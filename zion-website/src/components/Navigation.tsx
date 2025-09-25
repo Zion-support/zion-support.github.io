@@ -3,15 +3,15 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 
-const navigation  =  [
-  { name: 'Home', href: '/' }
-  { name: 'About', href: '/about' }
-  { name: 'Services', href: '/services' }
-  { name: 'Solutions', href: '/solutions' }
-  { name: 'Blog', href: '/blog' }
-  { name: 'Updates', href: '/updates' }
-  { name: 'Contact', href: '/contact' }
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' }
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
 ]
 
 export default function Navigation() {

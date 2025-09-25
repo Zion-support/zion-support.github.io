@@ -4,7 +4,6 @@ import Link from 'next/link'
 // Icons removed to avoid dependency issues in this environment
 
 interface ContentItem {
-
   id: string
   title: string
   description: string
@@ -17,17 +16,16 @@ interface ContentItem {
 }
 
 interface NewContentPromoBannerProps {
-
   variant?: 'default' | 'featured' | 'minimal'
   maxItems?: number
   autoRotate?: boolean
   rotationInterval?: number
 }
 
-const NewContentPromoBanner  =  ({
-  variant = 'default'
-  maxItems = 4
-  autoRotate = true
+const NewContentPromoBanner = ({
+  variant = 'default',
+  maxItems = 4,
+  autoRotate = true,
   rotationInterval = 5000
 }: NewContentPromoBannerProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -43,7 +41,7 @@ const NewContentPromoBanner  =  ({
       readTime: '15 min read'
       date: 'Sep 12, 2025'
       category: 'Inference'
-    }
+    },
     {
       id: '57'
       title: 'Serverless GenAI Architectures (2025)'

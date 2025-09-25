@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
-export default function UpdateZionGPT2() {return (
+
+export default function UpdateZionGPT2() {
+  return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>
         <a
@@ -35,4 +37,6 @@ export default function UpdateZionGPT2() {return (
           </a>
         </div>
       </div>
-    </div>)}
+    </div>
+  )
+}

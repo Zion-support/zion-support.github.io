@@ -1,4 +1,5 @@
-export default function UpdateDetailPage() {return (
+export default function UpdateDetailPage() {
+  return (
     <div className='bg-black min-h-screen'>
       <div className='relative isolate px-6 pt-24 lg: px-8'>
         <div className='mx-auto max-w-3xl py-12 lg: py-16'>
@@ -33,4 +34,6 @@ export default function UpdateDetailPage() {return (
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  )
+}
