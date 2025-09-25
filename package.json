@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "build:netlify": "vite build",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
