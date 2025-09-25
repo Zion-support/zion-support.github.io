@@ -45,13 +45,16 @@ class PerformanceMonitor {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
-      this.metrics.lcp = lastEntry.startTime
+      this.metrics.lcp = lastEntry?.startTime ?? 0
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const anyEntry = entry as any
+        if (typeof anyEntry.processingStart === 'number') {
+          this.metrics.fid = anyEntry.processingStart - anyEntry.startTime
+        }
       })
     })
 
@@ -182,6 +185,8 @@ export class ResourceOptimizer {
 }
 
 // Bundle optimization utilities
+import React from 'react'
+
 export class BundleOptimizer {
   static async loadChunk(chunkName: string): Promise<any> {
     try {
