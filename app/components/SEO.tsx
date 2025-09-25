@@ -1,1 +1,1 @@
-export { default } from '../../src/components/SEO';
+export { default } from '../../components/SEO';
