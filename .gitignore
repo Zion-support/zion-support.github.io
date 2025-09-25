@@ -105,3 +105,8 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+
+# Yarn Berry cache
+.yarn/cache
+.yarn/*-state.*
+yarn.lock
