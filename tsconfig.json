@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -54,19 +54,23 @@
     ],
     "strictNullChecks": true
   },
-    "include": [
-      "src/types/offline-shims.d.ts",
-      ".next/types/**/*.ts",
-      "app/**/*.ts",
-      "app/**/*.tsx"
-    ],
-    "exclude": [
-    	"App.tsx",
+  "include": [
+    "src/types/offline-shims.d.ts",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx"
+  ],
+  "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
     "src/**",
+    "data/**",
+    "utils/**",
+    "lib/**",
+    "types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",

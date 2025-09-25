@@ -13,8 +13,8 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit",
+    "lint": "eslint App.tsx app pages_minimal __safe_tests__ --max-warnings=0",
+    "type-check": "tsc -p tsconfig.typecheck.app.json --noEmit",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -108,6 +108,7 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -140,6 +141,7 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.7.0",
     "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.3.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -151,12 +153,12 @@
     "@types/node-cron": "^3.0.11",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "@typescript-eslint/eslint-plugin": "^8.44.1",
-    "@typescript-eslint/parser": "^8.44.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.36.0",
+    "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.33",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
     "postcss": "^8.5.6",
@@ -165,5 +167,6 @@
     "tailwindcss": "^4.1.13",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

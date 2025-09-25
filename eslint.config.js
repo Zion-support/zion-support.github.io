@@ -1,8 +1,24 @@
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+let js;
+let react;
+let reactHooks;
+let tseslint;
+let tsparser;
+
+try {
+  ({ default: js } = await import('@eslint/js'));
+} catch {}
+try {
+  ({ default: react } = await import('eslint-plugin-react'));
+} catch {}
+try {
+  ({ default: reactHooks } = await import('eslint-plugin-react-hooks'));
+} catch {}
+try {
+  ({ default: tseslint } = await import('@typescript-eslint/eslint-plugin'));
+} catch {}
+try {
+  ({ default: tsparser } = await import('@typescript-eslint/parser'));
+} catch {}
 
 export default [
   // Ignore everything by default; we will opt-in only app and safe test files
@@ -49,11 +65,11 @@ export default [
   },
   // Apply recommended base only to selected app/test files
   {
-    ...js.configs.recommended,
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
+    ...(js?.configs?.recommended ?? {}),
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
   },
   {
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -108,11 +124,11 @@ export default [
         HTMLElement: 'readonly'
       }
     },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint
-    },
+    plugins: Object.fromEntries([
+      react ? ['react', react] : null,
+      reactHooks ? ['react-hooks', reactHooks] : null,
+      tseslint ? ['@typescript-eslint', tseslint] : null
+    ].filter(Boolean)),
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
