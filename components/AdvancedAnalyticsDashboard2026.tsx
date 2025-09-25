@@ -1,15 +1,14 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3
-  TrendingUp
-  Users
-  DollarSign
-  Eye
-  MousePointer
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  BarChart3,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Eye,
+  MousePointer,
   Clock,
   Target,
   Zap,
@@ -20,31 +19,26 @@ import {
   Star,
   ArrowUpRight,
   ArrowDownRight,
-  Activity
-} from 'lucide-react';
-
+  Activity} from 'lucide-react',
 interface AnalyticsData {
-  id: string;
-  title: string;
-  value: string | number;
-  change: number;
-  trend: 'up' | 'down' | 'stable';
-  icon: React.ComponentType<any>;
-  color: string;
-  description: string;
-}
-
-const AdvancedAnalyticsDashboard2026 = () => {
-  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
-  const [selectedTimeframesetSelectedTimeframe] = useState('7d');
-  const [isLoadingsetIsLoading] = useState(true);
-
+  id: string,
+  title: string,
+  value: string | number,
+  change: number,
+  trend: 'up' | 'down' | 'stable',
+  icon: React.ComponentType<any>,
+  color: string,
+  description: string}
+,
+const AdvancedAnalyticsDashboard20o26 = () => {
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]),
+  const [selectedTimeframesetSelectedTimeframe] = useState('7d'),
+  const [isLoadingsetIsLoading] = useState(true),
   useEffect(() => {
-    // Simulate data loading
+    // Simulate data loading,
     const loadData = async () => {
-      setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve1000));
-      
+      setIsLoading(true),
+      await new Promise(resolve => setTimeout(resolve10o00)),
       const data: AnalyticsData[] = [
         {
           id: 'revenue',
@@ -53,9 +47,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 23.5,
           trend: 'up',
           icon: DollarSign,
-          color: 'from-green-500 to-emerald-500',
-          description: 'Monthly recurring revenue'
-        },
+          color: 'from-green-50o0 to-emerald-50o0',
+          description: 'Monthly recurring revenue'},
         {
           id: 'users',
           title: 'Active Users',
@@ -63,9 +56,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 12.3,
           trend: 'up',
           icon: Users,
-          color: 'from-blue-500 to-cyan-500',
-          description: 'Daily active users'
-        },
+          color: 'from-blue-50o0 to-cyan-50o0',
+          description: 'Daily active users'},
         {
           id: 'conversion',
           title: 'Conversion Rate',
@@ -73,9 +65,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: -2.1,
           trend: 'down',
           icon: Target,
-          color: 'from-purple-500 to-pink-500',
-          description: 'Visitor to customer conversion'
-        },
+          color: 'from-purple-50o0 to-pink-50o0',
+          description: 'Visitor to customer conversion'},
         {
           id: 'pageviews',
           title: 'Page Views',
@@ -83,9 +74,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 34.7,
           trend: 'up',
           icon: Eye,
-          color: 'from-orange-500 to-red-500',
-          description: 'Total page views this month'
-        },
+          color: 'from-orange-50o0 to-red-50o0',
+          description: 'Total page views this month'},
         {
           id: 'sessions',
           title: 'Sessions',
@@ -93,9 +83,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 18.9,
           trend: 'up',
           icon: Activity,
-          color: 'from-teal-500 to-cyan-500',
-          description: 'User sessions this month'
-        },
+          color: 'from-teal-50o0 to-cyan-50o0',
+          description: 'User sessions this month'},
         {
           id: 'bounce',
           title: 'Bounce Rate',
@@ -103,9 +92,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: -5.2,
           trend: 'down',
           icon: MousePointer,
-          color: 'from-indigo-500 to-purple-500',
-          description: 'Single-page sessions'
-        },
+          color: 'from-indigo-50o0 to-purple-50o0',
+          description: 'Single-page sessions'},
         {
           id: 'avg-session',
           title: 'Avg. Session',
@@ -113,9 +101,8 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 8.3,
           trend: 'up',
           icon: Clock,
-          color: 'from-yellow-500 to-orange-500',
-          description: 'Average session duration'
-        },
+          color: 'from-yellow-50o0 to-orange-50o0',
+          description: 'Average session duration'},
         {
           id: 'ai-usage',
           title: 'AI Features Used',
@@ -123,190 +110,164 @@ const AdvancedAnalyticsDashboard2026 = () => {
           change: 67.2,
           trend: 'up',
           icon: Brain,
-          color: 'from-pink-500 to-rose-500',
-          description: 'AI-powered interactions'
-        }
-      ];
-      
-      setAnalyticsData(data);
-      setIsLoading(false);
-    };
-
-    loadData();
-  }[selectedTimeframe]);
-
+          color: 'from-pink-50o0 to-rose-50o0',
+          description: 'AI-powered interactions'}
+      ],
+      setAnalyticsData(data),
+      setIsLoading(false)},
+    loadData()}[selectedTimeframe]),
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <ArrowUpRight className="w-4 h-4 text-green-400" />;
-      case 'down': return <ArrowDownRight className="w-4 h-4 text-red-400" />;
-      case 'stable': return <TrendingUp className="w-4 h-4 text-gray-400" />;
-      default: return <TrendingUp className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
+      case 'up': return <ArrowUpRight className="w-4 h-4 text-green-40o0"  />,
+      case 'down': return <ArrowDownRight className="w-4 h-4 text-red-40o0"  />,
+      case 'stable': return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
+      default: return <TrendingUp className="w-4 h-4 text-gray-40o0"  />}
+  },
   const getChangeColor = (change: number) => {
-    return change >= 0 ? 'text-green-400' : 'text-red-400';
-  };
-
+    return change >= 0 ? 'text-green-40o0' : 'text-red-40o0'},
   const timeframes = [
-    { value: '24'h', 'label: '24 Hours' },
-    { value: '7'd', 'label: '7 Days' },
-    { value: '30'd', 'label: '30 Days' },
-    { value: '90'd', 'label: '90 Days' }
-  ];
-
+    { value: '24'hlabel: '24 Hours' },
+    { value: '7'dlabel: '7 Days' },
+    { value: '30'dlabel: '30 Days' },
+    { value: '90'dlabel: '90 Days' }
+  ],
   if (isLoading) {
     return (
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
-        <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
-        </div>
-      </div>
-    );
-  }
-
+      <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
+        <div className="flex items-center justify-center h-64">,
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-50o0"></div>,
+        </div>,
+      </div>)}
+,
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
+    <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center gap-3">
-          <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
-            <BarChart3 className="w-6 h-6 text-white" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-white">Advanced Analytics 2026</h3>
-            <p className="text-gray-400">Comprehensive business intelligence and insights</p>
-          </div>
-        </div>
-        
-        <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between mb-8">,
+        <div className="flex items-center gap-3">,
+          <div className="p-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-xl">,
+            <BarChart3 className="w-6 h-6 text-white"  />,
+          </div>,
+          <div>,
+            <h3 className="text-2xl font-bold text-white">Advanced Analytics 20o26</h3>,
+            <p className="text-gray-40o0">Comprehensive business intelligence and insights</p>,
+          </div>,
+        </div>,
+        <div className="flex items-center gap-2">,
           {timeframes.map((timeframe) => (
             <button
               key={timeframe.value}
               onClick={() => setSelectedTimeframe(timeframe.value)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                selectedTimeframe === timeframe.value
-                  ? 'bg-purple-500 text-white'
-                  : 'bg-white/10 text-gray-400 hover:bg-white/20 hover:text-white'
-              }`}
-            >
+                selectedTimeframe === timeframe.value,
+                  ? 'bg-purple-50o0 text-white',
+                  : 'bg-white/10 text-gray-40o0 hover: bg-white/20 hover:text-white'}`}
+            >,
               {timeframe.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
+            </button>))}
+        </div>,
+      </div>,
       {/* Analytics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <AnimatePresence>
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
+        <AnimatePresence>,
           {analyticsData.map((itemindex) => (
-            <motion.div
+            <motion.div,
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color}`}>
-                  <item.icon className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex items-center gap-1">
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-30o0 group">,
+              <div className="flex items-center justify-between mb-4">,
+                <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color}`}>,
+                  <item.icon className="w-5 h-5 text-white"  />,
+                </div>,
+                <div className="flex items-center gap-1">,
                   {getTrendIcon(item.trend)}
-                  <span className={`text-sm font-medium ${getChangeColor(item.change)}`}>
-                    {item.change > 0 ? '+' : ''}{item.change.toFixed(1)}%
-                  </span>
-                </div>
-              </div>
-              
-              <div className="mb-2">
-                <div className="text-2xl font-bold text-white mb-1">
+                  <span className={`text-sm font-medium ${getChangeColor(item.change)}`}>,
+                    {item.change > 0 ? '+' : ''}{item.change.toFixed(1)}%,
+                  </span>,
+                </div>,
+              </div>,
+              <div className="mb-2">,
+                <div className="text-2xl font-bold text-white mb-1">,
                   {item.value}
-                </div>
-                <div className="text-sm text-gray-400">
+                </div>,
+                <div className="text-sm text-gray-40o0">,
                   {item.title}
-                </div>
-              </div>
-              
-              <div className="text-xs text-gray-500">
+                </div>,
+              </div>,
+              <div className="text-xs text-gray-50o0">,
                 {item.description}
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
-
+              </div>,
+            </motion.div>))}
+        </AnimatePresence>,
+      </div>,
       {/* Performance Insights */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-yellow-400" />
-            Performance Insights
-          </h4>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between p-3 bg-green-500/10 rounded-lg border border-green-500/20">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm text-white">AI Features Usage</span>
-              </div>
-              <span className="text-sm font-medium text-green-400">+67.2%</span>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-sm text-white">User Engagement</span>
-              </div>
-              <span className="text-sm font-medium text-blue-400">+18.9%</span>
-            </div>
-            <div className="flex items-center justify-between p-3 bg-purple-500/10 rounded-lg border border-purple-500/20">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                <span className="text-sm text-white">Revenue Growth</span>
-              </div>
-              <span className="text-sm font-medium text-purple-400">+23.5%</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <Rocket className="w-5 h-5 text-orange-400" />
-            Growth Opportunities
-          </h4>
-          <div className="space-y-4">
-            <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
-              <div className="flex items-center gap-2 mb-2">
-                <Brain className="w-4 h-4 text-purple-400" />
-                <span className="text-sm font-medium text-white">AI Optimization</span>
-              </div>
-              <p className="text-xs text-gray-400">
-                Implement advanced AI features to increase user engagement by 25%
-              </p>
-            </div>
-            <div className="p-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-lg border border-blue-500/20">
-              <div className="flex items-center gap-2 mb-2">
-                <Globe className="w-4 h-4 text-blue-400" />
-                <span className="text-sm font-medium text-white">Global Expansion</span>
-              </div>
-              <p className="text-xs text-gray-400">
-                Expand to new markets to capture additional 40% revenue growth
-              </p>
-            </div>
-            <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg border border-green-500/20">
-              <div className="flex items-center gap-2 mb-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span className="text-sm font-medium text-white">Security Enhancement</span>
-              </div>
-              <p className="text-xs text-gray-400">
-                Upgrade security measures to build trust and reduce bounce rate
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default AdvancedAnalyticsDashboard2026;
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">,
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">,
+          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">,
+            <Zap className="w-5 h-5 text-yellow-40o0"  />,
+            Performance Insights,
+          </h4>,
+          <div className="space-y-4">,
+            <div className="flex items-center justify-between p-3 bg-green-50o0/10 rounded-lg border border-green-50o0/20">,
+              <div className="flex items-center gap-3">,
+                <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>,
+                <span className="text-sm text-white">AI Features Usage</span>,
+              </div>,
+              <span className="text-sm font-medium text-green-40o0">+67.2%</span>,
+            </div>,
+            <div className="flex items-center justify-between p-3 bg-blue-50o0/10 rounded-lg border border-blue-50o0/20">,
+              <div className="flex items-center gap-3">,
+                <div className="w-2 h-2 bg-blue-40o0 rounded-full"></div>,
+                <span className="text-sm text-white">User Engagement</span>,
+              </div>,
+              <span className="text-sm font-medium text-blue-40o0">+18.9%</span>,
+            </div>,
+            <div className="flex items-center justify-between p-3 bg-purple-50o0/10 rounded-lg border border-purple-50o0/20">,
+              <div className="flex items-center gap-3">,
+                <div className="w-2 h-2 bg-purple-40o0 rounded-full"></div>,
+                <span className="text-sm text-white">Revenue Growth</span>,
+              </div>,
+              <span className="text-sm font-medium text-purple-40o0">+23.5%</span>,
+            </div>,
+          </div>,
+        </div>,
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">,
+          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">,
+            <Rocket className="w-5 h-5 text-orange-40o0"  />,
+            Growth Opportunities,
+          </h4>,
+          <div className="space-y-4">,
+            <div className="p-3 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-lg border border-purple-50o0/20">,
+              <div className="flex items-center gap-2 mb-2">,
+                <Brain className="w-4 h-4 text-purple-40o0"  />,
+                <span className="text-sm font-medium text-white">AI Optimization</span>,
+              </div>,
+              <p className="text-xs text-gray-40o0">,
+                Implement advanced AI features to increase user engagement by 25%,
+              </p>,
+            </div>,
+            <div className="p-3 bg-gradient-to-r from-blue-50o0/10 to-cyan-50o0/10 rounded-lg border border-blue-50o0/20">,
+              <div className="flex items-center gap-2 mb-2">,
+                <Globe className="w-4 h-4 text-blue-40o0"  />,
+                <span className="text-sm font-medium text-white">Global Expansion</span>,
+              </div>,
+              <p className="text-xs text-gray-40o0">,
+                Expand to new markets to capture additional 40% revenue growth,
+              </p>,
+            </div>,
+            <div className="p-3 bg-gradient-to-r from-green-50o0/10 to-emerald-50o0/10 rounded-lg border border-green-50o0/20">,
+              <div className="flex items-center gap-2 mb-2">,
+                <Shield className="w-4 h-4 text-green-40o0"  />,
+                <span className="text-sm font-medium text-white">Security Enhancement</span>,
+              </div>,
+              <p className="text-xs text-gray-40o0">,
+                Upgrade security measures to build trust and reduce bounce rate,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>)},
+export default AdvancedAnalyticsDashboard20o26,

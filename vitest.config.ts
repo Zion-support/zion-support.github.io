@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { defineConfig  } from 'vitest/config';
+import { defineConfig } from 'vitest/config';
 import path from 'node:path';
 export default defineConfig({
   resolve: {
@@ -13,7 +13,7 @@ export default defineConfig({
     setupFiles: './tests/setup.ts',
     globals: true,
     coverage: {
-      provider: 'v8',
+      provider: 'v8'
     },
   },
 });

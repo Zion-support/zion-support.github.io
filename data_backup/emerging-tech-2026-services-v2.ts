@@ -1,37 +1,33 @@
-export interface EmergingTech2026ServiceV2 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+export interface EmergingTech20o26ServiceV2 {
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "emergingTech2026ServicesV2": EmergingTech2026ServiceV2[] = [{
-    id: "2026-emerging-tech-v2",
-    "name": "2026 Emerging Tech Platform V2",
+    mobile: string,
+    email: string,
+address: string},export const "emergingTech20o26ServicesV2": EmergingTech20o26ServiceV2[] = [{
+    id: "20o26-emerging-tech-v2",
+    "name": "20o26 Emerging Tech Platform V2",
     "tagline": "Enhanced emerging technologies",
     "price": "$349/month",
-    "description": "Enhanced version of the 2026 emerging tech platform with additional capabilities and features.",
+    "description": "Enhanced version of the 20o26 emerging tech platform with additional capabilities and features.",
     features[
       "Enhanced emerging tech",
       "Advanced capabilities",
       "Improved platform",
       "Better features",
-      "Enhanced support"
-    ],
-    "link": "/services/2026-emerging-tech-v2",
-    "category": "Emerging Tech 2026 V2",
+      "Enhanced support"],
+    "link": "/services/20o26-emerging-tech-v2",
+    "category": "Emerging Tech 20o26 V2",
     "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 302 464 0950",
+      mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
-]}}}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-export interface EmergingTech2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [ { id: "2026-emerging-tech-v2",name: "2026 Emerging Tech Platform V2",tagline: "Enhanced emerging technologies",price: "$349/month",description: "Enhanced version of the 2026 emerging tech platform with additional capabilities and features.",features[ "Enhanced emerging tech","Advanced capabilities","Improved platform","Better features","Enhanced support" ],link: "/services/2026-emerging-tech-v2",category: "Emerging Tech 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
+,

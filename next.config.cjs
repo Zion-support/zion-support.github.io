@@ -6,9 +6,9 @@ const nextConfig = {
   poweredByHeader: false,
   // Next 15 removes swcMinify; rely on optimization.minimize in webpack hook
   
-  // Enhanced build settings
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  // Enhanced build settings - stricter settings from remote
+  eslint: { ignoreDuringBuilds: false },
+  typescript: { ignoreBuildErrors: false },
   pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   images: {
     domains: [

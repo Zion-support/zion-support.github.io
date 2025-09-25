@@ -1,9 +1,0 @@
-import React, { useState, useEffect, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; BarChart3,; Users,; Eye,; MousePointer,; Clock,; TrendingUp,; TrendingDown,; Activity,; Globe,; Smartphone,; Monitor,; MapPin,; Calendar,; Download,; Share2,; Filter,; RefreshCw,; X,; ChevronDown,; ChevronUp;  } from 'lucide-react'; import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'; ; interface AnalyticsData { pageViews: number; uniqueVisitors: number; bounceRate: number; avgSessionDuration: number; topPages: Arra y<{ page: string; views: number; change: number   }>; trafficSources: Arra y<{ source: string; percentage: number; color: string   }>; deviceTypes: Arra y<{ device: string; percentage: number; color: string   }>; geographicData: Arra y<{ country: string; visitors: number; change: number   }>; hourlyTraffic: Arra y<{ hour: number; visitors: number   }>; weeklyTrends: Arra y<{ week: string; visitors: number; pageViews: number   }>; }; interface AnalyticsDashboardProps {
- showPanel?: boolean; autoRefresh?: boolean; refreshInterval?: number; 
-}; export function AnalyticsDashboard(props: any) {; const [isOpen, setIsOpen] = useState<any>(false); const [isExpanded, setIsExpanded] = useState<any>(false); const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h'); const [isLoading, setIsLoading] = useState<any>(false); const [lastUpdate, setLastUpdate] = useState<Date>(new Date()); ; const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({; pageViews: 0,; uniqueVisitors: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: [],; geographicData: [],; hourlyTraffic: [],; weeklyTrends: []; }
-    ); ;
-</AnalyticsData>
-</Date>
-</any>
-</any>
-</any>

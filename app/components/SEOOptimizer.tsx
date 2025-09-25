@@ -1,380 +1,187 @@
-'use client';
+'use client'
 
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
+import { useEffect, useMemo } from 'react'
 
 interface SEOOptimizerProps {
-  seoData: SEOData;
-  children?: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: any
+  noindex?: boolean
+  nofollow?: boolean
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
-  const {
-    title,
-    description,
-    keywords,
-    canonicalUrl,
-    ogImage = '/images/og-default.jpg',
-    ogType = 'website',
-    twitterCard = 'summary_large_image',
-    structuredData,
-    robots = 'index, follow',
-    author = 'AI Innovation Hub',
-    publishedTime,
-    modifiedTime,
-    section,
-    tags = []
-  } = seoData;
+export default function SEOOptimizer({
+  title = 'Zion Tech Group - Advanced AI and Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
+  keywords = ['AI', 'artificial intelligence', 'cloud services', 'cybersecurity', 'technology solutions', 'enterprise software', 'digital transformation'],
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false
+}: SEOOptimizerProps) {
+  // Memoize SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: title.trim(),
+    description: description.trim(),
+    keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords,
+    canonicalUrl: canonicalUrl?.trim(),
+    ogImage: ogImage?.trim(),
+    ogType: ogType?.trim(),
+    twitterCard: twitterCard?.trim(),
+  }), [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard])
 
-  // Generate structured data
-  const generateStructuredData = () => {
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'AI Innovation Hub',
-      url: 'https://zion.app',
-      logo: 'https://zion.app/images/logo.png',
-      description: 'Revolutionary AI solutions delivering unprecedented ROI and business transformation',
-      sameAs: [
-        'https://twitter.com/aiinnovationhub',
-        'https://linkedin.com/company/ai-innovation-hub'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-AI-HUB',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      }
-    };
-
-    if (structuredData) {
-      return structuredData;
-    }
-
-    return baseStructuredData;
-  };
-
-  // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://zion.app'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: section || 'Content',
-          item: `https://zion.app/${section || 'content'}`
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: title,
-          item: canonicalUrl || 'https://zion.app'
-        }
-      ]
-    };
-  };
-
-  // Generate article structured data
-  const generateArticleStructuredData = () => {
-    if (ogType !== 'article') return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: title,
-      description: description,
-      image: ogImage,
-      author: {
-        '@type': 'Person',
-        name: author
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'AI Innovation Hub',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://zion.app/images/logo.png'
-        }
-      },
-      datePublished: publishedTime,
-      dateModified: modifiedTime || publishedTime,
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': canonicalUrl || 'https://zion.app'
-      },
-      keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords,
-      articleSection: section,
-      wordCount: description.split(' ').length
-    };
-  };
-
-  // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is AI Innovation Hub?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI Innovation Hub is a leading provider of revolutionary AI solutions that deliver unprecedented ROI and business transformation for enterprises worldwide.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'What ROI can I expect from AI implementation?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Our AI solutions typically deliver 5,000% to 25,000% ROI within 12-18 months, with average annual savings of $12.8B to $45.2B for Fortune 500 companies.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'How quickly can AI solutions be implemented?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Our AI solutions can be implemented in 6-12 months, with 67% faster deployment compared to traditional solutions and 99.7% success rate.'
-          }
-        }
-      ]
-    };
-  };
-
-  // Generate local business structured data
-  const generateLocalBusinessStructuredData = () => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: 'AI Innovation Hub',
-      description: 'Revolutionary AI solutions for enterprise transformation',
-      url: 'https://zion.app',
-      telephone: '+1-555-AI-HUB',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 AI Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US'
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 37.7749,
-        longitude: -122.4194
-      },
-      openingHours: 'Mo-Fr 09:00-17:00',
-      priceRange: '$$$',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '150'
-      }
-    };
-  };
-
-  // Generate software application structured data
-  const generateSoftwareApplicationStructuredData = () => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'SoftwareApplication',
-      name: 'AI Innovation Platform',
-      applicationCategory: 'BusinessApplication',
-      operatingSystem: 'Web, Cloud',
-      description: 'Revolutionary AI platform delivering 5,000% to 25,000% ROI',
-      url: 'https://zion.app',
-      author: {
-        '@type': 'Organization',
-        name: 'AI Innovation Hub'
-      },
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock'
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '150'
-      },
-      featureList: [
-        '5,000% ROI Guarantee',
-        'Real-time Analytics',
-        'Predictive Intelligence',
-        'Automated Decision Making',
-        'Quantum AI Integration'
-      ]
-    };
-  };
-
-  // Set up performance monitoring
   useEffect(() => {
-    // Track page views
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: title,
-        page_location: canonicalUrl || window.location.href
-      });
+    if (typeof window === 'undefined') return
+
+    // Batch DOM updates for better performance
+    const updates: (() => void)[] = []
+
+    // Update document title
+    if (seoData.title) {
+      updates.push(() => {
+        document.title = seoData.title
+      })
     }
 
-    // Track Core Web Vitals
-    if (typeof window !== 'undefined') {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            // Track FID
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-          if (entry.entryType === 'layout-shift') {
-            // Track CLS
-            console.log('CLS:', entry.value);
-          }
-        });
-      });
+    // Update meta description
+    updates.push(() => {
+      let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement
+      if (metaDescription) {
+        metaDescription.content = seoData.description
+      } else {
+        metaDescription = document.createElement('meta')
+        metaDescription.name = 'description'
+        metaDescription.content = seoData.description
+        document.head.appendChild(metaDescription)
+      }
+    })
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    // Update meta keywords
+    updates.push(() => {
+      let metaKeywords = document.querySelector('meta[name="keywords"]') as HTMLMetaElement
+      if (metaKeywords) {
+        metaKeywords.content = seoData.keywords
+      } else {
+        metaKeywords = document.createElement('meta')
+        metaKeywords.name = 'keywords'
+        metaKeywords.content = seoData.keywords
+        document.head.appendChild(metaKeywords)
+      }
+    })
+
+    // Update canonical URL
+    if (seoData.canonicalUrl) {
+      updates.push(() => {
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+        if (canonical) {
+          canonical.href = seoData.canonicalUrl
+        } else {
+          canonical = document.createElement('link')
+          canonical.rel = 'canonical'
+          canonical.href = seoData.canonicalUrl
+          document.head.appendChild(canonical)
+        }
+      })
     }
-  }, [title, canonicalUrl]);
 
-  return (
-    <>
-      <Head>
-        {/* Basic Meta Tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-        <meta name="robots" content={robots} />
-        <meta name="author" content={author} />
-        <link rel="canonical" href={canonicalUrl || 'https://zion.app'} />
+    // Update robots meta
+    updates.push(() => {
+      let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement
+      const robotsContent = [
+        noindex ? 'noindex' : 'index',
+        nofollow ? 'nofollow' : 'follow',
+        'max-snippet:-1',
+        'max-image-preview:large',
+        'max-video-preview:-1'
+      ].join(', ')
 
-        {/* Open Graph Meta Tags */}
-        <meta property="og:type" content={ogType} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || 'https://zion.app'} />
-        <meta property="og:site_name" content="AI Innovation Hub" />
-        <meta property="og:locale" content="en_US" />
+      if (robots) {
+        robots.content = robotsContent
+      } else {
+        robots = document.createElement('meta')
+        robots.name = 'robots'
+        robots.content = robotsContent
+        document.head.appendChild(robots)
+      }
+    })
 
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@aiinnovationhub" />
-        <meta name="twitter:creator" content="@aiinnovationhub" />
+    // Update Open Graph tags
+    const ogTags = [
+      { property: 'og:title', content: seoData.title },
+      { property: 'og:description', content: seoData.description },
+      { property: 'og:image', content: seoData.ogImage },
+      { property: 'og:type', content: seoData.ogType },
+      { property: 'og:url', content: seoData.canonicalUrl || window.location.href },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+    ]
 
-        {/* Article Meta Tags */}
-        {ogType === 'article' && (
-          <>
-            <meta property="article:author" content={author} />
-            <meta property="article:published_time" content={publishedTime} />
-            <meta property="article:modified_time" content={modifiedTime || publishedTime} />
-            <meta property="article:section" content={section} />
-            {tags.map((tag, index) => (
-              <meta key={index} property="article:tag" content={tag} />
-            ))}
-          </>
-        )}
+    ogTags.forEach(({ property, content }) => {
+      if (content) {
+        updates.push(() => {
+          let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement
+          if (meta) {
+            meta.content = content
+          } else {
+            meta = document.createElement('meta')
+            meta.setAttribute('property', property)
+            meta.content = content
+            document.head.appendChild(meta)
+          }
+        })
+      }
+    })
 
-        {/* Additional Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="AI Innovation Hub" />
+    // Update Twitter Card tags
+    const twitterTags = [
+      { name: 'twitter:card', content: seoData.twitterCard },
+      { name: 'twitter:title', content: seoData.title },
+      { name: 'twitter:description', content: seoData.description },
+      { name: 'twitter:image', content: seoData.ogImage },
+    ]
 
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
+    twitterTags.forEach(({ name, content }) => {
+      if (content) {
+        updates.push(() => {
+          let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement
+          if (meta) {
+            meta.content = content
+          } else {
+            meta = document.createElement('meta')
+            meta.name = name
+            meta.content = content
+            document.head.appendChild(meta)
+          }
+        })
+      }
+    })
 
-        {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+    // Add structured data
+    if (structuredData) {
+      updates.push(() => {
+        // Remove existing structured data
+        const existingScripts = document.querySelectorAll('script[type="application/ld+json"]')
+        existingScripts.forEach(script => script.remove())
 
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        // Add new structured data
+        const script = document.createElement('script')
+        script.type = 'application/ld+json'
+        script.textContent = JSON.stringify(structuredData)
+        document.head.appendChild(script)
+      })
+    }
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateStructuredData())
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbStructuredData())
-          }}
-        />
-        {generateArticleStructuredData() && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(generateArticleStructuredData())
-            }}
-          />
-        )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQStructuredData())
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateLocalBusinessStructuredData())
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateSoftwareApplicationStructuredData())
-          }}
-        />
-      </Head>
+    // Execute all updates
+    updates.forEach(update => update())
 
-      {/* Content */}
-      {children}
-    </>
-  );
-};
+  }, [seoData, structuredData, noindex, nofollow])
 
-export default SEOOptimizer;
+  return null
+}

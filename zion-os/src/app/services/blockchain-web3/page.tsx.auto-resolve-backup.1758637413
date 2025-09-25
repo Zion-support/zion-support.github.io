@@ -1,6 +1,5 @@
 
 
-=======
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
@@ -284,7 +283,6 @@ export default function BlockchainWeb3Page() {;
       </div>;
     </div>);
 }
-=======
 "use client";
 
 export default function BlockchainWeb3Page() {

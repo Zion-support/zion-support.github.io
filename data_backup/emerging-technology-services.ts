@@ -1,17 +1,17 @@
 export interface EmergingTechnologyService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "emergingTechnologyServices": EmergingTechnologyService[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "emergingTechnologyServices": EmergingTechnologyService[] = [{
     id: "blockchain-platform",
     "name": "Blockchain Development Platform",
     "tagline": "Build and deploy blockchain applications",
@@ -22,16 +22,12 @@ address: string};export const "emergingTechnologyServices": EmergingTechnologySe
       "DApp deployment",
       "Blockchain integration",
       "Security auditing",
-      "Performance monitoring"
-    ],
+      "Performance monitoring"],
     "link": "/services/blockchain-platform",
     "category": "Emerging Tech",
     "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 302 464 0950",
+      mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
-]}}}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-export interface EmergingTechnologyService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechnologyServices: EmergingTechnologyService[] = [ { id: "blockchain-platform",name: "Blockchain Development Platform",tagline: "Build and deploy blockchain applications",price: "$179/month",description: "Comprehensive blockchain development platform for creating decentralized applications.",features[ "Smart contract development","DApp deployment","Blockchain integration","Security auditing","Performance monitoring" ],link: "/services/blockchain-platform",category: "Emerging Tech",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
+,

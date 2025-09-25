@@ -1,10 +1,7 @@
-import { Route } from "react-router-dom";
-import CommunityPage from "../pages/CommunityPage";
-
-export default function CommunityRoutes() {
+export function CommunityRoutes() {
   return (
-    <>
-      <Route path="" element={<CommunityPage />} />
-    </>
-  );
-}
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

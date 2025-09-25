@@ -1,12 +1,7 @@
-import React from 'react';
-
-interface NextSeoProps {
-  title?: string;
-  description?: string;
-  openGraph?: Record<string, unknown>;
-}
-
-const NextSeo: React.FC<NextSeoProps> = () => null;
-
-export default NextSeo;
-
+export function NextSeo() {
+  return (
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

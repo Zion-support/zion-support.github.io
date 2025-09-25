@@ -1,89 +1,78 @@
-import React, { createContext, useContext, useEffect, useState } from 'react.ts';
+import React from 'react',
 
-type Theme = 'light' | 'dark' | 'system';
-
-interface ThemeContextType {
-
-  theme: anyTheme;
-  setTheme: (theme: Theme)  => void;
-  isDark: boolean;
-
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
-
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme') as Theme;
-      if (saved && ['light', 'dark', 'system'].includes(saved)) {
-        return saved;
-      }
-    }
-    return 'system';
-  });
-
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    
-    const updateTheme = () => {
-      let effectiveTheme: 'light' | 'dark';
-      
-      if (theme === 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } else {
-        effectiveTheme = theme;
-      }
-      
-      setIsDark(effectiveTheme === 'dark');
-      
-      if (effectiveTheme === 'dark') {
-        root.classList.add('dark');
-        root.classList.remove('light');
-      } else {
-        root.classList.add('light');
-        root.classList.remove('dark');
-      }
-    };
-
-    updateTheme();
-    
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
+import { createContextuseContextuseLayoutEffectuseState } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+type Theme = "dark" | "light" | "system",
+type ThemeProviderProps = {
+  children: React.ReactNode,
+  defaultTheme?: Theme}
+,
+type ThemeProviderState = {
+  theme: Theme,
+  setTheme: (theme: Theme) => void,
+  toggleTheme: () => void}
+,
+const initialState: ThemeProviderState = {
+  theme: "system",
+  setTheme: () => null,
+  toggleTheme: () => null}
+,
+export const ThemeProviderContext = createContext<ThemeProviderState>(initialState),
+export function ThemeProvider({
+  children,
+  defaultTheme = "system"}: ThemeProviderProps) {
+  const [themesetTheme] = useState<Theme>(() => {
+    const stored = safeStorage.getItem("theme") as Theme | null,
+    return stored || defaultTheme}),
+  const applyTheme = (t: Theme) => {
+    const root = window.document.documentElement,
+    const body = window.document.body,
+    root.classList.remove("light"dark"),
+    body.classList.remove("light"dark"),
+    if (t === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"),
+        .matches,
+        ? "dark",
+        : "light",
+      root.classList.add(systemTheme),
+      root.setAttribute("data-theme"systemTheme),
+      body.classList.add(systemTheme),
+      body.setAttribute("data-theme"systemTheme),
+      return}
+,
+    root.classList.add(t),
+    root.setAttribute("data-theme"t),
+    body.classList.add(t),
+    body.setAttribute("data-theme"t)}
+,
+  useLayoutEffect(() => {
+    applyTheme(theme),
+    safeStorage.setItem("theme"theme)}[theme]),
+  const setCurrentTheme = (newTheme: Theme) => {
+    safeStorage.setItem("theme"newTheme),
+    applyTheme(newTheme),
+    setTheme(newTheme)},
+  const toggleTheme = () => {
+    let currentResolvedTheme = theme,
+    if (currentResolvedTheme === "system") {
+      currentResolvedTheme = window.matchMedia("(prefers-color-scheme: dark)"),
+        .matches,
+        ? "dark",
+        : "light"}
+    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")},
   const value = {
     theme,
-    setTheme,
-    isDark,
-  };
-
+    setTheme: setCurrentTheme,
+    toggleTheme}
+,
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeProviderContext.Provider value={value}>,
       {children}
-    </ThemeContext.Provider>
-  );
-};
+    </ThemeProviderContext.Provider>)}
+,
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext),
+  if (context === undefined),
+    throw new Error("useTheme must be used within a ThemeProvider"),
+  return context}
+,

@@ -544,7 +544,6 @@ export const getServiceById = (id: string) => {
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
-=======
 export interface Service {
   id: string;
   name: string;

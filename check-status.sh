@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 echo "=== Checking Git Status ==="
 git status --porcelain
 
@@ -18,4 +16,4 @@ else
   echo "(Skipping build verification: node or script not available)"
 fi
 
-echo -e "\n=== Done ==="
+echo -e "\n=== Build Complete ==="

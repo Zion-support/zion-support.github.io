@@ -1,71 +1,51 @@
-# Base ignores
+# Exclude non-app directories and archived content from linting
 node_modules/
 .next/
-dist/
-build/
 out/
+build/
+dist/
 coverage/
+.cache/
 
-# Massive backup/quarantine/disabled folders
-backup/**
-backups/**
-backup-merge-conflicts/**
-backup-problematic-files/**
-*.backup/**
-*backup*/**
-*backups*/**
-.pages/**
-pages.bak/**
-pages-backup/**
-pages_backup/**
-pages_backup_before_cleanup/**
-pages.__backup/**
-pages._archive_corrupted/**
-pages._quarantine/**
-pages-quarantine/**
-pages-disabled/**
-pages.disabled/**
-pages.disabled_auto/**
-pages.disabled_build/**
-pages.disabled.full/**
-pages.disabled_full/**
-pages.broken/**
-pages.corrupted*/**
-pages.old/**
-pages.blog.disabled/**
+# Large mono-repo subprojects not part of the current app build
+automation/
+automation_backup/
+automation-logs/
+automation-reports/
+scripts/
+server/
+backend/
+apps/
+apps.backup/
+app_backup/
+app.disabled/
+app-disabled/
 
-src_backup/**
-src_backup_temp/**
-src.disabled/**
-src.broken/**
-src-corrupted/**
-src.corrupted/**
-lib_backup/**
-lib.disabled/**
-components.disabled/**
-components.disabled_full/**
-services_backup/**
-solutions.disabled/**
-solutions_backup/**
+# Generated or demo services
+generated-services/
 
-recovered-branches/**
-workflow_backups/**
-automation/backups/**
+# Archived, backups, or intentionally broken areas
+backups/
+backup*/
+backup-problematic-files/
+corrupted_backup/
+temp_exclude/
+temp_*/
+ts_files_backup/
+__tests__/**
+tests/**
+__jest__/**
+__mocks__/**
+__safe_tests__/**
 
-# Misc temp
-.temp*/**
-.temp_*/**
-.temp*/
-**/*.conflict*/**
-**/*.broken/**
-**/*.disabled/**
-**/*.disabled/**
-**/*.disabled_full/**
+# Other packages in the repo
+zion-os/
+zion-website/
+zion-ai-assistant/
+zion_academy/
+zion-film/
 
-# Logs and reports
-playwright-report/**
-playwright-logs/**
-ci-cd-reports/**
-reports/**
-**/*-report*/**
-
+# Misc top-level jsx/js playground files
+*.backup
+*.bak
+# Keep above; no additional ignores below so that src-clean is linted

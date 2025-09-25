@@ -97,6 +97,13 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
+
+                🚀 Launch Your Economy
+              </Link>
+              <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
+
+                📊 View Instances
+              </Link>
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">

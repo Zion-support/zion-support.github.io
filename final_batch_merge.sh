@@ -1,64 +1,116 @@
 #!/bin/bash
 
-echo "Starting final batch merge of remaining PRs..."
+# Final Batch Merge Script - Efficient Processing
+set -e
 
-# Get remaining PR numbers
-PR_NUMBERS="17382 17385 17386 17388 17389 17390 17392 17393 17394 17395 17396 17397 17398 17399 17400 17401 17402 17403 17404 17405 17406 17407"
+echo "🚀 Starting Final Batch Merge Process..."
+echo "📅 $(date)"
 
-for pr_number in $PR_NUMBERS; do
-    echo "Processing PR #$pr_number..."
+# Function to merge branches efficiently
+merge_branches_efficiently() {
+    local branch_list=("$@")
+    local batch_name="$1"
+    local successful=0
+    local failed=0
     
-    # Get PR details
-    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-    HEAD_REF=$(echo "$PR_DETAILS" | grep -A 3 '"head":' | grep '"ref":' | head -1 | cut -d'"' -f4)
+    echo "🔄 Processing batch: $batch_name"
     
-    if [ -z "$HEAD_REF" ]; then
-        echo "Could not get head ref for PR #$pr_number, skipping..."
-        continue
-    fi
-    
-    echo "PR #$pr_number head ref: $HEAD_REF"
-    
-    # Fetch and checkout
-    if ! git fetch origin "$HEAD_REF"; then
-        echo "Failed to fetch branch $HEAD_REF, skipping PR #$pr_number"
-        continue
-    fi
-    
-    if ! git checkout -b "pr-$pr_number" "origin/$HEAD_REF" 2>/dev/null; then
-        if ! git checkout "pr-$pr_number" 2>/dev/null; then
-            echo "Failed to checkout branch $HEAD_REF, skipping PR #$pr_number"
+    for branch in "${branch_list[@]}"; do
+        # Skip the first element (batch name)
+        if [ "$branch" = "$batch_name" ]; then
             continue
         fi
-    fi
+        
+        echo "🔄 Merging: $branch"
+        
+        # Check if already merged
+        if git merge-base --is-ancestor "origin/$branch" main 2>/dev/null; then
+            echo "✅ $branch already merged, skipping..."
+            continue
+        fi
+        
+        # Try direct merge
+        if git merge "origin/$branch" --no-ff -m "Merge $branch - batch processing $(date +%Y%m%d-%H%M%S)" 2>/dev/null; then
+            ((successful++))
+            echo "✅ Merged: $branch"
+        else
+            # Try conflict resolution
+            git merge --abort 2>/dev/null || true
+            if git merge "origin/$branch" --no-commit --no-ff 2>/dev/null; then
+                git commit -m "Merge $branch - resolved - $(date +%Y%m%d-%H%M%S)"
+                ((successful++))
+                echo "✅ Merged with resolution: $branch"
+            else
+                # Auto-resolve conflicts
+                conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+                if [ -n "$conflicted_files" ]; then
+                    for file in $conflicted_files; do
+                        if [ -f "$file" ]; then
+                            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+                            git add "$file"
+                        fi
+                    done
+                    if git commit -m "Merge $branch - auto-resolved - $(date +%Y%m%d-%H%M%S)"; then
+                        ((successful++))
+                        echo "✅ Merged with auto-resolution: $branch"
+                    else
+                        git merge --abort 2>/dev/null || true
+                        ((failed++))
+                        echo "❌ Failed: $branch"
+                    fi
+                else
+                    git merge --abort 2>/dev/null || true
+                    ((failed++))
+                    echo "❌ Failed: $branch"
+                fi
+            fi
+        fi
+        
+        # Small delay
+        sleep 0.05
+    done
     
-    # Merge with main
-    if ! git merge main --no-edit; then
-        echo "Resolving conflicts for PR #$pr_number..."
-        git checkout --ours . 2>/dev/null || true
-        git add . 2>/dev/null || true
-        git commit -m "Resolve merge conflicts - keep main branch content" 2>/dev/null || true
-    fi
-    
-    # Switch back to main and merge
-    git checkout main
-    if ! git merge "pr-$pr_number" --no-edit; then
-        echo "Failed to merge PR #$pr_number into main, skipping"
-        continue
-    fi
-    
-    # Push to main
-    if ! git push origin main --force; then
-        echo "Failed to push PR #$pr_number to main, skipping"
-        continue
-    fi
-    
-    echo "✅ Successfully merged PR #$pr_number"
-    
-    # Clean up
-    git branch -D "pr-$pr_number" 2>/dev/null || true
-    
-    sleep 1
-done
+    echo "📊 $batch_name Results: ✅ $successful, ❌ $failed"
+    return 0
+}
 
-echo "Final batch merge completed"
+# Define branch batches
+cursor_branches=(
+    "Cursor Branches"
+    "cursor/check-fix-push-and-merge-to-main-2148"
+    "cursor/check-fix-push-and-merge-to-main-2b29"
+    "cursor/check-fix-push-and-merge-to-main-43bd"
+    "cursor/check-fix-push-and-merge-to-main-5149"
+    "cursor/check-fix-push-and-merge-to-main-59e4"
+    "cursor/check-fix-push-and-merge-to-main-6972"
+    "cursor/check-fix-push-and-merge-to-main-6d12"
+    "cursor/check-fix-push-and-merge-to-main-6df3"
+    "cursor/check-fix-push-and-merge-to-main-8c36"
+    "cursor/check-fix-push-and-merge-to-main-b528"
+    "cursor/check-fix-push-and-merge-to-main-d62b"
+    "cursor/check-fix-push-and-merge-to-main-d753"
+    "cursor/check-fix-push-and-merge-to-main-dd78"
+)
+
+other_branches=(
+    "Other Branches"
+    "maintenance/deps-minor-20250924-125228"
+    "push-to-main-merge-automation-20250924-130735"
+)
+
+# Process batches
+echo ""
+echo "🔄 Phase 1: Processing cursor branches..."
+merge_branches_efficiently "${cursor_branches[@]}"
+
+echo ""
+echo "🔄 Phase 2: Processing other branches..."
+merge_branches_efficiently "${other_branches[@]}"
+
+echo ""
+echo "🚀 Pushing all changes to remote..."
+git push origin main
+
+echo ""
+echo "🎉 Final batch merge completed!"
+echo "📅 Finished at: $(date)"
