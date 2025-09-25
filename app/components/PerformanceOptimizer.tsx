@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 export default function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
     // Preload critical resources
@@ -112,7 +112,7 @@ export default function PerformanceOptimizer() {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
-        performanceMetrics.lcp = lastEntry.startTime
+        performanceMetrics.lcp = lastEntry?.startTime || 0
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 

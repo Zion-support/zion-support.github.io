@@ -26,7 +26,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 		return { hasError: true, error, errorInfo: undefined };
 	}
 
-	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
 		const errorDetails = {
 			message: error.message,
 			stack: error.stack,
@@ -65,7 +65,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 		this.setState({ hasError: false, error: undefined, errorInfo: undefined });
 	};
 
-	render() {
+  override render() {
 		if (this.state.hasError) {
 			if (this.props.fallback) {
 				const FallbackComponent = this.props.fallback;

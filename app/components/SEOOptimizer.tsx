@@ -82,11 +82,11 @@ export default function SEOOptimizer({
       updates.push(() => {
         let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
         if (canonical) {
-          canonical.href = seoData.canonicalUrl
+          canonical.href = seoData.canonicalUrl || ''
         } else {
           canonical = document.createElement('link')
           canonical.rel = 'canonical'
-          canonical.href = seoData.canonicalUrl
+          canonical.href = seoData.canonicalUrl || ''
           document.head.appendChild(canonical)
         }
       })

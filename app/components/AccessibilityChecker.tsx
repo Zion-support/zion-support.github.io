@@ -48,7 +48,7 @@ export default function AccessibilityChecker() {
       // Check for missing heading hierarchy
       const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
       let previousLevel = 0
-      headings.forEach((heading, index) => {
+      headings.forEach((heading) => {
         const level = parseInt(heading.tagName.charAt(1))
         if (level > previousLevel + 1 && previousLevel > 0) {
           newIssues.push({
