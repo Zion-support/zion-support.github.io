@@ -1,17 +1,27 @@
-// Flat ESLint config for ESLint v9 + Next.js
-// Uses eslint-config-next (flat) and TypeScript support
-
+// ESLint flat config for Next.js 14 + ESLint 9
+// Uses Next's official flat config
 import next from 'eslint-config-next';
 
 export default [
-  // Base Next.js rules (includes React, JSX, etc.)
+  // Next.js recommended rules (includes react/react-hooks, etc.)
   ...next,
-
-  // Project overrides
+  // Project-specific ignores
   {
-    rules: {
-      // Keep initial set minimal; rely on Next defaults
-    },
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '**/*.backup.*',
+      '**/*.bak*',
+      '**/.DS_Store',
+      'reports/**',
+      'playwright-report/**',
+      'playwright-logs/**',
+      'test-results/**',
+      'public/**',
+    ],
   },
 ];
 
