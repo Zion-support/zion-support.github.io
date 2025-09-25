@@ -1,15 +1,22 @@
 module.exports = {
   parser: require.resolve('@typescript-eslint/parser'),
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import', '@next/next'],
   extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     // Disable to avoid escaping quotes in static content pages
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
-    'no-console': 'warn',
-    'no-debugger': 'warn',
+    'import/order': [
+      'warn',
+      { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
+    ],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
   ignorePatterns: [
     'node_modules/',
