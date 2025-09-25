@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AICybersecurityChecklist2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Cybersecurity Checklist 2025: Essential Security Measures for AI Systems"
-        description="Comprehensive AI cybersecurity checklist covering data protection, model security, infrastructure hardening, and incident response. Free downloadable checklist for 2025."
-        keywords="AI cybersecurity checklist, AI security measures, AI security checklist 2025, AI security framework, cybersecurity checklist"
-        url="/resources/ai-cybersecurity-checklist-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">

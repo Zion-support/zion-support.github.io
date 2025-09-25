@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
   title: 'AI 2026 Future Predictions - Revolutionary Technology Forecasts',
   description: 'Explore groundbreaking AI predictions for 2026, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world.',
@@ -11,14 +9,7 @@ export const metadata = {
 export default function AI2026FuturePredictionsRevolutionary() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      <SEO
-        title="AI 2026 Future Predictions - Revolutionary Technology Forecasts"
-        description="Explore groundbreaking AI predictions for 2026, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world."
-        keywords="AI 2026, future predictions, quantum AI, neural interfaces, synthetic intelligence, technology forecasts"
-        url="/ai-2026-future-predictions-revolutionary"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full px-6 py-2 mb-6">

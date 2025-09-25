@@ -2,8 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Tag, Share2, BookOpen, Clock } from 'lucide-react';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
   title: 'AI 2026: Quantum Computing Revolution - Ultimate Breakthrough Guide | Zion Tech Group',
   description: 'Explore the revolutionary impact of quantum computing on AI in 2026. Complete guide to quantum AI implementation, breakthrough applications, and enterprise transformation.',
@@ -21,14 +19,7 @@ export const metadata: Metadata = {
 export default function QuantumAI2026RevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Quantum Computing Revolution - Ultimate Breakthrough Guide"
-        description="Explore the revolutionary impact of quantum computing on AI in 2026. Complete guide to quantum AI implementation, breakthrough applications, and enterprise transformation."
-        keywords="quantum computing, AI, 2026, revolution, breakthrough, enterprise, quantum AI, technology"
-        url="/ai-2026-quantum-computing-revolution-ultimate-breakthrough"
-      />
-      
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

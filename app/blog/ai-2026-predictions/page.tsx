@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AI2026Predictions() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026 Predictions: The Next Frontier of Artificial Intelligence"
-        description="Expert predictions for AI in 2026. From quantum-AI hybrid systems to brain-computer interfaces, discover the technologies that will shape the future of artificial intelligence."
-        keywords="AI 2026 predictions, artificial intelligence future, AI trends 2026, quantum AI, brain-computer interface, AI technology predictions"
-        url="/blog/ai-2026-predictions"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">

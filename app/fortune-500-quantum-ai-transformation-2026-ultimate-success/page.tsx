@@ -2,8 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Tag, Share2, BookOpen, Clock, TrendingUp, Target, Zap } from 'lucide-react';
-import SEO from '../../components/SEO';
-
 export const metadata: Metadata = {
   title: 'Fortune 500 Quantum AI Transformation 2026: Ultimate Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through quantum AI transformation. Complete case study with implementation details and results.',
@@ -21,14 +19,7 @@ export const metadata: Metadata = {
 export default function Fortune500QuantumAISuccessPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Fortune 500 Quantum AI Transformation 2026: Ultimate Success Story"
-        description="Discover how a Fortune 500 company achieved 500% ROI through quantum AI transformation. Complete case study with implementation details and results."
-        keywords="Fortune 500, quantum AI, transformation, ROI, success, 2026, case study"
-        url="/fortune-500-quantum-ai-transformation-2026-ultimate-success"
-      />
-      
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

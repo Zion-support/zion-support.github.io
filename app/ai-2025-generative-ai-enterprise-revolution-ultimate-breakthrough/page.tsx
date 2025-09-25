@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Tag, Share2, BookOpen, Clock } from 'lucide-react';
-import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'AI 2025: Generative AI Enterprise Revolution - Ultimate Breakthrough Guide | Zion Tech Group',
@@ -21,12 +20,6 @@ export const metadata: Metadata = {
 export default function GenerativeAI2025RevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Generative AI Enterprise Revolution - Ultimate Breakthrough Guide"
-        description="Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes."
-        keywords="generative AI, enterprise, automation, 2025, revolution, breakthrough, AI transformation"
-        url="/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
-      />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">

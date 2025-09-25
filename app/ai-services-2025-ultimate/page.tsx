@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
   title: 'AI Services 2025 Ultimate - Revolutionary AI Solutions',
   description: 'Discover our comprehensive suite of AI services for 2025, including automation, machine learning, neural networks, and quantum computing solutions that transform businesses.',
@@ -11,14 +9,7 @@ export const metadata = {
 export default function AIServices2025Ultimate() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-      <SEO
-        title="AI Services 2025 Ultimate - Revolutionary AI Solutions"
-        description="Discover our comprehensive suite of AI services for 2025, including automation, machine learning, neural networks, and quantum computing solutions that transform businesses."
-        keywords="AI services 2025, artificial intelligence solutions, AI automation, machine learning, neural networks, quantum computing"
-        url="/ai-services-2025-ultimate"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-6 py-2 mb-6">

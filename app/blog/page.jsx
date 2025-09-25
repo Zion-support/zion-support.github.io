@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
   title: 'AI & Technology Blog - Latest Insights & Breakthroughs | Zion Tech Group',
   description: 'Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies.',
@@ -57,14 +55,7 @@ const BlogPage = () => {
 
   return (
     <div>
-      <SEO
-        title="AI & Technology Blog - Latest Insights & Breakthroughs"
-        description="Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies."
-        keywords="AI blog, technology insights, quantum computing, neural interfaces, enterprise AI, business transformation, AI trends, technology news"
-        url="/blog"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+            <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
   title: 'AI 2025 Ultimate Innovation Showcase - Revolutionary Breakthroughs',
   description: 'Discover the most revolutionary AI innovations of 2025 that are transforming industries and creating unprecedented opportunities for businesses worldwide.',
@@ -11,14 +9,7 @@ export const metadata = {
 export default function AI2025UltimateInnovationShowcase() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
-      <SEO
-        title="AI 2025 Ultimate Innovation Showcase - Revolutionary Breakthroughs"
-        description="Discover the most revolutionary AI innovations of 2025 that are transforming industries and creating unprecedented opportunities for businesses worldwide."
-        keywords="AI 2025, artificial intelligence, innovation, breakthrough, technology trends, business transformation"
-        url="/ai-2025-ultimate-innovation-showcase"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-6 py-2 mb-6">
