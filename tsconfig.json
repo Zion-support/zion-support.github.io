@@ -33,8 +33,8 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
@@ -54,11 +54,14 @@
     ],
     "strictNullChecks": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
+    "include": [
+      "src/types/offline-shims.d.ts",
+      ".next/types/**/*.ts",
+      "app/**/*.ts",
+      "app/**/*.tsx"
+    ],
+    "exclude": [
+    	"App.tsx",
     "node_modules",
     "dist",
     "build",
