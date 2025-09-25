@@ -13,7 +13,7 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "eslint -c eslint.config.js --max-warnings=0 --ext .ts,.tsx ./app ./pages_minimal",
+    "lint": "eslint -c eslint.config.js --max-warnings=0 ./app ./pages_minimal",
     "type-check": "tsc -p tsconfig.typecheck.app.json --noEmit",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
