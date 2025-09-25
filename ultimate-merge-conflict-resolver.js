@@ -1,0 +1,106 @@
+#!/usr/bin/env node,
+import { execSync } from 'child_process',
+// // console.log('🚀 ULTIMATE MERGE CONFLICT RESOLVER'),
+// // console.log('='.repeat(50)),;
+function runCommand(command, description) {
+  try {
+    // // console.log(`\n🔧 ${description}...`),;
+const result = execSync(command,
+ {,
+stdio: 'pipe',
+      encoding: 'utf8',
+      cwd: '/workspace'}),
+    // // console.log(`✅ ${description} completed successfully`),;
+return result} catch (error) {
+    // // console.log(`⚠️ ${description} had issues: ${error.message}`),;
+return null}
+}
+,
+// Step 1: Sync with remote and resolve diverged commits,;
+function syncWithRemote() {
+  // // console.log('\n📡 Syncing with remote repository...'),
+  // Fetch all remote changes,
+  runCommand('git fetch --allFetching all remote changes'),
+  // Check current status,;
+const status = runCommand('git statusChecking git status'),
+  // // console.log('Current status:', status),
+  // Reset to remote main to resolve diverged commits,
+  runCommand('git reset --hard origin/mainResetting to remote main'),
+  // // console.log('✅ Remote sync completed')}
+,
+// Step 2: Get all remote branches and process them,;
+function processAllBranches() {
+  // // console.log('\n🌿 Processing all remote branches...'),
+  // Get all remote branches,;
+const branches = runCommand('git branch -rGetting remote branches'),;
+if (!branches) return,;
+const branchList = branches.split('\n'),
+    .filter(branch => branch.trim() && !branch.includes('HEAD') && !branch.includes('main')),
+    .map(branch => branch.trim().replace('origin/', '')),
+    .slice(0, 30), // Process first 30 branches,
+  // // console.log(`Found ${branchList.length} branches to process`),;
+let mergedCount = 0,;
+let conflictCount = 0,
+  for (const branch of branchList) {
+    try {
+      // // console.log(`\n🔄 Processing branch: ${branch}`),
+      // Fetch the specific branch,
+      runCommand(`git fetch origin ${branch}`, `Fetching ${branch}`),
+      // Try to merge,;
+const mergeResult = runCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch} into main"`, `Merging ${branch}`),;
+if (mergeResult) {
+        mergedCount++,
+        // // console.log(`✅ Successfully merged ${branch}`)} else {
+        // Handle merge conflicts,
+        // // console.log(`⚠️ Merge conflict in ${branch}, resolving...`),
+        // Check for conflict markers,;
+const conflictedFiles = runCommand('git diff --name-only --diff-filter=UGetting conflicted files'),;
+if (conflictedFiles) {;
+const files = conflictedFiles.trim().split('\n').filter(f => f.trim()),
+          // // console.log(`Found ${files.length} conflicted files:`, files),
+          // Auto-resolve conflicts by choosing incoming version,
+          for (const file of files) {
+            // // console.log(`🔧 Resolving conflicts in ${file}...`),
+            runCommand(`git checkout --theirs "${file}"`, `Resolving ${file}`),
+            runCommand(`git add "${file}"`, `Adding ${file}`)}
+,
+          // Complete the merge,;
+const commitResult = runCommand('git commit -m "Resolve merge conflicts in ' + branch + '"', `Committing resolved conflicts for ${branch}`),;
+if (commitResult) {
+            mergedCount++,
+            // // console.log(`✅ Successfully resolved and merged ${branch}`)} else {
+            conflictCount++,
+            // // console.log(`❌ Failed to resolve conflicts in ${branch}`),
+            runCommand('git merge --abortAborting failed merge')}
+        } else {
+          conflictCount++,
+          // // console.log(`❌ Failed to merge ${branch}`),
+          runCommand('git merge --abortAborting failed merge')}
+      }
+} catch (error) {
+      // // console.log(`❌ Error processing ${branch}: ${error.message}`),
+      conflictCount++,
+      runCommand('git merge --abortAborting failed merge')}
+  }
+,
+  // // console.log(`\n📊 Branch Processing Summary: `),
+  // // console.log(`✅ Successfully merged: ${mergedCount} branches`),
+  // // console.log(`❌ Failed to merge: ${conflictCount} branches`),;
+return { mergedCount, conflictCount },
+}
+,
+// Step 3: Fix syntax errors and merge conflicts,;
+function fixSyntaxAndConflicts() {
+  // // console.log('\n🔧 Fixing syntax errors and merge conflicts...'),
+  // Find all TypeScript/JavaScript files,;
+const files = runCommand('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -50Finding files to fix'),;
+if (!files) return,;
+const fileList = files.split('\n').filter(f => f.trim()),;
+let fixedCount = 0,
+  for (const file of fileList) {
+    try {;
+let content = fs.readFileSync(file, 'utf8'),;
+let originalContent = content,
+      // Remove merge conflict markers,
+      content = content.replace(/,
+      content = content.replace(/[\s\S]*?}}}))
