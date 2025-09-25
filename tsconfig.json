@@ -54,12 +54,12 @@
     ],
     "strictNullChecks": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx"
-  ],
+    "include": [
+      "app",
+      "src-clean/src",
+      "src/types/offline-shims.d.ts",
+      ".next/types/**/*.ts"
+    ],
   "exclude": [
     "node_modules",
     "dist",
@@ -93,7 +93,7 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    
+    "src/vite-env.d.ts",
     "src/utils/cartUtils.js"
   ]
 }
