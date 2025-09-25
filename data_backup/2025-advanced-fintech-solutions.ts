@@ -1,42 +1,42 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from "../types/service-variants",
 export interface AdvancedFintechSolution20o25 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolution20o25[] = [{
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,export const advancedFintechSolutions20o25: AdvancedFintechSolution20o25[] = [{
     id:,
   ai-powered-credit-risk-assessment',
     "name": 'AI-Powered Credit Risk Assessment,
@@ -46,19 +46,13 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     "period": '/month,
     "description": 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
     features[
-  'Alternative data analysis',
-  'Machine learning models',
-  'Real-time scoring',
-  'Risk prediction',
-  'Fraud detection',
-  'Compliance reporting',
-  'API integration',
-  'Custom scoring models',
-  'Performance analytics',
-  'Regulatory compliance'
-    ],
+  'Alternative data analysisMachine learning models',
+  'Real-time scoringRisk prediction',
+  'Fraud detectionCompliance reporting',
+  'API integrationCustom scoring models',
+  'Performance analyticsRegulatory compliance'],
     "popular": true,
-    icon:,
+    icon: ,
   💳',
     "color": 'from-green-60o0 via-emerald-60o0 to-teal-60o0,
     textColor:,
@@ -68,7 +62,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
   Leading AI-powered credit risk assessment with alternative data analysis',
     "targetAudience": Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   15-20 days',
     "category": 'Fintech,
     "realService": true,
@@ -80,7 +74,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     competitors[,
   FICO, Experian, TransUnion, Equifax, Upstart'],
     "marketSize": '$35B credit scoring market,
-    growthRate:,
+    growthRate: ,
   25% annual growth',
     "variant": 'fintech,
     "contactInfo": {
@@ -89,18 +83,16 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
     "launchDate": '20o25-0o1-22,
     "customers": 67,
-    "rating": 4.8
-    reviews: 45
-  }
+    "rating": 4.8,
+    reviews: 45}
   {
-    id:,
+    id: ,
   blockchain-payment-processing-platform',
     "name": 'Blockchain Payment Processing Platform,
     tagline:,
@@ -109,19 +101,13 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     period:,
   /month',
     "description": Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',
-    features['Cross-border payments',
-  'Real-time settlement',
-  'Multi-currency support',
-  'Smart contracts',
-  'Compliance tools',
-  'API integration',
-  'Transaction monitoring',
-  'Fraud prevention',
-  'Regulatory reporting',
-  'Cost optimization'
-    ],
+    features['Cross-border paymentsReal-time settlement',
+  'Multi-currency supportSmart contracts',
+  'Compliance toolsAPI integration',
+  'Transaction monitoringFraud prevention',
+  'Regulatory reportingCost optimization'],
     "popular": true,
-    icon:,
+    icon: ,
   ⛓️',
     "color": 'from-blue-60o0 via-cyan-60o0 to-teal-60o0,
     textColor:,
@@ -131,7 +117,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
   Leading blockchain payment platform with real-time cross-border capabilities',
     "targetAudience": Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   10-15 days',
     "category": 'Fintech,
     "realService": true,
@@ -143,7 +129,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     competitors[,
   Ripple, Stellar, Circle, Coinbase, Binance'],
     "marketSize": '$28B blockchain payments market,
-    growthRate:,
+    growthRate: ,
   55% annual growth',
     "variant": 'blockchain-futuristic,
     "contactInfo": {
@@ -152,18 +138,16 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Production-ready blockchain payment platform with enterprise-grade security and compliance features.',
     "launchDate": '20o25-0o1-28,
     "customers": 89,
-    "rating": 4.7
-    reviews: 56
-  }
+    "rating": 4.7,
+    reviews: 56}
   {
-    id:,
+    id: ,
   quantum-financial-modeling-platform',
     "name": 'Quantum Financial Modeling Platform,
     tagline:,
@@ -171,19 +155,13 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     "price": $2,499,
     "period": '/month,
     "description": 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
-    features['Quantum algorithms',
-  'Portfolio optimization',
-  'Risk modeling',
-  'Option pricing',
-  'Monte Carlo simulation',
-  'Quantum machine learning',
-  'Real-time calculations',
-  'API access',
-  'Custom models',
-  'Performance analytics'
-    ],
+    features['Quantum algorithmsPortfolio optimization',
+  'Risk modelingOption pricing',
+  'Monte Carlo simulationQuantum machine learning',
+  'Real-time calculationsAPI access',
+  'Custom modelsPerformance analytics'],
     "popular": false,
-    icon:,
+    icon: ,
   ⚛️',
     "color": 'from-purple-60o0 via-violet-60o0 to-indigo-60o0,
     textColor:,
@@ -193,7 +171,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
   Leading quantum financial modeling platform with advanced optimization capabilities',
     "targetAudience": Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',
     "trialDays": 45,
-    setupTime:,
+    setupTime: ,
   20-30 days',
     "category": 'Fintech,
     "realService": true,
@@ -205,7 +183,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     competitors[,
   IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
     "marketSize": '$8B quantum computing market,
-    growthRate:,
+    growthRate: ,
   65% annual growth',
     "variant": 'quantum-financial,
     "contactInfo": {
@@ -214,18 +192,16 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Production-ready quantum financial platform with advanced algorithms and enterprise integration.',
     "launchDate": '20o25-0o2-0o3,
     "customers": 23,
-    "rating": 4.9
-    reviews: 18
-  }
+    "rating": 4.9,
+    reviews: 18}
   {
-    id:,
+    id: ,
   ai-powered-insurance-underwriting',
     "name": 'AI-Powered Insurance Underwriting,
     tagline:,
@@ -234,19 +210,13 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     period:,
   /month',
     "description": Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
-    features['AI risk assessment',
-  'Automated underwriting',
-  'Predictive modeling',
-  'Claims prediction',
-  'Fraud detection',
-  'Policy optimization',
-  'Customer segmentation',
-  'Compliance tools',
-  'API integration',
-  'Performance analytics'
-    ],
+    features['AI risk assessmentAutomated underwriting',
+  'Predictive modelingClaims prediction',
+  'Fraud detectionPolicy optimization',
+  'Customer segmentationCompliance tools',
+  'API integrationPerformance analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   🛡️',
     "color": 'from-orange-60o0 via-amber-60o0 to-yellow-60o0,
     textColor:,
@@ -256,7 +226,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
   Leading AI-powered insurance underwriting with advanced risk assessment',
     "targetAudience": Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   10-15 days',
     "category": 'Fintech,
     "realService": true,
@@ -268,7 +238,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     competitors[,
   Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
     "marketSize": '$20B insurtech market,
-    growthRate:,
+    growthRate: ,
   30% annual growth',
     "variant": 'fintech,
     "contactInfo": {
@@ -277,18 +247,16 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',
     "launchDate": '20o25-0o2-08,
     "customers": 134,
-    "rating": 4.6
-    reviews: 78
-  }
+    "rating": 4.6,
+    reviews: 78}
   {
-    id:,
+    id: ,
   regtech-compliance-automation-platform',
     "name": 'RegTech Compliance Automation Platform,
     tagline:,
@@ -297,19 +265,13 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     period:,
   /month',
     "description": Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
-    features['Regulatory monitoring',
-  'Automated reporting',
-  'Compliance tracking',
-  'Risk assessment',
-  'Audit trails',
-  'Policy management',
-  'Training modules',
-  'API integration',
-  'Real-time updates',
-  'Performance analytics'
-    ],
+    features['Regulatory monitoringAutomated reporting',
+  'Compliance trackingRisk assessment',
+  'Audit trailsPolicy management',
+  'Training modulesAPI integration',
+  'Real-time updatesPerformance analytics'],
     "popular": false,
-    icon:,
+    icon: ,
   📋',
     "color": 'from-gray-60o0 via-slate-60o0 to-zinc-60o0,
     textColor:,
@@ -319,7 +281,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
   Leading RegTech platform with comprehensive compliance automation',
     "targetAudience": Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   7-10 days',
     "category": 'Fintech,
     "realService": true,
@@ -331,7 +293,7 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
     competitors[,
   ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
     "marketSize": '$15B RegTech market,
-    growthRate:,
+    growthRate: ,
   40% annual growth',
     "variant": 'fintech,
     "contactInfo": {
@@ -340,13 +302,12 @@ reviews: number;export const advancedFintechSolutions20o25: AdvancedFintechSolut
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     "launchDate": '20o25-0o2-12,
     "customers": 89,
-    "rating": 4.5
-    reviews: 52
-]}}
+    "rating": 4.5,
+    reviews: 52]}}
+,

@@ -8,9 +8,32 @@ echo "📊 Total cursor branches to process: $(git branch -r | grep "origin/curs
 echo "⏰ Started at: $(date)"
 echo "---"
 
-# Configuration
+# Configuration (overridable via CLI flags)
 BATCH_SIZE=50
 BACKUP_BRANCH="streamlined-backup-$(date +%Y%m%d-%H%M%S)"
+NON_INTERACTIVE=0
+SINGLE_BATCH=0
+
+# Parse CLI flags
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --non-interactive)
+            NON_INTERACTIVE=1
+            ;;
+        --single-batch)
+            SINGLE_BATCH=1
+            ;;
+        --batch-size)
+            shift
+            if [ -n "$1" ]; then
+                BATCH_SIZE="$1"
+            fi
+            ;;
+        *)
+            ;;
+    esac
+    shift
+done
 
 # Create a backup branch
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
@@ -31,39 +54,25 @@ BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
-    
+
     echo "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-<<<<<<< HEAD
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-=======
-    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            sed -i '/        fi
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-        
+
+    # Check if file has merge conflict markers
+    if grep -q '<<<<<<< ' "$file"; then
+        case "$file" in
+            next.config.js|tsconfig.json|tailwind.config.js|postcss.config.*)
+                # Prefer main (ours) for configuration files
+                git checkout --ours -- "$file"
+                ;;
+            package.json|package-lock.json|pnpm-lock.yaml|yarn.lock)
+                # Prefer incoming (theirs) for lockfiles to reduce churn
+                git checkout --theirs -- "$file"
+                ;;
+            *)
+                # Default to main (ours) to keep current behavior stable
+                git checkout --ours -- "$file"
+                ;;
+        esac
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
@@ -193,14 +202,21 @@ for ((i=0; i<total_branches; i+=BATCH_SIZE)); do
     echo "✅ Batch $current_batch completed: $batch_success successful, $batch_failures failed"
     echo "---"
     
-    # Ask user if they want to continue
+    # Continue automatically in non-interactive mode
     if [ $((i + BATCH_SIZE)) -lt $total_branches ]; then
-        echo ""
-        read -p "Continue to next batch? (y/n): " -n 1 -r
-        echo
-        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-            echo "⏸️  Pausing batch processing. You can resume later."
-            break
+        if [ "$NON_INTERACTIVE" -eq 1 ]; then
+            if [ "$SINGLE_BATCH" -eq 1 ]; then
+                echo "⏸️  Single-batch mode enabled. Stopping after this batch."
+                break
+            fi
+        else
+            echo ""
+            read -p "Continue to next batch? (y/n): " -n 1 -r
+            echo
+            if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+                echo "⏸️  Pausing batch processing. You can resume later."
+                break
+            fi
         fi
     fi
 done

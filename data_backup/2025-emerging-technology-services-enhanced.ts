@@ -1,44 +1,45 @@
-import { ServiceVariant } from "../types/service-variants";
+import React from 'react',
+import { ServiceVariant } from "../types/service-variants",
 export interface EmergingTechnologyService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTechnologyService[] = [// Quantum Computing as a Service
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTechnologyService[] = [// Quantum Computing as a Service,
   {
-    id:,
+    id: ,
   quantum-computing-as-a-service',
     "name": 'Quantum Computing as a Service,
     tagline:,
@@ -48,19 +49,13 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   /month',
     "description": Advanced quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools.',
     features[
-  'Access to quantum processors (IBM, Google, Rigetti)',
-  'Quantum algorithm library',
-  'Quantum software development kit',
-  'Real-time quantum circuit execution',
-  'Quantum error correction',
-  'Hybrid quantum-classical computing',
-  'Quantum machine learning algorithms',
-  'Quantum cryptography tools',
-  'Performance monitoring and analytics',
-  'Expert quantum consulting'
-    ],
+  'Access to quantum processors (IBM, Google, Rigetti)Quantum algorithm library',
+  'Quantum software development kitReal-time quantum circuit execution',
+  'Quantum error correctionHybrid quantum-classical computing',
+  'Quantum machine learning algorithmsQuantum cryptography tools',
+  'Performance monitoring and analyticsExpert quantum consulting'],
     "popular": true,
-    icon:,
+    icon: ,
   ⚛️',
     "color": 'from-indigo-60o0 to-purple-60o0,
     textColor:,
@@ -70,7 +65,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Competes with IBM Quantum ($0.60/minute), Amazon Braket ($0.30/hour), Google Quantum ($0.50/minute). Our "advantage": Comprehensive quantum ecosystem with hybrid computing and expert support.,
     "targetAudience": 'Research institutions, Pharmaceutical companies, Financial services, Cybersecurity firms, AI research labs',
     "trialDays": 7,
-    setupTime:,
+    setupTime: ,
   8-12 hours',
     "category": 'Quantum Computing & Technology,
     "realService": true,
@@ -82,7 +77,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     competitors[,
   IBM Quantum, Amazon Braket, Google Quantum, Azure Quantum'],
     "marketSize": '$1.8B quantum computing market,
-    growthRate:,
+    growthRate: ,
   45% annual growth',
     "variant": 'quantum-computing-enterprise,
     "contactInfo": {
@@ -91,19 +86,17 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.',
     "launchDate": '20o24-10-15,
     "customers": 23,
     "rating": 4.9,
-    "reviews": 18
-  },
-  // Blockchain Infrastructure Platform
+    "reviews": 18},
+  // Blockchain Infrastructure Platform,
   {
-    id:,
+    id: ,
   blockchain-infrastructure-platform',
     "name": 'Blockchain Infrastructure Platform,
     tagline:,
@@ -112,19 +105,13 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     period:,
   /month',
     "description": Advanced blockchain platform that provides infrastructure, development tools, and deployment services for enterprise blockchain applications.',
-    features['Multi-blockchain support (Ethereum, Polygon, Solana)',
-  'Smart contract development tools',
-  'Blockchain deployment automation',
-  'Performance monitoring and analytics',
-  'Security auditing and testing',
-  'Cross-chain interoperability',
-  'Scalability solutions',
-  'Developer SDK and APIs',
-  'Compliance and governance tools',
-  '24/7 blockchain monitoring'
-    ],
+    features['Multi-blockchain support (Ethereum, Polygon, Solana)Smart contract development tools',
+  'Blockchain deployment automationPerformance monitoring and analytics',
+  'Security auditing and testingCross-chain interoperability',
+  'Scalability solutionsDeveloper SDK and APIs',
+  'Compliance and governance tools24/7 blockchain monitoring'],
     "popular": true,
-    icon:,
+    icon: ,
   🔗',
     "color": 'from-green-60o0 to-emerald-60o0,
     textColor:,
@@ -134,7 +121,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Competes with Alchemy ($49/month), Infura ($99/month), QuickNode ($49/month). Our "advantage": Multi-blockchain support with enterprise-grade security and compliance.,
     "targetAudience": 'Blockchain developers, DeFi companies, NFT platforms, Enterprise organizations, Financial institutions',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   4-6 hours',
     "category": 'Blockchain & Web3,
     "realService": true,
@@ -146,7 +133,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     competitors[,
   Alchemy, Infura, QuickNode, AWS Blockchain'],
     "marketSize": '$19.9B blockchain market,
-    growthRate:,
+    growthRate: ,
   87% annual growth',
     "variant": 'blockchain-enterprise,
     "contactInfo": {
@@ -155,19 +142,17 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.',
     "launchDate": '20o24-11-0o1,
     "customers": 89,
     "rating": 4.8,
-    "reviews": 67
-  },
-  // Edge Computing Orchestration Platform
+    "reviews": 67},
+  // Edge Computing Orchestration Platform,
   {
-    id:,
+    id: ,
   edge-computing-orchestration-platform',
     "name": 'Edge Computing Orchestration Platform,
     tagline:,
@@ -176,19 +161,13 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     period:,
   /month',
     "description": Advanced edge computing platform that orchestrates distributed computing resources, optimizes performance, and provides real-time data processing capabilities.',
-    features['Distributed edge node management',
-  'Real-time data processing',
-  'Load balancing and optimization',
-  'Edge AI model deployment',
-  'Performance monitoring and analytics',
-  'Security and compliance tools',
-  'Multi-cloud edge integration',
-  'Custom edge applications',
-  'Edge-to-cloud synchronization',
-  'Advanced orchestration dashboard'
-    ],
+    features['Distributed edge node managementReal-time data processing',
+  'Load balancing and optimizationEdge AI model deployment',
+  'Performance monitoring and analyticsSecurity and compliance tools',
+  'Multi-cloud edge integrationCustom edge applications',
+  'Edge-to-cloud synchronizationAdvanced orchestration dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   🌐',
     "color": 'from-blue-60o0 to-cyan-60o0,
     textColor:,
@@ -198,7 +177,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), Google Cloud IoT ($0.0o044/10o0KB). Our "advantage": Intelligent orchestration reduces latency by 80% and improves resource utilization by 60%.,
     "targetAudience": 'IoT companies, Edge computing providers, Telecommunications, Manufacturing, Smart cities',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   6-8 hours',
     "category": 'Edge Computing & IoT,
     "realService": true,
@@ -206,11 +185,11 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Kubernetes, Docker, Python, Go, React, Node.js, Redis'],
     integrations['AWS, Azure, GCP, Kubernetes, Docker, MQTT, CoAP'],
     useCases['IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation'],
-    "roi": 'Edge computing projects report 40o0% ROI through reduced latency and improved performance.,
+    "roi": 'Edge computing projects report 40o0% ROI through reduced latency and improved window.window.performance.,
     competitors[,
   AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],
     "marketSize": '$11.2B edge computing market,
-    growthRate:,
+    growthRate: ,
   37% annual growth',
     "variant": 'edge-computing-enterprise,
     "contactInfo": {
@@ -219,19 +198,17 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.',
     "launchDate": '20o24-11-20,
     "customers": 156,
     "rating": 4.7,
-    "reviews": 98
-  },
-  // Metaverse Development Platform
+    "reviews": 98},
+  // Metaverse Development Platform,
   {
-    id:,
+    id: ,
   metaverse-development-platform',
     "name": 'Metaverse Development Platform,
     tagline:,
@@ -240,19 +217,13 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     period:,
   /month',
     "description": Advanced metaverse platform that provides tools for creating, deploying, and managing immersive virtual worlds and experiences.',
-    features['3D world building tools',
-  'Avatar creation and customization',
-  'Real-time collaboration tools',
-  'VR/AR integration',
-  'Blockchain integration',
-  'Social features and networking',
-  'Content monetization tools',
-  'Performance optimization',
-  'Multi-platform deployment',
-  'Advanced analytics dashboard'
-    ],
+    features['3D world building toolsAvatar creation and customization',
+  'Real-time collaboration toolsVR/AR integration',
+  'Blockchain integrationSocial features and networking',
+  'Content monetization toolsPerformance optimization',
+  'Multi-platform deploymentAdvanced analytics dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   🌍',
     "color": 'from-purple-60o0 to-pink-60o0,
     textColor:,
@@ -262,7 +233,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Competes with Unity Pro ($180/month), Unreal Engine ($0), Roblox Studio ($0). Our "advantage": Integrated metaverse ecosystem with blockchain and social features.,
     "targetAudience": 'Gaming companies, Virtual event organizers, Educational institutions, Real estate companies, Entertainment companies',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   8-10 hours',
     "category": 'Metaverse & Virtual Reality,
     "realService": true,
@@ -274,7 +245,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     competitors[,
   Unity, Unreal Engine, Roblox Studio, Decentraland'],
     "marketSize": '$47.5B metaverse market,
-    growthRate:,
+    growthRate: ,
   42% annual growth',
     "variant": 'metaverse-enterprise,
     "contactInfo": {
@@ -283,19 +254,17 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.',
     "launchDate": '20o24-12-0o1,
     "customers": 67,
     "rating": 4.8,
-    "reviews": 45
-  },
-  // Space Technology Platform
+    "reviews": 45},
+  // Space Technology Platform,
   {
-    id:,
+    id: ,
   space-technology-platform',
     "name": 'Space Technology Platform,
     tagline:,
@@ -304,19 +273,13 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     period:,
   /month',
     "description": Advanced space technology platform that provides satellite management, space data analytics, and space infrastructure solutions.',
-    features['Satellite constellation management',
-  'Space data analytics and processing',
-  'Ground station automation',
-  'Orbital mechanics optimization',
-  'Space weather monitoring',
-  'Satellite communication tools',
-  'Space debris tracking',
-  'Launch vehicle integration',
-  'Regulatory compliance tools',
-  'Advanced space analytics dashboard'
-    ],
+    features['Satellite constellation managementSpace data analytics and processing',
+  'Ground station automationOrbital mechanics optimization',
+  'Space weather monitoringSatellite communication tools',
+  'Space debris trackingLaunch vehicle integration',
+  'Regulatory compliance toolsAdvanced space analytics dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   🚀',
     "color": 'from-gray-60o0 to-slate-60o0,
     textColor:,
@@ -326,7 +289,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Competes with Maxar ($0.50/km²), Planet ($0.30/km²), Airbus ($0.40/km²). Our "advantage": Comprehensive space technology platform with integrated analytics and management tools.,
     "targetAudience": 'Satellite companies, Space agencies, Telecommunications, Agriculture, Environmental monitoring',
     "trialDays": 7,
-    setupTime:,
+    setupTime: ,
   10-12 hours',
     "category": 'Space Technology & Satellites,
     "realService": true,
@@ -338,7 +301,7 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
     competitors[,
   Maxar, Planet, Airbus, SpaceX'],
     "marketSize": '$469B space economy,
-    growthRate:,
+    growthRate: ,
   8% annual growth',
     "variant": 'space-technology-enterprise,
     "contactInfo": {
@@ -347,13 +310,12 @@ reviews: number;export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.',
     "launchDate": '20o24-10-0o1,
     "customers": 34,
     "rating": 4.9,
-    "reviews": 23
-]}}
+    "reviews": 23]}}
+,

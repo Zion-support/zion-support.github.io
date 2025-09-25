@@ -1,1 +1,1 @@
-export { default } from "../../components/NewContent20o25AdvancedAutomationBanner";
+export { default } from '../../components/NewContent20o25AdvancedAutomationBanner',

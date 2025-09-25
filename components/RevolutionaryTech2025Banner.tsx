@@ -1,207 +1,227 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 const RevolutionaryTech20o25Banner = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-full px-8 py-3 mb-8">
-            <span className="text-lg font-bold">🚀 REVOLUTIONARY 20o25 CONTENT</span>
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent">
-            The Future of Technology is Here
-          </h2>
-          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover the groundbreaking technologies that are reshaping industries
-            transforming business operationsand creating unprecedented opportunities for growth.
-          </p>
-        </div>
-
+    <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20'>,
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
+        <div className='text-center mb-16'>,
+          <div className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-full px-8 py-3 mb-8'>,
+            <span className='text-lg font-bold'>,
+              🚀 REVOLUTIONARY 20o25 CONTENT,
+            </span>,
+          </div>,
+          <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
+            The Future of Technology is Here,
+          </h2>,
+          <p className='text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed'>,
+            Discover the groundbreaking technologies that are reshaping,
+            industries transforming business operationsand creating,
+            unprecedented opportunities for growth.,
+          </p>,
+        </div>,
         {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 mb-16'>,
           {/* Left Column - AI Automation */}
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 border border-white border-opacity-20">
-              <div className="flex items-center mb-6">
-                <div className="text-5xl mr-4">🤖</div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-2">AI Enterprise Automation</h3>
-                  <p className="text-lg opacity-90">Complete Implementation Guide</p>
-                </div>
-              </div>
-              <p className="text-lg mb-6 opacity-90">
-                Transform your business operations with AI-powered automation. Learn proven strategies
-                implementation best practicesand real-world success stories from industry leaders.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-40o0">340%</div>
-                  <div className="text-sm opacity-80">Average ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-40o0">45%</div>
-                  <div className="text-sm opacity-80">Efficiency Gain</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-40o0">98%</div>
-                  <div className="text-sm opacity-80">Success Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-40o0">50o0+</div>
-                  <div className="text-sm opacity-80">Projects</div>
-                </div>
-              </div>
-              <Link 
-                href="/blog/ai-20o25-enterprise-automation-revolution-complete-implementation-guide"
-                className="inline-flex items-center bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
-              >
-                Read Complete Guide →
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-r from-red-60o0 to-pink-60o0 rounded-2xl p-8 border border-white border-opacity-20">
-              <div className="flex items-center mb-6">
-                <div className="text-5xl mr-4">🔒</div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-2">AI Cybersecurity Revolution</h3>
-                  <p className="text-lg opacity-90">Next-Gen Threat Protection</p>
-                </div>
-              </div>
-              <p className="text-lg mb-6 opacity-90">
-                Protect your organization with AI-powered cybersecurity solutions. Advanced threat detection
-                automated response systemsand quantum-safe security measures.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-40o0">95%</div>
-                  <div className="text-sm opacity-80">Faster Response</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-40o0">98%</div>
-                  <div className="text-sm opacity-80">False Positive Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-40o0">99.9%</div>
-                  <div className="text-sm opacity-80">Threat Prevention</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-40o0">60%</div>
-                  <div className="text-sm opacity-80">Cost Reduction</div>
-                </div>
-              </div>
-              <Link 
-                href="/blog/ai-20o25-cybersecurity-revolution-next-generation-threat-protection"
-                className="inline-flex items-center bg-white text-red-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
-              >
-                Learn Security Solutions →
-              </Link>
-            </div>
-          </div>
-
+          <div className='space-y-8'>,
+            <div className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 border border-white border-opacity-20'>,
+              <div className='flex items-center mb-6'>,
+                <div className='text-5xl mr-4'>🤖</div>,
+                <div>,
+                  <h3 className='text-3xl font-bold mb-2'>,
+                    AI Enterprise Automation,
+                  </h3>,
+                  <p className='text-lg opacity-90'>,
+                    Complete Implementation Guide,
+                  </p>,
+                </div>,
+              </div>,
+              <p className='text-lg mb-6 opacity-90'>,
+                Transform your business operations with AI-powered automation.,
+                Learn proven strategies implementation best practicesand,
+                real-world success stories from industry leaders.,
+              </p>,
+              <div className='grid grid-cols-2 gap-4 mb-6'>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-yellow-40o0'>,
+                    340%,
+                  </div>,
+                  <div className='text-sm opacity-80'>Average ROI</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-green-40o0'>45%</div>,
+                  <div className='text-sm opacity-80'>Efficiency Gain</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-blue-40o0'>98%</div>,
+                  <div className='text-sm opacity-80'>Success Rate</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-purple-40o0'>,
+                    50o0+,
+                  </div>,
+                  <div className='text-sm opacity-80'>Projects</div>,
+                </div>,
+              </div>,
+              <Link
+                href='/blog/ai-20o25-enterprise-automation-revolution-complete-implementation-guide',
+                className='inline-flex items-center bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover: bg-gray-10o0 transition-colors'>,
+                Read Complete Guide →,
+              </Link>,
+            </div>,
+            <div className='bg-gradient-to-r from-red-60o0 to-pink-60o0 rounded-2xl p-8 border border-white border-opacity-20'>,
+              <div className='flex items-center mb-6'>,
+                <div className='text-5xl mr-4'>🔒</div>,
+                <div>,
+                  <h3 className='text-3xl font-bold mb-2'>,
+                    AI Cybersecurity Revolution,
+                  </h3>,
+                  <p className='text-lg opacity-90'>,
+                    Next-Gen Threat Protection,
+                  </p>,
+                </div>,
+              </div>,
+              <p className='text-lg mb-6 opacity-90'>,
+                Protect your organization with AI-powered cybersecurity,
+                solutions. Advanced threat detection automated response,
+                systemsand quantum-safe security measures.,
+              </p>,
+              <div className='grid grid-cols-2 gap-4 mb-6'>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-yellow-40o0'>95%</div>,
+                  <div className='text-sm opacity-80'>Faster Response</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-green-40o0'>98%</div>,
+                  <div className='text-sm opacity-80'>,
+                    False Positive Reduction,
+                  </div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-blue-40o0'>99.9%</div>,
+                  <div className='text-sm opacity-80'>Threat Prevention</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-purple-40o0'>60%</div>,
+                  <div className='text-sm opacity-80'>Cost Reduction</div>,
+                </div>,
+              </div>,
+              <Link
+                href='/blog/ai-20o25-cybersecurity-revolution-next-generation-threat-protection',
+                className='inline-flex items-center bg-white text-red-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors'>,
+                Learn Security Solutions →,
+              </Link>,
+            </div>,
+          </div>,
           {/* Right Column - Quantum Computing */}
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 rounded-2xl p-8 border border-white border-opacity-20">
-              <div className="flex items-center mb-6">
-                <div className="text-5xl mr-4">⚛️</div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-2">Quantum Computing</h3>
-                  <p className="text-lg opacity-90">Business Applications Guide</p>
-                </div>
-              </div>
-              <p className="text-lg mb-6 opacity-90">
-                Harness the power of quantum computing for your business. Explore practical applications
-                implementation strategiesand industry transformation opportunities.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-40o0">$65.5B</div>
-                  <div className="text-sm opacity-80">Market by 20o30</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-40o0">10o00x</div>
-                  <div className="text-sm opacity-80">Speed Improvement</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-40o0">45%</div>
-                  <div className="text-sm opacity-80">Fortune 50o0 Adoption</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-40o0">340%</div>
-                  <div className="text-sm opacity-80">Investment Growth</div>
-                </div>
-              </div>
-              <Link 
-                href="/blog/quantum-computing-business-applications-20o25-ultimate-guide"
-                className="inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
-              >
-                Explore Quantum Guide →
-              </Link>
-            </div>
-
+          <div className='space-y-8'>,
+            <div className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 rounded-2xl p-8 border border-white border-opacity-20'>,
+              <div className='flex items-center mb-6'>,
+                <div className='text-5xl mr-4'>⚛️</div>,
+                <div>,
+                  <h3 className='text-3xl font-bold mb-2'>Quantum Computing</h3>,
+                  <p className='text-lg opacity-90'>,
+                    Business Applications Guide,
+                  </p>,
+                </div>,
+              </div>,
+              <p className='text-lg mb-6 opacity-90'>,
+                Harness the power of quantum computing for your business.,
+                Explore practical applications implementation strategiesand,
+                industry transformation opportunities.,
+              </p>,
+              <div className='grid grid-cols-2 gap-4 mb-6'>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-yellow-40o0'>,
+                    $65.5B,
+                  </div>,
+                  <div className='text-sm opacity-80'>Market by 20o30</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-green-40o0'>,
+                    10o00x,
+                  </div>,
+                  <div className='text-sm opacity-80'>Speed Improvement</div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-blue-40o0'>45%</div>,
+                  <div className='text-sm opacity-80'>,
+                    Fortune 50o0 Adoption,
+                  </div>,
+                </div>,
+                <div className='text-center'>,
+                  <div className='text-3xl font-bold text-purple-40o0'>,
+                    340%,
+                  </div>,
+                  <div className='text-sm opacity-80'>Investment Growth</div>,
+                </div>,
+              </div>,
+              <Link
+                href='/blog/quantum-computing-business-applications-20o25-ultimate-guide',
+                className='inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-xl font-bold text-lg hover: bg-gray-10o0 transition-colors'>,
+                Explore Quantum Guide →,
+              </Link>,
+            </div>,
             {/* Additional Content Preview */}
-            <div className="bg-gradient-to-r from-green-60o0 to-teal-60o0 rounded-2xl p-8 border border-white border-opacity-20">
-              <div className="flex items-center mb-6">
-                <div className="text-5xl mr-4">🚀</div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-2">More Revolutionary Content</h3>
-                  <p className="text-lg opacity-90">Coming Soon</p>
-                </div>
-              </div>
-              <p className="text-lg mb-6 opacity-90">
-                Stay tuned for more groundbreaking content covering AI trendstechnology innovations
-                and business transformation strategies.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
-                  <span>AI 20o26 Future Predictions</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
-                  <span>Neural Interface Revolution</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
-                  <span>Autonomous Business Systems</span>
-                </div>
-              </div>
-              <Link 
-                href="/blog"
-                className="inline-flex items-center bg-white text-green-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
-              >
-                Explore All Content →
-              </Link>
-            </div>
-          </div>
-        </div>
-
+            <div className='bg-gradient-to-r from-green-60o0 to-teal-60o0 rounded-2xl p-8 border border-white border-opacity-20'>,
+              <div className='flex items-center mb-6'>,
+                <div className='text-5xl mr-4'>🚀</div>,
+                <div>,
+                  <h3 className='text-3xl font-bold mb-2'>,
+                    More Revolutionary Content,
+                  </h3>,
+                  <p className='text-lg opacity-90'>Coming Soon</p>,
+                </div>,
+              </div>,
+              <p className='text-lg mb-6 opacity-90'>,
+                Stay tuned for more groundbreaking content covering AI,
+                trendstechnology innovations and business transformation,
+                strategies.,
+              </p>,
+              <div className='space-y-3 mb-6'>,
+                <div className='flex items-center text-sm'>,
+                  <span className='w-2 h-2 bg-yellow-40o0 rounded-full mr-3'></span>,
+                  <span>AI 20o26 Future Predictions</span>,
+                </div>,
+                <div className='flex items-center text-sm'>,
+                  <span className='w-2 h-2 bg-yellow-40o0 rounded-full mr-3'></span>,
+                  <span>Neural Interface Revolution</span>,
+                </div>,
+                <div className='flex items-center text-sm'>,
+                  <span className='w-2 h-2 bg-yellow-40o0 rounded-full mr-3'></span>,
+                  <span>Autonomous Business Systems</span>,
+                </div>,
+              </div>,
+              <Link
+                href='/blog',
+                className='inline-flex items-center bg-white text-green-60o0 px-8 py-4 rounded-xl font-bold text-lg hover: bg-gray-10o0 transition-colors'>,
+                Explore All Content →,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
         {/* Bottom CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-2xl p-12">
-            <h3 className="text-4xl font-bold mb-6">Ready to Lead the Technology Revolution?</h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join the organizations already transforming their business with cutting-edge AI
-              quantum computingand cybersecurity solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <div className='text-center'>,
+          <div className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-2xl p-12'>,
+            <h3 className='text-4xl font-bold mb-6'>,
+              Ready to Lead the Technology Revolution?,
+            </h3>,
+            <p className='text-xl mb-8 opacity-90'>,
+              Join the organizations already transforming their business with,
+              cutting-edge AI quantum computingand cybersecurity solutions.,
+            </p>,
+            <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
               <Link
-                href="/contact"
-                className="bg-black text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-80o0 transition-colors"
-              >
-                Get Expert Consultation
-              </Link>
+                href='/contact',
+                className='bg-black text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-80o0 transition-colors'>,
+                Get Expert Consultation,
+              </Link>,
               <Link
-                href="/services"
-                className="border-2 border-black text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-black hover:text-white transition-colors"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default RevolutionaryTech20o25Banner;
+                href='/services',
+                className='border-2 border-black text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-black hover:text-white transition-colors'>,
+                Explore Our Services,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>)},
+export default RevolutionaryTech20o25Banner,

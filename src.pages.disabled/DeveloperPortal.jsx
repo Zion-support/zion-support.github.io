@@ -1,12 +1,10 @@
 interface DeveloperPortalProps {
-  // Add props here as needed
-}
-
+  // Add props here as needed}
+,
 export default function DeveloperPortal({ }: DeveloperPortalProps) {
   return (
-    <div>
-      <h1>DeveloperPortal</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+    <div>,
+      <h1>DeveloperPortal</h1>,
+      <p>This component is currently under development.</p>,
+    </div>)}
+,

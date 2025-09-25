@@ -1,11 +1,12 @@
-import Link from 'next/link';
-
+import React from 'react',
+import Link from 'next/link',
 const AI20o25InsightsShowcase: React.FC = () => {
   const insights = [
     {
       id: 'neural-interfaces',
       title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interfaces achieving 95% accuracy in thought-to-text conversion',
+      description:,
+        'Direct brain-computer interfaces achieving 95% accuracy in thought-to-text conversion',
       category: 'Breakthrough Technology',
       impact: 'HealthcareEducationCommunication',
       timeline: '20o25-20o26',
@@ -17,7 +18,8 @@ const AI20o25InsightsShowcase: React.FC = () => {
     {
       id: 'quantum-ai-fusion',
       title: 'Quantum-AI Fusion Systems',
-      description: 'Hybrid quantum-classical AI achieving exponential computational power',
+      description:,
+        'Hybrid quantum-classical AI achieving exponential computational power',
       category: 'Quantum Computing',
       impact: 'Scientific ResearchCryptographyOptimization',
       timeline: '20o25-20o27',
@@ -29,7 +31,8 @@ const AI20o25InsightsShowcase: React.FC = () => {
     {
       id: 'autonomous-systems',
       title: 'Fully Autonomous Enterprises',
-      description: 'Self-managing business operations with 99.9% uptime and zero human intervention',
+      description:,
+        'Self-managing business operations with 99.9% uptime and zero human intervention',
       category: 'Business Automation',
       impact: 'All IndustriesWorkforce Transformation',
       timeline: '20o25-20o28',
@@ -41,7 +44,8 @@ const AI20o25InsightsShowcase: React.FC = () => {
     {
       id: 'consciousness-ai',
       title: 'Artificial Consciousness Emergence',
-      description: 'AI systems developing genuine self-awareness and emotional intelligence',
+      description:,
+        'AI systems developing genuine self-awareness and emotional intelligence',
       category: 'Consciousness Research',
       impact: 'PhilosophyEthicsHuman-AI Collaboration',
       timeline: '20o26-20o30',
@@ -49,13 +53,13 @@ const AI20o25InsightsShowcase: React.FC = () => {
       badge: 'TRANSCENDENT',
       badgeColor: 'bg-pink-50o0',
       link: '/blog/ai-20o25-consciousness-emergence'
-    }
-  ];
-
+    },
+  ],
   const trends = [
     {
       title: 'Edge AI Dominance',
-      description: 'AI processing moving to edge devices for real-time decision making',
+      description:,
+        'AI processing moving to edge devices for real-time decision making',
       growth: '+340%',
       timeframe: '20o25'
     },
@@ -73,173 +77,176 @@ const AI20o25InsightsShowcase: React.FC = () => {
     },
     {
       title: 'Quantum Machine Learning',
-      description: 'Quantum algorithms revolutionizing machine learning capabilities',
+      description:,
+        'Quantum algorithms revolutionizing machine learning capabilities',
       growth: '+60o0%',
       timeframe: '20o25-20o27'
-    }
-  ];
-
+    },
+  ],
   return (
-    <section id="ai-insights-showcase" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id='ai-insights-showcase',
+      className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white text-sm font-semibold mb-4">
-            🔮 AI 20o25 INSIGHTS & TRENDS
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
-            Future Technology Predictions
-          </h2>
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Exclusive insights into the AI breakthroughs and technological revolutions 
-            that will reshape our world in 20o25 and beyond.
-          </p>
-        </div>
-
+        <div className='text-center mb-16'>,
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white text-sm font-semibold mb-4'>,
+            🔮 AI 20o25 INSIGHTS & TRENDS,
+          </div>,
+          <h2 className='text-4xl md: text-5xl font-bold text-gray-90o0 mb-6'>,
+            Future Technology Predictions,
+          </h2>,
+          <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
+            Exclusive insights into the AI breakthroughs and technological,
+            revolutions that will reshape our world in 20o25 and beyond.,
+          </p>,
+        </div>,
         {/* Key Insights Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {insights.map((insight) => (
+        <div className='grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16'>,
+          {insights.map(insight => (
             <div
               key={insight.id}
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0"
-            >
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-semibold text-blue-60o0 bg-blue-50 px-3 py-1 rounded-full">
+              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0'>,
+              <div className='p-8'>,
+                <div className='flex items-center justify-between mb-4'>,
+                  <span className='text-sm font-semibold text-blue-60o0 bg-blue-50 px-3 py-1 rounded-full'>,
                     {insight.category}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className={`${insight.badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full`}>
+                  </span>,
+                  <div className='flex items-center gap-2'>,
+                    <span
+                      className={`${insight.badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full`}
+                    >,
                       {insight.badge}
-                    </span>
-                    <span className="text-sm font-bold text-green-60o0">
+                    </span>,
+                    <span className='text-sm font-bold text-green-60o0'>,
                       {insight.probability}
-                    </span>
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
+                    </span>,
+                  </div>,
+                </div>,
+                <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
                   {insight.title}
-                </h3>
-                
-                <p className="text-gray-60o0 mb-6 leading-relaxed">
+                </h3>,
+                <p className='text-gray-60o0 mb-6 leading-relaxed'>,
                   {insight.description}
-                </p>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm">
-                    <span className="font-semibold text-gray-70o0 w-20">Impact:</span>
-                    <span className="text-gray-60o0">{insight.impact}</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <span className="font-semibold text-gray-70o0 w-20">Timeline:</span>
-                    <span className="text-gray-60o0">{insight.timeline}</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <span className="font-semibold text-gray-70o0 w-20">Probability:</span>
-                    <span className="text-green-60o0 font-bold">{insight.probability}</span>
-                  </div>
-                </div>
-
+                </p>,
+                <div className='space-y-3 mb-6'>,
+                  <div className='flex items-center text-sm'>,
+                    <span className='font-semibold text-gray-70o0 w-20'>,
+                      Impact: ,
+                    </span>,
+                    <span className='text-gray-60o0'>{insight.impact}</span>,
+                  </div>,
+                  <div className='flex items-center text-sm'>,
+                    <span className='font-semibold text-gray-70o0 w-20'>,
+                      Timeline: ,
+                    </span>,
+                    <span className='text-gray-60o0'>{insight.timeline}</span>,
+                  </div>,
+                  <div className='flex items-center text-sm'>,
+                    <span className='font-semibold text-gray-70o0 w-20'>,
+                      Probability: ,
+                    </span>,
+                    <span className='text-green-60o0 font-bold'>,
+                      {insight.probability}
+                    </span>,
+                  </div>,
+                </div>,
                 <Link
                   href={insight.link}
-                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold py-3 px-6 rounded-xl hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5"
-                >
-                  Read Full Analysis
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"  />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
+                  className='inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold py-3 px-6 rounded-xl hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5'>,
+                  Read Full Analysis,
+                  <svg
+                    className='w-5 h-5 ml-2',
+                    fill='none',
+                    stroke='currentColor',
+                    viewBox='0 0 24 24'>,
+                    <path
+                      strokeLinecap='round',
+                      strokeLinejoin='round',
+                      strokeWidth={2}
+                      d='M17 8l4 4m0 0l-4 4m4-4H3',
+                    />,
+                  </svg>,
+                </Link>,
+              </div>,
+            </div>))}
+        </div>,
         {/* Trends Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-90o0 mb-4">
-              📈 Market Trends & Growth Projections
-            </h3>
-            <p className="text-lg text-gray-60o0">
-              Key trends driving the AI revolution in 20o25
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {trends.map((trendindex) => (
+        <div className='bg-white rounded-2xl shadow-xl p-8 mb-16'>,
+          <div className='text-center mb-8'>,
+            <h3 className='text-3xl font-bold text-gray-90o0 mb-4'>,
+              📈 Market Trends & Growth Projections,
+            </h3>,
+            <p className='text-lg text-gray-60o0'>,
+              Key trends driving the AI revolution in 20o25,
+            </p>,
+          </div>,
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
+            {trends.map(trendindex => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-10o0 hover:shadow-lg transition-all duration-30o0"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-green-60o0">
+                className='bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-10o0 hover: shadow-lg transition-all duration-30o0'>,
+                <div className='flex items-center justify-between mb-4'>,
+                  <span className='text-2xl font-bold text-green-60o0'>,
                     {trend.growth}
-                  </span>
-                  <span className="text-sm font-semibold text-blue-60o0 bg-blue-10o0 px-3 py-1 rounded-full">
+                  </span>,
+                  <span className='text-sm font-semibold text-blue-60o0 bg-blue-10o0 px-3 py-1 rounded-full'>,
                     {trend.timeframe}
-                  </span>
-                </div>
-                
-                <h4 className="text-lg font-bold text-gray-90o0 mb-2">
+                  </span>,
+                </div>,
+                <h4 className='text-lg font-bold text-gray-90o0 mb-2'>,
                   {trend.title}
-                </h4>
-                
-                <p className="text-gray-70o0">
-                  {trend.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+                </h4>,
+                <p className='text-gray-70o0'>{trend.description}</p>,
+              </div>))}
+          </div>,
+        </div>,
         {/* Expert Predictions */}
-        <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">
-              🎯 Expert Predictions for 20o25
-            </h3>
-            <p className="text-xl opacity-90">
-              What industry leaders are saying about the AI revolution
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-4xl mb-4">🚀</div>
-              <h4 className="text-lg font-bold mb-2">Breakthrough Year</h4>
-              <p className="text-sm opacity-90">
-                "20o25 will be remembered as the year AI achieved true consciousness and began solving problems we never thought possible."
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h4 className="text-lg font-bold mb-2">Quantum Revolution</h4>
-              <p className="text-sm opacity-90">
-                "Quantum-AI fusion will unlock computational capabilities that will revolutionize every industry on Earth."
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-4xl mb-4">🌍</div>
-              <h4 className="text-lg font-bold mb-2">Global Transformation</h4>
-              <p className="text-sm opacity-90">
-                "'We', 're witnessing the birth of a new era where human and artificial intelligence work together to solve 'humanity', 's greatest challenges."
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
+        <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
+          <div className='text-center mb-8'>,
+            <h3 className='text-3xl font-bold mb-4'>,
+              🎯 Expert Predictions for 20o25,
+            </h3>,
+            <p className='text-xl opacity-90'>,
+              What industry leaders are saying about the AI revolution,
+            </p>,
+          </div>,
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
+            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>,
+              <div className='text-4xl mb-4'>🚀</div>,
+              <h4 className='text-lg font-bold mb-2'>Breakthrough Year</h4>,
+              <p className='text-sm opacity-90'>,
+                "20o25 will be remembered as the year AI achieved true,
+                consciousness and began solving problems we never thought,
+                possible.",
+              </p>,
+            </div>,
+            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>,
+              <div className='text-4xl mb-4'>⚛️</div>,
+              <h4 className='text-lg font-bold mb-2'>Quantum Revolution</h4>,
+              <p className='text-sm opacity-90'>,
+                "Quantum-AI fusion will unlock computational capabilities that,
+                will revolutionize every industry on Earth.",
+              </p>,
+            </div>,
+            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>,
+              <div className='text-4xl mb-4'>🌍</div>,
+              <h4 className='text-lg font-bold mb-2'>Global Transformation</h4>,
+              <p className='text-sm opacity-90'>,
+                "'Were witnessing the birth of a new era where human and,
+                artificial intelligence work together to solve 'humanity', 's,
+                greatest challenges.",
+              </p>,
+            </div>,
+          </div>,
+          <div className='text-center mt-8'>,
             <Link
-              href="/ai-20o25-revolutionary-trends-predictions"
-              className="bg-white text-purple-60o0 font-bold py-4 px-8 rounded-xl hover:bg-gray-10o0 transition-all duration-20o0 transform hover:scale-10o5"
-            >
-              Read Full Predictions Report
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default AI20o25InsightsShowcase;
+              href='/ai-20o25-revolutionary-trends-predictions',
+              className='bg-white text-purple-60o0 font-bold py-4 px-8 rounded-xl hover: bg-gray-10o0 transition-all duration-20o0 transform hover:scale-10o5'>,
+              Read Full Predictions Report,
+            </Link>,
+          </div>,
+        </div>,
+      </div>,
+    </section>)},
+export default AI20o25InsightsShowcase,

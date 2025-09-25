@@ -1,41 +1,42 @@
-import { ServiceVariant } from '../types/service-variants';
+import React from 'react',
+import { ServiceVariant } from '../types/service-variants',
 export interface RealMicroSaasService20o24 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period?: string;
-  description?: string;
-  features: string[];
-  rating: number;
-  customers: string | number;
-  variant?: string;
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category?: string;
-  realService?: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period?: string,
+  description?: string,
+  features: string[],
+  rating: number,
+  customers: string | number,
+  variant?: string,
+  popular?: boolean,
+  icon?: string,
+  color?: string,
+  textColor?: string,
+  link?: string,
+  marketPosition?: string,
+  targetAudience?: string,
+  trialDays?: number,
+  setupTime?: string,
+  category?: string,
+  realService?: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
   contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation?: boolean;
-  implementationDetails?: string;
-  launchDate?: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation?: boolean,
+  implementationDetails?: string,
+  launchDate?: string,
   reviews?: number}
 export const "realMicroSaasServices20o24": RealMicroSaasService20o24[] = [{
     id: 'ai-business-intelligence-pro',
@@ -45,16 +46,11 @@ export const "realMicroSaasServices20o24": RealMicroSaasService20o24[] = [{
     "period": '/month',
     "description": 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
     "features": [
-      'AI-powered data analysis and insights',
-      'Real-time dashboard with 50+ customizable widgets'
-      'Predictive analytics and forecasting',
-      'Automated report generation and scheduling',
-      'Multi-source data integration (CRM, ERP, Analytics)',
-      'Natural language query interface',
-      'Mobile-responsive design'
-      'White-label solution for agencies',
-      'API access for custom integrations',
-      'Advanced security and compliance (SOC 2, GDPR)',
+      'AI-powered data analysis and insightsReal-time dashboard with 50+ customizable widgets',
+      'Predictive analytics and forecastingAutomated report generation and scheduling',
+      'Multi-source data integration (CRM, ERP, Analytics)Natural language query interface',
+      'Mobile-responsive designWhite-label solution for agencies',
+      'API access for custom integrationsAdvanced security and compliance (SOC 2, GDPR)',
     ],
     "popular": true,
     "icon": '📊',
@@ -81,14 +77,14 @@ export const "realMicroSaasServices20o24": RealMicroSaasService20o24[] = [{
       mobile: '+1 30o2 464 0950',
       "email": 'kleber@ziontechgroup.com',
       "address": '364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com'},
+      "website": 'https: //ziontechgroup.com'},
     "realImplementation": true,
     "implementationDetails": 'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.',
     "launchDate": '20o24-0o3-15',
     "customers": 180o0,
     "rating": 4.9,
     "reviews": 890},
-  // AI Customer Success Automation
+  // AI Customer Success Automation,
   {
     "id": 'ai-customer-success-automation',
     "name": 'AI Customer Success Automation',
@@ -96,16 +92,11 @@ export const "realMicroSaasServices20o24": RealMicroSaasService20o24[] = [{
     "price": '$199',
     "period": '/month',
     "description": 'Intelligent customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and scale customer success operations efficiently.',
-    "features": ['AI-powered churn prediction and prevention',
-      'Automated onboarding workflows'
-      'Intelligent customer health scoring',
-      'Automated check-in sequences'
-      'Success milestone tracking',
-      'Integration with popular CRM systems'
-      'Custom automation rules and triggers',
-      'Performance analytics and reporting',
-      'Multi-channel communication (email, SMS, in-app)',
-      'Customer feedback collection and analysis',
+    "features": ['AI-powered churn prediction and preventionAutomated onboarding workflows',
+      'Intelligent customer health scoringAutomated check-in sequences',
+      'Success milestone trackingIntegration with popular CRM systems',
+      'Custom automation rules and triggersPerformance analytics and reporting',
+      'Multi-channel communication (email, SMS, in-app)Customer feedback collection and analysis',
     ],
     "popular": true,
     "icon": '🤖',
@@ -132,11 +123,11 @@ export const "realMicroSaasServices20o24": RealMicroSaasService20o24[] = [{
       mobile: '+1 30o2 464 0950',
       "email": 'kleber@ziontechgroup.com',
       "address": '364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com'},
+      "website": 'https: //ziontechgroup.com'},
     "realImplementation": true,
     "implementationDetails": 'Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.',
     "launchDate": '20o24-0o2-20',
     "customers": 120o0,
     "rating": 4.8,
     "reviews": 650},
-];
+],

@@ -1,1 +1,1 @@
-export { default } from "../../components/QuantumAI20o26BreakthroughBanner";
+export { default } from '../../components/QuantumAI20o26BreakthroughBanner',

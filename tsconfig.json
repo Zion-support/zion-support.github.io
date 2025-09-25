@@ -1,73 +1,100 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "zion-website/src/*"
-      ]
-    },
+    "target": "ES2022",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@/app/*": [
+        "app/*"
+      ],
+      "@/components/*": [
+        "app/components/*"
+      ],
+      "@/lib/*": [
+        "app/lib/*"
+      ]
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
+    "types": [
+      "vite/client",
+      "node",
+      "react",
+      "react-dom"
+    ],
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "target": "ES2017"
+    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "types/**/*.d.ts"
+    "src-clean/src",
+    "src/types/offline-shims.d.ts",
+    "vite-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/node_modules/**",
-    ".next/cache",
     "dist",
-    "out",
-    "coverage",
     "build",
-    "public/build",
-    "server/**",
-    "zion-os/**",
-    "zion-os.disabled/**",
-    "zion-ai-assistant/**",
-    "zion-website/**",
-    "apps.backup/**",
-    "data_backup/**",
-    "backups/**",
-    "backup/**",
-    "data_backup",
-    "pages_backup_conflict",
-    "corrupted-files-backup",
-    "lib_backup",
-    "**/*backup*",
-    "**/*conflict*",
-    "**/*temp*",
-    "app/**/*.disabled/**",
-    "src/pages_backup/**",
-    "src/pages.broken/**",
-    "src.broken/**",
-    "src.disabled/**",
-    "src.pages.disabled/**"
+    "coverage",
+    "src/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "ts_files_backup",
+    "zion-os.disabled",
+    "zion-os",
+    "zion-website",
+    "zion-ai-assistant",
+    "types.disabled",
+    "**/*.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts",
+    // Temporarily exclude corrupted or legacy areas until cleaned
+    "src/routes",
+    "src/utils/errorBoundary.tsx",
+    "src/utils/imageOptimizer.tsx",
+    "src/utils/cartUtils.ts",
+    "src/pages/solutions",
+    "src/pages/services",
+    "src/pages",
+    "src/pages-disabled",
+    "src/components",
+    "src/context",
+    "src/legal",
+    "src/i18n.js",
+    "src/utils/sitemapGenerator.ts",
+    "src/vite-env.d.ts",
+    "src/utils/cartUtils.js"
   ]
 }

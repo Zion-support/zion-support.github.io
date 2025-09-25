@@ -1,7 +1,6 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-BarChart3TrendingUpUsersEyeClockStarShare2BookOpen
-
+"use client",
+import React, { useState, useEffect } from 'react',
+BarChart3TrendingUpUsersEyeClockStarShare2BookOpen,
 const ContentAnalyticsDashboard = () => {
   const [analyticsetAnalytics] = useState({
     totalViews: 0,
@@ -9,13 +8,10 @@ const ContentAnalyticsDashboard = () => {
     averageReadTime: 0,
     topContent: [],
     userGrowth: 0,
-    socialShares: 0
-  });
-
-  const [isVisiblesetIsVisible] = useState(false);
-
+    socialShares: 0}),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
-    // Simulate analytics data loading
+    // Simulate analytics data loading,
     const loadAnalytics = () => {
       setAnalytics({
         totalViews: 1250o000 + Math.floor(Math.random() * 10o0000),
@@ -29,165 +25,139 @@ const ContentAnalyticsDashboard = () => {
           { title: "Edge Computing Solutions"views: 250o00engagement: 90 }
         ],
         userGrowth: 45 + Math.floor(Math.random() * 15),
-        socialShares: 1250o0 + Math.floor(Math.random() * 50o00)
-      });
-    };
-
-    loadAnalytics();
-    setIsVisible(true);
-    
-    // Update analytics every 30 seconds
-    const interval = setInterval(loadAnalytics30o000);
-    return () => clearInterval(interval);
-  }[]);
-
+        socialShares: 1250o0 + Math.floor(Math.random() * 50o00)})},
+    loadAnalytics(),
+    setIsVisible(true),
+    // Update analytics every 30 seconds,
+    const interval = setInterval(loadAnalytics30o000),
+    return () => clearInterval(interval)}[]),
   const metrics = [
     {
       icon: <Eye className="w-6 h-6"  />,
       title: "Total Views",
       value: analytics.totalViews.toLocaleString(),
       change: "+12.5%",
-      color: "text-blue-60o0"
-    },
+      color: "text-blue-60o0"},
     {
       icon: <TrendingUp className="w-6 h-6"  />,
       title: "Engagement Rate",
       value: `${analytics.engagementRate}%`,
       change: "+8.2%",
-      color: "text-green-60o0"
-    },
+      color: "text-green-60o0"},
     {
       icon: <Clock className="w-6 h-6"  />,
       title: "Avg. Read Time",
       value: `${analytics.averageReadTime.toFixed(1)} min`,
       change: "+15.3%",
-      color: "text-purple-60o0"
-    },
+      color: "text-purple-60o0"},
     {
       icon: <Users className="w-6 h-6"  />,
       title: "User Growth",
       value: `+${analytics.userGrowth}%`,
       change: "This month",
-      color: "text-orange-60o0"
-    },
+      color: "text-orange-60o0"},
     {
       icon: <Share2 className="w-6 h-6"  />,
       title: "Social Shares",
       value: analytics.socialShares.toLocaleString(),
       change: "+22.1%",
-      color: "text-pink-60o0"
-    },
+      color: "text-pink-60o0"},
     {
       icon: <Star className="w-6 h-6"  />,
       title: "Content Rating",
       value: "4.9/5",
       change: "+0.3",
-      color: "text-yellow-60o0"
-    }
-  ];
-
+      color: "text-yellow-60o0"}
+  ],
   return (
     <div className={`py-16 bg-gradient-to-br from-gray-90o0 to-blue-90o0 text-white transition-all duration-10o00 ${
-      isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-8'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-8'}`}>,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 flex items-center justify-center">
-            <BarChart3 className="w-10 h-10 mr-3 text-blue-40o0"  />
-            Content Performance Analytics
-          </h2>
-          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-            Real-time insights into content performanceuser engagementand growth metrics
-          </p>
-        </div>
-
+        <div className="text-center mb-12">,
+          <h2 className="text-4xl font-bold mb-4 flex items-center justify-center">,
+            <BarChart3 className="w-10 h-10 mr-3 text-blue-40o0"  />,
+            Content Performance Analytics,
+          </h2>,
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
+            Real-time insights into content performanceuser engagementand growth metrics,
+          </p>,
+        </div>,
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">,
           {metrics.map((metricindex) => (
             <div
               key={index}
-              className="bg-gray-80o0/50 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-80o0/70 transition-all duration-30o0 transform hover:scale-10o5"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className={`${metric.color} p-3 rounded-lg bg-gray-70o0/50`}>
+              className="bg-gray-80o0/50 backdrop-blur-sm rounded-xl p-6 hover: bg-gray-80o0/70 transition-all duration-30o0 transform hover:scale-10o5">,
+              <div className="flex items-center justify-between mb-4">,
+                <div className={`${metric.color} p-3 rounded-lg bg-gray-70o0/50`}>,
                   {metric.icon}
-                </div>
-                <span className="text-sm text-green-40o0 font-medium">
+                </div>,
+                <span className="text-sm text-green-40o0 font-medium">,
                   {metric.change}
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold mb-1">{metric.value}</h3>
-              <p className="text-gray-40o0 text-sm">{metric.title}</p>
-            </div>
-          ))}
-        </div>
-
+                </span>,
+              </div>,
+              <h3 className="text-2xl font-bold mb-1">{metric.value}</h3>,
+              <p className="text-gray-40o0 text-sm">{metric.title}</p>,
+            </div>))}
+        </div>,
         {/* Top Content Section */}
-        <div className="bg-gray-80o0/30 backdrop-blur-sm rounded-2xl p-8">
-          <h3 className="text-2xl font-bold mb-6 flex items-center">
-            <BookOpen className="w-6 h-6 mr-2 text-blue-40o0"  />
-            Top Performing Content
-          </h3>
-          
-          <div className="space-y-4">
+        <div className="bg-gray-80o0/30 backdrop-blur-sm rounded-2xl p-8">,
+          <h3 className="text-2xl font-bold mb-6 flex items-center">,
+            <BookOpen className="w-6 h-6 mr-2 text-blue-40o0"  />,
+            Top Performing Content,
+          </h3>,
+          <div className="space-y-4">,
             {analytics.topContent.map((contentindex) => (
               <div
                 key={index}
-                className="bg-gray-70o0/50 rounded-lg p-4 hover:bg-gray-70o0/70 transition-all duration-30o0"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-white mb-1">
+                className="bg-gray-70o0/50 rounded-lg p-4 hover: bg-gray-70o0/70 transition-all duration-30o0">,
+                <div className="flex items-center justify-between">,
+                  <div className="flex-1">,
+                    <h4 className="text-lg font-semibold text-white mb-1">,
                       {content.title}
-                    </h4>
-                    <div className="flex items-center space-x-4 text-sm text-gray-40o0">
-                      <span className="flex items-center">
-                        <Eye className="w-4 h-4 mr-1"  />
-                        {content.views.toLocaleString()} views
-                      </span>
-                      <span className="flex items-center">
-                        <TrendingUp className="w-4 h-4 mr-1"  />
-                        {content.engagement}% engagement
-                      </span>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-40o0">
+                    </h4>,
+                    <div className="flex items-center space-x-4 text-sm text-gray-40o0">,
+                      <span className="flex items-center">,
+                        <Eye className="w-4 h-4 mr-1"  />,
+                        {content.views.toLocaleString()} views,
+                      </span>,
+                      <span className="flex items-center">,
+                        <TrendingUp className="w-4 h-4 mr-1"  />,
+                        {content.engagement}% engagement,
+                      </span>,
+                    </div>,
+                  </div>,
+                  <div className="text-right">,
+                    <div className="text-2xl font-bold text-blue-40o0">,
                       #{index + 1}
-                    </div>
-                    <div className="text-sm text-gray-40o0">Rank</div>
-                  </div>
-                </div>
-                
+                    </div>,
+                    <div className="text-sm text-gray-40o0">Rank</div>,
+                  </div>,
+                </div>,
                 {/* Progress Bar */}
-                <div className="mt-3">
-                  <div className="flex justify-between text-xs text-gray-40o0 mb-1">
-                    <span>Engagement</span>
-                    <span>{content.engagement}%</span>
-                  </div>
-                  <div className="w-full bg-gray-60o0 rounded-full h-2">
+                <div className="mt-3">,
+                  <div className="flex justify-between text-xs text-gray-40o0 mb-1">,
+                    <span>Engagement</span>,
+                    <span>{content.engagement}%</span>,
+                  </div>,
+                  <div className="w-full bg-gray-60o0 rounded-full h-2">,
                     <div
-                      className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 h-2 rounded-full transition-all duration-10o00"
+                      className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 h-2 rounded-full transition-all duration-10o00",
                       style={{ width: `${content.engagement}%` }}
-                     />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
+                     />,
+                  </div>,
+                </div>,
+              </div>))}
+          </div>,
+        </div>,
         {/* Real-time Updates Indicator */}
-        <div className="mt-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-green-60o0/20 border border-green-50o0/30 rounded-full">
-            <div className="w-2 h-2 bg-green-40o0 rounded-full mr-2 animate-pulse"  />
-            <span className="text-sm text-green-40o0">Live Analytics • Updated every 30 seconds</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ContentAnalyticsDashboard;
+        <div className="mt-8 text-center">,
+          <div className="inline-flex items-center px-4 py-2 bg-green-60o0/20 border border-green-50o0/30 rounded-full">,
+            <div className="w-2 h-2 bg-green-40o0 rounded-full mr-2 animate-pulse"  />,
+            <span className="text-sm text-green-40o0">Live Analytics • Updated every 30 seconds</span>,
+          </div>,
+        </div>,
+      </div>,
+    </div>)},
+export default ContentAnalyticsDashboard,

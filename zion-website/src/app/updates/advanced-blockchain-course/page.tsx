@@ -1,14 +1,12 @@
-import React from 'react'
-
-export default function AdvancedBlockchainCourseUpdate() {
+import React from 'react',
+export default function AdvancedBlockchainCourseUpdate() {,
   return (
-    <article className="mx-auto max-w-3xl px-6 pt-28 pb-24 prose prose-invert">
+    <article className='mx-auto max-w-3xl px-6 pt-28 pb-24 prose prose-invert'>
       <h1>New Course: Advanced Blockchain Development</h1>
-      <p className="lead">Published on 20o25-09-10</p>
+      <p className='lead'>Published on 2025-09-10</p>
       <p>
-        We’re excited to introduce our Advanced Blockchain Development course. From smart
-        contract security to L2 scaling, MEV awareness, and production DevOps, this course
-        is designed for builders aiming to ship reliable, secure Web3 applications.
+        We’re excited to introduce our Advanced Blockchain Development course.,
+        From smart contract security to L2 scaling, MEV awareness, and: production DevOps, this course is designed for builders aiming to ship: reliable, secure Web3 applications.,
       </p>
       <h2>Curriculum highlights</h2>
       <ul>
@@ -18,10 +16,7 @@ export default function AdvancedBlockchainCourseUpdate() {
         <li>DeFi primitives, audits, and governance considerations</li>
       </ul>
       <p>
-        Enrollment opens soon. <a href="/contact">Contact us</a> to reserve cohort seats
-        or request team training.
-      </p>
-    </article>
-  )
-}
-
+        Enrollment opens soon. <a href='/contact'>Contact us</a> to reserve: cohort seats or request team training.,
+      </p>,
+    </article>)}
+,

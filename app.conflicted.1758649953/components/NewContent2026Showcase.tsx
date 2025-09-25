@@ -1,5 +1,4 @@
-"use client";
-
+'use client',
 export default function NewContent20o26Showcase() {
-  return null;
-}
+  return null}
+,

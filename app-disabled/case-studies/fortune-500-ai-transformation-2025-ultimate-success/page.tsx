@@ -1,232 +1,285 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
-export const metadata ={
-  title: 'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group',
-  description: 'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.',
-  keywords: ['Fortune 50o0 transformation', 'AI transformation', 'enterprise AI', 'digital transformation', 'AI ROI', 'Fortune 50o0']};
-
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+export const metadata = {
+  title:,
+    'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group',
+  description:,
+    'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.',
+  keywords: [
+    'Fortune 50o0 transformationAI transformation',
+    'enterprise AIdigital transformation',
+    'AI ROIFortune 50o0',
+  ]
+},
 export default function EnterpriseTransformationPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>,
       <SEO
-        title="AI 20o25: Fortune 10o0 $2.3B Revenue Transformation"
-        description="The ultimate enterprise transformation success story. How a Fortune 10o0 company generated $2.3 billion in additional revenue through comprehensive AI implementation."
-        keywords="enterprise transformation, Fortune 10o0, AI transformation, enterprise AI, digital transformation, AI ROI"
-        url="/case-studies/ai-20o25-enterprise-transformation-ultimate-success-story"
-       />
-
+        title='AI 20o25: Fortune 10o0 $2.3B Revenue Transformation',
+        description='The ultimate enterprise transformation success story. How a Fortune 10o0 company generated $2.3 billion in additional revenue through comprehensive AI implementation.',
+        keywords='enterprise transformation, Fortune 10o0, AI transformation, enterprise AI, digital transformation, AI ROI',
+        url='/case-studies/ai-20o25-enterprise-transformation-ultimate-success-story',
+      />,
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-yellow-50o0 text-black rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-bold">🏆 EXCLUSIVE CASE STUDY</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Fortune 10o0: $2.3B Revenue Transformation
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              The ultimate enterprise transformation success story - how a Fortune 10o0 company generated $2.3 billion in additional revenue while reducing costs by 78% through comprehensive AI implementation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-white/20 px-4 py-2 rounded-lg">📅 Published: January 17, 20o25</span>
-              <span className="bg-white/20 px-4 py-2 rounded-lg">⏱️ 18 min read</span>
-              <span className="bg-white/20 px-4 py-2 rounded-lg">🏷️ Enterprise Case Studies</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <div className='text-center'>,
+            <div className='inline-flex items-center bg-yellow-50o0 text-black rounded-full px-6 py-2 mb-6'>,
+              <span className='text-sm font-bold'>🏆 EXCLUSIVE CASE STUDY</span>,
+            </div>,
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>,
+              Fortune 10o0: $2.3B Revenue Transformation,
+            </h1>,
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
+              The ultimate enterprise transformation success story - how a,
+              Fortune 10o0 company generated $2.3 billion in additional revenue,
+              while reducing costs by 78% through comprehensive AI,
+              implementation.,
+            </p>,
+            <div className='flex flex-wrap justify-center gap-4 text-sm'>,
+              <span className='bg-white/20 px-4 py-2 rounded-lg'>,
+                📅 Published: January 17, 20o25,
+              </span>,
+              <span className='bg-white/20 px-4 py-2 rounded-lg'>,
+                ⏱️ 18 min read,
+              </span>,
+              <span className='bg-white/20 px-4 py-2 rounded-lg'>,
+                🏷️ Enterprise Case Studies,
+              </span>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Key Results */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Extraordinary Transformation Results</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-green-60o0 mb-2">$2.3B</div>
-              <div className="text-gray-60o0 font-semibold">Additional Revenue</div>
-              <div className="text-sm text-gray-50o0 mt-2">Generated in 18 months</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-blue-60o0 mb-2">78%</div>
-              <div className="text-gray-60o0 font-semibold">Cost Reduction</div>
-              <div className="text-sm text-gray-50o0 mt-2">Operational cost savings</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-purple-60o0 mb-2">2,40o0%</div>
-              <div className="text-gray-60o0 font-semibold">ROI Achieved</div>
-              <div className="text-sm text-gray-50o0 mt-2">Over 3 years</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-orange-60o0 mb-2">99.8%</div>
-              <div className="text-gray-60o0 font-semibold">Operational Efficiency</div>
-              <div className="text-sm text-gray-50o0 mt-2">Achieved across all systems</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 bg-gray-50'>,
+        <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <h2 className='text-3xl font-bold text-center mb-12'>,
+            Extraordinary Transformation Results,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>,
+            <div className='bg-white p-8 rounded-xl shadow-lg text-center'>,
+              <div className='text-4xl font-bold text-green-60o0 mb-2'>,
+                $2.3B,
+              </div>,
+              <div className='text-gray-60o0 font-semibold'>,
+                Additional Revenue,
+              </div>,
+              <div className='text-sm text-gray-50o0 mt-2'>,
+                Generated in 18 months,
+              </div>,
+            </div>,
+            <div className='bg-white p-8 rounded-xl shadow-lg text-center'>,
+              <div className='text-4xl font-bold text-blue-60o0 mb-2'>78%</div>,
+              <div className='text-gray-60o0 font-semibold'>Cost Reduction</div>,
+              <div className='text-sm text-gray-50o0 mt-2'>,
+                Operational cost savings,
+              </div>,
+            </div>,
+            <div className='bg-white p-8 rounded-xl shadow-lg text-center'>,
+              <div className='text-4xl font-bold text-purple-60o0 mb-2'>,
+                2,40o0%,
+              </div>,
+              <div className='text-gray-60o0 font-semibold'>ROI Achieved</div>,
+              <div className='text-sm text-gray-50o0 mt-2'>Over 3 years</div>,
+            </div>,
+            <div className='bg-white p-8 rounded-xl shadow-lg text-center'>,
+              <div className='text-4xl font-bold text-orange-60o0 mb-2'>,
+                99.8%,
+              </div>,
+              <div className='text-gray-60o0 font-semibold'>,
+                Operational Efficiency,
+              </div>,
+              <div className='text-sm text-gray-50o0 mt-2'>,
+                Achieved across all systems,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Transformation Phases */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold mb-8">The 18-Month Transformation Journey</h2>
-            
-            <div className="space-y-12">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold mb-4 text-blue-80o0">Phase 1: Foundation Building (Months 1-6)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Key Initiatives</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• Data unification platform consolidation</li>
-                      <li>• AI infrastructure setup across all regions</li>
-                      <li>• Cultural transformation and training</li>
-                      <li>• Pilot program implementation</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Results</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• 67% improvement in data accessibility</li>
-                      <li>• 340% faster data processing speeds</li>
-                      <li>• 89% employee adoption of new tools</li>
-                      <li>• $340 million in initial cost savings</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold mb-4 text-green-80o0">Phase 2: Process Automation (Months 7-12)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Key Implementations</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• Intelligent process automation (IPA)</li>
-                      <li>• Predictive analytics engine</li>
-                      <li>• Conversational AI platform</li>
-                      <li>• Cross-functional deployment</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Results</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• 450% increase in process efficiency</li>
-                      <li>• 67% reduction in operational costs</li>
-                      <li>• 340% improvement in customer satisfaction</li>
-                      <li>• $890 million in cumulative savings</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold mb-4 text-purple-80o0">Phase 3: Advanced AI Integration (Months 13-18)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Revolutionary Achievements</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• Autonomous decision making systems</li>
-                      <li>• Predictive business intelligence</li>
-                      <li>• Customer experience revolution</li>
-                      <li>• Self-improving algorithms</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-2">Final Results</h4>
-                    <ul className="space-y-2 text-gray-70o0">
-                      <li>• $2.3 billion in additional revenue</li>
-                      <li>• 78% reduction in operational costs</li>
-                      <li>• 340% increase in customer satisfaction</li>
-                      <li>• 99.8% operational efficiency</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl mt-12">
-              <h3 className="text-2xl font-bold mb-4 text-orange-80o0">🎯 Critical Success Factors</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Executive Leadership</h4>
-                  <p className="text-gray-70o0">Strong commitment from C-suite with dedicated transformation budget and resources.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Change Management</h4>
-                  <p className="text-gray-70o0">Comprehensive training and support programs for 250,0o00 employees across all regions.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Data Quality</h4>
-                  <p className="text-gray-70o0">Clean, accurate data foundation with 99.8% accuracy across all systems and processes.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
+      <section className='py-16'>,
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <div className='prose prose-lg max-w-none'>,
+            <h2 className='text-3xl font-bold mb-8'>,
+              The 18-Month Transformation Journey,
+            </h2>,
+            <div className='space-y-12'>,
+              <div className='bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl'>,
+                <h3 className='text-2xl font-bold mb-4 text-blue-80o0'>,
+                  Phase 1: Foundation Building (Months 1-6),
+                </h3>,
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>Key Initiatives</h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• Data unification platform consolidation</li>,
+                      <li>• AI infrastructure setup across all regions</li>,
+                      <li>• Cultural transformation and training</li>,
+                      <li>• Pilot program implementation</li>,
+                    </ul>,
+                  </div>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>Results</h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• 67% improvement in data accessibility</li>,
+                      <li>• 340% faster data processing speeds</li>,
+                      <li>• 89% employee adoption of new tools</li>,
+                      <li>• $340 million in initial cost savings</li>,
+                    </ul>,
+                  </div>,
+                </div>,
+              </div>,
+              <div className='bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl'>,
+                <h3 className='text-2xl font-bold mb-4 text-green-80o0'>,
+                  Phase 2: Process Automation (Months 7-12),
+                </h3>,
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>,
+                      Key Implementations,
+                    </h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• Intelligent process automation (IPA)</li>,
+                      <li>• Predictive analytics engine</li>,
+                      <li>• Conversational AI platform</li>,
+                      <li>• Cross-functional deployment</li>,
+                    </ul>,
+                  </div>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>Results</h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• 450% increase in process efficiency</li>,
+                      <li>• 67% reduction in operational costs</li>,
+                      <li>• 340% improvement in customer satisfaction</li>,
+                      <li>• $890 million in cumulative savings</li>,
+                    </ul>,
+                  </div>,
+                </div>,
+              </div>,
+              <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl'>,
+                <h3 className='text-2xl font-bold mb-4 text-purple-80o0'>,
+                  Phase 3: Advanced AI Integration (Months 13-18),
+                </h3>,
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>,
+                      Revolutionary Achievements,
+                    </h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• Autonomous decision making systems</li>,
+                      <li>• Predictive business intelligence</li>,
+                      <li>• Customer experience revolution</li>,
+                      <li>• Self-improving algorithms</li>,
+                    </ul>,
+                  </div>,
+                  <div>,
+                    <h4 className='font-bold text-lg mb-2'>Final Results</h4>,
+                    <ul className='space-y-2 text-gray-70o0'>,
+                      <li>• $2.3 billion in additional revenue</li>,
+                      <li>• 78% reduction in operational costs</li>,
+                      <li>• 340% increase in customer satisfaction</li>,
+                      <li>• 99.8% operational efficiency</li>,
+                    </ul>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+            <div className='bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl mt-12'>,
+              <h3 className='text-2xl font-bold mb-4 text-orange-80o0'>,
+                🎯 Critical Success Factors,
+              </h3>,
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>,
+                <div>,
+                  <h4 className='font-bold text-lg mb-2'>,
+                    Executive Leadership,
+                  </h4>,
+                  <p className='text-gray-70o0'>,
+                    Strong commitment from C-suite with dedicated transformation,
+                    budget and resources.,
+                  </p>,
+                </div>,
+                <div>,
+                  <h4 className='font-bold text-lg mb-2'>Change Management</h4>,
+                  <p className='text-gray-70o0'>,
+                    Comprehensive training and support programs for 250,0o00,
+                    employees across all regions.,
+                  </p>,
+                </div>,
+                <div>,
+                  <h4 className='font-bold text-lg mb-2'>Data Quality</h4>,
+                  <p className='text-gray-70o0'>,
+                    Clean, accurate data foundation with 99.8% accuracy across,
+                    all systems and processes.,
+                  </p>,
+                </div>,
+              </div>,
+            </div>,
+            <div className='text-center mt-12'>,
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 inline-block"
-              >
-                Start Your Enterprise Transformation →
-              </Link>
-              <p className="text-gray-60o0 mt-4 text-sm">
-                Join Fortune 10o0 companies transforming with AI
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+                href='/contact',
+                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 inline-block'>,
+                Start Your Enterprise Transformation →,
+              </Link>,
+              <p className='text-gray-60o0 mt-4 text-sm'>,
+                Join Fortune 10o0 companies transforming with AI,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Related Content */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">More Transformation Success Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/blog/ai-20o25-business-automation-revolution-complete-guide" className="group">
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <span className="bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
-                    BREAKTHROUGH
-                  </span>
-                  <span className="text-sm text-gray-50o0">Guide</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-60o0 transition-colors">
-                  The Complete Business Automation Revolution Guide
-                </h3>
-                <p className="text-gray-60o0 mb-4">
-                  Learn how organizations achieve 450% efficiency gains through intelligent automation systems.
-                </p>
-                <div className="flex items-center text-blue-60o0 font-semibold">
-                  Read the guide →
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/case-studies/ai-20o25-startup-to-unicorn-transformation" className="group">
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <span className="bg-green-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
-                    SUCCESS STORY
-                  </span>
-                  <span className="text-sm text-gray-50o0">Featured</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-60o0 transition-colors">
-                  From Startup to Unicorn in 18 Months
-                </h3>
-                <p className="text-gray-60o0 mb-4">
-                  How a tech startup achieved $4.2 billion valuation through strategic AI implementation.
-                </p>
-                <div className="flex items-center text-blue-60o0 font-semibold">
-                  Read the story →
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+      <section className='py-16 bg-gray-50'>,
+        <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <h2 className='text-3xl font-bold text-center mb-12'>,
+            More Transformation Success Stories,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
+            <Link
+              href='/blog/ai-20o25-business-automation-revolution-complete-guide',
+              className='group'>,
+              <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
+                <div className='flex items-center mb-4'>,
+                  <span className='bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3'>,
+                    BREAKTHROUGH,
+                  </span>,
+                  <span className='text-sm text-gray-50o0'>Guide</span>,
+                </div>,
+                <h3 className='text-xl font-bold mb-3 group-hover:text-blue-60o0 transition-colors'>,
+                  The Complete Business Automation Revolution Guide,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Learn how organizations achieve 450% efficiency gains through,
+                  intelligent automation systems.,
+                </p>,
+                <div className='flex items-center text-blue-60o0 font-semibold'>,
+                  Read the guide →,
+                </div>,
+              </div>,
+            </Link>,
+            <Link
+              href='/case-studies/ai-20o25-startup-to-unicorn-transformation',
+              className='group'>,
+              <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
+                <div className='flex items-center mb-4'>,
+                  <span className='bg-green-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3'>,
+                    SUCCESS STORY,
+                  </span>,
+                  <span className='text-sm text-gray-50o0'>Featured</span>,
+                </div>,
+                <h3 className='text-xl font-bold mb-3 group-hover:text-blue-60o0 transition-colors'>,
+                  From Startup to Unicorn in 18 Months,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  How a tech startup achieved $4.2 billion valuation through,
+                  strategic AI implementation.,
+                </p>,
+                <div className='flex items-center text-blue-60o0 font-semibold'>,
+                  Read the story →,
+                </div>,
+              </div>,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
+    </div>)}
+,

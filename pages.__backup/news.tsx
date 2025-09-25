@@ -1,11 +1,12 @@
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper
-  Calendar
-  User
-  Tag
-  ArrowRight
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Newspaper,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
   ExternalLink,
   TrendingUp,
   Award,
@@ -13,10 +14,8 @@ import {
   Globe,
   Brain,
   Atom,
-  Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
+  Zap} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -28,8 +27,7 @@ const NewsPage: React.FC = () => {
       readTime: '5 min read',
       featured: true,
       image: '/images/news/ai-consciousness-breakthrough.jpg',
-      tags: ['AI Consciousness'Breakthrough'Research'Innovation']
-    },
+      tags: ['AI Consciousness'Breakthrough'Research'Innovation']},
     {
       id: 2,
       title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',
@@ -40,8 +38,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: true,
       image: '/images/news/series-c-funding.jpg',
-      tags: ['Funding'Investment'Growth'Expansion']
-    },
+      tags: ['Funding'Investment'Growth'Expansion']},
     {
       id: 3,
       title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',
@@ -52,10 +49,8 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: true,
       image: '/images/news/quantum-azure-partnership.jpg',
-      tags: ['Quantum Computing'Microsoft Azure'Security'Partnership']
-    }
-  ];
-
+      tags: ['Quantum Computing'Microsoft Azure'Security'Partnership']}
+  ],
   const latestNews = [
     {
       id: 4,
@@ -67,8 +62,7 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: false,
       image: '/images/news/ai-customer-success.jpg',
-      tags: ['AI'Customer Success'Retention'Platform']
-    },
+      tags: ['AI'Customer Success'Retention'Platform']},
     {
       id: 5,
       title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year',
@@ -79,8 +73,7 @@ const NewsPage: React.FC = () => {
       readTime: '2 min read',
       featured: false,
       image: '/images/news/forbes-ai-50.jpg',
-      tags: ['Recognition'Forbes'AI Leadership'Innovation']
-    },
+      tags: ['Recognition'Forbes'AI Leadership'Innovation']},
     {
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
@@ -91,8 +84,7 @@ const NewsPage: React.FC = () => {
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
-      tags: ['Quantum Computing'Drug Discovery'Research'Healthcare']
-    },
+      tags: ['Quantum Computing'Drug Discovery'Research'Healthcare']},
     {
       id: 7,
       title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
@@ -103,8 +95,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/deloitte-partnership.jpg',
-      tags: ['Partnership'Deloitte'Enterprise'AI Implementation']
-    },
+      tags: ['Partnership'Deloitte'Enterprise'AI Implementation']},
     {
       id: 8,
       title: 'AI Autonomous Business Operations Platform Beta Launch',
@@ -115,8 +106,7 @@ const NewsPage: React.FC = () => {
       readTime: '6 min read',
       featured: false,
       image: '/images/news/ai-autonomous-business.jpg',
-      tags: ['AI'Autonomous Operations'Business'Platform']
-    },
+      tags: ['AI'Autonomous Operations'Business'Platform']},
     {
       id: 9,
       title: 'Zion Tech Group Expands to European Markets',
@@ -127,73 +117,59 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/european-expansion.jpg',
-      tags: ['Expansion'Europe'International'Growth']
-    }
-  ];
-
+      tags: ['Expansion'Europe'International'Growth']}
+  ],
   const pressReleases = [
     {
       title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
       date: '20o25-0o1-15',
-      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'
-    },
+      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'},
     {
       title: 'Series C Funding Round: $250M Investment for Global Expansion',
       date: '20o25-0o1-10',
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'
-    },
+      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'},
     {
       title: 'Quantum-Secure Cloud Partnership with Microsoft Azure',
       date: '20o25-0o1-0o5',
-      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'
-    }
-  ];
-
+      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'}
+  ],
   const mediaResources = [
     {
       title: 'Company Fact Sheet',
       description: 'Key factsfiguresand company information for media and investors.',
       type: 'PDF',
       size: '2.1 MB',
-      download: '/media/zion-tech-group-fact-sheet.pdf'
-    },
+      download: '/media/zion-tech-group-fact-sheet.pdf'},
     {
       title: 'Executive Biographies',
       description: 'Professional backgrounds and photos of Zion Tech Group leadership team.',
       type: 'ZIP',
       size: '15.3 MB',
-      download: '/media/executive-bios.zip'
-    },
+      download: '/media/executive-bios.zip'},
     {
       title: 'Company Logo Package',
       description: 'High-resolution logos and brand assets for media use.',
       type: 'ZIP',
       size: '8.7 MB',
-      download: '/media/logo-package.zip'
-    },
+      download: '/media/logo-package.zip'},
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI and quantum computing platforms.',
       type: 'ZIP',
       size: '25.1 MB',
-      download: '/media/product-screenshots.zip'
-    }
-  ];
-
+      download: '/media/product-screenshots.zip'}
+  ],
   const filteredNews = [...featuredNews...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
-    const searchMatch = searchQuery === '' || 
-      news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return categoryMatch && searchMatch;
-  });
-
+    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory,
+    const searchMatch = searchQuery === '' ||,
+      news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    return categoryMatch && searchMatch}),
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US'{ 
-      year: 'numeric'
-      month: 'long'
-      day: 'numeric' 
-    });
-  };
+    const date = new Date(dateString),
+    return date.toLocaleDateString('en-US'{
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'})},
+}

@@ -1,52 +1,50 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from "../types/service-variants",
 export interface InnovativeAgricultureService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;const contact ={
-  mobile:,
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,const contact ={
+  mobile: ,
   +1 30o2 464 0950',
   "email": 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-  ;
-  ;
-  "website": 'https://ziontechgroup.com};
+  "website": 'https: //ziontechgroup.com},
 export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [{
-    id:,
+    id: ,
   ai-powered-precision-agriculture',
     "name": 'AI-Powered Precision Agriculture,
     tagline:,
@@ -55,18 +53,13 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "period": '/month,
     "description": 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
     features[
-  'AI-powered crop monitoring',
-  'Irrigation optimization',
-  'Yield prediction',
-  'Real-time monitoring',
-  'Performance analytics',
-  'Integration capabilities',
-  'Custom monitoring models',
-  'Multi-field support',
-  'Compliance management'
-    ],
+  'AI-powered crop monitoringIrrigation optimization',
+  'Yield predictionReal-time monitoring',
+  'Performance analyticsIntegration capabilities',
+  'Custom monitoring modelsMulti-field support',
+  'Compliance management'],
     "popular": true,
-    icon:,
+    icon: ,
   🌾',
     "color": 'from-green-60o0 to-emerald-70o0,
     textColor:,
@@ -76,7 +69,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
   Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.',
     "targetAudience": Farmers, Agricultural companies, Crop consultants, Food producers',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2 weeks',
     "category": 'Agriculture & Food Technology,
     "realService": true,
@@ -88,7 +81,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     competitors[,
   John Deere, Trimble, Raven Industries, AGCO'],
     "marketSize": '$12.8B+ precision agriculture market,
-    growthRate:,
+    growthRate: ,
   20o0% YoY',
     "variant": 'ai-futuristic,
     "contactInfo": contact,
@@ -98,10 +91,9 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "launchDate": '20o25-0o1-09,
     "customers": 234,
     "rating": 4.8,
-    "reviews": 178
-  },
+    "reviews": 178},
   {
-    id:,
+    id: ,
   quantum-agriculture-optimization',
     "name": 'Quantum Agriculture Optimization,
     tagline:,
@@ -109,18 +101,13 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "price": $4,999,
     "period": '/month,
     "description": 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
-    features['Quantum optimization algorithms',
-  'Crop planning optimization',
-  'Resource allocation',
-  'Real-time adaptation',
-  'Performance analytics',
-  'Cost optimization',
-  'Efficiency analysis',
-  'Regulatory compliance',
-  'Multi-crop support'
-    ],
+    features['Quantum optimization algorithmsCrop planning optimization',
+  'Resource allocationReal-time adaptation',
+  'Performance analyticsCost optimization',
+  'Efficiency analysisRegulatory compliance',
+  'Multi-crop support'],
     "popular": false,
-    icon:,
+    icon: ,
   ⚡',
     "color": 'from-blue-60o0 to-indigo-70o0,
     textColor:,
@@ -130,7 +117,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
   Advanced quantum computing platform for agriculture optimization and resource allocation.',
     "targetAudience": Large agricultural companies, Food producers, Agricultural research institutions, Government agencies',
     "trialDays": 60,
-    setupTime:,
+    setupTime: ,
   2 months',
     "category": 'Agriculture & Food Technology,
     "realService": true,
@@ -142,7 +129,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     competitors[,
   D-Wave, Rigetti, IBM Quantum, Google Quantum'],
     "marketSize": '$9.8B+ quantum agriculture market,
-    growthRate:,
+    growthRate: ,
   380% YoY',
     "variant": 'quantum,
     "contactInfo": contact,
@@ -152,10 +139,9 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "launchDate": '20o25-0o1-15,
     "customers": 34,
     "rating": 4.6,
-    "reviews": 26
-  },
+    "reviews": 26},
   {
-    id:,
+    id: ,
   ai-powered-food-safety-monitoring',
     "name": 'AI-Powered Food Safety Monitoring,
     tagline:,
@@ -163,18 +149,13 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "price": $1,599,
     "period": '/month,
     "description": 'Advanced food safety monitoring platform that uses AI to detect contamination, monitor quality, and ensure food safety compliance for food producers and processors.',
-    features['AI-powered contamination detection',
-  'Quality monitoring',
-  'Safety compliance',
-  'Real-time alerts',
-  'Performance analytics',
-  'Integration capabilities',
-  'Custom monitoring rules',
-  'Multi-facility support',
-  'Compliance management'
-    ],
+    features['AI-powered contamination detectionQuality monitoring',
+  'Safety complianceReal-time alerts',
+  'Performance analyticsIntegration capabilities',
+  'Custom monitoring rulesMulti-facility support',
+  'Compliance management'],
     "popular": true,
-    icon:,
+    icon: ,
   🍎',
     "color": 'from-red-60o0 to-pink-70o0,
     textColor:,
@@ -184,7 +165,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
   Leading AI-powered food safety monitoring platform for contamination detection and quality control.',
     "targetAudience": Food producers, Food processors, Restaurants, Food safety inspectors',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2 weeks',
     "category": 'Agriculture & Food Technology,
     "realService": true,
@@ -196,7 +177,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     competitors[,
   FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
     "marketSize": '$15.6B+ food safety market,
-    growthRate:,
+    growthRate: ,
   220% YoY',
     "variant": 'ai-futuristic,
     "contactInfo": contact,
@@ -206,10 +187,9 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "launchDate": '20o25-0o1-20,
     "customers": 189,
     "rating": 4.7,
-    "reviews": 145
-  },
+    "reviews": 145},
   {
-    id:,
+    id: ,
   blockchain-food-traceability',
     "name": 'Blockchain Food Traceability,
     tagline:,
@@ -217,18 +197,13 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "price": $1,799,
     "period": '/month,
     "description": 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
-    features['Blockchain-based tracking',
-  'Supply chain transparency',
-  'Product authentication',
-  'Real-time monitoring',
-  'Compliance verification',
-  'Performance analytics',
-  'Multi-party collaboration',
-  'API integration',
-  'Mobile app support'
-    ],
+    features['Blockchain-based trackingSupply chain transparency',
+  'Product authenticationReal-time monitoring',
+  'Compliance verificationPerformance analytics',
+  'Multi-party collaborationAPI integration',
+  'Mobile app support'],
     "popular": false,
-    icon:,
+    icon: ,
   🔗',
     "color": 'from-purple-60o0 to-violet-70o0,
     textColor:,
@@ -238,7 +213,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
   Advanced blockchain platform for transparent food traceability and supply chain tracking.',
     "targetAudience": Food producers, Food distributors, Retailers, Consumers',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2 weeks',
     "category": 'Agriculture & Food Technology,
     "realService": true,
@@ -250,7 +225,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     competitors[,
   IBM Food Trust, VeChain, OriginTrail, Provenance'],
     "marketSize": '$18.4B+ food traceability market,
-    growthRate:,
+    growthRate: ,
   320% YoY',
     "variant": 'default,
     "contactInfo": contact,
@@ -260,10 +235,9 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "launchDate": '20o25-0o1-26,
     "customers": 89,
     "rating": 4.5,
-    "reviews": 67
-  },
+    "reviews": 67},
   {
-    id:,
+    id: ,
   ai-powered-vertical-farming',
     "name": 'AI-Powered Vertical Farming,
     tagline:,
@@ -271,18 +245,13 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "price": $2,299,
     "period": '/month,
     "description": 'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
-    features['AI-powered climate control',
-  'Crop growth monitoring',
-  'Environmental optimization',
-  'Real-time control',
-  'Performance analytics',
-  'Integration capabilities',
-  'Custom growing protocols',
-  'Multi-tier support',
-  'Compliance management'
-    ],
+    features['AI-powered climate controlCrop growth monitoring',
+  'Environmental optimizationReal-time control',
+  'Performance analyticsIntegration capabilities',
+  'Custom growing protocolsMulti-tier support',
+  'Compliance management'],
     "popular": true,
-    icon:,
+    icon: ,
   🏗️',
     "color": 'from-orange-60o0 to-red-70o0,
     textColor:,
@@ -292,7 +261,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
   Leading AI-powered vertical farming platform for climate control and crop optimization.',
     "targetAudience": Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   1 month',
     "category": 'Agriculture & Food Technology,
     "realService": true,
@@ -304,7 +273,7 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     competitors[,
   Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
     "marketSize": '$9.3B+ vertical farming market,
-    growthRate:,
+    growthRate: ,
   280% YoY',
     "variant": 'ai-futuristic,
     "contactInfo": contact,
@@ -314,5 +283,5 @@ export const "innovativeAgricultureServices": InnovativeAgricultureService[] = [
     "launchDate": '20o25-0o2-0o2,
     "customers": 123,
     "rating": 4.6,
-    "reviews": 89
-]}}
+    "reviews": 89]}}
+,

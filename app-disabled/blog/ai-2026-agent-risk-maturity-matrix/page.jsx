@@ -1,101 +1,108 @@
-import Link from 'next/link';
-
-export const metadata ={
+import Link from 'next/link',
+export const metadata = {
   title: 'AI 20o26: Agent Risk Maturity Matrix — Governance to ROI',
-  description:
+  description:,
     'Assess and improve agent risk maturity across policy, evals, telemetry, and operations to safely scale AI with measurable ROI.',
   keywords: [
-    'AI governance',
-    'agent risk',
-    'maturity model',
-    'policy as code',
-    'evals',
-    'observability',
-    'enterprise AI',
-    'ROI'
+    'AI governanceagent risk',
+    'maturity modelpolicy as code',
+    'evalsobservability',
+    'enterprise AIROI',
   ]
-};
-
+},
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-70o0 via-indigo-60o0 to-blue-60o0 text-white py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-            AI 20o26: Agent Risk Maturity Matrix
-          </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-3xl">
-            A practical maturity model to benchmark, prioritize, and uplift agent safety across policy, evals,
-            telemetry, and operations—unlocking reliable scale and ROI.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose max-w-none">
-            <h2>Why a Risk Maturity Matrix?</h2>
-            <p>
-              As autonomous agents become embedded in revenue, support, and operations, organizations need a
-              common language to gauge readiness. This matrix defines levels across four pillars: Policy,
-              Evals, Telemetry, and Operations.
-            </p>
-
-            <h3>Four Pillars</h3>
-            <ul>
-              <li>
-                <strong>Policy</strong>: policy-as-code, permissioning, isolation domains, safe-mode fallbacks
-              </li>
-              <li>
-                <strong>Evals</strong>: preflight, canary, and continuous evals with pass criteria and gates
-              </li>
-              <li>
-                <strong>Telemetry</strong>: traces, safety signals, outcome metrics, audit evidence
-              </li>
-              <li>
-                <strong>Operations</strong>: incident playbooks, rollback automation, SLOs, change management
-              </li>
-            </ul>
-
-            <h3>Levels</h3>
-            <ol>
-              <li>Ad hoc — manual reviews, limited logs</li>
-              <li>Defined — basic policies and pre-release checks</li>
-              <li>Managed — gating with evals, dashboards, incident workflows</li>
-              <li>Optimized — continuous verification, auto-rollback, budget guardrails</li>
-            </ol>
-
-            <h3>Getting Started</h3>
-            <p>
-              Start with a baseline assessment and prioritize gaps that reduce incident risk while enabling
-              faster, safer delivery. Pair each uplift with measured impact: incident rate, rollback time,
-              conversion lift, and cost per outcome.
-            </p>
-
-            <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
-              <h4 className="text-purple-80o0 font-semibold mb-2">Related resources</h4>
-              <ul className="list-disc pl-6">
-                <li>
-                  <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="text-purple-70o0 font-medium">
-                    LLM Evals Maturity Model
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/content/ai-20o26-agent-platform-operations" className="text-purple-70o0 font-medium">
-                    Agent Platform Operations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/ai-20o26-agent-cost-optimization" className="text-purple-70o0 font-medium">
-                    Agent Cost Optimization
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-
+    <main className='min-h-screen bg-white'>,
+      <section className='bg-gradient-to-r from-purple-70o0 via-indigo-60o0 to-blue-60o0 text-white py-16'>,
+        <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <h1 className='text-3xl md:text-5xl font-extrabold mb-4'>,
+            AI 20o26: Agent Risk Maturity Matrix,
+          </h1>,
+          <p className='text-lg md:text-xl opacity-90 max-w-3xl'>,
+            A practical maturity model to benchmark, prioritize, and uplift,
+            agent safety across policy, evals, telemetry, and,
+            operations—unlocking reliable scale and ROI.,
+          </p>,
+        </div>,
+      </section>,
+      <section className='py-12'>,
+        <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <div className='prose max-w-none'>,
+            <h2>Why a Risk Maturity Matrix?</h2>,
+            <p>,
+              As autonomous agents become embedded in revenue, support, and,
+              operations, organizations need a common language to gauge,
+              readiness. This matrix defines levels across four pillars: Policy,
+              Evals, Telemetry, and Operations.,
+            </p>,
+            <h3>Four Pillars</h3>,
+            <ul>,
+              <li>,
+                <strong>Policy</strong>: policy-as-code, permissioning,
+                isolation domains, safe-mode fallbacks,
+              </li>,
+              <li>,
+                <strong>Evals</strong>: preflight, canary, and continuous evals,
+                with pass criteria and gates,
+              </li>,
+              <li>,
+                <strong>Telemetry</strong>: traces, safety signals, outcome,
+                metrics, audit evidence,
+              </li>,
+              <li>,
+                <strong>Operations</strong>: incident playbooks, rollback,
+                automation, SLOs, change management,
+              </li>,
+            </ul>,
+            <h3>Levels</h3>,
+            <ol>,
+              <li>Ad hoc — manual reviews, limited logs</li>,
+              <li>Defined — basic policies and pre-release checks</li>,
+              <li>,
+                Managed — gating with evals, dashboards, incident workflows,
+              </li>,
+              <li>,
+                Optimized — continuous verification, auto-rollback, budget,
+                guardrails,
+              </li>,
+            </ol>,
+            <h3>Getting Started</h3>,
+            <p>,
+              Start with a baseline assessment and prioritize gaps that reduce,
+              incident risk while enabling faster, safer delivery. Pair each,
+              uplift with measured impact: incident rate, rollback time,
+              conversion lift, and cost per outcome.,
+            </p>,
+            <div className='mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl'>,
+              <h4 className='text-purple-80o0 font-semibold mb-2'>,
+                Related resources,
+              </h4>,
+              <ul className='list-disc pl-6'>,
+                <li>,
+                  <Link
+                    href='/blog/ai-20o26-llm-evals-maturity-model',
+                    className='text-purple-70o0 font-medium'>,
+                    LLM Evals Maturity Model,
+                  </Link>,
+                </li>,
+                <li>,
+                  <Link
+                    href='/content/ai-20o26-agent-platform-operations',
+                    className='text-purple-70o0 font-medium'>,
+                    Agent Platform Operations,
+                  </Link>,
+                </li>,
+                <li>,
+                  <Link
+                    href='/blog/ai-20o26-agent-cost-optimization',
+                    className='text-purple-70o0 font-medium'>,
+                    Agent Cost Optimization,
+                  </Link>,
+                </li>,
+              </ul>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </main>)}
+,

@@ -1,34 +1,34 @@
-name: Auto Merge Automation PRs
+name: Auto-merge PRs
 
 on:
-  workflow_run:
-    workflows: ["Autonomous Orchestrator", "Auto Dependency Bump"]
-    types:
-      - completed
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, labeled]
+  check_suite:
+    types: [completed]
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  merge:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  automerge:
+    name: Enable and perform auto-merge
     runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.draft == false
     steps:
-      - name: Merge PRs with label automation
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const prs = await github.paginate(github.rest.pulls.list, { owner, repo, state: 'open' });
-            for (const pr of prs) {
-              const labels = pr.labels.map(l => l.name);
-              if (labels.includes('automation')) {
-                try {
-                  await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'squash' });
-                  core.info(`Merged PR #${pr.number}`);
-                } catch (e) {
-                  core.info(`Skip merge PR #${pr.number}: ${e.message}`);
-                }
-              }
-            }
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Automerge when green and labeled
+        uses: pascalgn/automerge-action@v0.16.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: merge
+          MERGE_LABELS: automerge
+          MERGE_REMOVE_LABELS: automerge
+          MERGE_RETRIES: 10
+          MERGE_RETRY_SLEEP: 60000
+          UPDATE_RETRIES: 10
+          UPDATE_RETRY_SLEEP: 60000

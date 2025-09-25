@@ -1,121 +1,130 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 const QuantumComputing20o26UltimateBanner = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden">
+    <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
       {/* Quantum field animation background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-40o0 rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-purple-40o0 rounded-full opacity-15 animate-bounce"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-pink-40o0 rounded-full opacity-20 animate-ping"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-purple-40o0 rounded-full px-8 py-3 mb-8">
-            <span className="text-lg font-bold text-black">⚛️ QUANTUM COMPUTING 20o26 ULTIMATE</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-30o0 via-purple-30o0 to-pink-30o0 bg-clip-text text-transparent">
-            Quantum Supremacy Achieved
-          </h1>
-          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Witness the dawn of true quantum supremacy. Our 20o26 quantum processors solve problems 
-            that would take classical computers billions of years in mere seconds.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      <div className='absolute inset-0'>,
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20'></div>,
+        <div className='absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-40o0 rounded-full opacity-10 animate-pulse'></div>,
+        <div className='absolute top-3/4 right-1/4 w-24 h-24 bg-purple-40o0 rounded-full opacity-15 animate-bounce'></div>,
+        <div className='absolute bottom-1/4 left-1/3 w-16 h-16 bg-pink-40o0 rounded-full opacity-20 animate-ping'></div>,
+      </div>,
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
+        <div className='text-center mb-16'>,
+          <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-purple-40o0 rounded-full px-8 py-3 mb-8'>,
+            <span className='text-lg font-bold text-black'>,
+              ⚛️ QUANTUM COMPUTING 20o26 ULTIMATE,
+            </span>,
+          </div>,
+          <h1 className='text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-30o0 via-purple-30o0 to-pink-30o0 bg-clip-text text-transparent'>,
+            Quantum Supremacy Achieved,
+          </h1>,
+          <p className='text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed'>,
+            Witness the dawn of true quantum supremacy. Our 20o26 quantum,
+            processors solve problems that would take classical computers,
+            billions of years in mere seconds.,
+          </p>,
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
             <Link
-              href="/quantum-computing-20o26"
-              className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl"
-            >
-              Explore Quantum 20o26
-            </Link>
+              href='/quantum-computing-20o26',
+              className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
+              Explore Quantum 20o26,
+            </Link>,
             <Link
-              href="/quantum-applications"
-              className="border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0"
-            >
-              Quantum Applications
-            </Link>
-          </div>
-        </div>
-
+              href='/quantum-applications',
+              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0'>,
+              Quantum Applications,
+            </Link>,
+          </div>,
+        </div>,
         {/* Quantum Capabilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-40o0/30">
-            <div className="text-5xl mb-6">🔬</div>
-            <h3 className="text-2xl font-bold mb-4">Drug Discovery</h3>
-            <p className="text-gray-20o0 mb-6 text-lg">
-              Accelerate pharmaceutical research by simulating molecular interactions at quantum scale.
-            </p>
-            <div className="text-3xl font-bold text-cyan-30o0">10o00x Faster</div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-40o0/30">
-            <div className="text-5xl mb-6">🌍</div>
-            <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
-            <p className="text-gray-20o0 mb-6 text-lg">
-              Model complex climate systems with unprecedented accuracy and speed.
-            </p>
-            <div className="text-3xl font-bold text-purple-30o0">∞ Accuracy</div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-pink-50o0/20 to-cyan-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-40o0/30">
-            <div className="text-5xl mb-6">🔐</div>
-            <h3 className="text-2xl font-bold mb-4">Cryptography</h3>
-            <p className="text-gray-20o0 mb-6 text-lg">
-              Unbreakable quantum encryption that ensures perfect security for all communications.
-            </p>
-            <div className="text-3xl font-bold text-pink-30o0">10o0% Secure</div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-50o0/20 to-pink-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-40o0/30">
-            <div className="text-5xl mb-6">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Genomics</h3>
-            <p className="text-gray-20o0 mb-6 text-lg">
-              Decode genetic sequences and predict protein folding with quantum precision.
-            </p>
-            <div className="text-3xl font-bold text-cyan-30o0">Perfect Match</div>
-          </div>
-        </div>
-
+        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
+          <div className='bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-40o0/30'>,
+            <div className='text-5xl mb-6'>🔬</div>,
+            <h3 className='text-2xl font-bold mb-4'>Drug Discovery</h3>,
+            <p className='text-gray-20o0 mb-6 text-lg'>,
+              Accelerate pharmaceutical research by simulating molecular,
+              interactions at quantum scale.,
+            </p>,
+            <div className='text-3xl font-bold text-cyan-30o0'>,
+              10o00x Faster,
+            </div>,
+          </div>,
+          <div className='bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-40o0/30'>,
+            <div className='text-5xl mb-6'>🌍</div>,
+            <h3 className='text-2xl font-bold mb-4'>Climate Modeling</h3>,
+            <p className='text-gray-20o0 mb-6 text-lg'>,
+              Model complex climate systems with unprecedented accuracy and,
+              speed.,
+            </p>,
+            <div className='text-3xl font-bold text-purple-30o0'>,
+              ∞ Accuracy,
+            </div>,
+          </div>,
+          <div className='bg-gradient-to-br from-pink-50o0/20 to-cyan-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-40o0/30'>,
+            <div className='text-5xl mb-6'>🔐</div>,
+            <h3 className='text-2xl font-bold mb-4'>Cryptography</h3>,
+            <p className='text-gray-20o0 mb-6 text-lg'>,
+              Unbreakable quantum encryption that ensures perfect security for,
+              all communications.,
+            </p>,
+            <div className='text-3xl font-bold text-pink-30o0'>,
+              10o0% Secure,
+            </div>,
+          </div>,
+          <div className='bg-gradient-to-br from-cyan-50o0/20 to-pink-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-40o0/30'>,
+            <div className='text-5xl mb-6'>🧬</div>,
+            <h3 className='text-2xl font-bold mb-4'>Genomics</h3>,
+            <p className='text-gray-20o0 mb-6 text-lg'>,
+              Decode genetic sequences and predict protein folding with quantum,
+              precision.,
+            </p>,
+            <div className='text-3xl font-bold text-cyan-30o0'>,
+              Perfect Match,
+            </div>,
+          </div>,
+        </div>,
         {/* Quantum Statistics */}
-        <div className="bg-gradient-to-r from-black/30 to-black/50 backdrop-blur-sm rounded-3xl p-12 border border-cyan-40o0/20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-cyan-30o0 mb-3">10o00+</div>
-              <div className="text-gray-30o0 text-lg">Qubits</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-30o0 mb-3">99.99%</div>
-              <div className="text-gray-30o0 text-lg">Fidelity</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-pink-30o0 mb-3">10^18</div>
-              <div className="text-gray-30o0 text-lg">Operations/sec</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-cyan-30o0 mb-3">-273°C</div>
-              <div className="text-gray-30o0 text-lg">Operating Temp</div>
-            </div>
-          </div>
-        </div>
-
+        <div className='bg-gradient-to-r from-black/30 to-black/50 backdrop-blur-sm rounded-3xl p-12 border border-cyan-40o0/20'>,
+          <div className='grid grid-cols-2 md: grid-cols-4 gap-8 text-center'>,
+            <div>,
+              <div className='text-4xl font-bold text-cyan-30o0 mb-3'>,
+                10o00+,
+              </div>,
+              <div className='text-gray-30o0 text-lg'>Qubits</div>,
+            </div>,
+            <div>,
+              <div className='text-4xl font-bold text-purple-30o0 mb-3'>,
+                99.99%,
+              </div>,
+              <div className='text-gray-30o0 text-lg'>Fidelity</div>,
+            </div>,
+            <div>,
+              <div className='text-4xl font-bold text-pink-30o0 mb-3'>,
+                10^18,
+              </div>,
+              <div className='text-gray-30o0 text-lg'>Operations/sec</div>,
+            </div>,
+            <div>,
+              <div className='text-4xl font-bold text-cyan-30o0 mb-3'>,
+                -273°C,
+              </div>,
+              <div className='text-gray-30o0 text-lg'>Operating Temp</div>,
+            </div>,
+          </div>,
+        </div>,
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-xl text-gray-30o0 mb-8">
-            Ready to harness the power of quantum computing for your business?
-          </p>
+        <div className='text-center mt-16'>,
+          <p className='text-xl text-gray-30o0 mb-8'>,
+            Ready to harness the power of quantum computing for your business?,
+          </p>,
           <Link
-            href="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl"
-          >
-            Get Quantum Access Now
-            <span className="ml-2">→</span>
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default QuantumComputing20o26UltimateBanner;
+            href='/contact',
+            className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
+            Get Quantum Access Now,
+            <span className='ml-2'>→</span>,
+          </Link>,
+        </div>,
+      </div>,
+    </section>)},
+export default QuantumComputing20o26UltimateBanner,

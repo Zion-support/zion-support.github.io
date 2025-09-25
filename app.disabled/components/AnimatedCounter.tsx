@@ -1,62 +1,40 @@
-"use client";
-
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-
+"use client",
+import React, { useState, useEffect } from 'react',
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  suffix?: string;
-  prefix?: string;
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
-  end, 
-  duration = 2000, 
-  suffix = '', 
-  prefix = '' 
-}) => {
-  const [count, setCount] = useState(0);
-
+  end: number,
+  duration?: number,
+  suffix?: string,
+  prefix?: string}
+,
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+  end,
+  duration = 2000,
+  suffix = '',
+  prefix = ''}) => {
+  const [count, setCount] = useState(0),
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
+    let startTime: number,
+    let animationFrame: number,
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      
-      setCount(Math.floor(progress * end));
-      
+      if (!startTime) startTime = currentTime,
+      const progress = Math.min((currentTime - startTime) / duration, 1),
+      setCount(Math.floor(progress * end)),
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-
+        animationFrame = requestAnimationFrame(animate)}
+    },
+    animationFrame = requestAnimationFrame(animate),
     return () => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration]);
-=======
-type Props ={ value?: number; label?: string };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
-
+        cancelAnimationFrame(animationFrame)}
+    },
+  }, [end, duration]),
+type Props ={ value?: number, label?: string },
   return (
-<<<<<<< HEAD
-    <span>
+    <span>,
       {prefix}{count}{suffix}
-    </span>
-=======
-    <div className="text-center">
-      <div className="text-3xl font-bold text-white">{value}</div>
+    </span>,
+    <div className="text-center">,
+      <div className="text-3xl font-bold text-white">{value}</div>,
       {label && <div className="text-sm text-gray-30o0">{label}</div>}
-    </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
-  );
-};
-
-export default AnimatedCounter;
+    </div>)},
+export default AnimatedCounter,

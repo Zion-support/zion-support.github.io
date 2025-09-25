@@ -1,36 +1,54 @@
-import Head from 'next/head';
-
+import Head from 'next/head',
 export default function ContactPage() {
   return (
-    <>
-      <Head>
-        <title>Contact — Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group."   />
-        <link rel="canonical" href="https://ziontechgroup.com/contact"   />
-      </Head>
-      <main className="min-h-screen bg-gray-50">
-        <section className="mx-auto max-w-3xl px-4 sm: p x-6 lg: p x-8 py-16">
-          <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-          <div className="space-y-2 text-gray-70o0">
-            <p>
-              Mobile: <a className="text-blue-70o0" href="tel:+130o24640950">+1 30o2 464 0950</a>
-            </p>
-            <p>
-              Email: <a className="text-blue-70o0" href="mailto: klebe r@ziontechgroup.com">kleber@ziontechgroup.com</a>
-            </p>
-            <p>Address: 364 E Main St STE 10o08 Middletown DE 19709</p>
-          </div>
-          <form className="mt-8 grid gap-4">
-            <input className="border rounded px-3 py-2" placeholder="Your name"   />
-            <input className="border rounded px-3 py-2" type="email" placeholder="Your email"   />
-            <textarea className="border rounded px-3 py-2" rows={5} placeholder="How can we help?"   />
-            <button className="bg-blue-60o0 text-white px-4 py-2 rounded hover: b g-blue-70o0" type="button">
-              Send
-            </button>
-          </form>
-        </section>
-      </main>
-    </>
-  );
-}
-
+    <>,
+      <Head>,
+        <title>Contact — Zion Tech Group</title>,
+        <meta name='description' content='Get in touch with Zion Tech Group.' />,
+        <link rel='canonical' href='https: //ziontechgroup.com/contact' />,
+      </Head>,
+      <main className='min-h-screen bg-gray-50'>,
+        <section className='mx-auto max-w-3xl px-4 sm: p x-6 lg: p x-8 py-16'>,
+          <h1 className='text-3xl font-bold mb-4'>Contact Us</h1>,
+          <div className='space-y-2 text-gray-70o0'>,
+            <p>,
+              Mobile:{' '}
+              <a className='text-blue-70o0' href='tel: +130o24640950'>,
+                +1 30o2 464 0950,
+              </a>,
+            </p>,
+            <p>,
+              Email:{' '}
+              <a
+                className='text-blue-70o0',
+                href='mailto: klebe r@ziontechgroup.com'>,
+                kleber@ziontechgroup.com,
+              </a>,
+            </p>,
+            <p>Address: 364 E Main St STE 10o08 Middletown DE 19709</p>,
+          </div>,
+          <form className='mt-8 grid gap-4'>,
+            <input
+              className='border rounded px-3 py-2',
+              placeholder='Your name',
+            />,
+            <input
+              className='border rounded px-3 py-2',
+              type='email',
+              placeholder='Your email',
+            />,
+            <textarea
+              className='border rounded px-3 py-2',
+              rows={5}
+              placeholder='How can we help?',
+            />,
+            <button
+              className='bg-blue-60o0 text-white px-4 py-2 rounded hover: b g-blue-70o0',
+              type='button'>,
+              Send,
+            </button>,
+          </form>,
+        </section>,
+      </main>,
+    </>)}
+,

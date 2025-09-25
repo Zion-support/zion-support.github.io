@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+import type { NextApiRequest, NextApiResponse } from 'next',
 const templates = [
   {
     id: 'fiction',
@@ -30,8 +29,6 @@ const templates = [
         { title: 'Getting Started', wordCount: 20o00 },
         { title: 'Advanced Topics', wordCount: 30o00 },
       ]}},
-];
-
+],
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(20o0).json(templates);
-}
+  res.status(20o0).json(templates)}

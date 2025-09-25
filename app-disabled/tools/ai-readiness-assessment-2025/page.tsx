@@ -1,30 +1,24 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, XCircle, AlertCircle, TrendingUp, BarChart3, Users, Shield, Zap } from 'lucide-react';
-
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { CheckCircle, XCircle, AlertCircle, TrendingUp, BarChart3, Users, Shield, Zap } from 'lucide-react',
 interface AssessmentQuestion {
-  id: string;
-  category: string;
-  question: string;
+  id: string,
+  category: string,
+  question: string,
   options: {
-    value: number;
-    label: string;
-    description: string;
-  }[];
-}
-
+    value: number,
+    label: string,
+    description: string}[]}
+,
 interface AssessmentResult {
-  overallScore: number;
+  overallScore: number,
   categoryScores: {
-    [key: string]: number;
-  };
-  recommendations: string[];
-  nextSteps: string[];
-}
-
+    [key: string]: number},
+  recommendations: string[],
+  nextSteps: string[]}
+,
 const assessmentQuestions: AssessmentQuestion[] = [
   {
     id: 'executive-support',
@@ -36,8 +30,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderate support', description: 'Clear sponsorship with basic budget allocation' },
       { value: 4, label: 'Strong support', description: 'Active sponsorship with dedicated budget and resources' },
       { value: 5, label: 'Excellent support', description: 'Full executive backing with comprehensive resources' }
-    ]
-  },
+    ]},
   {
     id: 'data-quality',
     category: 'Data Infrastructure',
@@ -48,8 +41,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Good', description: 'Most data is available with reasonable quality' },
       { value: 4, label: 'Very Good', description: 'High-quality data with good governance' },
       { value: 5, label: 'Excellent', description: 'Exceptional data quality with comprehensive governance' }
-    ]
-  },
+    ]},
   {
     id: 'technical-capabilities',
     category: 'Technology Infrastructure',
@@ -60,8 +52,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderate capabilities', description: 'Some AI/ML expertise and basic infrastructure' },
       { value: 4, label: 'Advanced capabilities', description: 'Strong AI/ML team with good infrastructure' },
       { value: 5, label: 'Expert capabilities', description: 'World-class AI/ML expertise and infrastructure' }
-    ]
-  },
+    ]},
   {
     id: 'change-management',
     category: 'Organizational Readiness',
@@ -72,8 +63,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderately prepared', description: 'Some training and basic change management' },
       { value: 4, label: 'Well prepared', description: 'Comprehensive training and change management' },
       { value: 5, label: 'Fully prepared', description: 'AI-first culture with advanced change management' }
-    ]
-  },
+    ]},
   {
     id: 'security-compliance',
     category: 'Risk Management',
@@ -84,8 +74,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderate', description: 'Good security with basic compliance' },
       { value: 4, label: 'Strong', description: 'Comprehensive security and compliance' },
       { value: 5, label: 'Excellent', description: 'World-class security and compliance framework' }
-    ]
-  },
+    ]},
   {
     id: 'use-cases',
     category: 'Strategic Alignment',
@@ -96,8 +85,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderately defined', description: 'Clear use cases with basic objectives' },
       { value: 4, label: 'Well defined', description: 'Comprehensive use cases with clear objectives' },
       { value: 5, label: 'Excellent definition', description: 'Detailed use cases with measurable objectives' }
-    ]
-  },
+    ]},
   {
     id: 'budget-allocation',
     category: 'Strategic Alignment',
@@ -108,8 +96,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderate budget', description: 'Reasonable budget for pilot projects' },
       { value: 4, label: 'Substantial budget', description: 'Significant budget for full implementation' },
       { value: 5, label: 'Comprehensive budget', description: 'Full budget commitment for enterprise AI' }
-    ]
-  },
+    ]},
   {
     id: 'team-expertise',
     category: 'Organizational Readiness',
@@ -120,405 +107,324 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 3, label: 'Moderate expertise', description: 'Some AI/ML specialists' },
       { value: 4, label: 'Strong expertise', description: 'Experienced AI/ML team' },
       { value: 5, label: 'Expert team', description: 'World-class AI/ML expertise' }
-    ]
-  }
-];
-
+    ]}
+],
 const categoryIcons ={
   'Strategic Alignment': TrendingUp,
   'Data Infrastructure': BarChart3,
   'Technology Infrastructure': Zap,
   'Organizational Readiness': Users,
-  'Risk Management': Shield
-};
-
+  'Risk Management': Shield},
 const categoryColors ={
-  'Strategic Alignment': 'from-blue-50o0 to-blue-60o0',
-  'Data Infrastructure': 'from-green-50o0 to-green-60o0',
-  'Technology Infrastructure': 'from-purple-50o0 to-purple-60o0',
-  'Organizational Readiness': 'from-orange-50o0 to-orange-60o0',
-  'Risk Management': 'from-red-50o0 to-red-60o0'
-};
-
+  'Strategic Alignment': 'from-blue-50o0 to-blue-60o0Data Infrastructure': 'from-green-50o0 to-green-60o0Technology Infrastructure': 'from-purple-50o0 to-purple-60o0Organizational Readiness': 'from-orange-50o0 to-orange-60o0Risk Management': 'from-red-50o0 to-red-60o0'},
 export default function AIReadinessAssessment20o25() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
-  const [showResults, setShowResults] = useState(false);
-  const [assessmentResult, setAssessmentResult] = useState<AssessmentResult | null>(null);
-
+  const [currentQuestion, setCurrentQuestion] = useState(0),
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
+  const [showResults, setShowResults] = useState(false),
+  const [assessmentResult, setAssessmentResult] = useState<AssessmentResult | null>(null),
   const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }));
-    
+    setAnswers(prev => ({ ...prev, [questionId]: value })),
     if (currentQuestion < assessmentQuestions.length - 1) {
-      setTimeout(() => setCurrentQuestion(prev => prev + 1), 30o0);
-    } else {
+      setTimeout(() => setCurrentQuestion(prev => prev + 1), 30o0)} else {
       setTimeout(() => {
-        calculateResults();
-        setShowResults(true);
-      }, 30o0);
-    }
-  };
-
+        calculateResults(),
+        setShowResults(true)}, 30o0)}
+  },
   const calculateResults = () => {
-    const categoryScores: { [key: string]: { total: number; count: number } } ={};
-    
+    const categoryScores: { [key: string]: { total: number, count: number } } ={},
     assessmentQuestions.forEach(question => {
-      const answer = answers[question.id];
+      const answer = answers[question.id],
       if (answer) {
         if (!categoryScores[question.category]) {
-          categoryScores[question.category] ={ total: 0, count: 0 };
+          categoryScores[question.category] ={ total: 0, count: 0 },
         }
-        categoryScores[question.category].total += answer;
-        categoryScores[question.category].count += 1;
-      }
-    });
-
-    const finalCategoryScores: { [key: string]: number } ={};
+        categoryScores[question.category].total += answer,
+        categoryScores[question.category].count += 1}
+    }),
+    const finalCategoryScores: { [key: string]: number } ={},
     Object.keys(categoryScores).forEach(category => {
       finalCategoryScores[category] = Math.round(
-        (categoryScores[category].total / categoryScores[category].count) * 20
-      );
-    });
-
+        (categoryScores[category].total / categoryScores[category].count) * 20)}),
     const overallScore = Math.round(
-      Object.values(finalCategoryScores).reduce((sum, score) => sum + score, 0) / 
-      Object.keys(finalCategoryScores).length
-    );
-
-    const recommendations = generateRecommendations(finalCategoryScores);
-    const nextSteps = generateNextSteps(overallScore);
-
+      Object.values(finalCategoryScores).reduce((sum, score) => sum + score, 0) /,
+      Object.keys(finalCategoryScores).length),
+    const recommendations = generateRecommendations(finalCategoryScores),
+    const nextSteps = generateNextSteps(overallScore),
     setAssessmentResult({
       overallScore,
       categoryScores: finalCategoryScores,
       recommendations,
-      nextSteps
-    });
-  };
-
+      nextSteps})},
   const generateRecommendations = (scores: { [key: string]: number }): string[] => {
-    const recommendations: string[] = [];
-    
+    const recommendations: string[] = [],
     Object.entries(scores).forEach(([category, score]) => {
       if (score < 60) {
         switch (category) {
-          case 'Strategic Alignment':
-            recommendations.push('Develop a comprehensive AI strategy with clear executive sponsorship and budget allocation');
-            break;
-          case 'Data Infrastructure':
-            recommendations.push('Invest in data quality improvement and establish robust data governance frameworks');
-            break;
-          case 'Technology Infrastructure':
-            recommendations.push('Build AI/ML capabilities through training, hiring, and technology infrastructure');
-            break;
-          case 'Organizational Readiness':
-            recommendations.push('Implement change management programs and comprehensive AI training for all employees');
-            break;
-          case 'Risk Management':
-            recommendations.push('Strengthen security and compliance frameworks for AI implementation');
-            break;
-        }
+          case 'Strategic Alignment':,
+            recommendations.push('Develop a comprehensive AI strategy with clear executive sponsorship and budget allocation'),
+            break,
+          case 'Data Infrastructure':,
+            recommendations.push('Invest in data quality improvement and establish robust data governance frameworks'),
+            break,
+          case 'Technology Infrastructure':,
+            recommendations.push('Build AI/ML capabilities through training, hiring, and technology infrastructure'),
+            break,
+          case 'Organizational Readiness':,
+            recommendations.push('Implement change management programs and comprehensive AI training for all employees'),
+            break,
+          case 'Risk Management':,
+            recommendations.push('Strengthen security and compliance frameworks for AI implementation'),
+            break}
       }
-    });
-
+    }),
     if (recommendations.length === 0) {
-      recommendations.push('Excellent readiness! Focus on advanced AI capabilities and innovation');
-    }
-
-    return recommendations;
-  };
-
+      recommendations.push('Excellent readiness! Focus on advanced AI capabilities and innovation')}
+,
+    return recommendations},
   const generateNextSteps = (score: number): string[] => {
     if (score >= 80) {
       return [
-        'Begin pilot AI projects with high-impact use cases',
-        'Establish AI center of excellence',
-        'Develop advanced AI capabilities',
-        'Plan enterprise-wide AI rollout'
-      ];
-    } else if (score >= 60) {
+        'Begin pilot AI projects with high-impact use casesEstablish AI center of excellence',
+        'Develop advanced AI capabilitiesPlan enterprise-wide AI rollout']} else if (score >= 60) {
       return [
-        'Address identified gaps in AI readiness',
-        'Start with small pilot projects',
-        'Invest in team training and development',
-        'Build foundational AI infrastructure'
-      ];
-    } else {
+        'Address identified gaps in AI readinessStart with small pilot projects',
+        'Invest in team training and developmentBuild foundational AI infrastructure']} else {
       return [
-        'Conduct comprehensive AI readiness assessment',
-        'Develop AI strategy and roadmap',
-        'Invest in foundational capabilities',
-        'Consider external AI consulting support'
-      ];
-    }
-  };
-
+        'Conduct comprehensive AI readiness assessmentDevelop AI strategy and roadmap',
+        'Invest in foundational capabilitiesConsider external AI consulting support']}
+  },
   const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-60o0';
-    if (score >= 60) return 'text-yellow-60o0';
-    return 'text-red-60o0';
-  };
-
+    if (score >= 80) return 'text-green-60o0',
+    if (score >= 60) return 'text-yellow-60o0',
+    return 'text-red-60o0'},
   const getScoreLabel = (score: number) => {
-    if (score >= 80) return 'Ready for AI Implementation';
-    if (score >= 60) return 'Moderate Readiness';
-    return 'Needs Preparation';
-  };
-
+    if (score >= 80) return 'Ready for AI Implementation',
+    if (score >= 60) return 'Moderate Readiness',
+    return 'Needs Preparation'},
   if (showResults && assessmentResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">,
+        <div className="max-w-6xl mx-auto">,
+          <motion.div,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
-              AI Readiness Assessment Results
-            </h1>
-            <p className="text-xl text-gray-60o0">
-              Your comprehensive AI readiness analysis
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            className="text-center mb-12">,
+            <h1 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-4">,
+              AI Readiness Assessment Results,
+            </h1>,
+            <p className="text-xl text-gray-60o0">,
+              Your comprehensive AI readiness analysis,
+            </p>,
+          </motion.div>,
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
             {/* Overall Score */}
-            <motion.div
+            <motion.div,
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="lg:col-span-1"
-            >
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                <div className="text-6xl font-bold mb-4">
-                  <span className={getScoreColor(assessmentResult.overallScore)}>
+              className="lg: col-span-1">,
+              <div className="bg-white rounded-2xl shadow-xl p-8 text-center">,
+                <div className="text-6xl font-bold mb-4">,
+                  <span className={getScoreColor(assessmentResult.overallScore)}>,
                     {assessmentResult.overallScore}
-                  </span>
-                  <span className="text-gray-40o0">/10o0</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-90o0 mb-2">
+                  </span>,
+                  <span className="text-gray-40o0">/10o0</span>,
+                </div>,
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-2">,
                   {getScoreLabel(assessmentResult.overallScore)}
-                </h3>
-                <p className="text-gray-60o0">
-                  Overall AI readiness score based on your responses
-                </p>
-              </div>
-            </motion.div>
-
+                </h3>,
+                <p className="text-gray-60o0">,
+                  Overall AI readiness score based on your responses,
+                </p>,
+              </div>,
+            </motion.div>,
             {/* Category Scores */}
-            <div className="lg:col-span-2">
-              <motion.div
+            <div className="lg: col-span-2">,
+              <motion.div,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white rounded-2xl shadow-xl p-8"
-              >
-                <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
-                  Category Breakdown
-                </h3>
-                <div className="space-y-6">
+                className="bg-white rounded-2xl shadow-xl p-8">,
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">,
+                  Category Breakdown,
+                </h3>,
+                <div className="space-y-6">,
                   {Object.entries(assessmentResult.categoryScores).map(([category, score], index) => {
-                    const IconComponent = categoryIcons[category as keyof typeof categoryIcons];
-                    const colorClass = categoryColors[category as keyof typeof categoryColors];
-                    
+                    const IconComponent = categoryIcons[category as keyof typeof categoryIcons],
+                    const colorClass = categoryColors[category as keyof typeof categoryColors],
                     return (
-                      <motion.div
+                      <motion.div,
                         key={category}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="flex items-center justify-between p-4 bg-gray-50 rounded-xl"
-                      >
-                        <div className="flex items-center space-x-4">
-                          <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass} text-white`}>
-                            <IconComponent className="w-6 h-6"  />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-90o0">{category}</h4>
-                            <p className="text-sm text-gray-60o0">
+                        className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">,
+                        <div className="flex items-center space-x-4">,
+                          <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass} text-white`}>,
+                            <IconComponent className="w-6 h-6"  />,
+                          </div>,
+                          <div>,
+                            <h4 className="font-semibold text-gray-90o0">{category}</h4>,
+                            <p className="text-sm text-gray-60o0">,
                               {score >= 80 ? 'Excellent' : score >= 60 ? 'Good' : 'Needs Improvement'}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <div className={`text-2xl font-bold ${getScoreColor(score)}`}>
+                            </p>,
+                          </div>,
+                        </div>,
+                        <div className="text-right">,
+                          <div className={`text-2xl font-bold ${getScoreColor(score)}`}>,
                             {score}
-                          </div>
-                          <div className="text-sm text-gray-50o0">/10o0</div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
+                          </div>,
+                          <div className="text-sm text-gray-50o0">/10o0</div>,
+                        </div>,
+                      </motion.div>)})}
+                </div>,
+              </motion.div>,
+            </div>,
+          </div>,
           {/* Recommendations */}
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-8 bg-white rounded-2xl shadow-xl p-8"
-          >
-            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
-              Recommendations
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            className="mt-8 bg-white rounded-2xl shadow-xl p-8">,
+            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">,
+              Recommendations,
+            </h3>,
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
               {assessmentResult.recommendations.map((recommendation, index) => (
-                <motion.div
+                <motion.div,
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-start space-x-3 p-4 bg-blue-50 rounded-xl"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-60o0 mt-0.5 flex-shrink-0"  />
-                  <p className="text-gray-70o0">{recommendation}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
+                  className="flex items-start space-x-3 p-4 bg-blue-50 rounded-xl">,
+                  <CheckCircle className="w-6 h-6 text-blue-60o0 mt-0.5 flex-shrink-0"  />,
+                  <p className="text-gray-70o0">{recommendation}</p>,
+                </motion.div>))}
+            </div>,
+          </motion.div>,
           {/* Next Steps */}
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-8 bg-white rounded-2xl shadow-xl p-8"
-          >
-            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
-              Recommended Next Steps
-            </h3>
-            <div className="space-y-4">
+            className="mt-8 bg-white rounded-2xl shadow-xl p-8">,
+            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">,
+              Recommended Next Steps,
+            </h3>,
+            <div className="space-y-4">,
               {assessmentResult.nextSteps.map((step, index) => (
-                <motion.div
+                <motion.div,
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl"
-                >
-                  <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center font-semibold">
+                  className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl">,
+                  <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center font-semibold">,
                     {index + 1}
-                  </div>
-                  <p className="text-gray-70o0">{step}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
+                  </div>,
+                  <p className="text-gray-70o0">{step}</p>,
+                </motion.div>))}
+            </div>,
+          </motion.div>,
           {/* CTA */}
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="mt-8 text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-semibold mb-4">
-                Ready to Transform Your Business with AI?
-              </h3>
-              <p className="text-lg mb-6 opacity-90">
-                Get expert guidance and support for your AI implementation journey
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
-                  Download Full Report
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">
-                  Schedule Consultation
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    );
-  }
-
+            className="mt-8 text-center">,
+            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">,
+              <h3 className="text-2xl font-semibold mb-4">,
+                Ready to Transform Your Business with AI?,
+              </h3>,
+              <p className="text-lg mb-6 opacity-90">,
+                Get expert guidance and support for your AI implementation journey,
+              </p>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+                <button className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
+                  Download Full Report,
+                </button>,
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">,
+                  Schedule Consultation,
+                </button>,
+              </div>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </div>)}
+,
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">,
+      <div className="max-w-4xl mx-auto">,
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
-            AI Readiness Assessment 20o25
-          </h1>
-          <p className="text-xl text-gray-60o0 mb-8">
-            Evaluate your organization's readiness for AI implementation
-          </p>
-          <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">
-            <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-60o0">
+          className="text-center mb-12">,
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-4">,
+            AI Readiness Assessment 20o25,
+          </h1>,
+          <p className="text-xl text-gray-60o0 mb-8">,
+            Evaluate your organization's readiness for AI implementation,
+          </p>,
+          <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">,
+            <div className="flex items-center space-x-4">,
+              <div className="text-sm text-gray-60o0">,
                 Question {currentQuestion + 1} of {assessmentQuestions.length}
-              </div>
-              <div className="w-64 bg-gray-20o0 rounded-full h-2">
-                <div 
-                  className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 h-2 rounded-full transition-all duration-30o0"
+              </div>,
+              <div className="w-64 bg-gray-20o0 rounded-full h-2">,
+                <div
+                  className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 h-2 rounded-full transition-all duration-30o0",
                   style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 10o0}%` }}
-                 />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
+                 />,
+              </div>,
+            </div>,
+          </div>,
+        </motion.div>,
+        <AnimatePresence mode="wait">,
+          <motion.div,
             key={currentQuestion}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="bg-white rounded-2xl shadow-xl p-8"
-          >
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
+            className="bg-white rounded-2xl shadow-xl p-8">,
+            <div className="mb-8">,
+              <div className="flex items-center space-x-3 mb-4">,
                 <div className={`p-2 rounded-lg bg-gradient-to-r ${
-                  categoryColors[assessmentQuestions[currentQuestion].category as keyof typeof categoryColors]
-                } text-white`}>
+                  categoryColors[assessmentQuestions[currentQuestion].category as keyof typeof categoryColors]} text-white`}>,
                   {React.createElement(
                     categoryIcons[assessmentQuestions[currentQuestion].category as keyof typeof categoryIcons],
                     { className: "w-6 h-6" }
                   )}
-                </div>
-                <span className="text-sm font-medium text-gray-60o0">
+                </div>,
+                <span className="text-sm font-medium text-gray-60o0">,
                   {assessmentQuestions[currentQuestion].category}
-                </span>
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-90o0 mb-6">
+                </span>,
+              </div>,
+              <h2 className="text-2xl font-semibold text-gray-90o0 mb-6">,
                 {assessmentQuestions[currentQuestion].question}
-              </h2>
-            </div>
-
-            <div className="space-y-4">
+              </h2>,
+            </div>,
+            <div className="space-y-4">,
               {assessmentQuestions[currentQuestion].options.map((option, index) => (
-                <motion.button
+                <motion.button,
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handleAnswer(assessmentQuestions[currentQuestion].id, option.value)}
-                  className="w-full text-left p-6 border-2 border-gray-20o0 rounded-xl hover:border-purple-30o0 hover:bg-purple-50 transition-all duration-20o0 group"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-semibold text-gray-90o0 group-hover:text-purple-70o0">
+                  className="w-full text-left p-6 border-2 border-gray-20o0 rounded-xl hover: border-purple-30o0 hover:bg-purple-50 transition-all duration-20o0 group">,
+                  <div className="flex items-center justify-between">,
+                    <div>,
+                      <div className="font-semibold text-gray-90o0 group-hover:text-purple-70o0">,
                         {option.label}
-                      </div>
-                      <div className="text-sm text-gray-60o0 mt-1">
+                      </div>,
+                      <div className="text-sm text-gray-60o0 mt-1">,
                         {option.description}
-                      </div>
-                    </div>
-                    <div className="w-6 h-6 border-2 border-gray-30o0 rounded-full group-hover:border-purple-50o0 transition-colors"  />
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </div>
-  );
-}
+                      </div>,
+                    </div>,
+                    <div className="w-6 h-6 border-2 border-gray-30o0 rounded-full group-hover: border-purple-50o0 transition-colors"  />,
+                  </div>,
+                </motion.button>))}
+            </div>,
+          </motion.div>,
+        </AnimatePresence>,
+      </div>,
+    </div>)}

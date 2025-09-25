@@ -1,5 +1,4 @@
-"use client";
-
+'use client',
 export default function WhatsNewStrip() {
-  return null;
-}
+  return null}
+,

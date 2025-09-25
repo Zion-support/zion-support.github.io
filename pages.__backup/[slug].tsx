@@ -1,43 +1,38 @@
-import React{ useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-ArrowLeft
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
+import React{ useMemo } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+ArrowLeft,
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 export default function ServiceFallbackPage() {
 	return (
-		<UltraFuturisticBackground>
-			<Head>
-				<title>Service Not Found | Zion Tech Group</title>
-				<meta name="robots" content="noindex"  />
-			</Head>
-			<div className="container mx-auto px-4 py-24 text-center">
-				<h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Service Not Found</h1>
-				<p className="text-gray-30o0 mb-8">This service link is no longer available. Explore our full catalog of services.</p>
-				<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-					<Link 
-						href="/services" 
-						className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold"
-					>
-						Browse Services
-					</Link>
-					<Link 
-						href="/contact" 
-						className="border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold"
-					>
-						Contact Us
-					</Link>
-				</div>
-				<div className="mt-12 text-left">
-					<Link 
-						href="/" 
-						className="inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors"
-					>
-						<ArrowLeft className="w-4 h-4"  />
-						Back to Home
-					</Link>
-				</div>
-			</div>
-		</UltraFuturisticBackground>
-	);
-}
+		<UltraFuturisticBackground>,
+			<Head>,
+				<title>Service Not Found | Zion Tech Group</title>,
+				<meta name="robots" content="noindex"  />,
+			</Head>,
+			<div className="container mx-auto px-4 py-24 text-center">,
+				<h1 className="text-4xl md: text-6xl font-bold text-white mb-4">Service Not Found</h1>,
+				<p className="text-gray-30o0 mb-8">This service link is no longer available. Explore our full catalog of services.</p>,
+				<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">,
+					<Link
+						href="/services",
+						className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold">,
+						Browse Services,
+					</Link>,
+					<Link
+						href="/contact",
+						className="border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold">,
+						Contact Us,
+					</Link>,
+				</div>,
+				<div className="mt-12 text-left">,
+					<Link
+						href="/",
+						className="inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors">,
+						<ArrowLeft className="w-4 h-4"  />,
+						Back to Home,
+					</Link>,
+				</div>,
+			</div>,
+		</UltraFuturisticBackground>)}
+,

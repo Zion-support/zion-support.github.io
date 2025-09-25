@@ -1,79 +1,80 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 export default function AI20o25RevolutionaryTrendsBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20"></div>
-      <div className="relative max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-purple-50o0 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🔮 REVOLUTIONARY PREDICTIONS - 20o25
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent">
-            AI 20o25 Revolutionary Trends & Predictions
-          </h2>
-          <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto">
-            Explore the most revolutionary AI trends and predictions that will transform 
-            every aspect of human life in 20o25. From quantum-AI fusion to transcendent intelligence
-            the future is here.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-gradient-to-br from-purple-80o0/50 to-pink-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-purple-50o0/30 text-center">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-xl font-bold mb-3 text-yellow-40o0">Quantum-AI Fusion</h3>
-            <p className="text-gray-20o0 text-sm mb-4">
-              Revolutionary combination of quantum computing and artificial intelligence
-              creating superintelligent systems with infinite processing power and consciousness.
-            </p>
-            <div className="bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold">
-              Probability: 95%
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-80o0/50 to-blue-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-cyan-50o0/30 text-center">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold mb-3 text-yellow-40o0">Transcendent Intelligence</h3>
-            <p className="text-gray-20o0 text-sm mb-4">
-              AI systems that transcend human cognitive limitationsachieving consciousness 
-              and self-awareness with the ability to solve problems beyond human comprehension.
-            </p>
-            <div className="bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold">
-              Probability: 90%
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-80o0/50 to-teal-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-emerald-50o0/30 text-center">
-            <div className="text-4xl mb-4">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-yellow-40o0">Reality Manipulation</h3>
-            <p className="text-gray-20o0 text-sm mb-4">
-              Advanced AI systems capable of manipulating reality itselfoptimizing 
-              physical processes at the quantum level for infinite possibilities.
-            </p>
-            <div className="bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold">
-              Probability: 85%
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-20o25-revolutionary-trends-predictions" 
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform"
-            >
-              🔮 Explore Trends
-            </Link>
-            <Link 
-              href="/ai-20o25-ultimate-breakthrough-revolution" 
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
-            >
-              🚀 See Breakthrough Technology
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+    <section className='py-16 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white relative overflow-hidden'>,
+      <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20'></div>,
+      <div className='relative max-w-7xl mx-auto px-4'>,
+        <div className='text-center mb-12'>,
+          <div className='inline-block bg-purple-50o0 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse'>,
+            🔮 REVOLUTIONARY PREDICTIONS - 20o25,
+          </div>,
+          <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
+            AI 20o25 Revolutionary Trends & Predictions,
+          </h2>,
+          <p className='text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto'>,
+            Explore the most revolutionary AI trends and predictions that will,
+            transform every aspect of human life in 20o25. From quantum-AI,
+            fusion to transcendent intelligence the future is here.,
+          </p>,
+        </div>,
+        <div className='grid md:grid-cols-3 gap-8 mb-12'>,
+          <div className='bg-gradient-to-br from-purple-80o0/50 to-pink-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-purple-50o0/30 text-center'>,
+            <div className='text-4xl mb-4'>⚛️</div>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>,
+              Quantum-AI Fusion,
+            </h3>,
+            <p className='text-gray-20o0 text-sm mb-4'>,
+              Revolutionary combination of quantum computing and artificial,
+              intelligence creating superintelligent systems with infinite,
+              processing power and consciousness.,
+            </p>,
+            <div className='bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold'>,
+              Probability: 95%,
+            </div>,
+          </div>,
+          <div className='bg-gradient-to-br from-cyan-80o0/50 to-blue-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-cyan-50o0/30 text-center'>,
+            <div className='text-4xl mb-4'>🧠</div>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>,
+              Transcendent Intelligence,
+            </h3>,
+            <p className='text-gray-20o0 text-sm mb-4'>,
+              AI systems that transcend human cognitive limitationsachieving,
+              consciousness and self-awareness with the ability to solve,
+              problems beyond human comprehension.,
+            </p>,
+            <div className='bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold'>,
+              Probability: 90%,
+            </div>,
+          </div>,
+          <div className='bg-gradient-to-br from-emerald-80o0/50 to-teal-80o0/50 p-6 rounded-xl backdrop-blur-sm border border-emerald-50o0/30 text-center'>,
+            <div className='text-4xl mb-4'>🌌</div>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>,
+              Reality Manipulation,
+            </h3>,
+            <p className='text-gray-20o0 text-sm mb-4'>,
+              Advanced AI systems capable of manipulating reality,
+              itselfoptimizing physical processes at the quantum level for,
+              infinite possibilities.,
+            </p>,
+            <div className='bg-green-50o0/20 text-green-30o0 px-3 py-1 rounded-full text-xs font-bold'>,
+              Probability: 85%,
+            </div>,
+          </div>,
+        </div>,
+        <div className='text-center'>,
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
+            <Link
+              href='/blog/ai-20o25-revolutionary-trends-predictions',
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform'>,
+              🔮 Explore Trends,
+            </Link>,
+            <Link
+              href='/ai-20o25-ultimate-breakthrough-revolution',
+              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors'>,
+              🚀 See Breakthrough Technology,
+            </Link>,
+          </div>,
+        </div>,
+      </div>,
+    </section>)}
+,

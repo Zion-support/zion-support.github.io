@@ -1,13 +1,13 @@
-"use client";
-import React{ useState } from 'react';
-import Link from 'next/link';
-import { 
-  Search
-  Filter
-  Brain
-  Atom
-  Bot
-  Zap
+"use client",
+import React{ useState } from 'react',
+import Link from 'next/link',
+import {
+  Search,
+  Filter,
+  Brain,
+  Atom,
+  Bot,
+  Zap,
   TrendingUp,
   Star,
   ArrowRight,
@@ -17,13 +17,10 @@ import {
   Lightbulb,
   Shield,
   Globe,
-  Cpu
-} from 'lucide-react';
-
+  Cpu} from 'lucide-react',
 const NewContentDiscoveryWidget20o26 = () => {
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-
+  const [searchTermsetSearchTerm] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
   const contentItems = [
     {
       id: 1,
@@ -97,217 +94,190 @@ const NewContentDiscoveryWidget20o26 = () => {
       featured: false,
       stats: { views: "8K"rating: 4.8 }
     }
-  ];
-
+  ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <Globe className="h-4 w-4"  /> },
-    { id: 'ai-'breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: <Brain className="h-4 w-4"  /> },
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: <Atom className="h-4 w-4"  /> },
-    { id: ''automation', 'name: ''Automation', 'icon: <Bot className="h-4 w-4"  /> }
-  ];
-
+    { id: ''allname: 'All 'Contenticon: <Globe className="h-4 w-4"  /> },
+    { id: 'ai-'breakthroughsname: 'AI 'Breakthroughsicon: <Brain className="h-4 w-4"  /> },
+    { id: 'quantum-'computingname: 'Quantum 'Computingicon: <Atom className="h-4 w-4"  /> },
+    { id: ''automationname: ''Automationicon: <Bot className="h-4 w-4"  /> }
+  ],
   const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const featuredContent = filteredContent.filter(item => item.featured);
-  const regularContent = filteredContent.filter(item => !item.featured);
-
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory}),
+  const featuredContent = filteredContent.filter(item => item.featured),
+  const regularContent = filteredContent.filter(item => !item.featured),
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-20o0 p-8">
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-20o0 p-8">,
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-90o0 mb-2">
-            Discover Revolutionary Content
-          </h2>
-          <p className="text-gray-60o0">
-            Explore the latest AI breakthroughsquantum computing solutionsand automation technologies
-          </p>
-        </div>
-        <div className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-full text-sm font-medium">
-          <Star className="h-4 w-4 mr-2"  />
-          New 20o26
-        </div>
-      </div>
-
+      <div className="flex items-center justify-between mb-8">,
+        <div>,
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-2">,
+            Discover Revolutionary Content,
+          </h2>,
+          <p className="text-gray-60o0">,
+            Explore the latest AI breakthroughsquantum computing solutionsand automation technologies,
+          </p>,
+        </div>,
+        <div className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-full text-sm font-medium">,
+          <Star className="h-4 w-4 mr-2"  />,
+          New 20o26,
+        </div>,
+      </div>,
       {/* Search and Filter */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-40o0"  />
+      <div className="flex flex-col sm: flex-row gap-4 mb-8">,
+        <div className="relative flex-1">,
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-40o0"  />,
           <input
-            type="text"
-            placeholder="Search contentagsor technologies..."
+            type="text",
+            placeholder="Search contentagsor technologies...",
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
-          />
-        </div>
-        <div className="flex gap-2">
+            className="w-full pl-10 pr-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
+          />,
+        </div>,
+        <div className="flex gap-2">,
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center px-4 py-3 rounded-lg font-medium transition-all duration-20o0 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white'
-                  : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
-              }`}
-            >
+                selectedCategory === category.id,
+                  ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white',
+                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
+            >,
               {category.icon}
-              <span className="ml-2 hidden sm:inline">{category.name}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
+              <span className="ml-2 hidden sm: inline">{category.name}</span>,
+            </button>))}
+        </div>,
+      </div>,
       {/* Featured Content */}
       {featuredContent.length > 0 && (
-        <div className="mb-8">
-          <h3 className="text-xl font-bold text-gray-90o0 mb-4 flex items-center">
-            <Star className="h-5 w-5 mr-2 text-yellow-50o0"  />
-            Featured Content
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-8">,
+          <h3 className="text-xl font-bold text-gray-90o0 mb-4 flex items-center">,
+            <Star className="h-5 w-5 mr-2 text-yellow-50o0"  />,
+            Featured Content,
+          </h3>,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {featuredContent.map((item) => (
-              <div key={item.id} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-30o0"></div>
-                <div className="relative bg-white border border-gray-20o0 rounded-xl p-6 hover:shadow-lg transition-all duration-30o0 group-hover:border-blue-30o0">
-                  <div className="flex items-center mb-4">
-                    <div className="p-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-lg mr-3">
+              <div key={item.id} className="group relative">,
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-xl blur-xl group-hover: blur-2xl transition-all duration-30o0"></div>,
+                <div className="relative bg-white border border-gray-20o0 rounded-xl p-6 hover:shadow-lg transition-all duration-30o0 group-hover:border-blue-30o0">,
+                  <div className="flex items-center mb-4">,
+                    <div className="p-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-lg mr-3">,
                       {item.icon}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center text-sm text-gray-50o0">
-                        <Clock className="h-3 w-3 mr-1"  />
+                    </div>,
+                    <div className="flex-1">,
+                      <div className="flex items-center text-sm text-gray-50o0">,
+                        <Clock className="h-3 w-3 mr-1"  />,
                         {item.readTime}
-                        <span className="mx-2">•</span>
-                        <Users className="h-3 w-3 mr-1"  />
+                        <span className="mx-2">•</span>,
+                        <Users className="h-3 w-3 mr-1"  />,
                         {item.stats.views}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <h4 className="text-lg font-bold text-gray-90o0 mb-2 group-hover:text-blue-60o0 transition-colors">
+                      </div>,
+                    </div>,
+                  </div>,
+                  <h4 className="text-lg font-bold text-gray-90o0 mb-2 group-hover: text-blue-60o0 transition-colors">,
                     {item.title}
-                  </h4>
-                  
-                  <p className="text-gray-60o0 text-sm mb-4 line-clamp-3">
+                  </h4>,
+                  <p className="text-gray-60o0 text-sm mb-4 line-clamp-3">,
                     {item.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  </p>,
+                  <div className="flex flex-wrap gap-2 mb-4">,
                     {item.tags.slice(0o3).map((tagindex) => (
-                      <span key={index} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">
+                      <span key={index} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
                         {tag}
-                      </span>
-                    ))}
+                      </span>))}
                     {item.tags.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">
-                        +{item.tags.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="flex items-center text-sm text-gray-50o0">
-                        <Star className="h-4 w-4 text-yellow-40o0 mr-1"  />
+                      <span className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
+                        +{item.tags.length - 3} more,
+                      </span>)}
+                  </div>,
+                  <div className="flex items-center justify-between">,
+                    <div className="flex items-center">,
+                      <div className="flex items-center text-sm text-gray-50o0">,
+                        <Star className="h-4 w-4 text-yellow-40o0 mr-1"  />,
                         {item.stats.rating}
-                      </div>
-                    </div>
-                    <Link 
+                      </div>,
+                    </div>,
+                    <Link
                       href={item.url}
-                      className="inline-flex items-center text-blue-60o0 hover:text-blue-70o0 font-medium text-sm group-hover:translate-x-1 transition-all duration-20o0"
-                    >
-                      Read More
-                      <ArrowRight className="h-4 w-4 ml-1"  />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
+                      className="inline-flex items-center text-blue-60o0 hover: text-blue-70o0 font-medium text-sm group-hover:translate-x-1 transition-all duration-20o0">,
+                      Read More,
+                      <ArrowRight className="h-4 w-4 ml-1"  />,
+                    </Link>,
+                  </div>,
+                </div>,
+              </div>))}
+          </div>,
+        </div>)}
+,
       {/* Regular Content */}
       {regularContent.length > 0 && (
-        <div>
-          <h3 className="text-xl font-bold text-gray-90o0 mb-4 flex items-center">
-            <TrendingUp className="h-5 w-5 mr-2 text-green-50o0"  />
-            Latest Content
-          </h3>
-          <div className="space-y-4">
+        <div>,
+          <h3 className="text-xl font-bold text-gray-90o0 mb-4 flex items-center">,
+            <TrendingUp className="h-5 w-5 mr-2 text-green-50o0"  />,
+            Latest Content,
+          </h3>,
+          <div className="space-y-4">,
             {regularContent.map((item) => (
-              <div key={item.id} className="group bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-md transition-all duration-30o0 border border-transparent hover:border-gray-20o0">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-lg flex-shrink-0">
+              <div key={item.id} className="group bg-gray-50 rounded-xl p-6 hover: bg-white hover:shadow-md transition-all duration-30o0 border border-transparent hover:border-gray-20o0">,
+                <div className="flex items-start gap-4">,
+                  <div className="p-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white rounded-lg flex-shrink-0">,
                     {item.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-2">
-                      <h4 className="text-lg font-bold text-gray-90o0 group-hover:text-blue-60o0 transition-colors">
+                  </div>,
+                  <div className="flex-1">,
+                    <div className="flex items-center gap-4 mb-2">,
+                      <h4 className="text-lg font-bold text-gray-90o0 group-hover: text-blue-60o0 transition-colors">,
                         {item.title}
-                      </h4>
-                      <div className="flex items-center text-sm text-gray-50o0">
-                        <Clock className="h-3 w-3 mr-1"  />
+                      </h4>,
+                      <div className="flex items-center text-sm text-gray-50o0">,
+                        <Clock className="h-3 w-3 mr-1"  />,
                         {item.readTime}
-                      </div>
-                    </div>
-                    <p className="text-gray-60o0 text-sm mb-3">
+                      </div>,
+                    </div>,
+                    <p className="text-gray-60o0 text-sm mb-3">,
                       {item.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
+                    </p>,
+                    <div className="flex items-center justify-between">,
+                      <div className="flex flex-wrap gap-2">,
                         {item.tags.slice(0o4).map((tagindex) => (
-                          <span key={index} className="px-2 py-1 bg-white text-gray-60o0 text-xs rounded-full border">
+                          <span key={index} className="px-2 py-1 bg-white text-gray-60o0 text-xs rounded-full border">,
                             {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <Link 
+                          </span>))}
+                      </div>,
+                      <Link
                         href={item.url}
-                        className="inline-flex items-center text-blue-60o0 hover:text-blue-70o0 font-medium text-sm group-hover:translate-x-1 transition-all duration-20o0"
-                      >
-                        Read More
-                        <ArrowRight className="h-4 w-4 ml-1"  />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
+                        className="inline-flex items-center text-blue-60o0 hover: text-blue-70o0 font-medium text-sm group-hover:translate-x-1 transition-all duration-20o0">,
+                        Read More,
+                        <ArrowRight className="h-4 w-4 ml-1"  />,
+                      </Link>,
+                    </div>,
+                  </div>,
+                </div>,
+              </div>))}
+          </div>,
+        </div>)}
+,
       {/* No Results */}
       {filteredContent.length === 0 && (
-        <div className="text-center py-12">
-          <Search className="h-12 w-12 text-gray-40o0 mx-auto mb-4"  />
-          <h3 className="text-lg font-medium text-gray-90o0 mb-2">No content found</h3>
-          <p className="text-gray-50o0">Try adjusting your search terms or filters</p>
-        </div>
-      )}
-
+        <div className="text-center py-12">,
+          <Search className="h-12 w-12 text-gray-40o0 mx-auto mb-4"  />,
+          <h3 className="text-lg font-medium text-gray-90o0 mb-2">No content found</h3>,
+          <p className="text-gray-50o0">Try adjusting your search terms or filters</p>,
+        </div>)}
+,
       {/* View All CTA */}
-      <div className="mt-8 pt-6 border-t border-gray-20o0 text-center">
-        <Link 
-          href="/content-showcase"
-          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-semibold rounded-lg hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5"
-        >
-          <Globe className="h-5 w-5 mr-2"  />
-          View All Content
-          <ArrowRight className="h-4 w-4 ml-2"  />
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-export default NewContentDiscoveryWidget20o26;
+      <div className="mt-8 pt-6 border-t border-gray-20o0 text-center">,
+        <Link
+          href="/content-showcase",
+          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-semibold rounded-lg hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
+          <Globe className="h-5 w-5 mr-2"  />,
+          View All Content,
+          <ArrowRight className="h-4 w-4 ml-2"  />,
+        </Link>,
+      </div>,
+    </div>)},
+export default NewContentDiscoveryWidget20o26,

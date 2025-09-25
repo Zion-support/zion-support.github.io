@@ -1,11 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx"
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -20,6 +16,8 @@
     "components",
     "lib",
     "types",
+    "data",
+    "utils",
     "**/*.backup.*",
     "**/*.bak/**",
     "**/backup/**",
@@ -29,4 +27,3 @@
     "noEmit": true
   }
 }
-

@@ -1,24 +1,21 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  ArrowRight, 
-  CheckCircle, 
+import React from 'react',
+import dynamic from 'next/dynamic',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  ArrowRight,
+  CheckCircle,
   Star,
   Globe,
   Settings,
-  Users
-} from 'lucide-react'
-
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
-
+  Users} from 'lucide-react',
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false }),
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false }),
 const CybersecurityPage: React.FC = () => {
   const services = [
     {
@@ -30,13 +27,11 @@ const CybersecurityPage: React.FC = () => {
         "Penetration testing",
         "Security audit",
         "Risk assessment",
-        "Compliance review"
-      ],
+        "Compliance review"],
       pricing: "Starting at $2,50o0",
       delivery: "1-3 weeks",
       category: "Assessment",
-      icon: <Shield className="w-8 h-8"   />
-    },
+      icon: <Shield className="w-8 h-8"   />},
     {
       id: 2,
       title: "Data Protection",
@@ -46,13 +41,11 @@ const CybersecurityPage: React.FC = () => {
         "Access control",
         "Data backup",
         "Privacy compliance",
-        "Data loss prevention"
-      ],
+        "Data loss prevention"],
       pricing: "Starting at $3,0o00",
       delivery: "2-4 weeks",
       category: "Protection",
-      icon: <Lock className="w-8 h-8"   />
-    },
+      icon: <Lock className="w-8 h-8"   />},
     {
       id: 3,
       title: "Threat Monitoring",
@@ -62,13 +55,11 @@ const CybersecurityPage: React.FC = () => {
         "Threat detection",
         "Incident alerting",
         "Security analytics",
-        "Response automation"
-      ],
+        "Response automation"],
       pricing: "Starting at $1,50o0/month",
       delivery: "Ongoing",
       category: "Monitoring",
-      icon: <Eye className="w-8 h-8"   />
-    },
+      icon: <Eye className="w-8 h-8"   />},
     {
       id: 4,
       title: "Incident Response",
@@ -78,13 +69,11 @@ const CybersecurityPage: React.FC = () => {
         "Containment strategies",
         "Recovery planning",
         "Forensic investigation",
-        "Post-incident review"
-      ],
+        "Post-incident review"],
       pricing: "Starting at $5,0o00",
       delivery: "Immediate",
       category: "Response",
-      icon: <AlertTriangle className="w-8 h-8"   />
-    },
+      icon: <AlertTriangle className="w-8 h-8"   />},
     {
       id: 5,
       title: "Compliance Management",
@@ -94,13 +83,11 @@ const CybersecurityPage: React.FC = () => {
         "Policy development",
         "Training programs",
         "Audit support",
-        "Documentation"
-      ],
+        "Documentation"],
       pricing: "Starting at $4,0o00",
       delivery: "2-6 weeks",
       category: "Compliance",
-      icon: <Settings className="w-8 h-8"   />
-    },
+      icon: <Settings className="w-8 h-8"   />},
     {
       id: 6,
       title: "Security Training",
@@ -110,15 +97,12 @@ const CybersecurityPage: React.FC = () => {
         "Phishing simulation",
         "Best practices training",
         "Incident reporting",
-        "Regular updates"
-      ],
+        "Regular updates"],
       pricing: "Starting at $1,0o00",
       delivery: "1-2 weeks",
       category: "Training",
-      icon: <Users className="w-8 h-8"   />
-    }
-  ]
-
+      icon: <Users className="w-8 h-8"   />}
+  ],
   const complianceStandards = [
     { name: "SOC 2", description: "Service Organization Control 2" },
     { name: "ISO 270o01", description: "Information Security Management" },
@@ -126,213 +110,185 @@ const CybersecurityPage: React.FC = () => {
     { name: "PCI DSS", description: "Payment Card Industry" },
     { name: "GDPR", description: "General Data Protection Regulation" },
     { name: "NIST", description: "National Institute of Standards" }
-  ]
-
+  ],
   return (
-    <>
-      <SEO title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions."
-        keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance"
-        canonical="https://ziontechgroup.com/cybersecurity"
-        />
-      
-      <PageTransition>
-        <main className="min-h-screen bg-white">
+    <>,
+      <SEO title="Cybersecurity Services - Zion Tech Group",
+        description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions.",
+        keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance",
+        canonical="https: //ziontechgroup.com/cybersecurity",
+        />,
+      <PageTransition>,
+        <main className="min-h-screen bg-white">,
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-20">,
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+              <motion.div,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-90o0 mb-6">
-                  Cybersecurity <span className="text-blue-60o0">Services</span>
-                </h1>
-                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
-                  Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.
-                </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-                  <motion.a
-                    href="#services"
+                className="text-center">,
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-90o0 mb-6">,
+                  Cybersecurity <span className="text-blue-60o0">Services</span>,
+                </h1>,
+                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
+                  Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.,
+                </p>,
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">,
+                  <motion.a,
+                    href="#services",
                     whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"   />
-                    Explore Services
-                  </motion.a>
-                  <motion.a
-                    href="/contact"
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
+                    <ArrowRight className="w-5 h-5"   />,
+                    Explore Services,
+                  </motion.a>,
+                  <motion.a,
+                    href="/contact",
                     whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"   />
-                    Get Started
-                  </motion.a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
+                    <ArrowRight className="w-5 h-5"   />,
+                    Get Started,
+                  </motion.a>,
+                </div>,
+              </motion.div>,
+            </div>,
+          </section>,
           {/* Services Grid */}
-          <section id="services" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div
+          <section id="services" className="py-20">,
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+              <motion.div,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">
-                  Our Cybersecurity Services
-                </h2>
-                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-                  Comprehensive security solutions to protect your business from cyber threats and ensure compliance.
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                className="text-center mb-16">,
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">,
+                  Our Cybersecurity Services,
+                </h2>,
+                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                  Comprehensive security solutions to protect your business from cyber threats and ensure compliance.,
+                </p>,
+              </motion.div>,
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
                 {services.map((service, index) => (
-                  <motion.div
+                  <motion.div,
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-30o0 overflow-hidden"
-                  >
-                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-blue-60o0">
+                    className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0 overflow-hidden">,
+                    <div className="p-8">,
+                      <div className="flex items-center justify-between mb-4">,
+                        <div className="text-blue-60o0">,
                           {service.icon}
-                        </div>
-                        <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-medium">
+                        </div>,
+                        <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-medium">,
                           {service.category}
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-xl font-bold text-gray-90o0 mb-3">
+                        </span>,
+                      </div>,
+                      <h3 className="text-xl font-bold text-gray-90o0 mb-3">,
                         {service.title}
-                      </h3>
-                      
-                      <p className="text-gray-60o0 mb-6">
+                      </h3>,
+                      <p className="text-gray-60o0 mb-6">,
                         {service.description}
-                      </p>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-90o0 mb-3">Key Features:</h4>
-                        <ul className="space-y-2">
+                      </p>,
+                      <div className="mb-6">,
+                        <h4 className="font-semibold text-gray-90o0 mb-3">Key Features: </h4>,
+                        <ul className="space-y-2">,
                           {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-60o0">
-                              <CheckCircle className="w-4 h-4 text-green-50o0"   />
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-60o0">,
+                              <CheckCircle className="w-4 h-4 text-green-50o0"   />,
                               {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div className="flex items-center justify-between text-sm text-gray-50o0 mb-6">
-                        <span className="font-semibold text-green-60o0">{service.pricing}</span>
-                        <span>{service.delivery}</span>
-                      </div>
-                      
-                      <motion.button
+                            </li>))}
+                        </ul>,
+                      </div>,
+                      <div className="flex items-center justify-between text-sm text-gray-50o0 mb-6">,
+                        <span className="font-semibold text-green-60o0">{service.pricing}</span>,
+                        <span>{service.delivery}</span>,
+                      </div>,
+                      <motion.button,
                         whileHover={{ scale: 1.0o2 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-60o0 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-70o0 transition-colors"
-                      >
-                        <ArrowRight className="w-5 h-5"   />
-                        Learn More
-                      </motion.button>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
+                        className="w-full bg-blue-60o0 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-70o0 transition-colors">,
+                        <ArrowRight className="w-5 h-5"   />,
+                        Learn More,
+                      </motion.button>,
+                    </div>,
+                  </motion.div>))}
+              </div>,
+            </div>,
+          </section>,
           {/* Compliance Standards */}
-          <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div
+          <section className="bg-gray-50 py-20">,
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+              <motion.div,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">
-                  Compliance Standards
-                </h2>
-                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-                  We help you meet industry standards and regulatory requirements for data security.
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">
+                className="text-center mb-16">,
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">,
+                  Compliance Standards,
+                </h2>,
+                <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                  We help you meet industry standards and regulatory requirements for data security.,
+                </p>,
+              </motion.div>,
+              <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">,
                 {complianceStandards.map((standard, index) => (
-                  <motion.div
+                  <motion.div,
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-30o0 text-center"
-                  >
-                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-30o0 text-center">,
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">,
                       {standard.name}
-                    </h3>
-                    <p className="text-sm text-gray-60o0">
+                    </h3>,
+                    <p className="text-sm text-gray-60o0">,
                       {standard.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
+                    </p>,
+                  </motion.div>))}
+              </div>,
+            </div>,
+          </section>,
           {/* CTA Section */}
-          <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div
+          <section className="py-20">,
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+              <motion.div,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-6">
-                  Secure Your Business Today
-                </h2>
-                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
-                  Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
-                </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-                  <motion.a
-                    href="/contact"
+                className="text-center">,
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-6">,
+                  Secure Your Business Today,
+                </h2>,
+                <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
+                  Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.,
+                </p>,
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">,
+                  <motion.a,
+                    href="/contact",
                     whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"   />
-                    Get Started Today
-                  </motion.a>
-                  <motion.a
-                    href="tel:+130o24640950"
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
+                    <ArrowRight className="w-5 h-5"   />,
+                    Get Started Today,
+                  </motion.a>,
+                  <motion.a,
+                    href="tel: +130o24640950",
                     whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-                  >
-                    <ArrowRight className="w-5 h-5"   />
-                    Call Us: +1 30o2 464 0950
-                  </motion.a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-        </main>
-      </PageTransition>
-    </>
-  )
-}
-
-export default CybersecurityPage
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
+                    <ArrowRight className="w-5 h-5"   />,
+                    Call Us: +1 30o2 464 0950,
+                  </motion.a>,
+                </div>,
+              </motion.div>,
+            </div>,
+          </section>,
+        </main>,
+      </PageTransition>,
+    </>)}
+,
+export default CybersecurityPage,

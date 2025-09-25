@@ -1,6 +1,14 @@
-import Head from 'next/head';
+import React from 'react';
 
-export default function SiteHealth() {
+const site-health = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">site-health</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default site-health;

@@ -1,75 +1,51 @@
-# Ignore backups, temp, disabled, and non-source directories
+# Exclude non-app directories and archived content from linting
 node_modules/
 .next/
-dist/
 out/
-coverage/
 build/
-public/build/
+dist/
+coverage/
+.cache/
+
+# Large mono-repo subprojects not part of the current app build
 automation/
-
-# Backups and temp
-.backup*/
-**/*backup*/
-backup*/
-backups*/
-backup-merge-conflicts/
-backup-problematic-files/
-.temp_backup_components/
-src_backup*/
-*.disabled/
-*/.disabled/
-*disabled*/
-recovered-branches/
-automation/backups/
-
-data_backup/
-
-# Monorepo extra apps and large content
+automation_backup/
+automation-logs/
+automation-reports/
+scripts/
 server/
-zion-os/
-zion-os.disabled/
-zion-ai-assistant/
-zion-website/
-zion_academy/
-zion.app/
-
-# Temp and generated content
-temp*/
-temp_components/
-temp_disabled/
-temp_working/
-__tests__/
-tests/
-__mocks__/
-
-test*/
-
-# Broad utility and types folders that are not part of lint scope
-utils/
-types/
-
-# Specific noisy folders
-services_backup/
-src.disabled/
+backend/
+apps/
 apps.backup/
-components.apps/
-components.disabled/
-components.disabled_full/
-pages.disabled*/
-pages.broken/
-pages.bak/
+app_backup/
+app.disabled/
+app-disabled/
 
-# Static assets and HTML dumps
-site.html
-sitemap.xml
+# Generated or demo services
+generated-services/
 
-# Scripts and experiment sandboxes
-simulator/
-workflow_templates/
+# Archived, backups, or intentionally broken areas
+backups/
+backup*/
+backup-problematic-files/
+corrupted_backup/
+temp_exclude/
+temp_*/
+ts_files_backup/
+__tests__/**
+tests/**
+__jest__/**
+__mocks__/**
+__safe_tests__/**
 
-# Temporary broad exclusion for broken components
-components/**
-src.broken/
-src.pages.disabled/
-*.tsbuildinfo
+# Other packages in the repo
+zion-os/
+zion-website/
+zion-ai-assistant/
+zion_academy/
+zion-film/
+
+# Misc top-level jsx/js playground files
+*.backup
+*.bak
+# Keep above; no additional ignores below so that src-clean is linted

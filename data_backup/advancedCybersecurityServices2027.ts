@@ -1,43 +1,43 @@
 export interface AdvancedCybersecurityService20o27 {
-  "id": string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
+  "id": string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
   pricing: {
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string};
-  "features": string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
+    monthly: number,
+    yearly: number,
+    custom: string,
+    currency: string,
+    pricingModel: string},
+  "features": string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  technologies: string[],
+  integrations: string[],
+  support: string[],
+  link: string,
+  badge: string,
+  icon: string,
+  image: string,
+  innovationLevel: string,
+  marketSize: string,
+  competitors: string[],
   securityFeatures: {
-    threatDetection: string;
-    encryption: string;
-    compliance: string[];
-    monitoring: string;
-    response: string};
-  "roi": string;
-  estimatedDelivery: string;
+    threatDetection: string,
+    encryption: string,
+    compliance: string[],
+    monitoring: string,
+    response: string},
+  "roi": string,
+  estimatedDelivery: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+    phone: string,
+    email: string,
+    website: string,
     address: string}}
-export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityService20o27[] = [// AI-Powered Threat Intelligence Platform
+export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityService20o27[] = [// AI-Powered Threat Intelligence Platform,
   {
     id: "ai-threat-intelligence-platform",
     "title": "AI-Powered Threat Intelligence Platform",
@@ -49,8 +49,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "yearly": 89990,
       "custom": "Enterprise threat intelligence solutions",
       "currency": "$",
-      "pricingModel": "Monthly subscription with threat intelligence feeds"
-    },
+      "pricingModel": "Monthly subscription with threat intelligence feeds"},
     features[
       "Real-time threat detection",
       "AI behavioral analysis",
@@ -61,39 +60,32 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "Custom threat feeds",
       "Advanced analytics",
       "Machine learning models",
-      "API integration"
-    ],
+      "API integration"],
     benefits["Detect threats 10x faster than traditional methods",
       "Reduce false positives by 85%",
       "Predict attacks before they happen",
       "Automated response reduces damage",
-      "24/7 intelligent monitoring"
-    ],
+      "24/7 intelligent monitoring"],
     useCases["Enterprise security operations",
       "Government cybersecurity",
       "Financial institution protection",
       "Healthcare data security",
-      "Critical infrastructure"
-    ],
+      "Critical infrastructure"],
     targetAudience["Fortune 50o0 companies",
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
-      "Technology companies"
-    ],
+      "Technology companies"],
     technologies["Machine learning", "Deep neural networks", "Natural language processing",
-      "Behavioral analytics", "Predictive modeling", "Automation"
-    ],
+      "Behavioral analytics", "Predictive modeling", "Automation"],
     integrations["SIEM systems", "Firewalls", "Endpoint protection", "Cloud platforms",
-      "Security tools", "Incident response platforms"
-    ],
+      "Security tools", "Incident response platforms"],
     support["24/7 threat intelligence support",
       "Security consultation",
       "Threat hunting assistance",
       "Compliance guidance",
-      "Training and certification"
-    ],
-    "link": "https://ziontechgroup.com/ai-threat-intelligence",
+      "Training and certification"],
+    "link": "https: //ziontechgroup.com/ai-threat-intelligence",
     "badge": "Advanced",
     "icon": "🛡️",
     "image": "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto = format&fit=crop&w=80o0&h=50o0",
@@ -105,17 +97,15 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "encryption": "AES-256 encryption",
       compliance["SOC 2", "ISO 270o01", "NIST", "GDPR"],
       "monitoring": "24/7 intelligent monitoring",
-      "response": "Automated incident response"
-    },
+      "response": "Automated incident response"},
     "roi": "40o0-80o0%",
     "estimatedDelivery": "12-16 weeks",
     "contactInfo": {
       phone: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
       "website": "https://ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-  },
-  // Quantum Cryptography Platform
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
+  // Quantum Cryptography Platform,
   {
     "id": "quantum-cryptography-platform",
     "title": "Quantum Cryptography Platform",
@@ -127,8 +117,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "yearly": 150o000,
       "custom": "Quantum security solutions",
       "currency": "$",
-      "pricingModel": "Quantum security platform subscription"
-    },
+      "pricingModel": "Quantum security platform subscription"},
     features["Quantum key distribution (QKD)",
       "Post-quantum cryptography",
       "Quantum-resistant algorithms",
@@ -138,39 +127,32 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "Quantum authentication",
       "Quantum digital signatures",
       "Quantum secure storage",
-      "Quantum compliance tools"
-    ],
+      "Quantum compliance tools"],
     benefits["Unbreakable quantum encryption",
       "Future-proof security",
       "Quantum advantage in cryptography",
       "Government-grade security",
-      "Mathematically proven security"
-    ],
+      "Mathematically proven security"],
     useCases["Government communications",
       "Military operations",
       "Financial transactions",
       "Healthcare data",
-      "Critical infrastructure"
-    ],
+      "Critical infrastructure"],
     targetAudience["Government agencies",
       "Military organizations",
       "Financial institutions",
       "Healthcare systems",
-      "Defense contractors"
-    ],
+      "Defense contractors"],
     technologies["Quantum mechanics", "Quantum key distribution", "Post-quantum algorithms",
-      "Quantum random generation", "Quantum networks", "Quantum hardware"
-    ],
+      "Quantum random generation", "Quantum networks", "Quantum hardware"],
     integrations["Government systems", "Military networks", "Financial systems",
-      "Healthcare platforms", "Critical infrastructure"
-    ],
+      "Healthcare platforms", "Critical infrastructure"],
     support["Quantum security expertise",
       "Government compliance",
       "Security consultation",
       "Quantum training",
-      "Ongoing support"
-    ],
-    "link": "https://ziontechgroup.com/quantum-cryptography",
+      "Ongoing support"],
+    "link": "https: //ziontechgroup.com/quantum-cryptography",
     "badge": "Revolutionary",
     "icon": "🔐",
     "image": "https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0",
@@ -182,17 +164,15 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "encryption": "Quantum encryption",
       compliance["NIST", "FIPS", "Government standards", "Military compliance"],
       "monitoring": "Quantum security monitoring",
-      "response": "Quantum security response"
-    },
+      "response": "Quantum security response"},
     "roi": "80o0-150o0%",
     "estimatedDelivery": "20-28 weeks",
     "contactInfo": {
       phone: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
       "website": "https://ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-  },
-  // Zero Trust Security Architecture
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
+  // Zero Trust Security Architecture,
   {
     "id": "zero-trust-security-architecture",
     "title": "Zero Trust Security Architecture",
@@ -204,8 +184,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "yearly": 120o000,
       "custom": "Zero trust architecture implementation",
       "currency": "$",
-      "pricingModel": "Architecture implementation with ongoing support"
-    },
+      "pricingModel": "Architecture implementation with ongoing support"},
     features["Identity verification",
       "Device trust assessment",
       "Network segmentation",
@@ -215,39 +194,32 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "Access control",
       "Threat detection",
       "Incident response",
-      "Compliance management"
-    ],
+      "Compliance management"],
     benefits["Eliminate network perimeter vulnerabilities",
       "Reduce attack surface by 90%",
       "Improve compliance posture",
       "Enhanced visibility and control",
-      "Adaptive security architecture"
-    ],
+      "Adaptive security architecture"],
     useCases["Enterprise networks",
       "Cloud environments",
       "Remote workforces",
       "Government systems",
-      "Healthcare networks"
-    ],
+      "Healthcare networks"],
     targetAudience["Large enterprises",
       "Government agencies",
       "Healthcare organizations",
       "Financial institutions",
-      "Technology companies"
-    ],
+      "Technology companies"],
     technologies["Identity management", "Network segmentation", "Application security",
-      "Data encryption", "Threat detection", "Access control"
-    ],
+      "Data encryption", "Threat detection", "Access control"],
     integrations["Active Directory", "Cloud platforms", "Security tools",
-      "Network infrastructure", "Applications", "Data systems"
-    ],
+      "Network infrastructure", "Applications", "Data systems"],
     support["Architecture design",
       "Implementation support",
       "Security consultation",
       "Training programs",
-      "Ongoing maintenance"
-    ],
-    "link": "https://ziontechgroup.com/zero-trust-security",
+      "Ongoing maintenance"],
+    "link": "https: //ziontechgroup.com/zero-trust-security",
     "badge": "Advanced",
     "icon": "🔒",
     "image": "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
@@ -259,17 +231,15 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "encryption": "End-to-end encryption",
       compliance["SOC 2", "ISO 270o01", "NIST", "Zero Trust framework"],
       "monitoring": "24/7 security monitoring",
-      "response": "Automated incident response"
-    },
+      "response": "Automated incident response"},
     "roi": "50o0-10o00%",
     "estimatedDelivery": "16-24 weeks",
     "contactInfo": {
       phone: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
       "website": "https://ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-  },
-  // Autonomous Security Operations Center
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
+  // Autonomous Security Operations Center,
   {
     "id": "autonomous-security-operations-center",
     "title": "Autonomous Security Operations Center",
@@ -281,8 +251,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "yearly": 250o000,
       "custom": "Autonomous SOC implementation",
       "currency": "$",
-      "pricingModel": "Autonomous SOC platform subscription"
-    },
+      "pricingModel": "Autonomous SOC platform subscription"},
     features["AI-powered threat detection",
       "Automated incident response",
       "Machine learning analytics",
@@ -292,39 +261,32 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "Threat intelligence",
       "Compliance automation",
       "Security orchestration",
-      "Performance optimization"
-    ],
+      "Performance optimization"],
     benefits["24/7 autonomous security operations",
       "Reduce response time by 95%",
       "Eliminate human error",
       "Continuous security improvement",
-      "Cost-effective security operations"
-    ],
+      "Cost-effective security operations"],
     useCases["Enterprise security operations",
       "Government cybersecurity",
       "Financial security",
       "Healthcare security",
-      "Critical infrastructure"
-    ],
+      "Critical infrastructure"],
     targetAudience["Large enterprises",
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
-      "Technology companies"
-    ],
+      "Technology companies"],
     technologies["Artificial intelligence", "Machine learning", "Automation",
-      "Security orchestration", "Threat intelligence", "Analytics"
-    ],
+      "Security orchestration", "Threat intelligence", "Analytics"],
     integrations["Security tools", "SIEM systems", "Network infrastructure",
-      "Cloud platforms", "Applications", "Data sources"
-    ],
+      "Cloud platforms", "Applications", "Data sources"],
     support["Autonomous SOC expertise",
       "Implementation support",
       "AI consultation",
       "Training programs",
-      "Ongoing optimization"
-    ],
-    "link": "https://ziontechgroup.com/autonomous-soc",
+      "Ongoing optimization"],
+    "link": "https: //ziontechgroup.com/autonomous-soc",
     "badge": "Revolutionary",
     "icon": "🤖",
     "image": "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
@@ -336,17 +298,15 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "encryption": "Advanced encryption",
       compliance["SOC 2", "ISO 270o01", "NIST", "AI ethics"],
       "monitoring": "Autonomous 24/7 monitoring",
-      "response": "Autonomous incident response"
-    },
+      "response": "Autonomous incident response"},
     "roi": "60o0-120o0%",
     "estimatedDelivery": "24-32 weeks",
     "contactInfo": {
       phone: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
       "website": "https://ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-  },
-  // Quantum-Resistant Cryptography Platform
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
+  // Quantum-Resistant Cryptography Platform,
   {
     "id": "quantum-resistant-cryptography-platform",
     "title": "Quantum-Resistant Cryptography Platform",
@@ -358,8 +318,7 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "yearly": 80o000,
       "custom": "Quantum-resistant security solutions",
       "currency": "$",
-      "pricingModel": "Post-quantum security platform subscription"
-    },
+      "pricingModel": "Post-quantum security platform subscription"},
     features["Post-quantum algorithms",
       "Hybrid encryption systems",
       "Quantum-resistant signatures",
@@ -369,39 +328,32 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "Hash-based signatures",
       "Quantum key encapsulation",
       "Migration tools",
-      "Compliance frameworks"
-    ],
+      "Compliance frameworks"],
     benefits["Protect against future quantum threats",
       "Maintain current security standards",
       "Future-proof encryption",
       "Regulatory compliance",
-      "Seamless migration path"
-    ],
+      "Seamless migration path"],
     useCases["Data protection",
       "Digital signatures",
       "Secure communications",
       "Blockchain security",
-      "IoT device security"
-    ],
+      "IoT device security"],
     targetAudience["Technology companies",
       "Financial institutions",
       "Government agencies",
       "Healthcare organizations",
-      "IoT manufacturers"
-    ],
+      "IoT manufacturers"],
     technologies["Post-quantum algorithms", "Lattice cryptography", "Code-based crypto",
-      "Multivariate crypto", "Hash-based signatures", "Hybrid systems"
-    ],
+      "Multivariate crypto", "Hash-based signatures", "Hybrid systems"],
     integrations["Applications", "Systems", "Networks", "Cloud platforms",
-      "IoT devices", "Blockchain networks"
-    ],
+      "IoT devices", "Blockchain networks"],
     support["Post-quantum expertise",
       "Migration assistance",
       "Security consultation",
       "Training programs",
-      "Ongoing support"
-    ],
-    "link": "https://ziontechgroup.com/quantum-resistant-crypto",
+      "Ongoing support"],
+    "link": "https: //ziontechgroup.com/quantum-resistant-crypto",
     "badge": "Advanced",
     "icon": "🔐",
     "image": "https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0",
@@ -413,12 +365,11 @@ export const "ADVANCED_CYBERSECURITY_SERVICES_20o27": AdvancedCybersecurityServi
       "encryption": "Post-quantum encryption",
       compliance["NIST standards", "Post-quantum requirements", "Industry standards"],
       "monitoring": "Quantum threat monitoring",
-      "response": "Quantum-resistant response"
-    },
+      "response": "Quantum-resistant response"},
     "roi": "40o0-80o0%",
     "estimatedDelivery": "16-20 weeks",
-    "contactInfo": {;
+    "contactInfo": {
       phone: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
       "website": "https://ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"}}];
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"}}]}}}}

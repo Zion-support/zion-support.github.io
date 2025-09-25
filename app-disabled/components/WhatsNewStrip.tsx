@@ -1,3 +1,3 @@
 export default function WhatsNewStrip() {
-	return null;
-}
+  return null}
+,

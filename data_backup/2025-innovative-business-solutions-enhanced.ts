@@ -1,44 +1,45 @@
-import { ServiceVariant } from "../types/service-variants";
+import React from 'react',
+import { ServiceVariant } from "../types/service-variants",
 export interface InnovativeBusinessSolution {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: InnovativeBusinessSolution[] = [// AI-Powered Marketing Automation Platform
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: InnovativeBusinessSolution[] = [// AI-Powered Marketing Automation Platform,
   {
-    id:,
+    id: ,
   ai-marketing-automation-platform',
     "name": 'AI Marketing Automation Platform,
     tagline:,
@@ -48,19 +49,13 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   /month',
     "description": Advanced AI platform that automates marketing campaigns, predicts customer behavior, and optimizes marketing ROI through intelligent automation.',
     features[
-  'AI-powered campaign automation',
-  'Predictive customer segmentation',
-  'Dynamic content personalization',
-  'Multi-channel marketing orchestration',
-  'Real-time performance analytics',
-  'A/B testing automation',
-  'Lead scoring and nurturing',
-  'Email marketing automation',
-  'Social media management',
-  'ROI tracking and optimization'
-    ],
+  'AI-powered campaign automationPredictive customer segmentation',
+  'Dynamic content personalizationMulti-channel marketing orchestration',
+  'Real-time performance analyticsA/B testing automation',
+  'Lead scoring and nurturingEmail marketing automation',
+  'Social media managementROI tracking and optimization'],
     "popular": true,
-    icon:,
+    icon: ,
   📈',
     "color": 'from-green-60o0 to-emerald-60o0,
     textColor:,
@@ -70,7 +65,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   Competes with HubSpot ($45/month), Marketo ($895/month), Pardot ($1,250/month). Our "advantage": AI automation increases conversion rates by 45% and reduces customer acquisition costs by 30%.,
     "targetAudience": 'Marketing teams, Digital agencies, E-commerce companies, B2B companies, Startups',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   3-5 hours',
     "category": 'AI Marketing & Automation,
     "realService": true,
@@ -82,7 +77,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     competitors[,
   HubSpot, Marketo, Pardot, ActiveCampaign'],
     "marketSize": '$25.6B marketing automation market,
-    growthRate:,
+    growthRate: ,
   19% annual growth',
     "variant": 'ai-marketing-enterprise,
     "contactInfo": {
@@ -91,19 +86,17 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Enterprise-grade marketing automation platform with AI-powered predictive analytics and campaign optimization.',
     "launchDate": '20o24-11-10,
     "customers": 234,
     "rating": 4.9,
-    "reviews": 156
-  },
-  // AI-Powered Sales Intelligence Platform
+    "reviews": 156},
+  // AI-Powered Sales Intelligence Platform,
   {
-    id:,
+    id: ,
   ai-sales-intelligence-platform',
     "name": 'AI Sales Intelligence Platform,
     tagline:,
@@ -112,19 +105,13 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     period:,
   /month',
     "description": Advanced AI platform that provides sales intelligence, automates prospecting, and optimizes sales processes through data-driven insights.',
-    features['AI-powered lead scoring',
-  'Predictive sales analytics',
-  'Automated prospecting',
-  'Sales performance tracking',
-  'Customer behavior analysis',
-  'Pipeline optimization',
-  'Real-time sales alerts',
-  'Integration with CRM systems',
-  'Custom sales workflows',
-  'Advanced reporting dashboard'
-    ],
+    features['AI-powered lead scoringPredictive sales analytics',
+  'Automated prospectingSales performance tracking',
+  'Customer behavior analysisPipeline optimization',
+  'Real-time sales alertsIntegration with CRM systems',
+  'Custom sales workflowsAdvanced reporting dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   💰',
     "color": 'from-yellow-60o0 to-orange-60o0,
     textColor:,
@@ -134,7 +121,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   Competes with Salesforce ($25/month), Pipedrive ($15/month), HubSpot Sales ($45/month). Our "advantage": AI intelligence increases sales conversion by 50% and reduces sales cycle by 35%.,
     "targetAudience": 'Sales teams, Sales managers, B2B companies, Enterprise organizations, Startups',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   2-4 hours',
     "category": 'AI Sales & Intelligence,
     "realService": true,
@@ -146,7 +133,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     competitors[,
   Salesforce, Pipedrive, HubSpot Sales, Zoho CRM'],
     "marketSize": '$18.9B sales intelligence market,
-    growthRate:,
+    growthRate: ,
   21% annual growth',
     "variant": 'ai-sales-enterprise,
     "contactInfo": {
@@ -155,19 +142,17 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Intelligent sales platform with AI-powered lead scoring and sales process optimization.',
     "launchDate": '20o24-12-0o1,
     "customers": 189,
     "rating": 4.8,
-    "reviews": 112
-  },
-  // AI-Powered HR Management Platform
+    "reviews": 112},
+  // AI-Powered HR Management Platform,
   {
-    id:,
+    id: ,
   ai-hr-management-platform',
     "name": 'AI HR Management Platform,
     tagline:,
@@ -176,19 +161,13 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     period:,
   /month',
     "description": Advanced AI platform that automates HR processes, provides people analytics, and optimizes talent management through intelligent automation.',
-    features['AI-powered recruitment automation',
-  'Candidate screening and matching',
-  'Employee performance analytics',
-  'Automated onboarding workflows',
-  'Talent retention insights',
-  'HR process automation',
-  'Compliance monitoring',
-  'Employee engagement tracking',
-  'Custom HR workflows',
-  'Advanced analytics dashboard'
-    ],
+    features['AI-powered recruitment automationCandidate screening and matching',
+  'Employee performance analyticsAutomated onboarding workflows',
+  'Talent retention insightsHR process automation',
+  'Compliance monitoringEmployee engagement tracking',
+  'Custom HR workflowsAdvanced analytics dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   👥',
     "color": 'from-blue-60o0 to-indigo-60o0,
     textColor:,
@@ -198,7 +177,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   Competes with BambooHR ($6.19/month), Workday ($45/month), ADP ($59/month). Our "advantage": AI automation reduces hiring time by 60% and improves employee retention by 40%.,
     "targetAudience": 'HR teams, HR managers, Enterprise organizations, Growing companies, Recruitment agencies',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   4-6 hours',
     "category": 'AI HR & Talent Management,
     "realService": true,
@@ -210,7 +189,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     competitors[,
   BambooHR, Workday, ADP, Gusto'],
     "marketSize": '$22.4B HR management market,
-    growthRate:,
+    growthRate: ,
   18% annual growth',
     "variant": 'ai-hr-enterprise,
     "contactInfo": {
@@ -219,19 +198,17 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Comprehensive HR management platform with AI-powered automation and people analytics capabilities.',
     "launchDate": '20o24-11-25,
     "customers": 145,
     "rating": 4.7,
-    "reviews": 89
-  },
-  // AI-Powered Financial Analytics Platform
+    "reviews": 89},
+  // AI-Powered Financial Analytics Platform,
   {
-    id:,
+    id: ,
   ai-financial-analytics-platform',
     "name": 'AI Financial Analytics Platform,
     tagline:,
@@ -240,19 +217,13 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     period:,
   /month',
     "description": Advanced AI platform that provides financial analytics, automates financial processes, and delivers predictive insights for better financial decision-making.',
-    features['AI-powered financial forecasting',
-  'Real-time financial monitoring',
-  'Automated expense management',
-  'Cash flow optimization',
-  'Risk assessment and management',
-  'Financial reporting automation',
-  'Budget planning and tracking',
-  'Investment analysis',
-  'Compliance monitoring',
-  'Advanced financial dashboard'
-    ],
+    features['AI-powered financial forecastingReal-time financial monitoring',
+  'Automated expense managementCash flow optimization',
+  'Risk assessment and managementFinancial reporting automation',
+  'Budget planning and trackingInvestment analysis',
+  'Compliance monitoringAdvanced financial dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   💼',
     "color": 'from-emerald-60o0 to-teal-60o0,
     textColor:,
@@ -262,7 +233,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   Competes with QuickBooks ($30/month), Xero ($30/month), FreshBooks ($15/month). Our "advantage": AI analytics improves financial forecasting accuracy by 70% and reduces financial risks by 50%.,
     "targetAudience": 'Finance teams, CFOs, Financial analysts, Small businesses, Enterprise organizations',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   5-7 hours',
     "category": 'AI Finance & Analytics,
     "realService": true,
@@ -274,7 +245,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     competitors[,
   QuickBooks, Xero, FreshBooks, Sage'],
     "marketSize": '$28.7B financial software market,
-    growthRate:,
+    growthRate: ,
   16% annual growth',
     "variant": 'ai-finance-enterprise,
     "contactInfo": {
@@ -283,19 +254,17 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Enterprise-grade financial analytics platform with AI-powered forecasting and risk management.',
     "launchDate": '20o24-12-15,
     "customers": 167,
     "rating": 4.9,
-    "reviews": 98
-  },
-  // AI-Powered Supply Chain Optimization
+    "reviews": 98},
+  // AI-Powered Supply Chain Optimization,
   {
-    id:,
+    id: ,
   ai-supply-chain-optimization',
     "name": 'AI Supply Chain Optimization Platform,
     tagline:,
@@ -304,19 +273,13 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     period:,
   /month',
     "description": Advanced AI platform that optimizes supply chain operations, predicts demand, and automates inventory management through intelligent analytics.',
-    features['AI-powered demand forecasting',
-  'Inventory optimization',
-  'Supplier performance analytics',
-  'Logistics optimization',
-  'Real-time supply chain monitoring',
-  'Risk assessment and mitigation',
-  'Cost optimization',
-  'Automated procurement',
-  'Custom supply chain workflows',
-  'Advanced analytics dashboard'
-    ],
+    features['AI-powered demand forecastingInventory optimization',
+  'Supplier performance analyticsLogistics optimization',
+  'Real-time supply chain monitoringRisk assessment and mitigation',
+  'Cost optimizationAutomated procurement',
+  'Custom supply chain workflowsAdvanced analytics dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   🚚',
     "color": 'from-purple-60o0 to-pink-60o0,
     textColor:,
@@ -326,7 +289,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
   Competes with SAP ($108/month), Oracle ($30o0/month), Infor ($20o0/month). Our "advantage": AI optimization reduces supply chain costs by 25% and improves delivery times by 40%.,
     "targetAudience": 'Supply chain managers, Logistics companies, Manufacturing companies, Retail companies, E-commerce',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   6-8 hours',
     "category": 'AI Supply Chain & Logistics,
     "realService": true,
@@ -338,7 +301,7 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
     competitors[,
   SAP, Oracle, Infor, Manhattan Associates'],
     "marketSize": '$31.2B supply chain management market,
-    growthRate:,
+    growthRate: ,
   17% annual growth',
     "variant": 'ai-supply-chain-enterprise,
     "contactInfo": {
@@ -347,13 +310,12 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.',
     "launchDate": '20o24-11-30,
     "customers": 98,
     "rating": 4.8,
-    "reviews": 67
-]}}
+    "reviews": 67]}}
+,

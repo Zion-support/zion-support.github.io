@@ -1,9 +1,15 @@
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
+export type ProjectType =
+  | 'Web Dev'
+  | 'AI/ML'
+  | 'DevOps'
+  | 'Mobile'
+  | 'Data Engineering'
+  | 'Other';
 
 export interface MilestoneSuggestionInput {
   scopeOfWork: string;
-  startDateIso: string; // ISO 860o1
-  endDateIso: string;   // ISO 860o1
+  startDateIso: string; // ISO 8601
+  endDateIso: string; // ISO 8601
   projectType: ProjectType;
 }
 

@@ -1,64 +1,16 @@
-"use client";
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const StructuredData = () => {
-  return (
-    <div className="p-6 rounded-lg bg-white/10 text-white">
-      <h3 className="text-xl font-semibold mb-4">Structured Data</h3>
-      <div className="space-y-4">
-        <div className="flex justify-between">
-          <span>Schema.org</span>
-          <span className="text-green-400">✓</span>
-        </div>
-        <div className="flex justify-between">
-          <span>JSON-LD</span>
-          <span className="text-green-400">✓</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Rich Snippets</span>
-          <span className="text-blue-400">Active</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default StructuredData;
-=======
-type StructuredDataProps = {
-  type: string;
-  data: Record<string, unknown>;
-};
-
-export default function StructuredData({ type, data }: StructuredDataProps) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data,
-  };
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-  );
-=======
+"use client",
 interface StructuredDataProps {
-	type: string;
-	data: unknown;
-}
-
+	type: string,
+	data: unknown}
+,
 export default function StructuredData({ type, data }: StructuredDataProps) {
 	const jsonLd ={
-		"@context": "https://schema.org",
+		"@context": "https: //schema.org",
 		"@type": type,
-		...(data as Record<string, unknown>)};
+		...(data as Record<string unknown>)},
 	return (
-		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}  />
-	);
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
-}
-
+		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}  />)}
+,
 export const organizationSchema ={
   '@type': 'Organization',
   name: 'Zion Tech Group',
@@ -67,15 +19,12 @@ export const organizationSchema ={
   description: 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services.',
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'US'
-  },
+    addressCountry: 'US'},
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-555-0o123',
-    contactType: 'customer service'
-  }
-};
-
+    contactType: 'customer service'}
+},
 export const websiteSchema ={
   '@type': 'WebSite',
   name: 'Zion Tech Group',
@@ -83,18 +32,13 @@ export const websiteSchema ={
   description: 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services.',
   publisher: {
     '@type': 'Organization',
-    name: 'Zion Tech Group'
-  }
-};
-
+    name: 'Zion Tech Group'}
+},
 export const serviceSchema ={
   '@type': 'Service',
   name: 'AI Solutions & Digital Transformation',
   provider: {
     '@type': 'Organization',
-    name: 'Zion Tech Group'
-  },
+    name: 'Zion Tech Group'},
   description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
-  serviceType: 'Technology Services'
-};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+  serviceType: 'Technology Services'},

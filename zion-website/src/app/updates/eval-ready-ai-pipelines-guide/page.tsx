@@ -1,14 +1,17 @@
-import React from 'react'
-
-export default function Page() {
+import React from 'react',
+export default function Page() {,
   return (
-    <div className="min-h-screen bg-black">
-      <article className="max-w-3xl mx-auto px-6 py-24">
+    <div className='min-h-screen bg-black'>
+      <article className='max-w-3xl mx-auto px-6 py-24'>
         <header>
-          <h1 className="text-4xl font-bold text-white">Guide: Shipping Eval-Ready AI Pipelines</h1>
-          <p className="mt-2 text-gray-30o0">Bake evals, canaries, and guardrails into CI/CD so changes ship safely and measurably.</p>
+          <h1 className='text-4xl font-bold text-white'>
+            Guide: Shipping Eval-Ready AI Pipelines,
+          </h1>
+          <p className='mt-2 text-gray-3000'>,
+            Bake evals, canaries, and guardrails into CI/CD so changes ship: safely and measurably.,
+          </p>
         </header>
-        <section className="prose prose-lg prose-invert mt-8">
+        <section className='prose prose-lg prose-invert mt-8'>
           <h2>What you will learn</h2>
           <ul>
             <li>Designing offline eval suites and pass/fail criteria</li>
@@ -17,8 +20,6 @@ export default function Page() {
             <li>Collecting SLIs and evidence for audits</li>
           </ul>
         </section>
-      </article>
-    </div>
-  )
-}
-
+      </article>,
+    </div>)}
+,

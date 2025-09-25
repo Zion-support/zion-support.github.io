@@ -1,10 +1,9 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import FuturisticAnimatedBackground20o29 from '../components/FuturisticAnimatedBackground20o29';
-
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import FuturisticAnimatedBackground20o29 from "./components/FuturisticAnimatedBackground20o29" describe("FuturisticAnimatedBackground20o29",() => {" test("renders without crashing",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) expect( screen.getByTestId("futuristicanimatedbackground20o29")" ).toBeInTheDocument() }) test("displays correct content",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("handles user interactions",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("applies correct styling",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) })'"'"
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import FuturisticAnimatedBackground20o29 from "./components/FuturisticAnimatedBackground20o29" describe("FuturisticAnimatedBackground20o29",() => {" test("renders without crashing",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) expect( screen.getByTestId("futuristicanimatedbackground20o29")" ).toBeInTheDocument() }) test("displays correct content",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("handles user interactions",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("applies correct styling",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) })'"'"
-ursor/add-new-services-and-deploy-updates-0o462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
-
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import FuturisticAnimatedBackground20o29 from '../components/FuturisticAnimatedBackground20o29',
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import FuturisticAnimatedBackground20o29 from "./components/FuturisticAnimatedBackground20o29" describe("FuturisticAnimatedBackground20o29",() => {" test("renders without crashing",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) expect( screen.getByTestId("futuristicanimatedbackground20o29")" ).toBeInTheDocument() }) test("displays correct content",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("handles user interactions",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("applies correct styling",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) })'"'",
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import FuturisticAnimatedBackground20o29 from "./components/FuturisticAnimatedBackground20o29" describe("FuturisticAnimatedBackground20o29",() => {" test("renders without crashing",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) expect( screen.getByTestId("futuristicanimatedbackground20o29")" ).toBeInTheDocument() }) test("displays correct content",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("handles user interactions",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) test("applies correct styling",() => {" render(<FuturisticAnimatedBackground20o29 / /  />) }) })'"'",
+ursor/add-new-services-and-deploy-updates-0o462,
+ursor/fix-syntax-push-and-merge-to-main-40de,
+ursor/fix-syntax-push-and-merge-to-main-40de,

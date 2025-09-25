@@ -1,22 +1,13 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PWARegistration from '../components/PWARegistration';
-
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import PWARegistration from '../components/PWARegistration',
 describe('PWARegistration', () => {
   test('renders without crashing', () => {
-    render(<PWARegistration  />);
-    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument();
-  });
-  
+    render(<PWARegistration />),
+    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument()}),
   test('displays correct content', () => {
-    render(<PWARegistration  />);
-  });
-  
+    render(<PWARegistration />)}),
   test('handles user interactions', () => {
-    render(<PWARegistration  />);
-  });
-  
+    render(<PWARegistration />)}),
   test('applies correct styling', () => {
-    render(<PWARegistration  />);
-  });
-});
+    render(<PWARegistration />)})}),
