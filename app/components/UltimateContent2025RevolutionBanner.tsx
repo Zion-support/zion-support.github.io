@@ -175,31 +175,31 @@ const UltimateContent2025RevolutionBanner = () => {
                     <span className="text-sm font-medium text-yellow-400">FEATURED CONTENT</span>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-white/70">
-                    <span>{currentContent.readingTime}</span>
+                    <span>{currentContent?.readingTime}</span>
                   </div>
                 </div>
                 
                 <h3 className="text-lg font-bold mb-2 line-clamp-2">
-                  {currentContent.title}
+                  {currentContent?.title}
                 </h3>
                 
                 <p className="text-white/80 text-sm mb-4 line-clamp-2">
-                  {currentContent.description}
+                  {currentContent?.description}
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-yellow-400">{currentContent.metrics.roi}</div>
+                      <div className="text-2xl font-bold text-yellow-400">{currentContent?.metrics?.roi}</div>
                     <div className="text-xs text-white/70">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">{currentContent.metrics.savings}</div>
+                      <div className="text-2xl font-bold text-green-400">{currentContent?.metrics?.savings}</div>
                     <div className="text-xs text-white/70">Savings</div>
                   </div>
                 </div>
                 
                 <Link
-                  href={currentContent.url}
+                  href={currentContent?.url || '#'}
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold py-3 px-6 rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-200 transform hover:scale-105"
                 >
                   Read Full Article

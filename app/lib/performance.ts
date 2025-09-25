@@ -45,13 +45,16 @@ class PerformanceMonitor {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
-      this.metrics.lcp = lastEntry.startTime
+      this.metrics.lcp = lastEntry?.startTime ?? 0
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const anyEntry = entry as unknown as { processingStart?: number; startTime: number }
+        if (typeof anyEntry.processingStart === 'number') {
+          this.metrics.fid = anyEntry.processingStart - anyEntry.startTime
+        }
       })
     })
 
@@ -195,7 +198,10 @@ export class BundleOptimizer {
   static createLazyComponent<T extends React.ComponentType<any>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc)
+    // Use global React import assumption in Next.js environment
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const ReactModule = require('react') as typeof import('react')
+    return ReactModule.lazy(importFunc)
   }
 }
 

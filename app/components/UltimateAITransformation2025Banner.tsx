@@ -102,7 +102,7 @@ const UltimateAITransformation2025Banner = () => {
                   <StarIcon className="h-5 w-5 text-yellow-400" />
                   <span className="text-sm font-medium text-yellow-400">NEW ULTIMATE CONTENT</span>
                 </div>
-                {currentContent.isNew && (
+                {currentContent?.isNew && (
                   <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                     JUST PUBLISHED
                   </span>
@@ -110,40 +110,40 @@ const UltimateAITransformation2025Banner = () => {
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
-                {currentContent.title}
+                {currentContent?.title}
               </h2>
 
               <p className="text-lg text-blue-100 mb-6 max-w-3xl leading-relaxed">
-                {currentContent.description}
+                {currentContent?.description}
               </p>
 
               <div className="flex flex-wrap items-center gap-6 mb-6">
                 <div className="flex items-center space-x-2">
                   <ChartBarIcon className="h-5 w-5 text-green-400" />
                   <span className="text-sm font-semibold">
-                    <span className="text-green-400">{currentContent.metrics.roi}</span> ROI
+                    <span className="text-green-400">{currentContent?.metrics?.roi}</span> ROI
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CurrencyDollarIcon className="h-5 w-5 text-green-400" />
                   <span className="text-sm font-semibold">
-                    <span className="text-green-400">{currentContent.metrics.savings}</span> Savings
+                    <span className="text-green-400">{currentContent?.metrics?.savings}</span> Savings
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <ClockIcon className="h-5 w-5 text-blue-400" />
                   <span className="text-sm font-semibold text-blue-400">
-                    {currentContent.readingTime}
+                    {currentContent?.readingTime}
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href={currentContent.url}
+                  href={currentContent?.url || '#'}
                   className="inline-flex items-center px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
-                  Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
+                  Read {currentContent?.type === 'blog' ? 'Article' : currentContent?.type === 'case-study' ? 'Case Study' : 'Guide'}
                   <ChevronRightIcon className="ml-2 h-4 w-4" />
                 </Link>
                 <Link
@@ -161,19 +161,19 @@ const UltimateAITransformation2025Banner = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-200">Average ROI</span>
-                    <span className="text-lg font-bold text-green-400">{currentContent.metrics.roi}</span>
+                    <span className="text-lg font-bold text-green-400">{currentContent?.metrics?.roi}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-200">Annual Savings</span>
-                    <span className="text-lg font-bold text-green-400">{currentContent.metrics.savings}</span>
+                    <span className="text-lg font-bold text-green-400">{currentContent?.metrics?.savings}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-200">Efficiency</span>
-                    <span className="text-lg font-bold text-blue-400">{currentContent.metrics.efficiency || '156%'}</span>
+                    <span className="text-lg font-bold text-blue-400">{currentContent?.metrics?.efficiency || '156%'}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-200">Success Rate</span>
-                    <span className="text-lg font-bold text-purple-400">{currentContent.metrics.success || '98%'}</span>
+                    <span className="text-lg font-bold text-purple-400">{currentContent?.metrics?.success || '98%'}</span>
                   </div>
                 </div>
               </div>

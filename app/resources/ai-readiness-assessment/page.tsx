@@ -6,8 +6,18 @@ import Link from 'next/link';
 
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  type AnswersMap = Record<string, number>
+  interface ResultsData {
+    totalScore: number
+    percentage: number
+    readinessLevel: string
+    color: 'green' | 'blue' | 'yellow' | 'red'
+    recommendations: string[]
+    nextSteps: string[]
+  }
+
+  const [answers, setAnswers] = useState<AnswersMap>({});
+  const [results, setResults] = useState<ResultsData | null>(null);
 
   const questions = [
     {
@@ -67,7 +77,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId, value) => {
+  const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -89,11 +99,14 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce((sum: number, score: number) => sum + score, 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel, color, recommendations, nextSteps;
+    let readinessLevel: ResultsData['readinessLevel']
+    let color: ResultsData['color']
+    let recommendations: string[]
+    let nextSteps: string[]
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -257,15 +270,15 @@ export default function AIReadinessAssessment() {
                     <div className="flex-1 bg-gray-200 rounded-full h-2">
                       <div 
                         className={`h-2 rounded-full ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                        style={{ width: `${(answers[question.id] / 4) * 100}%` }}
+                        style={{ width: `${(((answers as AnswersMap)[question.id] ?? 0) / 4) * 100}%` }}
                       ></div>
                     </div>
                     <span className="text-sm font-medium text-gray-600">
-                      {answers[question.id]}/4
+                      {(answers as AnswersMap)[question.id] ?? 0}/4
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    {question.options.find(opt => opt.value === answers[question.id])?.description}
+                    {question.options.find(opt => opt.value === ((answers as AnswersMap)[question.id] ?? 0))?.description}
                   </p>
                 </div>
               ))}
@@ -372,27 +385,27 @@ export default function AIReadinessAssessment() {
 
         {/* Question */}
         <div className="bg-white border border-gray-200 rounded-xl p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">{currentQuestion.title}</h2>
-          <p className="text-lg text-gray-700 mb-8">{currentQuestion.description}</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">{currentQuestion?.title}</h2>
+          <p className="text-lg text-gray-700 mb-8">{currentQuestion?.description}</p>
           
           <div className="space-y-4">
-            {currentQuestion.options.map((option, index) => (
+            {currentQuestion?.options.map((option, index) => (
               <button
                 key={index}
-                onClick={() => handleAnswer(currentQuestion.id, option.value)}
+                onClick={() => handleAnswer(currentQuestion!.id, option.value)}
                 className={`w-full text-left p-6 rounded-lg border-2 transition-all duration-200 ${
-                  answers[currentQuestion.id] === option.value
+                  (answers as AnswersMap)[currentQuestion!.id] === option.value
                     ? 'border-blue-500 bg-blue-50'
                     : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                 }`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                    answers[currentQuestion.id] === option.value
+                    (answers as AnswersMap)[currentQuestion!.id] === option.value
                       ? 'border-blue-500 bg-blue-500'
                       : 'border-gray-300'
                   }`}>
-                    {answers[currentQuestion.id] === option.value && (
+                    {(answers as AnswersMap)[currentQuestion!.id] === option.value && (
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     )}
                   </div>
@@ -418,7 +431,7 @@ export default function AIReadinessAssessment() {
           
           <button
             onClick={handleNext}
-            disabled={!answers[currentQuestion.id]}
+            disabled={!currentQuestion || !(currentQuestion.id in answers)}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {currentStep === questions.length - 1 ? 'Get Results' : 'Next'}

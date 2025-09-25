@@ -5,8 +5,9 @@ import { useEffect, useMemo } from 'react'
 interface SEOOptimizerProps {
   title?: string
   description?: string
-  keywords?: string[]
+  keywords?: string | string[]
   canonicalUrl?: string
+  url?: string
   ogImage?: string
   ogType?: string
   twitterCard?: string
@@ -20,6 +21,7 @@ export default function SEOOptimizer({
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
   keywords = ['AI', 'artificial intelligence', 'cloud services', 'cybersecurity', 'technology solutions', 'enterprise software', 'digital transformation'],
   canonicalUrl,
+  url,
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
@@ -119,7 +121,7 @@ export default function SEOOptimizer({
       { property: 'og:description', content: seoData.description },
       { property: 'og:image', content: seoData.ogImage },
       { property: 'og:type', content: seoData.ogType },
-      { property: 'og:url', content: seoData.canonicalUrl || window.location.href },
+      { property: 'og:url', content: seoData.canonicalUrl || url || window.location.href },
       { property: 'og:site_name', content: 'Zion Tech Group' },
     ]
 
