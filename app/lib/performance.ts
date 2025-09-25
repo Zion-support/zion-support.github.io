@@ -1,7 +1,7 @@
 /**
  * Performance monitoring and optimization utilities
  */
-import React from 'react';
+import React from 'react'
 
 export interface PerformanceMetrics {
   fcp?: number
@@ -46,17 +46,17 @@ class PerformanceMonitor {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
-      if (lastEntry) {
-        this.metrics.lcp = (lastEntry as any).startTime ?? undefined
+      if (lastEntry && typeof (lastEntry as any).startTime === 'number') {
+        this.metrics.lcp = (lastEntry as any).startTime
       }
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        const processingStart = (entry as any).processingStart
-        if (typeof processingStart === 'number') {
-          this.metrics.fid = processingStart - entry.startTime
+        const e: any = entry as any
+        if (typeof e.processingStart === 'number' && typeof e.startTime === 'number') {
+          this.metrics.fid = e.processingStart - e.startTime
         }
       })
     })
@@ -201,7 +201,7 @@ export class BundleOptimizer {
   static createLazyComponent<T extends React.ComponentType<any>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc)
+    return (React as any).lazy(importFunc)
   }
 }
 
