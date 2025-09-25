@@ -4,10 +4,22 @@ import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
+type AnswerValue = number
+type AnswersMap = Record<string, AnswerValue>
+
+interface AssessmentResults {
+  totalScore: number
+  percentage: number
+  readinessLevel: string
+  color: 'green' | 'blue' | 'yellow' | 'red'
+  recommendations: string[]
+  nextSteps: string[]
+}
+
 export default function AIReadinessAssessment() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [answers, setAnswers] = useState<AnswersMap>({});
+  const [results, setResults] = useState<AssessmentResults | null>(null);
 
   const questions = [
     {
@@ -67,7 +79,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId, value) => {
+  const handleAnswer = (questionId: string, value: AnswerValue) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -89,11 +101,11 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce<number>((sum, score) => sum + (score as number), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel, color, recommendations, nextSteps;
+    let readinessLevel: string, color: AssessmentResults['color'], recommendations: string[], nextSteps: string[];
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
