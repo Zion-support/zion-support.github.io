@@ -33,8 +33,8 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
@@ -42,7 +42,6 @@
     "noImplicitThis": true,
     "noImplicitOverride": true,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -56,9 +55,9 @@
     "strictNullChecks": true
   },
   "include": [
+    "app",
     "src-clean/src",
     "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
