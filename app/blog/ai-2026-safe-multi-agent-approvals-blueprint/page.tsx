@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../src/components/SEO';
+import SEO from '../../components/SEO';
 
 const SafeMultiAgentApprovalsBlueprint = () => {
   return (

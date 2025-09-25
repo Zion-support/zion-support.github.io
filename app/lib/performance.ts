@@ -51,7 +51,10 @@ class PerformanceMonitor {
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const e = entry as any
+        if (e && typeof e.processingStart === 'number') {
+          this.metrics.fid = e.processingStart - e.startTime
+        }
       })
     })
 
@@ -195,7 +198,8 @@ export class BundleOptimizer {
   static createLazyComponent<T extends React.ComponentType<any>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc)
+    const ReactModule = require('react') as typeof import('react')
+    return ReactModule.lazy(importFunc)
   }
 }
 

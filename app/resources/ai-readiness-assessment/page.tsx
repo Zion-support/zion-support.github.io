@@ -4,10 +4,21 @@ import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
+type AnswerValue = 1 | 2 | 3 | 4;
+type AnswersMap = Record<string, AnswerValue>;
+interface Results {
+  totalScore: number;
+  percentage: number;
+  readinessLevel: string;
+  color: 'green' | 'blue' | 'yellow' | 'red';
+  recommendations: string[];
+  nextSteps: string[];
+}
+
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  const [answers, setAnswers] = useState<AnswersMap>({});
+  const [results, setResults] = useState<Results | null>(null);
 
   const questions = [
     {
@@ -67,7 +78,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId, value) => {
+  const handleAnswer = (questionId: string, value: AnswerValue) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -89,11 +100,14 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce<number>((sum, score) => sum + Number(score), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel, color, recommendations, nextSteps;
+    let readinessLevel: Results['readinessLevel'];
+    let color: Results['color'];
+    let recommendations: string[];
+    let nextSteps: string[];
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -379,7 +393,7 @@ export default function AIReadinessAssessment() {
             {currentQuestion.options.map((option, index) => (
               <button
                 key={index}
-                onClick={() => handleAnswer(currentQuestion.id, option.value)}
+                onClick={() => handleAnswer(currentQuestion.id, option.value as AnswerValue)}
                 className={`w-full text-left p-6 rounded-lg border-2 transition-all duration-200 ${
                   answers[currentQuestion.id] === option.value
                     ? 'border-blue-500 bg-blue-50'
