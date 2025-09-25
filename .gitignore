@@ -105,3 +105,13 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+
+# Yarn Berry cache and generated artifacts
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+# Explicitly ignore cache to prevent large binary blobs in Git
+.yarn/cache/
