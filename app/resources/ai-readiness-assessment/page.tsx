@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
-interface AnswerMap { [questionId: string]: number }
-
+type AnswerValue = 1 | 2 | 3 | 4;
+type AnswersMap = Record<string, AnswerValue>;
 interface ResultsData {
   totalScore: number;
   percentage: number;
@@ -17,7 +17,7 @@ interface ResultsData {
 
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState<number>(0);
-  const [answers, setAnswers] = useState<AnswerMap>({});
+  const [answers, setAnswers] = useState<AnswersMap>({});
   const [results, setResults] = useState<ResultsData | null>(null);
 
   const questions = [
@@ -78,10 +78,11 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId: string, value: number) => {
-    setAnswers((prev: AnswerMap) => ({
+  const handleAnswer = (questionId: string, value: AnswerValue | number) => {
+    const normalized = (typeof value === 'number' ? value : 1) as AnswerValue;
+    setAnswers((prev: AnswersMap): AnswersMap => ({
       ...prev,
-      [questionId]: value
+      [questionId]: normalized,
     }));
   };
 
@@ -100,7 +101,7 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum: number, score: number) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + (score as number), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 

@@ -106,6 +106,7 @@ aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
 
+
 # Yarn v4 cache (do not commit)
 .yarn/cache/
-
+.yarn/*-state.*
