@@ -4,12 +4,25 @@ import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
+type AnswerMap = Record<string, number>;
+interface ResultData {
+  totalScore: number;
+  percentage: number;
+  readinessLevel: string;
+  color: 'green' | 'blue' | 'yellow' | 'red';
+  recommendations: string[];
+  nextSteps: string[];
+}
+
+interface QuestionOption { value: number; label: string; description: string }
+interface Question { id: string; title: string; description: string; options: QuestionOption[] }
+
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  const [answers, setAnswers] = useState<AnswerMap>({});
+  const [results, setResults] = useState<ResultData | null>(null);
 
-  const questions = [
+  const questions: Question[] = [
     {
       id: 'data_quality',
       title: 'Data Quality & Infrastructure',
@@ -67,7 +80,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId, value) => {
+  const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -89,11 +102,11 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + (Number(score) || 0), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel, color, recommendations, nextSteps;
+    let readinessLevel: string, color: ResultData['color'], recommendations: string[], nextSteps: string[];
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -255,17 +268,17 @@ export default function AIReadinessAssessment() {
                   <h3 className="font-semibold text-gray-900 mb-2">{question.title}</h3>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex-1 bg-gray-200 rounded-full h-2">
-                      <div 
-                        className={`h-2 rounded-full ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                        style={{ width: `${(answers[question.id] / 4) * 100}%` }}
-                      ></div>
+                    <div 
+                      className={`h-2 rounded-full ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}
+                      style={{ width: `${((answers[question.id] ?? 0) / 4) * 100}%` }}
+                    ></div>
                     </div>
                     <span className="text-sm font-medium text-gray-600">
-                      {answers[question.id]}/4
+                      {(answers[question.id] ?? 0)}/4
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    {question.options.find(opt => opt.value === answers[question.id])?.description}
+                    {question.options.find(opt => opt.value === (answers[question.id] ?? 0))?.description}
                   </p>
                 </div>
               ))}
@@ -315,7 +328,7 @@ export default function AIReadinessAssessment() {
     );
   }
 
-  const currentQuestion = questions[currentStep];
+  const currentQuestion: Question = (questions[currentStep] ?? questions[0]) as Question;
   const progress = ((currentStep + 1) / questions.length) * 100;
 
   return (
