@@ -1,0 +1,56 @@
+🚀 Starting aggressive merge of PRs with actual differences...
+📊 Total cursor branches available: 6371
+⏰ Started at: Wed Sep 24 01:50:54 PM UTC 2025
+---
+2025-09-24 13:50:54 - 🔒 Creating backup branch: aggressive-merge-backup-20250924-135054
+Switched to a new branch 'aggressive-merge-backup-20250924-135054'
+remote: 
+remote: Create a pull request for 'aggressive-merge-backup-20250924-135054' on GitHub by visiting:        
+remote:      https://github.com/Zion-Holdings/zion.app/pull/new/aggressive-merge-backup-20250924-135054        
+remote: 
+To https://github.com/Zion-Holdings/zion.app
+ * [new branch]                aggressive-merge-backup-20250924-135054 -> aggressive-merge-backup-20250924-135054
+Switched to branch 'main'
+M	aggressive-merge-run.out
+Your branch is up to date with 'origin/main'.
+2025-09-24 13:50:56 - 📋 Getting list of cursor branches...
+2025-09-24 13:50:56 - 🔄 Starting aggressive batch processing...
+---
+2025-09-24 13:50:56 - 📋 Processing branch 1: cursor/automate-automation-redundancy-and-build-improvement-e3e4
+2025-09-24 13:50:56 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-e3e4...
+2025-09-24 13:50:57 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 has 234269 files to merge
+2025-09-24 13:50:57 - ⚠️  Large branch detected (234269 files), proceeding with caution...
+Already up to date.
+2025-09-24 13:50:58 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-e3e4
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   aggressive-merge-run.out
+
+no changes added to commit (use "git add" and/or "git commit -a")
+2025-09-24 13:50:58 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 processed successfully
+2025-09-24 13:50:58 - 📊 Progress: 1 successful, 0 failed, 0 conflicts resolved, 0 skipped
+---
+2025-09-24 13:50:58 - 📋 Processing branch 2: cursor/automate-automation-redundancy-and-build-improvement-ea74
+2025-09-24 13:50:58 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-ea74...
+2025-09-24 13:50:59 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 has 234273 files to merge
+2025-09-24 13:50:59 - ⚠️  Large branch detected (234273 files), proceeding with caution...
+Already up to date.
+2025-09-24 13:51:00 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-ea74
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   aggressive-merge-run.out
+
+no changes added to commit (use "git add" and/or "git commit -a")
+2025-09-24 13:51:00 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 processed successfully
+2025-09-24 13:51:01 - 📊 Progress: 2 successful, 0 failed, 0 conflicts resolved, 0 skipped
+---
+2025-09-24 13:51:01 - 📋 Processing branch 3: cursor/automate-automation-redundancy-and-build-improvement-f8c0
+2025-09-24 13:51:01 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-f8c0...
