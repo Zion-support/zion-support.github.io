@@ -2,6 +2,8 @@
  * Performance monitoring and optimization utilities
  */
 
+import React from 'react'
+
 export interface PerformanceMetrics {
   fcp?: number
   lcp?: number
@@ -45,13 +47,18 @@ class PerformanceMonitor {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
-      this.metrics.lcp = lastEntry.startTime
+      if (lastEntry) {
+        this.metrics.lcp = lastEntry.startTime
+      }
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const processingStart = (entry as any).processingStart
+        if (processingStart) {
+          this.metrics.fid = processingStart - entry.startTime
+        }
       })
     })
 

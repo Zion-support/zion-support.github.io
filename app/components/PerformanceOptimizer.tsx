@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 export default function PerformanceOptimizer() {
-  const [metrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
     // Preload critical resources
