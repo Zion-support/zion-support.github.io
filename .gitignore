@@ -113,3 +113,11 @@ tsconfig.tsbuildinfo
 .yarn/cache/
 .yarn/install-state.gz
 .pnp.*
+
+# Python artifacts and virtual envs
+__pycache__/
+*.pyc
+.venv/
+
+# Local SQLite databases
+zion_academy/instance/*.db
