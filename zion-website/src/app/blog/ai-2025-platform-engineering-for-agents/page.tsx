@@ -1,22 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
-
+import React from 'react'
+import {
+ Metadata 
+} from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
-  title: 'Platform Engineering for AI Agents (2025): Reference Architecture | Zion Tech Group',
-  description: 'A practical blueprint for enterprise-grade agent platforms: reliability, safety, observability, and cost controls.',
-  keywords: 'AI agents platform, platform engineering 2025, agent architecture, reliability, governance',
+  title: 'Platform Engineering for AI Agents (2025): Reference Architecture | Zion Tech Group'
+  description: 'A practical blueprint for enterprise-grade agent platforms: reliability, safety, observability, and cost controls.'
+  keywords: 'AI agents platform, platform engineering 2025, agent architecture, reliability, governance'
   openGraph: {
-    title: 'Platform Engineering for AI Agents (2025)',
-    description: 'Blueprint for enterprise agent platforms: reliability, safety, observability, cost.',
-    type: 'article',
-    publishedTime: '2025-09-12T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+    title: 'Platform Engineering for AI Agents (2025)'
+    description: 'Blueprint for enterprise agent platforms: reliability, safety, observability, cost.'
+    type: 'article'
+    publishedTime: '2025-09-12T00: 00
+  00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['Agents', 'Platform Engineering', 'Architecture']
   }
-};
-
+}
 export default function PlatformEngineeringForAgents2025() {
   return (
     <div className="min-h-screen bg-white">
@@ -74,6 +73,6 @@ export default function PlatformEngineeringForAgents2025() {
         </div>
       </article>
     </div>
-  );
+  )
 }
 
