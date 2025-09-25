@@ -42,7 +42,6 @@
     "noImplicitThis": true,
     "noImplicitOverride": true,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -55,13 +54,14 @@
     ],
     "strictNullChecks": true
   },
-  "include": [
-    "src-clean/src",
-    "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
+    "include": [
+      "src/types/offline-shims.d.ts",
+      ".next/types/**/*.ts",
+      "app/**/*.ts",
+      "app/**/*.tsx"
+    ],
+    "exclude": [
+    	"App.tsx",
     "node_modules",
     "dist",
     "build",
@@ -94,7 +94,7 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
+    
     "src/utils/cartUtils.js"
   ]
 }
