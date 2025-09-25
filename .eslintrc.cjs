@@ -1,6 +1,6 @@
 module.exports = {
   parser: require.resolve('@typescript-eslint/parser'),
-  plugins: ['@typescript-eslint', '@next/next'],
+  plugins: ['@typescript-eslint'],
   extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
   rules: {
     // Disable to avoid escaping quotes in static content pages
