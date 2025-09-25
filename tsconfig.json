@@ -52,16 +52,16 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": false
+    "strictNullChecks": true
   },
-    "include": [
-      "src/types/offline-shims.d.ts",
-      ".next/types/**/*.ts",
-      "app/**/*.ts",
-      "app/**/*.tsx"
-    ],
-    "exclude": [
-    	"App.tsx",
+  "include": [
+    "src/types/offline-shims.d.ts",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx"
+  ],
+  "exclude": [
     "node_modules",
     "dist",
     "build",
@@ -94,7 +94,7 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    
+    "src/vite-env.d.ts",
     "src/utils/cartUtils.js"
   ]
 }
