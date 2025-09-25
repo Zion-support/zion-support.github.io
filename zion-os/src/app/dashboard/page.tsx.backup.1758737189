@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+import React from 'react',
+,
+export default function DashboardPage(): React.ReactElement {,
+	return (
+		<main>
+			<h1>Dashboard</h1>
+			<p>Welcome to your dashboard.</p>
+		</main>
+	)
+}
+,
+=======
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import Link from "next/link";
+>>>>>>> origin/aggressive-merge-backup-20250924-085711
