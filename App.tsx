@@ -280,9 +280,11 @@ export default function App(): JSX.Element {
                         <p className="text-orange-100 mb-4 text-sm text-center">
                           Comprehensive showcase of next-generation technologies reshaping our world
                         </p>
-                        <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
+                      <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                           Explore Next-Gen Tech →
                         </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
