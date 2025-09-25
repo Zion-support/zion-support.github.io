@@ -1,7 +1,7 @@
 
 ,
-export interface TokenConfig {
-  token_name: string,
+export interface TokenConfig {,
+token_name: string,
   token_symbol: string,
   decimals: number,
   totalSupply: number,
@@ -9,17 +9,17 @@ export interface TokenConfig {
   redeemRate: number,
   minIssueAmount: number,
   maxIssueAmount: number}
-,
-const DATA_DIR = path && path.join(process && process.cwd(), 'data'),
+,;
+const DATA_DIR = path && path.join(process && process.cwd(), 'data'),;
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'),
-export interface TokenStoreData {
-  wallets: Record < string, Wallet>,
+export interface TokenStoreData {,
+wallets: Record < string, Wallet>,
   transactions: TokenTransaction[],
   config: TokenConfig}
 ,
 class TokenStore {
-  private config: TokenConfig = {
-    tokenName: 'ZION$',
+  private config: TokenConfig = {,
+tokenName: 'ZION$',
     tokenSymbol: 'ZION',
     decimals: 18,
     totalSupply: 1000000000,
@@ -29,20 +29,19 @@ class TokenStore {
     maxIssueAmount: 10000}
 export interface TokenStoreData {
   }
-export interface TokenStoreData {
-  wallets: Record<string Wallet>,
+export interface TokenStoreData {,
+wallets: Record<string Wallet>,
   transactions: TokenTransaction[],
   config: TokenConfig}
 function readFromDisk(): TokenStoreData | null {
   try {
-    ensureDataDir(),
-    if (!fs.existsSync(STORE_FILE)) return null,
-    const raw = fs.readFileSync(STORE_FILE, 'utf8'),
-    const parsed = JSON.parse(raw) as TokenStoreData,
-    return parsed} catch {
-    return null}
+    ensureDataDir(),;
+if (!fs.existsSync(STORE_FILE)) return null,;
+const raw = fs.readFileSync(STORE_FILE, 'utf8'),;
+const parsed = JSON.parse(raw) as TokenStoreData,;
+return parsed} catch {;
+return null}
 ,
-  getData(): TokenStoreData {
-    return this && this.data}
+  getData(): TokenStoreData {;
+return this && this.data}
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}
