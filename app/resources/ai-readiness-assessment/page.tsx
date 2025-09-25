@@ -6,8 +6,15 @@ import Link from 'next/link';
 
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [results, setResults] = useState<{
+    totalScore: number;
+    percentage: number;
+    readinessLevel: string;
+    color: 'green' | 'blue' | 'yellow' | 'red';
+    recommendations: string[];
+    nextSteps: string[];
+  } | null>(null);
 
   const questions = [
     {
@@ -89,7 +96,7 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + (Number(score) || 0), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 

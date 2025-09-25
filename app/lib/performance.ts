@@ -1,6 +1,7 @@
 /**
  * Performance monitoring and optimization utilities
  */
+import React from 'react'
 
 export interface PerformanceMetrics {
   fcp?: number
@@ -51,7 +52,10 @@ class PerformanceMonitor {
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const firstInput = entry as any
+        if (typeof firstInput.processingStart === 'number') {
+          this.metrics.fid = firstInput.processingStart - firstInput.startTime
+        }
       })
     })
 
