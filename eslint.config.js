@@ -23,7 +23,45 @@ try {
 export default [
   // Ignore everything by default; we will opt-in only app and safe test files
   {
-    ignores: ['**/*']
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'dist/**',
+      'coverage/**',
+      '.cache/**',
+      'automation/**',
+      'automation_backup/**',
+      'automation-logs/**',
+      'automation-reports/**',
+      'scripts/**',
+      'server/**',
+      'backend/**',
+      'apps/**',
+      'apps.backup/**',
+      'app_backup/**',
+      'app.disabled/**',
+      'app-disabled/**',
+      'generated-services/**',
+      'backups/**',
+      'backup*/**',
+      'backup-problematic-files/**',
+      'corrupted_backup/**',
+      'temp_exclude/**',
+      'temp_*/**',
+      'ts_files_backup/**',
+      '__tests__/**',
+      'tests/**',
+      '__jest__/**',
+      '__mocks__/**',
+      // Allow __safe_tests__ explicitly later
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'zion_academy/**',
+      'zion-film/**'
+    ]
   },
   // Apply recommended base only to selected app/test files
   {

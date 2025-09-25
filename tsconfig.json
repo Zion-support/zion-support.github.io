@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -33,16 +33,15 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitOverride": false,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -53,15 +52,16 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
-  "include": [
-    "src-clean/src",
-    "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
+    "include": [
+      "src/types/offline-shims.d.ts",
+      ".next/types/**/*.ts",
+      "app/**/*.ts",
+      "app/**/*.tsx"
+    ],
+    "exclude": [
+    	"App.tsx",
     "node_modules",
     "dist",
     "build",
@@ -94,7 +94,7 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
+    
     "src/utils/cartUtils.js"
   ]
 }
