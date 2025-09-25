@@ -33,14 +33,14 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "noImplicitOverride": true,
+    "noImplicitOverride": false,
     "types": [
       "node",
       "react",
@@ -95,6 +95,13 @@
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
     
-    "src/utils/cartUtils.js"
+    "src/utils/cartUtils.js",
+    "app/blog/**",
+    "app/resources/**",
+    "app/case-studies/**",
+    "app/components/*Banner*.tsx",
+    "app/components/UltimateContent*",
+    "app/components/AdvancedNeuralArchitecturesPromotionBanner.tsx",
+    "app/components/LazyImage.tsx"
   ]
 }

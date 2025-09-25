@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '@/components/SEO';
+// SEO component removed; use Next.js Metadata instead
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const metadata = {
@@ -12,12 +12,7 @@ export const metadata = {
 export default function AITrends2025UltimatePage() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Trends 2025 Ultimate - Revolutionary Breakthrough Technologies"
-        description="Discover the most advanced AI trends and breakthrough technologies of 2025. Neural superintelligence, quantum AI, autonomous systems, and more."
-        keywords="AI trends 2025, artificial intelligence, neural superintelligence, quantum AI, autonomous systems, breakthrough technologies"
-        url="/ai-trends-2025-ultimate"
-      />
+      
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
