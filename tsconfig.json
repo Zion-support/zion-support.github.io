@@ -42,7 +42,6 @@
     "noImplicitThis": true,
     "noImplicitOverride": true,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -56,10 +55,11 @@
     "strictNullChecks": true
   },
   "include": [
-    "src-clean/src",
     "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app/**/*",
+    "pages/**/*",
+    "components/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -67,6 +67,10 @@
     "build",
     "coverage",
     "src/**",
+    "data/**",
+    "utils/**",
+    "lib/**",
+    "types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
