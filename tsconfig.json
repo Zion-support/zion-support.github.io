@@ -42,7 +42,6 @@
     "noImplicitThis": true,
     "noImplicitOverride": true,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -56,9 +55,9 @@
     "strictNullChecks": true
   },
   "include": [
-    "src-clean/src",
+    "app",
+    "__safe_tests__",
     "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
