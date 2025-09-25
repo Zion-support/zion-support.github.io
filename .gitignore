@@ -105,3 +105,11 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+
+# Yarn Berry cache
+.yarn/cache
+.yarn/*-state.*
+# Ignore Yarn v4 cache
+.yarn/cache/
+.yarn/install-state.gz
+.pnp.*
