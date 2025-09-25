@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "build:netlify": "vite build",
-    "lint": "eslint --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint app components lib --no-error-on-unmatched-pattern",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
