@@ -1,8 +1,10 @@
-export default function SEO() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
+export interface SEOProps {
+  title?: string
+  description?: string
+  keywords?: string
+  url?: string
+}
+
+export default function SEO(_props: SEOProps) {
+  return null
 }
