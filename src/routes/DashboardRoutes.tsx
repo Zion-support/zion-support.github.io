@@ -1,28 +1,27 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import OrdersPage from "@/pages/Orders";
+import OrderDetailPage from "@/pages/OrderDetail";
+import ContractBuilder from "@/pages/ContractBuilder";
+import Projects from "@/pages/Projects";
 
-import { Route, Routes } from "react-router-dom"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import Dashboard from "@/pages/Dashboard"
-import ClientDashboard from "@/pages/ClientDashboard"
-import TalentDashboard from "@/pages/TalentDashboard"
-import CreatorDashboard from "@/pages/CreatorDashboard"
-import Analytics from "@/pages/Analytics"
-import ProjectMilestones from "@/pages/ProjectMilestones"
-import ProjectDetails from "@/pages/ProjectDetails"
-import ProjectRoom from "@/pages/ProjectRoom"
-import Payments from "@/pages/Payments"
-import Interviews from "@/pages/Interviews"
-import Notifications from "@/pages/Notifications"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker"
-import HiringTracker from "@/pages/HiringTracker"
-import PortfolioBuilder from "@/pages/PortfolioBuilder"
-import DeveloperPortal from "@/pages/DeveloperPortal"
-import OrdersPage from "@/pages/Orders"
-import OrderDetailPage from "@/pages/OrderDetail"
-import ContractBuilder from "@/pages/ContractBuilder"
-import Projects from "@/pages/Projects"
-
-const DashboardRoutes = () => {
+export function DashboardRoutes() {
   return (
     <Routes>
       {/* Dashboard Routes */}
@@ -219,16 +218,5 @@ const DashboardRoutes = () => {
         }
       />
     </Routes>
-  )
+  );
 }
-
-export default DashboardRoutes
-=======
-export function DashboardRoutes() {
-  return (
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>)}
-,
->>>>>>> origin/main

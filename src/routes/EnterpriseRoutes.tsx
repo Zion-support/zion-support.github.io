@@ -1,7 +1,10 @@
+import React from 'react';
+
 export function EnterpriseRoutes() {
   return (
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>)}
-,
+    <div>
+      <h1>Enterprise Routes</h1>
+      <p>Enterprise routes component placeholder</p>
+    </div>
+  );
+}
