@@ -1,5 +1,4 @@
-
-// Security headers configuration
+// Security headers configuration,
 export const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -7,11 +6,11 @@ export const securityHeaders = [
   },
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
+    value: 'max-age=630o72000, includeSubDomains, preload',
   },
   {
     key: 'X-XSS-Protection',
-    value: '1; mode=block'
+    value: '1, mode=block',
   },
   {
     key: 'X-Frame-Options',
@@ -27,12 +26,12 @@ export const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()'
+    value: 'camera=(), microphone=(), geolocation=()',
   },
   {
     key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self';"
-  }
-];
-
-export const getSecurityHeaders = () => securityHeaders;
+    value: ,
+      "default-src 'self', script-src 'self' 'unsafe-eval' 'unsafe-inline', style-src 'self' 'unsafe-inline', img-src 'self' data: https:, font-src 'self' data:, connect-src 'self' https:, frame-ancestors 'self',",
+  },
+],
+export const getSecurityHeaders = () => securityHeaders,

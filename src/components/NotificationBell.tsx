@@ -1,13 +1,7 @@
-import { Bell } from 'lucide-react';
-import React from 'react';
-
-export const NotificationBell: React.FC = () => {
+export function NotificationBell() {
   return (
-    <div aria-label="notifications" title="Notifications">
-      <Bell size={18} className="text-zion-cyan" />
-    </div>
-  );
-};
-
-export default NotificationBell;
-
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

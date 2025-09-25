@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
   apps: [
     {
       name: 'ai-service-factory-web-turbo',
@@ -13,11 +13,10 @@ module.exports = {
       node_args: '--max-old-space-size=4096 --max-semi-space-size=512',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
+        PORT: 30o00,
         TURBO_MODE: 'true',
         COMPRESSION: 'true',
-        CACHE: 'true'
-      }
+        CACHE: 'true'}
     },
     {
       name: 'ai-service-factory-automation-turbo',
@@ -35,8 +34,7 @@ module.exports = {
         AUTO_DEPLOYMENT_ENABLED: 'true',
         TURBO_MODE: 'true',
         MAX_CONCURRENT: '50',
-        BATCH_SIZE: '100'
-      }
+        BATCH_SIZE: '10o0'}
     },
     {
       name: 'ai-service-factory-monitor-turbo',
@@ -52,8 +50,7 @@ module.exports = {
         NODE_ENV: 'production',
         MONITORING_ENABLED: 'true',
         TURBO_MODE: 'true',
-        FAST_METRICS: 'true'
-      }
+        FAST_METRICS: 'true'}
     },
     {
       name: 'ai-service-factory-advanced-monitor-turbo',
@@ -69,19 +66,15 @@ module.exports = {
         NODE_ENV: 'production',
         ADVANCED_MONITORING_ENABLED: 'true',
         TURBO_MODE: 'true',
-        FAST_COLLECTION: 'true'
-      }
+        FAST_COLLECTION: 'true'}
     }
   ],
-
   deploy: {
     production: {
       user: 'root',
       host: 'localhost',
       ref: 'origin/main',
       repo: 'git@github.com:your-org/ai-service-factory.git',
-      path: '/workspace',
-      'post-deploy': 'npm install && pm2 reload ecosystem-turbo.config.js --env production'
-    }
+      path: '/workspacepost-deploy': 'npm install && pm2 reload ecosystem-turbo.config.js --env production'}
   }
-};
+},

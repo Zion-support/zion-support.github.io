@@ -17,11 +17,11 @@
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent;
   }
-  
+
   .glass-effect {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
@@ -31,7 +31,7 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .scroll-smooth {
     scroll-behavior: smooth;
   }

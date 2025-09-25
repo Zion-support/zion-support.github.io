@@ -1,11 +1,3 @@
-import { toast } from 'react-hot-toast'
-
-interface ToastOptions {
-  duration?: number;
-  position?: 'top-right' | 'top-center' | 'top-left' | 'bottom-right' | 'bottom-center' | 'bottom-left';
-}
-
-export function useToast() {
-  const showToast = (message: string, options?: ToastOptions) => toast(message, options)
-  return { showToast }
-}
+// Module for use-toast,
+export const use-toast ={
+  // TODO: Implement module functionality},

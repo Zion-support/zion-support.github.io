@@ -1,13 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx"
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -17,11 +11,19 @@
     "coverage",
     "build",
     "public/build",
-    "components/**",
-    "lib/**",
-    "types/**",
-    "**/*.test.*",
-    "__tests__/**"
-  ]
+    "automation",
+    "server",
+    "components",
+    "lib",
+    "types",
+    "data",
+    "utils",
+    "**/*.backup.*",
+    "**/*.bak/**",
+    "**/backup/**",
+    "**/backups/**"
+  ],
+  "compilerOptions": {
+    "noEmit": true
+  }
 }
-

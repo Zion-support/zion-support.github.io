@@ -34,13 +34,15 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
-    """Homepage with featured and latest courses."""
+    """Homepage with hero, latest updates, and quick links."""
     with app.app_context():
+        latest_updates = Update.query.filter_by(is_published=True).order_by(desc(Update.created_at)).limit(3).all()
         latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
         featured_courses = Course.query.filter_by(is_premium_tier=False).order_by(desc(Course.created_at)).limit(3).all()
     return render_template(
         'index.html',
         title='Welcome to Zion Academy',
+        latest_updates=latest_updates,
         latest_courses=latest_courses,
         featured_courses=featured_courses,
     )
@@ -99,7 +101,11 @@ def course_detail(course_id):
         with app.app_context():
             # Query for the course by ID, and also eagerly load its lessons
             # and category to avoid separate queries in the template.
-            course = Course.query.options(db.joinedload(Course.lessons), db.joinedload(Course.category)).get(course_id)
+            course = db.session.get(
+                Course,
+                course_id,
+                options=(db.joinedload(Course.lessons), db.joinedload(Course.category)),
+            )
     except Exception as e:
         print(f"Error fetching course {course_id}: {e}")
 
@@ -188,7 +194,7 @@ def api_user_progress(user_id):
         enrollments = Enrollment.query.filter_by(user_id=user_id).all()
         progress_data = []
         for e in enrollments:
-            course = Course.query.get(e.course_id)
+            course = db.session.get(Course, e.course_id)
             progress_data.append({
                 'course_id': e.course_id,
                 'course_title': course.title if course else '',
@@ -515,9 +521,9 @@ def user_profile(user_id):
     """Display user profile with progress and achievements."""
     user = None
     with app.app_context():
-        user = User.query.get(user_id)
+        user = db.session.get(User, user_id)
         enrollments = Enrollment.query.filter_by(user_id=user_id).all()
-        courses = {e.course_id: Course.query.get(e.course_id) for e in enrollments}
+        courses = {e.course_id: db.session.get(Course, e.course_id) for e in enrollments}
         certificates = Certificate.query.filter_by(user_id=user_id).all()
 
     return render_template(
@@ -540,7 +546,7 @@ def updates_list():
     
     with app.app_context():
         # Get user's last visit time
-        user = User.query.get(user_id)
+        user = db.session.get(User, user_id)
         last_visit = user.last_visit if user else datetime.min
         
         # Get all published updates
@@ -627,7 +633,7 @@ def api_react_to_update(update_id):
         db.session.commit()
         
         # Get updated counts
-        update = Update.query.get(update_id)
+        update = db.session.get(Update, update_id)
         reaction_counts = {
             'useful': update.get_reaction_count('useful'),
             'informative': update.get_reaction_count('informative'),
@@ -652,7 +658,7 @@ def api_comment_on_update(update_id):
     
     with app.app_context():
         # Verify update exists and is published
-        update = Update.query.get(update_id)
+        update = db.session.get(Update, update_id)
         if not update or not update.is_published:
             return jsonify({'error': 'Update not found'}), 404
         
@@ -666,7 +672,7 @@ def api_comment_on_update(update_id):
         db.session.commit()
         
         # Get user info for the response
-        user = User.query.get(user_id)
+        user = db.session.get(User, user_id)
         username = user.username if user else f'User {user_id}'
     
     return jsonify({

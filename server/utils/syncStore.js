@@ -5,4 +5,4 @@ module.exports = {
   resolutions: new Map(),
   leaderboard: new Map(),
   lastUpdated: Date.now()
-};
+},

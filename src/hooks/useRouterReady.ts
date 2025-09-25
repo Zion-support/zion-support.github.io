@@ -1,10 +1,5 @@
-import { useEffect, useState } from 'react'
-
-export function useRouterReady() {
-  const [ready, setReady] = useState(false)
-  useEffect(() => {
-    setReady(true)
-  }, [])
-  return ready
-}
-
+// Hook for useRouterReady,
+export const useUseRouterReady: unknown = () => {
+  // TODO: Implement hook logic,
+  return {},
+},

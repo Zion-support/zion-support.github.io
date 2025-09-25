@@ -1,28 +1,20 @@
-
-import { createNotification } from './createNotification';
-import { HireRequestNotificationParams } from './types';
-
-/**
- * Creates a hire request notification for admin and talent
- */
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
+/**,
+ * Creates a hire request notification for admin and talent,
+ */,
 export async function createHireRequestNotifications({
   talentId,
   adminId,
   requesterName,
-  requesterEmail, 
+  requesterEmail,
   projectType,
   projectSummary,
-  hireRequestId
+  hireRequestId,
 }: HireRequestNotificationParams) {
-  const projectInfo = projectType 
-    ? `${projectType} project` 
-    : "project";
-  
-  const summaryText = projectSummary 
-    ? `: "${projectSummary}"` 
-    : "";
-  
-  // Create notification for talent
+  const projectInfo = projectType ? `${projectType} project` : 'project',
+  const summaryText = projectSummary ? `: "${projectSummary}"` : '',
+  // Create notification for talent,
   const talentNotification = await createNotification({
     userId: talentId,
     title: `New Hire Request from ${requesterName}`,
@@ -32,9 +24,8 @@ export async function createHireRequestNotifications({
     sendEmail: true,
     actionUrl: '/dashboard',
     actionText: 'View Request'
-  });
-  
-  // Create notification for admin if admin ID is provided
+  }),
+  // Create notification for admin if admin ID is provided,
   if (adminId) {
     const adminNotification = await createNotification({
       userId: adminId,
@@ -45,17 +36,17 @@ export async function createHireRequestNotifications({
       sendEmail: true,
       actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
-    });
-    
+    }),
     return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-    };
+    },
   }
-  
+,
   return {
     success: talentNotification.success,
     talentNotification
-  };
+  },
 }
+,

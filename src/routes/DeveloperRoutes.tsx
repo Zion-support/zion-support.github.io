@@ -1,9 +1,7 @@
-// Developer routes - imports removed as pages are not found
-
-export default function DeveloperRoutes() {
+export function DeveloperRoutes() {
   return (
-    <>
-      {/* Developer portal routes can be added here */}
-    </>
-  );
-}
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

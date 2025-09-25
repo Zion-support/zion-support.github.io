@@ -16,17 +16,7 @@
                 <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-blue-200 rounded-lg hover:bg-blue-50">View all</a>
             </div>
 
-            {% set latest = [] %}
-            {% if updates is defined %}
-                {% set latest = updates[:3] %}
-            {% else %}
-                {# Fallback: show a simple CTA if updates not provided #}
-                <div class="flex items-center justify-between">
-                    <p class="text-blue-900">Check what’s new: course launches, features, events, and more.</p>
-                    <a href="{{ url_for('updates_list') }}" class="text-blue-700 hover:underline">See updates →</a>
-                </div>
-            {% endif %}
-
+            {% set latest = latest_updates if latest_updates is defined else [] %}
             {% if latest %}
             <ul class="divide-y divide-blue-100 bg-white rounded-lg border border-blue-100">
                 {% for u in latest %}
@@ -41,6 +31,11 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% else %}
+            <div class="flex items-center justify-between">
+                <p class="text-blue-900">Check what’s new: course launches, features, events, and more.</p>
+                <a href="{{ url_for('updates_list') }}" class="text-blue-700 hover:underline">See updates →</a>
+            </div>
             {% endif %}
         </section>
     </div>

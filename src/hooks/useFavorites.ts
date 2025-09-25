@@ -1,14 +1,5 @@
-import { useMemo } from 'react';
-
-export interface FavoriteItem {
-  item_id: string;
-  type?: string;
-}
-
-export function useFavorites() {
-  const favorites = useMemo<FavoriteItem[]>(() => [], []);
-  return { favorites };
-}
-
-export default useFavorites;
-
+// Hook for useFavorites,
+export const useUseFavorites: unknown = () => {
+  // TODO: Implement hook logic,
+  return {},
+},
