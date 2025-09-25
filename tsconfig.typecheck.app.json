@@ -13,8 +13,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "pages_minimal/**/*.ts",
+    "pages_minimal/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [
