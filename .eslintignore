@@ -1,3 +1,5 @@
+zion-website/
+
 # Exclude non-app directories and archived content from linting
 node_modules/
 .next/
