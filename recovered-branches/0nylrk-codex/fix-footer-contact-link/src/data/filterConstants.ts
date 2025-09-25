@@ -1,0 +1,16 @@
+import React from 'react',
+// Common skills for filtering,
+export const COMMON_SKILLS = [
+  'Machine LearningPython',
+  'JavaScriptReact',
+  'Data ScienceAWS',
+  'DockerKubernetes',
+  'DevOpsCloud Architecture',
+  'TensorFlow',
+],
+// Regions,
+export const REGIONS = [
+  'North AmericaEurope',
+  'Asia PacificSouth America',
+  'Middle EastAfrica',
+],
