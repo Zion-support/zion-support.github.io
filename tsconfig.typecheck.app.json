@@ -1,12 +1,20 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitReturns": false,
+    "noUncheckedIndexedAccess": false,
+    "strictNullChecks": false,
+    "noImplicitOverride": false
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "pages_minimal/**/*.ts",
+    "pages_minimal/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [

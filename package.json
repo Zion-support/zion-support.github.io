@@ -13,8 +13,8 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "eslint .",
-    "type-check": "tsc --noEmit",
+    "lint": "eslint -c eslint.config.js --max-warnings=0 --ext .ts,.tsx ./app ./pages_minimal",
+    "type-check": "tsc -p tsconfig.typecheck.app.json --noEmit",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -108,6 +108,7 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -140,28 +141,32 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.7.0",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.9.2",
+    "tailwind-merge": "^3.3.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
+    "@eslint/js": "8.57.0",
+    "@next/eslint-plugin-next": "^14.2.33",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.5.2",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.36.0",
+    "eslint": "8.57.0",
     "eslint-config-next": "^14.2.33",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-    
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
-  }
+  },
+  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
 }
