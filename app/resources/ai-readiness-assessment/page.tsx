@@ -1,20 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import SEO from '@/components/SEO';
+import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
+interface AnswerMap { [questionId: string]: number }
+
+interface ResultsData {
+  totalScore: number;
+  percentage: number;
+  readinessLevel: 'AI-Ready' | 'AI-Prepared' | 'AI-Developing' | 'AI-Exploring';
+  color: 'green' | 'blue' | 'yellow' | 'red';
+  recommendations: string[];
+  nextSteps: string[];
+}
+
 export default function AIReadinessAssessment() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [results, setResults] = useState<null | {
-    totalScore: number;
-    percentage: number;
-    readinessLevel: string;
-    color: 'green' | 'blue' | 'yellow' | 'red';
-    recommendations: string[];
-    nextSteps: string[];
-  }>(null);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [answers, setAnswers] = useState<AnswerMap>({});
+  const [results, setResults] = useState<ResultsData | null>(null);
 
   const questions = [
     {
@@ -75,7 +79,7 @@ export default function AIReadinessAssessment() {
   ];
 
   const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({
+    setAnswers((prev: AnswerMap) => ({
       ...prev,
       [questionId]: value
     }));
@@ -100,7 +104,10 @@ export default function AIReadinessAssessment() {
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel: string, color: 'green' | 'blue' | 'yellow' | 'red', recommendations: string[], nextSteps: string[];
+    let readinessLevel: ResultsData['readinessLevel'];
+    let color: ResultsData['color'];
+    let recommendations: string[];
+    let nextSteps: string[];
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -226,7 +233,7 @@ export default function AIReadinessAssessment() {
             <div className="bg-white border border-gray-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Recommendations</h2>
               <div className="space-y-4">
-                {results.recommendations.map((rec, index) => (
+                {results.recommendations.map((rec: string, index: number) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}>
                       {index + 1}
@@ -241,7 +248,7 @@ export default function AIReadinessAssessment() {
             <div className="bg-white border border-gray-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Recommended Next Steps</h2>
               <div className="space-y-4">
-                {results.nextSteps.map((step, index) => (
+                {results.nextSteps.map((step: string, index: number) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}>
                       {index + 1}
@@ -264,15 +271,15 @@ export default function AIReadinessAssessment() {
                     <div className="flex-1 bg-gray-200 rounded-full h-2">
                       <div 
                         className={`h-2 rounded-full ${results.color === 'green' ? 'bg-green-500' : results.color === 'blue' ? 'bg-blue-500' : results.color === 'yellow' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                        style={{ width: `${(answers[question.id] / 4) * 100}%` }}
+                        style={{ width: `${((answers[question.id] ?? 0) / 4) * 100}%` }}
                       ></div>
                     </div>
                     <span className="text-sm font-medium text-gray-600">
-                      {answers[question.id]}/4
+                      {(answers[question.id] ?? 0)}/4
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    {question.options.find(opt => opt.value === answers[question.id])?.description}
+                    {question.options.find((opt: { value: number; description: string }) => opt.value === (answers[question.id] ?? 0))?.description}
                   </p>
                 </div>
               ))}
@@ -383,7 +390,7 @@ export default function AIReadinessAssessment() {
           <p className="text-lg text-gray-700 mb-8">{currentQuestion.description}</p>
           
           <div className="space-y-4">
-            {currentQuestion.options.map((option, index) => (
+            {currentQuestion.options.map((option: { value: number; label: string; description: string }, index: number) => (
               <button
                 key={index}
                 onClick={() => handleAnswer(currentQuestion.id, option.value)}
