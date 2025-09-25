@@ -1,5 +1,6 @@
 // This component is deprecated for App Router
-// Use metadata export in page.tsx files instead
+// It remains as a no-op to avoid breaking existing pages that pass SEO props.
+// Prefer using the Next.js Metadata API via `export const metadata` in `page.tsx`.
 
 type SEOProps = {
   title?: string;
