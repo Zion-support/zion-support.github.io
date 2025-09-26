@@ -2,19 +2,32 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import PerformanceMetrics from '../src/components/PerformanceMetrics';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import '../styles/animations.css';
+
+// Lazy load heavy components
+const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
+  ssr: false
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <HelmetProvider>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion App" />
-        <meta name="theme-color" content="#2563eb" />
-      </Head>
+    <EnhancedErrorBoundary>
+      <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
+        <HelmetProvider>
+          <Head>
+            <meta charSet="utf-8" />
+            <meta name="robots" content="index, follow" />
+            <meta name="author" content="Zion App" />
+            <meta name="theme-color" content="#2563eb" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          </Head>
       <style jsx global>{`
         * {
           box-sizing: border-box;
@@ -133,9 +146,12 @@ export default function App({ Component, pageProps }: AppProps) {
           border: 0;
         }
       `}</style>
-      <Component {...pageProps} />
-      <PerformanceMetrics />
-      <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
-    </HelmetProvider>
+          <Component {...pageProps} />
+          <PerformanceMetrics />
+          <PerformanceTracker />
+          <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+        </HelmetProvider>
+      </AnalyticsProvider>
+    </EnhancedErrorBoundary>
   );
 }

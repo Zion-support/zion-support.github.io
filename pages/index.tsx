@@ -1,11 +1,23 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+// Lazy load heavy components
+const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
+  ssr: false,
+  loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
+  ssr: false
+});
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
   const isHeroInView = useInView(heroRef, { once: true });
@@ -13,6 +25,30 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     setIsVisible(true);
+    setIsLoading(false);
+    
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            setPerformanceMetrics({
+              loadTime: entry.loadEventEnd - entry.fetchStart,
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart,
+            });
+          }
+        });
+      });
+      
+      try {
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (e) {
+        console.warn('Performance observer not supported');
+      }
+      
+      return () => observer.disconnect();
+    }
   }, []);
 
   const handleGetStarted = useCallback(() => {
@@ -59,15 +95,76 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Zion Tech Solutions - AI-Powered Business Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion Tech Solutions - AI-Powered Business Solutions & Cloud Infrastructure</title>
+        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="keywords" content="AI solutions, cloud infrastructure, digital transformation, business automation, machine learning, cloud migration, tech consulting" />
+        <meta name="author" content="Zion Tech Solutions" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
         <meta property="og:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zion.app" />
+        <meta property="og:site_name" content="Zion Tech Solutions" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
         <meta name="twitter:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
+        <meta name="twitter:site" content="@ziontech" />
+        
+        {/* Performance and Security */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://zion.app" />
+        
+        {/* Favicon and Icons */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Theme Color */}
+        <meta name="theme-color" content="#3B82F6" />
+        <meta name="msapplication-TileColor" content="#3B82F6" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Solutions",
+              "url": "https://zion.app",
+              "logo": "https://zion.app/logo.png",
+              "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.",
+              "sameAs": [
+                "https://twitter.com/ziontech",
+                "https://linkedin.com/company/ziontech"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-0123",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              }
+            })
+          }}
+        />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
@@ -239,6 +336,10 @@ export default function Home(): JSX.Element {
             </div>
           </div>
         </section>
+
+        {/* Performance and Accessibility Components */}
+        <AccessibilityEnhancer />
+        <PerformanceTracker />
       </div>
     </>
   );
