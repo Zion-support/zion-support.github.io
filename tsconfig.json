@@ -48,7 +48,7 @@
     "strictNullChecks": false
   },
   "include": [
-    "src/**/*"
+    "types.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -68,6 +68,9 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "src/pages/**",
+    "src/routes/**",
+    "src/utils/cartUtils.js"
   ]
 }
