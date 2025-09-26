@@ -1,50 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-}
-
-export default function LazyImage({ src, alt, className = '', placeholder }: LazyImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
+const LazyImage = () => {
   return (
-    <div ref={imgRef} className={`relative ${className}`}>
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-700 animate-pulse rounded-lg flex items-center justify-center">
-          <div className="text-gray-400">Loading...</div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Lazy Image</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
         </div>
-      )}
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-          onLoad={() => setIsLoaded(true)}
-        />
-      )}
     </div>
   );
-}
+};
+
+export default LazyImage;
