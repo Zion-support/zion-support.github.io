@@ -18,7 +18,7 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <header className="bg-slate-900/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+      <header className="bg-gray-900/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">

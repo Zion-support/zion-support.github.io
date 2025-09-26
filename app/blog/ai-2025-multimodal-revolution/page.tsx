@@ -72,12 +72,7 @@ export default function AIMultimodalRevolution() {
             </div>
             <div className="group">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-<<<<<<< HEAD
-                {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                <Image className="w-8 h-8 text-purple-600" />
-=======
                 <Image className="w-8 h-8 text-purple-600" alt="Multimodal AI image processing" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d7b9
               </div>
               <h3 className="font-semibold text-gray-900">Images</h3>
               <p className="text-sm text-gray-600">Visual Content Generation</p>
