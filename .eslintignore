@@ -7,7 +7,8 @@ dist/
 coverage/
 .cache/
 
-# Exclude corrupted or non-app source directories (keep main src for linting)
+# Exclude corrupted or non-app source directories
+# Allow linting of active app source under src/
 # src/
 # components/
 
@@ -51,11 +52,12 @@ zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
+# Keep targeted ignores inside src minimal to allow lint to run
 # src/components/**
 # src/pages/**
 # src/routes/**
 # src/context/**
-src/utils/cartUtils.js
+# src/utils/cartUtils.js
 **/*.config.ts
 vite.config.ts
 vitest.config.ts
