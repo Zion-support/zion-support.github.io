@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import TaskManager from './TaskManager';
 
 interface NavigationProps {
-  currentTime: Date;
-  isDarkMode: boolean;
-  onToggleDarkMode: () => void;
-  activeSection: string;
-  onSectionChange: (section: string) => void;
+  currentTime?: Date;
+  isDarkMode?: boolean;
+  onToggleDarkMode?: () => void;
+  activeSection?: string;
+  onSectionChange?: (section: string) => void;
 }
 
 export default function Navigation({
-  currentTime,
-  isDarkMode,
-  onToggleDarkMode,
-  activeSection,
-  onSectionChange
+  currentTime = new Date(),
+  isDarkMode = false,
+  onToggleDarkMode = () => {},
+  activeSection = '',
+  onSectionChange = () => {}
 }: NavigationProps): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
