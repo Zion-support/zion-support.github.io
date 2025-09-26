@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+node_modules/
+=======
 # Build output
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 .next/
 out/
 dist/
+<<<<<<< HEAD
+*.config.js
+*.config.ts
+=======
 coverage/
 
 # Dependencies
@@ -21,19 +29,13 @@ automation/
 automation_backup/
 automation-logs/
 automation-reports/
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 scripts/
-server/
-backend/
+automation/
+netlify/
 apps/
-apps.backup/
-app_backup/
-app.disabled/
-app-disabled/
-
-# Generated or demo services
-generated-services/
-
-# Archived, backups, or intentionally broken areas
+__tests__/
+tests/
 backups/
 backup*/
 backup-problematic-files/
@@ -41,15 +43,36 @@ corrupted_backup/
 temp_exclude/
 temp_*/
 ts_files_backup/
-__tests__/**
-tests/**
-__jest__/**
-__mocks__/**
-__safe_tests__/**
-
-# Other packages in the repo
+components/
+components.disabled/
+components.browserstack.config.ts
+pages.disabled/
+pages_backup/
+pages.bak/
+pages._archive_corrupted/
+pages-disabled/
+src.disabled/
+src-disabled/
+src_backup/
+src_backup_all/
+src_backup_temp/
+src.broken/
+src.corrupted/
+components.disabled_full/
+pages.disabled_full/
+apps.backup/
+app_backup/
+.temp_backup_components/
+src.corrupted/
+src/
+lib/
+backend/
+server/
 zion-os/
 zion-website/
+<<<<<<< HEAD
+zion-ai-assistant/
+=======
 zion-ai-assistant/
 zion_academy/
 zion-film/
@@ -69,3 +92,4 @@ vitest.config.ts
 *.backup
 *.bak
 # Keep above; no additional ignores below so that src-clean is linted
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
