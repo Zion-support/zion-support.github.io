@@ -1,20 +1,20 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import {;
-  Newspaper,;
-  Calendar,;
-  User,;
-  ArrowRight,;
-  Download,;
-  Mail,;
-  Phone,;
-  Globe,;
-  Award,;
-  TrendingUp,;
-  Users,;
-  Zap,;
-  Shield,;
-  Brain,;
+  Newspaper;
+  Calendar;
+  User;
+  ArrowRight;
+  Download;
+  Mail;
+  Phone;
+  Globe;
+  Award;
+  TrendingUp;
+  Users;
+  Zap;
+  Shield;
+  Brain;
   Rocket;
 } from "lucide-react"
 export default function Press() {;
@@ -28,42 +28,42 @@ export default function Press() {;
   ];
   const pressReleases = [;
     {;
-      id: 1,title: "Zion Tech Group Launches Revolutionary AI Autonomous Research Assistant",date: "2025-01-20",author: "Press Team",category: "press-releases",excerpt: "Groundbreaking AI system that autonomously discovers, analyzes, and synthesizes information across multiple sources, revolutionizing how businesses conduct research and gather intelligence.",;
-      content: "Zion Tech Group today announced the launch of its revolutionary AI Autonomous Research Assistant, a breakthrough artificial intelligence system that autonomously discovers, analyzes, and synthesizes information across multiple sources. This innovative solution represents a paradigm shift in research methodology, enabling organizations to conduct comprehensive research 10x faster while maintaining 95% accuracy rates. The system continuously monitors and updates information, providing real-time insights that drive informed decision-making across industries.",;
+      id: 1,title: "Zion Tech Group Launches Revolutionary AI Autonomous Research Assistant",date: "2025-01-20",author: "Press Team",category: "press-releases",excerpt: "Groundbreaking AI system that autonomously discovers, analyzes, and synthesizes information across multiple sources, revolutionizing how businesses conduct research and gather intelligence.";
+      content: "Zion Tech Group today announced the launch of its revolutionary AI Autonomous Research Assistant, a breakthrough artificial intelligence system that autonomously discovers, analyzes, and synthesizes information across multiple sources. This innovative solution represents a paradigm shift in research methodology, enabling organizations to conduct comprehensive research 10x faster while maintaining 95% accuracy rates. The system continuously monitors and updates information, providing real-time insights that drive informed decision-making across industries.";
       featured: true,tags: ["AI Research", "Autonomous Systems", "Innovation", "Product Launch"]
-    },;
+    };
     {;
-      id: 2,title: "Zion Tech Group Introduces AI Supply Chain Optimization Platform",date: "2025-01-18",author: "Press Team",category: "press-releases",excerpt: "AI-powered supply chain solution that predicts demand, optimizes inventory, and reduces costs by up to 30% for global enterprises.",;
-      content: "Zion Tech Group has launched its AI Supply Chain Optimization Platform, a comprehensive solution that leverages artificial intelligence to transform supply chain operations. The platform provides predictive analytics, real-time visibility, and intelligent routing capabilities that enable organizations to reduce costs by up to 30%, improve delivery times by 40%, and enhance overall supply chain efficiency. This solution addresses critical challenges faced by global enterprises in today's complex supply chain environment.",;
+      id: 2,title: "Zion Tech Group Introduces AI Supply Chain Optimization Platform",date: "2025-01-18",author: "Press Team",category: "press-releases",excerpt: "AI-powered supply chain solution that predicts demand, optimizes inventory, and reduces costs by up to 30% for global enterprises.";
+      content: "Zion Tech Group has launched its AI Supply Chain Optimization Platform, a comprehensive solution that leverages artificial intelligence to transform supply chain operations. The platform provides predictive analytics, real-time visibility, and intelligent routing capabilities that enable organizations to reduce costs by up to 30%, improve delivery times by 40%, and enhance overall supply chain efficiency. This solution addresses critical challenges faced by global enterprises in today's complex supply chain environment.";
       featured: true,tags: ["Supply Chain", "AI Optimization", "Predictive Analytics", "Product Launch"]
-    },;
+    };
     {;
-      id: 3,title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",date: "2024-01-15",author: "Press Team",category: "press-releases",excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.",;
-      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",;
+      id: 3,title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",date: "2024-01-15",author: "Press Team",category: "press-releases",excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.";
+      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.";
       featured: true,tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
-    },;
+    };
     {;
-      id: 6,title: "Zion Tech Group Secures $50M Series B Funding Round",date: "2024-01-10",author: "Press Team",category: "press-releases",excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",;
+      id: 6,title: "Zion Tech Group Secures $50M Series B Funding Round",date: "2024-01-10",author: "Press Team",category: "press-releases",excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.";
       featured: true,tags: ["Funding", "Investment", "Growth"]
-    },;
+    };
     {;
-      id: 3,title: "Zion Tech Group Named to Inc. 5000 Fastest-Growing Companies",date: "2023-12-20",author: "Press Team",category: "awards",excerpt: "Company recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.",;
-      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",;
+      id: 3,title: "Zion Tech Group Named to Inc. 5000 Fastest-Growing Companies",date: "2023-12-20",author: "Press Team",category: "awards",excerpt: "Company recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.";
+      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.";
       featured: false,tags: ["Award", "Growth", "Recognition"]
-    },;
+    };
     {;
-      id: 4,title: "Zion Tech Group Launches AI-Powered Cybersecurity Platform",date: "2023-12-15",author: "Press Team",category: "press-releases",excerpt: "Next-generation cybersecurity solution combines artificial intelligence with advanced threat detection to provide enterprise-grade protection against evolving cyber threats.",content: "Zion Tech Group has launched its latest AI-powered cybersecurity platform, designed to provide enterprise-grade protection against increasingly sophisticated cyber threats. The platform leverages advanced machine learning algorithms to detect and respond to security incidents in real-time, offering organizations unprecedented levels of protection and threat intelligence.",;
+      id: 4,title: "Zion Tech Group Launches AI-Powered Cybersecurity Platform",date: "2023-12-15",author: "Press Team",category: "press-releases",excerpt: "Next-generation cybersecurity solution combines artificial intelligence with advanced threat detection to provide enterprise-grade protection against evolving cyber threats.",content: "Zion Tech Group has launched its latest AI-powered cybersecurity platform, designed to provide enterprise-grade protection against increasingly sophisticated cyber threats. The platform leverages advanced machine learning algorithms to detect and respond to security incidents in real-time, offering organizations unprecedented levels of protection and threat intelligence.";
       featured: false,tags: ["Cybersecurity", "AI", "Product Launch"]
-    },;
+    };
     {;
-      id: 5,title: "Zion Tech Group CEO Kleber Oliveira Featured in Forbes Technology Council",date: "2023-12-10",author: "Forbes",category: "thought-leadership",excerpt: "Company CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",content: "Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations. The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.",;
+      id: 5,title: "Zion Tech Group CEO Kleber Oliveira Featured in Forbes Technology Council",date: "2023-12-10",author: "Forbes",category: "thought-leadership",excerpt: "Company CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",content: "Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations. The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.";
       featured: false,tags: ["Thought Leadership", "AI", "Business Transformation"]
-    },;
+    };
     {;
-      id: 6,title: "Zion Tech Group Expands Global Operations to Europe",date: "2023-12-05",author: "Press Team",category: "press-releases",excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",;
+      id: 6,title: "Zion Tech Group Expands Global Operations to Europe",date: "2023-12-05",author: "Press Team",category: "press-releases",excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.";
       featured: false,tags: ["Global Expansion", "Europe", "Market Growth"]
     };
-  ],;
+  ];
 
   const mediaCoverage = [;
     {;
@@ -92,7 +92,7 @@ export default function Press() {;
   ];
   const filteredContent = selectedCategory === 'all'
     ? [...pressReleases, ...mediaCoverage, ...awards]
-    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory),;
+    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {;
     hidden: { opacity: 0 };
@@ -405,7 +405,7 @@ export default function Press() {;
               Contact Our Media Team;
             </[^>]*>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
-              For media inquiries, interview requests, or additional information,;
+              For media inquiries, interview requests, or additional information;
               our media relations team is here to help.;
             </[^>]*>
 

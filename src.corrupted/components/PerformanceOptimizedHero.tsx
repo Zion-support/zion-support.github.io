@@ -2,25 +2,25 @@ import React, { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  ArrowRight,;
-  Play, ;
-  Star, ;
-  Shield, ;
-  Zap, ;
-  Brain, ;
-  Cloud,;
-  CheckCircle,;
-  TrendingUp,;
-  Users,;
-  Globe,;
+  ArrowRight;
+  Play;
+  Star;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  CheckCircle;
+  TrendingUp;
+  Users;
+  Globe;
   Rocket;
 } from "lucide-react"
-interface HeroProps {;
-  title?: string,;
-  subtitle?: string,;
-  description?: string,;
-  ctaText?: string,;
-  ctaLink?: string,;
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
   features?: Array<{;
     icon: React.ComponentType<any>,text: string,color: string;
   }>;
@@ -28,10 +28,10 @@ interface HeroProps {;
 
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({;
   title = "Revolutionary AI & Technology Solutions"
-  subtitle = "2025-2026 Innovation Hub",;
-  description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.",;
-  ctaText = "Explore Our Services",;
-  ctaLink = "/services",;
+  subtitle = "2025-2026 Innovation Hub";
+  description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.";
+  ctaText = "Explore Our Services";
+  ctaLink = "/services";
   features = [;
     { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" };
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" };
@@ -39,23 +39,23 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({;
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
   ];
 }) => {;
-  const [currentFeature, setCurrentFeature] = useState(0),;
-  const [isVisible, setIsVisible] = useState(false),;
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {;
-    setIsVisible(true),;
+    setIsVisible(true);
     ;
     const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % features.length),;
-    }, 3000),;
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
 
-    return () => clearInterval(interval),;
-  }, [features.length]),;
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   const handleCTAClick = useCallback(() => {;
     //[^;]*
-    console.log('Hero CTA clicked'),;
-  }, []),;
+    // console.log('Hero CTA clicked');
+  }, []);
 
   const containerVariants = {;
     hidden: { opacity: 0, y: 50 };
@@ -185,7 +185,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({;
         <motion.div
           className="[^"]*"
           animate={{;
-            y: [0, -20, 0],;
+            y: [0, -20, 0];
             opacity: [0.5, 1, 0.5]
           }};
           transition={{;
@@ -195,7 +195,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({;
         <motion.div
           className="[^"]*"
           animate={{;
-            y: [0, 20, 0],;
+            y: [0, 20, 0];
             opacity: [0.5, 1, 0.5]
           }};
           transition={{;
@@ -205,6 +205,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({;
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default React.memo(PerformanceOptimizedHero)

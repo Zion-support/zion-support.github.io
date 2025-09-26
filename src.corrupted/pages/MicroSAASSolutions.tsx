@@ -1,47 +1,47 @@
 import React from "react"
 import { SEO } from "../components/SEO"
 import {;
-  Code,;
-  Zap,;
-  Users,;
-  TrendingUp,;
-  Shield,;
-  Globe,;
-  Building,;
-  Rocket,;
-  Cpu,;
-  BarChart3,;
-  Database,;
-  Cloud,;
-  Lock,;
-  Smartphone,;
-  Target,;
-  DollarSign,;
-  Clock,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
+  Code;
+  Zap;
+  Users;
+  TrendingUp;
+  Shield;
+  Globe;
+  Building;
+  Rocket;
+  Cpu;
+  BarChart3;
+  Database;
+  Cloud;
+  Lock;
+  Smartphone;
+  Target;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  Star;
+  ArrowRight;
   Brain;
 } from "lucide-react"
 export default function MicroSAASSolutions() {;
   const services = [;
     {;
       title: "Custom SAAS Development",description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",icon: Code,features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
-    },;
+    };
     {;
       title: "Multi-tenant Architecture",description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",icon: Users,features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
-    },;
+    };
     {;
       title: "Subscription Management",description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",icon: BarChart3,features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
-    },;
+    };
     {;
       title: "API Development & Integration",description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",icon: Cpu,features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
-    },;
+    };
     {;
-      title: "Analytics & Reporting",description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
+      title: "Analytics & Reporting",description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.";
       icon: TrendingUp,features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     };
-  ],;
+  ];
 
   const benefits = [;
     {;

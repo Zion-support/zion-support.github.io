@@ -1,42 +1,42 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  FileText,;
-  Shield, ;
-  Zap, ;
-  CheckCircle, ;
-  BarChart3, ;
-  Sparkles, ;
-  ArrowRight, ;
-  Brain,;
-  Cpu,;
-  Database,;
-  Globe,;
-  Rocket,;
-  Target,;
-  TrendingUp,;
-  Layers,;
-  Scale,;
-  Gavel,;
-  BookOpen,;
-  Search,;
-  Clock,;
-  DollarSign,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Home,;
+  FileText;
+  Shield;
+  Zap;
+  CheckCircle;
+  BarChart3;
+  Sparkles;
+  ArrowRight;
+  Brain;
+  Cpu;
+  Database;
+  Globe;
+  Rocket;
+  Target;
+  TrendingUp;
+  Layers;
+  Scale;
+  Gavel;
+  BookOpen;
+  Search;
+  Clock;
+  DollarSign;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Home;
   Heart;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
 export default function AILegalDocumentAutomation() {;
   const features = [;
-    'AI-powered contract analysis and generationLegal document template automation',;
-    'Compliance checking and risk assessmentMulti-jurisdiction legal framework support',;
-    'Real-time legal research and citationAutomated contract negotiation assistance',;
+    'AI-powered contract analysis and generationLegal document template automation';
+    'Compliance checking and risk assessmentMulti-jurisdiction legal framework support';
+    'Real-time legal research and citationAutomated contract negotiation assistance';
     'Legal document version control and trackingIntegration with legal practice management systems'
-  ],;
+  ];
 
   const benefits = [;
     'Reduce legal document creation time by 85%Minimize legal risks and compliance errors'
@@ -46,42 +46,42 @@ export default function AILegalDocumentAutomation() {;
   const useCases = [;
     {;
       industry: 'Corporate Law',description: 'Automated contract generation and management for businesses',icon: Building,applications: ['M&A contractsEmployment agreements', 'Vendor contractsNDAs']
-    },;
+    };
     {;
       industry: 'Real Estate',description: 'Streamlined property transaction documentation',icon: Home,applications: ['Purchase agreementsLease contracts', 'Title documentsClosing paperwork']
-    },;
+    };
     {;
       industry: 'Healthcare',description: 'Compliance-focused medical practice documentation',icon: Heart,applications: ['Patient consent formsHIPAA compliance', 'Medical contractsRegulatory filings']
-    },;
+    };
     {;
       industry: 'Startups & SMEs',description: 'Cost-effective legal document automation',icon: Rocket,applications: ['Founder agreementsInvestment documents', 'IP protectionEmployment contracts']
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
       plan: 'Starter',price: '$299',period: '/month',features: [;
         'Up to 50 documents/monthBasic contract templates'
-        'Standard compliance checksEmail support',;
+        'Standard compliance checksEmail support';
         'Basic legal research tools'
-      ],;
+      ];
       recommended: false;
     };
     {;
       plan: 'Professional',price: '$799',period: '/month',features: [;
         'Up to 200 documents/monthAdvanced contract templates'
-        'Multi-jurisdiction supportPriority support',;
+        'Multi-jurisdiction supportPriority support';
         'Advanced legal researchContract negotiation assistance'
-      ],;
+      ];
       recommended: true;
     };
     {;
-      plan: 'Enterprise',price: '$1,999',;
+      plan: 'Enterprise',price: '$1,999';
       period: '/month',features: [;
         'Unlimited documentsCustom template creation'
-        'White-label solutions24/7 dedicated support',;
+        'White-label solutions24/7 dedicated support';
         'API accessCustom integrations'
-      ],;
+      ];
       recommended: false;
     };
   ];
@@ -93,10 +93,10 @@ export default function AILegalDocumentAutomation() {;
     { name: 'ContractPodAi', url: 'https://[^;]*
   ];
   const complianceFrameworks = [;
-    'GDPR (EU Data Protection)CCPA (California Privacy)',;
-    'SOX (Sarbanes-Oxley)HIPAA (Healthcare Privacy)',;
+    'GDPR (EU Data Protection)CCPA (California Privacy)';
+    'SOX (Sarbanes-Oxley)HIPAA (Healthcare Privacy)';
     'GLBA (Financial Privacy)ISO 27001 (Information Security)'
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;

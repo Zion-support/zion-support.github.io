@@ -1,5 +1,5 @@
 import React from "react"
-interface ErrorFallbackProps {;
+interface ErrorFallbackProps {
   error: Error,resetErrorBoundary: () => void;
 };
 

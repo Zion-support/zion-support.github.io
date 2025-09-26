@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState, ReactNode } from "react"
-interface Notification {;
+interface Notification {
   id: string,message: string,type: 'success' | 'error' | 'warning' | 'info'
   duration?: number;
 };
 
-interface NotificationContextType {;
-  notifications: Notification[],addNotification: (notification: Omit<Notification, 'id'>) => void,;
+interface NotificationContextType {
+  notifications: Notification[],addNotification: (notification: Omit<Notification 'id'>) => void;
   removeNotification: (id: string) => void,clearNotifications: () => void;
 };
 
@@ -13,22 +13,22 @@ const NotificationContext = createContext<NotificationContextType | undefined>(u
 export const useNotifications = () => {;
   const context = useContext(NotificationContext)
   if (!context) {;
-    throw new Error('useNotifications must be used within a NotificationProvider'),;
+    throw new Error('useNotifications must be used within a NotificationProvider');
   };
-  return context,;
-},;
+  return context;
+};
 
-interface NotificationProviderProps {;
+interface NotificationProviderProps {
   children: ReactNode;
 };
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]),;
+  const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: Omit<Notification, 'id'>) => {;
+  const addNotification = (notification: Omit<Notification 'id'>) => {;
     const id = Math.random().toString(36).substr(2, 9)
     const newNotification = { ...notification, id };
-    setNotifications(prev => [...prev, newNotification]),;
+    setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {;
       setTimeout(() => {;
@@ -40,19 +40,19 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
   const clearNotifications = () => {;
-    setNotifications([]),;
-  },;
+    setNotifications([]);
+  };
 
   const value: NotificationContextType = {;
     notifications;
-    addNotification,;
-    removeNotification,;
+    addNotification;
+    removeNotification;
     clearNotifications;
-  },;
+  };
 
   return (
     <NotificationContext.Provider value={value}>;
       {children};
     </[^>]*>
-  ),;
+  );
 };

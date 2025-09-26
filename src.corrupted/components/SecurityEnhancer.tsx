@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from "react"
-interface SecurityEvent {;
+interface SecurityEvent {
   id: string,type: 'xss_attempt' | 'injection_attempt' | 'suspicious_activity' | 'security_violation',severity: 'low' | 'medium' | 'high' | 'critical',description: string,timestamp: number,userAgent: string;
-  ipAddress?: string,;
-  payload?: string,;
+  ipAddress?: string;
+  payload?: string;
   blocked: boolean;
 };
 
-interface SecurityConfig {;
+interface SecurityConfig {
   enableXSSProtection: boolean,enableCSRFProtection: boolean,enableInputValidation: boolean,enableRateLimiting: boolean,enableSecurityHeaders: boolean,enableContentSecurityPolicy: boolean;
 };
 
@@ -15,12 +15,12 @@ export const SecurityEnhancer: React.FC = () => {
   const [config, setConfig] = useState<SecurityConfig>({;
     enableXSSProtection: true,enableCSRFProtection: true,enableInputValidation: true,enableRateLimiting: true,enableSecurityHeaders: true,enableContentSecurityPolicy: true;
   });
-  const [isActive, setIsActive] = useState(false),;
-  const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low'),;
-  const [blockedRequests, setBlockedRequests] = useState(0),;
-  const [allowedRequests, setAllowedRequests] = useState(0),;
+  const [isActive, setIsActive] = useState(false);
+  const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low');
+  const [blockedRequests, setBlockedRequests] = useState(0);
+  const [allowedRequests, setAllowedRequests] = useState(0);
   ;
-  const rateLimitMap = useRef<Map<string, { count: number, resetTime: number }>>(new Map());
+  const rateLimitMap = useRef<Map<string { count: number, resetTime: number }>>(new Map());
   const suspiciousPatterns = useRef<RegExp[]>([]);
   const xssPatterns = useRef<RegExp[]>([]);
 
@@ -28,77 +28,77 @@ export const SecurityEnhancer: React.FC = () => {
   useEffect(() => {;
     //[^;]*
     xssPatterns.current = [;
-      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,;
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
       /javascript: /gi;
-      /on\w+\s*=/gi,;
-      /<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi,;
-      /<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi,;
-      /<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi,;
-      /<form\b[^<]*(?:(?!<\/form>)<[^<]*)*<\/form>/gi,;
-      /<input\b[^<]*(?:(?!<\/input>)<[^<]*)*<\/input>/gi,;
-      /<textarea\b[^<]*(?:(?!<\/textarea>)<[^<]*)*<\/textarea>/gi,;
+      /on\w+\s*=/gi;
+      /<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi;
+      /<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi;
+      /<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi;
+      /<form\b[^<]*(?:(?!<\/form>)<[^<]*)*<\/form>/gi;
+      /<input\b[^<]*(?:(?!<\/input>)<[^<]*)*<\/input>/gi;
+      /<textarea\b[^<]*(?:(?!<\/textarea>)<[^<]*)*<\/textarea>/gi;
       /<select\b[^<]*(?:(?!<\/select>)<[^<]*)*<\/select>/gi;
-    ],;
+    ];
 
     //[^;]*
     suspiciousPatterns.current = [;
-      /union\s+select/gi,;
-      /drop\s+table/gi,;
-      /insert\s+into/gi,;
-      /update\s+set/gi,;
-      /delete\s+from/gi,;
-      /exec\s*\(/gi,;
-      /eval\s*\(/gi,;
-      /document\.cookie/gi,;
-      /window\.location/gi,;
-      /innerHTML\s*=/gi,;
-      /outerHTML\s*=/gi,;
-      /document\.write/gi,;
+      /union\s+select/gi;
+      /drop\s+table/gi;
+      /insert\s+into/gi;
+      /update\s+set/gi;
+      /delete\s+from/gi;
+      /exec\s*\(/gi;
+      /eval\s*\(/gi;
+      /document\.cookie/gi;
+      /window\.location/gi;
+      /innerHTML\s*=/gi;
+      /outerHTML\s*=/gi;
+      /document\.write/gi;
       /document\.writeln/gi;
-    ],;
-  }, []),;
+    ];
+  }, []);
 
   //[^;]*
   const generateEventId = useCallback(() => {;
-    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),;
-  }, []),;
+    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }, []);
 
   //[^;]*
-  const logSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {;
+  const logSecurityEvent = useCallback((event: Omit<SecurityEvent 'id' | 'timestamp'>) => {;
     const securityEvent: SecurityEvent = {;
       ...event
       id: generateEventId(),timestamp: Date.now()
     };
-    setSecurityEvents(prev => [...prev, securityEvent]),;
+    setSecurityEvents(prev => [...prev, securityEvent]);
     ;
     //[^;]*
     if (event.severity === 'critical' || event.severity === 'high') {
-      setThreatLevel('high'),;
+      setThreatLevel('high');
     } else if (event.severity === 'medium') {;
-      setThreatLevel('medium'),;
+      setThreatLevel('medium');
     };
 
     //[^;]*
     if (process.env['NODE_ENV'] === 'development') {;
-      console.warn('Security Event:', securityEvent),;
+      console.warn('Security Event:', securityEvent);
     };
 
     //[^;]*
     try {;
       const storedEvents = localStorage.getItem('security-events') || '[]'
       const events = JSON.parse(storedEvents)
-      events.push(securityEvent),;
+      events.push(securityEvent);
       ;
       //[^;]*
       if (events.length > 100) {;
-        events.splice(0, events.length - 100),;
+        events.splice(0, events.length - 100);
       };
       ;
-      localStorage.setItem('security-events', JSON.stringify(events)),;
+      localStorage.setItem('security-events', JSON.stringify(events));
     } catch (error) {;
-      console.warn('Error storing security event locally:', error),;
+      console.warn('Error storing security event locally:', error);
     };
-  }, [generateEventId]),;
+  }, [generateEventId]);
 
   //[^;]*
   const sendToSecurityService = useCallback(async (event: SecurityEvent) => {;
@@ -107,23 +107,23 @@ export const SecurityEnhancer: React.FC = () => {
       //[^;]*
       const storedEvents = localStorage.getItem('security-events') || '[]'
       const events = JSON.parse(storedEvents)
-      events.push(event),;
+      events.push(event);
       ;
       //[^;]*
       if (events.length > 100) {;
-        events.splice(0, events.length - 100),;
+        events.splice(0, events.length - 100);
       };
       ;
-      localStorage.setItem('security-events', JSON.stringify(events)),;
+      localStorage.setItem('security-events', JSON.stringify(events));
       ;
       //[^;]*
       if (process.env['NODE_ENV'] === 'development') {;
-        console.log('Security event stored locally:', event),;
+        // console.log('Security event stored locally:', event);
       };
     } catch (error) {;
-      console.warn('Error storing security event locally:', error),;
+      console.warn('Error storing security event locally:', error);
     };
-  }, []),;
+  }, []);
 
   //[^;]*
   const sanitizeInput = useCallback((input: string): string => {;
@@ -132,8 +132,8 @@ export const SecurityEnhancer: React.FC = () => {
     ;
     //[^;]*
     xssPatterns.current.forEach(pattern => {;
-      sanitized = sanitized.replace(pattern, ''),;
-    }),;
+      sanitized = sanitized.replace(pattern, '');
+    });
 
     //[^;]*
     sanitized = sanitized;
@@ -141,18 +141,18 @@ export const SecurityEnhancer: React.FC = () => {
       .replace(/</g, '&lt,')
       .replace(/>/g, '&gt,')
       .replace(/"/g, '&quot,')
-      .replace(/'/g, '&#x27,'),;
+      .replace(/'/g, '&#x27,');
 
     //[^;]*
     if (sanitized !== input) {;
       logSecurityEvent({;
         type: 'xss_attempt',severity: 'high',description: 'XSS attempt detected and sanitized',userAgent: navigator.userAgent,payload: input,blocked: true;
       });
-      setBlockedRequests(prev => prev + 1),;
+      setBlockedRequests(prev => prev + 1);
     };
 
-    return sanitized,;
-  }, [config.enableXSSProtection, logSecurityEvent]),;
+    return sanitized;
+  }, [config.enableXSSProtection, logSecurityEvent]);
 
   //[^;]*
   const validateInput = useCallback((input: string, type: 'text' | 'email' | 'url' | 'number'): boolean => {;
@@ -161,44 +161,44 @@ export const SecurityEnhancer: React.FC = () => {
     let validationPattern: RegExp;
     switch (type) {;
       case 'email':;
-        validationPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
-        break,;
+        validationPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        break;
       case 'url':;
-        validationPattern = /^https?:\/\/.+/,;
-        break,;
+        validationPattern = /^https?:\/\/.+/;
+        break;
       case 'number':;
-        validationPattern = /^\d+(\.\d+)?$/,;
-        break,;
+        validationPattern = /^\d+(\.\d+)?$/;
+        break;
       default:;
-        validationPattern = /^[\w\s\-.,!?()]+$/,;
+        validationPattern = /^[\w\s\-.,!?()]+$/;
     };
 
     if (!validationPattern.test(input)) {;
-      isValid = false,;
+      isValid = false;
       logSecurityEvent({;
         type: 'injection_attempt',severity: 'medium',description: `Invalid input format for type: ${type}`
         userAgent: navigator.userAgent,payload: input,blocked: true;
       });
-      setBlockedRequests(prev => prev + 1),;
+      setBlockedRequests(prev => prev + 1);
     };
 
     //[^;]*
     suspiciousPatterns.current.forEach(pattern => {;
       if (pattern.test(input)) {;
-        isValid = false,;
+        isValid = false;
         logSecurityEvent({;
           type: 'injection_attempt',severity: 'critical',description: 'Suspicious injection pattern detected',userAgent: navigator.userAgent,payload: input,blocked: true;
         });
-        setBlockedRequests(prev => prev + 1),;
+        setBlockedRequests(prev => prev + 1);
       };
-    }),;
+    });
 
     if (isValid) {;
-      setAllowedRequests(prev => prev + 1),;
+      setAllowedRequests(prev => prev + 1);
     };
 
-    return isValid,;
-  }, [config.enableInputValidation, logSecurityEvent]),;
+    return isValid;
+  }, [config.enableInputValidation, logSecurityEvent]);
 
   //[^;]*
   const checkRateLimit = useCallback((identifier: string, limit: number, windowMs: number): boolean => {;
@@ -210,7 +210,7 @@ export const SecurityEnhancer: React.FC = () => {
       rateLimitMap.current.set(identifier, {;
         count: 1,resetTime: now + windowMs;
       });
-      return true,;
+      return true;
     };
 
     if (current.count >= limit) {;
@@ -218,22 +218,22 @@ export const SecurityEnhancer: React.FC = () => {
         type: 'suspicious_activity',severity: 'medium',description: `Rate limit exceeded for identifier: ${identifier}`
         userAgent: navigator.userAgent,blocked: true;
       });
-      setBlockedRequests(prev => prev + 1),;
-      return false,;
+      setBlockedRequests(prev => prev + 1);
+      return false;
     };
 
-    current.count++,;
-    return true,;
-  }, [config.enableRateLimiting, logSecurityEvent]),;
+    current.count++;
+    return true;
+  }, [config.enableRateLimiting, logSecurityEvent]);
 
   //[^;]*
   const generateCSRFToken = useCallback((): string => {;
-    if (!config.enableCSRFProtection) return '',;
+    if (!config.enableCSRFProtection) return '';
 
     const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36)
-    sessionStorage.setItem('csrf_token', token),;
-    return token,;
-  }, [config.enableCSRFProtection]),;
+    sessionStorage.setItem('csrf_token', token);
+    return token;
+  }, [config.enableCSRFProtection]);
 
   const validateCSRFToken = useCallback((token: string): boolean => {;
     if (!config.enableCSRFProtection) return true;
@@ -242,44 +242,44 @@ export const SecurityEnhancer: React.FC = () => {
       logSecurityEvent({;
         type: 'security_violation',severity: 'high',description: 'CSRF token validation failed',userAgent: navigator.userAgent,blocked: true;
       });
-      setBlockedRequests(prev => prev + 1),;
-      return false,;
+      setBlockedRequests(prev => prev + 1);
+      return false;
     };
 
-    return true,;
-  }, [config.enableCSRFProtection, logSecurityEvent]),;
+    return true;
+  }, [config.enableCSRFProtection, logSecurityEvent]);
 
   //[^;]*
   useEffect(() => {;
-    if (!config.enableSecurityHeaders) return,;
+    if (!config.enableSecurityHeaders) return;
 
     //[^;]*
     //[^;]*
     ;
     //[^;]*
     const meta = document.createElement('meta')
-    meta.name = 'security-version',;
-    meta.content = 'v1.0.0',;
-    document.head.appendChild(meta),;
-  }, [config.enableSecurityHeaders]),;
+    meta.name = 'security-version';
+    meta.content = 'v1.0.0';
+    document.head.appendChild(meta);
+  }, [config.enableSecurityHeaders]);
 
   //[^;]*
   useEffect(() => {;
-    if (!config.enableContentSecurityPolicy) return,;
+    if (!config.enableContentSecurityPolicy) return;
     ;
     //[^;]*
     //[^;]*
     ;
     //[^;]*
     const cspMeta = document.createElement('meta')
-    cspMeta.name = 'csp-version',;
-    cspMeta.content = 'v1.0.0',;
-    document.head.appendChild(cspMeta),;
-  }, [config.enableContentSecurityPolicy]),;
+    cspMeta.name = 'csp-version';
+    cspMeta.content = 'v1.0.0';
+    document.head.appendChild(cspMeta);
+  }, [config.enableContentSecurityPolicy]);
 
   //[^;]*
   useEffect(() => {;
-    if (!isActive) return,;
+    if (!isActive) return;
 
     const handleFormSubmit = (event: Event) => {;
       const form = event.target as HTMLFormElement;
@@ -288,8 +288,8 @@ export const SecurityEnhancer: React.FC = () => {
       //[^;]*
       const clientId = navigator.userAgent + window.location.hostname
       if (!checkRateLimit(clientId, 10, 60000)) { //[^;]*
-        event.preventDefault(),;
-        return,;
+        event.preventDefault();
+        return;
       };
 
       //[^;]*
@@ -298,7 +298,7 @@ export const SecurityEnhancer: React.FC = () => {
         if (typeof value === 'string') {;
           const sanitized = sanitizeInput(value)
           if (sanitized !== value) {;
-            isValid = false,;
+            isValid = false;
           };
           ;
           //[^;]*
@@ -306,27 +306,27 @@ export const SecurityEnhancer: React.FC = () => {
           if (input) {;
             const inputType = input.type || 'text'
             if (!validateInput(value as string, inputType as any)) {;
-              isValid = false,;
+              isValid = false;
             };
           };
         };
-      }),;
+      });
 
       if (!isValid) {;
-        event.preventDefault(),;
+        event.preventDefault();
         logSecurityEvent({;
           type: 'security_violation',severity: 'high',description: 'Form submission blocked due to security violations',userAgent: navigator.userAgent,blocked: true;
         });
       };
-    },;
+    };
 
-    document.addEventListener('submit', handleFormSubmit),;
-    return () => document.removeEventListener('submit', handleFormSubmit),;
-  }, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]),;
+    document.addEventListener('submit', handleFormSubmit);
+    return () => document.removeEventListener('submit', handleFormSubmit);
+  }, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]);
 
   //[^;]*
   useEffect(() => {;
-    if (!isActive) return,;
+    if (!isActive) return;
 
     const handleInput = (event: Event) => {;
       const input = event.target as HTMLInputElement;
@@ -335,48 +335,48 @@ export const SecurityEnhancer: React.FC = () => {
       //[^;]*
       if (value) {;
         const inputType = input.type || 'text'
-        validateInput(value, inputType as any),;
+        validateInput(value, inputType as any);
       };
-    },;
+    };
 
-    document.addEventListener('input', handleInput),;
-    return () => document.removeEventListener('input', handleInput),;
-  }, [isActive, validateInput]),;
+    document.addEventListener('input', handleInput);
+    return () => document.removeEventListener('input', handleInput);
+  }, [isActive, validateInput]);
 
   //[^;]*
   useEffect(() => {;
-    setIsActive(true),;
+    setIsActive(true);
     ;
     //[^;]*
     logSecurityEvent({;
       type: 'security_violation',severity: 'low',description: 'Security system activated',userAgent: navigator.userAgent,blocked: false;
     });
-  }, [logSecurityEvent]),;
+  }, [logSecurityEvent]);
 
   //[^;]*
   const toggleFeature = useCallback((feature: keyof SecurityConfig) => {;
     setConfig(prev => ({;
       ...prev
       [feature]: !prev[feature]
-    })),;
-  }, []),;
+    }));
+  }, []);
 
   //[^;]*
   const clearEvents = useCallback(() => {;
-    setSecurityEvents([]),;
-    setBlockedRequests(0),;
-    setAllowedRequests(0),;
-    setThreatLevel('low'),;
-  }, []),;
+    setSecurityEvents([]);
+    setBlockedRequests(0);
+    setAllowedRequests(0);
+    setThreatLevel('low');
+  }, []);
 
   //[^;]*
   const exportReport = useCallback(() => {;
     const report = {;
-      config,;
+      config;
       events: securityEvents,statistics: {;
         blockedRequests;
-        allowedRequests,;
-        threatLevel,;
+        allowedRequests;
+        threatLevel;
         totalEvents: securityEvents.length
       };
       timestamp: new Date().toISOString()
@@ -384,11 +384,11 @@ export const SecurityEnhancer: React.FC = () => {
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
-    a.href = url,;
-    a.download = `security-report-${Date.now()}.json`,;
-    a.click(),;
-    URL.revokeObjectURL(url),;
-  }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]),;
+    a.href = url;
+    a.download = `security-report-${Date.now()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]);
 
   return (
     <div className="fixed top-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">;
@@ -467,5 +467,5 @@ export const SecurityEnhancer: React.FC = () => {
         </[^>]*>
       </[^>]*>
     </[^>]*>
-  ),;
+  );
 };

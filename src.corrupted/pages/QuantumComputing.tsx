@@ -2,39 +2,39 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Atom,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Globe,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  Target,;
-  Users,;
-  ArrowRight,;
-  Key,;
-  Fingerprint,;
-  EyeOff,;
-  Server,;
-  Globe2,;
-  ShieldCheck,;
-  Infinity,;
-  Rocket,;
-  Sparkles,;
+  Atom;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Infinity;
+  Rocket;
+  Sparkles;
   Flask;
 } from "lucide-react"
 export default function QuantumComputing() {;
@@ -59,10 +59,10 @@ export default function QuantumComputing() {;
     };
   ];
   const benefits = [;
-    'Solve problems 100x faster than classical computersBreakthrough discoveries in drug development',;
-    'Unbreakable quantum encryptionRevolutionary AI and machine learning',;
+    'Solve problems 100x faster than classical computersBreakthrough discoveries in drug development';
+    'Unbreakable quantum encryptionRevolutionary AI and machine learning';
     'Optimize complex logistics and supply chainsTransform financial modeling and risk assessment'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -81,17 +81,17 @@ export default function QuantumComputing() {;
   const quantumApplications = [;
     {;
       name: 'Quantum Machine Learning',description: 'Revolutionary AI algorithms powered by quantum computing',examples: ['Pattern recognitionOptimization', 'Neural networks']
-    },;
+    };
     {;
       name: 'Quantum Cryptography',description: 'Unbreakable encryption using quantum principles',examples: ['Key distributionSecure communication', 'Digital signatures']
-    },;
+    };
     {;
       name: 'Quantum Simulation',description: 'Accurate modeling of complex quantum systems',examples: ['Chemical reactionsMaterial properties', 'Quantum physics']
-    },;
+    };
     {;
       name: 'Quantum Optimization',description: 'Solve complex optimization problems efficiently',examples: ['LogisticsScheduling', 'Resource allocation']
     };
-  ],;
+  ];
 
   return (
     <>;

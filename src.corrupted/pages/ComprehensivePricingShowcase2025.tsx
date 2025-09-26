@@ -2,35 +2,35 @@ import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import { Helmet } from "react-helmet-async"
 import { ;
-    Search,;
-    Filter, ;
-    TrendingUp, ;
-    Shield, ;
-    Zap, ;
-    Globe, ;
-    Users, ;
-    BarChart3,;
-    DollarSign,;
-    Heart,;
-    GraduationCap,;
-    Target,;
-    Settings,;
-    Package,;
-    CheckCircle,;
-    Star,;
-    ArrowRight,;
-    Phone,;
-    Mail,;
-    MapPin,;
-    ExternalLink,;
-    Crown,;
+    Search;
+    Filter;
+    TrendingUp;
+    Shield;
+    Zap;
+    Globe;
+    Users;
+    BarChart3;
+    DollarSign;
+    Heart;
+    GraduationCap;
+    Target;
+    Settings;
+    Package;
+    CheckCircle;
+    Star;
+    ArrowRight;
+    Phone;
+    Mail;
+    MapPin;
+    ExternalLink;
+    Crown;
     Sparkles;
 } from "lucide-react"
 import { comprehensivePricingGuide2025, ServicePricing } from "../data/comprehensive-pricing-guide-2025"
 const ComprehensivePricingShowcase2025: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState(''),;
-    const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null),;
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null);
 
     const categories = [;
         { id: 'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length };
@@ -50,35 +50,33 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                 service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.category.toLowerCase().includes(searchTerm.toLowerCase());
-            ),;
+            );
         };
 
         if (selectedCategory !== 'all') {;
-            filtered = filtered.filter(service => service.category === selectedCategory),;
+            filtered = filtered.filter(service => service.category === selectedCategory);
         };
 
-        return filtered,;
-    }, [searchTerm, selectedCategory]),;
+        return filtered;
+    }, [searchTerm, selectedCategory]);
 
     const getCategoryColor = (category: string) => {;
         const colors: { [key: string]: string } = {;
             'Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
         };
-        return colors[category] || 'from-gray-500 to-gray-600',
-    },;
+        return colors[category] || 'from-gray-500 to-gray-600'};
 
     const getCategoryIcon = (category: string) => {;
         const icons: { [key: string]: React.ReactNode } = {;
             'Fintech': <[^>]*/>
-            'Healthtech': <Heart className="w-5 h-5" />,;
-            'Edutech': <GraduationCap className="w-5 h-5" />,;
-            'Martech': <Target className="w-5 h-5" />,;
-            'Micro SaaS': <Settings className="w-5 h-5" />,;
-            'AI Services': <Zap className="w-5 h-5" />,;
+            'Healthtech': <Heart className="w-5 h-5" />;
+            'Edutech': <GraduationCap className="w-5 h-5" />;
+            'Martech': <Target className="w-5 h-5" />;
+            'Micro SaaS': <Settings className="w-5 h-5" />;
+            'AI Services': <Zap className="w-5 h-5" />;
             'IT Services': <[^>]*/>
-        },;
-        return icons[category] || <Globe className="w-5 h-5" />,
-    },;
+        };
+        return icons[category] || <Globe className="w-5 h-5" />};
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">;
@@ -409,6 +407,6 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </[^>]*>
         </[^>]*>
     );
-},;
+};
 
 export default ComprehensivePricingShowcase2025;

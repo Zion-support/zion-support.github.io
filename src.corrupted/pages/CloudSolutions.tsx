@@ -1,36 +1,36 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Cloud,;
-  Server,;
-  Database,;
-  Shield,;
-  Zap,;
-  Globe,;
-  Lock,;
-  BarChart3,;
-  ArrowRight,;
-  CheckCircle,;
-  Play,;
-  Code,;
-  Settings,;
+  Cloud;
+  Server;
+  Database;
+  Shield;
+  Zap;
+  Globe;
+  Lock;
+  BarChart3;
+  ArrowRight;
+  CheckCircle;
+  Play;
+  Code;
+  Settings;
   Users;
 } from "lucide-react"
 export default function CloudSolutions() {;
   const cloudServices = [;
     {;
       icon: Server,title: "Cloud Migration",description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
-    },;
+    };
     {;
       icon: Database,title: "Database Management",description: "Optimize and manage your databases in the cloud for maximum performance",features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
-    },;
+    };
     {;
       icon: Shield,title: "Cloud Security",description: "Comprehensive security solutions to protect your cloud infrastructure",features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
-    },;
+    };
     {;
       icon: Zap,title: "DevOps Automation",description: "Streamline your development and deployment processes with automation",features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
     };
-  ],;
+  ];
 
   const benefits = [;
     {;
@@ -90,7 +90,7 @@ export default function CloudSolutions() {;
               </[^>]*>
             </[^>]*>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">;
-              Transform your business with enterprise-grade cloud infrastructure, DevOps automation,;
+              Transform your business with enterprise-grade cloud infrastructure, DevOps automation;
               and scalable solutions that drive innovation and growth.;
             </[^>]*>
 

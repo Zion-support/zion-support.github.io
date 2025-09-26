@@ -1,50 +1,50 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  Star,;
-  MessageCircle,;
-  ThumbsUp,;
-  ThumbsDown,;
-  Send,;
-  Heart,;
-  Award,;
-  TrendingUp,;
-  Users,;
-  Clock,;
-  Flag,;
-  Share2,;
-  Download,;
-  Filter,;
+  Star;
+  MessageCircle;
+  ThumbsUp;
+  ThumbsDown;
+  Send;
+  Heart;
+  Award;
+  TrendingUp;
+  Users;
+  Clock;
+  Flag;
+  Share2;
+  Download;
+  Filter;
   Search;
 } from "lucide-react"
-interface Feedback {;
+interface Feedback {
   id: string,customerName: string,rating: number,comment: string,category: 'service' | 'product' | 'support' | 'overall',sentiment: 'positive' | 'neutral' | 'negative',date: string,helpful: number,unhelpful: number,tags: string[],verified: boolean;
 };
 
-interface FeedbackStats {;
+interface FeedbackStats {
   totalFeedback: number,averageRating: number,positivePercentage: number,responseRate: number,topCategories: Array<{ category: string, count: number, percentage: number }>;
 };
 
-interface CustomerFeedbackSystemProps {;
-  showStats?: boolean,;
-  showFilters?: boolean,;
-  maxFeedback?: number,;
+interface CustomerFeedbackSystemProps {
+  showStats?: boolean;
+  showFilters?: boolean;
+  maxFeedback?: number;
 };
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
   showStats = true;
-  showFilters = true,;
+  showFilters = true;
   maxFeedback = 10;
 }) => {;
-  const [feedback, setFeedback] = useState<Feedback[]>([]),;
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]),;
+  const [feedback, setFeedback] = useState<Feedback[]>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({;
     totalFeedback: 0,averageRating: 0,positivePercentage: 0,responseRate: 0,topCategories: []
   });
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [selectedRating, setSelectedRating] = useState<number>(0),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [showFeedbackForm, setShowFeedbackForm] = useState(false),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedRating, setSelectedRating] = useState<number>(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({;
     rating: 0,comment: '',category: 'overall' as Feedback['category']
   });
@@ -52,29 +52,29 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
   useEffect(() => {;
     const sampleFeedback: Feedback[] = [;
       {;
-        id: '1',customerName: 'Sarah Johnson',rating: 5,comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',category: 'service',sentiment: 'positive',date: '2024-01-15',helpful: 24,unhelpful: 1,tags: ['AIConsulting', 'Machine Learning'],;
+        id: '1',customerName: 'Sarah Johnson',rating: 5,comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',category: 'service',sentiment: 'positive',date: '2024-01-15',helpful: 24,unhelpful: 1,tags: ['AIConsulting', 'Machine Learning'];
         verified: true;
       };
       {;
-        id: '2',customerName: 'Michael Chen',rating: 4,comment: 'Great cloud migration support. The team was professional and helped us transition smoothly to the cloud. Minor delays but overall excellent experience.',category: 'support',sentiment: 'positive',date: '2024-01-12',helpful: 18,unhelpful: 2,tags: ['CloudMigration', 'Support'],;
+        id: '2',customerName: 'Michael Chen',rating: 4,comment: 'Great cloud migration support. The team was professional and helped us transition smoothly to the cloud. Minor delays but overall excellent experience.',category: 'support',sentiment: 'positive',date: '2024-01-12',helpful: 18,unhelpful: 2,tags: ['CloudMigration', 'Support'];
         verified: true;
       };
       {;
-        id: '3',customerName: 'Emily Rodriguez',rating: 5,comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure. ROI was achieved within 6 months.',category: 'product',sentiment: 'positive',date: '2024-01-10',helpful: 31,unhelpful: 0,tags: ['Digital TransformationInfrastructure', 'ROI'],;
+        id: '3',customerName: 'Emily Rodriguez',rating: 5,comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure. ROI was achieved within 6 months.',category: 'product',sentiment: 'positive',date: '2024-01-10',helpful: 31,unhelpful: 0,tags: ['Digital TransformationInfrastructure', 'ROI'];
         verified: true;
       };
       {;
-        id: '4',customerName: 'David Kim',rating: 3,comment: 'Good security services but communication could be improved. The technical work was solid but project updates were infrequent.',category: 'service',sentiment: 'neutral',date: '2024-01-08',helpful: 12,unhelpful: 5,tags: ['SecurityCommunication', 'Project Management'],;
+        id: '4',customerName: 'David Kim',rating: 3,comment: 'Good security services but communication could be improved. The technical work was solid but project updates were infrequent.',category: 'service',sentiment: 'neutral',date: '2024-01-08',helpful: 12,unhelpful: 5,tags: ['SecurityCommunication', 'Project Management'];
         verified: true;
       };
       {;
-        id: '5',customerName: 'Lisa Thompson',rating: 5,comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%. Highly recommend their services.',category: 'overall',sentiment: 'positive',date: '2024-01-05',helpful: 28,unhelpful: 1,tags: ['AIEfficiency', 'Implementation'],;
+        id: '5',customerName: 'Lisa Thompson',rating: 5,comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%. Highly recommend their services.',category: 'overall',sentiment: 'positive',date: '2024-01-05',helpful: 28,unhelpful: 1,tags: ['AIEfficiency', 'Implementation'];
         verified: true;
       };
     ];
-    setFeedback(sampleFeedback),;
-    setFilteredFeedback(sampleFeedback),;
-  }, []),;
+    setFeedback(sampleFeedback);
+    setFilteredFeedback(sampleFeedback);
+  }, []);
 
   //[^;]*
   useEffect(() => {;
@@ -86,38 +86,38 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
 
       const categoryCounts = feedback.reduce((acc, f) => {;
         acc[f.category] = (acc[f.category] || 0) + 1,
-        return acc,;
-      }, {} as Record<string, number>),;
+        return acc;
+      }, {} as Record<string number>);
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({;
           category: category.charAt(0).toUpperCase() + category.slice(1)
-          count,;
+          count;
           percentage: (count / totalFeedback) * 100;
         }));
         .sort((a, b) => b.count - a.count);
-        .slice(0, 4),;
+        .slice(0, 4);
 
       setStats({;
-        totalFeedback,;
-        averageRating,;
-        positivePercentage,;
-        responseRate,;
+        totalFeedback;
+        averageRating;
+        positivePercentage;
+        responseRate;
         topCategories;
-      }),;
+      });
     };
-  }, [feedback]),;
+  }, [feedback]);
 
   //[^;]*
   useEffect(() => {;
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(f => f.category === selectedCategory),;
+      filtered = filtered.filter(f => f.category === selectedCategory);
     };
 
     if (selectedRating > 0) {;
-      filtered = filtered.filter(f => f.rating === selectedRating),;
+      filtered = filtered.filter(f => f.rating === selectedRating);
     };
 
     if (searchQuery) {;
@@ -125,11 +125,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      ),;
+      );
     };
 
-    setFilteredFeedback(filtered.slice(0, maxFeedback)),;
-  }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]),;
+    setFilteredFeedback(filtered.slice(0, maxFeedback));
+  }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   //[^;]*
   const handleSubmitFeedback = () => {;
@@ -138,10 +138,10 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
     const feedback: Feedback = {;
       id: Date.now().toString(),customerName: 'Anonymous Customer',rating: newFeedback.rating,comment: newFeedback.comment,category: newFeedback.category,sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',date: new Date().toISOString().split('T')[0],helpful: 0,unhelpful: 0,tags: [],verified: false
     };
-    setFeedback(prev => [feedback, ...prev]),;
+    setFeedback(prev => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' })
-    setShowFeedbackForm(false),;
-  },;
+    setShowFeedbackForm(false);
+  };
 
   //[^;]*
   const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {;
@@ -152,15 +152,15 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
         };
       };
-      return f,;
-    })),;
-  },;
+      return f;
+    }));
+  };
 
   //[^;]*
   const getSentimentColor = (sentiment: string) => {;
     switch (sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20'
-      case 'negative': return 'text-red-400 bg-red-400/20',;
+      case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'
     };
   };
@@ -169,8 +169,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
     const colors = {;
       'service': 'text-blue-400 bg-blue-400/20product': 'text-green-400 bg-green-400/20support': 'text-purple-400 bg-purple-400/20overall': 'text-zion-cyan bg-zion-cyan/20'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20',
-  },;
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
 
   return (
     <div className="w-full max-w-6xl mx-auto p-6">;
