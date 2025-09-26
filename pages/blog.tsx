@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -16,83 +18,17 @@ export default function Blog(): JSX.Element {
 	usePageView('blog');
 	const { trackClick } = useAnalytics();
 
-	const blogPosts = [
-		{
-			id: 1,
-			title: 'The Future of AI in Enterprise Software Development',
-			excerpt: 'Exploring how artificial intelligence is revolutionizing enterprise software development and what it means for businesses.',
-			author: 'Sarah Johnson',
-			date: '2024-01-15',
-			category: 'AI',
-			readTime: '8 min read',
-			image: '🤖',
-			featured: true
-		},
-		{
-			id: 2,
-			title: 'Cloud Migration Best Practices: A Complete Guide',
-			excerpt: 'Learn the essential strategies and best practices for successful cloud migration projects.',
-			author: 'Michael Chen',
-			date: '2024-01-12',
-			category: 'Cloud',
-			readTime: '12 min read',
-			image: '☁️',
-			featured: true
-		},
-		{
-			id: 3,
-			title: 'Building Scalable Web Applications with Next.js',
-			excerpt: 'Discover how to build high-performance, scalable web applications using Next.js and modern development practices.',
-			author: 'David Kim',
-			date: '2024-01-10',
-			category: 'Web Development',
-			readTime: '10 min read',
-			image: '💻',
-			featured: false
-		},
-		{
-			id: 4,
-			title: 'Cybersecurity Trends to Watch in 2024',
-			excerpt: 'Stay ahead of the curve with the latest cybersecurity trends and threats facing businesses today.',
-			author: 'Emily Rodriguez',
-			date: '2024-01-08',
-			category: 'Security',
-			readTime: '6 min read',
-			image: '🔒',
-			featured: false
-		},
-		{
-			id: 5,
-			title: 'Data Analytics: Turning Information into Insights',
-			excerpt: 'Learn how to transform raw data into actionable business insights that drive growth.',
-			author: 'Alex Thompson',
-			date: '2024-01-05',
-			category: 'Data',
-			readTime: '9 min read',
-			image: '📊',
-			featured: false
-		},
-		{
-			id: 6,
-			title: 'Mobile App Development: Native vs Cross-Platform',
-			excerpt: 'Compare native and cross-platform mobile development approaches to choose the right strategy for your project.',
-			author: 'Lisa Wang',
-			date: '2024-01-03',
-			category: 'Mobile',
-			readTime: '7 min read',
-			image: '📱',
-			featured: false
-		}
-	];
-
-	const categories = ['all', 'AI', 'Cloud', 'Web Development', 'Security', 'Data', 'Mobile'];
-
-	const filteredPosts = selectedCategory === 'all' 
-		? blogPosts 
-		: blogPosts.filter(post => post.category === selectedCategory);
-
-	const featuredPosts = blogPosts.filter(post => post.featured);
-	const regularPosts = filteredPosts.filter(post => !post.featured);
+	// Use memoized data for better performance
+	const filteredPosts = useMemo(() => 
+		getPostsByCategory(selectedCategory === 'all' ? 'All' : selectedCategory), 
+		[selectedCategory]
+	);
+	
+	const featuredPosts = useMemo(() => getFeaturedPosts(), []);
+	const regularPosts = useMemo(() => 
+		filteredPosts.filter(post => !post.featured), 
+		[filteredPosts]
+	);
 
 	return (
 		<ErrorBoundary>
@@ -125,20 +61,25 @@ export default function Blog(): JSX.Element {
 						}`}>
 							<div className="flex flex-wrap justify-center gap-4">
 								{categories.map((category, index) => (
-									<button
+									<motion.button
 										key={category}
 										onClick={() => {
-											setSelectedCategory(category);
+											setSelectedCategory(category.toLowerCase());
 											trackClick(`blog-category-${category}`, 'filter');
 										}}
 										className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-											selectedCategory === category
-												? 'bg-blue-600 text-white shadow-lg transform -translate-y-1'
+											selectedCategory === category.toLowerCase() || (selectedCategory === 'all' && category === 'All')
+												? 'bg-blue-600 text-white shadow-lg'
 												: 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
 										}`}
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+										initial={{ opacity: 0, y: 20 }}
+										animate={{ opacity: 1, y: 0 }}
+										transition={{ duration: 0.3, delay: index * 0.1 }}
 									>
-										{category === 'all' ? 'All Posts' : category}
-									</button>
+										{category}
+									</motion.button>
 								))}
 							</div>
 						</section>
@@ -181,7 +122,7 @@ export default function Blog(): JSX.Element {
 														</div>
 														<div>
 															<p className="text-sm font-medium text-gray-800">{post.author}</p>
-															<p className="text-xs text-gray-500">{post.date}</p>
+															<p className="text-xs text-gray-500">{new Date(post.publishDate).toLocaleDateString()}</p>
 														</div>
 													</div>
 													<button 
@@ -212,12 +153,18 @@ export default function Blog(): JSX.Element {
 									}`}>
 										<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 h-full">
 											<div className="flex items-center mb-4">
-												<div className="text-3xl mr-3">{post.image}</div>
+												<div className="text-3xl mr-3">
+													{post.category === 'Artificial Intelligence' ? '🤖' :
+													 post.category === 'Cloud Solutions' ? '☁️' :
+													 post.category === 'Security' ? '🔒' :
+													 post.category === 'Digital Strategy' ? '🚀' :
+													 '💻'}
+												</div>
 												<div>
 													<span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
 														{post.category}
 													</span>
-													<span className="ml-2 text-xs text-gray-500">{post.readTime}</span>
+													<span className="ml-2 text-xs text-gray-500">{post.readTime} min read</span>
 												</div>
 											</div>
 											<h3 className="text-lg font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
@@ -235,7 +182,7 @@ export default function Blog(): JSX.Element {
 													</div>
 													<div>
 														<p className="text-xs font-medium text-gray-800">{post.author}</p>
-														<p className="text-xs text-gray-500">{post.date}</p>
+														<p className="text-xs text-gray-500">{new Date(post.publishDate).toLocaleDateString()}</p>
 													</div>
 												</div>
 												<button 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import ErrorBoundary from './ErrorBoundary';
 import { NotificationSystem, useNotifications } from './NotificationSystem';
+import PerformanceTracker from './PerformanceTracker';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -81,6 +82,12 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
         <NotificationSystem 
           notifications={notifications} 
           onRemove={removeNotification} 
+        />
+        
+        {/* Performance Tracking */}
+        <PerformanceTracker 
+          enableConsoleLogging={process.env.NODE_ENV === 'development'}
+          enableAnalytics={process.env.NODE_ENV === 'production'}
         />
       </div>
     </ErrorBoundary>
