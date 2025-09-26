@@ -8,6 +8,10 @@ dist/
 coverage/
 .cache/
 
+# Exclude corrupted or non-app source directories
+src/
+components/
+
 # Large mono-repo subprojects not part of the current app build
 automation/
 automation_backup/
