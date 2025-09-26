@@ -12,8 +12,7 @@ export default function Header() {
     { name: 'Research & Development', href: '/research-development' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
-  ],
+    { name: 'Contact', href: '/contact' }],
   const services = [
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     {
@@ -23,8 +22,7 @@ export default function Header() {
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
     { name: 'Business Intelligence', href: '/ai-business-intelligence' },
     { name: 'Content Generation', href: '/ai-content-generator' },
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },
-  ],
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }],
   return (
     <header className='sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,

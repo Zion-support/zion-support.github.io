@@ -2,46 +2,46 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Server,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  Code,;
-  Rocket,;
-  Users,;
-  Search,;
-  Filter,;
-  Star,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  CheckCircle,;
-  ArrowRight,;
-  Play,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe as GlobeIcon,;
-  Sparkles,;
-  Target,;
-  Award,;
-  Lightbulb,;
-  BarChart3,;
-  Layers,;
-  Cpu as CpuIcon,;
-  Shield as ShieldIcon,;
-  Brain as BrainIcon,;
-  Rocket as RocketIcon,;
-  Truck,;
-  Scale,;
+  Brain;
+  Cloud;
+  Shield;
+  Server;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Globe as GlobeIcon;
+  Sparkles;
+  Target;
+  Award;
+  Lightbulb;
+  BarChart3;
+  Layers;
+  Cpu as CpuIcon;
+  Shield as ShieldIcon;
+  Brain as BrainIcon;
+  Rocket as RocketIcon;
+  Truck;
+  Scale;
   Building;
 } from "lucide-react"
 import SEO from "@/components/SEO"
@@ -49,11 +49,11 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/dat
 import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025"
 import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025"
 export default function ServicesPage() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),;
-  const [sortBy, setSortBy] = useState('featured'),;
-  const [activeTab, setActiveTab] = useState('all'),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+  const [activeTab, setActiveTab] = useState('all');
 
   //[^;]*
   const allServices = [;
@@ -82,10 +82,10 @@ export default function ServicesPage() {;
   ];
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },;
-    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },;
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' };
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' };
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' };
-  ],;
+  ];
 
   const sortOptions = [;
     { id: 'featured', name: 'Featured' };
@@ -103,26 +103,25 @@ export default function ServicesPage() {;
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),;&& service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),; service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));&& service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))); service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
     const matchesCategory = selectedCategory === 'all' ||;
-                           service.category.toLowerCase().includes(selectedCategory),;
+                           service.category.toLowerCase().includes(selectedCategory);
 
     const matchesPrice = selectedPriceRange === 'all' ||;
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||;&& service.price <= 1000) ||; service.price <= 1000) ||
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||;&& service.price > 1000 && service.price <= 5000) ||; service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000),;&& service.price > 5000),; service.price > 5000),
+                        (selectedPriceRange === 'enterprise' && service.price > 5000);&& service.price > 5000); service.price > 5000),
 
-    return matchesSearch && matchesCategory && matchesPrice,;&& matchesCategory && matchesPrice,; matchesCategory && matchesPrice,
-  }),;
+    return matchesSearch && matchesCategory && matchesPrice;&& matchesCategory && matchesPrice; matchesCategory && matchesPrice});
 
   //[^;]*
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'price-high':;
-        return b.price - a.price,;
+        return b.price - a.price;
       case 'newest':;
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime(),
       default: return 0;
@@ -141,7 +140,7 @@ export default function ServicesPage() {;
       case 'Cutting-edge':;
         return 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30'
       case 'Advanced':;
-        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30',;
+        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
       default: return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30'
     };
   };
@@ -369,8 +368,7 @@ export default function ServicesPage() {;
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>;
                           {(() => {;
                             const IconComponent = getCategoryIcon(service.category)
-                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null,
-                          })()};
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null})()};
                         </[^>]*>
                         <div className="text-right">;
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</[^>]*>
@@ -470,7 +468,7 @@ export default function ServicesPage() {;
                 <button;
                   onClick={() => {;
                     setSearchQuery('')
-                    setSelectedCategory('all'),;
+                    setSelectedCategory('all');
                     setSelectedPriceRange('all')
                   }};
                   className="[^"]*"

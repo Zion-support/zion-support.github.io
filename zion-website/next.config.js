@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   // Temporarily compile only markdown-based routes to unblock CI
   pageExtensions: ['md', 'mdx'],
   images: {
@@ -17,17 +15,13 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production'},
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
   httpAgentOptions: {
-    keepAlive: true,
-  },
-};
+    keepAlive: true}};
 
 module.exports = nextConfig;

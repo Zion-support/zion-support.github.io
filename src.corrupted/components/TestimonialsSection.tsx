@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
-interface Testimonial {;
+interface Testimonial {
   id: number,name: string,position: string,company: string,content: string,rating: number,avatar: string,logo: string,category: 'enterprise' | 'startup' | 'agency' | 'government',results: {;
     metric: string,value: string,change: string;
   }[]
@@ -59,35 +59,35 @@ const categories = [;
   { id: 'government', name: 'Government', count: testimonials.filter(t => t.category === 'government').length };
 ];
 export function TestimonialsSection() {;
-  const [currentTestimonial, setCurrentTestimonial] = useState(0),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),;
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false),;
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const filteredTestimonials = selectedCategory === 'all' ;
     ? testimonials ;
-    : testimonials.filter(t => t.category === selectedCategory),;
+    : testimonials.filter(t => t.category === selectedCategory);
 
   //[^;]*
   useEffect(() => {;
-    if (!isAutoPlaying) return,;
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {;
-      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),;
-    }, 8000),;
+      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
+    }, 8000);
 
-    return () => clearInterval(interval),;
-  }, [isAutoPlaying, filteredTestimonials.length]),;
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, filteredTestimonials.length]);
 
   const nextTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),;
-    setIsAutoPlaying(false),;
-  },;
+    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
+    setIsAutoPlaying(false);
+  };
 
   const prevTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length),;
-    setIsAutoPlaying(false),;
-  },;
+    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
+    setIsAutoPlaying(false);
+  };
 
   const currentTestimonialData = filteredTestimonials[currentTestimonial]
   const renderStars = (rating: number) => {;

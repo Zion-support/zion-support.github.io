@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  CheckCircle,;
-  AlertTriangle, ;
-  XCircle, ;
-  Clock, ;
-  Activity, ;
-  Server, ;
-  Database,;
-  Globe,;
-  Zap,;
-  RefreshCw,;
-  TrendingUp,;
-  BarChart3,;
-  Calendar,;
-  AlertCircle,;
-  Info,;
+  CheckCircle;
+  AlertTriangle;
+  XCircle;
+  Clock;
+  Activity;
+  Server;
+  Database;
+  Globe;
+  Zap;
+  RefreshCw;
+  TrendingUp;
+  BarChart3;
+  Calendar;
+  AlertCircle;
+  Info;
   ExternalLink;
 } from "lucide-react"
 export default function Status() {;
@@ -81,7 +81,7 @@ export default function Status() {;
         };
         {;
           time: new Date('2024-01-10T15:15:00Z'),message: 'Identified high traffic load, implementing scaling measures'
-        },;
+        };
         {;
           time: new Date('2024-01-10T16:45:00Z'),message: 'Performance restored to normal levels'
         };
@@ -107,11 +107,11 @@ export default function Status() {;
       case 'operational':;
         return 'text-green-400 bg-green-500/20'
       case 'degraded':;
-        return 'text-yellow-400 bg-yellow-500/20',;
+        return 'text-yellow-400 bg-yellow-500/20';
       case 'outage':;
-        return 'text-red-400 bg-red-500/20',;
+        return 'text-red-400 bg-red-500/20';
       case 'maintenance':;
-        return 'text-blue-400 bg-blue-500/20',;
+        return 'text-blue-400 bg-blue-500/20';
       default: return 'text-gray-400 bg-gray-500/20'
     };
   };
@@ -120,11 +120,11 @@ export default function Status() {;
       case 'operational':;
         return <[^>]*/>
       case 'degraded':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />,;
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'outage':;
-        return <XCircle className="w-5 h-5 text-red-400" />,;
+        return <XCircle className="w-5 h-5 text-red-400" />;
       case 'maintenance':;
-        return <Clock className="w-5 h-5 text-blue-400" />,;
+        return <Clock className="w-5 h-5 text-blue-400" />;
       default: return <[^>]*/>
     };
   };
@@ -133,28 +133,28 @@ export default function Status() {;
       case 'low':;
         return 'bg-blue-500/20 text-blue-400'
       case 'medium':;
-        return 'bg-yellow-500/20 text-yellow-400',;
+        return 'bg-yellow-500/20 text-yellow-400';
       case 'high':;
-        return 'bg-red-500/20 text-red-400',;
+        return 'bg-red-500/20 text-red-400';
       case 'critical':;
-        return 'bg-red-600/20 text-red-500',;
+        return 'bg-red-600/20 text-red-500';
       default: return 'bg-gray-500/20 text-gray-400'
     };
   };
   const refreshStatus = () => {;
-    setIsRefreshing(true),;
+    setIsRefreshing(true);
     setTimeout(() => {;
-      setLastUpdated(new Date()),;
-      setIsRefreshing(false),;
-    }, 1000),;
-  },;
+      setLastUpdated(new Date());
+      setIsRefreshing(false);
+    }, 1000);
+  };
 
   useEffect(() => {;
     const interval = setInterval(() => {;
-      setLastUpdated(new Date()),;
+      setLastUpdated(new Date());
     }, 30000), //[^;]*
 
-    return () => clearInterval(interval),;
+    return () => clearInterval(interval);
   }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

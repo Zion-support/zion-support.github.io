@@ -1,159 +1,159 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  Users,;
-  MessageCircle,;
-  FileText,;
-  Calendar,;
-  CheckCircle,;
-  Clock,;
-  AlertCircle,;
-  Plus,;
-  Search,;
-  Filter,;
-  Download,;
-  Share2,;
-  Edit,;
-  Trash2,;
-  Eye,;
-  Star,;
-  Award,;
-  Zap,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Globe,;
-  Database,;
-  Server,;
-  Lock,;
-  Unlock,;
-  Wifi,;
-  Smartphone,;
-  Monitor,;
-  Tablet,;
-  Video,;
-  Phone,;
-  Mail,;
-  Send,;
-  Paperclip,;
-  Image,;
-  File,;
-  Folder,;
-  Tag,;
-  UserPlus,;
-  Settings,;
-  Bell,;
-  Heart,;
-  ThumbsUp,;
-  ThumbsDown,;
-  Reply,;
-  Forward,;
-  Archive,;
-  Pin,;
-  Bookmark,;
-  Link,;
-  Copy,;
-  MoreHorizontal,;
-  ChevronDown,;
-  ChevronUp,;
-  ArrowRight,;
-  ArrowLeft,;
-  RefreshCw,;
-  TrendingUp,;
-  Activity,;
-  Target,;
-  BarChart3,;
+  Users;
+  MessageCircle;
+  FileText;
+  Calendar;
+  CheckCircle;
+  Clock;
+  AlertCircle;
+  Plus;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Edit;
+  Trash2;
+  Eye;
+  Star;
+  Award;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Globe;
+  Database;
+  Server;
+  Lock;
+  Unlock;
+  Wifi;
+  Smartphone;
+  Monitor;
+  Tablet;
+  Video;
+  Phone;
+  Mail;
+  Send;
+  Paperclip;
+  Image;
+  File;
+  Folder;
+  Tag;
+  UserPlus;
+  Settings;
+  Bell;
+  Heart;
+  ThumbsUp;
+  ThumbsDown;
+  Reply;
+  Forward;
+  Archive;
+  Pin;
+  Bookmark;
+  Link;
+  Copy;
+  MoreHorizontal;
+  ChevronDown;
+  ChevronUp;
+  ArrowRight;
+  ArrowLeft;
+  RefreshCw;
+  TrendingUp;
+  Activity;
+  Target;
+  BarChart3;
   PieChart;
 } from "lucide-react"
-interface TeamMember {;
+interface TeamMember {
   id: string,name: string,role: string,department: string,avatar: string,status: 'online' | 'away' | 'busy' | 'offline',lastSeen: string,skills: string[],projects: string[],availability: 'available' | 'busy' | 'unavailable'
 };
 
-interface Project {;
+interface Project {
   id: string,name: string,description: string,status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold',priority: 'low' | 'medium' | 'high' | 'critical',progress: number,startDate: string,endDate: string,teamMembers: string[],tasks: Task[],budget: number,client: string,tags: string[]
 };
 
-interface Task {;
+interface Task {
   id: string,title: string,description: string,status: 'todo' | 'in-progress' | 'review' | 'completed',priority: 'low' | 'medium' | 'high' | 'critical',assignee: string,dueDate: string,estimatedHours: number,actualHours: number,dependencies: string[],tags: string[],comments: Comment[]
 };
 
-interface Comment {;
+interface Comment {
   id: string,author: string,content: string,timestamp: string,likes: number,replies: Comment[]
 };
 
-interface Message {;
+interface Message {
   id: string,sender: string,content: string,timestamp: string,type: 'text' | 'file' | 'image' | 'link'
-  attachments?: string[],;
+  attachments?: string[];
   reactions: { type: string, count: number }[]
   isRead: boolean;
 };
 
-interface FileItem {;
+interface FileItem {
   id: string,name: string,type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',size: number,uploadedBy: string,uploadDate: string,lastModified: string,tags: string[],sharedWith: string[],permissions: 'view' | 'edit' | 'admin',version: string;
 };
 
-interface TeamCollaborationToolsProps {;
+interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean;
-  showProjects?: boolean,;
-  showCommunication?: boolean,;
-  showFileSharing?: boolean,;
-  maxItems?: number,;
+  showProjects?: boolean;
+  showCommunication?: boolean;
+  showFileSharing?: boolean;
+  maxItems?: number;
 };
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
   showTeamMembers = true;
-  showProjects = true,;
-  showCommunication = true,;
-  showFileSharing = true,;
+  showProjects = true;
+  showCommunication = true;
+  showFileSharing = true;
   maxItems = 20;
 }) => {;
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team'),;
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]),;
-  const [projects, setProjects] = useState<Project[]>([]),;
-  const [messages, setMessages] = useState<Message[]>([]),;
-  const [files, setFiles] = useState<FileItem[]>([]),;
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null),;
-  const [showProjectForm, setShowProjectForm] = useState(false),;
-  const [showTaskForm, setShowTaskForm] = useState(false),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),;
-  const [selectedStatus, setSelectedStatus] = useState<string>('all'),;
+  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [files, setFiles] = useState<FileItem[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [showTaskForm, setShowTaskForm] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
 
   //[^;]*
   useEffect(() => {;
     const sampleTeamMembers: TeamMember[] = [;
       {;
-        id: '1',name: 'Sarah Johnson',role: 'Senior AI Engineer',department: 'Engineering',avatar: 'SJ',status: 'online',lastSeen: '2 minutes ago',skills: ['Machine LearningPython', 'TensorFlowAI/ML'],;
+        id: '1',name: 'Sarah Johnson',role: 'Senior AI Engineer',department: 'Engineering',avatar: 'SJ',status: 'online',lastSeen: '2 minutes ago',skills: ['Machine LearningPython', 'TensorFlowAI/ML'];
         projects: ['AI Platform DevelopmentML Model Optimization'],availability: 'available'
       };
       {;
-        id: '2',name: 'Michael Chen',role: 'Cloud Architect',department: 'IT Operations',avatar: 'MC',status: 'busy',lastSeen: '15 minutes ago',skills: ['AWSAzure', 'KubernetesDevOps'],;
+        id: '2',name: 'Michael Chen',role: 'Cloud Architect',department: 'IT Operations',avatar: 'MC',status: 'busy',lastSeen: '15 minutes ago',skills: ['AWSAzure', 'KubernetesDevOps'];
         projects: ['Cloud MigrationInfrastructure Modernization'],availability: 'busy'
       };
       {;
-        id: '3',name: 'David Kim',role: 'Cybersecurity Specialist',department: 'Security',avatar: 'DK',status: 'online',lastSeen: '1 minute ago',skills: ['Penetration TestingThreat Detection', 'Incident Response'],;
+        id: '3',name: 'David Kim',role: 'Cybersecurity Specialist',department: 'Security',avatar: 'DK',status: 'online',lastSeen: '1 minute ago',skills: ['Penetration TestingThreat Detection', 'Incident Response'];
         projects: ['Security AuditThreat Intelligence'],availability: 'available'
       };
       {;
-        id: '4',name: 'Lisa Thompson',role: 'Project Manager',department: 'Management',avatar: 'LT',status: 'away',lastSeen: '1 hour ago',skills: ['AgileScrum', 'Risk ManagementStakeholder Communication'],;
+        id: '4',name: 'Lisa Thompson',role: 'Project Manager',department: 'Management',avatar: 'LT',status: 'away',lastSeen: '1 hour ago',skills: ['AgileScrum', 'Risk ManagementStakeholder Communication'];
         projects: ['Digital TransformationProcess Optimization'],availability: 'unavailable'
       };
       {;
-        id: '5',name: 'Alex Wong',role: 'DevOps Engineer',department: 'Engineering',avatar: 'AW',status: 'online',lastSeen: '5 minutes ago',skills: ['DockerJenkins', 'TerraformMonitoring'],;
+        id: '5',name: 'Alex Wong',role: 'DevOps Engineer',department: 'Engineering',avatar: 'AW',status: 'online',lastSeen: '5 minutes ago',skills: ['DockerJenkins', 'TerraformMonitoring'];
         projects: ['CI/CD PipelineInfrastructure as Code'],availability: 'available'
       };
     ];
     const sampleProjects: Project[] = [;
       {;
         id: '1',name: 'AI Platform Development',description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',status: 'active',priority: 'high',progress: 65,startDate: '2024-01-01',endDate: '2024-06-30',teamMembers: ['Sarah JohnsonAlex Wong'],tasks: [],budget: 500000,client: 'TechCorp Inc.',tags: ['AIMachine Learning', 'Platform']
-      },;
+      };
       {;
         id: '2',name: 'Cloud Migration',description: 'Migrating legacy systems to cloud infrastructure with zero downtime',status: 'active',priority: 'critical',progress: 45,startDate: '2024-02-01',endDate: '2024-08-31',teamMembers: ['Michael ChenAlex Wong'],tasks: [],budget: 750000,client: 'Global Enterprises',tags: ['CloudMigration', 'Infrastructure']
-      },;
+      };
       {;
         id: '3',name: 'Security Audit',description: 'Comprehensive security assessment and vulnerability remediation',status: 'review',priority: 'high',progress: 90,startDate: '2024-01-15',endDate: '2024-03-15',teamMembers: ['David Kim'],tasks: [],budget: 150000,client: 'SecureBank',tags: ['SecurityAudit', 'Compliance']
       };
-    ],;
+    ];
 
     const sampleMessages: Message[] = [;
       {;
@@ -171,23 +171,23 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
     ];
     const sampleFiles: FileItem[] = [;
       {;
-        id: '1',name: 'AI_Platform_Architecture.pdf',type: 'document',size: 2.5,uploadedBy: 'Sarah Johnson',uploadDate: '2024-01-15',lastModified: '2024-01-15',tags: ['ArchitectureAI', 'Documentation'],;
+        id: '1',name: 'AI_Platform_Architecture.pdf',type: 'document',size: 2.5,uploadedBy: 'Sarah Johnson',uploadDate: '2024-01-15',lastModified: '2024-01-15',tags: ['ArchitectureAI', 'Documentation'];
         sharedWith: ['Michael ChenAlex Wong'],permissions: 'edit',version: '1.2'
       };
       {;
-        id: '2',name: 'Cloud_Migration_Plan.xlsx',type: 'document',size: 1.8,uploadedBy: 'Michael Chen',uploadDate: '2024-01-14',lastModified: '2024-01-14',tags: ['MigrationCloud', 'Planning'],;
+        id: '2',name: 'Cloud_Migration_Plan.xlsx',type: 'document',size: 1.8,uploadedBy: 'Michael Chen',uploadDate: '2024-01-14',lastModified: '2024-01-14',tags: ['MigrationCloud', 'Planning'];
         sharedWith: ['Sarah JohnsonDavid Kim'],permissions: 'view',version: '2.1'
       };
       {;
-        id: '3',name: 'Security_Audit_Report.docx',type: 'document',size: 3.2,uploadedBy: 'David Kim',uploadDate: '2024-01-13',lastModified: '2024-01-13',tags: ['SecurityAudit', 'Report'],;
+        id: '3',name: 'Security_Audit_Report.docx',type: 'document',size: 3.2,uploadedBy: 'David Kim',uploadDate: '2024-01-13',lastModified: '2024-01-13',tags: ['SecurityAudit', 'Report'];
         sharedWith: ['Lisa Thompson'],permissions: 'view',version: '1.0'
       };
     ];
-    setTeamMembers(sampleTeamMembers),;
-    setProjects(sampleProjects),;
-    setMessages(sampleMessages),;
-    setFiles(sampleFiles),;
-  }, []),;
+    setTeamMembers(sampleTeamMembers);
+    setProjects(sampleProjects);
+    setMessages(sampleMessages);
+    setFiles(sampleFiles);
+  }, []);
 
   //[^;]*
   const getStatusDisplay = (status: string) => {;
@@ -198,16 +198,16 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
       case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
     };
-  },;
+  };
 
   //[^;]*
   const getProjectStatusColor = (status: string) => {;
     switch (status) {;
       case 'planning': return 'text-blue-400 bg-blue-400/20'
-      case 'active': return 'text-green-400 bg-green-400/20',;
-      case 'review': return 'text-yellow-400 bg-yellow-400/20',;
-      case 'completed': return 'text-purple-400 bg-purple-400/20',;
-      case 'on-hold': return 'text-red-400 bg-red-400/20',;
+      case 'active': return 'text-green-400 bg-green-400/20';
+      case 'review': return 'text-yellow-400 bg-yellow-400/20';
+      case 'completed': return 'text-purple-400 bg-purple-400/20';
+      case 'on-hold': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     };
   };
@@ -215,9 +215,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
   const getPriorityColor = (priority: string) => {;
     switch (priority) {;
       case 'low': return 'text-green-400 bg-green-400/20'
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',;
-      case 'high': return 'text-orange-400 bg-orange-400/20',;
-      case 'critical': return 'text-red-400 bg-red-400/20',;
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     };
   };
@@ -225,19 +225,19 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
   const getFileTypeIcon = (type: string) => {;
     switch (type) {;
       case 'document': return <[^>]*/>
-      case 'image': return <Image className="w-5 h-5" />,;
-      case 'video': return <Video className="w-5 h-5" />,;
-      case 'audio': return <File className="w-5 h-5" />,;
-      case 'archive': return <Folder className="w-5 h-5" />,;
+      case 'image': return <Image className="w-5 h-5" />;
+      case 'video': return <Video className="w-5 h-5" />;
+      case 'audio': return <File className="w-5 h-5" />;
+      case 'archive': return <Folder className="w-5 h-5" />;
       default: return <[^>]*/>
     };
   };
   //[^;]*
   const formatFileSize = (size: number) => {;
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`
-    if (size < 1024) return `${size.toFixed(1)} MB`,;
-    return `${(size / 1024).toFixed(1)} GB`,;
-  },;
+    if (size < 1024) return `${size.toFixed(1)} MB`;
+    return `${(size / 1024).toFixed(1)} GB`;
+  };
 
   //[^;]*
   const handleProjectSelect = (project: Project) => {;
@@ -254,9 +254,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
           msg.reactions.push({ type: reactionType, count: 1 })
         };
       };
-      return msg,;
-    })),;
-  },;
+      return msg;
+    }));
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">;

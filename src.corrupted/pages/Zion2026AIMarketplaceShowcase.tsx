@@ -1,57 +1,56 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import { ;
-  Search,;
-  Filter, ;
-  Grid3X3, ;
-  List, ;
-  Star, ;
-  TrendingUp, ;
-  Users, ;
-  Zap,;
-  Shield,;
-  BarChart3,;
-  Code,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Search;
+  Filter;
+  Grid3X3;
+  List;
+  Star;
+  TrendingUp;
+  Users;
+  Zap;
+  Shield;
+  BarChart3;
+  Code;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 import { zion2026AIMarketplaceServices } from "../../data/zion-2026-ai-marketplace-services"
 const Zion2026AIMarketplaceShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const categories = ['allAI Marketplace', 'AI IntegrationAI Automation', 'AI AnalyticsAI Development']
 
   const filteredServices = useMemo(() => {;
     return zion2026AIMarketplaceServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()),;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-      return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
-    }),;
-  }, [searchTerm, selectedCategory]),;
+      return matchesSearch && matchesCategory;&& matchesCategory; matchesCategory});
+  }, [searchTerm, selectedCategory]);
 
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Marketplace': return Globe;
-      case 'AI Integration': return Zap,;
-      case 'AI Automation': return Shield,;
-      case 'AI Analytics': return BarChart3,;
-      case 'AI Development': return Code,;
+      case 'AI Integration': return Zap;
+      case 'AI Automation': return Shield;
+      case 'AI Analytics': return BarChart3;
+      case 'AI Development': return Code;
       default: return Globe;
     };
   };
   const getCategoryColor = (category: string) => {;
     switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500'
-      case 'AI Integration': return 'from-purple-500 to-pink-500',;
-      case 'AI Automation': return 'from-green-500 to-emerald-500',;
-      case 'AI Analytics': return 'from-orange-500 to-red-500',;
-      case 'AI Development': return 'from-indigo-500 to-blue-500',;
+      case 'AI Integration': return 'from-purple-500 to-pink-500';
+      case 'AI Automation': return 'from-green-500 to-emerald-500';
+      case 'AI Analytics': return 'from-orange-500 to-red-500';
+      case 'AI Development': return 'from-indigo-500 to-blue-500';
       default: return 'from-gray-500 to-slate-500'
     };
   };

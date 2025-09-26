@@ -2,133 +2,133 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 import { Link } from "react-router-dom"
 import { ;
-  FileText,;
-  Brain, ;
-  Shield, ;
-  Zap, ;
-  CheckCircle, ;
-  ArrowRight, ;
-  DollarSign, ;
-  Clock, ;
-  Users, ;
-  BarChart3,;
-  Lock,;
-  Globe,;
-  Target,;
-  TrendingUp,;
-  Award,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Star,;
-  Eye,;
-  Search,;
-  AlertTriangle,;
-  FileCheck,;
-  Scale,;
-  Gavel,;
-  Building,;
-  Heart,;
-  BookOpen,;
-  Calendar,;
-  AlertCircle,;
-  CheckSquare,;
-  FileX,;
-  Download,;
-  Upload,;
-  Share2,;
-  Settings,;
-  Database,;
-  Cloud,;
-  Server,;
-  Wifi,;
-  ShieldCheck,;
-  UserCheck,;
-  Globe2,;
+  FileText;
+  Brain;
+  Shield;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  DollarSign;
+  Clock;
+  Users;
+  BarChart3;
+  Lock;
+  Globe;
+  Target;
+  TrendingUp;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  Eye;
+  Search;
+  AlertTriangle;
+  FileCheck;
+  Scale;
+  Gavel;
+  Building;
+  Heart;
+  BookOpen;
+  Calendar;
+  AlertCircle;
+  CheckSquare;
+  FileX;
+  Download;
+  Upload;
+  Share2;
+  Settings;
+  Database;
+  Cloud;
+  Server;
+  Wifi;
+  ShieldCheck;
+  UserCheck;
+  Globe2;
   Zap as ZapIcon;
 } from "lucide-react"
 export default function AIPoweredContractAnalysis() {;
   const features = [;
     {;
-      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Analysis",description: "Advanced NLP models analyze contracts with 98% accuracy, identifying risks, obligations, and opportunities.",;
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Analysis",description: "Advanced NLP models analyze contracts with 98% accuracy, identifying risks, obligations, and opportunities.";
       benefits: ["98% accuracy rate", "Multi-language support", "Context-aware analysis"]
-    },;
+    };
     {;
       icon: <Shield className="w-6 h-6" />,title: "Risk Assessment",description: "Automated risk scoring and compliance checking against industry standards and regulatory requirements.",benefits: ["Real-time risk scoring", "Regulatory compliance", "Industry benchmarks"]
-    },;
+    };
     {;
-      icon: <Zap className="w-6 h-6" />,title: "Real-time Processing",description: "Process contracts in seconds, not hours. Instant insights and recommendations for legal teams.",;
+      icon: <Zap className="w-6 h-6" />,title: "Real-time Processing",description: "Process contracts in seconds, not hours. Instant insights and recommendations for legal teams.";
       benefits: ["< 30 second processing", "Batch processing", "Instant notifications"]
-    },;
+    };
     {;
       icon: <FileCheck className="w-6 h-6" />,title: "Compliance Monitoring",description: "Track regulatory changes and automatically flag non-compliant clauses and terms.",benefits: ["Auto-updating regulations", "Compliance alerts", "Audit trails"]
-    },;
+    };
     {;
       icon: <Search className="w-6 h-6" />,title: "Smart Search",description: "Semantic search across contract databases with natural language queries and advanced filtering.",benefits: ["Natural language queries", "Advanced filters", "Search history"]
-    },;
+    };
     {;
-      icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive reporting on contract performance, risks, and opportunities across your portfolio.",;
+      icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive reporting on contract performance, risks, and opportunities across your portfolio.";
       benefits: ["Custom reports", "Real-time metrics", "Export capabilities"]
-    },;
+    };
     {;
-      icon: <Lock className="w-6 h-6" />,title: "Enterprise Security",description: "Bank-level security with end-to-end encryption, role-based access control, and audit logging.",;
+      icon: <Lock className="w-6 h-6" />,title: "Enterprise Security",description: "Bank-level security with end-to-end encryption, role-based access control, and audit logging.";
       benefits: ["SOC 2 Type II", "GDPR compliant", "HIPAA ready"]
-    },;
+    };
     {;
       icon: <Globe className="w-6 h-6" />,title: "Global Compliance",description: "Support for international legal frameworks and multi-jurisdictional compliance requirements.",benefits: ["150+ countries", "Local regulations", "Translation support"]
     };
-  ],;
+  ];
 
   const pricingPlans = [;
     {;
       name: "Starter",price: "$299",period: "/month",description: "Perfect for small legal teams and startups",features: [;
         "Up to 100 contracts/month"
-        "Basic risk assessment",;
-        "Standard compliance checks",;
-        "Email support",;
-        "Basic analytics dashboard",;
-        "Standard security features",;
-        "5 user licenses",;
+        "Basic risk assessment";
+        "Standard compliance checks";
+        "Email support";
+        "Basic analytics dashboard";
+        "Standard security features";
+        "5 user licenses";
         "Basic API access"
-      ],;
+      ];
       popular: false,savings: "Save $200/month with annual billing"
     };
     {;
       name: "Professional",price: "$799",period: "/month",description: "Ideal for growing law firms and mid-size companies",features: [;
-        "Up to 1,000 contracts/month",;
-        "Advanced AI analysis",;
-        "Custom compliance rules",;
-        "Priority support",;
-        "Advanced analytics & reporting",;
-        "Full API access",;
-        "Team collaboration tools",;
-        "Custom integrations",;
-        "25 user licenses",;
-        "Advanced security features",;
-        "Compliance reporting",;
+        "Up to 1,000 contracts/month";
+        "Advanced AI analysis";
+        "Custom compliance rules";
+        "Priority support";
+        "Advanced analytics & reporting";
+        "Full API access";
+        "Team collaboration tools";
+        "Custom integrations";
+        "25 user licenses";
+        "Advanced security features";
+        "Compliance reporting";
         "Training & onboarding"
-      ],;
+      ];
       popular: true,savings: "Save $800/month with annual billing"
     };
     {;
-      name: "Enterprise",price: "$1,999",;
+      name: "Enterprise",price: "$1,999";
       period: "/month",description: "For large organizations with complex contract portfolios",features: [;
         "Unlimited contracts"
-        "Custom AI models",;
-        "Advanced compliance",;
-        "24/7 dedicated support",;
-        "Custom analytics",;
-        "Full API access",;
-        "Enterprise integrations",;
-        "Unlimited users",;
-        "Advanced security",;
-        "Custom training",;
-        "SLA guarantees",;
+        "Custom AI models";
+        "Advanced compliance";
+        "24/7 dedicated support";
+        "Custom analytics";
+        "Full API access";
+        "Enterprise integrations";
+        "Unlimited users";
+        "Advanced security";
+        "Custom training";
+        "SLA guarantees";
         "Dedicated account manager"
-      ],;
+      ];
       popular: false,savings: "Save $2,000/month with annual billing"
     };
-  ],;
+  ];
 
   const benefits = [;
     {;

@@ -5,30 +5,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {;
-  Shield,;
-  Lock,;
-  Eye,;
-  AlertTriangle,;
-  Users,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Zap,;
-  Brain,;
-  Network,;
-  Server,;
-  Database,;
-  Key,;
-  Monitor,;
-  TrendingUp,;
-  ShieldCheck,;
-  FileText,;
-  Clock,;
-  DollarSign,;
+  Shield;
+  Lock;
+  Eye;
+  AlertTriangle;
+  Users;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Zap;
+  Brain;
+  Network;
+  Server;
+  Database;
+  Key;
+  Monitor;
+  TrendingUp;
+  ShieldCheck;
+  FileText;
+  Clock;
+  DollarSign;
   Code;
 } from "lucide-react"
 import { ENHANCED_SERVICES } from "@/data/enhancedServices"
@@ -38,7 +38,7 @@ import { QuoteFormSection } from "@/components/QuoteFormSection"
 //[^;]*
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>;
   service.category === 'Cybersecurity'
-),;
+);
 const SECURITY_SERVICE_CATEGORIES = [;
   {;
     id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'));
@@ -48,53 +48,53 @@ const SECURITY_SERVICE_CATEGORIES = [;
   };
 ];
 export default function CybersecurityServicesPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
   ;
   //[^;]*
   const securityTechnologies = [;
-    'SIEM PlatformsEDR Solutions',;
-    'Zero Trust NetworkIdentity Management',;
-    'Threat IntelligenceVulnerability Management',;
+    'SIEM PlatformsEDR Solutions';
+    'Zero Trust NetworkIdentity Management';
+    'Threat IntelligenceVulnerability Management';
     'Incident ResponseSecurity Automation'
-  ],;
+  ];
 
   const complianceStandards = [;
-    'SOC 2 Type IIISO 27001',;
-    'PCI DSSNIST Framework',;
-    'GDPR ComplianceHIPAA Security',;
+    'SOC 2 Type IIISO 27001';
+    'PCI DSSNIST Framework';
+    'GDPR ComplianceHIPAA Security';
     'FedRAMPCIS Controls'
-  ],;
+  ];
 
   const threatIntelligence = [;
-    'Dark Web MonitoringThreat Hunting',;
+    'Dark Web MonitoringThreat Hunting';
     'Malware AnalysisAPT Detection'
     'IOC ManagementThreat Modeling'
     'Risk AssessmentSecurity Metrics'
   ];
   const securityServices = [;
     {;
-      id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response'],;
+      id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response'];
       price: 2500,currency: '$',duration: 'Monthly'
     };
     {;
-      id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth'],;
+      id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth'];
       price: 1800,currency: '$',duration: 'Monthly'
     };
     {;
-      id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support'],;
+      id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support'];
       price: 3200,currency: '$',duration: 'Monthly'
     };
   ];
   const getCategoryIcon = (category: string) => {;
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
     return categoryData?.icon || Shield
-  },;
+  };
   const getPricingModelLabel = (model: string) => {;
     switch (model) {;
       case 'one-time': return 'One-time'
-      case 'monthly': return 'Monthly',;
-      case 'hourly': return 'Hourly',;
-      case 'project-based': return 'Project-based',;
+      case 'monthly': return 'Monthly';
+      case 'hourly': return 'Hourly';
+      case 'project-based': return 'Project-based';
       default: return model;
     };
   };
@@ -106,12 +106,12 @@ export default function CybersecurityServicesPage() {;
         keywords={['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust']};
         structuredData={{;
           "@context": "https: //schema.org"
-          "@type": "Service",;
-          "name": "Cybersecurity Services",;
-          "description": "Comprehensive cybersecurity solutions",;
+          "@type": "Service";
+          "name": "Cybersecurity Services";
+          "description": "Comprehensive cybersecurity solutions";
           "url": "https: //ziontechgroup.com/services/cybersecurity"
           "provider": {;
-            "@type": "Organization",;
+            "@type": "Organization";
             "name": "Zion Tech Group"
           };
         }};
@@ -581,7 +581,7 @@ export default function CybersecurityServicesPage() {;
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</[^>]*>
               <Button onClick={() => {;
                 setSearchQuery('')
-                setSelectedSubcategory('all'),;
+                setSelectedSubcategory('all');
                 setPriceRange('all')
               }}>;
                 Clear Filters;

@@ -1,68 +1,68 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Search,;
-  Filter, ;
-  Star, ;
-  ArrowRight, ;
-  ChevronDown, ;
-  Brain, ;
-  Cpu, ;
-  Database, ;
-  Network, ;
-  Shield, ;
-  Rocket, ;
-  Users, ;
-  BarChart3, ;
-  Code, ;
-  Server, ;
-  Chip, ;
-  Globe, ;
-  Zap, ;
-  Lock, ;
-  ShieldCheck,;
-  TrendingUp,;
-  CheckCircle,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  Handshake,;
-  Lightbulb,;
-  Scale,;
-  Heart,;
-  Leaf,;
-  Eye,;
-  Atom,;
-  Building2,;
-  Car,;
-  Home,;
-  Factory,;
-  City,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  Award,;
-  TrendingDown,;
-  Users2,;
-  BarChart4,;
-  Zap2,;
-  Target2,;
-  Shield2,;
-  Rocket2,;
-  Brain2,;
-  Cpu2,;
-  Database2,;
+  Search;
+  Filter;
+  Star;
+  ArrowRight;
+  ChevronDown;
+  Brain;
+  Cpu;
+  Database;
+  Network;
+  Shield;
+  Rocket;
+  Users;
+  BarChart3;
+  Code;
+  Server;
+  Chip;
+  Globe;
+  Zap;
+  Lock;
+  ShieldCheck;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Target;
+  Handshake;
+  Lightbulb;
+  Scale;
+  Heart;
+  Leaf;
+  Eye;
+  Atom;
+  Building2;
+  Car;
+  Home;
+  Factory;
+  City;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Award;
+  TrendingDown;
+  Users2;
+  BarChart4;
+  Zap2;
+  Target2;
+  Shield2;
+  Rocket2;
+  Brain2;
+  Cpu2;
+  Database2;
   Network2;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025"
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [sortBy, setSortBy] = useState('rating'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [selectedService, setSelectedService] = useState<any>(null),;
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
@@ -88,20 +88,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-    return matchesCategory && matchesSearch,;&& matchesSearch,; matchesSearch,
-  }),;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;&& matchesSearch; matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'rating':;
-        return b.rating - a.rating,;
+        return b.rating - a.rating;
       case 'price':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'reviews':;
-        return b.reviews - a.reviews,;
+        return b.reviews - a.reviews;
       case 'name':;
-        return a.title.localeCompare(b.title),;
+        return a.title.localeCompare(b.title);
       default: return 0;
     };
   });
@@ -125,16 +124,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     const badges = {;
       'Basic': 'bg-gray-500 text-whiteIntermediate': 'bg-blue-500 text-whiteAdvanced': 'bg-purple-500 text-whiteRevolutionary': 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
     };
-    return badges[level as keyof typeof badges] || 'bg-gray-500 text-white',
-  },;
+    return badges[level as keyof typeof badges] || 'bg-gray-500 text-white'};
 
   const getROIColor = (roi: string) => {;
     const roiValue = parseInt(roi.split('-')[0]);
-    if (roiValue >= 800) return 'text-green-500',;
-    if (roiValue >= 500) return 'text-blue-500',;
-    if (roiValue >= 300) return 'text-yellow-500',;
+    if (roiValue >= 800) return 'text-green-500';
+    if (roiValue >= 500) return 'text-blue-500';
+    if (roiValue >= 300) return 'text-yellow-500';
     return 'text-gray-500'
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -564,19 +562,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 //[^;]*
 const Grid = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 
 const List = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 
 export default EnhancedServicesShowcase2025;

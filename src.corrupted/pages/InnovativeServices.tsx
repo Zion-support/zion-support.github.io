@@ -1,25 +1,25 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain,;
-  Atom,;
-  Lock,;
-  Wifi,;
-  Shield,;
-  Eye,;
-  Globe2,;
-  Leaf,;
-  Zap,;
-  Rocket,;
-  Cpu,;
-  Database,;
-  Network,;
-  Code,;
-  Users,;
-  BarChart3,;
-  TrendingUp,;
-  Lightbulb,;
-  Target,;
+  Brain;
+  Atom;
+  Lock;
+  Wifi;
+  Shield;
+  Eye;
+  Globe2;
+  Leaf;
+  Zap;
+  Rocket;
+  Cpu;
+  Database;
+  Network;
+  Code;
+  Users;
+  BarChart3;
+  TrendingUp;
+  Lightbulb;
+  Target;
   Award;
 } from "lucide-react"
 const InnovativeServices: React.FC = () => {
@@ -28,65 +28,65 @@ const InnovativeServices: React.FC = () => {
       id: 'ai-automation',title: 'AI Business Automation',description: 'Revolutionary AI-powered business process automation that transforms your operations',icon: Brain,features: [;
         'Intelligent workflow automationPredictive analytics integration'
         'Real-time decision makingScalable AI infrastructure'
-      ],;
-      benefits: ['300% efficiency increase24/7 autonomous operation', 'Cost reduction up to 60%'],;
+      ];
+      benefits: ['300% efficiency increase24/7 autonomous operation', 'Cost reduction up to 60%'];
       color: 'from-zion-cyan to-zion-purple'
     };
     {;
       id: 'quantum-computing',title: 'Quantum Computing Services',description: 'Next-generation quantum computing solutions for complex problem-solving',icon: Atom,features: [;
         'Quantum algorithm optimizationCryptographic security'
         'Molecular simulationFinancial modeling'
-      ],;
-      benefits: ['1000x faster computationUnbreakable encryption', 'Revolutionary breakthroughs'],;
+      ];
+      benefits: ['1000x faster computationUnbreakable encryption', 'Revolutionary breakthroughs'];
       color: 'from-zion-purple to-zion-blue'
     };
     {;
-      id: 'blockchain',title: 'Enterprise Blockchain',description: 'Secure, scalable blockchain solutions for enterprise applications',;
+      id: 'blockchain',title: 'Enterprise Blockchain',description: 'Secure, scalable blockchain solutions for enterprise applications';
       icon: Lock,features: [;
         'Smart contract developmentDeFi platform creation'
         'Supply chain transparencyDigital asset management'
-      ],;
-      benefits: ['Immutable securityTransparent operations', 'Reduced costs'],;
+      ];
+      benefits: ['Immutable securityTransparent operations', 'Reduced costs'];
       color: 'from-zion-blue to-zion-green'
     };
     {;
       id: 'iot-edge',title: 'IoT Edge Computing',description: 'Intelligent IoT solutions with edge computing for real-time processing',icon: Wifi,features: [;
         'Edge AI processingReal-time analytics'
         'Predictive maintenanceSmart city solutions'
-      ],;
-      benefits: ['Reduced latencyLower bandwidth costs', 'Enhanced security'],;
+      ];
+      benefits: ['Reduced latencyLower bandwidth costs', 'Enhanced security'];
       color: 'from-zion-green to-zion-emerald'
     };
     {;
       id: 'cybersecurity',title: 'Zero Trust Security',description: 'Advanced cybersecurity platform with zero-trust architecture',icon: Shield,features: [;
         'Multi-factor authenticationBehavioral analytics'
         'Threat intelligenceIncident response automation'
-      ],;
-      benefits: ['99.99% threat preventionReal-time monitoring', 'Compliance ready'],;
+      ];
+      benefits: ['99.99% threat preventionReal-time monitoring', 'Compliance ready'];
       color: 'from-zion-emerald to-zion-cyan'
     };
     {;
       id: 'digital-twin',title: 'Digital Twin Technology',description: 'Create virtual replicas of physical systems for simulation and optimization',icon: Eye,features: [;
         '3D modeling and simulationReal-time monitoring'
         'Predictive maintenancePerformance optimization'
-      ],;
-      benefits: ['Reduced downtimeOptimized performance', 'Cost savings'],;
+      ];
+      benefits: ['Reduced downtimeOptimized performance', 'Cost savings'];
       color: 'from-zion-cyan to-zion-purple'
     };
     {;
       id: 'metaverse',title: 'Metaverse & VR',description: 'Immersive virtual reality and metaverse development platform',icon: Globe2,features: [;
         'VR application developmentMetaverse platform creation'
         '3D content creationVirtual event hosting'
-      ],;
-      benefits: ['Enhanced user engagementNew revenue streams', 'Innovative experiences'],;
+      ];
+      benefits: ['Enhanced user engagementNew revenue streams', 'Innovative experiences'];
       color: 'from-zion-purple to-zion-blue'
     };
     {;
       id: 'green-tech',title: 'Green Tech Solutions',description: 'Sustainable technology solutions for environmental impact reduction',icon: Leaf,features: [;
         'Renewable energy optimizationCarbon footprint tracking'
         'Sustainable infrastructureGreen data centers'
-      ],;
-      benefits: ['Environmental impactCost savings', 'Regulatory compliance'],;
+      ];
+      benefits: ['Environmental impactCost savings', 'Regulatory compliance'];
       color: 'from-zion-blue to-zion-green'
     };
   ];

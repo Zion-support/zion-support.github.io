@@ -1,20 +1,20 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Shield,;
-  Lock,;
-  Eye,;
-  Database,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  AlertTriangle,;
-  FileText,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Calendar,;
-  CheckCircle,;
+  Shield;
+  Lock;
+  Eye;
+  Database;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
   AlertTriangle;
 } from "lucide-react"
 import SEO from "../components/SEO"
@@ -45,7 +45,7 @@ const Privacy: React.FC = () => {
               Privacy Policy;
             </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-              Your privacy is important to us. This policy explains how we collect, use,;
+              Your privacy is important to us. This policy explains how we collect, use;
               and protect your personal information.;
             </[^>]*>
           </[^>]*>
