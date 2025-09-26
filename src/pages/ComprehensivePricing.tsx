@@ -13,34 +13,34 @@ const pricingTiers = [;
   {;
     name: 'Starter',price: '$999',period: '/month',description: 'Perfect for small businesses and startups',features: [;
       'Basic AI automationStandard support'
-      'Core integrationsBasic analytics',;
+      'Core integrationsBasic analytics';
       'Email support'
-    ],;
+    ];
     popular: false;
   };
   {;
-    name: 'Professional',price: '$2,999',;
+    name: 'Professional',price: '$2,999';
     period: '/month',description: 'Ideal for growing businesses',features: [;
       'Advanced AI featuresPriority support'
-      'Custom integrationsAdvanced analytics',;
+      'Custom integrationsAdvanced analytics';
       'Phone & email supportTraining sessions'
-    ],;
+    ];
     popular: true;
   };
   {;
-    name: 'Enterprise',price: '$7,999',;
+    name: 'Enterprise',price: '$7,999';
     period: '/month',description: 'For large organizations',features: [;
       'Full AI suite24/7 dedicated support'
-      'Custom developmentEnterprise analytics',;
-      'Dedicated account managerCustom training programs',;
+      'Custom developmentEnterprise analytics';
+      'Dedicated account managerCustom training programs';
       'SLA guarantees'
-    ],;
+    ];
     popular: false;
   };
 ];
 export default function ComprehensivePricing() {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
 
   //[^;]*
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027]
@@ -57,26 +57,25 @@ export default function ComprehensivePricing() {;
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       switch (selectedPriceRange) {;
         case 'under-1000':;
-          matchesPrice = price < 1000,;
-          break,;
+          matchesPrice = price < 1000;
+          break;
         case '1000-3000':;
-          matchesPrice = price >= 1000 && price < 3000,;&& price < 3000,; price < 3000,
-          break,;
+          matchesPrice = price >= 1000 && price < 3000;&& price < 3000; price < 3000,
+          break;
         case '3000-5000':;
-          matchesPrice = price >= 3000 && price < 5000,;&& price < 5000,; price < 5000,
-          break,;
+          matchesPrice = price >= 3000 && price < 5000;&& price < 5000; price < 5000,
+          break;
         case 'over-5000':;
-          matchesPrice = price >= 5000,;
-          break,;
+          matchesPrice = price >= 5000;
+          break;
       };
     };
 
-    return matchesCategory && matchesPrice,;&& matchesPrice,; matchesPrice,
-  }),;
+    return matchesCategory && matchesPrice;&& matchesPrice; matchesPrice});
 
   const getPriceRangeLabel = (range: string) => {;
     switch (range) {;
-      case 'under-1000': return 'Under $1,000',;
+      case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000'
       case '3000-5000': return '$3,000 - $5,000'
       case 'over-5000': return 'Over $5,000'
@@ -286,7 +285,7 @@ export default function ComprehensivePricing() {;
               <Button;
                 onClick={() => {;
                   setSelectedCategory('all')
-                  setSelectedPriceRange('all'),;
+                  setSelectedPriceRange('all');
                 }};
                 className="[^"]*"
               >;

@@ -2,33 +2,33 @@ import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import { Helmet } from "react-helmet-async"
 import { ;
-    Search,;
-    Filter, ;
-    TrendingUp, ;
-    Shield, ;
-    Zap, ;
-    Globe, ;
-    Users, ;
-    BarChart3,;
-    DollarSign,;
-    Heart,;
-    GraduationCap,;
-    Target,;
-    Settings,;
-    Package,;
-    CheckCircle,;
-    Star,;
-    ArrowRight,;
-    Phone,;
-    Mail,;
-    MapPin,;
+    Search;
+    Filter;
+    TrendingUp;
+    Shield;
+    Zap;
+    Globe;
+    Users;
+    BarChart3;
+    DollarSign;
+    Heart;
+    GraduationCap;
+    Target;
+    Settings;
+    Package;
+    CheckCircle;
+    Star;
+    ArrowRight;
+    Phone;
+    Mail;
+    MapPin;
     ExternalLink;
 } from "lucide-react"
 import { comprehensiveServices2025Enhanced, EnhancedService } from "../data/comprehensive-services-2025-enhanced"
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState(''),;
-    const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name'),;
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name');
 
     const categories = [;
         { id: 'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length };
@@ -49,11 +49,11 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                 service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-            ),;
+            );
         };
 
         if (selectedCategory !== 'all') {;
-            filtered = filtered.filter(service => service.category === selectedCategory),;
+            filtered = filtered.filter(service => service.category === selectedCategory);
         };
 
         //[^;]*
@@ -62,35 +62,33 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                 case 'price':;
                     const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''));
                     const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, ''));
-                    return priceA - priceB,;
+                    return priceA - priceB;
                 case 'popularity':;
                     return b.trialDays - a.trialDays, //[^;]*
                 default: return a.name.localeCompare(b.name)
             };
         });
-        return filtered,;
-    }, [searchTerm, selectedCategory, sortBy]),;
+        return filtered;
+    }, [searchTerm, selectedCategory, sortBy]);
 
     const getCategoryColor = (category: string) => {;
         const colors: { [key: string]: string } = {;
             'fintech': 'from-green-500 to-emerald-600healthtech': 'from-red-500 to-pink-600edutech': 'from-purple-500 to-violet-600martech': 'from-pink-500 to-rose-600micro-saas': 'from-blue-500 to-indigo-600ai-services': 'from-cyan-500 to-blue-600it-services': 'from-slate-500 to-gray-600emerging-tech': 'from-orange-500 to-yellow-600'
         };
-        return colors[category] || 'from-gray-500 to-gray-600',
-    },;
+        return colors[category] || 'from-gray-500 to-gray-600'};
 
     const getCategoryIcon = (category: string) => {;
         const icons: { [key: string]: React.ReactNode } = {;
             'fintech': <[^>]*/>
-            'healthtech': <Heart className="w-5 h-5" />,;
-            'edutech': <GraduationCap className="w-5 h-5" />,;
-            'martech': <Target className="w-5 h-5" />,;
-            'micro-saas': <Settings className="w-5 h-5" />,;
-            'ai-services': <Zap className="w-5 h-5" />,;
-            'it-services': <Shield className="w-5 h-5" />,;
+            'healthtech': <Heart className="w-5 h-5" />;
+            'edutech': <GraduationCap className="w-5 h-5" />;
+            'martech': <Target className="w-5 h-5" />;
+            'micro-saas': <Settings className="w-5 h-5" />;
+            'ai-services': <Zap className="w-5 h-5" />;
+            'it-services': <Shield className="w-5 h-5" />;
             'emerging-tech': <[^>]*/>
-        },;
-        return icons[category] || <Globe className="w-5 h-5" />,
-    },;
+        };
+        return icons[category] || <Globe className="w-5 h-5" />};
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">;
@@ -381,6 +379,6 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
             </[^>]*>
         </[^>]*>
     );
-},;
+};
 
 export default ComprehensiveServicesShowcase2025Enhanced;

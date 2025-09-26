@@ -2,41 +2,41 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Smartphone,;
-  Download, ;
-  Zap, ;
-  Shield, ;
-  Cloud, ;
-  Users, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Star,;
-  Globe,;
-  Lock,;
-  Wifi,;
-  Battery,;
-  Settings,;
-  Bell,;
-  Search,;
-  Home,;
-  User,;
-  BarChart3,;
-  MessageCircle,;
-  ShoppingCart,;
-  Calendar,;
-  FileText,;
-  Heart,;
-  Bookmark,;
-  Share2,;
-  Play,;
-  Pause,;
-  SkipBack,;
-  SkipForward,;
-  Volume2,;
-  Maximize2,;
-  RotateCcw,;
-  Wifi as WifiIcon,;
-  Battery as BatteryIcon,;
+  Smartphone;
+  Download;
+  Zap;
+  Shield;
+  Cloud;
+  Users;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Globe;
+  Lock;
+  Wifi;
+  Battery;
+  Settings;
+  Bell;
+  Search;
+  Home;
+  User;
+  BarChart3;
+  MessageCircle;
+  ShoppingCart;
+  Calendar;
+  FileText;
+  Heart;
+  Bookmark;
+  Share2;
+  Play;
+  Pause;
+  SkipBack;
+  SkipForward;
+  Volume2;
+  Maximize2;
+  RotateCcw;
+  Wifi as WifiIcon;
+  Battery as BatteryIcon;
   Signal;
 } from "lucide-react"
 import SEO from "../components/SEO"
@@ -58,17 +58,17 @@ const MobileLaunch: React.FC = () => {
   const appScreens = [;
     {;
       name: "Dashboard",description: "Overview of your business metrics and key performance indicators",icon: Home,features: ["Real-time metrics", "Customizable widgets", "Quick actions"]
-    },;
+    };
     {;
       name: "AI Assistant",description: "Your personal AI companion for business insights and automation",icon: Zap,features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
-    },;
+    };
     {;
       name: "Analytics",description: "Comprehensive data visualization and business intelligence tools",icon: BarChart3,features: ["Interactive charts", "Custom reports", "Data export"]
-    },;
+    };
     {;
       name: "Services",description: "Access to all Zion Tech Group services and solutions",icon: Settings,features: ["Service catalog", "Quick setup", "Support access"]
     };
-  ],;
+  ];
 
   const downloadOptions = [;
     {;

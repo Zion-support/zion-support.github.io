@@ -2,25 +2,63 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Target, Brain, Users, Clock, Shield, CheckCircle, BarChart3 } from "lucide-react"
 import { SEO } from "@/components/SEO"
+export default function AIProjectManagement() {;
+  const features = [;
+    {;
+      icon: Brain,title: "AI-Powered Planning",description: "Intelligent project planning with predictive analytics and resource optimization"
+    };
+    {;
+      icon: Target,title: "Smart Goal Setting",description: "AI-driven milestone tracking and adaptive goal adjustment"
+    };
+    {;
+      icon: Users,title: "Team Optimization",description: "Automated team allocation and workload balancing"
+    };
+    {;
+      icon: Clock,title: "Predictive Scheduling",description: "Forecast project timelines and identify potential delays"
+    };
+    {;
+      icon: BarChart3,title: "Real-Time Analytics",description: "Live project insights and performance metrics"
+    };
+    {;
+      icon: Shield,title: "Risk Management",description: "AI-powered risk identification and mitigation strategies"
+    };
+  ];
+  const benefits = [;
+    "Reduce project delivery time by 30-50%";
+    "Improve resource utilization by 40-60%";
+    "Increase project success rate by 25-40%";
+    "Reduce project costs by 20-35%";
+    "Eliminate manual reporting by 80%";
+    "Improve stakeholder communication by 50%"
+  ];
 
-export default function AIProjectManagement() {
-  const features = [
-    { icon: Brain, title: "AI-Powered Planning", description: "Intelligent project planning with predictive analytics and resource optimization" },
-    { icon: Target, title: "Smart Goal Setting", description: "AI-driven milestone tracking and adaptive goal adjustment" },
-    { icon: Users, title: "Team Optimization", description: "Automated team allocation and workload balancing" },
-    { icon: Clock, title: "Predictive Scheduling", description: "Forecast project timelines and identify potential delays" },
-    { icon: BarChart3, title: "Real-Time Analytics", description: "Live project insights and performance metrics" },
-    { icon: Shield, title: "Risk Management", description: "AI-powered risk identification and mitigation strategies" },
-  ]
+  const solutions = [;
+    {;
+      title: "AI Project Planning",description: "Intelligent project planning and scheduling with predictive analytics",features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"];
+      price: "From $3,000/month"
+    };
+    {;
+      title: "Team Management AI",description: "AI-powered team allocation and performance optimization",features: ["Workload balancing", "Skill matching", "Performance tracking"];
+      price: "From $2,500/month"
+    };
+    {;
+      title: "Risk Management Platform",description: "Advanced risk identification and mitigation strategies",features: ["Risk prediction", "Mitigation planning", "Real-time alerts"];
+      price: "From $2,000/month"
+    };
+    {;
+      title: "Complete PM Suite",description: "Full AI-powered project management solution",features: ["All features", "Custom integrations", "Enterprise support"];
+      price: "From $6,000/month"
+    };
+  ];
 
-  const benefits = [
-    "Reduce project delivery time by 30-50%",
-    "Improve resource utilization by 40-60%",
-    "Increase project success rate by 25-40%",
-    "Reduce project costs by 20-35%",
-    "Eliminate manual reporting by 80%",
-    "Improve stakeholder communication by 50%",
-  ]
+  const projectTypes = [;
+    "Software Development";
+    "Construction & Engineering";
+    "Marketing Campaigns";
+    "Product Launches";
+    "Research & Development";
+    "Event Management"
+  ];
 
   const solutions = [
     {
@@ -64,7 +102,58 @@ export default function AIProjectManagement() {
       <SEO
         title="AI Project Management Services - Zion Tech Group"
         description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
-      />
+      />;
+      ;
+      {/* Hero Section */};
+      <section className="relative overflow-hidden py-20 lg:py-32">;
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></[^>]*>
+        <div className="container mx-auto px-4 relative z-10">;
+          <motion.div
+            initial={{ opacity: 0, y: 20 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            className="[^"]*"
+          >;
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">;
+              <[^>]*/>
+              <span className="text-orange-300 font-medium">AI Project Management</[^>]*>
+            </[^>]*>
+            ;
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">;
+              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">;
+                AI Project Management;
+              </[^>]*>
+              <[^>]*/>
+              <span className="text-white">That Delivers Results</[^>]*>
+            </[^>]*>
+            ;
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Transform your project delivery with AI-powered management that optimizes ;
+              planning, resource allocation, and risk management. Deliver projects faster;
+              cheaper, and with unprecedented success rates.;
+            </[^>]*>
+            ;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <motion.button
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className="[^"]*"
+              >;
+                <[^>]*/>
+                Start Free Trial;
+              </[^>]*>
+              <motion.button
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className="[^"]*"
+              >;
+                <[^>]*/>
+                Watch Demo;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">

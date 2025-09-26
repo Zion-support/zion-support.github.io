@@ -1,26 +1,26 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  FileText,;
-  Shield,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  AlertTriangle,;
-  Scale,;
-  Lock,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Calendar,;
-  CheckCircle,;
-  AlertTriangle,;
-  Lock,;
-  Eye,;
-  Database,;
-  Zap,;
-  Rocket,;
-  Brain,;
+  FileText;
+  Shield;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  Scale;
+  Lock;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
+  AlertTriangle;
+  Lock;
+  Eye;
+  Database;
+  Zap;
+  Rocket;
+  Brain;
   Cpu;
 } from "lucide-react"
 import { SEO } from "../components/SEO"

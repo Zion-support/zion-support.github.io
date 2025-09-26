@@ -13,7 +13,7 @@ interface State {
   errorId: string | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props)
     this.state = {

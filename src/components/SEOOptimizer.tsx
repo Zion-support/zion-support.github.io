@@ -1,73 +1,73 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  Search,;
-  TrendingUp,;
-  Target,;
-  Zap,;
-  CheckCircle,;
-  AlertTriangle,;
-  Info,;
-  Settings,;
-  BarChart3,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Eye,;
-  Clock,;
-  Star,;
-  ArrowUpRight,;
+  Search;
+  TrendingUp;
+  Target;
+  Zap;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  Settings;
+  BarChart3;
+  Globe;
+  Smartphone;
+  Monitor;
+  Eye;
+  Clock;
+  Star;
+  ArrowUpRight;
   RefreshCw;
 } from "lucide-react"
-interface SEOAnalysis {;
+interface SEOAnalysis {
   score: number,issues: SEOIssue[],suggestions: SEOSuggestion[],metrics: SEOMetrics,lastUpdated: Date;
 };
 
-interface SEOIssue {;
+interface SEOIssue {
   id: string,type: 'error' | 'warning' | 'info',title: string,description: string,impact: 'high' | 'medium' | 'low',fixable: boolean,category: 'content' | 'technical' | 'performance' | 'accessibility'
 };
 
-interface SEOSuggestion {;
+interface SEOSuggestion {
   id: string,title: string,description: string,priority: 'high' | 'medium' | 'low',effort: 'low' | 'medium' | 'high',estimatedImpact: number;
 };
 
-interface SEOMetrics {;
+interface SEOMetrics {
   pageSpeed: number,mobileFriendliness: number,accessibility: number,bestPractices: number,seoScore: number,coreWebVitals: {;
     lcp: number,fid: number,cls: number;
   };
 };
 
-interface SEOOptimizerProps {;
-  url?: string,;
-  autoAnalyze?: boolean,;
-  showDetails?: boolean,;
+interface SEOOptimizerProps {
+  url?: string;
+  autoAnalyze?: boolean;
+  showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysis) => void;
 };
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
   url;
-  autoAnalyze = true,;
-  showDetails = false,;
+  autoAnalyze = true;
+  showDetails = false;
   onAnalysisComplete;
 }) => {;
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),;
-  const [isAnalyzing, setIsAnalyzing] = useState(false),;
+  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href),
-  const [showAdvanced, setShowAdvanced] = useState(false),;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   //[^;]*
   const mockAnalysis: SEOAnalysis = useMemo(() => ({;
     score: 87,issues: [;
       {;
-        id: '1',type: 'warning',title: 'Missing Meta Description',description: 'The page is missing a meta description tag, which is important for search engine snippets.',;
+        id: '1',type: 'warning',title: 'Missing Meta Description',description: 'The page is missing a meta description tag, which is important for search engine snippets.';
         impact: 'medium',fixable: true,category: 'content'
       };
       {;
         id: '2',type: 'error',title: 'Slow Page Load Time',description: 'Page load time is above the recommended 3-second threshold.',impact: 'high',fixable: true,category: 'performance'
       };
       {;
-        id: '3',type: 'info',title: 'Missing Alt Text',description: 'Some images are missing alt text, which affects accessibility.',;
+        id: '3',type: 'info',title: 'Missing Alt Text',description: 'Some images are missing alt text, which affects accessibility.';
         impact: 'low',fixable: true,category: 'accessibility'
       };
     ];
@@ -88,47 +88,47 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       };
     };
     lastUpdated: new Date()
-  }), []),;
+  }), []);
 
   //[^;]*
   const analyzeSEO = useCallback(async () => {;
-    setIsAnalyzing(true),;
+    setIsAnalyzing(true);
 
     //[^;]*
-    await new Promise(resolve => setTimeout(resolve, 2000)),;
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-    setAnalysis(mockAnalysis),;
-    setIsAnalyzing(false),;
-    onAnalysisComplete?.(mockAnalysis),;
-  }, [mockAnalysis, onAnalysisComplete]),;
+    setAnalysis(mockAnalysis);
+    setIsAnalyzing(false);
+    onAnalysisComplete?.(mockAnalysis);
+  }, [mockAnalysis, onAnalysisComplete]);
 
   //[^;]*
   useEffect(() => {;
     if (autoAnalyze) {;
-      analyzeSEO(),;
+      analyzeSEO();
     };
-  }, [autoAnalyze, analyzeSEO]),;
+  }, [autoAnalyze, analyzeSEO]);
 
   //[^;]*
   const getScoreColor = (score: number) => {;
     if (score >= 90) return 'text-green-500'
-    if (score >= 70) return 'text-yellow-500',;
+    if (score >= 70) return 'text-yellow-500';
     return 'text-red-500'
-  },;
+  };
 
   //[^;]*
   const getScoreBackground = (score: number) => {;
     if (score >= 90) return 'bg-green-100'
-    if (score >= 70) return 'bg-yellow-100',;
+    if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100'
-  },;
+  };
 
   //[^;]*
   const getImpactColor = (impact: string) => {;
     switch (impact) {;
       case 'high': return 'text-red-500'
-      case 'medium': return 'text-yellow-500',;
-      case 'low': return 'text-blue-500',;
+      case 'medium': return 'text-yellow-500';
+      case 'low': return 'text-blue-500';
       default: return 'text-zion-slate'
     };
   };
@@ -136,24 +136,22 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
   const getPriorityColor = (priority: string) => {;
     switch (priority) {;
       case 'high': return 'text-red-500 bg-red-50 border-red-200'
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200',;
-      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200',;
+      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'
     };
   };
   //[^;]*
   const filteredIssues = useMemo(() => {;
     if (selectedCategory === 'all') return analysis?.issues || [],
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [],
-  }, [analysis, selectedCategory]),;
+    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]);
 
   //[^;]*
   const filteredSuggestions = useMemo(() => {;
     return analysis?.suggestions.sort((a, b) => {;
       const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority],;
-    }) || [],
-  }, [analysis]),;
+      return priorityOrder[b.priority] - priorityOrder[a.priority];
+    }) || []}, [analysis]);
 
   if (!analysis && !isAnalyzing) {;&& !isAnalyzing) {; !isAnalyzing) {
     return (
@@ -433,19 +431,19 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       ) : null};
     </[^>]*>
   );
-},;
+};
 
 //[^;]*
 export const useSEOOptimization = () => {;
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),;
-  const [isOptimizing, setIsOptimizing] = useState(false),;
+  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+  const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {;
-    setIsOptimizing(true),;
+    setIsOptimizing(true);
     //[^;]*
-    await new Promise(resolve => setTimeout(resolve, 3000)),;
-    setIsOptimizing(false),;
-  }, []),;
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    setIsOptimizing(false);
+  }, []);
 
   return {;
     analysis;

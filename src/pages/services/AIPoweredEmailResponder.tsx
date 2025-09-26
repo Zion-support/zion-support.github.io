@@ -69,7 +69,7 @@ const AIPoweredEmailResponder: React.FC = () => {
         </[^>]*>
       </[^>]*>
     </[^>]*>
-  ),;
+  );
 };
 
 export default AIPoweredEmailResponder;

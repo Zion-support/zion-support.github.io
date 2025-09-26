@@ -3,14 +3,14 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 const categories = [;
   {;
-    title: "AI Services",description: "Cutting-edge AI solutions, chatbots, and machine learning",;
+    title: "AI Services",description: "Cutting-edge AI solutions, chatbots, and machine learning";
     icon: "🤖",link: "/ai-services",color: "from-purple-500 to-indigo-600"
   };
   {;
     title: "Micro SAAS",description: "Cloud-based software solutions for modern businesses",icon: "☁️",link: "/micro-saas",color: "from-cyan-500 to-blue-600"
   };
   {;
-    title: "IT Services",description: "Infrastructure, security, and technical consulting",;
+    title: "IT Services",description: "Infrastructure, security, and technical consulting";
     icon: "⚡",link: "/all-services",color: "from-amber-500 to-orange-600"
   };
   {;
@@ -28,8 +28,8 @@ const specialServices = [;
     title: "Services Comparison",link: "/services-comparison"
   };
 ];
-interface CategoriesSectionProps {;
-  showTitle?: boolean,;
+interface CategoriesSectionProps {
+  showTitle?: boolean;
 };
 
 const containerVariants = {;

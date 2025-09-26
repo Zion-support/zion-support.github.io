@@ -1,49 +1,49 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Star,;
-  Rocket, ;
-  Brain, ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-  Atom, ;
-  Cpu, ;
-  Network, ;
-  Database,;
-  TrendingUp,;
-  Users,;
-  Target,;
-  Globe,;
-  Code,;
-  Lock,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  MessageCircle,;
-  BarChart3,;
-  HelpCircle,;
-  FileText,;
-  Truck,;
-  Mail,;
-  Smartphone,;
-  DollarSign,;
-  CheckCircle,;
-  ArrowRight,;
-  Sparkles,;
-  Award,;
-  GitFork,;
-  Server,;
-  Building,;
-  Leaf,;
-  Satellite,;
-  Gamepad2,;
-  Coins,;
-  GraduationCap,;
-  Activity,;
-  Briefcase,;
-  Newspaper,;
-  BookOpen,;
+  Star;
+  Rocket;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Atom;
+  Cpu;
+  Network;
+  Database;
+  TrendingUp;
+  Users;
+  Target;
+  Globe;
+  Code;
+  Lock;
+  Eye;
+  Heart;
+  ShoppingCart;
+  MessageCircle;
+  BarChart3;
+  HelpCircle;
+  FileText;
+  Truck;
+  Mail;
+  Smartphone;
+  DollarSign;
+  CheckCircle;
+  ArrowRight;
+  Sparkles;
+  Award;
+  GitFork;
+  Server;
+  Building;
+  Leaf;
+  Satellite;
+  Gamepad2;
+  Coins;
+  GraduationCap;
+  Activity;
+  Briefcase;
+  Newspaper;
+  BookOpen;
   ExternalLink;
 } from "lucide-react"
 export default function UltimateServicesShowcase2026() {;
@@ -52,50 +52,50 @@ export default function UltimateServicesShowcase2026() {;
       category: 'AI & Machine Learning',icon: Brain,services: [;
         {;
           name: 'AI Workflow Orchestrator',description: 'Intelligent process automation and workflow management',href: '/services/ai-workflow-orchestrator',features: ['Process AutomationWorkflow Optimization', 'AI Decision MakingIntegration Hub']
-        },;
+        };
         {;
           name: 'AI Data Governance Platform',description: 'Comprehensive data management and compliance',href: '/services/ai-data-governance-platform',features: ['Data QualityCompliance Management', 'Privacy ProtectionAudit Trails']
-        },;
+        };
         {;
           name: 'AI Customer Experience Analytics',description: 'Deep insights into customer behavior and satisfaction',href: '/services/ai-customer-experience-analytics',features: ['Behavior AnalysisSentiment Analysis', 'Predictive InsightsPersonalization']
         };
       ];
-    },;
+    };
     {;
       category: 'Cloud & Infrastructure',icon: Cloud,services: [;
         {;
           name: 'Cloud DevOps',description: 'Streamlined development and operations',href: '/services/cloud-devops',features: ['CI/CD PipelinesInfrastructure as Code', 'MonitoringAutomation']
-        },;
+        };
         {;
           name: 'FinOps Advisor',description: 'Cloud cost optimization and management',href: '/services/finops-advisor',features: ['Cost AnalysisResource Optimization', 'Budget ManagementROI Tracking']
         };
       ];
-    },;
+    };
     {;
       category: 'Cybersecurity',icon: Shield,services: [;
         {;
           name: 'AI Cybersecurity Platform',description: 'AI-powered threat detection and response',href: '/services/ai-cybersecurity-platform',features: ['Threat DetectionAutomated Response', 'Risk AssessmentCompliance']
-        },;
+        };
         {;
           name: 'Zero Trust Network Access',description: 'Secure access control and network security',href: '/services/zero-trust-network-access',features: ['Identity VerificationAccess Control', 'Network SegmentationMonitoring']
         };
       ];
-    },;
+    };
     {;
       category: 'Emerging Technologies',icon: Atom,services: [;
         {;
           name: 'Quantum Computing Solutions',description: 'Next-generation quantum computing services',href: '/services/quantum-computing',features: ['Quantum AlgorithmsOptimization', 'SimulationResearch']
-        },;
+        };
         {;
           name: 'IoT Edge Computing',description: 'Smart device networks and edge processing',href: '/services/iot-edge-computing',features: ['Device ManagementEdge Processing', 'Real-time AnalyticsConnectivity']
         };
       ];
-    },;
+    };
     {;
       category: 'Micro SaaS Solutions',icon: ShoppingCart,services: [;
         {;
           name: 'Micro CRM',description: 'Customer relationship management for small businesses',href: '/services/micro-crm',features: ['Contact ManagementSales Tracking', 'Customer InsightsAutomation']
-        },;
+        };
         {;
           name: 'Website Analytics',description: 'Privacy-first analytics for small businesses',href: '/services/website-analytics',features: ['Visitor TrackingPerformance Metrics', 'Privacy ComplianceInsights']
         };

@@ -1,36 +1,36 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain,;
-  Cpu,;
-  Cloud,;
-  Shield,;
-  Rocket,;
-  Zap,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Users,;
-  Target,;
-  Award,;
-  Globe,;
-  Settings,;
-  Database,;
-  Network,;
-  Lock,;
-  Eye,;
-  TrendingUp,;
-  Clock,;
-  DollarSign,;
-  Phone,;
-  Mail,;
-  ExternalLink,;
+  Brain;
+  Cpu;
+  Cloud;
+  Shield;
+  Rocket;
+  Zap;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Users;
+  Target;
+  Award;
+  Globe;
+  Settings;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  TrendingUp;
+  Clock;
+  DollarSign;
+  Phone;
+  Mail;
+  ExternalLink;
   Search;
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025"
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025"
-interface Service {;
+interface Service {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {;
     phone: string,email: string,website: string;
   };
@@ -39,24 +39,24 @@ interface Service {;
   };
 };
 const ComprehensiveServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),;
-  const [searchTerm, setSearchTerm] = useState<string>(''),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   //[^;]*
   const allServices: Service[] = [;
     ...EXPANDED_INNOVATIVE_SERVICES_2025
     ...EMERGING_TECH_SERVICES_2025
-  ],;
+  ];
   //[^;]*
   const categories = useMemo(() => {;
     const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))]
-    return cats,;
-  }, [allServices]),;
+    return cats;
+  }, [allServices]);
   //[^;]*
   const innovationLevels = useMemo(() => {;
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))]
-    return levels,;
-  }, [allServices]),;
+    return levels;
+  }, [allServices]);
   //[^;]*
   const filteredServices = useMemo(() => {;
     return allServices.filter(service => {;
@@ -64,10 +64,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-      return matchesCategory && matchesInnovationLevel && matchesSearch,;&& matchesInnovationLevel && matchesSearch,; matchesInnovationLevel && matchesSearch,
-    }),;
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),;
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      return matchesCategory && matchesInnovationLevel && matchesSearch;&& matchesInnovationLevel && matchesSearch; matchesInnovationLevel && matchesSearch});
+  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI & Analytics':;
@@ -80,31 +79,31 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return <[^>]*/>
       case 'Cybersecurity & AI':;
       case 'Cybersecurity & Quantum':;
-        return <Shield className="h-6 w-6" />,;
+        return <Shield className="h-6 w-6" />;
       case 'Blockchain & Supply Chain':;
-        return <Database className="h-6 w-6" />,;
+        return <Database className="h-6 w-6" />;
       case 'IoT & Edge Computing':;
-        return <Network className="h-6 w-6" />,;
+        return <Network className="h-6 w-6" />;
       case 'Quantum Computing':;
-        return <Cpu className="h-6 w-6" />,;
+        return <Cpu className="h-6 w-6" />;
       case 'AR/VR & Immersive Tech':;
-        return <Eye className="h-6 w-6" />,;
+        return <Eye className="h-6 w-6" />;
       case '5G & Telecommunications':;
-        return <Globe className="h-6 w-6" />,;
+        return <Globe className="h-6 w-6" />;
       case 'Space Technology':;
-        return <Rocket className="h-6 w-6" />,;
+        return <Rocket className="h-6 w-6" />;
       case 'Neuromorphic Computing':;
-        return <Brain className="h-6 w-6" />,;
+        return <Brain className="h-6 w-6" />;
       case 'Digital Twin & Simulation':;
-        return <Settings className="h-6 w-6" />,;
+        return <Settings className="h-6 w-6" />;
       case 'Synthetic Biology':;
-        return <Target className="h-6 w-6" />,;
+        return <Target className="h-6 w-6" />;
       case 'Brain-Computer Interface':;
-        return <Brain className="h-6 w-6" />,;
+        return <Brain className="h-6 w-6" />;
       case 'Sustainability & Energy':;
-        return <Zap className="h-6 w-6" />,;
+        return <Zap className="h-6 w-6" />;
       case 'Autonomous Vehicles & Fleet Management':;
-        return <Rocket className="h-6 w-6" />,;
+        return <Rocket className="h-6 w-6" />;
       default: return <[^>]*/>
     };
   };
@@ -113,9 +112,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'Cutting-edge':;
         return 'bg-gradient-to-r from-purple-600 to-pink-600'
       case 'Advanced':;
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600',;
+        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Professional':;
-        return 'bg-gradient-to-r from-green-600 to-emerald-600',;
+        return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
     };
   };
@@ -360,8 +359,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <button;
                 onClick={() => {;
                   setSelectedCategory('all')
-                  setSelectedInnovationLevel('all'),;
-                  setSearchTerm(''),;
+                  setSelectedInnovationLevel('all');
+                  setSearchTerm('');
                 }};
                 className="[^"]*"
               >;

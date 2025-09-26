@@ -1,22 +1,22 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Send,;
-  CheckCircle,;
-  AlertCircle,;
-  Clock,;
-  MessageSquare,;
-  Building,;
+  Mail;
+  Phone;
+  MapPin;
+  Send;
+  CheckCircle;
+  AlertCircle;
+  Clock;
+  MessageSquare;
+  Building;
   Globe;
 } from "lucide-react"
-interface ContactFormData {;
+interface ContactFormData {
   name: string,email: string,phone: string,company: string,service: string,message: string;
 };
 
-interface ContactFormErrors {;
+interface ContactFormErrors {
   [key: string]: string;
 };
 
@@ -24,9 +24,9 @@ export function EnhancedContact() {;
   const [formData, setFormData] = useState<ContactFormData>({;
     name: '',email: '',phone: '',company: '',service: 'general',message: ''
   });
-  const [errors, setErrors] = useState<ContactFormErrors>({}),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = [;
     { value: 'general', label: 'General Inquiry' };
@@ -41,33 +41,33 @@ export function EnhancedContact() {;
   const validateForm = (): boolean => {;
     const newErrors: ContactFormErrors = {};
     if (!formData.name.trim()) {;
-      newErrors.name = 'Name is required',;
+      newErrors.name = 'Name is required';
     };
 
     if (!formData.email.trim()) {;
-      newErrors.email = 'Email is required',;
+      newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {;
-      newErrors.email = 'Please enter a valid email address',;
+      newErrors.email = 'Please enter a valid email address';
     };
 
     if (!formData.message.trim()) {;
-      newErrors.message = 'Message is required',;
+      newErrors.message = 'Message is required';
     } else if (formData.message.length < 10) {;
-      newErrors.message = 'Message must be at least 10 characters long',;
+      newErrors.message = 'Message must be at least 10 characters long';
     };
 
-    setErrors(newErrors),;
-    return Object.keys(newErrors).length === 0,;
-  },;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {;
-    setFormData(prev => ({ ...prev, [field]: value })),;
+    setFormData(prev => ({ ...prev, [field]: value }));
 
     //[^;]*
     if (errors[field]) {;
-      setErrors(prev => ({ ...prev, [field]: '' })),;
+      setErrors(prev => ({ ...prev, [field]: '' }));
     };
-  },;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault()
@@ -75,22 +75,22 @@ export function EnhancedContact() {;
       return;
     };
 
-    setIsSubmitting(true),;
+    setIsSubmitting(true);
 
     try {;
       //[^;]*
-      await new Promise(resolve => setTimeout(resolve, 2000)),;
+      await new Promise(resolve => setTimeout(resolve, 2000));
 
-      setIsSubmitted(true),;
+      setIsSubmitted(true);
       setFormData({;
         name: '',email: '',phone: '',company: '',service: 'general',message: ''
       });
     } catch (error) {;
-      console.error('Error submitting form:', error),;
+      console.error('Error submitting form:', error);
     } finally {;
-      setIsSubmitting(false),;
+      setIsSubmitting(false);
     };
-  },;
+  };
 
   const contactInfo = [;
     {;
@@ -100,7 +100,7 @@ export function EnhancedContact() {;
       icon: Phone,title: 'Phone',value: '+1 (302) 464-0950',description: 'Call us directly'
     };
     {;
-      icon: MapPin,title: 'Address',value: '364 E Main St STE 1008, Middletown, DE 19709',;
+      icon: MapPin,title: 'Address',value: '364 E Main St STE 1008, Middletown, DE 19709';
       description: 'Visit our office'
     };
     {;

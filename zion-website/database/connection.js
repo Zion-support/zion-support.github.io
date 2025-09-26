@@ -14,8 +14,8 @@ export const dbPool = new Pool({
   connectionTimeoutMillis: 2000,
   maxUses: 7500,
   // SSL configuration for production
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-})
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false})
+
 // Graceful shutdown
 process.on('SIGINT', async () => {
   await dbPool.end()

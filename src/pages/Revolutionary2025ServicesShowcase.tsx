@@ -1,88 +1,88 @@
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import {;
-  Search,;
-  Filter,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Shield,;
-  Brain,;
-  Globe,;
-  Atom,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  CheckCircle,;
-  Clock,;
-  Users,;
-  Target,;
-  BarChart3,;
-  Rocket,;
-  Cpu,;
-  Network,;
-  Database,;
-  Lock,;
-  Leaf,;
-  Scale,;
-  Stethoscope,;
-  Car,;
-  Building2,;
-  DollarSign,;
-  Award,;
-  Lightbulb,;
-  ArrowRight,;
-  ChevronRight,;
-  ChevronLeft,;
-  Play,;
-  Eye,;
-  X,;
-  Flask,;
-  Calculator,;
-  TrendingDown,;
-  Minus,;
-  Plus,;
-  Equal,;
-  Divide,;
-  Percent,;
-  Euro,;
-  Pound,;
-  Yen,;
-  Bitcoin,;
-  Ethereum,;
-  CreditCard,;
-  Wallet,;
-  Banknote,;
-  Coins,;
-  PiggyBank,;
-  Safe,;
-  Vault,;
-  LockKeyhole,;
-  Key,;
-  Fingerprint,;
-  QrCode,;
-  Barcode,;
-  Scan,;
-  Camera,;
-  VideoOff,;
-  Mic,;
-  MicOff,;
-  Volume2,;
-  VolumeX,;
-  Pause,;
-  Stop,;
-  SkipBack,;
-  SkipForward,;
-  Rewind,;
-  FastForward,;
-  Shuffle,;
-  Repeat,;
-  Repeat1,;
-  Shuffle2,;
-  SkipBack2,;
-  SkipForward2,;
-  PlayCircle,;
+  Search;
+  Filter;
+  Star;
+  TrendingUp;
+  Zap;
+  Shield;
+  Brain;
+  Globe;
+  Atom;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  Clock;
+  Users;
+  Target;
+  BarChart3;
+  Rocket;
+  Cpu;
+  Network;
+  Database;
+  Lock;
+  Leaf;
+  Scale;
+  Stethoscope;
+  Car;
+  Building2;
+  DollarSign;
+  Award;
+  Lightbulb;
+  ArrowRight;
+  ChevronRight;
+  ChevronLeft;
+  Play;
+  Eye;
+  X;
+  Flask;
+  Calculator;
+  TrendingDown;
+  Minus;
+  Plus;
+  Equal;
+  Divide;
+  Percent;
+  Euro;
+  Pound;
+  Yen;
+  Bitcoin;
+  Ethereum;
+  CreditCard;
+  Wallet;
+  Banknote;
+  Coins;
+  PiggyBank;
+  Safe;
+  Vault;
+  LockKeyhole;
+  Key;
+  Fingerprint;
+  QrCode;
+  Barcode;
+  Scan;
+  Camera;
+  VideoOff;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Pause;
+  Stop;
+  SkipBack;
+  SkipForward;
+  Rewind;
+  FastForward;
+  Shuffle;
+  Repeat;
+  Repeat1;
+  Shuffle2;
+  SkipBack2;
+  SkipForward2;
+  PlayCircle;
   PauseCircle;
 } from "lucide-react"
 import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2"
@@ -90,14 +90,14 @@ import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-
 //[^;]*
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices]
 const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),;
-  const [selectedROI, setSelectedROI] = useState('all'),;
-  const [sortBy, setSortBy] = useState('title'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid'),;
-  const [selectedServices, setSelectedServices] = useState<string[]>([]),;
+  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   //[^;]*
   useEffect(() => {;
     let filtered = ALL_SERVICES;
@@ -106,53 +106,51 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      ),;
+      );
     };
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
     if (selectedPriceRange !== 'all') {;
-      const [min, max] = selectedPriceRange.split('-').map(Number),;
+      const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {;
-          return price >= min && price <= max,;&& price <= max,; price <= max,
-        };
-        return price >= min,;
-      }),;
+          return price >= min && price <= max;&& price <= max; price <= max};
+        return price >= min;
+      });
     };
     if (selectedROI !== 'all') {;
-      const [min, max] = selectedROI.split('-').map(Number),;
+      const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0')
         if (max) {;
-          return roi >= min && roi <= max,;&& roi <= max,; roi <= max,
-        };
-        return roi >= min,;
-      }),;
+          return roi >= min && roi <= max;&& roi <= max; roi <= max};
+        return roi >= min;
+      });
     };
     //[^;]*
     filtered.sort((a, b) => {;
       switch (sortBy) {;
         case 'price':;
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),;
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
         case 'rating':;
-          return b.rating - a.rating,;
+          return b.rating - a.rating;
         case 'customers':;
-          return b.customers - a.customers,;
+          return b.customers - a.customers;
         default: return a.name.localeCompare(b.name)
       };
     });
-    setServices(filtered),;
-  }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]),;
+    setServices(filtered);
+  }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
   const handleServiceSelect = (serviceId: string) => {;
     setSelectedServices(prev =>;
       prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
         : [...prev, serviceId]
-    ),;
-  },;
+    );
+  };
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -172,7 +170,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions;
             </[^>]*>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
-              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence,;
+              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence;
               quantum computing, and autonomous operations to transform your business.;
             </[^>]*>
           </[^>]*>
@@ -1624,10 +1622,10 @@ const Grid = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 const List = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 export default Revolutionary2025ServicesShowcase;

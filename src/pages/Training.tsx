@@ -3,46 +3,46 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  GraduationCap,;
-  BookOpen, ;
-  Users, ;
-  Clock, ;
-  Star, ;
-  ArrowRight, ;
-  Play, ;
-  Download, ;
-  Award,;
-  Certificate,;
-  Video,;
-  FileText,;
-  Code,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Zap,;
-  Target,;
-  TrendingUp,;
-  CheckCircle,;
-  Calendar,;
-  MapPin,;
-  Globe,;
-  Smartphone,;
-  Laptop,;
-  Server,;
-  Database,;
-  Lock,;
-  Key,;
-  Rocket,;
-  Atom,;
-  Eye,;
-  MessageSquare,;
-  Image,;
-  BarChart3,;
-  Cpu,;
-  Network,;
-  Monitor,;
-  Smartphone as SmartphoneIcon,;
-  Tablet,;
+  GraduationCap;
+  BookOpen;
+  Users;
+  Clock;
+  Star;
+  ArrowRight;
+  Play;
+  Download;
+  Award;
+  Certificate;
+  Video;
+  FileText;
+  Code;
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  Calendar;
+  MapPin;
+  Globe;
+  Smartphone;
+  Laptop;
+  Server;
+  Database;
+  Lock;
+  Key;
+  Rocket;
+  Atom;
+  Eye;
+  MessageSquare;
+  Image;
+  BarChart3;
+  Cpu;
+  Network;
+  Monitor;
+  Smartphone as SmartphoneIcon;
+  Tablet;
   Laptop as LaptopIcon;
 } from "lucide-react"
 export const Training: React.FC = () => {
@@ -59,54 +59,54 @@ export const Training: React.FC = () => {
   ];
   const trainingPrograms = [;
     {;
-      id: 1,title: 'AI Fundamentals & Machine Learning',description: 'Master the basics of artificial intelligence and machine learning with hands-on projects and real-world applications.',category: 'ai-ml',level: 'Beginner',duration: '8 weeks',format: 'Online + Live Sessions',instructor: 'Dr. Sarah Chen',rating: 4.9,students: 1247,price: '$1,299',;
-      featured: true,icon: Brain,color: 'from-purple-500 to-pink-500',topics: ['Python ProgrammingMachine Learning Algorithms', 'Neural NetworksDeep Learning', 'AI Ethics'],;
+      id: 1,title: 'AI Fundamentals & Machine Learning',description: 'Master the basics of artificial intelligence and machine learning with hands-on projects and real-world applications.',category: 'ai-ml',level: 'Beginner',duration: '8 weeks',format: 'Online + Live Sessions',instructor: 'Dr. Sarah Chen',rating: 4.9,students: 1247,price: '$1,299';
+      featured: true,icon: Brain,color: 'from-purple-500 to-pink-500',topics: ['Python ProgrammingMachine Learning Algorithms', 'Neural NetworksDeep Learning', 'AI Ethics'];
       certification: true,liveProjects: 5,support: '24/7'
     };
     {;
-      id: 2,title: 'Advanced Cybersecurity & Threat Intelligence',description: 'Learn advanced cybersecurity techniques, threat hunting, and incident response strategies.',;
-      category: 'cybersecurity',level: 'Advanced',duration: '10 weeks',format: 'Hybrid',instructor: 'Marcus Rodriguez',rating: 4.8,students: 892,price: '$1,599',;
-      featured: true,icon: Shield,color: 'from-green-500 to-emerald-500',topics: ['Penetration TestingThreat Hunting', 'Incident ResponseSecurity Architecture', 'Compliance'],;
+      id: 2,title: 'Advanced Cybersecurity & Threat Intelligence',description: 'Learn advanced cybersecurity techniques, threat hunting, and incident response strategies.';
+      category: 'cybersecurity',level: 'Advanced',duration: '10 weeks',format: 'Hybrid',instructor: 'Marcus Rodriguez',rating: 4.8,students: 892,price: '$1,599';
+      featured: true,icon: Shield,color: 'from-green-500 to-emerald-500',topics: ['Penetration TestingThreat Hunting', 'Incident ResponseSecurity Architecture', 'Compliance'];
       certification: true,liveProjects: 8,support: '24/7'
     };
     {;
-      id: 3,title: 'Cloud-Native Development & DevOps',description: 'Build scalable applications using modern cloud technologies and DevOps practices.',category: 'cloud-devops',level: 'Intermediate',duration: '6 weeks',format: 'Online',instructor: 'Alex Thompson',rating: 4.7,students: 1102,price: '$999',featured: true,icon: Cloud,color: 'from-blue-500 to-cyan-500',topics: ['Docker & KubernetesCI/CD Pipelines', 'AWS/Azure/GCPMicroservices', 'Infrastructure as Code'],;
+      id: 3,title: 'Cloud-Native Development & DevOps',description: 'Build scalable applications using modern cloud technologies and DevOps practices.',category: 'cloud-devops',level: 'Intermediate',duration: '6 weeks',format: 'Online',instructor: 'Alex Thompson',rating: 4.7,students: 1102,price: '$999',featured: true,icon: Cloud,color: 'from-blue-500 to-cyan-500',topics: ['Docker & KubernetesCI/CD Pipelines', 'AWS/Azure/GCPMicroservices', 'Infrastructure as Code'];
       certification: true,liveProjects: 6,support: 'Business Hours'
     };
     {;
-      id: 4,title: 'Data Science & Business Intelligence',description: 'Transform raw data into actionable insights using modern analytics tools and techniques.',category: 'data-analytics',level: 'Intermediate',duration: '8 weeks',format: 'Online + Workshops',instructor: 'Dr. Emily Watson',rating: 4.6,students: 756,price: '$1,199',;
-      featured: false,icon: BarChart3,color: 'from-orange-500 to-red-500',topics: ['Python & RStatistical Analysis', 'Data VisualizationSQL & NoSQL', 'Predictive Modeling'],;
+      id: 4,title: 'Data Science & Business Intelligence',description: 'Transform raw data into actionable insights using modern analytics tools and techniques.',category: 'data-analytics',level: 'Intermediate',duration: '8 weeks',format: 'Online + Workshops',instructor: 'Dr. Emily Watson',rating: 4.6,students: 756,price: '$1,199';
+      featured: false,icon: BarChart3,color: 'from-orange-500 to-red-500',topics: ['Python & RStatistical Analysis', 'Data VisualizationSQL & NoSQL', 'Predictive Modeling'];
       certification: true,liveProjects: 4,support: 'Business Hours'
     };
     {;
-      id: 5,title: 'Quantum Computing Fundamentals',description: 'Introduction to quantum computing principles, algorithms, and practical applications.',;
-      category: 'quantum-computing',level: 'Advanced',duration: '12 weeks',format: 'Online + Lab Access',instructor: 'Dr. James Wilson',rating: 4.9,students: 445,price: '$2,199',;
-      featured: true,icon: Atom,color: 'from-indigo-500 to-purple-500',topics: ['Quantum MechanicsQuantum Algorithms', 'Qiskit ProgrammingQuantum Cryptography', 'Quantum Machine Learning'],;
+      id: 5,title: 'Quantum Computing Fundamentals',description: 'Introduction to quantum computing principles, algorithms, and practical applications.';
+      category: 'quantum-computing',level: 'Advanced',duration: '12 weeks',format: 'Online + Lab Access',instructor: 'Dr. James Wilson',rating: 4.9,students: 445,price: '$2,199';
+      featured: true,icon: Atom,color: 'from-indigo-500 to-purple-500',topics: ['Quantum MechanicsQuantum Algorithms', 'Qiskit ProgrammingQuantum Cryptography', 'Quantum Machine Learning'];
       certification: true,liveProjects: 3,support: '24/7'
     };
     {;
-      id: 6,title: 'IoT & Edge Computing Solutions',description: 'Design and implement IoT systems with edge computing capabilities for real-time processing.',category: 'iot-edge',level: 'Intermediate',duration: '7 weeks',format: 'Hybrid',instructor: 'David Chen',rating: 4.5,students: 623,price: '$899',featured: false,icon: Zap,color: 'from-yellow-500 to-orange-500',topics: ['IoT ArchitectureEdge Computing', 'Sensor NetworksReal-time Processing', 'Security'],;
+      id: 6,title: 'IoT & Edge Computing Solutions',description: 'Design and implement IoT systems with edge computing capabilities for real-time processing.',category: 'iot-edge',level: 'Intermediate',duration: '7 weeks',format: 'Hybrid',instructor: 'David Chen',rating: 4.5,students: 623,price: '$899',featured: false,icon: Zap,color: 'from-yellow-500 to-orange-500',topics: ['IoT ArchitectureEdge Computing', 'Sensor NetworksReal-time Processing', 'Security'];
       certification: true,liveProjects: 5,support: 'Business Hours'
     };
   ];
   const filteredPrograms = trainingPrograms.filter(program => ;
     selectedCategory === 'all' || program.category === selectedCategory
-  ),;
+  );
 
   const getLevelColor = (level: string) => {;
     switch (level) {;
       case 'Beginner': return 'bg-green-500/20 text-green-400 border-green-400/30'
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',;
-      case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30',;
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30';
+      case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
     };
   };
   const getFormatIcon = (format: string) => {;
     if (format.includes('Online')) return Smartphone;
-    if (format.includes('Hybrid')) return Laptop,;
-    if (format.includes('Live')) return Users,;
+    if (format.includes('Hybrid')) return Laptop;
+    if (format.includes('Live')) return Users;
     return Globe;
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -137,7 +137,7 @@ export const Training: React.FC = () => {
             </[^>]*>
             ;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Advance your career with industry-leading training programs in AI, cybersecurity, ;
+              Advance your career with industry-leading training programs in AI, cybersecurity;
               cloud computing, and emerging technologies. Learn from experts and earn recognized certifications.;
             </[^>]*>
             ;
@@ -400,7 +400,7 @@ export const Training: React.FC = () => {
                 icon: Code,title: 'Hands-on Projects',description: 'Apply your learning with real-world projects and case studies',color: 'from-purple-500 to-pink-500'
               };
               {;
-                icon: Globe,title: 'Flexible Learning',description: 'Online, hybrid, and in-person options to fit your schedule',;
+                icon: Globe,title: 'Flexible Learning',description: 'Online, hybrid, and in-person options to fit your schedule';
                 color: 'from-orange-500 to-red-500'
               };
               {;

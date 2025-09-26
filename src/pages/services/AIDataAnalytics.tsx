@@ -5,60 +5,60 @@ import { SEO } from "@/components/SEO"
 export default function AIDataAnalytics() {;
   const features = [;
     {;
-      title: "Predictive Analytics Engine",description: "AI algorithms forecast future trends, customer behavior, and business outcomes with high accuracy",;
+      title: "Predictive Analytics Engine",description: "AI algorithms forecast future trends, customer behavior, and business outcomes with high accuracy";
       icon: Brain,color: "from-blue-500 to-cyan-500"
     };
     {;
       title: "Real-time Data Processing",description: "Process millions of data points in real-time to provide instant insights and recommendations",icon: Zap,color: "from-purple-500 to-pink-500"
     };
     {;
-      title: "Natural Language Queries",description: "Ask complex data questions in plain English and get instant, visual answers",;
+      title: "Natural Language Queries",description: "Ask complex data questions in plain English and get instant, visual answers";
       icon: Globe,color: "from-orange-500 to-red-500"
     };
     {;
-      title: "Automated Insights Discovery",description: "AI automatically identifies patterns, anomalies, and opportunities in your data",;
+      title: "Automated Insights Discovery",description: "AI automatically identifies patterns, anomalies, and opportunities in your data";
       icon: Target,color: "from-green-500 to-emerald-500"
     };
     {;
-      title: "Multi-Source Data Integration",description: "Connect and analyze data from databases, APIs, cloud services, and third-party tools",;
+      title: "Multi-Source Data Integration",description: "Connect and analyze data from databases, APIs, cloud services, and third-party tools";
       icon: Database,color: "from-indigo-500 to-blue-500"
     };
     {;
-      title: "Interactive Visualizations",description: "Create stunning, interactive dashboards that make complex data easy to understand",;
+      title: "Interactive Visualizations",description: "Create stunning, interactive dashboards that make complex data easy to understand";
       icon: PieChart,color: "from-teal-500 to-cyan-500"
     };
   ];
   const pricingPlans = [;
     {;
       name: "Starter",price: "$49",period: "/month",description: "Perfect for small businesses",features: [;
-        "Up to 100,000 data points/month",;
-        "Basic predictive analytics",;
-        "5 custom dashboards",;
-        "Email support",;
+        "Up to 100,000 data points/month";
+        "Basic predictive analytics";
+        "5 custom dashboards";
+        "Email support";
         "Mobile app access"
-      ],;
+      ];
       cta: "Start Free Trial",popular: false;
     };
     {;
       name: "Professional",price: "$129",period: "/month",description: "Ideal for growing businesses",features: [;
-        "Up to 1,000,000 data points/month",;
-        "Advanced AI analytics",;
-        "Unlimited dashboards",;
-        "Priority support",;
-        "API access",;
+        "Up to 1,000,000 data points/month";
+        "Advanced AI analytics";
+        "Unlimited dashboards";
+        "Priority support";
+        "API access";
         "Custom data models"
-      ],;
+      ];
       cta: "Start Free Trial",popular: true;
     };
     {;
       name: "Enterprise",price: "$399",period: "/month",description: "For large organizations",features: [;
         "Unlimited data points"
-        "Custom AI models",;
-        "White-label solution",;
-        "Dedicated support",;
-        "Advanced security",;
+        "Custom AI models";
+        "White-label solution";
+        "Dedicated support";
+        "Advanced security";
         "Custom integrations"
-      ],;
+      ];
       cta: "Contact Sales",popular: false;
     };
   ];
@@ -75,18 +75,18 @@ export default function AIDataAnalytics() {;
   ];
   const useCases = [;
     {;
-      title: "Customer Analytics",description: "Understand customer behavior, preferences, and lifetime value",;
+      title: "Customer Analytics",description: "Understand customer behavior, preferences, and lifetime value";
       icon: Users,color: "from-blue-500 to-cyan-500"
     };
     {;
-      title: "Financial Forecasting",description: "Predict revenue, expenses, and cash flow with AI accuracy",;
+      title: "Financial Forecasting",description: "Predict revenue, expenses, and cash flow with AI accuracy";
       icon: BarChart3,color: "from-purple-500 to-pink-500"
     };
     {;
       title: "Operational Intelligence",description: "Monitor and optimize business operations in real-time",icon: TrendingUp,color: "from-orange-500 to-red-500"
     };
     {;
-      title: "Market Analysis",description: "Track competitors, market trends, and business opportunities",;
+      title: "Market Analysis",description: "Track competitors, market trends, and business opportunities";
       icon: Globe,color: "from-green-500 to-emerald-500"
     };
   ];

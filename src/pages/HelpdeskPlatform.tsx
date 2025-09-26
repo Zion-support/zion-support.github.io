@@ -2,46 +2,46 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  MessageCircle,;
-  Users, ;
-  Ticket, ;
-  Clock, ;
-  CheckCircle, ;
-  AlertCircle, ;
-  Search, ;
-  Filter,;
-  ArrowRight,;
-  Star,;
-  Globe,;
-  Cpu,;
-  Shield,;
-  Cloud,;
-  Zap,;
-  Target,;
-  Activity,;
-  BarChart3,;
-  Settings,;
-  Bell,;
-  Download,;
-  Upload,;
-  RefreshCw,;
-  Eye,;
-  Lock,;
-  Database,;
-  Network,;
-  Smartphone,;
-  Monitor,;
-  Headphones,;
-  Mail,;
-  Phone,;
-  Video,;
-  FileText,;
-  Calendar,;
-  Tag,;
-  UserCheck,;
-  UserX,;
-  TrendingUp,;
-  PieChart,;
+  MessageCircle;
+  Users;
+  Ticket;
+  Clock;
+  CheckCircle;
+  AlertCircle;
+  Search;
+  Filter;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Shield;
+  Cloud;
+  Zap;
+  Target;
+  Activity;
+  BarChart3;
+  Settings;
+  Bell;
+  Download;
+  Upload;
+  RefreshCw;
+  Eye;
+  Lock;
+  Database;
+  Network;
+  Smartphone;
+  Monitor;
+  Headphones;
+  Mail;
+  Phone;
+  Video;
+  FileText;
+  Calendar;
+  Tag;
+  UserCheck;
+  UserX;
+  TrendingUp;
+  PieChart;
   LineChart;
 } from "lucide-react"
 export default function HelpdeskPlatform() {;
@@ -68,20 +68,20 @@ export default function HelpdeskPlatform() {;
   const services = [;
     {;
       title: "Customer Support",description: "Multi-channel customer support and ticket management",icon: MessageCircle,benefits: ["Email support", "Live chat", "Phone support", "Social media integration"]
-    },;
+    };
     {;
       title: "Internal IT Support",description: "Employee IT support and technical assistance",icon: Cpu,benefits: ["Hardware support", "Software assistance", "Network issues", "Access management"]
-    },;
+    };
     {;
       title: "Knowledge Base",description: "Self-service knowledge base and documentation",icon: FileText,benefits: ["FAQ management", "Documentation", "Video tutorials", "Search functionality"]
-    },;
+    };
     {;
       title: "Automation & AI",description: "AI-powered automation and intelligent routing",icon: Brain,benefits: ["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"]
     };
-  ],;
+  ];
 
   const integrations = [;
-    "CRM Systems", "Email Platforms", "Chat Tools", "Social Media", ;
+    "CRM Systems", "Email Platforms", "Chat Tools", "Social Media";
     "Project Management", "Analytics Tools", "Cloud Services", "Mobile Apps", "API Access", "Webhooks"
   ];
   return (

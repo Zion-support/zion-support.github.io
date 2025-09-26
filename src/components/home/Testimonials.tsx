@@ -1,19 +1,19 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
-interface Testimonial {;
+interface Testimonial {
   id: number,name: string,role: string,company: string,content: string,rating: number,avatar: string,industry: string;
 };
 
 const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0),;
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [;
     {;
       id: 1,name: "Sarah Chen",role: "CTO",company: "TechFlow Solutions",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",industry: "Technology"
     };
     {;
-      id: 2,name: "Marcus Rodriguez",role: "VP of Operations",company: "Global Manufacturing Co.",content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",;
+      id: 2,name: "Marcus Rodriguez",role: "VP of Operations",company: "Global Manufacturing Co.",content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.";
       rating: 5,avatar: "/images/testimonials/marcus-rodriguez.jpg",industry: "Manufacturing"
     };
     {;
@@ -24,12 +24,12 @@ const Testimonials: React.FC = () => {
     };
   ];
   const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length),;
-  },;
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),;
-  },;
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const goToTestimonial = (index: number) => {;
     setCurrentIndex(index)
