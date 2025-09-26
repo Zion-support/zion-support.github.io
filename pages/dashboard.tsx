@@ -11,12 +11,14 @@ import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonit
 import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
 import SystemMonitor from '../src/components/SystemMonitor';
 import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
+import SecurityMonitor from '../src/components/SecurityMonitor';
+import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
 import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
-import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -36,6 +38,9 @@ const Dashboard: React.FC = () => {
     { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
     { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
     { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
     { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
   ];
@@ -203,6 +208,96 @@ const Dashboard: React.FC = () => {
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
             <AdvancedSecurityEnhancements />
+          </div>
+        );
+      case 'new-performance':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <PerformanceDashboard 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onAlert={(alert) => console.log('Performance alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-security':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Monitoring
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <SecurityMonitor 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-analytics':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <EnhancedAnalytics 
+              refreshInterval={isRealTime ? 10000 : 60000}
+              enableRealTime={isRealTime}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
           </div>
         );
       case 'error-handler':
