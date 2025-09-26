@@ -1,6 +1,71 @@
 /** @type {import('next').NextConfig} */
-export default {
+const nextConfig = {
+  // Enable TypeScript checking
   typescript: {
-    ignoreBuildErrors: true},
+    ignoreBuildErrors: false,
+  },
+  
+  // Enable ESLint checking
   eslint: {
-    ignoreDuringBuilds: true}};
+    ignoreDuringBuilds: false,
+  },
+  
+  // Enable experimental features
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+  
+  // Image optimization
+  images: {
+    domains: [],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Performance optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Webpack configuration
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Add custom webpack configurations here if needed
+    return config;
+  },
+};
+
+export default nextConfig;
