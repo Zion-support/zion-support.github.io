@@ -50,7 +50,8 @@
     "app/**/*",
     "src/src/**/*",
     "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/src/**/*"
   ],
   "exclude": [
     "node_modules",
