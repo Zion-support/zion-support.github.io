@@ -8,7 +8,8 @@
   }
 
   body {
-    @apply bg-zion-slate-dark text-white;
+    background-color: #475569;
+    color: white;
   }
 }
 
@@ -18,10 +19,10 @@
   }
 
   .btn-secondary {
-    @apply bg-zion-slate hover:bg-zion-slate-light text-white font-semibold py-3 px-6 rounded-lg border border-zion-slate transition-all duration-300;
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg border border-blue-500 transition-all duration-300;
   }
 
   .card {
-    @apply bg-zion-slate/50 border border-zion-slate-light rounded-lg p-6 hover:bg-zion-slate/70 transition-all duration-300;
+    @apply bg-gray-800/50 border border-gray-700 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300;
   }
 }
