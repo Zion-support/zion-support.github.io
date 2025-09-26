@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('../components/Header'), { ssr: false });
 import Footer from '../components/Footer';
 
 const InnovativeServicesShowcase2025 = () => {
