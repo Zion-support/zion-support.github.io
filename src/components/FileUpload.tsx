@@ -77,6 +77,20 @@ export const FileUpload: React.FC<FileUploadProps> = ({
       return;
     }
 
+    const validateFile = (file: File): string | null => {
+      // Check file size
+      if (file.size > maxSize * 1024 * 1024) {
+        return `File size must be less than ${maxSize}MB`;
+      }
+
+      // Check file type
+      if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {
+        return `File type ${file.type} is not allowed`;
+      }
+
+      return null;
+    };
+
     const newFiles: UploadedFile[] = [];
 
     for (const file of fileArray) {
@@ -102,6 +116,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     if (onFileSelect) {
       onFileSelect(fileArray);
     }
+<<<<<<< HEAD
   }, [uploadedFiles.length, maxFiles, onFileSelect, validateFile]);
 
   const handleDragOver = (e: React.DragEvent) => {
