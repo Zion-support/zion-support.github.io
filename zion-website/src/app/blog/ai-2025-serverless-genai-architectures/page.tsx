@@ -1,24 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
+import React from 'react'
+import { Metadata } from 'next'
+import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'Serverless GenAI Architectures (2025) | Zion Tech Group',
+  title: 'Serverless GenAI Architectures (2025) | Zion Tech Group'
   description:
-    'Design serverless GenAI backends with event-driven pipelines, vector stores, evals, and cost guardrails. Reference patterns for AWS, GCP, and Azure.',
+    'Design serverless GenAI backends with event-driven pipelines, vector stores, evals, and cost guardrails. Reference patterns for AWS, GCP, and Azure.'
   keywords:
-    'serverless, GenAI, AWS Lambda, Cloud Functions, Azure Functions, vector DB, event-driven, cost guardrails',
+    'serverless, GenAI, AWS Lambda, Cloud Functions, Azure Functions, vector DB, event-driven, cost guardrails'
   openGraph: {
-    title: 'Serverless GenAI Architectures (2025)',
+    title: 'Serverless GenAI Architectures (2025)'
     description:
-      'Event-driven GenAI backends with queues, functions, vector stores, and evaluations. Shipping safely at low cost.',
-    type: 'article',
-    publishedTime: '2025-09-12T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Architecture', 'Serverless', 'GenAI'],
-  },
-};
-
+      'Event-driven GenAI backends with queues, functions, vector stores, and evaluations. Shipping safely at low cost.'
+    type: 'article'
+    publishedTime: '2025-09-12T00: 00
+  00.000Z'
+    authors: ['Zion Tech Group']
+    tags: ['Architecture', 'Serverless', 'GenAI']}}
 export default function ServerlessGenAIArchitectures2025() {
   return (
     <div className="min-h-screen bg-white">
@@ -81,6 +78,6 @@ export default function ServerlessGenAIArchitectures2025() {
         </div>
       </article>
     </div>
-  );
+  )
 }
 

@@ -2,56 +2,56 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Star,;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Rocket, ;
-  Target, ;
-  CheckCircle,;
-  ArrowRight,;
-  Sparkles,;
-  Globe,;
-  Users,;
-  Award,;
-  TrendingUp,;
-  Heart,;
-  Crown,;
-  Eye,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Network,;
-  Smartphone,;
-  BarChart3,;
-  Code,;
-  Server,;
-  Chip,;
-  Wifi,;
-  ShieldCheck,;
-  Bot,;
-  GitFork,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  DollarSign,;
-  Atom,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Activity,;
-  FileText,;
-  MessageCircle,;
-  Search,;
-  BarChart,;
-  Users2,;
-  Settings,;
-  Palette,;
-  PhoneCall,;
-  Mail as MailIcon,;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Rocket;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Sparkles;
+  Globe;
+  Users;
+  Award;
+  TrendingUp;
+  Heart;
+  Crown;
+  Eye;
+  Lock;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Bot;
+  GitFork;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  DollarSign;
+  Atom;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  FileText;
+  MessageCircle;
+  Search;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  PhoneCall;
+  Mail as MailIcon;
   MapPin as MapPinIcon;
 } from "lucide-react"
 import EnhancedSEOManager from "../components/EnhancedSEOManager"
@@ -60,54 +60,54 @@ export default function ComprehensiveImprovements2025() {;
     {;
       category: 'AI & Machine Learning Services',icon: Brain,color: 'from-zion-cyan to-zion-purple',items: [;
         'AI Workflow Orchestrator - Intelligent workflow automationAI Data Governance Platform - Comprehensive data compliance'
-        'AI Customer Experience Analytics - Advanced customer insightsAI Business Intelligence Analytics - ML-powered insights',;
-        'AI Compliance Assistant - Automated regulatory complianceAI Sales Copilot - Intelligent sales optimization',;
-        'AI-Powered SEO - Machine learning optimizationInterview Assessment AI - Candidate evaluation',;
-        'AI Content Marketing Suite - Automated content creationAI Customer Support Automation - Intelligent support',;
-        'AI Project Management - AI-driven optimizationAI Financial Analytics - Intelligent financial insights',;
-        'AI Financial Risk Management - Risk assessmentAI Code Review Security Scanner - Security analysis',;
-        'AI DevOps Automation Platform - DevOps automationAI Customer Experience Support - Enhanced experience',;
-        'AI Marketing Automation Personalization - PersonalizationAI Quantum Hybrid Platform - Quantum-AI integration',;
-        'AI Quantum Financial Trading - Quantum tradingAI Autonomous Supply Chain - Supply chain automation',;
+        'AI Customer Experience Analytics - Advanced customer insightsAI Business Intelligence Analytics - ML-powered insights';
+        'AI Compliance Assistant - Automated regulatory complianceAI Sales Copilot - Intelligent sales optimization';
+        'AI-Powered SEO - Machine learning optimizationInterview Assessment AI - Candidate evaluation';
+        'AI Content Marketing Suite - Automated content creationAI Customer Support Automation - Intelligent support';
+        'AI Project Management - AI-driven optimizationAI Financial Analytics - Intelligent financial insights';
+        'AI Financial Risk Management - Risk assessmentAI Code Review Security Scanner - Security analysis';
+        'AI DevOps Automation Platform - DevOps automationAI Customer Experience Support - Enhanced experience';
+        'AI Marketing Automation Personalization - PersonalizationAI Quantum Hybrid Platform - Quantum-AI integration';
+        'AI Quantum Financial Trading - Quantum tradingAI Autonomous Supply Chain - Supply chain automation';
         'AI Cybersecurity Threat Intelligence - Threat detection'
       ];
-    },;
+    };
     {;
       category: 'Cloud & DevOps Solutions',icon: Cloud,color: 'from-blue-500 to-cyan-500',items: [;
         'Cloud DevOps - Infrastructure automation & scalingIT Infrastructure - Enterprise infrastructure solutions'
         'FinOps Advisor - Cloud cost optimizationCloud FinOps Optimizer - Financial operations automation'
       ];
-    },;
+    };
     {;
       category: 'Cybersecurity & Privacy',icon: Shield,color: 'from-red-500 to-orange-500',items: [;
         'AI Cybersecurity Platform - Advanced AI-powered securitySecurity Headers & CSP - Web security hardening'
         'DSR Privacy Portal - GDPR/CCPA complianceZero Trust Network Access - Modern security architecture'
       ];
-    },;
+    };
     {;
       category: 'Digital Transformation',icon: Zap,color: 'from-yellow-500 to-orange-500',items: [;
         'Digital Twin - Virtual system replicasDigital Transformation - Strategic technology consulting'
         'IT Consulting - Technology strategy & planning'
       ];
-    },;
+    };
     {;
       category: 'Emerging Technologies',icon: Atom,color: 'from-indigo-500 to-purple-500',items: [;
         'Quantum Computing - Next-gen computational powerIoT Edge Computing - Smart device networks'
         'Space Tech - Space technology solutionsGreen IT - Sustainable technology solutions'
       ];
     };
-  ],;
+  ];
 
   const features = [;
     {;
-      title: 'Futuristic Design',description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX',;
+      title: 'Futuristic Design',description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX';
       icon: Sparkles,color: 'from-pink-500 to-purple-500'
     };
     {;
       title: 'Responsive Layout',description: 'Optimized for all screen sizes with mobile-first approach',icon: Smartphone,color: 'from-blue-500 to-cyan-500'
     };
     {;
-      title: 'Performance Optimized',description: 'Lazy loading, code splitting, and optimized animations',;
+      title: 'Performance Optimized',description: 'Lazy loading, code splitting, and optimized animations';
       icon: Zap,color: 'from-yellow-500 to-orange-500'
     };
     {;
@@ -120,8 +120,8 @@ export default function ComprehensiveImprovements2025() {;
   return (
     <EnhancedSEOManager;
       seoData={{;
-        title: 'Comprehensive Improvements 2025 | Zion Tech Group',description: 'Discover our comprehensive suite of improvements including AI services, performance analytics, SEO optimization, and modern UI/UX enhancements.',;
-        keywords: ['AI servicesperformance analytics', 'SEO optimizationUI/UX', 'security featuresintegrations'],;
+        title: 'Comprehensive Improvements 2025 | Zion Tech Group',description: 'Discover our comprehensive suite of improvements including AI services, performance analytics, SEO optimization, and modern UI/UX enhancements.';
+        keywords: ['AI servicesperformance analytics', 'SEO optimizationUI/UX', 'security featuresintegrations'];
         ogType: 'website',canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
       }};
     >;

@@ -2,22 +2,22 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  Briefcase,;
-  Users, ;
-  Heart, ;
-  Zap, ;
-  Globe, ;
-  Award, ;
-  Mail, ;
-  MapPin, ;
-  Clock, ;
-  DollarSign,;
-  ChevronDown,;
+  Briefcase;
+  Users;
+  Heart;
+  Zap;
+  Globe;
+  Award;
+  Mail;
+  MapPin;
+  Clock;
+  DollarSign;
+  ChevronDown;
   ExternalLink;
 } from "lucide-react"
 const Careers: React.FC = () => {
-  const [expandedJob, setExpandedJob] = useState<string | null>(null),;
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),;
+  const [expandedJob, setExpandedJob] = useState<string | null>(null);
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
 
   const departments = [;
     { id: 'all', name: 'All Departments', count: 12 };
@@ -28,83 +28,83 @@ const Careers: React.FC = () => {
   ];
   const jobListings = [;
     {;
-      id: 'senior-ai-engineer',title: 'Senior AI Engineer',department: 'engineering',location: 'Remote / San Francisco, CA',;
-      type: 'Full-time',salary: '$120,000 - $180,000',;
+      id: 'senior-ai-engineer',title: 'Senior AI Engineer',department: 'engineering',location: 'Remote / San Francisco, CA';
+      type: 'Full-time',salary: '$120,000 - $180,000';
       experience: '5+ years',description: 'Join our AI team to develop cutting-edge machine learning solutions and autonomous systems.',requirements: [;
-        'Strong background in machine learning and deep learningExperience with Python, TensorFlow, and PyTorch',;
-        'Knowledge of cloud platforms (AWS, Azure, GCP)Experience with MLOps and model deployment',;
+        'Strong background in machine learning and deep learningExperience with Python, TensorFlow, and PyTorch';
+        'Knowledge of cloud platforms (AWS, Azure, GCP)Experience with MLOps and model deployment';
         'Strong problem-solving and communication skills'
-      ],;
+      ];
       responsibilities: [;
         'Design and implement AI/ML solutionsOptimize model performance and scalability'
-        'Collaborate with cross-functional teamsMentor junior engineers',;
+        'Collaborate with cross-functional teamsMentor junior engineers';
         'Stay current with AI/ML trends and technologies'
-      ],;
+      ];
       benefits: [;
         'Competitive salary and equityFlexible work arrangements'
-        'Professional development budgetHealth, dental, and vision insurance',;
+        'Professional development budgetHealth, dental, and vision insurance';
         '401(k) with company match'
       ];
-    },;
+    };
     {;
-      id: 'ai-sales-engineer',title: 'AI Sales Engineer',department: 'sales',location: 'Remote / New York, NY',;
-      type: 'Full-time',salary: '$90,000 - $140,000',;
+      id: 'ai-sales-engineer',title: 'AI Sales Engineer',department: 'sales',location: 'Remote / New York, NY';
+      type: 'Full-time',salary: '$90,000 - $140,000';
       experience: '3+ years',description: 'Help clients understand and implement our AI solutions through technical expertise and sales acumen.',requirements: [;
         'Technical background in AI/ML or software engineeringExperience in B2B sales or sales engineering'
-        'Strong presentation and communication skillsAbility to understand client needs and propose solutions',;
+        'Strong presentation and communication skillsAbility to understand client needs and propose solutions';
         'Experience with CRM systems'
-      ],;
+      ];
       responsibilities: [;
         'Conduct technical demonstrations and presentationsDevelop proof-of-concept solutions'
-        'Collaborate with sales and engineering teamsProvide technical support during sales process',;
+        'Collaborate with sales and engineering teamsProvide technical support during sales process';
         'Build relationships with technical stakeholders'
-      ],;
+      ];
       benefits: [;
         'Base salary plus commissionPerformance bonuses'
-        'Company car allowanceHealth and wellness benefits',;
+        'Company car allowanceHealth and wellness benefits';
         'Professional development opportunities'
       ];
-    },;
+    };
     {;
-      id: 'product-marketing-manager',title: 'Product Marketing Manager',department: 'marketing',location: 'Remote / Austin, TX',;
-      type: 'Full-time',salary: '$80,000 - $120,000',;
-      experience: '4+ years',description: 'Drive product positioning, messaging, and go-to-market strategies for our AI solutions.',;
+      id: 'product-marketing-manager',title: 'Product Marketing Manager',department: 'marketing',location: 'Remote / Austin, TX';
+      type: 'Full-time',salary: '$80,000 - $120,000';
+      experience: '4+ years',description: 'Drive product positioning, messaging, and go-to-market strategies for our AI solutions.';
       requirements: [;
         'Experience in B2B SaaS product marketingStrong analytical and creative skills'
-        'Experience with market research and competitive analysisExcellent written and verbal communication',;
+        'Experience with market research and competitive analysisExcellent written and verbal communication';
         'Understanding of AI/ML technologies'
-      ],;
+      ];
       responsibilities: [;
         'Develop product positioning and messagingCreate marketing collateral and campaigns'
-        'Conduct market research and competitive analysisWork with product and sales teams',;
+        'Conduct market research and competitive analysisWork with product and sales teams';
         'Track and analyze marketing metrics'
-      ],;
+      ];
       benefits: [;
         'Competitive salary and benefitsRemote work flexibility'
-        'Marketing budget for tools and resourcesHealth and wellness benefits',;
+        'Marketing budget for tools and resourcesHealth and wellness benefits';
         'Professional development opportunities'
       ];
-    },;
+    };
     {;
-      id: 'devops-engineer',title: 'DevOps Engineer',department: 'engineering',location: 'Remote / Seattle, WA',;
-      type: 'Full-time',salary: '$100,000 - $150,000',;
+      id: 'devops-engineer',title: 'DevOps Engineer',department: 'engineering',location: 'Remote / Seattle, WA';
+      type: 'Full-time',salary: '$100,000 - $150,000';
       experience: '3+ years',description: 'Build and maintain our cloud infrastructure and deployment pipelines.',requirements: [;
-        'Experience with AWS, Azure, or GCPKnowledge of Docker, Kubernetes, and CI/CD',;
-        'Experience with infrastructure as code (Terraform)Strong scripting skills (Python, Bash)',;
+        'Experience with AWS, Azure, or GCPKnowledge of Docker, Kubernetes, and CI/CD';
+        'Experience with infrastructure as code (Terraform)Strong scripting skills (Python, Bash)';
         'Understanding of security best practices'
-      ],;
+      ];
       responsibilities: [;
         'Manage cloud infrastructure and servicesAutomate deployment and scaling processes'
-        'Monitor system performance and reliabilityImplement security and compliance measures',;
+        'Monitor system performance and reliabilityImplement security and compliance measures';
         'Collaborate with development teams'
-      ],;
+      ];
       benefits: [;
         'Competitive salary and equityRemote work flexibility'
-        'Cloud certification reimbursementHealth and wellness benefits',;
+        'Cloud certification reimbursementHealth and wellness benefits';
         'Professional development budget'
       ];
     };
-  ],;
+  ];
 
   const companyValues = [;
     {;
@@ -122,7 +122,7 @@ const Careers: React.FC = () => {
   ];
   const filteredJobs = selectedDepartment === 'all' ;
     ? jobListings ;
-    : jobListings.filter(job => job.department === selectedDepartment),;
+    : jobListings.filter(job => job.department === selectedDepartment);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

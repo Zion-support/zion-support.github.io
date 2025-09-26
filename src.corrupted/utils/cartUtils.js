@@ -20,9 +20,7 @@
   
   getTotalItems: (cart) => {
     return cart.reduce((total, item) => total + item.quantity, 0);
-  },
-  
-  }
+  }}
 };
 
 export default cartUtils;

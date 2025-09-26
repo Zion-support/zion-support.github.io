@@ -1,6 +1,5 @@
-'use client',
-import { siteUpdates } from '../../data/updates',
-
+'use client'
+import { siteUpdates } from '../../data/updates'
 export default function UpdatesPage() {
   return (
     <div className='bg-black min-h-screen'>
@@ -52,5 +51,5 @@ export default function UpdatesPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

@@ -1,69 +1,69 @@
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain,;
-  Globe,;
-  Zap,;
-  Shield,;
-  Cloud,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Code,;
-  Lock,;
-  Rocket,;
-  Leaf,;
-  Waves,;
-  Factory,;
-  Building2,;
-  Cpu,;
-  Network,;
-  Eye,;
-  Heart,;
-  Lightbulb,;
-  TrendingUp,;
-  Users,;
-  Target,;
-  Award,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  CheckCircle,;
-  Clock,;
-  Users,;
-  Target,;
-  BarChart3,;
-  Rocket,;
-  Cpu,;
-  Network,;
-  Database,;
-  Lock,;
-  Leaf,;
-  Scale,;
-  Stethoscope,;
-  Car,;
-  Building2,;
-  DollarSign,;
-  Award,;
-  Lightbulb,;
-  ArrowRight,;
-  ChevronRight,;
-  ChevronLeft,;
-  Play,;
-  Eye,;
-  X,;
+  Brain;
+  Globe;
+  Zap;
+  Shield;
+  Cloud;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Code;
+  Lock;
+  Rocket;
+  Leaf;
+  Waves;
+  Factory;
+  Building2;
+  Cpu;
+  Network;
+  Eye;
+  Heart;
+  Lightbulb;
+  TrendingUp;
+  Users;
+  Target;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  CheckCircle;
+  Clock;
+  Users;
+  Target;
+  BarChart3;
+  Rocket;
+  Cpu;
+  Network;
+  Database;
+  Lock;
+  Leaf;
+  Scale;
+  Stethoscope;
+  Car;
+  Building2;
+  DollarSign;
+  Award;
+  Lightbulb;
+  ArrowRight;
+  ChevronRight;
+  ChevronLeft;
+  Play;
+  Eye;
+  X;
   Beaker;
 } from "lucide-react"
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027"
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),;
-  const [sortBy, setSortBy] = useState('title'),;
-  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null),;
-  const [currentSlide, setCurrentSlide] = useState(0),;
+  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
+  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))]
   const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))]
@@ -71,65 +71,64 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
   const filteredServices = services.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
     ;
-    return matchesSearch && matchesCategory && matchesInnovation,;&& matchesCategory && matchesInnovation,; matchesCategory && matchesInnovation,
-  }),;
+    return matchesSearch && matchesCategory && matchesInnovation;&& matchesCategory && matchesInnovation; matchesCategory && matchesInnovation});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'innovation':;
         const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0),
       case 'roi':;
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', '')),;
+        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default: return a.title.localeCompare(b.title)
     };
   });
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI & Financial Technology': return <[^>]*/>
-      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />,;
-      case 'AI & Supply Chain': return <Network className="w-5 h-5" />,;
-      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />,;
-      case 'AI & Energy Management': return <Zap className="w-5 h-5" />,;
-      case 'Quantum & Networking': return <Globe className="w-5 h-5" />,;
-      case 'AI & Education Technology': return <Users className="w-5 h-5" />,;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />,;
-      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />,;
-      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />,;
+      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
+      case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
+      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />;
+      case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
+      case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
+      case 'AI & Education Technology': return <Users className="w-5 h-5" />;
+      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
+      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
+      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <[^>]*/>
     };
   };
   const getInnovationLevelColor = (level: string) => {;
     switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600'
-      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600',;
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600',;
+      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600'
     };
   };
   const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
     setSelectedService(service)
     setCurrentSlide(0)
-  },;
+  };
 
   const nextSlide = () => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev + 1) % 4),;
+      setCurrentSlide((prev) => (prev + 1) % 4);
     };
-  },;
+  };
 
   const prevSlide = () => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4),;
+      setCurrentSlide((prev) => (prev - 1 + 4) % 4);
     };
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
@@ -147,7 +146,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
               Enhanced Innovative Services 2027;
             </[^>]*>
             <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">;
-              Discover the future of technology with our comprehensive suite of AI, quantum computing, ;
+              Discover the future of technology with our comprehensive suite of AI, quantum computing;
               and cutting-edge innovative services designed to revolutionize your business.;
             </[^>]*>
             <div className="flex justify-center space-x-4">;
@@ -690,6 +689,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default EnhancedInnovativeServicesShowcase2027;

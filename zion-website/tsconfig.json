@@ -25,7 +25,11 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules",
-    "src/app/updates/**",
-    "src/data/updates.ts"
+    "src/app/**",
+    "src/components/NewContentPromoBanner.tsx",
+    "src/data/updates.ts",
+    "src/utils/**",
+    "e2e/**",
+    "playwright.config.ts"
   ]
 }

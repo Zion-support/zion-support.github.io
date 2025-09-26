@@ -1,34 +1,34 @@
 import React, { useState } from "react"
 import { SEO } from "../components/SEO"
 import { ;
-  HelpCircle,;
-  MessageCircle, ;
-  Phone, ;
-  Mail, ;
-  Clock, ;
-  Search,;
-  BookOpen,;
-  FileText,;
-  Video,;
-  Users,;
-  Zap,;
-  CheckCircle,;
-  ArrowRight,;
-  ExternalLink,;
-  Ticket,;
-  MessageCircle,;
-  Headphones,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Shield,;
-  Rocket,;
-  Brain,;
+  HelpCircle;
+  MessageCircle;
+  Phone;
+  Mail;
+  Clock;
+  Search;
+  BookOpen;
+  FileText;
+  Video;
+  Users;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  ExternalLink;
+  Ticket;
+  MessageCircle;
+  Headphones;
+  Globe;
+  Smartphone;
+  Monitor;
+  Shield;
+  Rocket;
+  Brain;
   Cloud;
 } from "lucide-react"
 const Support: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [;
     { id: 'all', name: 'All Categories', icon: HelpCircle };
@@ -46,7 +46,7 @@ const Support: React.FC = () => {
       icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets'
     };
     {;
-      icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST',;
+      icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST';
       responseTime: 'Immediate',priority: 'high',href: '/support/phone'
     };
     {;
@@ -61,7 +61,7 @@ const Support: React.FC = () => {
       icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials'
     };
     {;
-      icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members',;
+      icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members';
       href: '/community'
     };
     {;
@@ -71,26 +71,26 @@ const Support: React.FC = () => {
   const commonIssues = [;
     {;
       category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: ['passwordlogin', 'account']
-    },;
+    };
     {;
       category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: ['integrationapi', 'documentation']
-    },;
+    };
     {;
       category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: ['billingaccount', 'payment']
-    },;
+    };
     {;
-      category: 'Technical',title: 'Service is running slow, what should I do?',;
-      solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.',;
+      category: 'Technical',title: 'Service is running slow, what should I do?';
+      solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.';
       tags: ['performancetroubleshooting', 'speed']
     };
-  ],;
+  ];
 
   const filteredIssues = commonIssues.filter(issue => ;
     (selectedCategory === 'all' || issue.category.toLowerCase() === selectedCategory) &&
     (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
      issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||;
      issue.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-  ),;
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

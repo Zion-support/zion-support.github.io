@@ -2,17 +2,17 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  Users,;
-  Target, ;
-  Award, ;
-  Globe, ;
-  Zap, ;
-  Brain, ;
-  Rocket, ;
-  Shield,;
-  Heart,;
-  Star,;
-  CheckCircle,;
+  Users;
+  Target;
+  Award;
+  Globe;
+  Zap;
+  Brain;
+  Rocket;
+  Shield;
+  Heart;
+  Star;
+  CheckCircle;
   ArrowRight;
 } from "lucide-react"
 export default function About() {;
@@ -41,11 +41,11 @@ export default function About() {;
       name: 'Kleber Santos',role: 'CEO & Founder',bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',image: '/team/kleber-santos.jpg'
     };
     {;
-      name: 'AI Research Team',role: 'AI & ML Specialists',bio: 'Experts in machine learning, neural networks, and autonomous systems development.',;
+      name: 'AI Research Team',role: 'AI & ML Specialists',bio: 'Experts in machine learning, neural networks, and autonomous systems development.';
       image: '/team/ai-team.jpg'
     };
     {;
-      name: 'DevOps Engineers',role: 'Infrastructure & Cloud',bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',;
+      name: 'DevOps Engineers',role: 'Infrastructure & Cloud',bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.';
       image: '/team/devops-team.jpg'
     };
   ];

@@ -2,33 +2,33 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Brain,;
-  BarChart3, ;
-  TrendingUp, ;
-  Target, ;
-  Zap, ;
-  Shield, ;
-  Cloud, ;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Lightbulb,;
-  Cpu,;
-  Database,;
-  Network,;
-  Eye,;
-  Sparkles,;
-  Rocket,;
-  Globe,;
-  Clock,;
-  Award,;
-  Star,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  ShoppingCart,;
-  DollarSign,;
-  Heart,;
+  Brain;
+  BarChart3;
+  TrendingUp;
+  Target;
+  Zap;
+  Shield;
+  Cloud;
+  Users;
+  CheckCircle;
+  ArrowRight;
+  Lightbulb;
+  Cpu;
+  Database;
+  Network;
+  Eye;
+  Sparkles;
+  Rocket;
+  Globe;
+  Clock;
+  Award;
+  Star;
+  MessageCircle;
+  Phone;
+  Mail;
+  ShoppingCart;
+  DollarSign;
+  Heart;
   Factory;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -42,41 +42,41 @@ export default function AIBusinessIntelligence() {;
     };
     {;
       icon: TrendingUp,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and predict potential risks before they occur'
-    },;
+    };
     {;
       icon: Target,title: 'Intelligent Automation',description: 'Automate routine analysis tasks and focus on strategic decision-making'
     };
   ];
   const benefits = [;
-    'Faster decision-making with real-time insightsImproved accuracy through machine learning',;
-    'Cost reduction through process automationCompetitive advantage with predictive capabilities',;
+    'Faster decision-making with real-time insightsImproved accuracy through machine learning';
+    'Cost reduction through process automationCompetitive advantage with predictive capabilities';
     'Enhanced customer understanding and personalizationStreamlined operations and resource optimization'
-  ],;
+  ];
 
   const useCases = [;
     {;
-      industry: 'Retail & E-commerce',applications: ['Customer segmentationDemand forecasting', 'Inventory optimizationPersonalized marketing'],;
+      industry: 'Retail & E-commerce',applications: ['Customer segmentationDemand forecasting', 'Inventory optimizationPersonalized marketing'];
       icon: ShoppingCart;
     };
     {;
-      industry: 'Financial Services',applications: ['Risk assessmentFraud detection', 'Portfolio optimizationCustomer churn prediction'],;
+      industry: 'Financial Services',applications: ['Risk assessmentFraud detection', 'Portfolio optimizationCustomer churn prediction'];
       icon: DollarSign;
     };
     {;
-      industry: 'Healthcare',applications: ['Patient outcome predictionResource allocation', 'Treatment optimizationDisease prevention'],;
+      industry: 'Healthcare',applications: ['Patient outcome predictionResource allocation', 'Treatment optimizationDisease prevention'];
       icon: Heart;
     };
     {;
-      industry: 'Manufacturing',applications: ['Predictive maintenanceQuality control', 'Supply chain optimizationProduction planning'],;
+      industry: 'Manufacturing',applications: ['Predictive maintenanceQuality control', 'Supply chain optimizationProduction planning'];
       icon: Factory;
     };
   ];
   const technologies = [;
-    'TensorFlow & PyTorchApache Spark',;
-    'AWS SageMakerAzure Machine Learning',;
-    'Google Cloud AISnowflake Data Platform',;
+    'TensorFlow & PyTorchApache Spark';
+    'AWS SageMakerAzure Machine Learning';
+    'Google Cloud AISnowflake Data Platform';
     'Tableau & Power BICustom ML Models'
-  ],;
+  ];
 
   const process = [;
     {;

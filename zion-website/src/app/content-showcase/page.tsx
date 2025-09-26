@@ -1,308 +1,302 @@
-import React from 'react';
-import Link from 'next/link';
-import NewContentPromoBanner from '../../components/NewContentPromoBanner';
-
+import React from 'react'
+import Link from 'next/link'
+import NewContentPromoBanner from '../../components/NewContentPromoBanner'
 export const metadata = {
-  title: 'Content Showcase - AI & Technology Resources | Zion Tech Group',
-  description: 'Explore our comprehensive library of AI and technology content including blog posts, case studies, webinars, and whitepapers.',
-  keywords: 'AI content, technology resources, blog posts, case studies, webinars, whitepapers, AI guides',
+  title: 'Content Showcase - AI & Technology Resources | Zion Tech Group'
+  description: 'Explore our comprehensive library of AI and technology content including blog posts, case studies, webinars, and whitepapers.'
+  keywords: 'AI content, technology resources, blog posts, case studies, webinars, whitepapers, AI guides'
   openGraph: {
-    title: 'Content Showcase - AI & Technology Resources',
-    description: 'Explore our comprehensive library of AI and technology content including blog posts, case studies, webinars, and whitepapers.',
-    type: 'website',
-  },
-};
-
+    title: 'Content Showcase - AI & Technology Resources'
+    description: 'Explore our comprehensive library of AI and technology content including blog posts, case studies, webinars, and whitepapers.'
+    type: 'website'}}
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "LLM Inference Optimization on GPUs (2025)",
-      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
-      href: "/blog/ai-2025-llm-inference-optimization-gpus",
-      icon: "🧠",
-      category: "Inference",
-      readTime: "15 min read",
-      date: "Sep 12, 2025",
+      title: "LLM Inference Optimization on GPUs (2025)"
+      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost."
+      href: "/blog/ai-2025-llm-inference-optimization-gpus"
+      icon: "🧠"
+      category: "Inference"
+      readTime: "15 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Serverless GenAI Architectures (2025)",
-      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails.",
-      href: "/blog/ai-2025-serverless-genai-architectures",
-      icon: "☁️",
-      category: "Architecture",
-      readTime: "14 min read",
-      date: "Sep 12, 2025",
+      title: "Serverless GenAI Architectures (2025)"
+      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails."
+      href: "/blog/ai-2025-serverless-genai-architectures"
+      icon: "☁️"
+      category: "Architecture"
+      readTime: "14 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Agentic Data Pipelines in Production (2025)",
-      description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
-      href: "/blog/ai-2025-agentic-data-pipelines",
-      icon: "🧩",
-      category: "Data Platforms",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
+      title: "Agentic Data Pipelines in Production (2025)"
+      description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration."
+      href: "/blog/ai-2025-agentic-data-pipelines"
+      icon: "🧩"
+      category: "Data Platforms"
+      readTime: "18 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Evaluations in Production (2025): Shipping with Confidence",
-      description: "Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics.",
-      href: "/blog/ai-2025-evaluations-in-production",
-      icon: "✅",
-      category: "Evaluation",
-      readTime: "20 min read",
-      date: "Sep 12, 2025",
+      title: "Evaluations in Production (2025): Shipping with Confidence"
+      description: "Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics."
+      href: "/blog/ai-2025-evaluations-in-production"
+      icon: "✅"
+      category: "Evaluation"
+      readTime: "20 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Reliable Realtime Agents in 2025: Architecture & SLAs",
-      description: "Blueprint for production-grade realtime agents with SLAs, safety, and observability.",
-      href: "/blog/ai-2025-reliable-realtime-agents",
-      icon: "⚡",
-      category: "Reliability",
-      readTime: "20 min read",
-      date: "Sep 12, 2025",
+      title: "Reliable Realtime Agents in 2025: Architecture & SLAs"
+      description: "Blueprint for production-grade realtime agents with SLAs, safety, and observability."
+      href: "/blog/ai-2025-reliable-realtime-agents"
+      icon: "⚡"
+      category: "Reliability"
+      readTime: "20 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Enterprise GenAI Security Blueprint 2025",
-      description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design.",
-      href: "/blog/ai-2025-genai-security-blueprint",
-      icon: "🔒",
-      category: "AI Security",
-      readTime: "15 min read",
-      date: "Sep 12, 2025",
+      title: "Enterprise GenAI Security Blueprint 2025"
+      description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design."
+      href: "/blog/ai-2025-genai-security-blueprint"
+      icon: "🔒"
+      category: "AI Security"
+      readTime: "15 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Agent Marketplaces in 2025: Strategy & Governance",
-      description: "How to launch enterprise agent marketplaces with reference architectures, monetization, and safety.",
-      href: "/blog/ai-2025-agent-marketplaces-strategy",
-      icon: "🛒",
-      category: "Strategy",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
+      title: "Agent Marketplaces in 2025: Strategy & Governance"
+      description: "How to launch enterprise agent marketplaces with reference architectures, monetization, and safety."
+      href: "/blog/ai-2025-agent-marketplaces-strategy"
+      icon: "🛒"
+      category: "Strategy"
+      readTime: "18 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails",
-      description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails.",
-      href: "/blog/ai-2025-ai-agent-observability",
-      icon: "📈",
-      category: "Reliability",
-      readTime: "19 min read",
-      date: "Sep 12, 2025",
+      title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails"
+      description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails."
+      href: "/blog/ai-2025-ai-agent-observability"
+      icon: "📈"
+      category: "Reliability"
+      readTime: "19 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
-      description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and performance.",
-      href: "/blog/ai-2025-edge-agents-in-production",
-      icon: "🤖",
-      category: "Edge AI",
-      readTime: "21 min read",
-      date: "Sep 12, 2025",
+      title: "Edge AI Agents 2025: Running Autonomous Agents in Production"
+      description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and window.performance."
+      href: "/blog/ai-2025-edge-agents-in-production"
+      icon: "🤖"
+      category: "Edge AI"
+      readTime: "21 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Reinforcement Learning in Production: 2025 Patterns",
-      description: "Offline RL, simulators, safety constraints, and guardrails to ship RL safely.",
-      href: "/blog/ai-2025-reinforcement-learning-production-patterns",
-      icon: "🎯",
-      category: "Advanced AI",
-      readTime: "20 min read",
-      date: "Sep 12, 2025",
+      title: "Reinforcement Learning in Production: 2025 Patterns"
+      description: "Offline RL, simulators, safety constraints, and guardrails to ship RL safely."
+      href: "/blog/ai-2025-reinforcement-learning-production-patterns"
+      icon: "🎯"
+      category: "Advanced AI"
+      readTime: "20 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Operational Excellence with AI Agents (2025)",
-      description: "Agentic workflows that cut MTTR by 41% and lift OTIF by 6 points.",
-      href: "/blog/ai-2025-operational-excellence-agents",
-      icon: "⚙️",
-      category: "Operations",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
+      title: "Operational Excellence with AI Agents (2025)"
+      description: "Agentic workflows that cut MTTR by 41% and lift OTIF by 6 points."
+      href: "/blog/ai-2025-operational-excellence-agents"
+      icon: "⚙️"
+      category: "Operations"
+      readTime: "16 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Evaluating LLM Agents in 2025: Methods, Metrics, and Tooling",
-      description: "Task success, tool correctness, policy adherence, and automated pipelines for agent evaluation.",
-      href: "/blog/ai-2025-evaluation-llm-agents",
-      icon: "🧪",
-      category: "AI Safety",
-      readTime: "22 min read",
-      date: "Sep 12, 2025",
+      title: "Evaluating LLM Agents in 2025: Methods, Metrics, and Tooling"
+      description: "Task success, tool correctness, policy adherence, and automated pipelines for agent evaluation."
+      href: "/blog/ai-2025-evaluation-llm-agents"
+      icon: "🧪"
+      category: "AI Safety"
+      readTime: "22 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Foundation Models Cost Optimization 2025",
-      description: "Cut inference and training costs with quantization, distillation, caching, and smart routing.",
-      href: "/blog/ai-2025-foundation-models-cost-optimization",
-      icon: "💸",
-      category: "Optimization",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
+      title: "Foundation Models Cost Optimization 2025"
+      description: "Cut inference and training costs with quantization, distillation, caching, and smart routing."
+      href: "/blog/ai-2025-foundation-models-cost-optimization"
+      icon: "💸"
+      category: "Optimization"
+      readTime: "18 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "AI-Powered Customer Service: 90% Satisfaction Case Study",
-      description: "90% CSAT and 60% cost reduction with AI assistants, deflection flows, and smart escalation.",
-      href: "/case-studies/ai-customer-service-transformation",
-      icon: "💬",
-      category: "Case Study",
-      readTime: "12 min read",
-      date: "Jan 20, 2025",
+      title: "AI-Powered Customer Service: 90% Satisfaction Case Study"
+      description: "90% CSAT and 60% cost reduction with AI assistants, deflection flows, and smart escalation."
+      href: "/case-studies/ai-customer-service-transformation"
+      icon: "💬"
+      category: "Case Study"
+      readTime: "12 min read"
+      date: "Jan 20, 2025"
       featured: true
-    },
+    }
     {
-      title: "Advanced RAG Systems 2025: Production-Ready Implementation Guide",
-      description: "Master advanced RAG (Retrieval-Augmented Generation) systems with our comprehensive 2025 guide. Learn production patterns, optimization techniques, and real-world implementations.",
-      href: "/blog/ai-2025-advanced-rag-systems",
-      icon: "🔍",
-      category: "Advanced AI",
-      readTime: "25 min read",
-      date: "Jan 28, 2025",
+      title: "Advanced RAG Systems 2025: Production-Ready Implementation Guide"
+      description: "Master advanced RAG (Retrieval-Augmented Generation) systems with our comprehensive 2025 guide. Learn production patterns, optimization techniques, and real-world implementations."
+      href: "/blog/ai-2025-advanced-rag-systems"
+      icon: "🔍"
+      category: "Advanced AI"
+      readTime: "25 min read"
+      date: "Jan 28, 2025"
       featured: true
-    },
+    }
     {
-      title: "AI Multimodal Revolution 2025: Vision, Voice, and Text Integration",
-      description: "Explore how multimodal AI is revolutionizing human-computer interaction by seamlessly combining vision, voice, and text processing. Learn about the latest breakthroughs and real-world applications.",
-      href: "/blog/ai-2025-multimodal-revolution",
-      icon: "🎭",
-      category: "Multimodal AI",
-      readTime: "28 min read",
-      date: "Jan 28, 2025",
+      title: "AI Multimodal Revolution 2025: Vision, Voice, and Text Integration"
+      description: "Explore how multimodal AI is revolutionizing human-computer interaction by seamlessly combining vision, voice, and text processing. Learn about the latest breakthroughs and real-world applications."
+      href: "/blog/ai-2025-multimodal-revolution"
+      icon: "🎭"
+      category: "Multimodal AI"
+      readTime: "28 min read"
+      date: "Jan 28, 2025"
       featured: true
-    },
+    }
     {
-      title: "Quantum Machine Learning 2025: The Next Frontier of AI",
-      description: "Discover how quantum computing is revolutionizing machine learning, enabling exponential speedups in optimization, pattern recognition, and complex problem solving.",
-      href: "/blog/ai-2025-quantum-machine-learning",
-      icon: "⚛️",
-      category: "Quantum AI",
-      readTime: "32 min read",
-      date: "Jan 28, 2025",
+      title: "Quantum Machine Learning 2025: The Next Frontier of AI"
+      description: "Discover how quantum computing is revolutionizing machine learning, enabling exponential speedups in optimization, pattern recognition, and complex problem solving."
+      href: "/blog/ai-2025-quantum-machine-learning"
+      icon: "⚛️"
+      category: "Quantum AI"
+      readTime: "32 min read"
+      date: "Jan 28, 2025"
       featured: true
-    },
+    }
     {
-      title: "AI Autonomous Manufacturing Revolution: $200M Success Story",
-      description: "Complete case study: How a Fortune 500 manufacturer achieved $200M in cost savings and 300% productivity gains through AI-powered autonomous manufacturing systems.",
-      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
-      icon: "🏭",
-      category: "Case Study",
-      readTime: "15 min read",
-      date: "Jan 28, 2025",
+      title: "AI Autonomous Manufacturing Revolution: $200M Success Story"
+      description: "Complete case study: How a Fortune 500 manufacturer achieved $200M in cost savings and 300% productivity gains through AI-powered autonomous manufacturing systems."
+      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution"
+      icon: "🏭"
+      category: "Case Study"
+      readTime: "15 min read"
+      date: "Jan 28, 2025"
       featured: true
-    },
+    }
     {
-      title: "Operations Excellence Impact: 41% MTTR Reduction",
-      description: "Agentic ops automated runbooks, reduced expedites by 27%, +6 pts OTIF.",
-      href: "/case-studies/ai-2025-operations-excellence-impact",
-      icon: "📊",
-      category: "Case Study",
-      readTime: "10 min read",
-      date: "Sep 12, 2025",
+      title: "Operations Excellence Impact: 41% MTTR Reduction"
+      description: "Agentic ops automated runbooks, reduced expedites by 27%, +6 pts OTIF."
+      href: "/case-studies/ai-2025-operations-excellence-impact"
+      icon: "📊"
+      category: "Case Study"
+      readTime: "10 min read"
+      date: "Sep 12, 2025"
       featured: true
-    },
+    }
     {
-      title: "Building Scalable AI Infrastructure: A Complete Guide",
-      description: "Learn how to design and implement AI infrastructure that scales with your business needs, from data pipelines to model deployment and monitoring.",
-      href: "/blog/scalable-ai-infrastructure",
-      icon: "🏗️",
-      category: "AI Infrastructure",
-      readTime: "20 min read",
-      date: "Jan 25, 2025",
-      featured: false
-    },
-    {
-      title: "Enterprise AI Security: Best Practices and Implementation",
-      description: "Comprehensive guide to securing AI systems in enterprise environments, covering data protection, model security, and regulatory compliance.",
-      href: "/blog/enterprise-ai-security",
-      icon: "🔒",
-      category: "AI Security",
-      readTime: "18 min read",
-      date: "Jan 22, 2025",
-      featured: false
-    },
-    {
-      title: "AI-Powered Customer Service: 90% Satisfaction Case Study",
-      description: "How a leading e-commerce company transformed customer service with AI, achieving 90% customer satisfaction and 60% cost reduction.",
-      href: "/case-studies/ai-customer-service-transformation",
-      icon: "💬",
-      category: "Case Study",
-      readTime: "12 min read",
-      date: "Jan 20, 2025",
-      featured: false
-    },
-    {
-      title: "The Future of AI in Healthcare: Trends and Opportunities",
-      description: "Explore the latest trends in AI healthcare applications, from diagnostic tools to personalized medicine and drug discovery.",
-      href: "/blog/ai-healthcare-trends-2025",
-      icon: "🏥",
-      category: "AI Healthcare",
-      readTime: "22 min read",
-      date: "Jan 18, 2025",
-      featured: false
-    },
-    {
-      title: "Machine Learning Model Optimization: Advanced Techniques",
-      description: "Master advanced techniques for optimizing machine learning models, including hyperparameter tuning, model compression, and deployment strategies.",
-      href: "/blog/ml-model-optimization",
-      icon: "⚡",
-      category: "Machine Learning",
-      readTime: "24 min read",
-      date: "Sep 12, 2025",
-      featured: false
-    },
-    {
-      title: "AI Ethics and Responsible Development: A Framework",
-      description: "Comprehensive framework for developing AI systems responsibly, covering bias mitigation, transparency, and ethical considerations.",
-      href: "/blog/ai-ethics-framework",
-      icon: "⚖️",
-      category: "AI Ethics",
-      readTime: "19 min read",
-      date: "Sep 12, 2025",
-      featured: false
-    },
-    {
-      title: "Edge AI Deployment: Bringing Intelligence to the Edge",
-      description: "Learn how to deploy AI models at the edge for real-time processing, reduced latency, and improved privacy in IoT applications.",
-      href: "/blog/edge-ai-deployment",
-      icon: "📱",
-      category: "Edge Computing",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: false
-    },
-    {
-      title: "AI in Financial Services: Risk Management Case Study",
-      description: "How a major bank implemented AI for risk management, achieving 40% improvement in fraud detection and 25% reduction in false positives.",
-      href: "/case-studies/ai-financial-risk-management",
-      icon: "💰",
-      category: "Case Study",
-      readTime: "14 min read",
-      date: "Sep 12, 2025",
+      title: "Building Scalable AI Infrastructure: A Complete Guide"
+      description: "Learn how to design and implement AI infrastructure that scales with your business needs, from data pipelines to model deployment and monitoring."
+      href: "/blog/scalable-ai-infrastructure"
+      icon: "🏗️"
+      category: "AI Infrastructure"
+      readTime: "20 min read"
+      date: "Jan 25, 2025"
       featured: false
     }
-  ];
-
+    {
+      title: "Enterprise AI Security: Best Practices and Implementation"
+      description: "Comprehensive guide to securing AI systems in enterprise environments, covering data protection, model security, and regulatory compliance."
+      href: "/blog/enterprise-ai-security"
+      icon: "🔒"
+      category: "AI Security"
+      readTime: "18 min read"
+      date: "Jan 22, 2025"
+      featured: false
+    }
+    {
+      title: "AI-Powered Customer Service: 90% Satisfaction Case Study"
+      description: "How a leading e-commerce company transformed customer service with AI, achieving 90% customer satisfaction and 60% cost reduction."
+      href: "/case-studies/ai-customer-service-transformation"
+      icon: "💬"
+      category: "Case Study"
+      readTime: "12 min read"
+      date: "Jan 20, 2025"
+      featured: false
+    }
+    {
+      title: "The Future of AI in Healthcare: Trends and Opportunities"
+      description: "Explore the latest trends in AI healthcare applications, from diagnostic tools to personalized medicine and drug discovery."
+      href: "/blog/ai-healthcare-trends-2025"
+      icon: "🏥"
+      category: "AI Healthcare"
+      readTime: "22 min read"
+      date: "Jan 18, 2025"
+      featured: false
+    }
+    {
+      title: "Machine Learning Model Optimization: Advanced Techniques"
+      description: "Master advanced techniques for optimizing machine learning models, including hyperparameter tuning, model compression, and deployment strategies."
+      href: "/blog/ml-model-optimization"
+      icon: "⚡"
+      category: "Machine Learning"
+      readTime: "24 min read"
+      date: "Sep 12, 2025"
+      featured: false
+    }
+    {
+      title: "AI Ethics and Responsible Development: A Framework"
+      description: "Comprehensive framework for developing AI systems responsibly, covering bias mitigation, transparency, and ethical considerations."
+      href: "/blog/ai-ethics-framework"
+      icon: "⚖️"
+      category: "AI Ethics"
+      readTime: "19 min read"
+      date: "Sep 12, 2025"
+      featured: false
+    }
+    {
+      title: "Edge AI Deployment: Bringing Intelligence to the Edge"
+      description: "Learn how to deploy AI models at the edge for real-time processing, reduced latency, and improved privacy in IoT applications."
+      href: "/blog/edge-ai-deployment"
+      icon: "📱"
+      category: "Edge Computing"
+      readTime: "16 min read"
+      date: "Sep 12, 2025"
+      featured: false
+    }
+    {
+      title: "AI in Financial Services: Risk Management Case Study"
+      description: "How a major bank implemented AI for risk management, achieving 40% improvement in fraud detection and 25% reduction in false positives."
+      href: "/case-studies/ai-financial-risk-management"
+      icon: "💰"
+      category: "Case Study"
+      readTime: "14 min read"
+      date: "Sep 12, 2025"
+      featured: false
+    }
+  ]
   const categories = [
-    { name: 'All', count: featuredContent.length, active: true },
-    { name: 'Advanced AI', count: featuredContent.filter(c => c.category === 'Advanced AI').length, active: false },
-    { name: 'Evaluation', count: featuredContent.filter(c => c.category === 'Evaluation').length, active: false },
-    { name: 'Governance', count: featuredContent.filter(c => c.category === 'Governance').length, active: false },
-    { name: 'Multimodal AI', count: featuredContent.filter(c => c.category === 'Multimodal AI').length, active: false },
-    { name: 'Quantum AI', count: featuredContent.filter(c => c.category === 'Quantum AI').length, active: false },
-    { name: 'Case Study', count: featuredContent.filter(c => c.category === 'Case Study').length, active: false },
-    { name: 'AI Infrastructure', count: featuredContent.filter(c => c.category === 'AI Infrastructure').length, active: false },
-    { name: 'AI Security', count: featuredContent.filter(c => c.category === 'AI Security').length, active: false },
-    { name: 'AI Healthcare', count: featuredContent.filter(c => c.category === 'AI Healthcare').length, active: false },
-    { name: 'Machine Learning', count: featuredContent.filter(c => c.category === 'Machine Learning').length, active: false },
-    { name: 'AI Ethics', count: featuredContent.filter(c => c.category === 'AI Ethics').length, active: false },
+    { name: 'All', count: featuredContent.length, active: true }
+    { name: 'Advanced AI', count: featuredContent.filter(c => c.category === 'Advanced AI').length, active: false }
+    { name: 'Evaluation', count: featuredContent.filter(c => c.category === 'Evaluation').length, active: false }
+    { name: 'Governance', count: featuredContent.filter(c => c.category === 'Governance').length, active: false }
+    { name: 'Multimodal AI', count: featuredContent.filter(c => c.category === 'Multimodal AI').length, active: false }
+    { name: 'Quantum AI', count: featuredContent.filter(c => c.category === 'Quantum AI').length, active: false }
+    { name: 'Case Study', count: featuredContent.filter(c => c.category === 'Case Study').length, active: false }
+    { name: 'AI Infrastructure', count: featuredContent.filter(c => c.category === 'AI Infrastructure').length, active: false }
+    { name: 'AI Security', count: featuredContent.filter(c => c.category === 'AI Security').length, active: false }
+    { name: 'AI Healthcare', count: featuredContent.filter(c => c.category === 'AI Healthcare').length, active: false }
+    { name: 'Machine Learning', count: featuredContent.filter(c => c.category === 'Machine Learning').length, active: false }
+    { name: 'AI Ethics', count: featuredContent.filter(c => c.category === 'AI Ethics').length, active: false }
     { name: 'Edge Computing', count: featuredContent.filter(c => c.category === 'Edge Computing').length, active: false }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -492,5 +486,5 @@ export default function ContentShowcase() {
         </div>
       </section>
     </div>
-  );
+  )
 }

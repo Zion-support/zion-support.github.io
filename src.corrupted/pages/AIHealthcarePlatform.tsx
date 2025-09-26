@@ -2,30 +2,30 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Heart,;
-  Brain, ;
-  Shield, ;
-  Activity, ;
-  Users, ;
-  Zap, ;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Globe,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
+  Heart;
+  Brain;
+  Shield;
+  Activity;
+  Users;
+  Zap;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
   Eye;
 } from "lucide-react"
 export default function AIHealthcarePlatform() {;
@@ -50,10 +50,10 @@ export default function AIHealthcarePlatform() {;
     };
   ];
   const benefits = [;
-    'Reduce diagnostic errors by up to 85%Improve patient outcomes by 40%',;
-    'Cut healthcare costs by 30%Streamline administrative processes',;
+    'Reduce diagnostic errors by up to 85%Improve patient outcomes by 40%';
+    'Cut healthcare costs by 30%Streamline administrative processes';
     'Enhance patient engagementEnsure regulatory compliance'
-  ],;
+  ];
 
   const useCases = [;
     {;
