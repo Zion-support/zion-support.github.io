@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 
@@ -26,28 +26,28 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 		return { hasError: true, error, errorInfo: undefined };
 	}
 
-	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
 		const errorDetails = {
 			message: error.message,
 			stack: error.stack,
 			componentStack: errorInfo.componentStack,
 			timestamp: new Date().toISOString(),
 			userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
-			url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+			url: typeof window !== 'undefined' ? window.location.href : 'unknown'
 		};
 
-		if (process.env.NODE_ENV === 'development') {
-			// eslint-disable-next-line no-console
-			console.group('🚨 Error Boundary Caught Error');
-			// eslint-disable-next-line no-console
-			console.error('Error:', error);
-			// eslint-disable-next-line no-console
-			console.error('Error Info:', errorInfo);
-			// eslint-disable-next-line no-console
-			console.error('Full Details:', errorDetails);
-			// eslint-disable-next-line no-console
-			console.groupEnd();
-		}
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.group('🚨 Error Boundary Caught Error');
+      // eslint-disable-next-line no-console
+      console.error('Error:', error);
+      // eslint-disable-next-line no-console
+      console.error('Error Info:', errorInfo);
+      // eslint-disable-next-line no-console
+      console.error('Full Details:', errorDetails);
+      // eslint-disable-next-line no-console
+      console.groupEnd();
+    }
 
 		if (typeof window !== 'undefined') {
 			const maybeGtag = (window as unknown as {
@@ -65,7 +65,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 		this.setState({ hasError: false, error: undefined, errorInfo: undefined });
 	};
 
-	render() {
+  override render() {
 		if (this.state.hasError) {
 			if (this.props.fallback) {
 				const FallbackComponent = this.props.fallback;
