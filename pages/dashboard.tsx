@@ -10,8 +10,10 @@ import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsD
 import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
 import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
 import SystemMonitor from '../src/components/SystemMonitor';
+import SecurityMonitor from '../src/components/SecurityMonitor';
+import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -27,7 +29,10 @@ const Dashboard: React.FC = () => {
     { id: 'advanced-performance' as const, name: 'Advanced Performance', icon: '⚡️' },
     { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
-    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' }
+    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
+    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' }
   ];
 
   // Sample data for advanced components
@@ -185,6 +190,96 @@ const Dashboard: React.FC = () => {
               onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
+            />
+          </div>
+        );
+      case 'new-performance':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <PerformanceDashboard 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onAlert={(alert) => console.log('Performance alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-security':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Monitoring
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <SecurityMonitor 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-analytics':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <EnhancedAnalytics 
+              refreshInterval={isRealTime ? 10000 : 60000}
+              enableRealTime={isRealTime}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
           </div>
         );

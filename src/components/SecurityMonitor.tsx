@@ -1,306 +1,241 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface SecurityConfig {
-  enableCSP: boolean;
-  enableXSSProtection: boolean;
-  enableClickjackingProtection: boolean;
-  enableHSTS: boolean;
-  enableContentTypeSniffing: boolean;
-  enableReferrerPolicy: boolean;
-}
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Shield, 
+  AlertTriangle, 
+  CheckCircle, 
+  Lock, 
+  Eye, 
+  AlertCircle,
+  Activity,
+  Clock,
+  Database,
+  Globe
+} from 'lucide-react';
 
 interface SecurityEvent {
-  type: 'xss' | 'csrf' | 'clickjacking' | 'injection' | 'suspicious';
+  id: string;
+  type: 'threat' | 'vulnerability' | 'breach' | 'suspicious' | 'normal';
   severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  timestamp: number;
-  userAgent?: string;
-  url?: string;
+  title: string;
+  description: string;
+  timestamp: Date;
+  source: string;
+  status: 'active' | 'resolved' | 'investigating';
+  affectedSystems: string[];
+  recommendedActions: string[];
 }
 
-class SecurityMonitor {
-  private static instance: SecurityMonitor;
-  private events: SecurityEvent[] = [];
-  private config: SecurityConfig;
-
-  constructor(config: SecurityConfig) {
-    this.config = config;
-    this.initializeSecurityHeaders();
-    this.setupEventListeners();
-  }
-
-  static getInstance(config?: SecurityConfig): SecurityMonitor {
-    if (!SecurityMonitor.instance) {
-      SecurityMonitor.instance = new SecurityMonitor(config || {
-        enableCSP: true,
-        enableXSSProtection: true,
-        enableClickjackingProtection: true,
-        enableHSTS: true,
-        enableContentTypeSniffing: true,
-        enableReferrerPolicy: true
-      });
-    }
-    return SecurityMonitor.instance;
-  }
-
-  private initializeSecurityHeaders(): void {
-    if (typeof document === 'undefined') return;
-
-    // Content Security Policy
-    if (this.config.enableCSP) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'Content-Security-Policy';
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';";
-      document.head.appendChild(meta);
-    }
-
-    // XSS Protection
-    if (this.config.enableXSSProtection) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-XSS-Protection';
-      meta.content = '1; mode=block';
-      document.head.appendChild(meta);
-    }
-
-    // Clickjacking Protection
-    if (this.config.enableClickjackingProtection) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Frame-Options';
-      meta.content = 'DENY';
-      document.head.appendChild(meta);
-    }
-
-    // Content Type Sniffing Protection
-    if (this.config.enableContentTypeSniffing) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Content-Type-Options';
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
-
-    // Referrer Policy
-    if (this.config.enableReferrerPolicy) {
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'strict-origin-when-cross-origin';
-      document.head.appendChild(meta);
-    }
-  }
-
-  private setupEventListeners(): void {
-    if (typeof window === 'undefined') return;
-
-    // Monitor for suspicious scripts
-    const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
-      
-      if (tagName.toLowerCase() === 'script') {
-        SecurityMonitor.getInstance().logEvent({
-          type: 'suspicious',
-          severity: 'medium',
-          message: 'Script element created',
-          timestamp: Date.now(),
-          url: window.location.href
-        });
-      }
-      
-      return element;
-    };
-
-    // Monitor for suspicious URLs
-    const originalOpen = window.open;
-    window.open = function(url?: string, target?: string, features?: string) {
-      if (url && (url.includes('javascript:') || url.includes('data:'))) {
-        SecurityMonitor.getInstance().logEvent({
-          type: 'xss',
-          severity: 'high',
-          message: 'Suspicious URL in window.open',
-          timestamp: Date.now(),
-          url: url
-        });
-      }
-      return originalOpen.call(this, url, target, features);
-    };
-
-    // Monitor for suspicious form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      const formData = new FormData(form);
-      
-      // Check for suspicious patterns
-      for (const [key, value] of formData.entries()) {
-        if (typeof value === 'string' && (
-          value.includes('<script') ||
-          value.includes('javascript:') ||
-          value.includes('onload=') ||
-          value.includes('onerror=')
-        )) {
-          SecurityMonitor.getInstance().logEvent({
-            type: 'injection',
-            severity: 'critical',
-            message: `Suspicious form data detected in field: ${key}`,
-            timestamp: Date.now(),
-            url: window.location.href
-          });
-        }
-      }
-    });
-  }
-
-  logEvent(event: SecurityEvent): void {
-    this.events.push(event);
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Security Event:', event);
-    }
-
-    // Send to security monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToSecurityService(event);
-    }
-  }
-
-  private async sendToSecurityService(event: SecurityEvent): Promise<void> {
-    try {
-      await fetch('/api/security-events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event)
-      });
-    } catch (error) {
-      console.error('Failed to send security event:', error);
-    }
-  }
-
-  getEvents(): SecurityEvent[] {
-    return [...this.events];
-  }
-
-  getEventsBySeverity(severity: SecurityEvent['severity']): SecurityEvent[] {
-    return this.events.filter(event => event.severity === severity);
-  }
-
-  clearEvents(): void {
-    this.events = [];
-  }
-
-  getSecurityScore(): number {
-    const criticalEvents = this.getEventsBySeverity('critical').length;
-    const highEvents = this.getEventsBySeverity('high').length;
-    const mediumEvents = this.getEventsBySeverity('medium').length;
-    const lowEvents = this.getEventsBySeverity('low').length;
-
-    const score = 100 - (criticalEvents * 20) - (highEvents * 10) - (mediumEvents * 5) - (lowEvents * 1);
-    return Math.max(0, score);
-  }
+interface SecurityMetrics {
+  totalThreats: number;
+  activeThreats: number;
+  resolvedThreats: number;
+  vulnerabilityScore: number;
+  securityScore: number;
+  lastScan: Date;
+  protectedAssets: number;
+  blockedRequests: number;
 }
 
-// React hook for security monitoring
-export const useSecurityMonitor = () => {
-  const [securityScore, setSecurityScore] = useState(100);
+interface SecurityMonitorProps {
+  refreshInterval?: number;
+  enableAlerts?: boolean;
+  onSecurityAlert?: (alert: SecurityEvent) => void;
+}
+
+export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
+  refreshInterval = 10000,
+  enableAlerts = true,
+  onSecurityAlert
+}) => {
   const [events, setEvents] = useState<SecurityEvent[]>([]);
+  const [metrics, setMetrics] = useState<SecurityMetrics>({
+    totalThreats: 0,
+    activeThreats: 0,
+    resolvedThreats: 0,
+    vulnerabilityScore: 0,
+    securityScore: 0,
+    lastScan: new Date(),
+    protectedAssets: 0,
+    blockedRequests: 0
+  });
+  const [isLoading, setIsLoading] = useState(true);
+
+  const generateMockEvents = useCallback((): SecurityEvent[] => {
+    const eventTypes: SecurityEvent['type'][] = ['threat', 'vulnerability', 'breach', 'suspicious', 'normal'];
+    const severities: SecurityEvent['severity'][] = ['low', 'medium', 'high', 'critical'];
+    const statuses: SecurityEvent['status'][] = ['active', 'resolved', 'investigating'];
+    
+    return Array.from({ length: Math.floor(Math.random() * 10) + 5 }, (_, i) => ({
+      id: `event-${i}`,
+      type: eventTypes[Math.floor(Math.random() * eventTypes.length)],
+      severity: severities[Math.floor(Math.random() * severities.length)],
+      title: `Security Event ${i + 1}`,
+      description: `Description of security event ${i + 1}`,
+      timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
+      source: `Source ${i + 1}`,
+      status: statuses[Math.floor(Math.random() * statuses.length)],
+      affectedSystems: [`System ${i + 1}`, `System ${i + 2}`],
+      recommendedActions: [`Action ${i + 1}`, `Action ${i + 2}`]
+    }));
+  }, []);
+
+  const generateMockMetrics = useCallback((): SecurityMetrics => {
+    return {
+      totalThreats: Math.floor(Math.random() * 100) + 50,
+      activeThreats: Math.floor(Math.random() * 20) + 5,
+      resolvedThreats: Math.floor(Math.random() * 80) + 20,
+      vulnerabilityScore: Math.random() * 100,
+      securityScore: Math.random() * 100,
+      lastScan: new Date(),
+      protectedAssets: Math.floor(Math.random() * 1000) + 500,
+      blockedRequests: Math.floor(Math.random() * 10000) + 1000
+    };
+  }, []);
+
+  const updateData = useCallback(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const newEvents = generateMockEvents();
+      const newMetrics = generateMockMetrics();
+      
+      setEvents(newEvents);
+      setMetrics(newMetrics);
+      setIsLoading(false);
+
+      // Check for critical security alerts
+      if (enableAlerts) {
+        const criticalEvents = newEvents.filter(event => 
+          event.severity === 'critical' && event.status === 'active'
+        );
+        criticalEvents.forEach(event => {
+          onSecurityAlert?.(event);
+        });
+      }
+    }, 800);
+  }, [generateMockEvents, generateMockMetrics, enableAlerts, onSecurityAlert]);
 
   useEffect(() => {
-    const monitor = SecurityMonitor.getInstance();
-    
-    const updateData = () => {
-      setSecurityScore(monitor.getSecurityScore());
-      setEvents(monitor.getEvents());
-    };
-
-    // Update every 5 seconds
-    const interval = setInterval(updateData, 5000);
     updateData();
-
+    const interval = setInterval(updateData, refreshInterval);
     return () => clearInterval(interval);
-  }, []);
+  }, [updateData, refreshInterval]);
 
-  const logEvent = useCallback((event: Omit<SecurityEvent, 'timestamp'>) => {
-    const monitor = SecurityMonitor.getInstance();
-    monitor.logEvent({
-      ...event,
-      timestamp: Date.now()
-    });
-  }, []);
-
-  return {
-    securityScore,
-    events,
-    logEvent,
-    getEventsBySeverity: (severity: SecurityEvent['severity']) => 
-      SecurityMonitor.getInstance().getEventsBySeverity(severity)
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'critical': return 'text-red-600 bg-red-100 border-red-200';
+      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
+      case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
+      default: return 'text-gray-600 bg-gray-100 border-gray-200';
+    }
   };
-};
 
-// Security Dashboard Component
-export const SecurityDashboard: React.FC = () => {
-  const { securityScore, events, logEvent } = useSecurityMonitor();
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'threat': return <AlertTriangle className="w-4 h-4" />;
+      case 'vulnerability': return <Shield className="w-4 h-4" />;
+      case 'breach': return <AlertCircle className="w-4 h-4" />;
+      case 'suspicious': return <Eye className="w-4 h-4" />;
+      case 'normal': return <CheckCircle className="w-4 h-4" />;
+      default: return <Activity className="w-4 h-4" />;
+    }
+  };
 
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    if (score >= 40) return 'text-orange-600';
-    return 'text-red-600';
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'text-red-600 bg-red-100';
+      case 'resolved': return 'text-green-600 bg-green-100';
+      case 'investigating': return 'text-yellow-600 bg-yellow-100';
+      default: return 'text-gray-600 bg-gray-100';
+    }
   };
 
   return (
-    <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-sm">
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-        Security Monitor
-      </h3>
-      
-      <div className="mb-3">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Security Score</span>
-          <span className={`text-sm font-semibold ${getScoreColor(securityScore)}`}>
-            {securityScore}/100
-          </span>
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+          <Shield className="w-6 h-6 mr-2 text-red-600" />
+          Security Monitor
+        </h2>
+        <div className="flex items-center text-sm text-gray-500">
+          <Clock className="w-4 h-4 mr-1" />
+          Last scan: {metrics.lastScan.toLocaleTimeString()}
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      </div>
+
+      {/* Security Metrics */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-red-600">{metrics.activeThreats}</div>
+          <div className="text-sm text-gray-600">Active Threats</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-green-600">{metrics.resolvedThreats}</div>
+          <div className="text-sm text-gray-600">Resolved</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-blue-600">{metrics.protectedAssets}</div>
+          <div className="text-sm text-gray-600">Protected Assets</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-purple-600">{metrics.blockedRequests}</div>
+          <div className="text-sm text-gray-600">Blocked Requests</div>
+        </div>
+      </div>
+
+      {/* Security Score */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Security Score</span>
+          <span className="text-sm text-gray-500">{metrics.securityScore.toFixed(1)}/100</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
             className={`h-2 rounded-full ${
-              securityScore >= 80 ? 'bg-green-500' :
-              securityScore >= 60 ? 'bg-yellow-500' :
-              securityScore >= 40 ? 'bg-orange-500' : 'bg-red-500'
+              metrics.securityScore >= 80 ? 'bg-green-500' : 
+              metrics.securityScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'
             }`}
-            style={{ width: `${securityScore}%` }}
-          />
+            style={{ width: `${metrics.securityScore}%` }}
+          ></div>
         </div>
       </div>
 
-      <div className="text-sm text-gray-600 dark:text-gray-300">
-        <div>Total Events: {events.length}</div>
-        <div>Critical: {events.filter(e => e.severity === 'critical').length}</div>
-        <div>High: {events.filter(e => e.severity === 'high').length}</div>
-        <div>Medium: {events.filter(e => e.severity === 'medium').length}</div>
-        <div>Low: {events.filter(e => e.severity === 'low').length}</div>
+      {/* Security Events */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Security Events</h3>
+        <AnimatePresence>
+          {events.slice(0, 5).map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ delay: index * 0.1 }}
+              className={`border rounded-lg p-4 ${getSeverityColor(event.severity)}`}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center">
+                  {getTypeIcon(event.type)}
+                  <span className="ml-2 font-medium">{event.title}</span>
+                </div>
+                <div className={`px-2 py-1 rounded-full text-xs ${getStatusColor(event.status)}`}>
+                  {event.status}
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-2">{event.description}</p>
+              <div className="flex items-center justify-between text-xs text-gray-500">
+                <span>Source: {event.source}</span>
+                <span>{event.timestamp.toLocaleString()}</span>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
-      {events.length > 0 && (
-        <div className="mt-3 max-h-32 overflow-y-auto">
-          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
-            Recent Events
-          </h4>
-          {events.slice(-3).map((event, index) => (
-            <div key={index} className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              <span className={`px-1 rounded text-white ${
-                event.severity === 'critical' ? 'bg-red-500' :
-                event.severity === 'high' ? 'bg-orange-500' :
-                event.severity === 'medium' ? 'bg-yellow-500' : 'bg-blue-500'
-              }`}>
-                {event.severity}
-              </span>
-              <span className="ml-1">{event.message}</span>
-            </div>
-          ))}
+      {isLoading && (
+        <div className="flex items-center justify-center py-8">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div>
         </div>
       )}
     </div>
