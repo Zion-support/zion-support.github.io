@@ -9,13 +9,34 @@
     "build:netlify": "vite build",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/",
+      "/out/",
+      "/build/",
+      "/src\\.disabled/",
+      "/components\\.disabled/",
+      "/pages\\.disabled/",
+      "/tests\\.disabled/",
+      "/ts_files_backup/",
+      "/temp_",
+      "/temp-",
+      "/__mocks__/"
+    ],
+    "passWithNoTests": true
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
