@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
-import { Skeleton, ServiceCardSkeleton, FeatureCardSkeleton, LoadingSpinner } from '../src/components/LoadingComponents';
+import { ErrorBoundary } from '../ErrorBoundary';
+import { ThemeProvider, ThemeToggle } from '../ThemeProvider';
+import { Skeleton, ServiceCardSkeleton, FeatureCardSkeleton, LoadingSpinner } from '../LoadingComponents';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {

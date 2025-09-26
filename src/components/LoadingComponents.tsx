@@ -6,6 +6,7 @@ interface SkeletonProps {
   height?: string | number;
   rounded?: boolean;
   animate?: boolean;
+  'data-testid'?: string;
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({
@@ -13,7 +14,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   width,
   height,
   rounded = true,
-  animate = true
+  animate = true,
+  'data-testid': dataTestId
 }) => {
   const style: React.CSSProperties = {};
   
@@ -29,6 +31,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         ${className}
       `}
       style={style}
+      data-testid={dataTestId}
     />
   );
 };
@@ -102,9 +105,14 @@ export const PageSkeleton: React.FC = () => (
   </div>
 );
 
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg'; className?: string }> = ({
+export const LoadingSpinner: React.FC<{ 
+  size?: 'sm' | 'md' | 'lg'; 
+  className?: string;
+  'data-testid'?: string;
+}> = ({
   size = 'md',
-  className = ''
+  className = '',
+  'data-testid': dataTestId
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -113,7 +121,7 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg'; className?: s
   };
 
   return (
-    <div className={`animate-spin ${sizeClasses[size]} ${className}`}>
+    <div className={`animate-spin ${sizeClasses[size]} ${className}`} data-testid={dataTestId}>
       <svg className="w-full h-full text-blue-600" fill="none" viewBox="0 0 24 24">
         <circle
           className="opacity-25"
