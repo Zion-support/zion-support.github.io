@@ -36,7 +36,7 @@ import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
 import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
 import BlogPost from './pages/BlogPost';
 
-export default function App(): JSX.Element {
+export default function App(): React.ReactElement {
   return (
     <Router>
       <div className="min-h-screen bg-white">
