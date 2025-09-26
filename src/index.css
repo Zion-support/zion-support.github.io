@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html {
@@ -15,16 +13,7 @@
 
 @layer components {
   .btn-primary {
-    background: linear-gradient(to right, #2563eb, #9333ea);
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s;
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(to right, #1d4ed8, #7c3aed);
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .btn-secondary {
