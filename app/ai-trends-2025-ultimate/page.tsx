@@ -3,6 +3,8 @@ import Link from 'next/link';
 import SEO from '@/components/SEO';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'AI Trends 2025 Ultimate - Revolutionary Breakthrough Technologies',
   description: 'Discover the most advanced AI trends and breakthrough technologies of 2025. Neural superintelligence, quantum AI, autonomous systems, and more.',
