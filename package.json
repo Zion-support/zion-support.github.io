@@ -10,7 +10,7 @@
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --watch --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
