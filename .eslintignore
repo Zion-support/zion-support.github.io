@@ -7,9 +7,9 @@ dist/
 coverage/
 .cache/
 
-# Exclude corrupted or non-app source directories
-src/
-components/
+# Exclude corrupted or non-app source directories (keep main src for linting)
+# src/
+# components/
 
 # Large mono-repo subprojects not part of the current app build
 automation/
@@ -51,10 +51,10 @@ zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
-src/components/**
-src/pages/**
-src/routes/**
-src/context/**
+# src/components/**
+# src/pages/**
+# src/routes/**
+# src/context/**
 src/utils/cartUtils.js
 **/*.config.ts
 vite.config.ts
