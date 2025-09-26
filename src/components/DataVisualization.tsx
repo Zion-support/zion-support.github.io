@@ -195,7 +195,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     } else if (type === 'line' || type === 'area') {
       drawLineChart(ctx, chartWidth, chartHeight, padding, colors);
     }
-  }, [type, drawPieChart, drawBarChart, drawLineChart]);
+  }, [type, data.datasets, data.labels]);
 
   const drawPieChart = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
     const centerX = width / 2;

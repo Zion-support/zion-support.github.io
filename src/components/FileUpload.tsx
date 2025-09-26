@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import Image from 'next/image';
 
 interface FileUploadProps {
   onFileSelect?: (files: File[]) => void;
@@ -41,7 +42,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const validateFile = (file: File): string | null => {
+  const validateFile = useCallback((file: File): string | null => {
     // Check file size
     if (file.size > maxSize * 1024 * 1024) {
       return `File size must be less than ${maxSize}MB`;
@@ -53,7 +54,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     }
 
     return null;
-  };
+  }, [maxSize, allowedTypes]);
 
   const generatePreview = (file: File): Promise<string> => {
     return new Promise((resolve) => {
@@ -101,7 +102,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     if (onFileSelect) {
       onFileSelect(fileArray);
     }
-  }, [uploadedFiles.length, maxFiles, maxSize, allowedTypes, onFileSelect, validateFile]);
+  }, [uploadedFiles.length, maxFiles, onFileSelect, validateFile]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -293,10 +294,12 @@ export const FileUpload: React.FC<FileUploadProps> = ({
                 {/* File Icon/Preview */}
                 <div className="flex-shrink-0">
                   {showPreview && uploadedFile.preview ? (
-                    <img
+                    <Image
                       src={uploadedFile.preview}
                       alt={uploadedFile.file.name}
                       className="h-10 w-10 rounded object-cover"
+                      width={40}
+                      height={40}
                     />
                   ) : (
                     <div className="h-10 w-10 bg-gray-200 rounded flex items-center justify-center text-lg">
