@@ -93,11 +93,11 @@ export default [
       '**/app_backup/**',
       '**/app.disabled*/**',
       '**/pages.disabled/**',
-      '**/src/**',
+      // allow linting active source
       '**/ts_files_backup/**',
       '**/types/**',
       '**/src.broken/**',
-      '**/components/**',
+      // allow linting components
       '**/utils/**',
       '**/hooks/**',
       '**/zion-website/**',
@@ -129,7 +129,7 @@ export default [
       '**/zion_academy/**',
       '**/recovered/**',
       '**/backup*/**',
-      '**/src/**',
+      // allow linting active source
       '**/ts_files_backup/**',
       '**/types/**',
       '**/types.disabled/**',
@@ -145,7 +145,7 @@ export default [
       '**/recovered/**',
       '**/backup*/**',
       '**/src.broken/**',
-      '**/components/**',
+      // allow linting components
       '**/utils/**',
       '**/hooks/**',
       '**/structural-fix.js',

@@ -8,8 +8,7 @@ coverage/
 .cache/
 
 # Exclude corrupted or non-app source directories
-src/
-components/
+# Allow linting the active app source; keep only corrupted dirs ignored
 
 # Large mono-repo subprojects not part of the current app build
 automation/
