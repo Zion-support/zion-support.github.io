@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer = () => {
+export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -30,7 +30,6 @@ const Footer = () => {
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }];
 
-export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
