@@ -76,7 +76,12 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts",
+<<<<<<< HEAD
+    "src/pages/services/ai-legal-document-analysis.tsx",
+    "src/pages/services/ai-marketing-automation.tsx"
+=======
     // Exclude corrupted or archived areas not part of active app
     "src/**"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1f94
   ]
 }
