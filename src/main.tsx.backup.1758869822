@@ -1,6 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+<<<<<<< HEAD
+import App from '../App';
+=======
 import App from './App.tsx';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ae0a
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -12,4 +16,8 @@ if (rootElement) {
       <App />
     </React.StrictMode>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ae0a
