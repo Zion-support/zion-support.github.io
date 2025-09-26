@@ -8134,7 +8134,11 @@ snapshots:
     dependencies:
       '@modelcontextprotocol/sdk': 1.18.2
       diff: 5.2.0
+<<<<<<< HEAD
+      glob: 10.4.5
+=======
       glob: 10.3.10
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5e29
       minimatch: 10.0.3
       zod-to-json-schema: 3.24.6(zod@3.25.76)
     transitivePeerDependencies:

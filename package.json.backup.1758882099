@@ -4,6 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
+    "dev": "vite",
+    "build": "vite build",
+    "build:netlify": "node scripts/build-with-error-handling.js",
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5e29
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 3000",
