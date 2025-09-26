@@ -1,10 +1,15 @@
 // This component is deprecated for App Router
-// Accept legacy props to keep type-checks passing where it's still used
-export default function SEO(_props: {
+// Use metadata export in page.tsx files instead
+
+// Provide a prop type to satisfy existing usages without rendering anything.
+export interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string | string[];
   url?: string;
-}) {
+  image?: string;
+}
+
+export default function SEO(_: SEOProps) {
   return null;
 }
