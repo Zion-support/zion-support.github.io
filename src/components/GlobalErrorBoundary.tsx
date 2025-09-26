@@ -63,7 +63,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       // Send to custom analytics endpoint
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && typeof fetch !== 'undefined') {
         fetch('/api/error-reporting', {
           method: 'POST',
           headers: {

@@ -134,7 +134,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
         }
       ] : undefined
     };
-  }, []);
+  }, [acknowledgeAlert, resolveAlert]);
 
   const acknowledgeAlert = useCallback((alertId: string) => {
     setAlerts(prev => prev.map(alert => 
