@@ -12,7 +12,7 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
-    "type-check": "npx tsc --noEmit",
+    "type-check": "npx tsc --noEmit -p tsconfig.typecheck.json",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
