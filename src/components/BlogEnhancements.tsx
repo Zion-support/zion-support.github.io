@@ -322,7 +322,7 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
       >
         <div className="text-green-600 text-4xl mb-4">✓</div>
         <h3 className="text-xl font-bold text-green-800 mb-2">Thank you for subscribing!</h3>
-        <p className="text-green-600">You'll receive our latest articles in your inbox.</p>
+        <p className="text-green-600">You&apos;ll receive our latest articles in your inbox.</p>
       </motion.div>
     );
   }
