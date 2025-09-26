@@ -36,8 +36,8 @@ import { ForumCategory } from '@/types / community',
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-interface PostFormValues {,
-title: string,
+interface PostFormValues {
+  title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string,
@@ -61,8 +61,8 @@ export const PostForm = ({
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-interface PostFormValues {,
-title: string,
+interface PostFormValues {
+  title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string}
@@ -78,17 +78,17 @@ interface PostFormProps {
 export const PostForm = ({
   initialValues,
   onSubmit,
-  isEditing = false}: PostFormProps) => {;
-const form = useForm<PostFormValues>({,
-defaultValues: {,
-title: initialValues?.title |"",
+  isEditing = false}: PostFormProps) => {
+  const form = useForm<PostFormValues>({
+    defaultValues: {
+      title: initialValues?.title |"",
       content: initialValues?.content |"",
       categoryId: initialValues?.categoryId |"project-help",
       tags: initialValues?.tags |""}
-}),;
-const [isSubmitting, setIsSubmitting] = useState(false),
-interface PostFormValues {,
-title: string,
+}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+interface PostFormValues {
+  title: string,
   content: string,
   category_id: ForumCategory,
   tags: string}
@@ -99,107 +99,108 @@ interface PostFormProps {
 export const PostForm = ({
   initial_values,
   on_submit,
-  is_editing = false}: PostFormProps) =>: any {;
-const form = use_form < PostFormValues>({,
-default_values: {,
-title: initial_values?.title || "",
+  is_editing = false}: PostFormProps) =>: any {
+  const form = use_form < PostFormValues>({
+    default_values: {
+      title: initial_values?.title || "",
       content: initial_values?.content || "",
       category_id: initial_values?.category_id || "project - help",
       tags: initial_values?.tags || ""}
-  }),;
-const [is_submitting, setIsSubmitting] = useState (false),;
-const handle_submit = async (values: PostFormValues) => {
+  }),
+  const [is_submitting, setIsSubmitting] = useState (false),
+  const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
     try {
       await on_submit (values)} finally {
       setIsSubmitting(false)}
-}),;
-const [isSubmitting, setIsSubmitting] = useState(false),;
-const handleSubmit = async (values: PostFormValues) => {
+}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const handleSubmit = async (values: PostFormValues) => {
     setIsSubmitting(true),
     try {
       await onSubmit(values)} finally {
       setIsSubmitting(false)}
 }
-,;
-return (
+,
+  return (
     <Card>,
       <CardHeader>,
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}
-      
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>,
+      </CardHeader>,
       <CardContent>,
         <Form {...form}>,
           <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>,
-            <FormField,
-control={form && form.control}
+            <FormField
+              control={form && form.control}
               name="title",
               render={({ field }) => (
                 <FormItem>,
-                  <FormLabel>Title
+                  <FormLabel>Title</FormLabel>,
                   <FormControl>,
                     <Input placeholder="Enter post title..." {...field} />,
-                  
+                  </FormControl>,
                   <FormMessage />,
             />,
-            <FormField,
-control={form && form.control}
+            <FormField
+              control={form && form.control}
               name="content",
               render={({ field }) => (
                 <FormItem>,
-                  <FormLabel>Category
+                  <FormLabel>Category</FormLabel>,
                   <FormControl>,
-                    <select,
-className="w-full p-2 border rounded-md",
-
+                    <select
+                      className="w-full p-2 border rounded-md",
                       {...field}>,
-                      <option value="getting-hired">Getting Hired
-                      <option value="project-help">Project Help
-                      <option value="ai-tools">AI Tools Discussion
-                      <option value="feedback">Feedback & Feature Requests
-
+                      <option value="getting-hired">Getting Hired</option>,
+                      <option value="project-help">Project Help</option>,
+                      <option value="ai-tools">AI Tools Discussion</option>,
+                      <option value="feedback">Feedback & Feature Requests</option>,
+                    </select>,
+                  </FormControl>,
                   <FormMessage />,
                 </FormItem>)}
             />,
-            <FormField,
-control={form && form.control}
+            <FormField
+              control={form && form.control}
               name="categoryId",
               render={({ field }) => (
                 <FormItem>,
-                  <FormLabel>Category
+                  <FormLabel>Category</FormLabel>,
                   <FormControl>,
-                    <select,
-className="w-full p-2 border rounded-md",
-
+                    <select
+                      className="w-full p-2 border rounded-md",
                       {...field}>,
-                      <option value="getting-hired">Getting Hired
-                      <option value="project-help">Project Help
-                      <option value="ai-tools">AI Tools Discussion
-                      <option value="feedback">Feedback & Feature Requests
-
+                      <option value="getting-hired">Getting Hired</option>,
+                      <option value="project-help">Project Help</option>,
+                      <option value="ai-tools">AI Tools Discussion</option>,
+                      <option value="feedback">Feedback & Feature Requests</option>,
+                    </select>,
+                  </FormControl>,
                   <FormMessage />,
                 </FormItem>)}
 ,
             />,
-            <FormField,
-control={form && form.control}
+            <FormField
+              control={form && form.control}
               name="tags",
               render={({ field }) => (
                 <FormItem>,
-                  <FormLabel>Tags (comma-separated)
+                  <FormLabel>Tags (comma-separated)</FormLabel>,
                   <FormControl>,
-                    <Input,
-placeholder="e && e.g. resume, hiring, flutter",
-
+                    <Input
+                      placeholder="e && e.g. resume, hiring, flutter",
                       {...field} ,
                     />,
-                  
+                  </FormControl>,
                   <FormMessage />,
                 </FormItem>)}
             />,
             <Button type="submit" disabled={isSubmitting}>,
-
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-
+            </Button>,
+          </form>,
+        </Form>,
+      </CardContent>,
     </Card>)}
 ,
 export default PostForm,

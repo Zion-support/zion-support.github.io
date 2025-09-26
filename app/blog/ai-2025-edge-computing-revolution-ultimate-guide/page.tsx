@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import SEO from '@/components/SEO';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
   description: 'Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation.',

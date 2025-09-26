@@ -15,12 +15,6 @@ const UltimateContent2025PromotionBanner = () => {
       setIsVisible(true);
     }
 
-    // Auto-rotate content every 5 seconds
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
@@ -75,6 +69,15 @@ const UltimateContent2025PromotionBanner = () => {
       badgeColor: 'bg-gradient-to-r from-blue-500 to-cyan-500'
     }
   ];
+
+  useEffect(() => {
+    // Auto-rotate content every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [featuredContent.length]);
 
   if (!isVisible) return null;
 

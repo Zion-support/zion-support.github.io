@@ -36,18 +36,18 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 			url: typeof window !== 'undefined' ? window.location.href : 'unknown'
 		};
 
-		if (process.env.NODE_ENV === 'development') {
-			// eslint-disable-next-line no-console
-			console.group('🚨 Error Boundary Caught Error');
-			// eslint-disable-next-line no-console
-			console.error('Error:', error);
-			// eslint-disable-next-line no-console
-			console.error('Error Info:', errorInfo);
-			// eslint-disable-next-line no-console
-			console.error('Full Details:', errorDetails);
-			// eslint-disable-next-line no-console
-			console.groupEnd();
-		}
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.group('🚨 Error Boundary Caught Error');
+      // eslint-disable-next-line no-console
+      console.error('Error:', error);
+      // eslint-disable-next-line no-console
+      console.error('Error Info:', errorInfo);
+      // eslint-disable-next-line no-console
+      console.error('Full Details:', errorDetails);
+      // eslint-disable-next-line no-console
+      console.groupEnd();
+    }
 
 		if (typeof window !== 'undefined') {
 			const maybeGtag = (window as unknown as {
