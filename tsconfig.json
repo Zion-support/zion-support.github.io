@@ -46,10 +46,6 @@
     "strictNullChecks": false
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*",
-    "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts",
     "src/src/**/*"
   ],
   "exclude": [
