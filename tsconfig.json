@@ -48,7 +48,11 @@
     "strictNullChecks": false
   },
   "include": [
-    "types.d.ts"
+    "types.d.ts",
+    "App.tsx",
+    "app/**/*",
+    "pages_minimal/**/*",
+    "__safe_tests__/**/*"
   ],
   "exclude": [
     "node_modules",
