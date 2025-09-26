@@ -106,7 +106,23 @@ aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
 
+# Ignore build outputs to avoid conflicts
+.next/
+out/
+dist/
+coverage/
+tsconfig.tsbuildinfo
+
 # Yarn Berry cache
 .yarn/cache
 .yarn/*-state.*
-yarn.lock
+.yarn/install-state.gz
+.pnp.*
+
+# Python artifacts and virtual envs
+__pycache__/
+*.pyc
+.venv/
+
+# Local SQLite databases
+zion_academy/instance/*.db

@@ -1,14 +1,15 @@
 // This component is deprecated for App Router
-// Kept to maintain backwards-compat with existing pages that still render <SEO />
-// Accept props to satisfy TS where pages pass SEO metadata props.
+// Prefer using the Next.js Metadata API via `export const metadata` in `page.tsx`.
 
-type SEOProps = {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: string;
-};
+export interface SEOProps {
+	title?: string;
+	description?: string;
+	keywords?: string | string[];
+	canonical?: string;
+	url?: string;
+	noindex?: boolean;
+}
 
 export default function SEO(_props: SEOProps) {
-  return null;
+	return null;
 }

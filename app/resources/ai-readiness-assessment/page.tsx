@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
+
+import SEO from '../../../components/SEO';
 
 type AnswerValue = 1 | 2 | 3 | 4;
 type AnswersMap = Record<string, AnswerValue>;
