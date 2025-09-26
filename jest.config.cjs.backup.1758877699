@@ -1,5 +1,27 @@
 /** @type {import('jest').Config} */
 module.exports = {
+<<<<<<< HEAD
+	preset: 'ts-jest',
+	testEnvironment: 'jsdom',
+	testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+	testPathIgnorePatterns: [
+		'/node_modules/',
+		'/dist/',
+		'/build/',
+		'/zion-website/e2e/',
+	],
+	transform: {
+		'^.+\\.(ts|tsx)$': [
+			'ts-jest',
+			{
+				tsconfig: '<rootDir>/tsconfig.json',
+				useESM: false,
+			},
+		],
+	},
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+}
+=======
 	testEnvironment: "jest-environment-jsdom",
 	setupFilesAfterEnv: [],
 	testMatch: ["**/__tests__/**/*.(js|jsx|ts|tsx)", "**/*.(test|spec).(js|jsx|ts|tsx)"],
@@ -11,4 +33,5 @@ module.exports = {
 	// Avoid picking up Next.js specific e2e tests located elsewhere
 	testPathIgnorePatterns: ["/zion-website/e2e/", "/e2e/", "/dist/", "/build/"],
 };
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d55a
 
