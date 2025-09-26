@@ -68,6 +68,8 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    // Exclude corrupted or archived areas not part of active app
+    "src/**"
   ]
 }
