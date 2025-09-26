@@ -51,6 +51,10 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
+<<<<<<< HEAD
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
+=======
+  ]
+>>>>>>> cursor/check-fix-push-and-merge-to-main-b787
 }
