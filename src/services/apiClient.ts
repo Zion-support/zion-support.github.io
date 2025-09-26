@@ -3,7 +3,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import axiosRetry from 'axios-retry';
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
-import type { AxiosResponse } from 'axios';
+import type { AxiosResponse, AxiosError, AxiosRequestConfig } from 'axios';
 
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
@@ -11,24 +11,27 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 // Global interceptor for all axios instances
 
 // Define the global error handler (exported for testing purposes)
-export const globalAxiosErrorHandler = (error: any) => {
-  const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
+export const globalAxiosErrorHandler = (error: unknown) => {
+  const axiosError = error as AxiosError;
+  const response = axiosError?.response;
+  const config = (axiosError?.config as AxiosRequestConfig | undefined) || {};
+
+  const contentType = typeof response?.headers?.['content-type'] === 'string' ? response?.headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON');
   }
 
-  const config = (typeof error === 'object' && error && 'config' in error ? (error as any).config : {}) || {};
-  const axiosRetryState = (config as any)['axios-retry'];
+  const axiosRetryState = (config as any)['axios-retry']; // Standard property used by axios-retry
 
   const isRetryingAndNotFinalConfiguredRetry = axiosRetryState && axiosRetryState.attemptNumber <= axiosRetryState.retryCount;
 
-  const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined;
-  const method = ((config as any).method || '').toUpperCase();
-  const url = (config as any).url || '';
+  const status = response?.status;
+  const method = (config?.method || '').toUpperCase();
+  const url = config?.url || '';
 
   // Handle DELETE 404 as success (item already removed)
   if (status === 404 && method === 'DELETE') {
-    return Promise.resolve(typeof error === 'object' && error && 'response' in error ? (error as { response?: unknown }).response : undefined);
+    return Promise.resolve(response as unknown);
   }
 
   // Suppress 404 toast if retries are pending
@@ -47,7 +50,8 @@ export const globalAxiosErrorHandler = (error: any) => {
     '/telemetry',
     'supabase.co',
     'googleapis.com',
-    'github.com/api'];
+    'github.com/api',
+  ];
 
   // Check if URL should fail silently
   const shouldFailSilently = (url: string): boolean => {
@@ -85,11 +89,11 @@ export const globalAxiosErrorHandler = (error: any) => {
 
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
-    const message = error?.response?.data?.message as string | undefined;
+    const message = (response?.data as any)?.message as string | undefined;
     toast.error(message || 'Something went wrong');
   } else {
     // Log background errors without showing toast
-    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined });
+    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: (response as any)?.data });
   }
 
   return Promise.reject(error);
@@ -110,7 +114,7 @@ export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
 
-axiosRetry(apiClient as any, {
+axiosRetry(apiClient, {
   retries: 3,
   retryCondition: (error) => {
     return (
@@ -123,7 +127,8 @@ axiosRetry(apiClient as any, {
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
   async (error: unknown) => {
-    const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined;
+    const axiosError = error as AxiosError;
+    const status = axiosError?.response?.status;
 
     if (status === 401) {
       try {
@@ -136,8 +141,8 @@ apiClient.interceptors.response.use(
         window.location.assign('/login');
       }
     } else {
-      const message = error.response?.data?.message || 'Something went wrong';
-      toast.error(message);
+      const message = (axiosError?.response?.data as any)?.message as string | undefined;
+      toast.error(message || 'Something went wrong');
     }
     return Promise.reject(error);
   }

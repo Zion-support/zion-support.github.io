@@ -174,5 +174,8 @@ const Home: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bb8a
 export default Home;
