@@ -1,23 +1,88 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { PerformanceDashboard } from '../src/components/PerformanceDashboard';
-import { SecurityDashboard } from '../src/components/SecurityDashboard';
-import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
-import EnhancedDashboard from '../src/components/EnhancedDashboard';
-import EnhancedSearch from '../src/components/EnhancedSearch';
-import { AdvancedPerformanceMonitor } from '../src/components/AdvancedPerformanceMonitor';
-import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsDashboard';
-import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
-import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
-import SystemMonitor from '../src/components/SystemMonitor';
+import dynamic from 'next/dynamic';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor';
+// Lazy load heavy components for better performance
+const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+});
+
+const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
+});
+
+const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
+});
+
+const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
+});
+
+const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
+});
+
+const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600"></div></div>
+});
+
+const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div></div>
+});
+
+const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600"></div></div>
+});
+
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div></div>
+});
+
+const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-600"></div></div>
+});
+
+const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div></div>
+});
+
+const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-rose-600"></div></div>
+});
+
+const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600"></div></div>
+});
+
+const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-600"></div></div>
+});
+
+const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-600"></div></div>
+});
+
+const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600"></div></div>
+});
+
+const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-fuchsia-600"></div></div>
+});
+
+const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
+});
+
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
 
 const Dashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
+  const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
   const [isRealTime, setIsRealTime] = useState(true);
 
   const tabs = [
+    { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
     { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
     { id: 'performance' as const, name: 'Performance', icon: '⚡' },
     { id: 'security' as const, name: 'Security', icon: '🔒' },
@@ -27,7 +92,15 @@ const Dashboard: React.FC = () => {
     { id: 'advanced-performance' as const, name: 'Advanced Performance', icon: '⚡️' },
     { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
-    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' }
+    { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
+    { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
+    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
+    { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
   ];
 
   // Sample data for advanced components
@@ -75,6 +148,8 @@ const Dashboard: React.FC = () => {
 
   const renderDashboard = () => {
     switch (activeTab) {
+      case 'comprehensive':
+        return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
         return <AnalyticsDashboard />;
       case 'performance':
@@ -188,16 +263,203 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'security-enhancements':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+            <AdvancedSecurityEnhancements />
+          </div>
+        );
+      case 'new-performance':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <PerformanceDashboard 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onAlert={(alert) => console.log('Performance alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-security':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Monitoring
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <SecurityMonitor 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+            />
+          </div>
+        );
+      case 'new-analytics':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
+              <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <EnhancedAnalytics 
+              refreshInterval={isRealTime ? 10000 : 60000}
+              enableRealTime={isRealTime}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
+          </div>
+        );
+      case 'error-handler':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorHandler 
+              onError={(error) => console.log('Error captured:', error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              enableAutoRetry={true}
+              maxRetries={3}
+              enablePerformanceMonitoring={true}
+              enableErrorReporting={true}
+              enableUserFeedback={true}
+            />
+          </div>
+        );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer />
+          </div>
+        );
+      case 'user-experience':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">User Experience Settings</h1>
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Use the settings button in the bottom-right corner to customize your experience.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Theme Settings</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Customize light, dark, or auto theme</p>
+                </div>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Accessibility</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">High contrast, reduced motion, and screen reader support</p>
+                </div>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Language</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Multi-language support with RTL support</p>
+                </div>
+              </div>
+            </div>
+            <EnhancedUserExperience />
+          </div>
+        );
+      case 'analytics-insights':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedAnalyticsInsights 
+              data={sampleAnalyticsData}
+              enableRealTime={true}
+              refreshInterval={30000}
+              onInsightAction={(insight) => console.log('Insight action:', insight)}
+            />
+          </div>
+        );
       default:
-        return <AnalyticsDashboard />;
+        return <ComprehensiveAnalyticsDashboard />;
     }
   };
 
   return (
     <>
       <Head>
-        <title>Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive dashboard for monitoring analytics, performance, and security metrics" />
+        <title>Advanced Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring, security analysis, SEO optimization, and accessibility insights" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -207,8 +469,8 @@ const Dashboard: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-                <p className="text-sm text-gray-600">Monitor your application&apos;s performance and security</p>
+                <h1 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
+                <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights, performance optimization, security analysis, and SEO recommendations</p>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="text-sm text-gray-500">

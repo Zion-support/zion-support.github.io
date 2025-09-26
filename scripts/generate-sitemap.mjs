@@ -26,17 +26,44 @@ const dynamicRoutes = [
   // Add dynamic routes here if needed
 ];
 
+// Define API routes for sitemap
+const apiRoutes = [
+  '/api/analytics',
+  '/api/health',
+  '/api/error-reporting',
+  '/api/image-optimization',
+  '/api/security-events'
+];
+
 // Generate sitemap XML
 function generateSitemap() {
   const routes = [...staticRoutes, ...dynamicRoutes];
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 ${routes.map(route => {
   const url = `${baseUrl}${route}`;
   const lastmod = new Date().toISOString().split('T')[0];
-  const priority = route === '' ? '1.0' : '0.8';
-  const changefreq = route === '' ? 'daily' : 'weekly';
+  
+  // Set priority and changefreq based on route
+  let priority = '0.8';
+  let changefreq = 'weekly';
+  
+  if (route === '') {
+    priority = '1.0';
+    changefreq = 'daily';
+  } else if (route === '/blog') {
+    priority = '0.9';
+    changefreq = 'daily';
+  } else if (route === '/services' || route === '/about') {
+    priority = '0.9';
+    changefreq = 'weekly';
+  } else if (route === '/contact' || route === '/faq') {
+    priority = '0.7';
+    changefreq = 'monthly';
+  }
   
   return `  <url>
     <loc>${url}</loc>
