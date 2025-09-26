@@ -95,28 +95,6 @@ export default function Home(): JSX.Element {
 							</div>
 						</section>
 
-<<<<<<< HEAD
-						<section className="text-center py-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-16 text-white">
-							<h2 className="text-3xl md:text-4xl font-bold mb-4">
-								Ready to Get Started?
-							</h2>
-							<p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-								Contact us today to discuss your project requirements and how we can help your business grow.
-							</p>
-							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<button 
-									onClick={() => trackClick('get-in-touch-button', 'cta')}
-									className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
-								>
-									Get In Touch
-								</button>
-								<button 
-									onClick={() => trackClick('view-portfolio-button', 'cta')}
-									className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
-								>
-									View Portfolio
-								</button>
-=======
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 							{/* Background pattern */}
 							<div className="absolute inset-0 opacity-10">
@@ -151,7 +129,6 @@ export default function Home(): JSX.Element {
 										</span>
 									</button>
 								</div>
->>>>>>> 538456d5095588e94341a68b7224da5ebe5e443a
 							</div>
 						</section>
 
