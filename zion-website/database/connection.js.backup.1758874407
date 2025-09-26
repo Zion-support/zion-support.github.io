@@ -18,7 +18,10 @@ export const dbPool = new Pool({
 
 // Graceful shutdown
 process.on('SIGINT', async () => {
+<<<<<<< HEAD
+=======
   // // // console.log('Closing database pool...')
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ad04
   await dbPool.end()
   process.exit(0)
 })

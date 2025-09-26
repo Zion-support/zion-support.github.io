@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -29,6 +31,7 @@ const Footer = () => {
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ad04
 
 export const Footer: React.FC = () => {
   return (

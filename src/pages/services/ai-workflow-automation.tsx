@@ -1,46 +1,10 @@
-import React from "react";
-import { SEO } from "../../components/SEO";
-
-type Feature = { title: string; description: string };
+import React from "react"
 
 export default function AIWorkflowAutomation() {
-  const features: Feature[] = [
-    { title: "Intelligent Process Automation", description: "AI-powered workflow automation that optimizes processes automatically." },
-    { title: "Machine Learning Integration", description: "Seamless integration with ML models for predictive optimization." },
-    { title: "Goal-Oriented Automation", description: "Workflows that adapt based on business objectives and KPIs." }
-  ];
-  const benefits: string[] = [
-    "Reduce manual tasks by up to 80%",
-    "Improve process efficiency by 60%",
-    "Cut operational costs by 40%",
-    "Enhance customer satisfaction",
-    "Ensure regulatory compliance"
-  ];
-
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
-      />
-
-      <section className="py-12">
-        <h1 className="text-3xl font-bold">AI Workflow Automation</h1>
-        <div className="mt-6 grid gap-4">
-          {features.map((feature, index) => (
-            <div key={index}>
-              <h3 className="text-xl font-semibold">{feature.title}</h3>
-              <p className="text-slate-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <ul className="mt-8 list-disc pl-6">
-          {benefits.map((benefit, index) => (
-            <li key={index}>{benefit}</li>
-          ))}
-        </ul>
-      </section>
+    <div style={{ padding: 24 }}>
+      <h1>AI Workflow Automation</h1>
+      <p>This page is under construction.</p>
     </div>
-  );
+  )
 }
