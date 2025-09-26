@@ -9,9 +9,11 @@ import { SecurityDashboard } from '../src/components/SecurityMonitor';
 import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
 import { TestDashboard } from '../src/components/TestDashboard';
+import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { useAdvancedAnalytics } from '../src/hooks/useAdvancedAnalytics';
 import { useCache } from '../src/hooks/useAdvancedCache';
+import { Analytics, useEventTracking, useScrollTracking, useTimeTracking } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
@@ -19,13 +21,10 @@ export default function Home(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 
-	useEffect(() => {
-		setIsVisible(true);
-		
-		const handleScroll = () => setScrollY(window.scrollY);
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	// Analytics hooks
+	const { trackButtonClick, trackServiceView } = useEventTracking();
+	useScrollTracking();
+	useTimeTracking();
 
 	// Analytics tracking
 	usePageView('homepage');
@@ -43,15 +42,34 @@ export default function Home(): JSX.Element {
 		{ ttl: 5 * 60 * 1000 } // 5 minutes cache
 	);
 
+	useEffect(() => {
+		setIsVisible(true);
+		
+		const handleScroll = () => setScrollY(window.scrollY);
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	const handleServiceHover = (serviceId: string) => {
+		setHoveredService(serviceId);
+		trackServiceView(serviceId);
+	};
+
+	const handleButtonClick = (buttonName: string) => {
+		trackButtonClick(buttonName, 'homepage');
+	};
+
 	return (
 		<ErrorBoundary>
-			<SEO />
-			<PerformanceMonitor />
-			<SecurityDashboard />
-			<ErrorDashboard />
-			<AnalyticsDashboard />
-			<TestDashboard />
-			<Head>
+			<ThemeProvider>
+				<SEO />
+				<Analytics />
+				<PerformanceMonitor />
+				<SecurityDashboard />
+				<ErrorDashboard />
+				<AnalyticsDashboard />
+				<TestDashboard />
+				<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -80,6 +98,11 @@ export default function Home(): JSX.Element {
 				</div>
 				
 				<div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+					{/* Theme Toggle */}
+					<div className="fixed top-4 right-4 z-50">
+						<ThemeToggle />
+					</div>
+					
 					<header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 						<h1 className="text-5xl md:text-7xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
 							Zion App
@@ -109,7 +132,7 @@ export default function Home(): JSX.Element {
 										<ServiceCard
 											service={service}
 											isHovered={hoveredService === service.id}
-											onMouseEnter={() => setHoveredService(service.id)}
+											onMouseEnter={() => handleServiceHover(service.id)}
 											onMouseLeave={() => setHoveredService(null)}
 										/>
 									</div>
@@ -133,13 +156,14 @@ export default function Home(): JSX.Element {
 									Contact us today to discuss your project requirements and how we can help your business grow with cutting-edge technology solutions.
 								</p>
 								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-								<button 
-									onClick={() => {
-										trackClick('get-in-touch-button', 'cta');
-										trackConversion('contact_form_click', 1, { source: 'cta_button' });
-									}}
-									className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
-								>
+									<button 
+										onClick={() => {
+											handleButtonClick('get_in_touch');
+											trackClick('get-in-touch-button', 'cta');
+											trackConversion('contact_form_click', 1, { source: 'cta_button' });
+										}}
+										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+									>
 										<span className="flex items-center justify-center gap-2">
 											Get In Touch
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,13 +171,14 @@ export default function Home(): JSX.Element {
 											</svg>
 										</span>
 									</button>
-								<button 
-									onClick={() => {
-										trackClick('view-portfolio-button', 'cta');
-										trackConversion('portfolio_view_click', 1, { source: 'cta_button' });
-									}}
-									className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
-								>
+									<button 
+										onClick={() => {
+											handleButtonClick('view_portfolio');
+											trackClick('view-portfolio-button', 'cta');
+											trackConversion('portfolio_view_click', 1, { source: 'cta_button' });
+										}}
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
+									>
 										<span className="flex items-center justify-center gap-2">
 											View Portfolio
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -230,6 +255,7 @@ export default function Home(): JSX.Element {
 					</footer>
 				</div>
 			</div>
+			</ThemeProvider>
 		</ErrorBoundary>
 	);
 }
