@@ -1,25 +1,25 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Target,;
-  TrendingUp, ;
-  Users, ;
-  Clock, ;
-  BarChart3, ;
-  Shield, ;
-  Zap, ;
-  CheckCircle,;
-  Brain,;
-  Workflow,;
-  MessageSquare,;
-  Mail,;
-  Smartphone,;
-  Globe,;
-  Star,;
-  ArrowRight,;
-  Play,;
-  Cpu,;
-  Heart,;
+  Target;
+  TrendingUp;
+  Users;
+  Clock;
+  BarChart3;
+  Shield;
+  Zap;
+  CheckCircle;
+  Brain;
+  Workflow;
+  MessageSquare;
+  Mail;
+  Smartphone;
+  Globe;
+  Star;
+  ArrowRight;
+  Play;
+  Cpu;
+  Heart;
   Eye;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -41,7 +41,7 @@ const AIMarketingAutomation = () => {;
       icon: BarChart3,title: "Predictive Analytics",description: "AI predicts customer behavior and campaign performance",price: "$99/month"
     };
     {;
-      icon: Users,title: "Multi-Channel Orchestration",description: "Seamlessly coordinate campaigns across email, social, and web",;
+      icon: Users,title: "Multi-Channel Orchestration",description: "Seamlessly coordinate campaigns across email, social, and web";
       price: "$119/month"
     };
   ];
@@ -49,30 +49,30 @@ const AIMarketingAutomation = () => {;
     {;
       name: "Starter",price: "$59",period: "/month",description: "Perfect for small businesses starting with AI marketing",features: [;
         "Basic audience targeting"
-        "Email automation",;
-        "Social media posting",;
+        "Email automation";
+        "Social media posting";
         "Email support"
-      ],;
+      ];
       popular: false;
     };
     {;
       name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses with multiple marketing channels",features: [;
         "All Starter features"
-        "Advanced AI targeting",;
-        "Multi-channel campaigns",;
-        "Priority support",;
+        "Advanced AI targeting";
+        "Multi-channel campaigns";
+        "Priority support";
         "Custom integrations"
-      ],;
+      ];
       popular: true;
     };
     {;
       name: "Enterprise",price: "$399",period: "/month",description: "For large organizations with complex marketing needs",features: [;
         "All Professional features"
-        "Custom AI models",;
-        "Advanced analytics",;
-        "Dedicated support",;
+        "Custom AI models";
+        "Advanced analytics";
+        "Dedicated support";
         "White-label options"
-      ],;
+      ];
       popular: false;
     };
   ];
@@ -89,7 +89,7 @@ const AIMarketingAutomation = () => {;
     {;
       icon: Heart,title: "Personalized Experience",description: "Every customer receives relevant, personalized content"
     };
-  ],;
+  ];
 
   return (
     <>;

@@ -2,25 +2,25 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Zap,;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Cpu, ;
-  Rocket, ;
-  Atom, ;
-  Globe,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  Lock,;
-  Database,;
-  Network,;
-  CpuIcon,;
-  Server,;
-  CircuitBoard,;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Rocket;
+  Atom;
+  Globe;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Users;
+  Lock;
+  Database;
+  Network;
+  CpuIcon;
+  Server;
+  CircuitBoard;
   Microchip;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
@@ -54,13 +54,13 @@ const QuantumComputing = () => {;
     };
   ];
   const technologies = [;
-    "Quantum Annealing",;
-    "Quantum Machine Learning",;
-    "Quantum Cryptography",;
-    "Quantum Error Correction",;
-    "Quantum-Classical Hybrid Systems",;
+    "Quantum Annealing";
+    "Quantum Machine Learning";
+    "Quantum Cryptography";
+    "Quantum Error Correction";
+    "Quantum-Classical Hybrid Systems";
     "Quantum Cloud Infrastructure"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;

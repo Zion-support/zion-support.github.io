@@ -1,24 +1,24 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  FileText,;
-  Search, ;
-  Shield, ;
-  Zap, ;
-  Brain, ;
-  CheckCircle, ;
-  Clock, ;
-  DollarSign,;
-  Users,;
-  BarChart3,;
-  Lock,;
-  Globe,;
-  Award,;
-  Star,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  FileText;
+  Search;
+  Shield;
+  Zap;
+  Brain;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Users;
+  BarChart3;
+  Lock;
+  Globe;
+  Award;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -26,7 +26,7 @@ export default function AILegalDocumentAnalysis() {;
   const features = [;
     {;
       icon: <Brain className="w-6 h-6" />,title: "AI-Powered Contract Analysis",description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy"
-    },;
+    };
     {;
       icon: <Search className="w-6 h-6" />,title: "Intelligent Document Search",description: "Semantic search across millions of legal documents with context-aware results and relevance scoring"
     };
@@ -38,55 +38,55 @@ export default function AILegalDocumentAnalysis() {;
     };
     {;
       icon: <Users className="w-6 h-6" />,title: "Collaborative Review",description: "Multi-user document review with version control, comments, and approval workflows"
-    },;
+    };
     {;
       icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive insights into document patterns, risk trends, and compliance metrics"
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
       name: "Starter",price: "$299",period: "/month",features: [;
         "Up to 100 documents/month"
-        "Basic AI analysis",;
-        "Standard search",;
-        "Email support",;
+        "Basic AI analysis";
+        "Standard search";
+        "Email support";
         "Basic compliance alerts"
-      ],;
+      ];
       popular: false;
     };
     {;
       name: "Professional",price: "$799",period: "/month",features: [;
-        "Up to 1,000 documents/month",;
-        "Advanced AI analysis",;
-        "Semantic search",;
-        "Priority support",;
-        "Full compliance monitoring",;
-        "Risk assessment",;
+        "Up to 1,000 documents/month";
+        "Advanced AI analysis";
+        "Semantic search";
+        "Priority support";
+        "Full compliance monitoring";
+        "Risk assessment";
         "API access"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$1,999",;
+      name: "Enterprise",price: "$1,999";
       period: "/month",features: [;
         "Unlimited documents"
-        "Custom AI models",;
-        "Advanced analytics",;
-        "Dedicated support",;
-        "Custom integrations",;
-        "White-label options",;
+        "Custom AI models";
+        "Advanced analytics";
+        "Dedicated support";
+        "Custom integrations";
+        "White-label options";
         "SLA guarantees"
-      ],;
+      ];
       popular: false;
     };
   ];
   const benefits = [;
-    "Reduce legal review time by 85%",;
-    "Identify contract risks 3x faster",;
-    "Ensure 100% compliance accuracy",;
-    "Save $50,000+ annually on legal costs",;
-    "Improve contract negotiation outcomes",;
+    "Reduce legal review time by 85%";
+    "Identify contract risks 3x faster";
+    "Ensure 100% compliance accuracy";
+    "Save $50,000+ annually on legal costs";
+    "Improve contract negotiation outcomes";
     "Streamline due diligence processes"
   ];
   return (

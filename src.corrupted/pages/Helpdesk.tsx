@@ -2,46 +2,46 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  MessageCircle,;
-  Users, ;
-  Ticket, ;
-  Clock, ;
-  CheckCircle, ;
-  AlertCircle, ;
-  Search, ;
-  Filter,;
-  ArrowRight,;
-  Star,;
-  Globe,;
-  Cpu,;
-  Shield,;
-  Cloud,;
-  Zap,;
-  Target,;
-  Activity,;
-  BarChart3,;
-  Settings,;
-  Bell,;
-  Download,;
-  Upload,;
-  RefreshCw,;
-  Eye,;
-  Lock,;
-  Database,;
-  Network,;
-  Smartphone,;
-  Monitor,;
-  Headphones,;
-  Mail,;
-  Phone,;
-  Video,;
-  FileText,;
-  Calendar,;
-  Tag,;
-  UserCheck,;
-  UserX,;
-  TrendingUp,;
-  PieChart,;
+  MessageCircle;
+  Users;
+  Ticket;
+  Clock;
+  CheckCircle;
+  AlertCircle;
+  Search;
+  Filter;
+  ArrowRight;
+  Star;
+  Globe;
+  Cpu;
+  Shield;
+  Cloud;
+  Zap;
+  Target;
+  Activity;
+  BarChart3;
+  Settings;
+  Bell;
+  Download;
+  Upload;
+  RefreshCw;
+  Eye;
+  Lock;
+  Database;
+  Network;
+  Smartphone;
+  Monitor;
+  Headphones;
+  Mail;
+  Phone;
+  Video;
+  FileText;
+  Calendar;
+  Tag;
+  UserCheck;
+  UserX;
+  TrendingUp;
+  PieChart;
   LineChart;
 } from "lucide-react"
 export default function Helpdesk() {;
@@ -67,24 +67,24 @@ export default function Helpdesk() {;
   ];
   const capabilities = [;
     {;
-      title: "Multi-Channel Support",description: "Handle support requests across email, chat, phone, and social media",;
+      title: "Multi-Channel Support",description: "Handle support requests across email, chat, phone, and social media";
       icon: Globe,benefits: ["Unified inbox", "Channel routing", "Response templates"]
-    },;
+    };
     {;
       title: "AI-Powered Automation",description: "Intelligent ticket routing and automated responses",icon: Cpu,benefits: ["Smart categorization", "Auto-assignment", "Predictive analytics"]
-    },;
+    };
     {;
       title: "Customer Self-Service",description: "Empower customers with knowledge base and FAQ systems",icon: Users,benefits: ["Knowledge management", "Community forums", "Video tutorials"]
-    },;
+    };
     {;
       title: "Performance Analytics",description: "Monitor team performance and customer satisfaction metrics",icon: TrendingUp,benefits: ["Response time tracking", "Resolution rates", "CSAT scores"]
     };
-  ],;
+  ];
 
   const integrations = [;
-    "Slack", "Microsoft Teams", "Zendesk", "Salesforce", "Jira", ;
+    "Slack", "Microsoft Teams", "Zendesk", "Salesforce", "Jira";
     "ServiceNow", "HubSpot", "Intercom", "Freshdesk", "Help Scout"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

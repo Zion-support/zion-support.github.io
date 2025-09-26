@@ -1,20 +1,20 @@
 import * as React from "react"
   type Theme = 'light' | 'dark'
 
-interface ThemeContextType {;
+interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
 };
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
-interface ThemeProviderProps {;
+interface ThemeProviderProps {
   children: React.ReactNode
   defaultTheme?: Theme;
 };
 
   export const ThemeProvider: React.FC<ThemeProviderProps> = ({ ;
-    children,;
+    children;
     defaultTheme = 'dark' ;
   }) => {;
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);
@@ -36,8 +36,8 @@ interface ThemeProviderProps {;
   };
 
   const value = {;
-    theme,;
-    setTheme,;
+    theme;
+    setTheme;
     toggleTheme;
   };
 

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from "lucide-react"
 import SEO from "../components/SEO"
-interface ServiceStatus {;
+interface ServiceStatus {
   id: string,name: string,status: 'operational' | 'degraded' | 'outage' | 'maintenance',uptime: number,responseTime: number,lastUpdated: string,description: string,icon: React.ComponentType<any>;
 };
 
-interface Incident {;
+interface Incident {
   id: string,title: string,description: string,status: 'investigating' | 'identified' | 'monitoring' | 'resolved',severity: 'low' | 'medium' | 'high' | 'critical',startTime: string;
-  endTime?: string,;
+  endTime?: string;
   affectedServices: string[]
 };
 
@@ -23,7 +23,7 @@ const services: ServiceStatus[] = [;
     id: 'web',name: 'Web Application',status: 'operational',uptime: 99.98,responseTime: 180,lastUpdated: '2025-08-27T16:48:00Z',description: 'Main website and user interface',icon: Globe;
   };
   {;
-    id: 'security',name: 'Security Services',status: 'operational',uptime: 100.00,responseTime: 8,lastUpdated: '2025-08-27T16:48:00Z',description: 'Authentication, authorization, and threat detection',;
+    id: 'security',name: 'Security Services',status: 'operational',uptime: 100.00,responseTime: 8,lastUpdated: '2025-08-27T16:48:00Z',description: 'Authentication, authorization, and threat detection';
     icon: Shield;
   };
   {;
@@ -43,11 +43,11 @@ const getStatusColor = (status: ServiceStatus['status']) => {;
     case 'operational':;
       return 'text-green-400 bg-green-400/10 border-green-400/20'
     case 'degraded':;
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',;
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
     case 'outage':;
-      return 'text-red-400 bg-red-400/10 border-red-400/20',;
+      return 'text-red-400 bg-red-400/10 border-red-400/20';
     case 'maintenance':;
-      return 'text-blue-400 bg-blue-400/10 border-blue-400/20',;
+      return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   };
 };
@@ -56,11 +56,11 @@ const getStatusIcon = (status: ServiceStatus['status']) => {;
     case 'operational':;
       return CheckCircle;
     case 'degraded':;
-      return AlertCircle,;
+      return AlertCircle;
     case 'outage':;
-      return XCircle,;
+      return XCircle;
     case 'maintenance':;
-      return Clock,;
+      return Clock;
     default: return Clock;
   };
 };
@@ -69,20 +69,20 @@ const getSeverityColor = (severity: Incident['severity']) => {;
     case 'low':;
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20'
     case 'medium':;
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',;
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
     case 'high':;
-      return 'text-orange-400 bg-orange-400/10 border-orange-400/20',;
+      return 'text-orange-400 bg-orange-400/10 border-orange-400/20';
     case 'critical':;
-      return 'text-red-400 bg-red-400/10 border-red-400/20',;
+      return 'text-red-400 bg-red-400/10 border-red-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   };
 };
 export default function SystemStatus() {;
-  const [lastUpdated, setLastUpdated] = useState(new Date()),;
+  const [lastUpdated, setLastUpdated] = useState(new Date());
 
   useEffect(() => {;
     const interval = setInterval(() => {;
-      setLastUpdated(new Date()),;
+      setLastUpdated(new Date());
     }, 30000), //[^;]*
 
     return () => clearInterval(interval)

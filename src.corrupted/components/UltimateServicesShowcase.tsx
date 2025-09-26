@@ -2,30 +2,30 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Globe,;
-  Code,;
-  BarChart3,;
-  Users,;
-  ShoppingCart,;
-  MessageSquare,;
-  FileText,;
-  Settings,;
-  Zap,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
+  Brain;
+  Cloud;
+  Shield;
+  Globe;
+  Code;
+  BarChart3;
+  Users;
+  ShoppingCart;
+  MessageSquare;
+  FileText;
+  Settings;
+  Zap;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
   MapPin;
 } from "lucide-react"
 //[^;]*
 import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion"
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services"
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions"
-interface Service {;
+interface Service {
   id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {;
     mobile: string,email: string,address: string,website: string;
   };
@@ -48,18 +48,18 @@ const categories = [;
 ];
 const innovationLevelColors = {;
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
-},;
+};
 
 const patentStatusColors = {;
   'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
-},;
+};
 
 export function UltimateServicesShowcase() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedService, setSelectedService] = useState<Service | null>(null),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const allServices = [;
-    ...ultimateInnovativeServices2025,;
+    ...ultimateInnovativeServices2025;
     ...enterpriseITInfrastructureServices2025
     ...innovativeMicroSaasSolutions2025
   ];
