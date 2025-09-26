@@ -5,7 +5,7 @@ import About from './src/pages/About';
 import Contact from './src/pages/Contact';
 import './src/index.css';
 
-function App() {
+function App(): JSX.Element {
   return (
     <Router>
       <Routes>
