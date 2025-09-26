@@ -86,6 +86,8 @@ export default [
   },
   {
     ignores: [
+      '**/*.cjs',
+      '**/scripts/**',
       'App.tsx',
       '**/app.disabled/**',
       '**/app_disabled/**',
