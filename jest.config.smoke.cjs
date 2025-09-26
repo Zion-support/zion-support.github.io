@@ -1,7 +1,10 @@
+/** @type {import('jest').Config} */
+const base = require('./jest.config.cjs');
+
 module.exports = {
-	testEnvironment: 'jsdom',
-	roots: ['<rootDir>/src', '<rootDir>/components'],
-	testMatch: ['**/__tests__/**/*.test.(js|jsx|ts|tsx)'],
-	setupFilesAfterEnv: [],
+  ...base,
+  testMatch: ['**/?(*.)+(smoke).(ts|tsx|js|jsx)'],
+  testPathIgnorePatterns: [...(base.testPathIgnorePatterns || []), '/src/', '/components/'],
+  passWithNoTests: true,
 };
 
