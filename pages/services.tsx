@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
+import { Navigation } from '../src/components/Navigation';
+import { PricingCalculator } from '../src/components/PricingCalculator';
 import { SERVICES } from '../src/utils/constants';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
@@ -145,12 +147,13 @@ export default function Services(): JSX.Element {
 	return (
 		<ErrorBoundary>
 			<SEO />
+			<Navigation />
 			<Head>
 				<title>Services - Zion App</title>
 				<meta name="description" content="Explore our comprehensive technology services including AI, cloud solutions, web development, mobile apps, data analytics, and cybersecurity." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
@@ -355,6 +358,19 @@ export default function Services(): JSX.Element {
 									</button>
 								</div>
 							</div>
+						</section>
+
+						{/* Pricing Calculator Section */}
+						<section className={`mb-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+							<div className="text-center mb-12">
+								<h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+									Project Pricing Calculator
+								</h2>
+								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+									Get an instant estimate for your project based on your specific requirements and preferences.
+								</p>
+							</div>
+							<PricingCalculator />
 						</section>
 					</main>
 				</div>
