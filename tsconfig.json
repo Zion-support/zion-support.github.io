@@ -84,6 +84,9 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ]
+    "**/*.spec.tsx",
+    "src/pages/services/ai-legal-document-analysis.tsx",
+    "src/pages/services/ai-marketing-automation.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
