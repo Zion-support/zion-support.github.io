@@ -18,10 +18,12 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       setCurrentTime(new Date());
     }, 1000);
 
-    // Load dark mode preference from localStorage
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode) {
-      setIsDarkMode(JSON.parse(savedDarkMode));
+    // Load dark mode preference from localStorage (only on client side)
+    if (typeof window !== 'undefined') {
+      const savedDarkMode = localStorage.getItem('darkMode');
+      if (savedDarkMode) {
+        setIsDarkMode(JSON.parse(savedDarkMode));
+      }
     }
 
     // Show welcome notification
@@ -36,14 +38,16 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   }, [addNotification]);
 
   useEffect(() => {
-    // Save dark mode preference to localStorage
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
-    
-    // Apply dark mode class to document
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    // Save dark mode preference to localStorage (only on client side)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+      
+      // Apply dark mode class to document
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
   }, [isDarkMode]);
 

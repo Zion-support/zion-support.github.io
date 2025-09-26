@@ -72,7 +72,7 @@ export default function Navigation({
 
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-500 dark:text-gray-400 hidden sm:block">
-                {currentTime.toLocaleTimeString()}
+                {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
                 onClick={() => setShowTaskManager(true)}

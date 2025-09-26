@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
-import { Navigation } from '../src/components/Navigation';
+import Navigation from '../src/components/Navigation';
 import { PricingCalculator } from '../src/components/PricingCalculator';
 import { SERVICES } from '../src/utils/constants';
 import ErrorBoundary from '../src/components/ErrorBoundary';
