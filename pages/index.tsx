@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
+import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
