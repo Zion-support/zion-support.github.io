@@ -3,4 +3,6 @@ export default {
   typescript: {
     ignoreBuildErrors: true},
   eslint: {
-    ignoreDuringBuilds: true}};
+    ignoreDuringBuilds: true},
+  pageExtensions: ['js', 'jsx']
+};
