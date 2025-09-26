@@ -116,7 +116,7 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
-    "@tailwindcss/postcss": "^4.1.13",
+    "tailwindcss": "^3.4.15",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -163,7 +163,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.13",
+    "tailwindcss": "^3.4.15",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
