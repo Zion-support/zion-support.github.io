@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html {
@@ -8,20 +6,29 @@
   }
 
   body {
-    @apply bg-slate-900 text-white;
+    @apply bg-gray-900 text-white;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    background: linear-gradient(to right, #2563eb, #9333ea);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #1d4ed8, #7c3aed);
   }
 
   .btn-secondary {
-    @apply bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg border border-slate-600 transition-all duration-300;
+    @apply bg-zion-slate-dark hover:bg-zion-slate text-white font-semibold py-3 px-6 rounded-lg border border-zion-slate transition-all duration-300;
   }
 
   .card {
-    @apply bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300;
+    @apply bg-zion-slate-dark/50 border border-zion-slate rounded-lg p-6 hover:bg-zion-slate-dark/70 transition-all duration-300;
   }
 }
