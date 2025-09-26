@@ -1,181 +1,157 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  Database, 
-  Globe, 
-  Shield, 
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  Info
-} from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { useWebVitals } from '../hooks/useWebVitals';
 
-interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  status: 'excellent' | 'good' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
-  description: string;
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
 }
 
-interface PerformanceDashboardProps {
-  refreshInterval?: number;
-  enableAlerts?: boolean;
-  onAlert?: (alert: { type: string; message: string; severity: 'low' | 'medium' | 'high' | 'critical' }) => void;
-}
-
-export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
-  refreshInterval = 5000,
-  enableAlerts = true,
-  onAlert
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
-
-  const generateMockMetrics = useCallback((): PerformanceMetric[] => {
-    const now = Date.now();
-    return [
-      {
-        name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,
-        unit: 'ms',
-        status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.4 ? 'good' : 'warning',
-        trend: Math.random() > 0.5 ? 'down' : 'up',
-        description: 'Time to fully load the page'
-      },
-      {
-        name: 'First Contentful Paint',
-        value: Math.random() * 1000 + 200,
-        unit: 'ms',
-        status: Math.random() > 0.6 ? 'excellent' : 'good',
-        trend: Math.random() > 0.5 ? 'down' : 'stable',
-        description: 'Time to first contentful paint'
-      },
-      {
-        name: 'Largest Contentful Paint',
-        value: Math.random() * 2500 + 800,
-        unit: 'ms',
-        status: Math.random() > 0.5 ? 'good' : 'warning',
-        trend: Math.random() > 0.5 ? 'down' : 'up',
-        description: 'Time to largest contentful paint'
-      },
-      {
-        name: 'Cumulative Layout Shift',
-        value: Math.random() * 0.3,
-        unit: 'score',
-        status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.4 ? 'good' : 'warning',
-        trend: Math.random() > 0.5 ? 'down' : 'stable',
-        description: 'Visual stability score'
-      },
-      {
-        name: 'First Input Delay',
-        value: Math.random() * 100 + 10,
-        unit: 'ms',
-        status: Math.random() > 0.6 ? 'excellent' : 'good',
-        trend: Math.random() > 0.5 ? 'down' : 'stable',
-        description: 'Time to first user interaction'
-      },
-      {
-        name: 'Time to Interactive',
-        value: Math.random() * 3000 + 1000,
-        unit: 'ms',
-        status: Math.random() > 0.5 ? 'good' : 'warning',
-        trend: Math.random() > 0.5 ? 'down' : 'up',
-        description: 'Time until page is fully interactive'
-      },
-      {
-        name: 'Bundle Size',
-        value: Math.random() * 500 + 200,
-        unit: 'KB',
-        status: Math.random() > 0.6 ? 'excellent' : 'good',
-        trend: Math.random() > 0.5 ? 'down' : 'stable',
-        description: 'Total JavaScript bundle size'
-      },
-      {
-        name: 'Cache Hit Rate',
-        value: Math.random() * 30 + 70,
-        unit: '%',
-        status: Math.random() > 0.5 ? 'excellent' : 'good',
-        trend: Math.random() > 0.5 ? 'up' : 'stable',
-        description: 'Percentage of cache hits'
-      }
-    ];
-  }, []);
-
-  const updateMetrics = useCallback(() => {
-    setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      const newMetrics = generateMockMetrics();
-      setMetrics(newMetrics);
-      setLastUpdated(new Date());
-      setIsLoading(false);
-
-      // Check for alerts
-      if (enableAlerts) {
-        newMetrics.forEach(metric => {
-          if (metric.status === 'critical' && onAlert) {
-            onAlert({
-              type: 'performance',
-              message: `${metric.name} is in critical state: ${metric.value}${metric.unit}`,
-              severity: 'high'
-            });
-          }
-        });
-      }
-    }, 500);
-  }, [generateMockMetrics, enableAlerts, onAlert]);
+const PerformanceDashboard: React.FC = () => {
+  const { vitals, isSupported, getVitalScore, getVitalColor } = useWebVitals();
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const firstPaint = paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
+      const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+
+      setMetrics({
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        firstPaint,
+        firstContentfulPaint,
+        largestContentfulPaint: vitals.LCP || 0,
+        firstInputDelay: vitals.FID || 0,
+        cumulativeLayoutShift: vitals.CLS || 0,
+      });
+    };
+
+    // Update metrics when vitals change
     updateMetrics();
-    const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [updateMetrics, refreshInterval]);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'excellent': return 'text-green-600 bg-green-100';
-      case 'good': return 'text-blue-600 bg-blue-100';
-      case 'warning': return 'text-yellow-600 bg-yellow-100';
-      case 'critical': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+    // Update metrics on page load
+    window.addEventListener('load', updateMetrics);
+    
+    return () => window.removeEventListener('load', updateMetrics);
+  }, [vitals]);
+
+  const getPerformanceScore = (): number => {
+    if (!metrics) return 0;
+
+    let score = 100;
+    
+    // LCP scoring
+    if (metrics.largestContentfulPaint > 4000) score -= 30;
+    else if (metrics.largestContentfulPaint > 2500) score -= 15;
+    
+    // FID scoring
+    if (metrics.firstInputDelay > 300) score -= 25;
+    else if (metrics.firstInputDelay > 100) score -= 10;
+    
+    // CLS scoring
+    if (metrics.cumulativeLayoutShift > 0.25) score -= 25;
+    else if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+    
+    // Load time scoring
+    if (metrics.loadTime > 5000) score -= 20;
+    else if (metrics.loadTime > 3000) score -= 10;
+
+    return Math.max(0, score);
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'excellent': return <CheckCircle className="w-4 h-4" />;
-      case 'good': return <CheckCircle className="w-4 h-4" />;
-      case 'warning': return <AlertTriangle className="w-4 h-4" />;
-      case 'critical': return <AlertTriangle className="w-4 h-4" />;
-      default: return <Info className="w-4 h-4" />;
-    }
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
   };
 
-  const getTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'down': return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
-      case 'stable': return <Activity className="w-4 h-4 text-gray-500" />;
-      default: return <Activity className="w-4 h-4 text-gray-500" />;
-    }
+  const getScoreBgColor = (score: number): string => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
   };
+
+  if (!isSupported) {
+    return (
+      <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+        <p className="text-sm text-yellow-800">
+          Performance monitoring is not supported in this browser.
+        </p>
+      </div>
+    );
+  }
+
+  const performanceScore = getPerformanceScore();
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-          <Activity className="w-6 h-6 mr-2 text-blue-600" />
-          Performance Dashboard
-        </h2>
-        <div className="flex items-center text-sm text-gray-500">
-          <Clock className="w-4 h-4 mr-1" />
-          Last updated: {lastUpdated.toLocaleTimeString()}
+        <h2 className="text-xl font-semibold text-gray-900">Performance Dashboard</h2>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-sm text-blue-600 hover:text-blue-800"
+        >
+          {isVisible ? 'Hide Details' : 'Show Details'}
+        </button>
+      </div>
+
+      {/* Overall Performance Score */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Overall Score</span>
+          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+            {performanceScore}
+          </span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div
+            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
+            style={{ width: `${performanceScore}%` }}
+          ></div>
+        </div>
+      </div>
+
+      {/* Core Web Vitals */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">LCP</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+              {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">Largest Contentful Paint</p>
+        </div>
+
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">FID</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+              {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">First Input Delay</p>
+        </div>
+
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">CLS</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+              {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">Cumulative Layout Shift</p>
         </div>
       </div>
 
@@ -215,9 +191,40 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         </AnimatePresence>
       </div>
 
-      {isLoading && (
-        <div className="flex items-center justify-center py-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+      {/* Detailed Metrics */}
+      {isVisible && metrics && (
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium text-gray-900">Detailed Metrics</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">Load Time</span>
+                <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">DOM Content Loaded</span>
+                <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">First Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">First Contentful Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
