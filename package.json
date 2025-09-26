@@ -30,6 +30,8 @@
 		"prepare": "echo 'Husky prepare script disabled'",
 		"sitemap": "node scripts/generate-sitemap.mjs",
 		"performance:monitor": "node scripts/performance-monitor.mjs",
+		"bundle:analyze": "node scripts/optimize-bundle.mjs",
+		"accessibility:audit": "node scripts/accessibility-audit.mjs",
 		"autonomous": "node automation/launch-enhanced-autonomous-system.js",
 		"autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
 		"autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
