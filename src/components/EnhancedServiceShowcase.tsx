@@ -2,82 +2,82 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Users,;
-  Globe,;
-  Code,;
-  Database,;
-  Rocket,;
-  TrendingUp,;
-  Star,;
-  ArrowRight,;
-  Play,;
-  Target,;
-  Award,;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Users;
+  Globe;
+  Code;
+  Database;
+  Rocket;
+  TrendingUp;
+  Star;
+  ArrowRight;
+  Play;
+  Target;
+  Award;
   CheckCircle;
 } from "lucide-react"
-interface Service {;
+interface Service {
   id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>;
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
-  popular?: boolean,;
+  popular?: boolean;
   link: string;
 };
 
 const services: Service[] = [;
   {;
-    id: 'ai-business-intelligence',title: 'AI Business Intelligence Platform',description: 'Advanced analytics with AI-powered insights and predictive modeling',icon: Brain,category: 'AI & Machine Learning',features: ['Real-time analyticsPredictive modeling', 'Custom dashboardsAPI integration'],;
-    pricing: '$2,999/month',;
+    id: 'ai-business-intelligence',title: 'AI Business Intelligence Platform',description: 'Advanced analytics with AI-powered insights and predictive modeling',icon: Brain,category: 'AI & Machine Learning',features: ['Real-time analyticsPredictive modeling', 'Custom dashboardsAPI integration'];
+    pricing: '$2,999/month';
     rating: 4.9,reviews: 156,color: 'from-blue-500 to-cyan-500',popular: true,link: '/ai-services/business-intelligence'
   };
   {;
-    id: 'quantum-computing-suite',title: 'Quantum Computing Suite',description: 'Next-generation quantum computing solutions for complex problem solving',icon: Rocket,category: 'Emerging Tech',features: ['Quantum algorithmsHybrid classical-quantum', 'Scientific computingOptimization'],;
-    pricing: '$5,000/month',;
+    id: 'quantum-computing-suite',title: 'Quantum Computing Suite',description: 'Next-generation quantum computing solutions for complex problem solving',icon: Rocket,category: 'Emerging Tech',features: ['Quantum algorithmsHybrid classical-quantum', 'Scientific computingOptimization'];
+    pricing: '$5,000/month';
     rating: 4.8,reviews: 89,color: 'from-purple-500 to-pink-500',link: '/emerging-tech/quantum-computing'
   };
   {;
-    id: 'cybersecurity-platform',title: 'AI-Powered Cybersecurity Platform',description: 'Intelligent threat detection and response with zero-trust architecture',icon: Shield,category: 'Cybersecurity',features: ['AI threat detectionZero-trust architecture', 'Compliance automation24/7 monitoring'],;
-    pricing: '$2,500/month',;
+    id: 'cybersecurity-platform',title: 'AI-Powered Cybersecurity Platform',description: 'Intelligent threat detection and response with zero-trust architecture',icon: Shield,category: 'Cybersecurity',features: ['AI threat detectionZero-trust architecture', 'Compliance automation24/7 monitoring'];
+    pricing: '$2,500/month';
     rating: 4.9,reviews: 234,color: 'from-red-500 to-orange-500',popular: true,link: '/it-services/cybersecurity'
   };
   {;
-    id: 'cloud-devops-automation',title: 'Cloud & DevOps Automation',description: 'Scalable cloud infrastructure with intelligent automation',icon: Cloud,category: 'Cloud & DevOps',features: ['Multi-cloud managementCI/CD automation', 'Infrastructure as codeCost optimization'],;
-    pricing: '$1,500/month',;
+    id: 'cloud-devops-automation',title: 'Cloud & DevOps Automation',description: 'Scalable cloud infrastructure with intelligent automation',icon: Cloud,category: 'Cloud & DevOps',features: ['Multi-cloud managementCI/CD automation', 'Infrastructure as codeCost optimization'];
+    pricing: '$1,500/month';
     rating: 4.7,reviews: 189,color: 'from-green-500 to-emerald-500',link: '/it-services/cloud-devops'
   };
   {;
-    id: 'blockchain-defi-platform',title: 'Blockchain & DeFi Platform',description: 'Decentralized finance solutions with advanced blockchain technology',icon: Globe,category: 'Blockchain & Web3',features: ['DeFi protocolsSmart contracts', 'Yield optimizationCross-chain support'],;
-    pricing: '$1,800/month',;
+    id: 'blockchain-defi-platform',title: 'Blockchain & DeFi Platform',description: 'Decentralized finance solutions with advanced blockchain technology',icon: Globe,category: 'Blockchain & Web3',features: ['DeFi protocolsSmart contracts', 'Yield optimizationCross-chain support'];
+    pricing: '$1,800/month';
     rating: 4.6,reviews: 123,color: 'from-yellow-500 to-orange-500',link: '/emerging-tech/blockchain-defi'
   };
   {;
-    id: 'digital-transformation',title: 'Digital Transformation Consulting',description: 'End-to-end business transformation with cutting-edge technology',icon: TrendingUp,category: 'Digital Transformation',features: ['Strategy consultingProcess optimization', 'Change managementROI tracking'],;
-    pricing: '$3,500/month',;
+    id: 'digital-transformation',title: 'Digital Transformation Consulting',description: 'End-to-end business transformation with cutting-edge technology',icon: TrendingUp,category: 'Digital Transformation',features: ['Strategy consultingProcess optimization', 'Change managementROI tracking'];
+    pricing: '$3,500/month';
     rating: 4.8,reviews: 167,color: 'from-indigo-500 to-purple-500',link: '/services/digital-transformation'
   };
   {;
-    id: 'micro-saas-platform',title: 'Micro SaaS Development Platform',description: 'Rapid development and deployment of SaaS applications',icon: Code,category: 'Micro SAAS',features: ['Rapid prototypingScalable architecture', 'Multi-tenancyAnalytics dashboard'],;
+    id: 'micro-saas-platform',title: 'Micro SaaS Development Platform',description: 'Rapid development and deployment of SaaS applications',icon: Code,category: 'Micro SAAS',features: ['Rapid prototypingScalable architecture', 'Multi-tenancyAnalytics dashboard'];
     pricing: '$899/month',rating: 4.7,reviews: 98,color: 'from-cyan-500 to-blue-500',link: '/micro-saas/development-platform'
   };
   {;
-    id: 'healthcare-ai',title: 'Healthcare AI Solutions',description: 'AI-powered diagnostic and patient care optimization',icon: Users,category: 'Healthcare AI',features: ['Medical imaging AIPredictive diagnostics', 'Patient monitoringHIPAA compliant'],;
-    pricing: '$4,500/month',;
+    id: 'healthcare-ai',title: 'Healthcare AI Solutions',description: 'AI-powered diagnostic and patient care optimization',icon: Users,category: 'Healthcare AI',features: ['Medical imaging AIPredictive diagnostics', 'Patient monitoringHIPAA compliant'];
+    pricing: '$4,500/month';
     rating: 4.9,reviews: 78,color: 'from-emerald-500 to-teal-500',link: '/ai-services/healthcare'
   };
 ];
 const categories = [;
-  'All ServicesAI & Machine Learning',;
-  'Emerging TechCybersecurity',;
-  'Cloud & DevOpsBlockchain & Web3',;
-  'Digital TransformationMicro SAAS',;
+  'All ServicesAI & Machine Learning';
+  'Emerging TechCybersecurity';
+  'Cloud & DevOpsBlockchain & Web3';
+  'Digital TransformationMicro SAAS';
   'Healthcare AI'
-],;
+];
 
 export const EnhancedServiceShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),;
-  const [hoveredService, setHoveredService] = useState<string | null>(null),;
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {;
     const observer = new IntersectionObserver(;
@@ -90,15 +90,15 @@ export const EnhancedServiceShowcase: React.FC = () => {
     );
     const element = document.getElementById('service-showcase')
     if (element) {;
-      observer.observe(element),;
+      observer.observe(element);
     };
 
-    return () => observer.disconnect(),;
-  }, []),;
+    return () => observer.disconnect();
+  }, []);
 
   const filteredServices = selectedCategory === 'All Services'
     ? services;
-    : services.filter(service => service.category === selectedCategory),;
+    : services.filter(service => service.category === selectedCategory);
 
   const renderStars = (rating: number) => {;
     return Array.from({ length: 5 }, (_, i) => (;
@@ -110,8 +110,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
             : 'text-gray-400'
         }`};
       />;
-    )),;
-  },;
+    ));
+  };
 
   return (
     <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

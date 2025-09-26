@@ -46,7 +46,6 @@
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-toast": "^1.1.5",
-    "@radix-ui/react-tooltip": "^1.0.7",
     "@rollup/rollup-linux-x64-gnu": "^4.50.2",
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/ssr": "^0.6.1",
@@ -140,6 +139,13 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
+  },
+  "optionalDependencies": {
+    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
+    "@modelcontextprotocol/server-memory": "^2025.8.4",
+    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "resolutions": {
     "motion-utils": "^12.23.6"

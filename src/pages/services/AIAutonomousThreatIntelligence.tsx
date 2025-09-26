@@ -1,102 +1,102 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Shield,;
-  Eye, ;
-  AlertTriangle, ;
-  Target, ;
-  CheckCircle, ;
-  Star,;
-  BarChart3,;
-  Users,;
-  Globe,;
-  Zap,;
-  Cpu,;
-  Database,;
-  Network,;
-  Rocket,;
-  Lightbulb,;
-  Code,;
-  Server,;
-  Sparkles,;
-  Activity,;
-  Gauge,;
-  Workflow,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Lock,;
-  Smartphone,;
-  Wifi,;
-  Cloud,;
-  BarChart,;
-  TrendingUp,;
-  Activity,;
+  Shield;
+  Eye;
+  AlertTriangle;
+  Target;
+  CheckCircle;
+  Star;
+  BarChart3;
+  Users;
+  Globe;
+  Zap;
+  Cpu;
+  Database;
+  Network;
+  Rocket;
+  Lightbulb;
+  Code;
+  Server;
+  Sparkles;
+  Activity;
+  Gauge;
+  Workflow;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  Lock;
+  Smartphone;
+  Wifi;
+  Cloud;
+  BarChart;
+  TrendingUp;
+  Activity;
   ShieldCheck;
 } from "lucide-react"
 export default function AIAutonomousThreatIntelligence() {;
   const features = [;
     {;
       icon: Eye,title: 'Real-time Threat Detection',description: 'AI-powered monitoring that identifies threats before they become attacks',benefits: ['24/7 surveillanceZero-day threat detection', 'Behavioral analysis']
-    },;
+    };
     {;
       icon: Shield,title: 'Autonomous Response',description: 'AI that automatically blocks and mitigates threats without human intervention',benefits: ['Instant threat neutralizationAdaptive defense strategies', 'Self-learning protection']
-    },;
+    };
     {;
       icon: Target,title: 'Predictive Intelligence',description: 'Machine learning models that predict and prevent future attacks',benefits: ['Attack pattern recognitionRisk assessment', 'Proactive defense']
-    },;
+    };
     {;
       icon: Network,title: 'Global Threat Intelligence',description: 'Real-time threat data from worldwide sources and dark web monitoring',benefits: ['Global threat visibilityDark web intelligence', 'Cross-platform correlation']
     };
-  ],;
+  ];
 
   const threatTypes = [;
     {;
-      title: 'Ransomware Protection',description: 'Advanced ransomware detection and prevention',icon: Lock,price: '$15,000/month',;
+      title: 'Ransomware Protection',description: 'Advanced ransomware detection and prevention',icon: Lock,price: '$15,000/month';
       features: ['Behavioral analysisFile encryption detection', 'Backup protection']
-    },;
+    };
     {;
-      title: 'Phishing Defense',description: 'AI-powered email and web phishing detection',icon: Mail,price: '$12,000/month',;
+      title: 'Phishing Defense',description: 'AI-powered email and web phishing detection',icon: Mail,price: '$12,000/month';
       features: ['URL analysisContent filtering', 'Social engineering detection']
-    },;
+    };
     {;
-      title: 'DDoS Mitigation',description: 'Intelligent DDoS attack prevention and mitigation',icon: Network,price: '$18,000/month',;
+      title: 'DDoS Mitigation',description: 'Intelligent DDoS attack prevention and mitigation',icon: Network,price: '$18,000/month';
       features: ['Traffic analysisRate limiting', 'Geographic blocking']
-    },;
+    };
     {;
-      title: 'Insider Threat Detection',description: 'Monitor and detect malicious insider activities',icon: Users,price: '$20,000/month',;
+      title: 'Insider Threat Detection',description: 'Monitor and detect malicious insider activities',icon: Users,price: '$20,000/month';
       features: ['User behavior analysisAccess monitoring', 'Anomaly detection']
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
-      name: 'Threat Shield Basic',price: '$8,000',;
+      name: 'Threat Shield Basic',price: '$8,000';
       period: '/month',description: 'Essential threat intelligence for small organizations',features: [;
         'Basic threat detectionEmail security'
         'Standard supportBasic reporting'
       ];
-    },;
+    };
     {;
-      name: 'Threat Shield Pro',price: '$25,000',;
+      name: 'Threat Shield Pro',price: '$25,000';
       period: '/month',description: 'Advanced threat intelligence for growing organizations',features: [;
         'Advanced threat detectionAutonomous response'
-        'Priority supportReal-time monitoring',;
+        'Priority supportReal-time monitoring';
         'Predictive analytics'
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: 'Threat Shield Enterprise',price: '$75,000',;
+      name: 'Threat Shield Enterprise',price: '$75,000';
       period: '/month',description: 'Complete threat intelligence for large enterprises',features: [;
         'Everything in ProCustom AI models'
-        'Dedicated security analyst24/7 support',;
+        'Dedicated security analyst24/7 support';
         'White-label solutions'
       ];
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">;

@@ -1,91 +1,91 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { ;
-  FileText,;
-  Shield, ;
-  CheckCircle, ;
-  Clock, ;
-  DollarSign, ;
-  Users, ;
-  TrendingUp, ;
-  Award,;
-  ArrowRight,;
-  Star,;
-  Zap,;
-  Brain,;
-  Lock,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  FileText;
+  Shield;
+  CheckCircle;
+  Clock;
+  DollarSign;
+  Users;
+  TrendingUp;
+  Award;
+  ArrowRight;
+  Star;
+  Zap;
+  Brain;
+  Lock;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 const AILegalDocumentAnalyzer: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview'),;
+  const [activeTab, setActiveTab] = useState('overview');
 
   const features = [;
-    "Contract risk assessment",;
-    "Compliance violation detection", ;
-    "Legal clause analysis",;
-    "Automated contract review",;
-    "Regulatory compliance checking",;
-    "Document comparison tools",;
-    "Legal precedent matching",;
-    "Risk scoring algorithms",;
-    "Multi-language support",;
+    "Contract risk assessment";
+    "Compliance violation detection";
+    "Legal clause analysis";
+    "Automated contract review";
+    "Regulatory compliance checking";
+    "Document comparison tools";
+    "Legal precedent matching";
+    "Risk scoring algorithms";
+    "Multi-language support";
     "Integration with legal databases"
-  ],;
+  ];
 
   const benefits = [;
-    "Reduce legal review time by 90%",;
-    "Identify 95% of compliance risks",;
-    "Save $50K+ annually on legal fees",;
-    "Improve contract negotiation outcomes",;
+    "Reduce legal review time by 90%";
+    "Identify 95% of compliance risks";
+    "Save $50K+ annually on legal fees";
+    "Improve contract negotiation outcomes";
     "Ensure regulatory compliance"
-  ],;
+  ];
 
   const useCases = [;
-    "Contract review and analysis",;
-    "Regulatory compliance checking",;
-    "Legal risk assessment",;
-    "Due diligence processes",;
+    "Contract review and analysis";
+    "Regulatory compliance checking";
+    "Legal risk assessment";
+    "Due diligence processes";
     "Legal document automation"
-  ],;
+  ];
 
   const pricingPlans = [;
     {;
-      name: "Starter",price: "$1,499",;
+      name: "Starter",price: "$1,499";
       period: "/month",description: "Perfect for small law firms and legal departments",features: [;
         "Up to 100 documents/month"
-        "Basic risk assessment",;
-        "Compliance checking",;
-        "Email support",;
+        "Basic risk assessment";
+        "Compliance checking";
+        "Email support";
         "Standard integrations"
-      ],;
+      ];
       popular: false;
     };
     {;
-      name: "Professional",price: "$2,499",;
+      name: "Professional",price: "$2,499";
       period: "/month",description: "Ideal for growing legal practices",features: [;
         "Up to 500 documents/month"
-        "Advanced risk assessment",;
-        "Multi-language support",;
-        "Priority support",;
-        "Advanced integrations",;
+        "Advanced risk assessment";
+        "Multi-language support";
+        "Priority support";
+        "Advanced integrations";
         "Custom workflows"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$3,999",;
+      name: "Enterprise",price: "$3,999";
       period: "/month",description: "For large legal organizations",features: [;
         "Unlimited documents"
-        "Custom AI models",;
-        "White-label solution",;
-        "Dedicated support",;
-        "Full API access",;
+        "Custom AI models";
+        "White-label solution";
+        "Dedicated support";
+        "Full API access";
         "Custom security features"
-      ],;
+      ];
       popular: false;
     };
   ];
@@ -484,6 +484,6 @@ const AILegalDocumentAnalyzer: React.FC = () => {
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default AILegalDocumentAnalyzer;

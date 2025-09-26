@@ -2,48 +2,48 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Cloud,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  Target,;
-  Users,;
-  ArrowRight,;
-  Key,;
-  Fingerprint,;
-  EyeOff,;
-  Server,;
-  Globe2,;
-  ShieldCheck,;
-  Wifi,;
-  Smartphone,;
-  Activity,;
-  Clock,;
-  BarChart,;
-  PieChart,;
-  GitBranch,;
-  Code,;
-  Package,;
-  Play,;
-  Settings,;
-  Monitor,;
-  Shield,;
+  Cloud;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  GitBranch;
+  Code;
+  Package;
+  Play;
+  Settings;
+  Monitor;
+  Shield;
   Rocket;
 } from "lucide-react"
 export default function CloudDevOps() {;
@@ -52,7 +52,7 @@ export default function CloudDevOps() {;
       icon: Cloud,title: 'Cloud Infrastructure',description: 'Scalable cloud solutions with automated provisioning and management',color: 'from-blue-500 to-cyan-500'
     };
     {;
-      icon: GitBranch,title: 'CI/CD Pipelines',description: 'Automated build, test, and deployment workflows',;
+      icon: GitBranch,title: 'CI/CD Pipelines',description: 'Automated build, test, and deployment workflows';
       color: 'from-green-500 to-emerald-500'
     };
     {;
@@ -69,10 +69,10 @@ export default function CloudDevOps() {;
     };
   ];
   const benefits = [;
-    'Deploy applications 10x faster with automated pipelinesReduce infrastructure costs by 40% with cloud optimization',;
-    'Improve system reliability with 99.9% uptimeEnable rapid development and iteration cycles',;
+    'Deploy applications 10x faster with automated pipelinesReduce infrastructure costs by 40% with cloud optimization';
+    'Improve system reliability with 99.9% uptimeEnable rapid development and iteration cycles';
     'Scale infrastructure automatically based on demandEnsure security and compliance with automated checks'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -90,19 +90,19 @@ export default function CloudDevOps() {;
   ];
   const devOpsCapabilities = [;
     {;
-      name: 'Continuous Integration',description: 'Automated code building, testing, and quality checks',;
+      name: 'Continuous Integration',description: 'Automated code building, testing, and quality checks';
       examples: ['Automated testingCode quality gates', 'Build automation']
-    },;
+    };
     {;
       name: 'Continuous Deployment',description: 'Automated deployment to multiple environments',examples: ['Staging deploymentProduction rollout', 'Rollback automation']
-    },;
+    };
     {;
       name: 'Infrastructure Management',description: 'Version-controlled infrastructure with automation',examples: ['Terraform scriptsCloudFormation templates', 'Resource provisioning']
-    },;
+    };
     {;
       name: 'Monitoring & Alerting',description: 'Real-time system monitoring and automated alerts',examples: ['Performance metricsError tracking', 'Capacity planning']
     };
-  ],;
+  ];
 
   return (
     <>;

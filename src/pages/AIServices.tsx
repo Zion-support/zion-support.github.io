@@ -5,26 +5,26 @@ import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2 } from "
 export default function AIServices() {;
   const plans = [;
     {;
-      name: 'Starter AI',price: '$1,500/mo',;
+      name: 'Starter AI',price: '$1,500/mo';
       ideal: 'Startups and SMBs',features: [;
         'AI chat assistant setup (Zendesk/Intercom integration)Basic analytics dashboard (Mixpanel/GA4)'
         'Monthly model updates and prompt tuningUp to 5,000 AI messages/mo'
-      ],;
+      ];
       cta: '/contact'
     };
     {;
-      name: 'Growth AI',price: '$4,000/mo',;
+      name: 'Growth AI',price: '$4,000/mo';
       ideal: 'Growing teams',features: [;
         'Custom retrieval-augmented generation (RAG)Fine-tuned models for your domain'
         'A/B testing for prompts and flowsUp to 50,000 AI messages/mo'
-      ],;
+      ];
       cta: '/contact',highlighted: true;
     };
     {;
       name: 'Enterprise AI',price: 'Custom',ideal: 'Large orgs and regulated industries',features: [;
-        'SLA, SSO, data residency, complianceOn-prem or VPC deployment options',;
+        'SLA, SSO, data residency, complianceOn-prem or VPC deployment options';
         'MLOps pipelines and monitoringMulti-LLM safety and guardrails'
-      ],;
+      ];
       cta: '/contact'
     };
   ];
@@ -59,10 +59,10 @@ export default function AIServices() {;
           {/* Capabilities */};
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">;
             {[;
-              { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' },;
+              { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' };
               { icon: Search, title: 'RAG & Search', desc: 'Accurate answers grounded in your content.' };
               { icon: BarChart3, title: 'Analytics & BI', desc: 'AI insights embedded into dashboards and apps.' };
-              { icon: Activity, title: 'Automation', desc: 'AI workflows to triage, route, and summarize.' },;
+              { icon: Activity, title: 'Automation', desc: 'AI workflows to triage, route, and summarize.' };
               { icon: Wand2, title: 'Fine-tuning', desc: 'Domain-adapted models for tone and accuracy.' };
               { icon: Bot, title: 'Safety & QA', desc: 'Hallucination, PII, toxicity filters and audits.' };
             ].map((c) => (;
