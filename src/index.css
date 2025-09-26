@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-slate-900 text-white;
+    @apply bg-zion-blue-dark text-white;
   }
 }
 
@@ -18,7 +18,7 @@
   }
 
   .btn-secondary {
-    @apply bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg border border-slate-600 transition-all duration-300;
+    @apply bg-zion-slate-dark hover:bg-zion-slate text-white font-semibold py-3 px-6 rounded-lg border border-zion-slate transition-all duration-300;
   }
 
   .card {
