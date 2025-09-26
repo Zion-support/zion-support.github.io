@@ -248,13 +248,23 @@ importers:
       zod:
         specifier: ^3.22.4
         version: 3.25.76
+    optionalDependencies:
+      '@magneticwatermelon/mcp-toolkit':
+        specifier: ^1.1.4
+        version: 1.1.5(typescript@5.9.2)
+      '@modelcontextprotocol/sdk':
+        specifier: ^1.17.1
+        version: 1.18.2
+      '@modelcontextprotocol/server-filesystem':
+        specifier: ^2025.7.29
+        version: 2025.8.21(zod@3.25.76)
+      '@modelcontextprotocol/server-memory':
+        specifier: ^2025.8.4
+        version: 2025.9.25
+      '@modelcontextprotocol/server-sequential-thinking':
+        specifier: ^2025.7.1
+        version: 2025.7.1
     devDependencies:
-      '@babel/core':
-        specifier: ^7.28.4
-        version: 7.28.4
-      '@babel/preset-env':
-        specifier: ^7.28.3
-        version: 7.28.3(@babel/core@7.28.4)
       '@babel/preset-react':
         specifier: ^7.27.1
         version: 7.27.1(@babel/core@7.28.4)
@@ -321,15 +331,12 @@ importers:
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
-      ts-jest:
-        specifier: ^29.4.4
-        version: 29.4.4(@babel/core@7.28.4)(@jest/transform@30.1.2)(@jest/types@30.0.5)(babel-jest@30.1.2(@babel/core@7.28.4))(jest-util@30.0.5)(jest@29.7.0(@types/node@24.5.2)(ts-node@10.9.2(@types/node@24.5.2)(typescript@5.9.2)))(typescript@5.9.2)
-      ts-node:
-        specifier: ^10.9.2
-        version: 10.9.2(@types/node@24.5.2)(typescript@5.9.2)
+      next:
+        specifier: ^14.2.33
+        version: 14.2.33(@babel/core@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       vitest:
-        specifier: ^3.2.4
-        version: 3.2.4(@types/node@24.5.2)(jiti@2.6.0)(jsdom@20.0.3)(lightningcss@1.30.1)(terser@5.44.0)
+        specifier: ^0.34.1
+        version: 0.34.6(jsdom@20.0.3)(lightningcss@1.30.1)(terser@5.44.0)
 
 packages:
 
@@ -1379,6 +1386,28 @@ packages:
   '@next/eslint-plugin-next@14.2.33':
     resolution: {integrity: sha512-DQTJFSvlB+9JilwqMKJ3VPByBNGxAGFTfJ7BuFj25cVcbBy7jm88KfUN+dngM4D3+UxZ8ER2ft+WH9JccMvxyg==}
 
+  '@modelcontextprotocol/sdk@1.18.2':
+    resolution: {integrity: sha512-beedclIvFcCnPrYgHsylqiYJVJ/CI47Vyc4tY8no1/Li/O8U4BTlJfy6ZwxkYwx+Mx10nrgwSVrA7VBbhh4slg==}
+    engines: {node: '>=18'}
+
+  '@modelcontextprotocol/server-filesystem@2025.8.21':
+    resolution: {integrity: sha512-Kk+E+lAuAQPLhrJlrsboEdwTBxWU0DYfsuELIuP3Nvfn8Kvd72BU6KVjhEa5EjbC4YckQDCxH9VJK47x6psxow==}
+    hasBin: true
+
+  '@modelcontextprotocol/server-memory@2025.9.25':
+    resolution: {integrity: sha512-6fdvSeJm8op2Cx736ck9MO8SdbFR+Of04KC/uchXnxvCTI68dJCRaxWuUBf8cv5RKNqGK98vHjRAmadapfnuRg==}
+    hasBin: true
+
+  '@modelcontextprotocol/server-sequential-thinking@2025.7.1':
+    resolution: {integrity: sha512-gEMck99hpP+us6CTGACerxOlCsVL+e53kBev5E64m4yaQhnjIj/+vTttapc7Xc1TsvPnzSmtCwKYvcFPZ0tg/w==}
+    hasBin: true
+
+  '@next/env@14.2.33':
+    resolution: {integrity: sha512-CgVHNZ1fRIlxkLhIX22flAZI/HmpDaZ8vwyJ/B0SDPTBuLZ1PJ+DWMjCHhqnExfmSQzA/PbZi8OAc7PAq2w9IA==}
+
+  '@next/eslint-plugin-next@15.5.4':
+    resolution: {integrity: sha512-SR1vhXNNg16T4zffhJ4TS7Xn7eq4NfKfcOsRwea7RIAHrjRpI9ALYbamqIJqkAhowLlERffiwk0FMvTLNdnVtw==}
+
   '@next/swc-darwin-arm64@14.2.33':
     resolution: {integrity: sha512-HqYnb6pxlsshoSTubdXKu15g3iivcbsMXg4bYpjL2iS/V6aQot+iyF4BUc2qA/J/n55YtvE4PHMKWBKGCF/+wA==}
     engines: {node: '>= 10'}
@@ -2230,7 +2259,6 @@ packages:
 
   '@rollup/rollup-linux-x64-gnu@4.52.2':
     resolution: {integrity: sha512-opH8GSUuVcCSSyHHcl5hELrmnk4waZoVpgn/4FDao9iyE4WpQhyWJ5ryl5M3ocp4qkRuHfyXnGqg8M9oKCEKRA==}
-    cpu: [x64]
     os: [linux]
 
   '@rollup/rollup-linux-x64-musl@4.52.2':
@@ -7764,6 +7792,21 @@ snapshots:
   '@next/eslint-plugin-next@14.2.33':
     dependencies:
       glob: 10.3.10
+
+  '@next/swc-darwin-arm64@14.2.33':
+    optional: true
+
+  '@next/swc-darwin-x64@14.2.33':
+    optional: true
+
+  '@next/swc-linux-arm64-gnu@14.2.33':
+    optional: true
+
+  '@next/env@14.2.33': {}
+
+  '@next/eslint-plugin-next@15.5.4':
+    dependencies:
+      fast-glob: 3.3.1
 
   '@next/swc-darwin-arm64@14.2.33':
     optional: true
