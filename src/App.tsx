@@ -29,6 +29,12 @@ import EnhancedNavigation2026 from './components/EnhancedNavigation2026';
 import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
 import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
+import DynamicContentCarousel from './components/DynamicContentCarousel';
+import InnovationLanding2025 from './pages/InnovationLanding2025';
+import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
+import BlogPost from './pages/BlogPost';
+import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
+import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -106,10 +112,7 @@ export default function App(): JSX.Element {
                   <NewContentShowcase2026 />
                 </div>
 
-                {/* Revolutionary Content Showcase 2026 */}
-                <div className="mb-12">
-                  <RevolutionaryContentShowcase2026 />
-                </div>
+                {/* Removed non-existent RevolutionaryContentShowcase2026 */}
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -123,7 +126,7 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                    <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      <a href="/pages/BlogPost" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
                     </a>
                     <a href="/pages/AITransformationGuide2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
@@ -374,26 +377,8 @@ export default function App(): JSX.Element {
           } />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
-          <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
-          <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
-          <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
-          <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
-          <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
-          <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
-          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
-          <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
-          <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
-          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
-          <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
-          <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
-          <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
-          <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
-          <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
-          <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
-          <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
-          <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-          <Route path="/pages/BusinessAutomationGuide2025" element={<BusinessAutomationGuide2025 />} />
+          <Route path="/pages/BlogPost" element={<BlogPost />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
@@ -405,11 +390,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
+          {/** Removed non-existent route component EnhancedContentShowcase */}
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
