@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 interface User {
   id: string;
@@ -39,7 +39,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const [editingUser, setEditingUser] = useState<User | null>(null);
 
   // Mock data - in a real app, this would come from an API
-  const mockUsers: User[] = [
+  const mockUsers: User[] = useMemo(() => [
     {
       id: '1',
       name: 'John Doe',
@@ -105,7 +105,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       department: 'HR',
       phone: '+1-555-0127'
     }
-  ];
+  ], []);
 
   useEffect(() => {
     // Simulate API call

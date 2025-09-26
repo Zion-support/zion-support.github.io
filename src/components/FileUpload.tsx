@@ -41,7 +41,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const validateFile = (file: File): string | null => {
+  const validateFile = useCallback((file: File): string | null => {
     // Check file size
     if (file.size > maxSize * 1024 * 1024) {
       return `File size must be less than ${maxSize}MB`;
@@ -53,7 +53,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     }
 
     return null;
-  };
+  }, [maxSize, allowedTypes]);
 
   const generatePreview = (file: File): Promise<string> => {
     return new Promise((resolve) => {
@@ -101,7 +101,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     if (onFileSelect) {
       onFileSelect(fileArray);
     }
-  }, [uploadedFiles.length, maxFiles, maxSize, allowedTypes, onFileSelect, validateFile]);
+  }, [uploadedFiles.length, maxFiles, onFileSelect, validateFile]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
