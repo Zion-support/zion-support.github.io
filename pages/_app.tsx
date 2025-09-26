@@ -2,6 +2,7 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
+import PerformanceMetrics from '../src/components/PerformanceMetrics';
 import '../styles/animations.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -74,6 +75,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Component {...pageProps} />
+      <PerformanceMetrics />
     </HelmetProvider>
   );
 }
