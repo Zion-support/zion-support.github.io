@@ -1,7 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { Menu, X, Zap } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

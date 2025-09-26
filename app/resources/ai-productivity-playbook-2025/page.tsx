@@ -1,19 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export default function AIProductivityPlaybook2025() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Productivity Playbook 2025 - Free Download"
-        description="Complete AI productivity automation playbook with implementation frameworks, ROI calculations, and real-world case studies. Free download."
-        keywords="AI productivity playbook, automation guide, productivity framework, AI implementation, business automation"
-        url="/resources/ai-productivity-playbook-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+            <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-green-50 to-blue-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

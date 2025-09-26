@@ -1,13 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
+type AnswerValue = number
+type AnswersMap = Record<string, AnswerValue>
+
+interface AssessmentResults {
+  totalScore: number
+  percentage: number
+  readinessLevel: string
+  color: 'green' | 'blue' | 'yellow' | 'red'
+  recommendations: string[]
+  nextSteps: string[]
+}
+
 export default function AIReadinessAssessment() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [results, setResults] = useState(null);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [answers, setAnswers] = useState<AnswersMap>({});
+  const [results, setResults] = useState<AssessmentResults | null>(null);
 
   const questions = [
     {
@@ -67,7 +78,7 @@ export default function AIReadinessAssessment() {
     }
   ];
 
-  const handleAnswer = (questionId, value) => {
+  const handleAnswer = (questionId: string, value: AnswerValue) => {
     setAnswers(prev => ({
       ...prev,
       [questionId]: value
@@ -89,11 +100,11 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateResults = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const totalScore = Object.values(answers).reduce<number>((sum, score) => sum + (score as number), 0);
     const maxScore = questions.length * 4;
     const percentage = Math.round((totalScore / maxScore) * 100);
 
-    let readinessLevel, color, recommendations, nextSteps;
+    let readinessLevel: string, color: AssessmentResults['color'], recommendations: string[], nextSteps: string[];
 
     if (percentage >= 80) {
       readinessLevel = 'AI-Ready';
@@ -176,14 +187,7 @@ export default function AIReadinessAssessment() {
   if (results) {
     return (
       <div className="min-h-screen bg-white">
-        <SEO
-          title="AI Readiness Assessment Results | Free Tool | Zion Tech Group"
-          description="Get your personalized AI readiness assessment results with actionable recommendations and next steps for AI implementation success."
-          keywords="AI readiness assessment, AI implementation, AI strategy, digital transformation readiness, AI planning tool"
-          url="/resources/ai-readiness-assessment"
-        />
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-6 justify-center">
@@ -320,14 +324,7 @@ export default function AIReadinessAssessment() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Readiness Assessment | Free Tool | Zion Tech Group"
-        description="Assess your organization's readiness for AI implementation with our comprehensive assessment tool. Get personalized recommendations and actionable next steps."
-        keywords="AI readiness assessment, AI implementation readiness, AI strategy assessment, digital transformation readiness, AI planning"
-        url="/resources/ai-readiness-assessment"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center gap-3 mb-6 justify-center">

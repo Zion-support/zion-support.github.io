@@ -17,7 +17,7 @@ interface LayoutShift extends PerformanceEntry {
 }
 
 export default function PerformanceOptimizer() {
-  const [_metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
     // Preload critical resources
