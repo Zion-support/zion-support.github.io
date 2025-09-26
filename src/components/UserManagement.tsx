@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Image from 'next/image';
 
 interface User {
   id: string;
@@ -397,10 +398,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 h-10 w-10">
-                      <img
+                      <Image
                         className="h-10 w-10 rounded-full"
                         src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=random`}
                         alt={user.name}
+                        width={40}
+                        height={40}
                       />
                     </div>
                     <div className="ml-4">

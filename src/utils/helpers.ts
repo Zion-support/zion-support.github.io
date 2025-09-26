@@ -14,6 +14,9 @@ export class AppError extends Error {
 export const storage = {
   get: <T>(key: string, defaultValue: T): T => {
     try {
+      if (typeof window === 'undefined') {
+        return defaultValue;
+      }
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : defaultValue;
     } catch (error) {
@@ -24,6 +27,9 @@ export const storage = {
 
   set: <T>(key: string, value: T): boolean => {
     try {
+      if (typeof window === 'undefined') {
+        return false;
+      }
       localStorage.setItem(key, JSON.stringify(value));
       return true;
     } catch (error) {
@@ -34,6 +40,9 @@ export const storage = {
 
   remove: (key: string): boolean => {
     try {
+      if (typeof window === 'undefined') {
+        return false;
+      }
       localStorage.removeItem(key);
       return true;
     } catch (error) {

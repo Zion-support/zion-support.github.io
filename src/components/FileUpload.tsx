@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import Image from 'next/image';
 
 interface FileUploadProps {
   onFileSelect?: (files: File[]) => void;
@@ -75,6 +76,20 @@ export const FileUpload: React.FC<FileUploadProps> = ({
       alert(`Maximum ${maxFiles} files allowed`);
       return;
     }
+
+    const validateFile = (file: File): string | null => {
+      // Check file size
+      if (file.size > maxSize * 1024 * 1024) {
+        return `File size must be less than ${maxSize}MB`;
+      }
+
+      // Check file type
+      if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {
+        return `File type ${file.type} is not allowed`;
+      }
+
+      return null;
+    };
 
     const newFiles: UploadedFile[] = [];
 
@@ -293,10 +308,12 @@ export const FileUpload: React.FC<FileUploadProps> = ({
                 {/* File Icon/Preview */}
                 <div className="flex-shrink-0">
                   {showPreview && uploadedFile.preview ? (
-                    <img
+                    <Image
                       src={uploadedFile.preview}
                       alt={uploadedFile.file.name}
                       className="h-10 w-10 rounded object-cover"
+                      width={40}
+                      height={40}
                     />
                   ) : (
                     <div className="h-10 w-10 bg-gray-200 rounded flex items-center justify-center text-lg">
