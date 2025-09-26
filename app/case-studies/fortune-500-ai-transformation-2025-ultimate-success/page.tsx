@@ -8,7 +8,7 @@ import SEO from '@/components/SEO';
   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results.',
   keywords: ['Fortune 500', 'AI transformation', 'ROI', 'success', '2025', 'case study'],
-  authors: ['Zion Tech Group'],
+  authors: [{ name: 'Zion Tech Group' }],
 };
 
 export default function Fortune500AITransformationSuccessPage() {

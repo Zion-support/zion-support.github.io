@@ -21,7 +21,7 @@ export default defineConfig({
   ].filter(Boolean),
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src/src'),
       '@/app': path.resolve(__dirname, './app'),
       '@/components': path.resolve(__dirname, './app/components'),
       '@/lib': path.resolve(__dirname, './app/lib'),
