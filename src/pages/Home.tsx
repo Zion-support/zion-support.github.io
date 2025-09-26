@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <main className="container mx-auto px-4 py-8">
@@ -173,5 +173,5 @@ const Home = () => {
       </main>
     </div>
   );
-}
+};
 export default Home;

@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -55,11 +55,11 @@
     "dist",
     "build",
     "coverage",
-      "app/**/*",
-      // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
-      "src/pages/**",
-      "src/routes/**",
-      "src/utils/cartUtils.js",
+    "app/**/*",
+    // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
+    "src/pages/**",
+    "src/routes/**",
+    "src/utils/cartUtils.js",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -76,7 +76,7 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts",
-    "src/pages/services/ai-legal-document-analysis.tsx",
-    "src/pages/services/ai-marketing-automation.tsx"
+    // Exclude corrupted or archived areas not part of active app
+    "src/**"
   ]
 }
