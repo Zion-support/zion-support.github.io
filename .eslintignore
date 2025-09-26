@@ -1,26 +1,4 @@
-# Ignore build artifacts
-node_modules/
-dist/
-build/
-out/
-coverage/
-
-# Ignore known corrupted or unused source areas (excluded from tsconfig build)
-src/components/**
-src/pages/**
-src/routes/**
-src/context/**
-src/utils/cartUtils.js
-**/*.config.ts
-vite.config.ts
-vitest.config.ts
-zion-website/**
-zion-os/**
-zion-os.disabled/**
-ts_files_backup/**
-types.disabled/**
-zion-website/
-# Exclude non-app directories and archived content from linting
+# Exclude non-app directories and archived content from linting (merged)
 node_modules/
 .next/
 out/
@@ -66,6 +44,17 @@ zion-website/
 zion-ai-assistant/
 zion_academy/
 zion-film/
+src.corrupted/**
+
+# Ignore known corrupted or unused source areas (excluded from tsconfig build)
+src/components/**
+src/pages/**
+src/routes/**
+src/context/**
+src/utils/cartUtils.js
+**/*.config.ts
+vite.config.ts
+vitest.config.ts
 
 # Misc top-level jsx/js playground files
 *.backup
