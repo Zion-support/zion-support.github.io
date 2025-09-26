@@ -228,9 +228,6 @@
 		"@babel/preset-typescript": "^7.27.1",
 <<<<<<< HEAD
 		"@eslint/js": "^8.57.1",
-=======
-		"@eslint/js": "^8.57.1",
->>>>>>> origin/main
 		"@next/eslint-plugin-next": "^14.2.13",
 		"@tailwindcss/postcss": "^4.1.13",
 		"@testing-library/jest-dom": "^6.8.0",
