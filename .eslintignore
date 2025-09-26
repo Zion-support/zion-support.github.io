@@ -8,7 +8,9 @@ coverage/
 .cache/
 
 # Exclude corrupted or non-app source directories
-# Allow linting the active app source; keep only corrupted dirs ignored
+# Allow linting of active app source under src/
+# src/
+# components/
 
 # Large mono-repo subprojects not part of the current app build
 automation/
@@ -50,11 +52,12 @@ zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
-src/components/**
-src/pages/**
-src/routes/**
-src/context/**
-src/utils/cartUtils.js
+# Keep targeted ignores inside src minimal to allow lint to run
+# src/components/**
+# src/pages/**
+# src/routes/**
+# src/context/**
+# src/utils/cartUtils.js
 **/*.config.ts
 vite.config.ts
 vitest.config.ts
