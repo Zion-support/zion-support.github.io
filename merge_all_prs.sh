@@ -1,68 +1,125 @@
 #!/bin/bash
+
+# Script to merge all open PRs into main branch
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "Starting automated PR merge process..."
 
-# Function to resolve conflicts selectively
-resolve_conflicts_selectively() {
-    echo "🔧 Applying selective conflict resolution..."
-    
-    # Keep main's version for critical config files
-    git checkout --ours package*.json next.config* tsconfig* eslint.config* middleware* 2>/dev/null || true
-    git checkout --ours yarn.lock package-lock.json pnpm-lock.yaml 2>/dev/null || true
-    
-    # For component files, prefer incoming changes but handle conflicts
-    for file in $(git diff --name-only --diff-filter=U | grep -E '\.(tsx|ts|jsx|js)$' | grep -v -E '(config|middleware)'); do
-        if [ -f "$file" ]; then
-            echo "Resolving $file..."
-            # Simple strategy: remove conflict markers and keep both versions where possible
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        fi
-    done
-    
-    git add .
-    git commit -m "Resolve merge conflicts (prefer main configs, merge components)" --no-edit
-}
+# Get all PR numbers from the file we created earlier
+PR_NUMBERS=$(cat /tmp/pr_numbers.txt)
 
-# Get all cursor branches
-echo "📋 Fetching cursor branches..."
-git fetch origin --prune
-branches=($(git ls-remote --heads origin 'cursor/*' | awk '{print $2}' | sed 's.refs/heads/..'))
+# Counter for tracking progress
+count=0
+total=$(cat /tmp/pr_numbers.txt | wc -l)
 
-echo "Found ${#branches[@]} branches to process"
+echo "Found $total PRs to merge"
 
-success_count=0
-fail_count=0
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
-for branch in "${branches[@]}"; do
-    echo "🔄 Processing $branch..."
+# Function to resolve yarn cache conflicts by removing cache and regenerating
+resolve_yarn_conflicts() {
+    echo "Resolving yarn cache conflicts..."
     
-    # Ensure we're on main and up to date
-    git checkout -q main
-    git pull -q --ff-only
+    # Remove yarn cache directories that are causing conflicts
+    rm -rf .yarn/cache/ .yarn-cache/
     
-    # Try to merge
-    if git merge --no-ff -m "Merge $branch" "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git push -q origin main
-        success_count=$((success_count + 1))
-    else
-        echo "⚠️ Conflict in $branch, attempting resolution..."
-        if resolve_conflicts_selectively; then
-            echo "✅ Successfully resolved and merged $branch"
-            git push -q origin main
-            success_count=$((success_count + 1))
-        else
-            echo "❌ Failed to resolve conflicts in $branch"
-            git merge --abort 2>/dev/null || true
-            fail_count=$((fail_count + 1))
-        fi
+    # Remove package-lock.json if it exists
+    rm -f package-lock.json
+    
+    # Keep yarn.lock if it exists (it should be in the PR)
+    if [ -f yarn.lock ]; then
+        echo "Keeping yarn.lock from PR"
     fi
     
-    echo "---"
+    # Remove install state
+    rm -f .yarn/install-state.gz
+}
+
+# Function to merge a single PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name="cursor/check-fix-push-and-merge-to-main-$(echo $pr_number | tail -c 5)"
+    
+    echo "Processing PR #$pr_number (branch: $branch_name)"
+    
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "Branch $branch_name exists, attempting merge..."
+        
+        # Try to merge the branch
+        if git merge origin/$branch_name --no-edit; then
+            echo "✅ Successfully merged PR #$pr_number"
+            return 0
+        else
+            echo "⚠️  Merge conflict in PR #$pr_number, attempting to resolve..."
+            
+            # Check if conflicts are mainly in yarn cache
+            if git status --porcelain | grep -q "yarn/cache\|yarn-cache"; then
+                echo "Detected yarn cache conflicts, resolving..."
+                resolve_yarn_conflicts
+                
+                # Add resolved files
+                git add .
+                
+                # Complete the merge
+                if git commit --no-edit; then
+                    echo "✅ Successfully resolved conflicts and merged PR #$pr_number"
+                    return 0
+                else
+                    echo "❌ Failed to resolve conflicts for PR #$pr_number"
+                    git merge --abort
+                    return 1
+                fi
+            else
+                echo "❌ Non-yarn conflicts in PR #$pr_number, skipping for now"
+                git merge --abort
+                return 1
+            fi
+        fi
+    else
+        echo "⚠️  Branch $branch_name not found, skipping PR #$pr_number"
+        return 1
+    fi
+}
+
+# Process each PR
+successful_merges=0
+failed_merges=0
+skipped_merges=0
+
+for pr_number in $PR_NUMBERS; do
+    count=$((count + 1))
+    echo ""
+    echo "Progress: $count/$total - Processing PR #$pr_number"
+    
+    if merge_pr $pr_number; then
+        successful_merges=$((successful_merges + 1))
+    else
+        failed_merges=$((failed_merges + 1))
+    fi
+    
+    # Push changes every 10 successful merges
+    if [ $((successful_merges % 10)) -eq 0 ] && [ $successful_merges -gt 0 ]; then
+        echo "Pushing changes to remote..."
+        git push origin main
+    fi
 done
 
-echo "🎉 Merge process completed!"
-echo "✅ Successful merges: $success_count"
-echo "❌ Failed merges: $fail_count"
+# Final push
+echo "Pushing final changes to remote..."
+git push origin main
+
+echo ""
+echo "=== MERGE SUMMARY ==="
+echo "Total PRs processed: $total"
+echo "Successful merges: $successful_merges"
+echo "Failed merges: $failed_merges"
+echo "Success rate: $(( successful_merges * 100 / total ))%"
+
+if [ $successful_merges -gt 0 ]; then
+    echo "✅ Successfully merged $successful_merges PRs into main branch"
+else
+    echo "❌ No PRs were successfully merged"
+fi
