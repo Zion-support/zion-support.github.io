@@ -78,7 +78,7 @@ const UltimateContent2025PromotionBanner = () => {
 
   if (!isVisible) return null;
 
-  const currentContent = featuredContent[currentSlide];
+  const currentContent = (featuredContent[currentSlide] ?? featuredContent[0])!;
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">

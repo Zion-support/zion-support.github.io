@@ -1,8 +1,9 @@
 'use client'
 
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X, Zap } from 'lucide-react'
+
 import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
