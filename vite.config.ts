@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: './pages/index.tsx'
+        main: './index.html'
       }
     }
   },
