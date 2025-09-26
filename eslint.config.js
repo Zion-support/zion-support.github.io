@@ -86,6 +86,8 @@ export default [
   },
   {
     ignores: [
+      '**/.temp_backup_components/**',
+      '**/src.corrupted/**',
       '**/*.cjs',
       '**/scripts/**',
       '**/app.disabled/**',
