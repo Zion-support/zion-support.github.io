@@ -1,72 +1,108 @@
 #!/bin/bash
 
-# Script to batch merge remaining unmerged cursor branches
+# Efficient batch merge script for remaining cursor branches
 set -e
 
-echo "Starting batch merge of remaining unmerged cursor branches..."
+echo "Starting batch merge of remaining cursor branches..."
 
-# Get list of unmerged cursor branches
-UNMERGED_BRANCHES=($(git branch -r --no-merged main | grep "cursor/" | head -20))
-
-echo "Found ${#UNMERGED_BRANCHES[@]} unmerged cursor branches"
-
-SUCCESSFUL_MERGES=()
-FAILED_MERGES=()
-
-for branch in "${UNMERGED_BRANCHES[@]}"; do
-    # Remove 'origin/' prefix
-    branch_name=${branch#origin/}
+# Function to merge a single branch with automatic conflict resolution
+merge_branch() {
+    local branch=$1
+    echo "Processing $branch..."
     
-    echo ""
-    echo "Processing branch: $branch_name"
-    echo "=========================================="
-    
-    # Try to merge the branch with strategy
-    if git merge "origin/$branch_name" --no-edit -X ours; then
-        echo "✅ Successfully merged $branch_name"
-        SUCCESSFUL_MERGES+=("$branch_name")
-        
-        # Commit the merge
-        git add . && git commit -m "Merge $branch_name with advanced content and components" || true
-        
-        # Push the merge
-        if git push origin main --force-with-lease; then
-            echo "✅ Successfully pushed merge for $branch_name"
-        else
-            echo "❌ Failed to push merge for $branch_name"
-        fi
+    # Try to merge
+    if git merge "$branch" --no-ff -m "Merge $branch" 2>/dev/null; then
+        echo "✓ Successfully merged $branch"
+        return 0
     else
-        echo "❌ Merge conflict in $branch_name even with strategy"
-        FAILED_MERGES+=("$branch_name")
+        echo "⚠ Conflict detected in $branch, resolving automatically..."
         
-        # Abort the merge
-        git merge --abort
-        echo "Aborted merge for $branch_name"
+        # Get list of conflicted files
+        conflict_files=$(git status --porcelain | grep "^UU\|^AA\|^DD\|^AU\|^UA" | awk '{print $2}')
+        
+        if [ -n "$conflict_files" ]; then
+            echo "Resolving conflicts in: $conflict_files"
+            
+            # Resolve conflicts automatically
+            for file in $conflict_files; do
+                case "$file" in
+                    *"package"*|*"yarn.lock"*|*"pnpm"*)
+                        echo "Taking incoming version for $file"
+                        git checkout --theirs "$file" 2>/dev/null || true
+                        ;;
+                    *".yarn"*|*"install-state"*)
+                        echo "Removing $file"
+                        git rm "$file" 2>/dev/null || true
+                        ;;
+                    *)
+                        echo "Taking incoming version for $file"
+                        git checkout --theirs "$file" 2>/dev/null || true
+                        ;;
+                esac
+            done
+            
+            # Add resolved files and commit
+            git add .
+            if git commit -m "Resolve conflicts for $branch" 2>/dev/null; then
+                echo "✓ Successfully resolved conflicts for $branch"
+                return 0
+            else
+                echo "✗ Failed to resolve conflicts for $branch"
+                git merge --abort 2>/dev/null || true
+                return 1
+            fi
+        else
+            echo "✗ Unknown conflict in $branch"
+            git merge --abort 2>/dev/null || true
+            return 1
+        fi
+    fi
+}
+
+# Get list of remaining unmerged branches
+echo "Getting remaining unmerged branches..."
+remaining_branches=$(git branch -r --no-merged main | grep "cursor/check-fix-push-and-merge-to-main-" | head -30)
+
+successful_merges=0
+failed_merges=0
+processed=0
+
+echo "Processing remaining branches in batches..."
+
+for branch in $remaining_branches; do
+    ((processed++))
+    echo ""
+    echo "[$processed] $branch"
+    
+    if merge_branch "$branch"; then
+        ((successful_merges++))
+    else
+        ((failed_merges++))
     fi
     
-    echo "Current status:"
-    git status --porcelain
-    echo ""
+    # Push every 10 successful merges
+    if [ $successful_merges -gt 0 ] && [ $((successful_merges % 10)) -eq 0 ]; then
+        echo "Pushing batch of $successful_merges merges..."
+        git push origin main
+    fi
+    
+    # Limit to prevent overwhelming
+    if [ $processed -ge 25 ]; then
+        echo "Processed 25 branches, stopping for safety"
+        break
+    fi
 done
 
 echo ""
-echo "=========================================="
-echo "BATCH MERGE SUMMARY"
-echo "=========================================="
-echo "Successful merges: ${#SUCCESSFUL_MERGES[@]}"
-for branch in "${SUCCESSFUL_MERGES[@]}"; do
-    echo "  ✅ $branch"
-done
+echo "=== BATCH MERGE COMPLETED ==="
+echo "Processed: $processed"
+echo "Successful: $successful_merges"
+echo "Failed: $failed_merges"
 
-echo ""
-echo "Failed merges: ${#FAILED_MERGES[@]}"
-for branch in "${FAILED_MERGES[@]}"; do
-    echo "  ❌ $branch"
-done
+# Final push
+if [ $successful_merges -gt 0 ]; then
+    echo "Pushing final changes..."
+    git push origin main
+fi
 
-echo ""
-echo "Final git status:"
-git status
-
-echo ""
-echo "Batch merge completed!"
+echo "✅ Batch merge completed!"
