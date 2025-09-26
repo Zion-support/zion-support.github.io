@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  bundleSize: number;
   memoryUsage: number;
+  cpuUsage: number;
+  networkLatency: number;
   cacheHitRate: number;
+  bundleSize: number;
+  renderTime: number;
   errorRate: number;
 }
 
@@ -19,42 +22,68 @@ interface OptimizationSuggestion {
   implementation: string;
 }
 
-const AdvancedPerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  className?: string;
+}
+
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
-    bundleSize: 0,
     memoryUsage: 0,
+    cpuUsage: 0,
+    networkLatency: 0,
     cacheHitRate: 0,
+    bundleSize: 0,
+    renderTime: 0,
     errorRate: 0
   });
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  const analyzePerformance = useCallback(async () => {
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+
+  const measurePerformance = useCallback(async () => {
     setIsAnalyzing(true);
     
     try {
-      // Simulate performance analysis
+      // Simulate performance measurement
       const performanceEntries = performance.getEntriesByType('navigation');
       const navigationEntry = performanceEntries[0] as PerformanceNavigationTiming;
       
+      let loadTime = Math.random() * 2000 + 500; // 500-2500ms
+      let renderTime = Math.random() * 500 + 100; // 100-600ms
+      
       if (navigationEntry) {
-        const loadTime = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
-        const renderTime = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-        
-        setMetrics(prev => ({
-          ...prev,
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(renderTime),
-          bundleSize: Math.round(Math.random() * 500 + 200), // Simulated
-          memoryUsage: Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || Math.random() * 50 + 10),
-          cacheHitRate: Math.round(Math.random() * 30 + 70),
-          errorRate: Math.round(Math.random() * 5)
-        }));
+        loadTime = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
+        renderTime = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
       }
 
+      const newMetrics: PerformanceMetrics = {
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(renderTime),
+        memoryUsage: Math.random() * 100, // 0-100%
+        cpuUsage: Math.random() * 100, // 0-100%
+        networkLatency: Math.random() * 100 + 10, // 10-110ms
+        cacheHitRate: Math.random() * 40 + 60, // 60-100%
+        bundleSize: Math.random() * 500 + 200, // 200-700KB
+        errorRate: Math.random() * 5 // 0-5%
+      };
+
+      setMetrics(newMetrics);
+
       // Generate optimization suggestions
+      const suggestions: string[] = [];
+      if (newMetrics.loadTime > 2000) suggestions.push('Consider code splitting to reduce initial load time');
+      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize memory usage with lazy loading');
+      if (newMetrics.cpuUsage > 70) suggestions.push('Implement virtual scrolling for large lists');
+      if (newMetrics.networkLatency > 80) suggestions.push('Enable CDN for static assets');
+      if (newMetrics.cacheHitRate < 80) suggestions.push('Improve caching strategy');
+      if (newMetrics.bundleSize > 500) suggestions.push('Remove unused dependencies and optimize bundle');
+
+      setOptimizations(suggestions);
+
+      // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
         {
           type: 'performance',
@@ -98,6 +127,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     }
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     analyzePerformance();
     
@@ -128,6 +158,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <Card>
@@ -200,11 +231,13 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             {suggestions.map((suggestion, index) => (
               <div key={index} className="border rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                   <h3 className="font-semibold text-lg">{suggestion.title}</h3>
                   <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
+<<<<<<< HEAD
                 <p className="text-gray-600 mb-2">{suggestion.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
@@ -219,6 +252,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </CardContent>
       </Card>
     </div>
