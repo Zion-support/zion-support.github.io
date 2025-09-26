@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+
 import { cn } from '../lib/utils'
 
 interface LazyImageProps {
@@ -34,11 +35,13 @@ export default function LazyImage({
   const imgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
-    if (priority || !imgRef.current) return
+    const element = imgRef.current
+    if (priority || !element) return
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0]
+        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
         }
@@ -48,7 +51,7 @@ export default function LazyImage({
       }
     )
 
-    observer.observe(imgRef.current)
+    observer.observe(element)
 
     return () => observer.disconnect()
   }, [priority])
