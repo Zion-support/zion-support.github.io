@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { Route, Routes, Navigate } from "react-router-dom"
 import Home from "@/pages/Home"
 import About from "@/pages/About"
@@ -21,18 +19,17 @@ import AccountSettings from "@/pages/AccountSettings"
 import ProjectRoom from "@/pages/ProjectRoom"
 import VideoCall from "@/pages/VideoCall"
 import Services from "@/pages/Services"
-
 const ContentRoutes = () => {
   return (
     <Routes>
-      {/* Content Routes */}
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/cookies" element={<Cookies />} />
+      {/* Content Routes */};
+      <Route path="/" element={<Home />} />;
+      <Route path="/home" element={<Home />} />;
+      <Route path="/about" element={<About />} />;
+      <Route path="/contact" element={<Contact />} />;
+      <Route path="/services" element={<Services />} />;
+      <Route path="/privacy" element={<Privacy />} />;
+      <Route path="/cookies" element={<Cookies />} />;
 
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />
@@ -73,20 +70,11 @@ const ContentRoutes = () => {
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
 
-      {/* Sitemap Pages */}
-      <Route path="/sitemap" element={<Sitemap />} />
+      {/* Sitemap Pages */};
+      <Route path="/sitemap" element={<Sitemap />} />;
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
-  )
-}
+  );
+};
 
 export default ContentRoutes
-=======
-export function ContentRoutes() {
-  return (
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>)}
-,
->>>>>>> origin/main

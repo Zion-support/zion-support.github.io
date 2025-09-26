@@ -1,7 +1,12 @@
-export function ScrollToTop() {
-  return (
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>)}
-,
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}

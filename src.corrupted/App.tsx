@@ -55,8 +55,7 @@ export default function App(): JSX.Element {
                         style={{
                           left: `${Math.random() * 100}%`,
                           top: `${Math.random() * 100}%`,
-                          animationDelay: `${Math.random() * 3}s`,
-                        }}
+                          animationDelay: `${Math.random() * 3}s`}}
                       />
                     ))}
                   </div>
@@ -295,7 +294,7 @@ export default function App(): JSX.Element {
                         <span className="text-sm text-gray-500">Uptime</span>
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Cloud Migration Success</h3>
-                      <p className="text-gray-600 mb-4">Migrated legacy systems to cloud infrastructure achieving 99.9% uptime and 60% faster performance.</p>
+                      <p className="text-gray-600 mb-4">Migrated legacy systems to cloud infrastructure achieving 99.9% uptime and 60% faster window.performance.</p>
                       <a href="/case-studies/cloud-migration" className="text-blue-600 hover:text-blue-700 font-semibold">
                         View Results →
                       </a>

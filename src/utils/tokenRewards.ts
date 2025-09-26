@@ -1,26 +1,29 @@
-import { apiClient } from './apiClient',
+import { apiClient } from "@/services/api";
+
 export async function rewardOnboarding(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      userId,
-      amount: 50,
-      reason: 'Completed onboarding'
-    }),
-  })}
-,
-export async function rewardReferral(userId: string) {
+    body: JSON.stringify({ userId, action: 'onboarding', amount: 50 })
+  });
+}
+
+export async function earnTokensForPurchase(
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' }),
-  })}
-,
-export async function rewardFiveStarReview(userId: string) {
+    body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType })
+  });
+}
+
+export async function earnTokensForReferral(
+  userId: string,
+  referredUserId: string
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
-  })}
-,
+    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
+  });
+}

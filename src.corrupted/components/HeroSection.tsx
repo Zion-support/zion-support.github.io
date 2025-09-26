@@ -2,35 +2,35 @@ import React, { useState, useEffect, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  ArrowRight,;
-  Play,;
-  Star,;
-  CheckCircle,;
-  ChevronLeft,;
-  ChevronRight,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Brain,;
-  Rocket,;
-  Target,;
-  TrendingUp,;
-  Pause,;
-  Cpu,;
-  Cloud,;
-  Lock,;
-  Users,;
-  BarChart3,;
+  ArrowRight;
+  Play;
+  Star;
+  CheckCircle;
+  ChevronLeft;
+  ChevronRight;
+  Zap;
+  Shield;
+  Globe;
+  Brain;
+  Rocket;
+  Target;
+  TrendingUp;
+  Pause;
+  Cpu;
+  Cloud;
+  Lock;
+  Users;
+  BarChart3;
   Lightbulb;
 } from "lucide-react"
-interface HeroSlide {;
+interface HeroSlide {
   id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[]
 };
 
 const heroSlides: HeroSlide[] = [;
   {;
-    id: 'ai-solutions',title: "AI-Powered Digital Transformation",subtitle: "Revolutionizing business with cutting-edge artificial intelligence",description: "Transform your organization with Zion's advanced AI solutions. From predictive analytics to automated decision-making, we deliver intelligent systems that drive unprecedented business growth and efficiency.",;
-    image: "/images/hero-ai-solutions.jpg",cta: "Explore AI Solutions",path: "/services/ai-business-intelligence",features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],;
+    id: 'ai-solutions',title: "AI-Powered Digital Transformation",subtitle: "Revolutionizing business with cutting-edge artificial intelligence",description: "Transform your organization with Zion's advanced AI solutions. From predictive analytics to automated decision-making, we deliver intelligent systems that drive unprecedented business growth and efficiency.";
+    image: "/images/hero-ai-solutions.jpg",cta: "Explore AI Solutions",path: "/services/ai-business-intelligence",features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"];
     gradient: "from-cyan-500 via-blue-500 to-purple-600",icon: Brain,stats: [;
       { label: "AI Accuracy Rate", value: "97.3%", icon: Target };
       { label: "ROI Increase", value: "450%", icon: TrendingUp };
@@ -38,8 +38,8 @@ const heroSlides: HeroSlide[] = [;
     ];
   };
   {;
-    id: 'enterprise-it',title: "Enterprise IT Excellence",subtitle: "Comprehensive technology solutions for modern enterprises",description: "Zion Tech Group delivers enterprise-grade IT solutions that scale with your business. From cloud infrastructure to cybersecurity, we ensure your digital foundation is robust, secure, and future-ready.",;
-    image: "/images/hero-enterprise-it.jpg",cta: "View Enterprise Solutions",path: "/services",features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],;
+    id: 'enterprise-it',title: "Enterprise IT Excellence",subtitle: "Comprehensive technology solutions for modern enterprises",description: "Zion Tech Group delivers enterprise-grade IT solutions that scale with your business. From cloud infrastructure to cybersecurity, we ensure your digital foundation is robust, secure, and future-ready.";
+    image: "/images/hero-enterprise-it.jpg",cta: "View Enterprise Solutions",path: "/services",features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"];
     gradient: "from-blue-500 via-purple-500 to-pink-500",icon: Shield,stats: [;
       { label: "System Uptime", value: "99.99%", icon: Target };
       { label: "Cost Savings", value: "60%", icon: TrendingUp };
@@ -47,7 +47,7 @@ const heroSlides: HeroSlide[] = [;
     ];
   };
   {;
-    id: 'green-tech',title: "Sustainable Technology Solutions",subtitle: "Driving innovation while protecting our planet",description: "Join the green technology revolution with Zion's sustainable IT solutions. We help organizations reduce their carbon footprint while maximizing performance and driving business value.",image: "/images/hero-green-tech.jpg",cta: "Discover Green Tech",path: "/green-it",features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],;
+    id: 'green-tech',title: "Sustainable Technology Solutions",subtitle: "Driving innovation while protecting our planet",description: "Join the green technology revolution with Zion's sustainable IT solutions. We help organizations reduce their carbon footprint while maximizing performance and driving business value.",image: "/images/hero-green-tech.jpg",cta: "Discover Green Tech",path: "/green-it",features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"];
     gradient: "from-green-500 via-emerald-500 to-teal-500",icon: Globe,stats: [;
       { label: "Energy Savings", value: "75%", icon: Target };
       { label: "Carbon Reduction", value: "85%", icon: TrendingUp };
@@ -55,7 +55,7 @@ const heroSlides: HeroSlide[] = [;
     ];
   };
   {;
-    id: 'digital-innovation',title: "Digital Innovation Hub",subtitle: "Accelerating digital transformation for forward-thinking organizations",description: "Zion Tech Group is your strategic partner in digital innovation. We combine cutting-edge technologies with deep industry expertise to create transformative solutions that drive competitive advantage.",image: "/images/hero-digital-innovation.jpg",cta: "Start Your Journey",path: "/solutions",features: ["Digital Strategy", "Technology Consulting", "Innovation Labs", "Digital Products"],;
+    id: 'digital-innovation',title: "Digital Innovation Hub",subtitle: "Accelerating digital transformation for forward-thinking organizations",description: "Zion Tech Group is your strategic partner in digital innovation. We combine cutting-edge technologies with deep industry expertise to create transformative solutions that drive competitive advantage.",image: "/images/hero-digital-innovation.jpg",cta: "Start Your Journey",path: "/solutions",features: ["Digital Strategy", "Technology Consulting", "Innovation Labs", "Digital Products"];
     gradient: "from-purple-500 via-pink-500 to-red-500",icon: Lightbulb,stats: [;
       { label: "Innovation Rate", value: "300%", icon: Target };
       { label: "Digital Maturity", value: "95%", icon: TrendingUp };
@@ -79,58 +79,58 @@ const swipePower = (offset: number, velocity: number) => {;
   return Math.abs(offset) * velocity;
 };
 export default function HeroSection() {;
-  const [currentSlide, setCurrentSlide] = useState(0),;
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),;
-  const [direction, setDirection] = useState(0),;
-  const [isLoading, setIsLoading] = useState(true),;
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [direction, setDirection] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   //[^;]*
   const memoizedSlides = useMemo(() => heroSlides, []);
 
   //[^;]*
   const nextSlide = useCallback(() => {;
-    setDirection(1),;
-    setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),;
-    setIsAutoPlaying(false),;
-  }, [memoizedSlides.length]),;
+    setDirection(1);
+    setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
+    setIsAutoPlaying(false);
+  }, [memoizedSlides.length]);
 
   const prevSlide = useCallback(() => {;
-    setDirection(-1),;
+    setDirection(-1);
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false)
   }, [memoizedSlides.length]);
   const goToSlide = useCallback((index: number) => {;
     setDirection(index > currentSlide ? 1 : -1)
-    setCurrentSlide(index),;
+    setCurrentSlide(index);
     setIsAutoPlaying(false)
-  }, [currentSlide]),;
+  }, [currentSlide]);
 
   //[^;]*
   useEffect(() => {;
-    if (!isAutoPlaying) return,;
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {;
-      setDirection(1),;
-      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),;
-    }, 7000),;
+      setDirection(1);
+      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
+    }, 7000);
 
-    return () => clearInterval(interval),;
-  }, [isAutoPlaying, memoizedSlides.length]),;
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, memoizedSlides.length]);
 
   //[^;]*
   useEffect(() => {;
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === 'ArrowLeft') prevSlide()
-      if (e.key === 'ArrowRight') nextSlide(),;
+      if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {;
-        e.preventDefault(),;
+        e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)
       };
-    },;
+    };
 
-    window.addEventListener('keydown', handleKeyDown),;
-    return () => window.removeEventListener('keydown', handleKeyDown),;
-  }, [prevSlide, nextSlide, isAutoPlaying]),;
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [prevSlide, nextSlide, isAutoPlaying]);
 
   //[^;]*
   useEffect(() => {;
@@ -138,18 +138,18 @@ export default function HeroSection() {;
       const imagePromises = memoizedSlides.map(slide => {;
         return new Promise((resolve) => {;
           const img = new Image()
-          img.onload = resolve,;
-          img.onerror = resolve,;
-          img.src = slide.image,;
-        }),;
-      }),;
+          img.onload = resolve;
+          img.onerror = resolve;
+          img.src = slide.image;
+        });
+      });
 
-      await Promise.all(imagePromises),;
-      setIsLoading(false),;
-    },;
+      await Promise.all(imagePromises);
+      setIsLoading(false);
+    };
 
-    preloadImages(),;
-  }, [memoizedSlides]),;
+    preloadImages();
+  }, [memoizedSlides]);
 
   const currentSlideData = memoizedSlides[currentSlide]
 
@@ -161,7 +161,7 @@ export default function HeroSection() {;
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</[^>]*>
         </[^>]*>
       </[^>]*>
-    ),;
+    );
   };
 
   return (
@@ -244,9 +244,9 @@ export default function HeroSection() {;
               const swipe = swipePower(offset.x, velocity.x)
 
               if (swipe < -swipeConfidenceThreshold) {;
-                nextSlide(),;
+                nextSlide();
               } else if (swipe > swipeConfidenceThreshold) {;
-                prevSlide(),;
+                prevSlide();
               };
             }};
             className="[^"]*"
