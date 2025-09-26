@@ -14,6 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -68,6 +69,5 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }
