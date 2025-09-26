@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import {;
-  Users,;
-  Globe,;
-  TrendingUp,;
-  Star,;
-  Zap,;
-  Shield,;
-  Award,;
+  Users;
+  Globe;
+  TrendingUp;
+  Star;
+  Zap;
+  Shield;
+  Award;
   Rocket;
 } from "lucide-react"
-interface Stat {;
+interface Stat {
   id: string,icon: React.ComponentType<any>,value: string,label: string,description: string,color: string,gradient: string;
 };
 
@@ -43,9 +43,9 @@ export default function EnhancedStatsSection() {;
   });
   useEffect(() => {;
     if (inView) {;
-      controls.start('visible'),;
+      controls.start('visible');
     };
-  }, [controls, inView]),;
+  }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {;
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
@@ -54,30 +54,30 @@ export default function EnhancedStatsSection() {;
 
     let current = start;
     const timer = setInterval(() => {;
-      current += increment,;
+      current += increment;
       if (current >= numericValue) {;
-        current = numericValue,;
-        clearInterval(timer),;
+        current = numericValue;
+        clearInterval(timer);
       };
       setCountedValues(prev => ({;
-        ...prev,;
+        ...prev;
         [target]: Math.floor(current)
-      })),;
-    }, 16),;
+      }));
+    }, 16);
 
-    return timer,;
-  },;
+    return timer;
+  };
 
   useEffect(() => {;
     if (inView) {;
       stats.forEach((stat) => {;
         const timer = setTimeout(() => {;
-          animateCount(stat.value),;
-        }, stats.indexOf(stat) * 200),;
-        return () => clearTimeout(timer),;
-      }),;
+          animateCount(stat.value);
+        }, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer);
+      });
     };
-  }, [inView]),;
+  }, [inView]);
 
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

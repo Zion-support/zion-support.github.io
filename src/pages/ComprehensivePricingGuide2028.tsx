@@ -1,73 +1,73 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,;
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building,;
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,;
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,;
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown,;
-  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart,;
-  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage,;
-  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart,;
-  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent,;
-  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,;
-  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,;
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star;
+  Server, Cloud, Database, Network, Lock, Code, Rocket, Building;
+  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth;
+  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign;
+  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown;
+  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart;
+  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage;
+  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart;
+  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent;
+  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank;
+  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode;
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp;
 } from "lucide-react"
 const pricingData2028 = {;
   aiServices: [;
     {;
-      name: 'Quantum Consciousness AI',price: '$25,999',;
-      period: '/month',category: 'AI & Consciousness',marketSize: '$1.2B',growthRate: '500%',roi: '800%',setupTime: '4-6 weeks',trialDays: 30,features: ['Quantum consciousness mappingEthical boundary testing', 'Real-time monitoring'],;
+      name: 'Quantum Consciousness AI',price: '$25,999';
+      period: '/month',category: 'AI & Consciousness',marketSize: '$1.2B',growthRate: '500%',roi: '800%',setupTime: '4-6 weeks',trialDays: 30,features: ['Quantum consciousness mappingEthical boundary testing', 'Real-time monitoring'];
       targetAudience: 'AI research institutions, Government agencies, Ethics committees'
-    },;
+    };
     {;
-      name: 'Quantum Financial Trading AI',price: '$35,999',;
-      period: '/month',category: 'AI & Finance',marketSize: '$15.8B',growthRate: '280%',roi: '600%',setupTime: '2-3 weeks',trialDays: 14,features: ['Quantum market analysisPredictive trading', 'Risk management'],;
+      name: 'Quantum Financial Trading AI',price: '$35,999';
+      period: '/month',category: 'AI & Finance',marketSize: '$15.8B',growthRate: '280%',roi: '600%',setupTime: '2-3 weeks',trialDays: 14,features: ['Quantum market analysisPredictive trading', 'Risk management'];
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
-    },;
+    };
     {;
-      name: 'Quantum Healthcare AI',price: '$28,999',;
-      period: '/month',category: 'AI & Healthcare',marketSize: '$8.9B',growthRate: '320%',roi: '450%',setupTime: '3-4 weeks',trialDays: 21,features: ['Medical diagnosisTreatment optimization', 'Drug discovery'],;
+      name: 'Quantum Healthcare AI',price: '$28,999';
+      period: '/month',category: 'AI & Healthcare',marketSize: '$8.9B',growthRate: '320%',roi: '450%',setupTime: '3-4 weeks',trialDays: 21,features: ['Medical diagnosisTreatment optimization', 'Drug discovery'];
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
     };
-  ],;
+  ];
   microSAAS: [;
     {;
-      name: 'AI Content Creator Pro',price: '$299',period: '/month',category: 'AI Content & Marketing',marketSize: '$4.2B',growthRate: '180%',roi: '300%',setupTime: '1-2 days',trialDays: 14,features: ['AI article generationContent optimization', 'Multi-language support'],;
+      name: 'AI Content Creator Pro',price: '$299',period: '/month',category: 'AI Content & Marketing',marketSize: '$4.2B',growthRate: '180%',roi: '300%',setupTime: '1-2 days',trialDays: 14,features: ['AI article generationContent optimization', 'Multi-language support'];
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
-    },;
+    };
     {;
-      name: 'AI Image Generator Plus',price: '$199',period: '/month',category: 'AI Design & Creative',marketSize: '$2.8B',growthRate: '250%',roi: '400%',setupTime: '1 day',trialDays: 7,features: ['High-resolution generationBrand customization', 'Commercial rights'],;
+      name: 'AI Image Generator Plus',price: '$199',period: '/month',category: 'AI Design & Creative',marketSize: '$2.8B',growthRate: '250%',roi: '400%',setupTime: '1 day',trialDays: 7,features: ['High-resolution generationBrand customization', 'Commercial rights'];
       targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
-    },;
+    };
     {;
-      name: 'AI Code Generator Pro',price: '$499',period: '/month',category: 'AI Development & Coding',marketSize: '$6.8B',growthRate: '280%',roi: '500%',setupTime: '2-3 days',trialDays: 21,features: ['Multi-language supportBug detection', 'Code optimization'],;
+      name: 'AI Code Generator Pro',price: '$499',period: '/month',category: 'AI Development & Coding',marketSize: '$6.8B',growthRate: '280%',roi: '500%',setupTime: '2-3 days',trialDays: 21,features: ['Multi-language supportBug detection', 'Code optimization'];
       targetAudience: 'Software developers, Development teams, Tech companies'
     };
-  ],;
+  ];
   itServices: [;
     {;
-      name: 'Quantum Cloud Infrastructure',price: '$45,999',;
-      period: '/month',category: 'Cloud & Infrastructure',marketSize: '$18.5B',growthRate: '320%',roi: '700%',setupTime: '6-8 weeks',trialDays: 30,features: ['Quantum-ready nodesZero-latency networking', 'Auto-scaling'],;
+      name: 'Quantum Cloud Infrastructure',price: '$45,999';
+      period: '/month',category: 'Cloud & Infrastructure',marketSize: '$18.5B',growthRate: '320%',roi: '700%',setupTime: '6-8 weeks',trialDays: 30,features: ['Quantum-ready nodesZero-latency networking', 'Auto-scaling'];
       targetAudience: 'Enterprises, Cloud providers, Data centers'
-    },;
+    };
     {;
-      name: 'AI-Powered Cybersecurity Suite',price: '$32,999',;
-      period: '/month',category: 'Cybersecurity',marketSize: '$15.2B',growthRate: '280%',roi: '500%',setupTime: '2-3 weeks',trialDays: 14,features: ['AI threat detectionZero-trust architecture', 'Automated response'],;
+      name: 'AI-Powered Cybersecurity Suite',price: '$32,999';
+      period: '/month',category: 'Cybersecurity',marketSize: '$15.2B',growthRate: '280%',roi: '500%',setupTime: '2-3 weeks',trialDays: 14,features: ['AI threat detectionZero-trust architecture', 'Automated response'];
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
-    },;
+    };
     {;
-      name: 'Quantum DevOps Automation',price: '$35,999',;
-      period: '/month',category: 'DevOps & Automation',marketSize: '$9.8B',growthRate: '300%',roi: '600%',setupTime: '4-5 weeks',trialDays: 21,features: ['AI-powered CI/CDAutomated testing', 'Performance monitoring'],;
+      name: 'Quantum DevOps Automation',price: '$35,999';
+      period: '/month',category: 'DevOps & Automation',marketSize: '$9.8B',growthRate: '300%',roi: '600%',setupTime: '4-5 weeks',trialDays: 21,features: ['AI-powered CI/CDAutomated testing', 'Performance monitoring'];
       targetAudience: 'Development teams, DevOps engineers, Technology companies'
     };
   ];
-},;
+};
 
 const ComprehensivePricingGuide2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [priceRange, setPriceRange] = useState('all'),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' };
@@ -87,24 +87,23 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' }));
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ];
-  },;
+  };
 
   const filteredServices = getAllServices().filter(service => {;
     const matchesCategory = selectedCategory === 'all' ||;
-      service.type.toLowerCase().includes(selectedCategory.replace('- ')),;
+      service.type.toLowerCase().includes(selectedCategory.replace('- '));
 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     let matchesPrice = true;
-    if (priceRange === 'low') matchesPrice = price < 500,;
-    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000,;&& price <= 10000,; price <= 10000,
-    else if (priceRange === 'high') matchesPrice = price > 10000,;
+    if (priceRange === 'low') matchesPrice = price < 500;
+    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;&& price <= 10000; price <= 10000,
+    else if (priceRange === 'high') matchesPrice = price > 10000;
 
-    return matchesCategory && matchesPrice,;&& matchesPrice,; matchesPrice,
-  }),;
+    return matchesCategory && matchesPrice;&& matchesPrice; matchesPrice});
 
   const calculateROI = (roi: string) => {;
-    return parseInt(roi.replace('%', '')),;
-  },;
+    return parseInt(roi.replace('%', ''));
+  };
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 

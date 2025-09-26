@@ -14,7 +14,7 @@ const HealthcareSolutions: React.FC = () => {
         </[^>]*>
       </[^>]*>
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 export default HealthcareSolutions;

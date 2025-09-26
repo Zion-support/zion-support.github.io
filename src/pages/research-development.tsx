@@ -2,149 +2,149 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  FlaskConical,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  TrendingUp,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  Code,;
-  Rocket,;
-  Users,;
-  BarChart3,;
-  FileImage,;
-  MessageCircle,;
-  Video,;
-  FileText,;
-  Heart,;
-  Award,;
-  Clock,;
-  DollarSign,;
-  Search,;
-  Filter,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Target,;
-  BookOpen,;
-  GraduationCap,;
-  Lightbulb,;
-  Microscope,;
-  TestTube,;
-  Atom,;
-  Satellite,;
+  FlaskConical;
+  Brain;
+  Shield;
+  Cloud;
+  TrendingUp;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  Rocket;
+  Users;
+  BarChart3;
+  FileImage;
+  MessageCircle;
+  Video;
+  FileText;
+  Heart;
+  Award;
+  Clock;
+  DollarSign;
+  Search;
+  Filter;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Target;
+  BookOpen;
+  GraduationCap;
+  Lightbulb;
+  Microscope;
+  TestTube;
+  Atom;
+  Satellite;
   Telescope;
 } from "lucide-react"
 const researchAreas = [;
   {;
-    id: 'ai-ml',name: 'Artificial Intelligence & Machine Learning',icon: Brain,description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',;
+    id: 'ai-ml',name: 'Artificial Intelligence & Machine Learning',icon: Brain,description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.';
     color: 'from-purple-500 to-indigo-600',focus: [;
       'Deep Learning ArchitecturesNatural Language Processing'
-      'Computer Vision & Image RecognitionReinforcement Learning',;
+      'Computer Vision & Image RecognitionReinforcement Learning';
       'AI Ethics & Responsible AIEdge AI & Federated Learning'
-    ],;
+    ];
     publications: 15,patents: 8,projects: 12;
   };
   {;
     id: 'quantum-computing',name: 'Quantum Computing & Quantum Technologies',icon: Atom,description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',color: 'from-blue-500 to-cyan-600',focus: [;
       'Quantum AlgorithmsQuantum Cryptography'
-      'Quantum Machine LearningQuantum Error Correction',;
+      'Quantum Machine LearningQuantum Error Correction';
       'Post-Quantum CryptographyQuantum Sensing'
-    ],;
+    ];
     publications: 8,patents: 5,projects: 6;
   };
   {;
     id: 'cybersecurity',name: 'Cybersecurity & Privacy',icon: Shield,description: 'Developing next-generation security solutions to protect against evolving cyber threats.',color: 'from-red-500 to-pink-600',focus: [;
       'Threat IntelligenceZero-Trust Security'
-      'Privacy-Preserving TechnologiesBlockchain Security',;
+      'Privacy-Preserving TechnologiesBlockchain Security';
       'IoT SecurityAI-Powered Security'
-    ],;
+    ];
     publications: 22,patents: 12,projects: 18;
   };
   {;
     id: 'edge-computing',name: 'Edge Computing & IoT',icon: Zap,description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',color: 'from-yellow-500 to-orange-600',focus: [;
       'Edge AI & Machine Learning5G & 6G Networks'
-      'IoT Security & PrivacyEdge Computing Optimization',;
+      'IoT Security & PrivacyEdge Computing Optimization';
       'Real-time Data ProcessingSmart City Technologies'
-    ],;
+    ];
     publications: 18,patents: 9,projects: 14;
   };
   {;
     id: 'data-science',name: 'Data Science & Analytics',icon: TrendingUp,description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',color: 'from-green-500 to-emerald-600',focus: [;
       'Big Data ProcessingPredictive Analytics'
-      'Data VisualizationStatistical Modeling',;
+      'Data VisualizationStatistical Modeling';
       'Real-time AnalyticsData Privacy & Ethics'
-    ],;
+    ];
     publications: 25,patents: 15,projects: 20;
   };
   {;
-    id: 'cloud-native',name: 'Cloud-Native Technologies',icon: Cloud,description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',;
+    id: 'cloud-native',name: 'Cloud-Native Technologies',icon: Cloud,description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.';
     color: 'from-indigo-500 to-purple-600',focus: [;
       'Microservices ArchitectureContainer Orchestration'
-      'Serverless ComputingMulti-cloud Strategies',;
+      'Serverless ComputingMulti-cloud Strategies';
       'Cloud SecurityDevOps Automation'
-    ],;
+    ];
     publications: 20,patents: 10,projects: 16;
   };
 ];
 const researchProjects = [;
   {;
-    id: 1,title: 'AI-Powered Cybersecurity Threat Detection',area: 'AI & ML',status: 'Active',description: 'Developing machine learning algorithms to detect and respond to cybersecurity threats in real-time.',team: ['Dr. Sarah ChenAI Researcher', 'Security Expert'],;
-    duration: '18 months',funding: '$500,000',;
+    id: 1,title: 'AI-Powered Cybersecurity Threat Detection',area: 'AI & ML',status: 'Active',description: 'Developing machine learning algorithms to detect and respond to cybersecurity threats in real-time.',team: ['Dr. Sarah ChenAI Researcher', 'Security Expert'];
+    duration: '18 months',funding: '$500,000';
     outcomes: [;
       'Real-time threat detection system95% accuracy in threat classification'
       '3 pending patents5 research publications'
-    ],;
+    ];
     icon: Brain,color: 'from-purple-500 to-indigo-600'
   };
   {;
-    id: 2,title: 'Quantum-Resistant Cryptographic Protocols',area: 'Quantum Computing',status: 'Active',description: 'Researching and developing cryptographic algorithms that remain secure against quantum computing attacks.',team: ['Dr. Michael RodriguezQuantum Researcher', 'Cryptographer'],;
-    duration: '24 months',funding: '$750,000',;
+    id: 2,title: 'Quantum-Resistant Cryptographic Protocols',area: 'Quantum Computing',status: 'Active',description: 'Researching and developing cryptographic algorithms that remain secure against quantum computing attacks.',team: ['Dr. Michael RodriguezQuantum Researcher', 'Cryptographer'];
+    duration: '24 months',funding: '$750,000';
     outcomes: [;
       'Post-quantum cryptographic framework2 patent applications'
       '3 research publicationsIndustry collaboration established'
-    ],;
+    ];
     icon: Atom,color: 'from-blue-500 to-cyan-600'
   };
   {;
-    id: 3,title: 'Edge AI for Smart Manufacturing',area: 'Edge Computing',status: 'Active',description: 'Developing intelligent edge computing solutions for real-time manufacturing process optimization.',team: ['Dr. Emily WangEdge Computing Expert', 'Manufacturing Specialist'],;
-    duration: '12 months',funding: '$300,000',;
+    id: 3,title: 'Edge AI for Smart Manufacturing',area: 'Edge Computing',status: 'Active',description: 'Developing intelligent edge computing solutions for real-time manufacturing process optimization.',team: ['Dr. Emily WangEdge Computing Expert', 'Manufacturing Specialist'];
+    duration: '12 months',funding: '$300,000';
     outcomes: [;
       'Edge AI platform prototype30% efficiency improvement'
       '2 research publicationsIndustry partnership formed'
-    ],;
+    ];
     icon: Zap,color: 'from-yellow-500 to-orange-600'
   };
   {;
-    id: 4,title: 'Privacy-Preserving Data Analytics',area: 'Data Science',status: 'Completed',description: 'Researching techniques for analyzing sensitive data while preserving individual privacy.',team: ['Dr. James BrownData Scientist', 'Privacy Expert'],;
-    duration: '15 months',funding: '$400,000',;
+    id: 4,title: 'Privacy-Preserving Data Analytics',area: 'Data Science',status: 'Completed',description: 'Researching techniques for analyzing sensitive data while preserving individual privacy.',team: ['Dr. James BrownData Scientist', 'Privacy Expert'];
+    duration: '15 months',funding: '$400,000';
     outcomes: [;
       'Privacy-preserving analytics framework4 research publications'
       '1 patent grantedOpen-source toolkit released'
-    ],;
+    ];
     icon: TrendingUp,color: 'from-green-500 to-emerald-600'
   };
   {;
-    id: 5,title: 'Cloud-Native Security Architecture',area: 'Cloud-Native',status: 'Active',description: 'Developing security-first cloud architecture patterns for enterprise applications.',team: ['Dr. Lisa GarciaCloud Architect', 'Security Researcher'],;
-    duration: '20 months',funding: '$600,000',;
+    id: 5,title: 'Cloud-Native Security Architecture',area: 'Cloud-Native',status: 'Active',description: 'Developing security-first cloud architecture patterns for enterprise applications.',team: ['Dr. Lisa GarciaCloud Architect', 'Security Researcher'];
+    duration: '20 months',funding: '$600,000';
     outcomes: [;
       'Security architecture framework3 research publications'
       '2 patent applicationsEnterprise pilot program'
-    ],;
+    ];
     icon: Cloud,color: 'from-indigo-500 to-purple-600'
   };
   {;
-    id: 6,title: 'AI Ethics and Responsible AI',area: 'AI & ML',status: 'Active',description: 'Researching ethical considerations in AI development and deployment.',team: ['Dr. David KimAI Ethicist', 'Social Scientist'],;
-    duration: '16 months',funding: '$350,000',;
+    id: 6,title: 'AI Ethics and Responsible AI',area: 'AI & ML',status: 'Active',description: 'Researching ethical considerations in AI development and deployment.',team: ['Dr. David KimAI Ethicist', 'Social Scientist'];
+    duration: '16 months',funding: '$350,000';
     outcomes: [;
       'AI ethics frameworkResponsible AI guidelines'
       '4 research publicationsIndustry standards contribution'
-    ],;
+    ];
     icon: Brain,color: 'from-purple-500 to-indigo-600'
   };
 ];
@@ -167,18 +167,18 @@ const publications = [;
 ];
 const patents = [;
   {;
-    id: 1,title: 'Adaptive Threat Detection System Using Machine Learning',inventors: ['Dr. Sarah ChenDr. Michael Rodriguez'],filingDate: '2026-08-15',status: 'Granted',patentNumber: 'US 11,234,567',;
+    id: 1,title: 'Adaptive Threat Detection System Using Machine Learning',inventors: ['Dr. Sarah ChenDr. Michael Rodriguez'],filingDate: '2026-08-15',status: 'Granted',patentNumber: 'US 11,234,567';
     area: 'AI & ML',description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
   };
   {;
     id: 2,title: 'Quantum-Resistant Digital Signature Algorithm',inventors: ['Dr. Michael Rodriguez'],filingDate: '2026-06-20',status: 'Pending',patentNumber: 'US 2026/0123456',area: 'Quantum Computing',description: 'A digital signature algorithm resistant to quantum computing attacks.'
   };
   {;
-    id: 3,title: 'Edge Computing Resource Optimization Method',inventors: ['Dr. Emily WangDr. James Brown'],filingDate: '2026-05-10',status: 'Granted',patentNumber: 'US 11,123,456',;
+    id: 3,title: 'Edge Computing Resource Optimization Method',inventors: ['Dr. Emily WangDr. James Brown'],filingDate: '2026-05-10',status: 'Granted',patentNumber: 'US 11,123,456';
     area: 'Edge Computing',description: 'A method for optimizing resource allocation in edge computing environments.'
   };
   {;
-    id: 4,title: 'Privacy-Preserving Data Analytics Framework',inventors: ['Dr. James Brown'],filingDate: '2026-03-25',status: 'Granted',patentNumber: 'US 11,012,345',;
+    id: 4,title: 'Privacy-Preserving Data Analytics Framework',inventors: ['Dr. James Brown'],filingDate: '2026-03-25',status: 'Granted',patentNumber: 'US 11,012,345';
     area: 'Data Science',description: 'A framework for analyzing data while preserving individual privacy.'
   };
   {;
@@ -186,9 +186,9 @@ const patents = [;
   };
 ];
 export default function ResearchDevelopment() {;
-  const [selectedArea, setSelectedArea] = useState('All'),;
-  const [selectedStatus, setSelectedStatus] = useState('All'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedArea, setSelectedArea] = useState('All');
+  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const areas = ['All', ...researchAreas.map(area => area.name)]
   const statuses = ['AllActive', 'CompletedPlanning']
@@ -203,12 +203,12 @@ export default function ResearchDevelopment() {;
   const getAreaIcon = (areaName: string) => {;
     const area = researchAreas.find(a => a.name === areaName)
     return area ? area.icon : FlaskConical
-  },;
+  };
 
   const getAreaColor = (areaName: string) => {;
     const area = researchAreas.find(a => a.name === areaName)
     return area ? area.color : 'from-gray-500 to-slate-600'
-  },;
+  };
 
   const getStatusBadge = (status: string) => {;
     if (status === 'Active') {;
@@ -216,9 +216,9 @@ export default function ResearchDevelopment() {;
     } else if (status === 'Completed') {;
       return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</[^>]*>
     } else {;
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>,;
+      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
     };
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">;
@@ -239,7 +239,7 @@ export default function ResearchDevelopment() {;
               Advancing Technology Frontiers;
             </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">;
-              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects,;
+              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects;
               and breakthrough technologies that are shaping the future of technology.;
             </[^>]*>
           </[^>]*>
@@ -354,7 +354,7 @@ export default function ResearchDevelopment() {;
                     </[^>]*>
                   </[^>]*>
                 </[^>]*>
-              ),;
+              );
             })};
           </[^>]*>
         </[^>]*>

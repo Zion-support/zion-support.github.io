@@ -1,11 +1,11 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  DollarSign,;
-  Play, ;
-  Settings, ;
-  Target, ;
-  CheckCircle, ;
+  DollarSign;
+  Play;
+  Settings;
+  Target;
+  CheckCircle;
   ArrowRight ;
 } from "lucide-react"
 export default function FinOpsAdvisor() {;
@@ -21,9 +21,9 @@ export default function FinOpsAdvisor() {;
     };
   ];
   const benefits = [;
-    'Reduce cloud costs by 30-50%Improve resource utilization',;
+    'Reduce cloud costs by 30-50%Improve resource utilization';
     'Implement cost governanceOptimize pricing models'
-  ],;
+  ];
 
   const useCases = [;
     { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' };
@@ -55,7 +55,7 @@ export default function FinOpsAdvisor() {;
             ;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
               Optimize your cloud spending with our FinOps advisory services that ;
-              help you achieve cost efficiency while maintaining performance.;
+              help you achieve cost efficiency while maintaining window.performance.;
             </[^>]*>
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;

@@ -1,3 +1,4 @@
+import React from "react"
 import { Route, Routes } from "react-router-dom"
 import { ProtectedRoute } from "@/components/ProtectedRoute"
 import Dashboard from "@/pages/Dashboard"
@@ -23,7 +24,6 @@ import Projects from "@/pages/Projects"
 const DashboardRoutes = () => {
   return (
     <Routes>
-      {/* Dashboard Routes */}
       <Route
         path="/dashboard"
         element={
@@ -204,7 +204,7 @@ const DashboardRoutes = () => {
         path="/dashboard/api-access"
         element={
           <ProtectedRoute>
-            <DeveloperPortal />
+            <div>API Access</div>
           </ProtectedRoute>
         }
       />

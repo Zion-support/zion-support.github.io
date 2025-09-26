@@ -3,41 +3,41 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
 const DigitalTransformation = () => {;
   const transformationServices = [;
     {;
-      title: "Process Automation",description: "Streamline workflows with intelligent automation and AI-powered solutions.",price: "From $15,000/project",;
-      features: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"],;
+      title: "Process Automation",description: "Streamline workflows with intelligent automation and AI-powered solutions.",price: "From $15,000/project";
+      features: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"];
       icon: Zap;
     };
     {;
-      title: "Legacy Modernization",description: "Update and integrate legacy systems with modern technologies.",price: "From $25,000/project",;
-      features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],;
+      title: "Legacy Modernization",description: "Update and integrate legacy systems with modern technologies.",price: "From $25,000/project";
+      features: ["System assessment", "Modernization planning", "Data migration", "Integration services"];
       icon: RefreshCw;
     };
     {;
-      title: "Change Management",description: "Guide your team through digital adoption and transformation.",price: "From $8,000/month",;
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
+      title: "Change Management",description: "Guide your team through digital adoption and transformation.",price: "From $8,000/month";
+      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"];
       icon: Users;
     };
   ];
   const transformationAreas = [;
     {;
       name: "Customer Experience",description: "Enhance customer interactions and satisfaction",icon: Target,features: ["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"]
-    },;
+    };
     {;
       name: "Operations",description: "Optimize internal processes and efficiency",icon: TrendingUp,features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-    },;
+    };
     {;
       name: "Technology",description: "Modernize your technology stack and infrastructure",icon: BarChart3,features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
     };
-  ],;
+  ];
 
   const benefits = [;
-    "Increased operational efficiency and productivity",;
-    "Enhanced customer experience and satisfaction",;
-    "Improved data insights and decision making",;
-    "Reduced operational costs and manual work",;
-    "Faster time to market for new products",;
+    "Increased operational efficiency and productivity";
+    "Enhanced customer experience and satisfaction";
+    "Improved data insights and decision making";
+    "Reduced operational costs and manual work";
+    "Faster time to market for new products";
     "Better competitive positioning in the market"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">;

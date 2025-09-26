@@ -1,25 +1,25 @@
 import React from "react"
 import { motion } from "framer-motion"
-interface SkeletonProps {;
-  className?: string,;
-  height?: string,;
-  width?: string,;
-  rounded?: boolean,;
-  animated?: boolean,;
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+  rounded?: boolean;
+  animated?: boolean;
 };
 
 const Skeleton: React.FC<SkeletonProps> = ({ ;
   className = ''
-  height = 'h-4', ;
-  width = 'w-full', ;
-  rounded = true,;
+  height = 'h-4';
+  width = 'w-full';
+  rounded = true;
   animated = true ;
 }) => {;
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`
   const classes = `${baseClasses} ${className}`
   ;
   if (!animated) {;
-    return <div className={classes} />,;
+    return <div className={classes} />;
   };
   ;
   return (
@@ -33,17 +33,17 @@ const Skeleton: React.FC<SkeletonProps> = ({ ;
       }};
     />;
   );
-},;
+};
 
-interface LoadingSkeletonProps {;
-  type?: 'card' | 'list' | 'hero' | 'table' | 'form',;
-  count?: number,;
-  className?: string,;
+interface LoadingSkeletonProps {
+  type?: 'card' | 'list' | 'hero' | 'table' | 'form';
+  count?: number;
+  className?: string;
 };
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
   type = 'card'
-  count = 3,;
+  count = 3;
   className = '' ;
 }) => {;
   const renderSkeleton = () => {;
@@ -59,7 +59,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
               <[^>]*/>
             </[^>]*>
           </[^>]*>
-        ),;
+        );
         ;
       case 'card':;
         return (
@@ -75,7 +75,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
               </[^>]*>
             </[^>]*>
           </[^>]*>
-        ),;
+        );
         ;
       case 'list':;
         return (
@@ -91,7 +91,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
               </[^>]*>
             ))};
           </[^>]*>
-        ),;
+        );
         ;
       case 'table':;
         return (
@@ -111,7 +111,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
               </[^>]*>
             ))};
           </[^>]*>
-        ),;
+        );
         ;
       case 'form':;
         return (
@@ -130,7 +130,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
               <[^>]*/>
             </[^>]*>
           </[^>]*>
-        ),;
+        );
         ;
       default: return <[^>]*/>
     };
@@ -139,8 +139,8 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ ;
     <div className={`animate-pulse ${className}`}>;
       {renderSkeleton()};
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 //[^;]*
 export const HeroSkeleton: React.FC = () => (;

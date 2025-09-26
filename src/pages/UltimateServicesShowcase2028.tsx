@@ -2,40 +2,40 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Search,;
-  Filter, ;
-  Star, ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Heart, ;
-  TrendingUp, ;
-  Users, ;
-  Globe, ;
-  Cpu, ;
-  Lock, ;
-  Target, ;
-  Rocket, ;
-  Sparkles,;
-  ChevronDown,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  Globe as GlobeIcon,;
-  Award,;
-  Clock,;
-  DollarSign,;
+  Search;
+  Filter;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Heart;
+  TrendingUp;
+  Users;
+  Globe;
+  Cpu;
+  Lock;
+  Target;
+  Rocket;
+  Sparkles;
+  ChevronDown;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  Globe as GlobeIcon;
+  Award;
+  Clock;
+  DollarSign;
   BarChart3;
 } from "lucide-react"
 import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028"
 const UltimateServicesShowcase2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [sortBy, setSortBy] = useState('name'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [expandedService, setExpandedService] = useState<string | null>(null),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   //[^;]*
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))]
@@ -54,9 +54,9 @@ const UltimateServicesShowcase2028: React.FC = () => {
     .sort((a, b) => {;
       switch (sortBy) {;
         case 'price':;
-          return a.price - b.price,;
+          return a.price - b.price;
         case 'category':;
-          return a.category.localeCompare(b.category),;
+          return a.category.localeCompare(b.category);
         case 'innovation':;
           return a.innovationLevel === 'revolutionary' ? 1 : -1,
         case 'name':;
@@ -64,27 +64,26 @@ const UltimateServicesShowcase2028: React.FC = () => {
       };
     });
   const getCategoryIcon = (category: string) => {;
-    const icons: Record<string, React.ReactNode> = {;
-      'AI & Enterprise': <Brain className="w-5 h-5" />,;
-      'Quantum Computing': <Zap className="w-5 h-5" />,;
-      'Cybersecurity': <Shield className="w-5 h-5" />,;
-      'Healthcare Technology': <Heart className="w-5 h-5" />,;
-      'Financial Technology': <DollarSign className="w-5 h-5" />,;
-      'Supply Chain': <Globe className="w-5 h-5" />,;
-      'Content Marketing': <Target className="w-5 h-5" />,;
-      'Project Management': <Rocket className="w-5 h-5" />,;
-      'Customer Support': <Users className="w-5 h-5" />,;
+    const icons: Record<string React.ReactNode> = {;
+      'AI & Enterprise': <Brain className="w-5 h-5" />;
+      'Quantum Computing': <Zap className="w-5 h-5" />;
+      'Cybersecurity': <Shield className="w-5 h-5" />;
+      'Healthcare Technology': <Heart className="w-5 h-5" />;
+      'Financial Technology': <DollarSign className="w-5 h-5" />;
+      'Supply Chain': <Globe className="w-5 h-5" />;
+      'Content Marketing': <Target className="w-5 h-5" />;
+      'Project Management': <Rocket className="w-5 h-5" />;
+      'Customer Support': <Users className="w-5 h-5" />;
       'Marketing Automation': <[^>]*/>
-    },;
-    return icons[category] || <Sparkles className="w-5 h-5" />,
-  },;
+    };
+    return icons[category] || <Sparkles className="w-5 h-5" />};
 
   const getInnovationLevelColor = (level: string) => {;
     switch (level) {;
       case 'revolutionary':;
         return 'from-purple-500 to-pink-500'
       case 'cutting-edge':;
-        return 'from-blue-500 to-cyan-500',;
+        return 'from-blue-500 to-cyan-500';
       default: return 'from-green-500 to-emerald-500'
     };
   };
@@ -115,9 +114,9 @@ const UltimateServicesShowcase2028: React.FC = () => {
               key={i};
               className="[^"]*"
               animate={{;
-                x: [0, 100, 0],;
-                y: [0, -100, 0],;
-                opacity: [0.3, 1, 0.3],;
+                x: [0, 100, 0];
+                y: [0, -100, 0];
+                opacity: [0.3, 1, 0.3];
                 scale: [0.5, 1.5, 0.5]
               }};
               transition={{;

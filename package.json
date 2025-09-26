@@ -4,16 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node -e \"console.log('No root app; use zion-website package for dev')\"",
-    "build": "node -e \"console.log('Skipping root build - use zion-website')\"",
-    "build:netlify": "node -e \"console.log('No root build; deploy zion-website')\"",
-    "start": "node -e \"console.log('No root server; use zion-website')\"",
+    "dev": "vite",
+    "build": "vite build",
+    "build:netlify": "vite build",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
-    "preview": "node -e \"console.log('No root preview; use zion-website')\"",
-    "test": "jest --config jest.config.cjs --passWithNoTests",
-    "test:watch": "jest --watch --config jest.config.cjs",
-    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests --testPathIgnorePatterns zion-website --config jest.config.cjs",
-    "type-check": "npx tsc --noEmit",
+    "preview": "vite preview",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
+    "type-check": "npx tsc --noEmit -p tsconfig.typecheck.json",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
@@ -147,26 +146,5 @@
   "resolutions": {
     "motion-utils": "^12.23.6"
   },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
-  },
-  "keywords": [
-    "nextjs",
-    "react",
-    "typescript",
-    "tailwindcss",
-    "ai",
-    "automation",
-    "zion-tech-group"
-  ],
-  "author": "Zion Tech Group",
-  "license": "MIT",
   "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }

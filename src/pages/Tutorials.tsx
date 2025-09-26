@@ -27,13 +27,13 @@ const Tutorials = () => {;
       title: "Building Your First AI Chatbot",description: "Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.",category: "Beginner",duration: "45 min",instructor: "Dr. Sarah Chen",rating: 4.8,students: "2.3k",thumbnail: "/images/tutorials/ai-chatbot.jpg"
     };
     {;
-      title: "Quantum Neural Network Implementation",description: "Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced performance.",category: "Advanced",duration: "90 min",instructor: "Michael Rodriguez",rating: 4.9,students: "856",thumbnail: "/images/tutorials/quantum-neural.jpg"
+      title: "Quantum Neural Network Implementation",description: "Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced window.performance.",category: "Advanced",duration: "90 min",instructor: "Michael Rodriguez",rating: 4.9,students: "856",thumbnail: "/images/tutorials/quantum-neural.jpg"
     };
     {;
       title: "Cybersecurity Best Practices",description: "Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.",category: "Intermediate",duration: "60 min",instructor: "James Wilson",rating: 4.7,students: "1.5k",thumbnail: "/images/tutorials/cybersecurity.jpg"
     };
     {;
-      title: "AI Model Optimization",description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",;
+      title: "AI Model Optimization",description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.";
       category: "Expert",duration: "75 min",instructor: "Dr. Emily Watson",rating: 4.6,students: "623",thumbnail: "/images/tutorials/model-optimization.jpg"
     };
   ];

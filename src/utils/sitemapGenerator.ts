@@ -6,7 +6,8 @@ interface SitemapUrl {
 }
 
 interface SitemapConfig {
-  baseUrl: string,urls: SitemapUrl[];
+  baseUrl: string;
+  urls: SitemapUrl[];
   outputPath?: string
 }
 
@@ -20,12 +21,12 @@ export class SitemapGenerator {
    * Generate XML sitemap content
    */
   generateXML(): string {
-    const { baseUrl, urls } = this.config,
+    const { baseUrl, urls } = this.config;
     
     const xmlUrls = urls.map(url => {
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0],
-      const changefreq = url.changefreq || 'weekly',
-      const priority = url.priority || 0.5,
+      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+      const changefreq = url.changefreq || 'weekly';
+      const priority = url.priority || 0.5;
       
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
@@ -36,7 +37,7 @@ export class SitemapGenerator {
     }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
 </urlset>`;
   }
@@ -45,7 +46,7 @@ ${xmlUrls}
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
-    const { baseUrl } = this.config,
+    const { baseUrl } = this.config;
     
     return `User-agent: *
 Allow: /
@@ -85,7 +86,7 @@ Crawl-delay: 1`
     }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapEntries}
 </sitemapindex>`;
   }

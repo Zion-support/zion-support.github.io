@@ -2,26 +2,26 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  MessageCircle,;
-  Brain, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  Clock, ;
-  Award, ;
-  Star,;
-  Globe,;
-  Cpu,;
-  Database,;
-  CheckCircle,;
-  Eye,;
-  Users,;
-  FileText,;
-  Shield,;
-  TrendingUp,;
-  Phone,;
-  Mail,;
-  Calendar,;
+  MessageCircle;
+  Brain;
+  Target;
+  Zap;
+  BarChart3;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  FileText;
+  Shield;
+  TrendingUp;
+  Phone;
+  Mail;
+  Calendar;
   Search;
 } from "lucide-react"
 export default function HelpdeskPlatform() {;
@@ -31,7 +31,7 @@ export default function HelpdeskPlatform() {;
     };
     {;
       icon: MessageCircle,title: "Multi-Channel Support",description: "Unified support across email, chat, phone, and social media platforms."
-    },;
+    };
     {;
       icon: Target,title: "Smart Ticket Routing",description: "AI-driven ticket classification and automatic assignment to best agents."
     };
@@ -46,13 +46,13 @@ export default function HelpdeskPlatform() {;
     };
   ];
   const benefits = [;
-    "Reduce support response time by 60-80% with AI automation",;
-    "Improve customer satisfaction scores by 40-60%",;
-    "Reduce support costs by 30-50% through automation",;
-    "Increase agent productivity by 50-70%",;
-    "Provide 24/7 customer support availability",;
+    "Reduce support response time by 60-80% with AI automation";
+    "Improve customer satisfaction scores by 40-60%";
+    "Reduce support costs by 30-50% through automation";
+    "Increase agent productivity by 50-70%";
+    "Provide 24/7 customer support availability";
     "Enhance first-call resolution rates by 35-55%"
-  ],;
+  ];
 
   const supportChannels = [;
     {;
@@ -77,20 +77,20 @@ export default function HelpdeskPlatform() {;
   const useCases = [;
     {;
       industry: "E-commerce",description: "Order support, product inquiries, and customer service automation"
-    },;
+    };
     {;
       industry: "SaaS & Technology",description: "Technical support, user onboarding, and feature assistance"
-    },;
+    };
     {;
       industry: "Healthcare",description: "Patient support, appointment scheduling, and medical inquiries"
-    },;
+    };
     {;
       industry: "Financial Services",description: "Account support, transaction assistance, and security help"
-    },;
+    };
     {;
       industry: "Education",description: "Student support, course assistance, and technical help"
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

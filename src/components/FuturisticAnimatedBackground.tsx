@@ -3,42 +3,42 @@ export const FuturisticAnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
     const canvas = canvasRef.current
-    if (!canvas) return,;
+    if (!canvas) return;
 
     const ctx = canvas.getContext('2d')
-    if (!ctx) return,;
+    if (!ctx) return;
 
     //[^;]*
     const resizeCanvas = () => {;
-      canvas.width = window.innerWidth,;
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight
-    },;
-    resizeCanvas(),;
-    window.addEventListener('resize', resizeCanvas),;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     //[^;]*
     const gridCanvas = document.createElement('canvas')
     const gridCtx = gridCanvas.getContext('2d')
     if (gridCtx) {;
-      gridCanvas.width = canvas.width,;
-      gridCanvas.height = canvas.height,;
+      gridCanvas.width = canvas.width;
+      gridCanvas.height = canvas.height;
       ;
       //[^;]*
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)',;
-      gridCtx.lineWidth = 1,;
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      gridCtx.lineWidth = 1;
       ;
       for (let x = 0, x < gridCanvas.width, x += 40) {;
-        gridCtx.beginPath(),;
-        gridCtx.moveTo(x, 0),;
-        gridCtx.lineTo(x, gridCanvas.height),;
-        gridCtx.stroke(),;
+        gridCtx.beginPath();
+        gridCtx.moveTo(x, 0);
+        gridCtx.lineTo(x, gridCanvas.height);
+        gridCtx.stroke();
       };
       ;
       for (let y = 0, y < gridCanvas.height, y += 40) {;
-        gridCtx.beginPath(),;
-        gridCtx.moveTo(0, y),;
-        gridCtx.lineTo(gridCanvas.width, y),;
-        gridCtx.stroke(),;
+        gridCtx.beginPath();
+        gridCtx.moveTo(0, y);
+        gridCtx.lineTo(gridCanvas.width, y);
+        gridCtx.stroke();
       };
     };
 
@@ -58,24 +58,24 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       const speed = Math.random() * 0.5 + 0.1;
       ;
       particles.push({;
-        x,;
-        y,;
-        vx: Math.cos(angle) * speed,vy: Math.sin(angle) * speed,size: Math.random() * 3 + 1,color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,;
+        x;
+        y;
+        vx: Math.cos(angle) * speed,vy: Math.sin(angle) * speed,size: Math.random() * 3 + 1,color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
         life: 1,maxLife: Math.random() * 100 + 50;
       });
-    },;
+    };
 
     //[^;]*
     const animate = () => {;
-      time += 0.01,;
+      time += 0.01;
       ;
       //[^;]*
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.1)',;
-      ctx.fillRect(0, 0, canvas.width, canvas.height),;
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       //[^;]*
       if (particles.length < 100) {;
-        createParticle(),;
+        createParticle();
       };
 
       //[^;]*
@@ -83,14 +83,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         const particle = particles[i]
         ;
         //[^;]*
-        particle.x += particle.vx,;
-        particle.y += particle.vy,;
-        particle.life += 1,;
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.life += 1;
 
         //[^;]*
         if (particle.life > particle.maxLife) {;
-          particles.splice(i, 1),;
-          continue,;
+          particles.splice(i, 1);
+          continue;
         };
 
         //[^;]*
@@ -98,26 +98,26 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         const size = particle.size * (1 - alpha * 0.5);
 
         //[^;]*
-        ctx.shadowColor = particle.color,;
-        ctx.shadowBlur = 20,;
-        ctx.fillStyle = particle.color,;
-        ctx.globalAlpha = alpha * 0.3,;
-        ctx.beginPath(),;
-        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2),;
-        ctx.fill(),;
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 20;
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = alpha * 0.3;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2);
+        ctx.fill();
 
         //[^;]*
-        ctx.shadowBlur = 10,;
-        ctx.globalAlpha = alpha,;
-        ctx.beginPath(),;
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2),;
-        ctx.fill(),;
+        ctx.shadowBlur = 10;
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
+        ctx.fill();
       };
 
       //[^;]*
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)',;
-      ctx.lineWidth = 1,;
-      ctx.globalAlpha = 0.3,;
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
+      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.3;
       ;
       const gridSize = 50;
       const offsetX = (time * 10) % gridSize;
@@ -125,24 +125,24 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 
       //[^;]*
       for (let x = offsetX, x < canvas.width, x += gridSize) {;
-        ctx.beginPath(),;
-        ctx.moveTo(x, 0),;
-        ctx.lineTo(x, canvas.height),;
-        ctx.stroke(),;
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
       };
 
       //[^;]*
       for (let y = offsetY, y < canvas.height, y += gridSize) {;
-        ctx.beginPath(),;
-        ctx.moveTo(0, y),;
-        ctx.lineTo(canvas.width, y),;
-        ctx.stroke(),;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
       };
 
       //[^;]*
-      ctx.globalAlpha = 0.1,;
-      ctx.strokeStyle = 'rgba(168, 85, 247, 0.5)',;
-      ctx.lineWidth = 2,;
+      ctx.globalAlpha = 0.1;
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.5)';
+      ctx.lineWidth = 2;
 
       //[^;]*
       const centerX = canvas.width * 0.2;
@@ -150,55 +150,55 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       const triangleSize = 30;
       const rotation = time * 0.5;
 
-      ctx.save(),;
-      ctx.translate(centerX, centerY),;
-      ctx.rotate(rotation),;
-      ctx.beginPath(),;
-      ctx.moveTo(0, -triangleSize),;
-      ctx.lineTo(triangleSize * 0.866, triangleSize * 0.5),;
-      ctx.lineTo(-triangleSize * 0.866, triangleSize * 0.5),;
-      ctx.closePath(),;
-      ctx.stroke(),;
-      ctx.restore(),;
+      ctx.save();
+      ctx.translate(centerX, centerY);
+      ctx.rotate(rotation);
+      ctx.beginPath();
+      ctx.moveTo(0, -triangleSize);
+      ctx.lineTo(triangleSize * 0.866, triangleSize * 0.5);
+      ctx.lineTo(-triangleSize * 0.866, triangleSize * 0.5);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
 
       //[^;]*
       const circleX = canvas.width * 0.8;
       const circleY = canvas.height * 0.7;
       const circleSize = 20 + Math.sin(time * 2) * 10;
 
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)',;
-      ctx.beginPath(),;
-      ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2),;
-      ctx.stroke(),;
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
+      ctx.beginPath();
+      ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
+      ctx.stroke();
 
       //[^;]*
-      ctx.globalAlpha = 1,;
+      ctx.globalAlpha = 1;
 
       //[^;]*
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)',;
-      ctx.lineWidth = 3,;
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+      ctx.lineWidth = 3;
       ;
       for (let i = 0, i < 3, i++) {;
         const waveOffset = (time * 50 + i * 100) % (canvas.width + 200);
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
         ;
-        ctx.beginPath(),;
-        ctx.moveTo(waveOffset - 100, waveY),;
-        ctx.lineTo(waveOffset, waveY + 20),;
-        ctx.lineTo(waveOffset + 100, waveY),;
-        ctx.stroke(),;
+        ctx.beginPath();
+        ctx.moveTo(waveOffset - 100, waveY);
+        ctx.lineTo(waveOffset, waveY + 20);
+        ctx.lineTo(waveOffset + 100, waveY);
+        ctx.stroke();
       };
 
-      animationId = requestAnimationFrame(animate),;
-    },;
+      animationId = requestAnimationFrame(animate);
+    };
 
-    animate(),;
+    animate();
 
     return () => {;
-      window.removeEventListener('resize', resizeCanvas),;
-      cancelAnimationFrame(animationId),;
-    },;
-  }, []),;
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
 
   return (
     <canvas;
@@ -206,7 +206,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       className="[^"]*"
       style={{[^}]*}}
     />;
-  ),;
-},;
+  );
+};
 
 export default FuturisticAnimatedBackground;

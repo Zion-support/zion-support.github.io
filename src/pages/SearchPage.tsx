@@ -156,7 +156,7 @@ export default function SearchPage() {
           </div>
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for &quot;{query}&quot;.</p>
+          <p className="text-zion-slate-light">No results found for "{query}".</p>
         )}
         {!loading && marketplaceResults.length > 0 && (
           <Tabs defaultValue="products" className="space-y-4">
