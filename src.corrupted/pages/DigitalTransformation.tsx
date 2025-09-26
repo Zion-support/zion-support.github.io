@@ -1,112 +1,112 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import {;
-  Rocket,;
-  Zap,;
-  Shield,;
-  Users,;
-  TrendingUp,;
-  Globe,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Target,;
-  Award,;
-  Lightbulb,;
-  Crown,;
-  Sparkles,;
-  ChevronRight,;
-  Clock,;
-  Check,;
-  BarChart3,;
-  Lock,;
-  Eye,;
+  Rocket;
+  Zap;
+  Shield;
+  Users;
+  TrendingUp;
+  Globe;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Cpu;
+  Database;
+  Cloud;
+  Target;
+  Award;
+  Lightbulb;
+  Crown;
+  Sparkles;
+  ChevronRight;
+  Clock;
+  Check;
+  BarChart3;
+  Lock;
+  Eye;
   Heart;
 } from "lucide-react"
 const DigitalTransformation = () => {;
-  const [selectedPhase, setSelectedPhase] = useState(0),;
+  const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [;
     {;
-      title: "Strategy & Planning",description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",icon: Rocket,features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],;
+      title: "Strategy & Planning",description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",icon: Rocket,features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"];
       color: "from-purple-500 to-pink-500"
     };
     {;
-      title: "Process Automation",description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",icon: Zap,features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],;
+      title: "Process Automation",description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",icon: Zap,features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"];
       color: "from-blue-500 to-cyan-500"
     };
     {;
-      title: "Technology Modernization",description: "Legacy system modernization and cloud-native architecture implementation.",icon: Cpu,features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],;
+      title: "Technology Modernization",description: "Legacy system modernization and cloud-native architecture implementation.",icon: Cpu,features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"];
       color: "from-green-500 to-emerald-500"
     };
     {;
-      title: "Data & Analytics",description: "Data-driven insights and business intelligence solutions for informed decision-making.",icon: Database,features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],;
+      title: "Data & Analytics",description: "Data-driven insights and business intelligence solutions for informed decision-making.",icon: Database,features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"];
       color: "from-orange-500 to-red-500"
     };
     {;
-      title: "Customer Experience",description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",icon: Users,features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],;
+      title: "Customer Experience",description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",icon: Users,features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"];
       color: "from-indigo-500 to-purple-500"
     };
     {;
-      title: "Security & Compliance",description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",icon: Shield,features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
+      title: "Security & Compliance",description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",icon: Shield,features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"];
       color: "from-yellow-500 to-orange-500"
     };
   ];
   const transformationPhases = [;
     {;
-      phase: "01",title: "Discovery & Assessment",description: "Evaluate current state, identify opportunities, and assess digital maturity",;
+      phase: "01",title: "Discovery & Assessment",description: "Evaluate current state, identify opportunities, and assess digital maturity";
       duration: "2-4 weeks",activities: [;
         "Current state analysis"
-        "Digital maturity assessment",;
-        "Stakeholder interviews",;
-        "Technology audit",;
+        "Digital maturity assessment";
+        "Stakeholder interviews";
+        "Technology audit";
         "Gap analysis"
       ];
-    },;
+    };
     {;
       phase: "02",title: "Strategy Development",description: "Create comprehensive digital transformation roadmap and business case",duration: "4-6 weeks",activities: [;
         "Digital strategy formulation"
-        "Technology roadmap creation",;
-        "Change management planning",;
-        "ROI analysis and business case",;
+        "Technology roadmap creation";
+        "Change management planning";
+        "ROI analysis and business case";
         "Risk assessment"
       ];
-    },;
+    };
     {;
       phase: "03",title: "Pilot & Validation",description: "Implement proof-of-concept and validate approach with stakeholders",duration: "6-8 weeks",activities: [;
         "Proof-of-concept development"
-        "Pilot implementation",;
-        "Stakeholder validation",;
-        "Performance measurement",;
+        "Pilot implementation";
+        "Stakeholder validation";
+        "Performance measurement";
         "Feedback collection"
       ];
-    },;
+    };
     {;
       phase: "04",title: "Full Implementation",description: "Execute transformation plan with phased rollout and continuous optimization",duration: "6-18 months",activities: [;
         "Phased rollout execution"
-        "Change management implementation",;
-        "Performance monitoring",;
-        "Continuous optimization",;
+        "Change management implementation";
+        "Performance monitoring";
+        "Continuous optimization";
         "Training and support"
       ];
     };
-  ],;
+  ];
 
   const testimonials = [;
     {;
-      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",name: "Carlos Rodriguez",role: "CEO, InnovateCorp",;
+      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",name: "Carlos Rodriguez",role: "CEO, InnovateCorp";
       rating: 5;
     };
     {;
-      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",name: "Lisa Chang",role: "COO, TechFlow Solutions",;
+      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",name: "Lisa Chang",role: "COO, TechFlow Solutions";
       rating: 5;
     };
     {;
-      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
-      name: "Marcus Johnson",role: "CTO, DigitalFirst Inc",;
+      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.";
+      name: "Marcus Johnson",role: "CTO, DigitalFirst Inc";
       rating: 5;
     };
   ];

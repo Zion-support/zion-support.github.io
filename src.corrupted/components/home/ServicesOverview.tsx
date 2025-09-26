@@ -2,13 +2,13 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Sparkles } from "lucide-react"
 import React from "react"
 import { Link } from "react-router-dom"
-interface Service {;
+interface Service {
   category: string,icon: React.ComponentType<{ className?: string }>;
   color: string,items: string[]
   description?: string;
 };
 
-interface ServicesOverviewProps {;
+interface ServicesOverviewProps {
   services: Service[]
 };
 
@@ -103,6 +103,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {;
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default ServicesOverview;

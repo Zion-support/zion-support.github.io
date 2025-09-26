@@ -1,14 +1,14 @@
 import React, { useEffect } from "react"
 import { Helmet } from "react-helmet-async"
-interface SEOData {;
+interface SEOData {
   title: string,description: string,keywords: string[]
-  ogImage?: string,;
-  ogType?: string,;
-  canonicalUrl?: string,;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
   structuredData?: object;
 };
 
-interface EnhancedSEOManagerProps {;
+interface EnhancedSEOManagerProps {
   seoData: SEOData,children: React.ReactNode
 };
 
@@ -17,29 +17,29 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     //[^;]*
     const updateMetaTags = () => {;
       //[^;]*
-      document.title = seoData.title,;
+      document.title = seoData.title;
       ;
       //[^;]*
       let metaDesc = document.querySelector('meta[name="description"]')
       if (!metaDesc) {;
-        metaDesc = document.createElement('meta'),;
-        metaDesc.setAttribute('namedescription'),;
-        document.head.appendChild(metaDesc),;
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('namedescription');
+        document.head.appendChild(metaDesc);
       };
-      metaDesc.setAttribute('content', seoData.description),;
+      metaDesc.setAttribute('content', seoData.description);
       ;
       //[^;]*
       let metaKeywords = document.querySelector('meta[name="keywords"]')
       if (!metaKeywords) {;
-        metaKeywords = document.createElement('meta'),;
-        metaKeywords.setAttribute('namekeywords'),;
-        document.head.appendChild(metaKeywords),;
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('namekeywords');
+        document.head.appendChild(metaKeywords);
       };
-      metaKeywords.setAttribute('content', seoData.keywords.join()),;
-    },;
+      metaKeywords.setAttribute('content', seoData.keywords.join());
+    };
 
-    updateMetaTags(),;
-  }, [seoData]),;
+    updateMetaTags();
+  }, [seoData]);
 
   return (
     <>;
@@ -81,7 +81,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       ;
       {children};
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 export default EnhancedSEOManager;

@@ -1,29 +1,29 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  BarChart3,;
-  TrendingUp, ;
-  Brain, ;
-  Zap, ;
-  Shield, ;
-  Globe, ;
-  Users, ;
-  Database,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Target,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Eye,;
-  Lock,;
-  Cloud,;
-  Smartphone,;
-  Monitor,;
-  Play,;
-  Phone,;
-  Mail,;
+  BarChart3;
+  TrendingUp;
+  Brain;
+  Zap;
+  Shield;
+  Globe;
+  Users;
+  Database;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Eye;
+  Lock;
+  Cloud;
+  Smartphone;
+  Monitor;
+  Play;
+  Phone;
+  Mail;
   MapPin;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -31,10 +31,10 @@ const AIBusinessIntelligenceDashboard = () => {;
   const features = [;
     {;
       icon: Brain,title: "AI-Powered Insights",description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
-    },;
+    };
     {;
       icon: BarChart3,title: "Real-time Analytics",description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
-    },;
+    };
     {;
       icon: TrendingUp,title: "Predictive Analytics",description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
     };
@@ -43,67 +43,67 @@ const AIBusinessIntelligenceDashboard = () => {;
     };
     {;
       icon: Shield,title: "Enterprise Security",description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
-    },;
+    };
     {;
       icon: Globe,title: "Multi-platform Access",description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     };
-  ],;
+  ];
 
   const pricingPlans = [;
     {;
       name: "Starter",price: "$299",period: "/month",description: "Perfect for small businesses and startups",features: [;
         "Up to 5 data sources"
-        "Basic AI insights",;
-        "5 user licenses",;
-        "Standard reports",;
-        "Email support",;
+        "Basic AI insights";
+        "5 user licenses";
+        "Standard reports";
+        "Email support";
         "Basic integrations"
-      ],;
+      ];
       popular: false;
     };
     {;
       name: "Professional",price: "$799",period: "/month",description: "Ideal for growing businesses and teams",features: [;
         "Up to 20 data sources"
-        "Advanced AI analytics",;
-        "25 user licenses",;
-        "Custom dashboards",;
-        "Priority support",;
-        "API access",;
-        "Advanced integrations",;
+        "Advanced AI analytics";
+        "25 user licenses";
+        "Custom dashboards";
+        "Priority support";
+        "API access";
+        "Advanced integrations";
         "White-label options"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$2,499",;
+      name: "Enterprise",price: "$2,499";
       period: "/month",description: "For large organizations with complex needs",features: [;
         "Unlimited data sources"
-        "Custom AI models",;
-        "Unlimited users",;
-        "Advanced security",;
-        "Dedicated support",;
-        "Custom development",;
-        "On-premise options",;
+        "Custom AI models";
+        "Unlimited users";
+        "Advanced security";
+        "Dedicated support";
+        "Custom development";
+        "On-premise options";
         "SLA guarantees"
-      ],;
+      ];
       popular: false;
     };
   ];
   const useCases = [;
     {;
-      title: "Sales Performance Analytics",description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",;
+      title: "Sales Performance Analytics",description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights";
       icon: TrendingUp;
     };
     {;
-      title: "Customer Behavior Analysis",description: "Understand customer patterns, churn prediction, and lifetime value optimization",;
+      title: "Customer Behavior Analysis",description: "Understand customer patterns, churn prediction, and lifetime value optimization";
       icon: Users;
     };
     {;
-      title: "Financial Performance Tracking",description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",;
+      title: "Financial Performance Tracking",description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts";
       icon: BarChart3;
     };
     {;
-      title: "Operational Efficiency",description: "Identify bottlenecks, optimize processes, and improve productivity across teams",;
+      title: "Operational Efficiency",description: "Identify bottlenecks, optimize processes, and improve productivity across teams";
       icon: Activity;
     };
   ];

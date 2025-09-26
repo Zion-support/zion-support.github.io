@@ -2,36 +2,36 @@ import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Check,;
-  X,;
-  Star,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  Users,;
-  Zap,;
-  Shield,;
-  Headphones,;
-  Globe,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  Grid3X3,;
-  List,;
-  Calculator,;
-  BarChart3,;
-  Target,;
-  Award,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Check;
+  X;
+  Star;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  Users;
+  Zap;
+  Shield;
+  Headphones;
+  Globe;
+  ArrowRight;
+  Search;
+  Filter;
+  Grid3X3;
+  List;
+  Calculator;
+  BarChart3;
+  Target;
+  Award;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from "../data/comprehensivePricingGuide2025"
 export default function ComprehensivePricingGuide2025() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 20000]);
@@ -49,26 +49,25 @@ export default function ComprehensivePricingGuide2025() {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesPrice = service.pricingTiers.some(tier => ;
       tier.price >= priceRange[0] && tier.price <= priceRange[1]
-    ),;
-    return matchesCategory && matchesSearch && matchesPrice,;&& matchesSearch && matchesPrice,; matchesSearch && matchesPrice,
-  }),;
+    );
+    return matchesCategory && matchesSearch && matchesPrice;&& matchesSearch && matchesPrice; matchesSearch && matchesPrice});
 
   const handleServiceClick = (service: any) => {;
     setSelectedService(service)
   };
   const closeModal = () => {;
-    setSelectedService(null),;
-  },;
+    setSelectedService(null);
+  };
 
   const formatPrice = (price: number) => {;
     if (price >= 1000) {;
       return `$${(price / 1000).toFixed(1)}k`
     };
-    return `$${price}`,;
-  },;
+    return `$${price}`;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;

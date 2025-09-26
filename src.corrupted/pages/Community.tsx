@@ -2,90 +2,90 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  Users,;
-  MessageCircle, ;
-  Search, ;
-  Filter,;
-  ArrowRight,;
-  Star,;
-  Bookmark,;
-  Share2,;
-  Copy,;
-  CheckCircle,;
-  Clock,;
-  Tag,;
-  Play,;
-  Terminal,;
-  FileText,;
-  Key,;
-  Lock,;
-  Eye,;
-  EyeOff,;
-  ChevronDown,;
-  ChevronRight,;
-  AlertCircle,;
-  Info,;
-  TrendingUp,;
-  Heart,;
-  MessageSquare,;
-  Award,;
-  Zap,;
-  Globe,;
-  Calendar,;
-  User,;
+  Users;
+  MessageCircle;
+  Search;
+  Filter;
+  ArrowRight;
+  Star;
+  Bookmark;
+  Share2;
+  Copy;
+  CheckCircle;
+  Clock;
+  Tag;
+  Play;
+  Terminal;
+  FileText;
+  Key;
+  Lock;
+  Eye;
+  EyeOff;
+  ChevronDown;
+  ChevronRight;
+  AlertCircle;
+  Info;
+  TrendingUp;
+  Heart;
+  MessageSquare;
+  Award;
+  Zap;
+  Globe;
+  Calendar;
+  User;
   Plus;
 } from "lucide-react"
 export default function Community() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSort, setSelectedSort] = useState('Latest')
   const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase']
   const sortOptions = ['LatestMost Popular', 'Most ActiveTrending']
   const forumCategories = [;
     {;
-      id: 'general',name: 'General Discussion',description: 'General topics, announcements, and community discussions',;
+      id: 'general',name: 'General Discussion',description: 'General topics, announcements, and community discussions';
       icon: Users,color: 'from-blue-500 to-cyan-500',topics: 1247,posts: 8934,lastActivity: '2 hours ago',featured: true;
     };
     {;
-      id: 'ai-ml',name: 'AI & Machine Learning',description: 'Discussions about AI, machine learning, and data science',;
+      id: 'ai-ml',name: 'AI & Machine Learning',description: 'Discussions about AI, machine learning, and data science';
       icon: Zap,color: 'from-purple-500 to-pink-500',topics: 892,posts: 5678,lastActivity: '1 hour ago',featured: true;
     };
     {;
-      id: 'cybersecurity',name: 'Cybersecurity',description: 'Security discussions, threat intelligence, and best practices',;
+      id: 'cybersecurity',name: 'Cybersecurity',description: 'Security discussions, threat intelligence, and best practices';
       icon: Lock,color: 'from-red-500 to-orange-500',topics: 456,posts: 2345,lastActivity: '3 hours ago',featured: true;
     };
     {;
-      id: 'cloud-devops',name: 'Cloud & DevOps',description: 'Cloud computing, DevOps practices, and infrastructure',;
+      id: 'cloud-devops',name: 'Cloud & DevOps',description: 'Cloud computing, DevOps practices, and infrastructure';
       icon: Globe,color: 'from-green-500 to-emerald-500',topics: 678,posts: 3456,lastActivity: '4 hours ago',featured: false;
     };
     {;
-      id: 'quantum',name: 'Quantum Computing',description: 'Quantum computing research, applications, and developments',;
+      id: 'quantum',name: 'Quantum Computing',description: 'Quantum computing research, applications, and developments';
       icon: Atom,color: 'from-indigo-500 to-purple-500',topics: 234,posts: 1234,lastActivity: '6 hours ago',featured: false;
     };
     {;
-      id: 'blockchain',name: 'Blockchain',description: 'Blockchain technology, DeFi, and Web3 discussions',;
+      id: 'blockchain',name: 'Blockchain',description: 'Blockchain technology, DeFi, and Web3 discussions';
       icon: Link,color: 'from-yellow-500 to-orange-500',topics: 345,posts: 1789,lastActivity: '8 hours ago',featured: false;
     };
   ];
   const recentDiscussions = [;
     {;
-      id: 1,title: 'Best practices for implementing AI in enterprise environments?',author: 'Sarah Chen',authorAvatar: '/avatars/sarah.jpg',category: 'AI & Machine Learning',replies: 23,views: 456,lastReply: '2 hours ago',tags: ['AIEnterprise', 'Best Practices'],;
+      id: 1,title: 'Best practices for implementing AI in enterprise environments?',author: 'Sarah Chen',authorAvatar: '/avatars/sarah.jpg',category: 'AI & Machine Learning',replies: 23,views: 456,lastReply: '2 hours ago',tags: ['AIEnterprise', 'Best Practices'];
       featured: true,pinned: false;
     };
     {;
-      id: 2,title: 'Zero Trust Security Architecture Implementation Guide',author: 'Mike Rodriguez',authorAvatar: '/avatars/mike.jpg',category: 'Cybersecurity',replies: 18,views: 234,lastReply: '4 hours ago',tags: ['SecurityZero Trust', 'Architecture'],;
+      id: 2,title: 'Zero Trust Security Architecture Implementation Guide',author: 'Mike Rodriguez',authorAvatar: '/avatars/mike.jpg',category: 'Cybersecurity',replies: 18,views: 234,lastReply: '4 hours ago',tags: ['SecurityZero Trust', 'Architecture'];
       featured: false,pinned: true;
     };
     {;
-      id: 3,title: 'Quantum Computing vs Classical Computing for ML workloads',author: 'Dr. Emily Watson',authorAvatar: '/avatars/emily.jpg',category: 'Quantum Computing',replies: 31,views: 789,lastReply: '1 hour ago',tags: ['QuantumMachine Learning', 'Performance'],;
+      id: 3,title: 'Quantum Computing vs Classical Computing for ML workloads',author: 'Dr. Emily Watson',authorAvatar: '/avatars/emily.jpg',category: 'Quantum Computing',replies: 31,views: 789,lastReply: '1 hour ago',tags: ['QuantumMachine Learning', 'Performance'];
       featured: true,pinned: false;
     };
     {;
-      id: 4,title: 'DevOps transformation success stories and lessons learned',author: 'Alex Thompson',authorAvatar: '/avatars/alex.jpg',category: 'Cloud & DevOps',replies: 15,views: 345,lastReply: '5 hours ago',tags: ['DevOpsTransformation', 'Success Stories'],;
+      id: 4,title: 'DevOps transformation success stories and lessons learned',author: 'Alex Thompson',authorAvatar: '/avatars/alex.jpg',category: 'Cloud & DevOps',replies: 15,views: 345,lastReply: '5 hours ago',tags: ['DevOpsTransformation', 'Success Stories'];
       featured: false,pinned: false;
     };
     {;
-      id: 5,title: 'Blockchain scalability solutions for enterprise applications',author: 'Maria Santos',authorAvatar: '/avatars/maria.jpg',category: 'Blockchain',replies: 27,views: 567,lastReply: '3 hours ago',tags: ['BlockchainScalability', 'Enterprise'],;
+      id: 5,title: 'Blockchain scalability solutions for enterprise applications',author: 'Maria Santos',authorAvatar: '/avatars/maria.jpg',category: 'Blockchain',replies: 27,views: 567,lastReply: '3 hours ago',tags: ['BlockchainScalability', 'Enterprise'];
       featured: false,pinned: false;
     };
   ];
@@ -97,20 +97,19 @@ export default function Community() {;
   ];
   const filteredDiscussions = recentDiscussions.filter(discussion => {;
     const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
+                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory
-    return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
-  }),;
+    return matchesSearch && matchesCategory;&& matchesCategory; matchesCategory});
 
   const handleStartDiscussion = () => {;
     //[^;]*
-    console.log('Start new discussion'),;
-  },;
+    // console.log('Start new discussion');
+  };
 
   const handleJoinCommunity = () => {;
     //[^;]*
-    console.log('Join community'),;
-  },;
+    // console.log('Join community');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -132,7 +131,7 @@ export default function Community() {;
               Join Our Community;
             </[^>]*>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-              Connect with thousands of technology professionals, share knowledge, ;
+              Connect with thousands of technology professionals, share knowledge;
               and stay updated with the latest trends in AI, cybersecurity, quantum computing, and more.;
             </[^>]*>
             ;
@@ -355,7 +354,7 @@ export default function Community() {;
               <button;
                 onClick={() => {;
                   setSearchQuery('')
-                  setSelectedCategory('All'),;
+                  setSelectedCategory('All');
                 }};
                 className="[^"]*"
               >;

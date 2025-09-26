@@ -2,57 +2,57 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Rocket,;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Database, ;
-  Globe, ;
-  Atom, ;
-  Heart, ;
-  Lock, ;
-  TrendingUp, ;
-  Target, ;
-  Zap, ;
-  Users, ;
-  Star, ;
-  ArrowRight,;
-  Play,;
-  Download,;
-  ExternalLink,;
-  CheckCircle,;
-  Sparkles,;
-  Flame,;
-  Crown,;
-  Infinity,;
-  Cpu,;
-  Eye,;
-  MessageCircle,;
-  ShoppingCart,;
-  Settings,;
-  Code,;
-  Truck,;
-  Building,;
-  BarChart3,;
-  PenTool,;
-  Server,;
-  Smartphone,;
-  Network,;
-  Clock,;
-  ShoppingCart,;
-  FileText,;
-  Key,;
-  Globe2,;
-  ShieldCheck,;
-  Leaf,;
-  Scale,;
-  Building2,;
-  Car,;
-  Home,;
-  Factory,;
-  City,;
-  CheckCircle2,;
-  ArrowUpRight,;
+  Rocket;
+  Brain;
+  Shield;
+  Cloud;
+  Database;
+  Globe;
+  Atom;
+  Heart;
+  Lock;
+  TrendingUp;
+  Target;
+  Zap;
+  Users;
+  Star;
+  ArrowRight;
+  Play;
+  Download;
+  ExternalLink;
+  CheckCircle;
+  Sparkles;
+  Flame;
+  Crown;
+  Infinity;
+  Cpu;
+  Eye;
+  MessageCircle;
+  ShoppingCart;
+  Settings;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Server;
+  Smartphone;
+  Network;
+  Clock;
+  ShoppingCart;
+  FileText;
+  Key;
+  Globe2;
+  ShieldCheck;
+  Leaf;
+  Scale;
+  Building2;
+  Car;
+  Home;
+  Factory;
+  City;
+  CheckCircle2;
+  ArrowUpRight;
   MailIcon;
 } from "lucide-react"
 const RevolutionaryServices2030: React.FC = () => {
@@ -60,194 +60,194 @@ const RevolutionaryServices2030: React.FC = () => {
     {;
       id: 'ai-autonomous-business-operations',title: 'AI Autonomous Business Operations',description: 'Fully autonomous business operations powered by advanced AI that can run entire companies with minimal human intervention.',icon: Brain,color: 'from-purple-500 to-cyan-500',features: [;
         'Autonomous decision-making systemsSelf-optimizing business processes'
-        'Predictive resource allocationIntelligent risk management',;
+        'Predictive resource allocationIntelligent risk management';
         'Automated customer serviceSelf-healing infrastructure'
-      ],;
+      ];
       benefits: [;
         '24/7 operational efficiencyZero human error'
-        'Real-time optimizationScalable operations',;
+        'Real-time optimizationScalable operations';
         'Cost reduction up to 80%Continuous improvement'
-      ],;
+      ];
       useCases: [;
         'Manufacturing automationSupply chain optimization'
-        'Financial trading systemsHealthcare operations',;
+        'Financial trading systemsHealthcare operations';
         'Retail automationLogistics management'
       ];
-    },;
+    };
     {;
-      id: 'quantum-ai-cybersecurity',title: 'Quantum AI Cybersecurity',description: 'Next-generation cybersecurity powered by quantum computing and AI, providing unbreakable protection against all known threats.',;
+      id: 'quantum-ai-cybersecurity',title: 'Quantum AI Cybersecurity',description: 'Next-generation cybersecurity powered by quantum computing and AI, providing unbreakable protection against all known threats.';
       icon: Shield,color: 'from-red-500 to-pink-500',features: [;
         'Quantum-resistant encryptionAI-powered threat detection'
-        'Real-time attack preventionZero-trust architecture',;
+        'Real-time attack preventionZero-trust architecture';
         'Quantum key distributionAdvanced behavioral analysis'
-      ],;
+      ];
       benefits: [;
         'Unbreakable securityInstant threat response'
-        'Proactive protectionCompliance assurance',;
+        'Proactive protectionCompliance assurance';
         'Reduced security costsFuture-proof security'
-      ],;
+      ];
       useCases: [;
         'Government systemsFinancial institutions'
-        'Healthcare networksCritical infrastructure',;
+        'Healthcare networksCritical infrastructure';
         'Military communicationsCorporate networks'
       ];
-    },;
+    };
     {;
-      id: 'ai-content-creation-studio',title: 'AI Content Creation Studio',description: 'Revolutionary content creation platform that generates high-quality, engaging content across all media types with human-like creativity.',;
+      id: 'ai-content-creation-studio',title: 'AI Content Creation Studio',description: 'Revolutionary content creation platform that generates high-quality, engaging content across all media types with human-like creativity.';
       icon: PenTool,color: 'from-blue-500 to-indigo-500',features: [;
         'Multi-format content generationEmotional intelligence integration'
-        'Brand voice consistencyReal-time collaboration',;
+        'Brand voice consistencyReal-time collaboration';
         'Content optimizationCreative ideation tools'
-      ],;
+      ];
       benefits: [;
         '10x faster content creationConsistent brand messaging'
-        'Reduced creative costsScalable content production',;
+        'Reduced creative costsScalable content production';
         'Data-driven optimizationMultilingual capabilities'
-      ],;
+      ];
       useCases: [;
         'Marketing campaignsSocial media content'
-        'Video productionArticle writing',;
+        'Video productionArticle writing';
         'Product descriptionsEducational content'
       ];
-    },;
+    };
     {;
-      id: 'ai-sales-intelligence',title: 'AI Sales Intelligence',description: 'Advanced sales intelligence system that predicts customer behavior, automates sales processes, and maximizes conversion rates.',;
+      id: 'ai-sales-intelligence',title: 'AI Sales Intelligence',description: 'Advanced sales intelligence system that predicts customer behavior, automates sales processes, and maximizes conversion rates.';
       icon: TrendingUp,color: 'from-emerald-500 to-green-500',features: [;
         'Predictive customer scoringAutomated lead qualification'
-        'Intelligent pricing optimizationSales forecasting',;
+        'Intelligent pricing optimizationSales forecasting';
         'Customer journey mappingReal-time market analysis'
-      ],;
+      ];
       benefits: [;
         'Increased conversion ratesReduced sales cycles'
-        'Higher deal valuesImproved customer retention',;
+        'Higher deal valuesImproved customer retention';
         'Data-driven decisionsAutomated follow-ups'
-      ],;
+      ];
       useCases: [;
         'B2B salesE-commerce optimization'
-        'Customer relationship managementMarket expansion',;
+        'Customer relationship managementMarket expansion';
         'Product developmentCompetitive analysis'
       ];
-    },;
+    };
     {;
-      id: 'ai-customer-support-automation',title: 'AI Customer Support Automation',description: 'Intelligent customer support system that provides instant, accurate, and empathetic responses to customer inquiries 24/7.',;
+      id: 'ai-customer-support-automation',title: 'AI Customer Support Automation',description: 'Intelligent customer support system that provides instant, accurate, and empathetic responses to customer inquiries 24/7.';
       icon: MessageCircle,color: 'from-cyan-500 to-blue-500',features: [;
         'Natural language understandingEmotional intelligence'
-        'Multi-channel supportSelf-learning responses',;
+        'Multi-channel supportSelf-learning responses';
         'Escalation managementCustomer sentiment analysis'
-      ],;
+      ];
       benefits: [;
         'Instant response times24/7 availability'
-        'Consistent service qualityReduced support costs',;
+        'Consistent service qualityReduced support costs';
         'Improved customer satisfactionScalable support operations'
-      ],;
+      ];
       useCases: [;
         'Customer serviceTechnical support'
-        'Product inquiriesOrder tracking',;
+        'Product inquiriesOrder tracking';
         'Returns processingAccount management'
       ];
-    },;
+    };
     {;
       id: 'ai-data-analytics-bi',title: 'AI Data Analytics & BI',description: 'Revolutionary business intelligence platform that transforms raw data into actionable insights with predictive and prescriptive analytics.',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: [;
         'Real-time data processingPredictive analytics'
-        'Natural language queriesAutomated insights',;
+        'Natural language queriesAutomated insights';
         'Interactive dashboardsMachine learning models'
-      ],;
+      ];
       benefits: [;
         'Faster decision makingHidden pattern discovery'
-        'Proactive insightsReduced analysis time',;
+        'Proactive insightsReduced analysis time';
         'Improved accuracyScalable analytics'
-      ],;
+      ];
       useCases: [;
         'Business intelligenceMarket analysis'
-        'Risk assessmentPerformance monitoring',;
+        'Risk assessmentPerformance monitoring';
         'Strategic planningOperational optimization'
       ];
-    },;
+    };
     {;
-      id: 'cloud-infrastructure-devops',title: 'Cloud Infrastructure & DevOps',description: 'Next-generation cloud infrastructure with autonomous DevOps that self-optimizes, scales, and maintains systems automatically.',;
+      id: 'cloud-infrastructure-devops',title: 'Cloud Infrastructure & DevOps',description: 'Next-generation cloud infrastructure with autonomous DevOps that self-optimizes, scales, and maintains systems automatically.';
       icon: Cloud,color: 'from-blue-500 to-cyan-500',features: [;
         'Autonomous scalingSelf-healing infrastructure'
-        'Intelligent resource managementAutomated deployment',;
+        'Intelligent resource managementAutomated deployment';
         'Performance optimizationCost optimization'
-      ],;
+      ];
       benefits: [;
         'Zero downtimeAutomatic scaling'
-        'Reduced operational costsFaster deployment',;
+        'Reduced operational costsFaster deployment';
         'Improved reliabilityEnhanced security'
-      ],;
+      ];
       useCases: [;
         'Web applicationsMicroservices'
-        'Data processingMachine learning',;
+        'Data processingMachine learning';
         'IoT platformsEnterprise systems'
       ];
-    },;
+    };
     {;
       id: 'iot-edge-computing',title: 'IoT Edge Computing',description: 'Revolutionary IoT platform with edge computing capabilities that process data locally for instant response and reduced latency.',icon: Zap,color: 'from-yellow-500 to-orange-500',features: [;
         'Local data processingReal-time analytics'
-        'Autonomous decision makingEdge AI capabilities',;
+        'Autonomous decision makingEdge AI capabilities';
         'Secure communicationScalable architecture'
-      ],;
+      ];
       benefits: [;
         'Instant response timesReduced bandwidth usage'
-        'Enhanced privacyLower latency',;
+        'Enhanced privacyLower latency';
         'Improved reliabilityCost-effective scaling'
-      ],;
+      ];
       useCases: [;
         'Smart citiesIndustrial IoT'
-        'Connected vehiclesHealthcare monitoring',;
+        'Connected vehiclesHealthcare monitoring';
         'Environmental sensingSmart homes'
       ];
-    },;
+    };
     {;
-      id: 'digital-twin-platform',title: 'Digital Twin Platform',description: 'Advanced digital twin technology that creates virtual replicas of physical systems for simulation, optimization, and predictive maintenance.',;
+      id: 'digital-twin-platform',title: 'Digital Twin Platform',description: 'Advanced digital twin technology that creates virtual replicas of physical systems for simulation, optimization, and predictive maintenance.';
       icon: Globe,color: 'from-green-500 to-emerald-500',features: [;
         'Real-time synchronizationPredictive modeling'
-        'Simulation capabilitiesPerformance optimization',;
+        'Simulation capabilitiesPerformance optimization';
         'Maintenance predictionVirtual testing'
-      ],;
+      ];
       benefits: [;
         'Reduced operational costsImproved efficiency'
-        'Predictive maintenanceRisk mitigation',;
+        'Predictive maintenanceRisk mitigation';
         'Performance optimizationVirtual prototyping'
-      ],;
+      ];
       useCases: [;
         'ManufacturingInfrastructure management'
-        'Healthcare systemsEnergy optimization',;
+        'Healthcare systemsEnergy optimization';
         'TransportationBuilding management'
       ];
-    },;
+    };
     {;
-      id: 'blockchain-web3-platform',title: 'Blockchain Web3 Platform',description: 'Revolutionary blockchain platform that enables decentralized applications, smart contracts, and Web3 infrastructure for the future internet.',;
+      id: 'blockchain-web3-platform',title: 'Blockchain Web3 Platform',description: 'Revolutionary blockchain platform that enables decentralized applications, smart contracts, and Web3 infrastructure for the future internet.';
       icon: Lock,color: 'from-orange-500 to-red-500',features: [;
         'Smart contract automationDecentralized identity'
-        'Cross-chain interoperabilityScalable transactions',;
+        'Cross-chain interoperabilityScalable transactions';
         'Privacy protectionToken management'
-      ],;
+      ];
       benefits: [;
         'Enhanced securityReduced intermediaries'
-        'Increased transparencyLower transaction costs',;
+        'Increased transparencyLower transaction costs';
         'Global accessibilityProgrammable money'
-      ],;
+      ];
       useCases: [;
         'DeFi applicationsNFT marketplaces'
-        'Supply chain trackingVoting systems',;
+        'Supply chain trackingVoting systems';
         'Identity managementAsset tokenization'
       ];
     };
-  ],;
+  ];
 
   const testimonials = [;
     {;
-      name: 'Dr. Sarah Chen',title: 'CTO, TechCorp Global',;
+      name: 'Dr. Sarah Chen',title: 'CTO, TechCorp Global';
       company: 'TechCorp Global',content: 'Zion Tech Group\'s Revolutionary Services 2030 have transformed our entire business operations. The AI autonomous systems have increased our efficiency by 300% while reducing costs by 60%.',rating: 5,avatar: '/images/testimonials/sarah-chen.jpg'
     };
     {;
-      name: 'Michael Rodriguez',title: 'CEO, InnovateTech Solutions',;
-      company: 'InnovateTech Solutions',content: 'The quantum AI cybersecurity platform has given us peace of mind like never before. We\'ve seen zero security breaches since implementation, and our compliance scores have improved dramatically.',;
+      name: 'Michael Rodriguez',title: 'CEO, InnovateTech Solutions';
+      company: 'InnovateTech Solutions',content: 'The quantum AI cybersecurity platform has given us peace of mind like never before. We\'ve seen zero security breaches since implementation, and our compliance scores have improved dramatically.';
       rating: 5,avatar: '/images/testimonials/michael-rodriguez.jpg'
     };
     {;
-      name: 'Dr. Emily Johnson',title: 'Head of AI, FutureSystems',;
+      name: 'Dr. Emily Johnson',title: 'Head of AI, FutureSystems';
       company: 'FutureSystems',content: 'The AI content creation studio has revolutionized our marketing department. We\'re producing 10x more content with higher engagement rates and significantly reduced creative costs.',rating: 5,avatar: '/images/testimonials/emily-johnson.jpg'
     };
   ];

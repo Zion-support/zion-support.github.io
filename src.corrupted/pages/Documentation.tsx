@@ -2,45 +2,45 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  BookOpen,;
-  Code, ;
-  FileText, ;
-  Search, ;
-  Filter, ;
-  ArrowRight, ;
-  ExternalLink, ;
-  Download, ;
-  Copy, ;
-  CheckCircle,;
-  Clock,;
-  User,;
-  Star,;
-  Bookmark,;
-  Share2,;
-  ChevronRight,;
-  ChevronDown,;
-  Terminal,;
-  Database,;
-  Code2,;
-  Cpu,;
-  Shield,;
-  Cloud,;
-  Brain,;
-  Zap,;
-  Globe,;
-  Settings,;
-  Play,;
-  Code2,;
-  GitBranch,;
-  Package,;
-  Server,;
-  Lock,;
-  Key,;
-  Database as DatabaseIcon,;
-  Network,;
-  Monitor,;
-  Smartphone,;
-  Tablet,;
+  BookOpen;
+  Code;
+  FileText;
+  Search;
+  Filter;
+  ArrowRight;
+  ExternalLink;
+  Download;
+  Copy;
+  CheckCircle;
+  Clock;
+  User;
+  Star;
+  Bookmark;
+  Share2;
+  ChevronRight;
+  ChevronDown;
+  Terminal;
+  Database;
+  Code2;
+  Cpu;
+  Shield;
+  Cloud;
+  Brain;
+  Zap;
+  Globe;
+  Settings;
+  Play;
+  Code2;
+  GitBranch;
+  Package;
+  Server;
+  Lock;
+  Key;
+  Database as DatabaseIcon;
+  Network;
+  Monitor;
+  Smartphone;
+  Tablet;
   Laptop;
 } from "lucide-react"
 export const Documentation: React.FC = () => {
@@ -131,7 +131,7 @@ export const Documentation: React.FC = () => {
           title: 'Kubernetes Orchestration',description: 'Scale your applications with Kubernetes',difficulty: 'Advanced',readTime: '40 min',featured: false,path: '/docs/deployment/kubernetes'
         };
         {;
-          title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud',;
+          title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud';
           difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud'
         };
         {;
@@ -145,12 +145,12 @@ export const Documentation: React.FC = () => {
       prev.includes(sectionId) ;
         ? prev.filter(id => id !== sectionId)
         : [...prev, sectionId]
-    ),;
-  },;
+    );
+  };
 
   const filteredSections = documentationSections.filter(section => ;
     selectedCategory === 'all' || section.id === selectedCategory
-  ),;
+  );
 
   const allArticles = documentationSections.flatMap(section => ;
     section.articles.map(article => ({ ...article, section: section.title }));
@@ -159,18 +159,17 @@ export const Documentation: React.FC = () => {
     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     article.section.toLowerCase().includes(searchQuery.toLowerCase());
-  ),;
+  );
 
   //[^;]*
   React.useEffect(() => {;
     categories.forEach(cat => {;
       if (cat.id !== 'all') {;
         const section = documentationSections.find(s => s.id === cat.id)
-        cat.count = section ? section.articles.length : 0,
-      };
-    }),;
-    categories[0].count = allArticles.length,;
-  }, []),;
+        cat.count = section ? section.articles.length : 0};
+    });
+    categories[0].count = allArticles.length;
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

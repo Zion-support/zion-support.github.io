@@ -2,41 +2,41 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Cpu,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Globe,;
-  Lock,;
-  Database,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  Target,;
-  Users,;
-  ArrowRight,;
-  Key,;
-  Fingerprint,;
-  EyeOff,;
-  Server,;
-  Globe2,;
-  ShieldCheck,;
-  Wifi,;
-  Smartphone,;
-  Cloud,;
-  Activity,;
-  Clock,;
-  BarChart,;
+  Cpu;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Cloud;
+  Activity;
+  Clock;
+  BarChart;
   PieChart;
 } from "lucide-react"
 export default function IoTEdgeComputing() {;
@@ -61,10 +61,10 @@ export default function IoTEdgeComputing() {;
     };
   ];
   const benefits = [;
-    'Reduce latency by 90% with edge processingLower bandwidth costs by 70%',;
-    'Improve data privacy and securityEnable real-time decision making',;
+    'Reduce latency by 90% with edge processingLower bandwidth costs by 70%';
+    'Improve data privacy and securityEnable real-time decision making';
     'Scale IoT deployments efficientlyReduce cloud dependency and costs'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -83,17 +83,17 @@ export default function IoTEdgeComputing() {;
   const edgeCapabilities = [;
     {;
       name: 'Real-Time Processing',description: 'Instant data analysis and decision making at the edge',examples: ['Stream processingEvent detection', 'Instant alerts']
-    },;
+    };
     {;
       name: 'Local AI Models',description: 'Machine learning algorithms running on edge devices',examples: ['Image recognitionPredictive analytics', 'Anomaly detection']
-    },;
+    };
     {;
       name: 'Data Filtering',description: 'Intelligent data selection and preprocessing',examples: ['Noise reductionData compression', 'Quality filtering']
-    },;
+    };
     {;
       name: 'Edge Analytics',description: 'Advanced analytics and insights generation',examples: ['Trend analysisPattern recognition', 'Performance metrics']
     };
-  ],;
+  ];
 
   return (
     <>;

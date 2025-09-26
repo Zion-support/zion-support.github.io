@@ -5,7 +5,7 @@ const ErrorRoutes = () => {;
     <Routes>;
       <Route path="*" element={<NotFound />} />;
     </[^>]*>
-  ),;
+  );
 };
 
 export default ErrorRoutes;

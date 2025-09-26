@@ -2,34 +2,34 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  Shield,;
-  FileText, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  Clock, ;
-  Award, ;
-  Star,;
-  Globe,;
-  Cpu,;
-  Database,;
-  CheckCircle,;
-  Eye,;
-  Users,;
-  Lock,;
-  TrendingUp,;
-  Search,;
-  Download,;
-  Upload,;
-  Calendar,;
-  AlertTriangle,;
+  Shield;
+  FileText;
+  Target;
+  Zap;
+  BarChart3;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  Lock;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  AlertTriangle;
   Trash;
 } from "lucide-react"
 export default function DSRPortal() {;
   const features = [;
     {;
       icon: Shield,title: "Data Subject Rights Management",description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
-    },;
+    };
     {;
       icon: FileText,title: "Automated Request Processing",description: "AI-powered processing of data subject requests with intelligent routing."
     };
@@ -47,13 +47,13 @@ export default function DSRPortal() {;
     };
   ];
   const benefits = [;
-    "Ensure 100% GDPR and CCPA compliance with automated workflows",;
-    "Reduce response time to data subject requests by 80-90%",;
-    "Minimize compliance risks and potential fines by 95%",;
-    "Streamline data discovery and mapping processes by 70%",;
-    "Improve audit trail and compliance reporting efficiency",;
+    "Ensure 100% GDPR and CCPA compliance with automated workflows";
+    "Reduce response time to data subject requests by 80-90%";
+    "Minimize compliance risks and potential fines by 95%";
+    "Streamline data discovery and mapping processes by 70%";
+    "Improve audit trail and compliance reporting efficiency";
     "Enhance customer trust through transparent data handling"
-  ],;
+  ];
 
   const dataRights = [;
     {;
@@ -66,7 +66,7 @@ export default function DSRPortal() {;
       right: "Right to Erasure",description: "Process requests to delete personal data (right to be forgotten)",icon: Trash;
     };
     {;
-      right: "Right to Portability",description: "Provide personal data in a structured, machine-readable format",;
+      right: "Right to Portability",description: "Provide personal data in a structured, machine-readable format";
       icon: Download;
     };
     {;
@@ -79,16 +79,16 @@ export default function DSRPortal() {;
   const useCases = [;
     {;
       industry: "E-commerce",description: "Customer data management, order history, and preference handling"
-    },;
+    };
     {;
       industry: "Financial Services",description: "Account data, transaction history, and financial information management"
-    },;
+    };
     {;
       industry: "Healthcare",description: "Patient data, medical records, and health information privacy"
-    },;
+    };
     {;
       industry: "Technology & SaaS",description: "User data, application usage, and service-related information"
-    },;
+    };
     {;
       industry: "Education",description: "Student data, academic records, and educational service information"
     };

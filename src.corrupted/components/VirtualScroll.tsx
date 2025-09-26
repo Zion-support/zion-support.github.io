@@ -2,21 +2,21 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 interface VirtualScrollProps<T> {;
   items: T[],height: number,itemHeight: number,renderItem: (item: T, index: number) => React.ReactNode
-  overscan?: number,;
-  className?: string,;
+  overscan?: number;
+  className?: string;
   onScroll?: (scrollTop: number) => void;
 };
 
 export function VirtualScroll<T>({;
   items;
-  height,;
-  itemHeight,;
-  renderItem,;
-  overscan = 5,;
-  className = '',;
+  height;
+  itemHeight;
+  renderItem;
+  overscan = 5;
+  className = '';
   onScroll;
 }: VirtualScrollProps<T>) {;
-  const [scrollTop, setScrollTop] = useState(0),;
+  const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   //[^;]*
@@ -26,10 +26,10 @@ export function VirtualScroll<T>({;
     const end = start + visibleCount + overscan;
     ;
     return {;
-      start: Math.max(0, start - overscan),;
+      start: Math.max(0, start - overscan);
       end: Math.min(items.length, end)
-    },;
-  }, [scrollTop, itemHeight, height, overscan, items.length]),;
+    };
+  }, [scrollTop, itemHeight, height, overscan, items.length]);
 
   //[^;]*
   const totalHeight = items.length * itemHeight;
@@ -38,9 +38,9 @@ export function VirtualScroll<T>({;
   //[^;]*
   const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {;
     const newScrollTop = event.currentTarget.scrollTop
-    setScrollTop(newScrollTop),;
+    setScrollTop(newScrollTop);
     onScroll?.(newScrollTop);
-  }, [onScroll]),;
+  }, [onScroll]);
 
   //[^;]*
   const scrollToItem = useCallback((index: number) => {;
@@ -48,12 +48,12 @@ export function VirtualScroll<T>({;
       const scrollTop = index * itemHeight;
       containerRef.current.scrollTop = scrollTop;
     };
-  }, [itemHeight]),;
+  }, [itemHeight]);
 
   //[^;]*
   const scrollToTop = useCallback(() => {;
-    scrollToItem(0),;
-  }, [scrollToItem]),;
+    scrollToItem(0);
+  }, [scrollToItem]);
 
   //[^;]*
   useEffect(() => {;
@@ -61,7 +61,7 @@ export function VirtualScroll<T>({;
       //[^;]*
       //[^;]*
     };
-  }, [items.length]),;
+  }, [items.length]);
 
   return (
     <div className={`relative ${className}`}>;
@@ -113,24 +113,24 @@ export function VirtualScroll<T>({;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </[^>]*>
     </[^>]*>
-  ),;
+  );
 };
 
 //[^;]*
-interface ServiceCard {;
+interface ServiceCard {
   id: string,name: string,description: string,category: string;
   icon?: string;
 };
 
-interface ServiceVirtualScrollProps {;
+interface ServiceVirtualScrollProps {
   services: ServiceCard[]
-  height?: number,;
+  height?: number;
   onServiceClick?: (service: ServiceCard) => void;
   className?: string;
 };
 
 export function ServiceVirtualScroll({;
-  services,;
+  services;
   height = 600;
   onServiceClick;
   className = ''

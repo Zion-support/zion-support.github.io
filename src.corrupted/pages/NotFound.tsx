@@ -2,17 +2,17 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Home,;
-  ArrowLeft, ;
-  ArrowRight, ;
-  MessageCircle, ;
-  Search, ;
-  HelpCircle,;
-  Cloud,;
-  Shield,;
-  Brain,;
-  Zap,;
-  Users,;
+  Home;
+  ArrowLeft;
+  ArrowRight;
+  MessageCircle;
+  Search;
+  HelpCircle;
+  Cloud;
+  Shield;
+  Brain;
+  Zap;
+  Users;
   BarChart3;
 } from "lucide-react"
 import { SEO } from "../components/SEO"

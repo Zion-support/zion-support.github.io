@@ -1,24 +1,24 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { ;
-  Users,;
-  Award, ;
-  Star, ;
-  Target, ;
-  TrendingUp, ;
-  Globe, ;
-  Zap, ;
-  Shield, ;
-  Brain, ;
-  Rocket,;
-  Building,;
-  Heart,;
-  Crown,;
-  Sparkles,;
-  ArrowRight,;
-  Linkedin,;
-  Mail,;
-  Phone,;
+  Users;
+  Award;
+  Star;
+  Target;
+  TrendingUp;
+  Globe;
+  Zap;
+  Shield;
+  Brain;
+  Rocket;
+  Building;
+  Heart;
+  Crown;
+  Sparkles;
+  ArrowRight;
+  Linkedin;
+  Mail;
+  Phone;
   MapPin;
 } from "lucide-react"
 import SEO from "../components/SEO"
@@ -30,7 +30,7 @@ export default function Leadership() {;
     };
     {;
       name: 'Dr. Sarah Chen',title: 'Chief Technology Officer',image: 'https://[^;]*
-      expertise: ['Quantum ComputingAI Research', 'Technology ArchitectureInnovation Strategy'],;
+      expertise: ['Quantum ComputingAI Research', 'Technology ArchitectureInnovation Strategy'];
       linkedin: 'https://linkedin.com/in/sarahchen',email: 'sarah@ziontechgroup.com',phone: '+1 302 464 0951'
     };
     {;
@@ -55,7 +55,7 @@ export default function Leadership() {;
     {;
       icon: Globe,title: 'Global Impact',description: 'We believe technology should make the world better for everyone, everywhere.'
     };
-  ],;
+  ];
 
   const achievements = [;
     {;

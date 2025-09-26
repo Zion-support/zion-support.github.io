@@ -1,26 +1,26 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import {;
-  Brain,;
-  Cpu,;
-  Zap,;
-  Target,;
-  Users,;
-  Shield,;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  Play,;
-  Code,;
-  Database,;
-  Cloud,;
-  Lock,;
-  BarChart3,;
-  Eye,;
-  MessageSquare,;
-  Heart,;
-  DollarSign,;
-  Factory,;
+  Brain;
+  Cpu;
+  Zap;
+  Target;
+  Users;
+  Shield;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  Code;
+  Database;
+  Cloud;
+  Lock;
+  BarChart3;
+  Eye;
+  MessageSquare;
+  Heart;
+  DollarSign;
+  Factory;
   ShoppingCart;
 } from "lucide-react"
 export default function AIServices() {;
@@ -28,41 +28,41 @@ export default function AIServices() {;
     {;
       name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions across your organization",icon: Target,features: [;
         "AI readiness assessment"
-        "Technology roadmap planning",;
-        "ROI analysis and business case development",;
+        "Technology roadmap planning";
+        "ROI analysis and business case development";
         "Change management strategies"
-      ],;
-      price: "From $2,500",;
+      ];
+      price: "From $2,500";
       duration: "2-4 weeks"
     };
     {;
       name: "Machine Learning Development",description: "Custom ML models and algorithms tailored to your specific business needs",icon: Brain,features: [;
         "Custom model development"
-        "Data preprocessing and feature engineering",;
-        "Model training and optimization",;
+        "Data preprocessing and feature engineering";
+        "Model training and optimization";
         "Performance monitoring and maintenance"
-      ],;
-      price: "From $5,000",;
+      ];
+      price: "From $5,000";
       duration: "4-8 weeks"
     };
     {;
       name: "AI-Powered Applications",description: "Intelligent automation and insights through custom AI applications",icon: Zap,features: [;
         "Chatbot and virtual assistant development"
-        "Predictive analytics applications",;
-        "Computer vision solutions",;
+        "Predictive analytics applications";
+        "Computer vision solutions";
         "Natural language processing systems"
-      ],;
-      price: "From $8,500",;
+      ];
+      price: "From $8,500";
       duration: "6-12 weeks"
     };
     {;
       name: "AI Infrastructure & MLOps",description: "Scalable AI infrastructure and machine learning operations",icon: Cloud,features: [;
         "ML pipeline automation"
-        "Model versioning and deployment",;
-        "Scalable training infrastructure",;
+        "Model versioning and deployment";
+        "Scalable training infrastructure";
         "Monitoring and alerting systems"
-      ],;
-      price: "From $6,000",;
+      ];
+      price: "From $6,000";
       duration: "4-10 weeks"
     };
   ];
@@ -76,19 +76,19 @@ export default function AIServices() {;
   ];
   const useCases = [;
     {;
-      industry: "Healthcare",applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],;
+      industry: "Healthcare",applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"];
       icon: Heart;
     };
     {;
-      industry: "Finance",applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],;
+      industry: "Finance",applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"];
       icon: DollarSign;
     };
     {;
-      industry: "Manufacturing",applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],;
+      industry: "Manufacturing",applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"];
       icon: Factory;
     };
     {;
-      industry: "Retail",applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
+      industry: "Retail",applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"];
       icon: ShoppingCart;
     };
   ];

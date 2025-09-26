@@ -1,31 +1,31 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  BarChart3,;
-  TrendingUp,;
-  Database,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Brain,;
-  Cloud,;
-  Lock,;
-  Users,;
-  Rocket,;
-  CheckCircle,;
-  ArrowRight,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Target,;
-  Lightbulb,;
-  Eye,;
-  Search,;
-  Filter,;
-  Download,;
-  Share2,;
-  Cpu,;
-  Network,;
+  BarChart3;
+  TrendingUp;
+  Database;
+  Zap;
+  Shield;
+  Globe;
+  Brain;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  PieChart;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Eye;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Cpu;
+  Network;
   FileText;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -38,46 +38,46 @@ export default function DataAnalytics() {;
       icon: Brain,title: 'Advanced Analytics',description: 'Leverage machine learning and AI for predictive insights and pattern recognition.'
     };
     {;
-      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that provide instant insights into your business performance.'
+      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that provide instant insights into your business window.performance.'
     };
     {;
       icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
     };
-  ],;
+  ];
 
   const solutions = [;
     {;
       title: 'Business Intelligence',description: 'Transform raw data into actionable insights with interactive dashboards and reports',icon: BarChart3,benefits: ['Real-time monitoringCustom dashboards', 'Automated reportingMobile access']
-    },;
+    };
     {;
       title: 'Predictive Analytics',description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',icon: Brain,benefits: ['Trend forecastingRisk assessment', 'Opportunity identificationScenario planning']
-    },;
+    };
     {;
       title: 'Data Mining',description: 'Discover hidden patterns and relationships in large datasets',icon: Search,benefits: ['Pattern recognitionAnomaly detection', 'Customer segmentationMarket insights']
-    },;
+    };
     {;
       title: 'Performance Analytics',description: 'Monitor and optimize business performance across all key metrics',icon: Activity,benefits: ['KPI trackingPerformance optimization', 'BenchmarkingGoal alignment']
     };
-  ],;
+  ];
 
   const useCases = [;
     {;
-      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting',;
+      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting';
       icon: Users,metrics: ['Customer Lifetime ValueInventory Turnover', 'Sales GrowthConversion Rates']
-    },;
+    };
     {;
-      industry: 'Finance',description: 'Risk assessment, fraud detection, and investment portfolio optimization',;
+      industry: 'Finance',description: 'Risk assessment, fraud detection, and investment portfolio optimization';
       icon: Shield,metrics: ['Risk ScoreFraud Detection Rate', 'Portfolio PerformanceCompliance Metrics']
-    },;
+    };
     {;
-      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',;
+      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness';
       icon: Activity,metrics: ['Patient OutcomesResource Utilization', 'Treatment Success RateCost Efficiency']
-    },;
+    };
     {;
-      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization',;
+      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization';
       icon: Cpu,metrics: ['Equipment UptimeQuality Score', 'Production EfficiencyCost Reduction']
     };
-  ],;
+  ];
 
   const benefits = [;
     {;
