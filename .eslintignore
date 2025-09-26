@@ -1,11 +1,16 @@
-# Exclude non-app directories and archived content from linting (merged)
-node_modules/
+# Build output
 .next/
 out/
-build/
 dist/
 coverage/
-.cache/
+
+# Dependencies
+node_modules/
+
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**
 
 # Exclude corrupted or non-app source directories
 # Allow linting of active app source under src/
@@ -57,7 +62,7 @@ src.corrupted/**
 # src/pages/**
 # src/routes/**
 # src/context/**
-# src/utils/cartUtils.js
+src/utils/cartUtils.js
 **/*.config.ts
 vite.config.ts
 vitest.config.ts

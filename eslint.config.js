@@ -7,7 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['src/App.tsx', 'src/main.tsx', 'app/**/*.{ts,tsx,js,jsx}'],
+    files: ['pages/**/*.{ts,tsx,js,jsx}', 'src/**/*.{ts,tsx,js,jsx}', 'app/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -86,8 +86,6 @@ export default [
   },
   {
     ignores: [
-      '**/.temp_backup_components/**',
-      '**/src.corrupted/**',
       '**/*.cjs',
       '**/scripts/**',
       '**/app.disabled/**',
@@ -122,7 +120,6 @@ export default [
       '**/data/**',
       '**/contracts/**',
       '**/cypress/**',
-      '**/public/**',
       '**/*.mjs',
       '**/server.mjs',
       '**/seed.js',
