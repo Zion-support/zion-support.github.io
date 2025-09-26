@@ -12,9 +12,7 @@ interface InstanceCardProps {
     createdAt: Date,
     _count: {
       deployments: number,
-      features: number},
-  },
-}
+      features: number}}}
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false),
   const getVerticalColor = (vertical: string) => {

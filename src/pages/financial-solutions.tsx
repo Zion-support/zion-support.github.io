@@ -1,17 +1,17 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  DollarSign,;
-  TrendingUp, ;
-  Shield, ;
-  BarChart3, ;
-  Brain, ;
-  Zap,;
-  Lock,;
-  Eye,;
-  Cloud,;
-  Star,;
-  Calculator,;
+  DollarSign;
+  TrendingUp;
+  Shield;
+  BarChart3;
+  Brain;
+  Zap;
+  Lock;
+  Eye;
+  Cloud;
+  Star;
+  Calculator;
   PieChart;
 } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -19,23 +19,23 @@ const FinancialSolutions: React.FC = () => {
   const solutions = [;
     {;
       title: 'AI Financial Analytics',description: 'Advanced AI-powered analytics for comprehensive financial insights and decision-making.',icon: BarChart3,features: ['Real-time analyticsPredictive modeling', 'Risk assessmentPerformance tracking']
-    },;
+    };
     {;
       title: 'AI Financial Risk Management',description: 'Intelligent risk assessment and management systems for financial institutions.',icon: Shield,features: ['Risk modelingCompliance monitoring', 'Fraud detectionPortfolio optimization']
-    },;
+    };
     {;
       title: 'AI Financial Trading',description: 'AI-driven trading algorithms and market analysis for optimal investment decisions.',icon: TrendingUp,features: ['Algorithmic tradingMarket analysis', 'Portfolio managementRisk mitigation']
-    },;
+    };
     {;
       title: 'FinOps Advisor',description: 'Cloud financial operations optimization for cost management and efficiency.',icon: Calculator,features: ['Cost optimizationResource management', 'Budget planningROI analysis']
-    },;
+    };
     {;
       title: 'Cloud FinOps Optimizer',description: 'Comprehensive cloud financial operations management and optimization.',icon: Cloud,features: ['Cloud cost managementResource optimization', 'Budget trackingEfficiency metrics']
-    },;
+    };
     {;
       title: 'AI Compliance Assistant',description: 'Automated compliance monitoring and reporting for financial regulations.',icon: Lock,features: ['Regulatory complianceAutomated reporting', 'Audit trailsRisk monitoring']
     };
-  ],;
+  ];
 
   const benefits = [;
     {;

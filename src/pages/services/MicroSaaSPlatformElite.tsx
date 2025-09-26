@@ -1,27 +1,27 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Rocket,;
-  ShoppingCart, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
-  Database,;
-  Network,;
-  Lock,;
-  Eye,;
-  Target,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  Code,;
-  BarChart3,;
-  CreditCard,;
+  Rocket;
+  ShoppingCart;
+  Zap;
+  Users;
+  Globe;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Code;
+  BarChart3;
+  CreditCard;
   Settings;
 } from "lucide-react"
 const MicroSaaSPlatformElite: React.FC = () => {
@@ -31,87 +31,87 @@ const MicroSaaSPlatformElite: React.FC = () => {
     };
     {;
       icon: ShoppingCart,title: "Built-in Payment Processing",description: "Integrated Stripe, PayPal, and crypto payments with automated billing and subscriptions"
-    },;
+    };
     {;
       icon: Zap,title: "AI-Powered Automation",description: "Smart workflows, customer support automation, and intelligent business process optimization"
-    },;
+    };
     {;
       icon: Users,title: "Multi-Tenant Architecture",description: "Scalable platform supporting unlimited customers with role-based access control"
     };
     {;
       icon: Globe,title: "Global Deployment",description: "Deploy to multiple regions with CDN, load balancing, and localized compliance"
-    },;
+    };
     {;
       icon: Database,title: "Enterprise Database",description: "PostgreSQL, MongoDB, and Redis with automated backups and disaster recovery"
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
-      name: "Micro SaaS Starter",price: "$2,500",;
+      name: "Micro SaaS Starter",price: "$2,500";
       period: "/month",description: "Perfect for solo entrepreneurs and small teams",features: [;
-        "Up to 1,000 customers",;
-        "Basic SaaS templates",;
-        "Standard payment processing",;
-        "Email support",;
-        "Basic analytics",;
+        "Up to 1,000 customers";
+        "Basic SaaS templates";
+        "Standard payment processing";
+        "Email support";
+        "Basic analytics";
         "SSL certificates"
       ];
-    },;
+    };
     {;
-      name: "Micro SaaS Pro",price: "$5,500",;
+      name: "Micro SaaS Pro",price: "$5,500";
       period: "/month",description: "Ideal for growing businesses and teams",features: [;
-        "Up to 10,000 customers",;
-        "Advanced SaaS templates",;
-        "Multi-payment gateways",;
-        "Priority support",;
-        "Advanced analytics",;
-        "API access",;
+        "Up to 10,000 customers";
+        "Advanced SaaS templates";
+        "Multi-payment gateways";
+        "Priority support";
+        "Advanced analytics";
+        "API access";
         "Custom branding"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Micro SaaS Enterprise",price: "$12,000",;
+      name: "Micro SaaS Enterprise",price: "$12,000";
       period: "/month",description: "For large organizations with complex needs",features: [;
         "Unlimited customers"
-        "Custom SaaS development",;
-        "White-label platform",;
-        "24/7 dedicated support",;
-        "Custom integrations",;
-        "On-premise deployment",;
+        "Custom SaaS development";
+        "White-label platform";
+        "24/7 dedicated support";
+        "Custom integrations";
+        "On-premise deployment";
         "SLA guarantees"
       ];
     };
-  ],;
+  ];
 
   const platformFeatures = [;
     {;
       title: "SaaS Templates & Components",description: "Pre-built templates for common SaaS applications including CRM, project management, e-commerce, and more"
-    },;
+    };
     {;
       title: "Customer Management System",description: "Complete customer lifecycle management with onboarding, support, and retention tools"
-    },;
+    };
     {;
       title: "Analytics & Reporting",description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
     };
     {;
       title: "Integration Hub",description: "Connect with 500+ third-party services including CRMs, marketing tools, and business applications"
     };
-  ],;
+  ];
 
   const saasTemplates = [;
-    "CRM & Sales Management",;
-    "Project Management",;
-    "E-commerce Platform",;
-    "Learning Management System",;
-    "HR & Recruitment",;
-    "Accounting & Finance",;
-    "Marketing Automation",;
-    "Customer Support",;
-    "Inventory Management",;
+    "CRM & Sales Management";
+    "Project Management";
+    "E-commerce Platform";
+    "Learning Management System";
+    "HR & Recruitment";
+    "Accounting & Finance";
+    "Marketing Automation";
+    "Customer Support";
+    "Inventory Management";
     "Real Estate Management"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

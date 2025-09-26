@@ -1,41 +1,41 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Workflow,;
-  Zap, ;
-  Brain, ;
-  Clock, ;
-  TrendingUp, ;
-  Shield, ;
-  Globe, ;
-  Database,;
-  Cloud,;
-  Lock,;
-  Users,;
-  Rocket,;
-  CheckCircle,;
-  ArrowRight,;
-  BarChart3,;
-  LineChart,;
-  Activity,;
-  Target,;
-  Lightbulb,;
-  Eye,;
-  Search,;
-  Filter,;
-  Download,;
-  Share2,;
-  Play,;
-  Pause,;
-  Settings,;
-  Monitor,;
-  AlertCircle,;
-  CheckSquare,;
-  FileText,;
-  Calendar,;
-  Repeat,;
-  GitBranch,;
-  Code,;
+  Workflow;
+  Zap;
+  Brain;
+  Clock;
+  TrendingUp;
+  Shield;
+  Globe;
+  Database;
+  Cloud;
+  Lock;
+  Users;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  BarChart3;
+  LineChart;
+  Activity;
+  Target;
+  Lightbulb;
+  Eye;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Play;
+  Pause;
+  Settings;
+  Monitor;
+  AlertCircle;
+  CheckSquare;
+  FileText;
+  Calendar;
+  Repeat;
+  GitBranch;
+  Code;
   Terminal;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -49,71 +49,71 @@ export default function AIWorkflowAutomation() {;
     };
     {;
       icon: Zap,title: 'Real-time Automation',description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
-    },;
+    };
     {;
       icon: TrendingUp,title: 'Performance Analytics',description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
     };
-  ],;
+  ];
 
   const capabilities = [;
     {;
       title: 'Workflow Orchestration',description: 'Coordinate complex multi-step processes across different systems and platforms',icon: GitBranch,benefits: ['Multi-system integrationConditional branching', 'Error handling']
-    },;
+    };
     {;
       title: 'AI Decision Engine',description: 'Machine learning models that make intelligent decisions within workflows',icon: Brain,benefits: ['Predictive decisionsPattern recognition', 'Continuous learning']
-    },;
+    };
     {;
       title: 'Real-time Monitoring',description: 'Live visibility into workflow execution and performance metrics',icon: Monitor,benefits: ['Live dashboardsAlert system', 'Performance tracking']
-    },;
+    };
     {;
       title: 'Integration Hub',description: 'Connect to 500+ applications and services via pre-built connectors',icon: Database,benefits: ['API integrationWebhook support', 'Custom connectors']
     };
-  ],;
+  ];
 
   const useCases = [;
     {;
-      industry: 'E-commerce',description: 'Automated order processing, inventory management, and customer service workflows',;
+      industry: 'E-commerce',description: 'Automated order processing, inventory management, and customer service workflows';
       icon: ShoppingCart,metrics: ['Order Processing TimeInventory Accuracy', 'Customer Satisfaction']
-    },;
+    };
     {;
-      industry: 'Finance',description: 'Automated loan processing, compliance checks, and risk assessment workflows',;
+      industry: 'Finance',description: 'Automated loan processing, compliance checks, and risk assessment workflows';
       icon: Shield,metrics: ['Processing SpeedCompliance Rate', 'Risk Detection']
-    },;
+    };
     {;
-      industry: 'Healthcare',description: 'Patient intake, appointment scheduling, and medical record management workflows',;
+      industry: 'Healthcare',description: 'Patient intake, appointment scheduling, and medical record management workflows';
       icon: Activity,metrics: ['Patient Wait TimeAppointment Efficiency', 'Record Accuracy']
-    },;
+    };
     {;
-      industry: 'Manufacturing',description: 'Production scheduling, quality control, and maintenance workflows',;
+      industry: 'Manufacturing',description: 'Production scheduling, quality control, and maintenance workflows';
       icon: Settings,metrics: ['Production EfficiencyQuality Score', 'Downtime Reduction']
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
       name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small teams getting started with automation',features: [;
         'Up to 10 workflows5 user accounts'
-        'Basic integrationsEmail support',;
+        'Basic integrationsEmail support';
         'Standard templates'
-      ],;
+      ];
       cta: 'Start Free Trial',popular: false;
     };
     {;
       name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing businesses with complex automation needs',features: [;
         'Up to 100 workflows25 user accounts'
-        'Advanced integrationsPriority support',;
-        'Custom templatesAdvanced analytics',;
+        'Advanced integrationsPriority support';
+        'Custom templatesAdvanced analytics';
         'API access'
-      ],;
+      ];
       cta: 'Start Free Trial',popular: true;
     };
     {;
       name: 'Enterprise',price: 'Custom',period: '',description: 'For large organizations requiring enterprise-grade automation',features: [;
         'Unlimited workflowsUnlimited users'
-        'All integrations24/7 support',;
-        'Custom developmentAdvanced security',;
+        'All integrations24/7 support';
+        'Custom developmentAdvanced security';
         'SLA guarantees'
-      ],;
+      ];
       cta: 'Contact Sales',popular: false;
     };
   ];

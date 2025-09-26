@@ -2,25 +2,25 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  PenTool,;
-  Brain, ;
-  Image, ;
-  Video, ;
-  FileText,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Zap,;
-  Users,;
-  Globe,;
-  Target,;
-  TrendingUp,;
-  Palette,;
-  Camera,;
-  Mic,;
-  Type,;
-  Sparkles,;
-  Lightbulb,;
+  PenTool;
+  Brain;
+  Image;
+  Video;
+  FileText;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Zap;
+  Users;
+  Globe;
+  Target;
+  TrendingUp;
+  Palette;
+  Camera;
+  Mic;
+  Type;
+  Sparkles;
+  Lightbulb;
   BarChart3;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
@@ -31,7 +31,7 @@ export default function AIContentCreation() {;
     };
     {;
       icon: Image,title: "Visual Content",description: "Create stunning images, graphics, and visual assets"
-    },;
+    };
     {;
       icon: Video,title: "Video Production",description: "Generate and edit videos with AI-driven tools"
     };
@@ -41,30 +41,30 @@ export default function AIContentCreation() {;
   ];
   const services = [;
     {;
-      title: "Content Writing",description: "AI-powered writing assistance for blogs, articles, and marketing copy",;
+      title: "Content Writing",description: "AI-powered writing assistance for blogs, articles, and marketing copy";
       icon: PenTool,features: ["Blog post generation", "SEO-optimized content", "Brand voice consistency"]
-    },;
+    };
     {;
-      title: "Visual Design",description: "Create compelling graphics, logos, and visual content with AI",;
+      title: "Visual Design",description: "Create compelling graphics, logos, and visual content with AI";
       icon: Palette,features: ["Logo design", "Social media graphics", "Brand assets"]
-    },;
+    };
     {;
       title: "Video Creation",description: "Generate and edit videos for marketing and social media",icon: Video,features: ["Video generation", "Auto-editing", "Caption generation"]
-    },;
+    };
     {;
-      title: "Audio Content",description: "Create podcasts, voice-overs, and audio content with AI",;
+      title: "Audio Content",description: "Create podcasts, voice-overs, and audio content with AI";
       icon: Mic,features: ["Voice synthesis", "Audio editing", "Podcast generation"]
     };
-  ],;
+  ];
 
   const technologies = [;
-    "Natural Language Processing (NLP)",;
-    "Generative Adversarial Networks (GANs)",;
-    "Computer Vision",;
-    "Speech Synthesis",;
-    "Content Optimization",;
-    "Brand Voice Training",;
-    "Multi-Modal AI",;
+    "Natural Language Processing (NLP)";
+    "Generative Adversarial Networks (GANs)";
+    "Computer Vision";
+    "Speech Synthesis";
+    "Content Optimization";
+    "Brand Voice Training";
+    "Multi-Modal AI";
     "Content Analytics"
   ];
   return (

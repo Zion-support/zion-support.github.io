@@ -1,70 +1,68 @@
 import React, { useState, useEffect } from "react"
 import { api, ApiResponse } from "@/services/api"
-interface User {;
+interface User {
   id: number,name: string,email: string;
   createdAt?: string;
 };
 
 const ApiDemo: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]),;
-  const [loading, setLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [newUser, setNewUser] = useState({ name: '', email: '' })
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...'),;
+  const [healthStatus, setHealthStatus] = useState<string>('Checking...');
 
   //[^;]*
   useEffect(() => {;
-    checkHealth(),;
-    fetchUsers(),;
-  }, []),;
+    checkHealth();
+    fetchUsers();
+  }, []);
 
   const checkHealth = async () => {;
     try {;
       const response = await api.health()
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`),;
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {;
-      setHealthStatus('❌ API Unhealthy'),;
+      setHealthStatus('❌ API Unhealthy');
     };
-  },;
+  };
 
   const fetchUsers = async () => {;
-    setLoading(true),;
-    setError(null),;
+    setLoading(true);
+    setError(null);
     ;
     try {;
       const response = await api.getUsers()
       if (response.success && response.data) {;&& response.data) {; response.data) {
-        setUsers(response.data),;
+        setUsers(response.data);
       };
     } catch (err) {;
-      setError(err instanceof Error ? err.message : 'Failed to fetch users'),
-    } finally {;
-      setLoading(false),;
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {;
+      setLoading(false);
     };
-  },;
+  };
 
   const handleCreateUser = async (e: React.FormEvent) => {;
     e.preventDefault()
     if (!newUser.name.trim() || !newUser.email.trim()) {
-      setError('Name and email are required'),;
+      setError('Name and email are required');
       return;
     };
 
-    setLoading(true),;
-    setError(null),;
+    setLoading(true);
+    setError(null);
 
     try {;
       const response = await api.createUser(newUser)
       if (response.success && response.data) {;&& response.data) {; response.data) {
-        setUsers(prev => [...prev, response.data!]),;
+        setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' })
       };
     } catch (err) {;
-      setError(err instanceof Error ? err.message : 'Failed to create user'),
-    } finally {;
-      setLoading(false),;
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;
+      setLoading(false);
     };
-  },;
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">;

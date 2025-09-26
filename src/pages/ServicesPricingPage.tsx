@@ -4,47 +4,47 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {;
-  Check,;
-  X,;
-  Star,;
-  Zap,;
-  Shield,;
-  Globe,;
-  TrendingUp,;
-  Users,;
-  Building,;
-  Smartphone,;
-  ShoppingCart,;
-  Heart,;
-  GraduationCap,;
-  Truck,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ExternalLink,;
-  DollarSign,;
+  Check;
+  X;
+  Star;
+  Zap;
+  Shield;
+  Globe;
+  TrendingUp;
+  Users;
+  Building;
+  Smartphone;
+  ShoppingCart;
+  Heart;
+  GraduationCap;
+  Truck;
+  Mail;
+  Phone;
+  MapPin;
+  ExternalLink;
+  DollarSign;
   Clock;
 } from "lucide-react"
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices"
 //[^;]*
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
   if (!acc[service.category]) {;
-    acc[service.category] = [],;
+    acc[service.category] = [];
   };
-  acc[service.category].push(service),;
-  return acc,;
+  acc[service.category].push(service);
+  return acc;
 }, {} as { [key: string]: typeof EXPANDED_SERVICES });
 //[^;]*
 const pricingFeatures = [;
-  "AI-Powered Solutions",;
-  "24/7 Support",;
-  "Global Coverage",;
-  "Custom Integration",;
-  "Training & Documentation",;
-  "Regular Updates",;
-  "Security Compliance",;
+  "AI-Powered Solutions";
+  "24/7 Support";
+  "Global Coverage";
+  "Custom Integration";
+  "Training & Documentation";
+  "Regular Updates";
+  "Security Compliance";
   "Scalable Architecture"
-],;
+];
 export default function ServicesPricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = Object.keys(servicesByCategory)
@@ -54,28 +54,27 @@ export default function ServicesPricingPage() {;
   const getCategoryIcon = (category: string) => {;
     const categoryIcons: { [key: string]: React.ReactNode } = {;
       'AI Automation': <[^>]*/>
-      'Customer Intelligence': <Users className="h-5 w-5" />,;
-      'Content Marketing': <TrendingUp className="h-5 w-5" />,;
-      'Cybersecurity': <Shield className="h-5 w-5" />,;
-      'Threat Intelligence': <Shield className="h-5 w-5" />,;
-      'Cloud Management': <Globe className="h-5 w-5" />,;
-      'DevOps': <Zap className="h-5 w-5" />,;
-      'Data Analytics': <TrendingUp className="h-5 w-5" />,;
-      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />,;
-      'Business Intelligence': <TrendingUp className="h-5 w-5" />,;
-      'Digital Transformation': <Building className="h-5 w-5" />,;
-      'Edge Computing': <Globe className="h-5 w-5" />,;
-      'API Management': <Zap className="h-5 w-5" />,;
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,;
-      'Mobile Development': <Smartphone className="h-5 w-5" />,;
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,;
-      'Healthcare Technology': <Heart className="h-5 w-5" />,;
-      'FinTech': <TrendingUp className="h-5 w-5" />,;
-      'Education Technology': <GraduationCap className="h-5 w-5" />,;
+      'Customer Intelligence': <Users className="h-5 w-5" />;
+      'Content Marketing': <TrendingUp className="h-5 w-5" />;
+      'Cybersecurity': <Shield className="h-5 w-5" />;
+      'Threat Intelligence': <Shield className="h-5 w-5" />;
+      'Cloud Management': <Globe className="h-5 w-5" />;
+      'DevOps': <Zap className="h-5 w-5" />;
+      'Data Analytics': <TrendingUp className="h-5 w-5" />;
+      'IoT & Predictive Analytics': <Zap className="h-5 w-5" />;
+      'Business Intelligence': <TrendingUp className="h-5 w-5" />;
+      'Digital Transformation': <Building className="h-5 w-5" />;
+      'Edge Computing': <Globe className="h-5 w-5" />;
+      'API Management': <Zap className="h-5 w-5" />;
+      'Blockchain & Web3': <Zap className="h-5 w-5" />;
+      'Mobile Development': <Smartphone className="h-5 w-5" />;
+      'E-commerce': <ShoppingCart className="h-5 w-5" />;
+      'Healthcare Technology': <Heart className="h-5 w-5" />;
+      'FinTech': <TrendingUp className="h-5 w-5" />;
+      'Education Technology': <GraduationCap className="h-5 w-5" />;
       'Supply Chain': <[^>]*/>
-    },;
-    return categoryIcons[category] || <Zap className="h-5 w-5" />,
-  },;
+    };
+    return categoryIcons[category] || <Zap className="h-5 w-5" />};
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">;
       {/* Hero Section */};
@@ -309,7 +308,7 @@ export default function ServicesPricingPage() {;
               </[^>]*>
               <CardContent>;
                 <p className="text-zion-cyan-light">;
-                  We offer flexible payment terms including upfront payment, milestone-based payments,;
+                  We offer flexible payment terms including upfront payment, milestone-based payments;
                   and monthly/annual subscription options for ongoing services.;
                 </[^>]*>
               </[^>]*>

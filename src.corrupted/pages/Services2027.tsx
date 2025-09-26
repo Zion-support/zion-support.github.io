@@ -2,100 +2,100 @@ import React, { useState, useMemo } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ;
-  Search,;
-  ArrowRight, ;
-  DollarSign, ;
-  ExternalLink, ;
-  Workflow, ;
-  MessageSquare, ;
-  Globe, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Cpu, ;
-  Zap, ;
-  Rocket, ;
-  Heart, ;
-  Lock, ;
-  Users, ;
-  BarChart3,;
-  Target,;
-  TrendingUp,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  Clock,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Filter,;
-  SortAsc,;
-  Eye,;
-  Code,;
-  Database,;
-  Network,;
-  Smartphone,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Activity,;
-  FileText,;
-  MessageCircle,;
-  BarChart,;
-  Users2,;
-  Settings,;
-  Palette,;
-  Atom,;
-  Sparkles,;
-  Bot,;
-  Workflow as WorkflowIcon,;
-  Globe2,;
-  Wifi,;
-  ShieldCheck,;
-  Server,;
+  Search;
+  ArrowRight;
+  DollarSign;
+  ExternalLink;
+  Workflow;
+  MessageSquare;
+  Globe;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Zap;
+  Rocket;
+  Heart;
+  Lock;
+  Users;
+  BarChart3;
+  Target;
+  TrendingUp;
+  Award;
+  Star;
+  CheckCircle;
+  Clock;
+  Phone;
+  Mail;
+  MapPin;
+  Filter;
+  SortAsc;
+  Eye;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  FileText;
+  MessageCircle;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  Atom;
+  Sparkles;
+  Bot;
+  Workflow as WorkflowIcon;
+  Globe2;
+  Wifi;
+  ShieldCheck;
+  Server;
   Chip;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
 //[^;]*
 const SERVICES_2027 = [;
   {;
-    id: 1,title: "AI Autonomous Business Platform",description: "Fully autonomous AI systems that manage and optimize business operations",category: "AI & Automation",innovationLevel: "Revolutionary",price: 5000,roi: "400-600%",features: ["Autonomous Decision Making", "Process Optimization", "Predictive Analytics", "Self-Learning Systems"],;
+    id: 1,title: "AI Autonomous Business Platform",description: "Fully autonomous AI systems that manage and optimize business operations",category: "AI & Automation",innovationLevel: "Revolutionary",price: 5000,roi: "400-600%",features: ["Autonomous Decision Making", "Process Optimization", "Predictive Analytics", "Self-Learning Systems"];
     icon: Bot,color: "from-purple-500 to-pink-500"
   };
   {;
-    id: 2,title: "Quantum AI Hybrid Platform",description: "Combines quantum computing with AI for unprecedented computational power",category: "Quantum AI",innovationLevel: "Revolutionary",price: 8000,roi: "500-800%",features: ["Quantum Algorithms", "AI Integration", "Hybrid Processing", "Advanced Simulations"],;
+    id: 2,title: "Quantum AI Hybrid Platform",description: "Combines quantum computing with AI for unprecedented computational power",category: "Quantum AI",innovationLevel: "Revolutionary",price: 8000,roi: "500-800%",features: ["Quantum Algorithms", "AI Integration", "Hybrid Processing", "Advanced Simulations"];
     icon: Atom,color: "from-indigo-500 to-purple-500"
   };
   {;
-    id: 3,title: "Next-Gen Cybersecurity Suite",description: "AI-powered security with quantum-resistant encryption and zero-trust architecture",category: "Cybersecurity",innovationLevel: "Cutting-Edge",price: 4000,roi: "300-500%",features: ["Quantum Encryption", "AI Threat Detection", "Zero Trust", "Automated Response"],;
+    id: 3,title: "Next-Gen Cybersecurity Suite",description: "AI-powered security with quantum-resistant encryption and zero-trust architecture",category: "Cybersecurity",innovationLevel: "Cutting-Edge",price: 4000,roi: "300-500%",features: ["Quantum Encryption", "AI Threat Detection", "Zero Trust", "Automated Response"];
     icon: Shield,color: "from-red-500 to-orange-500"
   };
   {;
-    id: 4,title: "Edge AI Computing Platform",description: "Distributed AI processing at the network edge for real-time intelligence",category: "Edge Computing",innovationLevel: "Advanced",price: 3000,roi: "250-400%",features: ["Edge Processing", "Real-time AI", "Low Latency", "Distributed Intelligence"],;
+    id: 4,title: "Edge AI Computing Platform",description: "Distributed AI processing at the network edge for real-time intelligence",category: "Edge Computing",innovationLevel: "Advanced",price: 3000,roi: "250-400%",features: ["Edge Processing", "Real-time AI", "Low Latency", "Distributed Intelligence"];
     icon: Cpu,color: "from-green-500 to-emerald-500"
   };
   {;
-    id: 5,title: "Digital Twin Ecosystem",description: "Comprehensive digital replicas with AI-powered optimization and simulation",category: "Digital Twin",innovationLevel: "Cutting-Edge",price: 4500,roi: "350-550%",features: ["3D Modeling", "AI Optimization", "Real-time Simulation", "Predictive Maintenance"],;
+    id: 5,title: "Digital Twin Ecosystem",description: "Comprehensive digital replicas with AI-powered optimization and simulation",category: "Digital Twin",innovationLevel: "Cutting-Edge",price: 4500,roi: "350-550%",features: ["3D Modeling", "AI Optimization", "Real-time Simulation", "Predictive Maintenance"];
     icon: Eye,color: "from-cyan-500 to-blue-500"
   };
   {;
-    id: 6,title: "Sustainable Tech Solutions",description: "Green technology solutions for environmental sustainability and efficiency",category: "Sustainability",innovationLevel: "Advanced",price: 2200,roi: "200-350%",features: ["Green Computing", "Energy Efficiency", "Carbon Reduction", "Sustainable Infrastructure"],;
+    id: 6,title: "Sustainable Tech Solutions",description: "Green technology solutions for environmental sustainability and efficiency",category: "Sustainability",innovationLevel: "Advanced",price: 2200,roi: "200-350%",features: ["Green Computing", "Energy Efficiency", "Carbon Reduction", "Sustainable Infrastructure"];
     icon: Leaf,color: "from-green-500 to-teal-500"
   };
   {;
-    id: 7,title: "Metaverse Development Platform",description: "Complete metaverse solutions with AI-powered content creation and management",category: "Metaverse",innovationLevel: "Cutting-Edge",price: 6000,roi: "400-650%",features: ["3D Worlds", "AI Content", "Virtual Reality", "Social Integration"],;
+    id: 7,title: "Metaverse Development Platform",description: "Complete metaverse solutions with AI-powered content creation and management",category: "Metaverse",innovationLevel: "Cutting-Edge",price: 6000,roi: "400-650%",features: ["3D Worlds", "AI Content", "Virtual Reality", "Social Integration"];
     icon: Gamepad2,color: "from-purple-500 to-indigo-500"
   };
   {;
-    id: 8,title: "Advanced IoT Solutions",description: "Intelligent IoT networks with AI and edge computing capabilities",category: "IoT",innovationLevel: "Advanced",price: 2800,roi: "250-400%",features: ["Smart Networks", "AI Processing", "Real-time Data", "Predictive Analytics"],;
+    id: 8,title: "Advanced IoT Solutions",description: "Intelligent IoT networks with AI and edge computing capabilities",category: "IoT",innovationLevel: "Advanced",price: 2800,roi: "250-400%",features: ["Smart Networks", "AI Processing", "Real-time Data", "Predictive Analytics"];
     icon: Network,color: "from-blue-500 to-cyan-500"
   };
 ];
 const Services2027: React.FC = () => {
-  const [query, setQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [sortBy, setSortBy] = useState('innovation'),;
+  const [query, setQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
   ;
   const categories = [;
     { id: 'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length };
@@ -118,32 +118,31 @@ const Services2027: React.FC = () => {
         s.title.toLowerCase().includes(q) ||;
         s.description.toLowerCase().includes(q) ||;
         s.category.toLowerCase().includes(q)
-      ),;
+      );
     };
     ;
     //[^;]*
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(s => s.category === selectedCategory),;
+      filtered = filtered.filter(s => s.category === selectedCategory);
     };
     ;
     //[^;]*
     switch (sortBy) {;
       case 'price':;
-        return filtered.sort((a, b) => a.price - b.price),;
+        return filtered.sort((a, b) => a.price - b.price);
       case 'innovation':;
         return filtered.sort((a, b) => {;
           const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0),
-        }),;
+          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0)});
       case 'roi':;
         return filtered.sort((a, b) => {;
           const aROI = parseInt(a.roi.split('-')[0]);
           const bROI = parseInt(b.roi.split('-')[0]);
-          return bROI - aROI,;
-        }),;
+          return bROI - aROI;
+        });
       default: return filtered;
     };
-  }, [query, selectedCategory, sortBy]),;
+  }, [query, selectedCategory, sortBy]);
 
   const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3)
 

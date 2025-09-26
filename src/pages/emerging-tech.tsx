@@ -1,17 +1,17 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Atom,;
-  Brain, ;
-  Network, ;
-  Satellite, ;
-  TrendingUp, ;
-  Leaf,;
-  Zap,;
-  Shield,;
-  Cloud,;
-  Globe,;
-  Rocket,;
+  Atom;
+  Brain;
+  Network;
+  Satellite;
+  TrendingUp;
+  Leaf;
+  Zap;
+  Shield;
+  Cloud;
+  Globe;
+  Rocket;
   Star;
 } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -19,26 +19,26 @@ const EmergingTech: React.FC = () => {
   const technologies = [;
     {;
       title: 'Quantum Computing',description: 'Revolutionary quantum computing solutions for complex problem-solving and optimization.',icon: Atom,path: '/services/quantum-computing',features: ['Quantum algorithmsOptimization problems', 'CryptographyMachine learning']
-    },;
+    };
     {;
       title: 'IoT Edge Computing',description: 'Next-generation IoT solutions with edge computing capabilities for real-time processing.',icon: Network,path: '/services/iot-edge-computing',features: ['Real-time processingLow latency', 'Edge AISmart sensors']
-    },;
+    };
     {;
       title: 'AI Quantum Hybrid Platform',description: 'Combining AI and quantum computing for unprecedented computational power.',icon: Brain,path: '/services/ai-quantum-hybrid-platform',features: ['Hybrid algorithmsQuantum ML', 'AI optimizationQuantum AI']
-    },;
+    };
     {;
       title: 'Space Technology',description: 'Cutting-edge space technology solutions for satellite and aerospace applications.',icon: Satellite,path: '/space-tech',features: ['Satellite systemsAerospace solutions', 'Space dataOrbital mechanics']
-    },;
+    };
     {;
       title: 'Quantum Machine Learning',description: 'Quantum-enhanced machine learning algorithms for superior pattern recognition.',icon: Atom,path: '/services/quantum-machine-learning',features: ['Quantum neural networksPattern recognition', 'OptimizationQuantum algorithms']
-    },;
+    };
     {;
       title: 'AI Predictive Maintenance',description: 'AI-powered predictive maintenance systems for industrial equipment and machinery.',icon: TrendingUp,path: '/services/ai-predictive-maintenance',features: ['Equipment monitoringPredictive analytics', 'Maintenance schedulingCost optimization']
-    },;
+    };
     {;
       title: 'Sustainable Technology',description: 'Green technology solutions for environmental sustainability and energy efficiency.',icon: Leaf,path: '/services/sustainable-technology',features: ['Energy efficiencyGreen computing', 'Carbon reductionSustainable AI']
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

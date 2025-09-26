@@ -1,34 +1,34 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Shield,;
-  Lock, ;
-  Eye, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
-  Database,;
-  Cpu,;
-  Network,;
-  Brain,;
-  Target,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  AlertTriangle,;
-  Activity,;
+  Shield;
+  Lock;
+  Eye;
+  Zap;
+  Users;
+  Globe;
+  Database;
+  Cpu;
+  Network;
+  Brain;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  AlertTriangle;
+  Activity;
   Key;
 } from "lucide-react"
 const AICybersecurityElite: React.FC = () => {
   const features = [;
     {;
       icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
-    },;
+    };
     {;
       icon: Shield,title: "Zero-Day Vulnerability Protection",description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
     };
@@ -40,49 +40,49 @@ const AICybersecurityElite: React.FC = () => {
     };
     {;
       icon: Users,title: "Identity & Access Management",description: "Multi-factor authentication, biometric verification, and role-based access control"
-    },;
+    };
     {;
       icon: Globe,title: "Global Threat Intelligence",description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
     };
   ];
   const pricing = [;
     {;
-      name: "Essential",price: "$3,500",;
+      name: "Essential",price: "$3,500";
       period: "/month",description: "Perfect for small businesses and startups",features: [;
         "Basic AI threat detection"
-        "Firewall & intrusion prevention",;
-        "Email security & spam filtering",;
-        "Vulnerability scanning",;
-        "24/7 monitoring",;
+        "Firewall & intrusion prevention";
+        "Email security & spam filtering";
+        "Vulnerability scanning";
+        "24/7 monitoring";
         "Basic incident response"
       ];
-    },;
+    };
     {;
-      name: "Professional",price: "$7,500",;
+      name: "Professional",price: "$7,500";
       period: "/month",description: "Ideal for growing businesses and teams",features: [;
         "Advanced AI threat detection"
-        "Behavioral analytics",;
-        "Advanced endpoint protection",;
-        "Threat intelligence feeds",;
-        "Automated incident response",;
-        "Compliance reporting",;
+        "Behavioral analytics";
+        "Advanced endpoint protection";
+        "Threat intelligence feeds";
+        "Automated incident response";
+        "Compliance reporting";
         "API access"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$18,000",;
+      name: "Enterprise",price: "$18,000";
       period: "/month",description: "For large organizations with complex needs",features: [;
         "Full AI cybersecurity suite"
-        "Custom threat modeling",;
-        "Advanced forensics",;
-        "Dedicated security team",;
-        "Custom integrations",;
-        "White-label options",;
+        "Custom threat modeling";
+        "Advanced forensics";
+        "Dedicated security team";
+        "Custom integrations";
+        "White-label options";
         "On-premise deployment"
       ];
     };
-  ],;
+  ];
 
   const securityFeatures = [;
     {;
@@ -93,22 +93,22 @@ const AICybersecurityElite: React.FC = () => {
     };
     {;
       title: "Cloud Security",description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
-    },;
+    };
     {;
       title: "Compliance & Governance",description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
     };
-  ],;
+  ];
 
   const complianceStandards = [;
-    "SOC 2 Type II",;
-    "ISO 27001",;
-    "GDPR",;
-    "HIPAA",;
-    "PCI DSS",;
-    "NIST Cybersecurity Framework",;
-    "CIS Controls",;
+    "SOC 2 Type II";
+    "ISO 27001";
+    "GDPR";
+    "HIPAA";
+    "PCI DSS";
+    "NIST Cybersecurity Framework";
+    "CIS Controls";
     "FedRAMP"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

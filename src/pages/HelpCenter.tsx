@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Search,;
-  MessageCircle, ;
-  BookOpen, ;
-  Settings, ;
-  Shield, ;
-  Cloud, ;
-  Zap, ;
-  Users,;
-  ChevronRight,;
-  ChevronDown,;
+  Search;
+  MessageCircle;
+  BookOpen;
+  Settings;
+  Shield;
+  Cloud;
+  Zap;
+  Users;
+  ChevronRight;
+  ChevronDown;
   ExternalLink;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
@@ -77,19 +77,19 @@ const helpSections = [;
 ];
 const popularQuestions = [;
   {;
-    question: 'How do I get started with Zion Tech Group services?',answer: 'Getting started is easy! Simply create an account, choose your service plan, and follow our step-by-step setup guide. Our team is also available for personalized onboarding assistance.',;
+    question: 'How do I get started with Zion Tech Group services?',answer: 'Getting started is easy! Simply create an account, choose your service plan, and follow our step-by-step setup guide. Our team is also available for personalized onboarding assistance.';
     category: 'getting-started'
   };
   {;
-    question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise clients. All payments are processed securely through our payment partners.',;
+    question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise clients. All payments are processed securely through our payment partners.';
     category: 'account'
   };
   {;
-    question: 'How secure are my data and applications?',answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, and regular security audits to protect your data.',;
+    question: 'How secure are my data and applications?',answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, and regular security audits to protect your data.';
     category: 'security'
   };
   {;
-    question: 'Do you provide 24/7 support?',answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.',;
+    question: 'Do you provide 24/7 support?',answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.';
     category: 'technical'
   };
 ];
@@ -102,18 +102,18 @@ export default function HelpCenter() {;
     if (newExpanded.has(sectionId)) {;
       newExpanded.delete(sectionId)
     } else {;
-      newExpanded.add(sectionId),;
+      newExpanded.add(sectionId);
     };
-    setExpandedSections(newExpanded),;
-  },;
+    setExpandedSections(newExpanded);
+  };
 
   const filteredQuestions = popularQuestions.filter(q => ;
     selectedCategory === 'all' || q.category === selectedCategory
-  ),;
+  );
 
   const filteredSections = helpSections.filter(section =>;
     selectedCategory === 'all' || section.id === selectedCategory
-  ),;
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

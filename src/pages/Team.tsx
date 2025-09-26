@@ -2,66 +2,66 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ;
-  Linkedin,;
-  Twitter, ;
-  Mail, ;
-  Globe, ;
-  Github,;
-  Award,;
-  Users,;
-  Target,;
-  Rocket,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Atom,;
-  Zap,;
-  Heart,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Building,;
-  Lightbulb,;
-  TrendingUp,;
-  Eye,;
-  Lock,;
-  Network,;
-  Database,;
-  Code,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Phone,;
-  MapPin,;
-  Calendar,;
-  Clock,;
-  BookOpen,;
-  MessageCircle,;
-  HelpCircle,;
-  DollarSign,;
-  Gauge,;
-  Workflow,;
-  BarChart3,;
-  PenTool,;
-  Server,;
-  Smartphone,;
-  Cpu,;
+  Linkedin;
+  Twitter;
+  Mail;
+  Globe;
+  Github;
+  Award;
+  Users;
+  Target;
+  Rocket;
+  Brain;
+  Cloud;
+  Shield;
+  Atom;
+  Zap;
+  Heart;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Building;
+  Lightbulb;
+  TrendingUp;
+  Eye;
+  Lock;
+  Network;
+  Database;
+  Code;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Phone;
+  MapPin;
+  Calendar;
+  Clock;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  BarChart3;
+  PenTool;
+  Server;
+  Smartphone;
+  Cpu;
   Truck;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
-interface TeamMember {;
+interface TeamMember {
   id: string,name: string,title: string,department: string,bio: string,expertise: string[],experience: string,education: string;
-  linkedin?: string,;
-  twitter?: string,;
-  github?: string,;
-  website?: string,;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+  website?: string;
   email: string,image: string,featured: boolean,leadership: boolean,achievements: string[]
 };
 
 const Team: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all'),;
-  const [selectedRole, setSelectedRole] = useState('all'),;
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const [selectedRole, setSelectedRole] = useState('all');
 
   const departments = [;
     { id: 'all', name: 'All Departments', icon: Users, count: 0 };
@@ -77,79 +77,78 @@ const Team: React.FC = () => {
   ];
   const teamMembers: TeamMember[] = [;
     {;
-      id: '1',name: 'Dr. Sarah Chen',title: 'Chief Executive Officer & Chief AI Officer',department: 'leadership',bio: 'Visionary leader with 15+ years of experience in artificial intelligence and quantum computing. Former research lead at Google AI and Stanford University.',expertise: ['Artificial IntelligenceQuantum Computing', 'Machine LearningStrategic Leadership'],;
-      experience: '15+ years',education: 'Ph.D. Computer Science, Stanford University',;
+      id: '1',name: 'Dr. Sarah Chen',title: 'Chief Executive Officer & Chief AI Officer',department: 'leadership',bio: 'Visionary leader with 15+ years of experience in artificial intelligence and quantum computing. Former research lead at Google AI and Stanford University.',expertise: ['Artificial IntelligenceQuantum Computing', 'Machine LearningStrategic Leadership'];
+      experience: '15+ years',education: 'Ph.D. Computer Science, Stanford University';
       linkedin: 'https://linkedin.com/in/sarahchen',twitter: 'https://twitter.com/sarahchen',github: 'https://github.com/sarahchen',website: 'https://sarahchen.com',email: 'sarah.chen@ziontechgroup.com',image: '/images/team/sarah-chen.jpg',featured: true,leadership: true,achievements: ['Forbes 30 Under 30MIT Technology Review Innovator', 'Published 50+ Research Papers']
-    },;
+    };
     {;
-      id: '2',name: 'Michael Rodriguez',title: 'Chief Technology Officer',department: 'leadership',bio: 'Technology visionary with expertise in cloud architecture, quantum computing, and emerging technologies. Former CTO at Microsoft Azure.',;
-      expertise: ['Cloud ArchitectureQuantum Computing', 'Emerging TechnologiesSystem Design'],;
-      experience: '18+ years',education: 'M.S. Computer Engineering, MIT',;
+      id: '2',name: 'Michael Rodriguez',title: 'Chief Technology Officer',department: 'leadership',bio: 'Technology visionary with expertise in cloud architecture, quantum computing, and emerging technologies. Former CTO at Microsoft Azure.';
+      expertise: ['Cloud ArchitectureQuantum Computing', 'Emerging TechnologiesSystem Design'];
+      experience: '18+ years',education: 'M.S. Computer Engineering, MIT';
       linkedin: 'https://linkedin.com/in/michaelrodriguez',twitter: 'https://twitter.com/mrodriguez',github: 'https://github.com/mrodriguez',email: 'michael.rodriguez@ziontechgroup.com',image: '/images/team/michael-rodriguez.jpg',featured: true,leadership: true,achievements: ['Microsoft MVPCloud Architecture Expert', 'Quantum Computing Pioneer']
-    },;
+    };
     {;
-      id: '3',name: 'Dr. Alex Thompson',title: 'Chief Security Officer',department: 'security',bio: 'Cybersecurity expert specializing in AI-powered threat detection and quantum-resistant cryptography. Former security lead at NSA.',expertise: ['CybersecurityAI Security', 'Quantum CryptographyThreat Intelligence'],;
-      experience: '12+ years',education: 'Ph.D. Cybersecurity, Carnegie Mellon University',;
+      id: '3',name: 'Dr. Alex Thompson',title: 'Chief Security Officer',department: 'security',bio: 'Cybersecurity expert specializing in AI-powered threat detection and quantum-resistant cryptography. Former security lead at NSA.',expertise: ['CybersecurityAI Security', 'Quantum CryptographyThreat Intelligence'];
+      experience: '12+ years',education: 'Ph.D. Cybersecurity, Carnegie Mellon University';
       linkedin: 'https://linkedin.com/in/alexthompson',twitter: 'https://twitter.com/alexthompson',email: 'alex.thompson@ziontechgroup.com',image: '/images/team/alex-thompson.jpg',featured: true,leadership: true,achievements: ['NSA Recognition AwardBlack Hat Speaker', 'Security Researcher of the Year']
-    },;
+    };
     {;
-      id: '4',name: 'Dr. Emily Watson',title: 'Head of AI Research',department: 'ai',bio: 'Leading researcher in machine learning and artificial intelligence. Specializes in quantum machine learning and neural network optimization.',expertise: ['Machine LearningQuantum ML', 'Neural NetworksResearch Leadership'],;
-      experience: '10+ years',education: 'Ph.D. Machine Learning, UC Berkeley',;
+      id: '4',name: 'Dr. Emily Watson',title: 'Head of AI Research',department: 'ai',bio: 'Leading researcher in machine learning and artificial intelligence. Specializes in quantum machine learning and neural network optimization.',expertise: ['Machine LearningQuantum ML', 'Neural NetworksResearch Leadership'];
+      experience: '10+ years',education: 'Ph.D. Machine Learning, UC Berkeley';
       linkedin: 'https://linkedin.com/in/emilywatson',twitter: 'https://twitter.com/emilywatson',github: 'https://github.com/emilywatson',email: 'emily.watson@ziontechgroup.com',image: '/images/team/emily-watson.jpg',featured: true,leadership: false,achievements: ['Google Research AwardNeurIPS Best Paper', 'AI Research Grant Recipient']
-    },;
+    };
     {;
-      id: '5',name: 'Dr. James Kim',title: 'Quantum Computing Lead',department: 'quantum',bio: 'Quantum physicist and computing expert. Leading research in quantum algorithms and quantum-classical hybrid systems.',expertise: ['Quantum PhysicsQuantum Algorithms', 'Quantum-Classical HybridResearch'],;
-      experience: '8+ years',education: 'Ph.D. Quantum Physics, Caltech',;
+      id: '5',name: 'Dr. James Kim',title: 'Quantum Computing Lead',department: 'quantum',bio: 'Quantum physicist and computing expert. Leading research in quantum algorithms and quantum-classical hybrid systems.',expertise: ['Quantum PhysicsQuantum Algorithms', 'Quantum-Classical HybridResearch'];
+      experience: '8+ years',education: 'Ph.D. Quantum Physics, Caltech';
       linkedin: 'https://linkedin.com/in/jameskim',twitter: 'https://twitter.com/jameskim',github: 'https://github.com/jameskim',email: 'james.kim@ziontechgroup.com',image: '/images/team/james-kim.jpg',featured: true,leadership: false,achievements: ['Caltech Distinguished AlumnusQuantum Research Grant', 'Published in Nature']
-    },;
+    };
     {;
-      id: '6',name: 'Lisa Chang',title: 'Head of Cloud & DevOps',department: 'cloud',bio: 'Cloud infrastructure expert with deep knowledge of FinOps, automation, and scalable systems. Former AWS Solutions Architect.',;
-      expertise: ['Cloud InfrastructureDevOps', 'FinOpsAutomation'],;
-      experience: '14+ years',education: 'M.S. Information Systems, University of Washington',;
+      id: '6',name: 'Lisa Chang',title: 'Head of Cloud & DevOps',department: 'cloud',bio: 'Cloud infrastructure expert with deep knowledge of FinOps, automation, and scalable systems. Former AWS Solutions Architect.';
+      expertise: ['Cloud InfrastructureDevOps', 'FinOpsAutomation'];
+      experience: '14+ years',education: 'M.S. Information Systems, University of Washington';
       linkedin: 'https://linkedin.com/in/lisachang',twitter: 'https://twitter.com/lisachang',github: 'https://github.com/lisachang',email: 'lisa.chang@ziontechgroup.com',image: '/images/team/lisa-chang.jpg',featured: false,leadership: true,achievements: ['AWS Solutions ArchitectDevOps Expert', 'Cloud Cost Optimization Specialist']
-    },;
+    };
     {;
-      id: '7',name: 'Robert Davis',title: 'Senior Software Engineer',department: 'engineering',bio: 'Full-stack developer specializing in microservices, AI integration, and scalable web applications.',;
-      expertise: ['Full-Stack DevelopmentMicroservices', 'AI IntegrationWeb Applications'],;
-      experience: '6+ years',education: 'B.S. Computer Science, University of Texas',;
+      id: '7',name: 'Robert Davis',title: 'Senior Software Engineer',department: 'engineering',bio: 'Full-stack developer specializing in microservices, AI integration, and scalable web applications.';
+      expertise: ['Full-Stack DevelopmentMicroservices', 'AI IntegrationWeb Applications'];
+      experience: '6+ years',education: 'B.S. Computer Science, University of Texas';
       linkedin: 'https://linkedin.com/in/robertdavis',github: 'https://github.com/robertdavis',email: 'robert.davis@ziontechgroup.com',image: '/images/team/robert-davis.jpg',featured: false,leadership: false,achievements: ['Microsoft Certified DeveloperOpen Source Contributor', 'Hackathon Winner']
-    },;
+    };
     {;
-      id: '8',name: 'Jennifer Lee',title: 'Business Development Manager',department: 'business',bio: 'Strategic business development professional with expertise in technology partnerships and market expansion.',expertise: ['Business DevelopmentPartnerships', 'Market StrategyClient Relations'],;
-      experience: '9+ years',education: 'MBA, Harvard Business School',;
+      id: '8',name: 'Jennifer Lee',title: 'Business Development Manager',department: 'business',bio: 'Strategic business development professional with expertise in technology partnerships and market expansion.',expertise: ['Business DevelopmentPartnerships', 'Market StrategyClient Relations'];
+      experience: '9+ years',education: 'MBA, Harvard Business School';
       linkedin: 'https://linkedin.com/in/jenniferlee',email: 'jennifer.lee@ziontechgroup.com',image: '/images/team/jennifer-lee.jpg',featured: false,leadership: false,achievements: ['Top Performer AwardPartnership Excellence', 'Client Satisfaction Leader']
-    },;
+    };
     {;
-      id: '9',name: 'David Wilson',title: 'UX/UI Design Lead',department: 'design',bio: 'Creative designer focused on user experience and interface design for complex technology applications.',expertise: ['UX/UI DesignUser Research', 'PrototypingDesign Systems'],;
-      experience: '7+ years',education: 'B.F.A. Design, Rhode Island School of Design',;
+      id: '9',name: 'David Wilson',title: 'UX/UI Design Lead',department: 'design',bio: 'Creative designer focused on user experience and interface design for complex technology applications.',expertise: ['UX/UI DesignUser Research', 'PrototypingDesign Systems'];
+      experience: '7+ years',education: 'B.F.A. Design, Rhode Island School of Design';
       linkedin: 'https://linkedin.com/in/davidwilson',website: 'https://davidwilson.design',email: 'david.wilson@ziontechgroup.com',image: '/images/team/david-wilson.jpg',featured: false,leadership: false,achievements: ['Design Excellence AwardUser Experience Innovation', 'Design Thinking Facilitator']
-    },;
+    };
     {;
-      id: '10',name: 'Maria Garcia',title: 'Data Scientist',department: 'data',bio: 'Data science expert specializing in predictive analytics, machine learning, and business intelligence.',;
-      expertise: ['Data SciencePredictive Analytics', 'Machine LearningBusiness Intelligence'],;
-      experience: '5+ years',education: 'M.S. Data Science, Columbia University',;
+      id: '10',name: 'Maria Garcia',title: 'Data Scientist',department: 'data',bio: 'Data science expert specializing in predictive analytics, machine learning, and business intelligence.';
+      expertise: ['Data SciencePredictive Analytics', 'Machine LearningBusiness Intelligence'];
+      experience: '5+ years',education: 'M.S. Data Science, Columbia University';
       linkedin: 'https://linkedin.com/in/mariagarcia',github: 'https://github.com/mariagarcia',email: 'maria.garcia@ziontechgroup.com',image: '/images/team/maria-garcia.jpg',featured: false,leadership: false,achievements: ['Data Science Competition WinnerResearch Publication', 'Analytics Innovation Award']
     };
-  ],;
+  ];
 
   //[^;]*
   departments.forEach(dept => {;
     if (dept.id === 'all') {;
-      dept.count = teamMembers.length,;
+      dept.count = teamMembers.length;
     } else if (dept.id === 'leadership') {;
-      dept.count = teamMembers.filter(member => member.leadership).length,;
+      dept.count = teamMembers.filter(member => member.leadership).length;
     } else {;
-      dept.count = teamMembers.filter(member => member.department === dept.id).length,;
+      dept.count = teamMembers.filter(member => member.department === dept.id).length;
     };
-  }),;
+  });
 
   const filteredMembers = teamMembers.filter(member => {;
     const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment
     const matchesRole = selectedRole === 'all' || 
                        (selectedRole === 'leadership' && member.leadership) ||;&& member.leadership) ||; member.leadership) ||
-                       (selectedRole === 'individual' && !member.leadership),;&& !member.leadership),; !member.leadership),
-    return matchesDepartment && matchesRole,;&& matchesRole,; matchesRole,
-  }),;
+                       (selectedRole === 'individual' && !member.leadership);&& !member.leadership); !member.leadership),
+    return matchesDepartment && matchesRole;&& matchesRole; matchesRole});
 
   const leadershipTeam = teamMembers.filter(member => member.leadership)
   const featuredMembers = teamMembers.filter(member => member.featured)
@@ -178,7 +177,7 @@ const Team: React.FC = () => {
               </[^>]*>
             </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              The brilliant minds behind Zion Tech Group's innovations in AI, quantum computing, ;
+              The brilliant minds behind Zion Tech Group's innovations in AI, quantum computing;
               and emerging technologies. Our diverse team brings together expertise from leading ;
               institutions and companies worldwide.;
             </[^>]*>
@@ -521,7 +520,7 @@ const Team: React.FC = () => {
             {[;
               { title: 'Innovation First', icon: Lightbulb, description: 'We push boundaries and embrace cutting-edge technologies to solve complex problems.' };
               { title: 'Collaboration', icon: Users, description: 'Great ideas come from diverse perspectives working together towards common goals.' };
-              { title: 'Excellence', icon: Star, description: 'We strive for excellence in everything we do, from code quality to client relationships.' },;
+              { title: 'Excellence', icon: Star, description: 'We strive for excellence in everything we do, from code quality to client relationships.' };
               { title: 'Continuous Learning', icon: BookOpen, description: 'Our team is committed to lifelong learning and staying ahead of technology trends.' };
             ].map((value, index) => (;
               <motion.div

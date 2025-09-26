@@ -1,3 +1,7 @@
+zion-website/**
+zion_academy/**
+src.corrupted/**
+zion-os.disabled/**
 zion-website/
 # Exclude non-app directories and archived content from linting
 node_modules/

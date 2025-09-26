@@ -17,8 +17,8 @@ const PerformanceMonitor: React.FC = () => {
     if (process.env.NODE_ENV !== 'development') return;
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
       
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;

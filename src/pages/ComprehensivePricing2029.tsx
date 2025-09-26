@@ -1,80 +1,79 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Star,;
-  CheckCircle, ;
-  ArrowRight, ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Rocket, ;
-  Globe,;
-  Cpu,;
-  Lock,;
-  Heart,;
-  Users,;
-  ShoppingCart,;
-  BookOpen,;
-  MessageCircle,;
-  HelpCircle,;
-  DollarSign,;
-  Gauge,;
-  Workflow,;
-  Atom,;
-  Target,;
-  Award,;
-  Code,;
-  Truck,;
-  Building,;
-  BarChart3,;
-  PenTool,;
-  Eye,;
-  Server,;
-  Smartphone,;
-  Database,;
-  Network,;
-  Clock,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,;
-  TrendingUp,;
-  Sparkles,;
-  Crown,;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Rocket;
+  Globe;
+  Cpu;
+  Lock;
+  Heart;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Atom;
+  Target;
+  Award;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Eye;
+  Server;
+  Smartphone;
+  Database;
+  Network;
+  Clock;
+  Search;
+  Filter;
+  Grid;
+  List;
+  TrendingUp;
+  Sparkles;
+  Crown;
   Gem;
 } from "lucide-react"
 import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029"
 import { revolutionaryAIServices2029 } from "../../data/revolutionary-ai-services-2029"
 import { revolutionaryITServices2029 } from "../../data/revolutionary-it-services-2029"
 export default function ComprehensivePricing2029() {;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity'),;
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity');
 
   const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & ConsultingEdge Computing', 'DevOps & AutomationStorage & Security', 'Network OptimizationDisaster Recovery', 'Quantum Security']
 
   //[^;]*
   const allServices = [;
-    ...innovativeMicroSAASServices2029,;
-    ...revolutionaryAIServices2029,;
+    ...innovativeMicroSAASServices2029;
+    ...revolutionaryAIServices2029;
     ...revolutionaryITServices2029
-  ],;
+  ];
 
   const filteredServices = allServices.filter(service => {;
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),;
-    return matchesCategory && matchesSearch,;&& matchesSearch,; matchesSearch,
-  }),;
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;&& matchesSearch; matchesSearch});
 
   //[^;]*
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        return parseFloat(a.price.replace('$', '').replace( '')) - parseFloat(b.price.replace('$', '').replace( ''));
       case 'rating':;
         return b.rating - a.rating
       case 'popularity':;
@@ -85,24 +84,23 @@ export default function ComprehensivePricing2029() {;
   const getCategoryIcon = (category: string) => {;
     const iconMap: { [key: string]: any } = {;
       'AI & Analytics': Brain;
-      'Cybersecurity': Shield,;
-      'AI & Operations': Workflow,;
-      'Blockchain & Security': Lock,;
-      'AI & Legal Tech': BookOpen,;
-      'IoT & Edge Computing': Network,;
-      'AI & Healthcare': Heart,;
-      'Quantum Computing & AI': Atom,;
-      'AI & Fintech': DollarSign,;
-      'Sustainability & Consulting': Globe,;
-      'Edge Computing': Network,;
-      'DevOps & Automation': Rocket,;
-      'Storage & Security': Database,;
-      'Network Optimization': BarChart3,;
-      'Disaster Recovery': Shield,;
+      'Cybersecurity': Shield;
+      'AI & Operations': Workflow;
+      'Blockchain & Security': Lock;
+      'AI & Legal Tech': BookOpen;
+      'IoT & Edge Computing': Network;
+      'AI & Healthcare': Heart;
+      'Quantum Computing & AI': Atom;
+      'AI & Fintech': DollarSign;
+      'Sustainability & Consulting': Globe;
+      'Edge Computing': Network;
+      'DevOps & Automation': Rocket;
+      'Storage & Security': Database;
+      'Network Optimization': BarChart3;
+      'Disaster Recovery': Shield;
       'Quantum Security': Lock;
-    },;
-    return iconMap[category] || Cpu,
-  },;
+    };
+    return iconMap[category] || Cpu};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">;
@@ -119,8 +117,8 @@ export default function ComprehensivePricing2029() {;
               key={i};
               className="[^"]*"
               animate={{;
-                x: [0, 100, 0],;
-                y: [0, -100, 0],;
+                x: [0, 100, 0];
+                y: [0, -100, 0];
                 opacity: [0.3, 0.8, 0.3]
               }};
               transition={{;

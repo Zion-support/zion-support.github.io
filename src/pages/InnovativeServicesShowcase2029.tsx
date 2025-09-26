@@ -1,58 +1,58 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Brain,;
-  Shield, ;
-  Cloud, ;
-  Zap, ;
-  Rocket, ;
-  Star, ;
-  TrendingUp, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Globe,;
-  Cpu,;
-  Lock,;
-  Heart,;
-  Users,;
-  ShoppingCart,;
-  BookOpen,;
-  MessageCircle,;
-  HelpCircle,;
-  DollarSign,;
-  Gauge,;
-  Workflow,;
-  Atom,;
-  Target,;
-  Award,;
-  Code,;
-  Truck,;
-  Building,;
-  BarChart3,;
-  PenTool,;
-  Eye,;
-  Server,;
-  Smartphone,;
-  Database,;
-  Network,;
-  Clock,;
-  PanelLeft,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,;
-  Play,;
-  Pause,;
-  Volume2,;
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Rocket;
+  Star;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Globe;
+  Cpu;
+  Lock;
+  Heart;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Atom;
+  Target;
+  Award;
+  Code;
+  Truck;
+  Building;
+  BarChart3;
+  PenTool;
+  Eye;
+  Server;
+  Smartphone;
+  Database;
+  Network;
+  Clock;
+  PanelLeft;
+  Search;
+  Filter;
+  Grid;
+  List;
+  Play;
+  Pause;
+  Volume2;
   VolumeX;
 } from "lucide-react"
 import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029"
 export default function InnovativeServicesShowcase2029() {;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [isPlaying, setIsPlaying] = useState(false),;
-  const [isMuted, setIsMuted] = useState(false),;
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & Consulting']
 
@@ -60,9 +60,8 @@ export default function InnovativeServicesShowcase2029() {;
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),;
-    return matchesCategory && matchesSearch,;&& matchesSearch,; matchesSearch,
-  }),;
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;&& matchesSearch; matchesSearch});
 
   const togglePlayPause = () => setIsPlaying(!isPlaying)
   const toggleMute = () => setIsMuted(!isMuted)

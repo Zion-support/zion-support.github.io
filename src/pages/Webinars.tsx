@@ -3,45 +3,45 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Play,;
-  Calendar, ;
-  Clock, ;
-  Users, ;
-  Video, ;
-  Headphones, ;
-  BookOpen, ;
-  ArrowRight, ;
-  Star, ;
-  ExternalLink,;
-  Clock3,;
-  User,;
-  Tag,;
-  Download,;
-  Share2,;
+  Play;
+  Calendar;
+  Clock;
+  Users;
+  Video;
+  Headphones;
+  BookOpen;
+  ArrowRight;
+  Star;
+  ExternalLink;
+  Clock3;
+  User;
+  Tag;
+  Download;
+  Share2;
   Bookmark;
 } from "lucide-react"
 export const Webinars: React.FC = () => {
   const webinars = [;
     {;
       id: 1,title: 'AI-Powered Business Transformation: From Strategy to Implementation',description: 'Join industry experts as they discuss practical strategies for implementing AI solutions that drive real business value.',category: 'AI & Business',speaker: 'Dr. Sarah Chen',date: '2025-02-15',time: '14:00 EST',duration: '60 min',attendees: 1250,featured: true,status: 'upcoming',thumbnail: '/images/webinars/ai-business-transformation.jpg',tags: ['AIBusiness Strategy', 'Digital Transformation']
-    },;
+    };
     {;
       id: 2,title: 'Quantum Computing: Breaking Down the Hype vs. Reality',description: 'A deep dive into current quantum computing capabilities and what businesses can realistically expect in the next 5 years.',category: 'Quantum Computing',speaker: 'Dr. James Wilson',date: '2025-02-20',time: '15:30 EST',duration: '90 min',attendees: 890,featured: true,status: 'upcoming',thumbnail: '/images/webinars/quantum-computing-reality.jpg',tags: ['Quantum ComputingEmerging Tech', 'Future Trends']
-    },;
+    };
     {;
-      id: 3,title: 'Cybersecurity in the AI Era: New Threats, New Solutions',;
+      id: 3,title: 'Cybersecurity in the AI Era: New Threats, New Solutions';
       description: 'Explore emerging cybersecurity challenges posed by AI and learn about cutting-edge defense strategies.',category: 'Cybersecurity',speaker: 'Marcus Rodriguez',date: '2025-02-25',time: '13:00 EST',duration: '75 min',attendees: 1100,featured: true,status: 'upcoming',thumbnail: '/images/webinars/ai-cybersecurity.jpg',tags: ['CybersecurityAI Security', 'Threat Prevention']
-    },;
+    };
     {;
       id: 4,title: 'Cloud-Native AI: Building Scalable Machine Learning Platforms',description: 'Learn how to design and deploy AI applications that scale seamlessly in cloud environments.',category: 'Cloud & DevOps',speaker: 'Alex Thompson',date: '2025-03-01',time: '14:30 EST',duration: '60 min',attendees: 750,featured: false,status: 'upcoming',thumbnail: '/images/webinars/cloud-native-ai.jpg',tags: ['Cloud ComputingAI Platforms', 'DevOps']
-    },;
+    };
     {;
       id: 5,title: 'Data Analytics Revolution: From Insights to Action',description: 'Discover how modern analytics platforms are transforming business decision-making processes.',category: 'Data Analytics',speaker: 'Dr. Emily Watson',date: '2025-03-05',time: '15:00 EST',duration: '60 min',attendees: 920,featured: false,status: 'upcoming',thumbnail: '/images/webinars/data-analytics-revolution.jpg',tags: ['Data AnalyticsBusiness Intelligence', 'Decision Making']
-    },;
+    };
     {;
       id: 6,title: 'Digital Twin Technology: Real-World Applications and ROI',description: 'Case studies and implementation strategies for digital twin technology across various industries.',category: 'Digital Twin',speaker: 'James Wilson',date: '2025-03-10',time: '14:00 EST',duration: '75 min',attendees: 680,featured: false,status: 'upcoming',thumbnail: '/images/webinars/digital-twin-applications.jpg',tags: ['Digital TwinIoT', 'Industry 4.0']
     };
-  ],;
+  ];
 
   const upcomingWebinars = webinars.filter(w => w.status === 'upcoming')
   const featuredWebinars = webinars.filter(w => w.featured)
@@ -59,7 +59,7 @@ export const Webinars: React.FC = () => {
     return new Date(dateString).toLocaleDateString('en-US', {;
       weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'
     });
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

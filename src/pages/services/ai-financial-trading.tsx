@@ -1,27 +1,27 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  TrendingUp,;
-  DollarSign, ;
-  Brain, ;
-  Zap, ;
-  CheckCircle, ;
-  Clock, ;
-  Shield,;
-  Users,;
-  BarChart3,;
-  Lock,;
-  Globe,;
-  Award,;
-  Star,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  TrendingUp,;
-  Target,;
-  Cpu,;
+  TrendingUp;
+  DollarSign;
+  Brain;
+  Zap;
+  CheckCircle;
+  Clock;
+  Shield;
+  Users;
+  BarChart3;
+  Lock;
+  Globe;
+  Award;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  TrendingUp;
+  Target;
+  Cpu;
   Activity;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -29,7 +29,7 @@ export default function AIFinancialTrading() {;
   const features = [;
     {;
       icon: <Brain className="w-6 h-6" />,title: "AI-Powered Market Analysis",description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
-    },;
+    };
     {;
       icon: <TrendingUp className="w-6 h-6" />,title: "Predictive Trading Signals",description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
     };
@@ -45,53 +45,53 @@ export default function AIFinancialTrading() {;
     {;
       icon: <BarChart3 className="w-6 h-6" />,title: "Performance Analytics",description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
       name: "Starter",price: "$299",period: "/month",features: [;
         "Basic AI trading signals"
-        "Portfolio tracking",;
-        "Email alerts",;
-        "Standard analytics",;
+        "Portfolio tracking";
+        "Email alerts";
+        "Standard analytics";
         "Basic risk management"
-      ],;
+      ];
       popular: false;
     };
     {;
       name: "Professional",price: "$799",period: "/month",features: [;
         "Advanced AI algorithms"
-        "Real-time signals",;
-        "Portfolio optimization",;
-        "Priority support",;
-        "Advanced analytics",;
-        "API access",;
+        "Real-time signals";
+        "Portfolio optimization";
+        "Priority support";
+        "Advanced analytics";
+        "API access";
         "Custom strategies"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Institutional",price: "$1,999",;
+      name: "Institutional",price: "$1,999";
       period: "/month",features: [;
         "Custom AI models"
-        "White-label platform",;
-        "Dedicated support",;
-        "SLA guarantees",;
-        "Advanced risk controls",;
-        "Multi-account management",;
+        "White-label platform";
+        "Dedicated support";
+        "SLA guarantees";
+        "Advanced risk controls";
+        "Multi-account management";
         "On-premise deployment"
-      ],;
+      ];
       popular: false;
     };
   ];
   const benefits = [;
-    "Increase trading returns by 25-40%",;
-    "Reduce trading risks by 60%",;
-    "Automate 80% of trading decisions",;
-    "24/7 market monitoring and alerts",;
-    "Professional-grade risk management",;
+    "Increase trading returns by 25-40%";
+    "Reduce trading risks by 60%";
+    "Automate 80% of trading decisions";
+    "24/7 market monitoring and alerts";
+    "Professional-grade risk management";
     "Access to institutional-level tools"
-  ],;
+  ];
 
   const tradingStrategies = [;
     {;
@@ -104,7 +104,7 @@ export default function AIFinancialTrading() {;
       strategy: "Sentiment Analysis",description: "Social media and news sentiment analysis for market direction prediction",performance: "42% annual return"
     };
     {;
-      strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis",;
+      strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis";
       performance: "38% annual return"
     };
   ];

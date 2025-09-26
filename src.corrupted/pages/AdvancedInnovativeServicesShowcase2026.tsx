@@ -1,45 +1,45 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain,;
-  Zap,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  TrendingUp,;
-  Users,;
-  Search,;
-  Filter,;
-  Star,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Brain;
+  Zap;
+  Globe;
+  Shield;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  TrendingUp;
+  Users;
+  Search;
+  Filter;
+  Star;
+  Clock;
+  DollarSign;
+  Target;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026"
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [sortBy, setSortBy] = useState('innovation'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const categories = useMemo(() => {;
     const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)],;
-  }, []),;
+    return ['all', ...Array.from(cats)];
+  }, []);
 
   const filteredServices = useMemo(() => {;
     let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
     //[^;]*
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
 
     //[^;]*
@@ -48,25 +48,25 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      ),;
+      );
     };
 
     //[^;]*
     filtered.sort((a, b) => {;
       switch (sortBy) {;
         case 'innovation':;
-          return b.innovationLevel.localeCompare(a.innovationLevel),;
+          return b.innovationLevel.localeCompare(a.innovationLevel);
         case 'roi':;
-          return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),;
+          return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
         case 'price':;
-          return a.price - b.price,;
+          return a.price - b.price;
         case 'delivery':;
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery),;
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default: return 0;
       };
     });
-    return filtered,;
-  }, [searchTerm, selectedCategory, sortBy]),;
+    return filtered;
+  }, [searchTerm, selectedCategory, sortBy]);
 
   const containerVariants = {;
     hidden: { opacity: 0 };

@@ -2,36 +2,36 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Shield,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Globe,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  AlertTriangle,;
-  Target,;
-  Users,;
-  ArrowRight,;
-  Key,;
-  Fingerprint,;
-  EyeOff,;
-  Server,;
-  Globe2,;
+  Shield;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Globe;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  AlertTriangle;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
   ShieldCheck;
 } from "lucide-react"
 export default function AICybersecurity() {;
@@ -56,10 +56,10 @@ export default function AICybersecurity() {;
     };
   ];
   const benefits = [;
-    'Detect threats 10x faster than traditional methodsReduce false positives by 85%',;
-    'Prevent 99.9% of cyber attacks24/7 automated security monitoring',;
+    'Detect threats 10x faster than traditional methodsReduce false positives by 85%';
+    'Prevent 99.9% of cyber attacks24/7 automated security monitoring';
     'Compliance with industry standardsScalable security for any organization'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -78,17 +78,17 @@ export default function AICybersecurity() {;
   const securityLayers = [;
     {;
       name: 'Perimeter Security',description: 'Advanced firewall and network protection systems',features: ['DDoS protectionIntrusion detection', 'Traffic analysis']
-    },;
+    };
     {;
       name: 'Endpoint Security',description: 'Device-level protection for all connected endpoints',features: ['Malware detectionBehavioral analysis', 'Threat isolation']
-    },;
+    };
     {;
       name: 'Application Security',description: 'Secure software development and runtime protection',features: ['Code analysisVulnerability scanning', 'Runtime monitoring']
-    },;
+    };
     {;
       name: 'Data Security',description: 'Protection for sensitive data and information',features: ['EncryptionAccess controls', 'Data loss prevention']
     };
-  ],;
+  ];
 
   return (
     <>;

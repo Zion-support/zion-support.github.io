@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react"
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {;
-  label?: string,;
-  error?: string,;
+  label?: string;
+  error?: string;
 };
 
-const Input = forwardRef<HTMLInputElement, InputProps>(;
+const Input = forwardRef<HTMLInputElement InputProps>(;
   ({ label, error, className = '', ...props }, ref) => {;
     return (
       <div className="w-full">;
@@ -29,9 +29,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(;
       </[^>]*>
     );
   };
-),;
+);
 
-Input.displayName = 'Input',;
+Input.displayName = 'Input';
 
 export { Input };
 export default Input;

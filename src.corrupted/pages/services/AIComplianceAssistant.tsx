@@ -2,25 +2,25 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  Shield,;
-  CheckCircle, ;
-  AlertTriangle, ;
-  FileText, ;
-  Users, ;
-  Zap, ;
-  Globe, ;
-  Lock, ;
-  Eye,;
-  BarChart3,;
-  TrendingUp,;
-  Clock,;
-  Award,;
-  Star,;
-  Cpu,;
-  Database,;
-  Search,;
-  Filter,;
-  Download,;
+  Shield;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Users;
+  Zap;
+  Globe;
+  Lock;
+  Eye;
+  BarChart3;
+  TrendingUp;
+  Clock;
+  Award;
+  Star;
+  Cpu;
+  Database;
+  Search;
+  Filter;
+  Download;
   Share2;
 } from "lucide-react"
 export default function AIComplianceAssistant() {;
@@ -33,7 +33,7 @@ export default function AIComplianceAssistant() {;
     };
     {;
       icon: FileText,title: "Document Management",description: "Intelligent document processing, classification, and automated compliance verification."
-    },;
+    };
     {;
       icon: Users,title: "Role-Based Access Control",description: "Secure access management with granular permissions and audit trails."
     };
@@ -43,16 +43,16 @@ export default function AIComplianceAssistant() {;
     {;
       icon: Globe,title: "Multi-Jurisdiction Support",description: "Comprehensive coverage of global regulations including GDPR, CCPA, SOX, and more."
     };
-  ],;
+  ];
 
   const benefits = [;
-    "Reduce compliance costs by 40-60% through automation",;
-    "Improve compliance accuracy by 95% with AI validation",;
-    "Reduce audit preparation time by 70%",;
-    "Minimize regulatory fines and penalties by 80%",;
-    "Enhance risk visibility and management by 90%",;
+    "Reduce compliance costs by 40-60% through automation";
+    "Improve compliance accuracy by 95% with AI validation";
+    "Reduce audit preparation time by 70%";
+    "Minimize regulatory fines and penalties by 80%";
+    "Enhance risk visibility and management by 90%";
     "Streamline compliance reporting and documentation"
-  ],;
+  ];
 
   const regulations = [;
     {;
@@ -77,20 +77,20 @@ export default function AIComplianceAssistant() {;
   const useCases = [;
     {;
       industry: "Financial Services",description: "Regulatory reporting, risk management, and compliance monitoring for banks and fintech companies"
-    },;
+    };
     {;
       industry: "Healthcare",description: "HIPAA compliance, patient data protection, and medical record security"
-    },;
+    };
     {;
       industry: "E-commerce",description: "Data privacy compliance, payment security, and customer data protection"
-    },;
+    };
     {;
       industry: "Manufacturing",description: "Environmental compliance, safety regulations, and quality standards"
-    },;
+    };
     {;
       industry: "Technology",description: "Data privacy, security compliance, and international regulatory adherence"
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
