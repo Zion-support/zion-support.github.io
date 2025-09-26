@@ -1,10 +1,35 @@
+<<<<<<< HEAD
 node_modules/
+=======
+# Build output
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 .next/
 out/
-build/
 dist/
+<<<<<<< HEAD
 *.config.js
 *.config.ts
+=======
+coverage/
+
+# Dependencies
+node_modules/
+
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**
+
+# Exclude corrupted or non-app source directories (keep main src for linting)
+# src/
+# components/
+
+# Large mono-repo subprojects not part of the current app build
+automation/
+automation_backup/
+automation-logs/
+automation-reports/
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 scripts/
 automation/
 netlify/
@@ -45,4 +70,26 @@ backend/
 server/
 zion-os/
 zion-website/
+<<<<<<< HEAD
 zion-ai-assistant/
+=======
+zion-ai-assistant/
+zion_academy/
+zion-film/
+src.corrupted/**
+
+# Ignore known corrupted or unused source areas (excluded from tsconfig build)
+# src/components/**
+# src/pages/**
+# src/routes/**
+# src/context/**
+src/utils/cartUtils.js
+**/*.config.ts
+vite.config.ts
+vitest.config.ts
+
+# Misc top-level jsx/js playground files
+*.backup
+*.bak
+# Keep above; no additional ignores below so that src-clean is linted
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
