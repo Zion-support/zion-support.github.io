@@ -34,9 +34,7 @@ import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
 import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
 import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
-import InnovationLanding2025 from './pages/InnovationLanding2025';
-import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
-import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
+// Duplicate imports removed
 
 export default function App(): JSX.Element {
   return (
