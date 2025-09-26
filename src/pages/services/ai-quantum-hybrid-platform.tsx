@@ -13,6 +13,7 @@ import {
   Smartphone,
   Monitor,
   CheckCircle,
+  Rocket,
 } from "lucide-react"
 
 const AIQuantumHybridPlatform: React.FC = () => {
