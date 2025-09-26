@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -55,11 +55,11 @@
     "dist",
     "build",
     "coverage",
-      "app/**/*",
-      // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
-      "src/pages/**",
-      "src/routes/**",
-      "src/utils/cartUtils.js",
+    "app/**/*",
+    // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
+    "src/pages/**",
+    "src/routes/**",
+    "src/utils/cartUtils.js",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
