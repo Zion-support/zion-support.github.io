@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
+import { Testimonials } from '../src/components/Testimonials';
+import { ContactForm } from '../src/components/ContactForm';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
@@ -195,6 +197,26 @@ export default function Home(): JSX.Element {
 											<FeatureCard feature={feature} />
 										</div>
 									))}
+								</div>
+							</div>
+						</section>
+
+						{/* Testimonials Section */}
+						<Testimonials />
+
+						{/* Contact Form Section */}
+						<section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+							<div className="container mx-auto px-4 max-w-6xl">
+								<div className="text-center mb-12">
+									<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+										Start Your Project Today
+									</h2>
+									<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+										Ready to transform your business with cutting-edge technology? Get in touch with our team of experts.
+									</p>
+								</div>
+								<div className="max-w-4xl mx-auto">
+									<ContactForm />
 								</div>
 							</div>
 						</section>

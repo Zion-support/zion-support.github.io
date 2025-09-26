@@ -3,6 +3,8 @@ export interface Service {
 	title: string;
 	description: string;
 	icon: string;
+	features?: string[];
+	price?: string;
 }
 
 export const SERVICES: Service[] = [
@@ -10,37 +12,49 @@ export const SERVICES: Service[] = [
 		id: 'ai-ml',
 		title: 'AI & Machine Learning',
 		description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
-		icon: '🤖'
+		icon: '🤖',
+		features: ['Custom AI Models', 'Machine Learning Pipelines', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+		price: 'From $5K'
 	},
 	{
 		id: 'cloud',
 		title: 'Cloud Solutions',
 		description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
-		icon: '☁️'
+		icon: '☁️',
+		features: ['Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration', 'Serverless Architecture', 'Cloud Security'],
+		price: 'From $3K'
 	},
 	{
 		id: 'web-dev',
 		title: 'Web Development',
 		description: 'Modern, responsive web applications built with the latest technologies and best practices.',
-		icon: '💻'
+		icon: '💻',
+		features: ['React/Next.js Apps', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development', 'Performance Optimization'],
+		price: 'From $2K'
 	},
 	{
 		id: 'mobile',
 		title: 'Mobile Development',
 		description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
-		icon: '📱'
+		icon: '📱',
+		features: ['Native iOS/Android', 'React Native Apps', 'Flutter Development', 'App Store Optimization', 'Push Notifications'],
+		price: 'From $4K'
 	},
 	{
 		id: 'data-analytics',
 		title: 'Data Analytics',
 		description: 'Advanced data analysis and business intelligence solutions to drive informed decisions.',
-		icon: '📊'
+		icon: '📊',
+		features: ['Data Visualization', 'Business Intelligence', 'Real-time Dashboards', 'Data Warehousing', 'Machine Learning Analytics'],
+		price: 'From $3K'
 	},
 	{
 		id: 'cybersecurity',
 		title: 'Cybersecurity',
 		description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-		icon: '🔒'
+		icon: '🔒',
+		features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Security Monitoring', 'Incident Response'],
+		price: 'From $2K'
 	}
 ];
 
