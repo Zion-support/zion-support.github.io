@@ -8,6 +8,7 @@ import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
+import { WebVitals } from '../src/components/WebVitals';
 import '../styles/animations.css';
 
 // Lazy load heavy components
@@ -152,6 +153,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </PerformanceOptimizer>
           <PerformanceMetrics />
           <PerformanceTracker />
+          <WebVitals />
           <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
         </HelmetProvider>
       </AnalyticsProvider>
