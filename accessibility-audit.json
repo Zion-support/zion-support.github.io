@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-09-26T23:41:28.105Z",
+  "timestamp": "2025-09-26T23:49:15.228Z",
   "summary": {
-    "totalIssues": 111,
+    "totalIssues": 113,
     "highSeverity": 13,
     "mediumSeverity": 47,
-    "lowSeverity": 51
+    "lowSeverity": 53
   },
   "issues": [
     {
@@ -57,15 +57,9 @@
     },
     {
       "file": "src/components/AdvancedAnalyticsInsights.tsx",
-      "issue": "Button missing accessible label",
-      "severity": "medium",
-      "count": 2
-    },
-    {
-      "file": "src/components/AdvancedAnalyticsInsights.tsx",
       "issue": "Heading missing id for anchor links",
       "severity": "low",
-      "count": 5
+      "count": 2
     },
     {
       "file": "src/components/AdvancedErrorHandler.tsx",
@@ -236,6 +230,30 @@
       "count": 1
     },
     {
+      "file": "src/components/ComprehensiveMonitoringDashboard.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "file": "src/components/ComprehensiveMonitoringDashboard.tsx",
+      "issue": "Heading missing id for anchor links",
+      "severity": "low",
+      "count": 1
+    },
+    {
+      "file": "src/components/ComprehensiveSecurityDashboard.tsx",
+      "issue": "Button missing accessible label",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "file": "src/components/ComprehensiveSecurityDashboard.tsx",
+      "issue": "Heading missing id for anchor links",
+      "severity": "low",
+      "count": 6
+    },
+    {
       "file": "src/components/ContactForm.tsx",
       "issue": "Button missing accessible label",
       "severity": "medium",
@@ -360,12 +378,6 @@
       "issue": "Input missing accessible label",
       "severity": "high",
       "count": 4
-    },
-    {
-      "file": "src/components/EnhancedUserExperience.tsx",
-      "issue": "Div with onClick should be button or have proper role",
-      "severity": "medium",
-      "count": 1
     },
     {
       "file": "src/components/EnhancedUserExperience.tsx",
@@ -709,7 +721,6 @@
   "recommendations": [
     "Priority: Fix all high severity accessibility issues",
     "Add proper labels to all form inputs and buttons",
-    "Replace div elements with onClick with proper button elements",
     "Review and fix medium severity issues",
     "Test with screen readers (NVDA, JAWS, VoiceOver)",
     "Test keyboard navigation without mouse",

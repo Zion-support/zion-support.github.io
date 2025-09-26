@@ -357,6 +357,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             placeholder={placeholder}
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={!isConnected}
+            aria-label="Type your message"
           />
           <button
             onClick={() = aria-label="handleSendMessage(inputText)}
@@ -379,6 +380,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         onChange={enableImageUpload ? handleImageUpload : handleFileUpload}
         accept={enableImageUpload ? 'image/*' : '*'}
         className="hidden"
+        aria-label="Upload file"
       />
     </div>
   );

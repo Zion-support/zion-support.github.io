@@ -52,6 +52,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                 }}
                 placeholder="Add a new task..."
                 className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                aria-label="Add a new task"
               />
               <button
                 onClick={() = aria-label="{
@@ -116,9 +117,11 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                   >
                     <input
                       type="checkbox"
+                      id={`task-${task.id}`}
                       checked={task.completed}
                       onChange={() => toggleTask(task.id)}
                       className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                      aria-label={`Mark task "${task.text}" as ${task.completed ? 'incomplete' : 'complete'}`}
                     />
                     <span
                       className={`flex-1 ${

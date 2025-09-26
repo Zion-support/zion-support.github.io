@@ -335,6 +335,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <label className="flex items-center">
             <input
               type="checkbox"
+              id={`setting-${setting.id}`}
               checked={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.checked)}
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
@@ -364,10 +365,12 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         return (
           <input
             type="text"
+            id={`setting-${setting.id}`}
             value={setting.value}
             onChange={(e) => handleSettingChange(setting.id, e.target.value)}
             placeholder={setting.placeholder}
             className={commonClasses}
+            aria-label={setting.label}
           />
         );
 
@@ -387,12 +390,14 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="space-y-2">
             <input
               type="range"
+              id={`setting-${setting.id}`}
               min={setting.min}
               max={setting.max}
               step={setting.step}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              aria-label={setting.label}
             />
             <div className="flex justify-between text-sm text-gray-500">
               <span>{setting.min}</span>
@@ -407,15 +412,19 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="flex items-center space-x-2">
             <input
               type="color"
+              id={`setting-${setting.id}-color`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
               className="h-10 w-20 border border-gray-300 rounded cursor-pointer"
+              aria-label={`${setting.label} color picker`}
             />
             <input
               type="text"
+              id={`setting-${setting.id}-text`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
               className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label={`${setting.label} color value`}
             />
           </div>
         );

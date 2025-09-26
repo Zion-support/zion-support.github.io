@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
@@ -21,6 +21,19 @@ const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTr
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  // Register service worker for performance optimization
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw-performance.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  }, []);
+
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
@@ -32,6 +45,14 @@ export default function App({ Component, pageProps }: AppProps) {
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <meta name="mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+            <meta name="apple-mobile-web-app-title" content="Zion App" />
+            <link rel="apple-touch-icon" href="/icon-192x192.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
           </Head>
       <style jsx global>{`
         * {

@@ -383,6 +383,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         onChange={handleFileInputChange}
         className="hidden"
         disabled={disabled}
+        aria-label="Upload file"
       />
     </div>
   );

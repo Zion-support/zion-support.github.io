@@ -293,11 +293,12 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Team Size */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700 mb-3">
+						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700 mb-3">
 							Team Size
 						</label>
 						<input
 							type="number"
+							id="teamSize"
 							min="1"
 							max="10"
 							value={inputs.teamSize}
@@ -319,6 +320,7 @@ export const PricingCalculator: React.FC = () => {
 										<span className="text-sm text-gray-600">{formatPrice(feature.price)}</span>
 										<input
 											type="checkbox"
+											id={`feature-${feature.id}`}
 											checked={inputs.additionalFeatures.includes(feature.id)}
 											onChange={() => handleFeatureToggle(feature.id)}
 											className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"

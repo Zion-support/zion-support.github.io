@@ -293,6 +293,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Search users"
             />
           </div>
           <select
@@ -377,9 +378,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({
               <th className="px-6 py-3 text-left">
                 <input
                   type="checkbox"
+                  id="select-all-users"
                   checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
                   onChange={handleSelectAll}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  aria-label="Select all users"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -405,9 +408,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap">
                   <input
                     type="checkbox"
+                    id={`user-${user.id}`}
                     checked={selectedUsers.includes(user.id)}
                     onChange={() => handleUserSelect(user.id)}
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    aria-label={`Select user ${user.name}`}
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
