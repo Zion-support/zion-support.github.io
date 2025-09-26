@@ -48,7 +48,15 @@
     "strictNullChecks": false
   },
   "include": [
-    "types.d.ts"
+    "types.d.ts",
+    "src/main.tsx",
+    "App.tsx",
+    "src/pages/Home.*",
+    "src/pages/About.*",
+    "src/pages/Contact.*",
+    "src/index.css",
+    "pages_minimal/**/*",
+    "__safe_tests__/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -66,11 +74,11 @@
     "zion-website",
     "zion-ai-assistant",
     "types.disabled",
-    "**/*.config.ts",
-    "vite.config.ts",
-    "vitest.config.ts",
+    // Temporarily exclude broader areas known to be corrupted/not used by build
     "src/pages/**",
     "src/routes/**",
-    "src/utils/cartUtils.js"
+    "**/*.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
   ]
 }
