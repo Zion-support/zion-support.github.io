@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Star, TrendingUp, Target, Zap, BookOpen, FileText, BarChart3 } from 'lucide-react';
+import { ArrowRight, Clock, Star, Zap, BookOpen, FileText, BarChart3 } from 'lucide-react';
 
 const UltimateContentShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -194,7 +194,7 @@ const UltimateContentShowcase2025 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {filteredContent.map((content, index) => (
+          {filteredContent.map((content, _index) => (
             <div
               key={content.id}
               className={`bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Tag, Share2, BookOpen, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
 import SEO from '../../components/SEO';
 
