@@ -335,6 +335,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <label className="flex items-center">
             <input
               type="checkbox"
+              id={`setting-${setting.id}`}
               checked={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.checked)}
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
@@ -364,10 +365,12 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         return (
           <input
             type="text"
+            id={`setting-${setting.id}`}
             value={setting.value}
             onChange={(e) => handleSettingChange(setting.id, e.target.value)}
             placeholder={setting.placeholder}
             className={commonClasses}
+            aria-label={setting.label}
           />
         );
 
@@ -387,12 +390,14 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="space-y-2">
             <input
               type="range"
+              id={`setting-${setting.id}`}
               min={setting.min}
               max={setting.max}
               step={setting.step}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              aria-label={setting.label}
             />
             <div className="flex justify-between text-sm text-gray-500">
               <span>{setting.min}</span>
@@ -407,15 +412,19 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="flex items-center space-x-2">
             <input
               type="color"
+              id={`setting-${setting.id}-color`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
               className="h-10 w-20 border border-gray-300 rounded cursor-pointer"
+              aria-label={`${setting.label} color picker`}
             />
             <input
               type="text"
+              id={`setting-${setting.id}-text`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
               className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label={`${setting.label} color value`}
             />
           </div>
         );
@@ -433,13 +442,20 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         {/* Sidebar */}
         <div className="w-64 border-r border-gray-200 bg-gray-50">
           <div className="p-4">
-            <h2 className="text-lg font-semibold text-gray-900">Settings</h2>
+            <h2 className="text-lg font-semibold text-gray-900" id="settings">Settings</h2>
           </div>
           <nav className="space-y-1 px-4 pb-4">
             {categories.map(category => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() = aria-label="setActiveCategory(category)}
+                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  activeCategory === category
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                }`}
+              >
+                {category}"> setActiveCategory(category)}
                 className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
@@ -457,19 +473,19 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           {/* Header */}
           <div className="px-6 py-4 border-b border-gray-200">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-medium text-gray-900">{activeCategory}</h3>
+              <h3 className="text-lg font-medium text-gray-900" id="activecategory">{activeCategory}</h3>
               <div className="flex space-x-2">
                 <button
                   onClick={handleReset}
                   className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
-                >
+                 aria-label="Reset">
                   Reset
                 </button>
                 <button
                   onClick={handleSave}
                   disabled={!hasChanges || isSaving}
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
+                 aria-label="{isSaving ? 'Saving...' : 'Save Changes'}">
                   {isSaving ? 'Saving...' : 'Save Changes'}
                 </button>
               </div>

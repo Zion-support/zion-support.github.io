@@ -1,26 +1,98 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { PerformanceDashboard } from '../src/components/PerformanceDashboard';
-import { SecurityDashboard } from '../src/components/SecurityDashboard';
-import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
-import EnhancedDashboard from '../src/components/EnhancedDashboard';
-import EnhancedSearch from '../src/components/EnhancedSearch';
-import ComprehensiveAnalyticsDashboard from '../src/components/ComprehensiveAnalyticsDashboard';
-import { AdvancedPerformanceMonitor } from '../src/components/AdvancedPerformanceMonitor';
-import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsDashboard';
-import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
-import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessibilityAuditor';
-import SystemMonitor from '../src/components/SystemMonitor';
-import SecurityMonitor from '../src/components/SecurityMonitor';
-import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
-import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
-import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
-import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
-import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import dynamic from 'next/dynamic';
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights';
+// Lazy load heavy components for better performance
+const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+});
+
+const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
+});
+
+const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
+});
+
+const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
+});
+
+const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
+});
+
+const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600"></div></div>
+});
+
+const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div></div>
+});
+
+const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600"></div></div>
+});
+
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div></div>
+});
+
+const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-600"></div></div>
+});
+
+const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div></div>
+});
+
+const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-rose-600"></div></div>
+});
+
+const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600"></div></div>
+});
+
+const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-600"></div></div>
+});
+
+const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-600"></div></div>
+});
+
+const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600"></div></div>
+});
+
+const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-fuchsia-600"></div></div>
+});
+
+const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
+});
+
+// New components from the comprehensive improvements branch
+const SEOOptimizer = dynamic(() => import('../src/components/SEOOptimizer'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const AdvancedCacheManager = dynamic(() => import('../src/components/AdvancedCacheManager'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const RealTimeAnalytics = dynamic(() => import('../src/components/RealTimeAnalytics'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const AccessibilityEnhancements = dynamic(() => import('../src/components/AccessibilityEnhancements'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'seo-optimizer' | 'cache-manager' | 'real-time-analytics' | 'accessibility-enhancements' | 'new-performance' | 'new-security' | 'new-analytics';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -38,14 +110,18 @@ const Dashboard: React.FC = () => {
     { id: 'advanced-security' as const, name: 'Advanced Security', icon: '🛡️' },
     { id: 'accessibility' as const, name: 'Accessibility', icon: '♿' },
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
-    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
-    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
     { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
     { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
+    { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'seo-optimizer' as const, name: 'SEO Optimizer', icon: '🔍' },
+    { id: 'cache-manager' as const, name: 'Cache Manager', icon: '💾' },
+    { id: 'real-time-analytics' as const, name: 'Real-Time Analytics', icon: '📊' },
+    { id: 'accessibility-enhancements' as const, name: 'Accessibility', icon: '♿' }
   ];
 
   // Sample data for advanced components
@@ -208,6 +284,13 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'security-enhancements':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+            <AdvancedSecurityEnhancements />
+          </div>
+        );
       case 'new-performance':
         return (
           <div className="p-8">
@@ -298,18 +381,11 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
-      case 'security-enhancements':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
-            <AdvancedSecurityEnhancements />
-          </div>
-        );
       case 'error-handler':
         return (
           <div className="p-8">
             <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Error Handler</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
               <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
@@ -320,10 +396,13 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <AdvancedErrorHandler 
-              enableRealTime={true}
-              refreshInterval={5000}
-              onError={(error) => console.log('Error detected:', error)}
-              onErrorResolved={(error) => console.log('Error resolved:', error)}
+              onError={(error) => console.log('Error captured:', error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              enableAutoRetry={true}
+              maxRetries={3}
+              enablePerformanceMonitoring={true}
+              enableErrorReporting={true}
+              enableUserFeedback={true}
             />
           </div>
         );
@@ -390,6 +469,45 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'seo-optimizer':
+        return (
+          <div className="p-6">
+            <SEOOptimizer
+              seoData={{
+                title: 'Dashboard - Zion Tech Solutions',
+                description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics',
+                keywords: ['dashboard', 'analytics', 'performance', 'security', 'monitoring'],
+                canonical: 'https://ziontechgroup.com/dashboard',
+                ogImage: 'https://ziontechgroup.com/og-dashboard.jpg',
+                twitterCard: 'summary_large_image',
+                structuredData: {
+                  '@context': 'https://schema.org',
+                  '@type': 'WebPage',
+                  name: 'Dashboard',
+                  description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics'
+                }
+              }}
+            />
+          </div>
+        );
+      case 'cache-manager':
+        return (
+          <div className="p-6">
+            <AdvancedCacheManager />
+          </div>
+        );
+      case 'real-time-analytics':
+        return (
+          <div className="p-6">
+            <RealTimeAnalytics />
+          </div>
+        );
+      case 'accessibility-enhancements':
+        return (
+          <div className="p-6">
+            <AccessibilityEnhancements />
           </div>
         );
       default:
