@@ -1,464 +1,306 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 
-interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  gradient: string;
+interface Task {
+	id: number;
+	text: string;
+	completed: boolean;
+	createdAt: string;
 }
 
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  price: string;
-  features: string[];
+interface AppState {
+	isLoading: boolean;
+	error: string | null;
+	data: { message: string } | null;
 }
 
-const features: Feature[] = [
-  {
-    id: '1',
-    title: 'AI-Powered Solutions',
-    description: 'Advanced artificial intelligence and machine learning services for modern businesses',
-    icon: '🤖',
-    gradient: 'from-purple-500 to-pink-500'
-  },
-  {
-    id: '2',
-    title: 'Blockchain Technology',
-    description: 'Secure, decentralized solutions using cutting-edge blockchain technology',
-    icon: '⛓️',
-    gradient: 'from-blue-500 to-cyan-500'
-  },
-  {
-    id: '3',
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions with enterprise-grade security and performance',
-    icon: '☁️',
-    gradient: 'from-green-500 to-teal-500'
-  },
-  {
-    id: '4',
-    title: 'Quantum Computing',
-    description: 'Next-generation quantum computing solutions for complex problem solving',
-    icon: '⚛️',
-    gradient: 'from-orange-500 to-red-500'
-  },
-  {
-    id: '5',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your digital assets',
-    icon: '🔒',
-    gradient: 'from-indigo-500 to-purple-500'
-  },
-  {
-    id: '6',
-    title: 'Data Analytics',
-    description: 'Advanced data analytics and business intelligence solutions',
-    icon: '📊',
-    gradient: 'from-pink-500 to-rose-500'
-  }
-];
+type FilterType = 'all' | 'active' | 'completed';
 
-const services: Service[] = [
-  {
-    id: '1',
-    name: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: '🤖',
-    price: 'Starting at $5,000',
-    features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-  },
-  {
-    id: '2',
-    name: 'Blockchain Solutions',
-    description: 'Secure and scalable blockchain implementations',
-    icon: '⛓️',
-    price: 'Starting at $10,000',
-    features: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'Token Development']
-  },
-  {
-    id: '3',
-    name: 'Cloud Migration',
-    description: 'Seamless migration to cloud infrastructure',
-    icon: '☁️',
-    price: 'Starting at $3,000',
-    features: ['AWS/Azure/GCP Setup', 'Data Migration', 'Security Implementation', '24/7 Monitoring']
-  }
-];
+export default function App(): React.ReactElement {
+	const [state, setState] = useState<AppState>({
+		isLoading: true,
+		error: null,
+		data: null
+	});
 
-export default function App() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const [isScrolled, setIsScrolled] = useState(false);
-  const heroRef = useRef<HTMLDivElement>(null);
+	const [showTaskManager, setShowTaskManager] = useState(false);
+	const [tasks, setTasks] = useState<Task[]>([]);
+	const [newTaskText, setNewTaskText] = useState('');
+	const [filter, setFilter] = useState<FilterType>('all');
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+	useEffect(() => {
+		// Simulate loading
+		const timer = setTimeout(() => {
+			setState(prev => ({
+				...prev,
+				isLoading: false,
+				data: { message: 'App loaded successfully!' }
+			}));
+		}, 1000);
 
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+		return () => clearTimeout(timer);
+	}, []);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+	// Load tasks from localStorage on mount
+	useEffect(() => {
+		const savedTasks = localStorage.getItem('tasks');
+		if (savedTasks) {
+			try {
+				setTasks(JSON.parse(savedTasks));
+			} catch (error) {
+				console.error('Error parsing saved tasks:', error);
+			}
+		}
+	}, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+	// Save tasks to localStorage whenever tasks change
+	useEffect(() => {
+		if (tasks.length > 0) {
+			localStorage.setItem('tasks', JSON.stringify(tasks));
+		}
+	}, [tasks]);
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
-    setIsMenuOpen(false);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+	const addTask = () => {
+		if (newTaskText.trim()) {
+			const newTask: Task = {
+				id: Date.now(),
+				text: newTaskText.trim(),
+				completed: false,
+				createdAt: new Date().toISOString()
+			};
+			setTasks(prev => [...prev, newTask]);
+			setNewTaskText('');
+		}
+	};
 
-  return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
-    }`}>
-      {/* Enhanced Header with Navigation */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Zion Tech Group
-              </h1>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {['home', 'services', 'features', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors ${
-                    activeSection === section
-                      ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
-            </nav>
+	const toggleTask = (id: number) => {
+		setTasks(prev => prev.map(task => 
+			task.id === id ? { ...task, completed: !task.completed } : task
+		));
+	};
 
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-500 dark:text-gray-400 hidden sm:block">
-                {currentTime.toLocaleTimeString()}
-              </span>
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? '☀️' : '🌙'}
-              </button>
-              
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle menu"
-              >
-                {isMenuOpen ? '✕' : '☰'}
-              </button>
-            </div>
-          </div>
-        </div>
+	const deleteTask = (id: number) => {
+		setTasks(prev => prev.filter(task => task.id !== id));
+	};
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div className="px-4 py-2 space-y-2">
-              {['home', 'services', 'features', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`block w-full text-left capitalize py-2 px-3 rounded-md transition-colors ${
-                    activeSection === section
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
+	const handleKeyDown = (e: React.KeyboardEvent) => {
+		if (e.key === 'Enter') {
+			addTask();
+		}
+	};
 
-      {/* Main Content */}
-      <main className="pt-16">
-        {/* Enhanced Hero Section */}
-        <section id="home" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 opacity-10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-                Welcome to{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Building the future with cutting-edge technology solutions. 
-                We specialize in AI, blockchain, quantum computing, and enterprise software development.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  Get Started
-                </button>
-                <button 
-                  onClick={() => scrollToSection('features')}
-                  className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+	const filteredTasks = tasks.filter(task => {
+		switch (filter) {
+			case 'active':
+				return !task.completed;
+			case 'completed':
+				return task.completed;
+			default:
+				return true;
+		}
+	});
 
-        {/* Enhanced Features Section */}
-        <section id="features" className="py-20 bg-white dark:bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Core Technologies
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge solutions powered by the latest technologies
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={feature.id}
-                  className="group bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+	const activeTasks = tasks.filter(task => !task.completed);
+	const completedTasks = tasks.filter(task => task.completed);
 
-        {/* Services Section */}
-        <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions tailored to your business needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                >
-                  <div className="text-4xl mb-6">{service.icon}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-6">
-                    {service.price}
-                  </div>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-600 dark:text-gray-300">
-                        <span className="text-green-500 mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+	if (state.isLoading) {
+		return (
+			<div className="min-h-screen flex items-center justify-center p-8">
+				<div className="text-center">
+					<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+					<p className="text-gray-600">Loading...</p>
+				</div>
+			</div>
+		);
+	}
 
-        {/* Enhanced Stats Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Our Impact
-              </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Delivering exceptional results for businesses worldwide
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="group">
-                <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  500+
-                </div>
-                <div className="text-blue-100 text-lg">Projects Completed</div>
-              </div>
-              <div className="group">
-                <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  200+
-                </div>
-                <div className="text-blue-100 text-lg">Happy Clients</div>
-              </div>
-              <div className="group">
-                <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  24/7
-                </div>
-                <div className="text-blue-100 text-lg">Support Available</div>
-              </div>
-              <div className="group">
-                <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  99%
-                </div>
-                <div className="text-blue-100 text-lg">Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </section>
+	if (state.error) {
+		return (
+			<div className="min-h-screen flex items-center justify-center p-8">
+				<div className="text-center max-w-xl">
+					<div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+						<strong className="font-bold">Error: </strong>
+						<span className="block sm:inline">{state.error}</span>
+					</div>
+					<button 
+						onClick={() => window.location.reload()}
+						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+					>
+						Retry
+					</button>
+				</div>
+			</div>
+		);
+	}
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Let&apos;s discuss how we can help transform your business with cutting-edge technology
-              </p>
-            </div>
-            
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl shadow-lg">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                      Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <span className="text-blue-600 dark:text-blue-400 mr-3">📧</span>
-                        <span className="text-gray-600 dark:text-gray-300">hello@ziontechgroup.com</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-blue-600 dark:text-blue-400 mr-3">📞</span>
-                        <span className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-blue-600 dark:text-blue-400 mr-3">📍</span>
-                        <span className="text-gray-600 dark:text-gray-300">San Francisco, CA</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                      Schedule a Consultation
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+	if (showTaskManager) {
+		return (
+			<div className="min-h-screen bg-gray-50 py-8">
+				<div className="max-w-2xl mx-auto px-4">
+					<div className="bg-white rounded-lg shadow-lg p-6">
+						<div className="flex justify-between items-center mb-6">
+							<h1 className="text-2xl font-bold text-gray-800">Task Manager</h1>
+							<button 
+								onClick={() => setShowTaskManager(false)}
+								className="text-gray-500 hover:text-gray-700"
+							>
+								← Back
+							</button>
+						</div>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-              <p className="text-gray-400 mb-4">
-                Building the future with cutting-edge technology solutions.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">AI Development</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blockchain Solutions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cloud Migration</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2025 Zion Tech Group. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              Built with React, Next.js, and Tailwind CSS
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+						{/* Add Task Form */}
+						<div className="flex gap-2 mb-6">
+							<input
+								type="text"
+								placeholder="Add a new task..."
+								value={newTaskText}
+								onChange={(e) => setNewTaskText(e.target.value)}
+								onKeyDown={handleKeyDown}
+								className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+							/>
+							<button
+								onClick={addTask}
+								className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+							>
+								Add Task
+							</button>
+						</div>
+
+						{/* Task Stats */}
+						<div className="grid grid-cols-3 gap-4 mb-6">
+							<div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-center">
+								<div className="text-blue-600 font-semibold">{tasks.length}</div>
+								<div className="text-sm text-blue-700">Total</div>
+							</div>
+							<div className="bg-green-50 border border-green-200 rounded-lg p-3 text-center">
+								<div className="text-green-600 font-semibold">{activeTasks.length}</div>
+								<div className="text-sm text-green-700">Active</div>
+							</div>
+							<div className="bg-purple-50 border border-purple-200 rounded-lg p-3 text-center">
+								<div className="text-purple-600 font-semibold">{completedTasks.length}</div>
+								<div className="text-sm text-purple-700">Completed</div>
+							</div>
+						</div>
+
+						{/* Filter Buttons */}
+						<div className="flex gap-2 mb-4">
+							<button
+								onClick={() => setFilter('all')}
+								className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 ${
+									filter === 'all' 
+										? 'bg-blue-600 text-white' 
+										: 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+								}`}
+							>
+								All ({tasks.length})
+							</button>
+							<button
+								onClick={() => setFilter('active')}
+								className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 ${
+									filter === 'active' 
+										? 'bg-blue-600 text-white' 
+										: 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+								}`}
+							>
+								Active ({activeTasks.length})
+							</button>
+							<button
+								onClick={() => setFilter('completed')}
+								className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 ${
+									filter === 'completed' 
+										? 'bg-blue-600 text-white' 
+										: 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+								}`}
+							>
+								Completed ({completedTasks.length})
+							</button>
+						</div>
+
+						{/* Task List */}
+						<div className="space-y-2">
+							{filteredTasks.length === 0 ? (
+								<div className="text-center py-8 text-gray-500">
+									{filter === 'all' ? 'No tasks yet. Add one above!' : 
+									 filter === 'active' ? 'No active tasks.' : 'No completed tasks.'}
+								</div>
+							) : (
+								filteredTasks.map(task => (
+									<div key={task.id} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+										<input
+											type="checkbox"
+											checked={task.completed}
+											onChange={() => toggleTask(task.id)}
+											className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+										/>
+										<span className={`flex-1 ${task.completed ? 'line-through text-gray-500' : 'text-gray-800'}`}>
+											{task.text}
+										</span>
+										<button
+											onClick={() => deleteTask(task.id)}
+											title={task.text}
+											className="text-red-500 hover:text-red-700 p-1"
+										>
+											🗑️
+										</button>
+									</div>
+								))
+							)}
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
+
+	return (
+		<div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="text-center max-w-2xl">
+				<div className="bg-white rounded-2xl shadow-xl p-8">
+					<div className="mb-6">
+						<div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span className="text-3xl text-white">⚡</span>
+						</div>
+						<h1 className="text-4xl font-bold text-gray-800 mb-3">
+							Zion Tech Group
+						</h1>
+						<p className="text-gray-600 text-lg mb-6">
+							React + Vite app is configured and building correctly.
+						</p>
+					</div>
+					
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+						<div className="bg-green-50 border border-green-200 rounded-lg p-4">
+							<div className="text-green-600 font-semibold mb-1">✓ Build</div>
+							<div className="text-sm text-green-700">Successful</div>
+						</div>
+						<div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+							<div className="text-blue-600 font-semibold mb-1">⚡ Vite</div>
+							<div className="text-sm text-blue-700">Fast Dev</div>
+						</div>
+						<div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+							<div className="text-purple-600 font-semibold mb-1">⚛️ React</div>
+							<div className="text-sm text-purple-700">Ready</div>
+						</div>
+					</div>
+
+					<div className="bg-gray-50 rounded-lg p-4 mb-6">
+						<p className="text-sm text-gray-600 mb-2">Status:</p>
+						<p className="text-green-600 font-medium">{state.data?.message}</p>
+					</div>
+
+					<div className="flex flex-col sm:flex-row gap-3 justify-center">
+						<button 
+							onClick={() => setShowTaskManager(true)}
+							className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+						>
+							🚀 Try Task Manager
+						</button>
+						<button className="border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold py-2 px-6 rounded-lg transition-colors duration-200">
+							Learn More
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
