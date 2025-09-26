@@ -17,13 +17,12 @@ const UltimateAITransformation2025Banner = () => {
   }, []);
 
   useEffect(() => {
-    if (!(isVisible && !isDismissed)) {
-      return;
+    if (isVisible && !isDismissed) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
   }, [isVisible, isDismissed]);
 
   const handleDismiss = () => {
@@ -82,7 +81,7 @@ const UltimateAITransformation2025Banner = () => {
 
   if (!isVisible || isDismissed) return null;
 
-  const currentContent = (featuredContent[currentSlide] ?? featuredContent[0])!;
+  const currentContent = featuredContent[currentSlide];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">

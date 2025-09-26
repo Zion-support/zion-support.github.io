@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
-// SEO component removed; use Next.js Metadata instead
+import SEO from '@/components/SEO';
 
 export const metadata: Metadata = {
   title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
@@ -13,7 +13,12 @@ export const metadata: Metadata = {
 export default function EdgeComputingRevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* SEO handled via exported metadata above */}
+      <SEO
+        title="AI 2025: Edge Computing Revolution - Ultimate Guide"
+        description="Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation."
+        keywords="edge computing, AI, 2025, revolution, guide, enterprise"
+        url="/blog/ai-2025-edge-computing-revolution-ultimate-guide"
+      />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">

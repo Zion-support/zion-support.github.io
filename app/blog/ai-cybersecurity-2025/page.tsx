@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-
 import SEO from '../../../components/SEO';
+import Link from 'next/link';
 
 export default function AICybersecurity2025() {
   return (

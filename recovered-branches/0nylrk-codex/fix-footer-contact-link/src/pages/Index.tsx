@@ -57,9 +57,9 @@ import { FeaturesGuideSection } from '@/components / FeaturesGuideSection',
 import { SocialShareSection } from '@/components / SocialShareSection',
 import { use_translation } from './react - i18next',
 import { use_language } from '@/context / LanguageContext',
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from './lucide-react',;
-const { t } = useTranslation(),;
-const { isRTL } = useLanguage(),
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from './lucide-react',
+  const { t } = useTranslation(),
+  const { isRTL } = useLanguage(),
   ArrowRight,
   Users,
   Zap,
@@ -69,13 +69,13 @@ const { isRTL } = useLanguage(),
   Sparkles,
   BarChart3,
   Smartphone} from "lucide-react",
-export default function Index() {;
-const { t } = useTranslation(),;
-const { isRTL } = useLanguage(),
-  // Tools and features showcase,;
-const toolsFeatures = [
-    {,
-title: t("home.tool_ai_matcher"),
+export default function Index() {
+  const { t } = useTranslation(),
+  const { isRTL } = useLanguage(),
+  // Tools and features showcase,
+  const toolsFeatures = [
+    {
+      title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
       link: "/match"}
@@ -116,58 +116,55 @@ title: "Mobile App",
       link: "/mobile-launch",
 export default /**,
  * Index - Function description,
- */,;
-function Index() {;
-const { t } = use_translation (),;
-const { isRTL } = use_language (),
-  // Tools and features showcase,;
-const tools_features = [
-    {,
-title: t ("home.tool_ai_matcher"),
+ */,
+function Index() {
+  const { t } = use_translation (),
+  const { isRTL } = use_language (),
+  // Tools and features showcase,
+  const tools_features = [
+    {
+      title: t ("home.tool_ai_matcher"),
       description: t ("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,
       link: "/match"}
-  ],;
-return (
+  ],
+  return (
     <div className="min-h-screen bg-zion-blue text-white">,
-      <SEO,
-title={t("home.seo_title")}
+      <SEO
+        title={t("home.seo_title")}
         description={t("home.seo_description")}
         keywords={t("home.seo_keywords")}
         canonical="https: //ziontechgroup.com/",
       />,
       <Header />,
       <HeroSection />,
-
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">,
         <div className="container mx-auto px-4">,
           <div className="text-center mb-12">,
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">,
-
               {t("home.explore_tools")}
-            
+            </h2>,
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">,
-
               {t("home.tools_description")}
-
+            </p>,
+          </div>,
           <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>,
-
             {toolsFeatures.map((feature, index) => (
               <Link,
 key={index}
                 to={feature.link}
                 className="bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300">,
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">,
-
                   {feature.icon}
-                
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}
-                <p className="text-zion-slate-light mb-4">{feature.description}
+                </div>,
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>,
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>,
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>,
-                  <span>{t("general.explore")}
+                  <span>{t("general.explore")}</span>,
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />,
-
+                </div>,
+              </Link>,
   ArrowRight,
   Users,
   Zap,
@@ -177,92 +174,84 @@ key={index}
   Sparkles,
   BarChart3,
   Smartphone} from "lucide-react",
-export default function Index() {;
-const { t } = useTranslation(),;
-const { isRTL } = useLanguage(),
-  // Tools and features showcase,;
-const toolsFeatures = [
-    {,
-title: t("home.tool_ai_matcher"),
+export default function Index() {
+  const { t } = useTranslation(),
+  const { isRTL } = useLanguage(),
+  // Tools and features showcase,
+  const toolsFeatures = [
+    {
+      title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
       link: "/match"},
-
-    {,
-title: t("home.tool_talent"),
+    {
+      title: t("home.tool_talent"),
       description: t("home.tool_talent_desc"),
       icon: <Users className="h-6 w-6 text-zion-purple" />,
       link: "/talent"},
-
-    {,
-title: t("home.tool_services"),
+    {
+      title: t("home.tool_services"),
       description: t("home.tool_services_desc"),
       icon: <Zap className="h-6 w-6 text-zion-cyan" />,
       link: "/services"},
-
-    {,
-title: t("home.tool_equipment"),
+    {
+      title: t("home.tool_equipment"),
       description: t("home.tool_equipment_desc"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
       link: "/equipment"},
-
-    {,
-title: t("home.tool_analytics"),
+    {
+      title: t("home.tool_analytics"),
       description: t("home.tool_analytics_desc"),
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
       link: "/analytics"},
-
-    {,
-title: "Mobile App",
+    {
+      title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"}
-  ],;
-return (
+  ],
+  return (
     <div className="min-h-screen bg-zion-blue text-white">,
-      <SEO,
-title={t("home.seo_title")} ,
+      <SEO
+        title={t("home.seo_title")} ,
         description={t("home.seo_description")} ,
         keywords={t("home.seo_keywords")}
         canonical="https: //app.ziontechgroup.com/",
       />,
       <Header />,
       <HeroSection />,
-
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">,
         <div className="container mx-auto px-4">,
           <div className="text-center mb-12">,
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">,
-
               {t("home.explore_tools")}
-            
+            </h2>,
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">,
-
               {t("home.tools_description")}
-
+            </p>,
+          </div>,
           <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>,
-
             {toolsFeatures.map((feature, index) => (
-              <Link,
-key={index} ,
+              <Link
+                key={index} ,
                 to={feature.link} ,
                 className="bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300">,
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">,
-
                   {feature.icon}
-                
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}
-                <p className="text-zion-slate-light mb-4">{feature.description}
+                </div>,
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>,
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>,
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>,
-                  <span>{t("general.explore")}
+                  <span>{t("general.explore")}</span>,
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />,
-                
-              </Link>
-
+                </div>,
+              </Link>>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982))}
+          </div>,
+        </div>,
+      </section>,
       <CategoriesSection />,
       <BenefitsSection />,
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />,
       <HowItWorksSection />,
@@ -270,7 +259,6 @@ key={index} ,
       <TestimonialCarousel />,
       <TrustedBySection />,
       <BlogSection />,
-
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />,
       <WaitlistSection />,
@@ -279,8 +267,8 @@ key={index} ,
     </div>)}
 ,
     <div className="min-h-screen bg-zion-blue text-white">,
-      <SEO,
-title={t("home && home.seo_title")} ,
+      <SEO
+        title={t("home && home.seo_title")} ,
         description={t("home && home.seo_description")} ,
         keywords={t("home && home.seo_keywords")}
         canonical="https: //app && app.ziontechgroup.com/",
@@ -288,27 +276,26 @@ title={t("home && home.seo_title")} ,
       <Header />,
       <HeroSection />,
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>,
-
             {toolsFeatures && toolsFeatures.map((feature, index) => (
-              <Link,
-key={index} ,
+              <Link
+                key={index} ,
                 to={feature && feature.link} ,
                 className="bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300">,
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">,
-
                   {feature && feature.icon}
-                
-                <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}
-                <p className="text-zion-slate-light mb-4">{feature && feature.description}
+                </div>,
+                <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}</h3>,
+                <p className="text-zion-slate-light mb-4">{feature && feature.description}</p>,
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>,
-                  <span>{t("general && general.explore")}
+                  <span>{t("general && general.explore")}</span>,
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />,
-                
+                </div>,
               </Link>))}
-
+          </div>,
+        </div>,
+      </section>,
       <CategoriesSection />,
       <BenefitsSection />,
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />,
       <HowItWorksSection />,
@@ -316,7 +303,6 @@ key={index} ,
       <TestimonialCarousel />,
       <TrustedBySection />,
       <BlogSection />,
-
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />,
       <WaitlistSection />,
@@ -324,49 +310,46 @@ key={index} ,
       <Footer />,
     </div>)}
     <div className="min - h-screen bg - zion - blue text - white">,
-      <SEO,
-title={t ("home.seo_title")}
+      <SEO
+        title={t ("home.seo_title")}
         description={t ("home.seo_description")}
         keywords={t ("home.seo_keywords")}
         canonical="https: //app.ziontechgroup.com/",
       />,
       <Header />,
       <HeroSection />,
-
       {/* Quick Access Tools Section */}
       <section className="py - 16 bg - zion - blue - dark">,
         <div className="container mx - auto px - 4">,
           <div className="text - center mb - 12">,
             <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 4">,
-
               {t ("home.explore_tools")}
-            
+            </h2>,
             <p className="text - zion - slate - light text - xl max - w-3xl mx - auto">,
-
               {t ("home.tools_description")}
-
+            </p>,
+          </div>,
           <div className={`grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}>,
-
             {tools_features.map ((feature, index) => (
-              <Link,
-key={index}
+              <Link
+                key={index}
                 to={feature.link}
                 className="bg - zion - blue border border - zion - blue - light hover: border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300">,
                 <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4">,
-
                   {feature.icon}
-                
-                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}
-                <p className="text - zion - slate - light mb - 4">{feature.description}
+                </div>,
+                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>,
+                <p className="text - zion - slate - light mb - 4">{feature.description}</p>,
                 <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>,
-                  <span>{t ("general.explore")}
+                  <span>{t ("general.explore")}</span>,
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />,
-                
+                </div>,
               </Link>))}
-
+          </div>,
+        </div>,
+      </section>,
       <CategoriesSection />,
       <BenefitsSection />,
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />,
       <HowItWorksSection />,
@@ -374,7 +357,6 @@ key={index}
       <TestimonialCarousel />,
       <TrustedBySection />,
       <BlogSection />,
-
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />,
       <WaitlistSection />,

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 import SEO from '../../../components/SEO';
 
 export default function AIImplementationPlaybook2025() {

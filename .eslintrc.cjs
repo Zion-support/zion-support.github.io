@@ -1,6 +1,10 @@
 module.exports = {
   parser: require.resolve('@typescript-eslint/parser'),
+<<<<<<< HEAD
   plugins: ['@typescript-eslint', 'import'],
+=======
+  plugins: ['@typescript-eslint', 'react-hooks', 'import', '@next/next'],
+>>>>>>> origin/backup-main-20250924-182607
   extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -9,13 +13,21 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
+<<<<<<< HEAD
     '@typescript-eslint/no-empty-interface': 'warn',
+=======
+    '@typescript-eslint/no-empty-object-type': 'warn',
+>>>>>>> origin/backup-main-20250924-182607
     '@next/next/no-html-link-for-pages': 'warn',
     'import/order': [
       'warn',
       { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
     ],
+<<<<<<< HEAD
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'warn',
+=======
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+>>>>>>> origin/backup-main-20250924-182607
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
   ignorePatterns: [
@@ -68,8 +80,11 @@ module.exports = {
     'zion-os/**',
     'zion-website/**',
     'zion-ai-assistant/**',
+<<<<<<< HEAD
     'data/**',
     'utils/**',
     'types/**',
+=======
+>>>>>>> origin/backup-main-20250924-182607
   ],
 };

@@ -56,7 +56,7 @@ export default function App(): JSX.Element {
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-              <div role="main" className="container mx-auto px-4 py-8">
+              <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -110,7 +110,6 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-              </div>
 
                 {/* NEW: Revolutionary Content Showcase 2026 */}
                 <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-8 text-white relative overflow-hidden">
@@ -284,8 +283,7 @@ export default function App(): JSX.Element {
                         <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                           Explore Next-Gen Tech →
                         </a>
-                      </div>
-                    </div>
+                  </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -765,7 +763,7 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
-              </div>
+              </main>
             </div>
       } />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
