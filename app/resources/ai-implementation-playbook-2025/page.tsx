@@ -1,17 +1,8 @@
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export default function AIImplementationPlaybook2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Implementation Playbook 2025: Complete Guide"
-        description="Master AI implementation with our comprehensive 2025 playbook. Step-by-step guide covering strategy, planning, execution, and optimization for successful AI projects."
-        keywords="AI implementation, AI strategy, AI planning, AI execution, AI optimization, AI playbook"
-        url="/resources/ai-implementation-playbook-2025"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">

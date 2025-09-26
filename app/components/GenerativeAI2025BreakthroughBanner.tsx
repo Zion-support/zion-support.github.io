@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Zap, Target, TrendingUp, Users } from 'lucide-react';
 
 const GenerativeAI2025BreakthroughBanner = () => {
@@ -74,8 +74,7 @@ const GenerativeAI2025BreakthroughBanner = () => {
         <div className="bg-white bg-opacity-5 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-10 mb-12">
           <h3 className="text-2xl font-bold mb-6 text-center">Featured Generative AI Content</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link 
-              href="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
+            <Link to="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
               className="group bg-white bg-opacity-10 rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20"
             >
               <div className="flex items-start space-x-4">
@@ -96,8 +95,7 @@ const GenerativeAI2025BreakthroughBanner = () => {
               </div>
             </Link>
             
-            <Link 
-              href="/services/generative-ai"
+            <Link to="/services/generative-ai"
               className="group bg-white bg-opacity-10 rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20"
             >
               <div className="flex items-start space-x-4">
@@ -153,14 +151,12 @@ const GenerativeAI2025BreakthroughBanner = () => {
         {/* CTA Section */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/services/generative-ai"
+            <Link to="/services/generative-ai"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your AI Transformation
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Get Free AI Consultation

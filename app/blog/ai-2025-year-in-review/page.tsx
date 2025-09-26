@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AI2025YearInReview() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025 Year in Review: The Breakthrough Year for Artificial Intelligence"
-        description="Comprehensive review of AI breakthroughs, trends, and transformations in 2025. From multimodal AI to enterprise adoption, discover what shaped the AI landscape this year."
-        keywords="AI 2025, artificial intelligence trends, AI breakthroughs, AI adoption, machine learning 2025, AI transformation"
-        url="/blog/ai-2025-year-in-review"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">

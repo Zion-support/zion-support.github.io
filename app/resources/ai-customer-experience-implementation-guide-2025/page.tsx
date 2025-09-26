@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Removed Next.js Metadata import
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Customer Experience Implementation Guide 2025 - Complete Roadmap',
   description: 'Complete implementation guide for AI-powered customer experience transformation. Step-by-step roadmap, best practices, and proven strategies for 400% ROI.',
   keywords: ['AI customer experience', 'implementation guide', 'customer service automation', 'AI transformation roadmap', 'customer experience strategy'],
@@ -551,14 +551,12 @@ export default function AICustomerExperienceImplementationGuide2025() {
             Get expert guidance and support for your AI transformation with Zion Tech Group.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Get Implementation Support
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
               Explore Our Services
@@ -570,15 +568,15 @@ export default function AICustomerExperienceImplementationGuide2025() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2025-customer-experience-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/blog/ai-2025-customer-experience-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">AI Customer Experience Revolution</h4>
               <p className="text-gray-600">Learn about the latest trends and technologies transforming customer experience.</p>
             </Link>
-            <Link href="/case-studies/ai-customer-experience-transformation-2025-ultimate-success" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/case-studies/ai-customer-experience-transformation-2025-ultimate-success" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">Success Story: TechCorp</h4>
               <p className="text-gray-600">See how TechCorp achieved $15M ROI through AI customer experience transformation.</p>
             </Link>
-            <Link href="/services" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/services" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">AI Implementation Services</h4>
               <p className="text-gray-600">Get expert support for your AI customer experience implementation journey.</p>
             </Link>

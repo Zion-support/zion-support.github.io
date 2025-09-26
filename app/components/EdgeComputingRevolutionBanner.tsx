@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const EdgeComputingRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -84,14 +84,12 @@ const EdgeComputingRevolutionBanner = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-2025-edge-computing-revolution-enterprise-transformation"
+              <Link to="/blog/ai-2025-edge-computing-revolution-enterprise-transformation"
                 className="bg-white text-cyan-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Read Edge AI Guide
               </Link>
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-900 transition-colors text-center"
               >
                 Get Edge AI Consultation

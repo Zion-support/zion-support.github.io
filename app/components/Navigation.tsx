@@ -1,11 +1,14 @@
 'use client'
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { Menu, X, Zap } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +51,7 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div
@@ -111,7 +114,7 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-            {navigation.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}

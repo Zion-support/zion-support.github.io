@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Star, Zap, BookOpen, FileText, BarChart3 } from 'lucide-react';
 
 const UltimateContentShowcase2025 = () => {
@@ -269,8 +269,7 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                 </div>
 
-                <Link
-                  href={content.url}
+                <Link to={content.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:from-purple-500 hover:to-blue-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Read Full Article
@@ -289,14 +288,12 @@ const UltimateContentShowcase2025 = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/resources"
+            <Link to="/resources"
               className="bg-white text-purple-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
             >
               Explore All Resources
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-200"
             >
               Get Custom Consultation

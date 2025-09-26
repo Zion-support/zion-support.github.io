@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIMultimodalApplications2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Multimodal Applications 2025: Beyond Text to Vision, Audio, and Beyond"
-        description="Explore the future of AI with multimodal applications. Learn how to build AI systems that process text, images, audio, and video for revolutionary business solutions."
-        keywords="AI multimodal, computer vision, speech recognition, AI applications, machine learning, deep learning"
-        url="/blog/ai-multimodal-applications-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
