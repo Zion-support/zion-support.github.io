@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import TaskManager from './TaskManager';
 
 interface NavigationProps {
@@ -54,20 +55,28 @@ export default function Navigation({
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {['home', 'services', 'features', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors ${
-                    activeSection === section
-                      ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Services
+              </Link>
+              <Link href="/portfolio" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Blog
+              </Link>
+              <Link href="/faq" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                FAQ
+              </Link>
+              <Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Contact
+              </Link>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -105,19 +114,27 @@ export default function Navigation({
           {isMenuOpen && (
             <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
               <div className="px-2 pt-2 pb-3 space-y-1">
-                {['home', 'services', 'features', 'contact'].map((section) => (
-                  <button
-                    key={section}
-                    onClick={() => scrollToSection(section)}
-                    className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium capitalize transition-colors ${
-                      activeSection === section
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    {section}
-                  </button>
-                ))}
+                <Link href="/" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Home
+                </Link>
+                <Link href="/about" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  About
+                </Link>
+                <Link href="/services" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Services
+                </Link>
+                <Link href="/portfolio" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Portfolio
+                </Link>
+                <Link href="/blog" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Blog
+                </Link>
+                <Link href="/faq" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  FAQ
+                </Link>
+                <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Contact
+                </Link>
               </div>
             </div>
           )}
