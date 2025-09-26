@@ -8134,7 +8134,11 @@ snapshots:
     dependencies:
       '@modelcontextprotocol/sdk': 1.18.2
       diff: 5.2.0
+<<<<<<< HEAD
+      glob: 10.3.10
+=======
       glob: 10.4.5
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6a7a
       minimatch: 10.0.3
       zod-to-json-schema: 3.24.6(zod@3.25.76)
     transitivePeerDependencies:
@@ -10239,7 +10243,11 @@ snapshots:
       vary: 1.1.2
     optional: true
 
+<<<<<<< HEAD
+  create-jest@29.7.0(@types/node@24.5.2)(ts-node@10.9.2(@swc/core@1.13.5)(@types/node@24.5.2)(typescript@5.9.2)):
+=======
   create-jest@29.7.0(@types/node@24.5.2)(ts-node@10.9.2(@types/node@24.5.2)(typescript@5.9.2)):
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6a7a
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
