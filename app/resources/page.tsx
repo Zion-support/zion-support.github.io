@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function ResourcesPage() {
   const resources = [
@@ -121,14 +121,12 @@ export default function ResourcesPage() {
               AI and technology implementation. Everything you need to succeed in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='#featured-resources'
+              <Link to='#featured-resources'
                 className='bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg'
               >
                 Browse Resources
               </Link>
-              <Link
-                href='/contact'
+              <Link to='/contact'
                 className='border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors text-lg'
               >
                 Request Custom Resource
@@ -243,7 +241,7 @@ interface Resource {
 
 function ResourceCard({ resource }: { resource: Resource }) {
   return (
-    <Link href={`/resources/${resource.id}`} className='group'>
+    <Link to={`/resources/${resource.id}`} className='group'>
       <div className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
         <div className='aspect-video bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center'>
           <div className='text-4xl'>📄</div>

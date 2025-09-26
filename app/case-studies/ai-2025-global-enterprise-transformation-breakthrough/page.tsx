@@ -1,18 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <SEO
-        title="AI 2025 Global Enterprise Transformation: 1200% ROI Success Story"
-        description="Discover how a Fortune 500 company achieved 1200% ROI through comprehensive AI transformation. Learn the strategies, challenges, and results that made this breakthrough possible."
-        keywords="AI transformation, enterprise AI, Fortune 500, ROI success, AI case study, digital transformation, 1200% ROI"
-        url="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
-      />
-      
-      <article className="prose prose-lg max-w-none">
+            <article className="prose prose-lg max-w-none">
         <div className="mb-8">
           <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">🏆 SUCCESS STORY</span>

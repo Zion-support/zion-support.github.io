@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Removed Next.js Metadata import
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2025 Global Transformation Breakthrough - 10,000% ROI Success Story',
   description: 'Discover how a Fortune 500 company achieved 10,000% ROI through AI 2025 breakthrough technologies. Quantum computing, neural interfaces, and autonomous operations transformed their business.',
   keywords: ['AI 2025', 'Case Study', '10,000% ROI', 'Global Transformation', 'Fortune 500', 'Quantum Computing', 'Neural Interfaces', 'Autonomous Operations'],
@@ -433,14 +433,12 @@ export default function AI2025GlobalTransformationBreakthrough() {
             Start your journey to extraordinary ROI today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution" 
+            <Link to="/ai-2025-ultimate-breakthrough-revolution" 
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Explore Breakthrough Technologies
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Schedule Consultation

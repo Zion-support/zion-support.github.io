@@ -15,15 +15,13 @@ export default function NotFound() {
         </div>
         
         <div className="space-y-4">
-          <Link
-            href="/"
+          <Link to="/"
             className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Go home
           </Link>
           
-          <Link
-            href="/services"
+          <Link to="/services"
             className="inline-block w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
           >
             View our services

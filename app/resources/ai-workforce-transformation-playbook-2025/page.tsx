@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIWorkforceTransformationPlaybook2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Workforce Transformation Playbook 2025 - Free Download"
-        description="Complete guide to transforming your workforce for the AI era. Includes templates, checklists, and step-by-step implementation strategies."
-        keywords="AI workforce transformation, reskilling playbook, AI training guide, workforce development, digital transformation"
-        url="/resources/ai-workforce-transformation-playbook-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">

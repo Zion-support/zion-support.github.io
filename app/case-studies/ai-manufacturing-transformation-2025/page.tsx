@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag, Factory, TrendingUp, CheckCircle, DollarSign, Users, Zap } from 'lucide-react';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Manufacturing Transformation: $75M Cost Savings Success Story',
   description: 'Discover how a global manufacturing company achieved $75M in annual savings and 85% efficiency gains through comprehensive AI transformation in 2025.',
   keywords: 'AI manufacturing, manufacturing transformation, AI case study, industrial AI, smart manufacturing',
@@ -496,15 +496,13 @@ export default function AIManufacturingTransformation() {
                 Let's discuss how AI can revolutionize your production processes and drive significant cost savings.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
                 >
                   Start Your AI Transformation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <Link 
-                  href="/services/manufacturing-ai" 
+                <Link to="/services/manufacturing-ai" 
                   className="inline-flex items-center px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Learn About Our Services
@@ -520,7 +518,7 @@ export default function AIManufacturingTransformation() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">More Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
+            <Link to="/case-studies/ai-financial-services-transformation-2025" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Financial Services Transformation
@@ -531,7 +529,7 @@ export default function AIManufacturingTransformation() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-healthcare-diagnosis-breakthrough-2025" className="group">
+            <Link to="/case-studies/ai-healthcare-diagnosis-breakthrough-2025" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Healthcare Diagnosis Breakthrough
