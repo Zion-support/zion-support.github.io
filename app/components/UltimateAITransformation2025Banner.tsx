@@ -24,7 +24,7 @@ const UltimateAITransformation2025Banner = () => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isVisible, isDismissed]);
+  }, [isVisible, isDismissed, featuredContent.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);

@@ -180,7 +180,15 @@ export default function BlogPage() {
   );
 }
 
-const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
+interface Post {
+  id: string;
+  title: string;
+  excerpt: string;
+  publishedAt: string;
+  readTime: string;
+}
+
+const FeaturedPostCard: FC<{ post: Post }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
@@ -210,7 +218,7 @@ const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
   );
 };
 
-const PostCard: FC<{ post: any }> = ({ post }) => {
+const PostCard: FC<{ post: Post }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>

@@ -21,7 +21,7 @@ const UltimateContent2025PromotionBanner = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [featuredContent.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
