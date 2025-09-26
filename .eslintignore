@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-node_modules/
-=======
 # Build output
->>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 .next/
 out/
 dist/
-<<<<<<< HEAD
-*.config.js
-*.config.ts
-=======
 coverage/
 
 # Dependencies
@@ -29,7 +21,6 @@ automation/
 automation_backup/
 automation-logs/
 automation-reports/
->>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
 scripts/
 automation/
 netlify/
@@ -70,15 +61,13 @@ backend/
 server/
 zion-os/
 zion-website/
-<<<<<<< HEAD
-zion-ai-assistant/
-=======
 zion-ai-assistant/
 zion_academy/
 zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
+# Keep targeted ignores inside src minimal to allow lint to run
 # src/components/**
 # src/pages/**
 # src/routes/**
@@ -92,4 +81,3 @@ vitest.config.ts
 *.backup
 *.bak
 # Keep above; no additional ignores below so that src-clean is linted
->>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
