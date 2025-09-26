@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Image from 'next/image';
 
 interface User {
   id: string;
@@ -39,7 +40,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const [editingUser, setEditingUser] = useState<User | null>(null);
 
   // Mock data - in a real app, this would come from an API
-  const mockUsers: User[] = [
+  const mockUsers: User[] = useMemo(() => [
     {
       id: '1',
       name: 'John Doe',
@@ -105,7 +106,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       department: 'HR',
       phone: '+1-555-0127'
     }
-  ];
+  ], []);
 
   useEffect(() => {
     // Simulate API call
@@ -397,10 +398,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 h-10 w-10">
-                      <img
+                      <Image
                         className="h-10 w-10 rounded-full"
                         src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=random`}
                         alt={user.name}
+                        width={40}
+                        height={40}
                       />
                     </div>
                     <div className="ml-4">

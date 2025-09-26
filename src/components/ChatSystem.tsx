@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import Image from 'next/image';
 
 interface Message {
   id: string;
@@ -225,10 +226,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       >
         <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
           <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}>
-            <img
+            <Image
               className="h-8 w-8 rounded-full"
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
+              width={32}
+              height={32}
             />
           </div>
           <div className={`${isUser ? 'text-right' : 'text-left'}`}>
@@ -241,10 +244,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             >
               {message.type === 'image' && message.metadata?.imageUrl && (
                 <div className="mb-2">
-                  <img
+                  <Image
                     src={message.metadata.imageUrl}
                     alt="Shared image"
                     className="max-w-full h-auto rounded"
+                    width={300}
+                    height={200}
                   />
                 </div>
               )}
@@ -272,10 +277,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">
-          <img
+          <Image
             className="h-8 w-8 rounded-full mr-3"
             src={botAvatar}
             alt={botName}
+            width={32}
+            height={32}
           />
           <div>
             <h3 className="text-sm font-medium text-gray-900">{botName}</h3>
@@ -319,10 +326,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         {isTyping && (
           <div className="flex justify-start">
             <div className="flex items-center">
-              <img
+              <Image
                 className="h-8 w-8 rounded-full mr-3"
                 src={botAvatar}
                 alt={botName}
+                width={32}
+                height={32}
               />
               <div className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">
                 <div className="flex space-x-1">
