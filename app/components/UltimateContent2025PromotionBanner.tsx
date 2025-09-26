@@ -14,7 +14,10 @@ const UltimateContent2025PromotionBanner = () => {
     if (!dismissed) {
       setIsVisible(true);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d7b9
   }, []);
 
   const handleDismiss = () => {
