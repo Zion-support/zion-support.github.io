@@ -8,20 +8,48 @@
   }
 
   body {
-    @apply bg-zion-slate-dark text-white;
+    color: white;
+    background-color: #475569;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #1d4ed8, #7c3aed);
   }
 
   .btn-secondary {
-    @apply bg-zion-slate hover:bg-zion-slate-light text-white font-semibold py-3 px-6 rounded-lg border border-zion-slate transition-all duration-300;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    color: white;
+    background-color: #64748b;
+    border-color: #64748b;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #94a3b8;
   }
 
   .card {
-    @apply bg-zion-slate/50 border border-zion-slate-light rounded-lg p-6 hover:bg-zion-slate/70 transition-all duration-300;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    background-color: rgba(100, 116, 139, 0.5);
+    border-color: #94a3b8;
+  }
+  
+  .card:hover {
+    background-color: rgba(100, 116, 139, 0.7);
   }
 }
