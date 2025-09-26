@@ -6,6 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+<<<<<<< HEAD
+    "build:netlify": "vite build",
+    "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
+    "type-check": "npx tsc --noEmit",
+=======
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -18,6 +27,7 @@
     "test": "jest --config jest.config.cjs",
     "test:watch": "jest --watch --config jest.config.cjs",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests --testPathIgnorePatterns zion-website --config jest.config.cjs",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ea2b
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
@@ -107,7 +117,11 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+<<<<<<< HEAD
+    "@eslint/js": "^9.36.0",
+=======
     "@eslint/js": "^8.57.1",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ea2b
     "@next/eslint-plugin-next": "^14.2.13",
     "@tailwindcss/postcss": "^4.1.13",
     "@testing-library/jest-dom": "^6.8.0",
