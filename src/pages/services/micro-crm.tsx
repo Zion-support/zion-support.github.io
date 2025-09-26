@@ -1,67 +1,10 @@
-import React from "react";
-import { SEO } from "../../components/SEO";
-
-type SimpleItem = { title: string; description: string };
+import React from "react"
 
 export default function MicroCRM() {
-  const features: SimpleItem[] = [
-    { title: "Contact Management", description: "Centralized database with detailed profiles and interaction history." },
-    { title: "Lead Tracking", description: "Track leads through the funnel with automated scoring." },
-    { title: "Task Management", description: "Schedule follow-ups and reminders with an integrated calendar." },
-    { title: "Sales Analytics", description: "Comprehensive reporting to track performance and opportunities." }
-  ];
-  const benefits: string[] = [
-    "Streamline customer relationship management",
-    "Improve sales team productivity",
-    "Enhance customer communication",
-    "Track sales performance metrics",
-    "Automate repetitive tasks",
-    "Centralize customer data"
-  ];
-  const useCases: SimpleItem[] = [
-    { title: "Small Business CRM", description: "Manage relationships efficiently for small teams." },
-    { title: "Sales Team Management", description: "Empower sales teams to track leads and interactions." },
-    { title: "Customer Support", description: "Track issues and provide timely support with ticketing." },
-    { title: "Marketing Campaigns", description: "Manage campaigns and track engagement and responses." }
-  ];
-
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="Micro CRM - Zion Tech Group"
-        description="Streamline your customer relationship management with our Micro CRM solution."
-      />
-
-      <section className="py-12">
-        <h1 className="text-3xl font-bold">Micro CRM</h1>
-
-        <h2 className="mt-8 text-2xl font-semibold">Features</h2>
-        <div className="mt-4 grid gap-4">
-          {features.map((f, idx) => (
-            <div key={idx}>
-              <h3 className="text-xl font-semibold">{f.title}</h3>
-              <p className="text-slate-600">{f.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <h2 className="mt-10 text-2xl font-semibold">Benefits</h2>
-        <ul className="mt-4 list-disc pl-6">
-          {benefits.map((b, idx) => (
-            <li key={idx}>{b}</li>
-          ))}
-        </ul>
-
-        <h2 className="mt-10 text-2xl font-semibold">Use Cases</h2>
-        <div className="mt-4 grid gap-4">
-          {useCases.map((u, idx) => (
-            <div key={idx}>
-              <h3 className="text-xl font-semibold">{u.title}</h3>
-              <p className="text-slate-600">{u.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div style={{ padding: 24 }}>
+      <h1>Micro CRM</h1>
+      <p>This page is under construction.</p>
     </div>
-  );
+  )
 }
