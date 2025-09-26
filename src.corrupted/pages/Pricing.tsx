@@ -2,38 +2,38 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  Check,;
-  Star, ;
-  Zap, ;
-  Brain, ;
-  Cloud, ;
-  Shield, ;
-  Users, ;
-  ArrowRight,;
-  Crown,;
-  Sparkles,;
-  Flame,;
-  Infinity,;
-  Target,;
-  Award,;
-  Code,;
-  Server,;
-  Database,;
-  Network,;
-  Lock,;
-  Globe,;
-  Rocket,;
-  Heart,;
-  Scale,;
-  Leaf,;
-  TrendingUp,;
-  DollarSign,;
-  Calendar,;
-  Clock,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Check;
+  Star;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Users;
+  ArrowRight;
+  Crown;
+  Sparkles;
+  Flame;
+  Infinity;
+  Target;
+  Award;
+  Code;
+  Server;
+  Database;
+  Network;
+  Lock;
+  Globe;
+  Rocket;
+  Heart;
+  Scale;
+  Leaf;
+  TrendingUp;
+  DollarSign;
+  Calendar;
+  Clock;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
   Building;
 } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -45,30 +45,30 @@ export default function Pricing() {;
       name: 'Starter',description: 'Perfect for small businesses and startups',price: { monthly: 299, annual: 2990 };
       features: [;
         'AI-powered business intelligence dashboardBasic cloud infrastructure setup'
-        'Email supportMonthly reports',;
+        'Email supportMonthly reports';
         'Up to 5 usersBasic integrations'
-      ],;
+      ];
       icon: Rocket,color: 'from-blue-500 to-cyan-500',popular: false,cta: 'Get Started',link: '/contact'
     };
     {;
       name: 'Professional',description: 'Ideal for growing businesses and teams',price: { monthly: 799, annual: 7990 };
       features: [;
         'Everything in StarterAdvanced AI analytics and insights'
-        'Custom dashboard developmentPriority support',;
-        'Up to 25 usersAdvanced integrations',;
+        'Custom dashboard developmentPriority support';
+        'Up to 25 usersAdvanced integrations';
         'Custom reportingTraining sessions'
-      ],;
+      ];
       icon: Building,color: 'from-purple-500 to-pink-500',popular: true,cta: 'Get Started',link: '/contact'
     };
     {;
       name: 'Enterprise',description: 'For large organizations with complex needs',price: { monthly: 1999, annual: 19990 };
       features: [;
         'Everything in ProfessionalCustom AI model development'
-        'Dedicated account manager24/7 priority support',;
-        'Unlimited usersCustom integrations',;
-        'White-label solutionsOn-site training',;
+        'Dedicated account manager24/7 priority support';
+        'Unlimited usersCustom integrations';
+        'White-label solutionsOn-site training';
         'SLA guarantees'
-      ],;
+      ];
       icon: Globe,color: 'from-orange-500 to-red-500',popular: false,cta: 'Contact Sales',link: '/contact'
     };
   ];
@@ -76,32 +76,32 @@ export default function Pricing() {;
     {;
       title: 'AI & Machine Learning',description: 'Custom AI solutions and ML model development',startingPrice: 5000,icon: Cpu,color: 'from-blue-500 to-cyan-500',features: [;
         'Custom AI model developmentData preprocessing and cleaning'
-        'Model training and optimizationAPI integration and deployment',;
+        'Model training and optimizationAPI integration and deployment';
         'Ongoing model maintenance'
       ];
-    },;
+    };
     {;
       title: 'Cloud Infrastructure',description: 'Scalable cloud solutions and migration services',startingPrice: 3000,icon: Server,color: 'from-green-500 to-emerald-500',features: [;
         'Cloud architecture designMigration planning and execution'
-        'Security and compliance setupPerformance optimization',;
+        'Security and compliance setupPerformance optimization';
         '24/7 monitoring and support'
       ];
-    },;
+    };
     {;
       title: 'Digital Twin Solutions',description: 'Advanced digital twin technology implementation',startingPrice: 10000,icon: Target,color: 'from-purple-500 to-pink-500',features: [;
         '3D modeling and visualizationReal-time data integration'
-        'Predictive analyticsIoT device connectivity',;
+        'Predictive analyticsIoT device connectivity';
         'Custom dashboard development'
       ];
-    },;
+    };
     {;
       title: 'Data Analytics',description: 'Comprehensive data analysis and insights',startingPrice: 2500,icon: Database,color: 'from-orange-500 to-red-500',features: [;
         'Data strategy and planningETL pipeline development'
-        'Advanced analytics and reportingData visualization',;
+        'Advanced analytics and reportingData visualization';
         'Business intelligence dashboards'
       ];
     };
-  ],;
+  ];
 
   const pricingFactors = [;
     {;
@@ -472,13 +472,13 @@ export default function Pricing() {;
             {[;
               {;
                 question: 'Can I change my plan at any time?',answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
-              },;
+              };
               {;
                 question: 'Do you offer custom pricing for enterprise clients?',answer: 'Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements.'
               };
               {;
                 question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
-              },;
+              };
               {;
                 question: 'Is there a setup fee?',answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
               };

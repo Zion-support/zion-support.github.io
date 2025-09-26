@@ -1,33 +1,33 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  MessageCircle,;
-  Bot, ;
-  Brain, ;
-  Zap, ;
-  Shield, ;
-  Globe, ;
-  Users, ;
-  Clock,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Play,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Headphones,;
-  Smartphone,;
-  Monitor,;
-  TrendingUp,;
-  BarChart3,;
-  Target,;
-  Settings,;
-  Database,;
-  Cloud,;
-  AlertCircle,;
-  FileText,;
-  Calendar,;
+  MessageCircle;
+  Bot;
+  Brain;
+  Zap;
+  Shield;
+  Globe;
+  Users;
+  Clock;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Phone;
+  Mail;
+  MapPin;
+  Headphones;
+  Smartphone;
+  Monitor;
+  TrendingUp;
+  BarChart3;
+  Target;
+  Settings;
+  Database;
+  Cloud;
+  AlertCircle;
+  FileText;
+  Calendar;
   UserCheck;
 } from "lucide-react"
 import { SEO } from "../../components/SEO"
@@ -35,82 +35,82 @@ const AICustomerSupportAutomation = () => {;
   const features = [;
     {;
       icon: Bot,title: "AI-Powered Chatbots",description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
-    },;
+    };
     {;
       icon: Brain,title: "Natural Language Processing",description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
-    },;
+    };
     {;
       icon: Clock,title: "24/7 Availability",description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
-    },;
+    };
     {;
       icon: BarChart3,title: "Smart Ticket Routing",description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
-    },;
+    };
     {;
       icon: TrendingUp,title: "Performance Analytics",description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
-    },;
+    };
     {;
       icon: Shield,title: "Enterprise Security",description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
     };
-  ],;
+  ];
 
   const pricingPlans = [;
     {;
       name: "Starter",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [;
-        "Up to 1,000 conversations/month",;
-        "Basic AI chatbot",;
-        "5 agent licenses",;
-        "Email support",;
-        "Basic integrations",;
-        "Standard templates",;
+        "Up to 1,000 conversations/month";
+        "Basic AI chatbot";
+        "5 agent licenses";
+        "Email support";
+        "Basic integrations";
+        "Standard templates";
         "Basic analytics"
-      ],;
+      ];
       popular: false;
     };
     {;
       name: "Professional",price: "$599",period: "/month",description: "Ideal for growing businesses and teams",features: [;
-        "Up to 10,000 conversations/month",;
-        "Advanced AI with NLP",;
-        "25 agent licenses",;
-        "Priority support",;
-        "API access",;
-        "Custom integrations",;
-        "Advanced analytics",;
-        "Multi-language support",;
+        "Up to 10,000 conversations/month";
+        "Advanced AI with NLP";
+        "25 agent licenses";
+        "Priority support";
+        "API access";
+        "Custom integrations";
+        "Advanced analytics";
+        "Multi-language support";
         "White-label options"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$1,999",;
+      name: "Enterprise",price: "$1,999";
       period: "/month",description: "For large organizations with high support volumes",features: [;
         "Unlimited conversations"
-        "Custom AI models",;
-        "Unlimited agents",;
-        "Dedicated support",;
-        "Custom development",;
-        "Advanced security",;
-        "On-premise options",;
-        "SLA guarantees",;
+        "Custom AI models";
+        "Unlimited agents";
+        "Dedicated support";
+        "Custom development";
+        "Advanced security";
+        "On-premise options";
+        "SLA guarantees";
         "Custom training"
-      ],;
+      ];
       popular: false;
     };
   ];
   const useCases = [;
     {;
-      title: "E-commerce Support",description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",;
+      title: "E-commerce Support",description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents";
       icon: ShoppingCart;
     };
     {;
-      title: "SaaS Customer Success",description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",;
+      title: "SaaS Customer Success",description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption";
       icon: Monitor;
     };
     {;
-      title: "Financial Services",description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",;
+      title: "Financial Services",description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance";
       icon: DollarSign;
     };
     {;
-      title: "Healthcare Support",description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",;
+      title: "Healthcare Support",description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance";
       icon: Heart;
     };
   ];
@@ -133,7 +133,7 @@ const AICustomerSupportAutomation = () => {;
       name: "Jennifer Adams",role: "Customer Success Director",company: "TechFlow Solutions",content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",rating: 5;
     };
     {;
-      name: "Marcus Chen",role: "Operations Manager",company: "E-commerce Plus",content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",;
+      name: "Marcus Chen",role: "Operations Manager",company: "E-commerce Plus",content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.";
       rating: 5;
     };
     {;
@@ -625,18 +625,18 @@ const ShoppingCart = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 
 const DollarSign = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 
 const Heart = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <[^>]*/>
   </[^>]*>
-),;
+);
 
 export default AICustomerSupportAutomation;

@@ -1,29 +1,25 @@
-src/
-database/
+# Ignore problematic or generated files until they are refactored
+# Database config (non-TypeScript style)
+database/connection.js
+
+# E2E config (uses different TS parser settings)
 playwright.config.ts
+
+# Tailwind config (not part of app src lint)
 tailwind.config.js
 
-node_modules/
-.next/
-dist/
-out/
-coverage/
-
-# Problematic content to be repaired in a follow-up pass
+# App routes currently being refactored
 src/app/**
-src/components/**
-src/utils/**
-src/data/**
-database/**
-e2e/**
-playwright.config.ts
-jest.config.js
-jest.setup.js
-middleware.ts
-tailwind.config.js
 
-# Config and cache that shouldn't be linted
-cache/
-**/*.backup.*
-**/*.cleanup-backup.*
-**/*.conflict-backup.*
+# Specific components/utilities pending cleanup
+src/components/NewContentPromoBanner.tsx
+src/data/updates.ts
+src/utils/**
+
+# Node modules
+node_modules
+
+# Build outputs
+.next
+out
+coverage

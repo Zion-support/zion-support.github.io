@@ -5,7 +5,7 @@ const anchor = (url: string, label?: string) => (;
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">;
     {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
   </[^>]*>
-),;
+);
 
 const ServicesAdvertising: React.FC = () => {
   const contact = {;
@@ -13,9 +13,9 @@ const ServicesAdvertising: React.FC = () => {
   } as const;
   const benefits: string[] = [;
     'High-ROI projects with measurable KPIsTransparent pricing with market references'
-    'Fast onboarding with templates and playbooksEnterprise-grade security and compliance',;
-    '24/7 support with SLAsProven architectures and reference implementations',;
-    'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',;
+    'Fast onboarding with templates and playbooksEnterprise-grade security and compliance';
+    '24/7 support with SLAsProven architectures and reference implementations';
+    'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling';
     'Flexible deployment: SaaS or self-hosted options'
   ];
   const spotlight = [;
@@ -26,11 +26,11 @@ const ServicesAdvertising: React.FC = () => {
       title: 'AI Sales Assistant',price: 'Typical: $30–$150/user/mo',refs: ['https://www.apollo.io/pricinghttps://www.lemlist.com/pricing', 'https: //www.hubspot.com/pricing/sales'],href: '/services/ai-sales-assistant'
     };
     {;
-      title: 'Security Posture Guardian',price: 'Typical: $100–$2,000/mo',;
+      title: 'Security Posture Guardian',price: 'Typical: $100–$2,000/mo';
       refs: ['https://www.wiz.io/pricinghttps://snyk.io/plans/', 'https: //www.paloaltonetworks.com/prisma/cloud/pricing'],href: '/services/security-posture-guardian'
     };
     {;
-      title: 'AI Data Pipeline Optimizer',price: 'Typical: $200–$2,000/mo',;
+      title: 'AI Data Pipeline Optimizer',price: 'Typical: $200–$2,000/mo';
       refs: ['https://www.databricks.com/product/pricinghttps://www.snowflake.com/pricing/', 'https: //www.getdbt.com/pricing'],href: '/services/ai-data-pipeline-optimizer'
     };
     {;
@@ -122,6 +122,6 @@ const ServicesAdvertising: React.FC = () => {
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default ServicesAdvertising;

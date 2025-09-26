@@ -1,40 +1,40 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import {;
-  Brain,;
-  Shield,;
-  Zap,;
-  Cloud,;
-  Lock,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Smartphone,;
-  BarChart3,;
-  TrendingUp,;
-  Users,;
-  Building2,;
-  Leaf,;
-  Car,;
-  Heart,;
-  Scale,;
-  Eye,;
-  Search,;
-  Filter,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Brain;
+  Shield;
+  Zap;
+  Cloud;
+  Lock;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  TrendingUp;
+  Users;
+  Building2;
+  Leaf;
+  Car;
+  Heart;
+  Scale;
+  Eye;
+  Search;
+  Filter;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 import { INNOVATIVE_SERVICES } from "../data/servicesData"
 export default function InnovativeServicesShowcase2026() {;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [sortBy, setSortBy] = useState('innovation'),;
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
 
   const categories = ['AllAI & Automation', 'Quantum ComputingBlockchain', 'CybersecurityIoT', 'AI & ContentDevOps', 'FinanceSustainability']
 
@@ -47,12 +47,12 @@ export default function InnovativeServicesShowcase2026() {;
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      ),;
+      );
     };
 
     //[^;]*
     if (selectedCategory !== 'All') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
 
     //[^;]*
@@ -67,29 +67,29 @@ export default function InnovativeServicesShowcase2026() {;
         default: return 0;
       };
     });
-    return filtered,;
-  }, [searchQuery, selectedCategory, sortBy]),;
+    return filtered;
+  }, [searchQuery, selectedCategory, sortBy]);
 
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI & Automation':;
         return <[^>]*/>
       case 'Quantum Computing':;
-        return <Zap className="w-5 h-5" />,;
+        return <Zap className="w-5 h-5" />;
       case 'Blockchain':;
-        return <Database className="w-5 h-5" />,;
+        return <Database className="w-5 h-5" />;
       case 'Cybersecurity':;
-        return <Shield className="w-5 h-5" />,;
+        return <Shield className="w-5 h-5" />;
       case 'IoT':;
-        return <Globe className="w-5 h-5" />,;
+        return <Globe className="w-5 h-5" />;
       case 'AI & Content':;
-        return <Cpu className="w-5 h-5" />,;
+        return <Cpu className="w-5 h-5" />;
       case 'DevOps':;
-        return <Database className="w-5 h-5" />,;
+        return <Database className="w-5 h-5" />;
       case 'Finance':;
-        return <TrendingUp className="w-5 h-5" />,;
+        return <TrendingUp className="w-5 h-5" />;
       case 'Sustainability':;
-        return <Leaf className="w-5 h-5" />,;
+        return <Leaf className="w-5 h-5" />;
       default: return <[^>]*/>
     };
   };
@@ -101,8 +101,8 @@ export default function InnovativeServicesShowcase2026() {;
       <span className={`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
         {level};
       </[^>]*>
-    ),;
-  },;
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -467,7 +467,7 @@ export default function InnovativeServicesShowcase2026() {;
         </[^>]*>
       </[^>]*>
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 export default InnovativeServicesShowcase2026;

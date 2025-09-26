@@ -2,51 +2,51 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import {;
-  Zap,;
-  Code,;
-  Database,;
-  Users,;
-  Shield,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Star,;
-  TrendingUp,;
-  BarChart3,;
-  Settings,;
-  Lightbulb,;
-  Briefcase,;
-  Award,;
-  Rocket,;
-  Target,;
+  Zap;
+  Code;
+  Database;
+  Users;
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Clock;
+  Star;
+  TrendingUp;
+  BarChart3;
+  Settings;
+  Lightbulb;
+  Briefcase;
+  Award;
+  Rocket;
+  Target;
   Globe;
 } from "lucide-react"
 const MicroSAASPage = () => {;
   const saasServices = [;
     {;
-      id: 'custom-applications',title: 'Custom Applications',description: 'Tailored software solutions designed for your specific business needs',icon: <Code className="w-8 h-8" />,features: ['Custom DevelopmentScalable Architecture', 'User ManagementAPI Integration'],;
-      useCases: ['Business ToolsIndustry Solutions', 'Process AutomationCustomer Portals'],;
+      id: 'custom-applications',title: 'Custom Applications',description: 'Tailored software solutions designed for your specific business needs',icon: <Code className="w-8 h-8" />,features: ['Custom DevelopmentScalable Architecture', 'User ManagementAPI Integration'];
+      useCases: ['Business ToolsIndustry Solutions', 'Process AutomationCustomer Portals'];
       pricing: 'Starting from $2,500/month'
-    },;
+    };
     {;
-      id: 'api-development',title: 'API Development',description: 'Robust and scalable APIs to connect your applications and services',icon: <Database className="w-8 h-8" />,features: ['RESTful APIsGraphQL Services', 'AuthenticationRate Limiting'],;
-      useCases: ['System IntegrationMobile Apps', 'Third-party ServicesData Exchange'],;
+      id: 'api-development',title: 'API Development',description: 'Robust and scalable APIs to connect your applications and services',icon: <Database className="w-8 h-8" />,features: ['RESTful APIsGraphQL Services', 'AuthenticationRate Limiting'];
+      useCases: ['System IntegrationMobile Apps', 'Third-party ServicesData Exchange'];
       pricing: 'Starting from $1,800/month'
-    },;
+    };
     {;
-      id: 'scalable-architecture',title: 'Scalable Architecture',description: 'Cloud-native architectures that grow with your business',icon: <Globe className="w-8 h-8" />,features: ['MicroservicesContainerization', 'Auto-scalingLoad Balancing'],;
-      useCases: ['High-traffic ApplicationsGrowing Businesses', 'Enterprise SolutionsGlobal Deployments'],;
+      id: 'scalable-architecture',title: 'Scalable Architecture',description: 'Cloud-native architectures that grow with your business',icon: <Globe className="w-8 h-8" />,features: ['MicroservicesContainerization', 'Auto-scalingLoad Balancing'];
+      useCases: ['High-traffic ApplicationsGrowing Businesses', 'Enterprise SolutionsGlobal Deployments'];
       pricing: 'Starting from $3,200/month'
-    },;
+    };
     {;
-      id: 'user-management',title: 'User Management',description: 'Comprehensive user authentication and authorization systems',icon: <Users className="w-8 h-8" />,features: ['Single Sign-OnRole-based Access', 'Multi-tenancyUser Analytics'],;
-      useCases: ['B2B ApplicationsEnterprise Software', 'Multi-user PlatformsSaaS Products'],;
+      id: 'user-management',title: 'User Management',description: 'Comprehensive user authentication and authorization systems',icon: <Users className="w-8 h-8" />,features: ['Single Sign-OnRole-based Access', 'Multi-tenancyUser Analytics'];
+      useCases: ['B2B ApplicationsEnterprise Software', 'Multi-user PlatformsSaaS Products'];
       pricing: 'Starting from $1,500/month'
     };
-  ],;
+  ];
   const saasBenefits = [;
     'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration'
-  ],;
+  ];
   const containerVariants = {;
     hidden: { opacity: 0 };
     visible: {;

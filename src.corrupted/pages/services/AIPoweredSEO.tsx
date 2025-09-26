@@ -2,25 +2,25 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  Search,;
-  TrendingUp, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  Globe, ;
-  Users, ;
-  Clock, ;
-  Award, ;
-  Star,;
-  Cpu,;
-  Database,;
-  Filter,;
-  Download,;
-  Share2,;
-  CheckCircle,;
-  Eye,;
-  MousePointer,;
-  Smartphone,;
+  Search;
+  TrendingUp;
+  Target;
+  Zap;
+  BarChart3;
+  Globe;
+  Users;
+  Clock;
+  Award;
+  Star;
+  Cpu;
+  Database;
+  Filter;
+  Download;
+  Share2;
+  CheckCircle;
+  Eye;
+  MousePointer;
+  Smartphone;
   Monitor;
 } from "lucide-react"
 const AIPoweredSEO = () => {;
@@ -45,24 +45,24 @@ const AIPoweredSEO = () => {;
     };
   ];
   const benefits = [;
-    "Increase organic traffic by 40-80% with AI-optimized strategies",;
-    "Improve search rankings by 3-5 positions on average",;
-    "Reduce SEO implementation time by 60-70%",;
-    "Boost conversion rates by 25-45% through better targeting",;
-    "Enhance user experience and engagement metrics",;
+    "Increase organic traffic by 40-80% with AI-optimized strategies";
+    "Improve search rankings by 3-5 positions on average";
+    "Reduce SEO implementation time by 60-70%";
+    "Boost conversion rates by 25-45% through better targeting";
+    "Enhance user experience and engagement metrics";
     "Achieve sustainable long-term SEO results"
-  ],;
+  ];
 
   const seoProcess = [;
     {;
-      stage: "Research & Analysis",description: "AI-powered keyword research, competitor analysis, and technical audits",;
+      stage: "Research & Analysis",description: "AI-powered keyword research, competitor analysis, and technical audits";
       icon: Search;
     };
     {;
       stage: "Strategy Development",description: "Data-driven SEO strategy and content planning",icon: Target;
     };
     {;
-      stage: "Implementation",description: "Technical optimization, content creation, and on-page improvements",;
+      stage: "Implementation",description: "Technical optimization, content creation, and on-page improvements";
       icon: Zap;
     };
     {;
@@ -78,20 +78,20 @@ const AIPoweredSEO = () => {;
   const useCases = [;
     {;
       industry: "E-commerce",description: "Product page optimization, category targeting, and local SEO for online stores"
-    },;
+    };
     {;
       industry: "B2B Services",description: "Service page optimization, industry keyword targeting, and lead generation"
-    },;
+    };
     {;
       industry: "Healthcare",description: "Medical service optimization, local search, and patient acquisition"
-    },;
+    };
     {;
       industry: "Real Estate",description: "Property listing optimization, local SEO, and agent visibility"
-    },;
+    };
     {;
       industry: "Technology",description: "SaaS SEO, technical content optimization, and developer targeting"
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

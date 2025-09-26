@@ -1,15 +1,15 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Code,;
-  Database,;
-  Cloud,;
-  Shield,;
-  Brain,;
-  Zap,;
-  Globe,;
-  Server,;
-  Cpu,;
+  Code;
+  Database;
+  Cloud;
+  Shield;
+  Brain;
+  Zap;
+  Globe;
+  Server;
+  Cpu;
   Network;
 } from "lucide-react"
 const technologyCategories = [;
@@ -78,7 +78,7 @@ export function TechnologyStackSection() {;
           </[^>]*>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Built with cutting-edge technologies and industry best practices.;
-            Our comprehensive tech stack ensures scalability, security, and performance.;
+            Our comprehensive tech stack ensures scalability, security, and window.performance.;
           </[^>]*>
         </[^>]*>
 

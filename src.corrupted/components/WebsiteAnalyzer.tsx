@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { LinkChecker, LinkInfo, PageInfo } from "../utils/linkChecker"
 import { ;
-  CheckCircle,;
-  XCircle, ;
-  AlertTriangle, ;
-  ExternalLink, ;
-  Search, ;
-  FileText, ;
-  Link as LinkIcon,;
-  Download,;
+  CheckCircle;
+  XCircle;
+  AlertTriangle;
+  ExternalLink;
+  Search;
+  FileText;
+  Link as LinkIcon;
+  Download;
   RefreshCw;
 } from "lucide-react"
-interface AnalysisResult {;
+interface AnalysisResult {
   summary: {;
     totalLinks: number,brokenLinks: number,missingPages: number,externalLinks: number;
   };
@@ -19,35 +19,35 @@ interface AnalysisResult {;
 };
 
 export const WebsiteAnalyzer: React.FC = () => {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),;
-  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null),;
-  const [currentPage, setCurrentPage] = useState(''),;
-  const [progress, setProgress] = useState(0),;
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [currentPage, setCurrentPage] = useState('');
+  const [progress, setProgress] = useState(0);
 
   const pagesToAnalyze = [;
     '//[^;]*
-    '/contact/services',;
-    '/services2026/services2027',;
-    '/ai-services/ai-solutions',;
-    '/it-services/micro-saas',;
-    '/comprehensive-services/careers',;
-    '/blog/partners',;
-    '/pricing/solutions',;
-    '/research-development/case-studies',;
-    '/news/events',;
-    '/team/help-center',;
-    '/support/privacy',;
-    '/terms/cookies',;
-    '/sitemap/marketplace',;
-    '/talent/equipment',;
-    '/green-it/security',;
-    '/training/webinars',;
-    '/white-papers/documentation',;
-    '/developers/api',;
-    '/status/system-status',;
-    '/request-quote/dashboard',;
-    '/login/faq',;
-    '/search/match',;
+    '/contact/services';
+    '/services2026/services2027';
+    '/ai-services/ai-solutions';
+    '/it-services/micro-saas';
+    '/comprehensive-services/careers';
+    '/blog/partners';
+    '/pricing/solutions';
+    '/research-development/case-studies';
+    '/news/events';
+    '/team/help-center';
+    '/support/privacy';
+    '/terms/cookies';
+    '/sitemap/marketplace';
+    '/talent/equipment';
+    '/green-it/security';
+    '/training/webinars';
+    '/white-papers/documentation';
+    '/developers/api';
+    '/status/system-status';
+    '/request-quote/dashboard';
+    '/login/faq';
+    '/search/match';
     '/analytics/mobile-launch'
   ];
   const analyzeWebsite = async () => {;
@@ -60,20 +60,20 @@ export const WebsiteAnalyzer: React.FC = () => {
     try {;
       for (let i = 0, i < pagesToAnalyze.length, i++) {;
         const page = pagesToAnalyze[i]
-        setCurrentPage(page),;
-        setProgress((i / pagesToAnalyze.length) * 100),;
+        setCurrentPage(page);
+        setProgress((i / pagesToAnalyze.length) * 100);
 
         try {;
           //[^;]*
           const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`
           const pageResult = await linkChecker.checkPageLinks(page, mockContent)
-          results.push(pageResult),;
+          results.push(pageResult);
         } catch (error) {;
-          console.error(`Error analyzing ${page}:`, error),;
+          console.error(`Error analyzing ${page}:`, error);
         };
 
         //[^;]*
-        await new Promise(resolve => setTimeout(resolve, 100)),;
+        await new Promise(resolve => setTimeout(resolve, 100));
       };
 
       const summary = linkChecker.getSummary()
@@ -81,22 +81,22 @@ export const WebsiteAnalyzer: React.FC = () => {
       const missingPages = linkChecker.getMissingPages()
 
       setAnalysisResult({;
-        summary,;
+        summary;
         pages: results;
-        brokenLinks,;
+        brokenLinks;
         missingPages;
-      }),;
+      });
     } catch (error) {;
-      console.error('Analysis failed:', error),;
+      console.error('Analysis failed:', error);
     } finally {;
-      setIsAnalyzing(false),;
-      setProgress(100),;
-      setCurrentPage(''),;
+      setIsAnalyzing(false);
+      setProgress(100);
+      setCurrentPage('');
     };
-  },;
+  };
 
   const exportReport = () => {;
-    if (!analysisResult) return,;
+    if (!analysisResult) return;
 
     const report = {;
       timestamp: new Date().toISOString(),summary: analysisResult.summary,brokenLinks: analysisResult.brokenLinks,missingPages: analysisResult.missingPages,pages: analysisResult.pages
@@ -104,24 +104,24 @@ export const WebsiteAnalyzer: React.FC = () => {
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
-    a.href = url,;
-    a.download = 'zion-website-analysis.json',;
-    document.body.appendChild(a),;
-    a.click(),;
-    document.body.removeChild(a),;
-    URL.revokeObjectURL(url),;
-  },;
+    a.href = url;
+    a.download = 'zion-website-analysis.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   const getStatusIcon = (status: string) => {;
     switch (status) {;
       case 'working':;
         return <[^>]*/>
       case 'broken':;
-        return <XCircle className="w-4 h-4 text-red-500" />,;
+        return <XCircle className="w-4 h-4 text-red-500" />;
       case 'missing':;
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />,;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
       case 'external':;
-        return <ExternalLink className="w-4 h-4 text-blue-500" />,;
+        return <ExternalLink className="w-4 h-4 text-blue-500" />;
       default: return <[^>]*/>
     };
   };
@@ -130,11 +130,11 @@ export const WebsiteAnalyzer: React.FC = () => {
       case 'working':;
         return 'text-green-600 bg-green-100'
       case 'broken':;
-        return 'text-red-600 bg-red-100',;
+        return 'text-red-600 bg-red-100';
       case 'missing':;
-        return 'text-yellow-600 bg-yellow-100',;
+        return 'text-yellow-600 bg-yellow-100';
       case 'external':;
-        return 'text-blue-600 bg-blue-100',;
+        return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100'
     };
   };
@@ -320,7 +320,7 @@ export const WebsiteAnalyzer: React.FC = () => {
         )};
       </[^>]*>
     </[^>]*>
-  ),;
-},;
+  );
+};
 
 export default WebsiteAnalyzer;

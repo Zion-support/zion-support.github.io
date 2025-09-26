@@ -9,74 +9,74 @@ export default function FAQ() {;
     general: [;
       {;
         question: "What is Zion Tech Group and what services do you offer?",answer: "Zion Tech Group is a leading technology solutions provider specializing in AI-powered business intelligence, cloud infrastructure, digital twin technology, data analytics, and IT infrastructure services. We help businesses of all sizes transform their operations through innovative technology solutions."
-      },;
+      };
       {;
         question: "What industries do you serve?",answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, education, and more. Our solutions are designed to be industry-agnostic while addressing specific sector challenges."
-      },;
+      };
       {;
         question: "Do you work with small businesses or only enterprise clients?",answer: "We work with businesses of all sizes, from startups and small businesses to large enterprises. We offer scalable solutions that can grow with your business and provide flexible engagement models to meet different budget requirements."
-      },;
+      };
       {;
         question: "What makes Zion Tech Group different from other tech companies?",answer: "Our unique combination of cutting-edge AI technology, deep industry expertise, and personalized approach sets us apart. We focus on delivering measurable business outcomes, not just technology implementations."
       };
-    ],;
+    ];
     services: [;
       {;
         question: "What AI and machine learning services do you provide?",answer: "We offer comprehensive AI services including predictive analytics, natural language processing, computer vision, recommendation systems, and custom AI model development. Our solutions help businesses automate processes, gain insights from data, and make better decisions."
-      },;
+      };
       {;
         question: "Can you help with cloud migration and infrastructure setup?",answer: "Yes, we provide end-to-end cloud migration services including assessment, planning, migration execution, and ongoing optimization. We work with AWS, Azure, and Google Cloud Platform to create scalable, secure, and cost-effective cloud solutions."
-      },;
+      };
       {;
         question: "What is digital twin technology and how can it benefit my business?",answer: "Digital twin technology creates virtual replicas of physical systems, processes, or products. This enables real-time monitoring, predictive maintenance, scenario planning, and optimization. Benefits include reduced downtime, improved efficiency, and better decision-making."
-      },;
+      };
       {;
         question: "Do you provide ongoing support and maintenance?",answer: "Yes, we offer comprehensive support and maintenance packages including 24/7 monitoring, regular updates, performance optimization, and technical support. We also provide training and documentation to ensure your team can effectively use our solutions."
       };
-    ],;
+    ];
     pricing: [;
       {;
         question: "How do you structure your pricing?",answer: "Our pricing is based on the scope of work, complexity of the solution, and ongoing support requirements. We offer flexible engagement models including project-based pricing, subscription services, and managed services. We provide detailed proposals with transparent pricing."
-      },;
+      };
       {;
         question: "Do you offer free consultations or assessments?",answer: "Yes, we provide free initial consultations to understand your business needs and challenges. We also offer free technology assessments to evaluate your current infrastructure and identify improvement opportunities."
-      },;
+      };
       {;
         question: "Are there any hidden costs or fees?",answer: "No, we believe in transparent pricing. All costs are clearly outlined in our proposals, including implementation, training, support, and any third-party licensing fees. We discuss any potential additional costs upfront."
-      },;
+      };
       {;
         question: "Do you offer payment plans or financing options?",answer: "Yes, we offer flexible payment options including milestone-based payments, monthly installments, and financing through our partner institutions. We work with clients to find payment solutions that fit their budget and cash flow."
       };
-    ],;
+    ];
     implementation: [;
       {;
         question: "How long does it typically take to implement your solutions?",answer: "Implementation timelines vary based on complexity and scope. Simple integrations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed project timelines during the planning phase."
-      },;
+      };
       {;
         question: "What is your implementation process?",answer: "Our implementation process follows a proven methodology: Discovery & Planning, Design & Architecture, Development & Testing, Deployment & Go-Live, and Training & Support. We maintain regular communication and provide progress updates throughout."
-      },;
+      };
       {;
         question: "Do you provide training for our team?",answer: "Yes, we provide comprehensive training programs including user training, administrator training, and technical training. We also create custom documentation and video tutorials to ensure your team can effectively use and maintain the solutions."
-      },;
+      };
       {;
         question: "What happens if we encounter issues during implementation?",answer: "We have dedicated support teams available throughout implementation to address any issues quickly. Our project managers maintain regular check-ins, and we provide escalation procedures for urgent matters."
       };
-    ],;
+    ];
     support: [;
       {;
         question: "What support options do you provide?",answer: "We offer multiple support tiers including email support, phone support, live chat, and dedicated account management. Our support team is available during business hours with 24/7 emergency support for critical issues."
-      },;
+      };
       {;
         question: "How quickly do you respond to support requests?",answer: "Response times vary by support tier: Standard support responds within 4 hours, Premium support within 2 hours, and Enterprise support within 1 hour. Critical issues receive immediate attention regardless of support tier."
-      },;
+      };
       {;
         question: "Do you provide remote support and troubleshooting?",answer: "Yes, we provide remote support including screen sharing, remote desktop access, and video calls. This allows us to quickly diagnose and resolve issues without requiring on-site visits."
-      },;
+      };
       {;
         question: "What documentation and resources do you provide?",answer: "We provide comprehensive documentation including user manuals, technical guides, API documentation, video tutorials, and knowledge base articles. All resources are regularly updated and easily accessible through our client portal."
       };
     ];
-  },;
+  };
 
   const categories = [;
     { id: 'general', name: 'General Questions', icon: HelpCircle, count: faqData.general.length };
@@ -90,13 +90,13 @@ export default function FAQ() {;
       const filtered = questions.filter(q => ;
         q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         q.answer.toLowerCase().includes(searchQuery.toLowerCase());
-      ),;
+      );
       if (filtered.length > 0) {;
-        acc[category] = filtered,;
+        acc[category] = filtered;
       };
     };
-    return acc,;
-  }, {}),;
+    return acc;
+  }, {});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -120,7 +120,7 @@ export default function FAQ() {;
               <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Questions</[^>]*>
             </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Find answers to common questions about our services, pricing, implementation process, ;
+              Find answers to common questions about our services, pricing, implementation process;
               and support options. Can't find what you're looking for? Contact our team.;
             </[^>]*>
             ;
@@ -312,7 +312,7 @@ export default function FAQ() {;
 
 //[^;]*
 function FAQItem({ question, answer }: { question: string, answer: string }) {;
-  const [isOpen, setIsOpen] = useState(false),;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg overflow-hidden">;

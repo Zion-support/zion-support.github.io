@@ -1,17 +1,17 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Building,;
-  Heart, ;
-  Factory, ;
-  DollarSign, ;
-  Car, ;
-  Zap,;
-  Globe,;
-  Star,;
-  Brain,;
-  Cloud,;
-  Shield,;
+  Building;
+  Heart;
+  Factory;
+  DollarSign;
+  Car;
+  Zap;
+  Globe;
+  Star;
+  Brain;
+  Cloud;
+  Shield;
   TrendingUp;
 } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -19,24 +19,24 @@ const IndustrySolutions: React.FC = () => {
   const industries = [;
     {;
       title: 'Healthcare',description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',icon: Heart,path: '/solutions/healthcare',solutions: ['AI Healthcare AnalyticsPredictive Diagnostics', 'Patient Care OptimizationCompliance Management']
-    },;
+    };
     {;
-      title: 'Manufacturing',description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.',;
+      title: 'Manufacturing',description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.';
       icon: Factory,path: '/manufacturing-solutions',solutions: ['Smart Factory AutomationPredictive Maintenance', 'Quality ControlSupply Chain Optimization']
-    },;
+    };
     {;
       title: 'Financial Services',description: 'Advanced financial technology solutions for risk management and operational efficiency.',icon: DollarSign,path: '/financial-solutions',solutions: ['AI Financial AnalyticsRisk Management', 'Trading AlgorithmsCompliance Automation']
-    },;
+    };
     {;
       title: 'Automotive',description: 'Connected vehicle solutions and automotive technology innovations.',icon: Car,path: '/automotive-solutions',solutions: ['Connected VehiclesPredictive Maintenance', 'Fleet ManagementSafety Systems']
-    },;
+    };
     {;
       title: 'Energy & Utilities',description: 'Smart grid and energy management solutions for sustainability and efficiency.',icon: Zap,path: '/energy-solutions',solutions: ['Smart Grid ManagementEnergy Optimization', 'Predictive MaintenanceSustainability Analytics']
-    },;
+    };
     {;
       title: 'Retail & E-commerce',description: 'Digital transformation solutions for modern retail and e-commerce operations.',icon: Globe,path: '/retail-solutions',solutions: ['Customer AnalyticsInventory Management', 'PersonalizationSupply Chain Optimization']
     };
-  ],;
+  ];
 
   const benefits = [;
     {;

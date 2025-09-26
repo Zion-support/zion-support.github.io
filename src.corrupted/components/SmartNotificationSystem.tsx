@@ -1,23 +1,23 @@
 import React, { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ;
-  Bell,;
-  X, ;
-  CheckCircle, ;
-  AlertCircle, ;
-  Info, ;
-  XCircle,;
-  Settings,;
-  Volume2,;
-  VolumeX,;
-  Clock,;
-  Star,;
-  MessageSquare,;
-  Zap,;
-  TrendingUp,;
+  Bell;
+  X;
+  CheckCircle;
+  AlertCircle;
+  Info;
+  XCircle;
+  Settings;
+  Volume2;
+  VolumeX;
+  Clock;
+  Star;
+  MessageSquare;
+  Zap;
+  TrendingUp;
   Award;
 } from "lucide-react"
-interface Notification {;
+interface Notification {
   id: string,type: 'success' | 'error' | 'warning' | 'info' | 'achievement',title: string,message: string,timestamp: Date,read: boolean;
   action?: {;
     label: string,onClick: () => void;
@@ -26,13 +26,13 @@ interface Notification {;
   expiresAt?: Date;
 };
 
-interface Props {;
-  enabled?: boolean,;
+interface Props {
+  enabled?: boolean;
 };
 
 export function SmartNotificationSystem({ enabled = true }: Props) {;
-  const [notifications, setNotifications] = useState<Notification[]>([]),;
-  const [isVisible, setIsVisible] = useState(false),;
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false)
   const [unreadCount, setUnreadCount] = useState(0)
   const [showSettings, setShowSettings] = useState(false)
@@ -42,13 +42,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
       {;
         id: '1',type: 'success',title: 'Welcome to Zion Tech Group!',message: 'Your account has been successfully created. Explore our AI-powered solutions.',timestamp: new Date(Date.now() - 1000 * 60 * 5), //[^;]*
         read: false,priority: 'high',category: 'onboarding',action: {;
-          label: 'Get Started',onClick: () => console.log('Get Started clicked')
+          label: 'Get Started',onClick: () => // console.log('Get Started clicked')
         };
       };
       {;
         id: '2',type: 'achievement',title: 'Performance Milestone Reached!',message: 'Your website performance score has improved to 95%. Great job!',timestamp: new Date(Date.now() - 1000 * 60 * 15), //[^;]*
         read: false,priority: 'medium',category: 'performance',action: {;
-          label: 'View Details',onClick: () => console.log('View Details clicked')
+          label: 'View Details',onClick: () => // console.log('View Details clicked')
         };
       };
       {;
@@ -58,20 +58,20 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
       {;
         id: '4',type: 'warning',title: 'Security Update Required',message: 'Please update your password to maintain account security.',timestamp: new Date(Date.now() - 1000 * 60 * 60), //[^;]*
         read: false,priority: 'high',category: 'security',action: {;
-          label: 'Update Now',onClick: () => console.log('Update Now clicked')
+          label: 'Update Now',onClick: () => // console.log('Update Now clicked')
         };
       };
     ];
-    setNotifications(sampleNotifications),;
-    setUnreadCount(sampleNotifications.filter(n => !n.read).length),;
-  }, []),;
+    setNotifications(sampleNotifications);
+    setUnreadCount(sampleNotifications.filter(n => !n.read).length);
+  }, []);
 
   //[^;]*
   useEffect(() => {;
     if (enabled) {;
-      generateSampleNotifications(),;
+      generateSampleNotifications();
     };
-  }, [enabled, generateSampleNotifications]),;
+  }, [enabled, generateSampleNotifications]);
 
   //[^;]*
   useEffect(() => {;
@@ -80,21 +80,21 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         const now = new Date()
         const filtered = prev.filter(notification => {;
           if (notification.expiresAt && notification.expiresAt < now) {;&& notification.expiresAt < now) {; notification.expiresAt < now) {
-            return false,;
+            return false;
           };
-          return true,;
-        }),;
+          return true;
+        });
         ;
         if (filtered.length !== prev.length) {;
-          setUnreadCount(filtered.filter(n => !n.read).length),;
+          setUnreadCount(filtered.filter(n => !n.read).length);
         };
         ;
-        return filtered,;
-      }),;
+        return filtered;
+      });
     }, 60000), //[^;]*
 
-    return () => clearInterval(interval),;
-  }, []),;
+    return () => clearInterval(interval);
+  }, []);
 
   //[^;]*
   const markAsRead = useCallback((id: string) => {;
@@ -102,39 +102,39 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
       const updated = prev.map(n => ;
         n.id === id ? { ...n, read: true } : n;
       );
-      setUnreadCount(updated.filter(n => !n.read).length),;
-      return updated,;
-    }),;
-  }, []),;
+      setUnreadCount(updated.filter(n => !n.read).length);
+      return updated;
+    });
+  }, []);
 
   //[^;]*
   const markAllAsRead = useCallback(() => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ({ ...n, read: true }));
-      setUnreadCount(0),;
-      return updated,;
-    }),;
-  }, []),;
+      setUnreadCount(0);
+      return updated;
+    });
+  }, []);
 
   //[^;]*
   const removeNotification = useCallback((id: string) => {;
     setNotifications(prev => {;
       const filtered = prev.filter(n => n.id !== id)
-      setUnreadCount(filtered.filter(n => !n.read).length),;
+      setUnreadCount(filtered.filter(n => !n.read).length);
       return filtered;
-    }),;
-  }, []),;
+    });
+  }, []);
 
   //[^;]*
   const clearAllNotifications = useCallback(() => {;
-    setNotifications([]),;
-    setUnreadCount(0),;
-  }, []),;
+    setNotifications([]);
+    setUnreadCount(0);
+  }, []);
 
   //[^;]*
   const toggleMute = useCallback(() => {;
-    setIsMuted(!isMuted),;
-  }, [isMuted]),;
+    setIsMuted(!isMuted);
+  }, [isMuted]);
 
   //[^;]*
   const getNotificationIcon = (type: Notification['type']) => {;
@@ -142,13 +142,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
       case 'success':;
         return <[^>]*/>
       case 'error':;
-        return <XCircle className="w-5 h-5 text-red-500" />,;
+        return <XCircle className="w-5 h-5 text-red-500" />;
       case 'warning':;
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />,;
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'info':;
-        return <Info className="w-5 h-5 text-blue-500" />,;
+        return <Info className="w-5 h-5 text-blue-500" />;
       case 'achievement':;
-        return <Award className="w-5 h-5 text-purple-500" />,;
+        return <Award className="w-5 h-5 text-purple-500" />;
       default: return <[^>]*/>
     };
   };
@@ -158,9 +158,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
       case 'high':;
         return 'border-l-red-500'
       case 'medium':;
-        return 'border-l-yellow-500',;
+        return 'border-l-yellow-500';
       case 'low':;
-        return 'border-l-blue-500',;
+        return 'border-l-blue-500';
       default: return 'border-l-gray-500'
     };
   };
@@ -172,13 +172,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
     const hours = Math.floor(diff / (1000 * 60 * 60));
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    if (minutes < 1) return 'Just now',;
-    if (minutes < 60) return `${minutes}m ago`,;
-    if (hours < 24) return `${hours}h ago`,;
-    return `${days}d ago`,;
-  },;
+    if (minutes < 1) return 'Just now';
+    if (minutes < 60) return `${minutes}m ago`;
+    if (hours < 24) return `${hours}h ago`;
+    return `${days}d ago`;
+  };
 
-  if (!enabled) return null,;
+  if (!enabled) return null;
 
   if (!isVisible) {;
     return (
@@ -325,7 +325,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                             <button;
                               onClick={(e) => {;
                                 e.stopPropagation()
-                                notification.action!.onClick(),;
+                                notification.action!.onClick();
                               }};
                               className="[^"]*"
                             >;
@@ -342,7 +342,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                           <button;
                             onClick={(e) => {;
                               e.stopPropagation()
-                              removeNotification(notification.id),;
+                              removeNotification(notification.id);
                             }};
                             className="[^"]*"
                             title="Remove notification"

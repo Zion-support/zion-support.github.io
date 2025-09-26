@@ -5,36 +5,36 @@ const pricingTiers = [;
   {;
     name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses and startups",features: [;
       "Basic AI Services"
-      "Email Support",;
-      "5GB Storage",;
-      "Basic Analytics",;
+      "Email Support";
+      "5GB Storage";
+      "Basic Analytics";
       "Mobile App Access"
-    ],;
+    ];
     popular: false,color: "from-blue-500 to-cyan-500"
   };
   {;
     name: "Professional",price: "$299",period: "/month",description: "Ideal for growing businesses",features: [;
       "Advanced AI Services"
-      "Priority Support",;
-      "50GB Storage",;
-      "Advanced Analytics",;
-      "API Access",;
-      "Custom Integrations",;
+      "Priority Support";
+      "50GB Storage";
+      "Advanced Analytics";
+      "API Access";
+      "Custom Integrations";
       "Team Collaboration"
-    ],;
+    ];
     popular: true,color: "from-purple-500 to-pink-500"
   };
   {;
     name: "Enterprise",price: "$999",period: "/month",description: "For large organizations",features: [;
       "Full AI Suite"
-      "24/7 Dedicated Support",;
-      "Unlimited Storage",;
-      "Custom Analytics",;
-      "White-label Solutions",;
-      "Advanced Security",;
-      "Custom Development",;
+      "24/7 Dedicated Support";
+      "Unlimited Storage";
+      "Custom Analytics";
+      "White-label Solutions";
+      "Advanced Security";
+      "Custom Development";
       "SLA Guarantee"
-    ],;
+    ];
     popular: false,color: "from-green-500 to-emerald-500"
   };
 ];

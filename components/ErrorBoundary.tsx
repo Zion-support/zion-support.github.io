@@ -12,7 +12,7 @@ interface State {
   error?: Error;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+export default class ErrorBoundary extends Component<Props State> {
   public override state: State = {
     hasError: false
   };

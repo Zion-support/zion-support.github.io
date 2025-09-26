@@ -11,8 +11,7 @@ const Navigation = () => {
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
     { name: 'Cloud Services', href: '/services/cloud' },
     { name: 'Blockchain', href: '/services/blockchain' },
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-  ];
+    { name: 'Micro SaaS', href: '/services/micro-saas' }];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-blue-light/20">

@@ -1,26 +1,26 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Brain,;
-  BarChart3, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
-  Database,;
-  Cpu,;
-  Network,;
-  Lock,;
-  Eye,;
-  Target,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
+  Brain;
+  BarChart3;
+  TrendingUp;
+  Shield;
+  Zap;
+  Users;
+  Globe;
+  Database;
+  Cpu;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
   ExternalLink;
 } from "lucide-react"
 const AIBusinessIntelligenceElite: React.FC = () => {
@@ -43,58 +43,58 @@ const AIBusinessIntelligenceElite: React.FC = () => {
     {;
       icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
     };
-  ],;
+  ];
 
   const pricing = [;
     {;
-      name: "Starter",price: "$2,500",;
+      name: "Starter",price: "$2,500";
       period: "/month",description: "Perfect for small businesses and startups",features: [;
         "Up to 10 data sources"
-        "Basic AI analytics",;
-        "Standard reporting",;
-        "Email support",;
+        "Basic AI analytics";
+        "Standard reporting";
+        "Email support";
         "5 user licenses"
       ];
-    },;
+    };
     {;
-      name: "Professional",price: "$5,000",;
+      name: "Professional",price: "$5,000";
       period: "/month",description: "Ideal for growing businesses and teams",features: [;
         "Up to 50 data sources"
-        "Advanced AI analytics",;
-        "Custom dashboards",;
-        "Priority support",;
-        "25 user licenses",;
+        "Advanced AI analytics";
+        "Custom dashboards";
+        "Priority support";
+        "25 user licenses";
         "API access"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Enterprise",price: "$12,000",;
+      name: "Enterprise",price: "$12,000";
       period: "/month",description: "For large organizations with complex needs",features: [;
         "Unlimited data sources"
-        "Full AI suite",;
-        "Custom development",;
-        "24/7 dedicated support",;
-        "Unlimited users",;
+        "Full AI suite";
+        "Custom development";
+        "24/7 dedicated support";
+        "Unlimited users";
         "White-label options"
       ];
     };
-  ],;
+  ];
 
   const useCases = [;
     {;
       title: "Financial Analytics",description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting"
-    },;
+    };
     {;
       title: "Sales Intelligence",description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning"
-    },;
+    };
     {;
       title: "Customer Analytics",description: "Customer behavior analysis, segmentation, and lifetime value prediction"
-    },;
+    };
     {;
       title: "Operational Efficiency",description: "Process optimization, resource allocation, and performance monitoring"
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react"
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025"
 const InnovativeServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [priceRange, setPriceRange] = useState('all'),;
-  const [sortBy, setSortBy] = useState('rating'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
 
   const categories = ['allAI Services', 'IT ServicesMicro SAAS', 'BusinessDevelopment']
   const priceRanges = [;
@@ -30,42 +30,41 @@ const InnovativeServicesShowcase: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      ),;
+      );
     };
 
     //[^;]*
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
 
     //[^;]*
     if (priceRange !== 'all') {;
-      const [min, max] = priceRange.split('-').map(Number),;
+      const [min, max] = priceRange.split('-').map(Number);
       if (priceRange === '3000+') {;
-        filtered = filtered.filter(service => service.price >= 3000),;
+        filtered = filtered.filter(service => service.price >= 3000);
       } else {;
-        filtered = filtered.filter(service => service.price >= min && service.price <= max),;&& service.price <= max),; service.price <= max),
-      };
+        filtered = filtered.filter(service => service.price >= min && service.price <= max);&& service.price <= max); service.price <= max)};
     };
 
     //[^;]*
     switch (sortBy) {;
       case 'rating':;
-        filtered.sort((a, b) => b.rating - a.rating),;
-        break,;
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
       case 'aiScore':;
-        filtered.sort((a, b) => b.aiScore - a.aiScore),;
-        break,;
+        filtered.sort((a, b) => b.aiScore - a.aiScore);
+        break;
       case 'price':;
-        filtered.sort((a, b) => a.price - b.price),;
-        break,;
+        filtered.sort((a, b) => a.price - b.price);
+        break;
       case 'launchDate':;
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),;
-        break,;
+        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        break;
     };
 
-    return filtered,;
-  }, [searchTerm, selectedCategory, priceRange, sortBy]),;
+    return filtered;
+  }, [searchTerm, selectedCategory, priceRange, sortBy]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (;
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">;

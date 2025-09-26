@@ -1,35 +1,35 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 import {;
-  Search,;
-  Filter,;
-  Star,;
-  Zap,;
-  Brain,;
-  Shield,;
-  Cpu,;
-  Network,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  TrendingUp,;
-  Users,;
-  Clock,;
-  CheckCircle,;
+  Search;
+  Filter;
+  Star;
+  Zap;
+  Brain;
+  Shield;
+  Cpu;
+  Network;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  TrendingUp;
+  Users;
+  Clock;
+  CheckCircle;
   ArrowRight;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
 import {;
-  revolutionaryMicroSaasServices2026,;
-  revolutionaryITInfrastructureServices2026,;
-  revolutionaryAIServices2026,;
+  revolutionaryMicroSaasServices2026;
+  revolutionaryITInfrastructureServices2026;
+  revolutionaryAIServices2026;
   ALL_REVOLUTIONARY_SERVICES_2026;
 } from "../data/comprehensiveServices2026"
 const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))]
   const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))]
   const filteredServices = useMemo(() => {;
@@ -40,33 +40,33 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         service.name.toLowerCase().includes(lowerQuery) ||;
         service.description.toLowerCase().includes(lowerQuery) ||;
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery));
-      ),;
+      );
     };
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
     if (selectedInnovationLevel !== 'all') {;
-      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel),;
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
     };
-    return filtered,;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]),;
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'Quantum Computing': return <[^>]*/>
-      case 'Neural Networks': return <Brain className="w-5 h-5" />,;
-      case 'Blockchain Development': return <Shield className="w-5 h-5" />,;
-      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />,;
-      case 'Edge Computing': return <Network className="w-5 h-5" />,;
-      case 'Autonomous Systems': return <Brain className="w-5 h-5" />,;
-      case 'Quantum AI': return <Zap className="w-5 h-5" />,;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5" />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
       default: return <[^>]*/>
     };
   };
   const getInnovationLevelColor = (level: string) => {;
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600'
-      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600',;
-      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600',;
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600'
     };
   };
@@ -292,8 +292,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <button;
                   onClick={() => {;
                     setSearchTerm('')
-                    setSelectedCategory('all'),;
-                    setSelectedInnovationLevel('all'),;
+                    setSelectedCategory('all');
+                    setSelectedInnovationLevel('all');
                   }};
                   className="[^"]*"
                 >;

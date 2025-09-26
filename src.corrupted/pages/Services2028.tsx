@@ -6,16 +6,16 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaas
 import { COMPREHENSIVE_IT_SERVICES_2028 } from "../data/comprehensiveITServices2028"
 import { COMPREHENSIVE_PRICING_2028 } from "../data/comprehensivePricingGuide2028"
 export default function Services2028() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),;
-  const [sortBy, setSortBy] = useState('featured'),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
 
   //[^;]*
   const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028,;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028;
     ...COMPREHENSIVE_IT_SERVICES_2028
-  ],;
+  ];
 
   //[^;]*
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))]
@@ -24,23 +24,21 @@ export default function Services2028() {;
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     ;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     ;
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && service.price < 2000) ||;&& service.price < 2000) ||; service.price < 2000) ||
                         (selectedPriceRange === 'medium' && service.price >= 2000 && service.price < 5000) ||;&& service.price >= 2000 && service.price < 5000) ||; service.price >= 2000 && service.price < 5000) ||
-                        (selectedPriceRange === 'high' && service.price >= 5000),;&& service.price >= 5000),; service.price >= 5000),
-    ;
-    return matchesSearch && matchesCategory && matchesPrice,;&& matchesCategory && matchesPrice,; matchesCategory && matchesPrice,
-  }),;
+                        (selectedPriceRange === 'high' && service.price >= 5000);&& service.price >= 5000); service.price >= 5000);
+    return matchesSearch && matchesCategory && matchesPrice;&& matchesCategory && matchesPrice; matchesCategory && matchesPrice});
 
   //[^;]*
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'price-high':;
         return b.price - a.price
       case 'rating':;
