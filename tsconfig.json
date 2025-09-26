@@ -68,6 +68,8 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "src/pages/services/ai-legal-document-analysis.tsx",
+    "src/pages/services/ai-marketing-automation.tsx"
   ]
 }
