@@ -1,18 +1,19 @@
-# Exclude non-app directories and archived content from linting (merged)
-node_modules/
+# Build output
 .next/
 out/
-build/
 dist/
 coverage/
-.cache/
 
-<<<<<<< HEAD
+# Dependencies
+node_modules/
+
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**
+
 # Exclude corrupted or non-app source directories
 # Allow linting of active app source under src/
-=======
-# Exclude corrupted or non-app source directories (keep main src for linting)
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
 # src/
 # components/
 
@@ -56,19 +57,12 @@ zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
-<<<<<<< HEAD
 # Keep targeted ignores inside src minimal to allow lint to run
-=======
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
 # src/components/**
 # src/pages/**
 # src/routes/**
 # src/context/**
-<<<<<<< HEAD
-# src/utils/cartUtils.js
-=======
 src/utils/cartUtils.js
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
 **/*.config.ts
 vite.config.ts
 vitest.config.ts
