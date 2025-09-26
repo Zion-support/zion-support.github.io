@@ -8,7 +8,8 @@
   }
 
   body {
-    @apply bg-slate-900 text-white;
+    background-color: #0f172a;
+    color: white;
   }
 }
 
@@ -18,10 +19,22 @@
   }
 
   .btn-secondary {
-    @apply bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg border border-slate-600 transition-all duration-300;
+    @apply text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    background-color: #1e293b;
+    border: 1px solid #475569;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #334155;
   }
 
   .card {
-    @apply bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300;
+    @apply rounded-lg p-6 transition-all duration-300;
+    background-color: rgba(30, 41, 59, 0.5);
+    border: 1px solid #334155;
+  }
+  
+  .card:hover {
+    background-color: rgba(30, 41, 59, 0.7);
   }
 }
