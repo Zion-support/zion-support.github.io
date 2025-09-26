@@ -1,3 +1,5 @@
+import React from 'react'
+
 /**
  * Performance monitoring and optimization utilities
  */
@@ -46,16 +48,16 @@ class PerformanceMonitor {
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
       if (lastEntry) {
-        this.metrics.lcp = lastEntry.startTime
+        this.metrics.lcp = (lastEntry as any).startTime
       }
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        const anyEntry = entry as any
-        if (typeof anyEntry.processingStart === 'number' && typeof anyEntry.startTime === 'number') {
-          this.metrics.fid = anyEntry.processingStart - anyEntry.startTime
+        const firstInputEntry = entry as unknown as { processingStart?: number; startTime: number }
+        if (typeof firstInputEntry.processingStart === 'number') {
+          this.metrics.fid = firstInputEntry.processingStart - firstInputEntry.startTime
         }
       })
     })
@@ -187,7 +189,6 @@ export class ResourceOptimizer {
 }
 
 // Bundle optimization utilities
-import React from 'react'
 export class BundleOptimizer {
   static async loadChunk(chunkName: string): Promise<any> {
     try {
