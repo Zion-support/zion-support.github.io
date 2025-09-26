@@ -80,3 +80,4 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+export { PerformanceMonitor };

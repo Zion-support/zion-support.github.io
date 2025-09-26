@@ -138,3 +138,6 @@ declare global {
     gtag?: (...args: any[]) => void;
   }
 }
+
+// Default export for compatibility
+export default ErrorBoundary;

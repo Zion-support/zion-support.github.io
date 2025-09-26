@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
 import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
+import ErrorBoundary from '../src/components/ErrorBoundary';
 import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
 import { Analytics, useEventTracking, useScrollTracking, useTimeTracking } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
