@@ -19,7 +19,7 @@
 		"test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
 		"test:watch": "jest --watch --config jest.config.ts",
 		"test:coverage": "jest --coverage --config jest.config.ts",
-		"verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
+		"verify": "npm run type-check && npm run build && npm run test:smoke",
 		"check": "npm run lint && npm run type-check && npm run test:smoke",
 		"clean": "rm -rf .next out dist",
 		"precommit": "npm run check",
