@@ -1,0 +1,29 @@
+src/
+database/
+playwright.config.ts
+tailwind.config.js
+
+node_modules/
+.next/
+dist/
+out/
+coverage/
+
+# Problematic content to be repaired in a follow-up pass
+src/app/**
+src/components/**
+src/utils/**
+src/data/**
+database/**
+e2e/**
+playwright.config.ts
+jest.config.js
+jest.setup.js
+middleware.ts
+tailwind.config.js
+
+# Config and cache that shouldn't be linted
+cache/
+**/*.backup.*
+**/*.cleanup-backup.*
+**/*.conflict-backup.*
