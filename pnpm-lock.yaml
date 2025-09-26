@@ -274,15 +274,9 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.27.1
         version: 7.27.1(@babel/core@7.28.4)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       '@eslint/js':
         specifier: ^8.57.1
         version: 8.57.1
-=======
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
->>>>>>> cursor/check-fix-push-and-merge-to-main-2dca
       '@next/eslint-plugin-next':
         specifier: ^14.2.13
         version: 14.2.33
