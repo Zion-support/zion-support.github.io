@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AITransformationReadinessAssessment2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Transformation Readiness Assessment 2025 - Free Download"
-        description="Evaluate your organization's AI transformation readiness with our comprehensive assessment tool. Free download with 50+ evaluation criteria and actionable recommendations."
-        keywords="AI readiness assessment, AI transformation, digital transformation, AI implementation, business assessment, free download"
-        url="/resources/ai-transformation-readiness-assessment-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">

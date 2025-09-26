@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AICybersecurityTransformation2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Cybersecurity Transformation: How a Fortune 500 Company Secured Their AI Infrastructure"
-        description="Case study: Fortune 500 company implements comprehensive AI cybersecurity framework, reducing security incidents by 95% and saving $12M in potential breach costs."
-        keywords="AI cybersecurity case study, AI security transformation, Fortune 500 AI security, AI security framework, cybersecurity success story"
-        url="/case-studies/ai-cybersecurity-transformation-2025"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">

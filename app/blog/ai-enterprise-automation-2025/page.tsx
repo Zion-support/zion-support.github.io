@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIEnterpriseAutomation2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Enterprise Automation 2025: Complete Implementation Guide"
-        description="Transform your enterprise with AI automation. Learn proven strategies, implementation frameworks, and real-world case studies for 40% cost reduction and 300% productivity gains."
-        keywords="AI automation, enterprise AI, business automation, AI implementation, digital transformation, cost reduction, productivity"
-        url="/blog/ai-enterprise-automation-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
             ← Back to Blog

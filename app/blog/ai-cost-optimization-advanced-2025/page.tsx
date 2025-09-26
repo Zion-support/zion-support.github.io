@@ -1,17 +1,8 @@
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export default function AICostOptimizationAdvanced2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Advanced AI Cost Optimization 2025: Complete Guide"
-        description="Master AI cost optimization with advanced strategies, tools, and techniques. Reduce AI infrastructure costs by 40-60% while maintaining performance."
-        keywords="AI cost optimization, LLM costs, AI infrastructure, cost reduction, AI efficiency, FinOps"
-        url="/blog/ai-cost-optimization-advanced-2025"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">

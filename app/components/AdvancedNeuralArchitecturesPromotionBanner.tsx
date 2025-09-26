@@ -96,21 +96,21 @@ const AdvancedNeuralArchitecturesPromotionBanner = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-2">
               <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                {currentContent.type}
+                {currentContent?.type}
               </span>
-              <span className="text-gray-300 text-sm">{currentContent.readingTime}</span>
+              <span className="text-gray-300 text-sm">{currentContent?.readingTime}</span>
             </div>
             
             <h2 className="text-2xl lg:text-3xl font-bold leading-tight">
-              {currentContent.title}
+              {currentContent?.title}
             </h2>
             
             <p className="text-lg text-gray-200 leading-relaxed">
-              {currentContent.description}
+              {currentContent?.description}
             </p>
             
             <div className="flex flex-wrap gap-4 text-sm">
-              {currentContent.metrics.split(' • ').map((metric, index) => (
+              {currentContent?.metrics?.split(' • ').map((metric, index) => (
                 <span key={index} className="bg-white bg-opacity-20 px-3 py-1 rounded-full">
                   {metric}
                 </span>
@@ -119,7 +119,7 @@ const AdvancedNeuralArchitecturesPromotionBanner = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href={currentContent.url}
+                href={currentContent?.url || '#'}
                 className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Read Now
