@@ -46,11 +46,11 @@
     "strictNullChecks": false
   },
   "include": [
+    "src/src/**/*",
     "next-env.d.ts",
     "app/**/*",
     "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts",
-    "src/src/**/*"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
