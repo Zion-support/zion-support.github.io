@@ -13,8 +13,10 @@ import SystemMonitor from '../src/components/SystemMonitor';
 import AdvancedSecurityEnhancements from '../src/components/AdvancedSecurityEnhancements';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
 import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -33,7 +35,9 @@ const Dashboard: React.FC = () => {
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
     { id: 'security-enhancements' as const, name: 'Security Enhancements', icon: '🔐' },
     { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
-    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' }
+    { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
+    { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
   ];
 
   // Sample data for advanced components
@@ -201,10 +205,45 @@ const Dashboard: React.FC = () => {
             <AdvancedSecurityEnhancements />
           </div>
         );
+      case 'error-handler':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorHandler 
+              onError={(error) => console.log('Error captured:', error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              enableAutoRetry={true}
+              maxRetries={3}
+              enablePerformanceMonitoring={true}
+              enableErrorReporting={true}
+              enableUserFeedback={true}
+            />
+          </div>
+        );
       case 'performance-optimizer':
         return (
           <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Performance Optimizer</h1>
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
             <AdvancedPerformanceOptimizer />
           </div>
         );
@@ -232,6 +271,28 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <EnhancedUserExperience />
+          </div>
+        );
+      case 'analytics-insights':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedAnalyticsInsights 
+              data={sampleAnalyticsData}
+              enableRealTime={true}
+              refreshInterval={30000}
+              onInsightAction={(insight) => console.log('Insight action:', insight)}
+            />
           </div>
         );
       default:

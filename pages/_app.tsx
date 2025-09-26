@@ -10,6 +10,8 @@ import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import { WebVitals } from '../src/components/WebVitals';
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 
@@ -156,8 +158,16 @@ export default function App({ Component, pageProps }: AppProps) {
           <PerformanceMetrics />
           <PerformanceMonitor />
           <PerformanceTracker />
+          <WebVitals />
           <AccessibilityAuditor />
           <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+          <AdvancedErrorHandler 
+            enableAutoRetry={true}
+            maxRetries={3}
+            enablePerformanceMonitoring={true}
+            enableErrorReporting={true}
+            enableUserFeedback={true}
+          />
         </HelmetProvider>
       </AnalyticsProvider>
     </EnhancedErrorBoundary>
