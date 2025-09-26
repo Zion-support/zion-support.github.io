@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -6,6 +5,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ServiceCard from './components/ServiceCard';
+import FeatureCard from './components/FeatureCard';
+import SuccessStoryCard from './components/SuccessStoryCard';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../src/components/AdvancedContentRecommendationEngine';
@@ -120,13 +122,15 @@ export default function HomePage() {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/services'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                aria-label="Explore our services"
               >
                 Explore Services
               </Link>
               <Link
                 href='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                aria-label="Get started with our services"
               >
                 Get Started
               </Link>
@@ -441,25 +445,25 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <Card
+            <ServiceCard
               title='Micro SaaS'
               href='/services/micro-saas'
               description='End-to-end product engineering with billing, auth, analytics and growth.'
               icon='🚀'
             />
-            <Card
+            <ServiceCard
               title='AI Services'
               href='/services/ai-services'
               description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
               icon='🤖'
             />
-            <Card
+            <ServiceCard
               title='Edge Computing'
               href='/services/edge-computing'
               description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
               icon='⚡'
             />
-            <Card
+            <ServiceCard
               title='IT Services'
               href='/services/it-services'
               description='Cloud migration, DevOps, SRE, security hardening and cost optimization.'
@@ -575,18 +579,22 @@ export default function HomePage() {
             <FeatureCard
               title='Fast Delivery'
               description='Rapid prototyping and deployment with modern tools and practices.'
+              icon='⚡'
             />
             <FeatureCard
               title='Scalable Architecture'
               description='Built for growth with cloud-native, microservices architecture.'
+              icon='🏗️'
             />
             <FeatureCard
               title='24/7 Support'
               description='Round-the-clock monitoring and support for your critical systems.'
+              icon='🛡️'
             />
             <FeatureCard
               title='Cost Effective'
               description='Optimized solutions that reduce operational costs and improve efficiency.'
+              icon='💰'
             />
           </div>
         </div>
@@ -604,21 +612,21 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <TestimonialCard
+            <SuccessStoryCard
               company="TechStart Inc."
               industry="SaaS"
               result="300% increase in customer satisfaction"
               description="AI automation reduced support response time from 4 hours to 2 minutes"
               savings="$50K monthly savings"
             />
-            <TestimonialCard
+            <SuccessStoryCard
               company="RetailMax"
               industry="E-commerce"
               result="90% reduction in manual tasks"
               description="Automated inventory management and order processing systems"
               savings="$75K annual cost reduction"
             />
-            <TestimonialCard
+            <SuccessStoryCard
               company="ConsultPro"
               industry="Professional Services"
               result="40% increase in proposal win rate"
@@ -960,8 +968,13 @@ export default function HomePage() {
                 type='email'
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                aria-label="Email address for newsletter subscription"
+                required
               />
-              <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+              <button 
+                className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                aria-label="Subscribe to newsletter"
+              >
                 Subscribe
               </button>
             </div>
@@ -1276,17 +1289,19 @@ export default function HomePage() {
             </p>
           </div>
           <div className='bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto'>
-            <form className='space-y-4'>
+            <form className='space-y-4' onSubmit={(e) => e.preventDefault()}>
               <div className='flex flex-col sm:flex-row gap-4'>
                 <input
                   type='email'
                   placeholder='Enter your email address'
                   className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  aria-label="Email address for newsletter subscription"
                   required
                 />
                 <button 
                   type='submit'
-                  className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap'
+                  className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                  aria-label="Subscribe to newsletter"
                 >
                   Subscribe Now
                 </button>
