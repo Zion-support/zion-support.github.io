@@ -1,97 +1,93 @@
 #!/bin/bash
 
-# Script to merge all unmerged branches into main
-set -e
+# Comprehensive branch merging script for Zion Holdings repository
+# This script will systematically merge all feature branches into main
 
-echo "Starting comprehensive branch merge process..."
+set -e  # Exit on any error
 
-# Get all unmerged branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged origin/main | grep -v "backup-main" | head -20)
+echo "🚀 Starting comprehensive branch merge process..."
+echo "=================================================="
 
-echo "Found unmerged branches:"
-echo "$UNMERGED_BRANCHES"
+# Get all remote branches (excluding main and HEAD)
+BRANCHES=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | grep -v "origin/cursor/" | sed 's/origin\///' | head -50)
 
-# Create a backup branch
-git checkout -b backup-before-merge-$(date +%Y%m%d-%H%M%S)
+# Counter for tracking progress
+total_branches=$(echo "$BRANCHES" | wc -l)
+current=0
+successful_merges=0
+failed_merges=0
 
-# Switch back to main
-git checkout main
+echo "📊 Found $total_branches branches to process"
+echo ""
 
-# Counter for successful merges
-SUCCESS_COUNT=0
-FAILED_BRANCHES=()
-
-for branch in $UNMERGED_BRANCHES; do
-    echo ""
-    echo "Processing branch: $branch"
+# Process each branch
+for branch in $BRANCHES; do
+    current=$((current + 1))
+    echo "[$current/$total_branches] 🔄 Processing branch: $branch"
     
-    # Extract branch name without origin/
-    BRANCH_NAME=$(echo $branch | sed 's/origin\///')
+    # Create a temporary branch for testing the merge
+    temp_branch="temp-merge-$branch"
     
-    # Try to merge the branch
-    if git merge --no-ff "$branch" -m "Merge $BRANCH_NAME into main"; then
-        echo "✅ Successfully merged $BRANCH_NAME"
-        ((SUCCESS_COUNT++))
-    else
-        echo "❌ Failed to merge $BRANCH_NAME - resolving conflicts..."
+    # Clean up any existing temp branch
+    git branch -D "$temp_branch" 2>/dev/null || true
+    
+    # Create and checkout temp branch
+    if git checkout -b "$temp_branch" "origin/$branch" 2>/dev/null; then
+        echo "  ✅ Created temp branch: $temp_branch"
         
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts in $BRANCH_NAME..."
+        # Attempt to merge main into the temp branch
+        if git merge main --no-edit 2>/dev/null; then
+            echo "  ✅ Merge successful: $branch"
+            successful_merges=$((successful_merges + 1))
             
-            # For yarn.lock conflicts, regenerate the file
-            if git status --porcelain | grep -q "yarn.lock"; then
-                echo "Regenerating yarn.lock..."
-                rm yarn.lock
-                yarn install
-                git add yarn.lock
-            fi
-            
-            # For package.json conflicts, use the main version
-            if git status --porcelain | grep -q "package.json"; then
-                echo "Using main version of package.json..."
-                git checkout --ours package.json
-                git add package.json
-            fi
-            
-            # For tsconfig.json conflicts, use the main version
-            if git status --porcelain | grep -q "tsconfig.json"; then
-                echo "Using main version of tsconfig.json..."
-                git checkout --ours tsconfig.json
-                git add tsconfig.json
-            fi
-            
-            # Commit the resolved conflicts
-            if git commit --no-edit; then
-                echo "✅ Successfully resolved conflicts and merged $BRANCH_NAME"
-                ((SUCCESS_COUNT++))
+            # Push the merged branch
+            if git push origin "$temp_branch" 2>/dev/null; then
+                echo "  ✅ Pushed merged branch: $temp_branch"
+                
+                # Switch to main and merge
+                git checkout main
+                if git merge "$temp_branch" --no-edit 2>/dev/null; then
+                    echo "  ✅ Merged into main: $branch"
+                else
+                    echo "  ⚠️  Already up to date in main: $branch"
+                fi
+                
+                # Push main
+                git push origin main
+                echo "  ✅ Pushed main branch"
             else
-                echo "❌ Failed to commit resolved conflicts for $BRANCH_NAME"
-                FAILED_BRANCHES+=("$BRANCH_NAME")
-                git merge --abort
+                echo "  ❌ Failed to push merged branch: $branch"
+                failed_merges=$((failed_merges + 1))
             fi
         else
-            echo "❌ No conflicts detected but merge failed for $BRANCH_NAME"
-            FAILED_BRANCHES+=("$BRANCH_NAME")
-            git merge --abort
+            echo "  ❌ Merge conflict detected: $branch"
+            failed_merges=$((failed_merges + 1))
         fi
+        
+        # Clean up temp branch
+        git checkout main
+        git branch -D "$temp_branch" 2>/dev/null || true
+        
+    else
+        echo "  ❌ Failed to create temp branch: $branch"
+        failed_merges=$((failed_merges + 1))
     fi
+    
+    echo ""
 done
 
-echo ""
-echo "Merge process completed!"
-echo "Successfully merged: $SUCCESS_COUNT branches"
-echo "Failed branches: ${#FAILED_BRANCHES[@]}"
+echo "=================================================="
+echo "📈 Merge Summary:"
+echo "  Total branches processed: $total_branches"
+echo "  Successful merges: $successful_merges"
+echo "  Failed merges: $failed_merges"
+echo "  Success rate: $(( (successful_merges * 100) / total_branches ))%"
+echo "=================================================="
 
-if [ ${#FAILED_BRANCHES[@]} -gt 0 ]; then
-    echo "Failed branches:"
-    for branch in "${FAILED_BRANCHES[@]}"; do
-        echo "  - $branch"
-    done
+if [ $failed_merges -eq 0 ]; then
+    echo "🎉 All branches merged successfully!"
+    exit 0
+else
+    echo "⚠️  Some branches had issues. Check the output above for details."
+    exit 1
 fi
-
-# Push the updated main branch
-echo "Pushing updated main branch..."
-git push origin main
-
-echo "Process complete!"
