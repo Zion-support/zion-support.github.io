@@ -65,7 +65,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     });
 
     return () => clearInterval(timer);
-  }, [addNotification]);
+  }, [addNotification, addEnhancedNotification]);
 
   useEffect(() => {
     // Save dark mode preference to localStorage (only on client side)

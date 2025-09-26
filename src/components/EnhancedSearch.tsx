@@ -279,7 +279,7 @@ export default function EnhancedSearch({
         setResults([]);
         break;
     }
-  }, [isOpen, selectedIndex, results, query, performSearch]);
+  }, [isOpen, selectedIndex, results, query, performSearch, handleResultClick]);
 
   // Handle result click
   const handleResultClick = useCallback((result: SearchResult) => {
@@ -504,7 +504,7 @@ export default function EnhancedSearch({
             {query && results.length === 0 && !isLoading && (
               <div className="p-4 text-center text-gray-500">
                 <Search className="h-8 w-8 mx-auto mb-2 text-gray-300" />
-                <p>No results found for "{query}"</p>
+                <p>No results found for &quot;{query}&quot;</p>
                 <p className="text-xs mt-1">Try different keywords or check your spelling</p>
               </div>
             )}
