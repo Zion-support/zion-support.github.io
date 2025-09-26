@@ -1,8 +1,7 @@
-import React from 'react'
-
 /**
  * Performance monitoring and optimization utilities
  */
+import React from 'react'
 
 export interface PerformanceMetrics {
   fcp?: number
@@ -13,11 +12,6 @@ export interface PerformanceMetrics {
   fmp?: number
   tbt?: number
   si?: number
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number
-  hadRecentInput: boolean
 }
 
 export interface PerformanceConfig {
@@ -52,8 +46,8 @@ class PerformanceMonitor {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
-      if (lastEntry) {
-        this.metrics.lcp = (lastEntry as PerformanceEntry).startTime
+      if (lastEntry && typeof (lastEntry as any).startTime === 'number') {
+        this.metrics.lcp = (lastEntry as any).startTime
       }
     })
 
@@ -71,9 +65,8 @@ class PerformanceMonitor {
     this.observeMetric('layout-shift', (entries) => {
       let clsValue = 0
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value
         }
       })
       this.metrics.cls = clsValue
@@ -94,7 +87,6 @@ class PerformanceMonitor {
       this.observers.push(observer)
     } catch (error) {
       if (this.config.enableLogging) {
-        // eslint-disable-next-line no-console
         console.warn(`Failed to observe ${type}:`, error)
       }
     }
@@ -133,7 +125,6 @@ class PerformanceMonitor {
       })
     } catch (error) {
       if (this.config.enableLogging) {
-        // eslint-disable-next-line no-console
         console.error('Failed to report metrics:', error)
       }
     }
@@ -198,20 +189,19 @@ export class ResourceOptimizer {
 
 // Bundle optimization utilities
 export class BundleOptimizer {
-  static async loadChunk(chunkName: string): Promise<Record<string, unknown>> {
+  static async loadChunk(chunkName: string): Promise<any> {
     try {
       return await import(/* webpackChunkName: "[request]" */ `../components/${chunkName}`)
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(`Failed to load chunk ${chunkName}:`, error)
       throw error
     }
   }
 
-  static createLazyComponent<T extends React.ComponentType<Record<string, unknown>>>(
+  static createLazyComponent<T extends React.ComponentType<any>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
-    return React.lazy(importFunc)
+    return (React as any).lazy(importFunc)
   }
 }
 
