@@ -8,7 +8,7 @@
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "start": "next start",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint --no-ignore src",
     "type-check": "npx tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix || true",
