@@ -127,8 +127,7 @@ export default function HomePage() {
               >
                 Explore Services
               </Link>
-              <Link
-                href='/contact'
+              <Link href='/contact'
                 className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
                 aria-label="Get started with our services"
               >
