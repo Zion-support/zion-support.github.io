@@ -108,6 +108,7 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+<<<<<<< HEAD
 
 # Ignore build outputs to avoid conflicts
 .next/
@@ -129,3 +130,5 @@ __pycache__/
 
 # Local SQLite databases
 zion_academy/instance/*.db
+=======
+>>>>>>> origin/backup-main-20250924-182607

@@ -283,8 +283,11 @@ export default function App(): JSX.Element {
                         <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                           Explore Next-Gen Tech →
                         </a>
+<<<<<<< HEAD
+=======
                       </div>
                     </div>
+>>>>>>> 8794a12ea372b27e7dfc5874856d00621a1bef87
                   </div>
                 </div>
 

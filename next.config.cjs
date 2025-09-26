@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   // Optimized for modern Next.js deployment
   reactStrictMode: true,
   compress: true,
@@ -112,3 +113,14 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+=======
+	typescript: {
+		ignoreBuildErrors: false
+	},
+	eslint: {
+		ignoreDuringBuilds: false
+	}
+}
+
+module.exports = nextConfig
+>>>>>>> origin/backup-main-20250924-182607

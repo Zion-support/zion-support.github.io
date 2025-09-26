@@ -231,7 +231,17 @@ export default function ResourcesPage() {
   );
 }
 
-function ResourceCard({ resource }: { resource: any }) {
+interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  type: string;
+  category: string;
+  rating: number;
+  downloadCount: string;
+}
+
+function ResourceCard({ resource }: { resource: Resource }) {
   return (
     <Link href={`/resources/${resource.id}`} className='group'>
       <div className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
