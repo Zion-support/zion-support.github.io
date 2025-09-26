@@ -208,7 +208,7 @@ export const PricingCalculator: React.FC = () => {
 	return (
 		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800 mb-3">Project Pricing Calculator</h3>
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
 				<p className="text-gray-600 text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
@@ -235,7 +235,7 @@ export const PricingCalculator: React.FC = () => {
 								>
 									<div className="flex justify-between items-start">
 										<div>
-											<h4 className="font-semibold text-gray-800">{service.name}</h4>
+											<h4 className="font-semibold text-gray-800" id="servicename">{service.name}</h4>
 											<p className="text-sm text-gray-600">{service.description}</p>
 										</div>
 										<span className="text-sm font-medium text-blue-600">
@@ -332,7 +332,7 @@ export const PricingCalculator: React.FC = () => {
 
 				{/* Price Estimate */}
 				<div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-					<h4 className="text-xl font-bold text-gray-800 mb-4">Price Estimate</h4>
+					<h4 className="text-xl font-bold text-gray-800 mb-4" id="price-estimate">Price Estimate</h4>
 					
 					{estimatedPrice > 0 ? (
 						<>
@@ -344,7 +344,7 @@ export const PricingCalculator: React.FC = () => {
 							</div>
 
 							<div className="space-y-3 mb-6">
-								<h5 className="font-semibold text-gray-800">Price Breakdown:</h5>
+								<h5 className="font-semibold text-gray-800" id="price-breakdown">Price Breakdown:</h5>
 								{breakdown.map((item, index) => (
 									<div key={index} className="flex justify-between items-center text-sm">
 										<div>
@@ -362,7 +362,7 @@ export const PricingCalculator: React.FC = () => {
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+							<button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>

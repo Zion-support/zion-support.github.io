@@ -119,7 +119,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
               </svg>
             </motion.div>
 
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4" id="oops-something-went-wrong">
               Oops! Something went wrong
             </h1>
             

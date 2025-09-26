@@ -433,13 +433,20 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         {/* Sidebar */}
         <div className="w-64 border-r border-gray-200 bg-gray-50">
           <div className="p-4">
-            <h2 className="text-lg font-semibold text-gray-900">Settings</h2>
+            <h2 className="text-lg font-semibold text-gray-900" id="settings">Settings</h2>
           </div>
           <nav className="space-y-1 px-4 pb-4">
             {categories.map(category => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() = aria-label="setActiveCategory(category)}
+                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  activeCategory === category
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                }`}
+              >
+                {category}"> setActiveCategory(category)}
                 className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
@@ -457,19 +464,19 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           {/* Header */}
           <div className="px-6 py-4 border-b border-gray-200">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-medium text-gray-900">{activeCategory}</h3>
+              <h3 className="text-lg font-medium text-gray-900" id="activecategory">{activeCategory}</h3>
               <div className="flex space-x-2">
                 <button
                   onClick={handleReset}
                   className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
-                >
+                 aria-label="Reset">
                   Reset
                 </button>
                 <button
                   onClick={handleSave}
                   disabled={!hasChanges || isSaving}
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
+                 aria-label="{isSaving ? 'Saving...' : 'Save Changes'}">
                   {isSaving ? 'Saving...' : 'Save Changes'}
                 </button>
               </div>

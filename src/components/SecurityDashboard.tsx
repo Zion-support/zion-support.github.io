@@ -238,12 +238,19 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       {/* Security Overview */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900">Security Overview</h2>
+          <h2 className="text-xl font-semibold text-gray-900" id="security-overview">Security Overview</h2>
           <div className="flex space-x-2">
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() => setSelectedTimeRange(range)}
+                onClick={() = aria-label="setSelectedTimeRange(range)}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  selectedTimeRange === range
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {range}"> setSelectedTimeRange(range)}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
@@ -302,7 +309,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
 
       {/* Recent Events Table */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Security Events</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">

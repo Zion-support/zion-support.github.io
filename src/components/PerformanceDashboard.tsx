@@ -191,7 +191,7 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               className="bg-gray-50 rounded-lg p-4 border border-gray-200"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3 className="font-medium text-gray-900 text-sm">{metric.name}</h3>
+                <h3 className="font-medium text-gray-900 text-sm" id="metricname">{metric.name}</h3>
                 <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
                   {getStatusIcon(metric.status)}
                 </div>
