@@ -26,15 +26,14 @@ id: "getting-hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"},
-
-  {,
-id: "project-help",
+  {
+    id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"}
-  {,
-icon: "Code"}
+  {
+    icon: "Code"}
   },
 
   {,
@@ -43,9 +42,8 @@ id: "ai-tools",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"},
-
-  {,
-id: "feedback",
+  {
+    id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
@@ -58,43 +56,43 @@ id: "announcements",
     description: "Official announcements from the Zion team.",
     adminOnly: true,
     icon: "Megaphone"}
-]],;
+]],
 const iconMap = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone}
-export const ForumCategories = () => {;
-const { user } = useAuth(),;
-const isAdmin = user?.userType === 'admin' |user?.role === 'admin',;
-const visibleCategories = categories.filter(,
-category => !category.adminOnly |isAdmin)},
-export const ForumCategories = () => {;
-const { user } = useAuth(),;
-const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-export const ForumCategories = () => {;
-const { user } = useAuth(),;
-const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-const visibleCategories = categories.filter(,
-category => !category.adminOnly || isAdmin),;
-return (
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin',
+  const visibleCategories = categories.filter(
+    category => !category.adminOnly |isAdmin)},
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const visibleCategories = categories.filter(
+    category => !category.adminOnly || isAdmin),
+  return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">,
-
-      {visibleCategories.map((category) => {;
-const Icon = iconMap[category.icon as keyof typeof iconMap],;
-return (
+      {visibleCategories.map((category) => {
+        const Icon = iconMap[category.icon as keyof typeof iconMap],
+        return (
           <Link key={category.id} to={`/community/category/${category.id}`}>,
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">,
               <CardHeader className="flex flex-row items-center gap-4">,
                 <div className="p-2 bg-zion-purple/10 rounded-full">,
                   <Icon className="h-6 w-6 text-zion-purple" />,
-                
-                <CardTitle className="text-xl">{category.name}
-              
+                </div>,
+                <CardTitle className="text-xl">{category.name}</CardTitle>,
+              </CardHeader>,
               <CardContent>,
-                <CardDescription className="text-base">{category.description}
-
+                <CardDescription className="text-base">{category.description}</CardDescription>,
+              </CardContent>,
+            </Card>,
           </Link>)})}
     </div>)}
 export default ForumCategories,
@@ -102,104 +100,100 @@ export default ForumCategories,
   Briefcase,
   Code,
   FileText,
-  Megaphone} from "@/components/icons",;
+  Megaphone} from "@/components/icons",
 const categories: ForumCategoryInfo[] = [
-  {,
-id: "getting-hired",
+  {
+    id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"},
-
-  {,
-id: "project-help",
+  {
+    id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"},
-
-  {,
-id: "ai-tools",
+  {
+    id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"},
-
-  {,
-id: "feedback",
+  {
+    id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"},
-
-  {,
-id: "announcements",
+  {
+    id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
     adminOnly: true,
     icon: "Megaphone"}
-],;
-const iconMap = {;
+],
+const iconMap = {
 const categories: ForumCategoryInfo[] = [
-  {,
-id: "getting - hired",
+  {
+    id: "getting - hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     admin_only: false,
     icon: "Briefcase"}
-  {,
-id: "project - help",
+  {
+    id: "project - help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     admin_only: false,
     icon: "MessageSquare"}
-  {,
-id: "ai - tools",
+  {
+    id: "ai - tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     admin_only: false,
     icon: "Code"}
-  {,
-id: "feedback",
+  {
+    id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     admin_only: false,
     icon: "FileText"}
-  {,
-id: "announcements",
+  {
+    id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
     admin_only: true,
     icon: "Megaphone"}
-],;
+],
 const icon_map = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone}
-export const ForumCategories = () => {;
-const { user } = useAuth(),;
-const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-const visibleCategories = categories && categories.filter(,
-category => !category && category.adminOnly || isAdmin),;
-return (
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const visibleCategories = categories && categories.filter(
+    category => !category && category.adminOnly || isAdmin),
+  return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">,
-
-      {visibleCategories && visibleCategories.map((category) => {;
-const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
-return (
+      {visibleCategories && visibleCategories.map((category) => {
+        const Icon = iconMap[category && category.icon as keyof typeof iconMap],
+        return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>,
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">,
               <CardHeader className="flex flex-row items-center gap-4">,
                 <div className="p-2 bg-zion-purple/10 rounded-full">,
                   <Icon className="h-6 w-6 text-zion-purple" />,
-                
-                <CardTitle className="text-xl">{category && category.name}
-              
+                </div>,
+                <CardTitle className="text-xl">{category && category.name}</CardTitle>,
+              </CardHeader>,
               <CardContent>,
-                <CardDescription className="text-base">{category && category.description}
-
+                <CardDescription className="text-base">{category && category.description}</CardDescription>,
+              </CardContent>,
+            </Card>,
           </Link>)})}
 ,
     </div>)},

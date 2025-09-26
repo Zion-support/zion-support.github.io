@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -33,14 +33,14 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "noImplicitOverride": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
     "types": [
       "node",
       "react",
@@ -55,11 +55,9 @@
     "strictNullChecks": true
   },
   "include": [
-    "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts",
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    "app/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -67,10 +65,6 @@
     "build",
     "coverage",
     "src/**",
-    "data/**",
-    "utils/**",
-    "lib/**",
-    "types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",

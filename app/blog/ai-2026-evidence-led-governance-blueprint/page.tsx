@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SEO from '@/components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Evidence‑Led Governance Blueprint | Zion Tech Group',
@@ -45,6 +46,12 @@ const sections: { title: string; points: string[] }[] = [
 const ArticlePage = () => {
   return (
     <div>
+      <SEO
+        title="AI 2026: Evidence‑Led Governance Blueprint"
+        description="Blueprint for evidence‑led AI governance: eval gates, scorecards, and audit‑ready operations."
+        keywords="AI governance, evidence‑led operations, eval gates, scorecards, audit readiness, policy‑as‑code"
+        url="/blog/ai-2026-evidence-led-governance-blueprint"
+      />
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

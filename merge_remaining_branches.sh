@@ -1,55 +1,101 @@
 #!/bin/bash
 
-# Script to merge remaining cursor branches efficiently
-echo "Starting merge of remaining cursor branches..."
+# Script to merge remaining unmerged branches
+set -e
 
-# Get the most recent 10 branches
-branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/check-fix-push-and-merge-to-main" | head -10)
+echo "Starting merge of remaining unmerged branches..."
 
-success_count=0
-conflict_count=0
-already_merged_count=0
-
-for branch in $branches; do
-    echo "Processing $branch..."
-    
-    # Check if already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
-        echo "  ✓ Already merged"
-        ((already_merged_count++))
-        continue
-    fi
+# Function to merge a single branch with conflict resolution
+merge_branch() {
+    local branch=$1
+    echo "Attempting to merge $branch..."
     
     # Try to merge
-    if git merge "origin/$branch" --no-commit --no-edit 2>/dev/null; then
-        git commit -m "merge: integrate $branch automatically" --no-edit 2>/dev/null
-        if [ $? -eq 0 ]; then
-            echo "  ✓ Successfully merged"
-            ((success_count++))
-        else
-            echo "  ✗ Failed to commit merge"
-            git merge --abort 2>/dev/null
-            ((conflict_count++))
-        fi
+    if git merge "$branch" --no-ff -m "Merge $branch" 2>/dev/null; then
+        echo "✓ Successfully merged $branch"
+        return 0
     else
-        echo "  ✗ Merge conflict - resolving automatically"
-        # Auto-resolve conflicts by keeping main branch version
-        git checkout --ours . 2>/dev/null
-        git add . 2>/dev/null
-        git commit -m "resolve: auto-resolve conflicts for $branch" --no-edit 2>/dev/null
-        if [ $? -eq 0 ]; then
-            echo "  ✓ Conflict resolved and merged"
-            ((success_count++))
+        echo "⚠ Conflict detected in $branch, attempting to resolve..."
+        
+        # Check what files have conflicts
+        conflict_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
+        
+        if [ -n "$conflict_files" ]; then
+            echo "Resolving conflicts in: $conflict_files"
+            
+            # For package files, prefer the incoming version
+            for file in $conflict_files; do
+                if [[ "$file" == *"package"* ]] || [[ "$file" == *"yarn.lock"* ]]; then
+                    echo "Taking incoming version for $file"
+                    git checkout --theirs "$file" 2>/dev/null || true
+                else
+                    echo "Taking incoming version for $file"
+                    git checkout --theirs "$file" 2>/dev/null || true
+                fi
+            done
+            
+            # Add resolved files and commit
+            git add .
+            if git commit -m "Resolve conflicts for $branch" 2>/dev/null; then
+                echo "✓ Successfully resolved conflicts for $branch"
+                return 0
+            else
+                echo "✗ Failed to resolve conflicts for $branch"
+                git merge --abort 2>/dev/null || true
+                return 1
+            fi
         else
-            echo "  ✗ Failed to resolve conflict"
-            git merge --abort 2>/dev/null
-            ((conflict_count++))
+            echo "✗ Unknown conflict in $branch"
+            git merge --abort 2>/dev/null || true
+            return 1
         fi
+    fi
+}
+
+# Get list of unmerged branches
+echo "Getting list of unmerged branches..."
+unmerged_branches=$(git branch -r --no-merged main | grep "cursor/check-fix-push-and-merge-to-main-" | head -20)
+
+successful_merges=0
+failed_merges=0
+processed=0
+
+echo "Processing unmerged branches..."
+
+for branch in $unmerged_branches; do
+    ((processed++))
+    echo ""
+    echo "[$processed] Processing $branch"
+    
+    if merge_branch "$branch"; then
+        ((successful_merges++))
+    else
+        ((failed_merges++))
+    fi
+    
+    # Commit every 5 successful merges
+    if [ $successful_merges -gt 0 ] && [ $((successful_merges % 5)) -eq 0 ]; then
+        echo "Committing batch of $successful_merges merges..."
+        git push origin main
+    fi
+    
+    # Limit to prevent overwhelming
+    if [ $processed -ge 15 ]; then
+        echo "Processed 15 branches, stopping for safety"
+        break
     fi
 done
 
 echo ""
-echo "Merge process completed!"
-echo "Successfully merged: $success_count"
-echo "Already merged: $already_merged_count"
-echo "Conflicts/Failures: $conflict_count"
+echo "=== MERGE PROCESS COMPLETED ==="
+echo "Processed: $processed"
+echo "Successful: $successful_merges"
+echo "Failed: $failed_merges"
+
+# Final push
+if [ $successful_merges -gt 0 ]; then
+    echo "Pushing final changes..."
+    git push origin main
+fi
+
+echo "✅ Merge process completed!"
