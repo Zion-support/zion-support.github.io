@@ -1,1 +1,0 @@
-import{j as e}from"./ui-C_PCuSNc.js";import"./vendor-BYA32aEE.js";function s(){return e.jsxs("div",{className:"p-8",children:[e.jsx("h1",{className:"text-3xl font-bold",children:"Home"}),e.jsx("p",{className:"mt-4 text-gray-700",children:"Welcome to Zion Tech Group."})]})}export{s as default};
