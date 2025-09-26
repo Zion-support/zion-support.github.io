@@ -27,6 +27,12 @@ export default function App({ Component, pageProps }: AppProps) {
           line-height: 1.6;
           color: #1e293b;
           background-color: #ffffff;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .dark body {
+          background-color: #0f172a;
+          color: #f1f5f9;
         }
         
         h1, h2, h3, h4, h5, h6 {
