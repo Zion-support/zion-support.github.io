@@ -5,7 +5,13 @@ import { FeatureCard } from '../src/components/FeatureCard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
+import { SecurityDashboard } from '../src/components/SecurityMonitor';
+import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';
+import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
+import { TestDashboard } from '../src/components/TestDashboard';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { useAdvancedAnalytics } from '../src/hooks/useAdvancedAnalytics';
+import { useCache } from '../src/hooks/useAdvancedCache';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
@@ -24,11 +30,27 @@ export default function Home(): JSX.Element {
 	// Analytics tracking
 	usePageView('homepage');
 	const { trackClick } = useAnalytics();
+	const { trackPageView, trackConversion } = useAdvancedAnalytics();
+
+	// Advanced caching for API calls
+	const { data: cachedData, loading: cacheLoading } = useCache(
+		'homepage-data',
+		async () => {
+			// Simulate API call
+			await new Promise(resolve => setTimeout(resolve, 1000));
+			return { services: SERVICES, features: FEATURES };
+		},
+		{ ttl: 5 * 60 * 1000 } // 5 minutes cache
+	);
 
 	return (
 		<ErrorBoundary>
 			<SEO />
 			<PerformanceMonitor />
+			<SecurityDashboard />
+			<ErrorDashboard />
+			<AnalyticsDashboard />
+			<TestDashboard />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
@@ -111,10 +133,13 @@ export default function Home(): JSX.Element {
 									Contact us today to discuss your project requirements and how we can help your business grow with cutting-edge technology solutions.
 								</p>
 								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-									<button 
-										onClick={() => trackClick('get-in-touch-button', 'cta')}
-										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
-									>
+								<button 
+									onClick={() => {
+										trackClick('get-in-touch-button', 'cta');
+										trackConversion('contact_form_click', 1, { source: 'cta_button' });
+									}}
+									className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+								>
 										<span className="flex items-center justify-center gap-2">
 											Get In Touch
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,10 +147,13 @@ export default function Home(): JSX.Element {
 											</svg>
 										</span>
 									</button>
-									<button 
-										onClick={() => trackClick('view-portfolio-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
-									>
+								<button 
+									onClick={() => {
+										trackClick('view-portfolio-button', 'cta');
+										trackConversion('portfolio_view_click', 1, { source: 'cta_button' });
+									}}
+									className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
+								>
 										<span className="flex items-center justify-center gap-2">
 											View Portfolio
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
