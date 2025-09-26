@@ -5,7 +5,10 @@ import { FeatureCard } from '../src/components/FeatureCard';
 import Navigation from '../src/components/Navigation';
 import Dashboard from '../src/components/Dashboard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import ErrorBoundary from '../src/components/ErrorBoundary';
+import ErrorReporter from '../src/components/ErrorReporter';
+import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import SEO from '../src/components/SEO';
 import Layout from '../src/components/Layout';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
@@ -37,10 +40,13 @@ export default function Home(): JSX.Element {
 	const { trackClick } = useAnalytics();
 
 	return (
-		<Layout>
-			<SEO />
-			<PerformanceMonitor />
-			<Navigation />
+		<ErrorReporter>
+			<AccessibilityAuditor>
+				<PerformanceOptimizer>
+					<Layout>
+						<SEO />
+						<PerformanceMonitor />
+						<Navigation />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
@@ -228,5 +234,8 @@ export default function Home(): JSX.Element {
 				</div>
 			</div>
 		</Layout>
+				</PerformanceOptimizer>
+			</AccessibilityAuditor>
+		</ErrorReporter>
 	);
 }
