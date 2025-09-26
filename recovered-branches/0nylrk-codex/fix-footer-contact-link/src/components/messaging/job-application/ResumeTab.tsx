@@ -17,22 +17,21 @@ export function ResumeTab({
   onSelectResume,
   onResumeSelected,
   onApply,
-  isSubmitting = false}: ResumeTabProps) {;
-const handleResumeSelected = (resume: ResumeOption) => {;
-if (onResumeSelected) {
+  isSubmitting = false}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    if (onResumeSelected) {
       onResumeSelected(resume)}
     if (onSelectResume) {
       onSelectResume(resume.id)}
   }
-,;
-return (
+,
+  return (
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
-
       {onApply && (
         <div className="mt-6">,
-          <Button,
-onClick={onApply}
+          <Button
+            onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
 ,
 export interface ResumeTabProps {
@@ -45,16 +44,16 @@ export function ResumeTab(): any ({
   onResumeSelected,
   onApply,
   isSubmitting = false,
-}: ResumeTabProps) {;
-const handleResumeSelected = (resume: ResumeOption) => {;
-if (onResumeSelected) {
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    if (onResumeSelected) {
       onResumeSelected(resume)}
-,;
-if (onSelectResume) {
+,
+    if (onSelectResume) {
       onSelectResume(resume && resume.id)}
   }
-,;
-return (
+,
+  return (
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
 export interface ResumeTabProps {
@@ -70,83 +69,76 @@ export interface ResumeTabProps {
   onApply?: () => Promise<void>,
   isSubmitting?: boolean}
 ,
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {;
-const handleResumeSelected = (resume: ResumeOption) => {;
-if (onResumeSelected) {
+export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    if (onResumeSelected) {
       onResumeSelected(resume)}
-,;
-if (onSelectResume) {
+,
+    if (onSelectResume) {
       onSelectResume(resume.id)}
-  },;
-return (
+  },
+  return (
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
-
       {onApply && (
         <div className="mt-6">,
-          <Button,
-onClick={onApply} ,
+          <Button
+            onClick={onApply} ,
             disabled={!selectedResumeId || isSubmitting}
 ,
             className="w-full">,
-
             {isSubmitting ? "Submitting..." : "Submit Application"}
-          </Button>
-
+          </Button>>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">,
               Please select a resume to continue,
-            
+            </p>,
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
-
       {onApply && (
         <div className="mt-6">,
-          <Button,
-onClick={onApply}
+          <Button
+            onClick={onApply}
             disabled={!selectedResumeId || isSubmitting}
             className="w-full">,
-
             {isSubmitting ? "Submitting..." : "Submit Application"}
-          
+          </Button>,
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">,
               Please select a resume to continue,
             </p>)}
         </div>)}
 ,
-    
+    </div>,
     </div>),
   on_apply?: () => Promise < void>,
   is_submitting?: boolean}
 export /**,
  * ResumeTab - Function description,
- */,;
-function ResumeTab() {;
-const handleResumeSelected = (resume: ResumeOption) =>: any {
-    // Check condition,;
+ */,
+function ResumeTab() {
+  const handleResumeSelected = (resume: ResumeOption) =>: any {
+    // Check condition,
 if ( {) {
   $2}
       onResumeSelected (resume)}
-    // Check condition,;
+    // Check condition,
 if ( {) {
   $2}
       onSelectResume (resume.id)}
   }
-,;
-return (
+,
+  return (
     <div className="space - y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
-
       {on_apply && (
         <div className="mt - 6">,
-          <Button,
-on_click={on_apply}
+          <Button
+            on_click={on_apply}
             disabled={!selectedResumeId || is_submitting}
             className="w - full">,
-
             {is_submitting ? "Submitting..." : "Submit Application"}
-          
+          </Button>,
           {!selectedResumeId && (
             <p className="text - sm text - muted - foreground mt - 2">,
               Please select a resume to continue,

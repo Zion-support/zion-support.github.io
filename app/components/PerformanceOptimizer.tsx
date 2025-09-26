@@ -11,8 +11,13 @@ interface PerformanceMetrics {
   fmp?: number
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+}
+
 export default function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [_metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
     // Preload critical resources
@@ -119,7 +124,7 @@ export default function PerformanceOptimizer() {
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fidEntry = entry as any
+          const fidEntry = entry as PerformanceEventTiming
           if (fidEntry.processingStart) {
             performanceMetrics.fid = fidEntry.processingStart - fidEntry.startTime
           }
@@ -131,8 +136,9 @@ export default function PerformanceOptimizer() {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value
+          const clsEntry = entry as LayoutShift
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value
             performanceMetrics.cls = clsValue
           }
         }
@@ -151,15 +157,18 @@ export default function PerformanceOptimizer() {
         
         // Optimize based on poor metrics
         if (performanceMetrics.lcp && performanceMetrics.lcp > 2500) {
+          // eslint-disable-next-line no-console
           console.warn('LCP is slow, consider optimizing images and critical resources')
           optimizeImages()
         }
 
         if (performanceMetrics.cls && performanceMetrics.cls > 0.1) {
+          // eslint-disable-next-line no-console
           console.warn('CLS is high, check for layout shifts')
         }
 
         if (performanceMetrics.fid && performanceMetrics.fid > 100) {
+          // eslint-disable-next-line no-console
           console.warn('FID is high, consider reducing JavaScript execution time')
         }
       }

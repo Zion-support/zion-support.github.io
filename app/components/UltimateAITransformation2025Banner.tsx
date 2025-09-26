@@ -16,16 +16,6 @@ const UltimateAITransformation2025Banner = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (!(isVisible && !isDismissed)) {
-      return;
-    }
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isVisible, isDismissed]);
-
   const handleDismiss = () => {
     setIsDismissed(true);
     setIsVisible(false);
@@ -79,6 +69,16 @@ const UltimateAITransformation2025Banner = () => {
       isNew: true
     }
   ];
+
+  useEffect(() => {
+    if (!(isVisible && !isDismissed)) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isVisible, isDismissed, featuredContent.length]);
 
   if (!isVisible || isDismissed) return null;
 

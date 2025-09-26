@@ -15,12 +15,6 @@ const UltimateContent2025PromotionBanner = () => {
       setIsVisible(true);
     }
 
-    // Auto-rotate content every 5 seconds
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
@@ -76,9 +70,18 @@ const UltimateContent2025PromotionBanner = () => {
     }
   ];
 
+  useEffect(() => {
+    // Auto-rotate content every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [featuredContent.length]);
+
   if (!isVisible) return null;
 
-  const currentContent = (featuredContent[currentSlide] ?? featuredContent[0])!;
+  const currentContent = featuredContent[currentSlide];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
