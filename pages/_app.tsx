@@ -8,7 +8,7 @@ import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
-import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
+// import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import { WebVitals } from '../src/components/WebVitals';
@@ -23,8 +23,7 @@ const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTr
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <EnhancedErrorBoundary>
-      <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
-        <HelmetProvider>
+      <HelmetProvider>
           <Head>
             <meta charSet="utf-8" />
             <meta name="robots" content="index, follow" />
@@ -169,7 +168,6 @@ export default function App({ Component, pageProps }: AppProps) {
             enableUserFeedback={true}
           />
         </HelmetProvider>
-      </AnalyticsProvider>
     </EnhancedErrorBoundary>
   );
 }
