@@ -8,6 +8,7 @@ import {
   Users,
   Clock,
   Network,
+  Rocket,
   Shield,
   Globe,
   Smartphone,
