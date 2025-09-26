@@ -1,302 +1,198 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { DataVisualization } from './DataVisualization';
+import React, { useState, useEffect } from 'react';
+import { useWebVitals } from '../hooks/useWebVitals';
 
 interface PerformanceMetrics {
-  timestamp: number;
-  pageLoadTime: number;
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
   firstInputDelay: number;
-  totalBlockingTime: number;
-  memoryUsage: number;
-  networkRequests: number;
-  errors: number;
+  cumulativeLayoutShift: number;
 }
 
-interface PerformanceDashboardProps {
-  className?: string;
-}
-
-export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = "" }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedTimeRange, setSelectedTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-
-  const fetchPerformanceMetrics = useCallback(async () => {
-    try {
-      setIsLoading(true);
-      
-      // Simulate API call - in real implementation, this would fetch from your analytics API
-      const mockMetrics: PerformanceMetrics[] = Array.from({ length: 24 }, (_, i) => ({
-        timestamp: Date.now() - (23 - i) * 60 * 60 * 1000, // Last 24 hours
-        pageLoadTime: Math.random() * 2000 + 500,
-        firstContentfulPaint: Math.random() * 1000 + 200,
-        largestContentfulPaint: Math.random() * 1500 + 300,
-        cumulativeLayoutShift: Math.random() * 0.1,
-        firstInputDelay: Math.random() * 100 + 10,
-        totalBlockingTime: Math.random() * 300 + 50,
-        memoryUsage: Math.random() * 50 + 10,
-        networkRequests: Math.floor(Math.random() * 50 + 10),
-        errors: Math.floor(Math.random() * 5)
-      }));
-
-      setMetrics(mockMetrics);
-    } catch (error) {
-      console.error('Failed to fetch performance metrics:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+const PerformanceDashboard: React.FC = () => {
+  const { vitals, isSupported, getVitalScore, getVitalColor } = useWebVitals();
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    fetchPerformanceMetrics();
-    const interval = setInterval(fetchPerformanceMetrics, 30000); // Refresh every 30 seconds
-    return () => clearInterval(interval);
-  }, [fetchPerformanceMetrics]);
+    if (typeof window === 'undefined') return;
 
-  const getAverageMetric = (key: keyof PerformanceMetrics) => {
-    if (metrics.length === 0) return 0;
-    const sum = metrics.reduce((acc, metric) => acc + metric[key] as number, 0);
-    return sum / metrics.length;
-  };
+    const updateMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const firstPaint = paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
+      const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
 
-  const getLatestMetric = (key: keyof PerformanceMetrics) => {
-    if (metrics.length === 0) return 0;
-    return metrics[metrics.length - 1][key] as number;
-  };
+      setMetrics({
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        firstPaint,
+        firstContentfulPaint,
+        largestContentfulPaint: vitals.LCP || 0,
+        firstInputDelay: vitals.FID || 0,
+        cumulativeLayoutShift: vitals.CLS || 0,
+      });
+    };
 
-  const getPerformanceScore = () => {
-    const lcp = getAverageMetric('largestContentfulPaint');
-    const fid = getAverageMetric('firstInputDelay');
-    const cls = getAverageMetric('cumulativeLayoutShift');
+    // Update metrics when vitals change
+    updateMetrics();
+
+    // Update metrics on page load
+    window.addEventListener('load', updateMetrics);
     
-    // Simplified Core Web Vitals scoring
+    return () => window.removeEventListener('load', updateMetrics);
+  }, [vitals]);
+
+  const getPerformanceScore = (): number => {
+    if (!metrics) return 0;
+
     let score = 100;
-    if (lcp > 2500) score -= 30;
-    else if (lcp > 4000) score -= 50;
     
-    if (fid > 100) score -= 20;
-    else if (fid > 300) score -= 40;
+    // LCP scoring
+    if (metrics.largestContentfulPaint > 4000) score -= 30;
+    else if (metrics.largestContentfulPaint > 2500) score -= 15;
     
-    if (cls > 0.1) score -= 20;
-    else if (cls > 0.25) score -= 40;
+    // FID scoring
+    if (metrics.firstInputDelay > 300) score -= 25;
+    else if (metrics.firstInputDelay > 100) score -= 10;
     
+    // CLS scoring
+    if (metrics.cumulativeLayoutShift > 0.25) score -= 25;
+    else if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+    
+    // Load time scoring
+    if (metrics.loadTime > 5000) score -= 20;
+    else if (metrics.loadTime > 3000) score -= 10;
+
     return Math.max(0, score);
   };
 
-  const performanceScore = getPerformanceScore();
-  const scoreColor = performanceScore >= 90 ? 'text-green-600' : 
-                    performanceScore >= 70 ? 'text-yellow-600' : 'text-red-600';
-
-  const chartData = {
-    labels: metrics.map(m => new Date(m.timestamp).toLocaleTimeString()),
-    datasets: [{
-      label: 'Page Load Time (ms)',
-      data: metrics.map(m => m.pageLoadTime),
-      backgroundColor: '#3B82F6',
-      borderColor: '#1D4ED8',
-      borderWidth: 2
-    }]
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
   };
 
-  const memoryData = {
-    labels: metrics.map(m => new Date(m.timestamp).toLocaleTimeString()),
-    datasets: [{
-      label: 'Memory Usage (MB)',
-      data: metrics.map(m => m.memoryUsage),
-      backgroundColor: '#10B981',
-      borderColor: '#059669',
-      borderWidth: 2
-    }]
+  const getScoreBgColor = (score: number): string => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
   };
 
-  const errorData = {
-    labels: ['Errors', 'Network Issues', 'Performance Issues', 'Other'],
-    datasets: [{
-      label: 'Error Count',
-      data: [
-        metrics.reduce((sum, m) => sum + m.errors, 0),
-        Math.floor(Math.random() * 10),
-        Math.floor(Math.random() * 5),
-        Math.floor(Math.random() * 3)
-      ],
-      backgroundColor: ['#EF4444', '#F59E0B', '#8B5CF6', '#6B7280'],
-      borderColor: ['#DC2626', '#D97706', '#7C3AED', '#4B5563'],
-      borderWidth: 2
-    }]
-  };
-
-  if (isLoading) {
+  if (!isSupported) {
     return (
-      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
-        <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="space-y-3">
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
-          </div>
-        </div>
+      <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+        <p className="text-sm text-yellow-800">
+          Performance monitoring is not supported in this browser.
+        </p>
       </div>
     );
   }
 
+  const performanceScore = getPerformanceScore();
+
   return (
-    <div className={`space-y-6 ${className}`}>
-      {/* Performance Score */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900">Performance Overview</h2>
-          <div className="flex space-x-2">
-            {(['1h', '24h', '7d', '30d'] as const).map((range) => (
-              <button
-                key={range}
-                onClick={() => setSelectedTimeRange(range)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedTimeRange === range
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {range}
-              </button>
-            ))}
-          </div>
+    <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xl font-semibold text-gray-900">Performance Dashboard</h2>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-sm text-blue-600 hover:text-blue-800"
+        >
+          {isVisible ? 'Hide Details' : 'Show Details'}
+        </button>
+      </div>
+
+      {/* Overall Performance Score */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Overall Score</span>
+          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+            {performanceScore}
+          </span>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className={`text-3xl font-bold ${scoreColor}`}>
-              {performanceScore}
-            </div>
-            <div className="text-sm text-gray-600">Performance Score</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">
-              {Math.round(getAverageMetric('pageLoadTime'))}ms
-            </div>
-            <div className="text-sm text-gray-600">Avg Load Time</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">
-              {Math.round(getAverageMetric('memoryUsage'))}MB
-            </div>
-            <div className="text-sm text-gray-600">Memory Usage</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">
-              {metrics.reduce((sum, m) => sum + m.errors, 0)}
-            </div>
-            <div className="text-sm text-gray-600">Total Errors</div>
-          </div>
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div
+            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
+            style={{ width: `${performanceScore}%` }}
+          ></div>
         </div>
       </div>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <DataVisualization
-          type="line"
-          data={chartData}
-          title="Page Load Time Trend"
-          height={300}
-        />
-        <DataVisualization
-          type="line"
-          data={memoryData}
-          title="Memory Usage Trend"
-          height={300}
-        />
-      </div>
+      {/* Core Web Vitals */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">LCP</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+              {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">Largest Contentful Paint</p>
+        </div>
 
-      {/* Error Distribution */}
-      <DataVisualization
-        type="pie"
-        data={errorData}
-        title="Error Distribution"
-        height={300}
-      />
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">FID</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+              {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">First Input Delay</p>
+        </div>
 
-      {/* Detailed Metrics Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Web Vitals</h3>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Metric
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Current
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Average
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Largest Contentful Paint
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {Math.round(getLatestMetric('largestContentfulPaint'))}ms
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {Math.round(getAverageMetric('largestContentfulPaint'))}ms
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                    getLatestMetric('largestContentfulPaint') < 2500 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}>
-                    {getLatestMetric('largestContentfulPaint') < 2500 ? 'Good' : 'Needs Improvement'}
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  First Input Delay
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {Math.round(getLatestMetric('firstInputDelay'))}ms
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {Math.round(getAverageMetric('firstInputDelay'))}ms
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                    getLatestMetric('firstInputDelay') < 100 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}>
-                    {getLatestMetric('firstInputDelay') < 100 ? 'Good' : 'Needs Improvement'}
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  Cumulative Layout Shift
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {getLatestMetric('cumulativeLayoutShift').toFixed(3)}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {getAverageMetric('cumulativeLayoutShift').toFixed(3)}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                    getLatestMetric('cumulativeLayoutShift') < 0.1 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}>
-                    {getLatestMetric('cumulativeLayoutShift') < 0.1 ? 'Good' : 'Needs Improvement'}
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="p-4 border rounded-lg">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700">CLS</span>
+            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+              {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
+            </span>
+          </div>
+          <p className="text-xs text-gray-500">Cumulative Layout Shift</p>
         </div>
       </div>
+
+      {/* Detailed Metrics */}
+      {isVisible && metrics && (
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium text-gray-900">Detailed Metrics</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">Load Time</span>
+                <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">DOM Content Loaded</span>
+                <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">First Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
+              </div>
+            </div>
+            
+            <div className="p-3 bg-gray-50 rounded">
+              <div className="flex justify-between">
+                <span className="text-sm text-gray-600">First Contentful Paint</span>
+                <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
+
+export default PerformanceDashboard;
