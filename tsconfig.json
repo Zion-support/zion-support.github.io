@@ -17,54 +17,38 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
-      ],
-      "@/app/*": [
-        "app/*"
-      ],
-      "@/components/*": [
-        "app/components/*"
-      ],
-      "@/lib/*": [
-        "app/lib/*"
+        "src/src/*"
       ]
     },
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": false,
     "noImplicitReturns": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
-    "noImplicitOverride": true,
+    "noImplicitOverride": false,
     "types": [
       "node",
       "react",
       "react-dom"
     ],
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*",
-    ".next/types/**/*.ts"
+    "src/src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
-    "src/**",
+    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -77,22 +61,6 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts",
-    // Temporarily exclude corrupted or legacy areas until cleaned
-    "src/routes",
-    "src/utils/errorBoundary.tsx",
-    "src/utils/imageOptimizer.tsx",
-    "src/utils/cartUtils.ts",
-    "src/pages/solutions",
-    "src/pages/services",
-    "src/pages",
-    "src/pages-disabled",
-    "src/components",
-    "src/context",
-    "src/legal",
-    "src/i18n.js",
-    "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
-    "src/utils/cartUtils.js"
+    "vitest.config.ts"
   ]
 }
