@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
+import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { SecurityDashboard } from '../src/components/SecurityMonitor';
 import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';

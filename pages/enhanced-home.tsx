@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { TestimonialCard } from '../src/components/TestimonialCard';
 import { PricingCard } from '../src/components/PricingCard';
 import { BlogCard } from '../src/components/BlogCard';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
+import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 import { TESTIMONIALS, PRICING_TIERS, BLOG_POSTS } from '../src/utils/constants';
