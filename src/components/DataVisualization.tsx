@@ -52,37 +52,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     return () => clearTimeout(timer);
   }, [data, type, drawChart]);
 
-  const drawChart = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const { width, height: canvasHeight } = canvas;
-    const padding = 40;
-    const chartWidth = width - padding * 2;
-    const chartHeight = canvasHeight - padding * 2;
-
-    // Clear canvas
-    ctx.clearRect(0, 0, width, canvasHeight);
-
-    // Set up colors
-    const colors = [
-      '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
-      '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6B7280'
-    ];
-
-    if (type === 'pie' || type === 'doughnut') {
-      drawPieChart(ctx, width, canvasHeight, colors);
-    } else if (type === 'bar') {
-      drawBarChart(ctx, chartWidth, chartHeight, padding, colors);
-    } else if (type === 'line' || type === 'area') {
-      drawLineChart(ctx, chartWidth, chartHeight, padding, colors);
-    }
-  }, [data, type, drawPieChart, drawBarChart, drawLineChart]);
-
-  const drawPieChart = (ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
+  const drawPieChart = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
     const centerX = width / 2;
     const centerY = height / 2;
     const radius = Math.min(width, height) / 2 - 40;
@@ -125,9 +95,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       currentAngle += sliceAngle;
     });
-  };
+  }, [data, type]);
 
-  const drawBarChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawBarChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const barWidth = chartWidth / data.labels.length * 0.8;
     const barSpacing = chartWidth / data.labels.length * 0.2;
     const maxValue = Math.max(...data.datasets[0].data);
@@ -150,9 +120,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       // Draw label
       ctx.fillText(data.labels[index], x + barWidth / 2, padding + chartHeight + 20);
     });
-  };
+  }, [data]);
 
-  const drawLineChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawLineChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const maxValue = Math.max(...data.datasets[0].data);
     const minValue = Math.min(...data.datasets[0].data);
     const valueRange = maxValue - minValue;
@@ -201,7 +171,37 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       // Draw label
       ctx.fillText(data.labels[index], point.x, padding + chartHeight + 20);
     });
-  };
+  }, [data, type]);
+
+  const drawChart = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const { width, height: canvasHeight } = canvas;
+    const padding = 40;
+    const chartWidth = width - padding * 2;
+    const chartHeight = canvasHeight - padding * 2;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, width, canvasHeight);
+
+    // Set up colors
+    const colors = [
+      '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
+      '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6B7280'
+    ];
+
+    if (type === 'pie' || type === 'doughnut') {
+      drawPieChart(ctx, width, canvasHeight, colors);
+    } else if (type === 'bar') {
+      drawBarChart(ctx, chartWidth, chartHeight, padding, colors);
+    } else if (type === 'line' || type === 'area') {
+      drawLineChart(ctx, chartWidth, chartHeight, padding, colors);
+    }
+  }, [type, drawPieChart, drawBarChart, drawLineChart]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
     if (!showTooltips) return;
