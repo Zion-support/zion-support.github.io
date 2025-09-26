@@ -111,7 +111,10 @@ export default function Home(): JSX.Element {
 									Contact us today to discuss your project requirements and how we can help your business grow with cutting-edge technology solutions.
 								</p>
 								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-									<button className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg">
+									<button 
+										onClick={() => trackClick('get-in-touch-button', 'cta')}
+										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+									>
 										<span className="flex items-center justify-center gap-2">
 											Get In Touch
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +122,10 @@ export default function Home(): JSX.Element {
 											</svg>
 										</span>
 									</button>
-									<button className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg">
+									<button 
+										onClick={() => trackClick('view-portfolio-button', 'cta')}
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
+									>
 										<span className="flex items-center justify-center gap-2">
 											View Portfolio
 											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
