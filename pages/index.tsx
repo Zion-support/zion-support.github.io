@@ -19,6 +19,7 @@ export default function Home(): JSX.Element {
 
 	return (
 		<>
+			<PerformanceMonitor />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
