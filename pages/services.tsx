@@ -5,9 +5,9 @@ import { ServiceCard } from '../src/components/ServiceCard';
 import Navigation from '../src/components/Navigation';
 import { PricingCalculator } from '../src/components/PricingCalculator';
 import { SERVICES } from '../src/utils/constants';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+import { ErrorBoundary } from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +18,6 @@ export default function Services(): JSX.Element {
 	}, []);
 
 	// Analytics tracking
-	usePageView('services');
 	const { trackClick } = useAnalytics();
 
 	const serviceDetails = {

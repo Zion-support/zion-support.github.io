@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Navigation from '../src/components/Navigation';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+import { ErrorBoundary } from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function About(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +14,6 @@ export default function About(): JSX.Element {
 	}, []);
 
 	// Analytics tracking
-	usePageView('about');
 	const { trackClick } = useAnalytics();
 
 	const teamMembers = [

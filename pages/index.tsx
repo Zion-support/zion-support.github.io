@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+import { ErrorBoundary } from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { SecurityDashboard } from '../src/components/SecurityMonitor';
 import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
 import { TestDashboard } from '../src/components/TestDashboard';
 import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 import { useAdvancedAnalytics } from '../src/hooks/useAdvancedAnalytics';
 import { useCache } from '../src/hooks/useAdvancedCache';
 import { Analytics, useEventTracking, useScrollTracking, useTimeTracking } from '../src/hooks/useAnalytics';
@@ -27,7 +27,6 @@ export default function Home(): JSX.Element {
 	useTimeTracking();
 
 	// Analytics tracking
-	usePageView('homepage');
 	const { trackClick } = useAnalytics();
 	const { trackPageView, trackConversion } = useAdvancedAnalytics();
 
