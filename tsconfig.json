@@ -22,11 +22,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "src/src/*"
       ]
     },
+<<<<<<< HEAD
 
     /* Linting */
+=======
+>>>>>>> dfdbc6e1050699bbe193144d7280ed7cabec5daf
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
@@ -35,8 +38,11 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "noImplicitOverride": false,
+<<<<<<< HEAD
     "strictNullChecks": false,
     
+=======
+>>>>>>> dfdbc6e1050699bbe193144d7280ed7cabec5daf
     "types": [
       "node",
       "react",
@@ -47,17 +53,26 @@
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ]
   },
   "include": [
     "src/**/*",
     "app/**/*"
+=======
+    ],
+    "strictNullChecks": false
+  },
+  "include": [
+    "src/src/**/*"
+>>>>>>> dfdbc6e1050699bbe193144d7280ed7cabec5daf
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
+    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -71,6 +86,5 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }
