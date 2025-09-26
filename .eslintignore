@@ -7,6 +7,11 @@ coverage/
 # Dependencies
 node_modules/
 
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**
+
 # Exclude corrupted or non-app source directories
 # Allow linting of active app source under src/
 # src/
@@ -66,8 +71,3 @@ vitest.config.ts
 *.backup
 *.bak
 # Keep above; no additional ignores below so that src-clean is linted
-
-# Generated artifacts
-*.log
-**/*.generated.*
-zion.app/recovered-content/**
