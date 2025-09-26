@@ -7,8 +7,14 @@ Sitemap: https://zion.app/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
-# Disallow sensitive areas
+# Disallow admin areas
+Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /admin/
-Disallow: /private/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /services/
+Allow: /about
+Allow: /contact
