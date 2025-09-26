@@ -1,24 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
+import React from 'react'
+import { Metadata } from 'next'
+import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'LLM Inference Optimization on GPUs (2025) | Zion Tech Group',
+  title: 'LLM Inference Optimization on GPUs (2025) | Zion Tech Group'
   description:
-    'Practical 2025 guide to optimize LLM inference on GPUs: quantization, KV cache strategies, batching, tensor parallelism, and cost controls.',
+    'Practical 2025 guide to optimize LLM inference on GPUs: quantization, KV cache strategies, batching, tensor parallelism, and cost controls.'
   keywords:
-    'LLM inference, GPU optimization, quantization, KV cache, batching, tensor parallelism, throughput, latency, cost',
+    'LLM inference, GPU optimization, quantization, KV cache, batching, tensor parallelism, throughput, latency, cost'
   openGraph: {
-    title: 'LLM Inference Optimization on GPUs (2025)',
+    title: 'LLM Inference Optimization on GPUs (2025)'
     description:
-      'Optimize LLM inference with quantization, KV cache tuning, batching, and parallelism. Cut P50/P99 latency and $/token.',
-    type: 'article',
-    publishedTime: '2025-09-12T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Inference', 'LLM', 'GPU', 'Performance'],
-  },
-};
-
+      'Optimize LLM inference with quantization, KV cache tuning, batching, and parallelism. Cut P50/P99 latency and $/token.'
+    type: 'article'
+    publishedTime: '2025-09-12T00: 00
+  00.000Z'
+    authors: ['Zion Tech Group']
+    tags: ['Inference', 'LLM', 'GPU', 'Performance']}}
 export default function LLMInferenceOptimizationOnGPUs2025() {
   return (
     <div className="min-h-screen bg-white">
@@ -83,6 +80,6 @@ export default function LLMInferenceOptimizationOnGPUs2025() {
         </div>
       </article>
     </div>
-  );
+  )
 }
 

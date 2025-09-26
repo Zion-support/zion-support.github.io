@@ -24,8 +24,8 @@ export default function AIWorkflowAutomation() {;
     };
   ];
   const benefits = [;
-    'Reduce manual tasks by up to 80%Improve process efficiency by 60%',;
-    'Cut operational costs by 40%Enhance customer satisfaction',;
+    'Reduce manual tasks by up to 80%Improve process efficiency by 60%';
+    'Cut operational costs by 40%Enhance customer satisfaction';
     'Ensure regulatory complianceScale operations seamlessly'
   ];
   return (

@@ -2,20 +2,20 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Sparkles,;
-  ArrowRight, ;
-  CheckCircle, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  DollarSign,;
-  Clock,;
-  Users,;
-  Target,;
+  Sparkles;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Shield;
+  Zap;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  DollarSign;
+  Clock;
+  Users;
+  Target;
   Rocket;
 } from "lucide-react"
 import { SEO } from "@/components/SEO"
@@ -34,18 +34,18 @@ export default function NewInnovativeServicesShowcase() {;
   ];
   const keyBenefits = [;
     {;
-      title: "Cutting-Edge AI Technology",description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics",;
+      title: "Cutting-Edge AI Technology",description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics";
       icon: Sparkles;
     };
     {;
       title: "Industry-Specific Solutions",description: "Tailored solutions designed for specific industry challenges and regulatory requirements",icon: Target;
     };
     {;
-      title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services",;
+      title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services";
       icon: TrendingUp;
     };
     {;
-      title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security",;
+      title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security";
       icon: Shield;
     };
   ];

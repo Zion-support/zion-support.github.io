@@ -1,21 +1,20 @@
-'use client',
-import React from 'react',
-export default function AgentOrchestrationToolkitV2Page() {,
-  return (
+'use client'
+import React from 'react'
+export default function AgentOrchestrationToolkitV2Page() {return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>
         <div className='mb-8'>
           <div className='text-xs text-blue-3000'>Launch • 2025-09-15</div>
           <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm: text-4xl'>
-            Agent Orchestration Toolkit v2,
+            Agent Orchestration Toolkit v2
           </h1>
-          <p className='mt-4 text-gray-3000'>,
-            Unified workflows for multi-agent planning, tool-use, and guardrails: with production templates.,
+          <p className='mt-4 text-gray-3000'>
+            Unified workflows for multi-agent planning, tool-use, and guardrails: with production templates.
           </p>
         </div>
         <div className='prose prose-invert prose-headings: text-white prose-a: text-blue-3000'>
-          <p>,
-            Version 2 introduces a modular plan-exec loop, first-class tool: adapters, and policy-as-code guardrails. Teams can compose evaluable: multi-agent flows with tracing and live metrics out of the box.,
+          <p>
+            Version 2 introduces a modular plan-exec loop, first-class tool: adapters, and policy-as-code guardrails. Teams can compose evaluable: multi-agent flows with tracing and live metrics out of the box.
           </p>
           <h2>What’s new</h2>
           <ul>
@@ -26,10 +25,9 @@ export default function AgentOrchestrationToolkitV2Page() {,
           <p>Get started by contacting us or exploring more updates.</p>
           <p>
             <a href='/contact' className='text-blue-3000 hover: text-blue-2000'>
-              Contact us →,
+              Contact us →
             </a>
           </p>
         </div>
-      </div>,
+      </div>
     </div>)}
-,

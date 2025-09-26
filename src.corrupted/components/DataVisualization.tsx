@@ -1,56 +1,56 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  BarChart3,;
-  PieChart,;
-  TrendingUp,;
-  Activity,;
-  Users,;
-  DollarSign,;
-  Calendar,;
-  Target,;
-  ArrowUp,;
-  ArrowDown,;
-  Minus,;
-  Eye,;
-  Download,;
-  Share2,;
+  BarChart3;
+  PieChart;
+  TrendingUp;
+  Activity;
+  Users;
+  DollarSign;
+  Calendar;
+  Target;
+  ArrowUp;
+  ArrowDown;
+  Minus;
+  Eye;
+  Download;
+  Share2;
   RefreshCw;
 } from "lucide-react"
-interface ChartData {;
+interface ChartData {
   labels: string[],datasets: {;
     label: string,data: number[],backgroundColor: string[],borderColor: string[],borderWidth: number;
   }[]
 };
 
-interface MetricCard {;
+interface MetricCard {
   title: string,value: string | number,change: number,changeType: 'increase' | 'decrease' | 'neutral',icon: React.ReactNode,color: string;
 };
 
-interface DataVisualizationProps {;
+interface DataVisualizationProps {
   title?: string;
-  showMetrics?: boolean,;
-  showCharts?: boolean,;
-  showActions?: boolean,;
+  showMetrics?: boolean;
+  showCharts?: boolean;
+  showActions?: boolean;
 };
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({;
   title = "Data Analytics Dashboard"
-  showMetrics = true,;
-  showCharts = true,;
+  showMetrics = true;
+  showCharts = true;
   showActions = true;
 }) => {;
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d'),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar'),;
+  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar');
 
   //[^;]*
   const [chartData, setChartData] = useState<ChartData>({;
-    labels: ['JanFeb', 'MarApr', 'MayJun'],;
+    labels: ['JanFeb', 'MarApr', 'MayJun'];
     datasets: [{;
-      label: 'Revenue',data: [65, 59, 80, 81, 56, 55],;
-      backgroundColor: ['rgba(34, 221, 210, 0.2)'],;
-      borderColor: ['rgba(34, 221, 210, 1)'],;
+      label: 'Revenue',data: [65, 59, 80, 81, 56, 55];
+      backgroundColor: ['rgba(34, 221, 210, 0.2)'];
+      borderColor: ['rgba(34, 221, 210, 1)'];
       borderWidth: 2;
     }];
   });
@@ -70,13 +70,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
   ]);
   //[^;]*
   const refreshData = async () => {;
-    setIsLoading(true),;
+    setIsLoading(true);
     //[^;]*
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     //[^;]*
     setChartData(prev => ({;
-      ...prev,;
+      ...prev;
       datasets: [{;
         ...prev.datasets[0]
         data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
@@ -84,14 +84,14 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
     }));
     //[^;]*
     setMetrics(prev => prev.map(metric => ({;
-      ...metric,;
+      ...metric;
       change: Math.random() > 0.5 ?;
         (Math.random() * 20 - 10) :;
         (Math.random() * 15 - 7.5),changeType: Math.random() > 0.6 ? 'increase' :;
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-    setIsLoading(false),;
-  },;
+    setIsLoading(false);
+  };
 
   //[^;]*
   const getChangeDisplay = (change: number, changeType: string) => {;
@@ -100,36 +100,36 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
                  <[^>]*/>
     const color = changeType === 'increase' ? 'text-green-400' :;
                   changeType === 'decrease' ? 'text-red-400' :;
-                  'text-zinc-400',;
+                  'text-zinc-400';
 
-    return { icon, color },;
-  },;
+    return { icon, color };
+  };
 
   //[^;]*
   const pieChartData = {;
-    labels: ['AI ServicesCloud Solutions', 'SecurityConsulting', 'Development'],;
+    labels: ['AI ServicesCloud Solutions', 'SecurityConsulting', 'Development'];
     datasets: [{;
-      data: [35, 25, 20, 15, 5],;
+      data: [35, 25, 20, 15, 5];
       backgroundColor: [;
-        'rgba(34, 221, 210, 0.8)rgba(140, 21, 233, 0.8)',;
-        'rgba(239, 68, 68, 0.8)rgba(16, 185, 129, 0.8)',;
+        'rgba(34, 221, 210, 0.8)rgba(140, 21, 233, 0.8)';
+        'rgba(239, 68, 68, 0.8)rgba(16, 185, 129, 0.8)';
         'rgba(245, 158, 11, 0.8)'
-      ],;
+      ];
       borderColor: [;
-        'rgba(34, 221, 210, 1)rgba(140, 21, 233, 1)',;
-        'rgba(239, 68, 68, 1)rgba(16, 185, 129, 1)',;
+        'rgba(34, 221, 210, 1)rgba(140, 21, 233, 1)';
+        'rgba(239, 68, 68, 1)rgba(16, 185, 129, 1)';
         'rgba(245, 158, 11, 1)'
-      ],;
+      ];
       borderWidth: 2;
     }];
   };
   //[^;]*
   const lineChartData = {;
-    labels: ['MonTue', 'WedThu', 'FriSat', 'Sun'],;
+    labels: ['MonTue', 'WedThu', 'FriSat', 'Sun'];
     datasets: [{;
-      label: 'Weekly Performance',data: [65, 59, 80, 81, 56, 55, 70],;
-      backgroundColor: 'rgba(34, 221, 210, 0.1)',;
-      borderColor: 'rgba(34, 221, 210, 1)',;
+      label: 'Weekly Performance',data: [65, 59, 80, 81, 56, 55, 70];
+      backgroundColor: 'rgba(34, 221, 210, 0.1)';
+      borderColor: 'rgba(34, 221, 210, 1)';
       borderWidth: 3,fill: true,tension: 0.4;
     }];
   };
@@ -186,7 +186,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
       {showMetrics && (;&& (; (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
           {metrics.map((metric, index) => {;
-            const { icon, color } = getChangeDisplay(metric.change, metric.changeType),;
+            const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div
                 key={metric.title};
@@ -294,7 +294,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
                           const angle = percentage * 360;
                           const startAngle = pieChartData.datasets[0].data
                             .slice(0, index)
-                            .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0),;
+                            .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0);
 
                           const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180)
                           const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180)
@@ -311,7 +311,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
                               stroke={pieChartData.datasets[0].borderColor[index]};
                               strokeWidth="2"
                             />;
-                          ),;
+                          );
                         })};
                       </[^>]*>
 
@@ -435,5 +435,5 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({;
         </[^>]*>
       </[^>]*>
     </[^>]*>
-  ),;
+  );
 };

@@ -52,7 +52,7 @@ class ZionAnalytics {
 ,
         // Log to console in development,
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            // // console.log('Analytics Event:', event)}
+            // // // console.log('Analytics Event:', event)}
     }
 ,
     trackPageView() {
@@ -104,24 +104,19 @@ class ZionAnalytics {
         const courseMatch = path.match(/\/course\/(\d+)/),
         const lessonMatch = path.match(/\/lesson\/(\d+)/),
         if (courseMatch) {
-            return { content_type: 'course', course_id: parseInt(courseMatch[1]) },
-        } else if (lessonMatch) {
-            return { content_type: 'lesson', lesson_id: parseInt(lessonMatch[1]) },
-        }
+            return { content_type: 'course', course_id: parseInt(courseMatch[1]) }} else if (lessonMatch) {
+            return { content_type: 'lesson', lesson_id: parseInt(lessonMatch[1]) }}
 ,
-        return {},
-    }
+        return {}}
 ,
     getContentContext(element) {
         // Try to find content context from the element or its parents,
         let currentElement = element,
         while (currentElement && currentElement !== document.body) {
             if (currentElement.dataset.courseId) {
-                return { content_type: 'course', course_id: parseInt(currentElement.dataset.courseId) },
-            }
+                return { content_type: 'course', course_id: parseInt(currentElement.dataset.courseId) }}
             if (currentElement.dataset.lessonId) {
-                return { content_type: 'lesson', lesson_id: parseInt(currentElement.dataset.lessonId) },
-            }
+                return { content_type: 'lesson', lesson_id: parseInt(currentElement.dataset.lessonId) }}
             currentElement = currentElement.parentElement}
 ,
         return this.extractContentContext(window.location.pathname)}

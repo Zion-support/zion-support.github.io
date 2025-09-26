@@ -1,22 +1,22 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import {;
-  Eye,;
-  Shield,;
-  CheckCircle,;
-  AlertTriangle,;
-  BarChart3,;
-  Users,;
-  Globe,;
-  ArrowRight,;
-  Star,;
-  Heart,;
-  Users,;
-  Zap,;
-  Lock,;
-  FileText,;
-  Phone,;
-  Mail,;
+  Eye;
+  Shield;
+  CheckCircle;
+  AlertTriangle;
+  BarChart3;
+  Users;
+  Globe;
+  ArrowRight;
+  Star;
+  Heart;
+  Users;
+  Zap;
+  Lock;
+  FileText;
+  Phone;
+  Mail;
   MessageCircle;
 } from "lucide-react"
 export default function AccessibilityPage() {;
@@ -25,32 +25,32 @@ export default function AccessibilityPage() {;
     {;
       category: 'Visual Accessibility',icon: Eye,features: [;
         'High contrast mode supportAdjustable font sizes'
-        'Color-blind friendly designClear typography and spacing',;
+        'Color-blind friendly designClear typography and spacing';
         'Alternative text for imagesFocus indicators for navigation'
       ];
-    },;
+    };
     {;
       category: 'Auditory Accessibility',icon: Ear,features: [;
         'Closed captions for videosAudio descriptions'
-        'Volume controlsVisual alerts and notifications',;
+        'Volume controlsVisual alerts and notifications';
         'Transcripts for audio content'
       ];
-    },;
+    };
     {;
       category: 'Motor Accessibility',icon: Hand,features: [;
         'Keyboard navigation supportVoice control compatibility'
-        'Large click targetsCustomizable timing',;
+        'Large click targetsCustomizable timing';
         'Alternative input methods'
       ];
-    },;
+    };
     {;
       category: 'Cognitive Accessibility',icon: Brain,features: [;
         'Clear and simple languageConsistent navigation structure'
-        'Logical content organizationReduced distractions',;
+        'Logical content organizationReduced distractions';
         'Step-by-step instructions'
       ];
     };
-  ],;
+  ];
 
   const complianceStandards = [;
     {;
@@ -68,7 +68,7 @@ export default function AccessibilityPage() {;
   ];
   const accessibilityTools = [;
     {;
-      name: 'Screen Reader Support',description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',;
+      name: 'Screen Reader Support',description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver';
       icon: Monitor;
     };
     {;
@@ -78,7 +78,7 @@ export default function AccessibilityPage() {;
       name: 'Voice Navigation',description: 'Voice control support for hands-free navigation and interaction',icon: Globe;
     };
     {;
-      name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs',;
+      name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs';
       icon: Zap;
     };
   ];

@@ -5,40 +5,39 @@ import { SEO } from "@/components/SEO"
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services"
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services"
 export default function RevolutionaryServicesShowcase2029() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [sortBy, setSortBy] = useState('popularity'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
 
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES]
 
   const categories = [;
-    'allAI & Analytics',;
-    'AI & AutomationAI & Cybersecurity',;
-    'AI & MarketingAI & Healthcare',;
-    'AI & DevelopmentAI & Supply Chain',;
-    'AI & FinTechAI & Legal Tech',;
-    'AI & Customer SuccessSpace Technology & AI',;
-    'Quantum Technology & SecurityNeurotechnology & AI',;
-    'AI & Autonomous SystemsAI & Biotechnology',;
-    'Quantum Computing & AIAI & Autonomous Vehicles',;
-    'AI & Digital TwinsAI & Blockchain',;
+    'allAI & Analytics';
+    'AI & AutomationAI & Cybersecurity';
+    'AI & MarketingAI & Healthcare';
+    'AI & DevelopmentAI & Supply Chain';
+    'AI & FinTechAI & Legal Tech';
+    'AI & Customer SuccessSpace Technology & AI';
+    'Quantum Technology & SecurityNeurotechnology & AI';
+    'AI & Autonomous SystemsAI & Biotechnology';
+    'Quantum Computing & AIAI & Autonomous Vehicles';
+    'AI & Digital TwinsAI & Blockchain';
     'AI & Metaverse'
-  ],;
+  ];
 
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
-  }),;
+    return matchesSearch && matchesCategory;&& matchesCategory; matchesCategory});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),;
+        return parseFloat(a.price.replace('$', '').replace( '')) - parseFloat(b.price.replace('$', '').replace( ''));
       case 'price-high':;
-        return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
+        return parseFloat(b.price.replace('$', '').replace( '')) - parseFloat(a.price.replace('$', '').replace( ''));
       case 'rating':;
         return b.rating - a.rating
       case 'customers':;
@@ -49,28 +48,27 @@ export default function RevolutionaryServicesShowcase2029() {;
   const getCategoryIcon = (category: string) => {;
     const iconMap: { [key: string]: React.ReactNode } = {;
       'AI & Analytics': <[^>]*/>
-      'AI & Automation': <Zap className="w-5 h-5" />,;
-      'AI & Cybersecurity': <Shield className="w-5 h-5" />,;
-      'AI & Marketing': <Target className="w-5 h-5" />,;
-      'AI & Healthcare': <Brain className="w-5 h-5" />,;
-      'AI & Development': <Code className="w-5 h-5" />,;
-      'AI & Supply Chain': <Truck className="w-5 h-5" />,;
-      'AI & FinTech': <TrendingUp className="w-5 h-5" />,;
-      'AI & Legal Tech': <Shield className="w-5 h-5" />,;
-      'AI & Customer Success': <Users className="w-5 h-5" />,;
-      'Space Technology & AI': <Rocket className="w-5 h-5" />,;
-      'Quantum Technology & Security': <Atom className="w-5 h-5" />,;
-      'Neurotechnology & AI': <Brain className="w-5 h-5" />,;
-      'AI & Autonomous Systems': <Plane className="w-5 h-5" />,;
-      'AI & Biotechnology': <Dna className="w-5 h-5" />,;
-      'Quantum Computing & AI': <Atom className="w-5 h-5" />,;
-      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,;
-      'AI & Digital Twins': <Box className="w-5 h-5" />,;
-      'AI & Blockchain': <Link className="w-5 h-5" />,;
+      'AI & Automation': <Zap className="w-5 h-5" />;
+      'AI & Cybersecurity': <Shield className="w-5 h-5" />;
+      'AI & Marketing': <Target className="w-5 h-5" />;
+      'AI & Healthcare': <Brain className="w-5 h-5" />;
+      'AI & Development': <Code className="w-5 h-5" />;
+      'AI & Supply Chain': <Truck className="w-5 h-5" />;
+      'AI & FinTech': <TrendingUp className="w-5 h-5" />;
+      'AI & Legal Tech': <Shield className="w-5 h-5" />;
+      'AI & Customer Success': <Users className="w-5 h-5" />;
+      'Space Technology & AI': <Rocket className="w-5 h-5" />;
+      'Quantum Technology & Security': <Atom className="w-5 h-5" />;
+      'Neurotechnology & AI': <Brain className="w-5 h-5" />;
+      'AI & Autonomous Systems': <Plane className="w-5 h-5" />;
+      'AI & Biotechnology': <Dna className="w-5 h-5" />;
+      'Quantum Computing & AI': <Atom className="w-5 h-5" />;
+      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />;
+      'AI & Digital Twins': <Box className="w-5 h-5" />;
+      'AI & Blockchain': <Link className="w-5 h-5" />;
       'AI & Metaverse': <[^>]*/>
-    },;
-    return iconMap[category] || <Cpu className="w-5 h-5" />,
-  };
+    };
+    return iconMap[category] || <Cpu className="w-5 h-5" />};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
