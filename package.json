@@ -16,7 +16,7 @@
     "lint:check": "eslint --no-ignore \"app/**/*.{ts,tsx,js,jsx}\" --max-warnings 0",
     "type-check": "tsc -p tsconfig.app.json --noEmit",
     "test": "jest --config jest.config.cjs",
-    "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
+    "test:smoke": "jest --config jest.config.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
     "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
