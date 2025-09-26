@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-
+import SEO from '@/components/SEO';
 import ErrorBoundary from '@/components/ErrorBoundary';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'AI Innovations 2025 - Revolutionary Breakthrough Technologies',
@@ -12,6 +14,12 @@ export const metadata = {
 export default function AIInnovations2025Page() {
   return (
     <ErrorBoundary>
+      <SEO
+        title="AI Innovations 2025 - Revolutionary Breakthrough Technologies"
+        description="Explore the latest AI innovations and breakthrough technologies of 2025. Neural superintelligence, quantum AI, autonomous systems, and more."
+        keywords="AI innovations 2025, artificial intelligence, breakthrough technologies, neural superintelligence, quantum AI, autonomous systems"
+        url="/ai-innovations-2025"
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}

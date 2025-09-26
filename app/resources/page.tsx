@@ -236,7 +236,9 @@ interface Resource {
   title: string;
   description: string;
   type: string;
-  readTime: string;
+  category: string;
+  rating: number;
+  downloadCount: string;
 }
 
 function ResourceCard({ resource }: { resource: Resource }) {

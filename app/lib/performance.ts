@@ -15,6 +15,11 @@ export interface PerformanceMetrics {
   si?: number
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+}
+
 export interface PerformanceConfig {
   enableLogging: boolean
   enableReporting: boolean
@@ -48,16 +53,16 @@ class PerformanceMonitor {
     this.observeMetric('largest-contentful-paint', (entries) => {
       const lastEntry = entries[entries.length - 1]
       if (lastEntry) {
-        this.metrics.lcp = (lastEntry as { startTime: number }).startTime
+        this.metrics.lcp = (lastEntry as PerformanceEntry).startTime
       }
     })
 
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        const firstInputEntry = entry as unknown as { processingStart?: number; startTime: number }
-        if (typeof firstInputEntry.processingStart === 'number') {
-          this.metrics.fid = firstInputEntry.processingStart - firstInputEntry.startTime
+        const e: any = entry as any
+        if (typeof e.processingStart === 'number' && typeof e.startTime === 'number') {
+          this.metrics.fid = e.processingStart - e.startTime
         }
       })
     })
@@ -66,7 +71,7 @@ class PerformanceMonitor {
     this.observeMetric('layout-shift', (entries) => {
       let clsValue = 0
       entries.forEach((entry) => {
-        const layoutShiftEntry = entry as { hadRecentInput?: boolean; value: number }
+        const layoutShiftEntry = entry as LayoutShift
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value
         }
@@ -193,7 +198,7 @@ export class ResourceOptimizer {
 
 // Bundle optimization utilities
 export class BundleOptimizer {
-  static async loadChunk(chunkName: string): Promise<unknown> {
+  static async loadChunk(chunkName: string): Promise<Record<string, unknown>> {
     try {
       return await import(/* webpackChunkName: "[request]" */ `../components/${chunkName}`)
     } catch (error) {
@@ -203,7 +208,7 @@ export class BundleOptimizer {
     }
   }
 
-  static createLazyComponent<T extends React.ComponentType<unknown>>(
+  static createLazyComponent<T extends React.ComponentType<Record<string, unknown>>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
     return React.lazy(importFunc)

@@ -93,7 +93,7 @@ const UltimateContent2025RevolutionBanner = () => {
 
   if (!isVisible) return null;
 
-  const currentContent = (contentPieces[currentSlide] ?? contentPieces[0])!;
+  const currentContent = contentPieces[currentSlide];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">

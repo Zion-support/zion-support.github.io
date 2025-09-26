@@ -97,8 +97,8 @@ export default function LazyImage({
             <Image
               src={src}
               alt={alt}
-              width={width}
-              height={height}
+              width={width || 800}
+              height={height || 600}
               className={cn(
                 'transition-opacity duration-300',
                 isLoaded ? 'opacity-100' : 'opacity-0'

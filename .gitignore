@@ -60,6 +60,9 @@ jspm_packages/
 *.tgz
 # Yarn Integrity file
 .yarn-integrity
+# Yarn v4 cache (do not commit cached zips)
+.yarn/cache/
+.yarn/install-state.gz
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -105,6 +108,7 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+<<<<<<< HEAD
 
 # Ignore build outputs to avoid conflicts
 .next/
@@ -126,3 +130,5 @@ __pycache__/
 
 # Local SQLite databases
 zion_academy/instance/*.db
+=======
+>>>>>>> origin/backup-main-20250924-182607

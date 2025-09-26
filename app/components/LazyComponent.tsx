@@ -3,7 +3,7 @@
 import { Suspense, lazy, ComponentType, ReactNode } from 'react'
 
 interface LazyComponentProps {
-  component: () => Promise<{ default: ComponentType<unknown> }>
+  component: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
   fallback?: ReactNode
   [key: string]: unknown
 }

@@ -11,6 +11,11 @@ interface PerformanceMetrics {
   fmp?: number
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+}
+
 export default function PerformanceOptimizer() {
   const [_metrics, setMetrics] = useState<PerformanceMetrics>({})
 
@@ -119,7 +124,7 @@ export default function PerformanceOptimizer() {
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fidEntry = entry as { processingStart?: number; startTime: number }
+          const fidEntry = entry as PerformanceEventTiming
           if (fidEntry.processingStart) {
             performanceMetrics.fid = fidEntry.processingStart - fidEntry.startTime
           }
@@ -131,7 +136,7 @@ export default function PerformanceOptimizer() {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const clsEntry = entry as { hadRecentInput?: boolean; value: number }
+          const clsEntry = entry as LayoutShift
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
             performanceMetrics.cls = clsValue

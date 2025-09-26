@@ -1,119 +1,146 @@
-# Frontend Application Source (`src/`)
+# Zion Tech Group - Technology Solutions
 
-This directory contains the primary source code for the Zion platform's Next.js frontend application.
+A modern, responsive website for Zion Tech Group, showcasing our comprehensive technology services including AI, Cloud, Cybersecurity, and Data Analytics solutions.
 
-## Overview
+## 🚀 Features
 
-The frontend is built using Next.js and React, with TypeScript as the primary language. It's responsible for rendering the user interface, managing client-side state, interacting with various backend APIs, and providing the overall user experience for the platform.
+- **Modern Design**: Clean, professional design with gradient accents
+- **Responsive Layout**: Optimized for all devices and screen sizes
+- **Service Showcase**: Detailed information about our technology services
+- **Contact Form**: Interactive contact form with validation
+- **Performance Optimized**: Fast loading with modern React practices
+- **Accessibility**: Built with accessibility best practices
 
-## Key Technologies & Libraries
+## 🛠️ Tech Stack
 
-- **Framework:** Next.js. The project primarily relies on the traditional Pages Router with some gradual adoption of the App Router for newer sections.
-- **Language:** TypeScript
-- **UI Framework/Libraries:**
-  - React
-  - Tailwind CSS (assumed, based on `src/index.css` and typical Next.js setups)
-  - Chakra UI (`@chakra-ui/react`)
-  - Radix UI (`@radix-ui/*`) for unstyled, accessible UI primitives.
-  - Shadcn/UI components are used as the base design system, leveraging Radix primitives under the hood.
-  - Framer Motion (for animations)
-- **State Management:**
-  - React Query / SWR (`@tanstack/react-query`, `swr`): For server state, caching, and data synchronization.
-  - Redux Toolkit (`@reduxjs/toolkit`): For complex client-side state (e.g., cart, wishlist, auth session details).
-  - React Context API: For global state like theme, authentication, wallet info, etc.
-- **Forms:** React Hook Form is the preferred library. Some legacy components still use Formik or Zod but new code should adopt React Hook Form.
-- **API Interaction:** Axios, SWR/React Query's fetch capabilities. Custom clients in `src/api/` and `src/services/`.
-- **Authentication:** NextAuth.js (client-side integration via `AuthProvider` in `src/context/auth/`), interacting with Supabase.
-- **Internationalization (i18n):** `i18next`, `react-i18next`.
-- **Web3/Decentralization:** Ethers.js, Helia, libp2p, OrbitDB (client-side interactions).
-  - Custom `useTokenBalance` hook retrieves ERC20 balances when a wallet is connected.
-- **Error Monitoring:** Sentry (`@sentry/nextjs`).
-- **Testing:**
-  - Jest (with React Testing Library) for unit/integration tests (tests primarily in `__tests__/` at root).
-  - Storybook (`.storybook/` at root) for component development and testing.
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Package Manager**: npm
 
-## Directory Structure Highlights
+## 📱 Pages
 
-- **`api/`**: Client-side API service functions/wrappers for backend communication.
-- **`assets/`**: Static assets like images.
-- **`components/`**: Reusable React components, organized by feature or type. This is a very large and critical directory.
-- **`config/`**: Frontend-specific configurations.
-- **`context/`**: React Context providers for global state.
-- **`data/`**: Mock data, static data sets.
-- **`hooks/`**: Custom React hooks for reusable logic.
-- **`i18n/` & `locales/`**: Internationalization and localization files.
-- **`integrations/`**: Client-side setup for third-party services (Firebase, Supabase client).
-- **`layout/`**: Components defining the overall page structure and navigation.
-- **`lib/`**: General utility functions and libraries for the frontend.
-- **`mobile/`**: Components and pages potentially tailored for a mobile-specific web experience.
-- **`pages/` (within `src/`)**: This directory contains page components. Note: Next.js typically uses a root `pages/` or `app/` directory for routing. If this `src/pages/` is the primary one, the root `pages/` might be minimal or for API routes only.
-- The `app/` directory hosts a handful of experimental routes using the App Router.
-- **`routes/`**: Custom routing logic, protected route components, route configuration.
-- **`services/`**: More structured API interaction layer, potentially typed API clients.
-- **`store/`**: Redux Toolkit store setup (slices, reducers).
-- **`styles/`**: Global stylesheets, CSS modules, Tailwind base.
-- **`types/`**: TypeScript type definitions.
-- **`utils/`**: Utility functions.
+- **Home**: Company overview, services preview, and contact information
+- **Services**: Detailed service offerings with pricing and features
+- **Contact**: Contact form and company information
+- **404**: Custom error page with navigation options
 
-## Getting Started & Development
+## 🚀 Getting Started
 
-1.  **Prerequisites:** Node.js, npm (ensure versions match project requirements, e.g., Node 20.x).
-2.  **Install Dependencies:** Run `npm install` in the root of the monorepo.
-3.  **Environment Variables:**
-    - Copy `.env.example` (if it exists at the root or `src/`) to `.env.local`.
-    - Populate necessary client-side environment variables (e.g., `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SENTRY_DSN`, API keys for third-party services).
-4.  **Running the Development Server:**
-    ```bash
-    npm run dev
-    ```
-    The frontend will typically be available at `http://localhost:3000`.
+### Prerequisites
 
-## Building for Production
+- Node.js 16+ 
+- npm 8+
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd zion-tech-group
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+### Building for Production
 
 ```bash
 npm run build
 ```
 
-This will create an optimized production build in the `.next` directory.
+The built files will be in the `dist` directory.
 
-## Running Tests
+## 🎨 Customization
 
-- **Unit/Integration Tests (Jest):**
-  ```bash
-  npm test
-  ```
-- **E2E Tests (Cypress/Playwright):** Refer to `cypress/README.md` (if exists) or root level instructions. Typically:
-  ```bash
-  npm run cypress:open
-  # or
-  npm run playwright test # (or similar, check Playwright scripts)
-  ```
-- **Storybook (Component Development/Testing):**
-  ```bash
-  npm run storybook
-  ```
+### Colors
 
-## Coding Conventions & Style Guides
+The application uses a custom color palette defined in `tailwind.config.js`:
 
-- **Linting:** ESLint is used. Run `npm run lint` to check.
-- **Formatting:** Prettier is used. Run `npm run format` to format code.
-- See the [CONTRIBUTING.md](../CONTRIBUTING.md) file for detailed coding standards and contribution guidelines.
+- **Zion Blue**: Primary brand color
+- **Zion Cyan**: Accent color
+- **Zion Purple**: Secondary accent
+- **Zion Slate**: Text and background colors
 
-## State Management Strategy
+### Styling
 
-The application employs a hybrid state management approach:
+Custom CSS classes are defined in `src/index.css`:
+- `.btn-primary`: Primary button styling
+- `.btn-secondary`: Secondary button styling
+- `.card`: Card component styling
 
-1.  **React Query / SWR:** For managing server state, caching API responses, and handling asynchronous data fetching.
-2.  **Redux Toolkit:** For complex global client-side state (e.g., shopping cart, wishlist, detailed auth session info).
-3.  **React Context API:** For simpler global state that needs to be shared across components (e.g., theme, basic auth status, wallet connection).
+## 📁 Project Structure
 
-- See [Frontend State Management Guidelines](../docs/frontend_state_management_guidelines.md) for more details on choosing between React Query, Redux Toolkit and React Context.
+```
+src/
+├── pages/           # Page components
+│   ├── Home.tsx     # Homepage
+│   ├── Services.tsx # Services page
+│   ├── Contact.tsx  # Contact page
+│   └── NotFound.tsx # 404 page
+├── App.tsx          # Main app component
+├── main.tsx         # App entry point
+├── index.css        # Global styles
+└── App.css          # App-specific styles
+```
 
-## Key Architectural Decisions & Notes
+## 🔧 Configuration
 
-- **Component-Driven Development:** Emphasis on reusable components.
-- **TypeScript:** For static typing and improved code quality.
-- **Robust Error Handling:** Multiple layers of error boundaries.
-- **Internationalization:** Built-in support for multiple languages.
-- Chakra UI provides high level layout components while Radix supplies low level accessible primitives. Shadcn stitches these pieces together with a consistent design language.
-- `AuthProvider` exposes authentication state via React Context and synchronizes with the Redux `authSlice` so that pages and components can access auth data without prop drilling.
+### Vite Configuration
+
+The build tool is configured in `vite.config.ts` with:
+- React plugin
+- Path aliases (@/ for src/)
+- Development server on port 3000
+- Source maps for production builds
+
+### TypeScript Configuration
+
+TypeScript is configured in `tsconfig.json` with:
+- Strict mode enabled
+- Path mapping for imports
+- Modern ES2020 target
+
+## 📊 Performance
+
+- **Lazy Loading**: Components are loaded on demand
+- **Code Splitting**: Automatic code splitting by routes
+- **Optimized Images**: Placeholder for image optimization
+- **Minimal Dependencies**: Only essential packages included
+
+## 🌐 Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 📞 Contact Information
+
+- **Phone**: +1 (302) 464-0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Hours**: Monday - Friday: 9:00 AM - 6:00 PM EST
+
+## 📝 License
+
+This project is proprietary to Zion Tech Group.
+
+## 🤝 Contributing
+
+For internal development and contributions, please follow the established coding standards and review process.
+
+---
+
+Built with ❤️ by Zion Tech Group
