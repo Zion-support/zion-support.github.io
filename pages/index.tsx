@@ -7,7 +7,7 @@ import Dashboard from '../src/components/Dashboard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import ErrorBoundary from '../src/components/ErrorBoundary';
-import ErrorReporter from '../src/components/ErrorReporter';
+import { ErrorReporter } from '../src/components/ErrorReporter';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import SEO from '../src/components/SEO';
 import Layout from '../src/components/Layout';
