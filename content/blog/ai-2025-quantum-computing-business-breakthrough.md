@@ -1,5 +1,0 @@
----
-```
-
-## Real-World Success Stories
-
