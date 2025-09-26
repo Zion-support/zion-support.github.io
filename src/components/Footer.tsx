@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
@@ -127,7 +126,7 @@ export const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Zion Tech Group. All rights reserved.
+            © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>
       </div>
