@@ -5,7 +5,7 @@ import About from './src/pages/About';
 import Contact from './src/pages/Contact';
 import './src/index.css';
 
-function App(): JSX.Element {
+function App(): React.ReactElement {
   return (
     <Router>
       <Routes>
