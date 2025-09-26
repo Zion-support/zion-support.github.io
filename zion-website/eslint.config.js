@@ -1,6 +1,7 @@
 export default [
   {
     ignores: [
+      '.next/**',
       'src/**',
       'database/**',
       'e2e/**',
