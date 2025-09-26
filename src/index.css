@@ -6,8 +6,7 @@
   }
 
   body {
-    background-color: #475569;
-    color: white;
+    @apply bg-zion-slate-dark text-white;
   }
 }
 
@@ -17,28 +16,10 @@
   }
 
   .btn-secondary {
-    background-color: #64748b;
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #64748b;
-    transition: all 0.3s;
-  }
-
-  .btn-secondary:hover {
-    background-color: #94a3b8;
+    @apply bg-zion-slate-dark hover:bg-zion-slate text-white font-semibold py-3 px-6 rounded-lg border border-zion-slate transition-all duration-300;
   }
 
   .card {
-    background-color: rgba(100, 116, 139, 0.5);
-    border: 1px solid #94a3b8;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    transition: all 0.3s;
-  }
-
-  .card:hover {
-    background-color: rgba(100, 116, 139, 0.7);
+    @apply bg-zion-slate-dark/50 border border-zion-slate rounded-lg p-6 hover:bg-zion-slate-dark/70 transition-all duration-300;
   }
 }
