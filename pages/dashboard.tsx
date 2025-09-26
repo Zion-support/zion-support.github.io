@@ -75,7 +75,24 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600"></div></div>
 });
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
+// New components from the comprehensive improvements branch
+const SEOOptimizer = dynamic(() => import('../src/components/SEOOptimizer'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const AdvancedCacheManager = dynamic(() => import('../src/components/AdvancedCacheManager'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const RealTimeAnalytics = dynamic(() => import('../src/components/RealTimeAnalytics'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+const AccessibilityEnhancements = dynamic(() => import('../src/components/AccessibilityEnhancements'), {
+  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div></div>
+});
+
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'seo-optimizer' | 'cache-manager' | 'real-time-analytics' | 'accessibility-enhancements' | 'new-performance' | 'new-security' | 'new-analytics';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -100,7 +117,11 @@ const Dashboard: React.FC = () => {
     { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
     { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'seo-optimizer' as const, name: 'SEO Optimizer', icon: '🔍' },
+    { id: 'cache-manager' as const, name: 'Cache Manager', icon: '💾' },
+    { id: 'real-time-analytics' as const, name: 'Real-Time Analytics', icon: '📊' },
+    { id: 'accessibility-enhancements' as const, name: 'Accessibility', icon: '♿' }
   ];
 
   // Sample data for advanced components
@@ -448,6 +469,45 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'seo-optimizer':
+        return (
+          <div className="p-6">
+            <SEOOptimizer
+              seoData={{
+                title: 'Dashboard - Zion Tech Solutions',
+                description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics',
+                keywords: ['dashboard', 'analytics', 'performance', 'security', 'monitoring'],
+                canonical: 'https://ziontechgroup.com/dashboard',
+                ogImage: 'https://ziontechgroup.com/og-dashboard.jpg',
+                twitterCard: 'summary_large_image',
+                structuredData: {
+                  '@context': 'https://schema.org',
+                  '@type': 'WebPage',
+                  name: 'Dashboard',
+                  description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics'
+                }
+              }}
+            />
+          </div>
+        );
+      case 'cache-manager':
+        return (
+          <div className="p-6">
+            <AdvancedCacheManager />
+          </div>
+        );
+      case 'real-time-analytics':
+        return (
+          <div className="p-6">
+            <RealTimeAnalytics />
+          </div>
+        );
+      case 'accessibility-enhancements':
+        return (
+          <div className="p-6">
+            <AccessibilityEnhancements />
           </div>
         );
       default:
