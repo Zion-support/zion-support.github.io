@@ -12,12 +12,14 @@ export default function Home(): JSX.Element {
 	const [hoveredService, setHoveredService] = useState<string | null>(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsVisible(true);
+		setIsLoading(false);
 		
 		const handleScroll = () => setScrollY(window.scrollY);
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
@@ -49,6 +51,15 @@ export default function Home(): JSX.Element {
 				<meta name="author" content="Zion App" />
 				<meta name="theme-color" content="#2563eb" />
 			</Head>
+
+			{isLoading ? (
+				<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+					<div className="text-center">
+						<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+						<p className="text-gray-600">Loading...</p>
+					</div>
+				</div>
+			) : (
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
 				{/* Animated background elements */}
 				<div className="absolute inset-0 overflow-hidden">
@@ -202,6 +213,7 @@ export default function Home(): JSX.Element {
 					</footer>
 				</div>
 			</div>
+			)}
 		</ErrorBoundary>
 	);
 }
