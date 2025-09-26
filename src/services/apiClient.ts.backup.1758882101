@@ -13,12 +13,18 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 // Define the global error handler (exported for testing purposes)
 export const globalAxiosErrorHandler = (error: unknown) => {
   const axiosError = error as AxiosError;
+<<<<<<< HEAD
+  const response = axiosError.response;
+  const config = axiosError.config as AxiosRequestConfig | undefined;
+  const contentType = typeof response?.headers?.['content-type'] === 'string' ? response?.headers?.['content-type'] : undefined;
+=======
   const response = axiosError?.response;
   const config = axiosError?.config;
 
   const contentType = typeof response?.headers?.['content-type'] === 'string'
     ? response.headers['content-type']
     : undefined;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-de20
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON');
   }
