@@ -2,7 +2,6 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import ServicesOverview from '../components/ServicesOverview';
 import TestimonialsSection from '../components/TestimonialsSection';
-import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   return (
