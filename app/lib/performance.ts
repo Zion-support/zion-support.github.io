@@ -3,7 +3,6 @@ import React from 'react'
 /**
  * Performance monitoring and optimization utilities
  */
-import React from 'react'
 
 export interface PerformanceMetrics {
   fcp?: number
