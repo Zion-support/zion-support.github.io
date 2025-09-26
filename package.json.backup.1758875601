@@ -4,6 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "type-check": "npx tsc --noEmit",
+    "prepare": "git config core.hooksPath .husky || true",
+    "fix:all": "eslint . --fix || true",
+    "build:heal": "npm run build || (npm run fix:all && npm run build)",
+    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
+=======
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
@@ -15,6 +27,7 @@
     "lint:fix": "eslint --no-ignore \"{src,components}/**/*.{ts,tsx,js,jsx}\" --fix",
     "lint:check": "eslint --no-ignore \"{src,components}/**/*.{ts,tsx,js,jsx}\" --max-warnings 0",
     "type-check": "tsc -p tsconfig.app.json --noEmit",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0313
     "test": "jest --config jest.config.cjs",
     "test:watch": "jest --watch --config jest.config.cjs",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests --testPathIgnorePatterns zion-website --config jest.config.cjs",
