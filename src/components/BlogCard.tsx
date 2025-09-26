@@ -47,7 +47,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2" id="posttitle">
           {post.title}
         </h3>
         

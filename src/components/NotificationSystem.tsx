@@ -185,7 +185,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             ? 'text-red-600 hover:text-red-500'
                             : 'text-gray-600 hover:text-gray-500'
                         }`}
-                      >
+                       aria-label="{action.label}">
                         {action.label}
                       </button>
                     ))}
