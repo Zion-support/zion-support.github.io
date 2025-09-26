@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
+// SEO component removed; use Next.js Metadata instead
 
 export const metadata: Metadata = {
   title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function EdgeComputingRevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* SEO handled via exported metadata above */}
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
