@@ -40,15 +40,9 @@
       "react-dom"
     ],
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": false
   },
   "include": [
-    "next-env.d.ts",
     "types.d.ts",
     "App.tsx",
     "src/**/*.ts",
