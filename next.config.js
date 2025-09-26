@@ -20,6 +20,20 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  swcMinify: true,
+  
+  // Bundle analyzer (only in development)
+  ...(process.env.ANALYZE === 'true' && {
+    webpack: (config) => {
+      config.plugins.push(
+        new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)({
+          analyzerMode: 'server',
+          openAnalyzer: true,
+        })
+      );
+      return config;
+    },
+  }),
   
   // Image optimization
   images: {
