@@ -1,68 +1,13 @@
-# Exclude non-app directories and archived content from linting (merged)
-node_modules/
+# Build output
 .next/
 out/
-build/
 dist/
 coverage/
-.cache/
 
-# Exclude corrupted or non-app source directories
-# Allow linting of active app source under src/
-# src/
-# components/
+# Dependencies
+node_modules/
 
-# Large mono-repo subprojects not part of the current app build
-automation/
-automation_backup/
-automation-logs/
-automation-reports/
-scripts/
-server/
-backend/
-apps/
-apps.backup/
-app_backup/
-app.disabled/
-app-disabled/
-
-# Generated or demo services
-generated-services/
-
-# Archived, backups, or intentionally broken areas
-backups/
-backup*/
-backup-problematic-files/
-corrupted_backup/
-temp_exclude/
-temp_*/
-ts_files_backup/
-__tests__/**
-tests/**
-__jest__/**
-__mocks__/**
-__safe_tests__/**
-
-# Other packages in the repo
-zion-os/
-zion-website/
-zion-ai-assistant/
-zion_academy/
-zion-film/
-src.corrupted/**
-
-# Ignore known corrupted or unused source areas (excluded from tsconfig build)
-# Keep targeted ignores inside src minimal to allow lint to run
-# src/components/**
-# src/pages/**
-# src/routes/**
-# src/context/**
-# src/utils/cartUtils.js
-**/*.config.ts
-vite.config.ts
-vitest.config.ts
-
-# Misc top-level jsx/js playground files
-*.backup
-*.bak
-# Keep above; no additional ignores below so that src-clean is linted
+# Generated artifacts
+*.log
+**/*.generated.*
+zion.app/recovered-content/**
