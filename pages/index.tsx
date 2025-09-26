@@ -2,13 +2,12 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
-import { Navigation } from '../src/components/Navigation';
-import { Dashboard } from '../src/components/Dashboard';
+import Navigation from '../src/components/Navigation';
+import Dashboard from '../src/components/Dashboard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import Layout from '../src/components/Layout';
-import Dashboard from '../src/components/Dashboard';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
