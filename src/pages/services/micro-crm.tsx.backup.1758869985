@@ -1,4 +1,9 @@
 import React from "react"
+<<<<<<< HEAD
+import { SEO } from "../../components/SEO"
+
+export default function MicroCRM() {
+=======
 import { Users, Target, CheckCircle, Phone, Calendar, BarChart3, Building } from "lucide-react"
 import { SEO } from "../../components/SEO"
 
@@ -66,6 +71,7 @@ export default function MicroCRM() {
     },
   ]
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-fbb2
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -73,6 +79,16 @@ export default function MicroCRM() {
         description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
 
+<<<<<<< HEAD
+      <section className="py-20 text-center">
+        <h1 className="text-5xl font-bold text-white mb-6">Micro CRM</h1>
+        <p className="text-xl text-slate-300 mb-10">
+          Lightweight CRM to manage contacts, leads, and tasks.
+        </p>
+        <div className="flex gap-4 justify-center">
+          <button className="px-8 py-4 bg-cyan-600 text-white rounded-lg">Start Free Trial</button>
+          <button className="px-8 py-4 border border-cyan-400 text-cyan-300 rounded-lg">Watch Demo</button>
+=======
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
@@ -189,6 +205,7 @@ export default function MicroCRM() {
               Schedule Demo
             </button>
           </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-fbb2
         </div>
       </section>
     </div>
