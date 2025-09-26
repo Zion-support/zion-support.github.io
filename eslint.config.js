@@ -98,18 +98,27 @@ export default [
       '**/types.disabled/**',
       '**/zion-website/**',
       '**/zion-os*/**',
+<<<<<<< HEAD
+=======
       '**/zion.app/**',
       '**/zion_academy/**',
       '**/recovered/**',
       '**/backup*/**',
+>>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
       '**/structural-fix.js',
       '**/ultimate-*.js',
       '**/verify*.js',
       '**/workbox-config.js',
+<<<<<<< HEAD
+      '**/vite.config*.ts',
+      '**/vitest.config*.ts',
+      '**/tailwind.config.ts',
+=======
       '**/vite.config.*',
       '**/vitest.config.*',
       '**/tailwind.config.*',
       '**/*.config.*',
+>>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
       '**/node_modules/**',
       '**/dist/**',
       '**/build/**',
