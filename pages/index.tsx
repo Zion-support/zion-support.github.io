@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
@@ -73,6 +74,31 @@ export default function Home(): JSX.Element {
 					<div className="fixed top-4 right-4 z-50">
 						<ThemeToggle />
 					</div>
+					
+					{/* Navigation */}
+					<nav className={`mb-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+						<div className="flex justify-center">
+							<div className="bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
+								<div className="flex space-x-8">
+									<Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+										About
+									</Link>
+									<Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+										Services
+									</Link>
+									<Link href="/portfolio" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+										Portfolio
+									</Link>
+									<Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+										Blog
+									</Link>
+									<Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+										Contact
+									</Link>
+								</div>
+							</div>
+						</div>
+					</nav>
 					
 					<header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 						<h1 className="text-5xl md:text-7xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
