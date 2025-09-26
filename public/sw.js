@@ -1,10 +1,17 @@
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-v2';
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
+  '/about',
+  '/contact',
+  '/services',
+  '/blog',
+  '/portfolio',
+  '/dashboard',
+  '/faq',
+  '/privacy-policy',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/site.webmanifest'
 ];
 
 // Install event - cache resources

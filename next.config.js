@@ -22,6 +22,12 @@ const nextConfig = {
   generateEtags: true,
   swcMinify: true,
   
+  // Additional performance optimizations
+  reactStrictMode: true,
+  trailingSlash: false,
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
+  
   // Bundle analyzer (only in development)
   ...(process.env.ANALYZE === 'true' && {
     webpack: (config) => {

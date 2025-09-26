@@ -15,6 +15,9 @@ const staticRoutes = [
   '/services',
   '/blog',
   '/portfolio',
+  '/dashboard',
+  '/faq',
+  '/privacy-policy',
   '/enhanced-home'
 ];
 
