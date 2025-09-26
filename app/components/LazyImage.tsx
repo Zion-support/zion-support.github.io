@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 
 import { cn } from '../lib/utils'
 
@@ -93,19 +94,18 @@ export default function LazyImage({
           )}
           
           {isInView && (
-            <img
+            <Image
               src={src}
               alt={alt}
-              width={width}
-              height={height}
+              width={width || 800}
+              height={height || 600}
               className={cn(
                 'transition-opacity duration-300',
                 isLoaded ? 'opacity-100' : 'opacity-0'
               )}
               onLoad={handleLoad}
               onError={handleError}
-              loading={priority ? 'eager' : 'lazy'}
-              decoding="async"
+              priority={priority}
             />
           )}
         </>
