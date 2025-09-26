@@ -1,13 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import './index.css';
 
-export default function App(): React.ReactElement {
-	return (
-		<div className="min-h-screen flex items-center justify-center p-8">
-			<div className="text-center max-w-xl">
-				<h1 className="text-3xl font-bold mb-3">Zion Tech Group</h1>
-				<p className="text-gray-600">React + Vite app is configured and building correctly.</p>
-			</div>
-		</div>
-	)
+export default function App(): JSX.Element {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/blog"
+            element={
+              <main className="container mx-auto px-4 py-16">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+                  <p className="text-xl text-gray-600">Latest insights and updates</p>
+                </div>
+              </main>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <main className="container mx-auto px-4 py-16">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+                  <p className="text-xl text-gray-600">Get in touch with our team</p>
+                </div>
+              </main>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <main className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+                <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
+              </main>
+            }
+          />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
-
