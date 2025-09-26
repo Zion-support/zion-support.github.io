@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Share2 } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group',
   description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge AI technologies, implementation strategies, and real-world success stories.',
