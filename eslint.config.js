@@ -7,7 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}', 'app/**/*.{ts,tsx,js,jsx}'],
+    files: ['src/App.tsx', 'src/main.tsx', 'app/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -86,6 +86,8 @@ export default [
   },
   {
     ignores: [
+      '**/.temp_backup_components/**',
+      '**/src.corrupted/**',
       '**/*.cjs',
       '**/scripts/**',
       '**/app.disabled/**',
@@ -98,27 +100,18 @@ export default [
       '**/types.disabled/**',
       '**/zion-website/**',
       '**/zion-os*/**',
-<<<<<<< HEAD
-=======
       '**/zion.app/**',
       '**/zion_academy/**',
       '**/recovered/**',
       '**/backup*/**',
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
       '**/structural-fix.js',
       '**/ultimate-*.js',
       '**/verify*.js',
       '**/workbox-config.js',
-<<<<<<< HEAD
-      '**/vite.config*.ts',
-      '**/vitest.config*.ts',
-      '**/tailwind.config.ts',
-=======
       '**/vite.config.*',
       '**/vitest.config.*',
       '**/tailwind.config.*',
       '**/*.config.*',
->>>>>>> 0be11cc9d5b7 (chore: enable linting on stable files, relax ignore rules, fix scripts; install deps and verify build)
       '**/node_modules/**',
       '**/dist/**',
       '**/build/**',
