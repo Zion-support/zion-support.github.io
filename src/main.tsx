@@ -1,19 +1,15 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import App from "./App";
 import "./index.css";
 
-function App(): React.ReactElement {
-	return (
-		<div style={{ padding: 24 }}>
-			<h1>Zion</h1>
-			<p>Welcome to the Zion Tech Group site.</p>
-		</div>
-	);
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error("Root element with id 'root' not found");
 }
 
-const container = document.getElementById("root");
-if (container) {
-	const root = createRoot(container);
-	root.render(<App />);
-}
-
+createRoot(rootElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
