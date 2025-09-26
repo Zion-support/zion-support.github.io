@@ -3,27 +3,27 @@ import SEO from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Code,;
-  Search,;
-  Filter,;
-  ArrowRight,;
-  Download,;
-  ExternalLink,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Sparkles,;
-  Zap,;
-  Globe,;
-  Target,;
-  TrendingUp,;
-  CheckCircle,;
-  Clock,;
-  User,;
-  Star,;
-  Terminal,;
-  Key,;
-  Database,;
+  Code;
+  Search;
+  Filter;
+  ArrowRight;
+  Download;
+  ExternalLink;
+  Brain;
+  Cloud;
+  Shield;
+  Sparkles;
+  Zap;
+  Globe;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  Clock;
+  User;
+  Star;
+  Terminal;
+  Key;
+  Database;
   Lock;
 } from "lucide-react"
 const API: React.FC = () => {
@@ -60,11 +60,11 @@ const API: React.FC = () => {
       title: 'Text Analysis',language: 'Python',description: 'Analyze text sentiment and extract insights using our AI API.',code: `import requests;
 
 response = requests.post('https://[^;]*
-    "text": "Your text here",;
+    "text": "Your text here";
     "analysis_type": "sentiment"
 });
 
-print(response.json())`,;
+print(response.json())`;
       category: 'AI & ML'
     };
     {;
@@ -76,8 +76,8 @@ const createInstance = async () => {;
     const response = await api.post('/instances', {;
         type: 'compute',size: 'medium',region: 'us-east-1'
     });
-    return response.data,;
-},`,;
+    return response.data;
+},`;
       category: 'Cloud & DevOps'
     };
     {;
@@ -88,11 +88,11 @@ def check_threat(ip_address):;
     headers = {"Authorization": "Bearer YOUR_API_KEY"};
 
     response = requests.post(url, json={;
-        "ip": ip_address,;
+        "ip": ip_address;
         "check_type": "comprehensive"
     });
 
-    return response.json()`,;
+    return response.json()`;
       category: 'Security'
     };
   ];

@@ -1,20 +1,20 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Shield,;
-  Lock,;
-  CheckCircle,;
-  AlertTriangle,;
-  Users,;
-  Award,;
-  FileText,;
-  Globe,;
-  Server,;
+  Shield;
+  Lock;
+  CheckCircle;
+  AlertTriangle;
+  Users;
+  Award;
+  FileText;
+  Globe;
+  Server;
   Eye;
 } from "lucide-react"
 const securityFeatures = [;
   {;
-    title: "SOC 2 Type II Compliance",description: "Annual third-party audits ensuring data security, availability, and confidentiality",;
+    title: "SOC 2 Type II Compliance",description: "Annual third-party audits ensuring data security, availability, and confidentiality";
     icon: "🔒",status: "Certified",color: "from-green-500 to-emerald-600"
   };
   {;
@@ -27,7 +27,7 @@ const securityFeatures = [;
     title: "HIPAA Compliance",description: "Healthcare data protection standards for medical information",icon: "🏥",status: "Compliant",color: "from-orange-500 to-red-600"
   };
   {;
-    title: "Zero Trust Architecture",description: "Never trust, always verify security model implementation",;
+    title: "Zero Trust Architecture",description: "Never trust, always verify security model implementation";
     icon: "🛡️",status: "Implemented",color: "from-indigo-500 to-purple-600"
   };
   {;
@@ -38,28 +38,28 @@ const complianceFeatures = [;
   {;
     category: "Data Protection",features: [;
       "Automated data classification"
-      "Real-time threat detection",;
-      "Automated incident response",;
+      "Real-time threat detection";
+      "Automated incident response";
       "Data loss prevention (DLP)"
     ];
-  },;
+  };
   {;
     category: "Access Control",features: [;
       "Multi-factor authentication (MFA)"
-      "Role-based access control (RBAC)",;
-      "Privileged access management",;
+      "Role-based access control (RBAC)";
+      "Privileged access management";
       "Single sign-on (SSO) integration"
     ];
-  },;
+  };
   {;
     category: "Monitoring & Auditing",features: [;
       "24/7 security monitoring"
-      "Comprehensive audit logs",;
-      "Real-time alerts",;
+      "Comprehensive audit logs";
+      "Real-time alerts";
       "Automated compliance reporting"
     ];
   };
-],;
+];
 
 export function SecurityComplianceSection() {;
   return (

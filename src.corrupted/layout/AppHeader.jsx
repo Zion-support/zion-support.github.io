@@ -41,22 +41,20 @@ export function AppHeader() {
     { name: 'Services', href: '/services', current: location.pathname === '/services' },
     { name: 'All Services', href: '/comprehensive-services', current: location.pathname === '/comprehensive-services' },
     { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
-  ];
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' }];
 
   const servicesDropdown = [
     { name: 'AI Solutions', href: '/comprehensive-services#ai' },
     { name: 'Quantum Technology', href: '/comprehensive-services#quantum' },
     { name: 'Cybersecurity', href: '/comprehensive-services#cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
-    { name: 'DevOps', href: '/comprehensive-services#devops' },
-  ];
+    { name: 'DevOps', href: '/comprehensive-services#devops' }];
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
+      // console.log('Searching for:', searchQuery);
     }
     return location.pathname.startsWith(path);
   };

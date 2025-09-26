@@ -16,11 +16,8 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
-    }
-  },
-}))
+        emit: jest.fn()}}
+  }}))
 // Mock Next.js navigation
 jest.mock('next/navigation', () => ({
   useRouter() {
@@ -29,16 +26,14 @@ jest.mock('next/navigation', () => ({
       replace: jest.fn(),
       back: jest.fn(),
       forward: jest.fn(),
-      refresh: jest.fn(),
-    }
+      refresh: jest.fn()}
   },
   useSearchParams() {
     return new URLSearchParams()
   },
   usePathname() {
     return '/'
-  },
-}))
+  }}))
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}

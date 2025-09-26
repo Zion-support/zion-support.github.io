@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 export default {
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+    ignoreDuringBuilds: true}};

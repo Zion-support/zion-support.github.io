@@ -20,9 +20,7 @@ const securityHeaders = {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
-    'upgrade-insecure-requests',
-  ].join('; '),
-}
+    'upgrade-insecure-requests'].join('; ')}
 export function middleware(request: NextRequest) {
   const response = NextResponse.next()
   // Add security headers
@@ -33,16 +31,13 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith('/api/')) {
     response.headers.set(
       'Access-Control-Allow-Origin',
-      process.env.ALLOWED_ORIGINS || 'http://localhost:3000',
-    )
+      process.env.ALLOWED_ORIGINS || 'http://localhost:3000')
     response.headers.set(
       'Access-Control-Allow-Methods',
-      'GET, POST, PUT, DELETE, OPTIONS',
-    )
+      'GET, POST, PUT, DELETE, OPTIONS')
     response.headers.set(
       'Access-Control-Allow-Headers',
-      'Content-Type, Authorization',
-    )
+      'Content-Type, Authorization')
   }
 
   return response

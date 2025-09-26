@@ -93,7 +93,7 @@ export default function ContentShowcase() {
     }
     {
       title: "Edge AI Agents 2025: Running Autonomous Agents in Production"
-      description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and performance."
+      description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and window.performance."
       href: "/blog/ai-2025-edge-agents-in-production"
       icon: "🤖"
       category: "Edge AI"
