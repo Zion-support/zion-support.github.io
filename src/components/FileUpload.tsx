@@ -285,10 +285,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             <div className="flex space-x-2">
               <button
                 onClick={handleUpload}
-                disabled={isUploading || uploadedFiles.every(f = aria-label="f.status !== 'pending')}
-                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isUploading ? 'Uploading...' : 'Upload All'}"> f.status !== 'pending')}
+                disabled={isUploading || uploadedFiles.every(f => f.status !== 'pending')}
+                aria-label="Upload all selected files"
                 className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isUploading ? 'Uploading...' : 'Upload All'}

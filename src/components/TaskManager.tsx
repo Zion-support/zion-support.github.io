@@ -55,18 +55,12 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                 aria-label="Add a new task"
               />
               <button
-                onClick={() = aria-label="{
+                onClick={() => {
                   if (addTask(newTaskText)) {
                     setNewTaskText('');
                   }
                 }}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Add"> {
-                  if (addTask(newTaskText)) {
-                    setNewTaskText('');
-                  }
-                }}
+                aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
                 Add
@@ -79,14 +73,8 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
             {(['all', 'active', 'completed'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() = aria-label="setFilter(filterType)}
-                className={`px-3 py-1 rounded-md text-sm transition-colors ${
-                  filter === filterType
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-                }`}
-              >
-                {filterType.charAt(0).toUpperCase() + filterType.slice(1)}"> setFilter(filterType)}
+                onClick={() => setFilter(filterType)}
+                aria-label={`Filter by ${filterType}`}
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
                     ? 'bg-blue-600 text-white'
@@ -133,10 +121,8 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                       {task.text}
                     </span>
                     <button
-                      onClick={() = aria-label="deleteTask(task.id)}
-                      className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
-                    >
-                      🗑️"> deleteTask(task.id)}
+                      onClick={() => deleteTask(task.id)}
+                      aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
                     >
                       🗑️

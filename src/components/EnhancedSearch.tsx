@@ -425,10 +425,8 @@ export default function EnhancedSearch({
                 {searchHistory.slice(0, 5).map((item, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >
-                    {item}"> handleInputChange(item)}
+                    onClick={() => handleInputChange(item)}
+                    aria-label={`Search for ${item}`}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {item}
@@ -447,10 +445,8 @@ export default function EnhancedSearch({
                 {suggestions.map((suggestion, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >
-                    {suggestion}"> handleInputChange(suggestion)}
+                    onClick={() => handleInputChange(suggestion)}
+                    aria-label={`Search for ${suggestion}`}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {suggestion}

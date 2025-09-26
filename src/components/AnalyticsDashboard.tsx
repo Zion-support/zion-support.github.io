@@ -219,14 +219,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() = aria-label="setSelectedTimeRange(range)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedTimeRange === range
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {range}"> setSelectedTimeRange(range)}
+                onClick={() => setSelectedTimeRange(range)}
+                aria-label={`Select ${range} time range`}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
@@ -275,15 +269,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
             {(['pageViews', 'uniqueVisitors', 'revenue'] as const).map((metric) => (
               <button
                 key={metric}
-                onClick={() = aria-label="setSelectedMetric(metric)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedMetric === metric
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {metric === 'pageViews' ? 'Page Views' : 
-                 metric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue'}"> setSelectedMetric(metric)}
+                onClick={() => setSelectedMetric(metric)}
+                aria-label={`Select ${metric} metric`}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedMetric === metric
                     ? 'bg-blue-100 text-blue-700'
