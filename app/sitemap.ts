@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next'
+// Removed Next.js MetadataRoute import
 
 export const dynamic = 'force-static'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap() {
   const baseUrl = 'https://zion.app'
   
   return [
