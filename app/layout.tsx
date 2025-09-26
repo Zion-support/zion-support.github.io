@@ -1,10 +1,10 @@
-// Removed Next.js Metadata import
-// Removed Next.js font import
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
-// Removed Next.js font
+const inter = Inter({ subsets: ['latin'] });
 
-// Removed Next.js metadata export
+export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
 };

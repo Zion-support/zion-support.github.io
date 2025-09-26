@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2022",
     "lib": [
       "ES2022",
@@ -15,22 +14,12 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-=======
-    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94c4
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -59,7 +48,7 @@
     "strictNullChecks": false
   },
   "include": [
-    "src/src/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -80,17 +69,6 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ]
-}
-=======
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"],
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94c4
