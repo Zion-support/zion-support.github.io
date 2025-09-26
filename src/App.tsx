@@ -28,6 +28,9 @@ import EnhancedContentShowcase2026 from './components/EnhancedContentShowcase202
 import EnhancedNavigation2026 from './components/EnhancedNavigation2026';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import InnovationLanding2025 from './pages/InnovationLanding2025';
+import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
+import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
 import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
 import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
@@ -111,7 +114,7 @@ export default function App(): JSX.Element {
                   <NewContentShowcase2026 />
                 </div>
 
-                {/* Revolutionary Content Showcase 2026 - removed (component not present) */}
+                {/* Removed non-existent RevolutionaryContentShowcase2026 */}
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -388,12 +391,11 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          {/** Enhanced showcase route retained by importing the correct component if needed */}
-          {/* <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} /> */}
+          {/** Removed route to non-existent EnhancedContentShowcase */}
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          {/* Removed revolutionary-showcase route (component not present) */}
+          {/** Removed route to non-existent RevolutionaryContentShowcase */}
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
