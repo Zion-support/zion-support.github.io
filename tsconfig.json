@@ -7,6 +7,7 @@
       "DOM.Iterable"
     ],
     "allowJs": true,
+    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -69,6 +70,5 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }
