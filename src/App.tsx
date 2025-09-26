@@ -4,6 +4,11 @@ import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import DynamicContentCarousel from './components/DynamicContentCarousel';
+import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import InnovationLanding2025 from './pages/InnovationLanding2025';
+import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
+import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
@@ -26,14 +31,9 @@ import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import EnhancedContentShowcase2026 from './components/EnhancedContentShowcase2026';
 import EnhancedNavigation2026 from './components/EnhancedNavigation2026';
-import DynamicContentCarousel from './components/DynamicContentCarousel';
-import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
 import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
-import InnovationLanding2025 from './pages/InnovationLanding2025';
-import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
-import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
 import BlogPost from './pages/BlogPost';
 
 export default function App(): JSX.Element {
