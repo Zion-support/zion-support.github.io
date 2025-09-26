@@ -1,0 +1,22 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+
+<<<<<<< HEAD
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+=======
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ad04
