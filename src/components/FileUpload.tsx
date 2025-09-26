@@ -116,7 +116,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     if (onFileSelect) {
       onFileSelect(fileArray);
     }
-  }, [uploadedFiles.length, maxFiles, onFileSelect, validateFile, allowedTypes, maxSize]);
+  }, [uploadedFiles.length, maxFiles, onFileSelect, allowedTypes, maxSize]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
