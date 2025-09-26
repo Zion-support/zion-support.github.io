@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import SEO from '../../../components/SEO';
 
 export default function AIAutomation2025Guide() {

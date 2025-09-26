@@ -1,6 +1,6 @@
 module.exports = {
   parser: require.resolve('@typescript-eslint/parser'),
-  plugins: ['@typescript-eslint', 'import', '@next/next'],
+  plugins: ['@typescript-eslint', 'import'],
   extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
