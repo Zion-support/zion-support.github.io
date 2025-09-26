@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../src/components/SEO';
 
 const SafeMultiAgentApprovalsBlueprint = () => {
@@ -43,8 +43,8 @@ const SafeMultiAgentApprovalsBlueprint = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/content/ai-2026-risk-aware-agents-blueprint" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Risk‑Aware Agents Blueprint</Link>
+          <Link to="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
+          <Link to="/content/ai-2026-risk-aware-agents-blueprint" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Risk‑Aware Agents Blueprint</Link>
         </footer>
       </article>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 
 export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
@@ -548,17 +548,17 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Implementation Guides</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/resources/ai-transformation-playbook" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/ai-transformation-playbook" className="text-blue-600 hover:text-blue-800">
                     📋 AI Transformation Playbook
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/enterprise-ai-roi-calculator" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/enterprise-ai-roi-calculator" className="text-blue-600 hover:text-blue-800">
                     💰 Enterprise AI ROI Calculator
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/change-management-framework" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/change-management-framework" className="text-blue-600 hover:text-blue-800">
                     👥 Change Management Framework
                   </Link>
                 </li>
@@ -568,17 +568,17 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Related Case Studies</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/case-studies/ai-manufacturing-optimization" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-manufacturing-optimization" className="text-blue-600 hover:text-blue-800">
                     🏭 Manufacturing AI Optimization
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies/ai-supply-chain-transformation" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-supply-chain-transformation" className="text-blue-600 hover:text-blue-800">
                     📦 Supply Chain AI Transformation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies/ai-customer-experience-revolution" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-customer-experience-revolution" className="text-blue-600 hover:text-blue-800">
                     🎯 Customer Experience AI Revolution
                   </Link>
                 </li>
@@ -594,14 +594,12 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
               <p className="text-sm text-gray-500">Confidential case study - details anonymized</p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Discuss Your Transformation
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 View All Case Studies

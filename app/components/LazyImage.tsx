@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'; // Replaced next/image with useState for now
 
 import { cn } from '../lib/utils'
 

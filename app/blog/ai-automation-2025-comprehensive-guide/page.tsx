@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 
 export default function AIAutomation2025Guide() {
@@ -15,7 +15,7 @@ export default function AIAutomation2025Guide() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
             <span className="text-gray-300">|</span>
@@ -356,14 +356,12 @@ export default function AIAutomation2025Guide() {
                 Join hundreds of companies already benefiting from AI automation. Get your free assessment and implementation roadmap.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Get Free Assessment
                 </Link>
-                <Link
-                  href="/resources/ai-implementation-checklist-2025"
+                <Link to="/resources/ai-implementation-checklist-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   Download Checklist

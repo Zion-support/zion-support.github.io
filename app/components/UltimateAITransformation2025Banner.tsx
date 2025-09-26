@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ChevronRightIcon, XMarkIcon, StarIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 const UltimateAITransformation2025Banner = () => {
@@ -140,15 +140,13 @@ const UltimateAITransformation2025Banner = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={currentContent.url}
+                <Link to={currentContent.url}
                   className="inline-flex items-center px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
                   <ChevronRightIcon className="ml-2 h-4 w-4" />
                 </Link>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
                 >
                   Get Consultation

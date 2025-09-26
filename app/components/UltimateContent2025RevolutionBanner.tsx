@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { X, ArrowRight, Star, TrendingUp, Zap, Target } from 'lucide-react';
 
 const UltimateContent2025RevolutionBanner = () => {
@@ -198,8 +198,7 @@ const UltimateContent2025RevolutionBanner = () => {
                   </div>
                 </div>
                 
-                <Link
-                  href={currentContent.url}
+                <Link to={currentContent.url}
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold py-3 px-6 rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-200 transform hover:scale-105"
                 >
                   Read Full Article
@@ -274,14 +273,12 @@ const UltimateContent2025RevolutionBanner = () => {
 
               {/* Call to Action */}
               <div className="space-y-4">
-                <Link
-                  href="/resources"
+                <Link to="/resources"
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 px-6 rounded-lg text-center hover:from-purple-500 hover:to-blue-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Explore All Resources
                 </Link>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="block w-full border-2 border-white text-white font-bold py-4 px-6 rounded-lg text-center hover:bg-white hover:text-purple-900 transition-all duration-200"
                 >
                   Get Custom Consultation

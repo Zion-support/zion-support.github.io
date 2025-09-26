@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIWorkforceTransformationPlaybook2025() {
   return (
@@ -16,7 +16,7 @@ export default function AIWorkforceTransformationPlaybook2025() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Resources
             </Link>
             <span className="text-gray-400">•</span>
@@ -281,7 +281,7 @@ export default function AIWorkforceTransformationPlaybook2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/resources/ai-implementation-checklist-2025" className="group">
+            <Link to="/resources/ai-implementation-checklist-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Implementation Checklist 2025
@@ -291,7 +291,7 @@ export default function AIWorkforceTransformationPlaybook2025() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-workforce-transformation-2025" className="group">
+            <Link to="/blog/ai-workforce-transformation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Workforce Transformation Article

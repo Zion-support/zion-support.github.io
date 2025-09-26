@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIDataPrivacy2025() {
   return (
@@ -16,7 +16,7 @@ export default function AIDataPrivacy2025() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
@@ -248,7 +248,7 @@ export default function AIDataPrivacy2025() {
         <div className="mt-16 border-t pt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
+            <Link to="/blog/edge-ai-privacy-by-design-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="text-2xl mb-3">🔐</div>
                 <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
@@ -260,7 +260,7 @@ export default function AIDataPrivacy2025() {
               </div>
             </Link>
             
-            <Link href="/blog/ai-governance-blueprint-2025" className="group">
+            <Link to="/blog/ai-governance-blueprint-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="text-2xl mb-3">🛡️</div>
                 <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
@@ -281,14 +281,12 @@ export default function AIDataPrivacy2025() {
             Get expert guidance on implementing privacy-preserving AI in your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Privacy Consultation
             </Link>
-            <Link
-              href="/resources/ai-implementation-checklist-2025"
+            <Link to="/resources/ai-implementation-checklist-2025"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Download Privacy Checklist

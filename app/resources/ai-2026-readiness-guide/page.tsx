@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026ReadinessGuide() {
   return (
@@ -15,7 +15,7 @@ export default function AI2026ReadinessGuide() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Resources
             </Link>
             <span className="text-gray-400">•</span>
@@ -307,8 +307,7 @@ export default function AI2026ReadinessGuide() {
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Download Free Guide
               </button>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Get Expert Consultation
@@ -331,14 +330,12 @@ export default function AI2026ReadinessGuide() {
               </p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/resources"
+              <Link to="/resources"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 More Resources
               </Link>
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 Related Articles

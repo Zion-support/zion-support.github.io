@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AdvancedNeuralArchitecturesPromotionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -118,14 +118,12 @@ const AdvancedNeuralArchitecturesPromotionBanner = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={currentContent.url}
+              <Link to={currentContent.url}
                 className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Read Now
               </Link>
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
               >
                 Get Consultation

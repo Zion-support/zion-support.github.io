@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +39,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <span className="text-2xl font-bold text-purple-600">
                 Zion Tech Group
               </span>
@@ -60,9 +60,8 @@ export default function Navigation() {
                     {isResourcesOpen && (
                       <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50 border">
                         {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
+                          <Link key={dropdownItem.name}
+                            to={dropdownItem.href}
                             className="block px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                           >
                             {dropdownItem.name}
@@ -72,8 +71,7 @@ export default function Navigation() {
                     )}
                   </div>
                 ) : (
-                  <Link
-                    href={item.href}
+                  <Link to={item.href}
                     className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     {item.name}
@@ -81,8 +79,7 @@ export default function Navigation() {
                 )}
               </div>
             ))}
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
             >
               Get Started
@@ -112,17 +109,15 @@ export default function Navigation() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
+              <Link key={item.name}
+                to={item.href}
                 className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-purple-700"
               onClick={() => setIsOpen(false)}
             >

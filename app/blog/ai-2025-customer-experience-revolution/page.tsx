@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Removed Next.js Metadata import
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2025 Customer Experience Revolution - Transform Your Business',
   description: 'Discover how AI is revolutionizing customer experience in 2025. Learn about autonomous customer service, predictive analytics, and personalized engagement strategies that drive 400% ROI.',
   keywords: ['AI customer experience', 'customer service automation', 'predictive analytics', 'personalized engagement', 'AI 2025'],
@@ -209,14 +209,12 @@ export default function AI2025CustomerExperienceRevolution() {
             Join the AI revolution and start delivering exceptional customer experiences today.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Get Started Today
@@ -228,15 +226,15 @@ export default function AI2025CustomerExperienceRevolution() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2025-enterprise-automation-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/blog/ai-2025-enterprise-automation-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">AI 2025 Enterprise Automation Revolution</h4>
               <p className="text-gray-600">Discover how AI is transforming enterprise operations and driving unprecedented efficiency.</p>
             </Link>
-            <Link href="/blog/ai-2025-cybersecurity-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/blog/ai-2025-cybersecurity-revolution" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">AI 2025 Cybersecurity Revolution</h4>
               <p className="text-gray-600">Learn about next-generation AI security solutions that protect your business.</p>
             </Link>
-            <Link href="/case-studies/enterprise-ai-transformation-2025-ultimate-success-story" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <Link to="/case-studies/enterprise-ai-transformation-2025-ultimate-success-story" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">Enterprise AI Transformation Success Story</h4>
               <p className="text-gray-600">See how one company achieved $2.8B in business value through AI transformation.</p>
             </Link>

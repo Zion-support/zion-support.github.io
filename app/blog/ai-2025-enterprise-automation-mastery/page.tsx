@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 
 export default function AI2025EnterpriseAutomationMastery() {
@@ -443,17 +443,17 @@ export default function AI2025EnterpriseAutomationMastery() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Free Downloads</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/resources/ai-automation-implementation-checklist" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/ai-automation-implementation-checklist" className="text-blue-600 hover:text-blue-800">
                     📋 AI Automation Implementation Checklist
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/ai-roi-calculator-template" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/ai-roi-calculator-template" className="text-blue-600 hover:text-blue-800">
                     💰 AI ROI Calculator Template
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/change-management-playbook" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/change-management-playbook" className="text-blue-600 hover:text-blue-800">
                     👥 Change Management Playbook
                   </Link>
                 </li>
@@ -463,17 +463,17 @@ export default function AI2025EnterpriseAutomationMastery() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Related Articles</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/blog/ai-cost-optimization-2025" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/blog/ai-cost-optimization-2025" className="text-blue-600 hover:text-blue-800">
                     ⚡ AI Cost Optimization Strategies
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies/fortune-500-ai-transformation" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/fortune-500-ai-transformation" className="text-blue-600 hover:text-blue-800">
                     🏆 Fortune 500 AI Transformation Case Study
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/ai-governance-best-practices" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/blog/ai-governance-best-practices" className="text-blue-600 hover:text-blue-800">
                     🛡️ AI Governance Best Practices
                   </Link>
                 </li>
@@ -489,14 +489,12 @@ export default function AI2025EnterpriseAutomationMastery() {
               <p className="text-sm text-gray-500">Updated weekly with latest insights</p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get Expert Consultation
               </Link>
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 View All Articles

@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Removed Next.js Metadata import
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Customer Experience Transformation 2025 - $15M ROI Success Story',
   description: 'Discover how TechCorp achieved $15M ROI through AI-powered customer experience transformation. Learn about their journey from traditional support to autonomous AI agents.',
   keywords: ['AI customer experience', 'customer service transformation', 'AI ROI case study', 'autonomous customer service', 'TechCorp success story'],
@@ -418,14 +418,12 @@ export default function AICustomerExperienceTransformation2025() {
             customer experience solutions.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Start Your Transformation

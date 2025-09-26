@@ -1,11 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
 import SEO from '../../components/SEO';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2025: Generative AI Enterprise Revolution - Ultimate Breakthrough Guide | Zion Tech Group',
   description: 'Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes.',
   keywords: ['generative AI', 'enterprise', 'automation', '2025', 'revolution', 'breakthrough', 'AI transformation'],
@@ -319,14 +319,12 @@ export default function GenerativeAI2025RevolutionPage() {
             Join the generative AI revolution. Achieve 300-500% ROI with strategic AI implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/generative-ai"
+            <Link to="/services/generative-ai"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Generative AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Get AI Consultation
@@ -337,8 +335,7 @@ export default function GenerativeAI2025RevolutionPage() {
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
+        <Link to="/"
           className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 
 export default function AIImplementationPlaybook2025() {
@@ -15,7 +15,7 @@ export default function AIImplementationPlaybook2025() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Resources
             </Link>
             <span className="text-gray-300">|</span>
@@ -472,14 +472,12 @@ export default function AIImplementationPlaybook2025() {
                 based on your specific needs and objectives.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Get Expert Consultation
                 </Link>
-                <Link
-                  href="/services/ai-services"
+                <Link to="/services/ai-services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
                 >
                   View AI Services

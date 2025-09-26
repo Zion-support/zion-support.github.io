@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AITransformationReadinessAssessment2025() {
   return (
@@ -459,8 +459,7 @@ export default function AITransformationReadinessAssessment2025() {
               <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
                 📋 Download Assessment Now
               </button>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-lg"
               >
                 Schedule Consultation
@@ -476,7 +475,7 @@ export default function AITransformationReadinessAssessment2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/resources/ai-implementation-checklist-2025" className="group">
+            <Link to="/resources/ai-implementation-checklist-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Implementation Checklist 2025
@@ -487,7 +486,7 @@ export default function AITransformationReadinessAssessment2025() {
               </div>
             </Link>
             
-            <Link href="/blog/ai-enterprise-automation-2025" className="group">
+            <Link to="/blog/ai-enterprise-automation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Enterprise Automation Guide

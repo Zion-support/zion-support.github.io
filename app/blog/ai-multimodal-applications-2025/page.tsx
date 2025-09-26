@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIMultimodalApplications2025() {
   return (
@@ -519,8 +519,7 @@ export default function AIMultimodalApplications2025() {
                     Complete step-by-step guide covering everything from data preparation to deployment, 
                     with real-world examples and best practices.
                   </p>
-                  <Link 
-                    href="/resources/ai-multimodal-implementation-guide-2025"
+                  <Link to="/resources/ai-multimodal-implementation-guide-2025"
                     className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
                   >
                     Download Guide →
@@ -533,8 +532,7 @@ export default function AIMultimodalApplications2025() {
                     Schedule a consultation with our multimodal AI experts to discuss your specific 
                     use case and get a customized implementation roadmap.
                   </p>
-                  <Link 
-                    href="/contact"
+                  <Link to="/contact"
                     className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
                   >
                     Book Consultation →
@@ -549,7 +547,7 @@ export default function AIMultimodalApplications2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-enterprise-automation-2025" className="group">
+            <Link to="/blog/ai-enterprise-automation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   AI Enterprise Automation 2025
@@ -560,7 +558,7 @@ export default function AIMultimodalApplications2025() {
               </div>
             </Link>
             
-            <Link href="/blog/ai-cybersecurity-threats-2025" className="group">
+            <Link to="/blog/ai-cybersecurity-threats-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   AI Cybersecurity Threats 2025

@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AICybersecurity2025() {
   return (
@@ -15,7 +15,7 @@ export default function AICybersecurity2025() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
@@ -457,14 +457,12 @@ export default function AICybersecurity2025() {
               comprehensive security measures to protect your AI infrastructure and data from emerging threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center"
               >
                 Get AI Security Assessment
               </Link>
-              <Link
-                href="/resources/ai-cybersecurity-checklist-2025"
+              <Link to="/resources/ai-cybersecurity-checklist-2025"
                 className="border-2 border-red-600 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors text-center"
               >
                 Download Security Checklist
@@ -484,14 +482,12 @@ export default function AICybersecurity2025() {
               </p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 More Articles
               </Link>
-              <Link
-                href="/resources"
+              <Link to="/resources"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 Free Resources

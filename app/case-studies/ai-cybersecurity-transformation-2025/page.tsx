@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AICybersecurityTransformation2025() {
   return (
@@ -15,7 +15,7 @@ export default function AICybersecurityTransformation2025() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Case Studies
             </Link>
             <span className="text-gray-400">•</span>
@@ -422,14 +422,12 @@ export default function AICybersecurityTransformation2025() {
               implement comprehensive protection for your AI systems and data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Security Assessment
               </Link>
-              <Link
-                href="/resources/ai-cybersecurity-checklist-2025"
+              <Link to="/resources/ai-cybersecurity-checklist-2025"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
               >
                 Download Security Checklist
@@ -449,14 +447,12 @@ export default function AICybersecurityTransformation2025() {
               </p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 More Case Studies
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 Get Expert Help

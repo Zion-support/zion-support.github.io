@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 
 export default function AI2025UltimateImplementationToolkit() {
@@ -516,17 +516,17 @@ export default function AI2025UltimateImplementationToolkit() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Implementation Guides</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/blog/ai-2025-enterprise-automation-mastery" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/blog/ai-2025-enterprise-automation-mastery" className="text-blue-600 hover:text-blue-800">
                     🚀 AI 2025 Enterprise Automation Mastery
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/ai-implementation-checklist" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/ai-implementation-checklist" className="text-blue-600 hover:text-blue-800">
                     📋 AI Implementation Checklist
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/ai-roi-calculator" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/resources/ai-roi-calculator" className="text-blue-600 hover:text-blue-800">
                     💰 AI ROI Calculator
                   </Link>
                 </li>
@@ -536,17 +536,17 @@ export default function AI2025UltimateImplementationToolkit() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Case Studies</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="text-blue-600 hover:text-blue-800">
                     🏆 Global Enterprise Transformation (1200% ROI)
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies/ai-manufacturing-optimization" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-manufacturing-optimization" className="text-blue-600 hover:text-blue-800">
                     🏭 Manufacturing AI Optimization
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies/ai-financial-services-revolution" className="text-blue-600 hover:text-blue-800">
+                  <Link to="/case-studies/ai-financial-services-revolution" className="text-blue-600 hover:text-blue-800">
                     🏦 Financial Services AI Revolution
                   </Link>
                 </li>
@@ -562,14 +562,12 @@ export default function AI2025UltimateImplementationToolkit() {
               <p className="text-sm text-gray-500">Updated monthly with latest insights</p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get Expert Support
               </Link>
-              <Link
-                href="/resources"
+              <Link to="/resources"
                 className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 View All Resources

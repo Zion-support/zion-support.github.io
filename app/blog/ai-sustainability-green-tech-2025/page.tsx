@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AISustainabilityGreenTech2025() {
   return (
@@ -16,7 +16,7 @@ export default function AISustainabilityGreenTech2025() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link to="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
@@ -497,8 +497,7 @@ export default function AISustainabilityGreenTech2025() {
               Download our comprehensive Green AI Implementation Guide with practical strategies, 
               tools, and templates to make your AI systems more sustainable.
             </p>
-            <Link 
-              href="/resources/green-ai-implementation-guide-2025"
+            <Link to="/resources/green-ai-implementation-guide-2025"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Download Free Guide
@@ -511,7 +510,7 @@ export default function AISustainabilityGreenTech2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-cost-optimization-2025" className="group">
+            <Link to="/blog/ai-cost-optimization-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Cost Optimization 2025
@@ -521,7 +520,7 @@ export default function AISustainabilityGreenTech2025() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
+            <Link to="/blog/edge-ai-privacy-by-design-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   Edge AI: Privacy by Design

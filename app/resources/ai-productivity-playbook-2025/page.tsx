@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
@@ -32,8 +32,7 @@ export default function AIProductivityPlaybook2025() {
                 <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg">
                   Download Free Playbook
                 </button>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-lg"
                 >
                   Get Implementation Help
@@ -132,7 +131,7 @@ export default function AIProductivityPlaybook2025() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Resources</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/resources/ai-implementation-checklist-2025" className="group">
+              <Link to="/resources/ai-implementation-checklist-2025" className="group">
                 <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">📋</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600">
@@ -144,7 +143,7 @@ export default function AIProductivityPlaybook2025() {
                 </div>
               </Link>
               
-              <Link href="/resources/ai-automation-roi-calculator" className="group">
+              <Link to="/resources/ai-automation-roi-calculator" className="group">
                 <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">💰</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600">
@@ -156,7 +155,7 @@ export default function AIProductivityPlaybook2025() {
                 </div>
               </Link>
               
-              <Link href="/resources/ai-transformation-readiness-assessment-2025" className="group">
+              <Link to="/resources/ai-transformation-readiness-assessment-2025" className="group">
                 <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">📊</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600">

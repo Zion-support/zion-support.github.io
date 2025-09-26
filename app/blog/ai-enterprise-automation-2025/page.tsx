@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIEnterpriseAutomation2025() {
   return (
@@ -14,7 +14,7 @@ export default function AIEnterpriseAutomation2025() {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+          <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
             ← Back to Blog
           </Link>
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
@@ -279,14 +279,12 @@ export default function AIEnterpriseAutomation2025() {
               companies already achieving 40% cost reduction and 300% productivity gains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/resources/ai-implementation-checklist-2025"
+              <Link to="/resources/ai-implementation-checklist-2025"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Download Free Checklist
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
               >
                 Schedule Consultation

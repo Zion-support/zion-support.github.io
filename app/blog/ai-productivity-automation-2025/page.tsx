@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
@@ -29,14 +29,12 @@ export default function AIProductivityAutomation2025() {
                 Achieve 40% efficiency gains and 300% productivity improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/resources/ai-productivity-playbook-2025"
+                <Link to="/resources/ai-productivity-playbook-2025"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
                 >
                   Download Free Playbook
                 </Link>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
                 >
                   Get Implementation Help
@@ -246,14 +244,12 @@ export default function AIProductivityAutomation2025() {
                   implement these strategies and achieve measurable results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="/contact"
+                  <Link to="/contact"
                     className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
                   >
                     Get Free Consultation
                   </Link>
-                  <Link
-                    href="/resources/ai-productivity-playbook-2025"
+                  <Link to="/resources/ai-productivity-playbook-2025"
                     className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center"
                   >
                     Download Implementation Guide
@@ -286,7 +282,7 @@ export default function AIProductivityAutomation2025() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/blog/ai-enterprise-automation-2025" className="group">
+              <Link to="/blog/ai-enterprise-automation-2025" className="group">
                 <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">🏢</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
@@ -297,7 +293,7 @@ export default function AIProductivityAutomation2025() {
                   </p>
                 </div>
               </Link>
-              <Link href="/blog/ai-cost-optimization-2025" className="group">
+              <Link to="/blog/ai-cost-optimization-2025" className="group">
                 <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">⚡</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">

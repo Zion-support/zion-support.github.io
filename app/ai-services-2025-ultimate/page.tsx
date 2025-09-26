@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 import SEO from '../../components/SEO';
 
@@ -157,8 +157,7 @@ export default function AIServices2025Ultimate() {
                 <li>Standard Analytics</li>
                 <li>Email Support</li>
               </ul>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all text-center block"
               >
                 Get Started
@@ -177,8 +176,7 @@ export default function AIServices2025Ultimate() {
                 <li>Priority Support</li>
                 <li>Custom Integrations</li>
               </ul>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="w-full bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all text-center block"
               >
                 Get Started
@@ -194,8 +192,7 @@ export default function AIServices2025Ultimate() {
                 <li>White-glove Support</li>
                 <li>Quantum Computing</li>
               </ul>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all text-center block"
               >
                 Contact Sales
@@ -212,14 +209,12 @@ export default function AIServices2025Ultimate() {
             unprecedented growth and success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
             >
               Get Started Today
             </Link>
-            <Link
-              href="/ai-2025-ultimate-innovation-showcase"
+            <Link to="/ai-2025-ultimate-innovation-showcase"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
             >
               View Innovations
