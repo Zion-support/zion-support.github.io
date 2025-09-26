@@ -204,9 +204,30 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
   score: number;
   recommendations: string[];
+  webVitals: {
+    lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    fid: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    cls: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+  };
 } {
   let score = 100;
   const recommendations: string[] = [];
+
+  // Web Vitals status determination
+  const webVitals = {
+    lcp: { 
+      value: metrics.largestContentfulPaint || 0, 
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
+    },
+    fid: { 
+      value: metrics.firstInputDelay || 0, 
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
+    },
+    cls: { 
+      value: metrics.cumulativeLayoutShift || 0, 
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
+    }
+  };
 
   // Load Time scoring (target: < 3000ms)
   if (metrics.loadTime > 5000) {
@@ -230,10 +251,14 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   if (metrics.largestContentfulPaint) {
     if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
+      webVitals.lcp.status = 'poor';
       recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
     } else if (metrics.largestContentfulPaint > 2500) {
       score -= 10;
+      webVitals.lcp.status = 'needs-improvement';
       recommendations.push('Consider optimizing Largest Contentful Paint');
+    } else {
+      webVitals.lcp.status = 'good';
     }
   }
 
@@ -241,10 +266,14 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   if (metrics.firstInputDelay) {
     if (metrics.firstInputDelay > 300) {
       score -= 20;
+      webVitals.fid.status = 'poor';
       recommendations.push('Reduce First Input Delay (currently over 300ms)');
     } else if (metrics.firstInputDelay > 100) {
       score -= 5;
+      webVitals.fid.status = 'needs-improvement';
       recommendations.push('Consider reducing First Input Delay');
+    } else {
+      webVitals.fid.status = 'good';
     }
   }
 
@@ -252,10 +281,14 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   if (metrics.cumulativeLayoutShift) {
     if (metrics.cumulativeLayoutShift > 0.25) {
       score -= 20;
+      webVitals.cls.status = 'poor';
       recommendations.push('Fix layout shifts (CLS over 0.25)');
     } else if (metrics.cumulativeLayoutShift > 0.1) {
       score -= 10;
+      webVitals.cls.status = 'needs-improvement';
       recommendations.push('Consider reducing layout shifts');
+    } else {
+      webVitals.cls.status = 'good';
     }
   }
 
@@ -267,5 +300,55 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   else if (score >= 60) grade = 'D';
   else grade = 'F';
 
-  return { grade, score: Math.max(0, score), recommendations };
+  return { grade, score: Math.max(0, score), recommendations, webVitals };
+}
+
+// Enhanced performance monitoring with real-time updates
+export function useRealTimePerformance() {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateMetrics = () => {
+      try {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        const currentMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.fetchStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+          firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+        };
+
+        setMetrics(currentMetrics);
+      } catch (error) {
+        console.warn('Real-time performance monitoring error:', error);
+      }
+    };
+
+    // Initial metrics
+    updateMetrics();
+
+    // Monitor for changes
+    const observer = new PerformanceObserver((list) => {
+      updateMetrics();
+    });
+
+    try {
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      setIsMonitoring(true);
+    } catch (e) {
+      console.warn('Performance observer not supported');
+    }
+
+    return () => {
+      observer.disconnect();
+      setIsMonitoring(false);
+    };
+  }, []);
+
+  return { metrics, isMonitoring };
 }

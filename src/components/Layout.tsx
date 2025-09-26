@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import ErrorBoundary from './ErrorBoundary';
 import { NotificationSystem, useNotifications } from './NotificationSystem';
+import { EnhancedNotificationSystem, useNotifications as useEnhancedNotifications } from './EnhancedNotificationSystem';
 import PerformanceTracker from './PerformanceTracker';
-import GlobalErrorBoundary from './GlobalErrorBoundary';
 import AccessibilityEnhancer from './AccessibilityEnhancer';
-import PerformanceMonitor from './PerformanceMonitor';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,6 +15,11 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const { notifications, addNotification, removeNotification } = useNotifications();
+  const { 
+    notifications: enhancedNotifications, 
+    addNotification: addEnhancedNotification, 
+    removeNotification: removeEnhancedNotification 
+  } = useEnhancedNotifications();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,8 +42,30 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
       duration: 3000
     });
 
+    // Show enhanced welcome notification
+    addEnhancedNotification({
+      type: 'info',
+      title: 'Welcome to Zion Tech Solutions!',
+      message: 'Discover our AI-powered business solutions and cutting-edge technology services.',
+      duration: 5000,
+      priority: 'medium',
+      category: 'welcome',
+      actions: [
+        {
+          label: 'Explore Services',
+          action: () => window.location.href = '/services',
+          variant: 'primary'
+        },
+        {
+          label: 'View Dashboard',
+          action: () => window.location.href = '/dashboard',
+          variant: 'secondary'
+        }
+      ]
+    });
+
     return () => clearInterval(timer);
-  }, [addNotification]);
+  }, [addNotification, addEnhancedNotification]);
 
   useEffect(() => {
     // Save dark mode preference to localStorage (only on client side)
@@ -64,47 +90,50 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   };
 
   return (
-    <GlobalErrorBoundary>
-      <AccessibilityEnhancer>
-        <ErrorBoundary>
-          <div className={`min-h-screen transition-colors duration-300 ${
-            isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
-          }`}>
-            <Navigation
-              currentTime={currentTime}
-              isDarkMode={isDarkMode}
-              onToggleDarkMode={toggleDarkMode}
-              activeSection={activeSection}
-              onSectionChange={handleSectionChange}
-            />
-            
-            {/* Main content with top padding to account for fixed header */}
-            <main id="main-content" className="pt-16" role="main">
-              {children}
-            </main>
-            
-            {/* Notification System */}
-            <NotificationSystem 
-              notifications={notifications} 
-              onRemove={removeNotification} 
-            />
-            
-            {/* Performance Tracking */}
-            <PerformanceTracker 
-              enableConsoleLogging={process.env.NODE_ENV === 'development'}
-              enableAnalytics={process.env.NODE_ENV === 'production'}
-            />
-            
-            {/* Enhanced Performance Monitoring */}
-            <PerformanceMonitor
-              enableRealTimeMonitoring={true}
-              enableMemoryTracking={true}
-              enableNetworkTracking={true}
-              reportInterval={10000}
-            />
-          </div>
-        </ErrorBoundary>
-      </AccessibilityEnhancer>
-    </GlobalErrorBoundary>
+    <ErrorBoundary>
+      <div className={`min-h-screen transition-colors duration-300 ${
+        isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
+      }`}>
+        <Navigation
+          currentTime={currentTime}
+          isDarkMode={isDarkMode}
+          onToggleDarkMode={toggleDarkMode}
+          activeSection={activeSection}
+          onSectionChange={handleSectionChange}
+        />
+        
+        {/* Main content with top padding to account for fixed header */}
+        <main className="pt-16">
+          {children}
+        </main>
+        
+        {/* Notification System */}
+        <NotificationSystem 
+          notifications={notifications} 
+          onRemove={removeNotification} 
+        />
+        
+        {/* Enhanced Notification System */}
+        <EnhancedNotificationSystem 
+          notifications={enhancedNotifications} 
+          onRemove={removeEnhancedNotification}
+          enableSound={true}
+          enableGrouping={true}
+          enablePersistence={true}
+        />
+        
+        {/* Performance Tracking */}
+        <PerformanceTracker 
+          enableConsoleLogging={process.env.NODE_ENV === 'development'}
+          enableAnalytics={process.env.NODE_ENV === 'production'}
+        />
+        
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer 
+          enableKeyboardShortcuts={true}
+          enableVoiceCommands={false}
+        />
+      </div>
+    </ErrorBoundary>
   );
 }

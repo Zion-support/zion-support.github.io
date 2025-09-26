@@ -54,10 +54,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   }, [maxNotifications, removeNotification]);
 
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  }, []);
-
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);
   }, []);
