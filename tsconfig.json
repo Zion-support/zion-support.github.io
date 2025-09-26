@@ -50,6 +50,7 @@
   "include": [
     "next-env.d.ts",
     "types.d.ts",
+    "App.tsx",
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
