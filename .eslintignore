@@ -12,8 +12,7 @@ node_modules/
 **/*.generated.*
 zion.app/recovered-content/**
 
-# Exclude corrupted or non-app source directories
-# Allow linting of active app source under src/
+# Exclude corrupted or non-app source directories (keep main src for linting)
 # src/
 # components/
 
