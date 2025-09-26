@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
 import PerformanceMetrics from '../src/components/PerformanceMetrics';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import '../styles/animations.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -76,6 +78,8 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <Component {...pageProps} />
       <PerformanceMetrics />
+      <PerformanceMonitor />
+      <AccessibilityAuditor />
     </HelmetProvider>
   );
 }
