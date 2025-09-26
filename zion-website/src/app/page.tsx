@@ -5,8 +5,7 @@ import {
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
-  UserGroupIcon,
-} from '@heroicons/react/24/outline'
+  UserGroupIcon} from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
 
 const features = [
@@ -14,91 +13,74 @@ const features = [
     name: 'AI-Powered Research',
     description:
       'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon,
-  },
+    icon: LightBulbIcon},
   {
     name: 'Quantum Computing',
     description:
       'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon,
-  },
+    icon: CpuChipIcon},
   {
     name: 'Global Solutions',
     description:
       'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon,
-  },
+    icon: GlobeAltIcon},
   {
     name: 'Enterprise Security',
     description:
       'Military-grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon,
-  },
+    icon: ShieldCheckIcon},
   {
     name: 'Data Analytics',
     description:
       'Advanced analytics and insights driving informed decision-making.',
-    icon: ChartBarIcon,
-  },
+    icon: ChartBarIcon},
   {
     name: 'Expert Team',
     description:
       'World-class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon,
-  },
-]
+    icon: UserGroupIcon}]
 
 const stats = [
   { name: 'Research Papers Published', value: '150+' },
   { name: 'AI Models Deployed', value: '500+' },
   { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' },
-]
+  { name: 'Patents Filed', value: '25+' }]
 
 const solutions = [
   {
     name: 'AI Research Assistant',
     description:
       'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions/ai-autonomous-research',
-  },
+    href: '/solutions/ai-autonomous-research'},
   {
     name: 'Quantum Neural Networks',
     description: 'Next-generation computing for complex problem solving.',
-    href: '/solutions/quantum-neural-networks',
-  },
+    href: '/solutions/quantum-neural-networks'},
   {
     name: 'Autonomous Business Operations',
     description: 'AI-powered automation for enterprise efficiency.',
-    href: '/solutions/autonomous-business',
-  },
+    href: '/solutions/autonomous-business'},
   {
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions/it-asset-management',
-  },
+    href: '/solutions/it-asset-management'},
   {
     name: 'Edge AI Inference',
     description:
       'Deploy low-latency AI at the edge with optimized inference runtimes.',
-    href: '/solutions/edge-ai-inference',
-  },
+    href: '/solutions/edge-ai-inference'},
   {
     name: 'GenAI Content Studio',
     description:
       'End-to-end content generation workflows with governance and human-in-the-loop.',
-    href: '/solutions/genai-content-studio',
-  },
-]
+    href: '/solutions/genai-content-studio'}]
 
 const whatsNew = [
   {
     title: 'Edge AI Inference v1.2',
     desc: 'Run models 3x faster on edge devices with quantization-aware serving.',
     href: '/solutions/edge-ai-inference',
-    tag: 'New',
-  },
-]
+    tag: 'New'}]
 
 export default function HomePage() {
   return (

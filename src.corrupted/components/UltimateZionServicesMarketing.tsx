@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025"
 const UltimateZionServicesMarketing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [;
     { ;
@@ -30,7 +30,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
   const getServicesByCategory = (categoryId: string) => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId)
-  },;
+  };
 
   const selectedServices = getServicesByCategory(selectedCategory)
 
@@ -58,7 +58,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }} ;
             transition={{ duration: 0.6, delay: 0.2 }};
           >;
-            Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations, ;
+            Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations;
             and cutting-edge technology services that transform industries and create unprecedented value.;
           </[^>]*>
 
@@ -165,7 +165,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
           <div className="max-w-7xl mx-auto">;
             {(() => {;
               const category = categories.find(c => c.id === selectedCategory)
-              if (!category) return null,;
+              if (!category) return null;
               ;
               return (
                 <motion.div ;

@@ -1,30 +1,30 @@
 import React from "react"
 import { SEO } from "../../components/SEO"
 import { ;
-  Atom,;
-  Brain, ;
-  Zap, ;
-  Cpu, ;
-  Users, ;
-  Clock, ;
-  TrendingUp, ;
-  CheckCircle,;
-  Network,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  FileText,;
-  BarChart3,;
-  Rocket,;
-  Microscope,;
-  Telescope,;
-  Database,;
-  Lock,;
-  ArrowRight,;
-  Infinity,;
-  Target,;
-  Lightbulb,;
+  Atom;
+  Brain;
+  Zap;
+  Cpu;
+  Users;
+  Clock;
+  TrendingUp;
+  CheckCircle;
+  Network;
+  Shield;
+  Globe;
+  Smartphone;
+  Monitor;
+  FileText;
+  BarChart3;
+  Rocket;
+  Microscope;
+  Telescope;
+  Database;
+  Lock;
+  ArrowRight;
+  Infinity;
+  Target;
+  Lightbulb;
   Gauge;
 } from "lucide-react"
 const AIQuantumHybridPlatform: React.FC = () => {
@@ -69,17 +69,17 @@ const AIQuantumHybridPlatform: React.FC = () => {
     };
   ];
   const applications = [;
-    'Drug Discovery & Molecular ModelingFinancial Modeling & Risk Analysis',;
-    'Climate Change & Weather PredictionCryptography & Cybersecurity',;
-    'Optimization ProblemsMachine Learning & AI Training',;
+    'Drug Discovery & Molecular ModelingFinancial Modeling & Risk Analysis';
+    'Climate Change & Weather PredictionCryptography & Cybersecurity';
+    'Optimization ProblemsMachine Learning & AI Training';
     'Material Science & EngineeringLogistics & Supply Chain'
-  ],;
+  ];
 
   const benefits = [;
-    'Exponential speedup for complex problemsUnprecedented accuracy in simulations',;
-    'Breakthrough discoveries in scienceEnhanced AI capabilities',;
+    'Exponential speedup for complex problemsUnprecedented accuracy in simulations';
+    'Breakthrough discoveries in scienceEnhanced AI capabilities';
     'Future-proof technology investmentCompetitive advantage in research'
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -184,7 +184,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 Revolutionary Applications;
               </[^>]*>
               <p className="text-xl text-gray-300 mb-8">;
-                Our AI-Quantum hybrid platform opens new frontiers in science, technology, ;
+                Our AI-Quantum hybrid platform opens new frontiers in science, technology;
                 and business, solving problems that were previously impossible.;
               </[^>]*>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;

@@ -1,11 +1,11 @@
 import { motion, useInView } from "framer-motion"
 import React, { useEffect, useRef, useState } from "react"
-interface Stat {;
+interface Stat {
   number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>;
   color: string;
 };
 
-interface StatsSectionProps {;
+interface StatsSectionProps {
   stats: Stat[]
 };
 
@@ -24,23 +24,23 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
           const increment = targetNumber / 50;
 
           const countTimer = setInterval(() => {;
-            current += increment,;
+            current += increment;
             if (current >= targetNumber) {;
-              current = targetNumber,;
-              clearInterval(countTimer),;
+              current = targetNumber;
+              clearInterval(countTimer);
             };
 
             setCounts(prev => ({;
-              ...prev,;
+              ...prev;
               [stat.label]: Math.floor(current)
-            })),;
-          }, 50),;
-        }),;
-      }, 500),;
+            }));
+          }, 50);
+        });
+      }, 500);
 
-      return () => clearTimeout(timer),;
+      return () => clearTimeout(timer);
     };
-  }, [isInView, stats]),;
+  }, [isInView, stats]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;
@@ -111,6 +111,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
       </[^>]*>
     </[^>]*>
   );
-},;
+};
 
 export default StatsSection;

@@ -2,17 +2,17 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  ArrowRight,;
-  CheckCircle, ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-  Brain, ;
-  Users, ;
-  Target,;
-  BarChart3,;
-  Rocket,;
-  Globe,;
+  ArrowRight;
+  CheckCircle;
+  Cloud;
+  Shield;
+  Zap;
+  Brain;
+  Users;
+  Target;
+  BarChart3;
+  Rocket;
+  Globe;
   Lock;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
