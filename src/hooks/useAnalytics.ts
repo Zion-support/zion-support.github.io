@@ -173,16 +173,13 @@ export const useTimeTracking = () => {
   }, [trackTimeOnPage]);
 };
 
-// Simple page view tracking hook
-export const usePageView = (pageName: string) => {
+// Page view tracking hook
+export const usePageView = (pageName?: string) => {
+  const { trackPageView } = useAnalytics();
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  }, [pageName]);
+    trackPageView(window.location.href, pageName || document.title);
+  }, [trackPageView, pageName]);
 };
 
 // Extend Window interface
