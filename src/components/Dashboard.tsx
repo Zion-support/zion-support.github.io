@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTaskManager } from '../hooks/useTaskManager';
+import Collaboration from './Collaboration';
+import ProjectManagement from './ProjectManagement';
+import ActivityFeed from './ActivityFeed';
 
 interface DashboardProps {
   isDarkMode: boolean;
@@ -65,65 +68,67 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Dashboard
+          Enhanced Dashboard
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
-          Track your productivity and task completion progress
+          Comprehensive overview of your productivity, team collaboration, and project management
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {dashboardItems.map((item, index) => (
-          <div
-            key={index}
-            className={`p-6 rounded-lg border-2 transition-all duration-300 hover:shadow-lg ${
-              isDarkMode 
-                ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-                : 'bg-white border-gray-200 hover:border-gray-300'
-            }`}
-          >
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                  {item.title}
-                </p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {item.value}
-                </p>
+      {/* Main Dashboard Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Task Statistics */}
+        <div className="lg:col-span-1">
+          <div className={`p-6 rounded-lg border-2 transition-all duration-300 hover:shadow-lg ${
+            isDarkMode 
+              ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
+              : 'bg-white border-gray-200 hover:border-gray-300'
+          }`}>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              Task Overview
+            </h3>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              {dashboardItems.map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>
+                    <div className="text-2xl mb-1">{item.icon}</div>
+                    <div className="text-lg font-bold">{item.value}</div>
+                    <div className="text-xs opacity-75">{item.title}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Progress Chart */}
+            <div className="mt-4">
+              <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <span>Overall Progress</span>
+                <span>{stats.completionRate}%</span>
               </div>
-              <div className={`p-3 rounded-full ${getColorClasses(item.color)}`}>
-                <span className="text-2xl">{item.icon}</span>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                <div 
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500 ease-out"
+                  style={{ width: `${stats.completionRate}%` }}
+                ></div>
               </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Collaboration */}
+        <div className="lg:col-span-1">
+          <Collaboration isDarkMode={isDarkMode} />
+        </div>
+
+        {/* Activity Feed */}
+        <div className="lg:col-span-1">
+          <ActivityFeed isDarkMode={isDarkMode} />
+        </div>
       </div>
 
-      {/* Progress Chart */}
-      <div className={`p-6 rounded-lg border-2 ${
-        isDarkMode 
-          ? 'bg-gray-800 border-gray-700' 
-          : 'bg-white border-gray-200'
-      }`}>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          Task Completion Progress
-        </h3>
-        <div className="space-y-4">
-          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-            <span>Overall Progress</span>
-            <span>{stats.completionRate}%</span>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-            <div 
-              className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${stats.completionRate}%` }}
-            ></div>
-          </div>
-          <div className="flex justify-between text-xs text-gray-500 dark:text-gray-500">
-            <span>{stats.completedTasks} completed</span>
-            <span>{stats.activeTasks} remaining</span>
-          </div>
-        </div>
+      {/* Project Management */}
+      <div className="mb-8">
+        <ProjectManagement isDarkMode={isDarkMode} />
       </div>
 
       {/* Quick Actions */}
