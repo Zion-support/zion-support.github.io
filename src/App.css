@@ -1,6 +1,8 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+  background: linear-gradient(135deg, #172d67 0%, #1e3a8a 30%, #8c15e9 70%, #172d67 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 /* Custom scrollbar */
@@ -13,12 +15,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: linear-gradient(45deg, #2e73ea, #8c15e9);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: linear-gradient(45deg, #1e3a8a, #6b21a8);
 }
 
 /* Smooth transitions */
@@ -29,6 +31,20 @@
 /* Focus styles */
 button:focus,
 a:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #2e73ea;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(46, 115, 234, 0.2);
+}
+
+/* Add gradient animation keyframes */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
