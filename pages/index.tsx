@@ -1,19 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import SEO from '../src/components/SEO';
-import { SecurityDashboard } from '../src/components/SecurityMonitor';
-import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';
-import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
-import { TestDashboard } from '../src/components/TestDashboard';
+import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
+import ErrorBoundary from '../src/components/ErrorBoundary';
 import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
-import { useAnalytics } from '../src/hooks/useAnalytics';
-import { useAdvancedAnalytics } from '../src/hooks/useAdvancedAnalytics';
-import { useCache } from '../src/hooks/useAdvancedCache';
 import { Analytics, useEventTracking, useScrollTracking, useTimeTracking } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
@@ -26,21 +17,6 @@ export default function Home(): JSX.Element {
 	const { trackButtonClick, trackServiceView } = useEventTracking();
 	useScrollTracking();
 	useTimeTracking();
-
-	// Analytics tracking
-	const { trackClick } = useAnalytics();
-	const { trackPageView, trackConversion } = useAdvancedAnalytics();
-
-	// Advanced caching for API calls
-	const { data: cachedData, loading: cacheLoading } = useCache(
-		'homepage-data',
-		async () => {
-			// Simulate API call
-			await new Promise(resolve => setTimeout(resolve, 1000));
-			return { services: SERVICES, features: FEATURES };
-		},
-		{ ttl: 5 * 60 * 1000 } // 5 minutes cache
-	);
 
 	useEffect(() => {
 		setIsVisible(true);
@@ -62,13 +38,8 @@ export default function Home(): JSX.Element {
 	return (
 		<ErrorBoundary>
 			<ThemeProvider>
-				<SEO />
 				<Analytics />
 				<PerformanceMonitor />
-				<SecurityDashboard />
-				<ErrorDashboard />
-				<AnalyticsDashboard />
-				<TestDashboard />
 				<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
@@ -102,31 +73,6 @@ export default function Home(): JSX.Element {
 					<div className="fixed top-4 right-4 z-50">
 						<ThemeToggle />
 					</div>
-					
-					{/* Navigation */}
-					<nav className={`mb-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-						<div className="flex justify-center">
-							<div className="bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
-								<div className="flex space-x-8">
-									<Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-										About
-									</Link>
-									<Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-										Services
-									</Link>
-									<Link href="/portfolio" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-										Portfolio
-									</Link>
-									<Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-										Blog
-									</Link>
-									<Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-										Contact
-									</Link>
-								</div>
-							</div>
-						</div>
-					</nav>
 					
 					<header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 						<h1 className="text-5xl md:text-7xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
@@ -182,11 +128,7 @@ export default function Home(): JSX.Element {
 								</p>
 								<div className="flex flex-col sm:flex-row gap-6 justify-center">
 									<button 
-										onClick={() => {
-											handleButtonClick('get_in_touch');
-											trackClick('get-in-touch-button', 'cta');
-											trackConversion('contact_form_click', 1, { source: 'cta_button' });
-										}}
+										onClick={() => handleButtonClick('get_in_touch')}
 										className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
@@ -197,11 +139,7 @@ export default function Home(): JSX.Element {
 										</span>
 									</button>
 									<button 
-										onClick={() => {
-											handleButtonClick('view_portfolio');
-											trackClick('view-portfolio-button', 'cta');
-											trackConversion('portfolio_view_click', 1, { source: 'cta_button' });
-										}}
+										onClick={() => handleButtonClick('view_portfolio')}
 										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">

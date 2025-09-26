@@ -41,7 +41,14 @@ export const useAnalytics = () => {
     }
   };
 
-  return { trackEvent, trackPageView };
+  const trackClick = (elementName: string, location?: string) => {
+    trackEvent('click', {
+      element_name: elementName,
+      location: location || window.location.pathname,
+    });
+  };
+
+  return { trackEvent, trackPageView, trackClick };
 };
 
 // Analytics component for tracking page views
@@ -178,8 +185,12 @@ export const usePageView = (pageName?: string) => {
   const { trackPageView } = useAnalytics();
 
   useEffect(() => {
-    trackPageView(window.location.href, pageName || document.title);
-  }, [trackPageView, pageName]);
+    if (pageName) {
+      trackPageView(window.location.href, pageName);
+    } else {
+      trackPageView(window.location.href, document.title);
+    }
+  }, [pageName, trackPageView]);
 };
 
 // Extend Window interface
