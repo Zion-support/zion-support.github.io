@@ -15,8 +15,12 @@ import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceO
 import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AdvancedCacheManager from '../src/components/AdvancedCacheManager';
+import RealTimeAnalytics from '../src/components/RealTimeAnalytics';
+import AccessibilityEnhancements from '../src/components/AccessibilityEnhancements';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'seo-optimizer' | 'cache-manager' | 'real-time-analytics' | 'accessibility-enhancements';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -37,7 +41,11 @@ const Dashboard: React.FC = () => {
     { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚡️' },
     { id: 'user-experience' as const, name: 'User Experience', icon: '👤' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'seo-optimizer' as const, name: 'SEO Optimizer', icon: '🔍' },
+    { id: 'cache-manager' as const, name: 'Cache Manager', icon: '💾' },
+    { id: 'real-time-analytics' as const, name: 'Real-Time Analytics', icon: '📊' },
+    { id: 'accessibility-enhancements' as const, name: 'Accessibility', icon: '♿' }
   ];
 
   // Sample data for advanced components
@@ -293,6 +301,45 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'seo-optimizer':
+        return (
+          <div className="p-6">
+            <SEOOptimizer
+              seoData={{
+                title: 'Dashboard - Zion Tech Solutions',
+                description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics',
+                keywords: ['dashboard', 'analytics', 'performance', 'security', 'monitoring'],
+                canonical: 'https://ziontechgroup.com/dashboard',
+                ogImage: 'https://ziontechgroup.com/og-dashboard.jpg',
+                twitterCard: 'summary_large_image',
+                structuredData: {
+                  '@context': 'https://schema.org',
+                  '@type': 'WebPage',
+                  name: 'Dashboard',
+                  description: 'Comprehensive dashboard for monitoring analytics, performance, and security metrics'
+                }
+              }}
+            />
+          </div>
+        );
+      case 'cache-manager':
+        return (
+          <div className="p-6">
+            <AdvancedCacheManager />
+          </div>
+        );
+      case 'real-time-analytics':
+        return (
+          <div className="p-6">
+            <RealTimeAnalytics />
+          </div>
+        );
+      case 'accessibility-enhancements':
+        return (
+          <div className="p-6">
+            <AccessibilityEnhancements />
           </div>
         );
       default:
