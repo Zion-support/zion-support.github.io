@@ -61,6 +61,7 @@
     "app/**/*",
     // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
     "src/pages/**",
+    "src/pages.disabled/**",
     "src/routes/**",
     "src/utils/cartUtils.js",
     "**/*.test.ts",
@@ -75,6 +76,7 @@
     "types.disabled",
     // Temporarily exclude broader areas known to be corrupted/not used by build
     "src/pages/**",
+    "src/pages.disabled/**",
     "src/routes/**",
     "src/components/**",
     "src/context/**",
