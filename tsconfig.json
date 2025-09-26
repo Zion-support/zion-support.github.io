@@ -78,6 +78,7 @@
     "types.disabled",
     // Temporarily exclude broader areas known to be corrupted/not used by build
     "src/pages/**",
+    "src/pages.disabled/**",
     "src/routes/**",
     "src/components/**",
     "src/context/**",
