@@ -18,8 +18,10 @@ import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
 import EnhancedUserExperience from '../src/components/EnhancedUserExperience';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import ComprehensiveMonitoringDashboard from '../src/components/ComprehensiveMonitoringDashboard';
+import ComprehensiveSecurityDashboard from '../src/components/ComprehensiveSecurityDashboard';
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -44,7 +46,9 @@ const Dashboard: React.FC = () => {
     { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
     { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
+    { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
   ];
 
   // Sample data for advanced components
@@ -408,10 +412,51 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <AdvancedAnalyticsInsights 
-              data={sampleAnalyticsData}
-              enableRealTime={true}
+              timeRange="30d"
               refreshInterval={30000}
-              onInsightAction={(insight) => console.log('Insight action:', insight)}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
+          </div>
+        );
+      case 'comprehensive-monitoring':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <ComprehensiveMonitoringDashboard 
+              refreshInterval={5000}
+              enableRealTimeUpdates={true}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+            />
+          </div>
+        );
+      case 'comprehensive-security':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <ComprehensiveSecurityDashboard 
+              refreshInterval={10000}
+              enableRealTimeMonitoring={true}
+              onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}
             />
           </div>
         );
