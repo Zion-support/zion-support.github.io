@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import express, { Router } from 'express';
 import { body, validationResult } from 'express-validator';
 
-const router: ReturnType<typeof Router> = Router();
+const router: express.Router = Router();
 
 // Validation middleware
 const validate = (req: any, res: any, next: any) => {
