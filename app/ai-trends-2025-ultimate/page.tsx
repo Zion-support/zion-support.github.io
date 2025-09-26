@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-// SEO component removed; use Next.js Metadata instead
+
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const metadata = {
@@ -12,7 +12,6 @@ export const metadata = {
 export default function AITrends2025UltimatePage() {
   return (
     <ErrorBoundary>
-      
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
