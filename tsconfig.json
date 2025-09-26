@@ -21,11 +21,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/src/*"
-      ]
-    },
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
@@ -48,7 +43,10 @@
     "strictNullChecks": false
   },
   "include": [
-    "src/**/*"
+    "components/**/*",
+    "next-env.d.ts",
+    "*.ts",
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",
