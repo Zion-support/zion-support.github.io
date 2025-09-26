@@ -1,131 +1,38 @@
 #!/bin/bash
 
-# Script to merge all unmerged branches into main and resolve conflicts
-set -e
-
-echo "🚀 Starting comprehensive branch merge process..."
-
-# Update main branch
-echo "📥 Updating main branch..."
-git checkout main
-git fetch --all
+# Script to merge all unmerged branches with conflict resolution
+echo "Starting comprehensive branch merge process..."
 
 # Get all unmerged branches
-echo "📋 Getting all unmerged branches..."
-UNMERGED_BRANCHES=$(git branch -r --no-merged origin/main | grep -v "backup-main" | head -20)
+branches=$(git branch -r --no-merged origin/main | head -50)
 
-echo "Found unmerged branches:"
-echo "$UNMERGED_BRANCHES"
-
-# Create a backup branch
-echo "💾 Creating backup branch..."
-git checkout -b backup-before-merge-$(date +%Y%m%d-%H%M%S)
-
-# Switch back to main
-git checkout main
-
-# Counter for successful merges
-SUCCESS_COUNT=0
-FAILED_BRANCHES=()
-
-# Function to resolve conflicts
-resolve_conflicts() {
-    local branch_name=$1
-    echo "🔧 Resolving conflicts in $branch_name..."
+for branch in $branches; do
+  echo "Processing $branch..."
+  
+  # Attempt merge
+  if git merge "$branch" --no-ff -m "Merge $branch"; then
+    echo "✅ Successfully merged $branch"
+  else
+    echo "⚠️  Conflict in $branch, resolving..."
     
-    # For yarn.lock conflicts, regenerate the file
-    if git status --porcelain | grep -q "yarn.lock"; then
-        echo "🔄 Regenerating yarn.lock..."
-        rm yarn.lock
-        yarn install
-        git add yarn.lock
-    fi
+    # Resolve common conflicts
+    git rm .yarn/install-state.gz yarn.lock 2>/dev/null || true
+    git rm .yarn/cache/*.zip 2>/dev/null || true
     
-    # For package.json conflicts, use the main version
-    if git status --porcelain | grep -q "package.json"; then
-        echo "📦 Using main version of package.json..."
-        git checkout --ours package.json
-        git add package.json
-    fi
+    # Keep main branch versions of package files
+    git checkout --ours package.json package-lock.json 2>/dev/null || true
     
-    # For tsconfig.json conflicts, use the main version
-    if git status --porcelain | grep -q "tsconfig.json"; then
-        echo "⚙️  Using main version of tsconfig.json..."
-        git checkout --ours tsconfig.json
-        git add tsconfig.json
-    fi
+    # Add resolved files
+    git add package.json package-lock.json 2>/dev/null || true
     
-    # For merge_all_branches.sh conflicts, use the main version
-    if git status --porcelain | grep -q "merge_all_branches.sh"; then
-        echo "📜 Using main version of merge_all_branches.sh..."
-        git checkout --ours merge_all_branches.sh
-        git add merge_all_branches.sh
-    fi
-    
-    # For other conflicts, prefer the main version
-    git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
-        if [[ -f "$file" ]]; then
-            echo "🔧 Resolving conflict in $file (preferring main version)..."
-            git checkout --ours "$file" 2>/dev/null || true
-            git add "$file"
-        fi
-    done
-}
-
-for branch in $UNMERGED_BRANCHES; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
-    
-    # Extract branch name without origin/
-    BRANCH_NAME=$(echo $branch | sed 's/origin\///')
-    
-    # Try to merge the branch
-    if git merge --no-ff "$branch" -m "Merge $BRANCH_NAME into main"; then
-        echo "✅ Successfully merged $BRANCH_NAME"
-        ((SUCCESS_COUNT++))
+    # Commit resolution
+    if git commit -m "Resolve merge conflicts in $branch"; then
+      echo "✅ Resolved conflicts for $branch"
     else
-        echo "⚠️  Failed to merge $BRANCH_NAME - resolving conflicts..."
-        
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            resolve_conflicts "$BRANCH_NAME"
-            
-            # Commit the resolved conflicts
-            if git commit --no-edit; then
-                echo "✅ Successfully resolved conflicts and merged $BRANCH_NAME"
-                ((SUCCESS_COUNT++))
-            else
-                echo "❌ Failed to commit resolved conflicts for $BRANCH_NAME"
-                FAILED_BRANCHES+=("$BRANCH_NAME")
-                git merge --abort
-            fi
-        else
-            echo "❌ No conflicts detected but merge failed for $BRANCH_NAME"
-            FAILED_BRANCHES+=("$BRANCH_NAME")
-            git merge --abort
-        fi
+      echo "❌ Failed to resolve conflicts for $branch"
+      git merge --abort 2>/dev/null || true
     fi
+  fi
 done
 
-echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successfully merged: $SUCCESS_COUNT branches"
-echo "❌ Failed branches: ${#FAILED_BRANCHES[@]}"
-
-if [ ${#FAILED_BRANCHES[@]} -gt 0 ]; then
-    echo "Failed branches:"
-    for branch in "${FAILED_BRANCHES[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-# Push the updated main branch
-if [ $SUCCESS_COUNT -gt 0 ]; then
-    echo "📤 Pushing updated main branch..."
-    git push origin main
-    echo "✅ Changes pushed successfully!"
-else
-    echo "ℹ️  No new merges to push"
-fi
-
-echo "🎉 Branch merge process completed!"
+echo "Branch merge process completed!"
