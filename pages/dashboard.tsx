@@ -14,8 +14,10 @@ import SystemMonitor from '../src/components/SystemMonitor';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
+import AdvancedErrorMonitoring from '../src/components/AdvancedErrorMonitoring';
+import AdvancedSystemMonitor from '../src/components/AdvancedSystemMonitor';
 
-type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'error-handler' | 'performance-optimizer' | 'analytics-insights';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'error-handler' | 'performance-optimizer' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
@@ -35,7 +37,9 @@ const Dashboard: React.FC = () => {
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
     { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
     { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
-    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
+    { id: 'error-monitoring' as const, name: 'Error Monitoring', icon: '🐛' },
+    { id: 'advanced-system-monitor' as const, name: 'System Monitor', icon: '🖥️' }
   ];
 
   // Sample data for advanced components
@@ -266,6 +270,40 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       default:
