@@ -1,40 +1,52 @@
 #!/bin/bash
 
-# Script to merge cursor PR branches into main
+# Comprehensive script to merge all recent cursor PR branches into main
 set -e
 
-echo "Starting cursor PR merge process..."
+echo "Starting comprehensive PR merge process..."
 
-# Define the PR branches to merge
-PR_BRANCHES=(
-    "cursor/check-fix-push-and-merge-to-main-106a"
-    "cursor/check-fix-push-and-merge-to-main-2e1b"
-    "cursor/check-fix-push-and-merge-to-main-6370"
-    "cursor/check-fix-push-and-merge-to-main-67f6"
-    "cursor/check-fix-push-and-merge-to-main-8c28"
-    "cursor/check-fix-push-and-merge-to-main-afbb"
-    "cursor/check-fix-push-and-merge-to-main-f942"
+# Get the most recent cursor branches (last 100)
+RECENT_BRANCHES=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sort -V | tail -100 | sed 's/origin\///')
+
+# Also include some other important branches
+OTHER_BRANCHES=(
+    "clean-main"
+    "clean-improvements-main"
+    "comprehensive-improvements-final"
+    "comprehensive-merge-all-prs"
 )
 
-# Count total PRs
-TOTAL_PRS=${#PR_BRANCHES[@]}
-echo "Found $TOTAL_PRS PR branches to merge"
+# Combine all branches
+ALL_BRANCHES=($(echo "$RECENT_BRANCHES" | tr '\n' ' ') "${OTHER_BRANCHES[@]}")
+
+# Count total branches
+TOTAL_BRANCHES=${#ALL_BRANCHES[@]}
+echo "Found $TOTAL_BRANCHES branches to process"
 
 # Initialize counters
 MERGED_COUNT=0
 CONFLICT_COUNT=0
 ERROR_COUNT=0
+SKIPPED_COUNT=0
 
-# Function to merge a single PR branch
-merge_pr_branch() {
+# Function to merge a single branch
+merge_branch() {
     local branch=$1
     echo ""
-    echo "Processing PR branch: $branch"
+    echo "Processing branch: $branch"
     
     # Check if branch exists
     if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
         echo "Branch $branch does not exist, skipping..."
+        SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
         return 1
+    fi
+    
+    # Check if branch is already merged
+    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
+        echo "Branch $branch is already merged, skipping..."
+        SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
+        return 0
     fi
     
     # Try to merge into main
@@ -81,6 +93,12 @@ resolve_conflicts() {
         # For package.json conflicts, prefer the version with more dependencies
         if [[ "$file" == "package.json" ]]; then
             resolve_package_json_conflict "$file"
+        # For lock files, prefer the newer one
+        elif [[ "$file" == "package-lock.json" ]] || [[ "$file" == "pnpm-lock.yaml" ]]; then
+            resolve_lock_file_conflict "$file"
+        # For config files, prefer the incoming version
+        elif [[ "$file" == "eslint.config.js" ]] || [[ "$file" == ".eslintrc.cjs" ]] || [[ "$file" == "tsconfig.json" ]]; then
+            resolve_config_conflict "$file"
         # For other files, try to merge intelligently
         else
             resolve_generic_conflict "$file"
@@ -99,6 +117,24 @@ resolve_package_json_conflict() {
     git add "$file"
 }
 
+# Function to resolve lock file conflicts
+resolve_lock_file_conflict() {
+    local file=$1
+    
+    # Prefer the incoming version for lock files
+    git checkout --theirs "$file"
+    git add "$file"
+}
+
+# Function to resolve config file conflicts
+resolve_config_conflict() {
+    local file=$1
+    
+    # Prefer the incoming version for config files
+    git checkout --theirs "$file"
+    git add "$file"
+}
+
 # Function to resolve generic conflicts
 resolve_generic_conflict() {
     local file=$1
@@ -108,22 +144,23 @@ resolve_generic_conflict() {
     git add "$file"
 }
 
-# Process each PR branch
-for branch in "${PR_BRANCHES[@]}"; do
-    merge_pr_branch "$branch"
+# Process each branch
+for branch in "${ALL_BRANCHES[@]}"; do
+    merge_branch "$branch"
 done
 
 # Final summary
 echo ""
 echo "=== MERGE SUMMARY ==="
-echo "Total PRs processed: $TOTAL_PRS"
+echo "Total branches processed: $TOTAL_BRANCHES"
 echo "Successfully merged: $MERGED_COUNT"
 echo "Conflicts encountered: $CONFLICT_COUNT"
 echo "Errors: $ERROR_COUNT"
+echo "Skipped: $SKIPPED_COUNT"
 
 # Push the updated main branch
 echo ""
 echo "Pushing updated main branch..."
 git push origin main
 
-echo "Cursor PR merge process completed!"
+echo "Comprehensive PR merge process completed!"
