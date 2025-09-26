@@ -1,155 +1,301 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
+interface AppState {
+  isLoading: boolean;
+  error: string | null;
+  data: any;
 }
 
-const features: Feature[] = [
-  {
-    id: '1',
-    title: 'Modern React Architecture',
-    description: 'Built with React 18, TypeScript, and modern development practices',
-    icon: '⚛️'
-  },
-  {
-    id: '2',
-    title: 'Next.js Framework',
-    description: 'Server-side rendering and static site generation capabilities',
-    icon: '🚀'
-  },
-  {
-    id: '3',
-    title: 'Tailwind CSS',
-    description: 'Utility-first CSS framework for rapid UI development',
-    icon: '🎨'
-  },
-  {
-    id: '4',
-    title: 'TypeScript Support',
-    description: 'Type-safe development with comprehensive TypeScript integration',
-    icon: '🔒'
-  }
-];
+interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+  createdAt: Date;
+}
 
-export default function App() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const [isDarkMode, setIsDarkMode] = useState(false);
+export default function App(): React.JSX.Element {
+  const [state, setState] = useState<AppState>({
+    isLoading: false,
+    error: null,
+    data: null
+  });
+
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [newTask, setNewTask] = useState('');
+  const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
+  const [showTaskManager, setShowTaskManager] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
+    // Simulate loading data
+    setState(prev => ({ ...prev, isLoading: true }));
+    
+    const timer = setTimeout(() => {
+      setState(prev => ({ 
+        ...prev, 
+        isLoading: false, 
+        data: { message: 'Welcome to Zion Tech Group!' }
+      }));
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => clearTimeout(timer);
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+  // Load tasks from localStorage on component mount
+  useEffect(() => {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      try {
+        const parsedTasks = JSON.parse(savedTasks).map((task: any) => ({
+          ...task,
+          createdAt: new Date(task.createdAt)
+        }));
+        setTasks(parsedTasks);
+      } catch (error) {
+        console.error('Error loading tasks:', error);
+      }
+    }
+  }, []);
+
+  // Save tasks to localStorage whenever tasks change
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
+  const handleError = (error: string): void => {
+    setState(prev => ({ ...prev, error, isLoading: false }));
   };
 
-  return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
-    }`}>
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Zion Tech Group
-              </h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {currentTime.toLocaleTimeString()}
-              </span>
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? '☀️' : '🌙'}
+  const addTask = () => {
+    if (newTask.trim()) {
+      const task: Task = {
+        id: Date.now(),
+        text: newTask.trim(),
+        completed: false,
+        createdAt: new Date()
+      };
+      setTasks([...tasks, task]);
+      setNewTask('');
+    }
+  };
+
+  const toggleTask = (id: number) => {
+    setTasks(tasks.map(task => 
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ));
+  };
+
+  const deleteTask = (id: number) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  const clearCompleted = () => {
+    setTasks(tasks.filter(task => !task.completed));
+  };
+
+  const filteredTasks = tasks.filter(task => {
+    switch (filter) {
+      case 'active':
+        return !task.completed;
+      case 'completed':
+        return task.completed;
+      default:
+        return true;
+    }
+  });
+
+  const activeTasksCount = tasks.filter(task => !task.completed).length;
+  const completedTasksCount = tasks.filter(task => task.completed).length;
+
+  if (state.isLoading) {
+    return (
+      <div className="app-container">
+        <div className="loading-spinner">
+          <div className="spinner"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (state.error) {
+    return (
+      <div className="app-container">
+        <div className="error-message">
+          <h2>Error</h2>
+          <p>{state.error}</p>
+          <button onClick={() => handleError('')}>Retry</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (showTaskManager) {
+    return (
+      <div className="app-container">
+        <header className="app-header">
+          <h1>🚀 Zion Task Manager</h1>
+          <p>A modern, efficient task management application</p>
+          <button 
+            onClick={() => setShowTaskManager(false)}
+            className="back-button"
+          >
+            ← Back to Home
+          </button>
+        </header>
+
+        <main className="app-main">
+          <div className="task-input-section">
+            <div className="input-group">
+              <input
+                type="text"
+                value={newTask}
+                onChange={(e) => setNewTask(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && addTask()}
+                placeholder="Add a new task..."
+                className="task-input"
+              />
+              <button onClick={addTask} className="add-button">
+                Add Task
               </button>
             </div>
           </div>
-        </div>
+
+          <div className="filter-section">
+            <div className="filter-buttons">
+              <button
+                className={filter === 'all' ? 'active' : ''}
+                onClick={() => setFilter('all')}
+              >
+                All ({tasks.length})
+              </button>
+              <button
+                className={filter === 'active' ? 'active' : ''}
+                onClick={() => setFilter('active')}
+              >
+                Active ({activeTasksCount})
+              </button>
+              <button
+                className={filter === 'completed' ? 'active' : ''}
+                onClick={() => setFilter('completed')}
+              >
+                Completed ({completedTasksCount})
+              </button>
+            </div>
+            {completedTasksCount > 0 && (
+              <button onClick={clearCompleted} className="clear-button">
+                Clear Completed
+              </button>
+            )}
+          </div>
+
+          <div className="tasks-section">
+            {filteredTasks.length === 0 ? (
+              <div className="empty-state">
+                <p>
+                  {filter === 'all' 
+                    ? "No tasks yet. Add one above!" 
+                    : filter === 'active'
+                    ? "No active tasks. Great job!"
+                    : "No completed tasks yet."
+                  }
+                </p>
+              </div>
+            ) : (
+              <ul className="task-list">
+                {filteredTasks.map(task => (
+                  <li key={task.id} className={`task-item ${task.completed ? 'completed' : ''}`}>
+                    <div className="task-content">
+                      <input
+                        type="checkbox"
+                        checked={task.completed}
+                        onChange={() => toggleTask(task.id)}
+                        className="task-checkbox"
+                      />
+                      <span className="task-text">{task.text}</span>
+                      <span className="task-date">
+                        {task.createdAt.toLocaleDateString()}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => deleteTask(task.id)}
+                      className="delete-button"
+                      title="Delete task"
+                    >
+                      🗑️
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <div className="stats-section">
+            <div className="stat">
+              <span className="stat-number">{tasks.length}</span>
+              <span className="stat-label">Total Tasks</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">{activeTasksCount}</span>
+              <span className="stat-label">Active</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">{completedTasksCount}</span>
+              <span className="stat-label">Completed</span>
+            </div>
+          </div>
+        </main>
+
+        <footer className="app-footer">
+          <p>Built with React, TypeScript, and ❤️ by Zion Team</p>
+        </footer>
+      </div>
+    );
+  }
+
+  return (
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Zion Tech Group</h1>
+        <p>Advanced Technology Solutions</p>
+        <button 
+          onClick={() => setShowTaskManager(true)}
+          className="task-manager-button"
+        >
+          🚀 Try Task Manager
+        </button>
       </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Welcome to Zion Tech Group
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Building the future with cutting-edge technology solutions. 
-            We specialize in AI, blockchain, quantum computing, and enterprise software development.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-              Get Started
-            </button>
-            <button className="border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold py-3 px-6 rounded-lg transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
-            >
-              <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                {feature.description}
-              </p>
+      
+      <main className="app-main">
+        <section className="hero-section">
+          <h2>{state.data?.message || 'Welcome!'}</h2>
+          <p>Empowering businesses with cutting-edge technology solutions</p>
+        </section>
+        
+        <section className="features-section">
+          <div className="feature-grid">
+            <div className="feature-card">
+              <h3>AI Solutions</h3>
+              <p>Advanced artificial intelligence and machine learning services</p>
             </div>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold mb-2">100+</div>
-              <div className="text-blue-100">Projects Completed</div>
+            <div className="feature-card">
+              <h3>Cloud Infrastructure</h3>
+              <p>Scalable and secure cloud computing solutions</p>
             </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-blue-100">Happy Clients</div>
+            <div className="feature-card">
+              <h3>Blockchain Technology</h3>
+              <p>Decentralized applications and smart contracts</p>
             </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Support Available</div>
+            <div className="feature-card">
+              <h3>Cybersecurity</h3>
+              <p>Comprehensive security solutions for modern businesses</p>
             </div>
           </div>
-        </div>
+        </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-gray-400">
-              © 2025 Zion Tech Group. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              Built with React, Next.js, and Tailwind CSS
-            </p>
-          </div>
-        </div>
+      
+      <footer className="app-footer">
+        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
       </footer>
     </div>
   );
