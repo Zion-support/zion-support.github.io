@@ -1,61 +1,23 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react"
+import { Link } from "react-router-dom"
 
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="bg-gray-800 shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-white">
-            Zion Tech Group
-          </Link>
-          
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
-          </nav>
-
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            <nav className="flex flex-col space-y-2">
-              <Link to="/" className="text-gray-300 hover:text-white transition-colors py-2">
-                Home
-              </Link>
-              <Link to="/services" className="text-gray-300 hover:text-white transition-colors py-2">
-                Services
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white transition-colors py-2">
-                About
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors py-2">
-                Contact
-              </Link>
+export function Header() {
+    return (
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    <Link to="/" className="text-white text-xl font-bold">Zion Tech Group</Link>
+                    <div className="hidden md:flex space-x-8">
+                        <Link to="/services" className="text-white hover:text-cyan-400">Services</Link>
+                        <Link to="/solutions" className="text-white hover:text-cyan-400">Solutions</Link>
+                        <Link to="/about" className="text-white hover:text-cyan-400">About</Link>
+                        <Link to="/contact" className="text-white hover:text-cyan-400">Contact</Link>
+                    </div>
+                </div>
             </nav>
-          </div>
-        )}
-      </div>
-    </header>
-  );
+        </header>
+    );
 }
+
+export default Header
+
