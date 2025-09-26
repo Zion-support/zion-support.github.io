@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
 import PerformanceMetrics from '../src/components/PerformanceMetrics';
 import '../styles/animations.css';
+import '../src/styles/accessibility.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

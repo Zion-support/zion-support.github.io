@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,17 +59,25 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Solutions - AI-Powered Business Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-      </Head>
+      <EnhancedSEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI Solutions',
+          'Cloud Computing',
+          'Digital Transformation',
+          'Business Automation',
+          'Technology Consulting',
+          'Machine Learning',
+          'Artificial Intelligence',
+          'Cloud Infrastructure',
+          'Data Analytics',
+          'Software Development'
+        ]}
+        url="https://zion.app"
+        type="website"
+        image="/images/og-homepage.jpg"
+      />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}

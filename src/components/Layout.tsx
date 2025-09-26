@@ -3,6 +3,9 @@ import Navigation from './Navigation';
 import ErrorBoundary from './ErrorBoundary';
 import { NotificationSystem, useNotifications } from './NotificationSystem';
 import PerformanceTracker from './PerformanceTracker';
+import GlobalErrorBoundary from './GlobalErrorBoundary';
+import AccessibilityEnhancer from './AccessibilityEnhancer';
+import PerformanceMonitor from './PerformanceMonitor';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -61,35 +64,47 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
   };
 
   return (
-    <ErrorBoundary>
-      <div className={`min-h-screen transition-colors duration-300 ${
-        isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
-      }`}>
-        <Navigation
-          currentTime={currentTime}
-          isDarkMode={isDarkMode}
-          onToggleDarkMode={toggleDarkMode}
-          activeSection={activeSection}
-          onSectionChange={handleSectionChange}
-        />
-        
-        {/* Main content with top padding to account for fixed header */}
-        <main className="pt-16">
-          {children}
-        </main>
-        
-        {/* Notification System */}
-        <NotificationSystem 
-          notifications={notifications} 
-          onRemove={removeNotification} 
-        />
-        
-        {/* Performance Tracking */}
-        <PerformanceTracker 
-          enableConsoleLogging={process.env.NODE_ENV === 'development'}
-          enableAnalytics={process.env.NODE_ENV === 'production'}
-        />
-      </div>
-    </ErrorBoundary>
+    <GlobalErrorBoundary>
+      <AccessibilityEnhancer>
+        <ErrorBoundary>
+          <div className={`min-h-screen transition-colors duration-300 ${
+            isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
+          }`}>
+            <Navigation
+              currentTime={currentTime}
+              isDarkMode={isDarkMode}
+              onToggleDarkMode={toggleDarkMode}
+              activeSection={activeSection}
+              onSectionChange={handleSectionChange}
+            />
+            
+            {/* Main content with top padding to account for fixed header */}
+            <main id="main-content" className="pt-16" role="main">
+              {children}
+            </main>
+            
+            {/* Notification System */}
+            <NotificationSystem 
+              notifications={notifications} 
+              onRemove={removeNotification} 
+            />
+            
+            {/* Performance Tracking */}
+            <PerformanceTracker 
+              enableConsoleLogging={process.env.NODE_ENV === 'development'}
+              enableAnalytics={process.env.NODE_ENV === 'production'}
+            />
+            
+            {/* Enhanced Performance Monitoring */}
+            <PerformanceMonitor
+              enableRealTimeMonitoring={true}
+              enableMemoryTracking={true}
+              enableNetworkTracking={true}
+              reportInterval={10000}
+            />
+          </div>
+        </ErrorBoundary>
+      </AccessibilityEnhancer>
+    </GlobalErrorBoundary>
   );
 }
