@@ -11,6 +11,19 @@
     "export": "vite build",
     "start": "vite preview --port 3000",
     "postbuild": "echo \"Build completed\"",
+<<<<<<< HEAD
+    "lint": "eslint --ignore-path .eslintignore App.tsx src --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint --ignore-path .eslintignore App.tsx src --fix",
+    "lint:check": "eslint --ignore-path .eslintignore App.tsx src --report-unused-disable-directives --max-warnings 0",
+    "type-check": "npx tsc --noEmit",
+    "preview": "vite preview",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+=======
     "lint": "eslint App.tsx --max-warnings 1000",
     "lint:fix": "eslint App.tsx --fix",
     "lint:check": "eslint App.tsx --max-warnings 0",
@@ -258,6 +271,7 @@
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a755
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
