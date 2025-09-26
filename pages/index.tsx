@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
+import { Navigation } from '../src/components/Navigation';
+import { Dashboard } from '../src/components/Dashboard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
@@ -29,6 +31,7 @@ export default function Home(): JSX.Element {
 		<ErrorBoundary>
 			<SEO />
 			<PerformanceMonitor />
+			<Navigation />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
 				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
@@ -49,7 +52,7 @@ export default function Home(): JSX.Element {
 				<meta name="author" content="Zion App" />
 				<meta name="theme-color" content="#2563eb" />
 			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden pt-20">
 				{/* Animated background elements */}
 				<div className="absolute inset-0 overflow-hidden">
 					<div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -157,6 +160,14 @@ export default function Home(): JSX.Element {
 									</div>
 								))}
 							</div>
+						</section>
+
+						{/* Dashboard Section */}
+						<section className={`mb-20 transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+							<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-12 text-center bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								Real-Time Project Insights
+							</h2>
+							<Dashboard />
 						</section>
 					</main>
 

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { Navigation } from '../src/components/Navigation';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
@@ -84,12 +85,13 @@ export default function About(): JSX.Element {
 	return (
 		<ErrorBoundary>
 			<SEO />
+			<Navigation />
 			<Head>
 				<title>About Us - Zion App</title>
 				<meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
