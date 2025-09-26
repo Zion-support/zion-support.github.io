@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -33,14 +33,14 @@
         "app/lib/*"
       ]
     },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "noImplicitOverride": false,
+    "noImplicitOverride": true,
     "types": [
       "node",
       "react",
@@ -55,12 +55,9 @@
     "strictNullChecks": true
   },
   "include": [
-    "app/**/*",
-    ".next/types/**/*.ts",
-    "src/types/offline-shims.d.ts",
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx"
+    "app/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -68,10 +65,6 @@
     "build",
     "coverage",
     "src/**",
-    "data/**",
-    "utils/**",
-    "lib/**",
-    "types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -99,14 +92,7 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    
-    "src/utils/cartUtils.js",
-    "app/blog/**",
-    "app/resources/**",
-    "app/case-studies/**",
-    "app/components/*Banner*.tsx",
-    "app/components/UltimateContent*",
-    "app/components/AdvancedNeuralArchitecturesPromotionBanner.tsx",
-    "app/components/LazyImage.tsx"
+    "src/vite-env.d.ts",
+    "src/utils/cartUtils.js"
   ]
 }
