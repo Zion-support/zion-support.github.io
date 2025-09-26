@@ -12,8 +12,10 @@ import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import { WebVitals } from '../src/components/WebVitals';
+import { setupGlobalErrorHandling } from '../src/utils/errorHandling';
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
+import '../src/styles/improvements.css';
 
 // Lazy load heavy components
 const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -21,6 +23,11 @@ const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTr
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  // Setup global error handling
+  React.useEffect(() => {
+    setupGlobalErrorHandling();
+  }, []);
+
   return (
     <EnhancedErrorBoundary>
       <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>

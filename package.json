@@ -140,7 +140,9 @@
 		"design:cycle": "node automation/launch-design-improvement-automation.js cycle",
 		"design:status": "node automation/launch-design-improvement-automation.js status",
 		"design:stop": "node automation/launch-design-improvement-automation.js stop",
-		"design:all": "npm run design:layout && npm run design:navigation && npm run design:visual"
+		"design:all": "npm run design:layout && npm run design:navigation && npm run design:visual",
+		"optimize": "node scripts/optimize-application.js",
+		"optimize:full": "npm run optimize && npm run build && npm run test:smoke"
 	},
 	"pm2": {
 		"ecosystem": "ecosystem.maintenance.cjs"
