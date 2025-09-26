@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load heavy components
 const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -12,6 +13,26 @@ const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTr
 
 const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
   ssr: false
+});
+
+const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
 export default function Home(): JSX.Element {
@@ -94,78 +115,21 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Solutions - AI-Powered Business Solutions & Cloud Infrastructure</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="keywords" content="AI solutions, cloud infrastructure, digital transformation, business automation, machine learning, cloud migration, tech consulting" />
-        <meta name="author" content="Zion Tech Solutions" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zion.app" />
-        <meta property="og:site_name" content="Zion Tech Solutions" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta name="twitter:site" content="@ziontech" />
-        
-        {/* Performance and Security */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://zion.app" />
-        
-        {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* Theme Color */}
-        <meta name="theme-color" content="#3B82F6" />
-        <meta name="msapplication-TileColor" content="#3B82F6" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Solutions",
-              "url": "https://zion.app",
-              "logo": "https://zion.app/logo.png",
-              "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.",
-              "sameAs": [
-                "https://twitter.com/ziontech",
-                "https://linkedin.com/company/ziontech"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-555-0123",
-                "contactType": "customer service",
-                "availableLanguage": "English"
-              }
-            })
-          }}
-        />
-      </Head>
+      <EnhancedSEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions',
+          'cloud infrastructure', 
+          'digital transformation',
+          'business automation',
+          'technology consulting',
+          'machine learning',
+          'artificial intelligence',
+          'cloud computing',
+          'enterprise solutions'
+        ]}
+      />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
@@ -333,6 +297,129 @@ export default function Home(): JSX.Element {
                 <p className="text-gray-600 mb-4">&quot;Excellent support and innovative solutions. Great partnership!&quot;</p>
                 <div className="font-semibold text-gray-900">- Emily Rodriguez, Director</div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Advanced Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Advanced Monitoring & Analytics</h2>
+              <p className="text-xl text-gray-300">
+                Real-time performance monitoring, security analysis, and accessibility auditing
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <AdvancedPerformanceMonitor 
+                  onMetricsUpdate={(metrics) => {
+                    console.log('Performance metrics updated:', metrics);
+                  }}
+                  className="h-full"
+                />
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <AdvancedAnalyticsDashboard 
+                  data={{
+                    pageViews: 12543,
+                    uniqueVisitors: 8921,
+                    bounceRate: 42.3,
+                    avgSessionDuration: 3.2,
+                    conversionRate: 2.8,
+                    topPages: [
+                      { page: '/', views: 4521, bounceRate: 38.2 },
+                      { page: '/services', views: 3124, bounceRate: 45.1 },
+                      { page: '/about', views: 2898, bounceRate: 41.7 }
+                    ],
+                    trafficSources: [
+                      { source: 'Direct', visitors: 4521, percentage: 50.7 },
+                      { source: 'Google', visitors: 3124, percentage: 35.0 },
+                      { source: 'Social', visitors: 1276, percentage: 14.3 }
+                    ],
+                    deviceTypes: [
+                      { device: 'Desktop', count: 6234, percentage: 69.8 },
+                      { device: 'Mobile', count: 2341, percentage: 26.2 },
+                      { device: 'Tablet', count: 346, percentage: 3.9 }
+                    ],
+                    geographicData: [
+                      { country: 'United States', visitors: 4521, percentage: 50.7 },
+                      { country: 'Canada', visitors: 1234, percentage: 13.8 },
+                      { country: 'United Kingdom', visitors: 987, percentage: 11.1 }
+                    ],
+                    hourlyData: Array.from({ length: 24 }, (_, i) => ({ hour: i, visitors: Math.floor(Math.random() * 100) })),
+                    dailyData: Array.from({ length: 30 }, (_, i) => ({ 
+                      date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
+                      visitors: Math.floor(Math.random() * 500) + 200,
+                      pageViews: Math.floor(Math.random() * 800) + 400
+                    })),
+                    realTimeVisitors: 23,
+                    topKeywords: [
+                      { keyword: 'AI solutions', searches: 234, position: 3 },
+                      { keyword: 'cloud services', searches: 189, position: 5 },
+                      { keyword: 'digital transformation', searches: 156, position: 7 }
+                    ],
+                    errorRate: 0.8,
+                    performanceScore: 92
+                  }}
+                  className="h-full"
+                />
+              </motion.div>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <AdvancedSecurityMonitor 
+                  metrics={{
+                    totalThreats: 47,
+                    blockedRequests: 1234,
+                    suspiciousActivity: 23,
+                    securityScore: 87,
+                    lastScan: new Date(),
+                    vulnerabilities: [
+                      { id: '1', type: 'XSS', severity: 'high', description: 'Potential XSS vulnerability in contact form', status: 'open' },
+                      { id: '2', type: 'CSRF', severity: 'medium', description: 'Missing CSRF token on login form', status: 'in-progress' }
+                    ],
+                    recentEvents: [
+                      { id: '1', type: 'threat', message: 'Blocked suspicious request from IP 192.168.1.100', timestamp: new Date(), severity: 'high', source: 'Firewall' },
+                      { id: '2', type: 'warning', message: 'Multiple failed login attempts detected', timestamp: new Date(), severity: 'medium', source: 'Auth System' }
+                    ],
+                    cspViolations: 3,
+                    xssAttempts: 12,
+                    sqlInjectionAttempts: 5,
+                    bruteForceAttempts: 8,
+                    rateLimitHits: 45
+                  }}
+                  className="h-full"
+                />
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <AdvancedAccessibilityAuditor 
+                  onAuditComplete={(metrics) => {
+                    console.log('Accessibility audit completed:', metrics);
+                  }}
+                  className="h-full"
+                />
+              </motion.div>
             </div>
           </div>
         </section>

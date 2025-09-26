@@ -43,6 +43,13 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   skipMiddlewareUrlNormalize: true,
   
+  // Enhanced performance features
+  output: 'standalone',
+  distDir: '.next',
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
+  
   // Bundle analyzer (only in development)
   ...(process.env.ANALYZE === 'true' && {
     webpack: (config) => {
@@ -99,6 +106,24 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, s-maxage=300',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
