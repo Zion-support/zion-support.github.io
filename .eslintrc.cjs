@@ -78,7 +78,9 @@ module.exports = {
     'pages.disabled_full/**',
     'apps.backup/**',
     'app_backup/**',
-    // Additional large directories or mixed-quality code not part of the main Next.js app
+    // Additional problematic directories
+    '.temp_backup_components/**',
+    'src.corrupted/**',
     'src/**',
     'lib/**',
     'backend/**',
