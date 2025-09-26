@@ -2,37 +2,37 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  TrendingUp,;
-  Brain, ;
-  Target, ;
-  Users, ;
-  Zap, ;
-  BarChart3, ;
-  CheckCircle, ;
-  Star,;
-  ArrowRight,;
-  Mail,;
-  MessageCircle,;
-  Globe,;
-  Shield,;
-  Cloud,;
-  Rocket,;
-  Workflow,;
-  Calendar,;
-  Clock,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  Settings,;
-  Monitor,;
-  Filter,;
+  TrendingUp;
+  Brain;
+  Target;
+  Users;
+  Zap;
+  BarChart3;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Mail;
+  MessageCircle;
+  Globe;
+  Shield;
+  Cloud;
+  Rocket;
+  Workflow;
+  Calendar;
+  Clock;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Settings;
+  Monitor;
+  Filter;
   PieChart;
 } from "lucide-react"
 export default function AIMarketingAutomation() {;
   const features = [;
     {;
       icon: Brain,title: "Intelligent Audience Segmentation",description: "AI-powered customer segmentation based on behavior, preferences, and engagement patterns."
-    },;
+    };
     {;
       icon: Target,title: "Personalized Campaigns",description: "Dynamic content and messaging that adapts to individual customer preferences and behavior."
     };
@@ -44,42 +44,42 @@ export default function AIMarketingAutomation() {;
     };
     {;
       icon: Shield,title: "Compliance & Privacy",description: "Built-in GDPR, CCPA, and other privacy compliance features for secure marketing operations."
-    },;
+    };
     {;
       icon: Cloud,title: "Multi-Channel Integration",description: "Seamlessly integrate with email, social media, SMS, and other marketing channels."
     };
-  ],;
+  ];
 
   const marketingChannels = [;
     {;
       icon: Mail,title: "Email Marketing",description: "Automated email campaigns with intelligent timing, personalization, and A/B testing."
-    },;
+    };
     {;
       icon: MessageCircle,title: "Social Media",description: "Automated social media posting, engagement monitoring, and audience interaction."
-    },;
+    };
     {;
       icon: Globe,title: "Web Personalization",description: "Dynamic website content that adapts to visitor behavior and preferences."
     };
     {;
       icon: ShoppingCart,title: "E-commerce Automation",description: "Abandoned cart recovery, product recommendations, and purchase follow-ups."
-    },;
+    };
     {;
       icon: Calendar,title: "Event Marketing",description: "Automated event promotion, registration, and follow-up communications."
-    },;
+    };
     {;
       icon: Monitor,title: "Retargeting Campaigns",description: "Intelligent retargeting based on user behavior and engagement patterns."
     };
   ];
   const benefits = [;
-    "Increase conversion rates by up to 50%",;
-    "Reduce marketing costs by 30%",;
-    "Improve customer engagement and retention",;
-    "Personalize customer experiences at scale",;
-    "Automate repetitive marketing tasks",;
-    "Optimize campaigns in real-time",;
-    "Gain deeper customer insights",;
+    "Increase conversion rates by up to 50%";
+    "Reduce marketing costs by 30%";
+    "Improve customer engagement and retention";
+    "Personalize customer experiences at scale";
+    "Automate repetitive marketing tasks";
+    "Optimize campaigns in real-time";
+    "Gain deeper customer insights";
     "Scale marketing operations efficiently"
-  ],;
+  ];
 
   const useCases = [;
     {;

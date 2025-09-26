@@ -1,5 +1,4 @@
-  },
-]
+  }]
 
 export default function NewsPage() {
   return (
@@ -26,16 +25,16 @@ export default function NewsPage() {
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'News & Updates - Zion Tech Group',
+  title: 'News & Updates - Zion Tech Group'
   description: 'Latest announcements, research highlights, and product updates from Zion Tech Group.'
 }
 
-const newsItems = [
+const newsItems  =  [
   {
-    id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
-    summary: 'A pragmatic framework combining machine-enforceable policy with human oversight to safely scale autonomous systems.',
-    date: '2025-09-15',
+    id: 'ai-governance-blueprint-2025'
+    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy'
+    summary: 'A pragmatic framework combining machine-enforceable policy with human oversight to safely scale autonomous systems.'
+    date: '2025-09-15'
     category: 'AI Governance'
   }
 ]

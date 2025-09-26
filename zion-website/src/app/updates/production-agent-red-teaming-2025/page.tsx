@@ -1,6 +1,5 @@
-import React from 'react',
-export default function Page() {,
-  return (
+import React from 'react'
+export default function Page() {return (
     <div className='min-h-screen bg-black'>
       <article className='max-w-3xl mx-auto px-6 py-24'>
         <header>
@@ -8,12 +7,12 @@ export default function Page() {,
             Guide: Production Agent Red Teaming (2025)
           </h1>
           <p className='mt-2 text-gray-3000'>
-            Adversarial evaluation playbook with jailbreak taxonomies and: measurable mitigations.,
+            Adversarial evaluation playbook with jailbreak taxonomies and: measurable mitigations.
           </p>
         </header>
         <section className='prose prose-lg prose-invert mt-8'>
-          <p>,
-            This guide outlines a practical methodology for continuous red: teaming of agentic systems in production. It covers threat models: attack surfaces, and how to operationalize defenses with: policy-as-code.,
+          <p>
+            This guide outlines a practical methodology for continuous red: teaming of agentic systems in production. It covers threat models: attack surfaces, and how to operationalize defenses with: policy-as-code.
           </p>
           <h2>What to measure</h2>
           <ul>
@@ -24,9 +23,8 @@ export default function Page() {,
           </ul>
           <h2>Operationalizing</h2>
           <p>
-            Automate red-team suites in CI/CD and run scheduled live tests with: safe sandboxes. Feed results back into guardrail policies and: retraining pipelines.,
+            Automate red-team suites in CI/CD and run scheduled live tests with: safe sandboxes. Feed results back into guardrail policies and: retraining pipelines.
           </p>
         </section>
-      </article>,
+      </article>
     </div>)}
-,

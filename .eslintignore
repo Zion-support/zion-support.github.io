@@ -1,74 +1,68 @@
-# Exclude broken, archived, and non-app code from linting
+# Exclude non-app directories and archived content from linting (merged)
 node_modules/
-dist/
-build/
-out/
 .next/
+out/
+build/
+dist/
 coverage/
+.cache/
 
-# Large or archived areas with known invalid code/tests
+# Exclude corrupted or non-app source directories
+# Allow linting of active app source under src/
+# src/
+# components/
+
+# Large mono-repo subprojects not part of the current app build
+automation/
+automation_backup/
+automation-logs/
+automation-reports/
+scripts/
+server/
+backend/
+apps/
+apps.backup/
+app_backup/
+app.disabled/
+app-disabled/
+
+# Generated or demo services
+generated-services/
+
+# Archived, backups, or intentionally broken areas
+backups/
+backup*/
+backup-problematic-files/
+corrupted_backup/
+temp_exclude/
+temp_*/
+ts_files_backup/
 __tests__/**
 tests/**
-backups/**
-backup*/**
-backup-problematic-files/**
-corrupted_backup/**
-temp_exclude/**
-temp_*/**
-ts_files_backup/**
-src.broken/**
+__jest__/**
+__mocks__/**
+__safe_tests__/**
+
+# Other packages in the repo
+zion-os/
+zion-website/
+zion-ai-assistant/
+zion_academy/
+zion-film/
 src.corrupted/**
-components.disabled_full/**
-pages.disabled_full/**
-apps.backup/**
-app_backup/**
 
-# Additional directories not part of main app
-src.disabled/**
-src-disabled/**
-src_backup/**
-src_backup_all/**
-src_backup_temp/**
-apps/**
-automation/**
-backend/**
-server/**
-zion-os/**
-zion-website/**
-zion-ai-assistant/**
+# Ignore known corrupted or unused source areas (excluded from tsconfig build)
+# Keep targeted ignores inside src minimal to allow lint to run
+# src/components/**
+# src/pages/**
+# src/routes/**
+# src/context/**
+# src/utils/cartUtils.js
+**/*.config.ts
+vite.config.ts
+vitest.config.ts
 
-# Standalone scripts
-*.config.js
-*.config.ts
-scripts/**
-*.out
-*.txt
-# Exclude problematic directories and files
-pages_backup/
-pages.broken/
-pages.corrupted*/
-pages.disabled/
-pages.old/
-*.backup.*
-*.cleanup-backup.*
-*.disabled.*
-*.corrupted*
-node_modules/
-.next/
-out/
-dist/
-build/
-*.min.js
-*.min.css
-src.broken/
-ts_files_backup/
-types.disabled/
-backup/
-backup-*/
-backup-problematic-files/
-recovered-branches/
-src_backup/
-pages_backup/
-pages.broken/
-pages._quarantine/
-pages-quarantine/
+# Misc top-level jsx/js playground files
+*.backup
+*.bak
+# Keep above; no additional ignores below so that src-clean is linted

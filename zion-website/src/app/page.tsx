@@ -5,108 +5,83 @@ import {
   GlobeAltIcon,
   LightBulbIcon,
   ShieldCheckIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
+  UserGroupIcon} from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
     name: 'AI-Powered Research',
-    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon,
-  },
+    description:
+      'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon},
   {
     name: 'Quantum Computing',
-    description: 'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon,
-  },
+    description:
+      'Next-generation quantum neural networks for solving complex computational problems.',
+    icon: CpuChipIcon},
   {
     name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon,
-  },
+    description:
+      'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon},
   {
     name: 'Enterprise Security',
-    description: 'Military-grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon,
-  },
+    description:
+      'Military-grade security protocols protecting your most valuable digital assets.',
+    icon: ShieldCheckIcon},
   {
     name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision-making.',
-    icon: ChartBarIcon,
-  },
+    description:
+      'Advanced analytics and insights driving informed decision-making.',
+    icon: ChartBarIcon},
   {
     name: 'Expert Team',
-    description: 'World-class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon,
-  },
-]
+    description:
+      'World-class researchers and engineers pushing the boundaries of technology.',
+    icon: UserGroupIcon}]
 
 const stats = [
   { name: 'Research Papers Published', value: '150+' },
   { name: 'AI Models Deployed', value: '500+' },
   { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' },
-]
+  { name: 'Patents Filed', value: '25+' }]
 
 const solutions = [
   {
     name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions/ai-autonomous-research',
-  },
+    description:
+      'Autonomous research platform that accelerates scientific discovery.',
+    href: '/solutions/ai-autonomous-research'},
   {
     name: 'Quantum Neural Networks',
     description: 'Next-generation computing for complex problem solving.',
-    href: '/solutions/quantum-neural-networks',
-  },
+    href: '/solutions/quantum-neural-networks'},
   {
     name: 'Autonomous Business Operations',
     description: 'AI-powered automation for enterprise efficiency.',
-    href: '/solutions/autonomous-business',
-  },
+    href: '/solutions/autonomous-business'},
   {
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions/it-asset-management',
-  },
+    href: '/solutions/it-asset-management'},
   {
     name: 'Edge AI Inference',
-    description: 'Deploy low-latency AI at the edge with optimized inference runtimes.',
-    href: '/solutions/edge-ai-inference',
-  },
+    description:
+      'Deploy low-latency AI at the edge with optimized inference runtimes.',
+    href: '/solutions/edge-ai-inference'},
   {
     name: 'GenAI Content Studio',
-    description: 'End-to-end content generation workflows with governance and human-in-the-loop.',
-    href: '/solutions/genai-content-studio',
-  },
-]
+    description:
+      'End-to-end content generation workflows with governance and human-in-the-loop.',
+    href: '/solutions/genai-content-studio'}]
 
 const whatsNew = [
   {
     title: 'Edge AI Inference v1.2',
     desc: 'Run models 3x faster on edge devices with quantization-aware serving.',
     href: '/solutions/edge-ai-inference',
-    tag: 'New',
-  },
-import { getLatestUpdates } from '../data/updates'
+    tag: 'New'}]
 
-=======
-  {
-    title: 'GenAI Content Studio',
-    desc: 'Launch multi-channel AI content with approvals, analytics, and guardrails.',
-    href: '/solutions/genai-content-studio',
-    tag: 'New',
-  },
-  {
-    title: 'Security Copilot',
-    desc: 'AI-driven incident response and continuous posture hardening for enterprises.',
-    href: '/solutions/security-copilot',
-    tag: 'Beta',
-  },
-]
-
->>>>>>> cursor/create-and-deploy-new-content-2def
 export default function HomePage() {
   return (
     <div className="bg-black">
@@ -122,19 +97,7 @@ export default function HomePage() {
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
-=======
-              New: Real-Time Agent Cost Controller v1.0 —
-              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
+
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -641,4 +604,3 @@ export default function HomePage() {
     </div>
   )
 }
-
