@@ -62,6 +62,7 @@
     // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
     "src/pages/**",
     "src/pages.disabled/**",
+    "src.corrupted/**",
     "src/routes/**",
     "src/utils/cartUtils.js",
     "**/*.test.ts",
@@ -80,6 +81,7 @@
     "src/routes/**",
     "src/components/**",
     "src/context/**",
+    "src/services/**",
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts",

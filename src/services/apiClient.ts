@@ -13,8 +13,8 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 // Define the global error handler (exported for testing purposes)
 export const globalAxiosErrorHandler = (error: unknown) => {
   const axiosError = error as AxiosError | undefined;
-  const response = axiosError?.response;
-  const config = axiosError?.config as AxiosRequestConfig | undefined;
+  const response = axiosError?.response as AxiosResponse | undefined;
+  const config = (axiosError?.config as AxiosRequestConfig | undefined) || undefined;
   const contentType = typeof response?.headers?.['content-type'] === 'string' ? response?.headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON');
@@ -24,9 +24,9 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   const isRetryingAndNotFinalConfiguredRetry = axiosRetryState && axiosRetryState.attemptNumber <= axiosRetryState.retryCount;
 
-  const status = response?.status;
+  const status = response?.status as number | undefined;
   const method = (config?.method || '').toUpperCase();
-  const url = config?.url || '';
+  const url = (config?.url || '') as string;
 
   // Handle DELETE 404 as success (item already removed)
   if (status === 404 && method === 'DELETE') {
