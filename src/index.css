@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-slate-900 text-white;
+    @apply bg-gray-900 text-white;
   }
 }
 
@@ -18,10 +18,10 @@
   }
 
   .btn-secondary {
-    @apply bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg border border-slate-600 transition-all duration-300;
+    @apply bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg border border-gray-600 transition-all duration-300;
   }
 
   .card {
-    @apply bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300;
+    @apply bg-gray-800/50 border border-gray-700 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300;
   }
 }
