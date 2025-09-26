@@ -77,6 +77,9 @@ export default function Navigation({
               <Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
                 Contact
               </Link>
+              <Link href="/dashboard" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+                Dashboard
+              </Link>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -134,6 +137,9 @@ export default function Navigation({
                 </Link>
                 <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   Contact
+                </Link>
+                <Link href="/dashboard" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  Dashboard
                 </Link>
               </div>
             </div>

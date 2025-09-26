@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import ErrorBoundary from './ErrorBoundary';
-import NotificationSystem, { useNotifications } from './NotificationSystem';
+import { NotificationSystem, useNotifications } from './NotificationSystem';
 
 interface LayoutProps {
   children: React.ReactNode;

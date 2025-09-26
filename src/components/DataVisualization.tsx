@@ -73,6 +73,121 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6B7280'
     ];
 
+    // Define drawing functions inline to avoid dependency issues
+    const drawPieChart = (ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
+      const centerX = width / 2;
+      const centerY = height / 2;
+      const radius = Math.min(width, height) / 2 - 40;
+      const innerRadius = type === 'doughnut' ? radius * 0.6 : 0;
+
+      let currentAngle = 0;
+      const total = data.datasets[0].data.reduce((sum, value) => sum + value, 0);
+
+      data.datasets[0].data.forEach((value, index) => {
+        const sliceAngle = (value / total) * 2 * Math.PI;
+        const color = colors[index % colors.length];
+
+        // Draw slice
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+        if (innerRadius > 0) {
+          ctx.arc(centerX, centerY, innerRadius, currentAngle + sliceAngle, currentAngle, true);
+        }
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Draw label
+        const labelAngle = currentAngle + sliceAngle / 2;
+        const labelX = centerX + Math.cos(labelAngle) * (radius + 20);
+        const labelY = centerY + Math.sin(labelAngle) * (radius + 20);
+
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.labels[index], labelX, labelY);
+
+        // Draw percentage
+        const percentage = ((value / total) * 100).toFixed(1);
+        ctx.fillText(`${percentage}%`, labelX, labelY + 15);
+
+        currentAngle += sliceAngle;
+      });
+    };
+
+    const drawBarChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+      const barWidth = chartWidth / data.labels.length * 0.8;
+      const barSpacing = chartWidth / data.labels.length * 0.2;
+      const maxValue = Math.max(...data.datasets[0].data);
+
+      data.datasets[0].data.forEach((value, index) => {
+        const barHeight = (value / maxValue) * chartHeight;
+        const x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
+        const y = padding + chartHeight - barHeight;
+
+        // Draw bar
+        ctx.fillStyle = colors[index % colors.length];
+        ctx.fillRect(x, y, barWidth, barHeight);
+
+        // Draw value on top
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
+
+        // Draw label
+        ctx.fillText(data.labels[index], x + barWidth / 2, padding + chartHeight + 20);
+      });
+    };
+
+    const drawLineChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+      const maxValue = Math.max(...data.datasets[0].data);
+      const minValue = Math.min(...data.datasets[0].data);
+      const valueRange = maxValue - minValue;
+
+      if (valueRange === 0) return;
+
+      const pointSpacing = chartWidth / (data.labels.length - 1);
+      const points = data.datasets[0].data.map((value, index) => ({
+        x: padding + index * pointSpacing,
+        y: padding + chartHeight - ((value - minValue) / valueRange) * chartHeight
+      }));
+
+      // Draw line
+      ctx.beginPath();
+      ctx.moveTo(points[0].x, points[0].y);
+      points.slice(1).forEach(point => {
+        ctx.lineTo(point.x, point.y);
+      });
+      ctx.strokeStyle = colors[0];
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Draw points
+      points.forEach((point, index) => {
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, 4, 0, 2 * Math.PI);
+        ctx.fillStyle = colors[0];
+        ctx.fill();
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Draw value
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(data.datasets[0].data[index].toString(), point.x, point.y - 10);
+
+        // Draw label
+        ctx.fillText(data.labels[index], point.x, padding + chartHeight + 20);
+      });
+    };
+
     if (type === 'pie' || type === 'doughnut') {
       drawPieChart(ctx, width, canvasHeight, colors);
     } else if (type === 'bar') {
