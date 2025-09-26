@@ -120,27 +120,15 @@ export default function HomePage() {
               platforms.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-<<<<<<< HEAD
-              <Link
-                href='/services'
+              <Link to='/services'
                 className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
                 aria-label="Explore our services"
               >
                 Explore Services
               </Link>
-              <Link
-                href='/contact'
+              <Link to='/contact'
                 className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
                 aria-label="Get started with our services"
-=======
-              <Link to='/services'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
-              >
-                Explore Services
-              </Link>
-              <Link to='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
->>>>>>> c3d412029d4a968b29a7f591618ae8c274b897ea
               >
                 Get Started
               </Link>
