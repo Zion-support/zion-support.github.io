@@ -1,17 +1,23 @@
 /** @type {import('jest').Config} */
 module.exports = {
+	preset: 'ts-jest',
 	testEnvironment: 'jsdom',
-	transform: {
-		'^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
-	},
-	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-	testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],
-	transformIgnorePatterns: ['/node_modules/'],
+	testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
 	testPathIgnorePatterns: [
 		'/node_modules/',
-		'<rootDir>/zion-website/e2e/',
-		'<rootDir>/zion-website/',
-		'/e2e/',
+		'/dist/',
+		'/build/',
+		'/zion-website/e2e/',
 	],
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
-};
+	transform: {
+		'^.+\\.(ts|tsx)$': [
+			'ts-jest',
+			{
+				tsconfig: '<rootDir>/tsconfig.json',
+				useESM: false,
+			},
+		],
+	},
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+}
+
