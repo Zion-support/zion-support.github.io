@@ -5,6 +5,7 @@ import { SecurityDashboard } from '../src/components/SecurityDashboard';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
 import EnhancedDashboard from '../src/components/EnhancedDashboard';
 import EnhancedSearch from '../src/components/EnhancedSearch';
+import ComprehensiveAnalyticsDashboard from '../src/components/ComprehensiveAnalyticsDashboard';
 import { AdvancedPerformanceMonitor } from '../src/components/AdvancedPerformanceMonitor';
 import { AdvancedAnalyticsDashboard } from '../src/components/AdvancedAnalyticsDashboard';
 import { AdvancedSecurityMonitor } from '../src/components/AdvancedSecurityMonitor';
@@ -16,13 +17,14 @@ import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
 import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-handler' | 'performance-optimizer' | 'analytics-insights';
+type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-handler' | 'performance-optimizer' | 'analytics-insights';
 
 const Dashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
+  const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
   const [isRealTime, setIsRealTime] = useState(true);
 
   const tabs = [
+    { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
     { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
     { id: 'performance' as const, name: 'Performance', icon: '⚡' },
     { id: 'security' as const, name: 'Security', icon: '🔒' },
@@ -86,6 +88,8 @@ const Dashboard: React.FC = () => {
 
   const renderDashboard = () => {
     switch (activeTab) {
+      case 'comprehensive':
+        return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
         return <AnalyticsDashboard />;
       case 'performance':
@@ -378,15 +382,15 @@ const Dashboard: React.FC = () => {
           </div>
         );
       default:
-        return <AnalyticsDashboard />;
+        return <ComprehensiveAnalyticsDashboard />;
     }
   };
 
   return (
     <>
       <Head>
-        <title>Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive dashboard for monitoring analytics, performance, and security metrics" />
+        <title>Advanced Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring, security analysis, SEO optimization, and accessibility insights" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -396,8 +400,8 @@ const Dashboard: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-                <p className="text-sm text-gray-600">Monitor your application&apos;s performance and security</p>
+                <h1 className="text-2xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
+                <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights, performance optimization, security analysis, and SEO recommendations</p>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="text-sm text-gray-500">
