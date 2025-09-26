@@ -9,9 +9,7 @@ export default function Footer() {
         { name: 'Leadership', href: '/leadership' },
         { name: 'Careers', href: '/careers' },
         { name: 'News', href: '/news' },
-        { name: 'Contact', href: '/contact' },
-      ],
-    },
+        { name: 'Contact', href: '/contact' }]},
     {
       title: 'Services',
       links: [
@@ -22,9 +20,7 @@ export default function Footer() {
           href: '/ai-powered-enterprise-security'
         },
         { name: 'Research & Development', href: '/research-development' },
-        { name: 'Consulting', href: '/consulting' },
-      ],
-    },
+        { name: 'Consulting', href: '/consulting' }]},
     {
       title: 'AI Platforms',
       links: [
@@ -35,9 +31,7 @@ export default function Footer() {
           name: 'Research Assistant',
           href: '/ai-autonomous-research-assistant'
         },
-        { name: 'Neural Networks', href: '/quantum-neural-network-platform' },
-      ],
-    },
+        { name: 'Neural Networks', href: '/quantum-neural-network-platform' }]},
     {
       title: 'Resources',
       links: [
@@ -45,10 +39,7 @@ export default function Footer() {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Documentation', href: '/docs' },
         { name: 'Webinars', href: '/webinars' },
-        { name: 'Events', href: '/events' },
-      ],
-    },
-  ],
+        { name: 'Events', href: '/events' }]}],
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -74,8 +65,7 @@ export default function Footer() {
       name: 'Discord',
       href: 'https://discord.gg/ziontechgroup',
       icon: 'Discord'
-    },
-  ],
+    }],
   return (
     <footer className='bg-black/90 border-t border-white/10'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

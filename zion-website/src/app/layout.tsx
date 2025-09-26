@@ -20,8 +20,7 @@ export const metadata: Metadata = {
     'quantum computing',
     'autonomous systems',
     'business solutions',
-    'zion tech',
-  ],
+    'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -37,29 +36,22 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group',
-      },
-    ],
+        alt: 'Zion Tech Group'}],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description:
       'Transform your business with cutting-edge AI and technology solutions.',
-    images: ['/og-image.jpg'],
-  },
+    images: ['/og-image.jpg']},
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com',
-  ),
-}
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com')}
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#000000',
-}
+  themeColor: '#000000'}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

@@ -11,8 +11,7 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
-]
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' }]
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

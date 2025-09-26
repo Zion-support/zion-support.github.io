@@ -11,16 +11,16 @@ export default function MicroCRM() {;
     };
     {;
       icon: Calendar,title: 'Task Management',description: 'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'
-    },;
+    };
     {;
       icon: BarChart3,title: 'Sales Analytics',description: 'Comprehensive reporting and analytics to track performance and identify opportunities.'
     };
   ];
   const benefits = [;
-    'Streamline customer relationship managementImprove sales team productivity',;
-    'Enhance customer communicationTrack sales performance metrics',;
+    'Streamline customer relationship managementImprove sales team productivity';
+    'Enhance customer communicationTrack sales performance metrics';
     'Automate repetitive tasksCentralize customer data'
-  ],;
+  ];
 
   const useCases = [;
     {;

@@ -4,28 +4,27 @@ import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Roc
 import { SEO } from "@/components/SEO"
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from "../../data/revolutionary-2029-advanced-micro-saas-services"
 export default function RevolutionaryServices2029() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [sortBy, setSortBy] = useState('popularity'),;
-  const [isPlaying, setIsPlaying] = useState(false),;
-  const [volume, setVolume] = useState(0.5),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
 
   const categories = ['AllAI & Automation', 'Quantum Computing & AIAI & Security', 'AI & MarketingAI & Sales', 'AI & SupportAI & Analytics', 'IT & InfrastructureQuantum Computing & Finance', 'AI & Healthcare']
 
   const filteredServices = REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),;
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory
-    return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
-  }),;
+    return matchesSearch && matchesCategory;&& matchesCategory; matchesCategory});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'popularity':;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'price-low':;
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':;
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':;
@@ -56,8 +55,8 @@ export default function RevolutionaryServices2029() {;
             key={i};
             className="[^"]*"
             animate={{;
-              x: [0, 100, 0],;
-              y: [0, -100, 0],;
+              x: [0, 100, 0];
+              y: [0, -100, 0];
               opacity: [0.2, 0.8, 0.2]
             }};
             transition={{;
@@ -381,16 +380,16 @@ export default function RevolutionaryServices2029() {;
         };
         @keyframes blob {;
           0% {;
-            transform: translate(0px, 0px) scale(1),;
+            transform: translate(0px, 0px) scale(1);
           };
           33% {;
-            transform: translate(30px, -50px) scale(1.1),;
+            transform: translate(30px, -50px) scale(1.1);
           };
           66% {;
-            transform: translate(-20px, 20px) scale(0.9),;
+            transform: translate(-20px, 20px) scale(0.9);
           };
           100% {;
-            transform: translate(0px, 0px) scale(1),;
+            transform: translate(0px, 0px) scale(1);
           };
         };
         .line-clamp-3 {;

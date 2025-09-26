@@ -20,9 +20,9 @@ import AccountSettings from "@/pages/AccountSettings"
 import ProjectRoom from "@/pages/ProjectRoom"
 import VideoCall from "@/pages/VideoCall"
 import Services from "@/pages/Services"
-const ContentRoutes = () => {;
+const ContentRoutes = () => {
   return (
-    <Routes>;
+    <Routes>
       {/* Content Routes */};
       <Route path="/" element={<Home />} />;
       <Route path="/home" element={<Home />} />;
@@ -73,9 +73,9 @@ const ContentRoutes = () => {;
 
       {/* Sitemap Pages */};
       <Route path="/sitemap" element={<Sitemap />} />;
-      <Route path="/sitemap-page" element={<SitemapPage />} />;
-    </[^>]*>
-  ),;
-},;
+      <Route path="/sitemap-page" element={<SitemapPage />} />
+    </Routes>
+  );
+};
 
 export default ContentRoutes;

@@ -3,43 +3,43 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } fro
 const InfrastructureServices = () => {;
   const infrastructureServices = [;
     {;
-      title: "Network Design & Management",description: "Scalable network architecture and optimization for enterprise needs.",price: "From $5,000/month",;
-      features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"],;
+      title: "Network Design & Management",description: "Scalable network architecture and optimization for enterprise needs.",price: "From $5,000/month";
+      features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"];
       icon: Network;
     };
     {;
-      title: "System Administration",description: "Comprehensive system management and maintenance services.",price: "From $3,500/month",;
-      features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],;
+      title: "System Administration",description: "Comprehensive system management and maintenance services.",price: "From $3,500/month";
+      features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"];
       icon: Server;
     };
     {;
-      title: "Data Center Solutions",description: "Reliable hosting, colocation, and data center management.",;
-      price: "From $8,000/month",;
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
+      title: "Data Center Solutions",description: "Reliable hosting, colocation, and data center management.";
+      price: "From $8,000/month";
+      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"];
       icon: Database;
     };
   ];
   const technologies = [;
     {;
-      name: "Virtualization",description: "VMware, Hyper-V, and container solutions",;
+      name: "Virtualization",description: "VMware, Hyper-V, and container solutions";
       icon: Cpu,features: ["VMware vSphere", "Docker containers", "Kubernetes orchestration", "Resource optimization"]
-    },;
+    };
     {;
       name: "Storage Solutions",description: "Enterprise storage and backup systems",icon: HardDrive,features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
-    },;
+    };
     {;
       name: "Network Security",description: "Advanced network protection and monitoring",icon: Shield,features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
     };
-  ],;
+  ];
 
   const benefits = [;
-    "Improved system reliability and uptime",;
-    "Enhanced security and compliance",;
-    "Scalable infrastructure that grows with your business",;
-    "Reduced operational costs and complexity",;
-    "Expert support and maintenance",;
+    "Improved system reliability and uptime";
+    "Enhanced security and compliance";
+    "Scalable infrastructure that grows with your business";
+    "Reduced operational costs and complexity";
+    "Expert support and maintenance";
     "Future-proof technology solutions"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">;
@@ -150,7 +150,7 @@ const InfrastructureServices = () => {;
                 Why Choose Our Infrastructure?;
               </[^>]*>
               <p className="text-lg text-gray-300 mb-6">;
-                Our infrastructure solutions provide the reliability, security,;
+                Our infrastructure solutions provide the reliability, security;
                 and scalability your business needs to succeed.;
               </[^>]*>
               <ul className="space-y-3">;

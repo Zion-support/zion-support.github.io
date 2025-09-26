@@ -2,48 +2,48 @@ import React from "react"
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { ;
-  Globe,;
-  Brain, ;
-  Zap, ;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  Lock,;
-  Database,;
-  Cpu,;
-  Network,;
-  BarChart3,;
-  FileText,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Building,;
-  Video,;
-  Eye,;
-  Target,;
-  Users,;
-  ArrowRight,;
-  Key,;
-  Fingerprint,;
-  EyeOff,;
-  Server,;
-  Globe2,;
-  ShieldCheck,;
-  Wifi,;
-  Smartphone,;
-  Cloud,;
-  Activity,;
-  Clock,;
-  BarChart,;
-  PieChart,;
-  Cube,;
-  Layers,;
-  Monitor,;
-  Smartphone,;
-  Factory,;
-  Car,;
+  Globe;
+  Brain;
+  Zap;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Award;
+  Lock;
+  Database;
+  Cpu;
+  Network;
+  BarChart3;
+  FileText;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Building;
+  Video;
+  Eye;
+  Target;
+  Users;
+  ArrowRight;
+  Key;
+  Fingerprint;
+  EyeOff;
+  Server;
+  Globe2;
+  ShieldCheck;
+  Wifi;
+  Smartphone;
+  Cloud;
+  Activity;
+  Clock;
+  BarChart;
+  PieChart;
+  Cube;
+  Layers;
+  Monitor;
+  Smartphone;
+  Factory;
+  Car;
   Heart;
 } from "lucide-react"
 export default function DigitalTwin() {;
@@ -68,10 +68,10 @@ export default function DigitalTwin() {;
     };
   ];
   const benefits = [;
-    'Reduce operational costs by 30% with predictive maintenanceImprove asset performance by 25% through optimization',;
-    'Minimize downtime with real-time monitoring and alertsEnable remote operations and virtual collaboration',;
+    'Reduce operational costs by 30% with predictive maintenanceImprove asset performance by 25% through optimization';
+    'Minimize downtime with real-time monitoring and alertsEnable remote operations and virtual collaboration';
     'Optimize resource allocation and energy efficiencyAccelerate decision-making with data-driven insights'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -90,17 +90,17 @@ export default function DigitalTwin() {;
   const digitalTwinCapabilities = [;
     {;
       name: 'Real-Time Monitoring',description: 'Live data synchronization and instant status updates',examples: ['Live sensor dataPerformance metrics', 'Status monitoring']
-    },;
+    };
     {;
       name: 'Predictive Analytics',description: 'AI-powered forecasting and predictive maintenance',examples: ['Failure predictionPerformance optimization', 'Trend analysis']
-    },;
+    };
     {;
       name: '3D Visualization',description: 'Immersive 3D models and interactive simulations',examples: ['Virtual walkthroughsInteractive models', 'Spatial analysis']
-    },;
+    };
     {;
       name: 'Simulation & Testing',description: 'Virtual testing and scenario modeling',examples: ['What-if scenariosPerformance testing', 'Risk assessment']
     };
-  ],;
+  ];
 
   return (
     <>;

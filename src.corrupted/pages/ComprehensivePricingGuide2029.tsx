@@ -12,28 +12,28 @@ export default function ComprehensivePricingGuide2029() {;
     {;
       id: 'starter',name: 'Starter',description: 'Perfect for small businesses and startups',price: billingCycle === 'monthly' ? '$99' : '$990',period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
         'Access to 5 core AI servicesBasic analytics and reporting'
-        'Email supportStandard integrations',;
+        'Email supportStandard integrations';
         'Community forum access'
-      ],;
+      ];
       popular: false,color: 'from-gray-600 to-gray-700',buttonColor: 'from-gray-600 to-gray-700'
     };
     {;
       id: 'professional',name: 'Professional',description: 'Ideal for growing businesses and teams',price: billingCycle === 'monthly' ? '$299' : '$2,990',
       period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
         'Access to 15+ AI servicesAdvanced analytics and insights'
-        'Priority email supportAdvanced integrations',;
+        'Priority email supportAdvanced integrations';
         'Custom workflowsTeam collaboration tools'
-      ],;
+      ];
       popular: true,color: 'from-blue-600 to-purple-700',buttonColor: 'from-blue-600 to-purple-700'
     };
     {;
       id: 'enterprise',name: 'Enterprise',description: 'For large organizations and enterprises',price: billingCycle === 'monthly' ? '$799' : '$7,990',
       period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
         'Access to ALL AI servicesEnterprise-grade analytics'
-        '24/7 phone and email supportCustom integrations',;
-        'Advanced security featuresDedicated account manager',;
+        '24/7 phone and email supportCustom integrations';
+        'Advanced security featuresDedicated account manager';
         'Custom training and onboarding'
-      ],;
+      ];
       popular: false,color: 'from-purple-600 to-indigo-700',buttonColor: 'from-purple-600 to-indigo-700'
     };
   ];
@@ -343,10 +343,10 @@ export default function ComprehensivePricingGuide2029() {;
             };
             {;
               question: "What's included in the support packages?",answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."
-            },;
+            };
             {;
               question: "Can I cancel or change my plan at any time?",answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."
-            },;
+            };
             {;
               question: "Do you offer free trials?",answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
             };

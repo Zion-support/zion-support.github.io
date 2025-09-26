@@ -2,23 +2,23 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  Shield,;
-  Lock, ;
-  Eye, ;
-  Key, ;
-  Server, ;
-  Users, ;
-  CheckCircle, ;
-  AlertTriangle,;
-  FileText,;
-  Globe,;
-  Database,;
-  Network,;
-  Zap,;
-  ArrowRight,;
-  ExternalLink,;
-  ChevronDown,;
-  ChevronUp,;
+  Shield;
+  Lock;
+  Eye;
+  Key;
+  Server;
+  Users;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Globe;
+  Database;
+  Network;
+  Zap;
+  ArrowRight;
+  ExternalLink;
+  ChevronDown;
+  ChevronUp;
   Mail;
 } from "lucide-react"
 export default function Security() {;
@@ -29,75 +29,75 @@ export default function Security() {;
         'Real-time threat monitoringBehavioral analysis'
         'Automated response systems24/7 security operations'
       ];
-    },;
+    };
     {;
       icon: Lock,title: 'Data Encryption',description: 'End-to-end encryption for data at rest and in transit',features: [;
         'AES-256 encryptionTLS 1.3 protocols'
         'Key management systemsHardware security modules'
       ];
-    },;
+    };
     {;
       icon: Users,title: 'Identity & Access Management',description: 'Comprehensive user authentication and authorization controls',features: [;
         'Multi-factor authenticationSingle sign-on (SSO)'
         'Role-based access controlPrivileged access management'
       ];
-    },;
+    };
     {;
       icon: Server,title: 'Infrastructure Security',description: 'Secure cloud infrastructure with network segmentation',features: [;
         'VPC and subnet isolationWeb application firewalls'
         'DDoS protectionIntrusion detection systems'
       ];
-    },;
+    };
     {;
-      icon: Database,title: 'Data Protection',description: 'Comprehensive data backup, recovery, and privacy controls',;
+      icon: Database,title: 'Data Protection',description: 'Comprehensive data backup, recovery, and privacy controls';
       features: [;
         'Automated backupsPoint-in-time recovery'
         'Data classificationPrivacy by design'
       ];
-    },;
+    };
     {;
       icon: Network,title: 'Network Security',description: 'Advanced network security with monitoring and controls',features: [;
         'Network segmentationTraffic analysis'
         'VPN and secure tunnelsNetwork access control'
       ];
     };
-  ],;
+  ];
 
   const complianceFrameworks = [;
     {;
-      name: 'SOC 2 Type II',status: 'Certified',description: 'Service Organization Control 2 Type II certification for security, availability, and confidentiality',;
+      name: 'SOC 2 Type II',status: 'Certified',description: 'Service Organization Control 2 Type II certification for security, availability, and confidentiality';
       details: [;
         'Annual third-party auditsContinuous monitoring'
         'Regular security assessmentsComprehensive reporting'
-      ],;
+      ];
       icon: CheckCircle,color: 'text-green-400'
     };
     {;
       name: 'ISO 27001',status: 'Certified',description: 'International standard for information security management systems',details: [;
         'Risk-based approachContinuous improvement'
         'Management commitmentRegular audits and reviews'
-      ],;
+      ];
       icon: CheckCircle,color: 'text-green-400'
     };
     {;
       name: 'GDPR',status: 'Compliant',description: 'General Data Protection Regulation compliance for EU data protection',details: [;
         'Data subject rightsPrivacy by design'
         'Data breach notificationRegular compliance audits'
-      ],;
+      ];
       icon: CheckCircle,color: 'text-green-400'
     };
     {;
       name: 'HIPAA',status: 'Compliant',description: 'Health Insurance Portability and Accountability Act compliance',details: [;
         'Protected health informationAdministrative safeguards'
         'Physical safeguardsTechnical safeguards'
-      ],;
+      ];
       icon: CheckCircle,color: 'text-green-400'
     };
     {;
       name: 'PCI DSS',status: 'Compliant',description: 'Payment Card Industry Data Security Standard compliance',details: [;
         'Cardholder data protectionVulnerability management'
         'Access controlRegular security testing'
-      ],;
+      ];
       icon: CheckCircle,color: 'text-green-400'
     };
   ];

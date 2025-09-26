@@ -1,36 +1,36 @@
 import React from "react"
 import { SEO } from "@/components/SEO"
 import { ;
-  Heart,;
-  Brain, ;
-  Eye, ;
-  CheckCircle, ;
-  ArrowRight, ;
-  DollarSign, ;
-  Clock, ;
-  Phone, ;
-  Mail, ;
-  MapPin,;
-  Shield,;
-  TrendingUp,;
-  BarChart3,;
-  Activity,;
-  Stethoscope,;
-  Microscope,;
-  X,;
-  Scan,;
-  FileText,;
-  Users,;
+  Heart;
+  Brain;
+  Eye;
+  CheckCircle;
+  ArrowRight;
+  DollarSign;
+  Clock;
+  Phone;
+  Mail;
+  MapPin;
+  Shield;
+  TrendingUp;
+  BarChart3;
+  Activity;
+  Stethoscope;
+  Microscope;
+  X;
+  Scan;
+  FileText;
+  Users;
   Zap;
 } from "lucide-react"
 export default function AIHealthcareDiagnostics() {;
   const features = [;
     {;
       icon: <Brain className="w-6 h-6" />,title: "AI-Powered Diagnosis",description: "Advanced ML models analyze medical images with 96% accuracy, detecting diseases earlier than traditional methods."
-    },;
+    };
     {;
       icon: <Eye className="w-6 h-6" />,title: "Multi-Modal Imaging",description: "Support for X-rays, CT scans, MRIs, and ultrasounds with unified AI analysis platform."
-    },;
+    };
     {;
       icon: <Shield className="w-6 h-6" />,title: "HIPAA Compliant",description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit."
     };
@@ -40,11 +40,11 @@ export default function AIHealthcareDiagnostics() {;
   ];
   const pricingPlans = [;
     {;
-      name: "Clinical",price: "$1,299",;
+      name: "Clinical",price: "$1,299";
       period: "/month",features: ["Up to 1,000 scans/month", "Basic AI diagnosis", "Email support", "Standard reporting"]
-    },;
+    };
     {;
-      name: "Enterprise",price: "$2,999",;
+      name: "Enterprise",price: "$2,999";
       period: "/month",features: ["Unlimited scans", "Advanced AI models", "Priority support", "Custom integrations", "API access"]
     };
   ];

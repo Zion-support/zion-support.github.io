@@ -4,28 +4,28 @@ const Consulting = () => {;
   const consultingServices = [;
     {;
       icon: Lightbulb,title: "Technology Strategy",description: "Strategic technology planning and digital transformation roadmaps",features: ["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
-    },;
+    };
     {;
       icon: Target,title: "AI & ML Consulting",description: "Expert guidance on AI implementation and machine learning strategies",features: ["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
-    },;
+    };
     {;
       icon: Shield,title: "Cybersecurity Consulting",description: "Comprehensive security assessments and risk management strategies",features: ["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
-    },;
+    };
     {;
       icon: Globe,title: "Cloud Strategy",description: "Cloud migration planning and multi-cloud optimization strategies",features: ["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
-    },;
+    };
     {;
-      icon: Database,title: "Data Strategy",description: "Data governance, analytics, and business intelligence consulting",;
+      icon: Database,title: "Data Strategy",description: "Data governance, analytics, and business intelligence consulting";
       features: ["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
-    },;
+    };
     {;
       icon: Zap,title: "Digital Innovation",description: "Emerging technology consulting and innovation acceleration",features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
     };
-  ],;
+  ];
 
   const industries = [;
     {;
-      title: "Financial Services",description: "Banking, insurance, and fintech consulting",;
+      title: "Financial Services",description: "Banking, insurance, and fintech consulting";
       icon: TrendingUp;
     };
     {;
@@ -45,13 +45,13 @@ const Consulting = () => {;
     };
   ];
   const benefits = [;
-    "Expert guidance from industry professionals",;
-    "Proven methodologies and best practices",;
-    "Customized solutions for your specific needs",;
-    "Long-term strategic partnerships",;
-    "Measurable results and ROI",;
+    "Expert guidance from industry professionals";
+    "Proven methodologies and best practices";
+    "Customized solutions for your specific needs";
+    "Long-term strategic partnerships";
+    "Measurable results and ROI";
     "Access to cutting-edge technology insights"
-  ],;
+  ];
 
   const process = [;
     {;

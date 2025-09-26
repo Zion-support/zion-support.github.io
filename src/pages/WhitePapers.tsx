@@ -7,14 +7,14 @@ import { FileText, Download, Calendar, User, ArrowRight, BookOpen, TrendingUp, T
 export const WhitePapers: React.FC = () => {
   const whitePapers = [;
     {;
-      id: 1,title: 'AI-Powered Business Transformation: A Comprehensive Guide 2025',description: 'Explore how artificial intelligence is revolutionizing business operations, from automation to decision-making processes.',;
+      id: 1,title: 'AI-Powered Business Transformation: A Comprehensive Guide 2025',description: 'Explore how artificial intelligence is revolutionizing business operations, from automation to decision-making processes.';
       category: 'AI & Business',author: 'Zion Tech Group Research Team',date: '2025-01-15',downloadCount: 1247,featured: true,icon: Brain,color: 'from-purple-500 to-pink-500'
     };
     {;
       id: 2,title: 'Quantum Computing in Enterprise: Practical Applications and ROI',description: 'A detailed analysis of quantum computing applications in enterprise environments and their measurable business impact.',category: 'Quantum Computing',author: 'Dr. Sarah Chen',date: '2024-12-20',downloadCount: 892,featured: true,icon: Zap,color: 'from-blue-500 to-cyan-500'
     };
     {;
-      id: 3,title: 'Cybersecurity in the AI Era: Threats, Solutions, and Best Practices',;
+      id: 3,title: 'Cybersecurity in the AI Era: Threats, Solutions, and Best Practices';
       description: 'Comprehensive guide to protecting AI systems and data in an increasingly connected digital landscape.',category: 'Cybersecurity',author: 'Marcus Rodriguez',date: '2024-11-30',downloadCount: 1563,featured: true,icon: Shield,color: 'from-green-500 to-emerald-500'
     };
     {;

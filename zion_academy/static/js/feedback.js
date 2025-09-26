@@ -23,21 +23,18 @@ class ZionFeedback {
         type: 'course',
         id: courseMatch[1],
         title: document.title
-      },
-    } else if (lessonMatch) {
+      }} else if (lessonMatch) {
       return {
         type: 'lesson',
         id: lessonMatch[1],
         title: document.title
-      },
-    }
+      }}
 ,
     return {
       type: 'general',
       id: null,
       title: document.title
-    },
-  }
+    }}
 ,
   createFeedbackWidget() {
     // Create floating feedback button,
@@ -433,8 +430,7 @@ class ZionFeedback {
       .then(response => response.json()),
       .catch(error => {
         console.error('Failed to fetch feedback stats:', error),
-        return { feedbacks: [] },
-      })}
+        return { feedbacks: [] }})}
 }
 ,
 // Initialize feedback when DOM is ready,

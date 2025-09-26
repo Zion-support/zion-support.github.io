@@ -1,226 +1,224 @@
 
-import { Route, Routes } from "react-router-dom"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import Dashboard from "@/pages/Dashboard"
-import ClientDashboard from "@/pages/ClientDashboard"
-import TalentDashboard from "@/pages/TalentDashboard"
-import CreatorDashboard from "@/pages/CreatorDashboard"
-import Analytics from "@/pages/Analytics"
-import ProjectMilestones from "@/pages/ProjectMilestones"
-import ProjectDetails from "@/pages/ProjectDetails"
-import ProjectRoom from "@/pages/ProjectRoom"
-//[^;]*
-import Payments from "@/pages/Payments"
-import Interviews from "@/pages/Interviews"
-import Notifications from "@/pages/Notifications"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker"
-import HiringTracker from "@/pages/HiringTracker"
-import PortfolioBuilder from "@/pages/PortfolioBuilder"
-//[^;]*
-import DeveloperPortal from "@/pages/DeveloperPortal"
-//[^;]*
-import OrdersPage from "@/pages/Orders"
-import OrderDetailPage from "@/pages/OrderDetail"
-import ContractBuilder from "@/pages/ContractBuilder"
-import Projects from "@/pages/Projects"
-const DashboardRoutes = () => {;
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import OrdersPage from "@/pages/Orders";
+import OrderDetailPage from "@/pages/OrderDetail";
+import ContractBuilder from "@/pages/ContractBuilder";
+import Projects from "@/pages/Projects";
+
+const DashboardRoutes = () => {
   return (
-    <Routes>;
-      {/* Dashboard Routes */};
-      <Route;
+    <Routes>
+      {/* Dashboard Routes */}
+      <Route
         path="/dashboard"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/client-dashboard"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <ClientDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/talent-dashboard"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <TalentDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/creator-dashboard"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <CreatorDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/analytics"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/project/:id/milestones"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <ProjectMilestones />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/project/:id"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <ProjectDetails />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/project/:id/room"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <ProjectRoom />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/messages"
-        element={;
-          <ProtectedRoute>;
-            <div>Messages Page</[^>]*>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <div>Messages Page</div>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/inbox"
-        element={;
-          <ProtectedRoute>;
-            <div>Inbox Page</[^>]*>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <div>Inbox Page</div>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/payments"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Payments />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/interviews"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Interviews />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/notifications"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Notifications />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/applications/track"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <ApplicationStatusTracker />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/hiring-tracker"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <HiringTracker />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/projects"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <Projects />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/portfolio-builder"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <PortfolioBuilder />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/referrals"
-        element={;
-          <ProtectedRoute>;
-            <div>Referrals Page</[^>]*>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <div>Referrals Page</div>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/developers"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <DeveloperPortal />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/wallet"
-        element={;
-          <ProtectedRoute>;
-            <div>Wallet Page</[^>]*>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <div>Wallet Page</div>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/orders"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <OrdersPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/orders/:orderId"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <OrderDetailPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/dashboard/api-access"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-      <Route;
+        element={
+          <ProtectedRoute>
+            <div>API Access</div>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/contract-builder"
-        element={;
-          <ProtectedRoute>;
-            <[^>]*/>
-          </[^>]*>
-        };
-      />;
-    </[^>]*>
-  ),;
-},;
+        element={
+          <ProtectedRoute>
+            <ContractBuilder />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+};
 
 export default DashboardRoutes;

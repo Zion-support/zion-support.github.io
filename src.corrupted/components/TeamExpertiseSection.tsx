@@ -1,24 +1,24 @@
 import React from "react"
 import { motion } from "framer-motion"
 import {;
-  Award,;
-  Users,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Zap,;
-  Star,;
-  CheckCircle,;
-  Globe,;
+  Award;
+  Users;
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Star;
+  CheckCircle;
+  Globe;
   Rocket;
 } from "lucide-react"
 const teamExpertise = [;
   {;
-    icon: "🎓",title: "Advanced Degrees",description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",;
+    icon: "🎓",title: "Advanced Degrees",description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities";
     count: "95%"
   };
   {;
-    icon: "🏆",title: "Industry Certifications",description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",;
+    icon: "🏆",title: "Industry Certifications",description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies";
     count: "50+"
   };
   {;
@@ -28,7 +28,7 @@ const teamExpertise = [;
     icon: "⚡",title: "Years of Experience",description: "Combined experience of over 200 years in technology and business solutions",count: "200+"
   };
   {;
-    icon: "🔬",title: "Research Publications",description: "Published research in leading AI, quantum computing, and blockchain journals",;
+    icon: "🔬",title: "Research Publications",description: "Published research in leading AI, quantum computing, and blockchain journals";
     count: "30+"
   };
   {;
@@ -36,15 +36,15 @@ const teamExpertise = [;
   };
 ];
 const coreExpertise = [;
-  "Artificial Intelligence & Machine Learning",;
-  "Quantum Computing & Algorithms",;
-  "Blockchain & Web3 Technologies",;
-  "Cloud Infrastructure & DevOps",;
-  "Cybersecurity & Compliance",;
-  "Data Science & Analytics",;
-  "IoT & Edge Computing",;
+  "Artificial Intelligence & Machine Learning";
+  "Quantum Computing & Algorithms";
+  "Blockchain & Web3 Technologies";
+  "Cloud Infrastructure & DevOps";
+  "Cybersecurity & Compliance";
+  "Data Science & Analytics";
+  "IoT & Edge Computing";
   "Mobile & Web Development"
-],;
+];
 
 export function TeamExpertiseSection() {;
   return (

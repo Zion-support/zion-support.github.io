@@ -24,41 +24,41 @@ export default function AIProjectManagement() {;
     };
   ];
   const benefits = [;
-    "Reduce project delivery time by 30-50%",;
-    "Improve resource utilization by 40-60%",;
-    "Increase project success rate by 25-40%",;
-    "Reduce project costs by 20-35%",;
-    "Eliminate manual reporting by 80%",;
+    "Reduce project delivery time by 30-50%";
+    "Improve resource utilization by 40-60%";
+    "Increase project success rate by 25-40%";
+    "Reduce project costs by 20-35%";
+    "Eliminate manual reporting by 80%";
     "Improve stakeholder communication by 50%"
-  ],;
+  ];
 
   const solutions = [;
     {;
-      title: "AI Project Planning",description: "Intelligent project planning and scheduling with predictive analytics",features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"],;
+      title: "AI Project Planning",description: "Intelligent project planning and scheduling with predictive analytics",features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"];
       price: "From $3,000/month"
-    },;
+    };
     {;
-      title: "Team Management AI",description: "AI-powered team allocation and performance optimization",features: ["Workload balancing", "Skill matching", "Performance tracking"],;
+      title: "Team Management AI",description: "AI-powered team allocation and performance optimization",features: ["Workload balancing", "Skill matching", "Performance tracking"];
       price: "From $2,500/month"
-    },;
+    };
     {;
-      title: "Risk Management Platform",description: "Advanced risk identification and mitigation strategies",features: ["Risk prediction", "Mitigation planning", "Real-time alerts"],;
+      title: "Risk Management Platform",description: "Advanced risk identification and mitigation strategies",features: ["Risk prediction", "Mitigation planning", "Real-time alerts"];
       price: "From $2,000/month"
-    },;
+    };
     {;
-      title: "Complete PM Suite",description: "Full AI-powered project management solution",features: ["All features", "Custom integrations", "Enterprise support"],;
+      title: "Complete PM Suite",description: "Full AI-powered project management solution",features: ["All features", "Custom integrations", "Enterprise support"];
       price: "From $6,000/month"
     };
-  ],;
+  ];
 
   const projectTypes = [;
-    "Software Development",;
-    "Construction & Engineering",;
-    "Marketing Campaigns",;
-    "Product Launches",;
-    "Research & Development",;
+    "Software Development";
+    "Construction & Engineering";
+    "Marketing Campaigns";
+    "Product Launches";
+    "Research & Development";
     "Event Management"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -92,7 +92,7 @@ export default function AIProjectManagement() {;
             ;
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Transform your project delivery with AI-powered management that optimizes ;
-              planning, resource allocation, and risk management. Deliver projects faster, ;
+              planning, resource allocation, and risk management. Deliver projects faster;
               cheaper, and with unprecedented success rates.;
             </[^>]*>
             ;

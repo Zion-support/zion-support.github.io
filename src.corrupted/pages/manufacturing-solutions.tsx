@@ -1,17 +1,17 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Factory,;
-  Cog, ;
-  Bot, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap,;
-  BarChart3,;
-  Network,;
-  Eye,;
-  Brain,;
-  Cloud,;
+  Factory;
+  Cog;
+  Bot;
+  TrendingUp;
+  Shield;
+  Zap;
+  BarChart3;
+  Network;
+  Eye;
+  Brain;
+  Cloud;
   Star;
 } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -19,23 +19,23 @@ const ManufacturingSolutions: React.FC = () => {
   const solutions = [;
     {;
       title: 'Smart Factory Automation',description: 'Intelligent automation systems that optimize production processes and increase efficiency.',icon: Bot,features: ['Process optimizationReal-time monitoring', 'Predictive maintenanceQuality control']
-    },;
+    };
     {;
       title: 'Industrial IoT Integration',description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',icon: Network,features: ['Sensor networksData collection', 'Remote monitoringPredictive analytics']
-    },;
+    };
     {;
       title: 'AI-Powered Quality Control',description: 'Advanced AI systems for automated quality inspection and defect detection.',icon: Eye,features: ['Visual inspectionDefect detection', 'Quality assuranceCompliance monitoring']
-    },;
+    };
     {;
       title: 'Predictive Maintenance',description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',icon: TrendingUp,features: ['Equipment monitoringFailure prediction', 'Maintenance schedulingCost optimization']
-    },;
+    };
     {;
       title: 'Supply Chain Optimization',description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',icon: Cog,features: ['Demand forecastingInventory optimization', 'Route planningSupplier management']
-    },;
+    };
     {;
       title: 'Digital Twin Technology',description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',icon: Cloud,features: ['System simulationPerformance optimization', 'Scenario testingReal-time monitoring']
     };
-  ],;
+  ];
 
   const benefits = [;
     {;

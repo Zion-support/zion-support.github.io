@@ -1,27 +1,27 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Atom,;
-  Cpu, ;
-  Zap, ;
-  Brain, ;
-  Users, ;
-  Globe, ;
-  Database,;
-  Network,;
-  Lock,;
-  Eye,;
-  Target,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  Rocket,;
-  Microscope,;
+  Atom;
+  Cpu;
+  Zap;
+  Brain;
+  Users;
+  Globe;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Target;
+  Award;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
+  Rocket;
+  Microscope;
   TestTube;
 } from "lucide-react"
 const QuantumComputingElite: React.FC = () => {
@@ -47,50 +47,50 @@ const QuantumComputingElite: React.FC = () => {
   ];
   const pricing = [;
     {;
-      name: "Quantum Starter",price: "$8,500",;
+      name: "Quantum Starter",price: "$8,500";
       period: "/month",description: "Perfect for research institutions and startups",features: [;
         "Up to 100 qubit access"
-        "Basic quantum algorithms",;
-        "Standard quantum simulators",;
-        "Email support",;
-        "5 user licenses",;
+        "Basic quantum algorithms";
+        "Standard quantum simulators";
+        "Email support";
+        "5 user licenses";
         "Basic quantum education"
       ];
-    },;
+    };
     {;
-      name: "Quantum Professional",price: "$18,000",;
+      name: "Quantum Professional",price: "$18,000";
       period: "/month",description: "Ideal for growing businesses and research teams",features: [;
         "Up to 500 qubit access"
-        "Advanced quantum algorithms",;
-        "Custom quantum circuits",;
-        "Priority support",;
-        "25 user licenses",;
-        "API access",;
+        "Advanced quantum algorithms";
+        "Custom quantum circuits";
+        "Priority support";
+        "25 user licenses";
+        "API access";
         "Quantum consulting"
-      ],;
+      ];
       popular: true;
     };
     {;
-      name: "Quantum Enterprise",price: "$45,000",;
+      name: "Quantum Enterprise",price: "$45,000";
       period: "/month",description: "For large organizations with complex quantum needs",features: [;
         "Unlimited qubit access"
-        "Full quantum suite",;
-        "Custom quantum development",;
-        "24/7 dedicated support",;
-        "Unlimited users",;
-        "White-label options",;
+        "Full quantum suite";
+        "Custom quantum development";
+        "24/7 dedicated support";
+        "Unlimited users";
+        "White-label options";
         "On-premise quantum computers"
       ];
     };
-  ],;
+  ];
 
   const quantumApplications = [;
     {;
       title: "Drug Discovery & Pharmaceuticals",description: "Quantum molecular modeling for faster drug discovery, protein folding, and chemical simulations"
-    },;
+    };
     {;
       title: "Financial Modeling & Optimization",description: "Portfolio optimization, risk assessment, and algorithmic trading using quantum algorithms"
-    },;
+    };
     {;
       title: "Machine Learning & AI",description: "Quantum machine learning algorithms for pattern recognition and data analysis"
     };
@@ -105,15 +105,15 @@ const QuantumComputingElite: React.FC = () => {
     };
   ];
   const quantumTechnologies = [;
-    "Superconducting Qubits",;
-    "Trapped Ion Qubits",;
-    "Topological Qubits",;
-    "Photonic Qubits",;
-    "Silicon Spin Qubits",;
-    "Quantum Annealing",;
-    "Quantum Error Correction",;
+    "Superconducting Qubits";
+    "Trapped Ion Qubits";
+    "Topological Qubits";
+    "Photonic Qubits";
+    "Silicon Spin Qubits";
+    "Quantum Annealing";
+    "Quantum Error Correction";
     "Quantum Memory Systems"
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

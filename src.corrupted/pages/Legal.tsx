@@ -3,19 +3,19 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { ;
-  FileText,;
-  Shield, ;
-  Lock, ;
-  Eye, ;
-  Scale, ;
-  CheckCircle,;
-  ArrowRight,;
-  BookOpen,;
-  UserCheck,;
-  Globe,;
-  Database,;
-  Server,;
-  Mail,;
+  FileText;
+  Shield;
+  Lock;
+  Eye;
+  Scale;
+  CheckCircle;
+  ArrowRight;
+  BookOpen;
+  UserCheck;
+  Globe;
+  Database;
+  Server;
+  Mail;
   Phone;
 } from "lucide-react"
 const Legal: React.FC = () => {
@@ -24,7 +24,7 @@ const Legal: React.FC = () => {
       title: 'Terms of Service',description: 'Our terms and conditions for using Zion Tech Group services',href: '/terms',icon: FileText,category: 'Service Terms'
     };
     {;
-      title: 'Privacy Policy',description: 'How we collect, use, and protect your personal information',;
+      title: 'Privacy Policy',description: 'How we collect, use, and protect your personal information';
       href: '/privacy',icon: Shield,category: 'Data Protection'
     };
     {;

@@ -28,7 +28,7 @@ const NeuralInterfaceRevolution2026 = () => {
           <div className="text-4xl mb-4">🧠</div>
           <h3 className="text-xl font-semibold mb-2">Neural Enhancement</h3>
           <p className="text-gray-600 mb-4">
-            Cognitive enhancement technologies for improved mental performance.
+            Cognitive enhancement technologies for improved mental window.performance.
           </p>
           <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">
             Explore →
