@@ -3,7 +3,7 @@ import { Pool } from 'pg'
 // Database connection pool configuration
 export const dbPool = new Pool({
   host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
+  port: parseInt(process.env.DB_PORT || '5432', 10),
   database: process.env.DB_NAME || 'zion_tech',
   user: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || '',
@@ -14,8 +14,11 @@ export const dbPool = new Pool({
   connectionTimeoutMillis: 2000,
   maxUses: 7500,
   // SSL configuration for production
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false})
-
+  ssl:
+    process.env.NODE_ENV === 'production'
+      ? { rejectUnauthorized: false }
+      : false,
+})
 // Graceful shutdown
 process.on('SIGINT', async () => {
   // // // console.log('Closing database pool...')
