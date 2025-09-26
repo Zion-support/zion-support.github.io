@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+// SEO component removed; use Next.js Metadata instead
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const metadata = {

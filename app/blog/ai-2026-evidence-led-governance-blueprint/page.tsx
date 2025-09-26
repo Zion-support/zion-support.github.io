@@ -1,4 +1,5 @@
 import Link from 'next/link';
+// SEO component removed; use Next.js Metadata instead
 
 export const metadata = {
   title: 'AI 2026: Evidence‑Led Governance Blueprint | Zion Tech Group',

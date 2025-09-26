@@ -36,10 +36,10 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "noImplicitOverride": false,
     "types": [
       "node",
@@ -98,7 +98,14 @@
     "src/legal",
     "src/i18n.js",
     "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
-    "src/utils/cartUtils.js"
+    
+    "src/utils/cartUtils.js",
+    "app/blog/**",
+    "app/resources/**",
+    "app/case-studies/**",
+    "app/components/*Banner*.tsx",
+    "app/components/UltimateContent*",
+    "app/components/AdvancedNeuralArchitecturesPromotionBanner.tsx",
+    "app/components/LazyImage.tsx"
   ]
 }
