@@ -197,6 +197,8 @@ export class ResourceOptimizer {
 }
 
 // Bundle optimization utilities
+import React from 'react'
+
 export class BundleOptimizer {
   static async loadChunk(chunkName: string): Promise<Record<string, unknown>> {
     try {
