@@ -12,11 +12,7 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 
 // Define the global error handler (exported for testing purposes)
 export const globalAxiosErrorHandler = (error: unknown) => {
-  const axiosError = error as AxiosError;
-  const response = axiosError?.response;
-  const config = (axiosError?.config as AxiosRequestConfig | undefined) || {};
-
-  const contentType = typeof response?.headers?.['content-type'] === 'string' ? response?.headers?.['content-type'] : undefined;
+  const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string unknown> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON');
   }
@@ -50,8 +46,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     '/telemetry',
     'supabase.co',
     'googleapis.com',
-    'github.com/api',
-  ];
+    'github.com/api'];
 
   // Check if URL should fail silently
   const shouldFailSilently = (url: string): boolean => {
@@ -107,8 +102,7 @@ axios.interceptors.response.use(
 
 const API_BASE = axios.defaults.baseURL;
 const apiClient = axios.create({
-  baseURL: `${API_BASE}/api/v1/services`,
-});
+  baseURL: `${API_BASE}/api/v1/services`});
 
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
@@ -121,8 +115,7 @@ axiosRetry(apiClient, {
       axiosRetry.isNetworkError(error) ||
       axiosRetry.isIdempotentRequestError(error)
     );
-  },
-});
+  }});
 
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
