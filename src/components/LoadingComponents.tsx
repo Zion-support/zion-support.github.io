@@ -4,12 +4,14 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   className?: string;
+  'data-testid'?: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'blue',
-  className = ''
+  className = '',
+  'data-testid': dataTestId
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',
@@ -27,7 +29,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}`} />
+    <div 
+      data-testid={dataTestId}
+      className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}`} 
+    />
   );
 };
 
@@ -233,6 +238,66 @@ export const LoadingChart: React.FC<LoadingChartProps> = ({
           <div className="text-gray-400 text-sm">Loading chart...</div>
         </div>
       </div>
+    </div>
+  );
+};
+
+// Additional components for testing
+interface SkeletonProps {
+  width?: number | string;
+  height?: number | string;
+  className?: string;
+  'data-testid'?: string;
+  rounded?: boolean;
+  animate?: boolean;
+}
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  width = '100%',
+  height = '1rem',
+  className = '',
+  'data-testid': dataTestId,
+  rounded = true,
+  animate = true
+}) => {
+  const classes = [
+    'bg-gray-200',
+    rounded ? 'rounded' : '',
+    animate ? 'animate-pulse' : '',
+    className
+  ].filter(Boolean).join(' ');
+
+  return (
+    <div
+      data-testid={dataTestId}
+      className={classes}
+      style={{ width, height }}
+    />
+  );
+};
+
+export const ServiceCardSkeleton: React.FC<{ className?: string }> = ({
+  className = ''
+}) => {
+  return (
+    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}`}>
+      <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+      <div className="h-3 bg-gray-300 rounded w-1/2 mb-4"></div>
+      <div className="h-20 bg-gray-300 rounded mb-4"></div>
+      <div className="h-8 bg-gray-300 rounded w-1/3"></div>
+    </div>
+  );
+};
+
+export const FeatureCardSkeleton: React.FC<{ className?: string }> = ({
+  className = ''
+}) => {
+  return (
+    <div className={`animate-pulse bg-white rounded-lg shadow p-6 ${className}`}>
+      <div className="h-6 bg-gray-300 rounded w-1/2 mb-2"></div>
+      <div className="h-4 bg-gray-300 rounded w-3/4 mb-4"></div>
+      <div className="h-16 bg-gray-300 rounded mb-4"></div>
+      <div className="h-8 bg-gray-300 rounded w-1/4"></div>
     </div>
   );
 };
