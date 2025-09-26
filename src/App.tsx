@@ -36,7 +36,7 @@ import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase20
 import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
 import BlogPost from './pages/BlogPost';
 
-export default function App(): JSX.Element {
+export default function App(): React.ReactElement {
   return (
     <Router>
       <div className="min-h-screen bg-white">
