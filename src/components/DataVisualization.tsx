@@ -82,7 +82,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     }
   }, [type, drawPieChart, drawBarChart, drawLineChart]);
 
-  const drawPieChart = (ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
+  const drawPieChart = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
     const centerX = width / 2;
     const centerY = height / 2;
     const radius = Math.min(width, height) / 2 - 40;
@@ -125,9 +125,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       currentAngle += sliceAngle;
     });
-  };
+  }, [type, data]);
 
-  const drawBarChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawBarChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const barWidth = chartWidth / data.labels.length * 0.8;
     const barSpacing = chartWidth / data.labels.length * 0.2;
     const maxValue = Math.max(...data.datasets[0].data);
@@ -150,9 +150,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       // Draw label
       ctx.fillText(data.labels[index], x + barWidth / 2, padding + chartHeight + 20);
     });
-  };
+  }, [data]);
 
-  const drawLineChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawLineChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const maxValue = Math.max(...data.datasets[0].data);
     const minValue = Math.min(...data.datasets[0].data);
     const valueRange = maxValue - minValue;
@@ -201,7 +201,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       // Draw label
       ctx.fillText(data.labels[index], point.x, padding + chartHeight + 20);
     });
-  };
+  }, [type, data]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
     if (!showTooltips) return;
