@@ -26,15 +26,10 @@
   }
 
   .btn-secondary {
-<<<<<<< HEAD
-=======
-    background-color: #64748b;
->>>>>>> 4364a6822b7e8b6bff5f8f82be8d51d1530767b1
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-<<<<<<< HEAD
     transition: all 0.3s;
     background-color: #1e293b;
     border: 1px solid #475569;
@@ -54,25 +49,5 @@
   
   .card:hover {
     background-color: rgba(30, 41, 59, 0.7);
-=======
-    border: 1px solid #64748b;
-    transition: all 0.3s;
-  }
-
-  .btn-secondary:hover {
-    background-color: #94a3b8;
-  }
-
-  .card {
-    background-color: rgba(100, 116, 139, 0.5);
-    border: 1px solid #94a3b8;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    transition: all 0.3s;
-  }
-
-  .card:hover {
-    background-color: rgba(100, 116, 139, 0.7);
->>>>>>> 4364a6822b7e8b6bff5f8f82be8d51d1530767b1
   }
 }
