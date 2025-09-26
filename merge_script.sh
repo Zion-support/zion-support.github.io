@@ -1,82 +1,57 @@
 #!/bin/bash
 
-# Comprehensive merge script for resolving conflicts and merging branches
-set -e
+# Script to merge all cursor/check-fix-push-and-merge-to-main branches
+echo "Starting systematic merge of cursor branches..."
 
-echo "🚀 Starting comprehensive merge process..."
+# Get all branches with the pattern
+branches=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sed 's/origin\///')
 
-# Function to merge a branch safely
-merge_branch() {
-    local branch_name="$1"
-    echo "📋 Processing branch: $branch_name"
+# Counter for tracking progress
+count=0
+total=$(echo "$branches" | wc -l)
+merged=0
+skipped=0
+
+echo "Found $total branches to check"
+
+for branch in $branches; do
+    count=$((count + 1))
+    echo "[$count/$total] Checking branch: $branch"
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch_name"; then
-        echo "⚠️  Branch $branch_name does not exist, skipping..."
-        return 0
-    fi
+    # Check if branch has commits ahead of main
+    commits_ahead=$(git log --oneline main..origin/$branch | wc -l)
     
-    # Create local tracking branch
-    git checkout -b "local-$branch_name" "origin/$branch_name"
-    
-    # Try to merge with main
-    if git merge main --no-commit --no-ff; then
-        echo "✅ Successfully merged $branch_name with main"
-        git commit -m "Merge $branch_name into main - resolved conflicts automatically"
+    if [ "$commits_ahead" -gt 0 ]; then
+        echo "  -> Branch has $commits_ahead commits ahead of main, attempting merge..."
         
-        # Merge back to main
-        git checkout main
-        git merge "local-$branch_name" --no-ff -m "Merge $branch_name: resolved conflicts and integrated changes"
-        
-        echo "✅ Successfully merged $branch_name into main"
+        # Try to merge
+        if git merge origin/$branch --no-edit --no-ff; then
+            echo "  -> ✅ Successfully merged $branch"
+            merged=$((merged + 1))
+        else
+            echo "  -> ❌ Merge conflict in $branch, skipping..."
+            git merge --abort
+            skipped=$((skipped + 1))
+        fi
     else
-        echo "⚠️  Merge conflicts detected in $branch_name, resolving automatically..."
-        
-        # Auto-resolve conflicts by keeping both versions where possible
-        git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-            if [ -f "$file" ]; then
-                echo "🔧 Auto-resolving conflicts in $file"
-                # Use git's merge strategy to resolve conflicts
-                git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-                git add "$file"
-            fi
-        done
-        
-        # Commit the resolved merge
-        git commit -m "Merge $branch_name into main - auto-resolved conflicts"
-        
-        # Merge back to main
-        git checkout main
-        git merge "local-$branch_name" --no-ff -m "Merge $branch_name: auto-resolved conflicts and integrated changes"
-        
-        echo "✅ Successfully merged $branch_name into main (with auto-resolved conflicts)"
+        echo "  -> ⏭️  Branch is up to date with main, skipping..."
+        skipped=$((skipped + 1))
     fi
     
-    # Clean up local branch
-    git branch -D "local-$branch_name"
-    echo "🧹 Cleaned up local branch for $branch_name"
-}
-
-# Get recent branches that need merging
-echo "🔍 Finding branches to merge..."
-recent_branches=$(git for-each-ref --format='%(refname:short)' refs/remotes/origin | grep -E "(cursor|codex)" | head -20)
-
-echo "📊 Found $(echo "$recent_branches" | wc -l) branches to process"
-
-# Process each branch
-for branch in $recent_branches; do
-    branch_name=$(echo "$branch" | sed 's|origin/||')
-    echo ""
-    echo "🔄 Processing: $branch_name"
-    merge_branch "$branch_name"
+    # Show progress every 50 branches
+    if [ $((count % 50)) -eq 0 ]; then
+        echo "Progress: $count/$total processed, $merged merged, $skipped skipped"
+    fi
 done
 
 echo ""
-echo "🎉 Comprehensive merge process completed!"
-echo "📈 Pushing all changes to remote..."
+echo "Merge complete!"
+echo "Total branches processed: $total"
+echo "Successfully merged: $merged"
+echo "Skipped (up to date or conflicts): $skipped"
 
-# Push all changes
-git push origin main
-
-echo "✅ All changes pushed to remote successfully!"
-echo "🏁 Merge process complete!"
+# Push changes if any merges were successful
+if [ "$merged" -gt 0 ]; then
+    echo "Pushing merged changes to origin/main..."
+    git push origin main
+fi
