@@ -1,34 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const services = [
-    { name: 'AI Solutions', href: '/services/ai' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    { name: 'Cloud Services', href: '/services/cloud' },
-    { name: 'Blockchain', href: '/services/blockchain' },
-    { name: 'Micro SaaS', href: '/services/micro-saas' }];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/news' }];
-
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Support', href: '/support' }];
-
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }];
 
 export const Footer: React.FC = () => {
   return (
