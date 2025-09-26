@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react"
 export default function ApiPlayground() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [activeCategory, setActiveCategory] = useState('all'),;
-  const [activeMethod, setActiveMethod] = useState('all'),;
-  const [selectedApi, setSelectedApi] = useState<any>(null),;
-  const [requestBody, setRequestBody] = useState(''),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeMethod, setActiveMethod] = useState('all');
+  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [requestBody, setRequestBody] = useState('');
   const [responseData, setResponseData] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [activeTab, setActiveTab] = useState('playground')
@@ -26,7 +26,7 @@ export default function ApiPlayground() {;
   ];
   const apis = [;
     {;
-      id: 1,name: 'AI Text Analysis',description: 'Analyze text sentiment, extract entities, and perform language processing tasks.',;
+      id: 1,name: 'AI Text Analysis',description: 'Analyze text sentiment, extract entities, and perform language processing tasks.';
       category: 'ai-ml',method: 'POST',endpoint: '/api/v1/ai/text-analysis',baseUrl: 'https://[^;]*
         { name: 'text', type: 'string', required: true, description: 'Text to analyze' };
         { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' };
@@ -34,19 +34,19 @@ export default function ApiPlayground() {;
       ];
       requestExample: {;
         text: "I love this new AI technology! It's amazing how it can understand context.",language: "en",features: ["sentiment", "entities", "keywords"]
-      },;
+      };
       responseExample: {;
         sentiment: { score: 0.9, label: "positive" };
         entities: [;
           { text: "AI technology", type: "technology", confidence: 0.95 };
         ];
-        keywords: ["AI", "technology", "amazing", "context"],;
+        keywords: ["AI", "technology", "amazing", "context"];
         language: "en"
       };
       documentation: 'https://[^;]*
     };
     {;
-      id: 2,name: 'Cloud Resource Management',description: 'Manage cloud infrastructure, deploy resources, and monitor performance.',;
+      id: 2,name: 'Cloud Resource Management',description: 'Manage cloud infrastructure, deploy resources, and monitor window.performance.';
       category: 'cloud',method: 'GET',endpoint: '/api/v1/cloud/resources',baseUrl: 'https://[^;]*
         { name: 'region', type: 'string', required: false, description: 'Cloud region' };
         { name: 'type', type: 'string', required: false, description: 'Resource type' };
@@ -78,7 +78,7 @@ export default function ApiPlayground() {;
         source: "web_application",timestamp: "2024-01-15T10:30:00Z"
       };
       responseExample: {;
-        threat_level: "low",risk_score: 0.2,recommendations: ["Enable 2FA", "Monitor login patterns"],;
+        threat_level: "low",risk_score: 0.2,recommendations: ["Enable 2FA", "Monitor login patterns"];
         detected: false;
       };
       documentation: 'https://[^;]*
@@ -86,11 +86,11 @@ export default function ApiPlayground() {;
     {;
       id: 4,name: 'Data Analytics Query',description: 'Query and analyze large datasets with SQL-like syntax.',category: 'data',method: 'POST',endpoint: '/api/v1/data/query',baseUrl: 'https://[^;]*
         { name: 'query', type: 'string', required: true, description: 'SQL query string' };
-        { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },;
+        { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' };
         { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' };
       ];
       requestExample: {;
-        query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",;
+        query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10";
         format: "json",timeout: 30;
       };
       responseExample: {;
@@ -103,7 +103,7 @@ export default function ApiPlayground() {;
       documentation: 'https://[^;]*
     };
     {;
-      id: 5,name: 'IoT Device Management',description: 'Manage IoT devices, monitor sensors, and control actuators.',;
+      id: 5,name: 'IoT Device Management',description: 'Manage IoT devices, monitor sensors, and control actuators.';
       category: 'iot',method: 'GET',endpoint: '/api/v1/iot/devices',baseUrl: 'https://[^;]*
         { name: 'location', type: 'string', required: false, description: 'Device location' };
         { name: 'type', type: 'string', required: false, description: 'Device type' };
@@ -125,22 +125,21 @@ export default function ApiPlayground() {;
   ];
   //[^;]*
   categories.forEach(cat => {;
-    cat.count = apis.filter(api => api.category === cat.id).length,;
-  }),;
+    cat.count = apis.filter(api => api.category === cat.id).length;
+  });
 
   methods.forEach(method => {;
-    method.count = apis.filter(api => api.method === method.id).length,;
-  }),;
+    method.count = apis.filter(api => api.method === method.id).length;
+  });
 
   const filteredApis = apis.filter(api => {;
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         api.description.toLowerCase().includes(searchQuery.toLowerCase()),;
+                         api.description.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory = activeCategory === 'all' || api.category === category.id
     const matchesMethod = activeMethod === 'all' || api.method === method.id
 
-    return matchesSearch && matchesCategory && matchesMethod,;&& matchesCategory && matchesMethod,; matchesCategory && matchesMethod,
-  }),;
+    return matchesSearch && matchesCategory && matchesMethod;&& matchesCategory && matchesMethod; matchesCategory && matchesMethod});
 
   const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <[^>]*/>
@@ -151,45 +150,45 @@ export default function ApiPlayground() {;
   const getStatusColor = (status: string) => {;
     switch (status) {;
       case 'stable': return 'text-green-400'
-      case 'beta': return 'text-yellow-400',;
-      case 'alpha': return 'text-red-400',;
+      case 'beta': return 'text-yellow-400';
+      case 'alpha': return 'text-red-400';
       default: return 'text-zion-slate-light'
     };
   };
   const handleApiSelect = (api: any) => {;
     setSelectedApi(api)
-    setRequestBody(JSON.stringify(api.requestExample, null, 2)),;
-    setResponseData(''),;
-    setActiveTab('playground'),;
-  },;
+    setRequestBody(JSON.stringify(api.requestExample, null, 2));
+    setResponseData('');
+    setActiveTab('playground');
+  };
 
   const handleTestApi = async () => {;
-    if (!selectedApi) return,;
+    if (!selectedApi) return;
 
-    setIsLoading(true),;
+    setIsLoading(true);
 
     //[^;]*
     setTimeout(() => {;
-      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2)),;
-      setIsLoading(false),;
-    }, 1500),;
-  },;
+      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
+      setIsLoading(false);
+    }, 1500);
+  };
 
   const copyToClipboard = (text: string) => {;
     navigator.clipboard.writeText(text)
   };
   const downloadResponse = () => {;
-    if (!responseData) return,;
+    if (!responseData) return;
 
     const blob = new Blob([responseData], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
-    a.href = url,;
-    a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`,;
-    document.body.appendChild(a),;
-    a.click(),;
-    document.body.removeChild(a),;
-    URL.revokeObjectURL(url),;
+    a.href = url;
+    a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;

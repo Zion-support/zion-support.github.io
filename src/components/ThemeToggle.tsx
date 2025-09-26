@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react"
 import { Sun, Moon, Monitor } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-type Theme = 'light' | 'dark' | 'system',;
+type Theme = 'light' | 'dark' | 'system';
 
-interface ThemeToggleProps {;
-  className?: string,;
+interface ThemeToggleProps {
+  className?: string;
 };
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
-  const [theme, setTheme] = useState<Theme>('system'),;
-  const [mounted, setMounted] = useState(false),;
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {;
-    setMounted(true),;
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {;
-      setTheme(savedTheme),;
+      setTheme(savedTheme);
     };
   }, []);
   useEffect(() => {;
@@ -23,26 +23,26 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     const root = window.document.documentElement
     if (theme === 'system') {;
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      root.classList.toggle('dark', systemTheme === 'dark'),;
+      root.classList.toggle('dark', systemTheme === 'dark');
     } else {;
-      root.classList.toggle('dark', theme === 'dark'),;
+      root.classList.toggle('dark', theme === 'dark');
     };
     ;
-    localStorage.setItem('theme', theme),;
-  }, [theme, mounted]),;
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
 
   useEffect(() => {;
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = () => {;
       if (theme === 'system') {;
         const root = window.document.documentElement
-        root.classList.toggle('dark', mediaQuery.matches),;
+        root.classList.toggle('dark', mediaQuery.matches);
       };
-    },;
+    };
 
-    mediaQuery.addEventListener('change', handleChange),;
-    return () => mediaQuery.removeEventListener('change', handleChange),;
-  }, [theme]),;
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme]);
 
   if (!mounted) {;
     return (
@@ -93,15 +93,15 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
 //[^;]*
 export function ThemeToggleDropdown() {;
-  const [theme, setTheme] = useState<Theme>('system'),;
-  const [isOpen, setIsOpen] = useState(false),;
-  const [mounted, setMounted] = useState(false),;
+  const [theme, setTheme] = useState<Theme>('system');
+  const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {;
-    setMounted(true),;
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {;
-      setTheme(savedTheme),;
+      setTheme(savedTheme);
     };
   }, []);
   useEffect(() => {;
@@ -109,13 +109,13 @@ export function ThemeToggleDropdown() {;
     const root = window.document.documentElement
     if (theme === 'system') {;
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      root.classList.toggle('dark', systemTheme === 'dark'),;
+      root.classList.toggle('dark', systemTheme === 'dark');
     } else {;
-      root.classList.toggle('dark', theme === 'dark'),;
+      root.classList.toggle('dark', theme === 'dark');
     };
     ;
-    localStorage.setItem('theme', theme),;
-  }, [theme, mounted]),;
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
 
   if (!mounted) {;
     return (
@@ -155,7 +155,7 @@ export function ThemeToggleDropdown() {;
                 key={themeOption.value};
                 onClick={() => {;
                   setTheme(themeOption.value)
-                  setIsOpen(false),;
+                  setIsOpen(false);
                 }};
                 className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${;
                   theme === themeOption.value

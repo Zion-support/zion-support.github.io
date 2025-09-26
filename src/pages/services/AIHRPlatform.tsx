@@ -2,35 +2,35 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import {;
-  Users,;
-  Brain,;
-  Target,;
-  Zap,;
-  BarChart3,;
-  Clock,;
-  Award,;
-  Star,;
-  Globe,;
-  Cpu,;
-  Database,;
-  CheckCircle,;
-  Eye,;
-  FileText,;
-  Shield,;
-  TrendingUp,;
-  Search,;
-  Download,;
-  Upload,;
-  Calendar,;
-  MessageSquare,;
-  UserCheck,;
+  Users;
+  Brain;
+  Target;
+  Zap;
+  BarChart3;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  FileText;
+  Shield;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  MessageSquare;
+  UserCheck;
   GraduationCap;
 } from "lucide-react"
 export default function AIHRPlatform() {;
   const features = [;
     {;
       icon: Brain,title: "AI-Powered Recruitment",description: "Intelligent candidate sourcing, screening, and matching with job requirements."
-    },;
+    };
     {;
       icon: Users,title: "Talent Management",description: "Comprehensive employee lifecycle management from hire to retire."
     };
@@ -48,51 +48,51 @@ export default function AIHRPlatform() {;
     };
   ];
   const benefits = [;
-    "Reduce hiring time by 50-70% with AI-powered recruitment",;
-    "Improve employee retention by 30-50% through better engagement",;
-    "Enhance HR efficiency by 40-60% with automation",;
-    "Reduce HR costs by 25-40% through process optimization",;
-    "Improve decision-making with data-driven insights",;
+    "Reduce hiring time by 50-70% with AI-powered recruitment";
+    "Improve employee retention by 30-50% through better engagement";
+    "Enhance HR efficiency by 40-60% with automation";
+    "Reduce HR costs by 25-40% through process optimization";
+    "Improve decision-making with data-driven insights";
     "Ensure 100% compliance with automated monitoring"
-  ],;
+  ];
 
   const hrModules = [;
     {;
-      module: "Recruitment & Onboarding",description: "AI-powered job matching, candidate screening, and automated onboarding",;
+      module: "Recruitment & Onboarding",description: "AI-powered job matching, candidate screening, and automated onboarding";
       icon: UserCheck;
     };
     {;
-      module: "Performance Management",description: "Goal setting, performance tracking, and development planning",;
+      module: "Performance Management",description: "Goal setting, performance tracking, and development planning";
       icon: Target;
     };
     {;
       module: "Learning & Development",description: "Personalized training programs and skill development tracking",icon: GraduationCap;
     };
     {;
-      module: "Employee Engagement",description: "Pulse surveys, feedback systems, and engagement analytics",;
+      module: "Employee Engagement",description: "Pulse surveys, feedback systems, and engagement analytics";
       icon: MessageSquare;
     };
     {;
       module: "Payroll & Benefits",description: "Automated payroll processing and benefits administration",icon: FileText;
     };
     {;
-      module: "HR Analytics",description: "Workforce insights, predictive analytics, and reporting",;
+      module: "HR Analytics",description: "Workforce insights, predictive analytics, and reporting";
       icon: BarChart3;
     };
   ];
   const useCases = [;
     {;
       industry: "Technology",description: "Developer recruitment, skill assessment, and remote team management"
-    },;
+    };
     {;
       industry: "Healthcare",description: "Medical staff recruitment, credentialing, and compliance management"
-    },;
+    };
     {;
       industry: "Manufacturing",description: "Skilled worker recruitment, safety training, and performance tracking"
-    },;
+    };
     {;
       industry: "Financial Services",description: "Compliance training, performance management, and talent development"
-    },;
+    };
     {;
       industry: "Retail",description: "Seasonal hiring, employee scheduling, and customer service training"
     };

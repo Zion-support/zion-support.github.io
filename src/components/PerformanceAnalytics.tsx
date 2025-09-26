@@ -1,31 +1,31 @@
 import React, { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { ;
-  Activity,;
-  TrendingUp, ;
-  TrendingDown, ;
-  Clock, ;
-  Zap, ;
-  AlertTriangle,;
-  CheckCircle,;
-  BarChart3,;
-  Cpu,;
-  HardDrive,;
-  Network,;
+  Activity;
+  TrendingUp;
+  TrendingDown;
+  Clock;
+  Zap;
+  AlertTriangle;
+  CheckCircle;
+  BarChart3;
+  Cpu;
+  HardDrive;
+  Network;
   Monitor;
 } from "lucide-react"
-interface PerformanceMetric {;
+interface PerformanceMetric {
   name: string,value: number,unit: string,trend: 'up' | 'down' | 'stable',status: 'good' | 'warning' | 'critical',icon: React.ComponentType<any>;
 };
 
-interface PerformanceData {;
+interface PerformanceData {
   timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[]
 };
 
 const PerformanceAnalytics: React.FC = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),;
-  const [isMonitoring, setIsMonitoring] = useState(false),;
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),;
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   //[^;]*
   const generatePerformanceData = useCallback((): PerformanceData => {;
@@ -51,60 +51,60 @@ const PerformanceAnalytics: React.FC = () => {
       };
     ];
     const alerts = [;
-      'High memory usage detectedNetwork latency increased by 15%',;
+      'High memory usage detectedNetwork latency increased by 15%';
       'CPU usage spike at 14: 30'
     ].filter(() => Math.random() > 0.7);
     const recommendations = [;
-      'Consider implementing lazy loading for imagesOptimize database queries',;
+      'Consider implementing lazy loading for imagesOptimize database queries';
       'Enable CDN for static assetsImplement caching strategy'
-    ].filter(() => Math.random() > 0.6),;
+    ].filter(() => Math.random() > 0.6);
 
     return {;
       timestamp: now;
-      metrics,;
-      alerts,;
+      metrics;
+      alerts;
       recommendations;
-    },;
-  }, []),;
+    };
+  }, []);
 
   useEffect(() => {;
     if (isMonitoring) {;
       const interval = setInterval(() => {;
-        setPerformanceData(generatePerformanceData()),;
-      }, 5000),;
+        setPerformanceData(generatePerformanceData());
+      }, 5000);
 
-      return () => clearInterval(interval),;
+      return () => clearInterval(interval);
     };
-  }, [isMonitoring, generatePerformanceData]),;
+  }, [isMonitoring, generatePerformanceData]);
 
   const getStatusColor = (status: string) => {;
     switch (status) {;
       case 'good': return 'text-green-400'
-      case 'warning': return 'text-yellow-400',;
-      case 'critical': return 'text-red-400',;
+      case 'warning': return 'text-yellow-400';
+      case 'critical': return 'text-red-400';
       default: return 'text-gray-400'
     };
   };
   const getStatusBgColor = (status: string) => {;
     switch (status) {;
       case 'good': return 'bg-green-500/20'
-      case 'warning': return 'bg-yellow-500/20',;
-      case 'critical': return 'bg-red-500/20',;
+      case 'warning': return 'bg-yellow-500/20';
+      case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'
     };
   };
   const getTrendIcon = (trend: string) => {;
     switch (trend) {;
       case 'up': return <[^>]*/>
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />,;
+      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
       default: return <[^>]*/>
     };
   };
   const formatValue = (value: number, unit: string) => {;
     if (unit === '%') return `${value.toFixed(1)}%`
-    if (unit === 'ms') return `${Math.round(value)}ms`,;
-    return `${value.toFixed(2)}${unit}`,;
-  },;
+    if (unit === 'ms') return `${Math.round(value)}ms`;
+    return `${value.toFixed(2)}${unit}`;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;

@@ -1,41 +1,41 @@
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ;
-  Cookie,;
-  CheckCircle, ;
-  Settings, ;
-  Eye, ;
-  Globe, ;
-  Info, ;
-  Shield,;
-  Clock,;
-  Target,;
+  Cookie;
+  CheckCircle;
+  Settings;
+  Eye;
+  Globe;
+  Info;
+  Shield;
+  Clock;
+  Target;
   ExternalLink;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
-interface CookieType {;
+interface CookieType {
   id: string,name: string,description: string,color: string,icon: React.ComponentType<any>,examples: string[],alwaysActive: boolean;
 };
 
-interface CookieDetail {;
+interface CookieDetail {
   name: string,purpose: string,duration: string,provider: string,type: 'essential' | 'analytics' | 'marketing' | 'functional'
 };
 
 const cookieTypes: CookieType[] = [;
   {;
-    id: 'essential',name: 'Essential Cookies',description: 'Required for basic website functionality',color: 'from-blue-500/20 to-cyan-500/20',icon: Shield,examples: ['AuthenticationSecurity', 'Basic navigation'],;
+    id: 'essential',name: 'Essential Cookies',description: 'Required for basic website functionality',color: 'from-blue-500/20 to-cyan-500/20',icon: Shield,examples: ['AuthenticationSecurity', 'Basic navigation'];
     alwaysActive: true;
   };
   {;
-    id: 'analytics',name: 'Analytics Cookies',description: 'Help us understand how visitors use our website',color: 'from-purple-500/20 to-pink-500/20',icon: Globe,examples: ['Page viewsUser behavior', 'Performance metrics'],;
+    id: 'analytics',name: 'Analytics Cookies',description: 'Help us understand how visitors use our website',color: 'from-purple-500/20 to-pink-500/20',icon: Globe,examples: ['Page viewsUser behavior', 'Performance metrics'];
     alwaysActive: false;
   };
   {;
-    id: 'marketing',name: 'Marketing Cookies',description: 'Used to deliver personalized advertisements',color: 'from-orange-500/20 to-red-500/20',icon: Target,examples: ['Ad targetingCampaign tracking', 'Conversion analysis'],;
+    id: 'marketing',name: 'Marketing Cookies',description: 'Used to deliver personalized advertisements',color: 'from-orange-500/20 to-red-500/20',icon: Target,examples: ['Ad targetingCampaign tracking', 'Conversion analysis'];
     alwaysActive: false;
   };
   {;
-    id: 'functional',name: 'Functional Cookies',description: 'Enable enhanced functionality and personalization',color: 'from-green-500/20 to-emerald-500/20',icon: Settings,examples: ['Language preferencesCustom settings', 'Enhanced features'],;
+    id: 'functional',name: 'Functional Cookies',description: 'Enable enhanced functionality and personalization',color: 'from-green-500/20 to-emerald-500/20',icon: Settings,examples: ['Language preferencesCustom settings', 'Enhanced features'];
     alwaysActive: false;
   };
 ];
@@ -63,30 +63,30 @@ const Cookies: React.FC = () => {
     if (saved) {;
       try {;
         const parsed = JSON.parse(saved)
-        setCookiePreferences({ ...cookiePreferences, ...parsed }),;
+        setCookiePreferences({ ...cookiePreferences, ...parsed });
       } catch (e) {;
-        console.error('Failed to parse cookie preferences'),;
+        console.error('Failed to parse cookie preferences');
       };
     };
-  }, []),;
+  }, []);
 
   const updateCookiePreference = (type: string, enabled: boolean) => {;
     const newPreferences = { ...cookiePreferences, [type]: enabled };
-    setCookiePreferences(newPreferences),;
-    localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences)),;
-  },;
+    setCookiePreferences(newPreferences);
+    localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences));
+  };
 
   const acceptAll = () => {;
     const allAccepted = {;
       essential: true,analytics: true,marketing: true,functional: true;
     };
-    setCookiePreferences(allAccepted),;
-    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted)),;
-  },;
+    setCookiePreferences(allAccepted);
+    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
+  };
 
   const savePreferences = () => {;
-    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences)),;
-  },;
+    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

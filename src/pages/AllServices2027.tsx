@@ -4,29 +4,29 @@ import { Link } from "react-router-dom"
 import SEO from "../components/SEOHead"
 import { INNOVATIVE_SERVICES_2027 } from "@/data/innovativeServices2027"
 import {;
-  Brain,;
-  Shield,;
-  Zap,;
-  Code,;
-  Signal,;
-  Users,;
-  Truck,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  CheckCircle,;
-  TrendingUp,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  Cloud,;
+  Brain;
+  Shield;
+  Zap;
+  Code;
+  Signal;
+  Users;
+  Truck;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  CheckCircle;
+  TrendingUp;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Cloud;
   Rocket;
 } from "lucide-react"
 const AllServices2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' };
@@ -38,21 +38,21 @@ const AllServices2027: React.FC = () => {
   ];
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>;
     selectedCategory === 'All' || service.category === selectedCategory
-  ),;
+  );
 
   const getCategoryStats = (categoryId: string) => {;
     if (categoryId === 'All') {;
       return {;
-        count: INNOVATIVE_SERVICES_2027.length,avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
+        count: INNOVATIVE_SERVICES_2027.length,avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length);
         avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
-      },;
+      };
     };
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId)
     return {;
-      count: services.length,avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),;
+      count: services.length,avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length);
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10;
-    },;
-  },;
+    };
+  };
 
   const containerVariants = {;
     hidden: { opacity: 0 };
@@ -404,13 +404,13 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {;
       case 'AI Services':;
         return <[^>]*/>
       case 'Cybersecurity':;
-        return <Shield className="w-5 h-5" />,;
+        return <Shield className="w-5 h-5" />;
       case 'Emerging Technology':;
-        return <Zap className="w-5 h-5" />,;
+        return <Zap className="w-5 h-5" />;
       case 'IT Services':;
-        return <Code className="w-5 h-5" />,;
+        return <Code className="w-5 h-5" />;
       case 'Telecommunications':;
-        return <Signal className="w-5 h-5" />,;
+        return <Signal className="w-5 h-5" />;
       default: return <[^>]*/>
     };
   };

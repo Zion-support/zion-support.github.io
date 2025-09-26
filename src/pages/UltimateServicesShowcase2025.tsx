@@ -2,31 +2,31 @@ import React, { useState } from "react"
 import SEO from "@/components/SEO"
 import { Link } from "react-router-dom"
 import { ;
-  Brain,;
-  Zap, ;
-  Shield, ;
-  Database, ;
-  Users, ;
-  TrendingUp, ;
-  Globe, ;
-  Lock,;
-  Cloud,;
-  Briefcase,;
-  Scale,;
-  Rocket,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
+  Brain;
+  Zap;
+  Shield;
+  Database;
+  Users;
+  TrendingUp;
+  Globe;
+  Lock;
+  Cloud;
+  Briefcase;
+  Scale;
+  Rocket;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink;
   Search;
 } from "lucide-react"
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from "@/data/ultimateRealServices2025"
 export default function UltimateServicesShowcase2025() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)]
 
@@ -41,8 +41,8 @@ export default function UltimateServicesShowcase2025() {;
     if (category === 'all') return <[^>]*/>
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? ;
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
-      <Rocket className="w-6 h-6" />,;
-  },;
+      <Rocket className="w-6 h-6" />;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
@@ -399,7 +399,7 @@ export default function UltimateServicesShowcase2025() {;
             <button;
               onClick={() => {;
                 setSearchTerm('')
-                setSelectedCategory('all'),;
+                setSelectedCategory('all');
               }};
               className="[^"]*"
             >;

@@ -17,7 +17,7 @@ const QuantumNeuralFusion2026 = () => {
           <div className="text-4xl mb-4">⚛️</div>
           <h3 className="text-xl font-semibold mb-2">Quantum Neural Networks</h3>
           <p className="text-gray-600 mb-4">
-            Neural networks powered by quantum computing for enhanced performance.
+            Neural networks powered by quantum computing for enhanced window.performance.
           </p>
           <a href="/pages/InnovativeServicesShowcase2025" className="text-purple-600 hover:text-purple-700 font-semibold">
             Learn More →

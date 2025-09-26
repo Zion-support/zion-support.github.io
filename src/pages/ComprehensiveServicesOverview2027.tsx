@@ -6,14 +6,14 @@ import Input from "@/components/ui/Input"
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices"
 import { motion } from "framer-motion"
 import {;
-    ArrowRight,;
-    BarChart3,;
-    Briefcase,;
-    Globe,;
-    Grid,;
-    List,;
-    MessageCircle,;
-    Search,;
+    ArrowRight;
+    BarChart3;
+    Briefcase;
+    Globe;
+    Grid;
+    List;
+    MessageCircle;
+    Search;
     Star;
 } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -21,15 +21,15 @@ import { Link } from "react-router-dom"
 //[^;]*
 const MICRO_SAAS_SERVICES = [;
   {;
-    id: 'micro-crm',title: 'Micro CRM',description: 'Lightweight customer relationship management for small businesses',category: 'Business Tools',subcategory: 'CRM',pricingModel: 'monthly',price: 29,rating: 4.8,reviewCount: 156,aiScore: 95,featured: true,createdAt: '2024-01-15',href: '/services/micro-crm',tags: ['CRMBusiness', 'Automation'],;
+    id: 'micro-crm',title: 'Micro CRM',description: 'Lightweight customer relationship management for small businesses',category: 'Business Tools',subcategory: 'CRM',pricingModel: 'monthly',price: 29,rating: 4.8,reviewCount: 156,aiScore: 95,featured: true,createdAt: '2024-01-15',href: '/services/micro-crm',tags: ['CRMBusiness', 'Automation'];
     images: ['/images/micro-crm.jpg']
   };
   {;
-    id: 'helpdesk-platform',title: 'Helpdesk Platform',description: 'Streamlined customer support and ticket management system',category: 'Customer Support',subcategory: 'Helpdesk',pricingModel: 'monthly',price: 39,rating: 4.7,reviewCount: 89,aiScore: 92,featured: false,createdAt: '2024-02-01',href: '/services/helpdesk-platform',tags: ['SupportHelpdesk', 'Customer Service'],;
+    id: 'helpdesk-platform',title: 'Helpdesk Platform',description: 'Streamlined customer support and ticket management system',category: 'Customer Support',subcategory: 'Helpdesk',pricingModel: 'monthly',price: 39,rating: 4.7,reviewCount: 89,aiScore: 92,featured: false,createdAt: '2024-02-01',href: '/services/helpdesk-platform',tags: ['SupportHelpdesk', 'Customer Service'];
     images: ['/images/helpdesk.jpg']
   };
   {;
-    id: 'website-analytics',title: 'Website Analytics',description: 'Comprehensive website performance and user behavior analytics',category: 'Analytics',subcategory: 'Web Analytics',pricingModel: 'monthly',price: 19,rating: 4.9,reviewCount: 234,aiScore: 98,featured: true,createdAt: '2024-01-10',href: '/services/website-analytics',tags: ['AnalyticsWeb', 'Performance'],;
+    id: 'website-analytics',title: 'Website Analytics',description: 'Comprehensive website performance and user behavior analytics',category: 'Analytics',subcategory: 'Web Analytics',pricingModel: 'monthly',price: 19,rating: 4.9,reviewCount: 234,aiScore: 98,featured: true,createdAt: '2024-01-10',href: '/services/website-analytics',tags: ['AnalyticsWeb', 'Performance'];
     images: ['/images/analytics.jpg']
   };
 ];
@@ -47,21 +47,21 @@ const pricingModels = [;
   { id: 'usage-based', name: 'Usage-based' };
 ];
 export default function ComprehensiveServicesOverview2027() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedPricing, setSelectedPricing] = useState('all'),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES),;
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [expandedService, setExpandedService] = useState<string | null>(null),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   useEffect(() => {;
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => service.category === selectedCategory),;
+      filtered = filtered.filter(service => service.category === selectedCategory);
     };
     if (selectedPricing !== 'all') {;
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing),;
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
     };
     if (searchQuery.trim()) {;
       const query = searchQuery.toLowerCase()
@@ -70,7 +70,7 @@ export default function ComprehensiveServicesOverview2027() {;
         service.description.toLowerCase().includes(query) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
         service.subcategory?.toLowerCase().includes(query)
-      ),;
+      );
     };
     filtered.sort((a, b) => {;
       switch (sortBy) {;
@@ -85,8 +85,8 @@ export default function ComprehensiveServicesOverview2027() {;
         default: return 0;
       };
     });
-    setFilteredServices(filtered),;
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]),;
+    setFilteredServices(filtered);
+  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion.div
@@ -333,7 +333,7 @@ export default function ComprehensiveServicesOverview2027() {;
             <Button;
               onClick={() => {;
                 setSelectedCategory('all')
-                setSelectedPricing('all'),;
+                setSelectedPricing('all');
                 setSearchQuery('')
               }};
               className="[^"]*"

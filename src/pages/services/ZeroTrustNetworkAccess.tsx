@@ -1,36 +1,36 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { ;
-  Shield,;
-  Lock, ;
-  Eye, ;
-  CheckCircle, ;
-  Users, ;
-  Clock, ;
-  ArrowRight,;
-  Play,;
-  Settings,;
-  Target,;
-  Cpu,;
-  Cloud,;
-  Activity,;
-  Sparkles,;
-  Search,;
-  Zap,;
-  Globe,;
-  Building,;
-  DollarSign,;
-  BarChart3,;
-  TrendingUp,;
-  Network,;
-  Key,;
-  Fingerprint,;
-  Monitor,;
-  AlertTriangle,;
-  ShieldCheck,;
-  Globe2,;
-  Server,;
-  Database,;
+  Shield;
+  Lock;
+  Eye;
+  CheckCircle;
+  Users;
+  Clock;
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Cloud;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  DollarSign;
+  BarChart3;
+  TrendingUp;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
   Smartphone;
 } from "lucide-react"
 const ZeroTrustNetworkAccess = () => {;
@@ -55,10 +55,10 @@ const ZeroTrustNetworkAccess = () => {;
     };
   ];
   const benefits = [;
-    'Eliminate network perimeter vulnerabilitiesReduce attack surface by 90%',;
-    'Enable secure remote work from anywhereComply with industry security standards',;
+    'Eliminate network perimeter vulnerabilitiesReduce attack surface by 90%';
+    'Enable secure remote work from anywhereComply with industry security standards';
     'Improve incident response time by 80%Enhance user experience with seamless access'
-  ],;
+  ];
 
   const useCases = [;
     {;
@@ -77,17 +77,17 @@ const ZeroTrustNetworkAccess = () => {;
   const securityLayers = [;
     {;
       icon: Fingerprint,title: 'User Identity',description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
-    },;
+    };
     {;
       icon: Device,title: 'Device Security',description: 'Device health checks, compliance validation, and security posture assessment'
-    },;
+    };
     {;
       icon: Globe2,title: 'Network Security',description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
-    },;
+    };
     {;
       icon: Database,title: 'Application Security',description: 'API security, application-level access controls, and data protection'
     };
-  ],;
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

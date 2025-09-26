@@ -1,25 +1,25 @@
 import React from "react"
 import { Filter, X } from "lucide-react"
-interface FilterOption {;
+interface FilterOption {
   value: string,label: string;
   count?: number;
 };
 
-interface FilterGroup {;
+interface FilterGroup {
   title: string,key: string,options: FilterOption[],type: 'checkbox' | 'radio' | 'range'
 };
 
-interface FilterSidebarProps {;
-  filters: FilterGroup[],selectedFilters: Record<string, string[]>,;
+interface FilterSidebarProps {
+  filters: FilterGroup[],selectedFilters: Record<string string[]>;
   onFilterChange: (key: string, value: string, checked: boolean) => void,onClearFilters: () => void,isOpen: boolean,onClose: () => void;
 };
 
 export function FilterSidebar({;
   filters;
-  selectedFilters,;
-  onFilterChange,;
-  onClearFilters,;
-  isOpen,;
+  selectedFilters;
+  onFilterChange;
+  onClearFilters;
+  isOpen;
   onClose;
 }: FilterSidebarProps) {;
   return (

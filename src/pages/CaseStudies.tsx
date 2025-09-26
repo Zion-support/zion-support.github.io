@@ -3,31 +3,31 @@ import { motion } from "framer-motion"
 import { SEO } from "../components/SEO"
 import { Link } from "react-router-dom"
 import { ;
-  Target,;
-  TrendingUp, ;
-  Users, ;
-  DollarSign, ;
-  Clock, ;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Building,;
-  Heart,;
-  Scale,;
-  Rocket,;
-  Globe,;
-  Leaf,;
-  Shield,;
-  Brain,;
-  Cloud,;
-  Database,;
-  Network,;
-  Zap,;
-  Award,;
-  BarChart3,;
-  Eye,;
-  Lock,;
-  Cpu,;
+  Target;
+  TrendingUp;
+  Users;
+  DollarSign;
+  Clock;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Building;
+  Heart;
+  Scale;
+  Rocket;
+  Globe;
+  Leaf;
+  Shield;
+  Brain;
+  Cloud;
+  Database;
+  Network;
+  Zap;
+  Award;
+  BarChart3;
+  Eye;
+  Lock;
+  Cpu;
   Car;
 } from "lucide-react"
 export default function CaseStudies() {;
@@ -36,48 +36,48 @@ export default function CaseStudies() {;
       id: 'techcorp-digital-transformation',title: 'TechCorp Inc. - Digital Transformation Success',subtitle: '50% Cost Reduction & 99.9% Uptime',company: 'TechCorp Inc.',industry: 'Manufacturing',challenge: 'Legacy systems causing 40% downtime and $2M annual losses',solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',results: [;
         '50% reduction in operational costs99.9% system uptime achieved'
         '3x faster decision making40% improvement in productivity'
-      ],;
-      technologies: ['AI AutomationCloud Migration', 'IoT IntegrationPredictive Analytics'],;
+      ];
+      technologies: ['AI AutomationCloud Migration', 'IoT IntegrationPredictive Analytics'];
       duration: '6 months',teamSize: '15 engineers',featured: true,color: 'from-blue-500 to-cyan-500',icon: Building,roi: '400%'
     };
     {;
       id: 'healthplus-ai-revolution',title: 'HealthPlus Systems - AI Healthcare Revolution',subtitle: '30% Diagnostic Accuracy Improvement',company: 'HealthPlus Systems',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed AI-powered diagnostic tools and digital twin solutions',results: [;
         '30% improvement in diagnostic accuracyZero critical device failures'
         '25% improvement in patient outcomes40% reduction in patient wait times'
-      ],;
-      technologies: ['AI DiagnosticsDigital Twins', 'IoT MonitoringMachine Learning'],;
+      ];
+      technologies: ['AI DiagnosticsDigital Twins', 'IoT MonitoringMachine Learning'];
       duration: '8 months',teamSize: '12 engineers',featured: true,color: 'from-red-500 to-pink-500',icon: Heart,roi: '350%'
     };
     {;
       id: 'startupxyz-growth',title: 'StartupXYZ - Rapid Growth Acceleration',subtitle: '10x Faster Market Validation',company: 'StartupXYZ',industry: 'SaaS',challenge: 'Need for rapid scaling and market validation',solution: 'Implemented AI-powered analytics and automated growth tools',results: [;
         '10x faster market validation3x increase in user engagement'
         '50% reduction in customer acquisition costsSecured Series A funding in 6 months'
-      ],;
-      technologies: ['AI AnalyticsGrowth Automation', 'Cloud InfrastructureData Analytics'],;
+      ];
+      technologies: ['AI AnalyticsGrowth Automation', 'Cloud InfrastructureData Analytics'];
       duration: '4 months',teamSize: '8 engineers',featured: true,color: 'from-purple-500 to-indigo-500',icon: Rocket,roi: '500%'
     };
     {;
       id: 'smartcity-metro',title: 'SmartCity Metro - Urban Infrastructure Optimization',subtitle: '30% Traffic Reduction',company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public services',solution: 'Created city-wide digital twin integrating all infrastructure systems',results: [;
         '30% reduction in traffic congestion20% improvement in transit efficiency'
         '15% reduction in energy consumptionImproved citizen satisfaction by 40%'
-      ],;
-      technologies: ['Digital TwinsIoT Sensors', 'AI AnalyticsSmart Infrastructure'],;
+      ];
+      technologies: ['Digital TwinsIoT Sensors', 'AI AnalyticsSmart Infrastructure'];
       duration: '12 months',teamSize: '20 engineers',featured: false,color: 'from-green-500 to-emerald-500',icon: Building,roi: '250%'
     };
     {;
       id: 'fintech-risk-management',title: 'FinTech Solutions - AI-Powered Risk Management',subtitle: '80% Fraud Reduction',company: 'FinTech Solutions',industry: 'Financial Services',challenge: 'High fraud rates and manual risk assessment processes',solution: 'Implemented AI-powered fraud detection and automated risk assessment',results: [;
         '80% reduction in fraud losses90% faster risk assessment'
         'Improved compliance by 95%25% reduction in operational costs'
-      ],;
-      technologies: ['AI Fraud DetectionMachine Learning', 'BlockchainAutomation'],;
+      ];
+      technologies: ['AI Fraud DetectionMachine Learning', 'BlockchainAutomation'];
       duration: '7 months',teamSize: '10 engineers',featured: false,color: 'from-emerald-500 to-green-500',icon: TrendingUp,roi: '300%'
     };
     {;
       id: 'manufacturing-industry4',title: 'ManufacturingCorp - Industry 4.0 Transformation',subtitle: '60% Quality Improvement',company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Outdated manufacturing processes and quality control issues',solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',results: [;
         '60% improvement in product quality45% reduction in production time'
         '30% reduction in waste25% increase in production capacity'
-      ],;
-      technologies: ['IoT SensorsAI Quality Control', 'Predictive MaintenanceAutomation'],;
+      ];
+      technologies: ['IoT SensorsAI Quality Control', 'Predictive MaintenanceAutomation'];
       duration: '10 months',teamSize: '18 engineers',featured: false,color: 'from-orange-500 to-red-500',icon: Building,roi: '280%'
     };
   ];

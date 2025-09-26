@@ -2,83 +2,83 @@ import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import { ;
-  Brain,;
-  Cloud, ;
-  Shield, ;
-  Rocket, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
-  Cpu,;
-  Lock,;
-  Heart,;
-  Star,;
-  ArrowRight,;
-  CheckCircle,;
-  TrendingUp,;
-  Code,;
-  Database,;
-  Network,;
-  Smartphone,;
-  BarChart3,;
-  MessageSquare,;
-  FileText,;
-  ShoppingCart,;
-  Headphones,;
-  Mail,;
-  Search,;
-  HelpCircle,;
-  ShieldCheck,;
-  Globe2,;
-  Leaf,;
-  Sparkles,;
-  Target,;
-  DollarSign,;
-  Clock,;
-  Award,;
-  Phone,;
-  Mail as MailIcon,;
-  MapPin,;
-  Infinity,;
-  Atom,;
-  Satellite,;
-  Car,;
-  Bot,;
-  Eye,;
-  Calculator,;
-  PieChart,;
-  BarChart,;
-  LineChart,;
-  TrendingDown,;
-  ZapIcon,;
-  ShieldIcon,;
-  CloudIcon,;
-  BrainIcon,;
-  RocketIcon,;
-  LeafIcon,;
-  GlobeIcon,;
-  CodeIcon,;
-  DatabaseIcon,;
-  NetworkIcon,;
-  SmartphoneIcon,;
-  BarChartIcon,;
-  MessageSquareIcon,;
-  FileTextIcon,;
-  ShoppingCartIcon,;
-  HeadphonesIcon,;
-  MailIcon as MailIcon2,;
-  SearchIcon,;
-  HelpCircleIcon,;
-  ShieldCheckIcon,;
-  Globe2Icon,;
-  LeafIcon as LeafIcon2,;
-  SparklesIcon,;
-  TargetIcon,;
-  DollarSignIcon,;
-  ClockIcon,;
-  AwardIcon,;
-  PhoneIcon,;
-  MapPinIcon,;
+  Brain;
+  Cloud;
+  Shield;
+  Rocket;
+  Zap;
+  Users;
+  Globe;
+  Cpu;
+  Lock;
+  Heart;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Code;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  MessageSquare;
+  FileText;
+  ShoppingCart;
+  Headphones;
+  Mail;
+  Search;
+  HelpCircle;
+  ShieldCheck;
+  Globe2;
+  Leaf;
+  Sparkles;
+  Target;
+  DollarSign;
+  Clock;
+  Award;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
+  Infinity;
+  Atom;
+  Satellite;
+  Car;
+  Bot;
+  Eye;
+  Calculator;
+  PieChart;
+  BarChart;
+  LineChart;
+  TrendingDown;
+  ZapIcon;
+  ShieldIcon;
+  CloudIcon;
+  BrainIcon;
+  RocketIcon;
+  LeafIcon;
+  GlobeIcon;
+  CodeIcon;
+  DatabaseIcon;
+  NetworkIcon;
+  SmartphoneIcon;
+  BarChartIcon;
+  MessageSquareIcon;
+  FileTextIcon;
+  ShoppingCartIcon;
+  HeadphonesIcon;
+  MailIcon as MailIcon2;
+  SearchIcon;
+  HelpCircleIcon;
+  ShieldCheckIcon;
+  Globe2Icon;
+  LeafIcon as LeafIcon2;
+  SparklesIcon;
+  TargetIcon;
+  DollarSignIcon;
+  ClockIcon;
+  AwardIcon;
+  PhoneIcon;
+  MapPinIcon;
   InfinityIcon;
 } from "lucide-react"
 import { SEO } from "../components/SEO"
@@ -86,16 +86,16 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaas
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027"
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027"
 export default function ComprehensivePricingGuide2027() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [priceRange, setPriceRange] = useState([0, 50000]),;
-  const [sortBy, setSortBy] = useState('price'),;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [sortBy, setSortBy] = useState('price');
 
   //[^;]*
   const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,;
-    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027,;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
     ...EMERGING_TECHNOLOGY_SERVICES_2027
-  ],;
+  ];
 
   //[^;]*
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))]
@@ -104,14 +104,13 @@ export default function ComprehensivePricingGuide2027() {;
   const filteredServices = allServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1]
-    return matchesCategory && matchesPrice,;&& matchesPrice,; matchesPrice,
-  }),;
+    return matchesCategory && matchesPrice;&& matchesPrice; matchesPrice});
 
   //[^;]*
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
-        return a.price - b.price,;
+        return a.price - b.price;
       case 'rating':;
         return b.rating - a.rating
       case 'roi':;
@@ -130,41 +129,40 @@ export default function ComprehensivePricingGuide2027() {;
   const getCategoryIcon = (category: string) => {;
     const iconMap: { [key: string]: React.ReactNode } = {;
       'AI & Business Intelligence': <[^>]*/>
-      'Cybersecurity': <Shield className="w-6 h-6" />,;
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />,;
-      'AI & Healthcare': <Heart className="w-6 h-6" />,;
-      'Blockchain & Web3': <Link className="w-6 h-6" />,;
-      'IoT & Edge Computing': <Network className="w-6 h-6" />,;
-      'Quantum Computing': <Atom className="w-6 h-6" />,;
-      'Space Technology': <Satellite className="w-6 h-6" />,;
-      'Sustainable Technology': <Leaf className="w-6 h-6" />,;
-      'AI & Legal Tech': <FileText className="w-6 h-6" />,;
-      'FinTech': <DollarSign className="w-6 h-6" />,;
-      'AI & Content': <MessageSquare className="w-6 h-6" />,;
-      'IT Infrastructure': <Database className="w-6 h-6" />,;
-      'AI & Computing': <Cpu className="w-6 h-6" />,;
-      'Biotechnology': <Dna className="w-6 h-6" />,;
-      'Energy Technology': <Zap className="w-6 h-6" />,;
-      'Metaverse & AR/VR': <Globe className="w-6 h-6" />,;
-      'Neurotechnology': <Brain className="w-6 h-6" />,;
-      'Quantum Technology': <Atom className="w-6 h-6" />,;
-      'Autonomous Systems': <Car className="w-6 h-6" />,;
+      'Cybersecurity': <Shield className="w-6 h-6" />;
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />;
+      'AI & Healthcare': <Heart className="w-6 h-6" />;
+      'Blockchain & Web3': <Link className="w-6 h-6" />;
+      'IoT & Edge Computing': <Network className="w-6 h-6" />;
+      'Quantum Computing': <Atom className="w-6 h-6" />;
+      'Space Technology': <Satellite className="w-6 h-6" />;
+      'Sustainable Technology': <Leaf className="w-6 h-6" />;
+      'AI & Legal Tech': <FileText className="w-6 h-6" />;
+      'FinTech': <DollarSign className="w-6 h-6" />;
+      'AI & Content': <MessageSquare className="w-6 h-6" />;
+      'IT Infrastructure': <Database className="w-6 h-6" />;
+      'AI & Computing': <Cpu className="w-6 h-6" />;
+      'Biotechnology': <Dna className="w-6 h-6" />;
+      'Energy Technology': <Zap className="w-6 h-6" />;
+      'Metaverse & AR/VR': <Globe className="w-6 h-6" />;
+      'Neurotechnology': <Brain className="w-6 h-6" />;
+      'Quantum Technology': <Atom className="w-6 h-6" />;
+      'Autonomous Systems': <Car className="w-6 h-6" />;
       'Robotics & Automation': <[^>]*/>
-    },;
-    return iconMap[category] || <Star className="w-6 h-6" />,
-  },;
+    };
+    return iconMap[category] || <Star className="w-6 h-6" />};
 
   const formatPrice = (price: number) => {;
     if (price >= 1000) {;
       return `$${(price / 1000).toFixed(1)}K`
     };
-    return `$${price}`,;
-  },;
+    return `$${price}`;
+  };
 
   const parseROI = (roi: string) => {;
     const match = roi.match(/(\d+)%/);
     return match ? parseInt(match[1]) : 0
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;

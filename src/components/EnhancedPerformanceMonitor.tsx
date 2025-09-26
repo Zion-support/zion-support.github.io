@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
   loadTime: number,renderTime: number,memoryUsage: number,networkLatency: number,fps: number,lighthouseScore: number;
 };
 
@@ -7,48 +7,48 @@ export function EnhancedPerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0;
   });
-  const [isVisible, setIsVisible] = useState(false),;
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {;
     //[^;]*
-    const loadTime = performance.now()
+    const loadTime = window.performance.now()
     ;
     //[^;]*
     const memoryInfo = (performance as any).memory
     const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0
 
     //[^;]*
-    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0
+    const renderTime = window.performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0
 
     //[^;]*
-    const networkLatency = performance.getEntriesByType('resource')
-      .reduce((acc, entry) => acc + entry.duration, 0) / 10,;
+    const networkLatency = window.performance.getEntriesByType('resource')
+      .reduce((acc, entry) => acc + entry.duration, 0) / 10;
 
     //[^;]*
     let fps = 60;
-    let lastTime = performance.now()
+    let lastTime = window.performance.now()
     let frameCount = 0;
 
     const measureFPS = () => {;
-      frameCount++,;
-      const currentTime = performance.now()
+      frameCount++;
+      const currentTime = window.performance.now()
       if (currentTime - lastTime >= 1000) {;
-        fps = Math.round((frameCount * 1000) / (currentTime - lastTime)),;
-        frameCount = 0,;
-        lastTime = currentTime,;
+        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        frameCount = 0;
+        lastTime = currentTime;
       };
-      requestAnimationFrame(measureFPS),;
-    },;
-    measureFPS(),;
+      requestAnimationFrame(measureFPS);
+    };
+    measureFPS();
 
     //[^;]*
-    const lighthouseScore = Math.max(0, Math.min(100, ;
+    const lighthouseScore = Math.max(0, Math.min(100;
       100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10);
-    )),;
+    ));
 
     setMetrics({;
       loadTime: Math.round(loadTime),renderTime: Math.round(renderTime),memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency)
-      fps,;
+      fps;
       lighthouseScore: Math.round(lighthouseScore)
     });
     //[^;]*
@@ -57,11 +57,11 @@ export function EnhancedPerformanceMonitor() {;
         setIsVisible(!isVisible)
       };
     };
-    window.addEventListener('keydown', handleKeyPress),;
-    return () => window.removeEventListener('keydown', handleKeyPress),;
-  }, [isVisible]),;
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isVisible]);
 
-  if (!isVisible) return null,;
+  if (!isVisible) return null;
 
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">;
