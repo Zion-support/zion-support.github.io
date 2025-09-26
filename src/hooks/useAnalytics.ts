@@ -173,6 +173,15 @@ export const useTimeTracking = () => {
   }, [trackTimeOnPage]);
 };
 
+// Page view tracking hook
+export const usePageView = (pageName?: string) => {
+  const { trackPageView } = useAnalytics();
+
+  useEffect(() => {
+    trackPageView(window.location.href, pageName || document.title);
+  }, [trackPageView, pageName]);
+};
+
 // Extend Window interface
 declare global {
   interface Window {

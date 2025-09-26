@@ -1,10 +1,11 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { HelmetProvider } from 'react-helmet-async';
 import '../styles/animations.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <HelmetProvider>
       <Head>
         <meta charSet="utf-8" />
         <meta name="robots" content="index, follow" />
@@ -72,6 +73,6 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Component {...pageProps} />
-    </>
+    </HelmetProvider>
   );
 }
