@@ -1,19 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export default function AIProductivityAutomation2025() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Productivity Automation 2025: Complete Implementation Guide"
-        description="Transform your business productivity with AI automation. Complete guide covering tools, strategies, and real-world implementations for 40% efficiency gains."
-        keywords="AI productivity, business automation, workflow optimization, AI tools, efficiency gains, productivity automation"
-        url="/blog/ai-productivity-automation-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+            <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

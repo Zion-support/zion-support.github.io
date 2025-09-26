@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 type AnswerValue = number
@@ -188,14 +187,7 @@ export default function AIReadinessAssessment() {
   if (results) {
     return (
       <div className="min-h-screen bg-white">
-        <SEO
-          title="AI Readiness Assessment Results | Free Tool | Zion Tech Group"
-          description="Get your personalized AI readiness assessment results with actionable recommendations and next steps for AI implementation success."
-          keywords="AI readiness assessment, AI implementation, AI strategy, digital transformation readiness, AI planning tool"
-          url="/resources/ai-readiness-assessment"
-        />
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center gap-3 mb-6 justify-center">
@@ -332,14 +324,7 @@ export default function AIReadinessAssessment() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Readiness Assessment | Free Tool | Zion Tech Group"
-        description="Assess your organization's readiness for AI implementation with our comprehensive assessment tool. Get personalized recommendations and actionable next steps."
-        keywords="AI readiness assessment, AI implementation readiness, AI strategy assessment, digital transformation readiness, AI planning"
-        url="/resources/ai-readiness-assessment"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center gap-3 mb-6 justify-center">
