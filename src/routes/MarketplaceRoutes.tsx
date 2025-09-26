@@ -1,7 +1,10 @@
+import React from 'react';
+
 export function MarketplaceRoutes() {
   return (
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>)}
-,
+    <div>
+      <h1>Marketplace Routes</h1>
+      <p>Marketplace routes component placeholder</p>
+    </div>
+  );
+}

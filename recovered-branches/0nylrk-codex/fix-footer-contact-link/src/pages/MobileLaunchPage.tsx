@@ -18,31 +18,31 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {;
+constructor(props) {
     super(props),
     this.state = { hasError: false },
   }
 ,
-  static getDerivedStateFromError(error) {
-    return { hasError: true },
+  static getDerivedStateFromError(error) {;
+return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
 ,
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>}
-,
-    return this.props.children}
+  render() {;
+if (this.state.hasError) {;
+return <div>Something went wrong.</div>}
+,;
+return this.props.children}
 }
-,
-const MobileLaunchPage: React.FC = () => {
-  return (
+,;
+const MobileLaunchPage: React.FC = () => {;
+return (
     <AppLayout>,
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+
         title="Get the Zion App - AI Marketplace in Your Pocket",
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.",
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app",
@@ -56,12 +56,12 @@ const MobileLaunchPage: React.FC = () => {
       <MobileEmailCapture />,
       <AppStoreBanner />,
     </AppLayout>),
-export default MobileLaunchPage,
-const MobileLaunchPage: React.FC = () => {
-  return (
+export default MobileLaunchPage,;
+const MobileLaunchPage: React.FC = () => {;
+return (
     <AppLayout>,
-      <SEO
-        title="Get the Zion App - AI Marketplace in Your Pocket",
+      <SEO,
+title="Get the Zion App - AI Marketplace in Your Pocket",
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.",
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app",
         canonical="/mobile - launch",
@@ -76,4 +76,3 @@ const MobileLaunchPage: React.FC = () => {
     </AppLayout>)}
 ,
 export default MobileLaunchPage,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

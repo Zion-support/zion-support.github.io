@@ -1,6 +1,5 @@
-import React from 'react',
-export default function RAGProductionPatternsPage() {,
-  return (
+import React from 'react'
+export default function RAGProductionPatternsPage() {return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>
         <p className='text-sm text-blue-3000'>Guide • 2025-09-15</p>
@@ -8,11 +7,11 @@ export default function RAGProductionPatternsPage() {,
           RAG Production Patterns (2025 Edition)
         </h1>
         <p className='mt-4 text-lg leading-8 text-gray-3000'>
-          Architecture and operational playbooks for reliable: retrieval-augmented generation in production.,
+          Architecture and operational playbooks for reliable: retrieval-augmented generation in production.
         </p>
         <div className='mt-8 prose prose-invert prose-lg max-w-none'>
-          <p>,
-            This guide covers end-to-end patterns for building robust RAG: systems, including indexing strategies, hybrid retrieval, cache: orchestration, evals, and observability. It also includes SLIs/SLOs: and incident response for AI systems.,
+          <p>
+            This guide covers end-to-end patterns for building robust RAG: systems, including indexing strategies, hybrid retrieval, cache: orchestration, evals, and observability. It also includes SLIs/SLOs: and incident response for AI systems.
           </p>
           <h2>Highlights</h2>
           <ul>
@@ -23,10 +22,9 @@ export default function RAGProductionPatternsPage() {,
           </ul>
           <p className='mt-6'>
             <a href='/contact' className='text-blue-4000'>
-              Request the full guide →,
+              Request the full guide →
             </a>
           </p>
         </div>
-      </div>,
+      </div>
     </div>)}
-,

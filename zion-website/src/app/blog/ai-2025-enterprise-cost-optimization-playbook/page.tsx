@@ -1,22 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
-
+import React from 'react'
+import {
+ Metadata 
+} from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
-  title: 'Enterprise AI Cost Optimization Playbook (2025) | Zion Tech Group',
-  description: 'A practical playbook to reduce AI costs without sacrificing quality: routing, caching, distillation, and measurement.',
-  keywords: 'AI cost optimization, model routing, caching, distillation, cost controls',
+  title: 'Enterprise AI Cost Optimization Playbook (2025) | Zion Tech Group'
+  description: 'A practical playbook to reduce AI costs without sacrificing quality: routing, caching, distillation, and measurement.'
+  keywords: 'AI cost optimization, model routing, caching, distillation, cost controls'
   openGraph: {
-    title: 'Enterprise AI Cost Optimization Playbook (2025)',
-    description: 'Cut AI costs with routing, caching, distillation, and rigorous measurement.',
-    type: 'article',
-    publishedTime: '2025-09-12T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+    title: 'Enterprise AI Cost Optimization Playbook (2025)'
+    description: 'Cut AI costs with routing, caching, distillation, and rigorous measurement.'
+    type: 'article'
+    publishedTime: '2025-09-12T00: 00
+  00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['Optimization', 'Strategy', 'Engineering']
   }
-};
-
+}
 export default function EnterpriseCostOptimizationPlaybook2025() {
   return (
     <div className="min-h-screen bg-white">
@@ -64,6 +63,6 @@ export default function EnterpriseCostOptimizationPlaybook2025() {
         </div>
       </article>
     </div>
-  );
+  )
 }
 

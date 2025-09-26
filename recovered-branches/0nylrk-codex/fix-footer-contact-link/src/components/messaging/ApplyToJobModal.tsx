@@ -2,4 +2,4 @@
 // Export all job application components from the job-application folder,
 export * from "./job-application",
 // Export all job application components from the job-application folder,
-export * from './job-application'>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+export * from './job-application'

@@ -1,7 +1,7 @@
 
 export type WatchlistMatch = {
-export type WatchlistMatch = {
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia',
+export type WatchlistMatch = {,
+list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia',
   name: string,
   score: number, // 0-1 match confidence,
   referenceId?: string,
@@ -9,8 +9,8 @@ export type WatchlistMatch = {
 ,
 export type AmlCheckResult = {
 },
-export type AmlCheckResult = {
-  status: 'clear' | 'match' | 'review' | 'unknown',
+export type AmlCheckResult = {,
+status: 'clear' | 'match' | 'review' | 'unknown',
   matches: WatchlistMatch[],
   checked_at: string, // ISO,
   provider: 'mock' | 'remote'}
@@ -19,18 +19,18 @@ export interface AmlProvider {
 export interface AmlProvider {
   checkPerson(params: { fullLegalName: string, country: string, dob?: string }): Promise<AmlResult>,
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>}
-class MockAmlProvider implements AmlProvider {
-    const name = params && params.fullLegalName.toLowerCase(),
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } },
+class MockAmlProvider implements AmlProvider {;
+const name = params && params.fullLegalName.toLowerCase(),;
+if (name && name.includes('test') || name && name.includes('demo')) {;
+return { status: 'match', details: { reason: 'Test name detected' } },
 }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service,
-    const name = params && params.businessName.toLowerCase(),
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } },
+    // Mock implementation - in production, this would call a real AML service,;
+const name = params && params.businessName.toLowerCase(),;
+if (name && name.includes('test') || name && name.includes('demo')) {;
+return { status: 'match', details: { reason: 'Test business name detected' } },
 }
     return { status: 'clear' }
   }
@@ -39,10 +39,10 @@ class MockAmlProvider implements AmlProvider {
 // Singleton instance,
 export const amlManager = new AmlManager(),
 // Utility functions,
-export function createAmlCheck(
-  userId: string,
-  checkType: AmlCheck['checkType']): Omit<AmlCheck 'id' | 'createdAt' | 'expiresAt'> {
-  return {
+export function createAmlCheck(,
+userId: string,
+  checkType: AmlCheck['checkType']): Omit<AmlCheck 'id' | 'createdAt' | 'expiresAt'> {;
+return {
     userId,
     checkType,
     status: 'pending',
@@ -51,30 +51,30 @@ export function createAmlCheck(
     details: {}
   },
 }
-export function generateAmlCheckId(): string {
-  return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-export function isAmlCheckExpired(check: AmlCheck): boolean {
-  return new Date(check.expiresAt) < new Date()}
-export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
-  const colors = {
-    low: 'green',
+export function generateAmlCheckId(): string {;
+return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+export function isAmlCheckExpired(check: AmlCheck): boolean {;
+return new Date(check.expiresAt) < new Date()}
+export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {;
+const colors = {,
+low: 'green',
     medium: 'yellow',
     high: 'orange',
-    critical: 'red'},
-  return colors[riskLevel]}
+    critical: 'red'},;
+return colors[riskLevel]}
   async check_person (params: { fullLegalName: string, country: string, dob?: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service,
-    const name = params.fullLegalName.toLowerCase (),
-    if (|| name.includes ('demo')) {) {
+    // Mock implementation - in production, this would call a real AML service,;
+const name = params.fullLegalName.toLowerCase (),;
+if (|| name.includes ('demo')) {) {
   $2}
       return { status: 'match', details: { reason: 'Test name detected' } }
     }
     return { status: 'clear' }
   }
   async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service,
-    const name = params.business_name.toLowerCase (),
-    if (|| name.includes ('demo')) {) {
+    // Mock implementation - in production, this would call a real AML service,;
+const name = params.business_name.toLowerCase (),;
+if (|| name.includes ('demo')) {) {
   $2}
       return { status: 'match', details: { reason: 'Test business name detected' } }
     }
@@ -82,9 +82,8 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   }
 }
 ,
-export function getAmlProvider(): AmlProvider {
-  return new MockAmlProvider()}
+export function getAmlProvider(): AmlProvider {;
+return new MockAmlProvider()}
 ,
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ()}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+export function getAmlProvider (): AmlProvider {;
+return new MockAmlProvider ()}

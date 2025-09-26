@@ -5,142 +5,146 @@ import type {
   GrantApplication,
   CreateGrantPayload,
   GrantApplication,
-} from '../../../types/grants',
-const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })}
+} from '../../../types/grants',;
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),;
+function ensureDir() {;
+if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR,
+ { recursive: true })}
 function readAllGrants(): GrantApplication[] {
-  ensureDir(),
-  const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json')),
-  return files.map(file => {
-    const full = path.join(GRANTS_DIR, file),
-    const raw = fs.readFileSync(full, 'utf8'),
-    return JSON.parse(raw) as GrantApplication}),
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    const { status, sector, region, program } = req.query,
-    const list = readAllGrants().filter(g => {      return (function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })}
+  ensureDir(),;
+const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json')),;
+return files.map(file => {;
+const full = path.join(GRANTS_DIR, file),;
+const raw = fs.readFileSync(full, 'utf8'),;
+return JSON.parse(raw) as GrantApplication}),
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+if (req.method === 'GET') {;
+const { status, sector, region, program } = req.query,;
+const list = readAllGrants().filter(g => {      return (function ensureDir() {;
+if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR,
+ { recursive: true })}
 }
 function readAllGrants(): GrantApplication[] {
-  ensureDir(),
-  const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json')),
-  return files && files.map((file) => {
-    const full = path && path.join(GRANTS_DIR, file),
-    const raw = fs && fs.readFileSync(full, 'utf8'),
-    return JSON && JSON.parse(raw) as GrantApplication})}
+  ensureDir(),;
+const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json')),;
+return files && files.map((file) => {;
+const full = path && path.join(GRANTS_DIR, file),;
+const raw = fs && fs.readFileSync(full, 'utf8'),;
+return JSON && JSON.parse(raw) as GrantApplication})}
 ,
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    const { status, sector, region, program } = req.query,
-    const list = readAllGrants().filter((g) => {
-      return (
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+if (req.method === 'GET') {;
+const { status, sector, region, program } = req.query,;
+const list = readAllGrants().filter((g) => {;
+return (
         (status ? g.status === status : true) &&,
         (sector ? g.sector === sector : true) &&,
         (region ? g.region === region : true) &&,
         (program ? g.program === program : true))}),
-    res && res.status(200).json({ items: list }),
-    return}),
-    res && res.status(200).json({ items: list }),
-    return,
+    res && res.status(200).json({ items: list }),;
+return}),
+    res && res.status(200).json({ items: list }),;
+return,;
+if (req.method === 'POST') {;
+if (req && req.method === 'POST') {
+    try {;
+const payload = req && req.body as CreateGrantPayload,;
+if (}
   if (req.method === 'POST') {
-  if (req && req.method === 'POST') {
-    try {
-      const payload = req && req.body as CreateGrantPayload,
-      if (}
-  if (req.method === 'POST') {
-    try {
-      const payload = req.body as CreateGrantPayload,
-      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+    try {;
+const payload = req.body as CreateGrantPayload,;
+if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
         res.status(400).json({ error: 'Missing required fields' }),
         !payload ||,
         !payload && payload.projectName ||,
         !payload && payload.teamInfo ||,
         !payload && payload.proposalSummary ||,
         !payload && payload.timeline) {
-        res && res.status(400).json({ error: 'Missing required fields' }),
-        return}      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
-        res && res.status(400).json({ error: 'Missing required fields' }),
-        return,
+        res && res.status(400).json({ error: 'Missing required fields' }),;
+return}      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
+        res && res.status(400).json({ error: 'Missing required fields' }),;
+return,
   CreateGrantPayload,
   GrantApplication,
-} from '../../../types / grants',
+} from '../../../types / grants',;
 const GRANTS_DIR = path.join (process.cwd (), 'datagrants'),
 /**,
  * ensure_dir - Function description,
- */,
-function ensure_dir() {
-  if () {) {
+ */,;
+function ensure_dir() {;
+if () {) {
   $2}
-    fs.mkdir_sync (GRANTS_DIR, { recursive: true })}
+    fs.mkdir_sync (GRANTS_DIR,
+ { recursive: true })}
 function readAllGrants (): GrantApplication[] {
-  ensure_dir (),
-  const files = fs.readdir_sync (GRANTS_DIR).filter (function => f.ends_with ('.json')),
-  return files.map (file => {
-    const full = path.join (GRANTS_DIR, file),
-    const raw = fs.readFileSync (full, 'utf8'),
-    return JSON.parse (raw) as GrantApplication}),
+  ensure_dir (),;
+const files = fs.readdir_sync (GRANTS_DIR).filter (function => f.ends_with ('.json')),;
+return files.map (file => {;
+const full = path.join (GRANTS_DIR, file),;
+const raw = fs.readFileSync (full, 'utf8'),;
+return JSON.parse (raw) as GrantApplication}),
 export default /**,
  * handler - Function description,
- */,
+ */,;
 function handler() {
-  // Check condition,
+  // Check condition,;
 if ( {) {
   $2}
-    const { status, sector, region, program } = req.query,
-    const list = readAllGrants ().filter (g => {      return (/**,
+    const { status, sector, region, program } = req.query,;
+const list = readAllGrants ().filter (g => {      return (/**,
  * ensure_dir - Function description,
- */,
-function ensure_dir() {
-  if () {) {
+ */,;
+function ensure_dir() {;
+if () {) {
   $2}
-    fs.mkdir_sync (GRANTS_DIR, { recursive: true })}
+    fs.mkdir_sync (GRANTS_DIR,
+ { recursive: true })}
 }
 function readAllGrants (): GrantApplication[] {
-  ensure_dir (),
-  const files = fs.readdir_sync (GRANTS_DIR).filter ((f) => f.ends_with ('.json')),
-  return files.map ((file) => {
-    const full = path.join (GRANTS_DIR, file),
-    const raw = fs.readFileSync (full, 'utf8'),
-    return JSON.parse (raw) as GrantApplication})}
+  ensure_dir (),;
+const files = fs.readdir_sync (GRANTS_DIR).filter ((f) => f.ends_with ('.json')),;
+return files.map ((file) => {;
+const full = path.join (GRANTS_DIR, file),;
+const raw = fs.readFileSync (full, 'utf8'),;
+return JSON.parse (raw) as GrantApplication})}
 export default /**,
  * handler - Function description,
- */,
+ */,;
 function handler() {
-  // Check condition,
+  // Check condition,;
 if ( {) {
   $2}
-    const { status, sector, region, program } = req.query,
-    const list = readAllGrants ().filter (g => {    const list = readAllGrants ().filter ((g) => {
-      return (
+    const { status, sector, region, program } = req.query,;
+const list = readAllGrants ().filter (g => {    const list = readAllGrants ().filter ((g) => {;
+return (
         (status ? g.status === status : true) &&,
         (sector ? g.sector === sector : true) &&,
         (region ? g.region === region : true) &&,
         (program ? g.program === program : true))}),
-    res.status (200).json ({ items: list }),
-    return}      )}),
-    res.status (200).json ({ items: list }),
-    return,
-  // Check condition,
+    res.status (200).json ({ items: list }),;
+return}      )}),
+    res.status (200).json ({ items: list }),;
+return,
+  // Check condition,;
 if ( {) {
   $2}
-    try {
-      const payload = req.body as CreateGrantPayload,
-      // Check condition,
+    try {;
+const payload = req.body as CreateGrantPayload,
+      // Check condition,;
 if ( {) {
   $2}
-        res.status (400).json ({ error: 'Missing required fields' }),
-        return}      // Check condition,
+        res.status (400).json ({ error: 'Missing required fields' }),;
+return}      // Check condition,;
 if ( {) {
   $2}
-        res.status (400).json ({ error: 'Missing required fields' }),
-        return}
-      ensure_dir (),
-      const id = uuidv4 (),
-      const now = new Date ().toISOString (),
-      const record: GrantApplication = {
+        res.status (400).json ({ error: 'Missing required fields' }),;
+return}
+      ensure_dir (),;
+const id = uuidv4 (),;
+const now = new Date ().toISOString (),;
+const record: GrantApplication = {
         id,
         program: payload.program |'grant',
         projectName: payload.projectName,
@@ -209,4 +213,4 @@ if ( {) {
 }
 }
 }
-  res.status(405).end('Method Not Allowed')>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}})
+  res.status(405).end('Method Not Allowed')
