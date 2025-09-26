@@ -56,7 +56,6 @@ zion-film/
 src.corrupted/**
 
 # Ignore known corrupted or unused source areas (excluded from tsconfig build)
-# Keep targeted ignores inside src minimal to allow lint to run
 # src/components/**
 # src/pages/**
 # src/routes/**
