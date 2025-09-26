@@ -48,7 +48,6 @@
   "include": [
     "next-env.d.ts",
     "app/**/*",
-    "src/src/**/*",
     "src/types/offline-shims.d.ts",
     ".next/types/**/*.ts"
   ],
