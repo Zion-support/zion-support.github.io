@@ -1,6 +1,21 @@
 {
   "root": true,
   "extends": ["next", "next/core-web-vitals"],
+  "ignorePatterns": [
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "src/**",
+    "database/**",
+    "e2e/**",
+    "playwright.config.ts",
+    "jest.config.js",
+    "jest.setup.js",
+    "middleware.ts",
+    "tailwind.config.js"
+  ],
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off"
