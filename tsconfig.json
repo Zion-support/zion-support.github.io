@@ -2,31 +2,30 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-
-    /* Bundler mode */
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "src/src/*"
       ]
     },
-
-    /* Linting */
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
@@ -35,8 +34,6 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "noImplicitOverride": false,
-    "strictNullChecks": false,
-    
     "types": [
       "node",
       "react",
@@ -47,17 +44,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": false
   },
   "include": [
-    "src/**/*",
-    "app/**/*"
+    "src/src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
+    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -71,6 +69,5 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }
