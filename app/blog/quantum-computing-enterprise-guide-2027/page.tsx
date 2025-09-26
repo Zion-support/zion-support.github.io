@@ -1,8 +1,8 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'Quantum Computing Enterprise Guide 2027: Transforming Business Operations',
   description: 'Complete guide to quantum computing implementation in enterprise environments, including use cases, ROI analysis, and implementation strategies.',
   keywords: ['quantum computing', 'enterprise', 'business transformation', 'technology implementation', 'ROI'],
@@ -277,14 +277,12 @@ export default function QuantumComputingGuidePage() {
             and technology selection services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-colors"
             >
               Get Quantum Strategy Consultation
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Services

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 
 export const dynamic = 'force-dynamic';
@@ -95,10 +95,10 @@ const ArticlePage = () => {
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
-              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
+              <Link to="/blog/ai-2026-policy-as-code-blueprint" className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
                 Policy‑as‑Code Blueprint
               </Link>
-              <Link href="/blog/ai-2026-release-scorecards" className="border-2 border-emerald-600 text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50">
+              <Link to="/blog/ai-2026-release-scorecards" className="border-2 border-emerald-600 text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50">
                 Release Scorecards
               </Link>
             </div>

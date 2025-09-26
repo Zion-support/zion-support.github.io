@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag, Users, TrendingUp, CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Enterprise Integration Success: 2025 Complete Guide',
   description: 'Master AI enterprise integration with proven strategies, real-world case studies, and step-by-step implementation frameworks for 2025 success.',
   keywords: 'AI enterprise integration, AI implementation, enterprise AI, AI strategy, digital transformation',
@@ -346,15 +346,13 @@ export default function AIEnterpriseIntegrationSuccess() {
                 AI integration strategy tailored to your organization's unique needs.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Get Started Today
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <Link 
-                  href="/resources/ai-implementation-master-guide-2025" 
+                <Link to="/resources/ai-implementation-master-guide-2025" 
                   className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
                 >
                   Download Complete Guide
@@ -370,7 +368,7 @@ export default function AIEnterpriseIntegrationSuccess() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-implementation-best-practices-2025" className="group">
+            <Link to="/blog/ai-implementation-best-practices-2025" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Implementation Best Practices 2025
@@ -381,7 +379,7 @@ export default function AIEnterpriseIntegrationSuccess() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
+            <Link to="/case-studies/ai-financial-services-transformation-2025" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Financial Services Transformation Case Study

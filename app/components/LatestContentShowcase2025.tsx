@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function LatestContentShowcase2025() {
   return (
@@ -20,8 +20,7 @@ export default function LatestContentShowcase2025() {
             <p className="text-gray-600 mb-4">
               Governance-by-design with evals-as-code, policy-as-code, and safety telemetry.
             </p>
-            <Link 
-              href="/content/trustworthy-autonomous-agents-2026"
+            <Link to="/content/trustworthy-autonomous-agents-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Blueprint →
@@ -33,8 +32,7 @@ export default function LatestContentShowcase2025() {
             <p className="text-gray-600 mb-4">
               Policy-constrained, risk-scored agent workflows with evals and guardrails.
             </p>
-            <Link 
-              href="/content/ai-2026-risk-aware-agents-blueprint"
+            <Link to="/content/ai-2026-risk-aware-agents-blueprint"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Full Guide →
@@ -48,10 +46,10 @@ export default function LatestContentShowcase2025() {
               Governance-by-design with evals, policy, and safety telemetry for reliable autonomy.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/blog/ai-2026-trustworthy-autonomous-agents-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">
+              <Link to="/blog/ai-2026-trustworthy-autonomous-agents-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">
                 Read Article →
               </Link>
-              <Link href="/content/trustworthy-autonomous-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">
+              <Link to="/content/trustworthy-autonomous-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">
                 Implementation Guide →
               </Link>
             </div>
@@ -60,8 +58,7 @@ export default function LatestContentShowcase2025() {
             <div className="text-4xl mb-4">✅</div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Safe Multi‑Agent Approvals</h3>
             <p className="text-gray-600 mb-4">Risk‑tiered approvals, budgets, and policy‑as‑code for safe execution.</p>
-            <Link 
-              href="/blog/ai-2026-safe-multi-agent-approvals-blueprint"
+            <Link to="/blog/ai-2026-safe-multi-agent-approvals-blueprint"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Blueprint →
