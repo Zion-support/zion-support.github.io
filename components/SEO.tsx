@@ -1,32 +1,14 @@
-import Head from 'next/head';
+// This component is deprecated for App Router
+// Use metadata export in page.tsx files instead
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  url?: string;
-  noindex?: boolean;
-}
+export type SEOProps = {
+  title: string;
+  description: string;
+  keywords: string;
+  url: string;
+};
 
-export default function SEO({ 
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords,
-  canonical,
-  url,
-  noindex = false
-}: SEOProps) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      {url && <meta property="og:url" content={url} />}
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-  );
+// Accept props to satisfy existing usage during transition to metadata API
+export default function SEO(_: SEOProps) {
+  return null;
 }

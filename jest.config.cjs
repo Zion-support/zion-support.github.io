@@ -1,61 +1,25 @@
-module.exports = {
-  testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/coverage/'],
-};
-
 /** @type {import('jest').Config} */
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__safe_tests__'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/app/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+    '^@/lib/(.*)$': '<rootDir>/app/lib/$1',
+  },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      { presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }], '@babel/preset-typescript'] }
-    ]
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
-  },
-  // Run only safe tests
-  testMatch: ['<rootDir>/__safe_tests__/**/*.(test|spec).(js|jsx|ts|tsx)'],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/__tests__/',
-    '/recovered-branches/',
-    '/src_backup/',
-    '/backup/',
-    '/backup-problematic-files/',
-    '/components.disabled/',
-    '/components.disabled_full/',
-    '/pages-disabled/',
-    '/pages.disabled/',
-    '/pages.disabled_auto/',
-    '/pages.disabled_full/',
-    '/pages_backup/',
-    '/pages_backup_before_cleanup/',
-    '/pages_backup_conflict/',
-    '/pages_backup_conflicts/',
-    '/pages.broken/',
-    '/pages._archive_corrupted/',
-    '/pages._quarantine/',
-    '/pages-quarantine/',
-    '/tests/',
-    '/e2e/',
-    '/temp_exclude/',
-    '/ts_files_backup/'
+  testMatch: [
+    '**/__tests__/**/*.(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)',
   ],
-  passWithNoTests: true
-}
-
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    'app/**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+  ],
+};
