@@ -71,3 +71,157 @@ export const FOOTER_LINKS = {
 	resources: ['Blog', 'Documentation', 'Support', 'FAQ'],
 	connect: ['LinkedIn', 'Twitter', 'GitHub', 'Email']
 };
+
+export interface Testimonial {
+	id: string;
+	name: string;
+	role: string;
+	company: string;
+	content: string;
+	avatar?: string;
+	rating: number;
+}
+
+export const TESTIMONIALS: Testimonial[] = [
+	{
+		id: 'testimonial-1',
+		name: 'Sarah Johnson',
+		role: 'CTO',
+		company: 'TechCorp Inc.',
+		content: 'Zion App transformed our digital infrastructure with their AI solutions. The team delivered exceptional results and exceeded our expectations.',
+		rating: 5
+	},
+	{
+		id: 'testimonial-2',
+		name: 'Michael Chen',
+		role: 'Founder',
+		company: 'StartupXYZ',
+		content: 'Their cloud solutions helped us scale from 0 to 100k users seamlessly. Professional, reliable, and innovative approach.',
+		rating: 5
+	},
+	{
+		id: 'testimonial-3',
+		name: 'Emily Rodriguez',
+		role: 'Product Manager',
+		company: 'InnovateLab',
+		content: 'The mobile app they developed for us has been a game-changer. Clean code, great performance, and excellent user experience.',
+		rating: 5
+	}
+];
+
+export interface PricingTier {
+	id: string;
+	name: string;
+	price: number;
+	period: string;
+	description: string;
+	features: string[];
+	isPopular?: boolean;
+	buttonText: string;
+	buttonVariant: 'primary' | 'secondary';
+}
+
+export const PRICING_TIERS: PricingTier[] = [
+	{
+		id: 'starter',
+		name: 'Starter',
+		price: 99,
+		period: 'month',
+		description: 'Perfect for small projects and startups',
+		features: [
+			'Up to 5 team members',
+			'Basic AI features',
+			'Email support',
+			'Standard hosting',
+			'Basic analytics'
+		],
+		buttonText: 'Get Started',
+		buttonVariant: 'secondary'
+	},
+	{
+		id: 'professional',
+		name: 'Professional',
+		price: 299,
+		period: 'month',
+		description: 'Ideal for growing businesses',
+		features: [
+			'Up to 25 team members',
+			'Advanced AI features',
+			'Priority support',
+			'Premium hosting',
+			'Advanced analytics',
+			'Custom integrations',
+			'API access'
+		],
+		isPopular: true,
+		buttonText: 'Choose Professional',
+		buttonVariant: 'primary'
+	},
+	{
+		id: 'enterprise',
+		name: 'Enterprise',
+		price: 999,
+		period: 'month',
+		description: 'For large organizations',
+		features: [
+			'Unlimited team members',
+			'Full AI capabilities',
+			'24/7 dedicated support',
+			'Enterprise hosting',
+			'Custom analytics',
+			'White-label solutions',
+			'Custom development',
+			'SLA guarantee'
+		],
+		buttonText: 'Contact Sales',
+		buttonVariant: 'secondary'
+	}
+];
+
+export interface BlogPost {
+	id: string;
+	title: string;
+	excerpt: string;
+	author: string;
+	date: string;
+	readTime: string;
+	category: string;
+	image: string;
+	slug: string;
+}
+
+export const BLOG_POSTS: BlogPost[] = [
+	{
+		id: 'blog-1',
+		title: 'The Future of AI in Business: Trends and Predictions for 2024',
+		excerpt: 'Explore the latest AI trends shaping the business landscape and discover how artificial intelligence is revolutionizing industries.',
+		author: 'Alex Thompson',
+		date: 'Dec 15, 2024',
+		readTime: '5 min read',
+		category: 'AI & Technology',
+		image: '/api/placeholder/400/250',
+		slug: 'future-ai-business-trends-2024'
+	},
+	{
+		id: 'blog-2',
+		title: 'Cloud Migration Best Practices: A Complete Guide',
+		excerpt: 'Learn the essential steps and strategies for successful cloud migration, including common pitfalls to avoid.',
+		author: 'Maria Garcia',
+		date: 'Dec 12, 2024',
+		readTime: '8 min read',
+		category: 'Cloud Computing',
+		image: '/api/placeholder/400/250',
+		slug: 'cloud-migration-best-practices-guide'
+	},
+	{
+		id: 'blog-3',
+		title: 'Building Scalable Web Applications: Architecture Patterns',
+		excerpt: 'Discover proven architecture patterns and design principles for building web applications that can handle massive scale.',
+		author: 'David Kim',
+		date: 'Dec 10, 2024',
+		readTime: '6 min read',
+		category: 'Web Development',
+		image: '/api/placeholder/400/250',
+		slug: 'scalable-web-applications-architecture-patterns'
+	}
+];
