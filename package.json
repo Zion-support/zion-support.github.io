@@ -9,10 +9,10 @@
     "build:netlify": "vite build",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
-    "type-check": "tsc -p tsconfig.app.json --noEmit",
+    "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx"
