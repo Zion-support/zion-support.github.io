@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import './App.css';
 // Lazy load components
 const Home = React.lazy(() => import('./pages/Home'));
@@ -16,6 +17,7 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <div className='App'>
+      <Navigation />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path='/' element={<Home />} />
