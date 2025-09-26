@@ -4,11 +4,16 @@ import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import PerformanceMetrics from '../src/components/PerformanceMetrics';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import { WebVitals } from '../src/components/WebVitals';
 import '../styles/animations.css';
+import '../src/styles/accessibility.css';
 
 // Lazy load heavy components
 const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -151,8 +156,18 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </PerformanceOptimizer>
           <PerformanceMetrics />
+          <PerformanceMonitor />
           <PerformanceTracker />
+          <WebVitals />
+          <AccessibilityAuditor />
           <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+          <AdvancedErrorHandler 
+            enableAutoRetry={true}
+            maxRetries={3}
+            enablePerformanceMonitoring={true}
+            enableErrorReporting={true}
+            enableUserFeedback={true}
+          />
         </HelmetProvider>
       </AnalyticsProvider>
     </EnhancedErrorBoundary>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load heavy components
 const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -114,78 +115,21 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Solutions - AI-Powered Business Solutions & Cloud Infrastructure</title>
-        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="keywords" content="AI solutions, cloud infrastructure, digital transformation, business automation, machine learning, cloud migration, tech consulting" />
-        <meta name="author" content="Zion Tech Solutions" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zion.app" />
-        <meta property="og:site_name" content="Zion Tech Solutions" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Solutions - AI-Powered Business Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-        <meta name="twitter:site" content="@ziontech" />
-        
-        {/* Performance and Security */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://zion.app" />
-        
-        {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* Theme Color */}
-        <meta name="theme-color" content="#3B82F6" />
-        <meta name="msapplication-TileColor" content="#3B82F6" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Solutions",
-              "url": "https://zion.app",
-              "logo": "https://zion.app/logo.png",
-              "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services.",
-              "sameAs": [
-                "https://twitter.com/ziontech",
-                "https://linkedin.com/company/ziontech"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-555-0123",
-                "contactType": "customer service",
-                "availableLanguage": "English"
-              }
-            })
-          }}
-        />
-      </Head>
+      <EnhancedSEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions',
+          'cloud infrastructure', 
+          'digital transformation',
+          'business automation',
+          'technology consulting',
+          'machine learning',
+          'artificial intelligence',
+          'cloud computing',
+          'enterprise solutions'
+        ]}
+      />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
