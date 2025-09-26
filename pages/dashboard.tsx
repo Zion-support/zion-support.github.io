@@ -3,8 +3,10 @@ import Head from 'next/head';
 import { PerformanceDashboard } from '../src/components/PerformanceDashboard';
 import { SecurityDashboard } from '../src/components/SecurityDashboard';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
+import EnhancedDashboard from '../src/components/EnhancedDashboard';
+import EnhancedSearch from '../src/components/EnhancedSearch';
 
-type DashboardTab = 'analytics' | 'performance' | 'security';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -12,7 +14,9 @@ const Dashboard: React.FC = () => {
   const tabs = [
     { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
     { id: 'performance' as const, name: 'Performance', icon: '⚡' },
-    { id: 'security' as const, name: 'Security', icon: '🔒' }
+    { id: 'security' as const, name: 'Security', icon: '🔒' },
+    { id: 'enhanced' as const, name: 'Enhanced Dashboard', icon: '🚀' },
+    { id: 'search' as const, name: 'Search', icon: '🔍' }
   ];
 
   const renderDashboard = () => {
@@ -23,6 +27,23 @@ const Dashboard: React.FC = () => {
         return <PerformanceDashboard />;
       case 'security':
         return <SecurityDashboard />;
+      case 'enhanced':
+        return <EnhancedDashboard />;
+      case 'search':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
+            <div className="max-w-2xl">
+              <EnhancedSearch 
+                onSearch={(query, results) => console.log('Search:', query, results)}
+                onResultClick={(result) => console.log('Result clicked:', result)}
+                enableFilters={true}
+                enableSuggestions={true}
+                enableHistory={true}
+              />
+            </div>
+          </div>
+        );
       default:
         return <AnalyticsDashboard />;
     }

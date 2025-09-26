@@ -2,20 +2,35 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import PerformanceMetrics from '../src/components/PerformanceMetrics';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
+import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
+import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 import '../styles/animations.css';
+
+// Lazy load heavy components
+const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
+  ssr: false
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <HelmetProvider>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion App" />
-        <meta name="theme-color" content="#2563eb" />
-      </Head>
+    <EnhancedErrorBoundary>
+      <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
+        <HelmetProvider>
+          <Head>
+            <meta charSet="utf-8" />
+            <meta name="robots" content="index, follow" />
+            <meta name="author" content="Zion App" />
+            <meta name="theme-color" content="#2563eb" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          </Head>
       <style jsx global>{`
         * {
           box-sizing: border-box;
@@ -75,11 +90,75 @@ export default function App({ Component, pageProps }: AppProps) {
             font-size: 14px;
           }
         }
+        
+        /* Accessibility Styles */
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        
+        .large-text {
+          font-size: 1.2em;
+        }
+        
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text h4 { font-size: 1.5em; }
+        .large-text h5 { font-size: 1.25em; }
+        .large-text h6 { font-size: 1.1em; }
+        
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        
+        .focus-visible *:focus {
+          outline: 3px solid #2563eb !important;
+          outline-offset: 2px !important;
+        }
+        
+        .screen-reader-optimized {
+          /* Enhanced focus indicators */
+        }
+        
+        .screen-reader-optimized *:focus {
+          outline: 4px solid #ff6b35 !important;
+          outline-offset: 4px !important;
+        }
+        
+        .keyboard-navigation button:focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation textarea:focus,
+        .keyboard-navigation select:focus {
+          outline: 2px solid #2563eb !important;
+          outline-offset: 2px !important;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
       `}</style>
-      <Component {...pageProps} />
-      <PerformanceMetrics />
-      <PerformanceMonitor />
-      <AccessibilityAuditor />
-    </HelmetProvider>
+          <PerformanceOptimizer>
+            <Component {...pageProps} />
+          </PerformanceOptimizer>
+          <PerformanceMetrics />
+          <PerformanceMonitor />
+          <PerformanceTracker />
+          <AccessibilityAuditor />
+          <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+        </HelmetProvider>
+      </AnalyticsProvider>
+    </EnhancedErrorBoundary>
   );
 }
