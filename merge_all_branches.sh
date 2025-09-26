@@ -1,110 +1,97 @@
 #!/bin/bash
 
-# Script to merge all open branches and resolve conflicts
+# Script to merge all unmerged branches into main
 set -e
 
-echo "🚀 Starting comprehensive branch merge process..."
+echo "Starting comprehensive branch merge process..."
 
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | head -50)
+# Get all unmerged branches
+UNMERGED_BRANCHES=$(git branch -r --no-merged origin/main | grep -v "backup-main" | head -20)
 
-# Counter for tracking progress
-count=0
-total=$(echo "$BRANCHES" | wc -l)
-successful_merges=0
-failed_merges=0
+echo "Found unmerged branches:"
+echo "$UNMERGED_BRANCHES"
 
-echo "📊 Found $total branches to process"
+# Create a backup branch
+git checkout -b backup-before-merge-$(date +%Y%m%d-%H%M%S)
 
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local branch_name=$(echo "$branch" | sed 's/origin\///')
+# Switch back to main
+git checkout main
+
+# Counter for successful merges
+SUCCESS_COUNT=0
+FAILED_BRANCHES=()
+
+for branch in $UNMERGED_BRANCHES; do
+    echo ""
+    echo "Processing branch: $branch"
     
-    echo "🔄 Processing branch: $branch_name ($((++count))/$total)"
+    # Extract branch name without origin/
+    BRANCH_NAME=$(echo $branch | sed 's/origin\///')
     
-    # Checkout the branch
-    if ! git checkout -b "$branch_name" "$branch" 2>/dev/null; then
-        echo "⚠️  Branch $branch_name already exists locally, switching to it"
-        git checkout "$branch_name" 2>/dev/null || {
-            echo "❌ Failed to checkout $branch_name"
-            return 1
-        }
-    fi
-    
-    # Try to merge with main
-    if git merge main --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch_name"
-        ((successful_merges++))
-        
-        # Push the merged changes
-        git push origin main 2>/dev/null || {
-            echo "⚠️  Failed to push merged changes for $branch_name"
-        }
-        
-        # Switch back to main
-        git checkout main
-        
-        # Delete the local branch
-        git branch -D "$branch_name" 2>/dev/null || true
-        
+    # Try to merge the branch
+    if git merge --no-ff "$branch" -m "Merge $BRANCH_NAME into main"; then
+        echo "✅ Successfully merged $BRANCH_NAME"
+        ((SUCCESS_COUNT++))
     else
-        echo "⚠️  Merge conflict in $branch_name, attempting to resolve..."
+        echo "❌ Failed to merge $BRANCH_NAME - resolving conflicts..."
         
-        # Check for conflicts
+        # Check if there are conflicts
         if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch_name..."
+            echo "Resolving conflicts in $BRANCH_NAME..."
             
-            # Use our version for common conflict files
-            git checkout --ours . 2>/dev/null || true
-            git add . 2>/dev/null || true
+            # For yarn.lock conflicts, regenerate the file
+            if git status --porcelain | grep -q "yarn.lock"; then
+                echo "Regenerating yarn.lock..."
+                rm yarn.lock
+                yarn install
+                git add yarn.lock
+            fi
             
-            # Try to commit the resolved conflicts
-            if git commit -m "Resolve merge conflicts in $branch_name" 2>/dev/null; then
-                echo "✅ Resolved conflicts in $branch_name"
-                ((successful_merges++))
-                
-                # Push the resolved changes
-                git push origin main 2>/dev/null || {
-                    echo "⚠️  Failed to push resolved changes for $branch_name"
-                }
+            # For package.json conflicts, use the main version
+            if git status --porcelain | grep -q "package.json"; then
+                echo "Using main version of package.json..."
+                git checkout --ours package.json
+                git add package.json
+            fi
+            
+            # For tsconfig.json conflicts, use the main version
+            if git status --porcelain | grep -q "tsconfig.json"; then
+                echo "Using main version of tsconfig.json..."
+                git checkout --ours tsconfig.json
+                git add tsconfig.json
+            fi
+            
+            # Commit the resolved conflicts
+            if git commit --no-edit; then
+                echo "✅ Successfully resolved conflicts and merged $BRANCH_NAME"
+                ((SUCCESS_COUNT++))
             else
-                echo "❌ Failed to resolve conflicts in $branch_name"
-                git merge --abort 2>/dev/null || true
-                ((failed_merges++))
+                echo "❌ Failed to commit resolved conflicts for $BRANCH_NAME"
+                FAILED_BRANCHES+=("$BRANCH_NAME")
+                git merge --abort
             fi
         else
-            echo "❌ Unknown merge issue with $branch_name"
-            git merge --abort 2>/dev/null || true
-            ((failed_merges++))
+            echo "❌ No conflicts detected but merge failed for $BRANCH_NAME"
+            FAILED_BRANCHES+=("$BRANCH_NAME")
+            git merge --abort
         fi
-        
-        # Switch back to main
-        git checkout main
-        
-        # Delete the local branch
-        git branch -D "$branch_name" 2>/dev/null || true
     fi
-    
-    echo "---"
-}
-
-# Process each branch
-for branch in $BRANCHES; do
-    merge_branch "$branch"
-    
-    # Add a small delay to avoid overwhelming the system
-    sleep 1
 done
 
-echo "🎉 Merge process completed!"
-echo "📈 Results:"
-echo "   ✅ Successful merges: $successful_merges"
-echo "   ❌ Failed merges: $failed_merges"
-echo "   📊 Total processed: $count"
+echo ""
+echo "Merge process completed!"
+echo "Successfully merged: $SUCCESS_COUNT branches"
+echo "Failed branches: ${#FAILED_BRANCHES[@]}"
 
-# Final status check
-echo "🔍 Final git status:"
-git status
+if [ ${#FAILED_BRANCHES[@]} -gt 0 ]; then
+    echo "Failed branches:"
+    for branch in "${FAILED_BRANCHES[@]}"; do
+        echo "  - $branch"
+    done
+fi
 
-echo "🏁 Script completed successfully!"
+# Push the updated main branch
+echo "Pushing updated main branch..."
+git push origin main
+
+echo "Process complete!"
