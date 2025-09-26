@@ -285,7 +285,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             height={32}
           />
           <div>
-            <h3 className="text-sm font-medium text-gray-900">{botName}</h3>
+            <h3 className="text-sm font-medium text-gray-900" id="botname">{botName}</h3>
             <div className="flex items-center">
               <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}></div>
               <span className="text-xs text-gray-500">
@@ -357,9 +357,14 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             placeholder={placeholder}
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={!isConnected}
+            aria-label="Type your message"
           />
           <button
-            onClick={() => handleSendMessage(inputText)}
+            onClick={() = aria-label="handleSendMessage(inputText)}
+            disabled={!inputText.trim() || !isConnected}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Send"> handleSendMessage(inputText)}
             disabled={!inputText.trim() || !isConnected}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
@@ -375,6 +380,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         onChange={enableImageUpload ? handleImageUpload : handleFileUpload}
         accept={enableImageUpload ? 'image/*' : '*'}
         className="hidden"
+        aria-label="Upload file"
       />
     </div>
   );

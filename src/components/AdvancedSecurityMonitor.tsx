@@ -113,7 +113,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Security Monitor</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="security-monitor">Security Monitor</h2>
           <p className="text-gray-600 dark:text-gray-400">Real-time security monitoring and threat detection</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -124,7 +124,14 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
             </span>
           </div>
           <button
-            onClick={() => setIsMonitoring(!isMonitoring)}
+            onClick={() = aria-label="setIsMonitoring(!isMonitoring)}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              isMonitoring
+                ? 'bg-red-500 hover:bg-red-600 text-white'
+                : 'bg-green-500 hover:bg-green-600 text-white'
+            }`}
+          >
+            {isMonitoring ? 'Pause' : 'Start'}"> setIsMonitoring(!isMonitoring)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               isMonitoring
                 ? 'bg-red-500 hover:bg-red-600 text-white'
@@ -140,7 +147,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-lg font-semibold mb-2">Security Score</h3>
+            <h3 className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
             <div className="flex items-center space-x-4">
               <div className={`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}>
                 {metrics.securityScore}
@@ -206,7 +213,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
       {/* Vulnerabilities */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Vulnerabilities</h3>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="vulnerabilities">Vulnerabilities</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {['critical', 'high', 'medium', 'low'].map(severity => (
             <motion.div
@@ -227,7 +234,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Security Events */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Security Events</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="recent-security-events">Recent Security Events</h3>
           <select
             value={selectedSeverity}
             onChange={(e) => setSelectedSeverity(e.target.value)}
@@ -274,7 +281,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Attack Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Attack Types</h4>
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">CSP Violations</span>
@@ -300,18 +307,18 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
 
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Security Actions</h4>
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3" id="security-actions">Security Actions</h4>
           <div className="space-y-3">
-            <button className="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium transition-colors">
+            <button className="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Block Suspicious IPs">
               Block Suspicious IPs
             </button>
-            <button className="w-full px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg text-sm font-medium transition-colors">
+            <button className="w-full px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Update Firewall Rules">
               Update Firewall Rules
             </button>
-            <button className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">
+            <button className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Run Security Scan">
               Run Security Scan
             </button>
-            <button className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors">
+            <button className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors" aria-label="Generate Security Report">
               Generate Security Report
             </button>
           </div>

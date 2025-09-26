@@ -314,7 +314,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         <div className="px-6 py-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium text-gray-900">System Alerts</h3>
+            <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
               <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
               <span className="text-sm text-gray-600">
@@ -349,7 +349,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                       {getAlertIcon(alert.type)}
                       <div className="flex-1">
                         <div className="flex items-center space-x-2">
-                          <h4 className="text-sm font-medium text-gray-900">{alert.title}</h4>
+                          <h4 className="text-sm font-medium text-gray-900" id="alerttitle">{alert.title}</h4>
                           <span className={`text-xs font-medium px-2 py-1 rounded-full ${
                             alert.severity === 'critical' ? 'bg-red-100 text-red-800' :
                             alert.severity === 'high' ? 'bg-orange-100 text-orange-800' :
@@ -377,7 +377,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
                               action.variant === 'secondary' ? 'bg-gray-600 text-white hover:bg-gray-700' :
                               'bg-red-600 text-white hover:bg-red-700'
                             }`}
-                          >
+                           aria-label="{action.label}">
                             {action.label}
                           </button>
                         ))}

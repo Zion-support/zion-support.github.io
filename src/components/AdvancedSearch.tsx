@@ -227,6 +227,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
           onFocus={() => query.trim() && setIsOpen(true)}
           className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           placeholder={placeholder}
+          aria-label="Search"
         />
         {isLoading && (
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
@@ -243,7 +244,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
           {results.map((result, index) => (
             <div
               key={result.id}
-              onClick={() => handleResultClick(result)}
+              role="button" tabIndex="0" onClick={() => handleResultClick(result)}
               className={`cursor-pointer select-none relative py-3 px-4 hover:bg-gray-50 ${
                 index === selectedIndex ? 'bg-blue-50' : ''
               }`}

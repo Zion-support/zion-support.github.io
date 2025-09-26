@@ -43,7 +43,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 				)}
 			</div>
 			
-			<h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+			<h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300" id="servicetitle">
 				{service.title}
 			</h3>
 			
@@ -63,7 +63,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 					))}
 					{service.features.length > 3 && (
 						<button
-							onClick={(e) => {
+							onClick={(e) = aria-label="{
+								e.stopPropagation();
+								setIsExpanded(!isExpanded);
+							}}
+							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
+						>
+							{isExpanded ? 'Show Less' : `+${service.features.length - 3} More`}"> {
 								e.stopPropagation();
 								setIsExpanded(!isExpanded);
 							}}
@@ -76,10 +82,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 			)}
 			
 			<div className="flex items-center justify-between mt-6">
-				<button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200">
+				<button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200" aria-label="Learn More →">
 					Learn More →
 				</button>
-				<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+				<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" aria-label="Get Quote">
 					Get Quote
 				</button>
 			</div>

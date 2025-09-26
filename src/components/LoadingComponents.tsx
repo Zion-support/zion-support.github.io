@@ -176,7 +176,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${className}`}>
       <div className="text-center">
         <LoadingSpinner size="xl" className="mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">{title}</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-2" id="title">{title}</h2>
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
