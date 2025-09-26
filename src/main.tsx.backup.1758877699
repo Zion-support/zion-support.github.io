@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App'
+import './index.css'
+
+const rootElement = document.getElementById('root')
+
+if (rootElement) {
+	const root = createRoot(rootElement)
+	root.render(
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>
+	)
+=======
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+
+function App(): React.ReactElement {
+	return (
+		<div style={{ padding: 24 }}>
+			<h1>Zion</h1>
+			<p>Welcome to the Zion Tech Group site.</p>
+		</div>
+	);
+}
+
+const container = document.getElementById("root");
+if (container) {
+	const root = createRoot(container);
+	root.render(<App />);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d55a
+}
+
