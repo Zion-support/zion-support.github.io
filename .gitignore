@@ -106,6 +106,7 @@ aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
 
+<<<<<<< HEAD
 # Ignore build outputs to avoid conflicts
 .next/
 out/
@@ -113,3 +114,20 @@ dist/
 coverage/
 tsconfig.tsbuildinfo
 .yarn/install-state.gz
+=======
+# Yarn Berry cache
+.yarn/cache
+.yarn/*-state.*
+# Ignore Yarn v4 cache
+.yarn/cache/
+.yarn/install-state.gz
+.pnp.*
+
+# Python artifacts and virtual envs
+__pycache__/
+*.pyc
+.venv/
+
+# Local SQLite databases
+zion_academy/instance/*.db
+>>>>>>> cursor/check-fix-push-and-merge-to-main-865f

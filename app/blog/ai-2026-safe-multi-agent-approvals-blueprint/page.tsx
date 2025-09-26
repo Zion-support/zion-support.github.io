@@ -1,16 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import Head from 'next/head';
 
 const SafeMultiAgentApprovalsBlueprint = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Safe Multi‑Agent Approvals — Blueprint"
-        description="Design risk‑tiered approvals, budget controls, and policy‑as‑code gates for safe multi‑agent execution."
-        keywords="multi-agent, approvals, policy-as-code, budgets, guardrails, safety"
-        url="/blog/ai-2026-safe-multi-agent-approvals-blueprint"
-      />
+      <Head>
+        <title>AI 2026: Safe Multi‑Agent Approvals — Blueprint</title>
+        <meta name="description" content="Design risk‑tiered approvals, budget controls, and policy‑as‑code gates for safe multi‑agent execution." />
+        <meta name="keywords" content="multi-agent, approvals, policy-as-code, budgets, guardrails, safety" />
+        <link rel="canonical" href="/blog/ai-2026-safe-multi-agent-approvals-blueprint" />
+      </Head>
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">

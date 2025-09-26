@@ -34,7 +34,7 @@ jobs:
       - name: Run group ${{ matrix.group }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CLOUD_TASKS: ${{
+          CLOUD_TASKS: ${{ 
             matrix.group == 'lint' && 'type-check lint linting:check linting:fix' ||
             matrix.group == 'syntax' && 'syntax:build-check syntax:continuous' ||
             matrix.group == 'design' && 'design:status design:analyze ui-evolution:analyze ui-evolution:beautify' ||

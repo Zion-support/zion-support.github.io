@@ -2,9 +2,9 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
-const QuantumConsciousness2027: React.FC = () => {
-  return (
+;
+const QuantumConsciousness2027: React.FC = () => {;
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black">
       <Header />
       
@@ -240,10 +240,8 @@ const QuantumConsciousness2027: React.FC = () => {
       
       <Footer />
 
->>>>>>> cursor/create-and-deploy-new-content-c963
     </div>
   );
 };
-
 
 export default QuantumConsciousness2027;

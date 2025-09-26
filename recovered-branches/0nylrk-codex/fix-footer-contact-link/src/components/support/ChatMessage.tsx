@@ -15,32 +15,33 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar'
 import { cn } from '@/lib / utils',
 import { format } from './date - fns',
 import { use_theme } from '@/hooks / use_theme',
-interface ChatMessageProps {
-  message: string,
+interface ChatMessageProps {,
+message: string,
   isUser: boolean,
   timestamp: Date}
 ,
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme(),
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme(),
-  const { theme } = useTheme(),
-  return (
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+const { theme } = useTheme(),
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+const { theme } = useTheme(),;
+const { theme } = useTheme(),;
+return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>,
       <Avatar className="h-8 w-8">,
+
         {isUser ? (
           <>,
             <AvatarImage src="https: //i.pravatar.cc/40?img=1" alt="User" />,
-            <AvatarFallback>U</AvatarFallback>,
+            <AvatarFallback>U
           </>) : (
           <>,
-            <AvatarImage
-              src="https://placehold && placehold.co/40x40?text=AI",
+            <AvatarImage,
+src="https://placehold && placehold.co/40x40?text=AI",
               alt="Zion Support",
             />,
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>,
+            <AvatarFallback className="bg-zion-purple text-white">Z
           </>)}
-      </Avatar>,
+      
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser,
@@ -62,46 +63,47 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             : theme === "dark",
               ? "text-gray-300",
               : "text-gray-500")}>,
+
           {format(timestamp, "h: mm a")}
-        </div>,
-      </div>,
+
     </div>)}
-// Function to convert URLs and help links to actual clickable links,
+// Function to convert URLs and help links to actual clickable links,;
 function formatMessageWithLinks(message: string): string {
-  // Replace URLs,
-  const urlRegex = /(https?:\/\/[^\s]+)/g,
-  let formattedMessage = message.replace(
+  // Replace URLs,;
+const urlRegex = /(https?:\/\/[^\s]+)/g,;
+let formattedMessage = message.replace(
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>')),
-  // Replace help center references like [Getting Started],
-  const helpCenterRegex = /[([^]]+)]/g,
+  // Replace help center references like [Getting Started],;
+const helpCenterRegex = /[([^]]+)]/g,
   formattedMessage = formattedMessage.replace(
     helpCenterRegex,
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
-  return formattedMessage,
-interface ChatMessageProps {
-  message: string,
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),;
+return formattedMessage,
+interface ChatMessageProps {,
+message: string,
   isUser: boolean,
   timestamp: Date}
 ,
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme(),
-  return (
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+const { theme } = useTheme(),;
+return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>,
       <Avatar className="h-8 w-8">,
+
         {isUser ? (
           <>,
             <AvatarImage src="https: //i.pravatar.cc/40?img=1" alt="User" />,
-            <AvatarFallback>U</AvatarFallback>,
+            <AvatarFallback>U
           </>) : (
           <>,
-            <AvatarImage
-              src="https://placehold.co/40x40?text=AI",
+            <AvatarImage,
+src="https://placehold.co/40x40?text=AI",
               alt="Zion Support",
             />,
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>,
+            <AvatarFallback className="bg-zion-purple text-white">Z
           </>)}
-      </Avatar>,
+      
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser,
@@ -117,30 +119,30 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             : theme === "dark",
               ? "text-gray-300",
               : "text-gray-500")}>,
+
           {format(timestamp, "h: mm a")}
-        </div>,
-      </div>,
+
     </div>)}
 ,
-// Function to convert URLs and help links to actual clickable links,
+// Function to convert URLs and help links to actual clickable links,;
 function formatMessageWithLinks(): any (message: string): string {
-  // Replace URLs,
-  const urlRegex = /(https?:\/\/[^\s]+)/g,
-  let formattedMessage = message && message.replace(
+  // Replace URLs,;
+const urlRegex = /(https?:\/\/[^\s]+)/g,;
+let formattedMessage = message && message.replace(
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
-  // Replace help center references like [Getting Started],
-  const helpCenterRegex = /[([^]]+)]/g,
+  // Replace help center references like [Getting Started],;
+const helpCenterRegex = /[([^]]+)]/g,
   formattedMessage = formattedMessage && formattedMessage.replace(
     helpCenterRegex,
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
-  return formattedMessage>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
-interface ChatMessageProps {
-  message: string,
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),;
+return formattedMessage
+interface ChatMessageProps {,
+message: string,
   is_user: boolean,
   timestamp: Date}
 export /**,
  * ChatMessage - Function description,
- */,
-function ChatMessage() {
-  const { theme } = use_theme ()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}
+ */,;
+function ChatMessage() {;
+const { theme } = use_theme ()

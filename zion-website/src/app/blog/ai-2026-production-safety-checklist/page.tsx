@@ -1,13 +1,12 @@
-export default function ProductionSafetyChecklistPage() {,
-  return (
+export default function ProductionSafetyChecklistPage() {return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>
         <p className='text-sm text-blue-3000'>Guide • 2025-09-15</p>
         <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm: text-4xl'>
-          AI 2026: Production Safety Checklist,
+          AI 2026: Production Safety Checklist
         </h1>
-        <p className='mt-4 text-lg leading-8 text-gray-3000'>,
-          A practical checklist to ship safer AI: risk tiers, guardrails, evals: canaries, and evidence.,
+        <p className='mt-4 text-lg leading-8 text-gray-3000'>
+          A practical checklist to ship safer AI: risk tiers, guardrails, evals: canaries, and evidence.
         </p>
         <div className='mt-8 prose prose-invert prose-lg max-w-none'>
           <h2>1. Define Risk Tiers</h2>
@@ -38,10 +37,9 @@ export default function ProductionSafetyChecklistPage() {,
           <p className='mt-6'>
             Need help implementing this in your environment?{' '}
             <a href='/contact' className='text-blue-4000'>
-              Talk to our team →,
+              Talk to our team →
             </a>
           </p>
         </div>
       </div>
     </div>)}
-,
