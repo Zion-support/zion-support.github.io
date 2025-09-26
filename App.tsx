@@ -110,7 +110,6 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-              </div>
 
                 {/* NEW: Revolutionary Content Showcase 2026 */}
                 <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-8 text-white relative overflow-hidden">
@@ -284,8 +283,12 @@ export default function App(): JSX.Element {
                         <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                           Explore Next-Gen Tech →
                         </a>
+<<<<<<< HEAD
+=======
                       </div>
                     </div>
+>>>>>>> 8794a12ea372b27e7dfc5874856d00621a1bef87
+                  </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}

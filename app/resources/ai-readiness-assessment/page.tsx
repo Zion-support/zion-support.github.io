@@ -262,7 +262,7 @@ export default function AIReadinessAssessment() {
           <div className="bg-gray-50 rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Analysis</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {questions.map((question, index) => (
+              {questions.map((question, _index) => (
                 <div key={question.id} className="bg-white rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">{question.title}</h3>
                   <div className="flex items-center gap-2 mb-2">
