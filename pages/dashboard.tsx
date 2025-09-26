@@ -199,7 +199,6 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
-<<<<<<< HEAD
       case 'new-performance':
         return (
           <div className="p-8">
@@ -215,14 +214,6 @@ const Dashboard: React.FC = () => {
                   />
                   Real-time Updates
                 </label>
-=======
-      case 'error-handler':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
-              <div className="flex items-center space-x-4">
->>>>>>> c3df36cb184ede66f4f88d0840cdd1540f7c82e1
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -231,7 +222,6 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
             <PerformanceDashboard 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
@@ -254,25 +244,6 @@ const Dashboard: React.FC = () => {
                   />
                   Real-time Monitoring
                 </label>
-=======
-            <AdvancedErrorHandler 
-              onError={(error) => console.log('Error captured:', error)}
-              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
-              enableAutoRetry={true}
-              maxRetries={3}
-              enablePerformanceMonitoring={true}
-              enableErrorReporting={true}
-              enableUserFeedback={true}
-            />
-          </div>
-        );
-      case 'performance-optimizer':
-        return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
->>>>>>> c3df36cb184ede66f4f88d0840cdd1540f7c82e1
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
