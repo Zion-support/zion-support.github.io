@@ -37,6 +37,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zion.app/faq</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/privacy-policy</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zion.app/404</loc>
     <lastmod>2024-12-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
