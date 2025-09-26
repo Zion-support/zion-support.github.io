@@ -48,7 +48,12 @@
     "strictNullChecks": false
   },
   "include": [
-    "App.tsx"
+    "src/App.tsx",
+    "src/components/Header.tsx",
+    "src/components/Footer.tsx",
+    "src/components/ScrollToTop.tsx",
+    "src/pages/Home.tsx",
+    "types.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -71,12 +76,8 @@
     "zion-ai-assistant",
     "types.disabled",
     // Temporarily exclude broader areas known to be corrupted/not used by build
-    "src/pages/**",
-    "src/routes/**",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts",
-    // Exclude corrupted or archived areas not part of active app
-    "src/**"
+    "vitest.config.ts"
   ]
 }
