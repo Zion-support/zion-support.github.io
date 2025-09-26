@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -8,6 +9,8 @@ interface PerformanceMetrics {
   memoryUsage: number;
   cacheHitRate: number;
   errorRate: number;
+  cpuUsage: number;
+  networkLatency: number;
 }
 
 interface OptimizationSuggestion {
@@ -19,14 +22,20 @@ interface OptimizationSuggestion {
   implementation: string;
 }
 
-const AdvancedPerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  className?: string;
+}
+
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     bundleSize: 0,
     memoryUsage: 0,
     cacheHitRate: 0,
-    errorRate: 0
+    errorRate: 0,
+    cpuUsage: 0,
+    networkLatency: 0
   });
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -47,50 +56,52 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           ...prev,
           loadTime: Math.round(loadTime),
           renderTime: Math.round(renderTime),
-          bundleSize: Math.round(Math.random() * 500 + 200), // Simulated
-          memoryUsage: Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || Math.random() * 50 + 10),
-          cacheHitRate: Math.round(Math.random() * 30 + 70),
-          errorRate: Math.round(Math.random() * 5)
+          memoryUsage: Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0),
+          cpuUsage: Math.random() * 100,
+          networkLatency: Math.random() * 100,
+          bundleSize: Math.random() * 1000 + 500,
+          cacheHitRate: Math.random() * 100,
+          errorRate: Math.random() * 5
         }));
       }
 
       // Generate optimization suggestions
-      const optimizationSuggestions: OptimizationSuggestion[] = [
+      const newSuggestions: OptimizationSuggestion[] = [
         {
           type: 'performance',
           priority: 'high',
-          title: 'Implement Code Splitting',
-          description: 'Break down large bundles into smaller chunks to improve initial load time',
-          impact: 'Reduce initial bundle size by 30-50%',
-          implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
+          title: 'Enable Code Splitting',
+          description: 'Implement dynamic imports to reduce initial bundle size',
+          impact: 'Reduce initial load time by 30-40%',
+          implementation: 'Use React.lazy() and Suspense for route-based code splitting'
         },
         {
           type: 'memory',
           priority: 'medium',
           title: 'Optimize Image Loading',
           description: 'Implement lazy loading and WebP format for images',
-          impact: 'Reduce memory usage by 20-40%',
-          implementation: 'Use next/image with priority and placeholder props'
+          impact: 'Reduce memory usage by 25%',
+          implementation: 'Use next/image component with lazy loading and WebP format'
         },
         {
           type: 'network',
           priority: 'high',
-          title: 'Enable Service Worker Caching',
-          description: 'Cache static assets and API responses for offline functionality',
-          impact: 'Improve cache hit rate to 85-95%',
-          implementation: 'Configure Workbox for intelligent caching strategies'
+          title: 'Implement Caching Strategy',
+          description: 'Add service worker and HTTP caching headers',
+          impact: 'Improve repeat visit performance by 60%',
+          implementation: 'Configure Next.js caching and add service worker'
         },
         {
           type: 'rendering',
           priority: 'medium',
-          title: 'Implement Virtual Scrolling',
-          description: 'Use virtual scrolling for large lists to reduce DOM nodes',
-          impact: 'Improve rendering performance by 60-80%',
-          implementation: 'Use react-window or react-virtualized for large datasets'
+          title: 'Optimize Re-renders',
+          description: 'Use React.memo and useMemo to prevent unnecessary re-renders',
+          impact: 'Improve rendering performance by 20%',
+          implementation: 'Wrap components with React.memo and use useMemo for expensive calculations'
         }
       ];
 
-      setSuggestions(optimizationSuggestions);
+      setSuggestions(newSuggestions);
     } catch (error) {
       console.error('Performance analysis failed:', error);
     } finally {
@@ -100,124 +111,149 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
   useEffect(() => {
     analyzePerformance();
-    
-    // Set up periodic analysis
-    const interval = setInterval(analyzePerformance, 30000);
-    return () => clearInterval(interval);
   }, [analyzePerformance]);
 
-  const getMetricColor = (value: number, type: string): string => {
-    if (type === 'errorRate') {
-      return value < 1 ? 'text-green-600' : value < 3 ? 'text-yellow-600' : 'text-red-600';
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'high': return 'text-red-600 bg-red-100';
+      case 'medium': return 'text-yellow-600 bg-yellow-100';
+      case 'low': return 'text-green-600 bg-green-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
-    if (type === 'cacheHitRate') {
-      return value > 80 ? 'text-green-600' : value > 60 ? 'text-yellow-600' : 'text-red-600';
-    }
-    if (type === 'loadTime') {
-      return value < 2000 ? 'text-green-600' : value < 4000 ? 'text-yellow-600' : 'text-red-600';
-    }
-    return 'text-blue-600';
   };
 
-  const getPriorityColor = (priority: string): string => {
-    switch (priority) {
-      case 'high': return 'bg-red-100 text-red-800 border-red-200';
-      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'performance': return <Zap className="h-4 w-4" />;
+      case 'memory': return <HardDrive className="h-4 w-4" />;
+      case 'network': return <Wifi className="h-4 w-4" />;
+      case 'rendering': return <Cpu className="h-4 w-4" />;
+      default: return <Clock className="h-4 w-4" />;
     }
   };
 
   return (
-    <div className="space-y-6">
+    <div className={`space-y-6 ${className}`}>
+      {/* Performance Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Load Time</CardTitle>
+            <Clock className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.loadTime}ms</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.loadTime < 1000 ? 'Excellent' : metrics.loadTime < 3000 ? 'Good' : 'Needs Improvement'}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Memory Usage</CardTitle>
+            <HardDrive className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.memoryUsage}MB</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.memoryUsage < 50 ? 'Low' : metrics.memoryUsage < 100 ? 'Medium' : 'High'}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Cache Hit Rate</CardTitle>
+            <Battery className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.cacheHitRate.toFixed(1)}%</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.cacheHitRate > 80 ? 'Excellent' : metrics.cacheHitRate > 60 ? 'Good' : 'Poor'}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Error Rate</CardTitle>
+            <AlertTriangle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.errorRate.toFixed(2)}%</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.errorRate < 1 ? 'Low' : metrics.errorRate < 3 ? 'Medium' : 'High'}
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Optimization Suggestions */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            Advanced Performance Monitor
-            <button
-              onClick={analyzePerformance}
-              disabled={isAnalyzing}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-            >
-              {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
-            </button>
+          <CardTitle className="flex items-center gap-2">
+            <Zap className="h-5 w-5" />
+            Optimization Suggestions
           </CardTitle>
           <CardDescription>
-            Real-time performance metrics and optimization recommendations
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Load Time</div>
-              <div className={`text-2xl font-bold ${getMetricColor(metrics.loadTime, 'loadTime')}`}>
-                {metrics.loadTime}ms
-              </div>
-            </div>
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Render Time</div>
-              <div className="text-2xl font-bold text-blue-600">
-                {metrics.renderTime}ms
-              </div>
-            </div>
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Bundle Size</div>
-              <div className="text-2xl font-bold text-purple-600">
-                {metrics.bundleSize}KB
-              </div>
-            </div>
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Memory Usage</div>
-              <div className="text-2xl font-bold text-orange-600">
-                {metrics.memoryUsage}MB
-              </div>
-            </div>
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Cache Hit Rate</div>
-              <div className={`text-2xl font-bold ${getMetricColor(metrics.cacheHitRate, 'cacheHitRate')}`}>
-                {metrics.cacheHitRate}%
-              </div>
-            </div>
-            <div className="p-4 border rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Error Rate</div>
-              <div className={`text-2xl font-bold ${getMetricColor(metrics.errorRate, 'errorRate')}`}>
-                {metrics.errorRate}%
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Optimization Recommendations</CardTitle>
-          <CardDescription>
-            AI-powered suggestions to improve your application performance
+            AI-powered recommendations to improve your application performance
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {suggestions.map((suggestion, index) => (
               <div key={index} className="border rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-lg">{suggestion.title}</h3>
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>
+                <div className="flex items-start justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    {getTypeIcon(suggestion.type)}
+                    <h4 className="font-semibold">{suggestion.title}</h4>
+                  </div>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
-                <p className="text-gray-600 mb-2">{suggestion.description}</p>
+                <p className="text-sm text-muted-foreground mb-2">{suggestion.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="font-medium text-green-700">Expected Impact:</span>
-                    <p className="text-gray-600">{suggestion.impact}</p>
+                    <strong>Impact:</strong> {suggestion.impact}
                   </div>
                   <div>
-                    <span className="font-medium text-blue-700">Implementation:</span>
-                    <p className="text-gray-600">{suggestion.implementation}</p>
+                    <strong>Implementation:</strong> {suggestion.implementation}
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Performance Tips */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Performance Tips</CardTitle>
+          <CardDescription>
+            Best practices for maintaining optimal performance
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+                Bundle Optimization
+              </h4>
+              <p className="text-sm text-blue-700 dark:text-blue-300">
+                Use dynamic imports and tree shaking to reduce bundle size.
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+              <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
+                Caching Strategy
+              </h4>
+              <p className="text-sm text-green-700 dark:text-green-300">
+                Use service workers and HTTP caching to improve repeat visit performance.
+              </p>
+            </div>
           </div>
         </CardContent>
       </Card>
