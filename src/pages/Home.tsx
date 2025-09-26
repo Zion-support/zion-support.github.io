@@ -1,8 +1,11 @@
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
+      <Navigation />
       {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-blue-light rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'></div>
@@ -10,7 +13,7 @@ export default function Home() {
         <div className='absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float' style={{animationDelay: '4s'}}></div>
       </div>
       {/* Hero Section */}
-      <section className='container mx-auto px-6 py-20 relative z-10'>
+      <section className='container mx-auto px-6 pt-32 pb-20 relative z-10'>
         <div className='text-center max-w-5xl mx-auto'>
           {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover:shadow-xl transition-all duration-300'>
@@ -218,6 +221,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
