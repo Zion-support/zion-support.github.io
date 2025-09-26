@@ -173,6 +173,18 @@ export const useTimeTracking = () => {
   }, [trackTimeOnPage]);
 };
 
+// Simple page view tracking hook
+export const usePageView = (pageName: string) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  }, [pageName]);
+};
+
 // Extend Window interface
 declare global {
   interface Window {
