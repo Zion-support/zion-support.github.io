@@ -12,9 +12,11 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 export default function Services(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
 	const [selectedService, setSelectedService] = useState<string | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsVisible(true);
+		setIsLoading(false);
 	}, []);
 
 	// Analytics tracking
@@ -152,6 +154,14 @@ export default function Services(): JSX.Element {
 				<meta name="description" content="Explore our comprehensive technology services including AI, cloud solutions, web development, mobile apps, data analytics, and cybersecurity." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
+			{isLoading ? (
+				<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+					<div className="text-center">
+						<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+						<p className="text-gray-600">Loading services...</p>
+					</div>
+				</div>
+			) : (
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">
@@ -374,6 +384,7 @@ export default function Services(): JSX.Element {
 					</main>
 				</div>
 			</div>
+			)}
 		</ErrorBoundary>
 	);
 }
