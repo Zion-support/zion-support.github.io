@@ -20,13 +20,26 @@ describe('App Component', () => {
     localStorageMock.setItem.mockClear();
   });
 
-  test('renders the app title', () => {
+  const waitForAppToLoad = async () => {
+    await waitFor(() => {
+      expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    }, { timeout: 2000 });
+  };
+
+  test('renders the app title', async () => {
     render(<App />);
-    expect(screen.getByText('🚀 Zion Task Manager')).toBeInTheDocument();
+    await waitForAppToLoad();
   });
 
   test('allows adding a new task', async () => {
     render(<App />);
+    
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
     
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
@@ -40,6 +53,13 @@ describe('App Component', () => {
   test('allows adding a task by pressing Enter', async () => {
     render(<App />);
     
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
+    
     const input = screen.getByPlaceholderText('Add a new task...');
     
     fireEvent.change(input, { target: { value: 'Enter task' } });
@@ -50,6 +70,13 @@ describe('App Component', () => {
 
   test('allows toggling task completion', async () => {
     render(<App />);
+    
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
     
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
@@ -65,6 +92,13 @@ describe('App Component', () => {
 
   test('allows deleting a task', async () => {
     render(<App />);
+    
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
     
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
@@ -82,6 +116,13 @@ describe('App Component', () => {
 
   test('filters tasks correctly', async () => {
     render(<App />);
+    
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
     
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
@@ -115,6 +156,13 @@ describe('App Component', () => {
   test('shows correct task counts', async () => {
     render(<App />);
     
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
+    
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
     
@@ -138,7 +186,7 @@ describe('App Component', () => {
     expect(screen.getByText('1')).toBeInTheDocument(); // Completed
   });
 
-  test('loads tasks from localStorage on mount', () => {
+  test('loads tasks from localStorage on mount', async () => {
     const mockTasks = [
       { id: 1, text: 'Saved task', completed: false, createdAt: new Date().toISOString() }
     ];
@@ -146,11 +194,25 @@ describe('App Component', () => {
     
     render(<App />);
     
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
+    
     expect(screen.getByText('Saved task')).toBeInTheDocument();
   });
 
   test('saves tasks to localStorage when tasks change', async () => {
     render(<App />);
+    
+    // Wait for loading to complete
+    await waitForAppToLoad();
+    
+    // Navigate to task manager
+    const taskManagerButton = screen.getByText('🚀 Try Task Manager');
+    fireEvent.click(taskManagerButton);
     
     const input = screen.getByPlaceholderText('Add a new task...');
     const addButton = screen.getByText('Add Task');
