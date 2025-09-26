@@ -3,8 +3,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
-import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEO from '../src/components/SEO';
+import { SecurityDashboard } from '../src/components/SecurityMonitor';
+import { ErrorDashboard } from '../src/components/EnhancedErrorBoundary';
+import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
+import { TestDashboard } from '../src/components/TestDashboard';
 import { ThemeProvider, ThemeToggle } from '../src/components/ThemeProvider';
 import { Analytics, useEventTracking, useScrollTracking, useTimeTracking } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
@@ -43,8 +48,13 @@ export default function Home(): JSX.Element {
 	return (
 		<ThemeProvider>
 			<ErrorBoundary>
-				<Analytics />
+				<SEO />
 				<PerformanceMonitor />
+				<SecurityDashboard />
+				<ErrorDashboard />
+				<AnalyticsDashboard />
+				<TestDashboard />
+				<Analytics />
 				<Head>
 					<title>Zion App - Advanced Technology Solutions</title>
 					<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
@@ -198,7 +208,7 @@ export default function Home(): JSX.Element {
 									</h2>
 									<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
 										Join hundreds of companies that trust Zion App for their technology needs. 
-										Let's build something amazing together.
+										Let&apos;s build something amazing together.
 									</p>
 									<div className="flex flex-col sm:flex-row gap-4 justify-center">
 										<Link 
