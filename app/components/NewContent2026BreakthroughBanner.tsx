@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2026BreakthroughBanner() {
   return (
@@ -27,8 +27,7 @@ export default function NewContent2026BreakthroughBanner() {
               Direct brain-computer interfaces are transforming how humans interact with technology, 
               creating unprecedented opportunities for business transformation.
             </p>
-            <Link 
-              href="/blog/ai-2026-neural-interface-business-transformation" 
+            <Link to="/blog/ai-2026-neural-interface-business-transformation" 
               className="inline-flex items-center text-white font-semibold hover:text-indigo-200 transition-colors"
             >
               Explore Neural Interfaces →
@@ -42,8 +41,7 @@ export default function NewContent2026BreakthroughBanner() {
               The revolutionary fusion of quantum computing and neural networks is unlocking 
               unprecedented computational power for breakthrough applications.
             </p>
-            <Link 
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough" 
+            <Link to="/blog/ai-2026-quantum-neural-fusion-breakthrough" 
               className="inline-flex items-center text-white font-semibold hover:text-indigo-200 transition-colors"
             >
               Discover Quantum AI →
@@ -57,8 +55,7 @@ export default function NewContent2026BreakthroughBanner() {
               Enterprise autonomous systems are delivering 300-500% efficiency improvements 
               and transforming operations across every industry.
             </p>
-            <Link 
-              href="/blog/ai-2025-enterprise-autonomous-systems-revolution" 
+            <Link to="/blog/ai-2025-enterprise-autonomous-systems-revolution" 
               className="inline-flex items-center text-white font-semibold hover:text-indigo-200 transition-colors"
             >
               Transform Your Enterprise →
@@ -74,14 +71,12 @@ export default function NewContent2026BreakthroughBanner() {
               Get expert guidance and comprehensive implementation support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Expert Consultation
               </Link>
-              <Link 
-                href="/blog" 
+              <Link to="/blog" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 Explore All Articles

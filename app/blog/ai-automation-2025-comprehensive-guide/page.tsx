@@ -1,17 +1,8 @@
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export default function AIAutomation2025Guide() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Automation 2025: Complete Implementation Guide"
-        description="Master AI automation in 2025 with our comprehensive guide covering strategy, implementation, ROI measurement, and real-world case studies."
-        keywords="AI automation, business automation, AI implementation, automation strategy, ROI, case studies"
-        url="/blog/ai-automation-2025-comprehensive-guide"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">

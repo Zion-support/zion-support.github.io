@@ -60,9 +60,9 @@ class PerformanceMonitor {
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        const anyEntry = entry as any
-        if (typeof anyEntry.processingStart === 'number') {
-          this.metrics.fid = anyEntry.processingStart - anyEntry.startTime
+        const e: any = entry as any
+        if (typeof e.processingStart === 'number' && typeof e.startTime === 'number') {
+          this.metrics.fid = e.processingStart - e.startTime
         }
       })
     })
@@ -197,7 +197,6 @@ export class ResourceOptimizer {
 }
 
 // Bundle optimization utilities
-
 export class BundleOptimizer {
   static async loadChunk(chunkName: string): Promise<Record<string, unknown>> {
     try {

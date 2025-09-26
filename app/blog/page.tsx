@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import type { FC } from 'react';
 
 const posts = [
@@ -100,8 +100,7 @@ export default function BlogPage() {
               >
                 Subscribe to Updates
               </a>
-              <Link
-                href='/contact'
+              <Link to='/contact'
                 className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
               >
                 Work With Us
@@ -195,7 +194,7 @@ interface BlogPost {
 
 const FeaturedPostCard: FC<{ post: BlogPost }> = ({ post }) => {
   return (
-    <Link href={`/blog/${post.id}`} className='group'>
+    <Link to={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
         <div className='aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'>
           <div className='text-6xl'>📊</div>
@@ -225,7 +224,7 @@ const FeaturedPostCard: FC<{ post: BlogPost }> = ({ post }) => {
 
 const PostCard: FC<{ post: BlogPost }> = ({ post }) => {
   return (
-    <Link href={`/blog/${post.id}`} className='group'>
+    <Link to={`/blog/${post.id}`} className='group'>
       <article className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
         <div className='aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center'>
           <div className='text-4xl'>💡</div>

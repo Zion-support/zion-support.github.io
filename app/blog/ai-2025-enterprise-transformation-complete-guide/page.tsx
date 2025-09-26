@@ -1,11 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2 } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group',
   description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge AI technologies, implementation strategies, and real-world success stories.',
   keywords: ['AI', 'Enterprise', 'Transformation', 'Automation', '2025', 'ROI', 'Business Strategy'],
@@ -27,7 +27,7 @@ export default function EnterpriseTransformationGuide() {
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors">
+          <Link to="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
           </Link>
@@ -258,14 +258,12 @@ export default function EnterpriseTransformationGuide() {
               300-500% ROI improvements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Contact Us Today
               </Link>
-              <Link
-                href="/consultation"
+              <Link to="/consultation"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Schedule Consultation

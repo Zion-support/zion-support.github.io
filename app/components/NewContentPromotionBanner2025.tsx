@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContentPromotionBanner2025() {
   return (
@@ -18,8 +18,7 @@ export default function NewContentPromotionBanner2025() {
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Blog Post 1 */}
-          <Link 
-            href="/blog/ai-2025-customer-experience-revolution"
+          <Link to="/blog/ai-2025-customer-experience-revolution"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-center">
@@ -37,8 +36,7 @@ export default function NewContentPromotionBanner2025() {
           </Link>
 
           {/* Blog Post 2 */}
-          <Link 
-            href="/blog/ai-2025-autonomous-workforce-revolution"
+          <Link to="/blog/ai-2025-autonomous-workforce-revolution"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-center">
@@ -56,8 +54,7 @@ export default function NewContentPromotionBanner2025() {
           </Link>
 
           {/* Case Study */}
-          <Link 
-            href="/case-studies/ai-customer-experience-transformation-2025-ultimate-success"
+          <Link to="/case-studies/ai-customer-experience-transformation-2025-ultimate-success"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-center">
@@ -86,8 +83,7 @@ export default function NewContentPromotionBanner2025() {
               Get your comprehensive roadmap to AI customer experience transformation with proven strategies, 
               best practices, and ROI calculator.
             </p>
-            <Link
-              href="/resources/ai-customer-experience-implementation-guide-2025"
+            <Link to="/resources/ai-customer-experience-implementation-guide-2025"
               className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Download Implementation Guide
@@ -121,14 +117,12 @@ export default function NewContentPromotionBanner2025() {
             Ready to transform your business with AI? Get expert guidance and support.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Expert Consultation
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Explore Services

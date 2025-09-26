@@ -1,11 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
 import SEO from '../../components/SEO';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2026: Quantum Computing Revolution - Ultimate Breakthrough Guide | Zion Tech Group',
   description: 'Explore the revolutionary impact of quantum computing on AI in 2026. Complete guide to quantum AI implementation, breakthrough applications, and enterprise transformation.',
   keywords: ['quantum computing', 'AI', '2026', 'revolution', 'breakthrough', 'enterprise', 'quantum AI', 'technology'],
@@ -253,14 +253,12 @@ export default function QuantumAI2026RevolutionPage() {
             Transform your enterprise with quantum AI. Achieve 500%+ ROI with strategic quantum implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/quantum-ai"
+            <Link to="/services/quantum-ai"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Quantum AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Get Quantum AI Consultation
@@ -271,8 +269,7 @@ export default function QuantumAI2026RevolutionPage() {
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
+        <Link to="/"
           className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

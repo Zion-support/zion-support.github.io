@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2026: Safe Tool Envelopes — Production Blueprint',
@@ -11,7 +11,7 @@ export default function SafeToolEnvelopesBlueprint() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+          <Link to="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -79,10 +79,10 @@ export default function SafeToolEnvelopesBlueprint() {
           <footer className="mt-12 pt-6 border-t border-white/20 flex items-center justify-between">
             <div className="text-white/60 text-sm">Written by Zion Tech Group AI Systems</div>
             <div className="flex gap-4">
-              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link to="/blog/ai-2026-runtime-guardrails-blueprint" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Runtime Guardrails
               </Link>
-              <Link href="/blog/ai-2026-policy-as-code-starter-kit" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+              <Link to="/blog/ai-2026-policy-as-code-starter-kit" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
                 Policy‑as‑Code Starter Kit
               </Link>
             </div>

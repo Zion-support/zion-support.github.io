@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AISustainabilityGreenTech2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Sustainability & Green Tech 2025: Building Eco-Friendly AI"
-        description="Discover how to build sustainable AI systems that reduce environmental impact. Learn green AI practices, energy optimization, and carbon-neutral strategies."
-        keywords="AI sustainability, green AI, carbon neutral AI, sustainable technology, energy efficient AI, environmental AI, green tech"
-        url="/blog/ai-sustainability-green-tech-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
