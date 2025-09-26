@@ -1,105 +1,82 @@
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export const PerformanceMonitor = () => {
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+  fps?: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+  });
+
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Measure page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
 
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // Track Largest Contentful Paint (LCP)
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-            // Send to analytics service
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Web Vitals',
-                event_label: 'Largest Contentful Paint'
-              });
-            }
-          }
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+    // Measure render time
+    const renderStart = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
 
-      // Track First Input Delay (FID)
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-                event_category: 'Web Vitals',
-                event_label: 'First Input Delay'
-              });
-            }
-          }
-        }
-      }).observe({ entryTypes: ['first-input'] });
+    // Monitor memory usage if available
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
+    }
 
-      // Track Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals',
-            event_label: 'Cumulative Layout Shift'
-          });
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
+    // Monitor FPS
+    let frameCount = 0;
+    let lastTime = performance.now();
+    
+    const measureFPS = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps }));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      requestAnimationFrame(measureFPS);
     };
+    
+    measureFPS();
 
-    // Track page load performance
-    const trackPageLoad = () => {
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            dns: navigation.domainLookupEnd - navigation.domainLookupStart,
-            tcp: navigation.connectEnd - navigation.connectStart,
-            request: navigation.responseStart - navigation.requestStart,
-            response: navigation.responseEnd - navigation.responseStart,
-            dom: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            load: navigation.loadEventEnd - navigation.loadEventStart,
-            total: navigation.loadEventEnd - navigation.navigationStart
-          };
+    // Log performance metrics (removed metrics dependency)
+    console.log('Performance monitoring initialized');
+  }, []); // Empty dependency array is intentional for initialization
 
-          console.log('Page Load Metrics:', metrics);
-          
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'page_load_metrics', {
-              event_category: 'Performance',
-              custom_map: metrics
-            });
-          }
-        }
-      });
-    };
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
-    trackWebVitals();
-    trackPageLoad();
-  }, []);
-
-  return null;
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
+      <div className="space-y-1">
+        <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+        <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+        {metrics.memoryUsage && (
+          <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
+        )}
+        {metrics.fps && (
+          <div>FPS: {metrics.fps}</div>
+        )}
+      </div>
+    </div>
+  );
 };
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+export default PerformanceMonitor;
