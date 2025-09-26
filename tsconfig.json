@@ -48,7 +48,7 @@
     "strictNullChecks": false
   },
   "include": [
-    "src/src/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -69,5 +69,6 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ]
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
