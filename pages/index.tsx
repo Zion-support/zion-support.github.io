@@ -5,6 +5,8 @@ import { FeatureCard } from '../src/components/FeatureCard';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
+import Layout from '../src/components/Layout';
+import Dashboard from '../src/components/Dashboard';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
@@ -12,12 +14,20 @@ export default function Home(): JSX.Element {
 	const [hoveredService, setHoveredService] = useState<string | null>(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
+	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	useEffect(() => {
 		setIsVisible(true);
 		
 		const handleScroll = () => setScrollY(window.scrollY);
 		window.addEventListener('scroll', handleScroll);
+		
+		// Check for dark mode preference
+		const savedDarkMode = localStorage.getItem('darkMode');
+		if (savedDarkMode) {
+			setIsDarkMode(JSON.parse(savedDarkMode));
+		}
+		
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
@@ -26,7 +36,7 @@ export default function Home(): JSX.Element {
 	const { trackClick } = useAnalytics();
 
 	return (
-		<ErrorBoundary>
+		<Layout>
 			<SEO />
 			<PerformanceMonitor />
 			<Head>
@@ -72,6 +82,11 @@ export default function Home(): JSX.Element {
 							<span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors duration-300 cursor-default">Secure</span>
 						</div>
 					</header>
+
+					{/* Dashboard Section */}
+					<section className={`mb-20 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+						<Dashboard isDarkMode={isDarkMode} />
+					</section>
 
 					<main>
 						<section className={`mb-20 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -202,6 +217,6 @@ export default function Home(): JSX.Element {
 					</footer>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</Layout>
 	);
 }
