@@ -17,37 +17,33 @@ import {Badge} from "@/components/ui/badge",
 import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSteps",
 import {MyApplications} from "@/components/jobs/MyApplications",
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner",
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-  return (
+import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard",;
+function TalentDashboardContent() {;
+const { user } = useAuth(),;
+const [activeTab, setActiveTab] = useState("job-matches"),;
+return (
     <>,
-      <SEO
-        title="Talent Dashboard | Zion AI Marketplace",
+      <SEO,
+title="Talent Dashboard | Zion AI Marketplace",
         description="Your personalized talent dashboard with job matches and professional opportunities.",
       />,
       <AppHeader />,
       <main className="container mx-auto px-4 py-8">,
         <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">,
           <div>,
-            <h1 className="text-3xl font-bold">Talent Dashboard</h1>,
-            <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p>,
-          </div>,
+            <h1 className="text-3xl font-bold">Talent Dashboard
+            <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience
+          
           <div className="flex gap-4">,
             <Button variant="outline" asChild>,
               <Link to="/profile/settings">,
                 <UserIcon className="h-4 w-4 mr-2" />,
                 Profile Settings,
-              </Link>,
-            </Button>,
+
             <Button asChild>,
               <Link to="/dashboard/talent/applications">,
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker,
-              </Link>,
-            </Button>,
-          </div>,
-        </div>,
+
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />,
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
@@ -57,44 +53,39 @@ function TalentDashboardContent() {
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <Avatar className="h-12 w-12 border">,
+
                       {user?.avatarUrl ? (
                         <img src={user.avatarUrl} alt={user.displayName |"User"} />) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">,
+
                           {user?.displayName?.charAt(0) |"U"}
                         </div>)}
-                    </Avatar>,
+                    
                     <div>,
-                      <CardTitle>{user?.displayName |"User"}</CardTitle>,
-                      <CardDescription>{user?.headline |"AI Professional"}</CardDescription>,
-                    </div>,
-                  </div>,
-                  <Badge className="bg-green-100 text-green-800">Online</Badge>,
-                </div>,
-              </CardHeader>,
+                      <CardTitle>{user?.displayName |"User"}
+                      <CardDescription>{user?.headline |"AI Professional"}
+
+                  <Badge className="bg-green-100 text-green-800">Online
+
               <CardContent>,
                 <div className="grid grid-cols-2 gap-4 mt-4">,
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">,
                     <div className="flex items-center gap-1 text-lg font-bold">,
                       <Star className="h-4 w-4 text-yellow-500" />,
                       4.9,
-                    </div>,
-                    <span className="text-xs text-muted-foreground">Rating</span>,
-                  </div>,
+                    
+                    <span className="text-xs text-muted-foreground">Rating
+                  
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">,
-                    <div className="text-lg font-bold">18</div>,
-                    <span className="text-xs text-muted-foreground">Projects</span>,
-                  </div>,
-                </div>,
+                    <div className="text-lg font-bold">18
+                    <span className="text-xs text-muted-foreground">Projects
+
                 <div className="mt-4">,
                   <Button className="w-full" asChild>,
                     <Link to="/messages">,
                       <MessageSquare className="h-4 w-4 mr-2" />,
                       Messages,
-                    </Link>,
-                  </Button>,
-                </div>,
-              </CardContent>,
-            </Card>,
+
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -112,37 +103,33 @@ import { Badge } from "@/components/ui/badge",
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
 import { MyApplications } from "@/components/jobs/MyApplications",
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-  return (
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
+function TalentDashboardContent() {;
+const { user } = useAuth(),;
+const [activeTab, setActiveTab] = useState("job-matches"),;
+return (
     <>,
-      <SEO
-        title="Talent Dashboard | Zion AI Marketplace",
+      <SEO,
+title="Talent Dashboard | Zion AI Marketplace",
         description="Your personalized talent dashboard with job matches and professional opportunities.",
       />,
       <AppHeader />,
       <main className="container mx-auto px-4 py-8">,
         <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">,
           <div>,
-            <h1 className="text-3xl font-bold">Talent Dashboard</h1>,
-            <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p>,
-          </div>,
+            <h1 className="text-3xl font-bold">Talent Dashboard
+            <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience
+          
           <div className="flex gap-4">,
             <Button variant="outline" asChild>,
               <Link to="/profile/settings">,
                 <UserIcon className="h-4 w-4 mr-2" />,
                 Profile Settings,
-              </Link>,
-            </Button>,
+
             <Button asChild>,
               <Link to="/dashboard/talent/applications">,
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker,
-              </Link>,
-            </Button>,
-          </div>,
-        </div>,
+
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />,
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
@@ -152,127 +139,110 @@ function TalentDashboardContent() {
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <Avatar className="h-12 w-12 border">,
+
                       {user?.avatarUrl ? (
                         <img src={user.avatarUrl} alt={user.displayName || "User"} />) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">,
+
                           {user?.displayName?.charAt(0) || "U"}
                         </div>)}
-                    </Avatar>,
+                    
                     <div>,
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>,
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>,
-                    </div>,
-                  </div>,
-                  <Badge className="bg-green-100 text-green-800">Online</Badge>,
-                </div>,
-              </CardHeader>,
+                      <CardTitle>{user?.displayName || "User"}
+                      <CardDescription>{user?.headline || "AI Professional"}
+
+                  <Badge className="bg-green-100 text-green-800">Online
+
               <CardContent>,
                 <div className="grid grid-cols-2 gap-4 mt-4">,
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">,
                     <div className="flex items-center gap-1 text-lg font-bold">,
                       <Star className="h-4 w-4 text-yellow-500" />,
                       4.9,
-                    </div>,
-                    <span className="text-xs text-muted-foreground">Rating</span>,
-                  </div>,
+                    
+                    <span className="text-xs text-muted-foreground">Rating
+                  
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">,
-                    <div className="text-lg font-bold">18</div>,
-                    <span className="text-xs text-muted-foreground">Projects</span>,
-                  </div>,
-                </div>,
+                    <div className="text-lg font-bold">18
+                    <span className="text-xs text-muted-foreground">Projects
+
                 <div className="mt-4">,
                   <Button className="w-full" asChild>,
                     <Link to="/messages">,
                       <MessageSquare className="h-4 w-4 mr-2" />,
                       Messages,
-                    </Link>,
-                  </Button>,
-                </div>,
-              </CardContent>,
-            </Card>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
+
+            </Card>
+
             {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+            <TalentOnboardingSteps />
+
             {/* Upcoming Interviews Card */}
             <div className="mt-8">,
               <UpcomingInterviewsCard />,
-            </div>,
+            
             <Card className="mt-8">,
               <CardHeader>,
-                <CardTitle className="text-lg">Quick Stats</CardTitle>,
-              </CardHeader>,
+                <CardTitle className="text-lg">Quick Stats
+              
               <CardContent>,
                 <div className="space-y-3">,
                   <div className="flex justify-between">,
-                    <span className="text-muted-foreground">Profile views</span>,
-                    <span className="font-medium">152</span>,
-                  </div>,
+                    <span className="text-muted-foreground">Profile views
+                    <span className="font-medium">152
+                  
                   <div className="flex justify-between">,
-                    <span className="text-muted-foreground">Job matches</span>,
-                    <span className="font-medium">7</span>,
-                  </div>,
+                    <span className="text-muted-foreground">Job matches
+                    <span className="font-medium">7
+                  
                   <div className="flex justify-between">,
-                    <span className="text-muted-foreground">Applications</span>,
-                    <span className="font-medium">3</span>,
-                  </div>,
+                    <span className="text-muted-foreground">Applications
+                    <span className="font-medium">3
+                  
                   <div className="flex justify-between">,
-                    <span className="text-muted-foreground">Profile completion</span>,
-                    <span className="font-medium">85%</span>,
-                  </div>,
-                </div>,
-              </CardContent>,
-            </Card>,
-          </div>,
+                    <span className="text-muted-foreground">Profile completion
+                    <span className="font-medium">85%
+
           <div className="lg: col-span-2">,
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>,
               <TabsList className="mb-6">,
                 <TabsTrigger value="job-matches" className="flex items-center">,
                   <BriefcaseIcon className="h-4 w-4 mr-2" />,
                   AI Job Matches,
-                </TabsTrigger>,
-                <TabsTrigger value="applications">My Applications</TabsTrigger>,
-                <TabsTrigger value="saved">Saved Jobs</TabsTrigger>,
-              </TabsList>,
+                
+                <TabsTrigger value="applications">My Applications
+                <TabsTrigger value="saved">Saved Jobs
+              
               <TabsContent value="job-matches" className="mt-0">,
                 <SuggestedJobs />,
-              </TabsContent>,
+              
               <TabsContent value="applications" className="mt-0">,
                 <MyApplications />,
                 <div className="mt-4 flex justify-center">,
                   <Button variant="outline" asChild>,
                     <Link to="/dashboard/talent/applications">,
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker,
-                    </Link>,
-                  </Button>,
-                </div>,
-              </TabsContent>,
+
               <TabsContent value="saved" className="mt-0">,
                 <Card className="bg-muted/30">,
                   <CardContent className="pt-6 text-center">,
                     <p className="text-muted-foreground">,
                       You haven't saved any jobs yet.,
-                    </p>,
+                    
                     <Button className="mt-4" asChild>,
-                      <Link to="/jobs">Browse Jobs</Link>,
-                    </Button>,
-                  </CardContent>,
-                </Card>,
-              </TabsContent>,
-            </Tabs>,
-          </div>,
-        </div>,
-      </main>,
+                      <Link to="/jobs">Browse Jobs
+
       <Footer />,
     </>)}
 ,
-export default function TalentDashboard() {
-  return (
+export default function TalentDashboard() {;
+return (
     <ProtectedRoute>,
       <TalentDashboardContent />,
     </ProtectedRoute>)}
 ,
-export default function TalentDashboard() {
-  return (
+export default function TalentDashboard() {;
+return (
     <ProtectedRoute>,
       <TalentDashboardContent />,
     </ProtectedRoute>)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))})

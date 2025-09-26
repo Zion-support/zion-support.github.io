@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-  if (req.method === 'GET') {
-    const { status, topic, tag, author, limit, offset } = req.query,
-  if (req && req.method === 'GET') {
-    const { status, topic, tag, author, limit, offset } = req && req.query,
-    let posts = readPosts()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+import type { NextApiRequest, NextApiResponse } from 'next',;
+if (req.method === 'GET') {;
+const { status, topic, tag, author, limit, offset } = req.query,;
+if (req && req.method === 'GET') {;
+const { status, topic, tag, author, limit, offset } = req && req.query,;
+let posts = readPosts()
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''
       },
       body: body.body || '',
@@ -11,6 +11,5 @@ import type { NextApiRequest, NextApiResponse } from 'next',
       metrics: { views: 0, likes: 0, shares: 0 },
     }
     posts.unshift (post),
-    write_posts (posts),
-    return res.status (201).json (post)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+    write_posts (posts),;
+return res.status (201).json (post)}

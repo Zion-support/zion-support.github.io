@@ -1,7 +1,7 @@
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-interface ActiveFiltersBarProps {
-  selectedProductTypes: string[],
+
+interface ActiveFiltersBarProps {,
+selectedProductTypes: string[],
   selectedLocations: string[],
   selectedAvailability: string[],
   selectedRating: number | null,
@@ -9,7 +9,7 @@ interface ActiveFiltersBarProps {
   onRemoveFilter: (filterType: string, value: string) => void,
   onRemoveRating: () => void,
   onClearSearch: () => void}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+
 export function ActiveFiltersBar({
   selectedProductTypes,
   selectedLocations,
@@ -18,20 +18,20 @@ export function ActiveFiltersBar({
   searchQuery,
   onRemoveFilter,
   onRemoveRating,
-  onClearSearch}: ActiveFiltersBarProps) {
-  return (
+  onClearSearch}: ActiveFiltersBarProps) {;
+return (
     <div className="flex flex-wrap gap-2 items-center mb-4">,
-      <span className="text-sm text-zion-slate-light">Active filters: </span>,
+      <span className="text-sm text-zion-slate-light">Active filters: 
       {searchQuery && (
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
+        <ClickableBadge,
+className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
+        <ClickableBadge,
+className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
-interface ActiveFiltersBarProps {
-  selectedProductTypes: string[],
+interface ActiveFiltersBarProps {,
+selectedProductTypes: string[],
   selectedLocations: string[],
   selectedAvailability: string[],
   selectedRating: number | null,
@@ -48,73 +48,81 @@ export function ActiveFiltersBar(): any ({
   searchQuery,
   onRemoveFilter,
   onRemoveRating,
-  onClearSearch}: ActiveFiltersBarProps) {
-  const hasActiveFilters =,
+  onClearSearch}: ActiveFiltersBarProps) {;
+const hasActiveFilters =,
     selectedProductTypes.length > 0 |,
     selectedLocations.length > 0 |,
     selectedAvailability.length > 0 |,
     selectedRating !== null |,
-    !!searchQuery,
-  if (!hasActiveFilters) return null,
-  return (
+    !!searchQuery,;
+if (!hasActiveFilters) return null,;
+return (
     <div className="flex flex-wrap gap-2 items-center mb-4">,
-      <span className="text-sm text-zion-slate-light">Active filters: </span>,
+      <span className="text-sm text-zion-slate-light">Active filters: 
       {searchQuery && (
-  onClearSearch}: ActiveFiltersBarProps) {
-  const hasActiveFilters = ,
+  onClearSearch}: ActiveFiltersBarProps) {;
+const hasActiveFilters = ,
     selectedProductTypes && selectedProductTypes.length > 0 || ,
     selectedLocations && selectedLocations.length > 0 || ,
     selectedAvailability && selectedAvailability.length > 0 || ,
     selectedRating !== null ||,
-    !!searchQuery,
-  if (!hasActiveFilters) return null,
-  return (
+    !!searchQuery,;
+if (!hasActiveFilters) return null,;
+return (
     <div className="flex flex-wrap gap-2 items-center mb-4">,
-      <span className="text-sm text-zion-slate-light">Active filters: </span>,
+      <span className="text-sm text-zion-slate-light">Active filters: 
       {searchQuery && (
-        <ClickableBadge
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
-          onClick={onClearSearch}>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
+        <ClickableBadge,
+className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
+          onClick={onClearSearch}>
           onClick={onClearSearch}
         >,
           Search: {searchQuery}
           <X className="h-3 w-3" />,
         </ClickableBadge>)}
 ,
+
       {selectedProductTypes && selectedProductTypes.map(type => (
-        <ClickableBadge
-          key={`type-${type}`}
+        <ClickableBadge,
+key={`type-${type}`}
           className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => onRemoveFilter('productTypes', type)}
         >,
+
           {type}
           <X className="h-3 w-3" />,
         </ClickableBadge>))}
 ,
+
       {selectedLocations && selectedLocations.map(location => (
-        <ClickableBadge
-          key={`location-${location}`}
+        <ClickableBadge,
+key={`location-${location}`}
           className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => onRemoveFilter('locations', location)}
         >,
+
           {location}
           <X className="h-3 w-3" />,
         </ClickableBadge>))}
 ,
+
       {selectedAvailability && selectedAvailability.map(availability => (
-        <ClickableBadge
-          key={`availability-${availability}`}
+        <ClickableBadge,
+key={`availability-${availability}`}
           className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => onRemoveFilter('availability', availability)}
         >,
+
           {availability}
           <X className="h-3 w-3" />,
         </ClickableBadge>))}
 ,
+
       {selectedRating !== null && (
-        <ClickableBadge
-          className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
+        <ClickableBadge,
+className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={onRemoveRating}>,
+
           {selectedRating}+ Stars,
           <X className="h-3 w-3" />,
         </ClickableBadge>)}
@@ -124,8 +132,8 @@ export function ActiveFiltersBar(): any ({
 import React from './react',
 import { ClickableBadge } from '@/components / ui / clickable - badge',
 import { X } from './lucide-react',
-interface ActiveFiltersBarProps {
-  selectedProductTypes: string[],
+interface ActiveFiltersBarProps {,
+selectedProductTypes: string[],
   selected_locations: string[],
   selected_availability: string[],
   selected_rating: number | null,
@@ -135,62 +143,65 @@ interface ActiveFiltersBarProps {
   onClearSearch: () => void}
 export /**,
  * ActiveFiltersBar - Function description,
- */,
-function ActiveFiltersBar() {
-  const hasActiveFilters =,
+ */,;
+function ActiveFiltersBar() {;
+const hasActiveFilters =,
     selectedProductTypes.length > 0 ||,
     selected_locations.length > 0 ||,
     selected_availability.length > 0 ||,
     selected_rating !== null ||,
     !!search_query,
-  // Check condition,
+  // Check condition,;
 if (return null) {
   $2}
   return (
     <div className="flex flex - wrap gap - 2 items - center mb - 4">,
-      <span className="text - sm text - zion - slate - light">Active filters: </span>,
+      <span className="text - sm text - zion - slate - light">Active filters: 
       {search_query && (
-        <ClickableBadge
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
+        <ClickableBadge,
+className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
           on_click={onClearSearch}
         >,
           Search: {search_query}
           <X className="h - 3 w - 3" />,
         </ClickableBadge>)}
       {selectedProductTypes.map (type => (
-        <ClickableBadge
-          key={`type-${type}`}
+        <ClickableBadge,
+key={`type-${type}`}
           className="bg - zion - purple / 20 hover: bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
           on_click={() => onRemoveFilter ('product_types', type)}
         >,
+
           {type}
           <X className="h - 3 w - 3" />,
         </ClickableBadge>))}
       {selected_locations.map (location => (
-        <ClickableBadge
-          key={`location-${location}`}
+        <ClickableBadge,
+key={`location-${location}`}
           className="bg - zion - purple / 20 hover: bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
           on_click={() => onRemoveFilter ('locations', location)}
         >,
+
           {location}
           <X className="h - 3 w - 3" />,
         </ClickableBadge>))}
       {selected_availability.map (availability => (
-        <ClickableBadge
-          key={`availability-${availability}`}
+        <ClickableBadge,
+key={`availability-${availability}`}
           className="bg - zion - purple / 20 hover: bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
           on_click={() => onRemoveFilter ('availability', availability)}
         >,
+
           {availability}
           <X className="h - 3 w - 3" />,
         </ClickableBadge>))}
       {selected_rating !== null && (
-        <ClickableBadge
-          className="bg - zion - purple / 20 hover: bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
+        <ClickableBadge,
+className="bg - zion - purple / 20 hover: bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2",
           on_click={onRemoveRating}
         >,
+
           {selected_rating}+ Stars,
           <X className="h - 3 w - 3" />,
         </ClickableBadge>)}
     </div>)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}})))

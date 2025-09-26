@@ -58,11 +58,11 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
 export default /**,
  * ReferralsPage - Function description,
- */,
-function ReferralsPage() {
-  const navigate = use_navigate (),
-  const { is_authenticated } = use_auth (),
-  const {
+ */,;
+function ReferralsPage() {;
+const navigate = use_navigate (),;
+const { is_authenticated } = use_auth (),;
+const {
     is_loading,
     referral_code,
     referrals,
@@ -71,13 +71,13 @@ function ReferralsPage() {
     getReferralLink,
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
-export default function ReferralsPage() {
-  const navigate = useNavigate(),
-  const { isAuthenticated } = useAuth(),
-export default function ReferralsPage() {
-  const navigate = useNavigate(),
-  const { isAuthenticated } = useAuth(),
-  const {
+export default function ReferralsPage() {;
+const navigate = useNavigate(),;
+const { isAuthenticated } = useAuth(),
+export default function ReferralsPage() {;
+const navigate = useNavigate(),;
+const { isAuthenticated } = useAuth(),;
+const {
     isLoading,
     referralCode,
     referrals,
@@ -86,40 +86,38 @@ export default function ReferralsPage() {
     getReferralLink,
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
-  useEffect(() => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"}),
+  useEffect(() => {;
+if (!isAuthenticated) {
+      toast({,
+title: "Authentication required",
+        description: "Please login to access the referral program",;,
+variant: "destructive"}),
       navigate("/login"),
-  useEffect(() => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"}),
+  useEffect(() => {;
+if (!isAuthenticated) {
+      toast({,
+title: "Authentication required",
+        description: "Please login to access the referral program",;,
+variant: "destructive"}),
       navigate("/login")}
-,
-  return (
+,;
+return (
     <div className="container max-w-7xl py-10">,
       <div className="mb-8 flex flex-col md: flex-row justify-between md:items-center gap-4">,
         <div>,
-          <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>,
+          <h1 className="text-3xl font-bold tracking-tight">Referral Program
           <p className="text-muted-foreground mt-1">,
             Invite others to Zion AI Marketplace and earn rewards,
-          </p>,
-        </div>,
+
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>,
           <Share className="h-4 w-4" />,
           Share Referral Link,
-        </Button>,
-      </div>,
+
       <ReferralStats stats={stats} isLoading={isLoading} />,
       <div className="grid gap-6 mt-6 lg: grid-cols-3">,
         <div className="lg:col-span-2 space-y-6">,
-          <ReferralLink
-            referralLink={referralLink}
+          <ReferralLink,
+referralLink={referralLink}
             onCopy={copyReferralLink}
             onShare={shareOnSocialMedia}
           />,
@@ -128,30 +126,26 @@ export default function ReferralsPage() {
               <TabsTrigger value="referrals" className="flex items-center gap-2">,
                 <Users className="h-4 w-4" />,
                 Your Referrals,
-              </TabsTrigger>,
+              
               <TabsTrigger value="rewards" className="flex items-center gap-2">,
                 <Share className="h-4 w-4" />,
                 Rewards,
-              </TabsTrigger>,
-            </TabsList>,
+
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">,
               <ReferralTable referrals={referrals} isLoading={isLoading} />,
-            </TabsContent>,
+            
             <TabsContent value="rewards" className="p-0 mt-6">,
               <RewardsCard rewards={rewards} isLoading={isLoading} />,
-            </TabsContent>,
-          </Tabs>,
-        </div>,
+
         <div className="space-y-6">,
           <ReferralGuide />,
           <ReferralLeaderboard />,
-        </div>,
-      </div>,
+
     </div>),
-export default function ReferralsPage() {
-  const navigate = useNavigate(),
-  const { isAuthenticated } = useAuth(),
-  const {
+export default function ReferralsPage() {;
+const navigate = useNavigate(),;
+const { isAuthenticated } = useAuth(),;
+const {
     isLoading,
     referralCode,
     referrals,
@@ -160,34 +154,33 @@ export default function ReferralsPage() {
     getReferralLink,
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
-  useEffect(() => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"}),
+  useEffect(() => {;
+if (!isAuthenticated) {
+      toast({,
+title: "Authentication required",
+        description: "Please login to access the referral program",;,
+variant: "destructive"}),
       navigate("/login")}
-  }, [isAuthenticated, navigate]),
-  const referralLink = getReferralLink(),
-  return (
+  },
+ [isAuthenticated, navigate]),;
+const referralLink = getReferralLink(),;
+return (
     <div className="container max-w-7xl py-10">,
       <div className="mb-8 flex flex-col md: flex-row justify-between md:items-center gap-4">,
         <div>,
-          <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>,
+          <h1 className="text-3xl font-bold tracking-tight">Referral Program
           <p className="text-muted-foreground mt-1">,
             Invite others to Zion AI Marketplace and earn rewards,
-          </p>,
-        </div>,
+
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>,
           <Share className="h-4 w-4" />,
           Share Referral Link,
-        </Button>,
-      </div>,
+
       <ReferralStats stats={stats} isLoading={isLoading} />,
       <div className="grid gap-6 mt-6 lg: grid-cols-3">,
         <div className="lg:col-span-2 space-y-6">,
-          <ReferralLink
-            referralLink={referralLink} ,
+          <ReferralLink,
+referralLink={referralLink} ,
             onCopy={copyReferralLink} ,
             onShare={shareOnSocialMedia}
           />,
@@ -196,52 +189,48 @@ export default function ReferralsPage() {
               <TabsTrigger value="referrals" className="flex items-center gap-2">,
                 <Users className="h-4 w-4" />,
                 Your Referrals,
-              </TabsTrigger>,
+              
               <TabsTrigger value="rewards" className="flex items-center gap-2">,
                 <Share className="h-4 w-4" />,
                 Rewards,
-              </TabsTrigger>,
-            </TabsList>,
+
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">,
               <ReferralTable referrals={referrals} isLoading={isLoading} />,
-            </TabsContent>,
+            
             <TabsContent value="rewards" className="p-0 mt-6">,
               <RewardsCard rewards={rewards} isLoading={isLoading} />,
-            </TabsContent>,
-          </Tabs>,
-        </div>,
+
         <div className="space-y-6">,
     shareOnSocialMedia} = useReferrals (),
   useEffect (() => {
-    // Check condition,
+    // Check condition,;
 if ( {) {
   $2}
-      toast ({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"}),
+      toast ({,
+title: "Authentication required",
+        description: "Please login to access the referral program",;,
+variant: "destructive"}),
       navigate ("/login")}
-  }, [is_authenticated, navigate]),
-  const referral_link = getReferralLink (),
-  return (
+  },
+ [is_authenticated, navigate]),;
+const referral_link = getReferralLink (),;
+return (
     <div className="container max - w-7xl py - 10">,
       <div className="mb - 8 flex flex - col md: flex - row justify - between md:items - center gap - 4">,
         <div>,
-          <h1 className="text - 3xl font - bold tracking - tight">Referral Program</h1>,
+          <h1 className="text - 3xl font - bold tracking - tight">Referral Program
           <p className="text - muted - foreground mt - 1">,
             Invite others to Zion AI Marketplace and earn rewards,
-          </p>,
-        </div>,
+
         <Button className="flex items - center gap - 2" on_click={copyReferralLink}>,
           <Share className="h - 4 w - 4" />,
           Share Referral Link,
-        </Button>,
-      </div>,
+
       <ReferralStats stats={stats} is_loading={is_loading} />,
       <div className="grid gap - 6 mt - 6 lg: grid - cols - 3">,
         <div className="lg:col - span - 2 space - y-6">,
-          <ReferralLink
-            referral_link={referral_link}
+          <ReferralLink,
+referral_link={referral_link}
             on_copy={copyReferralLink}
             on_share={shareOnSocialMedia}
           />,
@@ -250,23 +239,19 @@ if ( {) {
               <TabsTrigger value="referrals" className="flex items - center gap - 2">,
                 <Users className="h - 4 w - 4" />,
                 Your Referrals,
-              </TabsTrigger>,
+              
               <TabsTrigger value="rewards" className="flex items - center gap - 2">,
                 <Share className="h - 4 w - 4" />,
                 Rewards,
-              </TabsTrigger>,
-            </TabsList>,
+
             <TabsContent value="referrals" className="p - 0 border rounded - md mt - 6">,
               <ReferralTable referrals={referrals} is_loading={is_loading} />,
-            </TabsContent>,
+            
             <TabsContent value="rewards" className="p - 0 mt - 6">,
               <RewardsCard rewards={rewards} is_loading={is_loading} />,
-            </TabsContent>,
-          </Tabs>,
-        </div>,
+
         <div className="space - y-6">,
           <ReferralGuide />,
           <ReferralLeaderboard />,
-        </div>,
+        
       </div>}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}))))

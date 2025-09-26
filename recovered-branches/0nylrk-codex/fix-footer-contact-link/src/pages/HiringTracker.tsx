@@ -27,22 +27,22 @@ import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalyti
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs',
 import { SEO } from '@/components / SEO',
 import { ProtectedRoute } from '@/components / ProtectedRoute',
-import { Briefcase } from './lucide-react',
-function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string }
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string },
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-  return (
-  return (
-function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string },
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-  return (
+import { Briefcase } from './lucide-react',;
+function HiringTrackerContent() {;
+const { jobId } = useParams() as { jobId?: string }
+  const [activeTab, setActiveTab] = useState<string>("kanban"),;
+function HiringTrackerContent() {;
+const { jobId } = useParams() as { jobId?: string },;
+const [activeTab, setActiveTab] = useState<string>("kanban"),;
+return (;
+return (;
+function HiringTrackerContent() {;
+const { jobId } = useParams() as { jobId?: string },;
+const [activeTab, setActiveTab] = useState<string>("kanban"),;
+return (
     <>,
-      <SEO
-        title="Hiring Tracker | Zion AI Marketplace",
+      <SEO,
+title="Hiring Tracker | Zion AI Marketplace",
         description="Manage your candidate pipeline in the Zion AI Marketplace.",
       />,
       <AppHeader />,
@@ -52,30 +52,26 @@ function HiringTrackerContent() {
             <h1 className="text-3xl font-bold flex items-center">,
               <Briefcase className="mr-2 h-6 w-6 text-primary" />,
               Hiring Pipeline,
-            </h1>,
+            
             <p className="text-muted-foreground mt-1">,
               Track and manage your candidates through the hiring process,
-            </p>,
-          </div>,
-        </div>,
+
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">,
           <TabsList>,
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>,
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>,
-          </TabsList>,
+            <TabsTrigger value="kanban">Kanban Board
+            <TabsTrigger value="analytics">Analytics
+          
           <TabsContent value="kanban" className="mt-6">,
             <KanbanBoard jobId={jobId} />,
-          </TabsContent>,
+          
           <TabsContent value="analytics" className="mt-6">,
             <HiringAnalytics jobId={jobId} />,
-          </TabsContent>,
-        </Tabs>,
-      </main>,
+
       <Footer />,
     </>)}
 ,
-export default function HiringTracker() {
-  return (
+export default function HiringTracker() {;
+return (
     <ProtectedRoute>,
       <HiringTrackerContent />,
     </ProtectedRoute>)}
@@ -83,7 +79,7 @@ export default function HiringTracker() {
 ,
 /**,
  * HiringTrackerContent - Function description,
- */,
-function HiringTrackerContent() {
-  const { job_id } = use_params () as { job_id?: string }
-  const [active_tab, setActiveTab] = useState < string>("kanban")>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}))
+ */,;
+function HiringTrackerContent() {;
+const { job_id } = use_params () as { job_id?: string }
+  const [active_tab, setActiveTab] = useState < string>("kanban")

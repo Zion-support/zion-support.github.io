@@ -43,13 +43,13 @@ const testimonials: Testimonial[] = [
     company: 'DataDriven Corp',
     content:
       'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
-    rating: 5,
-  },
+    rating: 5
+  }
 ];
 
 export default function TestimonialCard({
   testimonial,
-  isActive,
+  isActive
 }: TestimonialCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 

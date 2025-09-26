@@ -5,18 +5,23 @@
  
 [build]
   command = "npm run build"
-  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "24.0.0"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
 [[plugins]]
-  package = "netlify-plugin-compress"
+  package = "netlify-plugin-cloudinary"
   [plugins.inputs]
-    gzip = true
-    brotli = true
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+
+# Compression is handled by Netlify's built-in compression
+# No additional plugin needed
 
 [context.production.environment]
   NODE_ENV = "production"

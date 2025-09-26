@@ -1,22 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
-
+import React from 'react'
+import {
+ Metadata 
+} from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
-  title: 'Production Evaluations + Guardrails: Seamless Integration in 2025 | Zion Tech Group',
-  description: 'How to integrate offline and online evaluations with policy guardrails for safe, reliable AI systems.',
-  keywords: 'AI evaluations, guardrails, policy as code, online evals, safety, production AI',
+  title: 'Production Evaluations + Guardrails: Seamless Integration in 2025 | Zion Tech Group'
+  description: 'How to integrate offline and online evaluations with policy guardrails for safe, reliable AI systems.'
+  keywords: 'AI evaluations, guardrails, policy as code, online evals, safety, production AI'
   openGraph: {
-    title: 'Evaluations + Guardrails Integration (2025)',
-    description: 'Integrate offline/online evals with policy guardrails to ship safely at speed.',
-    type: 'article',
-    publishedTime: '2025-09-12T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+    title: 'Evaluations + Guardrails Integration (2025)'
+    description: 'Integrate offline/online evals with policy guardrails to ship safely at speed.'
+    type: 'article'
+    publishedTime: '2025-09-12T00: 00
+  00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['AI Safety', 'Evaluations', 'Policy']
   }
-};
-
+}
 export default function EvalsGuardrailsIntegration2025() {
   return (
     <div className="min-h-screen bg-white">
@@ -70,6 +69,6 @@ export default function EvalsGuardrailsIntegration2025() {
         </div>
       </article>
     </div>
-  );
+  )
 }
 

@@ -11,8 +11,8 @@ export type AdminActionType =,
   id: string,
   case_id: string,
   type: AdminActionType,
-export interface AdminAction {
-  id: string,
+export interface AdminAction {,
+id: string,
   case_id: string,
   type: AdminActionType,
   admin_id: string,
@@ -22,36 +22,35 @@ export interface AdminAction {
   executed_at?: string,
   status: 'pending' | 'executed' | 'failed'
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-export interface FraudDetectionResult {
-  is_fraud: boolean,
-  isFraud: boolean>>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
+
+export interface FraudDetectionResult {,
+is_fraud: boolean,
+  isFraud: boolean
   confidence: number,
   reasons: string[],
 export interface FraudDetectionConfig {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
+
   enabled: boolean,
-  rules: {
-    suspiciousActivity: {
-      enabled: boolean,
+  rules: {,
+suspiciousActivity: {,
+enabled: boolean,
       threshold: number
-    }
-    fake_profile: {
-      enabled: boolean,
+}
+    fake_profile: {,
+enabled: boolean,
       threshold: number
-    }
-    payment_fraud: {
-      enabled: boolean,
+}
+    payment_fraud: {,
+enabled: boolean,
       threshold: number
-    }
-    spam: {
-      enabled: boolean,
+}
+    spam: {,
+enabled: boolean,
       threshold: number
-    }
+}
   }
-  auto_actions: {
-    enabled: boolean,
+  auto_actions: {,
+enabled: boolean,
     actions: AdminActionType[]}
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+

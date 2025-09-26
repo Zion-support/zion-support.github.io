@@ -1,6 +1,6 @@
 import React from 'react',
 
-"use client",
+"use client";
 const Checkbox = React.forwardRef<,
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>>(({ className...props }ref) => (
@@ -19,4 +19,3 @@ const Checkbox = React.forwardRef<,
   </CheckboxPrimitive.Root>)),
 Checkbox.displayName = CheckboxPrimitive.Root.displayName,
 export { Checkbox }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
