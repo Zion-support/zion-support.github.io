@@ -220,7 +220,7 @@ export default function Home(): JSX.Element {
 									</h2>
 									<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
 										Join hundreds of companies that trust Zion App for their technology needs. 
-										Let's build something amazing together.
+										Let&apos;s build something amazing together.
 									</p>
 									<div className="flex flex-col sm:flex-row gap-4 justify-center">
 										<Link 
