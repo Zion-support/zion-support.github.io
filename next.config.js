@@ -13,7 +13,15 @@ const nextConfig = {
   // Enable experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['next/head', 'lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['next/head', 'lucide-react', '@radix-ui/react-icons', 'framer-motion', 'recharts'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   
   // Performance optimizations
@@ -21,6 +29,13 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: true,
   swcMinify: true,
+  
+  // Additional performance settings
+  outputFileTracing: true,
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  },
   
   // Additional performance optimizations
   reactStrictMode: true,

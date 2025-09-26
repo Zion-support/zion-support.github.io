@@ -12,8 +12,11 @@ import { AdvancedAccessibilityAuditor } from '../src/components/AdvancedAccessib
 import SystemMonitor from '../src/components/SystemMonitor';
 import SecurityMonitor from '../src/components/SecurityMonitor';
 import EnhancedAnalytics from '../src/components/EnhancedAnalytics';
+import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
+import AdvancedPerformanceOptimizer from '../src/components/AdvancedPerformanceOptimizer';
+import AdvancedAnalyticsInsights from '../src/components/AdvancedAnalyticsInsights';
 
-type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics';
+type DashboardTab = 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'error-handler' | 'performance-optimizer' | 'analytics-insights';
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('analytics');
@@ -32,7 +35,10 @@ const Dashboard: React.FC = () => {
     { id: 'system-monitor' as const, name: 'System Monitor', icon: '📊' },
     { id: 'new-performance' as const, name: 'New Performance', icon: '⚡️' },
     { id: 'new-security' as const, name: 'New Security', icon: '🛡️' },
-    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' }
+    { id: 'new-analytics' as const, name: 'New Analytics', icon: '📊' },
+    { id: 'error-handler' as const, name: 'Error Handler', icon: '🚨' },
+    { id: 'performance-optimizer' as const, name: 'Performance Optimizer', icon: '⚙️' },
+    { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' }
   ];
 
   // Sample data for advanced components
@@ -193,6 +199,7 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+<<<<<<< HEAD
       case 'new-performance':
         return (
           <div className="p-8">
@@ -208,6 +215,14 @@ const Dashboard: React.FC = () => {
                   />
                   Real-time Updates
                 </label>
+=======
+      case 'error-handler':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
+              <div className="flex items-center space-x-4">
+>>>>>>> c3df36cb184ede66f4f88d0840cdd1540f7c82e1
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -216,6 +231,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
             <PerformanceDashboard 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
@@ -238,6 +254,25 @@ const Dashboard: React.FC = () => {
                   />
                   Real-time Monitoring
                 </label>
+=======
+            <AdvancedErrorHandler 
+              onError={(error) => console.log('Error captured:', error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              enableAutoRetry={true}
+              maxRetries={3}
+              enablePerformanceMonitoring={true}
+              enableErrorReporting={true}
+              enableUserFeedback={true}
+            />
+          </div>
+        );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+>>>>>>> c3df36cb184ede66f4f88d0840cdd1540f7c82e1
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -280,6 +315,73 @@ const Dashboard: React.FC = () => {
               refreshInterval={isRealTime ? 10000 : 60000}
               enableRealTime={isRealTime}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
+          </div>
+        );
+      case 'error-handler':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Error Handler</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedErrorHandler 
+              enableRealTime={true}
+              refreshInterval={5000}
+              onError={(error) => console.log('Error detected:', error)}
+              onErrorResolved={(error) => console.log('Error resolved:', error)}
+            />
+          </div>
+        );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer 
+              enableRealTime={true}
+              refreshInterval={1000}
+              enableAutoOptimization={true}
+              onOptimization={(rule) => console.log('Optimization applied:', rule)}
+              onPerformanceChange={(metrics) => console.log('Performance changed:', metrics)}
+            />
+          </div>
+        );
+      case 'analytics-insights':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedAnalyticsInsights 
+              data={sampleAnalyticsData}
+              enableRealTime={true}
+              refreshInterval={30000}
+              onInsightAction={(insight) => console.log('Insight action:', insight)}
             />
           </div>
         );
