@@ -13,13 +13,21 @@ const nextConfig = {
   // Enable experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['next/head', 'lucide-react', '@radix-ui/react-icons'],
   },
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   
   // Image optimization
   images: {
     domains: [],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   
   // Performance optimizations
