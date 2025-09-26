@@ -48,7 +48,11 @@
     "strictNullChecks": false
   },
   "include": [
+<<<<<<< HEAD
+    "types.d.ts"
+=======
     "App.tsx"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-621c
   ],
   "exclude": [
     "node_modules",
