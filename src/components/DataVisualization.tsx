@@ -80,7 +80,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     } else if (type === 'line' || type === 'area') {
       drawLineChart(ctx, chartWidth, chartHeight, padding, colors);
     }
-  }, [data, type, drawPieChart, drawBarChart, drawLineChart]);
+  }, [type, drawPieChart, drawBarChart, drawLineChart]);
 
   const drawPieChart = (ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
     const centerX = width / 2;
