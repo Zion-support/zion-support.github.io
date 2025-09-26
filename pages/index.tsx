@@ -2,14 +2,22 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { ServiceCard } from '../src/components/ServiceCard';
 import { FeatureCard } from '../src/components/FeatureCard';
-import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEO from '../src/components/SEO';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { SERVICES, FEATURES, FOOTER_LINKS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
 	const [hoveredService, setHoveredService] = useState<string | null>(null);
 
+	// Analytics tracking
+	usePageView('homepage');
+	const { trackClick } = useAnalytics();
+
 	return (
-		<>
+		<ErrorBoundary>
+			<SEO />
 			<PerformanceMonitor />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions | AI, Cloud & Digital Transformation</title>
@@ -146,10 +154,16 @@ export default function Home(): JSX.Element {
 								Contact us today to discuss your project requirements and how we can help your business grow.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+								<button 
+									onClick={() => trackClick('get-in-touch-button', 'cta')}
+									className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+								>
 									Get In Touch
 								</button>
-								<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">
+								<button 
+									onClick={() => trackClick('view-portfolio-button', 'cta')}
+									className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+								>
 									View Portfolio
 								</button>
 							</div>
@@ -194,6 +208,6 @@ export default function Home(): JSX.Element {
 					</footer>
 				</div>
 			</div>
-		</>
+		</ErrorBoundary>
 	);
 }
