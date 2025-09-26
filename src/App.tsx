@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function App() {
+export default function App(): React.ReactElement {
   return (
-    <div style={{ fontFamily: 'Orbitron, sans-serif', padding: 24 }}>
-      <h1>Zion Marketplace</h1>
-      <p>Build successful.</p>
+    <div style={{ fontFamily: 'sans-serif', padding: 24 }}>
+      <h1>Zion Project</h1>
+      <p>Minimal React app scaffold for Vite build.</p>
     </div>
   );
 }
