@@ -63,7 +63,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Standard slate colors
+        // Default Tailwind colors
         slate: {
           50: '#f8fafc',
           100: '#f1f5f9',
