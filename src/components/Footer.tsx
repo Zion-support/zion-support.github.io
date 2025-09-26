@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
+// Removed stray, unclosed component declaration to fix syntax error
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
