@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function App(): JSX.Element {
+export default function App(): React.ReactElement {
 	return (
 		<div className="min-h-screen flex items-center justify-center p-8">
 			<div className="text-center max-w-xl">
