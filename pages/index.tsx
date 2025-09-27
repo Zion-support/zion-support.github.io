@@ -112,6 +112,7 @@ export default function Home(): JSX.Element {
 		delay: 0.4
     }
   ], []);
+
   return (
     <>
       {/* <EnhancedSEO
@@ -456,8 +457,6 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
-
-
-		</>
-
-  )}
+    </>
+  );
+}
