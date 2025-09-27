@@ -105,7 +105,7 @@ export const analyzeBundle = () => {
 // Tree shaking optimization hints
 export const optimizeTreeShaking = {
   // Mark functions as side-effect free for better tree shaking
-  markAsPure: (fn: Function) => {
+  markAsPure: <T extends (...args: unknown[]) => unknown>(fn: T): T => {
     // This is a hint for bundlers, actual implementation depends on build tools
     return fn;
   },

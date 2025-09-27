@@ -113,7 +113,7 @@ export class SecurityManager {
     const patterns = {
       email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       url: /^https?:\/\/.+/,
-      phone: /^\+?[\d\s\-\(\)]+$/,
+      phone: /^\+?[\d\s\-()]+$/,
       text: /^[a-zA-Z0-9\s\-_.,!?]+$/
     };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Home = () => {
   return (

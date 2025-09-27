@@ -60,11 +60,11 @@ global.performance = {
 };
 
 // Mock PerformanceObserver
-global.PerformanceObserver = jest.fn().mockImplementation((callback) => ({
+global.PerformanceObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   disconnect: jest.fn(),
   takeRecords: jest.fn().mockReturnValue([])
 }));
 
 // Setup testing library matchers
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';
