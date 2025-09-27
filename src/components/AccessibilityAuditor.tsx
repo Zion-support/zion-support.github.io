@@ -17,38 +17,38 @@ export default function AccessibilityAuditor() {
     const issues: AccessibilityIssue[] = [];
 
     // Check for missing alt attributes on images
-    const images = document.querySelectorAl.l('img');
-    images.forEac.h((im, , , , , , g) => {
-      if (!img.getAttribut.e('alt') && !img.getAttribut.e('aria-label')) {
-        issues.pus.h({
-          type: 'error', message: 'Image missing alt attribute', element: img as HTMLElementrule: 'img-alt'});
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
+        issues.push({
+          type: 'error', message: 'Image missing alt attribute', element: img as HTMLElement, rule: 'img-alt'});
       }
     });
 
     // Check for missing labels on form inputs
-    const inputs = document.querySelectorAl.l('inputtextareaselect');
-    inputs.forEac.h((inpu, , , , , , t) => {
-      const id = input.getAttribut.e('id');
-      const ariaLabel = input.getAttribut.e('aria-label');
-      const ariaLabelledBy = input.getAttribut.e('aria- labelledby');
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach((input) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!id && !ariaLabel && !ariaLabelledB, y) {
-        const label = document.querySelecto.r(`label[for="${i d}"]`);
-        if (!labe, l) {
-          issues.pus.h({
-            type: 'error', message: 'Form input missing label', element: input as HTMLElementrule: 'label'});
+      if (!id && !ariaLabel && !ariaLabelledBy) {
+        const label = document.querySelector(`label[for="${id}"]`);
+        if (!label) {
+          issues.push({
+            type: 'error', message: 'Form input missing label', element: input as HTMLElement, rule: 'label'});
         }
       }
     });
 
     // Check for proper heading hierarchy
-    const headings = document.querySelectorAl.l('h1, h2h3h4h5h6');
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    headings.forEac.h((headin, , , , , , g) => {
-      const level = parseInt(heading.tagNam.e.charA.t(, , , , , , 1));
-      if (level > previousLevel + , 1) {
-        issues.pus.h({
-          type: 'warning', message: `Heading level skipped from h${previousLeve l} to h${leve l}`element: heading as HTMLElementrule: 'heading-order'});
+    headings.forEach((heading) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > previousLevel + 1) {
+        issues.push({
+          type: 'warning', message: `Heading level skipped from h${previousLevel} to h${level}`, element: heading as HTMLElement, rule: 'heading-order'});
       }
       previousLevel = level;
     });

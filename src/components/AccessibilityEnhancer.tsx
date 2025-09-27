@@ -15,37 +15,41 @@ interface AccessibilityEnhancerProps {
 }
 
 export default function AccessibilityEnhancer({
-  enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
-}: AccessibilityEnhancerProp, s): null {
-  const [isHighContrastsetIsHighContras, t] = useState(fals, , e);
-  const [prefersReducedsetPrefersReduce, d] = useState(fals, , e);
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}: AccessibilityEnhancerProps): null {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
     // Initialize focus visible polyfill
-    if (enableFocusManagemen, t) {
+    if (enableFocusManagement) {
       initFocusVisible();
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSuppor, t) {
+    if (enableHighContrastSupport) {
       setIsHighContrast(isHighContrastMode());
       
-      const mediaQuery = window.matchMedi.a('(forced-colors: activ, , , , , , e)');
+      const mediaQuery = window.matchMedia('(forced-colors: active)');
       const handleChange = () => setIsHighContrast(isHighContrastMode());
-      mediaQuery.addEventListene.r('change', handleChang, , , , , e);
+      mediaQuery.addEventListener('change', handleChange);
       
-      return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }[enableFocusManagementenableHighContrastSuppor, t]);
+  }, [enableFocusManagement, enableHighContrastSupport]);
 
   useEffect(() => {
     // Check for reduced motion preference
-    if (enableReducedMotionSuppor, t) {
+    if (enableReducedMotionSupport) {
       setPrefersReduced(prefersReducedMotion());
       
-      const mediaQuery = window.matchMedi.a('(prefers-reduced-motion: reduc, , , , , , e)');
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       const handleChange = () => setPrefersReduced(prefersReducedMotion());
-      mediaQuery.addEventListene.r('change', handleChang, , , , , e);
+      mediaQuery.addEventListener('change', handleChange);
       
       return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
     }
