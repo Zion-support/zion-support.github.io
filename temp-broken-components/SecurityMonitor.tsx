@@ -129,12 +129,12 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
   return (
     <d  i  v className="bg-whi t e round e d-lg shad o w-lg p-6">
       <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-6">
-        <h2 className="te x t-2x l fo n t-bo l d te x t-gr a y-900 fl e x ite m s-cent e r">
+        <h2 className="te x t-2 x l fo n t-bo l d te x t-gr a y-900 fl e x ite m s-cent e r">
           <Shie  l  d className="w-6 h-6 mr-2 te x t-r e d-600" />
           Securi  t  y Monit  o  r
         </h2>
         <d  i  v className="fl e x ite m s-cent e r te x t-smte x t-gr a y-500">
-          <Clock className="w-4 h-4m r-1" />
+          <Clock className="w-4 h-4 m r-1" />
           La  s  t scan: {metrics.lastScan.toLocaleTimeString()}
         </d  i  v>
       </d  i  v>
@@ -146,11 +146,11 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
           <d  i  v className="te x t-sm te x t-gr a y-600">Acti  v  e Threa  t  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
-          <d  i  v className="te x t-2x l fo n t-boldte x t-gre e n-600">{metrics.resolvedThrea  t  s}</d  i  v>
+          <d  i  v className="te x t-2 x l fo n t-boldte x t-gre e n-600">{metrics.resolvedThrea  t  s}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Resolv  e  d</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
-          <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">{metrics.protectedAsse  t  s}</d  i  v>
+          <d  i  v className="te x t-2 x l fo n t-boldte x t-bl u e-600">{metrics.protectedAsse  t  s}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Protect  e  d Asse  t  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">

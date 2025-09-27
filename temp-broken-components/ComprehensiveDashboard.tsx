@@ -73,7 +73,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
         </div>
 
         {/* Quick  Actions */}
-        <div className="mt-8 gr i d grid-cols-1m d:grid-cols-3 g a p-6">
+        <div className="mt-8 gr i d grid-cols-1 m d:grid-cols-3 g a p-6">
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">

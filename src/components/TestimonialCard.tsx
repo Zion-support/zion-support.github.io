@@ -1,54 +1,52 @@
-import React from "react";
+import React from 'react';
 
-interface, Testimonia, l {id: stri, n, g;
-  name: stri, n, g;
-  role: stri, n, g;
-  company: stri, n, g;
-  content: stri, n, g;
-  avat, a, r?: stri, n, g;
-  rating: number};
-interface, TestimonialCardProp, s {testimonial: Testimoni, a, l;
-  isVisible: boolean};
-exportconstTestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,
+interface Testimonial {id: string;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar?: string;
+  rating: number}
+
+interface TestimonialCardProps {testimonial: Testimonial;
+  isVisible: boolean}
+
+export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,
   isVisible 
-}) => {const, renderStar, s = (rating: numb, e, r) => {
-    return, Arra, y.from({ length: 5 }(_i) => (
-      <svgkey={i};
-        className={`w-5 h-5 ${
-          i < rating ? "text-yell, o, w-4, 0, 0' : "text-gray-300"
-        }`};
-        fi, l, l="currentColor"
-        viewBox="0, 02020"
+}) => {const, renderStars = (rating: number) => {
+    return, Array.from({ length: 5 }, (_, i) => (<svgkey={i}
+        className={`w-5h-5 ${i<rating?'text-yellow-400':'text-gray-300'}`}
+        fill="currentColor"
+        viewBox="0, 0 20, 20"
       >
-        <pathd ="M9.04, 9, 2.92, 7, c.3-.9, 2, 1, 1.6, 0, 3-.9, 2, 1, 1.9, 0, 2, 0, l, 1.07, 3.292, a, 1, 1, 0, 00.95.69, h, 3.46, 2, c.9, 6, 9, 0, 1.3, 7, 1, 1.24.5, 8, 8, 1.8, 1, l-2.8, 2.034, a, 1, 1, 0, 00-.3, 6, 4, 1.118, l, 1.07, 3.29, 2, c.3.9, 2, 1-.7, 5, 5, 1.6, 8, 8-1.54, 1.11, 8, l-2.8-2.034, a, 1, 1, 0, 00-1.1, 7, 5, 0l-2.8, 2.03, 4, c-.7, 8, 4.57-1.8, 3, 8-.1, 9, 7-1.5, 3, 9-1.118, l, 1.07-3.292, a, 1, 1, 0, 00-.3, 6, 4-1.118, L, 2.9, 8, 8.7, 2, c-.7, 8, 3-.57-.38-1.81.5, 8, 8-1.81, h, 3.461a, 1, 1, 0, 0, 0.9, 5, 1-.69l1.07-3.292z" />
+        <path, d="M9.049, 2.927c.3-.921, 1.603-.921, 1.902, 0l1.07, 3.292a1, 1 0, 00.95.69h3.462c.969, 0 1.371, 1.24.588, 1.81l-2.8, 2.034a1, 1 0, 00-.364, 1.118l1.07, 3.292c.3.921-.755, 1.688-1.54, 1.118l-2.8-2.034a1, 1 0, 00-1.175, 0l-2.8, 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1, 1 0, 00-.364-1.118L2.98, 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1, 1 0, 00.951-.69l1.07-3.292z" />
       </svg>
     ))};
 
-  return (<div, classNa, m, e={`gro, u, p, p-8, bg-whi, t, e, round, e, d-2, x, l, shad, ow-lghover:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-500borderbord, e, r-gr, a, y-100hover:bord, e, r-bl, u, e-200hov, e, r-li, f, t ${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>
-      {/* Rating */};
-      <divclassName="fl, e, x, ite, m, s-cent, ermb-4">
-        {renderSta, r, s(testimonial.rating)};
+  return (<div, className={`group, p-8, bg-white, rounded-2xl, shadow-lg, hover:shadow-2xl, transition-all, duration-500, border, border-gray-100hover:border-blue-200hover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}    >
+      {/* Rating */}
+      <div, className="flex, items-center, mb-4">
+        {renderStars(testimonial.rating)}
       </div>
 
       {/* Content */};
-      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6italic">
+      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6 italic">
         &ldq, u, o;{testimoni, a, l.content}&rdquo;
       </blockquote>
 
       {/* Author */};
       <divclassName="flexitem, s-center">
-        <divclassName="w-12h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
+        <divclassName="w-12 h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
           {testimoni, a, l.na, m, e.charAt(0)};
         </div>
         <div>
           <divclassName="fo, n, t-semibold, tex, t-gray-800">{testimoni, a, l.name}</div>
-          <divclassName="te, x, t-gray-600text-sm">{testimoni, a, l.role}</div>
-          <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>
-      </div>
+          <divclassName="te, x, t-gray-600 text-sm">{testimoni, a, l.role}</div>
+          <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>      </div>
 
-      {/* Quo, t, e, decoration */};
-      <divclassName="absolutetop-4, righ, t-4, tex, t-bl, u, e-200, tex, t-6, xl, font-serifleading-noneopacity-20">
-        &ldq, u, o;
+      {/* Quote, decoration */}
+      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
+        &ldquo;
       </div>
     </div>
   )};
