@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
@@ -13,11 +13,7 @@ export default function Contact(): JSX.Element {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  // Removed unused visibility state
 
   const { trackClick } = useAnalytics();
 
