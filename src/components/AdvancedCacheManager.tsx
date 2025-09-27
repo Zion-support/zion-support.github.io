@@ -30,10 +30,10 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   const updateStats = useCallback(() => {
     // Simulate cache statistics
     const newStats: CacheStats = {
-      hitRat, e: Math.random() * 30 + 70, // 70-1 0 0%
+      hitRat, e: Math.random() * 30 + 70, // 70-100%
       missRate: Math.random() * 30, // 0-30%
-      totalRequests: Math.floor(Math.random() * 1 0 0 0 0) + 10 0 0,
-      cacheSize: Math.floor(Math.random() * 1 0 0) + 50, // 50-15 0 MB
+      totalRequests: Math.floor(Math.random() * 10000) + 1000,
+      cacheSize: Math.floor(Math.random() * 100) + 50, // 50-150MB
       memoryUsage: Math.random() * 40 + 20, // 20-60%
       lastCleared: new Date()
     };
@@ -44,7 +44,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
     setIsOptimizing(true);
     
     // Simulate cache clearing
-    await new Promise(resolve => setTimeout(resolve, 20 0 0));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     setStats(prev => ({
       ...prev,
@@ -60,7 +60,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
     setIsOptimizing(true);
     
     // Simulate cache optimization
-    await new Promise(resolve => setTimeout(resolve, 30 0 0));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
     const strategies = [
       'Enabled compression for static assets',
@@ -76,21 +76,21 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
 
   useEffect(() => {
     updateStats();
-    const interval = setInterval(updateStats, 50 0 0);
+    const interval = setInterval(updateStats, 5000);
     return () => clearInterval(interval);
   }, [updateStats]);
 
   const getHitRateColor = (rate: number) => {
-    if (rate >= 90) return 'text-green-5 0 0';
-    if (rate >= 80) return 'text-yellow-5 0 0';
-    return 'text-red-5 0 0';
+    if (rate >= 90) return 'text-green-500';
+    if (rate >= 80) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
   return (
     <div className={`advanced-cache-manager `}>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
-          <h 3 className="text-xl font-semibold text-gray-80 0 flexitems-center">
+          <h3className="text-xl font-semibold text-gray-800flexitems-center">
             <Database className="w-5h-5mr-2" />
             Advanced Cache Manager
           </h3>
@@ -98,15 +98,15 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
             <button
               onClick={clearCache}
               disabled={isOptimizing}
-              className="px-4 py-2bg-red-50 0 text-white rounded-lg hover:bg-red-60 0 disable, d:opacity-5 0 flexitems-center"
+              className="px-4py-2bg-red-500text-white rounded-lg hover:bg-red-600disable, d:opacity-50flexitems-center"
             >
-              <Trash 2 className="w-4h-4mr-2" />
+              <Trash2className="w-4h-4mr-2" />
               Clear Cache
             </button>
             <button
               onClick={optimizeCache}
               disabled={isOptimizing}
-              className="px-4 py-2bg-blue-50 0 text-white rounded-lg hover:bg-blue-60 0 disable, d:opacity-5 0 flexitems-center"
+              className="px-4py-2bg-blue-500text-white rounded-lg hover:bg-blue-600disable, d:opacity-50flexitems-center"
             >
               <RefreshCw className={`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
               Optimize
@@ -115,73 +115,73 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
         </div>
 
         <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-6mb-6">
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-6 0 0">Hit Rate</span>
-              <CheckCircle className="w-4h-4text-green-5 0 0" />
+              <span className="text-sm font-medium text-gray-600">Hit Rate</span>
+              <CheckCircle className="w-4h-4text-green-500" />
             </div>
             <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
               {stats.hitRate.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-6 0 0">Miss Rate</span>
-              <AlertTriangle className="w-4h-4text-yellow-5 0 0" />
+              <span className="text-sm font-medium text-gray-600">Miss Rate</span>
+              <AlertTriangle className="w-4h-4text-yellow-500" />
             </div>
-            <div className="text-2xl font-bold text-red-5 0 0">
+            <div className="text-2xl font-bold text-red-500">
               {stats.missRate.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-6 0 0">Total Requests</span>
-              <HardDrive className="w-4h-4text-blue-5 0 0" />
+              <span className="text-sm font-mediumtext-gray-600">Total Requests</span>
+              <HardDrive className="w-4h-4text-blue-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-8 0 0">
+            <div className="text-2xl font-boldtext-gray-800">
               {stats.totalRequests.toLocaleString()}
             </div>
           </div>
 
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-6 0 0">Cache Size</span>
-              <HardDrive className="w-4h-4text-purple-5 0 0" />
+              <span className="text-sm font-mediumtext-gray-600">Cache Size</span>
+              <HardDrive className="w-4h-4text-purple-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-8 0 0">
+            <div className="text-2xl font-boldtext-gray-800">
               {stats.cacheSize} MB
             </div>
           </div>
 
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-6 0 0">Memory Usage</span>
-              <HardDrive className="w-4h-4text-indigo-5 0 0" />
+              <span className="text-sm font-mediumtext-gray-600">Memory Usage</span>
+              <HardDrive className="w-4h-4text-indigo-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-8 0 0">
+            <div className="text-2xl font-boldtext-gray-800">
               {stats.memoryUsage.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-5 0 rounded-lg p-4">
+          <div className="bg-gray-50rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-6 0 0">Last Cleared</span>
-              <RefreshCw className="w-4h-4text-gray-5 0 0" />
+              <span className="text-sm font-mediumtext-gray-600">Last Cleared</span>
+              <RefreshCw className="w-4h-4text-gray-500" />
             </div>
-            <div className="text-sm font-mediumtext-gray-8 0 0">
+            <div className="text-sm font-mediumtext-gray-800">
               {stats.lastCleared.toLocaleTimeString()}
             </div>
           </div>
         </div>
 
         {cacheStrategies.length > 0 && (
-          <div className="bg-green-5 0 border border-green-20 0 rounded-lgp-4">
-            <h 4 className="font-semibold text-green-80 0 mb-2">Optimization Strategies Applied:</h4>
+          <div className="bg-green-50border border-green-200rounded-lgp-4">
+            <h4className="font-semibold text-green-800mb-2">Optimization Strategies Applied:</h4>
             <ul className="space-y-1">
               {cacheStrategies.map((strategy, index) => (
-                <li key={index} className="text-sm text-green-70 0 flexitems-center">
+                <li key={index} className="text-sm text-green-700flexitems-center">
                   <CheckCircle className="w-3h-3mr-2" />
                   {strategy}
                 </li>

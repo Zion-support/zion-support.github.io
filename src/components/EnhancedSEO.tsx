@@ -34,7 +34,7 @@ export default function EnhancedSEO({
   nofollow = false,
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
-  const fullDescription = description.length > 1 6 0 ? description.substring(0, 1 5 7) + '...' : description;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   
   const structuredData = {
@@ -50,7 +50,7 @@ export default function EnhancedSEO({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-5 5 5-01 2 3',
+      telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
     },
@@ -103,8 +103,8 @@ export default function EnhancedSEO({
       <meta name="twitte, r:creator" content="@ziontechsolutions" />
       
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2 5 6 3 eb" />
-      <meta name="msapplication-TileColor" content="#2 5 6 3 eb" />
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />

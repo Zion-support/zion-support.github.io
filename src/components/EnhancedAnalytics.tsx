@@ -30,7 +30,7 @@ interface EnhancedAnalyticsProps {
 }
 
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  refreshInterval = 3 0 0 0 0,
+  refreshInterval = 30000,
   enableRealTime = true,
   onDataUpdate
 }) => {
@@ -47,10 +47,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   const generateMockData = useCallback((): AnalyticsData => {
     return {
-      pageViews: Math.floor(Math.random() * 1 0 0 0 0) + 50 0 0,
-      uniqueVisitors: Math.floor(Math.random() * 50 0 0) + 20 0 0,
+      pageViews: Math.floor(Math.random() * 10000) + 5000,
+      uniqueVisitors: Math.floor(Math.random() * 5000) + 2000,
       bounceRate: Math.random() * 40 + 20,
-      avgSessionDuration: Math.random() * 3 0 0 + 1 2 0,
+      avgSessionDuration: Math.random() * 300 + 120,
       conversionRate: Math.random() * 5 + 1,
       realTimeUsers: Math.floor(Math.random() * 50) + 10
     };
@@ -64,7 +64,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       setLastUpdated(new Date());
       setIsLoading(false);
       onDataUpdate?.(newData);
-    }, 10 0 0);
+    }, 1000);
   }, [generateMockData, onDataUpdate]);
 
   useEffect(() => {
@@ -74,8 +74,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   }, [updateData, refreshInterval]);
 
   const formatNumber = (num: number) => {
-    if (num >= 1 0 0 0 0 0 0) return (num / 1 0 0 0 0 0 0).toFixed(1) + 'M';
-    if (num >= 10 0 0) return (num / 10 0 0).toFixed(1) + 'K';
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
 
@@ -88,11 +88,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return (
     <div className="bg-white rounded-lg shadow-lgp-6">
       <div className="flex items-center justify-between mb-6">
-        <h 2 className="text-2xl font-bold text-gray-90 0 flexitems-center">
-          <BarChart 3 className="w-6h-6mr-2text-blue-6 0 0" />
+        <h2className="text-2xl font-bold text-gray-900flexitems-center">
+          <BarChart3className="w-6h-6mr-2text-blue-600" />
           Analytics Dashboard
         </h2>
-        <div className="flex items-center text-smtext-gray-5 0 0">
+        <div className="flex items-center text-smtext-gray-500">
           <Clock className="w-4h-4mr-1" />
           Last updated: {lastUpdated.toLocaleTimeString()}
         </div>
@@ -100,49 +100,49 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       {/* Key Metrics */}
       <div className="grid grid-cols-2md:grid-cols-5gap-4mb-6">
-        <div className="bg-blue-5 0 rounded-lg p-4text-center">
-          <Eye className="w-6h-6mx-auto mb-2text-blue-6 0 0" />
-          <div className="text-2xl font-boldtext-blue-6 0 0">{formatNumber(data.pageViews)}</div>
-          <div className="text-sm text-gray-6 0 0">Page Views</div>
+        <div className="bg-blue-50rounded-lg p-4text-center">
+          <Eye className="w-6h-6mx-auto mb-2text-blue-600" />
+          <div className="text-2xl font-boldtext-blue-600">{formatNumber(data.pageViews)}</div>
+          <div className="text-sm text-gray-600">Page Views</div>
         </div>
-        <div className="bg-green-5 0 rounded-lg p-4text-center">
-          <Users className="w-6h-6mx-auto mb-2text-green-6 0 0" />
-          <div className="text-2xl font-boldtext-green-6 0 0">{formatNumber(data.uniqueVisitors)}</div>
-          <div className="text-sm text-gray-6 0 0">Unique Visitors</div>
+        <div className="bg-green-50rounded-lg p-4text-center">
+          <Users className="w-6h-6mx-auto mb-2text-green-600" />
+          <div className="text-2xl font-boldtext-green-600">{formatNumber(data.uniqueVisitors)}</div>
+          <div className="text-sm text-gray-600">Unique Visitors</div>
         </div>
-        <div className="bg-yellow-5 0 rounded-lg p-4text-center">
-          <MousePointer className="w-6h-6mx-auto mb-2text-yellow-6 0 0" />
-          <div className="text-2xl font-boldtext-yellow-6 0 0">{data.bounceRate.toFixed(1)}%</div>
-          <div className="text-sm text-gray-6 0 0">Bounce Rate</div>
+        <div className="bg-yellow-50rounded-lg p-4text-center">
+          <MousePointer className="w-6h-6mx-auto mb-2text-yellow-600" />
+          <div className="text-2xl font-boldtext-yellow-600">{data.bounceRate.toFixed(1)}%</div>
+          <div className="text-sm text-gray-600">Bounce Rate</div>
         </div>
-        <div className="bg-purple-5 0 rounded-lg p-4text-center">
-          <Clock className="w-6h-6mx-auto mb-2text-purple-6 0 0" />
-          <div className="text-2xl font-boldtext-purple-6 0 0">{formatDuration(data.avgSessionDuration)}</div>
-          <div className="text-sm text-gray-6 0 0">Avg. Session</div>
+        <div className="bg-purple-50rounded-lg p-4text-center">
+          <Clock className="w-6h-6mx-auto mb-2text-purple-600" />
+          <div className="text-2xl font-boldtext-purple-600">{formatDuration(data.avgSessionDuration)}</div>
+          <div className="text-sm text-gray-600">Avg. Session</div>
         </div>
-        <div className="bg-red-5 0 rounded-lg p-4text-center">
-          <TrendingUp className="w-6h-6mx-auto mb-2text-red-6 0 0" />
-          <div className="text-2xl font-boldtext-red-6 0 0">{data.conversionRate.toFixed(1)}%</div>
-          <div className="text-sm text-gray-6 0 0">Conversion Rate</div>
+        <div className="bg-red-50rounded-lg p-4text-center">
+          <TrendingUp className="w-6h-6mx-auto mb-2text-red-600" />
+          <div className="text-2xl font-boldtext-red-600">{data.conversionRate.toFixed(1)}%</div>
+          <div className="text-sm text-gray-600">Conversion Rate</div>
         </div>
       </div>
 
       {/* Real-time Users */}
       {enableRealTime && (
-        <div className="bg-gray-5 0 rounded-lg p-4mb-6">
+        <div className="bg-gray-50rounded-lg p-4mb-6">
           <div className="flex items-center justify-between">
             <div className="flexitems-center">
-              <Activity className="w-5h-5mr-2text-green-6 0 0" />
-              <span className="font-mediumtext-gray-9 0 0">Real-time Users</span>
+              <Activity className="w-5h-5mr-2text-green-600" />
+              <span className="font-mediumtext-gray-900">Real-time Users</span>
             </div>
-            <div className="text-2xl font-boldtext-green-6 0 0">{data.realTimeUsers}</div>
+            <div className="text-2xl font-boldtext-green-600">{data.realTimeUsers}</div>
           </div>
         </div>
       )}
 
       {isLoading && (
         <div className="flex items-center justify-centerpy-8">
-          <div className="animate-spin rounded-full h-8w-8border-b-2border-blue-6 0 0"></div>
+          <div className="animate-spin rounded-full h-8w-8border-b-2border-blue-600"></div>
         </div>
       )}
     </div>

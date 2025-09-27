@@ -123,14 +123,14 @@ describe('Loading Components', () => {
     
     const skeleton = screen.getByTestId('skeleton');
     expect(skeleton).toBeInTheDocument();
-    expect(skeleton).toHaveClass('bg-gray-2 0 0', 'rounded', 'animate-pulse');
+    expect(skeleton).toHaveClass('bg-gray-200', 'rounded', 'animate-pulse');
   });
 
   it('renders skeleton with custom props', () => {
     render(
       <Skeleton 
         data-testid="skeleton" 
-        width={1 0 0} 
+        width={100} 
         height={50} 
         rounded={false} 
         animate={false} 
@@ -139,7 +139,7 @@ describe('Loading Components', () => {
     
     const skeleton = screen.getByTestId('skeleton');
     expect(skeleton).toBeInTheDocument();
-    expect(skeleton).toHaveStyle({ width: '10 0 px', height: '5 0 px' });
+    expect(skeleton).toHaveStyle({ width: '100px', height: '50px' });
     expect(skeleton).not.toHaveClass('rounded', 'animate-pulse');
   });
 

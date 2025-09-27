@@ -34,55 +34,55 @@ export const PricingCalculator: React.FC = () => {
 			i, d: 'web-dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
-			basePrice: 1 5 0 0 0,
+			basePrice: 15000,
 			features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
 		},
 		{
 			id: 'mobile',
 			name: 'Mobile Development',
 			description: 'iOS and Android applications',
-			basePrice: 2 5 0 0 0,
+			basePrice: 25000,
 			features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
 		},
 		{
 			id: 'ai-ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
-			basePrice: 3 5 0 0 0,
+			basePrice: 35000,
 			features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
 		},
 		{
 			id: 'cloud',
 			name: 'Cloud Solutions',
 			description: 'Cloud infrastructure and deployment',
-			basePrice: 2 0 0 0 0,
+			basePrice: 20000,
 			features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
 		},
 		{
 			id: 'data-analytics',
 			name: 'Data Analytics',
 			description: 'Business intelligence and analytics',
-			basePrice: 1 8 0 0 0,
+			basePrice: 18000,
 			features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
 		},
 		{
 			id: 'cybersecurity',
 			name: 'Cybersecurity',
 			description: 'Security solutions and audits',
-			basePrice: 1 2 0 0 0,
+			basePrice: 12000,
 			features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
 		}
 	];
 
 	const additionalFeatures = [
-		{ id: 'api-integration', name: 'API Integration', price: 50 0 0 },
-		{ id: 'third-party-auth', name: 'Third-party Authentication', price: 30 0 0 },
-		{ id: 'payment-gateway', name: 'Payment Gateway Integration', price: 40 0 0 },
-		{ id: 'real-time-chat', name: 'Real-time Chat', price: 60 0 0 },
-		{ id: 'advanced-analytics', name: 'Advanced Analytics', price: 80 0 0 },
-		{ id: 'multi-language', name: 'Multi-language Support', price: 40 0 0 },
-		{ id: 'admin-dashboard', name: 'Admin Dashboard', price: 70 0 0 },
-		{ id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 30 0 0 }
+		{ id: 'api-integration', name: 'API Integration', price: 5000 },
+		{ id: 'third-party-auth', name: 'Third-party Authentication', price: 3000 },
+		{ id: 'payment-gateway', name: 'Payment Gateway Integration', price: 4000 },
+		{ id: 'real-time-chat', name: 'Real-time Chat', price: 6000 },
+		{ id: 'advanced-analytics', name: 'Advanced Analytics', price: 8000 },
+		{ id: 'multi-language', name: 'Multi-language Support', price: 4000 },
+		{ id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 },
+		{ id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
 	];
 
 	useEffect(() => {
@@ -123,7 +123,7 @@ export const PricingCalculator: React.FC = () => {
 			priceBreakdown.push({
 				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
 				price: complexityAdjustment,
-				description: `${Math.round((complexityMultiplier - 1) * 1 0 0)}% complexity adjustment`
+				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
 			});
 		}
 
@@ -143,7 +143,7 @@ export const PricingCalculator: React.FC = () => {
 			priceBreakdown.push({
 				item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`,
 				price: timelineAdjustment,
-				description: `${Math.round((timelineMultiplier - 1) * 1 0 0)}% timeline adjustment`
+				description: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
 			});
 		}
 
@@ -208,8 +208,8 @@ export const PricingCalculator: React.FC = () => {
 	return (
 		<div className="bg-white rounded-2xl shadow-xlp-8">
 			<div className="mb-8">
-				<h 3 className="text-3xl font-bold text-gray-80 0 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-60 0 text-lg">
+				<h3className="text-3xl font-bold text-gray-800mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<p className="text-gray-600text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
 			</div>
@@ -219,7 +219,7 @@ export const PricingCalculator: React.FC = () => {
 				<div className="space-y-6">
 					{/* Service Selection */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-70 0 mb-3">
+						<label className="block text-sm font-semibold text-gray-700mb-3">
 							Select Service *
 						</label>
 						<div className="grid grid-cols-1gap-3">
@@ -227,18 +227,18 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={service.id}
 									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4rounded-lg border-2text-left transition-all duration-2 0 0 ${
+									className={`p-4rounded-lg border-2text-left transition-all duration-200 ${
 										inputs.service === service.id
-											? 'border-blue-50 0 bg-blue-50'
-											: 'border-gray-20 0 hover:border-gray-3 0 0'
+											? 'border-blue-500bg-blue-50'
+											: 'border-gray-200hover:border-gray-300'
 									}`}
 								>
 									<div className="flex justify-betweenitems-start">
 										<div>
-											<h 4 className="font-semiboldtext-gray-8 0 0" id="servicename">{service.name}</h4>
-											<p className="text-sm text-gray-6 0 0">{service.description}</p>
+											<h4className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
+											<p className="text-sm text-gray-600">{service.description}</p>
 										</div>
-										<span className="text-sm font-mediumtext-blue-6 0 0">
+										<span className="text-sm font-mediumtext-blue-600">
 											{formatPrice(service.basePrice)}
 										</span>
 									</div>
@@ -249,7 +249,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Complexity */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-70 0 mb-3">
+						<label className="block text-sm font-semibold text-gray-700mb-3">
 							Project Complexity
 						</label>
 						<div className="grid grid-cols-2gap-3">
@@ -257,10 +257,10 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={complexity}
 									onClick={() => handleInputChange('complexity', complexity)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-2 0 0 ${
+									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.complexity === complexity
-											? 'border-blue-50 0 bg-blue-50'
-											: 'border-gray-20 0 hover:border-gray-3 0 0'
+											? 'border-blue-500bg-blue-50'
+											: 'border-gray-200hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
@@ -271,7 +271,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Timeline */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-70 0 mb-3">
+						<label className="block text-sm font-semibold text-gray-700mb-3">
 							Timeline
 						</label>
 						<div className="grid grid-cols-3gap-3">
@@ -279,10 +279,10 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={timeline}
 									onClick={() => handleInputChange('timeline', timeline)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-2 0 0 ${
+									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.timeline === timeline
-											? 'border-blue-50 0 bg-blue-50'
-											: 'border-gray-20 0 hover:border-gray-3 0 0'
+											? 'border-blue-500bg-blue-50'
+											: 'border-gray-200hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
@@ -293,7 +293,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Team Size */}
 					<div>
-						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-70 0 mb-3">
+						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700mb-3">
 							Team Size
 						</label>
 						<input
@@ -303,27 +303,27 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4 py-3border border-gray-30 0 rounded-lg focus:ring-2focu, s:ring-blue-50 0 focu,s:border-transparent"
+							className="w-full px-4py-3border border-gray-300rounded-lg focus:ring-2focu, s:ring-blue-500focu,s:border-transparent"
 						/>
 					</div>
 
 					{/* Additional Features */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-70 0 mb-3">
+						<label className="block text-sm font-semibold text-gray-700mb-3">
 							Additional Features
 						</label>
 						<div className="space-y-2">
 							{additionalFeatures.map((feature) => (
-								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-20 0 rounded-lg hover:bg-gray-5 0 cursor-pointer">
+								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-200rounded-lg hover:bg-gray-50cursor-pointer">
 									<span className="font-medium">{feature.name}</span>
 									<div className="flex items-centerspace-x-3">
-										<span className="text-sm text-gray-6 0 0">{formatPrice(feature.price)}</span>
+										<span className="text-sm text-gray-600">{formatPrice(feature.price)}</span>
 										<input
 											type="checkbox"
 											id={`feature-${feature.id}`}
 											checked={inputs.additionalFeatures.includes(feature.id)}
 											onChange={() => handleFeatureToggle(feature.id)}
-											className="w-4h-4text-blue-60 0 border-gray-30 0 roundedfocus:ring-blue-5 0 0"
+											className="w-4h-4text-blue-600border-gray-300roundedfocus:ring-blue-500"
 										/>
 									</div>
 								</label>
@@ -333,43 +333,43 @@ export const PricingCalculator: React.FC = () => {
 				</div>
 
 				{/* Price Estimate */}
-				<div className="bg-gradient-to-br from-blue-5 0 to-indigo-5 0 rounded-xlp-6">
-					<h 4 className="text-xl font-bold text-gray-80 0 mb-4" id="price-estimate">Price Estimate</h4>
+				<div className="bg-gradient-to-br from-blue-50to-indigo-50rounded-xlp-6">
+					<h4className="text-xl font-bold text-gray-800mb-4" id="price-estimate">Price Estimate</h4>
 					
 					{estimatedPrice > 0 ? (
 						<>
 							<div className="text-centermb-6">
-								<div className="text-4xl font-bold text-blue-60 0 mb-2">
+								<div className="text-4xl font-bold text-blue-600mb-2">
 									{formatPrice(estimatedPrice)}
 								</div>
-								<p className="text-gray-6 0 0">Estimated project cost</p>
+								<p className="text-gray-600">Estimated project cost</p>
 							</div>
 
 							<div className="space-y-3mb-6">
-								<h 5 className="font-semiboldtext-gray-8 0 0" id="price-breakdown">Price Breakdown:</h5>
+								<h5className="font-semiboldtext-gray-800" id="price-breakdown">Price Breakdown:</h5>
 								{breakdown.map((item, index) => (
 									<div key={index} className="flex justify-between items-centertext-sm">
 										<div>
 											<span className="font-medium">{item.item}</span>
-											<p className="text-gray-50 0 text-xs">{item.description}</p>
+											<p className="text-gray-500text-xs">{item.description}</p>
 										</div>
 										<span className="font-medium">{formatPrice(item.price)}</span>
 									</div>
 								))}
 							</div>
 
-							<div className="bg-blue-10 0 rounded-lg p-4mb-6">
-								<p className="text-blue-80 0 text-sm">
+							<div className="bg-blue-100rounded-lg p-4mb-6">
+								<p className="text-blue-800text-sm">
 									<strong>Note: </strong> This is an estimated cost. Final pricing will be determined after a detailed consultation and project scope analysis.
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-60 0 hover:bg-blue-70 0 text-white font-semibold py-3px-6rounded-lg transition-colorsduration-2 0 0" aria-label="Get Detailed Quote">
+							<button className="w-full bg-blue-600hover:bg-blue-700text-white font-semibold py-3px-6rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>
 					) : (
-						<div className="text-centertext-gray-5 0 0">
+						<div className="text-centertext-gray-500">
 							<div className="text-6xlmb-4">💰</div>
 							<p>Select a service to see pricing estimate</p>
 						</div>

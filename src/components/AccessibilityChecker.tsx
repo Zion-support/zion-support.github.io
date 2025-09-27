@@ -153,7 +153,7 @@ const AccessibilityChecker: React.FC = () => {
       }
     });
 
-    const score = totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 1 0 0) : 1 0 0;
+    const score = totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 100;
 
     setReport({
       issues,
@@ -166,10 +166,10 @@ const AccessibilityChecker: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-60 0 bg-red-50';
-      case 'medium': return 'text-yellow-60 0 bg-yellow-50';
-      case 'low': return 'text-blue-60 0 bg-blue-50';
-      default: return 'text-gray-60 0 bg-gray-50';
+      case 'high': return 'text-red-600bg-red-50';
+      case 'medium': return 'text-yellow-600bg-yellow-50';
+      case 'low': return 'text-blue-600bg-blue-50';
+      default: return 'text-gray-600bg-gray-50';
     }
   };
 
@@ -186,10 +186,10 @@ const AccessibilityChecker: React.FC = () => {
     const element = document.querySelector(selector);
     if (element) {
       element.scrollIntoView({ behavio, r: 'smooth', block: 'center' });
-      element.classList.add('ring-2', 'ring-red-5 0 0', 'ring-opacity-50');
+      element.classList.add('ring-2', 'ring-red-500', 'ring-opacity-50');
       setTimeout(() => {
-        element.classList.remove('ring-2', 'ring-red-5 0 0', 'ring-opacity-50');
-      }, 30 0 0);
+        element.classList.remove('ring-2', 'ring-red-500', 'ring-opacity-50');
+      }, 3000);
     }
   };
 
@@ -201,18 +201,18 @@ const AccessibilityChecker: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h 2 className="text-xl font-semiboldtext-gray-9 0 0">Accessibility Checker</h2>
+        <h2className="text-xl font-semiboldtext-gray-900">Accessibility Checker</h2>
         <div className="flexspace-x-2">
           <button
             onClick={checkAccessibility}
             disabled={isRunning}
-            className="px-4 py-2text-sm font-medium text-white bg-blue-60 0 rounded-md hover:bg-blue-70 0 disable, d:opacity-5 0 disable,d:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Checking...' : 'Recheck'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4 py-2text-sm font-medium text-gray-70 0 bg-gray-10 0 rounded-md hover:bg-gray-2 0 0"
+            className="px-4py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -222,17 +222,17 @@ const AccessibilityChecker: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-7 0 0">Accessibility Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-6 0 0' : report.score >= 70 ? 'text-yellow-6 0 0' : 'text-red-6 0 0'}`}
+              <span className="text-sm font-mediumtext-gray-700">Accessibility Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-20 0 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div
-                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-5 0 0' : report.score >= 70 ? 'bg-yellow-5 0 0' : 'bg-red-5 0 0'}`}
+                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
                 style={{ width: `${report.score}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-60 0 mt-2">
+            <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
             </p>
           </div>
@@ -243,8 +243,8 @@ const AccessibilityChecker: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Errors</p>
-                  <p className="text-2xl font-boldtext-red-6 0 0">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
               </div>
             </div>
             
@@ -252,8 +252,8 @@ const AccessibilityChecker: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Warnings</p>
-                  <p className="text-2xl font-boldtext-yellow-6 0 0">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
               </div>
             </div>
             
@@ -261,8 +261,8 @@ const AccessibilityChecker: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Info</p>
-                  <p className="text-2xl font-boldtext-blue-6 0 0">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
               </div>
             </div>
           </div>
@@ -270,8 +270,8 @@ const AccessibilityChecker: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && report.issues.length > 0 && (
             <div className="space-y-4">
-              <h 3 className="text-lg font-mediumtext-gray-9 0 0">Issues Found</h3>
-              <div className="space-y-2max-h-9 6 overflow-y-auto">
+              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
@@ -283,7 +283,7 @@ const AccessibilityChecker: React.FC = () => {
                         <div>
                           <p className="text-sm font-medium">{issue.message}</p>
                           {issue.selector && (
-                            <p className="text-xs text-gray-50 0 mt-1">
+                            <p className="text-xs text-gray-500mt-1">
                               Selector: {issue.selector}
                             </p>
                           )}
@@ -292,7 +292,7 @@ const AccessibilityChecker: React.FC = () => {
                       {issue.selector && (
                         <button
                           onClick={() =>scrollToElement(issue.selector!)}
-                          className="text-xs text-blue-60 0 hover:text-blue-80 0 underline"
+                          className="text-xs text-blue-600hover:text-blue-800underline"
                         </button>
                       )}
                     </div>
@@ -305,8 +305,8 @@ const AccessibilityChecker: React.FC = () => {
           {report.issues.length === 0 && (
             <div className="text-centerpy-8">
               <div className="text-4xlmb-4">🎉</div>
-              <h 3 className="text-lg font-medium text-gray-90 0 mb-2">Great job!</h3>
-              <p className="text-gray-6 0 0">No accessibility issues found.</p>
+              <h3className="text-lg font-medium text-gray-900mb-2">Great job!</h3>
+              <p className="text-gray-600">No accessibility issues found.</p>
             </div>
           )}
         </>

@@ -68,16 +68,16 @@ const SEOAnalyzer: React.FC = () => {
     } else if (title.length < 30) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too short (less than3 0 characters)',
+        message: 'Title tag is too short (less than30characters)',
         severity: 'medium',
         suggestion: 'Make your title more descriptive and longer'
       });
     } else if (title.length > 60) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too long (more than6 0 characters)',
+        message: 'Title tag is too long (more than60characters)',
         severity: 'medium',
-        suggestion: 'Shorten your title to under6 0 characters'
+        suggestion: 'Shorten your title to under60characters'
       });
     } else {
       passedChecks++;
@@ -93,40 +93,40 @@ const SEOAnalyzer: React.FC = () => {
         severity: 'high',
         suggestion: 'Add a meta description to your page'
       });
-    } else if (metaDescription.length < 1 2 0) {
+    } else if (metaDescription.length < 120) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too short (less than 1 2 0 characters)',
+        message: 'Meta description is too short (less than120characters)',
         severity: 'medium',
         suggestion: 'Make your meta description more descriptive'
       });
-    } else if (metaDescription.length > 1 6 0) {
+    } else if (metaDescription.length > 160) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too long (more than 1 6 0 characters)',
+        message: 'Meta description is too long (more than160characters)',
         severity: 'medium',
-        suggestion: 'Shorten your meta description to under 1 6 0 characters'
+        suggestion: 'Shorten your meta description to under160characters'
       });
     } else {
       passedChecks++;
     }
 
-    // Check for H 1 tag
+    // Check for H1tag
     totalChecks++;
-    const h 1 Tags = document.querySelectorAll('h1');
-    if (h 1 Tags.length === 0) {
+    const h1Tags = document.querySelectorAll('h1');
+    if (h1Tags.length === 0) {
       issues.push({
         type: 'error',
-        message: 'Missing H 1 tag',
+        message: 'Missing H1tag',
         severity: 'high',
-        suggestion: 'Add an H 1 tag to your page'
+        suggestion: 'Add an H1tag to your page'
       });
-    } else if (h 1 Tags.length > 1) {
+    } else if (h1Tags.length > 1) {
       issues.push({
         type: 'warning',
-        message: 'Multiple H 1 tags found',
+        message: 'Multiple H1tags found',
         severity: 'medium',
-        suggestion: 'Use only one H 1 tag per page'
+        suggestion: 'Use only one H1tag per page'
       });
     } else {
       passedChecks++;
@@ -270,7 +270,7 @@ const SEOAnalyzer: React.FC = () => {
       twitterCard: twitterCard || null,
     };
 
-    const score = totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 1 0 0) : 1 0 0;
+    const score = totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 100;
 
     setReport({
       issues,
@@ -296,10 +296,10 @@ const SEOAnalyzer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-60 0 bg-red-50';
-      case 'medium': return 'text-yellow-60 0 bg-yellow-50';
-      case 'low': return 'text-blue-60 0 bg-blue-50';
-      default: return 'text-gray-60 0 bg-gray-50';
+      case 'high': return 'text-red-600bg-red-50';
+      case 'medium': return 'text-yellow-600bg-yellow-50';
+      case 'low': return 'text-blue-600bg-blue-50';
+      default: return 'text-gray-600bg-gray-50';
     }
   };
 
@@ -319,18 +319,18 @@ const SEOAnalyzer: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h 2 className="text-xl font-semiboldtext-gray-9 0 0">SEO Analyzer</h2>
+        <h2className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
         <div className="flexspace-x-2">
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4 py-2text-sm font-medium text-white bg-blue-60 0 rounded-md hover:bg-blue-70 0 disable, d:opacity-5 0 disable,d:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4 py-2text-sm font-medium text-gray-70 0 bg-gray-10 0 rounded-md hover:bg-gray-2 0 0"
+            className="px-4py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -340,17 +340,17 @@ const SEOAnalyzer: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-7 0 0">SEO Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-6 0 0' : report.score >= 70 ? 'text-yellow-6 0 0' : 'text-red-6 0 0'}`}
+              <span className="text-sm font-mediumtext-gray-700">SEO Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-20 0 rounded-fullh-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div
-                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-5 0 0' : report.score >= 70 ? 'bg-yellow-5 0 0' : 'bg-red-5 0 0'}`}
+                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
                 style={{ width: `${report.score}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-60 0 mt-2">
+            <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
             </p>
           </div>
@@ -358,20 +358,20 @@ const SEOAnalyzer: React.FC = () => {
           {/* Quick Stats */}
           <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
             <div className="p-4border rounded-lgtext-center">
-              <p className="text-2xl font-boldtext-blue-6 0 0">{report.headings.h1}</p>
-              <p className="text-sm text-gray-6 0 0">H 1 Tags</p>
+              <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
+              <p className="text-sm text-gray-600">H1Tags</p>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <p className="text-2xl font-boldtext-green-6 0 0">{report.images.withAlt}</p>
-              <p className="text-sm text-gray-6 0 0">Images with Alt</p>
+              <p className="text-2xl font-boldtext-green-600">{report.images.withAlt}</p>
+              <p className="text-sm text-gray-600">Images with Alt</p>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <p className="text-2xl font-boldtext-purple-6 0 0">{report.links.internal}</p>
-              <p className="text-sm text-gray-6 0 0">Internal Links</p>
+              <p className="text-2xl font-boldtext-purple-600">{report.links.internal}</p>
+              <p className="text-sm text-gray-600">Internal Links</p>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <p className="text-2xl font-boldtext-orange-6 0 0">{report.links.external}</p>
-              <p className="text-sm text-gray-6 0 0">External Links</p>
+              <p className="text-2xl font-boldtext-orange-600">{report.links.external}</p>
+              <p className="text-sm text-gray-600">External Links</p>
             </div>
           </div>
 
@@ -381,8 +381,8 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Errors</p>
-                  <p className="text-2xl font-boldtext-red-6 0 0">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
               </div>
             </div>
             
@@ -390,8 +390,8 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Warnings</p>
-                  <p className="text-2xl font-boldtext-yellow-6 0 0">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
               </div>
             </div>
             
@@ -399,8 +399,8 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-9 0 0">Info</p>
-                  <p className="text-2xl font-boldtext-blue-6 0 0">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
+                  <p className="text-sm font-mediumtext-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
               </div>
             </div>
           </div>
@@ -408,8 +408,8 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-              <h 3 className="text-lg font-mediumtext-gray-9 0 0">Issues Found</h3>
-              <div className="space-y-2max-h-9 6 overflow-y-auto">
+              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
@@ -420,7 +420,7 @@ const SEOAnalyzer: React.FC = () => {
                       <div className="flex-1">
                         <p className="text-sm font-medium">{issue.message}</p>
                         {issue.suggestion && (
-                          <p className="text-xs text-gray-60 0 mt-1">
+                          <p className="text-xs text-gray-600mt-1">
                             💡 {issue.suggestion}
                           </p>
                         )}
@@ -435,8 +435,8 @@ const SEOAnalyzer: React.FC = () => {
           {report.issues.length === 0 && (
             <div className="text-centerpy-8">
               <div className="text-4xlmb-4">🎉</div>
-              <h 3 className="text-lg font-medium text-gray-90 0 mb-2">Excellent SEO!</h3>
-              <p className="text-gray-6 0 0">No SEO issues found.</p>
+              <h3className="text-lg font-medium text-gray-900mb-2">Excellent SEO!</h3>
+              <p className="text-gray-600">No SEO issues found.</p>
             </div>
           )}
         </>

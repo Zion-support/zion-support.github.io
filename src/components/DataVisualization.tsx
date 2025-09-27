@@ -33,7 +33,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   type,
   data,
   title,
-  height = 3 0 0,
+  height = 300,
   showLegend = true,
   showTooltips = true,
   className = ""
@@ -47,7 +47,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     const timer = setTimeout(() => {
       drawChart();
       setIsLoading(false);
-    }, 1 0 0);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [data, type, drawChart]);
@@ -69,12 +69,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
     // Set up colors
     const colors = [
-      '#3B8 2 F6', '#EF 4 4 4 4', '#1 0 B9 8 1', '#F5 9 E 0 B', '#8B 5 CF6',
-      '#0 6 B 6 D4', '#8 4 CC 1 6', '#F9 7 3 1 6', '#EC 4 8 9 9', '#6B 7 2 8 0'
+      '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
+      '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6B7280'
     ];
 
     // Define drawing functions inline to avoid dependency issues
-    const drawPieChart = (ctx: CanvasRenderingContext 2 D, width: number, height: number, colors: string[]) => {
+    const drawPieChart = (ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
       const centerX = width / 2;
       const centerY = height / 2;
       const radius = Math.min(width, height) / 2 - 40;
@@ -106,20 +106,20 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         const labelX = centerX + Math.cos(labelAngle) * (radius + 20);
         const labelY = centerY + Math.sin(labelAngle) * (radius + 20);
 
-        ctx.fillStyle = '#37 4 1 5 1';
-        ctx.font = '1 2 px Inter, sans-serif';
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(data.labels[index], labelX, labelY);
 
         // Draw percentage
-        const percentage = ((value / total) * 1 0 0).toFixed(1);
+        const percentage = ((value / total) * 100).toFixed(1);
         ctx.fillText(`${percentage}%`, labelX, labelY + 15);
 
         currentAngle += sliceAngle;
       });
     };
 
-    const drawBarChart = (ctx: CanvasRenderingContext 2 D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+    const drawBarChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
       const barWidth = chartWidth / data.labels.length * 0.8;
       const barSpacing = chartWidth / data.labels.length * 0.2;
       const maxValue = Math.max(...data.datasets[0].data);
@@ -134,8 +134,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         ctx.fillRect(x, y, barWidth, barHeight);
 
         // Draw value on top
-        ctx.fillStyle = '#37 4 1 5 1';
-        ctx.font = '1 2 px Inter, sans-serif';
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
 
@@ -144,7 +144,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       });
     };
 
-    const drawLineChart = (ctx: CanvasRenderingContext 2 D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+    const drawLineChart = (ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
       const maxValue = Math.max(...data.datasets[0].data);
       const minValue = Math.min(...data.datasets[0].data);
       const valueRange = maxValue - minValue;
@@ -178,8 +178,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         ctx.stroke();
 
         // Draw value
-        ctx.fillStyle = '#37 4 1 5 1';
-        ctx.font = '1 2 px Inter, sans-serif';
+        ctx.fillStyle = '#374151';
+        ctx.font = '12px Inter, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(data.datasets[0].data[index].toString(), point.x, point.y - 10);
 
@@ -197,7 +197,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     }
   }, [type, data.datasets, data.labels]);
 
-  const drawPieChart = useCallback((ctx: CanvasRenderingContext 2 D, width: number, height: number, colors: string[]) => {
+  const drawPieChart = useCallback((ctx: CanvasRenderingContext2D, width: number, height: number, colors: string[]) => {
     const centerX = width / 2;
     const centerY = height / 2;
     const radius = Math.min(width, height) / 2 - 40;
@@ -229,20 +229,20 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       const labelX = centerX + Math.cos(labelAngle) * (radius + 20);
       const labelY = centerY + Math.sin(labelAngle) * (radius + 20);
 
-      ctx.fillStyle = '#37 4 1 5 1';
-      ctx.font = '1 2 px Inter, sans-serif';
+      ctx.fillStyle = '#374151';
+      ctx.font = '12px Inter, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(data.labels[index], labelX, labelY);
 
       // Draw percentage
-      const percentage = ((value / total) * 1 0 0).toFixed(1);
+      const percentage = ((value / total) * 100).toFixed(1);
       ctx.fillText(`${percentage}%`, labelX, labelY + 15);
 
       currentAngle += sliceAngle;
     });
   }, [type, data]);
 
-  const drawBarChart = useCallback((ctx: CanvasRenderingContext 2 D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawBarChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const barWidth = chartWidth / data.labels.length * 0.8;
     const barSpacing = chartWidth / data.labels.length * 0.2;
     const maxValue = Math.max(...data.datasets[0].data);
@@ -257,8 +257,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       ctx.fillRect(x, y, barWidth, barHeight);
 
       // Draw value on top
-      ctx.fillStyle = '#37 4 1 5 1';
-      ctx.font = '1 2 px Inter, sans-serif';
+      ctx.fillStyle = '#374151';
+      ctx.font = '12px Inter, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(value.toString(), x + barWidth / 2, y - 5);
 
@@ -267,7 +267,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     });
   }, [data]);
 
-  const drawLineChart = useCallback((ctx: CanvasRenderingContext 2 D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
+  const drawLineChart = useCallback((ctx: CanvasRenderingContext2D, chartWidth: number, chartHeight: number, padding: number, colors: string[]) => {
     const maxValue = Math.max(...data.datasets[0].data);
     const minValue = Math.min(...data.datasets[0].data);
     const valueRange = maxValue - minValue;
@@ -308,8 +308,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       ctx.stroke();
 
       // Draw value
-      ctx.fillStyle = '#37 4 1 5 1';
-      ctx.font = '1 2 px Inter, sans-serif';
+      ctx.fillStyle = '#374151';
+      ctx.font = '12px Inter, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(point.value.toString(), point.x, point.y - 10);
 
@@ -356,21 +356,21 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-20 0 p-6 `}>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200p-6 `}>
       {title && (
-        <h 3 className="text-lg font-semibold text-gray-90 0 mb-4" id="title">{title}</h3>
+        <h3className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
       )}
       
       <div className="relative">
         {isLoading && (
-          <div className="absolute inset-0flex items-center justify-center bg-white bg-opacity-7 5 rounded-lg">
-            <div className="animate-spin rounded-full h-8w-8border-b-2border-blue-6 0 0"></div>
+          <div className="absolute inset-0flex items-center justify-center bg-white bg-opacity-75rounded-lg">
+            <div className="animate-spin rounded-full h-8w-8border-b-2border-blue-600"></div>
           </div>
         )}
         
         <canvas
           ref={canvasRef}
-          width={4 0 0}
+          width={400}
           height={height}
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -384,15 +384,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <div
               key={index}
               className={`flex items-center space-x-2px-3py-1rounded-full text-sm ${
-                hoveredIndex === index ? 'bg-gray-1 0 0' : ''
+                hoveredIndex === index ? 'bg-gray-100' : ''
               }`}
             >
               <div
-                className="w-3 h-3 rounded-full"
+                className="w-3h-3rounded-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}
               />
-              <span className="text-gray-7 0 0">{label}</span>
-              <span className="text-gray-5 0 0">
+              <span className="text-gray-700">{label}</span>
+              <span className="text-gray-500">
                 ({data.datasets[0].data[index]})
               </span>
             </div>
@@ -401,7 +401,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       )}
 
       {hoveredIndex !== null && showTooltips && (
-        <div className="mt-2p-2bg-gray-10 0 rounded text-smtext-gray-7 0 0">
+        <div className="mt-2p-2bg-gray-100rounded text-smtext-gray-700">
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}
         </div>
       )}

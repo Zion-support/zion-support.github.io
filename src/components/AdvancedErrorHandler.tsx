@@ -100,7 +100,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
 
     // Auto-retry for certain types of errors
     if (enableAutoRetry && shouldRetry(error)) {
-      setTimeout(() => retryError(errorData.id), 10 0 0);
+      setTimeout(() => retryError(errorData.id), 1000);
     }
   }, [onError, enableAutoRetry, retryError]);
 
@@ -120,7 +120,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
   const determineSeverity = (error: Error): ErrorInfo['severity'] => {
     if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) return 'medium';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'medium';
-    if (error.message.includes('Permission') || error.message.includes('4 0 3')) return 'high';
+    if (error.message.includes('Permission') || error.message.includes('403')) return 'high';
     if (error.message.includes('Critical') || error.message.includes('Fatal')) return 'critical';
     return 'low';
   };
@@ -129,7 +129,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
     if (error.name === 'TypeError' || error.name === 'ReferenceError') return 'javascript';
     if (error.message.includes('Network') || error.message.includes('fetch')) return 'network';
     if (error.message.includes('validation') || error.message.includes('required')) return 'validation';
-    if (error.message.includes('Permission') || error.message.includes('4 0 3')) return 'permission';
+    if (error.message.includes('Permission') || error.message.includes('403')) return 'permission';
     return 'system';
   };
 
@@ -177,12 +177,12 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'measure') {
           const duration = entry.duration;
-          if (duration > 1 0 0) { // Threshold for slow operations
+          if (duration > 100) { // Threshold for slow operations
             handlePerformanceIssue({
               type: 'slow-render',
               component: entry.name,
               duration,
-              threshold: 1 0 0,
+              threshold: 100,
               details: { entry }
             });
           }
@@ -234,36 +234,36 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-50 border-red-200';
-      case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
-      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-      case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
+      case 'critical': return 'text-red-600bg-red-50border-red-200';
+      case 'high': return 'text-orange-600bg-orange-50border-orange-200';
+      case 'medium': return 'text-yellow-600bg-yellow-50border-yellow-200';
+      case 'low': return 'text-blue-600bg-blue-50border-blue-200';
+      default: return 'text-gray-600bg-gray-50border-gray-200';
     }
   };
 
   const getCategoryIcon = (category: ErrorInfo['category']) => {
     switch (category) {
-      case 'javascript': return <Bug className="w-4 h-4" />;
-      case 'network': return <Activity className="w-4 h-4" />;
-      case 'validation': return <Shield className="w-4 h-4" />;
-      case 'permission': return <Shield className="w-4 h-4" />;
-      case 'system': return <Database className="w-4 h-4" />;
-      default: return <AlertTriangle className="w-4 h-4" />;
+      case 'javascript': return <Bug className="w-4h-4" />;
+      case 'network': return <Activity className="w-4h-4" />;
+      case 'validation': return <Shield className="w-4h-4" />;
+      case 'permission': return <Shield className="w-4h-4" />;
+      case 'system': return <Database className="w-4h-4" />;
+      default: return <AlertTriangle className="w-4h-4" />;
     }
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
+    <div className="fixed bottom-4right-4z-50" ref={errorHandlerRef}>
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
+        className="bg-red-600hover:bg-red-700text-white p-3rounded-full shadow-lg transition-colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <AlertTriangle className="w-6 h-6" />
+        <AlertTriangle className="w-6h-6" />
         {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+          <span className="absolute -top-2 -right-2bg-red-500text-white text-xs rounded-full w-6h-6flex items-center justify-center">
             {stats.totalErrors}
           </span>
         )}
@@ -275,21 +275,21 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute bottom-1 6 right-0w-9 6 bg-white rounded-lg shadow-xl border border-gray-20 0 max-h-9 6 overflow-hidden"
+            className="absolute bottom-16right-0w-96bg-white rounded-lg shadow-xl border border-gray-200max-h-96overflow-hidden"
           >
-            <div className="p-4border-bborder-gray-2 0 0">
+            <div className="p-4border-bborder-gray-200">
               <div className="flex items-center justify-between">
-                <h 3 className="text-lg font-semiboldtext-gray-9 0 0" id="error-monitor">Error Monitor</h3>
+                <h3className="text-lg font-semiboldtext-gray-900" id="error-monitor">Error Monitor</h3>
                 <div className="flexspace-x-2">
                   <button
                     onClick={clearResolvedErrors}
-                    className="text-sm text-gray-50 0 hover:text-gray-7 0 0"
+                    className="text-sm text-gray-500hover:text-gray-700"
                    aria-label="Clear Resolved">
                     Clear Resolved
                   </button>
                   <button
                     onClick={() => setIsVisible(false)}
-                    className="text-gray-40 0 hover:text-gray-6 0 0"
+                    className="text-gray-400hover:text-gray-600"
                   >
                     <X className="w-4h-4" />
                   </button>
@@ -298,28 +298,28 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               
               <div className="grid grid-cols-2gap-4mt-3text-sm">
                 <div className="text-center">
-                  <div className="text-2xl font-boldtext-red-6 0 0">{stats.totalErrors}</div>
-                  <div className="text-gray-5 0 0">Total Errors</div>
+                  <div className="text-2xl font-boldtext-red-600">{stats.totalErrors}</div>
+                  <div className="text-gray-500">Total Errors</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-boldtext-orange-6 0 0">{stats.criticalErrors}</div>
-                  <div className="text-gray-5 0 0">Critical</div>
+                  <div className="text-2xl font-boldtext-orange-600">{stats.criticalErrors}</div>
+                  <div className="text-gray-500">Critical</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-boldtext-green-6 0 0">{stats.resolvedErrors}</div>
-                  <div className="text-gray-5 0 0">Resolved</div>
+                  <div className="text-2xl font-boldtext-green-600">{stats.resolvedErrors}</div>
+                  <div className="text-gray-500">Resolved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-boldtext-blue-6 0 0">{stats.performanceIssues}</div>
-                  <div className="text-gray-5 0 0">Performance</div>
+                  <div className="text-2xl font-boldtext-blue-600">{stats.performanceIssues}</div>
+                  <div className="text-gray-500">Performance</div>
                 </div>
               </div>
             </div>
 
             <div className="overflow-y-automax-h-64">
               {errors.length === 0 && performanceIssues.length === 0 ? (
-                <div className="p-4text-centertext-gray-5 0 0">
-                  <CheckCircle className="w-8h-8mx-auto mb-2text-green-5 0 0" />
+                <div className="p-4text-centertext-gray-500">
+                  <CheckCircle className="w-8h-8mx-auto mb-2text-green-500" />
                   No issues detected
                 </div>
               ) : (
@@ -343,17 +343,17 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                             <span className={`text-sm font-medium ${getSeverityColor(error.severity).split(' ')[0]}`}
                               {error.severity.toUpperCase()}
                             </span>
-                            <span className="text-xstext-gray-5 0 0">
+                            <span className="text-xstext-gray-500">
                               {error.timestamp.toLocaleTimeString()}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-70 0 mt-1truncate">
+                          <p className="text-sm text-gray-700mt-1truncate">
                             {error.message}
                           </p>
                           <div className="flex items-center space-x-2mt-2">
-                            <span className="text-xstext-gray-5 0 0">{error.category}</span>
+                            <span className="text-xstext-gray-500">{error.category}</span>
                             {error.retryCount > 0 && (
-                              <span className="text-xstext-blue-5 0 0">
+                              <span className="text-xstext-blue-500">
                                 Retry {error.retryCount}/{maxRetries}
                               </span>
                             )}
@@ -363,7 +363,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                                   e.stopPropagation();
                                   resolveError(error.id);
                                 }}
-                                className="text-xs text-green-60 0 hover:text-green-8 0 0"
+                                className="text-xs text-green-600hover:text-green-800"
                               </button>
                             )}
                           </div>
@@ -385,21 +385,21 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0bg-black bg-opacity-5 0 flex items-center justify-centerz-50"
+            className="fixed inset-0bg-black bg-opacity-50flex items-center justify-centerz-50"
             onClick={() => setSelectedError(null)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-lg p-6max-w-2xl w-full mx-4max-h-9 6 overflow-y-auto"
+              className="bg-white rounded-lg p-6max-w-2xl w-full mx-4max-h-96overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
-                <h 3 className="text-lgfont-semibold" id="error-details">Error Details</h3>
+                <h3className="text-lgfont-semibold" id="error-details">Error Details</h3>
                 <button
                   onClick={() => setSelectedError(null)}
-                  className="text-gray-40 0 hover:text-gray-6 0 0"
+                  className="text-gray-400hover:text-gray-600"
                 >
                   <X className="w-5h-5" />
                 </button>
@@ -407,16 +407,16 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm font-mediumtext-gray-7 0 0">Message</label>
-                  <p className="mt-1text-sm text-gray-90 0 bg-gray-5 0 p-2rounded">
+                  <label className="text-sm font-mediumtext-gray-700">Message</label>
+                  <p className="mt-1text-sm text-gray-900bg-gray-50p-2rounded">
                     {selectedError.message}
                   </p>
                 </div>
                 
                 {selectedError.stack && (
                   <div>
-                    <label className="text-sm font-mediumtext-gray-7 0 0">Stack Trace</label>
-                    <pre className="mt-1text-xs text-gray-90 0 bg-gray-5 0 p-2roundedoverflow-x-auto">
+                    <label className="text-sm font-mediumtext-gray-700">Stack Trace</label>
+                    <pre className="mt-1text-xs text-gray-900bg-gray-50p-2roundedoverflow-x-auto">
                       {selectedError.stack}
                     </pre>
                   </div>
@@ -424,20 +424,20 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                 
                 <div className="grid grid-cols-2gap-4">
                   <div>
-                    <label className="text-sm font-mediumtext-gray-7 0 0">Severity</label>
-                    <p className="mt-1text-sm text-gray-9 0 0">{selectedError.severity}</p>
+                    <label className="text-sm font-mediumtext-gray-700">Severity</label>
+                    <p className="mt-1text-sm text-gray-900">{selectedError.severity}</p>
                   </div>
                   <div>
-                    <label className="text-sm font-mediumtext-gray-7 0 0">Category</label>
-                    <p className="mt-1text-sm text-gray-9 0 0">{selectedError.category}</p>
+                    <label className="text-sm font-mediumtext-gray-700">Category</label>
+                    <p className="mt-1text-sm text-gray-900">{selectedError.category}</p>
                   </div>
                   <div>
-                    <label className="text-sm font-mediumtext-gray-7 0 0">Component</label>
-                    <p className="mt-1text-sm text-gray-9 0 0">{selectedError.component}</p>
+                    <label className="text-sm font-mediumtext-gray-700">Component</label>
+                    <p className="mt-1text-sm text-gray-900">{selectedError.component}</p>
                   </div>
                   <div>
-                    <label className="text-sm font-mediumtext-gray-7 0 0">Timestamp</label>
-                    <p className="mt-1text-sm text-gray-9 0 0">
+                    <label className="text-sm font-mediumtext-gray-700">Timestamp</label>
+                    <p className="mt-1text-sm text-gray-900">
                       {selectedError.timestamp.toLocaleString()}
                     </p>
                   </div>

@@ -50,43 +50,43 @@ const PerformanceDashboard: React.FC = () => {
   const getPerformanceScore = (): number => {
     if (!metrics) return0;
 
-    let score = 1 0 0;
+    let score = 100;
     
     // LCP scoring
-    if (metrics.largestContentfulPaint > 40 0 0) score -= 30;
-    else if (metrics.largestContentfulPaint > 25 0 0) score -= 15;
+    if (metrics.largestContentfulPaint > 4000) score -= 30;
+    else if (metrics.largestContentfulPaint > 2500) score -= 15;
     
     // FID scoring
-    if (metrics.firstInputDelay > 3 0 0) score -= 25;
-    else if (metrics.firstInputDelay > 1 0 0) score -= 10;
+    if (metrics.firstInputDelay > 300) score -= 25;
+    else if (metrics.firstInputDelay > 100) score -= 10;
     
     // CLS scoring
     if (metrics.cumulativeLayoutShift > 0.25) score -= 25;
     else if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
     
     // Load time scoring
-    if (metrics.loadTime > 50 0 0) score -= 20;
-    else if (metrics.loadTime > 30 0 0) score -= 10;
+    if (metrics.loadTime > 5000) score -= 20;
+    else if (metrics.loadTime > 3000) score -= 10;
 
     return Math.max(0, score);
   };
 
   const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-6 0 0';
-    if (score >= 70) return 'text-yellow-6 0 0';
-    return 'text-red-6 0 0';
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
   };
 
   const getScoreBgColor = (score: number): string => {
-    if (score >= 90) return 'bg-green-1 0 0';
-    if (score >= 70) return 'bg-yellow-1 0 0';
-    return 'bg-red-1 0 0';
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
   };
 
   if (!isSupported) {
     return (
-      <div className="p-4bg-yellow-5 0 border border-yellow-20 0 rounded-md">
-        <p className="text-sm text-yellow-8 0 0">
+      <div className="p-4bg-yellow-50border border-yellow-200rounded-md">
+        <p className="text-sm text-yellow-800">
           Performance monitoring is not supported in this browser.
         </p>
       </div>
@@ -98,10 +98,10 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center justify-between mb-6">
-        <h 2 className="text-xl font-semibold text-gray-9 0 0" id="performance-dashboard">Performance Dashboard</h2>
+        <h2className="text-xl font-semibold text-gray-900" id="performance-dashboard">Performance Dashboard</h2>
         <button
           onClick={() => setIsVisible(!isVisible)}
-          className="text-sm text-blue-60 0 hover:text-blue-8 0 0"
+          className="text-sm text-blue-600hover:text-blue-800"
         >
           {isVisible ? 'Hide Details' : 'Show Details'}
         </button>
@@ -110,12 +110,12 @@ const PerformanceDashboard: React.FC = () => {
       {/* Overall Performance Score */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-7 0 0">Overall Score</span>
+          <span className="text-sm font-medium text-gray-700">Overall Score</span>
           <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}
             {performanceScore}
           </span>
         </div>
-        <div className="w-full bg-gray-20 0 rounded-full h-2">
+        <div className="w-full bg-gray-200rounded-full h-2">
           <div
             className={`h-2rounded-full ${getScoreBgColor(performanceScore)}`}
             style={{ width: `${performanceScore}%` }}
@@ -127,32 +127,32 @@ const PerformanceDashboard: React.FC = () => {
       <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
         <div className="p-4border rounded-lg">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-7 0 0">LCP</span>
+            <span className="text-sm font-medium text-gray-700">LCP</span>
             <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-5 0 0">Largest Contentful Paint</p>
+          <p className="text-xs text-gray-500">Largest Contentful Paint</p>
         </div>
 
         <div className="p-4border rounded-lg">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-7 0 0">FID</span>
+            <span className="text-sm font-medium text-gray-700">FID</span>
             <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-5 0 0">First Input Delay</p>
+          <p className="text-xs text-gray-500">First Input Delay</p>
         </div>
 
         <div className="p-4border rounded-lg">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-7 0 0">CLS</span>
+            <span className="text-sm font-medium text-gray-700">CLS</span>
             <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-5 0 0">Cumulative Layout Shift</p>
+          <p className="text-xs text-gray-500">Cumulative Layout Shift</p>
         </div>
       </div>
 
@@ -166,24 +166,24 @@ const PerformanceDashboard: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-5 0 rounded-lg p-4border border-gray-2 0 0"
+              className="bg-gray-50rounded-lg p-4border border-gray-200"
             >
               <div className="flex items-center justify-between mb-2">
-                <h 3 className="font-medium text-gray-90 0 text-sm" id="metricname">{metric.name}</h3>
+                <h3className="font-medium text-gray-900text-sm" id="metricname">{metric.name}</h3>
                 <div className={`flex items-center px-2py-1rounded-full text-xs ${getStatusColor(metric.status)}`}
                   {getStatusIcon(metric.status)}
                 </div>
               </div>
               
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold text-gray-9 0 0">
+                <span className="text-2xl font-bold text-gray-900">
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
-                <span className="text-sm text-gray-5 0 0">{metric.unit}</span>
+                <span className="text-sm text-gray-500">{metric.unit}</span>
               </div>
               
               <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-6 0 0">{metric.description}</span>
+                <span className="text-xs text-gray-600">{metric.description}</span>
                 <div className="flex items-center">
                   {getTrendIcon(metric.trend)}
                 </div>
@@ -196,33 +196,33 @@ const PerformanceDashboard: React.FC = () => {
       {/* Detailed Metrics */}
       {isVisible && metrics && (
         <div className="space-y-4">
-          <h 3 className="text-lg font-medium text-gray-9 0 0" id="detailed-metrics">Detailed Metrics</h3>
+          <h3className="text-lg font-medium text-gray-900" id="detailed-metrics">Detailed Metrics</h3>
           
           <div className="grid grid-cols-1md:grid-cols-2gap-4">
-            <div className="p-3bg-gray-5 0 rounded">
+            <div className="p-3bg-gray-50rounded">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-6 0 0">Load Time</span>
+                <span className="text-sm text-gray-600">Load Time</span>
                 <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-5 0 rounded">
+            <div className="p-3bg-gray-50rounded">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-6 0 0">DOM Content Loaded</span>
+                <span className="text-sm text-gray-600">DOM Content Loaded</span>
                 <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-5 0 rounded">
+            <div className="p-3bg-gray-50rounded">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-6 0 0">First Paint</span>
+                <span className="text-sm text-gray-600">First Paint</span>
                 <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-5 0 rounded">
+            <div className="p-3bg-gray-50rounded">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-6 0 0">First Contentful Paint</span>
+                <span className="text-sm text-gray-600">First Contentful Paint</span>
                 <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
               </div>
             </div>

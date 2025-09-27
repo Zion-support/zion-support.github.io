@@ -19,8 +19,8 @@ interface ErrorEvent {
 
 interface ErrorStats {
   totalErrors: number;
-  errorsLast2 4 h: number;
-  errorsLast 7 d: number;
+  errorsLast24h: number;
+  errorsLast7d: number;
   criticalErrors: number;
   resolvedErrors: number;
   averageResolutionTime: number;
@@ -43,8 +43,8 @@ const AdvancedErrorMonitoring: React.FC = () => {
   const [errors, setErrors] = useState<ErrorEvent[]>([]);
   const [stats, setStats] = useState<ErrorStats>({
     totalErrors: 0,
-    errorsLast2 4 h: 0,
-    errorsLast 7 d: 0,
+    errorsLast24h: 0,
+    errorsLast7d: 0,
     criticalErrors: 0,
     resolvedErrors: 0,
     averageResolutionTime: 0,
@@ -59,43 +59,43 @@ const AdvancedErrorMonitoring: React.FC = () => {
     const mockErrors: ErrorEvent[] = [
       {
         i, d: '1',
-        timestamp: new Date(Date.now() - 10 0 0 * 60 * 30), // 3 0 minutes ago
+        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30minutes ago
         type: 'error',
         severity: 'high',
         message: 'TypeErro, r: Cannot read property "length" of undefined',
         stack: 'at Component.render (Component.js:45:12)\nat ReactDOM.render (ReactDOM.j, s:12, 3:45)',
         url: 'http, s://example.com/dashboard',
-        userAgent: 'Mozilla/5.0 (Windows NT 1 0.0; Win 6 4; x 6 4) AppleWebKit/5 3 7.36',
-        userId: 'user_1 2 3',
-        sessionId: 'session_4 5 6',
+        userAgent: 'Mozilla/5.0 (Windows NT10.0; Win64; x64) AppleWebKit/537.36',
+        userId: 'user_123',
+        sessionId: 'session_456',
         resolved: false,
         tags: ['javascript', 'react', 'frontend']
       },
       {
         id: '2',
-        timestamp: new Date(Date.now() - 10 0 0 * 60 * 60 * 2), // 2hours ago
+        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2hours ago
         type: 'error',
         severity: 'critical',
         message: 'Database connection timeout',
         stack: 'at Database.connect (db.js:78:15)\nat Query.execute (query.j, s:2, 3:8)',
         url: 'http, s://example.com/api/users',
-        userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X1 0 _ 1 5 _7) AppleWebKit/5 3 7.36',
-        userId: 'user_7 8 9',
-        sessionId: 'session_7 8 9',
+        userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X10_15_7) AppleWebKit/537.36',
+        userId: 'user_789',
+        sessionId: 'session_789',
         resolved: true,
         tags: ['database', 'backend', 'timeout']
       },
       {
         id: '3',
-        timestamp: new Date(Date.now() - 10 0 0 * 60 * 60 * 6), // 6hours ago
+        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 6), // 6hours ago
         type: 'warning',
         severity: 'medium',
         message: 'Deprecated API endpoint used',
         stack: 'at ApiClient.request (api.j, s:4, 5:12)',
         url: 'http, s://example.com/api/legacy',
-        userAgent: 'Mozilla/5.0 (X 1 1; Linux x8 6 _ 6 4) AppleWebKit/5 3 7.36',
-        userId: 'user_4 5 6',
-        sessionId: 'session_1 2 3',
+        userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',
+        userId: 'user_456',
+        sessionId: 'session_123',
         resolved: false,
         tags: ['api', 'deprecated', 'backend']
       }
@@ -109,17 +109,17 @@ const AdvancedErrorMonitoring: React.FC = () => {
         description: 'User query taking5+ seconds to execute',
         impact: 'Users experiencing slow page loads',
         solution: 'Add database index on user_id column',
-        detectedAt: new Date(Date.now() - 10 0 0 * 60 * 15),
+        detectedAt: new Date(Date.now() - 1000 * 60 * 15),
         resolved: false
       },
       {
         id: '2',
         type: 'memory_leak',
         severity: 'critical',
-        description: 'Memory usage increasing by1 0 MB per hour',
+        description: 'Memory usage increasing by10MB per hour',
         impact: 'Server may crash due to memory exhaustion',
         solution: 'Review and fix event listener cleanup',
-        detectedAt: new Date(Date.now() - 10 0 0 * 60 * 60 * 3),
+        detectedAt: new Date(Date.now() - 1000 * 60 * 60 * 3),
         resolved: true
       }
     ];
@@ -129,11 +129,11 @@ const AdvancedErrorMonitoring: React.FC = () => {
 
     // Calculate stats
     const now = new Date();
-    const last2 4 h = new Date(now.getTime() - 24 * 60 * 60 * 10 0 0);
-    const last 7 d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 10 0 0);
+    const last24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    const last7d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
-    const errorsLast2 4 h = mockErrors.filter(e => e.timestamp >= last2 4 h).length;
-    const errorsLast 7 d = mockErrors.filter(e => e.timestamp >= last 7 d).length;
+    const errorsLast24h = mockErrors.filter(e => e.timestamp >= last24h).length;
+    const errorsLast7d = mockErrors.filter(e => e.timestamp >= last7d).length;
     const criticalErrors = mockErrors.filter(e => e.severity === 'critical').length;
     const resolvedErrors = mockErrors.filter(e => e.resolved).length;
 
@@ -148,15 +148,15 @@ const AdvancedErrorMonitoring: React.FC = () => {
       .map(([type, count]) => ({
         type,
         count,
-        percentage: Math.round((count / mockErrors.length) * 1 0 0)
+        percentage: Math.round((count / mockErrors.length) * 100)
       }))
       .sort((a, b) => b.count - a.count)
       .slice(0, 5);
 
     setStats({
       totalErrors: mockErrors.length,
-      errorsLast2 4 h,
-      errorsLast 7 d,
+      errorsLast24h,
+      errorsLast7d,
       criticalErrors,
       resolvedErrors,
       averageResolutionTime: 2.5, // hours
@@ -172,33 +172,33 @@ const AdvancedErrorMonitoring: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-10 0 text-red-80 0 border-red-2 0 0';
-      case 'high': return 'bg-orange-10 0 text-orange-80 0 border-orange-2 0 0';
-      case 'medium': return 'bg-yellow-10 0 text-yellow-80 0 border-yellow-2 0 0';
-      case 'low': return 'bg-blue-10 0 text-blue-80 0 border-blue-2 0 0';
-      default: return 'bg-gray-1 0 0 text-gray-80 0 border-gray-2 0 0';
+      case 'critical': return 'bg-red-100text-red-800border-red-200';
+      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
+      default: return 'bg-gray-100text-gray-800border-gray-200';
     }
   };
 
   const getTypeColor = (type: string): string => {
     switch (type) {
-      case 'error': return 'text-red-6 0 0';
-      case 'warning': return 'text-yellow-6 0 0';
-      case 'info': return 'text-blue-6 0 0';
-      default: return 'text-gray-6 0 0';
+      case 'error': return 'text-red-600';
+      case 'warning': return 'text-yellow-600';
+      case 'info': return 'text-blue-600';
+      default: return 'text-gray-600';
     }
   };
 
   const formatTimeAgo = (date: Date): string => {
     const now = new Date();
-    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (10 0 0 * 60));
+    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
     
     if (diffInMinutes < 60) {
       return `${diffInMinutes}m ago`;
-    } else if (diffInMinutes < 14 4 0) {
+    } else if (diffInMinutes < 1440) {
       return `${Math.floor(diffInMinutes / 60)}h ago`;
     } else {
-      return `${Math.floor(diffInMinutes / 14 4 0)}d ago`;
+      return `${Math.floor(diffInMinutes / 1440)}d ago`;
     }
   };
 
@@ -214,12 +214,12 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Bug className="h-6 w-6 text-red-600" />
+              <Bug className="h-6w-6text-red-600" />
               <span>Advanced Error Monitoring</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`}</div>
-              <span className="text-sm text-gray-6 0 0">
+              <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
+              <span className="text-sm text-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
             </div>
@@ -232,40 +232,40 @@ const AdvancedErrorMonitoring: React.FC = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
             <div className="p-4border rounded-lgtext-center">
-              <div className="text-2xl font-boldtext-red-6 0 0">{stats.totalErrors}</div>
-              <div className="text-sm text-gray-6 0 0">Total Errors</div>
+              <div className="text-2xl font-boldtext-red-600">{stats.totalErrors}</div>
+              <div className="text-sm text-gray-600">Total Errors</div>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <div className="text-2xl font-boldtext-orange-6 0 0">{stats.errorsLast2 4 h}</div>
-              <div className="text-sm text-gray-6 0 0">Last2 4 h</div>
+              <div className="text-2xl font-boldtext-orange-600">{stats.errorsLast24h}</div>
+              <div className="text-sm text-gray-600">Last24h</div>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <div className="text-2xl font-boldtext-purple-6 0 0">{stats.criticalErrors}</div>
-              <div className="text-sm text-gray-6 0 0">Critical</div>
+              <div className="text-2xl font-boldtext-purple-600">{stats.criticalErrors}</div>
+              <div className="text-sm text-gray-600">Critical</div>
             </div>
             <div className="p-4border rounded-lgtext-center">
-              <div className="text-2xl font-boldtext-green-6 0 0">{stats.resolvedErrors}</div>
-              <div className="text-sm text-gray-6 0 0">Resolved</div>
+              <div className="text-2xl font-boldtext-green-600">{stats.resolvedErrors}</div>
+              <div className="text-sm text-gray-600">Resolved</div>
             </div>
           </div>
 
           {/* Top Error Types */}
           <div className="mb-6">
-            <h 3 className="text-lg font-semiboldmb-3">Top Error Types</h3>
+            <h3className="text-lg font-semiboldmb-3">Top Error Types</h3>
             <div className="space-y-2">
               {stats.topErrorTypes.map((errorType, index) => (
                 <div key={index} className="flex items-center justify-between p-3borderrounded-lg">
                   <div className="flex items-centerspace-x-3">
                     <span className="font-medium">{errorType.type}</span>
-                    <span className="text-sm text-gray-6 0 0">{errorType.count} occurrences</span>
+                    <span className="text-sm text-gray-600">{errorType.count} occurrences</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-2 0 bg-gray-20 0 rounded-fullh-2">
+                    <div className="w-20bg-gray-200rounded-fullh-2">
                       <div 
-                        className="bg-blue-60 0 h-2rounded-full" 
+                        className="bg-blue-600h-2rounded-full" 
                         style={{ width: `${errorType.percentage}%` }}</p></div>
                     </div>
-                    <span className="text-sm text-gray-6 0 0">{errorType.percentage}%</span>
+                    <span className="text-sm text-gray-600">{errorType.percentage}%</span>
                   </div>
                 </div>
               ))}
@@ -279,7 +279,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <AlertTriangle className="h-5w-5text-red-6 0 0" />
+              <AlertTriangle className="h-5w-5text-red-600" />
               <span>Recent Errors</span>
             </CardTitle>
           </CardHeader>
@@ -289,7 +289,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
                 <div 
                   key={error.id} 
                   className={`p-3border rounded-lg cursor-pointer hover:bg-gray-50 ${
-                    selectedError?.id === error.id ? 'bg-blue-5 0 border-blue-2 0 0' : ''
+                    selectedError?.id === error.id ? 'bg-blue-50border-blue-200' : ''
                   }`}
                   onClick={() => setSelectedError(error)}
                 >
@@ -297,22 +297,22 @@ const AdvancedErrorMonitoring: React.FC = () => {
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(error.severity)}`}
                       {error.severity.toUpperCase()}
                     </span>
-                    <span className="text-xstext-gray-5 0 0">{formatTimeAgo(error.timestamp)}</span>
+                    <span className="text-xstext-gray-500">{formatTimeAgo(error.timestamp)}</span>
                   </div>
                   <div className="flex items-center space-x-2mb-1">
                     <span className={`text-sm font-medium ${getTypeColor(error.type)}`}
                       {error.type.toUpperCase()}
                     </span>
                     {error.resolved && (
-                      <span className="text-xs bg-green-10 0 text-green-80 0 px-2py-1rounded">RESOLVED</span>
+                      <span className="text-xs bg-green-100text-green-800px-2py-1rounded">RESOLVED</span>
                     )}
                   </div>
-                  <p className="text-sm text-gray-70 0 mb-2">{error.message}</p>
-                  <div className="flex items-center justify-between text-xstext-gray-5 0 0">
+                  <p className="text-sm text-gray-700mb-2">{error.message}</p>
+                  <div className="flex items-center justify-between text-xstext-gray-500">
                     <span>{error.url}</span>
                     <div className="flexspace-x-1">
                       {error.tags.map((tag, index) => (
-                        <span key={index} className="bg-gray-10 0 px-2py-1rounded">{tag}</span>
+                        <span key={index} className="bg-gray-100px-2py-1rounded">{tag}</span>
                       ))}
                     </div>
                   </div>
@@ -326,7 +326,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Activity className="h-5w-5text-orange-6 0 0" />
+              <Activity className="h-5w-5text-orange-600" />
               <span>Performance Issues</span>
             </CardTitle>
           </CardHeader>
@@ -338,15 +338,15 @@ const AdvancedErrorMonitoring: React.FC = () => {
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
                       {issue.severity.toUpperCase()}
                     </span>
-                    <span className="text-xstext-gray-5 0 0">{formatTimeAgo(issue.detectedAt)}</span>
+                    <span className="text-xstext-gray-500">{formatTimeAgo(issue.detectedAt)}</span>
                   </div>
-                  <h 4 className="font-mediummb-1">{issue.description}</h4>
-                  <p className="text-sm text-gray-60 0 mb-2">{issue.impact}</p>
-                  <div className="text-xs text-blue-60 0 bg-blue-5 0 p-2rounded">
+                  <h4className="font-mediummb-1">{issue.description}</h4>
+                  <p className="text-sm text-gray-600mb-2">{issue.impact}</p>
+                  <div className="text-xs text-blue-600bg-blue-50p-2rounded">
                     <strong>Solution:</strong> {issue.solution}
                   </div>
                   {issue.resolved && (
-                    <div className="mt-2text-xs text-green-60 0 bg-green-5 0 p-2rounded">
+                    <div className="mt-2text-xs text-green-600bg-green-50p-2rounded">
                       ✓ Resolved
                     </div>
                   )}
@@ -359,40 +359,40 @@ const AdvancedErrorMonitoring: React.FC = () => {
 
       {/* Error Details Modal */}
       {selectedError && (
-        <div className="fixed inset-0bg-black bg-opacity-5 0 flex items-center justify-centerz-50">
-          <div className="bg-white rounded-lg p-6max-w-2xl w-full mx-4max-h-9 6 overflow-y-auto">
+        <div className="fixed inset-0bg-black bg-opacity-50flex items-center justify-centerz-50">
+          <div className="bg-white rounded-lg p-6max-w-2xl w-full mx-4max-h-96overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
-              <h 3 className="text-lg font-semibold">Error Details</h3>
+              <h3className="text-lg font-semibold">Error Details</h3>
               <button 
                 onClick={() =>setSelectedError(null)}
-                className="text-gray-50 0 hover:text-gray-7 0 0"
+                className="text-gray-500hover:text-gray-700"
               </button>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-mediumtext-gray-6 0 0">Message</label>
-                <p className="text-smtext-gray-9 0 0">{selectedError.message}</p>
+                <label className="text-sm font-mediumtext-gray-600">Message</label>
+                <p className="text-smtext-gray-900">{selectedError.message}</p>
               </div>
               <div>
-                <label className="text-sm font-mediumtext-gray-6 0 0">Stack Trace</label>
-                <pre className="text-xs bg-gray-10 0 p-3roundedoverflow-x-auto">
+                <label className="text-sm font-mediumtext-gray-600">Stack Trace</label>
+                <pre className="text-xs bg-gray-100p-3roundedoverflow-x-auto">
                   {selectedError.stack || 'No stack trace available'}
                 </pre>
               </div>
               <div className="grid grid-cols-2gap-4">
                 <div>
-                  <label className="text-sm font-mediumtext-gray-6 0 0">URL</label>
-                  <p className="text-smtext-gray-9 0 0">{selectedError.url}</p>
+                  <label className="text-sm font-mediumtext-gray-600">URL</label>
+                  <p className="text-smtext-gray-900">{selectedError.url}</p>
                 </div>
                 <div>
-                  <label className="text-sm font-mediumtext-gray-6 0 0">User Agent</label>
-                  <p className="text-sm text-gray-90 0 truncate">{selectedError.userAgent}</p>
+                  <label className="text-sm font-mediumtext-gray-600">User Agent</label>
+                  <p className="text-sm text-gray-900truncate">{selectedError.userAgent}</p>
                 </div>
               </div>
               <div className="flex justify-endspace-x-2">
                 <button 
                   onClick={() =>setSelectedError(null)}
-                  className="px-4 py-2text-gray-60 0 border border-gray-30 0 roundedhover:bg-gray-50"
+                  className="px-4py-2text-gray-600border border-gray-300roundedhover:bg-gray-50"
                 </button>
                 {!selectedError.resolved && (
                   <button 
@@ -400,7 +400,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
                       resolveError(selectedError.id);
                       setSelectedError(null);
                     }}
-                    className="px-4 py-2bg-green-60 0 text-white roundedhover:bg-green-7 0 0"
+                    className="px-4py-2bg-green-600text-white roundedhover:bg-green-700"
                   </button>
                 )}
               </div>

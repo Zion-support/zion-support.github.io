@@ -34,7 +34,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   onMessageSend,
   onMessageReceive,
   placeholder = 'Type a message...',
-  maxMessages = 1 0 0,
+  maxMessages = 100,
   enableFileUpload = true,
   enableImageUpload = true,
   botName = 'Assistant',
@@ -95,7 +95,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
 
       if (onMessageReceive) {
         onMessageReceive(botResponse);      }
-    }, 10 0 0 + Math.random() * 20 0 0);
+    }, 1000 + Math.random() * 2000);
   }, [maxMessages, onMessageSend, onMessageReceive]);
 
   const generateBotResponse = (userText: string): string => {
@@ -182,7 +182,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     const isBot = message.sender === 'bot';
     const isSystem = message.sender === 'system';
 
-    if (isSystem) {      return (        <div key = {message.id} className=flex justify-center"">          <div className=bg-gray-1 0 0 text-gray-60 0 text-sm px-3py-1rounded-full"">
+    if (isSystem) {      return (        <div key = {message.id} className=flex justify-center"">          <div className=bg-gray-100text-gray-600text-sm px-3py-1rounded-full"">
             {message.text}
           </div>
         </div>;
@@ -205,25 +205,25 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           </div>
           <div className={`${isUser ? 'text-right' : 'text-left'}`}
             <div
-              className = {`px-4 py-2rounded-lg ${
+              className = {`px-4py-2rounded-lg ${
                 isUser
-                  ? 'bg-blue-60 0 text-white'                  : 'bg-gray-20 0 text-gray-8 0 0'}
+                  ? 'bg-blue-600text-white'                  : 'bg-gray-200text-gray-800'}
               }`}
             >
               {message.type === 'image' && message.metadata?.imageUrl && (                <div className=mb-2"">
                   <Image                    src={message.metadata.imageUrl}                    alt=Shared image""                    className=max-w-full h-auto rounded""
-                    width={3 0 0}
-                    height={2 0 0}
+                    width={300}
+                    height={200}
                   />
                 </div>
               )}
-              {message.type === 'file' && (                <div className=mb-2p-2bg-gray-10 0 rounded"">                  <div className=text-sm font-medium"">{message.metadata?.fileName}</div>                  <div className=text-xs text-gray-5 0 0"">
-                    {message.metadata?.fileSize ? `${(message.metadata.fileSize / 10 2 4).toFixed(1)} KB` : ''}
+              {message.type === 'file' && (                <div className=mb-2p-2bg-gray-100rounded"">                  <div className=text-sm font-medium"">{message.metadata?.fileName}</div>                  <div className=text-xs text-gray-500"">
+                    {message.metadata?.fileSize ? `${(message.metadata.fileSize / 1024).toFixed(1)} KB` : ''}
                   </div>
                 </div>
               )}              <p className=text-sm"">{message.text}</p>
             </div>
-            <div className={`text-xs text-gray-50 0 mt-1 ${isUser ? 'text-right' : 'text-left'}`}
+            <div className={`text-xs text-gray-500mt-1 ${isUser ? 'text-right' : 'text-left'}`}
               {formatTime(message.timestamp)}
             </div>
           </div>
@@ -233,30 +233,30 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className = {`flex flex-col h-9 6 bg-white rounded-lg shadow-sm border border-gray-2 0 0 ${className}`}
-      {/* Header */}      <div className=flex items-center justify-between p-4border-b border-gray-2 0 0"">        <div className=flex items-center"">
+    <div className = {`flex flex-col h-96bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
+      {/* Header */}      <div className=flex items-center justify-between p-4border-b border-gray-200"">        <div className=flex items-center"">
           <Image            className=h-8w-8rounded-full mr-3""
             src={botAvatar}
             alt={botName}
             width={32}
             height={32}
           />
-          <div>            <h 3 className=text-sm font-medium text-gray-9 0 0"" id="botname">{botName}</h3>            <div className=flex items-center"">
-              <div className={`h-2w-2rounded-full mr-2 ${isConnected ? 'bg-green-4 0 0' : 'bg-red-4 0 0'}`}</div>              <span className=text-xs text-gray-5 0 0"">
+          <div>            <h3className=text-sm font-medium text-gray-900"" id="botname">{botName}</h3>            <div className=flex items-center"">
+              <div className={`h-2w-2rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}</div>              <span className=text-xs text-gray-500"">
                 {isConnected ? 'Online' : 'Offline'}
               </span>
             </div>
           </div>
         </div>        <div className=flex space-x-2"">
           {enableFileUpload && (
-            <button              onClick={() => fileInputRef.current?.click()}              className=p-2text-gray-40 0 hover:text-gray-6 0 0""              title=Upload file""
-            >              <svg className=h-5w-5"" fill="none" stroke="currentColor" viewBox="00 2 4 2 4">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M 1 5.1 7 2 7 l-6.58 6 6.586a 2 2 0 1 0 2.82 8 2.82 8 l6.4 1 4-6.58 6 a4 4 0 0 0-5.6 5 6-5.65 6 l-6.41 5 6.585a 6 6 0 1 0 8.48 6 8.48 6 L 2 0.5 1 3" />
+            <button              onClick={() => fileInputRef.current?.click()}              className=p-2text-gray-400hover:text-gray-600""              title=Upload file""
+            >              <svg className=h-5w-5"" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M15.1727l-6.5866.586a220102.8282.828l6.414-6.586a44000-5.656-5.656l-6.4156.585a660108.4868.486L20.513" />
               </svg>
             </button>
           )}
           {enableImageUpload && (
-            <button              onClick={() => fileInputRef.current?.click()}              className=p-2text-gray-40 0 hover:text-gray-6 0 0""              title=Upload image""
-            >              <svg className=h-5w-5"" fill="none" stroke="currentColor" viewBox="00 2 4 2 4">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M 4 1 6 l4.5 8 6-4.586a 2 2 0 0 1 2.828 0 L1 6 1 6 m-2-2l1.5 8 6-1.586a 2 2 0 0 1 2.828 0 L2 0 1 4 m-6-6h.01M620h12a 2 2 0 0 0 2-2V 6 a2 2 0 0 0-2-2H 6 a2 2 0 0 0-22v12a22 0 0 0 2 2 z" />
+            <button              onClick={() => fileInputRef.current?.click()}              className=p-2text-gray-400hover:text-gray-600""              title=Upload image""
+            >              <svg className=h-5w-5"" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M416l4.586-4.586a220012.8280L1616m-2-2l1.586-1.586a220012.8280L2014m-6-6h.01M620h12a220002-2V6a22000-2-2H6a22000-22v12a2200022z" />
               </svg>
             </button>
           )}
@@ -270,7 +270,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 alt={botName}
                 width={32}
                 height={32}
-              />              <div className=bg-gray-20 0 text-gray-80 0 px-4 py-2rounded-lg"">                <div className=flex space-x-1"">                  <div className=w-2h-2bg-gray-50 0 rounded-full animate-bounce""></div>                  <div className=w-2h-2bg-gray-50 0 rounded-full animate-bounce"" style={{ animationDelay: '0.1s' }}></div>                  <div className=w-2h-2bg-gray-50 0 rounded-full animate-bounce"" style={{ animationDelay: '0.2s' }}></div>
+              />              <div className=bg-gray-200text-gray-800px-4py-2rounded-lg"">                <div className=flex space-x-1"">                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce""></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.1s' }}></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -279,18 +279,18 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}      <div className=p-4border-t border-gray-2 0 0"">        <div className=flex space-x-2"">
+      {/* Input */}      <div className=p-4border-t border-gray-200"">        <div className=flex space-x-2"">
           <input            type=text""
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={placeholder}            className=flex-1px-3py-2border border-gray-30 0 rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-5 0 0""
+            placeholder={placeholder}            className=flex-1px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-500""
             disabled = {!isConnected}            aria-label=Type your message""
           />
           <button
             onClick={() => handleSendMessage(inputText)}            aria-label=Send message""
-            disabled={!inputText.trim() || !isConnected}            className=px-4 py-2bg-blue-60 0 text-white rounded-md hover: bg-blue-70 0 disabled:opacity-5 0 disable,
+            disabled={!inputText.trim() || !isConnected}            className=px-4py-2bg-blue-600text-white rounded-md hover: bg-blue-700disabled:opacity-50disable,
     d:cursor-not-allowed transition-colors""
           >
             Send
