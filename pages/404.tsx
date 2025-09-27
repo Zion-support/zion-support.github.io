@@ -1,88 +1,12 @@
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
 
-        <title>404 - Page Not Found | Zion App</title>
-        <meta name="description" content="The page you're looking for doesn't exist." />
-			</Head>
-			<div style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        padding: "2rem",
-        textAlign: "center",
-        fontFamily: "system-ui, -apple-system, sans-serif"
+export default function Custom404() {
+	return (
+		<>
 
-export default function Custom404() {return (
-    <>      <Head>
-        <title>404 - Page Not Found | Zion App</title>
-        <meta name="description" content="The page you're looking for doesn't exist." />
-      </Head>
-      <div style={{
-        display: "flex"flexDirection: "column"alignItems: "center"justifyContent: "center"minHeight: "100vh"padding: "2rem"textAlign: "center"fontFamily: "system-ui-apple-systemsans-serif"
-
-      }}>
-			<div style={{ marginBottom: "2rem" }}>
-          <h1 style={{
-            fontSize: "6rem"fontWeight: "bold"color: "#2563eb"margin: 0lineHeight: 1
-          }}>
-            404
-          </h1>
-          <h2 style={{
-            fontSize: "2rem"color: "#1e293b"margin: "1rem 0"fontWeight: "500"
-          }}>
-            Page Not Found
-          </h2>
-          <p style={{
-            fontSize: "1.1rem"color: "#64748b"maxWidth: "500px"margin: "0 auto 2rem"
-          }}>
-            Sorrythe page you're looking for doesn't exist or has been moved.
-          </p>
-        </div>
-
-					<Link href="/">
-
-        <div style={{ display: "flex"gap: "1rem"flexWrap: "wrap"justifyContent: "center" }}>
-          <Link href="/">
-
-            <button style={{
-              backgroundColor: "#2563eb"color: "white"padding: "1rem 2rem"border: "none"borderRadius: "8px"fontSize: "1rem"cursor: "pointer",
-              textDecoration: "none"display: "inline-block"transition: "background-color 0.2s"
-            }}>
-              Go Home
-            </button>
-          </Link>
-          <button
-            onClick={() => window.history.back()}
-            style={{
-              backgroundColor: "transparent"color: "#2563eb"padding: "1rem 2rem"border: "2px solid #2563eb"borderRadius: "8px",
-              fontSize: "1rem"cursor: "pointer"transition: "all 0.2s"
-            }}
-          >
-            Go Back
-          </button>
-        </div>
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
-        }}>
-          <h3 style={{ color: "#1e293b"marginBottom: "1rem" }}>
-            Need Help?
-          </h3>
-          <p style={{ color: "#64748b"marginBottom: "1rem" }}>
-            If you believe this is an errorplease contact our support team.
-          </p>
-
-            Error Code: 404 |,
-		Timestamp: {new Date().toISOString()}
-
-          <p style={{ color: "#64748b"fontSize: "0.9rem" }}>
-            Error Code: 404 | Timestamp: {new Date().toISOString()}
-
-          </p>
-        </div>
-      </div>
-		</>
 			<Head>
 				<title>404 - Page Not Found | Zion App</title>
 				<meta name="description" content="The page you're looking for doesn't exist." />
@@ -93,50 +17,36 @@ export default function Custom404() {return (
 				alignItems: "center",
 				justifyContent: "center",
 				minHeight: "100vh",
-				padding: "2rem",
-				textAlign: "center"fontFamily: "system-ui-apple-systemsans-serif"
+
+				textAlign: "center",
+				padding: "20px"
 			}}>
-				<h1 style={{ fontSize: "6rem"fontWeight: "bold"color: "#1f2937"margin: "0 0 1rem 0" }}>
+				<h1 style={{ fontSize: "4rem", marginBottom: "1rem", color: "#1f2937" }}>
 					404
 				</h1>
-				<h2 style={{ fontSize: "2rem"fontWeight: "600"color: "#374151"margin: "0 0 1rem 0" }}>
+				<h2 style={{ fontSize: "2rem", marginBottom: "1rem", color: "#374151" }}>
 					Page Not Found
 				</h2>
-				<p style={{ fontSize: "1.125rem"color: "#6b7280"margin: "0 0 2rem 0"maxWidth: "32rem" }}>
-					Sorry, we couldn't find the page you"re looking for. It might have been moveddeletedor you entered the wrong URL.
+				<p style={{ fontSize: "1.2rem", marginBottom: "2rem", color: "#6b7280" }}>
+					The page you're looking for doesn't exist.
 				</p>
-
-
-				<div style={{ display: "flex"gap: "1rem"flexWrap: "wrap"justifyContent: "center" }}>
-
-					<Link 
-						href="/" 
-						style={{
-							backgroundColor: "#2563eb"color: "white"padding: "0.75rem 1.5rem",
-							borderRadius: "0.5rem",
-							textDecoration: "none",
-							fontWeight: "600"transition: "background-color 0.2s"
-						}}
-					>
-						Go Home
-					</Link>
-					<Link 
-						href="/contact" 
-						style={{
-							backgroundColor: "transparent"color: "#2563eb"padding: "0.75rem 1.5rem",
-							borderRadius: "0.5rem",
-							textDecoration: "none",
-							fontWeight: "600",
-							border: "2px solid #2563eb"transition: "background-color 0.2s"
-						}}
-					>
-						Contact Support
-					</Link>
-				</div>
+				<Link 
+					href="/" 
+					style={{
+						display: "inline-block",
+						padding: "12px 24px",
+						backgroundColor: "#2563eb",
+						color: "white",
+						textDecoration: "none",
+						borderRadius: "8px",
+						fontWeight: "600",
+						transition: "background-color 0.2s"
+					}}
+				>
+					Go Home
+				</Link>
 			</div>
 		</>
-	)}
-
-
-  )}
+	);
+}
 
