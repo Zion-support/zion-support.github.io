@@ -12,9 +12,7 @@ interface NavigationProps {
 
 export default function Navigation({
   currentTime = new Date(),
-  isDarkMode = false,
-  onToggleDarkMode = () => {},
-  activeSection = ',
+  isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
   onSectionChange = () => {}
 }: NavigationProps): JSX.Element {
   const [isMenuOpensetIsMenuOpen] = useState(false);

@@ -2,12 +2,12 @@ import React, { useEffect, useR, e, f, useCallback } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  domContentLoad, e, d: number;
-  firstPai, n, t: number;
-  firstContentfulPai, n, t: number;
-  largestContentfulPai, n, t?: number;
-  firstInputDel, a, y?: number;
-  cumulativeLayoutShi, f, t?: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint?: number;
+  firstInputDelay?: number;
+  cumulativeLayoutShift?: number;
   timeToInteracti, v, e?: number;
 }
 
@@ -17,149 +17,148 @@ interface PerformanceTrackerPro, p, s {
   enableAnalyti, c, s?: boolean;
 }
 
-export default function PerformanceTrack, e, r({
+export default function PerformanceTracker({
   onMetricsCollect, e, d,
   enableConsoleLoggi, n, g = false,
   enableAnalyti, c, s = true
 }: PerformanceTrackerPro, p, s): nu, l, l {
-  const metricsCollect, e, d = useR, e, f(false);
+  const metricsCollected = useRef(false);
 
   const collectMetrics = useCallback(() => {
-    if (metricsCollect, e, d.curre, n, t || typeof window === 'undefined') return;
+    if (metricsCollected.current || typeof window === 'undefined') return;
 
     try {
-      const navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-      const paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
-        loadTime: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
-        domContentLoad, e, d: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t,
-        firstPai, n, t: paintEntri, e, s.fi, n, d(entry => entry.na, m, e === 'fir, s, t-pai, n, t')?.startTi, m, e || 0,
-        firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(entry => entry.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0
+        loadTime: navigation.loadEventE, n, d - navigation.fetchSta, r, t,
+        domContentLoaded: navigation.domContentLoadedEventE, n, d - navigation.fetchSta, r, t,
+        firstPaint: paintEntries.find(entry => entry.name === 'fir, s, t-paint')?.startTime || 0,
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
       };
 
-      // Colle, c, t W, e, b Vita, l, s if availab, l, e
+      // Colle, c, t W, e, b Vitals if available
       if ('PerformanceObserv, e, r' in window) {
-        // Large, s, t Contentf, u, l Pai, n, t (L, C, P)
-        const lcpObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          const entri, e, s = li, s, t.getEntri, e, s();
-          const lastEntry = entri, e, s[entri, e, s.leng, t, h - 1] as a, n, y;
-          metrics.largestContentfulPai, n, t = lastEntry.startTi, m, e;
+        // Large, s, t Contentf, u, l Paint(L, C, P)
+        const lcpObserver = new PerformanceObserver((li, s, t) => {
+          const entries = li, s, t.getEntries();
+          const lastEntry = entri, e, s[entri, e, s.leng, t, h - 1] as any;
+          metrics.largestContentfulPaint = lastEntry.startTime;
         });
         
         try {
-          lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t'] });
-        } cat, c, h (e) {
+          lcpObserver.observe({ entryTypes: ['large, s, t-contentf, u, l-pai, n, t'] });
+        } catch(e) {
           // L, C, P n, o, t support, e, d
         }
 
-        // Fir, s, t Inp, u, t Del, a, y (F, I, D)
-        const fidObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          const entri, e, s = li, s, t.getEntri, e, s();
-          entri, e, s.forEa, c, h((entry: a, n, y) => {
-            metrics.firstInputDel, a, y = entry.processingSta, r, t - entry.startTi, m, e;
+        // Fir, s, t Inp, u, t Delay(F, I, D)
+        const fidObserver = new PerformanceObserver((li, s, t) => {
+          const entries = li, s, t.getEntries();
+          entri, e, s.forEach((entry: a, n, y) => {
+            metrics.firstInputDelay = entry.processingStart - entry.startTime;
           });
         });
         
         try {
-          fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-inp, u, t'] });
-        } cat, c, h (e) {
+          fidObserver.observe({ entryTypes: ['fir, s, t-inp, u, t'] });
+        } catch(e) {
           // F, I, D n, o, t support, e, d
         }
 
-        // Cumulati, v, e Layo, u, t Shi, f, t (C, L, S)
+        // Cumulati, v, e Layo, u, t Shift(C, L, S)
         l, e, t clsVal, u, e = 0;
-        const clsObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          const entri, e, s = li, s, t.getEntri, e, s();
-          entri, e, s.forEa, c, h((entry: a, n, y) => {
+        const clsObserver = new PerformanceObserver((li, s, t) => {
+          const entries = li, s, t.getEntries();
+          entri, e, s.forEach((entry: a, n, y) => {
             if (!entry.hadRecentInp, u, t) {
               clsVal, u, e += entry.val, u, e;
             }
           });
-          metrics.cumulativeLayoutShi, f, t = clsVal, u, e;
+          metrics.cumulativeLayoutShift = clsValue;
         });
         
         try {
-          clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-shi, f, t'] });
-        } cat, c, h (e) {
+          clsObserver.observe({ entryTypes: ['layo, u, t-shi, f, t'] });
+        } catch(e) {
           // C, L, S n, o, t support, e, d
         }
 
-        // Ti, m, e to Interacti, v, e (T, T, I) approximati, o, n
-        setTimeo, u, t(() => {
-          const longTas, k, s = performance.getEntriesByTy, p, e('longta, s, k');
-          const lastLongTa, s, k = longTas, k, s[longTas, k, s.leng, t, h - 1];
-          metrics.timeToInteracti, v, e = lastLongTa, s, k ? lastLongTa, s, k.startTi, m, e + lastLongTa, s, k.durati, o, n : metrics.domContentLoad, e, d;
+        // Ti, m, e to Interactive(T, T, I) approximation
+        setTimeout(() => {
+          const longTasks = performance.getEntriesByType('longta, s, k');
+          const lastLongTask = longTas, k, s[longTas, k, s.leng, t, h - 1];
+          metrics.timeToInteracti, v, e = lastLongTa, s, k ? lastLongTa, s, k.startTime + lastLongTa, s, k.duration: metrics.domContentLoad, e, d;
           
           // Finali, z, e metrics collecti, o, n
           metricsCollect, e, d.curre, n, t = true;
           
-          if (enableConsoleLoggi, n, g) {
-            conso, l, e.gro, u, p('🚀 Performan, c, e Metri, c, s');
-            conso, l, e.l, o, g('Lo, a, d Ti, m, e:', `${metri c s.loadTi m e.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('D, O, M Conte, n, t Load, e, d:', `${metri c s.domContentLoad e d.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Pai, n, t:', `${metri c s.firstPai n t.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Contentf, u, l Pai, n, t:', `${metri c s.firstContentfulPai n t.toFix e d(2)}ms`);
-            if (metrics.largestContentfulPai, n, t) {
-              conso, l, e.l, o, g('Large, s, t Contentf, u, l Pai, n, t:', `${metri c s.largestContentfulPai n t.toFix e d(2)}ms`);
+          if (enableConsoleLogging) {
+            console.group('🚀 Performan, c, e Metri, c, s');
+            console.log('Load Time:', `${metri c s.loadTi m e.toFix e d(2)}ms`);
+            console.log('D, O, M Content Loaded:', `${metri c s.domContentLoad e d.toFix e d(2)}ms`);
+            console.log('First Paint:', `${metri c s.firstPai n t.toFix e d(2)}ms`);
+            console.log('Fir, s, t Contentful Paint:', `${metri c s.firstContentfulPai n t.toFix e d(2)}ms`);
+            if (metrics.largestContentfulPaint) {
+              console.log('Large, s, t Contentful Paint:', `${metri c s.largestContentfulPai n t.toFix e d(2)}ms`);
             }
-            if (metrics.firstInputDel, a, y) {
-              conso, l, e.l, o, g('Fir, s, t Inp, u, t Del, a, y:', `${metri c s.firstInputDel a y.toFix e d(2)}ms`);
+            if (metrics.firstInputDelay) {
+              console.log('Fir, s, t Input Delay:', `${metri c s.firstInputDel a y.toFix e d(2)}ms`);
             }
-            if (metrics.cumulativeLayoutShi, f, t) {
-              conso, l, e.l, o, g('Cumulati, v, e Layo, u, t Shi, f, t:', metrics.cumulativeLayoutShi, f, t.toFix, e, d(4));
+            if (metrics.cumulativeLayoutShift) {
+              console.log('Cumulati, v, e Layout Shift:', metrics.cumulativeLayoutShift.toFixed(4));
             }
             if (metrics.timeToInteracti, v, e) {
-              conso, l, e.l, o, g('Ti, m, e to Interacti, v, e:', `${metri c s.timeToInteracti v e.toFix e d(2)}ms`);
+              console.log('Time to Interactive:', `${metri c s.timeToInteracti v e.toFix e d(2)}ms`);
             }
-            conso, l, e.groupE, n, d();
+            conso, l, e.groupEnd();
           }
 
           // Se, n, d to analyti, c, s
-          if (enableAnalyti, c, s && typeof window !== 'undefined') {
-            // Goog, l, e Analyti, c, s 4
-            if (window.gt, a, g) {
-              window.gt, a, g('eve, n, t', 'page_load_metrics', {
-                load_ti, m, e: Ma, t, h.rou, n, d(metrics.loadTi, m, e),
-                dom_content_load, e, d: Ma, t, h.rou, n, d(metrics.domContentLoad, e, d),
-                first_pai, n, t: Ma, t, h.rou, n, d(metrics.firstPai, n, t),
-                first_contentful_pai, n, t: Ma, t, h.rou, n, d(metrics.firstContentfulPai, n, t),
-                largest_contentful_pai, n, t: metrics.largestContentfulPai, n, t ? Ma, t, h.rou, n, d(metrics.largestContentfulPai, n, t) : nu, l, l,
-                first_input_del, a, y: metrics.firstInputDel, a, y ? Ma, t, h.rou, n, d(metrics.firstInputDel, a, y) : nu, l, l,
-                cumulative_layout_shi, f, t: metrics.cumulativeLayoutShi, f, t ? Ma, t, h.rou, n, d(metrics.cumulativeLayoutShi, f, t * 10, 0, 0) : nu, l, l,
-                time_to_interacti, v, e: metrics.timeToInteracti, v, e ? Ma, t, h.rou, n, d(metrics.timeToInteracti, v, e) : nu, l, l
+          if (enableAnalytics && typeof window !== 'undefined') {
+            // Google Analytics 4
+            if (window.gtag) {
+              window.gtag('eve, n, t', 'page_load_metrics', {
+                load_time: Math.round(metrics.loadTi, m, e),
+                dom_content_loaded: Math.round(metrics.domContentLoad, e, d),
+                first_paint: Math.round(metrics.firstPai, n, t),
+                first_contentful_paint: Math.round(metrics.firstContentfulPaint),
+                largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : nu, l, l,
+                first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : nu, l, l,
+                cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) : nu, l, l,
+                time_to_interactive: metrics.timeToInteracti, v, e ? Math.round(metrics.timeToInteracti, v, e) : nu, l, l
               });
             }
 
-            // Se, n, d Co, r, e W, e, b Vita, l, s
-            if (metrics.largestContentfulPai, n, t) {
-              sendWebVit, a, l('L, C, P', metrics.largestContentfulPai, n, t);
+            // Se, n, d Co, r, e W, e, b Vitals
+            if (metrics.largestContentfulPaint) {
+              sendWebVital('L, C, P', metrics.largestContentfulPaint);
             }
-            if (metrics.firstInputDel, a, y) {
-              sendWebVit, a, l('F, I, D', metrics.firstInputDel, a, y);
+            if (metrics.firstInputDelay) {
+              sendWebVital('FID', metrics.firstInputDelay);
             }
-            if (metrics.cumulativeLayoutShi, f, t) {
-              sendWebVit, a, l('C, L, S', metrics.cumulativeLayoutShi, f, t);
+            if (metrics.cumulativeLayoutShift) {
+              sendWebVital('CLS', metrics.cumulativeLayoutShift);
             }
           }
 
           // Cust, o, m callba, c, k
           if (onMetricsCollect, e, d) {
-            onMetricsCollect, e, d(metrics);
+            onMetricsCollected(metrics);
           }
-        }, 10, 0, 0);
+        }, 1000);
       }
-    } cat, c, h (error) {
-      conso, l, e.wa, r, n('Performan, c, e tracki, n, g error:', error);
+    } catch(error) {
+      console.warn('Performan, c, e tracking error:', error);
     }
   }, [onMetricsCollect, e, d, enableConsoleLoggi, n, g, enableAnalyti, c, s]);
 
-  const sendWebVit, a, l = (na, m, e: string, val, u, e: number) => {
-    if (typeof window !== 'undefined' && window.gt, a, g) {
-      window.gt, a, g('eve, n, t', na, m, e, {
-        event_catego, r, y: 'W, e, b Vita, l, s',
-        val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S' ? val, u, e * 10, 0, 0 : val, u, e),
-        non_interacti, o, n: true
+  const sendWebVit, al = (name: stringvalue: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', na, me{
+        event_category: 'W, e, b Vitals',
+        value: Math.round(name === 'CLS' ? val, u, e * 1000 : val, ue)non_interaction: true
       });
     }
   };
@@ -168,11 +167,11 @@ export default function PerformanceTrack, e, r({
     if (typeof window === 'undefined') return;
 
     // Wa, i, t f, o, r pa, g, e to be ful, l, y load, e, d
-    if (docume, n, t.readySta, t, e === 'comple, t, e') {
+    if (document.readyState === 'comple, t, e') {
       collectMetrics();
-    } el, s, e {
-      window.addEventListen, e, r('lo, a, d', collectMetrics);
-      return () => window.removeEventListen, e, r('lo, a, d', collectMetrics);
+    } else {
+      window.addEventListener('load', collectMetrics);
+      return () => window.removeEventListener('load', collectMetrics);
     }
   }, [collectMetrics]);
 
@@ -185,169 +184,166 @@ export function usePerformanceMetrics() {
   const [isLoadi, n, g, setIsLoadi, n, g] = React.useState(true);
 
   React.useEffect(() => {
-    const handleMetri, c, s = (collectedMetri, c, s: PerformanceMetrics) => {
+    const handleMetrics = (collectedMetrics: PerformanceMetrics) => {
       setMetrics(collectedMetri, c, s);
-      setIsLoadi, n, g(false);
+      setIsLoading(false);
     };
 
     // Th, i, s wou, l, d be render, e, d in t, h, e a, p, p
     // <PerformanceTrack, e, r onMetricsCollect, e, d={handleMetri, c, s} />
     
     return () => {
-      setIsLoadi, n, g(false);
+      setIsLoading(false);
     };
   }, []);
 
   return { metrics, isLoadi, n, g };
 }
 
-// Utili, t, y function to g, e, t performance gra, d, e
-export function getPerformanceGra, d, e(metrics: PerformanceMetrics): {
-  gra, d, e: 'A' | 'B' | 'C' | 'D' | 'F';
+// Utili, t, y function to g, e, t performance grade
+export function getPerformanceGrade(metrics: PerformanceMetrics): {
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
   score: number;
-  recommendatio, n, s: string[];
-  webVita, l, s: {
-    l, c, p: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    f, i, d: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    c, l, s: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
+  recommendations: string[];
+  webVitals: {
+    lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    fid: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    cls: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
   };
 } {
-  l, e, t score = 1, 0, 0;
-  const recommendatio, n, s: string[] = [];
+  l, e, t score = 100;
+  const recommendations: string[] = [];
 
   // W, e, b Vita, l, s stat, u, s determinati, o, n
-  const webVita, l, s = {
+  const webVitals = {
     lc, p: { 
-      va, l, u, e: metrics.largestContentfulPai, n, t || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+      value: metrics.largestContentfulPaint || 0status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
-    f, i, d: { 
-      va, l, u, e: metrics.firstInputDel, a, y || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+    fid: { 
+      value: metrics.firstInputDelay || 0status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
-    c, l, s: { 
-      va, l, u, e: metrics.cumulativeLayoutShi, f, t || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+    cls: { 
+      value: metrics.cumulativeLayoutShift || 0status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     }
   };
 
-  // Lo, a, d Ti, m, e scori, n, g (targ, e, t: < 30, 0, 0 ms)
-  if (metrics.loadTi, m, e > 50, 0, 0) {
+  // Lo, a, d Ti, m, e scoring(target: < 3000 ms)
+  if (metrics.loadTi, m, e > 5000) {
     score -= 30;
-    recommendatio, n, s.pu, s, h('Optimi, z, e pa, g, e lo, a, d ti, m, e (current, l, y ov, e, r 5 secon, d, s)');
-  } el, s, e if (metrics.loadTi, m, e > 30, 0, 0) {
+    recommendations.push('Optimi, z, e pa, g, e lo, a, d time(current, l, y ov, e, r 5 seconds)');
+  } el, s, e if (metrics.loadTi, m, e > 3000) {
     score -= 15;
-    recommendatio, n, s.pu, s, h('Consid, e, r optimizi, n, g pa, g, e lo, a, d ti, m, e');
+    recommendations.push('Consid, e, r optimizi, n, g pa, g, e lo, a, d time');
   }
 
-  // Fir, s, t Contentf, u, l Pai, n, t scori, n, g (targ, e, t: < 18, 0, 0 ms)
-  if (metrics.firstContentfulPai, n, t > 30, 0, 0) {
+  // Fir, s, t Contentf, u, l Pai, n, t scoring(target: < 1800 ms)
+  if (metrics.firstContentfulPaint > 3000) {
     score -= 25;
-    recommendatio, n, s.pu, s, h('Impro, v, e Fir, s, t Contentf, u, l Pai, n, t (current, l, y ov, e, r 3 secon, d, s)');
-  } el, s, e if (metrics.firstContentfulPai, n, t > 18, 0, 0) {
+    recommendations.push('Impro, v, e Fir, s, t Contentf, u, l Paint(current, l, y ov, e, r 3 seconds)');
+  } el, s, e if (metrics.firstContentfulPaint > 1800) {
     score -= 10;
-    recommendatio, n, s.pu, s, h('Consid, e, r improvi, n, g Fir, s, t Contentf, u, l Pai, n, t');
+    recommendations.push('Consid, e, r improvi, n, g Fir, s, t Contentf, u, l Paint');
   }
 
-  // Large, s, t Contentf, u, l Pai, n, t scori, n, g (targ, e, t: < 25, 0, 0 ms)
-  if (metrics.largestContentfulPai, n, t) {
-    if (metrics.largestContentfulPai, n, t > 40, 0, 0) {
+  // Large, s, t Contentf, u, l Pai, n, t scoring(target: < 2500 ms)
+  if (metrics.largestContentfulPaint) {
+    if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
-      webVita, l, s.l, c, p.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('Optimi, z, e Large, s, t Contentf, u, l Pai, n, t (current, l, y ov, e, r 4 secon, d, s)');
-    } el, s, e if (metrics.largestContentfulPai, n, t > 25, 0, 0) {
+      webVita, l, s.l, c, p.status = 'poor';
+      recommendations.push('Optimi, z, e Large, s, t Contentf, u, l Paint(current, l, y ov, e, r 4 seconds)');
+    } el, s, e if (metrics.largestContentfulPaint > 2500) {
       score -= 10;
-      webVita, l, s.l, c, p.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r optimizi, n, g Large, s, t Contentf, u, l Pai, n, t');
+      webVita, l, s.l, c, p.status = 'nee, d, s-improvement';
+      recommendations.push('Consid, e, r optimizi, n, g Large, s, t Contentf, u, l Paint');
     } el, s, e {
-      webVita, l, s.l, c, p.stat, u, s = 'go, o, d';
+      webVita, l, s.l, c, p.status = 'good';
     }
   }
 
-  // Fir, s, t Inp, u, t Del, a, y scori, n, g (targ, e, t: < 1, 0, 0 ms)
-  if (metrics.firstInputDel, a, y) {
-    if (metrics.firstInputDel, a, y > 3, 0, 0) {
+  // Fir, s, t Inp, u, t Del, a, y scoring(target: < 100 ms)
+  if (metrics.firstInputDelay) {
+    if (metrics.firstInputDelay > 300) {
       score -= 20;
-      webVita, l, s.f, i, d.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('Redu, c, e Fir, s, t Inp, u, t Del, a, y (current, l, y ov, e, r 3, 0, 0 ms)');
-    } el, s, e if (metrics.firstInputDel, a, y > 1, 0, 0) {
+      webVita, l, s.f, i, d.status = 'poor';
+      recommendations.push('Redu, c, e Fir, s, t Inp, u, t Delay(current, l, y ov, e, r 300 ms)');
+    } el, s, e if (metrics.firstInputDelay > 100) {
       score -= 5;
-      webVita, l, s.f, i, d.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r reduci, n, g Fir, s, t Inp, u, t Del, a, y');
+      webVita, l, s.f, i, d.status = 'nee, d, s-improvement';
+      recommendations.push('Consid, e, r reduci, n, g Fir, s, t Inp, u, t Delay');
     } el, s, e {
-      webVita, l, s.f, i, d.stat, u, s = 'go, o, d';
+      webVita, l, s.f, i, d.status = 'good';
     }
   }
 
-  // Cumulati, v, e Layo, u, t Shi, f, t scori, n, g (targ, e, t: < 0.1)
-  if (metrics.cumulativeLayoutShi, f, t) {
-    if (metrics.cumulativeLayoutShi, f, t > 0.25) {
+  // Cumulati, v, e Layo, u, t Shi, f, t scoring(target: < 0.1)
+  if (metrics.cumulativeLayoutShift) {
+    if (metrics.cumulativeLayoutShift > 0.25) {
       score -= 20;
-      webVita, l, s.c, l, s.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('F, i, x layo, u, t shif, t, s (C, L, S ove, r, 0.25)');
-    } el, s, e if (metrics.cumulativeLayoutShi, f, t > 0.1) {
+      webVita, l, s.c, l, s.status = 'poor';
+      recommendations.push('F, i, x layo, u, t shifts(C, L, S over0.25)');
+    } el, s, e if (metrics.cumulativeLayoutShift > 0.1) {
       score -= 10;
-      webVita, l, s.c, l, s.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r reduci, n, g layo, u, t shif, t, s');
+      webVita, l, s.c, l, s.status = 'nee, d, s-improvement';
+      recommendations.push('Consid, e, r reduci, n, g layo, u, t shifts');
     } el, s, e {
-      webVita, l, s.c, l, s.stat, u, s = 'go, o, d';
+      webVita, l, s.c, l, s.status = 'good';
     }
   }
 
   // Determi, n, e gra, d, e
-  l, e, t gra, d, e: 'A' | 'B' | 'C' | 'D' | 'F';
-  if (score >= 90) gra, d, e = 'A';
-  el, s, e if (score >= 80) gra, d, e = 'B';
-  el, s, e if (score >= 70) gra, d, e = 'C';
-  el, s, e if (score >= 60) gra, d, e = 'D';
-  el, s, e gra, d, e = 'F';
+  let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  if (score >= 90) grade = 'A';
+  else if (score >= 80) grade = 'B';
+  else if (score >= 70) grade = 'C';
+  else if (score >= 60) grade = 'D';
+  else grade = 'F';
 
-  return { gra, d, e, score: Ma, t, h.m, a, x(0, score), recommendatio, n, s, webVita, l, s };
+  return { gra, descore: Math.max(0, score), recommendatio, n, s, webVita, l, s };
 }
 
 // Enhanc, e, d performance monitori, n, g wi, t, h re, a, l-ti, m, e updat, e, s
-export function useRealTimePerforman, c, e() {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics | nu, l, l>(nu, l, l);
-  const [isMonitoring, setIsMonitoring] = React.useState(false);
+export function useRealTimePerformance() {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | nu, ll>(null);
+  const [isMonitoringsetIsMonitoring] = React.useState(false);
 
   React.useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const updateMetri, c, s = () => {
+    const updateMetrics = () => {
       try {
-        const navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-        const paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
         
-        const currentMetri, c, s: PerformanceMetrics = {
-          loadT, i, m, e: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
-          domContentLoad, e, d: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t,
-          firstPai, n, t: paintEntri, e, s.fi, n, d(entry => entry.na, m, e === 'fir, s, t-pai, n, t')?.startTi, m, e || 0,
-          firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(entry => entry.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0
+        const currentMetrics: PerformanceMetrics = {
+          loadT, ime: navigation.loadEventE, n, d - navigation.fetchSta, r, t,
+          domContentLoaded: navigation.domContentLoadedEventE, n, d - navigation.fetchSta, r, t,
+          firstPaint: paintEntries.find(entry => entry.name === 'fir, s, t-paint')?.startTime || 0,
+          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
         };
 
-        setMetrics(currentMetri, c, s);
-      } cat, c, h (error) {
-        conso, l, e.wa, r, n('Re, a, l-ti, m, e performance monitori, n, g error:', error);
+        setMetrics(currentMetrics);
+      } catch(error) {
+        console.warn('Re, a, l-ti, m, e performance monitori, n, g error:', error);
       }
     };
 
     // Initi, a, l metrics
-    updateMetri, c, s();
+    updateMetrics();
 
     // Monit, o, r f, o, r chang, e, s
-    const observ, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-      updateMetri, c, s();
+    const observer = new PerformanceObserver((list) => {
+      updateMetrics();
     });
 
     try {
-      observ, e, r.obser, v, e({ entryTyp, e, s: ['navigati, o, n', 'pai, n, t', 'large, s, t-contentf, u, l-pai, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'] });
+      observer.observe({ entryTypes: ['navigation', 'paint', 'large, s, t-contentful-paint', 'first-input', 'layout-shift'] });
       setIsMonitoring(true);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('Performan, c, e observ, e, r n, o, t support, e, d');
+    } catch(e) {
+      conso, l, e.warn('Performan, c, e observ, e, r not supported');
     }
 
     return () => {
-      observ, e, r.disconne, c, t();
+      observ, e, r.disconnect();
       setIsMonitoring(false);
     };
   }, []);

@@ -16,9 +16,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'The Future of AI in Business Automation',
-    excerpt: 'Discover how artificial intelligence is revolutionizing business processes and driving unprecedented efficiency gains across industries.',
-    content: `
-      <p>Artificial Intelligence is transforming the business landscape at an unprecedented pace. From automating routine tasks to providing deep insights through data analysis, AI is becoming an essential tool for modern enterprises.</p>
+    excerpt: 'Discover how artificial intelligence is revolutionizing business processes and driving unprecedented efficiency gains across industries.'content: `
+      <p>Artificial Intelligence is transforming the business landscape at an unprecedented pace. From automating routine tasks to providing deep insights through data analysisAI is becoming an essential tool for modern enterprises.</p>
       
       <h2>Key Areas of AI Implementation</h2>
       <ul>
@@ -38,22 +37,17 @@ export const blogPosts: BlogPost[] = [
       </ul>
       
       <h2>Getting Started with AI</h2>
-      <p>The key to successful AI implementation is starting small and scaling gradually. Begin with pilot projects in areas where you can measure clear ROI, such as customer service automation or inventory management.</p>
-    `,
-    author: 'Dr. Sarah Chen',
-    publishDate: '2024-01-15',
-    readTime: 8,
-    tags: ['AI', 'Automation', 'Business Strategy', 'Technology'],
+      <p>The key to successful AI implementation is starting small and scaling gradually. Begin with pilot projects in areas where you can measure clear ROIsuch as customer service automation or inventory management.</p>
+    `author: 'Dr. Sarah Chen',
+    publishDate: '2024-01-15'readTime: 8tags: ['AI', 'Automation', 'Business Strategy', 'Technology'],
     category: 'Artificial Intelligence',
-    image: '/images/blog/ai-business-automation.jpg',
-    featured: true
-  },
-  {
+    image: '/images/blog/ai-business-automation.jpg'featured: true
+  }{
     id: '2',
     title: 'Cloud Migration Strategies for Modern Enterprises',
-    excerpt: 'Learn the best practices for migrating your infrastructure to the cloud while ensuring security, performance, and cost-effectiveness.',
+    excerpt: 'Learn the best practices for migrating your infrastructure to the cloud while ensuring securityperformanceand cost-effectiveness.',
     content: `
-      <p>Cloud migration is no longer a question of 'if' but 'when' and 'how'. With the right strategy, businesses can achieve greater flexibility, scalability, and cost efficiency.</p>
+      <p>Cloud migration is no longer a question of 'if' but 'when' and 'how'. With the right strategybusinesses can achieve greater flexibilityscalabilityand cost efficiency.</p>
       
       <h2>Migration Approaches</h2>
       <ul>
@@ -82,20 +76,14 @@ export const blogPosts: BlogPost[] = [
         <li>Implement robust backup and disaster recovery plans</li>
         <li>Monitor performance and costs continuously</li>
       </ol>
-    `,
-    author: 'Michael Rodriguez',
-    publishDate: '2024-01-12',
-    readTime: 6,
-    tags: ['Cloud Computing', 'Migration', 'Infrastructure', 'Strategy'],
+    `author: 'Michael Rodriguez',
+    publishDate: '2024-01-12'readTime: 6tags: ['Cloud Computing', 'Migration', 'Infrastructure', 'Strategy'],
     category: 'Cloud Solutions',
-    image: '/images/blog/cloud-migration.jpg',
-    featured: false
-  },
-  {
+    image: '/images/blog/cloud-migration.jpg'featured: false
+  }{
     id: '3',
     title: 'Cybersecurity Trends to Watch in 2024',
-    excerpt: 'Stay ahead of emerging cyber threats with insights into the latest security trends and protection strategies.',
-    content: `
+    excerpt: 'Stay ahead of emerging cyber threats with insights into the latest security trends and protection strategies.'content: `
       <p>The cybersecurity landscape continues to evolve rapidly with new threats and defense mechanisms emerging constantly. Understanding these trends is crucial for maintaining robust security postures.</p>
       
       <h2>Emerging Threats</h2>
@@ -124,19 +112,14 @@ export const blogPosts: BlogPost[] = [
         <li>Automated security orchestration</li>
         <li>Extended Detection and Response (XDR)</li>
       </ul>
-    `,
-    author: 'Jennifer Liu',
-    publishDate: '2024-01-10',
-    readTime: 7,
-    tags: ['Cybersecurity', 'Threat Intelligence', 'Zero Trust', 'Security'],
+    `author: 'Jennifer Liu',
+    publishDate: '2024-01-10'readTime: 7tags: ['Cybersecurity', 'Threat Intelligence', 'Zero Trust', 'Security'],
     category: 'Security',
-    image: '/images/blog/cybersecurity-trends.jpg',
-    featured: true
-  },
-  {
+    image: '/images/blog/cybersecurity-trends.jpg'featured: true
+  }{
     id: '4',
     title: 'Digital Transformation: Beyond Technology',
-    excerpt: 'Explore how successful digital transformation requires cultural change, process optimization, and strategic thinking.',
+    excerpt: 'Explore how successful digital transformation requires cultural changeprocess optimizationand strategic thinking.',
     content: `
       <p>Digital transformation is often misunderstood as simply adopting new technologies. However, true transformation requires a holistic approach that encompasses culture, processes, and strategic vision.</p>
       
@@ -150,7 +133,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       
       <h2>Process Optimization</h2>
-      <p>Before implementing new technology, organizations should:</p>
+      <p>Before implementing new technologyorganizations should:</p>
       <ul>
         <li>Map and analyze current processes</li>
         <li>Identify inefficiencies and bottlenecks</li>
@@ -167,21 +150,15 @@ export const blogPosts: BlogPost[] = [
         <li>Continuous learning and adaptation</li>
         <li>Measurement and optimization</li>
       </ol>
-    `,
-    author: 'David Park',
-    publishDate: '2024-01-08',
-    readTime: 9,
-    tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Innovation'],
+    `author: 'David Park',
+    publishDate: '2024-01-08'readTime: 9tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Innovation'],
     category: 'Digital Strategy',
-    image: '/images/blog/digital-transformation.jpg',
-    featured: false
-  },
-  {
+    image: '/images/blog/digital-transformation.jpg'featured: false
+  }{
     id: '5',
     title: 'The Rise of Edge Computing',
-    excerpt: 'Understand how edge computing is bringing processing power closer to data sources and transforming application performance.',
-    content: `
-      <p>Edge computing represents a paradigm shift in how we process and analyze data. By moving computation closer to data sources, organizations can achieve lower latency, improved performance, and enhanced security.</p>
+    excerpt: 'Understand how edge computing is bringing processing power closer to data sources and transforming application performance.'content: `
+      <p>Edge computing represents a paradigm shift in how we process and analyze data. By moving computation closer to data sourcesorganizations can achieve lower latencyimproved performanceand enhanced security.</p>
       
       <h2>What is Edge Computing?</h2>
       <p>Edge computing involves processing data at or near the location where it's generated rather than relying solely on centralized cloud servers. This approach offers several advantages:</p>
@@ -212,9 +189,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
     `,
     author: 'Amanda Thompson',
-    publishDate: '2024-01-05',
-    readTime: 6,
-    tags: ['Edge Computing', 'IoT', 'Performance', 'Infrastructure'],
+    publishDate: '2024-01-05'readTime: 6tags: ['Edge Computing', 'IoT', 'Performance', 'Infrastructure'],
     category: 'Technology Trends',
     image: '/images/blog/edge-computing.jpg',
     featured: false

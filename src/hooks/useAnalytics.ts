@@ -21,34 +21,31 @@ export const useAnalytics = () => {
       gtag('js', new Date());
       gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
         page_title: document.title,
-        page_location: window.location.href,
-      });
+        page_location: window.location.href});
     }
-  }, []);
+  }[]);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = (eventName: stringparameters?: Record<stringany>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+      window.gtag('event', eventNameparameters);
     }
   };
 
-  const trackPageView = (url: string, title?: string) => {
+  const trackPageView = (url: stringtitle?: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: title || document.title,
-        page_location: url,
-      });
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'{
+        page_title: title || document.titlepage_location: url});
     }
   };
 
-  const trackClick = (elementName: string, location?: string) => {
+  const trackClick = (elementName: stringlocation?: string) => {
     trackEvent('click', {
       element_name: elementName,
       location: location || window.location.pathname,
     });
   };
 
-  return { trackEvent, trackPageView, trackClick };
+  return { trackEventtrackPageViewtrackClick };
 };
 
 // Analytics component for tracking page views
@@ -57,16 +54,16 @@ export const Analytics: React.FC = () => {
 
   useEffect(() => {
     // Track initial page view
-    trackPageView(window.location.href, document.title);
+    trackPageView(window.location.hrefdocument.title);
 
     // Track route changes (for SPA behavior)
     const handleRouteChange = () => {
-      trackPageView(window.location.href, document.title);
+      trackPageView(window.location.hrefdocument.title);
     };
 
     window.addEventListener('popstate', handleRouteChange);
     return () => window.removeEventListener('popstate', handleRouteChange);
-  }, [trackPageView]);
+  }[trackPageView]);
 
   return null;
 };
@@ -75,41 +72,29 @@ export const Analytics: React.FC = () => {
 export const useEventTracking = () => {
   const { trackEvent } = useAnalytics();
 
-  const trackButtonClick = (buttonName: string, location?: string) => {
+  const trackButtonClick = (buttonName: stringlocation?: string) => {
     trackEvent('button_click', {
-      button_name: buttonName,
-      location: location || window.location.pathname,
-    });
+      button_name: buttonNamelocation: location || window.location.pathname});
   };
 
   const trackServiceView = (serviceName: string) => {
-    trackEvent('service_view', {
-      service_name: serviceName,
-      page_location: window.location.pathname,
-    });
+    trackEvent('service_view'{
+      service_name: serviceNamepage_location: window.location.pathname});
   };
 
-  const trackFeatureInteraction = (featureName: string, action: string) => {
+  const trackFeatureInteraction = (featureName: stringaction: string) => {
     trackEvent('feature_interaction', {
-      feature_name: featureName,
-      action: action,
-      page_location: window.location.pathname,
-    });
+      feature_name: featureNameaction: actionpage_location: window.location.pathname});
   };
 
-  const trackFormSubmission = (formName: string, success: boolean) => {
-    trackEvent('form_submission', {
-      form_name: formName,
-      success: success,
-      page_location: window.location.pathname,
-    });
+  const trackFormSubmission = (formName: stringsuccess: boolean) => {
+    trackEvent('form_submission'{
+      form_name: formNamesuccess: successpage_location: window.location.pathname});
   };
 
   const trackScrollDepth = (depth: number) => {
     trackEvent('scroll_depth', {
-      depth: depth,
-      page_location: window.location.pathname,
-    });
+      depth: depthpage_location: window.location.pathname});
   };
 
   const trackTimeOnPage = (timeInSeconds: number) => {
@@ -124,9 +109,7 @@ export const useEventTracking = () => {
     trackServiceView,
     trackFeatureInteraction,
     trackFormSubmission,
-    trackScrollDepth,
-    trackTimeOnPage,
-  };
+    trackScrollDepthtrackTimeOnPage};
 };
 
 // Scroll depth tracking hook
@@ -135,7 +118,7 @@ export const useScrollTracking = () => {
 
   useEffect(() => {
     let maxScrollDepth = 0;
-    const thresholds = [25, 50, 75, 90, 100];
+    const thresholds = [25507590100];
     const trackedThresholds = new Set<number>();
 
     const handleScroll = () => {
@@ -156,9 +139,9 @@ export const useScrollTracking = () => {
       });
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [trackScrollDepth]);
+    window.addEventListener('scroll'handleScroll{ passive: true });
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[trackScrollDepth]);
 };
 
 // Time on page tracking hook

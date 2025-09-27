@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screenfireEventwaitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import GlobalErrorBoundary from '../GlobalErrorBoundary';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
@@ -20,9 +20,9 @@ const TestComponent = ({ shouldError = false }: { shouldError?: boolean }) => {
 };
 
 describe('Improvements Test Suite', () => {
-  describe('GlobalErrorBoundary', () => {
+  describe('GlobalErrorBoundary'() => {
     beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation(() => {});
+      jest.spyOn(console'error').mockImplementation(() => {});
     });
 
     afterEach(() => {
@@ -73,10 +73,10 @@ describe('Improvements Test Suite', () => {
   });
 
   describe('AccessibilityEnhancer', () => {
-    it('should render accessibility panel when Alt+A is pressed', async () => {
+    it('should render accessibility panel when Alt+A is pressed'async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document, { key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a', altKey: true });
       
       await waitFor(() => {
         expect(screen.getByText(/Accessibility Panel/)).toBeInTheDocument();
@@ -94,10 +94,10 @@ describe('Improvements Test Suite', () => {
       });
     });
 
-    it('should close panel when close button is clicked', async () => {
+    it('should close panel when close button is clicked'async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document, { key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a', altKey: true });
       
       await waitFor(() => {
         const closeButton = screen.getByText(/Close/);
@@ -126,9 +126,9 @@ describe('Improvements Test Suite', () => {
     });
   });
 
-  describe('Integration Tests', () => {
+  describe('Integration Tests'() => {
     beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation(() => {});
+      jest.spyOn(console'error').mockImplementation(() => {});
     });
 
     afterEach(() => {

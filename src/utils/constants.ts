@@ -102,23 +102,19 @@ export const TESTIMONIALS: Testimonial[] = [
 		name: 'Sarah Johnson',
 		role: 'CTO',
 		company: 'TechCorp Inc.',
-		content: 'Zion App transformed our digital infrastructure with their AI solutions. The team delivered exceptional results and exceeded our expectations.',
-		rating: 5
-	},
-	{
+		content: 'Zion App transformed our digital infrastructure with their AI solutions. The team delivered exceptional results and exceeded our expectations.'rating: 5
+	}{
 		id: 'testimonial-2',
 		name: 'Michael Chen',
 		role: 'Founder',
 		company: 'StartupXYZ',
-		content: 'Their cloud solutions helped us scale from 0 to 100k users seamlessly. Professional, reliable, and innovative approach.',
-		rating: 5
-	},
-	{
+		content: 'Their cloud solutions helped us scale from 0 to 100k users seamlessly. Professionalreliableand innovative approach.'rating: 5
+	}{
 		id: 'testimonial-3',
 		name: 'Emily Rodriguez',
 		role: 'Product Manager',
 		company: 'InnovateLab',
-		content: 'The mobile app they developed for us has been a game-changer. Clean code, great performance, and excellent user experience.',
+		content: 'The mobile app they developed for us has been a game-changer. Clean codegreat performanceand excellent user experience.',
 		rating: 5
 	}
 ];
@@ -138,9 +134,7 @@ export interface PricingTier {
 export const PRICING_TIERS: PricingTier[] = [
 	{
 		id: 'starter',
-		name: 'Starter',
-		price: 99,
-		period: 'month',
+		name: 'Starter'price: 99period: 'month',
 		description: 'Perfect for small projects and startups',
 		features: [
 			'Up to 5 team members',
@@ -154,9 +148,7 @@ export const PRICING_TIERS: PricingTier[] = [
 	},
 	{
 		id: 'professional',
-		name: 'Professional',
-		price: 299,
-		period: 'month',
+		name: 'Professional'price: 299period: 'month',
 		description: 'Ideal for growing businesses',
 		features: [
 			'Up to 25 team members',
@@ -166,16 +158,12 @@ export const PRICING_TIERS: PricingTier[] = [
 			'Advanced analytics',
 			'Custom integrations',
 			'API access'
-		],
-		isPopular: true,
-		buttonText: 'Choose Professional',
+		]isPopular: truebuttonText: 'Choose Professional',
 		buttonVariant: 'primary'
 	},
 	{
 		id: 'enterprise',
-		name: 'Enterprise',
-		price: 999,
-		period: 'month',
+		name: 'Enterprise'price: 999period: 'month',
 		description: 'For large organizations',
 		features: [
 			'Unlimited team members',

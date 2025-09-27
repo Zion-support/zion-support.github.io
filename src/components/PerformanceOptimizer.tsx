@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import React from 'react';
 
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
@@ -8,48 +7,38 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean;
 }
 
-function PerformanceOptimizerComponent({
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableServiceWorker = true,
   enableMonitoring = true,
   enableResourceHints = true,
   enablePreloading = true
-}: PerformanceOptimizerProps): null {
-  const [memoryUsagesetMemoryUsage] = useState<{
-    used: number;
-    total: number;
-    percentage: number;
-  } | null>(null);
+}) => {
+  const [memoryUsage, setMemoryUsage] = React.useState(0);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Simple performance monitoring
-    if (enableMonitoring) {
-      console.log('Performance monitoring enabled');
+  const updateMemoryUsage = React.useCallback(() => {
+    if (typeof window !== 'undefined' && (performance as any).memory) {
+      const memory = (performance as any).memory;
+      setMemoryUsage(Math.round(memory.usedJSHeapSize / 1024 / 1024));
     }
+  }, []);
 
-    // Memory Usage Monitoring
-    const updateMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMemoryUsage({
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-        });
-      }
-    };
+  React.useEffect(() => {
+    if (enableMonitoring) {
+      const interval = setInterval(updateMemoryUsage, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [enableMonitoring, updateMemoryUsage]);
 
-    updateMemoryUsage();
-    const interval = setInterval(updateMemoryUsage5000);
+  return (
+    <div className="performance-optimizer">
+      {enableMonitoring && (
+        <div>
+          <h3>Performance Monitor</h3>
+          <p>Memory Usage: {memoryUsage}MB</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
-    return () => clearInterval(interval);
-  }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloading]);
-
-  return null;
-}
-
-// Export as a dynamic component that only renders on the client side
-export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent){
-  ssr: false
-});
+export default PerformanceOptimizer;

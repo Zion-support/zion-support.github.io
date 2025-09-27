@@ -16,33 +16,28 @@ export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
+      hasError: falseerror: nullerrorInfo: null
     };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
-      error,
-      errorInfo: null
+      hasError: trueerrorerrorInfo: null
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+      errorerrorInfo
     });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary: ', error, errorInfo);
+      console.error('Error caught by boundary: ', errorerrorInfo);
     }
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(errorerrorInfo);
   }
 
   render() {
@@ -70,7 +65,7 @@ export class ErrorBoundary extends Component<Props, State> {
                   Refresh Page
                 </button>
                 <button
-                  onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
+                  onClick={() => this.setState({ hasError: falseerror: nullerrorInfo: null })}
                   className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
                 >
                   Try Again

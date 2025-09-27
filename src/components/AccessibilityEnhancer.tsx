@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { 
   announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisible,
-  createLiveRegion
+  createSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {
@@ -17,11 +13,7 @@ interface AccessibilityEnhancerProps {
 }
 
 export default function AccessibilityEnhancer({
-  enableSkipLinks = true,
-  enableFocusManagement = true,
-  enableScreenReaderSupport = true,
-  enableHighContrastSupport = true,
-  enableReducedMotionSupport = true
+  enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {
   const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
@@ -74,11 +66,7 @@ export default function AccessibilityEnhancer({
       };
     }
   }, [
-    enableSkipLinks,
-    enableFocusManagement,
-    enableScreenReaderSupport,
-    enableHighContrastSupport,
-    enableReducedMotionSupport
+    enableSkipLinksenableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
   ]);
 
   // Apply accessibility styles
@@ -96,7 +84,7 @@ export default function AccessibilityEnhancer({
     } else {
       root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotionenableHighContrastSupportenableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {
@@ -106,7 +94,7 @@ export default function AccessibilityEnhancer({
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(React.forwardRef(() => null)() => ({
+  React.useImperativeHandle(ref, () => ({
     announceChange
   }));
 

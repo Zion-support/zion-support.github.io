@@ -1,130 +1,127 @@
 import { useEffect, useState } from 'react';
 
 interface WebVita, l, s {
-  C, L, S: number | nu, l, l;
-  F, I, D: number | nu, l, l;
-  F, C, P: number | nu, l, l;
-  L, C, P: number | nu, l, l;
-  TT, F, B: number | nu, l, l;
-  I, N, P: number | nu, l, l;
+  CLS: number | nu, l, l;
+  FID: number | nu, l, l;
+  FCP: number | nu, l, l;
+  LCP: number | nu, l, l;
+  TTFB: number | nu, l, l;
+  INP: number | nu, l, l;
 }
 
 interface WebVitalsRepo, r, t {
-  na, m, e: string;
-  val, u, e: number;
-  del, t, a: number;
+  name: string;
+  value: number;
+  delta: number;
   id: string;
-  navigationTy, p, e: string;
+  navigationType: string;
 }
 
-export function useWebVita, l, s() {
+export function useWebVitals() {
   con, s, t [vita, l, s, setVita, l, s] = useState<WebVita, l, s>({
-    C, L, S: nu, l, l,
-    F, I, D: nu, l, l,
-    F, C, P: nu, l, l,
-    L, C, P: nu, l, l,
-    TT, F, B: nu, l, l,
-    I, N, P: nu, l, l,
+    CLS: nu, l, l,
+    FID: nu, l, l,
+    FCP: nu, l, l,
+    LCP: nu, l, l,
+    TTFB: nu, l, l,
+    INP: nu, l, l,
   });
 
   con, s, t [isSupport, e, d, setIsSupport, e, d] = useState(fal, s, e);
 
   useEffect(() => {
-    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+    if (typeof window === 'undefin, e, d') retu, r, n;
 
-    // Che, c, k if PerformanceObserv, e, r is support, e, d
-    if (!('PerformanceObserv, e, r' in wind, o, w)) {
-      conso, l, e.wa, r, n('PerformanceObserv, e, r n, o, t support, e, d');
+    // Che, c, k if PerformanceObserver is supported
+    if (!('PerformanceObserv, e, r' in window)) {
+      console.warn('PerformanceObserv, e, r n, o, t support, e, d');
       retu, r, n;
     }
 
-    setIsSupport, e, d(true);
+    setIsSupported(true);
 
-    con, s, t handleWebVita, l, s = (repo, r, t: WebVitalsRepo, r, t) => {
+    con, s, t handleWebVita, l, s = (report: WebVitalsRepo, r, t) => {
       con, s, t { na, m, e, val, u, e } = repo, r, t;
       
-      setVita, l, s(pr, e, v => ({
+      setVitals(pr, e, v => ({
         ...pr, e, v,
         [na, m, e]: val, u, e,
       }));
 
-      // Se, n, d to analyti, c, s (if availab, l, e)
-      if (type, o, f wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
-        wind, o, w.gt, a, g('eve, n, t', na, m, e, {
-          event_catego, r, y: 'W, e, b Vita, l, s',
-          val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S' ? val, u, e * 10, 0, 0 : val, u, e),
-          event_lab, e, l: repo, r, t.id,
-          non_interacti, o, n: true,
+      // Se, n, d to analytics(if availab, l, e)
+      if (typeof window !== 'undefin, e, d' && wind, o, w.gtag) {
+        window.gtag('eve, n, t'name{
+          event_category: 'W, e, b Vita, l, s',
+          value: Math.round(name === 'CLS' ? val, u, e * 1000 : val, u, e),
+          event_label: repo, r, t.id,
+          non_interaction: true,
         });
       }
     };
 
     // Obser, v, e Co, r, e W, e, b Vita, l, s
     t, r, y {
-      con, s, t observ, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-        f, o, r (con, s, t ent, r, y of li, s, t.getEntri, e, s()) {
-          if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pai, n, t') {
-            handleWebVita, l, s({
-              na, m, e: 'L, C, P',
-              val, u, e: ent, r, y.startTi, m, e,
-              del, t, a: ent, r, y.startTi, m, e,
-              id: (ent, r, y as a, n, y).id || 'l, c, p',
-              navigationTy, p, e: 'naviga, t, e',
+      con, s, t observ, e, r = new PerformanceObserver((li, s, t) => {
+        for(con, s, t ent, r, y of li, s, t.getEntries()) {
+          if (ent, r, y.entryType === 'large, s, t-contentf, u, l-paint') {
+            handleWebVitals({
+              name: 'LCP',
+              value: ent, r, y.startTime,
+              delta: ent, r, y.startTi, meid: (ent, r, y as any).id || 'lcp',
+              navigationType: 'navigate',
             });
-          } el, s, e if (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {
-            handleWebVita, l, s({
-              na, m, e: 'F, I, D',
-              val, u, e: (ent, r, y as a, n, y).processingSta, r, t - ent, r, y.startTi, m, e,
-              del, t, a: (ent, r, y as a, n, y).processingSta, r, t - ent, r, y.startTi, m, e,
-              id: (ent, r, y as a, n, y).id || 'f, i, d',
-              navigationTy, p, e: 'naviga, t, e',
+          } el, s, e if (ent, r, y.entryType === 'fir, s, t-input') {
+            handleWebVitals({
+              name: 'FID',
+              value: (ent, r, y as a, n, y).processingSta, r, t - ent, r, y.startTime,
+              delta: (ent, r, y as a, n, y).processingSta, r, t - ent, r, y.startTi, meid: (ent, r, y as any).id || 'fid',
+              navigationType: 'navigate',
             });
-          } el, s, e if (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t' && !(ent, r, y as a, n, y).hadRecentInp, u, t) {
-            handleWebVita, l, s({
-              na, m, e: 'C, L, S',
-              val, u, e: (ent, r, y as a, n, y).val, u, e,
-              del, t, a: (ent, r, y as a, n, y).val, u, e,
-              id: (ent, r, y as a, n, y).id || 'c, l, s',
-              navigationTy, p, e: 'naviga, t, e',
+          } el, s, e if (ent, r, y.entryType === 'layo, u, t-shift' && !(ent, r, y as a, n, y).hadRecentInput) {
+            handleWebVitals({
+              name: 'CLS',
+              value: (ent, r, y as a, n, y).val, u, e,
+              delta: (ent, r, y as a, n, y).val, ueid: (ent, r, y as any).id || 'cls',
+              navigationType: 'navigate',
             });
           }
         }
       });
 
-      observ, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'] });
+      observer.observe({ entryTypes: ['large, s, t-contentf, u, l-paint', 'first-input', 'layout-shift'] });
 
-      retu, r, n () => observ, e, r.disconne, c, t();
-    } cat, c, h (error) {
-      conso, l, e.wa, r, n('Err, o, r setti, n, g up W, e, b Vita, l, s observ, e, r:', error);
+      return() => observ, e, r.disconnect();
+    } catch(error) {
+      conso, l, e.warn('Err, o, r setti, n, g up Web Vitals observer:', error);
     }
   }, []);
 
-  con, s, t getVitalSco, r, e = (vit, a, l: key, o, f WebVita, l, s, val, u, e: number | nu, l, l): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l => {
+  con, s, t getVitalSco, r, e = (vital: key, o, f WebVita, l, s, value: number | nu, l, l): 'good' | 'needs-improvement' | 'poor' | nu, l, l => {
     if (val, u, e === nu, l, l) retu, r, n nu, l, l;
 
     con, s, t threshol, d, s = {
-      C, L, S: { go, o, d: 0.1, po, o, r: 0.25 },
-      F, I, D: { go, o, d: 1, 0, 0, po, o, r: 3, 0, 0 },
-      F, C, P: { go, o, d: 18, 0, 0, po, o, r: 30, 0, 0 },
-      L, C, P: { go, o, d: 25, 0, 0, po, o, r: 40, 0, 0 },
-      TT, F, B: { go, o, d: 8, 0, 0, po, o, r: 18, 0, 0 },
-      I, N, P: { go, o, d: 2, 0, 0, po, o, r: 5, 0, 0 },
+      CLS: { good: 0.1, poor: 0.25 },
+      FID: { good: 100, poor: 300 },
+      FCP: { good: 1800, poor: 3000 },
+      LCP: { good: 2500, poor: 4000 },
+      TTFB: { good: 800, poor: 1800 },
+      INP: { good: 200, poor: 500 },
     };
 
     con, s, t thresho, l, d = threshol, d, s[vit, a, l];
     if (!thresho, l, d) retu, r, n nu, l, l;
 
-    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
-    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    if (val, u, e <= thresho, l, d.go, o, d) return 'good';
+    if (val, u, e <= thresho, l, d.po, o, r) return 'nee, d, s-improvement';
+    return 'poor';
   };
 
-  con, s, t getVitalCol, o, r = (sco, r, e: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l): string => {
-    swit, c, h (sco, r, e) {
-      ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
-      ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yellow-6, 0, 0';
-      ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-5, 0, 0';
+  con, s, t getVitalColor = (score: 'good' | 'needs-improvement' | 'poor' | nu, l, l): string => {
+    switch(sco, r, e) {
+      case 'good': return 'te, x, t-gre, e, n-600';
+      case 'nee, d, s-improvement': return 'te, x, t-yellow-600';
+      case 'poor': return 'te, x, t-r, e, d-600';
+      default: return 'te, x, t-gr, a, y-500';
     }
   };
 

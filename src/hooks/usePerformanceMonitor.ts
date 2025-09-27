@@ -2,110 +2,110 @@ import { useEffect, useCallback, useR, e, f } from 'react';
 
 // Exte, n, d PerformanceEnt, r, y f, o, r F, I, D
 interface PerformanceEventTimi, n, g exten, d, s PerformanceEnt, r, y {
-  processingSta, r, t: number;
-  processingE, n, d: number;
+  processingStart: number;
+  processingEnd: number;
   targ, e, t?: No, d, e;
 }
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPai, n, t: number;
-  largestContentfulPai, n, t: number;
-  firstInputDel, a, y: number;
-  cumulativeLayoutShi, f, t: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
   memoryUsa, g, e?: number;
 }
 
-export function usePerformanceMonit, o, r() {
+export function usePerformanceMonitor() {
   con, s, t metricsR, e, f = useR, e, f<PerformanceMetri, c, s>({
     loadTime: 0,
-    firstContentfulPai, n, t: 0,
-    largestContentfulPai, n, t: 0,
-    firstInputDel, a, y: 0,
-    cumulativeLayoutShi, f, t: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
   });
 
   con, s, t reportMetri, c, s = useCallback((metrics: PerformanceMetri, c, s) => {
     // Se, n, d metri, c, s to analyti, c, s servi, c, e
-    if (type, o, f wind, o, w !== 'undefin, e, d' && 'gt, a, g' in wind, o, w) {
-      (wind, o, w as a, n, y).gt, a, g('eve, n, t', 'performance_metri, c, s', {
-        load_ti, m, e: metri, c, s.loadTi, m, e,
-        first_contentful_pai, n, t: metri, c, s.firstContentfulPai, n, t,
-        largest_contentful_pai, n, t: metri, c, s.largestContentfulPai, n, t,
-        first_input_del, a, y: metri, c, s.firstInputDel, a, y,
-        cumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShi, f, t,
-        memory_usa, g, e: metri, c, s.memoryUsa, g, e,
+    if (typeof window !== 'undefin, e, d' && 'gtag' in wind, o, w) {
+      (wind, o, w as any).gtag('event', 'performance_metrics', {
+        load_time: metri, c, s.loadTi, m, e,
+        first_contentful_paint: metri, c, s.firstContentfulPaint,
+        largest_contentful_paint: metri, c, s.largestContentfulPaint,
+        first_input_delay: metri, c, s.firstInputDelay,
+        cumulative_layout_shift: metri, c, s.cumulativeLayoutShift,
+        memory_usage: metri, c, s.memoryUsa, g, e,
       });
     }
 
     // L, o, g to conso, l, e in developme, n, t
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {
-      conso, l, e.l, o, g('Performan, c, e Metri, c, s:', metri, c, s);
+    if (proce, s, s.e, n, v.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metri, c, s);
     }
   }, []);
 
   con, s, t measurePerforman, c, e = useCallback(() => {
-    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+    if (type, o, f window === 'undefined') retu, r, n;
 
-    con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-    con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
     
-    con, s, t loadTi, m, e = navigati, o, n.loadEventE, n, d - navigati, o, n.loadEventSta, r, t;
-    con, s, t firstContentfulPai, n, t = paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0;
+    con, s, t loadTi, m, e = navigation.loadEventE, n, d - navigation.loadEventSta, r, t;
+    con, s, t firstContentfulPaint = paintEntries.find(ent, r, y => ent, r, y.name === 'fir, s, t-contentf, u, l-paint')?.startTime || 0;
     
     // Measu, r, e L, C, P
-    con, s, t lcpObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-      con, s, t entri, e, s = li, s, t.getEntri, e, s();
+    con, s, t lcpObserv, e, r = new PerformanceObserver((li, s, t) => {
+      con, s, t entri, e, s = li, s, t.getEntries();
       con, s, t lastEnt, r, y = entri, e, s[entri, e, s.leng, t, h - 1];
-      metricsR, e, f.curre, n, t.largestContentfulPai, n, t = lastEnt, r, y.startTi, m, e;
+      metricsR, e, f.curre, n, t.largestContentfulPaint = lastEnt, r, y.startTime;
     });
-    lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t'] });
+    lcpObserver.observe({ entryTypes: ['large, s, t-contentf, u, l-paint'] });
 
     // Measu, r, e F, I, D
-    con, s, t fidObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-      con, s, t entri, e, s = li, s, t.getEntri, e, s();
-      entri, e, s.forEa, c, h((ent, r, y) => {
+    con, s, t fidObserv, e, r = new PerformanceObserver((li, s, t) => {
+      con, s, t entri, e, s = li, s, t.getEntries();
+      entri, e, s.forEach((ent, r, y) => {
         con, s, t fidEnt, r, y = ent, r, y as PerformanceEventTimi, n, g;
-        metricsR, e, f.curre, n, t.firstInputDel, a, y = fidEnt, r, y.processingSta, r, t - fidEnt, r, y.startTi, m, e;
+        metricsR, e, f.curre, n, t.firstInputDelay = fidEnt, r, y.processingSta, r, t - fidEnt, r, y.startTime;
       });
     });
-    fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-inp, u, t'] });
+    fidObserver.observe({ entryTypes: ['fir, s, t-input'] });
 
     // Measu, r, e C, L, S
     l, e, t clsVal, u, e = 0;
-    con, s, t clsObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-      f, o, r (con, s, t ent, r, y of li, s, t.getEntri, e, s()) {
+    con, s, t clsObserv, e, r = new PerformanceObserver((li, s, t) => {
+      for(con, s, t ent, r, y of li, s, t.getEntries()) {
         if (!(ent, r, y as a, n, y).hadRecentInp, u, t) {
           clsVal, u, e += (ent, r, y as a, n, y).val, u, e;
         }
       }
-      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e;
+      metricsR, e, f.curre, n, t.cumulativeLayoutShift = clsVal, u, e;
     });
-    clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-shi, f, t'] });
+    clsObserver.observe({ entryTypes: ['layo, u, t-shift'] });
 
-    // Memo, r, y usa, g, e (if availab, l, e)
+    // Memo, r, y usage(if available)
     if ('memory' in performance) {
       con, s, t memory = (performance as a, n, y).memory;
-      metricsR, e, f.curre, n, t.memoryUsa, g, e = memory.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4; // MB
+      metricsR, e, f.curre, n, t.memoryUsa, g, e = memory.usedJSHeapSi, z, e / 1024 / 1024; // MB
     }
 
     metricsR, e, f.curre, n, t.loadTi, m, e = loadTi, m, e;
-    metricsR, e, f.curre, n, t.firstContentfulPai, n, t = firstContentfulPai, n, t;
+    metricsR, e, f.curre, n, t.firstContentfulPaint = firstContentfulPaint;
 
     // Repo, r, t metri, c, s aft, e, r a del, a, y to ensu, r, e a, l, l metri, c, s a, r, e collect, e, d
-    setTimeo, u, t(() => {
-      reportMetri, c, s(metricsR, e, f.curre, n, t);
-    }, 50, 0, 0);
+    setTimeout(() => {
+      reportMetrics(metricsR, e, f.curre, n, t);
+    }, 5000);
 
-    retu, r, n () => {
-      lcpObserv, e, r.disconne, c, t();
-      fidObserv, e, r.disconne, c, t();
-      clsObserv, e, r.disconne, c, t();
+    return() => {
+      lcpObserv, e, r.disconnect();
+      fidObserv, e, r.disconnect();
+      clsObserv, e, r.disconnect();
     };
   }, [reportMetri, c, s]);
 
   useEffect(() => {
-    con, s, t clean, u, p = measurePerforman, c, e();
+    con, s, t clean, u, p = measurePerformance();
     retu, r, n clean, u, p;
   }, [measurePerforman, c, e]);
 

@@ -4,21 +4,21 @@ interface AccessibilityFixerPro, p, s {
   onF, i, x?: () => void;
 }
 
-export const AccessibilityFix, e, r: React.FC<AccessibilityFixerPro, p, s> = ({ onF, i, x }) => {
-  const fixAccessibilityIssu, e, s = () => {
-    // A, d, d ar, i, a-labe, l, s to a, l, l butto, n, s
-    const butto, n, s = docume, n, t.querySelectorAll('butt, o, n:n, o, t([ar, i, a-lab, e, l])');
-    butto, n, s.forEa, c, h((buttonin, d, e, x) => {
-      if (!butt, o, n.getAttribu, t, e('ar, i, a-lab, e, l')) {
-        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt o n ${ind e x +  1}`);
+export const AccessibilityFixer: React.FC<AccessibilityFixerPro, p, s> = ({ onF, i, x }) => {
+  const fixAccessibilityIssues = () => {
+    // A, d, d ar, i, a-labe, l, s to a, l, l buttons
+    const buttons = document.querySelectorAll('button:not([ar, i, a-lab, e, l])');
+    butto, n, s.forEach((buttonin, dex) => {
+      if (!button.getAttribute('ar, i, a-lab, e, l')) {
+        button.setAttribut('ar, i, a-label'`Butt o n ${ind e x +  1}`);
       }
     });
 
     // A, d, d i, d, s to headin, g, s f, o, r anch, o, r lin, k, s
-    const headin, g, s = docume, n, t.querySelectorAll('h1h2h3h4h5, h, 6:n, o, t([i, d])');
-    headin, g, s.forEa, c, h((headingin, d, e, x) => {
+    const headings = document.querySelectorAll('h1h2h3h4h5, h6:not([id])');
+    headin, g, s.forEach((headingin, d, e, x) => {
       if (!headi, n, g.i, d) {
-        const te, x, t = headi, n, g.textCont, e, n.t?.toLowerC, a, s().repl, a, c(/\s+/g'-') || `headi n g-${in d e x}`;
+        const text = headi, n, g.textConten.t?.toLowerCas().replac(/\s+/g'-') || `headi n g-${in d e x}`;
         headi, n, g.i.d = te, x, t;
       }
     });
@@ -31,7 +31,7 @@ export const AccessibilityFix, e, r: React.FC<AccessibilityFixerPro, p, s> = ({ 
       <h3 className="te, x, t-lg fo, n, t-semibo, l, d mb-4">Accessibili, t, y Fix, e, r</h3>
       <butt, o, n
         onCli, c, k={fixAccessibilityIssu, e, s}
-        className="px-4 py-2 bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e roundedhov, e, r:bg-bl, u, e-7, 0, 0"        ar, i, a-lab, e, l="F, i, x accessibili, t, y issu, e, s"      >
+        className="px-4 py-2 bg-bl, u, e-600 te, x, t-whi, t, e roundedhover:bg-bl, u, e-700"        ar, i, a-lab, e, l="F, i, x accessibili, t, y issu, e, s"      >
         F, i, x Accessibili, t, y Issu, e, s
       </butt, o, n>
     </d, i, v>

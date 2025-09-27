@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screenfireEventwaitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEOOptimizer from '../SEOOptimizer';
 import AdvancedCacheManager from '../AdvancedCacheManager';

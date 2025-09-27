@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screenfireEventwaitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { ThemeProvider, ThemeToggle } from '../ThemeProvider';
-import { Skeleton, ServiceCardSkeleton, FeatureCardSkeleton, LoadingSpinner } from '../LoadingComponents';
+import { Skeleton, ServiceCardSkeletonFeatureCardSkeletonLoadingSpinner } from '../LoadingComponents';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -13,9 +13,9 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
-describe('ErrorBoundary', () => {
+describe('ErrorBoundary'() => {
   beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
