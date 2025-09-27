@@ -2,7 +2,7 @@ import React from 'react';
 // Removed Next.js Metadata import
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
-import Head from 'next/head';
+import SEO from '../../../components/SEO';
 
 // Removed Next.js metadata export
   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
@@ -14,12 +14,12 @@ import Head from 'next/head';
 export default function Fortune500AITransformationSuccessPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Head>
-        <title>Fortune 500 AI Transformation 2025: Ultimate Success Story</title>
-        <meta name="description" content="Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results." />
-        <meta name="keywords" content="Fortune 500, AI transformation, ROI, success, 2025, case study" />
-        <link rel="canonical" href="/case-studies/fortune-500-ai-transformation-2025-ultimate-success" />
-      </Head>
+      <SEO
+        title="Fortune 500 AI Transformation 2025: Ultimate Success Story"
+        description="Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results."
+        keywords="Fortune 500, AI transformation, ROI, success, 2025, case study"
+        url="/case-studies/fortune-500-ai-transformation-2025-ultimate-success"
+      />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-20">
