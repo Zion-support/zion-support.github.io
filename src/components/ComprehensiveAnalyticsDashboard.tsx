@@ -1,100 +1,165 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import AdvancedPerformanceOptimizer from './AdvancedPerformanceOptimizer';
+import AdvancedSecurityDashboard from './AdvancedSecurityDashboard';
+import SEOAccessibilityOptimizer from './SEOAccessibilityOptimizer';
+import { 
+  BarChart, 
+  Bar, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  Legend, 
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  PieChart,
+  Pie,
+  Cell
+} from 'recharts';
+import { 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Shield, 
+  Zap, 
+  Eye,
+  Activity,
+  Target,
+  Clock,
+  AlertTriangle,
+  CheckCircle
+} from 'lucide-react';
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number; bounceRate: number }>;
-  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
-  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
-  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
-  hourlyData: Array<{ hour: number; visitors: number }>;
-  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
-  realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
-  errorRate: number;
-  performanceScore: number;
+  visitors: {
+    total: number;
+    unique: number;
+    returning: number;
+    growth: number;
+  };
+  performance: {
+    pageSpeed: number;
+    loadTime: number;
+    bounceRate: number;
+    conversionRate: number;
+  };
+  security: {
+    score: number;
+    threats: number;
+    vulnerabilities: number;
+  };
+  seo: {
+    score: number;
+    keywords: number;
+    backlinks: number;
+  };
+  accessibility: {
+    score: number;
+    issues: number;
+  };
 }
 
-interface ComprehensiveAnalyticsDashboardProps {
-  data: AnalyticsData;
-  onDataRefresh?: () => void;
-  isRealTime?: boolean;
-  className?: string;
+interface ChartData {
+  name: string;
+  value: number;
+  color?: string;
 }
 
-export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDashboardProps> = ({
-  data,
-  onDataRefresh,
-  isRealTime = false,
-  className = ''
-}) => {
-  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
-  const [timeRange, setTimeRange] = useState<string>('7d');
+const ComprehensiveAnalyticsDashboard: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'seo'>('overview');
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+    visitors: { total: 0, unique: 0, returning: 0, growth: 0 },
+    performance: { pageSpeed: 0, loadTime: 0, bounceRate: 0, conversionRate: 0 },
+    security: { score: 0, threats: 0, vulnerabilities: 0 },
+    seo: { score: 0, keywords: 0, backlinks: 0 },
+    accessibility: { score: 0, issues: 0 }
+  });
+  const [isLoading, setIsLoading] = useState(true);
+
   const fetchAnalyticsData = useCallback(async () => {
-    setIsLoading(tru, e);
+    setIsLoading(true);
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve150, 0));
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
       const newData: AnalyticsData = {
         visitors: {
-          total: Math.floo.r(Math.rando.m() * 10000 + 5000)unique: Math.floo.r(Math.rando.m() * 8000 + 3000)returning: Math.floo.r(Math.rando.m() * 3000 + 1000)growth: Math.roun.d((Math.rando.m() - 0.5) * 50)
-        }performance: {
-          pageSpeed: Math.roun.d(Math.rando.m() * 30 + 70)loadTime: Math.roun.d(Math.rando.m() * 2000 + 1000)bounceRate: Math.roun.d(Math.rando.m() * 30 + 20)conversionRate: Math.roun.d(Math.rando.m() * 10 + 2)
-        }security: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)threats: Math.floo.r(Math.rando.m() * 5)vulnerabilities: Math.floo.r(Math.rando.m() * 10 + 2)
-        }seo: {
-          score: Math.roun.d(Math.rando.m() * 25 + 75)keywords: Math.floo.r(Math.rando.m() * 200 + 150)backlinks: Math.floo.r(Math.rando.m() * 500 + 300)
-        }accessibility: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)issues: Math.floo.r(Math.rando.m() * 8 + 2)
+          total: Math.floor(Math.random() * 10000 + 5000),
+          unique: Math.floor(Math.random() * 8000 + 3000),
+          returning: Math.floor(Math.random() * 3000 + 1000),
+          growth: Math.round((Math.random() - 0.5) * 50)
+        },
+        performance: {
+          pageSpeed: Math.round(Math.random() * 30 + 70),
+          loadTime: Math.round(Math.random() * 2000 + 1000),
+          bounceRate: Math.round(Math.random() * 30 + 20),
+          conversionRate: Math.round(Math.random() * 10 + 2)
+        },
+        security: {
+          score: Math.round(Math.random() * 20 + 80),
+          threats: Math.floor(Math.random() * 5),
+          vulnerabilities: Math.floor(Math.random() * 10 + 2)
+        },
+        seo: {
+          score: Math.round(Math.random() * 25 + 75),
+          keywords: Math.floor(Math.random() * 200 + 150),
+          backlinks: Math.floor(Math.random() * 500 + 300)
+        },
+        accessibility: {
+          score: Math.round(Math.random() * 20 + 80),
+          issues: Math.floor(Math.random() * 8 + 2)
         }
       };
       
-      setAnalyticsData(newDat, a);
-    } catch (erro, r) {
-      console.erro.r('Error fetching analytics data: ', erro, , , , , r);
+      setAnalyticsData(newData);
+    } catch (error) {
+      console.error('Error fetching analytics data:', error);
     } finally {
-      setIsLoading(fals, e);
+      setIsLoading(false);
     }
-  }[]);
+  }, []);
 
-  useEffect(() = > {
+  useEffect(() => {
     fetchAnalyticsData();
-  }[fetchAnalyticsDat, a]);
+  }, [fetchAnalyticsData]);
 
-  const getScoreColor = (score: numbe, r): string => {
-    if (score >= 9, 0) return ', text-green-600';
-    if (score >= 7, 0) return 'text-yellow-600';
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getGrowthColor = (growth: numbe, r): string => {
+  const getGrowthColor = (growth: number): string => {
     return growth >= 0 ? 'text-green-600' : 'text-red-600';
   };
 
-  if (isLoadin, g) {
+  if (isLoading) {
     return (
-      <div className="flex items-center justify-centerh-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2border-blue-600"></div>      </div>
+      <div className="flex items-center justify-center h-96">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      </div>
     );
   }
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#10B981' }{ name: 'Load Time', value: analyticsData.performanc.e.loadTim.e / 100color: '#F59E0B' }{ name: 'Bounce Rate', value: analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }{ name: 'Conversion', value: analyticsData.performanc.e.conversionRat.e * 10color: '#8B5CF6' }
+    { name: 'Page Speed', value: analyticsData.performance.pageSpeed, color: '#10B981' },
+    { name: 'Load Time', value: analyticsData.performance.loadTime / 100, color: '#F59E0B' },
+    { name: 'Bounce Rate', value: analyticsData.performance.bounceRate, color: '#EF4444' },
+    { name: 'Conversion', value: analyticsData.performance.conversionRate * 10, color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' }{ name: 'Threats', value: analyticsData.securit.y.threat.s * 20color: '#EF4444' }{ name: 'Vulnerabilities', value: analyticsData.securit.y.vulnerabilitie.s * 10color: '#F59E0B' }
+    { name: 'Security Score', value: analyticsData.security.score, color: '#10B981' },
+    { name: 'Threats', value: analyticsData.security.threats * 20, color: '#EF4444' },
+    { name: 'Vulnerabilities', value: analyticsData.security.vulnerabilities * 10, color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' }{ name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }
+    { name: 'SEO Score', value: analyticsData.seo.score, color: '#3B82F6' },
+    { name: 'Accessibility', value: analyticsData.accessibility.score, color: '#8B5CF6' }
   ];
 
   return (
@@ -102,44 +167,52 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className="h-6 w-6text-blue-600" />
-            <span>Comprehensive Analytics Dashboard</span>          </CardTitle>
+            <Activity className="h-6 w-6 text-blue-600" />
+            Comprehensive Analytics Dashboard
+          </CardTitle>
           <CardDescription>
-            Monitor your application's performancesecurityand SEO metrics
+            Monitor your application's performance, security, and SEO metrics
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex space-x-1 mb-6 bg-gray-100 p-1rounded-lg">            {[
-              { id: 'overview', label: 'Overview', icon: Activity }{ id: 'performance', label: 'Performance', icon: Zap }{ id: 'security', label: 'Security', icon: Shield }{ id: 'seo', label: 'SEO & A11y', icon: Eye }
-            ].ma.p(({ idlabelicon: Icon }) => (
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6">
+            {[
+              { id: 'overview', label: 'Overview', icon: Activity },
+              { id: 'performance', label: 'Performance', icon: Zap },
+              { id: 'security', label: 'Security', icon: Shield },
+              { id: 'seo', label: 'SEO & A11y', icon: Eye }
+            ].map(({ id, label, icon: Icon }) => (
               <button
-                key={key}
-                onClick={() => setActiveTab(key as any)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === key
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }` }
+                key={id}
+                onClick={() => setActiveTab(id as any)}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  activeTab === id
+                    ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300'
+                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
+                }`}
               >
-                <Icon className="h-4w-4" />
-                <span>{label}</span>              </button>
+                <Icon className="h-4 w-4" />
+                <span>{label}</span>
+              </button>
             ))}
           </div>
 
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-6">
-              {/* Key Metrics Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
+              {/* Key Metrics */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-8 w-8text-blue-600" />
+                      <Users className="h-8 w-8 text-blue-600" />
                       <div>
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
-                        <div className="text-smtext-gray-600">Total Visitors</div>
-                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}` }>
-                          {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%                        </div>
+                        <div className="text-sm text-gray-600">Total Visitors</div>
+                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}>
+                          {analyticsData.visitors.growth > 0 ? '+' : ''}{analyticsData.visitors.growth}% vs last month
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -148,13 +221,14 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Zap className="h-8 w-8text-green-600" />
+                      <Zap className="h-8 w-8 text-green-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`}>
                           {analyticsData.performance.pageSpeed}
                         </div>
-                        <div className="text-smtext-gray-600">Performance Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.performance.loadTime}ms load</div>                      </div>
+                        <div className="text-sm text-gray-600">Performance Score</div>
+                        <div className="text-xs text-gray-500">{analyticsData.performance.loadTime}ms load</div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -162,13 +236,14 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Shield className="h-8 w-8text-purple-600" />
+                      <Shield className="h-8 w-8 text-purple-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`}>
                           {analyticsData.security.score}
                         </div>
-                        <div className="text-smtext-gray-600">Security Score</div>
-                        <div className="text-xstext-red-500">{analyticsData.security.vulnerabilities} issues</div>                      </div>
+                        <div className="text-sm text-gray-600">Security Score</div>
+                        <div className="text-xs text-red-500">{analyticsData.security.vulnerabilities} issues</div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -176,20 +251,22 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Globe className="h-8 w-8text-orange-600" />
+                      <Globe className="h-8 w-8 text-orange-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}` }>
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`}>
                           {analyticsData.seo.score}
                         </div>
-                        <div className="text-smtext-gray-600">SEO Score</div>
-                        <div className="text-xstext-gray-500">{analyticsData.seo.keywords} keywords</div>                      </div>
+                        <div className="text-sm text-gray-600">SEO Score</div>
+                        <div className="text-xs text-gray-500">{analyticsData.seo.keywords} keywords</div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
               {/* Charts */}
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-6">                <Card>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
                   <CardHeader>
                     <CardTitle>Performance Metrics</CardTitle>
                   </CardHeader>
@@ -197,7 +274,8 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                     <ResponsiveContainer width="100%" height={300}>
                       <BarChart data={performanceData}>
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />                        <YAxis />
+                        <XAxis dataKey="name" />
+                        <YAxis />
                         <Tooltip />
                         <Bar dataKey="value" fill="#10B981" />
                       </BarChart>
@@ -213,9 +291,10 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                     <ResponsiveContainer width="100%" height={300}>
                       <LineChart data={[...securityData, ...seoAccessibilityData]}>
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />                        <YAxis />
+                        <XAxis dataKey="name" />
+                        <YAxis />
                         <Tooltip />
-                        <Line type="monotone" dataKey="value" stroke="#10B981" strokeWidth={ 2} />
+                        <Line type="monotone" dataKey="value" stroke="#10B981" strokeWidth={2} />
                       </LineChart>
                     </ResponsiveContainer>
                   </CardContent>
@@ -225,62 +304,56 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
               {/* Alerts and Recommendations */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <AlertTriangle className="h-5 w-5text-orange-600" />
-                    <span>Priority Actions</span>
-                  </CardTitle>
+                  <CardTitle>Alerts & Recommendations</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-4">
-                    {analyticsData.performance.pageSpeed < 70 && (
-                      <div className="p-4 border border-red-200 rounded-lgbg-red-50">
-                        <div className="font-medium text-red-800mb-1">Performance Issue</div>
-                        <div className="text-smtext-red-600">Page speed below optimal threshold</div>
-                      </div>
-                    )}
+                  <div className="space-y-3">
                     {analyticsData.security.vulnerabilities > 5 && (
-                      <div className="p-4 border border-orange-200 rounded-lgbg-orange-50">
-                        <div className="font-medium text-orange-800mb-1">Security Alert</div>
-                        <div className="text-smtext-orange-600">Multiple vulnerabilities detected</div>
+                      <div className="flex items-center space-x-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                        <AlertTriangle className="h-5 w-5 text-red-600" />
+                        <div>
+                          <p className="font-medium text-red-900 dark:text-red-100">High Security Risk</p>
+                          <p className="text-sm text-red-700 dark:text-red-300">
+                            {analyticsData.security.vulnerabilities} vulnerabilities detected
+                          </p>
+                        </div>
                       </div>
                     )}
-                    {analyticsData.accessibility.issues > 5 && (
-                      <div className="p-4 border border-yellow-200 rounded-lgbg-yellow-50">
-                        <div className="font-medium text-yellow-800mb-1">Accessibility Issues</div>
-                        <div className="text-smtext-yellow-600">Several accessibility improvements needed</div>                      </div>
+                    {analyticsData.performance.pageSpeed < 80 && (
+                      <div className="flex items-center space-x-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+                        <Zap className="h-5 w-5 text-yellow-600" />
+                        <div>
+                          <p className="font-medium text-yellow-900 dark:text-yellow-100">Performance Issue</p>
+                          <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                            Page speed is below recommended threshold
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {analyticsData.accessibility.issues > 3 && (
+                      <div className="flex items-center space-x-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                        <Eye className="h-5 w-5 text-blue-600" />
+                        <div>
+                          <p className="font-medium text-blue-900 dark:text-blue-100">Accessibility Issues</p>
+                          <p className="text-sm text-blue-700 dark:text-blue-300">
+                            {analyticsData.accessibility.issues} accessibility issues found
+                          </p>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </CardContent>
               </Card>
             </div>
-            <button
-              onClick={onDataRefresh}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-            >
-              Refresh
-            </button>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="text-sm font-medium text-gray-600">Page Views</div>
-            <div className="text-2xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="text-sm font-medium text-gray-600">Unique Visitors</div>
-            <div className="text-2xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="text-sm font-medium text-gray-600">Bounce Rate</div>
-            <div className="text-2xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="text-sm font-medium text-gray-600">Conversion Rate</div>
-            <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
-          </div>
-        </div>
-      </div>    </div>
+          )}
+
+          {/* Other Tabs */}
+          {activeTab === 'performance' && <AdvancedPerformanceOptimizer />}
+          {activeTab === 'security' && <AdvancedSecurityDashboard />}
+          {activeTab === 'seo' && <SEOAccessibilityOptimizer />}
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 

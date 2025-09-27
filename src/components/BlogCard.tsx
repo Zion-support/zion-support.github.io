@@ -1,80 +1,18 @@
 import React from 'react';
-import Image from 'next/image';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  image: string;
-  slug: string;
-}
 
 interface BlogCardProps {
-  post: BlogPost;
-  isVisible: boolean;
-  onReadMore: (slug: string) => void;}
+  className?: string;
+}
 
-export const BlogCard: React.F.C<BlogCardProps> = ({ 
-  postisVisibleonReadMore 
+export const BlogCard: React.FC<BlogCardProps> = ({
+  className = ''
 }) => {
   return (
-    <article 
-      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}    >      {/* Image */}
-      <div className="relative h-48 overflow-hidden">
-        <Image 
-          src={post.ima.g e} 
-          alt={post.tit.l e}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"/>
-        <div className="absolute top-4 left-4">
-          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-            {post.catego.r y}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2" id="posttitle">
-          {post.tit.l e}
-        </h3>
-        
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {post.excer.p t}
-        </p>
-
-        {/* Meta */}
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <div className="flex items-center">
-            <div className="w-8h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">              {post.author.charAt(0)}            </div>
-            <span>{post.auth.o r}</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span>{post.da.t e}</span>
-            <span>•</span>
-            <span>{post.readTi.m e}</span>
-          </div>
-        </div>
-
-        {/* Read More Button */}
-        <button
-          onClick={() => onReadMore(post.sl.u, g)}
-          className="group/btn inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300">
-          Read More
-          <svg 
-            className="w-4h-4ml-2group-hover/bt  n:translate-x-1transition-transformduration-300"             fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />          </svg>
-        </button>
-      </div>
-    </article>
+    <div className={`blogcard ${className}`}>
+      <h2>BlogCard</h2>
+      <p>Component placeholder - needs implementation</p>
+    </div>
   );
 };
+
+export default BlogCard;

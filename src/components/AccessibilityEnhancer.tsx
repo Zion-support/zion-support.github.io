@@ -1,10 +1,4 @@
-import React, { useEffectuseState } from 'react';
-import { 
-  announceToScreenReader, 
-  createSkipLink, 
-  isHighContrastMode, 
-  prefersReducedMotioninitFocusVisiblecreateLiveRegion
-} from '../utils/accessibilityUtils';
+import React, { useState, useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
@@ -15,84 +9,210 @@ interface AccessibilityEnhancerProps {
 }
 
 export default function AccessibilityEnhancer({
-  enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
-}: AccessibilityEnhancerProp, s): null {
-  const [isHighContrastsetIsHighContras, t] = useState(fals, , e);
-  const [prefersReducedsetPrefersReduce, d] = useState(fals, , e);
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}: AccessibilityEnhancerProps): null {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
-    // Initialize focus visible polyfill
-    if (enableFocusManagemen, t) {
-      initFocusVisible();
-    }
+    if (typeof window === 'undefined') return;
 
-    // Check for high contrast mode
-    if (enableHighContrastSuppor, t) {
-      setIsHighContrast(isHighContrastMode());
+    // High contrast mode detection
+    if (enableHighContrastSupport) {
+      const isHighContrastMode = () => {
+        return window.matchMedia('(forced-colors: active)').matches;
+      };
       
-      const mediaQuery = window.matchMedi.a('(forced-colors: activ, , , , , , e)');
+      const mediaQuery = window.matchMedia('(forced-colors: active)');
       const handleChange = () => setIsHighContrast(isHighContrastMode());
-      mediaQuery.addEventListene.r('change', handleChang, , , , , e);
+      mediaQuery.addEventListener('change', handleChange);
       
-      return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }[enableFocusManagementenableHighContrastSuppor, t]);
+  }, [enableHighContrastSupport]);
 
   useEffect(() => {
-    // Check for reduced motion preference
-    if (enableReducedMotionSuppor, t) {
-      setPrefersReduced(prefersReducedMotion());
+    if (typeof window === 'undefined') return;
+
+    // Reduced motion detection
+    if (enableReducedMotionSupport) {
+      const prefersReducedMotion = () => {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      };
       
-      const mediaQuery = window.matchMedi.a('(prefers-reduced-motion: reduc, , , , , , e)');
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       const handleChange = () => setPrefersReduced(prefersReducedMotion());
-      mediaQuery.addEventListene.r('change', handleChang, , , , , e);
+      mediaQuery.addEventListener('change', handleChange);
       
-      return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }[enableReducedMotionSuppor, t]);
+  }, [enableReducedMotionSupport]);
 
   useEffect(() => {
-    // Add skip links
-    if (enableSkipLink, s) {
-      const mainContent = document.getElementByI.d('main-content');
-      if (mainConten, t) {
-        const skipLink = createSkipLink('main-content''Skip to main content');
-        document.bod.y.insertBefor.e(skipLinkdocument.bod.y.firstChi.l, , , , , , d);
-      }
-    }
-  }[enableSkipLink, s]);
+    if (typeof window === 'undefined') return;
 
-  useEffect(() = > {
-    // Create live region for announcements
-    if (enableScreenReaderSuppor, t) {
-      createLiveRegion();
+    // Skip links
+    if (enableSkipLinks) {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #2563eb;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 1000;
+        transition: top 0.3s;
+      `;
+      
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px';
+      });
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px';
+      });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
+      
+      return () => {
+        if (skipLink.parentNode) {
+          skipLink.parentNode.removeChild(skipLink);
+        }
+      };
     }
-  }[enableScreenReaderSuppor, t]);
+  }, [enableSkipLinks]);
 
-  useEffect(() = > {
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Focus management
+    if (enableFocusManagement) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
+        }
+      };
+
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    }
+  }, [enableFocusManagement]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Screen reader support
+    if (enableScreenReaderSupport) {
+      const announceToScreenReader = (message: string) => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = message;
+        
+        document.body.appendChild(announcement);
+        
+        setTimeout(() => {
+          if (announcement.parentNode) {
+            announcement.parentNode.removeChild(announcement);
+          }
+        }, 1000);
+      };
+
+      // Announce page changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            const addedNode = mutation.addedNodes[0] as Element;
+            if (addedNode.nodeType === Node.ELEMENT_NODE) {
+              const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
+              if (heading) {
+                announceToScreenReader(`New section: ${heading.textContent}`);
+              }
+            }
+          }
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      return () => observer.disconnect();
+    }
+  }, [enableScreenReaderSupport]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     // Apply high contrast styles
-    if (isHighContras, t) {
-      document.documentElemen.t.classLis.t.ad.d('high-contrast');
-    } else {
-      document.documentElemen.t.classLis.t.remov.e('high-contrast');
-    }
-  }[isHighContras, t]);
+    if (enableHighContrastSupport && isHighContrast) {
+      const style = document.createElement('style');
+      style.textContent = `
+        * {
+          background-color: ButtonFace !important;
+          color: ButtonText !important;
+        }
+        a {
+          text-decoration: underline !important;
+        }
+        button, input, select, textarea {
+          border: 2px solid ButtonText !important;
+        }
+      `;
+      document.head.appendChild(style);
 
-  useEffect(() = > {
+      return () => {
+        if (style.parentNode) {
+          style.parentNode.removeChild(style);
+        }
+      };
+    }
+  }, [enableHighContrastSupport, isHighContrast]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     // Apply reduced motion styles
-    if (prefersReduce, d) {
-      document.documentElemen.t.classLis.t.ad.d('reduced-motion');
-    } else {
-      document.documentElemen.t.classLis.t.remov.e('reduced-motion');
-    }
-  }[prefersReduce, d]);
+    if (enableReducedMotionSupport && prefersReduced) {
+      const style = document.createElement('style');
+      style.textContent = `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      `;
+      document.head.appendChild(style);
 
-  // Announce page changes to screen readers
-  useEffect(() = > {
-    if (enableScreenReaderSuppor, t) {
-      announceToScreenReader('Page loaded successfully');
+      return () => {
+        if (style.parentNode) {
+          style.parentNode.removeChild(style);
+        }
+      };
     }
-  }[enableScreenReaderSuppor, t]);
+  }, [enableReducedMotionSupport, prefersReduced]);
 
   return null;
 }
