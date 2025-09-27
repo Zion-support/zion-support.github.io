@@ -210,10 +210,8 @@ jest.mock('../router', () => {
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   // Set the window location for the mocked router
-  Object.defineProperty(window, 'location', {
-    value: { pathname: route },
-    writable: true
-  });
+  delete (window as any).location;
+  (window as any).location = { pathname: route };
   return render(ui);
 };
 
