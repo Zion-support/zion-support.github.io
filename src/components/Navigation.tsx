@@ -9,7 +9,7 @@ interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   onToggleDarkMo, d, e?: () => vo, i, d;
   activeSecti, o, n?: stri, n, g;
   onSectionChan, g, e?: (section: stri, n, g) => void};
-const Navigation = React.memo(function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
+export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(fal, s, e);
   const [showTaskManagersetShowTaskManager] = useState(fal, s, e);
   useEffect(() => {
@@ -144,5 +144,3 @@ const Navigation = React.memo(function Navigation({currentTime = newDate()isDark
   )};
 
 export default Navigati;
-
-export default Navigation;

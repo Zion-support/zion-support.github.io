@@ -1,11 +1,9 @@
-import { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-interface AccessibilityIssue {
-  type: "error" | "warning" | "info";
+interface AccessibilityIssue {type: "error" | "warning" | "info";
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
 interface AccessibilityAuditorProps {
   onIssuesFound?: (issues: AccessibilityIssue[]) => void;

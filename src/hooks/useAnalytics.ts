@@ -18,14 +18,17 @@ export function useAnalytics() {
     (window as any).gtag = gtag;
 
     gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+      page_title: document.title,
+      page_location: window.location.href
+    });
   }, []);
 
-  const trackClick = (eventName: string, category: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, {
+  const trackClick = (eventName: string, category: string, label?: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, {
         event_category: category,
-        event_label: eventName,
+        event_label: label,
       });
     }
   };
