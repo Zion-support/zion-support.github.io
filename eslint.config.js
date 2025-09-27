@@ -66,10 +66,10 @@ export default [
   // Apply recommended base only to selected app/test files
   {
     ...(js?.configs?.recommended ?? {}),
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
   },
   {
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages_minimal/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
