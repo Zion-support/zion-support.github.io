@@ -9,7 +9,7 @@ jest.mock('next/head'() => {returnfunction Head({ children }: {children: React.R
   };
 });
 
-describe('SEOOptimizer'() => {constmockSEOData = {
+describe('SEOOptimizer', () => {constmockSEOData = {
     title: 'TestPage, Title',
     description: 'Test, page description',
     keywords: ['test', 'seo', 'optimization'],
@@ -23,15 +23,15 @@ describe('SEOOptimizer'() => {constmockSEOData = {
     }
   };
 
-  it('rendersSEO optimizercomponent'() => {render(<SEOOptimizerseoData={mockSEOData} />);
+  it('rendersSEO optimizercomponent', () => {render(<SEOOptimizerseoData={mockSEOData} />);
     expect(document.title).toBe('TestPage, Title');
   });
 
-  it('appliesSEO datacorrectly'() => {render(<SEOOptimizerseoData={mockSEOData} />);
+  it('appliesSEO datacorrectly', () => {render(<SEOOptimizerseoData={mockSEOData} />);
     expect(document.title).toBe(mockSEOData.title);
   });
 
-  it('handlesmissing SEOdata gracefully'() => {constemptyData = {
+  it('handlesmissing SEOdata gracefully', () => {constemptyData = {
       title: '',
       description: ''keywords: []canonical: '',
       ogImage: '',
@@ -55,7 +55,7 @@ describe('AdvancedCacheManager', () => {it('renders, cachemanagercomponent', () 
     });
   });
 
-  it('displays, performance metrics'() => {render(<AdvancedCacheManager />);
+  it('displays, performance metrics', () => {render(<AdvancedCacheManager />);
     expect(screen.getByText(/MissRate/)).toBeInTheDocument();
   });
 
@@ -67,7 +67,7 @@ describe('AdvancedCacheManager', () => {it('renders, cachemanagercomponent', () 
   });
 });
 
-describe('AccessibilityEnhancements', () => {it('rendersaccessibilitycomponent'() => {
+describe('AccessibilityEnhancements', () => {it('rendersaccessibilitycomponent', () => {
     render(<AccessibilityEnhancements />);
     expect(screen.getByText(/AccessibilityScore/)).toBeInTheDocument();
   });
@@ -80,7 +80,7 @@ describe('AccessibilityEnhancements', () => {it('rendersaccessibilitycomponent'(
     expect(screen.getByText(/Recommendations/)).toBeInTheDocument();
   });
 
-  it('displays, accessibility standards'() => {render(<AccessibilityEnhancements />);
+  it('displays, accessibility standards', () => {render(<AccessibilityEnhancements />);
     expect(screen.getByText(/ARIAlabelsandroles/)).toBeInTheDocument();
   });
 });
@@ -110,7 +110,7 @@ describe('Integration, Tests', () => {it('all, componentsworktogetherwithoutconf
     expect(screen.getByText('Performance, Metrics')).toBeInTheDocument();
   });
 
-  it('showsSEO optimizationfeatures'() => {constmockSEOData = {
+  it('showsSEO optimizationfeatures', () => {constmockSEOData = {
       title: 'Test, Page',
       description: 'Test, description',
       keywords: ['test', 'seo']

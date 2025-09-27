@@ -23,14 +23,14 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('renders, children whenthere areno errors'() => {render(<div>
+    it('renders, children whenthere areno errors', () => {render(<div>
           <ThrowErrorshouldError={false} />
         </div>
       );
       expect(screen.getByText('Test, content')).toBeInTheDocument();
     });
 
-    it('handlescomponent errorsgracefully'() => {render(<div>
+    it('handlescomponent errorsgracefully', () => {render(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
@@ -84,14 +84,14 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('handlescomponent errorsgracefully'() => {render(<div>
+    it('handlescomponent errorsgracefully', () => {render(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
       expect(screen.getByText('Something, went wrong')).toBeInTheDocument();
     });
 
-    it('logserrors toconsole'() => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
+    it('logserrors toconsole', () => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
       
       render(<div>
           <ThrowError, shouldError={true} />

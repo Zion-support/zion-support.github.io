@@ -191,48 +191,42 @@ const Dashboard: React.FC = () => {
   ], []);
 
   // Sample data for advanced components - memoized to prevent re-creation
-	const, sampleAnalyticsData = useMemo(() => ({
+	const sampleAnalyticsData = useMemo(() => ({
     pageViews: 125000,
     uniqueVisitors: 45000,
     bounceRate: 35.2,
     avgSessionDuration: 180,
     conversionRate: 12.5,
     topPages: [
-      {,
-		page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+      { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
       { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
       { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
     ],
     trafficSources: [
-      {,
+      {
 		source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
       { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
       { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
     ],
                 deviceTypes: [
-                  {,
-		device: 'Desktop', count: 25000, percentage: 55.6 },
+                  { device: 'Desktop', count: 25000, percentage: 55.6 },
                   { device: 'Mobile', count: 15000, percentage: 33.3 },
                   { device: 'Tablet', count: 5000, percentage: 11.1 }
                 ],
     geographicData: [
-      {,
-		country: 'United States', visitors: 18000, percentage: 40.0 },
+      { country: 'United States', visitors: 18000, percentage: 40.0 },
       { country: 'Canada', visitors: 9000, percentage: 20.0 },
       { country: 'United Kingdom', visitors: 7200, percentage: 16.0 }
     ],
-    hourlyData: Array.from({,
-		length: 24 }, (_,, i) => ({ hour: i, visitors: Math.floor(Math.random() * 1000) })),
-    dailyData: Array.from({,
-		length: 30 }, (_,, i) => ({ 
+    hourlyData: Array.from({ length: 24 }, (_, i) => ({ hour: i, visitors: Math.floor(Math.random() * 1000) })),
+    dailyData: Array.from({ length: 30 }, (_, i) => ({ 
       date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
       visitors: Math.floor(Math.random() * 2000) + 1000,
       pageViews: Math.floor(Math.random() * 5000) + 2000
     })),
     realTimeVisitors: 127,
     topKeywords: [
-      {,
-		keyword: 'AI solutions', searches: 1250, position: 1 },
+      { keyword: 'AI solutions', searches: 1250, position: 1 },
       { keyword: 'cloud computing', searches: 980, position: 2 },
       { keyword: 'digital transformation', searches: 750, position: 3 }
     ],

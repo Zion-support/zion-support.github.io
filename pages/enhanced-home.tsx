@@ -14,17 +14,19 @@ export default function Home(): JSX.Element {
 	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
-		setIsVisible(true)}, []);
+		setIsVisible(true);
+	}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
 
-	const handleSelectPlan = (tierId:, string) => {
+	const handleSelectPlan = (tierId: string) => {
 		trackClick(`select-plan-${tierId}`, 'conversion');
 		// Handle plan selection logic here
-		console.log('Selected plan:', tierId)};
+		console.log('Selected plan:', tierId);
+	};
 
-	const handleReadMore = (slug:, string) => {
+	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
 		// Handle blog navigation logic here
 		console.log('Read more:', slug);

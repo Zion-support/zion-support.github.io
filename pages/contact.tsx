@@ -118,7 +118,8 @@ export default function Contact(): JSX.Element {
 		'6+ months',
 		'Flexible'
 	];
-   return (
+
+	return (
      <>
        <SEO />
        {/* <Navigation /> */}
@@ -390,4 +391,5 @@ export default function Contact(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}

@@ -25,7 +25,7 @@ describe('ErrorBoundary', () => {beforeEach(() => {
     expect(screen.getByText('Refresh, Page')).toBeInTheDocument();
   });
 
-  it('renders, children whenno erroroccurs'() => {render(<ErrorBoundary>
+  it('renders, children whenno erroroccurs', () => {render(<ErrorBoundary>
         <div>Testcontent</div>
       </ErrorBoundary>
     );
@@ -44,7 +44,7 @@ describe('ErrorBoundary', () => {beforeEach(() => {
     expect(screen.getByText('Pleaserefresh thepage ortry againlater.')).toBeInTheDocument();
   });
 
-  it('logserror toconsole'() => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
+  it('logserror toconsole', () => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
     const ThrowError = () => {throw, new Error('Test, error');
     };
 
@@ -56,7 +56,7 @@ describe('ErrorBoundary', () => {beforeEach(() => {
     expect(consoleSpy).toHaveBeenCalled();
   });
 
-  it('renders, children whenthere areno errors'() => {render(<ErrorBoundary>
+  it('renders, children whenthere areno errors', () => {render(<ErrorBoundary>
         <div>Noerror</div>
       </ErrorBoundary>
     );
@@ -64,7 +64,7 @@ describe('ErrorBoundary', () => {beforeEach(() => {
   });
 });
 
-describe('ThemeProvider', () => {it('renders, children'() => {
+describe('ThemeProvider', () => {it('renders, children', () => {
     render(<ThemeProvider>
         <div>Testcontent</div>
       </ThemeProvider>
@@ -72,7 +72,7 @@ describe('ThemeProvider', () => {it('renders, children'() => {
     expect(screen.getByText('Test, content')).toBeInTheDocument();
   });
 
-  it('provides, theme context'() => {constTestComponent = () => {
+  it('provides, theme context', () => {constTestComponent = () => {
       const { theme } = React.useContext(ThemeProvider.context);
       return <div data-testid="theme">{theme}</div>;
     };
@@ -108,12 +108,12 @@ describe('LoadingComponents', () => {it('rendersskeletoncomponent', () => {
     expect(screen.getByTestId('feature-card-skeleton')).toBeInTheDocument();
   });
 
-  it('renders, loading spinner'() => {render(<LoadingComponents />);
+  it('renders, loading spinner', () => {render(<LoadingComponents />);
     constspinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('animate-spin', 'w-8', 'h-8');
   });
 
-  it('renders, loading spinnerwith differentsizes'() => {render(<LoadingComponents />);
+  it('renders, loading spinnerwith differentsizes', () => {render(<LoadingComponents />);
     constspinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('w-12', 'h-12');
   });
@@ -138,12 +138,12 @@ describe('ComponentIntegration', () => {it('renders, allcomponentstogetherwithou
     expect(screen.getByTestId('feature-card-skeleton')).toBeInTheDocument();
   });
 
-  it('renders, loading spinner'() => {render(<LoadingComponents />);
+  it('renders, loading spinner', () => {render(<LoadingComponents />);
     constspinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('animate-spin');
   });
 
-  it('renders, loading spinnerwith differentsizes'() => {render(<LoadingComponents />);
+  it('renders, loading spinnerwith differentsizes', () => {render(<LoadingComponents />);
     constspinner = screen.getByTestId('spinner');
     expect(spinner).toHaveClass('w-12', 'h-12');
   });

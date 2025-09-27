@@ -89,7 +89,8 @@ export default function Blog(): JSX.Element {
 		// Simulate API call
 		await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false)};
+		setIsNewsletterLoading(false);
+	};
   return (
     <>
 			<EnhancedSEO
@@ -216,4 +217,5 @@ export default function Blog(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}
