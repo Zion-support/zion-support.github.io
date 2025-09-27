@@ -50,6 +50,7 @@ class ErrorReporter {
   private maxReports = 100;
   private sessionId: string;
   private isInitialized = false;
+  private isReporting = false;
 
   private constructor() {
     this.sessionId = this.generateSessionId();
@@ -276,24 +277,40 @@ class ErrorReporter {
   }
 
   private async sendToMonitoringService(report: ErrorReport) {
+    // Prevent recursion by checking if we're already in an error reporting cycle
+    if (this.isReporting) {
+      return;
+    }
+    
+    this.isReporting = true;
+    
     try {
-      // Send to your error monitoring service
-      await fetch('/api/error-reporting', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(report),
-      });
-    } catch {
+      // Only send to monitoring service if we're not in a test environment
+      if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
+        await fetch('/api/error-reporting', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(report),
+        });
+      }
+    } catch (error) {
       // Fallback: store in localStorage for later retry
       try {
-        const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');
-        storedReports.push(report);
-        localStorage.setItem('errorReports', JSON.stringify(storedReports.slice(-10)));
+        if (typeof localStorage !== 'undefined') {
+          const storedReports = JSON.parse(localStorage.getItem('errorReports') || '[]');
+          storedReports.push(report);
+          localStorage.setItem('errorReports', JSON.stringify(storedReports.slice(-10)));
+        }
       } catch {
-        // Ignore localStorage errors
+        // If localStorage fails, just log to console silently
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to store error report:', report);
+        }
       }
+    } finally {
+      this.isReporting = false;
     }
   }
 
