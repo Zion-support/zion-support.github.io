@@ -42,6 +42,7 @@ export default function App(): React.JSX.Element {
     initOptimizations();
     
     // Initialize security features
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const securityManagerInstance = SecurityManager.getInstance();
     
     // Initialize performance monitoring
