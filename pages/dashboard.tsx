@@ -328,4 +328,6 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 			</div>
 		</>
 	);
-}
+});
+
+export default Dashboard;

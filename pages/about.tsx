@@ -194,4 +194,6 @@ const About = React.memo(function About(): JSX.Element {
 			</div>
 		</>
 	);
-}
+});
+
+export default About;
