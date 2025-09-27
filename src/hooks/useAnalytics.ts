@@ -90,9 +90,7 @@ export const useEventTracking = () => {const { trackEvent } = useAnalytics();
     trackServiceView,
     trackFeatureInteraction,
     trackFormSubmission,
-    trackScrollDepth,
-    trackTimeOnPage,
-  };
+    trackScrollDepthtrackTimeOnPage};
 };
 
 // Scroll depth tracking hook

@@ -32,7 +32,7 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
     }
 
     // Send error to analytics/monitoring service
-    this.logErrorToService(error, errorInfo);
+    this.logErrorToService(errorerrorInfo);
 
     // Call custom error handler
     this.props.onError? .(error : errorInfo);

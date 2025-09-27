@@ -1,19 +1,8 @@
-import Head from 'next/head';
+import React from 'react';
 
 interface SEOProps {title?: string;
   description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  keywords?: string[];
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
+  keywords?: string;
 }
 
 export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-PoweredBusinessSolutions',
@@ -95,4 +84,6 @@ export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </>
   );
-}
+};
+
+export default EnhancedSEO;
