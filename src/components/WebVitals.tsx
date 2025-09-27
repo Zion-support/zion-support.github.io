@@ -5,7 +5,8 @@ interface WebVitalsMetric {
   value: number;
   delta: number;
   id: string;
-  navigationType: string}
+  navigationType: string;
+}
 
 export function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
@@ -15,11 +16,13 @@ export function reportWebVitals(metric: WebVitalsMetric) {
       event_label: metric.id,
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true
-    })}
+    });
+  }
 
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('WebVitals:', metric)}
+    console.log('WebVitals:', metric);
+  }
 }
 
 export function WebVitals() {
@@ -30,6 +33,9 @@ export function WebVitals() {
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);
-      getTTFB(reportWebVitals)})}, []);
+      getTTFB(reportWebVitals);
+    });
+  }, []);
 
-  return null}
+  return null;
+}
