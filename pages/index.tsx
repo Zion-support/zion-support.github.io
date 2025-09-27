@@ -11,13 +11,13 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
   ssr: false
 });
 
-const Home = React.memo(function Home(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
-  const [performanceMetrics setPerformanceMetrics] = useState(null);
-  const [isLoading setIsLoading] = useState(true);
+const Home = React.memo(function Home(): JSX.Element { 
+  const [  isVisible setIsVisibl,   e  ] = useState(false);
+  const [  performanceMetrics setPerformanceMetric,   s  ] = useState(null);
+  const [  isLoading setIsLoadin    g  ] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const isHeroInView = useInView(heroRef { once: true });
+  const isHeroInView = useInView(heroRef { once: true  });
   const isFeaturesInView = useInView(featuresRef { once: true });
 
   useEffect(() => {

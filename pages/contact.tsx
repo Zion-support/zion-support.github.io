@@ -13,58 +13,58 @@ export default function Contact(): JSX.Element {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisible setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true)} []);
 
   const { trackClick } = useAnalytics();
 
-  const handleInputCha n g e = (e: React.ChangeEv e n t<HTMLInputElem e n t | HTMLTextAreaElem e n t>) => {
-    const { n a m e va l u e } = e.tar g e t;
-    setFormData(p r e v => ({
-      ...p r e v
-      [n a m e]: va l u e
+  consthandleInputChan ge = (e: React.ChangeEve nt<HTMLInputEleme nt | HTMLTextAreaEleme nt>) => {
+    const { na me val ue } = e.targ et;
+    setFormData(pr ev => ({
+      ...pr ev
+      [na me]: val ue
     }))};
 
-  const handleSub m i t = async (e: React.FormEv e n t) => {
-    e.preventDefa u l t();
-    setIsSubmitt i n g(true);
+  consthandleSubm it = async (e: React.FormEve nt) => {
+    e.preventDefau lt();
+    setIsSubmitti ng(true);
     
-    // Simul a t e f o r m submiss i o n
-    aw a i t ne w Prom i s e(reso l v e => setTime o u t(reso l v e 2 0 0 0));
+    // Simula te fo rm submissi on
+    awa it new Promi se(resol ve => setTimeo ut(resol ve 2 0 0 0));
     
-    setIsSubmitt i n g(false);
-    trackClick('cont a c t-f o r m-sub m i t' 'convers i o n');
-    al e r t('Th a n k yo u fo r y o u r mess a g e! W e\'l l ge t b a c k t o yo u s o o n.');
+    setIsSubmitti ng(false);
+    trackClick('conta ct-fo rm-subm it' 'conversi on');
+    ale rt('Tha nk you for yo ur messa ge! We\'ll get ba ck to you so on.');
     
-    // Re s e t f o r m
+    // Res et fo rm
     setFormData({
-      name: ''
-      email: ''
-      comp a n y: ''
+      name: '',
+		email: ''
+      compa ny: ''
       subject: '',
       message: ''
     })};
 
-  const contactI n f o = [
+  constcontactIn fo = [
     {
-      i c o n: '📧'
-      ti t l e: 'Em a i l U s'
-      deta i l s: 'he l l o@zion a p p.co m'
-      description: 'S e n d u s a n em a i l an d w e\'l l resp o n d wit h i n 2 4 ho u r s.'
+      ic on: '📧'
+      tit le: 'Ema il Us'
+      detai ls: 'hel lo@ziona pp.com'
+      description: 'Se nd us an ema il and we\'ll respo nd with in 2 4 hou rs.'
     }
     {
-      i c o n: '📞'
-      ti t l e: 'C a l l U s'
-      deta i l s: '+1 (55 5) 12 3-4 5 6 7'
-      description: 'Mo n-Fr i from 9a m t o 6p m ES T'
+      ic on: '📞'
+      tit le: 'Ca ll Us'
+      detai ls: '+1 (55 5) 12 3-4 5 6 7'
+      description: 'Mon-Fri from 9am to 6pm EST'
     }
     {
-      i c o n: '📍'
-      ti t l e: 'Vi s i t U s'
-      deta i l s: '12 3 T e c h Str e e t Sili c o n Val l e y C A 94 0 0 0'
-      description: 'C o m e sa y he l l o a t ou r off i c e'
+      ic on: '📍'
+      tit le: 'Vis it Us'
+      detai ls: '12 3 Te ch Stre et Silic on Vall ey CA 94 0 0 0'
+      description: 'Co me say hel lo at our offi ce'
     }
   ];
 
@@ -72,150 +72,150 @@ export default function Contact(): JSX.Element {
     <>
       <SEO />
       <Head>
-        <title>Contact U s - Z i o n Ap p</title>
-        <meta name="description" content="Ge t i n to u c h w i t h Z i o n Ap p. W e'r e h e r e t o h e l p yo u transf o r m y o u r busin e s s w i t h cutt i n g-e d g e technol o g y soluti o n s." />
-        <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
+        <title>ContactU s - Zi on App</title>
+        <metaname="description" content="Get in tou ch wi th Zi on App. We're he re to he lp you transfo rm yo ur busine ss wi th cutti ng-ed ge technolo gy solutio ns." />
+        <metaname="viewpo rt" content="wid th=devi ce-wid th initi al-sca le=1" />
       </Head>
-      <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
-        <di v classN a m e="contai n e r m x-a u t o p x-4 p y-8 ma x-w-7x l">
-          <na v classN a m e="m b-8">
-            <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
-              ← B a c k t o H o m e
+      <div classNa me="min-h-scre en bg-gradie nt-to-br from-bl ue-5 0 to-indi go-10 0 pt-2 0">
+        <div classNa me="contain er mx-au to px-4 p y-8 max-w-7xl">
+          <nav classNa me="mb-8">
+            <Linkhref="/" classNa me="te xt-bl ue-60 0 hov er:te xt-bl ue-80 0 fo nt-medi um transiti on-colo rs">
+              ← Ba ck to Ho me
             </Link>
-          </na v>
+          </nav>
 
-          <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
-            <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">
-              Contact U s
+          <head er classNa me="te xt-cent er mb-1 6">
+            <h 1 classNa me="te xt-5xl md:te xt-6xl fo nt-bo ld te xt-gr ay-90 0 mb-6">
+              ContactU s
             </h 1>
-            <p classN a m e="t e x t-x l t e x t-g r a y-60 0 ma x-w-3x l m x-a u t o">
-              Re a d y t o transf o r m y o u r busin e s s? Le t&a p o s;s disc u s s ho w w e ca n h e l p yo u achi e v e y o u r go a l s.
+            <pclassNa me="te xt-xl te xt-gr ay-60 0 max-w-3xl mx-au to">
+              Rea dy to transfo rm yo ur busine ss? Let&ap os;sdiscu ss how we can he lp you achie ve yo ur goa ls.
             </p>
-          </hea d e r>
+          </head er>
 
-          <di v classN a m e="g r i d g r i d-c o l s-1 l g:g r i d-c o l s-2 ga p-1 2">
-            {/* Contact F o r m */}
-            <di v classN a m e="b g-wh i t e roun d e d-2x l sha d o w-x l p-8">
-              <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">S e n d u s a Mess a g e</h 2>
-              <f o r m onSub m i t={handleSub m i t} classN a m e="sp a c e-y-6">
-                <di v classN a m e="g r i d g r i d-c o l s-1 m d:g r i d-c o l s-2 ga p-6">
-                  <di v>
-                    <la b e l html F o r="n a m e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                      F u l l N a m e *
-                    </la b e l>
-                    <in p u t
-                      type="t e x t"
-                      i d="n a m e"
-                      name="n a m e"
-                      va l u e={formData.n a m e}
-                      onCha n g e={handleInputCha n g e}
-                      requi r e d
-                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                      placehol d e r="Y o u r f u l l n a m e"
+          <div classNa me="gr id gr id-co ls-1 l g:gr id-co ls-2 gap-1 2">
+            {/* ContactF or m */}
+            <div classNa me="bg-whi te round ed-2xl shad ow-xl p-8">
+              <h 2 classNa me="te xt-2xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Se nd us aMessa ge</h 2>
+              <fo rm onSubm it={handleSubm it} classNa me="spa ce-y-6">
+                <div classNa me="gr id gr id-co ls-1 m d:gr id-co ls-2 gap-6">
+                  <div>
+                    <lab el htmlF or="na me" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
+                      Fu ll Na me *
+                    </lab el>
+                    <inp ut
+                      type="te xt"
+                      id="na me"
+                      name="na me"
+                      val ue={formData.na me}
+                      onChan ge={handleInputChan ge}
+                      requir ed
+                      classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
+                      placehold er="Yo ur fu ll na me"
                     />
-                  </di v>
-                  <di v>
-                    <la b e l html F o r="em a i l" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                      Em a i l Addr e s s *
-                    </la b e l>
-                    <in p u t
-                      type="em a i l"
-                      i d="em a i l"
-                      name="em a i l"
-                      va l u e={formData.em a i l}
-                      onCha n g e={handleInputCha n g e}
-                      requi r e d
-                      classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                      placehol d e r="y o u r.em a i l@exam p l e.co m"
+                  </div>
+                  <div>
+                    <lab el htmlF or="ema il" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
+                      Ema il Addre ss *
+                    </lab el>
+                    <inp ut
+                      type="ema il"
+                      id="ema il"
+                      name="ema il"
+                      val ue={formData.ema il}
+                      onChan ge={handleInputChan ge}
+                      requir ed
+                      classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
+                      placehold er="yo ur.ema il@examp le.com"
                     />
-                  </di v>
-                </di v>
-                <di v>
-                  <la b e l html F o r="comp a n y" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Comp a n y
-                  </la b e l>
-                  <in p u t
-                    type="t e x t"
-                    i d="comp a n y"
-                    name="comp a n y"
-                    va l u e={formData.comp a n y}
-                    onCha n g e={handleInputCha n g e}
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="Y o u r comp a n y n a m e"
+                  </div>
+                </div>
+                <div>
+                  <lab el htmlF or="compa ny" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
+                    Compa ny
+                  </lab el>
+                  <inp ut
+                    type="te xt"
+                    id="compa ny"
+                    name="compa ny"
+                    val ue={formData.compa ny}
+                    onChan ge={handleInputChan ge}
+                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
+                    placehold er="Yo ur compa ny na me"
                   />
-                </di v>
-                <di v>
-                  <la b e l html F o r="subj e c t" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Subj e c t *
-                  </la b e l>
-                  <in p u t
-                    type="t e x t"
-                    i d="subj e c t"
-                    name="subj e c t"
-                    va l u e={formData.subj e c t}
-                    onCha n g e={handleInputCha n g e}
-                    requi r e d
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="W h a t ca n w e h e l p yo u w i t h?"
+                </div>
+                <div>
+                  <lab el htmlF or="subje ct" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
+                    Subje ct *
+                  </lab el>
+                  <inp ut
+                    type="te xt"
+                    id="subje ct"
+                    name="subje ct"
+                    val ue={formData.subje ct}
+                    onChan ge={handleInputChan ge}
+                    requir ed
+                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
+                    placehold er="Wh at can we he lp you wi th?"
                   />
-                </di v>
-                <di v>
-                  <la b e l html F o r="mess a g e" classN a m e="bl o c k t e x t-s m f o n t-med i u m t e x t-g r a y-70 0 m b-2">
-                    Mess a g e *
-                  </la b e l>
-                  <texta r e a
-                    i d="mess a g e"
-                    name="mess a g e"
-                    va l u e={formData.mess a g e}
-                    onCha n g e={handleInputCha n g e}
-                    requi r e d
-                    r o w s={6}
-                    classN a m e="w-f u l l p x-4 p y-3 bor d e r bor d e r-g r a y-30 0 roun d e d-l g fo c u s:r i n g-2 fo c u s:r i n g-b l u e-50 0 fo c u s:bor d e r-transpar e n t"
-                    placehol d e r="T e l l u s ab o u t y o u r proj e c t o r quest i o n..."
+                </div>
+                <div>
+                  <lab el htmlF or="messa ge" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
+                    Messa ge *
+                  </lab el>
+                  <textar ea
+                    id="messa ge"
+                    name="messa ge"
+                    val ue={formData.messa ge}
+                    onChan ge={handleInputChan ge}
+                    requir ed
+                    ro ws={6}
+                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
+                    placehold er="Te ll us abo ut yo ur proje ct or questi on..."
                   />
-                </di v>
-                <but t o n
-                  type="sub m i t"
-                  disab l e d={isSubmitt i n g}
-                  classN a m e="w-f u l l b g-b l u e-60 0 t e x t-wh i t e p y-3 p x-6 roun d e d-l g f o n t-semib o l d ho v e r:b g-b l u e-70 0 transit i o n-col o r s disab l e d:opac i t y-5 0 disab l e d:cur s o r-no t-allo w e d"
+                </div>
+                <butt on
+                  type="subm it"
+                  disabl ed={isSubmitti ng}
+                  classNa me="w-fu ll bg-bl ue-60 0 te xt-whi te py-3 p x-6 round ed-lg fo nt-semibo ld hov er:bg-bl ue-70 0 transiti on-colo rs disabl ed:opaci ty-5 0 disabl ed:curs or-not-allow ed"
                 >
-                  {isSubmitt i n g ? 'Send i n g...' : 'S e n d Mess a g e'}
-                </but t o n>
-              </f o r m>
-            </di v>
+                  {isSubmitti ng ? 'Sendi ng...' : 'Se nd Messa ge'}
+                </butt on>
+              </fo rm>
+            </div>
 
-            {/* Contact Informat i o n */}
-            <di v classN a m e="sp a c e-y-8">
-              <di v>
-                <h 2 classN a m e="t e x t-2x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">Ge t i n To u c h</h 2>
-                <p classN a m e="t e x t-g r a y-60 0 m b-8">
-                  W e&a p o s;r e h e r e t o h e l p yo u succ e e d. Re a c h ou t t o u s thro u g h an y o f th e chann e l s be l o w an d w e&a p o s;l l ge t b a c k t o yo u a s s o o n a s possi b l e.
+            {/* ContactInformati on */}
+            <div classNa me="spa ce-y-8">
+              <div>
+                <h 2 classNa me="te xt-2xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Get in Tou ch</h 2>
+                <pclassNa me="te xt-gr ay-60 0 mb-8">
+                  We&ap os;re he re to he lp you succe ed. Rea ch out to us throu gh any of the channe ls bel ow and we&ap os;ll get ba ck to you as so on as possib le.
                 </p>
-              </di v>
+              </div>
 
-              <di v classN a m e="sp a c e-y-6">
-                {contactI n f o.ma p((i n f o in d e x) => (
-                  <di v ke y={in d e x} classN a m e="f l e x it e m s-st a r t sp a c e-x-4 p-6 b g-wh i t e roun d e d-x l sha d o w-l g">
-                    <di v classN a m e="t e x t-3x l">{i n f o.i c o n}</di v>
-                    <di v>
-                      <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-2">{i n f o.ti t l e}</h 3>
-                      <p classN a m e="t e x t-b l u e-60 0 f o n t-med i u m m b-1">{i n f o.deta i l s}</p>
-                      <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">{i n f o.description}</p>
-                    </di v>
-                  </di v>
+              <div classNa me="spa ce-y-6">
+                {contactIn fo.map((in fo ind ex) => (
+                  <div key={ind ex} classNa me="fl ex ite ms-sta rt spa ce-x-4 p-6 b g-whi te round ed-xl shad ow-lg">
+                    <div classNa me="te xt-3xl">{in fo.ic on}</div>
+                    <div>
+                      <h 3 classNa me="te xt-lg fo nt-semibo ld te xt-gr ay-90 0 mb-2">{in fo.tit le}</h 3>
+                      <pclassNa me="te xt-bl ue-60 0 fo nt-medi um mb-1">{in fo.detai ls}</p>
+                      <pclassNa me="te xt-gr ay-60 0 te xt-sm">{in fo.description}</p>
+                    </div>
+                  </div>
                 ))}
-              </di v>
+              </div>
 
-              <di v classN a m e="b g-b l u e-5 0 roun d e d-x l p-6">
-                <h 3 classN a m e="t e x t-l g f o n t-semib o l d t e x t-g r a y-90 0 m b-3">Respo n s e T i m e</h 3>
-                <p classN a m e="t e x t-g r a y-60 0 t e x t-s m">
-                  W e typica l l y resp o n d t o al l inquir i e s wit h i n 2 4 ho u r s dur i n g busin e s s d a y s. 
-                  Fo r urg e n t matt e r s ple a s e c a l l u s direc t l y.
+              <div classNa me="bg-bl ue-5 0 round ed-xl p-6">
+                <h 3 classNa me="te xt-lg fo nt-semibo ld te xt-gr ay-90 0 mb-3">Respon se Ti me</h 3>
+                <pclassNa me="te xt-gr ay-60 0 te xt-sm">
+                  We typical ly respo nd to all inquiri es with in 2 4 hou rs duri ng busine ss da ys. 
+                  For urge nt matte rs plea se ca ll us direct ly.
                 </p>
-              </di v>
-            </di v>
-          </di v>
-        </di v>
-      </di v>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )}

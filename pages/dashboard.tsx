@@ -1,50 +1,50 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, {  useState, useEffect, useMemo,  useCallback  } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-// Lazy load heavy components to reduce initial bundle size
-// const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })) {
+// Lazyloadheavycomponentstoreduceinitialbundlesize
+// constPerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })) {
 //   ssr: false
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })) {
+// constSecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })) {
 //   ssr: false
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-// });
+//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
+//  });
 
-export default function Dashboard(): JSX.Element {
-  const [activeTab, setActiveTab] = useState('comprehensive');
-  const [isRealTime, setIsRealTime] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const { trackClick } = useAnalytics();
+export default function Dashboard(): JSX.Element { 
+  const [  activeTab,   setActiveTab  ] = useState('comprehensive');
+  const [  isRealTime,   setIsRealTime  ] = useState(false);
+  const [  isLoadingsetIsLoading  ] = useState(false);
+  const [  errorsetError  ] = useState<string | null>(null);
+  const { trackClick  } = useAnalytics();
 
-  const handleTabChange = (tab: string) => {
+  consthandleTabChange = (tab: string) => {
     setActiveTab(tab);
     trackClick(`dashboard-tab-${tab}` 'navigation')};
 
-  const renderDashboard = () => {
+  constrenderDashboard = () => {
     switch (activeTab) {
       case 'comprehensive':
-        return <ComprehensiveAnalyticsDashboard />;
+        return <ComprehensiveAnalyticsDashboard >;
       case 'analytics':
-        return <div>Analytics Dashboard (temporarily disabled)</div>;
+        return <div>AnalyticsDashboard (temporarilydisabled)</div>;
       case 'performance':
-        return <div>Performance Dashboard (temporarily disabled)</div>;
+        return <div>PerformanceDashboard (temporarilydisabled)</div>;
       case 'security':
-        return <div>Security Dashboard (temporarily disabled)</div>;
+        return <div>SecurityDashboard (temporarilydisabled)</div>;
       case 'enhanced':
         return <EnhancedDashboard />;
       case 'search':
         return (
-      <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-      <div className="max-w-2xl">
+		<divclassName="p-8">
+            <h1 className="text-3xlfont-boldtext-gray-900 mb-8">EnhancedSearch</h1>
+      <divclassName="max-w-2xl">
               {/* <EnhancedSearch 
-                onSearch={(query results) => console.log('Search:' query results)}
-                onResultClick={(result) => console.log('Result clicked:' result)}
+                onSearch={(queryresults) => console.log('Search:' queryresults)}
+                onResultClick={(result) => console.log('Resultclicked:' result)}
                 enableFilters={true}
                 enableSuggestions={true}
                 enableHistory={true}
@@ -54,100 +54,100 @@ export default function Dashboard(): JSX.Element {
         );
       case 'advanced-analytics':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
-      <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">DashboardOverview</h1>
+      <divclassName="flexitems-centerspace-x-4">
+                <labelclassName="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
                     onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
-                  Real-time Updates
+                  Real-timeUpdates
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
-                  Refresh Data
+                  RefreshData
                 </button>
               </div>
             </div>
 
-            {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-      <div className="bg-white rounded-xl shadow-lg p-6">
-      <div className="flex items-center justify-between">
+            {/* StatsCards */}
+      <divclassName="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+      <divclassName="flexitems-centerjustify-between">
                   <div>
-                    <p className="text-gray-600 text-sm">Total Users</p>
-                    <p className="text-2 xl font-bold text-gray-900">1234</p>
+                    <pclassName="text-gray-600 text-sm">TotalUsers</p>
+                    <pclassName="text-2 xlfont-boldtext-gray-900">1234</p>
                   </div>
-      <div className="bg-blue-100 p-3 rounded-full">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+      <divclassName="bg-blue-100 p-3 rounded-full">
+                    <svgclassName="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                     </svg>
                   </div>
                 </div>
               </div>
-      <div className="bg-white rounded-xl shadow-lg p-6">
-      <div className="flex items-center justify-between">
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+      <divclassName="flexitems-centerjustify-between">
                   <div>
-                    <p className="text-gray-600 text-sm">Active Sessions</p>
-                    <p className="text-2 xl font-bold text-gray-900">567</p>
+                    <pclassName="text-gray-600 text-sm">ActiveSessions</p>
+                    <pclassName="text-2 xlfont-boldtext-gray-900">567</p>
                   </div>
-      <div className="bg-green-100 p-3 rounded-full">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      <divclassName="bg-green-100 p-3 rounded-full">
+                    <svgclassName="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
                 </div>
               </div>
-      <div className="bg-white rounded-xl shadow-lg p-6">
-      <div className="flex items-center justify-between">
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+      <divclassName="flexitems-centerjustify-between">
                   <div>
-                    <p className="text-gray-600 text-sm">Revenue</p>
-                    <p className="text-2 xl font-bold text-gray-900">$12345</p>
+                    <pclassName="text-gray-600 text-sm">Revenue</p>
+                    <pclassName="text-2 xlfont-boldtext-gray-900">$12345</p>
                   </div>
-      <div className="bg-yellow-100 p-3 rounded-full">
-                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+      <divclassName="bg-yellow-100 p-3 rounded-full">
+                    <svgclassName="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
                   </div>
                 </div>              </div>
-      <div className="bg-white rounded-xl shadow-lg p-6">
-      <div className="flex items-center justify-between">
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+      <divclassName="flexitems-centerjustify-between">
                   <div>
-                    <p className="text-gray-600 text-sm">Conversion Rate</p>
-                    <p className="text-2 xl font-bold text-gray-900">3.2%</p>
+                    <pclassName="text-gray-600 text-sm">ConversionRate</p>
+                    <pclassName="text-2 xlfont-boldtext-gray-900">3.2%</p>
                   </div>
-      <div className="bg-purple-100 p-3 rounded-full">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      <divclassName="bg-purple-100 p-3 rounded-full">
+                    <svgclassName="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Charts Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">User Activity</h3>
-      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Chart placeholder</p>
+            {/* ChartsSection */}
+      <divclassName="gridgrid-cols-1 lg:grid-cols-2 gap-6">
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+                <h3 className="text-lgfont-semiboldtext-gray-900 mb-4">UserActivity</h3>
+      <divclassName="h-64 bg-gray-100 rounded-lgflexitems-centerjustify-center">
+                  <pclassName="text-gray-500">Chartplaceholder</p>
                 </div>
               </div>
-      <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
-      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Chart placeholder</p>
+      <divclassName="bg-whiterounded-xlshadow-lgp-6">
+                <h3 className="text-lgfont-semiboldtext-gray-900 mb-4">PerformanceMetrics</h3>
+      <divclassName="h-64 bg-gray-100 rounded-lgflexitems-centerjustify-center">
+                  <pclassName="text-gray-500">Chartplaceholder</p>
                 </div>              </div>
             </div>
             <SystemMonitor 
-              onAlert={(alert) => console.log('System alert:' alert)}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
+              onAlert={(alert) => console.log('Systemalert:' alert)}
+              onMetricsUpdate={(metrics) => console.log('Metricsupdated:' metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
             />
@@ -155,30 +155,30 @@ export default function Dashboard(): JSX.Element {
         );
       case 'security-enhancements':
         return (
-      <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+		<divclassName="p-8">
+            <h1 className="text-3xlfont-boldtext-gray-900 mb-8">AdvancedSecurityEnhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */}
-      <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
+      <divclassName="text-centerpy-8 text-gray-500">SecurityEnhancementstemporarilydisabled</div>
           </div>
         );
       case 'new-performance':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
-      <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">EnhancedPerformanceDashboard</h1>
+      <divclassName="flexitems-centerspace-x-4">
+                <labelclassName="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
                     onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
-                  Real-time Updates
+                  Real-timeUpdates
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -189,22 +189,22 @@ export default function Dashboard(): JSX.Element {
         );
       case 'new-security':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
-      <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">EnhancedSecurityMonitor</h1>
+      <divclassName="flexitems-centerspace-x-4">
+                <labelclassName="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
                     onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
-                  Real-time Monitoring
+                  Real-timeMonitoring
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -213,19 +213,19 @@ export default function Dashboard(): JSX.Element {
             <SecurityMonitor 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
-              onSecurityAlert={(alert) => console.log('Security alert:' alert)}
+              onSecurityAlert={(alert) => console.log('Securityalert:' alert)}
             />
           </div>
         );
       case 'performance-optimizer':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">PerformanceOptimizer</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -236,22 +236,22 @@ export default function Dashboard(): JSX.Element {
         );
       case 'new-analytics':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
-      <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">EnhancedAnalyticsDashboard</h1>
+      <divclassName="flexitems-centerspace-x-4">
+                <labelclassName="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
                     onChange={(e) => setIsRealTime(e.target.checked)}
                     className="mr-2"
                   />
-                  Real-time Updates
+                  Real-timeUpdates
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -260,41 +260,41 @@ export default function Dashboard(): JSX.Element {
             <EnhancedAnalytics 
               refreshInterval={isRealTime ? 10000 : 60000}
               enableRealTime={isRealTime}
-              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
+              onDataUpdate={(data) => console.log('Analyticsdataupdated:' data)}
             />
           </div>
         );
       case 'error-monitoring':
         return (
-      <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+		<divclassName="p-8">
+            <h1 className="text-3xlfont-boldtext-gray-900 mb-8">AdvancedErrorMonitoring</h1>
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
         return (
-      <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+		<divclassName="p-8">
+            <h1 className="text-3xlfont-boldtext-gray-900 mb-8">AdvancedSystemMonitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">AdvancedErrorHandler</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
               </div>
             </div>
             {/* <AdvancedErrorHandler 
-              onError={(error) => console.log('Error captured:' error)}
-              onPerformanceIssue={(issue) => console.log('Performance issue:' issue)}
+              onError={(error) => console.log('Errorcaptured:' error)}
+              onPerformanceIssue={(issue) => console.log('Performanceissue:' issue)}
               enableAutoRetry={true}
               maxRetries={3}
               enablePerformanceMonitoring={true}
@@ -305,13 +305,13 @@ export default function Dashboard(): JSX.Element {
         );
       case 'performance-optimizer':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">PerformanceOptimizer</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -322,13 +322,13 @@ export default function Dashboard(): JSX.Element {
         );
       case 'analytics-insights':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">AnalyticsInsights</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -348,9 +348,9 @@ export default function Dashboard(): JSX.Element {
                   { page: '/blog' views: 15000 bounceRate: 45.2 avgTime: 180 }
                 ]
                 trafficSources: [
-                  { source: 'Organic Search' visitors: 25000 percentage: 55.6 conversionRate: 12.5 }
+                  { source: 'OrganicSearch' visitors: 25000 percentage: 55.6 conversionRate: 12.5 }
                   { source: 'Direct' visitors: 12000 percentage: 26.7 conversionRate: 15.2 }
-                  { source: 'Social Media' visitors: 8000 percentage: 17.8 conversionRate: 8.9 }
+                  { source: 'SocialMedia' visitors: 8000 percentage: 17.8 conversionRate: 8.9 }
                 ]
                 deviceTypes: [
                   { device: 'Desktop' visitors: 25000 percentage: 55.6 }
@@ -376,20 +376,20 @@ export default function Dashboard(): JSX.Element {
               }}
               enableRealTime={true}
               refreshInterval={30000}
-              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
+              onDataUpdate={(data) => console.log('Analyticsdataupdated:' data)}
             /> */}
-      <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
+      <divclassName="text-centerpy-8 text-gray-500">AnalyticsInsightstemporarilydisabled</div>
           </div>
         );
       case 'comprehensive-monitoring':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">ComprehensiveMonitoring</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -398,19 +398,19 @@ export default function Dashboard(): JSX.Element {
             {/* <ComprehensiveMonitoringDashboard 
               refreshInterval={5000}
               enableRealTimeUpdates={true}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
+              onMetricsUpdate={(metrics) => console.log('Metricsupdated:' metrics)}
             /> */}
           </div>
         );
       case 'comprehensive-security':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">ComprehensiveSecurity</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -419,19 +419,19 @@ export default function Dashboard(): JSX.Element {
             {/* <ComprehensiveSecurityDashboard 
               refreshInterval={10000}
               enableRealTimeMonitoring={true}
-              onSecurityUpdate={(metrics) => console.log('Security metrics updated:' metrics)}
+              onSecurityUpdate={(metrics) => console.log('Securitymetricsupdated:' metrics)}
             /> */}
           </div>
         );
       case 'error-monitoring':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">AdvancedErrorMonitoring</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -442,13 +442,13 @@ export default function Dashboard(): JSX.Element {
         );
       case 'advanced-system-monitor':
         return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
-      <div className="flex items-center space-x-4">
+		<divclassName="p-8">
+      <divclassName="flexjustify-betweenitems-centermb-8">
+              <h1 className="text-3xlfont-boldtext-gray-900">AdvancedSystemMonitor</h1>
+      <divclassName="flexitems-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-whitepx-4 py-2 rounded-lghover:bg-blue-700 transition-colors"
                 >
                   Refresh
                 </button>
@@ -460,30 +460,30 @@ export default function Dashboard(): JSX.Element {
 
       case 'analytics':
         return (
-      <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-      <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Analytics features coming soon...</p>
+		<divclassName="p-8">
+            <h1 className="text-3 xlfont-boldtext-gray-900 mb-8">AnalyticsDashboard</h1>
+      <divclassName="bg-whiterounded-xlshadow-lgp-8">
+              <pclassName="text-gray-600">Analyticsfeaturescomingsoon...</p>
             </div>
           </div>
         );
 
       case 'performance':
         return (
-      <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
-      <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Performance monitoring features coming soon...</p>
+		<divclassName="p-8">
+            <h1 className="text-3 xlfont-boldtext-gray-900 mb-8">PerformanceDashboard</h1>
+      <divclassName="bg-whiterounded-xlshadow-lgp-8">
+              <pclassName="text-gray-600">Performancemonitoringfeaturescomingsoon...</p>
             </div>
           </div>
         );
 
       default:
         return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-gray-600">Select a tab to view dashboard content.</p>
+		<divclassName="p-8">
+            <h1 className="text-3xlfont-boldtext-gray-900 mb-8">Dashboard</h1>
+            <divclassName="bg-whiterounded-xlshadow-lgp-8">
+              <pclassName="text-gray-600">Selecta tabtoviewdashboardcontent.</p>
             </div>
           </div>
         )}
@@ -492,46 +492,46 @@ export default function Dashboard(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Advanced Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring security analysis SEO optimization and accessibility insights" />
-        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <title>AdvancedDashboard - ZionTechSolutions</title>
+        <metaname="description" content="ComprehensiveanalyticsdashboardwithadvancedperformancemonitoringsecurityanalysisSEOoptimizationandaccessibilityinsights" />
+        <metaname="viewport" content="width=device-widthinitial-scale=1" />
       </Head>
-      <div className="min-h-screen bg-gray-50">
+      <divclassName="min-h-screenbg-gray-50">
         {/* Navigation */}
-        <nav className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between h-16">
-      <div className="flex">
-      <div className="flex-shrink-0 flex items-center">
-                  <h1 className="text-xl font-bold text-gray-900">Zion Dashboard</h1>
+        <navclassName="bg-whiteshadow-smborder-b">
+      <divclassName="max-w-7xlmx-autopx-4 sm:px-6 lg:px-8">
+      <divclassName="flexjustify-betweenh-16">
+      <divclassName="flex">
+      <divclassName="flex-shrink-0 flexitems-center">
+                  <h1 className="text-xlfont-boldtext-gray-900">ZionDashboard</h1>
                 </div>
-      <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+      <divclassName="hiddensm:ml-6 sm:flexsm:space-x-8">
                   <button
                     onClick={() => handleTabChange('overview')}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    className={`inline-flexitems-centerpx-1 pt-1 border-b-2 text-smfont-medium ${
                       activeTab === 'overview'
                         ? 'border-blue-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        : 'border-transparenttext-gray-500 hover:border-gray-300 hover:text-gray-700'
                     }`}
                   >
                     Overview
                   </button>
                   <button
                     onClick={() => handleTabChange('analytics')}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    className={`inline-flexitems-centerpx-1 pt-1 border-b-2 text-smfont-medium ${
                       activeTab === 'analytics'
                         ? 'border-blue-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        : 'border-transparenttext-gray-500 hover:border-gray-300 hover:text-gray-700'
                     }`}
                   >
                     Analytics
                   </button>
                   <button
                     onClick={() => handleTabChange('performance')}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    className={`inline-flexitems-centerpx-1 pt-1 border-b-2 text-smfont-medium ${
                       activeTab === 'performance'
                         ? 'border-blue-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        : 'border-transparenttext-gray-500 hover:border-gray-300 hover:text-gray-700'
                     }`}
                   >
                     Performance
@@ -543,14 +543,14 @@ export default function Dashboard(): JSX.Element {
         </main>
 
         {/* Footer */}
-        <footer className="bg-white border-t">
-      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between items-center">
+        <footerclassName="bg-whiteborder-t">
+      <divclassName="max-w-7xlmx-autopy-4 px-4 sm:px-6 lg:px-8">
+      <divclassName="flexjustify-betweenitems-center">
               <div>
-                <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
+                <pclassName="text-smtext-gray-500">© 2024 ZionTechSolutions. Allrightsreserved.</p>
               </div>
               <div>
-                <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>
+                <pclassName="mt-1">Dashboardpoweredbyadvancedanalyticsandmonitoringsystems.</p>
               </div>
             </div>
           </div>

@@ -1,46 +1,46 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-// import EnhancedSEO from "../src/components/EnhancedSEO";
+// importEnhancedSEOfrom "../src/components/EnhancedSEO";
 
-// L a z y l o a d th e comprehens i v e dashbo a r d
-// const ComprehensiveDashboard = dynamic(() => import("../src/components/ComprehensiveDashboard"){
-//   ss r: false//   load i n g: () => (
-//     <di v classN a m e="mi n-h-scr e e n b g-g r a y-5 0 f l e x it e m s-cen t e r just i f y-cen t e r">
-//       <di v classN a m e="t e x t-cen t e r">
-//         <di v classN a m e="anim a t e-s p i n roun d e d-f u l l h-1 2 w-1 2 bor d e r-b-2 bor d e r-b l u e-60 0 m x-a u t o"></di v>
-//         <p classN a m e="m t-4 t e x t-g r a y-60 0">Load i n g analyt i c s dashbo a r d...</p>
-//       </di v>
-//     </di v>
+// La zy lo ad the comprehensi ve dashboa rd
+// constComprehensiveDashboard = dynamic(() => import("../src/components/ComprehensiveDashboard"){
+//   ssr: false//   loadi ng: () => (
+//     <div classNa me="min-h-scre en bg-gr ay-5 0 fl ex ite ms-cent er justi fy-cent er">
+//       <div classNa me="te xt-cent er">
+//         <div classNa me="anima te-sp in round ed-fu ll h-1 2 w-1 2 bord er-b-2 bord er-bl ue-60 0 mx-au to"></div>
+//         <pclassNa me="mt-4 t ex t-gr ay-60 0">Loadi ng analyti cs dashboa rd...</p>
+//       </div>
+//     </div>
 //   )
 // });
 
 
 			<Head>
-        <title>Analytics Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehens i v e website analyt i c s dashbo a r d fo r performance accessibility an d SEO monitoring." />
-        <meta name="robots" content="noindex nofollow" />
+        <title>AnalyticsDashboard - ZionTechSolutions</title>
+        <metaname="description" content="Comprehensi ve websiteanalyti cs dashboa rd for performanceaccessibilityand SEOmonitoring." />
+        <metaname="robots" content="noindexnofollow" />
 			</Head>
 
-export default function AnalyticsPage() {
+exportdefaultfunctionAnalyticsPage() {
   return (
     <>
       <Head>
-        <title>Analytics Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive website analytics dashboard for performance, accessibility and SEO monitoring." />
-        <meta name="robots" content="noindex,nofollow" />
+        <title>AnalyticsDashboard - ZionTechSolutions</title>
+        <metaname="description" content="Comprehensivewebsiteanalyticsdashboardforperformance, accessibilityandSEOmonitoring." />
+        <metaname="robots" content="noindex,nofollow" />
       </Head>
 
       
       {/* <EnhancedSEO
-        ti t l e="Analytics Dashboard - Zion Tech Solutions"
-        description="Comprehens i v e website analyt i c s dashbo a r d fo r performanceaccessibility a n d SEO monitoring."
-        keywo r d s={['analyt i c s''performance monitoring''accessibility chec k e r''SEO analy z e r''website hea l t h''performance metr i c s''we b vit a l s''dashbo a r d']}
+        tit le="AnalyticsDashboard - ZionTechSolutions"
+        description="Comprehensi ve websiteanalyti cs dashboa rd for performanceaccessibilitya nd SEOmonitoring."
+        keywor ds={['analyti cs''performancemonitoring''accessibilitycheck er''SEOanalyz er''websiteheal th''performancemetri cs''web vita ls''dashboa rd']}
       /> */}
-			<di v classN a m e="mi n-h-scr e e n b g-g r a y-5 0 f l e x it e m s-cen t e r just i f y-cen t e r">
-			<di v classN a m e="t e x t-cen t e r">
-          <h 1 classN a m e="t e x t-2 x l f o n t-b o l d t e x t-g r a y-90 0 m b-4">Analytics Dashboard</h 1>
-          <p classN a m e="t e x t-g r a y-60 0">Compon e n t temporar i l y disab l e d</p>
-        </di v>
-      </di v>
+			<div classNa me="min-h-scre en bg-gr ay-5 0 fl ex ite ms-cent er justi fy-cent er">
+			<div classNa me="te xt-cent er">
+          <h 1 classNa me="te xt-2 x lf on t-bo ld te xt-gr ay-90 0 mb-4">AnalyticsDashboard</h 1>
+          <pclassNa me="te xt-gr ay-60 0">Compone nt temporari ly disabl ed</p>
+        </div>
+      </div>
 		</>
   )}

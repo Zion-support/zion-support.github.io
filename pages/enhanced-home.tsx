@@ -4,13 +4,13 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Home(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
-  const [isLoading setIsLoading] = useState(false);
-  const [error setError] = useState<string | null>(null);
+export default function Home(): JSX.Element { 
+  const [  isVisible setIsVisibl,   e  ] = useState(false);
+  const [  isLoading setIsLoadin,   g  ] = useState(false);
+  const [  error setErro,    r  ] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true) } []);
 
   const { trackClick } = useAnalytics();
 

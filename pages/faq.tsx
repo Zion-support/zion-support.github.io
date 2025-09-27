@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function FAQ(): JSX.Element {
-  const [searchTerm setSearchTerm] = useState('');
-  const [openItems setOpenItems] = useState(new Set());
-  const [isVisible setIsVisible] = useState(false);
+export default function FAQ(): JSX.Element { 
+  const [  searchTerm setSearchTer,   m  ] = useState('');
+  const [  openItems setOpenItem,   s  ] = useState(new Set());
+  const [  isVisible setIsVisibl,    e  ] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true) } []);
 
   const { trackClick } = useAnalytics();
 
@@ -94,7 +94,7 @@ export default function FAQ(): JSX.Element {
                         const id = categoryIndex * 100 + index;
                         const isOpen = openItems.has(id);
                         return (
-                          <div key={index} className="border border-gray-200 rounded-lg">
+		<div key={index} className="border border-gray-200 rounded-lg">
                             <button
                               onClick={() => toggleItem(id)}
                               className="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
