@@ -24,9 +24,9 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
         const accEnhancer = AccessibilityEnhancer.getInstance();
         const secEnhancer = SecurityEnhancer.getInstance();
 
-        setPerformanceMetrics(perfMonitor.getLatestMetrics());
-        setAccessibilityMetrics(accEnhancer.getMetrics());
-        setSecurityMetrics(secEnhancer.getMetrics());
+        setPerformanceMetrics(perfMonitor.getLatestMetrics() as any);
+        setAccessibilityMetrics(accEnhancer.getMetrics() as any);
+        setSecurityMetrics(secEnhancer.getMetrics() as any);
       };
 
       updateMetrics();

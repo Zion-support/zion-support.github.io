@@ -75,6 +75,13 @@ class SecurityEnhancer {
 
     this.config = { ...this.config, ...config };
     
+<<<<<<< HEAD
+    // Set up global reference for XMLHttpRequest monitoring
+=======
+    // Set global reference for XMLHttpRequest monitoring
+>>>>>>> cc85e364f81ca4c0f85e428f3362469b3f80604b
+    (window as any).__securityEnhancerInstance = this;
+    
     this.setupCSP();
     this.setupXSSProtection();
     this.setupCSRFProtection();
@@ -267,7 +274,9 @@ class SecurityEnhancer {
       this.metrics.clickjackingAttempts++;
       
       // Redirect to top-level window
-      window.top.location.href = window.self.location.href;
+      if (window.top) {
+        window.top.location.href = window.self.location.href;
+      }
     }
 
     // Monitor for frame busting attempts
@@ -378,7 +387,7 @@ class SecurityEnhancer {
     // Monitor fetch requests
     const originalFetch = window.fetch;
     window.fetch = (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
+      const url = typeof input === 'string' ? input : (input as Request).url;
       
       // Check for suspicious URLs
       if (this.isSuspiciousURL(url)) {
@@ -392,15 +401,17 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function(method, url, ...args) {
-      if (typeof url === 'string' && this.isSuspiciousURL(url)) {
-        this.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
-        this.metrics.blockedRequests++;
+    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
+      // Access the security enhancer instance through a global reference
+      const securityEnhancer = (window as any).__securityEnhancerInstance;
+      if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL(url)) {
+        securityEnhancer.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+        securityEnhancer.metrics.blockedRequests++;
         throw new Error('Suspicious URL blocked');
       }
       
-      return originalXHR.apply(this, [method, url, ...args]);
-    };
+      return (originalXHR as any).apply(this, [method, url, ...args]);
+    };a4c0f85e428f3362469b3f80604b
   }
 
   private monitorDOMChanges(): void {

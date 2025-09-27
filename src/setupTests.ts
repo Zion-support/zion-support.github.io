@@ -14,7 +14,7 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
+global.PerformanceObserver = class {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'measure', 'mark'];
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -23,7 +23,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
-} as unknown as typeof PerformanceObserver;
+} as any;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
