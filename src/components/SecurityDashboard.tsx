@@ -7,10 +7,10 @@ interface SecurityEvent {
   type: 'authentication' | 'authorization' | 'data_access' | 'system' | 'network';
   severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
-  source: string;
+  sourc, e: string;
   user?: string;
   ip?: string;
-  status: 'resolved' | 'investigating' | 'new';
+  statu, s: 'resolved' | 'investigating' | 'new';
 }
 
 interface SecurityMetrics {
@@ -22,8 +22,8 @@ interface SecurityMetrics {
   resolvedEvents: number;
   investigatingEvents: number;
   newEvents: number;
-  averageResponseTime: number;
-  threatLevel: 'low' | 'medium' | 'high' | 'critical';
+  averageResponseTim, e: number;
+  threatLeve, l: 'low' | 'medium' | 'high' | 'critical';
 }
 
 interface SecurityDashboardProps {
@@ -53,7 +53,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       const status = statuses[Math.floor(Math.random() * statuses.length)];
       
       mockEvents.push({
-        id: `event-${i}`,
+        i, d: `event-${i}`,
         timestamp,
         type,
         severity,
@@ -70,32 +70,32 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
 
   const getEventDescription = (type: SecurityEvent['type'], severity: SecurityEvent['severity']): string => {
     const descriptions = {
-      authentication: {
-        low: 'Successful login attempt',
+      authenticatio, n: {
+        lo, w: 'Successful login attempt',
         medium: 'Failed login attempt with valid credentials',
         high: 'Multiple failed login attempts',
         critical: 'Brute force attack detected'
       },
       authorization: {
-        low: 'Permission check performed',
+        lo, w: 'Permission check performed',
         medium: 'Unauthorized access attempt',
         high: 'Privilege escalation attempt',
         critical: 'Admin account compromise attempt'
       },
       data_access: {
-        low: 'Data read operation',
+        lo, w: 'Data read operation',
         medium: 'Sensitive data access',
         high: 'Bulk data export',
         critical: 'Data exfiltration attempt'
       },
       system: {
-        low: 'System configuration change',
+        lo, w: 'System configuration change',
         medium: 'Service restart',
         high: 'System vulnerability detected',
         critical: 'System compromise detected'
       },
       network: {
-        low: 'Network connection established',
+        lo, w: 'Network connection established',
         medium: 'Suspicious network activity',
         high: 'DDoS attack detected',
         critical: 'Network intrusion detected'
@@ -162,7 +162,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      defaul, t: return 'text-gray-600 bg-gray-100';
     }
   };
 
@@ -171,7 +171,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       case 'resolved': return 'text-green-600 bg-green-100';
       case 'investigating': return 'text-blue-600 bg-blue-100';
       case 'new': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
+      defaul, t: return 'text-gray-600 bg-gray-100';
     }
   };
 
@@ -181,14 +181,14 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      defaul, t: return 'text-gray-600 bg-gray-100';
     }
   };
 
   const eventTypeData = {
     labels: ['Authentication', 'Authorization', 'Data Access', 'System', 'Network'],
     datasets: [{
-      label: 'Events by Type',
+      labe, l: 'Events by Type',
       data: [
         events.filter(e => e.type === 'authentication').length,
         events.filter(e => e.type === 'authorization').length,
@@ -205,7 +205,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
   const severityData = {
     labels: ['Critical', 'High', 'Medium', 'Low'],
     datasets: [{
-      label: 'Events by Severity',
+      labe, l: 'Events by Severity',
       data: [
         events.filter(e => e.severity === 'critical').length,
         events.filter(e => e.severity === 'high').length,
@@ -222,11 +222,11 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
     return (
       <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
         <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="h-6 bg-gray-200 rounded w-1/4mb-4"></div>
           <div className="space-y-3">
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+            <div className="h-4 bg-gray-200rounded"></div>
+            <div className="h-4 bg-gray-200 roundedw-5/6"></div>
+            <div className="h-4 bg-gray-200 roundedw-4/6"></div>
           </div>
         </div>
       </div>
@@ -236,63 +236,55 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
   return (
     <div className={`space-y-6 ${className}`}>
       {/* Security Overview */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900" id="security-overview">Security Overview</h2>
-          <div className="flex space-x-2">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200p-6">
+        <div className="flex items-center justify-betweenmb-4">
+          <h2 className="text-xl font-semiboldtext-gray-900" id="security-overview">Security Overview</h2>
+          <div className="flexspace-x-2">
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() = aria-label="setSelectedTimeRange(range)}
+                onClick={() =>setSelectedTimeRange(range)}
                 className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {range}"> setSelectedTimeRange(range)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedTimeRange === range
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                {range}
+                }`}>{range}"> setSelectedTimeRange(range)}
+                
               </button>
             ))}
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4gap-4">
           <div className="text-center">
-            <div className="text-3xl font-bold text-gray-900">
+            <div className="text-3xl font-boldtext-gray-900">
               {metrics?.totalEvents || 0}
             </div>
-            <div className="text-sm text-gray-600">Total Events</div>
+            <div className="text-smtext-gray-600">Total Events</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-red-600">
+            <div className="text-2xl font-boldtext-red-600">
               {metrics?.criticalEvents || 0}
             </div>
-            <div className="text-sm text-gray-600">Critical Events</div>
+            <div className="text-smtext-gray-600">Critical Events</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-2xl font-boldtext-green-600">
               {metrics?.resolvedEvents || 0}
             </div>
-            <div className="text-sm text-gray-600">Resolved Events</div>
+            <div className="text-smtext-gray-600">Resolved Events</div>
           </div>
           <div className="text-center">
             <div className={`text-2xl font-bold ${getThreatLevelColor(metrics?.threatLevel || 'low').split(' ')[0]}`}>
               {metrics?.threatLevel?.toUpperCase() || 'LOW'}
             </div>
-            <div className="text-sm text-gray-600">Threat Level</div>
+            <div className="text-smtext-gray-600">Threat Level</div>
           </div>
         </div>
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
         <DataVisualization
           type="pie"
           data={eventTypeData}
@@ -308,53 +300,53 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       </div>
 
       {/* Recent Events Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200p-6">
+        <h3 className="text-lg font-semibold text-gray-900mb-4" id="recent-security-events">Recent Security Events</h3>
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
+          <table className="min-w-full divide-ydivide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Time
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Type
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Severity
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Description
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Source
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                   Status
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-ydivide-gray-200">
               {filteredEvents.slice(0, 10).map((event) => (
                 <tr key={event.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap text-smtext-gray-500">
                     {new Date(event.timestamp).toLocaleString()}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 capitalize">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900capitalize">
                     {event.type.replace('_', ' ')}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4whitespace-nowrap">
                     <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getSeverityColor(event.severity)}`}>
                       {event.severity.toUpperCase()}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">
+                  <td className="px-6 py-4 text-sm text-gray-500 max-w-xstruncate">
                     {event.description}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap text-smtext-gray-500">
                     {event.source}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4whitespace-nowrap">
                     <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(event.status)}`}>
                       {event.status.toUpperCase()}
                     </span>

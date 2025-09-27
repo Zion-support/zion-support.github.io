@@ -5,14 +5,14 @@ interface Testimonial {
   name: string;
   role: string;
   company: string;
-  content: string;
+  conten, t: string;
   avatar?: string;
-  rating: number;
+  ratin, g: number;
 }
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
-  isVisible: boolean;
+  isVisibl, e: boolean;
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
@@ -20,7 +20,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   isVisible 
 }) => {
   const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+    return Array.from({ lengt, h: 5 }, (_, i) => (
       <svg
         key={i}
         className={`w-5 h-5 ${
@@ -36,34 +36,34 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div 
-      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift ${
+      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hove, r:border-blue-200 hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       {/* Rating */}
-      <div className="flex items-center mb-4">
+      <div className="flex items-centermb-4">
         {renderStars(testimonial.rating)}
       </div>
 
       {/* Content */}
-      <blockquote className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+      <blockquote className="text-gray-700 text-lg leading-relaxed mb-6italic">
         &ldquo;{testimonial.content}&rdquo;
       </blockquote>
 
       {/* Author */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+      <div className="flexitems-center">
+        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lgmr-4">
           {testimonial.name.charAt(0)}
         </div>
         <div>
-          <div className="font-semibold text-gray-800">{testimonial.name}</div>
-          <div className="text-gray-600 text-sm">{testimonial.role}</div>
-          <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>
+          <div className="font-semiboldtext-gray-800">{testimonial.name}</div>
+          <div className="text-gray-600text-sm">{testimonial.role}</div>
+          <div className="text-blue-600 text-smfont-medium">{testimonial.company}</div>
         </div>
       </div>
 
       {/* Quote decoration */}
-      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-none opacity-20">
+      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
         &ldquo;
       </div>
     </div>

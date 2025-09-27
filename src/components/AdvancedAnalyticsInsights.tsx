@@ -30,37 +30,37 @@ interface AnalyticsData {
   topPages: Array<{
     page: string;
     views: number;
-    bounceRate: number;
-    avgTime: number;
+    bounceRat, e: number;
+    avgTim, e: number;
   }>;
   trafficSources: Array<{
     source: string;
     visitors: number;
-    percentage: number;
-    conversionRate: number;
+    percentag, e: number;
+    conversionRat, e: number;
   }>;
   deviceTypes: Array<{
     device: string;
-    visitors: number;
-    percentage: number;
+    visitor, s: number;
+    percentag, e: number;
   }>;
   userBehavior: Array<{
     action: string;
-    count: number;
-    trend: 'up' | 'down' | 'stable';
+    coun, t: number;
+    tren, d: 'up' | 'down' | 'stable';
   }>;
   performance: {
     pageLoadTime: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-    firstInputDelay: number;
+    cumulativeLayoutShif, t: number;
+    firstInputDela, y: number;
   };
   realTime: {
     activeUsers: number;
     currentPage: string;
-    location: string;
-    device: string;
+    locatio, n: string;
+    devic, e: string;
   }[];
 }
 
@@ -73,13 +73,13 @@ interface Insight {
   category: 'performance' | 'conversion' | 'engagement' | 'technical';
   actionable: boolean;
   action?: {
-    label: string;
-    onClick: () => void;
+    labe, l: string;
+    onClic, k: () => void;
   };
   metrics: {
     current: number;
-    target: number;
-    change: number;
+    targe, t: number;
+    chang, e: number;
   };
 }
 
@@ -91,7 +91,7 @@ interface AdvancedAnalyticsInsightsProps {
 }
 
 export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps> = ({
-  data: propData,
+  dat, a: propData,
   enableRealTime = true,
   refreshInterval = 30000,
   onInsightAction
@@ -113,37 +113,37 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
       avgSessionDuration: Math.random() * 120 + 60,
       conversionRate: Math.random() * 5 + 8,
       topPages: [
-        { page: '/', views: Math.floor(baseViews * 0.4), bounceRate: 25 + Math.random() * 10, avgTime: 120 + Math.random() * 60 },
+        { pag, e: '/', views: Math.floor(baseViews * 0.4), bounceRate: 25 + Math.random() * 10, avgTime: 120 + Math.random() * 60 },
         { page: '/services', views: Math.floor(baseViews * 0.25), bounceRate: 30 + Math.random() * 15, avgTime: 180 + Math.random() * 90 },
         { page: '/blog', views: Math.floor(baseViews * 0.15), bounceRate: 40 + Math.random() * 20, avgTime: 240 + Math.random() * 120 },
         { page: '/contact', views: Math.floor(baseViews * 0.1), bounceRate: 35 + Math.random() * 15, avgTime: 90 + Math.random() * 30 },
         { page: '/about', views: Math.floor(baseViews * 0.1), bounceRate: 45 + Math.random() * 20, avgTime: 150 + Math.random() * 60 }
       ],
       trafficSources: [
-        { source: 'Organic Search', visitors: Math.floor(baseVisitors * 0.5), percentage: 50, conversionRate: 12 + Math.random() * 5 },
+        { sourc, e: 'Organic Search', visitors: Math.floor(baseVisitors * 0.5), percentage: 50, conversionRate: 12 + Math.random() * 5 },
         { source: 'Direct', visitors: Math.floor(baseVisitors * 0.25), percentage: 25, conversionRate: 15 + Math.random() * 5 },
         { source: 'Social Media', visitors: Math.floor(baseVisitors * 0.15), percentage: 15, conversionRate: 8 + Math.random() * 4 },
         { source: 'Referral', visitors: Math.floor(baseVisitors * 0.1), percentage: 10, conversionRate: 10 + Math.random() * 5 }
       ],
       deviceTypes: [
-        { device: 'Desktop', visitors: Math.floor(baseVisitors * 0.6), percentage: 60 },
+        { devic, e: 'Desktop', visitors: Math.floor(baseVisitors * 0.6), percentage: 60 },
         { device: 'Mobile', visitors: Math.floor(baseVisitors * 0.35), percentage: 35 },
         { device: 'Tablet', visitors: Math.floor(baseVisitors * 0.05), percentage: 5 }
       ],
       userBehavior: [
-        { action: 'Page Views', count: baseViews, trend: Math.random() > 0.5 ? 'up' : 'down' },
+        { actio, n: 'Page Views', count: baseViews, trend: Math.random() > 0.5 ? 'up' : 'down' },
         { action: 'Clicks', count: Math.floor(baseViews * 0.8), trend: Math.random() > 0.5 ? 'up' : 'down' },
         { action: 'Scrolls', count: Math.floor(baseViews * 0.6), trend: Math.random() > 0.5 ? 'up' : 'down' },
         { action: 'Form Submissions', count: Math.floor(baseViews * 0.05), trend: Math.random() > 0.5 ? 'up' : 'down' }
       ],
       performance: {
-        pageLoadTime: Math.random() * 2000 + 1000,
+        pageLoadTim, e: Math.random() * 2000 + 1000,
         firstContentfulPaint: Math.random() * 1000 + 500,
         largestContentfulPaint: Math.random() * 2000 + 1000,
         cumulativeLayoutShift: Math.random() * 0.1,
         firstInputDelay: Math.random() * 100 + 50
       },
-      realTime: Array.from({ length: Math.floor(Math.random() * 20) + 5 }, (_, i) => ({
+      realTime: Array.from({ lengt, h: Math.floor(Math.random() * 20) + 5 }, (_, i) => ({
         activeUsers: Math.floor(Math.random() * 5) + 1,
         currentPage: ['/', '/services', '/blog', '/contact'][Math.floor(Math.random() * 4)],
         location: ['United States', 'Canada', 'United Kingdom', 'Germany', 'France'][Math.floor(Math.random() * 5)],
@@ -154,12 +154,12 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
 
   // Generate insights based on data
   const generateInsights = useCallback((analyticsData: AnalyticsData): Insight[] => {
-    const insights: Insight[] = [];
+    const insight, s: Insight[] = [];
 
     // Performance insights
     if (analyticsData.performance.pageLoadTime > 3000) {
       insights.push({
-        id: 'slow-page-load',
+        i, d: 'slow-page-load',
         type: 'warning',
         title: 'Slow Page Load Time',
         description: `Page load time is ${analyticsData.performance.pageLoadTime.toFixed(0)}ms, which is above the recommended 3s threshold.`,
@@ -167,11 +167,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         category: 'performance',
         actionable: true,
         action: {
-          label: 'Optimize Performance',
+          labe, l: 'Optimize Performance',
           onClick: () => console.log('Optimizing performance...')
         },
         metrics: {
-          current: analyticsData.performance.pageLoadTime,
+          curren, t: analyticsData.performance.pageLoadTime,
           target: 3000,
           change: -((analyticsData.performance.pageLoadTime - 3000) / 3000) * 100
         }
@@ -189,11 +189,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         category: 'conversion',
         actionable: true,
         action: {
-          label: 'Improve CTA',
+          labe, l: 'Improve CTA',
           onClick: () => console.log('Improving CTA...')
         },
         metrics: {
-          current: analyticsData.conversionRate,
+          curren, t: analyticsData.conversionRate,
           target: 10,
           change: ((10 - analyticsData.conversionRate) / analyticsData.conversionRate) * 100
         }
@@ -211,11 +211,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         category: 'engagement',
         actionable: true,
         action: {
-          label: 'Improve Content',
+          labe, l: 'Improve Content',
           onClick: () => console.log('Improving content...')
         },
         metrics: {
-          current: analyticsData.bounceRate,
+          curren, t: analyticsData.bounceRate,
           target: 50,
           change: -((analyticsData.bounceRate - 50) / 50) * 100
         }
@@ -234,11 +234,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         category: 'technical',
         actionable: true,
         action: {
-          label: 'Check Mobile UX',
+          labe, l: 'Check Mobile UX',
           onClick: () => console.log('Checking mobile UX...')
         },
         metrics: {
-          current: mobilePercentage,
+          curren, t: mobilePercentage,
           target: 40,
           change: ((mobilePercentage - 40) / 40) * 100
         }
@@ -256,7 +256,7 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         category: 'performance',
         actionable: false,
         metrics: {
-          current: analyticsData.performance.pageLoadTime,
+          curren, t: analyticsData.performance.pageLoadTime,
           target: 2000,
           change: -((analyticsData.performance.pageLoadTime - 2000) / 2000) * 100
         }
@@ -299,11 +299,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
 
   const getInsightIcon = (type: Insight['type']) => {
     switch (type) {
-      case 'opportunity': return <Target className="w-5 h-5 text-blue-500" />;
-      case 'warning': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case 'success': return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'info': return <Info className="w-5 h-5 text-blue-500" />;
-      default: return <Info className="w-5 h-5 text-gray-500" />;
+      case 'opportunity': return <Target className="w-5 h-5text-blue-500" />;
+      case 'warning': return <AlertCircle className="w-5 h-5text-yellow-500" />;
+      case 'success': return <CheckCircle className="w-5 h-5text-green-500" />;
+      case 'info': return <Info className="w-5 h-5text-blue-500" />;
+      defaul, t: return <Info className="w-5 h-5text-gray-500" />;
     }
   };
 
@@ -313,7 +313,7 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
       case 'warning': return 'border-yellow-200 bg-yellow-50';
       case 'success': return 'border-green-200 bg-green-50';
       case 'info': return 'border-blue-200 bg-blue-50';
-      default: return 'border-gray-200 bg-gray-50';
+      defaul, t: return 'border-gray-200 bg-gray-50';
     }
   };
 
@@ -322,28 +322,28 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
       case 'high': return 'text-red-600 bg-red-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      defaul, t: return 'text-gray-600 bg-gray-100';
     }
   };
 
   const getDeviceIcon = (device: string) => {
     switch (device) {
-      case 'Desktop': return <Monitor className="w-4 h-4" />;
-      case 'Mobile': return <Smartphone className="w-4 h-4" />;
-      case 'Tablet': return <Tablet className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
+      case 'Desktop': return <Monitor className="w-4h-4" />;
+      case 'Mobile': return <Smartphone className="w-4h-4" />;
+      case 'Tablet': return <Tablet className="w-4h-4" />;
+      defaul, t: return <Globe className="w-4h-4" />;
     }
   };
 
   if (isLoading) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
+          <div className="h-6 bg-gray-200 rounded w-1/3mb-4"></div>
           <div className="space-y-3">
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+            <div className="h-4 bg-gray-200rounded"></div>
+            <div className="h-4 bg-gray-200 roundedw-5/6"></div>
+            <div className="h-4 bg-gray-200 roundedw-4/6"></div>
           </div>
         </div>
       </div>
@@ -352,9 +352,9 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
 
   if (!data) {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="text-center text-gray-500">
-          <BarChart3 className="w-12 h-12 mx-auto mb-4 text-gray-400" />
+      <div className="bg-white rounded-lg shadow-lgp-6">
+        <div className="text-centertext-gray-500">
+          <BarChart3 className="w-12 h-12 mx-auto mb-4text-gray-400" />
           <p>No analytics data available</p>
         </div>
       </div>
@@ -364,23 +364,23 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <BarChart3 className="w-6 h-6 text-blue-600" />
+      <div className="bg-white rounded-lg shadow-lgp-6">
+        <div className="flex items-center justify-betweenmb-6">
+          <div className="flex items-centerspace-x-3">
+            <div className="p-2 bg-blue-100rounded-lg">
+              <BarChart3 className="w-6 h-6text-blue-600" />
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-gray-900">Analytics Insights</h2>
-              <p className="text-sm text-gray-500">Real-time analytics and actionable insights</p>
+              <h2 className="text-xl font-semiboldtext-gray-900">Analytics Insights</h2>
+              <p className="text-smtext-gray-500">Real-time analytics and actionable insights</p>
             </div>
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className="flex items-centerspace-x-2">
             <select
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value as any)}
-              className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focu, s:ring-blue-500 focu,s:border-blue-500"
             >
               <option value="1h">Last Hour</option>
               <option value="24h">Last 24 Hours</option>
@@ -390,7 +390,7 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
             
             <button
               onClick={loadData}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700transition-colors"
             >
               Refresh
             </button>
@@ -398,63 +398,62 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
         </div>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-4 gap-6mb-6">
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-1">
+            <div className="text-3xl font-bold text-blue-600mb-1">
               {data.pageViews.toLocaleString()}
             </div>
-            <div className="text-sm text-gray-500">Page Views</div>
-            <div className="flex items-center justify-center mt-1">
-              <ArrowUpRight className="w-4 h-4 text-green-500 mr-1" />
-              <span className="text-sm text-green-600">+12.5%</span>
+            <div className="text-smtext-gray-500">Page Views</div>
+            <div className="flex items-center justify-centermt-1">
+              <ArrowUpRight className="w-4 h-4 text-green-500mr-1" />
+              <span className="text-smtext-green-600">+12.5%</span>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-600 mb-1">
+            <div className="text-3xl font-bold text-green-600mb-1">
               {data.uniqueVisitors.toLocaleString()}
             </div>
-            <div className="text-sm text-gray-500">Unique Visitors</div>
-            <div className="flex items-center justify-center mt-1">
-              <ArrowUpRight className="w-4 h-4 text-green-500 mr-1" />
-              <span className="text-sm text-green-600">+8.3%</span>
+            <div className="text-smtext-gray-500">Unique Visitors</div>
+            <div className="flex items-center justify-centermt-1">
+              <ArrowUpRight className="w-4 h-4 text-green-500mr-1" />
+              <span className="text-smtext-green-600">+8.3%</span>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-600 mb-1">
+            <div className="text-3xl font-bold text-yellow-600mb-1">
               {data.bounceRate.toFixed(1)}%
             </div>
-            <div className="text-sm text-gray-500">Bounce Rate</div>
-            <div className="flex items-center justify-center mt-1">
-              <ArrowDownRight className="w-4 h-4 text-green-500 mr-1" />
-              <span className="text-sm text-green-600">-2.1%</span>
+            <div className="text-smtext-gray-500">Bounce Rate</div>
+            <div className="flex items-center justify-centermt-1">
+              <ArrowDownRight className="w-4 h-4 text-green-500mr-1" />
+              <span className="text-smtext-green-600">-2.1%</span>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-1">
+            <div className="text-3xl font-bold text-purple-600mb-1">
               {data.conversionRate.toFixed(1)}%
             </div>
-            <div className="text-sm text-gray-500">Conversion Rate</div>
-            <div className="flex items-center justify-center mt-1">
-              <ArrowUpRight className="w-4 h-4 text-green-500 mr-1" />
-              <span className="text-sm text-green-600">+1.2%</span>
+            <div className="text-smtext-gray-500">Conversion Rate</div>
+            <div className="flex items-center justify-centermt-1">
+              <ArrowUpRight className="w-4 h-4 text-green-500mr-1" />
+              <span className="text-smtext-green-600">+1.2%</span>
             </div>
           </div>
         </div>
 
         {/* Real-time Activity */}
-        <div className="bg-gray-50 rounded-lg p-4">
-          <h3 className="text-lg font-medium text-gray-900 mb-3">Real-time Activity</h3>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Activity className="w-4 h-4 text-green-500" />
-              <span className="text-sm text-gray-600">
-                {data.realTime.reduce((sum, item) => sum + item.activeUsers, 0)} active users
-              </span>
+        <div className="bg-gray-50 rounded-lgp-4">
+          <h3 className="text-lg font-medium text-gray-900mb-3">Real-time Activity</h3>
+          <div className="flex items-centerspace-x-4">
+            <div className="flex items-centerspace-x-2">
+              <Activity className="w-4 h-4text-green-500" />
+              <span className="text-smtext-gray-600">{data.realTime.reduce((sum, item) =</sum + item.activeUsers, 0)} active users
+              >
             </div>
-            <div className="text-sm text-gray-500">
+            <div className="text-smtext-gray-500">
               {data.realTime.length} locations
             </div>
           </div>
@@ -462,12 +461,12 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
       </div>
 
       {/* Insights */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Actionable Insights</h3>
+      <div className="bg-white rounded-lg shadow-lgp-6">
+        <h3 className="text-lg font-medium text-gray-900mb-4">Actionable Insights</h3>
         
         {insights.length === 0 ? (
-          <div className="text-center text-gray-500 py-8">
-            <CheckCircle className="w-12 h-12 mx-auto mb-4 text-green-500" />
+          <div className="text-center text-gray-500py-8">
+            <CheckCircle className="w-12 h-12 mx-auto mb-4text-green-500" />
             <p>No insights available at this time</p>
           </div>
         ) : (
@@ -479,25 +478,25 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
                 animate={{ opacity: 1, y: 0 }}
                 className={`p-4 rounded-lg border-2 ${getInsightColor(insight.type)}`}
               >
-                <div className="flex items-start space-x-3">
+                <div className="flex items-startspace-x-3">
                   {getInsightIcon(insight.type)}
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-900">{insight.title}</h4>
-                      <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-betweenmb-2">
+                      <h4 className="font-mediumtext-gray-900">{insight.title}</h4>
+                      <div className="flex items-centerspace-x-2">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(insight.impact)}`}>
                           {insight.impact} impact
                         </span>
-                        <span className="text-sm text-gray-500 capitalize">
+                        <span className="text-sm text-gray-500capitalize">
                           {insight.category}
                         </span>
                       </div>
                     </div>
                     
-                    <p className="text-sm text-gray-600 mb-3">{insight.description}</p>
+                    <p className="text-sm text-gray-600mb-3">{insight.description}</p>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
+                    <div className="flex items-centerjustify-between">
+                      <div className="flex items-centerspace-x-4">
                         <div className="text-sm">
                           <span className="text-gray-500">Current: </span>
                           <span className="font-medium">{insight.metrics.current.toFixed(1)}</span>
@@ -516,13 +515,11 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
                       
                       {insight.actionable && insight.action && (
                         <button
-                          onClick={() => {
+                          onClick={() =>{
                             insight.action?.onClick();
                             onInsightAction?.(insight);
                           }}
-                          className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
-                        >
-                          {insight.action.label}
+                          className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700transition-colors"
                         </button>
                       )}
                     </div>
@@ -535,25 +532,25 @@ export const AdvancedAnalyticsInsights: React.FC<AdvancedAnalyticsInsightsProps>
       </div>
 
       {/* Device Analytics */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Device Analytics</h3>
+      <div className="bg-white rounded-lg shadow-lgp-6">
+        <h3 className="text-lg font-medium text-gray-900mb-4">Device Analytics</h3>
         <div className="space-y-3">
           {data.deviceTypes.map((device) => (
-            <div key={device.device} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-              <div className="flex items-center space-x-3">
+            <div key={device.device} className="flex items-center justify-between p-3 bg-gray-50rounded-lg">
+              <div className="flex items-centerspace-x-3">
                 {getDeviceIcon(device.device)}
                 <span className="font-medium">{device.device}</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="text-sm text-gray-600">
+              <div className="flex items-centerspace-x-4">
+                <div className="text-smtext-gray-600">
                   {device.visitors.toLocaleString()} visitors
                 </div>
-                <div className="text-sm font-medium text-gray-900">
+                <div className="text-sm font-mediumtext-gray-900">
                   {device.percentage.toFixed(1)}%
                 </div>
-                <div className="w-24 bg-gray-200 rounded-full h-2">
+                <div className="w-24 bg-gray-200 rounded-fullh-2">
                   <div 
-                    className="bg-blue-600 h-2 rounded-full" 
+                    className="bg-blue-600 h-2rounded-full" 
                     style={{ width: `${device.percentage}%` }}
                   />
                 </div>

@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useCallback } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
+  firstPain, t: number;
+  firstContentfulPain, t: number;
   largestContentfulPaint?: number;
   firstInputDelay?: number;
   cumulativeLayoutShift?: number;
@@ -32,7 +32,7 @@ export default function PerformanceTracker({
       const paintEntries = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -205,9 +205,9 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   score: number;
   recommendations: string[];
   webVitals: {
-    lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
-    fid: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
-    cls: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    lcp: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
+    fid: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
+    cls: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
   };
 } {
   let score = 100;
@@ -215,16 +215,16 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
 
   // Web Vitals status determination
   const webVitals = {
-    lcp: { 
-      value: metrics.largestContentfulPaint || 0, 
+    lc, p: { 
+      valu, e: metrics.largestContentfulPaint || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
     fid: { 
-      value: metrics.firstInputDelay || 0, 
+      valu, e: metrics.firstInputDelay || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
     cls: { 
-      value: metrics.cumulativeLayoutShift || 0, 
+      valu, e: metrics.cumulativeLayoutShift || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     }
   };
@@ -317,7 +317,7 @@ export function useRealTimePerformance() {
         const paintEntries = performance.getEntriesByType('paint');
         
         const currentMetrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.fetchStart,
+          loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
           firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0

@@ -7,8 +7,8 @@ interface Project {
   status: 'planning' | 'in-progress' | 'review' | 'completed';
   progress: number;
   dueDate: string;
-  team: string[];
-  priority: 'low' | 'medium' | 'high' | 'urgent';
+  tea, m: string[];
+  priorit, y: 'low' | 'medium' | 'high' | 'urgent';
 }
 
 interface ProjectManagementProps {
@@ -63,27 +63,27 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
 
   const getStatusColor = (status: Project['status']) => {
     const colors = {
-      planning: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-      'in-progress': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
-      review: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-      completed: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+      planning: 'bg-blue-100 dar, k:bg-blue-900 text-blue-800 dar, k:text-blue-200',
+      'in-progress': 'bg-yellow-100 dark: bg-yellow-900 text-yellow-800 dar, k:text-yellow-200',
+      review: 'bg-purple-100 dar, k:bg-purple-900 text-purple-800 dar, k:text-purple-200',
+      completed: 'bg-green-100 dar, k:bg-green-900 text-green-800 dar, k:text-green-200'
     };
     return colors[status];
   };
 
   const getPriorityColor = (priority: Project['priority']) => {
     const colors = {
-      low: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
-      medium: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-      high: 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
-      urgent: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
+      low: 'bg-gray-100 dar, k:bg-gray-700 text-gray-800 dar, k:text-gray-200',
+      medium: 'bg-blue-100 dar, k:bg-blue-900 text-blue-800 dar, k:text-blue-200',
+      high: 'bg-orange-100 dar, k:bg-orange-900 text-orange-800 dar, k:text-orange-200',
+      urgent: 'bg-red-100 dar, k:bg-red-900 text-red-800 dar, k:text-red-200'
     };
     return colors[priority];
   };
 
   const getPriorityIcon = (priority: Project['priority']) => {
     const icons = {
-      low: '🔵',
+      lo, w: '🔵',
       medium: '🟡',
       high: '🟠',
       urgent: '🔴'
@@ -111,58 +111,50 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
     <div className={`p-6 rounded-lg border-2 transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-        : 'bg-white border-gray-200 hover:border-gray-300'
+        : 'bg-white border-gray-200 hove, r:border-gray-300'
     }`}>
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-betweenmb-6">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="project-management">
           Project Management
         </h3>
-        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors" aria-label="+ New Project">
+        <button className="px-4 py-2 bg-blue-600 hove, r:bg-blue-700 text-white text-sm rounded-mdtransition-colors" aria-label="+ New Project">
           + New Project
         </button>
       </div>
 
       {/* Status Filter */}
-      <div className="flex space-x-2 mb-6">
+      <div className="flex space-x-2mb-6">
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button
             key={status}
-            onClick={() = aria-label="setSelectedStatus(status)}
+            onClick={() =>setSelectedStatus(status)}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-            }`}
-          >
-            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
-            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
-              selectedStatus === status
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-            }`}
-          >
-            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}
+                : 'bg-gray-200 dark: bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dar, k:hove, r:bg-gray-600'
+            }`}>{status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
+            
           </button>
         ))}
       </div>
 
       {/* Status Overview */}
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-4 gap-4mb-6">
         <div className="text-center">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.planning}</div>
+          <div className="text-2xl font-bold text-blue-600dark:text-blue-400">{stats.planning}</div>
           <div className="text-xs text-gray-600 dark:text-gray-400">Planning</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{stats['in-progress']}</div>
+          <div className="text-2xl font-bold text-yellow-600 dar,k:text-yellow-400">{stats['in-progress']}</div>
           <div className="text-xs text-gray-600 dark:text-gray-400">In Progress</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.review}</div>
+          <div className="text-2xl font-bold text-purple-600 dar,k:text-purple-400">{stats.review}</div>
           <div className="text-xs text-gray-600 dark:text-gray-400">Review</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.completed}</div>
-          <div className="text-xs text-gray-600 dark:text-gray-400">Completed</div>
+          <div className="text-2xl font-bold text-green-600 dar,k:text-green-400">{stats.completed}</div>
+          <div className="text-xs text-gray-600dark:text-gray-400">Completed</div>
         </div>
       </div>
 
@@ -173,25 +165,25 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
             key={project.id}
             className={`p-4 rounded-lg border transition-all duration-200 hover:shadow-md ${
               isDarkMode 
-                ? 'bg-gray-700 border-gray-600 hover:border-gray-500' 
-                : 'bg-gray-50 border-gray-200 hover:border-gray-300'
+                ? 'bg-gray-700 border-gray-600 hove, r:border-gray-500' 
+                : 'bg-gray-50 border-gray-200 hove, r:border-gray-300'
             }`}
           >
-            <div className="flex items-start justify-between mb-3">
+            <div className="flex items-start justify-betweenmb-3">
               <div className="flex-1">
-                <div className="flex items-center space-x-2 mb-1">
-                  <h4 className="font-semibold text-gray-900 dark:text-white" id="projectname">
+                <div className="flex items-center space-x-2mb-1">
+                  <h4 className="font-semibold text-gray-900dark:text-white" id="projectname">
                     {project.name}
                   </h4>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
                     {getPriorityIcon(project.priority)} {project.priority}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <p className="text-sm text-gray-600 dark:text-gray-400mb-2">
                   {project.description}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-500">
-                  <span>Due: {new Date(project.dueDate).toLocaleDateString()}</span>
+                  <span>Du, e: {new Date(project.dueDate).toLocaleDateString()}</span>
                   <span>Team: {project.team.join(', ')}</span>
                 </div>
               </div>
@@ -202,29 +194,29 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
 
             {/* Progress Bar */}
             <div className="mb-3">
-              <div className="flex justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
+              <div className="flex justify-between text-xs text-gray-600 dark:text-gray-400mb-1">
                 <span>Progress</span>
                 <span>{project.progress}%</span>
               </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div className="w-full bg-gray-200 dark: bg-gray-600 rounded-fullh-2">
                 <div 
-                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${project.progress}%` }}
+                  className="bg-blue-600 h-2 rounded-full transition-allduration-300"
+                  style={{ widt, h: `${project.progress}%` }}
                 ></div>
               </div>
             </div>
 
             {/* Actions */}
-            <div className="flex items-center justify-between">
-              <div className="flex space-x-2">
-                <button className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors" aria-label="View Details">
+            <div className="flex items-centerjustify-between">
+              <div className="flexspace-x-2">
+                <button className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors" aria-label="View Details">
                   View Details
                 </button>
-                <button className="px-3 py-1 text-xs border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors" aria-label="Edit">
+                <button className="px-3 py-1 text-xs border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dar, k:text-gray-300 rounded-mdtransition-colors" aria-label="Edit">
                   Edit
                 </button>
               </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">
+              <div className="text-xs text-gray-500 dar,k:text-gray-400">
                 {project.progress === 100 ? '✅ Complete' : '🔄 In Progress'}
               </div>
             </div>
@@ -233,9 +225,9 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       </div>
 
       {filteredProjects.length === 0 && (
-        <div className="text-center py-8">
-          <div className="text-gray-400 dark:text-gray-600 text-4xl mb-2">📋</div>
-          <p className="text-gray-600 dark:text-gray-400">No projects found</p>
+        <div className="text-centerpy-8">
+          <div className="text-gray-400 dark: text-gray-600 text-4xlmb-2">📋</div>
+          <p className="text-gray-600 dar,k:text-gray-400">No projects found</p>
         </div>
       )}
     </div>

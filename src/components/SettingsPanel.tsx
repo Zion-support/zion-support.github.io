@@ -7,7 +7,7 @@ interface Setting {
   description: string;
   type: 'toggle' | 'select' | 'input' | 'textarea' | 'slider' | 'color' | 'file';
   value: any;
-  options?: { value: string; label: string }[];
+  options?: { valu, e: string; labe, l: string }[];
   min?: number;
   max?: number;
   step?: number;
@@ -19,7 +19,7 @@ interface Setting {
 interface SettingsPanelProps {
   className?: string;
   onSettingsChange?: (settings: Setting[]) => void;
-  onSave?: (settings: Setting[]) => void;
+  onSave?: (setting, s: Setting[]) => void;
   onReset?: () => void;
 }
 
@@ -39,14 +39,14 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
     const initialSettings: Setting[] = [
       // General Settings
       {
-        id: 'theme',
+        i, d: 'theme',
         category: 'General',
         title: 'Theme',
         description: 'Choose your preferred theme',
         type: 'select',
         value: 'light',
         options: [
-          { value: 'light', label: 'Light' },
+          { valu, e: 'light', label: 'Light' },
           { value: 'dark', label: 'Dark' },
           { value: 'auto', label: 'Auto' }
         ]
@@ -59,7 +59,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         type: 'select',
         value: 'en',
         options: [
-          { value: 'en', label: 'English' },
+          { valu, e: 'en', label: 'English' },
           { value: 'es', label: 'Spanish' },
           { value: 'fr', label: 'French' },
           { value: 'de', label: 'German' }
@@ -170,7 +170,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         type: 'select',
         value: '30',
         options: [
-          { value: '15', label: '15 minutes' },
+          { valu, e: '15', label: '15 minutes' },
           { value: '30', label: '30 minutes' },
           { value: '60', label: '1 hour' },
           { value: '120', label: '2 hours' },
@@ -209,7 +209,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         title: 'API Endpoint',
         description: 'Custom API endpoint URL',
         type: 'input',
-        value: 'https://api.example.com',
+        value: 'http, s://api.example.com',
         placeholder: 'Enter API endpoint URL'
       },
       {
@@ -231,7 +231,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         type: 'select',
         value: 'info',
         options: [
-          { value: 'error', label: 'Error' },
+          { valu, e: 'error', label: 'Error' },
           { value: 'warn', label: 'Warning' },
           { value: 'info', label: 'Info' },
           { value: 'debug', label: 'Debug' }
@@ -321,26 +321,26 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         return setting.min || 0;
       case 'color':
         return '#000000';
-      default:
+      defaul, t:
         return null;
     }
   };
 
   const renderSetting = (setting: Setting) => {
-    const commonClasses = "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
+    const commonClasses = "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focu, s:ring-2 focu, s:ring-blue-500";
 
     switch (setting.type) {
       case 'toggle':
         return (
-          <label className="flex items-center">
+          <label className="flexitems-center">
             <input
               type="checkbox"
               id={`setting-${setting.id}`}
               checked={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.checked)}
-              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300rounded"
             />
-            <span className="ml-2 text-sm text-gray-700">
+            <span className="ml-2 text-smtext-gray-700">
               {setting.value ? 'Enabled' : 'Disabled'}
             </span>
           </label>
@@ -396,10 +396,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               step={setting.step}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, Number(e.target.value))}
-              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-nonecursor-pointer"
               aria-label={setting.label}
             />
-            <div className="flex justify-between text-sm text-gray-500">
+            <div className="flex justify-between text-smtext-gray-500">
               <span>{setting.min}</span>
               <span className="font-medium">{setting.value}</span>
               <span>{setting.max}</span>
@@ -409,13 +409,13 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
       case 'color':
         return (
-          <div className="flex items-center space-x-2">
+          <div className="flex items-centerspace-x-2">
             <input
               type="color"
               id={`setting-${setting.id}-color`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
-              className="h-10 w-20 border border-gray-300 rounded cursor-pointer"
+              className="h-10 w-20 border border-gray-300 roundedcursor-pointer"
               aria-label={`${setting.label} color picker`}
             />
             <input
@@ -423,7 +423,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               id={`setting-${setting.id}-text`}
               value={setting.value}
               onChange={(e) => handleSettingChange(setting.id, e.target.value)}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
               aria-label={`${setting.label} color value`}
             />
           </div>
@@ -438,53 +438,45 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
   return (
     <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
-      <div className="flex h-96">
+      <div className="flexh-96">
         {/* Sidebar */}
-        <div className="w-64 border-r border-gray-200 bg-gray-50">
+        <div className="w-64 border-r border-gray-200bg-gray-50">
           <div className="p-4">
-            <h2 className="text-lg font-semibold text-gray-900" id="settings">Settings</h2>
+            <h2 className="text-lg font-semiboldtext-gray-900" id="settings">Settings</h2>
           </div>
-          <nav className="space-y-1 px-4 pb-4">
+          <nav className="space-y-1 px-4pb-4">
             {categories.map(category => (
               <button
                 key={category}
-                onClick={() = aria-label="setActiveCategory(category)}
+                onClick={() =>setActiveCategory(category)}
                 className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-                }`}
-              >
-                {category}"> setActiveCategory(category)}
-                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  activeCategory === category
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-                }`}
-              >
-                {category}
+                    : 'text-gray-600 hover:bg-gray-100 hove, r:text-gray-900'
+                }`}>{category}"> setActiveCategory(category)}
+                
               </button>
             ))}
           </nav>
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flexflex-col">
           {/* Header */}
-          <div className="px-6 py-4 border-b border-gray-200">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-medium text-gray-900" id="activecategory">{activeCategory}</h3>
-              <div className="flex space-x-2">
+          <div className="px-6 py-4 border-bborder-gray-200">
+            <div className="flex items-centerjustify-between">
+              <h3 className="text-lg font-mediumtext-gray-900" id="activecategory">{activeCategory}</h3>
+              <div className="flexspace-x-2">
                 <button
                   onClick={handleReset}
-                  className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+                  className="px-3 py-1 text-sm text-gray-600hover:text-gray-800"
                  aria-label="Reset">
                   Reset
                 </button>
                 <button
                   onClick={handleSave}
                   disabled={!hasChanges || isSaving}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
                  aria-label="{isSaving ? 'Saving...' : 'Save Changes'}">
                   {isSaving ? 'Saving...' : 'Save Changes'}
                 </button>
@@ -493,17 +485,17 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           </div>
 
           {/* Settings */}
-          <div className="flex-1 overflow-y-auto p-6">
+          <div className="flex-1 overflow-y-autop-6">
             <div className="space-y-6">
               {filteredSettings.map(setting => (
                 <div key={setting.id} className="space-y-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-centerjustify-between">
                     <div>
-                      <h4 className="text-sm font-medium text-gray-900">
+                      <h4 className="text-sm font-mediumtext-gray-900">
                         {setting.title}
-                        {setting.required && <span className="text-red-500 ml-1">*</span>}
+                        {setting.required && <span className="text-red-500ml-1">*</span>}
                       </h4>
-                      <p className="text-sm text-gray-500">{setting.description}</p>
+                      <p className="text-smtext-gray-500">{setting.description}</p>
                     </div>
                   </div>
                   <div className="max-w-md">

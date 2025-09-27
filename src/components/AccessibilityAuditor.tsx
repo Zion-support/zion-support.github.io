@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
-  message: string;
+  messag, e: string;
   element?: HTMLElement;
   rule?: string;
 }
@@ -21,7 +21,7 @@ export default function AccessibilityAuditor() {
     images.forEach((img) => {
       if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
         issues.push({
-          type: 'error',
+          typ, e: 'error',
           message: 'Image missing alt attribute',
           element: img as HTMLElement,
           rule: 'img-alt',
@@ -148,6 +148,6 @@ export default function AccessibilityAuditor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...arg, s: any[]) => void;
   }
 }

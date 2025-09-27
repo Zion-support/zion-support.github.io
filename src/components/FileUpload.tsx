@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 interface FileUploadProps {
   onFileSelect?: (files: File[]) => void;
-  onFileUpload?: (files: File[]) => Promise<void>;
+  onFileUpload?: (file, s: File[]) => Promise<void>;
   accept?: string;
   multiple?: boolean;
   maxSize?: number; // in MB
@@ -17,9 +17,9 @@ interface FileUploadProps {
 
 interface UploadedFile {
   file: File;
-  id: string;
-  progress: number;
-  status: 'pending' | 'uploading' | 'completed' | 'error';
+  i, d: string;
+  progres, s: number;
+  statu, s: 'pending' | 'uploading' | 'completed' | 'error';
   error?: string;
   preview?: string;
 }
@@ -230,7 +230,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         return 'text-green-500';
       case 'error':
         return 'text-red-500';
-      default:
+      defaul, t:
         return 'text-gray-500';
     }
   };
@@ -251,7 +251,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
       >
         <div className="space-y-2">
           <svg
-            className="mx-auto h-12 w-12 text-gray-400"
+            className="mx-auto h-12 w-12text-gray-400"
             stroke="currentColor"
             fill="none"
             viewBox="0 0 48 48"
@@ -263,13 +263,13 @@ export const FileUpload: React.FC<FileUploadProps> = ({
               strokeLinejoin="round"
             />
           </svg>
-          <div className="text-sm text-gray-600">
-            <span className="font-medium text-blue-600 hover:text-blue-500">
+          <div className="text-smtext-gray-600">
+            <span className="font-medium text-blue-600hover:text-blue-500">
               Click to upload
             </span>{' '}
             or drag and drop
           </div>
-          <div className="text-xs text-gray-500">
+          <div className="text-xstext-gray-500">
             {accept === '*' ? 'Any file type' : accept} • Max {maxSize}MB • Max {maxFiles} files
           </div>
         </div>
@@ -277,25 +277,21 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
       {/* File List */}
       {uploadedFiles.length > 0 && (
-        <div className="mt-4 space-y-2">
-          <div className="flex items-center justify-between">
-            <h3 className="text-sm font-medium text-gray-900" id="selected-files-uploadedfileslength">
+        <div className="mt-4space-y-2">
+          <div className="flex items-centerjustify-between">
+            <h3 className="text-sm font-mediumtext-gray-900" id="selected-files-uploadedfileslength">
               Selected Files ({uploadedFiles.length})
             </h3>
-            <div className="flex space-x-2">
+            <div className="flexspace-x-2">
               <button
                 onClick={handleUpload}
                 disabled={isUploading || uploadedFiles.every(f = aria-label="f.status !== 'pending')}
-                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed">{isUploading ? 'Uploading...' : 'Upload All'}"</f.status !== 'pending')}
+                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
               >
-                {isUploading ? 'Uploading...' : 'Upload All'}"> f.status !== 'pending')}
-                className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isUploading ? 'Uploading...' : 'Upload All'}
-              </button>
               <button
                 onClick={clearAllFiles}
-                className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+                className="px-3 py-1 text-sm text-gray-600hover:text-gray-800"
                aria-label="Clear All">
                 Clear All
               </button>
@@ -306,7 +302,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             {uploadedFiles.map((uploadedFile) => (
               <div
                 key={uploadedFile.id}
-                className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg"
+                className="flex items-center space-x-3 p-3 bg-gray-50rounded-lg"
               >
                 {/* File Icon/Preview */}
                 <div className="flex-shrink-0">
@@ -314,32 +310,32 @@ export const FileUpload: React.FC<FileUploadProps> = ({
                     <Image
                       src={uploadedFile.preview}
                       alt={uploadedFile.file.name}
-                      className="h-10 w-10 rounded object-cover"
+                      className="h-10 w-10 roundedobject-cover"
                       width={40}
                       height={40}
                     />
                   ) : (
-                    <div className="h-10 w-10 bg-gray-200 rounded flex items-center justify-center text-lg">
+                    <div className="h-10 w-10 bg-gray-200 rounded flex items-center justify-centertext-lg">
                       {getFileIcon(uploadedFile.file)}
                     </div>
                   )}
                 </div>
 
                 {/* File Info */}
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 truncate">
+                <div className="flex-1min-w-0">
+                  <p className="text-sm font-medium text-gray-900truncate">
                     {uploadedFile.file.name}
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xstext-gray-500">
                     {formatFileSize(uploadedFile.file.size)}
                   </p>
                   
                   {/* Progress Bar */}
                   {showProgress && uploadedFile.status === 'uploading' && (
                     <div className="mt-1">
-                      <div className="bg-gray-200 rounded-full h-1">
+                      <div className="bg-gray-200 rounded-fullh-1">
                         <div
-                          className="bg-blue-600 h-1 rounded-full transition-all duration-300"
+                          className="bg-blue-600 h-1 rounded-full transition-allduration-300"
                           style={{ width: `${uploadedFile.progress}%` }}
                         ></div>
                       </div>
@@ -348,22 +344,22 @@ export const FileUpload: React.FC<FileUploadProps> = ({
                   
                   {/* Error Message */}
                   {uploadedFile.status === 'error' && uploadedFile.error && (
-                    <p className="text-xs text-red-500 mt-1">
+                    <p className="text-xs text-red-500mt-1">
                       {uploadedFile.error}
                     </p>
                   )}
                 </div>
 
                 {/* Status */}
-                <div className="flex items-center space-x-2">
+                <div className="flex items-centerspace-x-2">
                   <span className={`text-xs font-medium ${getStatusColor(uploadedFile.status)}`}>
                     {uploadedFile.status === 'uploading' ? `${uploadedFile.progress}%` : uploadedFile.status}
                   </span>
                   <button
                     onClick={() => removeFile(uploadedFile.id)}
-                    className="text-gray-400 hover:text-red-500"
+                    className="text-gray-400hover:text-red-500"
                   >
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>

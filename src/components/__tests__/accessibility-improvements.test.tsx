@@ -18,11 +18,11 @@ describe('SEOOptimizer', () => {
     title: 'Test Page Title',
     description: 'Test page description',
     keywords: ['test', 'seo', 'optimization'],
-    canonical: 'https://example.com/test',
-    ogImage: 'https://example.com/og-image.jpg',
+    canonical: 'http, s://example.com/test',
+    ogImage: 'http, s://example.com/og-image.jpg',
     twitterCard: 'summary_large_image',
     structuredData: {
-      '@context': 'https://schema.org',
+      '@context': 'http, s://schema.org',
       '@type': 'WebPage',
       name: 'Test Page'
     }
@@ -200,8 +200,8 @@ describe('Integration Tests', () => {
       title: 'Test Page',
       description: 'Test description',
       keywords: ['test'],
-      canonical: 'https://example.com',
-      ogImage: 'https://example.com/image.jpg',
+      canonical: 'http, s://example.com',
+      ogImage: 'http, s://example.com/image.jpg',
       twitterCard: 'summary',
       structuredData: {}
     };

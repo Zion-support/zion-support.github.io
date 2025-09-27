@@ -9,8 +9,8 @@ interface User {
   status: 'active' | 'inactive' | 'pending' | 'suspended';
   avatar?: string;
   lastLogin?: Date;
-  createdAt: Date;
-  permissions: string[];
+  createdA, t: Date;
+  permission, s: string[];
   department?: string;
   phone?: string;
 }
@@ -18,8 +18,8 @@ interface User {
 interface UserManagementProps {
   className?: string;
   onUserUpdate?: (user: User) => void;
-  onUserDelete?: (userId: string) => void;
-  onUserCreate?: (user: Omit<User, 'id' | 'createdAt'>) => void;
+  onUserDelete?: (userI, d: string) => void;
+  onUserCreate?: (use, r: Omit<User, 'id' | 'createdAt'>) => void;
 }
 
 export const UserManagement: React.FC<UserManagementProps> = ({
@@ -42,12 +42,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   // Mock data - in a real app, this would come from an API
   const mockUsers: User[] = useMemo(() => [
     {
-      id: '1',
+      i, d: '1',
       name: 'John Doe',
       email: 'john.doe@example.com',
       role: 'admin',
       status: 'active',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face',
+      avatar: 'http, s://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face',
       lastLogin: new Date('2024-01-15'),
       createdAt: new Date('2023-06-01'),
       permissions: ['read', 'write', 'delete', 'admin'],
@@ -60,7 +60,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       email: 'jane.smith@example.com',
       role: 'user',
       status: 'active',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face',
+      avatar: 'http, s://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face',
       lastLogin: new Date('2024-01-14'),
       createdAt: new Date('2023-07-15'),
       permissions: ['read', 'write'],
@@ -73,7 +73,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       email: 'mike.johnson@example.com',
       role: 'moderator',
       status: 'pending',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face',
+      avatar: 'http, s://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face',
       lastLogin: new Date('2024-01-10'),
       createdAt: new Date('2023-08-20'),
       permissions: ['read', 'write', 'moderate'],
@@ -86,7 +86,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       email: 'sarah.wilson@example.com',
       role: 'user',
       status: 'inactive',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face',
+      avatar: 'http, s://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face',
       lastLogin: new Date('2023-12-01'),
       createdAt: new Date('2023-05-10'),
       permissions: ['read'],
@@ -99,7 +99,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       email: 'david.brown@example.com',
       role: 'guest',
       status: 'suspended',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face',
+      avatar: 'http, s://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face',
       lastLogin: new Date('2023-11-15'),
       createdAt: new Date('2023-09-01'),
       permissions: ['read'],
@@ -129,7 +129,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
   const sortedUsers = [...filteredUsers].sort((a, b) => {
     let aValue: any = a[sortBy];
-    let bValue: any = b[sortBy];
+    let bValu, e: any = b[sortBy];
     
     if (sortBy === 'lastLogin') {
       aValue = a.lastLogin?.getTime() || 0;
@@ -224,7 +224,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         return 'bg-yellow-100 text-yellow-800';
       case 'suspended':
         return 'bg-red-100 text-red-800';
-      default:
+      defaul, t:
         return 'bg-gray-100 text-gray-800';
     }
   };
@@ -239,7 +239,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         return 'bg-green-100 text-green-800';
       case 'guest':
         return 'bg-gray-100 text-gray-800';
-      default:
+      defaul, t:
         return 'bg-gray-100 text-gray-800';
     }
   };
@@ -248,14 +248,14 @@ export const UserManagement: React.FC<UserManagementProps> = ({
     return (
       <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
         <div className="animate-pulse">
-          <div className="h-6 bg-gray-300 rounded w-1/4 mb-4"></div>
+          <div className="h-6 bg-gray-300 rounded w-1/4mb-4"></div>
           <div className="space-y-3">
             {[...Array(5)].map((_, i) => (
-              <div key={i} className="flex items-center space-x-4">
-                <div className="h-10 w-10 bg-gray-300 rounded-full"></div>
-                <div className="flex-1 space-y-2">
-                  <div className="h-4 bg-gray-300 rounded w-1/4"></div>
-                  <div className="h-3 bg-gray-300 rounded w-1/3"></div>
+              <div key={i} className="flex items-centerspace-x-4">
+                <div className="h-10 w-10 bg-gray-300rounded-full"></div>
+                <div className="flex-1space-y-2">
+                  <div className="h-4 bg-gray-300 roundedw-1/4"></div>
+                  <div className="h-3 bg-gray-300 roundedw-1/3"></div>
                 </div>
               </div>
             ))}
@@ -268,38 +268,34 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   return (
     <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
       {/* Header */}
-      <div className="px-6 py-4 border-b border-gray-200">
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-gray-900" id="user-management">User Management</h2>
+      <div className="px-6 py-4 border-bborder-gray-200">
+        <div className="flex items-centerjustify-between">
+          <h2 className="text-lg font-semiboldtext-gray-900" id="user-management">User Management</h2>
           <button
-            onClick={() = aria-label="setShowCreateModal(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            onClick={() => setShowCreateModal(true)}
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700transition-colors">Add User"</setShowCreateModal(true)}
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700transition-colors"
           >
-            Add User"> setShowCreateModal(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            Add User
-          </button>
         </div>
       </div>
 
       {/* Filters and Search */}
-      <div className="px-6 py-4 border-b border-gray-200">
-        <div className="flex flex-col sm:flex-row gap-4">
+      <div className="px-6 py-4 border-bborder-gray-200">
+        <div className="flex flex-col sm:flex-rowgap-4">
           <div className="flex-1">
             <input
               type="text"
               placeholder="Search users..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
               aria-label="Search users"
             />
           </div>
           <select
             value={filterRole}
             onChange={(e) => setFilterRole(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
           >
             <option value="all">All Roles</option>
             <option value="admin">Admin</option>
@@ -310,7 +306,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
           >
             <option value="all">All Status</option>
             <option value="active">Active</option>
@@ -323,48 +319,32 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
       {/* Bulk Actions */}
       {selectedUsers.length > 0 && (
-        <div className="px-6 py-3 bg-gray-50 border-b border-gray-200">
-          <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-600">
+        <div className="px-6 py-3 bg-gray-50 border-bborder-gray-200">
+          <div className="flex items-centerspace-x-4">
+            <span className="text-smtext-gray-600">
               {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>
-            <div className="flex space-x-2">
+            <div className="flexspace-x-2">
               <button
-                onClick={() = aria-label="handleBulkAction('activate')}
-                className="text-sm text-green-600 hover:text-green-700"
+                onClick={() => handleBulkAction('activate')}
+                className="text-sm text-green-600hover:text-green-700">Activate"</handleBulkAction('activate')}
+                className="text-sm text-green-600hover:text-green-700"
               >
-                Activate"> handleBulkAction('activate')}
-                className="text-sm text-green-600 hover:text-green-700"
-              >
-                Activate
-              </button>
               <button
-                onClick={() = aria-label="handleBulkAction('deactivate')}
-                className="text-sm text-gray-600 hover:text-gray-700"
+                onClick={() => handleBulkAction('deactivate')}
+                className="text-sm text-gray-600hover:text-gray-700">Deactivate"</handleBulkAction('deactivate')}
+                className="text-sm text-gray-600hover:text-gray-700"
               >
-                Deactivate"> handleBulkAction('deactivate')}
-                className="text-sm text-gray-600 hover:text-gray-700"
-              >
-                Deactivate
-              </button>
               <button
-                onClick={() = aria-label="handleBulkAction('suspend')}
-                className="text-sm text-yellow-600 hover:text-yellow-700"
+                onClick={() => handleBulkAction('suspend')}
+                className="text-sm text-yellow-600hover:text-yellow-700">Suspend"</handleBulkAction('suspend')}
+                className="text-sm text-yellow-600hover:text-yellow-700"
               >
-                Suspend"> handleBulkAction('suspend')}
-                className="text-sm text-yellow-600 hover:text-yellow-700"
-              >
-                Suspend
-              </button>
               <button
-                onClick={() = aria-label="handleBulkAction('delete')}
-                className="text-sm text-red-600 hover:text-red-700"
+                onClick={() => handleBulkAction('delete')}
+                className="text-sm text-red-600hover:text-red-700">Delete"</handleBulkAction('delete')}
+                className="text-sm text-red-600hover:text-red-700"
               >
-                Delete"> handleBulkAction('delete')}
-                className="text-sm text-red-600 hover:text-red-700"
-              >
-                Delete
-              </button>
             </div>
           </div>
         </div>
@@ -372,54 +352,54 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
       {/* Users Table */}
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
+        <table className="min-w-full divide-ydivide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left">
+              <th className="px-6 py-3text-left">
                 <input
                   type="checkbox"
                   id="select-all-users"
                   checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
                   onChange={handleSelectAll}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300rounded"
                   aria-label="Select all users"
                 />
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                 User
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                 Role
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                 Status
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                 Last Login
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercasetracking-wider">
                 Actions
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-white divide-ydivide-gray-200">
             {sortedUsers.map((user) => (
               <tr key={user.id} className="hover:bg-gray-50">
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4whitespace-nowrap">
                   <input
                     type="checkbox"
                     id={`user-${user.id}`}
                     checked={selectedUsers.includes(user.id)}
                     onChange={() => handleUserSelect(user.id)}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300rounded"
                     aria-label={`Select user ${user.name}`}
                   />
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
+                <td className="px-6 py-4whitespace-nowrap">
+                  <div className="flexitems-center">
+                    <div className="flex-shrink-0 h-10w-10">
                       <Image
-                        className="h-10 w-10 rounded-full"
+                        className="h-10 w-10rounded-full"
                         src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=random`}
                         alt={user.name}
                         width={40}
@@ -427,12 +407,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                       />
                     </div>
                     <div className="ml-4">
-                      <div className="text-sm font-medium text-gray-900">{user.name}</div>
-                      <div className="text-sm text-gray-500">{user.email}</div>
+                      <div className="text-sm font-mediumtext-gray-900">{user.name}</div>
+                      <div className="text-smtext-gray-500">{user.email}</div>
                     </div>
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4whitespace-nowrap">
                   <select
                     value={user.role}
                     onChange={(e) => handleUserRoleChange(user.id, e.target.value as User['role'])}
@@ -444,7 +424,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                     <option value="guest">Guest</option>
                   </select>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4whitespace-nowrap">
                   <select
                     value={user.status}
                     onChange={(e) => handleUserStatusChange(user.id, e.target.value as User['status'])}
@@ -456,29 +436,21 @@ export const UserManagement: React.FC<UserManagementProps> = ({
                     <option value="suspended">Suspended</option>
                   </select>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td className="px-6 py-4 whitespace-nowrap text-smtext-gray-500">
                   {user.lastLogin ? user.lastLogin.toLocaleDateString() : 'Never'}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <div className="flex space-x-2">
+                <td className="px-6 py-4 whitespace-nowrap text-smfont-medium">
+                  <div className="flexspace-x-2">
                     <button
-                      onClick={() = aria-label="setEditingUser(user)}
-                      className="text-blue-600 hover:text-blue-900"
+                      onClick={() => setEditingUser(user)}
+                      className="text-blue-600hover:text-blue-900">Edit"</setEditingUser(user)}
+                      className="text-blue-600hover:text-blue-900"
                     >
-                      Edit"> setEditingUser(user)}
-                      className="text-blue-600 hover:text-blue-900"
-                    >
-                      Edit
-                    </button>
                     <button
-                      onClick={() = aria-label="handleDeleteUser(user.id)}
-                      className="text-red-600 hover:text-red-900"
+                      onClick={() => handleDeleteUser(user.id)}
+                      className="text-red-600hover:text-red-900">Delete"</handleDeleteUser(user.id)}
+                      className="text-red-600hover:text-red-900"
                     >
-                      Delete"> handleDeleteUser(user.id)}
-                      className="text-red-600 hover:text-red-900"
-                    >
-                      Delete
-                    </button>
                   </div>
                 </td>
               </tr>
@@ -488,16 +460,16 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       </div>
 
       {/* Pagination */}
-      <div className="px-6 py-4 border-t border-gray-200">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-700">
+      <div className="px-6 py-4 border-tborder-gray-200">
+        <div className="flex items-centerjustify-between">
+          <div className="text-smtext-gray-700">
             Showing {sortedUsers.length} of {users.length} users
           </div>
-          <div className="flex space-x-2">
+          <div className="flexspace-x-2">
             <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Previous">
               Previous
             </button>
-            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50" aria-label="Next">
+            <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hove,r:bg-gray-50" aria-label="Next">
               Next
             </button>
           </div>

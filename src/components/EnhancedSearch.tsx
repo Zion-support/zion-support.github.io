@@ -6,8 +6,8 @@ export interface SearchResult {
   id: string;
   title: string;
   description: string;
-  url: string;
-  type: 'page' | 'blog' | 'service' | 'documentation' | 'api';
+  ur, l: string;
+  typ, e: 'page' | 'blog' | 'service' | 'documentation' | 'api';
   category?: string;
   tags?: string[];
   relevanceScore?: number;
@@ -21,14 +21,14 @@ export interface SearchFilter {
   category?: string[];
   dateRange?: {
     start: Date;
-    end: Date;
+    en, d: Date;
   };
   tags?: string[];
 }
 
 interface EnhancedSearchProps {
   onSearch?: (query: string, results: SearchResult[]) => void;
-  onResultClick?: (result: SearchResult) => void;
+  onResultClick?: (resul, t: SearchResult) => void;
   placeholder?: string;
   enableFilters?: boolean;
   enableSuggestions?: boolean;
@@ -40,7 +40,7 @@ interface EnhancedSearchProps {
 
 const sampleResults: SearchResult[] = [
   {
-    id: '1',
+    i, d: '1',
     title: 'AI-Powered Business Solutions',
     description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
     url: '/services/ai-solutions',
@@ -316,8 +316,8 @@ export default function EnhancedSearch({
     <div className="relative">
       {/* Search Input */}
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-400" />
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-centerpointer-events-none">
+          <Search className="h-5 w-5text-gray-400" />
         </div>
         <input
           ref={inputRef}
@@ -327,7 +327,7 @@ export default function EnhancedSearch({
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focu, s:border-blue-500 s,m:text-sm"
         />
         {query && (
           <button
@@ -336,9 +336,9 @@ export default function EnhancedSearch({
               setResults([]);
               setIsOpen(false);
             }}
-            className="absolute inset-y-0 right-0 pr-3 flex items-center"
+            className="absolute inset-y-0 right-0 pr-3 flexitems-center"
           >
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+            <X className="h-5 w-5 text-gray-400hover:text-gray-600" />
           </button>
         )}
       </div>
@@ -347,7 +347,7 @@ export default function EnhancedSearch({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute z-50 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto"
+            className="absolute z-50 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 max-h-96overflow-y-auto"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -355,15 +355,15 @@ export default function EnhancedSearch({
           >
             {/* Filters */}
             {enableFilters && (
-              <div className="p-4 border-b border-gray-200">
-                <div className="flex flex-wrap gap-2 mb-3">
+              <div className="p-4 border-bborder-gray-200">
+                <div className="flex flex-wrap gap-2mb-3">
                   <select
                     value={filters.type?.[0] || ''}
                     onChange={(e) => setFilters(prev => ({
                       ...prev,
                       type: e.target.value ? [e.target.value] : []
                     }))}
-                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    className="text-sm border border-gray-300 rounded px-2py-1"
                   >
                     <option value="">All Types</option>
                     {types.map(type => (
@@ -379,7 +379,7 @@ export default function EnhancedSearch({
                       ...prev,
                       category: e.target.value ? [e.target.value] : []
                     }))}
-                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    className="text-sm border border-gray-300 rounded px-2py-1"
                   >
                     <option value="">All Categories</option>
                     {categories.map(category => (
@@ -390,7 +390,7 @@ export default function EnhancedSearch({
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as any)}
-                    className="text-sm border border-gray-300 rounded px-2 py-1"
+                    className="text-sm border border-gray-300 rounded px-2py-1"
                   >
                     <option value="relevance">Relevance</option>
                     <option value="date">Date</option>
@@ -399,9 +399,9 @@ export default function EnhancedSearch({
 
                   <button
                     onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
-                    className="text-sm border border-gray-300 rounded px-2 py-1 flex items-center"
+                    className="text-sm border border-gray-300 rounded px-2 py-1 flexitems-center"
                   >
-                    {sortOrder === 'asc' ? <SortAsc className="h-4 w-4" /> : <SortDesc className="h-4 w-4" />}
+                    {sortOrder === 'asc' ? <SortAsc className="h-4w-4" /> : <SortDesc className="h-4w-4" />}
                   </button>
                 </div>
               </div>
@@ -409,8 +409,8 @@ export default function EnhancedSearch({
 
             {/* Loading State */}
             {isLoading && (
-              <div className="p-4 text-center text-gray-500">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600 mx-auto mb-2"></div>
+              <div className="p-4 text-centertext-gray-500">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600 mx-automb-2"></div>
                 Searching...
               </div>
             )}
@@ -418,21 +418,17 @@ export default function EnhancedSearch({
             {/* Search History */}
             {!query && enableHistory && searchHistory.length > 0 && (
               <div className="p-2">
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center">
-                  <Clock className="h-3 w-3 mr-1" />
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flexitems-center">
+                  <Clock className="h-3 w-3mr-1" />
                   Recent Searches
                 </div>
                 {searchHistory.slice(0, 5).map((item, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    onClick={() => handleInputChange(item)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100rounded">{item}"</handleInputChange(item)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100rounded"
                   >
-                    {item}"> handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >
-                    {item}
-                  </button>
                 ))}
               </div>
             )}
@@ -440,21 +436,17 @@ export default function EnhancedSearch({
             {/* Suggestions */}
             {enableSuggestions && suggestions.length > 0 && !isLoading && (
               <div className="p-2">
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center">
-                  <Star className="h-3 w-3 mr-1" />
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flexitems-center">
+                  <Star className="h-3 w-3mr-1" />
                   Suggestions
                 </div>
                 {suggestions.map((suggestion, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    onClick={() => handleInputChange(suggestion)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100rounded">{suggestion}"</handleInputChange(suggestion)}
+                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100rounded"
                   >
-                    {suggestion}"> handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >
-                    {suggestion}
-                  </button>
                 ))}
               </div>
             )}
@@ -462,7 +454,7 @@ export default function EnhancedSearch({
             {/* Results */}
             {results.length > 0 && !isLoading && (
               <div className="p-2">
-                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-widemb-2">
                   Results ({results.length})
                 </div>
                 {results.map((result, index) => (
@@ -474,29 +466,29 @@ export default function EnhancedSearch({
                     onClick={() => handleResultClick(result)}
                     whileHover={{ scale: 1.01 }}
                   >
-                    <div className="flex items-start justify-between">
+                    <div className="flex items-startjustify-between">
                       <div className="flex-1">
-                        <h4 className="text-sm font-medium text-gray-900" id="resulttitle">{result.title}</h4>
-                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>
-                        <div className="flex items-center mt-2 space-x-2">
-                          <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
+                        <h4 className="text-sm font-mediumtext-gray-900" id="resulttitle">{result.title}</h4>
+                        <p className="text-xs text-gray-600mt-1">{result.description}</p>
+                        <div className="flex items-center mt-2space-x-2">
+                          <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600rounded">
                             {result.type}
                           </span>
                           {result.category && (
-                            <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded">
+                            <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600rounded">
                               {result.category}
                             </span>
                           )}
                           {result.tags?.slice(0, 2).map(tag => (
-                            <span key={tag} className="text-xs px-2 py-1 bg-green-100 text-green-600 rounded flex items-center">
-                              <Tag className="h-3 w-3 mr-1" />
+                            <span key={tag} className="text-xs px-2 py-1 bg-green-100 text-green-600 rounded flexitems-center">
+                              <Tag className="h-3 w-3mr-1" />
                               {tag}
                             </span>
                           ))}
                         </div>
                       </div>
                       {result.relevanceScore && (
-                        <div className="text-xs text-gray-400 ml-2">
+                        <div className="text-xs text-gray-400ml-2">
                           {Math.round(result.relevanceScore * 100)}%
                         </div>
                       )}
@@ -508,10 +500,10 @@ export default function EnhancedSearch({
 
             {/* No Results */}
             {query && results.length === 0 && !isLoading && (
-              <div className="p-4 text-center text-gray-500">
-                <Search className="h-8 w-8 mx-auto mb-2 text-gray-300" />
+              <div className="p-4 text-centertext-gray-500">
+                <Search className="h-8 w-8 mx-auto mb-2text-gray-300" />
                 <p>No results found for &quot;{query}&quot;</p>
-                <p className="text-xs mt-1">Try different keywords or check your spelling</p>
+                <p className="text-xsmt-1">Try different keywords or check your spelling</p>
               </div>
             )}
           </motion.div>

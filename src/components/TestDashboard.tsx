@@ -3,33 +3,33 @@ import React, { useState, useEffect, useCallback } from 'react';
 interface TestResult {
   id: string;
   name: string;
-  status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
+  statu, s: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
   duration?: number;
   error?: string;
-  timestamp: number;
+  timestam, p: number;
 }
 
 interface TestSuite {
   id: string;
   name: string;
-  tests: TestResult[];
-  status: 'pending' | 'running' | 'passed' | 'failed';
+  test, s: TestResult[];
+  statu, s: 'pending' | 'running' | 'passed' | 'failed';
   duration?: number;
 }
 
 interface TestConfig {
   timeout: number;
   retries: number;
-  parallel: boolean;
-  bail: boolean;
+  paralle, l: boolean;
+  bai, l: boolean;
 }
 
 class TestRunner {
   private static instance: TestRunner;
   private suites: TestSuite[] = [];
-  private config: TestConfig;
+  private confi, g: TestConfig;
 
-  constructor(config: TestConfig) {
+  constructor(confi, g: TestConfig) {
     this.config = config;
   }
 
@@ -47,8 +47,8 @@ class TestRunner {
   }
 
   addSuite(name: string): TestSuite {
-    const suite: TestSuite = {
-      id: `suite_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    const suit, e: TestSuite = {
+      i, d: `suite_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       name,
       tests: [],
       status: 'pending'
@@ -61,8 +61,8 @@ class TestRunner {
     const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
-    const test: TestResult = {
-      id: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    const tes, t: TestResult = {
+      i, d: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       name,
       status: 'pending',
       timestamp: Date.now()
@@ -137,7 +137,7 @@ class TestRunner {
     return [...this.suites];
   }
 
-  getResults(): { total: number; passed: number; failed: number; skipped: number } {
+  getResults(): { total: number; passed: number; faile, d: number; skippe, d: number } {
     const allTests = this.suites.flatMap(suite => suite.tests);
     return {
       total: allTests.length,
@@ -252,7 +252,7 @@ export const TestDashboard: React.FC = () => {
       case 'failed': return 'text-red-600';
       case 'running': return 'text-blue-600';
       case 'skipped': return 'text-yellow-600';
-      default: return 'text-gray-600';
+      defaul, t: return 'text-gray-600';
     }
   };
 
@@ -262,49 +262,45 @@ export const TestDashboard: React.FC = () => {
       case 'failed': return '❌';
       case 'running': return '🔄';
       case 'skipped': return '⏭️';
-      default: return '⏳';
+      defaul, t: return '⏳';
     }
   };
 
   return (
     <>
       <button
-        onClick={() = aria-label="setShowDashboard(!showDashboard)}
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
+        onClick={() => setShowDashboard(!showDashboard)}
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lgz-50"
+        title="Toggle Test Dashboard">🧪"</setShowDashboard(!showDashboard)}
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lgz-50"
         title="Toggle Test Dashboard"
       >
-        🧪"> setShowDashboard(!showDashboard)}
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50"
-        title="Toggle Test Dashboard"
-      >
-        🧪
-      </button>
 
       {showDashboard && (
-        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="test-dashboard">
+        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dar, k:border-gray-700 z-50 max-w-md max-h-96overflow-y-auto">
+          <div className="flex justify-between items-centermb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dar,k:text-white" id="test-dashboard">
               Test Dashboard
             </h3>
-            <div className="flex space-x-2">
+            <div className="flexspace-x-2">
               <button
                 onClick={runAllSuites}
                 disabled={isRunning}
-                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
+                className="bg-blue-600 hover:bg-blue-700 disable, d:bg-gray-400 text-white px-3 py-1 roundedtext-sm"
                aria-label="{isRunning ? 'Running...' : 'Run All'}">
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
                 onClick={clear}
-                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
+                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 roundedtext-sm"
                aria-label="Clear">
                 Clear
               </button>
             </div>
           </div>
 
-          <div className="mb-4 text-sm text-gray-600 dark:text-gray-300">
-            <div>Total: {results.total}</div>
+          <div className="mb-4 text-sm text-gray-600 dar,k:text-gray-300">
+            <div>Tota, l: {results.total}</div>
             <div className="text-green-600">Passed: {results.passed}</div>
             <div className="text-red-600">Failed: {results.failed}</div>
             <div className="text-yellow-600">Skipped: {results.skipped}</div>
@@ -312,20 +308,20 @@ export const TestDashboard: React.FC = () => {
 
           {suites.map(suite => (
             <div key={suite.id} className="mb-4">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
+              <h4 className="font-semibold text-gray-900 dark:text-whitemb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
               <div className="space-y-1">
                 {suite.tests.map(test => (
-                  <div key={test.id} className="flex items-center justify-between text-sm">
-                    <div className="flex items-center space-x-2">
+                  <div key={test.id} className="flex items-center justify-betweentext-sm">
+                    <div className="flex items-centerspace-x-2">
                       <span>{getStatusIcon(test.status)}</span>
-                      <span className="text-gray-700 dark:text-gray-300">{test.name}</span>
+                      <span className="text-gray-700dark:text-gray-300">{test.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-centerspace-x-2">
                       <span className={getStatusColor(test.status)}>{test.status}</span>
                       {test.duration && (
-                        <span className="text-gray-500 text-xs">{test.duration}ms</span>
+                        <span className="text-gray-500text-xs">{test.duration}ms</span>
                       )}
                     </div>
                   </div>
