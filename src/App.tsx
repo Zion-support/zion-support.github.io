@@ -9,7 +9,7 @@ import { PerformanceOptimizer } from './utils/performanceOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import securityEnhancer from './utils/securityEnhancements';
+// import securityEnhancer from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -28,8 +28,7 @@ import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
 import performanceEnhancer from './utils/performanceEnhancements';
-import securityEnhancer from './utils/securityEnhancements';
-import accessibilityEnhancer from './utils/accessibilityEnhancements';
+// import accessibilityEnhancer from './utils/accessibilityEnhancements';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -134,12 +133,12 @@ export default function App(): React.JSX.Element {
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
     console.log('Initializing security enhancements...');
-    const securityReport = securityEnhancer.generateSecurityReport();
-    console.log('Security Report:', securityReport);
+    // const securityReport = securityEnhancer.generateSecurityReport();
+    // console.log('Security Report:', securityReport);
     
     console.log('Initializing accessibility enhancements...');
-    const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
-    console.log('Accessibility Metrics:', accessibilityMetrics);
+    // const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
+    // console.log('Accessibility Metrics:', accessibilityMetrics);
     advancedPerformanceOptimizer.optimizeCriticalCSS();
     advancedPerformanceOptimizer.setupWebVitalsMonitoring();
     
@@ -230,8 +229,8 @@ export default function App(): React.JSX.Element {
     });
 
     // Initialize enhanced security features
-    const securityManagerInstance = SecurityManager.getInstance();
-    securityManagerInstance.monitorSecurityEvents();
+    // const securityManagerInstance = SecurityManager.getInstance();
+    // securityManagerInstance.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({
@@ -292,8 +291,8 @@ export default function App(): React.JSX.Element {
         scrollDepth,
         clicks,
         // userAgent: navigator.userAgent,
-        viewport: `${window.innerWidth}x${window.innerHeight}`,
-        connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
+        // viewport: `${window.innerWidth}x${window.innerHeight}`,
+        // connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
       });
     };
 

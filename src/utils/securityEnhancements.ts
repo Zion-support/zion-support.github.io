@@ -174,16 +174,16 @@ class SecurityEnhancer {
 
   private interceptFetch(): void {
     const originalFetch = window.fetch;
-    const self = this;
+    const securityEnhancer = this;
     
     window.fetch = async (...args) => {
       const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
       
-      if (self.isRateLimited(url)) {
+      if (securityEnhancer.isRateLimited(url)) {
         throw new Error('Rate limit exceeded');
       }
       
-      self.recordRequest(url);
+      securityEnhancer.recordRequest(url);
       return originalFetch(...args);
     };
   }
@@ -191,20 +191,20 @@ class SecurityEnhancer {
   private interceptXMLHttpRequest(): void {
     const originalOpen = XMLHttpRequest.prototype.open;
     const originalSend = XMLHttpRequest.prototype.send;
-    const self = this;
+    const securityEnhancer = this;
     
     XMLHttpRequest.prototype.open = function(method: string, url: string | URL, ...args: any[]) {
       (this as any)._url = url.toString();
-      return originalOpen.call(this, method, url, ...args);
+      return originalOpen.call(this, method, url, args[0], args[1], args[2]);
     };
     
     XMLHttpRequest.prototype.send = function(data?: any) {
-      if ((this as any)._url && self.isRateLimited((this as any)._url)) {
+      if ((this as any)._url && securityEnhancer.isRateLimited((this as any)._url)) {
         throw new Error('Rate limit exceeded');
       }
       
       if ((this as any)._url) {
-        self.recordRequest((this as any)._url);
+        securityEnhancer.recordRequest((this as any)._url);
       }
       
       return originalSend.call(this, data);
@@ -287,10 +287,10 @@ class SecurityEnhancer {
     // Monitor for suspicious patterns in URLs and inputs
     const originalPushState = history.pushState;
     const originalReplaceState = history.replaceState;
-    const self = this;
+    const securityEnhancer = this;
     
     history.pushState = function(state, title, url) {
-      if (url && self.detectXSSAttempt(url.toString())) {
+      if (url && securityEnhancer.detectXSSAttempt(url.toString())) {
         console.warn('Potential XSS attempt detected in URL');
         return;
       }
@@ -298,7 +298,7 @@ class SecurityEnhancer {
     };
     
     history.replaceState = function(state, title, url) {
-      if (url && self.detectXSSAttempt(url.toString())) {
+      if (url && securityEnhancer.detectXSSAttempt(url.toString())) {
         console.warn('Potential XSS attempt detected in URL');
         return;
       }
@@ -357,15 +357,15 @@ class SecurityEnhancer {
   private monitorNetworkActivity(): void {
     // Monitor for suspicious network requests
     const originalFetch = window.fetch;
-    const self = this;
+    const securityEnhancer = this;
     
     window.fetch = async (...args) => {
       const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
       
       // Check for suspicious domains
-      if (self.isSuspiciousDomain(url)) {
+      if (securityEnhancer.isSuspiciousDomain(url)) {
         console.warn('Suspicious network request detected:', url);
-        self.reportSecurityEvent('suspicious_request', { url });
+        securityEnhancer.reportSecurityEvent('suspicious_request', { url });
       }
       
       return originalFetch(...args);
