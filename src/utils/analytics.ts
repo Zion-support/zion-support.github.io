@@ -229,3 +229,4 @@ export class AnalyticsManager {
 }
 
 export const analyticsManager = AnalyticsManager.getInstance();
+export const analytics = analyticsManager;
