@@ -1,14 +1,106 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-// Lazy load heavy components for better performance
+// Lazy load heavy components to reduce initial bundle size
 const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
 const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
+  ssr: false,
+  loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+});
+
+const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
 const AnalyticsDashboard = dynamic(() => import('../src/components/AnalyticsDashboard').then(mod => ({ default: mod.AnalyticsDashboard })), {
@@ -96,8 +188,19 @@ type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' |
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>('comprehensive');
   const [isRealTime, setIsRealTime] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const tabs = [
+  // Optimized tab switching with loading state
+  const handleTabChange = useCallback((tabId: DashboardTab) => {
+    if (tabId !== activeTab) {
+      setIsLoading(true);
+      setActiveTab(tabId);
+      // Simulate loading time for better UX
+      setTimeout(() => setIsLoading(false), 100);
+    }
+  }, [activeTab]);
+
+  const tabs = useMemo(() => [
     { id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
     { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
     { id: 'performance' as const, name: 'Performance', icon: '⚡' },
@@ -121,10 +224,10 @@ const Dashboard: React.FC = () => {
     { id: 'analytics-insights' as const, name: 'Analytics Insights', icon: '💡' },
     { id: 'comprehensive-monitoring' as const, name: 'Comprehensive Monitoring', icon: '📊' },
     { id: 'comprehensive-security' as const, name: 'Comprehensive Security', icon: '🛡️' }
-  ];
+  ], []);
 
-  // Sample data for advanced components
-  const sampleAnalyticsData = {
+  // Sample data for advanced components - memoized to prevent re-creation
+  const sampleAnalyticsData = useMemo(() => ({
     pageViews: 125000,
     uniqueVisitors: 45000,
     bounceRate: 35.2,
@@ -164,9 +267,9 @@ const Dashboard: React.FC = () => {
     ],
     errorRate: 0.5,
     performanceScore: 92
-  };
+  }), []);
 
-  const renderDashboard = () => {
+  const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
@@ -350,6 +453,23 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer />
+          </div>
+        );
       case 'new-analytics':
         return (
           <div className="p-8">
@@ -378,6 +498,20 @@ const Dashboard: React.FC = () => {
               enableRealTime={isRealTime}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
@@ -528,7 +662,7 @@ const Dashboard: React.FC = () => {
       default:
         return <ComprehensiveAnalyticsDashboard />;
     }
-  };
+  }, [activeTab, isRealTime, sampleAnalyticsData]);
 
   return (
     <>
@@ -566,12 +700,13 @@ const Dashboard: React.FC = () => {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => handleTabChange(tab.id)}
+                  disabled={isLoading}
                   className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab.id
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
+                  } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.name}
@@ -582,8 +717,16 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Dashboard Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {renderDashboard()}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+          {isLoading && (
+            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+                <span className="text-gray-600">Loading dashboard...</span>
+              </div>
+            </div>
+          )}
+          {renderDashboard}
         </main>
 
         {/* Footer */}
