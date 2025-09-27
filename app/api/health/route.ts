@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
-export async function GET(_request: NextRequest) {
+export async function GET() {
   try {
     const startTime = Date.now()
     
@@ -30,7 +30,7 @@ export async function GET(_request: NextRequest) {
         'Expires': '0'
       }
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { 
         status: 'unhealthy', 

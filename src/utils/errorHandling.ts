@@ -6,6 +6,7 @@
 export interface ErrorInfo {
   message: string;
   stack?: string;
+  componentStack?: string;
   timestamp: string;
   userAgent: string;
   url: string;
@@ -87,7 +88,7 @@ export const createErrorInfo = (error: Error, errorInfo: React.ErrorInfo): Error
   return {
     message: error.message,
     stack: error.stack,
-    componentStack: errorInfo.componentStack,
+    componentStack: errorInfo.componentStack || undefined,
     timestamp: new Date().toISOString(),
     userAgent: navigator.userAgent,
     url: window.location.href

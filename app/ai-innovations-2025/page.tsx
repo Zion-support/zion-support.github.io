@@ -260,7 +260,7 @@ export default function AIInnovations2025Page() {
                 <div className="text-2xl font-semibold mb-4">Revenue Increase</div>
                 <div className="text-gray-300 mb-4">Fortune 500 Company</div>
                 <p className="text-sm opacity-75">
-                  "Our revenue increased by $2.5M in just 6 months after implementing their neural superintelligence solution."
+                  &ldquo;Our revenue increased by $2.5M in just 6 months after implementing their neural superintelligence solution.&rdquo;
                 </p>
               </div>
 
@@ -269,7 +269,7 @@ export default function AIInnovations2025Page() {
                 <div className="text-2xl font-semibold mb-4">Efficiency Boost</div>
                 <div className="text-gray-300 mb-4">Manufacturing Firm</div>
                 <p className="text-sm opacity-75">
-                  "Our operational efficiency increased by 340% with their autonomous business systems."
+                  &ldquo;Our operational efficiency increased by 340% with their autonomous business systems.&rdquo;
                 </p>
               </div>
 
@@ -278,7 +278,7 @@ export default function AIInnovations2025Page() {
                 <div className="text-2xl font-semibold mb-4">Cost Reduction</div>
                 <div className="text-gray-300 mb-4">Tech Startup</div>
                 <p className="text-sm opacity-75">
-                  "We reduced our operational costs by 95% using their quantum AI solutions."
+                  &ldquo;We reduced our operational costs by 95% using their quantum AI solutions.&rdquo;
                 </p>
               </div>
             </div>
