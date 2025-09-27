@@ -3,8 +3,7 @@ import Image from 'next/image';
 
 interface FileUploadProps {
   onFileSelect?: (files: File[]) => void;
-  onFileUpload?: (file,
-    s: File[]) => Promise<void>;
+  onFileUpload?: (files: File[]) => Promise<void>;
   accept?: string;
   multiple?: boolean;
   maxSize?: number; // in MB
@@ -13,18 +12,17 @@ interface FileUploadProps {
   disabled?: boolean;
   showPreview?: boolean;
   showProgress?: boolean;
-  allowedTypes?: string[];}
+  allowedTypes?: string[];
+}
 
 interface UploadedFile {
   file: File;
-  i,
-    d: string;
-  progres,
-    s: number;
-  statu,
-    s: 'pending' | 'uploading' | 'completed' | 'error';
+  id: string;
+  progress: number;
+  status: 'pending' | 'uploading' | 'completed' | 'error';
   error?: string;
-  preview?: string;}
+  preview?: string;
+}
 
 export const FileUpload: React.FC<FileUploadProps> = ({
   onFileSelect,
@@ -37,7 +35,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   disabled = false,
   showPreview = true,
   showProgress = true,
-  allowedTypes = []}) => {;
+  allowedTypes = []
+}) => {
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [isDragOver, setIsDragOver] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -45,11 +44,13 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
   const validateFile = useCallback((file: File): string | null => {
     // Check file size
-    if (file.size > maxSize * 1024 * 1024) {;      return `File size must be less than ${maxSize}MB`;
+    if (file.size > maxSize * 1024 * 1024) {
+      return `File size must be less than ${maxSize}MB`;
     }
 
     // Check file type
-    if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {      return `File type ${file.type} is not allowed`;
+    if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {
+      return `File type ${file.type} is not allowed`;
     }
 
     return null;
@@ -57,29 +58,34 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
   const generatePreview = (file: File): Promise<string> => {
     return new Promise((resolve) => {
-      if (file.type.startsWith('image/')) {;
+      if (file.type.startsWith('image/')) {
         const reader = new FileReader();
         reader.onload = (e) => resolve(e.target?.result as string);
-        reader.readAsDataURL(file);      } else {
-        resolve('');      }
+        reader.readAsDataURL(file);
+      } else {
+        resolve('');
+      }
     });
   };
 
-  const handleFileSelect = useCallback(async (files: FileList) => {;
+  const handleFileSelect = useCallback(async (files: FileList) => {
     const fileArray = Array.from(files);
     
     // Check max files limit
-    if (uploadedFiles.length + fileArray.length > maxFiles) {      alert(`Maximum ${maxFiles} files allowed`);
+    if (uploadedFiles.length + fileArray.length > maxFiles) {
+      alert(`Maximum ${maxFiles} files allowed`);
       return;
     }
 
     const validateFile = (file: File): string | null => {
       // Check file size
-      if (file.size > maxSize * 1024 * 1024) {;        return `File size must be less than ${maxSize}MB`;
+      if (file.size > maxSize * 1024 * 1024) {
+        return `File size must be less than ${maxSize}MB`;
       }
 
       // Check file type
-      if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {        return `File type ${file.type} is not allowed`;
+      if (allowedTypes.length > 0 && !allowedTypes.includes(file.type)) {
+        return `File type ${file.type} is not allowed`;
       }
 
       return null;
@@ -89,7 +95,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
     for (const file of fileArray) {
       const error = validateFile(file);
-      if (error) {        alert(`Error with ${file.name}: ${error}`);
+      if (error) {
+        alert(`Error with ${file.name}: ${error}`);
         continue;
       }
 
@@ -100,26 +107,30 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         id: Math.random().toString(36).substr(2, 9),
         progress: 0,
         status: 'pending',
-        preview      });
+        preview
+      });
     }
 
     setUploadedFiles(prev => [...prev, ...newFiles]);
 
     if (onFileSelect) {
-      onFileSelect(fileArray);    }
+      onFileSelect(fileArray);
+    }
   }, [uploadedFiles.length, maxFiles, onFileSelect, allowedTypes, maxSize]);
 
-  const handleDragOver = (e: React.DragEvent) => {;
+  const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
     if (!disabled) {
-      setIsDragOver(true);    }
+      setIsDragOver(true);
+    }
   };
 
-  const handleDragLeave = (e: React.DragEvent) => {;
+  const handleDragLeave = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragOver(false);  };
+    setIsDragOver(false);
+  };
 
-  const handleDrop = (e: React.DragEvent) => {;
+  const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragOver(false);
     
@@ -127,67 +138,77 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
     const files = e.dataTransfer.files;
     if (files.length > 0) {
-      handleFileSelect(files);    }
+      handleFileSelect(files);
+    }
   };
 
-  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
-      handleFileSelect(files);    }
+      handleFileSelect(files);
+    }
   };
 
-  const handleUpload = async () => {;
+  const handleUpload = async () => {
     if (uploadedFiles.length === 0) return;
 
     setIsUploading(true);
     const filesToUpload = uploadedFiles.filter(f => f.status === 'pending');
 
     // Update status to uploading
-    setUploadedFiles(prev = > prev.map(f =>       f.status === 'pending' ? { ...f, status: 'uploading' } : f;
+    setUploadedFiles(prev => prev.map(f => 
+      f.status === 'pending' ? { ...f, status: 'uploading' } : f
     ));
 
     try {
       if (onFileUpload) {
-        await onFileUpload(filesToUpload.map(f => f.file));      }
+        await onFileUpload(filesToUpload.map(f => f.file));
+      }
 
       // Simulate upload progress
       for (let i = 0; i <= 100; i += 10) {
         await new Promise(resolve => setTimeout(resolve, 100));
-        setUploadedFiles(prev = > prev.map(f =>           f.status === 'uploading' ? { ...f, progress: i } : f;
+        setUploadedFiles(prev => prev.map(f => 
+          f.status === 'uploading' ? { ...f, progress: i } : f
         ));
       }
 
       // Mark as completed
-      setUploadedFiles(prev = > prev.map(f => 
-        f.status === 'uploading' ? { ...f, status: 'completed', progress: 100 } : f;
+      setUploadedFiles(prev => prev.map(f => 
+        f.status === 'uploading' ? { ...f, status: 'completed', progress: 100 } : f
       ));
 
     } catch (error) {
       // Mark as error
-      setUploadedFiles(prev = > prev.map(f => 
+      setUploadedFiles(prev => prev.map(f => 
         f.status === 'uploading' ? { 
-          ...f,
+          ...f, 
           status: 'error', 
-          error: error instanceof Error ? error.message : 'Upload failed'        } : f;
+          error: error instanceof Error ? error.message : 'Upload failed'
+        } : f
       ));
     } finally {
-      setIsUploading(false);    }
+      setIsUploading(false);
+    }
   };
 
-  const removeFile = (id: string) => {;
-    setUploadedFiles(prev => prev.filter(f => f.id !== id));  };
+  const removeFile = (id: string) => {
+    setUploadedFiles(prev => prev.filter(f => f.id !== id));
+  };
 
-  const clearAllFiles = () => {;
-    setUploadedFiles([]);  };
+  const clearAllFiles = () => {
+    setUploadedFiles([]);
+  };
 
-  const formatFileSize = (bytes: number): string => {;
+  const formatFileSize = (bytes: number): string => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];  };
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
 
-  const getFileIcon = (file: File): string => {;
+  const getFileIcon = (file: File): string => {
     if (file.type.startsWith('image/')) return '🖼️';
     if (file.type.startsWith('video/')) return '🎥';
     if (file.type.startsWith('audio/')) return '🎵';
@@ -196,11 +217,12 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     if (file.type.includes('excel') || file.type.includes('spreadsheet')) return '📊';
     if (file.type.includes('powerpoint') || file.type.includes('presentation')) return '📈';
     if (file.type.includes('zip') || file.type.includes('rar')) return '📦';
-    return '📁';  };
+    return '📁';
+  };
 
   const getStatusColor = (status: UploadedFile['status']): string => {
     switch (status) {
-      case 'pending':;
+      case 'pending':
         return 'text-gray-500';
       case 'uploading':
         return 'text-blue-500';
@@ -208,110 +230,139 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         return 'text-green-500';
       case 'error':
         return 'text-red-500';
-      defaul,
-    t:
-        return 'text-gray-500';    }
+      default:
+        return 'text-gray-500';
+    }
   };
 
   return (
-    <div className = {`w-full ${className}`}>
+    <div className={`w-full ${className}`}>
       {/* Drop Zone */}
       <div
         className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
           isDragOver
             ? 'border-blue-400 bg-blue-50'
-            : 'border-gray-300 hover:border-gray-400'        } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
+            : 'border-gray-300 hover:border-gray-400'
+        } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         role="button" tabIndex="0" onClick={() => !disabled && fileInputRef.current?.click()}
-      >        <div className=space-y-2"">
-          <svg            className=mx-auto h-12 w-12 text-gray-400""            stroke=currentColor""            fill=none""            viewBox=0 0 48 48""
+      >
+        <div className="space-y-2">
+          <svg
+            className="mx-auto h-12 w-12 text-gray-400"
+            stroke="currentColor"
+            fill="none"
+            viewBox="0 0 48 48"
           >
-            <path              d=M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02""
-              strokeWidth={2}              strokeLinecap=round""              strokeLinejoin=round""
+            <path
+              d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-          </svg>          <div className=text-sm text-gray-600"">            <span className=font-medium text-blue-600 hover:text-blue-500"">
+          </svg>
+          <div className="text-sm text-gray-600">
+            <span className="font-medium text-blue-600 hover:text-blue-500">
               Click to upload
             </span>{' '}
             or drag and drop
-          </div>          <div className=text-xs text-gray-500"">
+          </div>
+          <div className="text-xs text-gray-500">
             {accept === '*' ? 'Any file type' : accept} • Max {maxSize}MB • Max {maxFiles} files
           </div>
         </div>
       </div>
 
       {/* File List */}
-      {uploadedFiles.length > 0 && (        <div className=mt-4 space-y-2"">          <div className=flex items-center justify-between"">            <h3 className=text-sm font-medium text-gray-900"" id="selected-files-uploadedfileslength">              Selected Files ({uploadedFiles.length})
-            </h3>            <div className=flex space-x-2"">
+      {uploadedFiles.length > 0 && (
+        <div className="mt-4 space-y-2">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-medium text-gray-900" id="selected-files-uploadedfileslength">
+              Selected Files ({uploadedFiles.length})
+            </h3>
+            <div className="flex space-x-2">
               <button
                 onClick={handleUpload}
-<<<<<<< HEAD:temp-broken-components/FileUpload.tsx
-                disabled={isUploading || uploadedFiles.every(f={() => f.status !== 'pending'}            aria-label=f.status !== 'pending'""}                className=px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover: bg-blue-700 disable,
-    d:opacity-50 disable,
-    d:cursor-not-allowed""
-              >                {isUploading ? 'Uploading...' : 'Upload All'}> f.status !== 'pending')}
-                className = ""px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover: bg-blue-700 disable,
-    d:opacity-50 disable,    d:cursor-not-allowed
-=======
                 disabled={isUploading || uploadedFiles.every(f => f.status !== 'pending')}
-                aria-label="Upload all selected files"
+                aria-label="Upload all files"
                 className="px-3 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
->>>>>>> 7f723505c7d69fdcdfb649a50c1163e3919b1408:src/components/FileUpload.tsx
               >
                 {isUploading ? 'Uploading...' : 'Upload All'}
               </button>
               <button
                 onClick={clearAllFiles}
-                className=""px-3 py-1 text-sm text-gray-600 hover:text-gray-800"               aria-label=Clear All"">
+                className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+               aria-label="Clear All">
                 Clear All
               </button>
             </div>
           </div>
-          <div className=space-y-2"">
+
+          <div className="space-y-2">
             {uploadedFiles.map((uploadedFile) => (
-              <div                key={uploadedFile.id}                className=flex items-center space-x-3 p-3 bg-gray-50 rounded-lg""
+              <div
+                key={uploadedFile.id}
+                className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg"
               >
-                {/* File Icon/Preview */}                <div className=flex-shrink-0"">
+                {/* File Icon/Preview */}
+                <div className="flex-shrink-0">
                   {showPreview && uploadedFile.preview ? (
-                    <Image                      src={uploadedFile.preview}
-                      alt={uploadedFile.file.name}                      className=h-10 w-10 rounded object-cover""
+                    <Image
+                      src={uploadedFile.preview}
+                      alt={uploadedFile.file.name}
+                      className="h-10 w-10 rounded object-cover"
                       width={40}
                       height={40}
                     />
-                  ) : (                    <div className=h-10 w-10 bg-gray-200 rounded flex items-center justify-center text-lg"">
+                  ) : (
+                    <div className="h-10 w-10 bg-gray-200 rounded flex items-center justify-center text-lg">
                       {getFileIcon(uploadedFile.file)}
                     </div>
                   )}
                 </div>
 
-                {/* File Info */}                <div className=flex-1 min-w-0"">                  <p className=text-sm font-medium text-gray-900 truncate"">
+                {/* File Info */}
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-gray-900 truncate">
                     {uploadedFile.file.name}
-                  </p>                  <p className=text-xs text-gray-500"">
+                  </p>
+                  <p className="text-xs text-gray-500">
                     {formatFileSize(uploadedFile.file.size)}
                   </p>
                   
                   {/* Progress Bar */}
-                  {showProgress && uploadedFile.status === 'uploading' && (                    <div className=mt-1"">                      <div className=bg-gray-200 rounded-full h-1"">
-                        <div                          className=bg-blue-600 h-1 rounded-full transition-all duration-300""                          style={{ width: `${uploadedFile.progress}%` }}
+                  {showProgress && uploadedFile.status === 'uploading' && (
+                    <div className="mt-1">
+                      <div className="bg-gray-200 rounded-full h-1">
+                        <div
+                          className="bg-blue-600 h-1 rounded-full transition-all duration-300"
+                          style={{ width: `${uploadedFile.progress}%` }}
                         ></div>
                       </div>
                     </div>
                   )}
                   
                   {/* Error Message */}
-                  {uploadedFile.status === 'error' && uploadedFile.error && (                    <p className=text-xs text-red-500 mt-1"">                      {uploadedFile.error}
+                  {uploadedFile.status === 'error' && uploadedFile.error && (
+                    <p className="text-xs text-red-500 mt-1">
+                      {uploadedFile.error}
                     </p>
                   )}
                 </div>
 
-                {/* Status */}                <div className=flex items-center space-x-2"">
+                {/* Status */}
+                <div className="flex items-center space-x-2">
                   <span className={`text-xs font-medium ${getStatusColor(uploadedFile.status)}`}>
                     {uploadedFile.status === 'uploading' ? `${uploadedFile.progress}%` : uploadedFile.status}
                   </span>
                   <button
-                    onClick={() => removeFile(uploadedFile.id)}                    className=text-gray-400 hover:text-red-500""
-                  >                    <svg className=h-4 w-4"" fill="none" stroke="currentColor" viewBox="0 0 24 24">                      <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    onClick={() => removeFile(uploadedFile.id)}
+                    className="text-gray-400 hover:text-red-500"
+                  >
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -323,12 +374,15 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
       {/* Hidden File Input */}
       <input
-        ref={fileInputRef}        type=file""
+        ref={fileInputRef}
+        type="file"
         accept={accept}
         multiple={multiple}
-        onChange={handleFileInputChange}        className=hidden""
-        disabled={disabled}        aria-label=Upload file""
+        onChange={handleFileInputChange}
+        className="hidden"
+        disabled={disabled}
+        aria-label="Upload file"
       />
-    </div>;
+    </div>
   );
 };

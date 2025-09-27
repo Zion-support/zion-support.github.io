@@ -48,7 +48,7 @@ const PerformanceMetrics: React.FC = () => {
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
-        aria-label="Toggle performance metrics visibility"
+        aria-label="Toggle performance metrics"
         className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"
       >
         📊 Performance

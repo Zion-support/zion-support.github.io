@@ -128,7 +128,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
           <button
             key={status}
             onClick={() => setSelectedStatus(status)}
-            aria-label={`Filter by ${status} status`}
+            aria-label={`Filter by ${status}`}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
                 ? 'bg-blue-600 text-white'
