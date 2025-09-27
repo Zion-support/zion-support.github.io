@@ -215,23 +215,26 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-4right-4bg-white dark: bg-gray-800rounded-lg shadow-lg p-4max-w-smz-50"
+
+          className="fixed bottom-4 right-4 bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4max-w-smz-50"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
         >
           <div className="flex items-center justify-between mb-2">
-            <h4className="font-semibold text-gray-900dark:text-white">SEO Analysis</h4>
+            <h4className="font-semibold text-gray-900 dark:text-white">SEO Analysis</h4>
             <div className={`text-2xl font-bold ${getScoreColor(seoScore)}`}
+
               {seoScore}
             </div>
           </div>
-          <div className="text-sm text-gray-600dark:text-gray-400mb-2">
+          <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
             {getScoreLabel(seoScore)}
           </div>
           
           {seoIssues.length > 0 && (
             <div className="space-y-1">
-              <div className="text-xs font-medium text-gray-700dark:text-gray-300">Issue, s:</div>
+              <div className="text-xs font-medium text-gray-700 dark:text-gray-300">Issue, s:</div>
               {seoIssues.map((issue, index) => (
-                <div key={index} className="text-xs text-red-600dark:text-red-400">
+                <div key={index} className="text-xs text-red-600 dark:text-red-400">
                   • {issue}
                 </div>
               ))}

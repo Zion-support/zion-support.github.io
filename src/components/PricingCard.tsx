@@ -26,14 +26,17 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     <div 
       className = {`relative p-8bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-500border-2 ${
         tier.isPopular 
-          ? 'border-blue-500scale-105' 
-          : 'border-gray-200hove,
-    r:border-blue-300'      } hover-lift ${
-        isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-8'      }`}
+
+          ? 'border-blue-500 scale-105' 
+          : 'border-gray-200 hover:border-blue-300'
+      } hover-lift ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
     >
       {/* Popular badge */}
       {tier.isPopular && (
-        <div className="absolute -top-4left-1/2transform -translate-x-1/2">          <span className=bg-gradient-to-r from-blue-600to-purple-600text-white px-6py-2rounded-full text-sm font-semibold shadow-lg"">
+        <div className="absolute -top-4 left-1/2transform -translate-x-1/2">          <span className=bg-gradient-to-r from-blue-600to-purple-600text-white px-6py-2rounded-full text-sm font-semibold shadow-lg"">
             Most Popular
           </span>
         </div>      )}
@@ -59,9 +62,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         aria-label={`Select ${tier.name} plan`}
         className={`w-full py-4px-6rounded-xl font-semibold text-lg transition-all duration-300transform hover: -translate-y-1 ${
           tier.buttonVariant === 'primary'
-            ? 'bg-gradient-to-r from-blue-600to-purple-600text-white hover:from-blue-700hover:to-purple-700shadow-lg hover:shadow-xl'
-            : 'border-2border-blue-600text-blue-600hover:bg-blue-600hove,
-    r:text-white'        }`}
+
+            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+        }` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
       >
         {tier.buttonText}
       </button>

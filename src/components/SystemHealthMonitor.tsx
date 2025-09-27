@@ -56,65 +56,84 @@ export const SystemHealthMonitor: React.FC = () => {
   };
 
   return (
-    <div className="p-6bg-white rounded-lgshadow-lg">
+
+    <div className="p-6 bg-white rounded-lgshadow-lg">
       <div className="flex items-center justify-between mb-6">
-        <h2className="text-2xl font-bold">System Health Monitor</h2>
+        <h2 className="text-2 xl font-bold">System Health Monitor</h2>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
         <div className={`px-3py-1rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
+
           {health.status.toUpperCase()}
         </div>
       </div>
 
-      <div className="grid grid-cols-2md:grid-cols-3gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">Uptime</h3>
-          <div className="text-2xl font-boldtext-gray-900">
+
+          <h3 className="text-sm font-medium text-gray-600">Uptime</h3>
+          <div className="text-2 xl font-boldtext-gray-900">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {formatUptime(health.uptime)}
           </div>
         </div>
 
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">Response Time</h3>
-          <div className="text-2xl font-boldtext-gray-900">
+
+          <h3 className="text-sm font-medium text-gray-600">Response Time</h3>
+          <div className="text-2 xl font-boldtext-gray-900">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {health.responseTime.toFixed(0)}ms
           </div>
         </div>
 
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">Error Rate</h3>
-          <div className="text-2xl font-boldtext-gray-900">
+
+          <h3 className="text-sm font-medium text-gray-600">Error Rate</h3>
+          <div className="text-2 xl font-boldtext-gray-900">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {health.errorRate.toFixed(2)}%
           </div>
         </div>
 
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">CPU Usage</h3>
-          <div className="text-2xl font-boldtext-gray-900">
+
+          <h3 className="text-sm font-medium text-gray-600">CPU Usage</h3>
+          <div className="text-2 xl font-boldtext-gray-900">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {health.cpuUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-blue-600h-2rounded-full transition-allduration-300"
+
+              className="bg-blue-600 h-2 rounded-full transition-allduration-300"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               style={{ width: `${health.cpuUsage}%` }}
             />
           </div>
         </div>
 
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">Memory Usage</h3>
-          <div className="text-2xl font-boldtext-gray-900">
+
+          <h3 className="text-sm font-medium text-gray-600">Memory Usage</h3>
+          <div className="text-2 xl font-boldtext-gray-900">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {health.memoryUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-green-600h-2rounded-full transition-allduration-300"
+
+              className="bg-green-600 h-2 rounded-full transition-allduration-300"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               style={{ width: `${health.memoryUsage}%` }}
             />
           </div>
         </div>
 
         <div className="space-y-2">
-          <h3className="text-sm font-mediumtext-gray-600">Last Updated</h3>
+
+          <h3 className="text-sm font-medium text-gray-600">Last Updated</h3>
           <div className="text-smtext-gray-500">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             {new Date().toLocaleTimeString()}
           </div>
         </div>

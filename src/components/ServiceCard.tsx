@@ -26,9 +26,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 		<div
 			className = {`group p-6rounded-xl border-2transition-all duration-300cursor-pointer ${
 				isHovered
-					? 'border-blue-500bg-blue-50shadow-lg transform -translate-y-1'
-					: 'border-gray-200bg-white hover: border-blue-300hove,
-    r:shadow-md'			}`}
+
+					? 'border-blue-500 bg-blue-50 shadow-lg transform -translate-y-1'
+					: 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'
+			}` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
 		>

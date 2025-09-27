@@ -115,32 +115,42 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     switch (type) {
       case 'success':
         return (
-          <svg className="h-6w-6text-green-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M513l44 L197" />
+
+          <svg className="h-6 w-6 text-green-400" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M513 l44 L197" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           </svg>
         );
       case 'error':
         return (
-          <svg className="h-6w-6text-red-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
+
+          <svg className="h-6 w-6 text-red-400" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66 l 1212" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           </svg>
         );
       case 'warning':
         return (
-          <svg className="h-6w-6text-yellow-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z" />
+
+          <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M129 v 2 m04 h.01 m-6.9384 h 13.856 c1.5402.502-1.6671.732-2.5L 13.7324 c-.77-.833-1.964-.833-2.7320 L3.73216.5c-.77.833.1922.51.7322.5z" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           </svg>
         );
       case 'info':
         return (
-          <svg className="h-6w-6text-blue-400" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1316h-1v-4h-1m1-4h.01M2112a99011-18099001180z" />
+
+          <svg className="h-6 w-6 text-blue-400" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1316 h-1v-4h-1m1-4h.01M2112 a99011-18099001180 z" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           </svg>
         );
       case 'loading':
         return (
-          <svg className="h-6w-6text-gray-400animate-spin" fill="none" viewBox="002424" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M44v5h.582m15.3562A8.0018.0010004.5829m00H9m1111v-5h-.581m00 a8.0038.003001-15.357-2m15.3572H15" />
+
+          <svg className="h-6 w-6 text-gray-400 animate-spin" fill="none" viewBox="002424" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M44 v 5 h.582 m 15.3562 A8.0018.0010004.5829m00H 9 m1111 v-5h-.581 m00 a8.0038.003001-15.357-2m 15.3572 H 15" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           </svg>
         );
       default:
@@ -154,6 +164,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   return (
     <div className={`${getPositionClasses()} `}>
+
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -164,16 +175,17 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="flex-shrink-0">
                 {getIcon(notification.type)}
               </div>
-              <div className="ml-3w-0flex-1">
+              <div className="ml-3 w-0 flex-1">
                 <p className="text-sm font-mediumtext-gray-900">
+
                   {notification.title}
                 </p>
-                <p className="mt-1text-smtext-gray-500">
+                <p className="mt-1 text-smtext-gray-500">
                   {notification.message}
                 </p>
                 
                 {notification.actions && notification.actions.length > 0 && (
-                  <div className="mt-3flexspace-x-2">
+                  <div className="mt-3 flexspace-x-2">
                     {notification.actions.map((action, index) => (
                       <button
                         key={index}
@@ -185,6 +197,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             ? 'text-red-600hover:text-red-500'
                             : 'text-gray-600hover:text-gray-500'
                         }`}
+
                        aria-label="{action.label}">
                         {action.label}
                       </button>
@@ -192,14 +205,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   </div>
                 )}
               </div>
-              <div className="ml-4flex-shrink-0flex">
+              <div className="ml-4 flex-shrink-0 flex">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400hover:text-gray-500focus:outline-none focus:ring-2focu, s:ring-offset-2focu,s:ring-indigo-500"
+
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focu, s:ring-offset-2 focu,s:ring-indigo-500"
                   onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>
-                  <svg className="h-5w-5" viewBox="002020" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.2934.293a110011.4140L108.586l4.293-4.293a110111.4141.414L11.41410l4.2934.293a11001-1.4141.414L1011.414l-4.2934.293a11001-1.414-1.414L8.586104.2935.707a110010-1.414z" clipRule="evenodd" />
+                  <svg className="h-5 w-5" viewBox="002020" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.2934.293a 110011.4140 L108.586 l4.293-4.293a 110111.4141.414 L 11.41410 l4.2934.293 a11001-1.4141.414 L 1011.414 l-4.2934.293 a11001-1.414-1.414 L8.586104.2935.707a 110010-1.414 z" clipRule="evenodd" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   </svg>
                 </button>
               </div>
