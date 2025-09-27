@@ -1,15 +1,5 @@
-import React, { Suspense, lazy, useEffect, useMemo } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SkipLink from './components/SkipLink';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBoundary from './components/ErrorBoundary';
-import ErrorFallback from './components/ErrorFallback';
-import SystemDashboard from './components/SystemDashboard';
-import AccessibilityTester from './components/AccessibilityTester';
-import PerformanceProfiler from './components/PerformanceProfiler';
+import React, { useEffect, useMemo } from 'react';
+import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
@@ -18,15 +8,6 @@ import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import './index.css';
-
-// Lazy load components for better performance
-const Home = lazy(() => import('./pages/Home'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Contact = lazy(() => import('./pages/Contact'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
@@ -144,36 +125,5 @@ export default function App(): React.JSX.Element {
     };
   }, [preloadResource, recordMetric, seoData]);
 
-  return (
-    <ErrorBoundary fallback={<ErrorFallback />}>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <SkipLink />
-          <ScrollToTop />
-          <Header />
-          
-          <main id="main-content">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          
-          {/* Development Tools */}
-          <SystemDashboard />
-          <AccessibilityTester />
-          <PerformanceProfiler />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
+  return <AppRouter />;
 }
