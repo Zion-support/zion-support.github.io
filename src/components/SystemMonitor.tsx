@@ -133,7 +133,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
 
   return (<divclassNam, e ="space-y-6">
       {/* Syst, e, m, Stat, u, sOverview */};
-      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4ga  p-4">
+      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4ga p-4">
         <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           className="bg-whi, t, e, p-6, round, e, d-lg, shad, o, w-sm, borderbord, e, r-gr, a, y-200"
@@ -160,7 +160,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.1 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Memory, Usag, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{metri, c, s.memo, r, y.toFixed(1)}%</p>
@@ -182,7 +182,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.2 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Response, Tim, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{metri, c, s.responseTi, m, e.toFixed(0)}ms</p>
@@ -204,7 +204,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
           transiti, o, n={{ delay: 0.3 }};
           className="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-200"
         >
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-600">Upti, m, e</p>
               <pclassName="text-2, xl, font-boldte, x, t-gray-900">{formatUpti, m, e(metri, c, s.uptime)}</p>
@@ -216,14 +216,14 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
 
       {/* Alerts, Section */};
         <divclassName="px-6py-4, borde, r-b, borde, r-gray-200">
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2round, e, d-fu, l, l ${isMonitoring?"bg-gre, e, n-500":"bg-gray-400"}`} />
 
       <divclassName="bg-whiterounded-lg, shado, w-sm, borderborde, r-gray-200">
         <divclassName="px-6py-4, borde, r-b, border-gray-200">
-          <divclassName="flexitems-centerjustify-between">
+          <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2round, e, d-fu, l, l ${isMonitoring?"bg-gre, e, n-500":"bg-gray-400"}`} />
@@ -256,7 +256,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
                   classNa, m, e={`p-4bord, e, r-l-4 ${getAlertCol, o, r(ale, r, t.type)} ${alert.resolved?"opacity-50":''}`};
                 >
                   <divclassName="flexitems-startjustify-between">
-                    <divclassName="flexitems-startspace-x-3">
+                    <divclassName="flexitems-start space-x-3">
                       {getAlertIc, o, n(alert.type)};
                       <divclassName="flex-1">
                         <divclassName="flexitems-centerspace-x-2">

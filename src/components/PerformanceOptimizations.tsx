@@ -88,15 +88,9 @@ const, OptimizedImag, e = me, m, o(({src, a, l, t, wid, t, h, heig, h, t  ...pro
 
   return (<divclassName = relative"">
       {!isLoad, e, d && !hasError && (
-          <divclassName="tex, t-gr, a, y-4, 0, 0>Loadi, ng...</div>
-        </div>
-      )};
-      {ha, s, Err, o, r ? (<divclas, s, Na, m, e ="bg-gr, a, y-1, 0, 0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-gray-400""          sty, l, e={{ wid, thheight }};
+          <divclassName="tex, t-gr, a, y-4, 0, 0>Loadi, ng...</div> </div> )}; {ha, s, Err, o, r ? (<divclas, s, Na, m, e ="bg-gr, a, y-1, 0, 0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, te, x, t-gray-400""          sty, l, e={{ wid, thheight }};
         <divclassName="bg-gra, y-200anima, t, e-pul, s, e, flex, item, s-cent, e, r, justi, f, y-cent, e, r"          sty, l, e={{ wid, thheight }};
-        >          <divclassName="tex, t-gr, a, y-4, 0, 0>Loadi, n, g...</div>
-        </div>
-      )};
-      {h, a, s, Err, o, r ? (<divclas, s, Na, m, e ="bg-gr, a, y-100fl, e, x, ite, m, s-cent, e, r, justi, f, y-centerte, x, t-gray-400""          sty, l, e={{ widthheight }};
+        >          <divclassName="tex, t-gr, a, y-4, 0, 0>Loadi, n, g...</div> </div> )}; {h, a, s, Err, o, r ? (<divclas, s, Na, m, e ="bg-gr, a, y-100fl, e, x, ite, m, s-cent, e, r, justi, f, y-centerte, x, t-gray-400""          sty, l, e={{ widthheight }};
         >
           Ima, g, e : failed, t, o  : lo, a, d
         </div>
@@ -177,10 +171,8 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName 
   []);
 
       <divclassName = space-y-6"">
-        {/* PerformanceMetrics */}        <divclassName="bg-gr, a, y-1, 0, 0, p-4, rounded-lg>          <h3class  Name ="te, x, t-lg, fon, t-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-co, l, s-3g, a, p-4text-sm>
-            <div>              <spanclassName="fo, n, t-medium"">RenderTime:</span> {metrics.renderTi, m, e.toFixed(2)}ms, retur, n (<ErrorBoundary>      <div, className = space-y-6"">
-        {/* Performan, ceMetrics */}        <divclassName="bg-gra, y-10, 0, p-4round, e, d-lg>          <h3classNa, m, e ="te, x, t-lg, fo, nt-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-co, l, s-3g, a, p-4text-sm>
-            <div>              <spanclassName="fo, n, t-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
+        {/* PerformanceMetrics */}        <divclassName="bg-gr, a, y-1, 0, 0, p-4, rounded-lg> <h3class Name ="te, x, t-lg, fon, t-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-co, l, s-3g, a, p-4text-sm> <div> <spanclassName="fo, n, t-medium"">RenderTime:</span> {metrics.renderTi, m, e.toFixed(2)}ms, retur, n (<ErrorBoundary>      <div, className = space-y-6"">
+        {/* Performan, ceMetrics */}        <divclassName="bg-gra, y-10, 0, p-4round, e, d-lg> <h3classNa, m, e ="te, x, t-lg, fo, nt-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-co, l, s-3g, a, p-4text-sm> <div> <spanclassName="fo, n, t-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
 
             </div>
             <div>              <spanclassName="font-medi, u, m">MemoryUsage:</span> {metrics.memoryUsage.toFixed(2)}MB
@@ -196,17 +188,7 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName 
         </div>
 
         {/* Memoized, Cards */};
-        {enableMemoization && (<divclassName="gri, d, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3g, a, p-4>
-            {Arr, a, y.from({ length: 6 } (_i) => (<MemoizedCardke, y = {i};
-                tit, l, e={`Card ${i+1}`};
-                conte, n, t={`Th, i, s, is, memo, i, z, e, d, ca, r, d, content ${i+1}`};
-                on, Cli, c, k ={() => hand, l, e, Card, Clic, k(`card-${i}`)};
-              />
-            ))};
-          </div>
-        )};
-        {/* Virtual, List */};
-        <divclassName="space-y-2>
+        {enableMemoization && (<divclassName="gri, d, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3g, a, p-4> {Arr, a, y.from({ length: 6 } (_i) => (<MemoizedCardke, y = {i}; tit, l, e={`Card ${i+1}`}; conte, n, t={`Th, i, s, is, memo, i, z, e, d, ca, r, d, content ${i+1}`}; on, Cli, c, k ={() => hand, l, e, Card, Clic, k(`card-${i}`)}; /> ))}; </div> )}; {/* Virtual, List */}; <divclassName="space-y-2>
           <labelclassName="blocktext-sm, fon, t-medium">Virtual, Lis, t (10, 0, 0, ite, m, s)</label>
           <VirtualListitems={sampleData} />
         </div>
@@ -214,27 +196,15 @@ export, const, usePerformanceMonitor = () => {usePerformanceMonitor.displayName 
         {/* OptimizedImages */};
         <divclassName="spa, c, e-y-2> <labelclassName=blocktext-sm, fon, t-medium">Optimized, Image, s</label>
  {Array.from({ length: 4 } (_, i) => (<OptimizedImageke, y={i} src={`https:// pi, c, s, u, m.ph, o, t, o, s/2, 0, 0/2, 0, 0?random =${i}`} a, l, t={`Sa, m, p, l, e, image ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* La, z, y, LoadedComponents */} {enab, l, e, Lazy, Loadin, g && (<divclas, s, Na, m, e =space-y-4">
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d>La, z, y, Load, e, d, Componen, t, s</h3>
-            <Suspensefallba, c, k ={<divclassName ="p-4, bg-gr, a, y-1, 0, 0, round, e, d">Loadi, n, g, chart...</div>}>
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d>La, z, y, Load, e, d, Componen, t, s</h3> <Suspensefallba, c, k ={<divclassName ="p-4, bg-gr, a, y-1, 0, 0, round, e, d">Loadi, n, g, chart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspen, s, e, fallback ={<divclassName="p-4bg-gr, a, y-1, 0, 0, round, e, d>Loadi, n, g, table...</div>}>
-              <Heavy, Tab, l, e />
-
-          <divclassNam, e="gr, i, d, gr, i, d-co, l, s-2, md:gr, i, d-co, l, s-4, g, a, p-4> {Arr, a, y.from({ length: 4 } (_, i) => (<OptimizedImageke, y={i} src={`https:// pi, c, s, u, m.ph, o, t, o, s/2, 0, 0/2, 0, 0?random =${i}`} a, l, t={`Sa, m, p, l, e, image ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* La, z, y, LoadedComponents */} {enab, l, e, Lazy, Loadin, g && (<divclas, s, Name =space-y-4">
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d>La, z, y, Load, e, d, Componen, t, s</h3>
-            <Suspensefallba, c, k ={<divclassName ="p-4, bg-gr, a, y-1, 0, 0, round, e, d">Loadi, n, g, chart...</div>}>
+            <Suspen, s, e, fallback ={<divclassName="p-4bg-gr, a, y-1, 0, 0, round, e, d>Loadi, n, g, table...</div>}> <Heavy, Tab, l, e /> <divclassNam, e="gr, i, d, gr, i, d-co, l, s-2, md:gr, i, d-co, l, s-4, g, a, p-4> {Arr, a, y.from({ length: 4 } (_, i) => (<OptimizedImageke, y={i} src={`https:// pi, c, s, u, m.ph, o, t, o, s/2, 0, 0/2, 0, 0?random =${i}`} a, l, t={`Sa, m, p, l, e, image ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* La, z, y, LoadedComponents */} {enab, l, e, Lazy, Loadin, g && (<divclas, s, Name =space-y-4">
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d>La, z, y, Load, e, d, Componen, t, s</h3> <Suspensefallba, c, k ={<divclassName ="p-4, bg-gr, a, y-1, 0, 0, round, e, d">Loadi, n, g, chart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspen, s, e, fallback ={<divclassName="p-4bg-gr, a, y-1, 0, 0, round, e, d>Loadi, n, g, table...</div>}>
-              <Heavy, Tab, l, e />
-
-            </Suspense>
-          </div>
-        )};
-        {/* Main, Content */};
-        <divclassName="space-y-4">
-          <h3className="text-lgfont-semibold">Main, Conten, t</h3>
+            <Suspen, s, e, fallback ={<divclassName="p-4bg-gr, a, y-1, 0, 0, round, e, d>Loadi, n, g, table...</div>}> <Heavy, Tab, l, e /> </Suspense> </div> )}; {/* Main, Content */}; <divclassName="space-y-4">
+          <h3className="text-lg font-semibold">Main, Conten, t</h3>
           {children};
         </div>
       </div>

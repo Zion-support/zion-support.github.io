@@ -44,8 +44,7 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -56,8 +55,7 @@ export default function Contact(): JSX.Element {
 		
 		trackClick('contact-form-submit', 'conversion');
 		setIsSubmitted(true);
-		setIsSubmitting(false);
-	};
+		setIsSubmitting(false)};
 
 	if (isSubmitted) {
 		return (
@@ -88,8 +86,7 @@ export default function Contact(): JSX.Element {
 					</div>
 				</div>
 			</>
-		);
-	}
+		)}
 
 	return (
 		<>
@@ -362,5 +359,4 @@ export default function Contact(): JSX.Element {
 					</d, i, v>
 				</d, i, v>
 			</d, i, v>		</>
-	);
-}
+	)}

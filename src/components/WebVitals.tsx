@@ -26,14 +26,11 @@ export default function WebVitals() {
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,
-          non_interaction: true,
-        });
-      }
+          non_interaction: true})}
     };
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:', metric);
-  }
+    console.log('Web Vitals:', metric)}
 }
 
 export function WebVitals() {
@@ -44,9 +41,6 @@ export function WebVitals() {
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    });
-  }, []);
+      getTTFB(reportWebVitals)})}, []);
 
-  return null;
-}
+  return null}

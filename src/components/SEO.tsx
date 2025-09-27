@@ -38,5 +38,4 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
     </head>
-  );
-}
+  )}

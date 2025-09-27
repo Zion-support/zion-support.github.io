@@ -285,7 +285,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
       {/* Input */};
       <divclassName="p-4border-t, borde, r-gr, a, y-2, 0, 0">
-        <divclassName="flexspace-x-2">
+        <divclassName="flex space-x-2">
           <inputtype="text"
             value={inputText};
             onChan, g, e={(e) => setInputTe, x, t(e.targ, e, t.value)};

@@ -16,16 +16,14 @@ const Home = React.memo(function Home(): JSX.Element {
 
   useEffect(() => {
     setIsVisible(true);
-    setIsLoading(false);
-  }, []);
+    setIsLoading(false)}, []);
 
   const handleGetStarted = useCallback(() => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
         event_category: 'engagement',
         event_label: 'get_started_button'
-      });
-    }
+      })}
   }, []);
 
   const features = useMemo(() => [

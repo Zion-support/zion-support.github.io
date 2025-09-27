@@ -53,40 +53,31 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
 			</Head>
       <style jsx global>{`
         * {
-          box-sizing: border-box;
-        }
+          box-sizing: border-box}
         html {
-          scroll-behavior: smooth;
-        }
+          scroll-behavior: smooth}
         body {margin: 0;
           padding: 0;
           font-family: -apple-systemBlinkMacSystemFont'Segoe UI''Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s easecolor 0.3s ease;
-        }
+          transition: background-color 0.3s easecolor 0.3s ease}
         .dark body {
           background-color: #0f172a;
-          color: #f1f5f9;
-        }
+          color: #f1f5f9}
         h1, h2, h3, h4, h5, h6 {
           margin: 0 0 1rem 0;
           font-weight: 600;
-          line-height: 1.2;
-        }
+          line-height: 1.2}
         p {
-          margin: 0 0 1rem 0;
-        }
+          margin: 0 0 1rem 0}
         button {
-          font-family: inherit;
-        }
+          font-family: inherit}
         button:hover {
-          opacity: 0.9;
-        }
+          opacity: 0.9}
         @media (prefers-reduced-motion: reduce) {
           html {
-            scroll-behavior: auto;
-          }
+            scroll-behavior: auto}
           * {
             animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
             animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
@@ -155,5 +146,4 @@ export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
             enableErrorReporti, n, g={tr, u, e};
             enableUserFeedba, c, k={tr, u, e};
           /> */};        </HelmetProvider>
-  );
-};
+  )};

@@ -18,13 +18,12 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
   useEffect(() => {
     // Initializeaccessibility featuresif (enableSkipLinks) {
       constskipLink = createSkipLink('main', 'Skip, tomaincontent');
-      document.body.insertBefore(skipLink, document.body.firstChild);    }
+      document.body.insertBefore(skipLink, document.body.firstChild)}
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {
       const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };      
+        setIsHighContrast(isHighContrastMode())};      
       const mediaQuery = window.matchMedia('(forced-colors: active)');
       const handleChange = () => setIsHighContrast(isHighContrastMode());
       mediaQuery.addEventListener('change'handleChange);
@@ -33,8 +32,7 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
   }, [enableFocusManagement, enableHighContrastSupport]);
   useEffect(() => {// Check for reduced motion preference    if (enableReducedMotionSupport) {
       const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+        setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
       

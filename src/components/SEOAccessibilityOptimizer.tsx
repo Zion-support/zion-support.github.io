@@ -139,11 +139,11 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
         </CardHeader>
       </Card>
 
-      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2ga  p-6">
+      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2ga p-6">
         <Card>
           <CardHeader>
 
-              <Search, className="h-5, w-5, t, e, x  t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
+              <Search, className="h-5, w-5, t, e, x t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
             </CardTitle>
           </CardHeader>
           <CardConte, nt>
@@ -166,7 +166,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
               
               <divclassName="grid, gri, d-co, l, s-2ga p-4">
                 <divclassName="p-3borderrounded-lg">
-                  <divclassName="flexitems-centerjustify-betweenmb-2">
+                  <divclassName="flexitems-center justify-betweenmb-2">
 Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
                       <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                    };
                     <spanclassName="text-smfont-medium">Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
@@ -225,7 +225,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
               </d, i, v>
               
               <divclassName="p-3borderrounded-lg">
-                <divclassName="flexitems-centerjustify-betweenmb-2">
+                <divclassName="flexitems-center justify-betweenmb-2">
                   <spanclassName="text-smfont-medium">Page, Spee, d</span>
                     {seoMetrics.pageSpeed}/1, 0, 0                  </span>
 
@@ -276,7 +276,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                   <spanclassName="text-sm">KeyboardNavigation</span>
   : 
                     <XCircleclassName="h-4, w-4te, x, t-r, e, d-600" />                  };
-                  {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x  t-green-6 : 0 : 0" />  : 
+                  {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
                 </div>
                 
@@ -284,7 +284,7 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                   <spanclassName="text-sm">ScreenReaderFriendly</span>
   : 
                     <XCircleclassName="h-4, w-4te, x, t-r, e, d-600" />                  };
-                  {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x  t-green-6 : 0 : 0" />  : 
+                  {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
                 </div>
                 

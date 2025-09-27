@@ -102,8 +102,7 @@ export default function Blog(): JSX.Element {
 		// Simulate API call
 		await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false);
-	};
+		setIsNewsletterLoading(false)};
 
 	const, filteredPost, s = selectedCatego, r, y === 'a, l, l' 
 		? blogPos, t, s 
@@ -201,5 +200,4 @@ export default function Blog(): JSX.Element {
 					</secti, o, n>
 				</d, i, v>
 			</d, i, v>		</>
-	);
-}
+	)}

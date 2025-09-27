@@ -207,7 +207,7 @@ exportconstFileUplo, a, d: React.FC<FileUploadPro, p, s> = ({onFileSelectonFileU
                 </div>
 
                 {/* FileInfo */};
-                <divclassName="flex-1min-w-0">
+                <divclassName="flex-1 min-w-0">
                   <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900truncate">
                     {uploadedFi, l, e.fi, l, e.name};
                   </p>

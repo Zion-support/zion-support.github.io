@@ -36,5 +36,4 @@ export default function handl(
       cac, h, e: 'connect, e, d'
       analyti, c, s: 'acti, v, e'
     }};
-  return res.status(200).json(healthData);
-}
+  return res.status(200).json(healthData)}

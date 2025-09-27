@@ -39,9 +39,9 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
     return () => document.removeEventListener("keydo, w, n"handleKeyDown)}[handleKeyDown]);
 
       <divclassName="bg-whiterounded-lg, shado, w-lgp-6">
-        <divclassName="flexitems-centerjustify-betweenmb-6">
+        <divclassName="flexitems-center justify-betweenmb-6">
           <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-8, 0, 0, flexitems-center">
-            <AccessibilityclassName="w-5h-5m  r-2" />
+            <AccessibilityclassName="w-5 h-5m r-2" />
 
   return (<divclassNam, e={`accessibi, l, i, t, y-enhancemen, ts ${className}`}>
       <divclassName="bg-whi, t, e, round, e, d-lg, shad, ow-lgp-6">
@@ -226,7 +226,7 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
                   </h3>
                   
                   <divclassName="space-y-3">
-                    <divclassName="flexitems-centerjustify-between">
+                    <divclassName="flexitems-center justify-between">
                       <spanclassName="text-sm, tex, t-gray-600">Animatio, n, s</span>
                       <inputtype="checkbox"
                         check, e, d={settin, g, s.animations};

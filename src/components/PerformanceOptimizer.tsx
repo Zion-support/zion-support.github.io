@@ -6,8 +6,7 @@ interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableMonitoring?: boolean;
   enableResourceHints?: boolean;
-  enablePreloading?: boolean;
-}
+  enablePreloading?: boolean}
 
 function PerformanceOptimizerComponent({
   enableServiceWorker = true,
@@ -18,8 +17,7 @@ function PerformanceOptimizerComponent({
   const [memoryUsagesetMemoryUsage] = useState<{
     used: number;
     total: number;
-    percentage: number;
-  } | null>(null);
+    percentage: number} | null>(null);
 
     // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
       conso, l, e.l, o, g('Performancemonitoringenabl, e, d')};
