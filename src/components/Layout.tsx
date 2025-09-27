@@ -91,7 +91,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
 
   return (
     <ErrorBoundary>
-      <div className={`min-h-screen transition-colors duration-300 ${
+      <div className="{"`min-h-screen transition-colors duration-300 ${
         isDarkMode ? 'bg-gray-900text-white' : 'bg-gray-50text-gray-900'
       }`}
         <Navigation

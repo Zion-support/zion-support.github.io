@@ -284,7 +284,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Overall SEO Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}
+                <span className="{"`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}
                   {seoMetrics.overallScore}/100
                 </span>
               </div>
@@ -316,7 +316,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 <div className="text-smspace-y-1">
                   <div className="flexjustify-between">
                     <span>H1Tags:</span>
-                    <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
+                    <span className="{seo Metrics.headings.h1 Count" === 1 ? 'text-green-600' : 'text-red-600'}>
                       {seoMetrics.headings.h1Count}
                     </span>
                   </div>
@@ -344,7 +344,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                   </div>
                   <div className="flexjustify-between">
                     <span>Missing Alt:</span>
-                    <span className={seoMetrics.images.missingAlt > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{seo Metrics.images.missing Alt" > 0 ? 'text-red-600' : 'text-green-600'}>
                       {seoMetrics.images.missingAlt}
                     </span>
                   </div>
@@ -354,7 +354,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
               <div className="p-3borderrounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium">Page Speed</span>
-                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}
+                  <span className="{"`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}
                     {seoMetrics.pageSpeed}/100
                   </span>
                 </div>
@@ -374,7 +374,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}
+                <span className="{"`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}
                   {accessibilityMetrics.overallScore}/100
                 </span>
               </div>
@@ -388,7 +388,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                   </div>
                   <div className="flexjustify-between">
                     <span>Failed:</span>
-                    <span className={accessibilityMetrics.contrast.failed > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{accessibility Metrics.contrast.failed" > 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.contrast.failed}
                     </span>
                   </div>
@@ -430,7 +430,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                   </div>
                   <div className="flexjustify-between">
                     <span>Missing:</span>
-                    <span className={accessibilityMetrics.ariaLabels.missing > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{accessibility Metrics.aria Labels.missing" > 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.ariaLabels.missing}
                     </span>
                   </div>
@@ -459,7 +459,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
               issues.map((issue, index) => (
                 <div key={index} className="border rounded-lgp-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
+                    <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
                       {issue.severity.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500capitalize">{issue.category}</span>

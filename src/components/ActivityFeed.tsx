@@ -118,7 +118,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
   };
 
   return (
-    <div className={`p-6rounded-lg border-2transition-all duration-300 ${
+    <div className="{"`p-6rounded-lg border-2transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800border-gray-700hover:border-gray-600' 
         : 'bg-white border-gray-200hover:border-gray-300'
@@ -150,7 +150,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
                 <span className="text-sm font-medium text-gray-900dark:text-white">
                   {activity.user}
                 </span>
-                <span className={`text-sm ${getActivityColor(activity.type)}`}
+                <span className="{"`text-sm ${getActivityColor(activity.type)}`}
                   {getActivityIcon(activity.type)}
                 </span>
                 <span className="text-sm text-gray-600dark:text-gray-400">

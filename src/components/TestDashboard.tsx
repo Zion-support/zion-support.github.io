@@ -246,39 +246,39 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
     <>
       <button
         onClick = {() => setShowDashboard(!showDashboard)}
-        aria-label="Toggle test dashboard"        className=fixed bottom-4left-4bg-purple-600hover: bg-purple-700text-white p-3rounded-full shadow-lg z-50""        title=Toggle Test Dashboard""
+        aria-label="Toggle test dashboard"        className="fixed" bottom-4left-4bg-purple-600hover: bg-purple-700text-white p-3rounded-full shadow-lg z-50""        title=Toggle Test Dashboard""
       >
         🧪
       </button>
 
-      {showDashboard && (        <div className=fixed bottom-20left-4bg-white dark:bg-gray-800p-4rounded-lg shadow-lg border border-gray-200dark:border-gray-700z-50max-w-md max-h-96overflow-y-auto"">          <div className=flex justify-between items-center mb-4"">            <h3className=text-lg font-semibold text-gray-900dar,
+      {showDashboard && (        <div className="fixed" bottom-20left-4bg-white dark:bg-gray-800p-4rounded-lg shadow-lg border border-gray-200dark:border-gray-700z-50max-w-md max-h-96overflow-y-auto"">          <div className="flex" justify-between items-center mb-4"">            <h3className="text-lg" font-semibold text-gray-900dar,
     k:text-white"" id = "test-dashboard">
               Test Dashboard
-            </h3>            <div className=flex space-x-2"">
+            </h3>            <div className="flex" space-x-2"">
               <button                onClick={runAllSuites}
-                disabled={isRunning}                className=bg-blue-600hover: bg-blue-700disable,
+                disabled={isRunning}                className="bg-blue-600hover:" bg-blue-700disable,
     d:bg-gray-400text-white px-3py-1rounded text-sm""               aria-label = {isRunning ? 'Running...' : 'Run All'}"">
                 {isRunning ? 'Running...' : 'Run All'}
               </button>
               <button
-                onClick={clear}                className=bg-red-600hover: bg-red-700text-white px-3py-1rounded text-sm""               aria-label=Clear"">
+                onClick={clear}                className="bg-red-600hover:" bg-red-700text-white px-3py-1rounded text-sm""               aria-label=Clear"">
                 Clear
               </button>
             </div>
           </div>
-          <div className=mb-4text-sm text-gray-600dark:text-gray-300"">
+          <div className="mb-4text-sm" text-gray-600dark:text-gray-300"">
             <div>Tota,
-    l: {results.total}</div>            <div className=text-green-600"">Passed: {results.passed}</div>            <div className=text-red-600"">Failed: {results.failed}</div>            <div className=text-yellow-600"">Skipped: {results.skipped}</div>
+    l: {results.total}</div>            <div className="text-green-600""">Passed: {results.passed}</div>            <div className="text-red-600""">Failed: {results.failed}</div>            <div className="text-yellow-600""">Skipped: {results.skipped}</div>
           </div>
 
-          {suites.map(suite => (            <div key={suite.id} className=mb-4"">              <h4className=font-semibold text-gray-900dark:text-white mb-2"" id="suitename-suitestatus">
+          {suites.map(suite => (            <div key={suite.id} className="mb-4""">              <h4className="font-semibold" text-gray-900dark:text-white mb-2"" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
-              </h4>              <div className=space-y-1"">
-                {suite.tests.map(test => (                  <div key={test.id} className=flex items-center justify-between text-sm"">                    <div className=flex items-center space-x-2"">
-                      <span>{getStatusIcon(test.status)}</span>                      <span className=text-gray-700dark:text-gray-300"">{test.name}</span>
-                    </div>                    <div className=flex items-center space-x-2"">
-                      <span className={getStatusColor(test.status)}>{test.status}</span>
-                      {test.duration && (                        <span className=text-gray-500text-xs"">{test.duration}ms</span>
+              </h4>              <div className="space-y-1""">
+                {suite.tests.map(test => (                  <div key={test.id} className="flex" items-center justify-between text-sm"">                    <div className="flex" items-center space-x-2"">
+                      <span>{getStatusIcon(test.status)}</span>                      <span className="text-gray-700dark:text-gray-300""">{test.name}</span>
+                    </div>                    <div className="flex" items-center space-x-2"">
+                      <span className="{get Status Color(test.status)}>{test.status}</span>"
+                      {test.duration && (                        <span className="text-gray-500text-xs""">{test.duration}ms</span>
                       )}
                     </div>
                   </div>

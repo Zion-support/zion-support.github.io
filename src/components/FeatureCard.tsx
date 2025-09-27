@@ -38,10 +38,10 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 
 	return (
 		<div className="group text-center p-6rounded-2xl transition-all duration-500hover-lift">
-			<div className={`w-20h-20 ${currentColor.bg} ${currentColor.hover} rounded-2xl flex items-center justify-center mx-auto mb-6transition-all duration-500group-hover:scale-110group-hover:rotate-3shadow-lg ${currentColor.shadow}`}
+			<div className="{"`w-20h-20 ${currentColor.bg} ${currentColor.hover} rounded-2xl flex items-center justify-center mx-auto mb-6transition-all duration-500group-hover:scale-110group-hover:rotate-3shadow-lg ${currentColor.shadow}`}
 				<span className="text-3xl group-hover:scale-110transition-transformduration-300">{icon}</span>
 			</div>
-			<h3className={`text-2xl font-bold mb-4transition-colors duration-300group-hover:${currentColor.text}`} id="title">
+			<h3className="{"`text-2xl font-bold mb-4transition-colors duration-300group-hover:${currentColor.text}`} id="title">
 				{title}
 			</h3>
 			<p className="text-gray-600leading-relaxed group-hover:text-gray-700transition-colorsduration-300">
@@ -49,7 +49,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 			</p>
 			
 			{/* Decorative line */}
-			<div className={`mt-6w-12h-1 ${currentColor.bg} rounded-full mx-auto transition-all duration-500group-hover:w-16`}</p></div>
+			<div className="{"`mt-6w-12h-1 ${currentColor.bg} rounded-full mx-auto transition-all duration-500group-hover:w-16`}</p></div>
 		</div>
 	);
 };

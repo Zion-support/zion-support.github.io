@@ -170,7 +170,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             onBlur={() => handleBlur(field.name)}
             placeholder={field.placeholder}
             disabled={field.disabled}
-            className={`${fieldClassName} resize-none`}
+            className="{"`${fieldClassName} resize-none`}
             rows={4}
           />
         );
@@ -183,7 +183,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             onChange={(e) => handleInputChange(field.name, e.target.value)}
             onBlur={() => handleBlur(field.name)}
             disabled={field.disabled}
-            className={fieldClassName}
+            className="{field Class Name}"
           >
             <option value="">Select {field.label}</option>
             {field.options?.map(option => (
@@ -248,7 +248,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             onBlur={() => handleBlur(field.name)}
             placeholder={field.placeholder}
             disabled={field.disabled}
-            className={fieldClassName}
+            className="{field Class Name}"
             aria-label={field.label}
           />
         );
@@ -256,7 +256,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 `}>
+    <form ref={formRef} onSubmit={handleSubmit} className="{"`space-y-6 `}>
       {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (

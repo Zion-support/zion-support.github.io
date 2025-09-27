@@ -356,7 +356,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200p-6 `}>
+    <div className="{"`bg-white rounded-lg shadow-sm border border-gray-200p-6 `}>
       {title && (
         <h3className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
       )}
@@ -383,7 +383,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           {data.labels.map((label, index) => (
             <div
               key={index}
-              className={`flex items-center space-x-2px-3py-1rounded-full text-sm ${
+              className="{"`flex items-center space-x-2px-3py-1rounded-full text-sm ${
                 hoveredIndex === index ? 'bg-gray-100' : ''
               }`}
             >

@@ -138,7 +138,7 @@ export const AdvancedAnalytics: React.FC = () => {
           <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-100">
             <div className="flex items-center justify-between mb-2">
               <span className="text-2xl">{card.icon}</span>
-              <span className={`text-sm font-medium px-2 py-1 rounded-full ${
+              <span className="{"`text-sm font-medium px-2 py-1 rounded-full ${
                 card.change >= 0 
                   ? 'text-green-700 bg-green-100' 
                   : 'text-red-700 bg-red-100'
@@ -163,7 +163,7 @@ export const AdvancedAnalytics: React.FC = () => {
               key={metric}
               onClick={() => setSelectedMetric(metric)}
               aria-label={`Select ${metric} metric`}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+              className="{"`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                 selectedMetric === metric
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

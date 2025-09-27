@@ -204,7 +204,7 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className={className}
+          className="{class Name}"
         >
           {children}
         </motion.div>
@@ -219,7 +219,7 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         >
           <div className="flex items-center justify-between mb-2">
             <h4className="font-semibold text-gray-900dark:text-white">SEO Analysis</h4>
-            <div className={`text-2xl font-bold ${getScoreColor(seoScore)}`}
+            <div className="{"`text-2xl font-bold ${getScoreColor(seoScore)}`}
               {seoScore}
             </div>
           </div>

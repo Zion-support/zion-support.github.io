@@ -6,8 +6,8 @@ interface CacheStats {
   missRate: number;
   totalRequests: number;
   cacheSize: number;
-  memoryUsag, e: number;
-  lastCleare, d: Date;
+  memoryUsage: number;
+  lastCleared: Date;
 }
 
 interface CacheManagerProps {
@@ -30,7 +30,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   const updateStats = useCallback(() => {
     // Simulate cache statistics
     const newStats: CacheStats = {
-      hitRat, e: Math.random() * 30 + 70, // 70-100%
+      hitRate: Math.random() * 30 + 70, // 70-100%
       missRate: Math.random() * 30, // 0-30%
       totalRequests: Math.floor(Math.random() * 10000) + 1000,
       cacheSize: Math.floor(Math.random() * 100) + 50, // 50-150MB
@@ -87,8 +87,13 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   };
 
   return (
+<<<<<<< HEAD
     <div className={`advanced-cache-manager `}>
       <div className="bg-white rounded-lg shadow-lg p-6">
+=======
+    <div className="{"`advanced-cache-manager `}>
+      <div className="bg-white rounded-lg shadow-lgp-6">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flex items-center">
             <Database className="w-5 h-5 mr-2" />
@@ -108,7 +113,11 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
               disabled={isOptimizing}
               className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 flex items-center"
             >
+<<<<<<< HEAD
               <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
+=======
+              <RefreshCw className="{"`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
               Optimize
             </button>
           </div>
@@ -120,7 +129,11 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>
               <CheckCircle className="w-4 h-4 text-green-500" />
             </div>
+<<<<<<< HEAD
             <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}>
+=======
+            <div className="{"`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
               {stats.hitRate.toFixed(1)}%
             </div>
           </div>

@@ -118,7 +118,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+            <div className="{"`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
             <span className="text-sm text-gray-600 dark:text-gray-400">
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
@@ -126,7 +126,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <button
             onClick={() => setIsMonitoring(!isMonitoring)}
             aria-label={isMonitoring ? 'Pause monitoring' : 'Start monitoring'}
-            className={`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
+            className="{"`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
               isMonitoring
                 ? 'bg-red-500hover:bg-red-600text-white'
                 : 'bg-green-500hover:bg-green-600text-white'
@@ -143,7 +143,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <div>
             <h3className="text-lg font-semibold mb-2" id="security-score">Security Score</h3>
             <div className="flex items-center space-x-4">
-              <div className={`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
+              <div className="{"`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
                 {metrics.securityScore}
               </div>
               <div>
@@ -214,7 +214,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
               key={severity}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className={`rounded-lg p-4 ${getSeverityColor(severity)}`}
+              className="{"`rounded-lg p-4 ${getSeverityColor(severity)}`}
             >
               <div className="text-2xl font-bold">
                 {vulnerabilityCounts[severity] || 0}
@@ -250,7 +250,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className={`p-3rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
+                className="{"`p-3rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">

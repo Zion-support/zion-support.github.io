@@ -211,7 +211,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   };
 
   return (
-    <div ref={searchRef} className={`relative `}>
+    <div ref={searchRef} className="{"`relative `}>
       <div className="relative">
         <div className="absolute inset-y-0left-0pl-3flex items-centerpointer-events-none">
           <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
@@ -245,7 +245,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
             <div
               key={result.id}
               role="button" tabIndex={0} onClick={() => handleResultClick(result)}
-              className={`cursor-pointer select-none relative py-3px-4hover:bg-gray-50 ${
+              className="{"`cursor-pointer select-none relative py-3px-4hover:bg-gray-50 ${
                 index === selectedIndex ? 'bg-blue-50' : ''
               }`}
             >
@@ -258,7 +258,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                     <p className="text-sm font-medium text-gray-900truncate">
                       {result.title}
                     </p>
-                    <span className={`inline-flex items-center px-2py-0.5rounded-full text-xs font-medium ${getTypeColor(result.type)}`}
+                    <span className="{"`inline-flex items-center px-2py-0.5rounded-full text-xs font-medium ${getTypeColor(result.type)}`}
                       {result.type}
                     </span>
                   </div>
