@@ -1,32 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
-  const [searchTerm setSearchTerm] = useState('');
-  const [openItems setOpenItems] = useState(new Set());
-  const [isVisible setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true)} []);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [openItems, setOpenItems] = useState(new Set());
+  // Removed unused visibility state
 
   const { trackClick } = useAnalytics();
 
   const faqData = [
     {
-      category: 'General'
+      category: 'General',
       questions: [
         {
-          question: 'What services do you offer?'
+          question: 'What services do you offer?',
           answer: 'We offer comprehensive technology solutions including AI development cloud infrastructure digital transformation cybersecurity and more.'
-        }
+        },
         {
-          question: 'How can I get started?'
+          question: 'How can I get started?',
           answer: 'Contact us through our contact page or call us directly. We will schedule a consultation to discuss your needs.'
-        }
+        },
         {
-          question: 'Do you provide ongoing support?'
+          question: 'Do you provide ongoing support?',
           answer: 'Yes we provide comprehensive ongoing support and maintenance for all our solutions.'
         }
       ]
@@ -36,13 +33,16 @@ export default function FAQ(): JSX.Element {
   const toggleItem = (id: number) => {
     const newOpenItems = new Set(openItems);
     if (newOpenItems.has(id)) {
-      newOpenItems.delete(id)} else {
-      newOpenItems.add(id)}
+      newOpenItems.delete(id);
+    } else {
+      newOpenItems.add(id);
+    }
     setOpenItems(newOpenItems);
-    trackClick(`faq-toggle-${id}` 'interaction')};
+    trackClick(`faq-toggle-${id}`, 'interaction');
+  };
 
   const filteredData = faqData.map(category => ({
-    ...category
+    ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
@@ -85,12 +85,12 @@ export default function FAQ(): JSX.Element {
             </div>
 
             <div className="space-y-6">
-              {filteredData.map((category categoryIndex) => (
+              {filteredData.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="bg-white rounded-xl shadow-sm overflow-hidden">
                   <div className="p-6">
                     <h2 className="text-xl font-semibold text-gray-900 mb-4">{category.category}</h2>
                     <div className="space-y-4">
-                      {category.questions.map((faq index) => {
+                      {category.questions.map((faq, index) => {
                         const id = categoryIndex * 100 + index;
                         const isOpen = openItems.has(id);
                         return (

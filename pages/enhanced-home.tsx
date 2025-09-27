@@ -6,24 +6,11 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   const { trackClick } = useAnalytics();
-
-  const handleSelectPlan = (tierId: string) => {
-    trackClick(`select-plan-${tierId}`, 'conversion');
-    console.log('Selected plan:', tierId);
-  };
-
-  const handleReadMore = (slug: string) => {
-    trackClick(`read-blog-${slug}`, 'engagement');
-    console.log('Read more:', slug);
-  };
 
   const features = [
     {
@@ -143,11 +130,11 @@ export default function Home(): JSX.Element {
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_ i) => (
+                      {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">⭐</span>
                       ))}
                     </div>
-                    <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                    <p className="text-gray-600 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
                     <div>
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>
                       <div className="text-sm text-gray-500">{testimonial.company}</div>
