@@ -38,7 +38,6 @@ exportconst, throttl, e = <Textends (...args: any[]) => a, n, y>(func: Tlimit: n
       func(...ar, g, s);
       inThrott, l, e = tr, u, e;
       setTimeo, u, t(() => (inThrott, l, e = fal, s, e)limit)}}};
-
 // Memory, usage, monitoring
 export, const, getMemoryUsage = (): {used: numb, e, r;
   total: numb, e, r;
@@ -62,7 +61,6 @@ export, const, analyzeBundleSize = (): vo, i, d => {if (type, o, f === window ==
     if (src && src.includes("_next/static")) {
       // Th, i, s, is, asimplifiedchec, k - inrealityyou"dneed, tofetchandmeasure, console.log(`Script: ${src}`)}});
   
-
 // Preload, critical, resources
 export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
   
@@ -82,21 +80,18 @@ export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === wi
     return};
   t, r, y {con, s, t, registrati, o, n = awaitnavigat, o, r.serviceWork, e, r.register("/sw.js");
     console.log("Servi, ceWorkerregisteredsuccessfully:", registration)} cat, c, h (err, o, r) {console.error("Servi, ceWorkerregistrationfailed:", error)}};
-
 // Performance, monitoring, export const, monitorPerformanc, e = (): vo, i, d => {if (typeof === window === "undefin, e, d") retu, r, n;
   
   // MonitorCore, WebVitalsconst, observer = newPerformanceObserv, e, r((li, s, t) => {
     li, s, t.getEntri, e, s().forEa, c, h((ent, r, y) => {
       if (entry.entryType === "large, s, t-contentf, u, l-pai, n, t") {
         console.log("LCP:"ent, r, y.startTime)} else, i, f (entry.entryType === "fir, s, t-inp, u, t") {console.log("FID:", (entryasa, n, y).processingSta, r, t - ent, r, y.startTime)} else, i, f (entry.entryType === "layo, u, t-shi, f, t") {console.log("CLS:", (entryasa, n, y).value)}})});
-  
-  observ, er.observe({entryTypes: ["large, s, t-contentf, u, l-pai, n, t'"first-input""layout-shift"] })};
+    observ, er.observe({entryTypes: ["large, s, t-contentf, u, l-pai, n, t'"first-input""layout-shift"] })};
 
 // Resource, hints, export const, addResourceHint, s = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
   
   con, s, t, hints = [{ rel: "d, n, s-prefetch"href: "https://fonts.googleapis.com"}{rel: "dns-prefetch"href: "https://fonts.gstatic.com"}{rel: "preconnect"href: "https://fonts.googleapis.com"}{rel: "preconnect"href: "https://fonts.gstatic.com"crossorigin: "anonymous" }];
-  
-  hin, t, s.forEa, c, h(hi, n, t => {con, s, t, li, n, k = document.createElement("link");
+    hin, t, s.forEa, c, h(hi, n, t => {con, s, t, li, n, k = document.createElement("link");
     Obje, c, t.entri, e, s(hi, n, t).forEa, c, h(([k, e, y, val, u, e]) => {
       li, n, k.setAttribu, t, e(k, e, y, val, u, e, as, string)});
     document.head.appendChi, l, d(li, n, k)})};

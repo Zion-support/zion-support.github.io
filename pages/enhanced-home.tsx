@@ -1,73 +1,64 @@
-import React from "react";
-import Head from "next/head";
-import { useStateuseEffect   } from "react";
-import SEO from "../src/components/SEO";
-import {useAnalytics   } from "../src/hooks/useAnalytics";
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
+export default function Home(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisib, l, e(true)}[]);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analyticstrackingconst {trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
- {
-		trackClick(`select-plan-${tierId}` "conversion');
-		console.log('Selected plan:"tierId)};
+	const, handleSelectPla, n = (tier, I, d: stri, n, g) => {
+		trackCli, c, k(`sele, c, t-pl, a, n-${tier, I, d}`, 'conversi, o, n');
+		conso, l, e.l, o, g('Selected, pla, n:', tier, I, d)};
 
-	const handleReadMore = (slug:string) => {
-		trackClick(`read-blog-${slug}` "engagement');
-		console.log('Read more:", slug)};
+	const, handleReadMor, e = (sl, u, g: stri, n, g) => {
+		trackCli, c, k(`re, a, d-bl, o, g-${sl, u, g}`, 'engageme, n, t');
+		conso, l, e.l, o, g('Read, mor, e:', sl, u, g)};
 
-	const handleSelectPlan  = (tierId: string) => {trackCli, ck(`select-plan-${tierId}` "conversion");
-		console.log("Selectedplan:", tier, I, d)};
-
-	const handleReadMore  = (slug: string) => {trackCli, ck(`read-blog-${slug}` "engagement");
-		console.log("Readmore:"slug)};
-
-
-	constfeatures = [
-		{title: "AI-PoweredSolutions",
-			description: "Leverage, cuttin, g-edge, artificialintelligence toautomateand optimizeyourbusiness processes."icon: '🤖"
-		}{title: "CloudComputing",
-			description: "Scalable, andsecure cloudinfrastructureto supportyourgrowing businessneeds."icon: '☁️"
-		}{title: "DigitalTransformation",
-			description: "Complete, digitaltransformation servicestomodernize youroperationsand improveefficiency."icon: '🚀"
+	const, feature, s = [
+		{
+			tit, l, e: 'AI-Powered, Solution, s'
+			descripti, o, n: 'Leverage, cuttin, g-edge, artificial, intelligence to, automate, and optimize, your, business process, e, s.'
+			ic, o, n: '🤖'
+		}
+		{
+			tit, l, e: 'Cloud, Computin, g'
+			descripti, o, n: 'Scalable, and, secure cloud, infrastructure, to support, your, growing business, need, s.'
+			ic, o, n: '☁️'
+		}
+		{
+			tit, l, e: 'Digital, Transformatio, n'
+			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.'
+			ic, o, n: '🚀'
 		}];
 
-	const, testimonials = [
-		{name: "SarahJohnson",
-			company: "TechCorpInc.",
-			content: "Zion, App, transformed our, entiredigital infrastructure. Theresultsexceeded ourexpectations."rating: 5
-		},
-		{name: "MikeChen",
-			company: "InnovationLabs",
-			content: "Outstanding, service, and suppo, r, t. The, team, delivered exactlywhatwe neededwhenweneeded it."rating: 5
-		},
-		{<SEO />
-			<Head>
-				<title>Zion App - Advanced Technology Solutions</title>
-				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AIcloud computingweb developmentand digital transformation." />
-				<meta name="viewport" content="width=device-widthinitial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-				{/* Animated background elements */}
-			<div className="absolute inset-0 overflow-hidden">
-			<div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-			<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-			<div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
-				</div>
-			<div className="container mx-auto px-4 py-8 max-w-7 xl relative z-10">
-					{/* Hero Section */}
-					<header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-						<h1 className="text-5 xl md: text-7 xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
-							Zion App
-
-			name: "EmilyDavis"company: "FutureSystems"content: "Profession, a, l, reliab, l, e, and, innovativ, e. Highlyrecommendtheir servicestoany business.",
-			rating: 5}];  return (
+	const, testimonial, s = [
+		{
+			na, m, e: 'Sarah, Johnso, n'
+			compa, n, y: 'TechCorp, In, c.'
+			conte, n, t: 'Zion, App, transformed our, entire, digital infrastructu, r, e. The, results, exceeded our, expectation, s.'
+			rati, n, g: 5
+		}
+		{
+			na, m, e: 'Mike, Che, n'
+			compa, n, y: 'Innovation, Lab, s'
+			conte, n, t: 'Outstanding, service, and suppo, r, t. The, team, delivered exactly, what, we need, e, d, when, we, needed it.'
+			rati, n, g: 5
+		}
+		{
+			na, m, e: 'Emily, Davi, s'
+			compa, n, y: 'Future, System, s'
+			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.'
+			rati, n, g: 5}];  return (
     <>
       
-      <SEO />
+      <S, E, O />
 			<Head>
 				<title>Zion, Ap, p - Advanced, Technology, Solutions</title>
 				<metaname="description" content="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmentanddigitaltransformation." />
@@ -84,9 +75,7 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 				<divclassName="containermx-auto, p, x-4, p, y-8 max-w-7 xlrelativez-10">
 					{/* HeroSection */};
 					<headerclassName={`text-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"}`}>
-						<h1className="text-5 xlmd:te, x, t-7 xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">
-							Zion, Ap, p
-
+						<h1className="text-5 xlmd:te, x, t-7 xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">							Zion, Ap, p
 						</h1>
 						<pclassName="text-xlmd:te, x, t-2 xl, tex, t-gr, a, y-700, ma, x-w-4 xl, m, x-autoleading-relaxedfont-light">
 							Advanced, Technology, Solutions for, Modern, Businesses
@@ -110,16 +99,16 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 							</button>
 							<buttononClick={() => trackClick("he, ro-cta-secondary""engagement")};
 								className="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gr, a, y-50 transition-colorsshadow-lghover:shadow-xl"
-
 							>
-								LearnMore
-							</button>
-						</div>
-					</header>
+								Learn, Mor, e
+							</butt, o, n>
+						</d, i, v>
+					</head, e, r>
 
-
-						<h2 className="text-3 xl md: text-4 xl font-bold text-gray-900 text-center mb-12">
-							Our Services
+					{/* Features, Sectio, n */};
+					<section, classNam, e="mb-20">
+						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
+							Our, Service, s
 						</h2>
 			<div className="gridmd:grid-cols-3 gap-8">
 							{features.map((featureindex) => (
@@ -172,10 +161,9 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 									<divclassName="text-4 xlmb-4">{feature.icon}</div>
 									<h3className="te, x, t-xl, fon, t-semibold, tex, t-gray-900 mb-4">{feature.title}</h3>
 									<pclassName="text-gr, a, y-600 leading-relaxed">{featu, re.description}</p>
-								</div>
-							))};
-						</div>
-					</section>
+								</div>							))};
+						</d, i, v>
+					</secti, o, n>
 
 					{/* TestimonialsSection */};
 					<sectionclassName="mb-20">
@@ -194,17 +182,14 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 										<pclassName="fo, n, t-semiboldtext-gray-900">{testimoni, a, l.name}</p>
 										<pclassName="text-gray-500 text-sm">{testimoni, a, l.company}</p>
 									</div>
-								</div>
-							))};
-						</div>
-					</section>
+								</div>							))};
+						</d, i, v>
+					</secti, o, n>
 
 					{/* CTASection */};
 					<sectionclassName="text-center">
 						<divclassName="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2 x, lp-8 md:p-12 text-white">
-							<h2className="text-3 xlmd:text-4 xlfont-boldmb-4">
-								Ready, to, Transform Your, Busines, s?
-
+							<h2className="text-3 xlmd:text-4 xlfont-boldmb-4">								Ready, to, Transform Your, Busines, s?
 							</h2>
 							<pclassName="text-xl, m, b-8, opacit, y-90 max-w-2 xlmx-auto">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
@@ -214,13 +199,12 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
 
 							<buttononClick={() => trackClick("fin, al-cta""conversion")};
 								className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gr, a, y-100 transition-colorsshadow-lghover:shadow-xl"
-
 							>
 								Start, Your, Journey Tod, a, y
-							</button>
-						</div>
-					</section>
+							</butt, o, n>
+						</d, i, v>
+					</secti, o, n>
 				</d, i, v>
-			</div>
+			</d, i, v>
 		</>
 	)};

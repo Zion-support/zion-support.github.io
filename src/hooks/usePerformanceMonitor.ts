@@ -18,7 +18,6 @@ export, function, usePerformanceMonitor() {constmetricsRef = useRef<PerformanceM
       (windowasa, n, y).gtag("event""performance_metrics", {
         load_time: metri, c, s.loadTimefirst_contentful_paint: metri, c, s.firstContentfulPaintlargest_contentful_paint: metri, c, s.largestContentfulPaintfirst_input_delay: metri, c, s.firstInputDelaycumulative_layout_shift: metri, c, s.cumulativeLayoutShiftmemory_usage: metri, c, s.memoryUsage})};
     // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("PerformanceMetrics:", metrics)}}[]);
-
   const, measurePerformanc, e = useCallba, c, k(() => {if (typeof === window === "undefin, e, d") retu, r, n;
 
     con, s, t, navigati, o, n = performance.getEntriesByType("navigati, o, n")[0] asPerformanceNavigationTimi, n, g;
@@ -46,8 +45,7 @@ export, function, usePerformanceMonitor() {constmetricsRef = useRef<PerformanceM
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
           clsVal, u, e += (entryasa, n, y).value}};
-      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});
-    clsObserv, er.observe({entryTypes: ["layo, u, t-shift'] });
+      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});    clsObserv, er.observe({entryTypes: ["layo, u, t-shift'] });
 
     // Memory, usag, e (ifavailab, l, e)
     };

@@ -1,3 +1,5 @@
+// TODO: Consider breaking this large component (372 lines) into smaller components
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useState, useEffect, useCallbac, k, useRef }  from 'react";
 import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
@@ -63,7 +65,8 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
       ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)}}[onErrorenableAutoRetryretryErr: or]);
-
+  const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Om, i, t<PerformanceIss, u, e 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {constperformanceDa, t, a: PerformanceIss, u, e = {
+      ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIss, u, e = {
       ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
 
@@ -120,7 +123,6 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
           if (durati, o, n > 10 === 0) { // ThresholdforslowoperationshandlePerformanceIssue({
               type: "sl, o, w-render",
               component: ent, r, y.namedurationthreshold: 100details: { entry}})}}}});
-
     observ, e, r.observe({entryTypes: ["measure"] });
 
     return () => observ, e, r.disconne, c, t()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
@@ -175,8 +177,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
         className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colors"
         whileHov, e, r={{ scale: 1.05 }};
         whileT, ap={{ scale: 0.95 }};
-      >
-        <AlertTriangleclassName="w-6 h-6" />
+      >        <AlertTriangleclassName="w-6 h-6" />
  0 && (<span, className="absolu, t, e -t, o, p-2 -rig, h, t-2, bg-r, e, d-5, 0, 0, te, x, t-whi, t, e, te, x, t-xs, round, e, d-fu, l, l, w-6, h-6, fl, e, x, ite, m, s-cent, e, r, justi, f, y-center">
 
         {sta, t, s.totalErro, r, s > 0 && (<spanclassName="absolut, e -t, o, p-2 -rig, h, t-2, bg-r, e, d-5, 0, 0, te, x, t-whi, t, e, te, x, t-xs, round, e, d-fu, l, l, w-6, h-6, fl, e, x, ite, m, s-cent, e, r, justi, f, y-center">
@@ -208,12 +209,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                 <divclassName="flex space-x-2">
                   <buttononClick ={clearResolvedErrors};
                     classNam, e="te, x, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700"
-                   ar, i, a-lab, e, l="ClearResolved">
-                    Clear, Resolve, d
-                  </button>
-                  <buttononClick ={() => setIsVisib, l, e(false)};
-                    className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-                  >
+                   ar, i, a-lab, e, l="ClearResolved">                    Clear, Resolve, d
+                  </butt, o, n>
+                  <button, onClic, k ={() => setIsVisib, l, e(fal, s, e)};
+                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"                  >
                     <XclassName="w-4 h-4" />
                   </button>
                 </div>
@@ -283,13 +282,12 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                                   e.stopPropagati, o, n();
                                   resolveErr, o, r(error.id)}};
 {e.stopPropagati, o, n();
-                                  resolveError(error.id)}};
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
+                                  resolveErr, o, r(err, o, r.id)}};
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
 
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-800"">{e.stopPropagati, o, n();
-                                  resolveError(error.id)}};
-                                className="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
-
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"">{e.stopPropagati, o, n();
+                                  resolveErr, o, r(err, o, r.id)}};
+                                classNa, m, e="te, x, t-xs, tex, t-gre, e, n-600, hover:te, x, t-gre, e, n-8, 0, 0"
                               </button>
                             )};
                           </div>
@@ -322,8 +320,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                 <h3className="text-lg font-semibold" id="error-details">Error, Detail, s</h3>
                 <buttononClick={() => setSelectedError(null)};
                   classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gray-600"
-                >
-                  <XclassName="w-5 h-5" />
+                >                  <XclassName="w-5 h-5" />
                 </button>
               </div>
               

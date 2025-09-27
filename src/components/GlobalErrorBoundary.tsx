@@ -33,7 +33,6 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
       fetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
         })
       })} cat, c, h (reportingErr, o, r) {conso, l, e.error("Failedtoreporterror:", reportingError)}};
-
   rend, e, r() {if (th, i, s.sta, t, e.hasErr, or) {
 
           <divclassName="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, shad, o, w-lg, round, ed-lgp-6">
@@ -59,15 +58,14 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
               <pclassName ="text-gray-600mb-4">
                 We"re, sorry, bu, t, something, unexpecte, d, happen, e, d. Plea, s, e, try, refreshin, g, thepage.
               </p>
-              <divclassName ="spac, e-y-2">
-                <buttononClic, k ={() => wind, o, w.location.reload()};
-                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colo, r, s"
+              <d, i, v, classNa, m, e ="spa, c, e-y-2">
+                <butt, o, n, onCli, c, k ={() => wind, o, w.locati, o, n.relo, a, d()};
+                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
-                </button>
-                <buttononClick={() => th, i, s.setSta, t, e({hasError: falseerror: nullerrorInfo: null })};
-                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
-                >
+                </butt, o, n>
+                <button, onClic, k={() => th, i, s.setSta, t, e({hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"                >
                   Try, Agai, n
                 </button>
               </div>
@@ -94,7 +92,6 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
       <Component {...props} />
     </GlobalErrorBoundary>
   );
-
   WrappedCompone, n, t.displayNa, m, e = `withErrorBounda, r, y(${Compone, n, t.displayNa, m, e||Compone, n, t.name})`;
 
   return, WrappedComponen, t};

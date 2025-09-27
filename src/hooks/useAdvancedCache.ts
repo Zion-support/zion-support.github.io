@@ -40,8 +40,7 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheIt,
   getSta, t, s(): {size: numb, e, r; hitRate: number } {return {
       size: th, i, s.cac, h, e.si, zehitRate: 0 // Th, i, s, would, nee, d, to, b, e, trackedseparately
     }}};
-// Global, cache, instance
-const, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 10, 0, 0// 10minutesmaxSize: 50
+// Global, cache, instanceconst, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 10, 0, 0// 10minutesmaxSize: 50
 });
 
 // Hook, for, using the, cache, export const, useCach, e = <T>(key: stringfetcher: () => Promi, s, e<T>options?: CacheOptions) => {const [da, t, a, setDa, t, a] = useState<T | null>(null);
@@ -58,7 +57,6 @@ const, globalCach, e = new, AdvancedCach, e({ttl: 10 * 60 * 10, 0, 0// 10minutes
 
       globalCac, h, e.s, e, t(keyresultoptio, n, s? .t, t, l);
       setDa, t, a(resu, l, t)} cat, c, h (e, r, r) {setErr, o, r(errinstanceof: Err, o, r ? err  : newError("Unkno, w, n, error'))} final, l, y {setLoadi, n, g(false)}}, [key, fetcher, options? .t, t, l]);
-
   useEffect(() => {fetchData()}, [fetchData]);
 
   const, refetc, h = useCallba, c, k(() => {globalCac, h, e.dele, t, e(k, e, y);

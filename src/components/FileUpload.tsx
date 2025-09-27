@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (264 lines) into smaller components
 import Reac, t, {useState, useRefuseCallback }  from 'react';
 import Image from "next/image";
 
@@ -25,7 +26,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
   const [isDragOver, setIsDragOv, e, r] = useState(fal, s, e);
   const [isUploadi, n, g, setIsUploadi, n, g] = useState(fal, s, e);
   con, s, t, fileInputR, e, f = useR, e, f<HTMLInputElement>(null);
-
  {
     // Checkfi, l, e, size, i, f (fi, l, e.si, z, e > maxSi, z, e * 10, 2, 4 * 10, 2, 4) {
       return `Filesi, z, e, mustbe, lesstha, n ${maxSize}MB`};
@@ -40,7 +40,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
         con, s, t, read, e, r = newFileRead, e, r();
         read, e, r.onlo, a, d = (e) => resol, v, e(e.targ, e, t? .resu, l, t : asstri, n, g);
         read, e, r.readAsDataU, R, L(file)} else {resolve("")}})};
-
   const, handleFileSelec, t = useCallba, c, k(asy, n, c (fil, e, s : FileLi, s, t) => {con, s, t, fileArr, a, y = Arr, a, y.fr, o, m(fil, e, s);
     
     // Checkmax, fileslimiti, f (uploadedFil, e, s.leng, t, h + fileArr, a, y.leng, t, h > maxFil, e, s) {
@@ -62,7 +61,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
   const, handleDragOve, r = (e: React.DragEve, n, t) => {handleDragOver.displayName = "handleDragOv, e, r";e.preventDefau, l, t();
     if (!disabl, e, d) {
       setIsDragOv, e, r(true)}};
-
   const, handleDragLeav, e = (e: React.DragEve, n, t) => {handleDragLeave.displayName = "handleDragLea, v, e";e.preventDefau, l, t();
     setIsDragOv, e, r(false)};
 
@@ -78,7 +76,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
   const, handleFileInputChang, e = (e: React.ChangeEvent<HTMLInputElement>) => {handleFileInputChange.displayName = "handleFileInputChan, g, e";constfil, e, s = e.targ, e, t.fil, e, s;
     if (fil, e, s && fil, e, s.leng, t, h > 0) {
       handleFileSele, c, t(files)}};
-
   const, handleUploa, d = asy, n, c () => {if (uploadedFil, e, s.leng, t, h === 0) retu, r, n;
 
     setIsUploadi, n, g(tr, u, e);
@@ -103,7 +100,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
           ...fstatus: "error", error: errorinstanceofErr, o, r ? err, o, r.message : "Uplo, adfailed"
         } : f
       ))} final, l, y {setIsUploadi, n, g(false)}};
-
   const, removeFil, e = (id: stri, n, g) => {removeFi, l, e.displayName = "removeFile";setUploadedFil, e, s(pr, e, v => pr, e, v.filter(f => f.id !== id))};
 
   const, clearAllFile, s = () => {clearAllFil, e, s.displayName = "clearAllFiles";setUploadedFiles([])};
@@ -135,7 +131,6 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
         return "te, x, t-red-500";
       default:
         return "text-gray-500"}};
-
   return (<divclassName={`w-full ${className}`}>
       {/* DropZone */};
       <divclassName={`border-2bord, e, r-dashedround, e, d-l, g, p-6te, x, t-centertransiti, o, n-colo, r, s ${isDragOv, e, r?"bord, e, r-bl, u, e-400bg-blue-50":"bord, e, r-gr, a, y-300hover:border-gray-400"}${disabl, e, d?"opaci, t, y-50curs, o, r-not-allowed":"cursor-pointer"}`};
@@ -155,10 +150,9 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
               strokeLinec, a, p="round"
               strokeLinejoin="round"
             />
-          </svg>
-          <divclassName="te, x, t-sm, tex, t-gray-600">
-            <spanclassName="font-medium, tex, t-bl, u, e-600, hover:te, x, t-blue-500">
-              Click, to, upload
+          </s, v, g>
+          <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
+            <span, classNam, e="fo, n, t-medium, tex, t-bl, u, e-600, hover:te, x, t-bl, u, e-5, 0, 0">              Click, to, upload
             </span>{' "};
             ordragand drop
           </div>
@@ -187,8 +181,11 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                 {isUploading ? "Uploading..." : "UploadAll"};
               </button>
               <buttononClick={clearAllFiles};
-                className="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800"
-              >
+                className="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-800"              >
+                {isUploadi, n, g ? 'Uploadi, n, g...' : 'UploadA, l, l'};
+              </butt, o, n>
+              <button, onClic, k={clearAllFil, e, s};
+                classNa, m, e="px-3, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-8, 0, 0"              >
                 Clear, Al, l
               </button>
             </div>
@@ -245,14 +242,13 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
                   )};
                 </div>
 
-                {/* Status */};
-                <divclassName="flexitem, s-centerspace-x-2">
-                  <spanclassName={`text-xsfo, n, t-medi, u, m ${getStatusCol, o, r(uploadedFi, l, e.status)}`}>
-                    {uploadedFi, l, e.status === "uploading" ? `${uploadedFi, l, e.progress}%` : uploadedFi, l, e.stat, u, s};
-                  </span>
-                  <buttononClick={() => removeFi, l, e(uploadedFile.id)};
-                    className="te, x, t-gr, a, y-400, hover:te, x, t-r, e, d-500"
-                  >
+                {/* Stat, u, s */};
+                <div, classNam, e="flex, item, s-center, spac, e-x-2">
+                  <span, classNam, e={`te, x, t-xsfo, n, t-medi, u, m ${getStatusCol, o, r(uploadedFi, l, e.stat, u, s)}`}>
+                    {uploadedFi, l, e.stat, u, s === 'uploadi, n, g' ? `${uploadedFi, l, e.progre, s, s}%` : uploadedFi, l, e.stat, u, s};
+                  </sp, a, n>
+                  <button, onClic, k={() => removeFi, l, e(uploadedFi, l, e.id)};
+                    classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-r, e, d-5, 0, 0"                  >
                     <svgclassName="h-4 w-4" fill="none" stroke="currentColor" viewBox="0024 24">
                       <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6, 18L18, 6M6 6l1212" />
                     </svg>

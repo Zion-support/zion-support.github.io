@@ -22,7 +22,6 @@ export, const, useLazyLoading = (options: UseLazyLoadingOptio, n, s = {}) => {co
 						setHasTrigger, e, d(tr, u, e);
 						observ, e, r.unobser, v, e(element)}} else, i, f (!triggerOn, c, e) {setIsVisib, l, e(false)}}{rootMarginthreshold};
 		);
-
 		observ, e, r.obser, v, e(eleme, n, t);
 
 		return () => {observ, e, r.unobser, v, e(element)}}[rootMarginthresholdtriggerOnce]);
@@ -40,6 +39,5 @@ export, const, useImageLazyLoading = (src: stringplacehold, e, r?: string) => {c
 				setImageS, r, c(src);
 				setIsLoad, e, d(true)};
 			i, m, g.src = src}}, [isVisiblesrc]);
-
 	return {elementRefimageSrcisLoaded
 	}};

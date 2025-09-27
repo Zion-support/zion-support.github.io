@@ -1,18 +1,23 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {useState, useEffect, useCallbackuseMemouseRef   } from "react";
-import {motionuseInViewAnimatePresence   } from "fram, e, r-moti, o, n";
-import dynamic from "next/dynamic";
-// import EnhancedSEO from "../src/components/EnhancedSEO";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
+import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazyloadheavy components
 // constPerformanceTracker = dynamic(() => import("../src/components/PerformanceTracker"), {//   ssr: false 
 //  loading: () => <divclassName="h-4 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
-
-// constAccessibilityEnhancer = dynamic(() => import("../src/components/AccessibilityEnhancer"), {//   ssr: false
-// });
+const Home = React.memo(function Home(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const heroRef = useRef(null);
+  const featuresRef = useRef(null);
+  const isHeroInView = useInView(heroRef, { once: true });
+  const isFeaturesInView = useInView(featuresRef, { once: true });
 
 // constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
 //  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
@@ -39,55 +44,66 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
   const isFeaturesInView  = useInVi, e, w(featuresR, e, f, {once: true });
 
   useEffect(() => {setIsVisib, l, e(true);
-    setIsLoadi, n, g(false);
-    
-    // Performancemonitoringif (typeofwindow !== "undefined") {
-      const observer  = new, PerformanceObserve, r((list) => {
-        const entries  = li, s, t.getEntri, e, s();
-        entri, e, s.forEa, c, h((entry) => {
-          if (entry.entryType === "navigation") {
-            setPerformanceMetri, c, s({
-              loadTime: ent, r, y.loadEventE, n, d - ent, r, y.fetchStartdomContentLoaded: ent, r, y.domContentLoadedEventE, n, d - ent, r, y.fetchStart
-            })}})});
+    setIsLoadi, n, g(false);    
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            setPerformanceMetrics({
+              loadTime: entry.loadEventEnd - entry.fetchStart,
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
+            });
+          }
+        });
+      });
       
-      t, r, y {observer.observe({ entryTypes: ["navigation"] })} catch (e) {console.warn("Performanceobservernot supported")};
-      return () => observ, er.disconnect()}}[]);
+      try {
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (e) {
+        console.warn('Performance observer not supported');
+      }
+      
+      return () => observer.disconnect();
+    }
+  }, []);
 
- {// Track user interaction
-    if (typeof window !== "undefined' && window.gtag) {
-      window.gtag('event''click'{
-        event_category: 'engagement'event_label: 'get_started_button"
-      })}
-  }[]);
+  const handleGetStarted = useCallback(() => {
+    // Track user interaction
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click', {
+        event_category: 'engagement',
+        event_label: 'get_started_button'
+      });
+    }
+  }, []);
 
-	const, features = useMemo(() => [
-
-	const handleGetStarted  = useCallback(() => {// Trackuserinteraction
-    if (typeofwindow !== "undefin, e, d" && wind, o, w.gtag) {
-      window.gtag("eve, n, t', "click"{
-        event_category: "engagement"event_label: "get_started_button"
-      })}}, []);
-
-	constfeatures = useMemo(() => [
-
-    {title: "AI-PoweredSolutions",
-      description: "Leverage, cuttin, g-edge, artificial, intelligence totransformyour businessoperationsand driveinnovation.",
-      icon: "🤖"color: "blue" asconstdelay: 0.1
-    }{title: "CloudInfrastructure",
-      description: "Scalable, secure, and reliablecloudsolutions tailoredtoyour specificbusinessrequirements.",
-      icon: "☁️"color: "green" asconstdelay: 0.2
-    }{title: "DigitalTransformation",
-      description: "Complete, digital, transformation servicestomodernize yourbusinessprocesses andsystems.",
-      icon: "🚀"color: "purple" asconstdelay: 0.3
-    }{{/* <EnhancedSEO
-        title="Zion Tech Solutions - AI-Powered Business Solutions"
-        description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions''cloud infrastructure''digital transformation''business automation''technology consulting''machine learning''artificial intelligence''cloud computing''enterprise solutions'
-        ]}
-      /> */}
-			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-
-      title: "24/7Support"description: "Roun, d-t, h, e-clock, technical, support andmonitoringto ensureyoursystems runsmoothly.",
+  const features = useMemo(() => [
+    {
+      title: "AI-Powered Solutions",
+      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
+      icon: "🤖",
+      color: "blue" as const,
+      delay: 0.1
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable, secure, and reliable cloud solutions tailored to your specific business requirements.",
+      icon: "☁️",
+      color: "green" as const,
+      delay: 0.2
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business processes and systems.",
+      icon: "🚀",
+      color: "purple" as const,
+      delay: 0.3
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
       color: "blue" asconstdelay: 0.4}];  return (
     <>
@@ -105,7 +121,24 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
         ]};
       /> */};
       <divclassName="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50 to-gray-100">
-
+  return (
+    <>
+      <EnhancedSEO
+        title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions',
+          'cloud infrastructure', 
+          'digital transformation',
+          'business automation',
+          'technology consulting',
+          'machine learning',
+          'artificial intelligence',
+          'cloud computing',
+          'enterprise solutions'
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* HeroSection */};
         <sectionref={heroRef};
@@ -124,22 +157,21 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             <motion.divclassName="text-center"
               initi, al={{ y: 50opacity: 0 }};
               anima, te={isHeroInVi, ew ? { y: 0opacity: 1 } : {y: 50opacity: 0 }};
-              transition={{ duration: 0.8ease: "easeOut" }};
-            >
-              <motion.h1className="te, x, t-5, xlmd: te, x, t-7, xl, font-bold, tex, t-gr, a, y-900, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, b, g-clip-texttext-transparent"
-                initi, al={{scale: 0.8opacity: 0 }};
-                anima, te={isHeroInVi, ew ? { scale: 1opacity: 1 } : {scale: 0.8opacity: 0 }};
-                transiti, on={{ duration: 1delay: 0.2 }};
+              transition={{ duration: 0.8ease: "easeOut" }};            >
+              <motion.h1 
+                className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
               >
-                Zion, Tech, Solutions
+                Zion Tech Solutions
               </motion.h1>
               
               <motion.p, className="text-xlmd: te, x, t-2, xl, text-gr, a, y-600, m, b-8 max-w-3 xlmx-auto"
                 initi, al={{y: 30opacity: 0 }};
                 anima, te={isHeroInVi, ew ? { y: 0opacity: 1 } : {y: 30opacity: 0 }};
-                transiti, on={{ duration: 0.8delay: 0.4 }};
-              >
-                Transform, your, business with, cuttin, g-edge, A, I-powered, solutions, cloud infrastructure, and, digital transformation, service, s.
+                transiti, on={{ duration: 0.8delay: 0.4 }};              >
+                Transform your business with cutting-edge AI-powered solutions, cloud infrastructure, and digital transformation services.
               </motion.p>
               
               <motion.div, className="flexflex-colsm: fl, e, x-rowgap-4 justify-center"
@@ -149,20 +181,24 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
               >
 					<Linkhref="/dashboard" 
                   onClick={handleGetStarted};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-all, duratio, n-300, transformhover:sca, le-105 shadow-lghover:shadow-xl"
-                >
-                  View, Dashboar, d
+                  className="bg-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-all, duratio, n-300, transformhover:sca, le-105 shadow-lghover:shadow-xl"                >
+                  View Dashboard
                 </Link>
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+                <Link 
+                  href="/services" 
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600 hover:shadow-xl"
                 >
-                  OurServices
+                  Our Services
                 </Link>
-              </motion.d, i, v>
+              </motion.div>
             </motion.div>
           </div>
         </section>
 
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+        {/* Features Section */}
+        <section 
+          ref={featuresRef}
+          className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
         >
 			<divclassName="max-w-7 xlmx-auto">
             <motion.divclassName="text-centermb-16"
@@ -172,16 +208,15 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             >
               <h2className="text-4, xl, font-bold, tex, t-gray-900 mb-4">Why, Choose, Zion Tech?</h2>
               <pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-auto">
-                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.
-              </p>
-
-			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
-              {features.map((feature index) => (
+                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
                 <motion.div 
                   key={index}
-                  initial={{ y: 50opacity: 0 }}
-                  animate={isFeaturesInView ? { y: 0opacity: 1 } : { y: 50opacity: 0 }}
-                  transition={{ duration: 0.6delay: feature.delay }}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                  transition={{ duration: 0.6, delay: feature.delay }}
                   whileHover={{ y: -5 }}
                   className="group"
 
@@ -205,17 +240,15 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                       whileHov, er={{ scale: 1.1rotate: 5 }};
                       transiti, on={{ duration: 0.3 }};
                     >
-                      <spanclassName="text-3 xl">{feature.icon}</span>
-                    </motion.div>
-                    <h3className="text-2, xl, font-bold, m, b-4, tex, t-gr, a, y-900, group-hover:te, x, t-bl, u, e-600, transitio, n-colors, duratio, n-300">
-                      {feature.title};
+                      <spanclassName="text-3 xl">{feature.icon}</span>                    </motion.div>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      {feature.title}
                     </h3>
                     <pclassName="text-gr, a, y-600 leading-relaxed">
-                      {featu, r, e.description};
-                    </p>
+                      {featu, r, e.description};                    </p>
                   </div>
-                </motion.d, iv>
-              ))};
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -231,22 +264,24 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             </p>
 			<divclassName="flexflex-colsm:fl, e, x-rowgap-4 justify-center">
 					<Linkhref="/contact" 
-                className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:sca, l, e-105 shadow-lgfont-semibold"
-              >
-                Get, Started, Today
+                className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:sca, l, e-105 shadow-lgfont-semibold"              >
+                Get Started Today
               </Link>
->>>>>> 98b958e34f69a81b0adf5a8e38f8010f768ddaa3
+              <Link 
+                href="/portfolio" 
+                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 border-2 border-white font-semibold"
               >
-                ViewOurWork
+                View Our Work
               </Link>
             </div>
           </div>
-        </secti, o, n>
+        </section>
 
-
-			<div className="max-w-7 xl mx-auto">
-			<div className="text-center mb-16">
-              <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
 
@@ -271,8 +306,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
               </div>
 			<divclassName="bg-whit, e, p-6 rounded-lgshadow-lg">
                 <pclassName="text-gray-600 mb-4">&qu, o, t;Excellent, support, and innovative, solution, s. Great, partnershi, p!&quot;</p>
-			<divclassName="font-semibold, tex, t-gray-900">- Emily, Rodriguez, Director</div>
-              </div>
+			<divclassName="font-semibold, tex, t-gray-900">- Emily, Rodriguez, Director</div>              </div>
             </div>
           </div>
         </section>
@@ -383,7 +417,6 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
               <pclassName="text-xltext-gray-600 mb-8">
                 Get, comprehensive, insights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboa, r, d.
               </p>
-
                 <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
@@ -403,10 +436,6 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             </div>
           </div>
         </section>
-      </d, i, v>
-});
+      </d, i, v>});
 
-export default ;
-		</>
-
-  )};
+export default Home;

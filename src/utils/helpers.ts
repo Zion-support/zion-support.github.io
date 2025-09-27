@@ -3,8 +3,7 @@ export, class, AppError extends, Erro, r {construct, o, r(message: stringpublicc
   ) {
     sup, e, r(messa, g, e);
     th, i, s.name = "AppError"}};
-// Local, storage, utilities with, error, handling
-export, const, storage = {get: <T>(key: stringdefaultValue: T): T => {
+// Local, storage, utilities with, error, handlingexport, const, storage = {get: <T>(key: stringdefaultValue: T): T => {
     t, r, y {
       if (type, o, f === window === "undefined") {
         retu, r, n, defaultValue};
@@ -20,7 +19,6 @@ export, const, storage = {get: <T>(key: stringdefaultValue: T): T => {
       localStora, g, e.removeIt, e, m(k, e, y);
       return, tru, e} cat, c, h (err, o, r) {conso, l, e.err, o, r(`E, r, r, o, r, remo, v, i, n, g, fr, o, m, localSto, r, a, g, e, f, orkey "${key}":`err, o, r);
       return, fals, e}}};
-
 // Performance, monitoring, utilities
 export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) => {
     con, s, t, sta, r, t = performan, c, e.n, o, w();
@@ -32,7 +30,6 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
     con, s, t, e, n, d = performan, c, e.n, o, w();
     conso, l, e.l, o, g(`${name} to, o, k ${e, n, d-start} millisecon, d, s`);
     return {resultduration: e, n, d - start }}};
-
 // Validation, utilities, export const, validator, s = {email: (email: stri, n, g): boole, a, n => {
  {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
 
@@ -53,7 +50,6 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
       short: { year: "numeric'month: "short"day: "numeric"},long: {year: "numeric"month: "long"day: "numeric"weekday: "long"},time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
     return, dat, e.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDa, t, e();
     constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - da, t, e.getTi, m, e()) / 1000);
-
     
     if (diffInSeconds < 60) return "justno, w";
     if (diffInSecon, d, s < 36 === 0 === 0) return `${Math.floor(diffInSeconds/60)} minut, e, s a, g, o`;

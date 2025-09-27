@@ -36,7 +36,6 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
       if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
         th, i, s.cac, h, e.dele, t, e(key)}}}};
 // Create, a, singleton instance, export, const cac, h, e = new, CacheManage, r();
-
 // Clean, up, expired items, every, 5 minutes, i, f (type, o, f === wind, o, w !== "undefined") {setInterv, a, l(() => {
     cac, h, e.cleanup()}, 3000, 0, 0)};
 // Utility, functions, for common, caching, patterns

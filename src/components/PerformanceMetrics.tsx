@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
@@ -20,7 +21,6 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
           renderTime: Ma, t, h.rou, n, d(renderTi, m, e),
           memoryUsage: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLatency: Ma, t, h.rou, n, d(networkLatency)
         })}};
-
     // Measure, after, component mounts, const, timer = setTimeo, u, t(measurePerformance1, 0, 0, 0);
     
     return () => clearTimeo, u, t(ti, m, e, r)}, []);
@@ -47,11 +47,9 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
             <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
               aria-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >
-              ✕"> setIsVisib, l, e(fal, s, e)};
-              aria-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >
-
+              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >              ✕"> setIsVisib, l, e(fal, s, e)};
+              ar, i, a-lab, e, l="Close, performance, metrics"
+              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
               ✕
             </button>
           </div>

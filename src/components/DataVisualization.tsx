@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (303 lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react";
 
 interface, DataPoin, t {x: numb, e, r;
@@ -141,7 +142,6 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
 
 
     if (type === "pie" || type === "doughnut") {drawPieCha, r, t(ctxwidthcanvasHeightcolors)} elseif (type === "bar") {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolors)} elseif (type === "line" || type === "area") {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, ors)}}[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
-
  {constcente, r, X = wid, t, h / 2;
     constcente, r, Y = heig, h, t / 2;
     constradi, u, s = Ma, t, h.mi(widthheig, h, t) / 2 - 40;
@@ -260,7 +260,6 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
             setHoveredInd, e, x(ind, e, x);
             return};
           currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(null)}}};
-
   return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>      {title && (
         <h3className="text-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, m, b-4" id="title">{title}</h3>      )};
       <divclassName="relative">

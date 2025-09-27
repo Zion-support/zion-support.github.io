@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (396 lines) into smaller components
 import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
 import Image from "next/image";
 
@@ -36,7 +37,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       createdAt: newDate()("2023-08-20")permissions: ["read""write""moderate"]department: "Support"phone: "+1-555-0125"}{id: '4'name: "Sar, ahWilson"email: "sar, a, h.wils, o, n@example.com"role: "user"status: "inactive"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14387616810, 3, 3-6461ffad8d, 8, 0? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2023-12-01"),
       createdAt: newDate()("2023-05-10")permissions: ['read']department: "Sales"phone: "+1-555-0126"}{id: '5'name: "Dav, idBrown"email: "dav, i, d.bro, w, n@example.com"role: "guest"status: "suspended"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-15006487677, 9, 1-00dcc994a4, 3, e? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2023-11-15"),
       createdAt: newDate()("2023-09-01")permissions: ['read']department: 'HR'phone: "+1-555-0127"}][]);
-
   useEffect(() => {// Simula, t, e, API, callconst, timer = setTimeo, u, t(() => {
       setUse, r, s(mockUse, r, s);
       setIsLoadi, n, g(false)}10, 0, 0);
@@ -57,7 +57,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
     if (type, o, f === aValue === "string") {aVal, u, e = aVal, u, e.toLowerCa, s, e();
       bVal, u, e = bVal, u, e.toLowerCase()};
     if (sortOrder === "asc") {return : aVal, u, e < bValue ? -1  : aValue > bValue ? 1 : 0} el, s, e {returnaVal, u, e > bVal, u, e ? -1 : aValue < bValue ? 1 : 0}});
-
  {handleUserSelect.displayName = "handleUserSelect";setSelectedUse, r, s(pr, e, v => 
 
   con, s, t, handleUserSele, c, t = (userId: stri, n, g) => {
@@ -70,7 +69,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
   const, handleSelectAl, l = () => {handleSelectA, l, l.displayName = "handleSelectAll";if (selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h) {
       setSelectedUsers([])} el, s, e {setSelectedUse, r, s(sortedUse, r, s.m, a, p(us, e, r => user.id))}};
-
  {handleUserStatusChan, g, e.displayName = "handleUserStatusChange";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
   consthandleUserStatusChan, g, e = (userId: stringstatus: User["status"]) => {
@@ -82,7 +80,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(user)}};
-
  {handleUserRoleChange.displayName = "handleUserRoleChan, g, e";constupdatedUse, r, s = use, r, s.m, a, p(us, e, r => 
 
   consthandleUserRoleChange = (userId: stringrole: User["role"]) => {
@@ -94,7 +91,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
     
     const, use, r = updatedUse, r, s.fi, n, d(u => u.id === user, I, d);
     if (us, e, r && onUserUpda, t, e) {onUserUpda, t, e(user)}};
-
  {handleDeleteUser.displayName = "handleDeleteUs, e, r";if (window.confirm("A, r, e, yousureyouwanttodeleteth, i, s === us, e, r?")) {
 
   con, s, t, handleDeleteUs, e, r = (userId: stri, n, g) => {
@@ -103,7 +99,6 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => us, e, r.id !== user, I, d));
       if (onUserDele, t, e) {
         onUserDele, te(userId)}}};
-
   consthandleBulkAction = (action: "activa, t, e' | "deactivate" | "suspend" | "delete") => {handleBulkActi, o, n.displayName = "handleBulkAction";if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
     if (action === "delete") {
@@ -137,12 +132,21 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         return "bg-gr, a, y-100te, x, t-gray-800";
       default:
         return "bg-gr, a, y-100text-gray-800"}};
-
+  const, getRoleColo, r = (ro, l, e: Us, e, r['ro, l, e']) => {getRoleCol, o, r.displayNa, m, e = 'getRoleCol, o, r';swit, c, h (ro, l, e) {
+      ca, s, e 'adm, i, n':
+        return 'bg-purp, l, e-100te, x, t-purp, l, e-8, 0, 0';      ca, s, e 'moderat, o, r':
+        return 'bg-bl, u, e-100te, x, t-bl, u, e-8, 0, 0';
+      ca, s, e 'us, e, r':
+        return 'bg-gre, e, n-100te, x, t-gre, e, n-8, 0, 0';
+      ca, s, e 'gue, s, t':
+        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0';
+      defau, l, t:
+        return 'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'}};
   if (isLoadi, n, g) {return (<divclassNam, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, p-6 ${className}`}>
         <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
           <div, classNa, m, e ="space-y-3">
-            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e, x, ite, m, s-cent, e, r, space-x-4">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl e x ite m s-cent e r space-x-4">
                 <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
                 <div, classNa, m, e="fl, ex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
@@ -167,8 +171,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             AddUser"> setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-label="Addnewuser"
             className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
-            Add, Use, r
-          </button>
+            Add, Use, r          </button>
         </div>
       </div>
 
@@ -177,20 +180,19 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
       {/* Filte, rsandSearch */};
       <divclassName="px-6 py-4, borde, r-b, borde, r-gr, a, y-200">
-
         <divclassName="flexflex-colsm:flex-rowgap-4">
           <divclassName="flex-1">
             <inputtype="text"
               placeholder="Searchusers..."
               val, u, e={searchTerm};
               onChan, g, e={(e) => setSearchTe, r, m(e.targ, e, t.value)};
-              className="w-full, p, x-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+              className="w-full p x-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
               ar, i, a-label="Searchusers"
             />
           </div>
           <selectvalue={filterRole};
             onChan, g, e={(e) => setFilterRo, l, e(e.targ, e, t.value)};
-            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllRoles</option>
             <optionvalue="admin">Admin</option>
@@ -200,7 +202,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           </select>
           <selectvalue={filterStatus};
             onChan, g, e={(e) => setFilterStat, u, s(e.targ, e, t.value)};
-            className="px-3, p, y-2, border, border-gr, a, y-300, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
+            className="px-3 p y-2 border border-gr a y-300 rounded-mdfocus:outli ne-nonefocus:ri n g-2 focus:ri n g-bl u e-500"
           >
             <optionvalue="all">AllStatus</option>
             <optionvalue="active">Active</option>
@@ -212,7 +214,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Bu, l, kActions */};
- 0 && (<divclassName="px-6, py-3, bg-gr, a, y-50, bord, e, r-b, bord, e, r-gr, a, y-200">
+ 0 && (<divclassName="px-6 py-3 bg-gr a y-50 bord e r-b bord e r-gr a y-200">
           <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
             <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
@@ -220,53 +222,52 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           <divclassNam, e ="flexitems-centerspace-x-4">
             <spanclassName ="text-smte, x, t-gray-600">
 
-              {selectedUse, r, s.length} us, e, r{selectedUse, r, s.length !== 1 ? 's' : '"} selected
-            </span>
-            <divclassName ="flexspace-x-2">              <buttononClick ={() = aria-label="handleBulkAction("activate")};
-                ar, i, a-label="Activateselectedusers"
-                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-700"
+              {selectedUse, r, s.leng, t, h} us, e, r{selectedUse, r, s.leng, t, h !== 1 ? 's' : ''} select, e, d
+            </sp, a, n>
+            <divclassNa, m, e ="flexspa, c, e-x-2">              <buttononCli, c, k ={() = ar, i, a-lab, e, l="handleBulkActi, o, n('activa, t, e')};
+                ar, i, a-lab, e, l="Activate, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
 
-              >
-                Activate"> handleBulkAction("activate")};
-                ar, i, a-label="Activateselectedusers"
-                className="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-700"
+               aria-label="Button">
+                Activa, t, e"> handleBulkActi, o, n('activa, t, e')};
+                ar, i, a-lab, e, l="Activate, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-gre, e, n-6, 00, hover:te, x, t-gre, e, n-7, 0, 0"
               >
 
                 Activa, t, e
-              </button>
-              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("deactivate")};
-                ar, i, a-label="Deactivateselectedusers"
-                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, ay-700"
+              </butt, o, n>
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('deactiva, t, e')};
+                ar, i, a-lab, e, l="Deactivate, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
 
               >
-                Deactivate"> handleBulkAction("deactivate")};
-                ar, i, a-label="Deactivateselectedusers"
-                className="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, ay-700"
+                Deactiva, t, e"> handleBulkActi, o, n('deactiva, t, e')};
+                ar, i, a-lab, e, l="Deactivate, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-gr, a, y-600, hover:te, x, t-gr, a, y-7, 00"
               >
 
                 Deactiva, t, e
-              </button>
-              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("suspend")};
-                ar, i, a-label="Suspendselectedusers"
-                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-700"
+              </butt, o, n>
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('suspe, n, d')};
+                ar, i, a-lab, e, l="Suspend, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
 
               >
-                Suspend"> handleBulkAction("suspend")};
-                ar, i, a-label="Suspendselectedusers"
-                className="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-700"
+                Suspe, n, d"> handleBulkActi, o, n('suspe, n, d')};
+                ar, i, a-lab, e, l="Suspend, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-yell, o, w-6, 00, hover:te, x, t-yell, o, w-7, 0, 0"
               >
 
                 Suspe, n, d
-              </button>
-              <buttononClick={(()) => {ar, i, a-label="handleBulkAction("delete")};
-                ar, i, a-label="Deleteselectedusers"
-                className="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-700"
+              </butt, o, n>
+              <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleBulkActi, o, n('dele, t, e')};
+                ar, i, a-lab, e, l="Delete, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-r, e, d-6, 00, hover:te, x, t-r, e, d-7, 0, 0"
 
               >
-                Delete"> handleBulkAction("delete")};
-                ar, i, a-label="Deleteselectedusers"
-                className="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-700"
-              >
+                Dele, t, e"> handleBulkActi, o, n('dele, t, e')};
+                ar, i, a-lab, e, l="Delete, selected, users"
+                classNa, m, e="te, x, t-sm, tex, t-r, e, d-600, hover:te, x, t-r, e, d-7, 0, 0"              >
                 Dele, t, e
               </button>
             </div>
@@ -275,12 +276,11 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       )};
       {/* Use, rsTable */};
       <divclassName="overflow-x-auto">
-        <tableclassName="min-w-full, divid, e-y, divid, e-gray-200">
+        <tableclassName="min-w-full divid e-y divid e-gray-200">
           <theadclassName="bg-gray-50">
             <tr>
               <thclassName="px-6 py-3 text-left">
-                <inputtype="checkbox"
-                  id="select-all-users"
+                <inputtype="checkbox"                  id="select-all-users"
                   check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
                   onChan, g, e={handleSelectAll};
                   classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
@@ -298,21 +298,18 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
               <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
                 Last, Logi, n
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
-                Actio, n, s
+              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">                Actio, n, s
               </th>
             </tr>
           </thead>
 
             {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
-                <tdclassName="px-6 py-4, whitespace-nowrap">
-                  <inputtype ="checkbox"
+                <tdclassName="px-6 py-4, whitespace-nowrap">                  <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300 rounded"
-                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
-          <tbodyclassName="bg-whitedivide-y, divid, e-gr, a, y-200">
+                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300 rounded"                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
+          <tbodyclassName="bg-whitedivide-y divid e-gr a y-200">
             {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
                 <tdclassName ="px-6p, y-4whitespace-nowrap">
                   <inputtype ="checkbox"
@@ -326,16 +323,15 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                 <tdclassName="px-6 py-4, whitespac, e-nowrap">
                   <divclassName="flexitems-center">
                     <divclassName="fl, e, x-shrink-0 h-10 w-10">
-                      <ImageclassName="h-10 w-10 rounded-full"
-                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
+                      <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
                         a, l, t={us, e, r.name};
                         wid, t, h={40};
                         heig, h, t={40};
                       />
                     </div>
                     <divclassName="ml-4">
-                      <divclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900">{us, e, r.name}</div>
-                      <divclassName="te, x, t-sm, tex, t-gray-500">{us, e, r.email}</div>                    </div>
+                      <divclassName="te x t-sm fon t-medium tex t-gray-900">{us, e, r.name}</div>
+                      <divclassName="te x t-sm tex t-gray-500">{us, e, r.email}</div>                    </div>
                   </div>
                 </td>
                 <td, classNam, e="px-6, p, y-4whitespace-nowrap">
@@ -347,7 +343,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     <optionvalue="user">User</option>
                     <optionvalue="guest">Guest</option>                  </select>
                 </td>
-                <tdclassName="px-6, p, y-4, whitespac, e-nowrap">
+                <tdclassName="px-6 p y-4 whitespac e-nowrap">
                   <selectvalue={user.status};
                     onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.i, d, e.target.valueasUser["status'])};
                   >
@@ -357,7 +353,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     <optionvalue="suspended">Suspended</option>
                   </select>
                 </td>
-                <tdclassName="px-6, p, y-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-5 : 00">
+                <tdclassName="px-6 p y-4 whitespac e-nowrap tex t-sm tex t-gray-5 : 00">
                   {us, e, r.lastLog, i, n ? us, e, r.lastLogin.toLocaleDateString()  : "Never"};
                 </td>
 
@@ -368,16 +364,14 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                       className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >
                       Edit"> setEditingUs, e, r(us, e, r)};
                       ar, i, a-label="Edituser"
-                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >
-                      Ed, i, t
-                    </button>
-                    <buttononClick={(()) => {ar, i, a-label="handleDeleteUs, e, r(user.id)};
-                      ar, i, a-label="Deleteuser"
-                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >
-                      Delete"> handleDeleteUs, e, r(us, e, r.id)};
-                      ar, i, a-label="Deleteuser"
-                      className="te, x, t-r, e, d-600, hover:te, x, t-r, ed-900"                    >
-                      Dele, t, e
+                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >                      Ed, i, t
+                    </butt, o, n>
+                    <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleDeleteUs, e, r(us, e, r.id)};
+                      ar, i, a-lab, e, l="Delete, use, r"
+                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >
+                      Dele, t, e"> handleDeleteUs, e, r(us, e, r.id)};
+                      ar, i, a-lab, e, l="Delete, use, r"
+                      classNa, m, e="te, x, t-r, e, d-600, hover:te, x, t-r, e, d-90, 0"                    >                      Dele, t, e
                     </button>
                   </div>
 
@@ -402,6 +396,5 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
             </button>
           </div>
         </div>
-      </d, i, v>
-    </div>
+      </d, i, v>    </div>
   )};

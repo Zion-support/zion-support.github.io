@@ -51,7 +51,6 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
     // Pagevisibili, t, y, trackingdocument.addEventListener("visibilitychange"() => {
       if (document.hidd, e, n) {
         th, i, s.track("engagement""page_hidden""user_left_page"undefined{})} el, s, e {th, i, s.track("engagement""page_visible""user_returned"undefined{})}});
-
     // Scroll, tracking, if (th, i, s.conf, i, g.enableScrollTracki, n, g) {l, etscrollTimeout: Node, J, S.Timeo, u, t;
       wind, o, w.addEventListener("scroll"() => {
         clearTimeo, u, t(scrollTimeo, u, t);
@@ -69,8 +68,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
           this.track("interacti, o, n'"click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : eleme, n, t.classNameid: element.id
           })}})};
     // Form, tracking, if (th, i, s.conf, i, g.enableFormTracki, n, g) {document.addEventListener("submit"(eve, n, t) => {
-        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;
-        constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";
+        con, s, t, fo, r, m = eve, n, t.targetasHTMLFormEleme, n, t;        constformNa, m, e = fo, r, m.na, m, e || form.id || "unnamed_form";
         
           formId: fo, r, m.idformName: fo, r, m.nameformAction: fo, r, m.actionformMethod: fo, r, m.method
         })})};
@@ -89,8 +87,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
       wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {th, i, s.track("error""unhandled_promise_rejection""PromiseRejection" : undefin, e, d  : {
           reas, o, n : eve, n, t.reason
         })})}};
-  private, startFlushTime, r(): vo, i, d {th, i, s.flushTim, e, r = setInterv, a, l(() => {
-      th, i, s.flush()}, th, i, s.conf, i, g.flushInterv, a, l)};
+  private, startFlushTime, r(): vo, i, d {th, i, s.flushTim, e, r = setInterv, a, l(() => {      th, i, s.flush()}, th, i, s.conf, i, g.flushInterv, a, l)};
   tra, c, k(category: stringaction: stringlab, e, l?: stri, n, g 
 
   ): vo, i, d {constevent: AnalyticsEve, n, t = {
@@ -106,7 +103,6 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
 
     // Flush, if, batch size, reached, if (th, i, s.even, t, s.leng, t, h >= th, i, s.conf, i, g.batchSi, z, e) {th, i, s.flush()}};
 ): vo, i, d {th, i, s.sessi, o, n.pageVie, w, s++;
-
   trackPageVi, e, w(pageName: stringmetada, t, a?: Reco, r, d<stringany>): voi, d {th, i, s.sessi, o, n.pageVie, w, s++;
 
     
@@ -134,7 +130,6 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
       clearInterv, a, l(th, i, s.flushTimer)};
     th, i, s.flu, s, h()}};
 // React, hook, for analytics, export, const useAdvancedAnalyti, c, s = () => {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
-
     category: stri, ngaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
   ) => {
     analytic, s.tra, c, k(catego, r, y, acti, o, n, lab, e, l, val, u, e, metadata)}, [analytics]);

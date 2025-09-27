@@ -1,8 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import { useState   } from "react";
-import SEO from "../src/components/SEO";
-import {useAnalytics   } from "../src/hooks/useAnalytics";
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 const Dashboard = React.memo(function Dashboard(): JSX.Element {
 	const [activeTab, setActiveTab] = useState("overview");
@@ -339,152 +337,24 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
   const [isRealTime, setIsRealTi, m, e] = useState(true);
   const [isLoadi, n, g, setIsLoadi, ng] = useState(false);
 
- {
-    if (tabId !== activeTab) {
+ {    if (tabId !== activeTab) {
       setIsLoading(true);
       setActiveTab(tabId);
       // Simulate loading time for better UX
-      setTimeout(() => setIsLoading(false)100)}
-  }[activeTab]);
+      setTimeout(() => setIsLoading(false), 100);
+    }
+  }, [activeTab]);
 
-  consttabs = useMemo(() => [
-    {id: "comprehensive' as constname: 'Comprehensive'icon: '🎯' },
-    {id: 'analytics' as constname: 'Analytics'icon: '📊' },
-    {id: 'performance' as constname: 'Performance'icon: '⚡' },
-    {id: 'security' as constname: 'Security'icon: '🔒' },
-    {id: 'enhanced' as constname: 'Enhanced Dashboard'icon: '🚀' },
-    {id: 'search' as constname: 'Search'icon: '🔍' },
-    {id: 'advanced-analytics' as constname: 'Advanced Analytics'icon: '📈' },
-    {id: 'advanced-performance' as constname: 'Advanced Performance'icon: '⚡️' },
-    {id: 'advanced-security' as constname: 'Advanced Security'icon: '🛡️' },
-    {id: 'accessibility' as constname: 'Accessibility'icon: '♿' },
-    {id: 'system-monitor' as constname: 'System Monitor'icon: '📊' },
-    {id: 'security-enhancements' as constname: 'Security Enhancements'icon: '🔐' },
-    {id: 'performance-optimizer' as constname: 'Performance Optimizer'icon: '⚙️' },
-    {id: 'user-experience' as constname: 'User Experience'icon: '👤' },
-    {id: 'error-monitoring' as constname: 'Error Monitoring'icon: '🚨' },
-    {id: 'advanced-system-monitor' as constname: 'Advanced System Monitor'icon: '🔧' },
-    {id: 'new-performance' as constname: 'New Performance'icon: '⚡️' },
-    {id: 'new-security' as constname: 'New Security'icon: '🛡️' },
-    {id: 'new-analytics' as constname: 'New Analytics'icon: '📊' },
-    {id: 'error-handler' as constname: 'Error Handler'icon: '🚨' },
-    {id: 'analytics-insights' as constname: 'Analytics Insights'icon: '💡' },
-    {id: 'comprehensive-monitoring' as constname: 'Comprehensive Monitoring'icon: '📊' },
-    {id: 'comprehensive-security' as constname: 'Comprehensive Security'icon: '🛡️" }
+  const tabs = useMemo(() => [
+    { id: 'overview' as const, name: 'Overview', icon: '🎯' },
+    { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
+    { id: 'performance' as const, name: 'Performance', icon: '⚡' },
+    { id: 'security' as const, name: 'Security', icon: '🔒' }
   ], []);
 
-  // Sample data for advanced components - memoized to prevent re-creation
-  constsampleAnalyticsData = useMemo(() => ({pageViews: 125000uniqueVisitors: 45000bounceRate: 35.2avgSessionDuration: 180conversionRate: 12.5topPages: [
-      {page: "/"views: 25000bounceRate: 28.5avgTime: 120 }{page: "/services"views: 18000bounceRate: 32.1avgTime: 95 }{page: "/blog"views: 15000bounceRate: 45.2avgTime: 180 }
-    ]trafficSources: [
-      {source: "Organic Search"visitors: 25000percentage: 55.6conversionRate: 12.5 }{source: "Direct"visitors: 12000percentage: 26.7conversionRate: 15.2 }{source: "Social Media", visitors: 8000percentage: 17.8conversionRate: 8.9 }
-    ]deviceTypes: [{device: "Desktop"count: 25000percentage: 55.6 }{device: "Mobile"count: 15000percentage: 33.3 }{device: "Tablet"count: 5000percentage: 11.1 }
-                ]geographicData: [
-      {country: "United States"visitors: 18000percentage: 40.0 }{country: "Canada"visitors: 9000percentage: 20.0 }{country: "United Kingdom"visitors: 7200percentage: 16.0 }
-    ],
-    hourlyData: Array.from({,
-		length: 24 }, (_,,, i) => ({ hour: ivisitors: Math.floor(Math.random() * 1000) }))dailyData: Array.from({length: 30 }(_i) => ({date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split("T")[0]visitors: Math.floor(Math.random() * 2000) + 1000pageViews: Math.floor(Math.random() * 5000) + 2000
-    }))realTimeVisitors: 127topKeywords: [
-      {keyword: "AI solutions"searches: 1250position: 1 }{keyword: "cloud computing"searches: 980position: 2 }{keyword: "digital transformation"searches: 750position: 3 }
-
-  // Optimized, tab, switching with, loading, state
-  const handleTabChange  = useCallba, c, k((tabId: DashboardTab) => {if (tab, I, d !== activeT, a, b) {
-      setIsLoadi, n, g(true);
-      setActiveT, a, b(tabId);
-      // Simulate, loading, time for, better, UX
-      setTimeo, u, t(() => setIsLoading(false)100)}}[activeTab]);
-
-  consttabs = useMemo(() => [
-    {id: "comprehensi, ve" asconstname: "Comprehensive"icon: '🎯' },
-    {id: "analytics" asconstname: "Analytics"icon: '📊' },
-    {id: "performance" asconstname: "Performance"icon: '⚡' },
-    {id: "security" asconstname: "Security"icon: '🔒' },
-    {id: "enhanced" asconstname: "EnhancedDashboard"icon: '🚀' },
-    {id: "search" asconstname: "Search"icon: '🔍' },
-    {id: "advanced-analytics" asconstname: "AdvancedAnalytics"icon: '📈' },
-    {id: "advanced-performance" asconstname: "AdvancedPerformance"icon: '⚡️' },
-    {id: "advanced-security" asconstname: "AdvancedSecurity"icon: '🛡️' },
-    {id: "accessibility" asconstname: "Accessibility"icon: '♿' },
-    {id: "system-monitor" asconstname: "SystemMonitor"icon: '📊' },
-    {id: "security-enhancements" asconstname: "SecurityEnhancements"icon: '🔐' },
-    {id: "performance-optimizer" asconstname: "PerformanceOptimizer"icon: '⚙️' },
-    {id: "user-experience" asconstname: "UserExperience"icon: '👤' },
-    {id: "error-monitoring" asconstname: "ErrorMonitoring"icon: '🚨' },
-    {id: "advanced-system-monitor" asconstname: "AdvancedSystemMonitor"icon: '🔧' },
-    {id: "new-performance" asconstname: "NewPerformance"icon: '⚡️' },
-    {id: "new-security" asconstname: "NewSecurity"icon: '🛡️' },
-    {id: "new-analytics" asconstname: "NewAnalytics"icon: '📊' },
-    {id: "error-handler" asconstname: "ErrorHandler"icon: '🚨' },
-    {id: "analytics-insights" asconstname: "AnalyticsInsights"icon: '💡' },
-    {id: "comprehensive-monitoring" asconstname: "ComprehensiveMonitoring"icon: '📊' },
-    {id: "comprehensive-security" asconstname: "ComprehensiveSecurity"icon: '🛡️" }], []);
-
-  // Sample, data, for advanced, component, s - memoized, to, prevent re-creation, const, sampleAnalyticsData = useMemo(() => ({pageViews: 1250, 0, 0,
-    uniqueVisitors: 450, 0, 0,
-    bounceRate: 35.2,
-    avgSessionDuration: 180conversionRate: 12.5topPages: [
-      { page: "/", views: 25000bounceRate: 28.5avgTime: 120 }{page: "/servic, e, s", views: 18000bounceRate: 32.1avgTime: 95 }{page: "/blog", views: 150, 0, 0, bounceRate: 45.2avgTime: 180}]trafficSources: [
-      {source: "OrganicSearch", visitors: 25000percentage: 55.6conversionRate: 12.5 }{source: "Direct", visitors: 12000percentage: 26.7conversionRate: 15.2 }{source: "SocialMedia", visitors: 80, 00percentage: 17.8conversionRate: 8.9}]deviceTypes: [
-                  {device: "Desktop"count: 25000percentage: 55.6 }{device: "Mobile"count: 15000percentage: 33.3 }{device: "Tablet", count: 5000percentage: 11.1}]geographicData: [{country: "UnitedStates"visitors: 18000percentage: 40.0 }{country: "Canada"visitors: 9000percentage: 20.0 }{country: "UnitedKingdom"visitors: 7200percentage: 16.0}],
-    hourlyData: Arr, a, y.fr, o, m({ length: 24 }(_i) => ({hour: ivisitors: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1000) })),
-    dailyData: Arr, a, y.fr, o, m({ length: 30 }(_i) => ({date: new, Dat, e(Da, t, e.n, o, w() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split("T")[0], 
-      visitors: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 2000) + 10, 0, 0,
-      pageViews: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5000) + 2000
-    }))realTimeVisitors: 127topKeywords: [
-      {keyword: "AI, solution, s"searches: 1250position: 1 }{keyword: "cloudcomputing"searches: 980position: 2 }{keyword: "digitaltransformation", searches: 7, 50position: 3}]errorRate: 0.5performanceScore: 92
-  })[]);
-
- {switch (activeTab) {
-      case "comprehensive':
-        return <ComprehensiveAnalyticsDashboard />;
-      case 'analytics':
-        return <div>Analytics Dashboard (temporarily disabled)</div>;
-      case 'performance':
-        return <div>Performance Dashboard (temporarily disabled)</div>;
-      case 'security':
-        return <div>Security Dashboard (temporarily disabled)</div>;
-      case 'enhanced':
-        return <EnhancedDashboard />;
-      case 'search':
-	return (
-			<div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-			<div className="max-w-2 xl">
-              {/* <EnhancedSearch 
-                onSearch={(queryresults) => console.log("Search:'queryresults)}
-                onResultClick={(result) => console.log('Result clicked:'result)}
-                enableFilters={true}
-                enableSuggestions={true}
-                enableHistory={true}
-              /> */}
-            </div>
-          </div>
-        );
-      case 'advanced-analytics':
-	return (
-			<div className="p-8">
-			<div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-			<div className="flex items-center space-x-4">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={isRealTime}
-                   ,, onChange={(e) => setIsRealTime(e.target.checked)}
-                    className="mr-2"
-
-  const renderDashboard = useMemo(()  => {switch (activeTab) {
-      case "comprehensive":
-        return <ComprehensiveAnalyticsDashboard />;
-      case "analytics":
-        return <div>AnalyticsDashboard (temporarilydisabled)</div>;
-      case "performance":
-        return <div>PerformanceDashboard (temporarilydisabled)</div>;
-      case "security":
-        return <div>SecurityDashboard (temporarilydisabled)</div>;
-      case "enhanced":
-        return <EnhancedDashboard />;
-      case "search":
+  const renderDashboard = useMemo(() => {
+    switch (activeTab) {
+      case 'overview':
         return (
           <divclassName="p-8">
             <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">EnhancedSearch</h1>
@@ -1099,15 +969,11 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
               </div>
 			<div className="flex items-center space-x-4">
 			<div className="text-sm text-gray-500">
-                  Last updated: {new Date().toLocaleString()}
-                </div>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                  Refresh Data
-                </button>
+                  Last updated: {new Date().toLocaleString()}                </div>
               </div>
             </div>
           </div>
-        </header>
+        );
 
         {/* Navigation Tabs */}
 			<div className="bg-white border-b border-gray-200">
@@ -1123,15 +989,24 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover: text-gray-700hover:border-gray-300'
                   } ${isLoading ? 'opacity-50 cursor-not-allowed' : '"}`}
-
       default:
-        return <ComprehensiveAnalyticsDashboard />}}[activeTa, b, isRealTi, m, e]);  return (
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Select a tab to view dashboard content.</p>
+            </div>
+          </div>
+        );
+    }
+  }, [activeTab, isRealTime]);
+
+  return (
     <>
-      
       <Head>
-        <title>AdvancedDashboard - ZionTechSolutions</title>
-        <metaname="description" content="Comprehensive, analytics, dashboard with, advanced, performance monitori, n, g, security, analysi, s, SEO, optimizationandaccessibilityinsights" />
-        <metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
+        <title>Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehensive analytics dashboard with performance monitoring, security analysis, and insights" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <divclassName="min-h-screenbg-gray-50">
@@ -1174,15 +1049,15 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
                   {tab.name};
                 </button>
               ))};
-            </nav>
-          </div>
-        </div>
+            </nav>          </div>
+        </nav>
 
-
+        {/* Main Content */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
           {isLoading && (
-			<div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
-			<div className="flex items-center space-x-2">
-			<div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
                 <span className="text-gray-600">Loading dashboard...</span>
               </div>
             </div>
@@ -1195,8 +1070,7 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
 			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
 			<div className="text-center text-sm text-gray-500">
               <p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
-              <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>
-            </div>
+              <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>            </div>
           </div>
         </footer>
       </div>
@@ -1226,8 +1100,7 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         </footer>
       </d, i, v>
     </>
-
-  )};
+  );
+};
 
 export default Dashboard;
-

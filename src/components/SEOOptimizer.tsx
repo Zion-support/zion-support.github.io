@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, { useEffect }  from 'react';
 import Head from "next/head";
 import {generateMetaTa, g, s, generateStructuredDa, t, avalidateSEODataSEOData   } from "../uti, l, s/seoUti, l, s";
@@ -5,7 +6,7 @@ import {generateMetaTa, g, s, generateStructuredDa, t, avalidateSEODataSEOData  
 interface, SEOOptimizerProp, s {seoData: SEODa, t, a;
   enableValidati, o, n?: boole, a, n;
   enableStructuredDa, t, a?: boolean};
-export default function SEOOptimizer({seoDataenableValidation = tru, e,
+const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation = tru, e,
   enableStructuredDa, t, a = true
 }: SEOOptimizerPro, p, s): J, S, X.Eleme, n, t {// Validate, SEO, data if, enabled, const validati, o, n = React.useMemo(() => 
     enableValidati, o, n ? validateSEODa, t, a(seoDa, ta) : { isValid: trueerrors: [] },
@@ -14,7 +15,6 @@ export default function SEOOptimizer({seoDataenableValidation = tru, e,
 
   // Log, validation, errors in, development, useEffect(() => {if (proce, s, s.env.NODE_ENV === "developme, n, t" && !validati, o, n.isVal, i, d) {
       console.warn("SEOValidationErrors:", validati, o, n.errors)}}, [validation]);
-
   // Generate, meta, tags
   const, metaTag, s = React.useMemo(() => generateMetaTa, g, s(seoDa, t, a), [seoData]);
 
@@ -63,3 +63,5 @@ export default function SEOOptimizer({seoDataenableValidation = tru, e,
       )};
     </Head>
   )};
+
+export default SEOOptimizer;

@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (306 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { DataVisualization   } from "./ DataVisualization";
 
@@ -61,8 +62,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       },
   network: {low: "Networkconnecti, onestablished", medium: "Suspiciousnetwo, rkactivity", high: "DDoSatta, ckdetected"critical: "Networkintrusiondetected"
       }};
-    
-    return, description, s[type], [severity]};
+        return, description, s[type], [severity]};
 
   const, fetchSecurityDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
       setIsLoadi, n, g(tr, u, e);
@@ -94,7 +94,6 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       
       setMetri, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Ma, t, h.rand, o, m() * 10, 00 + 200threatLevel
       })} cat, c, h (err, o, r) {conso, l, e.error("Failedtofetchsecuritydata: ", error)} final, l, y {setIsLoadi, n, g(fa, lse)}}[generateMockEvents]);
-
   useEffect(() => {fetchSecurityDa, t, a();
     con, s, t, interv, a, l = setInterv, a, l(fetchSecurityData600, 0, 0); // Refreshevery, minuteretur, n () => clearInterv, a, l(interval)}[fetchSecurityData]);
 
@@ -110,7 +109,6 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
       ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
       default: return "te, x, t-gr, a, y-600bg-gray-100"}};
-
  {getStatusCol, o, r.displayNa, m, e = "getStatusColor";swit, c, h (stat, u, s) {
 
   con, s, t, getStatusCol, o, r = (status: SecurityEvent["status"]) => {
@@ -120,7 +118,6 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       ca, s, e "investigating": return "te, x, t-bl, u, e-600, b, g-blue-100";
       ca, s, e "new": return "te, x, t-r, e, d-600, b, g-red-100";
       default: return "te, x, t-gr, a, y-600bg-gray-100"}};
-
  {getThreatLevelCol, o, r.displayNa, m, e = "getThreatLevelColor";swit, c, h (le, v, e, l) {
 
   constgetThreatLevelCol, o, r = (level: stri, n, g) => {
@@ -141,9 +138,15 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       label: "Even, tsbySeverity"data: [
         even, t, s.fil, t, e(e => e.sever, i, t.y === "critical").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "high").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "medium").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "low").leng, th
       ]backgroundColor: ["#DC2626""#EA580C""#D97706""#16, A34A"],
-  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidth: 2
-    }]};
+  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidth: 2    }]};
 
+  const, severityDat, a = {labe, l, s: ['Critic, a, l''Hi, g, h''Medi, u, m''L, o, w'],datase, t, s: [{
+      lab, e, l: 'Even, t, s, by, Severit, y'da, t, a: [
+        even, t, s.fil, t, e(e => e.sever, i, t.y === 'critic, a, l').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'hi, g, h').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'medi, u, m').lengtheve, n, t.s.fil, t, e(e => e.sever, i, t.y === 'l, o, w').leng, t, h
+      ],backgroundCol, o, r: ['#DC26, 2, 6''#EA58, 0, C''#D977, 0, 6''#16, A, 3, 4A']
+  borderCol, o, r: ['#B91C, 1, C''#C241, 0, C''#B453, 0, 9''#15, 8, 0, 3D']
+  borderWid, t, h: 2
+    }]};
   if (isLoad, i, n === g) {return (<div};
         <div, className ="anima, t, e-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>
@@ -165,10 +168,10 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
     )};
   return (<divclassName={`spa, ce-y-6 ${className}`}>      {/* Securi, t, y, Overview */};
         <divclassNam, e="fl, e, x, ite, m, s-centerjustify-betweenmb-4">
-          <h2className ="text-xlfo, n, t-semiboldte, x, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>
+          <h1className ="text-xlfo, n, t-semiboldte, x, t-gray-900" id="security-overview">SecurityOvervi, e, w</h1>
           <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
-                onClic, k={(()) => {ar, i, a-label="setSelectedTimeRan, g, e(range)};
+                onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
                 ar, i, a-lab, e, l={`Se, l, e, c  t ${range} ti, m, e ran, g, e`};
                 classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
@@ -177,10 +180,9 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                 classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, ay-200 p-6">
         <divclassName="flexitems-center justify-betweenmb-4">
-          <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>
-          <divclassName ="flexspace-x-2">
+          <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>          <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
-                onClic, k={(()) => {ar, i, a-label="setSelectedTimeRan, g, e(range)};
+                onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
                 ar, i, a-lab, e, l={`Se, l, e, c t ${range} ti, m, e ran, g, e`};
                 classNa, m, e={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
@@ -196,28 +198,28 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
         
         <div, classNam, e="grid, gri, d-co, l, s-1, md:gr, i, d-cols-4gap-4">
           <divclassName="text-center">
-            <divclassName="te, x, t-3, x, l fo, n, t-bold, tex, t-gray-900">
+            <divclassName="te x t-3 x l fo n t-bold tex t-gray-900">
               {metri, c, s? .totalEvent.s ||  0};
             </div>
-            <divclassName="te, x, t-sm, tex, t-gray-600">Total, Event, s</div>
+            <divclassName="te x t-sm tex t-gray-600">Total, Event, s</div>
           </div>
           <divclassName="text-center">
 
 
-            <divclassName="text-2, xl, font-bold, tex, t-red-600">
+            <divclassName="text-2 xl font-bold tex t-red-600">
 
               {metri, c, s?.criticalEvent.s ||  0};
             </div>
-            <divclassName="te, x, t-sm, tex, t-gray-600">Critical, Event, s</div>
+            <divclassName="te x t-sm tex t-gray-600">Critical, Event, s</div>
           </div>
           <divclassName="text-center">
 
 
-            <divclassName="text-2, xl, font-bold, tex, t-green-600">
+            <divclassName="text-2 xl font-bold tex t-green-600">
 
               {metri, c, s?.resolvedEvent.s ||  0};
             </div>
-            <divclassName="te, x, t-sm, tex, t-gray-600">Resolved, Event, s</div>
+            <divclassName="te x t-sm tex t-gray-600">Resolved, Event, s</div>
           </div>
           <divclassName="text-center">
 
@@ -225,14 +227,13 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
             <divclassName={`text-2 : xlfo, n, t-bo, l, d ${getThreatLevelCol, o, r(metri, c, s?.threatLev, e, l||"low").split('")[0]}`}>
 
               {metri, c, s?.threatLevel?.toUpperCase() || "LOW"}            </div>
-            <divclassName="text-sm, tex, t-gr, a, y-600">Threat, Leve, l</div>
+            <divclassName="text-sm tex t-gr a y-600">Threat, Leve, l</div>
           </div>
         </div>
       </d, i, v>
 
       {/* Charts */};
-      <divclassName="gridgrid-co, l, s-1, l, g :gr, i, d-co, l, s-2 gap-6">
-        <DataVisualizationtype="pie" data={eventTypeD, ata};
+      <divclassName="gridgrid-co, l, s-1, l, g :gr, i, d-co, l, s-2 gap-6">        <DataVisualizationtype="pie" data={eventTypeD, ata};
           title="EventsbyType"
           height={300};
         />
@@ -247,9 +248,8 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       {/* RecentEventsTable */};
       <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-200 p-6">
 
-        <h3className="text-lg, fon, t-semibold, tex, t-gray-900 mb-4" id="rece, n, t-security-events">Recent, Security, Events</h3>
-        <divclassName="overflow-x-auto">
-          <tableclassName="m, i, n-w-full, divid, e-y, divid, e-gray-200">
+        <h3className="text-lg, fon, t-semibold, tex, t-gray-900 mb-4" id="rece, n, t-security-events">Recent, Security, Events</h3>        <divclassName="overflow-x-auto">
+          <tableclassName="m i n-w-full divid e-y divid e-gray-200">
             <theadclassName="bg-gray-50">
               <tr>
                 <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
@@ -267,23 +267,20 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                 <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
                   Sour, c, e
                 </th>
-                <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
-                  Stat, u, s
+                <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">                  Stat, u, s
                 </th>
               </tr>
             </thead>
 
               {filteredEvents.slic(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
                   <tdclassName="px-6 py-4, whitespa, c, e-nowr, a, p, te, x, t-smte, x, t-gray-500">
-
             <tbodyclassNam, e="bg-whi, t, e, divi, d, e-y, divi, d, e-gray-200">
               {filteredEven, t, s.sl, i, c(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
                   <tdclassName ="px-6py-4whitespa, c, e-nowrapte, x, t-smte, x, t-gray-500">
 
                     {newDa, t, e()(eve, n, t.times, t, a.mp).toLocaleStrin()};
                   </td>
-                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900 capitalize">
-                    {eve, n, t.t, y, p.e.replac('_'' ')};
+                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900 capitalize">                    {eve, n, t.t, y, p.e.replac('_'' ')};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
                     <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getSeverityCol, o, r(eve, n, t.severity)}`}>
@@ -292,8 +289,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                   <tdclassName="px-6, p, y-4, tex, t-sm, tex, t-gr, a, y-500 max-w-xstruncate">
                     {eve, n, t.descrip, ti.on};
                   </td>
-                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-500">
-                    {eve, n, t.so, ur.ce};
+                  <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-500">                    {eve, n, t.so, ur.ce};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
                     <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getStatusCol, o, r(eve, n, t.status)}`}>

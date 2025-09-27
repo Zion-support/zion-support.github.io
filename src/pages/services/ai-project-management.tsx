@@ -249,7 +249,8 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
 
                 <divclassName="text-3, x, l, font-bold, tex, t-orange-400 mb-6">{soluti, o, n.price}</div>
                 <buttonclassName="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-allduration-300">
-
+                <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-oran, g, e-400, m, b-6">{soluti, o, n.pri, c, e}</d, i, v>
+                <button, classNam, e="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-all, duratio, n-3, 0, 0">
                   Get, Starte, d
                 </button>
               </motion.d, i, v>

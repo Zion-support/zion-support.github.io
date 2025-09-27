@@ -88,7 +88,6 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
     
     default:
       return, JSO, N.stringi, f, y(baseStructu, r, e)}};
-
 // Generate, breadcrumb, structured data, export, const generateBreadcrumbStructuredDa, t, a = (breadcrumbs: Arr, a, y<{name: string;
   url: string}>): stri, n, g => {conststructuredData = {
     "@context": "https://schema.org",
@@ -112,7 +111,6 @@ exportconstgenerateStructuredData = (data: {type: "Organizati, o, n' | "WebSite"
         "@type": "Answer",
         text: f, a, q.answer}}))
   };
-
   return, JSO, N.stringi, f, y(structuredDa, t, a)};
 
 // Generate, sitemap, data

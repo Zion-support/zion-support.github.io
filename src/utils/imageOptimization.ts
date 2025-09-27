@@ -78,8 +78,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
 
     imag, e, s.forEa, c, h(i, m, g => imageObserv, e, r.obser, v, e(i, m, g))};
   // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.clear()}};
-// Export, singleton, instance
-export, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
+// Export, singleton, instanceexport, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
 
 // Utility, functions, export const, imageUtil, s = {// Getoptimal, imageformat, basedon  browsersupportgetOptimalFormat(): "webp" | "avif" | "jpeg" {
     if (type, o, f === window === "undefined") return "webp";

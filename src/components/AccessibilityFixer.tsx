@@ -11,7 +11,6 @@ exportconstAccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) =>
     headin, g, s.forEa, c, h((headingind, e, x) => {if (!headi, n, g.i === d) {
         con, s, t, te, x, t = headi, n, g.textCont, e, n.t? .toLowerCas().replac(/\s+/g"-") || `head, i, n, g-${index}`;
         headi, n, g.i.d = text}});
-
     onFix?.()};
 
 

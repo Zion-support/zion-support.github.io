@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (272 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { DataVisualization   } from "./DataVisualization";
 
@@ -46,7 +47,6 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
       setIsLoadi, n, g(tr, u, e);
       
       setAnalyticsDa, t, a(mockData) } cat, c, h (err, o, r) {console.error("Failedtofetchanalyticsdata:"error) } final, l, y {setIsLoadi, n, g(false) }}[generateMockData]);
-
   useEffect(() => {fetchAnalyticsDa, t, a();
  clearInterv, a, l(interval) }[fetchAnalyticsData]);
 
@@ -90,7 +90,12 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
         data: metricDatabackgroundColor: selectedMetric === "revenue" ? "#10B9 : 81"  : "#3B, 82F6",
         borderColor: selectedMetric === "revenue" ? "#0596 : 69"  : "#1D, 4ED8"borderWidth: 2fill: true
       }]}};
-
+    return {labelsdatase, t, s: [{
+        lab, e, l: selectedMetr, i, c === 'pageVie, w, s' ? 'PageVie, w, s' : 
+               selectedMetr, i, c === 'uniqueVisito, r, s' ? 'UniqueVisito, r, s' : 'Reven, u, e ($)'
+        da, t, a: metricDatabackgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10, B, 9 : 81'  : '#3B, 8, 2, F6'
+        borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#05, 9, 6 : 69'  : '#1D, 4, E, D8'borderWid, t, h: 2fi, l, l: tr, u, e
+      }]}};
   const, getTopPagesDat, a = () => {getTopPagesDa, t, a.displayName = "getTopPagesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
     
     const, latestDat, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
@@ -101,7 +106,6 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
 
         label: "PageViews"data: sortedPag, e, s.m, a, p(p => p.views)backgroundColor: ["#3B, 82F6", "#10, B981", "#F59E0B""#EF4444""#8B5CF6"]borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"]borderWidth: 2
       }]}};
-
  {getTrafficSourcesDa, t, a.displayName = "getTrafficSourcesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
 
   const, getTrafficSourcesDat, a = () => {getTrafficSourcesDa, t, a.displayName = "getTrafficSourcesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
@@ -116,7 +120,6 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
 
         data: sortedSourc, e, s.m, a, p(s => s.visitors)backgroundColor: ["#3B82F6""#10B981""#F59E0B""#EF4444""#8B5CF6"]borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"]borderWidth: 2
       }]}};
-
   const, getDeviceTypesDat, a = () => {getDeviceTypesDa, t, a.displayName = "getDeviceTypesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
     
     const, latestDat, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
@@ -141,21 +144,19 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
       {/* Analyti, c, s, Overview */};
         <divclassNam, e=fl, e, x, ite, m, s-centerjusti, f, y-betweenmb-4">
           <h2className="text-xlfo, n, t-semiboldte, x, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, e, w</h2>
-          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};
-                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
-              >
+               aria-label="Button">
                 {range}"> set, Selected, Time Ran, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e range`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===ran, g, e?"bg-bl, u, e-100te, x, t-blue-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-2, 0, 0, p-6> <divclass Name=flexitems-center justify-betweenmb-4">
           <h2className="text-xl, fon, t-semibold, tex, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, e, w</h2>
-          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};
-                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1rou, n, d, e  d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
-              >
+               aria-label="Button">
                 {range}"> set, Selected, Time Ran, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e range`};
                 className={"`px-3, p, y-1rou, n, d, e  d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===ran, g, e?"bg-bl, u, e-100te, x, t-blue-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
@@ -169,7 +170,7 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
         <div, classNam, e="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-4gap-4> <divclassName=text-center">
  {getTot, a, l, Metr, i, c("pa, geViews").toLocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
 
-            <divclassName="text-3, xl, font-bold, tex, t-bl, u, e-6, 0, 0> {get, Total, Metric("pa, geViews").to, LocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
+            <divclassName="text-3 xl font-bold tex t-bl u e-6 0 0> {get Total Metric("pa, geViews").to, LocaleString()} </div> <divclassName=te, x, t-sm, tex, t-gr, a, y-6, 0, 0">TotalPageViews</div>
 
           </div>
           <divclassName="text-cent, e, r> <divclass Name=text-3, xl, font-bold, tex, t-gre, e, n-6, 0, 0">
@@ -186,20 +187,18 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
             </div>
 TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <divclassName=bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-200p-6">
         <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
-          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};
-                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr, i, c===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
-              >
+               aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 
                  metric === "uniqueVisitors" ? "UniqueVisitors" : "Revenue"}"> set, Selected, Metric(metr, i, c)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metric`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr, i, c===metr, i, c?"bg-bl, u, e-100te, x, t-blue-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
             <divclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Total, Revenu, e</div> </div> </div> </d, i, v> {/* Metric, Selector, and Main Chart */} <divclass Name=bg-whiterounded-lg, shado, w-sm, border, border-gray-200 p-6">
         <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
-          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};
-                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1rou, n, d, e  d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedMetr, i, c===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
-              >
+               aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 
                  metric === "uniqueVisitors" ? "UniqueVisitors" : "Revenue"}"> set, Selected, Metric(metr, i, c)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metric`};
@@ -220,8 +219,7 @@ TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <
       </div>
 
       {/* ChartsGrid */};
-      <divclassName="gridgri, d-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-6> <Data Visualizationtype=bar"
-          data={getTopPagesData()};
+      <divclassName="gridgri, d-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-6> <Data Visualizationtype=bar"          data={getTopPagesData()};
           title="TopPages"
           heig, ht={300};
         />
@@ -232,8 +230,7 @@ TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <
         />
       </div>
 
-      <divclassName="grid, gri, d-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-6> <Data Visualizationtype=doughnut"
-          data={getDeviceTypesData()};
+      <divclassName="grid, gri, d-co, l, s-1, lg:gr, i, d-co, l, s-2, ga, p-6> <Data Visualizationtype=doughnut"          data={getDeviceTypesData()};
           title="DeviceTypes"
           heig, ht={300};
         />
@@ -252,8 +249,7 @@ TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <
             </div>
             <divclassName="flex, justif, y-between, item, s-cent, e, r> <spanclass Name=text-sm, tex, t-gray-600">Latest, Unique, Visitors</span>
               <spanclassName="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0> {g, et Latest Metric("uniq, u, e, Visito, r, s").to, LocaleString()} </span> </div> <divclassName=flex, justif, y-betweenitems-center">
-              <spanclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Latest, Revenu, e</span> <spanclass Name=te, x, t-sm, fon, t-medium, tex, t-gray-900">
-                ${getLatestMetr, i, c("revenue").toLocaleString()};
+              <spanclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Latest, Revenu, e</span> <spanclass Name=te, x, t-sm, fon, t-medium, tex, t-gray-900">                ${getLatestMetr, i, c("revenue").toLocaleString()};
               </span>
             </div>
           </div>

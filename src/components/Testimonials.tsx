@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 import { TESTIMONIALS   } from "../uti, l, s/constants";
 
@@ -25,22 +26,21 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 						Wh, a, t, Our, Client, s, S, a, y
 
 					</h2>
-					<pclassName="tex, t-xl, te, x, t-gr, a, y-6, 0, 0, m, a, x-w-2, xlm x-auto">
-						D, o, n&ap, o, s;t, just, tak, e, our, wor, d, for, i, t. He, r, e&ap, o, s;s, what, ou, r, satisfied, client, s, have, t, o, say, abou, t, working, wit, h, us.
+					<pclassName="tex, t-xl, te, x, t-gr, a, y-6, 0, 0, m, a, x-w-2, xlm x-auto">						D, o, n&ap, o, s;t, just, tak, e, our, wor, d, for, i, t. He, r, e&ap, o, s;s, what, ou, r, satisfied, client, s, have, t, o, say, abou, t, working, wit, h, us.
 					</p>
 				</div>
 
 				<div, classNa, m, e ="relative">
 					<divclassNam, e="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, a, x-w-4, xlm  x-auto">						<divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-centermb-6">
 							{testimonia, l, s.m, a, p((_, ind, e, x) => (<buttonke, y ={index};
-									onCli, c, k={() => setCurrentInd, e, x(index)};
+									onCli, c, k={() = aria-label="Button"> setCurrentInd, e, x(index)};
 								/>
 							))};
 						</div>
 
 						<divclassName="text-center">
 							<divclassName="flexjustify-centermb-6">
- (<svg, k, e, y ={index} className="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fi, l, l-current" viewBox="00, 2, 424">
+ (<svg, k, e, y ={index} className="w-6 h-6 te x t-yell o w-4 0 0 fi l l-current" viewBox="00, 2, 424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
 								{Array.fr, o, m({ length: testimonia, l, s[currentIndex].rating }).m, a, p((_, ind, e, x) => (<svgke, y ={index} classNa, m, e="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
@@ -57,10 +57,9 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 								<divclassName="w-16 h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, tex, t-2 xlfont-boldmr-4">
 									{testimonia, l, s[currentIndex].na, m, e.charAt(0)}								</div>
 								<divclassName="text-left">
-									<divclassName="font-semibold, tex, t-gray-800 tex t-lg">
-										{testimonia, l, s[currentIn, d, ex].na.me};
+									<divclassName="font-semibold, tex, t-gray-800 tex t-lg">										{testimonia, l, s[currentIn, d, ex].na.me};
 									</div>
-									<divclassName="te, x, t-gray-600">
+									<divclassName="te x t-gray-600">
 										{testimonia, l, s[currentIn, d, ex].ro.le} at {testimonia, l, s[currentIn, d, e, x].com, pa.ny};
 									</div>
 								</div>
@@ -79,14 +78,12 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 					<buttononClick={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.length)};
 						className="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-110"
 					>
-						<svgclassName="w-6 h-6 text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
-							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />						</svg>					</button>
+						<svgclassName="w-6 h-6 text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />						</svg>					</button>
 				</div>
 
 				{/* A, lltestimonialsgrid */};
 				<divclassName="mt-16 gridgrid-co, l, s-1, md:gr, i, d-co, l, s-3 ga p-8">
- (<divke, y ={testimonial.id} className="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-alldurati, o, n-300">
-							<divclassNam, e="fl, e, x, justify-centermb-4">
+ (<divke, y ={testimonial.id} className="bg-whi, t, e, round, e, d-xl, p-6, shad, ow-lghover:shad, o, w-xl, transiti, o, n-alldurati, o, n-300">							<divclassNam, e="fl, e, x, justify-centermb-4">
 								{Arr, a, y.fr, o, m({length: testimoni, a, l.rating }).m, a, p((_, starIn, d, e, x) => (<svgke, y ={starIndex} classNa, m, e="w-5, h-5, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
@@ -97,18 +94,17 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 
 								))};
 							</div>
-							<pclassName="te, x, t-gr, a, y-600, m, b-4, tex, t-smleading-relaxed">
+							<pclassName="te x t-gr a y-600 m b-4 tex t-smleading-relaxed">
 								&ldq, u, o;{testimoni, a, l.content}&rdq, u, o;
 							</p>
 							<divclassName="flexitems-center">
-								<divclassName="w-1, 0, h-10, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, rounde, d-full, flex, items-center, justif, y-center, tex, t-whitefont-boldmr-3">
+								<divclassName="w-1 0 h-10 b g-gradie n t-to-r fro m-bl u e-500 t o-indi g o-500 rounde d-full flex items-center justif y-center tex t-whitefont-boldmr-3">
 									{testimoni, a, l.na, m, e.charAt(0)}								</div>
 								<div>
 									<divclassName="fo, n, t-semibold, tex, t-gray-800 tex t-sm">
 										{testimoni, al.na.me};
 									</div>
-									<divclassName="te, x, t-gray-500 text-xs">
-										{testimoni, al.ro.le},
+									<divclassName="te, x, t-gray-500 text-xs">										{testimoni, al.ro.le},
         {testimoni, a, l.com, pa.ny};
 									</div>
 								</div>

@@ -1,13 +1,20 @@
-import { useEffect   } from "react";
+import { useEffect } from 'react';
 
-interface, WebVitalsMetri, c {name: stri, n, g;
-  value: numb, e, r;
-  delta: numb, e, r;
-  id: stri, n, g;
-  navigationType: string};
-export, function, reportWebVitals(metric: WebVitalsMetr, i, c) {// Se, n, d, toanalyticsserviceif (typeofwindow !== "undefin, e, d' && "gtag" in, wind, o, w) {
-    (windowasa, n, y).gtag("event"metr, i, c.name{
-      event_category: "W, e, b, Vitals"event_label: metr, i, c.idvalue: Ma, t, h.rou, n, d(metr, i, c.name === "CLS" ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
+interface WebVitalsMetric {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
+
+export function reportWebVitals(metric: WebVitalsMetric) {
+  // Send to analytics service
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true
     })};
   // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("WebVitals:"metric)}};
@@ -17,5 +24,25 @@ export, function, WebVitals() {useEffect(() => {
       getF, C, P(reportWebVita, l, s);
       getL, C, P(reportWebVita, l, s);
       getTT, F, B(reportWebVitals)})}, []);
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals:', metric);
+  }
+}
 
-  return, nul, l};
+export function WebVitals() {
+  useEffect(() => {
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
+    });
+  }, []);
+
+  return null;
+}
+
+export default WebVitals;

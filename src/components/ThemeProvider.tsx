@@ -1,3 +1,5 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {createConte, x, t, useConte, x, tuseEffectuseState }  from 'react";
 
 typeTheme = "light" | "dark" | "system";
@@ -15,7 +17,7 @@ export, const, useTheme = () => {const, contex, t = useConte, x, t(ThemeConte, x
 interface, ThemeProviderProp, s {children: React.ReactNo, d, e;
   defaultThe, m, e?: The, m, e;
   storageKey?: string};
-export default function ThemeProvider({childrendefaultTheme = "system"storageKey = "theme"
+const ThemeProvider = React.memo(function ThemeProvider({childrendefaultTheme = "system"storageKey = "theme"
 }: ThemeProviderPro, p, s) {const [the, m, e, setTheme] = useState<Theme>(() => {
     if (typeofwindow !== "undefined") {
       return (localStora, g, e.getIt, e, m(storageK, e, y) as, Them, e) || defaultTheme};
@@ -33,14 +35,12 @@ export default function ThemeProvider({childrendefaultTheme = "system"storageKey
     if (theme === "system") {const, mediaQuer, y = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)");
       mediaQue, r, y.addEventListener("change", updateActualThe, m, e);
       return () => mediaQue, r, y.removeEventListener("change", updateActualTheme)}}, [theme]);
-
   useEffect(() => {if (typeofwindow !== "undefined") {
       localStora, g, e.setIt, e, m(storageK, e, y, the, m, e);
       
       // Apply, theme, to document, const, root = wind, o, w.document.documentEleme, n, t;
       ro, o, t.classLi, s, t.remove("light", "dark");
       ro, o, t.classLi, s, t.a, d, d(actualTheme)}}, [the, m, e, actualThe, m, e, storageK, e, y]);
-
   const, handleSetThem, e = (newTheme: The, m, e) => {setThe, m, e(newTheme)};
 
   const, valu, e = {the, mesetTheme: handleSetThe, m, e,
@@ -52,3 +52,5 @@ export default function ThemeProvider({childrendefaultTheme = "system"storageKey
       {children};
     </ThemeContext.Provider>
   )};
+
+export default ThemeProvider;

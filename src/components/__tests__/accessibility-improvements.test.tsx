@@ -14,7 +14,6 @@ describe("AccessibilityImprovementsTests", () => {const, mockSEOData = {
     ogTitle: "TestOGTitle",
     ogDescription: "TestOGDescription",
     ogImage: "https://te, s, t.c, o, m/image.jpg"twitterCard: "summary_large_image"structuredData: {}};
-
   it("rendersSEOoptimizer component", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
     expec, t(scre, e, n.getByTe, x, t("SEOOptimizer")).toBeInTheDocument()});
 
@@ -28,7 +27,6 @@ describe("AccessibilityImprovementsTests", () => {const, mockSEOData = {
       ogTitle: '',
       ogDescription: '',
       ogImage: ''twitterCard: '"structuredData: {}};
-
     rend, e, r(<SEOOptimizerseoData={emptyData} />);
     expec, t(screen.getByText("SEO, Optimize, r')).toBeInTheDocument()});
 

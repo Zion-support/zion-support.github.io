@@ -1,133 +1,138 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { useStateuseEffect   } from "react";
-// import { ServiceCard   } from "../src/components/ServiceCard";
-// import Navigation from "../src/components/Navigation";
-// import {PricingCalculator   } from "../src/components/PricingCalculator";
-import {SERVICES   } from "../src/utils/constants";
-// import ErrorBoundary from "../src/components/ErrorBoundary";
-import SEO from "../src/components/SEO";
-import {useAnalytics   } from "../src/hooks/useAnalytics";
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Services(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
-  const [selectedServi, c, e, setSelectedServi, c, e] = useState<string | null>(null);
-  const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
+export default function Services(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setIsVisib, l, e(true);
-		setIsLoadi, n, g(false)}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	// Analytics, tracking, const {trackClick } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
-	constserviceDetails = {"ai-ml': {
-			title: "AI & MachineLearning",
-			description: "Transform, your, business with, cuttin, g-edgeartificialintelligence andmachinelearning solutions.",
-			features: [
-				"NaturalLanguageProcessing (NLP)",
-				"ComputerVision & ImageRecognition",
-				"PredictiveAnalytics & Forecasting",
-				"Chatbots & VirtualAssistants",
-				"RecommendationSystems",
-				"AutomatedDecisionMaking"
-			],
-			technologies: ["TensorFlow", "PyTorch", "OpenAI", "HuggingFace", "Scikit-learn", "Pandas"],
-			benefits: [
-				"Automaterepetitivetasks andprocesses",
-				"Gaininsightsfrom largedatasets",
-				"Improvecustomerexperience withintelligentinteractions",
-				"Reduceoperationalcosts throughautomation",
-				"Makedata-drivendecisionswith predictiveanalytics"
-			]},
-		"cloud": {title: "CloudSolutions",
-			description: "Scalable, secure, and reliablecloudinfrastructure tailoredtoyour businessneeds.",
-			features: [
-				"CloudMigration & Strategy",
-				"ContainerOrchestration (Kubernetes)",
-				"ServerlessArchitecture",
-				"DevOps & CI/CDPipelines",
-				"MicroservicesArchitecture",
-				"CloudSecurity & Compliance"
-			],
-			technologies: ["AWS", "Azure", "GoogleCloud", "Docker", "Kubernetes", "Terraform"],
-			benefits: [
-				"Scaleresourcesbased ondemand",
-				"Reduceinfrastructurecosts",
-				"Improvereliabilityand uptime",
-				"Enableglobalaccessibility",
-				"Simplifymaintenanceand updates"
-			]},
-		"web-dev": {title: "WebDevelopment",
-			description: "Modern, responsive, web applicationsbuiltwith thelatesttechnologies andbestpractices.",
-			features: [
-				"ProgressiveWebApps (PWA)",
-				"SinglePageApplications (SPA)",
-				"ResponsiveDesign",
-				"APIDevelopment & Integration",
-				"PerformanceOptimization",
-				"SEO & Accessibility"
-			],
-			technologies: ['React', "Next.js", "Vue.js", "Node.js", "TypeScript", "TailwindCSS"],
-			benefits: [
-				"Enhanceduserexperience",
-				"Cross-platformcompatibility",
-				"Fastloadingtimes",
-				"Searchengineoptimization",
-				"Mobile-firstdesignapproach"
-			]},
-		"mobile": {title: "MobileDevelopment",
-			description: "Native, and, cross-platformmobileapplications thatdeliverexceptional userexperiences.",
-			features: [
-				"iOS & AndroidNativeApps",
-				"Cross-platformDevelopment",
-				"AppStoreOptimization",
-				"PushNotifications",
-				"OfflineFunctionality",
-				"PerformanceMonitoring"
-			],
-			technologies: ["ReactNative", "Flutter", "Swift", "Kotlin", "Xamarin", "Ionic"],
-			benefits: [
-				"Reachcustomerson theirpreferreddevices",
-				"Leveragedevice-specificfeatures",
-				"Improvecustomerengagement",
-				"Enableofflinefunctionality",
-				"Fastertimeto market"
-			]},
-		"data-analytics": {title: "DataAnalytics",
-			description: "Transform, your, data intoactionableinsights withadvancedanalytics andvisualizationtools.",
-			features: [
-				"BusinessIntelligenceDashboards",
-				"DataWarehousing & ETL",
-				"Real-timeAnalytics",
-				"PredictiveModeling",
-				"DataVisualization",
-				"CustomReportingSolutions"
-			],
-			technologies: ["Python", 'R', "Tableau", "PowerBI", "ApacheSpark", "SQL"],
-			benefits: ["Makeinformedbusiness decisions""Identifytrendsand patterns""Improveoperationalefficiency""Enhancecustomerunderstanding""Driverevenuegrowth"
-			]},
-		"cybersecurity": {title: "Cybersecurity",
-			description: "Comprehensive, security, solutions toprotectyour digitalassetsand ensurecompliance.",
-			features: [
-				"SecurityAudits & Assessments",
-				"PenetrationTesting",
-				"ComplianceManagement",
-				"IncidentResponsePlanning",
-				"SecurityTraining & Awareness",
-				"ThreatDetection & Prevention"
-			],
-			technologies: ["SIEM", "Firewalls", "VPN", "Encryption", "Multi-factorAuthentication", "SecurityMonitoring"],
-			benefits: [
-				"Protectsensitivedata andassets",
-				"Meetregulatorycompliance requirements",
-				"Reducesecurityrisks andvulnerabilities",
-				"Buildcustomertrust andconfidence",
-				"Minimizepotentialfinancial losses"
+	const, serviceDetail, s = {
+		'ai-ml': {
+			tit, l, e: 'AI & Machine, Learnin, g'
+			descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.'
+			featur, e, s: [
+				'Natural, Language, Processing (N, L, P)'
+				'Computer, Visio, n & Image, Recognitio, n'
+				'Predictive, Analytic, s & Forecasti, n, g'
+				'Chatbo, t, s & Virtual, Assistant, s'
+				'Recommendation, System, s'
+				'Automated, Decision, Making'
+			]
+			technologi, e, s: ['TensorFl, o, w', 'PyTor, c, h', 'Open, A, I', 'Hugging, Fac, e', 'Scik, i, t-lea, r, n', 'Pand, a, s']
+			benefi, t, s: [
+				'Automate, repetitive, tasks and, processe, s'
+				'Gain, insights, from large, dataset, s'
+				'Improve, customer, experience with, intelligent, interactions'
+				'Reduce, operational, costs through, automatio, n'
+				'Make, dat, a-driven, decisions, with predictive, analytic, s'
+			]}
+		'clo, u, d': {
+			tit, l, e: 'Cloud, Solution, s'
+			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.'
+			featur, e, s: [
+				'Cloud, Migratio, n & Strate, g, y'
+				'Container, Orchestratio, n (Kubernet, e, s)'
+				'Serverless, Architectur, e'
+				'DevO, p, s & CI/CD, Pipeline, s'
+				'Microservices, Architectur, e'
+				'Cloud, Securit, y & Complian, c, e'
+			]
+			technologi, e, s: ['A, W, S', 'Azu, r, e', 'Google, Clou, d', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m']
+			benefi, t, s: [
+				'Scale, resources, based on, deman, d'
+				'Reduce, infrastructure, costs'
+				'Improve, reliability, and upti, m, e'
+				'Enable, global, accessibility'
+				'Simplify, maintenance, and updat, e, s'
+			]}
+		'w, e, b-d, e, v': {
+			tit, l, e: 'Web, Developmen, t'
+			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.'
+			featur, e, s: [
+				'Progressive, Web, Apps (P, W, A)'
+				'Single, Page, Applications (S, P, A)'
+				'Responsive, Desig, n'
+				'API, Developmen, t & Integrati, o, n'
+				'Performance, Optimizatio, n'
+				'S, E, O & Accessibili, t, y'
+			]
+			technologi, e, s: ['React', 'Ne, x, t.js', 'V, u, e.js', 'No, d, e.js', 'TypeScri, p, t', 'Tailwind, CS, S']
+			benefi, t, s: [
+				'Enhanced, user, experience'
+				'Cro, s, s-platform, compatibilit, y'
+				'Fast, loading, times'
+				'Search, engine, optimization'
+				'Mobi, l, e-first, design, approach'
+			]}
+		'mobi, l, e': {
+			tit, l, e: 'Mobile, Developmen, t'
+			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.'
+			featur, e, s: [
+				'i, O, S & Android, Native, Apps'
+				'Cro, s, s-platform, Developmen, t'
+				'App, Store, Optimization'
+				'Push, Notification, s'
+				'Offline, Functionalit, y'
+				'Performance, Monitorin, g'
+			]
+			technologi, e, s: ['React, Nativ, e', 'Flutt, e, r', 'Swi, f, t', 'Kotl, i, n', 'Xamar, i, n', 'Ion, i, c']
+			benefi, t, s: [
+				'Reach, customers, on their, preferred, devices'
+				'Leverage, devic, e-specific, feature, s'
+				'Improve, customer, engagement'
+				'Enable, offline, functionality'
+				'Faster, time, to mark, e, t'
+			]}
+		'da, t, a-analyti, c, s': {
+			tit, l, e: 'Data, Analytic, s'
+			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.'
+			featur, e, s: [
+				'Business, Intelligence, Dashboards'
+				'Data, Warehousin, g & E, T, L'
+				'Re, a, l-time, Analytic, s'
+				'Predictive, Modelin, g'
+				'Data, Visualizatio, n'
+				'Custom, Reporting, Solutions'
+			]
+			technologi, e, s: ['Pyth, o, n', 'R', 'Table, a, u', 'Power, B, I', 'Apache, Spar, k', 'S, Q, L']
+			benefi, t, s: [
+				'Make, informed, business decisio, n, s'
+				'Identify, trends, and patter, n, s'
+				'Improve, operational, efficiency'
+				'Enhance, customer, understanding'
+				'Drive, revenue, growth'
+			]}
+		'cybersecuri, t, y': {
+			tit, l, e: 'Cybersecuri, t, y'
+			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.'
+			featur, e, s: [
+				'Security, Audit, s & Assessmen, t, s'
+				'Penetration, Testin, g'
+				'Compliance, Managemen, t'
+				'Incident, Response, Planning'
+				'Security, Trainin, g & Awarene, s, s'
+				'Threat, Detectio, n & Preventi, o, n'
+			]
+			technologi, e, s: ['SI, E, M', 'Firewal, l, s', 'V, P, N', 'Encrypti, o, n', 'Mul, t, i-factor, Authenticatio, n', 'Security, Monitorin, g']
+			benefi, t, s: [
+				'Protect, sensitive, data and, asset, s'
+				'Meet, regulatory, compliance requiremen, t, s'
+				'Reduce, security, risks and, vulnerabilitie, s'
+				'Build, customer, trust and, confidenc, e'
+				'Minimize, potential, financial loss, e, s'
 			]}};
-	return (
 
-			<SEO />
-			{/* <Navigation /> */}
+	return (
+		<d, i, v>
+			<S, E, O />
+			{/* <Navigati, o, n /> */};
 			<Head>
 				<title>Services - Zion App</title>
 				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
@@ -161,19 +166,17 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100 pt-20">
 			<divclassName="containermx-auto, p, x-4 py-8 max-w-7 xl">
 				<navclassName="mb-8">
-					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
-							← Back, to, Home
+					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">							← Back, to, Home
 						</Link>
-					</nav>
+					</n, a, v>
 
-					<headerclassName="text-centermb-16">
-						<h1className="text-5, xlmd:te, x, t-6, xl, font-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-clip-texttext-transparent">
+					<header, classNam, e="te, x, t-center, m, b-16">
+						<h1, classNam, e="te, x, t-5, x, l, md:te, x, t-6, xl, font-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 							Our, Service, s
 						</h1>
 						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-autoleading-relaxed">
-							Comprehensive, technology, solutions to, drive, your businessforward
-						</p>
-					</header>
+							Comprehensive, technology, solutions to, drive, your businessforward						</p>
+					</head, e, r>
 
 
 						{/* Services Grid */}
@@ -192,24 +195,21 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 			<divclassName="grid, gri, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-8">
 								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, ex) => (
 			<divkey={service.id};
-										className={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 100} ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
-										}`};
-
+										className={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 100} ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"										}`};
 									>
 			<divclassName="p-6 bg-whiterounded-lgshadow-md">
 											<h3className="text-xlfont-semiboldmb-2">{service.title}</h3>
 											<pclassName="text-gray-600 mb-4">{service.description}</p>
 			<divclassName="text-bl, u, e-600 font-medium">Service, Car, d (temporarilydisabled)</div>
 										</div>
-									</div>
-								))};
+									</div>								))};
 							</d, i, v>
-						</section>
+						</secti, o, n>
 
-						{/* ServiceDetails */};
-						{selectedServic, e && (
-							<sectionclassName={`mb-20transition-all, duratio, n-5, 0, 0 ${
-								isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
+						{/* Service, Detail, s */};
+						{selectedServi, c, e && (
+							<section, classNam, e={`mb-20, transitio, n-all, duratio, n-5, 0, 0 ${
+								isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 							}`}>
 			<divclassName="bg-whiterounded-3, xlshadow-2 xlp-8 md: p-12">
 			<divclassName="flexjustify-betweenitems-startmb-8">
@@ -218,12 +218,11 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.title};
 											</h2>
 											<pclassName="text-xl, tex, t-gray-600 leading-relaxed">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.description};
-											</p>
-
-										<button
-										,,,, onClick={() => setSelectedService(null)}
-											className="text-gray-400 hover:text-gray-600 transition-colors"
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.description};											</p>
+										</d, i, v>
+										<butt, o, n
+										,, onCli, c, k={() => setSelectedServi, c, e(nu, l, l)};
+											classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 										>
 											<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -263,11 +262,10 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 															<pathfillRule="evenodd" d="M16.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a110 011.4140z" clipRu, le="evenodd" />
 														</svg>
 														{feature};
-
 													</li>
 												))};
 											</ul>
-										</div>
+										</d, i, v>
 
 
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
@@ -313,26 +311,66 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 															<pathfillRule="evenodd" d="M1018a88 0, 10, 0-16, 8, 8 0, 000, 16zm3.7, 0, 7-9.293a1, 1, 0 00-1.4, 1, 4-1.414L9, 1, 0.58, 6, 7.70, 7, 9.293a1, 1, 0 00-1.41, 4, 1.414l22a11 0001.4140l4-4z" clipRu, le="evenodd" />
 														</svg>
 														{benefit};
-
+										{/* Benefi, t, s */};
+			<d, i, v>
+											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Benefi, t, s</h3>
+											<ul, classNam, e="spa, c, e-y-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.m, a, p((benef, i, t ,, ind, e, x) => (
+													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, tex, t-gr, a, y-6, 0, 0">
+														<svg, classNam, e="w-4 h-4, tex, t-bl, u, e-500, m, r-2, m, t-0.5" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+															<path, fillRul, e="eveno, d, d" d="M10, 18a8, 8 0, 10, 0-16, 8, 8 0, 000, 16zm3.7, 0, 7-9.293a1, 1, 0 00-1.4, 1, 4-1.414L9, 1, 0.58, 6, 7.70, 7, 9.293a1, 1, 0 00-1.41, 4, 1.414l2, 2a1, 1 0, 00, 1.414, 0l, 4-4z" clipRu, l, e="eveno, d, d" />
+														</s, v, g>
+														{benef, i, t};
 													</li>
 												))};
 											</ul>
-										</div>
-									</di, v>
-								</div>
-							</section>
+										</d, i, v>
+									</d, i, v>
+								</d, i, v>
+							</secti, o, n>
 						)};
-						{/* WhyChooseUs */};
-						<sectionclassName={`mb-20transition-all, duratio, n-1000, dela, y-700 ${
-							isVisible ? "opaci, t, y-100translate-y-0" : "opacity-0translate-y-8"
+						{/* Why, Choose, Us */};
+						<section, classNam, e={`mb-20, transitio, n-all, duratio, n-1000, dela, y-7, 0, 0 ${
+							isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 						}`}>
-			<divclassName="text-centermb-12">
-								<h2className="te, x, t-3, xlmd: te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-clip-texttext-transparent">
+			<div, classNam, e="te, x, t-center, m, b-12">
+								<h2, classNam, e="te, x, t-3, xl, md: te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 									Why, Choose, Our Servic, e, s?
 								</h2>
-								<pclassName="text-xl, tex, t-gr, a, y-600 max-w-3 xlmx-auto">
-									We, combine, technical expertise, with, business acumen, to, deliver solutions, that, drive real, result, s.
+								<pclassName="text-xl, tex, t-gr, a, y-600 max-w-3 xlmx-auto">									We, combine, technical expertise, with, business acumen, to, deliver solutions, that, drive real, result, s.
 								</p>
+							</d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">👥</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Expert, Tea, m</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Certified, professionals, with years, of, experience in, cuttin, g-edge, technologie, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">📈</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Proven, Result, s</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Track, record, of successful, projects, and satisfied, clients, across industri, e, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hover:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">🔄</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">24/7, Suppor, t</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Rou, n, d-t, h, e-clock, support, and maintenance, for, all our, solution, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hov, e, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">⚡</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Scalable, Solution, s</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Futu, r, e-proof, solutions, that grow, with, your business, need, s</p>
+								</d, i, v>
+							</d, i, v>
+						</secti, o, n>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
@@ -451,15 +489,14 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8, 7V3m8, 4V3m-9, 8h10M5, 21h14a2 2, 0, 002-2V7a2, 2, 0 00-2-2H5a2, 2, 0 00-22v12a22 00022z" />
 											</svg>
 										</span>
-									</button>
-								</d, i, v>
-							</div>
-						</section>
+									</button>								</d, i, v>
+							</d, i, v>
+						</secti, o, n>
 
-						{/* PricingCalculatorSection */};
-						<sectionclassName={`mb-20transition-all, duratio, n-1000, dela, y-7, 0, 0 ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"}`}>
-			<divclassName="text-centermb-12">
-								<h2className="te, x, t-4, xlmd:te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-clip-texttext-transparent">
+						{/* Pricing, Calculator, Section */};
+						<section, classNam, e={`mb-20, transitio, n-all, duratio, n-1000, dela, y-7, 0, 0 ${isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'}`}>
+			<div, classNam, e="te, x, t-center, m, b-12">
+								<h2, classNam, e="te, x, t-4, xl, md:te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 									Project, Pricing, Calculator
 								</h2>
 								<pclassName="text-xl, tex, t-gr, a, y-600 max-w-3 xlmx-auto">
@@ -469,9 +506,8 @@ export default function Services(): JSX.Element {const [isVisible, setIsVisib, l
 							{/* <PricingCalculator /> */};
 			<divclassName="tex, t-center, p, y-8 text-gray-500">Pricing, Calculator, temporarily disabl, e, d</div>
 						</section>
-					</main>
-				</d, i, v>
-			</div>
+					</main>				</d, i, v>
+			</d, i, v>
 			)};
-		</div>
+		</d, i, v>
 	)};

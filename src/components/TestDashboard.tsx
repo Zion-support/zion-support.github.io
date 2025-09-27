@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (232 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
 interface, TestResul, t {id: stri, ng;
@@ -83,7 +84,6 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
   const [testRunner] = useState(() => TestRunn, e, r.getInstan, c, e());
   const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
   const [isRunning, setIsRunni, n, g] = useState(fal, s, e);
-
   con, s, t, addSui, t, e = useCallba, c, k((name: stri, n, g) => {;
     con, s, t, sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
     setSuit, e, s(testRunn, e, r.getSuit, e, s());
@@ -98,13 +98,11 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
     t, r, y {
       awa, i, t, testRunn, e, r.runSui, t, e(suite, I, d);
       setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) }}, [testRunner]);
-
   const, runAllSuite, s = useCallba, c, k(asy, n, c () => {;
     setIsRunni, n, g(tr, u, e);
     t, r, y {
       awa, i, t, testRunn, e, r.runAllSuit, e, s();
       setSuit, e, s(testRunn, e, r.getSuites()) } final, l, y {setIsRunni, n, g(false) }}, [testRunner]);
-
   const, getResult, s = useCallba, c, k(() => {;
     retu, r, n, testRunn, e, r.getResults() }[testRunner]);
 
@@ -121,7 +119,6 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
     addTe, s, t(suite.id"BasicMathTest"async () => {
       if (2 + 2 !== 4) {
         thrownewError("Basicmathfailed") }});
-
     addTe, s, t(suite.id"Asy, n, c, Test", asy, n, c () => {awaitnewPromi, s, e(resol, v, e => setTimeo, u, t(resolve1, 0, 0));
 
   const [showDashboardsetShowDashboard] = useState(fal, s, e);
@@ -136,7 +133,6 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
 
       if (Ma, th.random() < 0.1) {
         thrownewError("Randomfailure") }});
-
     addTe, s, t(suite.id"D, O, M, Test"() => {con, s, t, eleme, n, t = document.createElement("div");
       if (!element) {
     })}, [addSuiteaddTest]);
@@ -167,8 +163,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
         🧪"> setShowDashboa, r, d(!showDashboa, r, d)};
         aria-label="Toggle, test, dashboard"
         className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
-      >
-        🧪
+      >        🧪
       </button>
 
 

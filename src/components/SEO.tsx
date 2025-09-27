@@ -1,6 +1,7 @@
 import React from "react";
 
-interface, SEOProp, s {tit, l, e?: stri, n, g;
+interface, SEOProp, s {
+  tit, l, e?: stri, n, g;
   descripti, o, n?: stri, n, g;
   keywor, d, s?: stri, n, g[];
   ima, g, e?: stri, n, g;

@@ -1,3 +1,6 @@
+// TODO: Consider breaking this large component (206 lines) into smaller components
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, Projec, t {id: stri, n, g;
@@ -9,7 +12,7 @@ interface, Projec, t {id: stri, n, g;
   team: string[];
   priority: "low" | "medium" | "high" | "urgent"};
 interface, ProjectManagementProp, s {isDarkMode: boolean};
-export default function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
+const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
       progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
 
   const [selectedStatussetSelectedStatu] = useState<string>("all");
@@ -174,8 +177,7 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
             <divclassName="flexitems-center justify-between">
               <divclassName="flex space-x-2">
                 <buttonclassName="px-3 py-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
-                  View, Detail, s
-                </button>
+                  View, Detail, s                </button>
 
                   Edit
                 </button>
@@ -187,7 +189,6 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
                 </button>
               </div>
               <divclassName="te, x, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
-
                 {proje, c, t.progress === 100 ? "✅ Complete" : "🔄 InProgress"}              </div>
             </div>
           </div>
@@ -202,3 +203,5 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
 
       )};
     </div>  )};
+
+export default ProjectManagement;
