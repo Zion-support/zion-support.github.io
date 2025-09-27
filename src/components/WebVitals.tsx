@@ -5,8 +5,7 @@ interface WebVitalsMetric {
   value: number;
   delta: number;
   id: string;
-  navigationType: string;
-}
+  navigationType: string}
 
 export function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
@@ -26,8 +25,7 @@ export, function, WebVitals() {useEffect(() => {
       getTT, F, B(reportWebVitals)})}, []);
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:', metric);
-  }
+    console.log('Web Vitals:', metric)}
 }
 
 export function WebVitals() {
@@ -38,11 +36,8 @@ export function WebVitals() {
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    });
-  }, []);
+      getTTFB(reportWebVitals)})}, []);
 
-  return null;
-}
+  return null}
 
 export default WebVitals;

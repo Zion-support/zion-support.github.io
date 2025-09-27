@@ -1,44 +1,4 @@
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { 
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  Lock,
-  Eye,
-  Globe,
-  Server,
-  Key,
-  FileText,
-  Users,
-  Activity,
-  Zap,
-  AlertCircle,
-  XCircle,
-  Clock,
-  TrendingUp,
-  TrendingDown,
-} from 'lucide-react';
-=import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/Card";
-import { Shield
-  AlertTriangle
-  CheckCircle
-  Lock
-  Eye
-  Globe
-  Server
-  Key 
-  FileText 
-  Users 
-  Activity 
-  Zap 
-  AlertCircle 
-  XCircleClockTrendingUpTrendingDown } from "lucide-react";
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+<
 
 interface SecurityMetrics {
   overall: {
@@ -157,28 +117,7 @@ export default function ComprehensiveSecurityDashboard({
         ]
       },compliance: {
         ssl: {
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-          score: 95 + Math.random() * 5,
-          grade: 'A+',
-          issues: []
-        },
-        csp: {
-          enabled: true,
-          violations: Math.floor(2 + Math.random() * 5),
-          policies: ['default-src \'self\'', 'script-src \'self\' \'unsafe-inline\'', 'style-src \'self\' \'unsafe-inline\'']
-        },
-        headers: {
-          security: true,
-          xss: true,
-          frame: true,
-=          score: 95 + Math.random() * 5grade: 'A+'issues: []
-        }csp: {
-          enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\"]
-        }headers: {
-          security: true 
-          xss: true 
-          frame: true 
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+<
           contentType: true
         }gdpr: {
           compliant: true 
@@ -187,11 +126,7 @@ export default function ComprehensiveSecurityDashboard({
       }monitoring: {
         activeAlerts: Math.floor(3 + Math.random() * 5)resolvedAlerts: Math.floor(25 * timeRangeMultiplier)blockedIPs: Math.floor(12 * timeRangeMultiplier)suspiciousActivity: Math.floor(8 * timeRangeMultiplier)loginAttempts: Math.floor(500 * timeRangeMultiplier)failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-    };
-  }, [selectedTimeRange]);
-=    }}[selectedTimeRange]);
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+<
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {const newAlerts = [];
 
@@ -229,11 +164,9 @@ export default function ComprehensiveSecurityDashboard({
         title: 'High Failed Login Rate'description: `${(failedLoginRate * 100).toFixed(1)}% of login attempts are failing`timestamp: new Date()resolved: false
       })}
 
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-    setAlerts(prev => [...prev, ...newAlerts]);
-  }, []);
+< [...prev, ...newAlerts])}, []);
 =    setAlerts(prev => [...prev...newAlerts])}[]);
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+>
 
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -241,20 +174,10 @@ export default function ComprehensiveSecurityDashboard({
       const mockData = generateMockData();
       setMetrics(mockData);
       generateAlerts(mockData);
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-      onSecurityUpdate?.(mockData);
-    } catch (error) {
-      console.error('Failed to load security metrics:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [generateMockData, generateAlerts, onSecurityUpdate]);
-
-  const resolveAlert = (alertId: string) => {
+< {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alert, resolved: true } : alert
-    ));
-  };
+    ))};
 =      onSecurityUpdate?.(mockData)} catch (error) {
       console.error('Failed to load security metrics:'error)} finally {
       setIsLoading(false)}
@@ -264,21 +187,18 @@ export default function ComprehensiveSecurityDashboard({
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
     ))};
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+>
 
   useEffect(() => {
     loadMetrics();
 
     if (enableRealTimeMonitoring) {
-<<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
-      const interval = setInterval(loadMetrics, refreshInterval);
-      return () => clearInterval(interval);
-    }
+< clearInterval(interval)}
   }, [loadMetrics, enableRealTimeMonitoring, refreshInterval]);
 =      const interval = setInterval(loadMetricsrefreshInterval);
       return () => clearInterval(interval)}
   }[loadMetricsenableRealTimeMonitoringrefreshInterval]);
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
+>
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {

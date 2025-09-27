@@ -8,12 +8,10 @@ interface UserPreferences {
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
 interface EnhancedUserExperienceProps {
-  className?: string;
-}
+  className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
   const [preferences, setPreferences] = useState<UserPreferences>({
@@ -46,8 +44,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
   useEffect(() => {
     // Save preferences to localStorage
-    localStorage.setItem('user-preferences', JSON.stringify(preferences));
-  }, [preferences]);
+    localStorage.setItem('user-preferences', JSON.stringify(preferences))}, [preferences]);
 
   const renderAppearanceTab = () => (
     <div className="space-y-6">
@@ -195,17 +192,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           {/* Reset Button */}
           <div className="mt-6 pt-4 border-t border-gray-200">
             <button
-              onClick={() => {
-                setPreferences({
+              onClick={(()) => {setPreferences({
                   theme: 'auto',
                   language: 'en',
                   fontSize: 'medium',
                   animations: true,
                   reducedMotion: false,
                   highContrast: false,
-                  screenReader: false
-                });
-              }}
+                  screenReader: false})}}
               className="w-full px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               Reset to Defaults
@@ -214,7 +208,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

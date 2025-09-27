@@ -81,8 +81,7 @@ export default function Contact(): JSX.Element {
 					</div>
 				</div>
 			</>
-		);
-	}
+		)}
 
 	return (
 		<>

@@ -341,8 +341,7 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
       setIsLoading(true);
       setActiveTab(tabId);
       // Simulate loading time for better UX
-      setTimeout(() => setIsLoading(false), 100);
-    }
+      setTimeout(() => setIsLoading(false), 100)}
   }, [activeTab]);
 
   const tabs = useMemo(() => [
@@ -997,8 +996,7 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
-        );
-    }
+        )}
   }, [activeTab, isRealTime]);
 
   return (
@@ -1100,7 +1098,6 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         </footer>
       </d, i, v>
     </>
-  );
-};
+  )};
 
 export default Dashboard;

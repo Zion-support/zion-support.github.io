@@ -4,8 +4,7 @@ interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableMonitoring?: boolean;
   enableResourceHints?: boolean;
-  enablePreloading?: boolean;
-}
+  enablePreloading?: boolean}
 
 function PerformanceOptimizerComponent({
   enableServiceWorker = true,
@@ -16,8 +15,7 @@ function PerformanceOptimizerComponent({
   const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
     total: number;
-    percentage: number;
-  } | null>(null);
+    percentage: number} | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -49,11 +47,8 @@ function PerformanceOptimizerComponent({
       hints.forEach(hint => {
         const link = document.createElement('link');
         Object.entries(hint).forEach(([key, value]) => {
-          link.setAttribute(key, value);
-        });
-        document.head.appendChild(link);
-      });
-    }
+          link.setAttribute(key, value)});
+        document.head.appendChild(link)})}
   }, [enableResourceHints]);
 
   useEffect(() => {
@@ -63,16 +58,12 @@ function PerformanceOptimizerComponent({
     if (enableServiceWorker && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
-        })
+          console.log('Service Worker registered:', registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
+          console.log('Service Worker registration failed:', error)})}
   }, [enableServiceWorker]);
 
-  return null;
-}
+  return null}
 
 // Export as default with React.memo for performance
 const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);

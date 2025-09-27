@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
+    dataLayer: any[]}
 }
 
 export function useAnalytics() {
@@ -13,8 +12,7 @@ export function useAnalytics() {
     (window as any).dataLayer = (window as any).dataLayer || [];
     
     function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
-    }
+      (window as any).dataLayer.push(args)}
     (window as any).gtag = gtag;
 
       gtag("js"newDate());

@@ -4,8 +4,7 @@ interface AccessibilityIssue {
   type: "error" | "warning" | "info";
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
     // Check, for, missing alt, attributes, on images, const, images = document.querySelectorAll("img");
     imag, e, s.forEa, c, h((img: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {

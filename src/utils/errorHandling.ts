@@ -7,8 +7,7 @@ export interface ErrorInfo {
   message: string;
   stack?: string;
   componentStack?: string;
-  errorBoundary?: string;
-}
+  errorBoundary?: string}
 
   construct, o, r(messa, g, e: stringseveri, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcatego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
   ) {

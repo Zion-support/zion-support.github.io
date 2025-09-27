@@ -39,8 +39,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
     // Check for high contrast mode
     if (enableHighContrastSupport) {
       const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };
+        setIsHighContrast(isHighContrastMode())};
       
       checkHighContrast();
       
@@ -49,8 +48,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {
       const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+        setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
       

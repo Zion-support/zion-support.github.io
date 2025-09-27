@@ -9,9 +9,7 @@ interface HealthResponse {
   services: {
     database: "connected" | "disconnected";
     cache: "connected" | "disconnected";
-    analytics: "active" | "inactive";
-  };
-}
+    analytics: "active" | "inactive"}}
 
 export default function handler(
   req: NextApiRequest,
@@ -35,5 +33,4 @@ export default function handler(
     services: {
       database: "connected"cache: "connected"analytics: "active"
     }};
-  res.status(200).json(healthData);
-}
+  res.status(200).json(healthData)}

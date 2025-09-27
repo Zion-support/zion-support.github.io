@@ -2,14 +2,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+    return res.status(405).json({ error: "Method not allowed" })}
 
   const { url, w, h, q, f, blur } = req.query;
 
   if (!url || typeof url !== "string") {
-    return res.status(400).json({ error: "URL parameter is required" });
-  }
+    return res.status(400).json({ error: "URL parameter is required" })}
 
   try {
     // Validate URL
@@ -24,8 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ];
     
     if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {
-      return res.status(400).json({ error: "Domain not allowed" });
-    }
+      return res.status(400).json({ error: "Domain not allowed" })}
 
     // Fetch the image
     const imageResponse = await fetch(imageUrl.toString());
@@ -33,8 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!imageResponse.ok) {
       return res.status(imageResponse.status).json({ 
         error: "Failed to fetch image" 
-      });
-    }
+      })}
 
     // For, now, just return, the, original ima, g, e
     // In, a, production environment, you, would implement, actual, image optimization, her, e

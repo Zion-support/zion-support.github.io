@@ -75,47 +75,40 @@ export default function App({ Component, pageProps }: AppProps) {
         }
         @media (max-width: 768px) {
           body {
-            font-size: 14px;
-          }
+            font-size: 14px}
         }
         /* Accessibility Styles */
         .high-contrast {
-          filter: contrast(150%) brightness(120%);
-        }
+          filter: contrast(150%) brightness(120%)}
         .large-text {
-          font-size: 1.2em;
-        }
-        .large-text h1 { font-size: 2.5em; }
-        .large-text h2 { font-size: 2em; }
-        .large-text h3 { font-size: 1.75em; }
-        .large-text h4 { font-size: 1.5em; }
-        .large-text h5 { font-size: 1.25em; }
-        .large-text h6 { font-size: 1.1em; }
+          font-size: 1.2em}
+        .large-text h1 { font-size: 2.5em}
+        .large-text h2 { font-size: 2em}
+        .large-text h3 { font-size: 1.75em}
+        .large-text h4 { font-size: 1.5em}
+        .large-text h5 { font-size: 1.25em}
+        .large-text h6 { font-size: 1.1em}
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
+          scroll-behavior: auto !important}
         .focus-visible *:focus {
           outline: 3px solid #2563eb !important;
-          outline-offset: 2px !important;
-        }
+          outline-offset: 2px !important}
         .screen-reader-optimized {
           /* Enhanced focus indicators */
         }
         .screen-reader-optimized *:focus {
           outline: 4px solid #ff6b35 !important;
-          outline-offset: 4px !important;
-        }
+          outline-offset: 4px !important}
         .keyboard-navigation button:focus,
         .keyboard-navigation a:focus,
         .keyboard-navigation input:focus,
         .keyboard-navigation textarea:focus,
         .keyboard-navigation select:focus {
           outline: 2px solid #2563eb !important;
-          outline-offset: 2px !important;
-        }
+          outline-offset: 2px !important}
         .sr-only {
           position: absolute;
           width: 1px;
@@ -125,8 +118,7 @@ export default function App({ Component, pageProps }: AppProps) {
           overflow: hidden;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0;
-        }
+          border: 0}
       `}</style>
           <PerformanceOptimizer>
             <Component {...pageProps} />
