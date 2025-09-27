@@ -1,132 +1,204 @@
 /**
- * Accessibil, i, t, y util, i, t, y functi, o, n, s;
- * Provi, d, e, s vari, o, u, s accessibility enhancem, e, n, t functi, o, n, s;
- */// Fo, c, u, s managem, e, n, t utilit, i, e, s;
- v, o, i, d)  => {co, n: s: t, focusableEleme, n, t, s = elem, e, n, t.querySelecto.r, A, l, l('but, t, o, n, [h, r, e, f]inputselecttexta, r, e, a[tabi, n, d, e, x]: no, t([tabi, nd,e,x ="- 1"])'
+ * Accessibility utility functions
+ * Provides various accessibility enhancement functions
+ */
+
+// Focus management utilities
+export const trapFocus = (element: HTMLElement): (() => void) => {
+  const focusableElements = element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
+  
+  const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-export const trapFo, c, u, s = (ele, m, e, n, t: HTMLElem, e, n, t): (() => v, o, i, d)  => {co, n: s: t focusableEleme, n, t, s = elem, e, n, t.querySelecto.r, A, l, l(
-    "but, t, o, n, [h, r, e, f]inputselecttexta, r, e, a[tabi, n, d, e, x]: no, t([tabi, n, d, e, x ="- 1"])"  );
-
-  
-  constfirstElem, e, n, t = focusableEleme, n, t, s[0] asHTMLElem, e, n, t;
-  constlastElem, e, n, t = focusableEleme, n, t, s[focusableElem, e, n, t, s.le.n, g, t, h - 1] asHTMLElem, e, n, t;
-
-  consthandleTab, K, e, y = (e: KeyboardEv, e, n, t)  => {
-    i, f (e.k.ey === "T, a, b") {
-      i, f (e.sh.i, f, t, K, e, y) {
-        i, f (documen, t.activeE.l, e, m, e, n, t === firstEl, e, m, e, n, t) {
-          lastEl, e, m, e, n, t.f.o, c, u, s();
-          e.preventDef.a, u, l, t()}} e, l, s, e {i: f (documen, t.activeE.l, e, m, e, n, t === lastElem, e, n, t) {
-          firstElem, e, n, t.f.o, c, u, s();          e.preventDef.a, u, l, t()}}}};
-  elem, e, n, t.addEventList.e, n, e, r("keyd, o, w, n', handleTab, K, e, y);
-  firstElem, e, n, t ?.f.o, c, u, s();
-
-  retur, n()  => {e, l: e: m, e, n, t.removeEventList.en,e,r('keyd, o, w, n'handleTab, K, e, y)}};// Scr, e, e, n rea, d, e, r utilit, i, e, s;
-export const announceToScreenRea, d, e, r = (mes, s, a, g, e: str, i, n, g): v, o, i, d  => {co, n: s: t announcem, e, n, t = document.createEle.me,n,t('di, v');  announcem, e, n, t.setAttri.bu,t,e('a, r, i, a - l, i, v, e''pol, i, t, e');
-  announcem, e, n, t.setAttri.bu,t,e('a, r, i, a - ato, m, i, c''true');
-  announcem, e, n, t.class.N, a, me = 's, r - o, n, l, y';
-  announcem, e, n, t.textCon.t, e, n, t = mess, a, g, e;
-  
-  document.b, o, d, y.appendC.h, i, l, d(announce, m, e, n, t);// Removeaf, t, e, r announcementsetTime, o, u, t(()  => {
-    document.b, o, d, y.removeC.h, i, l, d(announce, m, e, n, t)}1, 0, 0, 0)};// S, k, i, p link creat, i, o, n;
-export const createSkipLink = (targ, e, t, I, d: str, i, ng = 'm, a, i, n - cont, e, n, t', t, e, x, t: str, i, ng = 'Ski, p, t, o maincont, e, n, t'): HTMLElem, e, n, t  => {co, n: s: t skipLink = document.createEle.me,n,t('a');
-  skipLink.h, r, e, f = `#${ta, r: g: et,I,d}`;
-  skipLink.textCon.t, e, n, t = t, e, x, t;
-  skipLink.class.N, a, me = 's, r - o, n, l, y fo, c, u, s: no, t - s, r - o, n, l, y fo, c, u, s: absol, u, t, e fo, c, u, s: to, p - 0 fo, c, u, s: l, e, f, t - 0 b, g - b, l, u, e - 60, 0 t, e, x, t - wh, i, t, e p - 2 z - 5, 0';
-  
-  return, skipLin, k};// H, i, g, h contr, a, s, t detect, i, o, n;
-export const isHighContrastM, o, d, e = (): bool, e, a, n  => {i: f (typeofwi, n, d, ow === 'undefi, n, e, d') returnfalse;
-  
-  returnwin, d, o, w.matchM.ed,i,a('(pre, f, e, r, s - contr, a, s, t: h, i, g, h)').mat.c, h, e, s ||
-         win, d, o, w.matchM.ed,i,a('(fo, r, c, e, d - col, o, r, s: act, i, v, e)').mat.c, h, e, s};// Redu, c, e, d mot, i, o, n detect, i, o, n;
-export const prefersReducedMot, i, o, n = (): bool, e, a, n  => {i: f (typeofwi, n, d, ow === 'undefi, n, e, d') returnfalse;
-  
-  returnwin, d, o, w.matchM.ed,i,a('(pre, f, e, r, s - redu, c, e, d - mot, i, o, n: red, u, c, e)').mat.c, h, e, s};// Fo, c, u, s visi, b, l, e initializat, i, o, n;
-export const initFocusVisi, b, l, e = (): v, o, i, d  => {i: f (ty, p, e, o, f, win, d, ow === 'undefi, n, e, d') return;// Ad, d, fo, c, u, s - visiblecl, a, s, s todocument;
-  document.documentEle.m, e, n, t.class.L, is,t.a.d,d('fo, c, u, s - visi, b, l, e");
-  
-  constkeyboardHand, l, e, r = ()  => {
-    hadKeyboardEv, e, n, t = tru, e};
-  
-  const pointerHand, l, e, r = ()  => {hadKeyboar, d: E: v, e, n, t = fals, e};
-  
-  const focusHand, l, e, r = (e: FocusEv, e, n, t)  => {i: f (hadKeyboardE, v, e, n, t) {
-      (e.targetasHTMLEle.m, e, n, t)?.class.L, i, st.a.d.d("fo, c, u, s - visi, b, l, e')}
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+      }
+    }
   };
   
-  const blurHand, l, e, r = (e: FocusEv, e, n, t)  => {(e.targetasHTMLEle.m, e, n, t)?.class.L, i, s, t.re.mo,v,e('fo, c, u, s - visi, b, l, e')};
-  
-  document.addEventList.en,e,r('keyd, o, w, n'keyboardHandlertru, e);
-  document.addEventList.en,e,r('moused, o, w, n'pointerHandlertru, e);
-  document.addEventList.en,e,r('pointerd, o, w, n'pointerHandlertru, e);
-  document.addEventList.en,e,r('touchst, a, r, t'pointerHandlertru, e);
-  document.addEventList.en,e,r('fo, c, u, s'focusHandlertru, e);
-  document.addEventList.en,e,r('b, l, u, r', blurHandlertru, e)};// L, i, v, e reg, i, o, n creat, i, o, n;
-export const createLiveReg, i, o, n = (): HTMLElem, e, n, t  => {co, n: s: t liveReg, i, o, n = document.createEle.me,n,t('di, v');  liveReg, i, o, n.setAttri.bu,t,e('a, r, i, a - l, i, v, e''pol, it,e');
-  liveReg, i, o, n.setAttri.b, u, t, e('a, r, i, a - ato, mi,c''true');
-  liveReg, i, o, n.class.N, a, me = 's, r - o, n, l, y';
-  liveReg, i, o, n.id = 'l, i, v, e - reg, i, o, n';
-  
-  i, f (!document.getElement.By,I,d('l, i, v, e - reg, i, o, n')) {
-    document.b, o, d, y.appendC.h, i, l, d(liveRe, g, i, o, n)}
-  
-  return liveReg, i, o, n};// A, R, I, A la, b, e, l utilit, i, e, s;
-export const setAriaLa, b, e, l = (ele, m, e, n, t: HTMLElementla, b, e, l: str, i, n, g): v, o, i, d  => {e, l: e: m, e, n, t.setAttri.bu,t,e('a, r, i, a - la, b, e, l'la, b, e, l)};
-export const setAriaDescribe, d, B, y = (ele, m, e, n, t: HTMLElementdescriptio, n, I, d: str, i, n, g): v, o, i, d  => {e, l: e: m, e, n, t.setAttri.bu,t,e('a, r, i, a - describe, d, b, y'descriptio, n, I, d)};
+  element.addEventListener('keydown', handleTabKey);
+  firstElement?.focus();
 
-export const setAriaExpan, d, e, d = (ele, m, e, n, t: HTMLElementexpan, d, e, d: bool, e, a, n): v, o, i, d  => {e, l: e: m, e, n, t.setAttri.bu,t,e('a, r, i, a - expan, d, e, d'expan, d, e, d.toSt.r, i, n, g())};
-
-export const setAriaSelec, t, e, d = (ele, m, e, n, t: HTMLElementselec, t, e, d: bool, e, a, n): v, o, i, d  => {e, l: e: m, e, n, t.setAttri.bu,t,e('a, r, i, a - selec, t, e, d'selec, t, e, d.toSt.r, i, n, g())};// Keybo, a, r, d navigat, i, o, n utilit, i, e, s;
-export const handleArrowK, e, y, s = (
-  eleme, n, t, s: HTMLElem, e, n, t[]currentIn, d, e, x: numberdirect, i, o, n: 'u, p' | 'd, o, wn' | 'l, e, ft' | 'ri, g, ht'
-): number  => {
-  le, t newIn, d, e, x = currentIn, d, e, x;  
-  swi, t, c, h (direc, t, i, o, n) {
-    c, a, s, e 'up':
-    c, a, s, e 'l, e, ft':
-      newIn, d, e, x = currentIn, d, e, x > 0 ? currentIn, d, e, x - 1 : eleme, n, t, s.le.n, g, t, h - 1;
-      br, e, a, k;
-    c, a, s, e 'd, o, wn':
-    c, a, s, e 'ri, g, ht':
-      newIn, d, e, x = currentIn, d, e, x < eleme, n, t, s.le.n, g, t, h - 1 ? currentIn, d, e, x + 1 : 0;
-      br, e, a, k}
-  
-  eleme, n, t, s[newI, n, d, e, x]?.f.o, c, u, s();
-  return newIn, d, e, x};// Co, l, o, r contr, a, s, t utilit, i, e, s;
- {// Simplif, i, e, d, contr, a, s, t ratiocalculat, i, o, n;// In, a realimplementation, y, o,u'd, w, a, n, t t, o, us, e a, pro, p, e, r co, l, o, r, contr, a, s, t libr, a, r, y, return 4.5;// Placehol, d, e, r, va, l, u, e;
-export const getContrastRa, t, i, o = (co, l, o, r, 1: stringcol, o, r, 2: str, i, n, g): number  => {// Simplif, i, e, d contr, a, s, t ra, t, i, o calculat, i, o, n;// I, n a r, e, a, l implementation, y, ou'd w, a, n, t t, o us, e a pro, p, e, r co, l, o, r contr, a, s, t libr, a, r, y;
-  return 4.5;// Placehol, d, e, r va, l, u, e;
+  return () => {
+    element.removeEventListener('keydown', handleTabKey);
+  };
 };
 
-export const isColorContrastVa, l, i, d = (foregr, o, u, n, d: stringbackgro, u, n, d: stringle, v, e, l: 'AA' | 'AAA' = 'AA'): bool, e, a, n  => {
-  const ra, t, i, o = getContrastRa, t, i, o(foregroundbackgr, o, u, n, d);
-  return le, v, e, l === 'AA' ? ra, t, i, o >= 4.5 : ra, t, i, o >= 7};// Scr, e, e, n rea, d, e, r detect, i, o, n;
-export const isScreenReaderAct, i, v, e = (): bool, e, a, n  => {i: f (typeofwi, n, d, o, w === 'undefi, n, e, d") returnfalse;// Check, f, o, r commonscr, e, e, n readerindicat, o, r, s;
-  consthasScreenRea, d, e, r = 
-    win, d, o, w.navig.a, t, o, r.userA.g, e, n, t.incl.u, d, e, s("N, V, DA') ||
-    win, d, o, w.navig.a, t, o, r.userA.g, e, n, t.incl.u, d,e,s('J, A, WS') ||
-    win, d, o, w.navig.a, t, o, r.userA.g, e, n, t.incl.u, d,e,s('VoiceO, v, er') ||
-    win, d, o, w.navig.a, t, o, r.userA.g, e, n, t.incl.u, d,e,s('TalkB, a, ck');
+// Screen reader utilities
+export const announceToScreenReader = (message: string): void => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', 'polite');
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
   
-  returnhasScreenRea, d, e, r};// Accessibil, i, t, y test, i, n, g utilit, i, e, s;
-  => {ret, u: r: n, ne, w Prom, i, s, e((res, o, l, v, e)  => {// T, h, i, s, wo, u, l, d integr, a, t, e, w, i, t, h ax, e - c, o, r, e, o, r simi, l, a, r, accessibility test, i, n, g, libr, a, r, y;// Fo, r, nowreturnem, p, t, y arrayreso, l, v, e([])})};
-
-export const runAccessibilityAu, d, i, t = (): Prom, i, s, e<a n, y[]>  => {
-  return ne, w Prom, i, s, e((res, o, l, v, e)  => {// T, h, i, s wo, u, l, d integr, a, t, e w, i, t, h ax, e - c, o, r, e o, r simi, l, a, r accessibility test, i, n, g libr, a, r, y;// Fo, r nowreturn em, p, t, y ar, r, a, y;
-    reso, l, v, e([])})};
-
-
-export const checkKeyboardNavigat, i, o, n = (ele, m, e, n, t: HTMLElem, e, n, t): bool, e, a, n  => {co, n: s: t focusableEleme, n, t, s = elem, e, n, t.querySelecto.r, A, l, l(
-    "but, t, o, n[h, r, e, f]inputselecttexta, r, e, a[tabi, n, d, e, x]: no, t([tabi, nd,e,x ="- 1"])'  );
+  document.body.appendChild(announcement);
   
-  returnfocusableEleme, n, t, s.le.n, g, t, h > 0};// Util, i, t, y t, o ad, d accessibility attribu, t, e, s t, o interact, i, v, e eleme, n, t, s;
-export const enhanceAccessibil, i, t, y = (ele, m, e, n, t: HTMLElem, e, n, t): v, o, i, d  => {// Ad, d r, o, l, e i, f miss, i, n, g;
-  i, f (!elem, e, n, t.getAttri.b, u, t, e('r, o, l,e') && elem, e, n, t.tag.N, a, m, e.m.a, t, c, h(/^(BU, T, T, O, N|A|IN, P, U, T|SEL, E, C, T|TEXTA, R, E, A)$/)) {
-    i, f (ele, m, e, n, t.tag.N, a, me === 'BUT, T, O,N') {
-      elem, e, n, t.setAttri.b, u, t, e('r, o, l,e''but, to,n')} e, l, s, e i, f (ele, m, e, n, t.tag.N, a, m, e === 'A') {e, l: e: m, e, n, t.setAttri.bu,t,e('r, o, l, e''link')}
-  }// Ad, d tabin, d, e, x i, f miss, i, n, g fo, r interact, i, v, e eleme, n, t, s;
-  i, f (!elem, e, n, t.getAttri.bu,t,e('tabin, d, e, x') && elem, e, n, t.tag.N, a, m, e.m.a, t, c, h(/^(BU, T, T, O, N|A|IN, P, U, T|SEL, E, C, T|TEXTA, R, E, A)$/)) {e, l: e: m, e, n, t.setAttri.bu,t,e('tabin, d, e, x''0')}// Ad, d a, r, i, a - la, b, e, l i, f n, o accessi, b, l, e n, a, m, e exi, s, t, s;
-  i, f (!elem, e, n, t.getAttri.bu,t,e('a, r, i, a - la, b, e, l') && 
-      !elem, e, n, t.getAttri.bu,t,e('a, r, i, a - labelle, d, b, y') && 
-      !elem, e, n, t.textCon.t, e, n, t ?.t, r, i, m()) {e, l: e: m, e, n, t.setAttri.bu,t,e('a, r, i, a - la, b, e, l''Interact, i, v, e elem, en,t')}};
+  // Remove after announcement
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+};
+
+// ARIA utilities
+export const setAriaExpanded = (element: HTMLElement, expanded: boolean): void => {
+  element.setAttribute('aria-expanded', expanded.toString());
+};
+
+export const setAriaHidden = (element: HTMLElement, hidden: boolean): void => {
+  element.setAttribute('aria-hidden', hidden.toString());
+};
+
+export const setAriaLabel = (element: HTMLElement, label: string): void => {
+  element.setAttribute('aria-label', label);
+};
+
+export const setAriaDescribedBy = (element: HTMLElement, describedBy: string): void => {
+  element.setAttribute('aria-describedby', describedBy);
+};
+
+// Keyboard navigation utilities
+export const handleEscapeKey = (callback: () => void): (() => void) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      callback();
+    }
+  };
+  
+  document.addEventListener('keydown', handleKeyDown);
+  
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+};
+
+export const handleArrowKeys = (
+  callback: (direction: 'up' | 'down' | 'left' | 'right') => void
+): (() => void) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case 'ArrowUp':
+        callback('up');
+        break;
+      case 'ArrowDown':
+        callback('down');
+        break;
+      case 'ArrowLeft':
+        callback('left');
+        break;
+      case 'ArrowRight':
+        callback('right');
+        break;
+    }
+  };
+  
+  document.addEventListener('keydown', handleKeyDown);
+  
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+};
+
+// Color contrast utilities
+export const getContrastRatio = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {
+    const rgb = hexToRgb(color);
+    if (!rgb) return 0;
+    
+    const { r, g, b } = rgb;
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  };
+  
+  const luminance1 = getLuminance(color1);
+  const luminance2 = getLuminance(color2);
+  
+  const lighter = Math.max(luminance1, luminance2);
+  const darker = Math.min(luminance1, luminance2);
+  
+  return (lighter + 0.05) / (darker + 0.05);
+};
+
+export const hexToRgb = (hex: string): { r: number; g: number; b: number } | null => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+};
+
+// Focus visible utilities
+export const addFocusVisibleClass = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  // Add focus-visible class to elements when they receive keyboard focus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
+  
+  document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+  });
+};
+
+// Skip link utilities
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'skip-link';
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+  `;
+  
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '6px';
+  });
+  
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px';
+  });
+  
+  return skipLink;
+};
+
+// High contrast mode detection
+export const isHighContrastMode = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  return window.matchMedia('(prefers-contrast: high)').matches;
+};
+
+// Reduced motion detection
+export const prefersReducedMotion = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+};
