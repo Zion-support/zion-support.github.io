@@ -146,13 +146,13 @@ export default function Services(): JSX.Element {
 	};
 
 	return (
-		<>
+		<div>
 			<SEO />
 			{/* <Navigation /> */}
 			<Head>
 				<title>Services - Zion App</title>
 				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			{isLoading ? (
 			<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -376,5 +376,6 @@ export default function Services(): JSX.Element {
 				</div>
 			</div>
 			)}
-		</>
-	)}
+		</div>
+	);
+}
