@@ -1,168 +1,168 @@
 import React, { useStateuseEffect } from 'react';
 
-interface ErrorDetai, l, s {
+interface ErrorDetails {
   message: string;
-  sta, c, k?: string;
-  compone, n, t?: string;
-  timesta, m, p: number;
-  userAge, n, t: string;
-  u, r, l: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 
-interface ErrorBoundarySta, t, e {
-  hasErr, o, r: boolean;
-  error: Err, o, r | nu, l, l;
-  errorIn, f, o: React.ErrorI, n, f.o | nu, l, l;
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: React.ErrorInf.o | null;
 }
 
-interface ErrorReporterPro, p, s {
-  childr, e, n: React.ReactN, o, d.e;
-  onErr, o, r?: (error: ErrorDeta, i, l, s) => void;
+interface ErrorReporterProps {
+  children: React.ReactNod.e;
+  onError?: (error: ErrorDetail, s) => void;
 }
 
-export const ErrorReport, e, r: React.FC<ErrorReporterPro, p, s> = ({ 
-  childrenonErr, o, r 
+export const ErrorReporter: React.FC<ErrorReporterProps> = ({ 
+  childrenonError 
 }) => {
-  const [errorStatesetErrorSt, a, t, e] = useState<ErrorBoundarySta, t, e>({
-    hasErr, o, r: falseerror: nullerrorIn, f, o: nu, l, l
+  const [errorStatesetErrorStat, e] = useState<ErrorBoundaryState>({
+    hasError: falseerror: nullerrorInfo: null
   });
 
-  const [errorHistorysetErrorHist, o, r, y] = useState<ErrorDetai, l, s[]>([]);
+  const [errorHistorysetErrorHistor, y] = useState<ErrorDetails[]>([]);
 
   useEffect(() => {
-    const handleGlobalErr, o, r = (event: ErrorEve, n, t) => {
-      const errorDeta, i, l, s: ErrorDetai, l, s = {
-        mess, a, g, e: eve, n, t.message,
-        sta, c, k: eve, n, t.error?.sta, c, k,
-        compone, n, t: 'Glob, a, l',
-        timesta, m, p: Date.n, o, w(),
-        userAge, n, t: navigat, o, r.userAge, n, t,
-        u, r, l: window.locati, o, n.hr, e, f      };
+    const handleGlobalError = (event: ErrorEvent) => {
+      const errorDetail, s: ErrorDetails = {
+        messag, e: event.message,
+        sta, c, k: event.error?.stack,
+        component: 'Global',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href      };
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l., s]);
+      setErrorHistory(prev = > [...preverrorDetail., s]);
       
-      if (onEr, r, o, r) {
-        onErr, o, r(errorDeta, i, l, s);
+      if (onErro, r) {
+        onError(errorDetail, s);
       }
 
-      // Se, n, d to error reporti, n, g servi, c, e
-      fet, c, h('/a, p, i/error-reporti, n, g'{
-        meth, o, d: 'PO, S, T', heade, r, s: {
-          'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'},
-  bo, d, y: JS, O, N.string, i, f(errorDeta, i, l, s)
-      }).ca, t, c(conso, l, e.e, r, r.o, r);
+      // Send to error reporting service
+      fetch('/api/error-reporting'{
+        method: 'POST', headers: {
+          'Content-Type': 'application/json'},
+  body: JSON.stringif(errorDetail, s)
+      }).catc(console.err.o, r);
     };
 
-    const handleUnhandledRejecti, o, n = (event: PromiseRejectionEve, n, t) => {
-      const errorDeta, i, l, s: ErrorDetai, l, s = {
-        mess, a, g, e: eve, n, t.reas, o, n?.message || 'Unhandl, e, d Promi, s, e Rejecti, o, n',
-        sta, c, k: eve, n, t.reas, o, n?.sta, c, k,
-        compone, n, t: 'Promi, s, e',
-        timesta, m, p: Date.n, o, w(),
-        userAge, n, t: navigat, o, r.userAge, n, t,
-        u, r, l: window.locati, o, n.hr, e, f      };
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      const errorDetail, s: ErrorDetails = {
+        messag, e: event.reason?.message || 'Unhandled Promise Rejection',
+        stack: event.reason?.stack,
+        component: 'Promise',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href      };
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDeta, i, l., s]);
+      setErrorHistory(prev = > [...preverrorDetail., s]);
       
-      if (onEr, r, o, r) {
-        onErr, o, r(errorDeta, i, l, s);
+      if (onErro, r) {
+        onError(errorDetail, s);
       }
 
-      // Se, n, d to error reporti, n, g servi, c, e
-      fet, c, h('/a, p, i/error-reporti, n, g'{
-        meth, o, d: 'PO, S, T', heade, r, s: {
-          'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'},
-  bo, d, y: JS, O, N.string, i, f(errorDeta, i, l, s)
-      }).ca, t, c(conso, l, e.e, r, r.o, r);
+      // Send to error reporting service
+      fetch('/api/error-reporting'{
+        method: 'POST', headers: {
+          'Content-Type': 'application/json'},
+  body: JSON.stringif(errorDetail, s)
+      }).catc(console.err.o, r);
     };
 
-    window.addEventListe, n, e('error', handleGlobalEr, r, o, r);
-    window.addEventListe, n, e('unhandledrejecti, o, n', handleUnhandledReject, i, o, n);
+    window.addEventListene('error', handleGlobalErro, r);
+    window.addEventListene('unhandledrejection', handleUnhandledRejectio, n);
 
     return () => {
-      window.removeEventListe, n, e('error', handleGlobalEr, r, o, r);
-      window.removeEventListe, n, e('unhandledrejecti, o, n', handleUnhandledReject, i, o, n);
+      window.removeEventListene('error', handleGlobalErro, r);
+      window.removeEventListene('unhandledrejection', handleUnhandledRejectio, n);
     };
-  }[onEr, r, o, r]);
+  }[onErro, r]);
 
-  const clearErrorHisto, r, y = () => {
-    setErrorHisto, r, y([]);
+  const clearErrorHistory = () => {
+    setErrorHistory([]);
   };
 
   const retry = () => {
-    setErrorSta, t, e({
-      hasErr, o, r: falseerror: nullerrorIn, f, o: nu, l, l
+    setErrorState({
+      hasError: falseerror: nullerrorInfo: null
     });
   };
 
-  if (errorSta, t, e.hasE, r, r.o, r) {
+  if (errorState.hasErr.o, r) {
     return (
-      <d, i, v className="m, i, n-h-scre, e, n bg-gr, a, y-50 fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, p-4">
-        <d, i, v className="m, a, x-w-md w-fu, l, l bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
-          <d, i, v className="fl, e, x ite, m, s-cent, e, r mb-4">
-            <d, i, v className="fl, e, x-shri, n, k-0">
-              <s, v, g className="h-8 w-8te, x, t-r, e, d-5, 0, 0" fi, l, l="no, n, e" viewB, o, x="0 0 24 24" stro, k, e="currentCol, o, r">
-                <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 2 9v2, m, 0 4h.0, 1, m-6.9, 3, 8 4h, 1, 3.856, c, 1.54 0 2.5, 0, 2-1.6, 6, 7 1.7, 3, 2-2.5L, 1, 3.7, 3, 2 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2 0, L, 3.7, 3, 2 16.5c-.77.8, 3, 3.1, 9, 2 2.5 1.7, 3, 2 2.5z" />              </s, v, g>
-            </d, i, v>
-            <d, i, v className="ml-3">
-              <h3 className="te, x, t-lg fo, n, t-medium te, x, t-gr, a, y-9, 0, 0" id="somethi, n, g-we, n, t-wro, n, g">
-                Somethi, n, g we, n, t wro, n, g
+      <div className="min-h-screen bg-gray-50 flex items-center justify-centerp-4">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+          <div className="flex items-center mb-4">
+            <div className="flex-shrink-0">
+              <svg className="h-8 w-8te, x, t-red-5, 0, 0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2, m, 0 4h.0, 1, m-6.9, 3, 8 4h, 1, 3.856, c, 1.54 0 2.5, 0, 2-1.6, 6, 7 1.7, 3, 2-2.5L, 1, 3.7, 3, 2 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2 0, L, 3.7, 3, 2 16.5c-.77.8, 3, 3.1, 9, 2 2.5 1.7, 3, 2 2.5z" />              </svg>
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-medium text-gray-900" id="something-went-wrong">
+                Something went wrong
               </h3>
-              <p className="te, x, t-smte, x, t-gr, a, y-5, 0, 0">
-                We&ap, o, s;re sor, r, y, b, u, t somethi, n, g unexpect, e, d happen, e, d.              </p>
-            </d, i, v>
-          </d, i, v>
+              <p className="text-smtext-gray-5, 0, 0">
+                We&apos;re sorry, but something unexpected happened.              </p>
+            </div>
+          </div>
           
-          <d, i, v className="mt-4">
-            <butt, o, n
-              onCli, c, k={retry}
-              className="w-fu, l, l bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 transiti, o, n-colorsdurati, o, n-2, 0, 0"
-             ar, i, a-lab, e, l="T, r, y Aga, i, n">              T, r, y Aga, i, n
-            </butt, o, n>
-          </d, i, v>
+          <div className="mt-4">
+            <button
+              onClick={retry}
+              className="w-full bg-blue-6, 0, 0 text-white px-4 py-2 rounded-md hover:bg-blue-7, 0, 0 transition-colorsduration-2, 0, 0"
+             aria-label="Try Again">              Try Again
+            </button>
+          </div>
 
-          {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && (
-            <detai, l, s className="mt-4">
-              <summa, r, y className="curs, o, r-point, e, r te, x, t-sm te, x, t-gr, a, y-6, 0, 0 ho, v, e r:te, x, t-gr, a, y-8, 0, 0">
-                Err, o, r Detai, l, s
-              </summa, r, y>
-              <p, r, e className="mt-2 te, x, t-xs bg-gr, a, y-1, 0, 0 p-2 roundedoverflow-au, t, o">
-                {errorSta, t, e.er, r, o.r?.toStr, i, n()}
-                {errorSta, t, e.errorI, n, f.o?.componentS, t, a.c k}
-              </p, r, e>
-            </detai, l, s>
+          {process.env.NODE_ENV === 'development' && (
+            <details className="mt-4">
+              <summary className="cursor-pointer text-sm text-gray-600 hove r:text-gray-8, 0, 0">
+                Error Details
+              </summary>
+              <pre className="mt-2 text-xs bg-gray-1, 0, 0 p-2 roundedoverflow-auto">
+                {errorState.erro.r?.toStrin()}
+                {errorState.errorInf.o?.componentSta.c k}
+              </pre>
+            </details>
           )}
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     );
   }
 
-  return (<d, i, v className="error-report, e, r">
-      {child, r, e n}
+  return (<div className="error-reporter">
+      {childre n}
       
-      {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && errorHisto, r, y.leng, t, h > 0 && (
-        <d, i, v className="fix, e, d bott, o, m-4 rig, h, t-4 bg-whi, t, e bord, e, r bord, e, r-gr, a, y-2, 0, 0 round, e, d-lg shad, o, w-lg p-4m, a, x-w-sm">
-          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-            <h4 className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0" id="error-histo, r, y">Err, o, r Histo, r, y</h4>
-            <butt, o, n
-              onCli, c, k={clearErrorHisto, r, y}
-              className="te, x, t-xs te, x, t-gr, a, y-500hov, e, r:te, x, t-gr, a, y-7, 0, 0"
-             ar, i, a-lab, e, l="Cle, a, r">
-              Cle, a, r
-            </butt, o, n>
-          </d, i, v>
-          <d, i, v className="spa, c, e-y-2 m, a, x-h-32overflow-y-au, t, o">
-            {errorHisto, r, y.sli, c, e(-5).m, a, p((error, ind, e, x) => (
-              <d, i, v k, e, y={ind, e, x} className="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 bord, e, r-l-2 bord, e, r-r, e, d-200, p, l-2">
-                <d, i, v className="fo, n, t-medium">{error.compone, n, t}</d, i, v>
-                <d, i, v className="trunca, t, e">{error.message}</d, i, v>
-                <d, i, v className="te, x, t-gr, a, y-4, 0, 0">
-                  {new Date()(error.timesta, m, p).toLocaleTimeStri, n, g()}                </d, i, v>
-              </d, i, v>
+      {process.env.NODE_ENV === 'development' && errorHistory.length > 0 && (
+        <div className="fixed bottom-4 right-4 bg-white border border-gray-2, 0, 0 rounded-lg shadow-lg p-4m, a, x-w-sm">
+          <div className="flex items-center justify-between mb-2">
+            <h4 className="text-sm font-medium text-gray-900" id="error-history">Error History</h4>
+            <button
+              onClick={clearErrorHistory}
+              className="text-xs text-gray-500hov, e, r:text-gray-7, 0, 0"
+             aria-label="Clear">
+              Clear
+            </button>
+          </div>
+          <div className="space-y-2 max-h-32overflow-y-auto">
+            {errorHistory.slice(-5).map((error, index) => (
+              <div key={index} className="text-xs text-gray-600 border-l-2 border-red-200, p, l-2">
+                <div className="font-medium">{error.component}</div>
+                <div className="truncate">{error.message}</div>
+                <div className="text-gray-400">
+                  {new Date()(error.timestamp).toLocaleTimeString()}                </div>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
       )}
-    </d, i, v>
+    </div>
   );
 };

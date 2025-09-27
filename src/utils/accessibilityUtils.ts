@@ -125,7 +125,7 @@ export const checkColorContrast = (foreground: string, background: string): {
 
   // Calculate relative luminance
   const getLuminance = (r: number, g: number, b: number): number => {
-    const [rs, gs, bs] = [r, g, b].map(c => {
+    const [rs, gs, bs] = [rgb].map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });

@@ -1,76 +1,76 @@
 import { useEffect, useR, e, f, useState } from 'react';
 
-interface UseLazyLoadingOptio, n, s {
-	rootMarg, i, n?: string;
-	thresho, l, d?: number;
-	triggerOn, c, e?: boolean;
+interface UseLazyLoadingOptions {
+	rootMargin?: string;
+	threshold?: number;
+	triggerOnce?: boolean;
 }
 
-export con, s, t useLazyLoadi, n, g = (optio, n, s: UseLazyLoadingOptio, n, s = {}) => {
-	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
-	con, s, t [hasTrigger, e, d, setHasTrigger, e, d] = useState(fal, s, e);
-	con, s, t elementR, e, f = useR, e, f<HTMLElement>(nu, l, l);
+export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {
+	const [isVisible, setIsVisible] = useState(false);
+	const [hasTriggered, setHasTriggered] = useState(false);
+	const elementRef = useRef<HTMLElement>(null);
 
-	con, s, t {
-		rootMarg, i, n = '0, p, x',
-		thresho, l, d = 0.1,
-		triggerOn, c, e = true
-	} = optio, n, s;
+	const {
+		rootMargin = '0, p, x',
+		threshold = 0.1,
+		triggerOnce = true
+	} = options;
 
 	useEffect(() => {
-		con, s, t element = elementR, e, f.curre, n, t;
-		if (!element) retu, r, n;
+		const element = elementRef.current;
+		if (!element) return;
 
-		con, s, t observ, e, r = n, e, w IntersectionObserv, e, r(
-			([ent, r, y]) => {
-				if (ent, r, y.isIntersecti, n, g) {
-					setIsVisib, l, e(true);
-					if (triggerOn, c, e) {
-						setHasTrigger, e, d(true);
-						observ, e, r.unobser, v, e(element);
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setIsVisible(true);
+					if (triggerOnce) {
+						setHasTriggered(true);
+						observer.unobserve(element);
 					}
-				} el, s, e if (!triggerOn, c, e) {
-					setIsVisib, l, e(fal, s, e);
+				} else if (!triggerOnce) {
+					setIsVisible(false);
 				}
 			},
 			{
-				rootMarg, i, n,
-				thresho, l, d
+				rootMargin,
+				threshold
 			}
 		);
 
-		observ, e, r.obser, v, e(element);
+		observer.observe(element);
 
-		retu, r, n () => {
-			observ, e, r.unobser, v, e(element);
+		return () => {
+			observer.unobserve(element);
 		};
-	}, [rootMarg, i, n, thresho, l, d, triggerOn, c, e]);
+	}, [rootMargin, threshold, triggerOnce]);
 
-	retu, r, n {
-		elementR, e, f,
-		isVisib, l, e: triggerOn, c, e ? (hasTrigger, e, d || isVisib, l, e) : isVisib, l, e
+	return {
+		elementRef,
+		isVisible: triggerOnce ? (hasTriggered || isVisible) : isVisible
 	};
 };
 
-export con, s, t useImageLazyLoadi, n, g = (s, r, c: string, placehold, e, r?: string) => {
-	con, s, t [imageS, r, c, setImageS, r, c] = useState(placehold, e, r || '');
-	con, s, t [isLoad, e, d, setIsLoad, e, d] = useState(fal, s, e);
-	con, s, t { elementR, e, f, isVisib, l, e } = useLazyLoadi, n, g();
+export const useImageLazyLoading = (src: string, placehold, e, r?: string) => {
+	const [imageSrc, setImageSrc] = useState(placeholder || '');
+	const [isLoaded, setIsLoaded] = useState(false);
+	const { elementRef, isVisible } = useLazyLoading();
 
 	useEffect(() => {
-		if (isVisib, l, e && s, r, c) {
-			con, s, t i, m, g = n, e, w Ima, g, e();
-			i, m, g.onlo, a, d = () => {
-				setImageS, r, c(s, r, c);
-				setIsLoad, e, d(true);
+		if (isVisible && src) {
+			const img = new Image();
+			img.onload = () => {
+				setImageSrc(src);
+				setIsLoaded(true);
 			};
-			i, m, g.s, r, c = s, r, c;
+			img.src = src;
 		}
-	}, [isVisib, l, e, s, r, c]);
+	}, [isVisible, src]);
 
-	retu, r, n {
-		elementR, e, f,
-		imageS, r, c,
-		isLoad, e, d
+	return {
+		elementRef,
+		imageSrc,
+		isLoaded
 	};
 };

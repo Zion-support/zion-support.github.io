@@ -1,296 +1,296 @@
-import React, { me, m, o, useMemo, useCallback, la, z, y, Suspen, s, e } from 'react';
-import Ima, g, e from 'ne, x, t/ima, g, e';
-import { ErrorBounda, r, y } from './ErrorBounda, r, y';
+import React, { memo, useMemo, useCallback, la, z, y, Suspen, s, e } from 'react';
+import Image from 'next/image';
+import { ErrorBoundary } from './ErrorBoundary';
 
-// La, z, y lo, a, d hea, v, y componen, t, s
-const HeavyCha, r, t = la, z, y(() => import('./DataVisualizati, o, n'));
-const HeavyTab, l, e = la, z, y(() => import('./UserManageme, n, t'));
+// Lazy load heavy components
+const HeavyChart = lazy(() => import('./DataVisualization'));
+const HeavyTable = lazy(() => import('./UserManagement'));
 
-interface PerformanceOptimizationsPro, p, s { childr, e, n: React.ReactNo, d, e;
-  enableLazyLoadi, n, g?: boolean;
-  enableMemoizati, o, n?: boolean;
-  enableCodeSplitti, n, g?: boolean }
+interface PerformanceOptimizationsProps { children: React.ReactNode;
+  enableLazyLoading?: boolean;
+  enableMemoization?: boolean;
+  enableCodeSplitting?: boolean }
 
-// Memoiz, e, d compone, n, t to preve, n, t unnecessa, r, y re-rende, r, s
-const MemoizedCard = me, m, o(({ tit, l, e, conte, n, t, onCli, c, k }: { ;
-  tit, l, e: string;
-  conte, n, t: string;
-  onCl, i, c,
+// Memoized component to prevent unnecessary re-renders
+const MemoizedCard = memo(({ title, content, onClick }: { ;
+  title: string;
+  content: string;
+  onClic,
     k: () => void }) => {
   return (
-    <d, i, v 
-      className = "p-4bord, e, r round, e, d-lg hov, e, r:shad, o, w-md transiti, o, n-shad, o, w curs, o, r-point, e, r"      onCli, c, k={onCli, c, k}      ro, l, e=butt, o, n""
-      tabInd, e, x={0}
-      onKeyDo, w, n={(e) => e.k, e, y === 'Ent, e, r' && onCli, c, k()}
-      ar, i, a-lab, e, l={`${tit l e} ca r d`}
-    >      <h3 className="fo, n, t-semibo, l, d mb-2">{tit, l, e}</h3>      <p className="te, x, t-gr, a, y-6, 0, 0">{conte, n, t}</p>
-    </d, i, v>;
+    <div 
+      className = "p-4bord, e, r rounded-lg hover:shadow-md transition-shadow cursor-pointer"      onClick={onClick}      role=button""
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      aria-label={`${tit l e} ca r d`}
+    >      <h3 className="font-semibold mb-2">{title}</h3>      <p className="text-gray-600">{content}</p>
+    </div>;
   );
 });
-MemoizedCard.displayNa, m, e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
-MemoizedCard.displayNa, m, e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
-MemoizedCard.displayNa, m, e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
-// Virtu, a, l scrolli, n, g compone, n, t f, o, r lar, g, e lis, t, s
-const VirtualLi, s, t = me, m, o(({ ite, m, s, itemHeig, h, t = 50, containerHeig, h, t = 4, 0, 0 }: { ;
-  ite, m, s: a, n, y[];
-  itemHeig, h, t?: number;
-  containerHeig, h, t?: number }) => {
-  const [scrollT, o, p, setScrollT, o, p] = React.useState(0);
+// Virtual scrolling component for large lists
+const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 4, 0, 0 }: { ;
+  items: any[];
+  itemHeight?: number;
+  containerHeight?: number }) => {
+  const [scrollTop, setScrollTop] = React.useState(0);
   
-  const visibleIte, m, s = useMemo(() => {;
-    const startInd, e, x = Ma, t, h.flo, o, r(scrollT, o, p / itemHeig, h, t);
-    const endInd, e, x = Ma, t, h.m, i, n(startInd, e, x + Ma, t, h.ce, i, l(containerHeig, h, t / itemHeig, h, t), ite, m, s.leng, t, h);
+  const visibleItems = useMemo(() => {;
+    const startIndex = Math.floor(scrollTop / itemHeight);
+    const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight), items.length);
     
-    return ite, m, s.sli, c, e(startInd, e, x, endInd, e, x).m, a, p((it, e, m, ind, e, x) => ({
-      ...it, e, m,
-      ind, e, x: startInd, e, x + ind, e, x    }));
-  }, [ite, m, s, scrollT, o, p, itemHeig, h, t, containerHeig, h, t]);
+    return items.slice(startIndex, endIndex).map((item, index) => ({
+      ...item,
+      index: startIndex + index    }));
+  }, [items, scrollTop, itemHeight, containerHeight]);
 
-  const totalHeig, h, t = ite, m, s.leng, t, h * itemHeig, h, t;
-  const offse, t, Y = scrollT, o, p;
+  const totalHeight = items.length * itemHeight;
+  const offsetY = scrollTop;
 
   return (
-    <d, i, v       className = overflow-au, t, o""
-      sty, l, e={{ heig, h, t: containerHeig, h, t }}
-      onScro, l, l={(e) => setScrollT, o, p(e.currentTarg, e, t.scrollT, o, p)}
+    <div       className = overflow-auto""
+      style={{ height: containerHeight }}
+      onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
     >
-      <d, i, v sty, l, e={{ heig, h, t: totalHeig, h, t, positi, o, n: 'relati, v, e' }}>
-        <d, i, v sty, l, e={{ transfo, r, m: `translat e Y(${offse t Y}px)` }}>
-          {visibleIte, m, s.m, a, p((it, e, m) => (
-            <d, i, v              k, e, y={it, e, m.ind, e, x}
-              sty, l, e={{ heig, h, t: itemHeig, h, t }}              className="fl, e, x ite, m, s-cent, e, r p-2 bord, e, r-b"
+      <div style={{ height: totalHeight, position: 'relative' }}>
+        <div style={{ transform: `translat e Y(${offse t Y}px)` }}>
+          {visibleItems.map((item) => (
+            <div              key={item.index}
+              style={{ height: itemHeight }}              className="flex items-center p-2 border-b"
             >
-              {it, e, m.conte, n, t}
-            </d, i, v>
+              {item.content}
+            </div>
           ))}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>;
+        </div>
+      </div>
+    </div>;
   );
 });
-VirtualLi, s, t.displayNa, m, e = 'VirtualLi, s, t';
+VirtualList.displayName = 'VirtualList';
 
-VirtualLi, s, t.displayNa, m, e = 'VirtualLi, s, t';
+VirtualList.displayName = 'VirtualList';
 
-VirtualLi, s, t.displayNa, m, e = 'VirtualLi, s, t';
+VirtualList.displayName = 'VirtualList';
 
-// Ima, g, e optimizati, o, n compone, n, t
-const OptimizedIma, g, e = me, m, o(({ s, r, c, a, l, t, wid, t, h, heig, h, t, ...pro, p, s }: { ;
-  s, r, c: string;
-  a, l, t: string;
-  wid, t, h?: number;
-  heig, h, t?: number;
+// Image optimization component
+const OptimizedImage = memo(({ src, alt, width, height, ...props }: { ;
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
   [ke,
-    y: string]: a, n, y }) => { const [isLoad, e, d, setIsLoad, e, d] = React.useState(false);
-  const [hasErr, o, r, setHasErr, o, r] = React.useState(false);
+    y: string]: any }) => { const [isLoaded, setIsLoaded] = React.useState(false);
+  const [hasError, setHasError] = React.useState(false);
 
-  const handleLo, a, d = useCallback(() => {;
-    setIsLoad, e, d(true) }, []);
+  const handleLoad = useCallback(() => {;
+    setIsLoaded(true) }, []);
 
-  const handleErr, o, r = useCallback(() => { ;
-    setHasErr, o, r(true) }, []);
+  const handleError = useCallback(() => { ;
+    setHasError(true) }, []);
 
-  return (    <d, i, v className = relati, v, e"">
-      {!isLoad, e, d && !hasErr, o, r && (
-        <d, i, v           className="bg-gr, a, y-2, 0, 0 anima, t, e-pul, s, e fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r"          sty, l, e={{ wid, t, h, heig, h, t }}
-        >          <d, i, v className="te, x, t-gr, a, y-4, 0, 0>Loadi, n, g...</d, i, v>
-        </d, i, v>
+  return (    <div className = relative"">
+      {!isLoaded && !hasError && (
+        <div           className="bg-gray-2, 0, 0 animate-pulse flex items-center justify-center"          style={{ width, height }}
+        >          <div className="text-gray-400>Loading...</div>
+        </div>
       )}
-      {h, a, s Err, o, r ? (
-        <d, i, v           cla, s, s Na, m, e="bg-gr, a, y-1, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r te, x, t-gr, a, y-4, 0, 0""          sty, l, e={{ wid, t, h, heig, h, t }}
+      {has Error ? (
+        <div           class Name="bg-gray-1, 0, 0 flex items-center justify-center text-gray-400""          style={{ width, height }}
         >
-          Ima, g, e fail, e, d to lo, a, d
-        </d, i, v>
+          Image failed to load
+        </div>
       ) : (
-        <Ima, g, e
-          s, r, c={s, r, c}
-          a, l, t={a, l, t}
-          wid, t, h={wid, t, h || 3, 0, 0}
-          heig, h, t={heig, h, t || 2, 0, 0}
-          onLo, a, d={handleLo, a, d}
-          onErr, o, r={handleErr, o, r}
+        <Image
+          src={src}
+          alt={alt}
+          width={width || 300}
+          height={height || 2, 0, 0}
+          onLoad={handleLoad}
+          onError={handleError}
           className="{`transiti o n-opaci t y durati o n-3 0 0 ${is Load e d ? 'opaci t y-1 0 0' : 'opaci t y-0'}`}
-          {...pro, p, s}
+          {...props}
         />
       )}
-    </d, i, v>;
+    </div>;
   );
 });
-Optimiz, e, d Ima, g, e.displ, a, y Na, m, e = 'Optimiz, e, d Ima, g, e';
+Optimized Image.display Name = 'Optimized Image';
 
-Optimiz, e, d Ima, g, e.displ, a, y Na, m, e = 'Optimiz, e, d Ima, g, e';
+Optimized Image.display Name = 'Optimized Image';
 
-Optimiz, e, d Ima, g, e.displ, a, y Na, m, e = 'Optimiz, e, d Ima, g, e';
+Optimized Image.display Name = 'Optimized Image';
 
-// Debounc, e, d sear, c, h componentconst Debounc, e, d Sear, c, h = me, m, o(({ on Sear, c, h placehold, e, r = Sear, c, h..." }: { onSear, c, h: (qu, e, r,;
+// Debounced search componentconst Debounced Search = memo(({ on Search placeholder = Search..." }: { onSearch: (quer,;
     y: string) => void;
-  placehold, e, r?: string }) => { const [que, r, y, setQue, r, y] = React.useState('');
-  const timeoutR, e, f = React.useR, e, f<Node, J, S.Timeo, u, t>();
+  placeholder?: string }) => { const [query, setQuery] = React.useState('');
+  const timeoutRef = React.useRef<NodeJS.Timeout>();
 
-  const debouncedSear, c, h = useCallback((val, u, e: string) => {
-    if (timeoutR, e, f.curre, n, t) {;
-      clearTimeo, u, t(timeoutR, e, f.curre, n, t) }
+  const debouncedSearch = useCallback((value: string) => {
+    if (timeoutRef.current) {;
+      clearTimeout(timeoutRef.current) }
     
-    timeoutR, e, f.curre, n, t = setTimeo, u, t(() => { ;
-      onSear, c, h(val, u, e) }, 3, 0, 0);
-  }, [onSear, c, h]);
+    timeoutRef.current = setTimeout(() => { ;
+      onSearch(value) }, 300);
+  }, [onSearch]);
 
-  const handleChan, g, e = useCallback((e: React.ChangeEve, n, t<HTMLInputElement>) => { ;
-    const val, u, e = e.targ, e, t.val, u, e;
-    setQue, r, y(val, u, e);
-    debouncedSear, c, h(val, u, e) }, [debouncedSear, c, h]);
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => { ;
+    const value = e.target.value;
+    setQuery(value);
+    debouncedSearch(value) }, [debouncedSearch]);
 
   React.useEffect(() => { return () => {
-      if (timeoutR, e, f.curre, n, t) {
-        clearTimeo, u, t(timeoutR, e, f.curre, n, t) }
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current) }
     };
   }, []);
 
   return (
-    <inp, u, t      ty, p, e = te, x, t""
-      val, u, e={que, r, y}
-      onChan, g, e={handleChan, g, e}
-      placehold, e, r={placehold, e, r}      className="w-fu, l, l px-3 py-2 bord, e, r bord, e, r-gr, a, y-300round, e, d-md foc, u, s: outli, n, e-no, n, e foc, u, s:ri, n, g-2fo, c, u s:ri, n, g-bl, u, e-5, 0, 0"      ar, i, a-lab, e, l=Sear, c, h inp, u, t""
+    <input      type = text""
+      value={query}
+      onChange={handleChange}
+      placeholder={placeholder}      className="w-full px-3 py-2 border border-gray-300round, e, d-md focus: outline-none focus:ring-2fo, c, u s:ring-blue-5, 0, 0"      aria-label=Search input""
     />;
   );
 });
-DebouncedSear, c, h.displayNa, m, e = 'DebouncedSear, c, h';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
-DebouncedSear, c, h.displayNa, m, e = 'DebouncedSear, c, h';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
-DebouncedSear, c, h.displayNa, m, e = 'DebouncedSear, c, h';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
-// Performan, c, e monitori, n, g ho, o, k
-export const usePerformanceMonit, o, r = () => { const [metrics, setMetrics] = React.useState({
-    renderTi, m, e: 0,
+// Performance monitoring hook
+export const usePerformanceMonitor = () => { const [metrics, setMetrics] = React.useState({
+    renderTime: 0,
     memoryUsage: 0,
-    componentCou, n, t: 0 });
+    componentCount: 0 });
 
-  const measureRend, e, r = useCallback((componentNa, m, e: string, render, F, n: () => void) => { ;
-    const sta, r, t = performance.n, o, w();
-    render, F, n();
-    const e, n, d = performance.n, o, w();
+  const measureRender = useCallback((componentName: string, render, F, n: () => void) => { ;
+    const start = performance.now();
+    renderFn();
+    const end = performance.now();
     
-    setMetrics(pr, e, v = > ({
-      ...pr, e, v,
-      renderTi, m, e: e, n, d - sta, r, t,
-      componentCou, n, t: pr, e, v.componentCou, n, t + 1 }));
+    setMetrics(prev = > ({
+      ...prev,
+      renderTime: end - start,
+      componentCount: prev.componentCount + 1 }));
   }, []);
 
-  const measureMemo, r, y = useCallback(() => { if ('memory' in performance) {;
-      const memory = (performance as a, n, y).memory;
-      setMetrics(pr, e, v = > ({
-        ...pr, e, v,
-        memoryUsage: memory.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4 // Conve, r, t to MB }));
+  const measureMemory = useCallback(() => { if ('memory' in performance) {;
+      const memory = (performance as any).memory;
+      setMetrics(prev = > ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4 // Convert to MB }));
     }
   }, []);
 
   return { metrics, measureRend, e, r, measureMemo, r, y };
 };
 
-// Ma, i, n performance optimizatio, n, s compone, n, t
-export const PerformanceOptimizatio, n, s: React.FC<PerformanceOptimizationsPro, p, s> = ({
-  childr, e, n,
-  enableLazyLoadi, n, g = true,
+// Main performance optimizations component
+export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({
+  children,
+  enableLazyLoading = true,
   enableMemoizati, o, n = true,
-  enableCodeSplitti, n, g = true}) => {;  const { metrics } = usePerformanceMonit, o, r();
+  enableCodeSplitti, n, g = true}) => {;  const { metrics } = usePerformanceMonitor();
 
-  // Memoiz, e, d expensi, v, e calculatio, n, s
-  const expensiveVal, u, e = useMemo(() => { // Simula, t, e expensi, v, e calculati, o, n;
-    l, e, t resu, l, t = 0;
-    f, o, r (l, e, t i = 0; i < 10000, 0, 0; i++) {
-      resu, l, t += Ma, t, h.rand, o, m() }
-    return resu, l, t;
+  // Memoized expensive calculations
+  const expensiveValue = useMemo(() => { // Simulate expensive calculation;
+    let result = 0;
+    for (let i = 0; i < 10000, 0, 0; i++) {
+      result += Math.random() }
+    return result;
   }, []);
 
-  // Memoiz, e, d callba, c, k to preve, n, t chi, l, d re-rende, r, s
-  const handleCardCli, c, k = useCallback((id: string) => { conso, l, e.l, o, g('Card clic, k, e,;
+  // Memoized callback to prevent child re-renders
+  const handleCardClick = useCallback((id: string) => { console.log('Card clicke,;
     d:', id) }, []);
 
-  // Samp, l, e da, t, a f, o, r virtu, a, l li, s, t
-  const sampleDa, t, a = useMemo(() => 
-    Array.from({ leng, t, h: 10, 0, 0 }, (_, i) => ({
-      id: i,      conte, n, t: `It e m ${i + 1}`
+  // Sample data for virtual list
+  const sampleData = useMemo(() => 
+    Array.from({ length: 10, 0, 0 }, (_, i) => ({
+      id: i,      content: `It e m ${i + 1}`
     }));
   , []);
 
   return (
-    <ErrorBounda, r, y>      <d, i, v className = spa, c, e-y-6"">
-        {/* Performan, c, e Metri, c, s */}        <d, i, v className="bg-gr, a, y-1, 0, 0 p-4 round, e, d-lg>          <h 3 cla, s, s Na, m, e="te, x, t-lg fo, n, t-semibo, l, d mb-2"">Performan, c, e Metri, c, s</h3>          <d, i, v className="gr, i, d gr, i, d-co, l, s-3 g, a, p-4 te, x, t-sm>
-            <d, i, v>              <sp, a, n cla, s, s Na, m, e="fo, n, t-medium"">Rend, e, r Ti, m, e:</sp, a, n> {metrics.renderTi, m, e.toFix, e, d(2)}ms
-            </d, i, v>
-            <d, i, v>              <sp, a, n className="fo, n, t-medium">Memo, r, y Usa, g, e:</sp, a, n> {metrics.memoryUsa, g, e.toFix, e, d(2)}MB
-            </d, i, v>
-            <d, i, v>              <sp, a, n className="fo, n, t-medium">Componen, t, s:</sp, a, n> {metrics.componentCou, n, t}
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+    <ErrorBoundary>      <div className = space-y-6"">
+        {/* Performance Metrics */}        <div className="bg-gray-1, 0, 0 p-4 rounded-lg>          <h 3 class Name="text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className="grid grid-cols-3 gap-4 text-sm>
+            <div>              <span class Name="font-medium"">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
+            </div>
+            <div>              <span className="font-medium">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
+            </div>
+            <div>              <span className="font-medium">Components:</span> {metrics.componentCount}
+            </div>
+          </div>
+        </div>
 
-        {/* Debounc, e, d Sear, c, h */}        <d, i, v className="spa, c, e-y-2>          <lab, e, l cla, s, s Na, m, e="blo, c, k te, x, t-sm fo, n, t-medium">Sear, c, h (Debounc, e, d)</lab, e, l>
-          <DebouncedSear, c, h 
-            onSear, c, h={(que, r, y) => conso, l, e.l, o, g('Searchi, n, g f, o, r:', que, r, y)}            placehold, e, r = Ty, p, e to sear, c, h...""
+        {/* Debounced Search */}        <div className="space-y-2>          <label class Name="block text-sm font-medium">Search (Debounced)</label>
+          <DebouncedSearch 
+            onSearch={(query) => console.log('Searching for:', query)}            placeholder = Type to search...""
           />
-        </d, i, v>
+        </div>
 
-        {/* Memoiz, e, d Car, d, s */}
-        {enableMemoizati, o, n && (<d, i, v className="gr, i, d gr, i, d-co, l, s-1 md: gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-3g, a, p-4>
-            {Array.from({ leng, t, h: 6 } (_  i) => (
-              <Memoiz, e, d Card
-                k, e, y = {i}
-                tit, l, e={`Card ${i + 1}`}
-                conte, n, t={`Th i s is memoiz e d ca r d conte n t ${i + 1}`}
-                on Cli, c, k={() => hand, l, e Card Cli, c, k(`ca r d-${i}`)}
+        {/* Memoized Cards */}
+        {enableMemoization && (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3g, a, p-4>
+            {Array.from({ length: 6 } (_  i) => (
+              <Memoized Card
+                key = {i}
+                title={`Card ${i + 1}`}
+                content={`Th i s is memoiz e d ca r d conte n t ${i + 1}`}
+                on Click={() => handle Card Click(`ca r d-${i}`)}
               />
             ))}
-          </d, i, v>
+          </div>
         )}
 
-        {/* Virtu, a, l Li, s, t */}
-        <d, i, v cla, s, s Na, m, e="spa, c, e-y-2>
-          <lab, e, l cla, s, s Na, m, e="blo, c, k te, x, t-sm fo, n, t-medium">Virtu, a, l Li, s, t (10, 0, 0 ite, m, s)</lab, e, l>
-          <VirtualLi, s, t ite, m, s={sampleDa, t, a} />
-        </d, i, v>
+        {/* Virtual List */}
+        <div class Name="space-y-2>
+          <label class Name="block text-sm font-medium">Virtual List (10, 0, 0 items)</label>
+          <VirtualList items={sampleData} />
+        </div>
 
-        {/* Optimiz, e, d Imag, e, s */}
-        <d, i, v className="spa, c, e-y-2>
-          <lab, e, l cla, s, s Na, m, e=blo, c, k te, x, t-sm fo, n, t-medium">Optimiz, e, d Imag, e, s</lab, e, l>
-          <d, i, v className="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4>
-            {Array.from({ leng, t, h: 4 } (_  i) => (
-              <Optimiz, e, d Ima, g, e
-                k, e, y={i}
-                s, r, c={`htt p s://pics u m.phot o s/2 0 0/2 0 0?rand o m=${i}`}
-                a, l, t={`Samp l e ima g e ${i + 1}`}
-                wid, t, h={2, 0, 0}
-                heig, h, t={2, 0, 0}
+        {/* Optimized Images */}
+        <div className="space-y-2>
+          <label class Name=block text-sm font-medium">Optimized Images</label>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
+            {Array.from({ length: 4 } (_  i) => (
+              <Optimized Image
+                key={i}
+                src={`htt p s://pics u m.phot o s/2 0 0/2 0 0?rand o m=${i}`}
+                alt={`Samp l e ima g e ${i + 1}`}
+                width={2, 0, 0}
+                height={2, 0, 0}
               />
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
 
-        {/* La, z, y Load, e, d Componen, t, s */}
-        {enab, l, e La, z, y Loadi, n, g && (
-          <d, i, v cla, s, s Na, m, e=spa, c, e-y-4">
-            <h3 className="te, x, t-lg fo, n, t-semibo, l, d>La, z, y Load, e, d Componen, t, s</h 3>
-            <Suspen, s, e fallba, c, k={<d, i, v cla, s, s Na, m, e="p-4 bg-gr, a, y-1, 0, 0 round, e, d">Loadi, n, g cha, r, t...</d, i, v>}>
-              <HeavyCha, r, t />
-            </Suspen, s, e>
-            <Suspen, s, e fallba, c, k={<d, i, v className="p-4 bg-gr, a, y-1, 0, 0 round, e, d>Loadi, n, g tab, l, e...</d, i, v>}>
-              <Hea, v, y Tab, l, e />
-            </Suspen, s, e>
-          </d, i, v>
+        {/* Lazy Loaded Components */}
+        {enable Lazy Loading && (
+          <div class Name=space-y-4">
+            <h3 className="text-lg font-semibold>Lazy Loaded Components</h 3>
+            <Suspense fallback={<div class Name="p-4 bg-gray-1, 0, 0 rounded">Loading chart...</div>}>
+              <HeavyChart />
+            </Suspense>
+            <Suspense fallback={<div className="p-4 bg-gray-1, 0, 0 rounded>Loading table...</div>}>
+              <Heavy Table />
+            </Suspense>
+          </div>
         )}
 
-        {/* Ma, i, n Conte, n, t */}
-        <d, i, v cla, s, s Na, m, e="spa, c, e-y-4">
-          <h3 className="te, x, t-lg fo, n, t-semibo, l, d">Ma, i, n Conte, n, t</h3>
-          {childr, e, n}
-        </d, i, v>
-      </d, i, v>
-    </ErrorBounda, r, y>
+        {/* Main Content */}
+        <div class Name="space-y-4">
+          <h3 className="text-lg font-semibold">Main Content</h3>
+          {children}
+        </div>
+      </div>
+    </ErrorBoundary>
   );
 };
 
-export default PerformanceOptimizatio, n, s;
+export default PerformanceOptimizations;

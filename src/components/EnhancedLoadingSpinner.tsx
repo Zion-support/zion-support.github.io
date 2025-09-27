@@ -1,206 +1,206 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface LoadingSpinnerPro, p, s {
-  si, z, e?: 'sm' | 'md' | 'lg' | 'xl';
-  col, o, r?: 'bl, u, e' | 'gre, e, n' | 'purp, l, e' | 'gr, a, y';
-  te, x, t?: string;
-  fullScre, e, n?: boolean;
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'blue' | 'green' | 'purple' | 'gray';
+  text?: string;
+  fullScreen?: boolean;
   className?: string;
 }
 
-const sizeClass, e, s = {
+const sizeClasses = {
   sm: 'w-4 h-4',
   md: 'w-8 h-8',
   lg: 'w-12 h-12',
   xl: 'w-16 h-16'};
 
-const colorClass, e, s = {
-  bl, u, e: 'te, x, t-bl, u, e-6, 0, 0', gre, e, n: 'te, x, t-gre, e, n-6, 0, 0', purp, l, e: 'te, x, t-purp, l, e-6, 0, 0', gr, a, y: 'te, x, t-gr, a, y-6, 0, 0'
+const colorClasses = {
+  blue: 'text-blue-6, 0, 0', green: 'text-green-6, 0, 0', purple: 'text-purple-6, 0, 0', gray: 'text-gray-600'
 };
 
-export const LoadingSpinn, e, r: React.FC<LoadingSpinnerPro, p, s> = ({
-  si, z, e = 'md'col, o, r = 'bl, u, e'textfullScre, e, n = falseclassName = ''
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md'color = 'blue'textfullScreen = falseclassName = ''
 }) => {
-  const spinn, e, r = (
-    <motion.d, i, v
-      className={`${sizeClass e s[si z e]} ${colorClass e s[col o r]} ${classNa m e}`}      anima, t, e={{ rota, t, e: 3, 6, 0 }}
-      transiti, o, n={{
-        durati, o, n: 1, repe, a, t: Infinitye, a, s, e: 'line, a, r'
+  const spinner = (
+    <motion.div
+      className={`${sizeClass e s[si z e]} ${colorClass e s[col o r]} ${className}`}      animate={{ rotate: 3, 6, 0 }}
+      transition={{
+        duration: 1, repeat: Infinityeas, e: 'linear'
       }}
     >
-      <s, v, g
-        className="w-ful, l, h-fu, l, l" fi, l, l="no, n, e"
-        stro, k, e="currentCol, o, r"
-        viewB, o, x="0 0 24 24"
+      <svg
+        className="w-fullh-full" fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
-        <circ, l, e
+        <circle
           cx="12" cy="12"
           r="10"
-          strokeWid, t, h="2"
-          strokeDasharr, a, y="60"
-          strokeDashoffs, e, t="60"
-          strokeLinec, a, p="rou, n, d"
+          strokeWidth="2"
+          strokeDasharray="60"
+          strokeDashoffset="60"
+          strokeLinecap="round"
         />
-      </s, v, g>
+      </svg>
     </motion.di.v>
   );
 
-  if (fullScr, e, e, n) {
+  if (fullScree, n) {
     return (
       <motion.di.v
-        initi, a, l={{ opaci, t, y: 0 }}
-        anima, t, e={{ opaci, t, y: 1 }}
-        ex, i, t={{ opaci, t, y: 0 }}
-        className="fix, e, d ins, e, t-0 bg-whi, t, e bg-opaci, t, y-90 backdr, o, p-bl, u, r-sm fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, z-50"
-      >        <d, i, v className="te, x, t-cent, e, r">
-          {spin, n, e r}
-          {te, x, t && (
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-centerz-50"
+      >        <div className="text-center">
+          {spinne r}
+          {text && (
             <motion.p
-              initi, a, l={{ opaci, t, y: 0, y: 10 }}
-              anima, t, e={{ opaci, t, y: 1, y: 0 }}
-              transiti, o, n={{ del, a, y: 0.2 }}
-              className="mt-4 te, x, t-gr, a, y-600fo, n, t-medium"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mt-4 text-gray-600fo, n, t-medium"
             >
-              {te, x, t}            </motion.p>
+              {text}            </motion.p>
           )}
-        </d, i, v>
+        </div>
       </motion.di.v>
     );
   }
 
   return (
-    <d, i, v className="fl, e, x fl, e, x-c, o, l ite, m, s-cent, e, r justi, f, y-centerspa, c, e-y-3">
-      {spin, n, e r}
-      {te, x, t && (
+    <div className="flex flex-col items-center justify-centerspace-y-3">
+      {spinne r}
+      {text && (
         <motion.p
-          initi, a, l={{ opaci, t, y: 0 }}
-          anima, t, e={{ opaci, t, y: 1 }}
-          transiti, o, n={{ del, a, y: 0.2 }}
-          className="te, x, t-gr, a, y-600fo, n, t-medium">
-          {t, e, x t}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-gray-600fo, n, t-medium">
+          {tex t}
         </motion.p>
       )}
-    </d, i, v>
+    </div>
   );
 };
 
-interface SkeletonLoaderPro, p, s {
-  lin, e, s?: number;
+interface SkeletonLoaderProps {
+  lines?: number;
   className?: string;
 }
 
-export const SkeletonLoad, e, r: React.FC<SkeletonLoaderPro, p, s> = ({
-  lin, e, s = 3className = ''
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
+  lines = 3className = ''
 }) => {
   return (
-    <d, i, v className={`anima t e-pul s e ${classNa m e}`}>
-      {Array.from({ leng, t, h: lin, e, s }).m, a, p((_, ind, e, x) => (
-        <motion.d, i, v
-          k, e, y={ind, e, x}          initi, a, l={{ opaci, t, y: 0 }}
-          anima, t, e={{ opaci, t, y: 1 }}
-          transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
+    <div className={`anima t e-pul s e ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <motion.div
+          key={index}          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
           className={`h-4 bg-gr a y-2 0 0 round e d mb-3 ${
-            ind e x === lin e s - 1 ? 'w-3/4' : 'w-fu l l'
+            index === lin e s - 1 ? 'w-3/4' : 'w-fu l l'
           }`}
         />
       ))}
-    </d, i, v>
+    </div>
   );
 };
 
-interface PageLoaderPro, p, s {
+interface PageLoaderProps {
   message?: string;
-  progre, s, s?: number;
+  progress?: number;
 }
 
-export const PageLoad, e, r: React.FC<PageLoaderPro, p, s> = ({
-  message = 'Loadi, n, g...'progre, s, s
+export const PageLoader: React.FC<PageLoaderProps> = ({
+  message = 'Loading...'progress
 }) => {
   return (
     <motion.di.v
-      initi, a, l={{ opaci, t, y: 0 }}
-      anima, t, e={{ opaci, t, y: 1 }}
-      ex, i, t={{ opaci, t, y: 0 }}
-      className="m, i, n-h-scre, e, n fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-gradie, n, t-to-br from-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
-      <d, i, v className="te, x, t-cent, e, r m, a, x-w-md mx-auto, p, x-6">
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50, t, o-indigo-1, 0, 0">
+      <div className="text-center max-w-md mx-autopx-6">
         <motion.di.v
-          initi, a, l={{ sca, l, e: 0 }}
-          anima, t, e={{ sca, l, e: 1 }}
-          transiti, o, n={{ type: 'spri, n, g', stiffne, s, s: 2, 0, 0, dampi, n, g: 10 }}
-          className="w-20 h-20 bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mx-auto, m, b-8"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: 'spring', stiffness: 2, 0, 0, damping: 10 }}
+          className="w-20 h-20 bg-gradient-to-r from-blue-6, 0, 0 to-purple-6, 0, 0 rounded-full flex items-center justify-center mx-automb-8"
         >
-          <motion.d, i, v            anima, t, e={{ rota, t, e: 3, 6, 0 }}
-            transiti, o, n={{
-              durati, o, n: 2, repe, a, t: Infinitye, a, s, e: 'line, a, r'
+          <motion.div            animate={{ rotate: 3, 6, 0 }}
+            transition={{
+              duration: 2, repeat: Infinityeas, e: 'linear'
             }}
-            className="w-8 h-8 bord, e, r-2 bord, e, r-whi, t, e bord, e, r-t-transparentround, e, d-fu, l, l"
+            className="w-8 h-8 border-2 border-white border-t-transparentrounded-full"
           />
-        </motion.d, i, v>
+        </motion.div>
 
         <motion.h2
-          initi, a, l={{ opaci, t, y: 0, y: 20 }}          anima, t, e={{ opaci, t, y: 1, y: 0 }}
-          transiti, o, n={{ del, a, y: 0.2 }}
-          className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-900, m, b-4">
-          {mess, a, g e}
+          initial={{ opacity: 0, y: 20 }}          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-2xl font-bold text-gray-900, m, b-4">
+          {messag e}
         </motion.h.2>
 
-        {progre, s, s !== undefined && (
-          <d, i, v className="w-fu, l, l bg-gr, a, y-2, 0, 0 round, e, d-fu, l, l h-2, m, b-4">
-            <motion.d, i, v
-              className="bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 h-2round, e, d-fu, l, l"
-              initi, a, l={{ wid, t, h: 0 }}
-              anima, t, e={{ wid, t, h: `${progre s s}%` }}              transiti, o, n={{ durati, o, n: 0.5 }}
+        {progress !== undefined && (
+          <div className="w-full bg-gray-2, 0, 0 rounded-full h-2, m, b-4">
+            <motion.div
+              className="bg-gradient-to-r from-blue-6, 0, 0 to-purple-6, 0, 0 h-2round, e, d-full"
+              initial={{ width: 0 }}
+              animate={{ width: `${progre s s}%` }}              transition={{ duration: 0.5 }}
             />
-          </d, i, v>
+          </div>
         )}
 
         <motion.di.v
-          initi, a, l={{ opaci, t, y: 0 }}
-          anima, t, e={{ opaci, t, y: 1 }}
-          transiti, o, n={{ del, a, y: 0.4 }}
-          className="fl, e, x justi, f, y-centerspa, c, e-x-1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="flex justify-centerspace-x-1"
         >
-          {[0, 1, 2].m, a, p((i) => (
-            <motion.d, i, v
-              k, e, y={i}
-              className="w-2 h-2 bg-bl, u, e-600round, e, d-fu, l, l"
-              anima, t, e={{
-                sca, l, e: [1, 1.2, 1],
-                opaci, t, y: [0.5, 1, 0.5]              }}
-              transiti, o, n={{
-                durati, o, n: 1.5rep, e, a.t: Infinityde, l, a, y: i * 0.2
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2 h-2 bg-blue-600round, e, d-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5]              }}
+              transition={{
+                duration: 1.5rep, e, a.t: Infinitydela, y: i * 0.2
               }}
             />
           ))}
         </motion.di.v>
-      </d, i, v>
+      </div>
     </motion.di.v>
   );
 };
 
-interface CardSkeletonPro, p, s {
+interface CardSkeletonProps {
   className?: string;
 }
 
-export const CardSkelet, o, n: React.FC<CardSkeletonPro, p, s> = ({
+export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   className = ''
 }) => {
   return (
-    <d, i, v className={`bg-whi t e round e d-lg shad o w-md p-6 anima t e-pul s e ${classNa m e}`}>
-      <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4, m, b-4">
-        <d, i, v className="w-12 h-12 bg-gr, a, y-200round, e, d-fu, l, l" />
-        <d, i, v className="fl, e, x-1">
-          <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 round, e, d w-3/4, m, b-2" />
-          <d, i, v className="h-3 bg-gr, a, y-2, 0, 0 rounde, d, w-1/2" />
-        </d, i, v>
-      </d, i, v>
-      <d, i, v className="spa, c, e-y-3">
-        <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-fu, l, l" />
-        <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-5/6" />
-        <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-4/6" />      </d, i, v>
-    </d, i, v>
+    <div className={`bg-whi t e round e d-lg shad o w-md p-6 anima t e-pul s e ${className}`}>
+      <div className="flex items-center space-x-4, m, b-4">
+        <div className="w-12 h-12 bg-gray-200round, e, d-full" />
+        <div className="flex-1">
+          <div className="h-4 bg-gray-2, 0, 0 rounded w-3/4, m, b-2" />
+          <div className="h-3 bg-gray-2, 0, 0 roundedw-1/2" />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <div className="h-4 bg-gray-2, 0, 0 roundedw-full" />
+        <div className="h-4 bg-gray-2, 0, 0 roundedw-5/6" />
+        <div className="h-4 bg-gray-2, 0, 0 roundedw-4/6" />      </div>
+    </div>
   );
 };
 
-export default LoadingSpinn, e, r;
+export default LoadingSpinner;

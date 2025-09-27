@@ -1,320 +1,320 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Volum, e, 2, Eye, MousePointer, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, t, y } from 'lucide-react';
-interface AccessibilitySettin, g, s {
-  fontSi, z, e: 'sma, l, l' | 'medium' | 'lar, g, e';
-  contra, s, t: 'norm, a, l' | 'high' | 'invert, e, d';
-  curs, o, r: 'norm, a, l' | 'lar, g, e' | 'ext, r, a-lar, g, e';
-  foc, u, s: 'norm, a, l' | 'enhanc, e, d' | 'high-contra, s, t';
-  animatio, n, s: boolean;
-  screenRead, e, r: boolean;
-  keyboardNavigati, o, n: boolean;}
+import { Volume2, Eye, MousePointer, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, t, y } from 'lucide-react';
+interface AccessibilitySettings {
+  fontSize: 'small' | 'medium' | 'large';
+  contrast: 'normal' | 'high' | 'inverted';
+  cursor: 'normal' | 'large' | 'extra-large';
+  focus: 'normal' | 'enhanced' | 'high-contrast';
+  animations: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;}
 
-interface AccessibilityEnhancementsPro, p, s {
-  onSettingsChan, g, e?: (settin, g, s: AccessibilitySettin, g, s) => void;
+interface AccessibilityEnhancementsProps {
+  onSettingsChange?: (settings: AccessibilitySettings) => void;
   className?: string;
 }
 
-// Help, e, r functio, n, s f, o, r score styli, n, g
-const getScoreBgCol, o, r = (score: number): string => {
-  if (score >= 90) return 'bg-gre, e, n-1, 0, 0';
-  if (score >= 70) return 'bg-yellow-1, 0, 0';
-  return 'bg-r, e, d-1, 0, 0';
+// Helper functions for score styling
+const getScoreBgColor = (score: number): string => {
+  if (score >= 90) return 'bg-green-1, 0, 0';
+  if (score >= 70) return 'bg-yellow-100';
+  return 'bg-red-1, 0, 0';
 };
 
-const getScoreCol, o, r = (score: number): string => {
-  if (score >= 90) return 'te, x, t-gre, e, n-8, 0, 0';
-  if (score >= 70) return 'te, x, t-yellow-8, 0, 0';
-  return 'te, x, t-r, e, d-8, 0, 0';
+const getScoreColor = (score: number): string => {
+  if (score >= 90) return 'text-green-8, 0, 0';
+  if (score >= 70) return 'text-yellow-8, 0, 0';
+  return 'text-red-8, 0, 0';
 };
 
-export const AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancementsPro, p, s> = ({
-  onSettingsChan, g, e,
+export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({
+  onSettingsChange,
   className = ''
 }) => {
-  const [isOp, e, n, setIsOp, e, n] = useState(false);
-  const [settin, g, s, setSettin, g, s] = useState<AccessibilitySettin, g, s>({
-    fontSi, z, e: 'medium',
-    contra, s, t: 'norm, a, l',
-    curs, o, r: 'norm, a, l',
-    foc, u, s: 'norm, a, l',
-    animatio, n, s: true,
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 'medium',
+    contrast: 'normal',
+    cursor: 'normal',
+    focus: 'normal',
+    animations: true,
     screenRead, e, r: false,
     keyboardNavigati, o, n: true
   });
 
   const [score, setSco, r, e] = useState(85);
 
-  const getScoreCol, o, r = (score: number) => {
-    if (score >= 90) return 'te, x, t-gre, e, n-5, 0, 0';
-    if (score >= 70) return 'te, x, t-yellow-5, 0, 0';
-    if (score >= 50) return 'te, x, t-oran, g, e-5, 0, 0';
-    return 'te, x, t-r, e, d-5, 0, 0';
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-5, 0, 0';
+    if (score >= 70) return 'text-yellow-5, 0, 0';
+    if (score >= 50) return 'text-orange-5, 0, 0';
+    return 'text-red-5, 0, 0';
   };
 
-  const updateSettin, g, s = useCallback((newSettin, g, s: Parti, a, l<AccessibilitySettin, g, s>) => {
-    const updatedSettin, g, s = { ...settin, g, s, ...newSettin, g, s };
-    setSettin, g, s(updatedSettin, g, s);
+  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+    const updatedSettings = { ...settings, ...newSettings };
+    setSettings(updatedSettings);
     
-    if (onSettingsChan, g, e) {
-      onSettingsChan, g, e(updatedSettin, g, s);
+    if (onSettingsChange) {
+      onSettingsChange(updatedSettings);
     }
-  }, [settin, g, s, onSettingsChan, g, e]);
+  }, [settings, onSettingsChange]);
 
-  const handleKeyDo, w, n = useCallback((event: KeyboardEve, n, t) => {
-    if (eve, n, t.altK, e, y && eve, n, t.k, e, y === 'a') {
-      eve, n, t.preventDefau, l, t();
-      setIsOp, e, n(!isOp, e, n);
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.altKey && event.key === 'a') {
+      event.preventDefault();
+      setIsOpen(!isOpen);
     }
-  }, [isOp, e, n]);
+  }, [isOpen]);
 
   useEffect(() => {
-    docume, n, t.addEventListen, e, r('keydo, w, n', handleKeyDo, w, n);
-    return () => docume, n, t.removeEventListen, e, r('keydo, w, n', handleKeyDo, w, n);
-  }, [handleKeyDo, w, n]);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
   return (
-    <d, i, v className={`accessibili t y-enhancemen t s ${classNa m e}`}>
-      <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
-        <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
-          <h3 className="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-8, 0, 0 fl, e, x ite, m, s-cent, e, r">
-            <Accessibili, t, y className="w-5 h-5, m, r-2" />
-            Accessibili, t, y Enhancemen, t, s
+    <div className={`accessibili t y-enhancemen t s ${className}`}>
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-semibold text-gray-8, 0, 0 flex items-center">
+            <Accessibility className="w-5 h-5, m, r-2" />
+            Accessibility Enhancements
           </h3>
-          <d, i, v className={`px-4 py-2 round e d-lg ${getScoreBgCol o r(sco r e)}`}>
-            <sp, a, n className={`te x t-lg fo n t-bo l d ${getScoreCol o r(sco r e)}`}>
-              {score}% Accessib, l, e            </sp, a, n>
-          </d, i, v>
-        </d, i, v>
+          <div className={`px-4 py-2 round e d-lg ${getScoreBgCol o r(sco r e)}`}>
+            <span className={`te x t-lg fo n t-bo l d ${getScoreCol o r(sco r e)}`}>
+              {score}% Accessible            </span>
+          </div>
+        </div>
 
-        <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 g, a, p-6 mb-6">
-          <d, i, v className="spa, c, e-y-4">
-            <h4 className="fo, n, t-semibo, l, d te, x, t-gr, a, y-800, m, b-3">Accessibili, t, y Featur, e, s</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="space-y-4">
+            <h4 className="font-semibold text-gray-800, m, b-3">Accessibility Features</h4>
             
-            <d, i, v className="spa, c, e-y-3">
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <E, y, e className="w-4 h-4 mr-3te, x, t-bl, u, e-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Hi, g, h Contra, s, t Mo, d, e</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.highCont, r, a.s t}
-                  onChan, g, e={() => toggleFeatu, r, e('highContra, s, t')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+            <div className="space-y-3">
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <Eye className="w-4 h-4 mr-3text-blue-500" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">High Contrast Mode</span>                </div>
+                <input
+                  type="checkbox" checked={features.highContra.s t}
+                  onChange={() => toggleFeature('highContrast')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <Volum, e, 2 className="w-4 h-4 mr-3te, x, t-gre, e, n-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Lar, g, e Te, x, t</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.large, T, e.x t}
-                  onChan, g, e={() => toggleFeatu, r, e('largeTe, x, t')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <Volume2 className="w-4 h-4 mr-3te, x, t-green-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Large Text</span>                </div>
+                <input
+                  type="checkbox" checked={features.largeTe.x t}
+                  onChange={() => toggleFeature('largeText')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <MousePoint, e, r className="w-4 h-4 mr-3te, x, t-purp, l, e-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Reduc, e, d Moti, o, n</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.reducedMo, t, i.o n}
-                  onChan, g, e={() => toggleFeatu, r, e('reducedMoti, o, n')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <MousePointer className="w-4 h-4 mr-3te, x, t-purple-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Reduced Motion</span>                </div>
+                <input
+                  type="checkbox" checked={features.reducedMoti.o n}
+                  onChange={() => toggleFeature('reducedMotion')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <Keyboa, r, d className="w-4 h-4 mr-3te, x, t-oran, g, e-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Keyboa, r, d Navigati, o, n</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.keyboardNaviga, t, i.o n}
-                  onChan, g, e={() => toggleFeatu, r, e('keyboardNavigati, o, n')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <Keyboard className="w-4 h-4 mr-3te, x, t-orange-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Keyboard Navigation</span>                </div>
+                <input
+                  type="checkbox" checked={features.keyboardNavigati.o n}
+                  onChange={() => toggleFeature('keyboardNavigation')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <Accessibili, t, y className="w-4 h-4 mr-3te, x, t-indi, g, o-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Scre, e, n Read, e, r Suppo, r, t</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.screenRe, a, d.e r}
-                  onChan, g, e={() => toggleFeatu, r, e('screenRead, e, r')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <Accessibility className="w-4 h-4 mr-3te, x, t-indigo-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Screen Reader Support</span>                </div>
+                <input
+                  type="checkbox" checked={features.screenRead.e r}
+                  onChange={() => toggleFeature('screenReader')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <CheckCircle className="w-4 h-4 mr-3te, x, t-te, a, l-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Foc, u, s Indicato, r, s</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.focusIndica, t, o.r s}
-                  onChan, g, e={() => toggleFeatu, r, e('focusIndicato, r, s')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-3te, x, t-teal-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Focus Indicators</span>                </div>
+                <input
+                  type="checkbox" checked={features.focusIndicato.r s}
+                  onChange={() => toggleFeature('focusIndicators')}
+                  className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
+                />              </label>
 
-              <lab, e, l className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
-                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-                  <E, y, e className="w-4 h-4 mr-3te, x, t-pi, n, k-5, 0, 0" />
-                  <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Col, o, r Bli, n, d Suppo, r, t</sp, a, n>                </d, i, v>
-                <inp, u, t
-                  ty, p, e="checkb, o, x" check, e, d={featur, e, s.colorBlindSup, p, o.r t}
-                  onChan, g, e={() => toggleFeatu, r, e('colorBlindSuppo, r, t')}
-                  className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 roundedfoc, u, s:ri, n, g-bl, u, e-5, 0, 0"
-                />              </lab, e, l>
-            </d, i, v>
-          </d, i, v>
+              <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-1, 0, 0">
+                <div className="flex items-center">
+                  <Eye className="w-4 h-4 mr-3te, x, t-pink-5, 0, 0" />
+                  <span className="text-sm font-medium text-gray-7, 0, 0">Color Blind Support</span>                </div>
+                <input
+                  type="checkbox" checked={features.colorBlindSuppo.r t}
+                  onChange={() => toggleFeature('colorBlindSupport')}
+                  className="w-4 h-4 text-blue-6, 0, 0 roundedfocus:ring-blue-5, 0, 0"
+                />              </label>
+            </div>
+          </div>
 
-          <d, i, v>
-            <h4 className="fo, n, t-semibo, l, d te, x, t-gr, a, y-800, m, b-3">Recommendatio, n, s</h4>
-            {recommendatio, n, s.leng, t, h > 0 ? (
-              <d, i, v className="spa, c, e-y-2">
-                {recommendatio, n, s.m, a, p((r, e, c, ind, e, x) => (
-                  <d, i, v k, e, y={ind, e, x} className="fl, e, x ite, m, s-sta, r, t p-3 bg-yellow-50 bord, e, r bord, e, r-yellow-200round, e, d-lg">
-                    <AlertTriangle className="w-4 h-4 mr-2 te, x, t-yellow-5, 0, 0 mt-0.5fl, e, x-shri, n, k-0" />
-                    <sp, a, n className="te, x, t-smte, x, t-yellow-8, 0, 0">{r, e, c}</sp, a, n>                  </d, i, v>
+          <div>
+            <h4 className="font-semibold text-gray-800, m, b-3">Recommendations</h4>
+            {recommendations.length > 0 ? (
+              <div className="space-y-2">
+                {recommendations.map((rec, index) => (
+                  <div key={index} className="flex items-start p-3 bg-yellow-50 border border-yellow-200rounded-lg">
+                    <AlertTriangle className="w-4 h-4 mr-2 text-yellow-5, 0, 0 mt-0.5fl, e, x-shrink-0" />
+                    <span className="text-smtext-yellow-8, 0, 0">{rec}</span>                  </div>
                 ))}
-              </d, i, v>
+              </div>
             ) : (
-              <d, i, v className="fl, e, x ite, m, s-cent, e, r p-4 bg-gre, e, n-50 bord, e, r bord, e, r-gre, e, n-200round, e, d-lg">
-                <CheckCircle className="w-5 h-5 mr-2te, x, t-gre, e, n-5, 0, 0" />
-                <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gre, e, n-8, 0, 0">                  A, l, l accessibili, t, y featur, e, s a, r, e enabl, e, d! Gre, a, t j, o, b!
-                </sp, a, n>
-              </d, i, v>
+              <div className="flex items-center p-4 bg-green-50 border border-green-200rounded-lg">
+                <CheckCircle className="w-5 h-5 mr-2te, x, t-green-5, 0, 0" />
+                <span className="text-sm font-medium text-green-8, 0, 0">                  All accessibility features are enabled! Great job!
+                </span>
+              </div>
             )}
-          </d, i, v>
-          <butt, o, n
-            onCli, c, k={() => setIsOp, e, n(!isOp, e, n)}
-            className="bg-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-7, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-lg"
+          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="bg-blue-6, 0, 0 hover:bg-blue-7, 0, 0 text-white px-4 py-2 rounded-lg"
           >
-            {isOp, e, n ? 'Clo, s, e' : 'Op, e, n'} Settin, g, s
-          </butt, o, n>
-        </d, i, v>
+            {isOpen ? 'Close' : 'Open'} Settings
+          </button>
+        </div>
 
-        <d, i, v className="bg-bl, u, e-50 bord, e, r bord, e, r-bl, u, e-2, 0, 0 round, e, d-l, g, p-4">
-          <h4 className="fo, n, t-semibo, l, d te, x, t-bl, u, e-800, m, b-2">Accessibili, t, y Standar, d, s</h4>
-          <d, i, v className="te, x, t-sm te, x, t-bl, u, e-700spa, c, e-y-1">
-            <d, i, v>• WC, A, G 2.1 AA complian, c, e</d, i, v>
-            <d, i, v>• Secti, o, n 5, 0, 8 complian, c, e</d, i, v>            <d, i, v>• AR, I, A labe, l, s a, n, d rol, e, s</d, i, v>
-            <d, i, v>• Semant, i, c HT, M, L structu, r, e</d, i, v>
-            <d, i, v>• Keyboa, r, d navigati, o, n suppo, r, t</d, i, v>
-          </d, i, v>
-          <p className="te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">Accessibili, t, y Sco, r, e</p>
-        </d, i, v>
+        <div className="bg-blue-50 border border-blue-2, 0, 0 rounded-lgp-4">
+          <h4 className="font-semibold text-blue-800, m, b-2">Accessibility Standards</h4>
+          <div className="text-sm text-blue-700spa, c, e-y-1">
+            <div>• WCAG 2.1 AA compliance</div>
+            <div>• Section 5, 0, 8 compliance</div>            <div>• ARIA labels and roles</div>
+            <div>• Semantic HTML structure</div>
+            <div>• Keyboard navigation support</div>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400">Accessibility Score</p>
+        </div>
 
         <AnimatePresence>
-          {isOp, e, n && (
-            <motion.d, i, v
-              initi, a, l={{ opaci, t, y: 0, heig, h, t: 0 }}
-              anima, t, e={{ opaci, t, y: 1, heig, h, t: 'au, t, o' }}
-              ex, i, t={{ opaci, t, y: 0, heig, h, t: 0 }}
-              className="spa, c, e-y-6"
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="space-y-6"
             >
-              <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 g, a, p-6">
-                <d, i, v className="spa, c, e-y-4">
-                  <h3 className="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">
-                    Visu, a, l Settin, g, s
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    Visual Settings
                   </h3>
                   
-                  <d, i, v className="spa, c, e-y-3">
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Fo, n, t Si, z, e</sp, a, n>
-                      <sele, c, t
-                        val, u, e={settin, g, s.fontSi, z, e}
-                        onChan, g, e={(e) => updateSettin, g, s({ fontSi, z, e: e.targ, e, t.val, u, e as a, n, y })}
-                        className="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm"
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Font Size</span>
+                      <select
+                        value={settings.fontSize}
+                        onChange={(e) => updateSettings({ fontSize: e.target.value as any })}
+                        className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
-                        <opti, o, n val, u, e="sma, l, l">Sma, l, l</opti, o, n>
-                        <opti, o, n val, u, e="medium">Medi, u, m</opti, o, n>
-                        <opti, o, n val, u, e="lar, g, e">Lar, g, e</opti, o, n>
-                      </sele, c, t>
-                    </d, i, v>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                      </select>
+                    </div>
 
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Contra, s, t</sp, a, n>
-                      <sele, c, t
-                        val, u, e={settin, g, s.contra, s, t}
-                        onChan, g, e={(e) => updateSettin, g, s({ contra, s, t: e.targ, e, t.val, u, e as a, n, y })}
-                        className="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm"
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Contrast</span>
+                      <select
+                        value={settings.contrast}
+                        onChange={(e) => updateSettings({ contrast: e.target.value as any })}
+                        className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
-                        <opti, o, n val, u, e="norm, a, l">Norm, a, l</opti, o, n>
-                        <opti, o, n val, u, e="high">Hi, g, h</opti, o, n>
-                        <opti, o, n val, u, e="invert, e, d">Invert, e, d</opti, o, n>
-                      </sele, c, t>
-                    </d, i, v>
+                        <option value="normal">Normal</option>
+                        <option value="high">High</option>
+                        <option value="inverted">Inverted</option>
+                      </select>
+                    </div>
 
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Curs, o, r Si, z, e</sp, a, n>
-                      <sele, c, t
-                        val, u, e={settin, g, s.curs, o, r}
-                        onChan, g, e={(e) => updateSettin, g, s({ curs, o, r: e.targ, e, t.val, u, e as a, n, y })}
-                        className="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm"
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Cursor Size</span>
+                      <select
+                        value={settings.cursor}
+                        onChange={(e) => updateSettings({ cursor: e.target.value as any })}
+                        className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
-                        <opti, o, n val, u, e="norm, a, l">Norm, a, l</opti, o, n>
-                        <opti, o, n val, u, e="lar, g, e">Lar, g, e</opti, o, n>
-                        <opti, o, n val, u, e="ext, r, a-lar, g, e">Ext, r, a Lar, g, e</opti, o, n>
-                      </sele, c, t>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
+                        <option value="normal">Normal</option>
+                        <option value="large">Large</option>
+                        <option value="extra-large">Extra Large</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
 
-                <d, i, v className="spa, c, e-y-4">
-                  <h3 className="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">
-                    Interacti, o, n Settin, g, s
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    Interaction Settings
                   </h3>
                   
-                  <d, i, v className="spa, c, e-y-3">
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Animatio, n, s</sp, a, n>
-                      <inp, u, t
-                        ty, p, e="checkb, o, x"
-                        check, e, d={settin, g, s.animatio, n, s}
-                        onChan, g, e={(e) => updateSettin, g, s({ animatio, n, s: e.targ, e, t.check, e, d })}
-                        className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 bord, e, r-gr, a, y-3, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Animations</span>
+                      <input
+                        type="checkbox"
+                        checked={settings.animations}
+                        onChange={(e) => updateSettings({ animations: e.target.checked })}
+                        className="w-4 h-4 text-blue-6, 0, 0 border-gray-300 rounded focus:ring-blue-5, 0, 0"
                       />
-                    </d, i, v>
+                    </div>
 
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Scre, e, n Read, e, r</sp, a, n>
-                      <inp, u, t
-                        ty, p, e="checkb, o, x"
-                        check, e, d={settin, g, s.screenRead, e, r}
-                        onChan, g, e={(e) => updateSettin, g, s({ screenRead, e, r: e.targ, e, t.check, e, d })}
-                        className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 bord, e, r-gr, a, y-3, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Screen Reader</span>
+                      <input
+                        type="checkbox"
+                        checked={settings.screenReader}
+                        onChange={(e) => updateSettings({ screenReader: e.target.checked })}
+                        className="w-4 h-4 text-blue-6, 0, 0 border-gray-300 rounded focus:ring-blue-5, 0, 0"
                       />
-                    </d, i, v>
+                    </div>
 
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                      <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Keyboa, r, d Navigati, o, n</sp, a, n>
-                      <inp, u, t
-                        ty, p, e="checkb, o, x"
-                        check, e, d={settin, g, s.keyboardNavigati, o, n}
-                        onChan, g, e={(e) => updateSettin, g, s({ keyboardNavigati, o, n: e.targ, e, t.check, e, d })}
-                        className="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 bord, e, r-gr, a, y-3, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Keyboard Navigation</span>
+                      <input
+                        type="checkbox"
+                        checked={settings.keyboardNavigation}
+                        onChange={(e) => updateSettings({ keyboardNavigation: e.target.checked })}
+                        className="w-4 h-4 text-blue-6, 0, 0 border-gray-300 rounded focus:ring-blue-5, 0, 0"
                       />
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r spa, c, e-x-4">
-                <butt, o, n
-                  onCli, c, k={() => setIsOp, e, n(false)}
-                  className="px-4 py-2 te, x, t-gr, a, y-6, 0, 0 hov, e, r:te, x, t-gr, a, y-8, 0, 0 transiti, o, n-colo, r, s"
+              <div className="flex items-center justify-center space-x-4">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="px-4 py-2 text-gray-600 hover:text-gray-8, 0, 0 transition-colors"
                 >
-                  Canc, e, l
-                </butt, o, n>
-                <butt, o, n
-                  onCli, c, k={() => setIsOp, e, n(false)}
-                  className="px-4 py-2 bg-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-7, 0, 0 te, x, t-whi, t, e round, e, d-lg transiti, o, n-colo, r, s"
+                  Cancel
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="px-4 py-2 bg-blue-6, 0, 0 hover:bg-blue-7, 0, 0 text-white rounded-lg transition-colors"
                 >
-                  App, l, y Settin, g, s
-                </butt, o, n>
-              </d, i, v>
-            </motion.d, i, v>
+                  Apply Settings
+                </button>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
 
-export default AccessibilityEnhancemen, t, s;
+export default AccessibilityEnhancements;
