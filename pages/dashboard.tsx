@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Dashboard(): JSX.Element {
+const Dashboard = React.memo(function Dashboard(): JSX.Element {
 	const [activeTab, setActiveTab] = useState('overview');
 	const [isRealTime, setIsRealTime] = useState(false);
 	const { trackClick } = useAnalytics();

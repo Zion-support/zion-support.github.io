@@ -41,7 +41,7 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 		loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-export default function Home(): JSX.Element {
+const Home = React.memo(function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 	const [performanceMetrics, setPerformanceMetrics] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
