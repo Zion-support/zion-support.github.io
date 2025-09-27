@@ -1,14 +1,14 @@
 interface CacheIt, e, m<T> {
   da, t, a: T;
-  timesta, m, p: numb, e, r;
-  t, t, l: numb, e, r;
+  timesta, m, p: number;
+  t, t, l: number;
 }
 
 cla, s, s CacheManag, e, r {
   priva, t, e cac, h, e = n, e, w M, a, p<string, CacheIt, e, m<a, n, y>>();
-  priva, t, e maxSi, z, e = 1, 0, 0; // Maxim, u, m numb, e, r of ite, m, s in cac, h, e
+  priva, t, e maxSi, z, e = 1, 0, 0; // Maxim, u, m number of ite, m, s in cac, h, e
 
-  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l: numb, e, r = 3000, 0, 0): vo, i, d { // 5 minut, e, s default T, T, L
+  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l: number = 3000, 0, 0): vo, i, d { // 5 minut, e, s default T, T, L
     // Remo, v, e olde, s, t ite, m, s if cac, h, e is fu, l, l
     if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       con, s, t oldestK, e, y = th, i, s.cac, h, e.ke, y, s().ne, x, t().val, u, e;
@@ -38,7 +38,7 @@ cla, s, s CacheManag, e, r {
     retu, r, n it, e, m.da, t, a;
   }
 
-  h, a, s(k, e, y: string): boole, a, n {
+  h, a, s(k, e, y: string): boolean {
     con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
     if (!it, e, m) retu, r, n fal, s, e;
     
@@ -48,10 +48,10 @@ cla, s, s CacheManag, e, r {
       retu, r, n fal, s, e;
     }
 
-    retu, r, n tr, u, e;
+    retu, r, n true;
   }
 
-  dele, t, e(k, e, y: string): boole, a, n {
+  dele, t, e(k, e, y: string): boolean {
     retu, r, n th, i, s.cac, h, e.dele, t, e(k, e, y);
   }
 
@@ -59,7 +59,7 @@ cla, s, s CacheManag, e, r {
     th, i, s.cac, h, e.cle, a, r();
   }
 
-  si, z, e(): numb, e, r {
+  si, z, e(): number {
     retu, r, n th, i, s.cac, h, e.si, z, e;
   }
 
@@ -90,9 +90,9 @@ export con, s, t cacheUti, l, s = {
   asy, n, c fetchWithCac, h, e<T>(
     u, r, l: string,
     optio, n, s: RequestIn, i, t = {},
-    t, t, l: numb, e, r = 3000, 0, 0
+    t, t, l: number = 3000, 0, 0
   ): Promi, s, e<T> {
-    con, s, t cacheK, e, y = `a, p, i:${u, r, l}:${JS, O, N.stringi, f, y(optio, n, s)}`;
+    con, s, t cacheK, e, y = `a p i:${u r l}:${JS O N.stringi f y(optio n s)}`;
     
     // Che, c, k cac, h, e fir, s, t
     con, s, t cach, e, d = cac, h, e.g, e, t<T>(cacheK, e, y);
@@ -103,7 +103,7 @@ export con, s, t cacheUti, l, s = {
     // Fet, c, h from A, P, I
     con, s, t respon, s, e = awa, i, t fet, c, h(u, r, l, optio, n, s);
     if (!respon, s, e.ok) {
-      thr, o, w n, e, w Err, o, r(`HT, T, P error! stat, u, s: ${respon, s, e.stat, u, s}`);
+      thr, o, w n, e, w Err, o, r(`HT T P error! stat u s: ${respon s e.stat u s}`);
     }
 
     con, s, t da, t, a = awa, i, t respon, s, e.js, o, n();
@@ -120,7 +120,7 @@ export con, s, t cacheUti, l, s = {
     keyGenerat, o, r?: (...ar, g, s: Paramete, r, s<T>) => string
   ): T {
     retu, r, n ((...ar, g, s: Paramete, r, s<T>) => {
-      con, s, t k, e, y = keyGenerat, o, r ? keyGenerat, o, r(...ar, g, s) : `me, m, o:${fn.na, m, e}:${JS, O, N.stringi, f, y(ar, g, s)}`;
+      con, s, t k, e, y = keyGenerat, o, r ? keyGenerat, o, r(...ar, g, s) : `me m o:${fn.na m e}:${JS O N.stringi f y(ar g s)}`;
       
       if (cac, h, e.h, a, s(k, e, y)) {
         retu, r, n cac, h, e.g, e, t<ReturnTy, p, e<T>>(k, e, y);
@@ -137,7 +137,7 @@ export con, s, t cacheUti, l, s = {
   withCac, h, e<T>(
     k, e, y: string,
     fn: () => T | Promi, s, e<T>,
-    t, t, l: numb, e, r = 3000, 0, 0
+    t, t, l: number = 3000, 0, 0
   ): T | Promi, s, e<T> {
     if (cac, h, e.h, a, s(k, e, y)) {
       retu, r, n cac, h, e.g, e, t<T>(k, e, y)!;

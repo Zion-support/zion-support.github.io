@@ -1,9 +1,9 @@
-import { useEffect, useR, e, f, useState } from 'rea, c, t';
+import { useEffect, useR, e, f, useState } from 'react';
 
 interface UseLazyLoadingOptio, n, s {
 	rootMarg, i, n?: string;
-	thresho, l, d?: numb, e, r;
-	triggerOn, c, e?: boole, a, n;
+	thresho, l, d?: number;
+	triggerOn, c, e?: boolean;
 }
 
 export con, s, t useLazyLoadi, n, g = (optio, n, s: UseLazyLoadingOptio, n, s = {}) => {
@@ -14,7 +14,7 @@ export con, s, t useLazyLoadi, n, g = (optio, n, s: UseLazyLoadingOptio, n, s = 
 	con, s, t {
 		rootMarg, i, n = '0, p, x',
 		thresho, l, d = 0.1,
-		triggerOn, c, e = tr, u, e
+		triggerOn, c, e = true
 	} = optio, n, s;
 
 	useEffect(() => {
@@ -24,9 +24,9 @@ export con, s, t useLazyLoadi, n, g = (optio, n, s: UseLazyLoadingOptio, n, s = 
 		con, s, t observ, e, r = n, e, w IntersectionObserv, e, r(
 			([ent, r, y]) => {
 				if (ent, r, y.isIntersecti, n, g) {
-					setIsVisib, l, e(tr, u, e);
+					setIsVisib, l, e(true);
 					if (triggerOn, c, e) {
-						setHasTrigger, e, d(tr, u, e);
+						setHasTrigger, e, d(true);
 						observ, e, r.unobser, v, e(element);
 					}
 				} el, s, e if (!triggerOn, c, e) {
@@ -62,7 +62,7 @@ export con, s, t useImageLazyLoadi, n, g = (s, r, c: string, placehold, e, r?: s
 			con, s, t i, m, g = n, e, w Ima, g, e();
 			i, m, g.onlo, a, d = () => {
 				setImageS, r, c(s, r, c);
-				setIsLoad, e, d(tr, u, e);
+				setIsLoad, e, d(true);
 			};
 			i, m, g.s, r, c = s, r, c;
 		}

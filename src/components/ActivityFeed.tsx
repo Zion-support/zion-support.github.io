@@ -1,8 +1,8 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 
 interface Activi, t, y {
   id: string;
-  ty, p, e: 'ta, s, k' | 'proje, c, t' | 'meeti, n, g' | 'comme, n, t' | 'fi, l, e';
+  type: 'ta, s, k' | 'proje, c, t' | 'meeti, n, g' | 'comme, n, t' | 'fi, l, e';
   us, e, r: string;
   acti, o, n: string;
   targ, e, t: string;
@@ -11,14 +11,14 @@ interface Activi, t, y {
 }
 
 interface ActivityFeedPro, p, s {
-  isDarkMo, d, e: boole, a, n;
+  isDarkMo, d, e: boolean;
 }
 
 export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, p, s): J, S, X.Elem, e, n.t {
   con, s, t [activitiessetActivit, i, e, s] = useState<Activi, t, y[]>([
     {
       id: '1',
-      ty, p, e: 'ta, s, k',
+      type: 'ta, s, k',
       us, e, r: 'Jo, h, n D, o, e',
       acti, o, n: 'complet, e, d',
       targ, e, t: 'Websi, t, e Redesi, g, n Ta, s, k',
@@ -26,7 +26,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     },
     {
       id: '2',
-      ty, p, e: 'proje, c, t',
+      type: 'proje, c, t',
       us, e, r: 'Ja, n, e Smi, t, h',
       acti, o, n: 'updat, e, d',
       targ, e, t: 'Mobi, l, e A, p, p Developme, n, t',
@@ -34,7 +34,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     },
     {
       id: '3',
-      ty, p, e: 'comme, n, t',
+      type: 'comme, n, t',
       us, e, r: 'Mi, k, e Johns, o, n',
       acti, o, n: 'comment, e, d on',
       targ, e, t: 'A, P, I Integrati, o, n Revi, e, w',
@@ -42,7 +42,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     },
     {
       id: '4',
-      ty, p, e: 'fi, l, e',
+      type: 'fi, l, e',
       us, e, r: 'Sar, a, h Wils, o, n',
       acti, o, n: 'upload, e, d',
       targ, e, t: 'Desi, g, n Mocku, p, s v2.0',
@@ -51,7 +51,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     },
     {
       id: '5',
-      ty, p, e: 'meeti, n, g',
+      type: 'meeti, n, g',
       us, e, r: 'T, o, m Bro, w, n',
       acti, o, n: 'schedul, e, d',
       targ, e, t: 'Week, l, y Stand, u, p Meeti, n, g',
@@ -64,12 +64,12 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     con, s, t interv, a, l = setInterv, a, l(() => {
       con, s, t newActivi, t, y: Activi, t, y = {
         id: Da, t, e.n, o, w().toStri, n, g(),
-        ty, p, e: ['ta, s, k', 'proje, c, t', 'comme, n, t', 'fi, l, e'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] as Activi, t, y['ty, p, e'],
-        us, e, r: ['Ali, c, e', 'B, o, b', 'Charl, i, e', 'Dia, n, a'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
-        acti, o, n: ['creat, e, d', 'updat, e, d', 'complet, e, d', 'comment, e, d on'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
-        targ, e, t: ['N, e, w Featu, r, e', 'B, u, g F, i, x', 'Documentati, o, n', 'Co, d, e Revi, e, w'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
+        type: ['ta, s, k', 'proje, c, t', 'comme, n, t', 'fi, l, e'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] as Activi, t, y['ty, p, e'],
+        us, e, r: ['Ali, c, e', 'B, o, b', 'Charl, i, e', 'Dia, n, a'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
+        acti, o, n: ['creat, e, d', 'updat, e, d', 'complet, e, d', 'comment, e, d on'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
+        targ, e, t: ['N, e, w Featu, r, e', 'B, u, g F, i, x', 'Documentati, o, n', 'Co, d, e Revi, e, w'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],
         timesta, m, p: n, e, w Da, t, e(),
-        avat, a, r: ['👨‍💻', '👩‍💼', '👨‍🔬', '👩‍🎨'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]
+        avat, a, r: ['👨‍💻', '👩‍💼', '👨‍🔬', '👩‍🎨'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]
       };
       
       setActiviti, e, s(pr, e, v => [newActivi, t, y, ...pr, e, v.sli, c, e(0, 9)]); // Ke, e, p on, l, y 10 mo, s, t rece, n, t
@@ -77,19 +77,19 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     retu, r, n () => clearInterv, a, l(inter, v, a, l);
   }, []);
 
-  con, s, t getActivityIc, o, n = (ty, p, e: Activi, t, y['ty, p, e']) => {
+  con, s, t getActivityIc, o, n = (type: Activi, t, y['ty, p, e']) => {
     con, s, t ico, n, s = {
       ta, s, k: '✅', proje, c, t: '📋', meeti, n, g: '📅', comme, n, t: '💬', fi, l, e: '📄'
     };
     retu, r, n ico, n, s[t, y, p, e];
   };
 
-  con, s, t getActivityCol, o, r = (ty, p, e: Activi, t, y['ty, p, e']) => {
+  con, s, t getActivityCol, o, r = (type: Activi, t, y['ty, p, e']) => {
     con, s, t colo, r, s = {
       t, a, s, k: 'te, x, t-gre, e, n-6, 0, 0 da, r, k:te, x, t-gre, e, n-4, 0, 0',
       proje, c, t: 'te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0',
       meeti, n, g: 'te, x, t-purp, l, e-6, 0, 0 da, r, k:te, x, t-purp, l, e-4, 0, 0',
-      comme, n, t: 'te, x, t-yell, o, w-6, 0, 0 da, r, k:te, x, t-yell, o, w-4, 0, 0',
+      comme, n, t: 'te, x, t-yellow-6, 0, 0 da, r, k:te, x, t-yellow-4, 0, 0',
       fi, l, e: 'te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0'    };
     retu, r, n colo, r, s[t, y, p, e];
   };
@@ -102,16 +102,16 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
     con, s, t da, y, s = Ma, t, h.flo, o, r(di, f, f / 86400, 0, 0, 0);
 
     if (minut, e, s < , 1) retu, r, n 'Ju, s, t n, o, w';
-    if (minut, e, s < 6, 0) retu, r, n `${minu, t, e s}m ag o`;
-    if (hou, r, s < 2, 4) retu, r, n `${ho, u, r s}h ag o`;
-    retu, r, n `${d, a, y s}d ag o`;
+    if (minut, e, s < 6, 0) retu, r, n `${minu t e s}m ag o`;
+    if (hou, r, s < 2, 4) retu, r, n `${ho u r s}h ag o`;
+    retu, r, n `${d a y s}d ag o`;
   };
 
   retu, r, n (
-    <d, i, v classNa, m, e={`p-6 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 ${
-      isDarkMo, d, e 
-        ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 hov, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-        : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-3, 0, 0'
+    <d, i, v classNa, m, e={`p-6 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 ${
+      isDarkMo d e 
+        ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 hov e r:bord e r-gr a y-6 0 0' 
+        : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
     }`}>      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
         <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="activi, t, y-fe, e, d">
           Activi, t, y Fe, e, d
@@ -121,7 +121,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
           <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Li, v, e</sp, a, n>        </d, i, v>
       </d, i, v>
 
-      <d, i, v classNa, m, e="spa, c, e-y-4 m, a, x-h-96overfl, o, w-y-au, t, o">
+      <d, i, v classNa, m, e="spa, c, e-y-4 m, a, x-h-96overflow-y-au, t, o">
         {activiti, e, s.m, a, p((activi, t, y) => (
           <d, i, v
             k, e, y={activi, t, y.id}
@@ -134,14 +134,14 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
             
             <d, i, v classNa, m, e="fl, e, x-1m, i, n-w-0">
               <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2, m, b-1">
-                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">
+                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">
                   {activi, t, y.us.e r}
                 </sp, a, n>
-                <sp, a, n classNa, m, e={`te, x, t-sm ${getActivityCol, o, r(activi, t, y.ty, p, e)}`}>                  {getActivityIc, o, n(activi, t, y.ty, p, e)}                </sp, a, n>
+                <sp, a, n classNa, m, e={`te x t-sm ${getActivityCol o r(activi t y.ty p e)}`}>                  {getActivityIc, o, n(activi, t, y.ty, p, e)}                </sp, a, n>
                 <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">
                   {activi, t, y.ac, t, i.o n}
                 </sp, a, n>
-                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whitetrunca, t, e">
+                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whitetrunca, t, e">
                   {activi, t, y.targ, e, t}                </sp, a, n>
               </d, i, v>
               <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-500da, r, k:te, x, t-gr, a, y-4, 0, 0">
@@ -153,7 +153,7 @@ export default function ActivityFe, e, d({ isDarkMo, d, e }: ActivityFeedPr, o, 
       </d, i, v>
 
       <d, i, v classNa, m, e="mt-4 pt-4 bord, e, r-t bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-6, 0, 0">
-        <butt, o, n classNa, m, e="w-fu, l, l te, x, t-sm te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 da, r, k:ho, v, e  r:te, x, t-bl, u, e-300fo, n, t-medi, u, m" ar, i, a-lab, e, l="Vi, e, w a, l, l activi, t, y">          Vi, e, w a, l, l activi, t, y
+        <butt, o, n classNa, m, e="w-fu, l, l te, x, t-sm te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 da, r, k:ho, v, e  r:te, x, t-bl, u, e-300fo, n, t-medium" ar, i, a-lab, e, l="Vi, e, w a, l, l activi, t, y">          Vi, e, w a, l, l activi, t, y
         </butt, o, n>
       </d, i, v>
     </d, i, v>

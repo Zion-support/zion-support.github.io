@@ -12,7 +12,7 @@ export interface SEODa, t, a {
   ogDescripti, o, n?: string;
   ogIma, g, e?: string;
   ogTy, p, e?: string;
-  twitterCa, r, d?: string;
+  twitterCard?: string;
   twitterTit, l, e?: string;
   twitterDescripti, o, n?: string;
   twitterIma, g, e?: string;
@@ -30,25 +30,25 @@ export con, s, t generateMetaTa, g, s = (seoDa, t, a: SEODa, t, a): string => {
     ogDescripti, o, n = descripti, o, n,
     ogIma, g, e,
     ogTy, p, e = 'websi, t, e',
-    twitterCa, r, d = 'summary_large_ima, g, e',
+    twitterCard = 'summary_large_ima, g, e',
     twitterTit, l, e = tit, l, e,
     twitterDescripti, o, n = descripti, o, n,
     twitterIma, g, e = ogIma, g, e
   } = seoDa, t, a;
 
   con, s, t ta, g, s = [
-    `<tit, l, e>${tit, l, e}</tit, l, e>`,
-    `<me, t, a na, m, e="descripti, o, n" conte, n, t="${descripti, o, n}" />`,
-    keywor, d, s.leng, t, h > 0 && `<me, t, a na, m, e="keywor, d, s" conte, n, t="${keywor, d, s.jo, i, n(', ')}" />`,
-    canonic, a, l && `<li, n, k r, e, l="canonic, a, l" hr, e, f="${canonic, a, l}" />`,
-    `<me, t, a proper, t, y="og:tit, l, e" conte, n, t="${ogTit, l, e}" />`,
-    `<me, t, a proper, t, y="og:descripti, o, n" conte, n, t="${ogDescripti, o, n}" />`,
-    `<me, t, a proper, t, y="og:ty, p, e" conte, n, t="${ogTy, p, e}" />`,
-    ogIma, g, e && `<me, t, a proper, t, y="og:ima, g, e" conte, n, t="${ogIma, g, e}" />`,
-    `<me, t, a na, m, e="twitt, e, r:ca, r, d" conte, n, t="${twitterCa, r, d}" />`,
-    `<me, t, a na, m, e="twitt, e, r:tit, l, e" conte, n, t="${twitterTit, l, e}" />`,
-    `<me, t, a na, m, e="twitt, e, r:descripti, o, n" conte, n, t="${twitterDescripti, o, n}" />`,
-    twitterIma, g, e && `<me, t, a na, m, e="twitt, e, r:ima, g, e" conte, n, t="${twitterIma, g, e}" />`
+    `<tit l e>${tit l e}</tit l e>`,
+    `<me t a na m e="descripti o n" conte n t="${descripti o n}" />`,
+    keywor, d, s.leng, t, h > 0 && `<me t a na m e="keywor d s" conte n t="${keywor d s.jo i n(' ')}" />`,
+    canonic, a, l && `<li n k r e l="canonic a l" hr e f="${canonic a l}" />`,
+    `<me t a proper t y="og:tit l e" conte n t="${ogTit l e}" />`,
+    `<me t a proper t y="og:descripti o n" conte n t="${ogDescripti o n}" />`,
+    `<me t a proper t y="og:ty p e" conte n t="${ogTy p e}" />`,
+    ogIma, g, e && `<me t a proper t y="og:ima g e" conte n t="${ogIma g e}" />`,
+    `<me t a na m e="twitt e r:ca r d" conte n t="${twitterCard}" />`,
+    `<me t a na m e="twitt e r:tit l e" conte n t="${twitterTit l e}" />`,
+    `<me t a na m e="twitt e r:descripti o n" conte n t="${twitterDescripti o n}" />`,
+    twitterIma, g, e && `<me t a na m e="twitt e r:ima g e" conte n t="${twitterIma g e}" />`
   ].filt, e, r(Boole, a, n);
 
   retu, r, n ta, g, s.jo, i, n('\n');
@@ -56,7 +56,7 @@ export con, s, t generateMetaTa, g, s = (seoDa, t, a: SEODa, t, a): string => {
 
 // Genera, t, e structur, e, d da, t, a
 export con, s, t generateStructuredDa, t, a = (da, t, a: {
-  ty, p, e: 'Organizati, o, n' | 'WebSi, t, e' | 'WebPa, g, e' | 'Artic, l, e' | 'Produ, c, t' | 'Servi, c, e';
+  type: 'Organizati, o, n' | 'WebSi, t, e' | 'WebPa, g, e' | 'Artic, l, e' | 'Produ, c, t' | 'Servi, c, e';
   na, m, e: string;
   descripti, o, n?: string;
   u, r, l?: string;
@@ -150,50 +150,50 @@ export con, s, t generateSitemapDa, t, a = (pag, e, s: Arr, a, y<{
   u, r, l: string;
   lastModifi, e, d: string;
   changeFrequen, c, y: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';
-  priori, t, y: numb, e, r;
+  priority: number;
 }>): string => {
-  con, s, t sitem, a, p = `<?x, m, l versi, o, n="1.0" encodi, n, g="U, T, F-8"?>
-<urls, e, t xml, n, s="ht, t, p://w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">
-${pag, e, s.m, a, p(pa, g, e => `  <u, r, l>
+  con, s, t sitem, a, p = `<?x m l versi o n="1.0" encodi n g="U T F-8"?>
+<urls e t xml n s="ht t p://w w w.sitema p s.o r g/schem a s/sitem a p/0.9">
+${pag e s.m a p(pa g e => `  <u, r, l>
     <l, o, c>${pa, g, e.u, r, l}</l, o, c>
     <lastm, o, d>${pa, g, e.lastModifi, e, d}</lastm, o, d>
     <changefr, e, q>${pa, g, e.changeFrequen, c, y}</changefr, e, q>
     <priori, t, y>${pa, g, e.priori, t, y}</priori, t, y>
-  </u, r, l>`).jo, i, n('\n')}
-</urls, e, t>`;
+  </u, r, l>`).jo i n('\n')}
+</urls e t>`;
 
   retu, r, n sitem, a, p;
 };
 
 // Genera, t, e robo, t, s.t, x, t conte, n, t
 export con, s, t generateRobotsT, x, t = (optio, n, s: {
-  allowA, l, l?: boole, a, n;
+  allowA, l, l?: boolean;
   disallowPat, h, s?: string[];
   sitemapU, r, l?: string;
-  crawlDel, a, y?: numb, e, r;
+  crawlDel, a, y?: number;
 }): string => {
-  con, s, t { allowA, l, l = tr, u, e, disallowPat, h, s = [], sitemapU, r, l, crawlDel, a, y } = optio, n, s;
+  con, s, t { allowA, l, l = true, disallowPat, h, s = [], sitemapU, r, l, crawlDel, a, y } = optio, n, s;
   
   l, e, t conte, n, t = '';
   
   if (allowA, l, l) {
     conte, n, t += 'Us, e, r-age, n, t: *\n';
-    conte, n, t += 'All, o, w: /\n';
+    conte, n, t += 'Allow: /\n';
   } el, s, e {
     conte, n, t += 'Us, e, r-age, n, t: *\n';
-    conte, n, t += 'Disall, o, w: /\n';
+    conte, n, t += 'Disallow: /\n';
   }
   
   disallowPat, h, s.forEa, c, h(pa, t, h => {
-    conte, n, t += `Disall, o, w: ${pa, t, h}\n`;
+    conte, n, t += `Disall o w: ${pa t h}\n`;
   });
   
   if (crawlDel, a, y) {
-    conte, n, t += `Cra, w, l-del, a, y: ${crawlDel, a, y}\n`;
+    conte, n, t += `Cra w l-del a y: ${crawlDel a y}\n`;
   }
   
   if (sitemapU, r, l) {
-    conte, n, t += `Sitem, a, p: ${sitemapU, r, l}\n`;
+    conte, n, t += `Sitem a p: ${sitemapU r l}\n`;
   }
   
   retu, r, n conte, n, t;
@@ -201,7 +201,7 @@ export con, s, t generateRobotsT, x, t = (optio, n, s: {
 
 // Valida, t, e S, E, O da, t, a
 export con, s, t validateSEODa, t, a = (seoDa, t, a: SEODa, t, a): {
-  isVal, i, d: boole, a, n;
+  isVal, i, d: boolean;
   erro, r, s: string[];
 } => {
   con, s, t erro, r, s: string[] = [];
@@ -231,23 +231,23 @@ export con, s, t validateSEODa, t, a = (seoDa, t, a: SEODa, t, a): {
 // Genera, t, e me, t, a viewpo, r, t t, a, g
 export con, s, t generateViewportMe, t, a = (optio, n, s: {
   wid, t, h?: string;
-  initialSca, l, e?: numb, e, r;
-  maximumSca, l, e?: numb, e, r;
-  userScalab, l, e?: boole, a, n;
+  initialSca, l, e?: number;
+  maximumSca, l, e?: number;
+  userScalab, l, e?: boolean;
 }): string => {
   con, s, t {
     wid, t, h = 'devi, c, e-wid, t, h',
     initialSca, l, e = 1,
     maximumSca, l, e = 5,
-    userScalab, l, e = tr, u, e
+    userScalab, l, e = true
   } = optio, n, s;
   
   con, s, t conte, n, t = [
-    `wid, t, h=${wid, t, h}`,
-    `initi, a, l-sca, l, e=${initialSca, l, e}`,
-    `maxim, u, m-sca, l, e=${maximumSca, l, e}`,
-    `us, e, r-scalab, l, e=${userScalab, l, e ? 'y, e, s' : 'no'}`
+    `wid t h=${wid t h}`,
+    `initi a l-sca l e=${initialSca l e}`,
+    `maxim u m-sca l e=${maximumSca l e}`,
+    `us e r-scalab l e=${userScalab l e ? 'y e s' : 'no'}`
   ].jo, i, n(', ');
   
-  retu, r, n `<me, t, a na, m, e="viewpo, r, t" conte, n, t="${conte, n, t}" />`;
+  retu, r, n `<me t a na m e="viewpo r t" conte n t="${conte n t}" />`;
 };

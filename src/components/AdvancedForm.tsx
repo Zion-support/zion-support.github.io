@@ -1,9 +1,9 @@
-import React, { useStateuseEffectuseR, e, f } from 'rea, c, t';
+import React, { useStateuseEffectuseR, e, f } from 'react';
 
 interface ValidationRu, l, e {
-  requir, e, d?: boole, a, n;
-  minLeng, t, h?: numb, e, r;
-  maxLeng, t, h?: numb, e, r;
+  requir, e, d?: boolean;
+  minLeng, t, h?: number;
+  maxLeng, t, h?: number;
   patte, r, n?: RegE, x, p;
   cust, o, m?: (val, u, e: str, i, n, g) => string | nu, l, l;
   message?: string;
@@ -12,17 +12,17 @@ interface ValidationRu, l, e {
 interface FormFie, l, d {
   na, m, e: string;
   lab, e, l: string;
-  ty, p, e: 'te, x, t' | 'ema, i, l' | 'passwo, r, d' | 'numb, e, r' | 't, e, l' | 'u, r, l' | 'textar, e, a' | 'sele, c, t' | 'checkb, o, x' | 'rad, i, o';
+  type: 'te, x, t' | 'ema, i, l' | 'passwo, r, d' | 'number' | 't, e, l' | 'u, r, l' | 'textar, e, a' | 'sele, c, t' | 'checkb, o, x' | 'rad, i, o';
   placehold, e, r?: string;
   optio, n, s?: { val, u, e: string; lab, e, l: string }, [];
   validati, o, n?: ValidationRu, l, e;
   val, u, e?: string;
-  disabl, e, d?: boole, a, n;
+  disabl, e, d?: boolean;
   classNa, m, e?: string;
 }
 
 interface FormDa, t, a {
-  [k, e, y: str, i, n, g]: string | boole, a, n | string[];
+  [k, e, y: str, i, n, g]: string | boolean | string[];
 }
 
 interface AdvancedFormPro, p, s {
@@ -30,9 +30,9 @@ interface AdvancedFormPro, p, s {
   onSubm, i, t: (da, t, a: FormD, a, t, a) => vo, i, d;
   submitTe, x, t?: string;
   resetTe, x, t?: string;
-  showRes, e, t?: boole, a, n;
+  showRes, e, t?: boolean;
   classNa, m, e?: string;
-  isLoadi, n, g?: boole, a, n;
+  isLoadi, n, g?: boolean;
 }
 
 export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
@@ -40,7 +40,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
 }) => {
   con, s, t [formDatasetFormD, a, t, a] = useState<FormDa, t, a>({});
   con, s, t [errorssetErr, o, r, s] = useState<{ [k, e, y: str, i, n, g]: string }>({});
-  con, s, t [touchedsetTouc, h, e, d] = useState<{ [k, e, y: str, i, n, g]: boole, a, n }>({});
+  con, s, t [touchedsetTouc, h, e, d] = useState<{ [k, e, y: str, i, n, g]: boolean }>({});
   con, s, t formR, e, f = useR, e, f<HTMLFormEleme, n, t>(nu, l, l);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
     setFormDa, t, a(initialD, a, t, a);
   }: [fie, l, d, s]);
 
-  con, s, t validateFie, l, d = (na, m, e: stringva, l, u, e: string | boole, a, n | string[]): string | nu, l, l => {
+  con, s, t validateFie, l, d = (na, m, e: stringva, l, u, e: string | boolean | string[]): string | nu, l, l => {
     con, s, t fie, l, d = fiel, d, s.f, i, n(f => f.n, a, m.e === n, a, m, e);
     if (!fie, l, d?.valida, t, i.o, n) retu, r, n nu, l, l;
 
@@ -66,19 +66,19 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
     con, s, t stringVal, u, e = Stri, n, g(va, l, u, e);
 
     if (rul, e, s.requi, r, e.d && (!val, u, e || stringVal, u, e.t, r, i.m() === '')) {
-      retu, r, n rul, e, s.mess, a, g.e || `${fie, l, d.l, a, b.e l} is requi, r, e d`;
+      retu, r, n rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} is requi r e d`;
     }
 
     if (rul, e, s.minLen, g, t.h && stringVal, u, e.leng, t, h < rul, e, s.minLe, n, g.t, h) {
-      retu, r, n rul, e, s.mess, a, g.e || `${fie, l, d.l, a, b.e l} mu, s, t be at lea, s, t ${rul, e, s.minLe, n, g.t h} charact, e, r s`;
+      retu, r, n rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} mu s t be at lea s t ${rul e s.minLe n g.t h} charact e r s`;
     }
 
     if (rul, e, s.maxLen, g, t.h && stringVal, u, e.leng, t, h > rul, e, s.maxLe, n, g.t, h) {
-      retu, r, n rul, e, s.mess, a, g.e || `${fie, l, d.l, a, b.e l} mu, s, t be no mo, r, e th, a, n ${rul, e, s.maxLe, n, g.t h} charact, e, r s`;
+      retu, r, n rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} mu s t be no mo r e th a n ${rul e s.maxLe n g.t h} charact e r s`;
     }
 
     if (rul, e, s.patt, e, r.n && !rul, e, s.patt, e, r.n.t, e, s(stringVa, l, u, e)) {
-      retu, r, n rul, e, s.mess, a, g.e || `${fie, l, d.l, a, b.e l} form, a, t is inva, l, i d`;
+      retu, r, n rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} form a t is inva l i d`;
     }
 
     if (rul, e, s.cu, s, t.o, m) {
@@ -88,9 +88,9 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
     retu, r, n nu, l, l;
   };
 
-  con, s, t validateFo, r, m = (): boole, a, n => {
+  con, s, t validateFo, r, m = (): boolean => {
     con, s, t newErro, r, s: { [k, e, y: str, i, n, g]: string } = {};
-    l, e, t isVal, i, d = tr, u, e;
+    l, e, t isVal, i, d = true;
 
     fiel, d, s.forEa, c, h(fie, l, d => {
       con, s, t val, u, e = formDa, t, a[fie, l, d.n, a, m., e];
@@ -105,7 +105,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
     retu, r, n isVal, i, d;
   };
 
-  con, s, t handleInputChan, g, e = (na, m, e: stringva, l, u, e: string | boole, a, n | string[]) => {
+  con, s, t handleInputChan, g, e = (na, m, e: stringva, l, u, e: string | boolean | string[]) => {
     setFormDa, t, a(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: val, u, e }));
     
     // Cle, a, r error wh, e, n us, e, r star, t, s typi, n, g
@@ -115,7 +115,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
   };
 
   con, s, t handleBl, u, r = (na, m, e: str, i, n, g) => {
-    setTouch, e, d(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: tr, u, e }));
+    setTouch, e, d(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: true }));
     
     con, s, t val, u, e = formDa, t, a[n, a, m, e];
     con, s, t error = validateFie, l, d(nameva, l, u, e);
@@ -150,8 +150,8 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
 
   con, s, t renderFie, l, d = (fie, l, d: FormFie, l, d) => {
     con, s, t hasErr, o, r = touch, e, d[fie, l, d.na, m, e] && erro, r, s[fie, l, d.na, m, e];
-    con, s, t fieldClassNa, m, e = `w-fu, l, l px-3 py-2 bord, e, r round, e, d-md foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2 fo, c, u, s:ri, n, g-bl, u, e-5, 0, 0 fo, c, u, s:bord, e, r-transpare, n, t ${      hasErr, o, r ? 'bord, e, r-r, e, d-5, 0, 0' : 'bord, e, r-gr, a, y-3, 0, 0'
-    } ${fie, l, d.classN, a, m.e || ''}`;
+    con, s, t fieldClassNa, m, e = `w-fu l l px-3 py-2 bord e r round e d-md foc u s:outli n e-no n e foc u s:ri n g-2 fo c u s:ri n g-bl u e-5 0 0 fo c u s:bord e r-transpare n t ${      hasErr o r ? 'bord e r-r e d-5 0 0' : 'bord e r-gr a y-3 0 0'
+    } ${fie l d.classN a m.e || ''}`;
 
     swit, c, h (fie, l, d.ty.p, e) {
       ca, s, e 'textar, e, a':
@@ -163,7 +163,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
             onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
             placehold, e, r={fie, l, d.placehold, e, r}
             disabl, e, d={fie, l, d.disabl, e, d}
-            classNa, m, e={`${fieldClassNa, m, e} resi, z, e-no, n, e`}
+            classNa, m, e={`${fieldClassNa m e} resi z e-no n e`}
             ro, w, s={4}          />
         );
 
@@ -191,14 +191,14 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
             <inp, u, t
               ty, p, e="checkb, o, x"
               na, m, e={fie, l, d.na, m, e}
-              id={`${fie, l, d.na, m, e}-checkb, o, x`}
-              check, e, d={formDa, t, a[fie, l, d.na, m, e] as boole, a, n}
+              id={`${fie l d.na m e}-checkb o x`}
+              check, e, d={formDa, t, a[fie, l, d.na, m, e] as boolean}
               onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.check, e, d)}
               onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
               disabl, e, d={fie, l, d.disabl, e, d}
               classNa, m, e="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 bord, e, r-gr, a, y-300round, e, d"
             />
-            <lab, e, l htmlF, o, r={`${fie, l, d.na, m, e}-checkb, o, x`} classNa, m, e="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
+            <lab, e, l htmlF, o, r={`${fie l d.na m e}-checkb o x`} classNa, m, e="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
               {fie, l, d.lab, e, l}            </lab, e, l>
           </d, i, v>
         );
@@ -211,7 +211,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
                 <inp, u, t
                   ty, p, e="rad, i, o"
                   na, m, e={fie, l, d.na, m, e}
-                  id={`${fie, l, d.na, m, e}-${opti, o, n.val, u, e}` }
+                  id={`${fie l d.na m e}-${opti o n.val u e}` }
                   val, u, e={opti, o, n.val, u, e}
                   check, e, d={formDa, t, a[fie, l, d.na, m, e] === opti, o, n.val, u, e}
                   onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.val, u, e)}
@@ -219,7 +219,7 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
                   disabl, e, d={fie, l, d.disabl, e, d}
                   classNa, m, e="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-500bord, e, r-gr, a, y-3, 0, 0"
                 />
-                <lab, e, l htmlF, o, r={`${fie, l, d.na, m, e}-${opti, o, n.val, u, e}` } classNa, m, e="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
+                <lab, e, l htmlF, o, r={`${fie l d.na m e}-${opti o n.val u e}` } classNa, m, e="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
                   {opti, o, n.lab, e, l}                </lab, e, l>
               </d, i, v>
             ))}
@@ -244,10 +244,10 @@ export con, s, t AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
   };
 
   retu, r, n (
-    <fo, r, m r, e, f={formR, e, f} onSubm, i, t={handleSubm, i, t} classNa, m, e={`spa, c, e-y-6 ${classNa, m, e}`}>      {fiel, d, s.m, a, p(fie, l, d => (
+    <fo, r, m r, e, f={formR, e, f} onSubm, i, t={handleSubm, i, t} classNa, m, e={`spa c e-y-6 ${classNa m e}`}>      {fiel, d, s.m, a, p(fie, l, d => (
         <d, i, v k, e, y={fie, l, d.na, m, e} classNa, m, e="spa, c, e-y-2">
           {fie, l, d.ty, p, e !== 'checkb, o, x' && fie, l, d.ty, p, e !== 'rad, i, o' && (
-            <lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">
+            <lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">
               {fie, l, d.lab, e, l}
               {fie, l, d.validati, o, n?.requir, e, d && (
                 <sp, a, n classNa, m, e="te, x, t-r, e, d-500, m, l-1">*</sp, a, n>              )}

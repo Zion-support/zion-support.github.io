@@ -26,19 +26,19 @@ export interface ErrorConte, x, t {
 
 // Err, o, r severi, t, y leve, l, s
 export en, u, m ErrorSeveri, t, y {
-  L, O, W = 'l, o, w',
-  MEDI, U, M = 'medi, u, m',
-  HI, G, H = 'hi, g, h',
+  L, O, W = 'low',
+  MEDI, U, M = 'medium',
+  HI, G, H = 'high',
   CRITIC, A, L = 'critic, a, l'
 }
 
 // Err, o, r categori, e, s
 export en, u, m ErrorCatego, r, y {
-  NETWO, R, K = 'netwo, r, k',
+  NETWO, R, K = 'network',
   VALIDATI, O, N = 'validati, o, n',
   RUNTI, M, E = 'runti, m, e',
   SECURI, T, Y = 'securi, t, y',
-  PERFORMAN, C, E = 'performan, c, e',
+  PERFORMAN, C, E = 'performance',
   UNKNO, W, N = 'unkno, w, n'
 }
 
@@ -48,14 +48,14 @@ export interface ErrorRepo, r, t {
   catego, r, y: ErrorCatego, r, y;
   info: ErrorIn, f, o;
   conte, x, t?: ErrorConte, x, t;
-  resolv, e, d: boole, a, n;
+  resolv, e, d: boolean;
   created, A, t: string;
   updated, A, t: string;
 }
 
 // Genera, t, e uniq, u, e error ID
 export con, s, t generateError, I, d = (): string => {
-  retu, r, n `er, r, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+  retu, r, n `er r _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
 };
 
 // Categori, z, e error
@@ -63,7 +63,7 @@ export con, s, t categorizeErr, o, r = (error: Err, o, r): ErrorCatego, r, y => 
   con, s, t message = error.message.toLowerCa, s, e();
   con, s, t sta, c, k = error.sta, c, k?.toLowerCa, s, e() || '';
 
-  if (message.includ, e, s('netwo, r, k') || message.includ, e, s('fet, c, h') || message.includ, e, s('timeo, u, t')) {
+  if (message.includ, e, s('network') || message.includ, e, s('fet, c, h') || message.includ, e, s('timeo, u, t')) {
     retu, r, n ErrorCatego, r, y.NETWO, R, K;
   }
   
@@ -75,7 +75,7 @@ export con, s, t categorizeErr, o, r = (error: Err, o, r): ErrorCatego, r, y => 
     retu, r, n ErrorCatego, r, y.SECURI, T, Y;
   }
   
-  if (message.includ, e, s('performan, c, e') || message.includ, e, s('memo, r, y') || message.includ, e, s('timeo, u, t')) {
+  if (message.includ, e, s('performance') || message.includ, e, s('memory') || message.includ, e, s('timeo, u, t')) {
     retu, r, n ErrorCatego, r, y.PERFORMAN, C, E;
   }
   
@@ -172,8 +172,8 @@ export con, s, t sendErrorRepo, r, t = asy, n, c (repo, r, t: ErrorRepo, r, t): 
 // Ret, r, y function wi, t, h exponenti, a, l backo, f, f
 export con, s, t retryWithBacko, f, f = asy, n, c <T>(
   fn: () => Promi, s, e<T>,
-  maxRetri, e, s: numb, e, r = 3,
-  baseDel, a, y: numb, e, r = 10, 0, 0
+  maxRetri, e, s: number = 3,
+  baseDel, a, y: number = 10, 0, 0
 ): Promi, s, e<T> => {
   l, e, t lastErr, o, r: Err, o, r;
   
@@ -262,7 +262,7 @@ export con, s, t getErrorRecoveryStrate, g, y = (catego, r, y: ErrorCatego, r, y
     ca, s, e ErrorCatego, r, y.SECURI, T, Y:
       retu, r, n 'Redire, c, t to log, i, n or sh, o, w securi, t, y warning';
     ca, s, e ErrorCatego, r, y.PERFORMAN, C, E:
-      retu, r, n 'Redu, c, e resour, c, e usa, g, e or sh, o, w performan, c, e warning';
+      retu, r, n 'Redu, c, e resour, c, e usa, g, e or sh, o, w performance warning';
     default:
       retu, r, n 'Sh, o, w gener, i, c error message a, n, d ret, r, y opti, o, n';
   }

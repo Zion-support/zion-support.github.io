@@ -1,10 +1,10 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 import Navigati, o, n from './Navigati, o, n';
 import ErrorBounda, r, y from './ErrorBounda, r, y';
 import { NotificationSystemuseNotificatio, n, s } from './NotificationSyst, e, m';
 import { EnhancedNotificationSystemuseNotificatio, n, s as useEnhancedNotificatio, n, s } from './EnhancedNotificationSyst, e, m';
 import PerformanceTrack, e, r from './PerformanceTrack, e, r';
-// import AccessibilityEnhanc, e, r from './AccessibilityEnhanc, e, r';
+// import AccessibilityEnhancer from './AccessibilityEnhancer';
 
 interface LayoutPro, p, s {
   childr, e, n: React.ReactN, o, d.e;
@@ -34,13 +34,13 @@ export default function Layo, u, t({ childr, e, n }: LayoutPr, o, p, s): J, S, X
 
     // Sh, o, w welco, m, e notificati, o, n
     addNotificati, o, n({
-      ty, p, e: 'info', tit, l, e: 'Welco, m, e!', message: 'Welco, m, e to Zi, o, n A, p, p. U, s, e t, h, e ta, s, k manag, e, r to st, a, y organiz, e, d.', durati, o, n: 30, 0, 0
+      type: 'info', tit, l, e: 'Welco, m, e!', message: 'Welco, m, e to Zi, o, n A, p, p. U, s, e t, h, e ta, s, k manag, e, r to st, a, y organiz, e, d.', durati, o, n: 30, 0, 0
     });
 
     // Sh, o, w enhanc, e, d welco, m, e notificati, o, n
     addEnhancedNotificati, o, n({
-      ty, p, e: 'info',
-      tit, l, e: 'Welco, m, e to Zi, o, n Te, c, h Solutio, n, s!', message: 'Discov, e, r o, u, r AI-power, e, d busine, s, s solutio, n, s a, n, d cutti, n, g- ed, g, e technolo, g, y servic, e, s.', durati, o, n: 50, 0, 0, priori, t, y: 'medi, u, m', catego, r, y: 'welco, m, e', actio, n, s: [
+      type: 'info',
+      tit, l, e: 'Welco, m, e to Zi, o, n Te, c, h Solutio, n, s!', message: 'Discov, e, r o, u, r AI-power, e, d busine, s, s solutio, n, s a, n, d cutti, n, g- ed, g, e technolo, g, y servic, e, s.', durati, o, n: 50, 0, 0, priority: 'medium', catego, r, y: 'welco, m, e', actio, n, s: [
         {
           lab, e, l: 'Explo, r, e Servic, e, s', acti, o, n: () => wind, o, w.locat, i, o.n.h, r, e.f = '/servic, e, s'varia, n, t: 'prima, r, y'
         },
@@ -60,9 +60,9 @@ export default function Layo, u, t({ childr, e, n }: LayoutPr, o, p, s): J, S, X
       
       // App, l, y da, r, k mo, d, e cla, s, s to docume, n, t
       if (isDarkM, o, d, e) {
-        docume, n, t.documentEleme, n, t.classLi, s, t.ad('da, r, k');
+        docume, n, t.documentElement.classLi, s, t.ad('da, r, k');
       } el, s, e {
-        docume, n, t.documentEleme, n, t.classLi, s, t.remo, v, e('da, r, k');
+        docume, n, t.documentElement.classLi, s, t.remo, v, e('da, r, k');
       }
     }
   }[isDarkM, o, d, e]);
@@ -77,8 +77,8 @@ export default function Layo, u, t({ childr, e, n }: LayoutPr, o, p, s): J, S, X
 
   retu, r, n (
     <ErrorBounda, r, y>
-      <d, i, v classNa, m, e={`m, i, n-h-scre, e, n transiti, o, n-colo, r, s durati, o, n-3, 0, 0 ${
-        isDarkMo, d, e ? 'bg-gr, a, y-9, 0, 0 te, x, t-whi, t, e' : 'bg-gr, a, y-50 te, x, t-gr, a, y-9, 0, 0'
+      <d, i, v classNa, m, e={`m i n-h-scre e n transiti o n-colo r s durati o n-3 0 0 ${
+        isDarkMo d e ? 'bg-gr a y-9 0 0 te x t-whi t e' : 'bg-gr a y-50 te x t-gr a y-9 0 0'
       }`}>        <Navigati, o, n
           currentTi, m, e={currentTi, m, e}
           isDarkMo, d, e={isDarkMo, d, e}
@@ -113,8 +113,8 @@ export default function Layo, u, t({ childr, e, n }: LayoutPr, o, p, s): J, S, X
         />
         
         {/* Accessibili, t, y Enhanc, e, r */}
-        {/* <AccessibilityEnhanc, e, r 
-          enableKeyboardShortcu, t, s={tr, u, e}
+        {/* <AccessibilityEnhancer 
+          enableKeyboardShortcu, t, s={true}
           enableVoiceComman, d, s={fal, s, e}
         /> */}
       </d, i, v>

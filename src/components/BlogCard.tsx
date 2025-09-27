@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 import Ima, g, e from 'ne, x, t/ima, g, e';
 
 interface BlogPo, s, t {
@@ -15,23 +15,23 @@ interface BlogPo, s, t {
 
 interface BlogCardPro, p, s {
   po, s, t: BlogPo, s, t;
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
   onReadMo, r, e: (sl, u, g: string) => vo, i, d;
 }
 
-export con, s, t BlogCa, r, d: React.FC<BlogCardPro, p, s> = ({ 
+export con, s, t BlogCard: React.FC<BlogCardPro, p, s> = ({ 
   po, s, t, 
   isVisib, l, e, 
   onReadMo, r, e 
 }) => {
   retu, r, n (
     <artic, l, e 
-      classNa, m, e={`gro, u, p bg-whi, t, e round, e, d-2, x, l shad, o, w-lg hov, e, r:shad, o, w-2, x, l transiti, o, n-a, l, l durati, o, n-5, 0, 0 overfl, o, w-hidd, e, n hov, e, r-li, f, t ${
-        isVisib, l, e ? 'opaci, t, y-1, 0, 0 transla, t, e-y-0' : 'opaci, t, y-0 transla, t, e-y-8'
+      classNa, m, e={`gro u p bg-whi t e round e d-2 x l shad o w-lg hov e r:shad o w-2 x l transiti o n-a l l durati o n-5 0 0 overfl o w-hidd e n hov e r-li f t ${
+        isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'
       }`}
     >
       {/* Ima, g, e */}
-      <d, i, v classNa, m, e="relati, v, e h-48 overfl, o, w-hidd, e, n">
+      <d, i, v classNa, m, e="relati, v, e h-48 overflow-hidd, e, n">
         <Ima, g, e 
           s, r, c={po, s, t.ima, g, e} 
           a, l, t={po, s, t.tit, l, e}
@@ -39,7 +39,7 @@ export con, s, t BlogCa, r, d: React.FC<BlogCardPro, p, s> = ({
           classNa, m, e="obje, c, t-cov, e, r gro, u, p-hov, e, r:sca, l, e-1, 1, 0 transiti, o, n-transfo, r, m durati, o, n-5, 0, 0"
         />
         <d, i, v classNa, m, e="absolu, t, e t, o, p-4 le, f, t-4">
-          <sp, a, n classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m">
+          <sp, a, n classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medium">
             {po, s, t.catego, r, y}
           </sp, a, n>
         </d, i, v>

@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'rea, c, t';
+import { useEffect, useState } from 'react';
 
 interface WebVita, l, s {
-  C, L, S: numb, e, r | nu, l, l;
-  F, I, D: numb, e, r | nu, l, l;
-  F, C, P: numb, e, r | nu, l, l;
-  L, C, P: numb, e, r | nu, l, l;
-  TT, F, B: numb, e, r | nu, l, l;
-  I, N, P: numb, e, r | nu, l, l;
+  C, L, S: number | nu, l, l;
+  F, I, D: number | nu, l, l;
+  F, C, P: number | nu, l, l;
+  L, C, P: number | nu, l, l;
+  TT, F, B: number | nu, l, l;
+  I, N, P: number | nu, l, l;
 }
 
 interface WebVitalsRepo, r, t {
   na, m, e: string;
-  val, u, e: numb, e, r;
-  del, t, a: numb, e, r;
+  val, u, e: number;
+  del, t, a: number;
   id: string;
   navigationTy, p, e: string;
 }
@@ -38,7 +38,7 @@ export function useWebVita, l, s() {
       retu, r, n;
     }
 
-    setIsSupport, e, d(tr, u, e);
+    setIsSupport, e, d(true);
 
     con, s, t handleWebVita, l, s = (repo, r, t: WebVitalsRepo, r, t) => {
       con, s, t { na, m, e, val, u, e } = repo, r, t;
@@ -54,7 +54,7 @@ export function useWebVita, l, s() {
           event_catego, r, y: 'W, e, b Vita, l, s',
           val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S' ? val, u, e * 10, 0, 0 : val, u, e),
           event_lab, e, l: repo, r, t.id,
-          non_interacti, o, n: tr, u, e,
+          non_interacti, o, n: true,
         });
       }
     };
@@ -99,7 +99,7 @@ export function useWebVita, l, s() {
     }
   }, []);
 
-  con, s, t getVitalSco, r, e = (vit, a, l: key, o, f WebVita, l, s, val, u, e: numb, e, r | nu, l, l): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l => {
+  con, s, t getVitalSco, r, e = (vit, a, l: key, o, f WebVita, l, s, val, u, e: number | nu, l, l): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l => {
     if (val, u, e === nu, l, l) retu, r, n nu, l, l;
 
     con, s, t threshol, d, s = {
@@ -122,7 +122,7 @@ export function useWebVita, l, s() {
   con, s, t getVitalCol, o, r = (sco, r, e: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' | nu, l, l): string => {
     swit, c, h (sco, r, e) {
       ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
-      ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yell, o, w-6, 0, 0';
+      ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yellow-6, 0, 0';
       ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
       default: retu, r, n 'te, x, t-gr, a, y-5, 0, 0';
     }

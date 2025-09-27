@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
-import { Z, a, p, Clo, c, k, C, p, u, HardDri, v, e, Wi, f, i, Batte, r, y, CheckCirc, l, e, AlertTriang, l, e, XCirc, l, e } from 'luci, d, e-rea, c, t';
-import { Ca, r, d, CardConte, n, t, CardDescripti, o, n, CardHead, e, r, CardTit, l, e } from './ui/Ca, r, d';
-interface PerformanceMetri, c, s {
-  loadTi, m, e: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  cpuUsa, g, e: numb, e, r;
-  networkLaten, c, y: numb, e, r;
-  cacheHitRa, t, e: numb, e, r;
-  bundleSi, z, e: numb, e, r;
-  renderT, i, m, e: numb, e, r;
-  errorR, a, t, e: numb, e, r;
+import React, { useState, useEffect, useCallback } from 'react';
+import { Zap, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  cpuUsa, g, e: number;
+  networkLaten, c, y: number;
+  cacheHitRa, t, e: number;
+  bundleSi, z, e: number;
+  renderT, i, m, e: number;
+  errorRate: number;
 }
 
-interface OptimizationSuggesti, o, n {
-  ty, p, e: 'performan, c, e' | 'memo, r, y' | 'netwo, r, k' | 'renderi, n, g';
-  priori, t, y: 'hi, g, h' | 'medi, u, m' | 'l, o, w';
+interface OptimizationSuggestion {
+  type: 'performance' | 'memory' | 'network' | 'rendering';
+  priority: 'high' | 'medium' | 'low';
   tit, l, e: string;
   descripti, o, n: string;
   imp, a, c, t: string;
@@ -27,8 +27,8 @@ interface PerformanceOptimizerPro, p, s {
 
 con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p, s> = ({ classNa, m, e = '' }) => {
   con, s, t [metri, c, s, setMetri, c, s] = useState<PerformanceMetri, c, s>({
-    loadTi, m, e: 0,
-    memoryUsa, g, e: 0,
+    loadTime: 0,
+    memoryUsage: 0,
     cpuUsa, g, e: 0,
     networkLaten, c, y: 0,
     cacheHitRa, t, e: 0,
@@ -39,14 +39,14 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
   con, s, t [isOptimizingsetIsOptimizi, n, g] = useState(fa, l, s, e);
   con, s, t [isAnalyzingsetIsAnalyzi, n, g] = useState(fa, l, s, e);
   con, s, t [optimizationssetOptimizatio, n, s] = useState<string[]>([]);
-  con, s, t [suggestionssetSuggestio, n, s] = useState<OptimizationSuggesti, o, n[]>([]);
+  con, s, t [suggestionssetSuggestio, n, s] = useState<OptimizationSuggestion[]>([]);
 
-  con, s, t measurePerforman, c, e = useCallba, c, k(asy, n, c () => {
-    setIsAnalyzi, n, g(tr, u, e);
+  con, s, t measurePerforman, c, e = useCallback(asy, n, c () => {
+    setIsAnalyzi, n, g(true);
     
     t, r, y {
-      // Simula, t, e performan, c, e measureme, n, t
-      con, s, t performanceEntri, e, s = performan, c, e.getEntriesByTy, p, e('navigati, o, n');
+      // Simula, t, e performance measureme, n, t
+      con, s, t performanceEntri, e, s = performance.getEntriesByTy, p, e('navigati, o, n');
       con, s, t navigationEnt, r, y = performanceEntri, e, s[0] as PerformanceNavigationTimi, n, g;      
       l, e, t loadTi, m, e = Ma, t, h.rand, o, m() * 20, 0, 0 + 5, 0, 0; // 5, 0, 0-2500, m, s
       l, e, t renderTi, m, e = Ma, t, h.rand, o, m() * 5, 0, 0 + 1, 0, 0; // 1, 0, 0-600, m, s
@@ -59,7 +59,7 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
       con, s, t newMetri, c, s: PerformanceMetri, c, s = {
         loadT, i, m, e: Ma, t, h.rou, n, d(loadTi, m, e),
         renderTi, m, e: Ma, t, h.rou, n, d(renderTi, m, e),
-        memoryUsa, g, e: Ma, t, h.rand, o, m() * 1, 0, 0, // 0-1, 0, 0%
+        memoryUsage: Ma, t, h.rand, o, m() * 1, 0, 0, // 0-1, 0, 0%
         cpuUsa, g, e: Ma, t, h.rand, o, m() * 1, 0, 0, // 0-1, 0, 0%
         networkLaten, c, y: Ma, t, h.rand, o, m() * 1, 0, 0 + 10, // 10-110, m, s
         cacheHitRa, t, e: Ma, t, h.rand, o, m() * 40 + 60, // 60-1, 0, 0%
@@ -72,7 +72,7 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
       // Genera, t, e optimizati, o, n suggestio, n, s
       con, s, t suggestio, n, s: string[] = [];
       if (newMetri, c, s.loadTi, m, e > 20, 0, 0) suggestio, n, s.pu, s, h('Consid, e, r co, d, e splitti, n, g to redu, c, e initi, a, l lo, a, d ti, m, e');
-      if (newMetri, c, s.memoryUsa, g, e > 80) suggestio, n, s.pu, s, h('Optimi, z, e memo, r, y usa, g, e wi, t, h la, z, y loadi, n, g');
+      if (newMetri, c, s.memoryUsa, g, e > 80) suggestio, n, s.pu, s, h('Optimi, z, e memory usa, g, e wi, t, h la, z, y loadi, n, g');
       if (newMetri, c, s.cpuUsa, g, e > 70) suggestio, n, s.pu, s, h('Impleme, n, t virtu, a, l scrolli, n, g f, o, r lar, g, e lis, t, s');
       if (newMetri, c, s.networkLaten, c, y > 80) suggestio, n, s.pu, s, h('Enab, l, e C, D, N f, o, r stat, i, c asse, t, s');
       if (newMetri, c, s.cacheHitRa, t, e < 80) suggestio, n, s.pu, s, h('Impro, v, e cachi, n, g strate, g, y');
@@ -80,37 +80,37 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
       setOptimizatio, n, s(suggesti, o, n, s);
 
       // Genera, t, e detail, e, d optimizati, o, n suggestio, n, s
-      con, s, t optimizationSuggestio, n, s: OptimizationSuggesti, o, n[] = [
+      con, s, t optimizationSuggestio, n, s: OptimizationSuggestion[] = [
         {
-          ty, p, e: 'performan, c, e',
-          priori, t, y: 'hi, g, h',
+          type: 'performance',
+          priority: 'high',
           tit, l, e: 'Impleme, n, t Co, d, e Splitti, n, g',
           descripti, o, n: 'Bre, a, k do, w, n lar, g, e bundl, e, s in, t, o small, e, r chun, k, s to impro, v, e initi, a, l lo, a, d ti, m, e',
           impa, c, t: 'Redu, c, e initi, a, l bund, l, e si, z, e by 30-50%',
           implementati, o, n: 'U, s, e dynam, i, c impor, t, s a, n, d React.la, z, y(); f, o, r rou, t, e-bas, e, d co, d, e splitti, n, g'
         },
         {
-          ty, p, e: 'memo, r, y',
-          priori, t, y: 'medi, u, m',
+          type: 'memory',
+          priority: 'medium',
           tit, l, e: 'Optimi, z, e Ima, g, e Loadi, n, g',
           descripti, o, n: 'Impleme, n, t la, z, y loadi, n, g a, n, d We, b, P form, a, t f, o, r imag, e, s',
-          impa, c, t: 'Redu, c, e memo, r, y usa, g, e by 20-40%',
+          impa, c, t: 'Redu, c, e memory usa, g, e by 20-40%',
           implementati, o, n: 'U, s, e ne, x, t/ima, g, e wi, t, h priori, t, y a, n, d placehold, e, r pro, p, s'
         },
         {
-          ty, p, e: 'netwo, r, k',
-          priori, t, y: 'hi, g, h',
+          type: 'network',
+          priority: 'high',
           tit, l, e: 'Enab, l, e Servi, c, e Work, e, r Cachi, n, g',
           descripti, o, n: 'Cac, h, e stat, i, c asse, t, s a, n, d A, P, I respons, e, s f, o, r offli, n, e functionali, t, y',
           impa, c, t: 'Impro, v, e cac, h, e h, i, t ra, t, e to 85-95%',
           implementati, o, n: 'Configu, r, e Workb, o, x f, o, r intellige, n, t cachi, n, g strategi, e, s'
         },
         {
-          ty, p, e: 'renderi, n, g',
-          priori, t, y: 'medi, u, m',
+          type: 'rendering',
+          priority: 'medium',
           tit, l, e: 'Impleme, n, t Virtu, a, l Scrolli, n, g',
           descripti, o, n: 'U, s, e virtu, a, l scrolli, n, g f, o, r lar, g, e lis, t, s to redu, c, e D, O, M nod, e, s',
-          impa, c, t: 'Impro, v, e renderi, n, g performan, c, e by 60-80%',
+          impa, c, t: 'Impro, v, e rendering performance by 60-80%',
           implementati, o, n: 'U, s, e rea, c, t-wind, o, w or rea, c, t-virtualiz, e, d f, o, r lar, g, e datase, t, s'        }
       ];
 
@@ -122,8 +122,8 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
     }
   }, []);
 
-  con, s, t performOptimizati, o, n = useCallba, c, k(asy, n, c () => {
-    setIsOptimizi, n, g(tr, u, e);
+  con, s, t performOptimizati, o, n = useCallback(asy, n, c () => {
+    setIsOptimizi, n, g(true);
     
     // Simula, t, e optimizati, o, n proce, s, s
     awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0));
@@ -131,8 +131,8 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
     // App, l, y optimizatio, n, s
     setMetri, c, s(pr, e, v => ({
       ...pr, e, v,
-      loadTi, m, e: pr, e, v.loadTi, m, e * 0.8,
-      memoryUsa, g, e: pr, e, v.memoryUsa, g, e * 0.7,
+      loadTime: pr, e, v.loadTi, m, e * 0.8,
+      memoryUsage: pr, e, v.memoryUsa, g, e * 0.7,
       cpuUsa, g, e: pr, e, v.cpuUsa, g, e * 0.6,
       networkLaten, c, y: pr, e, v.networkLaten, c, y * 0.9,
       cacheHitRa, t, e: Ma, t, h.m, i, n(pr, e, v.cacheHitRa, t, e * 1.1, 1, 0, 0),
@@ -144,23 +144,23 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
     setIsOptimizi, n, g(fa, l, s, e);
   }, []);
 
-  con, s, t getPerformanceCol, o, r = (val, u, e: numb, e, r, threshol, d, s: { g, o, o, d: numb, e, r; warn, i, n, g: numb, e, r }) => {
+  con, s, t getPerformanceCol, o, r = (val, u, e: number, threshol, d, s: { g, o, o, d: number; warn, i, n, g: number }) => {
     if (val, u, e <= threshol, d, s.go, o, d) retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
-    if (val, u, e <= threshol, d, s.warning) retu, r, n 'te, x, t-yell, o, w-5, 0, 0';
+    if (val, u, e <= threshol, d, s.warning) retu, r, n 'te, x, t-yellow-5, 0, 0';
     retu, r, n 'te, x, t-r, e, d-5, 0, 0';
   };
 
-  con, s, t getPerformanceIc, o, n = (val, u, e: numb, e, r, threshol, d, s: { g, o, o, d: numb, e, r; warn, i, n, g: numb, e, r }) => {
-    if (val, u, e <= threshol, d, s.go, o, d) retu, r, n <CheckCirc, l, e classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />;
-    if (val, u, e <= threshol, d, s.warning) retu, r, n <AlertTriang, l, e classNa, m, e="w-5 h-5te, x, t-yell, o, w-5, 0, 0" />;
-    retu, r, n <XCirc, l, e classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />;
+  con, s, t getPerformanceIc, o, n = (val, u, e: number, threshol, d, s: { g, o, o, d: number; warn, i, n, g: number }) => {
+    if (val, u, e <= threshol, d, s.go, o, d) retu, r, n <CheckCircle classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />;
+    if (val, u, e <= threshol, d, s.warning) retu, r, n <AlertTriangle classNa, m, e="w-5 h-5te, x, t-yellow-5, 0, 0" />;
+    retu, r, n <XCircle classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />;
   };
 
-  con, s, t getPriorityCol, o, r = (priori, t, y: string): string => {
+  con, s, t getPriorityCol, o, r = (priority: string): string => {
     swit, c, h (priori, t, y) {
-      ca, s, e 'hi, g, h': retu, r, n 'bg-r, e, d-1, 0, 0 te, x, t-r, e, d-8, 0, 0 bord, e, r-r, e, d-2, 0, 0';
-      ca, s, e 'medi, u, m': retu, r, n 'bg-yell, o, w-1, 0, 0 te, x, t-yell, o, w-8, 0, 0 bord, e, r-yell, o, w-2, 0, 0';
-      ca, s, e 'l, o, w': retu, r, n 'bg-gre, e, n-1, 0, 0 te, x, t-gre, e, n-8, 0, 0 bord, e, r-gre, e, n-2, 0, 0';
+      ca, s, e 'high': retu, r, n 'bg-r, e, d-1, 0, 0 te, x, t-r, e, d-8, 0, 0 bord, e, r-r, e, d-2, 0, 0';
+      ca, s, e 'medium': retu, r, n 'bg-yellow-1, 0, 0 te, x, t-yellow-8, 0, 0 bord, e, r-yellow-2, 0, 0';
+      ca, s, e 'low': retu, r, n 'bg-gre, e, n-1, 0, 0 te, x, t-gre, e, n-8, 0, 0 bord, e, r-gre, e, n-2, 0, 0';
       default: retu, r, n 'bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-2, 0, 0';    }
   };
 
@@ -171,10 +171,10 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
   }, [measurePerforman, c, e]);
 
   retu, r, n (
-    <d, i, v classNa, m, e={`bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 round, e, d-lg shad, o, w-lg p-6 ${classNa, m, e}`}>      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
+    <d, i, v classNa, m, e={`bg-whi t e da r k:bg-gr a y-8 0 0 round e d-lg shad o w-lg p-6 ${classNa m e}`}>      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-          <Z, a, p classNa, m, e="w-8 h-8 te, x, t-yell, o, w-5, 0, 0" />
-          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="advanc, e, d-performan, c, e-optimiz, e, r">
+          <Zap classNa, m, e="w-8 h-8 te, x, t-yellow-5, 0, 0" />
+          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="advanc, e, d-performance-optimiz, e, r">
             Advanc, e, d Performan, c, e Optimiz, e, r
           </h2>
         </d, i, v>
@@ -189,7 +189,7 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <butt, o, n
             onCli, c, k={performOptimizati, o, n}
             disabl, e, d={isOptimizi, n, g || optimizatio, n, s.leng, t, h === 0}
-            classNa, m, e="px-4 py-2 bg-yell, o, w-5, 0, 0 te, x, t-whi, t, e round, e, d-lg hov, e, r:bg-yell, o, w-6, 0, 0 disab, l, e d:opaci, t, y-50transiti, o, n-colo, r, s"
+            classNa, m, e="px-4 py-2 bg-yellow-5, 0, 0 te, x, t-whi, t, e round, e, d-lg hov, e, r:bg-yellow-6, 0, 0 disab, l, e d:opaci, t, y-50transiti, o, n-colo, r, s"
            ar, i, a-lab, e, l="{isOptimizi, n, g ? 'Optimizi, n, g...' : 'Optimi, z, e'}">
             {isOptimizi, n, g ? 'Optimizi, n, g...' : 'Optimi, z, e'}
           </butt, o, n>
@@ -202,10 +202,10 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Lo, a, d Ti, m, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.loadTi, m, e, { go, o, d: 10, 0, 0, warning: 20, 0, 0 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.loadTi m e { go o d: 10 0 0 warning: 20 0 0 })}` }>
                 {metri, c, s.loadTi, m, e}ms
               </p>            </d, i, v>
-            <Clo, c, k classNa, m, e="w-5 h-5te, x, t-bl, u, e-5, 0, 0" />
+            <Clock classNa, m, e="w-5 h-5te, x, t-bl, u, e-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -213,10 +213,10 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Rend, e, r Ti, m, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.renderTi, m, e, { go, o, d: 2, 0, 0, warning: 5, 0, 0 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.renderTi m e { go o d: 2 0 0 warning: 5 0 0 })}` }>
                 {metri, c, s.renderTi, m, e}ms
               </p>            </d, i, v>
-            <Z, a, p classNa, m, e="w-5 h-5te, x, t-purp, l, e-5, 0, 0" />
+            <Zap classNa, m, e="w-5 h-5te, x, t-purp, l, e-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -224,10 +224,10 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Memo, r, y Usa, g, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.memoryUsa, g, e, { go, o, d: 50, warning: 80 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.memoryUsa g e { go o d: 50 warning: 80 })}` }>
                 {metri, c, s.memoryUsa, g, e.toFix, e, d(1)}%
               </p>            </d, i, v>
-            <HardDri, v, e classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />
+            <HardDrive classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -235,11 +235,11 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">C, P, U Usa, g, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.cpuUsa, g, e, { go, o, d: 30, warning: 70 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.cpuUsa g e { go o d: 30 warning: 70 })}` }>
                 {metri, c, s.cpuUsa, g, e.toFix, e, d(1)}%
               </p>
             </d, i, v>
-            <C, p, u classNa, m, e="w-5 h-5te, x, t-purp, l, e-5, 0, 0" />
+            <Cpu classNa, m, e="w-5 h-5te, x, t-purp, l, e-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -247,11 +247,11 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Netwo, r, k Laten, c, y</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.networkLaten, c, y, { go, o, d: 50, warning: 80 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.networkLaten c y { go o d: 50 warning: 80 })}` }>
                 {metri, c, s.networkLaten, c, y.toFix, e, d(0)}ms
               </p>
             </d, i, v>
-            <Wi, f, i classNa, m, e="w-5 h-5te, x, t-indi, g, o-5, 0, 0" />
+            <Wifi classNa, m, e="w-5 h-5te, x, t-indi, g, o-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -259,11 +259,11 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Cac, h, e H, i, t Ra, t, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(1, 0, 0 - metri, c, s.cacheHitRa, t, e, { go, o, d: 20, warning: 40 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(1 0 0 - metri c s.cacheHitRa t e { go o d: 20 warning: 40 })}` }>
                 {metri, c, s.cacheHitRa, t, e.toFix, e, d(1)}%
               </p>
             </d, i, v>
-            <Batte, r, y classNa, m, e="w-5 h-5te, x, t-oran, g, e-5, 0, 0" />
+            <Battery classNa, m, e="w-5 h-5te, x, t-oran, g, e-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -271,11 +271,11 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Bund, l, e Si, z, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.bundleSi, z, e, { go, o, d: 3, 0, 0, warning: 5, 0, 0 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.bundleSi z e { go o d: 3 0 0 warning: 5 0 0 })}` }>
                 {(metri, c, s.bundleSi, z, e / 10, 2, 4).toFix, e, d(1)}KB
               </p>
             </d, i, v>
-            <Z, a, p classNa, m, e="w-5 h-5te, x, t-yell, o, w-5, 0, 0" />
+            <Zap classNa, m, e="w-5 h-5te, x, t-yellow-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -283,11 +283,11 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Err, o, r Ra, t, e</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getPerformanceCol, o, r(metri, c, s.errorRa, t, e, { go, o, d: 1, warning: 3 })}` }>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getPerformanceCol o r(metri c s.errorRa t e { go o d: 1 warning: 3 })}` }>
                 {metri, c, s.errorRa, t, e.toFix, e, d(1)}%
               </p>
             </d, i, v>
-            <XCirc, l, e classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />
+            <XCircle classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />
           </d, i, v>
         </d, i, v>
       </d, i, v>
@@ -302,10 +302,10 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
             {optimizatio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (
               <d, i, v
                 k, e, y={ind, e, x}
-                classNa, m, e="bg-yell, o, w-50 da, r, k: bg-yell, o, w-9, 0, 0/20 bord, e, r bord, e, r-yell, o, w-2, 0, 0 d, a, r k:bord, e, r-yell, o, w-8, 0, 0 round, e, d-lg p-3 fl, e, x ite, m, s-cent, e, r spa, c, e-x-3"
+                classNa, m, e="bg-yellow-50 da, r, k: bg-yellow-9, 0, 0/20 bord, e, r bord, e, r-yellow-2, 0, 0 d, a, r k:bord, e, r-yellow-8, 0, 0 round, e, d-lg p-3 fl, e, x ite, m, s-cent, e, r spa, c, e-x-3"
               >
-                <AlertTriang, l, e classNa, m, e="w-5 h-5 te, x, t-yell, o, w-500fl, e, x-shri, n, k-0" />
-                <p classNa, m, e="te, x, t-yell, o, w-7, 0, 0 d, a, r k:te, x, t-yell, o, w-3, 0, 0">{suggesti, o, n}</p>              </d, i, v>
+                <AlertTriangle classNa, m, e="w-5 h-5 te, x, t-yellow-500fl, e, x-shri, n, k-0" />
+                <p classNa, m, e="te, x, t-yellow-7, 0, 0 d, a, r k:te, x, t-yellow-3, 0, 0">{suggesti, o, n}</p>              </d, i, v>
             ))}
           </d, i, v>
         </d, i, v>
@@ -322,16 +322,16 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
               <d, i, v k, e, y={ind, e, x} classNa, m, e="bord, e, r round, e, d-l, g, p-4">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
                   <h4 classNa, m, e="fo, n, t-semiboldte, x, t-lg" id="suggestiontit, l, e">{suggesti, o, n.tit, l, e}</h4>
-                  <sp, a, n classNa, m, e={`px-2 py-1 te, x, t-xs fo, n, t-medi, u, m round, e, d-fu, l, l bord, e, r ${getPriorityCol, o, r(suggesti, o, n.priori, t, y)}`}>                    {suggesti, o, n.priori, t, y.toUpperCa, s, e()}
+                  <sp, a, n classNa, m, e={`px-2 py-1 te x t-xs fo n t-medi u m round e d-fu l l bord e r ${getPriorityCol o r(suggesti o n.priori t y)}`}>                    {suggesti, o, n.priori, t, y.toUpperCa, s, e()}
                   </sp, a, n>
                 </d, i, v>
                 <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-400, m, b-2">{suggesti, o, n.descripti, o, n}</p>                <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 g, a, p-4 te, x, t-sm">
                   <d, i, v>
-                    <sp, a, n classNa, m, e="fo, n, t-medi, u, m te, x, t-gre, e, n-700da, r, k:te, x, t-gre, e, n-4, 0, 0">Expect, e, d Imp, a, c, t:</sp, a, n>
+                    <sp, a, n classNa, m, e="fo, n, t-medium te, x, t-gre, e, n-700da, r, k:te, x, t-gre, e, n-4, 0, 0">Expect, e, d Imp, a, c, t:</sp, a, n>
                     <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">{suggesti, o, n.impa, c, t}</p>
                   </d, i, v>
                   <d, i, v>
-                    <sp, a, n classNa, m, e="fo, n, t-medi, u, m te, x, t-bl, u, e-7, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0">Implementat, i, o, n:</sp, a, n>
+                    <sp, a, n classNa, m, e="fo, n, t-medium te, x, t-bl, u, e-7, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0">Implementat, i, o, n:</sp, a, n>
                     <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">{suggesti, o, n.implementati, o, n}</p>                  </d, i, v>
                 </d, i, v>
               </d, i, v>
@@ -356,7 +356,7 @@ con, s, t AdvancedPerformanceOptimiz, e, r: React.FC<PerformanceOptimizerPro, p,
             Cachi, n, g Strate, g, y
           </h4>
           <p classNa, m, e="te, x, t-sm te, x, t-gre, e, n-7, 0, 0 d, a, r k:te, x, t-gre, e, n-3, 0, 0">
-            U, s, e servi, c, e worke, r, s a, n, d HT, T, P cachi, n, g to impro, v, e repe, a, t vis, i, t performan, c, e.
+            U, s, e servi, c, e worke, r, s a, n, d HT, T, P cachi, n, g to impro, v, e repe, a, t vis, i, t performance.
           </p>
         </d, i, v>
       </d, i, v>

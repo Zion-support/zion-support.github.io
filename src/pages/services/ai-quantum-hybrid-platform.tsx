@@ -3,17 +3,17 @@ import { S, E, O } from "../../componen, t, s/S, E, O"
 import {
   At, o, m,
   Bra, i, n,
-  Z, a, p,
-  C, p, u,
+  Zap,
+  Cpu,
   Use, r, s,
-  Clo, c, k,
+  Clock,
   Netwo, r, k,
   Rock, e, t,
   Shie, l, d,
   Glo, b, e,
   Smartpho, n, e,
   Monit, o, r,
-  CheckCirc, l, e,
+  CheckCircle,
   Rock, e, t,
 } from "luci, d, e-rea, c, t"
 
@@ -21,10 +21,10 @@ con, s, t AIQuantumHybridPlatfo, r, m: React.FC = () => {
   con, s, t featur, e, s = [
     { ic, o, n: At, o, m, tit, l, e: "Quant, u, m Computi, n, g", descripti, o, n: "Levera, g, e quant, u, m bi, t, s f, o, r exponential, l, y fast, e, r computation, a, l pow, e, r" },
     { ic, o, n: Bra, i, n, tit, l, e: "AI Integrati, o, n", descripti, o, n: "Seamle, s, s integrati, o, n of classic, a, l AI wi, t, h quant, u, m algorith, m, s" },
-    { ic, o, n: Z, a, p, tit, l, e: "Hybr, i, d Processi, n, g", descripti, o, n: "Combin, e, s classic, a, l a, n, d quant, u, m computi, n, g f, o, r optim, a, l performan, c, e" },
-    { ic, o, n: C, p, u, tit, l, e: "Quant, u, m-Classic, a, l Interfa, c, e", descripti, o, n: "Bridgi, n, g quant, u, m a, n, d classic, a, l computi, n, g paradig, m, s" },
+    { ic, o, n: Zap, tit, l, e: "Hybr, i, d Processi, n, g", descripti, o, n: "Combin, e, s classic, a, l a, n, d quant, u, m computi, n, g f, o, r optim, a, l performance" },
+    { ic, o, n: Cpu, tit, l, e: "Quant, u, m-Classic, a, l Interfa, c, e", descripti, o, n: "Bridgi, n, g quant, u, m a, n, d classic, a, l computi, n, g paradig, m, s" },
     { ic, o, n: Use, r, s, tit, l, e: "Mul, t, i-us, e, r Acce, s, s", descripti, o, n: "Enterpri, s, e-gra, d, e platfo, r, m f, o, r tea, m, s a, n, d organizatio, n, s" },
-    { ic, o, n: Clo, c, k, tit, l, e: "Re, a, l-ti, m, e Processi, n, g", descripti, o, n: "Insta, n, t quant, u, m-classic, a, l hybr, i, d computatio, n, s" },
+    { ic, o, n: Clock, tit, l, e: "Re, a, l-ti, m, e Processi, n, g", descripti, o, n: "Insta, n, t quant, u, m-classic, a, l hybr, i, d computatio, n, s" },
   ]
 
   con, s, t capabiliti, e, s = [
@@ -33,7 +33,7 @@ con, s, t AIQuantumHybridPlatfo, r, m: React.FC = () => {
     { ic, o, n: Shie, l, d, tit, l, e: "Quant, u, m Cryptograp, h, y", descripti, o, n: "Unbreakab, l, e encrypti, o, n usi, n, g quant, u, m k, e, y distributi, o, n" },
     { ic, o, n: Glo, b, e, tit, l, e: "Glob, a, l Quant, u, m Netwo, r, k", descripti, o, n: "Worldwi, d, e quant, u, m computi, n, g infrastructu, r, e acce, s, s" },
     { ic, o, n: Smartpho, n, e, tit, l, e: "Mobi, l, e Quant, u, m Acce, s, s", descripti, o, n: "Acce, s, s quant, u, m computi, n, g pow, e, r from anywhe, r, e" },
-    { ic, o, n: Monit, o, r, tit, l, e: "Quant, u, m Monitori, n, g", descripti, o, n: "Re, a, l-ti, m, e quant, u, m syst, e, m performan, c, e tracki, n, g" },
+    { ic, o, n: Monit, o, r, tit, l, e: "Quant, u, m Monitori, n, g", descripti, o, n: "Re, a, l-ti, m, e quant, u, m syst, e, m performance tracki, n, g" },
   ]
 
   con, s, t applicatio, n, s = [
@@ -64,12 +64,12 @@ con, s, t AIQuantumHybridPlatfo, r, m: React.FC = () => {
       />
 
       {/* He, r, o Secti, o, n */}
-      <secti, o, n classNa, m, e="relati, v, e py-20 overfl, o, w-hidd, e, n">
+      <secti, o, n classNa, m, e="relati, v, e py-20 overflow-hidd, e, n">
         <d, i, v classNa, m, e="absolu, t, e ins, e, t-0 bg-gradie, n, t-to-r from-indi, g, o-9, 0, 0/20 v, i, a-purp, l, e-9, 0, 0/20 to-cy, a, n-9, 0, 0/20" />
         <d, i, v classNa, m, e="contain, e, r-responsi, v, e relati, v, e z-10">
           <d, i, v classNa, m, e="te, x, t-cent, e, r m, a, x-w-4, x, l mx-au, t, o">
-            <d, i, v classNa, m, e="inli, n, e-fl, e, x ite, m, s-cent, e, r px-4 py-2 bg-indi, g, o-4, 0, 0/10 bord, e, r bord, e, r-indi, g, o-4, 0, 0/20 round, e, d-fu, l, l te, x, t-indi, g, o-4, 0, 0 te, x, t-sm fo, n, t-medi, u, m mb-6">
-              <CheckCirc, l, e classNa, m, e="w-4 h-4 mr-2" />
+            <d, i, v classNa, m, e="inli, n, e-fl, e, x ite, m, s-cent, e, r px-4 py-2 bg-indi, g, o-4, 0, 0/10 bord, e, r bord, e, r-indi, g, o-4, 0, 0/20 round, e, d-fu, l, l te, x, t-indi, g, o-4, 0, 0 te, x, t-sm fo, n, t-medium mb-6">
+              <CheckCircle classNa, m, e="w-4 h-4 mr-2" />
               Quant, u, m AI Technolo, g, y
             </d, i, v>
             <h1 classNa, m, e="te, x, t-5, x, l md:te, x, t-6, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">AI Quant, u, m Hybr, i, d Platfo, r, m</h1>
@@ -157,7 +157,7 @@ con, s, t AIQuantumHybridPlatfo, r, m: React.FC = () => {
               <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 g, a, p-4">
                 {applicatio, n, s.m, a, p((applicati, o, n, ind, e, x) => (
                   <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                    <CheckCirc, l, e classNa, m, e="w-5 h-5 te, x, t-indi, g, o-4, 0, 0" />
+                    <CheckCircle classNa, m, e="w-5 h-5 te, x, t-indi, g, o-4, 0, 0" />
                     <sp, a, n classNa, m, e="te, x, t-gr, a, y-3, 0, 0">{applicati, o, n}</sp, a, n>
                   </d, i, v>
                 ))}
@@ -210,7 +210,7 @@ con, s, t AIQuantumHybridPlatfo, r, m: React.FC = () => {
                 classNa, m, e="te, x, t-cent, e, r p-6 bg-sla, t, e-8, 0, 0/50 bord, e, r bord, e, r-sla, t, e-7, 0, 0/50 round, e, d-xl hov, e, r:bg-sla, t, e-7, 0, 0/50 hov, e, r:bord, e, r-indi, g, o-4, 0, 0/30 transiti, o, n-a, l, l durati, o, n-2, 0, 0"
               >
                 <d, i, v classNa, m, e="w-16 h-16 bg-gradie, n, t-to-br from-indi, g, o-4, 0, 0/20 to-purp, l, e-5, 0, 0/20 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mx-au, t, o mb-4">
-                  <CheckCirc, l, e classNa, m, e="w-7 h-7 te, x, t-indi, g, o-3, 0, 0" />
+                  <CheckCircle classNa, m, e="w-7 h-7 te, x, t-indi, g, o-3, 0, 0" />
                 </d, i, v>
                 <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-whi, t, e mb-2">{benef, i, t}</h3>
               </d, i, v>

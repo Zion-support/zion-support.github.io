@@ -1,11 +1,11 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 import { useTaskManag, e, r } from '../hoo, k, s/useTaskManag, e, r';
 import Collaborati, o, n from './Collaborati, o, n';
 import ProjectManageme, n, t from './ProjectManageme, n, t';
 import ActivityFe, e, d from './ ActivityFe, e, d';
 
 interface DashboardPro, p, s {
-  isDarkMo, d, e: boole, a, n;
+  isDarkMo, d, e: boolean;
 }
 
 export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s): J, S, X.Elem, e, n.t {
@@ -26,20 +26,20 @@ export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s):
       tit, l, e: 'Tot, a, l Tas, k, s', val, u, e: sta, t, s.totalTasksi, c, o.n: '📋', col, o, r: 'bl, u, e'
     },
     {
-      tit, l, e: 'Acti, v, e Tas, k, s', val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳', col, o, r: 'yell, o, w'
+      tit, l, e: 'Acti, v, e Tas, k, s', val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳', col, o, r: 'yellow'
     },
     {
       tit, l, e: 'Complet, e, d', val, u, e: sta, t, s.completedTasksi, c, o.n: '✅', col, o, r: 'gre, e, n'
     },
         {
-      tit, l, e: 'Completi, o, n Ra, t, e', val, u, e: `${sta, t, s.completion, R, a.t e}%`ic, o, n: '📊', col, o, r: 'purp, l, e'
+      tit, l, e: 'Completi, o, n Ra, t, e', val, u, e: `${sta t s.completion R a.t e}%`ic, o, n: '📊', col, o, r: 'purp, l, e'
     }
   ];
 
   con, s, t getColorClass, e, s = (col, o, r: str, i, n, g) => {
     con, s, t colo, r, s = {
       bl, u, e: 'bg-bl, u, e-1, 0, 0 da, r, k:bg-bl, u, e-9, 0, 0 te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0',
-      yell, o, w: 'bg-yell, o, w-1, 0, 0 da, r, k:bg-yell, o, w-9, 0, 0 te, x, t-yell, o, w-6, 0, 0 da, r, k:te, x, t-yell, o, w-4, 0, 0',
+      yellow: 'bg-yellow-1, 0, 0 da, r, k:bg-yellow-9, 0, 0 te, x, t-yellow-6, 0, 0 da, r, k:te, x, t-yellow-4, 0, 0',
       gre, e, n: 'bg-gre, e, n-1, 0, 0 da, r, k:bg-gre, e, n-9, 0, 0 te, x, t-gre, e, n-6, 0, 0 da, r, k:te, x, t-gre, e, n-4, 0, 0',
       purp, l, e: 'bg-purp, l, e-1, 0, 0 da, r, k:bg-purp, l, e-9, 0, 0 te, x, t-purp, l, e-6, 0, 0 da, r, k:te, x, t-purp, l, e-4, 0, 0'    };
     retu, r, n colo, r, s[col, o, r as key, o, f type, o, f col, o, r, s] || colo, r, s.b, l, u.e;
@@ -59,10 +59,10 @@ export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s):
       <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-3 g, a, p-6 mb-8">
         {/* Ta, s, k Statisti, c, s */}
         <d, i, v classNa, m, e="lg:c, o, l-sp, a, n-1">
-          <d, i, v classNa, m, e={`p-6 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 hov, e, r:shad, o, w-lg ${
-            isDarkMo, d, e 
-              ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-              : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-3, 0, 0'
+          <d, i, v classNa, m, e={`p-6 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-lg ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
           }`}>
             <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="ta, s, k-overvi, e, w">
               Ta, s, k Overvi, e, w
@@ -70,7 +70,7 @@ export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s):
             <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2g, a, p-4 mb-4">
               {dashboardIte, m, s.m, a, p((it, e, m, ind, e, x) => (
                 <d, i, v k, e, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e={`p-3 round, e, d-lg ${getColorClass, e, s(it, e, m.col, o, r)}`}>                    <d, i, v classNa, m, e="te, x, t-2xl, m, b-1">{it, e, m.ic, o, n}</d, i, v>
+                  <d, i, v classNa, m, e={`p-3 round e d-lg ${getColorClass e s(it e m.col o r)}`}>                    <d, i, v classNa, m, e="te, x, t-2xl, m, b-1">{it, e, m.ic, o, n}</d, i, v>
                     <d, i, v classNa, m, e="te, x, t-lgfo, n, t-bo, l, d">{it, e, m.val, u, e}</d, i, v>
                     <d, i, v classNa, m, e="te, x, t-xsopaci, t, y-75">{it, e, m.tit, l, e}</d, i, v>                  </d, i, v>
                 </d, i, v>
@@ -86,7 +86,7 @@ export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s):
               <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 da, r, k: bg-gr, a, y-7, 0, 0 round, e, d-ful, l, h-3">
                 <d, i, v 
                   classNa, m, e="bg-gradie, n, t-to-r from-bl, u, e-5, 0, 0 to-purp, l, e-5, 0, 0 h-3 round, e, d-fu, l, l transiti, o, n-a, l, l durati, o, n-500ea, s, e-o, u, t"
-                  sty, l, e={{ wi, d, t, h: `${sta, t, s.completionRa, t, e}%` }}
+                  sty, l, e={{ wi, d, t, h: `${sta t s.completionRa t e}%` }}
                 ></d, i, v>              </d, i, v>
             </d, i, v>
           </d, i, v>
@@ -114,35 +114,35 @@ export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s):
           Qui, c, k Actio, n, s
         </h3>
         <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-3g, a, p-4">
-          <butt, o, n classNa, m, e={`p-4 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 hov, e, r:shad, o, w-md ${
-            isDarkMo, d, e 
-              ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-              : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-3, 0, 0'
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
           }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
               <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">📝</d, i, v>
-              <d, i, v classNa, m, e="fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">A, d, d Ta, s, k</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">A, d, d Ta, s, k</d, i, v>
               <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Crea, t, e n, e, w ta, s, k</d, i, v>
             </d, i, v>
           </butt, o, n>
           
-          <butt, o, n classNa, m, e={`p-4 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 hov, e, r:shad, o, w-md ${
-            isDarkMo, d, e 
-              ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-              : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-3, 0, 0'
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
           }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
               <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">📊</d, i, v>
-              <d, i, v classNa, m, e="fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Vi, e, w Repor, t, s</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Vi, e, w Repor, t, s</d, i, v>
               <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Analyti, c, s & insigh, t, s</d, i, v>
             </d, i, v>
           </butt, o, n>
           
-          <butt, o, n classNa, m, e={`p-4 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 hov, e, r:shad, o, w-md ${
-            isDarkMo, d, e 
-              ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-              : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 ho, v, e, r:bord, e, r-gr, a, y-3, 0, 0'
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
           }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
               <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">⚙️</d, i, v>
-              <d, i, v classNa, m, e="fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Settin, g, s</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Settin, g, s</d, i, v>
               <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Preferenc, e, s</d, i, v>
             </d, i, v>
           </butt, o, n>

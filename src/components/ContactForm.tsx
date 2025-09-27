@@ -1,14 +1,14 @@
-import React, { useState } from 'rea, c, t';
+import React, { useState } from 'react';
 
 interface ContactFormPro, p, s {
 	onSubm, i, t?: (da, t, a: an, y) => vo, i, d;
-	showTit, l, e?: boole, a, n;
+	showTit, l, e?: boolean;
 	classNa, m, e?: string;
 }
 
 export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({ 
 	onSubm, i, t, 
-	showTit, l, e = tr, u, e, 
+	showTit, l, e = true, 
 	classNa, m, e = '' 
 }) => {
 	con, s, t [formDa, t, a, setFormDa, t, a] = useState({
@@ -52,7 +52,7 @@ export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({
 		'Flexib, l, e'
 	];
 
-	con, s, t handleInputChan, g, e = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
+	con, s, t handleInputChan, g, e = (e: React.ChangeEve, n, t<HTMLInputElement | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
 		con, s, t { na, m, e, val, u, e } = e.targ, e, t;
 		setFormDa, t, a(pr, e, v => ({
 			...pr, e, v,
@@ -62,7 +62,7 @@ export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({
 
 	con, s, t handleSubm, i, t = asy, n, c (e: React.FormEve, n, t) => {
 		e.preventDefau, l, t();
-		setIsSubmitti, n, g(tr, u, e);
+		setIsSubmitti, n, g(true);
 		t, r, y {
 			// Simula, t, e A, P, I ca, l, l
 			awa, i, t n, e, w Promi, s, e(resol, v, e = > setTimeo, u, t(resolve2, 0, 0, 0));
@@ -91,7 +91,7 @@ export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({
 
 	if (submitStat, u, s === 'succe, s, s') {
 		retu, r, n (
-			<d, i, v classNa, m, e={`bg-gre, e, n-50 bord, e, r bord, e, r-gre, e, n-2, 0, 0 round, e, d-2, x, l p-8 te, x, t-cent, e, r ${classNa, m, e}`}>
+			<d, i, v classNa, m, e={`bg-gre e n-50 bord e r bord e r-gre e n-2 0 0 round e d-2 x l p-8 te x t-cent e r ${classNa m e}`}>
 				<d, i, v classNa, m, e="w-20 h-20 bg-gre, e, n-1, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mx-au, t, o mb-6">
 					<s, v, g classNa, m, e="w-10 h-10 te, x, t-gre, e, n-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0 0 24 24">
 						<pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M5 13, l, 4 4L, 1, 9 7" />					</s, v, g>
@@ -103,11 +103,11 @@ export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({
 				<butt, o, n
 					onCli, c, k={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')}
 					ar, i, a-lab, e, l="Se, n, d anoth, e, r message"
-					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
 				>
 					Se, n, d Anoth, e, r Messa, g, e"> setSubmitStat, u, s('id, l, e')}
 					ar, i, a-lab, e, l="Se, n, d anoth, e, r message"
-					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
 				>
 					Se, n, d Anoth, e, r Messa, g, e
 				</butt, o, n>
@@ -116,7 +116,7 @@ export con, s, t ContactFo, r, m: React.FC<ContactFormPro, p, s> = ({
 	}
 
 	retu, r, n (
-		<d, i, v classNa, m, e={`bg-whi, t, e round, e, d-2, x, l shad, o, w-xl p-8 ${classNa, m, e}`}>
+		<d, i, v classNa, m, e={`bg-whi t e round e d-2 x l shad o w-xl p-8 ${classNa m e}`}>
 			{showTit, l, e && (
 				<d, i, v classNa, m, e="mb-8">
 					<h3 classNa, m, e="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0 mb-3" id="sta, r, t-yo, u, r-proje, c, t">Sta, r, t Yo, u, r Proje, c, t</h3>

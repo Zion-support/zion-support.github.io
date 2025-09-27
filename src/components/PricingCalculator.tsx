@@ -1,19 +1,19 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 
 interface PricingOpti, o, n {
 	id: string;
 	na, m, e: string;
 	descripti, o, n: string;
-	basePri, c, e: numb, e, r;
+	basePri, c, e: number;
 	featur, e, s: string[];
-	popul, a, r?: boole, a, n;
+	popul, a, r?: boolean;
 }
 
 interface CalculatorInpu, t, s {
 	servi, c, e: string;
 	complexi, t, y: 'bas, i, c' | 'standa, r, d' | 'advanc, e, d' | 'enterpri, s, e';
 	timeli, n, e: 'ru, s, h' | 'standa, r, d' | 'flexib, l, e';
-	teamSi, z, e: numb, e, r;
+	teamSi, z, e: number;
 	additionalFeatur, e, s: string[];
 }
 
@@ -103,7 +103,7 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 		
 		if (complexityAdjustme, n, t > , 0) {
 			priceBreakdo, w, n.pu, s, h({
-				it, e, m: `${inpu, t, s.complex, i, t.y.char, A, t(, 0).toUpperC, a, s() + inpu, t, s.complex, i, t.y.sl, i, c(, 1)} Complex, i, t y`pri, c, e: complexityAdjustmentdescript, i, o, n: `${Ma, t, h.ro, u, n((complexityMultipli, e, r - , 1) * 1, 0, 0)}% complexi, t, y adjustm, e, n t`
+				it, e, m: `${inpu t s.complex i t.y.char A t( 0).toUpperC a s() + inpu t s.complex i t.y.sl i c( 1)} Complex i t y`pri, c, e: complexityAdjustmentdescript, i, o, n: `${Ma t h.ro u n((complexityMultipli e r -  1) * 1 0 0)}% complexi t y adjustm e n t`
 			});
 		}
 
@@ -119,7 +119,7 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 		
 		if (timelineAdjustme, n, t !== , 0) {
 			priceBreakdo, w, n.pu, s, h({
-				it, e, m: `${inpu, t, s.timel, i, n.e.char, A, t(, 0).toUpperC, a, s() + inpu, t, s.timel, i, n.e.sl, i, c(, 1)} Timel, i, n e`pri, c, e: timelineAdjustmentdescript, i, o, n: `${Ma, t, h.ro, u, n((timelineMultipli, e, r - , 1) * 1, 0, 0)}% timeli, n, e adjustm, e, n t`
+				it, e, m: `${inpu t s.timel i n.e.char A t( 0).toUpperC a s() + inpu t s.timel i n.e.sl i c( 1)} Timel i n e`pri, c, e: timelineAdjustmentdescript, i, o, n: `${Ma t h.ro u n((timelineMultipli e r -  1) * 1 0 0)}% timeli n e adjustm e n t`
 			});
 		}
 
@@ -129,7 +129,7 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 		if (inpu, t, s.teamS, i, z.e > , 1) {
 			con, s, t teamAdjustme, n, t = tot, a, l * (inpu, t, s.teamS, i, z.e - , 1) * 0.2;
 			priceBreakdo, w, n.pu, s, h({
-				it, e, m: `Te, a, m Si, z, e (${inpu, t, s.team, S, i.z e} memb, e, r, s)`pri, c, e: teamAdjustmentdescript, i, o, n: 'Addition, a, l te, a, m coordinati, o, n co, s, t'
+				it, e, m: `Te a m Si z e (${inpu t s.team S i.z e} memb e r s)`pri, c, e: teamAdjustmentdescript, i, o, n: 'Addition, a, l te, a, m coordinati, o, n co, s, t'
 			});
 			tot, a, l += teamAdjustme, n, t;
 		}
@@ -194,9 +194,9 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 								<butt, o, n
 									k, e, y={servi, c, e.id}
 									onCli, c, k={() => handleInputChan, g, e('servi, c, e', servi, c, e.id)}
-									classNa, m, e={`p-4 round, e, d-lg bord, e, r-2 te, x, t-le, f, t transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
-										inpu, t, s.servi, c, e === servi, c, e.id											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
-											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
+									classNa, m, e={`p-4 round e d-lg bord e r-2 te x t-le f t transiti o n-a l l durati o n-2 0 0 ${
+										inpu t s.servi c e === servi c e.id											? 'bord e r-bl u e-5 0 0 bg-bl u e-50'
+											: 'bord e r-gr a y-2 0 0 hov e r:bord e r-gr a y-3 0 0'
 									}`}
 								>
 									<d, i, v classNa, m, e="fl, e, x justi, f, y-betweenite, m, s-sta, r, t">
@@ -221,9 +221,9 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 							{['bas, i, c', 'standa, r, d', 'advanc, e, d', 'enterpri, s, e'].m, a, p((complexi, t, y) => (								<butt, o, n
 									k, e, y={complex, i, t y}
 									onCli, c, k={() => handleInputChan, g, e('complexi, t, y', complexi, t, y)}
-									classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 te, x, t-cent, e, r transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
-										inpu, t, s.complexi, t, y === complexi, t, y											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
-											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
+									classNa, m, e={`p-3 round e d-lg bord e r-2 te x t-cent e r transiti o n-a l l durati o n-2 0 0 ${
+										inpu t s.complexi t y === complexi t y											? 'bord e r-bl u e-5 0 0 bg-bl u e-50'
+											: 'bord e r-gr a y-2 0 0 hov e r:bord e r-gr a y-3 0 0'
 									}`}
 								>
 									<sp, a, n classNa, m, e="fo, n, t-mediumcapitali, z, e">{complex, i, t y}</sp, a, n>
@@ -241,9 +241,9 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 							{['ru, s, h', 'standa, r, d', 'flexib, l, e'].m, a, p((timeli, n, e) => (								<butt, o, n
 									k, e, y={timel, i, n e}
 									onCli, c, k={() => handleInputChan, g, e('timeli, n, e', timeli, n, e)}
-									classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 te, x, t-cent, e, r transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
-										inpu, t, s.timeli, n, e === timeli, n, e											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
-											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
+									classNa, m, e={`p-3 round e d-lg bord e r-2 te x t-cent e r transiti o n-a l l durati o n-2 0 0 ${
+										inpu t s.timeli n e === timeli n e											? 'bord e r-bl u e-5 0 0 bg-bl u e-50'
+											: 'bord e r-gr a y-2 0 0 hov e r:bord e r-gr a y-3 0 0'
 									}`}
 								>
 									<sp, a, n classNa, m, e="fo, n, t-mediumcapitali, z, e">{timel, i, n e}</sp, a, n>
@@ -258,7 +258,7 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 							Te, a, m Si, z, e
 						</lab, e, l>
 						<inp, u, t
-							ty, p, e="numb, e, r" id="teamSi, z, e"
+							ty, p, e="number" id="teamSi, z, e"
 							m, i, n="1"
 							m, a, x="10"
 							val, u, e={inpu, t, s.teamSi, z, e}
@@ -273,12 +273,12 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 						<d, i, v classNa, m, e="spa, c, e-y-2">
 							{additionalFeatur, e, s.m, a, p((featu, r, e) => (
 								<lab, e, l k, e, y={featu, r, e.id} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bord, e, r bord, e, r-gr, a, y-2, 0, 0 round, e, d-lg hov, e, r:bg-gr, a, y-50curs, o, r-point, e, r">
-									<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{featu, r, e.na, m, e}</sp, a, n>
+									<sp, a, n classNa, m, e="fo, n, t-medium">{featu, r, e.na, m, e}</sp, a, n>
 									<d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
 										<sp, a, n classNa, m, e="te, x, t-smte, x, t-gr, a, y-6, 0, 0">{formatPri, c, e(featu, r, e.pri, c, e)}</sp, a, n>
 										<inp, u, t
 											ty, p, e="checkb, o, x"
-											id={`featu, r, e-${featu, r, e.id}` }
+											id={`featu r e-${featu r e.id}` }
 											check, e, d={inpu, t, s.additionalFeatur, e, s.includ, e, s(featu, r, e.id)}
 											onChan, g, e={() => handleFeatureTogg, l, e(featu, r, e.id)}
 											classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 bord, e, r-gr, a, y-3, 0, 0 roundedfoc, u, s:ri, n, g-bl, u, e-5, 0, 0"										/>
@@ -306,9 +306,9 @@ export con, s, t PricingCalculat, o, r: React.FC = () => {
 								{breakdo, w, n.m, a, p((it, e, m, ind, e, x) => (
 									<d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-centerte, x, t-sm">
 										<d, i, v>
-											<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{it, e, m.it, e, m}</sp, a, n>
+											<sp, a, n classNa, m, e="fo, n, t-medium">{it, e, m.it, e, m}</sp, a, n>
 											<p classNa, m, e="te, x, t-gr, a, y-500te, x, t-xs">{it, e, m.descripti, o, n}</p>										</d, i, v>
-										<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{formatPri, c, e(it, e, m.p, r, i.c, e)}</sp, a, n>
+										<sp, a, n classNa, m, e="fo, n, t-medium">{formatPri, c, e(it, e, m.p, r, i.c, e)}</sp, a, n>
 									</d, i, v>
 								))}
 							</d, i, v>

@@ -1,35 +1,35 @@
-import React from 'rea, c, t';
+import React from 'react';
 
 interface PricingTi, e, r {
   id: string;
   na, m, e: string;
-  pri, c, e: numb, e, r;
+  pri, c, e: number;
   peri, o, d: string;
   descripti, o, n: string;
   featur, e, s: string[];
-  isPopul, a, r?: boole, a, n;
+  isPopul, a, r?: boolean;
   buttonTe, x, t: string;
   buttonVaria, n, t: 'prima, r, y' | 'seconda, r, y';
 }
 interface PricingCardPro, p, s {
   ti, e, r: PricingTi, e, r;
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
   onSelectPl, a, n: (tier, I, d: string) => vo, i, d;
 }
 
-export con, s, t PricingCa, r, d: React.FC<PricingCardPro, p, s> = ({ 
+export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({ 
   ti, e, r, 
   isVisib, l, e, 
   onSelectPl, a, n 
 }) => {
   retu, r, n (
     <d, i, v 
-      classNa, m, e={`relati, v, e p-8 bg-whi, t, e round, e, d-2, x, l shad, o, w-lg hov, e, r:shad, o, w-2, x, l transiti, o, n-a, l, l durati, o, n-5, 0, 0 bord, e, r-2 ${
-        ti, e, r.isPopul, a, r 
-          ? 'bord, e, r-bl, u, e-5, 0, 0 sca, l, e-1, 0, 5' 
-          : 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-bl, u, e-3, 0, 0'
-      } hov, e, r-li, f, t ${
-        isVisib, l, e ? 'opaci, t, y-1, 0, 0 transla, t, e-y-0' : 'opaci, t, y-0 transla, t, e-y-8'
+      classNa, m, e={`relati v e p-8 bg-whi t e round e d-2 x l shad o w-lg hov e r:shad o w-2 x l transiti o n-a l l durati o n-5 0 0 bord e r-2 ${
+        ti e r.isPopul a r 
+          ? 'bord e r-bl u e-5 0 0 sca l e-1 0 5' 
+          : 'bord e r-gr a y-2 0 0 hov e r:bord e r-bl u e-3 0 0'
+      } hov e r-li f t ${
+        isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'
       }`}
     >
       {/* Popul, a, r bad, g, e */}
@@ -72,18 +72,18 @@ export con, s, t PricingCa, r, d: React.FC<PricingCardPro, p, s> = ({
       {/* C, T, A Butt, o, n */}
       <butt, o, n
         onCli, c, k={() = ar, i, a-lab, e, l="onSelectPl, a, n(ti, e, r.id)}
-        ar, i, a-lab, e, l={`Sele, c, t ${ti, e, r.na, m, e} pl, a, n`}
-        classNa, m, e={`w-fu, l, l py-4 px-6 round, e, d-xl fo, n, t-semibo, l, d te, x, t-lg transiti, o, n-a, l, l durati, o, n-3, 0, 0 transfo, r, m hov, e, r:-transla, t, e-y-1 ${
-          ti, e, r.buttonVaria, n, t === 'prima, r, y'
-            ? 'bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 te, x, t-whi, t, e hov, e, r:from-bl, u, e-7, 0, 0 hov, e, r:to-purp, l, e-7, 0, 0 shad, o, w-lg hov, e, r:shad, o, w-xl'
-            : 'bord, e, r-2 bord, e, r-bl, u, e-6, 0, 0 te, x, t-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-6, 0, 0 hov, e, r:te, x, t-whi, t, e'
+        ar, i, a-lab, e, l={`Sele c t ${ti e r.na m e} pl a n`}
+        classNa, m, e={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
+          ti e r.buttonVaria n t === 'prima r y'
+            ? 'bg-gradie n t-to-r from-bl u e-6 0 0 to-purp l e-6 0 0 te x t-whi t e hov e r:from-bl u e-7 0 0 hov e r:to-purp l e-7 0 0 shad o w-lg hov e r:shad o w-xl'
+            : 'bord e r-2 bord e r-bl u e-6 0 0 te x t-bl u e-6 0 0 hov e r:bg-bl u e-6 0 0 hov e r:te x t-whi t e'
         }`}      >
         {ti, e, r.button, T, e.x t}"> onSelectPl, a, n(ti, e, r.id)}
-        ar, i, a-lab, e, l={`Sele, c, t ${ti, e, r.na, m, e} pl, a, n`}
-        classNa, m, e={`w-fu, l, l py-4 px-6 round, e, d-xl fo, n, t-semibo, l, d te, x, t-lg transiti, o, n-a, l, l durati, o, n-3, 0, 0 transfo, r, m hov, e, r:-transla, t, e-y-1 ${
-          ti, e, r.buttonVaria, n, t === 'prima, r, y'
-            ? 'bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 te, x, t-whi, t, e hov, e, r:from-bl, u, e-7, 0, 0 hov, e, r:to-purp, l, e-7, 0, 0 shad, o, w-lg hov, e, r:shad, o, w-xl'
-            : 'bord, e, r-2 bord, e, r-bl, u, e-6, 0, 0 te, x, t-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-6, 0, 0 hov, e, r:te, x, t-whi, t, e'
+        ar, i, a-lab, e, l={`Sele c t ${ti e r.na m e} pl a n`}
+        classNa, m, e={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
+          ti e r.buttonVaria n t === 'prima r y'
+            ? 'bg-gradie n t-to-r from-bl u e-6 0 0 to-purp l e-6 0 0 te x t-whi t e hov e r:from-bl u e-7 0 0 hov e r:to-purp l e-7 0 0 shad o w-lg hov e r:shad o w-xl'
+            : 'bord e r-2 bord e r-bl u e-6 0 0 te x t-bl u e-6 0 0 hov e r:bg-bl u e-6 0 0 hov e r:te x t-whi t e'
         }`}      >
         {ti, e, r.button, T, e.x t}
       </butt, o, n>

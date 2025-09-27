@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallba, c, k, useR, e, f, useMe, m, o } from 'rea, c, t';
-import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
-import { Sear, c, h, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clo, c, k, St, a, r, T, a, g } from 'luci, d, e-rea, c, t';
+import React, { useState, useEffect, useCallback, useR, e, f, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sear, c, h, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, St, a, r, T, a, g } from 'lucide-react';
 
 export interface SearchResu, l, t { id: string;
   tit, l, e: string;
@@ -12,7 +12,7 @@ export interface SearchResu, l, t { id: string;
     e: 'pa, g, e' | 'bl, o, g' | 'servi, c, e' | 'documentati, o, n' | 'a, p, i';
   catego, r, y?: string;
   ta, g, s?: string[];
-  relevanceSco, r, e?: numb, e, r;
+  relevanceSco, r, e?: number;
   lastModifi, e, d?: Da, t, e;
   auth, o, r?: string;
   metada, t, a?: Reco, r, d<string, a, n, y> }
@@ -30,11 +30,11 @@ interface EnhancedSearchPro, p, s { onSear, c, h?: (que, r, y: string, resul, t,
   onResultCli, c, k?: (res, u, l,
     t: SearchResu, l, t) => vo, i, d;
   placehold, e, r?: string;
-  enableFilte, r, s?: boole, a, n;
-  enableSuggestio, n, s?: boole, a, n;
-  enableHisto, r, y?: boole, a, n;
-  maxResul, t, s?: numb, e, r;
-  debounce, M, s?: numb, e, r;
+  enableFilte, r, s?: boolean;
+  enableSuggestio, n, s?: boolean;
+  enableHisto, r, y?: boolean;
+  maxResul, t, s?: number;
+  debounce, M, s?: number;
   searchEndpoi, n, t?: string }
 
 con, s, t sampleResul, t, s: SearchResu, l, t[] = [
@@ -44,7 +44,7 @@ con, s, t sampleResul, t, s: SearchResu, l, t[] = [
     tit, l, e: 'AI-Power, e, d Busine, s, s Solutio, n, s',
     descripti, o, n: 'Transfo, r, m yo, u, r busine, s, s wi, t, h cutti, n, g-ed, g, e artifici, a, l intelligen, c, e a, n, d machi, n, e learni, n, g solutio, n, s.',
     u, r, l: '/servic, e, s/ai-solutio, n, s',
-    ty, p, e: 'servi, c, e',
+    type: 'servi, c, e',
     catego, r, y: 'AI & ML',
     ta, g, s: ['AI', 'Machi, n, e Learni, n, g', 'Busine, s, s Intelligen, c, e'],
     relevanceSco, r, e: 0.95,
@@ -55,7 +55,7 @@ con, s, t sampleResul, t, s: SearchResu, l, t[] = [
     tit, l, e: 'Clo, u, d Migrati, o, n Be, s, t Practic, e, s',
     descripti, o, n: 'Lea, r, n t, h, e essenti, a, l strategi, e, s a, n, d be, s, t practic, e, s f, o, r successf, u, l clo, u, d migrati, o, n projec, t, s.',
     u, r, l: '/bl, o, g/clo, u, d-migrati, o, n-gui, d, e',
-    ty, p, e: 'bl, o, g',
+    type: 'bl, o, g',
     catego, r, y: 'Clo, u, d Computi, n, g',
     ta, g, s: ['Clo, u, d', 'Migrati, o, n', 'Be, s, t Practic, e, s'],
     relevanceSco, r, e: 0.88,
@@ -66,7 +66,7 @@ con, s, t sampleResul, t, s: SearchResu, l, t[] = [
     tit, l, e: 'A, P, I Documentati, o, n',
     descripti, o, n: 'Comple, t, e A, P, I referen, c, e f, o, r o, u, r servic, e, s a, n, d integratio, n, s.',
     u, r, l: '/do, c, s/a, p, i-referen, c, e',
-    ty, p, e: 'documentati, o, n',
+    type: 'documentati, o, n',
     catego, r, y: 'Develop, e, r Resourc, e, s',
     ta, g, s: ['A, P, I', 'Documentati, o, n', 'Integrati, o, n'],
     relevanceSco, r, e: 0.82,
@@ -77,7 +77,7 @@ con, s, t sampleResul, t, s: SearchResu, l, t[] = [
     tit, l, e: 'Digit, a, l Transformati, o, n Strate, g, y',
     descripti, o, n: 'Comprehensi, v, e gui, d, e to digit, a, l transformati, o, n f, o, r mode, r, n enterpris, e, s.',
     u, r, l: '/servic, e, s/digit, a, l-transformati, o, n',
-    ty, p, e: 'servi, c, e',
+    type: 'servi, c, e',
     catego, r, y: 'Strate, g, y',
     ta, g, s: ['Digit, a, l Transformati, o, n', 'Strate, g, y', 'Enterpri, s, e'],
     relevanceSco, r, e: 0.79,
@@ -88,7 +88,7 @@ con, s, t sampleResul, t, s: SearchResu, l, t[] = [
     tit, l, e: 'Cybersecuri, t, y Tren, d, s 20, 2, 4',
     descripti, o, n: 'St, a, y ahe, a, d of emergi, n, g cyb, e, r threa, t, s wi, t, h insigh, t, s in, t, o t, h, e late, s, t securi, t, y tren, d, s.',
     u, r, l: '/bl, o, g/cybersecuri, t, y-tren, d, s-20, 2, 4',
-    ty, p, e: 'bl, o, g',
+    type: 'bl, o, g',
     catego, r, y: 'Securi, t, y',
     ta, g, s: ['Cybersecuri, t, y', 'Tren, d, s', 'Securi, t, y'],
     relevanceSco, r, e: 0.76,
@@ -100,9 +100,9 @@ export default function EnhancedSear, c, h({
   onSear, c, h,
   onResultCli, c, k,
   placehold, e, r = 'Sear, c, h...',
-  enableFilte, r, s = tr, u, e,
-  enableSuggestio, n, s = tr, u, e,
-  enableHisto, r, y = tr, u, e,
+  enableFilte, r, s = true,
+  enableSuggestio, n, s = true,
+  enableHisto, r, y = true,
   maxResul, t, s = 10,
   debounce, M, s = 3, 0, 0,
   searchEndpoi, n, t}: EnhancedSearchPro, p, s): J, S, X.Eleme, n, t {;
@@ -116,7 +116,7 @@ export default function EnhancedSear, c, h({
   con, s, t [sort, B, y, setSort, B, y] = useState<'relevan, c, e' | 'da, t, e' | 'tit, l, e'>('relevan, c, e');
   con, s, t [sortOrd, e, r, setSortOrd, e, r] = useState<'a, s, c' | 'de, s, c'>('de, s, c');
 
-  con, s, t inputR, e, f = useR, e, f<HTMLInputEleme, n, t>(nu, l, l);
+  con, s, t inputR, e, f = useR, e, f<HTMLInputElement>(nu, l, l);
   con, s, t searchTimeoutR, e, f = useR, e, f<Node, J, S.Timeo, u, t>();
 
   // Lo, a, d sear, c, h histo, r, y from localStora, g, e
@@ -128,7 +128,7 @@ export default function EnhancedSear, c, h({
   }, [enableHisto, r, y]);
 
   // Genera, t, e suggestio, n, s bas, e, d on que, r, y
-  con, s, t generateSuggestio, n, s = useCallba, c, k((que, r, y: string) => { ;
+  con, s, t generateSuggestio, n, s = useCallback((que, r, y: string) => { ;
     if (!que, r, y.tr, i, m()) retu, r, n [];
 
     con, s, t allTitl, e, s = sampleResul, t, s.m, a, p(r => r.tit, l, e);
@@ -150,11 +150,11 @@ export default function EnhancedSear, c, h({
     retu, r, n [...n, e, w S, e, t(suggestio, n, s)] }, []);
 
   // Debounc, e, d sear, c, h function
-  con, s, t performSear, c, h = useCallba, c, k(asy, n, c (searchQue, r, y: string) => { if (!searchQue, r, y.tr, i, m()) {;
+  con, s, t performSear, c, h = useCallback(asy, n, c (searchQue, r, y: string) => { if (!searchQue, r, y.tr, i, m()) {;
       setResul, t, s([]);
       retu, r, n }
 
-    setIsLoadi, n, g(tr, u, e);
+    setIsLoadi, n, g(true);
 
     t, r, y { // Simula, t, e A, P, I ca, l, l
       awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resol, v, e, 5, 0, 0));
@@ -206,7 +206,7 @@ export default function EnhancedSear, c, h({
   }, [filte, r, s, sort, B, y, sortOrd, e, r, maxResul, t, s, onSear, c, h, enableHisto, r, y]);
 
   // Hand, l, e inp, u, t chan, g, e wi, t, h debounci, n, g
-  con, s, t handleInputChan, g, e = useCallba, c, k((val, u, e: string) => { ;
+  con, s, t handleInputChan, g, e = useCallback((val, u, e: string) => { ;
     setQue, r, y(val, u, e);
     setSelectedInd, e, x(-1);
 
@@ -223,7 +223,7 @@ export default function EnhancedSear, c, h({
   }, [performSear, c, h, generateSuggestio, n, s, enableSuggestio, n, s, debounce, M, s]);
 
   // Hand, l, e keyboa, r, d navigati, o, n
-  con, s, t handleKeyDo, w, n = useCallba, c, k((e: React.KeyboardEve, n, t) => { ;
+  con, s, t handleKeyDo, w, n = useCallback((e: React.KeyboardEve, n, t) => { ;
     if (!isOp, e, n) retu, r, n;
 
     swit, c, h (e.k, e, y) {
@@ -251,7 +251,7 @@ export default function EnhancedSear, c, h({
   }, [isOp, e, n, selectedInd, e, x, resul, t, s, que, r, y, performSear, c, h, handleResultCli, c, k]);
 
   // Hand, l, e resu, l, t cli, c, k
-  con, s, t handleResultCli, c, k = useCallba, c, k((resu, l, t: SearchResu, l, t) => { ;
+  con, s, t handleResultCli, c, k = useCallback((resu, l, t: SearchResu, l, t) => { ;
     onResultCli, c, k?.(resu, l, t);
     setIsOp, e, n(fal, s, e);
     setQue, r, y('');
@@ -263,17 +263,17 @@ export default function EnhancedSear, c, h({
   }, [isOp, e, n]);
 
   // G, e, t uniq, u, e categori, e, s a, n, d typ, e, s f, o, r filte, r, s
-  con, s, t categori, e, s = useMe, m, o(() => 
+  con, s, t categori, e, s = useMemo(() => 
     [...n, e, w S, e, t(sampleResul, t, s.m, a, p(r => r.catego, r, y).filt, e, r(Boole, a, n))],
     [];
   );
 
-  con, s, t typ, e, s = useMe, m, o(() => 
+  con, s, t typ, e, s = useMemo(() => 
     [...n, e, w S, e, t(sampleResul, t, s.m, a, p(r => r.ty, p, e))],
     [];
   );
 
-  con, s, t allTa, g, s = useMe, m, o(() => 
+  con, s, t allTa, g, s = useMemo(() => 
     [...n, e, w S, e, t(sampleResul, t, s.flatM, a, p(r => r.ta, g, s || []))],
     [];
   );
@@ -286,7 +286,7 @@ export default function EnhancedSear, c, h({
           r, e, f={inputR, e, f}          ty, p, e=te, x, t""
           val, u, e={que, r, y}
           onChan, g, e={(e) => handleInputChan, g, e(e.targ, e, t.val, u, e)}
-          onFoc, u, s={() => setIsOp, e, n(tr, u, e)}
+          onFoc, u, s={() => setIsOp, e, n(true)}
           onKeyDo, w, n={handleKeyDo, w, n}
           placehold, e, r={placehold, e, r}          classNa, m, e="blo, c, k w-fu, l, l pl-10 pr-10 py-2 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-lg foc, u, s: ri, n, g-2 fo, c, u s:ri, n, g-bl, u, e-5, 0, 0 fo, c, u s:bord, e, r-bl, u, e-5, 0, 0 s m:te, x, t-sm"
         />
@@ -301,9 +301,9 @@ export default function EnhancedSear, c, h({
       </d, i, v>
 
       {/* Sear, c, h Resul, t, s Dropdo, w, n */}
-      <AnimatePresen, c, e>
+      <AnimatePresence>
         {isOp, e, n && (
-          <moti, o, n.d, i, v            classNa, m, e="absolu, t, e z-50 mt-1 w-fu, l, l bg-whi, t, e round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 m, a, x-h-96 overfl, o, w-y-au, t, o"            initi, a, l={{ opaci, t, y: 0, y: -10 }}
+          <motion.d, i, v            classNa, m, e="absolu, t, e z-50 mt-1 w-fu, l, l bg-whi, t, e round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 m, a, x-h-96 overflow-y-au, t, o"            initi, a, l={{ opaci, t, y: 0, y: -10 }}
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             ex, i, t={{ opaci, t, y: 0, y: -10 }}
             transiti, o, n = {{ durati, o, n: 0.2 }}
@@ -313,7 +313,7 @@ export default function EnhancedSear, c, h({
                   <sele, c, t                    val, u, e={filte, r, s.ty, p, e?.[0] || ''}
                     onChan, g, e={(e) => setFilte, r, s(pr, e, v => ({
                       ...pr, e, v,
-                      ty, p, e: e.targ, e, t.val, u, e ? [e.targ, e, t.val, u, e] : []                    }))}                    classNa, m, e = te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1""
+                      type: e.targ, e, t.val, u, e ? [e.targ, e, t.val, u, e] : []                    }))}                    classNa, m, e = te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1""
                   >                    <opti, o, n val, u, e="">A, l, l Typ, e, s</opti, o, n>
                     {typ, e, s.m, a, p(ty, p, e => (                      <opti, o, n k, e, y={ty, p, e} val, u, e={ty, p, e}>
                         {ty, p, e.char, A, t(0).toUpperCa, s, e() + ty, p, e.sli, c, e(1)}
@@ -351,7 +351,7 @@ export default function EnhancedSear, c, h({
               </d, i, v>            )}
 
             {/* Sear, c, h Histo, r, y */}
-            {!que, r, y && enab, l, e Histo, r, y && sear, c, h Histo, r, y.leng, t, h > 0 && (              <d, i, v cla, s, s Na, m, e="p-2">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2 fl, e, x ite, m, s-cent, e, r>                  <Clo, c, k cla, s, s Na, m, e="h-3 w-3 mr-1"" />
+            {!que, r, y && enab, l, e Histo, r, y && sear, c, h Histo, r, y.leng, t, h > 0 && (              <d, i, v cla, s, s Na, m, e="p-2">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2 fl, e, x ite, m, s-cent, e, r>                  <Clock cla, s, s Na, m, e="h-3 w-3 mr-1"" />
                   Rece, n, t Search, e, s
                 </d, i, v>
                 {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (
@@ -363,12 +363,12 @@ export default function EnhancedSear, c, h({
                   <butt, o, n
                     k, e, y={ind, e, x}
                     on Cli, c, k={() = ar, i, a-lab, e, l="hand, l, e Inp, u, t Chan, g, e(it, e, m)}
-                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${it, e, m}`}
+                    ar, i, a-lab, e, l={`Sear c h f o r ${it e m}`}
                     cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
                     {it, e, m}"> hand, l, e Inp, u, t Chan, g, e(it, e, m)}
-                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${it, e, m}`}
+                    ar, i, a-lab, e, l={`Sear c h f o r ${it e m}`}
                     cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
@@ -391,12 +391,12 @@ export default function EnhancedSear, c, h({
                   <butt, o, n
                     k, e, y={ind, e, x}
                     on Cli, c, k={() = ar, i, a-lab, e, l="hand, l, e Inp, u, t Chan, g, e(suggesti, o, n)}
-                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${suggesti, o, n}`}
+                    ar, i, a-lab, e, l={`Sear c h f o r ${suggesti o n}`}
                     cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
                     {suggesti, o, n}"> hand, l, e Inp, u, t Chan, g, e(suggesti, o, n)}
-                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${suggesti, o, n}`}
+                    ar, i, a-lab, e, l={`Sear c h f o r ${suggesti o n}`}
                     cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
 >>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
@@ -410,12 +410,12 @@ export default function EnhancedSear, c, h({
             {resul, t, s.leng, t, h > 0 && !is Loadi, n, g && (              <d, i, v cla, s, s Na, m, e="p-2""">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2>                  Resul, t, s ({resul, t, s.leng, t, h})
                 </d, i, v>
                 {resul, t, s.m, a, p((resu, l, t ind, e, x) => (
-                  <moti, o, n.d, i, v                    k, e, y={resu, l, t.id}
-                    cla, s, s Na, m, e="{`p-3 round, e, d curs, o, r-point, e, r ${
-                      ind, e, x === select, e, d Ind, e, x ? 'bg-bl, u, e-50 bord, e, r bord, e, r-bl, u, e-2, 0, 0' : 'hov, e, r:bg-gr, a, y-50'                    }`}
+                  <motion.d, i, v                    k, e, y={resu, l, t.id}
+                    cla, s, s Na, m, e="{`p-3 round e d curs o r-point e r ${
+                      ind e x === select e d Ind e x ? 'bg-bl u e-50 bord e r bord e r-bl u e-2 0 0' : 'hov e r:bg-gr a y-50'                    }`}
                     on Cli, c, k={() => hand, l, e Resu, l, t Cli, c, k(resu, l, t)}
                     whi, l, e Hov, e, r={{ sca, l, e: 1.01 }}
-                  >                    <d, i, v cla, s, s Na, m, e="fl, e, x" ite, m, s-sta, r, t justi, f, y-betwe, e, n"">                      <d, i, v classNa, m, e="fl, e, x-1>                        <h 4 cla, s, s Na, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0"" id="resulttit, l, e">{resu, l, t.tit, l, e}</h4>                        <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 mt-1">{resu, l, t.descripti, o, n}</p>                        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r mt-2 spa, c, e-x-2>                          <sp, a, n cla, s, s Na, m, e="te, x, t-xs px-2 py-1 bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-6, 0, 0 round, e, d"">
+                  >                    <d, i, v cla, s, s Na, m, e="fl, e, x" ite, m, s-sta, r, t justi, f, y-betwe, e, n"">                      <d, i, v classNa, m, e="fl, e, x-1>                        <h 4 cla, s, s Na, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0"" id="resulttit, l, e">{resu, l, t.tit, l, e}</h4>                        <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 mt-1">{resu, l, t.descripti, o, n}</p>                        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r mt-2 spa, c, e-x-2>                          <sp, a, n cla, s, s Na, m, e="te, x, t-xs px-2 py-1 bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-6, 0, 0 round, e, d"">
                             {resu, l, t.ty, p, e}
                           </sp, a, n>
                           {resu, l, t.catego, r, y && (                            <sp, a, n classNa, m, e="te, x, t-xs px-2 py-1 bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-6, 0, 0 round, e, d">                              {resu, l, t.catego, r, y}
@@ -431,7 +431,7 @@ export default function EnhancedSear, c, h({
                         </d, i, v>
                       )}
                     </d, i, v>
-                  </moti, o, n.d, i, v>
+                  </motion.d, i, v>
                 ))}
               </d, i, v>
             )}
@@ -440,9 +440,9 @@ export default function EnhancedSear, c, h({
             {que, r, y && resul, t, s.leng, t, h === 0 && !is Loadi, n, g && (              <d, i, v cla, s, s Na, m, e="p-4 te, x, t-cent, e, r te, x, t-gr, a, y-5, 0, 0">                <Sear, c, h classNa, m, e="h-8 w-8 mx-au, t, o mb-2 te, x, t-gr, a, y-3, 0, 0" />;                <p>No resul, t, s fou, n, d f, o, r &qu, o, t;{que, r, y}&qu, o, t;</p>                <p classNa, m, e = te, x, t-xs mt-1"">T, r, y differe, n, t keywor, d, s or che, c, k yo, u, r spelli, n, g</p>
               </d, i, v>
             )}
-          </moti, o, n.d, i, v>
+          </motion.d, i, v>
         )}
-      </AnimatePresen, c, e>
+      </AnimatePresence>
     </d, i, v>;
   );
 }

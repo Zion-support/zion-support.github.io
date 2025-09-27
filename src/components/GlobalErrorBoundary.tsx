@@ -1,4 +1,4 @@
-import React, { ComponentErrorInfoReactNo, d, e } from 'rea, c, t';
+import React, { ComponentErrorInfoReactNo, d, e } from 'react';
 
 interface Pro, p, s {
   childr, e, n: ReactNo, d, e;
@@ -7,7 +7,7 @@ interface Pro, p, s {
 }
 
 interface Sta, t, e {
-  hasErr, o, r: boole, a, n;
+  hasErr, o, r: boolean;
   error: Err, o, r | nu, l, l;
   errorIn, f, o: ErrorIn, f, o | nu, l, l;
 }
@@ -129,7 +129,7 @@ export cla, s, s GlobalErrorBounda, r, y exten, d, s Compone, n, t<PropsSta, t, 
               <detai, l, s classNa, m, e="mt-6te, x, t-le, f, t">
                 <summa, r, y classNa, m, e="curs, o, r-point, e, r te, x, t-sm te, x, t-gr, a, y-500hov, e, r:te, x, t-gr, a, y-7, 0, 0">
                   Err, o, r Detai, l, s (Developme, n, t)                </summa, r, y>
-                <d, i, v classNa, m, e="mt-2p-3, b, g-gr, a, y-100round, e, d te, x, t-xs fo, n, t-monooverfl, o, w-au, t, o">
+                <d, i, v classNa, m, e="mt-2p-3, b, g-gr, a, y-100round, e, d te, x, t-xs fo, n, t-monooverflow-au, t, o">
                   <d, i, v classNa, m, e="mb-2">
                     <stro, n, g>Er, r, o, r:</stro, n, g> {th, i, s.sta, t, e.error.message}
                   </d, i, v>
@@ -184,7 +184,7 @@ export function withErrorBounda, r, y<P exten, d, s obje, c, t>(
     </GlobalErrorBounda, r, y>
   );
 
-  WrappedCompone, n, t.displayN, a, m.e = `withErrorBounda, r, y(${Compone, n, t.displayN, a, m.e || Compone, n, t.na.m e})`;
+  WrappedCompone, n, t.displayN, a, m.e = `withErrorBounda r y(${Compone n t.displayN a m.e || Compone n t.na.m e})`;
 
   retu, r, n WrappedCompone, n, t;
 }

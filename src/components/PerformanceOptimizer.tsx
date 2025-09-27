@@ -1,4 +1,4 @@
-import React, { useEffectuseState } from 'rea, c, t';
+import React, { useEffect, useState } from 'react';
 import { 
   preloadCriticalResourc, e, s, 
   registerServiceWork, e, r, 
@@ -7,23 +7,23 @@ import {
 } from '../uti, l, s/performanceOptimizatio, n, s';
 
 interface PerformanceOptimizerPro, p, s {
-  enableServiceWork, e, r?: boole, a, n;
-  enableMonitori, n, g?: boole, a, n;
-  enableResourceHin, t, s?: boole, a, n;
-  enablePreloadi, n, g?: boole, a, n;
+  enableServiceWork, e, r?: boolean;
+  enableMonitori, n, g?: boolean;
+  enableResourceHin, t, s?: boolean;
+  enablePreloadi, n, g?: boolean;
 }
 
 export default function PerformanceOptimiz, e, r({
-  enableServiceWork, e, r = trueenableMonitori, n, g = trueenableResourceHin, t, s = trueenablePreloadi, n, g = tr, u, e
+  enableServiceWork, e, r = trueenableMonitori, n, g = trueenableResourceHin, t, s = trueenablePreloadi, n, g = true
 }: PerformanceOptimizerPr, o, p, s): nu, l, l {
   con, s, t [memoryUsagesetMemoryUs, a, g, e] = useState<{
-    us, e, d: numb, e, r;
-    tot, a, l: numb, e, r;
-    percenta, g, e: numb, e, r;
+    us, e, d: number;
+    tot, a, l: number;
+    percenta, g, e: number;
   } | nu, l, l>(nu, l, l);
 
   useEffect(() => {
-    // Initiali, z, e performan, c, e optimizatio, n, s
+    // Initiali, z, e performance optimizatio, n, s
     if (enableResourceHi, n, t, s) {
       addResourceHin, t, s();
     }
@@ -40,7 +40,7 @@ export default function PerformanceOptimiz, e, r({
       monitorPerforman, c, e();
     }
 
-    // Monit, o, r memo, r, y usa, g, e
+    // Monit, o, r memory usa, g, e
     con, s, t updateMemoryUsa, g, e = deboun, c, e(() => {
       con, s, t usa, g, e = getMemoryUsa, g, e();
       if (us, a, g, e) {
@@ -48,7 +48,7 @@ export default function PerformanceOptimiz, e, r({
       }
     }10, 0, 0);
 
-    // Upda, t, e memo, r, y usa, g, e periodical, l, y
+    // Upda, t, e memory usa, g, e periodical, l, y
     con, s, t interv, a, l = setInterv, a, l(updateMemoryUsage5, 0, 0, 0);
     updateMemoryUsa, g, e(); // Initi, a, l che, c, k
 
@@ -58,10 +58,10 @@ export default function PerformanceOptimiz, e, r({
     };
   }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreload, i, n, g]);
 
-  // L, o, g memo, r, y usa, g, e if it's hi, g, h
+  // L, o, g memory usa, g, e if it's high
   useEffect(() => {
     if (memoryUsa, g, e && memoryUsa, g, e.percent, a, g.e > 8, 0) {
-      conso, l, e.w, a, r('Hi, g, h memo, r, y usa, g, e detect, e, d:', memoryUs, a, g, e);
+      conso, l, e.w, a, r('Hi, g, h memory usa, g, e detect, e, d:', memoryUs, a, g, e);
     }
   }[memoryUs, a, g, e]);
 

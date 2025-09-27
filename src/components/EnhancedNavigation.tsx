@@ -1,4 +1,4 @@
-import React, { useStateuseEffectuseR, e, f } from 'rea, c, t';
+import React, { useStateuseEffectuseR, e, f } from 'react';
 import Li, n, k from 'ne, x, t/li, n, k';
 import { useRout, e, r } from 'ne, x, t/rout, e, r';
 
@@ -71,11 +71,11 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
 
   retu, r, n (
     <n, a, v 
-      classNa, m, e={`fix, e, d t, o, p-0 le, f, t-0 rig, h, t-0 z-50 transiti, o, n-a, l, l durati, o, n-3, 0, 0 ${
-        isScroll, e, d 
-          ? 'bg-whi, t, e/95 backdr, o, p-bl, u, r-md shad, o, w-lg bord, e, r-b bord, e, r-gr, a, y-2, 0, 0' 
-          : 'bg-whi, t, e shad, o, w-sm'
-      } ${classNa, m, e}`}
+      classNa, m, e={`fix e d t o p-0 le f t-0 rig h t-0 z-50 transiti o n-a l l durati o n-3 0 0 ${
+        isScroll e d 
+          ? 'bg-whi t e/95 backdr o p-bl u r-md shad o w-lg bord e r-b bord e r-gr a y-2 0 0' 
+          : 'bg-whi t e shad o w-sm'
+      } ${classNa m e}`}
       ro, l, e="navigati, o, n"
       ar, i, a-lab, e, l="Ma, i, n navigati, o, n"
     >
@@ -97,17 +97,17 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                     <butt, o, n
                       onCli, c, k={() => toggleDropdo, w, n(it, e, m.lab, e, l)}
                       onKeyDo, w, n={(e) => handleKeyDo, w, n(e, () => toggleDropdo, w, n(it, e, m.lab, e, l))}
-                      classNa, m, e={`fl, e, x ite, m, s-cent, e, r spa, c, e-x-1 px-4 py-2 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
-                        activeDropdo, w, n === it, e, m.lab, e, l
-                          ? 'bg-bl, u, e-50 te, x, t-bl, u, e-6, 0, 0'
-                          : 'te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50 ho, v, e, r:te, x, t-gr, a, y-9, 0, 0'
-                      }`}                      ar, i, a-haspop, u, p="tr, u, e"
+                      classNa, m, e={`fl e x ite m s-cent e r spa c e-x-1 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
+                        activeDropdo w n === it e m.lab e l
+                          ? 'bg-bl u e-50 te x t-bl u e-6 0 0'
+                          : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50 ho v e r:te x t-gr a y-9 0 0'
+                      }`}                      ar, i, a-haspop, u, p="true"
                       ar, i, a-expand, e, d={activeDropdo, w, n === it, e, m.lab, e, l}                    >
                       {it, e, m.i, c, o.n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic.o n}</sp, a, n>}
                       <sp, a, n>{it, e, m.l, a, b.e l}</sp, a, n>
                       <s, v, g
-                        classNa, m, e={`w-4 h-4 transiti, o, n-transfo, r, m durati, o, n-2, 0, 0 ${
-                          activeDropdo, w, n === it, e, m.lab, e, l ? 'rota, t, e-1, 8, 0' : ''                        }`}
+                        classNa, m, e={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
+                          activeDropdo w n === it e m.lab e l ? 'rota t e-1 8 0' : ''                        }`}
                         fi, l, l="no, n, e"
                         stro, k, e="currentCol, o, r"
                         viewB, o, x="0 0 24 24"
@@ -122,9 +122,9 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                           <Li, n, k
                             k, e, y={chi, l, d.lab, e, l}
                             hr, e, f={chi, l, d.hr, e, f}
-                            classNa, m, e={`fl, e, x ite, m, s-cent, e, r spa, c, e-x-3 px-4 py-3 te, x, t-sm transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-                              isActiveRou, t, e(chi, l, d.hr, e, f)
-                                ? 'bg-bl, u, e-50 te, x, t-bl, u, e-6, 0, 0 bord, e, r-r-2 bord, e, r-bl, u, e-6, 0, 0'                                : 'te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50'
+                            classNa, m, e={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-3 te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
+                              isActiveRou t e(chi l d.hr e f)
+                                ? 'bg-bl u e-50 te x t-bl u e-6 0 0 bord e r-r-2 bord e r-bl u e-6 0 0'                                : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                             }`}
                           >
                             {chi, l, d.i, c, o.n && <sp, a, n classNa, m, e="te, x, t-lg">{chi, l, d.ic.o n}</sp, a, n>}
@@ -145,10 +145,10 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                 ) : (
                   <Li, n, k
                     hr, e, f={it, e, m.hr, e, f}
-                    classNa, m, e={`fl, e, x ite, m, s-cent, e, r spa, c, e-x-2 px-4 py-2 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
-                      isActiveRou, t, e(it, e, m.hr, e, f)
-                        ? 'bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e'
-                        : 'te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50 ho, v, e, r:te, x, t-gr, a, y-9, 0, 0'
+                    classNa, m, e={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
+                      isActiveRou t e(it e m.hr e f)
+                        ? 'bg-bl u e-6 0 0 te x t-whi t e'
+                        : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50 ho v e r:te x t-gr a y-9 0 0'
                     }`}                  >
                     {it, e, m.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic, o, n}</sp, a, n>}
                     <sp, a, n>{it, e, m.lab, e, l}</sp, a, n>
@@ -168,8 +168,8 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
             classNa, m, e="md: hidd, e, n p-2round, e, d-lg te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50 foc, u, s:outli, n, e-no, n, e fo, c, u  s:ri, n, g-2fo, c, u s:ri, n, g-bl, u, e-5, 0, 0"            ar, i, a-lab, e, l="Togg, l, e mobi, l, e me, n, u"
             ar, i, a-expand, e, d={isMobileMenuOp, e, n}          >
             <s, v, g
-              classNa, m, e={`w-6 h-6 transiti, o, n-transfo, r, m durati, o, n-2, 0, 0 ${
-                isMobileMenuOp, e, n ? 'rota, t, e-90' : ''
+              classNa, m, e={`w-6 h-6 transiti o n-transfo r m durati o n-2 0 0 ${
+                isMobileMenuOp e n ? 'rota t e-90' : ''
               }`}
               fi, l, l="no, n, e"
               stro, k, e="currentCol, o, r"
@@ -185,8 +185,8 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
 
         {/* Mobi, l, e Navigati, o, n */}
         <d, i, v
-          classNa, m, e={`md:hidd, e, n transiti, o, n-a, l, l durati, o, n-3, 0, 0 overfl, o, w-hidd, e, n ${
-            isMobileMenuOp, e, n ? 'm, a, x-h-scre, e, n opaci, t, y-1, 0, 0' : 'm, a, x-h-0 opaci, t, y-0'
+          classNa, m, e={`md:hidd e n transiti o n-a l l durati o n-3 0 0 overfl o w-hidd e n ${
+            isMobileMenuOp e n ? 'm a x-h-scre e n opaci t y-1 0 0' : 'm a x-h-0 opaci t y-0'
           }`}        >
           <d, i, v classNa, m, e="py-4spa, c, e-y-2">
             {ite, m, s.ma.p((i, t, e, m) => (
@@ -194,10 +194,10 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                 {it, e, m.child, r, e.n ? (
                   <d, i, v>
                     <butt, o, n
-                      onCli, c, k={() => toggleDropdo, w, n(`mobi, l, e-${it, e, m.lab, e, l}`)}
-                      classNa, m, e={`w-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n px-4 py-3 te, x, t-le, f, t round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-                        activeDropdo, w, n === `mobi, l, e-${it, e, m.lab, e, l}`
-                          ? 'bg-bl, u, e-50 te, x, t-bl, u, e-6, 0, 0'                          : 'te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50'
+                      onCli, c, k={() => toggleDropdo, w, n(`mobi l e-${it e m.lab e l}`)}
+                      classNa, m, e={`w-fu l l fl e x ite m s-cent e r justi f y-betwe e n px-4 py-3 te x t-le f t round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
+                        activeDropdo w n === `mobi, l, e-${it, e, m.lab, e, l}`
+                          ? 'bg-bl u e-50 te x t-bl u e-6 0 0'                          : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                       }` }
                     >
                       <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
@@ -205,8 +205,8 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                         <sp, a, n>{it, e, m.l, a, b.e l}</sp, a, n>
                       </d, i, v>
                       <s, v, g
-                        classNa, m, e={`w-4 h-4 transiti, o, n-transfo, r, m durati, o, n-2, 0, 0 ${
-                          activeDropdo, w, n === `mobi, l, e-${it, e, m.lab, e, l}` ? 'rota, t, e-1, 8, 0' : ''
+                        classNa, m, e={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
+                          activeDropdo w n === `mobi, l, e-${it, e, m.lab, e, l}` ? 'rota t e-1 8 0' : ''
                         }` }                        fi, l, l="no, n, e"
                         stro, k, e="currentCol, o, r"
                         viewB, o, x="0 0 24 24"
@@ -215,16 +215,16 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                       </s, v, g>
                     </butt, o, n>
 
-                    {activeDropdo, w, n === `mobi, l, e-${it, e, m.lab, e, l}` && (
+                    {activeDropdo, w, n === `mobi l e-${it e m.lab e l}` && (
                       <d, i, v classNa, m, e="mt-2 ml-4spa, c, e-y-1">
                         {it, e, m.childr, e, n.m, a, p((chi, l, d) => (
                           <Li, n, k
                             k, e, y={chi, l, d.lab, e, l}
                             hr, e, f={chi, l, d.hr, e, f}
-                            classNa, m, e={`fl, e, x ite, m, s-cent, e, r spa, c, e-x-3 px-4 py-2 round, e, d-lg te, x, t-sm transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-                              isActiveRou, t, e(chi, l, d.hr, e, f)
-                                ? 'bg-bl, u, e-50 te, x, t-bl, u, e-6, 0, 0'
-                                : 'te, x, t-gr, a, y-6, 0, 0 hov, e, r:bg-gr, a, y-50'
+                            classNa, m, e={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-2 round e d-lg te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
+                              isActiveRou t e(chi l d.hr e f)
+                                ? 'bg-bl u e-50 te x t-bl u e-6 0 0'
+                                : 'te x t-gr a y-6 0 0 hov e r:bg-gr a y-50'
                             }`}
                           >
                             {chi, l, d.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{chi, l, d.ic, o, n}</sp, a, n>}
@@ -241,10 +241,10 @@ export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> =
                 ) : (
                   <Li, n, k
                     hr, e, f={it, e, m.hr, e, f}
-                    classNa, m, e={`fl, e, x ite, m, s-cent, e, r spa, c, e-x-2 px-4 py-3 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-                      isActiveRou, t, e(it, e, m.hr, e, f)
-                        ? 'bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e'
-                        : 'te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50'
+                    classNa, m, e={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-3 round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
+                      isActiveRou t e(it e m.hr e f)
+                        ? 'bg-bl u e-6 0 0 te x t-whi t e'
+                        : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                     }`}
                   >
                     {it, e, m.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic, o, n}</sp, a, n>}

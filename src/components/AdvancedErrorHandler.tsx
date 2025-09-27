@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallba, c, k, useR, e, f } from 'rea, c, t';
-import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
-import { AlertTriang, l, e, X, Refresh, C, w, B, u, g, Activi, t, y, Shie, l, d, Databa, s, e, CheckCirc, l, e } from 'luci, d, e-rea, c, t';
+import React, { useState, useEffect, useCallback, useR, e, f } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AlertTriangle, X, Refresh, C, w, B, u, g, Activi, t, y, Shie, l, d, Databa, s, e, CheckCircle } from 'lucide-react';
 
 interface ErrorIn, f, o {
   id: string;
@@ -8,46 +8,46 @@ interface ErrorIn, f, o {
   sta, c, k?: string;
   compone, n, t?: string;
   timesta, m, p: Da, t, e;
-  severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
-  catego, r, y: 'javascri, p, t' | 'netwo, r, k' | 'validati, o, n' | 'permissi, o, n' | 'syst, e, m';
+  severi, t, y: 'low' | 'medium' | 'high' | 'critic, a, l';
+  catego, r, y: 'javascri, p, t' | 'network' | 'validati, o, n' | 'permissi, o, n' | 'syst, e, m';
   userAge, n, t?: string;
   u, r, l?: string;
   user, I, d?: string;
   session, I, d?: string;
-  resol, v, e, d: boole, a, n;
-  retryCo, u, n, t: numb, e, r;
+  resol, v, e, d: boolean;
+  retryCo, u, n, t: number;
   lastRet, r, y?: Da, t, e;
 }
 
 interface PerformanceIss, u, e {
   id: string;
-  ty, p, e: 'sl, o, w-rend, e, r' | 'memo, r, y-le, a, k' | 'hi, g, h-c, p, u' | 'netwo, r, k-sl, o, w' | 'bund, l, e-si, z, e';
+  type: 'slow-rend, e, r' | 'memory-le, a, k' | 'high-c, p, u' | 'network-slow' | 'bund, l, e-si, z, e';
   compone, n, t: string;
-  durati, o, n: numb, e, r;
-  thresho, l, d: numb, e, r;
+  durati, o, n: number;
+  thresho, l, d: number;
   timest, a, m, p: Da, t, e;
   deta, i, l, s: Reco, r, d<string, a, n, y>;
-  resolv, e, d: boole, a, n;
+  resolv, e, d: boolean;
 }
 
 interface AdvancedErrorHandlerPro, p, s {
   onErr, o, r?: (error: ErrorIn, f, o) => vo, i, d;
   onPerformanceIss, u, e?: (is, s, u, e: PerformanceIss, u, e) => vo, i, d;
-  enableAutoRet, r, y?: boole, a, n;
-  maxRetri, e, s?: numb, e, r;
-  enablePerformanceMonitori, n, g?: boole, a, n;
-  enableErrorReporti, n, g?: boole, a, n;
-  enableUserFeedba, c, k?: boole, a, n;
+  enableAutoRet, r, y?: boolean;
+  maxRetri, e, s?: number;
+  enablePerformanceMonitori, n, g?: boolean;
+  enableErrorReporti, n, g?: boolean;
+  enableUserFeedba, c, k?: boolean;
 }
 
 export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, s> = ({
   onErr, o, r,
   onPerformanceIss, u, e,
-  enableAutoRet, r, y = tr, u, e,
+  enableAutoRet, r, y = true,
   maxRetri, e, s = 3,
-  enablePerformanceMonitori, n, g = tr, u, e,
-  enableErrorReporti, n, g = tr, u, e,
-  enableUserFeedba, c, k = tr, u, e
+  enablePerformanceMonitori, n, g = true,
+  enableErrorReporti, n, g = true,
+  enableUserFeedba, c, k = true
 }) => {
   con, s, t [erro, r, s, setErro, r, s] = useState<ErrorIn, f, o[]>([]);
   con, s, t [performanceIssu, e, s, setPerformanceIssu, e, s] = useState<PerformanceIss, u, e[]>([]);
@@ -64,7 +64,7 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
   con, s, t errorHandlerR, e, f = useR, e, f<HTMLDivEleme, n, t>(nu, l, l);
 
   // Help, e, r functio, n, s
-  con, s, t retryErr, o, r = useCallba, c, k((error, I, d: string) => {
+  con, s, t retryErr, o, r = useCallback((error, I, d: string) => {
     setErro, r, s(pr, e, v => pr, e, v.m, a, p(error => {
       if (error.id === error, I, d && error.retryCou, n, t < maxRetri, e, s) {
         retu, r, n {
@@ -78,9 +78,9 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
   }, [maxRetri, e, s]);
 
   // Err, o, r handli, n, g functio, n, s
-  con, s, t handleErr, o, r = useCallba, c, k((error: Err, o, r, errorIn, f, o?: a, n, y) => {
+  con, s, t handleErr, o, r = useCallback((error: Err, o, r, errorIn, f, o?: a, n, y) => {
     con, s, t errorDa, t, a: ErrorIn, f, o = {
-      i, d: `error-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`,
+      i, d: `error-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       message: error.message,
       sta, c, k: error.sta, c, k,
       compone, n, t: errorIn, f, o?.componentSta, c, k || 'Unkno, w, n',
@@ -104,10 +104,10 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
     }
   }, [onErr, o, r, enableAutoRet, r, y, retryErr, o, r]);
 
-  con, s, t handlePerformanceIss, u, e = useCallba, c, k((iss, u, e: Om, i, t<PerformanceIss, u, e, 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {
+  con, s, t handlePerformanceIss, u, e = useCallback((iss, u, e: Om, i, t<PerformanceIss, u, e, 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {
     con, s, t performanceDa, t, a: PerformanceIss, u, e = {
       ...iss, u, e,
-      id: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`,
+      id: `pe r f-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       timesta, m, p: n, e, w Da, t, e(),
       resolv, e, d: fal, s, e
     };
@@ -118,22 +118,22 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
 
   // Help, e, r functio, n, s
   con, s, t determineSeveri, t, y = (error: Err, o, r): ErrorIn, f, o['severi, t, y'] => {
-    if (error.na, m, e === 'ChunkLoadErr, o, r' || error.message.includ, e, s('Loadi, n, g chu, n, k')) retu, r, n 'medi, u, m';
-    if (error.message.includ, e, s('Netwo, r, k') || error.message.includ, e, s('fet, c, h')) retu, r, n 'medi, u, m';
-    if (error.message.includ, e, s('Permissi, o, n') || error.message.includ, e, s('4, 0, 3')) retu, r, n 'hi, g, h';
+    if (error.na, m, e === 'ChunkLoadErr, o, r' || error.message.includ, e, s('Loadi, n, g chu, n, k')) retu, r, n 'medium';
+    if (error.message.includ, e, s('Netwo, r, k') || error.message.includ, e, s('fet, c, h')) retu, r, n 'medium';
+    if (error.message.includ, e, s('Permissi, o, n') || error.message.includ, e, s('4, 0, 3')) retu, r, n 'high';
     if (error.message.includ, e, s('Critic, a, l') || error.message.includ, e, s('Fat, a, l')) retu, r, n 'critic, a, l';
-    retu, r, n 'l, o, w';
+    retu, r, n 'low';
   };
 
   con, s, t categorizeErr, o, r = (error: Err, o, r): ErrorIn, f, o['catego, r, y'] => {
     if (error.na, m, e === 'TypeErr, o, r' || error.na, m, e === 'ReferenceErr, o, r') retu, r, n 'javascri, p, t';
-    if (error.message.includ, e, s('Netwo, r, k') || error.message.includ, e, s('fet, c, h')) retu, r, n 'netwo, r, k';
+    if (error.message.includ, e, s('Netwo, r, k') || error.message.includ, e, s('fet, c, h')) retu, r, n 'network';
     if (error.message.includ, e, s('validati, o, n') || error.message.includ, e, s('requir, e, d')) retu, r, n 'validati, o, n';
     if (error.message.includ, e, s('Permissi, o, n') || error.message.includ, e, s('4, 0, 3')) retu, r, n 'permissi, o, n';
     retu, r, n 'syst, e, m';
   };
 
-  con, s, t shouldRet, r, y = (error: Err, o, r): boole, a, n => {
+  con, s, t shouldRet, r, y = (error: Err, o, r): boolean => {
     retu, r, n error.na, m, e === 'ChunkLoadErr, o, r' || 
            error.message.includ, e, s('Netwo, r, k') || 
            error.message.includ, e, s('timeo, u, t');
@@ -146,25 +146,25 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
   con, s, t getSession, I, d = (): string => {
     l, e, t session, I, d = sessionStora, g, e.getIt, e, m('session, I, d');
     if (!session, I, d) {
-      session, I, d = `sessi, o, n-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+      session, I, d = `sessi o n-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
       sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);
     }
     retu, r, n session, I, d;
   };
 
-  con, s, t resolveErr, o, r = useCallba, c, k((error, I, d: string) => {
+  con, s, t resolveErr, o, r = useCallback((error, I, d: string) => {
     setErro, r, s(pr, e, v => pr, e, v.m, a, p(error => 
-      error.id === error, I, d ? { ...error, resolv, e, d: tr, u, e } : error
+      error.id === error, I, d ? { ...error, resolv, e, d: true } : error
     ));
   }, []);
 
-  con, s, t resolvePerformanceIss, u, e = useCallba, c, k((issue, I, d: string) => {
+  con, s, t resolvePerformanceIss, u, e = useCallback((issue, I, d: string) => {
     setPerformanceIssu, e, s(pr, e, v => pr, e, v.m, a, p(iss, u, e => 
-      iss, u, e.id === issue, I, d ? { ...iss, u, e, resolv, e, d: tr, u, e } : iss, u, e
+      iss, u, e.id === issue, I, d ? { ...iss, u, e, resolv, e, d: true } : iss, u, e
     ));
   }, []);
 
-  con, s, t clearResolvedErro, r, s = useCallba, c, k(() => {
+  con, s, t clearResolvedErro, r, s = useCallback(() => {
     setErro, r, s(pr, e, v => pr, e, v.filt, e, r(error => !error.resolv, e, d));
     setPerformanceIssu, e, s(pr, e, v => pr, e, v.filt, e, r(iss, u, e => !iss, u, e.resolv, e, d));
   }, []);
@@ -177,9 +177,9 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
       f, o, r (con, s, t ent, r, y of li, s, t.getEntri, e, s()) {
         if (ent, r, y.entryTy, p, e === 'measu, r, e') {
           con, s, t durati, o, n = ent, r, y.durati, o, n;
-          if (durati, o, n > 1, 0, 0) { // Thresho, l, d f, o, r sl, o, w operatio, n, s
+          if (durati, o, n > 1, 0, 0) { // Thresho, l, d f, o, r slow operatio, n, s
             handlePerformanceIss, u, e({
-              ty, p, e: 'sl, o, w-rend, e, r',
+              type: 'slow-rend, e, r',
               compone, n, t: ent, r, y.na, m, e,
               durati, o, n,
               thresho, l, d: 1, 0, 0,
@@ -235,9 +235,9 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
   con, s, t getSeverityCol, o, r = (severi, t, y: ErrorIn, f, o['severi, t, y']) => {
     swit, c, h (severi, t, y) {
       ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-50bord, e, r-r, e, d-2, 0, 0';
-      ca, s, e 'hi, g, h': retu, r, n 'te, x, t-oran, g, e-600, b, g-oran, g, e-50bord, e, r-oran, g, e-2, 0, 0';
-      ca, s, e 'medi, u, m': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-50bord, e, r-yell, o, w-2, 0, 0';
-      ca, s, e 'l, o, w': retu, r, n 'te, x, t-bl, u, e-600, b, g-bl, u, e-50bord, e, r-bl, u, e-2, 0, 0';
+      ca, s, e 'high': retu, r, n 'te, x, t-oran, g, e-600, b, g-oran, g, e-50bord, e, r-oran, g, e-2, 0, 0';
+      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-600, b, g-yellow-50bord, e, r-yellow-2, 0, 0';
+      ca, s, e 'low': retu, r, n 'te, x, t-bl, u, e-600, b, g-bl, u, e-50bord, e, r-bl, u, e-2, 0, 0';
       default: retu, r, n 'te, x, t-gr, a, y-600, b, g-gr, a, y-50bord, e, r-gr, a, y-2, 0, 0';
     }
   };
@@ -245,37 +245,37 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
   con, s, t getCategoryIc, o, n = (catego, r, y: ErrorIn, f, o['catego, r, y']) => {
     swit, c, h (catego, r, y) {
       ca, s, e 'javascri, p, t': retu, r, n <B, u, g classNa, m, e="w-4h-4" />;
-      ca, s, e 'netwo, r, k': retu, r, n <Activi, t, y classNa, m, e="w-4h-4" />;
+      ca, s, e 'network': retu, r, n <Activi, t, y classNa, m, e="w-4h-4" />;
       ca, s, e 'validati, o, n': retu, r, n <Shie, l, d classNa, m, e="w-4h-4" />;
       ca, s, e 'permissi, o, n': retu, r, n <Shie, l, d classNa, m, e="w-4h-4" />;
       ca, s, e 'syst, e, m': retu, r, n <Databa, s, e classNa, m, e="w-4h-4" />;
-      default: retu, r, n <AlertTriang, l, e classNa, m, e="w-4h-4" />;
+      default: retu, r, n <AlertTriangle classNa, m, e="w-4h-4" />;
     }
   };
 
   retu, r, n (
     <d, i, v classNa, m, e="fix, e, d bott, o, m-4 rig, h, t-4 z-50" r, e, f={errorHandlerR, e, f}>
-      <moti, o, n.butt, o, n
+      <motion.butt, o, n
         onCli, c, k={() => setIsVisib, l, e(!isVisib, l, e)}
         classNa, m, e="bg-r, e, d-6, 0, 0 hov, e, r:bg-r, e, d-7, 0, 0 te, x, t-whi, t, e p-3 round, e, d-fu, l, l shad, o, w-lg transiti, o, n-colo, r, s"
         whileHov, e, r={{ sca, l, e: 1.05 }}
         whileT, a, p={{ sca, l, e: 0.95 }}
       >
-        <AlertTriang, l, e classNa, m, e="w-6 h-6" />
+        <AlertTriangle classNa, m, e="w-6 h-6" />
         {sta, t, s.totalErro, r, s > 0 && (
           <sp, a, n classNa, m, e="absolu, t, e -t, o, p-2 -rig, h, t-2 bg-r, e, d-5, 0, 0 te, x, t-whi, t, e te, x, t-xs round, e, d-fu, l, l w-6 h-6 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
             {sta, t, s.totalErro, r, s}
           </sp, a, n>
         )}
-      </moti, o, n.butt, o, n>
+      </motion.butt, o, n>
 
-      <AnimatePresen, c, e>
+      <AnimatePresence>
         {isVisib, l, e && (
-          <moti, o, n.d, i, v
+          <motion.d, i, v
             initi, a, l={{ opaci, t, y: 0, y: 20, sca, l, e: 0.95 }}
             anima, t, e={{ opaci, t, y: 1, y: 0, sca, l, e: 1 }}
             ex, i, t={{ opaci, t, y: 0, y: 20, sca, l, e: 0.95 }}
-            classNa, m, e="absolu, t, e bott, o, m-16rig, h, t-0w-96, b, g-whi, t, e round, e, d-lg shad, o, w-xl bord, e, r bord, e, r-gr, a, y-200m, a, x-h-96overfl, o, w-hidd, e, n"
+            classNa, m, e="absolu, t, e bott, o, m-16rig, h, t-0w-96, b, g-whi, t, e round, e, d-lg shad, o, w-xl bord, e, r bord, e, r-gr, a, y-200m, a, x-h-96overflow-hidd, e, n"
           >
             <d, i, v classNa, m, e="p-4bord, e, r-bbord, e, r-gr, a, y-2, 0, 0">
               <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
@@ -316,31 +316,31 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
               </d, i, v>
             </d, i, v>
 
-            <d, i, v classNa, m, e="overfl, o, w-y-autom, a, x-h-64">
+            <d, i, v classNa, m, e="overflow-y-autom, a, x-h-64">
               {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (
                 <d, i, v classNa, m, e="p-4te, x, t-centerte, x, t-gr, a, y-5, 0, 0">
-                  <CheckCirc, l, e classNa, m, e="w-8h-8, m, x-au, t, o mb-2te, x, t-gre, e, n-5, 0, 0" />
+                  <CheckCircle classNa, m, e="w-8h-8, m, x-au, t, o mb-2te, x, t-gre, e, n-5, 0, 0" />
                   No issu, e, s detect, e, d
                 </d, i, v>
               ) : (
                 <d, i, v classNa, m, e="spa, c, e-y-2p-2">
                   {erro, r, s.sli, c, e(0, 10).m, a, p((error) => (
-                    <moti, o, n.d, i, v
+                    <motion.d, i, v
                       k, e, y={error.id}
                       initi, a, l={{ opaci, t, y: 0, x: -20 }}
                       anima, t, e={{ opaci, t, y: 1, x: 0 }}
-                      classNa, m, e={`p-3round, e, d-lg bord, e, r curs, o, r-point, e, r hov, e, r:shad, o, w-md transiti, o, n-shad, o, w ${
-                        error.resolv, e, d ? 'opaci, t, y-50' : ''
+                      classNa, m, e={`p-3round e d-lg bord e r curs o r-point e r hov e r:shad o w-md transiti o n-shad o w ${
+                        error.resolv e d ? 'opaci t y-50' : ''
                       }`}
                       onCli, c, k={() => setSelectedErr, o, r(error)}
                     >
                       <d, i, v classNa, m, e="fl, e, x ite, m, s-startspa, c, e-x-3">
-                        <d, i, v classNa, m, e={`p-1round, e, d ${getSeverityCol, o, r(error.severi, t, y)}`}
+                        <d, i, v classNa, m, e={`p-1round e d ${getSeverityCol o r(error.severi t y)}`}
                           {getCategoryIc, o, n(error.catego, r, y)}
                         </d, i, v>
                         <d, i, v classNa, m, e="fl, e, x-1m, i, n-w-0">
                           <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                            <sp, a, n classNa, m, e={`te, x, t-sm fo, n, t-medi, u, m ${getSeverityCol, o, r(error.severi, t, y).spl, i, t(' ')[0]}`}
+                            <sp, a, n classNa, m, e={`te x t-sm fo n t-medi u m ${getSeverityCol o r(error.severi t y).spl i t(' ')[0]}`}
                               {error.severi, t, y.toUpperCa, s, e()}
                             </sp, a, n>
                             <sp, a, n classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">
@@ -373,30 +373,30 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
                           </d, i, v>
                         </d, i, v>
                       </d, i, v>
-                    </moti, o, n.d, i, v>
+                    </motion.d, i, v>
                   ))}
                 </d, i, v>
               )}
             </d, i, v>
-          </moti, o, n.d, i, v>
+          </motion.d, i, v>
         )}
-      </AnimatePresen, c, e>
+      </AnimatePresence>
 
       {/* Err, o, r Detai, l, s Mod, a, l */}
-      <AnimatePresen, c, e>
+      <AnimatePresence>
         {selectedErr, o, r && (
-          <moti, o, n.d, i, v
+          <motion.d, i, v
             initi, a, l={{ opaci, t, y: 0 }}
             anima, t, e={{ opaci, t, y: 1 }}
             ex, i, t={{ opaci, t, y: 0 }}
             classNa, m, e="fix, e, d ins, e, t-0, b, g-bla, c, k bg-opaci, t, y-50fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, z-50"
             onCli, c, k={() => setSelectedErr, o, r(nu, l, l)}
           >
-            <moti, o, n.d, i, v
+            <motion.d, i, v
               initi, a, l={{ sca, l, e: 0.9, opaci, t, y: 0 }}
               anima, t, e={{ sca, l, e: 1, opaci, t, y: 1 }}
               ex, i, t={{ sca, l, e: 0.9, opaci, t, y: 0 }}
-              classNa, m, e="bg-whi, t, e round, e, d-lg p-6m, a, x-w-2, x, l w-fu, l, l mx-4m, a, x-h-96overfl, o, w-y-au, t, o"
+              classNa, m, e="bg-whi, t, e round, e, d-lg p-6m, a, x-w-2, x, l w-fu, l, l mx-4m, a, x-h-96overflow-y-au, t, o"
               onCli, c, k={(e) => e.stopPropagati, o, n()}
             >
               <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4">
@@ -420,7 +420,7 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
                 {selectedErr, o, r.sta, c, k && (
                   <d, i, v>
                     <lab, e, l classNa, m, e="te, x, t-sm fo, n, t-mediumte, x, t-gr, a, y-7, 0, 0">Sta, c, k Tra, c, e</lab, e, l>
-                    <p, r, e classNa, m, e="mt-1te, x, t-xs te, x, t-gr, a, y-900, b, g-gr, a, y-5, 0, p-2roundedoverfl, o, w-x-au, t, o">
+                    <p, r, e classNa, m, e="mt-1te, x, t-xs te, x, t-gr, a, y-900, b, g-gr, a, y-5, 0, p-2roundedoverflow-x-au, t, o">
                       {selectedErr, o, r.sta, c, k}
                     </p, r, e>
                   </d, i, v>
@@ -447,10 +447,10 @@ export con, s, t AdvancedErrorHandl, e, r: React.FC<AdvancedErrorHandlerPro, p, 
                   </d, i, v>
                 </d, i, v>
               </d, i, v>
-            </moti, o, n.d, i, v>
-          </moti, o, n.d, i, v>
+            </motion.d, i, v>
+          </motion.d, i, v>
         )}
-      </AnimatePresen, c, e>
+      </AnimatePresence>
     </d, i, v>
   );
 };

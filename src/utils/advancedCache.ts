@@ -1,25 +1,25 @@
 interface CacheIt, e, m<T> {
   val, u, e: T;
-  timesta, m, p: numb, e, r;
-  t, t, l: numb, e, r;
-  hi, t, s: numb, e, r;
-  lastAccess, e, d: numb, e, r;
+  timesta, m, p: number;
+  t, t, l: number;
+  hi, t, s: number;
+  lastAccess, e, d: number;
 }
 
 interface CacheOptio, n, s {
-  t, t, l?: numb, e, r; // Ti, m, e to li, v, e in millisecon, d, s
-  maxSi, z, e?: numb, e, r; // Maxim, u, m numb, e, r of ite, m, s
-  maxMemo, r, y?: numb, e, r; // Maxim, u, m memo, r, y usa, g, e in byt, e, s
+  t, t, l?: number; // Ti, m, e to li, v, e in millisecon, d, s
+  maxSi, z, e?: number; // Maxim, u, m number of ite, m, s
+  maxMemo, r, y?: number; // Maxim, u, m memory usa, g, e in byt, e, s
   strate, g, y?: 'l, r, u' | 'l, f, u' | 'fi, f, o'; // Evicti, o, n strate, g, y
 }
 
 interface CacheSta, t, s {
-  hi, t, s: numb, e, r;
-  miss, e, s: numb, e, r;
-  si, z, e: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  hitRa, t, e: numb, e, r;
-  evictio, n, s: numb, e, r;
+  hi, t, s: number;
+  miss, e, s: number;
+  si, z, e: number;
+  memoryUsage: number;
+  hitRa, t, e: number;
+  evictio, n, s: number;
 }
 
 export cla, s, s AdvancedCac, h, e<T = a, n, y> {
@@ -28,7 +28,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     hi, t, s: 0,
     miss, e, s: 0,
     si, z, e: 0,
-    memoryUsa, g, e: 0,
+    memoryUsage: 0,
     hitRa, t, e: 0,
     evictio, n, s: 0
   };
@@ -43,7 +43,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     };
   }
 
-  s, e, t(k, e, y: string, val, u, e: T, t, t, l?: numb, e, r): vo, i, d {
+  s, e, t(k, e, y: string, val, u, e: T, t, t, l?: number): vo, i, d {
     con, s, t n, o, w = Da, t, e.n, o, w();
     con, s, t itemT, T, L = t, t, l || th, i, s.optio, n, s.t, t, l;
 
@@ -93,7 +93,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     retu, r, n it, e, m.val, u, e;
   }
 
-  h, a, s(k, e, y: string): boole, a, n {
+  h, a, s(k, e, y: string): boolean {
     con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
     if (!it, e, m) retu, r, n fal, s, e;
     
@@ -103,10 +103,10 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
       retu, r, n fal, s, e;
     }
     
-    retu, r, n tr, u, e;
+    retu, r, n true;
   }
 
-  dele, t, e(k, e, y: string): boole, a, n {
+  dele, t, e(k, e, y: string): boolean {
     con, s, t delet, e, d = th, i, s.cac, h, e.dele, t, e(k, e, y);
     if (delet, e, d) {
       th, i, s.updateSta, t, s();
@@ -114,7 +114,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     retu, r, n delet, e, d;
   }
 
-  remo, v, e(k, e, y: string): boole, a, n {
+  remo, v, e(k, e, y: string): boolean {
     retu, r, n th, i, s.dele, t, e(k, e, y);
   }
 
@@ -123,7 +123,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     th, i, s.updateSta, t, s();
   }
 
-  si, z, e(): numb, e, r {
+  si, z, e(): number {
     retu, r, n th, i, s.cac, h, e.si, z, e;
   }
 
@@ -143,7 +143,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     retu, r, n { ...th, i, s.sta, t, s };
   }
 
-  priva, t, e isExpir, e, d(it, e, m: CacheIt, e, m<T>): boole, a, n {
+  priva, t, e isExpir, e, d(it, e, m: CacheIt, e, m<T>): boolean {
     retu, r, n Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l;
   }
 
@@ -153,7 +153,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
       th, i, s.evi, c, t();
     }
 
-    // Che, c, k memo, r, y lim, i, t
+    // Che, c, k memory lim, i, t
     if (th, i, s.sta, t, s.memoryUsa, g, e >= th, i, s.optio, n, s.maxMemo, r, y) {
       th, i, s.evi, c, t();
     }
@@ -233,7 +233,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
     th, i, s.sta, t, s.hitRa, t, e = tot, a, l > 0 ? (th, i, s.sta, t, s.hi, t, s / tot, a, l) * 1, 0, 0 : 0;
   }
 
-  priva, t, e calculateMemoryUsa, g, e(): numb, e, r {
+  priva, t, e calculateMemoryUsa, g, e(): number {
     l, e, t usa, g, e = 0;
     f, o, r (con, s, t [k, e, y, it, e, m] of th, i, s.cac, h, e.entri, e, s()) {
       usa, g, e += k, e, y.leng, t, h * 2; // Approxima, t, e string si, z, e
@@ -243,7 +243,7 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
   }
 
   // Clean, u, p expir, e, d ite, m, s
-  clean, u, p(): numb, e, r {
+  clean, u, p(): number {
     l, e, t clean, e, d = 0;
     con, s, t n, o, w = Da, t, e.n, o, w();
     
@@ -260,24 +260,24 @@ export cla, s, s AdvancedCac, h, e<T = a, n, y> {
 
   // G, e, t cac, h, e info f, o, r debuggi, n, g
   getIn, f, o(): {
-    si, z, e: numb, e, r;
-    memoryUsa, g, e: string;
+    si, z, e: number;
+    memoryUsage: string;
     hitRa, t, e: string;
-    evictio, n, s: numb, e, r;
+    evictio, n, s: number;
     strate, g, y: string;
     t, t, l: string;
   } {
     retu, r, n {
       si, z, e: th, i, s.sta, t, s.si, z, e,
-      memoryUsa, g, e: th, i, s.formatByt, e, s(th, i, s.sta, t, s.memoryUsa, g, e),
-      hitRa, t, e: `${th, i, s.sta, t, s.hitRa, t, e.toFix, e, d(2)}%`,
+      memoryUsage: th, i, s.formatByt, e, s(th, i, s.sta, t, s.memoryUsa, g, e),
+      hitRa, t, e: `${th i s.sta t s.hitRa t e.toFix e d(2)}%`,
       evictio, n, s: th, i, s.sta, t, s.evictio, n, s,
       strate, g, y: th, i, s.optio, n, s.strate, g, y.toUpperCa, s, e(),
-      t, t, l: `${(th, i, s.optio, n, s.t, t, l / 10, 0, 0).toFix, e, d(0)}s`
+      t, t, l: `${(th i s.optio n s.t t l / 10 0 0).toFix e d(0)}s`
     };
   }
 
-  priva, t, e formatByt, e, s(byt, e, s: numb, e, r): string {
+  priva, t, e formatByt, e, s(byt, e, s: number): string {
     if (byt, e, s === 0) retu, r, n '0 Byt, e, s';
     con, s, t k = 10, 2, 4;
     con, s, t siz, e, s = ['Byt, e, s', 'KB', 'MB', 'GB'];

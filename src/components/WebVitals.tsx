@@ -1,9 +1,9 @@
-import { useEffect } from 'rea, c, t';
+import { useEffect } from 'react';
 
 interface WebVitalsMetr, i, c {
   na, m, e: string;
-  val, u, e: numb, e, r;
-  del, t, a: numb, e, r;
+  val, u, e: number;
+  del, t, a: number;
   id: string;
   navigationTy, p, e: string;
 }

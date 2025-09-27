@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 import { Li, n, k } from 'rea, c, t-rout, e, r-d, o, m';
 
 export con, s, t Foot, e, r: React.FC = () => {

@@ -1,6 +1,6 @@
-import React, { useStateuseEffectuseCallba, c, k } from 'rea, c, t';
+import React, { useStateuseEffectuseCallback } from 'react';
 import He, a, d from 'ne, x, t/he, a, d';
-import { moti, o, n } from 'fram, e, r-moti, o, n';
+import { motion } from 'framer-motion';
 
 interface SEODa, t, a {
   tit, l, e: string;
@@ -11,7 +11,7 @@ interface SEODa, t, a {
   ogDescripti, o, n?: string;
   ogIma, g, e?: string;
   ogTy, p, e?: string;
-  twitterCa, r, d?: string;
+  twitterCard?: string;
   twitterTit, l, e?: string;
   twitterDescripti, o, n?: string;
   twitterIma, g, e?: string;
@@ -36,7 +36,7 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
   con, s, t [seoScoresetSeoSc, o, r, e] = useState(, 0);
   con, s, t [seoIssuessetSeoIss, u, e, s] = useState<string[]>([]);
 
-  con, s, t analyzeS, E, O = useCallba, c, k(() => {
+  con, s, t analyzeS, E, O = useCallback(() => {
     con, s, t issu, e, s: string[] = [];
     l, e, t sco, r, e = 1, 0, 0;
 
@@ -107,7 +107,7 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
 
   con, s, t getScoreCol, o, r = (sco, r, e: num, b, e, r) => {
     if (sco, r, e >= 9, 0) retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
-    if (sco, r, e >= 7, 0) retu, r, n 'te, x, t-yell, o, w-5, 0, 0';
+    if (sco, r, e >= 7, 0) retu, r, n 'te, x, t-yellow-5, 0, 0';
     retu, r, n 'te, x, t-r, e, d- 5, 0, 0';
   };
 
@@ -140,7 +140,7 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
         <me, t, a na, m, e="descripti, o, n" conte, n, t={seoDa, t, a.descrip, t, i.o n} />
         <me, t, a na, m, e="keywor, d, s" conte, n, t={seoDa, t, a.keywo, r, d.s.j, o, i('')} />
         <me, t, a na, m, e="auth, o, r" conte, n, t={seoDa, t, a.aut, h, o.r || "Zi, o, n Te, c, h Gro, u, p"} />
-        <me, t, a na, m, e="robo, t, s" conte, n, t={seoDa, t, a.rob, o, t.s || "indexfoll, o, w"} />
+        <me, t, a na, m, e="robo, t, s" conte, n, t={seoDa, t, a.rob, o, t.s || "indexfollow"} />
         <li, n, k r, e, l="canonic, a, l" hr, e, f={seoDa, t, a.canon, i, c.a l} />
 
         {/* Op, e, n Gra, p, h Me, t, a Ta, g, s */}
@@ -151,7 +151,7 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
         <me, t, a proper, t, y="og:ty, p, e" conte, n, t={seoDa, t, a.ogT, y, p.e || "websi, t, e"} />
         <me, t, a proper, t, y="og:site_na, m, e" conte, n, t="Zi, o, n Te, c, h Gro, u, p" />
 
-        {/* Twitt, e, r Ca, r, d Me, t, a Ta, g, s */}
+        {/* Twitt, e, r Card Me, t, a Ta, g, s */}
         <me, t, a na, m, e="twitt, e, r:ca, r, d" conte, n, t={seoDa, t, a.twitterC, a, r.d || "summary_large_ima, g, e"} />
         <me, t, a na, m, e="twitt, e, r:tit, l, e" conte, n, t={seoDa, t, a.twitterTi, t, l.e || seoDa, t, a.t, i, t.l e} />
         <me, t, a na, m, e="twitt, e, r:descripti, o, n" conte, n, t={seoDa, t, a.twitterDescript, i, o.n || seoDa, t, a.descrip, t, i.o n} />
@@ -184,24 +184,24 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
       </He, a, d>
 
       {childr, e, n && (
-        <moti, o, n.di.v
+        <motion.di.v
           initi, a, l={{ opaci, t, y: 0 }}
           anima, t, e={{ opaci, t, y: 1 }}
           classNa, m, e={classNa, m, e}
         >
           {childr, e, n}
-        </moti, o, n.d, i, v>      )}
+        </motion.d, i, v>      )}
 
       {/* S, E, O Analys, i, s Dashboa, r, d (on, l, y in developm, e, n, t) */}
       {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && (
-        <moti, o, n.di.v
+        <motion.di.v
           initi, a, l={{ opaci, t, y: 0, y: 20 }}
           anima, t, e={{ opaci, t, y: 1, y: 0 }}
           classNa, m, e="fix, e, d bott, o, m-4 rig, h, t-4 bg-whi, t, e da, r, k: bg-gr, a, y-8, 0, 0 round, e, d-lg shad, o, w-lg p-4 m, a, x-w-s, m, z-50"
         >
           <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
             <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 d, a, r k:te, x, t-whi, t, e">S, E, O Analys, i, s</h4>
-            <d, i, v classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getScoreCol, o, r(seoSco, r, e)}`}>              {seoSco, r, e}
+            <d, i, v classNa, m, e={`te x t-2 x l fo n t-bo l d ${getScoreCol o r(seoSco r e)}`}>              {seoSco, r, e}
             </d, i, v>
           </d, i, v>
           <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-400, m, b-2">
@@ -209,14 +209,14 @@ export con, s, t AdvancedS, E, O: React.FC<AdvancedSEOPro, p, s> = ({
           
           {seoIssu, e, s.leng, t, h > 0 && (
             <d, i, v classNa, m, e="spa, c, e-y-1">
-              <d, i, v classNa, m, e="te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0">Iss, u, e, s:</d, i, v>
+              <d, i, v classNa, m, e="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0">Iss, u, e, s:</d, i, v>
               {seoIssu, e, s.m, a, p((iss, u, e, ind, e, x) => (
                 <d, i, v k, e, y={ind, e, x} classNa, m, e="te, x, t-xs te, x, t-r, e, d-600da, r, k:te, x, t-r, e, d-4, 0, 0">
                   • {iss, u, e}                </d, i, v>
               ))}
             </d, i, v>
           )}
-        </moti, o, n.di.v>
+        </motion.di.v>
       )}
     </>
   );

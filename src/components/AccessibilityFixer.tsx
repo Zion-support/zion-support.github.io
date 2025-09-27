@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 
 interface AccessibilityFixerPro, p, s {
   onF, i, x?: () => vo, i, d;
@@ -7,18 +7,18 @@ interface AccessibilityFixerPro, p, s {
 export con, s, t AccessibilityFix, e, r: React.FC<AccessibilityFixerPro, p, s> = ({ onF, i, x }) => {
   con, s, t fixAccessibilityIssu, e, s = () => {
     // A, d, d ar, i, a-labe, l, s to a, l, l butto, n, s
-    con, s, t butto, n, s = docume, n, t.querySelectorA, l, l('butt, o, n:n, o, t([ar, i, a-lab, e, l])');
+    con, s, t butto, n, s = docume, n, t.querySelectorAll('butt, o, n:n, o, t([ar, i, a-lab, e, l])');
     butto, n, s.forEa, c, h((buttonin, d, e, x) => {
       if (!butt, o, n.getAttribu, t, e('ar, i, a-lab, e, l')) {
-        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt, o, n ${ind, e, x +  1}`);
+        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt o n ${ind e x +  1}`);
       }
     });
 
     // A, d, d i, d, s to headin, g, s f, o, r anch, o, r lin, k, s
-    con, s, t headin, g, s = docume, n, t.querySelectorA, l, l('h1h2h3h4h5, h, 6:n, o, t([i, d])');
+    con, s, t headin, g, s = docume, n, t.querySelectorAll('h1h2h3h4h5, h, 6:n, o, t([i, d])');
     headin, g, s.forEa, c, h((headingin, d, e, x) => {
       if (!headi, n, g.i, d) {
-        con, s, t te, x, t = headi, n, g.textCont, e, n.t?.toLowerC, a, s().repl, a, c(/\s+/g'-') || `headi, n, g-${in, d, e x}`;
+        con, s, t te, x, t = headi, n, g.textCont, e, n.t?.toLowerC, a, s().repl, a, c(/\s+/g'-') || `headi n g-${in d e x}`;
         headi, n, g.i.d = te, x, t;
       }
     });

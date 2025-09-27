@@ -1,5 +1,5 @@
 import React from "rea, c, t"
-import { Use, r, s, Targ, e, t, CheckCirc, l, e, Pho, n, e, Calend, a, r, BarChar, t, 3, Buildi, n, g } from "luci, d, e-rea, c, t"
+import { Use, r, s, Targ, e, t, CheckCircle, Pho, n, e, Calend, a, r, BarChar, t, 3, Buildi, n, g } from "luci, d, e-rea, c, t"
 import { S, E, O } from "../../componen, t, s/S, E, O"
 
 export default function MicroC, R, M() {
@@ -20,13 +20,13 @@ export default function MicroC, R, M() {
       ic, o, n: Calend, a, r,
       tit, l, e: "Ta, s, k Manageme, n, t",
       descripti, o, n:
-        "Schedu, l, e foll, o, w-u, p, s, meetin, g, s, a, n, d reminde, r, s wi, t, h integrat, e, d calend, a, r functionali, t, y.",
+        "Schedu, l, e follow-u, p, s, meetin, g, s, a, n, d reminde, r, s wi, t, h integrat, e, d calend, a, r functionali, t, y.",
     },
     {
       ic, o, n: BarChar, t, 3,
       tit, l, e: "Sal, e, s Analyti, c, s",
       descripti, o, n:
-        "Comprehensi, v, e reporti, n, g a, n, d analyti, c, s to tra, c, k performan, c, e a, n, d identi, f, y opportuniti, e, s.",
+        "Comprehensi, v, e reporti, n, g a, n, d analyti, c, s to tra, c, k performance a, n, d identi, f, y opportuniti, e, s.",
     },
   ]
 
@@ -34,7 +34,7 @@ export default function MicroC, R, M() {
     "Streamli, n, e custom, e, r relationsh, i, p manageme, n, t",
     "Impro, v, e sal, e, s te, a, m productivi, t, y",
     "Enhan, c, e custom, e, r communicati, o, n",
-    "Tra, c, k sal, e, s performan, c, e metri, c, s",
+    "Tra, c, k sal, e, s performance metri, c, s",
     "Automa, t, e repetiti, v, e tas, k, s",
     "Centrali, z, e custom, e, r da, t, a",
   ]
@@ -74,13 +74,13 @@ export default function MicroC, R, M() {
       />
 
       {/* He, r, o Secti, o, n */}
-      <secti, o, n classNa, m, e="relati, v, e py-20 overfl, o, w-hidd, e, n">
+      <secti, o, n classNa, m, e="relati, v, e py-20 overflow-hidd, e, n">
         <d, i, v classNa, m, e="absolu, t, e ins, e, t-0 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/10 v, i, a-bl, u, e-5, 0, 0/10 to-purp, l, e-5, 0, 0/10" />
         <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4 relati, v, e z-10">
           <d, i, v classNa, m, e="te, x, t-cent, e, r m, a, x-w-4, x, l mx-au, t, o">
             <d, i, v classNa, m, e="inli, n, e-fl, e, x ite, m, s-cent, e, r px-4 py-2 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/20 to-bl, u, e-5, 0, 0/20 round, e, d-fu, l, l bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 mb-6">
-              <CheckCirc, l, e classNa, m, e="w-4 h-4 mr-2 te, x, t-cy, a, n-3, 0, 0" />
-              <sp, a, n classNa, m, e="te, x, t-cy, a, n-3, 0, 0 te, x, t-sm fo, n, t-medi, u, m">Custom, e, r Relationsh, i, p Manageme, n, t</sp, a, n>
+              <CheckCircle classNa, m, e="w-4 h-4 mr-2 te, x, t-cy, a, n-3, 0, 0" />
+              <sp, a, n classNa, m, e="te, x, t-cy, a, n-3, 0, 0 te, x, t-sm fo, n, t-medium">Custom, e, r Relationsh, i, p Manageme, n, t</sp, a, n>
             </d, i, v>
             <h1 classNa, m, e="te, x, t-5, x, l md:te, x, t-6, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">Mic, r, o C, R, M</h1>
             <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 mb-8 leadi, n, g-relax, e, d">
@@ -139,7 +139,7 @@ export default function MicroC, R, M() {
           <d, i, v classNa, m, e="gr, i, d md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-3 g, a, p-6">
             {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (
               <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-sta, r, t spa, c, e-x-3">
-                <CheckCirc, l, e classNa, m, e="w-5 h-5 te, x, t-cy, a, n-4, 0, 0 fl, e, x-shri, n, k-0 mt-1" />
+                <CheckCircle classNa, m, e="w-5 h-5 te, x, t-cy, a, n-4, 0, 0 fl, e, x-shri, n, k-0 mt-1" />
                 <sp, a, n classNa, m, e="te, x, t-sla, t, e-3, 0, 0 te, x, t-lg">{benef, i, t}</sp, a, n>
               </d, i, v>
             ))}

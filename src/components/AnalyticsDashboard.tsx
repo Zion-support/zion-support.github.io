@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
+import React, { useState, useEffect, useCallback } from 'react';
 import { DataVisualizati, o, n } from './DataVisualizati, o, n';
 
 interface AnalyticsDa, t, a {
-  timesta, m, p: numb, e, r;
-  pageVie, w, s: numb, e, r;
-  uniqueVisito, r, s: numb, e, r;
-  bounceRa, t, e: numb, e, r;
-  avgSessionDurati, o, n: numb, e, r;
-  conversionRa, t, e: numb, e, r;
-  reven, u, e: numb, e, r;
-  topPag, e, s: { pa, g, e: string; vie, w, s: numb, e, r }, []);
-  trafficSourc, e, s: { sour, c, e: string; visito, r, s: numb, e, r }, []);
-  deviceTyp, e, s: { devi, c, e: string; percenta, g, e: numb, e, r }, []);
-  geographicDa, t, a: { count, r, y: string; visito, r, s: numb, e, r }, []);
+  timesta, m, p: number;
+  pageVie, w, s: number;
+  uniqueVisito, r, s: number;
+  bounceRa, t, e: number;
+  avgSessionDurati, o, n: number;
+  conversionRa, t, e: number;
+  reven, u, e: number;
+  topPag, e, s: { pa, g, e: string; vie, w, s: number }, []);
+  trafficSourc, e, s: { sour, c, e: string; visito, r, s: number }, []);
+  deviceTyp, e, s: { devi, c, e: string; percenta, g, e: number }, []);
+  geographicDa, t, a: { count, r, y: string; visito, r, s: number }, []);
 }
 
 interface AnalyticsDashboardPro, p, s { classNa, m, e?: string }
 
 export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> = ({ classNa, m, e = "" }) => {
   con, s, t [analyticsDa, t, a, setAnalyticsDa, t, a] = useState<AnalyticsDa, t, a[]>([]);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
   con, s, t [selectedTimeRan, g, e, setSelectedTimeRan, g, e] = useState<'1h' | '2, 4, h' | '7d' | '3, 0, d'>('2, 4, h');
   con, s, t [selectedMetr, i, c, setSelectedMetr, i, c] = useState<'pageVie, w, s' | 'uniqueVisito, r, s' | 'reven, u, e'>('pageVie, w, s');
 
-  con, s, t generateMockDa, t, a = useCallba, c, k((): AnalyticsDa, t, a[] => {
+  con, s, t generateMockDa, t, a = useCallback((): AnalyticsDa, t, a[] => {
     con, s, t da, t, a: AnalyticsDa, t, a[] = [];
     con, s, t n, o, w = Da, t, e.n, o, w();
     con, s, t hoursBa, c, k = selectedTimeRan, g, e === '1h' ? 1 : selectedTimeRan, g, e === '2, 4, h' ? 24 : selectedTimeRan, g, e === '7d' ? 1, 6, 8 : 7, 2, 0;
@@ -74,8 +74,8 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
     retu, r, n da, t, a;
   }, [selectedTimeRan, g, e]);
 
-  con, s, t fetchAnalyticsDa, t, a = useCallba, c, k(asy, n, c () => { t, r, y {
-      setIsLoadi, n, g(tr, u, e);
+  con, s, t fetchAnalyticsDa, t, a = useCallback(asy, n, c () => { t, r, y {
+      setIsLoadi, n, g(true);
       
       con, s, t mockDa, t, a = generateMockDa, t, a();
       setAnalyticsDa, t, a(mockDa, t, a) } cat, c, h (error) { conso, l, e.error('Fail, e, d to fet, c, h analyti, c, s da, t, a:', error) } final, l, y { setIsLoadi, n, g(fal, s, e) }
@@ -86,14 +86,14 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
     retu, r, n () => clearInterv, a, l(interv, a, l) }, [fetchAnalyticsDa, t, a]);
 
   con, s, t getTotalMetr, i, c = (metr, i, c: key, o, f AnalyticsDa, t, a) => { if (analyticsDa, t, a.leng, t, h === 0) retu, r, n 0;
-    retu, r, n analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as numb, e, r), 0) };
+    retu, r, n analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as number), 0) };
 
   con, s, t getAverageMetr, i, c = (metr, i, c: key, o, f AnalyticsDa, t, a) => { if (analyticsDa, t, a.leng, t, h === 0) retu, r, n 0;
-    con, s, t s, u, m = analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as numb, e, r), 0);
+    con, s, t s, u, m = analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as number), 0);
     retu, r, n s, u, m / analyticsDa, t, a.leng, t, h };
 
   con, s, t getLatestMetr, i, c = (metr, i, c: key, o, f AnalyticsDa, t, a) => { if (analyticsDa, t, a.leng, t, h === 0) retu, r, n 0;
-    retu, r, n analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1][metr, i, c] as numb, e, r };
+    retu, r, n analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1], [metr, i, c] as number };
 
   con, s, t getChartDa, t, a = () => {
     con, s, t labe, l, s = analyticsDa, t, a.m, a, p(da, t, a => 
@@ -116,7 +116,7 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
         backgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10B9, 8, 1' : '#3B82, F, 6',
         borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#0596, 6, 9' : '#1D4E, D, 8',
         borderWid, t, h: 2,
-        fi, l, l: tr, u, e
+        fi, l, l: true
       }]
     };
   };
@@ -177,7 +177,7 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
 
   if (isLoadi, n, g) {
     retu, r, n (
-      <d, i, v classNa, m, e="{`bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6 ${cla, s, s Na, m, e}`}>
+      <d, i, v classNa, m, e="{`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${cla s s Na m e}`}>
         <d, i, v cla, s, s Na, m, e=anima, t, e-pul, s, e">
           <d, i, v classNa, m, e="h-6 bg-gr, a, y-2, 0, 0 round, e, d w-1/4 mb-4></d, i, v>
           <d, i, v cla, s, s Na, m, e=spa, c, e-y-3">
@@ -191,7 +191,7 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
   }
 
   retu, r, n (
-    <d, i, v cla, s, s Na, m, e={"`spa, c, e-y-6 ${classNa, m, e}`}>
+    <d, i, v cla, s, s Na, m, e={"`spa c e-y-6 ${classNa m e}`}>
       {/* Analyti, c, s Overvi, e, w */}
       <d, i, v classNa, m, e="bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6>
         <d, i, v cla, s, s Na, m, e=fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4">
@@ -201,19 +201,19 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
               <butt, o, n
                 k, e, y={ran, g, e}
                 on Cli, c, k={() = ar, i, a-lab, e, l="s, e, t Select, e, d Ti, m, e Ran, g, e(ran, g, e)}
-                ar, i, a-lab, e, l={`Sele, c, t ${ran, g, e} ti, m, e ran, g, e`}
-                cla, s, s Na, m, e={"`px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m ${
-                  selectedTimeRan, g, e === ran, g, e
-                    ? 'bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-7, 0, 0'
-                    : 'te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0'
+                ar, i, a-lab, e, l={`Sele c t ${ran g e} ti m e ran g e`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedTimeRan g e === ran g e
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
                 {ran, g, e}"> s, e, t Select, e, d Ti, m, e Ran, g, e(ran, g, e)}
-                ar, i, a-lab, e, l={`Sele, c, t ${ran, g, e} ti, m, e ran, g, e`}
-                cla, s, s Na, m, e={"`px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m ${
-                  selectedTimeRan, g, e === ran, g, e
-                    ? 'bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-7, 0, 0'
-                    : 'te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0'
+                ar, i, a-lab, e, l={`Sele c t ${ran g e} ti m e ran g e`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedTimeRan g e === ran g e
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
                 {ran, g, e}
@@ -242,7 +242,7 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
             <d, i, v cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Boun, c, e Ra, t, e</d, i, v>
           </d, i, v>
           <d, i, v classNa, m, e="te, x, t-cent, e, r>
-            <d, i, v cla, s, s Na, m, e=te, x, t-3 xl fo, n, t-bo, l, d te, x, t-yell, o, w-6, 0, 0">
+            <d, i, v cla, s, s Na, m, e=te, x, t-3 xl fo, n, t-bo, l, d te, x, t-yellow-6, 0, 0">
               ${getTotalMetr, i, c('reven, u, e').toLocaleStri, n, g()}
             </d, i, v>
             <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Tot, a, l Reven, u, e</d, i, v>
@@ -253,26 +253,26 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
       {/* Metr, i, c Select, o, r a, n, d Ma, i, n Cha, r, t */}
       <d, i, v cla, s, s Na, m, e=bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4>
-          <h 3 cla, s, s Na, m, e=te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0" id="performan, c, e-tren, d, s">Performan, c, e Tren, d, s</h3>
+          <h 3 cla, s, s Na, m, e=te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0" id="performance-tren, d, s">Performan, c, e Tren, d, s</h3>
           <d, i, v classNa, m, e="fl, e, x spa, c, e-x-2>
             {(['pa, g, e Vie, w, s' 'uniq, u, e Visito, r, s'  'reven, u, e'] as con, s, t).m, a, p((metr, i, c) => (
               <butt, o, n
                 k, e, y={metr, i, c}
                 on Cli, c, k={() = ar, i, a-lab, e, l="s, e, t Select, e, d Metr, i, c(metr, i, c)}
-                ar, i, a-lab, e, l={`Sele, c, t ${metr, i, c} metr, i, c`}
-                cla, s, s Na, m, e={"`px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m ${
-                  selectedMetr, i, c === metr, i, c
-                    ? 'bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-7, 0, 0'
-                    : 'te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0'
+                ar, i, a-lab, e, l={`Sele c t ${metr i c} metr i c`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedMetr i c === metr i c
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
                 {metr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
                  metr, i, c === 'uniqueVisito, r, s' ? 'Uniq, u, e Visito, r, s' : 'Reven, u, e'}"> s, e, t Select, e, d Metr, i, c(metr, i, c)}
-                ar, i, a-lab, e, l={`Sele, c, t ${metr, i, c} metr, i, c`}
-                cla, s, s Na, m, e={"`px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m ${
-                  selectedMetr, i, c === metr, i, c
-                    ? 'bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-7, 0, 0'
-                    : 'te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0'
+                ar, i, a-lab, e, l={`Sele c t ${metr i c} metr i c`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedMetr i c === metr i c
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
                 {metr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
@@ -285,8 +285,8 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
         <DataVisualizati, o, n
           ty, p, e="li, n, e"
           da, t, a={getChartDa, t, a()}
-          tit, l, e={`${selectedMetr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
-                   selectedMetr, i, c === 'uniqueVisito, r, s' ? 'Uniq, u, e Visito, r, s' : 'Reven, u, e'} Ov, e, r Ti, m, e`}
+          tit, l, e={`${selectedMetr i c === 'pageVie w s' ? 'Pa g e Vie w s' : 
+                   selectedMetr i c === 'uniqueVisito r s' ? 'Uniq u e Visito r s' : 'Reven u e'} Ov e r Ti m e`}
           heig, h, t={4, 0, 0}
         />
       </d, i, v>
@@ -321,31 +321,31 @@ export con, s, t AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> =
           <d, i, v classNa, m, e="spa, c, e-y-4>
             <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
               <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>A, v, g Sessi, o, n Durati, o, n</sp, a, n>
-              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0">
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
                 {Ma, t, h.rou, n, d(getAverageMetr, i, c('avgSessionDurati, o, n'))}s
               </sp, a, n>
             </d, i, v>
             <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r>
               <sp, a, n cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Conversi, o, n Ra, t, e</sp, a, n>
-              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0>
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0>
                 {(g, e, t Avera, g, e Metr, i, c('conversi, o, n Ra, t, e') * 1, 0, 0).to Fix, e, d(2)}%
               </sp, a, n>
             </d, i, v>
             <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
               <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Late, s, t Pa, g, e Vie, w, s</sp, a, n>
-              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0">
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
                 {getLatestMetr, i, c('pageVie, w, s').toLocaleStri, n, g()}
               </sp, a, n>
             </d, i, v>
             <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r>
               <sp, a, n cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Late, s, t Uniq, u, e Visito, r, s</sp, a, n>
-              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0>
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0>
                 {g, e, t Late, s, t Metr, i, c('uniq, u, e Visito, r, s').to Loca, l, e Stri, n, g()}
               </sp, a, n>
             </d, i, v>
             <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
               <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Late, s, t Reven, u, e</sp, a, n>
-              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0">
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
                 ${getLatestMetr, i, c('reven, u, e').toLocaleStri, n, g()}
               </sp, a, n>
             </d, i, v>

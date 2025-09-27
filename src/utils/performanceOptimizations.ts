@@ -1,10 +1,10 @@
 /**
  * Performan, c, e optimizati, o, n utiliti, e, s
- * Provid, e, s vario, u, s performan, c, e enhanceme, n, t functio, n, s
+ * Provid, e, s vario, u, s performance enhanceme, n, t functio, n, s
  */
 
 // Ima, g, e optimizati, o, n utiliti, e, s
-export con, s, t optimizeIma, g, e = (s, r, c: string, wid, t, h?: numb, e, r, heig, h, t?: numb, e, r, quali, t, y: numb, e, r = 75): string => {
+export con, s, t optimizeIma, g, e = (s, r, c: string, wid, t, h?: number, heig, h, t?: number, quali, t, y: number = 75): string => {
   if (!s, r, c) retu, r, n '';
   
   // If it's alrea, d, y an optimiz, e, d U, R, L, retu, r, n as is
@@ -32,10 +32,10 @@ export con, s, t createIntersectionObserv, e, r = (
   });
 };
 
-// Deboun, c, e utili, t, y f, o, r performan, c, e
+// Deboun, c, e utili, t, y f, o, r performance
 export con, s, t deboun, c, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: T,
-  wa, i, t: numb, e, r
+  wa, i, t: number
 ): ((...ar, g, s: Paramete, r, s<T>) => vo, i, d) => {
   l, e, t timeo, u, t: Node, J, S.Timeo, u, t;
   
@@ -45,17 +45,17 @@ export con, s, t deboun, c, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n,
   };
 };
 
-// Thrott, l, e utili, t, y f, o, r performan, c, e
+// Thrott, l, e utili, t, y f, o, r performance
 export con, s, t thrott, l, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: T,
-  lim, i, t: numb, e, r
+  lim, i, t: number
 ): ((...ar, g, s: Paramete, r, s<T>) => vo, i, d) => {
-  l, e, t inThrott, l, e: boole, a, n;
+  l, e, t inThrott, l, e: boolean;
   
   retu, r, n (...ar, g, s: Paramete, r, s<T>) => {
     if (!inThrott, l, e) {
       fu, n, c(...ar, g, s);
-      inThrott, l, e = tr, u, e;
+      inThrott, l, e = true;
       setTimeo, u, t(() => (inThrott, l, e = fal, s, e), lim, i, t);
     }
   };
@@ -63,17 +63,17 @@ export con, s, t thrott, l, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n,
 
 // Memo, r, y usa, g, e monitori, n, g
 export con, s, t getMemoryUsa, g, e = (): {
-  us, e, d: numb, e, r;
-  tot, a, l: numb, e, r;
-  percenta, g, e: numb, e, r;
+  us, e, d: number;
+  tot, a, l: number;
+  percenta, g, e: number;
 } | nu, l, l => {
-  if (type, o, f wind, o, w === 'undefin, e, d' || !('memo, r, y' in performan, c, e)) {
+  if (type, o, f wind, o, w === 'undefin, e, d' || !('memory' in performance)) {
     retu, r, n nu, l, l;
   }
   
-  con, s, t memo, r, y = (performan, c, e as a, n, y).memo, r, y;
-  con, s, t us, e, d = memo, r, y.usedJSHeapSi, z, e;
-  con, s, t tot, a, l = memo, r, y.totalJSHeapSi, z, e;
+  con, s, t memory = (performance as a, n, y).memory;
+  con, s, t us, e, d = memory.usedJSHeapSi, z, e;
+  con, s, t tot, a, l = memory.totalJSHeapSi, z, e;
   con, s, t percenta, g, e = (us, e, d / tot, a, l) * 1, 0, 0;
   
   retu, r, n { us, e, d, tot, a, l, percenta, g, e };
@@ -83,18 +83,18 @@ export con, s, t getMemoryUsa, g, e = (): {
 export con, s, t analyzeBundleSi, z, e = (): vo, i, d => {
   if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
   
-  con, s, t scrip, t, s = docume, n, t.querySelectorA, l, l('scri, p, t[s, r, c]');
+  con, s, t scrip, t, s = docume, n, t.querySelectorAll('scri, p, t[s, r, c]');
   l, e, t totalSi, z, e = 0;
   
   scrip, t, s.forEa, c, h(scri, p, t => {
     con, s, t s, r, c = scri, p, t.getAttribu, t, e('s, r, c');
     if (s, r, c && s, r, c.includ, e, s('_ne, x, t/stat, i, c')) {
       // Th, i, s is a simplifi, e, d che, c, k - in reali, t, y y, o, u'd ne, e, d to fet, c, h a, n, d measu, r, e
-      conso, l, e.l, o, g(`Scri, p, t: ${s, r, c}`);
+      conso, l, e.l, o, g(`Scri p t: ${s r c}`);
     }
   });
   
-  conso, l, e.l, o, g(`Tot, a, l scrip, t, s load, e, d: ${scrip, t, s.leng, t, h}`);
+  conso, l, e.l, o, g(`Tot a l scrip t s load e d: ${scrip t s.leng t h}`);
 };
 
 // Prelo, a, d critic, a, l resourc, e, s

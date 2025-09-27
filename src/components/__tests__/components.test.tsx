@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
 import '@testi, n, g-libra, r, y/je, s, t- d, o, m';
 import { ErrorBounda, r, y } from '../ErrorBounda, r, y';
@@ -6,7 +6,7 @@ import { ThemeProviderThemeTogg, l, e } from '../ThemeProvid, e, r';
 import { SkeletonServiceCardSkeletonFeatureCardSkeletonLoadingSpinn, e, r } from '../LoadingComponen, t, s';
 
 // Mo, c, k compone, n, t th, a, t thro, w, s an error
-con, s, t ThrowErr, o, r = ({ shouldThr, o, w }: { shouldThr, o, w: boole, a, n }) => {
+con, s, t ThrowErr, o, r = ({ shouldThr, o, w }: { shouldThr, o, w: boolean }) => {
   if (shouldTh, r, o, w) {
     thr, o, w n, e, w Err, o, r('Te, s, t error');
   }

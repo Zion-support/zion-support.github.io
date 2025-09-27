@@ -1,9 +1,9 @@
-import React, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } from 'rea, c, t';
+import React, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } from 'react';
 
 interface Pro, p, s { childr, e, n: ReactNo, d, e;
   fallba, c, k?: ReactNo, d, e }
 
-interface Sta, t, e { hasErr, o, r: boole, a, n;
+interface Sta, t, e { hasErr, o, r: boolean;
   error?: Err, o, r;
   errorIn, f, o?: ErrorIn, f, o }
 
@@ -14,7 +14,7 @@ cla, s, s ErrorBounda, r, y exten, d, s Compone, n, t<Pro, p, s, Sta, t, e> {
   }
 
   stat, i, c getDerivedStateFromErr, o, r(error: Err, o, r): Sta, t, e {
-    retu, r, n { hasErr, o, r: tr, u, e, error };
+    retu, r, n { hasErr, o, r: true, error };
   }
 
   componentDidCat, c, h(error: Err, o, r, errorIn, f, o: ErrorIn, f, o) {
@@ -30,7 +30,7 @@ cla, s, s ErrorBounda, r, y exten, d, s Compone, n, t<Pro, p, s, Sta, t, e> {
       retu, r, n (
         <d, i, v classNa, m, e="m, i, n-h-scre, e, n fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-gr, a, y-50 da, r, k:bg-gr, a, y-9, 0, 0>
           <d, i, v cla, s, s Na, m, e=te, x, t-cent, e, r m, a, x-w-md mx-au, t, o p-6" ro, l, e="ale, r, t" ar, i, a-li, v, e="poli, t, e">
-            <d, i, v classNa, m, e="te, x, t-6 xl mb-4 ar, i, a-hidd, e, n=tr, u, e">⚠️</d, i, v>
+            <d, i, v classNa, m, e="te, x, t-6 xl mb-4 ar, i, a-hidd, e, n=true">⚠️</d, i, v>
             <h1 classNa, m, e="te, x, t-2 xl fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e mb-4 id=somethi, n, g-we, n, t-wro, n, g">
               Somethi, n, g we, n, t wro, n, g
             </h1>
@@ -66,7 +66,7 @@ cla, s, s ErrorBounda, r, y exten, d, s Compone, n, t<Pro, p, s, Sta, t, e> {
                 <summa, r, y classNa, m, e="curs, o, r-point, e, r te, x, t-sm te, x, t-gr, a, y-5, 0, 0 hov, e, r:te, x, t-gr, a, y-7, 0, 0 foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:ri, n, g-offs, e, t-2 round, e, d>
                   Err, o, r Detai, l, s (Developme, n, t)
                 </summa, r, y>
-                <d, i, v cla, s, s Na, m, e=mt-2 p-3 bg-gr, a, y-1, 0, 0 round, e, d te, x, t-xs fo, n, t-mo, n, o te, x, t-gr, a, y-8, 0, 0 overfl, o, w-au, t, o m, a, x-h-40" ro, l, e="l, o, g" ar, i, a-lab, e, l="Err, o, r detai, l, s">
+                <d, i, v cla, s, s Na, m, e=mt-2 p-3 bg-gr, a, y-1, 0, 0 round, e, d te, x, t-xs fo, n, t-mo, n, o te, x, t-gr, a, y-8, 0, 0 overflow-au, t, o m, a, x-h-40" ro, l, e="l, o, g" ar, i, a-lab, e, l="Err, o, r detai, l, s">
                   <d, i, v classNa, m, e="mb-2>
                     <stro, n, g>Err, o, r:</stro, n, g> {th, i, s.sta, t, e.error.message}
                   </d, i, v>

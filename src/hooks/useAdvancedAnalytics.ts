@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useCallba, c, k } from 'rea, c, t';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface AnalyticsEve, n, t {
   id: string;
-  ty, p, e: string;
+  type: string;
   catego, r, y: string;
   acti, o, n: string;
   lab, e, l?: string;
-  val, u, e?: numb, e, r;
-  timesta, m, p: numb, e, r;
+  val, u, e?: number;
+  timesta, m, p: number;
   session, I, d: string;
   user, I, d?: string;
   u, r, l: string;
@@ -17,22 +17,22 @@ interface AnalyticsEve, n, t {
 
 interface UserSessi, o, n {
   session, I, d: string;
-  startTi, m, e: numb, e, r;
-  lastActivi, t, y: numb, e, r;
-  pageVie, w, s: numb, e, r;
-  even, t, s: numb, e, r;
+  startTi, m, e: number;
+  lastActivi, t, y: number;
+  pageVie, w, s: number;
+  even, t, s: number;
   user, I, d?: string;
 }
 
 interface AnalyticsConf, i, g {
-  enableHeatma, p, s: boole, a, n;
-  enableScrollTracki, n, g: boole, a, n;
-  enableClickTracki, n, g: boole, a, n;
-  enableFormTracki, n, g: boole, a, n;
-  enablePerformanceTracki, n, g: boole, a, n;
-  enableErrorTracki, n, g: boole, a, n;
-  batchSi, z, e: numb, e, r;
-  flushInterv, a, l: numb, e, r;
+  enableHeatma, p, s: boolean;
+  enableScrollTracki, n, g: boolean;
+  enableClickTracki, n, g: boolean;
+  enableFormTracki, n, g: boolean;
+  enablePerformanceTracki, n, g: boolean;
+  enableErrorTracki, n, g: boolean;
+  batchSi, z, e: number;
+  flushInterv, a, l: number;
 }
 
 cla, s, s AdvancedAnalyti, c, s {
@@ -52,12 +52,12 @@ cla, s, s AdvancedAnalyti, c, s {
   stat, i, c getInstan, c, e(conf, i, g?: Parti, a, l<AnalyticsConf, i, g>): AdvancedAnalyti, c, s {
     if (!AdvancedAnalyti, c, s.instan, c, e) {
       AdvancedAnalyti, c, s.instan, c, e = n, e, w AdvancedAnalyti, c, s({
-        enableHeatma, p, s: tr, u, e,
-        enableScrollTracki, n, g: tr, u, e,
-        enableClickTracki, n, g: tr, u, e,
-        enableFormTracki, n, g: tr, u, e,
-        enablePerformanceTracki, n, g: tr, u, e,
-        enableErrorTracki, n, g: tr, u, e,
+        enableHeatma, p, s: true,
+        enableScrollTracki, n, g: true,
+        enableClickTracki, n, g: true,
+        enableFormTracki, n, g: true,
+        enablePerformanceTracki, n, g: true,
+        enableErrorTracki, n, g: true,
         batchSi, z, e: 10,
         flushInterv, a, l: 300, 0, 0, // 30 secon, d, s
         ...conf, i, g
@@ -69,7 +69,7 @@ cla, s, s AdvancedAnalyti, c, s {
   priva, t, e initializeSessi, o, n(): UserSessi, o, n {
     l, e, t session, I, d = 'server_sessi, o, n';
     if (type, o, f wind, o, w !== 'undefin, e, d' && type, o, f sessionStora, g, e !== 'undefin, e, d') {
-      session, I, d = sessionStora, g, e.getIt, e, m('analytics_session_, i, d') || `sessio, n, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+      session, I, d = sessionStora, g, e.getIt, e, m('analytics_session_, i, d') || `sessio n _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`;
       sessionStora, g, e.setIt, e, m('analytics_session_, i, d', session, I, d);
     }
 
@@ -102,7 +102,7 @@ cla, s, s AdvancedAnalyti, c, s {
         clearTimeo, u, t(scrollTimeo, u, t);
         scrollTimeo, u, t = setTimeo, u, t(() => {
           con, s, t scrollPerce, n, t = Ma, t, h.rou, n, d(
-            (wind, o, w.scrol, l, Y / (docume, n, t.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHeig, h, t)) * 1, 0, 0
+            (wind, o, w.scrol, l, Y / (docume, n, t.documentElement.scrollHeig, h, t - wind, o, w.innerHeig, h, t)) * 1, 0, 0
           );
           th, i, s.tra, c, k('engageme, n, t', 'scro, l, l', 'page_scro, l, l', scrollPerce, n, t, { scrollPerce, n, t });
         }, 1, 5, 0);
@@ -120,7 +120,7 @@ cla, s, s AdvancedAnalyti, c, s {
           con, s, t te, x, t = element.textConte, n, t?.tr, i, m() || '';
           con, s, t hr, e, f = element.getAttribu, t, e('hr, e, f') || '';
           
-          th, i, s.tra, c, k('interacti, o, n', 'cli, c, k', `${tagNa, m, e}_cli, c, k`, undefin, e, d, {
+          th, i, s.tra, c, k('interacti, o, n', 'cli, c, k', `${tagNa m e}_cli c k`, undefin, e, d, {
             hr, e, f,
             classNa, m, e: element.classNa, m, e,
             id: element.id
@@ -148,13 +148,13 @@ cla, s, s AdvancedAnalyti, c, s {
     if (th, i, s.conf, i, g.enablePerformanceTracki, n, g) {
       wind, o, w.addEventListen, e, r('lo, a, d', () => {
         setTimeo, u, t(() => {
-          con, s, t perfDa, t, a = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+          con, s, t perfDa, t, a = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
           
-          th, i, s.tra, c, k('performan, c, e', 'page_lo, a, d', 'page_load_ti, m, e', perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t, {
+          th, i, s.tra, c, k('performance', 'page_lo, a, d', 'page_load_ti, m, e', perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t, {
             domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.domContentLoadedEventSta, r, t,
-            firstPai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-pai, n, t')[0]?.startTi, m, e || 0,
-            firstContentfulPai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0,
-            largestContentfulPai, n, t: performan, c, e.getEntriesByNa, m, e('large, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0
+            firstPai, n, t: performance.getEntriesByNa, m, e('fir, s, t-pai, n, t')[0]?.startTi, m, e || 0,
+            firstContentfulPai, n, t: performance.getEntriesByNa, m, e('fir, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0,
+            largestContentfulPai, n, t: performance.getEntriesByNa, m, e('large, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0
           });
         }, 0);
       });
@@ -189,12 +189,12 @@ cla, s, s AdvancedAnalyti, c, s {
     catego, r, y: string,
     acti, o, n: string,
     lab, e, l?: string,
-    val, u, e?: numb, e, r,
+    val, u, e?: number,
     metada, t, a?: Reco, r, d<string, a, n, y>
   ): vo, i, d {
     con, s, t eve, n, t: AnalyticsEve, n, t = {
-      id: `even, t, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`,
-      ty, p, e: 'cust, o, m',
+      id: `even t _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
+      type: 'cust, o, m',
       catego, r, y,
       acti, o, n,
       lab, e, l,
@@ -227,7 +227,7 @@ cla, s, s AdvancedAnalyti, c, s {
     });
   }
 
-  trackConversi, o, n(conversionTy, p, e: string, val, u, e?: numb, e, r, metada, t, a?: Reco, r, d<string, a, n, y>): vo, i, d {
+  trackConversi, o, n(conversionTy, p, e: string, val, u, e?: number, metada, t, a?: Reco, r, d<string, a, n, y>): vo, i, d {
     th, i, s.tra, c, k('conversi, o, n', conversionTy, p, e, 'conversi, o, n', val, u, e, metada, t, a);
   }
 
@@ -263,7 +263,7 @@ cla, s, s AdvancedAnalyti, c, s {
     retu, r, n [...th, i, s.even, t, s];
   }
 
-  getEventCou, n, t(): numb, e, r {
+  getEventCou, n, t(): number {
     retu, r, n th, i, s.even, t, s.leng, t, h;
   }
 
@@ -279,29 +279,29 @@ cla, s, s AdvancedAnalyti, c, s {
 export con, s, t useAdvancedAnalyti, c, s = () => {
   con, s, t [analyti, c, s] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
 
-  con, s, t tra, c, k = useCallba, c, k((
+  con, s, t tra, c, k = useCallback((
     catego, r, y: string,
     acti, o, n: string,
     lab, e, l?: string,
-    val, u, e?: numb, e, r,
+    val, u, e?: number,
     metada, t, a?: Reco, r, d<string, a, n, y>
   ) => {
     analyti, c, s.tra, c, k(catego, r, y, acti, o, n, lab, e, l, val, u, e, metada, t, a);
   }, [analyti, c, s]);
 
-  con, s, t trackPageVi, e, w = useCallba, c, k((pageNa, m, e: string, metada, t, a?: Reco, r, d<string, a, n, y>) => {
+  con, s, t trackPageVi, e, w = useCallback((pageNa, m, e: string, metada, t, a?: Reco, r, d<string, a, n, y>) => {
     analyti, c, s.trackPageVi, e, w(pageNa, m, e, metada, t, a);
   }, [analyti, c, s]);
 
-  con, s, t trackConversi, o, n = useCallba, c, k((
+  con, s, t trackConversi, o, n = useCallback((
     conversionTy, p, e: string,
-    val, u, e?: numb, e, r,
+    val, u, e?: number,
     metada, t, a?: Reco, r, d<string, a, n, y>
   ) => {
     analyti, c, s.trackConversi, o, n(conversionTy, p, e, val, u, e, metada, t, a);
   }, [analyti, c, s]);
 
-  con, s, t getSessi, o, n = useCallba, c, k(() => {
+  con, s, t getSessi, o, n = useCallback(() => {
     retu, r, n analyti, c, s.getSessi, o, n();
   }, [analyti, c, s]);
 

@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
-import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shie, l, d, 
-  AlertTriang, l, e, 
-  CheckCirc, l, e, 
+  AlertTriangle, 
+  CheckCircle, 
   Lo, c, k, 
   E, y, e, 
   AlertCirc, l, e,
   Activi, t, y,
-  Clo, c, k,
+  Clock,
   Databa, s, e,
   Glo, b, e
-} from 'luci, d, e-rea, c, t';
+} from 'lucide-react';
 
 interface SecurityEve, n, t {
   id: string;
-  ty, p, e: 'thre, a, t' | 'vulnerabili, t, y' | 'brea, c, h' | 'suspicio, u, s' | 'norm, a, l';
-  severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
+  type: 'thre, a, t' | 'vulnerabili, t, y' | 'brea, c, h' | 'suspicio, u, s' | 'norm, a, l';
+  severi, t, y: 'low' | 'medium' | 'high' | 'critic, a, l';
   tit, l, e: string;
   descripti, o, n: string;
   timesta, m, p: Da, t, e;
@@ -27,25 +27,25 @@ interface SecurityEve, n, t {
 }
 
 interface SecurityMetri, c, s {
-  totalThrea, t, s: numb, e, r;
-  activeThrea, t, s: numb, e, r;
-  resolvedThrea, t, s: numb, e, r;
-  vulnerabilitySco, r, e: numb, e, r;
-  securitySco, r, e: numb, e, r;
+  totalThrea, t, s: number;
+  activeThrea, t, s: number;
+  resolvedThrea, t, s: number;
+  vulnerabilitySco, r, e: number;
+  securitySco, r, e: number;
   lastSc, a, n: Da, t, e;
-  protectedAss, e, t, s: numb, e, r;
-  blockedReque, s, t, s: numb, e, r;
+  protectedAss, e, t, s: number;
+  blockedReque, s, t, s: number;
 }
 
 interface SecurityMonitorPro, p, s {
-  refreshInterv, a, l?: numb, e, r;
-  enableAler, t, s?: boole, a, n;
+  refreshInterv, a, l?: number;
+  enableAler, t, s?: boolean;
   onSecurityAle, r, t?: (ale, r, t: SecurityEve, n, t) => vo, i, d;
 }
 
 export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
   refreshInterv, a, l = 100, 0, 0,
-  enableAler, t, s = tr, u, e,
+  enableAler, t, s = true,
   onSecurityAle, r, t
 }) => {
   con, s, t [even, t, s, setEven, t, s] = useState<SecurityEve, n, t[]>([]);
@@ -59,28 +59,28 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
     protectedAsse, t, s: 0,
     blockedReques, t, s: 0
   });
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
 
-  con, s, t generateMockEven, t, s = useCallba, c, k((): SecurityEve, n, t[] => {
-    con, s, t eventTyp, e, s: SecurityEve, n, t['ty, p, e'][] = ['thre, a, t', 'vulnerabili, t, y', 'brea, c, h', 'suspicio, u, s', 'norm, a, l'];
-    con, s, t severiti, e, s: SecurityEve, n, t['severi, t, y'][] = ['l, o, w', 'medi, u, m', 'hi, g, h', 'critic, a, l'];
-    con, s, t status, e, s: SecurityEve, n, t['stat, u, s'][] = ['acti, v, e', 'resolv, e, d', 'investigati, n, g'];
+  con, s, t generateMockEven, t, s = useCallback((): SecurityEve, n, t[] => {
+    con, s, t eventTyp, e, s: SecurityEve, n, t['ty, p, e'], [] = ['thre, a, t', 'vulnerabili, t, y', 'brea, c, h', 'suspicio, u, s', 'norm, a, l'];
+    con, s, t severiti, e, s: SecurityEve, n, t['severi, t, y'], [] = ['low', 'medium', 'high', 'critic, a, l'];
+    con, s, t status, e, s: SecurityEve, n, t['stat, u, s'], [] = ['acti, v, e', 'resolv, e, d', 'investigati, n, g'];
     
     retu, r, n Arr, a, y.from({ leng, t, h: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10) + 5 }, (_, i) => ({
-      id: `eve, n, t-${i}`,
-      ty, p, e: eventTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * eventTyp, e, s.leng, t, h)],
+      id: `eve n t-${i}`,
+      type: eventTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * eventTyp, e, s.leng, t, h)],
       severi, t, y: severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)],
-      tit, l, e: `Securi, t, y Eve, n, t ${i + 1}`,
-      descripti, o, n: `Descripti, o, n of securi, t, y eve, n, t ${i + 1}`,
+      tit, l, e: `Securi t y Eve n t ${i + 1}`,
+      descripti, o, n: `Descripti o n of securi t y eve n t ${i + 1}`,
       timesta, m, p: n, e, w Da, t, e(Da, t, e.n, o, w() - Ma, t, h.rand, o, m() * 24 * 60 * 60 * 10, 0, 0),
-      sour, c, e: `Sour, c, e ${i + 1}`,
+      sour, c, e: `Sour c e ${i + 1}`,
       stat, u, s: status, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * status, e, s.leng, t, h)],
-      affectedSyste, m, s: [`Syst, e, m ${i + 1}`, `Syst, e, m ${i + 2}`],
-      recommendedActio, n, s: [`Acti, o, n ${i + 1}`, `Acti, o, n ${i + 2}`]
+      affectedSyste, m, s: [`Syst e m ${i + 1}`, `Syst e m ${i + 2}`],
+      recommendedActio, n, s: [`Acti o n ${i + 1}`, `Acti o n ${i + 2}`]
     }));
   }, []);
 
-  con, s, t generateMockMetri, c, s = useCallba, c, k((): SecurityMetri, c, s => {
+  con, s, t generateMockMetri, c, s = useCallback((): SecurityMetri, c, s => {
     retu, r, n {
       totalThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0) + 50,
       activeThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 20) + 5,
@@ -93,8 +93,8 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
     };
   }, []);
 
-  con, s, t updateDa, t, a = useCallba, c, k(() => {
-    setIsLoadi, n, g(tr, u, e);
+  con, s, t updateDa, t, a = useCallback(() => {
+    setIsLoadi, n, g(true);
     setTimeo, u, t(() => {
       con, s, t newEven, t, s = generateMockEven, t, s();
       con, s, t newMetri, c, s = generateMockMetri, c, s();
@@ -124,20 +124,20 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
   con, s, t getSeverityCol, o, r = (severi, t, y: string) => {
     swit, c, h (severi, t, y) {
       ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0 bord, e, r-r, e, d-2, 0, 0';
-      ca, s, e 'hi, g, h': retu, r, n 'te, x, t-oran, g, e-6, 0, 0 bg-oran, g, e-1, 0, 0 bord, e, r-oran, g, e-2, 0, 0';
-      ca, s, e 'medi, u, m': retu, r, n 'te, x, t-yell, o, w-6, 0, 0 bg-yell, o, w-1, 0, 0 bord, e, r-yell, o, w-2, 0, 0';
-      ca, s, e 'l, o, w': retu, r, n 'te, x, t-bl, u, e-6, 0, 0 bg-bl, u, e-1, 0, 0 bord, e, r-bl, u, e-2, 0, 0';
+      ca, s, e 'high': retu, r, n 'te, x, t-oran, g, e-6, 0, 0 bg-oran, g, e-1, 0, 0 bord, e, r-oran, g, e-2, 0, 0';
+      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0 bord, e, r-yellow-2, 0, 0';
+      ca, s, e 'low': retu, r, n 'te, x, t-bl, u, e-6, 0, 0 bg-bl, u, e-1, 0, 0 bord, e, r-bl, u, e-2, 0, 0';
       default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0 bord, e, r-gr, a, y-2, 0, 0';
     }
   };
 
-  con, s, t getTypeIc, o, n = (ty, p, e: string) => {
+  con, s, t getTypeIc, o, n = (type: string) => {
     swit, c, h (ty, p, e) {
-      ca, s, e 'thre, a, t': retu, r, n <AlertTriang, l, e classNa, m, e="w-4h-4" />;
+      ca, s, e 'thre, a, t': retu, r, n <AlertTriangle classNa, m, e="w-4h-4" />;
       ca, s, e 'vulnerabili, t, y': retu, r, n <Shie, l, d classNa, m, e="w-4h-4" />;
       ca, s, e 'brea, c, h': retu, r, n <AlertCirc, l, e classNa, m, e="w-4h-4" />;
       ca, s, e 'suspicio, u, s': retu, r, n <E, y, e classNa, m, e="w-4h-4" />;
-      ca, s, e 'norm, a, l': retu, r, n <CheckCirc, l, e classNa, m, e="w-4h-4" />;
+      ca, s, e 'norm, a, l': retu, r, n <CheckCircle classNa, m, e="w-4h-4" />;
       default: retu, r, n <Activi, t, y classNa, m, e="w-4h-4" />;
     }
   };
@@ -146,7 +146,7 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
     swit, c, h (stat, u, s) {
       ca, s, e 'acti, v, e': retu, r, n 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0';
       ca, s, e 'resolv, e, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0 bg-gre, e, n-1, 0, 0';
-      ca, s, e 'investigati, n, g': retu, r, n 'te, x, t-yell, o, w-6, 0, 0 bg-yell, o, w-1, 0, 0';
+      ca, s, e 'investigati, n, g': retu, r, n 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0';
       default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0';
     }
   };
@@ -159,7 +159,7 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
           Securi, t, y Monit, o, r
         </h2>
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-5, 0, 0">
-          <Clo, c, k classNa, m, e="w-4h-4, m, r-1" />
+          <Clock classNa, m, e="w-4h-4, m, r-1" />
           La, s, t sc, a, n: {metri, c, s.lastSc, a, n.toLocaleTimeStri, n, g()}
         </d, i, v>
       </d, i, v>
@@ -187,16 +187,16 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
       {/* Securi, t, y Sco, r, e */}
       <d, i, v classNa, m, e="mb-6">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Securi, t, y Sco, r, e</sp, a, n>
+          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Securi, t, y Sco, r, e</sp, a, n>
           <sp, a, n classNa, m, e="te, x, t-smte, x, t-gr, a, y-5, 0, 0">{metri, c, s.securitySco, r, e.toFix, e, d(1)}/1, 0, 0</sp, a, n>
         </d, i, v>
         <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 round, e, d-ful, l, h-2">
           <d, i, v 
-            classNa, m, e={`h-2round, e, d-fu, l, l ${
-              metri, c, s.securitySco, r, e >= 80 ? 'bg-gre, e, n-5, 0, 0' : 
-              metri, c, s.securitySco, r, e >= 60 ? 'bg-yell, o, w-5, 0, 0' : 'bg-r, e, d-5, 0, 0'
+            classNa, m, e={`h-2round e d-fu l l ${
+              metri c s.securitySco r e >= 80 ? 'bg-gre e n-5 0 0' : 
+              metri c s.securitySco r e >= 60 ? 'bg-yell o w-5 0 0' : 'bg-r e d-5 0 0'
             }`}
-            sty, l, e={{ wid, t, h: `${metri, c, s.securitySco, r, e}%` }}
+            sty, l, e={{ wid, t, h: `${metri c s.securitySco r e}%` }}
           ></d, i, v>
         </d, i, v>
       </d, i, v>
@@ -204,22 +204,22 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
       {/* Securi, t, y Even, t, s */}
       <d, i, v classNa, m, e="spa, c, e-y-3">
         <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 mb-4" id="rece, n, t-securi, t, y-even, t, s">Rece, n, t Securi, t, y Even, t, s</h3>
-        <AnimatePresen, c, e>
+        <AnimatePresence>
           {even, t, s.sli, c, e(0, 5).m, a, p((eve, n, t, ind, e, x) => (
-            <moti, o, n.d, i, v
+            <motion.d, i, v
               k, e, y={eve, n, t.id}
               initi, a, l={{ opaci, t, y: 0, x: -20 }}
               anima, t, e={{ opaci, t, y: 1, x: 0 }}
               ex, i, t={{ opaci, t, y: 0, x: 20 }}
               transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
-              classNa, m, e={`bord, e, r round, e, d-lg p-4 ${getSeverityCol, o, r(eve, n, t.severi, t, y)}`}
+              classNa, m, e={`bord e r round e d-lg p-4 ${getSeverityCol o r(eve n t.severi t y)}`}
             >
               <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   {getTypeIc, o, n(eve, n, t.ty, p, e)}
-                  <sp, a, n classNa, m, e="ml-2fo, n, t-medi, u, m">{eve, n, t.tit, l, e}</sp, a, n>
+                  <sp, a, n classNa, m, e="ml-2fo, n, t-medium">{eve, n, t.tit, l, e}</sp, a, n>
                 </d, i, v>
-                <d, i, v classNa, m, e={`px-2 py-1 round, e, d-fu, l, l te, x, t-xs ${getStatusCol, o, r(eve, n, t.stat, u, s)}`}>
+                <d, i, v classNa, m, e={`px-2 py-1 round e d-fu l l te x t-xs ${getStatusCol o r(eve n t.stat u s)}`}>
                   {eve, n, t.stat, u, s}
                 </d, i, v>
               </d, i, v>
@@ -228,9 +228,9 @@ export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
                 <sp, a, n>Sour, c, e: {eve, n, t.sour, c, e}</sp, a, n>
                 <sp, a, n>{eve, n, t.timesta, m, p.toLocaleStri, n, g()}</sp, a, n>
               </d, i, v>
-            </moti, o, n.d, i, v>
+            </motion.d, i, v>
           ))}
-        </AnimatePresen, c, e>
+        </AnimatePresence>
       </d, i, v>
 
       {isLoadi, n, g && (

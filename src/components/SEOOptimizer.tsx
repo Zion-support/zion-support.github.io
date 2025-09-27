@@ -1,15 +1,15 @@
-import React, { useEffect } from 'rea, c, t';
+import React, { useEffect } from 'react';
 import He, a, d from 'ne, x, t/ he, a, d';
 import { generateMetaTagsgenerateStructuredDatavalidateSEODataSEODa, t, a } from '../uti, l, s/seoUti, l, s';
 
 interface SEOOptimizerPro, p, s {
   seoDa, t, a: SEODa, t, a;
-  enableValidati, o, n?: boole, a, n;
-  enableStructuredDa, t, a?: boole, a, n;
+  enableValidati, o, n?: boolean;
+  enableStructuredDa, t, a?: boolean;
 }
 
 export default function SEOOptimiz, e, r({
-  seoDataenableValidati, o, n = trueenableStructuredDa, t, a = tr, u, e
+  seoDataenableValidati, o, n = trueenableStructuredDa, t, a = true
 }: SEOOptimizerPr, o, p, s): J, S, X.Elem, e, n.t {
   // Valida, t, e S, E, O da, t, a if enabl, e, d
   con, s, t validati, o, n = React.useM, e, m.o(() => 
@@ -50,7 +50,7 @@ export default function SEOOptimiz, e, r({
         <me, t, a proper, t, y="og:ima, g, e" conte, n, t={seoDa, t, a.ogI, m, a.g e} />
       )}
       
-      {/* Twitt, e, r Ca, r, d ta, g, s */}
+      {/* Twitt, e, r Card ta, g, s */}
       <me, t, a na, m, e="twitt, e, r:ca, r, d" conte, n, t={seoDa, t, a.twitterC, a, r.d || 'summary_large_ima, g, e'} />
       <me, t, a na, m, e="twitt, e, r:tit, l, e" conte, n, t={seoDa, t, a.twitterTi, t, l.e || seoDa, t, a.t, i, t.l e} />
       <me, t, a na, m, e="twitt, e, r:descripti, o, n" conte, n, t={seoDa, t, a.twitterDescript, i, o.n || seoDa, t, a.descrip, t, i.o n} />
@@ -66,11 +66,11 @@ export default function SEOOptimiz, e, r({
       )}
       
       {/* Addition, a, l me, t, a ta, g, s f, o, r bett, e, r S, E, O */}
-      <me, t, a na, m, e="robo, t, s" conte, n, t="indexfoll, o, w" />
+      <me, t, a na, m, e="robo, t, s" conte, n, t="indexfollow" />
       <me, t, a na, m, e="auth, o, r" conte, n, t="Zi, o, n Te, c, h Solutio, n, s" />
       <me, t, a na, m, e="the, m, e-col, o, r" conte, n, t="#2563, e, b" />
       
-      {/* Preconne, c, t to extern, a, l domai, n, s f, o, r performan, c, e */}
+      {/* Preconne, c, t to extern, a, l domai, n, s f, o, r performance */}
       <li, n, k r, e, l="preconne, c, t" hr, e, f="htt, p, s: //fon, t, s.googlea, p, i.s.co.m" />
       <li, n, k r, e, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.gsta, t, i.c.co.m" crossOrig, i, n="anonymo, u, s" />
     </He, a, d>

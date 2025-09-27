@@ -1,4 +1,4 @@
-import React, { createConte, x, t, useContextuseEffectuseState } from 'rea, c, t';
+import React, { createConte, x, t, useContextuseEffectuseState } from 'react';
 
 ty, p, e The, m, e = 'lig, h, t' | 'da, r, k' | 'syst, e, m';
 
@@ -62,7 +62,7 @@ export con, s, t ThemeProvid, e, r: React.FC<ThemeProviderPro, p, s> = ({
 
   useEffect(() => {
     // App, l, y the, m, e to docume, n, t
-    con, s, t ro, o, t = wind, o, w.docum, e, n.t.documentEleme, n, t;
+    con, s, t ro, o, t = wind, o, w.docum, e, n.t.documentElement;
     ro, o, t.classLi, s, t.remo, v, e('lig, h, t''da, r, k');
     ro, o, t.classLi, s, t.ad(actualTh, e, m, e);
 
@@ -126,7 +126,7 @@ export con, s, t ThemeTogg, l, e: React.FC<{ classNa, m, e?: string }> = ({ clas
   retu, r, n (
     <butt, o, n
       onCli, c, k={toggleThe, m, e}
-      classNa, m, e={`p-2 round, e, d-lg bg-gr, a, y-1, 0, 0 da, r, k: bg-gr, a, y-8, 0, 0 te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0 hov, e, r:bg-gr, a, y-2, 0, 0 da, r, k:ho, v, e, r:bg-gr, a, y-7, 0, 0 transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${classNa, m, e}`}      tit, l, e={getToolt, i, p()}      ar, i, a-lab, e, l={getToolt, i, p()}
+      classNa, m, e={`p-2 round e d-lg bg-gr a y-1 0 0 da r k: bg-gr a y-8 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-2 0 0 da r k:ho v e r:bg-gr a y-7 0 0 transiti o n-colo r s durati o n-2 0 0 ${classNa m e}`}      tit, l, e={getToolt, i, p()}      ar, i, a-lab, e, l={getToolt, i, p()}
     >
       {getIc, o, n()}
     </butt, o, n>

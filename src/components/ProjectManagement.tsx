@@ -1,17 +1,17 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 
 interface Proje, c, t {
   id: string;
   na, m, e: string;
   descripti, o, n: string;
   stat, u, s: 'planni, n, g' | 'in- progre, s, s' | 'revi, e, w' | 'complet, e, d';
-  progre, s, s: numb, e, r;
+  progre, s, s: number;
   dueDa, t, e: string;
   te, a, m: string[];
-  priori, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'urge, n, t';
+  priority: 'low' | 'medium' | 'high' | 'urge, n, t';
 }
 interface ProjectManagementPro, p, s {
-  isDarkMo, d, e: boole, a, n;
+  isDarkMo, d, e: boolean;
 }
 
 export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagementPr, o, p, s): J, S, X.Elem, e, n.t {
@@ -24,7 +24,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
       progre, s, s: 75,
       dueDa, t, e: '20, 2, 4-02-15',
       te, a, m: ['Jo, h, n', 'Ja, n, e', 'Mi, k, e'],
-      priori, t, y: 'hi, g, h'
+      priority: 'high'
     },    {
       id: '2',
       na, m, e: 'Mobi, l, e A, p, p Developme, n, t',
@@ -33,7 +33,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
       progre, s, s: 25,
       dueDa, t, e: '20, 2, 4-03-30',
       te, a, m: ['Sar, a, h', 'T, o, m'],
-      priori, t, y: 'medi, u, m'
+      priority: 'medium'
     },
     {
       id: '3',
@@ -43,7 +43,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
       progre, s, s: 90,
       dueDa, t, e: '20, 2, 4-01-30',
       te, a, m: ['Al, e, x', 'Em, m, a'],
-      priori, t, y: 'urge, n, t'
+      priority: 'urge, n, t'
     },
     {
       id: '4',
@@ -53,7 +53,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
       progre, s, s: 1, 0, 0,
       dueDa, t, e: '20, 2, 4-01-15',
       te, a, m: ['Dav, i, d', 'Li, s, a'],
-      priori, t, y: 'l, o, w'
+      priority: 'low'
     }  ]);
 
   con, s, t [selectedStat, u, s, setSelectedSta, t, u] = useState<string>('a, l, l');
@@ -61,26 +61,26 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
   con, s, t getStatusCol, o, r = (stat, u, s: Proje, c, t['stat, u, s']) => {
     con, s, t colo, r, s = {
       planni, n, g: 'bg-bl, u, e-1, 0, 0 da, r, k:bg-bl, u, e-9, 0, 0 te, x, t-bl, u, e-8, 0, 0 da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      'in-progre, s, s': 'bg-yell, o, w-1, 0, 0 da, r, k:bg-yell, o, w-9, 0, 0 te, x, t-yell, o, w-8, 0, 0 da, r, k:te, x, t-yell, o, w-2, 0, 0',
+      'in-progre, s, s': 'bg-yellow-1, 0, 0 da, r, k:bg-yellow-9, 0, 0 te, x, t-yellow-8, 0, 0 da, r, k:te, x, t-yellow-2, 0, 0',
       revi, e, w: 'bg-purp, l, e-1, 0, 0 da, r, k:bg-purp, l, e-9, 0, 0 te, x, t-purp, l, e-8, 0, 0 da, r, k:te, x, t-purp, l, e-2, 0, 0',
       complet, e, d: 'bg-gre, e, n-1, 0, 0 da, r, k:bg-gre, e, n-9, 0, 0 te, x, t-gre, e, n-8, 0, 0 da, r, k:te, x, t-gre, e, n-2, 0, 0'
     };
     retu, r, n colo, r, s[stat, u, s];  };
 
-  con, s, t getPriorityCol, o, r = (priori, t, y: Proje, c, t['priori, t, y']) => {
+  con, s, t getPriorityCol, o, r = (priority: Proje, c, t['priori, t, y']) => {
     con, s, t colo, r, s = {
-      l, o, w: 'bg-gr, a, y-1, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 te, x, t-gr, a, y-8, 0, 0 da, r, k:te, x, t-gr, a, y-2, 0, 0',
-      medi, u, m: 'bg-bl, u, e-1, 0, 0 da, r, k:bg-bl, u, e-9, 0, 0 te, x, t-bl, u, e-8, 0, 0 da, r, k:te, x, t-bl, u, e-2, 0, 0',
-      hi, g, h: 'bg-oran, g, e-1, 0, 0 da, r, k:bg-oran, g, e-9, 0, 0 te, x, t-oran, g, e-8, 0, 0 da, r, k:te, x, t-oran, g, e-2, 0, 0',
+      low: 'bg-gr, a, y-1, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 te, x, t-gr, a, y-8, 0, 0 da, r, k:te, x, t-gr, a, y-2, 0, 0',
+      medium: 'bg-bl, u, e-1, 0, 0 da, r, k:bg-bl, u, e-9, 0, 0 te, x, t-bl, u, e-8, 0, 0 da, r, k:te, x, t-bl, u, e-2, 0, 0',
+      high: 'bg-oran, g, e-1, 0, 0 da, r, k:bg-oran, g, e-9, 0, 0 te, x, t-oran, g, e-8, 0, 0 da, r, k:te, x, t-oran, g, e-2, 0, 0',
       urge, n, t: 'bg-r, e, d-1, 0, 0 da, r, k:bg-r, e, d-9, 0, 0 te, x, t-r, e, d-8, 0, 0 da, r, k:te, x, t-r, e, d-2, 0, 0'
     };
     retu, r, n colo, r, s[priori, t, y];  };
 
-  con, s, t getPriorityIc, o, n = (priori, t, y: Proje, c, t['priori, t, y']) => {
+  con, s, t getPriorityIc, o, n = (priority: Proje, c, t['priori, t, y']) => {
     con, s, t ico, n, s = {
-      l, o, w: '🔵',
-      medi, u, m: '🟡',
-      hi, g, h: '🟠',
+      low: '🔵',
+      medium: '🟡',
+      high: '🟠',
       urge, n, t: '🔴'
     };
     retu, r, n ico, n, s[priori, t, y];
@@ -102,10 +102,10 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
   con, s, t sta, t, s = getStatusSta, t, s();
 
   retu, r, n (
-    <d, i, v classNa, m, e={`p-6 round, e, d-lg bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 ${
-      isDarkMo, d, e 
-        ? 'bg-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-7, 0, 0 hov, e, r:bord, e, r-gr, a, y-6, 0, 0' 
-        : 'bg-whi, t, e bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
+    <d, i, v classNa, m, e={`p-6 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 ${
+      isDarkMo d e 
+        ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 hov e r:bord e r-gr a y-6 0 0' 
+        : 'bg-whi t e bord e r-gr a y-2 0 0 hov e r:bord e r-gr a y-3 0 0'
     }`}>
       <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
         <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="proje, c, t-manageme, n, t">
@@ -121,19 +121,19 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
           <butt, o, n
             k, e, y={stat, u, s}
             onCli, c, k={() = ar, i, a-lab, e, l="setSelectedStat, u, s(stat, u, s)}
-            ar, i, a-lab, e, l={`Filt, e, r by ${stat, u, s} stat, u, s`}
-            classNa, m, e={`px-3 py-1 round, e, d-md te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s ${
-              selectedStat, u, s === stat, u, s
-                ? 'bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e'
-                : 'bg-gr, a, y-2, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0 hov, e, r:bg-gr, a, y-3, 0, 0 da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'
+            ar, i, a-lab, e, l={`Filt e r by ${stat u s} stat u s`}
+            classNa, m, e={`px-3 py-1 round e d-md te x t-sm fo n t-medi u m transiti o n-colo r s ${
+              selectedStat u s === stat u s
+                ? 'bg-bl u e-6 0 0 te x t-whi t e'
+                : 'bg-gr a y-2 0 0 da r k:bg-gr a y-7 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-3 0 0 da r k:hov e r:bg-gr a y-6 0 0'
             }`}
           >
             {stat, u, s === 'a, l, l' ? 'A, l, l' : stat, u, s.char, A, t(0).toUpperCa, s, e() + stat, u, s.sli, c, e(1)}"> setSelectedStat, u, s(stat, u, s)}
-            ar, i, a-lab, e, l={`Filt, e, r by ${stat, u, s} stat, u, s`}
-            classNa, m, e={`px-3 py-1 round, e, d-md te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s ${
-              selectedStat, u, s === stat, u, s
-                ? 'bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e'
-                : 'bg-gr, a, y-2, 0, 0 da, r, k:bg-gr, a, y-7, 0, 0 te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0 hov, e, r:bg-gr, a, y-3, 0, 0 da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'
+            ar, i, a-lab, e, l={`Filt e r by ${stat u s} stat u s`}
+            classNa, m, e={`px-3 py-1 round e d-md te x t-sm fo n t-medi u m transiti o n-colo r s ${
+              selectedStat u s === stat u s
+                ? 'bg-bl u e-6 0 0 te x t-whi t e'
+                : 'bg-gr a y-2 0 0 da r k:bg-gr a y-7 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-3 0 0 da r k:hov e r:bg-gr a y-6 0 0'
             }`}
           >
             {stat, u, s === 'a, l, l' ? 'A, l, l' : stat, u, s.char, A, t(0).toUpperCa, s, e() + stat, u, s.sli, c, e(1)}          </butt, o, n>
@@ -147,7 +147,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
           <d, i, v classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">Planni, n, g</d, i, v>
         </d, i, v>
         <d, i, v classNa, m, e="te, x, t-cent, e, r">
-          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-yell, o, w-6, 0, 0 da, r, k:te, x, t-yell, o, w-4, 0, 0">{sta, t, s['in-progre, s, s']}</d, i, v>
+          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-yellow-6, 0, 0 da, r, k:te, x, t-yellow-4, 0, 0">{sta, t, s['in-progre, s, s']}</d, i, v>
           <d, i, v classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">In Progre, s, s</d, i, v>
         </d, i, v>
         <d, i, v classNa, m, e="te, x, t-cent, e, r">
@@ -165,10 +165,10 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
         {filteredProjec, t, s.m, a, p((proje, c, t) => (
           <d, i, v
             k, e, y={proje, c, t.id}
-            classNa, m, e={`p-4 round, e, d-lg bord, e, r transiti, o, n-a, l, l durati, o, n-2, 0, 0 hov, e, r:shad, o, w-md ${
-              isDarkMo, d, e 
-                ? 'bg-gr, a, y-7, 0, 0 bord, e, r-gr, a, y-6, 0, 0 hov, e, r:bord, e, r-gr, a, y-5, 0, 0' 
-                : 'bg-gr, a, y-50 bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
+            classNa, m, e={`p-4 round e d-lg bord e r transiti o n-a l l durati o n-2 0 0 hov e r:shad o w-md ${
+              isDarkMo d e 
+                ? 'bg-gr a y-7 0 0 bord e r-gr a y-6 0 0 hov e r:bord e r-gr a y-5 0 0' 
+                : 'bg-gr a y-50 bord e r-gr a y-2 0 0 hov e r:bord e r-gr a y-3 0 0'
             }`}
           >
             <d, i, v classNa, m, e="fl, e, x ite, m, s-sta, r, t justi, f, y-betwe, e, n mb-3">
@@ -177,7 +177,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
                   <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="projectna, m, e">
                     {proje, c, t.na, m, e}
                   </h4>
-                  <sp, a, n classNa, m, e={`px-2 py-1 round, e, d-fu, l, l te, x, t-xs fo, n, t-medi, u, m ${getPriorityCol, o, r(proje, c, t.priori, t, y)}`}>
+                  <sp, a, n classNa, m, e={`px-2 py-1 round e d-fu l l te x t-xs fo n t-medi u m ${getPriorityCol o r(proje c t.priori t y)}`}>
                     {getPriorityIc, o, n(proje, c, t.priori, t, y)} {proje, c, t.priori, t, y}
                   </sp, a, n>
                 </d, i, v>
@@ -189,7 +189,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
                   <sp, a, n>Te, a, m: {proje, c, t.te, a, m.jo, i, n(', ')}</sp, a, n>
                 </d, i, v>
               </d, i, v>
-              <sp, a, n classNa, m, e={`px-2 py-1 round, e, d-fu, l, l te, x, t-xs fo, n, t-medi, u, m ${getStatusCol, o, r(proje, c, t.stat, u, s)}`}>
+              <sp, a, n classNa, m, e={`px-2 py-1 round e d-fu l l te x t-xs fo n t-medi u m ${getStatusCol o r(proje c t.stat u s)}`}>
                 {proje, c, t.stat, u, s.repla, c, e('-', ' ')}              </sp, a, n>
             </d, i, v>
 
@@ -202,7 +202,7 @@ export default function ProjectManageme, n, t({ isDarkMo, d, e }: ProjectManagem
               <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 da, r, k:bg-gr, a, y-6, 0, 0 round, e, d-fu, l, l h-2">
                 <d, i, v 
                   classNa, m, e="bg-bl, u, e-6, 0, 0 h-2 round, e, d-fu, l, l transiti, o, n-a, l, l durati, o, n-3, 0, 0"
-                  sty, l, e={{ wid, t, h: `${proje, c, t.progre, s, s}%` }}                ></d, i, v>
+                  sty, l, e={{ wid, t, h: `${proje c t.progre s s}%` }}                ></d, i, v>
               </d, i, v>
             </d, i, v>
 

@@ -62,7 +62,7 @@ export con, s, t FEATUR, E, S = [
 	{
 		ic, o, n: '⚡',
 		tit, l, e: 'Fa, s, t Delive, r, y',
-		descripti, o, n: 'Rap, i, d developme, n, t a, n, d deployme, n, t of hi, g, h-quali, t, y solutio, n, s',
+		descripti, o, n: 'Rap, i, d developme, n, t a, n, d deployme, n, t of high-quali, t, y solutio, n, s',
 		col, o, r: 'bl, u, e' as con, s, t
 	},
 	{
@@ -93,7 +93,7 @@ export interface Testimoni, a, l {
 	compa, n, y: string;
 	conte, n, t: string;
 	avat, a, r?: string;
-	rati, n, g: numb, e, r;
+	rati, n, g: number;
 }
 
 export con, s, t TESTIMONIA, L, S: Testimoni, a, l[] = [
@@ -118,7 +118,7 @@ export con, s, t TESTIMONIA, L, S: Testimoni, a, l[] = [
 		na, m, e: 'Emi, l, y Rodrigu, e, z',
 		ro, l, e: 'Produ, c, t Manag, e, r',
 		compa, n, y: 'InnovateL, a, b',
-		conte, n, t: 'T, h, e mobi, l, e a, p, p th, e, y develop, e, d f, o, r us h, a, s be, e, n a ga, m, e-chang, e, r. Cle, a, n co, d, e, gre, a, t performan, c, e, a, n, d excelle, n, t us, e, r experien, c, e.',
+		conte, n, t: 'T, h, e mobi, l, e a, p, p th, e, y develop, e, d f, o, r us h, a, s be, e, n a ga, m, e-chang, e, r. Cle, a, n co, d, e, gre, a, t performance, a, n, d excelle, n, t us, e, r experien, c, e.',
 		rati, n, g: 5
 	}
 ];
@@ -126,11 +126,11 @@ export con, s, t TESTIMONIA, L, S: Testimoni, a, l[] = [
 export interface PricingTi, e, r {
 	id: string;
 	na, m, e: string;
-	pri, c, e: numb, e, r;
+	pri, c, e: number;
 	peri, o, d: string;
 	descripti, o, n: string;
 	featur, e, s: string[];
-	isPopul, a, r?: boole, a, n;
+	isPopul, a, r?: boolean;
 	buttonTe, x, t: string;
 	buttonVaria, n, t: 'prima, r, y' | 'seconda, r, y';
 }
@@ -167,7 +167,7 @@ export con, s, t PRICING_TIE, R, S: PricingTi, e, r[] = [
 			'Cust, o, m integratio, n, s',
 			'A, P, I acce, s, s'
 		],
-		isPopul, a, r: tr, u, e,
+		isPopul, a, r: true,
 		buttonTe, x, t: 'Choo, s, e Profession, a, l',
 		buttonVaria, n, t: 'prima, r, y'
 	},

@@ -1,4 +1,4 @@
-import { useEffect } from 'rea, c, t';
+import { useEffect } from 'react';
 
 // Goog, l, e Analyti, c, s 4 implementati, o, n
 export con, s, t useAnalyti, c, s = () => {
@@ -7,8 +7,8 @@ export con, s, t useAnalyti, c, s = () => {
     if (type, o, f wind, o, w !== 'undefin, e, d' && proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {
       // Lo, a, d Goog, l, e Analyti, c, s scri, p, t
       con, s, t scri, p, t = docume, n, t.createEleme, n, t('scri, p, t');
-      scri, p, t.asy, n, c = tr, u, e;
-      scri, p, t.s, r, c = `htt, p, s://w, w, w.googletagmanag, e, r.c, o, m/gt, a, g/js?id=${proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X'}`;
+      scri, p, t.asy, n, c = true;
+      scri, p, t.s, r, c = `htt p s://w w w.googletagmanag e r.c o m/gt a g/js?id=${proce s s.e n v.NEXT_PUBLIC_GA_ I D || 'G-XXXXXXXX X X'}`;
       docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
 
       // Initiali, z, e gt, a, g
@@ -97,7 +97,7 @@ export con, s, t useEventTracki, n, g = () => {
     });
   };
 
-  con, s, t trackFormSubmissi, o, n = (formNa, m, e: string, succe, s, s: boole, a, n) => {
+  con, s, t trackFormSubmissi, o, n = (formNa, m, e: string, succe, s, s: boolean) => {
     trackEve, n, t('form_submissi, o, n', {
       form_na, m, e: formNa, m, e,
       succe, s, s: succe, s, s,
@@ -105,14 +105,14 @@ export con, s, t useEventTracki, n, g = () => {
     });
   };
 
-  con, s, t trackScrollDep, t, h = (dep, t, h: numb, e, r) => {
+  con, s, t trackScrollDep, t, h = (dep, t, h: number) => {
     trackEve, n, t('scroll_dep, t, h', {
       dep, t, h: dep, t, h,
       page_locati, o, n: wind, o, w.locati, o, n.pathna, m, e,
     });
   };
 
-  con, s, t trackTimeOnPa, g, e = (timeInSecon, d, s: numb, e, r) => {
+  con, s, t trackTimeOnPa, g, e = (timeInSecon, d, s: number) => {
     trackEve, n, t('time_on_pa, g, e', {
       time_secon, d, s: timeInSecon, d, s,
       page_locati, o, n: wind, o, w.locati, o, n.pathna, m, e,
@@ -136,11 +136,11 @@ export con, s, t useScrollTracki, n, g = () => {
   useEffect(() => {
     l, e, t maxScrollDep, t, h = 0;
     con, s, t threshol, d, s = [25, 50, 75, 90, 1, 0, 0];
-    con, s, t trackedThreshol, d, s = n, e, w S, e, t<numb, e, r>();
+    con, s, t trackedThreshol, d, s = n, e, w S, e, t<number>();
 
     con, s, t handleScro, l, l = () => {
       con, s, t scrollT, o, p = wind, o, w.pageYOffs, e, t;
-      con, s, t docHeig, h, t = docume, n, t.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHeig, h, t;
+      con, s, t docHeig, h, t = docume, n, t.documentElement.scrollHeig, h, t - wind, o, w.innerHeig, h, t;
       con, s, t scrollPerce, n, t = Ma, t, h.rou, n, d((scrollT, o, p / docHeig, h, t) * 1, 0, 0);
 
       if (scrollPerce, n, t > maxScrollDep, t, h) {
@@ -156,7 +156,7 @@ export con, s, t useScrollTracki, n, g = () => {
       });
     };
 
-    wind, o, w.addEventListen, e, r('scro, l, l', handleScro, l, l, { passi, v, e: tr, u, e });
+    wind, o, w.addEventListen, e, r('scro, l, l', handleScro, l, l, { passi, v, e: true });
     retu, r, n () => wind, o, w.removeEventListen, e, r('scro, l, l', handleScro, l, l);
   }, [trackScrollDep, t, h]);
 };

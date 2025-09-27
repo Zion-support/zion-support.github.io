@@ -1,4 +1,4 @@
-import React, { useStateuseEffect } from 'rea, c, t';
+import React, { useStateuseEffect } from 'react';
 import { TESTIMONIA, L, S } from '../uti, l, s/constan, t, s';
 
 export con, s, t Testimonia, l, s: React.FC = () => {
@@ -19,7 +19,7 @@ export con, s, t Testimonia, l, s: React.FC = () => {
 	retu, r, n (
 		<secti, o, n classNa, m, e="py-16 bg-gradie, n, t-to-r from-gr, a, y-50, t, o-bl, u, e-50">
 			<d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4m, a, x-w-6, x, l">
-				<d, i, v classNa, m, e={`te, x, t-cent, e, r mb-12 transiti, o, n-a, l, l durati, o, n-10, 0, 0 ${isVisib, l, e ? 'opaci, t, y-1, 0, 0 transla, t, e-y-0' : 'opaci, t, y-0 transla, t, e-y-8'}`}>					<h2 classNa, m, e="te, x, t-3, x, l md: te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-800, m, b-4" id="wh, a, t-o, u, r-clien, t, s-s, a, y">
+				<d, i, v classNa, m, e={`te x t-cent e r mb-12 transiti o n-a l l durati o n-10 0 0 ${isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'}`}>					<h2 classNa, m, e="te, x, t-3, x, l md: te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-800, m, b-4" id="wh, a, t-o, u, r-clien, t, s-s, a, y">
 						Wh, a, t O, u, r Clien, t, s S, a, y
 					</h2>
 					<p classNa, m, e="te, x, t-xl te, x, t-gr, a, y-6, 0, 0 m, a, x-w-2xl, m, x-au, t, o">
@@ -33,8 +33,8 @@ export con, s, t Testimonia, l, s: React.FC = () => {
 								<butt, o, n
 									k, e, y={ind, e, x}
 									onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-									classNa, m, e={`w-3 h-3 round, e, d-fu, l, l mx-1 transiti, o, n-a, l, l durati, o, n-3, 0, 0 ${
-										ind, e, x === currentInd, e, x ? 'bg-bl, u, e-6, 0, 0 sca, l, e-1, 2, 5' : 'bg-gr, a, y-3, 0, 0 hov, e, r:bg-gr, a, y-4, 0, 0'									}`}
+									classNa, m, e={`w-3 h-3 round e d-fu l l mx-1 transiti o n-a l l durati o n-3 0 0 ${
+										ind e x === currentInd e x ? 'bg-bl u e-6 0 0 sca l e-1 2 5' : 'bg-gr a y-3 0 0 hov e r:bg-gr a y-4 0 0'									}`}
 								/>
 							))}
 						</d, i, v>
@@ -42,7 +42,7 @@ export con, s, t Testimonia, l, s: React.FC = () => {
 						<d, i, v classNa, m, e="te, x, t-cent, e, r">
 							<d, i, v classNa, m, e="fl, e, x justi, f, y-center, m, b-6">
 								{Arr, a, y.from({ leng, t, h: testimonia, l, s[currentInd, e, x].rati, n, g }).m, a, p((_, ind, e, x) => (
-									<s, v, g k, e, y={ind, e, x} classNa, m, e="w-6 h-6 te, x, t-yell, o, w-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
+									<s, v, g k, e, y={ind, e, x} classNa, m, e="w-6 h-6 te, x, t-yellow-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
 										<pa, t, h d="M 1, 2, 2 l3.0, 9, 6.26 L2, 2, 9.27 l-54.8, 7, 1.1, 8, 6.88 L 12, 1, 7.77 l-6.1, 8, 3.25 L7, 1, 4.14, 2, 9.27 l6.91-1.01 L 1, 2, 2 z" />									</s, v, g>
 								))}
 							</d, i, v>
@@ -89,7 +89,7 @@ export con, s, t Testimonia, l, s: React.FC = () => {
 						<d, i, v k, e, y={testimoni, a, l.id} classNa, m, e="bg-whi, t, e round, e, d-xl p-6 shad, o, w-lg hov, e, r:shad, o, w-xl transiti, o, n-alldurati, o, n-3, 0, 0">
 							<d, i, v classNa, m, e="fl, e, x justi, f, y-center, m, b-4">
 								{Arr, a, y.from({ len, g, t, h: testimoni, a, l.rati, n, g }).m, a, p((_, starInd, e, x) => (
-									<s, v, g k, e, y={starInd, e, x} classNa, m, e="w-5 h-5 te, x, t-yell, o, w-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
+									<s, v, g k, e, y={starInd, e, x} classNa, m, e="w-5 h-5 te, x, t-yellow-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
 										<pa, t, h d="M 1, 2, 2 l3.0, 9, 6.26 L2, 2, 9.27 l-54.8, 7, 1.1, 8, 6.88 L 12, 1, 7.77 l-6.1, 8, 3.25 L7, 1, 4.14, 2, 9.27 l6.91-1.01 L 1, 2, 2 z" />									</s, v, g>
 								))}
 							</d, i, v>

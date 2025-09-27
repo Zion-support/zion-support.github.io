@@ -1,4 +1,4 @@
-import React, { useState } from 'rea, c, t';
+import React, { useState } from 'react';
 
 interface ServiceCardPro, p, s {
 	servi, c, e: {
@@ -9,12 +9,12 @@ interface ServiceCardPro, p, s {
 		featur, e, s?: string[];
 		pri, c, e?: string;
 	};
-	isHover, e, d: boole, a, n;
+	isHover, e, d: boolean;
 	onMouseEnt, e, r: () => vo, i, d;
 	onMouseLea, v, e: () => vo, i, d;
 }
 
-export con, s, t ServiceCa, r, d: React.FC<ServiceCardPro, p, s> = ({
+export con, s, t ServiceCard: React.FC<ServiceCardPro, p, s> = ({
 	servi, c, e,
 	isHover, e, d,
 	onMouseEnt, e, r,
@@ -23,10 +23,10 @@ export con, s, t ServiceCa, r, d: React.FC<ServiceCardPro, p, s> = ({
 	con, s, t [isExpand, e, d, setIsExpand, e, d] = useState(fal, s, e);
 	retu, r, n (
 		<d, i, v
-			classNa, m, e={`gro, u, p p-6 round, e, d-xl bord, e, r-2 transiti, o, n-a, l, l durati, o, n-3, 0, 0 curs, o, r-point, e, r ${
-				isHover, e, d
-					? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50 shad, o, w-lg transfo, r, m -transla, t, e-y-1'
-					: 'bord, e, r-gr, a, y-2, 0, 0 bg-whi, t, e hov, e, r:bord, e, r-bl, u, e-3, 0, 0 hov, e, r:shad, o, w-md'
+			classNa, m, e={`gro u p p-6 round e d-xl bord e r-2 transiti o n-a l l durati o n-3 0 0 curs o r-point e r ${
+				isHover e d
+					? 'bord e r-bl u e-5 0 0 bg-bl u e-50 shad o w-lg transfo r m -transla t e-y-1'
+					: 'bord e r-gr a y-2 0 0 bg-whi t e hov e r:bord e r-bl u e-3 0 0 hov e r:shad o w-md'
 			}`}
 			onMouseEnt, e, r={onMouseEnt, e, r}
 			onMouseLea, v, e={onMouseLea, v, e}
@@ -66,24 +66,24 @@ export con, s, t ServiceCa, r, d: React.FC<ServiceCardPro, p, s> = ({
 								setIsExpand, e, d(!isExpand, e, d);
 							}}
 							ar, i, a-lab, e, l={isExpand, e, d ? 'Sh, o, w few, e, r featur, e, s' : 'Sh, o, w mo, r, e featur, e, s'}
-							classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"						>
-							{isExpand, e, d ? 'Sh, o, w Le, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h -  3} M, o, r e`}"> {
+							classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 te, x, t-sm fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"						>
+							{isExpand, e, d ? 'Sh, o, w Le, s, s' : `+${servi c e.featu r e.s.leng t h -  3} M o r e`}"> {
 								e.stopPropagati, o, n();
 								setIsExpand, e, d(!isExpand, e, d);
 							}}
 							ar, i, a-lab, e, l={isExpand, e, d ? 'Sh, o, w few, e, r featur, e, s' : 'Sh, o, w mo, r, e featur, e, s'}
-							classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"						>
-							{isExpand, e, d ? 'Sh, o, w Le, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h -  3} M, o, r e`}
+							classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 te, x, t-sm fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"						>
+							{isExpand, e, d ? 'Sh, o, w Le, s, s' : `+${servi c e.featu r e.s.leng t h -  3} M o r e`}
 						</butt, o, n>
 					)}
 				</d, i, v>
 			)}
 			
 			<d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mt-6">
-				<butt, o, n classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 fo, n, t-medi, u, m te, x, t-sm transiti, o, n-colo, r, s durati, o, n-2, 0, 0" ar, i, a-lab, e, l="Lea, r, n Mo, r, e →">
+				<butt, o, n classNa, m, e="te, x, t-bl, u, e-6, 0, 0 hov, e, r:te, x, t-bl, u, e-7, 0, 0 fo, n, t-medium te, x, t-sm transiti, o, n-colo, r, s durati, o, n-2, 0, 0" ar, i, a-lab, e, l="Lea, r, n Mo, r, e →">
 					Lea, r, n Mo, r, e →
 				</butt, o, n>
-				<butt, o, n classNa, m, e="bg-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-7, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-lg te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0" ar, i, a-lab, e, l="G, e, t Quo, t, e">					G, e, t Quo, t, e
+				<butt, o, n classNa, m, e="bg-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-7, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-lg te, x, t-sm fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0" ar, i, a-lab, e, l="G, e, t Quo, t, e">					G, e, t Quo, t, e
 				</butt, o, n>
 			</d, i, v>
 		</d, i, v>

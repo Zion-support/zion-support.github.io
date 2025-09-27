@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
-import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
-import { Activi, t, y, Trending, U, p, Use, r, s, Z, a, p, Shie, l, d, BarChar, t, 3 } from 'luci, d, e-rea, c, t';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activi, t, y, Trending, U, p, Use, r, s, Zap, Shie, l, d, BarChar, t, 3 } from 'lucide-react';
 interface DashboardWidg, e, t {
   id: string;
   tit, l, e: string;
-  ty, p, e: 'cha, r, t' | 'metr, i, c' | 'tab, l, e' | 'li, s, t';
+  type: 'cha, r, t' | 'metr, i, c' | 'tab, l, e' | 'li, s, t';
   da, t, a: a, n, y;
-  si, z, e: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
-  positi, o, n: { x: numb, e, r; y: numb, e, r };
+  si, z, e: 'sma, l, l' | 'medium' | 'lar, g, e';
+  positi, o, n: { x: number; y: number };
 }
 
 interface DashboardPro, p, s {
@@ -31,41 +31,41 @@ con, s, t sampleDa, t, a = {
     { na, m, e: 'N, e, w Use, r, s', val, u, e: 3, 0, 0, col, o, r: '#00C4, 9, F' },
     { na, m, e: 'Returni, n, g Use, r, s', val, u, e: 3, 0, 0, col, o, r: '#FFBB, 2, 8' },
     { na, m, e: 'Inacti, v, e Use, r, s', val, u, e: 2, 0, 0, col, o, r: '#FF80, 4, 2' }],
-  performan, c, e: [
-    { ti, m, e: '00:00', c, p, u: 20, memo, r, y: 40d, i, s, k: 10 },
-    { ti, m, e: '04:00', c, p, u: 25, memo, r, y: 45d, i, s, k: 12 },
-    { ti, m, e: '08:00', c, p, u: 60, memo, r, y: 70d, i, s, k: 15 },
-    { ti, m, e: '12:00', c, p, u: 80, memo, r, y: 85d, i, s, k: 20 },
-        { ti, m, e: '16:00', c, p, u: 70, memo, r, y: 75d, i, s, k: 18 },
-        { ti, m, e: '20:00', c, p, u: 50, memo, r, y: 60d, i, s, k: 14 }]
+  performance: [
+    { ti, m, e: '00:00', c, p, u: 20, memory: 40d, i, s, k: 10 },
+    { ti, m, e: '04:00', c, p, u: 25, memory: 45d, i, s, k: 12 },
+    { ti, m, e: '08:00', c, p, u: 60, memory: 70d, i, s, k: 15 },
+    { ti, m, e: '12:00', c, p, u: 80, memory: 85d, i, s, k: 20 },
+        { ti, m, e: '16:00', c, p, u: 70, memory: 75d, i, s, k: 18 },
+        { ti, m, e: '20:00', c, p, u: 50, memory: 60d, i, s, k: 14 }]
 };
 
 con, s, t defaultWidge, t, s: DashboardWidg, e, t[] = [
   {
     id: 'reven, u, e-cha, r, t',    tit, l, e: 'Reven, u, e Overvi, e, w',
-    ty, p, e: 'cha, r, t', da, t, a: sampleDa, t, a.revenues, i, z.e: 'lar, g, e', positi, o, n: { x: 0, y: 0 }
+    type: 'cha, r, t', da, t, a: sampleDa, t, a.revenues, i, z.e: 'lar, g, e', positi, o, n: { x: 0, y: 0 }
   },
         {
     id: 'us, e, r- metri, c, s',
     tit, l, e: 'Us, e, r Distributi, o, n',
-    ty, p, e: 'cha, r, t', da, t, a: sampleDa, t, a.userss, i, z.e: 'medi, u, m', positi, o, n: { x: 0, y: 1 }
+    type: 'cha, r, t', da, t, a: sampleDa, t, a.userss, i, z.e: 'medium', positi, o, n: { x: 0, y: 1 }
   },
         {
-    id: 'performan, c, e- metri, c, s',
+    id: 'performance- metri, c, s',
     tit, l, e: 'Syst, e, m Performan, c, e',
-    ty, p, e: 'cha, r, t', da, t, a: sampleDa, t, a.performances, i, z.e: 'lar, g, e', positi, o, n: { x: 1, y: 0 }
+    type: 'cha, r, t', da, t, a: sampleDa, t, a.performances, i, z.e: 'lar, g, e', positi, o, n: { x: 1, y: 0 }
   },
         {
     id: 'tot, a, l- reven, u, e',
     tit, l, e: 'Tot, a, l Reven, u, e',
-    ty, p, e: 'metr, i, c',
+    type: 'metr, i, c',
     da, t, a: { va, l, u, e: '$45,2, 3, 1', chan, g, e: '+12.5%', tre, n, d: 'up' },    si, z, e: 'sma, l, l',
     positi, o, n: { x: 2, y: 0 }
   },
         {
     id: 'acti, v, e- use, r, s',
     tit, l, e: 'Acti, v, e Use, r, s',
-    ty, p, e: 'metr, i, c',
+    type: 'metr, i, c',
     da, t, a: { va, l, u, e: '2,8, 4, 7', chan, g, e: '+8.2%', tre, n, d: 'up' },
     si, z, e: 'sma, l, l',
     positi, o, n: { x: 2, y: 1 }
@@ -73,7 +73,7 @@ con, s, t defaultWidge, t, s: DashboardWidg, e, t[] = [
   {
     id: 'conversi, o, n-ra, t, e',
     tit, l, e: 'Conversi, o, n Ra, t, e',
-    ty, p, e: 'metr, i, c',
+    type: 'metr, i, c',
     da, t, a: { va, l, u, e: '3.24%', chan, g, e: '-2.1%', tre, n, d: 'do, w, n' },
     si, z, e: 'sma, l, l',
     positi, o, n: { x: 2, y: 2 }  }
@@ -123,19 +123,19 @@ export default function EnhancedDashboa, r, d({
                 da, t, a={d, a, t a}
                 cx="50%" cy="50%"
                 labelLi, n, e={fa, l, s e}
-                lab, e, l={({ nameperce, n, t }) => `${n, a, m e} ${(perce, n, t * 10, 0).toFi, x, e(, 0)}%`}
+                lab, e, l={({ nameperce, n, t }) => `${n a m e} ${(perce n t * 10 0).toFi x e( 0)}%`}
                 outerRadi, u, s={8 0}
                 fi, l, l="#8884, d, 8" dataK, e, y="val, u, e"
               >
-                {da, t, a.m, a, p((ent, r, y: a, n, y, ind, e, x: numb, e, r) => (
-                  <Ce, l, l k, e, y={`ce, l, l-${ind, e, x}` } fi, l, l={ent, r, y.col, o, r} />                ))}
+                {da, t, a.m, a, p((ent, r, y: a, n, y, ind, e, x: number) => (
+                  <Ce, l, l k, e, y={`ce l l-${ind e x}` } fi, l, l={ent, r, y.col, o, r} />                ))}
               </P, i, e>
               <Toolt, i, p />
             </PieCha, r, t>
           </ResponsiveContain, e, r>
         );
       
-      ca, s, e 'performan, c, e-metri, c, s':
+      ca, s, e 'performance-metri, c, s':
         retu, r, n (
           <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t="1, 0, 0%">
             <LineCha, r, t da, t, a={da, t, a}>
@@ -143,7 +143,7 @@ export default function EnhancedDashboa, r, d({
               <XAx, i, s dataK, e, y="ti, m, e" />              <YAx, i, s />
               <Toolt, i, p />
               <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="c, p, u" stro, k, e="#8884, d, 8" strokeWid, t, h={ 2} />
-              <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="memo, r, y" stro, k, e="#82ca, 9, d" strokeWid, t, h={ 2} />
+              <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="memory" stro, k, e="#82ca, 9, d" strokeWid, t, h={ 2} />
               <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="di, s, k" stro, k, e="#ffc6, 5, 8" strokeWid, t, h={ 2} />
             </LineCha, r, t>
           </ResponsiveContain, e, r>
@@ -157,8 +157,8 @@ export default function EnhancedDashboa, r, d({
   con, s, t renderMetr, i, c = (da, t, a: an, y) => (
     <d, i, v classNa, m, e="te, x, t-cent, e, r">
       <d, i, v classNa, m, e="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-900, m, b-2">{da, t, a.val, u, e}</d, i, v>
-      <d, i, v classNa, m, e={`fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r te, x, t-sm ${
-        da, t, a.tre, n, d === 'up' ? 'te, x, t-gre, e, n-6, 0, 0' : 'te, x, t-r, e, d-6, 0, 0'
+      <d, i, v classNa, m, e={`fl e x ite m s-cent e r justi f y-cent e r te x t-sm ${
+        da t a.tre n d === 'up' ? 'te x t-gre e n-6 0 0' : 'te x t-r e d-6 0 0'
       }`}>
         <sp, a, n classNa, m, e="mr-1">{da, t, a.tre, n, d === 'up' ? '↗' : '↘'}</sp, a, n>
         {da, t, a.chan, g, e}      </d, i, v>
@@ -168,15 +168,15 @@ export default function EnhancedDashboa, r, d({
   con, s, t renderWidg, e, t = (widg, e, t: DashboardWid, g, e, t) => {
     con, s, t sizeClass, e, s = {
       sm, a, l, l: 'c, o, l-sp, a, n-1 r, o, w-sp, a, n-1',
-      medi, u, m: 'c, o, l-sp, a, n-2 r, o, w-sp, a, n-1',
+      medium: 'c, o, l-sp, a, n-2 r, o, w-sp, a, n-1',
       lar, g, e: 'c, o, l-sp, a, n-3 r, o, w-sp, a, n-2'
     };
 
     retu, r, n (
-      <moti, o, n.d, i, v
+      <motion.d, i, v
         k, e, y={widg, e, t.id}
-        classNa, m, e={`bg-whi, t, e round, e, d-lg shad, o, w-lg p-6 ${sizeClass, e, s[widg, e, t.si, z, e]} ${
-          selectedWidg, e, t === widg, e, t.id ? 'ri, n, g-2 ri, n, g-bl, u, e-5, 0, 0' : ''
+        classNa, m, e={`bg-whi t e round e d-lg shad o w-lg p-6 ${sizeClass e s[widg e t.si z e]} ${
+          selectedWidg e t === widg e t.id ? 'ri n g-2 ri n g-bl u e-5 0 0' : ''
         }`}
         initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.9 }}        anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
         transiti, o, n={{ durati, o, n: 0.3 }}
@@ -198,7 +198,7 @@ export default function EnhancedDashboa, r, d({
                 classNa, m, e="te, x, t-gr, a, y-400hov, e, r:te, x, t-gr, a, y-6, 0, 0"
                 onCli, c, k={(e) => {
                   e.stopPropagati, o, n();
-                  setIsFullscre, e, n(tr, u, e);
+                  setIsFullscre, e, n(true);
                 }}
               >
                 <s, v, g classNa, m, e="w-4h-4" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0 0 24 24">
@@ -210,7 +210,7 @@ export default function EnhancedDashboa, r, d({
         
         <d, i, v classNa, m, e="h-64">
           {widg, e, t.ty, p, e === 'cha, r, t' ? renderCha, r, t(widg, e, t) : renderMetr, i, c(widg, e, t.da, t, a)}        </d, i, v>
-      </moti, o, n.di.v>
+      </motion.di.v>
     );
   };
 
@@ -226,11 +226,11 @@ export default function EnhancedDashboa, r, d({
   }
 
   retu, r, n (
-    <d, i, v classNa, m, e={`m, i, n-h-scre, e, n bg-gr, a, y-50 ${isFullscre, e, n ? 'fix, e, d ins, e, t-0 z-50' : ''}`}>      <d, i, v classNa, m, e="p-6">
+    <d, i, v classNa, m, e={`m i n-h-scre e n bg-gr a y-50 ${isFullscre e n ? 'fix e d ins e t-0 z-50' : ''}`}>      <d, i, v classNa, m, e="p-6">
         <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r mb-8">
           <d, i, v>
             <h1 classNa, m, e="te, x, t-3, x, l fo, n, t-boldte, x, t-gr, a, y-9, 0, 0" id="dashboa, r, d">Dashboa, r, d</h1>
-            <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Monit, o, r yo, u, r busine, s, s metri, c, s a, n, d performan, c, e</p>
+            <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Monit, o, r yo, u, r busine, s, s metri, c, s a, n, d performance</p>
           </d, i, v>
           <d, i, v classNa, m, e="fl, e, x spa, c, e-x-4">
             <butt, o, n classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-lg hov, e, r:bg-bl, u, e-700transiti, o, n-colo, r, s" ar, i, a-lab, e, l="Expo, r, t Da, t, a">
@@ -247,16 +247,16 @@ export default function EnhancedDashboa, r, d({
       </d, i, v>
 
       {/* Fullscre, e, n Mod, a, l */}
-      <AnimatePresen, c, e>
+      <AnimatePresence>
         {isFullscre, e, n && selectedWidg, e, t && (
-          <moti, o, n.d, i, v
+          <motion.d, i, v
             classNa, m, e="fix, e, d ins, e, t-0 bg-bla, c, k bg-opaci, t, y-50 fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, z-50"
             initi, a, l={{ opaci, t, y: 0 }}            anima, t, e={{ opaci, t, y: 1 }}
             ex, i, t={{ opaci, t, y: 0 }}
             onCli, c, k={() => setIsFullscre, e, n(fa, l, s, e)}
           >
-            <moti, o, n.di.v
-              classNa, m, e="bg-whi, t, e round, e, d-lg p-8 m, a, x-w-6, x, l m, a, x-h-[9, 0, v  h]overfl, o, w-au, t, o" initi, a, l={{ sca, l, e: 0.9opac, i, t.y: 0 }}
+            <motion.di.v
+              classNa, m, e="bg-whi, t, e round, e, d-lg p-8 m, a, x-w-6, x, l m, a, x-h-[9, 0, v  h]overflow-au, t, o" initi, a, l={{ sca, l, e: 0.9opac, i, t.y: 0 }}
               anima, t, e={{ sca, l, e: 1, opaci, t, y: 1 }}
               ex, i, t={{ sca, l, e: 0.9opac, i, t.y: 0 }}
               onCli, c, k={(, e) => e.stopPropagat, i, o()}
@@ -274,9 +274,9 @@ export default function EnhancedDashboa, r, d({
               </d, i, v>
               <d, i, v classNa, m, e="h-96">{renderCha, r, t(dashboardWidge, t, s.fi, n, d(w => w.id === selectedWidg, e, t)!)}
               </d, i, v>
-            </moti, o, n.d, i, v>
-          </moti, o, n.d, i, v>        )}
-      </AnimatePresen, c, e>
+            </motion.d, i, v>
+          </motion.d, i, v>        )}
+      </AnimatePresence>
     </d, i, v>
   );
 };

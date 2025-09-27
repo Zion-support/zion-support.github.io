@@ -1,25 +1,25 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface TestResu, l, t { id: string;
   na, m, e: string;
   stat, u, s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d' | 'skipp, e, d';
-  durati, o, n?: numb, e, r;
+  durati, o, n?: number;
   error?: string;
   timest, a, m,
-    p: numb, e, r }
+    p: number }
 
 interface TestSui, t, e { id: string;
   na, m, e: string;
   tes, t, s: TestResu, l, t[];
   sta, t, u,
     s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d';
-  durati, o, n?: numb, e, r }
+  durati, o, n?: number }
 
-interface TestConf, i, g { timeo, u, t: numb, e, r;
-  retri, e, s: numb, e, r;
-  parall, e, l: boole, a, n;
+interface TestConf, i, g { timeo, u, t: number;
+  retri, e, s: number;
+  parall, e, l: boolean;
   b, a, i,
-    l: boole, a, n }
+    l: boolean }
 
 cla, s, s TestRunn, e, r { priva, t, e stat, i, c instan, c, e: TestRunn, e, r;
   priva, t, e suit, e, s: TestSui, t, e[] = [];
@@ -42,7 +42,7 @@ cla, s, s TestRunn, e, r { priva, t, e stat, i, c instan, c, e: TestRunn, e, r;
 
   addSui, t, e(na, m, e: string): TestSui, t, e {
     con, s, t su, i, t,    e: TestSui, t, e = {}
-      id: `suit, e, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`,
+      id: `suit e _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       na, m, e,
       tes, t, s: [],
       stat, u, s: 'pendi, n, g';
@@ -56,7 +56,7 @@ cla, s, s TestRunn, e, r { priva, t, e stat, i, c instan, c, e: TestRunn, e, r;
     if (!sui, t, e) retu, r, n;
 
     con, s, t t, e, s,    t: TestResu, l, t = {}
-      id: `tes, t, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`,
+      id: `tes t _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
       na, m, e,
       stat, u, s: 'pendi, n, g',
       timesta, m, p: Da, t, e.n, o, w();
@@ -117,7 +117,7 @@ cla, s, s TestRunn, e, r { priva, t, e stat, i, c instan, c, e: TestRunn, e, r;
 
   getSuit, e, s(): TestSui, t, e[] { retu, r, n [...th, i, s.suit, e, s] }
 
-  getResul, t, s(): { tot, a, l: numb, e, r; pass, e, d: numb, e, r; fail, e, d: numb, e, r; skip, p, e,    d: numb, e, r } { con, s, t allTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
+  getResul, t, s(): { tot, a, l: number; pass, e, d: number; fail, e, d: number; skip, p, e,    d: number } { con, s, t allTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
     retu, r, n {
       tot, a, l: allTes, t, s.leng, t, h,
       pass, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'pass, e, d').leng, t, h,
@@ -134,33 +134,33 @@ export con, s, t useTestRunn, e, r = () => { ;
   con, s, t [suit, e, s, setSuit, e, s] = useState<TestSui, t, e[]>([]);
   con, s, t [isRunni, n, g, setIsRunni, n, g] = useState(fal, s, e);
 
-  con, s, t addSui, t, e = useCallba, c, k((na, m, e: string) => {;
+  con, s, t addSui, t, e = useCallback((na, m, e: string) => {;
     con, s, t sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
     setSuit, e, s(testRunn, e, r.getSuit, e, s());
     retu, r, n sui, t, e }, [testRunn, e, r]);
 
-  con, s, t addTe, s, t = useCallba, c, k((suite, I, d: string, na, m, e: string, test, F, n: () => Promi, s, e<vo, i, d> | vo, i, d) => { ;
+  con, s, t addTe, s, t = useCallback((suite, I, d: string, na, m, e: string, test, F, n: () => Promi, s, e<vo, i, d> | vo, i, d) => { ;
     testRunn, e, r.addTe, s, t(suite, I, d, na, m, e, test, F, n);
     setSuit, e, s(testRunn, e, r.getSuit, e, s()) }, [testRunn, e, r]);
 
-  con, s, t runSui, t, e = useCallba, c, k(asy, n, c (suite, I, d: string) => { ;
-    setIsRunni, n, g(tr, u, e);
+  con, s, t runSui, t, e = useCallback(asy, n, c (suite, I, d: string) => { ;
+    setIsRunni, n, g(true);
     t, r, y {
       awa, i, t testRunn, e, r.runSui, t, e(suite, I, d);
       setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y { setIsRunni, n, g(fal, s, e) }
   }, [testRunn, e, r]);
 
-  con, s, t runAllSuit, e, s = useCallba, c, k(asy, n, c () => { ;
-    setIsRunni, n, g(tr, u, e);
+  con, s, t runAllSuit, e, s = useCallback(asy, n, c () => { ;
+    setIsRunni, n, g(true);
     t, r, y {
       awa, i, t testRunn, e, r.runAllSuit, e, s();
       setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y { setIsRunni, n, g(fal, s, e) }
   }, [testRunn, e, r]);
 
-  con, s, t getResul, t, s = useCallba, c, k(() => { ;
+  con, s, t getResul, t, s = useCallback(() => { ;
     retu, r, n testRunn, e, r.getResul, t, s() }, [testRunn, e, r]);
 
-  con, s, t cle, a, r = useCallba, c, k(() => { ;
+  con, s, t cle, a, r = useCallback(() => { ;
     testRunn, e, r.cle, a, r();
     setSuit, e, s([]) }, [testRunn, e, r]);
 
@@ -206,7 +206,7 @@ export con, s, t TestDashboa, r, d: React.FC = () => {;  con, s, t { suit, e, s,
       ca, s, e 'pass, e, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
       ca, s, e 'fail, e, d': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
       ca, s, e 'runni, n, g': retu, r, n 'te, x, t-bl, u, e-6, 0, 0';
-      ca, s, e 'skipp, e, d': retu, r, n 'te, x, t-yell, o, w-6, 0, 0';
+      ca, s, e 'skipp, e, d': retu, r, n 'te, x, t-yellow-6, 0, 0';
       defa, u, l,
     t: retu, r, n 'te, x, t-gr, a, y-6, 0, 0' }
   };
@@ -237,7 +237,7 @@ export con, s, t TestDashboa, r, d: React.FC = () => {;  con, s, t { suit, e, s,
       </butt, o, n>
 
       {showDashboa, r, d && (
-        <d, i, v classNa, m, e="fix, e, d bott, o, m-20 le, f, t-4 bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 p-4 round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-7, 0, 0 z-50 m, a, x-w-md m, a, x-h-96 overfl, o, w-y-au, t, o>
+        <d, i, v classNa, m, e="fix, e, d bott, o, m-20 le, f, t-4 bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 p-4 round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-7, 0, 0 z-50 m, a, x-w-md m, a, x-h-96 overflow-y-au, t, o>
           <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r mb-4">
             <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e id=te, s, t-dashboa, r, d">
               Te, s, t Dashboa, r, d
@@ -264,7 +264,7 @@ export con, s, t TestDashboa, r, d: React.FC = () => {;  con, s, t { suit, e, s,
             <d, i, v>Tot, a, l: {resul, t, s.tot, a, l}</d, i, v>
             <d, i, v cla, s, s Na, m, e=te, x, t-gre, e, n-6, 0, 0">Pass, e, d: {resul, t, s.pass, e, d}</d, i, v>
             <d, i, v classNa, m, e="te, x, t-r, e, d-6, 0, 0>Fail, e, d: {resul, t, s.fail, e, d}</d, i, v>
-            <d, i, v cla, s, s Na, m, e=te, x, t-yell, o, w-6, 0, 0">Skipp, e, d: {resul, t, s.skipp, e, d}</d, i, v>
+            <d, i, v cla, s, s Na, m, e=te, x, t-yellow-6, 0, 0">Skipp, e, d: {resul, t, s.skipp, e, d}</d, i, v>
           </d, i, v>
 
           {suit, e, s.m, a, p(sui, t, e => (

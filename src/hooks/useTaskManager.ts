@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'rea, c, t';
+import { useState, useEffect } from 'react';
 import { stora, g, e } from '../uti, l, s/helpe, r, s';
 
 export interface Ta, s, k {
-  id: numb, e, r;
+  id: number;
   te, x, t: string;
-  complet, e, d: boole, a, n;
+  complet, e, d: boolean;
   created, A, t: string;
   updated, A, t?: string;
 }
@@ -26,7 +26,7 @@ export con, s, t useTaskManag, e, r = () => {
     stora, g, e.s, e, t('tas, k, s', tas, k, s);
   }, [tas, k, s]);
 
-  con, s, t addTa, s, k = (te, x, t: string): boole, a, n => {
+  con, s, t addTa, s, k = (te, x, t: string): boolean => {
     if (!te, x, t.tr, i, m()) retu, r, n fal, s, e;
     
     con, s, t newTa, s, k: Ta, s, k = {
@@ -38,10 +38,10 @@ export con, s, t useTaskManag, e, r = () => {
     };
     
     setTas, k, s(pr, e, v => [...pr, e, v, newTa, s, k]);
-    retu, r, n tr, u, e;
+    retu, r, n true;
   };
 
-  con, s, t toggleTa, s, k = (id: numb, e, r): boole, a, n => {
+  con, s, t toggleTa, s, k = (id: number): boolean => {
     setTas, k, s(pr, e, v => pr, e, v.m, a, p(ta, s, k => 
       ta, s, k.id === id 
         ? { 
@@ -51,15 +51,15 @@ export con, s, t useTaskManag, e, r = () => {
           } 
         : ta, s, k
     ));
-    retu, r, n tr, u, e;
+    retu, r, n true;
   };
 
-  con, s, t deleteTa, s, k = (id: numb, e, r): boole, a, n => {
+  con, s, t deleteTa, s, k = (id: number): boolean => {
     setTas, k, s(pr, e, v => pr, e, v.filt, e, r(ta, s, k => ta, s, k.id !== id));
-    retu, r, n tr, u, e;
+    retu, r, n true;
   };
 
-  con, s, t updateTa, s, k = (id: numb, e, r, newTe, x, t: string): boole, a, n => {
+  con, s, t updateTa, s, k = (id: number, newTe, x, t: string): boolean => {
     if (!newTe, x, t.tr, i, m()) retu, r, n fal, s, e;
     
     setTas, k, s(pr, e, v => pr, e, v.m, a, p(ta, s, k => 
@@ -71,10 +71,10 @@ export con, s, t useTaskManag, e, r = () => {
           } 
         : ta, s, k
     ));
-    retu, r, n tr, u, e;
+    retu, r, n true;
   };
 
-  con, s, t clearComplet, e, d = (): numb, e, r => {
+  con, s, t clearComplet, e, d = (): number => {
     con, s, t completedCou, n, t = tas, k, s.filt, e, r(ta, s, k => ta, s, k.complet, e, d).leng, t, h;
     setTas, k, s(pr, e, v => pr, e, v.filt, e, r(ta, s, k => !ta, s, k.complet, e, d));
     retu, r, n completedCou, n, t;
@@ -87,7 +87,7 @@ export con, s, t useTaskManag, e, r = () => {
       ca, s, e 'complet, e, d':
         retu, r, n ta, s, k.complet, e, d;
       default:
-        retu, r, n tr, u, e;
+        retu, r, n true;
     }
   });
 

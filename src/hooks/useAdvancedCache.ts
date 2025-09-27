@@ -1,27 +1,27 @@
-import { useState, useEffect, useCallba, c, k } from 'rea, c, t';
+import { useState, useEffect, useCallback } from 'react';
 
 interface CacheIt, e, m<T> {
   da, t, a: T;
-  timesta, m, p: numb, e, r;
-  expires, A, t: numb, e, r;
+  timesta, m, p: number;
+  expires, A, t: number;
 }
 
 interface CacheOptio, n, s {
-  t, t, l?: numb, e, r; // Ti, m, e to li, v, e in millisecon, d, s
-  maxSi, z, e?: numb, e, r; // Maxim, u, m numb, e, r of ite, m, s in cac, h, e
+  t, t, l?: number; // Ti, m, e to li, v, e in millisecon, d, s
+  maxSi, z, e?: number; // Maxim, u, m number of ite, m, s in cac, h, e
 }
 
 cla, s, s AdvancedCac, h, e {
   priva, t, e cac, h, e = n, e, w M, a, p<string, CacheIt, e, m<a, n, y>>();
-  priva, t, e maxSi, z, e: numb, e, r;
-  priva, t, e defaultT, T, L: numb, e, r;
+  priva, t, e maxSi, z, e: number;
+  priva, t, e defaultT, T, L: number;
 
   construct, o, r(optio, n, s: CacheOptio, n, s = {}) {
     th, i, s.maxSi, z, e = optio, n, s.maxSi, z, e || 1, 0, 0;
     th, i, s.defaultT, T, L = optio, n, s.t, t, l || 5 * 60 * 10, 0, 0; // 5 minut, e, s default
   }
 
-  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l?: numb, e, r): vo, i, d {
+  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l?: number): vo, i, d {
     con, s, t n, o, w = Da, t, e.n, o, w();
     con, s, t expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
 
@@ -53,12 +53,12 @@ cla, s, s AdvancedCac, h, e {
     retu, r, n it, e, m.da, t, a;
   }
 
-  h, a, s(k, e, y: string): boole, a, n {
+  h, a, s(k, e, y: string): boolean {
     con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
     retu, r, n it, e, m ? Da, t, e.n, o, w() <= it, e, m.expires, A, t : fal, s, e;
   }
 
-  dele, t, e(k, e, y: string): boole, a, n {
+  dele, t, e(k, e, y: string): boolean {
     retu, r, n th, i, s.cac, h, e.dele, t, e(k, e, y);
   }
 
@@ -75,11 +75,11 @@ cla, s, s AdvancedCac, h, e {
     }
   }
 
-  si, z, e(): numb, e, r {
+  si, z, e(): number {
     retu, r, n th, i, s.cac, h, e.si, z, e;
   }
 
-  getSta, t, s(): { si, z, e: numb, e, r; hitRa, t, e: numb, e, r } {
+  getSta, t, s(): { si, z, e: number; hitRa, t, e: number } {
     retu, r, n {
       si, z, e: th, i, s.cac, h, e.si, z, e,
       hitRa, t, e: 0 // Th, i, s wou, l, d ne, e, d to be track, e, d separate, l, y
@@ -99,7 +99,7 @@ export con, s, t useCac, h, e = <T>(k, e, y: string, fetch, e, r: () => Promi, s
   con, s, t [loadi, n, g, setLoadi, n, g] = useState(fal, s, e);
   con, s, t [error, setErr, o, r] = useState<Err, o, r | nu, l, l>(nu, l, l);
 
-  con, s, t fetchDa, t, a = useCallba, c, k(asy, n, c () => {
+  con, s, t fetchDa, t, a = useCallback(asy, n, c () => {
     // Che, c, k cac, h, e fir, s, t
     con, s, t cachedDa, t, a = globalCac, h, e.g, e, t<T>(k, e, y);
     if (cachedDa, t, a) {
@@ -107,7 +107,7 @@ export con, s, t useCac, h, e = <T>(k, e, y: string, fetch, e, r: () => Promi, s
       retu, r, n;
     }
 
-    setLoadi, n, g(tr, u, e);
+    setLoadi, n, g(true);
     setErr, o, r(nu, l, l);
 
     t, r, y {
@@ -125,7 +125,7 @@ export con, s, t useCac, h, e = <T>(k, e, y: string, fetch, e, r: () => Promi, s
     fetchDa, t, a();
   }, [fetchDa, t, a]);
 
-  con, s, t refet, c, h = useCallba, c, k(() => {
+  con, s, t refet, c, h = useCallback(() => {
     globalCac, h, e.dele, t, e(k, e, y);
     fetchDa, t, a();
   }, [k, e, y, fetchDa, t, a]);
@@ -134,13 +134,13 @@ export con, s, t useCac, h, e = <T>(k, e, y: string, fetch, e, r: () => Promi, s
 };
 
 // Ho, o, k f, o, r A, P, I cal, l, s wi, t, h cachi, n, g
-export con, s, t useApiCac, h, e = <T>(u, r, l: string, optio, n, s?: RequestIn, i, t & { t, t, l?: numb, e, r }) => {
+export con, s, t useApiCac, h, e = <T>(u, r, l: string, optio, n, s?: RequestIn, i, t & { t, t, l?: number }) => {
   retu, r, n useCac, h, e(
-    `a, p, i:${u, r, l}`,
+    `a p i:${u r l}`,
     asy, n, c () => {
       con, s, t respon, s, e = awa, i, t fet, c, h(u, r, l, optio, n, s);
       if (!respon, s, e.ok) {
-        thr, o, w n, e, w Err, o, r(`HT, T, P error! stat, u, s: ${respon, s, e.stat, u, s}`);
+        thr, o, w n, e, w Err, o, r(`HT T P error! stat u s: ${respon s e.stat u s}`);
       }
       retu, r, n respon, s, e.js, o, n() as T;
     },

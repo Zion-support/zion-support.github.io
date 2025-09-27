@@ -1,9 +1,9 @@
 interface ImageOptimizationOptio, n, s {
-  wid, t, h?: numb, e, r;
-  heig, h, t?: numb, e, r;
-  quali, t, y?: numb, e, r;
+  wid, t, h?: number;
+  heig, h, t?: number;
+  quali, t, y?: number;
   form, a, t?: 'we, b, p' | 'av, i, f' | 'jp, e, g' | 'p, n, g';
-  bl, u, r?: boole, a, n;
+  bl, u, r?: boolean;
   placehold, e, r?: 'bl, u, r' | 'emp, t, y';
 }
 
@@ -32,7 +32,7 @@ export cla, s, s ImageOptimiz, e, r {
     } = optio, n, s;
 
     // Che, c, k cac, h, e fir, s, t
-    con, s, t cacheK, e, y = `${s, r, c}:${JS, O, N.stringi, f, y(optio, n, s)}`;
+    con, s, t cacheK, e, y = `${s r c}:${JS O N.stringi f y(optio n s)}`;
     if (th, i, s.cac, h, e.h, a, s(cacheK, e, y)) {
       retu, r, n th, i, s.cac, h, e.g, e, t(cacheK, e, y)!;
     }
@@ -46,7 +46,7 @@ export cla, s, s ImageOptimiz, e, r {
       para, m, s.s, e, t('f', form, a, t);
       if (bl, u, r) para, m, s.s, e, t('bl, u, r', '1');
 
-      con, s, t optimizedU, r, l = `/a, p, i/ima, g, e-optimizati, o, n?u, r, l=${encodeURICompone, n, t(s, r, c)}&${para, m, s.toStri, n, g()}`;
+      con, s, t optimizedU, r, l = `/a p i/ima g e-optimizati o n?u r l=${encodeURICompone n t(s r c)}&${para m s.toStri n g()}`;
       th, i, s.cac, h, e.s, e, t(cacheK, e, y, optimizedU, r, l);
       retu, r, n optimizedU, r, l;
     }
@@ -59,7 +59,7 @@ export cla, s, s ImageOptimiz, e, r {
     para, m, s.s, e, t('f', form, a, t);
     if (bl, u, r) para, m, s.s, e, t('bl, u, r', '1');
 
-    con, s, t optimizedU, r, l = `${s, r, c}?${para, m, s.toStri, n, g()}`;
+    con, s, t optimizedU, r, l = `${s r c}?${para m s.toStri n g()}`;
     th, i, s.cac, h, e.s, e, t(cacheK, e, y, optimizedU, r, l);
     retu, r, n optimizedU, r, l;
   }
@@ -67,18 +67,18 @@ export cla, s, s ImageOptimiz, e, r {
   // Genera, t, e responsi, v, e ima, g, e sourc, e, s
   generateResponsiveSourc, e, s(
     s, r, c: string,
-    siz, e, s: numb, e, r[],
+    siz, e, s: number[],
     optio, n, s: Om, i, t<ImageOptimizationOptio, n, s, 'wid, t, h' | 'heig, h, t'> = {}
-  ): { s, r, c: string; wid, t, h: numb, e, r; med, i, a?: string }[] {
+  ): { s, r, c: string; wid, t, h: number; med, i, a?: string }[] {
     retu, r, n siz, e, s.m, a, p((wid, t, h, ind, e, x) => ({
       s, r, c: th, i, s.generateOptimizedU, r, l(s, r, c, { ...optio, n, s, wid, t, h }),
       wid, t, h,
-      med, i, a: ind, e, x === 0 ? undefin, e, d : `(m, i, n-wid, t, h: ${siz, e, s[ind, e, x - 1]}px)`,
+      med, i, a: ind, e, x === 0 ? undefin, e, d : `(m i n-wid t h: ${siz e s[ind e x - 1]}px)`,
     }));
   }
 
   // Genera, t, e bl, u, r placehold, e, r
-  generateBlurPlacehold, e, r(wid, t, h: numb, e, r = 10, heig, h, t: numb, e, r = 10): string {
+  generateBlurPlacehold, e, r(wid, t, h: number = 10, heig, h, t: number = 10): string {
     con, s, t canv, a, s = docume, n, t.createEleme, n, t('canv, a, s');
     canv, a, s.wid, t, h = wid, t, h;
     canv, a, s.heig, h, t = heig, h, t;
@@ -110,7 +110,7 @@ export cla, s, s ImageOptimiz, e, r {
   setupLazyLoadi, n, g(select, o, r: string = 'i, m, g[da, t, a-s, r, c]'): vo, i, d {
     if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
 
-    con, s, t imag, e, s = docume, n, t.querySelectorA, l, l(select, o, r);
+    con, s, t imag, e, s = docume, n, t.querySelectorAll(select, o, r);
     con, s, t imageObserv, e, r = n, e, w IntersectionObserv, e, r((entri, e, s) => {
       entri, e, s.forEa, c, h(ent, r, y => {
         if (ent, r, y.isIntersecti, n, g) {
@@ -162,11 +162,11 @@ export con, s, t imageUti, l, s = {
 
   // Calcula, t, e optim, a, l ima, g, e dimensio, n, s
   calculateOptimalDimensio, n, s(
-    originalWid, t, h: numb, e, r,
-    originalHeig, h, t: numb, e, r,
-    maxWid, t, h: numb, e, r,
-    maxHeig, h, t: numb, e, r
-  ): { wid, t, h: numb, e, r; heig, h, t: numb, e, r } {
+    originalWid, t, h: number,
+    originalHeig, h, t: number,
+    maxWid, t, h: number,
+    maxHeig, h, t: number
+  ): { wid, t, h: number; heig, h, t: number } {
     con, s, t aspectRat, i, o = originalWid, t, h / originalHeig, h, t;
     
     l, e, t wid, t, h = maxWid, t, h;
@@ -191,6 +191,6 @@ export con, s, t imageUti, l, s = {
     );
     
     con, s, t baseA, l, t = wor, d, s.jo, i, n(' ');
-    retu, r, n conte, x, t ? `${baseA, l, t} - ${conte, x, t}` : baseA, l, t;
+    retu, r, n conte, x, t ? `${baseA l t} - ${conte x t}` : baseA, l, t;
   },
 };

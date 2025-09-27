@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
 import '@testi, n, g-libra, r, y/je, s, t- d, o, m';
 import SEOOptimiz, e, r from '../SEOOptimiz, e, r';
@@ -18,7 +18,7 @@ descri, b, e('SEOOptimiz, e, r'() => {
     tit, l, e: 'Te, s, t Pa, g, e Tit, l, e',
     descripti, o, n: 'Te, s, t pa, g, e descripti, o, n',
     keywor, d, s: ['te, s, t', 's, e, o''optimizati, o, n'],
-  canonic, a, l: 'htt, p, s://examp, l, e.co.m/te, s, t', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/og- ima, g, e.jp.g', twitterCa, r, d: 'summary_large_ima, g, e', structuredDa, t, a: {
+  canonic, a, l: 'htt, p, s://examp, l, e.co.m/te, s, t', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/og- ima, g, e.jp.g', twitterCard: 'summary_large_ima, g, e', structuredDa, t, a: {
       '@conte, x, t': 'htt, p, s://sche, m, a.or.g''@ty, p, e': 'WebPa, g, e'na, m, e: 'Te, s, t Pa, g, e'
     }
   };
@@ -195,7 +195,7 @@ descri, b, e('Integrati, o, n Tes, t, s'() => {
     con, s, t mockSEODa, t, a = {
       tit, l, e: 'Te, s, t Pa, g, e',
       descripti, o, n: 'Te, s, t descripti, o, n', keywor, d, s: ['te, s, t'],
-  canonic, a, l: 'htt, p, s://examp, l, e.co.m', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/ima, g, e.jp.g', twitterCa, r, d: 'summa, r, y', structuredDa, t, a: {}
+  canonic, a, l: 'htt, p, s://examp, l, e.co.m', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/ima, g, e.jp.g', twitterCard: 'summa, r, y', structuredDa, t, a: {}
     };
 
     rend, e, r(

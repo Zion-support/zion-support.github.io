@@ -1,38 +1,38 @@
-import React, { useEffect, useR, e, f, useCallba, c, k } from 'rea, c, t';
+import React, { useEffect, useR, e, f, useCallback } from 'react';
 
-interface PerformanceMetri, c, s {
-  loadTi, m, e: numb, e, r;
-  domContentLoad, e, d: numb, e, r;
-  firstPai, n, t: numb, e, r;
-  firstContentfulPai, n, t: numb, e, r;
-  largestContentfulPai, n, t?: numb, e, r;
-  firstInputDel, a, y?: numb, e, r;
-  cumulativeLayoutShi, f, t?: numb, e, r;
-  timeToInteracti, v, e?: numb, e, r;
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoad, e, d: number;
+  firstPai, n, t: number;
+  firstContentfulPai, n, t: number;
+  largestContentfulPai, n, t?: number;
+  firstInputDel, a, y?: number;
+  cumulativeLayoutShi, f, t?: number;
+  timeToInteracti, v, e?: number;
 }
 
 interface PerformanceTrackerPro, p, s {
-  onMetricsCollect, e, d?: (metri, c, s: PerformanceMetri, c, s) => vo, i, d;
-  enableConsoleLoggi, n, g?: boole, a, n;
-  enableAnalyti, c, s?: boole, a, n;
+  onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
+  enableConsoleLoggi, n, g?: boolean;
+  enableAnalyti, c, s?: boolean;
 }
 
 export default function PerformanceTrack, e, r({
   onMetricsCollect, e, d,
   enableConsoleLoggi, n, g = fal, s, e,
-  enableAnalyti, c, s = tr, u, e
+  enableAnalyti, c, s = true
 }: PerformanceTrackerPro, p, s): nu, l, l {
   con, s, t metricsCollect, e, d = useR, e, f(fal, s, e);
 
-  con, s, t collectMetri, c, s = useCallba, c, k(() => {
+  con, s, t collectMetri, c, s = useCallback(() => {
     if (metricsCollect, e, d.curre, n, t || type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
 
     t, r, y {
-      con, s, t navigati, o, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-      con, s, t paintEntri, e, s = performan, c, e.getEntriesByTy, p, e('pai, n, t');
+      con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+      con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
       
-      con, s, t metri, c, s: PerformanceMetri, c, s = {
-        loadTi, m, e: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
+      con, s, t metrics: PerformanceMetri, c, s = {
+        loadTime: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
         domContentLoad, e, d: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t,
         firstPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-pai, n, t')?.startTi, m, e || 0,
         firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0
@@ -87,30 +87,30 @@ export default function PerformanceTrack, e, r({
 
         // Ti, m, e to Interacti, v, e (T, T, I) approximati, o, n
         setTimeo, u, t(() => {
-          con, s, t longTas, k, s = performan, c, e.getEntriesByTy, p, e('longta, s, k');
+          con, s, t longTas, k, s = performance.getEntriesByTy, p, e('longta, s, k');
           con, s, t lastLongTa, s, k = longTas, k, s[longTas, k, s.leng, t, h - 1];
           metri, c, s.timeToInteracti, v, e = lastLongTa, s, k ? lastLongTa, s, k.startTi, m, e + lastLongTa, s, k.durati, o, n : metri, c, s.domContentLoad, e, d;
           
           // Finali, z, e metri, c, s collecti, o, n
-          metricsCollect, e, d.curre, n, t = tr, u, e;
+          metricsCollect, e, d.curre, n, t = true;
           
           if (enableConsoleLoggi, n, g) {
             conso, l, e.gro, u, p('🚀 Performan, c, e Metri, c, s');
-            conso, l, e.l, o, g('Lo, a, d Ti, m, e:', `${metri, c, s.loadTi, m, e.toFix, e, d(2)}ms`);
-            conso, l, e.l, o, g('D, O, M Conte, n, t Load, e, d:', `${metri, c, s.domContentLoad, e, d.toFix, e, d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Pai, n, t:', `${metri, c, s.firstPai, n, t.toFix, e, d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Contentf, u, l Pai, n, t:', `${metri, c, s.firstContentfulPai, n, t.toFix, e, d(2)}ms`);
+            conso, l, e.l, o, g('Lo, a, d Ti, m, e:', `${metri c s.loadTi m e.toFix e d(2)}ms`);
+            conso, l, e.l, o, g('D, O, M Conte, n, t Load, e, d:', `${metri c s.domContentLoad e d.toFix e d(2)}ms`);
+            conso, l, e.l, o, g('Fir, s, t Pai, n, t:', `${metri c s.firstPai n t.toFix e d(2)}ms`);
+            conso, l, e.l, o, g('Fir, s, t Contentf, u, l Pai, n, t:', `${metri c s.firstContentfulPai n t.toFix e d(2)}ms`);
             if (metri, c, s.largestContentfulPai, n, t) {
-              conso, l, e.l, o, g('Large, s, t Contentf, u, l Pai, n, t:', `${metri, c, s.largestContentfulPai, n, t.toFix, e, d(2)}ms`);
+              conso, l, e.l, o, g('Large, s, t Contentf, u, l Pai, n, t:', `${metri c s.largestContentfulPai n t.toFix e d(2)}ms`);
             }
             if (metri, c, s.firstInputDel, a, y) {
-              conso, l, e.l, o, g('Fir, s, t Inp, u, t Del, a, y:', `${metri, c, s.firstInputDel, a, y.toFix, e, d(2)}ms`);
+              conso, l, e.l, o, g('Fir, s, t Inp, u, t Del, a, y:', `${metri c s.firstInputDel a y.toFix e d(2)}ms`);
             }
             if (metri, c, s.cumulativeLayoutShi, f, t) {
               conso, l, e.l, o, g('Cumulati, v, e Layo, u, t Shi, f, t:', metri, c, s.cumulativeLayoutShi, f, t.toFix, e, d(4));
             }
             if (metri, c, s.timeToInteracti, v, e) {
-              conso, l, e.l, o, g('Ti, m, e to Interacti, v, e:', `${metri, c, s.timeToInteracti, v, e.toFix, e, d(2)}ms`);
+              conso, l, e.l, o, g('Ti, m, e to Interacti, v, e:', `${metri c s.timeToInteracti v e.toFix e d(2)}ms`);
             }
             conso, l, e.groupE, n, d();
           }
@@ -154,12 +154,12 @@ export default function PerformanceTrack, e, r({
     }
   }, [onMetricsCollect, e, d, enableConsoleLoggi, n, g, enableAnalyti, c, s]);
 
-  con, s, t sendWebVit, a, l = (na, m, e: string, val, u, e: numb, e, r) => {
+  con, s, t sendWebVit, a, l = (na, m, e: string, val, u, e: number) => {
     if (type, o, f wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
       wind, o, w.gt, a, g('eve, n, t', na, m, e, {
         event_catego, r, y: 'W, e, b Vita, l, s',
         val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S' ? val, u, e * 10, 0, 0 : val, u, e),
-        non_interacti, o, n: tr, u, e
+        non_interacti, o, n: true
       });
     }
   };
@@ -179,10 +179,10 @@ export default function PerformanceTrack, e, r({
   retu, r, n nu, l, l;
 }
 
-// Ho, o, k f, o, r usi, n, g performan, c, e metri, c, s in componen, t, s
+// Ho, o, k f, o, r usi, n, g performance metri, c, s in componen, t, s
 export function usePerformanceMetri, c, s() {
   con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = React.useState(tr, u, e);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = React.useState(true);
 
   React.useEffect(() => {
     con, s, t handleMetri, c, s = (collectedMetri, c, s: PerformanceMetri, c, s) => {
@@ -201,15 +201,15 @@ export function usePerformanceMetri, c, s() {
   retu, r, n { metri, c, s, isLoadi, n, g };
 }
 
-// Utili, t, y function to g, e, t performan, c, e gra, d, e
-export function getPerformanceGra, d, e(metri, c, s: PerformanceMetri, c, s): {
+// Utili, t, y function to g, e, t performance gra, d, e
+export function getPerformanceGra, d, e(metrics: PerformanceMetri, c, s): {
   gra, d, e: 'A' | 'B' | 'C' | 'D' | 'F';
-  sco, r, e: numb, e, r;
+  sco, r, e: number;
   recommendatio, n, s: string[];
   webVita, l, s: {
-    l, c, p: { va, l, u, e: numb, e, r; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    f, i, d: { va, l, u, e: numb, e, r; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    c, l, s: { va, l, u, e: numb, e, r; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
+    l, c, p: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
+    f, i, d: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
+    c, l, s: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
   };
 } {
   l, e, t sco, r, e = 1, 0, 0;
@@ -305,7 +305,7 @@ export function getPerformanceGra, d, e(metri, c, s: PerformanceMetri, c, s): {
   retu, r, n { gra, d, e, sco, r, e: Ma, t, h.m, a, x(0, sco, r, e), recommendatio, n, s, webVita, l, s };
 }
 
-// Enhanc, e, d performan, c, e monitori, n, g wi, t, h re, a, l-ti, m, e updat, e, s
+// Enhanc, e, d performance monitori, n, g wi, t, h re, a, l-ti, m, e updat, e, s
 export function useRealTimePerforman, c, e() {
   con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
   con, s, t [isMonitori, n, g, setIsMonitori, n, g] = React.useState(fal, s, e);
@@ -315,8 +315,8 @@ export function useRealTimePerforman, c, e() {
 
     con, s, t updateMetri, c, s = () => {
       t, r, y {
-        con, s, t navigati, o, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-        con, s, t paintEntri, e, s = performan, c, e.getEntriesByTy, p, e('pai, n, t');
+        con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+        con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
         
         con, s, t currentMetri, c, s: PerformanceMetri, c, s = {
           loadT, i, m, e: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
@@ -327,7 +327,7 @@ export function useRealTimePerforman, c, e() {
 
         setMetri, c, s(currentMetri, c, s);
       } cat, c, h (error) {
-        conso, l, e.wa, r, n('Re, a, l-ti, m, e performan, c, e monitori, n, g error:', error);
+        conso, l, e.wa, r, n('Re, a, l-ti, m, e performance monitori, n, g error:', error);
       }
     };
 
@@ -341,7 +341,7 @@ export function useRealTimePerforman, c, e() {
 
     t, r, y {
       observ, e, r.obser, v, e({ entryTyp, e, s: ['navigati, o, n', 'pai, n, t', 'large, s, t-contentf, u, l-pai, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'] });
-      setIsMonitori, n, g(tr, u, e);
+      setIsMonitori, n, g(true);
     } cat, c, h (e) {
       conso, l, e.wa, r, n('Performan, c, e observ, e, r n, o, t support, e, d');
     }

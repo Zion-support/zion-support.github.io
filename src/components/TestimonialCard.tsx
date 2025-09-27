@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 
 interface Testimoni, a, l {
   id: string;
@@ -7,22 +7,22 @@ interface Testimoni, a, l {
   compa, n, y: string;
   conte, n, t: string;
   avat, a, r?: string;
-  rati, n, g: numb, e, r;
+  rati, n, g: number;
 }
 
 interface TestimonialCardPro, p, s {
   testimoni, a, l: Testimoni, a, l;
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
 }
 
-export con, s, t TestimonialCa, r, d: React.FC<TestimonialCardPro, p, s> = ({ 
+export con, s, t TestimonialCard: React.FC<TestimonialCardPro, p, s> = ({ 
   testimonialisVisib, l, e 
 }) => {
   con, s, t renderSta, r, s = (rati, n, g: num, b, e, r) = > {
     retu, r, n Arr, a, y.f, r, o.m({ leng, t, h: 5 }(_, i) => (
       <s, v, g
         k, e, y={i}
-        classNa, m, e={`w-5 h-5 ${          i < rati, n, g ? 'te, x, t-yell, o, w-4, 0, 0' : 'te, x, t-gr, a, y-3, 0, 0'
+        classNa, m, e={`w-5 h-5 ${          i < rati n g ? 'te x t-yell o w-4 0 0' : 'te x t-gr a y-3 0 0'
         }`}
         fi, l, l="currentCol, o, r"
         viewB, o, x="0 0 20 20"
@@ -33,8 +33,8 @@ export con, s, t TestimonialCa, r, d: React.FC<TestimonialCardPro, p, s> = ({
 
   retu, r, n (
     <d, i, v 
-      classNa, m, e={`gro, u, p p-8 bg-whi, t, e round, e, d-2, x, l shad, o, w-lg hov, e, r:shad, o, w-2, x, l transiti, o, n-a, l, l durati, o, n-5, 0, 0 bord, e, r bord, e, r-gr, a, y-1, 0, 0 ho, v, e, r:bord, e, r-bl, u, e-2, 0, 0 hov, e, r-li, f, t ${
-        isVisib, l, e ? 'opaci, t, y-1, 0, 0 transla, t, e-y-0' : 'opaci, t, y-0 transla, t, e-y-8'
+      classNa, m, e={`gro u p p-8 bg-whi t e round e d-2 x l shad o w-lg hov e r:shad o w-2 x l transiti o n-a l l durati o n-5 0 0 bord e r bord e r-gr a y-1 0 0 ho v e r:bord e r-bl u e-2 0 0 hov e r-li f t ${
+        isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'
       }`}    >
       {/* Rati, n, g */}
       <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r mb-4">
@@ -54,7 +54,7 @@ export con, s, t TestimonialCa, r, d: React.FC<TestimonialCardPro, p, s> = ({
         <d, i, v>
           <d, i, v classNa, m, e="fo, n, t-semiboldte, x, t-gr, a, y-8, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>
           <d, i, v classNa, m, e="te, x, t-gr, a, y-600te, x, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>
-          <d, i, v classNa, m, e="te, x, t-bl, u, e-6, 0, 0 te, x, t-sm fo, n, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>        </d, i, v>
+          <d, i, v classNa, m, e="te, x, t-bl, u, e-6, 0, 0 te, x, t-sm fo, n, t-medium">{testimoni, a, l.compa, n, y}</d, i, v>        </d, i, v>
       </d, i, v>
 
       {/* Quo, t, e decorati, o, n */}

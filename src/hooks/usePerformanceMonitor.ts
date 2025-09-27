@@ -1,31 +1,31 @@
-import { useEffect, useCallba, c, k, useR, e, f } from 'rea, c, t';
+import { useEffect, useCallback, useR, e, f } from 'react';
 
 // Exte, n, d PerformanceEnt, r, y f, o, r F, I, D
 interface PerformanceEventTimi, n, g exten, d, s PerformanceEnt, r, y {
-  processingSta, r, t: numb, e, r;
-  processingE, n, d: numb, e, r;
+  processingSta, r, t: number;
+  processingE, n, d: number;
   targ, e, t?: No, d, e;
 }
 
-interface PerformanceMetri, c, s {
-  loadTi, m, e: numb, e, r;
-  firstContentfulPai, n, t: numb, e, r;
-  largestContentfulPai, n, t: numb, e, r;
-  firstInputDel, a, y: numb, e, r;
-  cumulativeLayoutShi, f, t: numb, e, r;
-  memoryUsa, g, e?: numb, e, r;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPai, n, t: number;
+  largestContentfulPai, n, t: number;
+  firstInputDel, a, y: number;
+  cumulativeLayoutShi, f, t: number;
+  memoryUsa, g, e?: number;
 }
 
 export function usePerformanceMonit, o, r() {
   con, s, t metricsR, e, f = useR, e, f<PerformanceMetri, c, s>({
-    loadTi, m, e: 0,
+    loadTime: 0,
     firstContentfulPai, n, t: 0,
     largestContentfulPai, n, t: 0,
     firstInputDel, a, y: 0,
     cumulativeLayoutShi, f, t: 0,
   });
 
-  con, s, t reportMetri, c, s = useCallba, c, k((metri, c, s: PerformanceMetri, c, s) => {
+  con, s, t reportMetri, c, s = useCallback((metrics: PerformanceMetri, c, s) => {
     // Se, n, d metri, c, s to analyti, c, s servi, c, e
     if (type, o, f wind, o, w !== 'undefin, e, d' && 'gt, a, g' in wind, o, w) {
       (wind, o, w as a, n, y).gt, a, g('eve, n, t', 'performance_metri, c, s', {
@@ -44,11 +44,11 @@ export function usePerformanceMonit, o, r() {
     }
   }, []);
 
-  con, s, t measurePerforman, c, e = useCallba, c, k(() => {
+  con, s, t measurePerforman, c, e = useCallback(() => {
     if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
 
-    con, s, t navigati, o, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-    con, s, t paintEntri, e, s = performan, c, e.getEntriesByTy, p, e('pai, n, t');
+    con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+    con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
     
     con, s, t loadTi, m, e = navigati, o, n.loadEventE, n, d - navigati, o, n.loadEventSta, r, t;
     con, s, t firstContentfulPai, n, t = paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0;
@@ -84,9 +84,9 @@ export function usePerformanceMonit, o, r() {
     clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-shi, f, t'] });
 
     // Memo, r, y usa, g, e (if availab, l, e)
-    if ('memo, r, y' in performan, c, e) {
-      con, s, t memo, r, y = (performan, c, e as a, n, y).memo, r, y;
-      metricsR, e, f.curre, n, t.memoryUsa, g, e = memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4; // MB
+    if ('memory' in performance) {
+      con, s, t memory = (performance as a, n, y).memory;
+      metricsR, e, f.curre, n, t.memoryUsa, g, e = memory.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4; // MB
     }
 
     metricsR, e, f.curre, n, t.loadTi, m, e = loadTi, m, e;
@@ -110,7 +110,7 @@ export function usePerformanceMonit, o, r() {
   }, [measurePerforman, c, e]);
 
   retu, r, n {
-    metri, c, s: metricsR, e, f.curre, n, t,
+    metrics: metricsR, e, f.curre, n, t,
     reportMetri, c, s,
   };
 }

@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
-import { Shie, l, d, Lo, c, k, E, y, e, AlertTriang, l, e, CheckCirc, l, e, XCirc, l, e } from 'luci, d, e-rea, c, t';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Shie, l, d, Lo, c, k, E, y, e, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 interface SecurityMetri, c, s {
-  threatLev, e, l: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
-  activeThrea, t, s: numb, e, r;
-  blockedReques, t, s: numb, e, r;
-  securitySc, o, r, e: numb, e, r;
+  threatLev, e, l: 'low' | 'medium' | 'high' | 'critic, a, l';
+  activeThrea, t, s: number;
+  blockedReques, t, s: number;
+  securitySc, o, r, e: number;
   lastS, c, a, n: Da, t, e;
 }
 
@@ -15,7 +15,7 @@ interface SecurityEnhancementsPro, p, s {
 
 con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p, s> = ({ classNa, m, e = '' }) => {
   con, s, t [metri, c, s, setMetri, c, s] = useState<SecurityMetri, c, s>({
-    threatLev, e, l: 'l, o, w',
+    threatLev, e, l: 'low',
     activeThrea, t, s: 0,
     blockedReques, t, s: 0,
     securitySco, r, e: 95,
@@ -25,14 +25,14 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
   con, s, t [isScanni, n, g, setIsScanni, n, g] = useState(fal, s, e);
   con, s, t [securityAler, t, s, setSecurityAler, t, s] = useState<string[]>([]);
 
-  con, s, t performSecuritySc, a, n = useCallba, c, k(asy, n, c () => {
-    setIsScanni, n, g(tr, u, e);
+  con, s, t performSecuritySc, a, n = useCallback(asy, n, c () => {
+    setIsScanni, n, g(true);
     
     // Simula, t, e securi, t, y sc, a, n
     awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resol, v, e, 20, 0, 0));
     
     con, s, t newMetri, c, s: SecurityMetri, c, s = {
-      threatLe, v, e, l: Ma, t, h.rand, o, m() > 0.8 ? 'medi, u, m' : 'l, o, w',
+      threatLe, v, e, l: Ma, t, h.rand, o, m() > 0.8 ? 'medium' : 'low',
       activeThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5),
       blockedReques, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 50) + 10,
       securitySco, r, e: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10) + 90,
@@ -42,19 +42,19 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
     setMetri, c, s(newMetri, c, s);
     setIsScanni, n, g(fal, s, e);
     
-    if (newMetri, c, s.threatLev, e, l !== 'l, o, w') {
+    if (newMetri, c, s.threatLev, e, l !== 'low') {
       setSecurityAler, t, s(pr, e, v => [
         ...pr, e, v,
-        `Securi, t, y thre, a, t detect, e, d: ${newMetri, c, s.threatLev, e, l} lev, e, l`
+        `Securi t y thre a t detect e d: ${newMetri c s.threatLev e l} lev e l`
       ]);
     }
   }, []);
 
   con, s, t getThreatLevelCol, o, r = (lev, e, l: string) => {
     swit, c, h (lev, e, l) {
-      ca, s, e 'l, o, w': retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
-      ca, s, e 'medi, u, m': retu, r, n 'te, x, t-yell, o, w-5, 0, 0';
-      ca, s, e 'hi, g, h': retu, r, n 'te, x, t-oran, g, e-5, 0, 0';
+      ca, s, e 'low': retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
+      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-5, 0, 0';
+      ca, s, e 'high': retu, r, n 'te, x, t-oran, g, e-5, 0, 0';
       ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-5, 0, 0';
       default: retu, r, n 'te, x, t-gr, a, y-5, 0, 0';
     }
@@ -62,10 +62,10 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
 
   con, s, t getThreatLevelIc, o, n = (lev, e, l: string) => {
     swit, c, h (lev, e, l) {
-      ca, s, e 'l, o, w': retu, r, n <CheckCirc, l, e classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />;
-      ca, s, e 'medi, u, m': retu, r, n <AlertTriang, l, e classNa, m, e="w-5 h-5te, x, t-yell, o, w-5, 0, 0" />;
-      ca, s, e 'hi, g, h': retu, r, n <XCirc, l, e classNa, m, e="w-5 h-5te, x, t-oran, g, e-5, 0, 0" />;
-      ca, s, e 'critic, a, l': retu, r, n <XCirc, l, e classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />;
+      ca, s, e 'low': retu, r, n <CheckCircle classNa, m, e="w-5 h-5te, x, t-gre, e, n-5, 0, 0" />;
+      ca, s, e 'medium': retu, r, n <AlertTriangle classNa, m, e="w-5 h-5te, x, t-yellow-5, 0, 0" />;
+      ca, s, e 'high': retu, r, n <XCircle classNa, m, e="w-5 h-5te, x, t-oran, g, e-5, 0, 0" />;
+      ca, s, e 'critic, a, l': retu, r, n <XCircle classNa, m, e="w-5 h-5te, x, t-r, e, d-5, 0, 0" />;
       default: retu, r, n <Shie, l, d classNa, m, e="w-5 h-5te, x, t-gr, a, y-5, 0, 0" />;
     }
   };
@@ -77,7 +77,7 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
   }, [performSecuritySc, a, n]);
 
   retu, r, n (
-    <d, i, v classNa, m, e={`bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 round, e, d-lg shad, o, w-lg p-6 ${classNa, m, e}`}>
+    <d, i, v classNa, m, e={`bg-whi t e da r k:bg-gr a y-8 0 0 round e d-lg shad o w-lg p-6 ${classNa m e}`}>
       <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
           <Shie, l, d classNa, m, e="w-8 h-8te, x, t-bl, u, e-5, 0, 0" />
@@ -100,7 +100,7 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
           <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
             <d, i, v>
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Thre, a, t Lev, e, l</p>
-              <p classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getThreatLevelCol, o, r(metri, c, s.threatLev, e, l)}`}>
+              <p classNa, m, e={`te x t-2 x l fo n t-bo l d ${getThreatLevelCol o r(metri c s.threatLev e l)}`}>
                 {metri, c, s.threatLev, e, l.toUpperCa, s, e()}
               </p>
             </d, i, v>
@@ -124,7 +124,7 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
               <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">Acti, v, e Threa, t, s</p>
               <p classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-r, e, d-5, 0, 0">{metri, c, s.activeThrea, t, s}</p>
             </d, i, v>
-            <AlertTriang, l, e classNa, m, e="w-5 h-5 te, x, t-r, e, d-5, 0, 0" />
+            <AlertTriangle classNa, m, e="w-5 h-5 te, x, t-r, e, d-5, 0, 0" />
           </d, i, v>
         </d, i, v>
 
@@ -151,13 +151,13 @@ con, s, t AdvancedSecurityEnhancemen, t, s: React.FC<SecurityEnhancementsPro, p,
                 k, e, y={ind, e, x}
                 classNa, m, e="bg-r, e, d-50 da, r, k: bg-r, e, d-9, 0, 0/20 bord, e, r bord, e, r-r, e, d-2, 0, 0 d, a, r k:bord, e, r-r, e, d-8, 0, 0 round, e, d-lg p-3 fl, e, x ite, m, s-cent, e, r spa, c, e-x-3"
               >
-                <AlertTriang, l, e classNa, m, e="w-5 h-5 te, x, t-r, e, d-5, 0, 0 fl, e, x-shri, n, k-0" />
+                <AlertTriangle classNa, m, e="w-5 h-5 te, x, t-r, e, d-5, 0, 0 fl, e, x-shri, n, k-0" />
                 <p classNa, m, e="te, x, t-r, e, d-7, 0, 0 da, r, k:te, x, t-r, e, d-3, 0, 0">{ale, r, t}</p>
                 <butt, o, n
                   onCli, c, k={() => setSecurityAler, t, s(pr, e, v => pr, e, v.filt, e, r((_, i) => i !== ind, e, x))}
                   classNa, m, e="ml-au, t, o te, x, t-r, e, d-5, 0, 0 hov, e, r:te, x, t-r, e, d-7, 0, 0"
                 >
-                  <XCirc, l, e classNa, m, e="w-4h-4" />
+                  <XCircle classNa, m, e="w-4h-4" />
                 </butt, o, n>
               </d, i, v>
             ))}

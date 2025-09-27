@@ -6,20 +6,20 @@ interface SEOPro, p, s {
   canonic, a, l?: string;
   ogIma, g, e?: string;
   ogTy, p, e?: string;
-  twitterCa, r, d?: string;
+  twitterCard?: string;
   keywor, d, s?: string[];
   auth, o, r?: string;
   publishedTi, m, e?: string;
   modifiedTi, m, e?: string;
   secti, o, n?: string;
   ta, g, s?: string[];
-  noind, e, x?: boole, a, n;
-  nofoll, o, w?: boole, a, n;
+  noind, e, x?: boolean;
+  nofollow?: boolean;
 }
 
 export default function EnhancedS, E, O({
-  tit, l, e = 'Zi, o, n Te, c, h Solutio, n, s - AI-Power, e, d Busine, s, s Solutio, n, s'descripti, o, n = 'Leadi, n, g provid, e, r of AI- power, e, d busine, s, s solutionsclo, u, d infrastructurea, n, d digit, a, l transformati, o, n servic, e, s. Transfo, r, m yo, u, r busine, s, s wi, t, h cutti, n, g-ed, g, e technolo, g, y.'canonicalogIma, g, e = '/ og- ima, g, e.jp.g'ogTy, p, e = 'websi, t, e'twitterCa, r, d = 'summary_large_ima, g, e'keywor, d, s = ['AI solutio, n, s', 'clo, u, d infrastructu, r, e', 'digit, a, l transformati, o, n', 'busine, s, s automati, o, n''technolo, g, y consulti, n, g']auth, o, r = 'Zi, o, n Te, c, h Solutio, n, s'publishedTimemodifiedTimesectionta, g, s = []noind, e, x = falsenofoll, o, w = fa, l, s e}: SEOPro, p, s) {
-  con, s, t fullTit, l, e = tit, l, e.inclu, d, e('Zi, o, n Te, c, h Solutio, n, s') ? tit, l, e : `${ti, t, l e} | Zi, o, n Te, c, h Soluti, o, n s`;
+  tit, l, e = 'Zi, o, n Te, c, h Solutio, n, s - AI-Power, e, d Busine, s, s Solutio, n, s'descripti, o, n = 'Leadi, n, g provid, e, r of AI- power, e, d busine, s, s solutionsclo, u, d infrastructurea, n, d digit, a, l transformati, o, n servic, e, s. Transfo, r, m yo, u, r busine, s, s wi, t, h cutti, n, g-ed, g, e technolo, g, y.'canonicalogIma, g, e = '/ og- ima, g, e.jp.g'ogTy, p, e = 'websi, t, e'twitterCard = 'summary_large_ima, g, e'keywor, d, s = ['AI solutio, n, s', 'clo, u, d infrastructu, r, e', 'digit, a, l transformati, o, n', 'busine, s, s automati, o, n''technolo, g, y consulti, n, g']auth, o, r = 'Zi, o, n Te, c, h Solutio, n, s'publishedTimemodifiedTimesectionta, g, s = []noind, e, x = falsenofollow = fa, l, s e}: SEOPro, p, s) {
+  con, s, t fullTit, l, e = tit, l, e.inclu, d, e('Zi, o, n Te, c, h Solutio, n, s') ? tit, l, e : `${ti t l e} | Zi o n Te c h Soluti o n s`;
   con, s, t fullDescripti, o, n = descripti, o, n.leng, t, h > 1, 6, 0 ? descripti, o, n.substr, i, n(0, 1, 5, 7) + '...' : descripti, o, n;
   con, s, t fullCanonic, a, l = canonic, a, l || (type, o, f wind, o, w !== 'undefin, e, d' ? wind, o, w.locat, i, o.n.h, r, e.f : '');
   
@@ -56,7 +56,7 @@ export default function EnhancedS, E, O({
       {fullCanonic, a, l && <li, n, k r, e, l="canonic, a, l" hr, e, f={fullCanoni, c, a l} />}
       
       {/* Robo, t, s */}
-      <me, t, a na, m, e="robo, t, s" conte, n, t={`${noind, e, x ? 'noind, e, x' : 'ind, e, x'}${nofoll, o, w ? 'nofoll, o, w' : 'foll, o, w'}` } />
+      <me, t, a na, m, e="robo, t, s" conte, n, t={`${noind e x ? 'noind e x' : 'ind e x'}${nofoll o w ? 'nofoll o w' : 'foll o w'}` } />
       
       {/* Op, e, n Gra, p, h */}
       <me, t, a proper, t, y="og:ty, p, e" conte, n, t={ogT, y, p e} />
@@ -67,7 +67,7 @@ export default function EnhancedS, E, O({
       <me, t, a proper, t, y="og: site_na, m, e" conte, n, t="Zi, o, n Te, c, h Solutio, n, s" />
       <me, t, a proper, t, y="og:loca, l, e" conte, n, t="en_, U, S" />
       
-      {/* Twitt, e, r Ca, r, d */}
+      {/* Twitt, e, r Card */}
       <me, t, a na, m, e="twitt, e, r:ca, r, d" conte, n, t={twitterC, a, r d} />
       <me, t, a na, m, e="twitt, e, r:tit, l, e" conte, n, t={fullTi, t, l e} />
       <me, t, a na, m, e="twitt, e, r:descripti, o, n" conte, n, t={fullDescript, i, o n} />

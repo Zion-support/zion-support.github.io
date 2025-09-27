@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 
 export con, s, t TestCompone, n, t: React.FC = () => {
   retu, r, n (

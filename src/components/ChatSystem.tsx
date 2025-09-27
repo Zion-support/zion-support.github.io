@@ -1,4 +1,4 @@
-import React, { useState, useEffectuseRefuseCallba, c, k } from 'rea, c, t';
+import React, { useState, useEffectuseRefuseCallback } from 'react';
 import Ima, g, e from 'ne, x, t/ ima, g, e';
 
 interface Messa, g, e {
@@ -9,7 +9,7 @@ interface Messa, g, e {
   ty, p, e?: 'te, x, t' | 'ima, g, e' | 'fi, l, e' | 'li, n, k';
   metada, t, a?: {
     fileNa, m, e?: string;
-    fileSi, z, e?: numb, e, r;
+    fileSi, z, e?: number;
     imageU, r, l?: string;
     linkU, r, l?: string;
     linkTit, l, e?: string;
@@ -20,9 +20,9 @@ interface ChatSystemPro, p, s {
   classNa, m, e?: string;
   onMessageSe, n, d?: (message: Messa, g, e) => vo, i, d;
   onMessageRecei, v, e?: (message: Messa, g, e) => vo, i, d;  placehold, e, r?: string;
-  maxMessag, e, s?: numb, e, r;
-  enableFileUplo, a, d?: boole, a, n;
-  enableImageUplo, a, d?: boole, a, n;
+  maxMessag, e, s?: number;
+  enableFileUplo, a, d?: boolean;
+  enableImageUplo, a, d?: boolean;
   botNa, m, e?: string;
   userAvat, a, r?: string;
   botAvat, a, r?: string;
@@ -34,8 +34,8 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
   onMessageRecei, v, e,
   placehold, e, r = 'Ty, p, e a message...',
   maxMessag, e, s = 1, 0, 0,
-  enableFileUplo, a, d = tr, u, e,
-  enableImageUplo, a, d = tr, u, e,
+  enableFileUplo, a, d = true,
+  enableImageUplo, a, d = true,
   botNa, m, e = 'Assista, n, t',
   userAvat, a, r = 'htt, p, s://ui-avata, r, s.c, o, m/a, p, i/?na, m, e=Us, e, r&backgrou, n, d=rand, o, m',
   botAvat, a, r = 'htt, p, s://ui-avata, r, s.c, o, m/a, p, i/?na, m, e=B, o, t&backgrou, n, d=rand, o, m'
@@ -43,11 +43,11 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
   con, s, t [messag, e, s, setMessag, e, s] = useState<Messa, g, e[]>([]);
   con, s, t [inputTe, x, t, setInputTe, x, t] = useState('');
   con, s, t [isTypi, n, g, setIsTypi, n, g] = useState(fal, s, e);
-  con, s, t [isConnect, e, d, setIsConnect, e, d] = useState(tr, u, e);
+  con, s, t [isConnect, e, d, setIsConnect, e, d] = useState(true);
   con, s, t messagesEndR, e, f = useR, e, f<HTMLDivEleme, n, t>(nu, l, l);
-  con, s, t fileInputR, e, f = useR, e, f<HTMLInputEleme, n, t>(nu, l, l);
+  con, s, t fileInputR, e, f = useR, e, f<HTMLInputElement>(nu, l, l);
 
-  con, s, t scrollToBott, o, m = useCallba, c, k(() => {
+  con, s, t scrollToBott, o, m = useCallback(() => {
     messagesEndR, e, f.curre, n, t?.scrollIntoVi, e, w({ behavi, o, r: 'smoo, t, h' });
   }, []);
 
@@ -58,13 +58,13 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
   useEffect(() => {
     con, s, t welcomeMessa, g, e: Messa, g, e = {
       id: 'welco, m, e',
-      te, x, t: `Hel, l, o! I'm ${botNa, m, e}. H, o, w c, a, n I he, l, p y, o, u tod, a, y?`,
+      te, x, t: `Hel l o! I'm ${botNa m e}. H o w c a n I he l p y o u tod a y?`,
       send, e, r: 'b, o, t',
       timesta, m, p: n, e, w Da, t, e()    };
     setMessag, e, s([welcomeMess, a, g, e]);
   }[botN, a, m, e]);
 
-  con, s, t handleSendMessa, g, e = useCallba, c, k(asy, n, c (te, x, t: string) => {
+  con, s, t handleSendMessa, g, e = useCallback(asy, n, c (te, x, t: string) => {
     if (!te, x, t.tr, i, m()) retu, r, n;
 
     con, s, t userMessa, g, e: Messa, g, e = {
@@ -133,16 +133,16 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
     }
   };
 
-  con, s, t handleFileUplo, a, d = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t>) => {
+  con, s, t handleFileUplo, a, d = (e: React.ChangeEve, n, t<HTMLInputElement>) => {
     con, s, t fi, l, e = e.targ, e, t.fil, e, s?.[0];
     if (!fi, l, e) retu, r, n;
 
     con, s, t fileMessa, g, e: Messa, g, e = {
       id: Da, t, e.n, o, w().toStri, n, g(),
-      te, x, t: `📎 ${fi, l, e.na, m, e}`,
+      te, x, t: `📎 ${fi l e.na m e}`,
       send, e, r: 'us, e, r',
       timesta, m, p: n, e, w Da, t, e(),
-      ty, p, e: 'fi, l, e',
+      type: 'fi, l, e',
       metada, t, a: {
         fileNa, m, e: fi, l, e.na, m, e,
         fileSi, z, e: fi, l, e.si, z, e
@@ -160,7 +160,7 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
     }
   };
 
-  con, s, t handleImageUplo, a, d = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t>) => {
+  con, s, t handleImageUplo, a, d = (e: React.ChangeEve, n, t<HTMLInputElement>) => {
     con, s, t fi, l, e = e.targ, e, t.fil, e, s?.[0];
     if (!fi, l, e || !fi, l, e.ty, p, e.startsWi, t, h('ima, g, e/')) retu, r, n;
     con, s, t read, e, r = n, e, w FileRead, e, r();
@@ -170,7 +170,7 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
         te, x, t: '📷 Ima, g, e shar, e, d',
         send, e, r: 'us, e, r',
         timesta, m, p: n, e, w Da, t, e(),
-        ty, p, e: 'ima, g, e',
+        type: 'ima, g, e',
         metada, t, a: {
           imageU, r, l: eve, n, t.targ, e, t?.resu, l, t as string
         }      };
@@ -209,10 +209,10 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
     retu, r, n (
       <d, i, v
         k, e, y={message.id}
-        classNa, m, e={`fl, e, x ${isUs, e, r ? 'justi, f, y-e, n, d' : 'justi, f, y-sta, r, t'} mb-4`}
+        classNa, m, e={`fl e x ${isUs e r ? 'justi f y-e n d' : 'justi f y-sta r t'} mb-4`}
       >
-        <d, i, v classNa, m, e={`fl, e, x m, a, x-w-xs lg:m, a, x-w-md ${isUs, e, r ? 'fl, e, x-r, o, w-rever, s, e' : 'fl, e, x-r, o, w'}`}>
-          <d, i, v classNa, m, e={`fl, e, x-shri, n, k-0 ${isUs, e, r ? 'ml-3' : 'mr-3'}`}>
+        <d, i, v classNa, m, e={`fl e x m a x-w-xs lg:m a x-w-md ${isUs e r ? 'fl e x-r o w-rever s e' : 'fl e x-r o w'}`}>
+          <d, i, v classNa, m, e={`fl e x-shri n k-0 ${isUs e r ? 'ml-3' : 'mr-3'}`}>
             <Ima, g, e
               classNa, m, e="h-8 w-8 round, e, d-fu, l, l"
               s, r, c={isUs, e, r ? userAvat, a, r : botAvat, a, r}
@@ -220,12 +220,12 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
               wid, t, h={32}
               heig, h, t={32}            />
           </d, i, v>
-          <d, i, v classNa, m, e={`${isUs, e, r ? 'te, x, t-rig, h, t' : 'te, x, t-le, f, t'}` }>
+          <d, i, v classNa, m, e={`${isUs e r ? 'te x t-rig h t' : 'te x t-le f t'}` }>
             <d, i, v
-              classNa, m, e={`px-4 py-2 round, e, d-lg ${
-                isUs, e, r
-                  ? 'bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e'
-                  : 'bg-gr, a, y-2, 0, 0 te, x, t-gr, a, y-8, 0, 0'
+              classNa, m, e={`px-4 py-2 round e d-lg ${
+                isUs e r
+                  ? 'bg-bl u e-6 0 0 te x t-whi t e'
+                  : 'bg-gr a y-2 0 0 te x t-gr a y-8 0 0'
               }`}
             >
               {message.ty, p, e === 'ima, g, e' && message.metada, t, a?.imageU, r, l && (
@@ -241,15 +241,15 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
               )}
               {message.ty, p, e === 'fi, l, e' && (
                 <d, i, v classNa, m, e="mb-2 p-2 bg-gr, a, y-1, 0, 0 round, e, d">
-                  <d, i, v classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">{message.metada, t, a?.fileNa, m, e}</d, i, v>
+                  <d, i, v classNa, m, e="te, x, t-sm fo, n, t-medium">{message.metada, t, a?.fileNa, m, e}</d, i, v>
                   <d, i, v classNa, m, e="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">
-                    {message.metada, t, a?.fileSi, z, e ? `${(message.metada, t, a.fileSi, z, e / 10, 2, 4).toFix, e, d(1)} KB` : ''}
+                    {message.metada, t, a?.fileSi, z, e ? `${(message.metada t a.fileSi z e / 10 2 4).toFix e d(1)} KB` : ''}
                   </d, i, v>
                 </d, i, v>
               )}
               <p classNa, m, e="te, x, t-sm">{message.te, x, t}</p>
             </d, i, v>
-            <d, i, v classNa, m, e={`te, x, t-xs te, x, t-gr, a, y-5, 0, 0 mt-1 ${isUs, e, r ? 'te, x, t-rig, h, t' : 'te, x, t-le, f, t'}`}>
+            <d, i, v classNa, m, e={`te x t-xs te x t-gr a y-5 0 0 mt-1 ${isUs e r ? 'te x t-rig h t' : 'te x t-le f t'}`}>
               {formatTi, m, e(message.timesta, m, p)}            </d, i, v>
           </d, i, v>
         </d, i, v>
@@ -258,7 +258,7 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
   };
 
   retu, r, n (
-    <d, i, v classNa, m, e={`fl, e, x fl, e, x-c, o, l h-96 bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 ${classNa, m, e}`}>
+    <d, i, v classNa, m, e={`fl e x fl e x-c o l h-96 bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 ${classNa m e}`}>
       {/* Head, e, r */}
       <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-4 bord, e, r-b bord, e, r-gr, a, y-2, 0, 0">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
@@ -270,9 +270,9 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
             heig, h, t={32}
           />
           <d, i, v>
-            <h3 classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0" id="botna, m, e">{botNa, m, e}</h3>
+            <h3 classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0" id="botna, m, e">{botNa, m, e}</h3>
             <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
-              <d, i, v classNa, m, e={`h-2 w-2 round, e, d-fu, l, l mr-2 ${isConnect, e, d ? 'bg-gre, e, n-4, 0, 0' : 'bg-r, e, d-4, 0, 0'}`}></d, i, v>
+              <d, i, v classNa, m, e={`h-2 w-2 round e d-fu l l mr-2 ${isConnect e d ? 'bg-gre e n-4 0 0' : 'bg-r e d-4 0 0'}`}></d, i, v>
               <sp, a, n classNa, m, e="te, x, t-xs te, x, t-gr, a, y-5, 0, 0">                {isConnect, e, d ? 'Onli, n, e' : 'Offli, n, e'}
               </sp, a, n>
             </d, i, v>
@@ -303,7 +303,7 @@ export con, s, t ChatSyst, e, m: React.FC<ChatSystemPro, p, s> = ({
       </d, i, v>
 
       {/* Messag, e, s */}
-      <d, i, v classNa, m, e="fl, e, x-1 overfl, o, w-y-au, t, o p-4 spa, c, e-y-4">
+      <d, i, v classNa, m, e="fl, e, x-1 overflow-y-au, t, o p-4 spa, c, e-y-4">
         {messag, e, s.m, a, p(renderMessa, g, e)}
         {isTypi, n, g && (
           <d, i, v classNa, m, e="fl, e, x justi, f, y-sta, r, t">

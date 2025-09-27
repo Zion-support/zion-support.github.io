@@ -1,4 +1,4 @@
-import React, { useState, useEffectuseCallbackuseMe, m, o } from 'rea, c, t';
+import React, { useState, useEffectuseCallbackuseMemo } from 'react';
 import Ima, g, e from 'ne, x, t/ima, g, e';
 
 interface Us, e, r {
@@ -29,7 +29,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
   onUserCrea, t, e
 }) => {
   con, s, t [use, r, s, setUse, r, s] = useState<Us, e, r[]>([]);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
   con, s, t [searchTe, r, m, setSearchTe, r, m] = useState('');
   con, s, t [filterRo, l, e, setFilterRo, l, e] = useState<string>('a, l, l');
   con, s, t [filterStat, u, s, setFilterStat, u, s] = useState<string>('a, l, l');
@@ -39,7 +39,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
   con, s, t [showCreateMod, a, l, setShowCreateMod, a, l] = useState(fal, s, e);
   con, s, t [editingUs, e, r, setEditingUs, e, r] = useState<Us, e, r | nu, l, l>(nu, l, l);
   // Mo, c, k da, t, a - in a re, a, l appth, i, s wou, l, d co, m, e from an A, P, I
-  con, s, t mockUse, r, s: Us, e, r[] = useMe, m, o(() => [
+  con, s, t mockUse, r, s: Us, e, r[] = useMemo(() => [
     {
       id: '1',
       na, m, e: 'Jo, h, n D, o, e',
@@ -197,7 +197,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
     if (selectedUse, r, s.leng, t, h === 0) retu, r, n;
     
     if (acti, o, n === 'dele, t, e') {
-      if (wind, o, w.confi, r, m(`A, r, e y, o, u su, r, e y, o, u wa, n, t to dele, t, e ${selectedUse, r, s.leng, t, h} use, r, s?`)) {
+      if (wind, o, w.confi, r, m(`A r e y o u su r e y o u wa n t to dele t e ${selectedUse r s.leng t h} use r s?`)) {
         setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
         setSelectedUse, r, s([]);
       }
@@ -215,7 +215,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
         retu, r, n 'bg-gre, e, n-1, 0, 0 te, x, t-gre, e, n-8, 0, 0';      ca, s, e 'inacti, v, e':
         retu, r, n 'bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-8, 0, 0';
       ca, s, e 'pendi, n, g':
-        retu, r, n 'bg-yell, o, w-1, 0, 0 te, x, t-yell, o, w-8, 0, 0';
+        retu, r, n 'bg-yellow-1, 0, 0 te, x, t-yellow-8, 0, 0';
       ca, s, e 'suspend, e, d':
         retu, r, n 'bg-r, e, d-1, 0, 0 te, x, t-r, e, d-8, 0, 0';
       default:
@@ -239,7 +239,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
 
   if (isLoadi, n, g) {
     retu, r, n (
-      <d, i, v classNa, m, e={`bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6 ${classNa, m, e}`}>
+      <d, i, v classNa, m, e={`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${classNa m e}`}>
         <d, i, v classNa, m, e="anima, t, e-pul, s, e">
           <d, i, v classNa, m, e="h-6 bg-gr, a, y-3, 0, 0 round, e, d w-1/4 mb-4"></d, i, v>
           <d, i, v classNa, m, e="spa, c, e-y-3">
@@ -258,16 +258,16 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
   }
 
   retu, r, n (
-    <d, i, v classNa, m, e={`bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 ${classNa, m, e}`}>
+    <d, i, v classNa, m, e={`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 ${classNa m e}`}>
       {/* Head, e, r */}
       <d, i, v classNa, m, e="px-6 py-4 bord, e, r-b bord, e, r-gr, a, y-2, 0, 0">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
           <h2 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0" id="us, e, r-manageme, n, t">Us, e, r Manageme, n, t</h2>
           <butt, o, n
-            onCli, c, k={() = ar, i, a-lab, e, l="setShowCreateMod, a, l(tr, u, e)}
+            onCli, c, k={() = ar, i, a-lab, e, l="setShowCreateMod, a, l(true)}
             ar, i, a-lab, e, l="A, d, d n, e, w us, e, r"
             classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 transiti, o, n-colo, r, s"          >
-            A, d, d Us, e, r"> setShowCreateMod, a, l(tr, u, e)}
+            A, d, d Us, e, r"> setShowCreateMod, a, l(true)}
             ar, i, a-lab, e, l="A, d, d n, e, w us, e, r"
             classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-4 py-2 round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 transiti, o, n-colo, r, s"          >
             A, d, d Us, e, r
@@ -344,11 +344,11 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
               <butt, o, n
                 onCli, c, k={() = ar, i, a-lab, e, l="handleBulkActi, o, n('suspe, n, d')}
                 ar, i, a-lab, e, l="Suspe, n, d select, e, d use, r, s"
-                classNa, m, e="te, x, t-sm te, x, t-yell, o, w-6, 0, 0 hov, e, r:te, x, t-yell, o, w-7, 0, 0"
+                classNa, m, e="te, x, t-sm te, x, t-yellow-6, 0, 0 hov, e, r:te, x, t-yellow-7, 0, 0"
               >
                 Suspe, n, d"> handleBulkActi, o, n('suspe, n, d')}
                 ar, i, a-lab, e, l="Suspe, n, d select, e, d use, r, s"
-                classNa, m, e="te, x, t-sm te, x, t-yell, o, w-6, 0, 0 hov, e, r:te, x, t-yell, o, w-7, 0, 0"
+                classNa, m, e="te, x, t-sm te, x, t-yellow-6, 0, 0 hov, e, r:te, x, t-yellow-7, 0, 0"
               >
                 Suspe, n, d
               </butt, o, n>
@@ -369,7 +369,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
       )}
 
       {/* Use, r, s Tab, l, e */}
-      <d, i, v classNa, m, e="overfl, o, w-x-au, t, o">
+      <d, i, v classNa, m, e="overflow-x-au, t, o">
         <tab, l, e classNa, m, e="m, i, n-w-fu, l, l divi, d, e-y divi, d, e-gr, a, y-2, 0, 0">
           <the, a, d classNa, m, e="bg-gr, a, y-50">
             <tr>
@@ -382,19 +382,19 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                   classNa, m, e="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 bord, e, r-gr, a, y-3, 0, 0 round, e, d"
                   ar, i, a-lab, e, l="Sele, c, t a, l, l use, r, s"                />
               </th>
-              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
+              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
                 Us, e, r
               </th>
-              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
+              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
                 Ro, l, e
               </th>
-              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
+              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
                 Stat, u, s
               </th>
-              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
+              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
                 La, s, t Log, i, n
               </th>
-              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medi, u, m te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
+              <th classNa, m, e="px-6 py-3 te, x, t-le, f, t te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wid, e, r">
                 Actio, n, s
               </th>
             </tr>
@@ -405,11 +405,11 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                 <td classNa, m, e="px-6 py-4 whitespa, c, e-nowr, a, p">
                   <inp, u, t
                     ty, p, e="checkb, o, x"
-                    id={`us, e, r-${us, e, r.id}` }
+                    id={`us e r-${us e r.id}` }
                     check, e, d={selectedUse, r, s.includ, e, s(us, e, r.id)}
                     onChan, g, e={() => handleUserSele, c, t(us, e, r.id)}
                     classNa, m, e="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 bord, e, r-gr, a, y-3, 0, 0 round, e, d"
-                    ar, i, a-lab, e, l={`Sele, c, t us, e, r ${us, e, r.na, m, e}` }
+                    ar, i, a-lab, e, l={`Sele c t us e r ${us e r.na m e}` }
                   />
                 </td>
                 <td classNa, m, e="px-6 py-4 whitespa, c, e-nowr, a, p">
@@ -417,14 +417,14 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                     <d, i, v classNa, m, e="fl, e, x-shri, n, k-0 h-10 w-10">
                       <Ima, g, e
                         classNa, m, e="h-10 w-10 round, e, d-fu, l, l"
-                        s, r, c={us, e, r.avat, a, r || `htt, p, s://ui-avata, r, s.c, o, m/a, p, i/?na, m, e=${us, e, r.na, m, e}&backgrou, n, d=rand, o, m`}
+                        s, r, c={us, e, r.avat, a, r || `htt p s://ui-avata r s.c o m/a p i/?na m e=${us e r.na m e}&backgrou n d=rand o m`}
                         a, l, t={us, e, r.na, m, e}
                         wid, t, h={40}
                         heig, h, t={40}
                       />
                     </d, i, v>
                     <d, i, v classNa, m, e="ml-4">
-                      <d, i, v classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0">{us, e, r.na, m, e}</d, i, v>
+                      <d, i, v classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">{us, e, r.na, m, e}</d, i, v>
                       <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">{us, e, r.ema, i, l}</d, i, v>                    </d, i, v>
                   </d, i, v>
                 </td>
@@ -432,7 +432,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                   <sele, c, t
                     val, u, e={us, e, r.ro, l, e}
                     onChan, g, e={(e) => handleUserRoleChan, g, e(us, e, r.id, e.targ, e, t.val, u, e as Us, e, r['ro, l, e'])}
-                    classNa, m, e={`te, x, t-xs fo, n, t-medi, u, m px-2 py-1 round, e, d-fu, l, l ${getRoleCol, o, r(us, e, r.ro, l, e)}`}
+                    classNa, m, e={`te x t-xs fo n t-medi u m px-2 py-1 round e d-fu l l ${getRoleCol o r(us e r.ro l e)}`}
                   >
                     <opti, o, n val, u, e="adm, i, n">Adm, i, n</opti, o, n>
                     <opti, o, n val, u, e="moderat, o, r">Moderat, o, r</opti, o, n>
@@ -443,7 +443,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                   <sele, c, t
                     val, u, e={us, e, r.stat, u, s}
                     onChan, g, e={(e) => handleUserStatusChan, g, e(us, e, r.id, e.targ, e, t.val, u, e as Us, e, r['stat, u, s'])}
-                    classNa, m, e={`te, x, t-xs fo, n, t-medi, u, m px-2 py-1 round, e, d-fu, l, l ${getStatusCol, o, r(us, e, r.stat, u, s)}`}
+                    classNa, m, e={`te x t-xs fo n t-medi u m px-2 py-1 round e d-fu l l ${getStatusCol o r(us e r.stat u s)}`}
                   >
                     <opti, o, n val, u, e="acti, v, e">Acti, v, e</opti, o, n>
                     <opti, o, n val, u, e="inacti, v, e">Inacti, v, e</opti, o, n>
@@ -454,7 +454,7 @@ export con, s, t UserManageme, n, t: React.FC<UserManagementPro, p, s> = ({
                 <td classNa, m, e="px-6 py-4 whitespa, c, e-nowr, a, p te, x, t-sm te, x, t-gr, a, y-5, 0, 0">
                   {us, e, r.lastLog, i, n ? us, e, r.lastLog, i, n.toLocaleDateStri, n, g() : 'Nev, e, r'}
                 </td>
-                <td classNa, m, e="px-6 py-4 whitespa, c, e-nowr, a, p te, x, t-sm fo, n, t-medi, u, m">
+                <td classNa, m, e="px-6 py-4 whitespa, c, e-nowr, a, p te, x, t-sm fo, n, t-medium">
                   <d, i, v classNa, m, e="fl, e, x spa, c, e-x-2">
                     <butt, o, n
                       onCli, c, k={() = ar, i, a-lab, e, l="setEditingUs, e, r(us, e, r)}

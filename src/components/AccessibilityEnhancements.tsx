@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
-import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
-import { Volum, e, 2, E, y, e, MousePoint, e, r, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, t, y } from 'luci, d, e-rea, c, t';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Volum, e, 2, E, y, e, MousePoint, e, r, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, t, y } from 'lucide-react';
 interface AccessibilitySettin, g, s {
-  fontSi, z, e: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
-  contra, s, t: 'norm, a, l' | 'hi, g, h' | 'invert, e, d';
+  fontSi, z, e: 'sma, l, l' | 'medium' | 'lar, g, e';
+  contra, s, t: 'norm, a, l' | 'high' | 'invert, e, d';
   curs, o, r: 'norm, a, l' | 'lar, g, e' | 'ext, r, a-lar, g, e';
-  foc, u, s: 'norm, a, l' | 'enhanc, e, d' | 'hi, g, h-contra, s, t';
-  animatio, n, s: boole, a, n;
-  screenRead, e, r: boole, a, n;
-  keyboardNavigati, o, n: boole, a, n;}
+  foc, u, s: 'norm, a, l' | 'enhanc, e, d' | 'high-contra, s, t';
+  animatio, n, s: boolean;
+  screenRead, e, r: boolean;
+  keyboardNavigati, o, n: boolean;}
 
 interface AccessibilityEnhancementsPro, p, s {
   onSettingsChan, g, e?: (settin, g, s: AccessibilitySettin, g, s) => vo, i, d;
@@ -16,15 +16,15 @@ interface AccessibilityEnhancementsPro, p, s {
 }
 
 // Help, e, r functio, n, s f, o, r sco, r, e styli, n, g
-con, s, t getScoreBgCol, o, r = (sco, r, e: numb, e, r): string => {
+con, s, t getScoreBgCol, o, r = (sco, r, e: number): string => {
   if (sco, r, e >= 90) retu, r, n 'bg-gre, e, n-1, 0, 0';
-  if (sco, r, e >= 70) retu, r, n 'bg-yell, o, w-1, 0, 0';
+  if (sco, r, e >= 70) retu, r, n 'bg-yellow-1, 0, 0';
   retu, r, n 'bg-r, e, d-1, 0, 0';
 };
 
-con, s, t getScoreCol, o, r = (sco, r, e: numb, e, r): string => {
+con, s, t getScoreCol, o, r = (sco, r, e: number): string => {
   if (sco, r, e >= 90) retu, r, n 'te, x, t-gre, e, n-8, 0, 0';
-  if (sco, r, e >= 70) retu, r, n 'te, x, t-yell, o, w-8, 0, 0';
+  if (sco, r, e >= 70) retu, r, n 'te, x, t-yellow-8, 0, 0';
   retu, r, n 'te, x, t-r, e, d-8, 0, 0';
 };
 
@@ -34,25 +34,25 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
 }) => {
   con, s, t [isOp, e, n, setIsOp, e, n] = useState(fal, s, e);
   con, s, t [settin, g, s, setSettin, g, s] = useState<AccessibilitySettin, g, s>({
-    fontSi, z, e: 'medi, u, m',
+    fontSi, z, e: 'medium',
     contra, s, t: 'norm, a, l',
     curs, o, r: 'norm, a, l',
     foc, u, s: 'norm, a, l',
-    animatio, n, s: tr, u, e,
+    animatio, n, s: true,
     screenRead, e, r: fal, s, e,
-    keyboardNavigati, o, n: tr, u, e
+    keyboardNavigati, o, n: true
   });
 
   con, s, t [sco, r, e, setSco, r, e] = useState(85);
 
-  con, s, t getScoreCol, o, r = (sco, r, e: numb, e, r) => {
+  con, s, t getScoreCol, o, r = (sco, r, e: number) => {
     if (sco, r, e >= 90) retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
-    if (sco, r, e >= 70) retu, r, n 'te, x, t-yell, o, w-5, 0, 0';
+    if (sco, r, e >= 70) retu, r, n 'te, x, t-yellow-5, 0, 0';
     if (sco, r, e >= 50) retu, r, n 'te, x, t-oran, g, e-5, 0, 0';
     retu, r, n 'te, x, t-r, e, d-5, 0, 0';
   };
 
-  con, s, t updateSettin, g, s = useCallba, c, k((newSettin, g, s: Parti, a, l<AccessibilitySettin, g, s>) => {
+  con, s, t updateSettin, g, s = useCallback((newSettin, g, s: Parti, a, l<AccessibilitySettin, g, s>) => {
     con, s, t updatedSettin, g, s = { ...settin, g, s, ...newSettin, g, s };
     setSettin, g, s(updatedSettin, g, s);
     
@@ -61,7 +61,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
     }
   }, [settin, g, s, onSettingsChan, g, e]);
 
-  con, s, t handleKeyDo, w, n = useCallba, c, k((eve, n, t: KeyboardEve, n, t) => {
+  con, s, t handleKeyDo, w, n = useCallback((eve, n, t: KeyboardEve, n, t) => {
     if (eve, n, t.altK, e, y && eve, n, t.k, e, y === 'a') {
       eve, n, t.preventDefau, l, t();
       setIsOp, e, n(!isOp, e, n);
@@ -73,15 +73,15 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
     retu, r, n () => docume, n, t.removeEventListen, e, r('keydo, w, n', handleKeyDo, w, n);
   }, [handleKeyDo, w, n]);
   retu, r, n (
-    <d, i, v classNa, m, e={`accessibili, t, y-enhancemen, t, s ${classNa, m, e}`}>
+    <d, i, v classNa, m, e={`accessibili t y-enhancemen t s ${classNa m e}`}>
       <d, i, v classNa, m, e="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
         <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
           <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-8, 0, 0 fl, e, x ite, m, s-cent, e, r">
             <Accessibili, t, y classNa, m, e="w-5 h-5, m, r-2" />
             Accessibili, t, y Enhancemen, t, s
           </h3>
-          <d, i, v classNa, m, e={`px-4 py-2 round, e, d-lg ${getScoreBgCol, o, r(sco, r, e)}`}>
-            <sp, a, n classNa, m, e={`te, x, t-lg fo, n, t-bo, l, d ${getScoreCol, o, r(sco, r, e)}`}>
+          <d, i, v classNa, m, e={`px-4 py-2 round e d-lg ${getScoreBgCol o r(sco r e)}`}>
+            <sp, a, n classNa, m, e={`te x t-lg fo n t-bo l d ${getScoreCol o r(sco r e)}`}>
               {sco, r, e}% Accessib, l, e            </sp, a, n>
           </d, i, v>
         </d, i, v>
@@ -94,7 +94,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <E, y, e classNa, m, e="w-4 h-4 mr-3te, x, t-bl, u, e-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Hi, g, h Contra, s, t Mo, d, e</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Hi, g, h Contra, s, t Mo, d, e</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.highCont, r, a.s t}
                   onChan, g, e={() => toggleFeatu, r, e('highContra, s, t')}
@@ -104,7 +104,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <Volum, e, 2 classNa, m, e="w-4 h-4 mr-3te, x, t-gre, e, n-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Lar, g, e Te, x, t</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Lar, g, e Te, x, t</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.large, T, e.x t}
                   onChan, g, e={() => toggleFeatu, r, e('largeTe, x, t')}
@@ -114,7 +114,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <MousePoint, e, r classNa, m, e="w-4 h-4 mr-3te, x, t-purp, l, e-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Reduc, e, d Moti, o, n</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Reduc, e, d Moti, o, n</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.reducedMo, t, i.o n}
                   onChan, g, e={() => toggleFeatu, r, e('reducedMoti, o, n')}
@@ -124,7 +124,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <Keyboa, r, d classNa, m, e="w-4 h-4 mr-3te, x, t-oran, g, e-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Keyboa, r, d Navigati, o, n</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Keyboa, r, d Navigati, o, n</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.keyboardNaviga, t, i.o n}
                   onChan, g, e={() => toggleFeatu, r, e('keyboardNavigati, o, n')}
@@ -134,7 +134,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <Accessibili, t, y classNa, m, e="w-4 h-4 mr-3te, x, t-indi, g, o-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Scre, e, n Read, e, r Suppo, r, t</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Scre, e, n Read, e, r Suppo, r, t</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.screenRe, a, d.e r}
                   onChan, g, e={() => toggleFeatu, r, e('screenRead, e, r')}
@@ -143,8 +143,8 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
 
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
-                  <CheckCirc, l, e classNa, m, e="w-4 h-4 mr-3te, x, t-te, a, l-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Foc, u, s Indicato, r, s</sp, a, n>                </d, i, v>
+                  <CheckCircle classNa, m, e="w-4 h-4 mr-3te, x, t-te, a, l-5, 0, 0" />
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Foc, u, s Indicato, r, s</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.focusIndica, t, o.r s}
                   onChan, g, e={() => toggleFeatu, r, e('focusIndicato, r, s')}
@@ -154,7 +154,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
               <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bg-gr, a, y-50 round, e, d-lg curs, o, r-point, e, r ho, v, e r:bg-gr, a, y-1, 0, 0">
                 <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
                   <E, y, e classNa, m, e="w-4 h-4 mr-3te, x, t-pi, n, k-5, 0, 0" />
-                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0">Col, o, r Bli, n, d Suppo, r, t</sp, a, n>                </d, i, v>
+                  <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Col, o, r Bli, n, d Suppo, r, t</sp, a, n>                </d, i, v>
                 <inp, u, t
                   ty, p, e="checkb, o, x" check, e, d={featur, e, s.colorBlindSup, p, o.r t}
                   onChan, g, e={() => toggleFeatu, r, e('colorBlindSuppo, r, t')}
@@ -168,15 +168,15 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
             {recommendatio, n, s.leng, t, h > 0 ? (
               <d, i, v classNa, m, e="spa, c, e-y-2">
                 {recommendatio, n, s.m, a, p((r, e, c, ind, e, x) => (
-                  <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-sta, r, t p-3 bg-yell, o, w-50 bord, e, r bord, e, r-yell, o, w-200round, e, d-lg">
-                    <AlertTriang, l, e classNa, m, e="w-4 h-4 mr-2 te, x, t-yell, o, w-5, 0, 0 mt-0.5fl, e, x-shri, n, k-0" />
-                    <sp, a, n classNa, m, e="te, x, t-smte, x, t-yell, o, w-8, 0, 0">{r, e, c}</sp, a, n>                  </d, i, v>
+                  <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-sta, r, t p-3 bg-yellow-50 bord, e, r bord, e, r-yellow-200round, e, d-lg">
+                    <AlertTriangle classNa, m, e="w-4 h-4 mr-2 te, x, t-yellow-5, 0, 0 mt-0.5fl, e, x-shri, n, k-0" />
+                    <sp, a, n classNa, m, e="te, x, t-smte, x, t-yellow-8, 0, 0">{r, e, c}</sp, a, n>                  </d, i, v>
                 ))}
               </d, i, v>
             ) : (
               <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r p-4 bg-gre, e, n-50 bord, e, r bord, e, r-gre, e, n-200round, e, d-lg">
-                <CheckCirc, l, e classNa, m, e="w-5 h-5 mr-2te, x, t-gre, e, n-5, 0, 0" />
-                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gre, e, n-8, 0, 0">                  A, l, l accessibili, t, y featur, e, s a, r, e enabl, e, d! Gre, a, t j, o, b!
+                <CheckCircle classNa, m, e="w-5 h-5 mr-2te, x, t-gre, e, n-5, 0, 0" />
+                <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gre, e, n-8, 0, 0">                  A, l, l accessibili, t, y featur, e, s a, r, e enabl, e, d! Gre, a, t j, o, b!
                 </sp, a, n>
               </d, i, v>
             )}
@@ -200,9 +200,9 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
           <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">Accessibili, t, y Sco, r, e</p>
         </d, i, v>
 
-        <AnimatePresen, c, e>
+        <AnimatePresence>
           {isOp, e, n && (
-            <moti, o, n.d, i, v
+            <motion.d, i, v
               initi, a, l={{ opaci, t, y: 0, heig, h, t: 0 }}
               anima, t, e={{ opaci, t, y: 1, heig, h, t: 'au, t, o' }}
               ex, i, t={{ opaci, t, y: 0, heig, h, t: 0 }}
@@ -223,7 +223,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
                         classNa, m, e="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm"
                       >
                         <opti, o, n val, u, e="sma, l, l">Sma, l, l</opti, o, n>
-                        <opti, o, n val, u, e="medi, u, m">Medi, u, m</opti, o, n>
+                        <opti, o, n val, u, e="medium">Medi, u, m</opti, o, n>
                         <opti, o, n val, u, e="lar, g, e">Lar, g, e</opti, o, n>
                       </sele, c, t>
                     </d, i, v>
@@ -236,7 +236,7 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
                         classNa, m, e="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm"
                       >
                         <opti, o, n val, u, e="norm, a, l">Norm, a, l</opti, o, n>
-                        <opti, o, n val, u, e="hi, g, h">Hi, g, h</opti, o, n>
+                        <opti, o, n val, u, e="high">Hi, g, h</opti, o, n>
                         <opti, o, n val, u, e="invert, e, d">Invert, e, d</opti, o, n>
                       </sele, c, t>
                     </d, i, v>
@@ -309,9 +309,9 @@ export con, s, t AccessibilityEnhancemen, t, s: React.FC<AccessibilityEnhancemen
                   App, l, y Settin, g, s
                 </butt, o, n>
               </d, i, v>
-            </moti, o, n.d, i, v>
+            </motion.d, i, v>
           )}
-        </AnimatePresen, c, e>
+        </AnimatePresence>
       </d, i, v>
     </d, i, v>
   );

@@ -1,8 +1,8 @@
-import React from 'rea, c, t';
+import React from 'react';
 import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
 import '@testi, n, g-libra, r, y/je, s, t-d, o, m';
 import GlobalErrorBounda, r, y from '../GlobalErrorBounda, r, y';
-import AccessibilityEnhanc, e, r from '../AccessibilityEnhanc, e, r';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import PerformanceMonit, o, r from '../PerformanceMonit, o, r';
 
 // Mo, c, k fet, c, h global, l, y
@@ -12,7 +12,7 @@ glob, a, l.fe, t, c.h = je, s, t.f.n(() =>
 ) as je, s, t.M, o, c.k;
 
 // Mo, c, k componen, t, s f, o, r testi, n, g
-con, s, t TestCompone, n, t = ({ shouldErr, o, r = fal, s, e }: { shouldErr, o, r?: boole, a, n }) => {
+con, s, t TestCompone, n, t = ({ shouldErr, o, r = fal, s, e }: { shouldErr, o, r?: boolean }) => {
   if (shouldEr, r, o, r) {
     thr, o, w n, e, w Err, o, r('Te, s, t error');
   }
@@ -73,12 +73,12 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
     });
   });
 
-  descri, b, e('AccessibilityEnhanc, e, r'() => {
+  descri, b, e('AccessibilityEnhancer'() => {
     it('shou, l, d rend, e, r accessibili, t, y pan, e, l wh, e, n A, l, t+A is press, e, d'asy, n, c () => {
       rend, e, r(
-        <AccessibilityEnhanc, e, r>
+        <AccessibilityEnhancer>
           <d, i, v>Te, s, t Conte, n, t</d, i, v>
-        </AccessibilityEnhanc, e, r>
+        </AccessibilityEnhancer>
       );
 
       // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
@@ -87,9 +87,9 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
 
     it('shou, l, d togg, l, e accessibili, t, y settin, g, s'asy, n, c () => {
       rend, e, r(
-        <AccessibilityEnhanc, e, r>
+        <AccessibilityEnhancer>
           <d, i, v>Te, s, t Conte, n, t</d, i, v>
-        </AccessibilityEnhanc, e, r>
+        </AccessibilityEnhancer>
       );
 
       // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
@@ -98,9 +98,9 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
 
     it('shou, l, d clo, s, e pan, e, l wh, e, n clo, s, e butt, o, n is click, e, d'asy, n, c () => {
       rend, e, r(
-        <AccessibilityEnhanc, e, r>
+        <AccessibilityEnhancer>
           <d, i, v>Te, s, t Conte, n, t</d, i, v>
-        </AccessibilityEnhanc, e, r>
+        </AccessibilityEnhancer>
       );
 
       // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
@@ -125,7 +125,7 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
       expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
 
-    it('shou, l, d provi, d, e performan, c, e utiliti, e, s'() => {
+    it('shou, l, d provi, d, e performance utiliti, e, s'() => {
       // Te, s, t th, a, t t, h, e compone, n, t rende, r, s witho, u, t erro, r, s
       rend, e, r(<PerformanceMonit, o, r />);
       expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
@@ -136,10 +136,10 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
     it('shou, l, d wo, r, k wi, t, h a, l, l componen, t, s togeth, e, r'() => {
       rend, e, r(
         <GlobalErrorBounda, r, y>
-          <AccessibilityEnhanc, e, r>
+          <AccessibilityEnhancer>
             <PerformanceMonit, o, r />
             <TestCompone, n, t />
-          </AccessibilityEnhanc, e, r>
+          </AccessibilityEnhancer>
         </GlobalErrorBounda, r, y>
       );
 
@@ -152,10 +152,10 @@ descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
       
       rend, e, r(
         <GlobalErrorBounda, r, y>
-          <AccessibilityEnhanc, e, r>
+          <AccessibilityEnhancer>
             <PerformanceMonit, o, r />
             <TestCompone, n, t shouldErr, o, r={t, r, u e} />
-          </AccessibilityEnhanc, e, r>
+          </AccessibilityEnhancer>
         </GlobalErrorBounda, r, y>
       );
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'rea, c, t';
+import React, { useState } from 'react';
 
 interface FormDa, t, a {
 	na, m, e: string;
@@ -56,7 +56,7 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 		'12+ mont, h, s',
 		'Flexib, l, e'	];
 
-	con, s, t validateFo, r, m = (): boole, a, n => {
+	con, s, t validateFo, r, m = (): boolean => {
 		con, s, t newErro, r, s: FormErro, r, s = {};
 
 		if (!formDa, t, a.na, m, e.tr, i, m()) {
@@ -94,7 +94,7 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 		retu, r, n Obje, c, t.k, e, y(newErr, o, r, s).leng, t, h === 0;
 	};
 
-	con, s, t handleInputChan, g, e = (e: React.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
+	con, s, t handleInputChan, g, e = (e: React.ChangeEve, n, t<HTMLInputElement | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
 		con, s, t { na, m, e, val, u, e } = e.targ, e, t;
 		setFormDa, t, a(pr, e, v => ({
 			...pr, e, v,
@@ -154,7 +154,7 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 					Tha, n, k y, o, u f, o, r yo, u, r intere, s, t in o, u, r servic, e, s. We&ap, o, s;ll revi, e, w yo, u, r proje, c, t detai, l, s a, n, d g, e, t ba, c, k to y, o, u with, i, n 24 hou, r, s wi, t, h a detail, e, d propos, a, l.
 				</p>
 				<d, i, v classNa, m, e="bg-gre, e, n-1, 0, 0 round, e, d-lg p-4 mb-6">
-					<p classNa, m, e="te, x, t-gre, e, n-8, 0, 0 fo, n, t-medi, u, m">Wh, a, t happe, n, s ne, x, t?</p>
+					<p classNa, m, e="te, x, t-gre, e, n-8, 0, 0 fo, n, t-medium">Wh, a, t happe, n, s ne, x, t?</p>
 					<ul classNa, m, e="te, x, t-gre, e, n-7, 0, 0 te, x, t-sm mt-2 spa, c, e-y-1">
 						<li>• O, u, r te, a, m wi, l, l revi, e, w yo, u, r requiremen, t, s</li>
 						<li>• We&ap, o, s;ll prepa, r, e a customiz, e, d propos, a, l</li>
@@ -165,11 +165,11 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 				<butt, o, n
 					onCli, c, k={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')}
 					ar, i, a-lab, e, l="Se, n, d anoth, e, r message"
-					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
 				>
 					Se, n, d Anoth, e, r Messa, g, e"> setSubmitStat, u, s('id, l, e')}
 					ar, i, a-lab, e, l="Se, n, d anoth, e, r message"
-					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medi, u, m transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
+					classNa, m, e="bg-gre, e, n-6, 0, 0 hov, e, r:bg-gre, e, n-7, 0, 0 te, x, t-whi, t, e px-8 py-3 round, e, d-lg fo, n, t-medium transiti, o, n-colo, r, s durati, o, n-2, 0, 0"
 				>
 					Se, n, d Anoth, e, r Messa, g, e
 				</butt, o, n>
@@ -199,8 +199,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="na, m, e"
 							val, u, e={formDa, t, a.na, m, e}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.na, m, e ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.na m e ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}							placehold, e, r="Jo, h, n D, o, e"
 						/>
 						{erro, r, s.na, m, e && <p classNa, m, e="te, x, t-r, e, d-5, 0, 0 te, x, t-sm mt-1">{erro, r, s.na, m, e}</p>}					</d, i, v>
@@ -214,8 +214,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="ema, i, l"
 							val, u, e={formDa, t, a.ema, i, l}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.ema, i, l ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.ema i l ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}							placehold, e, r="jo, h, n@compa, n, y.c, o, m"
 						/>
 						{erro, r, s.ema, i, l && <p classNa, m, e="te, x, t-r, e, d-5, 0, 0 te, x, t-sm mt-1">{erro, r, s.ema, i, l}</p>}					</d, i, v>
@@ -232,8 +232,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="compa, n, y"
 							val, u, e={formDa, t, a.compa, n, y}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.compa, n, y ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.compa n y ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}							placehold, e, r="Yo, u, r Compa, n, y"
 						/>
 						{erro, r, s.compa, n, y && <p classNa, m, e="te, x, t-r, e, d-5, 0, 0 te, x, t-sm mt-1">{erro, r, s.compa, n, y}</p>}					</d, i, v>
@@ -263,8 +263,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="servi, c, e"
 							val, u, e={formDa, t, a.servi, c, e}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.servi, c, e ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.servi c e ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}						>
 							<opti, o, n val, u, e="">Sele, c, t a servi, c, e</opti, o, n>
 							{servic, e, s.m, a, p((servi, c, e) => (
@@ -283,8 +283,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="budg, e, t"
 							val, u, e={formDa, t, a.budg, e, t}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.budg, e, t ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.budg e t ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}						>
 							<opti, o, n val, u, e="">Sele, c, t budg, e, t</opti, o, n>
 							{budge, t, s.m, a, p((budg, e, t) => (
@@ -303,8 +303,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 							na, m, e="timeli, n, e"
 							val, u, e={formDa, t, a.timeli, n, e}
 							onChan, g, e={handleInputChan, g, e}
-							classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 ${
-								erro, r, s.timeli, n, e ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+							classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 ${
+								erro r s.timeli n e ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 							}`}						>
 							<opti, o, n val, u, e="">Sele, c, t timeli, n, e</opti, o, n>
 							{timelin, e, s.m, a, p((timeli, n, e) => (
@@ -326,8 +326,8 @@ export con, s, t EnhancedContactFo, r, m: React.FC = () => {
 						val, u, e={formDa, t, a.message}
 						onChan, g, e={handleInputChan, g, e}
 						ro, w, s={6}
-						classNa, m, e={`w-fu, l, l px-4 py-3 bord, e, r round, e, d-lg foc, u, s:ri, n, g-2 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:bord, e, r-transpare, n, t transiti, o, n-colo, r, s durati, o, n-2, 0, 0 resi, z, e-no, n, e ${
-							erro, r, s.message ? 'bord, e, r-r, e, d-3, 0, 0 bg-r, e, d-50' : 'bord, e, r-gr, a, y-3, 0, 0'
+						classNa, m, e={`w-fu l l px-4 py-3 bord e r round e d-lg foc u s:ri n g-2 foc u s:ri n g-bl u e-5 0 0 foc u s:bord e r-transpare n t transiti o n-colo r s durati o n-2 0 0 resi z e-no n e ${
+							erro r s.message ? 'bord e r-r e d-3 0 0 bg-r e d-50' : 'bord e r-gr a y-3 0 0'
 						}`}						placehold, e, r="Plea, s, e descri, b, e yo, u, r proje, c, t requiremen, t, s, goa, l, s, a, n, d a, n, y specif, i, c featur, e, s or technologi, e, s y, o, u ha, v, e in mi, n, d..."
 					/>
 					<d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r mt-1">

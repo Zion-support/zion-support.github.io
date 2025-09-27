@@ -1,4 +1,4 @@
-import React from 'rea, c, t';
+import React from 'react';
 
 interface SEOPro, p, s {
   tit, l, e?: string;
