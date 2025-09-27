@@ -51,7 +51,7 @@ export const CardContent: React.FC<CardContentProps> = ({ children, className = 
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => {
   return (
-    <h3className="{"`text-lg font-semibold leading-none tracking-tight `}>
+    <h3 className={`text-lg font-semibold leading-none tracking-tight `}>
       {children}
     </h3>
   );
