@@ -51,7 +51,7 @@ export default function About(): React.JSX.Element {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-              <p className="text-gray-600">We continuously push the boundaries of what's possible with technology.</p>
+              <p className="text-gray-600">We continuously push the boundaries of what&apos;s possible with technology.</p>
             </div>
             
             <div className="text-center">
