@@ -50,9 +50,9 @@ const PerformanceProfiler: React.FC = () => {
     
     const fcp = fcpEntry ? fcpEntry.startTime : 0;
     const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || performance.now();
-    const fidEntry = performance.getEntriesByName('first-input')[0] as any;
+    const fidEntry = performance.getEntriesByName('first-input')[0] as PerformanceEntry & { processingStart?: number };
     const fid = fidEntry?.processingStart || 0;
-    const clsEntry = performance.getEntriesByName('layout-shift')[0] as any;
+    const clsEntry = performance.getEntriesByName('layout-shift')[0] as PerformanceEntry & { value?: number };
     const cls = clsEntry?.value || 0;
     const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
     const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
