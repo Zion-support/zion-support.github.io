@@ -17,13 +17,11 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       }
     }
   };
@@ -32,9 +30,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
 
   return () => {
-    element.removeEventListener('keydown', handleTabKey);
-  };
-};
+    element.removeEventListener('keydown', handleTabKey)}};
 
 // Announce messages to screen readers
 export const announceToScreenReader = (
@@ -50,9 +46,7 @@ export const announceToScreenReader = (
   document.body.appendChild(announcement);
   
   setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
+    document.body.removeChild(announcement)}, 1000)};
 
 // Skip link functionality
 export const createSkipLink = (
@@ -76,15 +70,12 @@ export const createSkipLink = (
   `;
   
   skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '6px';
-  });
+    skipLink.style.top = '6px'});
   
   skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px';
-  });
+    skipLink.style.top = '-40px'});
   
-  return skipLink;
-};
+  return skipLink};
 
 // High contrast mode detection
 export const isHighContrastMode = (): boolean => {
@@ -92,23 +83,19 @@ export const isHighContrastMode = (): boolean => {
   
   // Check for Windows High Contrast Mode
   if (window.matchMedia('(-ms-high-contrast: active)').matches) {
-    return true;
-  }
+    return true}
   
   // Check for forced colors
   if (window.matchMedia('(forced-colors: active)').matches) {
-    return true;
-  }
+    return true}
   
-  return false;
-};
+  return false};
 
 // Reduced motion detection
 export const prefersReducedMotion = (): boolean => {
   if (typeof window === 'undefined') return false;
   
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-};
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches};
 
 // Color contrast checker
 export const checkColorContrast = (
@@ -117,8 +104,7 @@ export const checkColorContrast = (
 ): {
   ratio: number;
   passes: boolean;
-  level: 'AA' | 'AAA' | 'fail';
-} => {
+  level: 'AA' | 'AAA' | 'fail'} => {
   // Convert hex to RGB
   const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -126,8 +112,7 @@ export const checkColorContrast = (
       r: parseInt(result[1], 16),
       g: parseInt(result[2], 16),
       b: parseInt(result[3], 16)
-    } : { r: 0, g: 0, b: 0 };
-  };
+    } : { r: 0, g: 0, b: 0 }};
 
   const fg = hexToRgb(foreground);
   const bg = hexToRgb(background);
@@ -136,10 +121,8 @@ export const checkColorContrast = (
   const getLuminance = (r: number, g: number, b: number): number => {
     const [rs, gs, bs] = [r, g, b].map(c => {
       c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  };
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
   const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
   const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
@@ -150,8 +133,7 @@ export const checkColorContrast = (
     ratio: Math.round(ratio * 100) / 100,
     passes: ratio >= 4.5,
     level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'
-  };
-};
+  }};
 
 // Keyboard navigation helpers
 export const handleKeyboardNavigation = (
@@ -187,8 +169,7 @@ export const handleKeyboardNavigation = (
     case 'ArrowRight':
       event.preventDefault();
       onArrowRight?.();
-      break;
-  }
+      break}
 };
 
 // ARIA live region management
@@ -200,19 +181,16 @@ export const createLiveRegion = (): HTMLElement => {
   liveRegion.id = 'live-region';
   
   if (!document.getElementById('live-region')) {
-    document.body.appendChild(liveRegion);
-  }
+    document.body.appendChild(liveRegion)}
   
-  return liveRegion;
-};
+  return liveRegion};
 
 // Screen reader only text
 export const createScreenReaderText = (text: string): HTMLElement => {
   const element = document.createElement('span');
   element.className = 'sr-only';
   element.textContent = text;
-  return element;
-};
+  return element};
 
 // Focus visible polyfill
 export const initFocusVisible = (): void => {
@@ -228,23 +206,18 @@ export const initFocusVisible = (): void => {
 
   const isKeyboardEvent = (event: Event): boolean => {
     const { type, key } = event as KeyboardEvent;
-    return type === 'keydown' && key === 'Tab' || inputTypes.has((event.target as HTMLInputElement)?.type);
-  };
+    return type === 'keydown' && key === 'Tab' || inputTypes.has((event.target as HTMLInputElement)?.type)};
 
   const updateFocusVisible = (event: Event): void => {
     if (isKeyboardEvent(event)) {
-      hadKeyboardEvent = true;
-    } else {
-      hadKeyboardEvent = false;
-    }
+      hadKeyboardEvent = true} else {
+      hadKeyboardEvent = false}
   };
 
   const updateFocusVisibleThrottled = (event: Event): void => {
     if (keyboardThrottleTimeout) {
-      clearTimeout(keyboardThrottleTimeout);
-    }
-    keyboardThrottleTimeout = setTimeout(() => updateFocusVisible(event), 100);
-  };
+      clearTimeout(keyboardThrottleTimeout)}
+    keyboardThrottleTimeout = setTimeout(() => updateFocusVisible(event), 100)};
 
   document.addEventListener('keydown', updateFocusVisible, true);
   document.addEventListener('mousedown', updateFocusVisibleThrottled, true);
@@ -254,11 +227,8 @@ export const initFocusVisible = (): void => {
   // Add focus-visible class to focused elements
   document.addEventListener('focus', (event) => {
     if (hadKeyboardEvent) {
-      (event.target as HTMLElement).classList.add('focus-visible');
-    }
+      (event.target as HTMLElement).classList.add('focus-visible')}
   }, true);
 
   document.addEventListener('blur', (event) => {
-    (event.target as HTMLElement).classList.remove('focus-visible');
-  }, true);
-};
+    (event.target as HTMLElement).classList.remove('focus-visible')}, true)};

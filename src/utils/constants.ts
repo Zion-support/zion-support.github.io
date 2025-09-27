@@ -4,8 +4,7 @@ export interface Service {
   description: string;
   icon: string;
   features?: string[];
-  price?: string;
-}
+  price?: string}
 
 export const SERVICES: Service[] = [
   {
@@ -93,8 +92,7 @@ export interface Testimonial {
   company: string;
   content: string;
   avatar?: string;
-  rating: number;
-}
+  rating: number}
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -132,8 +130,7 @@ export interface PricingTier {
   features: string[];
   isPopular?: boolean;
   buttonText: string;
-  buttonVariant: 'primary' | 'secondary';
-}
+  buttonVariant: 'primary' | 'secondary'}
 
 export const PRICING_TIERS: PricingTier[] = [
   {
@@ -201,8 +198,7 @@ export interface BlogPost {
   readTime: string;
   category: string;
   image: string;
-  slug: string;
-}
+  slug: string}
 
 export const BLOG_POSTS: BlogPost[] = [
   {

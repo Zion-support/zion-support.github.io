@@ -12,8 +12,7 @@ export interface ErrorInfo {
   userAgent: string;
   url: string;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 export interface ErrorContext {
   componentName?: string;
@@ -21,8 +20,7 @@ export interface ErrorContext {
   props?: Record<string, any>;
   state?: Record<string, any>;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 // Error severity levels
 export enum ErrorSeverity {
@@ -50,13 +48,11 @@ export interface ErrorReport {
   context?: ErrorContext;
   resolved: boolean;
   createdAt: string;
-  updatedAt: string;
-}
+  updatedAt: string}
 
 // Generate unique error ID
 export const generateErrorId = (): string => {
-  return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
+  return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
 
 // Categorize error
 export const categorizeError = (error: Error): ErrorCategory => {
@@ -64,27 +60,21 @@ export const categorizeError = (error: Error): ErrorCategory => {
   const stack = error.stack?.toLowerCase() || '';
 
   if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
-    return ErrorCategory.NETWORK;
-  }
+    return ErrorCategory.NETWORK}
   
   if (message.includes('validation') || message.includes('invalid') || message.includes('required')) {
-    return ErrorCategory.VALIDATION;
-  }
+    return ErrorCategory.VALIDATION}
   
   if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {
-    return ErrorCategory.SECURITY;
-  }
+    return ErrorCategory.SECURITY}
   
   if (message.includes('performance') || message.includes('memory') || message.includes('timeout')) {
-    return ErrorCategory.PERFORMANCE;
-  }
+    return ErrorCategory.PERFORMANCE}
   
   if (stack.includes('react') || stack.includes('component')) {
-    return ErrorCategory.RUNTIME;
-  }
+    return ErrorCategory.RUNTIME}
   
-  return ErrorCategory.UNKNOWN;
-};
+  return ErrorCategory.UNKNOWN};
 
 // Determine error severity
 export const determineErrorSeverity = (error: Error, category: ErrorCategory): ErrorSeverity => {
@@ -92,30 +82,24 @@ export const determineErrorSeverity = (error: Error, category: ErrorCategory): E
   
   // Critical errors
   if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {
-    return ErrorSeverity.CRITICAL;
-  }
+    return ErrorSeverity.CRITICAL}
   
   if (category === ErrorCategory.SECURITY) {
-    return ErrorSeverity.CRITICAL;
-  }
+    return ErrorSeverity.CRITICAL}
   
   // High severity errors
   if (message.includes('fatal') || message.includes('critical') || message.includes('crash')) {
-    return ErrorSeverity.HIGH;
-  }
+    return ErrorSeverity.HIGH}
   
   if (category === ErrorCategory.NETWORK && message.includes('timeout')) {
-    return ErrorSeverity.HIGH;
-  }
+    return ErrorSeverity.HIGH}
   
   // Medium severity errors
   if (category === ErrorCategory.VALIDATION || category === ErrorCategory.RUNTIME) {
-    return ErrorSeverity.MEDIUM;
-  }
+    return ErrorSeverity.MEDIUM}
   
   // Low severity errors
-  return ErrorSeverity.LOW;
-};
+  return ErrorSeverity.LOW};
 
 // Create error report
 export const createErrorReport = (
@@ -144,8 +128,7 @@ export const createErrorReport = (
     resolved: false,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
-  };
-};
+  }};
 
 // Send error report to monitoring service
 export const sendErrorReport = async (report: ErrorReport): Promise<void> => {
@@ -159,14 +142,11 @@ export const sendErrorReport = async (report: ErrorReport): Promise<void> => {
       await fetch('/api/error-reporting', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json'},
         body: JSON.stringify(report)
-      });
-    }
+      })}
   } catch (error) {
-    console.error('Failed to send error report:', error);
-  }
+    console.error('Failed to send error report:', error)}
 };
 
 // Retry function with exponential backoff
@@ -179,21 +159,17 @@ export const retryWithBackoff = async <T>(
   
   for (let i = 0; i < maxRetries; i++) {
     try {
-      return await fn();
-    } catch (error) {
+      return await fn()} catch (error) {
       lastError = error as Error;
       
       if (i === maxRetries - 1) {
-        throw lastError;
-      }
+        throw lastError}
       
       const delay = baseDelay * Math.pow(2, i);
-      await new Promise(resolve => setTimeout(resolve, delay));
-    }
+      await new Promise(resolve => setTimeout(resolve, delay))}
   }
   
-  throw lastError!;
-};
+  throw lastError!};
 
 // Safe async function wrapper
 export const safeAsync = async <T>(
@@ -202,12 +178,10 @@ export const safeAsync = async <T>(
   onError?: (error: Error) => void
 ): Promise<T | undefined> => {
   try {
-    return await fn();
-  } catch (error) {
+    return await fn()} catch (error) {
     const err = error as Error;
     onError?.(err);
-    return fallback;
-  }
+    return fallback}
 };
 
 // Error boundary helper
@@ -219,8 +193,7 @@ export const getErrorBoundaryInfo = (error: Error, errorInfo: any): ErrorInfo =>
     timestamp: new Date().toISOString(),
     userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Server',
     url: typeof window !== 'undefined' ? window.location.href : 'Server'
-  };
-};
+  }};
 
 // Global error handler
 export const setupGlobalErrorHandling = (): void => {
@@ -232,8 +205,7 @@ export const setupGlobalErrorHandling = (): void => {
     const report = createErrorReport(error, {
       action: 'unhandled_promise_rejection'
     });
-    sendErrorReport(report);
-  });
+    sendErrorReport(report)});
   
   // Handle global errors
   window.addEventListener('error', (event) => {
@@ -246,9 +218,7 @@ export const setupGlobalErrorHandling = (): void => {
         colno: event.colno
       }
     });
-    sendErrorReport(report);
-  });
-};
+    sendErrorReport(report)})};
 
 // Error recovery strategies
 export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {
@@ -264,6 +234,5 @@ export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {
     case ErrorCategory.PERFORMANCE:
       return 'Reduce resource usage or show performance warning';
     default:
-      return 'Show generic error message and retry option';
-  }
+      return 'Show generic error message and retry option'}
 };

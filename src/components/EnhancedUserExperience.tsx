@@ -8,12 +8,10 @@ interface UserPreferences {
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
 interface EnhancedUserExperienceProps {
-  className?: string;
-}
+  className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
   const [preferences, setPreferences] = useState<UserPreferences>({
@@ -34,17 +32,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElement.setAttribute('data-theme', value);
-    }
+      document.documentElement.setAttribute('data-theme', value)}
     if (key === 'fontSize') {
-      document.documentElement.setAttribute('data-font-size', value);
-    }
+      document.documentElement.setAttribute('data-font-size', value)}
     if (key === 'highContrast') {
-      document.documentElement.setAttribute('data-high-contrast', value.toString());
-    }
+      document.documentElement.setAttribute('data-high-contrast', value.toString())}
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion', value.toString());
-    }
+      document.documentElement.setAttribute('data-reduced-motion', value.toString())}
   }, []);
 
   const detectSystemPreferences = useCallback(() => {
@@ -52,12 +46,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')}
     
     if (preferences.reducedMotion !== prefersReducedMotion) {
-      updatePreference('reducedMotion', prefersReducedMotion);
-    }
+      updatePreference('reducedMotion', prefersReducedMotion)}
   }, [preferences.theme, preferences.reducedMotion, updatePreference]);
 
   useEffect(() => {
@@ -65,8 +57,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const saved = localStorage.getItem('userPreferences');
     if (saved) {
       const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }));
-    }
+      setPreferences(prev => ({ ...prev, ...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -77,15 +68,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
     return () => {
       darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change', detectSystemPreferences);
-    };
-  }, [detectSystemPreferences]);
+      motionQuery.removeEventListener('change', detectSystemPreferences)}}, [detectSystemPreferences]);
 
   useEffect(() => {
     // Save preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences();
-  }, [preferences, detectSystemPreferences]);
+    detectSystemPreferences()}, [preferences, detectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -296,7 +284,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

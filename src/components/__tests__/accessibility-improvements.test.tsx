@@ -7,9 +7,7 @@ import { AccessibilityEnhancements } from '../AccessibilityEnhancements';
 // Mock Next.js Head component
 jest.mock('next/head', () => {
   return function Head({ children }: { children: React.ReactNode }) {
-    return <>{children}</>;
-  };
-});
+    return <>{children}</>}});
 
 describe('SEOOptimizer', () => {
   const mockSEOData = {
@@ -28,76 +26,59 @@ describe('SEOOptimizer', () => {
 
   it('renders SEO optimizer component', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
-    expect(document.title).toBe('Test Page Title');
-  });
+    expect(document.title).toBe('Test Page Title')});
 
   it('sets meta description correctly', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
     const metaDescription = document.querySelector('meta[name="description"]');
-    expect(metaDescription).toHaveAttribute('content', mockSEOData.description);
-  });
+    expect(metaDescription).toHaveAttribute('content', mockSEOData.description)});
 
   it('sets canonical URL correctly', () => {
     render(<SEOOptimizer seoData={mockSEOData} />);
     const canonical = document.querySelector('link[rel="canonical"]');
-    expect(canonical).toHaveAttribute('href', mockSEOData.canonical);
-  });
-});
+    expect(canonical).toHaveAttribute('href', mockSEOData.canonical)})});
 
 describe('AdvancedCacheManager', () => {
   it('renders cache manager component', () => {
     render(<AdvancedCacheManager />);
-    expect(screen.getByTestId('cache-manager')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('cache-manager')).toBeInTheDocument()});
 
   it('shows cache status information', async () => {
     render(<AdvancedCacheManager />);
     
     await waitFor(() => {
-      expect(screen.getByText('Cache Status')).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Cache Status')).toBeInTheDocument()})});
 
   it('displays cache statistics', async () => {
     render(<AdvancedCacheManager />);
     
     await waitFor(() => {
-      expect(screen.getByText('Cache Hit Rate')).toBeInTheDocument();
-    });
-  });
-});
+      expect(screen.getByText('Cache Hit Rate')).toBeInTheDocument()})})});
 
 describe('AccessibilityEnhancements', () => {
   it('renders accessibility component', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByTestId('accessibility-enhancements')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('accessibility-enhancements')).toBeInTheDocument()});
 
   it('shows accessibility features list', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Accessibility Features')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Accessibility Features')).toBeInTheDocument()});
 
   it('displays contrast ratio information', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Contrast Ratio')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Contrast Ratio')).toBeInTheDocument()});
 
   it('shows recommendations when features are disabled', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Recommendations')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Recommendations')).toBeInTheDocument()});
 
   it('provides keyboard navigation support', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Keyboard Navigation')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Keyboard Navigation')).toBeInTheDocument()});
 
   it('shows screen reader optimizations', () => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Screen Reader Support')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByText('Screen Reader Support')).toBeInTheDocument()})});
 
 describe('IntegrationTests', () => {
   it('all components work together without conflicts', () => {
@@ -116,6 +97,4 @@ describe('IntegrationTests', () => {
     );
 
     expect(screen.getByTestId('cache-manager')).toBeInTheDocument();
-    expect(screen.getByTestId('accessibility-enhancements')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByTestId('accessibility-enhancements')).toBeInTheDocument()})});
