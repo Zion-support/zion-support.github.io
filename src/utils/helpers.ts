@@ -149,7 +149,7 @@ export const validationUtils = {
     return emailRegex.test(email);
   },
   phone: (phone: string): boolean => {
-    const phoneRegex = /^\+?[\d\s\-\(\)]+$/;
+    const phoneRegex = /^\+?[\d\s\-()]+$/;
     return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 10;
   },
   url: (url: string): boolean => {
