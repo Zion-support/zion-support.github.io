@@ -26887,3 +26887,42 @@ src/utils/cartUtils.js
 [2025-09-27 10:20:21] 🔧 Resolving conflicts in src/utils/cartUtils.js for branch backup-main-20250926-083317...
 [2025-09-27 10:20:21] 🧩 Generic file: prefer main version
 [2025-09-27 10:20:21] ✅ Resolved conflicts in src/utils/cartUtils.js
+[2025-09-27 10:20:22] ✅ Successfully resolved conflicts and merged backup-main-20250926-083317
+[2025-09-27 10:20:22] ✅ Branch backup-main-20250926-083317 processed successfully
+[2025-09-27 10:20:22] 📊 Batch progress: 36 successful, 0 failed
+[2025-09-27 10:20:22] 📊 Overall progress: 36 successful, 0 failed, 6005 conflicts resolved
+[2025-09-27 10:20:22] 📋 Processing branch 37: backup-main-20250926-084823
+[2025-09-27 10:20:22] 🔄 Attempting to merge backup-main-20250926-084823...
+[2025-09-27 10:20:23] ⚠️  Merge conflicts detected in backup-main-20250926-084823, resolving...
+[2025-09-27 10:20:23] 📋 Conflicted files: .eslintignore
+next.config.js
+package-lock.json
+package.json
+src/App.tsx
+src/main.tsx
+zion-website/database/connection.js
+zion-website/src/app/layout.tsx
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in .eslintignore for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in .eslintignore
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in next.config.js for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] ⚙️ Config file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in next.config.js
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 📦 Package file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in package-lock.json
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 📦 Package file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in package.json
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in src/App.tsx for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in src/App.tsx
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in src/main.tsx for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in src/main.tsx
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in zion-website/database/connection.js for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in zion-website/database/connection.js
+[2025-09-27 10:20:23] 🔧 Resolving conflicts in zion-website/src/app/layout.tsx for branch backup-main-20250926-084823...
+[2025-09-27 10:20:23] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:23] ✅ Resolved conflicts in zion-website/src/app/layout.tsx

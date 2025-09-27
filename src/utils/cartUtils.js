@@ -21,6 +21,11 @@ const cartUtils = {
     }
     return cart.map(item => (item.id === itemId ? { ...item, quantity } : item))
   },
+  
+  getTotalItems: (cart) => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  }}
+};
 
   getTotalItems: cart => {
     return cart.reduce((total, item) => total + item.quantity, 0)

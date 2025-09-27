@@ -30,14 +30,14 @@ const AuthRoutes = () => {
 
       <Route
         path="/settings"
-        element={
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  )
-}
+        element={;
+          <ProtectedRoute>;
+            <div>Settings</[^>]*>
+          </[^>]*>
+        };
+      />;
+    </[^>]*>
+  );
+};
 
 export default AuthRoutes;
