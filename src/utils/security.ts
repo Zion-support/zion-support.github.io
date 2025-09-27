@@ -120,7 +120,7 @@ class SecurityManager {
     // Check if page is in iframe
     if (window !== window.top) {
       // Redirect to main page if in iframe
-      window.top.location.href = window.location.href;
+      window.top!.location.href = window.location.href;
     }
   }
 

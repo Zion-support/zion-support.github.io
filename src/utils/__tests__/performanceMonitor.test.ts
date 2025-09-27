@@ -33,7 +33,7 @@ describe('performanceMonitor', () => {
   });
 
   it('should handle missing performance API gracefully', () => {
-    // @ts-ignore
+    // @ts-expect-error - Performance API is being deleted for testing
     delete window.performance;
     
     expect(() => {

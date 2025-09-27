@@ -210,7 +210,7 @@ class AnalyticsManager {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
-          tti = navEntry.domContentLoadedEventEnd - navEntry.navigationStart;
+          tti = navEntry.domContentLoadedEventEnd - (navEntry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart;
           this.trackPerformanceMetric({
             name: 'time_to_interactive',
             value: tti,
