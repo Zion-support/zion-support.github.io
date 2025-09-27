@@ -136,7 +136,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       newAlerts.push('⚠️ Largest Contentful Paint is slow (>2.5s)');
     }
     if (metrics.firstInputDelay > 100) {
-      newAlerts.push('⚠️ First Input Delay is high (>100 ms)');
+      newAlerts.push('⚠️ First Input Delay is high (>100ms)');
     }
     if (metrics.cumulativeLayoutShift > 0.1) {
       newAlerts.push('⚠️ Cumulative Layout Shift is high (>0.1)');
@@ -181,6 +181,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
       className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}
     >
       <div className="flex items-center justify-between mb-6">
@@ -189,52 +190,99 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </h3>
         <div className="flex items-center space-x-2">
           <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+=======
+      className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}
+    >
+      <div className="flex items-center justify-between mb-6">
+        <h3className="text-xl font-semibold text-gray-900dark:text-white" id="performance-monitor">
+          Performance Monitor
+        </h3>
+        <div className="flex items-center space-x-2">
+          <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
           <span className="text-sm text-gray-600dark:text-gray-400">
             {isMonitoring ? 'Monitoring' : 'Stopped'}
           </span>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         <div className="bg-gray-50 dar k:bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">Load Time</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}` }>
+=======
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4mb-6">
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Load Time</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             {formatTime(metrics.loadTime)}
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">First Contentful Paint</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}` }>
+=======
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             {formatTime(metrics.firstContentfulPaint)}
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">Largest Contentful Paint</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}` }>
+=======
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Largest Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             {formatTime(metrics.largestContentfulPaint)}
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">First Input Delay</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}` }>
+=======
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Input Delay</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             {formatTime(metrics.firstInputDelay)}
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">Cumulative Layout Shift</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}` }>
+=======
+        <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Cumulative Layout Shift</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             {formatScore(metrics.cumulativeLayoutShift)}
           </div>
         </div>
 
         {metrics.memoryUsage && (
+<<<<<<< HEAD
           <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
             <div className="text-sm text-gray-600 dar k:text-gray-400mb-1">Memory Usage</div>
             <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}` }>
+=======
+          <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+            <div className="text-sm text-gray-600dark:text-gray-400mb-1">Memory Usage</div>
+            <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
               {metrics.memoryUsage}MB
             </div>
           </div>
@@ -247,12 +295,12 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-yellow-50 dark: bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lgp-4"
+            className="bg-yellow-50dark: bg-yellow-900/20border border-yellow-200dark:border-yellow-800rounded-lgp-4"
           >
-            <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2" id="performance-alerts">Performance Alerts</h4>
+            <h4className="font-semibold text-yellow-800dark:text-yellow-200mb-2" id="performance-alerts">Performance Alerts</h4>
             <ul className="space-y-1">
               {alerts.map((alert, index) => (
-                <li key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                <li key={index} className="text-sm text-yellow-700dark:text-yellow-300">
                   {alert}
                 </li>
               ))}
@@ -266,15 +314,24 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           onClick={isMonitoring ? stopMonitoring : startMonitoring}
           className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
             isMonitoring
+<<<<<<< HEAD
               ? 'bg-red-500 hover:bg-red-600 text-white'
               : 'bg-green-500 hove, r:bg-green-600 text-white'
+=======
+              ? 'bg-red-500hover:bg-red-600text-white'
+              : 'bg-green-500hover:bg-green-600text-white'
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
           }`}
          aria-label="{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}">
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
         <button
           onClick={collectMetrics}
+<<<<<<< HEAD
           className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
+=======
+          className="px-4py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-mediumtransition-colors"
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
          aria-label="Refresh Metrics">
           Refresh Metrics
         </button>

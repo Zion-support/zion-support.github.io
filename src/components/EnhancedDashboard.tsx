@@ -1,21 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell,
-  Area,
-  AreaChart
-} from 'recharts';
+import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
 
 interface DashboardWidget {
   id: string;
@@ -27,13 +12,14 @@ interface DashboardWidget {
 }
 
 interface DashboardProps {
-  widgets?: DashboardWidget[];
-  enableDragDrop?: boolean;
-  enableResize?: boolean;
-  enableFullscreen?: boolean;
-  onWidgetUpdate?: (widgets: DashboardWidget[]) => void;
+  widgets: DashboardWidget[];
+  onWidgetUpdate?: (widget: DashboardWidget) => void;
+  onWidgetAdd?: (widget: Omit<DashboardWidget, 'id'>) => void;
+  onWidgetRemove?: (widgetId: string) => void;
+  className?: string;
 }
 
+<<<<<<< HEAD
 const sampleData = {
   revenue: [
     { mont, h: 'Jan', revenue: 4000, profit: 2400 },
@@ -285,30 +271,40 @@ export default function EnhancedDashboard({
               Settings
             </button>
           </div>
+=======
+export const EnhancedDashboard: React.FC<DashboardProps> = ({
+  widgets,
+  onWidgetUpdate,
+  onWidgetAdd,
+  onWidgetRemove,
+  className = ''
+}) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  return (
+    <div className={`min-h-screen bg-gray-50 py-8 ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            Enhanced Dashboard
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400">
+            Customizable dashboard with real-time metrics and analytics
+          </p>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
         </div>
 
-        <div className="grid grid-cols-3gap-6auto-rows-min">
-          {dashboardWidgets.map(renderWidget)}
-        </div>
-      </div>
-
-      {/* Fullscreen Modal */}
-      <AnimatePresence>
-        {isFullscreen && selectedWidget && (
-          <motion.div
-            className="fixed inset-0bg-black bg-opacity-50 flex items-center justify-centerz-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsFullscreen(false)}
-          >
+        {/* Widgets Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {widgets.map(widget => (
             <motion.div
-              className="bg-white rounded-lg p-8max-w-6xl max-h-[90 vh]overflow-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
+              key={widget.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
             >
+<<<<<<< HEAD
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
@@ -319,13 +315,31 @@ export default function EnhancedDashboard({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
+=======
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {widget.title}
+                </h3>
+                <div className="flex items-center space-x-2">
+                  <Activity className="w-4 h-4 text-blue-500" />
+                </div>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
               </div>
-              <div className="h-96">{renderChart(dashboardWidgets.find(w => w.id === selectedWidget)!)}
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">
+                  {widget.data?.value || '0'}
+                </div>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {widget.data?.label || 'No data'}
+                </p>
               </div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default EnhancedDashboard;

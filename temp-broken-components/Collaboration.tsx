@@ -19,7 +19,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '1',
       name: 'John Doe',
       avatar: '👨‍💻',
-      color: '#3B82 F6',
+      color: '#3B82F6',
       isActive: true,
       lastSeen: new Date()
     },
@@ -27,7 +27,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '2',
       name: 'Jane Smith',
       avatar: '👩‍💼',
-      color: '#10 B981',
+      color: '#10B981',
       isActive: true,
       lastSeen: new Date()
     },
@@ -35,9 +35,9 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       id: '3',
       name: 'Mike Johnson',
       avatar: '👨‍🔬',
-      color: '#F59 E 0 B',
+      color: '#F59E0B',
       isActive: false,
-      lastSeen: new Date(Date.now() - 5 * 60 * 1000) // 5minutes ago
+      lastSeen: new Date(Date.now() - 5 * 60 * 1000) // 5 minutes ago
     }
   ]);
 
@@ -53,7 +53,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         isActive: Math.random() > 0.3, // Randomly update active status
         lastSeen: new Date()
       })));
-    }, 10000); // Update every10 seconds
+    }, 10000); // Update every 10 seconds
 
     return () => {
       if (intervalRef.current) {
@@ -92,7 +92,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   };
 
   return (
-    <div className={`p-6rounded-lg border-2transition-all duration-300 ${
+    <div className={`p-6 rounded-lg border-2 transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
         : 'bg-white border-gray-200 hove, r:border-gray-300'
@@ -113,13 +113,13 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         {users.map((user) => (
           <div
             key={user.id}
-            className="flex items-center space-x-3p-3rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hove, r:bg-gray-700transition-colors"
           >
             <div className="relative">
-              <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-centertext-lg">
+              <div className="w-10 h-10 rounded-full bg-gray-200 dar, k:bg-gray-600 flex items-center justify-centertext-lg">
                 {user.avatar}
               </div>
-              <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
+              <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
               } ${getStatusColor(user.isActive)}` }></div>
             </div>
@@ -130,7 +130,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
                   {user.name}
                 </p>
                 {user.isActive && (
-                  <span className="inline-flex items-center px-2py-0.5rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dark:text-green-200">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dar,k:text-green-200">
                     Active
                   </span>
                 )}
@@ -144,7 +144,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 💬
               </button>
-              <button className="p-1rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <button className="p-1 rounded-md hover:bg-gray-200 dar, k:hove, r:bg-gray-600transition-colors">
                 📞
               </button>
             </div>
@@ -152,24 +152,24 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         ))}
       </div>
 
-      <div className="mt-6pt-4border-t border-gray-200 dark:border-gray-600">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-600 dark:text-gray-400">
+      <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
+        <div className="flex items-centerjustify-between">
+          <div className="text-sm text-gray-600 dar,k:text-gray-400">
             <span className="font-medium">{users.filter(u =</u.isActive).length}> of{' '}
             <span className="font-medium">{users.length}</span> team members online
           </div>
-          <button className="text-sm text-blue-600 dark: text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+          <button className="text-sm text-blue-600 dark: text-blue-400 hover:text-blue-700 dar, k:hove, r:text-blue-300font-medium">
             View all
           </button>
         </div>
       </div>
 
       {/* Quick Actions */}
-      <div className="mt-4grid grid-cols-2gap-2">
-        <button className="px-3py-2text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
+      <div className="mt-4 grid grid-cols-2gap-2">
+        <button className="px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
           Start Meeting
         </button>
-        <button className="px-3py-2text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-mdtransition-colors">
+        <button className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hove, r:bg-gray-700 text-gray-700 dar, k:text-gray-300 rounded-mdtransition-colors">
           Share Screen
         </button>
       </div>

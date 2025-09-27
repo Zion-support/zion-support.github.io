@@ -27,7 +27,7 @@ export const SystemHealthMonitor: React.FC = () => {
   const updateHealth = () => {
     // Simulate real-time health monitoring
     const now = Date.now();
-    const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour uptime
+    const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1 hour uptime
     
     setHealth({
       status: Math.random() > 0.1 ? 'healthy' : 'warning',
@@ -59,12 +59,16 @@ export const SystemHealthMonitor: React.FC = () => {
     <div className="p-6 bg-white rounded-lgshadow-lg">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold">System Health Monitor</h2>
+<<<<<<< HEAD
         <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(health.status)}`}>
+=======
+        <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(health.status)}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
           {health.status.toUpperCase()}
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3gap-6">
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Uptime</h3>
           <div className="text-2xl font-boldtext-gray-900">
@@ -91,9 +95,9 @@ export const SystemHealthMonitor: React.FC = () => {
           <div className="text-2xl font-boldtext-gray-900">
             {health.cpuUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-gray-200 rounded-fullh-2">
             <div 
-              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+              className="bg-blue-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.cpuUsage}%` }}
             />
           </div>
@@ -104,9 +108,9 @@ export const SystemHealthMonitor: React.FC = () => {
           <div className="text-2xl font-boldtext-gray-900">
             {health.memoryUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-gray-200 rounded-fullh-2">
             <div 
-              className="bg-green-600 h-2 rounded-full transition-all duration-300"
+              className="bg-green-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.memoryUsage}%` }}
             />
           </div>

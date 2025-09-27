@@ -78,7 +78,6 @@ class ErrorBoundary extends Component<Props, State> {
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                    </div>
                   )}
                 </div>
               </details>

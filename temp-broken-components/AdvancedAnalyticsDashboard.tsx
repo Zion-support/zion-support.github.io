@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
   pageViews: number;
@@ -23,71 +22,61 @@ interface AnalyticsData {
 interface AdvancedAnalyticsDashboardProps {
   data: AnalyticsData;
   onDataRefresh?: () => void;
+  isRealTime?: boolean;
   className?: string;
 }
-
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
 
 export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProps> = ({
   data,
   onDataRefresh,
+  isRealTime = false,
   className = ''
 }) => {
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [selectedMetric, setSelectedMetric] = useState('visitors');
-  const [isRealTime, setIsRealTime] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
+  const [timeRange, setTimeRange] = useState<string>('7d');
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
-    return num.toString();
-  };
-
-  const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
-
-  const getMetricColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
-    if (value >= thresholds.good) return 'text-green-500';
-    if (value >= thresholds.warning) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  const timeRangeOptions = [
-    { value: '1d', label: 'Last 24 Hours' },
-    { value: '7d', label: 'Last 7 Days' },
-    { value: '30d', label: 'Last 30 Days' },
-    { value: '90d', label: 'Last 90 Days' }
-  ];
-
-  const metricOptions = [
-    { value: 'visitors', label: 'Visitors' },
+  const metrics = [
     { value: 'pageViews', label: 'Page Views' },
+    { value: 'uniqueVisitors', label: 'Unique Visitors' },
     { value: 'bounceRate', label: 'Bounce Rate' },
     { value: 'conversionRate', label: 'Conversion Rate' }
   ];
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}` }>
-      {/* Header */}
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">
+            Analytics Dashboard
+          </h2>
           <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
+<<<<<<< HEAD
             <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}` } />
             <span className="text-sm text-gray-600dark:text-gray-400">
+=======
+            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
               {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>
           <button
             onClick={onDataRefresh}
+<<<<<<< HEAD
             className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
             aria-label="Refresh">
+=======
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+          >
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             Refresh
           </button>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4mb-6">
@@ -114,17 +103,28 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
               <option key={option.value} value={option.value}>{option.label}</option>
             ))}
           </select>
+=======
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-gray-600">Page Views</div>
+          <div className="text-2xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
         </div>
-        <button
-          onClick={() => setIsRealTime(!isRealTime)}
-          aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            isRealTime
-              ? 'bg-green-500 hover:bg-green-600 text-white'
-              : 'bg-gray-500 hove, r:bg-gray-600 text-white'
-          }` }
-        </button>
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-gray-600">Unique Visitors</div>
+          <div className="text-2xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-gray-600">Bounce Rate</div>
+          <div className="text-2xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-gray-600">Conversion Rate</div>
+          <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
+        </div>
       </div>
+<<<<<<< HEAD
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
@@ -296,6 +296,8 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </motion.div>
         )}
       </AnimatePresence>
+=======
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
     </div>
   );
 };

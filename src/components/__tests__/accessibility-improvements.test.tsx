@@ -189,7 +189,7 @@ describe('AccessibilityEnhancements', () => {
     render(<AccessibilityEnhancements />);
     
     expect(screen.getByText('Accessibility Standards')).toBeInTheDocument();
-    expect(screen.getByText(/WCAG2.1AA compliance/)).toBeInTheDocument();
+    expect(screen.getByText(/WCAG 2.1 AA compliance/)).toBeInTheDocument();
     expect(screen.getByText(/Section 508 compliance/)).toBeInTheDocument();
     expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();
   });

@@ -10,8 +10,8 @@ interface LoadingSpinnerProps {
 }
 
 const sizeClasses = {
-  sm: 'w-4h-4',
-  md: 'w-8h-8',
+  sm: 'w-4 h-4',
+  md: 'w-8 h-8',
   lg: 'w-12 h-12',
   xl: 'w-16 h-16'
 };
@@ -32,7 +32,11 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   const spinner = (
     <motion.div
+<<<<<<< HEAD
       className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+=======
+      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}` }
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
       animate={{ rotate: 360 }}
       transition={{
         duration: 1,
@@ -44,7 +48,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className="w-fullh-full"
         fill="none"
         stroke="currentColor"
-        viewBox="002424"
+        viewBox="0 0 24 24"
       >
         <circle
           cx="12"
@@ -65,7 +69,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-centerz-50"
+        className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-centerz-50"
       >
         <div className="text-center">
           {spinner}
@@ -74,7 +78,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-4text-gray-600 font-medium"
+              className="mt-4 text-gray-600font-medium"
             >
               {text}
             </motion.p>
@@ -92,7 +96,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600 font-medium"
+          className="text-gray-600font-medium"
         >
           {text}
         </motion.p>
@@ -111,7 +115,11 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   className = ''
 }) => {
   return (
+<<<<<<< HEAD
     <div className={`animate-pulse ${className}`}>
+=======
+    <div className={`animate-pulse ${className}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
       {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
@@ -141,7 +149,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50to-indigo-100"
     >
       <div className="text-center max-w-md mx-autopx-6">
         <motion.div
@@ -157,14 +165,15 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
               repeat: Infinity,
               ease: 'linear'
             }}
-            className="w-8h-8border-2border-white border-t-transparentrounded-full"
+            className="w-8 h-8 border-2 border-white border-t-transparentrounded-full"
           />
         </motion.div>
 
-        <motion.h2 initial={{ opacity: 0, y: 20 }}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl font-bold text-gray-900 mb-4"
+          className="text-2xl font-bold text-gray-900mb-4"
         >
           {message}
         </motion.h2>
@@ -189,7 +198,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-2h-2bg-blue-600 rounded-full"
+              className="w-2 h-2 bg-blue-600rounded-full"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5]
@@ -215,18 +224,22 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   className = ''
 }) => {
   return (
+<<<<<<< HEAD
     <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}`}>
+=======
+    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
       <div className="flex items-center space-x-4mb-4">
         <div className="w-12 h-12 bg-gray-200rounded-full" />
         <div className="flex-1">
-          <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-          <div className="h-3 bg-gray-200 rounded w-1/2" />
+          <div className="h-4 bg-gray-200 rounded w-3/4mb-2" />
+          <div className="h-3 bg-gray-200 roundedw-1/2" />
         </div>
       </div>
       <div className="space-y-3">
-        <div className="h-4 bg-gray-200 rounded w-full" />
-        <div className="h-4 bg-gray-200 rounded w-5/6" />
-        <div className="h-4 bg-gray-200 rounded w-4/6" />
+        <div className="h-4 bg-gray-200 roundedw-full" />
+        <div className="h-4 bg-gray-200 roundedw-5/6" />
+        <div className="h-4 bg-gray-200 roundedw-4/6" />
       </div>
     </div>
   );

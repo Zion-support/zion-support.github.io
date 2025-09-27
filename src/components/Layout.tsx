@@ -93,7 +93,11 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     <ErrorBoundary>
       <div className={`min-h-screen transition-colors duration-300 ${
         isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
+<<<<<<< HEAD
       }`}>
+=======
+      }` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
         <Navigation
           currentTime={currentTime}
           isDarkMode={isDarkMode}

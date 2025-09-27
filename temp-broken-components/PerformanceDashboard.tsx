@@ -8,8 +8,8 @@ interface PerformanceMetrics {
   firstPaint: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  firstInputDela, y: number;
+  cumulativeLayoutShif, t: number;
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -85,8 +85,8 @@ const PerformanceDashboard: React.FC = () => {
 
   if (!isSupported) {
     return (
-      <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-md">
-        <p className="text-sm text-yellow-800">
+      <div className="p-4 bg-yellow-50 border border-yellow-200rounded-md">
+        <p className="text-smtext-yellow-800">
           Performance monitoring is not supported in this browser.
         </p>
       </div>
@@ -113,7 +113,7 @@ const PerformanceDashboard: React.FC = () => {
             {performanceScore}
           </span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-gray-200 rounded-fullh-2">
           <div
             className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}` }
             style={{ width: `${performanceScore}%` }}
@@ -130,7 +130,7 @@ const PerformanceDashboard: React.FC = () => {
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-500">Largest Contentful Paint</p>
+          <p className="text-xstext-gray-500">Largest Contentful Paint</p>
         </div>
 
         <div className="p-4 borderrounded-lg">
@@ -140,7 +140,7 @@ const PerformanceDashboard: React.FC = () => {
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-500">First Input Delay</p>
+          <p className="text-xstext-gray-500">First Input Delay</p>
         </div>
 
         <div className="p-4 borderrounded-lg">
@@ -150,7 +150,7 @@ const PerformanceDashboard: React.FC = () => {
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
-          <p className="text-xs text-gray-500">Cumulative Layout Shift</p>
+          <p className="text-xstext-gray-500">Cumulative Layout Shift</p>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ const PerformanceDashboard: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-50 rounded-lg p-4 border border-gray-200"
+              className="bg-gray-50 rounded-lg p-4 borderborder-gray-200"
             >
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-medium text-gray-900text-sm" id="metricname">{metric.name}</h3>
@@ -176,12 +176,12 @@ const PerformanceDashboard: React.FC = () => {
                 <span className="text-2xl font-boldtext-gray-900">
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
-                <span className="text-sm text-gray-500">{metric.unit}</span>
+                <span className="text-smtext-gray-500">{metric.unit}</span>
               </div>
               
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-600">{metric.description}</span>
-                <div className="flex items-center">
+              <div className="flex items-centerjustify-between">
+                <span className="text-xstext-gray-600">{metric.description}</span>
+                <div className="flexitems-center">
                   {getTrendIcon(metric.trend)}
                 </div>
               </div>
@@ -195,32 +195,32 @@ const PerformanceDashboard: React.FC = () => {
         <div className="space-y-4">
           <h3 className="text-lg font-medium text-gray-900">Detailed Metrics</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-3 bg-gray-50 rounded">
-              <div className="flex justify-between">
-                <span className="text-sm text-gray-600">Load Time</span>
-                <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
+          <div className="grid grid-cols-1 md:grid-cols-2gap-4">
+            <div className="p-3 bg-gray-50rounded">
+              <div className="flexjustify-between">
+                <span className="text-smtext-gray-600">Load Time</span>
+                <span className="text-smfont-medium">{Math.round(metrics.loadTime)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50 rounded">
-              <div className="flex justify-between">
-                <span className="text-sm text-gray-600">DOM Content Loaded</span>
-                <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
+            <div className="p-3 bg-gray-50rounded">
+              <div className="flexjustify-between">
+                <span className="text-smtext-gray-600">DOM Content Loaded</span>
+                <span className="text-smfont-medium">{Math.round(metrics.domContentLoaded)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50 rounded">
-              <div className="flex justify-between">
-                <span className="text-sm text-gray-600">First Paint</span>
-                <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
+            <div className="p-3 bg-gray-50rounded">
+              <div className="flexjustify-between">
+                <span className="text-smtext-gray-600">First Paint</span>
+                <span className="text-smfont-medium">{Math.round(metrics.firstPaint)}ms</span>
               </div>
             </div>
             
-            <div className="p-3 bg-gray-50 rounded">
-              <div className="flex justify-between">
-                <span className="text-sm text-gray-600">First Contentful Paint</span>
-                <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
+            <div className="p-3 bg-gray-50rounded">
+              <div className="flexjustify-between">
+                <span className="text-smtext-gray-600">First Contentful Paint</span>
+                <span className="text-smfont-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>
               </div>
             </div>
           </div>

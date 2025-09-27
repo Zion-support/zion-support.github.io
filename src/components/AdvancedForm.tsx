@@ -156,7 +156,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
 
   const renderField = (field: FormField) => {
     const hasError = touched[field.name] && errors[field.name];
-    const fieldClassName = `w-full px-3py-2border rounded-md focus:outline-none focus:ring-2focu, s:ring-blue-500 focu, s:border-transparent ${
+    const fieldClassName = `w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focu, s:ring-blue-500 focu, s:border-transparent ${
       hasError ? 'border-red-500' : 'border-gray-300'
     } ${field.className || ''}`;
 
@@ -205,9 +205,9 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
               onChange={(e) => handleInputChange(field.name, e.target.checked)}
               onBlur={() => handleBlur(field.name)}
               disabled={field.disabled}
-              className="h-4w-4text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300rounded"
             />
-            <label htmlFor={`${field.name}-checkbox`} className="ml-2text-smtext-gray-700">
+            <label htmlFor={`${field.name}-checkbox`} className="ml-2 text-smtext-gray-700">
               {field.label}
             </label>
           </div>
@@ -227,7 +227,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
                   onChange={(e) => handleInputChange(field.name, e.target.value)}
                   onBlur={() => handleBlur(field.name)}
                   disabled={field.disabled}
-                  className="h-4w-4text-blue-600 focus:ring-blue-500 border-gray-300"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500border-gray-300"
                 />
                 <label htmlFor={`${field.name}-${option.value}` } className="ml-2 text-smtext-gray-700">
                   {option.label}
@@ -256,14 +256,18 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   };
 
   return (
+<<<<<<< HEAD
     <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
+=======
+    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
       {fields.map(field => (
         <div key={field.name} className="space-y-2">
           {field.type !== 'checkbox' && field.type !== 'radio' && (
             <label className="block text-sm font-medium text-gray-700">
               {field.label}
               {field.validation?.required && (
-                <span className="text-red-500 ml-1">*</span>
+                <span className="text-red-500ml-1">*</span>
               )}
             </label>
           )}
@@ -271,9 +275,15 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
           {renderField(field)}
           
           {touched[field.name] && errors[field.name] && (
+<<<<<<< HEAD
             <p className="text-sm text-red-600 flex items-center">
               <svg className="w-4h-4mr-1" fill="currentColor" viewBox="002020">
                 <path fillRule="evenodd" d="M1810 a88011-16088001160 zm-74 a11011-201100120 zm-1-9a11000-11v4a1101020V 6 a11000-1-1z" clipRule="evenodd" />
+=======
+            <p className="text-sm text-red-600 flexitems-center">
+              <svg className="w-4 h-4mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
               </svg>
               {errors[field.name]}
             </p>
@@ -285,13 +295,17 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         <button
           type="submit"
           disabled={isLoading}
+<<<<<<< HEAD
           className="flex-1bg-blue-600 text-white px-4py-2rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"
+=======
+          className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
         >
           {isLoading ? (
-            <div className="flex items-center justify-center">
-              <svg className="animate-spin -ml-1mr-3h-5w-5text-white" fill="none" viewBox="002424">
+            <div className="flex items-centerjustify-center">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5text-white" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M412a 880018-8V 0 C5.373005.373012 h4 zm 25.291 A7.9627.962001412 H 0 c 03.0421.1355.82437.938 l3-2.647 z"></path>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
               Submitting...
             </div>
@@ -305,7 +319,11 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             type="button"
             onClick={handleReset}
             disabled={isLoading}
+<<<<<<< HEAD
             className="px-4py-2border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable  d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"
+=======
+            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
            aria-label="{resetText}">
             {resetText}
           </button>

@@ -23,7 +23,7 @@ interface SecurityAlert {
   title: string;
   description: string;
   recommendation: string;
-  resolved: boolean;
+  resolve, d: boolean;
   timestam, p: Date;
 }
 
@@ -136,7 +136,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
           priority: 'medium',
           title: 'Encrypt Sensitive Data',
           description: 'Ensure all sensitive data is encrypted at rest and in transit',
-          implementation: 'Use AES-256 encryption for data storage and TLS1.3for transmission',
+          implementation: 'Use AES-256 encryption for data storage and TLS 1.3 for transmission',
           impact: 'Protects user data from unauthorized access'
         },
         {
@@ -199,7 +199,11 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
+<<<<<<< HEAD
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"
+=======
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -209,15 +213,22 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="p-4 border rounded-lgtext-center">
               <div className="text-sm text-gray-600mb-1">Security Score</div>
               <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4mb-6">
+            <div className="p-4 border rounded-lgtext-center">
+              <div className="text-sm text-gray-600mb-1">Security Score</div>
+              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
                 {metrics.overallScore}/100
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Vulnerabilities</div>
+            <div className="p-4 borderrounded-lg">
+              <div className="text-sm text-gray-600mb-2">Vulnerabilities</div>
               <div className="space-y-1text-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-600">Critical:</span>
@@ -237,35 +248,35 @@ const AdvancedSecurityDashboard: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Security Features</div>
+            <div className="p-4 borderrounded-lg">
+              <div className="text-sm text-gray-600mb-2">Security Features</div>
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
+                <div className="flex items-centerjustify-between">
                   <span className="text-sm">HTTPS</span>
                   {metrics.httpsEnabled ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex items-centerjustify-between">
                   <span className="text-sm">CSP</span>
                   {metrics.cspEnabled ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex items-centerjustify-between">
                   <span className="text-sm">XSS Protection</span>
                   {metrics.xssProtection ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Last Scan</div>
-              <div className="text-sm font-semibold">
+            <div className="p-4 borderrounded-lg">
+              <div className="text-sm text-gray-600mb-1">Last Scan</div>
+              <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}
               </div>
               <div className="text-xstext-gray-500">
@@ -276,7 +287,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
@@ -289,7 +300,11 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {alerts.map((alert) => (
                 <div key={alert.id} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                     <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>
+=======
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
                       {alert.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">
@@ -297,8 +312,8 @@ const AdvancedSecurityDashboard: React.FC = () => {
                     </span>
                   </div>
                   <h4 className="font-semiboldmb-1">{alert.title}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{alert.description}</p>
-                  <p className="text-sm text-blue-600 font-medium">{alert.recommendation}</p>
+                  <p className="text-sm text-gray-600mb-2">{alert.description}</p>
+                  <p className="text-sm text-blue-600font-medium">{alert.recommendation}</p>
                 </div>
               ))}
             </div>
@@ -314,13 +329,17 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {recommendations.map((rec, index) => (
                 <div key={index} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                     <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}>
+=======
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}` }>
+>>>>>>> 291faebb6647e51e1c10fe098bd4c47d2942e871
                       {rec.priority.toUpperCase()}
                     </span>
-                    <span className="text-xs text-gray-500 capitalize">{rec.category}</span>
+                    <span className="text-xs text-gray-500capitalize">{rec.category}</span>
                   </div>
                   <h4 className="font-semiboldmb-1">{rec.title}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{rec.description}</p>
+                  <p className="text-sm text-gray-600mb-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
                       <span className="font-medium text-blue-700">Implementation:</span>

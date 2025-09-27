@@ -247,7 +247,11 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
+<<<<<<< HEAD:src/components/FileUpload.tsx
+        role="button" tabIndex={0} onClick={() => !disabled && fileInputRef.current?.click()}
+=======
         role="button" tabIndex="0" onClick={() => !disabled && fileInputRef.current?.click()}
+>>>>>>> b12ef9c0f174b8d76e8cb85e02ec47ce2d46a96b:temp-broken-components/FileUpload.tsx
       >
         <div className="space-y-2">
           <svg
