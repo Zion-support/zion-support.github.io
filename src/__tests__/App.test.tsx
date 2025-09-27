@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 import { Layout } from '../router';
 
@@ -77,8 +76,8 @@ import NotFound from '../pages/NotFound';
 
 // Mock the router to use MemoryRouter for tests
 jest.mock('../router', () => {
-  const React = require('react');
-  const { MemoryRouter, Routes, Route } = require('react-router-dom');
+  const React = jest.requireActual('react');
+  const { MemoryRouter, Routes, Route } = jest.requireActual('react-router-dom');
   
   return {
     AppRouter: () => {

@@ -51,9 +51,9 @@ if (!window.performance) {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: PerformanceObserverCallback) {}
+  constructor() {}
   disconnect() {}
-  observe(options?: PerformanceObserverInit) {}
+  observe() {}
   takeRecords() { return []; }
 };
 
