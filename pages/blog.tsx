@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+// // import ErrorBoundary from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
 import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
@@ -102,7 +102,7 @@ export default function Blog(): JSX.Element {
 	};
 
 	return (
-		<ErrorBoundary>
+		<>
 			<EnhancedSEO
 				title="Blog - Zion Tech Solutions"
 				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
@@ -223,6 +223,6 @@ export default function Blog(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }
