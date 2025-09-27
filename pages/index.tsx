@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link";
-import {useState, useEffectuseCallbackuseMemouseRef  } from "react";
-import { motionuseInViewAnimatePresence  } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import dynamic from 'next/dynamic';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 

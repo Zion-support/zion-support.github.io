@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import SEO from "../src/components/SEO";
 // import { ErrorBoundary } from "../src/components/ErrorBoundary";
 import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
 
