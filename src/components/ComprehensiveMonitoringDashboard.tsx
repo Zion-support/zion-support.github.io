@@ -426,3 +426,5 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
     </div>
   );
 };
+
+export default ComprehensiveMonitoringDashboard;

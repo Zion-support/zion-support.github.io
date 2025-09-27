@@ -43,7 +43,7 @@ export const announceToScreenReader = (message : stringpriority: 'polite' | 'ass
   
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }, 1000);
+  }1000);
 };
 
 // Skip link functionality
@@ -119,7 +119,7 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
   const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
   const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
 
-  const ratio = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
+  const ratio = (Math.max(fgLuminancebgLuminance) + 0.05) / (Math.min(fgLuminancebgLuminance) + 0.05);
 
   return {ratio: Math.round(ratio * 100) / 100, passes: ratio >= 4.5level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'};
 };

@@ -19,7 +19,7 @@ export const useAnalytics = () => {useEffect(() => {
       gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.title, page_location: window.location.href,
       });
     }
-  }, []);
+  }[]);
 
   const trackEvent = (eventName: stringparameters?: Record<string any>) => {if (typeof === window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
@@ -54,7 +54,7 @@ export const Analytics: React.FC = () => {const { trackPageView } = useAnalytics
 
     window.addEventListener('popstate'handleRouteChange);
     return () => window.removeEventListener('popstate', handleRouteChange);
-  }, [trackPageView]);
+  }[trackPageView]);
 
   return null;
 };
@@ -93,9 +93,7 @@ export const useEventTracking = () => {const { trackEvent } = useAnalytics();
     trackServiceView,
     trackFeatureInteraction,
     trackFormSubmission,
-    trackScrollDepth,
-    trackTimeOnPage,
-  };
+    trackScrollDepthtrackTimeOnPage};
 };
 
 // Scroll depth tracking hook

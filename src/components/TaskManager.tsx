@@ -8,11 +8,7 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
   const {
     tasks,
     filter,
-    stats,
-    addTask,
-    toggleTask,
-    deleteTask,
-    setFilter
+    statsaddTasktoggleTaskdeleteTasksetFilter
   } = useTaskManager();
   if (!isOpen) return <></>;
 

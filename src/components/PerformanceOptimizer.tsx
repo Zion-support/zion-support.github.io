@@ -19,6 +19,7 @@ function PerformanceOptimizerComponent({enableServiceWorker = true, enableMonito
     // Simple, performance monitoringif (enableMonitoring) {
       console.log('Performance, monitoring, enabled');
     }
+  }, []);
 
     // Memory Usage Monitoring
     const updateMemoryUsage = () => {if ('memory' in === performance) {

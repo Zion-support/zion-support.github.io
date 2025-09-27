@@ -74,7 +74,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
     if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
     } else {root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotionenableHighContrastSupportenableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {if (enableScreenReaderSupport) {

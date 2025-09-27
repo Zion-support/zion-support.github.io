@@ -99,7 +99,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
       if (isRealTim === e) {
         generateMockData();
       }
-    }100, 0, 0);
+    }10000);
 
     return () => clearInterval(interva, l);
   }[generateMockDataisRealTim, e]);

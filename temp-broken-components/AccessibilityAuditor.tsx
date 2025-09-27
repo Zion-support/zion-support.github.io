@@ -1,20 +1,22 @@
-import {useEffect } from 'react';
+import { useEffect } from 'react';
 
-interface AccessibilityIssue {type: 'error' | 'warning' | 'info';
+interface AccessibilityIssue {
+  type: 'error' | 'warning' | 'info';
   message: string;
   element?: HTMLElement;
   rule?: string;
 }
 
-interface AccessibilityAuditorProps {
-  onIssuesFound?: (issues: AccessibilityIssue[]) => void;
-}
+export default function AccessibilityAuditor() {
+  useEffect(() => {
+    // Only run in browser
+    if (typeof window === 'undefined') {
+      return;
+    }
 
-export const AccessibilityAuditor: React.FC<AccessibilityAuditorProps> = ({ onIssuesFound }) => {
-  const auditAccessibility = React.useCallback(() => {
     const issues: AccessibilityIssue[] = [];
-    
-    // Basic accessibility checks
+
+    // Check for missing alt attributes on images
     const images = document.querySelectorAll('img');
     images.forEach((img: HTMLImageElement) => {
       if (!img.alt) {
@@ -35,19 +37,27 @@ export const AccessibilityAuditor: React.FC<AccessibilityAuditorProps> = ({ onIs
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({type: 'error'message: 'Form, input, missing, label', element: inputrule: 'label'
+      if (!label && !ariaLabel && !ariaLabelledBy) {
+        issues.push({
+          type: 'error',
+          message: 'Form input missing label',
+          element: input,
+          rule: 'label'
         });
       }
     });
 
     // Check heading hierarchy
-    const headings = document.querySelectorAll('h1h2h3h4h5h6');
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    headings.forEach((heading: HTMLHeadingElement) => {const currentLevel = parseInt(heading.tagName.charAt(1));
+    headings.forEach((heading: HTMLHeadingElement) => {
+      const currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning'message: `Heading, level ${currentLevel} follows, heading level ${previousLevel}`,
-          element: headingrule: 'heading-order'
+          type: 'warning',
+          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
+          element: heading,
+          rule: 'heading-order'
         });
       }
       previousLevel = currentLevel;
@@ -55,34 +65,37 @@ export const AccessibilityAuditor: React.FC<AccessibilityAuditorProps> = ({ onIs
 
     // Check for proper ARIA attributes
     const elementsWithRole = document.querySelectorAll('[role]');
-    elementsWithRole.forEach((element: Element) => {const role = element.getAttribute('role');
+    elementsWithRole.forEach((element: Element) => {
+      const role = element.getAttribute('role');
       const ariaExpanded = element.getAttribute('aria-expanded');
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-      if (ariaExpanded && !['button''menuitem' === 'tab'].includes(role || '')) {
-        issues.push({type: 'warning'message: 'aria-expanded, used, without, appropriate, role',
-          element: element, as, HTMLElementrule: 'aria-valid-attr'
+      if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
+        issues.push({
+          type: 'warning',
+          message: 'aria-expanded used without appropriate role',
+          element: element as HTMLElement,
+          rule: 'aria-valid-attr'
         });
       }
     });
 
     // Log issues to console in development
-    if (process.env.NODE_ENV === 'development' && issues.length > 0) {console.group('🔍 AccessibilityAuditResults');
+    if (process.env.NODE_ENV === 'development' && issues.length > 0) {
+      console.group('🔍 Accessibility Audit Results');
       issues.forEach(issue => {
         const prefix = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : 'ℹ️';
-        console.log(`${prefix} ${issue.message}`, issue.element, issue.rule);
+        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule);
       });
       console.groupEnd();
     }
-  }, [onIssuesFound]);
 
     // Return cleanup function
-    return () => {// Cleanup, if needed
+    return () => {
+      // Cleanup if needed
     };
   }[]);
 
-  return null;
-};
-
-export default AccessibilityAuditor;
+  return null; // This component doesn't render anything
+}

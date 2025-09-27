@@ -17,7 +17,7 @@ interface OptimizationSuggestion {type: 'performance' | 'memory' | 'network' | '
   title: string;
   description: string;
   impact: string;
-  implementation: string;
+  effort: string;
 }
 
 interface PerformanceOptimizerProps {className?: string;
