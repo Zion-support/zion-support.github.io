@@ -27032,3 +27032,14 @@ src/pages.disabled/services/micro-crm.tsx.backup.1758968420
 [2025-09-27 10:20:27] 🔧 Resolving conflicts in src/pages.disabled/services/micro-crm.tsx.backup.1758968420 for branch backup-main-20250926-091954...
 [2025-09-27 10:20:27] 🧩 Generic file: prefer main version
 [2025-09-27 10:20:27] ✅ Resolved conflicts in src/pages.disabled/services/micro-crm.tsx.backup.1758968420
+[2025-09-27 10:20:27] ✅ Successfully resolved conflicts and merged backup-main-20250926-091954
+[2025-09-27 10:20:27] ✅ Branch backup-main-20250926-091954 processed successfully
+[2025-09-27 10:20:27] 📊 Batch progress: 39 successful, 0 failed
+[2025-09-27 10:20:27] 📊 Overall progress: 39 successful, 0 failed, 6036 conflicts resolved
+[2025-09-27 10:20:27] 📋 Processing branch 40: backup-main-20250926-102133
+[2025-09-27 10:20:28] 🔄 Attempting to merge backup-main-20250926-102133...
+[2025-09-27 10:20:29] ⚠️  Merge conflicts detected in backup-main-20250926-102133, resolving...
+[2025-09-27 10:20:29] 📋 Conflicted files: package-lock.json
+[2025-09-27 10:20:29] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250926-102133...
+[2025-09-27 10:20:29] 📦 Package file: prefer main version
+[2025-09-27 10:20:29] ✅ Resolved conflicts in package-lock.json

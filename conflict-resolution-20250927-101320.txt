@@ -7371,3 +7371,5 @@
 2025-09-27 10:20:27 - Resolving conflicts in src/pages.disabled/services/ai-workflow-automation.tsx.backup.1758968419 for branch backup-main-20250926-091954
 2025-09-27 10:20:27 - Resolving conflicts in src/pages.disabled/services/micro-crm.tsx.backup.1758968399 for branch backup-main-20250926-091954
 2025-09-27 10:20:27 - Resolving conflicts in src/pages.disabled/services/micro-crm.tsx.backup.1758968420 for branch backup-main-20250926-091954
+2025-09-27 10:20:29 - Merge conflicts detected in backup-main-20250926-102133
+2025-09-27 10:20:29 - Resolving conflicts in package-lock.json for branch backup-main-20250926-102133
