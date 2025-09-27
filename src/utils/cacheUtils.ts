@@ -21,7 +21,7 @@ export class Cache<T> {
     this.cache.set(key, item);
   }
 
-  get<T>(key: string): T | null {
+  get(key: string): T | null {
     const item = this.cache.get(key);
     if (!item) return null;
 
@@ -30,7 +30,7 @@ export class Cache<T> {
       return null;
     }
 
-    return item.data as T;
+    return item.data;
   }
 
   has(key: string): boolean {
