@@ -20,7 +20,7 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -79,13 +79,13 @@ export default function EnhancedSEO({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(',')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      
       {/* Canonical URL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex?'noindex':'index'},${nofollow?'nofollow':'follow'}`} />
       
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />

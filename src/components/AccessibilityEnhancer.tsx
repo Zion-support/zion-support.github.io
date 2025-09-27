@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
@@ -8,13 +8,13 @@ interface AccessibilityEnhancerProps {
   enableReducedMotionSupport?: boolean;
 }
 
-const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableSkipLinks = true,
   enableFocusManagement = true,
   enableScreenReaderSupport = true,
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
-}, ref) => {
+}) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [prefersMotion, setPrefersMotion] = useState(true);
 
@@ -42,9 +42,9 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
       
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       const handleChange = () => checkHighContrast();
-      mediaQuery.addEventListener('change', handleChange);
+      mediaQuery.addEventListener("change", handleChange);
       
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange);
     }
 
     // Check for reduced motion preference
@@ -65,6 +65,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
 
   // Apply accessibility styles
   useEffect(() => {
+    // Apply high contrast styles
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast');
     } else {
@@ -73,6 +74,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   }, [isHighContrast]);
 
   useEffect(() => {
+    // Apply reduced motion styles
     if (!prefersMotion) {
       document.documentElement.classList.add('reduced-motion');
     } else {
@@ -92,50 +94,40 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   }, [enableScreenReaderSupport]);
 
   return null;
-});
+};
 
 // Helper functions
 function createSkipLink() {
+  const existingSkipLink = document.getElementById('skip-link');
+  if (existingSkipLink) return;
+
   const skipLink = document.createElement('a');
+  skipLink.id = 'skip-link';
   skipLink.href = '#main-content';
   skipLink.textContent = 'Skip to main content';
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+  
   document.body.insertBefore(skipLink, document.body.firstChild);
 }
 
 function initFocusVisible() {
   // Add focus-visible polyfill if needed
-  if (typeof window !== 'undefined' && !window.CSS?.supports?.('selector(:focus-visible)')) {
-    // Add basic focus-visible support
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    });
-    
-    document.addEventListener('mousedown', () => {
-      document.body.classList.remove('keyboard-navigation');
-    });
+  if (typeof window !== 'undefined') {
+    document.documentElement.classList.add('focus-visible');
   }
 }
 
 function createLiveRegion() {
-  let liveRegion = document.getElementById('live-region');
-  if (!liveRegion) {
-    liveRegion = document.createElement('div');
-    liveRegion.id = 'live-region';
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    document.body.appendChild(liveRegion);
-  }
-}
+  const existingRegion = document.getElementById('live-region');
+  if (existingRegion) return;
 
-function announceToScreenReader(message: string) {
-  const liveRegion = document.getElementById('live-region');
-  if (liveRegion) {
-    liveRegion.textContent = message;
-  }
+  const liveRegion = document.createElement('div');
+  liveRegion.id = 'live-region';
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.setAttribute('aria-atomic', 'true');
+  liveRegion.className = 'sr-only';
+  
+  document.body.appendChild(liveRegion);
 }
 
 function isHighContrastMode(): boolean {
@@ -148,6 +140,15 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+function announceToScreenReader(message: string) {
+  const liveRegion = document.getElementById('live-region');
+  if (liveRegion) {
+    liveRegion.textContent = message;
+    // Clear after announcement
+    setTimeout(() => {
+      liveRegion.textContent = '';
+    }, 1000);
+  }
+}
 
 export default AccessibilityEnhancer;

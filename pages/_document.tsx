@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-			<Head>
+      <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
@@ -16,7 +16,7 @@ export default function Document() {
         <meta name="description" content="Zion App - Advanced Technology Solutions" />
         <meta name="keywords" content="technology, AI, cloud computing, digital transformation" />
         <meta name="author" content="Zion App" />
-        <meta property="og: title" content="Zion App - Advanced Technology Solutions" />
+        <meta property="og:title" content="Zion App - Advanced Technology Solutions" />
         <meta property="og:description" content="Leading provider of cutting-edge technology solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zion.app" />
@@ -44,7 +44,7 @@ export default function Document() {
             `
           }}
         />
-			</Head>
+      </Head>
       <body>
         <Main />
         <NextScript />

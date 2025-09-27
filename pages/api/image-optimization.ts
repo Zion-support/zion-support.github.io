@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { url, w, q, f, blur } = req.query;
+  const { url, w, h, q, blur } = req.query;
 
   if (!url || typeof url !== "string") {
     return res.status(400).json({ error: "URL parameter is required" });
@@ -37,14 +37,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const imageBuffer = await imageResponse.arrayBuffer();
-    
+
     // For now, just return the original image
     // In a production environment, you would implement actual image optimization here
     // using libraries like Sharp or ImageMagick
-    
     res.setHeader('Content-Type', imageResponse.headers.get('content-type') || 'image/jpeg');
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-    
     res.status(200).send(Buffer.from(imageBuffer));
   } catch (error) {
     console.error("Image optimization error:", error);
