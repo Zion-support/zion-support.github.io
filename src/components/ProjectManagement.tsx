@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 
 interface Project {
   id: string;
   name: string;
   description: string;
-  status: 'planning' | 'in-progress' | 'review' | 'completed';
+  status: 'planning' | 'in- progress' | 'review' | 'completed';
   progress: number;
   dueDate: string;
   team: string[];
   priority: 'low' | 'medium' | 'high' | 'urgent';
 }
-
 interface ProjectManagementProps {
   isDarkMode: boolean;
 }
 
-export default function ProjectManagement({ isDarkMode }: ProjectManagementProps): JSX.Element {
-  const [projects, setProjects] = useState<Project[]>([
+export default function ProjectManagement({ isDarkMode }: ProjectManagementProp, s): JSX.Elemen.t {
+  const [projectssetProject, s] = useState<Project[]>([
     {
       id: '1',
       name: 'Website Redesign',
@@ -26,8 +25,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       dueDate: '2024-02-15',
       team: ['John', 'Jane', 'Mike'],
       priority: 'high'
-    },
-    {
+    },    {
       id: '2',
       name: 'Mobile App Development',
       description: 'Native mobile application for iOS and Android platforms',
@@ -56,10 +54,9 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       dueDate: '2024-01-15',
       team: ['David', 'Lisa'],
       priority: 'low'
-    }
-  ]);
+    }  ]);
 
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedStatussetSelectedStatu, s] = useState<string>('all');
 
   const getStatusColor = (status: Project['status']) => {
     const colors = {
@@ -68,8 +65,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       review: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
       completed: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
     };
-    return colors[status];
-  };
+    return colors[status];  };
 
   const getPriorityColor = (priority: Project['priority']) => {
     const colors = {
@@ -78,8 +74,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       high: 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
       urgent: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
     };
-    return colors[priority];
-  };
+    return colors[priority];  };
 
   const getPriorityIcon = (priority: Project['priority']) => {
     const icons = {
@@ -101,8 +96,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       'in-progress': projects.filter(p => p.status === 'in-progress').length,
       review: projects.filter(p => p.status === 'review').length,
       completed: projects.filter(p => p.status === 'completed').length
-    };
-    return stats;
+    };    return stats;
   };
 
   const stats = getStatusStats();
@@ -117,8 +111,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="project-management">
           Project Management
         </h3>
-        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors" aria-label="+ New Project">
-          + New Project
+        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors" aria-label="+ New Project">          + New Project
         </button>
       </div>
 
@@ -135,8 +128,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
           >
-            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}
-          </button>
+            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}          </button>
         ))}
       </div>
 
@@ -190,8 +182,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
                 </div>
               </div>
               <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
-                {project.status.replace('-', ' ')}
-              </span>
+                {project.status.replace('-', ' ')}              </span>
             </div>
 
             {/* Progress Bar */}
@@ -203,8 +194,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
               <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
                 <div 
                   className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${project.progress}%` }}
-                ></div>
+                  style={{ width: `${project.progress}%` }}                ></div>
               </div>
             </div>
 
@@ -219,8 +209,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
                 </button>
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-400">
-                {project.progress === 100 ? '✅ Complete' : '🔄 In Progress'}
-              </div>
+                {project.progress === 100 ? '✅ Complete' : '🔄 In Progress'}              </div>
             </div>
           </div>
         ))}
@@ -232,6 +221,5 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
           <p className="text-gray-600 dark:text-gray-400">No projects found</p>
         </div>
       )}
-    </div>
-  );
+    </div>  );
 }

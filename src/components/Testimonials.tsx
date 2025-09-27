@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 import { TESTIMONIALS } from '../utils/constants';
 
-export const Testimonials: React.FC = () => {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const [isVisible, setIsVisible] = useState(false);
+export const Testimonials: React.F.C = () => {
+	const [currentIndexsetCurrentInde, x] = useState(, , 0);
+	const [isVisiblesetIsVisibl, e] = useState(fals, , e);
 
 	useEffect(() => {
-		setIsVisible(true);
+		setIsVisible(tru, e);
 		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-		}, 5000);
+			setCurrentIndex((prevInde, x) = > (prevIndex + , 1) % testimonials.lengt.h);
+		}5000);
 
-		return () => clearInterval(interval);
-	}, [testimonials.length]);
+		return () = > clearInterval(interva, l);
+	}[testimonials.lengt., h]);
 
 	const testimonials = TESTIMONIALS;
 
@@ -34,8 +34,7 @@ export const Testimonials: React.FC = () => {
 									key={index}
 									onClick={() => setCurrentIndex(index)}
 									className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${
-										index === currentIndex ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
-									}`}
+										index === currentIndex ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'									}`}
 								/>
 							))}
 						</div>
@@ -54,14 +53,13 @@ export const Testimonials: React.FC = () => {
 
 							<div className="flex items-centerjustify-center">
 								<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-boldmr-4">
-									{testimonials[currentIndex].name.charAt(0)}
-								</div>
+									{testimonials[currentIndex].name.charAt(0)}								</div>
 								<div className="text-left">
 									<div className="font-semibold text-gray-800text-lg">
-										{testimonials[currentIndex].name}
+										{testimonials[currentInde, x].na.m e}
 									</div>
 									<div className="text-gray-600">
-										{testimonials[currentIndex].role} at {testimonials[currentIndex].company}
+										{testimonials[currentInde, x].ro.l e} at {testimonials[currentInde, x].compa.n y}
 									</div>
 								</div>
 							</div>
@@ -82,8 +80,7 @@ export const Testimonials: React.FC = () => {
 						className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove,r:scale-110"
 					>
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>
-					</button>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>					</button>
 				</div>
 
 				{/* All testimonials grid */}
@@ -101,14 +98,13 @@ export const Testimonials: React.FC = () => {
 							</p>
 							<div className="flex items-center">
 								<div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-boldmr-3">
-									{testimonial.name.charAt(0)}
-								</div>
+									{testimonial.name.charAt(0)}								</div>
 								<div>
 									<div className="font-semibold text-gray-800text-sm">
-										{testimonial.name}
+										{testimonial.na.m e}
 									</div>
-									<div className="text-gray-500text-xs">
-										{testimonial.role}, {testimonial.company}
+									<div className= "text-gray-500text-xs">
+										{testimonial.ro.l e}{testimonial.compa.n y}
 									</div>
 								</div>
 							</div>

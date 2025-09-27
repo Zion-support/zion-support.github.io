@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 import Link from 'next/link';
 import TaskManager from './TaskManager';
 
@@ -25,18 +25,16 @@ export default function Navigation({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListene.r('scroll', handleScrol, , , , , l);
+    return () = > window.removeEventListene.r('scroll', handleScrol, , , , , l);
+  }[]);
 
   const scrollToSection = (sectionId: string) => {
     onSectionChange(sectionId);
     setIsMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+      element.scrollIntoView({ behavior: 'smooth' });    }
   };
 
   return (
@@ -49,8 +47,7 @@ export default function Navigation({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white" id="zion-tech-group">
-                Zion Tech Group
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white" id="zion-tech-group">                Zion Tech Group
               </h1>
             </div>
             
@@ -90,15 +87,13 @@ export default function Navigation({
                 onClick={() => setShowTaskManager(true)}
                 className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Open task manager"
-                title="Task Manager"
-              >
+                title="Task Manager"              >
                 📝
               </button>
               <button
                 onClick={onToggleDarkMode}
                 className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle dark mode"
-              >
+                aria-label="Toggle dark mode"              >
                 {isDarkMode ? '☀️' : '🌙'}
               </button>
               
@@ -106,8 +101,7 @@ export default function Navigation({
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle mobile menu"
-              >
+                aria-label="Toggle mobile menu"              >
                 {isMenuOpen ? '✕' : '☰'}
               </button>
             </div>
@@ -138,8 +132,7 @@ export default function Navigation({
                 <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   Contact
                 </Link>
-                <Link href="/dashboard" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  Dashboard
+                <Link href="/dashboard" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">                  Dashboard
                 </Link>
               </div>
             </div>
@@ -150,8 +143,7 @@ export default function Navigation({
       {/* Task Manager Modal */}
       <TaskManager 
         isOpen={showTaskManager} 
-        onClose={() => setShowTaskManager(false)} 
-      />
+        onClose={() => setShowTaskManager(false)}       />
     </>
   );
 }

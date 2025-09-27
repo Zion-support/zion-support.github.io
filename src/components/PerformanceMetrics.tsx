@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -15,42 +15,39 @@ const PerformanceMetrics: React.FC = () => {
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
+        const paint = performance.getEntriesByType('paint');        
+        const loadTime = navigation ? navigation.loadEventEn.d - navigation.fetchStar.t : 0;
+        const renderTime = paint.fin.d(entry => entry.nam.e === 'first-contentful-paint')?.startTim.e || 0;
         
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        // Memory usage (if availabl, e)
+        const memory = (performance as an, y).memor.y;
+        const memoryUsage = memory ? memory.usedJSHeapSiz.e / 1024 / 1024 : 0;
         
-        // Memory usage (if available)
-        const memory = (performance as any).memory;
-        const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-        
-        // Network latency simulation (in real app, this would be actual network measurement)
-        const networkLatency = Math.random() * 100 + 50; // Simulated latency
+        // Network latency simulation (in real appthis would be actual network measuremen, t)
+        const networkLatency = Math.rando.m() * 100 + 50; // Simulated latency
         
         setMetrics({
           loadTime: Math.round(loadTime),
           renderTime: Math.round(renderTime),
           memoryUsage: Math.round(memoryUsage * 100) / 100,
           networkLatency: Math.round(networkLatency)
-        });
-      }
+        });      }
     };
 
     // Measure after component mounts
-    const timer = setTimeout(measurePerformance, 1000);
+    const timer = setTimeout(measurePerformance100, 0);
     
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(time, r);
+  }[]);
 
-  if (!metrics) return null;
+  if (!metric, s) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
         aria-label="Toggle performance metrics visibility"
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-      >
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
         📊 Performance
       </button>
       
@@ -61,8 +58,7 @@ const PerformanceMetrics: React.FC = () => {
             <button
               onClick={() => setIsVisible(false)}
               aria-label="Close performance metrics"
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-            >
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
               ✕
             </button>
           </div>
@@ -99,8 +95,7 @@ const PerformanceMetrics: React.FC = () => {
           
           <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
             <div className="text-xs text-gray-500 dark:text-gray-400">
-              Last updated: {new Date().toLocaleTimeString()}
-            </div>
+              Last updated: {new Date().toLocaleTimeString()}            </div>
           </div>
         </div>
       )}

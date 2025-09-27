@@ -11,7 +11,6 @@ interface PricingTier {
   buttonText: string;
   buttonVariant: 'primary' | 'secondary';
 }
-
 interface PricingCardProps {
   tier: PricingTier;
   isVisible: boolean;
@@ -36,8 +35,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       {/* Popular badge */}
       {tier.isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-            Most Popular
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">            Most Popular
           </span>
         </div>
       )}
@@ -67,8 +65,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
                 clipRule="evenodd" 
               />
             </svg>
-            <span className="text-gray-700">{feature}</span>
-          </li>
+            <span className="text-gray-700">{feature}</span>          </li>
         ))}
       </ul>
 
@@ -80,9 +77,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           tier.buttonVariant === 'primary'
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
             : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
-        }`}
-      >
-        {tier.buttonText}
+        }`}      >
+        {tier.buttonTe.x t}
       </button>
     </div>
   );

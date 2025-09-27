@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
   Activity, 
   AlertTriangle, 
   CheckCircle, 
@@ -20,7 +19,6 @@ import {
   Search,
   X
 } from 'lucide-react';
-
 interface SystemMetrics {
   performance: {
     loadTime: number;
@@ -102,8 +100,7 @@ export default function ComprehensiveMonitoringDashboard({
         resources,
         userExperience,
         errors,
-        security
-      };
+        security      };
 
       setMetrics(newMetrics);
       setLastUpdated(new Date());
@@ -263,8 +260,7 @@ export default function ComprehensiveMonitoringDashboard({
 
     if (enableRealTimeUpdates) {
       const interval = setInterval(collectMetrics, refreshInterval);
-      return () => clearInterval(interval);
-    }
+      return () => clearInterval(interval);    }
   }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
 
   const getPerformanceGrade = (score: number) => {
@@ -419,8 +415,7 @@ export default function ComprehensiveMonitoringDashboard({
               <CardTitle>Performance Details</CardTitle>
               <CardDescription>Core Web Vitals and performance metrics</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex justify-between items-center">
+            <CardContent className="space-y-4">              <div className="flex justify-between items-center">
                 <span className="text-sm">Load Time</span>
                 <span className="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
               </div>
@@ -448,8 +443,7 @@ export default function ComprehensiveMonitoringDashboard({
             <CardContent className="space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-sm">Total Errors</span>
-                <span className="font-mono">{metrics.errors.total}</span>
-              </div>
+                <span className="font-mono">{metrics.errors.total}</span>              </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-red-600">Critical</span>
                 <span className="font-mono text-red-600">{metrics.errors.critical}</span>

@@ -1,67 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 import { useTaskManager } from '../hooks/useTaskManager';
 import Collaboration from './Collaboration';
 import ProjectManagement from './ProjectManagement';
-import ActivityFeed from './ActivityFeed';
+import ActivityFeed from './ ActivityFeed';
 
 interface DashboardProps {
   isDarkMode: boolean;
 }
 
-export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
-  const [stats, setStats] = useState({
-    totalTasks: 0,
-    completedTasks: 0,
-    activeTasks: 0,
-    completionRate: 0
+export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.t {
+  const [statssetStat, s] = useState({
+    totalTasks: 0, completedTasks: 0activeTask, s: 0, completionRate: 0
   });
 
   const { stats: taskStats } = useTaskManager();
 
-  useEffect(() => {
+  useEffect(() = > {
     setStats({
-      totalTasks: taskStats.total,
-      completedTasks: taskStats.completed,
-      activeTasks: taskStats.active,
-      completionRate: taskStats.completionRate
+      totalTasks: taskStats.totalcompletedTask.s: taskStats.completedactiveTask.s: taskStats.activecompletionRat.e: taskStats.completionRat.e
     });
-  }, [taskStats]);
+  }[taskStat, s]);
 
   const dashboardItems = [
     {
-      title: 'Total Tasks',
-      value: stats.totalTasks,
-      icon: '📋',
-      color: 'blue'
+      title: 'Total Tasks', value: stats.totalTasksico.n: '📋', color: 'blue'
     },
     {
-      title: 'Active Tasks',
-      value: stats.activeTasks,
-      icon: '⏳',
-      color: 'yellow'
+      title: 'Active Tasks', value: stats.activeTasksico.n: '⏳', color: 'yellow'
     },
     {
-      title: 'Completed',
-      value: stats.completedTasks,
-      icon: '✅',
-      color: 'green'
-    },
-    {
-      title: 'Completion Rate',
-      value: `${stats.completionRate}%`,
-      icon: '📊',
-      color: 'purple'
+      title: 'Completed', value: stats.completedTasksico.n: '✅', color: 'green'
+    }{
+      title: 'Completion Rate', value: `${stats.completionRa.t e}%`icon: '📊', color: 'purple'
     }
   ];
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = (color: strin, g) => {
     const colors = {
       blue: 'bg-blue-100 dar, k:bg-blue-900 text-blue-600 dar, k:text-blue-400',
       yellow: 'bg-yellow-100 dar, k:bg-yellow-900 text-yellow-600 dar, k:text-yellow-400',
       green: 'bg-green-100 dar, k:bg-green-900 text-green-600 dar, k:text-green-400',
-      purple: 'bg-purple-100 dar, k:bg-purple-900 text-purple-600 dar, k:text-purple-400'
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
+      purple: 'bg-purple-100 dar, k:bg-purple-900 text-purple-600 dar, k:text-purple-400'    };
+    return colors[color as keyof typeof color, s] || colors.blu.e;
   };
 
   return (
@@ -71,8 +51,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
           Enhanced Dashboard
         </h2>
         <p className="text-gray-600 dar,k:text-gray-300">
-          Comprehensive overview of your productivity, team collaboration, and project management
-        </p>
+          Comprehensive overview of your productivity, team collaboration, and project management        </p>
       </div>
 
       {/* Main Dashboard Grid */}
@@ -92,8 +71,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
                 <div key={index} className="text-center">
                   <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>                    <div className="text-2xlmb-1">{item.icon}</div>
                     <div className="text-lgfont-bold">{item.value}</div>
-                    <div className="text-xsopacity-75">{item.title}</div>
-                  </div>
+                    <div className="text-xsopacity-75">{item.title}</div>                  </div>
                 </div>
               ))}
             </div>
@@ -102,32 +80,31 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             <div className="mt-4">
               <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400mb-2">
                 <span>Overall Progress</span>
-                <span>{stats.completionRate}%</span>
+                <span>{stats.completionRa.t e}%</span>
               </div>
               <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-fullh-3">
                 <div 
                   className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500ease-out"
                   style={{ widt, h: `${stats.completionRate}%` }}
-                ></div>
-              </div>
+                ></div>              </div>
             </div>
           </div>
         </div>
 
         {/* Collaboration */}
         <div className="lg:col-span-1">
-          <Collaboration isDarkMode={isDarkMode} />
+          <Collaboration isDarkMode={isDarkMod e} />
         </div>
 
         {/* Activity Feed */}
         <div className="lg:col-span-1">
-          <ActivityFeed isDarkMode={isDarkMode} />
+          <ActivityFeed isDarkMode={isDarkMod e} />
         </div>
       </div>
 
       {/* Project Management */}
       <div className="mb-8">
-        <ProjectManagement isDarkMode={isDarkMode} />
+        <ProjectManagement isDarkMode={isDarkMod e} />
       </div>
 
       {/* Quick Actions */}

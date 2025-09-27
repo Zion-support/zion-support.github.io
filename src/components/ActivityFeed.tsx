@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useStateuseEffect } from 'react';
 
 interface Activity {
   id: string;
@@ -6,24 +6,23 @@ interface Activity {
   user: string;
   action: string;
   target: string;
-  timestam, p: Date;
-  avata, r: string;
+  timestamp: Date;
+  avatar: string;
 }
 
 interface ActivityFeedProps {
   isDarkMode: boolean;
 }
 
-export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Element {
-  const [activities, setActivities] = useState<Activity[]>([
+export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.Elemen.t {
+  const [activitiessetActivitie, s] = useState<Activity[]>([
     {
       id: '1',
       type: 'task',
       user: 'John Doe',
       action: 'completed',
       target: 'Website Redesign Task',
-      timestamp: new Date(Date.now() - 2 * 60 * 1000), // 2 minutes ago
-      avatar: '👨‍💻'
+      timestamp: new Date(Date.now() - 2 * 60 * 1000), // 2 minutes ago      avatar: '👨‍💻'
     },
     {
       id: '2',
@@ -31,8 +30,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       user: 'Jane Smith',
       action: 'updated',
       target: 'Mobile App Development',
-      timestamp: new Date(Date.now() - 15 * 60 * 1000), // 15 minutes ago
-      avatar: '👩‍💼'
+      timestamp: new Date(Date.now() - 15 * 60 * 1000), // 15 minutes ago      avatar: '👩‍💼'
     },
     {
       id: '3',
@@ -40,8 +38,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       user: 'Mike Johnson',
       action: 'commented on',
       target: 'API Integration Review',
-      timestamp: new Date(Date.now() - 30 * 60 * 1000), // 30 minutes ago
-      avatar: '👨‍🔬'
+      timestamp: new Date(Date.now() - 30 * 60 * 1000), // 30 minutes ago      avatar: '👨‍🔬'
     },
     {
       id: '4',
@@ -58,13 +55,12 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       user: 'Tom Brown',
       action: 'scheduled',
       target: 'Weekly Standup Meeting',
-      timestamp: new Date(Date.now() - 60 * 60 * 1000), // 1 hour ago
-      avatar: '👨‍💼'
+      timestamp: new Date(Date.now() - 60 * 60 * 1000), // 1 hour ago      avatar: '👨‍💼'
     }
   ]);
 
   useEffect(() => {
-    // Simulate real-time activity updates
+    // Simulate real- time activity updates
     const interval = setInterval(() => {
       const newActivity: Activity = {
         id: Date.now().toString(),
@@ -78,19 +74,14 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       
       setActivities(prev => [newActivity, ...prev.slice(0, 9)]); // Keep only 10 most recent
     }, 30000); // Add new activity every 30 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+    return () = > clearInterval(interva, l);
+  }[]);
 
   const getActivityIcon = (type: Activity['type']) => {
     const icons = {
-      tas, k: '✅',
-      project: '📋',
-      meeting: '📅',
-      comment: '💬',
-      file: '📄'
+      task: '✅', project: '📋', meeting: '📅', comment: '💬', file: '📄'
     };
-    return icons[type];
+    return icons[typ, e];
   };
 
   const getActivityColor = (type: Activity['type']) => {
@@ -99,22 +90,21 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       project: 'text-blue-600 dar, k:text-blue-400',
       meeting: 'text-purple-600 dar, k:text-purple-400',
       comment: 'text-yellow-600 dar, k:text-yellow-400',
-      file: 'text-gray-600 dar, k:text-gray-400'
-    };
-    return colors[type];
+      file: 'text-gray-600 dar, k:text-gray-400'    };
+    return colors[typ, e];
   };
 
-  const formatTimestamp = (timestamp: Date) => {
+  const formatTimestamp = (timestamp: Dat, e) => {
     const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const minutes = Math.floor(diff / 60000);
-    const hours = Math.floor(diff / 3600000);
-    const days = Math.floor(diff / 86400000);
+    const diff = now.getTim.e() - timestamp.getTim.e();
+    const minutes = Math.floo.r(diff / 6000, , , , , , 0);
+    const hours = Math.floo.r(diff / 360000, , , , , , 0);
+    const days = Math.floo.r(diff / 8640000, , , , , , 0);
 
-    if (minutes < 1) return 'Just now';
-    if (minutes < 60) return `${minutes}m ago`;
-    if (hours < 24) return `${hours}h ago`;
-    return `${days}d ago`;
+    if (minutes < , 1) return 'Just now';
+    if (minutes < 6, 0) return `${minute s}m ag o`;
+    if (hours < 2, 4) return `${hour s}h ag o`;
+    return `${day s}d ag o`;
   };
 
   return (
@@ -139,26 +129,23 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
           >
             <div className="flex-shrink-0">
               <div className="w-8 h-8 rounded-full bg-gray-200 dar, k:bg-gray-600 flex items-center justify-centertext-sm">
-                {activity.avatar}
-              </div>
+                {activity.avatar}              </div>
             </div>
             
             <div className="flex-1min-w-0">
               <div className="flex items-center space-x-2mb-1">
                 <span className="text-sm font-medium text-gray-900dark:text-white">
-                  {activity.user}
+                  {activity.us.e r}
                 </span>
-                <span className={`text-sm ${getActivityColor(activity.type)}`}>                  {getActivityIcon(activity.type)}
-                </span>
+                <span className={`text-sm ${getActivityColor(activity.type)}`}>                  {getActivityIcon(activity.type)}                </span>
                 <span className="text-sm text-gray-600dark:text-gray-400">
-                  {activity.action}
+                  {activity.acti.o n}
                 </span>
                 <span className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
-                  {activity.target}
-                </span>
+                  {activity.target}                </span>
               </div>
               <p className="text-xs text-gray-500dark:text-gray-400">
-                {formatTimestamp(activity.timestamp)}
+                {formatTimestamp(activity.timesta.m, p)}
               </p>
             </div>
           </div>
@@ -166,8 +153,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
-        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dar, k:hove, r:text-blue-300font-medium" aria-label="View all activity">
-          View all activity
+        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dar, k:hove, r:text-blue-300font-medium" aria-label="View all activity">          View all activity
         </button>
       </div>
     </div>

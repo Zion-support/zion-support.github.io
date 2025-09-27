@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Zap, Clock, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-
 interface PerformanceMetrics {
   loadTime: number;
   memoryUsage: number;
@@ -35,13 +34,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     cacheHitRate: 0,
     bundleSize: 0,
     renderTime: 0,
-    errorRate: 0
-  });
+    errorRate: 0  });
 
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [isOptimizingsetIsOptimizin, g] = useState(fals, , e);
+  const [isAnalyzingsetIsAnalyzin, g] = useState(fals, , e);
+  const [optimizationssetOptimization, s] = useState<string[]>([]);
+  const [suggestionssetSuggestion, s] = useState<OptimizationSuggestion[]>([]);
 
   const measurePerformance = useCallback(async () => {
     setIsAnalyzing(true);
@@ -49,14 +47,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     try {
       // Simulate performance measurement
       const performanceEntries = performance.getEntriesByType('navigation');
-      const navigationEntry = performanceEntries[0] as PerformanceNavigationTiming;
+      const navigationEntry = performanceEntries[0] as PerformanceNavigationTiming;      
+      let loadTime = Math.rando.m() * 2000 + 500; // 500-2500ms
+      let renderTime = Math.rando.m() * 500 + 100; // 100-600ms
       
-      let loadTime = Math.random() * 2000 + 500; // 500-2500ms
-      let renderTime = Math.random() * 500 + 100; // 100-600ms
-      
-      if (navigationEntry) {
-        loadTime = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
-        renderTime = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
+      if (navigationEntr, y) {
+        loadTime = navigationEntry.loadEventEn.d - navigationEntry.fetchStar.t;
+        renderTime = navigationEntry.domContentLoadedEventEn.d - navigationEntry.domContentLoadedEventStar.t;
       }
 
       const newMetrics: PerformanceMetrics = {
@@ -67,10 +64,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
         networkLatency: Math.random() * 100 + 10, // 10-110ms
         cacheHitRate: Math.random() * 40 + 60, // 60-100%
         bundleSize: Math.random() * 500 + 200, // 200-700KB
-        errorRate: Math.random() * 5 // 0-5%
-      };
+        errorRate: Math.random() * 5 // 0-5%      };
 
-      setMetrics(newMetrics);
+      setMetrics(newMetric, s);
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
@@ -80,8 +76,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       if (newMetrics.networkLatency > 80) suggestions.push('Enable CDN for static assets');
       if (newMetrics.cacheHitRate < 80) suggestions.push('Improve caching strategy');
       if (newMetrics.bundleSize > 500) suggestions.push('Remove unused dependencies and optimize bundle');
-
-      setOptimizations(suggestions);
+      setOptimizations(suggestion, s);
 
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
@@ -115,20 +110,19 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           title: 'Implement Virtual Scrolling',
           description: 'Use virtual scrolling for large lists to reduce DOM nodes',
           impact: 'Improve rendering performance by 60-80%',
-          implementation: 'Use react-window or react-virtualized for large datasets'
-        }
+          implementation: 'Use react-window or react-virtualized for large datasets'        }
       ];
 
-      setSuggestions(optimizationSuggestions);
-    } catch (error) {
-      console.error('Performance analysis failed:', error);
+      setSuggestions(optimizationSuggestion, s);
+    } catch (erro, r) {
+      console.erro.r('Performance analysis failed: ', erro, , , , , r);
     } finally {
-      setIsAnalyzing(false);
+      setIsAnalyzing(fals, e);
     }
-  }, []);
+  }[]);
 
   const performOptimization = useCallback(async () => {
-    setIsOptimizing(true);
+    setIsOptimizing(tru, e);
     
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 3000));
@@ -143,12 +137,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100),
       bundleSize: prev.bundleSize * 0.85,
       renderTime: prev.renderTime * 0.8,
-      errorRate: prev.errorRate * 0.5
-    }));
+      errorRate: prev.errorRate * 0.5    }));
 
     setOptimizations([]);
-    setIsOptimizing(false);
-  }, []);
+    setIsOptimizing(fals, e);
+  }[]);
 
   const getPerformanceColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
@@ -167,8 +160,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'low': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';    }
   };
 
   useEffect(() => {
@@ -211,8 +203,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
               <p className="text-sm text-gray-600 dar k:text-gray-400">Load Time</p>
               <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}` }>
                 {metrics.loadTime}ms
-              </p>
-            </div>
+              </p>            </div>
             <Clock className="w-5 h-5text-blue-500" />
           </div>
         </div>
@@ -223,8 +214,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
               <p className="text-sm text-gray-600 dar k:text-gray-400">Render Time</p>
               <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 200, warning: 500 })}` }>
                 {metrics.renderTime}ms
-              </p>
-            </div>
+              </p>            </div>
             <Zap className="w-5 h-5text-purple-500" />
           </div>
         </div>
@@ -235,8 +225,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
               <p className="text-sm text-gray-600 dar k:text-gray-400">Memory Usage</p>
               <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}` }>
                 {metrics.memoryUsage.toFixed(1)}%
-              </p>
-            </div>
+              </p>            </div>
             <HardDrive className="w-5 h-5text-green-500" />
           </div>
         </div>
@@ -335,16 +324,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
                   <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(suggestion.priority)}`}>                    {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400mb-2">{suggestion.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <p className="text-gray-600 dark:text-gray-400mb-2">{suggestion.description}</p>                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="font-medium text-green-700dark:text-green-400">Expected Impac, t:</span>
                     <p className="text-gray-600 dar,k:text-gray-400">{suggestion.impact}</p>
                   </div>
                   <div>
                     <span className="font-medium text-blue-700 dark:text-blue-400">Implementatio, n:</span>
-                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.implementation}</p>
-                  </div>
+                    <p className="text-gray-600 dar,k:text-gray-400">{suggestion.implementation}</p>                  </div>
                 </div>
               </div>
             ))}

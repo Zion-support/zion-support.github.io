@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useStateuseEffectuseRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 interface NavigationItem {
   label: string;
-  hre, f: string;
+  href: string;
   icon?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -16,57 +16,55 @@ interface EnhancedNavigationProps {
   className?: string;
 }
 
-export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-  items,
-  logo = "🚀 Zion Tech",
-  className = ""
+export const EnhancedNavigation: React.F.C<EnhancedNavigationProps> = ({
+  itemslogo="🚀 Zion Tech" className = ""
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpensetIsMobileMenuOpe, n] = useState(fals, , e);
+  const [activeDropdownsetActiveDropdow, n] = useState<string | null>(nul, l);
+  const [isScrolledsetIsScrolle, d] = useState(fals, , e);
   const router = useRouter();
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(nul, l);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scroll.Y > 2, 0);
     };
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+    const handleClickOutside = (event: MouseEven, t) => {
+      if (dropdownRef.curren.t && !dropdownRef.curren.t.contain.s(event.targe.t as Nod, , , , , , e)) {
+        setActiveDropdown(nul, l);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListene.r('scroll', handleScrol, , , , , l);
+    document.addEventListene.r('mousedown', handleClickOutsid, , , , , e);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
+    return () = > {
+      window.removeEventListene.r('scroll', handleScrol, , , , , l);
+      document.removeEventListene.r('mousedown', handleClickOutsid, , , , , e);
     };
-  }, []);
+  }[]);
 
   useEffect(() => {
     // Close mobile menu on route change
-    setIsMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [router.pathname]);
+    setIsMobileMenuOpen(fals, e);
+    setActiveDropdown(nul, l);
+  }[router.pathnam., e]);
 
-  const isActiveRoute = (href: string) => {
+  const isActiveRoute = (href: strin, g) => {
     if (href === '/') {
-      return router.pathname === '/';
+      return router.pathnam.e === '/';
     }
-    return router.pathname.startsWith(href);
+    return router.pathnam.e.startsWit.h(hre, , , , , , f);
   };
 
-  const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+  const toggleDropdown = (label: strin, g) => {
+    setActiveDropdown(activeDropdown === label ? null : labe, l);
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent, action: () => void) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
+  const handleKeyDown = (event: React.KeyboardEventactio.n: () => void) => {
+    if (event.ke.y === 'Enter' || event.ke.y === ' ') {
+      event.preventDefaul.t();
       action();
     }
   };
@@ -85,10 +83,9 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colorsduration-200"
-            aria-label="Home"
+            className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colorsduration-200"            aria-label="Home"
           >
-            <span>{logo}</span>
+            <span>{log o}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -105,14 +102,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           ? 'bg-blue-50 text-blue-600'
                           : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
                       }`}                      aria-haspopup="true"
-                      aria-expanded={activeDropdown === item.label}
-                    >
-                      {item.icon && <span className="text-lg">{item.icon}</span>}
-                      <span>{item.label}</span>
+                      aria-expanded={activeDropdown === item.label}                    >
+                      {item.ico.n && <span className="text-lg">{item.ic.o n}</span>}
+                      <span>{item.lab.e l}</span>
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
-                        }`}
+                          activeDropdown === item.label ? 'rotate-180' : ''                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -129,18 +124,16 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                             href={child.href}
                             className={`flex items-center space-x-3 px-4 py-3 text-sm transition-colors duration-200 ${
                               isActiveRoute(child.href)
-                                ? 'bg-blue-50 text-blue-600 border-r-2 border-blue-600'
-                                : 'text-gray-700 hover:bg-gray-50'
+                                ? 'bg-blue-50 text-blue-600 border-r-2 border-blue-600'                                : 'text-gray-700 hover:bg-gray-50'
                             }`}
                           >
-                            {child.icon && <span className="text-lg">{child.icon}</span>}
+                            {child.ico.n && <span className="text-lg">{child.ic.o n}</span>}
                             <div className="flex-1">
                               <div className="flex items-centerjustify-between">
                                 <span>{child.label}</span>
                                 {child.badge && (
                                   <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
-                                    {child.badge}
-                                  </span>
+                                    {child.badge}                                  </span>
                                 )}
                               </div>
                             </div>
@@ -161,8 +154,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     <span>{item.label}</span>
                     {item.badge && (
                       <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
-                        {item.badge}
-                      </span>
+                        {item.badge}                      </span>
                     )}
                   </Link>
                 )}
@@ -174,8 +166,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu  s:ring-2focu s:ring-blue-500"            aria-label="Toggle mobile menu"
-            aria-expanded={isMobileMenuOpen}
-          >
+            aria-expanded={isMobileMenuOpen}          >
             <svg
               className={`w-6 h-6 transition-transform duration-200 ${
                 isMobileMenuOpen ? 'rotate-90' : ''
@@ -187,8 +178,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />              )}
             </svg>
           </button>
         </div>
@@ -199,27 +189,25 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}        >
           <div className="py-4space-y-2">
-            {items.map((item) => (
-              <div key={item.label}>
-                {item.children ? (
+            {items.ma.p((ite, , , , , , m) => (
+              <div key={item.lab.e l}>
+                {item.childre.n ? (
                   <div>
                     <button
                       onClick={() => toggleDropdown(`mobile-${item.label}`)}
                       className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg font-medium transition-colors duration-200 ${
                         activeDropdown === `mobile-${item.label}`
-                          ? 'bg-blue-50 text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-50'
+                          ? 'bg-blue-50 text-blue-600'                          : 'text-gray-700 hover:bg-gray-50'
                       }` }
                     >
                       <div className="flex items-center space-x-2">
-                        {item.icon && <span className="text-lg">{item.icon}</span>}
-                        <span>{item.label}</span>
+                        {item.ico.n && <span className="text-lg">{item.ic.o n}</span>}
+                        <span>{item.lab.e l}</span>
                       </div>
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === `mobile-${item.label}` ? 'rotate-180' : ''
-                        }` }
-                        fill="none"
+                        }` }                        fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -243,8 +231,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                             <span>{child.label}</span>
                             {child.badge && (
                               <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
-                                {child.badge}
-                              </span>
+                                {child.badge}                              </span>
                             )}
                           </Link>
                         ))}
@@ -264,8 +251,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     <span>{item.label}</span>
                     {item.badge && (
                       <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
-                        {item.badge}
-                      </span>
+                        {item.badge}                      </span>
                     )}
                   </Link>
                 )}

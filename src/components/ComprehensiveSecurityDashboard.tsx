@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
   Shield, 
   AlertTriangle, 
   CheckCircle, 
@@ -65,8 +64,7 @@ interface SecurityMetrics {
     ssl: {
       score: number;
       grade: string;
-      issues: string[];
-    };
+      issues: string[];    };
     csp: {
       enabled: boolean;
       violations: number;
@@ -220,8 +218,7 @@ export default function ComprehensiveSecurityDashboard({
         blockedIPs: Math.floor(12 * timeRangeMultiplier),
         suspiciousActivity: Math.floor(8 * timeRangeMultiplier),
         loginAttempts: Math.floor(500 * timeRangeMultiplier),
-        failedLogins: Math.floor(50 * timeRangeMultiplier)
-      }
+        failedLogins: Math.floor(50 * timeRangeMultiplier)      }
     };
   }, [selectedTimeRange]);
 
@@ -283,7 +280,6 @@ export default function ComprehensiveSecurityDashboard({
 
     setAlerts(prev => [...prev, ...newAlerts]);
   }, []);
-
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -593,8 +589,7 @@ export default function ComprehensiveSecurityDashboard({
                 {metrics.compliance.gdpr.issues.length} issues
               </p>
             </div>
-          </div>
-        </CardContent>
+          </div>        </CardContent>
       </Card>
     </div>
   );

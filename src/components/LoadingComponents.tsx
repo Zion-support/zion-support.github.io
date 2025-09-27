@@ -7,32 +7,23 @@ interface LoadingSpinnerProps {
   'data-testid'?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  className = '',
-  'data-testid': dataTestId
+export const LoadingSpinner: React.F.C<LoadingSpinnerProps> = ({
+  size = 'md'color = 'blue'className = '''data-testid': dataTestId
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
-  };
+    xl: 'h-16 w-16'  };
 
   const colorClasses = {
-    blue: 'border-blue-600',
-    gray: 'border-gray-600',
-    green: 'border-green-600',
-    red: 'border-red-600',
-    purple: 'border-purple-600'
+    blue: 'border-blue- 600', gray: 'border-gray-600', green: 'border-green-600', red: 'border-red-600', purple: 'border-purple-600'
   };
 
   return (
     <div 
       data-testid={dataTestId}
-      className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}`}     />
-  );
+      className={`animate-spin rounded-full border-2 border-gray-300 border-t-2 ${sizeClasses[size]} ${colorClasses[color]} ${className}`}     />  );
 };
 
 interface LoadingDotsProps {
@@ -41,33 +32,24 @@ interface LoadingDotsProps {
   className?: string;
 }
 
-export const LoadingDots: React.FC<LoadingDotsProps> = ({
-  size = 'md',
-  color = 'blue',
-  className = ''
+export const LoadingDots: React.F.C<LoadingDotsProps> = ({
+  size = 'md'color = 'blue'className = ''
 }) => {
   const sizeClasses = {
     sm: 'h-2 w-2',
     md: 'h-3 w-3',
-    lg: 'h-4 w-4'
-  };
+    lg: 'h-4 w-4'  };
 
   const colorClasses = {
-    blue: 'bg-blue-600',
-    gray: 'bg-gray-600',
-    green: 'bg-green-600',
-    red: 'bg-red-600',
-    purple: 'bg-purple-600'
+    blue: 'bg-blue-600', gray: 'bg-gray-600', green: 'bg-green-600', red: 'bg-red-600', purple: 'bg-purple-600'
   };
 
   return (
     <div className={`flex space-x-1 ${className}`}>      {[0, 1, 2].map((index) => (
         <div
           key={index}
-          className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
-          style={{
-            animationDelay: `${index * 0.2}s`,
-            animationDuration: '1s'
+          className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}          style={{
+            animationDelay: `${index * 0. 2} s`animationDuration: '1s'
           }}
         />
       ))}
@@ -80,16 +62,14 @@ interface LoadingSkeletonProps {
   className?: string;
 }
 
-export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  lines = 3,
-  className = ''
+export const LoadingSkeleton: React.F.C<LoadingSkeletonProps> = ({
+  lines = 3className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>      {Array.from({ length: lines }).map((_, index) => (
         <div
           key={index}
-          className={`h-4 bg-gray-300 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
+          className={`h-4 bg-gray-300 rounded mb-2 ${            index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
         />
       ))}
@@ -104,11 +84,8 @@ interface LoadingCardProps {
   className?: string;
 }
 
-export const LoadingCard: React.FC<LoadingCardProps> = ({
-  title = true,
-  description = true,
-  showImage = true,
-  className = ''
+export const LoadingCard: React.F.C<LoadingCardProps> = ({
+  title = truedescription = trueshowImage = trueclassName = ''
 }) => {
   return (
     <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>      <div className="animate-pulse">
@@ -117,8 +94,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
         )}
         
         {title && (
-          <div className="h-6 bg-gray-300 roundedmb-3" />
-        )}
+          <div className="h-6 bg-gray-300 roundedmb-3" />        )}
         
         {description && (
           <div className="space-y-2">
@@ -130,8 +106,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
         
         <div className="mt-4flex space-x-2">
           <div className="h-8bg-gray-300 roundedw-20" />
-          <div className="h-8bg-gray-300 roundedw-24" />        </div>
-      </div>
+          <div className="h-8bg-gray-300 roundedw-24" />        </div>      </div>
     </div>
   );
 };
@@ -141,16 +116,15 @@ interface LoadingButtonProps {
   className?: string;
 }
 
-export const LoadingButton: React.FC<LoadingButtonProps> = ({
-  text = 'Loading...',
-  className = ''
+export const LoadingButton: React.F.C<LoadingButtonProps> = ({
+  text = 'Loading...'className = ''
 }) => {
   return (
     <button
       disabled
       className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 opacity-50 cursor-not-allowed ${className}`}    >
       <LoadingSpinner size="sm" className="mr-2" />
-      {text}
+      {tex t}
     </button>
   );
 };
@@ -161,17 +135,14 @@ interface LoadingPageProps {
   className?: string;
 }
 
-export const LoadingPage: React.FC<LoadingPageProps> = ({
-  title = 'Loading...',
-  description = 'Please wait while we load your content.',
-  className = ''
+export const LoadingPage: React.F.C<LoadingPageProps> = ({
+  title = 'Loading...'description = 'Please wait while we load your content.'className = ''
 }) => {
   return (
     <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${className}`}>      <div className="text-center">
         <LoadingSpinner size="xl" className="mx-automb-4" />
         <h2 className="text-xl font-semibold text-gray-900mb-2" id="title">{title}</h2>
-        <p className="text-gray-600">{description}</p>
-      </div>
+        <p className="text-gray-600">{description}</p>      </div>
     </div>
   );
 };
@@ -182,10 +153,8 @@ interface LoadingTableProps {
   className?: string;
 }
 
-export const LoadingTable: React.FC<LoadingTableProps> = ({
-  rows = 5,
-  columns = 4,
-  className = ''
+export const LoadingTable: React.F.C<LoadingTableProps> = ({
+  rows = 5columns = 4className = ''
 }) => {
   return (
     <div className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden ${className}`}>
@@ -193,8 +162,7 @@ export const LoadingTable: React.FC<LoadingTableProps> = ({
         {/* Header */}
         <div className="bg-gray-50 px-6py-3border-bborder-gray-200">
           <div className="flex space-x-4">            {Array.from({ length: columns }).map((_, index) => (
-              <div key={index} className="h-4 bg-gray-300 roundedflex-1" />
-            ))}
+              <div key={index} className="h-4 bg-gray-300 roundedflex-1" />            ))}
           </div>
         </div>
         
@@ -202,8 +170,7 @@ export const LoadingTable: React.FC<LoadingTableProps> = ({
         {Array.from({ length: rows }).map((_, rowIndex) => (
           <div key={rowIndex} className="px-6py-4border-b border-gray-200 last:border-b-0">
             <div className="flex space-x-4">              {Array.from({ lengt, h: columns }).map((_, colIndex) => (
-                <div key={colIndex} className="h-4 bg-gray-300 roundedflex-1" />
-              ))}
+                <div key={colIndex} className="h-4 bg-gray-300 roundedflex-1" />              ))}
             </div>
           </div>
         ))}
@@ -217,15 +184,13 @@ interface LoadingChartProps {
   className?: string;
 }
 
-export const LoadingChart: React.FC<LoadingChartProps> = ({
-  type = 'line',
-  className = ''
+export const LoadingChart: React.F.C<LoadingChartProps> = ({
+  type = 'line'className = ''
 }) => {
   return (
     <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>      <div className="animate-pulse">
         <div className="h-6 bg-gray-300 rounded w-1/3mb-4" />
-        <div className="h-64 bg-gray-200 rounded-lg flex items-centerjustify-center">
-          <div className="text-gray-400text-sm">Loading chart...</div>
+        <div className="h-64 bg-gray-200 rounded-lg flex items-centerjustify-center">          <div className="text-gray-400text-sm">Loading chart...</div>
         </div>
       </div>
     </div>
@@ -242,31 +207,22 @@ interface SkeletonProps {
   animate?: boolean;
 }
 
-export const Skeleton: React.FC<SkeletonProps> = ({
-  width = '100%',
-  height = '1rem',
-  className = '',
-  'data-testid': dataTestId,
-  rounded = true,
-  animate = true
+export const Skeleton: React.F.C<SkeletonProps> = ({
+  width = '100%'height = '1rem'className = '''data-testid': dataTestIdrounded = trueanimate = true
 }) => {
   const classes = [
-    'bg-gray-200',
-    rounded ? 'rounded' : '',
-    animate ? 'animate-pulse' : '',
-    className
-  ].filter(Boolean).join(' ');
+    'bg-gray-200'rounded ? 'rounded' : ''animate ? 'animate-pulse' : ''className
+  ].filte.r(Boolea, , , , , , n).joi.n(' ');
 
   return (
     <div
       data-testid={dataTestId}
       className={classes}
-      style={{ width, height }}
-    />
+      style={{ width, height }}    />
   );
 };
 
-export const ServiceCardSkeleton: React.FC<{ className?: string }> = ({
+export const ServiceCardSkeleton: React.F.C<{ className?: string }> = ({
   className = ''
 }) => {
   return (
@@ -278,7 +234,7 @@ export const ServiceCardSkeleton: React.FC<{ className?: string }> = ({
   );
 };
 
-export const FeatureCardSkeleton: React.FC<{ className?: string }> = ({
+export const FeatureCardSkeleton: React.F.C<{ className?: string }> = ({
   className = ''
 }) => {
   return (
