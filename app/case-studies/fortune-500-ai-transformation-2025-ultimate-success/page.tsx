@@ -1,10 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
-import SEO from '../../../src/components/SEO';
+import SEO from '../../../components/SEO';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
+const metadata = {
   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results.',
   keywords: ['Fortune 500', 'AI transformation', 'ROI', 'success', '2025', 'case study'],
@@ -104,14 +105,12 @@ export default function Fortune500AITransformationSuccessPage() {
             Transform your enterprise with AI. Achieve 500%+ ROI with strategic AI implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/ai-transformation"
+            <Link to="/services/ai-transformation"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Get AI Consultation
@@ -122,8 +121,7 @@ export default function Fortune500AITransformationSuccessPage() {
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
+        <Link to="/"
           className="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

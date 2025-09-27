@@ -1,5 +1,0 @@
-  origin/cursor/check-fix-push-and-merge-to-main-7617
-  origin/cursor/check-fix-push-and-merge-to-main-8bc7
-  origin/cursor/check-fix-push-and-merge-to-main-a2ef
-  origin/cursor/check-fix-push-and-merge-to-main-aed8
-  origin/cursor/check-fix-push-and-merge-to-main-eab5

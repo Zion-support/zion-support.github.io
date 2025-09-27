@@ -1,3 +1,16 @@
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+node_modules/
+dist/
+out/
+build/
+.next/
+*.log
 # Dependencies
 node_modules/
 npm-debug.log*
@@ -105,3 +118,11 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
+
+# Yarn Berry cache
+.yarn/cache
+.yarn/*-state.*
+# Ignore Yarn v4 cache
+.yarn/cache/
+.yarn/install-state.gz
+.pnp.*

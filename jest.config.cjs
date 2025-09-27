@@ -1,61 +1,30 @@
-module.exports = {
-  testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/coverage/'],
-};
-
 /** @type {import('jest').Config} */
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__safe_tests__'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      { presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }], '@babel/preset-typescript'] }
-    ]
-  },
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
-  },
-  // Run only safe tests
-  testMatch: ['<rootDir>/__safe_tests__/**/*.(test|spec).(js|jsx|ts|tsx)'],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/__tests__/',
-    '/recovered-branches/',
-    '/src_backup/',
-    '/backup/',
-    '/backup-problematic-files/',
-    '/components.disabled/',
-    '/components.disabled_full/',
-    '/pages-disabled/',
-    '/pages.disabled/',
-    '/pages.disabled_auto/',
-    '/pages.disabled_full/',
-    '/pages_backup/',
-    '/pages_backup_before_cleanup/',
-    '/pages_backup_conflict/',
-    '/pages_backup_conflicts/',
-    '/pages.broken/',
-    '/pages._archive_corrupted/',
-    '/pages._quarantine/',
-    '/pages-quarantine/',
-    '/tests/',
-    '/e2e/',
-    '/temp_exclude/',
-    '/ts_files_backup/'
+  roots: ['<rootDir>/src'],
+  testMatch: [
+    '**/__tests__/**/*.(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)'
   ],
-  passWithNoTests: true
-}
-
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+  ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  passWithNoTests: true,
+  verbose: true
+};

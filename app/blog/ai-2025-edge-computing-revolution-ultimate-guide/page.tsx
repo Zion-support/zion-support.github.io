@@ -1,10 +1,10 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
-import SEO from '@/components/SEO';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
+const metadata = {
   title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
   description: 'Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation.',
   keywords: ['edge computing', 'AI', '2025', 'revolution', 'guide', 'enterprise'],
@@ -13,12 +13,6 @@ export const metadata: Metadata = {
 export default function EdgeComputingRevolutionPage() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2025: Edge Computing Revolution - Ultimate Guide"
-        description="Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation."
-        keywords="edge computing, AI, 2025, revolution, guide, enterprise"
-        url="/blog/ai-2025-edge-computing-revolution-ultimate-guide"
-      />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
@@ -91,14 +85,12 @@ export default function EdgeComputingRevolutionPage() {
             Discover how edge computing can revolutionize your AI implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/edge-ai"
+            <Link to="/services/edge-ai"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Edge AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Get Consultation
@@ -109,8 +101,7 @@ export default function EdgeComputingRevolutionPage() {
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
+        <Link to="/"
           className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
