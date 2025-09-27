@@ -450,22 +450,22 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className={`p-4rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
+                    className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <div className="flex items-center space-x-2mb-2">
-                          <span className="font-semibold text-gray-900dark:text-white">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className="font-semibold text-gray-900 dark:text-white">
                             {issue.description}
                           </span>
-                          <span className={`px-2py-1rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(issue.severity)}`}
                             {issue.severity}
                           </span>
                         </div>
-                        <div className="text-sm text-gray-600dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
                           {issue.impact}
                         </div>
-                        <div className="text-sm text-gray-600dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
                           <strong>Help:</strong> {issue.help}
                         </div>
                         <div className="text-xs text-gray-500dark:text-gray-500">
