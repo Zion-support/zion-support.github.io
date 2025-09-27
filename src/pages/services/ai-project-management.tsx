@@ -1,16 +1,16 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Target, Brain, Users, Clock, Shield, CheckCircle, BarChart3 } from "lucide-react"
+import { TargetBrainUsersClockShieldCheckCircleBarChart3 } from "lucide-react"
 import { SEO } from "@/components/SEO"
 
 export default function AIProjectManagement() {
   const features = [
-    { icon: Brain, title: "AI-Powered Planning", description: "Intelligent project planning with predictive analytics and resource optimization" },
-    { icon: Target, title: "Smart Goal Setting", description: "AI-driven milestone tracking and adaptive goal adjustment" },
-    { icon: Users, title: "Team Optimization", description: "Automated team allocation and workload balancing" },
-    { icon: Clock, title: "Predictive Scheduling", description: "Forecast project timelines and identify potential delays" },
-    { icon: BarChart3, title: "Real-Time Analytics", description: "Live project insights and performance metrics" },
-    { icon: Shield, title: "Risk Management", description: "AI-powered risk identification and mitigation strategies" },
+    { icon: Braintitle: "AI-Powered Planning"description: "Intelligent project planning with predictive analytics and resource optimization" },
+    { icon: Targettitle: "Smart Goal Setting"description: "AI-driven milestone tracking and adaptive goal adjustment" },
+    { icon: Userstitle: "Team Optimization"description: "Automated team allocation and workload balancing" },
+    { icon: Clocktitle: "Predictive Scheduling"description: "Forecast project timelines and identify potential delays" },
+    { icon: BarChart3title: "Real-Time Analytics"description: "Live project insights and performance metrics" },
+    { icon: Shieldtitle: "Risk Management"description: "AI-powered risk identification and mitigation strategies" },
   ]
 
   const benefits = [
@@ -26,25 +26,25 @@ export default function AIProjectManagement() {
     {
       title: "AI Project Planning",
       description: "Intelligent project planning and scheduling with predictive analytics",
-      features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"],
+      features: ["Smart milestone planning""Resource optimization""Timeline forecasting"],
       price: "From $3,000/month",
     },
     {
       title: "Team Management AI",
       description: "AI-powered team allocation and performance optimization",
-      features: ["Workload balancing", "Skill matching", "Performance tracking"],
+      features: ["Workload balancing""Skill matching""Performance tracking"],
       price: "From $2,500/month",
     },
     {
       title: "Risk Management Platform",
       description: "Advanced risk identification and mitigation strategies",
-      features: ["Risk prediction", "Mitigation planning", "Real-time alerts"],
+      features: ["Risk prediction""Mitigation planning""Real-time alerts"],
       price: "From $2,000/month",
     },
     {
       title: "Complete PM Suite",
       description: "Full AI-powered project management solution",
-      features: ["All features", "Custom integrations", "Enterprise support"],
+      features: ["All features""Custom integrations""Enterprise support"],
       price: "From $6,000/month",
     },
   ]
@@ -62,14 +62,14 @@ export default function AIProjectManagement() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Project Management Services - Zion Tech Group"
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
+        description="Revolutionary AI-powered project management that optimizes planningresource allocationand risk management. Deliver projects fastercheaperand with higher success rates."
       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10" />
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} animate={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
               <CheckCircle className="w-4 h-4 mr-2 text-orange-300" />
               <span className="text-orange-300 font-medium">AI Project Management</span>
@@ -82,8 +82,8 @@ export default function AIProjectManagement() {
               <span className="text-white">That Delivers Results</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with AI-powered management that optimizes planning, resource allocation,
-              and risk management. Deliver projects faster, cheaper, and with unprecedented success rates.
+              Transform your project delivery with AI-powered management that optimizes planningresource allocation,
+              and risk management. Deliver projects fastercheaperand with unprecedented success rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg">
@@ -100,21 +100,21 @@ export default function AIProjectManagement() {
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Advanced AI Technology for Better Project Delivery</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform combines machine learning, predictive analytics, and
+              Our AI-powered project management platform combines machine learningpredictive analyticsand
               automation to deliver exceptional project outcomes.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="p-6 rounded-xl border border-orange-400/20 bg-slate-800/40"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -131,21 +131,21 @@ export default function AIProjectManagement() {
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Proven Results & Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management delivers measurable improvements in delivery time, cost reduction, and
+              Our AI-powered project management delivers measurable improvements in delivery timecost reductionand
               project success rates.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0x: -20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="flex items-center space-x-3"
               >
                 <CheckCircle className="w-5 h-5 text-orange-400" />
@@ -159,7 +159,7 @@ export default function AIProjectManagement() {
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Flexible Solutions for Every Project</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our range of AI-powered project management solutions designed to meet your specific project
@@ -168,18 +168,18 @@ export default function AIProjectManagement() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map((solutionindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="p-6 rounded-xl border border-orange-400/20 bg-slate-800/40"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map((featurefeatureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-orange-400" />
                       <span className="text-gray-300">{feature}</span>
@@ -199,7 +199,7 @@ export default function AIProjectManagement() {
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Optimized for Any Project Type</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered project management platform is designed to handle diverse project types across all
@@ -208,12 +208,12 @@ export default function AIProjectManagement() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {projectTypes.map((projectType, index) => (
+            {projectTypes.map((projectTypeindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -229,10 +229,10 @@ export default function AIProjectManagement() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div initial={{ opacity: 0y: 20 }} whileInView={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Transform Your Project Delivery?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in project management and deliver projects faster, cheaper, and with higher success
+              Join the AI revolution in project management and deliver projects fastercheaperand with higher success
               rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

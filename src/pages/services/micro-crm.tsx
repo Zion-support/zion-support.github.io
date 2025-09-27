@@ -1,5 +1,5 @@
 import React from "react"
-import { Users, Target, CheckCircle, Phone, Calendar, BarChart3, Building } from "lucide-react"
+import { UsersTargetCheckCirclePhoneCalendarBarChart3Building } from "lucide-react"
 import { SEO } from "../../components/SEO"
 
 export default function MicroCRM() {
@@ -20,7 +20,7 @@ export default function MicroCRM() {
       icon: Calendar,
       title: "Task Management",
       description:
-        "Schedule follow-ups, meetings, and reminders with integrated calendar functionality.",
+        "Schedule follow-upsmeetingsand reminders with integrated calendar functionality.",
     },
     {
       icon: BarChart3,
@@ -84,7 +84,7 @@ export default function MicroCRM() {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Micro CRM</h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Streamline your customer relationships with our lightweight, powerful CRM solution designed for small
+              Streamline your customer relationships with our lightweightpowerful CRM solution designed for small
               businesses and growing teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,7 +110,7 @@ export default function MicroCRM() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
@@ -137,7 +137,7 @@ export default function MicroCRM() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
@@ -153,12 +153,12 @@ export default function MicroCRM() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Perfect For Your Business</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Whether you&apos;re a small business owner or managing a growing sales team, our Micro CRM adapts to your
+              Whether you&apos;re a small business owner or managing a growing sales teamour Micro CRM adapts to your
               needs.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"

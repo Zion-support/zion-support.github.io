@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { TestimonialCard } from '../src/components/TestimonialCard';
-import { PricingCard } from '../src/components/PricingCard';
-import { BlogCard } from '../src/components/BlogCard';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+// import { PricingCard } from '../src/components/PricingCard';
+// import { BlogCard } from '../src/components/BlogCard';
+// import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 import { TESTIMONIALS, PRICING_TIERS, BLOG_POSTS } from '../src/utils/constants';
@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
 	};
 
 	return (
-		<ErrorBoundary>
+		<>
 			<SEO />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
@@ -130,11 +130,11 @@ export default function Home(): JSX.Element {
 											key={tier.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
 										>
-											<PricingCard
-												tier={tier}
-												isVisible={isVisible}
-												onSelectPlan={handleSelectPlan}
-											/>
+											<div className="p-6 bg-white rounded-lg shadow-md">
+												<h3 className="text-xl font-semibold mb-2">{tier.name}</h3>
+												<p className="text-gray-600 mb-4">{tier.description}</p>
+												<div className="text-blue-600 font-medium">Pricing Card (temporarily disabled)</div>
+											</div>
 										</div>
 									))}
 								</div>
@@ -152,11 +152,15 @@ export default function Home(): JSX.Element {
 											key={post.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
 										>
-											<BlogCard
+											{/* <BlogCard
 												post={post}
 												isVisible={isVisible}
 												onReadMore={handleReadMore}
-											/>
+											/> */}
+											<div className="p-4 bg-gray-100 rounded">
+												<h3 className="font-bold">{post.title}</h3>
+												<p className="text-gray-600">{post.excerpt}</p>
+											</div>
 										</div>
 									))}
 								</div>
@@ -208,6 +212,6 @@ export default function Home(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }

@@ -1,357 +1,357 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { DataVisualization } from './DataVisualization';
+import { DataVisualizati, o, n } from './DataVisualizati, o, n';
 
 interface AnalyticsData {
-  timestamp: number;
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  revenue: number;
-  topPages: { page: string; views: number }[];
-  trafficSources: { source: string; visitors: number }[];
-  deviceTypes: { device: string; percentage: number }[];
-  geographicData: { country: string; visitors: number }[];
+  timesta, m, p: number;
+  pageVie, w, s: number;
+  uniqueVisito, r, s: number;
+  bounceRa, t, e: number;
+  avgSessionDurati, o, n: number;
+  conversionRa, t, e: number;
+  reven, u, e: number;
+  topPag, e, s: { pa, g, e: string; vie, w, s: number }, []);
+  trafficSourc, e, s: { sour, c, e: string; visito, r, s: number }, []);
+  deviceTyp, e, s: { devi, c, e: string; percenta, g, e: number }, []);
+  geographicDa, t, a: { country: string; visito, r, s: number }, []);
 }
 
-interface AnalyticsDashboardProps {
-  className?: string;
-}
+interface AnalyticsDashboardPro, p, s { className?: string }
 
-export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className = "" }) => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedTimeRange, setSelectedTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-  const [selectedMetric, setSelectedMetric] = useState<'pageViews' | 'uniqueVisitors' | 'revenue'>('pageViews');
+export const AnalyticsDashboa, r, d: React.FC<AnalyticsDashboardPro, p, s> = ({ className = "" }) => {
+  const [analyticsDa, t, a, setAnalyticsData] = useState<AnalyticsData[]>([]);
+  const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
+  const [selectedTimeRan, g, e, setSelectedTimeRan, g, e] = useState<'1h' | '2, 4, h' | '7d' | '30d'>('2, 4, h');
+  const [selectedMetr, i, c, setSelectedMetr, i, c] = useState<'pageVie, w, s' | 'uniqueVisito, r, s' | 'reven, u, e'>('pageVie, w, s');
 
-  const generateMockData = useCallback((): AnalyticsData[] => {
+  const generateMockDa, t, a = useCallback((): AnalyticsData[] => {
     const data: AnalyticsData[] = [];
-    const now = Date.now();
-    const hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '24h' ? 24 : selectedTimeRange === '7d' ? 168 : 720;
-    const interval = selectedTimeRange === '1h' ? 5 : selectedTimeRange === '24h' ? 60 : selectedTimeRange === '7d' ? 240 : 1440; // minutes
+    const n, o, w = Date.n, o, w();
+    const hoursBa, c, k = selectedTimeRan, g, e === '1h' ? 1 : selectedTimeRan, g, e === '2, 4, h' ? 24 : selectedTimeRan, g, e === '7d' ? 1, 6, 8 : 7, 2, 0;
+    const interv, a, l = selectedTimeRan, g, e === '1h' ? 5 : selectedTimeRan, g, e === '2, 4, h' ? 60 : selectedTimeRan, g, e === '7d' ? 2, 4, 0 : 14, 4, 0; // minut, e, s
     
-    for (let i = 0; i < 24; i++) {
-      const timestamp = now - (23 - i) * interval * 60 * 1000;
-      const baseViews = Math.random() * 1000 + 500;
-      const baseVisitors = Math.random() * 800 + 300;
+    f, o, r (l, e, t i = 0; i < 24; i++) {
+      const timesta, m, p = n, o, w - (23 - i) * interv, a, l * 60 * 10, 0, 0;
+      const baseVie, w, s = Ma, t, h.rand, o, m() * 10, 0, 0 + 5, 0, 0;
+      const baseVisito, r, s = Ma, t, h.rand, o, m() * 8, 0, 0 + 3, 0, 0;
       
-      data.push({
-        timestamp,
-        pageViews: Math.floor(baseViews + Math.random() * 200),
-        uniqueVisitors: Math.floor(baseVisitors + Math.random() * 150),
-        bounceRate: Math.random() * 0.4 + 0.2, // 20-60%
-        avgSessionDuration: Math.random() * 300 + 60, // 1-6 minutes
-        conversionRate: Math.random() * 0.05 + 0.01, // 1-6%
-        revenue: Math.random() * 5000 + 1000,
-        topPages: [
-          { page: '/', views: Math.floor(Math.random() * 500 + 200) },
-          { page: '/services', views: Math.floor(Math.random() * 300 + 100) },
-          { page: '/about', views: Math.floor(Math.random() * 200 + 50) },
-          { page: '/contact', views: Math.floor(Math.random() * 150 + 30) },
-          { page: '/blog', views: Math.floor(Math.random() * 100 + 20) }
+      da, t, a.pu, s, h({
+        timesta, m, p,
+        pageVie, w, s: Ma, t, h.flo, o, r(baseVie, w, s + Ma, t, h.rand, o, m() * 2, 0, 0),
+        uniqueVisito, r, s: Ma, t, h.flo, o, r(baseVisito, r, s + Ma, t, h.rand, o, m() * 1, 5, 0),
+        bounceRa, t, e: Ma, t, h.rand, o, m() * 0.4 + 0.2, // 20-60%
+        avgSessionDurati, o, n: Ma, t, h.rand, o, m() * 3, 0, 0 + 60, // 1-6 minut, e, s
+        conversionRa, t, e: Ma, t, h.rand, o, m() * 0.05 + 0.01, // 1-6%
+        reven, u, e: Ma, t, h.rand, o, m() * 50, 0, 0 + 10, 0, 0,
+        topPag, e, s: [
+          { pa, g, e: '/', vie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5, 0, 0 + 2, 0, 0) },
+          { pa, g, e: '/servic, e, s', vie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 1, 0, 0) },
+          { pa, g, e: '/abo, u, t', vie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 2, 0, 0 + 50) },
+          { pa, g, e: '/conta, c, t', vie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 30) },
+          { pa, g, e: '/bl, o, g', vie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 20) }
         ],
-        trafficSources: [
-          { source: 'Organic Search', visitors: Math.floor(Math.random() * 400 + 200) },
-          { source: 'Direct', visitors: Math.floor(Math.random() * 300 + 150) },
-          { source: 'Social Media', visitors: Math.floor(Math.random() * 200 + 100) },
-          { source: 'Referral', visitors: Math.floor(Math.random() * 150 + 50) },
-          { source: 'Email', visitors: Math.floor(Math.random() * 100 + 30) }
+        trafficSourc, e, s: [
+          { sour, c, e: 'Organ, i, c Sear, c, h', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4, 0, 0 + 2, 0, 0) },
+          { sour, c, e: 'Dire, c, t', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 1, 5, 0) },
+          { sour, c, e: 'Soci, a, l Med, i, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 2, 0, 0 + 1, 0, 0) },
+          { sour, c, e: 'Referr, a, l', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 50) },
+          { sour, c, e: 'Ema, i, l', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 30) }
         ],
-        deviceTypes: [
-          { device: 'Desktop', percentage: Math.random() * 0.3 + 0.4 },
-          { device: 'Mobile', percentage: Math.random() * 0.3 + 0.3 },
-          { device: 'Tablet', percentage: Math.random() * 0.2 + 0.1 }
+        deviceTyp, e, s: [
+          { devi, c, e: 'Deskt, o, p', percenta, g, e: Ma, t, h.rand, o, m() * 0.3 + 0.4 },
+          { devi, c, e: 'Mobi, l, e', percenta, g, e: Ma, t, h.rand, o, m() * 0.3 + 0.3 },
+          { devi, c, e: 'Tabl, e, t', percenta, g, e: Ma, t, h.rand, o, m() * 0.2 + 0.1 }
         ],
-        geographicData: [
-          { country: 'United States', visitors: Math.floor(Math.random() * 300 + 200) },
-          { country: 'United Kingdom', visitors: Math.floor(Math.random() * 150 + 100) },
-          { country: 'Canada', visitors: Math.floor(Math.random() * 100 + 50) },
-          { country: 'Germany', visitors: Math.floor(Math.random() * 80 + 40) },
-          { country: 'Australia', visitors: Math.floor(Math.random() * 60 + 30) }
+        geographicDa, t, a: [
+          { country: 'Unit, e, d Stat, e, s', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 2, 0, 0) },
+          { country: 'Unit, e, d Kingd, o, m', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 1, 0, 0) },
+          { country: 'Cana, d, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 50) },
+          { country: 'Germa, n, y', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80 + 40) },
+          { country: 'Austral, i, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 60 + 30) }
         ]
       });
     }
     
-    return data;
-  }, [selectedTimeRange]);
+    return da, t, a;
+  }, [selectedTimeRan, g, e]);
 
-  const fetchAnalyticsData = useCallback(async () => {
-    try {
-      setIsLoading(true);
+  const fetchAnalyticsData = useCallback(async () => { try {
+      setIsLoadi, n, g(true);
       
-      const mockData = generateMockData();
-      setAnalyticsData(mockData);
-      
-    } catch (error) {
-      console.error('Failed to fetch analytics data:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [generateMockData]);
+      const mockDa, t, a = generateMockDa, t, a();
+      setAnalyticsData(mockDa, t, a) } cat, c, h (error) { conso, l, e.error('Fail, e, d to fet, c, h analyti, c, s data:', error) } final, l, y { setIsLoadi, n, g(false) }
+  }, [generateMockDa, t, a]);
 
-  useEffect(() => {
-    fetchAnalyticsData();
-    const interval = setInterval(fetchAnalyticsData, 300000); // Refresh every 5 minutes
-    return () => clearInterval(interval);
-  }, [fetchAnalyticsData]);
+  useEffect(() => { fetchAnalyticsData();
+    const interv, a, l = setInterv, a, l(fetchAnalyticsData, 3000, 0, 0); // Refre, s, h eve, r, y 5 minut, e, s
+    return () => clearInterv, a, l(interv, a, l) }, [fetchAnalyticsData]);
 
-  const getTotalMetric = (metric: keyof AnalyticsData) => {
-    if (analyticsData.length === 0) return 0;
-    return analyticsData.reduce((sum, data) => sum + (data[metric] as number), 0);
-  };
+  const getTotalMetr, i, c = (metr, i, c: key, o, f AnalyticsData) => { if (analyticsDa, t, a.leng, t, h === 0) return 0;
+    return analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as number), 0) };
 
-  const getAverageMetric = (metric: keyof AnalyticsData) => {
-    if (analyticsData.length === 0) return 0;
-    const sum = analyticsData.reduce((sum, data) => sum + (data[metric] as number), 0);
-    return sum / analyticsData.length;
-  };
+  const getAverageMetr, i, c = (metr, i, c: key, o, f AnalyticsData) => { if (analyticsDa, t, a.leng, t, h === 0) return 0;
+    const s, u, m = analyticsDa, t, a.redu, c, e((s, u, m, da, t, a) => s, u, m + (da, t, a[metr, i, c] as number), 0);
+    return s, u, m / analyticsDa, t, a.leng, t, h };
 
-  const getLatestMetric = (metric: keyof AnalyticsData) => {
-    if (analyticsData.length === 0) return 0;
-    return analyticsData[analyticsData.length - 1][metric] as number;
-  };
+  const getLatestMetr, i, c = (metr, i, c: key, o, f AnalyticsData) => { if (analyticsDa, t, a.leng, t, h === 0) return 0;
+    return analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1], [metr, i, c] as number };
 
-  const getChartData = () => {
-    const labels = analyticsData.map(data => 
-      new Date(data.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+  const getChartDa, t, a = () => {
+    const labe, l, s = analyticsDa, t, a.m, a, p(da, t, a => 
+      new Date()(da, t, a.timesta, m, p).toLocaleTimeStri, n, g([], { ho, u, r: '2-dig, i, t', minu, t, e: '2-dig, i, t' })
     );
     
-    const metricData = analyticsData.map(data => {
-      switch (selectedMetric) {
-        case 'pageViews': return data.pageViews;
-        case 'uniqueVisitors': return data.uniqueVisitors;
-        case 'revenue': return data.revenue;
-        default: return data.pageViews;
-      }
+    const metricDa, t, a = analyticsDa, t, a.m, a, p(da, t, a => { swit, c, h (selectedMetr, i, c) {
+        ca, s, e 'pageVie, w, s': return da, t, a.pageVie, w, s;
+        ca, s, e 'uniqueVisito, r, s': return da, t, a.uniqueVisito, r, s;
+        ca, s, e 'reven, u, e': return da, t, a.reven, u, e;
+        default: return da, t, a.pageVie, w, s }
     });
 
     return {
-      labels,
-      datasets: [{
-        label: selectedMetric === 'pageViews' ? 'Page Views' : 
-               selectedMetric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue ($)',
-        data: metricData,
-        backgroundColor: selectedMetric === 'revenue' ? '#10B981' : '#3B82F6',
-        borderColor: selectedMetric === 'revenue' ? '#059669' : '#1D4ED8',
-        borderWidth: 2,
-        fill: true
+      labe, l, s,
+      datase, t, s: [{
+        lab, e, l: selectedMetr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
+               selectedMetr, i, c === 'uniqueVisito, r, s' ? 'Uniq, u, e Visito, r, s' : 'Reven, u, e ($)',
+        data: metricDa, t, a,
+        backgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10B9, 8, 1' : '#3B82, F, 6',
+        borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#0596, 6, 9' : '#1D4E, D, 8',
+        borderWid, t, h: 2,
+        fi, l, l: true
       }]
     };
   };
 
-  const getTopPagesData = () => {
-    if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getTopPagesDa, t, a = () => {
+    if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [], datase, t, s: [] };
     
-    const latestData = analyticsData[analyticsData.length - 1];
-    const sortedPages = latestData.topPages.sort((a, b) => b.views - a.views);
+    const latestDa, t, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
+    const sortedPag, e, s = latestDa, t, a.topPag, e, s.so, r, t((a, b) => b.vie, w, s - a.vie, w, s);
     
     return {
-      labels: sortedPages.map(p => p.page),
-      datasets: [{
-        label: 'Page Views',
-        data: sortedPages.map(p => p.views),
-        backgroundColor: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'],
-        borderColor: ['#1D4ED8', '#059669', '#D97706', '#DC2626', '#7C3AED'],
-        borderWidth: 2
+      labe, l, s: sortedPag, e, s.m, a, p(p => p.pa, g, e),
+      datase, t, s: [{
+        lab, e, l: 'Pa, g, e Vie, w, s',
+        data: sortedPag, e, s.m, a, p(p => p.vie, w, s),
+        backgroundCol, o, r: ['#3B82, F, 6', '#10B9, 8, 1', '#F59E, 0, B', '#EF44, 4, 4', '#8B5C, F, 6'],
+        borderCol, o, r: ['#1D4E, D, 8', '#0596, 6, 9', '#D977, 0, 6', '#DC26, 2, 6', '#7C3A, E, D'],
+        borderWid, t, h: 2
       }]
     };
   };
 
-  const getTrafficSourcesData = () => {
-    if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getTrafficSourcesDa, t, a = () => {
+    if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [], datase, t, s: [] };
     
-    const latestData = analyticsData[analyticsData.length - 1];
-    const sortedSources = latestData.trafficSources.sort((a, b) => b.visitors - a.visitors);
+    const latestDa, t, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
+    const sortedSourc, e, s = latestDa, t, a.trafficSourc, e, s.so, r, t((a, b) => b.visito, r, s - a.visito, r, s);
     
     return {
-      labels: sortedSources.map(s => s.source),
-      datasets: [{
-        label: 'Visitors',
-        data: sortedSources.map(s => s.visitors),
-        backgroundColor: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'],
-        borderColor: ['#1D4ED8', '#059669', '#D97706', '#DC2626', '#7C3AED'],
-        borderWidth: 2
+      labe, l, s: sortedSourc, e, s.m, a, p(s => s.sour, c, e),
+      datase, t, s: [{
+        lab, e, l: 'Visito, r, s',
+        data: sortedSourc, e, s.m, a, p(s => s.visito, r, s),
+        backgroundCol, o, r: ['#3B82, F, 6', '#10B9, 8, 1', '#F59E, 0, B', '#EF44, 4, 4', '#8B5C, F, 6'],
+        borderCol, o, r: ['#1D4E, D, 8', '#0596, 6, 9', '#D977, 0, 6', '#DC26, 2, 6', '#7C3A, E, D'],
+        borderWid, t, h: 2
       }]
     };
   };
 
-  const getDeviceTypesData = () => {
-    if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getDeviceTypesDa, t, a = () => {
+    if (analyticsDa, t, a.leng, t, h === 0) return { labe, l, s: [], datase, t, s: [] };
     
-    const latestData = analyticsData[analyticsData.length - 1];
-    const total = latestData.deviceTypes.reduce((sum, d) => sum + d.percentage, 0);
+    const latestDa, t, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
+    const tot, a, l = latestDa, t, a.deviceTyp, e, s.redu, c, e((s, u, m, d) => s, u, m + d.percenta, g, e, 0);
     
     return {
-      labels: latestData.deviceTypes.map(d => d.device),
-      datasets: [{
-        label: 'Device Usage',
-        data: latestData.deviceTypes.map(d => Math.round(d.percentage * 100)),
-        backgroundColor: ['#3B82F6', '#10B981', '#F59E0B'],
-        borderColor: ['#1D4ED8', '#059669', '#D97706'],
-        borderWidth: 2
+      labe, l, s: latestDa, t, a.deviceTyp, e, s.m, a, p(d => d.devi, c, e),
+      datase, t, s: [{
+        lab, e, l: 'Devi, c, e Usa, g, e',
+        data: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0)),
+        backgroundCol, o, r: ['#3B82, F, 6', '#10B9, 8, 1', '#F59E, 0, B'],
+        borderCol, o, r: ['#1D4E, D, 8', '#0596, 6, 9', '#D977, 0, 6'],
+        borderWid, t, h: 2
       }]
     };
   };
 
-  if (isLoading) {
+  if (isLoadi, n, g) {
     return (
-      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
-        <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="space-y-3">
-            <div className="h-4 bg-gray-200 rounded"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
-          </div>
-        </div>
-      </div>
+      <d, i, v className="{`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${cla s s Na m e}`}>
+        <d, i, v cla, s, s Na, m, e=anima, t, e-pul, s, e">
+          <d, i, v className="h-6 bg-gr, a, y-2, 0, 0 round, e, d w-1/4 mb-4></d, i, v>
+          <d, i, v cla, s, s Na, m, e=spa, c, e-y-3">
+            <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 round, e, d></d, i, v>
+            <d, i, v cla, s, s Na, m, e=h-4 bg-gr, a, y-2, 0, 0 round, e, d w-5/6"></d, i, v>
+            <d, i, v className="h-4 bg-gr, a, y-2, 0, 0 round, e, d w-4/6></d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
     );
   }
 
   return (
-    <div className={`space-y-6 ${className}`}>
-      {/* Analytics Overview */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900">Analytics Overview</h2>
-          <div className="flex space-x-2">
-            {(['1h', '24h', '7d', '30d'] as const).map((range) => (
-              <button
-                key={range}
-                onClick={() => setSelectedTimeRange(range)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedTimeRange === range
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
+    <d, i, v cla, s, s Na, m, e={"`spa c e-y-6 ${classNa m e}`}>
+      {/* Analyti, c, s Overvi, e, w */}
+      <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6>
+        <d, i, v cla, s, s Na, m, e=fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4">
+          <h2 className="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 id=analyti, c, s-overview">Analyti, c, s Overvi, e, w</h2>
+          <d, i, v className="fl, e, x spa, c, e-x-2>
+            {(['1 h' '24 h' '7d' '30d'] as const).m, a, p((ran, g, e) => (
+              <butt, o, n
+                k, e, y={ran, g, e}
+                on Cli, c, k={() = ar, i, a-lab, e, l="s, e, t Select, e, d Ti, m, e Ran, g, e(ran, g, e)}
+                ar, i, a-lab, e, l={`Sele c t ${ran g e} ti m e ran g e`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedTimeRan g e === ran g e
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
-                {range}
-              </button>
-            ))}
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">
-              {getTotalMetric('pageViews').toLocaleString()}
-            </div>
-            <div className="text-sm text-gray-600">Total Page Views</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-600">
-              {getTotalMetric('uniqueVisitors').toLocaleString()}
-            </div>
-            <div className="text-sm text-gray-600">Unique Visitors</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600">
-              {getAverageMetric('bounceRate').toFixed(1)}%
-            </div>
-            <div className="text-sm text-gray-600">Avg Bounce Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-600">
-              ${getTotalMetric('revenue').toLocaleString()}
-            </div>
-            <div className="text-sm text-gray-600">Total Revenue</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Metric Selector and Main Chart */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">Performance Trends</h3>
-          <div className="flex space-x-2">
-            {(['pageViews', 'uniqueVisitors', 'revenue'] as const).map((metric) => (
-              <button
-                key={metric}
-                onClick={() => setSelectedMetric(metric)}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedMetric === metric
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'
+                {ran, g, e}"> s, e, t Select, e, d Ti, m, e Ran, g, e(ran, g, e)}
+                ar, i, a-lab, e, l={`Sele c t ${ran g e} ti m e ran g e`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedTimeRan g e === ran g e
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
                 }`}
               >
-                {metric === 'pageViews' ? 'Page Views' : 
-                 metric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue'}
-              </button>
+                {ran, g, e}
+              </butt, o, n>
             ))}
-          </div>
-        </div>
+          </d, i, v>
+        </d, i, v>
         
-        <DataVisualization
-          type="line"
-          data={getChartData()}
-          title={`${selectedMetric === 'pageViews' ? 'Page Views' : 
-                   selectedMetric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue'} Over Time`}
-          height={400}
-        />
-      </div>
+        <d, i, v className="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-4 g, a, p-4>
+          <d, i, v cla, s, s Na, m, e=te, x, t-cent, e, r">
+            <d, i, v className="te, x, t-3 xl fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0>
+              {g, e, t Tot, a, l Metr, i, c('pa, g, e Vie, w, s').to Loca, l, e Stri, n, g()}
+            </d, i, v>
+            <d, i, v cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Tot, a, l Pa, g, e Vie, w, s</d, i, v>
+          </d, i, v>
+          <d, i, v className="te, x, t-cent, e, r>
+            <d, i, v cla, s, s Na, m, e=te, x, t-3 xl fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">
+              {getTotalMetr, i, c('uniqueVisito, r, s').toLocaleStri, n, g()}
+            </d, i, v>
+            <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Uniq, u, e Visito, r, s</d, i, v>
+          </d, i, v>
+          <d, i, v cla, s, s Na, m, e=te, x, t-cent, e, r">
+            <d, i, v className="te, x, t-3 xl fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0>
+              {g, e, t Avera, g, e Metr, i, c('boun, c, e Ra, t, e').to Fix, e, d(1)}%
+            </d, i, v>
+            <d, i, v cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Boun, c, e Ra, t, e</d, i, v>
+          </d, i, v>
+          <d, i, v className="te, x, t-cent, e, r>
+            <d, i, v cla, s, s Na, m, e=te, x, t-3 xl fo, n, t-bo, l, d te, x, t-yellow-6, 0, 0">
+              ${getTotalMetr, i, c('reven, u, e').toLocaleStri, n, g()}
+            </d, i, v>
+            <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Tot, a, l Reven, u, e</d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Charts Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <DataVisualization
-          type="bar"
-          data={getTopPagesData()}
-          title="Top Pages"
-          height={300}
+      {/* Metr, i, c Select, o, r a, n, d Ma, i, n Cha, r, t */}
+      <d, i, v cla, s, s Na, m, e=bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6">
+        <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-4>
+          <h 3 cla, s, s Na, m, e=te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0" id="performance-tren, d, s">Performan, c, e Tren, d, s</h3>
+          <d, i, v className="fl, e, x spa, c, e-x-2>
+            {(['pa, g, e Vie, w, s' 'uniq, u, e Visito, r, s'  'reven, u, e'] as const).m, a, p((metr, i, c) => (
+              <butt, o, n
+                k, e, y={metr, i, c}
+                on Cli, c, k={() = ar, i, a-lab, e, l="s, e, t Select, e, d Metr, i, c(metr, i, c)}
+                ar, i, a-lab, e, l={`Sele c t ${metr i c} metr i c`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedMetr i c === metr i c
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
+                }`}
+              >
+                {metr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
+                 metr, i, c === 'uniqueVisito, r, s' ? 'Uniq, u, e Visito, r, s' : 'Reven, u, e'}"> s, e, t Select, e, d Metr, i, c(metr, i, c)}
+                ar, i, a-lab, e, l={`Sele c t ${metr i c} metr i c`}
+                cla, s, s Na, m, e={"`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${
+                  selectedMetr i c === metr i c
+                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
+                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
+                }`}
+              >
+                {metr, i, c === 'pageVie, w, s' ? 'Pa, g, e Vie, w, s' : 
+                 metr, i, c === 'uniqueVisito, r, s' ? 'Uniq, u, e Visito, r, s' : 'Reven, u, e'}
+              </butt, o, n>
+            ))}
+          </d, i, v>
+        </d, i, v>
+        
+        <DataVisualizati, o, n
+          ty, p, e="li, n, e"
+          da, t, a={getChartDa, t, a()}
+          tit, l, e={`${selectedMetr i c === 'pageVie w s' ? 'Pa g e Vie w s' : 
+                   selectedMetr i c === 'uniqueVisito r s' ? 'Uniq u e Visito r s' : 'Reven u e'} Ov e r Ti m e`}
+          heig, h, t={4, 0, 0}
         />
-        <DataVisualization
-          type="pie"
-          data={getTrafficSourcesData()}
-          title="Traffic Sources"
-          height={300}
-        />
-      </div>
+      </d, i, v>
 
-      {/* Device Types and Additional Metrics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <DataVisualization
-          type="doughnut"
-          data={getDeviceTypesData()}
-          title="Device Types"
-          height={300}
+      {/* Char, t, s Gr, i, d */}
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6>
+        <Da, t, a Visualizati, o, n
+          ty, p, e=b, a, r"
+          da, t, a={getTopPagesDa, t, a()}
+          tit, l, e="T, o, p Pag, e, s"
+          heig, h, t={3, 0, 0}
+        />
+        <DataVisualizati, o, n
+          ty, p, e="p, i, e"
+          da, t, a={getTrafficSourcesDa, t, a()}
+          tit, l, e="Traff, i, c Sourc, e, s"
+          heig, h, t={3, 0, 0}
+        />
+      </d, i, v>
+
+      {/* Devi, c, e Typ, e, s a, n, d Addition, a, l Metri, c, s */}
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6>
+        <Da, t, a Visualizati, o, n
+          ty, p, e=doughn, u, t"
+          da, t, a={getDeviceTypesDa, t, a()}
+          tit, l, e="Devi, c, e Typ, e, s"
+          heig, h, t={3, 0, 0}
         />
         
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Metrics</h3>
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Avg Session Duration</span>
-              <span className="text-sm font-medium text-gray-900">
-                {Math.round(getAverageMetric('avgSessionDuration'))}s
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Conversion Rate</span>
-              <span className="text-sm font-medium text-gray-900">
-                {(getAverageMetric('conversionRate') * 100).toFixed(2)}%
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Latest Page Views</span>
-              <span className="text-sm font-medium text-gray-900">
-                {getLatestMetric('pageViews').toLocaleString()}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Latest Unique Visitors</span>
-              <span className="text-sm font-medium text-gray-900">
-                {getLatestMetric('uniqueVisitors').toLocaleString()}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Latest Revenue</span>
-              <span className="text-sm font-medium text-gray-900">
-                ${getLatestMetric('revenue').toLocaleString()}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-sm bord, e, r bord, e, r-gr, a, y-2, 0, 0 p-6>
+          <h 3 cla, s, s Na, m, e=te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 mb-4" id="k, e, y-metrics">K, e, y Metri, c, s</h3>
+          <d, i, v className="spa, c, e-y-4>
+            <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+              <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>A, v, g Sessi, o, n Durati, o, n</sp, a, n>
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
+                {Ma, t, h.rou, n, d(getAverageMetr, i, c('avgSessionDurati, o, n'))}s
+              </sp, a, n>
+            </d, i, v>
+            <d, i, v className="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r>
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Conversi, o, n Ra, t, e</sp, a, n>
+              <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0>
+                {(g, e, t Avera, g, e Metr, i, c('conversi, o, n Ra, t, e') * 1, 0, 0).to Fix, e, d(2)}%
+              </sp, a, n>
+            </d, i, v>
+            <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+              <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Late, s, t Pa, g, e Vie, w, s</sp, a, n>
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
+                {getLatestMetr, i, c('pageVie, w, s').toLocaleStri, n, g()}
+              </sp, a, n>
+            </d, i, v>
+            <d, i, v className="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r>
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Late, s, t Uniq, u, e Visito, r, s</sp, a, n>
+              <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0>
+                {g, e, t Late, s, t Metr, i, c('uniq, u, e Visito, r, s').to Loca, l, e Stri, n, g()}
+              </sp, a, n>
+            </d, i, v>
+            <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+              <sp, a, n className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0>Late, s, t Reven, u, e</sp, a, n>
+              <sp, a, n cla, s, s Na, m, e=te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">
+                ${getLatestMetr, i, c('reven, u, e').toLocaleStri, n, g()}
+              </sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };

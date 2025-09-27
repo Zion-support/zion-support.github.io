@@ -19,21 +19,21 @@ import {
 
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [
-    { icon: Atom, title: "Quantum Computing", description: "Leverage quantum bits for exponentially faster computational power" },
-    { icon: Brain, title: "AI Integration", description: "Seamless integration of classical AI with quantum algorithms" },
-    { icon: Zap, title: "Hybrid Processing", description: "Combines classical and quantum computing for optimal performance" },
-    { icon: Cpu, title: "Quantum-Classical Interface", description: "Bridging quantum and classical computing paradigms" },
-    { icon: Users, title: "Multi-user Access", description: "Enterprise-grade platform for teams and organizations" },
-    { icon: Clock, title: "Real-time Processing", description: "Instant quantum-classical hybrid computations" },
+    { icon: Atomtitle: "Quantum Computing"description: "Leverage quantum bits for exponentially faster computational power" },
+    { icon: Braintitle: "AI Integration"description: "Seamless integration of classical AI with quantum algorithms" },
+    { icon: Zaptitle: "Hybrid Processing"description: "Combines classical and quantum computing for optimal performance" },
+    { icon: Cputitle: "Quantum-Classical Interface"description: "Bridging quantum and classical computing paradigms" },
+    { icon: Userstitle: "Multi-user Access"description: "Enterprise-grade platform for teams and organizations" },
+    { icon: Clocktitle: "Real-time Processing"description: "Instant quantum-classical hybrid computations" },
   ]
 
   const capabilities = [
-    { icon: Atom, title: "Quantum Machine Learning", description: "Quantum-enhanced ML algorithms for superior pattern recognition" },
-    { icon: Network, title: "Quantum Neural Networks", description: "Next-generation neural networks powered by quantum mechanics" },
-    { icon: Shield, title: "Quantum Cryptography", description: "Unbreakable encryption using quantum key distribution" },
-    { icon: Globe, title: "Global Quantum Network", description: "Worldwide quantum computing infrastructure access" },
-    { icon: Smartphone, title: "Mobile Quantum Access", description: "Access quantum computing power from anywhere" },
-    { icon: Monitor, title: "Quantum Monitoring", description: "Real-time quantum system performance tracking" },
+    { icon: Atomtitle: "Quantum Machine Learning"description: "Quantum-enhanced ML algorithms for superior pattern recognition" },
+    { icon: Networktitle: "Quantum Neural Networks"description: "Next-generation neural networks powered by quantum mechanics" },
+    { icon: Shieldtitle: "Quantum Cryptography"description: "Unbreakable encryption using quantum key distribution" },
+    { icon: Globetitle: "Global Quantum Network"description: "Worldwide quantum computing infrastructure access" },
+    { icon: Smartphonetitle: "Mobile Quantum Access"description: "Access quantum computing power from anywhere" },
+    { icon: Monitortitle: "Quantum Monitoring"description: "Real-time quantum system performance tracking" },
   ]
 
   const applications = [
@@ -96,12 +96,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Quantum-Classical Hybrid Intelligence</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of quantum computing enhanced by artificial intelligence, delivering computational
+              Experience the power of quantum computing enhanced by artificial intelligencedelivering computational
               capabilities beyond imagination.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <div
                 key={index}
                 className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-indigo-400/30 transition-all duration-200 hover:scale-105"
@@ -123,12 +123,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From quantum machine learning to quantum cryptography, our platform delivers cutting-edge quantum
+              From quantum machine learning to quantum cryptographyour platform delivers cutting-edge quantum
               computing capabilities.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
+            {capabilities.map((capabilityindex) => (
               <div
                 key={index}
                 className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-indigo-400/30 transition-all duration-200 hover:scale-105"
@@ -151,11 +151,11 @@ const AIQuantumHybridPlatform: React.FC = () => {
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Applications</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our AI-Quantum hybrid platform opens new frontiers in science, technology, and business, solving
+                Our AI-Quantum hybrid platform opens new frontiers in sciencetechnologyand businesssolving
                 problems that were previously impossible.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {applications.map((application, index) => (
+                {applications.map((applicationindex) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-indigo-400" />
                     <span className="text-gray-300">{application}</span>
@@ -199,12 +199,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Transform Your Computational Power</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented computational capabilities that will revolutionize your research, development,
+              Experience unprecedented computational capabilities that will revolutionize your researchdevelopment,
               and business processes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-indigo-400/30 transition-all duration-200"
