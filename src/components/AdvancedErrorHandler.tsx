@@ -234,22 +234,22 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {
     switch (severity) {
-      case 'critical': return 'text-red-60 0 bg-red-5 0 border-red-2 0 0';
-      case 'high': return 'text-orange-60 0 bg-orange-5 0 border-orange-2 0 0';
-      case 'medium': return 'text-yellow-60 0 bg-yellow-5 0 border-yellow-2 0 0';
-      case 'low': return 'text-blue-60 0 bg-blue-5 0 border-blue-2 0 0';
-      default: return 'text-gray-60 0 bg-gray-5 0 border-gray-2 0 0';
+      case 'critical': return 'text-red-600 bg-red-50 border-red-200';
+      case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
   const getCategoryIcon = (category: ErrorInfo['category']) => {
     switch (category) {
-      case 'javascript': return <Bug className="w-4h-4" />;
-      case 'network': return <Activity className="w-4h-4" />;
-      case 'validation': return <Shield className="w-4h-4" />;
-      case 'permission': return <Shield className="w-4h-4" />;
-      case 'system': return <Database className="w-4h-4" />;
-      default: return <AlertTriangle className="w-4h-4" />;
+      case 'javascript': return <Bug className="w-4 h-4" />;
+      case 'network': return <Activity className="w-4 h-4" />;
+      case 'validation': return <Shield className="w-4 h-4" />;
+      case 'permission': return <Shield className="w-4 h-4" />;
+      case 'system': return <Database className="w-4 h-4" />;
+      default: return <AlertTriangle className="w-4 h-4" />;
     }
   };
 
@@ -257,13 +257,13 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
     <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-6 0 0 hover:bg-red-7 0 0 text-white p-3 rounded-full shadow-lg transition-colors"
+        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <AlertTriangle className="w-6 h-6" />
         {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-5 0 0 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
             {stats.totalErrors}
           </span>
         )}

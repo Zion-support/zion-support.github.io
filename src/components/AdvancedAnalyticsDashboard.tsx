@@ -70,13 +70,13 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-9 0 0 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-6 0 0 dark:text-gray-4 0 0">Real-time insights and performance metrics</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
+          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-5 0 0' : 'bg-gray-4 0 0'}`} />
-            <span className="text-sm text-gray-6 0 0 dark:text-gray-4 0 0">
+            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {isRealTime ? 'Real-time' : 'Paused'}
             </span>
           </div>

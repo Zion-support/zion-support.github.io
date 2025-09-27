@@ -34,7 +34,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
 
   useEffect(() => {
     const handleGlobalError = (event: ErrorEvent) => {
-      const errorDetail, s: ErrorDetails = {
+      const errorDetails: ErrorDetails = {
         messag, e: event.message,
         stack: event.error?.stack,
         component: 'Global',
@@ -60,7 +60,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      const errorDetail, s: ErrorDetails = {
+      const errorDetails: ErrorDetails = {
         messag, e: event.reason?.message || 'Unhandled Promise Rejection',
         stack: event.reason?.stack,
         component: 'Promise',
@@ -166,9 +166,9 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
               Clear
             </button>
           </div>
-          <div className="space-y-2max-h-3 2 overflow-y-auto">
+          <div className="space-y-2 max-h-32 overflow-y-auto">
             {errorHistory.slice(-5).map((error, index) => (
-              <div key={index} className="text-xs text-gray-60 0 border-l-2border-red-20 0 pl-2">
+              <div key={index} className="text-xs text-gray-600 border-l-2 border-red-200 pl-2">
                 <div className="font-medium">{error.component}</div>
                 <div className="truncate">{error.message}</div>
                 <div className="text-gray-4 0 0">

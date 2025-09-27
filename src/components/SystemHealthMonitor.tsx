@@ -56,65 +56,65 @@ export const SystemHealthMonitor: React.FC = () => {
   };
 
   return (
-    <div className="p-6bg-white rounded-lgshadow-lg">
+    <div className="p-6 bg-white rounded-lg shadow-lg">
       <div className="flex items-center justify-between mb-6">
-        <h 2 className="text-2xl font-bold">System Health Monitor</h2>
-        <div className={`px-3py-1rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
+        <h2 className="text-2xl font-bold">System Health Monitor</h2>
+        <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
           {health.status.toUpperCase()}
         </div>
       </div>
 
-      <div className="grid grid-cols-2md:grid-cols-3gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">Uptime</h3>
-          <div className="text-2xl font-boldtext-gray-9 0 0">
+          <h3 className="text-sm font-medium text-gray-600">Uptime</h3>
+          <div className="text-2xl font-bold text-gray-900">
             {formatUptime(health.uptime)}
           </div>
         </div>
 
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">Response Time</h3>
-          <div className="text-2xl font-boldtext-gray-9 0 0">
+          <h3 className="text-sm font-medium text-gray-600">Response Time</h3>
+          <div className="text-2xl font-bold text-gray-900">
             {health.responseTime.toFixed(0)}ms
           </div>
         </div>
 
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">Error Rate</h3>
-          <div className="text-2xl font-boldtext-gray-9 0 0">
+          <h3 className="text-sm font-medium text-gray-600">Error Rate</h3>
+          <div className="text-2xl font-bold text-gray-900">
             {health.errorRate.toFixed(2)}%
           </div>
         </div>
 
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">CPU Usage</h3>
-          <div className="text-2xl font-boldtext-gray-9 0 0">
+          <h3 className="text-sm font-medium text-gray-600">CPU Usage</h3>
+          <div className="text-2xl font-bold text-gray-900">
             {health.cpuUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-20 0 rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-blue-60 0 h-2rounded-full transition-allduration-3 0 0"
+              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
               style={{ width: `${health.cpuUsage}%` }}
             />
           </div>
         </div>
 
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">Memory Usage</h3>
-          <div className="text-2xl font-boldtext-gray-9 0 0">
+          <h3 className="text-sm font-medium text-gray-600">Memory Usage</h3>
+          <div className="text-2xl font-bold text-gray-900">
             {health.memoryUsage.toFixed(1)}%
           </div>
-          <div className="w-full bg-gray-20 0 rounded-fullh-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-green-60 0 h-2rounded-full transition-allduration-3 0 0"
+              className="bg-green-600 h-2 rounded-full transition-all duration-300"
               style={{ width: `${health.memoryUsage}%` }}
             />
           </div>
         </div>
 
         <div className="space-y-2">
-          <h 3 className="text-sm font-mediumtext-gray-6 0 0">Last Updated</h3>
-          <div className="text-smtext-gray-5 0 0">
+          <h3 className="text-sm font-medium text-gray-600">Last Updated</h3>
+          <div className="text-sm text-gray-500">
             {new Date().toLocaleTimeString()}
           </div>
         </div>

@@ -72,16 +72,16 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
 
   useEffect(() => {
     performSecurityScan();
-    const interval = setInterval(performSecurityScan, 3 0 0 0 0); // Scan every3 0 seconds
+    const interval = setInterval(performSecurityScan, 30000); // Scan every 30 seconds
     return () => clearInterval(interval);
   }, [performSecurityScan]);
 
   return (
     <div className={`bg-white dark:bg-gray-8 0 0 rounded-lg shadow-lg p-6 `}>
       <div className="flex items-center justify-between mb-6">
-        <div className="flex items-centerspace-x-3">
-          <Shield className="w-8h-8text-blue-5 0 0" />
-          <h 2 className="text-2xl font-bold text-gray-90 0 dark:text-white">
+        <div className="flex items-center space-x-3">
+          <Shield className="w-8 h-8 text-blue-500" />
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Advanced Security Monitor
           </h2>
         </div>
@@ -108,33 +108,33 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
           </div>
         </div>
 
-        <div className="bg-gray-5 0 dark: bg-gray-70 0 p-4rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-60 0 dark:text-gray-4 0 0">Security Score</p>
-              <p className="text-2xl font-boldtext-blue-5 0 0">{metrics.securityScore}%</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Security Score</p>
+              <p className="text-2xl font-bold text-blue-500">{metrics.securityScore}%</p>
             </div>
-            <Lock className="w-5h-5text-blue-5 0 0" />
+            <Lock className="w-5 h-5 text-blue-500" />
           </div>
         </div>
 
-        <div className="bg-gray-5 0 dark: bg-gray-70 0 p-4rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-60 0 dark:text-gray-4 0 0">Active Threats</p>
-              <p className="text-2xl font-boldtext-red-5 0 0">{metrics.activeThreats}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Active Threats</p>
+              <p className="text-2xl font-bold text-red-500">{metrics.activeThreats}</p>
             </div>
-            <AlertTriangle className="w-5h-5text-red-5 0 0" />
+            <AlertTriangle className="w-5 h-5 text-red-500" />
           </div>
         </div>
 
-        <div className="bg-gray-5 0 dark: bg-gray-70 0 p-4rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-60 0 dark:text-gray-4 0 0">Blocked Requests</p>
-              <p className="text-2xl font-boldtext-orange-5 0 0">{metrics.blockedRequests}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Blocked Requests</p>
+              <p className="text-2xl font-bold text-orange-500">{metrics.blockedRequests}</p>
             </div>
-            <Eye className="w-5h-5text-orange-5 0 0" />
+            <Eye className="w-5 h-5 text-orange-500" />
           </div>
         </div>
       </div>
@@ -186,8 +186,8 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
         </div>
       </div>
 
-      <div className="mt-4text-sm text-gray-50 0 dark:text-gray-4 0 0">
-        Last sca, n: {metrics.lastScan.toLocaleString()}
+      <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        Last scan: {metrics.lastScan.toLocaleString()}
       </div>
     </div>
   );

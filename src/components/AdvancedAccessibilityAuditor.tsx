@@ -49,7 +49,7 @@ interface AccessibilityMetrics {
 
 interface AdvancedAccessibilityAuditorProps {
   onAuditComplete?: (metrics: AccessibilityMetrics) => void;
-  onIssueFound?: (issu, e: AccessibilityIssue) => void;
+  onIssueFound?: (issue: AccessibilityIssue) => void;
   className?: string;
 }
 
@@ -321,7 +321,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <button
             onClick={auditAccessibility}
             disabled={isAuditing}
-            className="px-4 py-2bg-blue-50 0 hover:bg-blue-60 0 disabled:bg-gray-40 0 text-white rounded-lg text-sm font-medium transition-colors"
+            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
             aria-label={isAuditing ? 'Auditing...' : 'Run Audit'}>
             {isAuditing ? 'Auditing...' : 'Run Audit'}
           </button>
@@ -331,12 +331,12 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       {metrics && (
         <>
           {/* Accessibility Score */}
-          <div className="bg-gradient-to-r from-blue-50 0 to-purple-60 0 rounded-lg p-6text-white mb-6">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
             <div className="flex items-center justify-between">
               <div>
-                <h 3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
+                <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
-                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
+                  <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
                     {metrics.score}
                   </div>
                   <div>
@@ -465,10 +465,10 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                         <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-2">
                           {issue.impact}
                         </div>
-                        <div className="text-sm text-gray-60 0 dark:text-gray-40 0 mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                           <strong>Help:</strong> {issue.help}
                         </div>
-                        <div className="text-xs text-gray-50 0 dark:text-gray-5 0 0">
+                        <div className="text-xs text-gray-500 dark:text-gray-500">
                           Element: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
                         </div>
                       </div>
