@@ -116,8 +116,8 @@ class EnhancedPerformanceOptimizer {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+          clsValue += (entry as PerformanceEntry & { value?: number }).value || 0;
         }
       });
       this.metrics.cls = clsValue;
@@ -144,7 +144,7 @@ class EnhancedPerformanceOptimizer {
     if (!('memory' in performance)) return;
 
     const updateMemoryMetrics = () => {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         this.metrics.memory = {
           used: memory.usedJSHeapSize,
@@ -332,7 +332,8 @@ class EnhancedPerformanceOptimizer {
   /**
    * Trigger optimization based on poor performance
    */
-  private triggerOptimization(metric: string, value: number): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private triggerOptimization(metric: string, _value: number): void {
     switch (metric) {
       case 'LCP':
         this.optimizeLargestContentfulPaint();

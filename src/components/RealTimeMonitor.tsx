@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, 
@@ -42,17 +42,64 @@ const RealTimeMonitor: React.FC = () => {
   const wsRef = useRef<WebSocket | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    if (isVisible) {
-      initializeMonitoring();
-    } else {
-      cleanupMonitoring();
+  const generateAlert = useCallback(() => {
+    const alertTypes = ['performance', 'security', 'error', 'network'];
+    const severities = ['low', 'medium', 'high', 'critical'];
+    const messages = [
+      'High CPU usage detected',
+      'Memory usage approaching limit',
+      'Response time degradation',
+      'Security vulnerability detected',
+      'Database connection timeout',
+      'Network latency spike',
+      'Cache miss rate increased',
+      'Error rate threshold exceeded'
+    ];
+
+    const newAlert: SystemAlert = {
+      id: `alert-${Date.now()}`,
+      type: alertTypes[Math.floor(Math.random() * alertTypes.length)] as SystemAlert['type'],
+      severity: severities[Math.floor(Math.random() * severities.length)] as SystemAlert['severity'],
+      message: messages[Math.floor(Math.random() * messages.length)],
+      timestamp: Date.now(),
+      resolved: false
+    };
+
+    setAlerts(prev => [newAlert, ...prev.slice(0, 9)]); // Keep only last 10 alerts
+  }, []);
+
+  const updateMetrics = useCallback(() => {
+    setMetrics(prev => prev.map(metric => {
+      const change = (Math.random() - 0.5) * 10;
+      let newValue = metric.value + change;
+      
+      // Keep values within reasonable bounds
+      if (metric.id === 'cpu-usage' || metric.id === 'memory-usage') {
+        newValue = Math.max(0, Math.min(100, newValue));
+      } else if (metric.id === 'response-time') {
+        newValue = Math.max(50, Math.min(500, newValue));
+      } else if (metric.id === 'active-users') {
+        newValue = Math.max(0, Math.min(1000, newValue));
+      }
+      
+      // Calculate trend
+      const trend = change > 0 ? 'up' : change < 0 ? 'down' : 'stable';
+      
+      return {
+        ...metric,
+        value: Math.round(newValue * 10) / 10,
+        trend,
+        timestamp: Date.now()
+      };
+    }));
+
+    // Occasionally generate alerts
+    if (Math.random() < 0.1) {
+      generateAlert();
     }
+  }, [generateAlert]);
 
-    return cleanupMonitoring;
-  }, [isVisible]);
-
-  const initializeMonitoring = () => {
+  const initializeMonitoring = useCallback(() => {
     // Simulate WebSocket connection for real-time updates
     simulateWebSocketConnection();
     
@@ -61,7 +108,17 @@ const RealTimeMonitor: React.FC = () => {
     
     // Start periodic updates
     intervalRef.current = setInterval(updateMetrics, 2000);
-  };
+  }, [updateMetrics]);
+
+  useEffect(() => {
+    if (isVisible) {
+      initializeMonitoring();
+    } else {
+      cleanupMonitoring();
+    }
+
+    return cleanupMonitoring;
+  }, [isVisible, initializeMonitoring]);
 
   const cleanupMonitoring = () => {
     if (wsRef.current) {
@@ -141,78 +198,7 @@ const RealTimeMonitor: React.FC = () => {
     setMetrics(initialMetrics);
   };
 
-  const updateMetrics = () => {
-    setMetrics(prev => prev.map(metric => {
-      const change = (Math.random() - 0.5) * 10;
-      let newValue = metric.value + change;
-      
-      // Keep values within reasonable bounds
-      if (metric.id === 'cpu-usage' || metric.id === 'memory-usage') {
-        newValue = Math.max(0, Math.min(100, newValue));
-      } else if (metric.id === 'response-time') {
-        newValue = Math.max(50, Math.min(500, newValue));
-      } else if (metric.id === 'active-users') {
-        newValue = Math.max(0, Math.floor(newValue));
-      } else if (metric.id === 'error-rate') {
-        newValue = Math.max(0, Math.min(5, newValue));
-      } else if (metric.id === 'cache-hit-rate') {
-        newValue = Math.max(0, Math.min(100, newValue));
-      }
 
-      // Determine status based on value
-      let status: 'good' | 'warning' | 'critical' = 'good';
-      if (metric.id === 'cpu-usage' && newValue > 80) status = 'critical';
-      else if (metric.id === 'cpu-usage' && newValue > 60) status = 'warning';
-      else if (metric.id === 'memory-usage' && newValue > 85) status = 'critical';
-      else if (metric.id === 'memory-usage' && newValue > 70) status = 'warning';
-      else if (metric.id === 'response-time' && newValue > 300) status = 'critical';
-      else if (metric.id === 'response-time' && newValue > 200) status = 'warning';
-      else if (metric.id === 'error-rate' && newValue > 2) status = 'critical';
-      else if (metric.id === 'error-rate' && newValue > 1) status = 'warning';
-
-      // Determine trend
-      const trend = change > 2 ? 'up' : change < -2 ? 'down' : 'stable';
-
-      return {
-        ...metric,
-        value: Math.round(newValue * 100) / 100,
-        status,
-        trend,
-        timestamp: Date.now()
-      };
-    }));
-
-    // Occasionally generate alerts
-    if (Math.random() < 0.1) {
-      generateAlert();
-    }
-  };
-
-  const generateAlert = () => {
-    const alertTypes = ['performance', 'security', 'error', 'network'];
-    const severities = ['low', 'medium', 'high', 'critical'];
-    const messages = [
-      'High CPU usage detected',
-      'Memory usage approaching limit',
-      'Response time degradation',
-      'Security vulnerability detected',
-      'Database connection timeout',
-      'Network latency spike',
-      'Cache miss rate increased',
-      'Error rate threshold exceeded'
-    ];
-
-    const newAlert: SystemAlert = {
-      id: `alert-${Date.now()}`,
-      type: alertTypes[Math.floor(Math.random() * alertTypes.length)] as any,
-      severity: severities[Math.floor(Math.random() * severities.length)] as any,
-      message: messages[Math.floor(Math.random() * messages.length)],
-      timestamp: Date.now(),
-      resolved: false
-    };
-
-    setAlerts(prev => [newAlert, ...prev.slice(0, 9)]); // Keep only last 10 alerts
-  };
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
