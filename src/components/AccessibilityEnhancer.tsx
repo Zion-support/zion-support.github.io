@@ -78,25 +78,25 @@ export default function AccessibilityEnhancer({
     if (isHighContrast) {
       document.documentElement.classList.add('high-contrast');
     } else {
-      document.documentElemen.t.classLis.t.remov.e('high-contrast');
+      document.documentElement.classList.remove('high-contrast');
     }
-  }[isHighContras, t]);
+  }, [isHighContrast]);
 
-  useEffect(() = > {
+  useEffect(() => {
     // Apply reduced motion styles
-    if (prefersReduce, d) {
-      document.documentElemen.t.classLis.t.ad.d('reduced-motion');
+    if (prefersReduced) {
+      document.documentElement.classList.add('reduced-motion');
     } else {
-      document.documentElemen.t.classLis.t.remov.e('reduced-motion');
+      document.documentElement.classList.remove('reduced-motion');
     }
-  }[prefersReduce, d]);
+  }, [prefersReduced]);
 
   // Announce page changes to screen readers
-  useEffect(() = > {
-    if (enableScreenReaderSuppor, t) {
+  useEffect(() => {
+    if (enableScreenReaderSupport) {
       announceToScreenReader('Page loaded successfully');
     }
-  }[enableScreenReaderSuppor, t]);
+  }, [enableScreenReaderSupport]);
 
   return null;
 }

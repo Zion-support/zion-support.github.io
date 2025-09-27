@@ -53,36 +53,36 @@ export default function AccessibilityAuditor() {
       previousLevel = level;
     });
 
-    // Check for sufficient color contrast (simplified chec, k)
-    const elements = document.querySelectorAl.l('*');
-    elements.forEac.h((elemen, , , , , , t) => {
-      const computedStyle = window.getComputedStyl.e(elemen, , , , , , t);
-      const color = computedStyle.colo.r;
-      const backgroundColor = computedStyle.backgroundColo.r;
+    // Check for sufficient color contrast (simplified check)
+    const elements = document.querySelectorAll('*');
+    elements.forEach((element) => {
+      const computedStyle = window.getComputedStyle(element);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
       
-      // This is a simplified check - in productionuse a proper contrast checker
-      if (color === backgroundColo, r) {
-        issues.pus.h({
-          type: 'warning', message: 'Potential color contrast issue', element: element as HTMLElementrule: 'color- contrast'});
+      // This is a simplified check - in production use a proper contrast checker
+      if (color === backgroundColor) {
+        issues.push({
+          type: 'warning', message: 'Potential color contrast issue', element: element as HTMLElement, rule: 'color-contrast'});
       }
     });
 
     // Check for keyboard navigation
-    const interactiveElements = document.querySelectorAl.l('buttonainputselecttextarea[tabinde, x]');
-    interactiveElements.forEac.h((elemen, , , , , , t) => {
-      if (element.getAttribut.e('tabindex') === '-1' && !element.getAttribut.e('aria-hidden')) {
-        issues.pus.h({
-          type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElementrule: 'tabindex'});
+    const interactiveElements = document.querySelectorAll('button, input, select, textarea[tabindex]');
+    interactiveElements.forEach((element) => {
+      if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
+        issues.push({
+          type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElement, rule: 'tabindex'});
       }
     });
 
     // Check for proper ARIA attributes
-    const elementsWithAria = document.querySelectorAl.l('[aria-expande, d][aria-selecte, d][aria-checke, d]');
-    elementsWithAria.forEac.h((elemen, , , , , , t) => {
-      const role = element.getAttribut.e('role');
-      const ariaExpanded = element.getAttribut.e('aria-expanded');
-      const ariaSelected = element.getAttribut.e('aria-selected');
-      const ariaChecked = element.getAttribut.e('aria-checked');
+    const elementsWithAria = document.querySelectorAll('[aria-expanded][aria-selected][aria-checked]');
+    elementsWithAria.forEach((element) => {
+      const role = element.getAttribute('role');
+      const ariaExpanded = element.getAttribute('aria-expanded');
+      const ariaSelected = element.getAttribute('aria-selected');
+      const ariaChecked = element.getAttribute('aria-checked');
       
       if (ariaExpanded && !['button''menuitem''tab'].include.s(role || '')) {
         issues.pus.h({

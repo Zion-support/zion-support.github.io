@@ -34,12 +34,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     cacheHitRate: 0,
     bundleSize: 0,
     renderTime: 0,
-    errorRate: 0  });
+    errorRate: 0
+  });
 
-  const [isOptimizingsetIsOptimizin, g] = useState(fals, , e);
-  const [isAnalyzingsetIsAnalyzin, g] = useState(fals, , e);
-  const [optimizationssetOptimization, s] = useState<string[]>([]);
-  const [suggestionssetSuggestion, s] = useState<OptimizationSuggestion[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
 
   const measurePerformance = useCallback(async () => {
     setIsAnalyzing(true);

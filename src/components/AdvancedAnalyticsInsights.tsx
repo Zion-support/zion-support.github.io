@@ -68,16 +68,18 @@ interface AnalyticsData {
 interface AdvancedAnalyticsInsightsProps {
   timeRange?: '7d' | '30d' | '90d' | '1y';
   refreshInterval?: number;
-  onDataUpdate?: (data: AnalyticsDat, a) => void;
+  onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsights({
-  timeRange = '30d'refreshInterval = 30000onDataUpdate
-}: AdvancedAnalyticsInsightsProp, s) {
-  const [datasetDat, a] = useState<AnalyticsData | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
-  const [selectedMetricsetSelectedMetri, c] = useState<string>('overview');
-  const [insightssetInsight, s] = useState<Array<{
+  timeRange = '30d',
+  refreshInterval = 30000,
+  onDataUpdate
+}: AdvancedAnalyticsInsightsProps) {
+  const [data, setData] = useState<AnalyticsData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('overview');
+  const [insights, setInsights] = useState<Array<{
     type: 'positive' | 'negative' | 'neutral';
     title: string;
     description: string;

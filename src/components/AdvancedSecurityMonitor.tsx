@@ -39,15 +39,18 @@ interface AdvancedSecurityMonitorProps {
   className?: string;
 }
 
-export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = ({
-  metricsonThreatDetectedonVulnerabilityFoundclassName = ''
+export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
+  metrics,
+  onThreatDetected,
+  onVulnerabilityFound,
+  className = ''
 }) => {
-  const [isMonitoringsetIsMonitorin, g] = useState(tru, , e);
-  const [selectedSeveritysetSelectedSeverit, y] = useState<string>('all');
-  const [alertssetAlert, s] = useState<SecurityEvent[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(true);
+  const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
+  const [alerts, setAlerts] = useState<SecurityEvent[]>([]);
 
-  const getSeverityColor = (severity: strin, g) => {
-    switch (severit, y) {
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
       case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
       case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
