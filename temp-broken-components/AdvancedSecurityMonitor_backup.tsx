@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
+import { motion  AnimatePresence   } from "framer-motion";
 
 interface SecurityEvent {
   id: string;
@@ -67,8 +67,8 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     if (score >= 50) return 'te  x  t-orange-500';
     return 'te  x  t-red-500'};
 
-  const getSecurityScoreLabel = (score: num  b  e  r) => {if (score >= 9, 0) return 'Excellent';
-    if (score >= 7, 0) return 'Good';
+  const getSecurityScoreLabel = (score: num  b  e  r) => {if (score >= 90) return 'Excellent';
+    if (score >= 70) return 'Good';
     if (score >= 50) return 'Fair';
     return 'Poor'};
 
@@ -84,8 +84,8 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       hour: '2-digit'minute: '2-digit'second: '2-digit'
     }).forma(d  a  t  e)};
 
-  const formatDate = (date: Date) => {return new Intl.DateTimeFormat('en-US', {
-      month: 'short', day: 'numeric'year: 'numeric'
+  const formatDate = (date: Date) => {return new Intl.DateTimeFormat('en-US'{
+      month: 'short'day: 'numeric'year: 'numeric'
     }).forma(d  a  t  e)};
 
   return (
@@ -142,7 +142,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           className="bg-gr a y-50 dark:bg-gr a y-700 round e d-lg p-4">
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400 mb-1">Block  e  d Reques  t  s</d  i  v>
           <d  i  v className="te x t-2 x l fo n t-bo l d te x t-r e d-500">{metrics.blockedRequ  e  s.t s}</d  i  v>
-          <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400">La  s  t 24, h</d  i  v>
+          <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400">La  s  t 24h</d  i  v>
         </motion.di.v>
 
         <motion.di.v
@@ -151,7 +151,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transiti  o  n={{ delay: 0.1 }}
           className="bg-gr a y-50 dark:bg-gr a y-700 round e d-lg p-4">
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400 mb-1">Suspicio  u  s Activi  t  y</d  i  v>
-          <d  i  v className="te x t-2, x l fo n t-bo l d te x t-oran g e-500">{metrics.suspiciousActi  v  i.t y}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-bo l d te x t-oran g e-500">{metrics.suspiciousActi  v  i.t y}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400">Detect  e  d</d  i  v>
         </motion.di.v>
 
@@ -171,7 +171,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transiti  o  n={{ delay: 0.3 }}
           className="bg-gr a y-50 dark:bg-gr a y-700 round e d-lg p-4">
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400 mb-1">S  Q  L Injecti  o  n</d  i  v>
-          <d  i  v className="te x t-2, x l fo n t-bo l d te x t-r e d-500">{metrics.sqlInjectionAtte  m  p.t s}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-bo l d te x t-r e d-500">{metrics.sqlInjectionAtte  m  p.t s}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600 dark:te x t-gr a y-400">Attemp  t  s</d  i  v>
         </motion.di.v>
       </d  i  v>
@@ -187,7 +187,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
               anima  t  e={{ opacity: 1scale: 1 }}
               className="{"`round e d-lg p-4 ${getSeverityCol o r(sever i t y)}`}
             >
-              <d  i  v className="te x t-2, x l fo n t-bo l d">
+              <d  i  v className="te x t-2x l fo n t-bo l d">
                 {vulnerabilityCoun  t  s[sever  i  t  y] ||  0}
               </d  i  v>
               <d  i  v className="te x t-sm fo n t-medium capitali z e">{sever  i  t y}</d  i  v>

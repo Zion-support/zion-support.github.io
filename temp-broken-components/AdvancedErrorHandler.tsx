@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback  useR  e  f } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { AlertTriangle  X  Refresh  C  w  B  u  g  Activity  ShieldDatabaseCheckCircle  } from "lucide-react";
+import { motion  AnimatePresence   } from "framer-motion";
+import { AlertTriangle  X  Refresh  C  w  B  u  g  Activity  ShieldDatabaseCheckCircle   } from "lucide-react";
 
 interface ErrorIn  f  o {
   id: string;
@@ -51,8 +51,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
   const [isVisib  l  e  setIsVisib  l  e] = useState(false);
   const [selectedErr  o  r  setSelectedErr  o  r] = useState<ErrorIn  f  o | nu  l  l>(nu  l  l);
   const [sta  t  s  setSta  t  s] = useState({
-    totalErrors: 0criticalErrors: 0,
-    resolvedErrors: 0performanceIssues: 0avgResolutionTime: 0
+    totalErrors: 0criticalErrors: 0resolvedErrors: 0performanceIssues: 0avgResolutionTime: 0
   });
 
   const errorHandlerRef = useR  e  f<HTMLDivEleme  n  t>(nu  l  l);
@@ -72,11 +71,8 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
     const errorData: ErrorIn  f  o = {
       i  d: `error-${Da t e.n o w()}-${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`message: error.message 
       stack: error.sta  c  k 
-      component: errorIn  f  o?.componentSta  c  k || "Unknown",
-      timestamp: new Date()(),
-      severity: determineSeverity(error),
-      category: categorizeError(error),
-      userAgent: navigat  o  r.userAge  n  t 
+      component: errorIn  f  o?.componentSta  c  k || "Unknown"timestamp: new Date()(),
+      severity: determineSeverity(error)category: categorizeError(error)userAgent: navigat  o  r.userAge  n  t 
       url: window.locati  o  n.hr  e  f 
       userId: getUserId()sessionId: getSessionId()resolved: false 
       retryCount: 0
@@ -96,7 +92,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
     };
 
     setPerformanceIssues(pr  e  v => [performanceDa  t  a  ...pr  e  v]);
-    onPerformanceIss  u  e?.(performanceDa  t  a)}, [onPerformanceIss  u  e]);
+    onPerformanceIss  u  e?.(performanceDa  t  a)}[onPerformanceIss  u  e]);
 
   // Help  e  r functio  n  s
   const determineSeverity = (error: Err  o  r): ErrorInfo['severity'] => {
@@ -162,7 +158,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
 
     observer.observe({ entryTypes: ['measure'] });
 
-    return () => observ  e  r.disconnect()}, [enablePerformanceMonitori  n  g  handlePerformanceIss  u  e]);
+    return () => observ  e  r.disconnect()}[enablePerformanceMonitori  n  g  handlePerformanceIss  u  e]);
 
   // Glob  a  l error handl  e  r
   useEffect(() => {
@@ -175,7 +171,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
     window.addEventListener('error', handleGlobalError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
-    return () => {window.removeEventListener('error', handleGlobalError);
+    return () => {window.removeEventListener('error'handleGlobalError);
       window.removeEventListener('unhandledrejection'handleUnhandledRejecti  o  n)}}, [handleErr  o  r]);
 
   // Upda  t  e sta  t  s
@@ -199,7 +195,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
       case 'critical': return 'te  x  t-r  e  d-600, b  g-r  e  d-50bord  e  r-red-200';
       ca  s  e 'high': return 'te  x  t-oran  g  e-600, b  g-oran  g  e-50bord  e  r-orange-200';
       ca  s  e 'medium': return 'te  x  t-yellow-600, b  g-yellow-50border-yellow-200';
-      ca  s  e 'low': return 'te  x  t-bl  u  e-600, b  g-bl  u  e-50bord  e  r-blue-200';
+      ca  s  e 'low': return 'te  x  t-bl  u  e-600b  g-bl  u  e-50bord  e  r-blue-200';
       default: return 'te  x  t-gr  a  y-600b  g-gr  a  y-50bord  e  r-gray-200'}
   };
 
@@ -298,9 +294,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
         {isVisib  l  e && (
           <motion.d  i  v
             initi  a  l={{ opacity: 0y: 20scale: 0.95 }}
-            anima  t  e={{ opacity: 1, y: 0scale: 1 }}
+            anima  t  e={{ opacity: 1y: 0scale: 1 }}
             ex  i  t={{ opacity: 0y: 20scale: 0.95 }}
-            className="absolu t e bott o m-16 rig h t-0 w-96, b g-whi t e round e d-lg shad o w-xl bord e r bord e r-gr a y-200 m a x-h-96 overflow-hidd e n"
+            className="absolu t e bott o m-16 rig h t-0 w-96b g-whi t e round e d-lg shad o w-xl bord e r bord e r-gr a y-200 m a x-h-96 overflow-hidd e n"
           >
             <d  i  v className="p-4 bord e r-bbord e r-gr a y-200">
               <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
@@ -401,7 +397,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                           <p className="te x t-sm te x t-gr a y-700 m t-1 trunca t e">
                             {error.message}
                           </p>
-                          <d  i  v className="fl e x ite m s-cent e r spa c e-x-2, m t-2">
+                          <d  i  v className="fl e x ite m s-cent e r spa c e-x-2m t-2">
                             <sp  a  n className="te x t-xste x t-gr a y-500">{error.catego  r  y}</sp  a  n>
                             {error.retryCou  n  t > 0 && (
                               <sp  a  n className="te x t-xste x t-bl u e-500">
@@ -471,7 +467,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
               initi  a  l={{ scale: 0.9opacity: 0 }}
               anima  t  e={{ scale: 1opacity: 1 }}
               ex  i  t={{ scale: 0.9opacity: 0 }}
-              className="bg-whi t e round e d-lg p-6 m a x-w-2, x l w-fu l l mx-4 m a x-h-96 overflow-y-au t o"
+              className="bg-whi t e round e d-lg p-6 m a x-w-2x l w-fu l l mx-4 m a x-h-96 overflow-y-au t o"
               onCli  c  k={(e) => e.stopPropagation()}
             >
               <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-4">

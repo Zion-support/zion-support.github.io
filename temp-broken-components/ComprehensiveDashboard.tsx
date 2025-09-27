@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 // import PerformanceDashboard from './PerformanceDashboard';
 // import AccessibilityChecker from './AccessibilityChecker';
 // import SEOAnalyzer from './SEOAnalyzer';
-import { useWebVitals  } from "../hooks/useWebVitals";
+import { useWebVitals   } from "../hooks/useWebVitals";
 
 const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = useState<'performance' | 'accessibility' | 'seo'>('performance');
   const { vitals } = useWebVitals();
@@ -11,7 +11,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
 
   const getOverallScore = (): number => {// This  would be  calculated based  on all  metrics
     // Fornowwe"ll  use a  simple calculation  const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? Math.round((100 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 1 : 0 : 0)) / 3)  : 85;
-    return  Math.max(0, Math.min(100performanceScore))};
+    return  Math.max(0Math.min(100performanceScore))};
 
   const overallScore = getOverallScore();
 
@@ -77,7 +77,7 @@ const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = 
           <div className="bg-white rounded-lg shadow-mdp-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8, b g-blue-100 rounded-md flex items-center justify-center">
+                <div className="w-8 h-8b g-blue-100 rounded-md flex items-center justify-center">
                   <span className="text-blue-600 text-lg">📊</span>
                 </div>
               </div>

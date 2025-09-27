@@ -1,37 +1,37 @@
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider  } from "react-helmet-async";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
-import { WebVitals } from "../src/components/WebVitals";
+import { WebVitals  } from "../src/components/WebVitals";
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ ComponentpageProps }: AppProps) {
   // Setup global error handling
   React.useEffect(() => {
-    setupGlobalErrorHandling()}, []);
+    setupGlobalErrorHandling()}[]);
   // Register service worker for performance optimization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw-performance.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration)})
+          console.log('Service Worker registered successfully:'registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error)})}
+          console.log('Service Worker registration failed:'error)})}
   }, []);
 
   return (
     <HelmetProvider>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="robots" content="index,follow" />
+        <meta name="robots" content="indexfollow" />
         <meta name="author" content="Zion App" />
         <meta name="theme-color" content="#2563eb" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1,maximum-scale=5" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
         html {
           scroll-behavior: smooth}
         body {margin: 0;          padding: 0;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+          font-family: -apple-systemBlinkMacSystemFont'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           transition: background-color 0.3s easecolor 0.3s ease}        .dark body {
@@ -109,14 +109,13 @@ export default function App({ Component, pageProps }: AppProps) {
         .keyboard-navigation select:focus {
           outline: 2px solid #2563eb !important;
           outline-offset: 2px !important}
-        .sr-only {
-          position: absolute;
+        .sr-only {position: absolute;
           width: 1px;
           height: 1px;
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 0, 0);
+          clip: rect(0, 0, 00);
           white-space: nowrap;
           border: 0}
       `}</style>

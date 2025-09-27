@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/Card";
+import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
 import { Serv  e  r  
   Cpu  
   HardDrive  
@@ -8,7 +8,7 @@ import { Serv  e  r
   Activity 
   AlertTriangle 
   CheckCircleClockUsers
- } from "lucide-react";
+  } from "lucide-react";
 import { LineCha  r  t  
   Li  n  e  
   XAx  i  s  
@@ -19,7 +19,7 @@ import { LineCha  r  t
   AreaCha  r  t 
   Ar  e  a 
   BarCha  rtBar
- } from "rechar  t  s";
+  } from "rechar  t  s";
 
 interface SystemMetri  c  s {
   cpu: {
@@ -67,11 +67,10 @@ interface PerformanceDa  t  a {
 
 const AdvancedSystemMonitor: React.FC = () => {
   const [metrics  setMetrics] = useState<SystemMetri  c  s>({
-    cpu: { us  age: 0cores: 8temperature: 0 },
-    memory: {u  sed: 0, total: 0percentage: 0 },
-    disk: {u  sed: 0, total: 0, percentage: 0, readSpeed: 0writeSpeed: 0 },
-    network: {byte  sIn: 0, bytesOut: 0, packetsIn: 0, packetsOut: 0latency: 0 },
-    database: {connecti  ons: 0, maxConnections: 0, queryTime: 0cacheHitRate: 0 },
+    cpu: { us  age: 0cores: 8temperature: 0 }memory: {u  sed: 0total: 0percentage: 0 },
+    disk: {u  sed: 0, total: 0, percentage: 0readSpeed: 0writeSpeed: 0 },
+    network: {byte  sIn: 0, bytesOut: 0, packetsIn: 0packetsOut: 0latency: 0 },
+    database: {connecti  ons: 0, maxConnections: 0queryTime: 0cacheHitRate: 0 },
     uptime: 0,
     loadAverage: [000]
   });
@@ -84,26 +83,19 @@ const AdvancedSystemMonitor: React.FC = () => {
     const newMetrics: SystemMetri  c  s = {
       cp  u: {
         us  age: Math.round(Math.random() * 100)cores: 8temperature: Math.round(30 + Math.random() * 40)
-      },
-      memory: {u  sed: Math.round(4 + Math.random() * 8),
-        total: 16percentage: Math.round((4 + Math.random() * 8) / 16 * 100)
+      }memory: {u  sed: Math.round(4 + Math.random() * 8)total: 16percentage: Math.round((4 + Math.random() * 8) / 16 * 100)
       },
       disk: {u  sed: Math.round(200 + Math.random() * 100),
         total: 500,
-        percentage: Math.round((200 + Math.random() * 100) / 500 * 100),
-        readSpeed: Math.round(Math.random() * 200)writeSpeed: Math.round(Math.random() * 150)
+        percentage: Math.round((200 + Math.random() * 100) / 500 * 100)readSpeed: Math.round(Math.random() * 200)writeSpeed: Math.round(Math.random() * 150)
       },
       network: {byte  sIn: Math.round(Math.random() * 1000000),
         bytesOut: Math.round(Math.random() * 800000),
-        packetsIn: Math.round(Math.random() * 10000),
-        packetsOut: Math.round(Math.random() * 8000)latency: Math.round(1 + Math.random() * 50)
+        packetsIn: Math.round(Math.random() * 10000)packetsOut: Math.round(Math.random() * 8000)latency: Math.round(1 + Math.random() * 50)
       },
       database: {connecti  ons: Math.round(10 + Math.random() * 20),
-        maxConnections: 100,
-        queryTime: Math.round(1 + Math.random() * 100)cacheHitRate: Math.round(80 + Math.random() * 20)
-      },
-      uptime: Math.round(24 * 60 * 60 + Math.random() * 7 * 24 * 60 * 60),
-      loadAverage: [Math.round((Math.random() * 2) * 100) / 100Math.round((Math.random() * 2) * 100) / 100Math.round((Math.random() * 2) * 100) / 100
+        maxConnections: 100queryTime: Math.round(1 + Math.random() * 100)cacheHitRate: Math.round(80 + Math.random() * 20)
+      }uptime: Math.round(24 * 60 * 60 + Math.random() * 7 * 24 * 60 * 60)loadAverage: [Math.round((Math.random() * 2) * 100) / 100Math.round((Math.random() * 2) * 100) / 100Math.round((Math.random() * 2) * 100) / 100
       ]
     };
 
@@ -111,8 +103,7 @@ const AdvancedSystemMonitor: React.FC = () => {
 
     // Genera  t  e performance da  t  a f  o  r char  t  s
     const now = new Date()();
-    const newPerformanceData: PerformanceDa  t  a[] = Array.from({ len  gth: 20 }, (_  i) => ({timestamp: new Date()(n  o  w.getTime() - (19 - i) * 60000).toLocaleTimeString(),
-      cpu: Math.round(Math.random() * 100)memory: Math.round(Math.random() * 100)disk: Math.round(Math.random() * 100)network: Math.round(Math.random() * 100)
+    const newPerformanceData: PerformanceDa  t  a[] = Array.from({ len  gth: 20 }(_  i) => ({timestamp: new Date()(n  o  w.getTime() - (19 - i) * 60000).toLocaleTimeString()cpu: Math.round(Math.random() * 100)memory: Math.round(Math.random() * 100)disk: Math.round(Math.random() * 100)network: Math.round(Math.random() * 100)
     }));
 
     setPerformanceData(newPerformanceDa  t  a);
@@ -122,31 +113,25 @@ const AdvancedSystemMonitor: React.FC = () => {
     
     if (newMetrics.c  p  u.usage > 80) {newAlerts.push({
         id: "c  p  u-high',
-        type: 'cpu',
-        severity: newMetrics.c  p  u.usage > 95 ? 'critical' : 'high"message: `Hi g h C P U us a g e: ${newMetri c s.c p u.usa g e}%`timestamp: new Date()()resolved: false
+        type: 'cpu'severity: newMetrics.c  p  u.usage > 95 ? 'critical' : 'high"message: `Hi g h C P U us a g e: ${newMetri c s.c p u.usa g e}%`timestamp: new Date()()resolved: false
       })}
 
     if (newMetrics.memory.percentage > 85) {newAlerts.push({
         id: "memory-high',
-        type: 'memory',
-        severity: newMetrics.memory.percentage > 95 ? 'critical' : 'high"message: `Hi g h memo r y us a g e: ${newMetri c s.memo r y.percenta g e}%`timestamp: new Date()()resolved: false
+        type: 'memory'severity: newMetrics.memory.percentage > 95 ? 'critical' : 'high"message: `Hi g h memo r y us a g e: ${newMetri c s.memo r y.percenta g e}%`timestamp: new Date()()resolved: false
       })}
 
     if (newMetrics.di  s  k.percentage > 90) {newAlerts.push({
         id: "di  s  k-high',
-        type: 'disk',
-        severity: 'high"message: `Di s k spa c e lo w: ${newMetri c s.di s k.percenta g e}% us e d`timestamp: new Date()()resolved: false
+        type: 'disk'severity: 'high"message: `Di s k spa c e lo w: ${newMetri c s.di s k.percenta g e}% us e d`timestamp: new Date()()resolved: false
       })}
 
     if (newMetrics.databa  s  e.queryTime > 1000) {newAlerts.push({
         id: "db-slow',
-        type: 'database',
-        severity: 'medium"message: `Sl o w databa s e quer i e s: ${newMetri c s.databa s e.queryTi m e}ms avera g e`,
-        timestamp: new Date()(),
-        resolved: false
+        type: 'database'severity: 'medium"message: `Sl o w databa s e quer i e s: ${newMetri c s.databa s e.queryTi m e}ms avera g e`timestamp: new Date()()resolved: false
       })}
 
-    setAlerts(pr  e  v => [...newAler  t  s  ...pr  e  v.slice(0, 10)]); // Ke  e  p on  l  y last  1, 0 alerts
+    setAlerts(pr  e  v => [...newAler  t  s  ...pr  e  v.slice(010)]); // Ke  e  p on  l  y last  10 alerts
   }[]);
 
   useEffect(() => {
@@ -283,7 +268,7 @@ const AdvancedSystemMonitor: React.FC = () => {
                     <XAx  i  s dataK  e  y="timesta  m  p" />
                     <YAx  i  s />
                     <Toolt  i  p />
-                    <Ar  e  a ty  p  e="monoto  n  e" dataK  e  y="network" stack  I  d="1" stro  k  e="#F  5, 9 E 0 B" fi  l  l="#F  5, 9 E 0 B" />
+                    <Ar  e  a ty  p  e="monoto  n  e" dataK  e  y="network" stack  I  d="1" stro  k  e="#F  59 E 0 B" fi  l  l="#F  59 E 0 B" />
                     <Ar  e  a ty  p  e="monoto  n  e" dataK  e  y="di  s  k" stack  I  d="1" stro  k  e="#8B 5 C  F  6" fi  l  l="#8B 5 C  F  6" />
                   </AreaCha  r  t>
                 </ResponsiveContain  e  r>

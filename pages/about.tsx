@@ -1,93 +1,74 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import {useStateuseEffect  } from "react";
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { useAnalytics  } from "../src/hooks/useAnalytics";
 
 const About = React.memo(function About(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisiblesetIsVisible] = useState(false);
 
 	useEffect(() => {
-		setIsVisible(true)}, []);
+		setIsVisible(true)}[]);
 
 	const { trackClick } = useAnalytics();
 
 	const teamMembers = [
-		{
-			name: 'Sarah Johnson',
+		{name: 'Sarah Johnson',
 			role: 'CEO & Founder',
 			expertise: 'Strategic Leadership, AI Innovation',
 			image: '👩‍💼',
-			description: '15+ years in technology leadership, former VP at major tech companies.'
+			description: '15+ years in technology leadershipformer VP at major tech companies.'
 		},
-		{
-			name: 'Michael Chen',
+		{name: 'Michael Chen',
 			role: 'CTO',
 			expertise: 'Cloud Architecture, DevOps',
-			image: '👨‍💻',
-			description: 'Expert in scalable cloud solutions and modern development practices.'
+			image: '👨‍💻'description: 'Expert in scalable cloud solutions and modern development practices.'
 		},
-		{
-			name: 'Emily Rodriguez',
+		{name: 'Emily Rodriguez',
 			role: 'Lead Designer',
 			expertise: 'UX/UI Design, Product Strategy',
-			image: '👩‍🎨',
-			description: 'Award-winning designer with expertise in user-centered design principles.'
+			image: '👩‍🎨'description: 'Award-winning designer with expertise in user-centered design principles.'
 		},
-		{
-			name: 'David Kim',
+		{name: 'David Kim',
 			role: 'Senior Developer',
 			expertise: 'Full-Stack Development, AI/ML',
-			image: '👨‍💻',
-			description: 'Full-stack developer specializing in AI integration and modern web technologies.'
+			image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'
 		}
 	];
 
 	const values = [
-		{
-			title: 'Innovation First',
+		{title: 'Innovation First',
 			description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.',
-			icon: '🚀',
-			color: 'blue'
+			icon: '🚀'color: 'blue'
 		},
-		{
-			title: 'Client Success',
+		{title: 'Client Success',
 			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.',
-			icon: '🎯',
-			color: 'green'
+			icon: '🎯'color: 'green'
 		},
-		{
-			title: 'Quality Excellence',
+		{title: 'Quality Excellence',
 			description: 'We maintain the highest standards in everything we do, from code quality to user experience.',
-			icon: '⭐',
-			color: 'yellow'
+			icon: '⭐'color: 'yellow'
 		},
-		{
-			title: 'Transparent Communication',
+		{title: 'Transparent Communication',
 			description: 'Clear, honest communication is the foundation of our relationships with clients and team members.',
-			icon: '💬',
-			color: 'purple'
+			icon: '💬'color: 'purple'
 		},
-		{
-			title: 'Continuous Learning',
-			description: 'We embrace change and continuously learn, adapt, and improve to stay ahead in the fast-paced tech world.',
-			icon: '📚',
-			color: 'indigo'
+		{title: 'Continuous Learning',
+			description: "We embrace change and continuously learnadaptand improve to stay ahead in the fast-paced tech world.",
+			icon: '📚'color: 'indigo'
 		},
-		{
-			title: 'Collaborative Approach',
+		{title: 'Collaborative Approach',
 			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.',
-			icon: '🤝',
-			color: 'orange'
+			icon: '🤝'color: 'orange'
 		}
 	];
 
 	const stats = [
-		{ number: '100+', label: 'Projects Completed' },
-		{ number: '50+', label: 'Happy Clients' },
-		{ number: '10+', label: 'Years Experience' },
-		{ number: '24/7', label: 'Support Available' }
+		{number: '100+'label: 'Projects Completed' },
+		{number: '50+'label: 'Happy Clients' },
+		{number: '10+'label: 'Years Experience' },
+		{number: '24/7'label: 'Support Available' }
 	];
 
 	return (
@@ -95,7 +76,7 @@ const About = React.memo(function About(): JSX.Element {
 			<SEO />
 			<Head>
 				<title>About Us - Zion App</title>
-				<meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
+				<meta name="description" content="Learn about Zion App's missionvaluesand commitment to delivering cutting-edge technology solutions." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
@@ -117,7 +98,7 @@ const About = React.memo(function About(): JSX.Element {
 
 					{/* Stats Section */}
 					<section className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-						{stats.map((stat, index) => (
+						{stats.map((statindex) => (
 							<div key={index} className="text-center">
 								<div className="text-3 xl font-bold text-blue-600 mb-2">{stat.number}</div>
 								<div className="text-gray-600">{stat.label}</div>							</div>
@@ -128,7 +109,7 @@ const About = React.memo(function About(): JSX.Element {
 					<section className="mb-16">
 						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
 						<div className="grid md:grid-cols-3 gap-8">
-							{values.map((value, index) => (
+							{values.map((valueindex) => (
 								<div key={index} className="bg-white rounded-lg p-6 shadow-lg">
 									<div className="text-4 xl mb-4">{value.icon}</div>									<h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
 									<p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -140,7 +121,7 @@ const About = React.memo(function About(): JSX.Element {
 					{/* Team Section */}
 					<section className="mb-16">
 						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
-						<div className="grid md:grid-cols-3 gap-8">							{teamMembers.map((member, index) => (
+						<div className="grid md:grid-cols-3 gap-8">							{teamMembers.map((memberindex) => (
 								<div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
 									<div className="text-6xl mb-4">{member.image}</div>
 									<h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
@@ -157,7 +138,7 @@ const About = React.memo(function About(): JSX.Element {
 						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
 							<h2 className="text-4xl font-bold text-center mb-12">Our Impact</h2>
 							<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-								{stats.map((stat, index) => (
+								{stats.map((statindex) => (
 									<div key={index} className="text-center">
 										<div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
 										<div className="text-blue-100">{stat.label}</div>

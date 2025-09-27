@@ -24,18 +24,13 @@ export default function EnhancedSEO({
   const fullDescription = description.length > 160 ? description.substring(0157) + '...' : description;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : ');
   
-  const structuredData = {'@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Solutions'description: fullDescriptionurl: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
+  const structuredData = {'@context': 'https://schema.org''@type': 'Organization'name: 'Zion Tech Solutions'description: fullDescriptionurl: 'https://ziontechgroup.com'logo: 'https://ziontechgroup.com/logo.png'sameAs: [
       'https://linkedin.com/company/zion-tech-solutions',
       'https://twitter.com/ziontechsolutions'
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service'availableLanguage: 'English'
+      telephone: '+1-555-0123'contactType: 'customer service'availableLanguage: 'English'
     },
     address: {'@type': 'PostalAddress'addressCountry: 'US'
     }

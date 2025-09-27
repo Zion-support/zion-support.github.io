@@ -16,8 +16,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
   const updateSecurityMetrics = React.useCallback(() => {
     const newMetrics: SecurityMetrics = {
-      threatLevel: 'low"activeThreats: 0blockedRequests: 0,
-      securityScore: 95lastScan: new Date()
+      threatLevel: 'low"activeThreats: 0blockedRequests: 0securityScore: 95lastScan: new Date()
     };
 
     setMetrics(newMetrics);

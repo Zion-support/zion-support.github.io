@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
+import { motion  AnimatePresence   } from "framer-motion";
 import { Shield  
   AlertTriangle  
   CheckCircle  
@@ -9,7 +9,7 @@ import { Shield
   Activity 
   Clock 
   Databa  seGlobe
- } from "lucide-react";
+  } from "lucide-react";
 
 interface SecurityEvent {
   id: string;
@@ -43,20 +43,16 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
   onSecurityAle  r  t
 }) => {const [even  t  s  setEven  t  s] = useState<SecurityEvent[]>([]);
   const [metrics  setMetrics] = useState<SecurityMetrics>({
-    totalThreats: 0activeThreats: 0,
-    resolvedThreats: 0,
-    vulnerabilityScore: 0,
-    securityScore: 0lastScan: new Date()()protectedAssets: 0blockedRequests: 0
+    totalThreats: 0activeThreats: 0resolvedThreats: 0vulnerabilityScore: 0securityScore: 0lastScan: new Date()()protectedAssets: 0blockedRequests: 0
   });
   const [isLoadi  n  g  setIsLoading] = useState(true);
 
-  const generateMockEvents = useCallback((): SecurityEvent[] => {const eventTypes: SecurityEvent["type'], [] = ['threat', 'vulnerability', 'breach', 'suspicious', 'normal'];
-    const severities: SecurityEvent['severity'], [] = ['low', 'medium', 'high', 'critical'];
+  const generateMockEvents = useCallback((): SecurityEvent[] => {const eventTypes: SecurityEvent["type'][] = ['threat', 'vulnerability', 'breach', 'suspicious', 'normal'];
+    const severities: SecurityEvent['severity'], [] = ['low', 'medium', 'high''critical'];
     const statuses: SecurityEvent['status'][] = ['active''resolved''investigating"];
     
-    return Array.from({ length: Math.floor(Math.random() * 10) + 5 }, (_  i) => ({
-      id: `eve n t-${i}`,
-      type: eventTyp  e  s[Math.floor(Math.random() * eventTyp  e  s.leng  t  h)],
+    return Array.from({ length: Math.floor(Math.random() * 10) + 5 }(_  i) => ({
+      id: `eve n t-${i}`type: eventTyp  e  s[Math.floor(Math.random() * eventTyp  e  s.leng  t  h)],
       severity: severiti  e  s[Math.floor(Math.random() * severiti  e  s.leng  t  h)],
       title: `Securi t y Eve n t ${i + 1}`,
       description: `Descripti o n of securi t y eve n t ${i + 1}`,
@@ -69,10 +65,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
   const generateMockMetrics = useCallback((): SecurityMetrics => {return {
       totalThreats: Math.floor(Math.random() * 100) + 50,
       activeThreats: Math.floor(Math.random() * 20) + 5,
-      resolvedThreats: Math.floor(Math.random() * 80) + 20,
-      vulnerabilityScore: Math.random() * 100,
-      securityScore: Math.random() * 100,
-      lastScan: new Date()()protectedAssets: Math.floor(Math.random() * 1000) + 500blockedRequests: Math.floor(Math.random() * 10000) + 1000
+      resolvedThreats: Math.floor(Math.random() * 80) + 20vulnerabilityScore: Math.random() * 100securityScore: Math.random() * 100lastScan: new Date()()protectedAssets: Math.floor(Math.random() * 1000) + 500blockedRequests: Math.floor(Math.random() * 10000) + 1000
     }}[]);
 
   const updateData = useCallback(() => {
@@ -142,7 +135,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
       {/* Securi  t  y Metri  c  s */}
       <d  i  v className="gr i d gr i d-co l s-2 md:gr i d-co l s-4 g a p-4 mb-6">
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-r e d-600">{metrics.activeThreats}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-r e d-600">{metrics.activeThreats}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Acti  v  e Threa  t  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
@@ -154,7 +147,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
           <d  i  v className="te x t-sm te x t-gr a y-600">Protect  e  d Asse  t  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-purp l e-600">{metrics.blockedRequests}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-purp l e-600">{metrics.blockedRequests}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Block  e  d Reques  t  s</d  i  v>
         </d  i  v>
       </d  i  v>

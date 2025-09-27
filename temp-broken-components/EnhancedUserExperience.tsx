@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon  } from "lucide-react";
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon   } from "lucide-react";
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -57,8 +57,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    darkModeQuery.addEventListener('change', detectSystemPreferences);
-    motionQuery.addEventListener('change', detectSystemPreferences);
+    darkModeQuery.addEventListener('change'detectSystemPreferences);
+    motionQuery.addEventListener('change'detectSystemPreferences);
 
     return () => {darkModeQuery.removeEventListener('change'detectSystemPreferences);
       motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
@@ -101,9 +101,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'small'label: 'Small' },
-        {value: 'medium'label: 'Medium' },
-        {value: 'large'label: 'Large' }
+            { value: 'small'label: 'Small' }{value: 'medium'label: 'Medium' }{value: 'large'label: 'Large' }
           ].map(({ value  label }) => (
             <button
               key={value}

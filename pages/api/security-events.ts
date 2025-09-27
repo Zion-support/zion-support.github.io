@@ -1,5 +1,5 @@
 // API endpoint for security events
-export default async function handler(req: any, res: any) {
+export default async function handler(req: anyres: any) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" })}
 
@@ -11,13 +11,7 @@ export default async function handler(req: any, res: any) {
       return res.status(400).json({ error: "Invalid security event data" })}
 
     // Process security event
-    console.log("Security event received:", {
-      type: securityEvent.type,
-      severity: securityEvent.severity,
-      message: securityEvent.message,
-      timestamp: new Date(securityEvent.timestamp).toISOString(),
-      url: securityEvent.url,
-      userAgent: securityEvent.userAgent
+    console.log("Security event received:"{type: securityEvent.typeseverity: securityEvent.severitymessage: securityEvent.messagetimestamp: new Date(securityEvent.timestamp).toISOString()url: securityEvent.urluserAgent: securityEvent.userAgent
     });
 
     // Here you would typically:
@@ -29,7 +23,7 @@ export default async function handler(req: any, res: any) {
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueeventId: `se, c, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, tr(29)}`,
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueeventId: `se, c, _${Da, te.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`,
       timestamp: Da, t, e.n, o, w()
-    })} cat, c, h (err, o, r) {console.error("SecurityAPIerror:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};
+    })} cat, c, h (error) {console.error("SecurityAPIerror:", err, o, r);
+    r, e, s.status(500).json({ error: "Internalservererror' })}};

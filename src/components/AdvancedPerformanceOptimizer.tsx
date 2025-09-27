@@ -1,6 +1,6 @@
-import React, {useStateuseEffectuseCallback } from 'react";
-import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
-import {CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
+import React, {useState, useEffectuseCallback } from 'react";
+import { ZapClockCpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle    } from "lucide-react";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/Card";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -23,7 +23,7 @@ interface OptimizationSuggestion {
 interface PerformanceOptimizerProps {
   className?: string}
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metricssetMetrics] = useState<PerformanceMetrics>({
     loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
   });
 
@@ -69,21 +69,17 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
         {type: 'performance'priority: 'high'title: 'Implement Code Splitting'description: 'Break down large bundles into smaller chunks to improve initial load time'impact: 'Reduce initial bundle size by 30-50%'implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
-        },
-        {type: 'memory',
+        }{type: 'memory',
           priority: 'medium',
-          title: 'Optimize Image Loading',
-          description: 'Implement lazy loading and WebP format for images'impact: 'Reduce memory usage by 20-40%'implementation: 'Use next/image with priority and placeholder props'
+          title: 'Optimize Image Loading'description: 'Implement lazy loading and WebP format for images'impact: 'Reduce memory usage by 20-40%'implementation: 'Use next/image with priority and placeholder props'
         },
         {type: 'network',
           priority: 'high',
-          title: 'Enable Service Worker Caching',
-          description: 'Cache static assets and API responses for offline functionality'impact: 'Improve cache hit rate to 85-95%'implementation: 'Configure Workbox for intelligent caching strategies'
+          title: 'Enable Service Worker Caching'description: 'Cache static assets and API responses for offline functionality'impact: 'Improve cache hit rate to 85-95%'implementation: 'Configure Workbox for intelligent caching strategies'
         },
         {type: 'rendering',
           priority: 'medium',
-          title: 'Implement Virtual Scrolling',
-          description: 'Use virtual scrolling for large lists to reduce DOM nodes'impact: 'Improve rendering performance by 60-80%'implementation: 'Use react-window or react-virtualized for large datasets'
+          title: 'Implement Virtual Scrolling'description: 'Use virtual scrolling for large lists to reduce DOM nodes'impact: 'Improve rendering performance by 60-80%'implementation: 'Use react-window or react-virtualized for large datasets'
         }
       ];
 
@@ -94,13 +90,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
   const performOptimization = useCallback(async () => {setIsOptimizing(true);
     
     // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve3000));
     
     // Apply optimizations
     setMetrics(prev => ({
-      ...prevloadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
+      ...prevloadTime: prev.loadTime * 0.8memoryUsage: prev.memoryUsage * 0.7cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
     }));
 
     setOptimizations([]);

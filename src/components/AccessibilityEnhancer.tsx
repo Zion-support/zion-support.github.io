@@ -1,12 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { 
-  announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisible,
-  createLiveRegion
-} from '../utils/accessibilityUtils';
+import React, {useEffectuseState } from 'react";
+import {announceToScreenReader, createSkipLink, isHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
+ } from "../utils/accessibilityUtils";
 
 interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
@@ -15,15 +9,11 @@ interface AccessibilityEnhancerProps {
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({
-  enableSkipLinks = true,
-  enableFocusManagement = true,
-  enableScreenReaderSupport = true,
-  enableHighContrastSupport = true,
-  enableReducedMotionSupport = true
-}, ref) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersMotion, setPrefersMotion] = useState(true);
+const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({enableSkipLinks = trueenableFocusManagement = true,
+  enableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
+}ref) => {
+  const [isHighContrastsetIsHighContrast] = useState(false);
+  const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
     // Initialize accessibility features
@@ -43,7 +33,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
       
       checkHighContrast();
       
-      return () => mediaQuery.removeEventListener('change"handleChange)}
+      return () => mediaQuery.removeEventListener("change"handleChange)}
   }[enableFocusManagementenableHighContrastSupport]);
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {

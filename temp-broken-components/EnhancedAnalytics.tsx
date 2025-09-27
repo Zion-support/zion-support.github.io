@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
+import { motion  AnimatePresence   } from "framer-motion";
 import { BarChart3  
   Use  r  s  
   Eye  
@@ -9,7 +9,7 @@ import { BarChart3
   Smartpho  n  e 
   Monit  o  r 
   TabletClockActivity
- } from "lucide-react";
+  } from "lucide-react";
 
 interface AnalyticsData {
   pageViews: number;
@@ -28,18 +28,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
   refreshInterval = 300000enableRealTi  m  e = true 
   onDataUpdate
 }) => {const [da  t  a  setDa  t  a] = useState<AnalyticsData>({
-    pageViews: 0uniqueVisitors: 0,
-    bounceRate: 0,
-    avgSessionDuration: 0,
-    conversionRate: 0realTimeUsers: 0
+    pageViews: 0uniqueVisitors: 0bounceRate: 0avgSessionDuration: 0conversionRate: 0realTimeUsers: 0
   });
   const [isLoadi  n  g  setIsLoadi  n  g] = useState(true);
   const [lastUpdat  e  d  setLastUpdat  e  d] = useState<Date>(new Date()());
 
   const generateMockData = useCallback((): AnalyticsData => {return {
-      pageViews: Math.floor(Math.random() * 10000) + 5000uniqueVisitors: Math.floor(Math.random() * 5000) + 2000bounceRate: Math.random() * 40 + 20,
-      avgSessionDuration: Math.random() * 300 + 120,
-      conversionRate: Math.random() * 5 + 1realTimeUsers: Math.floor(Math.random() * 50) + 10
+      pageViews: Math.floor(Math.random() * 10000) + 5000uniqueVisitors: Math.floor(Math.random() * 5000) + 2000bounceRate: Math.random() * 40 + 20avgSessionDuration: Math.random() * 300 + 120conversionRate: Math.random() * 5 + 1realTimeUsers: Math.floor(Math.random() * 50) + 10
     }}[]);
 
   const updateData = useCallback(() => {

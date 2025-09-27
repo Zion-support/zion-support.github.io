@@ -2,20 +2,15 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { useAnalytics  } from "../src/hooks/useAnalytics";
 
-export default function Contact(): JSX.Element {
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		company: '',
-		phone: '',
+export default function Contact(): JSX.Element {const [formDatasetFormData] = useState({
+		name: ''email: ''company: ''phone: '',
 		service: '',
-		timeline: '',
-		message: ''
+		timeline: ''message: ''
 	});
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isSubmittingsetIsSubmitting] = useState(false);
+	const [isSubmittedsetIsSubmitted] = useState(false);
 
 	const { trackClick } = useAnalytics();
 
@@ -40,16 +35,14 @@ export default function Contact(): JSX.Element {
 	];
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		const { name, value } = e.target;
+		const { namevalue } = e.target;
 		setFormData(prev => ({
-			...prev,
-			[name]: value
+			...prev[name]: value
 		}))};
 
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
+	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
 		trackClick('contact-form-submit', 'form');
-		console.log('Form submitted:', formData);
+		console.log('Form submitted:'formData);
 		// Here you would typically send the data to your backend
 		alert('Thank you for your message! We will get back to you soon.')};
 	if (isSubmitted) {
@@ -59,7 +52,7 @@ export default function Contact(): JSX.Element {
 				<Head>
 					<title>Thank You - Zion App</title>
 					<meta name="description" content="Thank you for contacting Zion App. We'll get back to you soon." />
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<meta name="viewport" content="width=device-widthinitial-scale=1" />
 				</Head>
 				<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20 flex items-center justify-center">
 					<div className="max-w-2xl mx-auto text-center px-4">
@@ -88,8 +81,8 @@ export default function Contact(): JSX.Element {
 			<SEO />
 			<Head>
 				<title>Contact Us - Zion App</title>
-				<meta name="description" content="Get in touch with our team for technology solutions, consulting, and support." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Get in touch with our team for technology solutionsconsulting, and support." />
+				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
 			
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
@@ -234,47 +227,47 @@ export default function Contact(): JSX.Element {
 									/>
 								</div>
 
-								<d, i, v>
-									<label, htmlFo, r="ema, i, l" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+								<di, v>
+									<labelhtmlFor="email" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
 										Email, Addres, s
-									</lab, e, l>
-									<input, typ, e="ema, i, l"
-										id="ema, i, l"
-										na, m, e="ema, i, l"
-										val, u, e={formDa, t, a.ema, i, l};
-										onChan, g, e={handleInputChan, g, e};
-										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+									</label>
+									<input, typ, e="email"
+										id="email"
+										na, m, e="email"
+										val, u, e={formDa, t, a.ema, il};
+										onChan, g, e={handleInputChan, ge};
+										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
-								</d, i, v>
+								</div>
 
 								<d, i, v>
-									<label, htmlFo, r="compa, n, y" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+									<labelhtmlFor="company" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
 										Compa, n, y
-									</lab, e, l>
-									<input, typ, e="te, x, t"
-										id="compa, n, y"
-										na, m, e="compa, n, y"
-										val, u, e={formDa, t, a.compa, n, y};
-										onChan, g, e={handleInputChan, g, e};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+									</label>
+									<input, typ, e="text"
+										id="company"
+										na, m, e="company"
+										val, u, e={formDa, t, a.compa, ny};
+										onChan, g, e={handleInputChan, ge};
+										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
-								</d, i, v>
+								</div>
 
 								<d, i, v>
-									<label, htmlFo, r="messa, g, e" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+									<labelhtmlFor="message" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700mb-2">
 										Messa, g, e
-									</lab, e, l>
-									<textarea, i, d="messa, g, e"
-										na, m, e="messa, g, e"
-										val, u, e={formDa, t, a.messa, g, e};
-										onChan, g, e={handleInputChan, g, e};
+									</label>
+									<textarea, i, d="message"
+										na, m, e="message"
+										val, u, e={formDa, t, a.messa, ge};
+										onChan, g, e={handleInputChan, ge};
 										required, row, s={5};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lgfocus:outli, n, e-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500"
 									/>
-								</d, i, v>
+								</div>
 
-								<button, typ, e="subm, i, t"
-									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"								>
+								<button, typ, e="submit"
+									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, font-semiboldhover:bg-bl, u, e-700, transitio, n-colors"								>
 									{isSubmitting ? 'Sending Message...' : 'Send Message'}
 								</button>
 							</form>

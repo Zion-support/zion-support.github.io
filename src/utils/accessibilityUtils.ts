@@ -4,33 +4,30 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll(
+    "button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])"
   );
   
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-  consthandleTabK, e, y = (e: KeyboardEvent) => {
+  consthandleTabKey = (e: KeyboardEvent) => {
     if (e.key === "T, a, b") {
       if (e.shiftK, e, y) {
         if (document.activeEleme, n, t === firstEleme, n, t) {
-          lastEleme, n, t.foc, u, s();
+          lastEleme, n, t.foc, us();
           e.preventDefault()}} el, s, e {if (document.activeEleme, n, t === lastEleme, n, t) {
-          firstEleme, n, t.foc, u, s();
+          firstEleme, nt.focus();
           e.preventDefault()}}}};
-  element.addEventListener('keydown', handleTabKey);
+  element.addEventListener("keydown', handleTabKey);
   firstElement?.focus();
 
-  return () => {
-    element.removeEventListener('keydown', handleTabKey)}};
+  return () => {element.removeEventListener('keydown'handleTabKey)}};
 
 // Screen reader utilities
-export const announceToScreenReader = (message: string): void => {
-  const announcement = document.createElement('div');
+export const announceToScreenReader = (message: string): void => {const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-atomic''true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
   
@@ -94,10 +91,9 @@ export const initFocusVisible = (): void => {
   document.addEventListener('blur', blurHandler, true)};
 
 // Live region creation
-export const createLiveRegion = (): HTMLElement => {
-  const liveRegion = document.createElement('div');
+export const createLiveRegion = (): HTMLElement => {const liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live', 'polite');
-  liveRegion.setAttribute('aria-atomic', 'true');
+  liveRegion.setAttribute('aria-atomic''true');
   liveRegion.className = 'sr-only';
   liveRegion.id = 'live-region';
   
@@ -107,23 +103,17 @@ export const createLiveRegion = (): HTMLElement => {
   return liveRegion};
 
 // ARIA label utilities
-export const setAriaLabel = (element: HTMLElement, label: string): void => {
-  element.setAttribute('aria-label', label)};
+export const setAriaLabel = (element: HTMLElementlabel: string): void => {element.setAttribute('aria-label'label)};
 
-export const setAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
-  element.setAttribute('aria-describedby', descriptionId)};
+export const setAriaDescribedBy = (element: HTMLElementdescriptionId: string): void => {element.setAttribute('aria-describedby'descriptionId)};
 
-export const setAriaExpanded = (element: HTMLElement, expanded: boolean): void => {
-  element.setAttribute('aria-expanded', expanded.toString())};
+export const setAriaExpanded = (element: HTMLElementexpanded: boolean): void => {element.setAttribute('aria-expanded'expanded.toString())};
 
-export const setAriaSelected = (element: HTMLElement, selected: boolean): void => {
-  element.setAttribute('aria-selected', selected.toString())};
+export const setAriaSelected = (element: HTMLElementselected: boolean): void => {element.setAttribute('aria-selected'selected.toString())};
 
 // Keyboard navigation utilities
 export const handleArrowKeys = (
-  elements: HTMLElement[],
-  currentIndex: number,
-  direction: 'up' | 'down' | 'left' | 'right'
+  elements: HTMLElement[]currentIndex: numberdirection: 'up' | 'down' | 'left' | 'right'
 ): number => {
   let newIndex = currentIndex;
   
@@ -141,14 +131,14 @@ export const handleArrowKeys = (
   return newIndex};
 
 // Color contrast utilities
-export const getContrastRatio = (color1: string, color2: string): number => {
+export const getContrastRatio = (color1: stringcolor2: string): number => {
   // Simplified contrast ratio calculation
-  // In a real implementation, you'd want to use a proper color contrast library
+  // In a real implementationyou'd want to use a proper color contrast library
   return 4.5; // Placeholder value
 };
 
-export const isColorContrastValid = (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-  const ratio = getContrastRatio(foreground, background);
+export const isColorContrastValid = (foreground: stringbackground: stringlevel: 'AA' | 'AAA' = 'AA'): boolean => {
+  const ratio = getContrastRatio(foregroundbackground);
   return level === 'AA' ? ratio >= 4.5 : ratio >= 7};
 
 // Screen reader detection
@@ -168,32 +158,27 @@ export const isScreenReaderActive = (): boolean => {
 export const runAccessibilityAudit = (): Promise<any[]> => {
   return new Promise((resolve) => {
     // This would integrate with axe-core or similar accessibility testing library
-    // For now, return empty array
+    // For nowreturn empty array
     resolve([])})};
 
-export const checkKeyboardNavigation = (element: HTMLElement): boolean => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+export const checkKeyboardNavigation = (element: HTMLElement): boolean => {const focusableElements = element.querySelectorAll(
+    "button[href], inputselecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
   return focusableElements.length > 0};
 
 // Utility to add accessibility attributes to interactive elements
-export const enhanceAccessibility = (element: HTMLElement): void => {
-  // Add role if missing
+export const enhanceAccessibility = (element: HTMLElement): void => {// Add role if missing
   if (!element.getAttribute('role') && element.tagName.match(/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/)) {
     if (element.tagName === 'BUTTON') {
-      element.setAttribute('role', 'button')} else if (element.tagName === 'A') {
-      element.setAttribute('role', 'link')}
+      element.setAttribute('role''button')} else if (element.tagName === 'A') {element.setAttribute('role''link')}
   }
   
   // Add tabindex if missing for interactive elements
-  if (!element.getAttribute('tabindex') && element.tagName.match(/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/)) {
-    element.setAttribute('tabindex', '0')}
+  if (!element.getAttribute('tabindex') && element.tagName.match(/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/)) {element.setAttribute('tabindex''0')}
   
   // Add aria-label if no accessible name exists
   if (!element.getAttribute('aria-label') && 
       !element.getAttribute('aria-labelledby') && 
-      !element.textContent?.trim()) {
-    element.setAttribute('aria-label', 'Interactive element')}
+      !element.textContent?.trim()) {element.setAttribute('aria-label''Interactive element')}
 };

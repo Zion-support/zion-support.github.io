@@ -124,15 +124,12 @@ self.addEventListener('push', (event) => {console.log('Service Worker: Push rece
   const options = {
     body: event.data ? event.data.text() : 'New notification',
     icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png",
-    vibrate: [10050100]data: {
+    badge: '/badge-72x72.png"vibrate: [10050100]data: {
       dateOfArrival: Date.now()primaryKey: 1
     }actions: [
-      {action: "explore',
-        title: 'View'icon: '/icon-192x192.png'
+      {action: "explore'title: 'View'icon: '/icon-192x192.png'
       },
-      {action: 'close',
-        title: 'Close'icon: '/icon-192x192.png'
+      {action: 'close'title: 'Close'icon: '/icon-192x192.png'
       }
     ]
   };
@@ -202,9 +199,8 @@ async function removePendingAction(actionId) {
 
 async function sendMetricsToAnalytics(metrics) {try {
     // Send performance metrics to analytics service
-    await fetch('/api/analytics', {
-      method: 'POST',
-      headers: {
+    await fetch('/api/analytics'{
+      method: 'POST'headers: {
         'Content-Type': 'application/json' },
       body: JSON.stringify({type: 'performance'metrics: metricstimestamp: Date.now()
       })

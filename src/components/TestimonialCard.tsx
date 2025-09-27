@@ -14,11 +14,10 @@ interface TestimonialCardProps {
   isVisible: boolean}
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
-  testimonial,
-  isVisible 
+  testimonialisVisible 
 }) => {
   const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+    return Array.from({ length: 5 }(_, i) => (
       <svg
         key={i}
         className={`w-5 h-5 ${
@@ -42,19 +41,19 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
 
       {/* Content */};
-      <blockquoteclassName="tex, t-gr, a, y-700, tex, t-lg, leadin, g-relaxed, m, b-6 italic">
-        &ldq, u, o;{testimoni, a, l.content}&rdquo;
+      <blockquoteclassName="text-gra, y-700, tex, t-lg, leadin, g-relaxedmb-6 italic">
+        &ldq, u, o;{testimoni, al.content}&rdquo;
       </blockquote>
 
       {/* Author */};
-      <divclassName="flexitem, s-center">
-        <divclassName="w-12 h-12, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-white, fon, t-boldtext-lgmr-4">
-          {testimoni, a, l.na, m, e.charAt(0)};
+      <divclassName="flexitems-center">
+        <divclassName="w-12 h-12b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, tex, t-whitefont-boldtext-lgmr-4">
+          {testimoni, a, l.na, me.charAt(0)};
         </div>
         <div>
-          <divclassName="fo, n, t-semibold, tex, t-gray-800">{testimoni, a, l.name}</div>
-          <divclassName="te, x, t-gray-600 text-sm">{testimoni, a, l.role}</div>
-          <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>      </div>
+          <divclassName="font-semiboldtext-gray-800">{testimoni, al.name}</div>
+          <divclassName="text-gray-600 text-sm">{testimonial.role}</div>
+          <divclassName="text-bl, u, e-600, tex, t-smfont-medium">{testimonial.company}</div>        </div>      </div>
 
       {/* Quote decoration */}
       <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">

@@ -44,9 +44,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       images.forEach((img  index) => {
         if (!img.alt && !img.getAttribute('aria-label')) {
           issues.push({
-            id: `alt-text-${index}`type: 'error'severity: 'critical',
-            rule: 'image-alt',
-            description: 'Image missing alternative text',
+            id: `alt-text-${index}`type: 'error'severity: 'critical'rule: 'image-alt'description: 'Image missing alternative text',
             element: img.tagName 
             selector: img.tagName.toLowerCase(),
             impact: 'Screen readers cannot convey the purpose of this image',

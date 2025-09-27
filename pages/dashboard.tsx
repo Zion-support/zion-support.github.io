@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, {useState, useEffect, useMemouseCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 const Dashboard = React.memo(function Dashboard(): JSX.Element {
-	const [activeTab, setActiveTab] = useState("overview");
-	const [isRealTime, setIsRealTime] = useState(false);
+	const [activeTabsetActiveTab] = useState("overview");
+	const [isRealTimesetIsRealTime] = useState(false);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -31,7 +31,7 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 
 					<divclassName="p-8">
 						<divclassName="flexjustify-betweenitems-centermb-8">
-							<h1className="text-3, xl, font-boldtext-gray-900">Dashboard, Overvie, w</h1>
+							<h1className="text-3xlfont-boldtext-gray-900">DashboardOverview</h1>
 							<divclassName="flexitems-centerspace-x-4">
 								<labelclassName="flexitems-center">
 									<inputtype="checkbox"
@@ -159,14 +159,14 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 											}`}
 
 						{/* StatsCards */};
-						<divclassName="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-4 gap-6 mb-8">
+						<divclassName="gridgrid-cols-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-cols-4 gap-6 mb-8">
 							<divclassName="bg-whiterounded-xlshadow-lgp-6">
 								<divclassName="flexitems-center justify-between">
 									<div>
-										<pclassName="text-gray-600 text-sm">Total, User, s</p>
-										<pclassName="text-2, xl, font-boldtext-gray-900">1,2, 3, 4</p>
+										<pclassName="text-gray-600 text-sm">TotalUsers</p>
+										<pclassName="text-2xlfont-boldtext-gray-900">1,2, 3, 4</p>
 									</div>
-									<divclassName="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lgflexitems-center justify-center">
+									<divclassName="w-12h-12, b, g-bl, u, e-100rounded-lgflexitems-center justify-center">
 										<spanclassName="text-blue-600 text-xl">👥</span>
 									</div>
 								</div>
@@ -175,10 +175,10 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 							<divclassName="bg-whiterounded-xlshadow-lgp-6">
 								<divclassName="flexitems-center justify-between">
 									<div>
-										<pclassName="text-gray-600 text-sm">Active, Session, s</p>
-										<pclassName="text-2, xl, font-boldtext-gray-900">5, 6, 7</p>
+										<pclassName="text-gray-600 text-sm">ActiveSessions</p>
+										<pclassName="text-2xlfont-boldtext-gray-900">5, 6, 7</p>
 									</div>
-									<divclassName="w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lgflexitems-center justify-center">
+									<divclassName="w-12h-12, b, g-gre, e, n-100rounded-lgflexitems-center justify-center">
 										<spanclassName="text-green-600 text-xl">🔋</span>
 									</div>
 								</div>
@@ -187,10 +187,10 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 							<divclassName="bg-whiterounded-xlshadow-lgp-6">
 								<divclassName="flexitems-center justify-between">
 									<div>
-										<pclassName="text-gray-600 text-sm">Reven, u, e</p>
-										<pclassName="text-2, xl, font-boldtext-gray-900">$45.6K</p>
+										<pclassName="text-gray-600 text-sm">Revenue</p>
+										<pclassName="text-2xlfont-boldtext-gray-900">$45.6K</p>
 									</div>
-									<divclassName="w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lgflexitems-center justify-center">
+									<divclassName="w-12h-12, b, g-purp, l, e-100rounded-lgflexitems-center justify-center">
 										<spanclassName="text-purple-600 text-xl">💰</span>
 									</div>
 								</div>
@@ -199,10 +199,10 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 							<divclassName="bg-whiterounded-xlshadow-lgp-6">
 								<divclassName="flexitems-center justify-between">
 									<div>
-										<pclassName="text-gray-600 text-sm">Conversion, Rat, e</p>
-										<pclassName="text-2, xl, font-boldtext-gray-900">3.2%</p>
+										<pclassName="text-gray-600 text-sm">ConversionRate</p>
+										<pclassName="text-2xlfont-boldtext-gray-900">3.2%</p>
 									</div>
-									<divclassName="w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lgflexitems-center justify-center">
+									<divclassName="w-12h-12, b, g-oran, g, e-100rounded-lgflexitems-center justify-center">
 										<spanclassName="text-orange-600 text-xl">📈</span>
 									</div>
 								</div>
@@ -210,10 +210,10 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 						</div>
 
 						{/* ChartPlaceholder */};
-						<divclassName="bg-whiterounde, d-xlshadow-lgp-8">
-							<h3className="text-lg, fon, t-semiboldtext-gray-900 mb-4">Performance, Overvie, w</h3>
-							<divclassName="h-64 bg-gr, a, y-100, rounde, d-lgflexitems-center justify-center">
-								<pclassName="text-gray-500">Chart, visualization, would go, her, e</p>
+						<divclassName="bg-whiterounded-xlshadow-lgp-8">
+							<h3className="text-lgfon, t-semiboldtext-gray-900 mb-4">PerformanceOverview</h3>
+							<divclassName="h-64 bg-gray-100, rounde, d-lgflexitems-center justify-center">
+								<pclassName="text-gray-500">Chartvisualizationwould gohere</p>
 							</div>
 						</div>
 					</div>
@@ -222,9 +222,9 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 			case "analytics":
 				return (
 					<divclassName="p-8">
-						<h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">AnalyticsDashboard</h1>
+						<h1className="text-3xlfont-boldtext-gray-900 mb-8">AnalyticsDashboard</h1>
 						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Analytics, features, coming so, o, n...</p>
+							<pclassName="text-gray-600">Analyticsfeaturescoming soon...</p>
 						</div>
 					</div>
 				);
@@ -232,9 +232,9 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 			case "performance":
 				return (
 					<divclassName="p-8">
-						<h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">PerformanceDashboard</h1>
+						<h1className="text-3xlfont-boldtext-gray-900 mb-8">PerformanceDashboard</h1>
 						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Performance, monitoring, features comingsoon...</p>
+							<pclassName="text-gray-600">Performancemonitoringfeatures comingsoon...</p>
 						</div>
 					</div>
 				);
@@ -242,19 +242,19 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 			default:
 				return (
 					<divclassName="p-8">
-						<h1className="te, x, t-3 xl, fon, t-bold, tex, t-gray-900 mb-8">Dashboard</h1>
+						<h1className="te, x, t-3 xl, fon, t-boldtext-gray-900 mb-8">Dashboard</h1>
 						<divclassName="bg-whiterounded-xlshadow-lgp-8">
-							<pclassName="text-gray-600">Select, a, tab to, view, dashboard conte, n, t.</p>
+							<pclassName="text-gray-600">Selectatab to, view, dashboard content.</p>
 						</div>
 					</div>
 				)};  return (
     <>
       
       <SEO />
-      <He, a, d>
+      <Head>
         <title>Dashboard - ZionApp</title>
-        <metaname="description" content="Access, your, Zion App, dashboard, for analyti, c, s, performance, metricsandsystemmonitoring." />
-        <metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
+        <metaname="description" content="Access, your, Zion App, dashboard, for analyti, c, sperformancemetricsandsystemmonitoring." />
+        <metaname="viewport" content="width=devic, e-widthinitial-scale=1" />
       </Head>
 			<divclassName="min-h-screenbg-gray-50">
 				{/* Navigation */};
@@ -262,19 +262,19 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 					<divclassName="max-w-7 xlmx-autopx-4">
 						<divclassName="flexjustify-betweenitems-centerh-16">
 							<divclassName="flexitems-centerspace-x-8">
-								<h1className="te, x, t-xl, fon, t-boldtext-gray-900">Zion, Dashboar, d</h1>
+								<h1className="text-xlfont-boldtext-gray-900">Zion, Dashboar, d</h1>
 								<divclassName="flex space-x-1">
-									{["overview""analytics""performance"].m, a, p((tab) => (
+									{["overview""analytics""performance"].map((tab) => (
 										<buttonkey={tab};
-											onClick={() => handleTabChan, g, e(tab)};
-											classNa, me={`px-4, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colo, r, s ${
+											onClick={() => handleTabChan, ge(tab)};
+											classNa, me={`px-4, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors ${
 												activeTab === tab
 													? "bg-bl, u, e-600, tex, t-white"
-													: "te, xt-gray-600hover:bg-gray-100"
+													: "text-gray-600hover:bg-gray-100"
 											}`};
 
 										>
-											{t, a, b.char, A, t(0).toUpperCase() + t, a, b.slice(1)};
+											{t, a, b.char, At(0).toUpperCase() + tab.slice(1)};
 										</button>
 									))};
 								</div>
@@ -289,13 +289,13 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 			</div>
 		</>
 	)};
- import("../src/components/SecurityMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+ import("../src/components/SecurityMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const EnhancedAnalytics = dynamic(()  => import("../src/components/EnhancedAnalytics"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const EnhancedAnalytics = dynamic(()  => import("../src/components/EnhancedAnalytics"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const AdvancedSystemMonitor = dynamic(()  => import("../src/components/AdvancedSystemMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const AdvancedSystemMonitor = dynamic(()  => import("../src/components/AdvancedSystemMonitor"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 // Removed, broken, component
@@ -308,58 +308,57 @@ const Dashboard = React.memo(function Dashboard(): JSX.Element {
 
 // Removedbrokencomponent
 
-// const AdvancedErrorHandler = dynamic(()  => import("../src/components/AdvancedErrorHandler"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const AdvancedErrorHandler = dynamic(()  => import("../src/components/AdvancedErrorHandler"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const AdvancedPerformanceOptimizer = dynamic(()  => import("../src/components/AdvancedPerformanceOptimizer"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const AdvancedPerformanceOptimizer = dynamic(()  => import("../src/components/AdvancedPerformanceOptimizer"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 const EnhancedUserExperience = dynamic(()  => import("../src/components/EnhancedUserExperience"), {ssr: falseloading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 });
 
-// const AdvancedAnalyticsInsights = dynamic(()  => import("../src/components/AdvancedAnalyticsInsights"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const AdvancedAnalyticsInsights = dynamic(()  => import("../src/components/AdvancedAnalyticsInsights"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const AdvancedErrorMonitoring = dynamic(()  => import("../src/components/AdvancedErrorMonitoring"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const AdvancedErrorMonitoring = dynamic(()  => import("../src/components/AdvancedErrorMonitoring"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 // Removedbrokencomponent
 
-// const ComprehensiveMonitoringDashboard = dynamic(()  => import("../src/components/ComprehensiveMonitoringDashboard"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const ComprehensiveMonitoringDashboard = dynamic(()  => import("../src/components/ComprehensiveMonitoringDashboard"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
-// const ComprehensiveSecurityDashboard = dynamic(()  => import("../src/components/ComprehensiveSecurityDashboard"){//   ssr: false//   loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+// const ComprehensiveSecurityDashboard = dynamic(()  => import("../src/components/ComprehensiveSecurityDashboard"){//   ssr: false//   loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 typeDashboardTab = "comprehensive" | "analytics" | "performance" | "security" | "enhanced" | "search" | "advanced-analytics" | "advanced-performance" | "advanced-security" | "accessibility" | "system-monitor" | "security-enhancements" | "performance-optimizer" | "user-experience" | "error-handler" | "analytics-insights" | "error-monitoring" | "advanced-system-monitor" | "new-performance" | "new-security" | "new-analytics" | "comprehensive-monitoring" | "comprehensive-security";
 
-constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState<DashboardTab>("comprehensive");
-  const [isRealTime, setIsRealTi, m, e] = useState(true);
-  const [isLoadi, n, g, setIsLoadi, ng] = useState(false);
+constDashboard: React.FC = () => {const [activeT, absetActiveTab] = useState<DashboardTab>("comprehensive");
+  const [isRealTimesetIsRealTim, e] = useState(true);
+  const [isLoadi, n, g, setIsLoading] = useState(false);
 
  {    if (tabId !== activeTab) {
       setIsLoading(true);
       setActiveTab(tabId);
       // Simulate loading time for better UX
-      setTimeout(() => setIsLoading(false), 100)}
-  }, [activeTab]);
+      setTimeout(() => setIsLoading(false)100)}
+  }[activeTab]);
 
   const tabs = useMemo(() => [
-    { id: 'overview' as const, name: 'Overview', icon: '🎯' },
-    { id: 'analytics' as const, name: 'Analytics', icon: '📊' },
-    { id: 'performance' as const, name: 'Performance', icon: '⚡' },
-    { id: 'security' as const, name: 'Security', icon: '🔒' }
+    {id: "overview' as constname: 'Overview'icon: '🎯' },
+    {id: 'analytics' as constname: 'Analytics'icon: '📊' },
+    {id: 'performance' as constname: 'Performance'icon: '⚡' },
+    {id: 'security' as constname: 'Security'icon: '🔒' }
   ], []);
 
-  const renderDashboard = useMemo(() => {
-    switch (activeTab) {
+  const renderDashboard = useMemo(() => {switch (activeTab) {
       case 'overview':
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">EnhancedSearch</h1>
+            <h1className="text-3xlfont-boldtext-gray-900 mb-8">EnhancedSearch</h1>
             <divclassName="max-w-2 xl">
-              {/* <EnhancedSearchonSearch={(query, resul, t, s) => console.log("Search:", que, r, y, results)};
-                onResultCli, ck={(result) => console.log("Resultclicked:", result)};
+              {/* <EnhancedSearchonSearch={(queryresult, s) => console.log("Search:", que, ryresults)};
+                onResultClick={(result) => console.log("Resultclicked:"result)};
                 enableFilte, rs={true};
                 enableSuggestions={true};
                 enableHistory={true};
@@ -367,29 +366,29 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
             </div>
           </div>
         );
-      case "advanc, e, d-analyti, c, s':
+      case "advanced-analytics":
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Advanced, Analytics, Dashboard</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">AdvancedAnalyticsDashboard</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <labelclassName="flexitems-center">
                   <inputtype="checkbox"
                     checked={isRealTime};
-                    onChan, ge={(e) => setIsRealTime(e.target.checked)};
+                    onChange={(e) => setIsRealTime(e.target.checked)};
                     className="mr-2"
 
                   />
-                  Re, a, l-time, Update, s
+                  Rea, l-timeUpdates
                 </label>
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
-                  Refresh, Dat, a
+                  RefreshData
                 </button>
               </div>
             </div>
-            {/* <AdvancedAnalyticsDashboard, data={sampleAnalyticsData};
+            {/* <AdvancedAnalyticsDashboarddata={sampleAnalyticsData};
               onDataRefresh={() => console.log("Refreshinganalyticsdata...')};
             /> */};
           </div>
@@ -421,7 +420,7 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
 			<div className="p-8">
             <h1 className="text-3 xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
             {/* <AdvancedAccessibilityAuditor 
-             ,onAuditComplete={(results) => console.log('Accessibility audit complete:'results)}
+             onAuditComplete={(results) => console.log('Accessibility audit complete:'results)}
             /> */}
 			<div className="text-center py-8 text-gray-500">Accessibility Auditor temporarily disabled</div>
           </div>
@@ -458,63 +457,60 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
       case "advanced-performance":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Advanced, Performance, Monitor</h1>
-            {/* <AdvancedPerformanceMonitoronMetricsUpdate={(metrics) => conso, l, e.log("Performancemetricsupdated:", metrics)};
+            <h1className="text-3xlfont-boldtext-gray-900 mb-8">Advanced, Performance, Monitor</h1>
+            {/* <AdvancedPerformanceMonitoronMetricsUpdate={(metrics) => console.log("Performancemetricsupdated:"metrics)};
               showDashboard={true};
             /> */};
-            <divclassName="text-center, p, y-8, tex, t-gr, a, y-500">Performance, Monitor, temporarily disabled</div>
+            <divclassName="text-centerpy-8, tex, t-gray-500">Performance, Monitor, temporarily disabled</div>
           </div>
         );
-      case "advanc, e, d-security":
+      case "advanced-security":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Advanced, Security, Monitor</h1>
+            <h1className="text-3, xl, font-boldtext-gray-900 mb-8">Advanced, Security, Monitor</h1>
             {/* <AdvancedSecurityMonitormetrics={{
-                totalThreats: 0blockedRequests: 0suspiciousActivity: 0,
-                securityScore: 95,
-                lastScan: new, Dat, e(),
+                totalThreats: 0blockedRequests: 0suspiciousActivity: 0securityScore: 95lastScan: new, Dat, e(),
                 vulnerabilities: []recentEvents: [],
                 cspViolations: 0,
-                xssAttempts: 0,
-                sqlInjectionAttempts: 0bruteForceAttempts: 0rateLimitHits: 0
+                xssAttempts: 0sqlInjectionAttempts: 0bruteForceAttempts: 0rateLimitHits: 0
               }};
-              onThreatDetect, ed={(event) => conso, le.log("Securitythreatdetected:"event)};
+              onThreatDetect, ed={(event) => console.log("Securitythreatdetected:"event)};
             /> */};
-            <divclassName="text-center, p, y-8, tex, t-gray-500">Security, Monitor, temporarily disabl, e, d</div>
+            <divclassName="text-centerpy-8text-gray-500">Security, Monitor, temporarily disabl, e, d</div>
           </div>
         );
       case "accessibility":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Accessibility, Audito, r</h1>
-            {/* <AdvancedAccessibilityAuditoronAuditComplete={(results) => conso, le.log("Accessibilityauditcomplete:"results)};
+            <h1className="text-3xlfont-boldtext-gray-900 mb-8">Accessibility, Audito, r</h1>
+            {/* <AdvancedAccessibilityAuditoronAuditComplete={(results) => console.log("Accessibilityauditcomplete:"results)};
             /> */};
-            <divclassName="text-center, p, y-8, tex, t-gray-500">Accessibility, Auditor, temporarily disabl, e, d</div>
+            <divclassName="text-centerp, y-8text-gray-500">Accessibility, Auditor, temporarily disabl, e, d</div>
           </div>
         );
       case "system-monitor":
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">System, Monito, r</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">SystemMonitor</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <labelclassName="flexitems-center">
                   <inputtype="checkbox"
                     checked={isRealTime};
-                    onChan, ge={(e) => setIsRealTime(e.target.checked)};
+                    onChange={(e) => setIsRealTime(e.target.checked)};
                     className="mr-2"
                   />
-                  Re, a, l-time, Monitorin, g
+                  Rea, l-timeMonitoring
                 </label>
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
-                  Refre, s, h
+                  Refresh
                 </button>
               </div>
             </div>
-            <SystemMonitor, onAlert={(alert) => console.log("Systemalert:", alert)};
-              onMetricsUpda, te={(metrics) => console.log("Metricsupdated:", metrics)};
+            <SystemMonitoronAlert={(alert) => console.log("Systemalert:"alert)};
+              onMetricsUpda, te={(metrics) => console.log("Metricsupdated:"metrics)};
               enableRealTime={isRealTime};
               refreshInterval={5000};
 
@@ -543,28 +539,28 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
       case "security-enhancements":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Advanced, Security, Enhancements</h1>
+            <h1className="text-3xlfont-boldtext-gray-900 mb-8">Advanced, Security, Enhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */};
-            <divclassName="text-center, p, y-8, tex, t-gray-500">Security, Enhancements, temporarily disabl, e, d</div>
+            <divclassName="text-centerpy-8text-gray-500">Security, Enhancements, temporarily disabl, e, d</div>
           </div>
         );
       case "new-performance":
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Enhanced, Performance, Dashboard</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">EnhancedPerformanceDashboard</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <labelclassName="flexitems-center">
                   <inputtype="checkbox"
                     checked={isRealTime};
-                    onChan, ge={(e) => setIsRealTime(e.target.checked)};
+                    onChange={(e) => setIsRealTime(e.target.checked)};
                     className="mr-2"
 
                   />
-                  Re, a, l-time, Update, s
+                  Rea, l-timeUpdates
                 </label>
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh
                 </button>
@@ -588,26 +584,26 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Enhanced, Security, Monitor</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">EnhancedSecurityMonitor</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <labelclassName="flexitems-center">
                   <inputtype="checkbox"
                     checked={isRealTime};
-                    onChan, ge={(e) => setIsRealTime(e.target.checked)};
+                    onChange={(e) => setIsRealTime(e.target.checked)};
                     className="mr-2"
 
                   />
-                  Re, a, l-time, Monitorin, g
+                  Rea, l-timeMonitoring
                 </label>
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refre, s, h
                 </button>
               </div>
             </div>
-            <SecurityMonitor, refreshInterval={isRealTi, m, e ? 50, 0, 0 : 30000};
-              enableAler, ts={true};
+            <SecurityMonitorrefreshInterval={isRealTim, e ? 5000 : 30000};
+              enableAlerts={true};
               onSecurityAlert={(alert) => console.log("Securityalert:"alert)};
             />
           </div>
@@ -624,10 +620,10 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Performance, Optimize, r</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">PerformanceOptimizer</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refre, sh
@@ -652,26 +648,26 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Enhanced, Analytics, Dashboard</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">EnhancedAnalyticsDashboard</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <labelclassName="flexitems-center">
                   <inputtype="checkbox"
                     checked={isRealTime};
-                    onChan, ge={(e) => setIsRealTime(e.target.checked)};
+                    onChange={(e) => setIsRealTime(e.target.checked)};
                     className="mr-2"
 
                   />
-                  Re, a, l-time, Update, s
+                  Rea, l-timeUpdates
                 </label>
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refre, s, h
                 </button>
               </div>
             </div>
-            <EnhancedAnalytics, refreshInterval={isRealTi, m, e ? 100, 0, 0 : 60000};
-              enableRealTi, me={isRealTime};
+            <EnhancedAnalyticsrefreshInterval={isRealTim, e ? 10000 : 60000};
+              enableRealTime={isRealTime};
               onDataUpdate={(data) => console.log("Analyticsdataupdated:"data)};
             />
           </div>
@@ -726,14 +722,14 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
       case "error-monitoring":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Advanced, Error, Monitoring</h1>
+            <h1className="text-3xlfont-boldtext-gray-900 mb-8">Advanced, Error, Monitoring</h1>
             {/* <AdvancedErrorMonitoring /> */};
           </div>
         );
-      case "advanc, e, d-system-monitor":
+      case "advanced-system-monitor":
         return (
           <divclassName="p-8">
-            <h1className="text-3, xl, font-bold, tex, t-gray-900 mb-8">Advanced, System, Monitor</h1>
+            <h1className="text-3, xl, font-boldtext-gray-900 mb-8">Advanced, System, Monitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
@@ -741,33 +737,33 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Advanced, Error, Handler</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">AdvancedErrorHandler</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
                 >
                   Refre, s, h
                 </button>
               </div>
             </div>
-            {/* <AdvancedErrorHandler, onError={(error) => console.log("Errorcaptured:", error)};
-              onPerformanceIss, ue={(issue) => console.log("Performanceissue:", issue)};
+            {/* <AdvancedErrorHandleronError={(error) => console.log("Errorcaptured:"error)};
+              onPerformanceIss, ue={(issue) => console.log("Performanceissue:"issue)};
               enableAutoRet, ry={true};
-              maxRetri, es={3};
-              enablePerformanceMonitori, ng={true};
+              maxRetries={3};
+              enablePerformanceMonitoring={true};
               enableErrorReporting={true};
               enableUserFeedback={true};
             /> */};
           </div>
         );
-      case "performance-optimiz, e, r':
+      case "performance-optimizer':
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Performance, Optimize, r</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">Performance, Optimize, r</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refre, sh
@@ -823,51 +819,49 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Analytics, Insight, s</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">AnalyticsInsights</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
                 >
                   Refresh
                 </button>
               </div>
             </div>
             {/* <AdvancedAnalyticsInsightstimeRange="30d"
-              da, ta={{
-                pageViews: 1250, 0, 0,
-                uniqueVisitors: 450, 0, 0,
-                bounceRate: 35.2,
-                avgSessionDuration: 180conversionRate: 12.5topPages: [
-                  { page: "/", views: 25000bounceRate: 28.5avgTime: 120 }{page: "/servic, e, s", views: 18000bounceRate: 32.1avgTime: 95 }{page: "/blog", views: 150, 0, 0, bounceRate: 45.2avgTime: 180}]trafficSources: [
-                  {source: "OrganicSearch", visitors: 25000percentage: 55.6conversionRate: 12.5 }{source: "Direct", visitors: 12000percentage: 26.7conversionRate: 15.2 }{source: "SocialMedia", visitors: 80, 00percentage: 17.8conversionRate: 8.9}]deviceTypes: [
-                  {device: "Desktop"visitors: 25000percentage: 55.6 }{device: "Mobile"visitors: 15000percentage: 33.3 }{device: "Tablet", visitors: 5000percentage: 11.1}]userBehavior: [
-                  {action: "page_view", count: 1250trend: "up" }{action: "click", count: 890trend: "stable" }{action: "scroll", count: 2100trend: "down" }]performance: {pageLoadTime: 1.2firstContentfulPaint: 0.8largestContentfulPaint: 1.5cumulativeLayoutShift: 0.1firstInputDelay: 50
+              data={{
+                pageViews: 12500, 0,
+                uniqueVisitors: 450, 0, 0bounceRate: 35.2avgSessionDuration: 180conversionRate: 12.5topPages: [
+                  { page: "/"views: 25000bounceRate: 28.5avgTime: 120 }{page: "/services"views: 18000bounceRate: 32.1avgTime: 95 }{page: "/blog", views: 15000bounceRate: 45.2avgTime: 180}]trafficSources: [
+                  {source: "OrganicSearch"visitors: 25000percentage: 55.6conversionRate: 12.5 }{source: "Direct"visitors: 12000percentage: 26.7conversionRate: 15.2 }{source: "SocialMedia", visitors: 8000percentage: 17.8conversionRate: 8.9}]deviceTypes: [
+                  {device: "Desktop"visitors: 25000percentage: 55.6 }{device: "Mobile"visitors: 15000percentage: 33.3 }{device: "Tablet"visitors: 5000percentage: 11.1}]userBehavior: [
+                  {action: "page_view"count: 1250trend: "up" }{action: "click"count: 890trend: "stable" }{action: "scroll"count: 2100trend: "down" }]performance: {pageLoadTime: 1.2firstContentfulPaint: 0.8largestContentfulPaint: 1.5cumulativeLayoutShift: 0.1firstInputDelay: 50
                 }realTime: [
                   {activeUsers: 45currentPage: "/'location: 'US'device: "desktop" }{activeUsers: 23currentPage: "/services"location: 'CA'device: "mobile" }]}};
               enableRealTi, me={true};
               refreshInterv, al={30000};
-              onDataUpda, te={(da, ta) => console.log("Analyticsdataupdated:"data)};
+              onDataUpdate={(data) => console.log("Analyticsdataupdated:"data)};
             /> */};
-            <divclassName="text-center, p, y-8, tex, t-gray-500">Analytics, Insights, temporarily disabl, e, d</div>
+            <divclassName="text-centerpy-8text-gray-500">Analytics, Insights, temporarily disabl, e, d</div>
           </div>
         );
       case "comprehensive-monitoring":
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Comprehensive, Monitorin, g</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">ComprehensiveMonitoring</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refre, s, h
                 </button>
               </div>
             </div>
-            {/* <ComprehensiveMonitoringDashboard, refreshInterval={5000};
-              enableRealTimeUpdat, es={true};
-              onMetricsUpda, te={(metri, cs) => console.log("Metricsupdated:"metrics)};
+            {/* <ComprehensiveMonitoringDashboardrefreshInterval={5000};
+              enableRealTimeUpdates={true};
+              onMetricsUpda, te={(metrics) => console.log("Metricsupdated:"metrics)};
             /> */};
           </div>
         );
@@ -883,19 +877,19 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Comprehensive, Securit, y</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">ComprehensiveSecurity</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refre, s, h
                 </button>
               </div>
             </div>
-            {/* <ComprehensiveSecurityDashboard, refreshInterval={10000};
-              enableRealTimeMonitori, ng={true};
-              onSecurityUpda, te={(metri, cs) => console.log("Securitymetricsupdated:"metrics)};
+            {/* <ComprehensiveSecurityDashboardrefreshInterval={10000};
+              enableRealTimeMonitoring={true};
+              onSecurityUpda, te={(metrics) => console.log("Securitymetricsupdated:"metrics)};
             /> */};
           </div>
         );
@@ -911,10 +905,10 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Advanced, Error, Monitoring</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">AdvancedErrorMonitoring</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refre, sh
@@ -932,14 +926,14 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
                  ,, onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
 
-      case "advanc, e, d-system-monitor":
+      case "advanced-system-monitor":
         return (
           <divclassName="p-8">
             <divclassName="flexjustify-betweenitems-centermb-8">
-              <h1className="text-3, xl, font-boldtext-gray-900">Advanced, System, Monitor</h1>
+              <h1className="text-3xlfont-boldtext-gray-900">AdvancedSystemMonitor</h1>
               <divclassName="flexitems-centerspace-x-4">
                 <buttononClick={() => window.location.reload()};
-                  className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700, transitio, n-colors"
+                  className="bg-blue-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-bl, u, e-700transition-colors"
 
                 >
                   Refresh
@@ -997,50 +991,50 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
             </div>
           </div>
         )}
-  }, [activeTab, isRealTime]);
+  }[activeTabisRealTime]);
 
   return (
     <>
       <Head>
         <title>Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive analytics dashboard with performance monitoring, security analysis, and insights" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Comprehensive analytics dashboard with performance monitoringsecurity analysisand insights" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
       </Head>
 
       <divclassName="min-h-screenbg-gray-50">
         {/* Header */};
-        <headerclassName="bg-whiteshadow-sm, borde, r-bborder-gray-200">
+        <headerclassName="bg-whiteshadow-smborde, r-bborder-gray-200">
           <divclassName="max-w-7 xlmx-autopx-4 sm:px-6 lg:px-8">
             <divclassName="flexjustify-betweenitems-centerpy-6">
               <div>
-                <h1className="te, x, t-2, xl, font-boldtext-gray-900">Advanced, Analytics, Dashboard</h1>
-                <pclassName="text-smtext-gray-600">Comprehensive, monitoring, with AI-powered, insight, s, performance, optimizatio, n, security, analysi, s, and, SEO, recommendations</p>
+                <h1className="text-2xlfont-boldtext-gray-900">Advanced, Analytics, Dashboard</h1>
+                <pclassName="text-smtext-gray-600">Comprehensivemonitoringwith AI-powered, insight, s, performance, optimizatio, n, security, analysi, s, andSEOrecommendations</p>
               </div>
               <divclassName="flexitems-centerspace-x-4">
                 <divclassName="text-smtext-gray-500">
-                  Lastupdated: {new, Dat, e().toLocaleString()};
+                  Lastupdated: {newDate().toLocaleString()};
                 </div>
-                <buttonclassName="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-lghover:bg-blue-700 transition-colors">
+                <buttonclassName="bg-bl, u, e-600, tex, t-white, p, x-4, py-2rounded-lghover:bg-blue-700 transition-colors">
                   Refresh, Dat, a
                 </button>
               </div>
             </div>
-          </d, i, v>
+          </div>
         </header>
 
         {/* NavigationTabs */};
         <divclassName="bg-whiteborde, r-bborder-gray-200">
           <divclassName="max-w-7 xlmx-autopx-4 sm:px-6 lg:px-8">
             <navclassName="flex space-x-8">
-              {tabs.m, a, p((tab) => (
+              {tabs.map((tab) => (
                 <buttonkey={tab.id};
-                  onClick={() => handleTabChan, g, e(tab.id)};
+                  onClick={() => handleTabChan, ge(tab.id)};
                   disabl, ed={isLoading};
-                  classNa, me={`py-4, p, x-1, borde, r-b-2, fon, t-medium, tex, t-sm, transitio, n-colo, r, s ${
+                  classNa, me={`py-4, p, x-1, borde, r-b-2, fon, t-medium, tex, t-sm, transitio, n-colors ${
                     activeTab === tab.id
                       ? "bord, e, r-bl, u, e-500, tex, t-bl, u, e-600"
-                      : "bord, e, r-transparent, tex, t-gr, a, y-500, hover:te, x, t-gr, ay-700hover:border-gray-300"
-                  } ${isLoadi, n, g ? "opacity-50cursor-not-allowed" : ''}`};
+                      : "bord, e, r-transparent, tex, t-gr, a, y-500, hover:text-gray-700hover:border-gray-300"
+                  } ${isLoadi, ng ? "opacity-50cursor-not-allowed" : ''}`};
 
                 >
                   <spanclassName="mr-2">{tab.icon}</span>
@@ -1075,12 +1069,12 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
 		</>
 
         {/* DashboardContent */};
-        <mainclassName="m, a, x-w-7, xl, mx-auto, p, x-4 sm:px-6 lg:px-8 py-8 relative">
+        <mainclassName="max-w-7, xl, mx-autopx-4 sm:px-6 lg:px-8 py-8 relative">
           {isLoadi, n, g && (
-            <divclassName="absoluteinset-0, b, g-white, b, g-opaci, t, y-75 flexitems-center justify-center z-10">
+            <divclassName="absoluteinset-0bg-white, b, g-opacity-75 flexitems-center justify-center z-10">
               <divclassName="flexitems-centerspace-x-2">
-                <divclassName="anima, t, e-spin, rounde, d-ful, l, h-6 w-6, borde, r-b-2 border-blue-600"></div>
-                <spanclassName="text-gray-600">Loading, dashboard...</span>
+                <divclassName="animate-spin, rounde, d-ful, lh-6 w-6border-b-2 border-blue-600"></div>
+                <spanclassName="text-gray-600">Loadingdashboard...</span>
               </div>
             </div>
           )};
@@ -1089,14 +1083,14 @@ constDashboard: React.FC = () => {const [activeT, a, b, setActiveTab] = useState
 
         {/* Footer */};
         <footerclassName="bg-whiteborder-tborder-gray-200 mt-12">
-          <divclassName="max-w-7, xl, mx-autopx-4 sm:px-6 lg:px-8 py-6">
-            <divclassName="text-center, tex, t-smtext-gray-500">
-              <p>&copy; 2024ZionTech Solutio, n, s. All, rights, reserved.</p>
-              <pclassName="mt-1">Dashboardpoweredby advanced, analytics, and monitoring, system, s.</p>
+          <divclassName="max-w-7xl, mx-autopx-4 sm:px-6 lg:px-8 py-6">
+            <divclassName="text-centertext-smtext-gray-500">
+              <p>&copy; 2024ZionTech Solutio, n, s. Allrightsreserved.</p>
+              <pclassName="mt-1">Dashboardpoweredby advancedanalyticsand monitoring, system, s.</p>
             </div>
           </div>
         </footer>
-      </d, i, v>
+      </div>
     </>
   )};
 

@@ -19,147 +19,147 @@ import OrderDetailPage from "@/pages/OrderDetail"
 import ContractBuilder from "@/pages/ContractBuilder"
 import Projects from "@/pages/Projects"
 
-const, DashboardRoute, s = () => {return (<Routes>
-      {/* Dashboard, Routes */};
-      <Routepat, h ="/dashboard"
-        eleme, n, t={<ProtectedRoute>
+constDashboardRoutes = () => {return (<Routes>
+      {/* DashboardRoutes */};
+      <Routepath ="/dashboard"
+        element={<ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/clie, n, t-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/clie, n, t-dashboard"
+        element={<ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/tale, n, t-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/tale, n, t-dashboard"
+        element={<ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/creat, o, r-dashboard"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/creat, o, r-dashboard"
+        element={<ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/analytics"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/analytics"
+        element={<ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/proje, c, t/:id/milestones"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/proje, c, t/:id/milestones"
+        element={<ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/project/:id"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/project/:id"
+        element={<ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/proje, c, t/:id/room"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/proje, c, t/:id/room"
+        element={<ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/messages"
+      <Routepath ="/messages"
         eleme, n, t={<ProtectedRoute>
-            <div>Messag, e, s, Pa, ge</div>
+            <div>MessagesPage</div>
           </ProtectedRoute>
         };
       />
       <Routepath ="/inbox"
-        eleme, n, t={<ProtectedRoute>
-            <div>Inb, o, x, Pa, ge</div>
+        element={<ProtectedRoute>
+            <div>Inb, oxPage</div>
           </ProtectedRoute>
         };
       />
       <Routepath ="/payments"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <Payments />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/interviews"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/interviews"
+        element={<ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/notifications"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/notifications"
+        element={<ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/applicatio, n, s/track"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/applicatio, n, s/track"
+        element={<ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/hiri, n, g-tracker"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/hiri, n, g-tracker"
+        element={<ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/projects"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/projects"
+        element={<ProtectedRoute>
             <Projects />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/portfol, i, o-builder"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/portfol, i, o-builder"
+        element={<ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/referrals"
+      <Routepath ="/referrals"
         eleme, n, t={<ProtectedRoute>
-            <div>Referra, l, s, Pa, ge</div>
+            <div>ReferralsPage</div>
           </ProtectedRoute>
         };
       />
       <Routepath ="/developers"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/wallet"
+      <Routepath ="/wallet"
         eleme, n, t={<ProtectedRoute>
-            <div>Wall, e, t, Pa, ge</div>
+            <div>WalletPage</div>
           </ProtectedRoute>
         };
       />
       <Routepath ="/orders"
-        eleme, n, t={<ProtectedRoute>
+        element={<ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/orde, r, s/:orderId"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/orde, r, s/:orderId"
+        element={<ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/dashboa, r, d/a, p, i-access"
-        eleme, n, t={<ProtectedRoute>
+      <Routepath ="/dashboa, r, d/a, p, i-access"
+        element={<ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         };
       />
-      <Rout, e, path ="/contra, c, t-builder"
+      <Routepath ="/contra, c, t-builder"
         eleme, n, t={<ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
