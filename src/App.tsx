@@ -1,15 +1,5 @@
-import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SkipLink from './components/SkipLink';
-import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorBoundary from './components/ErrorBoundary';
-import ErrorFallback from './components/ErrorFallback';
-import SystemDashboard from './components/SystemDashboard';
-import AccessibilityTester from './components/AccessibilityTester';
-import PerformanceProfiler from './components/PerformanceProfiler';
+import React, { useEffect, useMemo } from 'react';
+import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
@@ -17,18 +7,27 @@ import { accessibilityManager } from './utils/accessibility';
 import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { performanceOptimizer } from './utils/optimization';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import './index.css';
 
-// Lazy load components for better performance
-const Home = lazy(() => import('./pages/Home'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Contact = lazy(() => import('./pages/Contact'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const NotFound = lazy(() => import('./pages/NotFound'));
-
 export default function App(): React.JSX.Element {
+  // Initialize performance optimizations
+  const { preloadResource, recordMetric } = usePerformanceOptimization();
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading Technology Solutions',
+    description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
+    keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
+    ogType: 'website',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image',
+    structuredData: [
+      seoManager.generateOrganizationStructuredData(),
+      seoManager.generateWebsiteStructuredData()
+    ]
+  }), []);
+
   useEffect(() => {
     // Initialize error reporting
     initializeErrorReporting();
@@ -68,19 +67,12 @@ export default function App(): React.JSX.Element {
     performanceOptimizer.preloadCriticalResources();
     performanceOptimizer.optimizeImages();
 
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
     // Set default SEO data
-    seoManager.updateSEO({
-      title: 'Zion Tech Group - Leading Technology Solutions',
-      description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
-      keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
-      ogType: 'website',
-      ogImage: '/og-image.png',
-      twitterCard: 'summary_large_image',
-      structuredData: [
-        seoManager.generateOrganizationStructuredData(),
-        seoManager.generateWebsiteStructuredData()
-      ]
-    });
+    seoManager.updateSEO(seoData);
 
     // Track user engagement
     let startTime = Date.now();
@@ -104,8 +96,17 @@ export default function App(): React.JSX.Element {
     };
 
     // Track clicks
-    const handleClick = () => {
+    const handleClick = (event: Event) => {
       clicks++;
+      recordMetric('userClicks', 1);
+      
+      // Track specific interaction types
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'BUTTON') {
+        recordMetric('buttonClicks', 1);
+      } else if (target.tagName === 'A') {
+        recordMetric('linkClicks', 1);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -127,38 +128,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', trackEngagement);
       memoryMonitor.stopMonitoring();
     };
-  }, []);
+  }, [preloadResource, recordMetric, seoData]);
 
-  return (
-    <ErrorBoundary fallback={<ErrorFallback />}>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <SkipLink />
-          <ScrollToTop />
-          <Header />
-          
-          <main id="main-content">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          
-          {/* Development Tools */}
-          <SystemDashboard />
-          <AccessibilityTester />
-          <PerformanceProfiler />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
+  return <AppRouter />;
 }
