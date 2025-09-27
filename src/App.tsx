@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import Home from './pages/Home';
 import './index.css';
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
