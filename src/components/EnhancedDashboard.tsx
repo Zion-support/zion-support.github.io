@@ -23,7 +23,7 @@ interface DashboardWidget {
   type: 'chart' | 'metric' | 'table' | 'list';
   data: any;
   size: 'small' | 'medium' | 'large';
-  position: { , x: number; , y: number };
+  position: { x: number; y: number };
 }
 
 interface DashboardProps {
@@ -66,7 +66,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.revenue,
     size: 'large',
-    position: { , x: 0, y: 0 }
+    position: { x: 0, y: 0 }
   },
   {
     id: 'user-metrics',
@@ -74,7 +74,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.users,
     size: 'medium',
-    position: { , x: 0, y: 1 }
+    position: { x: 0, y: 1 }
   },
   {
     id: 'performance-metrics',
@@ -82,31 +82,31 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.performance,
     size: 'large',
-    position: { , x: 1, y: 0 }
+    position: { x: 1, y: 0 }
   },
   {
     id: 'total-revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },
+    data: { value: '$45,231', change: '+12.5%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 0 }
+    position: { x: 2, y: 0 }
   },
   {
     id: 'active-users',
     title: 'Active Users',
     type: 'metric',
-    data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
+    data: { value: '2,847', change: '+8.2%', trend: 'up' },
     size: 'small',
-    position: { , x: 2, y: 1 }
+    position: { x: 2, y: 1 }
   },
   {
     id: 'conversion-rate',
     title: 'Conversion Rate',
     type: 'metric',
-    data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
+    data: { value: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
-    position: { , x: 2, y: 2 }
+    position: { x: 2, y: 2 }
   }
 ];
 
@@ -196,9 +196,10 @@ export default function EnhancedDashboard({
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div> <div className={`flex items-center justify-center text-sm ${
+      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div>
+      <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }`}
+      }`}>
         <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
         {data.change}
       </div>
@@ -267,7 +268,7 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
       <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
