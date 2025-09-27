@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
@@ -12,14 +13,14 @@ export default function PrivacyPolicy(): JSX.Element {
   const { trackClick } = useAnalytics();
 
   return (
-		<>
+    <>
 			<Head>
 				<title>Privacy Policy - Zion App</title>
-				<meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-4 xl">
+        <meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+				<div className="container mx-auto px-4 py-8 max-w-4xl">
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home

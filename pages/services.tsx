@@ -13,10 +13,10 @@ export default function Services(): JSX.Element {
 
   const { trackClick } = useAnalytics();
 
-	const, serviceDetail, s = {
+	const serviceDetails = {
 		'ai-ml': {
-			tit, l, e: 'AI & Machine, Learnin, g'
-			descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.'
+			title: 'AI & Machine, Learnin, g'
+			description: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.'
 			featur, e, s: [
 				'Natural, Language, Processing (N, L, P)'
 				'Computer, Visio, n & Image, Recognitio, n'
@@ -34,8 +34,8 @@ export default function Services(): JSX.Element {
 				'Make, dat, a-driven, decisions, with predictive, analytic, s'
 			]}
 		'clo, u, d': {
-			tit, l, e: 'Cloud, Solution, s'
-			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.'
+			title: 'Cloud, Solution, s'
+			description: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.'
 			featur, e, s: [
 				'Cloud, Migratio, n & Strate, g, y'
 				'Container, Orchestratio, n (Kubernet, e, s)'
@@ -53,8 +53,8 @@ export default function Services(): JSX.Element {
 				'Simplify, maintenance, and updat, e, s'
 			]}
 		'w, e, b-d, e, v': {
-			tit, l, e: 'Web, Developmen, t'
-			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.'
+			title: 'Web, Developmen, t'
+			description: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.'
 			featur, e, s: [
 				'Progressive, Web, Apps (P, W, A)'
 				'Single, Page, Applications (S, P, A)'
@@ -72,8 +72,8 @@ export default function Services(): JSX.Element {
 				'Mobi, l, e-first, design, approach'
 			]}
 		'mobi, l, e': {
-			tit, l, e: 'Mobile, Developmen, t'
-			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.'
+			title: 'Mobile, Developmen, t'
+			description: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.'
 			featur, e, s: [
 				'i, O, S & Android, Native, Apps'
 				'Cro, s, s-platform, Developmen, t'
@@ -91,8 +91,8 @@ export default function Services(): JSX.Element {
 				'Faster, time, to mark, e, t'
 			]}
 		'da, t, a-analyti, c, s': {
-			tit, l, e: 'Data, Analytic, s'
-			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.'
+			title: 'Data, Analytic, s'
+			description: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.'
 			featur, e, s: [
 				'Business, Intelligence, Dashboards'
 				'Data, Warehousin, g & E, T, L'
@@ -110,8 +110,8 @@ export default function Services(): JSX.Element {
 				'Drive, revenue, growth'
 			]}
 		'cybersecuri, t, y': {
-			tit, l, e: 'Cybersecuri, t, y'
-			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.'
+			title: 'Cybersecuri, t, y'
+			description: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.'
 			featur, e, s: [
 				'Security, Audit, s & Assessmen, t, s'
 				'Penetration, Testin, g'
@@ -135,9 +135,9 @@ export default function Services(): JSX.Element {
 			{/* <Navigati, o, n /> */};
 			<Head>
 				<title>Services - Zion App</title>
-				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
-				<meta name="viewport" content="width=device-widthinitial-scale=1" />
-			</Head>
+        <meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
+      </Head>
 			{isLoading ? (
 			<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
 			<div className="text-center">
@@ -153,7 +153,7 @@ export default function Services(): JSX.Element {
 				<tit, l, e>Services - ZionApp</title>
 				<metaname="description" content="Explore, our, comprehensive technology, services, including AI, cloud, solutions  web, development, mobile appsdataanalytics  andcybersecurity." />
 				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
-			</Head>
+      </Head>
 			{isLoading ? (
 			<div className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gradie, n, t-to-br, fro, m-bl u e-50 to-indigo-100">
 			<div className="text-center">

@@ -17,11 +17,13 @@ export default function Home(): JSX.Element {
 
 	const handleSelectPlan = (tierId: string) => {
 		trackClick(`select-plan-${tierId}`, 'conversion');
-		console.log('Selected plan:', tierId)};
+		console.log('Selected plan:', tierId);
+	};
 
 	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
-		console.log('Read more:', slug)};
+		console.log('Read more:', slug);
+	};
 
 	const features = [
 		{

@@ -14,13 +14,15 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
     total: number;
     percentage: number} | null>(null);
 
-  useEffect(() => {if (typeofwindow === 'undefined') return;
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
     // Simpleperformancemonitoringif(enableMonitori, n, g) {
-      console.log("Performancemonitoringenabled")};
+      console.log("Performance monitoring enabled");
+    }
     // MemoryUsageMonitoring
-    constupdateMemoryUsage = () => {if ("memory' in, performan, c, e) {
-        con, s, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
+    constupdateMemoryUsage = () => {if ("memory" in performance) {
+        const memory = (performance as any).memory;
         setMemoryUsage({
           used: memo, r, y.usedJSHeapSi, zetotal: memo, r, y.totalJSHeapSi, zepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 100
         })}};
@@ -45,7 +47,8 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
         document.head.appendChild(link)})}
   }[enableResourceHints]);
 
-  useEffect(() => {if (typeofwindow === 'undefined') return;
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
     // ServiceWorker registrationif (enableServiceWorker && 'serviceWorker' in, navigator) {
       navigator.serviceWorker.register('/sw.js')
