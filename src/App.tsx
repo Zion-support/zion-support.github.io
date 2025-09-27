@@ -9,7 +9,7 @@ import { PerformanceOptimizer } from './utils/performanceOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { SecurityManager } from './utils/securityEnhancements';
+import securityEnhancer from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -27,6 +27,9 @@ import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
+import performanceEnhancer from './utils/performanceEnhancements';
+import securityEnhancer from './utils/securityEnhancements';
+import accessibilityEnhancer from './utils/accessibilityEnhancements';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -66,7 +69,7 @@ export default function App(): React.JSX.Element {
     }
     
     // Initialize security features
-    SecurityManager.getInstance();
+    // SecurityManager.getInstance(); // Replaced with new security enhancer
     
     // Initialize enhanced performance optimizer
     enhancedPerformanceOptimizer.initialize();
@@ -124,6 +127,19 @@ export default function App(): React.JSX.Element {
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
+    
+    // Initialize new enhancement utilities
+    console.log('Initializing performance enhancements...');
+    performanceEnhancer.optimizeBundle();
+    performanceEnhancer.preloadResource('/static/js/main.js', 'script');
+    
+    console.log('Initializing security enhancements...');
+    const securityReport = securityEnhancer.generateSecurityReport();
+    console.log('Security Report:', securityReport);
+    
+    console.log('Initializing accessibility enhancements...');
+    const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
+    console.log('Accessibility Metrics:', accessibilityMetrics);
     advancedPerformanceOptimizer.optimizeCriticalCSS();
     advancedPerformanceOptimizer.setupWebVitalsMonitoring();
     
@@ -275,7 +291,7 @@ export default function App(): React.JSX.Element {
         timeOnPage,
         scrollDepth,
         clicks,
-        userAgent: navigator.userAgent,
+        // userAgent: navigator.userAgent,
         viewport: `${window.innerWidth}x${window.innerHeight}`,
         connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
       });

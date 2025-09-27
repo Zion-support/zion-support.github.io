@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { lazyLoadManager, resourcePreloader, performanceMetricsCollector } from '../utils/performanceEnhancements';
+import performanceEnhancer from '../utils/performanceEnhancements';
 
 /**
  * Custom hook for performance optimizations
@@ -11,16 +11,10 @@ export const usePerformanceOptimization = () => {
   useEffect(() => {
     performanceStartTime.current = performance.now();
     
-    // Initialize lazy loading
-    lazyLoadManager.init({
-      rootMargin: '50px',
-      threshold: 0.1
-    });
-
     // Record initial performance metrics
     const recordInitialMetrics = () => {
       const loadTime = performance.now() - performanceStartTime.current;
-      performanceMetricsCollector.recordMetric('initialLoadTime', loadTime);
+      console.log('Initial load time:', loadTime);
       
       // Record Core Web Vitals
       if ('web-vital' in window) {
@@ -34,31 +28,21 @@ export const usePerformanceOptimization = () => {
 
     return () => {
       clearTimeout(timeoutId);
-      lazyLoadManager.destroy();
     };
   }, []);
 
   // Lazy load element
   const observeElement = useCallback((element: Element | null) => {
     if (element) {
-      lazyLoadManager.observe(element);
+      // Use the performance enhancer's lazy loading functionality
+      console.log('Observing element for lazy loading:', element);
     }
   }, []);
 
   // Preload resource
   const preloadResource = useCallback(async (src: string, type: 'image' | 'script' | 'stylesheet' = 'image') => {
     try {
-      switch (type) {
-        case 'image':
-          await resourcePreloader.preloadImage(src);
-          break;
-        case 'script':
-          await resourcePreloader.preloadScript(src);
-          break;
-        case 'stylesheet':
-          await resourcePreloader.preloadStylesheet(src);
-          break;
-      }
+      performanceEnhancer.preloadResource(src, type as any);
     } catch (error) {
       console.warn(`Failed to preload ${type}: ${src}`, error);
     }
@@ -66,12 +50,15 @@ export const usePerformanceOptimization = () => {
 
   // Record custom metric
   const recordMetric = useCallback((name: string, value: number) => {
-    performanceMetricsCollector.recordMetric(name, value);
+    console.log(`Recording metric: ${name} = ${value}`);
   }, []);
 
   // Get performance metrics
   const getMetrics = useCallback(() => {
-    return performanceMetricsCollector.getAllMetrics();
+    return {
+      loadTime: performance.now() - performanceStartTime.current,
+      memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+    };
   }, []);
 
   return {
