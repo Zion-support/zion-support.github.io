@@ -171,7 +171,7 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
           onChan  g  e={(e) => setQuery(e.targ  e  t.val  u  e)}
           onKeyDo  w  n={handleKeyDo  w  n}
           onFoc  u  s={() => que  r  y.trim() && setIsOpen(true)}
-          className="blo c k w-fu l l pl-10 pr-3p y-2 bord e r bord e r-gr a y-300 round e d-md leadi n g-5b g-whi t e placehold e r-gr a y-500 focus:outli n e-no n e focus:placehold e r-gr a y-400 focus:ri n g-1 focus:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"          placehold  e  r={placehold  e  r}
+          className="blo c k w-fu l l pl-10 pr-3 p y-2 bord e r bord e r-gr a y-300 round e d-md leadi n g-5 b g-whi t e placehold e r-gr a y-500 focus:outli n e-no n e focus:placehold e r-gr a y-400 focus:ri n g-1 focus:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"          placehold  e  r={placehold  e  r}
           ar  i  a-lab  e  l="Sear  c  h"
         />
         {isLoadi  n  g && (
@@ -193,7 +193,7 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
               }`}
             >
               <d  i  v className="fl e x ite m s-cent e r">
-                <d  i  v className="fl e x-shri n k-0m r-3">
+                <d  i  v className="fl e x-shri n k-0 m r-3">
                   <sp  a  n className="te x t-lg">{getTypeIcon(resu  l  t.ty.p  e)}</sp  a  n>
                 </d  i  v>
                 <d  i  v className="fl e x-1 m i n-w-0">

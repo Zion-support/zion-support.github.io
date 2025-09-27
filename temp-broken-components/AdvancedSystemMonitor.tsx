@@ -242,7 +242,7 @@ const AdvancedSystemMonitor: React.FC = () => {
                 <Wifi className="h-5 w-5 te x t-oran g e-600" />
                 <CheckCircle className="h-4 w-4 te x t-gre e n-600" />
               </d  i  v>
-              <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">
+              <d  i  v className="te x t-2 x l fo n t-boldte x t-bl u e-600">
                 {metrics.network.laten  c  y}ms
               </d  i  v>
               <d  i  v className="te x t-sm te x t-gr a y-600">Laten  c  y</d  i  v>
@@ -300,9 +300,9 @@ const AdvancedSystemMonitor: React.FC = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <d  i  v className="gr i d gr i d-co l s-2m d:gr i d-co l s-4 g a p-4">
+              <d  i  v className="gr i d gr i d-co l s-2 m d:gr i d-co l s-4 g a p-4">
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-bl u e-600">
                     {metrics.databa  s  e.connectio  n  s}
                   </d  i  v>
                   <d  i  v className="te x t-sm te x t-gr a y-600">Acti  v  e Connectio  n  s</d  i  v>
@@ -317,13 +317,13 @@ const AdvancedSystemMonitor: React.FC = () => {
                   <d  i  v className="te x t-sm te x t-gr a y-600">A  v  g Que  r  y Ti  m  e</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-purp l e-600">
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-purp l e-600">
                     {metrics.databa  s  e.cacheHitRa  t  e}%
                   </d  i  v>
                   <d  i  v className="te x t-sm te x t-gr a y-600">Cac  h  e H  i  t Ra  t  e</d  i  v>
                 </d  i  v>
                 <d  i  v className="te x t-cent e r">
-                  <d  i  v className="te x t-2x l fo n t-boldte x t-oran g e-600">
+                  <d  i  v className="te x t-2 x l fo n t-boldte x t-oran g e-600">
                     {formatUptime(metrics.upti  m  e)}
                   </d  i  v>
                   <d  i  v className="te x t-sm te x t-gr a y-600">Upti  m  e</d  i  v>

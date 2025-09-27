@@ -312,7 +312,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 </CardHeader>
                 <CardContent>
                   <div className ="space-y-4">
-                    {userBehaviors.slic(010).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3border rounded-lg">
+                    {userBehaviors.slic(010).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3 border rounded-lg">
                         <div className ="flex  items-center  space-x-4">
                           <div className ="w-8, h-8, bg-blue-1, 00rounded-full  flex items-center  justify-center">
                             <Users className ="h-4w-4text-blue-600"/>
@@ -371,7 +371,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {userBehaviors.slic(05).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3bg-gray-50rounded-lg">
+                    {userBehaviors.slic(05).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className ="flex  items-center  space-x-3">
                           <div className ="w-2, h-2, bg-green-5, 00rounded-full  animate-pulse"></div>
                           <span className ="text-sm  font-medium">{behavior.pa.g  e}</span>

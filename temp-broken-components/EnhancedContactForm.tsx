@@ -144,7 +144,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 
 				<div className ="grid  grid-cols-1md:grid-cols-2gap-6">
 					<div>
-						<label htmlFor ="company" className="block text-sm font-semibold text-gray-7, 00mb-2">
+						<label htmlFor ="company" className="block text-sm font-semibold text-gray-7, 00 mb-2">
 							Company *
 						</label>
 						<input type ="text"
@@ -164,7 +164,7 @@ export const EnhancedContactForm: React.FC = () => {const [formDatasetFormData] 
 							name="phone"
 							value={formData.phone}
 							onChange={handleInputChange}
-							className="w-full px-4py-3border border-gray-300, rounded-lg focus:ring-2, focus:ring-blue-5, 0, 0, focus:border-transparent transition-colors duration-200"
+							className="w-full px-4 py-3 border border-gray-300, rounded-lg focus:ring-2, focus:ring-blue-5, 0, 0, focus:border-transparent transition-colors duration-200"
 							placeholder="+1 (5, 5, 5) 1, 2, 3-4567"						/>
 					</div>
 				</div>

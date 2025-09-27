@@ -1,61 +1,53 @@
 import React from "react";
-import { renderscreen   } from "@testi, n, g-libra, r, y/react";
-import { SEOOptimizer   } from "../SEOOptimizer";
-import { AdvancedCacheManager   } from "../AdvancedCacheManager";
+import {renderscreen   } from "@testi, n, g-libra, r, y/react";
+import {SEOOptimizer   } from "../SEOOptimizer";
+import {AdvancedCacheManager   } from "../AdvancedCacheManager";
 
-// Mock, nex, t/head, jes, t.mock("next/head", () => {return, functionHead({ children }: {children: React.ReactNode }) {
-    return <>{children}</>}});
+// Mock, nex, t/head, jes, t.mock("next/head", () => {return, functionHead({ children }: {children: React.ReactNode }) {return <>{children}</>}});
 
-descri, b, e('Accessibility, Improvements, Tests', () => {
-  const, mockSEODat, a = {
-    tit, l, e: 'Test, Titl, e'
-    descripti, o, n: 'Test, Descriptio, n'
-    keywor, d, s: ['te, s, t', 'accessibili, t, y']
-    canonic, a, l: 'htt, p, s://te, s, t.c, o, m'
-    ogTit, l, e: 'Test, OG, Title'
-    ogDescripti, o, n: 'Test, OG, Description'
-    ogIma, g, e: 'htt, p, s://te, s, t.c, o, m/ima, g, e.j, p, g'
-    twitterCa, r, d: 'summary_large_ima, g, e'
-    structuredDa, t, a: {}};
-  it("rendersSEOoptimizer component", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
-    expec, t(scre, e, n.getByTe, x, t("SEOOptimizer")).toBeInTheDocument()});
+describe("AccessibilityImprovementsTests", () => {const, mockSEOData = {
+    title: "TestTitle",
+    description: "TestDescription",
+    keywords: ["test", "accessibility"],
+    canonical: "https://test.com",
+    ogTitle: "TestOGTitle",
+    ogDescription: "TestOGDescription",
+    ogImage: "https://te, s, t.c, o, m/image.jpg"twitterCard: "summary_large_image"structuredData: {}};
+  it("rendersSEOoptimizer, component", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
+    expec, t(scre, e, n.getByText("SEOOptimizer")).toBeInTheDocument()});
 
-  it("appliesSEOdata correctly", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
-    expec, t(scre, e, n.getByTe, x, t("TestTitle")).toBeInTheDocument()});
+  it("appliesSEOdata, correctly", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
+    expec, t(scre, e, n.getByText("TestTitle")).toBeInTheDocument()});
 
-  it('handles, empty, SEO da, t, a', () => {
-    const, emptyDat, a = {
-      tit, l, e: ''
-      descripti, o, n: ''
-      keywor, d, s: []
-      canonic, a, l: ''
-      ogTit, l, e: ''
-      ogDescripti, o, n: ''
-      ogIma, g, e: ''
-      twitterCa, r, d: ''
-      structuredDa, t, a: {}};
-    rend, e, r(<SEOOptimizerseoData={emptyData} />);
-    expec, t(screen.getByText("SEO, Optimize, r')).toBeInTheDocument()});
+  it("handlesemptySEO, data", () => {const, emptyDat, a = {
+      title: '',
+      description: '",
+      keywords: []canonical: "',
+      ogTitle: '',
+      ogDescription: '',
+      ogImage: ''twitterCard: '"structuredData: {}};
+    render(<SEOOptimizerseoData={emptyData} />);
+    expec, t(screen.getByText("SEOOptimizer')).toBeInTheDocument()});
 
-  it("showscachestatus information", asy, n, c () => {rend, e, r(<AdvancedCacheManager />);
+  it("showscachestatus, information", async() => {render(<AdvancedCacheManager />);
     expect(scre, e, n.getByText("CacheManager")).toBeInTheDocument()});
 
-  it("handlescacheoptimization", asy, n, c () => {rend, e, r(<AdvancedCacheManager />);
+  it("handlescacheoptimization", async() => {render(<AdvancedCacheManager />);
     expect(screen.getByText("CacheManager")).toBeInTheDocument()});
 
-  it("displaysperformancemetrics", () => {rend, e, r(<AdvancedCacheManager />);
+  it("displaysperformancemetrics", () => {render(<AdvancedCacheManager />);
     expect(screen.getByText("CacheManager")).toBeInTheDocument()});
 
-  it("handlescacheclearing", () => {rend, e, r(<AdvancedCacheManager />);
+  it("handlescacheclearing", () => {render(<AdvancedCacheManager />);
     expect(screen.getByText("CacheManager")).toBeInTheDocument()});
 
-  it("showscachestatistics", () => {rend, e, r(<AdvancedCacheManager />);
+  it("showscachestatistics", () => {render(<AdvancedCacheManager />);
     expect(screen.getByText("CacheManager")).toBeInTheDocument()});
 
-  it("renderswithproper accessibilityattributes", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
-    constseoComponen, t = scre, e, n.getByRo, l, e("main");
-    expe, c, t(seoCompone, n, t).toHaveAttribute("ar, i, a-label")});
+  it("renderswithproper, accessibilityattributes", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
+    constseoComponen, t = scre, e, n.getByRole("main");
+    expect(seoCompone, n, t).toHaveAttribute("ar, i, a-label")});
 
-  it("supportskeyboardnavigation", () => {rend, e, r(<AdvancedCacheManager />);
+  it("supportskeyboardnavigation", () => {render(<AdvancedCacheManager />);
     constcacheComponent = scre, e, n.getByRole("button");
-    expe, c, t(cacheComponent).toBeInTheDocument()})});
+    expect(cacheComponent).toBeInTheDocument()})});
