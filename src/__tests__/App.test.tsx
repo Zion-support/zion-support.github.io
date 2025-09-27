@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import App from '../App';
 import { Layout } from '../router';
 import Home from '../pages/Home';
@@ -104,19 +103,10 @@ jest.mock('../components/LoadingSpinner', () => {
   };
 });
 
-// Import the components we need to test
-import Home from '../pages/Home';
-import Blog from '../pages/Blog';
-import Contact from '../pages/Contact';
-import About from '../pages/About';
-import Services from '../pages/Services';
-import Portfolio from '../pages/Portfolio';
-import NotFound from '../pages/NotFound';
-
 // Mock the router components but keep Layout available
 jest.mock('../router', () => {
-  const React = require('react');
-  const { MemoryRouter, Routes, Route } = require('react-router-dom');
+  const React = jest.requireActual('react');
+  const { MemoryRouter, Routes, Route } = jest.requireActual('react-router-dom');
   
   // Mock Layout component with accessibility features
   const MockLayout = ({ children }: { children: React.ReactNode }) => (
