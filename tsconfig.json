@@ -64,10 +64,7 @@
     "coverage",
     "app/**/*",
     // Exclude problematic or unused routes/pages that contain corrupted JSX placeholders
-    "src/pages/**",
-    "src/pages.disabled/**",
     "src.corrupted/**",
-    "src/routes/**",
     "src/utils/cartUtils.js",
     "**/*.test.ts",
     "**/*.test.tsx",
@@ -80,12 +77,9 @@
     "zion-ai-assistant",
     "types.disabled",
     // Temporarily exclude broader areas known to be corrupted/not used by build
-    "src/pages/**",
-    "src/pages.disabled/**",
-    "src/routes/**",
-    "src/components/**",
     "src/context/**",
     "src/services/**",
+    "src/components/**",
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts",
@@ -93,6 +87,10 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "src/pages.disabled/**",
+    "src/routes/**",
+    "src/pages/services/**",
+    "src/components/ui/**"
   ]
 }
