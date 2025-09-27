@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ServiceCard } from '../src/components/ServiceCard';
 // import Navigation from '../src/components/Navigation';
-import { PricingCalculator } from '../src/components/PricingCalculator';
+// import { PricingCalculator } from '../src/components/PricingCalculator';
 import { SERVICES } from '../src/utils/constants';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
@@ -376,7 +376,8 @@ export default function Services(): JSX.Element {
 									Get an instant estimate for your project based on your specific requirements and preferences.
 								</p>
 							</div>
-							<PricingCalculator />
+							{/* <PricingCalculator /> */}
+							<div className="text-center py-8 text-gray-500">Pricing Calculator temporarily disabled</div>
 						</section>
 					</main>
 				</div>
