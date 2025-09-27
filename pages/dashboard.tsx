@@ -1,333 +1,619 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const Dashboard = React.memo(function Dashboard(): JS, X.Elem, e, n, t {
-  const [active, T, a, b, setActive, T, a, b] = useState('overv, i, e, w');
-  const [isRealT, i, m, e, setIsRealT, i, m, e] = useState(fa, l, s, e);
-  const { trackCl, i, c, k } = useAnalytics();
+// Lazy load heavy components to reduce initial bundle size
+// const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-  const t, a, b, s = [
-    { i, d: 'overv, i, e, w', la, b, e, l: 'Overv, i, e, w', i, c, o, n: '📊' },
-    { i, d: 'analyt, i, c, s', la, b, e, l: 'Analytics', i, c, o, n: '📈' },
-    { i, d: 'performance', la, b, e, l: 'Performa, n, c, e', i, c, o, n: '⚡' },
-    { i, d: 'secur, i, t, y', la, b, e, l: 'Secur, i, t, y', i, c, o, n: '🔒' },
-    { i, d: 'sys, t, e, m-moni, t, o, r', la, b, e, l: 'Sys, t, e, m Moni, t, o, r', i, c, o, n: '🖥️' }
-  ];
+// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-  const renderTabCont, e, n, t = () => {
-    swi, t, c, h (active, T, a, b) {
-      c, a, s, e 'overv, i, e, w':
+export default function Dashboard(): JSX.Element {
+  const [activeTab, setActiveTab] = useState('comprehensive');
+  const [isRealTime, setIsRealTime] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const { trackClick } = useAnalytics();
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    trackClick(`dashboard-tab-${tab}`, 'navigation');
+  };
+
+  const renderDashboard = () => {
+    switch (activeTab) {
+      case 'comprehensive':
+        return <ComprehensiveAnalyticsDashboard />;
+      case 'analytics':
+        return <div>Analytics Dashboard (temporarily disabled)</div>;
+      case 'performance':
+        return <div>Performance Dashboard (temporarily disabled)</div>;
+      case 'security':
+        return <div>Security Dashboard (temporarily disabled)</div>;
+      case 'enhanced':
+        return <EnhancedDashboard />;
+      case 'search':
         return (
-          <di, v classN, a, m, e="p-8">
-            <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 l, g:g, r, i, d-c, o, l, s-4 ga, p-6 m, b-8">
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                  <di, v>
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-60, 0">To, t, a, l Us, e, r, s</p>
-                    <p classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">1, 2,54, 3</p>
-                  </di, v>
-                  <di, v classN, a, m, e="w-1, 2 h-1, 2 b, g-b, l, u, e-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-b, l, u, e-60, 0 t, e, x, t-x, l">👥</s, p, a, n>
-                  </di, v>
-                </di, v>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-gr, e, e, n-60, 0 m, t-2">+1, 2.5% from l, a, s, t mo, n, t, h</p>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                  <di, v>
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-60, 0">Reve, n, u, e</p>
-                    <p classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">$4, 5,67, 8</p>
-                  </di, v>
-                  <di, v classN, a, m, e="w-1, 2 h-1, 2 b, g-gr, e, e, n-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-gr, e, e, n-60, 0 t, e, x, t-x, l">💰</s, p, a, n>
-                  </di, v>
-                </di, v>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-gr, e, e, n-60, 0 m, t-2">+8.2% from l, a, s, t mo, n, t, h</p>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                  <di, v>
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-60, 0">Act, i, v, e Sessi, o, n, s</p>
-                    <p classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">1,23, 4</p>
-                  </di, v>
-                  <di, v classN, a, m, e="w-1, 2 h-1, 2 b, g-pur, p, l, e-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-pur, p, l, e-60, 0 t, e, x, t-x, l">🔄</s, p, a, n>
-                  </di, v>
-                </di, v>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-re, d-60, 0 m, t-2">-2.1% from l, a, s, t h, o, u, r</p>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                  <di, v>
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-60, 0">Er, r, o, r R, a, t, e</p>
-                    <p classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">0.1, 2%</p>
-                  </di, v>
-                  <di, v classN, a, m, e="w-1, 2 h-1, 2 b, g-re, d-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-re, d-60, 0 t, e, x, t-x, l">⚠️</s, p, a, n>
-                  </di, v>
-                </di, v>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-gr, e, e, n-60, 0 m, t-2">-0.0, 5% from l, a, s, t w, e, e, k</p>
-              </di, v>
-            </di, v>
-            <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-              <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Rec, e, n, t Activ, i, t, y</h, 3>
-              <di, v classN, a, m, e="sp, a, c, e-y-3">
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3 p-3 b, g-g, r, a, y-5, 0 roun, d, e, d-l, g">
-                  <di, v classN, a, m, e="w-8 h-8 b, g-b, l, u, e-10, 0 roun, d, e, d-f, u, l, l f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-b, l, u, e-60, 0 t, e, x, t-s, m">👤</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x-1">
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-90, 0">Ne, w u, s, e, r registe, r, e, d</p>
-                    <p classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">2 minu, t, e, s ag, o</p>
-                  </di, v>
-                </di, v>
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3 p-3 b, g-g, r, a, y-5, 0 roun, d, e, d-l, g">
-                  <di, v classN, a, m, e="w-8 h-8 b, g-gr, e, e, n-10, 0 roun, d, e, d-f, u, l, l f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-gr, e, e, n-60, 0 t, e, x, t-s, m">💳</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x-1">
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-90, 0">Paym, e, n, t proces, s, e, d</p>
-                    <p classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">5 minu, t, e, s ag, o</p>
-                  </di, v>
-                </di, v>
-                <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3 p-3 b, g-g, r, a, y-5, 0 roun, d, e, d-l, g">
-                  <di, v classN, a, m, e="w-8 h-8 b, g-yel, l, o, w-10, 0 roun, d, e, d-f, u, l, l f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-yel, l, o, w-60, 0 t, e, x, t-s, m">📧</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x-1">
-                    <p classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-90, 0">Em, a, i, l campa, i, g, n s, e, n, t</p>
-                    <p classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">1, 0 minu, t, e, s ag, o</p>
-                  </di, v>
-                </di, v>
-              </di, v>
-            </di, v>
-          </di, v>
+      <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
+      <div className="max-w-2xl">
+              {/* <EnhancedSearch 
+                onSearch={(query, results) => console.log('Search:', query, results)}
+                onResultClick={(result) => console.log('Result clicked:', result)}
+                enableFilters={true}
+                enableSuggestions={true}
+                enableHistory={true}
+              /> */}
+            </div>
+          </div>
         );
-
-      c, a, s, e 'analyt, i, c, s':
+      case 'advanced-analytics':
         return (
-          <di, v classN, a, m, e="p-8">
-            <di, v classN, a, m, e="f, l, e, x just, i, f, y-betw, e, e, n it, e, m, s-cen, t, e, r m, b-8">
-              <h, 1 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">Analytics Dashboard</h, 1>
-              <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r sp, a, c, e-x-4">
-                <la, b, e, l classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r">
-                  <in, p, u, t
-                    type="check, b, o, x"
-                    chec, k, e, d={isRealT, i, m, e}
-                    onCha, n, g, e={(e) => setIsRealT, i, m, e(e.tar, g, e, t.chec, k, e, d)}
-                    classN, a, m, e="m, r-2"
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
+      <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
                   />
-                  R, e, a, l-t, i, m, e Upda, t, e, s
-                </la, b, e, l>
-              </di, v>
-            </di, v>
-            <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 l, g:g, r, i, d-c, o, l, s-2 ga, p-8">
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">P, a, g, e Vi, e, w, s</h, 3>
-                <di, v classN, a, m, e="h-6, 4 b, g-g, r, a, y-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                  <s, p, a, n classN, a, m, e="t, e, x, t-g, r, a, y-50, 0">Ch, a, r, t placehol, d, e, r</s, p, a, n>
-                </di, v>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">U, s, e, r Engagem, e, n, t</h, 3>
-                <di, v classN, a, m, e="h-6, 4 b, g-g, r, a, y-10, 0 roun, d, e, d-l, g f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-cen, t, e, r">
-                  <s, p, a, n classN, a, m, e="t, e, x, t-g, r, a, y-50, 0">Ch, a, r, t placehol, d, e, r</s, p, a, n>
-                </di, v>
-              </di, v>
-            </di, v>
-          </di, v>
-        );
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh Data
+                </button>
+              </div>
+            </div>
 
-      c, a, s, e 'performance':
-        return (
-          <di, v classN, a, m, e="p-8">
-            <h, 1 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-8">Performa, n, c, e Metr, i, c, s</h, 1>
-            <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-3 ga, p-6">
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Respo, n, s, e T, i, m, e</h, 3>
-                <p classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-60, 0">24, 5, m, s</p>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-g, r, a, y-60, 0 m, t-2">Aver, a, g, e respo, n, s, e t, i, m, e</p>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Upt, i, m, e</h, 3>
-                <p classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-gr, e, e, n-60, 0">9, 9.9%</p>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-g, r, a, y-60, 0 m, t-2">L, a, s, t 3, 0 d, a, y, s</p>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Through, p, u, t</h, 3>
-                <p classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-pur, p, l, e-60, 0">1,23, 4</p>
-                <p classN, a, m, e="t, e, x, t-s, m t, e, x, t-g, r, a, y-60, 0 m, t-2">Reque, s, t, s pe, r sec, o, n, d</p>
-              </di, v>
-            </di, v>
-          </di, v>
-        );
+            {/* Stats Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-gray-600 text-sm">Total Users</p>
+                    <p className="text-2 xl font-bold text-gray-900">1,234</p>
+                  </div>
+      <div className="bg-blue-100 p-3 rounded-full">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-gray-600 text-sm">Active Sessions</p>
+                    <p className="text-2 xl font-bold text-gray-900">567</p>
+                  </div>
+      <div className="bg-green-100 p-3 rounded-full">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-gray-600 text-sm">Revenue</p>
+                    <p className="text-2 xl font-bold text-gray-900">$12,345</p>
+                  </div>
+      <div className="bg-yellow-100 p-3 rounded-full">
+                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                </div>              </div>
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-gray-600 text-sm">Conversion Rate</p>
+                    <p className="text-2 xl font-bold text-gray-900">3.2%</p>
+                  </div>
+      <div className="bg-purple-100 p-3 rounded-full">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      c, a, s, e 'secur, i, t, y':
-        return (
-          <di, v classN, a, m, e="p-8">
-            <h, 1 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-8">Secur, i, t, y Dashboard</h, 1>
-            <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 ga, p-8">
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Secur, i, t, y Eve, n, t, s</h, 3>
-                <di, v classN, a, m, e="sp, a, c, e-y-3">
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n p-3 b, g-re, d-5, 0 roun, d, e, d-l, g">
-                    <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3">
-                      <s, p, a, n classN, a, m, e="t, e, x, t-re, d-60, 0">🚨</s, p, a, n>
-                      <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m">Fai, l, e, d lo, g, i, n atte, m, p, t</s, p, a, n>
-                    </di, v>
-                    <s, p, a, n classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">2 mi, n ag, o</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n p-3 b, g-yel, l, o, w-5, 0 roun, d, e, d-l, g">
-                    <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3">
-                      <s, p, a, n classN, a, m, e="t, e, x, t-yel, l, o, w-60, 0">⚠️</s, p, a, n>
-                      <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m">Unus, u, a, l traf, f, i, c patt, e, r, n</s, p, a, n>
-                    </di, v>
-                    <s, p, a, n classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">1, 5 mi, n ag, o</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n p-3 b, g-gr, e, e, n-5, 0 roun, d, e, d-l, g">
-                    <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r ga, p-3">
-                      <s, p, a, n classN, a, m, e="t, e, x, t-gr, e, e, n-60, 0">✅</s, p, a, n>
-                      <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m">Secur, i, t, y s, c, a, n comple, t, e, d</s, p, a, n>
-                    </di, v>
-                    <s, p, a, n classN, a, m, e="t, e, x, t-x, s t, e, x, t-g, r, a, y-50, 0">1 h, o, u, r ag, o</s, p, a, n>
-                  </di, v>
-                </di, v>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Secur, i, t, y Sta, t, u, s</h, 3>
-                <di, v classN, a, m, e="sp, a, c, e-y-4">
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0">Firew, a, l, l Sta, t, u, s</s, p, a, n>
-                    <s, p, a, n classN, a, m, e="p, x-2 p, y-1 b, g-gr, e, e, n-10, 0 t, e, x, t-gr, e, e, n-80, 0 t, e, x, t-x, s roun, d, e, d-f, u, l, l">Act, i, v, e</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0">SS, L Certific, a, t, e</s, p, a, n>
-                    <s, p, a, n classN, a, m, e="p, x-2 p, y-1 b, g-gr, e, e, n-10, 0 t, e, x, t-gr, e, e, n-80, 0 t, e, x, t-x, s roun, d, e, d-f, u, l, l">Va, l, i, d</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0">Bac, k, u, p Sta, t, u, s</s, p, a, n>
-                    <s, p, a, n classN, a, m, e="p, x-2 p, y-1 b, g-gr, e, e, n-10, 0 t, e, x, t-gr, e, e, n-80, 0 t, e, x, t-x, s roun, d, e, d-f, u, l, l">U, p t, o d, a, t, e</s, p, a, n>
-                  </di, v>
-                  <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
-                    <s, p, a, n classN, a, m, e="t, e, x, t-s, m f, o, n, t-med, i, u, m t, e, x, t-g, r, a, y-70, 0">Vulnerabil, i, t, y S, c, a, n</s, p, a, n>
-                    <s, p, a, n classN, a, m, e="p, x-2 p, y-1 b, g-yel, l, o, w-10, 0 t, e, x, t-yel, l, o, w-80, 0 t, e, x, t-x, s roun, d, e, d-f, u, l, l">I, n progr, e, s, s</s, p, a, n>
-                  </di, v>
-                </di, v>
-              </di, v>
-            </di, v>
-          </di, v>
+            {/* Charts Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">User Activity</h3>
+      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500">Chart placeholder</p>
+                </div>
+              </div>
+      <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
+      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500">Chart placeholder</p>
+                </div>              </div>
+            </div>
+            <SystemMonitor 
+              onAlert={(alert) => console.log('System alert:', alert)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+              enableRealTime={isRealTime}
+              refreshInterval={5000}
+            />
+          </div>
         );
-
-      c, a, s, e 'sys, t, e, m-moni, t, o, r':
+      case 'security-enhancements':
         return (
-          <di, v classN, a, m, e="p-8">
-            <di, v classN, a, m, e="f, l, e, x just, i, f, y-betw, e, e, n it, e, m, s-cen, t, e, r m, b-8">
-              <h, 1 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">Sys, t, e, m Moni, t, o, r</h, 1>
-              <di, v classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r sp, a, c, e-x-4">
-                <la, b, e, l classN, a, m, e="f, l, e, x it, e, m, s-cen, t, e, r">
-                  <in, p, u, t
-                    type="check, b, o, x"
-                    chec, k, e, d={isRealT, i, m, e}
-                    onCha, n, g, e={(e) => setIsRealT, i, m, e(e.tar, g, e, t.chec, k, e, d)}
-                    classN, a, m, e="m, r-2"
+      <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+            {/* <AdvancedSecurityEnhancements /> */}
+      <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
+          </div>
+        );
+      case 'new-performance':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
+      <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
                   />
-                  R, e, a, l-t, i, m, e Upda, t, e, s
-                </la, b, e, l>
-              </di, v>
-            </di, v>
-            <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 l, g:g, r, i, d-c, o, l, s-4 ga, p-6">
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">CP, U Us, a, g, e</h, 3>
-                <di, v classN, a, m, e="t, e, x, t-cen, t, e, r">
-                  <di, v classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-60, 0 m, b-2">4, 5%</di, v>
-                  <di, v classN, a, m, e="w-f, u, l, l b, g-g, r, a, y-20, 0 roun, d, e, d-f, u, l, l h-2">
-                    <di, v classN, a, m, e="b, g-b, l, u, e-60, 0 h-2 roun, d, e, d-f, u, l, l" st, y, l, e={{ wi, d, t, h: '4, 5%' }}></di, v>
-                  </di, v>
-                </di, v>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Mem, o, r, y Us, a, g, e</h, 3>
-                <di, v classN, a, m, e="t, e, x, t-cen, t, e, r">
-                  <di, v classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-gr, e, e, n-60, 0 m, b-2">6, 7%</di, v>
-                  <di, v classN, a, m, e="w-f, u, l, l b, g-g, r, a, y-20, 0 roun, d, e, d-f, u, l, l h-2">
-                    <di, v classN, a, m, e="b, g-gr, e, e, n-60, 0 h-2 roun, d, e, d-f, u, l, l" st, y, l, e={{ wi, d, t, h: '6, 7%' }}></di, v>
-                  </di, v>
-                </di, v>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">D, i, s, k Us, a, g, e</h, 3>
-                <di, v classN, a, m, e="t, e, x, t-cen, t, e, r">
-                  <di, v classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-yel, l, o, w-60, 0 m, b-2">2, 3%</di, v>
-                  <di, v classN, a, m, e="w-f, u, l, l b, g-g, r, a, y-20, 0 roun, d, e, d-f, u, l, l h-2">
-                    <di, v classN, a, m, e="b, g-yel, l, o, w-60, 0 h-2 roun, d, e, d-f, u, l, l" st, y, l, e={{ wi, d, t, h: '2, 3%' }}></di, v>
-                  </di, v>
-                </di, v>
-              </di, v>
-              <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-l, g p-6 sha, d, o, w-m, d">
-                <h, 3 classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-4">Netw, o, r, k I/O</h, 3>
-                <di, v classN, a, m, e="t, e, x, t-cen, t, e, r">
-                  <di, v classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-pur, p, l, e-60, 0 m, b-2">1, 2%</di, v>
-                  <di, v classN, a, m, e="w-f, u, l, l b, g-g, r, a, y-20, 0 roun, d, e, d-f, u, l, l h-2">
-                    <di, v classN, a, m, e="b, g-pur, p, l, e-60, 0 h-2 roun, d, e, d-f, u, l, l" st, y, l, e={{ wi, d, t, h: '1, 2%' }}></di, v>
-                  </di, v>
-                </di, v>
-              </di, v>
-            </di, v>
-          </di, v>
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <PerformanceDashboard /> */}
+          </div>
+        );
+      case 'new-security':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
+      <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Monitoring
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <SecurityMonitor 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+            />
+          </div>
+        );
+      case 'performance-optimizer':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <AdvancedPerformanceOptimizer /> */}
+          </div>
+        );
+      case 'new-analytics':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
+      <div className="flex items-center space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={isRealTime}
+                    onChange={(e) => setIsRealTime(e.target.checked)}
+                    className="mr-2"
+                  />
+                  Real-time Updates
+                </label>
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <EnhancedAnalytics 
+              refreshInterval={isRealTime ? 10000 : 60000}
+              enableRealTime={isRealTime}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+      <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            {/* <AdvancedErrorMonitoring /> */}
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+      <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
+          </div>
+        );
+      case 'error-handler':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <AdvancedErrorHandler 
+              onError={(error) => console.log('Error captured:', error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              enableAutoRetry={true}
+              maxRetries={3}
+              enablePerformanceMonitoring={true}
+              enableErrorReporting={true}
+              enableUserFeedback={true}
+            /> */}
+          </div>
+        );
+      case 'performance-optimizer':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <AdvancedPerformanceOptimizer /> */}
+          </div>
+        );
+      case 'analytics-insights':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <AdvancedAnalyticsInsights 
+              timeRange="30d"
+              data={{
+                pageViews: 125000,
+                uniqueVisitors: 45000,
+                bounceRate: 35.2,
+                avgSessionDuration: 180,
+                conversionRate: 12.5,
+                topPages: [
+                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+                  { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+                  { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
+                ],
+                trafficSources: [
+                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+                  { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+                  { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
+                ],
+                deviceTypes: [
+                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
+                  { device: 'Mobile', visitors: 15000, percentage: 33.3 },
+                  { device: 'Tablet', visitors: 5000, percentage: 11.1 }
+                ],
+                userBehavior: [
+                  { action: 'page_view', count: 1250, trend: 'up' },
+                  { action: 'click', count: 890, trend: 'stable' },
+                  { action: 'scroll', count: 2100, trend: 'down' }
+                ],
+                performance: {
+                  pageLoadTime: 1.2,
+                  firstContentfulPaint: 0.8,
+                  largestContentfulPaint: 1.5,
+                  cumulativeLayoutShift: 0.1,
+                  firstInputDelay: 50
+                },
+                realTime: [
+                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
+                  { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
+                ]
+              }}
+              enableRealTime={true}
+              refreshInterval={30000}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            /> */}
+      <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
+          </div>
+        );
+      case 'comprehensive-monitoring':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <ComprehensiveMonitoringDashboard 
+              refreshInterval={5000}
+              enableRealTimeUpdates={true}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+            /> */}
+          </div>
+        );
+      case 'comprehensive-security':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <ComprehensiveSecurityDashboard 
+              refreshInterval={10000}
+              enableRealTimeMonitoring={true}
+              onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}
+            /> */}
+          </div>
+        );
+      case 'error-monitoring':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {/* <AdvancedErrorMonitoring /> */}
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
+      <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedSystemMonitor />
+          </div>
+        );
+
+      case 'analytics':
+        return (
+      <div className="p-8">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
+      <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Analytics features coming soon...</p>
+            </div>
+          </div>
+        );
+
+      case 'performance':
+        return (
+      <div className="p-8">
+            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
+      <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Performance monitoring features coming soon...</p>
+            </div>
+          </div>
         );
 
       default:
         return (
-          <di, v classN, a, m, e="p-8">
-            <h, 1 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">Dashboard</h, 1>
-            <p classN, a, m, e="t, e, x, t-g, r, a, y-60, 0 m, t-4">Sel, e, c, t a ta, b t, o v, i, e, w dashbo, a, r, d cont, e, n, t.</p>
-          </di, v>
-        );
-    }
+      <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
+      <div className="bg-white rounded-xl shadow-lg p-8">
+              <p className="text-gray-600">Select a tab to view dashboard content.</p>
+            </div>
+          </div>
+        )}
   };
 
   return (
     <>
       <Head>
-        <title>Dashboard - Z, i, o, n Ap, p</title>
-        <meta name="description" content="Comprehens, i, v, e dashbo, a, r, d fo, r monitoring an, d manag, i, n, g y, o, u, r Z, i, o, n Ap, p insta, n, c, e." />
-        <meta name="viewp, o, r, t" content="wi, d, t, h=dev, i, c, e-wi, d, t, h, init, i, a, l-sc, a, l, e=1" />
+        <title>Advanced Dashboard - Zion Tech Solutions</title>
+        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring, security analysis, SEO optimization, and accessibility insights" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <di, v classN, a, m, e="mi, n-h-scr, e, e, n b, g-g, r, a, y-5, 0">
-        <di, v classN, a, m, e="f, l, e, x">
-          {/* Side, b, a, r */}
-          <di, v classN, a, m, e="w-6, 4 b, g-wh, i, t, e sha, d, o, w-m, d">
-            <di, v classN, a, m, e="p-6">
-              <h, 2 classN, a, m, e="t, e, x, t-x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0">Dashboard</h, 2>
-            </di, v>
-            <na, v classN, a, m, e="m, t-6">
-              {t, a, b, s.ma, p((ta, b) => (
-                <but, t, o, n
-                  ke, y={ta, b.i, d}
-                  onCl, i, c, k={() => {
-                    setActive, T, a, b(ta, b.i, d);
-                    trackCl, i, c, k(`dashbo, a, r, d-ta, b-${ta, b.i, d}`, 'navigat, i, o, n');
-                  }}
-                  classN, a, m, e={`w-f, u, l, l f, l, e, x it, e, m, s-cen, t, e, r ga, p-3 p, x-6 p, y-3 t, e, x, t-l, e, f, t ho, v, e, r:b, g-g, r, a, y-5, 0 transit, i, o, n-col, o, r, s ${
-                    active, T, a, b === ta, b.i, d ? 'b, g-b, l, u, e-5, 0 t, e, x, t-b, l, u, e-60, 0 bor, d, e, r-r-2 bor, d, e, r-b, l, u, e-60, 0' : 't, e, x, t-g, r, a, y-70, 0'
+      <div className="min-h-screen bg-gray-50">
+        {/* Navigation */}
+        <nav className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center space-x-8">
+                <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech
+                </a>
+                <div className="hidden md:flex space-x-8">
+                  <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+                  <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+                  <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+                  <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-600">Dashboard</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Advanced Dashboard</h1>
+            <p className="text-gray-600">Monitor your system performance, security, and analytics</p>
+          </div>
+
+          {/* Tabs */}
+          <div className="border-b border-gray-200 mb-8">
+            <nav className="-mb-px flex space-x-8">
+              {['overview', 'performance', 'security', 'analytics'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                    activeTab === tab
+                      ? 'border-blue-500 text-blue-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
-                  <s, p, a, n classN, a, m, e="t, e, x, t-x, l">{ta, b.i, c, o, n}</s, p, a, n>
-                  <s, p, a, n classN, a, m, e="f, o, n, t-med, i, u, m">{ta, b.la, b, e, l}</s, p, a, n>
-                </but, t, o, n>
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
               ))}
-            </na, v>
-          </di, v>
+            </nav>
+          </div>
 
-          {/* Main Cont, e, n, t */}
-          <di, v classN, a, m, e="f, l, e, x-1">
-            {renderTabCont, e, n, t()}
-          </di, v>
-        </di, v>
-      </di, v>
+          {/* Tab Content */}
+          <div className="bg-white rounded-lg shadow p-6">
+            {activeTab === 'overview' && (
+              <div>
+                <h2 className="text-xl font-semibold mb-4">Overview</h2>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">99.9%</div>
+                    <div className="text-sm text-gray-600">Uptime</div>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-green-600">1.2s</div>
+                    <div className="text-sm text-gray-600">Response Time</div>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-600">1,234</div>
+                    <div className="text-sm text-gray-600">Active Users</div>
+                  </div>
+                  <div className="bg-orange-50 p-4 rounded-lg">
+                    <div className="text-2xl font-bold text-orange-600">0</div>
+                    <div className="text-sm text-gray-600">Issues</div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'performance' && (
+              <div>
+                <h2 className="text-xl font-semibold mb-4">Performance Metrics</h2>
+                <p className="text-gray-600">Performance monitoring data will be displayed here.</p>
+              </div>
+            )}
+
+            {activeTab === 'security' && (
+              <div>
+                <h2 className="text-xl font-semibold mb-4">Security Status</h2>
+                <p className="text-gray-600">Security monitoring data will be displayed here.</p>
+              </div>
+            )}
+
+            {activeTab === 'analytics' && (
+              <div>
+                <h2 className="text-xl font-semibold mb-4">Analytics</h2>
+                <p className="text-gray-600">Analytics data will be displayed here.</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {renderDashboard()}
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-white border-t">
+          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500">Dashboard powered by advanced analytics and monitoring systems.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </>
   );
-});
-
-export default Dashboard;
+}

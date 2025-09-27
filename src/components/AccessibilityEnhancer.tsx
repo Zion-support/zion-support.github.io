@@ -1,76 +1,153 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
-interf, a, c, e AccessibilityEnhancerPr, o, p, s {enableSkipLi, n, k, s?: bool, e, a, n;
-  enableFocusManagem, e, n, t?: bool, e, a, n;
-  enableScreenReaderSupp, o, r, t?: bool, e, a, n;
-  enableHighContrastSupp, o, r, t?: bool, e, a, n;
-  enableReducedMotionSupp, o, r, t?: bool, e, a, n}
+import React, { useState, useEffect, useRef } from 'react';
 
-(({enableSkipLi, n, k, s = t, r, u, e,
-  enableFocusManagem, e, n, t = t, r, u, e,
-  enableScreenReaderSupp, o, r, t = t, r, u, e,
-  enableHighContrastSupp, o, r, t = t, r, u, e,
-  enableReducedMotionSupp, o, r, t = t, r, u, e
-}, re, f) => {const [isHighContr, a, s, t, setIsHighContr, a, s, t] = useState(fa, l, s, e);
-  const [prefersMotionsetPrefersMot, i, o, n] = useState(t, r, u, e);
+interface AccessibilityEnhancerProps {
+  enableSkipLinks?: boolean;
+  enableFocusManagement?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrastSupport?: boolean;
+  enableReducedMotionSupport?: boolean;
+}
 
-
-const AccessibilityEnhan, c, e, r = React.forward, R, e, f<anyAccessibilityEnhancerPr, o, p, s>(({enableSkipLi, n, k, s = trueenableFocusManagem, e, n, t = trueenableScreenReaderSupp, o, r, t = trueenableHighContrastSupp, o, r, t = trueenableReducedMotionSupp, o, r, t = t, r, u, e
-}re, f) => {
-  const [isHighContrastsetIsHighContr, a, s, t] = useState(fa, l, s, e);
-  const [prefersMotionsetPrefersMot, i, o, n] = useState(t, r, u, e);
+const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}, ref) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotion, setPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initializeaccessibility feature, s, i, f (enableSkipLi, n, k, s) {
-      createSkipLink()}
-
-    i, f (enableFocusManagem, e, n, t) {initFocusVisi, b, l, e()}
-
-    i, f (enableScreenReaderSupp, o, r, t) {createLiveReg, i, o, n()}
-
-    // Ch, e, c, k fo, r h, i, g, h contr, a, s, t m, o, d, e
-    i, f (enableHighContrastSupp, o, r, t) {constcheckHighContr, a, s, t = () => {
-        setIsHighContr, a, s, t(isHighContrastM, o, d, e())};
-      
-      checkHighContr, a, s, t();
-      
-      return () => mediaQu, e, r, y.removeEventListe, n, e, r("cha, n, g, e"handleCha, n, g, e)}
-  }[enableFocusManagementenableHighContrastSupp, o, r, t]);
-    // Ch, e, c, k fo, r redu, c, e, d mot, i, o, n prefere, n, c, e
-    i, f (enableReducedMotionSupp, o, r, t) {constcheckReducedMot, i, o, n = () => {
-        setPrefersMot, i, o, n(!prefersReducedMot, i, o, n())};
-      
-      checkReducedMot, i, o, n();
-      
-      return () => mediaQu, e, r, y.removeEventListe, n, e, r('cha, n, g, e"handleCha, n, g, e)}
-  }[enableSkipLinksenableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupp, o, r, t]);
-
-  useEffect(() => {// Ad, d, s, k, i, p link, s, i, f (enableSkipLi, n, k, s) {
-      constmainCont, e, n, t = document.getElementB, y, I, d("m, a, i, n-cont, e, n, t');
-      i, f (mainCont, e, n, t) {
-        const, skipLink = createSkipLink('m, a, i, n-cont, e, n, t'"Skiptomaincont, e, n, t");
-        document.b, o, d, y.insertBef, o, r, e(skipLinkdocument.b, o, d, y.firstCh, i, l, d)}
+    // Initialize accessibility features
+    if (enableSkipLinks) {
+      createSkipLink();
     }
-  }[enableSkipLi, n, k, s]);
-  // Ap, p, l, y accessibility sty, l, e, s
- {// Cre, a, t, e, l, i, v, e region, f, o, r announcement, s, i, f (enableScreenReaderSupp, o, r, t) {
 
-  useEffect(() => {// Cre, a, t, e, l, i, v, e reg, i, o, n, fo, r announcement, s, i, f (enableScreenReaderSupp, o, r, t) {
+    if (enableFocusManagement) {
+      initFocusVisible();
+    }
 
-      createLiveReg, i, o, n()}
-  }[enableScreenReaderSupp, o, r, t]);
+    if (enableScreenReaderSupport) {
+      createLiveRegion();
+    }
 
-  useEffect(() => {// Applyh, i, g, h contraststy, l, e, s
-    i, f (isHighContr, a, s, t) {
-      document.documentElem, e, n, t.classL, i, s, t.ad, d("h, i, g, h-contr, a, s, t')} e, l, s, e {document.documentElem, e, n, t.classL, i, s, t.rem, o, v, e('h, i, g, h-contr, a, s, t')}
-  }[isHighContr, a, s, t]);
+    // Check for high contrast mode
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
+      
+      checkHighContrast();
+      
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const handleChange = () => checkHighContrast();
+      mediaQuery.addEventListener('change', handleChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
 
-  useEffect(() => {// Applyredu, c, e, d motionsty, l, e, s
-    i, f (prefersRedu, c, e, d) {
-      document.documentElem, e, n, t.classL, i, s, t.ad, d('redu, c, e, d-mot, i, o, n')} e, l, s, e {document.documentElem, e, n, t.classL, i, s, t.rem, o, v, e('redu, c, e, d-mot, i, o, n')}
-  }[prefersRedu, c, e, d]);
-  // Annou, n, c, e import, a, n, t chan, g, e, s t, o scr, e, e, n read, e, r, s
-  const announceCha, n, g, e = (mess, a, g, e: str, i, n, g) => {i, f (enableScreenReaderSupp, o, r, t) {
-      announceToScreenRea, d, e, r('Pageloadedsuccessfu, l, l, y')}
-  }, [enableScreenReaderSupp, o, r, t]);
+    // Check for reduced motion preference
+    if (enableReducedMotionSupport) {
+      const checkReducedMotion = () => {
+        setPrefersMotion(!prefersReducedMotion());
+      };
+      
+      checkReducedMotion();
+      
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const handleChange = () => checkReducedMotion();
+      mediaQuery.addEventListener('change', handleChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
+  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
 
-  return n, u, l, l}
+  // Apply accessibility styles
+  useEffect(() => {
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+  }, [isHighContrast]);
+
+  useEffect(() => {
+    if (!prefersMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+  }, [prefersMotion]);
+
+  // Announce important changes to screen readers
+  const announceChange = (message: string) => {
+    if (enableScreenReaderSupport) {
+      announceToScreenReader(message);
+    }
+  };
+
+  useEffect(() => {
+    announceChange('Page loaded successfully');
+  }, [enableScreenReaderSupport]);
+
+  return null;
+});
+
+// Helper functions
+function createSkipLink() {
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+  document.body.insertBefore(skipLink, document.body.firstChild);
+}
+
+function initFocusVisible() {
+  // Add focus-visible polyfill if needed
+  if (typeof window !== 'undefined' && !window.CSS?.supports?.('selector(:focus-visible)')) {
+    // Add basic focus-visible support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+    
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+  }
+}
+
+function createLiveRegion() {
+  let liveRegion = document.getElementById('live-region');
+  if (!liveRegion) {
+    liveRegion = document.createElement('div');
+    liveRegion.id = 'live-region';
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    document.body.appendChild(liveRegion);
+  }
+}
+
+function announceToScreenReader(message: string) {
+  const liveRegion = document.getElementById('live-region');
+  if (liveRegion) {
+    liveRegion.textContent = message;
+  }
+}
+
+function isHighContrastMode(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-contrast: high)').matches;
+}
+
+function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+
+export default AccessibilityEnhancer;
