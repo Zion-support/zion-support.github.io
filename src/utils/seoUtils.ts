@@ -16,7 +16,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 // Generate meta tags

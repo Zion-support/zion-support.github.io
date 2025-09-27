@@ -3,8 +3,18 @@
  * Provides various performance enhancement functions
  */
 
+// Type definitions for performance API
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 // Image optimization utilities
-export const optimizeImage = (src: string, width?: number, height?: number): string => {
+export const optimizeImage = (src: string): string => {
   if (!src) return '';
   
   // For external images you might want to use a service like Cloudinary or Next.js Image
@@ -27,7 +37,7 @@ export const createIntersectionObserver = (
 };
 
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(func: T, wait: number) => {
+export const debounce = <T extends (...args: unknown[]) => unknown>(func: T, wait: number) => {
   let timeout: NodeJS.Timeout;
 
   return ((...args: Parameters<T>) => {
@@ -37,7 +47,7 @@ export const debounce = <T extends (...args: any[]) => any>(func: T, wait: numbe
 };
 
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(func: T, limit: number) => {
+export const throttle = <T extends (...args: unknown[]) => unknown>(func: T, limit: number) => {
   let inThrottle: boolean;
 
   return ((...args: Parameters<T>) => {
@@ -55,7 +65,7 @@ export const getMemoryUsage = (): { used: number; total: number; percentage: num
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
@@ -128,9 +138,11 @@ export const observeWebVitals = (): void => {
       if (entry.entryType === 'largest-contentful-paint') {
         console.log('LCP:', entry.startTime);
       } else if (entry.entryType === 'first-input') {
-        console.log('FID:', (entry as any).processingStart - entry.startTime);
+        const fidEntry = entry as PerformanceEventTiming;
+        console.log('FID:', fidEntry.processingStart - entry.startTime);
       } else if (entry.entryType === 'layout-shift') {
-        console.log('CLS:', (entry as any).value);
+        const clsEntry = entry as LayoutShift;
+        console.log('CLS:', clsEntry.value);
       }
     });
   });

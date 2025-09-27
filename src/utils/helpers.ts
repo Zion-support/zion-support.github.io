@@ -128,7 +128,7 @@ export const objectUtils = {
   deepClone: <T>(obj: T): T => {
     return JSON.parse(JSON.stringify(obj));
   },
-  isEmpty: (obj: any): boolean => {
+  isEmpty: (obj: Record<string, unknown>): boolean => {
     return Object.keys(obj).length === 0;
   },
   pick: <T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
@@ -163,7 +163,7 @@ export const validationUtils = {
 };
 
 // Debounce utility
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -175,7 +175,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle utility
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {

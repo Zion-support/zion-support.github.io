@@ -11,7 +11,7 @@ interface SEOOptimizerProps {
   ogImage?: string
   ogType?: string
   twitterCard?: string
-  structuredData?: any
+  structuredData?: Record<string, unknown>
   noindex?: boolean
   nofollow?: boolean
 }
@@ -183,7 +183,7 @@ export default function SEOOptimizer({
     // Execute all updates
     updates.forEach(update => update())
 
-  }, [seoData, structuredData, noindex, nofollow])
+  }, [seoData, structuredData, noindex, nofollow, url])
 
   return null
 }
