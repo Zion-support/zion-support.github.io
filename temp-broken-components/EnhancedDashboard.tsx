@@ -1,21 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell,
-  Area,
-  AreaChart
-} from 'recharts';
+import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
 
 interface DashboardWidget {
   id: string;
@@ -27,11 +12,11 @@ interface DashboardWidget {
 }
 
 interface DashboardProps {
-  widgets?: DashboardWidget[];
-  enableDragDrop?: boolean;
-  enableResize?: boolean;
-  enableFullscreen?: boolean;
-  onWidgetUpdate?: (widgets: DashboardWidget[]) => void;
+  widgets: DashboardWidget[];
+  onWidgetUpdate?: (widget: DashboardWidget) => void;
+  onWidgetAdd?: (widget: Omit<DashboardWidget, 'id'>) => void;
+  onWidgetRemove?: (widgetId: string) => void;
+  className?: string;
 }
 
 const sampleData = {
@@ -328,4 +313,6 @@ export default function EnhancedDashboard({
       </AnimatePresence>
     </div>
   );
-}
+};
+
+export default EnhancedDashboard;

@@ -1,58 +1,44 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, CheckCircle, XCircle, Info, Activity, Server, Database, Globe } from 'lucide-react';
-
-interface SystemAlert {
-  id: string;
-  type: 'error' | 'warning' | 'info' | 'success';
-  title: string;
-  message: string;
-  timestamp: Date;
-  source: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  resolved: boolean;
-  actions?: Array<{
-    label: string;
-    actio, n: () => void;
-    varian, t: 'primary' | 'secondary' | 'danger';
-  }>;
-}
+import { Activity, Cpu, HardDrive, Wifi, Battery, Monitor } from 'lucide-react';
 
 interface SystemMetrics {
-  cpu: number;
-  memory: number;
-  disk: number;
-  network: number;
+  cpu: {
+    usage: number;
+    cores: number;
+    temperature: number;
+  };
+  memory: {
+    used: number;
+    total: number;
+    percentage: number;
+  };
+  disk: {
+    used: number;
+    total: number;
+    percentage: number;
+  };
+  network: {
+    upload: number;
+    download: number;
+    latency: number;
+  };
   uptime: number;
-  responseTime: number;
-  errorRat, e: number;
-  throughpu, t: number;
+  timestamp: Date;
 }
 
 interface SystemMonitorProps {
-  onAlert?: (alert: SystemAlert) => void;
-  onMetricsUpdate?: (metric, s: SystemMetrics) => void;
-  enableRealTime?: boolean;
+  onMetricsUpdate?: (metrics: SystemMetrics) => void;
   refreshInterval?: number;
+  className?: string;
 }
 
 export const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  onAlert,
   onMetricsUpdate,
-  enableRealTime = true,
-  refreshInterval = 5000
+  refreshInterval = 5000,
+  className = ''
 }) => {
-  const [alerts, setAlerts] = useState<SystemAlert[]>([]);
-  const [metrics, setMetrics] = useState<SystemMetrics>({
-    cpu: 0,
-    memory: 0,
-    disk: 0,
-    network: 0,
-    uptime: 0,
-    responseTime: 0,
-    errorRate: 0,
-    throughput: 0
-  });
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   // Generate sample metrics
@@ -173,9 +159,33 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
     }, refreshInterval);
 
     setIsMonitoring(true);
-    return () => {
-      clearInterval(interval);
-      setIsMonitoring(false);
+    
+    // Simulate metrics collection
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    const mockMetrics: SystemMetrics = {
+      cpu: {
+        usage: 45,
+        cores: 8,
+        temperature: 65
+      },
+      memory: {
+        used: 8.5,
+        total: 16,
+        percentage: 53
+      },
+      disk: {
+        used: 250,
+        total: 500,
+        percentage: 50
+      },
+      network: {
+        upload: 12.5,
+        download: 45.2,
+        latency: 25
+      },
+      uptime: 99.9,
+      timestamp: new Date()
     };
   }, [enableRealTime, refreshInterval, generateMetrics, onMetricsUpdate, addAlert, generateAlert]);
 
@@ -186,32 +196,13 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
       case 'info': return <Info className="h-5 w-5text-blue-500" />;
       case 'success': return <CheckCircle className="h-5 w-5text-green-500" />;
     }
-  };
+  }, [onMetricsUpdate]);
 
-  const getAlertColor = (type: SystemAlert['type']) => {
-    switch (type) {
-      case 'error': return 'border-red-200 bg-red-50';
-      case 'warning': return 'border-yellow-200 bg-yellow-50';
-      case 'info': return 'border-blue-200 bg-blue-50';
-      case 'success': return 'border-green-200 bg-green-50';
-    }
-  };
-
-  const getSeverityColor = (severity: SystemAlert['severity']) => {
-    switch (severity) {
-      case 'low': return 'text-gray-600';
-      case 'medium': return 'text-yellow-600';
-      case 'high': return 'text-orange-600';
-      case 'critical': return 'text-red-600';
-    }
-  };
-
-  const formatUptime = (uptime: number) => {
-    const days = Math.floor(uptime / (24 * 60 * 60 * 1000));
-    const hours = Math.floor((uptime % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-    const minutes = Math.floor((uptime % (60 * 60 * 1000)) / (60 * 1000));
-    return `${days}d ${hours}h ${minutes}m`;
-  };
+  useEffect(() => {
+    collectSystemMetrics();
+    const interval = setInterval(collectSystemMetrics, refreshInterval);
+    return () => clearInterval(interval);
+  }, [collectSystemMetrics, refreshInterval]);
 
   return (
     <div className="space-y-6">
@@ -240,6 +231,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
               />
             </div>
           </div>
+          <p className="text-gray-600 dark:text-gray-400">CPU Usage</p>
         </motion.div>
 
         <motion.div
@@ -266,6 +258,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
               />
             </div>
           </div>
+          <p className="text-gray-600 dark:text-gray-400">Memory Usage</p>
         </motion.div>
 
         <motion.div
@@ -292,6 +285,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
               />
             </div>
           </div>
+          <p className="text-gray-600 dark:text-gray-400">Disk Usage</p>
         </motion.div>
 
         <motion.div
@@ -307,6 +301,10 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({
             </div>
             <Globe className="h-8 w-8text-indigo-500" />
           </div>
+          <div className="text-3xl font-bold text-purple-600 mb-2">
+            {metrics?.uptime || 0}%
+          </div>
+          <p className="text-gray-600 dark:text-gray-400">System Uptime</p>
         </motion.div>
       </div>
 

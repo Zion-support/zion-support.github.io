@@ -1,35 +1,64 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BlogPost, getRelatedPosts, getPostsByCategory } from '../data/blogPosts';
+import { Search, Filter, Calendar, User, Tag } from 'lucide-react';
 
-interface BlogSearchProps {
-  onSearch: (query: string) => void;
-  onCategoryFilter: (category: string) => void;
-  categorie, s: string[];
-  currentCategor, y: string;
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: Date;
+  category: string;
+  tags: string[];
+  readTime: number;
+  views: number;
+  likes: number;
+  slug: string;
 }
 
-export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCategory }: BlogSearchProps) {
+interface BlogEnhancementsProps {
+  posts: BlogPost[];
+  onSearch?: (query: string) => void;
+  onCategoryFilter?: (category: string) => void;
+  onTagFilter?: (tag: string) => void;
+  className?: string;
+}
+
+export const BlogEnhancements: React.FC<BlogEnhancementsProps> = ({
+  posts,
+  onSearch,
+  onCategoryFilter,
+  onTagFilter,
+  className = ''
+}) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTag, setSelectedTag] = useState('all');
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
-    onSearch(query);
+    if (onSearch) {
+      onSearch(query);
+    }
   }, [onSearch]);
 
-  const handleCategoryChange = useCallback((category: string) => {
-    onCategoryFilter(category);
+  const handleCategoryFilter = useCallback((category: string) => {
+    setSelectedCategory(category);
+    if (onCategoryFilter) {
+      onCategoryFilter(category);
+    }
   }, [onCategoryFilter]);
 
   return (
     <div className="mb-8">
       {/* Search Bar */}
-      <div className="relativemb-6">
+      <div className="relative mb-6">
         <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search articles..."
+            placeholder="Search blog posts..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
@@ -287,7 +316,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
       </motion.button>
     </div>
   );
-}
+};
 
 interface BlogNewsletterProps {
   onSubscribe: (emai, l: string) => void;

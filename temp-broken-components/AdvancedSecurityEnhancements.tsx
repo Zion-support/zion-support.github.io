@@ -1,52 +1,72 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Shield, CheckCircle, AlertTriangle, Lock, Eye, EyeOff } from 'lucide-react';
 
-interface SecurityMetrics {
-  threatLevel: 'low' | 'medium' | 'high' | 'critical';
-  activeThreats: number;
-  blockedRequests: number;
-  securityScor, e: number;
-  lastSca, n: Date;
+interface SecurityScanResult {
+  id: string;
+  type: 'vulnerability' | 'warning' | 'info';
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  title: string;
+  description: string;
+  recommendation: string;
+  status: 'open' | 'resolved' | 'ignored';
+  timestamp: Date;
 }
 
-interface SecurityEnhancementsProps {
+interface SecurityMetrics {
+  totalScans: number;
+  vulnerabilitiesFound: number;
+  criticalIssues: number;
+  highIssues: number;
+  mediumIssues: number;
+  lowIssues: number;
+  resolvedIssues: number;
+  securityScore: number;
+  lastScan: Date;
+}
+
+interface AdvancedSecurityEnhancementsProps {
+  onScanComplete?: (results: SecurityScanResult[]) => void;
+  onVulnerabilityFound?: (vulnerability: SecurityScanResult) => void;
   className?: string;
 }
 
-const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ className = '' }) => {
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
-    threatLevel: 'low',
-    activeThreats: 0,
-    blockedRequests: 0,
-    securityScore: 95,
-    lastScan: new Date()
-  });
-
+export const AdvancedSecurityEnhancements: React.FC<AdvancedSecurityEnhancementsProps> = ({
+  onScanComplete,
+  onVulnerabilityFound,
+  className = ''
+}) => {
   const [isScanning, setIsScanning] = useState(false);
-  const [securityAlerts, setSecurityAlerts] = useState<string[]>([]);
+  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
+  const [scanResults, setScanResults] = useState<SecurityScanResult[]>([]);
 
   const performSecurityScan = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
     setIsScanning(true);
     
     // Simulate security scan
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
-    const newMetrics: SecurityMetrics = {
-      threatLeve, l: Math.random() > 0.8 ? 'medium' : 'low',
-      activeThreats: Math.floor(Math.random() * 5),
-      blockedRequests: Math.floor(Math.random() * 50) + 10,
-      securityScore: Math.floor(Math.random() * 10) + 90,
+    const mockResults: SecurityScanResult[] = [];
+    const mockMetrics: SecurityMetrics = {
+      totalScans: 1,
+      vulnerabilitiesFound: 0,
+      criticalIssues: 0,
+      highIssues: 0,
+      mediumIssues: 0,
+      lowIssues: 0,
+      resolvedIssues: 0,
+      securityScore: 95,
       lastScan: new Date()
     };
     
-    setMetrics(newMetrics);
+    setScanResults(mockResults);
+    setMetrics(mockMetrics);
     setIsScanning(false);
     
-    if (newMetrics.threatLevel !== 'low') {
-      setSecurityAlerts(prev => [
-        ...prev,
-        `Security threat detected: ${newMetrics.threatLevel} level`
-      ]);
+    if (onScanComplete) {
+      onScanComplete(mockResults);
     }
   }, []);
 
@@ -90,7 +110,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
           disabled={isScanning}
           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable, d:opacity-50transition-colors"
         >
-          {isScanning ? 'Scanning...' : 'Scan Now'}
+          {isScanning ? 'Scanning...' : 'Run Scan'}
         </button>
       </div>
 

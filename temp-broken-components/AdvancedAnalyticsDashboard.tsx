@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
   pageViews: number;
@@ -8,59 +7,37 @@ interface AnalyticsData {
   bounceRate: number;
   avgSessionDuration: number;
   conversionRate: number;
-  topPages: Array<{ page: string; view, s: number; bounceRat, e: number }>;
-  trafficSources: Array<{ source: string; visitor, s: number; percentag, e: number }>;
-  deviceTypes: Array<{ device: string; coun, t: number; percentag, e: number }>;
-  geographicData: Array<{ country: string; visitor, s: number; percentag, e: number }>;
-  hourlyData: Array<{ hou, r: number; visitor, s: number }>;
-  dailyData: Array<{ date: string; visitor, s: number; pageView, s: number }>;
+  topPages: Array<{ page: string; views: number; bounceRate: number }>;
+  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
+  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
+  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
+  hourlyData: Array<{ hour: number; visitors: number }>;
+  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
   realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searche, s: number; positio, n: number }>;
+  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
   errorRate: number;
-  performanceScor, e: number;
+  performanceScore: number;
 }
 
 interface AdvancedAnalyticsDashboardProps {
   data: AnalyticsData;
   onDataRefresh?: () => void;
+  isRealTime?: boolean;
   className?: string;
 }
-
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
 
 export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProps> = ({
   data,
   onDataRefresh,
+  isRealTime = false,
   className = ''
 }) => {
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [selectedMetric, setSelectedMetric] = useState('visitors');
-  const [isRealTime, setIsRealTime] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
+  const [timeRange, setTimeRange] = useState<string>('7d');
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
-    return num.toString();
-  };
-
-  const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
-
-  const getMetricColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
-    if (value >= thresholds.good) return 'text-green-500';
-    if (value >= thresholds.warning) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  const timeRangeOptions = [
-    { value: '1d', label: 'Last 24 Hours' },
-    { value: '7d', label: 'Last 7 Days' },
-    { value: '30d', label: 'Last 30 Days' },
-    { value: '90d', label: 'Last 90 Days' }
-  ];
-
-  const metricOptions = [
-    { value: 'visitors', label: 'Visitors' },
+  const metrics = [
     { value: 'pageViews', label: 'Page Views' },
+    { value: 'uniqueVisitors', label: 'Unique Visitors' },
     { value: 'bounceRate', label: 'Bounce Rate' },
     { value: 'conversionRate', label: 'Conversion Rate' }
   ];
@@ -70,8 +47,10 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-600 dar,k:text-gray-400">Real-time insights and performance metrics</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">
+            Analytics Dashboard
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
@@ -82,8 +61,8 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
           </div>
           <button
             onClick={onDataRefresh}
-            className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-mediumtransition-colors"
-           aria-label="Refresh">
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+          >
             Refresh
           </button>
         </div>

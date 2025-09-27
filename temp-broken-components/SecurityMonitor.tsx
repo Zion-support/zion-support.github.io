@@ -1,158 +1,81 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  Lock, 
-  Eye, 
-  AlertCircle,
-  Activity,
-  Clock,
-  Database,
-  Globe
-} from 'lucide-react';
+import { Shield, CheckCircle, AlertTriangle, Lock, Eye, EyeOff } from 'lucide-react';
 
-interface SecurityEvent {
+interface SecurityScanResult {
   id: string;
-  type: 'threat' | 'vulnerability' | 'breach' | 'suspicious' | 'normal';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: 'vulnerability' | 'warning' | 'info';
+  severity: 'critical' | 'high' | 'medium' | 'low';
   title: string;
   description: string;
+  recommendation: string;
+  status: 'open' | 'resolved' | 'ignored';
   timestamp: Date;
-  source: string;
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystem, s: string[];
-  recommendedAction, s: string[];
 }
 
 interface SecurityMetrics {
-  totalThreats: number;
-  activeThreats: number;
-  resolvedThreats: number;
-  vulnerabilityScore: number;
+  totalScans: number;
+  vulnerabilitiesFound: number;
+  criticalIssues: number;
+  highIssues: number;
+  mediumIssues: number;
+  lowIssues: number;
+  resolvedIssues: number;
   securityScore: number;
   lastScan: Date;
-  protectedAsset, s: number;
-  blockedRequest, s: number;
 }
 
 interface SecurityMonitorProps {
-  refreshInterval?: number;
-  enableAlerts?: boolean;
-  onSecurityAlert?: (alert: SecurityEvent) => void;
+  onScanComplete?: (results: SecurityScanResult[]) => void;
+  onVulnerabilityFound?: (vulnerability: SecurityScanResult) => void;
+  className?: string;
 }
 
 export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
-  refreshInterval = 10000,
-  enableAlerts = true,
-  onSecurityAlert
+  onScanComplete,
+  onVulnerabilityFound,
+  className = ''
 }) => {
-  const [events, setEvents] = useState<SecurityEvent[]>([]);
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
-    totalThreats: 0,
-    activeThreats: 0,
-    resolvedThreats: 0,
-    vulnerabilityScore: 0,
-    securityScore: 0,
-    lastScan: new Date(),
-    protectedAssets: 0,
-    blockedRequests: 0
-  });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isScanning, setIsScanning] = useState(false);
+  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
+  const [scanResults, setScanResults] = useState<SecurityScanResult[]>([]);
 
-  const generateMockEvents = useCallback((): SecurityEvent[] => {
-    const eventTypes: SecurityEvent['type'][] = ['threat', 'vulnerability', 'breach', 'suspicious', 'normal'];
-    const severities: SecurityEvent['severity'][] = ['low', 'medium', 'high', 'critical'];
-    const statuses: SecurityEvent['status'][] = ['active', 'resolved', 'investigating'];
+  const performSecurityScan = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
+    setIsScanning(true);
     
-    return Array.from({ length: Math.floor(Math.random() * 10) + 5 }, (_, i) => ({
-      id: `event-${i}`,
-      type: eventTypes[Math.floor(Math.random() * eventTypes.length)],
-      severity: severities[Math.floor(Math.random() * severities.length)],
-      title: `Security Event ${i + 1}`,
-      description: `Description of security event ${i + 1}`,
-      timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
-      source: `Source ${i + 1}`,
-      status: statuses[Math.floor(Math.random() * statuses.length)],
-      affectedSystems: [`System ${i + 1}`, `System ${i + 2}`],
-      recommendedActions: [`Action ${i + 1}`, `Action ${i + 2}`]
-    }));
-  }, []);
-
-  const generateMockMetrics = useCallback((): SecurityMetrics => {
-    return {
-      totalThreats: Math.floor(Math.random() * 100) + 50,
-      activeThreats: Math.floor(Math.random() * 20) + 5,
-      resolvedThreats: Math.floor(Math.random() * 80) + 20,
-      vulnerabilityScore: Math.random() * 100,
-      securityScore: Math.random() * 100,
-      lastScan: new Date(),
-      protectedAssets: Math.floor(Math.random() * 1000) + 500,
-      blockedRequests: Math.floor(Math.random() * 10000) + 1000
+    // Simulate security scan
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    
+    const mockResults: SecurityScanResult[] = [];
+    const mockMetrics: SecurityMetrics = {
+      totalScans: 1,
+      vulnerabilitiesFound: 0,
+      criticalIssues: 0,
+      highIssues: 0,
+      mediumIssues: 0,
+      lowIssues: 0,
+      resolvedIssues: 0,
+      securityScore: 95,
+      lastScan: new Date()
     };
-  }, []);
-
-  const updateData = useCallback(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      const newEvents = generateMockEvents();
-      const newMetrics = generateMockMetrics();
-      
-      setEvents(newEvents);
-      setMetrics(newMetrics);
-      setIsLoading(false);
-
-      // Check for critical security alerts
-      if (enableAlerts) {
-        const criticalEvents = newEvents.filter(event => 
-          event.severity === 'critical' && event.status === 'active'
-        );
-        criticalEvents.forEach(event => {
-          onSecurityAlert?.(event);
-        });
-      }
-    }, 800);
-  }, [generateMockEvents, generateMockMetrics, enableAlerts, onSecurityAlert]);
+    
+    setScanResults(mockResults);
+    setMetrics(mockMetrics);
+    setIsScanning(false);
+    
+    if (onScanComplete) {
+      onScanComplete(mockResults);
+    }
+  }, [onScanComplete]);
 
   useEffect(() => {
-    updateData();
-    const interval = setInterval(updateData, refreshInterval);
-    return () => clearInterval(interval);
-  }, [updateData, refreshInterval]);
-
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100 border-red-200';
-      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-      case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
-      default: return 'text-gray-600 bg-gray-100 border-gray-200';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'threat': return <AlertTriangle className="w-4h-4" />;
-      case 'vulnerability': return <Shield className="w-4h-4" />;
-      case 'breach': return <AlertCircle className="w-4h-4" />;
-      case 'suspicious': return <Eye className="w-4h-4" />;
-      case 'normal': return <CheckCircle className="w-4h-4" />;
-      default: return <Activity className="w-4h-4" />;
-    }
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'text-red-600 bg-red-100';
-      case 'resolved': return 'text-green-600 bg-green-100';
-      case 'investigating': return 'text-yellow-600 bg-yellow-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
-  };
+    performSecurityScan();
+  }, [performSecurityScan]);
 
   return (
-    <div className="bg-white rounded-lg shadow-lgp-6">
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900 flexitems-center">
           <Shield className="w-6 h-6 mr-2text-red-600" />
@@ -162,6 +85,13 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
           <Clock className="w-4 h-4mr-1" />
           Last scan: {metrics.lastScan.toLocaleTimeString()}
         </div>
+        <button
+          onClick={performSecurityScan}
+          disabled={isScanning}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+        >
+          {isScanning ? 'Scanning...' : 'Run Scan'}
+        </button>
       </div>
 
       {/* Security Metrics */}

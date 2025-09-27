@@ -1,41 +1,54 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstPain, t: number;
-  firstContentfulPain, t: number;
-  largestContentfulPaint?: number;
-  firstInputDelay?: number;
-  cumulativeLayoutShift?: number;
-  timeToInteractive?: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+  fmp: number;
+  tbt: number;
+  si: number;
+  overallScore: number;
+  timestamp: Date;
 }
 
 interface PerformanceTrackerProps {
   onMetricsCollected?: (metrics: PerformanceMetrics) => void;
-  enableConsoleLogging?: boolean;
-  enableAnalytics?: boolean;
+  showDashboard?: boolean;
+  className?: string;
 }
 
-export default function PerformanceTracker({
+export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   onMetricsCollected,
-  enableConsoleLogging = false,
-  enableAnalytics = true
-}: PerformanceTrackerProps): null {
-  const metricsCollected = useRef(false);
+  showDashboard = true,
+  className = ''
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isTracking, setIsTracking] = useState(false);
 
-  const collectMetrics = useCallback(() => {
-    if (metricsCollected.current || typeof window === 'undefined') return;
+  const collectMetrics = useCallback(async () => {
+    if (typeof window === 'undefined') return;
 
+    setIsTracking(true);
+    
     try {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      // Simulate metrics collection
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const metrics: PerformanceMetrics = {
-        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+      const mockMetrics: PerformanceMetrics = {
+        lcp: 2.5,
+        fid: 50,
+        cls: 0.1,
+        fcp: 1.2,
+        ttfb: 200,
+        fmp: 1.5,
+        tbt: 100,
+        si: 2.0,
+        overallScore: 85,
+        timestamp: new Date()
       };
 
       // Collect Web Vitals if available
@@ -147,39 +160,19 @@ export default function PerformanceTracker({
         }, 1000);
       }
     } catch (error) {
-      console.warn('Performance tracking error:', error);
+      console.error('Error collecting performance metrics:', error);
+      setIsTracking(false);
     }
-  }, [onMetricsCollected, enableConsoleLogging, enableAnalytics]);
-
-  const sendWebVital = (name: string, value: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', name, {
-        event_category: 'Web Vitals',
-        value: Math.round(name === 'CLS' ? value * 1000 : value),
-        non_interaction: true
-      });
-    }
-  };
+  }, [onMetricsCollected]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Wait for page to be fully loaded
-    if (document.readyState === 'complete') {
-      collectMetrics();
-    } else {
-      window.addEventListener('load', collectMetrics);
-      return () => window.removeEventListener('load', collectMetrics);
-    }
+    collectMetrics();
   }, [collectMetrics]);
 
-  return null;
-}
+  const formatTime = (ms: number) => `${ms.toFixed(0)}ms`;
+  const formatScore = (value: number) => value.toFixed(2);
 
-// Hook for using performance metrics in components
-export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
-  const [isLoading, setIsLoading] = React.useState(true);
+  if (!showDashboard || !metrics) return null;
 
   React.useEffect(() => {
     const handleMetrics = (collectedMetrics: PerformanceMetrics) => {
@@ -315,39 +308,38 @@ export function useRealTimePerformance() {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
         
-        const currentMetrics: PerformanceMetrics = {
-          loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-          firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-        };
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-600">FID</span>
+            <Zap className="w-4 h-4 text-green-500" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {formatTime(metrics.fid)}
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-600">CLS</span>
+            <TrendingUp className="w-4 h-4 text-yellow-500" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {formatScore(metrics.cls)}
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-600">Overall Score</span>
+            <Clock className="w-4 h-4 text-purple-500" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {metrics.overallScore}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
-        setMetrics(currentMetrics);
-      } catch (error) {
-        console.warn('Real-time performance monitoring error:', error);
-      }
-    };
-
-    // Initial metrics
-    updateMetrics();
-
-    // Monitor for changes
-    const observer = new PerformanceObserver((list) => {
-      updateMetrics();
-    });
-
-    try {
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      setIsMonitoring(true);
-    } catch (e) {
-      console.warn('Performance observer not supported');
-    }
-
-    return () => {
-      observer.disconnect();
-      setIsMonitoring(false);
-    };
-  }, []);
-
-  return { metrics, isMonitoring };
-}
+export default PerformanceTracker;

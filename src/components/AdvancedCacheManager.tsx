@@ -125,47 +125,47 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Miss Rate</span>
               <AlertTriangle className="w-4 h-4text-yellow-500" />
             </div>
-            <div className="text-2xl font-boldtext-red-500">
+            <div className="text-2xl font-bold text-red-500">
               {stats.missRate.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Total Requests</span>
               <HardDrive className="w-4 h-4text-blue-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.totalRequests.toLocaleString()}
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Cache Size</span>
               <HardDrive className="w-4 h-4text-purple-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.cacheSize} MB
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Memory Usage</span>
               <HardDrive className="w-4 h-4text-indigo-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.memoryUsage.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Last Cleared</span>
               <RefreshCw className="w-4 h-4text-gray-500" />

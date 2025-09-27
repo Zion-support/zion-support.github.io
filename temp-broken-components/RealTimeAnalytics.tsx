@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, Globe } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BarChart3, TrendingUp, Users, Eye, MousePointer } from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -12,19 +13,36 @@ interface AnalyticsData {
 }
 
 interface RealTimeAnalyticsProps {
+  data: AnalyticsData;
+  onDataRefresh?: () => void;
+  isLive?: boolean;
   className?: string;
 }
 
-const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' }) => {
-  const [analytics, setAnalytics] = useState<AnalyticsData>({
+export const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({
+  data = {
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
     avgSessionDuration: 0,
+    conversionRate: 0,
     topPages: [],
     trafficSources: [],
-    realTimeUsers: 0
-  });
+    deviceTypes: [],
+    geographicData: [],
+    hourlyData: [],
+    dailyData: [],
+    realTimeVisitors: 0,
+    topKeywords: [],
+    errorRate: 0,
+    performanceScore: 0
+  },
+  onDataRefresh,
+  isLive = false,
+  className = ''
+}) => {
+  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
+  const [timeRange, setTimeRange] = useState<string>('7d');
 
   const [isLive, setIsLive] = useState(true);
 
@@ -87,6 +105,12 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
               className="ml-2 px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
             </button>
           </div>
+          <button
+            onClick={onDataRefresh}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+          >
+            Refresh
+          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -126,6 +150,19 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
             <div className="text-sm opacity-90">+15% from yesterday</div>
           </div>
         </div>
+        <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4 text-white">
+          <div className="text-sm font-medium opacity-90">Unique Visitors</div>
+          <div className="text-2xl font-bold">{data.uniqueVisitors.toLocaleString()}</div>
+        </div>
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg p-4 text-white">
+          <div className="text-sm font-medium opacity-90">Bounce Rate</div>
+          <div className="text-2xl font-bold">{data.bounceRate.toFixed(1)}%</div>
+        </div>
+        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4 text-white">
+          <div className="text-sm font-medium opacity-90">Conversion Rate</div>
+          <div className="text-2xl font-bold">{data.conversionRate.toFixed(1)}%</div>
+        </div>
+      </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
           <div className="bg-gray-50 rounded-lgp-4">
@@ -146,6 +183,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
                     </div>
                     <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>
                   </div>
+                  <span className="text-sm font-medium text-gray-800">{page.views.toLocaleString()}</span>
                 </div>
               ))}
             </div>

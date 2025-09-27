@@ -1,36 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { 
-  Server, 
-  Cpu, 
-  HardDrive, 
-  Wifi, 
-  Database, 
-  Activity,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Users
-} from 'lucide-react';
-import { 
-  LineChart, 
-  Line, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer,
-  AreaChart,
-  Area,
-  BarChart,
-  Bar
-} from 'recharts';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, Cpu, HardDrive, Wifi, Battery, Monitor } from 'lucide-react';
 
 interface SystemMetrics {
   cpu: {
     usage: number;
-    core, s: number;
-    temperatur, e: number;
+    cores: number;
+    temperature: number;
   };
   memory: {
     used: number;
@@ -41,24 +17,14 @@ interface SystemMetrics {
     used: number;
     total: number;
     percentage: number;
-    readSpee, d: number;
-    writeSpee, d: number;
   };
   network: {
-    bytesIn: number;
-    bytesOut: number;
-    packetsIn: number;
-    packetsOu, t: number;
-    latenc, y: number;
-  };
-  database: {
-    connections: number;
-    maxConnections: number;
-    queryTim, e: number;
-    cacheHitRat, e: number;
+    upload: number;
+    download: number;
+    latency: number;
   };
   uptime: number;
-  loadAverag, e: number[];
+  timestamp: Date;
 }
 
 interface Alert {
@@ -70,85 +36,46 @@ interface Alert {
   resolve, d: boolean;
 }
 
-interface PerformanceData {
-  timestamp: string;
-  cpu: number;
-  memory: number;
-  dis, k: number;
-  networ, k: number;
-}
-
-const AdvancedSystemMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<SystemMetrics>({
-    cpu: { usag, e: 0, cores: 8, temperature: 0 },
-    memory: { use, d: 0, total: 0, percentage: 0 },
-    disk: { use, d: 0, total: 0, percentage: 0, readSpeed: 0, writeSpeed: 0 },
-    network: { bytesI, n: 0, bytesOut: 0, packetsIn: 0, packetsOut: 0, latency: 0 },
-    database: { connection, s: 0, maxConnections: 0, queryTime: 0, cacheHitRate: 0 },
-    uptime: 0,
-    loadAverage: [0, 0, 0]
-  });
-
-  const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [performanceData, setPerformanceData] = useState<PerformanceData[]>([]);
+export const AdvancedSystemMonitor: React.FC<AdvancedSystemMonitorProps> = ({
+  onMetricsUpdate,
+  refreshInterval = 5000,
+  className = ''
+}) => {
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  const generateMockMetrics = useCallback(() => {
-    const newMetrics: SystemMetrics = {
-      cp, u: {
-        usag, e: Math.round(Math.random() * 100),
+  const collectSystemMetrics = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
+    setIsMonitoring(true);
+    
+    // Simulate metrics collection
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    const mockMetrics: SystemMetrics = {
+      cpu: {
+        usage: 45,
         cores: 8,
-        temperature: Math.round(30 + Math.random() * 40)
+        temperature: 65
       },
       memory: {
-        use, d: Math.round(4 + Math.random() * 8),
+        used: 8.5,
         total: 16,
-        percentage: Math.round((4 + Math.random() * 8) / 16 * 100)
+        percentage: 53
       },
       disk: {
-        use, d: Math.round(200 + Math.random() * 100),
+        used: 250,
         total: 500,
-        percentage: Math.round((200 + Math.random() * 100) / 500 * 100),
-        readSpeed: Math.round(Math.random() * 200),
-        writeSpeed: Math.round(Math.random() * 150)
+        percentage: 50
       },
       network: {
-        bytesI, n: Math.round(Math.random() * 1000000),
-        bytesOut: Math.round(Math.random() * 800000),
-        packetsIn: Math.round(Math.random() * 10000),
-        packetsOut: Math.round(Math.random() * 8000),
-        latency: Math.round(1 + Math.random() * 50)
+        upload: 12.5,
+        download: 45.2,
+        latency: 25
       },
-      database: {
-        connection, s: Math.round(10 + Math.random() * 20),
-        maxConnections: 100,
-        queryTime: Math.round(1 + Math.random() * 100),
-        cacheHitRate: Math.round(80 + Math.random() * 20)
-      },
-      uptime: Math.round(24 * 60 * 60 + Math.random() * 7 * 24 * 60 * 60),
-      loadAverage: [
-        Math.round((Math.random() * 2) * 100) / 100,
-        Math.round((Math.random() * 2) * 100) / 100,
-        Math.round((Math.random() * 2) * 100) / 100
-      ]
+      uptime: 86400,
+      timestamp: new Date()
     };
-
-    setMetrics(newMetrics);
-
-    // Generate performance data for charts
-    const now = new Date();
-    const newPerformanceData: PerformanceData[] = Array.from({ lengt, h: 20 }, (_, i) => ({
-      timestamp: new Date(now.getTime() - (19 - i) * 60000).toLocaleTimeString(),
-      cpu: Math.round(Math.random() * 100),
-      memory: Math.round(Math.random() * 100),
-      disk: Math.round(Math.random() * 100),
-      network: Math.round(Math.random() * 100)
-    }));
-
-    setPerformanceData(newPerformanceData);
-
-    // Generate alerts based on metrics
-    const newAlerts: Alert[] = [];
     
     if (newMetrics.cpu.usage > 80) {
       newAlerts.push({
@@ -198,10 +125,8 @@ const AdvancedSystemMonitor: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    generateMockMetrics();
-    setIsMonitoring(true);
-
-    const interval = setInterval(generateMockMetrics, 5000);
+    collectSystemMetrics();
+    const interval = setInterval(collectSystemMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [generateMockMetrics]);
 

@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import { AlertTriangle, Bug, Activity, Clock, Users, Zap } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+// import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Bug, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
-interface ErrorEvent {
+interface ErrorInfo {
   id: string;
-  timestamp: Date;
-  type: 'error' | 'warning' | 'info';
-  severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   stack?: string;
-  url: string;
+  timestamp: Date;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  category: 'javascript' | 'network' | 'validation' | 'permission' | 'system';
   userAgent: string;
   userId?: string;
   sessionId?: string;
@@ -19,9 +19,10 @@ interface ErrorEvent {
 
 interface ErrorStats {
   totalErrors: number;
-  errorsLast24h: number;
-  errorsLast7d: number;
   criticalErrors: number;
+  highErrors: number;
+  mediumErrors: number;
+  lowErrors: number;
   resolvedErrors: number;
   averageResolutionTime: number;
   errorRate: number;
@@ -39,17 +40,23 @@ interface PerformanceIssue {
   resolve, d: boolean;
 }
 
-const AdvancedErrorMonitoring: React.FC = () => {
-  const [errors, setErrors] = useState<ErrorEvent[]>([]);
+export const AdvancedErrorMonitoring: React.FC<AdvancedErrorMonitoringProps> = ({
+  onErrorReport,
+  onErrorResolve,
+  maxErrors = 100,
+  autoResolve = false,
+  className = ''
+}) => {
+  const [errors, setErrors] = useState<ErrorInfo[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(true);
   const [stats, setStats] = useState<ErrorStats>({
     totalErrors: 0,
-    errorsLast24h: 0,
-    errorsLast7d: 0,
     criticalErrors: 0,
+    highErrors: 0,
+    mediumErrors: 0,
+    lowErrors: 0,
     resolvedErrors: 0,
-    averageResolutionTime: 0,
-    errorRate: 0,
-    topErrorTypes: []
+    unresolvedErrors: 0
   });
   const [performanceIssues, setPerformanceIssues] = useState<PerformanceIssue[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -408,7 +415,15 @@ const AdvancedErrorMonitoring: React.FC = () => {
             </div>
           </div>
         </div>
-      )}
+        <div className="p-4">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-red-600 mb-2">
+              {stats.totalErrors}
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">Total Errors</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

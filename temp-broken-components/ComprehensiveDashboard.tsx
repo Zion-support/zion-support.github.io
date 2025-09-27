@@ -4,23 +4,99 @@ import React, { useState } from 'react';
 // import SEOAnalyzer from './SEOAnalyzer';
 import { useWebVitals } from '../hooks/useWebVitals';
 
-const ComprehensiveDashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'performance' | 'accessibility' | 'seo'>('performance');
-  const { vitals } = useWebVitals();
-
-  const tabs = [
-    { id: 'performance', label: 'Performance', icon: '⚡' },
-    { id: 'accessibility', label: 'Accessibility', icon: '♿' },
-    { id: 'seo', label: 'SEO', icon: '🔍' },
-  ] as const;
-
-  const getOverallScore = (): number => {
-    // This would be calculated based on all metrics
-    // For now, we'll use a simple calculation
-    const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? 
-      Math.round((100 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 100)) / 3) : 85;
-    return Math.max(0, Math.min(100, performanceScore));
+interface DashboardMetrics {
+  performance: {
+    score: number;
+    lcp: number;
+    fid: number;
+    cls: number;
   };
+  analytics: {
+    pageViews: number;
+    uniqueVisitors: number;
+    bounceRate: number;
+    conversionRate: number;
+  };
+  security: {
+    score: number;
+    vulnerabilities: number;
+    threatsBlocked: number;
+  };
+  system: {
+    cpu: number;
+    memory: number;
+    disk: number;
+    uptime: number;
+  };
+}
+
+interface ComprehensiveDashboardProps {
+  onMetricsUpdate?: (metrics: DashboardMetrics) => void;
+  refreshInterval?: number;
+  className?: string;
+}
+
+export const ComprehensiveDashboard: React.FC<ComprehensiveDashboardProps> = ({
+  onMetricsUpdate,
+  refreshInterval = 10000,
+  className = ''
+}) => {
+  const [metrics, setMetrics] = useState<DashboardMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const getOverallScore = () => {
+    if (!metrics) return 0;
+    const performanceScore = metrics.performance.score;
+    const securityScore = metrics.security.score;
+    const systemHealth = 100 - (metrics.system.cpu + metrics.system.memory + metrics.system.disk) / 3;
+    return Math.round((performanceScore + securityScore + systemHealth) / 3);
+  };
+
+  const collectMetrics = useCallback(async () => {
+    setIsLoading(true);
+    
+    // Simulate metrics collection
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    const mockMetrics: DashboardMetrics = {
+      performance: {
+        score: 85,
+        lcp: 2.5,
+        fid: 50,
+        cls: 0.1
+      },
+      analytics: {
+        pageViews: 12500,
+        uniqueVisitors: 8500,
+        bounceRate: 35.2,
+        conversionRate: 4.8
+      },
+      security: {
+        score: 92,
+        vulnerabilities: 0,
+        threatsBlocked: 15
+      },
+      system: {
+        cpu: 45,
+        memory: 60,
+        disk: 55,
+        uptime: 99.9
+      }
+    };
+    
+    setMetrics(mockMetrics);
+    setIsLoading(false);
+    
+    if (onMetricsUpdate) {
+      onMetricsUpdate(mockMetrics);
+    }
+  }, [onMetricsUpdate]);
+
+  useEffect(() => {
+    collectMetrics();
+    const interval = setInterval(collectMetrics, refreshInterval);
+    return () => clearInterval(interval);
+  }, [collectMetrics, refreshInterval]);
 
   const overallScore = getOverallScore();
 
@@ -108,6 +184,29 @@ const ComprehensiveDashboard: React.FC = () => {
                 <h3 className="text-lg font-medium text-gray-900">Performance Report</h3>
                 <p className="text-smtext-gray-600">Generate detailed performance analysis</p>
               </div>
+              <p className="text-gray-600 dark:text-gray-400">Page Views</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security</h3>
+                <Shield className="w-6 h-6 text-red-500" />
+              </div>
+              <div className="text-3xl font-bold text-red-600 mb-2">
+                {metrics.security.score}%
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Security Score</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">System</h3>
+                <Zap className="w-6 h-6 text-purple-500" />
+              </div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">
+                {metrics.system.uptime}%
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">Uptime</p>
             </div>
           </div>
 

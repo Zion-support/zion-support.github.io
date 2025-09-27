@@ -1,81 +1,40 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
-import AdvancedPerformanceOptimizer from './AdvancedPerformanceOptimizer';
-import AdvancedSecurityDashboard from './AdvancedSecurityDashboard';
-import SEOAccessibilityOptimizer from './SEOAccessibilityOptimizer';
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  Legend, 
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell
-} from 'recharts';
-import { 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Eye,
-  Activity,
-  Target,
-  Clock,
-  AlertTriangle
-} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
-  visitors: {
-    total: number;
-    unique: number;
-    returnin, g: number;
-    growt, h: number;
-  };
-  performance: {
-    pageSpeed: number;
-    loadTime: number;
-    bounceRat, e: number;
-    conversionRat, e: number;
-  };
-  security: {
-    score: number;
-    threat, s: number;
-    vulnerabilitie, s: number;
-  };
-  seo: {
-    score: number;
-    keyword, s: number;
-    backlink, s: number;
-  };
-  accessibility: {
-    scor, e: number;
-    issue, s: number;
-  };
+  pageViews: number;
+  uniqueVisitors: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  conversionRate: number;
+  topPages: Array<{ page: string; views: number; bounceRate: number }>;
+  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
+  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
+  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
+  hourlyData: Array<{ hour: number; visitors: number }>;
+  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
+  realTimeVisitors: number;
+  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
+  errorRate: number;
+  performanceScore: number;
 }
 
-interface ChartData {
-  name: string;
-  valu, e: number;
-  color?: string;
+interface ComprehensiveAnalyticsDashboardProps {
+  data: AnalyticsData;
+  onDataRefresh?: () => void;
+  isRealTime?: boolean;
+  className?: string;
 }
 
-const ComprehensiveAnalyticsDashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'seo'>('overview');
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    visitors: { tota, l: 0, unique: 0, returning: 0, growth: 0 },
-    performance: { pageSpee, d: 0, loadTime: 0, bounceRate: 0, conversionRate: 0 },
-    security: { scor, e: 0, threats: 0, vulnerabilities: 0 },
-    seo: { scor, e: 0, keywords: 0, backlinks: 0 },
-    accessibility: { scor, e: 0, issues: 0 }
-  });
-  const [isLoading, setIsLoading] = useState(true);
+export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDashboardProps> = ({
+  data,
+  onDataRefresh,
+  isRealTime = false,
+  className = ''
+}) => {
+  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
+  const [timeRange, setTimeRange] = useState<string>('7d');
 
   const fetchAnalyticsData = useCallback(async () => {
     setIsLoading(true);
@@ -336,13 +295,34 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 </CardContent>
               </Card>
             </div>
-          )}
-
-          {activeTab === 'performance' && <AdvancedPerformanceOptimizer />}
-          {activeTab === 'security' && <AdvancedSecurityDashboard />}
-          {activeTab === 'seo' && <SEOAccessibilityOptimizer />}
-        </CardContent>
-      </Card>
+            <button
+              onClick={onDataRefresh}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+            >
+              Refresh
+            </button>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-sm font-medium text-gray-600">Page Views</div>
+            <div className="text-2xl font-bold text-gray-900">{data.pageViews.toLocaleString()}</div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-sm font-medium text-gray-600">Unique Visitors</div>
+            <div className="text-2xl font-bold text-gray-900">{data.uniqueVisitors.toLocaleString()}</div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-sm font-medium text-gray-600">Bounce Rate</div>
+            <div className="text-2xl font-bold text-gray-900">{data.bounceRate.toFixed(1)}%</div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-sm font-medium text-gray-600">Conversion Rate</div>
+            <div className="text-2xl font-bold text-gray-900">{data.conversionRate.toFixed(1)}%</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
