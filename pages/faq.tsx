@@ -62,8 +62,7 @@ export default function FAQ(): JSX.Element {
 			category: 'Development Process',
 			questions: [
 				{
-				,
-		id: 7,
+					id: 7,
 					question: 'What is your development process?',
 					answer: 'We follow an agile development methodology with regular sprints  client feedback loops  and iterative improvements. Our process includes discovery and planning  design and prototyping  development and testing  deployment  and ongoing support. We maintain transparent communication throughout the entire process.'
 				},
@@ -83,8 +82,7 @@ export default function FAQ(): JSX.Element {
 			category: 'AI & Technology',
 			questions: [
 				{
-				,
-		id: 10,
+					id: 10,
 					question: 'How do you implement AI solutions?',
 					answer: 'We use machine learning frameworks like TensorFlow and PyTorch  cloud AI services from AWS and Google Cloud  and custom AI model development. Our approach includes data analysis  model training  integration with existing systems  and continuous optimization based on performance metrics.'
 				},
@@ -104,8 +102,7 @@ export default function FAQ(): JSX.Element {
 			category: 'Support & Communication',
 			questions: [
 				{
-				,
-		id: 13,
+					id: 13,
 					question: 'How do you communicate with clients during projects?',
 					answer: 'We maintain regular communication through scheduled meetings  progress reports  project management tools  and direct access to your project team. We provide weekly status updates  demo sessions  and are available for questions and feedback throughout the development process.'
 				},
@@ -123,7 +120,7 @@ export default function FAQ(): JSX.Element {
 		}
 	];
 
-	const toggleItem = (id:, number) => {
+	const toggleItem = (id: number) => {
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
 			newOpenItems.delete(id)} else {
@@ -139,7 +136,7 @@ export default function FAQ(): JSX.Element {
 		)
 	})).filter(category => category.questions.length > 0);
 	return (
-		<>
+		<div>
 			<Head>
 				<title>FAQ - Zion App</title>
 				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
@@ -277,5 +274,6 @@ export default function FAQ(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</>
-	)}
+		</div>
+	);
+}

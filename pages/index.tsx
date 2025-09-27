@@ -108,13 +108,13 @@ export default function Home(): JSX.Element {
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
-      color: "blue" as const 
-     ,
-		delay: 0.4
+      color: "blue" as const,
+      delay: 0.4
     }
   ], []);
-	return (
-		<>
+  
+  return (
+    <div>
       <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
@@ -130,7 +130,7 @@ export default function Home(): JSX.Element {
           'enterprise solutions'
         ]}
       />
-			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
         <section 
@@ -453,8 +453,7 @@ export default function Home(): JSX.Element {
                 Get comprehensive insights into your website&apos;s performance  accessibility  and SEO with our advanced analytics dashboard.
               </p>
 					<Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2,
-		focus:ring-blue-500 transition-colors duration-200">
+                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
@@ -463,5 +462,6 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
-		</>
-  )}
+    </div>
+  );
+}
