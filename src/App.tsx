@@ -142,7 +142,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', trackEngagement);
       memoryMonitor.stopMonitoring();
     };
-  }, []);
+  }, [preloadResource, recordMetric, seoData]);
 
   return (
     <ErrorBoundary fallback={<ErrorFallback />}>
