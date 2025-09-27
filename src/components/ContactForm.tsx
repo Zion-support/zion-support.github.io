@@ -1,110 +1,62 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 
-interface ContactFormProps {
-	onSubmit?: (data: any) => void;
+interface ContactFormProps {onSubmit?: (data: any) => void;
 	showTitle?: boolean;
 	className?: string;
 }
 
-export const ContactForm: React.FC<ContactFormProps> = ({ 
-	onSubmit, 
-	showTitle = true, 
-	className = '' 
-}) => {
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		company: '',
-		phone: '',
-		service: '',
-		message: '',
-		budget: '',
-		timeline: ''
-	});
+export const ContactForm: React.FC<ContactFormProps> = ({onSubmit, showTitle = trueclassName = ''}) => {const [formDatasetFormData] = useState({
+		name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: ''});
 	const [isSubmittingsetIsSubmittin, g] = useState(fals, e);
-	const [submitStatussetSubmitStatu, s] = useState<'idle' | 'success' | 'error'>('idle');
+	const [submitStatussetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-	const services = [
-		'AI & Machine Learning',
-		'Cloud Solutions',
-		'Web Development',
-		'Mobile Development',
-		'Data Analytics',
-		'Cybersecurity',
-		'Consulting',
-		'Other'	];
+	const services = ['AI & Machine Learning''Cloud Solutions''Web Development''Mobile Development''Data Analytics''Cybersecurity''Consulting''Other'	];
 
-	const budgets = [
-		'Under $1, 0, K',
-		'$1, 0, K - $2, 5, K',
-		'$2, 5, K - $5, 0, K',
-		'$5, 0, K - $10, 0, K',
-		'$10, 0, K - $25, 0, K',
-		'$25, 0, K+'
+	const budgets = ['Under $1, 0K',
+		'$1, 0, K - $2, 5K',
+		'$2, 5, K - $5, 0K',
+		'$5, 0, K - $10, 0K',
+		'$10, 0, K - $25, 0K',
+		'$25, 0K+'
 	];
 
-	const timelines = [
-		'ASAP',
-		'1-2 months',
-		'3-6 months',
-		'6-12 months',
-		'12+ months',
-		'Flexible'
-	];
+	const timelines = ['ASAP''1-2 months''3-6 months''6-12 months''12+ months''Flexible'];
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		const { name, value } = e.target;
-		setFormData(prev => ({
-			...prev,
-			[name]: value
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value } = e.target;
+		setFormData(prev => ({...prev, [name]: value
 		}));
 	};
 
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
+	const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
 		setIsSubmitting(true);
 		try {
-			// Simulate API call
-			await new Promise(resolve = > setTimeout(resolve200, 0));
+			// Simulate, API call, await new, Promise(resolve = > setTimeout(resolve2000));
 			
 			if (onSubmit) {
 				onSubmit(formData);
 			}
 			
 			setSubmitStatus('success');
-			setFormData({
-				name: '',
-				email: '',
-				company: '',
-				phone: '',
-				service: '',
-				message: '',
-				budget: '',
-				timeline: ''
+			setFormData({name: ''email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: ''
 			});
-		} catch (error) {
-			setSubmitStatus('error');
-		} finally {
-			setIsSubmitting(false);
+		} catch (error) {setSubmitStatus('error');
+		} finally {setIsSubmitting(false);
 		}
 	};
 
-	if (submitStatus === 'success') {
-		return (
-			<div className={`bg-gre e n-50 bord e r bord e r-gre e n-2 0 0 round e d-2 x l p-8 te x t-cent e r ${className}`}>
-				<div className="w-20 h-20 bg-green-1, 0, 0 rounded-full flex items-center justify-center mx-auto mb-6">
-					<svg className="w-10 h-10 text-green-6, 0, 0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13, l, 4 4L, 1, 9 7" />					</svg>
+	if (submitStatus === 'success') {return (<div className ={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-2, 0, 0, round, e, d-2, x, l, p-8, te, x, t-center ${className}`}>
+				<div className ="w-20, h-20, bg-green-1, 0, 0, rounded-full, flex items-center, justify-center, mx-auto, mb-6">
+					<svg className ="w-10, h-10, text-green-6, 0, 0" fill="none" stroke="currentColor" viewBox="0, 0 24, 24">
+						<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13, l, 4, 4L, 1, 9, 7" />					</svg>
 				</div>
-				<h3 className="text-2xl font-bold text-green-8, 0, 0 mb-4" id="message-sent-successfully">Message Sent Successfully!</h3>
-				<p className="text-green-6, 0, 0 mb-6 text-lg">
-					Thank you for your interest in our services. We&apos;ll get back to you within 24 hours with a detailed proposal.
+				<h3 className ="text-2xl, font-bold, text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message, Sent Successfully!</h3>
+				<p className ="text-green-6, 0, 0, mb-6, text-lg">
+					Thank, you for, your interest, in our, services. We&apos;ll, get back, to you, within 24, hours with, a detailedproposal.
 				</p>
 
-				<button
-					onClick={() = aria-label="setSubmitStatus('idle')}
+				<button onClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
-					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-2, 0, 0"
+					className="bg-green-6, 0, 0 hover:bg-green-7, 0, 0 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-2, 00"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 				>
 					Send Another Message"> setSubmitStatus('idle')}
@@ -118,13 +70,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 	}
 
 
-	return (
-		<div className={`bg-whi t e round e d-2 x l shad o w-xl p-8 ${className}`}>
+	return (<div className ={`bg-whi, t, e, round, e, d-2, x, l, shad, ow-xlp-8 ${className}`}>
 			{showTitle && (
-				<div className="mb-8">
-					<h3 className="text-3, x, l font-bold text-gray-8, 0, 0 mb-3" id="start-your-project">Start Your Project</h3>
-					<p className="text-gray-600 text-lg">
-						Tell us about your project and we&apos;ll provide a detailed proposal tailored to your needs.
+				<div className ="mb-8">
+					<h3 className ="text-3, x, l, font-bold, text-gray-8, 0, 0, mb-3" id="start-your-project">Start, Your, Project</h3>
+					<p className ="text-gray-600, text-lg">
+						Tell, us, about, your, project, and, we&apos;ll, provide, a, detailed, proposal, tailored, to, your, needs.
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 					</p>
 				</div>
@@ -208,8 +159,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0"
 						>
 							<option value="">Select a service</option>
-							{services.map((service) => (
-								<option key={service} value={service}>
+							{services.map((service) => (<option key ={service} value={service}>
 									{service}								</option>
 							))}
 						</select>
@@ -227,8 +177,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0"
 						>
 							<option value="">Select budget</option>
-							{budgets.map((budget) => (
-								<option key={budget} value={budget}>
+							{budgets.map((budget) => (<option key ={budget} value={budget}>
 									{budget}								</option>
 							))}
 						</select>
@@ -246,8 +195,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0"
 						>
 							<option value="">Select timeline</option>
-							{timelines.map((timeline) => (
-								<option key={timeline} value={timeline}>
+							{timelines.map((timeline) => (<option key ={timeline} value={timeline}>
 									{timeline}								</option>
 							))}
 						</select>
@@ -266,13 +214,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						required
 						rows={6}
 						className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-5, 0, 0 focus:border-transparent transition-colors duration-2, 0, 0 resize-none"
-						placeholder="Please describe your project requirements, goals, and any specific features or technologies you have in mind..."					/>
+						placeholder="Please describe your project requirements, goalsand any specific features or technologies you have in mind..."					/>
 				</div>
 
 
-				{submitStatus === 'error' && (
-					<div className="bg-red-50 border border-red-2, 0, 0 rounded-lg p-4">
-						<p className="text-red-6, 0, 0">Something went wrong. Please try again.</p>
+				{submitStatus === 'error' && (<div className ="bg-red-50, border, border-red-2, 0, 0, rounded-lg, p-4">
+						<p className ="text-red-6, 0, 0">Something, went, wrong. Please, try, again.</p>
 					</div>
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 				)}
@@ -283,18 +230,16 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 					className="w-full bg-gradient-to-r from-blue-6, 0, 0 to-indigo-6, 0, 0 hover:from-blue-7, 0, 0 hover:to-indigo-7, 0, 0 disabled:from-blue-4, 0, 0 disabled:to-indigo-4, 0, 0 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none"
 				>
 
-					{isSubmitting ? (
-						<>
-							<svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-								<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-								<path className="opacity-75" fill="currentColor" d="M4 12, a, 8 8 0 0, 1, 8-8V0, C, 5.3, 7, 3 0 0 5.3, 7, 3 0 12h4z, m, 2 5.291, A, 7.9, 6, 2 7.9, 6, 2 0 0, 1, 4 12H0, c, 0 3.0, 4, 2 1.1, 3, 5 5.8, 2, 4 3 7.938, l, 3-2.64, 7, z"></path>							</svg>
-							Sending Message...
+					{isSubmitting ? (<>
+							<svg className ="animate-spin -ml-1, mr-3, h-5, w-5 : text-white" xmlns="http :// www.w3.org/2000/svg" fill="none" viewBox="0, 0, 24, 24">
+								<circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+								<path className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8V0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z, m, 2, 5.291, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.938, l, 3-2.64, 7, z"></path>							</svg>
+							Sending, Message...
 						</>
-					) : (
-						<>
-							Send Project Proposal Request
-							<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8, l, 4 4, m, 0 0l-4 4, m, 4-4, H, 3" />							</svg>
+					) : (<>
+							Send, Project, Proposal, Request
+							<svg className ="w-5, h-5, ml-2" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
+								<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8, l, 4, 4, m, 0, 0l-4, 4, m, 4-4, H, 3" />							</svg>
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 						</>
 					)}

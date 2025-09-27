@@ -1,115 +1,112 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-class RemainingSyntaxErrorFixer {
-  constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixSyntaxErrors(content) {
-    // Fix remaining syntax errors
-    content = content.replace(/seriousIssu, e, s/g, 'seriousIssues');
-    content = content.replace(/moderateIssu, e, s/g, 'moderateIssues');
-    content = content.replace(/minorIssu, e, s/g, 'minorIssues');
-    content = content.replace(/issu, e, s:/g, 'issues:');
-    content = content.replace(/AccessibilityIss, u, e\[\]/g, 'AccessibilityIssue[]');
-    content = content.replace(/wcagComplian, c, e/g, 'wcagCompliance');
-    content = content.replace(/leve, l, A/g, 'levelA');
-    content = content.replace(/level, A, A/g, 'levelAA');
-    content = content.replace(/GlobeSmartphoneMonitorTabl, e, t/g, 'Globe, Smartphone, Monitor, Tablet');
-    content = content.replace(/luci, d, e- rea, c, t/g, 'lucide-react');
-    content = content.replace(/AnalyticsDa, t, a/g, 'AnalyticsData');
-    content = content.replace(/overvi, e, w/g, 'overview');
-    content = content.replace(/totalSessio, n, s/g, 'totalSessions');
-    content = content.replace(/uniqueUse, r, s/g, 'uniqueUsers');
-    content = content.replace(/con, s, t/g, 'const');
-    content = content.replace(/AdvancedPerformanceMonit, o, r/g, 'AdvancedPerformanceMonitor');
-    content = content.replace(/PerformanceMonit, o, rProps/g, 'PerformanceMonitorProps');
-    content = content.replace(/lastS, c, a, n/g, 'lastScan');
-    content = content.replace(/Da, t, e/g, 'Date');
-    content = content.replace(/SecurityEnhancementsPro, p, s/g, 'SecurityEnhancementsProps');
-    content = content.replace(/suspiciousActivi, t, y/g, 'suspiciousActivity');
-    content = content.replace(/securitySco, r, e/g, 'securityScore');
-    content = content.replace(/lastSc, a, n/g, 'lastScan');
-    content = content.replace(/vulnerabiliti, e, s/g, 'vulnerabilities');
-    content = content.replace(/Arr, a, y/g, 'Array');
-    content = content.replace(/severi, t, y/g, 'severity');
-    
-    return content;
-  }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-
-      content = this.fixSyntaxErrors(content);
-
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed syntax errors in: ${filePath}`);
-      }
-    } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      this.errors.push(`${filePath}: ${error.message}`);
+// Fix specific syntax errors
+const fixSyntaxErrors = (content) => {
+  // Fix malformed variable declarations with commas
+  content = content.replace(/const,\s+/g, 'const ');
+  content = content.replace(/let,\s+/g, 'let ');
+  content = content.replace(/var,\s+/g, 'var ');
+  
+  // Fix malformed function parameters with commas
+  content = content.replace(/\(\s*([^)]*),\s*([^)]*)\s*\)/g, (match, p1, p2) => {
+    if (p1 && p2 && !p1.includes(',') && !p2.includes(',')) {
+      return `(${p1}, ${p2})`;
     }
-  }
-
-  async fixAllFiles() {
-    this.log('🔧 Starting remaining syntax error fixes...');
-    
-    try {
-      const files = await glob('src/components/*.tsx');
-      
-      for (const file of files) {
-        this.fixFile(file);
-      }
-      
-      this.log(`✅ Fixed ${this.fixedFiles.length} files`);
-      
-      if (this.errors.length > 0) {
-        this.log(`❌ ${this.errors.length} errors encountered`);
-        this.errors.forEach(error => this.log(`  - ${error}`));
-      }
-      
-    } catch (error) {
-      this.log(`❌ Error processing files: ${error.message}`);
+    return match;
+  });
+  
+  // Fix malformed destructuring with commas
+  content = content.replace(/\{\s*([^}]*),\s*([^}]*)\s*\}/g, (match, p1, p2) => {
+    if (p1 && p2 && !p1.includes(',') && !p2.includes(',')) {
+      return `{${p1}, ${p2}}`;
     }
-  }
+    return match;
+  });
+  
+  // Fix malformed JSX className props with commas
+  content = content.replace(/className=\{`([^`]*),\s*([^`]*)`\}/g, 'className={`$1$2`}');
+  
+  // Fix malformed template literals with commas
+  content = content.replace(/`([^`]*),\s*([^`]*)`/g, '`$1$2`');
+  
+  // Fix malformed function calls with commas in wrong places
+  content = content.replace(/if\s*\(([^)]*),\s*([^)]*)\)/g, 'if ($1 === $2)');
+  
+  // Fix malformed variable assignments with commas
+  content = content.replace(/(\w+),\s*(\w+)\s*=/g, '$1, $2 =');
+  
+  // Fix malformed selector queries
+  content = content.replace(/querySelectorAll\('([^']*),\s*([^']*)'\)/g, "querySelectorAll('$1, $2')");
+  
+  // Fix malformed object properties with commas
+  content = content.replace(/(\w+),\s*(\w+)\s*:/g, '$1, $2:');
+  
+  // Fix malformed array/object syntax
+  content = content.replace(/\[\s*([^\]]*),\s*([^\]]*)\s*\]/g, '[$1, $2]');
+  
+  // Fix malformed JSX props
+  content = content.replace(/<(\w+),\s*([^>]*)>/g, '<$1 $2>');
+  
+  // Fix malformed useEffect dependencies
+  content = content.replace(/\[([^\]]*),\s*([^\]]*)\]/g, '[$1, $2]');
+  
+  // Fix malformed string concatenations
+  content = content.replace(/'\s*([^']*),\s*([^']*)'/g, "'$1$2'");
+  
+  // Fix malformed comments with commas
+  content = content.replace(/\/\/\s*([^,]*),\s*([^,]*)/g, '// $1, $2');
+  
+  // Fix malformed ternary operators
+  content = content.replace(/\?\s*([^:]*),\s*([^:]*)\s*:/g, '? $1 : $2 :');
+  
+  // Fix malformed arrow function parameters
+  content = content.replace(/\(\s*([^)]*),\s*([^)]*)\s*\)\s*=>/g, '($1, $2) =>');
+  
+  // Fix malformed destructuring in function parameters
+  content = content.replace(/\(\s*\{\s*([^}]*),\s*([^}]*)\s*\}\s*\)/g, '({$1, $2})');
+  
+  return content;
+};
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-      summary: {
-        totalFixed: this.fixedFiles.length,
-        totalErrors: this.errors.length
+// Main function to fix remaining syntax errors
+async function fixRemainingErrors() {
+  console.log('🔧 Fixing remaining syntax errors...');
+  
+  try {
+    // Get all TypeScript and JavaScript files
+    const files = await glob('src/**/*.{ts,tsx,js,jsx}', { 
+      ignore: ['node_modules/**', 'dist/**', 'build/**'] 
+    });
+
+    let fixedCount = 0;
+    let errorCount = 0;
+
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
+
+        // Apply fixes
+        content = fixSyntaxErrors(content);
+
+        // Only write if content changed
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content, 'utf8');
+          console.log(`✅ Fixed: ${file}`);
+          fixedCount++;
+        }
+      } catch (error) {
+        console.error(`❌ Error fixing ${file}:`, error.message);
+        errorCount++;
       }
-    };
-    
-    fs.writeFileSync('remaining-syntax-fix-report.json', JSON.stringify(report, null, 2));
-    this.log('📊 Remaining syntax fix report generated');
-  }
+    }
 
-  async run() {
-    this.log('🚀 Starting remaining syntax error fixes...');
-    
-    await this.fixAllFiles();
-    await this.generateReport();
-    
-    this.log('✅ Remaining syntax error fixes completed!');
+    console.log(`\n🎉 Fixed ${fixedCount} files with ${errorCount} errors`);
+  } catch (error) {
+    console.error('❌ Error during fix process:', error.message);
   }
 }
 
-const fixer = new RemainingSyntaxErrorFixer();
-fixer.run().catch(console.error);
+fixRemainingErrors();

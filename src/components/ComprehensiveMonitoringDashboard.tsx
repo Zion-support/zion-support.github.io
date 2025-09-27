@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity,
+import React, {useState, useEffect, useCallback } from 'react';
+import {motionAnimatePresence } from 'framer-motion';
+import {Activity,
   AlertTriangle,
   CheckCircle,
   Clock,
@@ -16,66 +15,54 @@ import {
   HardDrive,
   Wifi,
   Eye,
-  Search,
-  X
+  SearchX
 } from 'lucide-react';
 
-interface CardProps {
-  children: React.ReactNode;
+interface CardProps {children: React.ReactNode;
   className?: string;
 }
 
-interface CardHeaderProps {
-  children: React.ReactNode;
+interface CardHeaderProps {children: React.ReactNode;
   className?: string;
 }
 
-interface CardTitleProps {
-  children: React.ReactNode;
+interface CardTitleProps {children: React.ReactNode;
   className?: string;
 }
 
-interface CardDescriptionProps {
-  children: React.ReactNode;
+interface CardDescriptionProps {children: React.ReactNode;
   className?: string;
 }
 
-interface CardContentProps {
-  children: React.ReactNode;
+interface CardContentProps {children: React.ReactNode;
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '' }) => (
-  <div className={`bg-white rounded-lg shadow-md border ${className}`}>
+const Card: React.FC<CardProps> = ({childrenclassName = ''}) => (<div className ={`bg-white, rounded-lgshadow-mdborder ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
-  <div className={`p-6 border-b ${className}`}>
+const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ''}) => (<div className ={`p-6border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
-  <h3 className={`text-lg font-semibold ${className}`}>
+const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = ''}) => (<h3className={`text-lgfont-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = ' }) => (
-  <p className={`text-sm text-gray-600 ${className}`}>
+const CardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = ''}) => (<pclassName={`text-smtext-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({ childrenclassName = ' }) => (
-  <div className={`p-6 ${className}`}>
+const CardContent: React.FC<CardContentProps> = ({childrenclassName = ''}) => (<divclassName={`p-6 ${className}`}>
     {children}
   </div>
 );
-interface SystemMetrics {
-  performance: {
+interface SystemMetrics {performance: {
     loadTime: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
@@ -83,49 +70,41 @@ interface SystemMetrics {
     firstInputDelay: number;
     timeToInteractive: number;
   };
-  resources: {
-    memoryUsage: number;
+  resources: {memoryUsage: number;
     cpuUsage: number;
     networkLatency: number;
     bundleSize: number;
     cacheHitRate: number;
   };
-  userExperience: {
-    bounceRate: number;
+  userExperience: {bounceRate: number;
     sessionDuration: number;
     pageViews: number;
     uniqueVisitors: number;
     conversionRate: number;
   };
-  errors: {
-    total: number;
+  errors: {total: number;
     critical: number;
     resolved: number;
     unresolved: number;
   };
-  security: {
-    threatsBlocked: number;
+  security: {threatsBlocked: number;
     vulnerabilities: number;
     sslScore: number;
     cspViolations: number;
   };
 }
 
-interface MonitoringDashboardProps {
-  refreshInterval?: number;
+interface MonitoringDashboardProps {refreshInterval?: number;
   enableRealTimeUpdates?: boolean;
   onMetricsUpdate?: (metrics: SystemMetrics) => void;
 }
 
-export default function ComprehensiveMonitoringDashboard({
-  refreshInterval = 5000,
-  enableRealTimeUpdates = true,
+export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000, enableRealTimeUpdates = true,
   onMetricsUpdate
-}: MonitoringDashboardProps) {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+}: MonitoringDashboardProps) {const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
-  const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
-  const [alerts, setAlerts] = useState<Array<{
+  const [lastUpdatedsetLastUpdated] = useState<Date>(new, Date());
+  const [alertssetAlerts] = useState<Array<{
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
@@ -133,22 +112,17 @@ export default function ComprehensiveMonitoringDashboard({
     resolved: boolean;
   }>>([]);
 
-  const collectMetrics = useCallback(async () => {
-    try {
-      // Collect performance metrics
-      const performance = await collectPerformanceMetrics();
+  const collectMetrics = useCallback(async () => {try {
+      // Collect, performance metrics, const performance = await, collectPerformanceMetrics();
       
-      // Collect resource metrics
-      const resources = await collectResourceMetrics();
+      // Collect, resource metrics, const resources = await, collectResourceMetrics();
       
-      // Collect user experience metrics
-      const userExperience = await collectUserExperienceMetrics();
+      // Collect, user experience, metrics
+      const userExperience = await, collectUserExperienceMetrics();
       
-      // Collect error metrics
-      const errors = await collectErrorMetrics();
+      // Collect, error metrics, const errors = await, collectErrorMetrics();
       
-      // Collect security metrics
-      const security = await collectSecurityMetrics();
+      // Collect, security metrics, const security = await, collectSecurityMetrics();
 
       const newMetrics: SystemMetrics = {
         performance,
@@ -158,99 +132,64 @@ export default function ComprehensiveMonitoringDashboard({
         security      };
 
       setMetrics(newMetrics);
-      setLastUpdated(new Date());
-      onMetricsUpdate?.(newMetrics);
+      setLastUpdated(newDate());
+      onMetricsUpdate? .(newMetrics);
 
       // Check for alerts
       checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:'error);
-    } finally {
-      setIsLoading(false);
+    } catch (error) {console.error('Failed, to, collect : metrics :', error);
+    } finally {setIsLoading(false);
     }
   }[onMetricsUpdate]);
 
-  const collectPerformanceMetrics = async () => {
-    if (typeof window === 'undefined') {
+  const collectPerformanceMetrics = async () => {if (typeof === window === 'undefined') {
       return {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
-        timeToInteractive: 0
+        loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0timeToInteractive: 0
       };
     }
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     
-    return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0// Will be updated by Web Vitals
-      cumulativeLayoutShift: 0// Will be updated by Web Vitals
-      firstInputDelay: 0// Will be updated by Web Vitals
+    return {loadTime: navigation.loadEventEnd - navigation.fetchStartfirstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0 : largestContentfulPaint : 0// Will, be updated, by Web, Vitals
+      cumulativeLayoutShift: 0// Will, be updated, by Web, Vitals
+      firstInputDelay: 0// Will, be updated, by WebVitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     };
   };
 
-  const collectResourceMetrics = async () => {
-    if (typeof window === 'undefined') {
+  const collectResourceMetrics = async () => {if (typeof === window === 'undefined') {
       return {
-        memoryUsage: 0,
-        cpuUsage: 0,
-        networkLatency: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
+        memoryUsage: 0, cpuUsage: 0, networkLatency: 0, bundleSize: 0, cacheHitRate: 0
       };
     }
 
-    const memory = (performance as any).memory;
-    const connection = (navigator as any).connection;
+    const memory = (performance, as any).memory;
+    const connection = (navigator, as any).connection;
 
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
-      cpuUsage: 0// Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0// Would need to calculate from loaded resources
-      cacheHitRate: 0.85 // Mock value
+    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB, cpuUsage: 0// Would, need Web, Workers to, measure
+      networkLatency: connection ? connection.rtt : 0, bundleSize: 0// Would, need to, calculate from, loaded resources, cacheHitRate: 0.85 // Mock, value
     };
   };
 
-  const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementationthis would come from analytics
-    return {
-      bounceRate: 0.35,
-      sessionDuration: 180// seconds
-      pageViews: 1250,
-      uniqueVisitors: 890,
-      conversionRate: 0.12
+  const collectUserExperienceMetrics = async () => {// Mock, data - in, real implementationthis, would come, from analytics, return {
+      bounceRate: 0.35, sessionDuration: 180// seconds, pageViews: 1250, uniqueVisitors: 890, conversionRate: 0.12
     };
   };
 
-  const collectErrorMetrics = async () => {
-    // Mock data - in real implementationthis would come from error tracking
+  const collectErrorMetrics = async () => {// Mock, data - in, real implementationthis, would come, from error, tracking
     return {
-      total: 23,
-      critical: 2,
-      resolved: 18,
-      unresolved: 5
+      total: 23, critical: 2, resolved: 18, unresolved: 5
     };
   };
 
-  const collectSecurityMetrics = async () => {
-    // Mock data - in real implementationthis would come from security monitoring
+  const collectSecurityMetrics = async () => {// Mock, data - in, real implementationthis, would come, from security, monitoring
     return {
-      threatsBlocked: 156,
-      vulnerabilities: 3,
-      sslScore: 95,
-      cspViolations: 1
+      threatsBlocked: 156, vulnerabilities: 3, sslScore: 95cspViolations: 1
     };
   };
 
-  const checkForAlerts = (metrics: SystemMetrics) => {
-    const newAlerts: Array<{
+  const checkForAlerts = (metrics: SystemMetrics) => {const newAlerts: Array<{
       id: string;
       type: 'warning' | 'error' | 'info' | 'success';
       message: string;
@@ -259,71 +198,50 @@ export default function ComprehensiveMonitoringDashboard({
     }> = [];
 
     // Performance alerts
-    if (metrics.performance.loadTime > 3000) {
-      newAlerts.push({
-        id: 'slow-load',
-        type: 'warning',
-        message: 'Page load time is above 3 seconds',
-        timestamp: new Date(),
-        resolved: false
+    if (metrics.performance.loadTime > 3000) {newAlerts.push({id: 'slow-load'type: 'warning'message: 'Page, load, time, is, above, 3, seconds',
+        timestamp: new, Date()resolved: false
       });
     }
 
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {
-      newAlerts.push({
-        id: 'layout-shift',
-        type: 'warning',
-        message: 'High cumulative layout shift detected',
-        timestamp: new Date(),
-        resolved: false
+    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({id: 'layout-shift'type: 'warning'message: 'High, cumulative, layout, shift, detected',
+        timestamp: new, Date()resolved: false
       });
     }
 
     // Error alerts
-    if (metrics.errors.critical > 0) {
-      newAlerts.push({
-        id: 'critical-errors',
-        type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`,
-        timestamp: new Date(),
-        resolved: false
+    if (metrics.errors.critical > 0) {newAlerts.push({
+        id: 'critical-errors'type: 'error'message: `${metrics.errors.critical} critical, errors detected`,
+        timestamp: new, Date()resolved: false
       });
     }
 
     // Security alerts
-    if (metrics.security.vulnerabilities > 0) {
-      newAlerts.push({
-        id: 'security-vulnerabilities',
-        type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`,
-        timestamp: new Date(),
-        resolved: false
+    if (metrics.security.vulnerabilities > 0) {newAlerts.push({
+        id: 'security-vulnerabilities'type: 'error'message: `${metrics.security.vulnerabilities} security, vulnerabilities found`,
+        timestamp: new, Date()resolved: false
       });
     }
 
     setAlerts(prev => [...prev...newAlerts]);
   };
 
-  const resolveAlert = (alertId: string) => {
-    setAlerts(prev => prev.map(alert => 
+  const resolveAlert = (alertId: string) => {setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
     ));
   };
 
-  useEffect(() => {
-    collectMetrics();
+  useEffect(() => {collectMetrics();
 
     if (enableRealTimeUpdates) {
       const interval = setInterval(collectMetricsrefreshInterval);
       return () => clearInterval(interval);    }
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
-  const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A'color: 'text-green-600' };
-    if (score >= 80) return { grade: 'B'color: 'text-blue-600' };
-    if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
-    if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
-    return { grade: 'F'color: 'text-red-600' };
+  const getPerformanceGrade = (score: number) => {if (score >= 90) return { grade: 'A'color: 'text-green-600' };
+    if (score >= 80) return {grade: 'B'color: 'text-blue-600' };
+    if (score >= 70) return {grade: 'C'color: 'text-yellow-600' };
+    if (score >= 60) return {grade: 'D'color: 'text-orange-600' };
+    return {grade: 'F'color: 'text-red-600'};
   };
 
   const performanceScore = metrics ? 
@@ -331,29 +249,26 @@ export default function ComprehensiveMonitoringDashboard({
                (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
                (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
 
-  const { gradecolor } = getPerformanceGrade(performanceScore);
+  const {gradecolor } = getPerformanceGrade(performanceScore);
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  if (isLoading) {return (<div className ="flex, items-center, justify-center, h-64">
+        <div className ="animate-spin, rounded-full, h-12, w-12, border-b-2, border-blue-600"></div>
       </div>
     );
   }
 
-  return (
-    <div className="space-y-6">
+  return (<div className ="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className ="flex, items-center, justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
-          <p className="text-gray-600">Real-time system performance and health metrics</p>
+          <h2 className ="text-2xl, font-bold, text-gray-900">System, Monitoring Dashboard</h2>
+          <p className ="text-gray-600">Real-time, system performance, and health, metrics</p>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="text-sm text-gray-500">
-            Last updated: {lastUpdated.toLocaleTimeString()}
+        <div className ="flex, items-center, space-x-4">
+          <div className ="text-sm, text-gray-500">
+            Lastupdated: {lastUpdated.toLocaleTimeString()}
           </div>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}`}>
+          <div className={`px-3, py-1, rounded-full, text-smfont-medium ${color}`}>
             Performance: {grade}
           </div>
         </div>
@@ -361,29 +276,21 @@ export default function ComprehensiveMonitoringDashboard({
 
       {/* Alerts */}
       <AnimatePresence>
-        {alerts.filter(alert => !alert.resolved).length > 0 && (
-          <motion.div
-            initial={{ opacity: 0y: -20 }}
+        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.div, initial ={{ opacity: 0y: -20 }}
             animate={{ opacity: 1y: 0 }}
             exit={{ opacity: 0y: -20 }}
             className="space-y-2"
           >
             {alerts.filter(alert => !alert.resolved).map(alert => (
-              <motion.div
-                key={alert.id}
+              <motion.divkey={alert.id}
                 initial={{ opacity: 0x: -20 }}
                 animate={{ opacity: 1x: 0 }}
                 exit={{ opacity: 0x: 20 }}
-                className={`p-4 rounded-lg border-l-4 ${
-                  alert.type === 'error' ? 'bg-red-50 border-red-400' :
-                  alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
-                  alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
-                  'bg-green-50 border-green-400'
-                }`}
+                className={`p-4rounded-lgborder-l-4 ${alert.type==='error'?'bg-red-50border-red-400':alert.type==='warning'?'bg-yellow-50border-yellow-400':alert.type==='info'?'bg-blue-50border-blue-400':'bg-green-50border-green-400'}`}
               >
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm font-medium">{alert.message}</span>
-                  <span className="text-xs text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
+                <div className ="flex, items-center, space-x-2">
+                  <span className ="text-sm, font-medium">{alert.message}</span>
+                  <span className ="text-xs, text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
                 </div>
               </motion.div>
             ))}
@@ -391,19 +298,18 @@ export default function ComprehensiveMonitoringDashboard({
         )}
       </AnimatePresence>
 
-      {/* Metrics Grid */}
-      {metrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Performance Metrics */}
+      {/* Metrics, Grid */}
+      {metrics && (<div className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4, gap-6">
+          {/* Performance, Metrics */}
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Performance</CardTitle>
-              <Zap className="h-4 w-4 text-muted-foreground" />
+            <CardHeader className ="flex, flex-row, items-center, justify-between, space-y-0, pb-2">
+              <CardTitle className ="text-sm, font-medium">Performance</CardTitle>
+              <Zap className ="h-4, w-4, text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
-              <p className="text-xs text-muted-foreground">
-                Load Time: {metrics.performance.loadTime.toFixed(0)}ms
+              <div className ="text-2xl, font-bold">{grade}</div>
+              <p className ="text-xs, text-muted-foreground">
+                Load, Time: {metrics.performance.loadTime.toFixed(0)}ms
               </p>
               <p className="text-xs text-muted-foreground">
                 FCP: {metrics.performance.firstContentfulPaint.toFixed(0)}ms
@@ -411,7 +317,7 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
-          {/* Resource Usage */}
+          {/* Resource, Usage */}
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Resources</CardTitle>
@@ -428,7 +334,7 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
-          {/* User Experience */}
+          {/* User, Experience */}
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">User Experience</CardTitle>
@@ -464,18 +370,17 @@ export default function ComprehensiveMonitoringDashboard({
         </div>
       )}
 
-      {/* Detailed Metrics */}
-      {metrics && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Performance Details */}
+      {/* Detailed, Metrics */}
+      {metrics && (<div className ="grid, grid-cols-1, lg:grid-cols-2, gap-6">
+          {/* Performance, Details */}
           <Card>
             <CardHeader>
-              <CardTitle>Performance Details</CardTitle>
-              <CardDescription>Core Web Vitals and performance metrics</CardDescription>
+              <CardTitle>Performance, Details</CardTitle>
+              <CardDescription>Core, Web Vitals, and performance, metrics</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">              <div className="flex justify-between items-center">
-                <span className="text-sm">Load Time</span>
-                <span className="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
+            <CardContent className ="space-y-4">              <div className ="flex, justify-between, items-center">
+                <span className ="text-sm">Load, Time</span>
+                <span className ="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm">First Contentful Paint</span>
@@ -492,7 +397,7 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
-          {/* Error Summary */}
+          {/* Error, Summary */}
           <Card>
             <CardHeader>
               <CardTitle>Error Summary</CardTitle>

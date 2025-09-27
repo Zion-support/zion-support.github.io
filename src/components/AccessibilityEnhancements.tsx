@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, Eye, MousePointer, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, t, y } from 'lucide-react';
-interface AccessibilitySettings {
-  fontSize: 'small' | 'medium' | 'large';
+import React, {useState, useEffect, useCallback } from 'react';
+import {motionAnimatePresence } from 'framer-motion';
+import {Volume2, Eye, MousePointer, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, ty } from 'lucide-react';
+interface AccessibilitySettings {fontSize: 'small' | 'medium' | 'large';
   contrast: 'normal' | 'high' | 'inverted';
   cursor: 'normal' | 'large' | 'extra-large';
   focus: 'normal' | 'enhanced' | 'high-contrast';
@@ -10,78 +9,61 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;}
 
-interface AccessibilityEnhancementsProps {
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
+interface AccessibilityEnhancementsProps {onSettingsChange?: (settings: AccessibilitySettings) => void;
   className?: string;
 }
 
 // Helper functions for score styling
-const getScoreBgColor = (score: number): string => {
-  if (score >= 90) return 'bg-green-1, 0, 0';
+const getScoreBgColor = (score: number): string => {if (score >= 90) return 'bg-green-1, 00';
   if (score >= 70) return 'bg-yellow-100';
-  return 'bg-red-1, 0, 0';
+  return 'bg-red-1, 00';
 };
 
-const getScoreColor = (score: number): string => {
-  if (score >= 90) return 'text-green-8, 0, 0';
-  if (score >= 70) return 'text-yellow-8, 0, 0';
-  return 'text-red-8, 0, 0';
+const getScoreColor = (score: number): string => {if (score >= 90) return 'text-green-8, 00';
+  if (score >= 70) return 'text-yellow-8, 00';
+  return 'text-red-8, 00';
 };
 
-export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({
-  onSettingsChange,
-  className = ''
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
-    contrast: 'normal',
-    cursor: 'normal',
-    focus: 'normal',
+export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({onSettingsChange, className = ''}) => {const [isOpen, setIsOpen] = useState(false);
+  const [settingssetSettings] = useState<AccessibilitySettings>({fontSize: 'medium'contrast: 'normal'cursor: 'normal'focus: 'normal',
     animations: true,
     screenRead, e, r: false,
     keyboardNavigati, o, n: true
   });
 
-  const [score, setSco, r, e] = useState(85);
+  const [score, setSco, re] = useState(85);
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-5, 0, 0';
-    if (score >= 70) return 'text-yellow-5, 0, 0';
-    if (score >= 50) return 'text-orange-5, 0, 0';
-    return 'text-red-5, 0, 0';
+  const getScoreColor = (score: number) => {if (score >= 90) return 'text-green-5, 0, 0';
+    if (score >= 70) return 'text-yellow-5, 00';
+    if (score >= 50) return 'text-orange-5, 00';
+    return 'text-red-5, 00';
   };
 
-  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings };
+  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     
-    if (onSettingsChange) {
-      onSettingsChange(updatedSettings);
+    if (onSettingsChange) {onSettingsChange(updatedSettings);
     }
   }, [settings, onSettingsChange]);
 
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.altKey && event.key === 'a') {
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {if (event.altKey && event.key === 'a') {
       event.preventDefault();
       setIsOpen(!isOpen);
     }
-  }, [isOpen]);
+  }[isOpen]);
 
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
+  useEffect(() => {document.addEventListener('keydown'handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
-  return (
-    <div className={`accessibili t y-enhancemen t s ${className}`}>
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-8, 0, 0 flex items-center">
-            <Accessibility className="w-5 h-5, m, r-2" />
-            Accessibility Enhancements
+  return (<div className ={`accessibili, t, y-enhancements ${className}`}>
+      <div className ="bg-white, rounded-lg, shadow-lg, p-6">
+        <div className ="flex, items-center, justify-between, mb-6">
+          <h3 className ="text-xl, font-semibold, text-gray-8, 0, 0, flex items-center">
+            <Accessibility className ="w-5, h-5, m, r-2" />
+            Accessibility, Enhancements
           </h3>
-          <div className={`px-4 py-2 round e d-lg ${getScoreBgCol o r(sco r e)}`}>
-            <span className={`te x t-lg fo n t-bo l d ${getScoreCol o r(sco r e)}`}>
+          <div className ={`px-4, py-2, rounded-lg ${getScoreBgColor(score)}`}>
+            <span className={`te, x t-lg, fo nt-bol d ${getScoreColor(score)}`}>
               {score}% Accessible            </span>
           </div>
         </div>
@@ -96,7 +78,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <Eye className="w-4 h-4 mr-3text-blue-500" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">High Contrast Mode</span>                </div>
                 <input
-                  type="checkbox" checked={features.highContra.s t}
+                  type="checkbox" checked={features.highContra.st}
                   onChange={() => toggleFeature('highContrast')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -106,7 +88,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <Volume2 className="w-4 h-4 mr-3te, x, t-green-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Large Text</span>                </div>
                 <input
-                  type="checkbox" checked={features.largeTe.x t}
+                  type="checkbox" checked={features.largeTe.xt}
                   onChange={() => toggleFeature('largeText')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -116,7 +98,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <MousePointer className="w-4 h-4 mr-3te, x, t-purple-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Reduced Motion</span>                </div>
                 <input
-                  type="checkbox" checked={features.reducedMoti.o n}
+                  type="checkbox" checked={features.reducedMoti.on}
                   onChange={() => toggleFeature('reducedMotion')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -126,7 +108,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <Keyboard className="w-4 h-4 mr-3te, x, t-orange-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Keyboard Navigation</span>                </div>
                 <input
-                  type="checkbox" checked={features.keyboardNavigati.o n}
+                  type="checkbox" checked={features.keyboardNavigati.on}
                   onChange={() => toggleFeature('keyboardNavigation')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -136,7 +118,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <Accessibility className="w-4 h-4 mr-3te, x, t-indigo-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Screen Reader Support</span>                </div>
                 <input
-                  type="checkbox" checked={features.screenRead.e r}
+                  type="checkbox" checked={features.screenRead.er}
                   onChange={() => toggleFeature('screenReader')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -146,7 +128,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <CheckCircle className="w-4 h-4 mr-3te, x, t-teal-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Focus Indicators</span>                </div>
                 <input
-                  type="checkbox" checked={features.focusIndicato.r s}
+                  type="checkbox" checked={features.focusIndicato.rs}
                   onChange={() => toggleFeature('focusIndicators')}
                   className="w-4 h-4 text-blue-6, 0, 0 rounded focus:ring-blue-5, 0, 0"
                 />              </label>
@@ -156,7 +138,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                   <Eye className="w-4 h-4 mr-3te, x, t-pink-5, 0, 0" />
                   <span className="text-sm font-medium text-gray-7, 0, 0">Color Blind Support</span>                </div>
                 <input
-                  type="checkbox" checked={features.colorBlindSuppo.r t}
+                  type="checkbox" checked={features.colorBlindSuppo.rt}
                   onChange={() => toggleFeature('colorBlindSupport')}
                   className="w-4 h-4 text-blue-6, 0, 0 roundedfocus:ring-blue-5, 0, 0"
                 />              </label>
@@ -165,25 +147,22 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
           <div>
             <h4 className="font-semibold text-gray-800, m, b-3">Recommendations</h4>
-            {recommendations.length > 0 ? (
-              <div className="space-y-2">
-                {recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start p-3 bg-yellow-50 border border-yellow-200rounded-lg">
-                    <AlertTriangle className="w-4 h-4 mr-2 text-yellow-5, 0, 0 mt-0.5fl, e, x-shrink-0" />
-                    <span className="text-smtext-yellow-8, 0, 0">{rec}</span>                  </div>
+            {recommendations.length > 0 ? (<div className ="space-y-2">
+                {recommendations.map((rec, index) => (<div key ={index} className="flex, items-start, p-3, bg-yellow-50, border border-yellow-200rounded-lg">
+                    <AlertTriangle className ="w-4, h-4, mr-2, text-yellow-5, 0, 0, mt-0.5fl, e, x-shrink-0" />
+                    <span className ="text-smtext-yellow-8, 0 : 0">{rec}</span>                  </div>
                 ))}
               </div>
-            ) : (
-              <div className="flex items-center p-4 bg-green-50 border border-green-200rounded-lg">
-                <CheckCircle className="w-5 h-5 mr-2te, x, t-green-5, 0, 0" />
-                <span className="text-sm font-medium text-green-8, 0, 0">                  All accessibility features are enabled! Great job!
+            )  : (<div className ="flex, items-center, p-4, bg-green-50, border border-green-200rounded-lg">
+                <CheckCircle className ="w-5, h-5, mr-2te, x, t-green-5, 0, 0" />
+                <span className ="text-sm, font-medium, text-green-8, 0, 0">                  All, accessibility features, are enabled! Great, job!
                 </span>
               </div>
             )}
           </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-blue-6, 0, 0 hover:bg-blue-7, 0, 0 text-white px-4 py-2 rounded-lg"
+            className="bg-blue-6, 0, 0 hover:bg-blue-7, 00 text-white px-4 py-2 rounded-lg"
           >
             {isOpen ? 'Close' : 'Open'} Settings
           </button>
@@ -201,25 +180,22 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
         </div>
 
         <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+          {isOpen && (<motion.div, initial ={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="space-y-6"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Visual Settings
+              <div className ="grid, grid-cols-1, md:grid-cols-2, gap-6">
+                <div className ="space-y-4">
+                  <h3 className ="text-lg, font-semibold, text-gray-900, dark:text-white">
+                    Visual, Settings
                   </h3>
                   
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Font Size</span>
-                      <select
-                        value={settings.fontSize}
-                        onChange={(e) => updateSettings({ fontSize: e.target.value as any })}
+                  <div className ="space-y-3">
+                    <div className ="flex, items-center, justify-between">
+                      <span className ="text-sm, text-gray-600">Font, Size</span>
+                      <select value ={settings.fontSize}
+                        onChange={(e) => updateSettings({fontSize: e.target.value, as, any })}
                         className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
                         <option value="small">Small</option>
@@ -232,7 +208,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                       <span className="text-sm text-gray-600">Contrast</span>
                       <select
                         value={settings.contrast}
-                        onChange={(e) => updateSettings({ contrast: e.target.value as any })}
+                        onChange={(e) => updateSettings({contrast: e.target.value, as, any })}
                         className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
                         <option value="normal">Normal</option>
@@ -245,7 +221,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                       <span className="text-sm text-gray-600">Cursor Size</span>
                       <select
                         value={settings.cursor}
-                        onChange={(e) => updateSettings({ cursor: e.target.value as any })}
+                        onChange={(e) => updateSettings({cursor: e.target.value, as, any })}
                         className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                       >
                         <option value="normal">Normal</option>
