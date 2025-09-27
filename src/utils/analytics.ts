@@ -8,7 +8,7 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-  customParameters?: Record<string, any>;
+  customParameters?: Record<string, unknown>;
   timestamp: string;
   userId?: string;
   sessionId: string;
@@ -53,7 +53,7 @@ export class AnalyticsManager {
     action: string,
     label?: string,
     value?: number,
-    customParameters?: Record<string, any>
+    customParameters?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
