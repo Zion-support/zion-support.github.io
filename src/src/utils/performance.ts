@@ -66,7 +66,10 @@ export const measureWebVitals = () => {
   const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries();
     entries.forEach((entry) => {
-      console.log('FID:', entry.processingStart - entry.startTime);
+      if ('processingStart' in entry) {
+        const processingStart = (entry as PerformanceEventTiming).processingStart;
+        console.log('FID:', processingStart - entry.startTime);
+      }
     });
   });
   
@@ -87,7 +90,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
