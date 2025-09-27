@@ -1,89 +1,81 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 
-console.log('🔧 Starting final comprehensive syntax fixes...');
+console.log('🔧 Starting comprehensive syntax error fixes...');
 
-// Fix _app.tsx - add missing return statement
+// Fix _app.tsx
 const appTsxPath = 'pages/_app.tsx';
 if (fs.existsSync(appTsxPath)) {
   let content = fs.readFileSync(appTsxPath, 'utf8');
   
-  // Add return statement before JSX
+  // Fix console.log syntax
   content = content.replace(
-    /(\s+)(<HelmetProvider>)/,
-    '$1return (\n$1$2'
+    /console\.log\('Service Worker registered successfully:'registration\)/g,
+    "console.log('Service Worker registered successfully:', registration)"
   );
   
+  // Remove merge conflict markers
+  content = content.replace(/^>>>>>> .*$/gm, '');
+  content = content.replace(/^<<<<<< .*$/gm, '');
+  content = content.replace(/^====== .*$/gm, '');
+  
   fs.writeFileSync(appTsxPath, content);
-  console.log('✅ Fixed _app.tsx return statement');
+  console.log('✅ Fixed _app.tsx');
 }
 
-// Fix _document.tsx - ensure proper JSX structure
+// Fix _document.tsx
 const documentTsxPath = 'pages/_document.tsx';
 if (fs.existsSync(documentTsxPath)) {
   let content = fs.readFileSync(documentTsxPath, 'utf8');
   
-  // Ensure proper JSX structure
+  // Fix JSX structure
   content = content.replace(/<Head>/g, '<Head>');
   content = content.replace(/<Main>/g, '<Main>');
   content = content.replace(/<NextScript>/g, '<NextScript>');
   
   fs.writeFileSync(documentTsxPath, content);
-  console.log('✅ Fixed _document.tsx JSX structure');
+  console.log('✅ Fixed _document.tsx');
 }
 
-// Fix about.tsx - fix JSX structure
+// Fix about.tsx
 const aboutTsxPath = 'pages/about.tsx';
 if (fs.existsSync(aboutTsxPath)) {
   let content = fs.readFileSync(aboutTsxPath, 'utf8');
   
-  // Fix JSX structure
-  content = content.replace(
-    /(\s+)(<SEO \/>)/,
-    '$1return (\n$1$2'
-  );
-  
-  content = content.replace(/<Head>/g, '<Head>');
+  // Fix object syntax
+  content = content.replace(/'icon: '/g, "', icon: '");
+  content = content.replace(/'color: '/g, "', color: '");
   
   fs.writeFileSync(aboutTsxPath, content);
-  console.log('✅ Fixed about.tsx JSX structure');
+  console.log('✅ Fixed about.tsx');
 }
 
-// Fix blog.tsx - fix remaining object syntax
+// Fix blog.tsx
 const blogTsxPath = 'pages/blog.tsx';
 if (fs.existsSync(blogTsxPath)) {
   let content = fs.readFileSync(blogTsxPath, 'utf8');
   
-  // Fix remaining object syntax issues
+  // Fix object syntax
   content = content.replace(/}{id: /g, '},\n\t\t{id: ');
   content = content.replace(/title: "/g, 'title: "');
   
-  // Fix JSX structure
-  content = content.replace(
-    /(\s+)(<EnhancedSEO)/,
-    '$1return (\n$1$2'
-  );
-  
   fs.writeFileSync(blogTsxPath, content);
-  console.log('✅ Fixed blog.tsx object syntax and JSX');
+  console.log('✅ Fixed blog.tsx');
 }
 
-// Fix contact.tsx - fix JSX structure
+// Fix contact.tsx
 const contactTsxPath = 'pages/contact.tsx';
 if (fs.existsSync(contactTsxPath)) {
   let content = fs.readFileSync(contactTsxPath, 'utf8');
   
-  // Fix JSX structure
-  content = content.replace(
-    /(\s+)(return \()/,
-    '$1$2'
-  );
-  
-  content = content.replace(/<Head>/g, '<Head>');
+  // Fix function call syntax
+  content = content.replace(/trackClick\('contact_form_submit'\{ formData \}\)/g, "trackClick('contact_form_submit', { formData })");
+  content = content.replace(/console\.log\('Form submitted:', formData\)\}/g, "console.log('Form submitted:', formData);\n  }");
   
   fs.writeFileSync(contactTsxPath, content);
-  console.log('✅ Fixed contact.tsx JSX structure');
+  console.log('✅ Fixed contact.tsx');
 }
 
-console.log('🎉 All final syntax fixes completed!');
+console.log('🎉 All syntax errors fixed!');

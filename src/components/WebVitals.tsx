@@ -1,121 +1,37 @@
-
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface WebVitalsMetric {
-	name: string;
-	value: number;
-	delta: number;
-	id: string;
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
 }
 
-interface WebVitalsProps {
-	onMetric?: (metric: WebVitalsMetric) => void;
+export function reportWebVitals(metric: WebVitalsMetric) {
+  // Send to analytics service
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), // values must be integers
+      non_interaction: true, // avoids affecting bounce rate
+      metric_id: metric.id, // Google Analytics 4 uses 'metric_id'
+      metric_value: metric.value,
+      metric_delta: metric.delta,
+      navigation_type: metric.navigationType,
+    });
+  }
+  console.log('[Web Vitals]', metric);
 }
 
-export default function WebVitals({ onMetric }: WebVitalsProps) {
-	useEffect(() => {
-		if (typeof window === 'undefined') return;
-
-		const getCLS = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-			let clsValue = 0;
-			let clsEntries: PerformanceEntry[] = [];
-			let sessionValue = 0;
-			let sessionEntries: PerformanceEntry[] = [];
-
-			new PerformanceObserver((entryList) => {
-				for (const entry of entryList.getEntries()) {
-					if (!entry.hadRecentInput) {
-						const firstSessionEntry = sessionEntries[0];
-						const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
-
-						if (sessionValue && entry.startTime - lastSessionEntry.startTime < 1000 && entry.startTime - firstSessionEntry.startTime < 5000) {
-							sessionValue += entry.value;
-							sessionEntries.push(entry);
-						} else {
-							sessionValue = entry.value;
-							sessionEntries = [entry];
-						}
-
-						if (sessionValue > clsValue) {
-							clsValue = sessionValue;
-							clsEntries = [...sessionEntries];
-						}
-					}
-				}
-
-				onPerfEntry?.({
-					name: 'CLS',
-					value: clsValue,
-					delta: clsValue,
-					id: `cls-${Date.now()}`
-				});
-			}).observe({ type: 'layout-shift', buffered: true });
-		};
-
-		const getFID = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-			new PerformanceObserver((entryList) => {
-				for (const entry of entryList.getEntries()) {
-					onPerfEntry?.({
-						name: 'FID',
-						value: entry.processingStart - entry.startTime,
-						delta: entry.processingStart - entry.startTime,
-						id: `fid-${Date.now()}`
-					});
-				}
-			}).observe({ type: 'first-input', buffered: true });
-		};
-
-		const getFCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-			new PerformanceObserver((entryList) => {
-				for (const entry of entryList.getEntries()) {
-					if (entry.name === 'first-contentful-paint') {
-						onPerfEntry?.({
-							name: 'FCP',
-							value: entry.startTime,
-							delta: entry.startTime,
-							id: `fcp-${Date.now()}`
-						});
-					}
-				}
-			}).observe({ type: 'paint', buffered: true });
-		};
-
-		const getLCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-			new PerformanceObserver((entryList) => {
-				const entries = entryList.getEntries();
-				const lastEntry = entries[entries.length - 1];
-				onPerfEntry?.({
-					name: 'LCP',
-					value: lastEntry.startTime,
-					delta: lastEntry.startTime,
-					id: `lcp-${Date.now()}`
-				});
-			}).observe({ type: 'largest-contentful-paint', buffered: true });
-		};
-
-		const getTTFB = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
-			new PerformanceObserver((entryList) => {
-				for (const entry of entryList.getEntries()) {
-					if (entry.entryType === 'navigation') {
-						onPerfEntry?.({
-							name: 'TTFB',
-							value: entry.responseStart - entry.fetchStart,
-							delta: entry.responseStart - entry.fetchStart,
-							id: `ttfb-${Date.now()}`
-						});
-					}
-				}
-			}).observe({ type: 'navigation', buffered: true });
-		};
-
-		// Initialize all metrics
-		getCLS(onMetric);
-		getFID(onMetric);
-		getFCP(onMetric);
-		getLCP(onMetric);
-		getTTFB(onMetric);
-	}, [onMetric]);
-
-	return null; // This component doesn't render anything
+// This component is primarily for Next.js's custom App component to hook into Web Vitals reporting.
+// It doesn't render anything itself.
+export default function WebVitals() {
+  useEffect(() => {
+    // You can also set up other Web Vitals reporting here if needed,
+    // but Next.js's built-in reportWebVitals function is usually sufficient
+    // when passed to the App component.
+  }, []);
+  return null;
 }
-
