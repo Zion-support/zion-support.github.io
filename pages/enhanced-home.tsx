@@ -1,29 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Home(): React.ReactElement {
-  const [isVisible, setIsVisible] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const { trackClick } = useAnalytics();
-
-  // const handleSelectPlan = (tierId: string) => {
-  //   trackClick(`select-plan-${tierId}`, 'conversion');
-  //   console.log('Selected plan:', tierId);
-  // };
-
-  // const handleReadMore = (slug: string) => {
-  //   trackClick(`read-blog-${slug}`, 'engagement');
-  //   console.log('Read more:', slug);
-  // };
+export default function Home(): JSX.Element {
+  // Removed unused state and handlers
 
   const features = [
     {
@@ -86,17 +67,17 @@ export default function Home(): React.ReactElement {
           <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <div className="text-center">
-                <h1 className={`text-4xl md:text-6xl font-bold text-gray-900 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                   Advanced Technology
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                     Solutions
                   </span>
                 </h1>
-                <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Transform your business with cutting-edge AI cloud computing and digital solutions. 
                   We deliver innovative technology that drives growth and efficiency.
                 </p>
-                <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/services" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                     Explore Services
                   </Link>
@@ -169,7 +150,6 @@ export default function Home(): React.ReactElement {
                   Join hundreds of companies that have already revolutionized their operations with our technology solutions.
                 </p>
                 <button 
-                  onClick={() => trackClick('final-cta', 'conversion')}
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey Today

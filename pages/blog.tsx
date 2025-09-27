@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Blog(): React.ReactElement {
+export default function Blog(): JSX.Element {
   const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
   const { trackClick } = useAnalytics();
 

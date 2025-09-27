@@ -3,9 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 
-export default function Portfolio(): React.ReactElement {
+export default function Portfolio(): JSX.Element {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  // Removed unused visibility state
 
+  // Removed unused analytics hook
 
   const projects = [
     {
@@ -65,7 +67,7 @@ export default function Portfolio(): React.ReactElement {
 
           <main>
             {/* Stats Section */}
-            <section className="mb-16 transition-all duration-700 delay-100 opacity-100 translate-y-0">
+            <section className="mb-16">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">

@@ -4,6 +4,9 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 
 export default function PrivacyPolicy(): JSX.Element {
+  // Removed unused visibility state
+
+  // Removed unused analytics hook
 
   const sections = [
     {

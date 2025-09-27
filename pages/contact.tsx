@@ -13,6 +13,7 @@ export default function Contact(): JSX.Element {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Removed unused visibility state
 
   const { trackClick } = useAnalytics();
 

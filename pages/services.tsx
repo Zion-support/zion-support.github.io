@@ -5,6 +5,8 @@ import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
+  // Removed unused visibility state
+
   const { trackClick } = useAnalytics();
 
   const serviceDetails = {

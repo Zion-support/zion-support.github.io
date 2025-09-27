@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 
 const About = (): JSX.Element => {
+  // Removed unused state and analytics hook
 
   const teamMembers = [
     {

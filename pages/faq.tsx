@@ -3,9 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function FAQ(): React.ReactElement {
+export default function FAQ(): JSX.Element {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState(new Set());
+  // Removed unused visibility state
 
   const { trackClick } = useAnalytics();
 

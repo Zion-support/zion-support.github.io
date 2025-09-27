@@ -1,24 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-// import Link from 'next/link';
-// import dynamic from 'next/dynamic';
 import SEO from '../src/components/SEO';
 
-// Lazy load heavy components
-// const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
-//   ssr: false
-// });
-
-const Home = React.memo(function Home(): React.ReactElement {
-  // const [isVisible, setIsVisible] = useState(false);
-  // const [performanceMetrics, setPerformanceMetrics] = useState(null);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const heroRef = useRef(null);
-  // const featuresRef = useRef(null);
-
-  // useEffect(() => {
-  //   setIsLoading(false);
-  // }, []);
+const Home = React.memo(function Home(): JSX.Element {
 
   return (
     <>
