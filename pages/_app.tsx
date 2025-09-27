@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
-import { HelmetProvider   } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
@@ -63,7 +63,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Zion App" />
             <meta name="theme-color" content="#2563eb" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link rel="manifest" href="/site.webmanifest" />
@@ -74,7 +74,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="apple-touch-icon" href="/icon-192x192.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-			</Head>
+      </Head>
       <style jsx global>{`
         * {
           box-sizing: border-box;

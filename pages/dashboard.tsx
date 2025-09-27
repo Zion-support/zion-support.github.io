@@ -40,9 +40,9 @@ export default function Dashboard(): JSX.Element {
         return <EnhancedDashboard />;
       case 'search':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-            <div className="max-w-2xl">
+      <div className="max-w-2xl">
               {/* <EnhancedSearch 
                 onSearch={(query, results) => console.log('Search:', query, results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
@@ -55,10 +55,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'advanced-analytics':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -78,55 +78,52 @@ export default function Dashboard(): JSX.Element {
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Total Users</p>
                     <p className="text-2 xl font-bold text-gray-900">1,234</p>
                   </div>
-                  <div className="bg-blue-100 p-3 rounded-full">
+      <div className="bg-blue-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                     </svg>
                   </div>
                 </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Active Sessions</p>
                     <p className="text-2 xl font-bold text-gray-900">567</p>
                   </div>
-                  <div className="bg-green-100 p-3 rounded-full">
+      <div className="bg-green-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
                 </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Revenue</p>
                     <p className="text-2 xl font-bold text-gray-900">$12,345</p>
                   </div>
-                  <div className="bg-yellow-100 p-3 rounded-full">
+      <div className="bg-yellow-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
                   </div>
                 </div>              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between">
+      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Conversion Rate</p>
                     <p className="text-2 xl font-bold text-gray-900">3.2%</p>
                   </div>
-                  <div className="bg-purple-100 p-3 rounded-full">
+      <div className="bg-purple-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
@@ -136,17 +133,16 @@ export default function Dashboard(): JSX.Element {
             </div>
 
             {/* Charts Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">User Activity</h3>
-                <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
                   <p className="text-gray-500">Chart placeholder</p>
                 </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
-                <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+      <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
                   <p className="text-gray-500">Chart placeholder</p>
                 </div>              </div>
             </div>
@@ -160,18 +156,18 @@ export default function Dashboard(): JSX.Element {
         );
       case 'security-enhancements':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */}
-            <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
+      <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
           </div>
         );
       case 'new-performance':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -194,10 +190,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'new-security':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Security Monitor</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -224,10 +220,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'performance-optimizer':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -241,10 +237,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'new-analytics':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -271,24 +267,24 @@ export default function Dashboard(): JSX.Element {
         );
       case 'error-monitoring':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Error Handler</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -310,10 +306,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'performance-optimizer':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -327,10 +323,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'analytics-insights':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Analytics Insights</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -383,15 +379,15 @@ export default function Dashboard(): JSX.Element {
               refreshInterval={30000}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
+      <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
         );
       case 'comprehensive-monitoring':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Comprehensive Monitoring</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -409,10 +405,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'comprehensive-security':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Comprehensive Security</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -430,10 +426,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'error-monitoring':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced Error Monitoring</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -447,10 +443,10 @@ export default function Dashboard(): JSX.Element {
         );
       case 'advanced-system-monitor':
         return (
-          <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
+      <div className="p-8">
+      <div className="flex justify-between items-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900">Advanced System Monitor</h1>
-              <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
                 <button 
                   onClick={() => window.location.reload()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -465,9 +461,9 @@ export default function Dashboard(): JSX.Element {
 
       case 'analytics':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
+      <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Analytics features coming soon...</p>
             </div>
           </div>
@@ -475,9 +471,9 @@ export default function Dashboard(): JSX.Element {
 
       case 'performance':
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
+      <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Performance monitoring features coming soon...</p>
             </div>
           </div>
@@ -485,9 +481,9 @@ export default function Dashboard(): JSX.Element {
 
       default:
         return (
-          <div className="p-8">
+      <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
-            <div className="bg-white rounded-xl shadow-lg p-8">
+      <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
@@ -505,13 +501,13 @@ export default function Dashboard(): JSX.Element {
       <div className="min-h-screen bg-gray-50">
         {/* Navigation */}
         <nav className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex">
-                <div className="flex-shrink-0 flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between h-16">
+      <div className="flex">
+      <div className="flex-shrink-0 flex items-center">
                   <h1 className="text-xl font-bold text-gray-900">Zion Dashboard</h1>
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+      <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   <button
                     onClick={() => handleTabChange('overview')}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
@@ -550,8 +546,8 @@ export default function Dashboard(): JSX.Element {
 
         {/* Footer */}
         <footer className="bg-white border-t">
-          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
               </div>

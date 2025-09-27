@@ -74,13 +74,12 @@ export default function Home(): JSX.Element {
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
+      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
         </div>
-
-        <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
           {/* Hero Section */}
           <header className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h1 className="text-5xl md:text-7xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
@@ -89,7 +88,7 @@ export default function Home(): JSX.Element {
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
               Advanced Technology Solutions for Modern Businesses
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => trackClick('hero-cta-primary', 'conversion')}
                 className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
@@ -162,5 +161,5 @@ export default function Home(): JSX.Element {
 					</secti, o, n>
 				</d, i, v>
 			</d, i, v>
-		</>
+    </>
 	)};

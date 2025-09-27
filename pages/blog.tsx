@@ -92,15 +92,15 @@ export default function Blog(): JSX.Element {
 		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
 
 	return (
-		<>
-			{/* <EnhancedSEO title="Blog - Zion Tech Solutions"
+    <>
+      {/* <EnhancedSEO title="Blog - Zion Tech Solutions"
 				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
 				keywords={["Technology Blog", "AI Insights", "Cloud Computing", "Digital Transformation", "Tech Trends"]}
 				url="https://zion.app/blog"
 				type="website"
 			/> */}
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
