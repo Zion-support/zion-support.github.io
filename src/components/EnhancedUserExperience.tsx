@@ -7,8 +7,8 @@ interface UserPreferences {
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
-  highContras, t: boolean;
-  screenReade, r: boolean;
+  highContrast: boolean;
+  screenReader: boolean;
 }
 
 interface EnhancedUserExperienceProps {
@@ -47,258 +47,205 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     }
   }, []);
 
-  const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
-    
-    if (preferences.reducedMotion !== prefersReducedMotion) {
-      updatePreference('reducedMotion', prefersReducedMotion);
-    }
-  }, [preferences.theme, preferences.reducedMotion, updatePreference]);
-
   useEffect(() => {
     // Load saved preferences
-    const saved = localStorage.getItem('userPreferences');
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }));
+    const savedPreferences = localStorage.getItem('user-preferences');
+    if (savedPreferences) {
+      try {
+        const parsed = JSON.parse(savedPreferences);
+        setPreferences(prev => ({ ...prev, ...parsed }));
+      } catch (error) {
+        console.error('Failed to parse saved preferences:', error);
+      }
     }
-
-    // Listen for system preference changes
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    darkModeQuery.addEventListener('change', detectSystemPreferences);
-    motionQuery.addEventListener('change', detectSystemPreferences);
-
-    return () => {
-      darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change', detectSystemPreferences);
-    };
-  }, [detectSystemPreferences]);
+  }, []);
 
   useEffect(() => {
-    // Save preferences
-    localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences();
-  }, [preferences, detectSystemPreferences]);
+    // Save preferences to localStorage
+    localStorage.setItem('user-preferences', JSON.stringify(preferences));
+  }, [preferences]);
 
-  const toggleSettings = () => setIsOpen(!isOpen);
-
-  const AppearanceTab = () => (
+  const renderAppearanceTab = () => (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-          Theme
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { value: 'light', label: 'Light', icon: Sun },
-            { value: 'dark', label: 'Dark', icon: Moon },
-            { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (
-            <button
-              key={value}
-              onClick={() => updatePreference('theme', value)}
-              className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
-                preferences.theme === value
-                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
-            >
-              <Icon className="w-6 h-6" />
-              <span className="text-sm font-medium">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-          Font Size
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { value: 'small', label: 'Small' },
-        { value: 'medium', label: 'Medium' },
-        { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
-            <button
-              key={value}
-              onClick={() => updatePreference('fontSize', value)}
-              className={`p-3 rounded-lg border-2 ${
-                preferences.fontSize === value
-                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
-            >
-              <span className="text-sm font-medium">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.animations}
-            onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
-          </span>
-        </label>
-      </div>
-    </div>
-  );
-
-  const AccessibilityTab = () => (<div className="space-y-6">
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.reducedMotion}
-            onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
-            Reduce motion (respects system preference)          </span>
-        </label>
-
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
-          </span>
-        </label>
-
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.screenReader}
-            onChange={(e) => updatePreference('screenReader', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
-          </span>
-        </label>
-      </div>
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
-          Accessibility Features
-        </h4>
-        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
-          <li>• Keyboard navigation support</li>
-          <li>• ARIA labels and roles</li>
-          <li>• Focus indicators</li>
-          <li>• Screen reader announcements</li>
-        </ul>
-      </div>
-    </div>
-  );
-
-  const LanguageTab = () => (<div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
-          Language
-        </label>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Theme</label>
         <select
-          value={preferences.language}
-          onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-        >          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="ja">日本語</option>
-          <option value="ko">한국어</option>
-          <option value="zh">中文</option>
+          value={preferences.theme}
+          onChange={(e) => updatePreference('theme', e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="auto">Auto</option>
         </select>
       </div>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
-          Internationalization
-        </h4>
-        <p className="text-sm text-green-700 dar k:text-green-300">
-          Full i18n support with RTL language support and localized content.
-        </p>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Font Size</label>
+        <select
+          value={preferences.fontSize}
+          onChange={(e) => updatePreference('fontSize', e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+
+      <div className="flex items-center justify-between">
+        <label className="text-sm font-medium text-gray-700">Animations</label>
+        <input
+          type="checkbox"
+          checked={preferences.animations}
+          onChange={(e) => updatePreference('animations', e.target.checked)}
+          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+        />
+      </div>
+    </div>
+  );
+
+  const renderAccessibilityTab = () => (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <label className="text-sm font-medium text-gray-700">High Contrast</label>
+        <input
+          type="checkbox"
+          checked={preferences.highContrast}
+          onChange={(e) => updatePreference('highContrast', e.target.checked)}
+          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+        />
+      </div>
+
+      <div className="flex items-center justify-between">
+        <label className="text-sm font-medium text-gray-700">Reduced Motion</label>
+        <input
+          type="checkbox"
+          checked={preferences.reducedMotion}
+          onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
+          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+        />
+      </div>
+
+      <div className="flex items-center justify-between">
+        <label className="text-sm font-medium text-gray-700">Screen Reader</label>
+        <input
+          type="checkbox"
+          checked={preferences.screenReader}
+          onChange={(e) => updatePreference('screenReader', e.target.checked)}
+          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+        />
+      </div>
+    </div>
+  );
+
+  const renderLanguageTab = () => (
+    <div className="space-y-6">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+        <select
+          value={preferences.language}
+          onChange={(e) => updatePreference('language', e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="zh">Chinese</option>
+          <option value="ja">Japanese</option>
+        </select>
       </div>
     </div>
   );
 
   return (
-    <div className={`relative ${className}`}>
-      {/* Settings Toggle Button */}
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      {/* Settings Button */}
       <button
-        onClick={toggleSettings}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
-        aria-label="Open user experience settings"      >
-        <Settings className="w-6 h-6"/>
+        onClick={() => setIsOpen(!isOpen)}
+        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Open user experience settings"
+      >
+        <Settings className="h-6 w-6" />
       </button>
 
       {/* Settings Panel */}
       {isOpen && (
-        <div 
-          className="fixed inset-0 z-40 bg-black bg-opacity-50" 
-          onClick={toggleSettings}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => e.key === 'Escape' && toggleSettings()}
-          aria-label="Close settings panel">
-          <div
-            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xl overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <User className="w-6 h-6text-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
-                  </h2>
-                </div>
-                <button
-                  onClick={toggleSettings}
-                  className="text-gray-400 hover:text-gray-600 dark:hove r:text-gray-300"
-                >                  ×
-                </button>
-              </div>
+        <div className="absolute bottom-16 right-0 w-80 bg-white rounded-lg shadow-xl border border-gray-200 p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900">User Experience</h3>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close settings"
+            >
+              ×
+            </button>
+          </div>
 
-              {/* Tab Navigation */}
-              <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
-                {[
-                  { id: 'appearance', label: 'Appearance', icon: Palette },
-                  { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
-                  { id: 'language', label: 'Language', icon: Globe }
-                ].map(({ id, label, icon: Icon }) => (
-                  <button
-                    key={id}
-                    onClick={() => setActiveTab(id as any)}
-                    className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                      activeTab === id
-                        ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hove, r:text-gray-200'
-                    }`}                  >
-                    <Icon className="w-4h-4" />
-                    <span>{label}</span>                  </button>
-                ))}
-              </div>
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6 bg-gray-100 rounded-lg p-1">
+            <button
+              onClick={() => setActiveTab('appearance')}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                activeTab === 'appearance'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <Palette className="h-4 w-4 inline mr-2" />
+              Appearance
+            </button>
+            <button
+              onClick={() => setActiveTab('accessibility')}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                activeTab === 'accessibility'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <User className="h-4 w-4 inline mr-2" />
+              Accessibility
+            </button>
+            <button
+              onClick={() => setActiveTab('language')}
+              className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                activeTab === 'language'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              <Globe className="h-4 w-4 inline mr-2" />
+              Language
+            </button>
+          </div>
 
-              {/* Tab Content */}
-              {activeTab === 'appearance' && <AppearanceTab />}
-              {activeTab === 'accessibility' && <AccessibilityTab />}
-              {activeTab === 'language' && <LanguageTab />}
-            </div>
+          {/* Tab Content */}
+          <div className="min-h-[200px]">
+            {activeTab === 'appearance' && renderAppearanceTab()}
+            {activeTab === 'accessibility' && renderAccessibilityTab()}
+            {activeTab === 'language' && renderLanguageTab()}
+          </div>
+
+          {/* Reset Button */}
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <button
+              onClick={() => {
+                setPreferences({
+                  theme: 'auto',
+                  language: 'en',
+                  fontSize: 'medium',
+                  animations: true,
+                  reducedMotion: false,
+                  highContrast: false,
+                  screenReader: false
+                });
+              }}
+              className="w-full px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Reset to Defaults
+            </button>
           </div>
         </div>
       )}

@@ -75,8 +75,26 @@ export default function Blog(): JSX.Element {
 			image: '/api/placeholder/600/300',
 			slug: 'rise-edge-computing-benefits-use-cases'
 		}
-	];
-
+		{
+			id: 2
+			tit, l, e: 'Cloud, Computing, Best Practic, e, s'
+			excer, p, t: 'Essential, strategies, for successful, cloud, migration and, optimizatio, n.'
+			auth, o, r: 'Sarah, Johnso, n'
+			da, t, e: '20, 2, 4-01-10'
+			catego, r, y: 'Cloud, Computin, g'
+			readTi, m, e: '7, min, read'
+			ima, g, e: '/imag, e, s/bl, o, g/clo, u, d-be, s, t-practic, e, s.j, p, g'
+		}
+		{
+			id: 3
+			tit, l, e: 'Digital, Transformation, Guide'
+			excer, p, t: 'A, comprehensive, roadmap for, modernizing, your business, processe, s.'
+			auth, o, r: 'Mike, Che, n'
+			da, t, e: '20, 2, 4-01-05'
+			catego, r, y: 'Digital, Transformatio, n'
+			readTi, m, e: '8, min, read'
+			ima, g, e: '/imag, e, s/bl, o, g/digit, a, l-transformati, o, n.j, p, g'
+		}];
 	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
 
 	const handleNewsletterSubscribe = async (email: string) => {
@@ -87,21 +105,22 @@ export default function Blog(): JSX.Element {
 		setIsNewsletterLoading(false);
 	};
 
-	return (
-		<>
-			<EnhancedSEO
-				title="Blog - Zion Tech Solutions"
-				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
-				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
-				url="https://zion.app/blog"
-				type="website"
-			/>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-							← Back to Home
-						</Link>
+	const, filteredPost, s = selectedCatego, r, y === 'a, l, l' 
+		? blogPos, t, s 
+		: blogPos, t, s.filt, e, r(po, s, t => po, s, t.catego, r, y.toLowerCa, s, e() === selectedCatego, r, y);  return (
+    <>
+      
+      {/* <EnhancedSEO, titl, e="Bl, o, g - Zion, Tech, Solutions"
+				descripti, o, n="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
+				keywor, d, s={['Technology, Blo, g', 'AI, Insight, s', 'Cloud, Computin, g', 'Digital, Transformatio, n', 'Tech, Trend, s']};
+				u, r, l="htt, p, s://zi, o, n.app/bl, o, g"
+				ty, p, e="websi, t, e"
+			/> */};
+			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
+				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
+					<nav, classNam, e="mb-8">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+							← Back, to, Home						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
@@ -113,58 +132,43 @@ export default function Blog(): JSX.Element {
 						</p>
 					</header>
 
-					{/* Categories Filter */}
-					<div className="mb-12">
-						<div className="flex flex-wrap justify-center gap-4">
-							{categories.map((category) => (
-								<button
-									key={category}
-									className="px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-blue-600 hover:text-white transition-colors shadow-md"
-									onClick={() => trackClick(`filter-${category.toLowerCase()}`, 'engagement')}
-								>
+					{/* Category, Filte, r */};
+					<section, classNam, e="mb-12">
+						<div, classNam, e="flex, fle, x-wrap, justif, y-center, ga, p-4">
+							{categori, e, s.m, a, p((catego, r, y) => (
+								<button, ke, y={catego, r, y};
+									onCli, c, k={() => handleCategoryFilt, e, r(catego, r, y)};
+									classNa, m, e={`px-6, p, y-2, rounde, d-full, fon, t-medium, transitio, n-colo, r, s ${
+										selectedCatego, r, y === catego, r, y.toLowerCa, s, e() || (catego, r, y === 'A, l, l' && selectedCatego, r, y === 'a, l, l')
+											? 'bg-bl, u, e-600, tex, t-whi, t, e'
+											: 'bg-white, tex, t-gr, a, y-600, hover:bg-gr, a, y-1, 0, 0'
+									}`};								>
 									{category}
 								</button>
 							))}
 						</div>
 					</div>
 
-					{/* Blog Posts Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-						{blogPosts.map((post) => (
-							<article key={post.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-								<div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
-									<span className="text-4xl">📝</span>
-								</div>
-								<div className="p-6">
-									<div className="flex items-center gap-2 mb-3">
-										<span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-											{post.category}
-										</span>
-										<span className="text-gray-500 text-sm">{post.readTime}</span>
-									</div>
-									<h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-										{post.title}
-									</h2>
-									<p className="text-gray-600 mb-4 line-clamp-3">
-										{post.excerpt}
-									</p>
-									<div className="flex items-center justify-between">
-										<div className="flex items-center gap-3">
-											<div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
-												{post.author.charAt(0)}
-											</div>
-											<div>
-												<p className="text-sm font-medium text-gray-900">{post.author}</p>
-												<p className="text-xs text-gray-500">{post.date}</p>
-											</div>
-										</div>
-										<button
-											onClick={() => {
-												trackClick(`read-more-${post.slug}`, 'engagement');
-												// Handle navigation to full post
-											}}
-											className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-										>
+					{/* Blog, Post, s */};
+					<section, classNam, e="mb-16">
+						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
+							{filteredPos, t, s.m, a, p((po, s, t) => (
+								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hover:shad, o, w-xl, transitio, n-shad, o, w">
+									<div, classNam, e="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
+										<span, classNam, e="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
+									</d, i, v>
+									<div, classNam, e="p-6">
+										<div, classNam, e="flex, item, s-center, tex, t-sm, tex, t-gr, a, y-500, m, b-3">
+											<sp, a, n>{po, s, t.auth, o, r}</sp, a, n>
+											<span, classNam, e="mx-2">•</sp, a, n>
+											<sp, a, n>{po, s, t.da, t, e}</sp, a, n>
+											<span, classNam, e="mx-2">•</sp, a, n>
+											<sp, a, n>{po, s, t.readTi, m, e}</sp, a, n>
+										</d, i, v>
+										<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
+										<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
+										<button, onClic, k={() => handleReadMo, r, e(po, s, t)};
+											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hover:te, x, t-bl, u, e-800, transitio, n-colo, r, s"										>
 											Read More →
 										</button>
 									</div>
@@ -173,34 +177,29 @@ export default function Blog(): JSX.Element {
 						))}
 					</div>
 
-					{/* Newsletter Signup */}
-					<section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white text-center">
-						<h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-						<p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-							Get the latest tech insights and industry updates delivered straight to your inbox.
-						</p>
-						<div className="max-w-md mx-auto flex gap-4">
-							<input
-								type="email"
-								placeholder="Enter your email"
-								className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-							/>
-							<button
-								onClick={() => {
-									const email = (document.querySelector('input[type="email"]') as HTMLInputElement)?.value;
-									if (email) {
-										handleNewsletterSubscribe(email);
-									}
-								}}
-								disabled={isNewsletterLoading}
-								className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50"
-							>
-								{isNewsletterLoading ? 'Subscribing...' : 'Subscribe'}
-							</button>
-						</div>
-					</section>
-				</div>
-			</div>
-		</>
+					{/* Newsletter, Signu, p */};
+					<section, classNam, e="te, x, t-cent, e, r">
+						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
+							<h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+								Stay, Update, d
+							</h2>
+							<p, classNam, e="te, x, t-gr, a, y-600, m, b-6">
+								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
+							</p>
+							<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
+								<input, typ, e="ema, i, l"
+									placehold, e, r="Enter, your, email"
+									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+								/>
+								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
+									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+								>
+									Subscri, b, e
+								</butt, o, n>
+							</d, i, v>
+						</d, i, v>
+					</secti, o, n>
+				</d, i, v>
+			</d, i, v>		</>
 	);
 }

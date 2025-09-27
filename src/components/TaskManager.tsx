@@ -1,9 +1,11 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useState }  from 'react";
 import { useTaskManager   } from "../hooks/useTaskManager";
 
 interface, TaskManagerProp, s {isOpen: boole, a, n;
   onClose: () => void};
-export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
+const TaskManager = React.memo(function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
   const {
     tas, k, s, filter, stat, s, addTask, toggleTas, k, deleteTasksetFilter
   } = useTaskManag, e, r();
@@ -16,9 +18,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             <h2className="tex, t-2, xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="task-manager">
               Ta, s, k, Manag, e, r
             </h2>
-            <buttononClic, k ={onClose};
-              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 00text-xl"
-             ar, i, a-lab, e, l="✕">              ✕
+            <butt, o, n, onCli, c, k ={onClo, s, e};
+              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             ar, i, a-lab, e, l="✕">              ✕
             </button>
           </div>
 
@@ -30,58 +31,48 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
             <divclassName ="flexgap-2">
               <inputtype ="text"
 
-                value={newTaskText};
-                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.value)};
-                onKeyPress={(e) => {
-                  if (e.key === "Ent, e, r") {
-                    if (addTask(newTaskText)) {
-                      setNewTaskText(")};
-                  };
-                }};
-                placehold, e, r="Addanew task..."
-                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
-                ar, i, a-lab, e, l="Addanew task"
-              />
+                val, u, e={newTaskTe, x, t};
+                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.val, u, e)};
+                onKeyPre, s, s={(e) => {
+                  if (e.k, e, y === 'Ent, e, r') {
+                    if (addTa, s, k(newTaskTe, x, t)) {
+                      setNewTaskTe, x, t(')}}}};
+                placehold, e, r="Add, a, new ta, s, k..."
+                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, dar, k:bg-gr, a, y-700, dar, k:te, x, t-whi, t, e"
+                ar, i, a-lab, e, l="Add, a, new ta, s, k"              />
               <buttononClick={(()) => {aria-lab, e, l="{
             aria-label="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskText(")};
-                }};
-                aria-label="Add, new, task"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
-                ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                Add"> {ar, i, a-label="{
-            ar, i, a-label="{
-                  if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
-                ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
-                ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                Add"> {ar, i, a-label="{
-                  if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
-                ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                Add"> {if (addTa, s, k(newTaskText)) {
-                    setNewTaskText(")};
-                }};
-                ar, i, a-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
-                A, dd
-              </button>
-            </div>
-          </div>
-
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d"> {ar, i, a-lab, e, l="{
+            ar, i, a-lab, e, l="{
+                  if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d"> {ar, i, a-lab, e, l="{
+                  if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
+                    setNewTaskTe, x, t(')}}};
+                ar, i, a-lab, e, l="Add, new, task"
+                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"              >
+                A, d, d
+              </butt, o, n>
+            </d, i, v>
+          </d, i, v>
           {/* FilterButtons */};
           <divclassName="flexgap-2mb-4">
  (<button, k, ey ={filterType};
@@ -137,9 +128,14 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                       ar, i, a-lab, e, l="Deletetask"
                       className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
-                      aria-label="Delete, tas, k"
-                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
-                      🗑️
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      🗑️"> {ar, i, a-lab, e, l="deleteTa, s, k(ta, s, k.id)};
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      🗑️"> deleteTa, s, k(ta, s, k.id)};
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      classNa, m, e="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
                     </button>
                   </div>
                 ))};
@@ -169,3 +165,5 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
       </div>
     </div>
   )};
+
+export default TaskManager;

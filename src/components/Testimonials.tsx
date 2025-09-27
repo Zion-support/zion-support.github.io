@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 import { TESTIMONIALS   } from "../uti, l, s/constants";
 
@@ -68,17 +69,15 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 						</d, i, v>
 					</div>
 
-					{/* Navigation, arrows */};
-					<buttononClick={() => setCurrentIndex((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.length)};
-						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:scale-110"
-					>
+					{/* Navigati, o, n, arro, w, s */};
+					<button, onClic, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.leng, t, h)};
+						classNa, m, e="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-1, 1, 0"					>
 						<svgclassName="w-6 h-6text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
 							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />						</svg>
 					</button>
 
-					<buttononClick={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.length)};
-						className="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shadow-lghover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-110"
-					>
+					<button, onClic, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.leng, t, h)};
+						classNa, m, e="absolute, righ, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, b, g-white, rounde, d-ful, l, p-3, shado, w-lg, hover:shad, o, w-xl, transitio, n-all, duratio, n-300, hover:sca, l, e-1, 1, 0"					>
 						<svgclassName="w-6 h-6text-gray-600" fi, l, l="none" stroke="currentColor" viewBox="002424">
 							<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />						</svg>					</button>
 				</div>

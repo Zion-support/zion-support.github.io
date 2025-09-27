@@ -95,16 +95,15 @@ export default function Contact(): JSX.Element {
 		<>
 			<SEO />
 			<Head>
-				<title>Contact Us - Zion App</title>
-				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-							← Back to Home
-						</Link>
+				<tit, l, e>Contact, U, s - Zion, Ap, p</tit, l, e>
+				<meta, nam, e="descripti, o, n" conte, n, t="Get, in, touch with, Zion, App for, your, technology nee, d, s. We're, here, to help, transform, your busine, s, s." />
+				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
+			</He, a, d>
+			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
+				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
+					<nav, classNam, e="mb-8">
+						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+							← Back, to, Home						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
@@ -242,11 +241,47 @@ export default function Contact(): JSX.Element {
 									/>
 								</div>
 
-								<button
-									type="submit"
-									disabled={isSubmitting}
-									className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-								>
+								<d, i, v>
+									<label, htmlFo, r="ema, i, l" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+										Email, Addres, s
+									</lab, e, l>
+									<input, typ, e="ema, i, l"
+										id="ema, i, l"
+										na, m, e="ema, i, l"
+										val, u, e={formDa, t, a.ema, i, l};
+										onChan, g, e={handleInputChan, g, e};
+										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+									/>
+								</d, i, v>
+
+								<d, i, v>
+									<label, htmlFo, r="compa, n, y" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+										Compa, n, y
+									</lab, e, l>
+									<input, typ, e="te, x, t"
+										id="compa, n, y"
+										na, m, e="compa, n, y"
+										val, u, e={formDa, t, a.compa, n, y};
+										onChan, g, e={handleInputChan, g, e};
+										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+									/>
+								</d, i, v>
+
+								<d, i, v>
+									<label, htmlFo, r="messa, g, e" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
+										Messa, g, e
+									</lab, e, l>
+									<textarea, i, d="messa, g, e"
+										na, m, e="messa, g, e"
+										val, u, e={formDa, t, a.messa, g, e};
+										onChan, g, e={handleInputChan, g, e};
+										required, row, s={5};
+										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+									/>
+								</d, i, v>
+
+								<button, typ, e="subm, i, t"
+									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"								>
 									{isSubmitting ? 'Sending Message...' : 'Send Message'}
 								</button>
 							</form>
@@ -290,35 +325,42 @@ export default function Contact(): JSX.Element {
 								</div>
 							</div>
 
-							<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-8 text-white">
-								<h2 className="text-2xl font-bold mb-4">Why Choose Zion App?</h2>
-								<ul className="space-y-3">
-									<li className="flex items-center gap-3">
-										<span className="text-xl">✓</span>
-										<span>Expert team with 10+ years experience</span>
-									</li>
-									<li className="flex items-center gap-3">
-										<span className="text-xl">✓</span>
-										<span>Cutting-edge technology solutions</span>
-									</li>
-									<li className="flex items-center gap-3">
-										<span className="text-xl">✓</span>
-										<span>24/7 support and maintenance</span>
-									</li>
-									<li className="flex items-center gap-3">
-										<span className="text-xl">✓</span>
-										<span>Proven track record of success</span>
-									</li>
-									<li className="flex items-center gap-3">
-										<span className="text-xl">✓</span>
-										<span>Transparent pricing and communication</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
+									<div, classNam, e="flex, item, s-cent, e, r">
+										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
+											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
+										</d, i, v>
+										<d, i, v>
+											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
+											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
+										</d, i, v>
+									</d, i, v>
+
+									<div, classNam, e="flex, item, s-cent, e, r">
+										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
+											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
+										</d, i, v>
+										<d, i, v>
+											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
+											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
+										</d, i, v>
+									</d, i, v>
+								</d, i, v>
+							</d, i, v>
+
+							<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
+								<h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
+								<p, classNam, e="mb-6, opacit, y-90">
+									Schedule, a, free consultation, to, discuss your, project, needs.
+								</p>
+								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
+									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colo, r, s"
+								>
+									Schedule, Consultatio, n
+								</butt, o, n>
+							</d, i, v>
+						</d, i, v>
+					</d, i, v>
+				</d, i, v>
+			</d, i, v>		</>
 	);
 }

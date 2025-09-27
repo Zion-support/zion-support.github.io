@@ -1,3 +1,6 @@
+// TODO: Consider breaking this large component (206 lines) into smaller components
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, Projec, t {id: stri, n, g;
@@ -9,7 +12,7 @@ interface, Projec, t {id: stri, n, g;
   team: string[];
   priority: "low" | "medium" | "high" | "urgent"};
 interface, ProjectManagementProp, s {isDarkMode: boolean};
-export default function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
+const ProjectManagement = React.memo(function ProjectManagement({isDarkMode }: ProjectManagementProps): JS, X.Elemen.t {const [projectssetProject] = useState<Project[]>([{
       progress: 100dueDate: "2024-01-15"team: ["David""Lisa"]priority: "low"}  ]);
 
   const [selectedStatussetSelectedStatu] = useState<string>("all");
@@ -170,11 +173,10 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
               </div>
             </div>
 
-            {/* Actions */};
-            <divclassName="flexitems-centerjustify-between">
-              <divclassName="flexspace-x-2">
-                <buttonclassName="px-3py-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="ViewDetails">
-                  View, Detail, s
+            {/* Actio, n, s */};
+            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+              <div, classNam, e="flex, spac, e-x-2">
+                <button, classNam, e="px-3, p, y-1, tex, t-xs, b, g-bl, u, e-600, hover:bg-bl, u, e-700, tex, t-white, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="View, Detail, s">                  View, Detail, s
                 </button>
 
                   Edit
@@ -182,12 +184,11 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
               </div>
               <divclassName="text-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
 
-                <buttonclassName="px-3py-1, tex, t-xs, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-600, tex, t-gr, a, y-700, dark:te, x, t-gr, a, y-300, rounde, d-mdtransition-colors" ar, i, a-lab, e, l="Edit">
-                  Edit
-                </button>
-              </div>
-              <divclassName="te, x, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-400">
-
+                <button, classNam, e="px-3, p, y-1, tex, t-xs, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-600, tex, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-300, rounde, d-md, transitio, n-colo, r, s" ar, i, a-lab, e, l="Ed, i, t">
+                  Ed, i, t
+                </butt, o, n>
+              </d, i, v>
+              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, dar, k:te, x, t-gr, a, y-4, 0, 0">
                 {proje, c, t.progress === 100 ? "✅ Complete" : "🔄 InProgress"}              </div>
             </div>
           </div>
@@ -202,3 +203,5 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProps)
 
       )};
     </div>  )};
+
+export default ProjectManagement;

@@ -76,7 +76,4 @@ const Home = React.memo(function Home(): JSX.Element {
         </section>
       </main>
     </>
-  );
-});
-
-export default Home;
+  )}

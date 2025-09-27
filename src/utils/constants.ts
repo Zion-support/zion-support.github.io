@@ -80,9 +80,8 @@ exportconstFEATURES = [{icon: "⚡',
 // Blog, posts, preview (importedfrom, blogPost, s.ts)
 export, const, BLOG_POSTS = [
   {id: '1',
-    title: "T, h, e, FutureofAIinBusiness Automation",
-    excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",
-    author: "Dr. Sar, ahChen",
-    publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence",
-    featured: true};
-];
+    tit, l, e: 'T, h, e, Future, ofAI, inBusiness Automati, o, n',
+    excer, p, t: 'Discoverhow, artificialintelligence, isrevolutionizing businessprocess, e, s.',
+    auth, o, r: 'Dr. Sar, a, h, Ch, e, n',
+    publishDa, t, e: '20, 2, 4-01-15'readTi, m, e: 8catego, r, y: 'Artifici, a, l, Intelligen, c, e',
+    featur, e, d: tr, u, e}];

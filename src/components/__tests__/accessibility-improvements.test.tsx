@@ -6,31 +6,34 @@ import { AdvancedCacheManager   } from "../AdvancedCacheManager";
 // Mock, nex, t/head, jes, t.mock("next/head", () => {return, functionHead({ children }: {children: React.ReactNode }) {
     return <>{children}</>}});
 
-describe("AccessibilityImprovementsTests", () => {const, mockSEOData = {
-    title: "TestTitle",
-    description: "TestDescription",
-    keywords: ["test", "accessibility"],
-    canonical: "https://test.com",
-    ogTitle: "TestOGTitle",
-    ogDescription: "TestOGDescription",
-    ogImage: "https://te, s, t.c, o, m/image.jpg"twitterCard: "summary_large_image"structuredData: {};
-  };
-
+descri, b, e('Accessibility, Improvements, Tests', () => {
+  const, mockSEODat, a = {
+    tit, l, e: 'Test, Titl, e'
+    descripti, o, n: 'Test, Descriptio, n'
+    keywor, d, s: ['te, s, t', 'accessibili, t, y']
+    canonic, a, l: 'htt, p, s://te, s, t.c, o, m'
+    ogTit, l, e: 'Test, OG, Title'
+    ogDescripti, o, n: 'Test, OG, Description'
+    ogIma, g, e: 'htt, p, s://te, s, t.c, o, m/ima, g, e.j, p, g'
+    twitterCa, r, d: 'summary_large_ima, g, e'
+    structuredDa, t, a: {}};
   it("rendersSEOoptimizer component", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
     expec, t(scre, e, n.getByTe, x, t("SEOOptimizer")).toBeInTheDocument()});
 
   it("appliesSEOdata correctly", () => {rend, er(<SEOOptimizerseoData={mockSEOData} />);
     expec, t(scre, e, n.getByTe, x, t("TestTitle")).toBeInTheDocument()});
 
-  it("handlesemptySEO data", () => {const, emptyDat, a = {
-      title: '',
-      description: '",
-      keywords: []canonical: "',
-      ogTitle: '',
-      ogDescription: '',
-      ogImage: ''twitterCard: '"structuredData: {};
-    };
-
+  it('handles, empty, SEO da, t, a', () => {
+    const, emptyDat, a = {
+      tit, l, e: ''
+      descripti, o, n: ''
+      keywor, d, s: []
+      canonic, a, l: ''
+      ogTit, l, e: ''
+      ogDescripti, o, n: ''
+      ogIma, g, e: ''
+      twitterCa, r, d: ''
+      structuredDa, t, a: {}};
     rend, e, r(<SEOOptimizerseoData={emptyData} />);
     expec, t(screen.getByText("SEO, Optimize, r')).toBeInTheDocument()});
 

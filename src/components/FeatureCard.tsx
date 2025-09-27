@@ -1,17 +1,15 @@
 import React from "react";
 
-interface, FeatureCardProp, s {icon: stri, n, g;
-	title: stri, ng;
-	description: string;
-	color: "blue' | "green" | "purple"};
-exportconstFeatureCard: React.FC<FeatureCardProps> = ({icontitledescriptioncolor
-}) => {cons, t, colorClasses = {
-		blue: {
-			bg: "bg-gradie, n, t-to-br, fr, o, m-bl, u, e-100, t, o-bl, u, e-200"text: "te, xt-blue-700"hover:"hover:fr, o, m-bl, u, e-200hover:to-blue-300"shadow: "hover:shadow-blue-200"},
-		green: {bg: "bg-gradie, n, t-to-br, fr, o, m-gre, e, n-100, t, o-green-200"text: "te, xt-green-700"hover: "hover:fr, o, m-gre, e, n-200hover:to-green-300"shadow: "hover:shadow-green-200"},
-		purple: {bg: "bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purple-200"text: "te, xt-purple-700"hover: "hover:fr, o, m-purp, l, e-200hover:to-purple-300"shadow: "hover:shadow-purple-200"		};
-	};
-
+interface, FeatureCardProp, s {ic, o, n: stri, n, g;
+	tit, l, e: stri, n, g;
+	descripti, o, n: stri, n, g;
+	col, o, r: 'bl, u, e' | 'gre, e, n' | 'purp, l, e'};
+export, const, FeatureCard: React.FC<FeatureCardPro, p, s> = ({icontitledescriptioncol, o, r
+}) => {con, s, t, colorClass, e, s = {
+		bl, u, e: {
+			bg: 'bg-gradie, n, t-to-br, fr, o, m-bl, u, e-100, t, o-bl, u, e-2, 0, 0'te, x, t: 'te, x, t-bl, u, e-7, 00'hov, e, r:'hov, e, r:fr, o, m-bl, u, e-2, 00hov, e, r:to-bl, u, e-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-bl, u, e-2, 00'}
+		gre, e, n: {bg: 'bg-gradie, n, t-to-br, fr, o, m-gre, e, n-100, t, o-gre, e, n-2, 0, 0'te, x, t: 'te, x, t-gre, e, n-7, 00'hov, e, r: 'hov, e, r:fr, o, m-gre, e, n-2, 00hov, e, r:to-gre, e, n-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-gre, e, n-2, 00'}
+		purp, l, e: {bg: 'bg-gradie, n, t-to-br, fr, o, m-purp, l, e-100, t, o-purp, l, e-2, 0, 0'te, x, t: 'te, x, t-purp, l, e-7, 00'hov, e, r: 'hov, e, r:fr, o, m-purp, l, e-2, 00hov, e, r:to-purp, l, e-3, 0, 0'shad, o, w: 'hov, e, r:shad, o, w-purp, l, e-2, 00'		}};
 	const, currentColo, r = colorClass, e, s[color];
 
 

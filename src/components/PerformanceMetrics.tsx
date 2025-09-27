@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
@@ -17,11 +18,9 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
         constrenderTi, m, e = pai, n, t.f, i, n(ent, r, y => ent, r, y.nam.e === "fir, s, t-contentf, u, l-paint")? .startT, i, m.e || 0;
         
         // Memo, r, y, usa, g, e (if, availa, b, l, e)
-          renderTime: Ma, t, h.rou, n, d(renderTi, m, e),
-          memoryUsage: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLatency: Ma, t, h.rou, n, d(networkLatency)
-        })};
-    };
-
+          renderTi, m, e: Ma, t, h.rou, n, d(renderTi, m, e)
+          memoryUsa, g, e: Ma, t, h.rou, n, d(memoryUsa, g, e * 1, 0, 0) / 1, 0, 0, networkLaten, c, y: Ma, t, h.rou, n, d(networkLaten, c, y)
+        })}};
     // Measure, after, component mounts, const, timer = setTimeo, u, t(measurePerformance1, 0, 0, 0);
     
     return () => clearTimeo, u, t(ti, m, e, r)}, []);
@@ -29,30 +28,29 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
   if (!metr, i, c === s) return, null;
 
 
-  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4z-50">
-      <buttononClic, k ={() = ar, i, a-label="setIsVisib, l, e(!isVisible)};
-        ar, i, a-label="Toggle, performance, metrics visibility"
-        className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"      >
-        📊 Performance"> setIsVisib, l, e(!isVisib, l, e)};
-        ar, i, a-label="Toggle, performance, metrics visibility"
-        className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"      >
-        📊 Performance
-      </button>
+  return (<d, i, v, classNa, m, e="fix, e, d, bott, o, m-4, rig, h, t-4, z-50">
+      <butt, o, n, onCli, c, k ={() = ar, i, a-lab, e, l="setIsVisib, l, e(!isVisib, l, e)};
+        ar, i, a-lab, e, l="Toggle, performance, metrics visibili, t, y"
+        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
+        📊 Performan, c, e"> setIsVisib, l, e(!isVisib, l, e)};
+        ar, i, a-lab, e, l="Toggle, performance, metrics visibili, t, y"
+        classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shado, w-lg, hover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medi, u, m"      >
+        📊 Performan, c, e
+      </butt, o, n>
       
 
-          <divclassName="flex, justif, y-betweenite, m, s-centermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
-            <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
-      {isVisible && (<divclassName="absolut, e, bott, o, m-12, rig, h, t-0, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4m, i, n-w-[25, 0, p, x]">
-          <divclassName="fle, x, justi, f, y-betwe, e, n, ite, m, s-cent, ermb-3">
-            <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
-            <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
-              aria-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >
+          <div, classNam, e="flex, justif, y-betweenite, m, s-center, m, b-3">
+            <h3, classNam, e ="te, x, t-smfo, n, t-semiboldte, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e" id="performan, c, e-metri, c, s">PerformanceMetri, c, s</h3>
+            <button, onClic, k ={() = ar, i, a-lab, e, l="setIsVisib, l, e(fal, s, e)};
+      {isVisib, l, e && (<d, i, v, classNa, m, e="absolu, t, e, bott, o, m-12, rig, h, t-0, bg-whi, t, e, da, r, k:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, da, r, k:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4m, i, n-w-[25, 0, p, x]">
+          <d, i, v, classNa, m, e="fl, e, x, justi, f, y-betwe, e, n, ite, m, s-cent, e, r, mb-3">
+            <h3classNa, m, e ="te, x, t-smfo, n, t-semiboldte, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e" id="performan, c, e-metri, c, s">PerformanceMetri, c, s</h3>
+            <buttononCli, c, k ={() = ar, i, a-lab, e, l="setIsVisib, l, e(fal, s, e)};
+              ar, i, a-lab, e, l="Close, performance, metrics"
+              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
               ✕"> setIsVisib, l, e(fal, s, e)};
-              aria-label="Close, performance, metrics"
-              className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dark:hover:te, x, t-gr, a, y-300"            >
-
+              ar, i, a-lab, e, l="Close, performance, metrics"
+              classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, dar, k:hov, e, r:te, x, t-gr, a, y-3, 0, 0"            >
               ✕
             </button>
           </div>

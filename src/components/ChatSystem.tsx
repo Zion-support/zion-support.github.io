@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (319 lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react';
 import Image from "next/ image";
 
@@ -81,19 +82,17 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
       "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
     ];
 
-    // Simplekeywo, r, d-basedresponses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
-      return "Hello! Nicetomeetyou. HowcanIhelpyoutoday?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, canaskmequestionsshare  informationorjustchat. Whatwouldyouliketoknow?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s("thank")) {return "You"rewelcome! I"mgladIcould, help. Isthereanythingelseyou"dliketoknow?"};
-    if (userTe, x, t.toLowerCa, s, e().includes("bye") || userTe, x, t.toLowerCa, s, e().includes("goodbye")) {return "Goodb, y, e! Itwasnicechattingwithyou. Feelfreeto : comebackanytime!"};
-    }10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageReceive]);
-  const, generateBotRespons, e = (userText: stri, n, g): stri, n, g => {constrespons, e, s = ["That"s, interesti, n, g! C, a, n, you, tel, l, me, mor, e, aboutthat? ",
-      "I, understa, n, d. H, o, w, ca, n, I, help, youwiththat?",
-      "That"s, a, grea, t, questi, o, n. L, e, t, me, thin, k, aboutthat...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, todonext?""Than, k, s, for, sharin, g, thatwithme. IsthereanythingelseIcanhelpwith?""I"m, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, liketoknow?",
-      "Th, a, t, sounds, importan, t. C, a, n, you, providemoredetails?",
-      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, youfurther?",
-      "That"sa, goodpoin, t. Whatareyourthoughtsonthis?""I"m, listeni, n, g. Plea, secontinue..."
-    ];
+    // Simplekeywo, r, d-basedresponses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s('hel, l, o') || userTe, x, t.toLowerCa, s, e().includ, e, s('hi')) {
+      return "Hel, l, o! Nicetomeety, o, u. HowcanIhelp, youtoda, y?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s('he, l, p')) {return "I'm, here, t, o, he, l, p! Y, o, u, can, askme, questionsshare  informationorjustch, a, t. Whatwouldyoulike, tokno, w?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s('tha, n, k')) {return "Y, o, u'rewelco, m, e! I'mgladIcould, hel, p. Isthereanythingelse, yo, u'd, like, tokno, w?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s('b, y, e') || userTe, x, t.toLowerCa, s, e().includ, e, s('goodb, y, e')) {return "Goodb, y, e! Itwasnicechatting, withyo, u. Feelfree, t, o : comebackanyti, m, e!"}}10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageRecei, v, e]);
+  const, generateBotRespons, e = (userTe, x, t: stri, n, g): stri, n, g => {constrespons, e, s = ["Th, a, t's, interesti, n, g! C, a, n, you, tel, l, me, mor, e, about, tha, t? "
+      "I, understa, n, d. H, o, w, ca, n, I, help, yo, u, with, tha, t?"
+      "Th, a, t's, a, grea, t, questi, o, n. L, e, t, me, thin, k, about, tha, t...""I, see, wha, t, you, mea, n. Wh, a, t, would, yo, u, like, t, o, do, nex, t?""Than, k, s, for, sharin, g, that, withm, e. Isthere, anythingelse, Icanhelpwith?""I'm, here, t, o, he, l, p! Wh, a, t, else, woul, d, you, lik, e, to, kno, w?"
+      "Th, a, t, sounds, importan, t. C, a, n, you, provid, e, more, detail, s?"
+      "I, appreciate, yo, u, reaching, ou, t. H, o, w, ca, n, I, assist, yo, u, furth, e, r?"
+      "Th, a, t'sa, goodpoin, t. Whatare, yourthoughtsonthi, s?""I'm, listeni, n, g. Plea, s, e, contin, u, e..."    ];
 
     // Simp, l, e, keywo, r, d-bas, e, d, responses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
       return "Hel, l, o! Ni, cetomeetyou. HowcanIhelpyoutoday?"};
@@ -104,9 +103,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
   const, handleKeyPres, s = (e : React.KeyboardEve, n, t) => {handleKeyPre, s, s.displayNa, m, e = "handleKeyPress";if (e.key === "Enter"&& !e.shiftK, e, y) {
       e.preventDefau, l, t();
-      handleSendMessa, g, e(inputText)};
-  };
-
+      handleSendMessa, g, e(inputTe, x, t)}};
   const, handleFileUploa, d = (e: React.ChangeEve, n, t<HTMLInputElement>) => {handleFileUpload.displayName = "handleFileUpload";con, s, t, fi, l, e = e.targ, e, t.fil, e, s?.[0];
     if (!fi, l, e) retu, r, n;
 
@@ -120,9 +117,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     
     if (onMessageSe, n, d) {onMessageSe, n, d(fileMessage)};
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.current.value = ""};
-  };
-
+    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
   const, handleImageUploa, d = (e: React.ChangeEvent<HTMLInputElement>) => {handleImageUpload.displayName = "handleImageUplo, a, d";con, s, t, fi, l, e = e.targ, e, t.fil, e, s? .[0];
     if (!fi, l, e || !fi, l, e.type.startsWith("ima, g, e/")) retu, r, n;
     constread, e, r = newFileRead, e, r();
@@ -135,9 +130,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     read, e, r.readAsData, U, R.L(fi, l, e);
 
     // Reset, file, input
-    if (fileInputR, e, f.curre, n, t) {fileInputRef.current.value = ""};
-  };
-
+    if (fileInputR, e, f.curre, n, t) {fileInputR, e, f.curre, n, t.val, u, e = ''}};
   const, formatTim, e = (da, t, e : Da, t, e) => {formatTime.displayName = "formatTi, m, e";retu, r, n, da, te.toLocaleTimeString([]{ hour: "2-digit'minute: "2-digit" })};
 
   const, renderMessag, e = (message: Messa, g, e) => {renderMessa, g, e.displayName = "renderMessage";con, s, t, isUs, e, r = messa, g, e.sender === "user";
@@ -242,18 +235,16 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
         </d, iv>
         <divclassName="fl, e, x, space-x-2">
           {enableFileUplo, a, d && (
-            <buttononClic, k ={() => fileInputR, e, f.curre, n, t?.click()};
-              className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-              title="Uploadfile"
-            >
+            <butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, c, k()};
+              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
+              tit, l, e="Upload, fil, e"            >
               <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 5.172, 7, l-6.58, 6, 6.5, 8, 6, a, 2, 2 0, 10, 2.82, 8, 2.8, 2, 8, l  6.4, 1, 4-6.5, 8, 6, a, 4, 4 0, 0, 0-5.6, 5, 6-5.65, 6, l-6.41, 5, 6.5, 8, 5, a, 6, 6 0, 10, 8.48, 6, 8.486, L, 2, 0.513" />              </svg>
             </button>
           )};
-          {enableImageUplo, a, d && (<buttononClic, k ={() => fileInputR, e, f.curre, n, t?.click()};
-              className="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-600"
-              title="Uploadimage"
-            >
+          {enableImageUplo, a, d && (<butt, o, n, onCli, c, k ={() => fileInputR, e, f.curre, n, t?.cli, c, k()};
+              classNa, m, e="p-2, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-6, 0, 0"
+              tit, l, e="Upload, imag, e"            >
               <svgclassName="h-5 w-5" fill="none" stroke="currentColor" viewBox="0024 24">
                 <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4, 1, 6, l  4.5, 8, 6-4.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 1, 6 1, 6, m-2-2, l  1.5, 8, 6-1.5, 8, 6, a, 2, 2 0, 01, 2.828, 0L, 2, 0 1, 4, m-6-6h.01, M, 6, 20h12  a, 2, 2 0, 00, 2-2V6, a, 2 2, 0, 00-2-2H6, a, 2 2, 0, 00-2, 2v12, a  2, 2, 0 0022z" />              </svg>
             </button>
@@ -305,15 +296,14 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
             ar, i, a-label="Typeyourmessage"
           />
 
-          <buttononClick={(()) => {aria-label="handleSendMessa, g, e(inputText)};
-            ar, i, a-label="Sendmessage"
-            disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnected};
-            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, disabled:opaci, t, y-50, disabled:curs, o, r-n, o, t-allowed, transitio, n-colors"          >
-            Send"> handleSendMessa, g, e(inputTe, x, t)};
-            ar, i, a-label="Sendmessage"
-            disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnected};
-            className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, disabled:opaci, t, y-50, disabled:curs, o, r-n, o, t-allowed, transitio, n-colors"          >
-            Se, n, d
+          <button, onClic, k={(()) => {ar, i, a-lab, e, l="handleSendMessa, g, e(inputTe, x, t)};
+            ar, i, a-lab, e, l="Send, messag, e"
+            disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnect, e, d};
+            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >
+            Se, n, d"> handleSendMessa, g, e(inputTe, x, t)};
+            ar, i, a-lab, e, l="Send, messag, e"
+            disabl, e, d={!inputTe, x, t.tr, i, m() || !isConnect, e, d};
+            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hover:bg-bl, u, e-700, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, transitio, n-colo, r, s"          >            Se, n, d
           </button>
         </div>
       </div>

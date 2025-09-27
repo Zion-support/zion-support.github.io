@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
 
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
@@ -14,7 +13,7 @@ function PerformanceOptimizerComponent({
   enableResourceHints = true,
   enablePreloading = true
 }: PerformanceOptimizerProps): null {
-  const [memoryUsagesetMemoryUsage] = useState<{
+  const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number;
@@ -46,10 +45,47 @@ function PerformanceOptimizerComponent({
     return () => clearInterval(interval);
   }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Resource hints
+    if (enableResourceHints) {
+      const hints = [
+        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      ];
+
+      hints.forEach(hint => {
+        const link = document.createElement('link');
+        Object.entries(hint).forEach(([key, value]) => {
+          link.setAttribute(key, value);
+        });
+        document.head.appendChild(link);
+      });
+    }
+  }, [enableResourceHints]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Service Worker registration
+    if (enableServiceWorker && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  }, [enableServiceWorker]);
+
   return null;
 }
 
-// Export as a dynamic component that only renders on the client side
-export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
-  ssr: false
-});
+// Export as default with React.memo for performance
+const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
+
+export default PerformanceOptimizer;

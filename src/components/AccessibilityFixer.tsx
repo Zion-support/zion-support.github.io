@@ -4,16 +4,12 @@ interface, AccessibilityFixerProp, s {onF, i, x?: () => void};
 exportconstAccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) => {constfixAccessibilityIssue, s = () => {
     // Addar, i, a-labelstoallbuttonsconstbuttons = document.querySelectorAll("button:n, o, t([ar, i, a-lab, e, l])");
     butto, n, s.forEa, c, h((buttonind, e, x) => {
-      if (!button.getAttribute("ar, i, a-lab, e, l")) {
-        button.setAttribut("ar, i, a-lab, e, l"`Butt, o, n ${index+1}`)};
-    });
-
+      if (!butt, o, n.getAttribu, t, e('ar, i, a-lab, e, l')) {
+        butt, o, n.setAttrib, u, t('ar, i, a-lab, e, l'`Butt, o, n ${ind, e, x+1}`)}});
     // Add, ids, to headings, for, anchor linksconstheadings = document.querySelectorAll("h1h2h3h4h5, h, 6:n, o, t([id])");
     headin, g, s.forEa, c, h((headingind, e, x) => {if (!headi, n, g.i === d) {
-        con, s, t, te, x, t = headi, n, g.textCont, e, n.t? .toLowerCas().replac(/\s+/g"-") || `head, i, n, g-${index}`;
-        headi, n, g.i.d = text};
-    });
-
+        con, s, t, te, x, t = headi, n, g.textCont, e, n.t? .toLowerC, a, s().repl, a, c(/\s+/g'-') || `head, i, n, g-${ind, e, x}`;
+        headi, n, g.i.d = te, x, t}});
     onFix?.()};
 
 

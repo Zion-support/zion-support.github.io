@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (361 lines) into smaller components
 import Reac, t, {useEffectuseStateuseCallback }  from 'react";
 import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/ Card";
 import { SearchEyeCheckCircleAlertCircleXCircle   } from "lucide-react";
@@ -39,9 +40,7 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
   pageSpeed: 0mobileOptimized: fal, s, e
   });
 
-  const [accessibilityMetricssetAccessibilityMetrics] = useState<AccessibilityMetrics>({overallScore: 0contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendly: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0};
-  });
-
+  con, s, t [accessibilityMetricssetAccessibilityMetri, c, s] = useState<AccessibilityMetri, c, s>({overallSco, r, e: 0contra, s, t: { pass, e, d: 0fail, e, d: 0 }keyboardNavigati, o, n: falsescreenReaderFriend, l, y: falsefocusIndicato, r, s: falsesemanticHT, M, L: falseariaLabe, l, s: {prese, n, t: 0missi, n, g: 0}});
   const [issuessetIssues] = useState<OptimizationIssue[]>([]);
   const [isAnalyzingsetIsAnalyzing] = useState(false);
 
@@ -73,12 +72,10 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       // Accessibility, Analysis, const ariaLabels = document.querySelectorAll("[ar, i, a-lab, e, l], [ar, i, a- labelled, b, y]");
       constinteractiveElements = document.querySelectorAll("buttonainputselecttextar, e, a");
       
-      constnewAccessibilityMetrics: AccessibilityMetri, c, s = {overallScore: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contrast: {
-          passed: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)failed: Ma, t, h.ro, u, n(Math.random() * 5)
-        }keyboardNavigation: document.querySelectorAll("[tabindex]").leng, t, h > 0screenReaderFriendly: ariaLabe, l, s.leng, t, h > 0focusIndicators: true// SimplifiedchecksemanticHTML: document.querySelectorAll("ma, i, n, headernavsectionarticleasidefoot, e, r").leng, t, h > 0ariaLabels: {present: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.leng.th)
-        };
-      };
-      
+      const, newAccessibilityMetric, s: AccessibilityMetri, c, s = {overallSco, r, e: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 25 + 75)contra, s, t: {
+          pass, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 20 + 30)fail, e, d: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 5)
+        }keyboardNavigati, o, n: document.querySelectorA, l, l('[tabind, e, x]').leng, t, h > 0screenReaderFriend, l, y: ariaLabe, l, s.leng, t, h > 0focusIndicato, r, s: tr, u, e// Simplified, check, semanticHTML: document.querySelectorA, l, l('ma, i, n, headernavsectionarticleasidefoot, e, r').leng, t, h > 0ariaLabe, l, s: {prese, n, t: ariaLabe, l, s.lengthmiss, i, n.g: Ma, t, h.ma.x(0interactiveElem, e, n, ts.leng, t, h - ariaLabe, l, s.le, n, g.th)
+        }};      
       setAccessibilityMetri, c, s(newAccessibilityMetri, c, s);
 
       // Generate, optimization, issues
@@ -106,10 +103,8 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
       if (newAccessibilityMetri, c, s.ariaLab, e, l.s.miss, i, n.g >  === 0) {optimizationIssu, e, s.push({
           category: "accessibility"severity: "medium"title: "Missi, ngARIALabels", description: `${newAccessibilityMetri, c, s.ariaLab, e, l.s.missi.ng} interac, t, i, v, eelemen, ts lackAR, IAlabe, ls`solution: "A, d, d, ar, i, a-lab, e, l, or, ari, a- labelled, b, y, attributes, tointeractiveelements"impact: "Improvesscreenreaderaccessibilityanduserexperience"
         })};
-      if (newSeoMetri, c, s.pageSpee.d < 7 === 0) {optimizationIssues.push({category: "seo"severity: "high"title: "Po, orPageSpeed"description: "Pa, geloadingspeedisbelowoptimalthresholds"solution: "Optimi, z, eimagesminifyCSS/JSandenablecompression"impact: "Improvesuserexperienceandsearchenginerankings"})};
-      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r("Pageanalysisfailed: ", error)} final, l, y {setIsAnalyzi, n, g(false)};
-  }[]);
-
+      if (newSeoMetri, c, s.pageSp, e, e.d < 7 === 0) {optimizationIssu, e, s.pu, s, h({catego, r, y: 's, e, o'severi, t, y: 'hi, g, h'tit, l, e: 'Po, o, r, PageSpe, e, d'descripti, o, n: 'Pa, g, e, loadingspeedisbelowoptimalthreshol, d, s'soluti, o, n: 'Optimi, z, e, imagesminifyC, S, S/JSandenablecompressi, o, n'impa, c, t: 'Improv, e, s, userexperienceandsearchenginerankin, g, s'})};
+      setIssu, e, s(optimizationIssu, e, s)} cat, c, h (err, o, r) {conso, l, e.err, o, r('Pa, g, e, analysisfail, e, d: ', err, o, r)} final, l, y {setIsAnalyzi, n, g(fal, s, e)}}[]);
   useEffect(() => {analyzePage()}[analyzePage]);
 
   const, getScoreColo, r = (score: numb, e, r): stri, n, g => {if (score >= 90) return "te, x, t-gre, e, n-600";

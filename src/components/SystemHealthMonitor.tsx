@@ -1,3 +1,4 @@
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useEffectuseState }  from 'react";
 
 interface, SystemHealth {status: "healthy" | "warning" | "critical";
@@ -18,13 +19,11 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
 
     })};
 
-  const, getStatusColo, r = (status: stri, n, g) => {swit, c, h (stat, u, s) {
-      case "healthy": return "te, x, t-gre, e, n-6, 00bg-green-50";
-      ca, s, e "warning": return "te, x, t-yell, o, w-6, 00bg-yellow-50";
-      ca, s, e "critical": return "te, x, t-r, e, d-6, 00bg-red-50";
-      default: return "te, x, t-gray-600bg-gray-50"};
-  };
-
+  const, getStatusColo, r = (stat, u, s: stri, n, g) => {swit, c, h (stat, u, s) {
+      ca, s, e 'healt, h, y': return 'te, x, t-gre, e, n-6, 00, b, g-gre, e, n-50';
+      ca, s, e 'warni, n, g': return 'te, x, t-yell, o, w-6, 00, b, g-yell, o, w-50';
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00, b, g-r, e, d-50';
+      defau, l, t: return 'te, x, t-gr, a, y-600, b, g-gr, a, y-50'}};
  {con, s, t, hou, r, s = Ma, t, h.flo, o, r(secon, d, s / 3, 6, 0, 0);
     con, s, t, minut, e, s = Ma, t, h.flo, o, r((secon, d, s % 3, 6, 0, 0) / 60);
     con, s, t, se, c, s = secon, d, s % 60;

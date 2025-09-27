@@ -1,31 +1,29 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
-interface, Activity {id: string;
-  type: "ta, s, k' | "project" | "meeting" | "comment" | "file";
-  user: stri, n, g;
-  action: stri, n, g;
-  target: stri, n, g;
-  timestamp: Da, t, e;
-  avatar: string};
-interface, ActivityFeedProp, s {isDarkMode: boolean};
-export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
-      id: "1'type: "task"user: "JohnDoe"action: "completed"target: "Website, RedesignTask"{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
-      constnewActivity: Activi, t, y = {
-        id: Da, t, e.n, o, w().toString()type: ["task""project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)];
-      };
+interface, Activit, y {id: stri, n, g;
+  ty, p, e: 'ta, s, k' | 'proje, c, t' | 'meeti, n, g' | 'comme, n, t' | 'fi, l, e';
+  us, e, r: stri, n, g;
+  acti, o, n: stri, n, g;
+  targ, e, t: stri, n, g;
+  timesta, m, p: Da, t, e;
+  avat, a, r: stri, n, g};
+interface, ActivityFeedProp, s {isDarkMo, d, e: boole, a, n};
+const ActivityFe = React.memo(function ActivityFe({isDarkMo, d, e }: ActivityFeedPro, p, s): J, S, X.Elem, e, n.t {con, s, t [activitiessetActiviti, e, s] = useState<Activi, t, y[]>([{
+      id: '1'ty, p, e: 'ta, s, k'us, e, r: 'JohnD, o, e'acti, o, n: 'complet, e, d'targ, e, t: 'Websi, t, e, RedesignTa, s, k'{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
+      constnewActivi, t, y: Activi, t, y = {
+        id: Da, t, e.n, o, w().toStri, n, g()ty, p, e: ['ta, s, k''proje, c, t''comme, n, t''fi, l, e'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivi, t, y['ty, p, e'],us, e, r: ['Ali, c, e''B, o, b''Charl, i, e''Dia, n, a'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],acti, o, n: ['creat, e, d''updat, e, d''complet, e, d''commented, o, n'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],targ, e, t: ['NewFeatu, r, e''BugF, i, x''Documentati, o, n''CodeRevi, e, w'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timesta, m, p: newDa, t, e()()avat, a, r: ['👨‍💻''👩‍💼''👨‍🔬''👩‍🎨'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]};
       
-      setActiviti, e, s(pr, e, v => [newActivi, t, y...pr, e, v.sli, c, e(09)]); // Keep, only, 10 mostrecenttimestamp: new, Dat, e()(Da, t, e.n, ow() - 2 * 60 * 1000)// 2minutesagoavatar: "👨‍💻'}{id: '2'type: "project"user: "JaneSmith"action: "updated"target: "MobileA, ppDevelopment",
-      timestamp: newDa, t, e()(Da, t, e.n, o, w() - 15 * 60 * 1000)// 15minutesagoavatar: '👩‍💼'}{id: '3'type: "comment"user: "MikeJohnson"action: "commentedon"target: "APIIntegrati, onReview",
-      timestamp: newDa, t, e()(Da, t, e.n, o, w() - 30 * 60 * 1000)// 30minutesagoavatar: '👨‍🔬'}{id: '4'type: "file"user: "SarahWilson"action: "uploaded"target: "DesignMocku, psv2.0",
-      timestamp: newDa, t, e()(Da, t, e.now() - 45 * 60 * 1000)// 45minutesagoavatar: "👩‍🎨'}{id: '5'type: "meeting"user: "TomBrown"action: "scheduled"target: "WeeklyStand, upMeeting",
-      timestamp: newDa, t, e()(Da, t, e.n, o, w() - 60 * 60 * 1000)// 1houragoavatar: '👨‍💼"};
-  ]);
+      setActiviti, e, s(pr, e, v => [newActivi, t, y...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recent, timestamp: new, Dat, e()(Da, t, e.n, o, w() - 2 * 60 * 10, 0, 0)// 2minutes, agoavata, r: '👨‍💻'}{id: '2'ty, p, e: 'proje, c, t'us, e, r: 'JaneSmi, t, h'acti, o, n: 'updat, e, d'targ, e, t: 'MobileA, p, p, Developme, n, t'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 15 * 60 * 10, 0, 0)// 15minutesagoavat, a, r: '👩‍💼'}{id: '3'ty, p, e: 'comme, n, t'us, e, r: 'MikeJohns, o, n'acti, o, n: 'commented, o, n'targ, e, t: 'APIIntegrati, o, n, Revi, e, w'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 30 * 60 * 10, 0, 0)// 30minutesagoavat, a, r: '👨‍🔬'}{id: '4'ty, p, e: 'fi, l, e'us, e, r: 'SarahWils, o, n'acti, o, n: 'upload, e, d'targ, e, t: 'DesignMocku, p, s, v2.0'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 45 * 60 * 10, 0, 0)// 45minutesagoavat, a, r: '👩‍🎨'}{id: '5'ty, p, e: 'meeti, n, g'us, e, r: 'TomBro, w, n'acti, o, n: 'schedul, e, d'targ, e, t: 'WeeklyStand, u, p, Meeti, n, g'
+      timesta, m, p: newDa, t, e()(Da, t, e.n, o, w() - 60 * 60 * 10, 0, 0)// 1houragoavat, a, r: '👨‍💼'}]);
 
   useEffect(() => {// Simulatere, a, l- timeactivityupdatesconst, interva, l = setInterv, a, l(() => {
-      constnewActivity: Activi, t, y = {
-        id: Da, t, e.n, ow().toString()type: ["task'"project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"], [Ma, t, h.flo, o, r(Ma, t, h.random() * 4)];
-      };
-      
+      constnewActivi, t, y: Activi, t, y = {
+        id: Da, t, e.n, o, w().toStri, n, g()ty, p, e: ['ta, s, k''proje, c, t''comme, n, t''fi, l, e'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivi, t, y['ty, p, e'],us, e, r: ['Ali, c, e''B, o, b''Charl, i, e''Dia, n, a'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)],acti, o, n: ['creat, e, d''updat, e, d''complet, e, d''commented, o, n'][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]targ, e, t: ['NewFeatu, r, e''BugF, i, x''Documentati, o, n''CodeRevi, e, w'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timesta, m, p: newDa, t, e()()avat, a, r: ['👨‍💻''👩‍💼''👨‍🔬''👩‍🎨'], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]};      
       setActiviti, e, s(pr, e, v => [newActivi, t, y  ...pr, e, v.sli, c, e(09)]); // Keep, only, 10 most, recen, t
 
     }3000, 0, 0); // Add, new, activity every, 30, seconds
@@ -112,9 +110,10 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
         ))};
       </div>
 
-      <div, classNam, e="mt-4, p, t-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gray-600">
-        <buttonclassName="w-fulltext-sm, tex, t-bl, u, e-600, dark:te, x, t-bl, u, e-400, hover:te, x, t-bl, u, e-700, dark:hover:te, x, t-bl, u, e-300fon t-medium" ar, i, a-lab, e, l="Viewallactivity">          View, all, activity
-        </button>
-      </div>
-    </div>
-  )};
+      <div, classNam, e="mt-4, p, t-4, borde, r-t, borde, r-gr, a, y-200, dar, k:bord, e, r-gr, a, y-6, 0, 0">
+        <button, classNam, e="w-full, tex, t-sm, tex, t-bl, u, e-600, dar, k:te, x, t-bl, u, e-400, hover:te, x, t-bl, u, e-700, dar, k:hov, e, r:te, x, t-bl, u, e-300, fo, n t-medi, u, m" ar, i, a-lab, e, l="View, all, activity">          View, all, activity
+        </butt, o, n>
+      </d, i, v>
+    </d, i, v>  )};
+
+export default ActivityFe;

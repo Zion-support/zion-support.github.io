@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (272 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { DataVisualization   } from "./DataVisualization";
 
@@ -38,18 +39,13 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
 
       
       da, t, a.pu, s, h({
-        timestamppageViews: Ma, t, h.flo, o, r(baseVie, w, s + Ma, t, h.rand, o, m() * 2, 0, 0)uniqueVisitors: Ma, t, h.flo, o, r(baseVisito, r, s + Ma, t, h.rand, o, m() * 1, 5, 0)bounceRate: Ma, t, h.random() * 0.4 + 0.2// 20-60%
-        ]geographicData: [{country: "Unit, e, d, Stat, e, s", visitors: Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 300 + 200) }{country: "Unit, e, d, Kingd, o, m", visitors: Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 150 + 100) }{country: "Cana, d, a", visitors: Ma, t, h.flo, o, r(Ma, th.random() * 100 + 50) }{country: "Germa, n, y", visitors: Ma, t, h.flo, or(Math.random() * 80 + 40) }{country: "Austral, i, a", visitors: Ma, t, h.flo, o, r(Ma, t, h.random() * 60 + 30) };
-        ];
-      })};
-    return, dat, a}[selectedTimeRange]);
-
+        timestamppageVie, w, s: Ma, t, h.flo, o, r(baseVie, w, s + Ma, t, h.rand, o, m() * 2, 0, 0)uniqueVisito, r, s: Ma, t, h.flo, o, r(baseVisito, r, s + Ma, t, h.rand, o, m() * 1, 5, 0)bounceRa, t, e: Ma, t, h.rand, o, m() * 0.4 + 0.2// 20-60%
+        ]geographicDa, t, a: [{count, r, y: 'Unit, e, d, Stat, e, s', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 3, 0, 0 + 2, 0, 0) }{count, r, y: 'Unit, e, d, Kingd, o, m', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 5, 0 + 1, 0, 0) }{count, r, y: 'Cana, d, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0 + 50) }{count, r, y: 'Germa, n, y', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80 + 40) }{count, r, y: 'Austral, i, a', visito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 60 + 30) }]})};
+    return, dat, a}[selectedTimeRan, g, e]);
   const, fetchAnalyticsDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
       setIsLoadi, n, g(tr, u, e);
       
-      setAnalyticsDa, t, a(mockData) } cat, c, h (err, o, r) {console.error("Failedtofetchanalyticsdata:"error) } final, l, y {setIsLoadi, n, g(false) };
-  }[generateMockData]);
-
+      setAnalyticsDa, t, a(mockDa, t, a) } cat, c, h (err, o, r) {conso, l, e.err, o, r('Failedtofetchanalyticsda, t, a:'err, o, r) } final, l, y {setIsLoadi, n, g(fal, s, e) }}[generateMockDa, t, a]);
   useEffect(() => {fetchAnalyticsDa, t, a();
  clearInterv, a, l(interval) }[fetchAnalyticsData]);
 
@@ -82,32 +78,27 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
     );
     
     const, metricDat, a = analyticsDa, t, a.m, a, p(da, t, a => {swit, c, h (selectedMetr, i, c) {
-        case "pageViews": returnda, t, a.pageVie, w, s;
-        case "uniqueVisitors": returnda, t, a.uniqueVisito, r, s;
-        case "revenue": returnda, t, a.reven, u, e;
-        default: returnda, t, a.pageViews};
-    });
+        ca, s, e 'pageVie, w, s': returnda, t, a.pageVie, w, s;
+        ca, s, e 'uniqueVisito, r, s': returnda, t, a.uniqueVisito, r, s;
+        ca, s, e 'reven, u, e': returnda, t, a.reven, u, e;
+        defau, l, t: returnda, t, a.pageVie, w, s}});
 
-    return {labelsdatasets: [{
-        label: selectedMetric === "pageViews" ? "PageViews" : 
-               selectedMetric === "uniqueVisitors" ? "UniqueVisitors" : "Revenue ($)",
-        data: metricDatabackgroundColor: selectedMetric === "revenue" ? "#10B9 : 81"  : "#3B, 82F6",
-        borderColor: selectedMetric === "revenue" ? "#0596 : 69"  : "#1D, 4ED8"borderWidth: 2fill: true
-      }];
-    }};
-
+    return {labelsdatase, t, s: [{
+        lab, e, l: selectedMetr, i, c === 'pageVie, w, s' ? 'PageVie, w, s' : 
+               selectedMetr, i, c === 'uniqueVisito, r, s' ? 'UniqueVisito, r, s' : 'Reven, u, e ($)'
+        da, t, a: metricDatabackgroundCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#10, B, 9 : 81'  : '#3B, 8, 2, F6'
+        borderCol, o, r: selectedMetr, i, c === 'reven, u, e' ? '#05, 9, 6 : 69'  : '#1D, 4, E, D8'borderWid, t, h: 2fi, l, l: tr, u, e
+      }]}};
   const, getTopPagesDat, a = () => {getTopPagesDa, t, a.displayName = "getTopPagesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
     
     const, latestDat, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
     const, sortedPage, s = latestDa, t, a.topPag, e, s.so, r, t((ab) => b.vie, w, s - a.vie, w, s);
     
-    return {labels: sortedPag, e, s.m, a, p(p => p.pa, g, e)datasets: [{
- p.views)backgroundColor: ["#3B, 82F6", "#10, B981", "#F59E0B""#EF4444""#8B5CF6"],borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"],
-
-        label: "PageViews"data: sortedPag, e, s.m, a, p(p => p.views)backgroundColor: ["#3B, 82F6", "#10, B981", "#F59E0B""#EF4444""#8B5CF6"]borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"]borderWidth: 2
-      }];
-    }};
-
+    return {labe, l, s: sortedPag, e, s.m, a, p(p => p.pa, g, e)datase, t, s: [{
+ p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        lab, e, l: 'PageVie, w, s'da, t, a: sortedPag, e, s.m, a, p(p => p.vie, w, s)backgroundCol, o, r: ['#3B, 8, 2, F6', '#10, B, 9, 81', '#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        borderWid, t, h: 2
+      }]}};
  {getTrafficSourcesDa, t, a.displayName = "getTrafficSourcesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
 
   const, getTrafficSourcesDat, a = () => {getTrafficSourcesDa, t, a.displayName = "getTrafficSourcesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
@@ -116,27 +107,23 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
     const, latestDat, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
     const, sortedSource, s = latestDa, t, a.trafficSourc, e, s.so, r, t((ab) => b.visito, r, s - a.visito, r, s);
     
-    return {labels: sortedSourc, e, s.m, a, p(s => s.source)datasets: [{
-        label: "Visitors",
- s.visitors)backgroundColor: ["#3B82F6""#10B981""#F59E0B""#EF4444""#8B5CF6"],borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"],
-
-        data: sortedSourc, e, s.m, a, p(s => s.visitors)backgroundColor: ["#3B82F6""#10B981""#F59E0B""#EF4444""#8B5CF6"]borderColor: ["#1D4ED8""#059669""#D97706""#DC2626""#7C3AED"]borderWidth: 2
-      }];
-    }};
-
+    return {labe, l, s: sortedSourc, e, s.m, a, p(s => s.sour, c, e)datase, t, s: [{
+        lab, e, l: 'Visito, r, s'
+ s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        da, t, a: sortedSourc, e, s.m, a, p(s => s.visito, r, s)backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B''#EF44, 4, 4''#8B5C, F, 6'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6''#DC26, 2, 6''#7C3A, E, D']
+        borderWid, t, h: 2
+      }]}};
   const, getDeviceTypesDat, a = () => {getDeviceTypesDa, t, a.displayName = "getDeviceTypesData";if (analyticsDa, t, a.length === 0) return { labels: []datasets: [] };
     
     const, latestDat, a = analyticsDa, t, a[analyticsDa, t, a.leng, t, h - 1];
     const, tota, l = latestDa, t, a.deviceTyp, e, s.redu, c, e((su, m, d) => s, u, m + d.percentag, e, 0);
     
-    return {labels: latestDa, t, a.deviceTyp, e, s.m, a, p(d => d.device)datasets: [{
-        label: "Devi, c, e, Usage",
- Ma, t, h.rou, n, d(d.percenta, g, e * 100))backgroundColor: ["#3B82F6""#10B981""#F59E0B"],borderColor: ["#1D4ED8""#059669""#D97706"],
-
-        data: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, ge * 100))backgroundColor: ["#3B82F  6""#10B981""#F59E0B"]borderColor: ["#1D4ED8""#059669""#D97706"]borderWidth: 2
-      }];
-    }};
-
+    return {labe, l, s: latestDa, t, a.deviceTyp, e, s.m, a, p(d => d.devi, c, e)datase, t, s: [{
+        lab, e, l: 'Devi, c, e, Usa, g, e'
+ Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B82, F, 6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
+        da, t, a: latestDa, t, a.deviceTyp, e, s.m, a, p(d => Ma, t, h.rou, n, d(d.percenta, g, e * 1, 0, 0))backgroundCol, o, r: ['#3B, 8, 2, F  6''#10B9, 8, 1''#F59E, 0, B'],borderCol, o, r: ['#1D4E, D, 8''#0596, 6, 9''#D977, 0, 6']
+        borderWid, t, h: 2
+      }]}};
 
         <divclassName=animate-pulse">
           <divclassName="h-6bg-gra, y-2, 0, 0, rounde, dw-1/4mb-4></div>

@@ -1,3 +1,5 @@
+// TODO: Consider breaking this large component (249 lines) into smaller components
+import { useMemo, useCallback } from 'react';
 import Reac, t, {useState }  from 'react";
 
 interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => vo, i, d;
@@ -33,12 +35,10 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 			
 			if (onSubm, i, t) {
-				onSubm, i, t(formData)};
-			setSubmitStatus("success");
-			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
-			})} cat, c, h (error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)};
-	};
-
+				onSubm, i, t(formDa, t, a)};
+			setSubmitStat, u, s('succe, s, s');
+			setFormDa, t, a({na, m, e: ''ema, i, l: ''compa, n, y: ''pho, n, e: ''servi, c, e: ''messa, g, e: ''budg, e, t: ''timeli, n, e: ''
+			})} cat, c, h (err, o, r) {setSubmitStat, u, s('err, o, r')} final, l, y {setIsSubmitti, n, g(fal, s, e)}};
 
 				<divclassName="w-20h-20bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
 					<svgclassName="w-10h-10te, x, t-green-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
@@ -59,15 +59,14 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 
 				</p>
 
-				<buttononClick ={() = aria-lab, e, l="setSubmitStatus("idle")};
-					aria-label="Send, another, message"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-200"
+				<buttononCli, c, k ={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')};
+					ar, i, a-lab, e, l="Send, another, message"
+					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
 
 				>
-					SendAnotherMessage"> setSubmitStatus("idle")};
-					ar, i, a-label="Sendanothermessage"
-					className="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-200"
-				>
+					Send, Another, Message"> setSubmitStat, u, s('id, l, e')};
+					ar, i, a-lab, e, l="Send, another, message"
+					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
 					Send, Another, Message
 				</button>
 			</div>
@@ -218,10 +217,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</div>
 
 				)};
-				<buttontype="submit"
-					disabl, e, d={isSubmitting};
-					className="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disabled:fr, o, m-bl, u, e-400, disabled:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shadow-lghover:shad, ow-xltransformhover:-transla, t, e-y-0.5, disabled:transfo, r, m-none"
-				>
+				<button, typ, e="subm, i, t"
+					disabl, e, d={isSubmitti, n, g};
+					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"				>
 
 					{isSubmitti, ng ? (<>
       

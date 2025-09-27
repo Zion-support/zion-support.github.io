@@ -22,12 +22,8 @@ export default async function handler(req: any, res: any) {
     // Here you would typically send to your analytics service
     console.log('Analytics events received:', processedEvents);
 
-    return res.status(200).json({ 
-      success: true, 
-      processed: processedEvents.length 
-    });
-  } catch (error) {
-    console.error('Analytics API error:', error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({ 
+      succe, s, s: true, processe, d: even, t, s.length, timestam, p: Da, t, e.n, o, w()
+    })} cat, c, h (err, o, r) {
+    conso, l, e.err, o, r('Analytics, API, error:', err, o, r);
+    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })}};

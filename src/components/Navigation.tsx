@@ -1,3 +1,5 @@
+import { useMemo, useCallback } from 'react';
+import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react';
 import Link from "next/link";
 import TaskManager from "./TaskManager";
@@ -6,12 +8,10 @@ interface, NavigationProp, s {currentTi, m, e?: Da, t, e;
   isDarkMo, d, e?: boole, a, n;
   onToggleDarkMo, d, e?: () => vo, i, d;
   activeSecti, o, n?: stri, n, g;
-  onSectionChan, g, e?: (section: stri, n, g) => void};
-export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = "onSectionChan, g, e = () => {};
-}: NavigationPro, p, s): J, S, X.Eleme, n, t {const [isMenuOpensetIsMenuOpen] = useState(false);
-  const [isScrolledsetIsScrolled] = useState(fal, s, e);
-  const [showTaskManagersetShowTaskManager] = useState(fal, s, e);
-
+  onSectionChan, g, e?: (secti, o, n: stri, n, g) => vo, i, d};
+const Navigati = React.memo(function Navigati({currentTi, m, e = newDa, t, e()isDarkMo, d, e = falseonToggleDarkMo, d, e = () => {}activeSecti, o, n = 'onSectionChan, g, e = () => {}}: NavigationPro, p, s): J, S, X.Eleme, n, t {con, s, t [isMenuOpensetIsMenuOp, e, n] = useState(fal, s, e);
+  con, s, t [isScrolledsetIsScroll, e, d] = useState(fal, s, e);
+  con, s, t [showTaskManagersetShowTaskManag, e, r] = useState(fal, s, e);
   useEffect(() => {
     consthandleScro, l, l = () => {
   handleScro, l, l.displayName = "handleScroll";
@@ -24,9 +24,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
     setIsMenuOp, e, n(fal, s, e);
     con, s, t, eleme, n, t = document.getElementBy, I, d(section, I, d);
     if (eleme, n, t) {
-      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})};
-  };  return (
-    <>
+      eleme, n, t.scrollIntoVi, e, w({ behavi, o, r: 'smoo, t, h'})}};  return (    <>
       
       <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-whi, t, e/90dark:bg-gr, a, y-8, 0, 0/90backdr, o, p-bl, u, r-mdshadow-lg':"bg-transparent"}`}>
         <divclassNam, e="m, a, x-w-7, xl, mx-au, topx-4sm:px-6lg:px-8">
@@ -75,39 +73,37 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
               <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
-            ar, i, a-lab, e, l="setShowTaskManager(true)};
-            </button>
-            <buttonclassName="p-2rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                aria-label="Open, task, manager"
-                title="TaskManager"              >
-                📝"> setShowTaskManag, e, r(true)};
-                className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                aria-label="Open, task, manager"
-                title="TaskManager"              >
+            ar, i, a-lab, e, l="setShowTaskManag, e, r(tr, u, e)};
+            </butt, o, n>
+            <button, classNam, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Open, task, manager"
+                tit, l, e="Task, Manage, r"              >
+                📝"> setShowTaskManag, e, r(tr, u, e)};
+                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Open, task, manager"
+                tit, l, e="Task, Manage, r"              >
                 📝
-              </button>
-              <buttononClick={onToggleDarkMode};
-                className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colors"
-                ar, i, a-label="Toggledarkmode"               aria-label="Button">
-                {isDarkMode ? "☀️' : '🌙"};
-              </button>
-              
+              </butt, o, n>
+              <button, onClic, k={onToggleDarkMo, d, e};
+                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Toggle, dark, mode"              >
+                {isDarkMo, d, e ? '☀️' : '🌙'};
+              </butt, o, n>              
               {/* MobileMenuButton */};
               <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
-            ar, i, a-lab, e, l="setIsMenuOpen(!isMenuOpen)};
-            </button>
-            <buttonclassName="md:hiddenp-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                aria-label="Toggle, mobile, menu"              >
-                {isMenuOpen ? "✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOpen)};
-                className="md:hidde, n, p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
-                aria-label="Toggle, mobile, menu"              >
-                {isMenuOpen ? "✕' : '☰"};
-              </button>
-            </div>
-          </div>
-
+            ar, i, a-lab, e, l="setIsMenuOp, e, n(!isMenuOp, e, n)};
+            </butt, o, n>
+            <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Toggle, mobile, menu"              >
+                {isMenuOp, e, n ? '✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOp, e, n)};
+                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                ar, i, a-lab, e, l="Toggle, mobile, menu"              >
+                {isMenuOp, e, n ? '✕' : '☰'};
+              </butt, o, n>
+            </d, i, v>
+          </d, i, v>
           {/* Mobi, l, e, Navigation */};
           {isMenuOpen && (<divclassName="md:hidde, n, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r-t, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0">
               <divclassName="px-2pt-2, pb-3, space-y-1">
@@ -148,3 +144,5 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
         onClos, e={() => setShowTaskManag, e, r(false)}       />
     </>
   )};
+
+export default Navigati;

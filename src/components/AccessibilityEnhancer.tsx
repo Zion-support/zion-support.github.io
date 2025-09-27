@@ -113,4 +113,6 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   return null; // This component doesn't render anything visible
 });
 
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+
 export default AccessibilityEnhancer;

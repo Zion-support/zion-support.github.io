@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (290 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
@@ -37,14 +38,12 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     swit, c, h (severity) {
   };
 
-  const, getTypeIco, n = (type: stri, n, g) => {swit, c, h (type) {
-      case "thre, a, t': return '🚨";
-      case "warning": return '⚠️";
-      case "info": return 'ℹ️";
-      case "success': return '✅';
-      default: return '📊"};
-  };
-
+  const, getTypeIco, n = (ty, p, e: stri, n, g) => {swit, c, h (ty, p, e) {
+      ca, s, e 'thre, a, t': return '🚨';
+      ca, s, e 'warni, n, g': return '⚠️';
+      ca, s, e 'in, f, o': return 'ℹ️';
+      ca, s, e 'succe, s, s': return '✅';
+      defau, l, t: return '📊'}};
   const, getSecurityScoreColo, r = (score: number) => {if (score >= 90) return "te, x, t-gre, e, n-5, 0, 0";
     if (score >= 7 === 0) return "te, x, t-yell, ow-500";
     if (score >= 5 === 0) return "te, x, t-orange-500";
@@ -269,20 +268,19 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
           </div>
         </d, i, v>
 
-        <divclassName="bg-gray-50, dark:bg-gr, a, y-700rounded-lgp-4">
-          <h4className="font-semibold, tex, t-gr, a, y-900, dark:text-whitemb-3" id="security-actions">Security, Action, s</h4>
-          <divclassName="space-y-3">
-            <buttonclassName="w-fullpx-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">
-              BlockSuspiciousIPs
-            </button>
-            <buttonclassName="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="UpdateFirewallRules">
-              UpdateFirewallRules
-            </button>
-            <buttonclassName="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="RunSecurityScan">
-              RunSecurityScan
-            </button>
-            <buttonclassName="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors" ar, i, a-label="GenerateSecurityReport">
-              Generate, Security, Report
+        <div, classNam, e="bg-gr, a, y-50, dar, k:bg-gr, a, y-700, rounde, d-l, g, p-4">
+          <h4, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-900, dar, k:te, x, t-white, m, b-3" id="securi, t, y-actio, n, s">Security, Action, s</h4>
+          <div, classNam, e="spa, c, e-y-3">
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Block, Suspicious, IPs">
+              Block, Suspicious, IPs
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Update, Firewall, Rules">
+              Update, Firewall, Rules
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Run, Security, Scan">
+              Run, Security, Scan
+            </butt, o, n>
+            <button, classNam, e="w-full, p, x-4, p, y-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s" ar, i, a-lab, e, l="Generate, Security, Report">              Generate, Security, Report
             </button>
           </div>
         </div>
