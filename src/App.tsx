@@ -20,6 +20,10 @@ import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/pe
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
 import { enhancedSecurityManager } from './utils/enhancedSecurity';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import AdvancedSecurityManager from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
 import './index.css';
 import './styles/notifications.css';
 
@@ -60,6 +64,12 @@ export default function App(): React.JSX.Element {
     
     // Initialize enhanced accessibility manager
     enhancedAccessibilityManager.initialize();
+    
+    // Initialize advanced managers
+    AdvancedPerformanceMonitor.getInstance().startMonitoring();
+    AdvancedAccessibilityManager.getInstance().initialize();
+    AdvancedSecurityManager.getInstance().initialize();
+    EnhancedUXManager.getInstance().initialize();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
