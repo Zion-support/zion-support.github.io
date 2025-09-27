@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useTaskManager } from '../hooks/ useTaskManager';
+import { useTaskManager } from '../hooks/useTaskManager';
 
 interface TaskManagerProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.Elemen.t {
-  const [newTaskTextsetNewTaskTex, t] = useState('');
+export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.Element {
+  const [newTaskText, setNewTaskText] = useState('');
   const {
     tasks,
     filter,
@@ -16,7 +16,7 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
     deleteTask,
     setFilter
   } = useTaskManager();
-  if (!isOpe, n) return <></>;
+  if (!isOpen) return <></>;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
