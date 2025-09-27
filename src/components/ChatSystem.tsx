@@ -25,10 +25,10 @@ interf, a, c, e, ChatSystemP, r, o, p, s {classN, a, m, e?: s, t, r, i, n, g;
  = ({classN, a, m, e = ""onMessageSendonMessageReceiveplacehol, d, e, r = "Typeamess, a, g, e...",
   maxMessa, g, e, s = 100enableFileUpl, o, a, d = trueexportconstChatSys, t, e, m: React.F, C<ChatSystemPr, o, p, s> = ({classN, a, m, e = ""onMessageSendonMessageReceiveplacehol, d, e, r = "Typeamess, a, g, e..."maxMessa, g, e, s = 100enableFileUpl, o, a, d = t, r, ueenableImageUpl, o, a, d = truebotN, a, m, e = "Assist, a, n, t"userAva, t, a, r = "ht, t, p, s:// u, i-av, a, t, a, r, s.c, o, m/a, p, i/?name=U, s, e, r&backgro, u, n, d=ran, d, o, m"botAva, t, a, r = "ht, t, p, s://u, i-av, a, t, a, r, s.c, o, m/ap, i/? name=Bo, t&backgro, u, n, d=ran, d, o, m"}) => {const [mes, s, a, g, e, s, setMessa, g, e, s] = useState<Mess, a, g, e[]>([]);
   const [inputTextsetInputT, e, x, t] = useState("");
-  const [isTyp, i, n, g : setIsTyp, i, n, g] = useState(fa, l, s, e);
-  const [isConnectedsetIsConnec, t, e, d] = useState(t, r, u, e);
-  const, messagesE, n, d, R, e, f = u, s, e, R, e, f<HTMLDivElem, e, n, t>(n, u, l, l);
-  constfileInput, R, e, f = use, R, e, f<HTMLInputElem, e, n, t>(n, u, l, l);
+  const [isTyp, i, n, g : setIsTyp, i, n, g] = useState(false);
+  const [isConnectedsetIsConnec, t, e, d] = useState(true);
+  const, messagesE, n, d, R, e, f = u, s, e, R, e, f<HTMLDivElem, e, n, t>(null);
+  constfileInput, R, e, f = use, R, e, f<HTMLInputElem, e, n, t>(null);
 
  {
 
@@ -55,7 +55,7 @@ interf, a, c, e, ChatSystemP, r, o, p, s {classN, a, m, e?: s, t, r, i, n, g;
       i, d: D, a, t, e.n, o, w().toStr, i, n, g()t, e, x, t: t, e, x, t.t, r, i, m()sen, d, e, r: "u, s, e, r"timest, a, m, p: newD, a, t, e()()    };
 
     setMes, s, a, g, e, s(p, r, e, v => [...prevuserMes, s, a, g.e].s, l, i, c(-maxMessa, g, e, s));    setInputT, e, x, t("");
-    setIsTyp, i, n, g(t, r, u, e);
+    setIsTyp, i, n, g(true);
 
     i, f (onMessag, e, S, e, n, d) {onMessageS, e, n, d(userMess, a, g, e)};    // Simul, a, t, e, bo, t, respo, n, s, e
  {constbotRespo, n, s, e: Me, s, s, a, g, e = {
@@ -64,7 +64,7 @@ interf, a, c, e, ChatSystemP, r, o, p, s {classN, a, m, e?: s, t, r, i, n, g;
 
         i, d: (D, a, t, e.n, o, w() + 1).toStr, i, n, g()t, e, x, t: generateBotRespo, n, s, e(t, e, x, t)sen, d, e, r: "bo, t"timest, a, m, p: newD, a, t, e()()      };
       setMessa, g, e, s(p, r, e, v = > [...prevbotResp, o, n, s.e].s, l, i, c(- maxMes, s, a, g, e, s));
-      setIsTyp, i, n, g(fa, l, s, e);
+      setIsTyp, i, n, g(false);
 
       i, f (onMessageRece, i, v, e) {onMessageRece, i, v, e(botRespo, n, s, e)};
  {constrespon, s, e, s = ["T, h, a, t"s, intere, s, t, i, n, g! C, a, n, youtellmemoreaboutt, h, a, t? ",

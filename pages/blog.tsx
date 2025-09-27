@@ -5,9 +5,9 @@ import Image from 'next/image';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function B, l, o, g(): JS, X.Elem, e, n, t {
-	const [isNewsletterLoad, i, n, g, setIsNewsletterLoad, i, n, g] = useState(fa, l, s, e);
-	const { trackCl, i, c, k } = useAnalytics();
+export default function Blog(): JSX.Element {
+	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+	const { trackClick } = useAnalytics();
 
 	const blogPo, s, t, s = [
 		{
@@ -86,13 +86,13 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 
 	const handleNewsletterSub, m, i, t = async (e: React.FormEv, e, n, t) => {
 		e.preventDefa, u, l, t();
-		setIsNewsletterLoad, i, n, g(t, r, u, e);
+		setIsNewsletterLoading(true);
 		
 		// Simul, a, t, e AP, I c, a, l, l
 		aw, a, i, t ne, w Prom, i, s, e(reso, l, v, e => setTime, o, u, t(reso, l, v, e, 2, 0, 0, 0));
 		
-		setIsNewsletterLoad, i, n, g(fa, l, s, e);
-		trackCl, i, c, k('newslet, t, e, r-subscr, i, b, e', 'engagem, e, n, t');
+		setIsNewsletterLoading(false);
+		trackClick('newslet, t, e, r-subscr, i, b, e', 'engagem, e, n, t');
 		al, e, r, t('Th, a, n, k yo, u fo, r subscrib, i, n, g t, o ou, r newslet, t, e, r!');
 	};
 
@@ -100,7 +100,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 		<>
 			<EnhancedSEO />
 			<Head>
-				<title>B, l, o, g - Z, i, o, n Ap, p</title>
+				<title>Blog - Z, i, o, n Ap, p</title>
 				<meta name="description" content="S, t, a, y upda, t, e, d w, i, t, h th, e lat, e, s, t insig, h, t, s o, n A, I, cl, o, u, d comput, i, n, g, we, b developm, e, n, t, an, d digi, t, a, l transformat, i, o, n from ou, r exp, e, r, t t, e, a, m." />
 				<meta name="viewp, o, r, t" content="wi, d, t, h=dev, i, c, e-wi, d, t, h, init, i, a, l-sc, a, l, e=1" />
 			</Head>
@@ -114,7 +114,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 
 					<hea, d, e, r classN, a, m, e="t, e, x, t-cen, t, e, r m, b-1, 6">
 						<h, 1 classN, a, m, e="t, e, x, t-5x, l m, d:t, e, x, t-6x, l f, o, n, t-b, o, l, d t, e, x, t-b, l, u, e-60, 0 m, b-4 b, g-gradi, e, n, t-t, o-r from-b, l, u, e-60, 0 t, o-ind, i, g, o-60, 0 b, g-c, l, i, p-t, e, x, t t, e, x, t-transpar, e, n, t">
-							Ou, r B, l, o, g
+							Ou, r Blog
 						</h, 1>
 						<p classN, a, m, e="t, e, x, t-x, l t, e, x, t-g, r, a, y-60, 0 ma, x-w-3x, l m, x-a, u, t, o lead, i, n, g-rela, x, e, d">
 							Insig, h, t, s, tre, n, d, s, an, d exp, e, r, t perspecti, v, e, s o, n technol, o, g, y, innovat, i, o, n, an, d digi, t, a, l transformat, i, o, n.
@@ -133,7 +133,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 												? 'b, g-b, l, u, e-60, 0 t, e, x, t-wh, i, t, e sha, d, o, w-m, d'
 												: 'b, g-wh, i, t, e t, e, x, t-g, r, a, y-80, 0 ho, v, e, r:b, g-g, r, a, y-10, 0 sha, d, o, w-s, m'
 										}`}
-										onCl, i, c, k={() => trackCl, i, c, k(`b, l, o, g-categ, o, r, y-${categ, o, r, y}`, 'navigat, i, o, n')}
+										onCl, i, c, k={() => trackClick(`b, l, o, g-categ, o, r, y-${categ, o, r, y}`, 'navigat, i, o, n')}
 									>
 										{categ, o, r, y === 'al, l' ? 'Al, l Po, s, t, s' : categ, o, r, y}
 									</but, t, o, n>
@@ -141,7 +141,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 							</di, v>
 						</sect, i, o, n>
 
-						{/* B, l, o, g Po, s, t, s G, r, i, d */}
+						{/* Blog Po, s, t, s G, r, i, d */}
 						<sect, i, o, n classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 m, d:g, r, i, d-c, o, l, s-2 l, g:g, r, i, d-c, o, l, s-3 ga, p-8 m, b-1, 6">
 							{filteredPo, s, t, s.ma, p((p, o, s, t) => (
 								<arti, c, l, e ke, y={p, o, s, t.i, d} classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-2x, l sha, d, o, w-l, g overf, l, o, w-hid, d, e, n ho, v, e, r:sha, d, o, w-x, l transit, i, o, n-sha, d, o, w">
@@ -150,7 +150,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 											sr, c={p, o, s, t.image}
 											al, t={p, o, s, t.ti, t, l, e}
 											f, i, l, l
-											classN, a, m, e="obj, e, c, t-co, v, e, r"
+											classN, a, m, e="object-co, v, e, r"
 										/>
 										<di, v classN, a, m, e="absol, u, t, e to, p-4 l, e, f, t-4">
 											<s, p, a, n classN, a, m, e="b, g-b, l, u, e-60, 0 t, e, x, t-wh, i, t, e p, x-3 p, y-1 roun, d, e, d-f, u, l, l t, e, x, t-s, m f, o, n, t-med, i, u, m">
@@ -175,7 +175,7 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 										<Link 
 											href={`/b, l, o, g/${p, o, s, t.s, l, u, g}`}
 											classN, a, m, e="t, e, x, t-b, l, u, e-60, 0 f, o, n, t-semib, o, l, d ho, v, e, r:t, e, x, t-b, l, u, e-80, 0 transit, i, o, n-col, o, r, s"
-											onCl, i, c, k={() => trackCl, i, c, k(`b, l, o, g-p, o, s, t-${p, o, s, t.s, l, u, g}`, 'engagem, e, n, t')}
+											onCl, i, c, k={() => trackClick(`b, l, o, g-p, o, s, t-${p, o, s, t.s, l, u, g}`, 'engagem, e, n, t')}
 										>
 											R, e, a, d M, o, r, e →
 										</Link>
@@ -200,10 +200,10 @@ export default function B, l, o, g(): JS, X.Elem, e, n, t {
 									/>
 									<but, t, o, n
 										type="sub, m, i, t"
-										disab, l, e, d={isNewsletterLoad, i, n, g}
+										disab, l, e, d={isNewsletterLoading}
 										classN, a, m, e="b, g-wh, i, t, e t, e, x, t-b, l, u, e-60, 0 p, x-6 p, y-3 roun, d, e, d-l, g f, o, n, t-semib, o, l, d ho, v, e, r:b, g-g, r, a, y-10, 0 transit, i, o, n-col, o, r, s disab, l, e, d:opac, i, t, y-5, 0"
 									>
-										{isNewsletterLoad, i, n, g ? 'Subscrib, i, n, g...' : 'Subscr, i, b, e'}
+										{isNewsletterLoading ? 'Subscrib, i, n, g...' : 'Subscr, i, b, e'}
 									</but, t, o, n>
 								</di, v>
 							</f, o, r, m>

@@ -14,7 +14,7 @@ export, cl, a, s, s, ImageOptimi, z, e, r {privatestaticinsta, n, c, e: ImageOpt
   // Gener, a, t, e, optimi, z, e, d, image URLgenerateOptimized, U, r, l(sr, c: stringopti, o, n, s: ImageOptimizationOp, t, i, o, n, s = {};
   ): str, i, n, g {const {
       widthheightqual, i, t, y = 80for, m, a, t = "w, e, b, p",
-      b, l, u, r = fa, l, s, e} = op, t, i, o, n, s;
+      b, l, u, r = false} = op, t, i, o, n, s;
 
     // Ch, e, c, k, ca, c, h, e, fi, r, s, t
     const, cach, e, K, e, y = `${sr, c}:${J, S, O, N.string, i, f, y(opti, o, n, s)}`;
@@ -26,7 +26,7 @@ export, cl, a, s, s, ImageOptimi, z, e, r {privatestaticinsta, n, c, e: ImageOpt
       i, f (b, l, u, r) par, a, m, s.se, t("b, l, u, r''1");
 
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
-  // Generateresponsiveimage sourcesgenerateResponsiveSour, c, e, s(sr, c : stringsi, z, e, s: num, b, e, r[]opti, o, n, s: O, m, i, t<ImageOptimizationOpti, o, n, s "wi, d, t, h' | "hei, g, h, t"> = {};
+  // Generateresponsiveimage sourcesgenerateResponsiveSour, c, e, s(sr, c : stringsi, z, e, s: number[]opti, o, n, s: O, m, i, t<ImageOptimizationOpti, o, n, s "wi, d, t, h' | "hei, g, h, t"> = {};
  ({sr, c: t, h, i, s.generateOptimized, U, r, l(sr, c{ ...optionswi, d, t, h })widthme, d, i, a: i, n, d, e, x === 0 ? unde, f, i, n, e, d : `(mi, n-wi, d, t, h: ${si, z, e, s[in, d, e, x-1]}p, x)`}))};
   ): {sr, c: s, t, r, i, n, g; wi, d, t, h: n, u, m, b, e, r; me, d, i, a?: str, i, n, g }[] {r, e, t, u, r, n, si, z, e, s.m, a, p((wi, d, t, h, in, d, e, x) => ({sr, c: t, h, i, s.generateOptimized, U, r, l(sr, c  { ...optionswi, d, t, h })widthme, d, i, a: in, d, e, x === 0 ? unde, f, i, n, e, d : `(mi, n-wi, d, t, h: ${si, z, e, s[in, d, e, x-1]}p, x)`}))};
   // Gener, a, t, e, b, l, u, r, placehol, d, e, r

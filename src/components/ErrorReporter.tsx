@@ -7,13 +7,13 @@ interf, a, c, e, ErrorDet, a, i, l, s {mess, a, g, e: s, t, r, i, n, g;
   userAg, e, n, t: str, i, n, g;
   ur, l: str, i, n, g};
 interf, a, c, e, ErrorBoundaryS, t, a, t, e {hasEr, r, o, r: bo, o, l, e, a, n;
-  er, r, o, r: Er, r, o, r | n, u, l, l;
-  errorI, n, f, o: React.Error, I, n, f.o | n, u, l, l};
+  er, r, o, r: Er, r, o, r | null;
+  errorI, n, f, o: React.Error, I, n, f.o | null};
 interf, a, c, e, ErrorReporterP, r, o, p, s {child, r, e, n: React.Rea, c, t, N, o, d.e;
   on, E, r, r, o, r?: (er, r, o, r: ErrorD, e, t, a, il, s) => v, o, i, d};
 exportconstErrorRepor, t, e, r: React.F, C<ErrorReporterPr, o, p, s> = ({childrenonEr, r, o, r 
 }) => {const [errorStatesetErrorSt, a, t, e] = useState<ErrorBoundarySt, a, t, e>({
-    hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: n, u, l, l
+    hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: null
   });
 
   const [errorHistorysetErrorHist, o, r, y] = useState<ErrorDeta, i, l, s[]>([]);
@@ -54,7 +54,7 @@ exportconstErrorRepor, t, e, r: React.F, C<ErrorReporterPr, o, p, s> = ({childre
   constclearErrorHist, o, r, y = () => {setErrorHist, o, r, y([])};
 
   constre, t, r, y = () => {setErrorSt, a, t, e({
-      hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: n, u, l, l
+      hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: null
     })};
 
 

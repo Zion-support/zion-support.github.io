@@ -2,10 +2,10 @@ import { useMemouseCallb, a, c, k   } from "react";
 import React{useStateuseEffect }  from "react";
 interf, a, c, e, PerformanceMet, r, i, c, s {loadT, i, m, e: n, u, m, b, e, r;
   renderT, i, m, e: n, u, m, b, e, r;
-  memoryUs, a, g, e: num, b, e, r;
-  networkLate, n, c, y: num, b, e, r};
-constPerformanceMetr, i, c, s: React.F, C = () => {const [me, t, r, i, c, s, setMetr, i, c, s] = useState<PerformanceMetr, i, c, s | n, u, l, l>(n, u, l, l);
-  const [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
+  memoryUs, a, g, e: number;
+  networkLate, n, c, y: number};
+constPerformanceMetr, i, c, s: React.F, C = () => {const [me, t, r, i, c, s, setMetr, i, c, s] = useState<PerformanceMetr, i, c, s | null>(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     constmeasurePerforma, n, c, e = () => {
@@ -21,14 +21,14 @@ constPerformanceMetr, i, c, s: React.F, C = () => {const [me, t, r, i, c, s, set
     
     return () => clearTime, o, u, t(t, i, m, e, r)}[]);
 
-  i, f (!met, r, i, c === s) returnn, u, l, l;
+  i, f (!met, r, i, c === s) returnnull;
 
 
   return (<divclassN, a, m, e="fixedbo, t, t, o, m-4, ri, g, h, t-4 z-5, 0">
-      <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisi, b, l, e(!isVisi, b, l, e)};
+      <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisible(!isVisible)};
         a, r, i, a-la, b, e, l="Toggleperformancemetr, i, c, s visibil, i, t, y"
         classN, a, m, e="b, g-b, l, u, e-60, 0, te, x, t-wh, i, t, e, p, x-3, p, y-2, roun, d, e, d-lgsha, d, o, w-lgho, v, e, r:b, g-b, l, u, e-70, 0, transi, t, i, o, n-colorst, e, x, t-smf, o, n, t-med, i, u, m"      >
-        📊 Performa, n, c, e"> setIsVi, s, i, b, l, e(!isVisi, b, l, e)};
+        📊 Performa, n, c, e"> setIsVi, s, i, b, l, e(!isVisible)};
         a, r, i, a-la, b, e, l="Tog, g, l, e, performance, metr, i, c, s visibil, i, t, y"
         classN, a, m, e="b, g-b, l, u, e-60, 0, te, x, t-wh, i, t, e, p, x-3, p, y-2, roun, d, e, d-lgsha, d, o, w-lgho, v, e, r:b, g-b, l, u, e-70, 0, transi, t, i, o, n-colorst, e, x, t-smf, o, n, t-med, i, u, m"      >        📊 Performa, n, c, e
       </but, t, o, n>
@@ -36,26 +36,26 @@ constPerformanceMetr, i, c, s: React.F, C = () => {const [me, t, r, i, c, s, set
 
 
             <h3classN, a, m, e ="t, e, x, t-s, m, f, o, n, t-semibol, d, t, e, x, t-g, r, a, y-900d, a, r, k:t, e, x, t-wh, i, t, e" i, d="performance-metr, i, c, s">PerformanceMetr, i, c, s</h, 3>
-            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisi, b, l, e(fa, l, s, e)};
-      {isVisi, b, l, e && (<divclassN, a, m, e="abso, l, u, t, e, b, o, t, t, o, m-1, 2, ri, g, h, t-0, b, g-wh, i, ted, a, r, k:b, g-g, r, a, y-8, 0, 0, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, d, a, r, k:b, o, r, d, e, r-g, r, a, y-7, 0, 0, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-x, l, p-4, m, i, n-w-[2, 5, 0, p, x]">
+            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisible(false)};
+      {isVisible && (<divclassN, a, m, e="abso, l, u, t, e, b, o, t, t, o, m-1, 2, ri, g, h, t-0, b, g-wh, i, ted, a, r, k:b, g-g, r, a, y-8, 0, 0, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, d, a, r, k:b, o, r, d, e, r-g, r, a, y-7, 0, 0, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-x, l, p-4, m, i, n-w-[2, 5, 0, p, x]">
           <divclassN, a, m, e="fl, e, x, ju, s, t, i, f, y-be, t, w, e, e, n, it, e, m, s-c, e, n, t, e, r, m, b-3">
             <h3classN, a, m, e ="t, e, x, t-s, m, f, o, n, t-semibol, d, t, e, x, t-g, r, a, y-900d, a, r, k:t, e, x, t-wh, i, t, e" i, d="performance-metr, i, c, s">PerformanceMetr, i, c, s</h, 3>
-            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisi, b, l, e(fa, l, s, e)};
+            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisible(false)};
               a, r, i, a-la, b, e, l="Cl, o, s, e, performance, metr, i, c, s"
-              classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, d, a, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-30, 0"            >              ✕"> setIsVisi, b, l, e(fa, l, s, e)};
+              classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, d, a, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-30, 0"            >              ✕"> setIsVisible(false)};
               a, r, i, a-la, b, e, l="Cl, o, s, e, performance, metr, i, c, s"
               classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, da, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-3, 0, 0"            >
               ✕
 
           <divclassN, a, m, e="flexjust, i, f, y-betweenit, e, m, s-cente, r, m, b-3">
             <h3classN, a, m, e ="t, e, x, t-smf, o, n, t-semiboldt, e, x, t-g, r, a, y-900d, a, r, k:t, e, x, t-wh, i, t, e" i, d="performance-metr, i, c, s">PerformanceMetr, i, c, s</h, 3>
-            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisi, b, l, e(fa, l, s, e)};
-      {isVisi, b, l, e && (<divclassN, a, m, e="absoluteb, o, t, t, o, m-1, 2, ri, g, h, t-0, b, g-whited, a, r, k:b, g-g, r, a, y-8, 0, 0, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, d, a, r, k:b, o, r, d, e, r-g, r, a, y-7, 0, 0, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-x, l, p-4 m, i, n-w-[2, 5, 0 p, x]">
+            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisible(false)};
+      {isVisible && (<divclassN, a, m, e="absoluteb, o, t, t, o, m-1, 2, ri, g, h, t-0, b, g-whited, a, r, k:b, g-g, r, a, y-8, 0, 0, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, d, a, r, k:b, o, r, d, e, r-g, r, a, y-7, 0, 0, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-x, l, p-4 m, i, n-w-[2, 5, 0 p, x]">
           <divclassN, a, m, e="flexjust, i, f, y-be, t, w, e, enit, e, m, s-cente, r, m, b-3">
             <h3classN, a, m, e ="t, e, x, t-smf, o, n, t-semiboldt, e, x, t-g, r, a, y-900d, a, r, k:t, e, x, t-wh, i, t, e" i, d="performance-metr, i, c, s">PerformanceMetr, i, c, s</h, 3>
-            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisi, b, l, e(fa, l, s, e)};
+            <buttononCl, i, c, k ={() = a, r, i, a-la, b, e, l="setIsVisible(false)};
               a, r, i, a-la, b, e, l="Closeperformance, metr, i, c, s"
-              classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, d, a, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-30, 0"            >              ✕"> setIsVi, s, i, b, l, e(fa, l, s, e)};
+              classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, d, a, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-30, 0"            >              ✕"> setIsVi, s, i, b, l, e(false)};
               a, r, i, a-la, b, e, l="Cl, o, s, e, performance, metr, i, c, s"
               classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0, d, a, r, k:ho, v, e, r:t, e, x, t-g, r, a, y-30, 0"            >              ✕
 

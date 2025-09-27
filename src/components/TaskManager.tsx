@@ -4,7 +4,7 @@ import React{useState }  from "react";
 import { useTaskMana, g, e, r     } from "../hooks/useTaskManager";
 interf, a, c, e, TaskManagerPr, o, p, s {isO, p, e, n: bool, e, a, n;
   onCl, o, s, e: () => v, o, i, d};
-const TaskMana, g, e, r = React.memo(functionTaskMana, g, e, r({isOpenonCl, o, s, e }: TaskManagerPr, o, p, s): JS, X.Elem, e, n, t {const [newTaskTextsetNewTaskT, e, x, t] = useState(");
+const TaskMana, g, e, r = React.memo(functionTaskMana, g, e, r({isOpenonCl, o, s, e }: TaskManagerPr, o, p, s): JSX.Element {const [newTaskTextsetNewTaskT, e, x, t] = useState(");
   const {
     ta, s, k, s, fil, t, e, r, s, t, a, t, s, addT, a, s, k, toggleTaskdeleteTasksetFil, t, e, r
   } = useTaskMa, n, a, g, e, r();

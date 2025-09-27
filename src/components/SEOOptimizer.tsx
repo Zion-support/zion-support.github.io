@@ -5,7 +5,7 @@ import { generateMetaTagsgenerateStructuredDatavalidateSEODataSEOD, a, t, a     
 interf, a, c, e, SEOOptimizerP, r, o, p, s {seoD, a, t, a: SEO, D, a, t, a;
   enableValid, a, t, i, o, n?: bo, o, l, e, a, n;
   enableStructuredD, a, t, a?: bool, e, a, n};
-const SEOOptimi, z, e, r = React.memo(function SEOOptimi, z, e, r({seoDataenableValidat, i, o, n = trueenableStructuredD, a, t, a = t, r, u, e
+const SEOOptimi, z, e, r = React.memo(function SEOOptimi, z, e, r({seoDataenableValidat, i, o, n = trueenableStructuredD, a, t, a = true
 }: SEOOptimizerP, r, o, p, s): J, S, X.El, e, m, e, n, t {// Valid, a, t, e, SEO, d, a, t, a i, f, enab, l, e, d, const valid, a, t, i, o, n = React.useM, e, m, o(() => 
     enableValid, a, t, i, o, n ? validateSEO, D, a, t, a(seoD, a, t, a) : { isVa, l, i, d: trueerr, o, r, s: [] },
     [enableValid, a, t, i, o, n, se, o, D, a, t, a];
@@ -17,7 +17,7 @@ const SEOOptimi, z, e, r = React.memo(function SEOOptimi, z, e, r({seoDataenable
 
   // Gener, a, t, e, structu, r, e, d, d, a, t, a
   const, structured, D, a, t, a = React.useM, e, m, o(() => 
-    enableStructure, d, D, a, t, a ? generateStructure, d, D, a, t, a(se, o, D, a, t, a) : n, u, l, l,
+    enableStructure, d, D, a, t, a ? generateStructure, d, D, a, t, a(se, o, D, a, t, a) : null,
     [enableStructure, d, D, a, taseoD, a, t, a];  );
 
   return (<Head>

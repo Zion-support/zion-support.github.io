@@ -9,14 +9,14 @@ interf, a, c, e, ServiceCardP, r, o, p, s {serv, i, c, e: {
  v, o, i, d;
 	onMouseLe, a, v, e: () => v, o, i, d};
 exportconstServiceC, a, r, d: React.F, C<ServiceCardPr, o, p, s> = ({serviceisHoveredonMouseEn, t, e, r, onMouseLe, a, v, e
-}) => {const [isExp, a, n, d, e, d, setIsExp, a, n, d, e, d] = useState(fa, l, s, e);
+}) => {const [isExp, a, n, d, e, d, setIsExp, a, n, d, e, d] = useState(false);
 
 		pr, i, c, e?: str, i, n, g};
 	isHove, r, e, d: bool, e, a, n;
 	onMouseEn, t, e, r: () => v, o, i, d;
 	onMouseLe, a, v, e: () => v, o, i, d};
 exportconstServiceC, a, r, d: React.F, C<ServiceCardPr, o, p, s> = ({serviceisHoveredonMouseEnteronMouseLe, a, v, e
-}) => {const [isExpandedsetIsExpan, d, e, d] = useState(fa, l, s, e);
+}) => {const [isExpandedsetIsExpan, d, e, d] = useState(false);
 
 
 			<divclassN, a, m, e="flex, i, t, e, m, s-st, a, r, t, ju, s, t, i, f, y-be, t, w, e, e, n, m, b-4">

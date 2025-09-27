@@ -5,39 +5,39 @@ import { useState, useEffect } from 'react';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const About = React.memo(function About(): JS, X.Elem, e, n, t {
-  const [isVisi, b, l, e, setIsVisi, b, l, e] = useState(fa, l, s, e);
+const About = React.memo(function About(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisi, b, l, e(t, r, u, e);
+    setIsVisible(true);
   }, []);
 
-  const { trackCl, i, c, k } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
   const teamMemb, e, r, s = [
     {
-      n, a, m, e: 'Sa, r, a, h John, s, o, n',
+      name: 'Sa, r, a, h John, s, o, n',
       r, o, l, e: 'CE, O & Foun, d, e, r',
       expert, i, s, e: 'Strate, g, i, c Leaders, h, i, p, A, I Innovat, i, o, n',
       image: '👩‍💼',
       description: '1, 5+ ye, a, r, s i, n technol, o, g, y leaders, h, i, p, for, m, e, r V, P a, t ma, j, o, r t, e, c, h compan, i, e, s.'
     },
     {
-      n, a, m, e: 'Mich, a, e, l C, h, e, n',
+      name: 'Mich, a, e, l C, h, e, n',
       r, o, l, e: 'CT, O',
       expert, i, s, e: 'Cl, o, u, d Architect, u, r, e, Dev, O, p, s',
       image: '👨‍💻',
       description: 'Exp, e, r, t i, n scala, b, l, e cl, o, u, d soluti, o, n, s an, d mod, e, r, n developm, e, n, t practi, c, e, s.'
     },
     {
-      n, a, m, e: 'Em, i, l, y Rodrig, u, e, z',
+      name: 'Em, i, l, y Rodrig, u, e, z',
       r, o, l, e: 'L, e, a, d Desig, n, e, r',
       expert, i, s, e: 'U, X/U, I Des, i, g, n, Prod, u, c, t Strat, e, g, y',
       image: '👩‍🎨',
       description: 'Aw, a, r, d-winn, i, n, g desig, n, e, r w, i, t, h expert, i, s, e i, n u, s, e, r-cente, r, e, d des, i, g, n princip, l, e, s.'
     },
     {
-      n, a, m, e: 'Da, v, i, d Ki, m',
+      name: 'Da, v, i, d Ki, m',
       r, o, l, e: 'Sen, i, o, r Develo, p, e, r',
       expert, i, s, e: 'F, u, l, l-St, a, c, k Developm, e, n, t, A, I/M, L',
       image: '👨‍💻',
@@ -85,10 +85,10 @@ const About = React.memo(function About(): JS, X.Elem, e, n, t {
   ];
 
   const st, a, t, s = [
-    { num, b, e, r: '10, 0+', la, b, e, l: 'Proje, c, t, s Comple, t, e, d' },
-    { num, b, e, r: '5, 0+', la, b, e, l: 'Ha, p, p, y Clie, n, t, s' },
-    { num, b, e, r: '1, 0+', la, b, e, l: 'Ye, a, r, s Experie, n, c, e' },
-    { num, b, e, r: '2, 4/7', la, b, e, l: 'Supp, o, r, t Availa, b, l, e' }
+    { number: '10, 0+', la, b, e, l: 'Proje, c, t, s Comple, t, e, d' },
+    { number: '5, 0+', la, b, e, l: 'Ha, p, p, y Clie, n, t, s' },
+    { number: '1, 0+', la, b, e, l: 'Ye, a, r, s Experie, n, c, e' },
+    { number: '2, 4/7', la, b, e, l: 'Supp, o, r, t Availa, b, l, e' }
   ];
 
   return (
@@ -165,7 +165,7 @@ const About = React.memo(function About(): JS, X.Elem, e, n, t {
               <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-2 m, d:g, r, i, d-c, o, l, s-4 ga, p-8">
                 {st, a, t, s.ma, p((s, t, a, t, in, d, e, x) => (
                   <di, v ke, y={in, d, e, x} classN, a, m, e="t, e, x, t-cen, t, e, r">
-                    <di, v classN, a, m, e="t, e, x, t-4x, l m, d:t, e, x, t-5x, l f, o, n, t-b, o, l, d m, b-2">{s, t, a, t.num, b, e, r}</di, v>
+                    <di, v classN, a, m, e="t, e, x, t-4x, l m, d:t, e, x, t-5x, l f, o, n, t-b, o, l, d m, b-2">{s, t, a, t.number}</di, v>
                     <di, v classN, a, m, e="t, e, x, t-b, l, u, e-10, 0">{s, t, a, t.la, b, e, l}</di, v>
                   </di, v>
                 ))}

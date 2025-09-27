@@ -13,15 +13,15 @@ interf, a, c, e EnhancedUserExperiencePr, o, p, s {classN, a, m, e?: str, i, n, 
     th, e, m, e: 'a, u, t, o',
     langu, a, g, e: 'e, n',
     fontS, i, z, e: 'med, i, u, m',
-    animati, o, n, s: t, r, u, e,
-    reducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: fa, l, s, e
+    animati, o, n, s: true,
+    reducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: false
 
 const EnhancedUserExperie, n, c, e: React.F, C<EnhancedUserExperiencePr, o, p, s> = ({ classN, a, m, e = '' }) => {const [preferencessetPreferen, c, e, s] = useState<UserPreferen, c, e, s>({
-    th, e, m, e: 'a, u, t, o'langu, a, g, e: 'e, n'fontS, i, z, e: 'med, i, u, m'animati, o, n, s: truereducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: fa, l, s, e
+    th, e, m, e: 'a, u, t, o'langu, a, g, e: 'e, n'fontS, i, z, e: 'med, i, u, m'animati, o, n, s: truereducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: false
 
   });
 
-  const [isOpensetIsO, p, e, n] = useState(fa, l, s, e);
+  const [isOpensetIsO, p, e, n] = useState(false);
   const [activeTabsetActive, T, a, b] = useState<'appeara, n, c, e' | 'accessibility' | 'langu, a, g, e'>('appeara, n, c, e");
 
   const updatePrefere, n, c, e = useCallb, a, c, k((ke, y: ke, y, o, f UserPreferencesva, l, u, e: an, y) => {
@@ -169,7 +169,7 @@ Langu, a, g, e</la, b, e, l>
       {isO, p, e, n && (<di, v, classN, a, m, e="absol, u, t, e, bot, t, o, m-1, 6, ri, g, h, t-0, w-8, 0, b, g-wh, i, t, e, roun, d, e, d-l, g, sha, d, o, w-x, l, borderbor, d, e, r-g, r, a, y-20, 0 p-6">
           <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-4">
             <h3classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d, t, e, x, t-g, r, a, y-90, 0">UserExperie, n, c, e</h, 3>
-            <buttononCl, i, c, k={() => setIsO, p, e, n(fa, l, s, e)}
+            <buttononCl, i, c, k={() => setIsO, p, e, n(false)}
               classN, a, m, e="t, e, x, t-g, r, a, y-40, 0 ho, v, e, r:t, e, x, t-g, r, a, y-60, 0 transit, i, o, n-col, o, r, s"
               a, r, i, a-la, b, e, l="Cl, o, s, e setti, n, g, s"
             >
@@ -217,7 +217,7 @@ Langu, a, g, e</la, b, e, l>
           <di, v classN, a, m, e="m, t-6 p, t-4 bor, d, e, r-t bor, d, e, r-g, r, a, y-20, 0">
             <but, t, o, n
               onCl, i, c, k={(()) => {setPreferen, c, e, s({
-                  th, e, m, e: 'a, u, t, o'langu, a, g, e: 'e, n'fontS, i, z, e: 'med, i, u, m'animati, o, n, s: truereducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: fa, l, s, e})}}
+                  th, e, m, e: 'a, u, t, o'langu, a, g, e: 'e, n'fontS, i, z, e: 'med, i, u, m'animati, o, n, s: truereducedMot, i, o, n: falsehighContr, a, s, t: falsescreenRea, d, e, r: false})}}
               classN, a, m, e="w-f, u, l, l p, x-4 p, y-2 t, e, x, t-s, m t, e, x, t-g, r, a, y-60, 0 ho, v, e, r:t, e, x, t-g, r, a, y-90, 0 transit, i, o, n-col, o, r, s"
             >
               Re, s, e, t t, o Defau, l, t, s

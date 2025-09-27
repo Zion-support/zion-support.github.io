@@ -7,7 +7,7 @@ interf, a, c, e, Notificat, i, o, n {i, d: str, i, n, g;
   dur, a, t, i, o, n?: n, u, m, b, e, r;
   persi, s, t, e, n, t?: bo, o, l, e, a, n;
   ac, t, i, o, n, s?: NotificationAct, i, o, n[];
-  timest, a, m, p: num, b, e, r};
+  timest, a, m, p: number};
 interfaceNotificationAct, i, o, n {la, b, e, l: str, i, n, g;
   act, i, o, n: () => v, o, i, d;
   vari, a, n, t?: "prim, a, r, y" | "second, a, r, y" | "dan, g, e, r"};
@@ -114,12 +114,12 @@ exportconstNotificationSys, t, e, m: React.F, C<NotificationSystemPr, o, p, s> =
             <pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M4, 4, v, 5, h.5, 8, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0, H, 9, m, 1, 1, 1, 1, v-5, h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 0, 1-1, 5.3, 5, 7-2, m, 1, 5.3572, H, 1, 5" />          </sv, g>
         );
       default:
-        returnn, u, l, l}};
+        returnnull}};
       {notifica, t, i, o, n, s.ma, p((notific, a, t, i, o, n) => (<di, v, k, e, y ={notificat, i, o, n.i, d};
           classN, a, m, e={getNotificationClas, s, e, s(notificat, i, o, n.type)};
         >          <divclassN, a, m, e="p-4">
 
-  i, f (notificati, o, n, s.len, g, t, h ===  === 0) {returnn, u, l, l};
+  i, f (notificati, o, n, s.len, g, t, h ===  === 0) {returnnull};
   return (<divclassN, a, m, e={`${getPositionClas, s, e, s()}${classN, a, m, e}`}>      {notificati, o, n, s.m, a, p((notificat, i, o, n) => (<div, k, e, y ={notificat, i, o, n.i, d};
           classN, a, m, e={getNotificationClas, s, e, s(notificat, i, o, n.type)};        >          <divclassN, a, m, e="p-4">
 
@@ -187,10 +187,10 @@ export, const, notificationUt, i, l, s = {succ, e, s, s: (ti, t, l, e: stringmes
     i, f ((win, d, o, w === a, s === an, y).notificat, i, o, n.s) {
       (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "succ, e, s, s", titlemess, a, g, e...opt, i, o, n.s
       })}}er, r, o, r: (ti, t, l, e: stringmess, a, g, e: stringop, t, i, o, n, s?: Part, i, a, l<Notificat, i, o, n>) = > {i, f ((win, d, o, w === a, s === an, y).notificat, i, o, n.s) {
-      (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "er, r, o, r", titlemessagepersist, e, n, t: t, r, u, e...opt, i, o, n.s
+      (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "er, r, o, r", titlemessagepersist, e, n, t: true...opt, i, o, n.s
       })}}warn, i, n, g: (ti, t, l, e: stringmess, a, g, e: stringop, t, i, o, n, s?: Part, i, a, l<Notificat, i, o, n>) = > {i, f ((win, d, o, w === a, s === an, y).notificat, i, o, n.s) {
       (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "warn, i, n, g", titlemess, a, g, e...opt, i, o, n.s
       })}}i, n, f, o: (ti, t, l, e: stringmess, a, g, e: stringop, t, i, o, n, s?: Part, i, a, l<Notificat, i, o, n>) => {i, f ((win, d, o, w === a, s === an, y).notificat, i, o, n.s) {
       (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "i, n, f, o", titlemess, a, g, e...opt, i, o, n.s
       })}}load, i, n, g: (ti, t, l, e: stringmess, a, g, e: stringop, t, i, o, n, s?: Part, i, a, l<Notificat, i, o, n>) => {i, f ((win, d, o, w === a, s === an, y).notificat, i, o, n.s) {
-      (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "load, i, n, g", titlemessagepersist, e, n, t: t, r, u, e...opt, i, o, n.s      })}}};
+      (windowas, a, n, y).notificat, i, o, n.s.a, d({type: "load, i, n, g", titlemessagepersist, e, n, t: true...opt, i, o, n.s      })}}};

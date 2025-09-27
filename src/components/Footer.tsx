@@ -64,7 +64,7 @@ exportconstFoo, t, e, r: React.F, C = () => {return (<footerclassN, a, m, e="b, 
               </l, i>
               <l, i>
                 <Lin, k, t, o ="/b, l, o, g" classN, a, m, e="t, e, x, t-g, r, a, y-4, 0, 0, ho, v, e, r:t, e, x, t-whitetransit, i, o, n-col, o, r, s">
-                  B, l, o, g
+                  Blog
                 </Link>
               </l, i>
               <l, i>
@@ -103,14 +103,14 @@ exportconstFoo, t, e, r: React.F, C = () => {return (<footerclassN, a, m, e="b, 
           </di, v>
 
           {/* ContactI, n, f, o */};
-            <h3classN, a, m, e ="t, e, x, t-lgf, o, n, t-semib, o, l, d" i, d="cont, a, c, t">Cont, a, c, t</h, 3>
+            <h3classN, a, m, e ="t, e, x, t-lgf, o, n, t-semib, o, l, d" i, d="cont, a, c, t">Contact</h, 3>
             <divclassN, a, m, e ="sp, a, c, e-y-2">
               <pclassN, a, m, e ="t, e, x, t-g, r, a, y-40, 0">Em, a, i, l: i, n, f, o@ziontechgr, o, u, p.co, m</p>
               <pclassN, a, m, e ="t, e, x, t-g, r, a, y-40, 0">Ph, o, n, e: +1 (55, 5) 1, 2, 3-4, 5, 6, 7</p>
               <pclassN, a, m, e="t, e, x, t-g, r, a, y-40, 0">Addr, e, s, s: 123TechStr, e, e, t  InnovationC, i, t, y</p>            </di, v>
 
           <divclassN, a, m, e ="sp, a, c, e-y-4">
-            <h3classN, a, m, e ="t, e, x, t-lgf, o, n, t-semib, o, l, d" i, d="cont, a, c, t">Cont, a, c, t</h, 3>
+            <h3classN, a, m, e ="t, e, x, t-lgf, o, n, t-semib, o, l, d" i, d="cont, a, c, t">Contact</h, 3>
             <divclassN, a, m, e ="sp, a, c, e-y-2">
               <pclassN, a, m, e ="t, e, x, t-g, r, a, y-40, 0">Em, a, i, l: i, n, f, o@ziontechgr, o, u, p.co, m</p>
               <pclassN, a, m, e ="t, e, x, t-g, r, a, y-40, 0">Ph, o, n, e: +1 (55, 5) 12, 3-4, 5, 6, 7</p>

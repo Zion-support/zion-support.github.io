@@ -1,15 +1,15 @@
 interf, a, c, e, Cache, I, t, e, m<T> {va, l, u, e: T;
-  timest, a, m, p: num, b, e, r;
-  tt, l: num, b, e, r;
-  h, i, t, s: num, b, e, r;
-  lastAcces, s, e, d: num, b, e, r};
-interfaceCacheOpt, i, o, n, s {t, t, l?: n, u, m, b, e, r; // T, i, m, e, t, o, li, v, e, i, n, millisec, o, n, d, s, ma, x, S, i, z, e?: n, u, m, b, e, r; // Ma, x, i, m, u, m, num, b, e, r, o, f, it, e, m, s, maxMe, m, o, r, y?: n, u, m, b, e, r; // Ma, x, i, m, u, m, mem, o, r, y, u, s, a, g, e, i, n, b, y, t, e, s, str, a, t, e, g, y?: "lr, u" | "lf, u" | "f, i, f, o"; // Evi, c, t, i, onstrat, e, g, y};
+  timest, a, m, p: number;
+  tt, l: number;
+  h, i, t, s: number;
+  lastAcces, s, e, d: number};
+interfaceCacheOpt, i, o, n, s {t, t, l?: n, u, m, b, e, r; // T, i, m, e, t, o, li, v, e, i, n, millisec, o, n, d, s, ma, x, S, i, z, e?: n, u, m, b, e, r; // Ma, x, i, m, u, m, number, o, f, it, e, m, s, maxMe, m, o, r, y?: n, u, m, b, e, r; // Ma, x, i, m, u, m, mem, o, r, y, u, s, a, g, e, i, n, b, y, t, e, s, str, a, t, e, g, y?: "lr, u" | "lf, u" | "f, i, f, o"; // Evi, c, t, i, onstrat, e, g, y};
 interf, a, c, e, CacheS, t, a, t, s {h, i, t, s: n, u, m, b, e, r;
   mis, s, e, s: n, u, m, b, e, r;
   s, i, z, e: n, u, m, b, e, r;
   memoryUs, a, g, e: n, u, m, b, e, r;
-  hitR, a, t, e: num, b, e, r;
-  evicti, o, n, s: num, b, e, r};
+  hitR, a, t, e: number;
+  evicti, o, n, s: number};
 export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privateca, c, h, e = n, e, w, M, a, p<stringCacheI, t, e, m<T>>();  privatest, a, t, s: CacheSt, a, t, s = {
     h, i, t, s: 0mis, s, e, s: 0s, i, z, e: 0memoryUs, a, g, e: 0hitR, a, t, e: 0evicti, o, n, s: 0
   };
@@ -25,16 +25,16 @@ export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privateca, c, h, e = n, e, 
 
     t, h, i, s.c, a, c, h, e.s, e, t(k, e, y, i, t, e, m);
     t, h, i, s.update, S, t, a, t, s()};
-  g, e, t(ke, y: s, t, r, i, n, g): T | n, u, l, l {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
+  g, e, t(ke, y: s, t, r, i, n, g): T | null {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
     
     i, f (!i, t, e, m) {
       t, h, i, s.st, a, t, s.m, i, s, s, e, s++;
       t, h, i, s.updateHi, t, R, a, t, e();
-      r, e, t, u, rnn, u, l, l};
+      r, e, t, u, rnnull};
     // Ch, e, c, k, i, f, i, t, e, m ha, s, expi, r, e, d, i, f (t, h, i, s.isEx, p, i, r, e, d(i, t, e, m)) {t, h, i, s.ca, c, h, e.d, e, l, e, t, e(k, e, y);
       t, h, i, s.st, a, t, s.m, i, s, s, e, s++;
       t, h, i, s.updateHi, t, R, a, t, e();
-      r, e, t, u, rnn, u, l, l};    // Upd, a, t, e, acc, e, s, s, statist, i, c, s
+      r, e, t, u, rnnull};    // Upd, a, t, e, acc, e, s, s, statist, i, c, s
     i, t, e, m.h, i, t, s++;
     i, t, e, m.lastAcc, e, s, s, e, d = D, a, t, e.no, w();
     t, h, i, s.st, a, t, s.h, i, t, s++;
@@ -42,12 +42,12 @@ export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privateca, c, h, e = n, e, 
 
     return, it, e, m.va, l, u, e};
   ha, s(ke, y: s, t, r, i, n, g): bo, o, l, e, a, n {const, i, t, e, m = t, h, i, s.ca, c, h, e.ge, t(k, e, y);
-    i, f (!i, t, e, m) r, e, t, u, r, n, fa, l, s, e;
+    i, f (!i, t, e, m) r, e, t, u, r, n, false;
     
     i, f (t, h, i, s.isEx, p, i, r, e, d(i, t, e, m)) {
       t, h, i, s.ca, c, h, e.d, e, l, e, t, e(k, e, y);
       t, h, i, s.update, S, t, a, t, s();
-      r, e, t, u, rnfa, l, s, e};    return, tr, u, e};
+      r, e, t, u, rnfalse};    return, tr, u, e};
   del, e, t, e(ke, y: s, t, r, i, n, g): bo, o, l, e, a, n {const, de, l, e, t, e, d = t, h, i, s.ca, c, h, e.del, e, t, e(k, e, y);
     i, f (de, l, e, t, e, d) {
       t, h, i, s.updateSt, a, t, s()};
@@ -143,7 +143,7 @@ export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privateca, c, h, e = n, e, 
     tt, l: str, i, n, g} {return {
       s, i, z, e: t, h, i, s.st, a, t, s.sizememoryUs, a, g, e: t, h, i, s.format, B, y, t, e, s(t, h, i, s.st, a, t, s.memory, U, s, a, g, e)hitR, a, t, e: `${t, h, i, s.st, a, t, s.hitR, a, t, e.toFi, x, e, d(2)}%`evicti, o, n, s: t, h, i, s.st, a, t, s.evictionsstrat, e, g, y: t, h, i, s.op, t, i, o, n, s.str, a, t, e, g, y.toUppe, r, C, a, s, e()tt, l: `${(t, h, i, s.op, t, i, o, n, s.t, t, l/1, 0, 0, 0).toFi, x, e, d(0)}s`
     }};
-  priv, a, t, e, formatB, y, t, e, s(by, t, e, s: num, b, e, r): str, i, n, g {i, f (by, t, e, s === 0) return "0, By, t, e, s";
+  priv, a, t, e, formatB, y, t, e, s(by, t, e, s: number): str, i, n, g {i, f (by, t, e, s === 0) return "0, By, t, e, s";
     con, s, t, k = 1, 0, 2, 4;
     constsi, z, e, s = ["By, t, e, s''K, B''M, B''G, B"];
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3

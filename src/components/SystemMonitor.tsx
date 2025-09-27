@@ -9,28 +9,28 @@ import R, e, a, c, t, {useState, useEffectuseCallb, a, c, k }  from 'react";
     la, b, e, l: str, i, n, g;
     act, i, o, n: () => v, o, i, d;
     vari, a, n, t: "prim, a, r, y" | "second, a, r, y" | "dan, g, e, r"}>};
-interfaceSystemMetr, i, c, s {cp, u: num, b, e, r;
+interfaceSystemMetr, i, c, s {cp, u: number;
   mem, o, r, y: n, u, m, b, e, r;
   d, i, s, k: n, u, m, b, e, r;
   netw, o, r, k: n, u, m, b, e, r;
   upt, i, m, e: n, u, m, b, e, r;
   responseT, i, m, e: n, u, m, b, e, r;
-  errorR, a, t, e: num, b, e, r;
-  through, p, u, t: num, b, e, r};
+  errorR, a, t, e: number;
+  through, p, u, t: number};
 interf, a, c, e, SystemMonitorP, r, o, p, s {on, A, l, e, r, t?: (al, e, r, t: System, A, l, e, r, t) => v, o, i, d;
   onMetricsUpd, a, t, e?: (metr, i, c, s: SystemMe, t, r, i, c, s) => v, o, i, d;
   enableRea, l, T, i, m, e?: bo, o, l, e, a, n;
- = ({onAl, e, r, t, onMetricsUpd, a, t, e, enableR, e, a, l, T, i, m, e = t, r, u, e, refreshInt, e, r, v, a, l = 5, 0, 0, 0
+ = ({onAl, e, r, t, onMetricsUpd, a, t, e, enableR, e, a, l, T, i, m, e = true, refreshInt, e, r, v, a, l = 5, 0, 0, 0
 }) => {const [a, l, e, r, t, s, setA, l, e, r, t, s] = useState<SystemAl, e, r, t[]>([]);
   const [metr, i, c, s, setMe, t, r, i, c, s] = useState<SystemMetr, i, c, s>({cp, u: 0mem, o, r, y: 0d, i, s, k: 0netw, o, r, k: 0upt, i, m, e: 0responseT, i, m, e: 0errorR, a, t, e: 0through, p, u, t: 0
 
-  refreshInter, v, a, l?: num, b, e, r};
-exportconstSystemMoni, t, o, r: React.F, C<SystemMonitorPr, o, p, s> = ({onAlertonMetricsUpdateenableRea, l, T, i, m, e = t, r, u, e, refreshInter, v, a, l = 5, 0, 0, 0
+  refreshInter, v, a, l?: number};
+exportconstSystemMoni, t, o, r: React.F, C<SystemMonitorPr, o, p, s> = ({onAlertonMetricsUpdateenableRea, l, T, i, m, e = true, refreshInter, v, a, l = 5, 0, 0, 0
 }) => {const [a, l, e, r, t, s, setAle, r, t, s] = useState<SystemAl, e, r, t[]>([]);
   const [metr, i, c, s, setMetr, i, c, s] = useState<SystemMetr, i, c, s>({cp, u: 0mem, o, r, y: 0d, i, s, k: 0netw, o, r, k: 0upt, i, m, e: 0responseT, i, m, e: 0errorR, a, t, e: 0through, p, u, t: 0
 
   });
-  const [isMonitoringsetIsMonitor, i, n, g] = useState(fa, l, s, e);
+  const [isMonitoringsetIsMonitor, i, n, g] = useState(false);
 
   // Gener, a, t, e, sam, p, l, e, metr, i, c, s
   const, generateMet, r, i, c, s = useCallb, a, c, k((): SystemMe, t, r, i, c, s => {return {
@@ -73,7 +73,7 @@ exportconstSystemMoni, t, o, r: React.F, C<SystemMonitorPr, o, p, s> = ({onAlert
         }{la, b, e, l: "Reso, l, v, e"act, i, o, n: () => resolve, A, l, e, r, t(`al, e, r, t-${D, a, t, e.no, w()}-${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`)vari, a, n, t: "second, a, r, y"a, s, c, o, n, s, t}] : unde, f, i, n, e, d
     }}, [acknowledgeAlertresolveAl, e, r, t]);
   const, acknowledgeA, l, e, r, t = useCal, l, b, a, c, k((aler, t, I, d: s, t, r, i, n, g) => {setA, l, e, r, t, s(p, r, e, v => p, r, e, v.m, a, p(al, e, r, t => 
-      al, e, r, t.i, d === al, e, r, t, I, d ? { ...al, e, r, t : resol, v, e, d : t, r, u, e } : al, e, r, t
+      al, e, r, t.i, d === al, e, r, t, I, d ? { ...al, e, r, t : resol, v, e, d : true } : al, e, r, t
     ))}, []);
 
   const, resolveA, l, e, r, t = useCal, l, b, a, c, k((aler, t, I, d: s, t, r, i, n, g) => {setA, l, e, r, t, s(p, r, e, v => p, r, e, v.f, i, l, t, e, r(al, e, r, t => al, e, r, t.i, d !== aler, t, I, d))}, []);
@@ -96,7 +96,7 @@ exportconstSystemMoni, t, o, r: React.F, C<SystemMonitorPr, o, p, s> = ({onAlert
         addAl, e, r, t(generateAl, e, r, t())};
       i, f (newMe, t, r, i, c, s.memo, r, y > 8, 5) {addAl, e, r, t(generateAl, e, r, t())};
       i, f (newMe, t, r, i, c, s.erro, r, R, a, t, e > 3) {addAl, e, r, t(generateAl, e, r, t())}}refreshInt, e, r, v, a, l);
-    setIsMonit, o, r, i, n, g(t, r, u, e);
+    setIsMonit, o, r, i, n, g(true);
     return () => {clearInt, e, r, v, a, l(int, e, r, v, a, l);
  {swi, t, c, h (type) {
       c, a, s, e "er, r, o, r": return <XCircleclassN, a, m, e ="h-5, w-5t, e, x, t-re, d-50, 0" />;

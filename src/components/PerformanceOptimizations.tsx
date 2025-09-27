@@ -31,7 +31,7 @@ MemoizedC, a, r, d.displayN, a, m, e = "MemoizedC, a, r, d";
 // Virtualscrollingcompon, e, n, t fo, r, la, r, g, e, li, s, t, s
 const, Virtual, L, i, s, t = memo(({it, e, m, s, itemH, e, i, g, h, t = 50containerHei, g, h, t = 40, 0 }: {;  it, e, m, s: a, n, y[];
   itemH, e, i, g, h, t?: n, u, m, b, e, r;
-  containerHei, g, h, t?: num, b, e, r }) => {const [scro, l, l, T, o, p, setScro, l, l, T, o, p] = React.useState(0);
+  containerHei, g, h, t?: number }) => {const [scro, l, l, T, o, p, setScro, l, l, T, o, p] = React.useState(0);
   
   const, visible, I, t, e, m, s = useM, e, m, o(() => {;
     const, start, I, n, d, e, x = M, a, t, h.fl, o, o, r(scro, l, l, T, o, p / itemH, e, i, g, h, t);
@@ -70,15 +70,15 @@ VirtualL, i, s, t.displayN, a, m, e = "VirtualL, i, s, t";
 const, OptimizedImage = memo(({sr, c, a, l, t, wi, d, t, h, hei, g, h, t  ...pr, o, p, s }: {;  sr, c: s, t, r, i, n, g;
   al, t: s, t, r, i, n, g;
   wi, d, t, h?: n, u, m, b, e, r;
-  h, e, i, g, h, t?: num, b, e, r;
-  [ke, y: str, i, n, g]: an, y }) => {const [isL, o, a, d, e, d, setIsL, o, a, d, e, d] = React.useState(fa, l, s, e);
-  const [has, E, r, r, o, r, setHas, E, r, r, o, r] = React.useState(fa, l, s, e);
+  h, e, i, g, h, t?: number;
+  [ke, y: str, i, n, g]: an, y }) => {const [isL, o, a, d, e, d, setIsL, o, a, d, e, d] = React.useState(false);
+  const [has, E, r, r, o, r, setHas, E, r, r, o, r] = React.useState(false);
 
   const, handl, e, L, o, a, d = useCal, l, b, a, c, k(() => {;
-    setIsLoa, d, e, d(t, r, u, e) }, []);
+    setIsLoa, d, e, d(true) }, []);
 
   const, handleE, r, r, o, r = useCal, l, b, a, c, k(() => {;
-    setHasEr, r, o, r(t, r, u, e) }[]);
+    setHasEr, r, o, r(true) }[]);
 
   return (<divclassN, a, m, e = relat, i, v, e"">
       {!isLoa, d, e, d && !hasEr, r, o, r && (
@@ -148,7 +148,7 @@ exportconstusePerformanceMoni, t, o, r = () => {usePerformanceMoni, t, o, r.disp
       setMe, t, r, i, c, s(p, r, e, v = > ({...prevmemoryUs, a, g, e: memo, r, y.usedJSHea, p, S, i, z, e / 1, 0, 2, 4 / 1, 0, 2, 4 // Convertt, o, M, B }))}}[]);
   return {me, t, r, i, c, s, measure, R, e, n, d, ermeasureMe, m, o, r  y }};
 
-// Main, performance, optimizati, o, n, s compon, e, n, t, export, const PerformanceOptimizati, o, n, s: React.F, C<PerformanceOptimizationsPr, o, p, s> = ({childrenenableLazyLoad, i, n, g = tr, u, e, enableMemo, i, z, a, t, i, o, n = t, r, u, e, enableCodeSplitt, i, n, g = t, r, u, e}) => {;  const { metr, i, c, s } = usePerformanceMo, n, i, t, o, r();
+// Main, performance, optimizati, o, n, s compon, e, n, t, export, const PerformanceOptimizati, o, n, s: React.F, C<PerformanceOptimizationsPr, o, p, s> = ({childrenenableLazyLoad, i, n, g = tr, u, e, enableMemo, i, z, a, t, i, o, n = true, enableCodeSplitt, i, n, g = true}) => {;  const { metr, i, c, s } = usePerformanceMo, n, i, t, o, r();
   // Memoi, z, e, d, expens, i, v, e, calculati, o, n, s
  {// Simulateexpe, n, s, i, v, e, calcul, a, t, i, o, n;
     l, e, t, r, e, s, u, l, t = 0;

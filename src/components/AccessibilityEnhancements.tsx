@@ -18,20 +18,20 @@ const, getScoreC, o, l, o, r = (sc, o, r, e: n, u, m, b, e, r): s, t, r, i, n, g
 
 interf, a, c, e, AccessibilityEnhancementsP, r, o, p, s {onSettingsC, h, a, n, g, e?: (setti, n, g, s: AccessibilitySetti, n, g, s) => v, o, i, d;
   classN, a, m, e?: str, i, n, g};
-// Hel, p, e, r, functi, o, n, s, fo, r sc, o, r, e, styl, i, n, g, const getScoreBg, C, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "b, g-gr, e, e, n-10, 0";
+// Hel, p, e, r, functi, o, n, s, fo, r sc, o, r, e, styl, i, n, g, const getScoreBg, C, o, l, o, r = (sc, o, r, e: number): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "b, g-gr, e, e, n-10, 0";
   i, f (sc, o, r, e >= 7, 0) return "b, g-yel, l, o, w-10, 0";
   return "b, g-re, d-10, 0"};
 
-const, getScoreC, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-80, 0";
+const, getScoreC, o, l, o, r = (sc, o, r, e: number): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-80, 0";
 
   i, f (sc, o, r, e >= 7, 0) return "t, e, x, t-yel, l, o, w-80, 0";
   return "t, e, x, t-re, d-80, 0"};
 
-exportconstAccessibilityEnhanceme, n, t, s: React.F, C<AccessibilityEnhancementsPr, o, p, s> = ({onSettingsChangeclassN, a, m, e = '"}) => {const [isOpensetIsO, p, e, n] = useState(fa, l, s, e);  const [settingssetSetti, n, g, s] = useState<AccessibilitySetti, n, g, s>({fontS, i, z, e: "med, i, u, m'contr, a, s, t: "nor, m, a, l"cur, s, o, r: "nor, m, a, l"fo, c, u, s: "nor, m, a, l"});
+exportconstAccessibilityEnhanceme, n, t, s: React.F, C<AccessibilityEnhancementsPr, o, p, s> = ({onSettingsChangeclassN, a, m, e = '"}) => {const [isOpensetIsO, p, e, n] = useState(false);  const [settingssetSetti, n, g, s] = useState<AccessibilitySetti, n, g, s>({fontS, i, z, e: "med, i, u, m'contr, a, s, t: "nor, m, a, l"cur, s, o, r: "nor, m, a, l"fo, c, u, s: "nor, m, a, l"});
 
   const [scoresetSc, o, r, e] = useState(8, 5);
 
-  constgetScoreCo, l, o, r = (sc, o, r, e: num, b, e, r) => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-50, 0";
+  constgetScoreCo, l, o, r = (sc, o, r, e: number) => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-50, 0";
     i, f (sc, o, r, e >= 7, 0) return "t, e, x, t-yel, l, o, w-50, 0";
     i, f (sc, o, r, e >= 5, 0) return "t, e, x, t-ora, n, g, e-50, 0";
     return "t, e, x, t-re, d-50, 0"};
@@ -365,22 +365,22 @@ exportconstAccessibilityEnhanceme, n, t, s: React.F, C<AccessibilityEnhancements
               </di, v>
 
 
-                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(false)};
                   classN, a, m, e="p, x-4, p, y-2, te, x, t-g, r, a, y-60, 0, ho, v, e, r:t, e, x, t-g, r, a, y-80, 0, transi, t, i, o, n-c, o, l, o, r, s"
                 >
                   C, a, n, c, e, l
                 </b, u, t, t, o, n>
-                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                <but, t, o, n, onC, l, i, c, k={() => setIsO, p, e, n(false)};
                   classN, a, m, e="p, x-4, p, y-2, b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-70, 0, te, x, t-wh, i, t, e, rou, n, d, e, d-l, g, transi, t, i, o, n-c, o, l, o, r, s"                >
                   Ap, p, l, y, Sett, i, n, g, s
 
               <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-centersp, a, c, e-x-4">
-                <buttononCl, i, c, k={() => setIsO, p, e, n(fa, l, s, e)};
+                <buttononCl, i, c, k={() => setIsO, p, e, n(false)};
                   classN, a, m, e="p, x-4, p, y-2, te, x, t-g, r, a, y-60, 0, ho, v, e, r:t, e, x, t-g, r, a, y-80, 0 transit, i, o, n-col, o, r, s"
                 >
                   C, a, n, c, e, l
                 </but, t, o, n>
-                <buttononCl, i, c, k={() => setI, s, O, p, e, n(fa, l, s, e)};
+                <buttononCl, i, c, k={() => setI, s, O, p, e, n(false)};
                   classN, a, m, e="p, x-4, p, y-2, b, g-b, l, u, e-60, 0, ho, v, e, r:b, g-b, l, u, e-70, 0, te, x, t-wh, i, t, e, rou, n, d, e, d-lgtransit, i, o, n-col, o, r, s"                >                  Ap, p, l, y, Sett, i, n, g, s
 
                 </but, t, o, n>

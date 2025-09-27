@@ -6,8 +6,8 @@ interf, a, c, e, PerformanceMet, r, i, c, s {loadT, i, m, e: n, u, m, b, e, r;
   firstContentfulPa, i, n, t: n, u, m, b, e, r;
   largestContentfulPa, i, n, t: n, u, m, b, e, r;
   firstInputDe, l, a, y: n, u, m, b, e, r;
-  cumulativeLayoutSh, i, f, t: num, b, e, r;
-  memoryUs, a, g, e?: num, b, e, r};
+  cumulativeLayoutSh, i, f, t: number;
+  memoryUs, a, g, e?: number};
 exportfunctionusePerformanceMoni, t, o, r() {constmetrics, R, e, f = use, R, e, f<PerformanceMetr, i, c, s>({loadT, i, m, e: 0firstContentfulPa, i, n, t: 0largestContentfulPa, i, n, t: 0firstInputDe, l, a, y: 0cumulativeLayoutSh, i, f, t: 0});
 
  {// Sendmetricstoanalyticsservic, e, i, f (typeofwin, d, o, w !== "undefi, n, e, d' && "g, t, a, g"i, n === win, d, o, w) {

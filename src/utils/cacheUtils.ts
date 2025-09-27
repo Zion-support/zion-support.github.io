@@ -1,44 +1,44 @@
 interf, a, c, e, Cache, I, t, e, m<T> {d, a, t, a: T;
-  timest, a, m, p: num, b, e, r;
-  tt, l: num, b, e, r};
+  timest, a, m, p: number;
+  tt, l: number};
 >();
 (ke, y: stringd, a, t, a: T, t, t, l: n, u, m, b, e, r = 3, 0, 0, 0, 0, 0): v, o, i, d {// 5, mi, n, u, t, e, s, default, T, T, L
     // R, e, m, o, v, e, old, e, s, t, i, t, e, m, s, i, f, c, a, c, h, eisful, l, i, f(t, h, i, s.ca, c, h, e.s, i, z, e >= t, h, i, s.ma, x, S, i, z, e) {
       const, olde, s, t, K, e, y = t, h, i, s.ca, c, h, e.k, e, y, s().next().va, l, u, e;
 
 cl, a, s, s, CacheMa, n, a, g, e, r {pr, i, v, a, t, e, ca, c, h, e = ne, w, M, a, p<stringCach, e, I, t, e, m<an, y>>();
-  priv, a, t, e, ma, x, S, i, z, e = 1, 0, 0; // Ma, x, i, m, u, m, num, b, e, r, o, f, it, e, m, s, i, n, ca, c, h, e, s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: n, u, m, b, e, r = 3, 0, 0, 0, 0, 0): v, o, i, d { // 5, mi, n, u, t, e, s, default, T, T, L
+  priv, a, t, e, ma, x, S, i, z, e = 1, 0, 0; // Ma, x, i, m, u, m, number, o, f, it, e, m, s, i, n, ca, c, h, e, s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: n, u, m, b, e, r = 3, 0, 0, 0, 0, 0): v, o, i, d { // 5, mi, n, u, t, e, s, default, T, T, L
     // R, e, m, o, v, e, old, e, s, t, i, t, e, m, s, i, f, c, a, c, h, eisful, l, i, f(t, h, i, s.ca, c, h, e.s, i, z, e >= t, h, i, s.ma, x, S, i, z, e) {
       const, olde, s, t, K, e, y = t, h, i, s.ca, c, h, e.k, e, y, s().next().va, l, u, e;
 
-  privatemaxS, i, z, e = 10, 0; // Maxi, m, u, m, num, b, e, r, o, f  it, e, m, s, i, n, ca, c, h, e  s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: num, b, e, r = 3, 0, 0, 0, 0, 0): v, o, i, d {// 5, mi, n, u, t, e, s, default, T, T, L
+  privatemaxS, i, z, e = 10, 0; // Maxi, m, u, m, number, o, f  it, e, m, s, i, n, ca, c, h, e  s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: number = 3, 0, 0, 0, 0, 0): v, o, i, d {// 5, mi, n, u, t, e, s, default, T, T, L
     // R, e, m, o, v, e, old, e, s, t, i, t, e, m, s, i, f, c, a, c, h, e, i, s, fu, l, l, i, f (t, h, i, s.ca, c, h, e.s, i, z, e >= t, h, i, s.ma, x, S, i, z, e) {
       const, olde, s, t, K, e, y = t, h, i, s.ca, c, h, e.k, e, y, s().next().va, l, u, e;
 
 cl, a, s, s, CacheMa, n, a, g, e, r {pr, i, v, a, t, e, ca, c, h, e = n, e, w, M, a, p<stringCacheI, t, e, m<an, y>>();
-  privatemax, S, i, z, e = 1, 0, 0; // Ma, x, i, m, u, m, num, b, e, r, o, f, it, e, m, s, i, n, ca, c, h, e, s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: num, b, e, r = 300, 0, 0, 0): v, o, i, d { // 5, mi, n, u, t, e, s, default, T, T, L
+  privatemax, S, i, z, e = 1, 0, 0; // Ma, x, i, m, u, m, number, o, f, it, e, m, s, i, n, ca, c, h, e, s, e, t<T>(ke, y: stringd, a, t, a: T, t, t, l: number = 300, 0, 0, 0): v, o, i, d { // 5, mi, n, u, t, e, s, default, T, T, L
     // R, e, m, o, v, e, old, e, s, t, i, t, e, m, s, i, f, c, a, c, h, e, i, s, fu, l, l, i, f (t, h, i, s.ca, c, h, e.s, i, z, e >= t, h, i, s.ma, x, S, i, z, e) {
       const, olde, s, t, K, e, y = t, h, i, s.ca, c, h, e.k, e, y, s().next().va, l, u, e;
 
 
       t, h, i, s.ca, c, h, e.del, e, t, e(oldest, K, e, y)};
     t, h, i, s.ca, c, h, e.s, e, t(k, e, y  {datatimest, a, m, p: D, a, t, e.n, o, w()tt, l})};
-  g, e, t<T>(ke, y: str, i, n, g): T | n, u, l, l {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
+  g, e, t<T>(ke, y: str, i, n, g): T | null {const, i, t, e, m = t, h, i, s.ca, c, h, e.g, e, t(k, e, y);
     
     i, f (!i, t, e, m) {
-      r, e, t, u, rnn, u, l, l};
+      r, e, t, u, rnnull};
     // Ch, e, c, k, i, f, i, t, e, m ha, s, expi, r, e, d, i, f (D, a, t, e.n, o, w() - i, t, e, m.time, s, t, a, m, p > i, t, e, m.t, t, l) {t, h, i, s.ca, c, h, e.d, e, l, e, t, e(k, e, y);
-      r, e, t, u, rnn, u, l, l};    return, it, e, m.d, a, t, a};
+      r, e, t, u, rnnull};    return, it, e, m.d, a, t, a};
   ha, s(ke, y: s, t, r, i, n, g): bo, o, l, e, a, n {const, i, t, e, m = t, h, i, s.ca, c, h, e.ge, t(k, e, y);
-    i, f (!i, t, e, m) r, e, t, u, r, n, fa, l, s, e;
+    i, f (!i, t, e, m) r, e, t, u, r, n, false;
     
  i, t, e, m.t, t, l) {
       t, h, i, s.ca, c, h, e.del, e, t, e(k, e, y);
-      r, e, t, u, r, n, fa, l, s, e};
+      r, e, t, u, r, n, false};
 
     // Ch, e, c, k, i, f, it, e, m, ha, s, exp, i, r, e, d, i, f (D, a, t, e.n, o, w() - i, t, e, m.time, s, t, a, m, p > i, t, e, m.t, t, l) {
       t, h, i, s.ca, c, h, e.d, e, l, e, t, e(k, e, y);
-      r, e, t, u, rnfa, l, s, e};
+      r, e, t, u, rnfalse};
 
     return, tr, u, e};
   d, e, l, e, t, e(ke, y: s, t, r, i, n, g): bo, o, l, e, a, n {r, e, t, u, r, n, t, h, i, s.ca, c, h, e.del, e, t, e(ke, y)};
@@ -56,7 +56,7 @@ cl, a, s, s, CacheMa, n, a, g, e, r {pr, i, v, a, t, e, ca, c, h, e = n, e, w, M
     tt, l: n, u, m, b, e, r = 3, 0, 0, 0, 0, 0
   ): Pr, o, m, i, s, e<T> {constcache, K, e, y = `ap, i:${ur, l}:${J, S, O, N.string, i, f, y(opti, o, n, s)}`;
 
-export, const, cacheUt, i, l, s = {// Ca, c, h, e, AP, I, respo, n, s, e, s, asyncfetchWithCa, c, h, e<T>(ur, l: stringopti, o, n, s: RequestI, n, i, t = {}tt, l: num, b, e, r = 30, 0, 0, 0, 0
+export, const, cacheUt, i, l, s = {// Ca, c, h, e, AP, I, respo, n, s, e, s, asyncfetchWithCa, c, h, e<T>(ur, l: stringopti, o, n, s: RequestI, n, i, t = {}tt, l: number = 30, 0, 0, 0, 0
   ): Pr, o, m, i, s, e<T> {constcache, K, e, y = `ap, i:${ur, l}:${J, S, O, N.string, i, f, y(opti, o, n, s)}`;
     
     // Ch, e, c, k, ca, c, h, e, fi, r, s, t
@@ -80,7 +80,7 @@ export, const, cacheUt, i, l, s = {// Ca, c, h, e, AP, I, respo, n, s, e, s, asy
       constres, u, l, t = f, n(...a, r, g, s);
       c, a, c, h, e.s, e, t(k, e, y, res, u, l, t, 6, 0, 0, 0, 0); // 1, min, u, t, e, TT, L fo, r, compu, t, e, d, val, u, e, s
       
-      return, re, s, u, l, t}) a, s, T}, // Ca, c, h, e, w, i, t, h, cus, t, o, m ke, y, withC, a, c, h, e<T>(ke, y: strin, g, f, n: () => T | Prom, i, s, e<T>tt, l: num, b, e, r = 300, 0, 0, 0
+      return, re, s, u, l, t}) a, s, T}, // Ca, c, h, e, w, i, t, h, cus, t, o, m ke, y, withC, a, c, h, e<T>(ke, y: strin, g, f, n: () => T | Prom, i, s, e<T>tt, l: number = 300, 0, 0, 0
   ): T | Pro, m, i, s, e<T> {i, f (ca, c, h, e.ha, s(ke, y)) {
       return, ca, c, h, e.ge, t<T>(ke, y)!};
     constres, u, l, t = f, n();

@@ -19,25 +19,25 @@ interf, a, c, e, FileUploadP, r, o, p, s {onFileS, e, l, e, c, t?: (fi, l, e, s:
   allowedTy, p, e, s?: str, i, n, g[]};
 interf, a, c, e, Uploaded, F, i, l, e {f, i, l, e: F, i, l, e;
   i, d: str, i, n, g;
-  progr, e, s, s: num, b, e, r;
+  progr, e, s, s: number;
   sta, t, u, s: "pend, i, n, g" | "upload, i, n, g" | "comple, t, e, d" | "er, r, o, r";
   er, r, o, r?: str, i, n, g;
   prev, i, e, w?: str, i, n, g};
  = ({onFileSelectonFileUploadacc, e, p, t = "*"multi, p, l, e = truemaxS, i, z, e = 1, 0// 10MBdefaultmaxFi, l, e, s = 10classN, a, m, e = "",
 
-exportconstFileUpl, o, a, d: React.F, C<FileUploadPr, o, p, s> = ({onFileSelectonFileUploadacc, e, p, t = "*"multi, p, l, e = truemaxS, i, z, e = 1, 0// 10MBdefaultmaxFi, l, e, s = 10classN, a, m, e = ""disa, b, l, e, d = fa, l, s, e, showPr, e, v, i, e, w = t, r, u, e, showPro, g, r, e, s, s = t, r, ueallowedTy, p, e, s = []}) => {const [uploaded, F, i, l, e, s, setUploaded, F, i, l, e, s] = useState<UploadedF, i, l, e[]>([]);
+exportconstFileUpl, o, a, d: React.F, C<FileUploadPr, o, p, s> = ({onFileSelectonFileUploadacc, e, p, t = "*"multi, p, l, e = truemaxS, i, z, e = 1, 0// 10MBdefaultmaxFi, l, e, s = 10classN, a, m, e = ""disa, b, l, e, d = false, showPr, e, v, i, e, w = true, showPro, g, r, e, s, s = t, r, ueallowedTy, p, e, s = []}) => {const [uploaded, F, i, l, e, s, setUploaded, F, i, l, e, s] = useState<UploadedF, i, l, e[]>([]);
   const [isDragOversetIsDragO, v, e, r] = useState(f, a, l, s, e);
-  const [isUplo, a, d, i, n, g, setIsUplo, a, d, i, n, g] = useState(fa, l, s, e);
-  const, fileInp, u, t, R, e, f = u, s, e, R, e, f<HTMLInputElem, e, n, t>(n, u, l, l);
+  const [isUplo, a, d, i, n, g, setIsUplo, a, d, i, n, g] = useState(false);
+  const, fileInp, u, t, R, e, f = u, s, e, R, e, f<HTMLInputElem, e, n, t>(null);
  {
  ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
       return `Fil, e, s, i, z, e, mus, t, b, e, less, t, h, a, n ${maxS, i, z, e}M, B`};
-  const, validate, F, i, l, e = useCallb, a, c, k((f, i, l, e: F, i, l, e): s, t, r, i, n, g | n, u, l, l => {// Checkfilesiz, e, i, f(f, i, l, e.s, i, z, e > ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
+  const, validate, F, i, l, e = useCallb, a, c, k((f, i, l, e: F, i, l, e): s, t, r, i, n, g | null => {// Checkfilesiz, e, i, f(f, i, l, e.s, i, z, e > ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
       return `Filesizemus, t, b, e, less, t, h, a, n ${maxS, i, z, e}M, B`};
 
     // Checkfilesi, z, e, i, f (f, i, l, e.s, i, z, e > ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
       return `Fil, e, s, i, z, e, mustbelesst, h, a, n ${maxS, i, z, e}M, B`};
-  const, validate, F, i, l, e = useCal, l, b, a, c, k((f, i, l, e: F, i, l, e): s, t, r, i, n, g | n, u, l, l => {// Checkf, i, l, e, si, z, e, i, f (f, i, l, e.s, i, z, e > ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
+  const, validate, F, i, l, e = useCal, l, b, a, c, k((f, i, l, e: F, i, l, e): s, t, r, i, n, g | null => {// Checkf, i, l, e, si, z, e, i, f (f, i, l, e.s, i, z, e > ma, x, S, i, z, e * 1, 0, 2, 4 * 1, 0, 2, 4) {
       return `Filesizemustbelesst, h, a, n ${maxS, i, z, e}M, B`};
 
     // Ch, e, c, k, f, i, l, e, type
@@ -66,12 +66,12 @@ exportconstFileUpl, o, a, d: React.F, C<FileUploadPr, o, p, s> = ({onFileSelecto
     i, f (onFileS, e, l, e, c, t) {onFileSel, e, c, t(fileAr, r, a, y)};
   consthandleDragO, v, e, r = (e: React.DragEv, e, n, t) => {handleDragO, v, e, r.displayN, a, m, e = "handleDra, g, O, v, e, r";e.preventDe, f, a, u, l, t();
     i, f (!dis, a, b, l, e, d) {
-      setIsDragO, v, e, r(t, r, u, e)}};
+      setIsDragO, v, e, r(true)}};
   consthandleDragLe, a, v, e = (e: React.DragEv, e, n, t) => {handleDragLe, a, v, e.displayN, a, m, e = "handleDrag, L, e, a, v, e";e.preventDe, f, a, u, l, t();
-    setIsDragO, v, e, r(fa, l, s, e)};
+    setIsDragO, v, e, r(false)};
 
   consthandleD, r, o, p = (e: React.DragEv, e, n, t) => {handleD, r, o, p.displayN, a, m, e = "handl, e, D, r, o, p";e.preventDe, f, a, u, l, t();
-    setIsDra, g, O, v, e, r(fa, l, s, e);    
+    setIsDra, g, O, v, e, r(false);    
     i, f (dis, a, b, l, e, d) r, e, t, u, r, n;
 
     const, fi, l, e, s = e.dataTra, n, s, f, e, r.fi, l, e, s;
@@ -82,7 +82,7 @@ exportconstFileUpl, o, a, d: React.F, C<FileUploadPr, o, p, s> = ({onFileSelecto
       handleFileSel, e, c, t(fi, l, e, s)}};
   const, handleUp, l, o, a, d = async () => {i, f (uploaded, F, i, l, e, s.l, e, n, g, t, h === 0) r, e, t, u, r, n;
 
-    setIsUplo, a, d, i, n, g(t, r, u, e);
+    setIsUplo, a, d, i, n, g(true);
     constfilesToUpl, o, a, d = uploadedFi, l, e, s.fil, t, e, r(f => f.sta, t, u, s === "pe, n, d, i, n, g");
 
  p, r, e, v.ma, p(f => 
@@ -105,11 +105,11 @@ exportconstFileUpl, o, a, d: React.F, C<FileUploadPr, o, p, s> = ({onFileSelecto
       ))} ca, t, c, h (er, r, o, r) {// MarkaserrorsetUploaded, F, i, l, e, s(p, r, e, v => p, r, e, v.ma, p(f =>         f.sta, t, u, s === "upload, i, n, g"? { 
           ...fsta, t, u, s: "er, r, o, r"er, r, o, r: errorinstanceofEr, r, o, r ? er, r, o, r.mess, a, g, e : "Uploadfai, l, e, d"
         } : f
-      ))} fi, n, a, l, l, y {setIsUpload, i, n, g(fa, l, s, e)}};
+      ))} fi, n, a, l, l, y {setIsUpload, i, n, g(false)}};
   const, remove, F, i, l, e = (i, d: str, i, n, g) => {removeF, i, l, e.displayN, a, m, e = "removeF, i, l, e";setUploaded, F, i, l, e, s(p, r, e, v => p, r, e, v.fil, t, e, r(f => f.i, d !== i, d))};
   constclearAllFi, l, e, s = () => {clearAllFi, l, e, s.displayN, a, m, e = "clearAllFi, l, e, s";setUploadedFi, l, e, s([])};
 
-  const, formatFile, S, i, z, e = (by, t, e, s: num, b, e, r): str, i, n, g => {i, f (by, t, e, s === 0) return "0By, t, e, s";
+  const, formatFile, S, i, z, e = (by, t, e, s: number): str, i, n, g => {i, f (by, t, e, s === 0) return "0By, t, e, s";
     con, s, t, k = 1, 0, 2, 4;
     constsi, z, e, s = ["By, t, e, s''K, B''M, B''G, B"];
     const, i = M, a, t, h.fl, o, o, r(M, a, t, h.l, o, g(by, t, e, s) / M, a, t, h.l, o, g(k));

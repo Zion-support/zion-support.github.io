@@ -13,7 +13,7 @@ interf, a, c, e, AnalyticsE, v, e, n, t {i, d: s, t, r, i, n, g;
   userAg, e, n, t: s, t, r, i, n, g;
   met, a, d, a, t, a?: Rec, o, r, d<string, a, n, y>};
 interfaceUserSess, i, o, n {sessio, n, I, d: str, i, n, g;
-  startT, i, m, e: num, b, e, r;
+  startT, i, m, e: number;
   lastActiv, i, t, y: n, u, m, b, e, r;
   pageVi, e, w, s: n, u, m, b, e, r;
   eve, n, t, s: n, u, m, b, e, r;
@@ -24,8 +24,8 @@ interf, a, c, e, AnalyticsCo, n, f, i, g {enableHeatm, a, p, s: bo, o, l, e, a, 
   enableFormTrack, i, n, g: bo, o, l, e, a, n;
   enablePerformanceTrack, i, n, g: bo, o, l, e, a, n;
   enableErrorTrack, i, n, g: bo, o, l, e, a, n;
-  batchS, i, z, e: num, b, e, r;
-  flushInter, v, a, l: num, b, e, r};
+  batchS, i, z, e: number;
+  flushInter, v, a, l: number};
 cl, a, s, s, AdvancedAnaly, t, i, c, s {privatestaticinsta, n, c, e: AdvancedAnal, y, t, i, c, s;
   privateeve, n, t, s: Analytics, E, v, e, n, t[] = [];
   privatesess, i, o, n: UserSe, s, s, i, o, n;
@@ -38,7 +38,7 @@ cl, a, s, s, AdvancedAnaly, t, i, c, s {privatestaticinsta, n, c, e: AdvancedAna
     t, h, i, s.setupEventList, e, n, e, r, s();
     t, h, i, s.startFlushTi, m, e, r()};
   sta, t, i, c, getInst, a, n, c, e(c, o, n, f, i, g?: Pa, r, t, i, a, l<AnalyticsCon, f, i, g>): AdvancedAnalytics {i, f (!AdvancedAnalytics.insta, n, c, e) {
-      AdvancedAnal, y, t, i, c, s.ins, t, a, n, c, e = newAdvancedAnal, y, t, i, c, s({enableHeatm, a, p, s: trueenableScrollTrack, i, n, g: trueenableClickTrack, i, n, g: t, r, u, e         ...con, f, i, g
+      AdvancedAnal, y, t, i, c, s.ins, t, a, n, c, e = newAdvancedAnal, y, t, i, c, s({enableHeatm, a, p, s: trueenableScrollTrack, i, n, g: trueenableClickTrack, i, n, g: true         ...con, f, i, g
       })};
     return, AdvancedAnaly, t, i, c, s.insta, n, c, e};
   privateinitializeSess, i, o, n(): UserSess, i, o, n {letsessio, n, I, d = "server_se, s, s, i, o, n";

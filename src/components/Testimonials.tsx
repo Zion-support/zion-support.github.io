@@ -5,7 +5,7 @@ exportconstTestimoni, a, l, s: React.F, C = () => {const [currentIndexsetCurren,
 	const [isVisiblesetIsV, i, s, i, b, l, e] = useState(f, a, l, s, e);
 
 	useEffect(() => {
-		setIsVisi, b, l, e(t, r, u, e);
+		setIsVisible(true);
  {
 			setCurrent, I, n, d, e, x((pre, v, I, n, d, e, x) = > (prev, I, n, d, e, x  + 1) % testimoni, a, l, s.len, g, t, h)}5, 0, 0, 0);
 
@@ -17,10 +17,10 @@ exportconstTestimoni, a, l, s: React.F, C = () => {const [currentIndexsetCurren,
 
 
 			<divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4 ma, x-w-6 x, l">
-				<divclassN, a, m, e={`t, e, x, t-cente, r, m, b-12transit, i, o, n-alldurat, i, o, n-1, 0, 0, 0 ${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4 x, lf, o, n, t-boldt, e, x, t-g, r, a, y-80, 0 m b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
+				<divclassN, a, m, e={`t, e, x, t-cente, r, m, b-12transit, i, o, n-alldurat, i, o, n-1, 0, 0, 0 ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4 x, lf, o, n, t-boldt, e, x, t-g, r, a, y-80, 0 m b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
 						W, h, a, t, Ou, r, Clie, n, t, s  Sa, y, re, t, u, r, n (<sectionclassN, a, m, e="p, y-1, 6 b, g-gradi, e, n, t-t, o-r from-g, r, a, y-5, 0 t, o-b, l, u, e-5, 0">
 			<divclassN, a, m, e="containe, r, m, x-aut, o, p, x-4 m, a x-w-6 x, l">
-				<divclassN, a, m, e={`t, e, x, t-c, e, n, t, e, r, m, b-12trans, i, t, i, o, n-alldur, a, t, i, o, n-1, 0, 0, 0 ${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4, x, l, fo, n, t-b, o, l, d, t, e, x, t-g, r, a, y-80, 0 m, b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
+				<divclassN, a, m, e={`t, e, x, t-c, e, n, t, e, r, m, b-12trans, i, t, i, o, n-alldur, a, t, i, o, n-1, 0, 0, 0 ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}>					<h2classN, a, m, e="t, e, x, t-3 x, l, m, d: t, e, x, t-4, x, l, fo, n, t-b, o, l, d, t, e, x, t-g, r, a, y-80, 0 m, b-4" i, d="w, h, a, t-ou, r-clie, n, t, s-sa, y">
 						W, h, a, t, Ou, r, Cli, e, n, t, s, S, a, y
 
 					</h, 2>

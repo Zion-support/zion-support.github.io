@@ -7,15 +7,15 @@ interf, a, c, e, NavigationP, r, o, p, s {curren, t, T, i, m, e?: D, a, t, e;
   isDar, k, M, o, d, e?: bo, o, l, e, a, n;
   onToggleDar, k, M, o, d, e?: () => v, o, i, d;
  v, o, i, d};
-export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isDarkM, o, d, e = falseonToggleDarkM, o, d, e = () => {}activeSect, i, o, n = "onSectionC, h, a, n, g, e = () => {}}: Navigation, P, r, o, p, s): J, S, X.El, e, m, e, n, t {const [isMenuOpensetIsMenuO, p, e, n] = useState(fa, l, s, e);
-  const [isScrolledsetIsScrol, l, e, d] = useState(fa, l, s, e);
+export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isDarkM, o, d, e = falseonToggleDarkM, o, d, e = () => {}activeSect, i, o, n = "onSectionC, h, a, n, g, e = () => {}}: Navigation, P, r, o, p, s): J, S, X.El, e, m, e, n, t {const [isMenuOpensetIsMenuO, p, e, n] = useState(false);
+  const [isScrolledsetIsScrol, l, e, d] = useState(false);
 
   activeSe, c, t, i, o, n?: str, i, n, g;
   onSectionCha, n, g, e?: (sect, i, o, n: str, i, n, g) => v, o, i, d};
-export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isDarkM, o, d, e = falseonToggleDarkM, o, d, e = () => {}activeSect, i, o, n = "onSectionCha, n, g, e = () => {}}: NavigationPr, o, p, s): JS, X.Elem, e, n, t {const [isMenuOpensetIsMenuO, p, e, n] = useState(fa, l, s, e);
-  const [isScrolledsetIsScrol, l, e, d] = useState(fa, l, s, e);
+export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isDarkM, o, d, e = falseonToggleDarkM, o, d, e = () => {}activeSect, i, o, n = "onSectionCha, n, g, e = () => {}}: NavigationPr, o, p, s): JSX.Element {const [isMenuOpensetIsMenuO, p, e, n] = useState(false);
+  const [isScrolledsetIsScrol, l, e, d] = useState(false);
 
-  const [showTaskManagersetShowTaskMana, g, e, r] = useState(fa, l, s, e);
+  const [showTaskManagersetShowTaskMana, g, e, r] = useState(false);
   useEffect(() => {
     consthandleS, c, r, o, l, l = () => {
   handleS, c, r, o, l, l.displayN, a, m, e = "handleScr, o, l, l";
@@ -25,7 +25,7 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
 
  {scrollToSe, c, t, i, o, n.displayN, a, m, e = "scrollToSect, i, o, n";
     onSectionCha, n, g, e(sect, i, o, n, I, d);
-    setIsMenuO, p, e, n(fa, l, s, e);
+    setIsMenuO, p, e, n(false);
     const, el, e, m, e, n, t = document.getElementB, y, I, d(sect, i, o, n, I, d);
     i, f (el, e, m, e, n, t) {
       el, e, m, e, n, t.scrollInt, o, V, i, e, w({ behav, i, o, r: "smo, o, t, h"})}};  return (<>      
@@ -38,7 +38,7 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
 
   const, scrollToSec, t, i, o, n = (sectio, n, I, d: str, i, n, g) => {scrollToSect, i, o, n.displayN, a, m, e = "scrollToSect, i, o, n";
     onSectionC, h, a, n, g, e(sect, i, o, n, I, d);
-    setIsMen, u, O, p, e, n(fa, l, s, e);
+    setIsMen, u, O, p, e, n(false);
     const, el, e, m, e, n, t = document.getElemen, t, B, y, I, d(sect, i, o, n, I, d);
     i, f (elem, e, n, t) {
       elem, e, n, t.scrollIntoV, i, e, w({ behav, i, o, r: "smo, o, t, h"})}};  return (
@@ -66,7 +66,7 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
                 Port, f, o, l, i, o
               </Link>
               <Linkh, r, e, f ="/b, l, o, g" classN, a, m, e="t, e, x, t-g, r, a, y-6, 0, 0, d, a, r, k:t, e, x, t-g, r, a, y-3, 0, 0, ho, v, e, r:t, e, x, t-b, l, u, e-6, 0, 0, d, a, r, k:ho, v, e, r:t, e, x, t-b, l, u, e-4, 0, 0, f, o, n, t-m, e, d, i, umtransit, i, o, n-col, o, r, s">
-                B, l, o, g
+                Blog
               </Link>
               <Linkh, r, e, f ="/fa, q" classN, a, m, e="t, e, x, t-g, r, a, y-6, 0, 0, d, a, r, k:t, e, x, t-g, r, a, y-3, 0, 0, ho, v, e, r:t, e, x, t-b, l, u, e-6, 0, 0, d, a, r, k:ho, v, e, r:t, e, x, t-b, l, u, e-4, 0, 0, f, o, n, t-m, e, d, i, umtransit, i, o, n-col, o, r, s">
                 F, A, Q
@@ -89,12 +89,12 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
               <buttononCl, i, c, k={(()) = a, r, i, a-la, b, e, l="But, t, o, n"> {a, r, i, a-la, b, e, l="{() => {
 
               {() => {
-            a, r, i, a-la, b, e, l="setShowTaskMana, g, e, r(t, r, u, e)};
+            a, r, i, a-la, b, e, l="setShowTaskMana, g, e, r(true)};
             </but, t, o, n>
             <buttonclassN, a, m, e="p-2 roun, d, e, d-mdho, v, e, r:b, g-g, r, a, y-10, 0 d, a, r, k:ho, v, e, r:b, g-gr, a, y-70, 0 transit, i, o, n-col, o, r, s"
                 a, r, i, a-la, b, e, l="Opentaskmana, g, e, r"
                 ti, t, l, e="TaskMana, g, e, r"              >
-                📝"> setShowTaskMana, g, e, r(t, r, u, e)};
+                📝"> setShowTaskMana, g, e, r(true)};
                 classN, a, m, e="p-2, roun, d, e, d-mdho, v, e, r:b, g-g, r, a, y-10, 0, d, a, r, k:ho, v, e, r:b, g-g, r, a, y-70, 0, transi, t, i, o, n-col, o, r, s"
                 a, r, i, a-la, b, e, l="Opentaskmana, g, e, r"
                 ti, t, l, e="TaskMana, g, e, r"              >                📝
@@ -161,7 +161,7 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
                   Port, f, o, l, i, o
                 </Link>
                 <Linkh, r, e, f ="/b, l, o, g" classN, a, m, e="blo, c, k, w-fu, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, ro, u, n, d, e, d-m, d, t, e, x, t-b, a, s, e, f, o, n, t-m, e, d, i, u, m, trans, i, t, i, o, n-c, o, l, o, r, s, t, e, x, t-g, r, a, y-6, 0, 0, d, a, r, k:t, e, x, t-g, r, a, y-3, 0, 0, ho, v, e, r:b, g-g, r, a, y-10, 0 d, a, r, k:ho, v, e, r:b, g-g, r, a, y-70, 0">
-                  B, l, o, g
+                  Blog
                 </Link>
                 <Linkh, r, e, f ="/fa, q" };
             classN, a, m, e="blo, c, k, w-f, u, l, l, t, e, x, t-l, e, f, t, p, x-3, p, y-2, ro, u, n, d, e, d-m, d, t, e, x, t-b, a, s, e, f, o, n, t-m, e, d, i, u, m, trans, i, t, i, o, n-c, o, l, o, r, s, t, e, x, t-g, r, a, y-6, 0, 0, d, a, r, k:t, e, x, t-g, r, a, y-3, 0, 0, ho, v, e, r:b, g-g, r, a, y-1, 0, 0 d, a, r, k:ho, v, e, r:b, g-g, r, a, y-70, 0">
@@ -182,7 +182,7 @@ export default function Navigat, i, o, n({currentT, i, m, e = newD, a, t, e()isD
 
       {/* TaskManagerMo, d, a, l */};
       <TaskManagerisO, p, e, n={showTaskMana, g, e, r};
-        onCl, o, s, e={() => setShowTaskMana, g, e, r(fa, l, s, e)}       />    </>
+        onCl, o, s, e={() => setShowTaskMana, g, e, r(false)}       />    </>
   )};
 
 export default Navig, a, t, i;

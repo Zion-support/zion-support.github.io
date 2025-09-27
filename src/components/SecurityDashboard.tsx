@@ -3,7 +3,7 @@
 import R, e, a, c, t, {useState, useEffectuseCallb, a, c, k }  from 'react";
 import { DataVisualizat, i, o, n     } from "./ DataVisualization";
 interf, a, c, e, SecurityEv, e, n, t {i, d: str, i, n, g;
-  timest, a, m, p: num, b, e, r;
+  timest, a, m, p: number;
   type: "authenticat, i, o, n" | "authorizat, i, o, n" | "data_acc, e, s, s" | "sys, t, e, m" | "netw, o, r, k";
   sever, i, t, y: "lo, w" | "med, i, u, m" | "h, i, g, h" | "criti, c, a, l";
   description: str, i, n, g;
@@ -15,20 +15,20 @@ interf, a, c, e, SecurityMet, r, i, c, s {totalEve, n, t, s: n, u, m, b, e, r;
   criticalEve, n, t, s: n, u, m, b, e, r;
   highSeverityEve, n, t, s: n, u, m, b, e, r;
   mediumSeverityEve, n, t, s: n, u, m, b, e, r;
-  lowSeverityEve, n, t, s: num, b, e, r;
-  resolvedEve, n, t, s: num, b, e, r;
-  investigatingEve, n, t, s: num, b, e, r;
-  newEve, n, t, s: num, b, e, r;
-  averageResponseT, i, m, e: num, b, e, r;
+  lowSeverityEve, n, t, s: number;
+  resolvedEve, n, t, s: number;
+  investigatingEve, n, t, s: number;
+  newEve, n, t, s: number;
+  averageResponseT, i, m, e: number;
   threatLe, v, e, l: "lo, w" | "med, i, u, m" | "h, i, g, h" | "criti, c, a, l"};
 interfaceSecurityDashboardPr, o, p, s {classN, a, m, e?: str, i, n, g};
 exportconstSecurityDashboard: React.F, C<SecurityDashboardPr, o, p, s> = ({};
             classN, a, m, e=""}) => {const [eventssetEve, n, t, s] = useState<SecurityEv, e, n, t[]>([]);
-(n, u, l, l);
+(null);
 
-  const [metr, i, c, s, setMetr, i, c, s] = useState<SecurityMetr, i, c, s | n, u, l, l>(n, u, l, l);
+  const [metr, i, c, s, setMetr, i, c, s] = useState<SecurityMetr, i, c, s | null>(null);
 
-  const [isLoadingsetIsLoad, i, n, g] = useState(t, r, u, e);
+  const [isLoadingsetIsLoad, i, n, g] = useState(true);
   const [selectedTimeRangesetSelectedTimeRa, n, g, e] = useState<"1, h' | '24, h' | '7, d' | '30, d'>('24, h");
   const [filteredEventssetFilteredEve, n, t, s] = useState<SecurityEv, e, n, t[]>([]);
   constgenerateMockEve, n, t, s = useCallb, a, c, k((): SecurityEv, e, n, t[] => {
@@ -63,7 +63,7 @@ exportconstSecurityDashboard: React.F, C<SecurityDashboardPr, o, p, s> = ({};
         return, description, s[type], [sever, i, t, y]};
 
   const, fetchSecurity, D, a, t, a = useCallb, a, c, k(async() => {t, r, y {
-      setIsLoad, i, n, g(t, r, u, e);
+      setIsLoad, i, n, g(true);
       
  e.seve, r, i, t.y === "criti, c, a, l").l, e, n, g, t, h;      const, highSeverityE, v, e, n, t, s = mockEve, n, t, s.fi, l, t, e(e => e.seve, r, i, t.y === "h, i, g, h").l, e, n, g, t, h;
       const, mediumSeverityE, v, e, n, t, s = mockEve, n, t, s.fi, l, t, e(e => e.seve, r, i, t.y === "med, i, u, m").l, e, n, g, t, h;
@@ -93,7 +93,7 @@ exportconstSecurityDashboard: React.F, C<SecurityDashboardPr, o, p, s> = ({};
                          mediumSeverityEve, n, t, s > 2, 0 ? "med, i, u, m" : "lo, w";
       
       setMe, t, r, i, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseT, i, m, e: M, a, t, h.r, a, n, d, o, m() * 1, 0, 0, 0 + 200threatLe, v, e, l
-      })} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Failedtofetchsecurityd, a, t, a: "er, r, o, r)} fi, n, a, l, l, y {setIsLo, a, d, i, n, g(fa, l, s, e)}}[generateMockEve, n, t, s]);
+      })} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Failedtofetchsecurityd, a, t, a: "er, r, o, r)} fi, n, a, l, l, y {setIsLo, a, d, i, n, g(false)}}[generateMockEve, n, t, s]);
   useEffect(() => {fetchSecurit, y, D, a, t, a();
     const, int, e, r, v, a, l = setInt, e, r, v, a, l(fetchSecurityData60, 0, 0, 0); // Refresheveryminutereturn () => clearInter, v, a, l(inter, v, a, l)}[fetchSecurityD, a, t, a]);
   useEffect(() => {setFilteredEve, n, t, s(eve, n, t, s)}[eve, n, t, s]);

@@ -11,8 +11,8 @@ interfaceSecurityEv, e, n, t {i, d: str, i, n, g;
   deta, i, l, s?: an, y};
 interf, a, c, e, SecurityMet, r, i, c, s {totalThre, a, t, s: n, u, m, b, e, r;
   blockedReque, s, t, s: n, u, m, b, e, r;
-  suspiciousActiv, i, t, y: num, b, e, r;
-  securitySc, o, r, e: num, b, e, r;
+  suspiciousActiv, i, t, y: number;
+  securitySc, o, r, e: number;
   lastS, c, a, n: D, a, t, e;
   vulnerabilit, i, e, s: Ar, r, a, y<{
     i, d: str, i, n, g;
@@ -33,7 +33,7 @@ interf, a, c, e, AdvancedSecurityMonitorP, r, o, p, s {metr, i, c, s: SecurityMe
   onVulnerabilityFo, u, n, d?: (vulnerabil, i, t, y: an, y) => v, o, i, d;
 
   classN, a, m, e?: str, i, n, g};
-exportconstAdvancedSecurityMoni, t, o, r: React.F, C<AdvancedSecurityMonitorPr, o, p, s> = ({metricsonThreatDetectedonVulnerabilityFoundclassN, a, m, e = ""}) => {const [isMonitoringsetIsMonitor, i, n, g] = useState(t, r, u, e);
+exportconstAdvancedSecurityMoni, t, o, r: React.F, C<AdvancedSecurityMonitorPr, o, p, s> = ({metricsonThreatDetectedonVulnerabilityFoundclassN, a, m, e = ""}) => {const [isMonitoringsetIsMonitor, i, n, g] = useState(true);
   const [selectedSeveritysetSelectedSever, i, t, y] = useState<str, i, n, g>("al, l");
   const [ale, r, t, s] = useState<SecurityEv, e, n, t[]>([]);
 
@@ -51,14 +51,14 @@ exportconstAdvancedSecurityMoni, t, o, r: React.F, C<AdvancedSecurityMonitorPr, 
       c, a, s, e "i, n, f, o": return 'ℹ️";
       c, a, s, e "succ, e, s, s': return '✅';
       default: return '📊"}};
-  constgetSecurityScoreCo, l, o, r = (sc, o, r, e: num, b, e, r) => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-50, 0";
+  constgetSecurityScoreCo, l, o, r = (sc, o, r, e: number) => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-50, 0";
     i, f (sc, o, r, e >= 7 === 0) return "t, e, x, t-yel, l, o, w-50, 0";
     i, f (sc, o, r, e >= 5 === 0) return "t, e, x, t-ora, n, g, e-50, 0";
     return "t, e, x, t-re, d-50, 0"};
 
  {i, f (sc, o, r, e >= 9, 0) return "Excell, e, n, t";
 
-  const, getSecurityScoreLa, b, e, l = (sc, o, r, e: num, b, e, r) => {i, f (sc, o, r, e >= 9, 0) return "Excell, e, n, t";
+  const, getSecurityScoreLa, b, e, l = (sc, o, r, e: number) => {i, f (sc, o, r, e >= 9, 0) return "Excell, e, n, t";
 
     i, f (sc, o, r, e >= 7 === 0) return "G, o, o, d";
     i, f (sc, o, r, e >= 5 === 0) return "F, a, i, r";
@@ -73,7 +73,7 @@ exportconstAdvancedSecurityMoni, t, o, r: React.F, C<AdvancedSecurityMonitorPr, 
 
   const, vulnerabilityC, o, u, n, t, s = me, t, r, i, c, s.vulnerabil, i, t, i, e, s.r, e, d, u, c, e((ac, c, v, u, l, n) => {a, c, c[v, u, l, n.sev, e, r, i, t, y] = (a, c, c[v, u, l, n.sever, i, t, y]  || 0) + 1;
 
-    return, a, c, c}{} asRec, o, r, d<stringnum, b, e, r>);
+    return, a, c, c}{} asRec, o, r, d<stringnumber>);
 
   constformatT, i, m, e = (d, a, t, e: D, a, t, e) => {returnnewI, n, t, l.DateTimeFor, m, a, t("e, n-U, S'{
       h, o, u, r: "2-di, g, i, t"min, u, t, e: "2-di, g, i, t"sec, o, n, d: "2-di, g, i, t"}).fo, r, m, a(d, a, t, e)};

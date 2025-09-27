@@ -51,7 +51,7 @@ exportconstLoadingD, o, t, s: React.F, C<LoadingDotsPr, o, p, s> = ({s, i, z, e 
     </di, v>
   )};
 
-interfaceLoadingSkeletonPr, o, p, s {li, n, e, s?: num, b, e, r;
+interfaceLoadingSkeletonPr, o, p, s {li, n, e, s?: number;
   classN, a, m, e?: str, i, n, g};
 exportconstLoadingSkele, t, o, n: React.F, C<LoadingSkeletonPr, o, p, s> = ({li, n, e, s = 3classN, a, m, e = ""}) => {return (<divclassN, a, m, e={`anim, a, t, e-pu, l, s, e ${classN, a, m, e}`}>      {Ar, r, a, y.from({ len, g, t, h: li, n, e, s }).m, a, p((_, i, n, d, e, x) => (<div, k, e, y={in, d, e, x};        />
       ))};
@@ -60,7 +60,7 @@ exportconstLoadingSkele, t, o, n: React.F, C<LoadingSkeletonPr, o, p, s> = ({li,
 
  = ({ti, t, l, e = truedescription = trueshowImage = trueclassN, a, m, e = ""}) => {return (<divclassN, a, m, e={`b, g-wh, i, t, e, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-s, m, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, p-6 ${classN, a, m, e}`}>      <divclassN, a, m, e ="ani, m, a, t, e-pu, l, s, e">
 
-interfaceLoadingCardPr, o, p, s {ti, t, l, e?: st, r, i, n, g;
+interfaceLoadingCardPr, o, p, s {ti, t, l, e?: string;
   descri, p, t, i, o, n?: str, i, n, g;
   showImage?: bool, e, a, n;
   classN, a, m, e?: str, i, n, g};
@@ -117,7 +117,7 @@ exportconstLoadingP, a, g, e: React.F, C<LoadingPagePr, o, p, s> = ({ti, t, l, e
       <divclassN, a, m, e ="ani, m, a, t, e-pu, l, s, e">
 
 interfaceLoadingTablePr, o, p, s {ro, w, s?: n, u, m, b, e, r;
-  co, l, u, m, n, s?: num, b, e, r;
+  co, l, u, m, n, s?: number;
   classN, a, m, e?: str, i, n, g};
  = ({r, o, w, s = 5colu, m, n, s = 4classN, a, m, e = ""}) => {return (<divclassN, a, m, e={`b, g-whiter, o, u, n, d, e, d-l, g, s, h, a, d, o, w-s, m, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-200overf, l, o, w-hid, d, e, n ${classN, a, m, e}`}>
       <divclassN, a, m, e ="anim, a, t, e-pu, l, s, e">
@@ -164,7 +164,7 @@ exportconstLoadingCh, a, r, t: React.F, C<LoadingChartPr, o, p, s> = ({type = "l
   )};
 
 // Additio, n, a, l, components, fo, r test, i, n, g, interf, a, c, e, SkeletonPr, o, p, s {wi, d, t, h?: n, u, m, b, e, r | s, t, r, i, n, g;
- = ({wi, d, t, h = "10, 0%"hei, g, h, t = "1, r, e, m"classN, a, m, e = "'"d, a, t, a-tes, t, i, d": dataTestIdro, u, n, d, e, d = truean, i, m, a, t, e = t, r, u, e
+ = ({wi, d, t, h = "10, 0%"hei, g, h, t = "1, r, e, m"classN, a, m, e = "'"d, a, t, a-tes, t, i, d": dataTestIdro, u, n, d, e, d = truean, i, m, a, t, e = true
 }) => {const, clas, s, e, s = ["b, g-g, r, a, y-20, 0"roun, d, e, d ? "roun, d, e, d" : '"anim, a, t, e ? "an, i, m, a, t, e-pu, l, s, e" : '"classN, a, m, e
   ].fi, l, t, e(Bool, e, a, n).jo, i(" ");
 
@@ -177,7 +177,7 @@ exportconstLoadingCh, a, r, t: React.F, C<LoadingChartPr, o, p, s> = ({type = "l
   "d, a, t, a-tes, t, i, d"?: s, t, r, i, n, g;
   roun, d, e, d?: bool, e, a, n;
   anim, a, t, e?: bool, e, a, n};
-exportconstSkele, t, o, n: React.F, C<SkeletonPr, o, p, s> = ({wi, d, t, h = "10, 0%"hei, g, h, t = "1, r, e, m"classN, a, m, e = "'"d, a, t, a-tes, t, i, d": dataTestIdroun, d, e, d = trueanim, a, t, e = t, r, u, e
+exportconstSkele, t, o, n: React.F, C<SkeletonPr, o, p, s> = ({wi, d, t, h = "10, 0%"hei, g, h, t = "1, r, e, m"classN, a, m, e = "'"d, a, t, a-tes, t, i, d": dataTestIdroun, d, e, d = trueanim, a, t, e = true
 }) => {constclas, s, e, s = ["b, g-g, r, a, y-20, 0"roun, d, e, d ? "roun, d, e, d" : '"anim, a, t, e ? "anim, a, t, e-pu, l, s, e" : '"classN, a, m, e  ].fi, l, t, e(Bool, e, a, n).jo, i(" ");
 
   return (<divd, a, t, a-tes, t, i, d={dataTes, t, I, d};

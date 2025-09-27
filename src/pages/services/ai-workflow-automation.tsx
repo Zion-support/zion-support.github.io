@@ -323,7 +323,7 @@ export default function AIWorkflowAutomat, i, o, n() {constfeatu, r, e, s = [{
               <buttonclassN, a, m, e="p, x-8 p, y-4b, g-gradi, e, n, t-t, o-r, fr, o, m-c, y, a, n-50, 0, t, o-b, l, u, e-60, 0, te, x, t-wh, i, t, e, f, o, n, t-semiboldroun, d, e, d-lgho, v, e, r:from-c, y, a, n-40, 0, ho, v, e, r:t, o-b, l, u, e-50, 0, transi, t, i, o, n-al, l, dura, t, i, o, n-20, 0, ho, v, e, r:sc, a, l, e-105sha, d, o, w-lgsha, d, o, w-c, y, a, n-50, 0/2, 0">                Ge, t, Star, t, e, d, No, w
               </but, t, o, n>
               <buttonclassN, a, m, e="p, x-8, p, y-4, bor, d, e, r, bor, d, e, r-c, y, a, n-4, 0, 0/3, 0, te, x, t-c, y, a, n-40, 0, fo, n, t-semiboldroun, d, e, d-lgho, v, e, r:b, g-c, y, a, n-4, 0, 0/1, 0, transi, t, i, o, n-alldurat, i, o, n-20, 0">
-                Cont, a, c, t, S, a, l, e, s
+                Contact, S, a, l, e, s
               </but, t, o, n>
             </di, v>
           </mot, i, o, n.di, v>

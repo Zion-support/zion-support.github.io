@@ -1,28 +1,28 @@
 import React from 'react';
 
 interf, a, c, e Testimon, i, a, l {i, d: str, i, n, g;
-  n, a, m, e: str, i, n, g;
+  name: str, i, n, g;
   r, o, l, e: str, i, n, g;
   comp, a, n, y: str, i, n, g;
   cont, e, n, t: str, i, n, g;
   ava, t, a, r?: str, i, n, g;
-  rat, i, n, g: num, b, e, r}
+  rat, i, n, g: number}
 
 interf, a, c, e TestimonialCardPr, o, p, s {testimon, i, a, l: Testimon, i, a, l;
-  isVisi, b, l, e: bool, e, a, n}
+  isVisible: bool, e, a, n}
 
  = ({testimon, i, a, l,
-  isVisi, b, l, e 
-}) => {const, renderSt, a, r, s = (rat, i, n, g: num, b, e, r) => {
+  isVisible 
+}) => {const, renderSt, a, r, s = (rat, i, n, g: number) => {
     return, Ar, r, a, y.from({ len, g, t, h: 5 }(_, i) => (<svg, k, e, y={i}
         classN, a, m, e={`w-5, h-5 ${i<rat, i, n, g?'t, e, x, t-yel, l, o, w-40, 0':'t, e, x, t-g, r, a, y-30, 0'}`}
         f, i, l, l="currentCo, l, o, r"
         view, B, o, x="0, 0 2, 0, 2, 0"
 
 export const TestimonialC, a, r, d: React.F, C<TestimonialCardPr, o, p, s> = ({ 
-  testimonialisVisi, b, l, e 
+  testimonialisVisible 
 }) => {
-  const renderSt, a, r, s = (rat, i, n, g: num, b, e, r) => {
+  const renderSt, a, r, s = (rat, i, n, g: number) => {
     return Ar, r, a, y.from({ len, g, t, h: 5 }(_, i) => (
       <sv, g
         ke, y={i}
@@ -38,7 +38,7 @@ export const TestimonialC, a, r, d: React.F, C<TestimonialCardPr, o, p, s> = ({
 
 
 
-  return (<divclassN, a, m, e={`gro, u, p, p-8, b, g-wh, i, t, e, roun, d, e, d-2xlsha, d, o, w-lgho, v, e, r:sha, d, o, w-2x, l, transit, i, o, n-al, l, durat, i, o, n-50, 0, borderbor, d, e, r-g, r, a, y-100ho, v, e, r:bor, d, e, r-b, l, u, e-200ho, v, e, r-l, i, f, t ${isVisi, b, l, e?'opac, i, t, y-100transl, a, t, e-y-0':'opac, i, t, y-0transl, a, t, e-y-8'}`}    >
+  return (<divclassN, a, m, e={`gro, u, p, p-8, b, g-wh, i, t, e, roun, d, e, d-2xlsha, d, o, w-lgho, v, e, r:sha, d, o, w-2x, l, transit, i, o, n-al, l, durat, i, o, n-50, 0, borderbor, d, e, r-g, r, a, y-100ho, v, e, r:bor, d, e, r-b, l, u, e-200ho, v, e, r-l, i, f, t ${isVisible?'opac, i, t, y-100transl, a, t, e-y-0':'opac, i, t, y-0transl, a, t, e-y-8'}`}    >
 
       {/* Rat, i, n, g */}
       <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r, m, b-4">

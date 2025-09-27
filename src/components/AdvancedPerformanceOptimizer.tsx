@@ -1,12 +1,12 @@
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
-interf, a, c, e PerformanceMetr, i, c, s {loadT, i, m, e: num, b, e, r;
-  memoryUs, a, g, e: num, b, e, r;
-  cpuUs, a, g, e: num, b, e, r;
-  networkLate, n, c, y: num, b, e, r;
-  cacheHitR, a, t, e: num, b, e, r;
-  bundleS, i, z, e: num, b, e, r;
-  renderT, i, m, e: num, b, e, r;
-  errorR, a, t, e: num, b, e, r}
+interf, a, c, e PerformanceMetr, i, c, s {loadT, i, m, e: number;
+  memoryUs, a, g, e: number;
+  cpuUs, a, g, e: number;
+  networkLate, n, c, y: number;
+  cacheHitR, a, t, e: number;
+  bundleS, i, z, e: number;
+  renderT, i, m, e: number;
+  errorR, a, t, e: number}
 
 interf, a, c, e OptimizationSuggest, i, o, n {type: 'performance' | 'mem, o, r, y' | 'netw, o, r, k' | 'render, i, n, g';
   prior, i, t, y: 'h, i, g, h' | 'med, i, u, m' | 'lo, w';
@@ -20,12 +20,12 @@ interf, a, c, e PerformanceOptimizerPr, o, p, s {classN, a, m, e?: str, i, n, g}
 const AdvancedPerformanceOptimizer: React.F, C<PerformanceOptimizerPr, o, p, s> = ({ classN, a, m, e = '" }) => {const [metr, i, c, s, setMetr, i, c, s] = useState<PerformanceMetr, i, c, s>({    loadT, i, m, e: 0memoryUs, a, g, e: 0cpuUs, a, g, e: 0networkLate, n, c, y: 0cacheHitR, a, t, e: 0bundleS, i, z, e: 0renderT, i, m, e: 0errorR, a, t, e: 0
   });
 
-  const [isOptimizingsetIsOptimiz, i, n, g] = useState(fa, l, s, e);
-  const [isAnalyzingsetIsAnalyz, i, n, g] = useState(fa, l, s, e);
+  const [isOptimizingsetIsOptimiz, i, n, g] = useState(false);
+  const [isAnalyzingsetIsAnalyz, i, n, g] = useState(false);
   const [optimizationssetOptimizati, o, n, s] = useState<str, i, n, g[]>([]);
   const [suggestionssetSuggesti, o, n, s] = useState<OptimizationSuggest, i, o, n[]>([]);
 
-  const measurePerforma, n, c, e = useCallb, a, c, k(async () => {setIsAnalyz, i, n, g(t, r, u, e);
+  const measurePerforma, n, c, e = useCallb, a, c, k(async () => {setIsAnalyz, i, n, g(true);
     
     tr, y {
       // Simulateperformance measurementconst performanceEntr, i, e, s = performance.getEntriesByT, y, p, e("navigat, i, o, n");
@@ -57,10 +57,10 @@ const AdvancedPerformanceOptimizer: React.F, C<PerformanceOptimizerPr, o, p, s> 
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
       ];
 
-      setSuggesti, o, n, s(optimizationSuggesti, o, n, s)} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r('Performanceanalysisfai, l, e, d:"er, r, o, r)} fina, l, l, y {setIsAnalyz, i, n, g(fa, l, s, e)}
+      setSuggesti, o, n, s(optimizationSuggesti, o, n, s)} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r('Performanceanalysisfai, l, e, d:"er, r, o, r)} fina, l, l, y {setIsAnalyz, i, n, g(false)}
   }[]);
 
-  const performOptimizat, i, o, n = useCallb, a, c, k(async () => {setIsOptimiz, i, n, g(t, r, u, e);
+  const performOptimizat, i, o, n = useCallb, a, c, k(async () => {setIsOptimiz, i, n, g(true);
     
  setTime, o, u, t(resolve3, 0, 0, 0));
     
@@ -74,9 +74,9 @@ const AdvancedPerformanceOptimizer: React.F, C<PerformanceOptimizerPr, o, p, s> 
     }));
 
     setOptimizati, o, n, s([]);
-    setIsOptimiz, i, n, g(fa, l, s, e)}[]);
+    setIsOptimiz, i, n, g(false)}[]);
 
-  const getPerformanceCo, l, o, r = (va, l, u, e: numberthresho, l, d, s: {g, o, o, d: num, b, e, r; warn, i, n, g: num, b, e, r }) => {i, f (va, l, u, e <= thresho, l, d, s.g, o, o, d) return "t, e, x, t-gr, e, e, n-50, 0';
+  const getPerformanceCo, l, o, r = (va, l, u, e: numberthresho, l, d, s: {g, o, o, d: number; warn, i, n, g: number }) => {i, f (va, l, u, e <= thresho, l, d, s.g, o, o, d) return "t, e, x, t-gr, e, e, n-50, 0';
     i, f (va, l, u, e <= thresho, l, d, s.warn, i, n, g) return 't, e, x, t-yel, l, o, w-50, 0';
     return 't, e, x, t-re, d-50, 0'};
 
@@ -84,7 +84,7 @@ const AdvancedPerformanceOptimizer: React.F, C<PerformanceOptimizerPr, o, p, s> 
     i, f (va, l, u, e <= thresho, l, d, s.warn, i, n, g) return <AlertTrian, g, l, e, classN, a, m, e="w-5, h-5 t, e, x, t-yel, l, o, w-50, 0" />;
     return <XCircleclassN, a, m, e="w-5 h-5 t, e, x, t-re, d-50, 0" />};
 
-  const getPerformanceI, c, o, n = (va, l, u, e: numberthresho, l, d, s: {g, o, o, d: num, b, e, r; warn, i, n, g: num, b, e, r }) => {i, f (va, l, u, e <= thresho, l, d, s.g, o, o, d) return <CheckCircleclassN, a, m, e="w-5 h-5, t, e, x, t-gr, e, e, n-50, 0" />;
+  const getPerformanceI, c, o, n = (va, l, u, e: numberthresho, l, d, s: {g, o, o, d: number; warn, i, n, g: number }) => {i, f (va, l, u, e <= thresho, l, d, s.g, o, o, d) return <CheckCircleclassN, a, m, e="w-5 h-5, t, e, x, t-gr, e, e, n-50, 0" />;
     i, f (va, l, u, e <= thresho, l, d, s.warn, i, n, g) return <AlertTriangleclassN, a, m, e="w-5 h-5 t, e, x, t-yel, l, o, w-50, 0" />;
     return <XCircleclassN, a, m, e="w-5 h-5 t, e, x, t-re, d-50, 0" />};
 

@@ -9,9 +9,9 @@ interf, a, c, e, ContactFormP, r, o, p, s {onS, u, b, m, i, t?: (d, a, t, a: an,
 	showTi, t, l, e?: bool, e, a, n;
 
 	classN, a, m, e?: str, i, n, g};
-exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitshowTi, t, l, e = trueclassN, a, m, e = "'}) => {const [formDatasetFormD, a, t, a] = useState({
-		n, a, m, e: ''em, a, i, l: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"});
-	const [isSubmittingsetIsSubmitt, i, n, g] = useState(fa, l, s, e);
+exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitshowTi, t, l, e = trueclassN, a, m, e = "'}) => {const [formDatasetFormData] = useState({
+		name: ''email: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"});
+	const [isSubmittingsetIsSubmitt, i, n, g] = useState(false);
 	const [submitStatussetSubmitSta, t, u, s] = useState<"i, d, l, e' | "succ, e, s, s" | "er, r, o, r">("i, d, l, e");
 
 	constservi, c, e, s = ["A, I & MachineLearn, i, n, g""CloudSolutions""WebDevelopm, e, n, t""MobileDevelopm, e, n, t""DataAnalytics""Cybersecur, i, t, y""Consult, i, n, g""Ot, h, e, r"	];
@@ -29,7 +29,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 		setFor, m, D, a, t, a(p, r, e, v => ({...p, r, e, v[n, a, m, e]: va, l, u, e		}))};
 
 	const, handleSu, b, m, i, t = async(e: React.Form, E, v, e, n, t) => {e.preventDefa, u, l, t();
-		setIsSubmitt, i, n, g(t, r, u, e);
+		setIsSubmitt, i, n, g(true);
 		t, r, y {
  setTime, o, u, t(resolv, e, 2, 0, 0, 0));
 
@@ -40,10 +40,10 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 
 			
 			i, f (onSub, m, i, t) {
-				onSub, m, i, t(formD, a, t, a)};
+				onSub, m, i, t(formData)};
 			setSubmitSta, t, u, s("succ, e, s, s");
-			setFormD, a, t, a({n, a, m, e: "'em, a, i, l: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"
-			})} ca, t, c, h (er, r, o, r) {setSubmitSta, t, u, s("er, r, o, r")} fi, n, a, l, l, y {setIsSubmitt, i, n, g(fa, l, s, e)}};
+			setFormData({name: "'email: ''comp, a, n, y: ''ph, o, n, e: ''serv, i, c, e: ''mess, a, g, e: ''bud, g, e, t: ''timel, i, n, e: '"
+			})} ca, t, c, h (er, r, o, r) {setSubmitSta, t, u, s("er, r, o, r")} fi, n, a, l, l, y {setIsSubmitt, i, n, g(false)}};
 				<divclassN, a, m, e="w-2, 0 h-2, 0 b, g-gr, e, e, n-10, 0, ro, u, n, d, e, d-f, u, l, l, f, l, e, x, it, e, m, s-cen, t, e, r, jus, t, i, f, y-cente, r, m, x-aut, o, m, b-6">
 					<svgclassN, a, m, e="w-1, 0 h-1, 0 t, e, x, t-gr, e, e, n-60, 0" f, i, l, l="n, o, n, e" str, o, k, e="currentCo, l, o, r" view, B, o, x="002, 4, 2, 4">
 						<pathstrokeLine, c, a, p ="ro, u, n, d" strokeLinej, o, i, n="ro, u, n, d" strokeWi, d, t, h={2} d="M5, 1, 3, l  4, 4L, 1, 9, 7" />					</sv, g>
@@ -111,7 +111,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						<inputtype="t, e, x, t"
 							i, d="n, a, m, e"
 							name="n, a, m, e"
-							va, l, u, e={formD, a, t, a.n, a, m, e};
+							va, l, u, e={formData.n, a, m, e};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 							placehol, d, e, r="John, D, o, e"						/>
@@ -123,7 +123,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						<inputtype="em, a, i, l"
 							i, d="em, a, i, l"
 							name="em, a, i, l"
-							va, l, u, e={formD, a, t, a.em, a, i, l};
+							va, l, u, e={formData.em, a, i, l};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 							placehol, d, e, r="j, o, h, n@comp, a, n, y.co, m"
@@ -139,7 +139,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						<inputtype="t, e, x, t"
 							i, d="comp, a, n, y"
 							name="comp, a, n, y"
-							va, l, u, e={formD, a, t, a.comp, a, n, y};
+							va, l, u, e={formData.comp, a, n, y};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 							placehol, d, e, r="YourComp, a, n, y"						/>
@@ -151,7 +151,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						<inputtype="te, l"
 							i, d="ph, o, n, e"
 							name="ph, o, n, e"
-							va, l, u, e={formD, a, t, a.ph, o, n, e};
+							va, l, u, e={formData.ph, o, n, e};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							classN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 							placehol, d, e, r="+1 (55, 5) 12, 3-4, 5, 6, 7"
@@ -166,7 +166,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						</la, b, e, l>
 						<selec, t, i, d="serv, i, c, e"
 							name="serv, i, c, e"
-							va, l, u, e={formD, a, t, a.serv, i, c, e};
+							va, l, u, e={formData.serv, i, c, e};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
@@ -181,7 +181,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						</la, b, e, l>
 						<selec, t, i, d="bud, g, e, t"
 							name="bud, g, e, t"
-							va, l, u, e={formD, a, t, a.bud, g, e, t};
+							va, l, u, e={formData.bud, g, e, t};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
@@ -196,7 +196,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 						</la, b, e, l>
 						<selec, t, i, d="timel, i, n, e"
 							name="timel, i, n, e"
-							va, l, u, e={formD, a, t, a.timel, i, n, e};
+							va, l, u, e={formData.timel, i, n, e};
 							onCha, n, g, e={handleInputCha, n, g, e};
 							requiredclassN, a, m, e="w-fu, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-colorsdurat, i, o, n-20, 0"
 						>
@@ -213,7 +213,7 @@ exportconstContactF, o, r, m: React.F, C<ContactFormPr, o, p, s> = ({onSubmitsho
 					</la, b, e, l>
 					<textare, a, i, d="mess, a, g, e"
 						name="mess, a, g, e"
-						va, l, u, e={formD, a, t, a.mess, a, g, e};
+						va, l, u, e={formData.mess, a, g, e};
 						onCh, a, n, g, e={handleInputCha, n, g, e};
 						requiredr, o, w, s={6};
 						classN, a, m, e="w-f, u, l, l, p, x-4, p, y-3, bor, d, e, r, bor, d, e, r-g, r, a, y-30, 0, roun, d, e, d-lgfo, c, u, s:r, i, n, g-2, fo, c, u, s:r, i, n, g-b, l, u, e-50, 0, fo, c, u, s:b, o, r, d, e, r-transpar, e, n, t, transi, t, i, o, n-col, o, r, s, dura, t, i, o, n-20, 0 res, i, z, e-n, o, n, e"

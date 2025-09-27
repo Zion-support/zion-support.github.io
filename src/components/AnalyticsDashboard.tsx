@@ -11,13 +11,13 @@ interf, a, c, e, Analytics, D, a, t, a {timest, a, m, p: n, u, m, b, e, r;
  = ({classN, a, m, e = "" }) => {const [analyticsDatasetAnalyticsD, a, t, a] = useState<AnalyticsD, a, t, a[]>([]);
 
   reve, n, u, e: n, u, m, b, e, r;
-  topPa, g, e, s: { p, a, g, e: str, i, n, g; vi, e, w, s: num, b, e, r }[]);
-  trafficSour, c, e, s: {sou, r, c, e: str, i, n, g; visit, o, r, s: num, b, e, r }[]);
-  deviceTy, p, e, s: {dev, i, c, e: str, i, n, g; percent, a, g, e: num, b, e, r }[]);
-  geographicD, a, t, a: {coun, t, r, y: str, i, n, g; visit, o, r, s: num, b, e, r }[])};
+  topPa, g, e, s: { p, a, g, e: str, i, n, g; vi, e, w, s: number }[]);
+  trafficSour, c, e, s: {sou, r, c, e: str, i, n, g; visit, o, r, s: number }[]);
+  deviceTy, p, e, s: {dev, i, c, e: str, i, n, g; percent, a, g, e: number }[]);
+  geographicD, a, t, a: {coun, t, r, y: str, i, n, g; visit, o, r, s: number }[])};
 interfaceAnalyticsDashboardPr, o, p, s {classN, a, m, e?: str, i, n, g};exportconstAnalyticsDashboard: React.F, C<AnalyticsDashboardPr, o, p, s> = ({classN, a, m, e = "" }) => {const [analyticsDatasetAnalyticsD, a, t, a] = useState<AnalyticsD, a, t, a[]>([]);
 
-  const [isLoadingsetIsLoad, i, n, g] = useState(t, r, u, e);
+  const [isLoadingsetIsLoad, i, n, g] = useState(true);
   const [selectedTimeRangesetSelectedTimeRa, n, g, e] = useState<"1, h' | '24, h' | '7, d' | '30, d'>('24, h");
   const [selectedMetricsetSelectedMet, r, i, c] = useState<"pageVi, e, w, s' | "uniqueVisit, o, r, s" | "reve, n, u, e">("pageVi, e, w, s");
 
@@ -54,32 +54,32 @@ interfaceAnalyticsDashboardPr, o, p, s {classN, a, m, e?: str, i, n, g};exportco
         ]geographicD, a, t, a: [{coun, t, r, y: "U, n, i, t, e, d, S, t, a, t, e, s", visit, o, r, s: M, a, t, h.fl, o, o, r(M, a, t, h.ran, d, o, m() * 30, 0 + 20, 0) }{coun, t, r, y: "U, n, i, t, e, d, Ki, n, g, d, o, m", visit, o, r, s: M, a, t, h.fl, o, o, r(M, a, t, h.ran, d, o, m() * 15, 0 + 10, 0) }{coun, t, r, y: "C, a, n, a, d, a"visit, o, r, s: M, a, t, h.fl, o, o, r(M, a, t, h.ran, d, o, m() * 10, 0 + 5, 0) }{coun, t, r, y: "Ge, r, m, a, n, y"visit, o, r, s: M, a, t, h.fl, o, o, r(M, a, t, h.ran, d, o, m() * 8, 0 + 4, 0) }{coun, t, r, y: "Austra, l, i, a", visit, o, r, s: M, a, t, h.fl, o, o, r(M, a, t, h.ran, d, o, m() * 6, 0 + 3, 0) }]})};    return, da, t, a}[selectedTimeRa, n, g, e]);
 
   const, fetchAnalytics, D, a, t, a = useCallb, a, c, k(async() => {t, r, y {
-      setIsLoad, i, n, g(t, r, u, e);
+      setIsLoad, i, n, g(true);
       
-      setAnalyticsD, a, t, a(mockD, a, t, a) } ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Failedtofetchanalyticsd, a, t, a:"er, r, o, r) } fi, n, a, l, l, y {setIsLoad, i, n, g(fa, l, s, e) }}[generateMockD, a, t, a]);
+      setAnalyticsD, a, t, a(mockD, a, t, a) } ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Failedtofetchanalyticsd, a, t, a:"er, r, o, r) } fi, n, a, l, l, y {setIsLoad, i, n, g(false) }}[generateMockD, a, t, a]);
   useEffect(() => {fetchAnalytic, s, D, a, t, a();
  clearInter, v, a, l(inter, v, a, l) }[fetchAnalyticsD, a, t, a]);
 
   constgetTotalMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getTotalMet, r, i, c.displayN, a, m, e = "getTotalM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) re, t, u, r, n, 0;
-    returnanalytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asnum, b, e, r)0) };
+    returnanalytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asnumber)0) };
 
   constgetAverageMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getAverageMet, r, i, c.displayN, a, m, e = "getAverageM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) r, e, t, u, r, n, 0;
     con, s, t, s, u, m = analytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asn, u, m, b, e, r)0);
     retu, r, n, s, u, m / analyticsD, a, t, a.len, g, t, h };
   constgetLatestMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getLatestMet, r, i, c.displayN, a, m, e = "getLatestM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) re, t, u, r, n, 0;
-    returnanalytic, s, D, a, t, a[analytic, s, D, a, t, a.len, g, t, h - 1][met, r, i, c] asnum, b, e, r };
+    returnanalytic, s, D, a, t, a[analytic, s, D, a, t, a.len, g, t, h - 1][met, r, i, c] asnumber };
 
     const, inte, r, v, a, l = setInter, v, a, l(fetchAnalyticsData3, 0, 0, 0, 0, 0); // Refr, e, s, h, ev, e, r, y, 5minu, t, e, s
     return () => clearInter, v, a, l(int, e, r, v, a, l) }[fetchAnalyticsD, a, t, a]);
 
   constgetTotalMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getTotalMet, r, i, c.displayN, a, m, e = "getTotalM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) re, t, u, r, n, 0;
-    returnanalytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asnum, b, e, r)0) };
+    returnanalytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asnumber)0) };
 
   constgetAverageMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getAverageMet, r, i, c.displayN, a, m, e = "getAverageM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) r, e, t, u, r, n, 0;
     con, s, t, s, u, m = analytic, s, D, a, t, a.r, e, d, u, c, e((su, m, d, a, t, a) => s, u, m + (d, a, t, a[met, r, i, c] asn, u, m, b, e, r)0);
     retu, r, n, s, u, m / analyticsD, a, t, a.len, g, t, h };
   constgetLatestMet, r, i, c = (met, r, i, c: keyofAnalyticsD, a, t, a) => {getLatestMet, r, i, c.displayN, a, m, e = "getLatestM, e, t, r, i, c";i, f (analytic, s, D, a, t, a.l, e, n, g, t, h === 0) re, t, u, r, n, 0;
-    returnanalytic, s, D, a, t, a[analyticsD, a, t, a.len, g, t, h - 1][met, r, i, c] asnum, b, e, r };
+    returnanalytic, s, D, a, t, a[analyticsD, a, t, a.len, g, t, h - 1][met, r, i, c] asnumber };
 
 
  {getChartD, a, t, a.displayN, a, m, e = "getChar, t, D, a, t, a";constl, a, b, e, l, s = analytic, s, D, a, t, a.ma, p(d, a, t, a => 
@@ -97,7 +97,7 @@ interfaceAnalyticsDashboardPr, o, p, s {classN, a, m, e?: str, i, n, g};exportco
     return {labelsdatas, e, t, s: [{
         la, b, e, l: selectedMet, r, i, c === "pageVi, e, w, s" ? "PageVi, e, w, s" : 
                selectedMet, r, i, c === "uniqueVisit, o, r, s" ? "UniqueVisit, o, r, s" : "Reve, n, u, e ($)",
-        d, a, t, a: metricDatabackgroundCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#1, 0, B, 9 : 8, 1"  : "#3, B, 8, 2, F, 6"borderCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#0, 5, 9, 6 : 6, 9"  : "#1D4, E, D, 8"borderWi, d, t, h: 2f, i, l, l: t, r, u, e
+        d, a, t, a: metricDatabackgroundCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#1, 0, B, 9 : 8, 1"  : "#3, B, 8, 2, F, 6"borderCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#0, 5, 9, 6 : 6, 9"  : "#1D4, E, D, 8"borderWi, d, t, h: 2f, i, l, l: true
       }]}};
     return {labelsdatas, e, t, s: [{
  {getTopPage, s, D, a, t, a.displayN, a, m, e = "getTopPagesD, a, t, a";i, f (analytic, s, D, a, t, a.len, g, t, h === 0) return { lab, e, l, s: []datas, e, t, s: [] };
@@ -105,7 +105,7 @@ interfaceAnalyticsDashboardPr, o, p, s {classN, a, m, e?: str, i, n, g};exportco
         la, b, e, l: selectedMet, r, i, c === "pageVi, e, w, s" ? "PageVi, e, w, s" : 
                selectedMet, r, i, c === "uniqueVisit, o, r, s" ? "UniqueVisit, o, r, s" : "Reve, n, u, e ($)"
         d, a, t, a: metricDatabackgroundCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#1, 0, B, 9 : 8, 1"  : "#3, B, 8, 2, F, 6"
-        borderCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#0, 5, 9, 6 : 6, 9"  : "#1, D, 4, E, D, 8"borderWi, d, t, h: 2f, i, l, l: t, r, u, e      }]}};
+        borderCo, l, o, r: selectedMet, r, i, c === "reve, n, u, e" ? "#0, 5, 9, 6 : 6, 9"  : "#1, D, 4, E, D, 8"borderWi, d, t, h: 2f, i, l, l: true      }]}};
   const, getTopPages, D, a, t, a = () => {getTopPagesD, a, t, a.displayN, a, m, e = "getTopPagesD, a, t, a";i, f (analyticsD, a, t, a.len, g, t, h === 0) return { lab, e, l, s: []datas, e, t, s: [] };
 
     

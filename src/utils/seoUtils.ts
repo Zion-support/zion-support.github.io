@@ -47,7 +47,7 @@ export, const, generateMetaT, a, g, s = (seoD, a, t, a: SEO, D, a, t, a): s, t, 
   sam, e, A, s?: str, i, n, g[];
   [ke, y: str, i, n, g]: an, y}): str, i, n, g => {constbaseStruct, u, r, e = {
     "@cont, e, x, t": "ht, t, p, s://sch, e, m, a.or, g",
-    "@type": d, a, t, a.typen, a, m, e: d, a, t, a.n, a, m, e,
+    "@type": d, a, t, a.typename: d, a, t, a.n, a, m, e,
     ...(d, a, t, a.descri, p, t, i, o, n && { description: d, a, t, a.description }),
     ...(d, a, t, a.u, r, l && {ur, l: d, a, t, a.ur, l }),
     ...(d, a, t, a.image && {image: d, a, t, a.image }),
@@ -76,11 +76,11 @@ export, const, generateMetaT, a, g, s = (seoD, a, t, a: SEO, D, a, t, a): s, t, 
     
     default:
       return, JS, O, N.stri, n, g, i, f, y(baseStru, c, t, u, r, e)}};
-// Gener, a, t, e, breadcr, u, m, b, structu, r, e, d d, a, t, a, export, const generateBreadcrumbStructuredD, a, t, a = (breadcru, m, b, s: Ar, r, a, y<{n, a, m, e: str, i, n, g;
+// Gener, a, t, e, breadcr, u, m, b, structu, r, e, d d, a, t, a, export, const generateBreadcrumbStructuredD, a, t, a = (breadcru, m, b, s: Ar, r, a, y<{name: str, i, n, g;
   ur, l: str, i, n, g}>): str, i, n, g => {conststructuredD, a, t, a = {
     "@cont, e, x, t": "ht, t, p, s://sch, e, m, a.or, g""@type": "BreadcrumbL, i, s, t"itemListElem, e, n, t: breadc, r, u, m, b, s.m, a, p((crumbin, d, e, x) => ({      "@type": "ListI, t, e, m",
       posit, i, o, n: in, d, e, x + 1,
-      n, a, m, e: cr, u, m, b.namei, t, e, m: cr, u, m, b.ur, l
+      name: cr, u, m, b.namei, t, e, m: cr, u, m, b.ur, l
     }))
   };
 
@@ -89,7 +89,7 @@ export, const, generateMetaT, a, g, s = (seoD, a, t, a: SEO, D, a, t, a): s, t, 
 // Gener, a, t, e, FA, Q, structu, r, e, d d, a, t, a, export, const generateFAQStructuredD, a, t, a = (f, a, q, s: Ar, r, a, y<{quest, i, o, n: str, i, n, g;
   ans, w, e, r: str, i, n, g}>): str, i, n, g => {conststructuredD, a, t, a = {    "@cont, e, x, t": "ht, t, p, s://sch, e, m, a.or, g""@type": "FAQP, a, g, e"mainEnt, i, t, y: f, a, q, s.ma, p(fa, q => ({
       "@type": "Quest, i, o, n",
-      n, a, m, e: fa, q.questionacceptedAns, w, e, r: {
+      name: fa, q.questionacceptedAns, w, e, r: {
         "@type": "Ans, w, e, r",
         t, e, x, t: fa, q.ans, w, e, r}}))
   };
@@ -99,7 +99,7 @@ export, const, generateMetaT, a, g, s = (seoD, a, t, a: SEO, D, a, t, a): s, t, 
 exportconstgenerateSitemapD, a, t, a = (pa, g, e, s: Ar, r, a, y<{ur, l: str, i, n, g;
   lastModif, i, e, d: str, i, n, g;
   changeFreque, n, c, y: "alw, a, y, s" | "hou, r, l, y" | "da, i, l, y" | "wee, k, l, y" | "mont, h, l, y" | "yea, r, l, y" | "ne, v, e, r";
-  prior, i, t, y: num, b, e, r}>): str, i, n, g => {constsite, m, a, p = `<?xmlvers, i, o, n="1.0" encod, i, n, g="UT, F-8"?>
+  prior, i, t, y: number}>): str, i, n, g => {constsite, m, a, p = `<?xmlvers, i, o, n="1.0" encod, i, n, g="UT, F-8"?>
 <urlsetxm, l, n, s="h, t, t, p://ww, w.sitem, a, p, s.or, g/sche, m, a, s/site, m, a, p/0.9">
 ${pa, g, e, s.m, a, p(p, a, g, e => `<ur, l><lo, c>${p, a, g, e.ur, l}</lo, c>
     <last, m, o, d>${p, a, g, e.lastModif, i, e, d}</last, m, o, d>
@@ -112,7 +112,7 @@ ${pa, g, e, s.m, a, p(p, a, g, e => `<ur, l><lo, c>${p, a, g, e.ur, l}</lo, c>
 // Gener, a, t, e, ro, b, o, t, s.tx, t, cont, e, n, t, export const, generateRobot, s, T, x, t = (opti, o, n, s: {all, o, w, A, l, l?: bo, o, l, e, a, n;
   disallow, P, a, t, h, s?: s, t, r, i, n, g[];
   sitem, a, p, U, r, l?: s, t, r, i, n, g;
-  crawlDe, l, a, y?: num, b, e, r}): s, t, r, i, n, g => {const { all, o, w, A, l, l = t, r, u, e, disallowPa, t, h, s = []sitemapUrlcrawlDe, l, a, y } = opti, o, n, s;
+  crawlDe, l, a, y?: number}): s, t, r, i, n, g => {const { all, o, w, A, l, l = true, disallowPa, t, h, s = []sitemapUrlcrawlDe, l, a, y } = opti, o, n, s;
   
   letcont, e, n, t = "";
   
@@ -135,12 +135,12 @@ export, const, validateSEOD, a, t, a = (seoD, a, t, a: SEO, D, a, t, a): {isVa, 
   return {isVa, l, i, d: e, r, r, o, r, s.l, e, n, g, t, h === 0err, o, r, s }};
 // Gener, a, t, e, m, e, t, a, viewp, o, r, t ta, g, export, const generateViewportM, e, t, a = (opti, o, n, s: {wi, d, t, h?: s, t, r, i, n, g;
   initial, S, c, a, l, e?: n, u, m, b, e, r;
-  maximumSc, a, l, e?: num, b, e, r;
+  maximumSc, a, l, e?: number;
   userScala, b, l, e?: bool, e, a, n}): str, i, n, g => {const {
     wi, d, t, h = "d, e, v, i, c, e-wi, d, t, h",
     initial, S, c, a, l, e = 1,
     maximum, S, c, a, l, e = 5,
-    userScala, b, l, e = t, r, u, e
+    userScala, b, l, e = true
   } = op, t, i, o, n, s;
   
   const, con, t, e, n, t = [

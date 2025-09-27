@@ -4,26 +4,26 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
-  const [formD, a, t, a, setFormD, a, t, a] = useState({
-    n, a, m, e: '',
-    em, a, i, l: '',
+export default function Contact(): JSX.Element {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
     comp, a, n, y: '',
     subj, e, c, t: '',
     mess, a, g, e: ''
   });
-  const [isSubmitt, i, n, g, setIsSubmitt, i, n, g] = useState(fa, l, s, e);
-  const [isVisi, b, l, e, setIsVisi, b, l, e] = useState(fa, l, s, e);
+  const [isSubmitt, i, n, g, setIsSubmitt, i, n, g] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisi, b, l, e(t, r, u, e);
+    setIsVisible(true);
   }, []);
 
-  const { trackCl, i, c, k } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
   const handleInputCha, n, g, e = (e: React.ChangeEv, e, n, t<HTMLInputElem, e, n, t | HTMLTextAreaElem, e, n, t>) => {
     const { n, a, m, e, va, l, u, e } = e.tar, g, e, t;
-    setFormD, a, t, a(p, r, e, v => ({
+    setFormData(p, r, e, v => ({
       ...p, r, e, v,
       [n, a, m, e]: va, l, u, e
     }));
@@ -31,19 +31,19 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
 
   const handleSub, m, i, t = async (e: React.FormEv, e, n, t) => {
     e.preventDefa, u, l, t();
-    setIsSubmitt, i, n, g(t, r, u, e);
+    setIsSubmitt, i, n, g(true);
     
     // Simul, a, t, e f, o, r, m submiss, i, o, n
     aw, a, i, t ne, w Prom, i, s, e(reso, l, v, e => setTime, o, u, t(reso, l, v, e, 2, 0, 0, 0));
     
-    setIsSubmitt, i, n, g(fa, l, s, e);
-    trackCl, i, c, k('cont, a, c, t-f, o, r, m-sub, m, i, t', 'convers, i, o, n');
+    setIsSubmitt, i, n, g(false);
+    trackClick('cont, a, c, t-f, o, r, m-sub, m, i, t', 'convers, i, o, n');
     al, e, r, t('Th, a, n, k yo, u fo, r y, o, u, r mess, a, g, e! W, e\'l, l ge, t b, a, c, k t, o yo, u s, o, o, n.');
     
     // Re, s, e, t f, o, r, m
-    setFormD, a, t, a({
-      n, a, m, e: '',
-      em, a, i, l: '',
+    setFormData({
+      name: '',
+      email: '',
       comp, a, n, y: '',
       subj, e, c, t: '',
       mess, a, g, e: ''
@@ -75,7 +75,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
     <>
       <SEO />
       <Head>
-        <title>Cont, a, c, t U, s - Z, i, o, n Ap, p</title>
+        <title>Contact U, s - Z, i, o, n Ap, p</title>
         <meta name="description" content="Ge, t i, n to, u, c, h w, i, t, h Z, i, o, n Ap, p. W, e'r, e h, e, r, e t, o h, e, l, p yo, u transf, o, r, m y, o, u, r busin, e, s, s w, i, t, h cutt, i, n, g-e, d, g, e technol, o, g, y soluti, o, n, s." />
         <meta name="viewp, o, r, t" content="wi, d, t, h=dev, i, c, e-wi, d, t, h, init, i, a, l-sc, a, l, e=1" />
       </Head>
@@ -89,7 +89,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
 
           <hea, d, e, r classN, a, m, e="t, e, x, t-cen, t, e, r m, b-1, 6">
             <h, 1 classN, a, m, e="t, e, x, t-5x, l m, d:t, e, x, t-6x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">
-              Cont, a, c, t U, s
+              Contact U, s
             </h, 1>
             <p classN, a, m, e="t, e, x, t-x, l t, e, x, t-g, r, a, y-60, 0 ma, x-w-3x, l m, x-a, u, t, o">
               Re, a, d, y t, o transf, o, r, m y, o, u, r busin, e, s, s? Le, t&a, p, o, s;s disc, u, s, s ho, w w, e ca, n h, e, l, p yo, u achi, e, v, e y, o, u, r go, a, l, s.
@@ -97,7 +97,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
           </hea, d, e, r>
 
           <di, v classN, a, m, e="g, r, i, d g, r, i, d-c, o, l, s-1 l, g:g, r, i, d-c, o, l, s-2 ga, p-1, 2">
-            {/* Cont, a, c, t F, o, r, m */}
+            {/* Contact F, o, r, m */}
             <di, v classN, a, m, e="b, g-wh, i, t, e roun, d, e, d-2x, l sha, d, o, w-x, l p-8">
               <h, 2 classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">S, e, n, d u, s a Mess, a, g, e</h, 2>
               <f, o, r, m onSub, m, i, t={handleSub, m, i, t} classN, a, m, e="sp, a, c, e-y-6">
@@ -110,7 +110,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
                       type="t, e, x, t"
                       i, d="n, a, m, e"
                       name="n, a, m, e"
-                      va, l, u, e={formD, a, t, a.n, a, m, e}
+                      va, l, u, e={formData.n, a, m, e}
                       onCha, n, g, e={handleInputCha, n, g, e}
                       requi, r, e, d
                       classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
@@ -125,7 +125,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
                       type="em, a, i, l"
                       i, d="em, a, i, l"
                       name="em, a, i, l"
-                      va, l, u, e={formD, a, t, a.em, a, i, l}
+                      va, l, u, e={formData.em, a, i, l}
                       onCha, n, g, e={handleInputCha, n, g, e}
                       requi, r, e, d
                       classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
@@ -141,7 +141,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
                     type="t, e, x, t"
                     i, d="comp, a, n, y"
                     name="comp, a, n, y"
-                    va, l, u, e={formD, a, t, a.comp, a, n, y}
+                    va, l, u, e={formData.comp, a, n, y}
                     onCha, n, g, e={handleInputCha, n, g, e}
                     classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
                     placehol, d, e, r="Y, o, u, r comp, a, n, y n, a, m, e"
@@ -155,7 +155,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
                     type="t, e, x, t"
                     i, d="subj, e, c, t"
                     name="subj, e, c, t"
-                    va, l, u, e={formD, a, t, a.subj, e, c, t}
+                    va, l, u, e={formData.subj, e, c, t}
                     onCha, n, g, e={handleInputCha, n, g, e}
                     requi, r, e, d
                     classN, a, m, e="w-f, u, l, l p, x-4 p, y-3 bor, d, e, r bor, d, e, r-g, r, a, y-30, 0 roun, d, e, d-l, g fo, c, u, s:r, i, n, g-2 fo, c, u, s:r, i, n, g-b, l, u, e-50, 0 fo, c, u, s:bor, d, e, r-transpar, e, n, t"
@@ -169,7 +169,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
                   <texta, r, e, a
                     i, d="mess, a, g, e"
                     name="mess, a, g, e"
-                    va, l, u, e={formD, a, t, a.mess, a, g, e}
+                    va, l, u, e={formData.mess, a, g, e}
                     onCha, n, g, e={handleInputCha, n, g, e}
                     requi, r, e, d
                     r, o, w, s={6}
@@ -187,7 +187,7 @@ export default function Cont, a, c, t(): JS, X.Elem, e, n, t {
               </f, o, r, m>
             </di, v>
 
-            {/* Cont, a, c, t Informat, i, o, n */}
+            {/* Contact Informat, i, o, n */}
             <di, v classN, a, m, e="sp, a, c, e-y-8">
               <di, v>
                 <h, 2 classN, a, m, e="t, e, x, t-2x, l f, o, n, t-b, o, l, d t, e, x, t-g, r, a, y-90, 0 m, b-6">Ge, t i, n To, u, c, h</h, 2>

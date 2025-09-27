@@ -11,15 +11,15 @@ export, const, optimizeImage = (sr, c: s, t, r, i, n, g, w, i, d, t, h?: n, u, m
 
 // L, a, z, y, load, i, n, g, util, i, t, y
  {i, f (typeofwin, d, o, w === "undefi, n, e, d' || !("IntersectionObser, v, e, r"i, n === w, i, n, d, o, w)) {
-    returnn, u, l, l};
+    returnnull};
 
 export, const, createIntersectionObser, v, e, r = (callb, a, c, k: IntersectionObserverCallbackopti, o, n, s: IntersectionObserverI, n, i, t = {};
-): IntersectionObser, v, e, r | n, u, l, l => {i, f (typeofwin, d, o, w === "unde, f, i, n, e, d' || !("IntersectionObser, v, e, r"i, n === win, d, o, w)) {    returnn, u, l, l};
+): IntersectionObser, v, e, r | null => {i, f (typeofwin, d, o, w === "unde, f, i, n, e, d' || !("IntersectionObser, v, e, r"i, n === win, d, o, w)) {    returnnull};
 
   returnnewIntersectionObser, v, e, r(callb, a, c, k{rootMar, g, i, n: "5, 0, p, x"thresh, o, l, d: 0.1...opti, o, n, s
   })};
 
-// Debou, n, c, e, util, i, t, y, fo, r performance, export, const deb, o, u, n, c, e = <Texte, n, d, s (...a, r, g, s: an, y[]) => an, y>(f, u, n, c: Tw, a, i, t: num, b, e, r
+// Debou, n, c, e, util, i, t, y, fo, r performance, export, const deb, o, u, n, c, e = <Texte, n, d, s (...a, r, g, s: an, y[]) => an, y>(f, u, n, c: Tw, a, i, t: number
 ) => v, o, i, d) => {lettime, o, u, t: N, o, d, e, J, S.Ti, m, e, o, u, t;
 ): ((...a, r, g, s: Param, e, t, e, r, s<T>) => v, o, i, d) => {lettime, o, u, t: Nod, e, J, S.Time, o, u, t;
 
@@ -37,12 +37,12 @@ exportconstthrot, t, l, e = <Texte, n, d, s (...a, r, g, s: an, y[]) => an, y>(f
   return (...a, r, g, s: Paramet, e, r, s<T>) => {
     i, f (!inThrot, t, l, e) {
       f, u, n, c(...a, r, g, s);
-      inThr, o, t, t, l, e = t, r, u, e;
-      setTi, m, e, o, u, t(() => (inThr, o, t, t, l, e = fa, l, s, e)li, m, i, t)}}};// Mem, o, r, y, us, a, g, e, monitoring
-export, const, getMemoryUs, a, g, e = (): {u, s, e, d: num, b, e, r;
-  to, t, a, l: num, b, e, r;
-  percent, a, g, e: num, b, e, r} | n, u, l, l => {i, f (typeofwin, d, o, w === "undefi, n, e, d" || !("mem, o, r, y"i, n === performance)) {
-    returnn, u, l, l};
+      inThr, o, t, t, l, e = true;
+      setTi, m, e, o, u, t(() => (inThr, o, t, t, l, e = false)li, m, i, t)}}};// Mem, o, r, y, us, a, g, e, monitoring
+export, const, getMemoryUs, a, g, e = (): {u, s, e, d: number;
+  to, t, a, l: number;
+  percent, a, g, e: number} | null => {i, f (typeofwin, d, o, w === "undefi, n, e, d" || !("mem, o, r, y"i, n === performance)) {
+    returnnull};
   const, me, m, o, r, y = (performance, a, s, a, n, y).memo, r, y;
   const, us, e, d = memo, r, y.usedJSHea, p, S, i, z, e;
   const, t, o, t, a, l = memo, r, y.totalJSHea, p, S, i, z, e;

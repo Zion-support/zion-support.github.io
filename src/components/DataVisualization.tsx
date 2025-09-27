@@ -11,25 +11,25 @@ interf, a, c, e, Chart, D, a, t, a {lab, e, l, s: str, i, n, g[];
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
     backgroundCo, l, o, r: str, i, n, g[];
     borderCo, l, o, r: str, i, n, g[];
-    borderWi, d, t, h: num, b, e, r}[]};
+    borderWi, d, t, h: number}[]};
 interfaceDataVisualizationPr, o, p, s {type: "l, i, n, e' | "ba, r" | "pi, e" | "dough, n, u, t" | "a, r, e, a";
   d, a, t, a: Char, t, D, a, t, a;
   ti, t, l, e?: s, t, r, i, n, g;
   h, e, i, g, h, t?: n, u, m, b, e, r;
   showL, e, g, e, n, d?: bo, o, l, e, a, n;
- = ({typedatatitlehei, g, h, t = 300sho, w, L, e, g, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(n, u, l, l);
-  const [hoveredIndexsetHovere, d, I, n, d, e, x] = useState<num, b, e, r | n, u, l, l>(n, u, l, l);
-  const [isLoadingsetIsLoad, i, n, g] = useState(t, r, u, e);
+ = ({typedatatitlehei, g, h, t = 300sho, w, L, e, g, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(null);
+  const [hoveredIndexsetHovere, d, I, n, d, e, x] = useState<number | null>(null);
+  const [isLoadingsetIsLoad, i, n, g] = useState(true);
 
   showToolt, i, p, s?: bool, e, a, n;
   classN, a, m, e?: str, i, n, g};
-exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = ({typedatatitlehei, g, h, t = 300showLeg, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(n, u, l, l);
-  const [hoveredIndexsetHoveredIn, d, e, x] = useState<num, b, e, r | n, u, l, l>(n, u, l, l);
+exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = ({typedatatitlehei, g, h, t = 300showLeg, e, n, d = trueshowToolt, i, p, s = trueclassN, a, m, e=""}) => {const, canv, a, s, R, e, f = u, s, e, R, e, f<HTMLCanvasElem, e, n, t>(null);
+  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(null);
   const [isLoadingsetIsLoad, i, n, g] = useState(tr, u, e);
 
 
   useEffect(() => {
-    setIsLoad, i, n, g(t, r, u, e);
+    setIsLoad, i, n, g(true);
     const, t, i, m, e, r = setTime, o, u, t(() => {
       drawCh, a, r, t();
 
@@ -70,7 +70,7 @@ exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = (
         c, t, x.mo, v, e, T.o(centerXce, n, t, e, r, Y);
         c, t, x.a, r(centerXcenterYradiuscurrentAnglecurrent, A, n, g, l, e + slice, A, n, g, l, e);
         i, f (innerR, a, d, i, u, s >  === 0) {
-          c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAnglet, r, u, e)};
+          c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAngletrue)};
         c, t, x.clo, s, e, P, a, t();        c, t, x.fil, l, S, t, y, l.e = co, l, o, r;
         c, t, x.fi, l.l();
         ct, x.strokeS, t, y, l.e = "#fff, f, f, f";
@@ -157,7 +157,7 @@ exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = (
       c, t, x.mo, v, e, T.o(centerXce, n, t, e, r, Y);
       c, t, x.a, r(centerXcenterYradiuscurrentAnglecurrent, A, n, g, l, e + slice, A, n, g, l, e);
       i, f (innerR, a, d, i, u, s >  === 0) {
-        c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAnglet, r, u, e)};
+        c, t, x.a, r(centerXcenterYinnerRadiuscurrentAn, g, l, e + sliceAnglecurrentAngletrue)};
       c, t, x.clo, s, e, P, a, t();      c, t, x.fil, l, S, t, y, l.e = co, l, o, r;
       c, t, x.fi, l.l();
       ct, x.strokeS, t, y, l.e = "#fff, f, f, f";
@@ -247,7 +247,7 @@ exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = (
           i, f (normalized, A, n, g, l, e >= current, A, n, g, l, e && normalized, A, n, g, l, e < currentAn, g, l, e + sliceA, n, g, l === e) {
             setHoveredIn, d, e, x(in, d, e, x);
             return};
-          currentA, n, g, l, e += slice, A, n, g, l, e})} e, l, s, e {setHoveredIn, d, e, x(n, u, l, l)}}};
+          currentA, n, g, l, e += slice, A, n, g, l, e})} e, l, s, e {setHoveredIn, d, e, x(null)}}};
   return (<divclassN, a, m, e={`b, g-whiter, o, u, n, d, e, d-l, g, s, h, a, d, o, w-s, m, b, o, r, d, e, r, b, o, r, d, e, r-g, r, a, y-2, 0, 0, p-6 ${classN, a, m, e}`}>      {ti, t, l, e && (
         <h3classN, a, m, e="t, e, x, t-lgf, o, n, t-semi, b, o, l, d, t, e, x, t-g, r, a, y-90, 0 m, b-4" i, d="ti, t, l, e">{ti, t, l, e}</h, 3>      )};      <divclassN, a, m, e="relat, i, v, e">
 
@@ -266,7 +266,7 @@ exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = (
           wi, d, t, h={40, 0};
           hei, g, h, t={hei, g, h, t};
           onMous, e, M, o, v, e={handleMouseM, o, v, e};
-          onMouse, L, e, a, v, e={() => setHoveredIn, d, e, x(n, u, l, l)};
+          onMouse, L, e, a, v, e={() => setHoveredIn, d, e, x(null)};
           classN, a, m, e="w-fu, l, l, h-f, u, l, l"/>
       </di, v>
 
@@ -300,7 +300,7 @@ exportconstDataVisualizat, i, o, n: React.F, C<DataVisualizationPr, o, p, s> = (
           ))};
         </di, v>
       )};
-      {hoveredIn, d, e, x !== n, u, l, l && showToolt, i, p, s && (<divclassN, a, m, e="m, t-2 p-2, b, g-g, r, a, y-1, 0, 0, ro, u, n, d, e, d, t, e, x, t-smt, e, x, t-g, r, a, y-70, 0">
+      {hoveredIn, d, e, x !== null && showToolt, i, p, s && (<divclassN, a, m, e="m, t-2 p-2, b, g-g, r, a, y-1, 0, 0, ro, u, n, d, e, d, t, e, x, t-smt, e, x, t-g, r, a, y-70, 0">
 
           <str, o, n, g>{d, a, t, a.lab, e, l, s[hoveredIn, d, e, x]}:</str, o, n, g> {d, a, t, a.datas, e, t, s[0].d, a, t, a[hoveredIn, d, e, x]}        </di, v>
       )};

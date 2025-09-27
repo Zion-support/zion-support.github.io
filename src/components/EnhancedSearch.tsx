@@ -22,16 +22,16 @@ interf, a, c, e, EnhancedSearchP, r, o, p, s {onS, e, a, r, c, h?: (qu, e, r, y:
   enableFi, l, t, e, r, s?: bo, o, l, e, a, n;
   enableSugges, t, i, o, n, s?: bo, o, l, e, a, n;
   enableHi, s, t, o, r, y?: bo, o, l, e, a, n;
-  maxRe, s, u, l, t, s?: num, b, e, r;
-  debounc, e, M, s?: num, b, e, r;
+  maxRe, s, u, l, t, s?: number;
+  debounc, e, M, s?: number;
   searchEndpo, i, n, t?: str, i, n, g}];
 
 ([]);
-  const [isOpensetIsO, p, e, n] = useState(fa, l, s, e);
+  const [isOpensetIsO, p, e, n] = useState(false);
 
-export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, e, r = "Sea, r, c, h..."enableFilt, e, r, s = trueenableSuggesti, o, n, s = trueenableHist, o, r, y = trueconst [querysetQu, e, r, y] = useState("");  const [resultssetResu, l, t, s] = useState<SearchRes, u, l, t[]>([]);  const [isOpensetIsO, p, e, n] = useState(fa, l, s, e);
+export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, e, r = "Sea, r, c, h..."enableFilt, e, r, s = trueenableSuggesti, o, n, s = trueenableHist, o, r, y = trueconst [querysetQu, e, r, y] = useState("");  const [resultssetResu, l, t, s] = useState<SearchRes, u, l, t[]>([]);  const [isOpensetIsO, p, e, n] = useState(false);
 
-  const [isLoadingsetIsLoad, i, n, g] = useState(fa, l, s, e);
+  const [isLoadingsetIsLoad, i, n, g] = useState(false);
 ({});
 
   const [selectedIndexsetSelectedIn, d, e, x] = useState(-1);  const [filterssetFilt, e, r, s] = useState<SearchFil, t, e, r>({});
@@ -41,7 +41,7 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
   const [sortBysetSor, t, B, y] = useState<"releva, n, c, e' | "d, a, t, e" | "ti, t, l, e">("releva, n, c, e");
   const [sortOrdersetSortOr, d, e, r] = useState<'as, c' | "d, e, s, c">("d, e, s, c");
 
-  constinput, R, e, f = use, R, e, f<HTMLInputElem, e, n, t>(n, u, l, l);
+  constinput, R, e, f = use, R, e, f<HTMLInputElem, e, n, t>(null);
   constsearchTimeout, R, e, f = use, R, e, f<Nod, e, J, S.Time, o, u, t>();
 
   // Loadsearchhist, o, r, y fromlocalStorageuseEffect(() => {i, f (enableHis, t, o, r, y && typ, e, o, f === win, d, o, w !== "undefi, n, e, d") {
@@ -67,7 +67,7 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
 
   // Deboun, c, e, d, sea, r, c, h, function constperformSea, r, c, h = useCallb, a, c, k(async (searchQu, e, r, y : s, t, r, i, n, g) => {i, f (!search, Q, u, e, r, y.t, r, i, m()) {;
       setResu, l, t, s([]);      return};
-    setIsLoad, i, n, g(t, r, u, e);
+    setIsLoad, i, n, g(true);
 
  setTime, o, u, t(reso, l, v, e, 5, 0, 0));
 
@@ -111,7 +111,7 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
 
           localStor, a, g, e.setI, t, e, m("searchHi, s, t, o, r, y", J, S, O, N.stri, n, g, i, f, y(newHist, o, r, y));
           returnnewHist, o, r, y })}} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("S, e, a, r, c, h : er, r, o, r :"er, r, o, r);
-      setResu, l, t, s([]) } fi, n, a, l, l, y {setIsLoad, i, n, g(fa, l, s, e) }}[filt, e, r, s, sor, t, B, y, sortOr, d, e, r  maxResu, l, t, s, onSea, r, c, h, enableHist, o, r, y]);
+      setResu, l, t, s([]) } fi, n, a, l, l, y {setIsLoad, i, n, g(false) }}[filt, e, r, s, sor, t, B, y, sortOr, d, e, r  maxResu, l, t, s, onSea, r, c, h, enableHist, o, r, y]);
   // Han, d, l, e, in, p, u, t, cha, n, g, e w, i, t, h, debounc, i, n, g, const handleInputC, h, a, n, g, e = useCal, l, b, a, c, k((va, l, u, e: s, t, r, i, n, g) => {;
     set, Q, u, e, r, y(va, l, u, e);
     setSelected, I, n, d, e, x(-1);
@@ -139,13 +139,13 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
         i, f (selected, I, n, d, e, x >= 0 && resu, l, t, s[selectedIn, d, e, x]) {
           handleResultCl, i, c, k(resu, l, t, s[selectedIn, d, e, x]) } e, l, s, e, i, f (qu, e, r, y.t, r, i, m()) {performSea, r, c, h(qu, e, r, y) };        br, e, a, k;
       c, a, s, e "E, s, c, a, p, e":
-        setIsO, p, e, n(fa, l, s, e);
+        setIsO, p, e, n(false);
         setQu, e, r, y("");
         setResu, l, t, s([]);
         br, e, a, k};
   // Han, d, l, e, res, u, l, t, cl, i, c, k
   const, handleResultC, l, i, c, k = useCal, l, b, a, c, k((res, u, l, t: SearchR, e, s, u, l, t) => {;
-    onResultCl, i, c, k? .(res, u, l, t);    setIsO, p, e, n(fa, l, s, e);
+    onResultCl, i, c, k? .(res, u, l, t);    setIsO, p, e, n(false);
     setQu, e, r, y("");
     setResu, l, t, s([]) }, [onResultCl, i, c, k]);
 
@@ -168,7 +168,7 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
         <input, r, e, f ={input, R, e, f}          type=t, e, x, t""
           va, l, u, e={qu, e, r, y};
           onC, h, a, n, g, e={(e) => handleInputC, h, a, n, g, e(e.tar, g, e, t.va, l, u, e)};
-          on, F, o, c, u, s={() => setIsO, p, e, n(t, r, u, e)};
+          on, F, o, c, u, s={() => setIsO, p, e, n(true)};
           onKeyD, o, w, n={handleKeyD, o, w, n};        />
         {qu, e, r, y && (<buttononCl, i, c, k={(()) => {;
               setQu, e, r, y("");
@@ -176,7 +176,7 @@ export default function EnhancedSea, r, c, h({onSearchonResultClickplacehol, d, 
             <XclassN, a, m, e="h-5 w-5 t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-60, 0" />
           </but, t, o, n>
 
-              setIsO, p, e, n(fa, l, s, e)}}            classN, a, m, e = absolutein, s, e, t-y-0ri, g, h, t-0p, r-3flexit, e, m, s-cen, t, e, r""
+              setIsO, p, e, n(false)}}            classN, a, m, e = absolutein, s, e, t-y-0ri, g, h, t-0p, r-3flexit, e, m, s-cen, t, e, r""
           >            <XclassN, a, m, e="h-5 w-5 t, e, x, t-g, r, a, y-40, 0 ho, v, e, r:t, e, x, t-g, r, a, y-60, 0" />          </but, t, o, n>
 
         )};      </di, v>

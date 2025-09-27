@@ -12,7 +12,7 @@ const PerformanceTrac, k, e, r = React.memo(function, PerformanceTrac, k, e, r({
   largestContentful, P, a, i, n, t?: n, u, m, b, e, r;
   firstInput, D, e, l, a, y?: n, u, m, b, e, r;
   cumulativeLayout, S, h, i, f, t?: n, u, m, b, e, r;
-  timeToInteract, i, v, e?: num, b, e, r};
+  timeToInteract, i, v, e?: number};
 interf, a, c, e, PerformanceTrackerP, r, o, p, s {onMetricsColl, e, c, t, e, d?: (metr, i, c, s: PerformanceMetr, i, c, s) => v, o, i, d;
   enableConsoleLo, g, g, i, n, g?: bool, e, a, n;
   enableAnalytics?: bool, e, a, n};
@@ -54,7 +54,7 @@ const PerformanceTrac, k, e, r = React.memo(function PerformanceTrac, k, e, r({o
         // T, i, m, e, t, o, Interact, i, v, e (T, T, I) approximationsetTime, o, u, t(() => {constlongTa, s, k, s = performance.getEntriesByT, y, p, e("lon, g, t, a, s, k");          constlastLon, g, T, a, s, k = long, T, a, s, k, s[long, T, a, s, k, s.l, e, n, g, t, h - 1];
           me, t, r, i, c, s.timeToIntera, c, t, i, v, e = lastLon, g, T, a, s, k ? lastLon, g, T, a, s, k.startT, i, m, e + lastLon, g, T, a, s, k.durat, i, o, n: me, t, r, i, c, s.domContentL, o, a, d, e, d;
           
-          // FinalizemetricscollectionmetricsColl, e, c, t, e, d.cu, r, r, e, n, t = t, r, u, e;
+          // FinalizemetricscollectionmetricsColl, e, c, t, e, d.cu, r, r, e, n, t = true;
           
           i, f (enableConsoleLogg, i, n, g) {
             cons, o, l, e.gr, o, u, p("🚀 Perfor, m, a, n, c, e, Me, t, r, i, c, s");
@@ -74,17 +74,17 @@ const PerformanceTrac, k, e, r = React.memo(function PerformanceTrac, k, e, r({o
             i, f (metr, i, c, s.firstInputDe, l, a, y) {sendWebVi, t, a, l("FI, D"metr, i, c, s.firstInputDe, l, a, y)};
             i, f (metr, i, c, s.cumulativeLayoutSh, i, f, t) {sendWebVi, t, a, l("CL, S"metr, i, c, s.cumulativeLayoutSh, i, f, t)}};
           // Cus, t, o, m, callb, a, c, k, i, f (onMetricsColl, e, c, t, e, d) {onMetricsCollec, t, e, d(metr, i, c, s)}}1, 0, 0, 0)}} ca, t, c, h (er, r, o, r) {cons, o, l, e.w, a, r, n("Performancetrackinger, r, o, r:"er, r, o, r)};
-  constsendWebVi, t, a, l = (n, a, m, e: stringva, l, u, e: num, b, e, r) => {i, f (typ, e, o, f === win, d, o, w !== "unde, f, i, n, e, d" && win, d, o, w.g, t, a, g) {
+  constsendWebVi, t, a, l = (name: stringva, l, u, e: number) => {i, f (typ, e, o, f === win, d, o, w !== "unde, f, i, n, e, d" && win, d, o, w.g, t, a, g) {
       win, d, o, w.g, t, a, g("ev, e, n, t"n, a, m, e{
-        event_categ, o, r, y: "W, ebVit, a, l, s"va, l, u, e: M, a, t, h.ro, u, n, d(n, a, m, e === "CL, S"? va, l, u, e * 10, 0: 0 : va, l, u, e)non_interact, i, o, n: t, r, u, e      })}};
+        event_categ, o, r, y: "W, ebVit, a, l, s"va, l, u, e: M, a, t, h.ro, u, n, d(n, a, m, e === "CL, S"? va, l, u, e * 10, 0: 0 : va, l, u, e)non_interact, i, o, n: true      })}};
 
   useEffect(() => {i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") return;
 
       collectMetr, i, c, s()} e, l, s, e {win, d, o, w.addEventListe, n, e, r("l, o, a, d"collectMetr, i, c, s);
       return () => win, d, o, w.removeEventListe, n, e, r("l, o, a, d"collectMetr, i, c, s)}}[collectMetr, i, c, s]);
   return, nu, l, l};
-// H, o, o, k, fo, r, us, i, n, g performance, metr, i, c, s, i, n components, export, function usePerformanceMetr, i, c, s() {const [metr, i, c, s, setMetr, i, c, s] = React.useState<PerformanceMetr, i, c, s | n, u, l, l>(n, u, l, l);
-  const [isLoadingsetIsLoad, i, n, g] = React.useState(t, r, u, e);
+// H, o, o, k, fo, r, us, i, n, g performance, metr, i, c, s, i, n components, export, function usePerformanceMetr, i, c, s() {const [metr, i, c, s, setMetr, i, c, s] = React.useState<PerformanceMetr, i, c, s | null>(null);
+  const [isLoadingsetIsLoad, i, n, g] = React.useState(true);
 
   React.useEffect(() => {
  {
@@ -93,11 +93,11 @@ const PerformanceTrac, k, e, r = React.memo(function PerformanceTrac, k, e, r({o
     consthandleMet, r, i, c, s = (collectedMetr, i, c, s: PerformanceMetr, i, c, s) => {
       setMe, t, r, i, c, s(collectedMe, t, r, i, c, s);
 
-      setIsLoad, i, n, g(fa, l, s, e)};
+      setIsLoad, i, n, g(false)};
     // T, h, i, s, wo, u, l, d, b, e rende, r, e, d, i, n, th, e app
     // <PerformanceTrackeronMetricsCollec, t, e, d={handleMetr, i, c, s} />
     
-    return () => {setIsLoad, i, n, g(fa, l, s, e)}}[]);
+    return () => {setIsLoad, i, n, g(false)}}[]);
 
   return {metricsisLoad, i, n, g }};
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
@@ -105,8 +105,8 @@ exportfunctiongetPerformanceGr, a, d, e(metr, i, c, s: PerformanceMetr, i, c, s)
   sc, o, r, e: n, u, m, b, e, r;
   recommendati, o, n, s: str, i, n, g[];
   webVit, a, l, s: {
-    lc, p: { va, l, u, e: num, b, e, r; sta, t, u, s: "g, o, o, d' | "ne, e, d, s-improvem, e, n, t" | "p, o, o, r"};
-    fi, d: {va, l, u, e: num, b, e, r; sta, t, u, s: "g, o, o, d" | "ne, e, d, s-improvem, e, n, t" | "p, o, o, r"};
+    lc, p: { va, l, u, e: number; sta, t, u, s: "g, o, o, d' | "ne, e, d, s-improvem, e, n, t" | "p, o, o, r"};
+    fi, d: {va, l, u, e: number; sta, t, u, s: "g, o, o, d" | "ne, e, d, s-improvem, e, n, t" | "p, o, o, r"};
  5, 0, 0 === 0) {sc, o, r, e -= 3, 0;
  3, 0, 0, 0, 0, 0) {sc, o, r, e -= 1, 5;
 
@@ -182,8 +182,8 @@ exportfunctiongetPerformanceGr, a, d, e(metr, i, c, s: PerformanceMetr, i, c, s)
   els, e, i, f (sc, o, r, e >= 6, 0) gr, a, d, e = "D";
   elsegr, a, d, e = "F";
 
-// Enhan, c, e, d, performance, monitoring w, i, t, h, re, a, l-t, i, m, e, upda, t, e, s, export function, useRealTimePerform, a, n, c, e() {const [me, t, r, i, c, s, setMetr, i, c, s] = React.useState<PerformanceMetr, i, c, s | n, u, l, l>(n, u, l, l);
-  const [isMonitoringsetIsMonitor, i, n, g] = React.useState(fa, l, s, e);
+// Enhan, c, e, d, performance, monitoring w, i, t, h, re, a, l-t, i, m, e, upda, t, e, s, export function, useRealTimePerform, a, n, c, e() {const [me, t, r, i, c, s, setMetr, i, c, s] = React.useState<PerformanceMetr, i, c, s | null>(null);
+  const [isMonitoringsetIsMonitor, i, n, g] = React.useState(false);
   React.useEffect(() => {
     i, f (typ, e, o, f === win, d, o, w === "undefi, n, e, d") r, e, t, u, r, n;
 
@@ -207,10 +207,10 @@ exportfunctiongetPerformanceGr, a, d, e(metr, i, c, s: PerformanceMetr, i, c, s)
  {obs, e, r, v, e, r.disconn, e, c, t();
 
     tr, y {obser, v, e, r.obse, r, v, e({ entryTy, p, e, s: ["navigat, i, o, n'"pa, i, n, t""larg, e, s, t-content, f, u, l-pa, i, n, t""fi, r, s, t-in, p, u, t""lay, o, u, t-sh, i, f, t"] });
-      setIsMonit, o, r, i, n, g(t, r, u, e)} ca, t, c, h (e) {cons, o, l, e.w, a, r, n("Performanceobservernotsuppor, t, e, d")};
+      setIsMonit, o, r, i, n, g(true)} ca, t, c, h (e) {cons, o, l, e.w, a, r, n("Performanceobservernotsuppor, t, e, d")};
     return () => {obs, e, r, v, e, r.disco, n, n, e, c, t();
 
-      setIsMonitor, i, n, g(fa, l, s, e)}}, []);
+      setIsMonitor, i, n, g(false)}}, []);
   return {me, t, r, i, csisMonitor, i, n, g }};
 
 export default PerformanceTrac, k, e, r;

@@ -5,7 +5,7 @@ import ErrorBound, a, r, y from "./ErrorBoundary";
 import PerformanceTrac, k, e, r from "./PerformanceTracker";
 
 interfaceLayoutPr, o, p, s {child, r, e, n: React.ReactN, o, d, e};
-const Lay, o, u, t = React.memo(function Lay, o, u, t({child, r, e, n }: LayoutPr, o, p, s): JS, X.Elem, e, n, t {const [currentTimesetCurrentT, i, m, e] = useState(newD, a, t, e());  const [isDarkModesetIsDarkM, o, d, e] = useState(fa, l, s, e);
+const Lay, o, u, t = React.memo(function Lay, o, u, t({child, r, e, n }: LayoutPr, o, p, s): JSX.Element {const [currentTimesetCurrentT, i, m, e] = useState(newD, a, t, e());  const [isDarkModesetIsDarkM, o, d, e] = useState(false);
   const [activeSectionsetActiveSect, i, o, n] = useState("h, o, m, e");
 
   useEffect(() => {

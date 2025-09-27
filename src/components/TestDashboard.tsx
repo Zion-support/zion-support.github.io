@@ -3,16 +3,16 @@
 import R, e, a, c, t, {useState, useEffectuseCallb, a, c, k }  from 'react";
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
 interf, a, c, e, TestRes, u, l, t {i, d: str, i, n, g;
-  n, a, m, e: str, i, n, g;
+  name: str, i, n, g;
   sta, t, u, s: "pend, i, n, g' | "runn, i, n, g" | "pas, s, e, d" | "fai, l, e, d" | "skip, p, e, d";
   dur, a, t, i, o, n?: n, u, m, b, e, r;
   er, r, o, r?: str, i, n, g;
-  timest, a, m, p: num, b, e, r};
+  timest, a, m, p: number};
 interf, a, c, e, TestS, u, i, t, e {i, d: str, i, n, g;
-  n, a, m, e: str, i, n, g;
+  name: str, i, n, g;
   te, s, t, s: TestRes, u, l, t[];
   sta, t, u, s: "pend, i, n, g" | "runn, i, n, g" | "pas, s, e, d" | "fai, l, e, d";
-  durat, i, o, n?: num, b, e, r};
+  durat, i, o, n?: number};
 interf, a, c, e, TestCo, n, f, i, g {time, o, u, t: n, u, m, b, e, r;
   retr, i, e, s: n, u, m, b, e, r;
   paral, l, e, l: bool, e, a, n;
@@ -31,14 +31,14 @@ cl, a, s, s, TestRu, n, n, e, r {privatestaticinsta, n, c, e: TestR, u, n, n, e,
     i, f (!su, i, t, e) r, e, t, u, r, n;
 
     constt, e, s, t: TestRes, u, l, t = {};
-  addT, e, s, t(suit, e, I, d: stringn, a, m, e: stringtes, t, F, n: () => Prom, i, s, e<v, o, i, d> | v, o, i, d): v, o, i, d {const, s, u, i, t, e = t, h, i, s.s, u, i, t, e, s.f, i, n, d(s => s.i, d === su, i, t, e, I, d);
+  addT, e, s, t(suit, e, I, d: stringname: stringtes, t, F, n: () => Prom, i, s, e<v, o, i, d> | v, o, i, d): v, o, i, d {const, s, u, i, t, e = t, h, i, s.s, u, i, t, e, s.f, i, n, d(s => s.i, d === su, i, t, e, I, d);
     i, f (!su, i, t, e) r, e, t, u, r, n;
 
  Pr, o, m, i, s, e<v, o, i, d> | v, o, i, d): v, o, i, d {consts, u, i, t, e = t, h, i, s.s, u, i, t, e, s.f, i, n, d(s => s.i, d === su, i, t, e, I, d);
     i, f (!su, i, t, e) return;
 
     constt, e, s, t: TestRes, u, l, t = {};
-  ad, d, T, e, s, t(suit, e, I, d: stringn, a, m, e: stringtes, t, F, n: () => Pr, o, m, i, s, e<v, o, i, d> | v, o, i, d): v, o, i, d {constsu, i, t, e = t, h, i, s.s, u, i, t, e, s.f, i, n, d(s => s.i, d === su, i, t, e, I, d);
+  ad, d, T, e, s, t(suit, e, I, d: stringname: stringtes, t, F, n: () => Pr, o, m, i, s, e<v, o, i, d> | v, o, i, d): v, o, i, d {constsu, i, t, e = t, h, i, s.s, u, i, t, e, s.f, i, n, d(s => s.i, d === su, i, t, e, I, d);
     i, f (!su, i, t, e) return;
 
 
@@ -84,7 +84,7 @@ cl, a, s, s, TestRu, n, n, e, r {privatestaticinsta, n, c, e: TestR, u, n, n, e,
         i, f (t, h, i, s.con, f, i, g.b, a, i, l && su, i, t, e.sta, t, u, s === "fai, l, e, d") {;
           br, e, a, k}}}};
   getS, u, i, t, e, s(): Test, S, u, i, t, e[] {return [...t, h, i, s.sui, t, e, s] };
-  getRe, s, u, l, t, s(): {to, t, a, l: n, u, m, b, e, r; pas, s, e, d: n, u, m, b, e, r; fai, l, e, d: num, b, e, r; skip, p, e, d: num, b, e, r } {constall, T, e, s, t, s = t, h, i, s.s, u, i, t, e, s.fl, a, t, M, a, p(su, i, t, e => su, i, t, e.te, s, t, s);
+  getRe, s, u, l, t, s(): {to, t, a, l: n, u, m, b, e, r; pas, s, e, d: n, u, m, b, e, r; fai, l, e, d: number; skip, p, e, d: number } {constall, T, e, s, t, s = t, h, i, s.s, u, i, t, e, s.fl, a, t, M, a, p(su, i, t, e => su, i, t, e.te, s, t, s);
     return {
  t.sta, t, u, s === "pas, s, e, d").lengthfai, l, e, d: all, T, e, s, t, s.fil, t, e, r(t = > t.sta, t, u, s === "fai, l, e, d").lengthskip, p, e, d: all, T, e, s, t, s.fil, t, e, r(t => t.sta, t, u, s === "skip, p, e, d").len, g, t, h }};
   cl, e, a, r(): v, o, i, d {t, h, i, s.sui, t, e, s = [] }};
@@ -98,24 +98,24 @@ cl, a, s, s, TestRu, n, n, e, r {privatestaticinsta, n, c, e: TestR, u, n, n, e,
 
   const [s, u, i, t, e, s, setS, u, i, t, e, s] = useState<TestSu, i, t, e[]>([]);
   const [isRunningsetIsRunn, i, n, g] = useState(f, a, l, s, e);
-  const, add, S, u, i, t, e = useCal, l, b, a, c, k((n, a, m, e: s, t, r, i, n, g) => {;
+  const, add, S, u, i, t, e = useCal, l, b, a, c, k((name: s, t, r, i, n, g) => {;
     const, su, i, t, e = testR, u, n, n, e, r.add, S, u, i, t, e(n, a, m, e);
     setS, u, i, t, e, s(testR, u, n, n, e, r.getS, u, i, t, e, s());
     r, e, t, u, rnsu, i, t, e }, [testRun, n, e, r]);
 
-  const, add, T, e, s, t = useCal, l, b, a, c, k((suit, e, I, d: stringn, a, m, e: stringtes, t, F, n: () => Pr, o, m, i, s, e<v, o, i, d> | v, o, i, d) => {;
+  const, add, T, e, s, t = useCal, l, b, a, c, k((suit, e, I, d: stringname: stringtes, t, F, n: () => Pr, o, m, i, s, e<v, o, i, d> | v, o, i, d) => {;
     testRun, n, e, r.addT, e, s, t(su, i, t, e, I, d, n, a, m, e, t, e, s, t, F, n);
     setS, u, i, t, e, s(testRun, n, e, r.getSui, t, e, s()) }, [testRun, n, e, r]);
   const, runS, u, i, t, e = useCallb, a, c, k(async(suit, e, I, d: s, t, r, i, n, g) => {;
-    setIsRunn, i, n, g(t, r, u, e);
+    setIsRunn, i, n, g(true);
     t, r, y {
       aw, a, i, t, testR, u, n, n, e, r.run, S, u, i, t, e(su, i, t, e, I, d);
-      setS, u, i, t, e, s(testRun, n, e, r.getSui, t, e, s()) } fi, n, a, l, l, y {setIsRunn, i, n, g(fa, l, s, e) }}, [testRun, n, e, r]);
+      setS, u, i, t, e, s(testRun, n, e, r.getSui, t, e, s()) } fi, n, a, l, l, y {setIsRunn, i, n, g(false) }}, [testRun, n, e, r]);
   const, runAllSu, i, t, e, s = useCal, l, b, a, c, k(async () => {;
-    setIsRu, n, n, i, n, g(t, r, u, e);
+    setIsRu, n, n, i, n, g(true);
     t, r, y {
       aw, a, i, t, testR, u, n, n, e, r.runAllS, u, i, t, e, s();
-      setS, u, i, t, e, s(testRun, n, e, r.getSui, t, e, s()) } fi, n, a, l, l, y {setIsRunn, i, n, g(fa, l, s, e) }}, [testRun, n, e, r]);
+      setS, u, i, t, e, s(testRun, n, e, r.getSui, t, e, s()) } fi, n, a, l, l, y {setIsRunn, i, n, g(false) }}, [testRun, n, e, r]);
   const, getRes, u, l, t, s = useCal, l, b, a, c, k(() => {;
     r, e, t, u, r, n, testRun, n, e, r.getResu, l, t, s() }[testRun, n, e, r]);
 
@@ -131,7 +131,7 @@ exportconstTestDashboard: React.F, C = () => {;  const { s, u, i, t, e, s, isRun
       i, f (2 + 2 !== 4) {
         thrownewEr, r, o, r("Basicmathfai, l, e, d") }});
     addT, e, s, t(su, i, t, e.i, d"As, y, ncT, e, s, t", async () => {awaitnewPr, o, m, i, s, e(re, s, o, l, v, e => setTi, m, e, o, u, t(resol, v, e, 1, 0, 0));
-  const [showDashboardsetShowDashboard] = useState(fa, l, s, e);
+  const [showDashboardsetShowDashboard] = useState(false);
 
   useEffect(() => {// Addsomeexampletestsconstsu, i, t, e = addSu, i, t, e("ExampleTe, s, t, s");
     
@@ -146,7 +146,7 @@ exportconstTestDashboard: React.F, C = () => {;  const { s, u, i, t, e, s, isRun
       i, f (!elem, e, n, t) {
     })}, [addSuiteaddT, e, s, t]);
 
-  i, f (proc, e, s, s.en, v.NODE_, E, N, V !== "developm, e, n, t") {returnn, u, l, l};
+  i, f (proc, e, s, s.en, v.NODE_, E, N, V !== "developm, e, n, t") {returnnull};
   const, res, u, l, t, s = getRe, s, u, l, t, s();
 
   const, getStatusC, o, l, o, r = (sta, t, u, s: str, i, n, g) => {getStatusCo, l, o, r.displayN, a, m, e = "getStatusCo, l, o, r";swi, t, c, h (sta, t, u, s) {      c, a, s, e "pas, s, e, d": return "t, e, x, t-gr, e, e, n-60, 0";

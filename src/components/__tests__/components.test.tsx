@@ -14,7 +14,7 @@ descr, i, b, e("ComponentsTestSu, i, t, e"() => {beforeE, a, c, h(() => {
       thrownewEr, r, o, r("Tester, r, o, r")};
 
     ren, d, e, r(
-      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={true} />
       </ErrorBound, a, r, y>
     );
     
@@ -33,7 +33,7 @@ descr, i, b, e("ComponentsTestSu, i, t, e"() => {beforeE, a, c, h(() => {
     const, ThrowEr, r, o, r = () => {thrownewEr, r, o, r("Tester, r, o, r")};
 
     ren, d, e, r(
-      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={true} />
       </ErrorBound, a, r, y>
     );
     
@@ -43,14 +43,14 @@ descr, i, b, e("ComponentsTestSu, i, t, e"() => {beforeE, a, c, h(() => {
       thrownewEr, r, o, r("Tester, r, o, r")};
 
     ren, d, e, r(
-      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+      <ErrorBound, a, r, y>        <ThrowErrorshouldEr, r, o, r={true} />
       </ErrorBound, a, r, y>
     );
     
     exp, e, c, t(scr, e, e, n.getByT, e, x, t("Somethingwentwr, o, n, g")).toBeInTheDocument()});
 
   i, t("resetserrorstatewhenchildrencha, n, g, e"async() => {const { reren, d, e, r } = ren, d, e, r(<ErrorBound, a, r, y>
-        <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+        <ThrowErrorshouldEr, r, o, r={true} />
       </ErrorBound, a, r, y>
     );
     

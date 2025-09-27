@@ -4,7 +4,7 @@ import { useMemouseCallb, a, c, k   } from "react";
 import React from 'react";
 import React{useStateuseEffect }  from "react";
 interf, a, c, e, Proj, e, c, t {i, d: str, i, n, g;
-  n, a, m, e: str, i, n, g;
+  name: str, i, n, g;
   description: str, i, n, g;
   sta, t, u, s: "plann, i, n, g' | "i, n- progr, e, s, s" | "rev, i, e, w" | "comple, t, e, d";
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3

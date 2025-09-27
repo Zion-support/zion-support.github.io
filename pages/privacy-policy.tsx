@@ -4,19 +4,19 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function PrivacyPol, i, c, y(): JS, X.Elem, e, n, t {
-  const [isVisi, b, l, e, setIsVisi, b, l, e] = useState(fa, l, s, e);
+export default function PrivacyPol, i, c, y(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisi, b, l, e(t, r, u, e);
+    setIsVisible(true);
   }, []);
 
-  const { trackCl, i, c, k } = useAnalytics();
+  const { trackClick } = useAnalytics();
 
   const secti, o, n, s = [
     {
       ti, t, l, e: 'Informat, i, o, n W, e Coll, e, c, t',
-      cont, e, n, t: 'W, e coll, e, c, t informat, i, o, n yo, u prov, i, d, e direc, t, l, y t, o u, s, s, u, c, h a, s w, h, e, n yo, u cre, a, t, e a, n acco, u, n, t, cont, a, c, t u, s, o, r us, e ou, r servi, c, e, s. T, h, i, s ma, y incl, u, d, e y, o, u, r n, a, m, e, em, a, i, l addr, e, s, s, ph, o, n, e num, b, e, r, comp, a, n, y informat, i, o, n, an, d an, y ot, h, e, r informat, i, o, n yo, u cho, o, s, e t, o prov, i, d, e.'
+      cont, e, n, t: 'W, e coll, e, c, t informat, i, o, n yo, u prov, i, d, e direc, t, l, y t, o u, s, s, u, c, h a, s w, h, e, n yo, u cre, a, t, e a, n acco, u, n, t, cont, a, c, t u, s, o, r us, e ou, r servi, c, e, s. T, h, i, s ma, y incl, u, d, e y, o, u, r n, a, m, e, em, a, i, l addr, e, s, s, ph, o, n, e number, comp, a, n, y informat, i, o, n, an, d an, y ot, h, e, r informat, i, o, n yo, u cho, o, s, e t, o prov, i, d, e.'
     },
     {
       ti, t, l, e: 'Ho, w W, e Us, e Y, o, u, r Informat, i, o, n',
@@ -39,7 +39,7 @@ export default function PrivacyPol, i, c, y(): JS, X.Elem, e, n, t {
       cont, e, n, t: 'W, e ma, y upd, a, t, e t, h, i, s Priv, a, c, y Pol, i, c, y from t, i, m, e t, o t, i, m, e. W, e w, i, l, l not, i, f, y yo, u o, f an, y chan, g, e, s b, y post, i, n, g th, e ne, w Priv, a, c, y Pol, i, c, y o, n t, h, i, s p, a, g, e an, d updat, i, n, g th, e "L, a, s, t Upda, t, e, d" d, a, t, e. W, e encour, a, g, e yo, u t, o rev, i, e, w t, h, i, s Priv, a, c, y Pol, i, c, y periodica, l, l, y fo, r an, y chan, g, e, s.'
     },
     {
-      ti, t, l, e: 'Cont, a, c, t U, s',
+      ti, t, l, e: 'Contact U, s',
       cont, e, n, t: 'I, f yo, u h, a, v, e an, y questi, o, n, s ab, o, u, t t, h, i, s Priv, a, c, y Pol, i, c, y, ple, a, s, e cont, a, c, t u, s a, t priv, a, c, y@zion, a, p, p.co, m.'
     }
   ];
@@ -86,9 +86,9 @@ export default function PrivacyPol, i, c, y(): JS, X.Elem, e, n, t {
           <sect, i, o, n classN, a, m, e="m, t-1, 6 t, e, x, t-cen, t, e, r">
             <di, v classN, a, m, e="b, g-b, l, u, e-60, 0 roun, d, e, d-2x, l p-8 t, e, x, t-wh, i, t, e">
               <h, 2 classN, a, m, e="t, e, x, t-3x, l f, o, n, t-b, o, l, d m, b-4">Questi, o, n, s About Y, o, u, r Priv, a, c, y?</h, 2>
-              <p classN, a, m, e="t, e, x, t-x, l m, b-6">Cont, a, c, t ou, r priv, a, c, y t, e, a, m fo, r an, y conce, r, n, s o, r inquir, i, e, s.</p>
+              <p classN, a, m, e="t, e, x, t-x, l m, b-6">Contact ou, r priv, a, c, y t, e, a, m fo, r an, y conce, r, n, s o, r inquir, i, e, s.</p>
               <Link href="/cont, a, c, t" classN, a, m, e="b, g-wh, i, t, e t, e, x, t-b, l, u, e-60, 0 p, x-8 p, y-3 roun, d, e, d-l, g f, o, n, t-semib, o, l, d ho, v, e, r:b, g-g, r, a, y-10, 0 transit, i, o, n-col, o, r, s">
-                Cont, a, c, t U, s
+                Contact U, s
               </Link>
             </di, v>
           </sect, i, o, n>

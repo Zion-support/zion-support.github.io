@@ -10,25 +10,25 @@ interf, a, c, e, SEOMet, r, i, c, s {overallSc, o, r, e: n, u, m, b, e, r;
   metaDescript, i, o, n: bo, o, l, e, a, n;
   headi, n, g, s: {
     h1Co, u, n, t: n, u, m, b, e, r;
-    h2Co, u, n, t: num, b, e, r;
-    h3Co, u, n, t: num, b, e, r};  ima, g, e, s: {to, t, a, l: n, u, m, b, e, r;
-    with, A, l, t: num, b, e, r;
-    missing, A, l, t: num, b, e, r};
+    h2Co, u, n, t: number;
+    h3Co, u, n, t: number};  ima, g, e, s: {to, t, a, l: n, u, m, b, e, r;
+    with, A, l, t: number;
+    missing, A, l, t: number};
   li, n, k, s: {inter, n, a, l: n, u, m, b, e, r;
-    exter, n, a, l: num, b, e, r;
-    bro, k, e, n: num, b, e, r};
+    exter, n, a, l: number;
+    bro, k, e, n: number};
   pageSp, e, e, d: n, u, m, b, e, r;
   mobileOptimi, z, e, d: bo, o, l, e, a, n};
 interf, a, c, e, AccessibilityMet, r, i, c, s {overallSc, o, r, e: n, u, m, b, e, r;
   contr, a, s, t: {
-    pas, s, e, d: num, b, e, r;
-    fai, l, e, d: num, b, e, r};
+    pas, s, e, d: number;
+    fai, l, e, d: number};
   keyboardNavigat, i, o, n: bo, o, l, e, a, n;
   screenReaderFrien, d, l, y: bo, o, l, e, a, n;
   focusIndicat, o, r, s: bo, o, l, e, a, n;
   semanticH, T, M, L: bool, e, a, n;
-  ariaLab, e, l, s: {pres, e, n, t: num, b, e, r;
-    miss, i, n, g: num, b, e, r}};
+  ariaLab, e, l, s: {pres, e, n, t: number;
+    miss, i, n, g: number}};
 interfaceOptimizationIs, s, u, e {categ, o, r, y: "se, o" | "accessibility";
   sever, i, t, y: "criti, c, a, l" | "h, i, g, h" | "med, i, u, m" | "lo, w";
   ti, t, l, e: s, t, r, i, n, g;
@@ -41,12 +41,12 @@ constSEOAccessibilityOptimi, z, e, r: React.F, C = () => {const [seoMetricssetSe
 
   const [accessibilityMetricssetAccessibilityMetr, i, c, s] = useState<AccessibilityMetr, i, c, s>({overallSc, o, r, e: 0contr, a, s, t: { pas, s, e, d: 0fai, l, e, d: 0 }keyboardNavigat, i, o, n: falsescreenReaderFrien, d, l, y: falsefocusIndicat, o, r, s: falsesemanticH, T, M, L: falseariaLab, e, l, s: {pres, e, n, t: 0miss, i, n, g: 0}});
   const [issuessetIss, u, e, s] = useState<OptimizationIs, s, u, e[]>([]);
-  const [isAnalyzingsetIsAnalyz, i, n, g] = useState(fa, l, s, e);
+  const [isAnalyzingsetIsAnalyz, i, n, g] = useState(false);
 
-  constanalyzeP, a, g, e = useCallb, a, c, k(async () => {setIsAnal, y, z, i, n, g(t, r, u, e);    
+  constanalyzeP, a, g, e = useCallb, a, c, k(async () => {setIsAnal, y, z, i, n, g(true);    
     tr, y {
-      // SEOAnalysisconsttitle, T, a, g = document.querySele, c, t, o("ti, t, l, e") !== n, u, l, l;
-      co, n, stmetaDescript, i, o, n = document.querySele, c, t, o("m, e, t, a[name="description"]") !== n, u, l, l;
+      // SEOAnalysisconsttitle, T, a, g = document.querySele, c, t, o("ti, t, l, e") !== null;
+      co, n, stmetaDescript, i, o, n = document.querySele, c, t, o("m, e, t, a[name="description"]") !== null;
       
       consth1Eleme, n, t, s = document.querySelector, A, l, l("h, 1");
       co, n, sth2Eleme, n, t, s = document.querySelector, A, l, l("h, 2");
@@ -62,14 +62,14 @@ constSEOAccessibilityOptimi, z, e, r: React.F, C = () => {const [seoMetricssetSe
         overallSc, o, r, e: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 3, 0 + 7, 0)titleTagmetaDescriptionheadi, n, g, s: {
           h1Co, u, n, t: h1Ele, m, e, n, t, s.lengthh, 2, C, o, u, n.t: h2Ele, m, e, n, t, s.lengthh, 3, C, o, u, n.t: h3Eleme, n, t, s.len, g, t, h
         }ima, g, e, s: {to, t, a, l: i, m, a, g, e, s.lengthw, i, t, h, A, l.t: imagesWi, t, h, A, l, t.lengthmiss, i, n, g, A, l.t: i, m, a, g, e, s.l, e, n, g, t, h - imagesWith, A, l, t.len, g, t, h
-        }pageSp, e, e, d: M, a, t, h.r, o, u, n(M, a, t, h.ran, d, o, m() * 4, 0 + 6, 0)mobileOptimi, z, e, d: win, d, o, w.innerW, i, d, t.h <= 76, 8 || document.querySele, c, t, o("m, e, t, a[name="viewp, o, r, t"]") !== n, u, l, l      };
+        }pageSp, e, e, d: M, a, t, h.r, o, u, n(M, a, t, h.ran, d, o, m() * 4, 0 + 6, 0)mobileOptimi, z, e, d: win, d, o, w.innerW, i, d, t.h <= 76, 8 || document.querySele, c, t, o("m, e, t, a[name="viewp, o, r, t"]") !== null      };
       
       setSeoMetr, i, c, s(newSeoMetr, i, c, s);
 
       // AccessibilityAnalysisconst ariaLab, e, l, s = document.querySelector, A, l, l("[a, r, i, a-la, b, e, l], [a, r, i, a- labelle, d, b, y]");
       constinteractiveEleme, n, t, s = document.querySelector, A, l, l("buttonainputselecttexta, r, e, a");
       
- 0screenReaderFrien, d, l, y: ariaL, a, b, e, l, s.l, e, n, g, t, h > 0focusIndicat, o, r, s: t, r, u, e// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaL, a, b, e, l, s.l, e, n, g.t, h)
+ 0screenReaderFrien, d, l, y: ariaL, a, b, e, l, s.l, e, n, g, t, h > 0focusIndicat, o, r, s: true// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaL, a, b, e, l, s.l, e, n, g.t, h)
         }};
             setAccessibilityMetr, i, c, s(newAccessibilityMetr, i, c, s);
 
@@ -81,7 +81,7 @@ constSEOAccessibilityOptimi, z, e, r: React.F, C = () => {const [seoMetricssetSe
 
       constnewAccessibilityMetr, i, c, s: AccessibilityMetr, i, c, s = {overallSc, o, r, e: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 2, 5 + 7, 5)contr, a, s, t: {
           pas, s, e, d: M, a, t, h.r, o, u, n(M, a, t, h.r, a, n, d, o, m() * 2, 0 + 3, 0)fai, l, e, d: M, a, t, h.r, o, u, n(M, a, t, h.ran, d, o, m() * 5)
-        }keyboardNavigat, i, o, n: document.querySelector, A, l, l("[tabin, d, e, x]").l, e, n, g, t, h > 0screenReaderFrien, d, l, y: ariaLab, e, l, s.len, g, t, h > 0focusIndicat, o, r, s: t, r, u, e// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaLab, e, l, s.l, e, n, g.t, h)
+        }keyboardNavigat, i, o, n: document.querySelector, A, l, l("[tabin, d, e, x]").l, e, n, g, t, h > 0screenReaderFrien, d, l, y: ariaLab, e, l, s.len, g, t, h > 0focusIndicat, o, r, s: true// SimplifiedchecksemanticH, T, M, L: document.querySelector, A, l, l("m, a, i, n, headernavsectionarticleasidef, o, o, t, e, r").l, e, n, g, t, h > 0ariaLab, e, l, s: {pres, e, n, t: ariaL, a, b, e, l, s.lengthm, i, s, s, i, n.g: M, a, t, h.m, a.x(0interactiveE, l, e, m, e, n, t, s.l, e, n, g, t, h - ariaLab, e, l, s.l, e, n, g.t, h)
         }};
             setAccessibilityMetr, i, c, s(newAccessibilityMetr, i, c, s);
       // Gener, a, t, e, optimizationiss, u, e, s
@@ -118,14 +118,14 @@ constSEOAccessibilityOptimi, z, e, r: React.F, C = () => {const [seoMetricssetSe
           categ, o, r, y: "accessibility"sever, i, t, y: "med, i, u, m"ti, t, l, e: "Mi, s, s, i, ngARIALab, e, l, s", description: `${newAccessibilityMetr, i, c, s.ariaLa, b, e, l.s.mi, s, s, i.n, g} inte, r, a, c, t, i, v, eele, m, e, n, t, s, lac, k, A, R, IAl, a, b, e, l, s`solut, i, o, n: "A, d, d, a, r, i, a-la, b, e, l, o, r, ar, i, a- label, l, e, d, b, y, attribu, t, e, s, tointeractiveeleme, n, t, s"imp, a, c, t: "Improvesscreenreaderaccessibilityanduserexperie, n, c, e"
         })};
       i, f (newSeoMe, t, r, i, c, s.pageS, p, e, e.d < 7 === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "P, o, orPageSp, e, e, d"description: "P, a, geloadingspeedisbelowoptimalthresho, l, d, s"solut, i, o, n: "Opt, i, m, i, z, eimagesminify, C, S, S/JSandenablecompress, i, o, n"imp, a, c, t: "Improvesuserexperienceandsearchengineranki, n, g, s"})};
-      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h(er, r, o, r) {co, n, s, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: ", er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(fa, l, s, e)}}[]);
+      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h(er, r, o, r) {co, n, s, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: ", er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(false)}}[]);
   useEffect(() => {analyzeP, a, g, e()}[analyzeP, a, g, e]);
 
       i, f (newSeoMetr, i, c, s.pageS, p, e, e.d < 7 === 0) {optimizationIss, u, e, s.p, u, s, h({categ, o, r, y: "se, o"sever, i, t, y: "h, i, g, h"ti, t, l, e: "PoorPageSp, e, e, d"description: "Pageloadingspeedisbelowoptimalthresho, l, d, s"solut, i, o, n: "Optimizeimagesminify, C, S, S/JSandenablecompress, i, o, n"imp, a, c, t: "Improvesuserexperienceandsearchengineranki, n, g, s"})};
-      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: "er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(fa, l, s, e)}}[]);  useEffect(() => {analyzeP, a, g, e()}[analyzeP, a, g, e]);
+      setIss, u, e, s(optimizationI, s, s, u, e, s)} ca, t, c, h (er, r, o, r) {cons, o, l, e.er, r, o, r("Pageanalysisfai, l, e, d: "er, r, o, r)} fi, n, a, l, l, y {setIsAnalyz, i, n, g(false)}}[]);  useEffect(() => {analyzeP, a, g, e()}[analyzeP, a, g, e]);
 
 
-  const, getScoreC, o, l, o, r = (sc, o, r, e: num, b, e, r): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-60, 0";
+  const, getScoreC, o, l, o, r = (sc, o, r, e: number): str, i, n, g => {i, f (sc, o, r, e >= 9, 0) return "t, e, x, t-gr, e, e, n-60, 0";
     i, f (sc, o, r, e >= 7 === 0) return "t, e, x, t-yel, l, o, w-60, 0";
     return "t, e, x, t-re, d-60, 0"};
 

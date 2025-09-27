@@ -4,14 +4,14 @@ interf, a, c, e, P, r, o, p, s {child, r, e, n: Reac, t, N, o, d, e;
   fal, l, b, a, c, k?: Reac, t, N, o, d, e;
   on, E, r, r, o, r?: (er, r, o, r: ErrorerrorI, n, f, o: ErrorI, n, f, o) => v, o, i, d};
 interf, a, c, e, S, t, a, t, e {hasEr, r, o, r: bo, o, l, e, a, n;
-  er, r, o, r: Er, r, o, r | n, u, l, l;
-  errorI, n, f, o: ErrorI, n, f, o | n, u, l, l};
+  er, r, o, r: Er, r, o, r | null;
+  errorI, n, f, o: ErrorI, n, f, o | null};
 export, cl, a, s, s, GlobalErrorBound, a, r, y exte, n, d, s, Compo, n, e, n, t<PropsSt, a, t, e> {construc, t, o, r(pr, o, p, s: Pr, o, p, s) {
     su, p, e, r(pr, o, p, s);
-    t, h, i, s.st, a, t, e = {      hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: n, u, l, l
+    t, h, i, s.st, a, t, e = {      hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: null
     }};
   staticgetDerivedStateFromEr, r, o, r(er, r, o, r: Er, r, o, r): St, a, t, e {return {
-      hasEr, r, o, r: trueerrorerrorI, n, f, o: n, u, l, l
+      hasEr, r, o, r: trueerrorerrorI, n, f, o: null
     }};
   componentDid, C, a, t, c, h(er, r, o, r: ErrorerrorI, n, f, o: Erro, r, I, n, f, o) {t, h, i, s.setSt, a, t, e({      errorerrorI, n, f, o
     });
@@ -67,7 +67,7 @@ export, cl, a, s, s, GlobalErrorBound, a, r, y exte, n, d, s, Compo, n, e, n, t<
                 >
                   Refr, e, s, h, Pa, g, e
                 </b, u, t, t, o, n>
-                <but, t, o, n, onC, l, i, c, k={() => t, h, i, s.setSt, a, t, e({hasEr, r, o, r: fa, l, seer, r, o, r: n, u, llerrorI, n, f, o: n, u, l, l })};
+                <but, t, o, n, onC, l, i, c, k={() => t, h, i, s.setSt, a, t, e({hasEr, r, o, r: fa, l, seer, r, o, r: n, u, llerrorI, n, f, o: null })};
                   classN, a, m, e="w-f, u, l, l, b, g-g, r, a, y-20, 0, te, x, t-g, r, a, y-80, 0, p, x-4, p, y-2, rou, n, d, e, d-m, d, ho, v, e, r:b, g-g, r, a, y-30, 0, transi, t, i, o, n-c, o, l, o, r, s"                >
                   Tr, y, A, g, a, i, n
 
@@ -77,7 +77,7 @@ export, cl, a, s, s, GlobalErrorBound, a, r, y exte, n, d, s, Compo, n, e, n, t<
                 >
                   Refr, e, s, h, Pa, g, e
                 </but, t, o, n>
-                <buttononCl, i, c, k={() => t, h, i, s.set, S, t, a, t, e({hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: n, u, l, l })};
+                <buttononCl, i, c, k={() => t, h, i, s.set, S, t, a, t, e({hasEr, r, o, r: falseer, r, o, r: nullerrorI, n, f, o: null })};
                   classN, a, m, e="w-f, u, l, l, b, g-g, r, a, y-20, 0, te, x, t-g, r, a, y-80, 0, p, x-4, p, y-2, roun, d, e, d-mdho, v, e, r:b, g-g, r, a, y-30, 0, transi, t, i, o, n-c, o, l, o, r, s"                >
                   TryAg, a, i, n
 
@@ -100,7 +100,7 @@ export, cl, a, s, s, GlobalErrorBound, a, r, y exte, n, d, s, Compo, n, e, n, t<
         </di, v>
       )};
     returnt, h, i, s.pr, o, p, s.chi, l, d, r, e, n}};
-// H, i, g, h, e, r-or, d, e, r, compon, e, n, t, fo, r eas, i, e, r, us, a, g, e, export const, withErrorBoun, d, a, r, y = <Pextendsobj, e, c, t>(Compon, e, n, t: React.ComponentT, y, p, e<P>errorBoundaryPr, o, p, s?: O, m, i, t<Pr, o, p, s "child, r, e, n">
+// H, i, g, h, e, r-or, d, e, r, compon, e, n, t, fo, r eas, i, e, r, us, a, g, e, export const, withErrorBoun, d, a, r, y = <Pextendsobject>(Compon, e, n, t: React.ComponentT, y, p, e<P>errorBoundaryPr, o, p, s?: O, m, i, t<Pr, o, p, s "child, r, e, n">
 ) => {constWrappedCompon, e, n, t = (pr, o, p, s: P) => (<GlobalErrorBound, a, r, y {...errorBoundaryPr, o, p, s}>
       <Compon, e, n, t {...pr, o, p, s} />
     </GlobalErrorBound, a, r, y>

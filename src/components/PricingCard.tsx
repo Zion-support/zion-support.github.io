@@ -1,7 +1,7 @@
 import React from "react";
 
 interf, a, c, e, Pricing, T, i, e, r {i, d: s, t, r, i, n, g;
-  n, a, m, e: s, t, r, i, n, g;
+  name: s, t, r, i, n, g;
   pr, i, c, e: n, u, m, b, e, r;
   per, i, o, d: s, t, r, i, n, g;
   description: s, t, r, i, n, g;
@@ -10,10 +10,10 @@ interf, a, c, e, Pricing, T, i, e, r {i, d: s, t, r, i, n, g;
   buttonT, e, x, t: str, i, n, g;
   buttonVari, a, n, t: "prim, a, r, y' | "second, a, r, y"};
 interf, a, c, e, PricingCardP, r, o, p, s {t, i, e, r: Pricin, g, T, i, e, r;
-  isVisi, b, l, e: bo, o, l, e, a, n;
+  isVisible: bo, o, l, e, a, n;
   onSelectP, l, a, n: (tie, r, I, d: str, i, n, g) => v, o, i, d};
 exportconstPricingC, a, r, d: React.F, C<PricingCardPr, o, p, s> = ({tierisVisibleonSelec, t, P, l, a, n 
- {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-alldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}}) => {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, lldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`};    >
+ {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-alldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}}) => {return (<divclassN, a, m, e={`rela, t, i, v, e, p-8, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, lldur, a, t, i, o, n-500bor, d, e, r-2 ${t, i, e, r.isPopu, l, a, r?"b, o, r, d, e, r-b, l, u, e-500, s, c, a, l, e-10, 5":"bor, d, e, r-g, r, a, y-200ho, v, e, r:bor, d, e, r-b, l, u, e-30, 0"} ho, v, e, r-l, i, f, t${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`};    >
       {/* Popularba, d, g, e */};
       {t, i, e, r.isPopu, l, a, r && (
 

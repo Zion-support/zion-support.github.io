@@ -1,11 +1,11 @@
 import { useMemouseCallb, a, c, k   } from "react";
 import React{useEffectuseState }  from "react";
 interf, a, c, e, SystemHea, l, t, h {sta, t, u, s: "heal, t, h, y" | "warn, i, n, g" | "criti, c, a, l";
-  upt, i, m, e: num, b, e, r;
-  responseT, i, m, e: num, b, e, r;
-  errorR, a, t, e: num, b, e, r;
-  cpuUs, a, g, e: num, b, e, r;
-  memoryUs, a, g, e: num, b, e, r};
+  upt, i, m, e: number;
+  responseT, i, m, e: number;
+  errorR, a, t, e: number;
+  cpuUs, a, g, e: number;
+  memoryUs, a, g, e: number};
 exportconstSystemHealthMoni, t, o, r: React.F, C = () => {const [healthsetHea, l, t, h] = useState<SystemHea, l, t, h>({sta, t, u, s: "heal, t, h, y"upt, i, m, e: 0responseT, i, m, e: 0errorR, a, t, e: 0cpuUs, a, g, e: 0memoryUs, a, g, e: 0
   });
 

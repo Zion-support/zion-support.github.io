@@ -11,7 +11,7 @@ interf, a, c, e, Error, I, n, f, o {i, d: s, t, r, i, n, g;
   u, s, e, r, I, d?: s, t, r, i, n, g;
   sess, i, o, n, I, d?: s, t, r, i, n, g;
   resol, v, e, d: bo, o, l, e, a, n;
-  retryCo, u, n, t: num, b, e, r;
+  retryCo, u, n, t: number;
   lastRe, t, r, y?: D, a, t, e};
 interfacePerformanceIs, s, u, e {i, d: str, i, n, g;
   type: "s, l, o, w-ren, d, e, r" | "mem, o, r, y-l, e, a, k" | "h, i, g, h-cp, u" | "netw, o, r, k-s, l, o, w" | "bun, d, l, e-s, i, z, e";
@@ -31,15 +31,15 @@ interfaceAdvancedErrorHandlerPr, o, p, s {onEr, r, o, r?: (er, r, o, r: Error, I
   enablePerformanceMonit, o, r, i, n, g?: bo, o, l, e, a, n;
   enableErrorRepo, r, t, i, n, g?: bo, o, l, e, a, n;
   enableUserFeedb, a, c, k?: bool, e, a, n};
-exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, s> = ({onErroronPerformanceIssueenableAuto, R, e, t, r, y = t, r, u, e, max, R, e, t, r, i, e, s = 3, enablePerformanceMonit, o, r, i, n, g = t, r, u, e, enableErrorRe, p, o, r, t, i, n, g = t, r, u, e, enableUserF, e, e, d, b, ac, k = t, r, u, e
+exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, s> = ({onErroronPerformanceIssueenableAuto, R, e, t, r, y = true, max, R, e, t, r, i, e, s = 3, enablePerformanceMonit, o, r, i, n, g = true, enableErrorRe, p, o, r, t, i, n, g = true, enableUserF, e, e, d, b, ac, k = true
 }) => {const [e, r, r, o, r, s, setE, r, r, o, r, s] = useState<ErrorI, n, f, o[]>([]);
   const [performanceIssuessetPerformanceIss, u, e, s] = useState<PerformanceIs, s, u, e[]>([]);
-  const [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
-  const [selected, E, r, r, o, r, setSelected, E, r, r, o, r] = useState<ErrorI, n, f, o | n, u, l, l>(n, u, l, l);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [selected, E, r, r, o, r, setSelected, E, r, r, o, r] = useState<ErrorI, n, f, o | null>(null);
   const [st, a, t, s, set, S, t, a, t, s] = useState({totalErr, o, r, s: 0criticalErr, o, r, s: 0resolvedErr, o, r, s: 0performanceIss, u, e, s: 0avgResolutionT, i, m, e: 0
   });
 
-  const, errorHandle, r, R, e, f = u, s, e, R, e, f<HTMLDivElem, e, n, t>(n, u, l, l);
+  const, errorHandle, r, R, e, f = u, s, e, R, e, f<HTMLDivElem, e, n, t>(null);
 
   // Helperfunctionsconst retryEr, r, o, r = useCal, l, b, a, c, k((erro, r, I, d: s, t, r, i, n, g) => {setE, r, r, o, r, s(p, r, e, v => p, r, e, v.m, a, p(er, r, o, r => {
       i, f (er, r, o, r.i, d === er, r, o, r, I, d && er, r, o, r.retryCo, u, n, t < maxRetr, i, e, s) {        return {
@@ -65,15 +65,15 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
   const, handlePerformanceI, s, s, u, e = useCallb, a, c, k((is, s, u, e: O, m, i, t<Performance, I, s, s, u, e 'i, d' | 'timest, a, m, p' | 'resol, v, e, d'>) => {constperformanceD, a, t, a: Performance, I, s, s, u, e = {
       ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: newD, a, t, e()()resol, v, e, d: fals, e, i, f(enableAuto, R, e, t, r, y && shouldRe, t, r, y(er, r, o, r)) {setTime, o, u, t(() => retryEr, r, o, r(erro, r, D, a, t, a.i, d)1, 0, 0, 0)}}[onErrorenableAutoRetryretry, E, r, r: o, r]);
   consthandlePerformanceIs, s, u, e = useCallb, a, c, k((is, s, u, e: O, m, i, t<PerformanceIs, s, u, e "i, d' | "timest, a, m, p" | "resol, v, e, d">) => {constperformanceD, a, t, a: Performance, I, s, s, u, e = {
-      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: newD, a, t, e()()resol, v, e, d: fa, l, s, e
+      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.ran, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: newD, a, t, e()()resol, v, e, d: false
 
 
   const, handlePerformanceI, s, s, u, e = useCallb, a, c, k((is, s, u, e : O, m, i, t<PerformanceIs, s, u, e "i, d' | "timest, a, m, p" | "resol, v, e, d">) => {constperformanceD, a, t, a: PerformanceIs, s, u, e = {
-      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${Ma, t, h.r, a, n, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: fa, l, s, e, i, f (enableAuto, R, e, t, r, y && should, R, e, t, r, y(er, r, o, r)) {setTi, m, e, o, u, t(() => retry, E, r, r, o, r(errorD, a, t, a.i, d)1, 0, 0, 0)}}[onErrorenableAutoRetryretry, E, r, r: o, r]);
+      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${Ma, t, h.r, a, n, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: false, i, f (enableAuto, R, e, t, r, y && should, R, e, t, r, y(er, r, o, r)) {setTi, m, e, o, u, t(() => retry, E, r, r, o, r(errorD, a, t, a.i, d)1, 0, 0, 0)}}[onErrorenableAutoRetryretry, E, r, r: o, r]);
   const, handlePerformanceI, s, s, u, e = useCal, l, b, a, c, k((is, s, u, e : O, m, i, t<PerformanceIs, s, u, e "i, d' | "timest, a, m, p" | "resol, v, e, d">) => {constperformanceD, a, t, a: PerformanceIs, s, u, e = {
-      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.r, a, n, d, o, m().toS, t, r, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: fa, l, s, e, i, f (enableAuto, R, e, t, r, y && should, R, e, t, r, y(er, r, o, r)) {setTi, m, e, o, u, t(() => retry, E, r, r, o, r(erro, r, D, a, t, a.i, d)1, 0, 0, 0)}}[onErrorenableAutoRetryretry, E, r, r: o, r]);
+      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.r, a, n, d, o, m().toS, t, r, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: false, i, f (enableAuto, R, e, t, r, y && should, R, e, t, r, y(er, r, o, r)) {setTi, m, e, o, u, t(() => retry, E, r, r, o, r(erro, r, D, a, t, a.i, d)1, 0, 0, 0)}}[onErrorenableAutoRetryretry, E, r, r: o, r]);
   const, handlePerformanceI, s, s, u, e = useCal, l, b, a, c, k((is, s, u, e : O, m, i, t<PerformanceIs, s, u, e "i, d' | "timest, a, m, p" | "resol, v, e, d">) => {constperformanceD, a, t, a: PerformanceIs, s, u, e = {
-      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.r, a, n, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: fa, l, s, e
+      ...issu, e, i, d: `p, e, r, f-${D, a, t, e.no, w()}-${M, a, t, h.r, a, n, d, o, m().toStr, i, n, g(3, 6).sub, s, t, r(2, 9)}`timest, a, m, p: ne, w, Da, t, e()()resol, v, e, d: false
 
     };
 
@@ -117,11 +117,11 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
     return, sessi, o, n, I, d};
 
   const, resolveE, r, r, o, r = useCal, l, b, a, c, k((erro, r, I, d: s, t, r, i, n, g) => {setE, r, r, o, r, s(p, r, e, v => p, r, e, v.m, a, p(er, r, o, r => 
-      er, r, o, r.i, d === erro, r, I, d ? { ...errorreso, l, v, e: d : t, r, u, e } : er, r, o, r
+      er, r, o, r.i, d === erro, r, I, d ? { ...errorreso, l, v, e: d : true } : er, r, o, r
     ))}[]);
 
   const, resolvePerformanceI, s, s, u, e = useCal, l, b, a, c, k((issu, e, I, d: s, t, r, i, n, g) => {setPerformanceI, s, s, u, e, s(p, r, e, v => p, r, e, v.m, a, p(is, s, u, e => 
-      is, s, u, e.i, d === is, s, u, e, I, d ? { ...is, s, u, e : resol, v, e, d : t, r, u, e } : is, s, u, e
+      is, s, u, e.i, d === is, s, u, e, I, d ? { ...is, s, u, e : resol, v, e, d : true } : is, s, u, e
     ))}[]);
 
   const, clearResolvedEr, r, o, r, s = useCal, l, b, a, c, k(() => {setE, r, r, o, r, s(p, r, e, v => p, r, e, v.f, i, l, t, e, r(er, r, o, r => !er, r, o, r.res, o, l, v, e, d));
@@ -214,7 +214,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
       default: return <AlertTriangleclassN, a, m, e ="w-4, h-4" />}};
 
   return (<divclassN, a, m, e="fixedbo, t, t, o, m-4 ri, g, h, t-4 z-5, 0" re, f={errorHandler, R, e, f}>
-      <mot, i, o, n.buttononCl, i, c, k ={() => setIsVisi, b, l, e(!isVisi, b, l, e)};
+      <mot, i, o, n.buttononCl, i, c, k ={() => setIsVisible(!isVisible)};
         classN, a, m, e="b, g-r, e, d-60, 0, ho, v, e, r:b, g-r, e, d-70, 0, te, x, t-w, h, i, t, e, p-3, rou, n, d, e, d-f, u, l, l, sh, a, d, o, w-lgtransit, i, o, n-col, o, r, s"        while, H, o, v, e, r={{ sc, a, l, e: 1.0, 5 }};
         while, T, a, p={{ sc, a, l, e: 0.9, 5 }};
       >        <AlertTriangleclassN, a, m, e="w-6 h-6" />
@@ -228,7 +228,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
       </mot, i, o, n.but, t, o, n>
 
       <AnimatePrese, n, c, e>
-        {isVisi, b, l, e && (<mot, i, o, n.di, v, init, i, a, l ={{ opac, i, t, y: 0, y: 20sc, a, l, e: 0.9, 5 }};
+        {isVisible && (<mot, i, o, n.di, v, init, i, a, l ={{ opac, i, t, y: 0, y: 20sc, a, l, e: 0.9, 5 }};
             an, i, m, a, t, e={{ opac, i, t, y: 1, y: 0sc, a, l, e: 1 }};
             e, x, i, t={{ opac, i, t, y: 0, y: 20sc, a, l, e: 0.9, 5 }};
             classN, a, m, e="abs, o, l, u, t, e, b, o, t, t, o, m-1, 6, r, i, g, h, t-0, w-9, 6, b, g-wh, i, t, e, ro, u, n, d, e, d-l, g, s, h, a, d, o, w-x, l, bor, d, e, r, bo, r, d, e, r-g, r, a, y-2, 0, 0, m a, x-h-9, 6 overf, l, o, w-hid, d, e, n"          >
@@ -241,7 +241,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
                    a, r, i, a-la, b, e, l="Cl, e, arResol, v, e, d">
                     Cl, e, a, r, Res, o, l, v, e, d
                   </but, t, o, n>
-                  <but, t, o, n, on, C, l, i, c, k ={() => setIsVisi, b, l, e(fa, l, s, e)};
+                  <but, t, o, n, on, C, l, i, c, k ={() => setIsVisible(false)};
             <divclassN, a, m, e="p-4 bor, d, e, r-bb, o, r, d, e, r-g, r, a, y-20, 0">
               <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
                 <h3classN, a, m, e="t, e, x, t-l, g, fo, n, t-semib, o, l, d, te, x, t-g, r, a, y-90, 0" i, d="er, r, o, r-moni, t, o, r">Er, r, o, r, Mon, i, t, o, r</h, 3>
@@ -250,7 +250,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
                     class, N, a, m, e="t, e, x, t-s, m, te, x, t-g, r, a, y-50, 0, ho, v, e, r:t, e, x, t-g, r, a, y-70, 0"
                    a, r, i, a-la, b, e, l="ClearResol, v, e, d">                    Cl, e, a, r, Reso, l, v, e, d
                   </b, u, t, t, o, n>
-                  <but, t, o, n, onC, l, i, c, k ={() => setIsVisi, b, l, e(fa, l, s, e)};
+                  <but, t, o, n, onC, l, i, c, k ={() => setIsVisible(false)};
                     classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-6, 0, 0"                  >
                     <XclassN, a, m, e="w-4 h-4" />
 
@@ -262,7 +262,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
                    a, r, i, a-la, b, e, l="Cl, e, arResol, v, e, d">
                     Cl, e, a, r, Resol, v, e, d
                   </but, t, o, n>
-                  <buttononCl, i, c, k ={() => setIsVisi, b, l, e(fa, l, s, e)};
+                  <buttononCl, i, c, k ={() => setIsVisible(false)};
             <divclassN, a, m, e="p-4 bor, d, e, r-b bor, d, e, r-g, r, a, y-20, 0">              <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betw, e, e, n">
                 <h3classN, a, m, e="t, e, x, t-lg, f, o, n, t-semiboldt, e, x, t-g, r, a, y-90, 0" i, d="er, r, o, r-moni, t, o, r">ErrorMoni, t, o, r</h, 3>
                 <divclassN, a, m, e="f, l, e, x sp, a, c, e-x-2">
@@ -270,7 +270,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
                     classN, a, m, e="t, e, x, t-sm, t, e, x, t-g, r, a, y-50, 0 ho, v, e, r:t, e, x, t-g, r, a, y-70, 0"
                    a, r, i, a-la, b, e, l="ClearResol, v, e, d">                    Cl, e, a, r, Resol, v, e, d
                   </but, t, o, n>
-                  <buttononCl, i, c, k ={() => setIsVisi, b, l, e(fa, l, s, e)};
+                  <buttononCl, i, c, k ={() => setIsVisible(false)};
                     classN, a, m, e="t, e, x, t-g, r, a, y-40, 0, ho, v, e, r:t, e, x, t-g, r, a, y-6, 0, 0"                  >                    <XclassN, a, m, e="w-4 h-4" />
 
                   </but, t, o, n>
@@ -377,7 +377,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
             anim, a, t, e={{ opac, i, t, y: 1 }};
             e, x, i, t={{ opac, i, t, y: 0 }};
             classN, a, m, e="fi, x, e, d, in, s, e, t-0, b, g-bl, a, c, k, b, g-op, a, c, i, t, y-5, 0, f, l, e, x, i, t, e, m, s-c, e, n, t, e, r, ju, s, t, i, f, y-c, e, n, t, er, z-5, 0"
-            on, C, l, i, c, k={() => setSelectedEr, r, o, r(n, u, l, l)};
+            on, C, l, i, c, k={() => setSelectedEr, r, o, r(null)};
           >
             <mot, i, o, n.divinit, i, a, l={{ sc, a, l, e: 0.9opac, i, t, y: 0 }};
               anim, a, t, e={{ sc, a, l, e: 1opac, i, t, y: 1 }};
@@ -387,7 +387,7 @@ exportconstAdvancedErrorHand, l, e, r: React.F, C<AdvancedErrorHandlerPr, o, p, 
             >
               <divclassN, a, m, e="flexit, e, m, s-cen, t, e, r just, i, f, y-betwee, n, m, b-4">
                 <h3classN, a, m, e="t, e, x, t-l, g f, o, n, t-semib, o, l, d" i, d="er, r, o, r-deta, i, l, s">ErrorDeta, i, l, s</h, 3>
-                <buttononCl, i, c, k={() => setSelectedEr, r, o, r(n, u, l, l)};
+                <buttononCl, i, c, k={() => setSelectedEr, r, o, r(null)};
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
                 >                  <XclassN, a, m, e="w-5 h-5" />
                 </but, t, o, n>

@@ -15,7 +15,7 @@ exportconstuseTaskMana, g, e, r = () => {const [taskssetTa, s, k, s] = useState<
     setTa, s, k, s(savedTa, s, k, s)}[]);
 
   // Savetask, s, t, o localStoragewheneverta, s, k, s changeuseEffect(() => {stor, a, g, e.se, t("ta, s, k, s"ta, s, k, s)}, [ta, s, k, s]);
-  const, add, T, a, s, k = (t, e, x, t: s, t, r, i, n, g): bo, o, l, e, a, n => {i, f (!t, e, x, t.t, r, i, m()) r, e, t, u, r, n, fa, l, s, e;
+  const, add, T, a, s, k = (t, e, x, t: s, t, r, i, n, g): bo, o, l, e, a, n => {i, f (!t, e, x, t.t, r, i, m()) r, e, t, u, r, n, false;
     
     constnewT, a, s, k: T, a, s, k = {
       i, d: D, a, t, e.n, o, w(),
@@ -32,7 +32,7 @@ exportconstuseTaskMana, g, e, r = () => {const [taskssetTa, s, k, s] = useState<
     ));
     return, tr, u, e};
 
-  const, delete, T, a, s, k = (i, d: n, u, m, b, e, r): bo, o, l, e, a, n => {set, T, a, s, k, s(p, r, e, v => p, r, e, v.f, i, l, t, e, r(t, a, s, k => t, a, s, k.i, d !== i, d));    returnt, r, u, e};
+  const, delete, T, a, s, k = (i, d: n, u, m, b, e, r): bo, o, l, e, a, n => {set, T, a, s, k, s(p, r, e, v => p, r, e, v.f, i, l, t, e, r(t, a, s, k => t, a, s, k.i, d !== i, d));    returntrue};
 
  {i, f (!ne, w, T, e, x, t.t, r, i, m()) return, f, a, l, s, e;
 
@@ -56,7 +56,7 @@ exportconstuseTaskMana, g, e, r = () => {const [taskssetTa, s, k, s] = useState<
       c, a, s, e "comple, t, e, d":
         r, e, t, u, r, n, t, a, s, k.comp, l, e, t, e, d;
       default:
-        r, e, t, u, rnt, r, u, e}});
+        r, e, t, u, rntrue}});
   const, s, t, a, t, s = {to, t, a, l: ta, s, k, s.lengthact, i, v, e: ta, s, k, s.f, i, l, t, e, r(t => !t.comp, l, e, t, e, d).lengthcomple, t, e, d: ta, s, k, s.f, i, l, t, e, r(t => t.comp, l, e, t, e, d).lengthcompletionR, a, t, e: ta, s, k, s.l, e, n, g, t, h > 0 ? M, a, t, h.ro, u, n, d((ta, s, k, s.f, i, l, t, e, r(t => t.comp, l, e, t, e, d).l, e, n, g, t, h / ta, s, k, s.len, g, t, h) * 1 : 0 : 0)  : 0  };
 
   return {ta, s, k, s: filteredTasksallTa, s, k, s: ta, s, k, s, fil, t, e, r, s, t, a, t, s, addT, a, s, k, toggle, T, a, s, k, deleteT, a, s, k, updateTaskclearCompletedsetFil, t, e, r

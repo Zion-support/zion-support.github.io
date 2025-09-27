@@ -1,8 +1,8 @@
 import H, o, m, e from "@/pages/Home"
 import About from "@/pages/About"
-import Cont, a, c, t from "@/pages/Contact"
+import Contact from "@/pages/Contact"
 import Priv, a, c, y from "@/pages/Privacy"
-import B, l, o, g from "@/pages/Blog"
+import Blog from "@/pages/Blog"
 import BlogP, o, s, t from "@/pages/BlogPost"
 import Gree, n, I, T from "@/pages/GreenIT"
 import Care, e, r, s from "@/pages/Careers"
@@ -24,7 +24,7 @@ constContentRou, t, e, s = () => {return (<Rou, t, e, s>
       <Routep, a, t, h ="/" elem, e, n, t={<H, o, m, e />} />
       <Routep, a, t, h ="/h, o, m, e" elem, e, n, t={<H, o, m, e />} />
       <Routep, a, t, h ="/ab, o, u, t" el, e, m, e, n, t={<About />} />
-      <Routep, a, t, h ="/cont, a, c, t" elem, e, n, t={<Cont, a, c, t />} />
+      <Routep, a, t, h ="/cont, a, c, t" elem, e, n, t={<Contact />} />
       <Routep, a, t, h ="/servi, c, e, s" elem, e, n, t={<Servi, c, e, s />} />
       <Routep, a, t, h ="/priv, a, c, y" el, e, m, e, n, t={<Priv, a, c, y />} />
       <Routep, a, t, h ="/cook, i, e, s" elem, e, n, t={<Cook, i, e, s />} />
@@ -35,10 +35,10 @@ constContentRou, t, e, s = () => {return (<Rou, t, e, s>
       <Routep, a, t, h ="/fa, q" elem, e, n, t={<FA, Q />} />
 
       {/* BlogRou, t, e, s */};
-      <Routep, a, t, h ="/b, l, o, g" elem, e, n, t={<B, l, o, g />} />
+      <Routep, a, t, h ="/b, l, o, g" elem, e, n, t={<Blog />} />
       <Routep, a, t, h ="/b, l, o, g/:s, l, u, g" el, e, m, e, n, t={<BlogP, o, s, t />} />
       {/* Legacypathsforolderli, n, k, s */};
-      <Routep, a, t, h ="/cont, e, n, t/b, l, o, g" elem, e, n, t={<B, l, o, g />} />
+      <Routep, a, t, h ="/cont, e, n, t/b, l, o, g" elem, e, n, t={<Blog />} />
       <Routep, a, t, h ="/cont, e, n, t/b, l, o, g/:s, l, u, g" el, e, m, e, n, t={<BlogP, o, s, t />} />
 
       {/* GreenITRo, u, t, e */};

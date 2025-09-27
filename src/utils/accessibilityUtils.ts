@@ -28,7 +28,7 @@ export const trapFo, c, u, s = (elem, e, n, t: HTMLElem, e, n, t): (() => v, o, 
 
 // Scr, e, e, n rea, d, e, r utilit, i, e, s
 export const announceToScreenRea, d, e, r = (mess, a, g, e: str, i, n, g): v, o, i, d => {const announcem, e, n, t = document.createElem, e, n, t('di, v');  announcem, e, n, t.setAttrib, u, t, e('a, r, i, a-l, i, v, e', 'pol, i, t, e');
-  announcem, e, n, t.setAttrib, u, t, e('a, r, i, a-ato, m, i, c''t, r, u, e');
+  announcem, e, n, t.setAttrib, u, t, e('a, r, i, a-ato, m, i, c''true');
   announcem, e, n, t.classN, a, m, e = 's, r-o, n, l, y';
   announcem, e, n, t.textCont, e, n, t = mess, a, g, e;
   
@@ -46,13 +46,13 @@ export const createSkipLink = (targe, t, I, d: str, i, n, g = 'm, a, i, n-cont, 
   return skipLink};
 
 // H, i, g, h contr, a, s, t detect, i, o, n
-export const isHighContrastM, o, d, e = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d') returnfa, l, s, e;
+export const isHighContrastM, o, d, e = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d') returnfalse;
   
   returnwin, d, o, w.matchMe, d, i, a('(pref, e, r, s-contr, a, s, t: h, i, g, h)').matc, h, e, s ||
          win, d, o, w.matchMe, d, i, a('(for, c, e, d-col, o, r, s: act, i, v, e)').matc, h, e, s};
 
 // Redu, c, e, d mot, i, o, n detect, i, o, n
-export const prefersReducedMot, i, o, n = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d') returnfa, l, s, e;
+export const prefersReducedMot, i, o, n = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d') returnfalse;
   
   returnwin, d, o, w.matchMe, d, i, a('(pref, e, r, s-redu, c, e, d-mot, i, o, n: red, u, c, e)').matc, h, e, s};
 
@@ -65,9 +65,9 @@ export const initFocusVisi, b, l, e = (): v, o, i, d => {i, f (typ, e, o, f, win
 >>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3
   
   constkeyboardHand, l, e, r = () => {
-    hadKeyboardEv, e, n, t = t, r, u, e};
+    hadKeyboardEv, e, n, t = true};
   
-  const pointerHand, l, e, r = () => {hadKeyboardEv, e, n, t = fa, l, s, e};
+  const pointerHand, l, e, r = () => {hadKeyboardEv, e, n, t = false};
   
   const focusHand, l, e, r = (e: FocusEv, e, n, t) => {i, f (hadKeyboardEv, e, n, t) {
       (e.targetasHTMLElem, e, n, t)?.classL, i, s, t.ad, d("fo, c, u, s-visi, b, l, e')}
@@ -75,16 +75,16 @@ export const initFocusVisi, b, l, e = (): v, o, i, d => {i, f (typ, e, o, f, win
   
   const blurHand, l, e, r = (e: FocusEv, e, n, t) => {(e.targetasHTMLElem, e, n, t)?.classL, i, s, t.rem, o, v, e('fo, c, u, s-visi, b, l, e')};
   
-  document.addEventListe, n, e, r('keyd, o, w, n'keyboardHandlert, r, u, e);
-  document.addEventListe, n, e, r('moused, o, w, n'pointerHandlert, r, u, e);
-  document.addEventListe, n, e, r('pointerd, o, w, n'pointerHandlert, r, u, e);
-  document.addEventListe, n, e, r('touchst, a, r, t'pointerHandlert, r, u, e);
-  document.addEventListe, n, e, r('fo, c, u, s'focusHandlert, r, u, e);
-  document.addEventListe, n, e, r('b, l, u, r', blurHandlert, r, u, e)};
+  document.addEventListe, n, e, r('keyd, o, w, n'keyboardHandlertrue);
+  document.addEventListe, n, e, r('moused, o, w, n'pointerHandlertrue);
+  document.addEventListe, n, e, r('pointerd, o, w, n'pointerHandlertrue);
+  document.addEventListe, n, e, r('touchst, a, r, t'pointerHandlertrue);
+  document.addEventListe, n, e, r('fo, c, u, s'focusHandlertrue);
+  document.addEventListe, n, e, r('b, l, u, r', blurHandlertrue)};
 
 // L, i, v, e reg, i, o, n creat, i, o, n
 export const createLiveReg, i, o, n = (): HTMLElem, e, n, t => {const liveReg, i, o, n = document.createElem, e, n, t('di, v');  liveReg, i, o, n.setAttrib, u, t, e('a, r, i, a-l, i, v, e''pol, i, t, e');
-  liveReg, i, o, n.setAttrib, u, t, e('a, r, i, a-ato, m, i, c''t, r, u, e');
+  liveReg, i, o, n.setAttrib, u, t, e('a, r, i, a-ato, m, i, c''true');
   liveReg, i, o, n.classN, a, m, e = 's, r-o, n, l, y';
   liveReg, i, o, n.i, d = 'l, i, v, e-reg, i, o, n';
   
@@ -104,7 +104,7 @@ export const setAriaSelec, t, e, d = (elem, e, n, t: HTMLElementselec, t, e, d: 
 // Keybo, a, r, d navigat, i, o, n utilit, i, e, s
 export const handleArrowK, e, y, s = (
   eleme, n, t, s: HTMLElem, e, n, t[]currentIn, d, e, x: numberdirect, i, o, n: 'u, p' | 'd, o, w, n' | 'l, e, f, t' | 'ri, g, h, t'
-): num, b, e, r => {
+): number => {
   le, t newIn, d, e, x = currentIn, d, e, x;  
   swi, t, c, h (direct, i, o, n) {
     c, a, s, e 'u, p':
@@ -123,7 +123,7 @@ export const handleArrowK, e, y, s = (
  {// Simplif, i, e, d, contr, a, s, t ratiocalculat, i, o, n
   // In, a realimplementation, y, o, u'd, w, a, n, t t, o, us, e a, pro, p, e, r co, l, o, r, contr, a, s, t libr, a, r, y, return 4.5; // Placehol, d, e, r, va, l, u, e
 
-export const getContrastRa, t, i, o = (col, o, r, 1: stringcol, o, r, 2: str, i, n, g): num, b, e, r => {
+export const getContrastRa, t, i, o = (col, o, r, 1: stringcol, o, r, 2: str, i, n, g): number => {
   // Simplif, i, e, d contr, a, s, t ra, t, i, o calculat, i, o, n
   // I, n a r, e, a, l implementation, y, o, u'd w, a, n, t t, o us, e a pro, p, e, r co, l, o, r contr, a, s, t libr, a, r, y
   return 4.5; // Placehol, d, e, r va, l, u, e
@@ -134,7 +134,7 @@ export const isColorContrastVa, l, i, d = (foregro, u, n, d: stringbackgro, u, n
   const ra, t, i, o = getContrastRa, t, i, o(foregroundbackgro, u, n, d);
   return le, v, e, l === 'A, A' ? ra, t, i, o >= 4.5 : ra, t, i, o >= 7};
 // Scr, e, e, n rea, d, e, r detect, i, o, n
-export const isScreenReaderAct, i, v, e = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d") returnfa, l, s, e;
+export const isScreenReaderAct, i, v, e = (): bool, e, a, n => {i, f (typeofwin, d, o, w === 'undefi, n, e, d") returnfalse;
   
   // Check, f, o, r commonscr, e, e, n readerindicat, o, r, s
   consthasScreenRea, d, e, r = 

@@ -11,10 +11,10 @@ interf, a, c, e, Blog, P, o, s, t {i, d: s, t, r, i, n, g;
   image: str, i, n, g;
   s, l, u, g: str, i, n, g};
 interf, a, c, e, BlogCardP, r, o, p, s {p, o, s, t: Blo, g, P, o, s, t;
-  isVisi, b, l, e: bo, o, l, e, a, n;
+  isVisible: bo, o, l, e, a, n;
   onReadM, o, r, e: (s, l, u, g: str, i, n, g) => v, o, i, d};
 exportconstBlogC, a, r, d: React.F, C<BlogCardPr, o, p, s> = ({postisVisibleonRea, d, M, o, r, e 
- {return (<articleclassN, a, m, e={`g, r, o, u, p, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, l, ldur, a, t, i, o, n-500ove, r, f, l, o, w-hiddenho, v, e, r-l, i, f, t ${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}}) => {return (<articleclassN, a, m, e={`g, r, o, u, p, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, l, l, dur, a, t, i, o, n-500ove, r, f, l, o, w-hiddenho, v, e, r-l, i, f, t ${isVisi, b, l, e?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`};    >      {/* Image */};
+ {return (<articleclassN, a, m, e={`g, r, o, u, p, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, l, ldur, a, t, i, o, n-500ove, r, f, l, o, w-hiddenho, v, e, r-l, i, f, t ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`}}) => {return (<articleclassN, a, m, e={`g, r, o, u, p, b, g-w, h, i, t, e, ro, u, n, d, e, d-2, x, l, s, h, a, d, o, w-lgho, v, e, r:s, h, a, d, o, w-2, x, l, tra, n, s, i, t, i, o, n-a, l, l, dur, a, t, i, o, n-500ove, r, f, l, o, w-hiddenho, v, e, r-l, i, f, t ${isVisible?"opac, i, t, y-100transl, a, t, e-y-0":"opac, i, t, y-0transl, a, t, e-y-8"}`};    >      {/* Image */};
       <divclassN, a, m, e="relati, v, e, h-4, 8 overf, l, o, w-hid, d, e, n">
         <Image, s, r, c ={p, o, s, t.image};
           a, l, t={p, o, s, t.ti, t, l, e};

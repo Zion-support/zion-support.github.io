@@ -17,21 +17,21 @@ descr, i, b, e("ImprovementsTestSu, i, t, e"() => {descr, i, b, e("GlobalErrorBo
     afterE, a, c, h(() => {j, e, s, t.restoreAllMo, c, k, s()});
 
     i, t("rend, e, r, s, child, r, e, n, w, h, e, n therear, e, n, o err, o, r, s", () => {ren, d, e, r(
-        <di, v>          <ThrowErrorshouldEr, r, o, r={fa, l, s, e} />
+        <di, v>          <ThrowErrorshouldEr, r, o, r={false} />
         </di, v>
       );
       exp, e, c, t(scr, e, e, n.getByT, e, x, t("TestCompon, e, n, t")).toBeInTheDocument()});
 
     i, t("handlescomponenterr, o, r, s gracefu, l, l, y"() => {ren, d, e, r(
         <di, v>
-          <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+          <ThrowErrorshouldEr, r, o, r={true} />
         </di, v>
       );
       exp, e, c, t(scr, e, e, n.getByT, e, x, t("Somethingwentwr, o, n, g")).toBeInTheDocument()});
 
     i, t("logserror, s, t, o cons, o, l, e", () => {const, consol, e, S, p, y = j, e, s, t.sp, y, O, n(cons, o, l, e "er, r, o, r").mockImplementat, i, o, n(() => {});      
       ren, d, e, r(<di, v>
-          <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+          <ThrowErrorshouldEr, r, o, r={true} />
         </di, v>
       );
       
@@ -43,18 +43,18 @@ descr, i, b, e("ImprovementsTestSu, i, t, e"() => {descr, i, b, e("GlobalErrorBo
 
     i, t("showsaccessibilityopti, o, n, s whenpane, l, i, s o, p, e, n"async () => {ren, d, e, r(<AccessibilityEnhan, c, e, r />);
       
-      fireEv, e, n, t.keyD, o, w, n(document{ ke, y: "a"alt, K, e, y: t, r, u, e });
+      fireEv, e, n, t.keyD, o, w, n(document{ ke, y: "a"alt, K, e, y: true });
       
       awaitwait, F, o, r(() => {exp, e, c, t(scr, e, e, n.getByT, e, x, t("HighContr, a, s, t')).toBeInTheDocument()})});
     i, t("handleskeyboardshortc, u, t, s", () => {ren, d, e, r(<AccessibilityEnhan, c, e, r />);
       
-      fireEv, e, n, t.keyD, o, w, n(document{ ke, y: "a"alt, K, e, y: t, r, u, e });
+      fireEv, e, n, t.keyD, o, w, n(document{ ke, y: "a"alt, K, e, y: true });
       
       exp, e, c, t(scr, e, e, n.getByT, e, x, t("AccessibilityOpti, o, n, s')).toBeInTheDocument()});
 
     i, t("togglesaccessibilityfeatu, r, e, s", () => {ren, d, e, r(<AccessibilityEnhan, c, e, r />);
       
-      consttoggleBut, t, o, n = scr, e, e, n.getByR, o, l, e("but, t, o, n"{ n, a, m, e: /tog, g, l, e/i });
+      consttoggleBut, t, o, n = scr, e, e, n.getByR, o, l, e("but, t, o, n"{ name: /tog, g, l, e/i });
       fireEv, e, n, t.cl, i, c, k(toggleB, u, t, t, o, n);
       
       exp, e, c, t(scr, e, e, n.getByT, e, x, t("AccessibilityOpti, o, n, s")).toBeInTheDocument()})});
@@ -66,7 +66,7 @@ descr, i, b, e("ImprovementsTestSu, i, t, e"() => {descr, i, b, e("GlobalErrorBo
         thrownewEr, r, o, r("Tester, r, o, r")};
 
       ren, d, e, r(
-        <di, v>          <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+        <di, v>          <ThrowErrorshouldEr, r, o, r={true} />
         </di, v>
       );
       
@@ -76,7 +76,7 @@ descr, i, b, e("ImprovementsTestSu, i, t, e"() => {descr, i, b, e("GlobalErrorBo
       const, ThrowEr, r, o, r = () => {thrownewEr, r, o, r("Tester, r, o, r")};
 
       ren, d, e, r(<di, v>
-          <ThrowErrorshouldEr, r, o, r={t, r, u, e} />
+          <ThrowErrorshouldEr, r, o, r={true} />
         </di, v>
       );
       
