@@ -166,7 +166,7 @@ export const initOptimizations = () => {
   addResourceHints();
   
   // Initialize performance monitoring if available
-  if (typeof window !== 'undefined' && 'performance' in window) {
+  if (typeof window !== 'undefined' && 'performance' in window && typeof performance.mark === 'function') {
     // Mark app initialization
     performance.mark('app-init-start');
   }

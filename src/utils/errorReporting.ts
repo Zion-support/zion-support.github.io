@@ -109,7 +109,9 @@ class ErrorReporter {
         context.performance.memory = (window.performance as PerformanceWithMemory).memory;
       }
 
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = typeof performance.getEntriesByType === 'function' 
+        ? performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        : null;
       if (navigation) {
         context.performance.timing = navigation;
       }

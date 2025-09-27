@@ -1,0 +1,42 @@
+nohup: ignoring input
+=== Fixing Divergent Branches ===
+Pulling with merge strategy...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   319150fdefef..3ad38cec27e1  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	merge-all-prs.sh
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+Pull failed, checking for conflicts...
+Pushing merged changes...
+To https://github.com/Zion-Holdings/zion.app
+ ! [rejected]                  main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Failed to push changes
+=== Process Completed ===
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 4 and 459 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   merge-all-prs.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge.sh
+	fix-divergent-branches.sh
+	fix-divergent-log.txt
+	merge-log.txt
+	quick-merge.sh
+	simple-merge.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")

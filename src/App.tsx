@@ -116,7 +116,9 @@ export default function App(): React.JSX.Element {
     window.addEventListener('beforeunload', trackEngagement);
 
     // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance) {
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
