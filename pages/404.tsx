@@ -63,6 +63,18 @@ export default function Custom4() {  return (
             </butt, o, n>
           </Link>
           
+ window.history.back()}
+            style={{
+              backgroundColor: 'transparent',
+              color: '#2563eb',
+              padding: '1rem 2rem',
+              border: '2px solid #2563eb',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s'
+            }}
+
           <button, onClic, k={() => wind, o, w.histo, r, y.ba, c, k()};
             sty, l, e={{
               backgroundCol, o, r: 'transpare, n, t'
@@ -74,6 +86,7 @@ export default function Custom4() {  return (
               curs, o, r: 'point, e, r'
               transiti, o, n: 'al, l, 0.2s'
             }};
+
           >
             Go, Bac, k
           </butt, o, n>
