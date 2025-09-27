@@ -297,11 +297,11 @@ export default function AdvancedAnalyticsInsights({
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3py-1border border-gray-300rounded-md text-sm"
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm"
           >
-            <option value="7d">Last7days</option>
-            <option value="30d">Last30days</option>
-            <option value="90d">Last90days</option>
+            <option value="7d">Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+            <option value="90d">Last 90 days</option>
             <option value="1y">Last year</option>
           </select>
         </div>
