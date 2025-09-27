@@ -1,309 +1,309 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
+import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
+import { BarCha, r, t, B, a, r, XAx, i, s, YAx, i, s, CartesianGr, i, d, Toolt, i, p, ResponsiveContain, e, r, LineCha, r, t, Li, n, e, PieCha, r, t, P, i, e, Ce, l, l } from 'rechar, t, s';
 
-interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number; bounceRate: number }>;
-  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
-  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
-  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
-  hourlyData: Array<{ hour: number; visitors: number }>;
-  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
-  realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
-  errorRate: number;
-  performanceScore: number;
+interface AnalyticsDa, t, a {
+  pageVie, w, s: numb, e, r;
+  uniqueVisito, r, s: numb, e, r;
+  bounceRa, t, e: numb, e, r;
+  avgSessionDurati, o, n: numb, e, r;
+  conversionRa, t, e: numb, e, r;
+  topPag, e, s: Arr, a, y<{ pa, g, e: string; vie, w, s: numb, e, r; bounceRa, t, e: numb, e, r }>;
+  trafficSourc, e, s: Arr, a, y<{ sour, c, e: string; visito, r, s: numb, e, r; percenta, g, e: numb, e, r }>;
+  deviceTyp, e, s: Arr, a, y<{ devi, c, e: string; cou, n, t: numb, e, r; percenta, g, e: numb, e, r }>;
+  geographicDa, t, a: Arr, a, y<{ count, r, y: string; visito, r, s: numb, e, r; percenta, g, e: numb, e, r }>;
+  hourlyDa, t, a: Arr, a, y<{ ho, u, r: numb, e, r; visito, r, s: numb, e, r }>;
+  dailyDa, t, a: Arr, a, y<{ da, t, e: string; visito, r, s: numb, e, r; pageVie, w, s: numb, e, r }>;
+  realTimeVisito, r, s: numb, e, r;
+  topKeywor, d, s: Arr, a, y<{ keywo, r, d: string; search, e, s: numb, e, r; positi, o, n: numb, e, r }>;
+  errorRa, t, e: numb, e, r;
+  performanceSco, r, e: numb, e, r;
 }
 
-interface AdvancedAnalyticsDashboardProps {
-  data: AnalyticsData;
-  onDataRefresh?: () => void;
-  className?: string;
+interface AdvancedAnalyticsDashboardPro, p, s {
+  da, t, a: AnalyticsDa, t, a;
+  onDataRefre, s, h?: () => vo, i, d;
+  classNa, m, e?: string;
 }
 
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
+con, s, t COLO, R, S = ['#3B82, F, 6', '#10B9, 8, 1', '#F59E, 0, B', '#EF44, 4, 4', '#8B5C, F, 6', '#06B6, D, 4'];
 
-export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProps> = ({
-  data,
-  onDataRefresh,
-  className = ''
+export con, s, t AdvancedAnalyticsDashboa, r, d: React.FC<AdvancedAnalyticsDashboardPro, p, s> = ({
+  da, t, a,
+  onDataRefre, s, h,
+  classNa, m, e = ''
 }) => {
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [selectedMetric, setSelectedMetric] = useState('visitors');
-  const [isRealTime, setIsRealTime] = useState(true);
+  con, s, t [selectedTimeRan, g, e, setSelectedTimeRan, g, e] = useState('7d');
+  con, s, t [selectedMetr, i, c, setSelectedMetr, i, c] = useState('visito, r, s');
+  con, s, t [isRealTi, m, e, setIsRealTi, m, e] = useState(tr, u, e);
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
-    return num.toString();
+  con, s, t formatNumb, e, r = (n, u, m: numb, e, r) => {
+    if (n, u, m >= 10000, 0, 0) retu, r, n `${(n, u, m / 10000, 0, 0).toFix, e, d(1)}M`;
+    if (n, u, m >= 10, 0, 0) retu, r, n `${(n, u, m / 10, 0, 0).toFix, e, d(1)}K`;
+    retu, r, n n, u, m.toStri, n, g();
   };
 
-  const formatPercentage = (num: number) => `${num.toFixed(1)}%`;
+  con, s, t formatPercenta, g, e = (n, u, m: numb, e, r) => `${n, u, m.toFix, e, d(1)}%`;
 
-  const getMetricColor = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value >= thresholds.good) return 'text-green-500';
-    if (value >= thresholds.warning) return 'text-yellow-500';
-    return 'text-red-500';
+  con, s, t getMetricCol, o, r = (val, u, e: numb, e, r, threshol, d, s: { go, o, d: numb, e, r; warning: numb, e, r }) => {
+    if (val, u, e >= threshol, d, s.go, o, d) retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
+    if (val, u, e >= threshol, d, s.warning) retu, r, n 'te, x, t-yell, o, w-5, 0, 0';
+    retu, r, n 'te, x, t-r, e, d-5, 0, 0';
   };
 
-  const timeRangeOptions = [
-    { value: '1d', label: 'Last24Hours' },
-    { value: '7d', label: 'Last7Days' },
-    { value: '30d', label: 'Last30Days' },
-    { value: '90d', label: 'Last90Days' }
+  con, s, t timeRangeOptio, n, s = [
+    { val, u, e: '1d', lab, e, l: 'Last24Hou, r, s' },
+    { val, u, e: '7d', lab, e, l: 'Last7Da, y, s' },
+    { val, u, e: '3, 0, d', lab, e, l: 'Last30Da, y, s' },
+    { val, u, e: '9, 0, d', lab, e, l: 'Last90Da, y, s' }
   ];
 
-  const metricOptions = [
-    { value: 'visitors', label: 'Visitors' },
-    { value: 'pageViews', label: 'Page Views' },
-    { value: 'bounceRate', label: 'Bounce Rate' },
-    { value: 'conversionRate', label: 'Conversion Rate' }
+  con, s, t metricOptio, n, s = [
+    { val, u, e: 'visito, r, s', lab, e, l: 'Visito, r, s' },
+    { val, u, e: 'pageVie, w, s', lab, e, l: 'Pa, g, e Vie, w, s' },
+    { val, u, e: 'bounceRa, t, e', lab, e, l: 'Boun, c, e Ra, t, e' },
+    { val, u, e: 'conversionRa, t, e', lab, e, l: 'Conversi, o, n Ra, t, e' }
   ];
 
-  return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
-          <p className="text-gray-600 dark:text-gray-400">Real-time insights and performance metrics</p>
-        </div>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isRealTime ? 'bg-green-500' : 'bg-gray-400'}`} />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              {isRealTime ? 'Real-time' : 'Paused'}
-            </span>
-          </div>
-          <button
-            onClick={onDataRefresh}
-            className="px-4 py-2 bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-medium transition-colors"
-           aria-label="Refresh">
-            Refresh
-          </button>
-        </div>
-      </div>
+  retu, r, n (
+    <d, i, v classNa, m, e={`bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 round, e, d-lg shad, o, w-lg p-6 ${classNa, m, e}`}>
+      {/* Head, e, r */}
+      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
+        <d, i, v>
+          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="analyti, c, s-dashboa, r, d">Analyti, c, s Dashboa, r, d</h2>
+          <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">Re, a, l-ti, m, e insigh, t, s a, n, d performan, c, e metri, c, s</p>
+        </d, i, v>
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
+          <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+            <d, i, v classNa, m, e={`w-3 h-3 round, e, d-fu, l, l ${isRealTi, m, e ? 'bg-gre, e, n-5, 0, 0' : 'bg-gr, a, y-4, 0, 0'}`} />
+            <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0">
+              {isRealTi, m, e ? 'Re, a, l-ti, m, e' : 'Paus, e, d'}
+            </sp, a, n>
+          </d, i, v>
+          <butt, o, n
+            onCli, c, k={onDataRefre, s, h}
+            classNa, m, e="px-4 py-2 bg-bl, u, e-500hov, e, r:bg-bl, u, e-600te, x, t-whi, t, e round, e, d-lg te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s"
+           ar, i, a-lab, e, l="Refre, s, h">
+            Refre, s, h
+          </butt, o, n>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Controls */}
-      <div className="flex flex-wrap items-center gap-4 mb-6">
-        <div className="flex items-center space-x-2">
-          <label className="text-sm font-medium text-gray-700dark:text-gray-300">Time Rang, e:</label>
-          <select
-            value={selectedTimeRange}
-            onChange={(e) => setSelectedTimeRange(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dar k:text-white"
+      {/* Contro, l, s */}
+      <d, i, v classNa, m, e="fl, e, x fl, e, x-wr, a, p ite, m, s-cent, e, r g, a, p-4 mb-6">
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+          <lab, e, l classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-3, 0, 0">Ti, m, e Ra, n, g, e:</lab, e, l>
+          <sele, c, t
+            val, u, e={selectedTimeRan, g, e}
+            onChan, g, e={(e) => setSelectedTimeRan, g, e(e.targ, e, t.val, u, e)}
+            classNa, m, e="px-3, p, y-1bord, e, r bord, e, r-gr, a, y-300da, r, k: bord, e, r-gr, a, y-600round, e, d-lg bg-whi, t, e da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-900d, a, r k:te, x, t-whi, t, e"
           >
-            {timeRangeOptions.map(option => (
-              <option key={option.value} value={option.value}>{option.label}</option>
+            {timeRangeOptio, n, s.m, a, p(opti, o, n => (
+              <opti, o, n k, e, y={opti, o, n.val, u, e} val, u, e={opti, o, n.val, u, e}>{opti, o, n.lab, e, l}</opti, o, n>
             ))}
-          </select>
-        </div>
-        <div className="flex items-center space-x-2">
-          <label className="text-sm font-medium text-gray-700dark:text-gray-300">Metri, c:</label>
-          <select
-            value={selectedMetric}
-            onChange={(e) => setSelectedMetric(e.target.value)}
-            className="px-3py-1border border-gray-300dark: border-gray-600rounded-lg bg-white dark:bg-gray-700text-gray-900dar k:text-white"
+          </sele, c, t>
+        </d, i, v>
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+          <lab, e, l classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-3, 0, 0">Met, r, i, c:</lab, e, l>
+          <sele, c, t
+            val, u, e={selectedMetr, i, c}
+            onChan, g, e={(e) => setSelectedMetr, i, c(e.targ, e, t.val, u, e)}
+            classNa, m, e="px-3, p, y-1bord, e, r bord, e, r-gr, a, y-300da, r, k: bord, e, r-gr, a, y-600round, e, d-lg bg-whi, t, e da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-900d, a, r k:te, x, t-whi, t, e"
           >
-            {metricOptions.map(option => (
-              <option key={option.value} value={option.value}>{option.label}</option>
+            {metricOptio, n, s.m, a, p(opti, o, n => (
+              <opti, o, n k, e, y={opti, o, n.val, u, e} val, u, e={opti, o, n.val, u, e}>{opti, o, n.lab, e, l}</opti, o, n>
             ))}
-          </select>
-        </div>
-        <button
-          onClick={() = aria-label="setIsRealTime(!isRealTime)}
-          aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
-          className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
-            isRealTime
-              ? 'bg-green-500hover:bg-green-600text-white'
-              : 'bg-gray-500hove, r:bg-gray-600text-white'
-          }`}">setIsRealTime(!isRealTime)}
-          aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
-          className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
-            isRealTime
-              ? 'bg-green-500hover:bg-green-600text-white'
-              : 'bg-gray-500hove, r:bg-gray-600text-white'
+          </sele, c, t>
+        </d, i, v>
+        <butt, o, n
+          onCli, c, k={() = ar, i, a-lab, e, l="setIsRealTi, m, e(!isRealTi, m, e)}
+          ar, i, a-lab, e, l={isRealTi, m, e ? 'Disab, l, e re, a, l-ti, m, e updat, e, s' : 'Enab, l, e re, a, l-ti, m, e updat, e, s'}
+          classNa, m, e={`px-4, p, y-2round, e, d-lg te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s ${
+            isRealTi, m, e
+              ? 'bg-gre, e, n-500hov, e, r:bg-gre, e, n-600te, x, t-whi, t, e'
+              : 'bg-gr, a, y-500ho, v, e, r:bg-gr, a, y-600te, x, t-whi, t, e'
+          }`}">setIsRealTi, m, e(!isRealTi, m, e)}
+          ar, i, a-lab, e, l={isRealTi, m, e ? 'Disab, l, e re, a, l-ti, m, e updat, e, s' : 'Enab, l, e re, a, l-ti, m, e updat, e, s'}
+          classNa, m, e={`px-4, p, y-2round, e, d-lg te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s ${
+            isRealTi, m, e
+              ? 'bg-gre, e, n-500hov, e, r:bg-gre, e, n-600te, x, t-whi, t, e'
+              : 'bg-gr, a, y-500ho, v, e, r:bg-gr, a, y-600te, x, t-whi, t, e'
           }`}
-        </button>
-      </div>
+        </butt, o, n>
+      </d, i, v>
 
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white"
+      {/* K, e, y Metri, c, s */}
+      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-4 g, a, p-4 mb-6">
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          classNa, m, e="bg-gradie, n, t-to-r from-bl, u, e-5, 0, 0 to-bl, u, e-6, 0, 0 round, e, d-lg p-4 te, x, t-whi, t, e"
         >
-          <div className="text-sm opacity-90 mb-1">Total Visitors</div>
-          <div className="text-2xl font-bold">{formatNumber(data.uniqueVisitors)}</div>
-          <div className="text-sm opacity-90">+12% from last period</div>
-        </motion.div>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90 mb-1">Tot, a, l Visito, r, s</d, i, v>
+          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.uniqueVisito, r, s)}</d, i, v>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90">+12% from la, s, t peri, o, d</d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500to-green-600rounded-lg p-4 text-white"
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.1 }}
+          classNa, m, e="bg-gradie, n, t-to-r from-gre, e, n-500, t, o-gre, e, n-600round, e, d-lg p-4 te, x, t-whi, t, e"
         >
-          <div className="text-sm opacity-90 mb-1">Page Views</div>
-          <div className="text-2xl font-bold">{formatNumber(data.pageViews)}</div>
-          <div className="text-sm opacity-90">+8% from last period</div>
-        </motion.div>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90 mb-1">Pa, g, e Vie, w, s</d, i, v>
+          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.pageVie, w, s)}</d, i, v>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90">+8% from la, s, t peri, o, d</d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-yellow-500to-yellow-600rounded-lg p-4 text-white"
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.2 }}
+          classNa, m, e="bg-gradie, n, t-to-r from-yell, o, w-500, t, o-yell, o, w-600round, e, d-lg p-4 te, x, t-whi, t, e"
         >
-          <div className="text-sm opacity-90 mb-1">Bounce Rate</div>
-          <div className={`text-2xl font-bold ${getMetricColor(data.bounceRate, { good: 40, warning: 60 })}`}
-            {formatPercentage(data.bounceRate)}
-          </div>
-          <div className="text-sm opacity-90">-3% from last period</div>
-        </motion.div>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90 mb-1">Boun, c, e Ra, t, e</d, i, v>
+          <d, i, v classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getMetricCol, o, r(da, t, a.bounceRa, t, e, { go, o, d: 40, warning: 60 })}`}
+            {formatPercenta, g, e(da, t, a.bounceRa, t, e)}
+          </d, i, v>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90">-3% from la, s, t peri, o, d</d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-gradient-to-r from-purple-500to-purple-600rounded-lg p-4 text-white"
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.3 }}
+          classNa, m, e="bg-gradie, n, t-to-r from-purp, l, e-500, t, o-purp, l, e-600round, e, d-lg p-4 te, x, t-whi, t, e"
         >
-          <div className="text-sm opacity-90 mb-1">Conversion Rate</div>
-          <div className={`text-2xl font-bold ${getMetricColor(data.conversionRate, { good: 3, warning: 1.5 })}`}
-            {formatPercentage(data.conversionRate)}
-          </div>
-          <div className="text-sm opacity-90">+15% from last period</div>
-        </motion.div>
-      </div>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90 mb-1">Conversi, o, n Ra, t, e</d, i, v>
+          <d, i, v classNa, m, e={`te, x, t-2, x, l fo, n, t-bo, l, d ${getMetricCol, o, r(da, t, a.conversionRa, t, e, { go, o, d: 3, warning: 1.5 })}`}
+            {formatPercenta, g, e(da, t, a.conversionRa, t, e)}
+          </d, i, v>
+          <d, i, v classNa, m, e="te, x, t-sm opaci, t, y-90">+15% from la, s, t peri, o, d</d, i, v>
+        </moti, o, n.d, i, v>
+      </d, i, v>
 
-      {/* Charts Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        {/* Traffic Sources */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+      {/* Char, t, s Gr, i, d */}
+      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6 mb-6">
+        {/* Traff, i, c Sourc, e, s */}
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.95 }}
+          anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
+          classNa, m, e="bg-gr, a, y-50da, r, k: bg-gr, a, y-700round, e, d-l, g, p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="traffic-sources">Traffic Sources</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={data.trafficSources}
+          <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="traff, i, c-sourc, e, s">Traff, i, c Sourc, e, s</h3>
+          <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={3, 0, 0}>
+            <PieCha, r, t>
+              <P, i, e
+                da, t, a={da, t, a.trafficSourc, e, s}
                 cx="50%"
                 cy="50%"
-                labelLine={false}
-                label={({ name, percentage }) => `${name} (${percentage}%)`}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="visitors"
+                labelLi, n, e={fal, s, e}
+                lab, e, l={({ na, m, e, percenta, g, e }) => `${na, m, e} (${percenta, g, e}%)`}
+                outerRadi, u, s={80}
+                fi, l, l="#8884, d, 8"
+                dataK, e, y="visito, r, s"
               >
-                {data.trafficSources.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                {da, t, a.trafficSourc, e, s.m, a, p((ent, r, y, ind, e, x) => (
+                  <Ce, l, l k, e, y={`ce, l, l-${ind, e, x}`} fi, l, l={COLO, R, S[ind, e, x % COLO, R, S.leng, t, h]} />
                 ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        </motion.div>
+              </P, i, e>
+              <Toolt, i, p />
+            </PieCha, r, t>
+          </ResponsiveContain, e, r>
+        </moti, o, n.d, i, v>
 
-        {/* Device Types */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+        {/* Devi, c, e Typ, e, s */}
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.95 }}
+          anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
+          transiti, o, n={{ del, a, y: 0.1 }}
+          classNa, m, e="bg-gr, a, y-50da, r, k: bg-gr, a, y-700round, e, d-l, g, p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="device-types">Device Types</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={data.deviceTypes}>
-              <CartesianGrid strokeDasharray="33" />
-              <XAxis dataKey="device" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="count" fill="#3B82F6" />
-            </BarChart>
-          </ResponsiveContainer>
-        </motion.div>
-      </div>
+          <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="devi, c, e-typ, e, s">Devi, c, e Typ, e, s</h3>
+          <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={3, 0, 0}>
+            <BarCha, r, t da, t, a={da, t, a.deviceTyp, e, s}>
+              <CartesianGr, i, d strokeDasharr, a, y="33" />
+              <XAx, i, s dataK, e, y="devi, c, e" />
+              <YAx, i, s />
+              <Toolt, i, p />
+              <B, a, r dataK, e, y="cou, n, t" fi, l, l="#3B82, F, 6" />
+            </BarCha, r, t>
+          </ResponsiveContain, e, r>
+        </moti, o, n.d, i, v>
+      </d, i, v>
 
-      {/* Additional Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        {/* Hourly Traffic */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+      {/* Addition, a, l Char, t, s */}
+      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6 mb-6">
+        {/* Hour, l, y Traff, i, c */}
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.95 }}
+          anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
+          transiti, o, n={{ del, a, y: 0.2 }}
+          classNa, m, e="bg-gr, a, y-50da, r, k: bg-gr, a, y-700round, e, d-l, g, p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="hourly-traffic">Hourly Traffic</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={data.hourlyData}>
-              <CartesianGrid strokeDasharray="33" />
-              <XAxis dataKey="hour" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="visitors" stroke="#10B981" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </motion.div>
+          <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="hour, l, y-traff, i, c">Hour, l, y Traff, i, c</h3>
+          <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={3, 0, 0}>
+            <LineCha, r, t da, t, a={da, t, a.hourlyDa, t, a}>
+              <CartesianGr, i, d strokeDasharr, a, y="33" />
+              <XAx, i, s dataK, e, y="ho, u, r" />
+              <YAx, i, s />
+              <Toolt, i, p />
+              <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="visito, r, s" stro, k, e="#10B9, 8, 1" strokeWid, t, h={2} />
+            </LineCha, r, t>
+          </ResponsiveContain, e, r>
+        </moti, o, n.d, i, v>
 
-        {/* Geographic Distribution */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="bg-gray-50dark: bg-gray-700rounded-lgp-4"
+        {/* Geograph, i, c Distributi, o, n */}
+        <moti, o, n.d, i, v
+          initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.95 }}
+          anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
+          transiti, o, n={{ del, a, y: 0.3 }}
+          classNa, m, e="bg-gr, a, y-50da, r, k: bg-gr, a, y-700round, e, d-l, g, p-4"
         >
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="top-countries">Top Countries</h3>
-          <div className="space-y-3">
-            {data.geographicData.slice(0, 5).map((country, index) => (
-              <div key={country.country} className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <div className="w-4h-4rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
-                  <span className="text-gray-900 dark:text-white">{country.country}</span>
-                </div>
-                <div className="text-right">
-                  <div className="font-semibold text-gray-900 dark:text-white">{formatNumber(country.visitors)}</div>
-                  <div className="text-sm text-gray-600dark:text-gray-400">{country.percentage}%</div>
-                </div>
-              </div>
+          <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="t, o, p-countri, e, s">T, o, p Countri, e, s</h3>
+          <d, i, v classNa, m, e="spa, c, e-y-3">
+            {da, t, a.geographicDa, t, a.sli, c, e(0, 5).m, a, p((count, r, y, ind, e, x) => (
+              <d, i, v k, e, y={count, r, y.count, r, y} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+                <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                  <d, i, v classNa, m, e="w-4h-4round, e, d-fu, l, l" sty, l, e={{ backgroundCol, o, r: COLO, R, S[ind, e, x % COLO, R, S.leng, t, h] }} />
+                  <sp, a, n classNa, m, e="te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">{count, r, y.count, r, y}</sp, a, n>
+                </d, i, v>
+                <d, i, v classNa, m, e="te, x, t-rig, h, t">
+                  <d, i, v classNa, m, e="fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">{formatNumb, e, r(count, r, y.visito, r, s)}</d, i, v>
+                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">{count, r, y.percenta, g, e}%</d, i, v>
+                </d, i, v>
+              </d, i, v>
             ))}
-          </div>
-        </motion.div>
-      </div>
+          </d, i, v>
+        </moti, o, n.d, i, v>
+      </d, i, v>
 
-      {/* Real-time Stats */}
-      <AnimatePresence>
-        {isRealTime && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="bg-gradient-to-r from-green-50to-blue-50dark:from-green-900/20dark:to-blue-900/20rounded-lg p-4"
+      {/* Re, a, l-ti, m, e Sta, t, s */}
+      <AnimatePresen, c, e>
+        {isRealTi, m, e && (
+          <moti, o, n.d, i, v
+            initi, a, l={{ opaci, t, y: 0, heig, h, t: 0 }}
+            anima, t, e={{ opaci, t, y: 1, heig, h, t: 'au, t, o' }}
+            ex, i, t={{ opaci, t, y: 0, heig, h, t: 0 }}
+            classNa, m, e="bg-gradie, n, t-to-r from-gre, e, n-50, t, o-bl, u, e-50da, r, k:from-gre, e, n-9, 0, 0/20da, r, k:to-bl, u, e-9, 0, 0/20round, e, d-lg p-4"
           >
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="real-time-activity">Real-time Activity</h3>
-                <p className="text-gray-600dark:text-gray-400">Live visitor count and activity</p>
-              </div>
-              <div className="text-right">
-                <div className="text-3xl font-bold text-green-600dark:text-green-400">
-                  {data.realTimeVisitors}
-                </div>
-                <div className="text-sm text-gray-600dark:text-gray-400">visitors online</div>
-              </div>
-            </div>
-          </motion.div>
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+              <d, i, v>
+                <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e" id="re, a, l-ti, m, e-activi, t, y">Re, a, l-ti, m, e Activi, t, y</h3>
+                <p classNa, m, e="te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Li, v, e visit, o, r cou, n, t a, n, d activi, t, y</p>
+              </d, i, v>
+              <d, i, v classNa, m, e="te, x, t-rig, h, t">
+                <d, i, v classNa, m, e="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-600da, r, k:te, x, t-gre, e, n-4, 0, 0">
+                  {da, t, a.realTimeVisito, r, s}
+                </d, i, v>
+                <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">visito, r, s onli, n, e</d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </moti, o, n.d, i, v>
         )}
-      </AnimatePresence>
-    </div>
+      </AnimatePresen, c, e>
+    </d, i, v>
   );
 };
 
-export default AdvancedAnalyticsDashboard;
+export default AdvancedAnalyticsDashboa, r, d;

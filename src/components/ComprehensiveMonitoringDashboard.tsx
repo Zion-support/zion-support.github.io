@@ -1,465 +1,465 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Database, 
-  Globe, 
-  Shield, 
-  TrendingUp,
-  Users,
-  Zap,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Eye,
-  Search,
+import React, { useState, useEffect, useCallba, c, k } from 'rea, c, t';
+import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
+import { Ca, r, d, CardConte, n, t, CardDescripti, o, n, CardHead, e, r, CardTit, l, e } from './ui/Ca, r, d';import { 
+  Activi, t, y, 
+  AlertTriang, l, e, 
+  CheckCirc, l, e, 
+  Clo, c, k, 
+  Databa, s, e, 
+  Glo, b, e, 
+  Shie, l, d, 
+  Trending, U, p,
+  Use, r, s,
+  Z, a, p,
+  BarChar, t, 3,
+  C, p, u,
+  HardDri, v, e,
+  Wi, f, i,
+  E, y, e,
+  Sear, c, h,
   X
-} from 'lucide-react';
-interface SystemMetrics {
-  performance: {
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-    firstInputDelay: number;
-    timeToInteractive: number;
+} from 'luci, d, e-rea, c, t';
+interface SystemMetri, c, s {
+  performan, c, e: {
+    loadTi, m, e: numb, e, r;
+    firstContentfulPai, n, t: numb, e, r;
+    largestContentfulPai, n, t: numb, e, r;
+    cumulativeLayoutShi, f, t: numb, e, r;
+    firstInputDel, a, y: numb, e, r;
+    timeToInteracti, v, e: numb, e, r;
   };
-  resources: {
-    memoryUsage: number;
-    cpuUsage: number;
-    networkLatency: number;
-    bundleSize: number;
-    cacheHitRate: number;
+  resourc, e, s: {
+    memoryUsa, g, e: numb, e, r;
+    cpuUsa, g, e: numb, e, r;
+    networkLaten, c, y: numb, e, r;
+    bundleSi, z, e: numb, e, r;
+    cacheHitRa, t, e: numb, e, r;
   };
-  userExperience: {
-    bounceRate: number;
-    sessionDuration: number;
-    pageViews: number;
-    uniqueVisitors: number;
-    conversionRate: number;
+  userExperien, c, e: {
+    bounceRa, t, e: numb, e, r;
+    sessionDurati, o, n: numb, e, r;
+    pageVie, w, s: numb, e, r;
+    uniqueVisito, r, s: numb, e, r;
+    conversionRa, t, e: numb, e, r;
   };
-  errors: {
-    total: number;
-    critical: number;
-    resolved: number;
-    unresolved: number;
+  erro, r, s: {
+    tot, a, l: numb, e, r;
+    critic, a, l: numb, e, r;
+    resolv, e, d: numb, e, r;
+    unresolv, e, d: numb, e, r;
   };
-  security: {
-    threatsBlocked: number;
-    vulnerabilities: number;
-    sslScore: number;
-    cspViolations: number;
+  securi, t, y: {
+    threatsBlock, e, d: numb, e, r;
+    vulnerabiliti, e, s: numb, e, r;
+    sslSco, r, e: numb, e, r;
+    cspViolatio, n, s: numb, e, r;
   };
 }
 
-interface MonitoringDashboardProps {
-  refreshInterval?: number;
-  enableRealTimeUpdates?: boolean;
-  onMetricsUpdate?: (metrics: SystemMetrics) => void;
+interface MonitoringDashboardPro, p, s {
+  refreshInterv, a, l?: numb, e, r;
+  enableRealTimeUpdat, e, s?: boole, a, n;
+  onMetricsUpda, t, e?: (metri, c, s: SystemMetri, c, s) => vo, i, d;
 }
 
-export default function ComprehensiveMonitoringDashboard({
-  refreshInterval = 5000,
-  enableRealTimeUpdates = true,
-  onMetricsUpdate
-}: MonitoringDashboardProps) {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
-  const [alerts, setAlerts] = useState<Array<{
+export default function ComprehensiveMonitoringDashboa, r, d({
+  refreshInterv, a, l = 50, 0, 0,
+  enableRealTimeUpdat, e, s = tr, u, e,
+  onMetricsUpda, t, e
+}: MonitoringDashboardPro, p, s) {
+  con, s, t [metri, c, s, setMetri, c, s] = useState<SystemMetri, c, s | nu, l, l>(nu, l, l);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
+  con, s, t [lastUpdat, e, d, setLastUpdat, e, d] = useState<Da, t, e>(n, e, w Da, t, e());
+  con, s, t [aler, t, s, setAler, t, s] = useState<Arr, a, y<{
     id: string;
-    type: 'warning' | 'error' | 'info' | 'success';
+    ty, p, e: 'warning' | 'error' | 'info' | 'succe, s, s';
     message: string;
-    timestamp: Date;
-    resolved: boolean;
+    timesta, m, p: Da, t, e;
+    resolv, e, d: boole, a, n;
   }>>([]);
 
-  const collectMetrics = useCallback(async () => {
-    try {
-      // Collect performance metrics
-      const performance = await collectPerformanceMetrics();
+  con, s, t collectMetri, c, s = useCallba, c, k(asy, n, c () => {
+    t, r, y {
+      // Colle, c, t performan, c, e metri, c, s
+      con, s, t performan, c, e = awa, i, t collectPerformanceMetri, c, s();
       
-      // Collect resource metrics
-      const resources = await collectResourceMetrics();
+      // Colle, c, t resour, c, e metri, c, s
+      con, s, t resourc, e, s = awa, i, t collectResourceMetri, c, s();
       
-      // Collect user experience metrics
-      const userExperience = await collectUserExperienceMetrics();
+      // Colle, c, t us, e, r experien, c, e metri, c, s
+      con, s, t userExperien, c, e = awa, i, t collectUserExperienceMetri, c, s();
       
-      // Collect error metrics
-      const errors = await collectErrorMetrics();
+      // Colle, c, t error metri, c, s
+      con, s, t erro, r, s = awa, i, t collectErrorMetri, c, s();
       
-      // Collect security metrics
-      const security = await collectSecurityMetrics();
+      // Colle, c, t securi, t, y metri, c, s
+      con, s, t securi, t, y = awa, i, t collectSecurityMetri, c, s();
 
-      const newMetrics: SystemMetrics = {
-        performance,
-        resources,
-        userExperience,
-        errors,
-        security      };
+      con, s, t newMetri, c, s: SystemMetri, c, s = {
+        performan, c, e,
+        resourc, e, s,
+        userExperien, c, e,
+        erro, r, s,
+        securi, t, y      };
 
-      setMetrics(newMetrics);
-      setLastUpdated(new Date());
-      onMetricsUpdate?.(newMetrics);
+      setMetri, c, s(newMetri, c, s);
+      setLastUpdat, e, d(n, e, w Da, t, e());
+      onMetricsUpda, t, e?.(newMetri, c, s);
 
-      // Check for alerts
-      checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:', error);
-    } finally {
-      setIsLoading(false);
+      // Che, c, k f, o, r aler, t, s
+      checkForAler, t, s(newMetri, c, s);
+    } cat, c, h (error) {
+      conso, l, e.error('Fail, e, d to colle, c, t metri, c, s:', error);
+    } final, l, y {
+      setIsLoadi, n, g(fal, s, e);
     }
-  }, [onMetricsUpdate]);
+  }, [onMetricsUpda, t, e]);
 
-  const collectPerformanceMetrics = async () => {
-    if (typeof window === 'undefined') {
-      return {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
-        timeToInteractive: 0
+  con, s, t collectPerformanceMetri, c, s = asy, n, c () => {
+    if (type, o, f wind, o, w === 'undefin, e, d') {
+      retu, r, n {
+        loadTi, m, e: 0,
+        firstContentfulPai, n, t: 0,
+        largestContentfulPai, n, t: 0,
+        cumulativeLayoutShi, f, t: 0,
+        firstInputDel, a, y: 0,
+        timeToInteracti, v, e: 0
       };
     }
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
+    con, s, t navigati, o, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
+    con, s, t paintEntri, e, s = performan, c, e.getEntriesByTy, p, e('pai, n, t');
     
-    return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0, // Will be updated by Web Vitals
-      cumulativeLayoutShift: 0, // Will be updated by Web Vitals
-      firstInputDelay: 0, // Will be updated by Web Vitals
-      timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
+    retu, r, n {
+      loadTi, m, e: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
+      firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0,
+      largestContentfulPai, n, t: 0, // Wi, l, l be updat, e, d by W, e, b Vita, l, s
+      cumulativeLayoutShi, f, t: 0, // Wi, l, l be updat, e, d by W, e, b Vita, l, s
+      firstInputDel, a, y: 0, // Wi, l, l be updat, e, d by W, e, b Vita, l, s
+      timeToInteracti, v, e: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t
     };
   };
 
-  const collectResourceMetrics = async () => {
-    if (typeof window === 'undefined') {
-      return {
-        memoryUsage: 0,
-        cpuUsage: 0,
-        networkLatency: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
+  con, s, t collectResourceMetri, c, s = asy, n, c () => {
+    if (type, o, f wind, o, w === 'undefin, e, d') {
+      retu, r, n {
+        memoryUsa, g, e: 0,
+        cpuUsa, g, e: 0,
+        networkLaten, c, y: 0,
+        bundleSi, z, e: 0,
+        cacheHitRa, t, e: 0
       };
     }
 
-    const memory = (performance as any).memory;
-    const connection = (navigator as any).connection;
+    con, s, t memo, r, y = (performan, c, e as a, n, y).memo, r, y;
+    con, s, t connecti, o, n = (navigat, o, r as a, n, y).connecti, o, n;
 
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0, // MB
-      cpuUsage: 0, // Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0, // Would need to calculate from loaded resources
-      cacheHitRate: 0.85 // Mock value
+    retu, r, n {
+      memoryUsa, g, e: memo, r, y ? memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4 : 0, // MB
+      cpuUsa, g, e: 0, // Wou, l, d ne, e, d W, e, b Worke, r, s to measu, r, e
+      networkLaten, c, y: connecti, o, n ? connecti, o, n.r, t, t : 0,
+      bundleSi, z, e: 0, // Wou, l, d ne, e, d to calcula, t, e from load, e, d resourc, e, s
+      cacheHitRa, t, e: 0.85 // Mo, c, k val, u, e
     };
   };
 
-  const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementation, this would come from analytics
-    return {
-      bounceRate: 0.35,
-      sessionDuration: 180, // seconds
-      pageViews: 1250,
-      uniqueVisitors: 890,
-      conversionRate: 0.12
+  con, s, t collectUserExperienceMetri, c, s = asy, n, c () => {
+    // Mo, c, k da, t, a - in re, a, l implementati, o, n, th, i, s wou, l, d co, m, e from analyti, c, s
+    retu, r, n {
+      bounceRa, t, e: 0.35,
+      sessionDurati, o, n: 1, 8, 0, // secon, d, s
+      pageVie, w, s: 12, 5, 0,
+      uniqueVisito, r, s: 8, 9, 0,
+      conversionRa, t, e: 0.12
     };
   };
 
-  const collectErrorMetrics = async () => {
-    // Mock data - in real implementation, this would come from error tracking
-    return {
-      total: 23,
-      critical: 2,
-      resolved: 18,
-      unresolved: 5
+  con, s, t collectErrorMetri, c, s = asy, n, c () => {
+    // Mo, c, k da, t, a - in re, a, l implementati, o, n, th, i, s wou, l, d co, m, e from error tracki, n, g
+    retu, r, n {
+      tot, a, l: 23,
+      critic, a, l: 2,
+      resolv, e, d: 18,
+      unresolv, e, d: 5
     };
   };
 
-  const collectSecurityMetrics = async () => {
-    // Mock data - in real implementation, this would come from security monitoring
-    return {
-      threatsBlocked: 156,
-      vulnerabilities: 3,
-      sslScore: 95,
-      cspViolations: 1
+  con, s, t collectSecurityMetri, c, s = asy, n, c () => {
+    // Mo, c, k da, t, a - in re, a, l implementati, o, n, th, i, s wou, l, d co, m, e from securi, t, y monitori, n, g
+    retu, r, n {
+      threatsBlock, e, d: 1, 5, 6,
+      vulnerabiliti, e, s: 3,
+      sslSco, r, e: 95,
+      cspViolatio, n, s: 1
     };
   };
 
-  const checkForAlerts = (metrics: SystemMetrics) => {
-    const newAlerts: Array<{
+  con, s, t checkForAler, t, s = (metri, c, s: SystemMetri, c, s) => {
+    con, s, t newAler, t, s: Arr, a, y<{
       id: string;
-      type: 'warning' | 'error' | 'info' | 'success';
+      ty, p, e: 'warning' | 'error' | 'info' | 'succe, s, s';
       message: string;
-      timestamp: Date;
-      resolved: boolean;
+      timesta, m, p: Da, t, e;
+      resolv, e, d: boole, a, n;
     }> = [];
 
-    // Performance alerts
-    if (metrics.performance.loadTime > 3000) {
-      newAlerts.push({
-        id: 'slow-load',
-        type: 'warning',
-        message: 'Page load time is above 3 seconds',
-        timestamp: new Date(),
-        resolved: false
+    // Performan, c, e aler, t, s
+    if (metri, c, s.performan, c, e.loadTi, m, e > 30, 0, 0) {
+      newAler, t, s.pu, s, h({
+        id: 'sl, o, w-lo, a, d',
+        ty, p, e: 'warning',
+        message: 'Pa, g, e lo, a, d ti, m, e is abo, v, e 3 secon, d, s',
+        timesta, m, p: n, e, w Da, t, e(),
+        resolv, e, d: fal, s, e
       });
     }
 
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {
-      newAlerts.push({
-        id: 'layout-shift',
-        type: 'warning',
-        message: 'High cumulative layout shift detected',
-        timestamp: new Date(),
-        resolved: false
+    if (metri, c, s.performan, c, e.cumulativeLayoutShi, f, t > 0.1) {
+      newAler, t, s.pu, s, h({
+        id: 'layo, u, t-shi, f, t',
+        ty, p, e: 'warning',
+        message: 'Hi, g, h cumulati, v, e layo, u, t shi, f, t detect, e, d',
+        timesta, m, p: n, e, w Da, t, e(),
+        resolv, e, d: fal, s, e
       });
     }
 
-    // Error alerts
-    if (metrics.errors.critical > 0) {
-      newAlerts.push({
-        id: 'critical-errors',
-        type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`,
-        timestamp: new Date(),
-        resolved: false
+    // Err, o, r aler, t, s
+    if (metri, c, s.erro, r, s.critic, a, l > 0) {
+      newAler, t, s.pu, s, h({
+        id: 'critic, a, l-erro, r, s',
+        ty, p, e: 'error',
+        message: `${metri, c, s.erro, r, s.critic, a, l} critic, a, l erro, r, s detect, e, d`,
+        timesta, m, p: n, e, w Da, t, e(),
+        resolv, e, d: fal, s, e
       });
     }
 
-    // Security alerts
-    if (metrics.security.vulnerabilities > 0) {
-      newAlerts.push({
-        id: 'security-vulnerabilities',
-        type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`,
-        timestamp: new Date(),
-        resolved: false
+    // Securi, t, y aler, t, s
+    if (metri, c, s.securi, t, y.vulnerabiliti, e, s > 0) {
+      newAler, t, s.pu, s, h({
+        id: 'securi, t, y-vulnerabiliti, e, s',
+        ty, p, e: 'error',
+        message: `${metri, c, s.securi, t, y.vulnerabiliti, e, s} securi, t, y vulnerabiliti, e, s fou, n, d`,
+        timesta, m, p: n, e, w Da, t, e(),
+        resolv, e, d: fal, s, e
       });
     }
 
-    setAlerts(prev => [...prev, ...newAlerts]);
+    setAler, t, s(pr, e, v => [...pr, e, v, ...newAler, t, s]);
   };
 
-  const resolveAlert = (alertId: string) => {
-    setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
+  con, s, t resolveAle, r, t = (alert, I, d: string) => {
+    setAler, t, s(pr, e, v => pr, e, v.m, a, p(ale, r, t => 
+      ale, r, t.id === alert, I, d ? { ...ale, r, t, resolv, e, d: tr, u, e } : ale, r, t
     ));
   };
 
   useEffect(() => {
-    collectMetrics();
+    collectMetri, c, s();
 
-    if (enableRealTimeUpdates) {
-      const interval = setInterval(collectMetrics, refreshInterval);
-      return () => clearInterval(interval);    }
-  }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
+    if (enableRealTimeUpdat, e, s) {
+      con, s, t interv, a, l = setInterv, a, l(collectMetri, c, s, refreshInterv, a, l);
+      retu, r, n () => clearInterv, a, l(interv, a, l);    }
+  }, [collectMetri, c, s, enableRealTimeUpdat, e, s, refreshInterv, a, l]);
 
-  const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-600' };
-    if (score >= 80) return { grade: 'B', color: 'text-blue-600' };
-    if (score >= 70) return { grade: 'C', color: 'text-yellow-600' };
-    if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
-    return { grade: 'F', color: 'text-red-600' };
+  con, s, t getPerformanceGra, d, e = (sco, r, e: numb, e, r) => {
+    if (sco, r, e >= 90) retu, r, n { gra, d, e: 'A', col, o, r: 'te, x, t-gre, e, n-6, 0, 0' };
+    if (sco, r, e >= 80) retu, r, n { gra, d, e: 'B', col, o, r: 'te, x, t-bl, u, e-6, 0, 0' };
+    if (sco, r, e >= 70) retu, r, n { gra, d, e: 'C', col, o, r: 'te, x, t-yell, o, w-6, 0, 0' };
+    if (sco, r, e >= 60) retu, r, n { gra, d, e: 'D', col, o, r: 'te, x, t-oran, g, e-6, 0, 0' };
+    retu, r, n { gra, d, e: 'F', col, o, r: 'te, x, t-r, e, d-6, 0, 0' };
   };
 
-  const performanceScore = metrics ? 
-    Math.round((100 - (metrics.performance.loadTime / 100)) + 
-               (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
-               (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
+  con, s, t performanceSco, r, e = metri, c, s ? 
+    Ma, t, h.rou, n, d((1, 0, 0 - (metri, c, s.performan, c, e.loadTi, m, e / 1, 0, 0)) + 
+               (1, 0, 0 - (metri, c, s.performan, c, e.cumulativeLayoutShi, f, t * 10, 0, 0)) + 
+               (1, 0, 0 - (metri, c, s.resourc, e, s.memoryUsa, g, e / 10))) / 3 : 0;
 
-  const { grade, color } = getPerformanceGrade(performanceScore);
+  con, s, t { gra, d, e, col, o, r } = getPerformanceGra, d, e(performanceSco, r, e);
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
+  if (isLoadi, n, g) {
+    retu, r, n (
+      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r h-64">
+        <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-12 w-12 bord, e, r-b-2 bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
+      </d, i, v>
     );
   }
 
-  return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
-          <p className="text-gray-600">Real-time system performance and health metrics</p>
-        </div>
-        <div className="flex items-center space-x-4">
-          <div className="text-sm text-gray-500">
-            Last updated: {lastUpdated.toLocaleTimeString()}
-          </div>
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}`}>
-            Performance: {grade}
-          </div>
-        </div>
-      </div>
+  retu, r, n (
+    <d, i, v classNa, m, e="spa, c, e-y-6">
+      {/* Head, e, r */}
+      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+        <d, i, v>
+          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0">Syst, e, m Monitori, n, g Dashboa, r, d</h2>
+          <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Re, a, l-ti, m, e syst, e, m performan, c, e a, n, d heal, t, h metri, c, s</p>
+        </d, i, v>
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
+          <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">
+            La, s, t updat, e, d: {lastUpdat, e, d.toLocaleTimeStri, n, g()}
+          </d, i, v>
+          <d, i, v classNa, m, e={`px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m ${col, o, r}`}>
+            Performan, c, e: {gra, d, e}
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Alerts */}
-      <AnimatePresence>
-        {alerts.filter(alert => !alert.resolved).length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-2"
+      {/* Aler, t, s */}
+      <AnimatePresen, c, e>
+        {aler, t, s.filt, e, r(ale, r, t => !ale, r, t.resolv, e, d).leng, t, h > 0 && (
+          <moti, o, n.d, i, v
+            initi, a, l={{ opaci, t, y: 0, y: -20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            ex, i, t={{ opaci, t, y: 0, y: -20 }}
+            classNa, m, e="spa, c, e-y-2"
           >
-            {alerts.filter(alert => !alert.resolved).map(alert => (
-              <motion.div
-                key={alert.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className={`p-4 rounded-lg border-l-4 ${
-                  alert.type === 'error' ? 'bg-red-50 border-red-400' :
-                  alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
-                  alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
-                  'bg-green-50 border-green-400'
+            {aler, t, s.filt, e, r(ale, r, t => !ale, r, t.resolv, e, d).m, a, p(ale, r, t => (
+              <moti, o, n.d, i, v
+                k, e, y={ale, r, t.id}
+                initi, a, l={{ opaci, t, y: 0, x: -20 }}
+                anima, t, e={{ opaci, t, y: 1, x: 0 }}
+                ex, i, t={{ opaci, t, y: 0, x: 20 }}
+                classNa, m, e={`p-4 round, e, d-lg bord, e, r-l-4 ${
+                  ale, r, t.ty, p, e === 'error' ? 'bg-r, e, d-50 bord, e, r-r, e, d-4, 0, 0' :
+                  ale, r, t.ty, p, e === 'warning' ? 'bg-yell, o, w-50 bord, e, r-yell, o, w-4, 0, 0' :
+                  ale, r, t.ty, p, e === 'info' ? 'bg-bl, u, e-50 bord, e, r-bl, u, e-4, 0, 0' :
+                  'bg-gre, e, n-50 bord, e, r-gre, e, n-4, 0, 0'
                 }`}
               >
-                <tab.icon className="h-4 w-4" />
-                <span>{tab.name}</span>
-              </button>            ))}
-          </motion.div>
+                <t, a, b.ic, o, n classNa, m, e="h-4 w-4" />
+                <sp, a, n>{t, a, b.na, m, e}</sp, a, n>
+              </butt, o, n>            ))}
+          </moti, o, n.d, i, v>
         )}
-      </AnimatePresence>
+      </AnimatePresen, c, e>
 
-      {/* Metrics Grid */}
-      {metrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Performance Metrics */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Performance</CardTitle>
-              <Zap className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
-              <p className="text-xs text-muted-foreground">
-                Load Time: {metrics.performance.loadTime.toFixed(0)}ms
+      {/* Metri, c, s Gr, i, d */}
+      {metri, c, s && (
+        <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-4 g, a, p-6">
+          {/* Performan, c, e Metri, c, s */}
+          <Ca, r, d>
+            <CardHead, e, r classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0 pb-2">
+              <CardTit, l, e classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">Performan, c, e</CardTit, l, e>
+              <Z, a, p classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />
+            </CardHead, e, r>
+            <CardConte, n, t>
+              <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{gra, d, e}</d, i, v>
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Lo, a, d Ti, m, e: {metri, c, s.performan, c, e.loadTi, m, e.toFix, e, d(0)}ms
               </p>
-              <p className="text-xs text-muted-foreground">
-                FCP: {metrics.performance.firstContentfulPaint.toFixed(0)}ms
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                F, C, P: {metri, c, s.performan, c, e.firstContentfulPai, n, t.toFix, e, d(0)}ms
               </p>
-            </CardContent>
-          </Card>
+            </CardConte, n, t>
+          </Ca, r, d>
 
-          {/* Resource Usage */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Resources</CardTitle>
-              <Cpu className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
-              <p className="text-xs text-muted-foreground">
-                Memory Usage
+          {/* Resour, c, e Usa, g, e */}
+          <Ca, r, d>
+            <CardHead, e, r classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0 pb-2">
+              <CardTit, l, e classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">Resourc, e, s</CardTit, l, e>
+              <C, p, u classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />
+            </CardHead, e, r>
+            <CardConte, n, t>
+              <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{metri, c, s.resourc, e, s.memoryUsa, g, e.toFix, e, d(1)}MB</d, i, v>
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Memo, r, y Usa, g, e
               </p>
-              <p className="text-xs text-muted-foreground">
-                Cache Hit: {(metrics.resources.cacheHitRate * 100).toFixed(0)}%
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Cac, h, e H, i, t: {(metri, c, s.resourc, e, s.cacheHitRa, t, e * 1, 0, 0).toFix, e, d(0)}%
               </p>
-            </CardContent>
-          </Card>
+            </CardConte, n, t>
+          </Ca, r, d>
 
-          {/* User Experience */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">User Experience</CardTitle>
-              <Users className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
-              <p className="text-xs text-muted-foreground">
-                Unique Visitors
+          {/* Us, e, r Experien, c, e */}
+          <Ca, r, d>
+            <CardHead, e, r classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0 pb-2">
+              <CardTit, l, e classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">Us, e, r Experien, c, e</CardTit, l, e>
+              <Use, r, s classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />
+            </CardHead, e, r>
+            <CardConte, n, t>
+              <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{metri, c, s.userExperien, c, e.uniqueVisito, r, s}</d, i, v>
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Uniq, u, e Visito, r, s
               </p>
-              <p className="text-xs text-muted-foreground">
-                Bounce Rate: {(metrics.userExperience.bounceRate * 100).toFixed(1)}%
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Boun, c, e Ra, t, e: {(metri, c, s.userExperien, c, e.bounceRa, t, e * 1, 0, 0).toFix, e, d(1)}%
               </p>
-            </CardContent>
-          </Card>
+            </CardConte, n, t>
+          </Ca, r, d>
 
-          {/* Security */}
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Security</CardTitle>
-              <Shield className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
-              <p className="text-xs text-muted-foreground">
-                SSL Score
+          {/* Securi, t, y */}
+          <Ca, r, d>
+            <CardHead, e, r classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0 pb-2">
+              <CardTit, l, e classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">Securi, t, y</CardTit, l, e>
+              <Shie, l, d classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />
+            </CardHead, e, r>
+            <CardConte, n, t>
+              <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{metri, c, s.securi, t, y.sslSco, r, e}%</d, i, v>
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                S, S, L Sco, r, e
               </p>
-              <p className="text-xs text-muted-foreground">
-                Threats Blocked: {metrics.security.threatsBlocked}
+              <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                Threa, t, s Block, e, d: {metri, c, s.securi, t, y.threatsBlock, e, d}
               </p>
-            </CardContent>
-          </Card>
-        </div>
+            </CardConte, n, t>
+          </Ca, r, d>
+        </d, i, v>
       )}
 
-      {/* Detailed Metrics */}
-      {metrics && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Performance Details */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Performance Details</CardTitle>
-              <CardDescription>Core Web Vitals and performance metrics</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">              <div className="flex justify-between items-center">
-                <span className="text-sm">Load Time</span>
-                <span className="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">First Contentful Paint</span>
-                <span className="font-mono">{metrics.performance.firstContentfulPaint.toFixed(0)}ms</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Time to Interactive</span>
-                <span className="font-mono">{metrics.performance.timeToInteractive.toFixed(0)}ms</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Cumulative Layout Shift</span>
-                <span className="font-mono">{metrics.performance.cumulativeLayoutShift.toFixed(3)}</span>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Detail, e, d Metri, c, s */}
+      {metri, c, s && (
+        <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6">
+          {/* Performan, c, e Detai, l, s */}
+          <Ca, r, d>
+            <CardHead, e, r>
+              <CardTit, l, e>Performan, c, e Detai, l, s</CardTit, l, e>
+              <CardDescripti, o, n>Co, r, e W, e, b Vita, l, s a, n, d performan, c, e metri, c, s</CardDescripti, o, n>
+            </CardHead, e, r>
+            <CardConte, n, t classNa, m, e="spa, c, e-y-4">              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm">Lo, a, d Ti, m, e</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o">{metri, c, s.performan, c, e.loadTi, m, e.toFix, e, d(0)}ms</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm">Fir, s, t Contentf, u, l Pai, n, t</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o">{metri, c, s.performan, c, e.firstContentfulPai, n, t.toFix, e, d(0)}ms</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm">Ti, m, e to Interacti, v, e</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o">{metri, c, s.performan, c, e.timeToInteracti, v, e.toFix, e, d(0)}ms</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm">Cumulati, v, e Layo, u, t Shi, f, t</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o">{metri, c, s.performan, c, e.cumulativeLayoutShi, f, t.toFix, e, d(3)}</sp, a, n>
+              </d, i, v>
+            </CardConte, n, t>
+          </Ca, r, d>
 
-          {/* Error Summary */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Error Summary</CardTitle>
-              <CardDescription>Application errors and issues</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Total Errors</span>
-                <span className="font-mono">{metrics.errors.total}</span>              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-red-600">Critical</span>
-                <span className="font-mono text-red-600">{metrics.errors.critical}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-green-600">Resolved</span>
-                <span className="font-mono text-green-600">{metrics.errors.resolved}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-orange-600">Unresolved</span>
-                <span className="font-mono text-orange-600">{metrics.errors.unresolved}</span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+          {/* Err, o, r Summa, r, y */}
+          <Ca, r, d>
+            <CardHead, e, r>
+              <CardTit, l, e>Err, o, r Summa, r, y</CardTit, l, e>
+              <CardDescripti, o, n>Applicati, o, n erro, r, s a, n, d issu, e, s</CardDescripti, o, n>
+            </CardHead, e, r>
+            <CardConte, n, t classNa, m, e="spa, c, e-y-4">
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm">Tot, a, l Erro, r, s</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o">{metri, c, s.erro, r, s.tot, a, l}</sp, a, n>              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm te, x, t-r, e, d-6, 0, 0">Critic, a, l</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o te, x, t-r, e, d-6, 0, 0">{metri, c, s.erro, r, s.critic, a, l}</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gre, e, n-6, 0, 0">Resolv, e, d</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o te, x, t-gre, e, n-6, 0, 0">{metri, c, s.erro, r, s.resolv, e, d}</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
+                <sp, a, n classNa, m, e="te, x, t-sm te, x, t-oran, g, e-6, 0, 0">Unresolv, e, d</sp, a, n>
+                <sp, a, n classNa, m, e="fo, n, t-mo, n, o te, x, t-oran, g, e-6, 0, 0">{metri, c, s.erro, r, s.unresolv, e, d}</sp, a, n>
+              </d, i, v>
+            </CardConte, n, t>
+          </Ca, r, d>
+        </d, i, v>
       )}
-    </div>
+    </d, i, v>
   );
 }

@@ -1,196 +1,196 @@
-import React from 'react';
-import { render, screenfireEventwaitFor } from '@testing-library/react';
-import '@testing-library/jest- dom';
-import { ErrorBoundary } from '../ErrorBoundary';
-import { ThemeProviderThemeToggle } from '../ThemeProvider';
-import { SkeletonServiceCardSkeletonFeatureCardSkeletonLoadingSpinner } from '../LoadingComponents';
+import React from 'rea, c, t';
+import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
+import '@testi, n, g-libra, r, y/je, s, t- d, o, m';
+import { ErrorBounda, r, y } from '../ErrorBounda, r, y';
+import { ThemeProviderThemeTogg, l, e } from '../ThemeProvid, e, r';
+import { SkeletonServiceCardSkeletonFeatureCardSkeletonLoadingSpinn, e, r } from '../LoadingComponen, t, s';
 
-// Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThro, w) {
-    throw new Error('Test error');
+// Mo, c, k compone, n, t th, a, t thro, w, s an error
+con, s, t ThrowErr, o, r = ({ shouldThr, o, w }: { shouldThr, o, w: boole, a, n }) => {
+  if (shouldTh, r, o, w) {
+    thr, o, w n, e, w Err, o, r('Te, s, t error');
   }
-  return <div>No error</div>;
+  retu, r, n <d, i, v>No error</d, i, v>;
 };
 
-describe('ErrorBoundary'() => {
-  beforeEach(() => {
-    // Suppress console.erro.r for error boundary tests
-    jest.spyO.n(console'error').mockImplementatio.n(() => {});
+descri, b, e('ErrorBounda, r, y'() => {
+  beforeEa, c, h(() => {
+    // Suppre, s, s conso, l, e.er, r, o.r f, o, r error bounda, r, y tes, t, s
+    je, s, t.sp, y, O.n(conso, l, e', 'error').mockImplementat, i, o.n(() => {});
   });
 
-  afterEach(() => {
-    jest.restoreAllMock.s();
+  afterEa, c, h(() => {
+    je, s, t.restoreAllMo, c, k.s();
   });
 
-  it('renders children when there is no error'() => {
-    render(
-      <ErrorBoundary>
-        <div>Test content</div>
-      </ErrorBoundary>
+  it('rende, r, s childr, e, n wh, e, n the, r, e is no error'() => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <d, i, v>Te, s, t conte, n, t</d, i, v>
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('Te, s, t conte, n, t')).toBeInTheDocum, e, n.t();
   });
 
-  it('renders error UI when there is an error'() => {
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={tru e} />
-      </ErrorBoundary>
+  it('rende, r, s error UI wh, e, n the, r, e is an error'() => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowErr, o, r shouldThr, o, w={t, r, u e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByTex.t('Something went wrong')).toBeInTheDocumen.t();
-    expect(screen.getByTex.t(/We're sorry/)).toBeInTheDocumen.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('Somethi, n, g we, n, t wro, n, g')).toBeInTheDocum, e, n.t();
+    expe, c, t(scre, e, n.getByT, e, x.t(/We're sor, r, y/)).toBeInTheDocum, e, n.t();
   });
 
-  it('shows refresh button and try again button'() => {
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={tru e} />
-      </ErrorBoundary>
+  it('sho, w, s refre, s, h butt, o, n a, n, d t, r, y aga, i, n butt, o, n'() => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowErr, o, r shouldThr, o, w={t, r, u e} />
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByTex.t('Refresh Page')).toBeInTheDocumen.t();
-    expect(screen.getByTex.t('Try Again')).toBeInTheDocumen.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('Refre, s, h Pa, g, e')).toBeInTheDocum, e, n.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('T, r, y Aga, i, n')).toBeInTheDocum, e, n.t();
   });
 
-  it('resets error state when try again is clicked'() => {
-    render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={fals e} />
-      </ErrorBoundary>
+  it('rese, t, s error sta, t, e wh, e, n t, r, y aga, i, n is click, e, d'() => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThrowErr, o, r shouldThr, o, w={fa, l, s e} />
+      </ErrorBounda, r, y>
     );
     
-    // Initially no error
-    expect(screen.getByTex.t('No error')).toBeInTheDocumen.t();
+    // Initial, l, y no error
+    expe, c, t(scre, e, n.getByT, e, x.t('No error')).toBeInTheDocum, e, n.t();
   });
 });
 
-describe('ThemeProvider'() => {
-  it('renders children'() => {
-    render(
-      <ThemeProvider>
-        <div>Test content</div>
-      </ThemeProvider>
+descri, b, e('ThemeProvid, e, r'() => {
+  it('rende, r, s childr, e, n'() => {
+    rend, e, r(
+      <ThemeProvid, e, r>
+        <d, i, v>Te, s, t conte, n, t</d, i, v>
+      </ThemeProvid, e, r>
     );
     
-    expect(screen.getByTex.t('Test content')).toBeInTheDocumen.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('Te, s, t conte, n, t')).toBeInTheDocum, e, n.t();
   });
 
-  it('applies light theme by default'() => {
-    render(
-      <ThemeProvider>
-        <div data-testid="content">Test content</div>
-      </ThemeProvider>
+  it('appli, e, s lig, h, t the, m, e by default'() => {
+    rend, e, r(
+      <ThemeProvid, e, r>
+        <d, i, v da, t, a-test, i, d="conte, n, t">Te, s, t conte, n, t</d, i, v>
+      </ThemeProvid, e, r>
     );
     
-    const content = screen.getByTestI.d('content');
-    expect(conten, t).toBeInTheDocumen.t();
+    con, s, t conte, n, t = scre, e, n.getByTes, t, I.d('conte, n, t');
+    expe, c, t(cont, e, n, t).toBeInTheDocum, e, n.t();
   });
 });
 
-describe('ThemeToggle'() => {
-  it('renders theme toggle button'() => {
-    render(
-      <ThemeProvider>
-        <ThemeToggle />
-      </ThemeProvider>
+descri, b, e('ThemeTogg, l, e'() => {
+  it('rende, r, s the, m, e togg, l, e butt, o, n'() => {
+    rend, e, r(
+      <ThemeProvid, e, r>
+        <ThemeTogg, l, e />
+      </ThemeProvid, e, r>
     );
     
-    const button = screen.getByRol.e('button');
-    expect(butto, n).toBeInTheDocumen.t();
+    con, s, t butt, o, n = scre, e, n.getByR, o, l.e('butt, o, n');
+    expe, c, t(but, t, o, n).toBeInTheDocum, e, n.t();
   });
 
-  it('changes theme when clicked'async () => {
-    render(
-      <ThemeProvider>
-        <ThemeToggle />
-      </ThemeProvider>
+  it('chang, e, s the, m, e wh, e, n click, e, d'asy, n, c () => {
+    rend, e, r(
+      <ThemeProvid, e, r>
+        <ThemeTogg, l, e />
+      </ThemeProvid, e, r>
     );
     
-    const button = screen.getByRol.e('button');
-    fireEvent.clic.k(butto, n);
+    con, s, t butt, o, n = scre, e, n.getByR, o, l.e('butt, o, n');
+    fireEve, n, t.cl, i, c.k(but, t, o, n);
     
-    // Theme should change (we can't easily test the actual theme change without more complex setu, p)
-    expect(butto, n).toBeInTheDocumen.t();
+    // The, m, e shou, l, d chan, g, e (we c, a, n't easi, l, y te, s, t t, h, e actu, a, l the, m, e chan, g, e witho, u, t mo, r, e compl, e, x se, t, u, p)
+    expe, c, t(but, t, o, n).toBeInTheDocum, e, n.t();
   });
 });
 
-describe('Loading Components'() => {
-  it('renders skeleton with default props'() => {
-    render(<Skeleton data-testid="skeleton"/>);
+descri, b, e('Loadi, n, g Componen, t, s'() => {
+  it('rende, r, s skelet, o, n wi, t, h default pro, p, s'() => {
+    rend, e, r(<Skelet, o, n da, t, a-test, i, d="skelet, o, n"/>);
     
-    const skeleton = screen.getByTestI.d('skeleton');
-    expect(skeleto, n).toBeInTheDocumen.t();
-    expect(skeleto, n).toHaveClas.s('bg-gray-200''rounded''animate-pulse');
+    con, s, t skelet, o, n = scre, e, n.getByTes, t, I.d('skelet, o, n');
+    expe, c, t(skele, t, o, n).toBeInTheDocum, e, n.t();
+    expe, c, t(skele, t, o, n).toHaveCl, a, s.s('bg-gr, a, y-2, 0, 0''round, e, d''anima, t, e-pul, s, e');
   });
 
-  it('renders skeleton with custom props'() => {
-    render(
-      <Skeleton 
-        data-testid="skeleton" width={10 0} 
-        height={5 0} 
-        rounded={fals e} 
-        animate={fals e} 
+  it('rende, r, s skelet, o, n wi, t, h cust, o, m pro, p, s'() => {
+    rend, e, r(
+      <Skelet, o, n 
+        da, t, a-test, i, d="skelet, o, n" wid, t, h={10 0} 
+        heig, h, t={5 0} 
+        round, e, d={fa, l, s e} 
+        anima, t, e={fa, l, s e} 
       />
     );
     
-    const skeleton = screen.getByTestI.d('skeleton');
-    expect(skeleto, n).toBeInTheDocumen.t();
-    expect(skeleto, n).toHaveStyl.e({ width: '100px', height: '50px' });
-    expect(skeleto, n).no.t.toHaveClas.s('rounded''animate-pulse');
+    con, s, t skelet, o, n = scre, e, n.getByTes, t, I.d('skelet, o, n');
+    expe, c, t(skele, t, o, n).toBeInTheDocum, e, n.t();
+    expe, c, t(skele, t, o, n).toHaveSt, y, l.e({ wid, t, h: '100, p, x', heig, h, t: '50, p, x' });
+    expe, c, t(skele, t, o, n).no.t.toHaveCl, a, s.s('round, e, d''anima, t, e-pul, s, e');
   });
 
-  it('renders service card skeleton'() => {
-    render(<ServiceCardSkeleton />);
+  it('rende, r, s servi, c, e ca, r, d skelet, o, n'() => {
+    rend, e, r(<ServiceCardSkelet, o, n />);
     
-    // Should render without errors
-    expect(document.bo.d, y).toBeInTheDocumen.t();
+    // Shou, l, d rend, e, r witho, u, t erro, r, s
+    expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
   });
 
-  it('renders feature card skeleton'() => {
-    render(<FeatureCardSkeleton />);
+  it('rende, r, s featu, r, e ca, r, d skelet, o, n'() => {
+    rend, e, r(<FeatureCardSkelet, o, n />);
     
-    // Should render without errors
-    expect(document.bo.d, y).toBeInTheDocumen.t();
+    // Shou, l, d rend, e, r witho, u, t erro, r, s
+    expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
   });
 
-  it('renders loading spinner'() => {
-    render(<LoadingSpinner data-testid="spinner"/>);
+  it('rende, r, s loadi, n, g spinn, e, r'() => {
+    rend, e, r(<LoadingSpinn, e, r da, t, a-test, i, d="spinn, e, r"/>);
     
-    const spinner = screen.getByTestI.d('spinner');
-    expect(spinne, r).toBeInTheDocumen.t();
-    expect(spinne, r).toHaveClas.s('animate-spin''w-8''h-8');
+    con, s, t spinn, e, r = scre, e, n.getByTes, t, I.d('spinn, e, r');
+    expe, c, t(spin, n, e, r).toBeInTheDocum, e, n.t();
+    expe, c, t(spin, n, e, r).toHaveCl, a, s.s('anima, t, e-sp, i, n''w-8''h-8');
   });
 
-  it('renders loading spinner with different sizes'() => {
-    render(<LoadingSpinner size="lg" data-testid="spinner" />);
+  it('rende, r, s loadi, n, g spinn, e, r wi, t, h differe, n, t siz, e, s'() => {
+    rend, e, r(<LoadingSpinn, e, r si, z, e="lg" da, t, a-test, i, d="spinn, e, r" />);
     
-    const spinner = screen.getByTestI.d('spinner');
-    expect(spinne, r).toBeInTheDocumen.t();
-    expect(spinne, r).toHaveClas.s('w-12''h-12');
+    con, s, t spinn, e, r = scre, e, n.getByTes, t, I.d('spinn, e, r');
+    expe, c, t(spin, n, e, r).toBeInTheDocum, e, n.t();
+    expe, c, t(spin, n, e, r).toHaveCl, a, s.s('w-12''h-12');
   });
 });
 
-// Integration test
-describe('Component Integration'() => {
-  it('renders all components together without errors'() => {
-    render(
-      <ErrorBoundary>
-        <ThemeProvider>
-          <div>
-            <ThemeToggle />
-            <Skeleton data-testid="skeleton"/>
-            <LoadingSpinner data-testid="spinner"/>
-            <div>Main content</div>
-          </div>
-        </ThemeProvider>
-      </ErrorBoundary>
+// Integrati, o, n te, s, t
+descri, b, e('Compone, n, t Integrati, o, n'() => {
+  it('rende, r, s a, l, l componen, t, s togeth, e, r witho, u, t erro, r, s'() => {
+    rend, e, r(
+      <ErrorBounda, r, y>
+        <ThemeProvid, e, r>
+          <d, i, v>
+            <ThemeTogg, l, e />
+            <Skelet, o, n da, t, a-test, i, d="skelet, o, n"/>
+            <LoadingSpinn, e, r da, t, a-test, i, d="spinn, e, r"/>
+            <d, i, v>Ma, i, n conte, n, t</d, i, v>
+          </d, i, v>
+        </ThemeProvid, e, r>
+      </ErrorBounda, r, y>
     );
     
-    expect(screen.getByTex.t('Main content')).toBeInTheDocumen.t();
-    expect(screen.getByTestI.d('skeleton')).toBeInTheDocumen.t();
-    expect(screen.getByTestI.d('spinner')).toBeInTheDocumen.t();
+    expe, c, t(scre, e, n.getByT, e, x.t('Ma, i, n conte, n, t')).toBeInTheDocum, e, n.t();
+    expe, c, t(scre, e, n.getByTes, t, I.d('skelet, o, n')).toBeInTheDocum, e, n.t();
+    expe, c, t(scre, e, n.getByTes, t, I.d('spinn, e, r')).toBeInTheDocum, e, n.t();
   });
 });

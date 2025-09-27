@@ -1,174 +1,174 @@
 /**
- * Performance optimization utilities
- * Provides various performance enhancement functions
+ * Performan, c, e optimizati, o, n utiliti, e, s
+ * Provid, e, s vario, u, s performan, c, e enhanceme, n, t functio, n, s
  */
 
-// Image optimization utilities
-export const optimizeImage = (src: string, width?: number, height?: number, quality: number = 75): string => {
-  if (!src) return '';
+// Ima, g, e optimizati, o, n utiliti, e, s
+export con, s, t optimizeIma, g, e = (s, r, c: string, wid, t, h?: numb, e, r, heig, h, t?: numb, e, r, quali, t, y: numb, e, r = 75): string => {
+  if (!s, r, c) retu, r, n '';
   
-  // If it's already an optimized URL, return as is
-  if (src.includes('_next/static') || src.includes('data:')) {
-    return src;
+  // If it's alrea, d, y an optimiz, e, d U, R, L, retu, r, n as is
+  if (s, r, c.includ, e, s('_ne, x, t/stat, i, c') || s, r, c.includ, e, s('da, t, a:')) {
+    retu, r, n s, r, c;
   }
   
-  // For external images, you might want to use a service like Cloudinary or Next.js Image
-  return src;
+  // F, o, r extern, a, l imag, e, s, y, o, u mig, h, t wa, n, t to u, s, e a servi, c, e li, k, e Cloudina, r, y or Ne, x, t.js Ima, g, e
+  retu, r, n s, r, c;
 };
 
-// Lazy loading utility
-export const createIntersectionObserver = (
-  callback: IntersectionObserverCallback,
-  options: IntersectionObserverInit = {}
-): IntersectionObserver | null => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return null;
+// La, z, y loadi, n, g utili, t, y
+export con, s, t createIntersectionObserv, e, r = (
+  callba, c, k: IntersectionObserverCallba, c, k,
+  optio, n, s: IntersectionObserverIn, i, t = {}
+): IntersectionObserv, e, r | nu, l, l => {
+  if (type, o, f wind, o, w === 'undefin, e, d' || !('IntersectionObserv, e, r' in wind, o, w)) {
+    retu, r, n nu, l, l;
   }
   
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,
-    ...options
+  retu, r, n n, e, w IntersectionObserv, e, r(callba, c, k, {
+    rootMarg, i, n: '50, p, x',
+    thresho, l, d: 0.1,
+    ...optio, n, s
   });
 };
 
-// Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+// Deboun, c, e utili, t, y f, o, r performan, c, e
+export con, s, t deboun, c, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(
+  fu, n, c: T,
+  wa, i, t: numb, e, r
+): ((...ar, g, s: Paramete, r, s<T>) => vo, i, d) => {
+  l, e, t timeo, u, t: Node, J, S.Timeo, u, t;
   
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+  retu, r, n (...ar, g, s: Paramete, r, s<T>) => {
+    clearTimeo, u, t(timeo, u, t);
+    timeo, u, t = setTimeo, u, t(() => fu, n, c(...ar, g, s), wa, i, t);
   };
 };
 
-// Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+// Thrott, l, e utili, t, y f, o, r performan, c, e
+export con, s, t thrott, l, e = <T exten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(
+  fu, n, c: T,
+  lim, i, t: numb, e, r
+): ((...ar, g, s: Paramete, r, s<T>) => vo, i, d) => {
+  l, e, t inThrott, l, e: boole, a, n;
   
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+  retu, r, n (...ar, g, s: Paramete, r, s<T>) => {
+    if (!inThrott, l, e) {
+      fu, n, c(...ar, g, s);
+      inThrott, l, e = tr, u, e;
+      setTimeo, u, t(() => (inThrott, l, e = fal, s, e), lim, i, t);
     }
   };
 };
 
-// Memory usage monitoring
-export const getMemoryUsage = (): {
-  used: number;
-  total: number;
-  percentage: number;
-} | null => {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null;
+// Memo, r, y usa, g, e monitori, n, g
+export con, s, t getMemoryUsa, g, e = (): {
+  us, e, d: numb, e, r;
+  tot, a, l: numb, e, r;
+  percenta, g, e: numb, e, r;
+} | nu, l, l => {
+  if (type, o, f wind, o, w === 'undefin, e, d' || !('memo, r, y' in performan, c, e)) {
+    retu, r, n nu, l, l;
   }
   
-  const memory = (performance as any).memory;
-  const used = memory.usedJSHeapSize;
-  const total = memory.totalJSHeapSize;
-  const percentage = (used / total) * 100;
+  con, s, t memo, r, y = (performan, c, e as a, n, y).memo, r, y;
+  con, s, t us, e, d = memo, r, y.usedJSHeapSi, z, e;
+  con, s, t tot, a, l = memo, r, y.totalJSHeapSi, z, e;
+  con, s, t percenta, g, e = (us, e, d / tot, a, l) * 1, 0, 0;
   
-  return { used, total, percentage };
+  retu, r, n { us, e, d, tot, a, l, percenta, g, e };
 };
 
-// Bundle size analyzer
-export const analyzeBundleSize = (): void => {
-  if (typeof window === 'undefined') return;
+// Bund, l, e si, z, e analyz, e, r
+export con, s, t analyzeBundleSi, z, e = (): vo, i, d => {
+  if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
   
-  const scripts = document.querySelectorAll('script[src]');
-  let totalSize = 0;
+  con, s, t scrip, t, s = docume, n, t.querySelectorA, l, l('scri, p, t[s, r, c]');
+  l, e, t totalSi, z, e = 0;
   
-  scripts.forEach(script => {
-    const src = script.getAttribute('src');
-    if (src && src.includes('_next/static')) {
-      // This is a simplified check - in reality you'd need to fetch and measure
-      console.log(`Script: ${src}`);
+  scrip, t, s.forEa, c, h(scri, p, t => {
+    con, s, t s, r, c = scri, p, t.getAttribu, t, e('s, r, c');
+    if (s, r, c && s, r, c.includ, e, s('_ne, x, t/stat, i, c')) {
+      // Th, i, s is a simplifi, e, d che, c, k - in reali, t, y y, o, u'd ne, e, d to fet, c, h a, n, d measu, r, e
+      conso, l, e.l, o, g(`Scri, p, t: ${s, r, c}`);
     }
   });
   
-  console.log(`Total scripts loaded: ${scripts.length}`);
+  conso, l, e.l, o, g(`Tot, a, l scrip, t, s load, e, d: ${scrip, t, s.leng, t, h}`);
 };
 
-// Preload critical resources
-export const preloadCriticalResources = (): void => {
-  if (typeof window === 'undefined') return;
+// Prelo, a, d critic, a, l resourc, e, s
+export con, s, t preloadCriticalResourc, e, s = (): vo, i, d => {
+  if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
   
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/images/hero-bg.webp',
-    '/images/logo.svg'
+  con, s, t criticalResourc, e, s = [
+    '/fon, t, s/int, e, r.wof, f, 2',
+    '/imag, e, s/he, r, o-bg.we, b, p',
+    '/imag, e, s/lo, g, o.s, v, g'
   ];
   
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+  criticalResourc, e, s.forEa, c, h(resour, c, e => {
+    con, s, t li, n, k = docume, n, t.createEleme, n, t('li, n, k');
+    li, n, k.r, e, l = 'prelo, a, d';
+    li, n, k.hr, e, f = resour, c, e;
+    li, n, k.as = resour, c, e.endsWi, t, h('.wof, f, 2') ? 'fo, n, t' : 'ima, g, e';
+    if (resour, c, e.endsWi, t, h('.wof, f, 2')) {
+      li, n, k.crossOrig, i, n = 'anonymo, u, s';
     }
-    document.head.appendChild(link);
+    docume, n, t.he, a, d.appendChi, l, d(li, n, k);
   });
 };
 
-// Service Worker registration for caching
-export const registerServiceWorker = async (): Promise<void> => {
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return;
+// Servi, c, e Work, e, r registrati, o, n f, o, r cachi, n, g
+export con, s, t registerServiceWork, e, r = asy, n, c (): Promi, s, e<vo, i, d> => {
+  if (type, o, f wind, o, w === 'undefin, e, d' || !('serviceWork, e, r' in navigat, o, r)) {
+    retu, r, n;
   }
   
-  try {
-    const registration = await navigator.serviceWorker.register('/sw.js');
-    console.log('Service Worker registered successfully:', registration);
-  } catch (error) {
-    console.error('Service Worker registration failed:', error);
+  t, r, y {
+    con, s, t registrati, o, n = awa, i, t navigat, o, r.serviceWork, e, r.regist, e, r('/sw.js');
+    conso, l, e.l, o, g('Servi, c, e Work, e, r register, e, d successful, l, y:', registrati, o, n);
+  } cat, c, h (error) {
+    conso, l, e.error('Servi, c, e Work, e, r registrati, o, n fail, e, d:', error);
   }
 };
 
-// Performance monitoring
-export const monitorPerformance = (): void => {
-  if (typeof window === 'undefined') return;
+// Performan, c, e monitori, n, g
+export con, s, t monitorPerforman, c, e = (): vo, i, d => {
+  if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
   
-  // Monitor Core Web Vitals
-  const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => {
-      if (entry.entryType === 'largest-contentful-paint') {
-        console.log('LCP:', entry.startTime);
-      } else if (entry.entryType === 'first-input') {
-        console.log('FID:', (entry as any).processingStart - entry.startTime);
-      } else if (entry.entryType === 'layout-shift') {
-        console.log('CLS:', (entry as any).value);
+  // Monit, o, r Co, r, e W, e, b Vita, l, s
+  con, s, t observ, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
+    li, s, t.getEntri, e, s().forEa, c, h((ent, r, y) => {
+      if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pai, n, t') {
+        conso, l, e.l, o, g('L, C, P:', ent, r, y.startTi, m, e);
+      } el, s, e if (ent, r, y.entryTy, p, e === 'fir, s, t-inp, u, t') {
+        conso, l, e.l, o, g('F, I, D:', (ent, r, y as a, n, y).processingSta, r, t - ent, r, y.startTi, m, e);
+      } el, s, e if (ent, r, y.entryTy, p, e === 'layo, u, t-shi, f, t') {
+        conso, l, e.l, o, g('C, L, S:', (ent, r, y as a, n, y).val, u, e);
       }
     });
   });
   
-  observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+  observ, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'] });
 };
 
-// Resource hints
-export const addResourceHints = (): void => {
-  if (typeof window === 'undefined') return;
+// Resour, c, e hin, t, s
+export con, s, t addResourceHin, t, s = (): vo, i, d => {
+  if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
   
-  const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+  con, s, t hin, t, s = [
+    { r, e, l: 'd, n, s-prefet, c, h', hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m' },
+    { r, e, l: 'd, n, s-prefet, c, h', hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m' },
+    { r, e, l: 'preconne, c, t', hr, e, f: 'htt, p, s://fon, t, s.googleap, i, s.c, o, m' },
+    { r, e, l: 'preconne, c, t', hr, e, f: 'htt, p, s://fon, t, s.gstat, i, c.c, o, m', crossorig, i, n: 'anonymo, u, s' }
   ];
   
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    Object.entries(hint).forEach(([key, value]) => {
-      link.setAttribute(key, value as string);
+  hin, t, s.forEa, c, h(hi, n, t => {
+    con, s, t li, n, k = docume, n, t.createEleme, n, t('li, n, k');
+    Obje, c, t.entri, e, s(hi, n, t).forEa, c, h(([k, e, y, val, u, e]) => {
+      li, n, k.setAttribu, t, e(k, e, y, val, u, e as string);
     });
-    document.head.appendChild(link);
+    docume, n, t.he, a, d.appendChi, l, d(li, n, k);
   });
 };

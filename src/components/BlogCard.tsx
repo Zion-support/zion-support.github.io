@@ -1,91 +1,91 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'rea, c, t';
+import Ima, g, e from 'ne, x, t/ima, g, e';
 
-interface BlogPost {
+interface BlogPo, s, t {
   id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  image: string;
-  slug: string;
+  tit, l, e: string;
+  excer, p, t: string;
+  auth, o, r: string;
+  da, t, e: string;
+  readTi, m, e: string;
+  catego, r, y: string;
+  ima, g, e: string;
+  sl, u, g: string;
 }
 
-interface BlogCardProps {
-  post: BlogPost;
-  isVisible: boolean;
-  onReadMore: (slug: string) => void;
+interface BlogCardPro, p, s {
+  po, s, t: BlogPo, s, t;
+  isVisib, l, e: boole, a, n;
+  onReadMo, r, e: (sl, u, g: string) => vo, i, d;
 }
 
-export const BlogCard: React.FC<BlogCardProps> = ({ 
-  post, 
-  isVisible, 
-  onReadMore 
+export con, s, t BlogCa, r, d: React.FC<BlogCardPro, p, s> = ({ 
+  po, s, t, 
+  isVisib, l, e, 
+  onReadMo, r, e 
 }) => {
-  return (
-    <article 
-      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+  retu, r, n (
+    <artic, l, e 
+      classNa, m, e={`gro, u, p bg-whi, t, e round, e, d-2, x, l shad, o, w-lg hov, e, r:shad, o, w-2, x, l transiti, o, n-a, l, l durati, o, n-5, 0, 0 overfl, o, w-hidd, e, n hov, e, r-li, f, t ${
+        isVisib, l, e ? 'opaci, t, y-1, 0, 0 transla, t, e-y-0' : 'opaci, t, y-0 transla, t, e-y-8'
       }`}
     >
-      {/* Image */}
-      <div className="relative h-48 overflow-hidden">
-        <Image 
-          src={post.image} 
-          alt={post.title}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
+      {/* Ima, g, e */}
+      <d, i, v classNa, m, e="relati, v, e h-48 overfl, o, w-hidd, e, n">
+        <Ima, g, e 
+          s, r, c={po, s, t.ima, g, e} 
+          a, l, t={po, s, t.tit, l, e}
+          fi, l, l
+          classNa, m, e="obje, c, t-cov, e, r gro, u, p-hov, e, r:sca, l, e-1, 1, 0 transiti, o, n-transfo, r, m durati, o, n-5, 0, 0"
         />
-        <div className="absolute top-4 left-4">
-          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-            {post.category}
-          </span>
-        </div>
-      </div>
+        <d, i, v classNa, m, e="absolu, t, e t, o, p-4 le, f, t-4">
+          <sp, a, n classNa, m, e="bg-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-3 py-1 round, e, d-fu, l, l te, x, t-sm fo, n, t-medi, u, m">
+            {po, s, t.catego, r, y}
+          </sp, a, n>
+        </d, i, v>
+      </d, i, v>
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2" id="posttitle">
-          {post.title}
+      {/* Conte, n, t */}
+      <d, i, v classNa, m, e="p-6">
+        <h3 classNa, m, e="te, x, t-xl fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0 mb-3 gro, u, p-hov, e, r:te, x, t-bl, u, e-6, 0, 0 transiti, o, n-colo, r, s durati, o, n-3, 0, 0 li, n, e-cla, m, p-2" id="posttit, l, e">
+          {po, s, t.tit, l, e}
         </h3>
         
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {post.excerpt}
+        <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 mb-4 li, n, e-cla, m, p-3">
+          {po, s, t.excer, p, t}
         </p>
 
-        {/* Meta */}
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <div className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">
-              {post.author.charAt(0)}
-            </div>
-            <span>{post.author}</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span>{post.date}</span>
-            <span>•</span>
-            <span>{post.readTime}</span>
-          </div>
-        </div>
+        {/* Me, t, a */}
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n te, x, t-sm te, x, t-gr, a, y-5, 0, 0 mb-4">
+          <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
+            <d, i, v classNa, m, e="w-8 h-8 bg-gradie, n, t-to-br from-bl, u, e-5, 0, 0 to-purp, l, e-6, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r te, x, t-whi, t, e fo, n, t-bo, l, d te, x, t-xs mr-3">
+              {po, s, t.auth, o, r.char, A, t(0)}
+            </d, i, v>
+            <sp, a, n>{po, s, t.auth, o, r}</sp, a, n>
+          </d, i, v>
+          <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
+            <sp, a, n>{po, s, t.da, t, e}</sp, a, n>
+            <sp, a, n>•</sp, a, n>
+            <sp, a, n>{po, s, t.readTi, m, e}</sp, a, n>
+          </d, i, v>
+        </d, i, v>
 
-        {/* Read More Button */}
-        <button
-          onClick={() => onReadMore(post.slug)}
-          className="group/btn inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
+        {/* Re, a, d Mo, r, e Butt, o, n */}
+        <butt, o, n
+          onCli, c, k={() => onReadMo, r, e(po, s, t.sl, u, g)}
+          classNa, m, e="gro, u, p/b, t, n inli, n, e-fl, e, x ite, m, s-cent, e, r te, x, t-bl, u, e-6, 0, 0 fo, n, t-semibo, l, d hov, e, r:te, x, t-bl, u, e-7, 0, 0 transiti, o, n-colo, r, s durati, o, n-3, 0, 0"
         >
-          Read More
-          <svg 
-            className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
+          Re, a, d Mo, r, e
+          <s, v, g 
+            classNa, m, e="w-4 h-4 ml-2 gro, u, p-hov, e, r/b, t, n:transla, t, e-x-1 transiti, o, n-transfo, r, m durati, o, n-3, 0, 0" 
+            fi, l, l="no, n, e" 
+            stro, k, e="currentCol, o, r" 
+            viewB, o, x="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </button>
-      </div>
-    </article>
+            <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 7 8, l, 4 4, m, 0 0l-4 4, m, 4-4, H, 3" />
+          </s, v, g>
+        </butt, o, n>
+      </d, i, v>
+    </artic, l, e>
   );
 };

@@ -1,151 +1,151 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallba, c, k } from 'rea, c, t';
 
-interface CacheItem<T> {
-  data: T;
-  timestamp: number;
-  expiresAt: number;
+interface CacheIt, e, m<T> {
+  da, t, a: T;
+  timesta, m, p: numb, e, r;
+  expires, A, t: numb, e, r;
 }
 
-interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  maxSize?: number; // Maximum number of items in cache
+interface CacheOptio, n, s {
+  t, t, l?: numb, e, r; // Ti, m, e to li, v, e in millisecon, d, s
+  maxSi, z, e?: numb, e, r; // Maxim, u, m numb, e, r of ite, m, s in cac, h, e
 }
 
-class AdvancedCache {
-  private cache = new Map<string, CacheItem<any>>();
-  private maxSize: number;
-  private defaultTTL: number;
+cla, s, s AdvancedCac, h, e {
+  priva, t, e cac, h, e = n, e, w M, a, p<string, CacheIt, e, m<a, n, y>>();
+  priva, t, e maxSi, z, e: numb, e, r;
+  priva, t, e defaultT, T, L: numb, e, r;
 
-  constructor(options: CacheOptions = {}) {
-    this.maxSize = options.maxSize || 100;
-    this.defaultTTL = options.ttl || 5 * 60 * 1000; // 5 minutes default
+  construct, o, r(optio, n, s: CacheOptio, n, s = {}) {
+    th, i, s.maxSi, z, e = optio, n, s.maxSi, z, e || 1, 0, 0;
+    th, i, s.defaultT, T, L = optio, n, s.t, t, l || 5 * 60 * 10, 0, 0; // 5 minut, e, s default
   }
 
-  set<T>(key: string, data: T, ttl?: number): void {
-    const now = Date.now();
-    const expiresAt = now + (ttl || this.defaultTTL);
+  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l?: numb, e, r): vo, i, d {
+    con, s, t n, o, w = Da, t, e.n, o, w();
+    con, s, t expires, A, t = n, o, w + (t, t, l || th, i, s.defaultT, T, L);
 
-    // Remove expired items if cache is full
-    if (this.cache.size >= this.maxSize) {
-      this.cleanup();
+    // Remo, v, e expir, e, d ite, m, s if cac, h, e is fu, l, l
+    if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+      th, i, s.clean, u, p();
     }
 
-    this.cache.set(key, {
-      data,
-      timestamp: now,
-      expiresAt
+    th, i, s.cac, h, e.s, e, t(k, e, y, {
+      da, t, a,
+      timesta, m, p: n, o, w,
+      expires, A, t
     });
   }
 
-  get<T>(key: string): T | null {
-    const item = this.cache.get(key);
+  g, e, t<T>(k, e, y: string): T | nu, l, l {
+    con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
     
-    if (!item) {
-      return null;
+    if (!it, e, m) {
+      retu, r, n nu, l, l;
     }
 
-    // Check if item has expired
-    if (Date.now() > item.expiresAt) {
-      this.cache.delete(key);
-      return null;
+    // Che, c, k if it, e, m h, a, s expir, e, d
+    if (Da, t, e.n, o, w() > it, e, m.expires, A, t) {
+      th, i, s.cac, h, e.dele, t, e(k, e, y);
+      retu, r, n nu, l, l;
     }
 
-    return item.data;
+    retu, r, n it, e, m.da, t, a;
   }
 
-  has(key: string): boolean {
-    const item = this.cache.get(key);
-    return item ? Date.now() <= item.expiresAt : false;
+  h, a, s(k, e, y: string): boole, a, n {
+    con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+    retu, r, n it, e, m ? Da, t, e.n, o, w() <= it, e, m.expires, A, t : fal, s, e;
   }
 
-  delete(key: string): boolean {
-    return this.cache.delete(key);
+  dele, t, e(k, e, y: string): boole, a, n {
+    retu, r, n th, i, s.cac, h, e.dele, t, e(k, e, y);
   }
 
-  clear(): void {
-    this.cache.clear();
+  cle, a, r(): vo, i, d {
+    th, i, s.cac, h, e.cle, a, r();
   }
 
-  cleanup(): void {
-    const now = Date.now();
-    for (const [key, item] of this.cache.entries()) {
-      if (now > item.expiresAt) {
-        this.cache.delete(key);
+  clean, u, p(): vo, i, d {
+    con, s, t n, o, w = Da, t, e.n, o, w();
+    f, o, r (con, s, t [k, e, y, it, e, m] of th, i, s.cac, h, e.entri, e, s()) {
+      if (n, o, w > it, e, m.expires, A, t) {
+        th, i, s.cac, h, e.dele, t, e(k, e, y);
       }
     }
   }
 
-  size(): number {
-    return this.cache.size;
+  si, z, e(): numb, e, r {
+    retu, r, n th, i, s.cac, h, e.si, z, e;
   }
 
-  getStats(): { size: number; hitRate: number } {
-    return {
-      size: this.cache.size,
-      hitRate: 0 // This would need to be tracked separately
+  getSta, t, s(): { si, z, e: numb, e, r; hitRa, t, e: numb, e, r } {
+    retu, r, n {
+      si, z, e: th, i, s.cac, h, e.si, z, e,
+      hitRa, t, e: 0 // Th, i, s wou, l, d ne, e, d to be track, e, d separate, l, y
     };
   }
 }
 
-// Global cache instance
-const globalCache = new AdvancedCache({
-  ttl: 10 * 60 * 1000, // 10 minutes
-  maxSize: 50
+// Glob, a, l cac, h, e instan, c, e
+con, s, t globalCac, h, e = n, e, w AdvancedCac, h, e({
+  t, t, l: 10 * 60 * 10, 0, 0, // 10 minut, e, s
+  maxSi, z, e: 50
 });
 
-// Hook for using the cache
-export const useCache = <T>(key: string, fetcher: () => Promise<T>, options?: CacheOptions) => {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+// Ho, o, k f, o, r usi, n, g t, h, e cac, h, e
+export con, s, t useCac, h, e = <T>(k, e, y: string, fetch, e, r: () => Promi, s, e<T>, optio, n, s?: CacheOptio, n, s) => {
+  con, s, t [da, t, a, setDa, t, a] = useState<T | nu, l, l>(nu, l, l);
+  con, s, t [loadi, n, g, setLoadi, n, g] = useState(fal, s, e);
+  con, s, t [error, setErr, o, r] = useState<Err, o, r | nu, l, l>(nu, l, l);
 
-  const fetchData = useCallback(async () => {
-    // Check cache first
-    const cachedData = globalCache.get<T>(key);
-    if (cachedData) {
-      setData(cachedData);
-      return;
+  con, s, t fetchDa, t, a = useCallba, c, k(asy, n, c () => {
+    // Che, c, k cac, h, e fir, s, t
+    con, s, t cachedDa, t, a = globalCac, h, e.g, e, t<T>(k, e, y);
+    if (cachedDa, t, a) {
+      setDa, t, a(cachedDa, t, a);
+      retu, r, n;
     }
 
-    setLoading(true);
-    setError(null);
+    setLoadi, n, g(tr, u, e);
+    setErr, o, r(nu, l, l);
 
-    try {
-      const result = await fetcher();
-      globalCache.set(key, result, options?.ttl);
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Unknown error'));
-    } finally {
-      setLoading(false);
+    t, r, y {
+      con, s, t resu, l, t = awa, i, t fetch, e, r();
+      globalCac, h, e.s, e, t(k, e, y, resu, l, t, optio, n, s?.t, t, l);
+      setDa, t, a(resu, l, t);
+    } cat, c, h (e, r, r) {
+      setErr, o, r(e, r, r instance, o, f Err, o, r ? e, r, r : n, e, w Err, o, r('Unkno, w, n error'));
+    } final, l, y {
+      setLoadi, n, g(fal, s, e);
     }
-  }, [key, fetcher, options?.ttl]);
+  }, [k, e, y, fetch, e, r, optio, n, s?.t, t, l]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchDa, t, a();
+  }, [fetchDa, t, a]);
 
-  const refetch = useCallback(() => {
-    globalCache.delete(key);
-    fetchData();
-  }, [key, fetchData]);
+  con, s, t refet, c, h = useCallba, c, k(() => {
+    globalCac, h, e.dele, t, e(k, e, y);
+    fetchDa, t, a();
+  }, [k, e, y, fetchDa, t, a]);
 
-  return { data, loading, error, refetch };
+  retu, r, n { da, t, a, loadi, n, g, error, refet, c, h };
 };
 
-// Hook for API calls with caching
-export const useApiCache = <T>(url: string, options?: RequestInit & { ttl?: number }) => {
-  return useCache(
-    `api:${url}`,
-    async () => {
-      const response = await fetch(url, options);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+// Ho, o, k f, o, r A, P, I cal, l, s wi, t, h cachi, n, g
+export con, s, t useApiCac, h, e = <T>(u, r, l: string, optio, n, s?: RequestIn, i, t & { t, t, l?: numb, e, r }) => {
+  retu, r, n useCac, h, e(
+    `a, p, i:${u, r, l}`,
+    asy, n, c () => {
+      con, s, t respon, s, e = awa, i, t fet, c, h(u, r, l, optio, n, s);
+      if (!respon, s, e.ok) {
+        thr, o, w n, e, w Err, o, r(`HT, T, P error! stat, u, s: ${respon, s, e.stat, u, s}`);
       }
-      return response.json() as T;
+      retu, r, n respon, s, e.js, o, n() as T;
     },
-    { ttl: options?.ttl }
+    { t, t, l: optio, n, s?.t, t, l }
   );
 };
 
-export default globalCache;
+export default globalCac, h, e;

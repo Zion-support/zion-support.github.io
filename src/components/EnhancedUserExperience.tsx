@@ -1,296 +1,296 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
+import React, { useStateuseEffectuseCallba, c, k } from 'rea, c, t';
+import { Us, e, r, Settin, g, s, Palet, t, e, Glo, b, e, Smartpho, n, e, MonitorSunMo, o, n } from 'luci, d, e-rea, c, t';
 
-interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  fontSize: 'small' | 'medium' | 'large';
-  animations: boolean;
-  reducedMotion: boolean;
-  highContras, t: boolean;
-  screenReade, r: boolean;
+interface UserPreferenc, e, s {
+  the, m, e: 'lig, h, t' | 'da, r, k' | 'au, t, o';
+  langua, g, e: string;
+  fontSi, z, e: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
+  animatio, n, s: boole, a, n;
+  reducedMoti, o, n: boole, a, n;
+  highContr, a, s, t: boole, a, n;
+  screenRea, d, e, r: boole, a, n;
 }
 
-interface EnhancedUserExperienceProps {
-  className?: string;
+interface EnhancedUserExperiencePro, p, s {
+  classNa, m, e?: string;
 }
 
-const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
-  const [preferencessetPreference, s] = useState<UserPreferences>({
-    theme: 'auto', language: 'en', fontSize: 'medium', animations: truereducedMotio, n: falsehighContrast: falsescreenReade, r: false
+con, s, t EnhancedUserExperien, c, e: React.FC<EnhancedUserExperiencePro, p, s> = ({ classNa, m, e = '' }) => {
+  con, s, t [preferencessetPreferen, c, e, s] = useState<UserPreferenc, e, s>({
+    the, m, e: 'au, t, o', langua, g, e: 'en', fontSi, z, e: 'medi, u, m', animatio, n, s: truereducedMot, i, o, n: falsehighContra, s, t: falsescreenRea, d, e, r: fal, s, e
   });
 
-  const [isOpensetIsOpe, n] = useState(fals, e);
-  const [activeTabsetActiveTa, b] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  con, s, t [isOpensetIsO, p, e, n] = useState(fa, l, s, e);
+  con, s, t [activeTabsetActive, T, a, b] = useState<'appearan, c, e' | 'accessibili, t, y' | 'langua, g, e'>('appearan, c, e');
 
-  const updatePreference = useCallback((key: keyof UserPreferencesvalue: an, y) => {
-    setPreferences(prev => ({ ...pre.v[ke, y]: value }));
+  con, s, t updatePreferen, c, e = useCallba, c, k((k, e, y: key, o, f UserPreferencesval, u, e: an, y) => {
+    setPreferenc, e, s(pr, e, v => ({ ...p, r, e.v[ke, y]: val, u, e }));
     
-    // Apply preferences immediately
-    if (key === 'theme') {
-      document.documentElement.setAttribut('data-theme', valu, e);
+    // App, l, y preferenc, e, s immediate, l, y
+    if (k, e, y === 'the, m, e') {
+      docume, n, t.documentEleme, n, t.setAttrib, u, t('da, t, a-the, m, e', va, l, u, e);
     }
-    if (key === 'fontSize') {
-      document.documentElement.setAttribut('data-font-size', valu, e);
+    if (k, e, y === 'fontSi, z, e') {
+      docume, n, t.documentEleme, n, t.setAttrib, u, t('da, t, a-fo, n, t-si, z, e', va, l, u, e);
     }
-    if (key === 'highContrast') {
-      document.documentElement.setAttribut('data-high-contrast'value.toStrin());
+    if (k, e, y === 'highContra, s, t') {
+      docume, n, t.documentEleme, n, t.setAttrib, u, t('da, t, a-hi, g, h-contra, s, t'val, u, e.toStr, i, n());
     }
-    if (key === 'reducedMotion') {
-      document.documentElement.setAttribut('data-reduced-motion'value.toStrin());
+    if (k, e, y === 'reducedMoti, o, n') {
+      docume, n, t.documentEleme, n, t.setAttrib, u, t('da, t, a-reduc, e, d-moti, o, n'val, u, e.toStr, i, n());
     }
   }, []);
 
-  const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dar, k)').matche.s;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduc, e)').matche.s;
+  con, s, t detectSystemPreferenc, e, s = useCallba, c, k(() => {
+    con, s, t prefersDa, r, k = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: d, a, r, k)').matc, h, e.s;
+    con, s, t prefersReducedMoti, o, n = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: red, u, c, e)').matc, h, e.s;
     
-    if (preferences.them.e === 'auto') {
-      document.documentElement.setAttribut('data-theme'prefersDark ? 'dark' : 'light');
+    if (preferenc, e, s.th, e, m.e === 'au, t, o') {
+      docume, n, t.documentEleme, n, t.setAttrib, u, t('da, t, a-the, m, e'prefersDa, r, k ? 'da, r, k' : 'lig, h, t');
     }
     
-    if (preferences.reducedMotio.n !== prefersReducedMotio, n) {
-      updatePreference('reducedMotion', prefersReducedMotion);
+    if (preferenc, e, s.reducedMot, i, o.n !== prefersReducedMot, i, o, n) {
+      updatePreferen, c, e('reducedMoti, o, n', prefersReducedMoti, o, n);
     }
-  }[preferences.themepreference.s.reducedMotionupdatePreferenc., e]);
+  }[preferenc, e, s.themepreferen, c, e.s.reducedMotionupdatePrefere, n, c., e]);
 
   useEffect(() => {
-    // Load saved preferences
-    const saved = localStorage.getIte.m('userPreferences');
-    if (save, d) {
-      const parsed = JSON.pars(save, d);
-      setPreferences(prev => ({ ...pre.v...parse.d }));
+    // Lo, a, d sav, e, d preferenc, e, s
+    con, s, t sav, e, d = localStora, g, e.getIt, e, m('userPreferenc, e, s');
+    if (sa, v, e, d) {
+      con, s, t pars, e, d = JS, O, N.pa, r, s(sa, v, e, d);
+      setPreferenc, e, s(pr, e, v => ({ ...p, r, e.v...par, s, e.d }));
     }
 
-    // Listen for system preference changes
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dar, k)');
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduc, e)');
+    // List, e, n f, o, r syst, e, m preferen, c, e chang, e, s
+    con, s, t darkModeQue, r, y = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: d, a, r, k)');
+    con, s, t motionQue, r, y = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: red, u, c, e)');
     
-    darkModeQuery.addEventListene('change', detectSystemPreference, s);
-    motionQuery.addEventListene('change', detectSystemPreference, s);
+    darkModeQue, r, y.addEventListe, n, e('chan, g, e', detectSystemPreferen, c, e, s);
+    motionQue, r, y.addEventListe, n, e('chan, g, e', detectSystemPreferen, c, e, s);
 
-    return () => {
-      darkModeQuery.removeEventListene('change', detectSystemPreference, s);
-      motionQuery.removeEventListene('change', detectSystemPreference, s);
+    retu, r, n () => {
+      darkModeQue, r, y.removeEventListe, n, e('chan, g, e', detectSystemPreferen, c, e, s);
+      motionQue, r, y.removeEventListe, n, e('chan, g, e', detectSystemPreferen, c, e, s);
     };
-  }[detectSystemPreference, s]);
+  }[detectSystemPreferen, c, e, s]);
 
   useEffect(() => {
-    // Save preferences
-    localStorage.setIte.m('userPreferences'JSON.stringif(preference, s));
-    detectSystemPreferences();
-  }[preferencesdetectSystemPreference, s]);
+    // Sa, v, e preferenc, e, s
+    localStora, g, e.setIt, e, m('userPreferenc, e, s'JS, O, N.string, i, f(preferen, c, e, s));
+    detectSystemPreferenc, e, s();
+  }[preferencesdetectSystemPreferen, c, e, s]);
 
-  const toggleSettings = () => setIsOpen(!isOpe, n);
+  con, s, t toggleSettin, g, s = () => setIsOp, e, n(!isO, p, e, n);
 
-  const AppearanceTab = () => (
-    <div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300mb-3">
-          Theme
-        </label>
-        <div className="grid grid-cols-3gap-3">
+  con, s, t AppearanceT, a, b = () => (
+    <d, i, v classNa, m, e="spa, c, e-y-6">
+      <d, i, v>
+        <lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 da, r, k: te, x, t-gr, a, y-300, m, b-3">
+          The, m, e
+        </lab, e, l>
+        <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-3g, a, p-3">
           {[
-            { valu, e: 'light', label: 'Light', icon: Sun },
-            { value: 'dark', label: 'Dark', icon: Moon },
-            { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (            <button
-              key={valu e}
-              onClick={() => updatePreference('theme', value)}
-              className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
-                preferences.theme === value
-                  ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
+            { va, l, u, e: 'lig, h, t', lab, e, l: 'Lig, h, t', ic, o, n: S, u, n },
+            { val, u, e: 'da, r, k', lab, e, l: 'Da, r, k', ic, o, n: Mo, o, n },
+            { val, u, e: 'au, t, o', lab, e, l: 'Au, t, o', ic, o, n: Monit, o, r }
+          ].m, a, p(({ val, u, e, lab, e, l, ic, o, n: Ic, o, n }) => (            <butt, o, n
+              k, e, y={va, l, u e}
+              onCli, c, k={() => updatePreferen, c, e('the, m, e', val, u, e)}
+              classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 fl, e, x fl, e, x-c, o, l ite, m, s-cent, e, r spa, c, e-y-2 ${
+                preferenc, e, s.the, m, e === val, u, e
+                  ? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50 da, r, k: bg-bl, u, e-9, 0, 0/20'
+                  : 'bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-6, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0 da, r, k:ho, v, e, r:bord, e, r-gr, a, y-5, 0, 0'
               }`}            >
-              <Icon className="w-6h-6" />
-              <span className="text-sm font-medium">{label}</span>            </button>
+              <Ic, o, n classNa, m, e="w-6h-6" />
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">{lab, e, l}</sp, a, n>            </butt, o, n>
           ))}
-        </div>
-      </div>
+        </d, i, v>
+      </d, i, v>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300mb-3">
-          Font Size
-        </label>
-        <div className= "grid grid-cols-3gap-3">
+      <d, i, v>
+        <lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 da, r, k: te, x, t-gr, a, y-300, m, b-3">
+          Fo, n, t Si, z, e
+        </lab, e, l>
+        <d, i, v classNa, m, e= "gr, i, d gr, i, d-co, l, s-3g, a, p-3">
           {[
-            { value: 'small', label: 'Small' },
-        { value: 'medium', label: 'Medium' },
-        { value: 'large', label: 'Large' }
-          ].ma.p(({ valuelabel }) => (
-            <button
-              key={valu e}
-              onClick={() => updatePreference('fontSize', value)}
-              className={`p-3 rounded-lg border-2 ${
-                preferences.fontSize === value
-                  ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
+            { val, u, e: 'sma, l, l', lab, e, l: 'Sma, l, l' },
+        { val, u, e: 'medi, u, m', lab, e, l: 'Medi, u, m' },
+        { val, u, e: 'lar, g, e', lab, e, l: 'Lar, g, e' }
+          ].ma.p(({ valuelab, e, l }) => (
+            <butt, o, n
+              k, e, y={va, l, u e}
+              onCli, c, k={() => updatePreferen, c, e('fontSi, z, e', val, u, e)}
+              classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 ${
+                preferenc, e, s.fontSi, z, e === val, u, e
+                  ? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50 da, r, k: bg-bl, u, e-9, 0, 0/20'
+                  : 'bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-6, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0 da, r, k:ho, v, e, r:bord, e, r-gr, a, y-5, 0, 0'
               }`}            >
-              <span className="text-sm font-medium">{label}</span>            </button>
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m">{lab, e, l}</sp, a, n>            </butt, o, n>
           ))}
-        </div>
-      </div>
+        </d, i, v>
+      </d, i, v>
 
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.animations}
-            onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+      <d, i, v classNa, m, e="spa, c, e-y-4">
+        <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+          <inp, u, t
+            ty, p, e="checkb, o, x"
+            check, e, d={preferenc, e, s.animatio, n, s}
+            onChan, g, e={(e) => updatePreferen, c, e('animatio, n, s', e.targ, e, t.check, e, d)}
+            classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
-          </span>
-        </label>
-      </div>
-    </div>
+          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 d, a, r k:te, x, t-gr, a, y-3, 0, 0">            Enab, l, e animatio, n, s
+          </sp, a, n>
+        </lab, e, l>
+      </d, i, v>
+    </d, i, v>
   );
 
-  const AccessibilityTab = () => (<div className="space-y-6">
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.reducedMotion}
-            onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+  con, s, t AccessibilityT, a, b = () => (<d, i, v classNa, m, e="spa, c, e-y-6">
+      <d, i, v classNa, m, e="spa, c, e-y-4">
+        <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+          <inp, u, t
+            ty, p, e="checkb, o, x"
+            check, e, d={preferenc, e, s.reducedMoti, o, n}
+            onChan, g, e={(e) => updatePreferen, c, e('reducedMoti, o, n', e.targ, e, t.check, e, d)}
+            classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
-            Reduce motion (respects system preference)          </span>
-        </label>
+          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 d, a, r k:te, x, t-gr, a, y-3, 0, 0">
+            Redu, c, e moti, o, n (respec, t, s syst, e, m preferen, c, e)          </sp, a, n>
+        </lab, e, l>
 
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+        <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+          <inp, u, t
+            ty, p, e="checkb, o, x"
+            check, e, d={preferenc, e, s.highContra, s, t}
+            onChan, g, e={(e) => updatePreferen, c, e('highContra, s, t', e.targ, e, t.check, e, d)}
+            classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
-          </span>
-        </label>
+          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 d, a, r k:te, x, t-gr, a, y-3, 0, 0">            Hi, g, h contra, s, t mo, d, e
+          </sp, a, n>
+        </lab, e, l>
 
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.screenReader}
-            onChange={(e) => updatePreference('screenReader', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+        <lab, e, l classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+          <inp, u, t
+            ty, p, e="checkb, o, x"
+            check, e, d={preferenc, e, s.screenRead, e, r}
+            onChan, g, e={(e) => updatePreferen, c, e('screenRead, e, r', e.targ, e, t.check, e, d)}
+            classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 round, e, d foc, u, s:ri, n, g-bl, u, e-5, 0, 0"
           />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
-          </span>
-        </label>
-      </div>
+          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-3, 0, 0">            Scre, e, n read, e, r optimizatio, n, s
+          </sp, a, n>
+        </lab, e, l>
+      </d, i, v>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
-          Accessibility Features
+      <d, i, v classNa, m, e="bg-bl, u, e-50 da, r, k:bg-bl, u, e-9, 0, 0/20 p-4round, e, d-lg">
+        <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-bl, u, e-9, 0, 0 da, r, k:te, x, t-bl, u, e-100, m, b-2">
+          Accessibili, t, y Featur, e, s
         </h4>
-        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
-          <li>• Keyboard navigation support</li>
-          <li>• ARIA labels and roles</li>
-          <li>• Focus indicators</li>
-          <li>• Screen reader announcements</li>
+        <ul classNa, m, e="te, x, t-sm te, x, t-bl, u, e-7, 0, 0 d, a, r  k:te, x, t-bl, u, e-300spa, c, e-y-1">
+          <li>• Keyboa, r, d navigati, o, n suppo, r, t</li>
+          <li>• AR, I, A labe, l, s a, n, d rol, e, s</li>
+          <li>• Foc, u, s indicato, r, s</li>
+          <li>• Scre, e, n read, e, r announcemen, t, s</li>
         </ul>
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 
-  const LanguageTab = () => (<div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
-          Language
-        </label>
-        <select
-          value={preferences.language}
-          onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-        >          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="ja">日本語</option>
-          <option value="ko">한국어</option>
-          <option value="zh">中文</option>
-        </select>
-      </div>
+  con, s, t LanguageT, a, b = () => (<d, i, v classNa, m, e="spa, c, e-y-6">
+      <d, i, v>
+        <lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-7, 0, 0 d, a, r  k:te, x, t-gr, a, y-300, m, b-3">
+          Langua, g, e
+        </lab, e, l>
+        <sele, c, t
+          val, u, e={preferenc, e, s.langua, g, e}
+          onChan, g, e={(e) => updatePreferen, c, e('langua, g, e', e.targ, e, t.val, u, e)}
+          classNa, m, e="w-fu, l, l p-3 bord, e, r bord, e, r-gr, a, y-3, 0, 0 da, r, k: bord, e, r-gr, a, y-6, 0, 0 round, e, d-lg bg-whi, t, e da, r, k:bg-gr, a, y-7, 0, 0 te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e"
+        >          <opti, o, n val, u, e="en">Engli, s, h</opti, o, n>
+          <opti, o, n val, u, e="es">Es, p, añol</opti, o, n>
+          <opti, o, n val, u, e="fr">Fr, a, nça, i, s</opti, o, n>
+          <opti, o, n val, u, e="de">Deuts, c, h</opti, o, n>
+          <opti, o, n val, u, e="ja">日本語</opti, o, n>
+          <opti, o, n val, u, e="ko">한국어</opti, o, n>
+          <opti, o, n val, u, e="zh">中文</opti, o, n>
+        </sele, c, t>
+      </d, i, v>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
-          Internationalization
+      <d, i, v classNa, m, e="bg-gre, e, n-50 da, r, k:bg-gre, e, n-9, 0, 0/20 p-4round, e, d-lg">
+        <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-gre, e, n-9, 0, 0 d, a, r  k:te, x, t-gre, e, n-100, m, b-2">
+          Internationalizati, o, n
         </h4>
-        <p className="text-sm text-green-700 dar k:text-green-300">
-          Full i18n support with RTL language support and localized content.
+        <p classNa, m, e="te, x, t-sm te, x, t-gre, e, n-7, 0, 0 d, a, r k:te, x, t-gre, e, n-3, 0, 0">
+          Fu, l, l i1, 8, n suppo, r, t wi, t, h R, T, L langua, g, e suppo, r, t a, n, d localiz, e, d conte, n, t.
         </p>
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 
-  return (
-    <div className={`relative ${className}`}>      {/* Settings Toggle Button */}
-      <button
-        onClick={toggleSettings}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
-        aria-label="Open user experience settings"      >
-        <Settings className="w-6h-6"/>
-      </button>
+  retu, r, n (
+    <d, i, v classNa, m, e={`relati, v, e ${classNa, m, e}`}>      {/* Settin, g, s Togg, l, e Butt, o, n */}
+      <butt, o, n
+        onCli, c, k={toggleSettin, g, s}
+        classNa, m, e="fix, e, d bott, o, m-6 rig, h, t-6 z-50 p-4 bg-bl, u, e-5, 0, 0 te, x, t-whi, t, e round, e, d-fu, l, l shad, o, w-lg hov, e, r:bg-bl, u, e-600transiti, o, n-colo, r, s"
+        ar, i, a-lab, e, l="Op, e, n us, e, r experien, c, e settin, g, s"      >
+        <Settin, g, s classNa, m, e="w-6h-6"/>
+      </butt, o, n>
 
-      {/* Settings Panel */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-40 bg-blackbg-opacity-50" 
-          onClick={toggleSettings}          role="button"
-          tabIndex={ 0}
-          onKeyDown={(, e) => e.ke.y === 'Escape' && toggleSettings()}
-          aria-label="Close settings panel">
-          <div
-            className="fixed right-0 top-0 h-full w-96 bg-white dark:bg-gray-800 shadow-xloverflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
+      {/* Settin, g, s Pan, e, l */}
+      {isOp, e, n && (
+        <d, i, v 
+          classNa, m, e="fix, e, d ins, e, t-0 z-40 bg-black, b, g-opaci, t, y-50" 
+          onCli, c, k={toggleSettin, g, s}          ro, l, e="butt, o, n"
+          tabInd, e, x={ 0}
+          onKeyDo, w, n={(, e) => e.ke.y === 'Esca, p, e' && toggleSettin, g, s()}
+          ar, i, a-lab, e, l="Clo, s, e settin, g, s pan, e, l">
+          <d, i, v
+            classNa, m, e="fix, e, d rig, h, t-0 t, o, p-0 h-fu, l, l w-96 bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 shad, o, w-xloverfl, o, w-y-au, t, o"
+            onCli, c, k={(e) => e.stopPropagati, o, n()}
           >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <User className="w-6 h-6text-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
+            <d, i, v classNa, m, e="p-6">
+              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
+                <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+                  <Us, e, r classNa, m, e="w-6 h-6te, x, t-bl, u, e-5, 0, 0" />
+                  <h2 classNa, m, e="te, x, t-xl fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">                    Us, e, r Experien, c, e
                   </h2>
-                </div>
-                <button
-                  onClick={toggleSettings}
-                  className="text-gray-400 hover:text-gray-600 dark:hove r:text-gray-300"
+                </d, i, v>
+                <butt, o, n
+                  onCli, c, k={toggleSettin, g, s}
+                  classNa, m, e="te, x, t-gr, a, y-4, 0, 0 hov, e, r:te, x, t-gr, a, y-6, 0, 0 da, r, k:ho, v, e r:te, x, t-gr, a, y-3, 0, 0"
                 >                  ×
-                </button>
-              </div>
+                </butt, o, n>
+              </d, i, v>
 
-              {/* Tab Navigation */}
-              <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
+              {/* T, a, b Navigati, o, n */}
+              <d, i, v classNa, m, e="fl, e, x spa, c, e-x-1 mb-6 bg-gr, a, y-1, 0, 0 da, r, k: bg-gr, a, y-7, 0, 0 round, e, d-l, g, p-1">
                 {[
-                  { id: 'appearance', label: 'Appearance', icon: Palette },
-                  { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
-                  { id: 'language', label: 'Language', icon: Globe }
-                ].map(({ id, label, icon: Icon }) => (
-                  <button
-                    key={id}
-                    onClick={() => setActiveTab(id as any)}
-                    className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                      activeTab === id
-                        ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hove, r:text-gray-200'
+                  { id: 'appearan, c, e', lab, e, l: 'Appearan, c, e', ic, o, n: Palet, t, e },
+                  { id: 'accessibili, t, y', lab, e, l: 'Accessibili, t, y', ic, o, n: Smartpho, n, e },
+                  { id: 'langua, g, e', lab, e, l: 'Langua, g, e', ic, o, n: Glo, b, e }
+                ].m, a, p(({ id, lab, e, l, ic, o, n: Ic, o, n }) => (
+                  <butt, o, n
+                    k, e, y={id}
+                    onCli, c, k={() => setActiveT, a, b(id as a, n, y)}
+                    classNa, m, e={`fl, e, x-1 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r spa, c, e-x-2 py-2 px-3 round, e, d-md te, x, t-sm fo, n, t-medi, u, m transiti, o, n-colo, r, s ${
+                      activeT, a, b === id
+                        ? 'bg-whi, t, e da, r, k: bg-gr, a, y-6, 0, 0 te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0 shad, o, w-sm'
+                        : 'te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-4, 0, 0 hov, e, r:te, x, t-gr, a, y-9, 0, 0 da, r, k:ho, v, e, r:te, x, t-gr, a, y-2, 0, 0'
                     }`}                  >
-                    <Icon className="w-4h-4" />
-                    <span>{label}</span>                  </button>
+                    <Ic, o, n classNa, m, e="w-4h-4" />
+                    <sp, a, n>{lab, e, l}</sp, a, n>                  </butt, o, n>
                 ))}
-              </div>
+              </d, i, v>
 
-              {/* Tab Content */}
-              {activeTab === 'appearance' && <AppearanceTab />}
-              {activeTab === 'accessibility' && <AccessibilityTab />}
-              {activeTab === 'language' && <LanguageTab />}
-            </div>
-          </div>
-        </div>
+              {/* T, a, b Conte, n, t */}
+              {activeT, a, b === 'appearan, c, e' && <AppearanceT, a, b />}
+              {activeT, a, b === 'accessibili, t, y' && <AccessibilityT, a, b />}
+              {activeT, a, b === 'langua, g, e' && <LanguageT, a, b />}
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
       )}
-    </div>
+    </d, i, v>
   );
 };
 
-export default EnhancedUserExperience;
+export default EnhancedUserExperien, c, e;

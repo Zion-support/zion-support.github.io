@@ -1,158 +1,158 @@
-interface CacheItem<T> {
-  data: T;
-  timestamp: number;
-  ttl: number;
+interface CacheIt, e, m<T> {
+  da, t, a: T;
+  timesta, m, p: numb, e, r;
+  t, t, l: numb, e, r;
 }
 
-class CacheManager {
-  private cache = new Map<string, CacheItem<any>>();
-  private maxSize = 100; // Maximum number of items in cache
+cla, s, s CacheManag, e, r {
+  priva, t, e cac, h, e = n, e, w M, a, p<string, CacheIt, e, m<a, n, y>>();
+  priva, t, e maxSi, z, e = 1, 0, 0; // Maxim, u, m numb, e, r of ite, m, s in cac, h, e
 
-  set<T>(key: string, data: T, ttl: number = 300000): void { // 5 minutes default TTL
-    // Remove oldest items if cache is full
-    if (this.cache.size >= this.maxSize) {
-      const oldestKey = this.cache.keys().next().value;
-      this.cache.delete(oldestKey);
+  s, e, t<T>(k, e, y: string, da, t, a: T, t, t, l: numb, e, r = 3000, 0, 0): vo, i, d { // 5 minut, e, s default T, T, L
+    // Remo, v, e olde, s, t ite, m, s if cac, h, e is fu, l, l
+    if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+      con, s, t oldestK, e, y = th, i, s.cac, h, e.ke, y, s().ne, x, t().val, u, e;
+      th, i, s.cac, h, e.dele, t, e(oldestK, e, y);
     }
 
-    this.cache.set(key, {
-      data,
-      timestamp: Date.now(),
-      ttl,
+    th, i, s.cac, h, e.s, e, t(k, e, y, {
+      da, t, a,
+      timesta, m, p: Da, t, e.n, o, w(),
+      t, t, l,
     });
   }
 
-  get<T>(key: string): T | null {
-    const item = this.cache.get(key);
+  g, e, t<T>(k, e, y: string): T | nu, l, l {
+    con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
     
-    if (!item) {
-      return null;
+    if (!it, e, m) {
+      retu, r, n nu, l, l;
     }
 
-    // Check if item has expired
-    if (Date.now() - item.timestamp > item.ttl) {
-      this.cache.delete(key);
-      return null;
+    // Che, c, k if it, e, m h, a, s expir, e, d
+    if (Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
+      th, i, s.cac, h, e.dele, t, e(k, e, y);
+      retu, r, n nu, l, l;
     }
 
-    return item.data;
+    retu, r, n it, e, m.da, t, a;
   }
 
-  has(key: string): boolean {
-    const item = this.cache.get(key);
-    if (!item) return false;
+  h, a, s(k, e, y: string): boole, a, n {
+    con, s, t it, e, m = th, i, s.cac, h, e.g, e, t(k, e, y);
+    if (!it, e, m) retu, r, n fal, s, e;
     
-    // Check if item has expired
-    if (Date.now() - item.timestamp > item.ttl) {
-      this.cache.delete(key);
-      return false;
+    // Che, c, k if it, e, m h, a, s expir, e, d
+    if (Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
+      th, i, s.cac, h, e.dele, t, e(k, e, y);
+      retu, r, n fal, s, e;
     }
 
-    return true;
+    retu, r, n tr, u, e;
   }
 
-  delete(key: string): boolean {
-    return this.cache.delete(key);
+  dele, t, e(k, e, y: string): boole, a, n {
+    retu, r, n th, i, s.cac, h, e.dele, t, e(k, e, y);
   }
 
-  clear(): void {
-    this.cache.clear();
+  cle, a, r(): vo, i, d {
+    th, i, s.cac, h, e.cle, a, r();
   }
 
-  size(): number {
-    return this.cache.size;
+  si, z, e(): numb, e, r {
+    retu, r, n th, i, s.cac, h, e.si, z, e;
   }
 
-  // Clean up expired items
-  cleanup(): void {
-    const now = Date.now();
-    for (const [key, item] of this.cache.entries()) {
-      if (now - item.timestamp > item.ttl) {
-        this.cache.delete(key);
+  // Cle, a, n up expir, e, d ite, m, s
+  clean, u, p(): vo, i, d {
+    con, s, t n, o, w = Da, t, e.n, o, w();
+    f, o, r (con, s, t [k, e, y, it, e, m] of th, i, s.cac, h, e.entri, e, s()) {
+      if (n, o, w - it, e, m.timesta, m, p > it, e, m.t, t, l) {
+        th, i, s.cac, h, e.dele, t, e(k, e, y);
       }
     }
   }
 }
 
-// Create a singleton instance
-export const cache = new CacheManager();
+// Crea, t, e a singlet, o, n instan, c, e
+export con, s, t cac, h, e = n, e, w CacheManag, e, r();
 
-// Clean up expired items every 5 minutes
-if (typeof window !== 'undefined') {
-  setInterval(() => {
-    cache.cleanup();
-  }, 300000);
+// Cle, a, n up expir, e, d ite, m, s eve, r, y 5 minut, e, s
+if (type, o, f wind, o, w !== 'undefin, e, d') {
+  setInterv, a, l(() => {
+    cac, h, e.clean, u, p();
+  }, 3000, 0, 0);
 }
 
-// Utility functions for common caching patterns
-export const cacheUtils = {
-  // Cache API responses
-  async fetchWithCache<T>(
-    url: string,
-    options: RequestInit = {},
-    ttl: number = 300000
-  ): Promise<T> {
-    const cacheKey = `api:${url}:${JSON.stringify(options)}`;
+// Utili, t, y functio, n, s f, o, r comm, o, n cachi, n, g patter, n, s
+export con, s, t cacheUti, l, s = {
+  // Cac, h, e A, P, I respons, e, s
+  asy, n, c fetchWithCac, h, e<T>(
+    u, r, l: string,
+    optio, n, s: RequestIn, i, t = {},
+    t, t, l: numb, e, r = 3000, 0, 0
+  ): Promi, s, e<T> {
+    con, s, t cacheK, e, y = `a, p, i:${u, r, l}:${JS, O, N.stringi, f, y(optio, n, s)}`;
     
-    // Check cache first
-    const cached = cache.get<T>(cacheKey);
-    if (cached) {
-      return cached;
+    // Che, c, k cac, h, e fir, s, t
+    con, s, t cach, e, d = cac, h, e.g, e, t<T>(cacheK, e, y);
+    if (cach, e, d) {
+      retu, r, n cach, e, d;
     }
 
-    // Fetch from API
-    const response = await fetch(url, options);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    // Fet, c, h from A, P, I
+    con, s, t respon, s, e = awa, i, t fet, c, h(u, r, l, optio, n, s);
+    if (!respon, s, e.ok) {
+      thr, o, w n, e, w Err, o, r(`HT, T, P error! stat, u, s: ${respon, s, e.stat, u, s}`);
     }
 
-    const data = await response.json();
+    con, s, t da, t, a = awa, i, t respon, s, e.js, o, n();
     
-    // Cache the result
-    cache.set(cacheKey, data, ttl);
+    // Cac, h, e t, h, e resu, l, t
+    cac, h, e.s, e, t(cacheK, e, y, da, t, a, t, t, l);
     
-    return data;
+    retu, r, n da, t, a;
   },
 
-  // Cache computed values
-  memoize<T extends (...args: any[]) => any>(
+  // Cac, h, e comput, e, d valu, e, s
+  memoi, z, e<T exten, d, s (...ar, g, s: a, n, y[]) => a, n, y>(
     fn: T,
-    keyGenerator?: (...args: Parameters<T>) => string
+    keyGenerat, o, r?: (...ar, g, s: Paramete, r, s<T>) => string
   ): T {
-    return ((...args: Parameters<T>) => {
-      const key = keyGenerator ? keyGenerator(...args) : `memo:${fn.name}:${JSON.stringify(args)}`;
+    retu, r, n ((...ar, g, s: Paramete, r, s<T>) => {
+      con, s, t k, e, y = keyGenerat, o, r ? keyGenerat, o, r(...ar, g, s) : `me, m, o:${fn.na, m, e}:${JS, O, N.stringi, f, y(ar, g, s)}`;
       
-      if (cache.has(key)) {
-        return cache.get<ReturnType<T>>(key);
+      if (cac, h, e.h, a, s(k, e, y)) {
+        retu, r, n cac, h, e.g, e, t<ReturnTy, p, e<T>>(k, e, y);
       }
 
-      const result = fn(...args);
-      cache.set(key, result, 60000); // 1 minute TTL for computed values
+      con, s, t resu, l, t = fn(...ar, g, s);
+      cac, h, e.s, e, t(k, e, y, resu, l, t, 600, 0, 0); // 1 minu, t, e T, T, L f, o, r comput, e, d valu, e, s
       
-      return result;
+      retu, r, n resu, l, t;
     }) as T;
   },
 
-  // Cache with custom key
-  withCache<T>(
-    key: string,
-    fn: () => T | Promise<T>,
-    ttl: number = 300000
-  ): T | Promise<T> {
-    if (cache.has(key)) {
-      return cache.get<T>(key)!;
+  // Cac, h, e wi, t, h cust, o, m k, e, y
+  withCac, h, e<T>(
+    k, e, y: string,
+    fn: () => T | Promi, s, e<T>,
+    t, t, l: numb, e, r = 3000, 0, 0
+  ): T | Promi, s, e<T> {
+    if (cac, h, e.h, a, s(k, e, y)) {
+      retu, r, n cac, h, e.g, e, t<T>(k, e, y)!;
     }
 
-    const result = fn();
+    con, s, t resu, l, t = fn();
     
-    if (result instanceof Promise) {
-      return result.then(data => {
-        cache.set(key, data, ttl);
-        return data;
+    if (resu, l, t instance, o, f Promi, s, e) {
+      retu, r, n resu, l, t.th, e, n(da, t, a => {
+        cac, h, e.s, e, t(k, e, y, da, t, a, t, t, l);
+        retu, r, n da, t, a;
       });
-    } else {
-      cache.set(key, result, ttl);
-      return result;
+    } el, s, e {
+      cac, h, e.s, e, t(k, e, y, resu, l, t, t, t, l);
+      retu, r, n resu, l, t;
     }
   },
 };

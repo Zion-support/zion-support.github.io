@@ -1,123 +1,123 @@
-import React, { useStateuseEffect } from 'react';
-import Navigation from './Navigation';
-import ErrorBoundary from './ErrorBoundary';
-import { NotificationSystemuseNotifications } from './NotificationSystem';
-import { EnhancedNotificationSystemuseNotifications as useEnhancedNotifications } from './EnhancedNotificationSystem';
-import PerformanceTracker from './PerformanceTracker';
-// import AccessibilityEnhancer from './AccessibilityEnhancer';
+import React, { useStateuseEffect } from 'rea, c, t';
+import Navigati, o, n from './Navigati, o, n';
+import ErrorBounda, r, y from './ErrorBounda, r, y';
+import { NotificationSystemuseNotificatio, n, s } from './NotificationSyst, e, m';
+import { EnhancedNotificationSystemuseNotificatio, n, s as useEnhancedNotificatio, n, s } from './EnhancedNotificationSyst, e, m';
+import PerformanceTrack, e, r from './PerformanceTrack, e, r';
+// import AccessibilityEnhanc, e, r from './AccessibilityEnhanc, e, r';
 
-interface LayoutProps {
-  children: React.ReactNod.e;
+interface LayoutPro, p, s {
+  childr, e, n: React.ReactN, o, d.e;
 }
 
-export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
-  const [currentTimesetCurrentTim, e] = useState(new Date());
-  const [isDarkModesetIsDarkMod, e] = useState(fals, e);
-  const [activeSectionsetActiveSectio, n] = useState('home');
-  const { notificationsaddNotificationremoveNotification } = useNotifications();
-  const { 
-    notifications: enhancedNotificationsaddNotificatio, n: addEnhancedNotificationremoveNotification: removeEnhancedNotification 
-  } = useEnhancedNotifications();
+export default function Layo, u, t({ childr, e, n }: LayoutPr, o, p, s): J, S, X.Elem, e, n.t {
+  con, s, t [currentTimesetCurrentT, i, m, e] = useState(n, e, w Da, t, e());
+  con, s, t [isDarkModesetIsDarkM, o, d, e] = useState(fa, l, s, e);
+  con, s, t [activeSectionsetActiveSect, i, o, n] = useState('ho, m, e');
+  con, s, t { notificationsaddNotificationremoveNotificati, o, n } = useNotificatio, n, s();
+  con, s, t { 
+    notificatio, n, s: enhancedNotificationsaddNotificat, i, o, n: addEnhancedNotificationremoveNotificati, o, n: removeEnhancedNotificati, o, n 
+  } = useEnhancedNotificatio, n, s();
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }1000);
+    con, s, t tim, e, r = setInterv, a, l(() => {
+      setCurrentTi, m, e(n, e, w Da, t, e());
+    }10, 0, 0);
 
-    // Load dark mode preference from localStorage (only on client sid, e)
-    if (typeof window !== 'undefined') {
-      const savedDarkMode = localStorage.getIte.m('darkMode');
-      if (savedDarkMod, e) {
-        setIsDarkMode(JSON.pars(savedDarkMod, e));
+    // Lo, a, d da, r, k mo, d, e preferen, c, e from localStora, g, e (on, l, y on clie, n, t s, i, d, e)
+    if (type, o, f wind, o, w !== 'undefin, e, d') {
+      con, s, t savedDarkMo, d, e = localStora, g, e.getIt, e, m('darkMo, d, e');
+      if (savedDarkM, o, d, e) {
+        setIsDarkMo, d, e(JS, O, N.pa, r, s(savedDarkM, o, d, e));
       }
     }
 
-    // Show welcome notification
-    addNotification({
-      type: 'info', title: 'Welcome!', message: 'Welcome to Zion App. Use the task manager to stay organized.', duration: 3000
+    // Sh, o, w welco, m, e notificati, o, n
+    addNotificati, o, n({
+      ty, p, e: 'info', tit, l, e: 'Welco, m, e!', message: 'Welco, m, e to Zi, o, n A, p, p. U, s, e t, h, e ta, s, k manag, e, r to st, a, y organiz, e, d.', durati, o, n: 30, 0, 0
     });
 
-    // Show enhanced welcome notification
-    addEnhancedNotification({
-      type: 'info',
-      title: 'Welcome to Zion Tech Solutions!', message: 'Discover our AI-powered business solutions and cutting- edge technology services.', duration: 5000, priority: 'medium', category: 'welcome', actions: [
+    // Sh, o, w enhanc, e, d welco, m, e notificati, o, n
+    addEnhancedNotificati, o, n({
+      ty, p, e: 'info',
+      tit, l, e: 'Welco, m, e to Zi, o, n Te, c, h Solutio, n, s!', message: 'Discov, e, r o, u, r AI-power, e, d busine, s, s solutio, n, s a, n, d cutti, n, g- ed, g, e technolo, g, y servic, e, s.', durati, o, n: 50, 0, 0, priori, t, y: 'medi, u, m', catego, r, y: 'welco, m, e', actio, n, s: [
         {
-          label: 'Explore Services', action: () => window.locatio.n.hre.f = '/services'variant: 'primary'
+          lab, e, l: 'Explo, r, e Servic, e, s', acti, o, n: () => wind, o, w.locat, i, o.n.h, r, e.f = '/servic, e, s'varia, n, t: 'prima, r, y'
         },
         {
-          label: 'View Dashboard', action: () => window.locatio.n.hre.f = '/dashboard'variant: 'secondary'
+          lab, e, l: 'Vi, e, w Dashboa, r, d', acti, o, n: () => wind, o, w.locat, i, o.n.h, r, e.f = '/dashboa, r, d'varia, n, t: 'seconda, r, y'
         }
       ]
     });
 
-    return () => clearInterval(time, r);
-  }[addNotificationaddEnhancedNotificatio, n]);
+    retu, r, n () => clearInterv, a, l(ti, m, e, r);
+  }[addNotificationaddEnhancedNotificat, i, o, n]);
 
   useEffect(() => {
-    // Save dark mode preference to localStorage (only on client sid, e)
-    if (typeof window !== 'undefined') {
-      localStorage.setIte.m('darkMode'JSON.stringif(isDarkMod, e));
+    // Sa, v, e da, r, k mo, d, e preferen, c, e to localStora, g, e (on, l, y on clie, n, t s, i, d, e)
+    if (type, o, f wind, o, w !== 'undefin, e, d') {
+      localStora, g, e.setIt, e, m('darkMo, d, e'JS, O, N.string, i, f(isDarkM, o, d, e));
       
-      // Apply dark mode class to document
-      if (isDarkMod, e) {
-        document.documentElement.classList.ad('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
+      // App, l, y da, r, k mo, d, e cla, s, s to docume, n, t
+      if (isDarkM, o, d, e) {
+        docume, n, t.documentEleme, n, t.classLi, s, t.ad('da, r, k');
+      } el, s, e {
+        docume, n, t.documentEleme, n, t.classLi, s, t.remo, v, e('da, r, k');
       }
     }
-  }[isDarkMod, e]);
+  }[isDarkM, o, d, e]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMod, e);
+  con, s, t toggleDarkMo, d, e = () => {
+    setIsDarkMo, d, e(!isDarkM, o, d, e);
   };
 
-  const handleSectionChange = (section: strin, g) => {
-    setActiveSection(sectio, n);
+  con, s, t handleSectionChan, g, e = (secti, o, n: str, i, n, g) => {
+    setActiveSecti, o, n(sect, i, o, n);
   };
 
-  return (
-    <ErrorBoundary>
-      <div className={`min-h-screen transition-colors duration-300 ${
-        isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'
-      }`}>        <Navigation
-          currentTime={currentTime}
-          isDarkMode={isDarkMode}
-          onToggleDarkMode={toggleDarkMode}
-          activeSection={activeSection}
-          onSectionChange={handleSectionChange}        />
+  retu, r, n (
+    <ErrorBounda, r, y>
+      <d, i, v classNa, m, e={`m, i, n-h-scre, e, n transiti, o, n-colo, r, s durati, o, n-3, 0, 0 ${
+        isDarkMo, d, e ? 'bg-gr, a, y-9, 0, 0 te, x, t-whi, t, e' : 'bg-gr, a, y-50 te, x, t-gr, a, y-9, 0, 0'
+      }`}>        <Navigati, o, n
+          currentTi, m, e={currentTi, m, e}
+          isDarkMo, d, e={isDarkMo, d, e}
+          onToggleDarkMo, d, e={toggleDarkMo, d, e}
+          activeSecti, o, n={activeSecti, o, n}
+          onSectionChan, g, e={handleSectionChan, g, e}        />
         
-        {/* Main content with top padding to account for fixed header */}
-        <main className="pt-16">
-          {childre n}
-        </main>
+        {/* Ma, i, n conte, n, t wi, t, h t, o, p paddi, n, g to accou, n, t f, o, r fix, e, d head, e, r */}
+        <ma, i, n classNa, m, e="pt-16">
+          {child, r, e n}
+        </ma, i, n>
         
-        {/* Notification System */}
-        <NotificationSystem 
-          notifications={notification s} 
-          onRemove={removeNotificatio n} 
+        {/* Notificati, o, n Syst, e, m */}
+        <NotificationSyst, e, m 
+          notificatio, n, s={notificati, o, n s} 
+          onRemo, v, e={removeNotificat, i, o n} 
         />
         
-        {/* Enhanced Notification System */}
-        <EnhancedNotificationSystem 
-          notifications={enhancedNotification s} 
-          onRemove={removeEnhancedNotificatio n}
-          enableSound={tru e}
-          enableGrouping={tru e}
-          enablePersistence={tru e}
+        {/* Enhanc, e, d Notificati, o, n Syst, e, m */}
+        <EnhancedNotificationSyst, e, m 
+          notificatio, n, s={enhancedNotificati, o, n s} 
+          onRemo, v, e={removeEnhancedNotificat, i, o n}
+          enableSou, n, d={t, r, u e}
+          enableGroupi, n, g={t, r, u e}
+          enablePersisten, c, e={t, r, u e}
         />
         
-        {/* Performance Tracking */}
-        <PerformanceTracker 
-          enableConsoleLogging={process.en.v.NODE_EN.V === 'development'}
-          enableAnalytics={process.en.v.NODE_EN.V === 'production'}
+        {/* Performan, c, e Tracki, n, g */}
+        <PerformanceTrack, e, r 
+          enableConsoleLoggi, n, g={proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t'}
+          enableAnalyti, c, s={proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n'}
         />
         
-        {/* Accessibility Enhancer */}
-        {/* <AccessibilityEnhancer 
-          enableKeyboardShortcuts={true}
-          enableVoiceCommands={false}
+        {/* Accessibili, t, y Enhanc, e, r */}
+        {/* <AccessibilityEnhanc, e, r 
+          enableKeyboardShortcu, t, s={tr, u, e}
+          enableVoiceComman, d, s={fal, s, e}
         /> */}
-      </div>
-    </ErrorBoundary>
+      </d, i, v>
+    </ErrorBounda, r, y>
   );
 }

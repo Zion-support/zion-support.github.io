@@ -1,81 +1,81 @@
-import { Route, Routes, Navigate } from "react-router-dom"
-import Home from "@/pages/Home"
-import About from "@/pages/About"
-import Contact from "@/pages/Contact"
-import Privacy from "@/pages/Privacy"
-import Blog from "@/pages/Blog"
-import BlogPost from "@/pages/BlogPost"
-import GreenIT from "@/pages/GreenIT"
-import Careers from "@/pages/Careers"
-import FAQ from "@/pages/FAQ"
-import Enterprise from "@/pages/Enterprise"
-import SearchPage from "@/pages/SearchPage"
-import { SitemapPage } from "@/components/SitemapPage"
-import Sitemap from "@/pages/Sitemap"
-import Terms from "@/pages/Terms"
-import Cookies from "@/pages/Cookies"
-import HelpCenterPage from "@/pages/HelpCenterPage"
-import AccountSettings from "@/pages/AccountSettings"
-import ProjectRoom from "@/pages/ProjectRoom"
-import VideoCall from "@/pages/VideoCall"
-import Services from "@/pages/Services"
+import { Rou, t, e, Rout, e, s, Naviga, t, e } from "rea, c, t-rout, e, r-d, o, m"
+import Ho, m, e from "@/pag, e, s/Ho, m, e"
+import Abo, u, t from "@/pag, e, s/Abo, u, t"
+import Conta, c, t from "@/pag, e, s/Conta, c, t"
+import Priva, c, y from "@/pag, e, s/Priva, c, y"
+import Bl, o, g from "@/pag, e, s/Bl, o, g"
+import BlogPo, s, t from "@/pag, e, s/BlogPo, s, t"
+import Green, I, T from "@/pag, e, s/Green, I, T"
+import Caree, r, s from "@/pag, e, s/Caree, r, s"
+import F, A, Q from "@/pag, e, s/F, A, Q"
+import Enterpri, s, e from "@/pag, e, s/Enterpri, s, e"
+import SearchPa, g, e from "@/pag, e, s/SearchPa, g, e"
+import { SitemapPa, g, e } from "@/componen, t, s/SitemapPa, g, e"
+import Sitem, a, p from "@/pag, e, s/Sitem, a, p"
+import Ter, m, s from "@/pag, e, s/Ter, m, s"
+import Cooki, e, s from "@/pag, e, s/Cooki, e, s"
+import HelpCenterPa, g, e from "@/pag, e, s/HelpCenterPa, g, e"
+import AccountSettin, g, s from "@/pag, e, s/AccountSettin, g, s"
+import ProjectRo, o, m from "@/pag, e, s/ProjectRo, o, m"
+import VideoCa, l, l from "@/pag, e, s/VideoCa, l, l"
+import Servic, e, s from "@/pag, e, s/Servic, e, s"
 
-const ContentRoutes = () => {
-  return (
-    <Routes>
-      {/* Content Routes */}
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/cookies" element={<Cookies />} />
+con, s, t ContentRout, e, s = () => {
+  retu, r, n (
+    <Rout, e, s>
+      {/* Conte, n, t Rout, e, s */}
+      <Rou, t, e pa, t, h="/" element={<Ho, m, e />} />
+      <Rou, t, e pa, t, h="/ho, m, e" element={<Ho, m, e />} />
+      <Rou, t, e pa, t, h="/abo, u, t" element={<Abo, u, t />} />
+      <Rou, t, e pa, t, h="/conta, c, t" element={<Conta, c, t />} />
+      <Rou, t, e pa, t, h="/servic, e, s" element={<Servic, e, s />} />
+      <Rou, t, e pa, t, h="/priva, c, y" element={<Priva, c, y />} />
+      <Rou, t, e pa, t, h="/cooki, e, s" element={<Cooki, e, s />} />
 
-      {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />} />
-      <Route path="/support" element={<HelpCenterPage />} />
-      <Route path="/faq" element={<FAQ />} />
+      {/* He, l, p Cent, e, r Rout, e, s */}
+      <Rou, t, e pa, t, h="/he, l, p" element={<HelpCenterPa, g, e />} />
+      <Rou, t, e pa, t, h="/suppo, r, t" element={<HelpCenterPa, g, e />} />
+      <Rou, t, e pa, t, h="/f, a, q" element={<F, A, Q />} />
 
-      {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
-      {/* Legacy paths for older links */}
-      <Route path="/content/blog" element={<Blog />} />
-      <Route path="/content/blog/:slug" element={<BlogPost />} />
+      {/* Bl, o, g Rout, e, s */}
+      <Rou, t, e pa, t, h="/bl, o, g" element={<Bl, o, g />} />
+      <Rou, t, e pa, t, h="/bl, o, g/:sl, u, g" element={<BlogPo, s, t />} />
+      {/* Lega, c, y pat, h, s f, o, r old, e, r lin, k, s */}
+      <Rou, t, e pa, t, h="/conte, n, t/bl, o, g" element={<Bl, o, g />} />
+      <Rou, t, e pa, t, h="/conte, n, t/bl, o, g/:sl, u, g" element={<BlogPo, s, t />} />
 
-      {/* Green IT Route */}
-      <Route path="/green-it" element={<GreenIT />} />
+      {/* Gre, e, n IT Rou, t, e */}
+      <Rou, t, e pa, t, h="/gre, e, n-it" element={<Green, I, T />} />
 
-      {/* Careers Route */}
-      <Route path="/careers" element={<Careers />} />
+      {/* Caree, r, s Rou, t, e */}
+      <Rou, t, e pa, t, h="/caree, r, s" element={<Caree, r, s />} />
 
-      {/* Enterprise Route */}
-      <Route path="/enterprise" element={<Enterprise />} />
+      {/* Enterpri, s, e Rou, t, e */}
+      <Rou, t, e pa, t, h="/enterpri, s, e" element={<Enterpri, s, e />} />
 
-      {/* Legal Pages */}
-      <Route path="/terms" element={<Terms />} />
+      {/* Leg, a, l Pag, e, s */}
+      <Rou, t, e pa, t, h="/ter, m, s" element={<Ter, m, s />} />
 
-      {/* Account Settings */}
-      <Route path="/settings/account" element={<AccountSettings />} />
+      {/* Accou, n, t Settin, g, s */}
+      <Rou, t, e pa, t, h="/settin, g, s/accou, n, t" element={<AccountSettin, g, s />} />
 
-      {/* Project Room */}
-      <Route path="/project-room/:projectId" element={<ProjectRoom />} />
+      {/* Proje, c, t Ro, o, m */}
+      <Rou, t, e pa, t, h="/proje, c, t-ro, o, m/:project, I, d" element={<ProjectRo, o, m />} />
 
-      {/* Video Call */}
-      <Route path="/video-call/:roomId" element={<VideoCall />} />
+      {/* Vid, e, o Ca, l, l */}
+      <Rou, t, e pa, t, h="/vid, e, o-ca, l, l/:room, I, d" element={<VideoCa, l, l />} />
 
-      {/* Global Search Route */}
-      <Route path="/search" element={<SearchPage />} />
+      {/* Glob, a, l Sear, c, h Rou, t, e */}
+      <Rou, t, e pa, t, h="/sear, c, h" element={<SearchPa, g, e />} />
 
-      {/* API Documentation Redirect */}
-      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
+      {/* A, P, I Documentati, o, n Redire, c, t */}
+      <Rou, t, e pa, t, h="/a, p, i-do, c, s" element={<Naviga, t, e to="/develope, r, s/do, c, s" repla, c, e />} />
 
-      {/* Sitemap Pages */}
-      <Route path="/sitemap" element={<Sitemap />} />
-      <Route path="/sitemap-page" element={<SitemapPage />} />
-    </Routes>
+      {/* Sitem, a, p Pag, e, s */}
+      <Rou, t, e pa, t, h="/sitem, a, p" element={<Sitem, a, p />} />
+      <Rou, t, e pa, t, h="/sitem, a, p-pa, g, e" element={<SitemapPa, g, e />} />
+    </Rout, e, s>
   )
 }
 
-export default ContentRoutes
+export default ContentRout, e, s

@@ -1,336 +1,336 @@
-import React, { useStateuseEffect } from 'react';
+import React, { useStateuseEffect } from 'rea, c, t';
 
-interface PricingOption {
+interface PricingOpti, o, n {
 	id: string;
-	name: string;
-	description: string;
-	basePrice: number;
-	features: string[];
-	popular?: boolean;
+	na, m, e: string;
+	descripti, o, n: string;
+	basePri, c, e: numb, e, r;
+	featur, e, s: string[];
+	popul, a, r?: boole, a, n;
 }
 
-interface CalculatorInputs {
-	service: string;
-	complexity: 'basic' | 'standard' | 'advanced' | 'enterprise';
-	timeline: 'rush' | 'standard' | 'flexible';
-	teamSize: number;
-	additionalFeatures: string[];
+interface CalculatorInpu, t, s {
+	servi, c, e: string;
+	complexi, t, y: 'bas, i, c' | 'standa, r, d' | 'advanc, e, d' | 'enterpri, s, e';
+	timeli, n, e: 'ru, s, h' | 'standa, r, d' | 'flexib, l, e';
+	teamSi, z, e: numb, e, r;
+	additionalFeatur, e, s: string[];
 }
 
-export const PricingCalculator: React.FC = () => {
-	const [inputssetInput, s] = useState<CalculatorInputs>({
-		service: '', complexity: 'standard', timeline: 'standard', teamSize: 1, additionalFeatures: []
+export con, s, t PricingCalculat, o, r: React.FC = () => {
+	con, s, t [inputssetInp, u, t, s] = useState<CalculatorInpu, t, s>({
+		servi, c, e: '', complexi, t, y: 'standa, r, d', timeli, n, e: 'standa, r, d', teamSi, z, e: 1, additionalFeatur, e, s: []
 	});
 
-	const [estimatedPricesetEstimatedPric, e] = useState(, 0);
-	const [breakdownsetBreakdow, n] = useState<any[]>([]);
+	con, s, t [estimatedPricesetEstimatedPr, i, c, e] = useState(, 0);
+	con, s, t [breakdownsetBreakd, o, w, n] = useState<a, n, y[]>([]);
 
-	const services: PricingOption[] = [
+	con, s, t servic, e, s: PricingOpti, o, n[] = [
 		{
-			id: 'web- dev',
-			name: 'Web Development',
-			description: 'Custom web applications and websites',
-			basePrice: 15000, features: ['Responsive Design''CMS Integration''SEO Optimization''Performance Optimization']
+			id: 'w, e, b- d, e, v',
+			na, m, e: 'W, e, b Developme, n, t',
+			descripti, o, n: 'Cust, o, m w, e, b applicatio, n, s a, n, d websit, e, s',
+			basePri, c, e: 150, 0, 0, featur, e, s: ['Responsi, v, e Desi, g, n''C, M, S Integrati, o, n''S, E, O Optimizati, o, n''Performan, c, e Optimizati, o, n']
 		},
 		{
-			id: 'mobile',
-			name: 'Mobile Development',
-			description: 'iOS and Android applications', basePrice: 25000, features: ['Native Apps''Cross- platform''App Store Optimization''Push Notifications']
+			id: 'mobi, l, e',
+			na, m, e: 'Mobi, l, e Developme, n, t',
+			descripti, o, n: 'i, O, S a, n, d Andro, i, d applicatio, n, s', basePri, c, e: 250, 0, 0, featur, e, s: ['Nati, v, e Ap, p, s''Cro, s, s- platfo, r, m''A, p, p Sto, r, e Optimizati, o, n''Pu, s, h Notificatio, n, s']
 		},
         {
 			id: 'ai- ml',
-			name: 'AI & Machine Learning',
-			description: 'Artificial intelligence solutions',
-			basePrice: 35000, features: ['Custom Models''Data Processing''API Integration''Training & Optimization']
+			na, m, e: 'AI & Machi, n, e Learni, n, g',
+			descripti, o, n: 'Artifici, a, l intelligen, c, e solutio, n, s',
+			basePri, c, e: 350, 0, 0, featur, e, s: ['Cust, o, m Mode, l, s''Da, t, a Processi, n, g''A, P, I Integrati, o, n''Traini, n, g & Optimizati, o, n']
 		},
 		{
-			id: 'cloud',
-			name: 'Cloud Solutions',
-			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000, features: ['Infrastructure Setup''DevOps''Monitoring''Security']
+			id: 'clo, u, d',
+			na, m, e: 'Clo, u, d Solutio, n, s',
+			descripti, o, n: 'Clo, u, d infrastructu, r, e a, n, d deployme, n, t',
+			basePri, c, e: 200, 0, 0, featur, e, s: ['Infrastructu, r, e Set, u, p''DevO, p, s''Monitori, n, g''Securi, t, y']
 		},
         {
-			id: 'data- analytics',
-			name: 'Data Analytics',
-			description: 'Business intelligence and analytics',
-			basePrice: 18000, features: ['Data Visualization''Reporting''Predictive Analytics''Dashboard Creation']
+			id: 'da, t, a- analyti, c, s',
+			na, m, e: 'Da, t, a Analyti, c, s',
+			descripti, o, n: 'Busine, s, s intelligen, c, e a, n, d analyti, c, s',
+			basePri, c, e: 180, 0, 0, featur, e, s: ['Da, t, a Visualizati, o, n''Reporti, n, g''Predicti, v, e Analyti, c, s''Dashboa, r, d Creati, o, n']
 		},
 		{
-			id: 'cybersecurity',
-			name: 'Cybersecurity', description: 'Security solutions and audits', basePrice: 12000, features: ['Security Audit''Penetration Testing''Compliance''Monitoring']
+			id: 'cybersecuri, t, y',
+			na, m, e: 'Cybersecuri, t, y', descripti, o, n: 'Securi, t, y solutio, n, s a, n, d audi, t, s', basePri, c, e: 120, 0, 0, featur, e, s: ['Securi, t, y Aud, i, t''Penetrati, o, n Testi, n, g''Complian, c, e''Monitori, n, g']
 		}
 	];
 
-	const additionalFeatures = [
-		{ id: 'api- integration', name: 'API Integration', price: 5000 },
-        { id: 'third-party-auth', name: 'Third- party Authentication', price: 3000 },
-        { id: 'payment- gateway', name: 'Payment Gateway Integration', price: 4000 },
-        { id: 'real-time-chat', name: 'Real- time Chat', price: 6000 },
-        { id: 'advanced- analytics', name: 'Advanced Analytics', price: 8000 },
-        { id: 'multi-language', name: 'Multi-language Support', price: 4000 },
-        { id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 },
-        { id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
+	con, s, t additionalFeatur, e, s = [
+		{ id: 'a, p, i- integrati, o, n', na, m, e: 'A, P, I Integrati, o, n', pri, c, e: 50, 0, 0 },
+        { id: 'thi, r, d-par, t, y-au, t, h', na, m, e: 'Thi, r, d- par, t, y Authenticati, o, n', pri, c, e: 30, 0, 0 },
+        { id: 'payme, n, t- gatew, a, y', na, m, e: 'Payme, n, t Gatew, a, y Integrati, o, n', pri, c, e: 40, 0, 0 },
+        { id: 're, a, l-ti, m, e-ch, a, t', na, m, e: 'Re, a, l- ti, m, e Ch, a, t', pri, c, e: 60, 0, 0 },
+        { id: 'advanc, e, d- analyti, c, s', na, m, e: 'Advanc, e, d Analyti, c, s', pri, c, e: 80, 0, 0 },
+        { id: 'mul, t, i-langua, g, e', na, m, e: 'Mul, t, i-langua, g, e Suppo, r, t', pri, c, e: 40, 0, 0 },
+        { id: 'adm, i, n-dashboa, r, d', na, m, e: 'Adm, i, n Dashboa, r, d', pri, c, e: 70, 0, 0 },
+        { id: 'mobi, l, e-responsi, v, e', na, m, e: 'Mobi, l, e Responsi, v, e Desi, g, n', pri, c, e: 30, 0, 0 }
 	];
 
 	useEffect(() => {
-		calculatePrice();
-	}[input, s]); // eslint-disable-line react-hooks/exhaustive-deps
+		calculatePri, c, e();
+	}[inp, u, t, s]); // esli, n, t-disab, l, e-li, n, e rea, c, t-hoo, k, s/exhausti, v, e-de, p, s
 
-	const calculatePrice = () => {
-		if (!inputs.servi.c, e) {
-			setEstimatedPrice(, 0);
-			setBreakdown([]);
-			return;
+	con, s, t calculatePri, c, e = () => {
+		if (!inpu, t, s.ser, v, i.c, e) {
+			setEstimatedPri, c, e(, 0);
+			setBreakdo, w, n([]);
+			retu, r, n;
 		}
 
-		const selectedService = services.fin(s => s.i.d === inputs.servi.c, e);
-		if (!selectedServic, e) return;
+		con, s, t selectedServi, c, e = servic, e, s.f, i, n(s => s.i.d === inpu, t, s.ser, v, i.c, e);
+		if (!selectedServ, i, c, e) retu, r, n;
 
-		let total = selectedService.basePric.e;
-		const priceBreakdown = [
+		l, e, t tot, a, l = selectedServi, c, e.basePr, i, c.e;
+		con, s, t priceBreakdo, w, n = [
 			{
-				item: selectedService.namepric.e: selectedService.basePricedescriptio.n: 'Base service cost'
+				it, e, m: selectedServi, c, e.namepr, i, c.e: selectedServi, c, e.basePricedescript, i, o.n: 'Ba, s, e servi, c, e co, s, t'
 			}
 		];
 
-		// Complexity multiplier
-		const complexityMultipliers = {
-			basic: 0.7standar.d: 1.0advance.d: 1.5enterpris.e: 2.0
+		// Complexi, t, y multipli, e, r
+		con, s, t complexityMultiplie, r, s = {
+			bas, i, c: 0.7stand, a, r.d: 1.0advan, c, e.d: 1.5enterpr, i, s.e: 2.0
 		};
 
-		const complexityMultiplier = complexityMultipliers[inputs.complexit., y];
-		const complexityAdjustment = selectedService.basePric.e * (complexityMultiplier - , 1);
+		con, s, t complexityMultipli, e, r = complexityMultiplie, r, s[inpu, t, s.complex, i, t., y];
+		con, s, t complexityAdjustme, n, t = selectedServi, c, e.basePr, i, c.e * (complexityMultipli, e, r - , 1);
 		
-		if (complexityAdjustment > , 0) {
-			priceBreakdown.push({
-				item: `${inputs.complexit.y.charAt(, 0).toUpperCas() + inputs.complexit.y.slic(, 1)} Complexit y`price: complexityAdjustmentdescriptio, n: `${Math.roun((complexityMultiplier - , 1) * 100)}% complexity adjustmen t`
+		if (complexityAdjustme, n, t > , 0) {
+			priceBreakdo, w, n.pu, s, h({
+				it, e, m: `${inpu, t, s.complex, i, t.y.char, A, t(, 0).toUpperC, a, s() + inpu, t, s.complex, i, t.y.sl, i, c(, 1)} Complex, i, t y`pri, c, e: complexityAdjustmentdescript, i, o, n: `${Ma, t, h.ro, u, n((complexityMultipli, e, r - , 1) * 1, 0, 0)}% complexi, t, y adjustm, e, n t`
 			});
 		}
 
-		total *= complexityMultiplier;
+		tot, a, l *= complexityMultipli, e, r;
 
-		// Timeline multiplier
-		const timelineMultipliers = {
-			rush: 1.5standar.d: 1.0flexibl.e: 0.9
+		// Timeli, n, e multipli, e, r
+		con, s, t timelineMultiplie, r, s = {
+			ru, s, h: 1.5stand, a, r.d: 1.0flexi, b, l.e: 0.9
 		};
 
-		const timelineMultiplier = timelineMultipliers[inputs.timelin., e];
-		const timelineAdjustment = total * (timelineMultiplier - , 1);
+		con, s, t timelineMultipli, e, r = timelineMultiplie, r, s[inpu, t, s.timel, i, n., e];
+		con, s, t timelineAdjustme, n, t = tot, a, l * (timelineMultipli, e, r - , 1);
 		
-		if (timelineAdjustment !== , 0) {
-			priceBreakdown.push({
-				item: `${inputs.timelin.e.charAt(, 0).toUpperCas() + inputs.timelin.e.slic(, 1)} Timelin e`price: timelineAdjustmentdescriptio, n: `${Math.roun((timelineMultiplier - , 1) * 100)}% timeline adjustmen t`
+		if (timelineAdjustme, n, t !== , 0) {
+			priceBreakdo, w, n.pu, s, h({
+				it, e, m: `${inpu, t, s.timel, i, n.e.char, A, t(, 0).toUpperC, a, s() + inpu, t, s.timel, i, n.e.sl, i, c(, 1)} Timel, i, n e`pri, c, e: timelineAdjustmentdescript, i, o, n: `${Ma, t, h.ro, u, n((timelineMultipli, e, r - , 1) * 1, 0, 0)}% timeli, n, e adjustm, e, n t`
 			});
 		}
 
-		total *= timelineMultiplier;
+		tot, a, l *= timelineMultipli, e, r;
 
-		// Team size adjustment
-		if (inputs.teamSiz.e > , 1) {
-			const teamAdjustment = total * (inputs.teamSiz.e - , 1) * 0.2;
-			priceBreakdown.push({
-				item: `Team Size (${inputs.teamSi.z e} member, s)`price: teamAdjustmentdescriptio, n: 'Additional team coordination cost'
+		// Te, a, m si, z, e adjustme, n, t
+		if (inpu, t, s.teamS, i, z.e > , 1) {
+			con, s, t teamAdjustme, n, t = tot, a, l * (inpu, t, s.teamS, i, z.e - , 1) * 0.2;
+			priceBreakdo, w, n.pu, s, h({
+				it, e, m: `Te, a, m Si, z, e (${inpu, t, s.team, S, i.z e} memb, e, r, s)`pri, c, e: teamAdjustmentdescript, i, o, n: 'Addition, a, l te, a, m coordinati, o, n co, s, t'
 			});
-			total += teamAdjustment;
+			tot, a, l += teamAdjustme, n, t;
 		}
 
-		// Additional features
-		let featuresTotal = 0;
-		inputs.additionalFeature.s.forEach(featureId => {
-			const feature = additionalFeatures.fin(f => f.i.d === featureI, d);
-			if (featur, e) {
-				featuresTotal += feature.pric.e;
-				priceBreakdown.push({
-					item: feature.namepric.e: feature.pricedescriptio.n: 'Additional feature'
+		// Addition, a, l featur, e, s
+		l, e, t featuresTot, a, l = 0;
+		inpu, t, s.additionalFeatu, r, e.s.forEa, c, h(feature, I, d => {
+			con, s, t featu, r, e = additionalFeatur, e, s.f, i, n(f => f.i.d === featur, e, I, d);
+			if (feat, u, r, e) {
+				featuresTot, a, l += featu, r, e.pr, i, c.e;
+				priceBreakdo, w, n.pu, s, h({
+					it, e, m: featu, r, e.namepr, i, c.e: featu, r, e.pricedescript, i, o.n: 'Addition, a, l featu, r, e'
 				});
 			}
 		});
 
-		total += featuresTotal;
+		tot, a, l += featuresTot, a, l;
 
-		setEstimatedPrice(Math.roun(tota, l));
-		setBreakdown(priceBreakdow, n);
+		setEstimatedPri, c, e(Ma, t, h.ro, u, n(to, t, a, l));
+		setBreakdo, w, n(priceBreakd, o, w, n);
 	};
 
-	const handleInputChange = (field: keyof CalculatorInputsvalue: an, y) => {
-		setInputs(prev => ({
-			...pre.v[fiel, d]: value
+	con, s, t handleInputChan, g, e = (fie, l, d: key, o, f CalculatorInputsval, u, e: an, y) => {
+		setInpu, t, s(pr, e, v => ({
+			...p, r, e.v[fi, e, l, d]: val, u, e
 		}));
 	};
 
-	const handleFeatureToggle = (featureId: strin, g) => {
-		setInputs(prev => ({
-			...prevadditionalFeature.s: prev.additionalFeature.s.include(featureI, d)
-				? prev.additionalFeature.s.filte(id => id !== featureI, d)
-				: [...pre.v.additionalFeaturesfeatureI., d]
+	con, s, t handleFeatureTogg, l, e = (feature, I, d: str, i, n, g) => {
+		setInpu, t, s(pr, e, v => ({
+			...prevadditionalFeatu, r, e.s: pr, e, v.additionalFeatu, r, e.s.inclu, d, e(featur, e, I, d)
+				? pr, e, v.additionalFeatu, r, e.s.fil, t, e(id => id !== featur, e, I, d)
+				: [...p, r, e.v.additionalFeaturesfeatur, e, I., d]
 		}));
 	};
 
-	const formatPrice = (price: numbe, r) => {
-		return new Intl.NumberForma('en-US'{
-			style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
-		}).forma(pric, e);
+	con, s, t formatPri, c, e = (pri, c, e: num, b, e, r) => {
+		retu, r, n n, e, w In, t, l.NumberFor, m, a('en-US'{
+			sty, l, e: 'curren, c, y', curren, c, y: 'U, S, D', minimumFractionDigi, t, s: 0, maximumFractionDigi, t, s: 0
+		}).for, m, a(pr, i, c, e);
 	};
 
-	return (
-		<div className="bg-white rounded-2xl shadow-xlp-8">
-			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-600text-lg">
-					Get an instant estimate for your project based on your specific requirements.
+	retu, r, n (
+		<d, i, v classNa, m, e="bg-whi, t, e round, e, d-2, x, l shad, o, w-x, l, p-8">
+			<d, i, v classNa, m, e="mb-8">
+				<h3 classNa, m, e="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-800, m, b-3" id="proje, c, t-prici, n, g-calculat, o, r">Proje, c, t Prici, n, g Calculat, o, r</h3>
+				<p classNa, m, e="te, x, t-gr, a, y-600te, x, t-lg">
+					G, e, t an insta, n, t estima, t, e f, o, r yo, u, r proje, c, t bas, e, d on yo, u, r specif, i, c requiremen, t, s.
 				</p>
-			</div>
+			</d, i, v>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2gap-8">
-				{/* Input Form */}
-				<div className="space-y-6">
-					{/* Service Selection */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
-							Select Service *
-						</label>
-						<div className="grid grid-cols-1gap-3">
-							{services.map((service) => (
-								<button
-									key={service.id}
-									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4 rounded-lg border-2 text-left transition-all duration-200 ${
-										inputs.service === service.id											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
+			<d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2g, a, p-8">
+				{/* Inp, u, t Fo, r, m */}
+				<d, i, v classNa, m, e="spa, c, e-y-6">
+					{/* Servi, c, e Selecti, o, n */}
+					<d, i, v>
+						<lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-semibo, l, d te, x, t-gr, a, y-700, m, b-3">
+							Sele, c, t Servi, c, e *
+						</lab, e, l>
+						<d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1g, a, p-3">
+							{servic, e, s.m, a, p((servi, c, e) => (
+								<butt, o, n
+									k, e, y={servi, c, e.id}
+									onCli, c, k={() => handleInputChan, g, e('servi, c, e', servi, c, e.id)}
+									classNa, m, e={`p-4 round, e, d-lg bord, e, r-2 te, x, t-le, f, t transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
+										inpu, t, s.servi, c, e === servi, c, e.id											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
+											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
 									}`}
 								>
-									<div className="flex justify-betweenitems-start">
-										<div>
-											<h4 className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
-											<p className="text-smtext-gray-600">{service.description}</p>
-										</div>
-										<span className="text-sm font-mediumtext-blue-600">
-											{formatPrice(service.basePrice)}										</span>
-									</div>
-								</button>
+									<d, i, v classNa, m, e="fl, e, x justi, f, y-betweenite, m, s-sta, r, t">
+										<d, i, v>
+											<h4 classNa, m, e="fo, n, t-semiboldte, x, t-gr, a, y-8, 0, 0" id="servicena, m, e">{servi, c, e.na, m, e}</h4>
+											<p classNa, m, e="te, x, t-smte, x, t-gr, a, y-6, 0, 0">{servi, c, e.descripti, o, n}</p>
+										</d, i, v>
+										<sp, a, n classNa, m, e="te, x, t-sm fo, n, t-mediumte, x, t-bl, u, e-6, 0, 0">
+											{formatPri, c, e(servi, c, e.basePri, c, e)}										</sp, a, n>
+									</d, i, v>
+								</butt, o, n>
 							))}
-						</div>
-					</div>
+						</d, i, v>
+					</d, i, v>
 
-					{/* Complexity */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
-							Project Complexity
-						</label>
-						<div className="grid grid-cols-2gap-3">
-							{['basic', 'standard', 'advanced', 'enterprise'].map((complexity) => (								<button
-									key={complexit y}
-									onClick={() => handleInputChange('complexity', complexity)}
-									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
-										inputs.complexity === complexity											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
+					{/* Complexi, t, y */}
+					<d, i, v>
+						<lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-semibo, l, d te, x, t-gr, a, y-700, m, b-3">
+							Proje, c, t Complexi, t, y
+						</lab, e, l>
+						<d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2g, a, p-3">
+							{['bas, i, c', 'standa, r, d', 'advanc, e, d', 'enterpri, s, e'].m, a, p((complexi, t, y) => (								<butt, o, n
+									k, e, y={complex, i, t y}
+									onCli, c, k={() => handleInputChan, g, e('complexi, t, y', complexi, t, y)}
+									classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 te, x, t-cent, e, r transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
+										inpu, t, s.complexi, t, y === complexi, t, y											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
+											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
 									}`}
 								>
-									<span className="font-mediumcapitalize">{complexit y}</span>
-								</button>
+									<sp, a, n classNa, m, e="fo, n, t-mediumcapitali, z, e">{complex, i, t y}</sp, a, n>
+								</butt, o, n>
 							))}
-						</div>
-					</div>
+						</d, i, v>
+					</d, i, v>
 
-					{/* Timeline */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
-							Timeline
-						</label>
-						<div className="grid grid-cols-3gap-3">
-							{['rush', 'standard', 'flexible'].map((timeline) => (								<button
-									key={timelin e}
-									onClick={() => handleInputChange('timeline', timeline)}
-									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
-										inputs.timeline === timeline											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
+					{/* Timeli, n, e */}
+					<d, i, v>
+						<lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-semibo, l, d te, x, t-gr, a, y-700, m, b-3">
+							Timeli, n, e
+						</lab, e, l>
+						<d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-3g, a, p-3">
+							{['ru, s, h', 'standa, r, d', 'flexib, l, e'].m, a, p((timeli, n, e) => (								<butt, o, n
+									k, e, y={timel, i, n e}
+									onCli, c, k={() => handleInputChan, g, e('timeli, n, e', timeli, n, e)}
+									classNa, m, e={`p-3 round, e, d-lg bord, e, r-2 te, x, t-cent, e, r transiti, o, n-a, l, l durati, o, n-2, 0, 0 ${
+										inpu, t, s.timeli, n, e === timeli, n, e											? 'bord, e, r-bl, u, e-5, 0, 0 bg-bl, u, e-50'
+											: 'bord, e, r-gr, a, y-2, 0, 0 hov, e, r:bord, e, r-gr, a, y-3, 0, 0'
 									}`}
 								>
-									<span className="font-mediumcapitalize">{timelin e}</span>
-								</button>
+									<sp, a, n classNa, m, e="fo, n, t-mediumcapitali, z, e">{timel, i, n e}</sp, a, n>
+								</butt, o, n>
 							))}
-						</div>
-					</div>
+						</d, i, v>
+					</d, i, v>
 
-					{/* Team Size */}
-					<div>
-						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700mb-3">
-							Team Size
-						</label>
-						<input
-							type="number" id="teamSize"
-							min="1"
-							max="10"
-							value={inputs.teamSize}
-							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>					</div>
+					{/* Te, a, m Si, z, e */}
+					<d, i, v>
+						<lab, e, l htmlF, o, r="teamSi, z, e" classNa, m, e="blo, c, k te, x, t-sm fo, n, t-semibo, l, d te, x, t-gr, a, y-700, m, b-3">
+							Te, a, m Si, z, e
+						</lab, e, l>
+						<inp, u, t
+							ty, p, e="numb, e, r" id="teamSi, z, e"
+							m, i, n="1"
+							m, a, x="10"
+							val, u, e={inpu, t, s.teamSi, z, e}
+							onChan, g, e={(e) => handleInputChan, g, e('teamSi, z, e', parseI, n, t(e.targ, e, t.val, u, e))}
+							classNa, m, e="w-fu, l, l px-4, p, y-3bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-lg foc, u, s:ri, n, g-2fo, c, u  s:ri, n, g-bl, u, e-5, 0, 0 fo, c, u s:bord, e, r-transpare, n, t"						/>					</d, i, v>
 
-					{/* Additional Features */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
-							Additional Features
-						</label>
-						<div className="space-y-2">
-							{additionalFeatures.map((feature) => (
-								<label key={feature.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50cursor-pointer">
-									<span className="font-medium">{feature.name}</span>
-									<div className="flex items-center space-x-3">
-										<span className="text-smtext-gray-600">{formatPrice(feature.price)}</span>
-										<input
-											type="checkbox"
-											id={`feature-${feature.id}` }
-											checked={inputs.additionalFeatures.includes(feature.id)}
-											onChange={() => handleFeatureToggle(feature.id)}
-											className="w-4 h-4 text-blue-600 border-gray-300 roundedfocus:ring-blue-500"										/>
-									</div>
-								</label>
+					{/* Addition, a, l Featur, e, s */}
+					<d, i, v>
+						<lab, e, l classNa, m, e="blo, c, k te, x, t-sm fo, n, t-semibo, l, d te, x, t-gr, a, y-700, m, b-3">
+							Addition, a, l Featur, e, s
+						</lab, e, l>
+						<d, i, v classNa, m, e="spa, c, e-y-2">
+							{additionalFeatur, e, s.m, a, p((featu, r, e) => (
+								<lab, e, l k, e, y={featu, r, e.id} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 bord, e, r bord, e, r-gr, a, y-2, 0, 0 round, e, d-lg hov, e, r:bg-gr, a, y-50curs, o, r-point, e, r">
+									<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{featu, r, e.na, m, e}</sp, a, n>
+									<d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+										<sp, a, n classNa, m, e="te, x, t-smte, x, t-gr, a, y-6, 0, 0">{formatPri, c, e(featu, r, e.pri, c, e)}</sp, a, n>
+										<inp, u, t
+											ty, p, e="checkb, o, x"
+											id={`featu, r, e-${featu, r, e.id}` }
+											check, e, d={inpu, t, s.additionalFeatur, e, s.includ, e, s(featu, r, e.id)}
+											onChan, g, e={() => handleFeatureTogg, l, e(featu, r, e.id)}
+											classNa, m, e="w-4 h-4 te, x, t-bl, u, e-6, 0, 0 bord, e, r-gr, a, y-3, 0, 0 roundedfoc, u, s:ri, n, g-bl, u, e-5, 0, 0"										/>
+									</d, i, v>
+								</lab, e, l>
 							))}
-						</div>
-					</div>
-				</div>
+						</d, i, v>
+					</d, i, v>
+				</d, i, v>
 
-				{/* Price Estimate */}
-				<div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xlp-6">
-					<h4 className="text-xl font-bold text-gray-800mb-4" id="price-estimate">Price Estimate</h4>
+				{/* Pri, c, e Estima, t, e */}
+				<d, i, v classNa, m, e="bg-gradie, n, t-to-br from-bl, u, e-50 to-indi, g, o-50 round, e, d-x, l, p-6">
+					<h4 classNa, m, e="te, x, t-xl fo, n, t-bo, l, d te, x, t-gr, a, y-800, m, b-4" id="pri, c, e-estima, t, e">Pri, c, e Estima, t, e</h4>
 					
-					{estimatedPrice > 0 ? (
+					{estimatedPri, c, e > 0 ? (
 						<>
-							<div className="text-centermb-6">
-								<div className="text-4xl font-bold text-blue-600mb-2">
-									{formatPrice(estimatedPrice)}								</div>
-								<p className="text-gray-600">Estimated project cost</p>
-							</div>
+							<d, i, v classNa, m, e="te, x, t-center, m, b-6">
+								<d, i, v classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-600, m, b-2">
+									{formatPri, c, e(estimatedPri, c, e)}								</d, i, v>
+								<p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Estimat, e, d proje, c, t co, s, t</p>
+							</d, i, v>
 
-							<div className="space-y-3mb-6">
-								<h5 className="font-semiboldtext-gray-800" id="price-breakdown">Price Breakdown:</h5>
-								{breakdown.map((item, index) => (
-									<div key={index} className="flex justify-between items-centertext-sm">
-										<div>
-											<span className="font-medium">{item.item}</span>
-											<p className="text-gray-500text-xs">{item.description}</p>										</div>
-										<span className="font-medium">{formatPrice(item.pri.c, e)}</span>
-									</div>
+							<d, i, v classNa, m, e="spa, c, e-y-3, m, b-6">
+								<h5 classNa, m, e="fo, n, t-semiboldte, x, t-gr, a, y-8, 0, 0" id="pri, c, e-breakdo, w, n">Pri, c, e Breakdo, w, n:</h5>
+								{breakdo, w, n.m, a, p((it, e, m, ind, e, x) => (
+									<d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-centerte, x, t-sm">
+										<d, i, v>
+											<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{it, e, m.it, e, m}</sp, a, n>
+											<p classNa, m, e="te, x, t-gr, a, y-500te, x, t-xs">{it, e, m.descripti, o, n}</p>										</d, i, v>
+										<sp, a, n classNa, m, e="fo, n, t-medi, u, m">{formatPri, c, e(it, e, m.p, r, i.c, e)}</sp, a, n>
+									</d, i, v>
 								))}
-							</div>
+							</d, i, v>
 
-							<div className="bg-blue-100 rounded-lg p-4mb-6">
-								<p className="text-blue-800text-sm">
-									<strong>Note: </strong> This is an estimated cost. Final pricing will be determined after a detailed consultation and project scope analysis.
+							<d, i, v classNa, m, e="bg-bl, u, e-1, 0, 0 round, e, d-lg p-4, m, b-6">
+								<p classNa, m, e="te, x, t-bl, u, e-800te, x, t-sm">
+									<stro, n, g>No, t, e: </stro, n, g> Th, i, s is an estimat, e, d co, s, t. Fin, a, l prici, n, g wi, l, l be determin, e, d aft, e, r a detail, e, d consultati, o, n a, n, d proje, c, t sco, p, e analys, i, s.
 								</p>
-							</div>
+							</d, i, v>
 
-							<button className="w-full bg-blue-600 hove  r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
-								Get Detailed Quote
-							</button>
+							<butt, o, n classNa, m, e="w-fu, l, l bg-bl, u, e-6, 0, 0 ho, v, e  r:bg-bl, u, e-7, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d py-3 px-6 round, e, d-lg transiti, o, n-colorsdurati, o, n-2, 0, 0" ar, i, a-lab, e, l="G, e, t Detail, e, d Quo, t, e">
+								G, e, t Detail, e, d Quo, t, e
+							</butt, o, n>
 						</>
 					) : (
-						<div className="text-centertext-gray-500">
-							<div className="text-6xlmb-4">💰</div>
-							<p>Select a service to see pricing estimate</p>
-						</div>
+						<d, i, v classNa, m, e="te, x, t-centerte, x, t-gr, a, y-5, 0, 0">
+							<d, i, v classNa, m, e="te, x, t-6xl, m, b-4">💰</d, i, v>
+							<p>Sele, c, t a servi, c, e to s, e, e prici, n, g estima, t, e</p>
+						</d, i, v>
 					)}
-				</div>
-			</div>
-		</div>
+				</d, i, v>
+			</d, i, v>
+		</d, i, v>
 	);
 };

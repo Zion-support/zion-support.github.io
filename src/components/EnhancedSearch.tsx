@@ -1,448 +1,448 @@
-import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, SortAsc, SortDesc, Clock, Star, Tag } from 'lucide-react';
+import React, { useState, useEffect, useCallba, c, k, useR, e, f, useMe, m, o } from 'rea, c, t';
+import { moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
+import { Sear, c, h, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clo, c, k, St, a, r, T, a, g } from 'luci, d, e-rea, c, t';
 
-export interface SearchResult { id: string;
-  title: string;
-  descriptio,
+export interface SearchResu, l, t { id: string;
+  tit, l, e: string;
+  descript, i, o,
     n: string;
   ur,
     l: string;
-  typ,
-    e: 'page' | 'blog' | 'service' | 'documentation' | 'api';
-  category?: string;
-  tags?: string[];
-  relevanceScore?: number;
-  lastModified?: Date;
-  author?: string;
-  metadata?: Record<string, any> }
+  t, y, p,
+    e: 'pa, g, e' | 'bl, o, g' | 'servi, c, e' | 'documentati, o, n' | 'a, p, i';
+  catego, r, y?: string;
+  ta, g, s?: string[];
+  relevanceSco, r, e?: numb, e, r;
+  lastModifi, e, d?: Da, t, e;
+  auth, o, r?: string;
+  metada, t, a?: Reco, r, d<string, a, n, y> }
 
-export interface SearchFilter { type?: string[];
-  category?: string[];
-  dateRange?: {
-    start: Date;
+export interface SearchFilt, e, r { ty, p, e?: string[];
+  catego, r, y?: string[];
+  dateRan, g, e?: {
+    sta, r, t: Da, t, e;
     en,
-    d: Date };
-  tags?: string[];
+    d: Da, t, e };
+  ta, g, s?: string[];
 }
 
-interface EnhancedSearchProps { onSearch?: (query: string, results: SearchResult[]) => void;
-  onResultClick?: (resul,
-    t: SearchResult) => void;
-  placeholder?: string;
-  enableFilters?: boolean;
-  enableSuggestions?: boolean;
-  enableHistory?: boolean;
-  maxResults?: number;
-  debounceMs?: number;
-  searchEndpoint?: string }
+interface EnhancedSearchPro, p, s { onSear, c, h?: (que, r, y: string, resul, t, s: SearchResu, l, t[]) => vo, i, d;
+  onResultCli, c, k?: (res, u, l,
+    t: SearchResu, l, t) => vo, i, d;
+  placehold, e, r?: string;
+  enableFilte, r, s?: boole, a, n;
+  enableSuggestio, n, s?: boole, a, n;
+  enableHisto, r, y?: boole, a, n;
+  maxResul, t, s?: numb, e, r;
+  debounce, M, s?: numb, e, r;
+  searchEndpoi, n, t?: string }
 
-const sampleResults: SearchResult[] = [
+con, s, t sampleResul, t, s: SearchResu, l, t[] = [
   {
     i,
     d: '1',
-    title: 'AI-Powered Business Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-    url: '/services/ai-solutions',
-    type: 'service',
-    category: 'AI & ML',
-    tags: ['AI', 'Machine Learning', 'Business Intelligence'],
-    relevanceScore: 0.95,
-    lastModified: new Date('2024-01-15'),
-    author: 'Dr. Sarah Chen'  },
+    tit, l, e: 'AI-Power, e, d Busine, s, s Solutio, n, s',
+    descripti, o, n: 'Transfo, r, m yo, u, r busine, s, s wi, t, h cutti, n, g-ed, g, e artifici, a, l intelligen, c, e a, n, d machi, n, e learni, n, g solutio, n, s.',
+    u, r, l: '/servic, e, s/ai-solutio, n, s',
+    ty, p, e: 'servi, c, e',
+    catego, r, y: 'AI & ML',
+    ta, g, s: ['AI', 'Machi, n, e Learni, n, g', 'Busine, s, s Intelligen, c, e'],
+    relevanceSco, r, e: 0.95,
+    lastModifi, e, d: n, e, w Da, t, e('20, 2, 4-01-15'),
+    auth, o, r: 'Dr. Sar, a, h Ch, e, n'  },
   {
     id: '2',
-    title: 'Cloud Migration Best Practices',
-    description: 'Learn the essential strategies and best practices for successful cloud migration projects.',
-    url: '/blog/cloud-migration-guide',
-    type: 'blog',
-    category: 'Cloud Computing',
-    tags: ['Cloud', 'Migration', 'Best Practices'],
-    relevanceScore: 0.88,
-    lastModified: new Date('2024-01-12'),
-    author: 'Michael Rodriguez'  },
+    tit, l, e: 'Clo, u, d Migrati, o, n Be, s, t Practic, e, s',
+    descripti, o, n: 'Lea, r, n t, h, e essenti, a, l strategi, e, s a, n, d be, s, t practic, e, s f, o, r successf, u, l clo, u, d migrati, o, n projec, t, s.',
+    u, r, l: '/bl, o, g/clo, u, d-migrati, o, n-gui, d, e',
+    ty, p, e: 'bl, o, g',
+    catego, r, y: 'Clo, u, d Computi, n, g',
+    ta, g, s: ['Clo, u, d', 'Migrati, o, n', 'Be, s, t Practic, e, s'],
+    relevanceSco, r, e: 0.88,
+    lastModifi, e, d: n, e, w Da, t, e('20, 2, 4-01-12'),
+    auth, o, r: 'Micha, e, l Rodrigu, e, z'  },
   {
     id: '3',
-    title: 'API Documentation',
-    description: 'Complete API reference for our services and integrations.',
-    url: '/docs/api-reference',
-    type: 'documentation',
-    category: 'Developer Resources',
-    tags: ['API', 'Documentation', 'Integration'],
-    relevanceScore: 0.82,
-    lastModified: new Date('2024-01-10'),
-    author: 'Tech Team'  },
+    tit, l, e: 'A, P, I Documentati, o, n',
+    descripti, o, n: 'Comple, t, e A, P, I referen, c, e f, o, r o, u, r servic, e, s a, n, d integratio, n, s.',
+    u, r, l: '/do, c, s/a, p, i-referen, c, e',
+    ty, p, e: 'documentati, o, n',
+    catego, r, y: 'Develop, e, r Resourc, e, s',
+    ta, g, s: ['A, P, I', 'Documentati, o, n', 'Integrati, o, n'],
+    relevanceSco, r, e: 0.82,
+    lastModifi, e, d: n, e, w Da, t, e('20, 2, 4-01-10'),
+    auth, o, r: 'Te, c, h Te, a, m'  },
   {
     id: '4',
-    title: 'Digital Transformation Strategy',
-    description: 'Comprehensive guide to digital transformation for modern enterprises.',
-    url: '/services/digital-transformation',
-    type: 'service',
-    category: 'Strategy',
-    tags: ['Digital Transformation', 'Strategy', 'Enterprise'],
-    relevanceScore: 0.79,
-    lastModified: new Date('2024-01-08'),
-    author: 'David Park'  },
+    tit, l, e: 'Digit, a, l Transformati, o, n Strate, g, y',
+    descripti, o, n: 'Comprehensi, v, e gui, d, e to digit, a, l transformati, o, n f, o, r mode, r, n enterpris, e, s.',
+    u, r, l: '/servic, e, s/digit, a, l-transformati, o, n',
+    ty, p, e: 'servi, c, e',
+    catego, r, y: 'Strate, g, y',
+    ta, g, s: ['Digit, a, l Transformati, o, n', 'Strate, g, y', 'Enterpri, s, e'],
+    relevanceSco, r, e: 0.79,
+    lastModifi, e, d: n, e, w Da, t, e('20, 2, 4-01-08'),
+    auth, o, r: 'Dav, i, d Pa, r, k'  },
   {
     id: '5',
-    title: 'Cybersecurity Trends 2024',
-    description: 'Stay ahead of emerging cyber threats with insights into the latest security trends.',
-    url: '/blog/cybersecurity-trends-2024',
-    type: 'blog',
-    category: 'Security',
-    tags: ['Cybersecurity', 'Trends', 'Security'],
-    relevanceScore: 0.76,
-    lastModified: new Date('2024-01-05'),
-    author: 'Jennifer Liu'  }
+    tit, l, e: 'Cybersecuri, t, y Tren, d, s 20, 2, 4',
+    descripti, o, n: 'St, a, y ahe, a, d of emergi, n, g cyb, e, r threa, t, s wi, t, h insigh, t, s in, t, o t, h, e late, s, t securi, t, y tren, d, s.',
+    u, r, l: '/bl, o, g/cybersecuri, t, y-tren, d, s-20, 2, 4',
+    ty, p, e: 'bl, o, g',
+    catego, r, y: 'Securi, t, y',
+    ta, g, s: ['Cybersecuri, t, y', 'Tren, d, s', 'Securi, t, y'],
+    relevanceSco, r, e: 0.76,
+    lastModifi, e, d: n, e, w Da, t, e('20, 2, 4-01-05'),
+    auth, o, r: 'Jennif, e, r L, i, u'  }
 ];
 
-export default function EnhancedSearch({
-  onSearch,
-  onResultClick,
-  placeholder = 'Search...',
-  enableFilters = true,
-  enableSuggestions = true,
-  enableHistory = true,
-  maxResults = 10,
-  debounceMs = 300,
-  searchEndpoint}: EnhancedSearchProps): JSX.Element {;
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);  const [filters, setFilters] = useState<SearchFilter>({});
-  const [searchHistory, setSearchHistory] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+export default function EnhancedSear, c, h({
+  onSear, c, h,
+  onResultCli, c, k,
+  placehold, e, r = 'Sear, c, h...',
+  enableFilte, r, s = tr, u, e,
+  enableSuggestio, n, s = tr, u, e,
+  enableHisto, r, y = tr, u, e,
+  maxResul, t, s = 10,
+  debounce, M, s = 3, 0, 0,
+  searchEndpoi, n, t}: EnhancedSearchPro, p, s): J, S, X.Eleme, n, t {;
+  con, s, t [que, r, y, setQue, r, y] = useState('');
+  con, s, t [resul, t, s, setResul, t, s] = useState<SearchResu, l, t[]>([]);
+  con, s, t [isOp, e, n, setIsOp, e, n] = useState(fal, s, e);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(fal, s, e);
+  con, s, t [selectedInd, e, x, setSelectedInd, e, x] = useState(-1);  con, s, t [filte, r, s, setFilte, r, s] = useState<SearchFilt, e, r>({});
+  con, s, t [searchHisto, r, y, setSearchHisto, r, y] = useState<string[]>([]);
+  con, s, t [suggestio, n, s, setSuggestio, n, s] = useState<string[]>([]);
+  con, s, t [sort, B, y, setSort, B, y] = useState<'relevan, c, e' | 'da, t, e' | 'tit, l, e'>('relevan, c, e');
+  con, s, t [sortOrd, e, r, setSortOrd, e, r] = useState<'a, s, c' | 'de, s, c'>('de, s, c');
 
-  const inputRef = useRef<HTMLInputElement>(null);
-  const searchTimeoutRef = useRef<NodeJS.Timeout>();
+  con, s, t inputR, e, f = useR, e, f<HTMLInputEleme, n, t>(nu, l, l);
+  con, s, t searchTimeoutR, e, f = useR, e, f<Node, J, S.Timeo, u, t>();
 
-  // Load search history from localStorage
-  useEffect(() => { if (enableHistory && typeof window !== 'undefined') {
-      const saved = localStorage.getItem('searchHistory');
-      if (saved) {
-        setSearchHistory(JSON.parse(saved)) }
+  // Lo, a, d sear, c, h histo, r, y from localStora, g, e
+  useEffect(() => { if (enableHisto, r, y && type, o, f wind, o, w !== 'undefin, e, d') {
+      con, s, t sav, e, d = localStora, g, e.getIt, e, m('searchHisto, r, y');
+      if (sav, e, d) {
+        setSearchHisto, r, y(JS, O, N.par, s, e(sav, e, d)) }
     }
-  }, [enableHistory]);
+  }, [enableHisto, r, y]);
 
-  // Generate suggestions based on query
-  const generateSuggestions = useCallback((query: string) => { ;
-    if (!query.trim()) return [];
+  // Genera, t, e suggestio, n, s bas, e, d on que, r, y
+  con, s, t generateSuggestio, n, s = useCallba, c, k((que, r, y: string) => { ;
+    if (!que, r, y.tr, i, m()) retu, r, n [];
 
-    const allTitles = sampleResults.map(r => r.title);
-    const allTags = sampleResults.flatMap(r => r.tags || []);
-    const allCategories = sampleResults.map(r => r.category).filter(Boolean);
+    con, s, t allTitl, e, s = sampleResul, t, s.m, a, p(r => r.tit, l, e);
+    con, s, t allTa, g, s = sampleResul, t, s.flatM, a, p(r => r.ta, g, s || []);
+    con, s, t allCategori, e, s = sampleResul, t, s.m, a, p(r => r.catego, r, y).filt, e, r(Boole, a, n);
 
-    const suggestions = [
-      ...allTitles.filter(title => 
-        title.toLowerCase().includes(query.toLowerCase())
+    con, s, t suggestio, n, s = [
+      ...allTitl, e, s.filt, e, r(tit, l, e => 
+        tit, l, e.toLowerCa, s, e().includ, e, s(que, r, y.toLowerCa, s, e())
       ),
-      ...allTags.filter(tag = > 
-        tag.toLowerCase().includes(query.toLowerCase())
+      ...allTa, g, s.filt, e, r(t, a, g = > 
+        t, a, g.toLowerCa, s, e().includ, e, s(que, r, y.toLowerCa, s, e())
       ),
-      ...allCategories.filter(category => 
-        category?.toLowerCase().includes(query.toLowerCase())
+      ...allCategori, e, s.filt, e, r(catego, r, y => 
+        catego, r, y?.toLowerCa, s, e().includ, e, s(que, r, y.toLowerCa, s, e())
       );
-    ].slice(0, 5);
+    ].sli, c, e(0, 5);
 
-    return [...new Set(suggestions)] }, []);
+    retu, r, n [...n, e, w S, e, t(suggestio, n, s)] }, []);
 
-  // Debounced search function
-  const performSearch = useCallback(async (searchQuery: string) => { if (!searchQuery.trim()) {;
-      setResults([]);
-      return }
+  // Debounc, e, d sear, c, h function
+  con, s, t performSear, c, h = useCallba, c, k(asy, n, c (searchQue, r, y: string) => { if (!searchQue, r, y.tr, i, m()) {;
+      setResul, t, s([]);
+      retu, r, n }
 
-    setIsLoading(true);
+    setIsLoadi, n, g(tr, u, e);
 
-    try { // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 500));
+    t, r, y { // Simula, t, e A, P, I ca, l, l
+      awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resol, v, e, 5, 0, 0));
 
-      // Filter results based on query and filters
-      let filteredResults = sampleResults.filter(result => {
-        const matchesQuery = 
-          result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-          result.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      // Filt, e, r resul, t, s bas, e, d on que, r, y a, n, d filte, r, s
+      l, e, t filteredResul, t, s = sampleResul, t, s.filt, e, r(resu, l, t => {
+        con, s, t matchesQue, r, y = 
+          resu, l, t.tit, l, e.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
+          resu, l, t.descripti, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||;
+          resu, l, t.ta, g, s?.so, m, e(t, a, g => t, a, g.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()));
 
-        const matchesType = !filters.type?.length || filters.type.includes(result.type);
-        const matchesCategory = !filters.category?.length || filters.category.includes(result.category || '');
-        const matchesTags = !filters.tags?.length || ;
-          filters.tags.some(filterTag => result.tags?.includes(filterTag));
+        con, s, t matchesTy, p, e = !filte, r, s.ty, p, e?.leng, t, h || filte, r, s.ty, p, e.includ, e, s(resu, l, t.ty, p, e);
+        con, s, t matchesCatego, r, y = !filte, r, s.catego, r, y?.leng, t, h || filte, r, s.catego, r, y.includ, e, s(resu, l, t.catego, r, y || '');
+        con, s, t matchesTa, g, s = !filte, r, s.ta, g, s?.leng, t, h || ;
+          filte, r, s.ta, g, s.so, m, e(filterT, a, g => resu, l, t.ta, g, s?.includ, e, s(filterT, a, g));
 
-        return matchesQuery && matchesType && matchesCategory && matchesTags });
+        retu, r, n matchesQue, r, y && matchesTy, p, e && matchesCatego, r, y && matchesTa, g, s });
 
-      // Sort results
-      filteredResults.sort((a, b) => { let comparison = 0;
+      // So, r, t resul, t, s
+      filteredResul, t, s.so, r, t((a, b) => { l, e, t comparis, o, n = 0;
         
-        switch (sortBy) {
-          case 'relevance':
-            comparison = (b.relevanceScore || 0) - (a.relevanceScore || 0);
-            break;
-          case 'date':
-            comparison = (b.lastModified?.getTime() || 0) - (a.lastModified?.getTime() || 0);
-            break;
-          case 'title':
-            comparison = a.title.localeCompare(b.title);
-            break }
+        swit, c, h (sort, B, y) {
+          ca, s, e 'relevan, c, e':
+            comparis, o, n = (b.relevanceSco, r, e || 0) - (a.relevanceSco, r, e || 0);
+            bre, a, k;
+          ca, s, e 'da, t, e':
+            comparis, o, n = (b.lastModifi, e, d?.getTi, m, e() || 0) - (a.lastModifi, e, d?.getTi, m, e() || 0);
+            bre, a, k;
+          ca, s, e 'tit, l, e':
+            comparis, o, n = a.tit, l, e.localeCompa, r, e(b.tit, l, e);
+            bre, a, k }
 
-        return sortOrder === 'asc' ? -comparison : comparison;
+        retu, r, n sortOrd, e, r === 'a, s, c' ? -comparis, o, n : comparis, o, n;
       });
 
-      const limitedResults = filteredResults.slice(0, maxResults);
-      setResults(limitedResults);
-      onSearch?.(searchQuery, limitedResults);
+      con, s, t limitedResul, t, s = filteredResul, t, s.sli, c, e(0, maxResul, t, s);
+      setResul, t, s(limitedResul, t, s);
+      onSear, c, h?.(searchQue, r, y, limitedResul, t, s);
 
-      // Add to search history
-      if (enableHistory && searchQuery.trim()) { setSearchHistory(prev = > {;
-          const newHistory = [searchQuery, ...prev.filter(item => item !== searchQuery)].slice(0, 10);
-          localStorage.setItem('searchHistory', JSON.stringify(newHistory));
-          return newHistory });
+      // A, d, d to sear, c, h histo, r, y
+      if (enableHisto, r, y && searchQue, r, y.tr, i, m()) { setSearchHisto, r, y(pr, e, v = > {;
+          con, s, t newHisto, r, y = [searchQue, r, y, ...pr, e, v.filt, e, r(it, e, m => it, e, m !== searchQue, r, y)].sli, c, e(0, 10);
+          localStora, g, e.setIt, e, m('searchHisto, r, y', JS, O, N.stringi, f, y(newHisto, r, y));
+          retu, r, n newHisto, r, y });
       }
 
-    } catch (error) { console.error('Search error:', error);
-      setResults([]) } finally { setIsLoading(false) }
-  }, [filters, sortBy, sortOrder, maxResults, onSearch, enableHistory]);
+    } cat, c, h (error) { conso, l, e.error('Sear, c, h error:', error);
+      setResul, t, s([]) } final, l, y { setIsLoadi, n, g(fal, s, e) }
+  }, [filte, r, s, sort, B, y, sortOrd, e, r, maxResul, t, s, onSear, c, h, enableHisto, r, y]);
 
-  // Handle input change with debouncing
-  const handleInputChange = useCallback((value: string) => { ;
-    setQuery(value);
-    setSelectedIndex(-1);
+  // Hand, l, e inp, u, t chan, g, e wi, t, h debounci, n, g
+  con, s, t handleInputChan, g, e = useCallba, c, k((val, u, e: string) => { ;
+    setQue, r, y(val, u, e);
+    setSelectedInd, e, x(-1);
 
-    // Clear previous timeout
-    if (searchTimeoutRef.current) {
-      clearTimeout(searchTimeoutRef.current) }
+    // Cle, a, r previo, u, s timeo, u, t
+    if (searchTimeoutR, e, f.curre, n, t) {
+      clearTimeo, u, t(searchTimeoutR, e, f.curre, n, t) }
 
-    // Generate suggestions
-    if (enableSuggestions && value.trim()) { setSuggestions(generateSuggestions(value)) } else { setSuggestions([]) }
+    // Genera, t, e suggestio, n, s
+    if (enableSuggestio, n, s && val, u, e.tr, i, m()) { setSuggestio, n, s(generateSuggestio, n, s(val, u, e)) } el, s, e { setSuggestio, n, s([]) }
 
-    // Debounced search
-    searchTimeoutRef.current = setTimeout(() => { ;
-      performSearch(value) }, debounceMs);
-  }, [performSearch, generateSuggestions, enableSuggestions, debounceMs]);
+    // Debounc, e, d sear, c, h
+    searchTimeoutR, e, f.curre, n, t = setTimeo, u, t(() => { ;
+      performSear, c, h(val, u, e) }, debounce, M, s);
+  }, [performSear, c, h, generateSuggestio, n, s, enableSuggestio, n, s, debounce, M, s]);
 
-  // Handle keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => { ;
-    if (!isOpen) return;
+  // Hand, l, e keyboa, r, d navigati, o, n
+  con, s, t handleKeyDo, w, n = useCallba, c, k((e: React.KeyboardEve, n, t) => { ;
+    if (!isOp, e, n) retu, r, n;
 
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setSelectedIndex(prev = > 
-          prev < results.length - 1 ? prev + 1 : prev;
+    swit, c, h (e.k, e, y) {
+      ca, s, e 'ArrowDo, w, n':
+        e.preventDefau, l, t();
+        setSelectedInd, e, x(pr, e, v = > 
+          pr, e, v < resul, t, s.leng, t, h - 1 ? pr, e, v + 1 : pr, e, v;
         );
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-        break;
-      case 'Enter':
-        e.preventDefault();
-        if (selectedIndex >= 0 && results[selectedIndex]) {
-          handleResultClick(results[selectedIndex]) } else if (query.trim()) { performSearch(query) }
-        break;
-      case 'Escape':
-        setIsOpen(false);
-        setQuery('');
-        setResults([]);
-        break;
+        bre, a, k;
+      ca, s, e 'Arrow, U, p':
+        e.preventDefau, l, t();
+        setSelectedInd, e, x(pr, e, v => pr, e, v > 0 ? pr, e, v - 1 : -1);
+        bre, a, k;
+      ca, s, e 'Ent, e, r':
+        e.preventDefau, l, t();
+        if (selectedInd, e, x >= 0 && resul, t, s[selectedInd, e, x]) {
+          handleResultCli, c, k(resul, t, s[selectedInd, e, x]) } el, s, e if (que, r, y.tr, i, m()) { performSear, c, h(que, r, y) }
+        bre, a, k;
+      ca, s, e 'Esca, p, e':
+        setIsOp, e, n(fal, s, e);
+        setQue, r, y('');
+        setResul, t, s([]);
+        bre, a, k;
     }
-  }, [isOpen, selectedIndex, results, query, performSearch, handleResultClick]);
+  }, [isOp, e, n, selectedInd, e, x, resul, t, s, que, r, y, performSear, c, h, handleResultCli, c, k]);
 
-  // Handle result click
-  const handleResultClick = useCallback((result: SearchResult) => { ;
-    onResultClick?.(result);
-    setIsOpen(false);
-    setQuery('');
-    setResults([]) }, [onResultClick]);
+  // Hand, l, e resu, l, t cli, c, k
+  con, s, t handleResultCli, c, k = useCallba, c, k((resu, l, t: SearchResu, l, t) => { ;
+    onResultCli, c, k?.(resu, l, t);
+    setIsOp, e, n(fal, s, e);
+    setQue, r, y('');
+    setResul, t, s([]) }, [onResultCli, c, k]);
 
-  // Focus input when opened
-  useEffect(() => { if (isOpen && inputRef.current) {
-      inputRef.current.focus() }
-  }, [isOpen]);
+  // Foc, u, s inp, u, t wh, e, n open, e, d
+  useEffect(() => { if (isOp, e, n && inputR, e, f.curre, n, t) {
+      inputR, e, f.curre, n, t.foc, u, s() }
+  }, [isOp, e, n]);
 
-  // Get unique categories and types for filters
-  const categories = useMemo(() => 
-    [...new Set(sampleResults.map(r => r.category).filter(Boolean))],
+  // G, e, t uniq, u, e categori, e, s a, n, d typ, e, s f, o, r filte, r, s
+  con, s, t categori, e, s = useMe, m, o(() => 
+    [...n, e, w S, e, t(sampleResul, t, s.m, a, p(r => r.catego, r, y).filt, e, r(Boole, a, n))],
     [];
   );
 
-  const types = useMemo(() => 
-    [...new Set(sampleResults.map(r => r.type))],
+  con, s, t typ, e, s = useMe, m, o(() => 
+    [...n, e, w S, e, t(sampleResul, t, s.m, a, p(r => r.ty, p, e))],
     [];
   );
 
-  const allTags = useMemo(() => 
-    [...new Set(sampleResults.flatMap(r => r.tags || []))],
+  con, s, t allTa, g, s = useMe, m, o(() => 
+    [...n, e, w S, e, t(sampleResul, t, s.flatM, a, p(r => r.ta, g, s || []))],
     [];
   );
 
-  return (
-    <div className = "relative">
-      {/* Search Input */}      <div className="relative>        <div class Name="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">          <Search className="h-5 w-5 text-gray-400" />
-        </div>
-        <input
-          ref={inputRef}          type=text""
-          value={query}
-          onChange={(e) => handleInputChange(e.target.value)}
-          onFocus={() => setIsOpen(true)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}          className="block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus: ring-2 focu s:ring-blue-500 focu s:border-blue-500 s m:text-sm"
+  retu, r, n (
+    <d, i, v classNa, m, e = "relati, v, e">
+      {/* Sear, c, h Inp, u, t */}      <d, i, v classNa, m, e="relati, v, e>        <d, i, v cla, s, s Na, m, e="absolu, t, e ins, e, t-y-0 le, f, t-0 pl-3 fl, e, x ite, m, s-cent, e, r point, e, r-even, t, s-no, n, e">          <Sear, c, h classNa, m, e="h-5 w-5 te, x, t-gr, a, y-4, 0, 0" />
+        </d, i, v>
+        <inp, u, t
+          r, e, f={inputR, e, f}          ty, p, e=te, x, t""
+          val, u, e={que, r, y}
+          onChan, g, e={(e) => handleInputChan, g, e(e.targ, e, t.val, u, e)}
+          onFoc, u, s={() => setIsOp, e, n(tr, u, e)}
+          onKeyDo, w, n={handleKeyDo, w, n}
+          placehold, e, r={placehold, e, r}          classNa, m, e="blo, c, k w-fu, l, l pl-10 pr-10 py-2 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-lg foc, u, s: ri, n, g-2 fo, c, u s:ri, n, g-bl, u, e-5, 0, 0 fo, c, u s:bord, e, r-bl, u, e-5, 0, 0 s m:te, x, t-sm"
         />
-        { query && (<button
-            onClick={() => {;
-              setQuery('');
-              setResults([]);
-              setIsOpen(false) }}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
-          >            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
-          </button>
+        { que, r, y && (<butt, o, n
+            onCli, c, k={() => {;
+              setQue, r, y('');
+              setResul, t, s([]);
+              setIsOp, e, n(fal, s, e) }}            classNa, m, e = absolu, t, e ins, e, t-y-0 rig, h, t-0 pr-3 fl, e, x ite, m, s-cent, e, r""
+          >            <X classNa, m, e="h-5 w-5 te, x, t-gr, a, y-4, 0, 0 hov, e, r:te, x, t-gr, a, y-6, 0, 0" />
+          </butt, o, n>
         )}
-      </div>
+      </d, i, v>
 
-      {/* Search Results Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div            className="absolute z-50 mt-1 w-full bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto"            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition = {{ duration: 0.2 }}
+      {/* Sear, c, h Resul, t, s Dropdo, w, n */}
+      <AnimatePresen, c, e>
+        {isOp, e, n && (
+          <moti, o, n.d, i, v            classNa, m, e="absolu, t, e z-50 mt-1 w-fu, l, l bg-whi, t, e round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 m, a, x-h-96 overfl, o, w-y-au, t, o"            initi, a, l={{ opaci, t, y: 0, y: -10 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            ex, i, t={{ opaci, t, y: 0, y: -10 }}
+            transiti, o, n = {{ durati, o, n: 0.2 }}
           >
-            {/* Filters */}
-            {enableFilters && (              <div className="p-4 border-b border-gray-200>                <div class Name="flex flex-wrap gap-2 mb-3">
-                  <select                    value={filters.type?.[0] || ''}
-                    onChange={(e) => setFilters(prev => ({
-                      ...prev,
-                      type: e.target.value ? [e.target.value] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
-                  >                    <option value="">All Types</option>
-                    {types.map(type => (                      <option key={type} value={type}>
-                        {type.charAt(0).toUpperCase() + type.slice(1)}
-                      </option>
+            {/* Filte, r, s */}
+            {enableFilte, r, s && (              <d, i, v classNa, m, e="p-4 bord, e, r-b bord, e, r-gr, a, y-2, 0, 0>                <d, i, v cla, s, s Na, m, e="fl, e, x fl, e, x-wr, a, p g, a, p-2 mb-3">
+                  <sele, c, t                    val, u, e={filte, r, s.ty, p, e?.[0] || ''}
+                    onChan, g, e={(e) => setFilte, r, s(pr, e, v => ({
+                      ...pr, e, v,
+                      ty, p, e: e.targ, e, t.val, u, e ? [e.targ, e, t.val, u, e] : []                    }))}                    classNa, m, e = te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1""
+                  >                    <opti, o, n val, u, e="">A, l, l Typ, e, s</opti, o, n>
+                    {typ, e, s.m, a, p(ty, p, e => (                      <opti, o, n k, e, y={ty, p, e} val, u, e={ty, p, e}>
+                        {ty, p, e.char, A, t(0).toUpperCa, s, e() + ty, p, e.sli, c, e(1)}
+                      </opti, o, n>
                     ))}
-                  </select>
+                  </sele, c, t>
 
-                  <select
-                    value={filters.category?.[0] || ''}
-                    onChange={(e) => setFilters(prev => ({
-                      ...prev,
-                      category: e.target.value ? [e.target.value] : []                    }))}                    className="text-sm border border-gray-300 rounded px-2 py-1"
-                  >                    <option value="">All Categories</option>
-                    {categories.map(category => (                      <option key={category} value={category}>{category}</option>
+                  <sele, c, t
+                    val, u, e={filte, r, s.catego, r, y?.[0] || ''}
+                    onChan, g, e={(e) => setFilte, r, s(pr, e, v => ({
+                      ...pr, e, v,
+                      catego, r, y: e.targ, e, t.val, u, e ? [e.targ, e, t.val, u, e] : []                    }))}                    classNa, m, e="te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1"
+                  >                    <opti, o, n val, u, e="">A, l, l Categori, e, s</opti, o, n>
+                    {categori, e, s.m, a, p(catego, r, y => (                      <opti, o, n k, e, y={catego, r, y} val, u, e={catego, r, y}>{catego, r, y}</opti, o, n>
                     ))}
-                  </select>
+                  </sele, c, t>
 
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)}                    className="text-sm border border-gray-300 rounded px-2 py-1"
-                  >                    <option value=relevance"">Relevance</option>                    <option value=date"">Date</option>                    <option value=title"">Title</option>
-                  </select>
+                  <sele, c, t
+                    val, u, e={sort, B, y}
+                    onChan, g, e={(e) => setSort, B, y(e.targ, e, t.val, u, e as a, n, y)}                    classNa, m, e="te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1"
+                  >                    <opti, o, n val, u, e=relevan, c, e"">Relevan, c, e</opti, o, n>                    <opti, o, n val, u, e=da, t, e"">Da, t, e</opti, o, n>                    <opti, o, n val, u, e=tit, l, e"">Tit, l, e</opti, o, n>
+                  </sele, c, t>
 
-                  <button
-                    onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}                    className="text-sm border border-gray-300 rounded px-2 py-1 flex items-center"
-                  >                    {sortOrder === 'asc' ? <SortAsc className="h-4 w-4" /> : <SortDesc className="h-4 w-4 />}
-                  </button>
-                </div>
-              </div>
+                  <butt, o, n
+                    onCli, c, k={() => setSortOrd, e, r(pr, e, v => pr, e, v === 'a, s, c' ? 'de, s, c' : 'a, s, c')}                    classNa, m, e="te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d px-2 py-1 fl, e, x ite, m, s-cent, e, r"
+                  >                    {sortOrd, e, r === 'a, s, c' ? <SortA, s, c classNa, m, e="h-4 w-4" /> : <SortDe, s, c classNa, m, e="h-4 w-4 />}
+                  </butt, o, n>
+                </d, i, v>
+              </d, i, v>
             )}
 
-            {/* Loading State */}
-            {is Loading && (              <div class Name=p-4" text-center text-gray-500"">                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600 mx-auto mb-2></div>
-                Searching...
-              </div>            )}
+            {/* Loadi, n, g Sta, t, e */}
+            {is Loadi, n, g && (              <d, i, v cla, s, s Na, m, e=p-4" te, x, t-cent, e, r te, x, t-gr, a, y-5, 0, 0"">                <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-6 w-6 bord, e, r-b-2 bord, e, r-bl, u, e-6, 0, 0 mx-au, t, o mb-2></d, i, v>
+                Searchi, n, g...
+              </d, i, v>            )}
 
-            {/* Search History */}
-            {!query && enable History && search History.length > 0 && (              <div class Name="p-2">                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center>                  <Clock class Name="h-3 w-3 mr-1"" />
-                  Recent Searches
-                </div>
-                {searchHistory.slice(0, 5).map((item, index) => (
-<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
-                  <button                    key={index}
-                    onClick={() => handleInputChange(item}            aria-label=handleInputChange(item""}                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >                    {item}> handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
-                  <button
-                    key={index}
-                    on Click={() = aria-label="handle Input Change(item)}
-                    aria-label={`Search for ${item}`}
-                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+            {/* Sear, c, h Histo, r, y */}
+            {!que, r, y && enab, l, e Histo, r, y && sear, c, h Histo, r, y.leng, t, h > 0 && (              <d, i, v cla, s, s Na, m, e="p-2">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2 fl, e, x ite, m, s-cent, e, r>                  <Clo, c, k cla, s, s Na, m, e="h-3 w-3 mr-1"" />
+                  Rece, n, t Search, e, s
+                </d, i, v>
+                {searchHisto, r, y.sli, c, e(0, 5).m, a, p((it, e, m, ind, e, x) => (
+<<<<<<< HE, A, D:te, m, p-brok, e, n-componen, t, s/EnhancedSear, c, h.t, s, x
+                  <butt, o, n                    k, e, y={ind, e, x}
+                    onCli, c, k={() => handleInputChan, g, e(it, e, m}            ar, i, a-lab, e, l=handleInputChan, g, e(it, e, m""}                    classNa, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d"
+                  >                    {it, e, m}> handleInputChan, g, e(it, e, m)}
+                    classNa, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+                  <butt, o, n
+                    k, e, y={ind, e, x}
+                    on Cli, c, k={() = ar, i, a-lab, e, l="hand, l, e Inp, u, t Chan, g, e(it, e, m)}
+                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${it, e, m}`}
+                    cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
-                    {item}"> handle Input Change(item)}
-                    aria-label={`Search for ${item}`}
-                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+                    {it, e, m}"> hand, l, e Inp, u, t Chan, g, e(it, e, m)}
+                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${it, e, m}`}
+                    cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
-                    {item}
-                  </button>
+                    {it, e, m}
+                  </butt, o, n>
                 ))}
-              </div>
+              </d, i, v>
             )}
 
-            {/* Suggestions */}
-            {enable Suggestions && suggestions.length > 0 && !is Loading && (<div class Name="p-2""">                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center>                  <Star class Name="h-3 w-3 mr-1"" />
-                  Suggestions
-                </div>
-                {suggestions.map((suggestion, index) => (
-<<<<<<< HEAD:temp-broken-components/EnhancedSearch.tsx
-                  <button                    key={index}
-                    onClick={() => handleInputChange(suggestion}            aria-label=handleInputChange(suggestion""}                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
-                  >                    {suggestion}> handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
-                  <button
-                    key={index}
-                    on Click={() = aria-label="handle Input Change(suggestion)}
-                    aria-label={`Search for ${suggestion}`}
-                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+            {/* Suggestio, n, s */}
+            {enab, l, e Suggestio, n, s && suggestio, n, s.leng, t, h > 0 && !is Loadi, n, g && (<d, i, v cla, s, s Na, m, e="p-2""">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2 fl, e, x ite, m, s-cent, e, r>                  <St, a, r cla, s, s Na, m, e="h-3 w-3 mr-1"" />
+                  Suggestio, n, s
+                </d, i, v>
+                {suggestio, n, s.m, a, p((suggesti, o, n, ind, e, x) => (
+<<<<<<< HE, A, D:te, m, p-brok, e, n-componen, t, s/EnhancedSear, c, h.t, s, x
+                  <butt, o, n                    k, e, y={ind, e, x}
+                    onCli, c, k={() => handleInputChan, g, e(suggesti, o, n}            ar, i, a-lab, e, l=handleInputChan, g, e(suggesti, o, n""}                    classNa, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d"
+                  >                    {suggesti, o, n}> handleInputChan, g, e(suggesti, o, n)}
+                    classNa, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+                  <butt, o, n
+                    k, e, y={ind, e, x}
+                    on Cli, c, k={() = ar, i, a-lab, e, l="hand, l, e Inp, u, t Chan, g, e(suggesti, o, n)}
+                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${suggesti, o, n}`}
+                    cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
-                    {suggestion}"> handle Input Change(suggestion)}
-                    aria-label={`Search for ${suggestion}`}
-                    class Name="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded
->>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b1408:src/components/Enhanced Search.tsx
+                    {suggesti, o, n}"> hand, l, e Inp, u, t Chan, g, e(suggesti, o, n)}
+                    ar, i, a-lab, e, l={`Sear, c, h f, o, r ${suggesti, o, n}`}
+                    cla, s, s Na, m, e="w-fu, l, l te, x, t-le, f, t px-3 py-2 te, x, t-sm te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-1, 0, 0 round, e, d
+>>>>>>> 7 f 723505c7d69fdcdfb649a50c1163e3919b14, 0, 8:s, r, c/componen, t, s/Enhanc, e, d Sear, c, h.t, s, x
                   >
-                    {suggestion}
-                  </button>
+                    {suggesti, o, n}
+                  </butt, o, n>
                 ))}
-              </div>
+              </d, i, v>
             )}
 
-            {/* Results */}
-            {results.length > 0 && !is Loading && (              <div class Name="p-2""">                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2>                  Results ({results.length})
-                </div>
-                {results.map((result index) => (
-                  <motion.div                    key={result.id}
-                    class Name="{`p-3 rounded cursor-pointer ${
-                      index === selected Index ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'                    }`}
-                    on Click={() => handle Result Click(result)}
-                    while Hover={{ scale: 1.01 }}
-                  >                    <div class Name="flex" items-start justify-between"">                      <div className="flex-1>                        <h 4 class Name="text-sm font-medium text-gray-900"" id="resulttitle">{result.title}</h4>                        <p className="text-xs text-gray-600 mt-1">{result.description}</p>                        <div className="flex items-center mt-2 space-x-2>                          <span class Name="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded"">
-                            {result.type}
-                          </span>
-                          {result.category && (                            <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded">                              {result.category}
-                            </span>
+            {/* Resul, t, s */}
+            {resul, t, s.leng, t, h > 0 && !is Loadi, n, g && (              <d, i, v cla, s, s Na, m, e="p-2""">                <d, i, v classNa, m, e="te, x, t-xs fo, n, t-semibo, l, d te, x, t-gr, a, y-5, 0, 0 upperca, s, e tracki, n, g-wi, d, e mb-2>                  Resul, t, s ({resul, t, s.leng, t, h})
+                </d, i, v>
+                {resul, t, s.m, a, p((resu, l, t ind, e, x) => (
+                  <moti, o, n.d, i, v                    k, e, y={resu, l, t.id}
+                    cla, s, s Na, m, e="{`p-3 round, e, d curs, o, r-point, e, r ${
+                      ind, e, x === select, e, d Ind, e, x ? 'bg-bl, u, e-50 bord, e, r bord, e, r-bl, u, e-2, 0, 0' : 'hov, e, r:bg-gr, a, y-50'                    }`}
+                    on Cli, c, k={() => hand, l, e Resu, l, t Cli, c, k(resu, l, t)}
+                    whi, l, e Hov, e, r={{ sca, l, e: 1.01 }}
+                  >                    <d, i, v cla, s, s Na, m, e="fl, e, x" ite, m, s-sta, r, t justi, f, y-betwe, e, n"">                      <d, i, v classNa, m, e="fl, e, x-1>                        <h 4 cla, s, s Na, m, e="te, x, t-sm fo, n, t-medi, u, m te, x, t-gr, a, y-9, 0, 0"" id="resulttit, l, e">{resu, l, t.tit, l, e}</h4>                        <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0 mt-1">{resu, l, t.descripti, o, n}</p>                        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r mt-2 spa, c, e-x-2>                          <sp, a, n cla, s, s Na, m, e="te, x, t-xs px-2 py-1 bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-6, 0, 0 round, e, d"">
+                            {resu, l, t.ty, p, e}
+                          </sp, a, n>
+                          {resu, l, t.catego, r, y && (                            <sp, a, n classNa, m, e="te, x, t-xs px-2 py-1 bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-6, 0, 0 round, e, d">                              {resu, l, t.catego, r, y}
+                            </sp, a, n>
                           )}
-                          {result.tags?.slice(0, 2).map(tag => (                            <span key={tag} className="text-xs px-2 py-1 bg-green-100 text-green-600 rounded flex items-center">                              <Tag className="h-3 w-3 mr-1" />
-                              {tag}
-                            </span>
+                          {resu, l, t.ta, g, s?.sli, c, e(0, 2).m, a, p(t, a, g => (                            <sp, a, n k, e, y={t, a, g} classNa, m, e="te, x, t-xs px-2 py-1 bg-gre, e, n-1, 0, 0 te, x, t-gre, e, n-6, 0, 0 round, e, d fl, e, x ite, m, s-cent, e, r">                              <T, a, g classNa, m, e="h-3 w-3 mr-1" />
+                              {t, a, g}
+                            </sp, a, n>
                           ))}
-                        </div>
-                      </div>
-                      {result.relevanceScore && (                        <div className="text-xs text-gray-400 ml-2>                          {Math.round(result.relevance Score * 100)}%
-                        </div>
+                        </d, i, v>
+                      </d, i, v>
+                      {resu, l, t.relevanceSco, r, e && (                        <d, i, v classNa, m, e="te, x, t-xs te, x, t-gr, a, y-4, 0, 0 ml-2>                          {Ma, t, h.rou, n, d(resu, l, t.relevan, c, e Sco, r, e * 1, 0, 0)}%
+                        </d, i, v>
                       )}
-                    </div>
-                  </motion.div>
+                    </d, i, v>
+                  </moti, o, n.d, i, v>
                 ))}
-              </div>
+              </d, i, v>
             )}
 
-            {/* No Results */}
-            {query && results.length === 0 && !is Loading && (              <div class Name="p-4 text-center text-gray-500">                <Search className="h-8 w-8 mx-auto mb-2 text-gray-300" />;                <p>No results found for &quot;{query}&quot;</p>                <p className = text-xs mt-1"">Try different keywords or check your spelling</p>
-              </div>
+            {/* No Resul, t, s */}
+            {que, r, y && resul, t, s.leng, t, h === 0 && !is Loadi, n, g && (              <d, i, v cla, s, s Na, m, e="p-4 te, x, t-cent, e, r te, x, t-gr, a, y-5, 0, 0">                <Sear, c, h classNa, m, e="h-8 w-8 mx-au, t, o mb-2 te, x, t-gr, a, y-3, 0, 0" />;                <p>No resul, t, s fou, n, d f, o, r &qu, o, t;{que, r, y}&qu, o, t;</p>                <p classNa, m, e = te, x, t-xs mt-1"">T, r, y differe, n, t keywor, d, s or che, c, k yo, u, r spelli, n, g</p>
+              </d, i, v>
             )}
-          </motion.div>
+          </moti, o, n.d, i, v>
         )}
-      </AnimatePresence>
-    </div>;
+      </AnimatePresen, c, e>
+    </d, i, v>;
   );
 }
