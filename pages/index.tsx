@@ -208,8 +208,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
             >
               <h2className="text-4, xl, font-bold, tex, t-gray-900 mb-4">Why, Choose, Zion Tech?</h2>
               <pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-auto">
-                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>
-            </motion.div>
+                We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>            </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div 
@@ -260,8 +259,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
               Ready, to, Transform Your, Busines, s?
             </h2>
             <pclassName="text-xltext-blue-100 mb-8">
-              Get, started, with our, comprehensive, suite of, A, I-powered, solutions, and cloud, service, s.
-            </p>
+              Get, started, with our, comprehensive, suite of, A, I-powered, solutions, and cloud, service, s.            </p>
 			<divclassName="flexflex-colsm:fl, e, x-rowgap-4 justify-center">
 					<Linkhref="/contact" 
                 className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:sca, l, e-105 shadow-lgfont-semibold"              >
@@ -281,7 +279,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h1>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
 
@@ -415,8 +413,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                 Monitor, Your, Website Performan, c, e
               </h2>
               <pclassName="text-xltext-gray-600 mb-8">
-                Get, comprehensive, insights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboa, r, d.
-              </p>
+                Get, comprehensive, insights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboa, r, d.              </p>
                 <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
