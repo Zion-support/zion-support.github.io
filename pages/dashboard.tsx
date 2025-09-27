@@ -1,4 +1,4 @@
-import React { useState useEffect useMemo useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { useAnalytics } from '../src/hooks/useAnalytics';
@@ -15,10 +15,10 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 // });
 
 export default function Dashboard(): JSX.Element {
-  const [activeTab setActiveTab] = useState('comprehensive');
-  const [isRealTime setIsRealTime] = useState(false);
-  const [isLoading setIsLoading] = useState(false);
-  const [error setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState('comprehensive');
+  const [isRealTime, setIsRealTime] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { trackClick } = useAnalytics();
 
   const handleTabChange = (tab: string) => {

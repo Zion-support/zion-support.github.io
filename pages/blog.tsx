@@ -1,4 +1,4 @@
-import React { useState } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,15 +6,15 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
-	const [isNewsletterLoading setIsNewsletterLoading] = useState(false);
+	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
 	const { trackClick } = useAnalytics();
 
-	const blogPo s t s = [
+	const blogPosts = [
 		{
-			i d: 1
-			ti t l e: 'Th e Fut u r e o f A I i n Busin e s s: Tre n d s an d Predicti o n s fo r 2 0 2 4'
+			id: 1
+			title: 'The Future of AI in Business: Trends and Predictions for 2024'
 			exce r p t: 'Expl o r e th e lat e s t A I tre n d s shap i n g th e busin e s s landsc a p e an d ho w compan i e s ar e leverag i n g artific i a l intellige n c e fo r competit i v e advant a g e.'
-			aut h o r: 'Sa r a h John s o n'
+			author: 'Sarah Johnson'
 			d a t e: '2 0 2 4-0 1-1 5'
 			readT i m e: '5 mi n r e a d'
 			categ o r y: 'A I & Mach i n e Learn i n g'
@@ -58,7 +58,7 @@ export default function Blog(): JSX.Element {
 			i d: 5
 			ti t l e: 'Cybersecur i t y i n th e Cl o u d: Essent i a l Protect i o n Strateg i e s'
 			exce r p t: 'Le a r n ab o u t th e criti c a l secur i t y considerati o n s an d b e s t practi c e s fo r protect i n g cl o u d-ba s e d applicati o n s an d d a t a.'
-			aut h o r: 'Sa r a h John s o n'
+			author: 'Sarah Johnson'
 			d a t e: '2 0 2 4-0 1-0 5'
 			readT i m e: '9 mi n r e a d'
 			categ o r y: 'Cybersecur i t y'

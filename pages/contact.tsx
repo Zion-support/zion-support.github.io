@@ -1,18 +1,18 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Contact(): JSX.Element {
-  const [formData setFormData] = useState({
-    name: ''
-    email: ''
-    comp a n y: ''
-    subj e c t: ''
-    mess a g e: ''
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
   });
-  const [isSubmitt i n g setIsSubmitt i n g] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -43,8 +43,8 @@ export default function Contact(): JSX.Element {
       name: ''
       email: ''
       comp a n y: ''
-      subj e c t: ''
-      mess a g e: ''
+      subject: '',
+      message: ''
     })};
 
   const contactI n f o = [

@@ -1,15 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 const About = React.memo(function About(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []););
 
   const { trackClick } = useAnalytics();
 

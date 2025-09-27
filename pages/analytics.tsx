@@ -21,12 +21,13 @@ import dynamic from "next/dynamic";
         <meta name="robots" content="noindex nofollow" />
 			</Head>
 
-export default function AnalyticsPage() {return (
+export default function AnalyticsPage() {
+  return (
     <>
       <Head>
         <title>Analytics Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehens i v e website analyt i c s dashbo a r d fo r performanceaccessibility a n d SEO monitoring." />
-        <meta name="robots" content="noindexnofollow" />
+        <meta name="description" content="Comprehensive website analytics dashboard for performance, accessibility and SEO monitoring." />
+        <meta name="robots" content="noindex,nofollow" />
       </Head>
 
       
