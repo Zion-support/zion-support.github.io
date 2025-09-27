@@ -1,44 +1,44 @@
-import {useMemouseCallback  } from "react";
+import { useMemouseCallback   } from "react";
 import React from 'react";
-import Reac, t, {createConte, x, tuseContextuseEffectuseState }  from "react";
+import Reac, t, {createContextuseContextuseEffectuseState }  from "react";
 typeTheme = "light" | "dark" | "system";
 
-interface, ThemeContextTyp, e {theme: Theme;
+interfaceThemeContextType {theme: Theme;
   setTheme: (theme: Theme) => void;
   actualTheme: "light" | "dark"};
 const, ThemeContex, t = createConte, x, t<ThemeContextType | undefined>(undefined);
 
-export, const, useTheme = () => {const, contex, t = useConte, x, t(ThemeConte, x, t);
-  if (conte, x, t === undefined) {
-    thrownewError("useTheme, mustbe usedwithina ThemeProvider")};  return, contex, t};
+exportconstuseTheme = () => {const, contex, t = useConte, x, t(ThemeConte, x, t);
+  if (context === undefined) {
+    thrownewError("useThememustbe usedwithina ThemeProvider")};  return, contex, t};
 
-interface, ThemeProviderProp, s {children: React.ReactNo, d, e;
-  defaultThe, me?: Theme;
+interface, ThemeProviderProp, s {children: React.ReactNode;
+  defaultTheme?: Theme;
   storageKey?: string};
 const ThemeProvider = React.memo(function ThemeProvider({childrendefaultTheme = "system"storageKey = "theme"
-}: ThemeProviderProps) {const [the, mesetTheme] = useState<Theme>(() => {
+}: ThemeProviderProps) {const [themesetTheme] = useState<Theme>(() => {
     if (typeofwindow !== "undefined") {
-      return (localStorage.getIt, e, m(storageK, e, y) as, Theme) || defaultTheme};    return, defaultThem, e});
+      return (localStorage.getItem(storageKe, y) asTheme) || defaultTheme};    return, defaultTheme});
 
-  const [actualThe, mesetActualTheme] = useState<"light' | "dark">("light");
+  const [actualThemesetActualTheme] = useState<"light' | "dark">("light");
 
   useEffect(() => {constupdateActualTheme = () => {
       if (theme === "system") {
-        constsystemTheme = window.matchMedia("(prefe, r, s-color-scheme: dark)").matches ? "dark" : "light";
-        setActualThe, me(systemTheme)} el, s, e {setActualThe, me(theme)}};
+        constsystemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        setActualTheme(systemTheme)} el, se {setActualTheme(theme)}};
     updateActualTheme();
 
-    if (theme === "system") {const, mediaQuer, y = window.matchMedia("(prefe, r, s-color-scheme: dark)");
-      mediaQuery.addEventListener("change", updateActualThe, m, e);
+    if (theme === "system") {constmediaQuery = window.matchMedia("(prefe, rs-color-scheme: dark)");
+      mediaQuery.addEventListener("change"updateActualTheme);
       return () => mediaQuery.removeEventListener("change"updateActualTheme)}}, [theme]);
   useEffect(() => {if (typeofwindow !== "undefined") {
       localStora, g, e.setItem(storageK, e, y, the, m, e);
       
       // Apply, theme, to document, const, root = wind, o, w.document.documentEleme, n, t;
-      ro, o, t.classList.remove("light", "dark");
-      ro, o, t.classLi, s, t.a, dd(actualTheme)}}, [the, m, e, actualThe, m, e, storageK, e, y]);
-  const, handleSetThem, e = (newTheme: The, m, e) => {setThe, me(newTheme)};
-  const, valu, e = {themesetTheme: handleSetThe, m, eactualTheme
+      root.classList.remove("light", "dark");
+      ro, o, t.classLi, s, t.add(actualTheme)}}, [the, m, e, actualThe, m, e, storageK, e, y]);
+  const, handleSetThem, e = (newTheme: The, m, e) => {setTheme(newTheme)};
+  const, valu, e = {themesetTheme: handleSetThe, meactualTheme
   };
 
   return (<ThemeContext.Providervalue={value}>

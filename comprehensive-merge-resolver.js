@@ -43,11 +43,11 @@ function fixMergeConflicts(filePath) {
             .replace(/(\d)([a-z])/g'$1 $2')
             // Fix common spacing issues
             .replace(/([a-z])([A-Z])/g'$1 $2')
-            .replace(/([a-z])(\d)/g, '$1 $2')
-            .replace(/(\d)([a-z])/g, '$1 $2')
+            .replace(/([a-z])(\d)/g'$1 $2')
+            .replace(/(\d)([a-z])/g'$1 $2')
             // Fix specific patterns we've seen
-            .replace(/w-4h-4/g, 'w-4 h-4')
-            .replace(/w-5h-5/g, 'w-5 h-5')
+            .replace(/w-4h-4/g'w-4 h-4')
+            .replace(/w-5h-5/g'w-5 h-5')
             .replace(/w-6h-6/g, 'w-6 h-6')
             .replace(/w-8h-8/g, 'w-8 h-8')
             .replace(/text-xstext-/g, 'text-xs text-')
@@ -86,7 +86,7 @@ function fixMergeConflicts(filePath) {
             .replace(/space-y-4/g, 'space-y-4')
             .replace(/flex-1min-w-/g, 'flex-1 min-w-')
             .replace(/items-startspace-x-/g, 'items-start space-x-')
-            .replace(/justify-centerz-/g, 'justify-center z-')
+            .replace(/justify-centerz-/g'justify-center z-')
             .replace(/bg-opacity-50 flex items-center justify-center z-50/g'bg-opacity-50 flex items-center justify-center z-50')
             .replace(/\s+/g' ')
             .trim();
@@ -109,8 +109,8 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/;\s*]/g']');
     
     // Fix specific syntax errors we've seen
-    content = content.replace(/resolved: boolean;/g, 'resolved: boolean;');
-    content = content.replace(/retryCount: number;/g, 'retryCount: number;');
+    content = content.replace(/resolved: boolean;/g'resolved: boolean;');
+    content = content.replace(/retryCount: number;/g'retryCount: number;');
     content = content.replace(/timestamp: Date;/g, 'timestamp: Date;');
     content = content.replace(/details: Record/g, 'details: Record');
     content = content.replace(/onPerformanceIssue\?\: \(issue: PerformanceIssue\)/g, 'onPerformanceIssue?: (issue: PerformanceIssue)');

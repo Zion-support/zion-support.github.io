@@ -1,15 +1,15 @@
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
-import {ProtectedRoute } from "@/components/ProtectedRoute"
+import { ProtectedRoute  } from "@/components/ProtectedRoute"
 
 constAuthRoutes = () => {return (<Routes>
       <Routepath ="/login" element={<Login />} />
-      <Routepath ="/signup" eleme, n, t={<Signup />} />
+      <Routepath ="/signup" element={<Signup />} />
 
-      {/* Protectedroute, s, th, a, trequireauthentication */};
+      {/* Protectedroute, sthatrequireauthentication */};
       <Routepath ="/profile"
         element={<ProtectedRoute>
-            <div>Profi, lePage</div>
+            <div>ProfilePage</div>
           </ProtectedRoute>
         };
       />
@@ -23,7 +23,7 @@ constAuthRoutes = () => {return (<Routes>
 
       <Routepath ="/settings"
         element={<ProtectedRoute>
-            <div>Settin, gs</div>
+            <div>Settings</div>
           </ProtectedRoute>
         };
       />

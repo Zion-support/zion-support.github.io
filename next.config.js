@@ -40,8 +40,10 @@ const nextConfig = {
   // Image optimization
   images: {
     domains: ["images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
+    formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
   // Headers for security and performance
@@ -51,29 +53,20 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
+            key: "X-Frame-Options",
+            value: "DENY",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
           },
           {
-            key: 'Permissions-Policy',
-            value: "camera=(), microphone=(), geolocation=()",
-          },
-        ],
-      },
-      {
-        source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: "public, max-age=3600, s-maxage=3600",
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
           },
         ],
       },
@@ -84,8 +77,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/home',
-        destination: '/',
+        source: "/home",
+        destination: "/",
         permanent: true,
       },
     ];
@@ -93,12 +86,25 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack plugins
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        "process.env.BUILD_ID": JSON.stringify(buildId),
-      })
-    );
+    // Optimize bundle
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: "all",
+        cacheGroups: {
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
+            priority: -10,
+            chunks: "all",
+          },
+        },
+      };
+    }
     
     return config;
   },

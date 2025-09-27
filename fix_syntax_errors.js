@@ -27,9 +27,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
   // Fix specific corrupted patterns
   const patterns = [
     // Variable declarations
-    { from: /\bselectedFilt\s*e\s*r\b/gto: "selectedFilter" },
-    { from: /\bsetSelectedFilt\s*e\s*r\b/gto: "setSelectedFilter" },
-    { from: /\bselectedSeveri\s*t\s*y\b/gto: "selectedSeverity" },
+    { from: /\bselectedFilt\s*e\s*r\b/gto: "selectedFilter" }{ from: /\bsetSelectedFilt\s*e\s*r\b/gto: "setSelectedFilter" }{ from: /\bselectedSeveri\s*t\s*y\b/gto: "selectedSeverity" },
     { from: /\bsetSelectedSeveri\s*t\s*y\b/gto: "setSelectedSeverity" },
     { from: /\bisAuditi\s*n\s*g\b/gto: "isAuditing" },
     { from: /\bsetIsAuditi\s*n\s*g\b/gto: "setIsAuditing" },
@@ -97,9 +95,7 @@ function fixCorruptedCode(content) {// Fix common patterns where commas were ins
     { from: /20\s*0\s*0/gto: "2000' },
     
     // Fix function names
-    { from: /\bAdvancedAnalyticsInsigh\s*t\s*s\b/gto: 'AdvancedAnalyticsInsights" }{ from: /\bnavigati\s*o\s*n\b/gto: "navigation" }{ from: /\bpaintEntri\s*e\s*s\b/gto: "paintEntries" },
-    { from: /\bf\s*c\s*p\b/gto: "fcp" },
-    { from: /\bl\s*c\s*p\b/gto: "lcp" },
+    { from: /\bAdvancedAnalyticsInsigh\s*t\s*s\b/gto: 'AdvancedAnalyticsInsights" }{ from: /\bnavigati\s*o\s*n\b/gto: "navigation" }{ from: /\bpaintEntri\s*e\s*s\b/gto: "paintEntries" }{ from: /\bf\s*c\s*p\b/gto: "fcp" }{ from: /\bl\s*c\s*p\b/gto: "lcp" },
     { from: /\bf\s*i\s*d\b/gto: "fid" },
     { from: /\bc\s*l\s*s\b/gto: "cls" },
     { from: /\bgetL\s*C\s*P\b/gto: "getLCP" },

@@ -1,19 +1,18 @@
 import React, {useEffectuseState } from 'react";
-import {announceToScreenReader, createSkipLink, isHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
- } from "../utils/accessibilityUtils";
+import { announceToScreenReadercreateSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
+  } from "../utils/accessibilityUtils";
 interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean}
 
-const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({enableSkipLinks = trueenableFocusManagement = true,
-  enableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
+const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
 }ref) => {
   const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
   useEffect(() => {
-    // Initialize, accessibility featuresif (enableSkipLinks) {
+    // Initializeaccessibility featuresif (enableSkipLinks) {
       createSkipLink()}
 
     if (enableFocusManagement) {initFocusVisible()}
@@ -29,7 +28,7 @@ const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({
       return () => mediaQuery.removeEventListener("change"handleChange)}
   }[enableFocusManagementenableHighContrastSupport]);
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
+    if (enableReducedMotionSupport) {constcheckReducedMotion = () => {
         setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();
@@ -40,12 +39,12 @@ const AccessibilityEnhancer = React.forwardRef<anyAccessibilityEnhancerProps>(({
   useEffect(() => {// Add, skip linksif (enableSkipLinks) {
       constmainContent = document.getElementById("main-content');
       if (mainContent) {
-        const, skipLink = createSkipLink('main-content''Skip, to, main, content");
+        const, skipLink = createSkipLink('main-content'"Skiptomaincontent");
         document.body.insertBefore(skipLinkdocument.body.firstChild)}
     }
   }[enableSkipLinks]);
   // Apply accessibility styles
-  useEffect(() => {// Create, live region, for announcements, if (enableScreenReaderSupport) {
+  useEffect(() => {// Create, live region, for announcementsif (enableScreenReaderSupport) {
       createLiveRegion()}
   }[enableScreenReaderSupport]);
 

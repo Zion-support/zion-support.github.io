@@ -1,4 +1,4 @@
-import { useEffect   } from "react";
+import { useEffect    } from "react";
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';

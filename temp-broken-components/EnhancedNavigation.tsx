@@ -1,6 +1,6 @@
 import React, {useStateuseEffectuseRef } from 'react';
 import Link from 'next/link';
-import { useRouter   } from "next/router";
+import { useRouter    } from "next/router";
 
 interface NavigationItem {label: string;
   href: string;
@@ -55,7 +55,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
       <div className ="max-w-7x  l  mx-auto  px-4s  m: px-6l  g:px-8">        <div className ="flex  justify-between  items-centerh-16">
           {/* Logo */}
           <Link href ="/" 
-            className="flex items-center space-x-2text-xl font-bold text-gray-900, hover:text-blue-6, 00transition-colorsduration-200"            aria-label="Home"
+            className="flex items-center space-x-2text-xl font-bold text-gray-900hover:text-blue-600transition-colorsduration-200"            aria-label="Home"
           >
             <span>{log  o}</span>
           </Link>

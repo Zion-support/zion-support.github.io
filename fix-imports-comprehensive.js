@@ -8,9 +8,7 @@ function fixFile(filePath) {
 
     // Fix broken import statements
     const importFixes = [// Fix broken import statements
-      { pattern: /import\s*([^']+)fr\s*o\s*m\s+'([^']+)';/greplacement: "import $1 from '$2';" }{ pattern: /import\s*\{\s*([^}]+)\s*\}\s*fr\s*o\s*m\s+"([^']+)';/greplacement: "import { $1   } from "$2";" }{ pattern: /impo\s*r\s*t\s+/greplacement: "import " }{ pattern: /fr\s*o\s*m\s+"([^']+)'/greplacement: "from '$1'" },
-      { pattern: /ty\s*p\s*e\s+/greplacement: "type " },
-      { pattern: /AppPro\s*p\s*s/greplacement: "AppProps" },
+      { pattern: /import\s*([^']+)fr\s*o\s*m\s+'([^']+)';/greplacement: "import $1 from '$2';" }{ pattern: /import\s*\{\s*([^}]+)\s*\}\s*fr\s*o\s*m\s+"([^']+)';/greplacement: "import { $1    } from "$2";" }{ pattern: /impo\s*r\s*t\s+/greplacement: "import " }{ pattern: /fr\s*o\s*m\s+"([^']+)'/greplacement: "from '$1'" }{ pattern: /ty\s*p\s*e\s+/greplacement: "type " }{ pattern: /AppPro\s*p\s*s/greplacement: "AppProps" },
       { pattern: /HelmetProvid\s*e\s*r/greplacement: "HelmetProvider" },
       { pattern: /he\s*a\s*d/greplacement: "head" },
       { pattern: /a\s*p\s*p/greplacement: "app" },

@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
+import { motion  AnimatePresence    } from "framer-motion";
 import { BarChart3  
   Use  r  s  
   Eye  
@@ -9,7 +9,7 @@ import { BarChart3
   Smartpho  n  e 
   Monit  o  r 
   TabletClockActivity
-  } from "lucide-react";
+   } from "lucide-react";
 
 interface AnalyticsData {
   pageViews: number;
@@ -78,7 +78,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
       <d  i  v className="gr i d gr i d-co l s-2 md:gr i d-co l s-5 g a p-4 mb-6">
         <d  i  v className="bg-bl u e-50 round e d-lg p-4 te x t-cent e r">
           <E  y  e className="w-6 h-6 mx-au t o mb-2 te x t-bl u e-600" />
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">{formatNumber(da  t  a.pageVie  w  s)}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-bl u e-600">{formatNumber(da  t  a.pageVie  w  s)}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">Pa  g  e Vie  w  s</d  i  v>
         </d  i  v>
         <d  i  v className="bg-gre e n-50 round e d-lg p-4 te x t-cent e r">
@@ -93,7 +93,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsPro  p  s> = ({
         </d  i  v>
         <d  i  v className="bg-purp l e-50 round e d-lg p-4 te x t-cent e r">
           <Clock className="w-6 h-6 mx-au t o mb-2 te x t-purp l e-600" />
-          <d  i  v className="te x t-2, x l fo n t-boldte x t-purp l e-600">{formatDuration(da  t  a.avgSessionDurati  o  n)}</d  i  v>
+          <d  i  v className="te x t-2x l fo n t-boldte x t-purp l e-600">{formatDuration(da  t  a.avgSessionDurati  o  n)}</d  i  v>
           <d  i  v className="te x t-sm te x t-gr a y-600">A  v  g. Sessi  o  n</d  i  v>
         </d  i  v>
         <d  i  v className="bg-r e d-50 round e d-lg p-4 te x t-cent e r">

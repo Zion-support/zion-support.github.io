@@ -1,5 +1,5 @@
 import React, {useState  useEffect  useCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/ Card";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/ Card";
 import { BarChart3  
   Trending  U  p  
   Use  r  s  
@@ -11,7 +11,7 @@ import { BarChart3
   Monit  o  r 
   Activity 
   ZapTargetPieChart
-  } from "lucide-react";
+   } from "lucide-react";
 import { LineChart  
   Line  
   XAxis  
@@ -21,7 +21,7 @@ import { LineChart
   ResponsiveContainer 
   BarChart 
   BarAreaChartAreaPieChartas RechartsPieChartPieCell
-  } from "recharts";
+   } from "recharts";
 
 interface AnalyticsData {pageViews: number;
   uniqueVisitors: number;
@@ -64,7 +64,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     // Generate daily data for the last 7 days
     const dailyData = Array.fro.m({length: 7 }(_  i) => {const date = new  Date()(now.getTim() - (6 - i) * 24 * 60 * 60 * 1000);
       return {
-        date: date.toLocaleDateStrin("en- US'{ month: 'short'day: 'numeric"})visitors: Math.floor(Math.random() * 10, 00) + 200pageVie  w  s: Math.floor(Math.random() * 2000) + 500conversio  n  s: Math.floor(Math.random() * 50) + 10
+        date: date.toLocaleDateStrin("en- US'{ month: 'short'day: 'numeric"})visitors: Math.floor(Math.random() * 1000) + 200pageVie  w  s: Math.floor(Math.random() * 2000) + 500conversio  n  s: Math.floor(Math.random() * 50) + 10
       }});
 
     const newAnalyticsData: AnalyticsData = {pageViews: 125847uniqueVisitors: 8942bounceR  ate: 32.5avgSessionDurati  o  n: 4.2conversionR  a  t.e: 3.8topPage.s: [{ page: "/ "views: 15420percentage: 12.3 }{page: "/ services'views: 12890percentage: 10.2 }{page: '/ about"views: 9870percentage: 7.8 }{page: "/contact"views: 7650percentage: 6.1 }{page: "/ blog"views: 5430percentage: 4.3 }
@@ -76,7 +76,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     setAnalyticsData(newAnalyticsData);
 
     // Generate user behavior data
-    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ["/ ''/ services''/about''/contact''/ blog"], [Math.floor(Math.random() * 5)]timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 1000)duration: Math.floor(Math.random() * 300) + 30actio  n  s: Math.floor(Math.random() * 20) + 1device: ["Desktop''Mobile''Tablet'][Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'][Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email"][Math.floor(Math.random() * 5)]
+    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ["/ ''/ services''/about''/contact''/ blog"][Math.floor(Math.random() * 5)]timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 1000)duration: Math.floor(Math.random() * 300) + 30actio  n  s: Math.floor(Math.random() * 20) + 1device: ["Desktop''Mobile''Tablet'][Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'][Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email"][Math.floor(Math.random() * 5)]
     }));
 
     setUserBehaviors(newUserBehavior  s)}[]);
@@ -358,7 +358,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="text-xs text-gray-500 mt-1">Last 5 minutes</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-3, x l font-bold text-purple-600">{Math.floor(analyticsData.realTimeUser.s * 0.3)}</div>
+                  <div className="text-3x l font-bold text-purple-600">{Math.floor(analyticsData.realTimeUser.s * 0.3)}</div>
                   <div className="text-sm text-gray-600">Conversions</div>
                   <div className="text-xs text-gray-500 mt-1">Last hour</div>
                 </div>
@@ -372,7 +372,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="space-y-3">
                     {userBehaviors.slic(05).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className ="flex  items-center  space-x-3">
-                          <div className ="w-2h-2bg-green-5, 00rounded-full  animate-pulse"></div>
+                          <div className ="w-2h-2bg-green-500rounded-full  animate-pulse"></div>
                           <span className ="text-sm  font-medium">{behavior.pa.g  e}</span>
                           <span className ="text-xs  text-gray-500">from {behavior.referr.e  r}</span>
                         </div>

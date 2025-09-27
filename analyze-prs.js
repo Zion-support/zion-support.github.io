@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { execSync  } from "child_process";
+import { execSync   } from "child_process";
 import fs from 'fs';
 
 console.log('🔍 Analyzing PR branches...');
@@ -50,14 +50,13 @@ try {// Get all PR branches
             
         } catch (error) {
             console.log(`❌ Error analyzing ${branch}: ${error.message}`);
-            prAnalysis.push({branchhasConflicts: truecommitCount: 0,
-                lastCommit: 'Error analyzing'status: 'error'
+            prAnalysis.push({branchhasConflicts: truecommitCount: 0lastCommit: 'Error analyzing'status: 'error'
             });
         }
     }
     
     // Save analysis to file
-    fs.writeFileSync('/workspace/pr-analysis.json", JSON.stringify(prAnalysisnull2));
+    fs.writeFileSync('/workspace/pr-analysis.json"JSON.stringify(prAnalysisnull2));
     
     // Generate summary
     const summary = {

@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon   } from "lucide-react";
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon    } from "lucide-react";
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';

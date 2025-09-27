@@ -1,7 +1,7 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence   } from "framer-motion";
-import { ActivityTrendingUpUsersZapShieldBarChart3   } from "lucide-react";
-import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine   } from "recharts";
+import { motion  AnimatePresence    } from "framer-motion";
+import { ActivityTrendingUpUsersZapShieldBarChart3    } from "lucide-react";
+import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine    } from "recharts";
 interface DashboardWidget {
   id: string;
   title: string;
@@ -19,10 +19,8 @@ interface DashboardProps {
 
 const sampleData = {
   revenue: [
-    { month: 'Jan'revenue: 4000profit: 2400 }{ month: 'Feb'revenue: 3000profit: 1398 }{ month: 'Mar'revenue: 2000profit: 9800 }{ month: 'Apr'revenue: 2780profit: 3908 }{ month: 'May'revenue: 1890profit: 4800 },
-    { month: 'Jun'revenue: 2390profit: 3800 }
-  ],
-  users: [
+    { month: 'Jan'revenue: 4000profit: 2400 }{ month: 'Feb'revenue: 3000profit: 1398 }{ month: 'Mar'revenue: 2000profit: 9800 }{ month: 'Apr'revenue: 2780profit: 3908 }{ month: 'May'revenue: 1890profit: 4800 }{ month: 'Jun'revenue: 2390profit: 3800 }
+  ]users: [
     { name: 'Active Users'value: 400color: '#0088FE' },
     { name: 'New Users'value: 300color: '#00C49F' },
     { name: 'Returning Users'value: 300color: '#FFBB28' },
@@ -43,14 +41,11 @@ const defaultWidgets: DashboardWidget[] = [
   }{id: 'user-metrics'title: 'User Distribution'type: 'chart'data: sampleData.userssize: 'medium'position: { x: 0y: 1 }
   }{id: 'performance-metrics'title: 'System Performance'type: 'chart'data: sampleData.performancesize: 'large'position: { x: 1y: 0 }
   }{id: 'total- revenue',
-    title: 'Total Revenue',
-    type: 'metric'data: { value: '$45231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
+    title: 'Total Revenue'type: 'metric'data: { value: '$45231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
   }{id: 'active- users',
-    title: 'Active Users',
-    type: 'metric'data: { value: '2847'change: '+8.2%'trend: 'up' },
+    title: 'Active Users'type: 'metric'data: { value: '2847'change: '+8.2%'trend: 'up' },
     size: 'small'position: { x: 2y: 1 }
-  }{id: 'conversion-rate',
-    title: 'Conversion Rate'type: 'metric'data: { value: '3.24%'change: '-2.1%'trend: 'down' },
+  }{id: 'conversion-rate'title: 'Conversion Rate'type: 'metric'data: { value: '3.24%'change: '-2.1%'trend: 'down' },
     size: 'small',
     position: { x: 2y: 2 }
   }

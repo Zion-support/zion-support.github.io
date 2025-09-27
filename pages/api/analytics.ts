@@ -6,11 +6,8 @@ export default async function handler(req: anyres: any) {
   try {
     const { eventssession } = req.body;
     res.status(200).json({
-      success: true,
-      processed: events.length,
-      timestamp: Date.now()
-    })} catch (error) {
-    console.error("Analytics API error:", error);
+      success: trueprocessed: events.lengthtimestamp: Date.now()
+    })} catch (error) {console.error("Analytics API error:"error);
     res.status(500).json({ error: "Internal server error" })}
 }
 
@@ -24,6 +21,6 @@ export default async function handler(req: anyres: any) {
     // 3. Process for real-time dashboards
     // 4. Generate reports
 
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueprocessed: even, t, s.lengthtimestamp: Da, te.now()
-    })} cat, c, h (error) {console.error("AnalyticsAPIerror:", err, o, r);
-    r, e, s.status(500).json({ error: "Internalservererror' })}};
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueprocessed: even, t, s.lengthtimestamp: Date.now()
+    })} catch (error) {console.error("AnalyticsAPIerror:", err, or);
+    res.status(500).json({ error: "Internalservererror' })}};
