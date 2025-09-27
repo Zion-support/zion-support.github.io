@@ -21,6 +21,8 @@ interface EnhancementConfig {
     enableSecureHeaders: boolean;
     enableInputSanitization: boolean;
     enableRateLimiting: boolean;
+    enableHSTS: boolean;
+    enableContentTypeOptions: boolean;
   };
   accessibility: {
     enableKeyboardNavigation: boolean;
@@ -29,11 +31,14 @@ interface EnhancementConfig {
     enableFocusManagement: boolean;
     enableAriaEnhancements: boolean;
     enableMotionReduction: boolean;
+    enableARIALabels: boolean;
   };
   errorHandling: {
     enableGlobalErrorHandling: boolean;
     enablePerformanceMonitoring: boolean;
     enableUserFeedback: boolean;
+    enableErrorReporting: boolean;
+    enableErrorRecovery: boolean;
     maxErrors: number;
   };
 }
@@ -50,11 +55,18 @@ interface SystemMetrics {
     violationCount: number;
     lastViolation: Date | null;
     rateLimitHits: number;
+    blockedRequests: number;
+    cspViolations: number;
+    xssAttempts: number;
   };
   accessibility: {
     violationCount: number;
     lastAudit: Date | null;
     complianceScore: number;
+    ariaLabelsCount: number;
+    keyboardNavigationScore: number;
+    screenReaderCompatibility: number;
+    colorContrastScore: number;
   };
   errors: {
     totalErrors: number;
@@ -66,10 +78,10 @@ interface SystemMetrics {
 export class EnhancementSuite {
   private static instance: EnhancementSuite;
   private config: EnhancementConfig;
-  private performanceOptimizer: PerformanceOptimizer;
-  private securityEnhancer: SecurityEnhancer;
-  private accessibilityEnhancer: AccessibilityEnhancer;
-  private errorHandler: ErrorHandler;
+  private performanceOptimizer!: PerformanceOptimizer;
+  private securityEnhancer!: SecurityEnhancer;
+  private accessibilityEnhancer!: AccessibilityEnhancer;
+  private errorHandler!: ErrorHandler;
   private metricsInterval: NodeJS.Timeout | null = null;
 
   private constructor(config: Partial<EnhancementConfig> = {}) {
@@ -87,6 +99,9 @@ export class EnhancementSuite {
         enableHSTS: true,
         enableXSSProtection: true,
         enableClickjackingProtection: true,
+        enableSecureHeaders: true,
+        enableInputSanitization: true,
+        enableRateLimiting: true,
         enableContentTypeOptions: true,
         ...config.security
       },
@@ -96,12 +111,17 @@ export class EnhancementSuite {
         enableScreenReaderSupport: true,
         enableHighContrast: true,
         enableFocusManagement: true,
+        enableAriaEnhancements: true,
+        enableMotionReduction: true,
         ...config.accessibility
       },
       errorHandling: {
         enableGlobalErrorHandling: true,
+        enablePerformanceMonitoring: true,
+        enableUserFeedback: true,
         enableErrorReporting: true,
         enableErrorRecovery: true,
+        maxErrors: 100,
         ...config.errorHandling
       }
     };
@@ -118,11 +138,11 @@ export class EnhancementSuite {
     console.log('EnhancementSuite cleanup');
   }
 
-  private initialize(): void {
+  public initialize(): void {
     // Initialize all enhancement modules
     this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
-    this.securityEnhancer = SecurityEnhancer.getInstance(this.config.security);
-    this.accessibilityEnhancer = AccessibilityEnhancer.getInstance(this.config.accessibility);
+    this.securityEnhancer = SecurityEnhancer.getInstance();
+    this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
     this.errorHandler = ErrorHandler.getInstance();
 
     // Initialize error handler
@@ -190,20 +210,25 @@ export class EnhancementSuite {
       },
       security: {
         violationCount: 0,
+        lastViolation: null,
+        rateLimitHits: 0,
         blockedRequests: 0,
         cspViolations: 0,
         xssAttempts: 0
       },
       accessibility: {
+        violationCount: 0,
+        lastAudit: null,
+        complianceScore: 0,
         ariaLabelsCount: 0,
         keyboardNavigationScore: 0,
         screenReaderCompatibility: 0,
         colorContrastScore: 0
       },
-      errorHandling: {
-        errorCount: 0,
-        recoveredErrors: 0,
-        criticalErrors: 0
+      errors: {
+        totalErrors: 0,
+        criticalErrors: 0,
+        lastError: null
       }
     };
   }

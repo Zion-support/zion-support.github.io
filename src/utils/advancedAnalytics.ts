@@ -104,7 +104,7 @@ class AdvancedAnalyticsManager {
         pageViews: this.session?.pageViews || 0,
         eventCount: this.session?.events.length || 0,
       });
-      this.flushEventQueue(true);
+      this.flushEventQueue();
     });
   }
 
