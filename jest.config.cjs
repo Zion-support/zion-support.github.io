@@ -1,45 +1,12 @@
-/** @type {import('jest').Config} */
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@/app/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/lib/(.*)$': '<rootDir>/app/lib/$1',
-  },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
   },
-  testMatch: [
-    '**/__tests__/**/*.(ts|tsx|js)',
-    '**/*.(test|spec).(ts|tsx|js)',
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/src.disabled/',
-    '/src.corrupted/',
-    '/src.broken/',
-    '/src.backup/',
-    '/components.disabled/',
-    '/ts_files_backup/',
-    '/recovered-branches/',
-    '/backup-problematic-files/',
-    '/error-prevention-reports/',
-    '/dao/',
-    '/zion-website/',
-    '/test/',
-    '/plugins/',
-    '/.*backup.*/',
-    '/.*disabled.*/',
-    '/.*broken.*/',
-    '/.*corrupted.*/',
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    'app/**/*.{ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],
+  transformIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/', '/zion-website/', '/e2e/'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
 };
+
