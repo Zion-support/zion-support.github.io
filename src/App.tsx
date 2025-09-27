@@ -17,6 +17,9 @@ import { userFeedback } from './utils/userFeedbackManager';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
 import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
+import { enhancedSecurityManager } from './utils/enhancedSecurity';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import './index.css';
 import './styles/notifications.css';
 
@@ -48,6 +51,15 @@ export default function App(): React.JSX.Element {
     
     // Initialize security features
     SecurityManager.getInstance();
+    
+    // Initialize enhanced performance optimizer
+    enhancedPerformanceOptimizer.initialize();
+    
+    // Initialize enhanced security manager
+    enhancedSecurityManager.initialize();
+    
+    // Initialize enhanced accessibility manager
+    enhancedAccessibilityManager.initialize();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
