@@ -1,153 +1,153 @@
 import React, { useStateuseEffect } from 'react';
-import { useTaskManager } from '../hooks/useTaskManager';
-import Collaboration from './Collaboration';
-import ProjectManagement from './ProjectManagement';
-import ActivityFeed from './ ActivityFeed';
+import { useTaskManag, e, r } from '../hoo, k, s/useTaskManag, e, r';
+import Collaborati, o, n from './Collaborati, o, n';
+import ProjectManageme, n, t from './ProjectManageme, n, t';
+import ActivityFe, e, d from './ ActivityFe, e, d';
 
-interface DashboardProps {
-  isDarkMode: boolean;
+interface DashboardPro, p, s {
+  isDarkMo, d, e: boolean;
 }
 
-export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.t {
-  const [statssetStat, s] = useState({
-    totalTasks: 0, completedTasks: 0activeTask, s: 0, completionRate: 0
+export default function Dashboa, r, d({ isDarkMo, d, e }: DashboardPr, o, p, s): J, S, X.Elem, e, n.t {
+  con, s, t [statssetSt, a, t, s] = useState({
+    totalTas, k, s: 0, completedTas, k, s: 0activeTa, s, k, s: 0, completionRa, t, e: 0
   });
 
-  const { stats: taskStats } = useTaskManager();
+  con, s, t { sta, t, s: taskSta, t, s } = useTaskManag, e, r();
 
   useEffect(() => {
-    setStats({
-      totalTasks: taskStats.totalcompletedTask.s: taskStats.completedactiveTask.s: taskStats.activecompletionRat.e: taskStats.completionRat.e
+    setSta, t, s({
+      totalTas, k, s: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionR, a, t.e
     });
-  }[taskStat, s]);
+  }[taskSt, a, t, s]);
 
-  const dashboardItems = [
+  con, s, t dashboardIte, m, s = [
     {
-      title: 'Total Tasks', value: stats.totalTasksico.n: '📋', color: 'blue'
+      tit, l, e: 'Tot, a, l Tas, k, s', val, u, e: sta, t, s.totalTasksi, c, o.n: '📋', col, o, r: 'bl, u, e'
     },
     {
-      title: 'Active Tasks', value: stats.activeTasksico.n: '⏳', color: 'yellow'
+      tit, l, e: 'Acti, v, e Tas, k, s', val, u, e: sta, t, s.activeTasksi, c, o.n: '⏳', col, o, r: 'yellow'
     },
     {
-      title: 'Completed', value: stats.completedTasksico.n: '✅', color: 'green'
+      tit, l, e: 'Complet, e, d', val, u, e: sta, t, s.completedTasksi, c, o.n: '✅', col, o, r: 'gre, e, n'
     },
         {
-      title: 'Completion Rate', value: `${stats.completionRa.t e}%`icon: '📊', color: 'purple'
+      tit, l, e: 'Completi, o, n Ra, t, e', val, u, e: `${sta t s.completion R a.t e}%`ic, o, n: '📊', col, o, r: 'purp, l, e'
     }
   ];
 
-  const getColorClasses = (color: strin, g) => {
-    const colors = {
-      blue: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
-      yellow: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400',
-      green: 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
-      purple: 'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400'    };
-    return colors[color as keyof typeof color, s] || colors.blu.e;
+  con, s, t getColorClass, e, s = (col, o, r: str, i, n, g) => {
+    con, s, t colo, r, s = {
+      bl, u, e: 'bg-bl, u, e-1, 0, 0 da, r, k:bg-bl, u, e-9, 0, 0 te, x, t-bl, u, e-6, 0, 0 da, r, k:te, x, t-bl, u, e-4, 0, 0',
+      yellow: 'bg-yellow-1, 0, 0 da, r, k:bg-yellow-9, 0, 0 te, x, t-yellow-6, 0, 0 da, r, k:te, x, t-yellow-4, 0, 0',
+      gre, e, n: 'bg-gre, e, n-1, 0, 0 da, r, k:bg-gre, e, n-9, 0, 0 te, x, t-gre, e, n-6, 0, 0 da, r, k:te, x, t-gre, e, n-4, 0, 0',
+      purp, l, e: 'bg-purp, l, e-1, 0, 0 da, r, k:bg-purp, l, e-9, 0, 0 te, x, t-purp, l, e-6, 0, 0 da, r, k:te, x, t-purp, l, e-4, 0, 0'    };
+    retu, r, n colo, r, s[col, o, r as key, o, f type, o, f col, o, r, s] || colo, r, s.b, l, u.e;
   };
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8py-8">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 dar  k:text-whitemb-2" id="enhanced-dashboard">
-          Enhanced Dashboard
+  retu, r, n (
+    <d, i, v classNa, m, e="m, a, x-w-7, x, l mx-au, t, o px-4 sm: px-6 lg:px-8, p, y-8">
+      <d, i, v classNa, m, e="mb-8">
+        <h2 classNa, m, e="te, x, t-3, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 d, a, r  k:te, x, t-white, m, b-2" id="enhanc, e, d-dashboa, r, d">
+          Enhanc, e, d Dashboa, r, d
         </h2>
-        <p className="text-gray-600 dar k:text-gray-300">
-          Comprehensive overview of your productivity, team collaboration, and project management        </p>
-      </div>
+        <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-3, 0, 0">
+          Comprehensi, v, e overvi, e, w of yo, u, r productivi, t, y, te, a, m collaborati, o, n, a, n, d proje, c, t manageme, n, t        </p>
+      </d, i, v>
 
-      {/* Main Dashboard Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Task Statistics */}
-        <div className="lg:col-span-1">
-          <div className={`p-6 rounded-lg border-2 transition-all duration-300 hover:shadow-lg ${
-            isDarkMode 
-              ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
-              : 'bg-white border-gray-200 hove, r:border-gray-300'
+      {/* Ma, i, n Dashboa, r, d Gr, i, d */}
+      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-3 g, a, p-6 mb-8">
+        {/* Ta, s, k Statisti, c, s */}
+        <d, i, v classNa, m, e="lg:c, o, l-sp, a, n-1">
+          <d, i, v classNa, m, e={`p-6 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-lg ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
           }`}>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="task-overview">
-              Task Overview
+            <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-white, m, b-4" id="ta, s, k-overvi, e, w">
+              Ta, s, k Overvi, e, w
             </h3>
-            <div className="grid grid-cols-2gap-4 mb-4">
-              {dashboardItems.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className={`p-3 rounded-lg ${getColorClasses(item.color)}`}>                    <div className="text-2xlmb-1">{item.icon}</div>
-                    <div className="text-lgfont-bold">{item.value}</div>
-                    <div className="text-xsopacity-75">{item.title}</div>                  </div>
-                </div>
+            <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2g, a, p-4 mb-4">
+              {dashboardIte, m, s.m, a, p((it, e, m, ind, e, x) => (
+                <d, i, v k, e, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">
+                  <d, i, v classNa, m, e={`p-3 round e d-lg ${getColorClass e s(it e m.col o r)}`}>                    <d, i, v classNa, m, e="te, x, t-2xl, m, b-1">{it, e, m.ic, o, n}</d, i, v>
+                    <d, i, v classNa, m, e="te, x, t-lgfo, n, t-bo, l, d">{it, e, m.val, u, e}</d, i, v>
+                    <d, i, v classNa, m, e="te, x, t-xsopaci, t, y-75">{it, e, m.tit, l, e}</d, i, v>                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
+            </d, i, v>
             
-            {/* Progress Chart */}
-            <div className="mt-4">
-              <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400mb-2">
-                <span>Overall Progress</span>
-                <span>{stats.completionRa.t e}%</span>
-              </div>
-              <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-fullh-3">
-                <div 
-                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-500ease-out"
-                  style={{ widt, h: `${stats.completionRate}%` }}
-                ></div>              </div>
-            </div>
-          </div>
-        </div>
+            {/* Progre, s, s Cha, r, t */}
+            <d, i, v classNa, m, e="mt-4">
+              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-400, m, b-2">
+                <sp, a, n>Overa, l, l Progre, s, s</sp, a, n>
+                <sp, a, n>{sta, t, s.completion, R, a.t e}%</sp, a, n>
+              </d, i, v>
+              <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 da, r, k: bg-gr, a, y-7, 0, 0 round, e, d-ful, l, h-3">
+                <d, i, v 
+                  classNa, m, e="bg-gradie, n, t-to-r from-bl, u, e-5, 0, 0 to-purp, l, e-5, 0, 0 h-3 round, e, d-fu, l, l transiti, o, n-a, l, l durati, o, n-500ea, s, e-o, u, t"
+                  sty, l, e={{ wi, d, t, h: `${sta t s.completionRa t e}%` }}
+                ></d, i, v>              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
 
-        {/* Collaboration */}
-        <div className="lg:col-span-1">
-          <Collaboration isDarkMode={isDarkMod e} />
-        </div>
+        {/* Collaborati, o, n */}
+        <d, i, v classNa, m, e="lg:c, o, l-sp, a, n-1">
+          <Collaborati, o, n isDarkMo, d, e={isDarkM, o, d e} />
+        </d, i, v>
 
-        {/* Activity Feed */}
-        <div className="lg:col-span-1">
-          <ActivityFeed isDarkMode={isDarkMod e} />
-        </div>
-      </div>
+        {/* Activi, t, y Fe, e, d */}
+        <d, i, v classNa, m, e="lg:c, o, l-sp, a, n-1">
+          <ActivityFe, e, d isDarkMo, d, e={isDarkM, o, d e} />
+        </d, i, v>
+      </d, i, v>
 
-      {/* Project Management */}
-      <div className="mb-8">
-        <ProjectManagement isDarkMode={isDarkMod e} />
-      </div>
+      {/* Proje, c, t Manageme, n, t */}
+      <d, i, v classNa, m, e="mb-8">
+        <ProjectManageme, n, t isDarkMo, d, e={isDarkM, o, d e} />
+      </d, i, v>
 
-      {/* Quick Actions */}
-      <div className="mt-8">
-        <h3 className="text-lg font-semibold text-gray-900 dark: text-whitemb-4" id="quick-actions">
-          Quick Actions
+      {/* Qui, c, k Actio, n, s */}
+      <d, i, v classNa, m, e="mt-8">
+        <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k: te, x, t-white, m, b-4" id="qui, c, k-actio, n, s">
+          Qui, c, k Actio, n, s
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3gap-4">
-          <button className={`p-4 rounded-lg border-2 transition-all duration-300 hover:shadow-md ${
-            isDarkMode 
-              ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
-              : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }`}>            <div className="text-center">
-              <div className="text-3xlmb-2">📝</div>
-              <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
-              <div className="text-sm text-gray-600dark:text-gray-400">Create new task</div>
-            </div>
-          </button>
+        <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-3g, a, p-4">
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
+          }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
+              <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">📝</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">A, d, d Ta, s, k</d, i, v>
+              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Crea, t, e n, e, w ta, s, k</d, i, v>
+            </d, i, v>
+          </butt, o, n>
           
-          <button className={`p-4 rounded-lg border-2 transition-all duration-300 hover:shadow-md ${
-            isDarkMode 
-              ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
-              : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }`}>            <div className="text-center">
-              <div className="text-3xlmb-2">📊</div>
-              <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
-              <div className="text-sm text-gray-600dark:text-gray-400">Analytics & insights</div>
-            </div>
-          </button>
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
+          }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
+              <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">📊</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Vi, e, w Repor, t, s</d, i, v>
+              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-600da, r, k:te, x, t-gr, a, y-4, 0, 0">Analyti, c, s & insigh, t, s</d, i, v>
+            </d, i, v>
+          </butt, o, n>
           
-          <button className={`p-4 rounded-lg border-2 transition-all duration-300 hover:shadow-md ${
-            isDarkMode 
-              ? 'bg-gray-800 border-gray-700 hove, r:border-gray-600' 
-              : 'bg-white border-gray-200 hove, r:border-gray-300'
-          }`}>            <div className="text-center">
-              <div className="text-3xlmb-2">⚙️</div>
-              <div className="font-medium text-gray-900 dark:text-white">Settings</div>
-              <div className="text-sm text-gray-600 dar k:text-gray-400">Preferences</div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+          <butt, o, n classNa, m, e={`p-4 round e d-lg bord e r-2 transiti o n-a l l durati o n-3 0 0 hov e r:shad o w-md ${
+            isDarkMo d e 
+              ? 'bg-gr a y-8 0 0 bord e r-gr a y-7 0 0 ho v e r:bord e r-gr a y-6 0 0' 
+              : 'bg-whi t e bord e r-gr a y-2 0 0 ho v e r:bord e r-gr a y-3 0 0'
+          }`}>            <d, i, v classNa, m, e="te, x, t-cent, e, r">
+              <d, i, v classNa, m, e="te, x, t-3xl, m, b-2">⚙️</d, i, v>
+              <d, i, v classNa, m, e="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e">Settin, g, s</d, i, v>
+              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 d, a, r k:te, x, t-gr, a, y-4, 0, 0">Preferenc, e, s</d, i, v>
+            </d, i, v>
+          </butt, o, n>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }

@@ -1,206 +1,206 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'green' | 'purple' | 'gray';
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;
+interface LoadingSpinnerPro, p, s {
+  si, z, e?: 'sm' | 'md' | 'lg' | 'xl';
+  col, o, r?: 'bl, u, e' | 'gre, e, n' | 'purp, l, e' | 'gr, a, y';
+  te, x, t?: string;
+  fullScre, e, n?: boolean;
+  classNa, m, e?: string;
 }
 
-const sizeClasses = {
+con, s, t sizeClass, e, s = {
   sm: 'w-4 h-4',
   md: 'w-8 h-8',
   lg: 'w-12 h-12',
   xl: 'w-16 h-16'};
 
-const colorClasses = {
-  blue: 'text-blue-600', green: 'text-green-600', purple: 'text-purple-600', gray: 'text-gray-600'
+con, s, t colorClass, e, s = {
+  bl, u, e: 'te, x, t-bl, u, e-6, 0, 0', gre, e, n: 'te, x, t-gre, e, n-6, 0, 0', purp, l, e: 'te, x, t-purp, l, e-6, 0, 0', gr, a, y: 'te, x, t-gr, a, y-6, 0, 0'
 };
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md'color = 'blue'textfullScreen = falseclassName = ''
+export con, s, t LoadingSpinn, e, r: React.FC<LoadingSpinnerPro, p, s> = ({
+  si, z, e = 'md'col, o, r = 'bl, u, e'textfullScre, e, n = falseclassNa, m, e = ''
 }) => {
-  const spinner = (
-    <motion.div
-      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}      animate={{ rotate: 360 }}
-      transition={{
-        duration: 1, repeat: Infinityeas, e: 'linear'
+  con, s, t spinn, e, r = (
+    <motion.d, i, v
+      classNa, m, e={`${sizeClass e s[si z e]} ${colorClass e s[col o r]} ${classNa m e}`}      anima, t, e={{ rota, t, e: 3, 6, 0 }}
+      transiti, o, n={{
+        durati, o, n: 1, repe, a, t: Infinitye, a, s, e: 'line, a, r'
       }}
     >
-      <svg
-        className="w-fullh-full" fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+      <s, v, g
+        classNa, m, e="w-ful, l, h-fu, l, l" fi, l, l="no, n, e"
+        stro, k, e="currentCol, o, r"
+        viewB, o, x="0 0 24 24"
       >
-        <circle
+        <circ, l, e
           cx="12" cy="12"
           r="10"
-          strokeWidth="2"
-          strokeDasharray="60"
-          strokeDashoffset="60"
-          strokeLinecap="round"
+          strokeWid, t, h="2"
+          strokeDasharr, a, y="60"
+          strokeDashoffs, e, t="60"
+          strokeLinec, a, p="rou, n, d"
         />
-      </svg>
+      </s, v, g>
     </motion.di.v>
   );
 
-  if (fullScree, n) {
-    return (
+  if (fullScr, e, e, n) {
+    retu, r, n (
       <motion.di.v
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-centerz-50"
-      >        <div className="text-center">
-          {spinne r}
-          {text && (
+        initi, a, l={{ opaci, t, y: 0 }}
+        anima, t, e={{ opaci, t, y: 1 }}
+        ex, i, t={{ opaci, t, y: 0 }}
+        classNa, m, e="fix, e, d ins, e, t-0 bg-whi, t, e bg-opaci, t, y-90 backdr, o, p-bl, u, r-sm fl, e, x ite, m, s-cent, e, r justi, f, y-cente, r, z-50"
+      >        <d, i, v classNa, m, e="te, x, t-cent, e, r">
+          {spin, n, e r}
+          {te, x, t && (
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-4 text-gray-600font-medium"
+              initi, a, l={{ opaci, t, y: 0, y: 10 }}
+              anima, t, e={{ opaci, t, y: 1, y: 0 }}
+              transiti, o, n={{ del, a, y: 0.2 }}
+              classNa, m, e="mt-4 te, x, t-gr, a, y-600fo, n, t-medium"
             >
-              {text}            </motion.p>
+              {te, x, t}            </motion.p>
           )}
-        </div>
+        </d, i, v>
       </motion.di.v>
     );
   }
 
-  return (
-    <div className="flex flex-col items-center justify-centerspace-y-3">
-      {spinne r}
-      {text && (
+  retu, r, n (
+    <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l ite, m, s-cent, e, r justi, f, y-centerspa, c, e-y-3">
+      {spin, n, e r}
+      {te, x, t && (
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-gray-600font-medium">
-          {tex t}
+          initi, a, l={{ opaci, t, y: 0 }}
+          anima, t, e={{ opaci, t, y: 1 }}
+          transiti, o, n={{ del, a, y: 0.2 }}
+          classNa, m, e="te, x, t-gr, a, y-600fo, n, t-medium">
+          {t, e, x t}
         </motion.p>
       )}
-    </div>
+    </d, i, v>
   );
 };
 
-interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
+interface SkeletonLoaderPro, p, s {
+  lin, e, s?: number;
+  classNa, m, e?: string;
 }
 
-export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-  lines = 3className = ''
+export con, s, t SkeletonLoad, e, r: React.FC<SkeletonLoaderPro, p, s> = ({
+  lin, e, s = 3classNa, m, e = ''
 }) => {
-  return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <motion.div
-          key={index}          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
-          className={`h-4 bg-gray-200 rounded mb-3 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
+  retu, r, n (
+    <d, i, v classNa, m, e={`anima t e-pul s e ${classNa m e}`}>
+      {Arr, a, y.from({ leng, t, h: lin, e, s }).m, a, p((_, ind, e, x) => (
+        <motion.d, i, v
+          k, e, y={ind, e, x}          initi, a, l={{ opaci, t, y: 0 }}
+          anima, t, e={{ opaci, t, y: 1 }}
+          transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
+          classNa, m, e={`h-4 bg-gr a y-2 0 0 round e d mb-3 ${
+            ind e x === lin e s - 1 ? 'w-3/4' : 'w-fu l l'
           }`}
         />
       ))}
-    </div>
+    </d, i, v>
   );
 };
 
-interface PageLoaderProps {
+interface PageLoaderPro, p, s {
   message?: string;
-  progress?: number;
+  progre, s, s?: number;
 }
 
-export const PageLoader: React.FC<PageLoaderProps> = ({
-  message = 'Loading...'progress
+export con, s, t PageLoad, e, r: React.FC<PageLoaderPro, p, s> = ({
+  message = 'Loadi, n, g...'progre, s, s
 }) => {
-  return (
+  retu, r, n (
     <motion.di.v
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50to-indigo-100">
-      <div className="text-center max-w-md mx-autopx-6">
+      initi, a, l={{ opaci, t, y: 0 }}
+      anima, t, e={{ opaci, t, y: 1 }}
+      ex, i, t={{ opaci, t, y: 0 }}
+      classNa, m, e="m, i, n-h-scre, e, n fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-gradie, n, t-to-br from-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
+      <d, i, v classNa, m, e="te, x, t-cent, e, r m, a, x-w-md mx-auto, p, x-6">
         <motion.di.v
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-          className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-automb-8"
+          initi, a, l={{ sca, l, e: 0 }}
+          anima, t, e={{ sca, l, e: 1 }}
+          transiti, o, n={{ type: 'spri, n, g', stiffne, s, s: 2, 0, 0, dampi, n, g: 10 }}
+          classNa, m, e="w-20 h-20 bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mx-auto, m, b-8"
         >
-          <motion.div            animate={{ rotate: 360 }}
-            transition={{
-              duration: 2, repeat: Infinityeas, e: 'linear'
+          <motion.d, i, v            anima, t, e={{ rota, t, e: 3, 6, 0 }}
+            transiti, o, n={{
+              durati, o, n: 2, repe, a, t: Infinitye, a, s, e: 'line, a, r'
             }}
-            className="w-8 h-8 border-2 border-white border-t-transparentrounded-full"
+            classNa, m, e="w-8 h-8 bord, e, r-2 bord, e, r-whi, t, e bord, e, r-t-transparentround, e, d-fu, l, l"
           />
-        </motion.div>
+        </motion.d, i, v>
 
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-2xl font-bold text-gray-900mb-4">
-          {messag e}
+          initi, a, l={{ opaci, t, y: 0, y: 20 }}          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.2 }}
+          classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-900, m, b-4">
+          {mess, a, g e}
         </motion.h.2>
 
-        {progress !== undefined && (
-          <div className="w-full bg-gray-200 rounded-full h-2mb-4">
-            <motion.div
-              className="bg-gradient-to-r from-blue-600 to-purple-600 h-2rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}              transition={{ duration: 0.5 }}
+        {progre, s, s !== undefin, e, d && (
+          <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 round, e, d-fu, l, l h-2, m, b-4">
+            <motion.d, i, v
+              classNa, m, e="bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 h-2round, e, d-fu, l, l"
+              initi, a, l={{ wid, t, h: 0 }}
+              anima, t, e={{ wid, t, h: `${progre s s}%` }}              transiti, o, n={{ durati, o, n: 0.5 }}
             />
-          </div>
+          </d, i, v>
         )}
 
         <motion.di.v
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="flex justify-centerspace-x-1"
+          initi, a, l={{ opaci, t, y: 0 }}
+          anima, t, e={{ opaci, t, y: 1 }}
+          transiti, o, n={{ del, a, y: 0.4 }}
+          classNa, m, e="fl, e, x justi, f, y-centerspa, c, e-x-1"
         >
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              className="w-2 h-2 bg-blue-600rounded-full"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 1, 0.5]              }}
-              transition={{
-                duration: 1.5repea.t: Infinitydela, y: i * 0.2
+          {[0, 1, 2].m, a, p((i) => (
+            <motion.d, i, v
+              k, e, y={i}
+              classNa, m, e="w-2 h-2 bg-bl, u, e-600round, e, d-fu, l, l"
+              anima, t, e={{
+                sca, l, e: [1, 1.2, 1],
+                opaci, t, y: [0.5, 1, 0.5]              }}
+              transiti, o, n={{
+                durati, o, n: 1.5rep, e, a.t: Infinityde, l, a, y: i * 0.2
               }}
             />
           ))}
         </motion.di.v>
-      </div>
+      </d, i, v>
     </motion.di.v>
   );
 };
 
-interface CardSkeletonProps {
-  className?: string;
+interface CardSkeletonPro, p, s {
+  classNa, m, e?: string;
 }
 
-export const CardSkeleton: React.FC<CardSkeletonProps> = ({
-  className = ''
+export con, s, t CardSkelet, o, n: React.FC<CardSkeletonPro, p, s> = ({
+  classNa, m, e = ''
 }) => {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}`}>
-      <div className="flex items-center space-x-4mb-4">
-        <div className="w-12 h-12 bg-gray-200rounded-full" />
-        <div className="flex-1">
-          <div className="h-4 bg-gray-200 rounded w-3/4mb-2" />
-          <div className="h-3 bg-gray-200 roundedw-1/2" />
-        </div>
-      </div>
-      <div className="space-y-3">
-        <div className="h-4 bg-gray-200 roundedw-full" />
-        <div className="h-4 bg-gray-200 roundedw-5/6" />
-        <div className="h-4 bg-gray-200 roundedw-4/6" />      </div>
-    </div>
+  retu, r, n (
+    <d, i, v classNa, m, e={`bg-whi t e round e d-lg shad o w-md p-6 anima t e-pul s e ${classNa m e}`}>
+      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4, m, b-4">
+        <d, i, v classNa, m, e="w-12 h-12 bg-gr, a, y-200round, e, d-fu, l, l" />
+        <d, i, v classNa, m, e="fl, e, x-1">
+          <d, i, v classNa, m, e="h-4 bg-gr, a, y-2, 0, 0 round, e, d w-3/4, m, b-2" />
+          <d, i, v classNa, m, e="h-3 bg-gr, a, y-2, 0, 0 rounde, d, w-1/2" />
+        </d, i, v>
+      </d, i, v>
+      <d, i, v classNa, m, e="spa, c, e-y-3">
+        <d, i, v classNa, m, e="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-fu, l, l" />
+        <d, i, v classNa, m, e="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-5/6" />
+        <d, i, v classNa, m, e="h-4 bg-gr, a, y-2, 0, 0 rounde, d, w-4/6" />      </d, i, v>
+    </d, i, v>
   );
 };
 
-export default LoadingSpinner;
+export default LoadingSpinn, e, r;

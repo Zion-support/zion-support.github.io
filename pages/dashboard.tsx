@@ -33,10 +33,7 @@ const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedPerformanceMonitor = dynamic(() => import('../temp-broken-components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
 // const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
 //   ssr: false,
@@ -48,30 +45,15 @@ const AdvancedPerformanceMonitor = dynamic(() => import('../temp-broken-componen
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedAccessibilityAuditor = dynamic(() => import('../temp-broken-components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
-const SystemMonitor = dynamic(() => import('../temp-broken-components/SystemMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
-const AdvancedSecurityEnhancements = dynamic(() => import('../temp-broken-components/AdvancedSecurityEnhancements'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
-const SecurityMonitor = dynamic(() => import('../temp-broken-components/SecurityMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
-const EnhancedAnalytics = dynamic(() => import('../temp-broken-components/EnhancedAnalytics'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
 // const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
 //   ssr: false,
@@ -98,10 +80,7 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedSystemMonitor = dynamic(() => import('../temp-broken-components/AdvancedSystemMonitor'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// Removed broken component
 
 const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
   ssr: false,

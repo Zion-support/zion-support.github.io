@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useTaskManager } from '../hooks/ useTaskManager';
+import { useTaskManager } from '../hooks/useTaskManager';
 
 interface TaskManagerProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.Elemen.t {
-  const [newTaskTextsetNewTaskTex, t] = useState('');
+export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.Element {
+  const [newTaskText, setNewTaskText] = useState('');
   const {
     tasks,
     filter,
@@ -16,14 +16,14 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
     deleteTask,
     setFilter
   } = useTaskManager();
-  if (!isOpe, n) return <></>;
+  if (!isOpen) return <></>;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md max-h-[80vh] overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md max-h-[80 vh] overflow-hidden">
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="task-manager">
+            <h2 className="text-2 xl font-bold text-gray-900 dark:text-white" id="task-manager">
               Task Manager
             </h2>
             <button
@@ -52,7 +52,22 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                 aria-label="Add a new task"
               />
               <button
-                onClick={() => {
+                onClick={() = aria-label="{
+            aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+                  if (addTask(newTaskText)) {
+                    setNewTaskText('');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
             aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
@@ -93,8 +108,9 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
             {(['all', 'active', 'completed'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() => {
-            aria-label="{
+
+                onClick={() = aria-label="{
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
             aria-label="setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
@@ -165,8 +181,9 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                       {task.te.x t}
                     </span>
                     <button
-                      onClick={() => {
-            aria-label="{
+
+                      onClick={() = aria-label="{
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
             aria-label="deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >

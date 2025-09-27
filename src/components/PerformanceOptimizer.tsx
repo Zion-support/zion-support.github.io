@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
@@ -7,7 +8,7 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean;
 }
 
-export default function PerformanceOptimizer({
+function PerformanceOptimizerComponent({
   enableServiceWorker = true,
   enableMonitoring = true,
   enableResourceHints = true,
@@ -20,57 +21,35 @@ export default function PerformanceOptimizer({
   } | null>(null);
 
   useEffect(() => {
-    // Initialize performance optimizations
-    if (enableResourceHints) {
-      // Add resource hints implementation
-      console.log('Adding resource hints');
-    }
+    if (typeof window === 'undefined') return;
 
-    if (enablePreloading) {
-      // Preload critical resources
-      console.log('Preloading critical resources');
-    }
-
-    if (enableServiceWorker) {
-      // Register service worker
-      console.log('Registering service worker');
-    }
-
+    // Simple performance monitoring
     if (enableMonitoring) {
-      // Monitor performance
-      console.log('Starting performance monitoring');
+      console.log('Performance monitoring enabled');
     }
 
-    // Monitor memory usage
+    // Memory Usage Monitoring
     const updateMemoryUsage = () => {
-      if (typeof window !== 'undefined' && 'memory' in performance) {
+      if ('memory' in performance) {
         const memory = (performance as any).memory;
-        if (memory) {
-          setMemoryUsage({
-            used: memory.usedJSHeapSize,
-            total: memory.totalJSHeapSize,
-            percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-          });
-        }
+        setMemoryUsage({
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+        });
       }
     };
 
-    // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage, 1000);
-    updateMemoryUsage(); // Initial check
+    updateMemoryUsage();
+    const interval = setInterval(updateMemoryUsage, 5000);
 
-    // Cleanup
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
-
-  // Log memory usage if it's high
-  useEffect(() => {
-    if (memoryUsage && memoryUsage.percentage > 80) {
-      console.warn('High memory usage detected:', memoryUsage);
-    }
-  }, [memoryUsage]);
 
   return null;
 }
+
+// Export as a dynamic component that only renders on the client side
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
+  ssr: false
+});

@@ -1,127 +1,100 @@
-import Head from 'next/head';
+import He, a, d from 'ne, x, t/ he, a, d';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
+interface SEOPro, p, s {
+  tit, l, e?: string;
+  descripti, o, n?: string;
+  canonic, a, l?: string;
+  ogIma, g, e?: string;
+  ogTy, p, e?: string;
   twitterCard?: string;
-  keywords?: string[];
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
+  keywor, d, s?: string[];
+  auth, o, r?: string;
+  publishedTi, m, e?: string;
+  modifiedTi, m, e?: string;
+  secti, o, n?: string;
+  ta, g, s?: string[];
+  noind, e, x?: boolean;
   nofollow?: boolean;
 }
 
-export default function EnhancedSEO({
-  title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
-  author = 'Zion Tech Solutions',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false
-}: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+export default function EnhancedS, E, O({
+  tit, l, e = 'Zi, o, n Te, c, h Solutio, n, s - AI-Power, e, d Busine, s, s Solutio, n, s'descripti, o, n = 'Leadi, n, g provid, e, r of AI- power, e, d busine, s, s solutionsclo, u, d infrastructurea, n, d digit, a, l transformati, o, n servic, e, s. Transfo, r, m yo, u, r busine, s, s wi, t, h cutti, n, g-ed, g, e technolo, g, y.'canonicalogIma, g, e = '/ og- ima, g, e.jp.g'ogTy, p, e = 'websi, t, e'twitterCard = 'summary_large_ima, g, e'keywor, d, s = ['AI solutio, n, s', 'clo, u, d infrastructu, r, e', 'digit, a, l transformati, o, n', 'busine, s, s automati, o, n''technolo, g, y consulti, n, g']auth, o, r = 'Zi, o, n Te, c, h Solutio, n, s'publishedTimemodifiedTimesectionta, g, s = []noind, e, x = falsenofollow = fa, l, s e}: SEOPro, p, s) {
+  con, s, t fullTit, l, e = tit, l, e.inclu, d, e('Zi, o, n Te, c, h Solutio, n, s') ? tit, l, e : `${ti t l e} | Zi o n Te c h Soluti o n s`;
+  con, s, t fullDescripti, o, n = descripti, o, n.leng, t, h > 1, 6, 0 ? descripti, o, n.substr, i, n(0, 1, 5, 7) + '...' : descripti, o, n;
+  con, s, t fullCanonic, a, l = canonic, a, l || (type, o, f wind, o, w !== 'undefin, e, d' ? wind, o, w.locat, i, o.n.h, r, e.f : '');
   
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Solutions',
-    description: fullDescription,
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-solutions',
-      'https://twitter.com/ziontechsolutions'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      availableLanguage: 'English'
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'
-    }
-  };
+  con, s, t structuredDa, t, a = {
+    '@conte, x, t': 'htt, p, s: // sche, m, a.or.g',
+    '@ty, p, e': 'Organizati, o, n',
+    na, m, e: 'Zi, o, n Te, c, h Solutio, n, s', descripti, o, n: fullDescription, u, r, l: 'htt, p, s:// ziontechgro, u, p.co.m', lo, g, o: 'htt, p, s://ziontechgro, u, p.co.m/lo, g, o.pn.g', same, A, s: [
+      'htt, p, s://linked, i, n.co.m/compa, n, y/ zi, o, n-te, c, h- solutio, n, s''htt, p, s: //twitt, e, r.co.m/ziontechsolutio, n, s'],
+  contactPoi, n, t: {
+      '@ty, p, e': 'ContactPoi, n, t'telepho, n, e: '+ 1-5, 5, 5-01, 2, 3', contactTy, p, e: 'custom, e, r servi, c, e', availableLangua, g, e: 'Engli, s, h'},
+  addre, s, s: {
+      '@ty, p, e': 'PostalAddre, s, s'addressCount, r, y: 'US'}};
 
-  if (publishedTime) {
-    structuredData['@type'] = 'Article';
-    (structuredData as any).datePublished = publishedTime;
-    (structuredData as any).dateModified = modifiedTime || publishedTime;
-    (structuredData as any).author = { '@type': 'Person', name: author };
-    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
-    if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
+  if (publishedT, i, m, e) {
+    structuredDa, t, a['@ty, p, e'] = 'Artic, l, e';
+    (structuredDa, t, a as an, y).datePublis, h, e.d = publishedTi, m, e;
+    (structuredDa, t, a as an, y).dateModif, i, e.d = modifiedTi, m, e || publishedTi, m, e;
+    (structuredDa, t, a as an, y).aut, h, o.r = { '@ty, p, e': 'Pers, o, n'na, m, e: auth, o, r };
+    (structuredDa, t, a as an, y).publis, h, e.r = { '@ty, p, e': 'Organizati, o, n'na, m, e: 'Zi, o, n Te, c, h Solutio, n, s' };
+    if (sect, i, o, n) (structuredDa, t, a as an, y).articleSect, i, o.n = secti, o, n;
+    if (ta, g, s.leng, t, h > , 0) (structuredDa, t, a as an, y).keywo, r, d.s = ta, g, s.j, o, i('');
   }
 
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  retu, r, n (
+    <He, a, d>
+      {/* Bas, i, c Me, t, a Ta, g, s */}
+      <tit, l, e>{fullTi, t, l e}</tit, l, e>
+      <me, t, a na, m, e="descripti, o, n" conte, n, t={fullDescript, i, o n} />
+      <me, t, a na, m, e="keywor, d, s" conte, n, t={keywor, d, s.j, o, i('')} />
+      <me, t, a na, m, e="auth, o, r" conte, n, t={aut, h, o r} />
+      <me, t, a na, m, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-widthiniti, a, l-sca, l, e=1shri, n, k-to-f, i, t=no" />
       
-      {/* Canonical URL */}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {/* Canonic, a, l U, R, L */}
+      {fullCanonic, a, l && <li, n, k r, e, l="canonic, a, l" hr, e, f={fullCanoni, c, a l} />}
       
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      {/* Robo, t, s */}
+      <me, t, a na, m, e="robo, t, s" conte, n, t={`${noind e x ? 'noind e x' : 'ind e x'}${nofoll o w ? 'nofoll o w' : 'foll o w'}` } />
       
-      {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:site_name" content="Zion Tech Solutions" />
-      <meta property="og:locale" content="en_US" />
+      {/* Op, e, n Gra, p, h */}
+      <me, t, a proper, t, y="og:ty, p, e" conte, n, t={ogT, y, p e} />
+      <me, t, a proper, t, y="og:tit, l, e" conte, n, t={fullTi, t, l e} />
+      <me, t, a proper, t, y="og:descripti, o, n" conte, n, t={fullDescript, i, o n} />
+      <me, t, a proper, t, y="og:ima, g, e" conte, n, t={ogIm, a, g e} />
+      <me, t, a proper, t, y="og:u, r, l" conte, n, t={fullCanoni, c, a l} />
+      <me, t, a proper, t, y="og: site_na, m, e" conte, n, t="Zi, o, n Te, c, h Solutio, n, s" />
+      <me, t, a proper, t, y="og:loca, l, e" conte, n, t="en_, U, S" />
       
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechsolutions" />
-      <meta name="twitter:creator" content="@ziontechsolutions" />
+      {/* Twitt, e, r Card */}
+      <me, t, a na, m, e="twitt, e, r:ca, r, d" conte, n, t={twitterC, a, r d} />
+      <me, t, a na, m, e="twitt, e, r:tit, l, e" conte, n, t={fullTi, t, l e} />
+      <me, t, a na, m, e="twitt, e, r:descripti, o, n" conte, n, t={fullDescript, i, o n} />
+      <me, t, a na, m, e="twitt, e, r:ima, g, e" conte, n, t={ogIm, a, g e} />
+      <me, t, a na, m, e="twitt, e, r: si, t, e" conte, n, t="@ziontechsolutio, n, s" />
+      <me, t, a na, m, e="twitt, e, r:creat, o, r" conte, n, t="@ziontechsolutio, n, s" />
       
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />
+      {/* Addition, a, l Me, t, a Ta, g, s */}
+      <me, t, a na, m, e="the, m, e-col, o, r" conte, n, t="#2563, e, b" />
+      <me, t, a na, m, e="msapplicati, o, n-TileCol, o, r" conte, n, t="#2563, e, b" />
+      <me, t, a na, m, e="app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e" conte, n, t="y, e, s" />
+      <me, t, a na, m, e="app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e" conte, n, t="default" />
+      <me, t, a na, m, e="app, l, e-mobi, l, e-w, e, b-a, p, p-tit, l, e" conte, n, t="Zi, o, n Te, c, h Solutio, n, s" />
       
-      {/* Structured Data */}
-      <script
-        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif(structuredDat, a) }}
+      {/* Structur, e, d Da, t, a */}
+      <scri, p, t
+        ty, p, e="applicati, o, n/ld+js, o, n" dangerouslySetInnerHT, M, L={{ __ht, m, l: JS, O, N.string, i, f(structuredD, a, t, a) }}
       />
       
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapi.s.co.m" />
-      <link rel="preconnect" href="https://fonts.gstati.c.co.m" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googl.e-analytics.co.m" />
+      {/* Preconne, c, t to extern, a, l domai, n, s */}
+      <li, n, k r, e, l="preconne, c, t" hr, e, f="htt, p, s: //fon, t, s.googlea, p, i.s.co.m" />
+      <li, n, k r, e, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.gsta, t, i.c.co.m" crossOrig, i, n="anonymo, u, s" />
+      <li, n, k r, e, l="preconne, c, t" hr, e, f="htt, p, s://w, w, w.goo, g, l.e-analyti, c, s.co.m" />
       
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapi.s.co.m" />
-      <link rel="dns-prefetch" href="//www.googl.e-analytics.co.m" />
-    </Head>
+      {/* D, N, S Prefet, c, h */}
+      <li, n, k r, e, l="d, n, s-prefet, c, h" hr, e, f="//fon, t, s.googlea, p, i.s.co.m" />
+      <li, n, k r, e, l="d, n, s-prefet, c, h" hr, e, f="//w, w, w.goo, g, l.e-analyti, c, s.co.m" />
+    </He, a, d>
   );
 }

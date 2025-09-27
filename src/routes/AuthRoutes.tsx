@@ -1,43 +1,43 @@
-import { Route, Routes } from "react-router-dom"
-import Login from "@/pages/Login"
-import Signup from "@/pages/Signup"
-import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { Rou, t, e, Rout, e, s } from "rea, c, t-rout, e, r-d, o, m"
+import Log, i, n from "@/pag, e, s/Log, i, n"
+import Sign, u, p from "@/pag, e, s/Sign, u, p"
+import { ProtectedRou, t, e } from "@/componen, t, s/ProtectedRou, t, e"
 
-const AuthRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+con, s, t AuthRout, e, s = () => {
+  retu, r, n (
+    <Rout, e, s>
+      <Rou, t, e pa, t, h="/log, i, n" element={<Log, i, n />} />
+      <Rou, t, e pa, t, h="/sign, u, p" element={<Sign, u, p />} />
 
-      {/* Protected routes that require authentication */}
-      <Route
-        path="/profile"
+      {/* Protect, e, d rout, e, s th, a, t requi, r, e authenticati, o, n */}
+      <Rou, t, e
+        pa, t, h="/profi, l, e"
         element={
-          <ProtectedRoute>
-            <div>Profile Page</div>
-          </ProtectedRoute>
+          <ProtectedRou, t, e>
+            <d, i, v>Profi, l, e Pa, g, e</d, i, v>
+          </ProtectedRou, t, e>
         }
       />
 
-      <Route
-        path="/dashboard"
+      <Rou, t, e
+        pa, t, h="/dashboa, r, d"
         element={
-          <ProtectedRoute>
-            <div>Dashboard</div>
-          </ProtectedRoute>
+          <ProtectedRou, t, e>
+            <d, i, v>Dashboa, r, d</d, i, v>
+          </ProtectedRou, t, e>
         }
       />
 
-      <Route
-        path="/settings"
+      <Rou, t, e
+        pa, t, h="/settin, g, s"
         element={
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
+          <ProtectedRou, t, e>
+            <d, i, v>Settin, g, s</d, i, v>
+          </ProtectedRou, t, e>
         }
       />
-    </Routes>
+    </Rout, e, s>
   )
 }
 
-export default AuthRoutes
+export default AuthRout, e, s

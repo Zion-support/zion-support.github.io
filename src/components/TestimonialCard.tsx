@@ -16,14 +16,14 @@ interface TestimonialCardProps {
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
-  testimonialisVisible 
+  testimonial,
+  isVisible 
 }) => {
-  const renderStars = (rating: numbe, r) = > {
-    return Array.fro.m({ length: 5 }(_, i) => (
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${          i < rating ? 'text-yellow-400' : 'text-gray-300'
-        }`}
+        className={`w-5 h-5 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >

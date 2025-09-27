@@ -1,363 +1,351 @@
 import React, { useState, useEffect } from 'react';
 
-interface PricingOption {
-	id: string;
-	name: string;
-	description: string;
-	basePrice: number;
-	features: string[];
-	popular?: boolean;
+interface CalculatorInputs {
+  service: string;
+  complexity: string;
+  timeline: string;
+  teamSize: number;
+  additionalFeatures: string[];
 }
 
-interface CalculatorInputs {
-	service: string;
-	complexity: 'basic' | 'standard' | 'advanced' | 'enterprise';
-	timeline: 'rush' | 'standard' | 'flexible';
-	teamSize: number;
-	additionalFeatures: string[];
+interface PricingOption {
+  id: string;
+  name: string;
+  description: string;
+  basePrice: number;
+  features: string[];
 }
 
 export const PricingCalculator: React.FC = () => {
-	const [inputs, setInputs] = useState<CalculatorInputs>({
-		service: '', complexity: 'standard', timeline: 'standard', teamSize: 1, additionalFeatures: []
-	});
+  const [inputs, setInputs] = useState<CalculatorInputs>({
+    service: '',
+    complexity: 'standard',
+    timeline: 'standard',
+    teamSize: 1,
+    additionalFeatures: []
+  });
 
-	const [estimatedPrice, setEstimatedPrice] = useState(0);
-	const [breakdown, setBreakdown] = useState<any[]>([]);
+  const [estimatedPrice, setEstimatedPrice] = useState(0);
+  const [breakdown, setBreakdown] = useState<any[]>([]);
 
-	const services: PricingOption[] = [
-		{
-			id: 'web-dev',
-			name: 'Web Development',
-			description: 'Custom web applications and websites',
-			basePrice: 15000,
-			features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
-		},
-		{
-			id: 'mobile',
-			name: 'Mobile Development',
-			description: 'iOS and Android applications',
-			basePrice: 25000,
-			features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
-		},
-		{
-			id: 'ai-ml',
-			name: 'AI & Machine Learning',
-			description: 'Artificial intelligence solutions',
-			basePrice: 35000,
-			features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
-		},
-		{
-			id: 'cloud',
-			name: 'Cloud Solutions',
-			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000,
-			features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
-		},
-		{
-			id: 'data-analytics',
-			name: 'Data Analytics',
-			description: 'Business intelligence and analytics',
-			basePrice: 18000,
-			features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
-		},
-		{
-			id: 'cybersecurity',
-			name: 'Cybersecurity',
-			description: 'Security solutions and audits',
-			basePrice: 12000,
-			features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
-		}
-	];
 
-	const additionalFeatures = [
-		{ id: 'api- integration', name: 'API Integration', price: 5000 },
-        { id: 'third-party-auth', name: 'Third- party Authentication', price: 3000 },
-        { id: 'payment- gateway', name: 'Payment Gateway Integration', price: 4000 },
-        { id: 'real-time-chat', name: 'Real- time Chat', price: 6000 },
-        { id: 'advanced- analytics', name: 'Advanced Analytics', price: 8000 },
-        { id: 'multi-language', name: 'Multi-language Support', price: 4000 },
-        { id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 },
-        { id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
-	];
+  const services: PricingOption[] = [
+    {
+      id: 'web-dev',
+      name: 'Web Development',
+      description: 'Custom web applications and websites',
+      basePrice: 15000,
+      features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
+    },
+    {
+      id: 'mobile',
+      name: 'Mobile Development',
+      description: 'iOS and Android applications',
+      basePrice: 25000,
+      features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
+    },
+    {
+      id: 'ai-ml',
+      name: 'AI & Machine Learning',
+      description: 'Artificial intelligence solutions',
+      basePrice: 35000,
+      features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud Solutions',
+      description: 'Cloud infrastructure and deployment',
+      basePrice: 20000,
+      features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics',
+      description: 'Business intelligence and analytics',
+      basePrice: 18000,
+      features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      description: 'Security solutions and audits',
+      basePrice: 12000,
+      features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
+    }
+  ];
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
-	useEffect(() => {
-		calculatePrice();
-  }, [inputs]); // eslint-disable-line react-hooks/exhaustive-deps
+  const additionalFeatures = [
+    { id: 'api-integration', name: 'API Integration', price: 5000 },
+    { id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
+  ];
 
-	const calculatePrice = () => {
-		if (!inputs.service) {
-			setEstimatedPrice(0);
-			setBreakdown([]);
-			return;
-		}
+  useEffect(() => {
+    calculatePrice();
+  }, [inputs]);
 
-		const selectedService = services.find(s => s.id === inputs.service);
-		if (!selectedService) return;
+  const calculatePrice = () => {
+    if (!inputs.service) {
+      setEstimatedPrice(0);
+      setBreakdown([]);
+      return;
+    }
 
-		let total = selectedService.basePrice;
-		const priceBreakdown = [
-			{
-				item: selectedService.name, price: selectedService.basePrice, description: 'Base service cost'
-			}
-		];
+    const selectedService = services.find(s => s.id === inputs.service);
+    if (!selectedService) return;
 
-		// Complexity multiplier
-		const complexityMultipliers = {
-			basic: 0.7,
-			standard: 1.0,
-			advanced: 1.5,
-			enterprise: 2.0
-		};
+    let total = selectedService.basePrice;
+    const priceBreakdown = [
+      {
+        item: selectedService.name,
+        price: selectedService.basePrice,
+        description: 'Base service cost'
+      }
+    ];
 
-		const complexityMultiplier = complexityMultipliers[inputs.complexity];
-		const complexityAdjustment = selectedService.basePrice * (complexityMultiplier - 1);
-		
-		if (complexityAdjustment > 0) {
-			priceBreakdown.push({
-				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
-				price: complexityAdjustment,
-				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
-			});
-		}
 
-		total *= complexityMultiplier;
+    // Complexity multiplier
+    const complexityMultipliers = {
+      basic: 0.7,
+      standard: 1.0,
+      advanced: 1.5,
+      enterprise: 2.0
+    };
 
-		// Timeline multiplier
-		const timelineMultipliers = {
-			rush: 1.5,
-			standard: 1.0,
-			flexible: 0.9
-		};
+    const complexityMultiplier = complexityMultipliers[inputs.complexity as keyof typeof complexityMultipliers];
+    const complexityAdjustment = selectedService.basePrice * (complexityMultiplier - 1);
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
-		const timelineMultiplier = timelineMultipliers[inputs.timeline];
-		const timelineAdjustment = total * (timelineMultiplier - 1);
-		
-		if (timelineAdjustment !== 0) {
-			priceBreakdown.push({
-				item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`,
-				price: timelineAdjustment,
-				description: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
-			});
-		}
+    if (complexityAdjustment > 0) {
+      priceBreakdown.push({
+        item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
+        price: complexityAdjustment,
+        description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
+      });
+    }
 
-		total *= timelineMultiplier;
 
-		// Team size adjustment
-		if (inputs.teamSize > 1) {
-			const teamAdjustment = total * (inputs.teamSize - 1) * 0.2;
-			priceBreakdown.push({
-				item: `Team Size (${inputs.teamSize} members)`,
-				price: teamAdjustment,
-				description: 'Additional team coordination cost'
-			});
-			total += teamAdjustment;
-		}
+    total *= complexityMultiplier;
 
-		// Additional features
-		let featuresTotal = 0;
-		inputs.additionalFeatures.forEach(featureId => {
-			const feature = additionalFeatures.find(f => f.id === featureId);
-			if (feature) {
-				featuresTotal += feature.price;
-				priceBreakdown.push({
-					item: feature.name,
-					price: feature.price,
-					description: 'Additional feature'
-				});
-			}
-		});
+    // Timeline multiplier
+    const timelineMultipliers = {
+      rush: 1.5,
+      standard: 1.0,
+      flexible: 0.9
+    };
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
-		total += featuresTotal;
+    const timelineMultiplier = timelineMultipliers[inputs.timeline as keyof typeof timelineMultipliers];
+    const timelineAdjustment = total * (timelineMultiplier - 1);
 
-		setEstimatedPrice(Math.round(total));
-		setBreakdown(priceBreakdown);
-	};
 
-	const handleInputChange = (field: keyof CalculatorInputs, value: any) => {
-		setInputs(prev => ({
-			...prev,
-			[field]: value
-		}));
-	};
+    if (timelineAdjustment !== 0) {
+      priceBreakdown.push({
+        item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`,
+        price: timelineAdjustment,
+        description: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
+      });
+    }
 
-	const handleFeatureToggle = (featureId: string) => {
-		setInputs(prev => ({
-			...prev,
-			additionalFeatures: prev.additionalFeatures.includes(featureId)
-				? prev.additionalFeatures.filter(id => id !== featureId)
-				: [...prev.additionalFeatures, featureId]
-		}));
-	};
+    total *= timelineMultiplier;
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
-	const formatPrice = (price: number) => {
-		return new Intl.NumberFormat('en-US', {
-			style: 'currency',
-			currency: 'USD',
-			minimumFractionDigits: 0,
-			maximumFractionDigits: 0
-		}).format(price);
-	};
+    // Team size adjustment
+    if (inputs.teamSize > 1) {
+      const teamAdjustment = total * (inputs.teamSize - 1) * 0.2;
+      priceBreakdown.push({
+        item: `Team Size (${inputs.teamSize} members)`,
+        price: teamAdjustment,
+        description: 'Additional team coordination cost'
+      });
+      total += teamAdjustment;
+    }
 
-	return (
-		<div className="bg-white rounded-2xl shadow-xl p-8">
-			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-600 text-lg">
-					Get an instant estimate for your project based on your specific requirements.
-				</p>
-			</div>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				{/* Input Form */}
-				<div className="space-y-6">
-					{/* Service Selection */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700 mb-3">
-							Select Service *
-						</label>
-						<div className="grid grid-cols-1gap-3">
-							{services.map((service) => (
-								<button
-									key={service.id}
-									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4 rounded-lg border-2 text-left transition-all duration-200 ${
-										inputs.service === service.id											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
-									}`}
-								>
-									<div className="flex justify-betweenitems-start">
-										<div>
-											<h4 className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
-											<p className="text-smtext-gray-600">{service.description}</p>
-										</div>
-										<span className="text-sm font-mediumtext-blue-600">
-											{formatPrice(service.basePrice)}										</span>
-									</div>
-								</button>
-							))}
-						</div>
-					</div>
+    // Additional features
+    let featuresTotal = 0;
+    inputs.additionalFeatures.forEach(featureId => {
+      const feature = additionalFeatures.find(f => f.id === featureId);
+      if (feature) {
+        featuresTotal += feature.price;
+        priceBreakdown.push({
+          item: feature.name,
+          price: feature.price,
+          description: 'Additional feature'
+        });
+      }
+    });
 
-					{/* Complexity */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700 mb-3">
-							Project Complexity
-						</label>
-						<div className="grid grid-cols-2gap-3">
-							{['basic', 'standard', 'advanced', 'enterprise'].map((complexity) => (								<button
-									key={complexit y}
-									onClick={() => handleInputChange('complexity', complexity)}
-									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
-										inputs.complexity === complexity											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
-									}`}
-								>
-									<span className="font-mediumcapitalize">{complexit y}</span>
-								</button>
-							))}
-						</div>
-					</div>
+    total += featuresTotal;
 
-					{/* Timeline */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700 mb-3">
-							Timeline
-						</label>
-						<div className="grid grid-cols-3gap-3">
-							{['rush', 'standard', 'flexible'].map((timeline) => (								<button
-									key={timelin e}
-									onClick={() => handleInputChange('timeline', timeline)}
-									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
-										inputs.timeline === timeline											? 'border-blue-500 bg-blue-50'
-											: 'border-gray-200 hover:border-gray-300'
-									}`}
-								>
-									<span className="font-mediumcapitalize">{timelin e}</span>
-								</button>
-							))}
-						</div>
-					</div>
+    setEstimatedPrice(Math.round(total));
+    setBreakdown(priceBreakdown);
+  };
 
-					{/* Team Size */}
-					<div>
-						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700mb-3">
-							Team Size
-						</label>
-						<input
-							type="number" id="teamSize"
-							min="1"
-							max="10"
-							value={inputs.teamSize}
-							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>					</div>
+  const handleInputChange = (field: keyof CalculatorInputs, value: any) => {
+    setInputs(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
 
-					{/* Additional Features */}
-					<div>
-						<label className="block text-sm font-semibold text-gray-700 mb-3">
-							Additional Features
-						</label>
-						<div className="space-y-2">
-							{additionalFeatures.map((feature) => (
-								<label key={feature.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50cursor-pointer">
-									<span className="font-medium">{feature.name}</span>
-									<div className="flex items-center space-x-3">
-										<span className="text-smtext-gray-600">{formatPrice(feature.price)}</span>
-										<input
-											type="checkbox"
-											id={`feature-${feature.id}` }
-											checked={inputs.additionalFeatures.includes(feature.id)}
-											onChange={() => handleFeatureToggle(feature.id)}
-											className="w-4 h-4 text-blue-600 border-gray-300 roundedfocus:ring-blue-500"										/>
-									</div>
-								</label>
-							))}
-						</div>
-					</div>
-				</div>
+  const handleFeatureToggle = (featureId: string) => {
+    setInputs(prev => ({
+      ...prev,
+      additionalFeatures: prev.additionalFeatures.includes(featureId)
+        ? prev.additionalFeatures.filter(id => id !== featureId)
+        : [...prev.additionalFeatures, featureId]
+    }));
+  };
 
-				{/* Price Estimate */}
-				<div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xlp-6">
-					<h4 className="text-xl font-bold text-gray-800mb-4" id="price-estimate">Price Estimate</h4>
-					
-					{estimatedPrice > 0 ? (
-						<>
-							<div className="text-centermb-6">
-								<div className="text-4xl font-bold text-blue-600mb-2">
-									{formatPrice(estimatedPrice)}								</div>
-								<p className="text-gray-600">Estimated project cost</p>
-							</div>
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(price);
+  };
 
-							<div className="space-y-3mb-6">
-								<h5 className="font-semiboldtext-gray-800" id="price-breakdown">Price Breakdown:</h5>
-								{breakdown.map((item, index) => (
-									<div key={index} className="flex justify-between items-centertext-sm">
-										<div>
-											<span className="font-medium">{item.item}</span>
-											<p className="text-gray-500text-xs">{item.description}</p>										</div>
-										<span className="font-medium">{formatPrice(item.pri.c, e)}</span>
-									</div>
-								))}
-							</div>
+  return (
+    <div className="bg-white rounded-2 xl shadow-xl p-8">
+      <div className="mb-8">
+        <h3 className="text-3 xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">
+          Project Pricing Calculator
+        </h3>
+        <p className="text-gray-600 text-lg">
+          Get an instant estimate for your project based on your specific requirements.
+        </p>
+      </div>
 
-							<div className="bg-blue-100 rounded-lg p-4mb-6">
-								<p className="text-blue-800text-sm">
-									<strong>Note: </strong> This is an estimated cost. Final pricing will be determined after a detailed consultation and project scope analysis.
-								</p>
-							</div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Form */}
+        <div className="space-y-6">
+          {/* Service Selection */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Select Service
+            </label>
+            <select
+              value={inputs.service}
+              onChange={(e) => handleInputChange('service', e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="">Choose a service...</option>
+              {services.map(service => (
+                <option key={service.id} value={service.id}>
+                  {service.name} - {formatPrice(service.basePrice)}
+                </option>
+              ))}
+            </select>
+          </div>
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
-							<button className="w-full bg-blue-600 hove  r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
-								Get Detailed Quote
-							</button>
-						</>
-					) : (
-						<div className="text-centertext-gray-500">
-							<div className="text-6xlmb-4">💰</div>
-							<p>Select a service to see pricing estimate</p>
-						</div>
-					)}
-				</div>
-			</div>
-		</div>
-	);
+          {/* Complexity */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Project Complexity
+            </label>
+            <select
+              value={inputs.complexity}
+              onChange={(e) => handleInputChange('complexity', e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="basic">Basic</option>
+              <option value="standard">Standard</option>
+              <option value="advanced">Advanced</option>
+              <option value="enterprise">Enterprise</option>
+            </select>
+          </div>
+
+
+          {/* Timeline */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Timeline
+            </label>
+            <select
+              value={inputs.timeline}
+              onChange={(e) => handleInputChange('timeline', e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="flexible">Flexible (3-6 months)</option>
+              <option value="standard">Standard (2-3 months)</option>
+              <option value="rush">Rush (1-2 months)</option>
+            </select>
+          </div>
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+
+          {/* Team Size */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Team Size
+            </label>
+            <input
+              type="number"
+              min="1"
+              max="20"
+              value={inputs.teamSize}
+              onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+
+          {/* Additional Features */}
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Additional Features
+            </label>
+            <div className="space-y-2">
+              {additionalFeatures.map(feature => (
+                <label key={feature.id} className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    checked={inputs.additionalFeatures.includes(feature.id)}
+                    onChange={() => handleFeatureToggle(feature.id)}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  />
+                  <span className="text-sm text-gray-700">
+                    {feature.name} (+{formatPrice(feature.price)})
+                  </span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Price Estimate */}
+        <div className="bg-gray-50 rounded-lg p-6">
+          <h4 className="text-xl font-bold text-gray-800 mb-4" id="price-estimate">Price Estimate</h4>
+          <div className="text-center mb-6">
+            <div className="text-4 xl font-bold text-blue-600 mb-2">
+              {formatPrice(estimatedPrice)}
+            </div>
+            <p className="text-gray-600">Total project cost</p>
+          </div>
+
+          {breakdown.length > 0 && (
+            <div>
+              <h5 className="font-semibold text-gray-700 mb-3" id="cost-breakdown">Cost Breakdown</h5>
+              <div className="space-y-2">
+                {breakdown.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200">
+                    <div>
+                      <div className="text-sm font-medium text-gray-800">{item.item}</div>
+                      <div className="text-xs text-gray-500">{item.description}</div>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-700">
+                      {formatPrice(item.price)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
+
+export default PricingCalculator;

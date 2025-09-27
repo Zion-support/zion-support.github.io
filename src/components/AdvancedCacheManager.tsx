@@ -1,174 +1,174 @@
 import React, { useStateuseEffectuseCallback } from 'react';
-import { Database, HardDrive, RefreshCw, Trash2CheckCircleAlertTriangle } from 'lucide- react';
+import { Databa, s, e, HardDrive, Refresh, C, w, Trash2CheckCircleAlertTriangle } from 'luci, d, e- rea, c, t';
 
-interface CacheStats {
-  hitRate: number;
-  missRate: number;
-  totalRequests: number;
-  cacheSize: number;
-  memoryUsag, e: number;
-  lastCleare, d: Date;
+interface CacheSta, t, s {
+  hitRa, t, e: number;
+  missRa, t, e: number;
+  totalReques, t, s: number;
+  cacheSi, z, e: number;
+  memoryUs, a, g, e: number;
+  lastClea, r, e, d: Da, t, e;
 }
 
-interface CacheManagerProps {
-  className?: string;
+interface CacheManagerPro, p, s {
+  classNa, m, e?: string;
 }
 
-const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) => {
-  const [statssetStat, s] = useState<CacheStats>({
-    hitRate: 0, missRate: 0totalRequest, s: 0, cacheSize: 0memoryUsag, e: 0, lastCleared: new Date()
+con, s, t AdvancedCacheManag, e, r: React.FC<CacheManagerPro, p, s> = ({ classNa, m, e = '' }) => {
+  con, s, t [statssetSt, a, t, s] = useState<CacheSta, t, s>({
+    hitRa, t, e: 0, missRa, t, e: 0totalReque, s, t, s: 0, cacheSi, z, e: 0memoryUs, a, g, e: 0, lastClear, e, d: n, e, w Da, t, e()
   });
 
-  const [isOptimizingsetIsOptimizing] = useState(fals, e);
-  const [cacheStrategiessetCacheStrategie, s] = useState<string[]>([]);
+  con, s, t [isOptimizingsetIsOptimizi, n, g] = useState(fa, l, s, e);
+  con, s, t [cacheStrategiessetCacheStrateg, i, e, s] = useState<string[]>([]);
 
-  const updateStats = useCallback(() => {
-    // Simulate cache statistics
-    const newStats: CacheStats = {
-      hitRate: Math.random() * 30 + 70// 70-100%
-      missRate: Math.random() * 30// 0-30%
-      totalRequests: Math.floor(Math.random() * 10000) + 1000cacheSize: Math.floor(Math.random() * 100) + 50// 50-150MB
-      memoryUsage: Math.random() * 40 + 20// 20-60%
-      lastCleared: new Date()
+  con, s, t updateSta, t, s = useCallback(() => {
+    // Simula, t, e cac, h, e statisti, c, s
+    con, s, t newSta, t, s: CacheSta, t, s = {
+      hitRa, t, e: Ma, t, h.rand, o, m() * 30 + 70// 70-1, 0, 0%
+      missRa, t, e: Ma, t, h.rand, o, m() * 30// 0-30%
+      totalReques, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 100, 0, 0) + 1000cacheSi, z, e: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0) + 50// 50-150, M, B
+      memoryUsage: Ma, t, h.rand, o, m() * 40 + 20// 20-60%
+      lastClear, e, d: n, e, w Da, t, e()
     };
-    setStats(newStat, s);
+    setSta, t, s(newSt, a, t, s);
   }, []);
 
-  const clearCache = useCallback(async () => {
-    setIsOptimizing(true);
+  con, s, t clearCac, h, e = useCallback(asy, n, c () => {
+    setIsOptimizi, n, g(true);
     
-    // Simulate cache clearing
-    await new Promise(resolve => setTimeout(resolve200, 0));
+    // Simula, t, e cac, h, e cleari, n, g
+    awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resolve2, 0, 0, 0));
     
-    setStats(prev = > ({
-      ...prevcacheSiz.e: 0, memoryUsage: 10lastCleare, d: new Date()
+    setSta, t, s(pr, e, v = > ({
+      ...prevcacheS, i, z.e: 0, memoryUsage: 10lastClea, r, e, d: n, e, w Da, t, e()
     }));
     
-    setIsOptimizing(fals, e);
+    setIsOptimizi, n, g(fa, l, s, e);
   }, []);
 
-  const optimizeCache = useCallback(async () => {
-    setIsOptimizing(true);
+  con, s, t optimizeCac, h, e = useCallback(asy, n, c () => {
+    setIsOptimizi, n, g(true);
     
-    // Simulate cache optimization
-    await new Promise(resolve => setTimeout(resolve300, 0));
+    // Simula, t, e cac, h, e optimizati, o, n
+    awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resolve3, 0, 0, 0));
     
-    const strategies = [
-      'Enabled compression for static assets''Implemented lazy loading for images''Added service worker caching''Optimized database queries''Enabled CDN caching'
+    con, s, t strategi, e, s = [
+      'Enabl, e, d compressi, o, n f, o, r stat, i, c asse, t, s''Implement, e, d la, z, y loadi, n, g f, o, r imag, e, s''Add, e, d servi, c, e work, e, r cachi, n, g''Optimiz, e, d databa, s, e queri, e, s''Enabl, e, d C, D, N cachi, n, g'
     ];
     
-    setCacheStrategies(strategie, s);
-    setIsOptimizing(fals, e);
+    setCacheStrategi, e, s(strateg, i, e, s);
+    setIsOptimizi, n, g(fa, l, s, e);
   }, []);
 
   useEffect(() => {
-    updateStats();
-    const interval = setInterval(updateStats500, 0);
-    return () => clearInterval(interva, l);
-  }[updateStat, s]);
+    updateSta, t, s();
+    con, s, t interv, a, l = setInterv, a, l(updateStats5, 0, 0, 0);
+    retu, r, n () => clearInterv, a, l(inter, v, a, l);
+  }[updateSt, a, t, s]);
 
-  const getHitRateColor = (rate: numbe, r) => {
-    if (rate >= 9, 0) return 'text-green-500';
-    if (rate >= 8, 0) return 'text-yellow-500';
-    return 'text-red-500';
+  con, s, t getHitRateCol, o, r = (ra, t, e: num, b, e, r) => {
+    if (ra, t, e >= 9, 0) retu, r, n 'te, x, t-gre, e, n-5, 0, 0';
+    if (ra, t, e >= 8, 0) retu, r, n 'te, x, t-yellow-5, 0, 0';
+    retu, r, n 'te, x, t-r, e, d-5, 0, 0';
   };
 
-  return (
-    <div className={`advanced-cache-manager ${className}`}>      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-            <Database className="w-5 h-5mr-2" />            Advanced Cache Manager
+  retu, r, n (
+    <d, i, v classNa, m, e={`advanc e d-cac h e-manag e r ${classNa m e}`}>      <d, i, v classNa, m, e="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
+        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
+          <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-8, 0, 0 fl, e, x ite, m, s-cent, e, r">
+            <Databa, s, e classNa, m, e="w-5 h-5, m, r-2" />            Advanc, e, d Cac, h, e Manag, e, r
           </h3>
-          <div className="flex space-x-2">
-            <button
-              onClick={clearCache}
-              disabled={isOptimizing}
-              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disable  d:opacity-50 flex items-center"
+          <d, i, v classNa, m, e="fl, e, x spa, c, e-x-2">
+            <butt, o, n
+              onCli, c, k={clearCac, h, e}
+              disabl, e, d={isOptimizi, n, g}
+              classNa, m, e="px-4 py-2 bg-r, e, d-5, 0, 0 te, x, t-whi, t, e round, e, d-lg hov, e, r:bg-r, e, d-6, 0, 0 disab, l, e  d:opaci, t, y-50 fl, e, x ite, m, s-cent, e, r"
             >
-              <Trash2 className="w-4 h-4mr-2" />
-              Clear Cache
-            </button>
-            <button
-              onClick={optimizeCache}
-              disabled={isOptimizing}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 flex items-center"
+              <Tras, h, 2 classNa, m, e="w-4 h-4, m, r-2" />
+              Cle, a, r Cac, h, e
+            </butt, o, n>
+            <butt, o, n
+              onCli, c, k={optimizeCac, h, e}
+              disabl, e, d={isOptimizi, n, g}
+              classNa, m, e="px-4 py-2 bg-bl, u, e-5, 0, 0 te, x, t-whi, t, e round, e, d-lg hov, e, r:bg-bl, u, e-6, 0, 0 disab, l, e  d:opaci, t, y-50 fl, e, x ite, m, s-cent, e, r"
             >
-              <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />              Optimize
-            </button>
-          </div>
-        </div>
+              <Refresh, C, w classNa, m, e={`w-4 h-4 mr-2 ${isOptimizi n g ? 'anima t e-sp i n' : ''}`} />              Optimi, z, e
+            </butt, o, n>
+          </d, i, v>
+        </d, i, v>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 l  g:grid-cols-3 gap-6 mb-6">
-          <div className="bg-gray-50 rounded-lgp-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Hit Rate</span>
-              <CheckCircle className="w-4 h-4text-green-500" />
-            </div>
-            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}>
-              {stats.hitRate.toFixed(1)}%            </div>
-          </div>
+        <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 l  g:gr, i, d-co, l, s-3 g, a, p-6 mb-6">
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-l, g, p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">H, i, t Ra, t, e</sp, a, n>
+              <CheckCircle classNa, m, e="w-4 h-4te, x, t-gre, e, n-5, 0, 0" />
+            </d, i, v>
+            <d, i, v classNa, m, e={`te x t-2 x l fo n t-bo l d ${getHitRateCol o r(sta t s.hitRa t e)}`}>
+              {sta, t, s.hitRa, t, e.toFix, e, d(1)}%            </d, i, v>
+          </d, i, v>
 
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Miss Rate</span>
-              <AlertTriangle className="w-4 h-4text-yellow-500" />            </div>
-            <div className="text-2xl font-bold text-red-500">
-              {stats.missRat.e.toFixe(, 1)}%
-            </div>
-          </div>
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">Mi, s, s Ra, t, e</sp, a, n>
+              <AlertTriangle classNa, m, e="w-4 h-4te, x, t-yellow-5, 0, 0" />            </d, i, v>
+            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-r, e, d-5, 0, 0">
+              {sta, t, s.missR, a, t.e.toFi, x, e(, 1)}%
+            </d, i, v>
+          </d, i, v>
 
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Total Requests</span>
-              <HardDrive className="w-4 h-4text-blue-500" />            </div>
-            <div className="text-2xl font-bold text-gray-800">
-              {stats.totalRequest.s.toLocaleStrin()}
-            </div>
-          </div>
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">Tot, a, l Reques, t, s</sp, a, n>
+              <HardDrive classNa, m, e="w-4 h-4te, x, t-bl, u, e-5, 0, 0" />            </d, i, v>
+            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0">
+              {sta, t, s.totalReque, s, t.s.toLocaleStr, i, n()}
+            </d, i, v>
+          </d, i, v>
 
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Cache Size</span>
-              <HardDrive className="w-4 h-4text-purple-500" />            </div>
-            <div className="text-2xl font-bold text-gray-800">
-              {stats.cacheSi.z e} MB
-            </div>
-          </div>
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">Cac, h, e Si, z, e</sp, a, n>
+              <HardDrive classNa, m, e="w-4 h-4te, x, t-purp, l, e-5, 0, 0" />            </d, i, v>
+            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0">
+              {sta, t, s.cache, S, i.z e} MB
+            </d, i, v>
+          </d, i, v>
 
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Memory Usage</span>
-              <HardDrive className="w-4 h-4text-indigo-500" />            </div>
-            <div className="text-2xl font-bold text-gray-800">
-              {stats.memoryUsag.e.toFixe(, 1)}%
-            </div>
-          </div>
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">Memo, r, y Usa, g, e</sp, a, n>
+              <HardDrive classNa, m, e="w-4 h-4te, x, t-indi, g, o-5, 0, 0" />            </d, i, v>
+            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0">
+              {sta, t, s.memoryUs, a, g.e.toFi, x, e(, 1)}%
+            </d, i, v>
+          </d, i, v>
 
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-600">Last Cleared</span>
-              <RefreshCw className="w-4 h-4text-gray-500" />            </div>
-            <div className="text-sm font-medium text-gray-800">
-              {stats.lastCleare.d.toLocaleTimeStrin()}
-            </div>
-          </div>
-        </div>
+          <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4">
+            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+              <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-6, 0, 0">La, s, t Clear, e, d</sp, a, n>
+              <Refresh, C, w classNa, m, e="w-4 h-4te, x, t-gr, a, y-5, 0, 0" />            </d, i, v>
+            <d, i, v classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-8, 0, 0">
+              {sta, t, s.lastClea, r, e.d.toLocaleTimeStr, i, n()}
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
 
-        {cacheStrategies.length > 0 && (
-          <div className="bg-green-50 border border-green-200 rounded-lgp-4">
-            <h4 className="font-semibold text-green-800mb-2">Optimization Strategies Applied:</h4>
-            <ul className="space-y-1">
-              {cacheStrategies.map((strategy, index) => (
-                <li key={index} className="text-sm text-green-700 flex items-center">
-                  <CheckCircle className="w-3 h-3mr-2" />
-                  {strategy}                </li>
+        {cacheStrategi, e, s.leng, t, h > 0 && (
+          <d, i, v classNa, m, e="bg-gre, e, n-50 bord, e, r bord, e, r-gre, e, n-2, 0, 0 round, e, d-l, g, p-4">
+            <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-gre, e, n-800, m, b-2">Optimizati, o, n Strategi, e, s Appli, e, d:</h4>
+            <ul classNa, m, e="spa, c, e-y-1">
+              {cacheStrategi, e, s.m, a, p((strate, g, y, ind, e, x) => (
+                <li k, e, y={ind, e, x} classNa, m, e="te, x, t-sm te, x, t-gre, e, n-7, 0, 0 fl, e, x ite, m, s-cent, e, r">
+                  <CheckCircle classNa, m, e="w-3 h-3, m, r-2" />
+                  {strate, g, y}                </li>
               ))}
             </ul>
-          </div>
+          </d, i, v>
         )}
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 };
 
-export default AdvancedCacheManager;
+export default AdvancedCacheManag, e, r;
