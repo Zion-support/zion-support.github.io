@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link";
-import {useStateuseEffectuseCallbackuseMemouseRef   } from "react";
-import { motionuseInViewAnimatePresence   } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import dynamic from 'next/dynamic';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
@@ -18,52 +18,34 @@ const Home = React.memo(function Home(): JSX.Element {
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
   const isHeroInView = useInView(heroRef{ once: true });
-  const isFeaturesInView = useInView(featuresRef{ once: true });
+  const isFeaturesInView = useInView(featuresRef, { once: true });
 
- <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
-// });
+// constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
+//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />// });
 
 // constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {//   ssr: false 
-// ,
-		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
+//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 // constAdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {//   ssr: false 
-// ,
-		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
-// });
-
-// constAdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {//   ssr: false 
-// ,
-		loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
-
-// constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"){//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />// });
-
-// constAdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"){//   ssr: false 
-//  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-// });
-
-// constAdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"){//   ssr: false 
 //  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
 // });
 
 // constAdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {//   ssr: false 
 //  loading: () => <divclassName="h-64 w-fullbg-gray-200 roundedanimate-pulse" />
-
 // });
 
-const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisible] = useState(false);
-	const [performanceMetricssetPerformanceMetrics] = useState(null);
+const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisibl, e] = useState(false);
+	const [performanceMetri, c, s, setPerformanceMetri, c, s] = useState(null);
 	const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
   const heroRef  = useR, e, f(null);
   const featuresRef  = useR, e, f(null);
-  const isHeroInView  = useInVi, e, w(heroR, ef{ once: true });
+  const isHeroInView  = useInVi, e, w(heroR, e, f{ once: true });
   const isFeaturesInView  = useInVi, e, w(featuresR, e, f, {once: true });
 
-  useEffect(() => {setIsVisible(true);
-    setIsLoading(false);        // Performance monitoring
-    if (typeof window !== "undefined') {
+  useEffect(() => {setIsVisib, l, e(true);
+    setIsLoadi, ng(false);        // Performance monitoring
+    if (typeof window !== 'undefined') {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
@@ -80,127 +62,61 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
       return () => observer.disconnect()}
   }, []);
 
- {
-    // Track user interaction
-
   const handleGetStarted = useCallback(() => {// Track user interaction
-
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'click'{
+      (window as any).gtag('event', 'click', {
         event_category: 'engagement'event_label: 'get_started_button'
       })}
   }, []);
 
- [
- {
-    setIsVisible(true);
-    setIsLoading(false);
-    
-    // Performance monitoring
-    if (typeof window !== "undefined") {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === "navigation") {
-            setPerformanceMetrics({
-              loadTime: entry.loadEventEnd - entry.fetchStart,
-              domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
-            })}
-        })});
-      
-      try {
-        observer.observe({ entryTypes: ["navigation"] })} catch (e) {
-        console.warn("Performance observer not supported")}
-      return () => observer.disconnect()}
-  }, []);
-
-  // Track user interaction
-  const, handleGetStarted = useCallback(() => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click", {
-        event_category: "engagement",
-        event_label: "get_started_button"
-      })}
-  }, []);
-
-	const, features = useMemo(() => [
-
-
-
-    {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
-      icon: "🤖",
-      color: "blue" as const,
-      delay: 0.1
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and reliable cloud solutions tailored to your specific business requirements.",
-      icon: "☁️",
-      color: "green" as const,
-      delay: 0.2
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business processes and systems.",
-      icon: "🚀",
-      color: "purple" as const,
-      delay: 0.3
- */};
-			<divclassName="min-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50 to-gray-100">
-
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
-      icon: "🛡️",
-      color: "blue" as const,
-      delay: 0.4
-    }
-  ], []);
-	return (
-		<>
-
   const features = useMemo(() => [
-    {title: "AI-Powered Solutions",      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation."icon: "🤖"color: "blue" as constdelay: 0.1
+    {title: "AI-Powered Solutions",      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
+      icon: "🤖"color: "blue" as constdelay: 0.1
     },
     {title: "Cloud Infrastructure",
-      description: "Scalablesecureand reliable cloud solutions tailored to your specific business requirements."icon: "☁️"color: "green" as constdelay: 0.2
+      description: "Scalablesecureand reliable cloud solutions tailored to your specific business requirements.",
+      icon: "☁️"color: "green" as constdelay: 0.2
     },
     {title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business processes and systems."icon: "🚀"color: "purple" as constdelay: 0.3    },
+      description: "Complete digital transformation services to modernize your business processes and systems.",
+      icon: "🚀"color: "purple" as constdelay: 0.3    },
     {title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly."icon: "🛡️"color: "blue" asconstdelay: 0.4}];  return (
+      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
+      icon: "🛡️"color: "blue" asconstdelay: 0.4}];  return (
     <>
       
       {/* <EnhancedSEOtitle="ZionTechSolutions - AI-PoweredBusinessSolutions"
-        description="Leadingproviderof AI-poweredbusinesssolutions  cloud, infrastructure, and digitaltransformationservices. Transformyourbusiness withcutting-edgetechnology."
+        description="Leadingproviderof AI-powered, business, solutions  cloud, infrastructure, and digital, transformation, services. Transformyourbusiness withcutting-edgetechnology."
         keywords={[
           "AIsolutions",
           "cloudinfrastructure", 
           "digitaltransformation",
           "businessautomation",
-          "technologyconsulting""machinelearning""artificialintelligence""cloudcomputing""enterprisesolutions"
+          "technologyconsulting",
+          "machinelearning""artificialintelligence""cloudcomputing""enterprisesolutions"
         ]};
       /> */};
-      <divclassName="min-h-screenbg-gradient-to-brfrom-gray-50 to-gray-100">  return (
+      <divclassName="min-h-screenbg-gradie, n, t-to-br, fro, m-gray-50 to-gray-100">  return (
     <>
-
       <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology."
         keywords={[
-          'AI solutions''cloud infrastructure''digital transformation',
+          'AI solutions',
+          'cloud infrastructure', 
+          'digital transformation',
           'business automation',
           'technology consulting',
           'machine learning',
-          'artificial intelligence''cloud computing''enterprise solutions'
+          'artificial intelligence',
+          'cloud computing''enterprise solutions'
         ]}
       />
-			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
+        {/* HeroSection */};
+        <sectionref={heroRef};
+          className="relativepy-20, p, x-4sm: px-6lg:px-8 min-h-screenflexitems-center"
         >
           {/* Animatedbackgroundelements */};
           <motion.divclassName="absoluteinset-0 overflow-hidden"
@@ -208,86 +124,41 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
             animate={{ opacity: 1 }};
             transiti, on={{ duration: 2 }};
           >
-</div>
-			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3 xl animate-pulse delay-1000"></div>
-          </motion.div>
-			<div className="max-w-7 xl mx-auto relative z-10">
-            <motion.div
-              className="text-center"
-              initial={{ y: 50, opacity: 0 }}
-              animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.h1 
-                className="text-5 xl md: text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                initial={{,
-		scale: 0.8, opacity: 0 }}
-                animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                Zion Tech Solutions
-              </motion.h1>
-              
-              <motion.p 
-                className="text-xl md: text-2 xl text-gray-600 mb-8 max-w-3 xl mx-auto"
-                initial={{,
-		y: 30, opacity: 0 }}
-                animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Transform your business with cutting-edge AI-powered solutions, cloud infrastructure, and digital transformation services.
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm: flex-row gap-4 justify-center"
-                initial={{,
-		y: 30, opacity: 0 }}
-                animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-					<Link 
-                  href="/dashboard" 
-                  onClick={handleGetStarted}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover: bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  View Dashboard
-
-			<divclassName="absolutetop-1/4 left-1/4 w-64 h-64, b, g-bl, u, e-400/5 rounded-fullblur-3 xlanimate-pulse"></div>
-			<divclassName="absolutebottom-1/4 right-1/4 w-9, 6, h-96, b, g-purp, l, e-4, 0, 0/5 rounded-fullblur-3 xlanimate-pulsedelay-1000"></div>
+			<divclassName="absolutetop-1/4left-1/4 w-6, 4, h-64, b, g-bl, u, e-4, 0, 0/5rounded-fullblur-3 xlanimate-pulse"></div>
+			<divclassName="absolutebottom-1/4, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-4, 0, 0/5, rounde, d-fullblur-3 xlanimate-pulsedelay-1000"></div>
           </motion.div>
 			<divclassName="max-w-7 xlmx-autorelativez-10">
             <motion.divclassName="text-center"
-              initial={{ y: 50opacity: 0 }};
+              initi, al={{ y: 50opacity: 0 }};
               animate={isHeroInView ? { y: 0opacity: 1 } : {y: 50opacity: 0 }};
               transition={{ duration: 0.8ease: "easeOut" }};            >
               <motion.h1 
-                className="text-5 xl md:text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                 initial={{ scale: 0.8opacity: 0 }}
                 animate={isHeroInView ? { scale: 1opacity: 1 } : { scale: 0.8opacity: 0 }}
                 transition={{ duration: 1delay: 0.2 }}              >
                 Zion Tech Solutions
               </motion.h1>
               
-              <motion.pclassName="text-xlmd: text-2, xl, text-gr, a, y-600 mb-8 max-w-3 xlmx-auto"
+              <motion.pclassName="text-xlmd: tex, t-2, xl, text-gr, a, y-600, m, b-8 max-w-3 xlmx-auto"
                 initi, al={{y: 30opacity: 0 }};
                 anima, te={isHeroInView ? { y: 0opacity: 1 } : {y: 30opacity: 0 }};
                 transiti, on={{ duration: 0.8delay: 0.4 }};              >
                 Transform your business with cutting-edge AI-powered solutionscloud infrastructureand digital transformation services.
               </motion.p>
               
-              <motion.divclassName="flexflex-colsm: flex-rowgap-4 justify-center"
-                initial={{y: 30opacity: 0 }};
+              <motion.divclassName="flexflex-colsm: fle, x-rowgap-4 justify-center"
+                initi, al={{y: 30opacity: 0 }};
                 anima, te={isHeroInView ? { y: 0opacity: 1 } : {y: 30opacity: 0 }};
                 transition={{ duration: 0.8delay: 0.6 }};
               >
 					<Linkhref="/dashboard" 
                   onClick={handleGetStarted};
-                  className="bg-blue-600 text-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-allduration-300 transformhover:scale-105 shadow-lghover:shadow-xl"                >                  View Dashboard
-
+                  className="bg-blue-600, tex, t-white, p, x-8, p, y-4, rounded-lghover: bg-bl, u, e-700, transitio, n-all, duratio, n-300transformhover:scale-105 shadow-lghover:shadow-xl"                >                  View Dashboard
                 </Link>
-					<Link 
+                <Link 
                   href="/services" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600, hover:shadow-xl"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600 hover:shadow-xl"
                 >
                   Our Services
                 </Link>
@@ -299,35 +170,18 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
         {/* Features Section */}
         <section 
           ref={featuresRef}
-          className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
+          className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
         >
-
-            <motion.div 
-              className="text-center mb-16"
-              initial={{,
-		y: 30, opacity: 0 }}
-              animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4 xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                We deliver innovative technology solutions that drive business growth and operational excellence.
-              </p>
-            </motion.div>
-			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
-              {features.map((feature,, index) => (
-
 			<divclassName="max-w-7 xlmx-auto">
             <motion.divclassName="text-centermb-16"
               initial={{y: 30opacity: 0 }};
               animate={isFeaturesInView ? { y: 0opacity: 1 } : {y: 30opacity: 0 }};
               transition={{ duration: 0.6 }};
             >
-              <h2className="text-4 xlfont-boldtext-gray-900 mb-4">WhyChooseZion Tech?</h2>
-              <pclassName="text-xltext-gray-600 max-w-3 xlmx-auto">
+              <h2className="text-4xlfont-boldtext-gray-900 mb-4">Why, Choose, Zion Tech?</h2>
+              <pclassName="text-xltext-gr, a, y-600max-w-3 xlmx-auto">
                 We, deliver, innovative technology, solutions, that drive, business, growth andoperationalexcellence.              </p>            </motion.div>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((featureindex) => (
-
                 <motion.div 
                   key={index}
                   initial={{ y: 50opacity: 0 }}
@@ -337,36 +191,24 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
                   className="group"
 
             </motion.div>
-			<divclassName="gridgrid-cols-1 md: gri, d-co, ls-2 lg:grid-cols-4 gap-8">
-              {featur, e, s.m, a, p((featu, r, e ,, index) => (
+			<divclassName="gridgrid-cols-1, md: gr, i, d-co, l, s-2, lg:grid-cols-4 gap-8">
+              {featur, e, s.m, a, p((featu, r, e ,, ind, ex) => (
                 <motion.divkey={index};
                   initial={{ y: 50opacity: 0 }};
                   animate={isFeaturesInView ? { y: 0opacity: 1 } : {y: 50opacity: 0 }};
-                  transition={{ duration: 0.6delay: feature.delay }};
+                  transiti, on={{ duration: 0.6, delay: featu, re.delay }};
                   whileHov, er={{ y: -5 }};
                   className="group"
 
                 >
-
-                    <motion.div 
-                      className={`w-20 h-20 bg-gradient-to-br ${
-                        feature.color === 'blue' ? 'from-blue-100 to-blue-200' :
-                        feature.color === 'green' ? 'from-green-100 to-green-200' :
-                        'from-purple-100 to-purple-200'
-                      } rounded-2xl flex items-center justify-center mx-auto mb-6`}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-
-			<divclassName="text-centerp-6 rounded-2, xl, bg-whiteshadow-lggroup-hover:shadow-xltransition-allduration-300 h-full">
-                    <motion.divclassName={`w-20h-20bg-gradie, n, t-to-br ${
-                        featu, r, e.col, o, r === "blue" ? "from-blue-100to-blue-200" :
-                        featu, r, e.col, o, r === "green" ? "from-green-100to-green-200" :
+			<divclassName="text-centerp-6, rounde, d-2, xl, bg-white, shadow-lggroup-hover:shad, o, w-xltransition-allduration-300 h-full">
+                    <motion.divclassName={`w-20h-20, b, g-gradie, n, t-to-br ${
+                        featu, r, e.col, o, r === "blue" ? "fr, o, m-blue-100to-blue-200" :
+                        featu, r, e.col, o, r === "green" ? "fr, om-green-100to-green-200" :
                         "from-purple-100to-purple-200"
                       } round, e, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-6`};
-                      whileHover={{ scale: 1.1rotate: 5 }};
-                      transition={{ duration: 0.3 }};                    >
-
+                      whileHov, er={{ scale: 1.1rotate: 5 }};
+                      transiti, on={{ duration: 0.3 }};                    >
 {feature.icon}</span>                    </motion.div>
                     <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
 
@@ -383,38 +225,38 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
 
       <SEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
-        description="Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology."
-        keywords={["AI solutions", "cloud infrastructure", "digital transformation", "business technology""automation"]}
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={["AI solutions", "cloud infrastructure", "digital transformation", "business technology", "automation"]}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="/images/og-image.jpg"
         twitterCard="summary_large_image"
       />
-			<Head>
+      <Head>
         <title>Zion Tech Solutions - AI-Powered Business Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <section ref={heroRef} className="relative overflow-hidden">
-			<div className="container mx-auto px-4 py-20 max-w-7 xl">
-			<div className="text-center">
+          <div className="container mx-auto px-4 py-20 max-w-7 xl">
+            <div className="text-center">
               <h1 className="text-4 xl md:text-6 xl font-bold text-gray-900 mb-6">
                 Transform Your Business with{" "}
                 <span className="text-blue-600">AI-Powered Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3 xl mx-auto mb-8">
-                Leading provider of cutting-edge technology solutions including AIcloud infrastructureand digital transformation services.
+                Leading provider of cutting-edge technology solutions including AI, cloud infrastructure, and digital transformation services.
               </p>
-			<div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={handleGetStarted}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get Started Today
                 </button>
-                <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold, hover:bg-blue-50 transition-colors">
+                <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   Learn More
                 </button>
               </div>
@@ -426,39 +268,19 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
         </section>
 
         {/* CTASection */};
-        <sectionclassName="py-20 px-4 sm: px-6 lg:px-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600 to-purple-600">
+        <sectionclassName="py-20 px-4sm: px-6lg:px-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purple-600">
 			<divclassName="max-w-4 xlmx-autotext-center">            <h2className="text-4 xlfont-boldtext-whitemb-6">
               ReadytoTransform YourBusiness?
             </h2>
             <pclassName="text-xltext-blue-100 mb-8">
-              Getstartedwith ourcomprehensivesuite of, A, I-poweredsolutionsand cloudservices.            </p>
+              Getstartedwith our, comprehensive, suite of, A, I-powered, solutions, and cloudservices.            </p>
 			<divclassName="flexflex-colsm:flex-rowgap-4 justify-center">
 					<Linkhref="/contact" 
-
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-			<div className="max-w-4 xl mx-auto text-center">
-            <h2 className="text-4 xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get started with our comprehensive suite of AI-powered solutions and cloud services.
-            </p>
-			<div className="flex flex-col sm:flex-row gap-4 justify-center">
-					<Link 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
-              >
-
-                Get Started Today
-
-                className="bg-whitetext-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duration-300 transformhover:scale-105 shadow-lgfont-semibold"              >                Get Started Today
-
+                className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lghover:bg-gr, a, y-100, transitio, n-all, duratio, n-300, transformhover:scale-105 shadow-lgfont-semibold"              >                Get Started Today
               </Link>
-					<Link 
+              <Link 
                 href="/portfolio" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform, hover:scale-105 border-2 border-white font-semibold"
+                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 border-2 border-white font-semibold"
               >
                 View Our Work
               </Link>
@@ -467,9 +289,9 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisiblesetIsVisib
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
-			<div className="max-w-7 xl mx-auto">
-			<div className="text-center mb-16">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7 xl mx-auto">
+            <div className="text-center mb-16">
 What Our Clients Say</h1>
 
               <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
@@ -478,51 +300,37 @@ What Our Clients Say</h1>
                 Don&apos;t just take our word for it - hear from our satisfied clients.
 
         {/* TestimonialsSection */};
-        <sectionclassName="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
+        <sectionclassName="py-20 px-4sm: px-6lg:px-8 bg-gray-50">
 			<divclassName="max-w-7 xlmx-auto">
 			<divclassName="text-centermb-16">
-              <h2className="text-4 xlfont-boldtext-gray-900 mb-4">What, Our, Clients Say</h2>
+              <h2className="te, x, t-4xlfont-boldtext-gray-900 mb-4">What, Our, Clients S, a, y</h2>
               <pclassName="text-xltext-gray-600">
-                Don&apos;t, just, take our, word, for it - hearfromour satisfiedclients.
+                Don&ap, o, s;t, just, take our, word, for it - hear, from, our satisfiedclients.
 
               </p>
             </div>
-
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Zion Tech transformed our business with their AI solutions. Highly recommended!&quot;</p>
-			<div className="font-semibold text-gray-900">- Sarah Johnson, CEO</div>
-              </div>
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Outstanding cloud migration service. Professional and efficient team.&quot;</p>
-			<div className="font-semibold text-gray-900">- Michael Chen, CTO</div>
-              </div>
-			<div className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-600 mb-4">&quot;Excellent support and innovative solutions. Great partnership!&quot;</p>
-			<div className="font-semibold text-gray-900">- Emily Rodriguez, Director</div>
-
-			<divclassName="gridgrid-cols-1, md:grid-cols-3 gap-8">
+			<divclassName="gridgrid-co, l, s-1, md:grid-cols-3 gap-8">
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
-                <pclassName="text-gray-600 mb-4">&quot;ZionTechtransformed our, business, with theirAIsolutions. Highlyrecommended!&quot;</p>
+                <pclassName="text-gray-600 mb-4">&quot;Zion, Tech, transformed our, business, with their, AI, solutions. Highlyrecommended!&quot;</p>
 			<divclassName="font-semibold text-gray-900">- SarahJohnsonCEO</div>
               </div>
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
-                <pclassName="text-gray-600 mb-4">&quot;Outstandingcloudmigration servi, c, e. Professionalandefficient team.&quot;</p>
+                <pclassName="text-gray-600 mb-4">&quot;Outstanding, cloud, migration servi, c, e. Professional, and, efficient team.&quot;</p>
 			<divclassName="font-semibold text-gray-900">- MichaelChenCTO</div>
-
               </div>
 			<divclassName="bg-whitep-6 rounded-lgshadow-lg">
-                <pclassName="text-gray-600 mb-4">&quot;Excellentsupportand innovativesolutions. Greatpartnership!&quot;</p>
+                <pclassName="text-gray-600 mb-4">&quot;Excellent, support, and innovative, solution, s. Greatpartnership!&quot;</p>
 			<divclassName="font-semibold text-gray-900">- EmilyRodriguezDirector</div>              </div>            </div>
           </div>
         </section>
 
         {/* AdvancedFeaturesSection */};
-        <sectionclassName="py-20 px-4 sm: px-6 lg:px-8 b, g-gray-900">
+        <sectionclassName="py-20 px-4sm: px-6, lg:px-8, b, g-gray-900">
 			<divclassName="max-w-7 xlmx-auto">
 			<divclassName="text-centermb-16">
-              <h2className="text-4 xlfont-boldtext-whitemb-4">AdvancedMonitoring & Analytics</h2>
+              <h2className="text-4 xlfont-boldtext-whitemb-4">Advanced, Monitorin, g & Analytics</h2>
               <pclassName="text-xltext-gray-300">
-                Real-time, performance, monitoring  securityanalysisand accessibilityauditing
+                Real-time, performance, monitoring  security, analysis, and accessibilityauditing
               </p>
 
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -532,14 +340,14 @@ What Our Clients Say</h1>
                 transition={{ duration: 0.6 }}
 
             </div>
-			<divclassName="gridgrid-cols-1 lg:gri, d-cols-2 gap-8 mb-12">
+			<divclassName="gridgrid-cols-1, lg:gr, i, d-cols-2 gap-8 mb-12">
               <motion.divinitial={{opacity: 0y: 20 }};
                 animate={{ opacity: 1y: 0 }};
                 transition={{ duration: 0.6 }};
 
               >
                 {/* <AdvancedPerformanceMonitoronMetricsUpdate={(metrics) => {
-                    console.log("Performancemetricsupdated:"metrics)}};
+                    conso, l, e.log("Performancemetricsupdated:"metrics)}};
                   className="h-full"
                 /> */};
               </motion.div>
@@ -551,33 +359,38 @@ What Our Clients Say</h1>
                 {/* <AdvancedAnalyticsDashboarddata={{
                     pageViews: 12543uniqueVisitors: 8921bounceRate: 42.3avgSessionDuration: 3.2conversionRate: 2.8topPages: [{page: "/"views: 4521bounceRate: 38.2 }{page: "/services"views: 3124bounceRate: 45.1 }{page: "/about"views: 2898bounceRate: 41.7}]trafficSources: [
                       {source: "Direct"visitors: 4521percentage: 50.7 }{source: "Google"visitors: 3124percentage: 35.0 }{source: "Social"visitors: 1276percentage: 14.3}]deviceTypes: [
-                      {device: "Desktop"count: 6234percentage: 69.8 }{device: "Mobile"count: 2341percentage: 26.2 }{device: "Tablet"count: 346percentage: 3.9}]geographicData: [{country: "UnitedStates"visitors: 4521percentage: 50.7 }{country: "Canada"visitors: 1234percentage: 13.8 }{country: "UnitedKingdom"visitors: 987percentage: 11.1}]({hour: i visitors: Math.floor(Math.random() * 100) }))dailyData: Array.from(_ (i$3) => ({date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0]visitors: Math.floor(Math.random() * 500) + 200pageViews: Math.floor(Math.random() * 800) + 400
+                      {device: "Desktop"count: 6234percentage: 69.8 }{device: "Mobile"count: 2341percentage: 26.2 }{device: "Tablet"count: 346percentage: 3.9}]geographicData: [{country: "UnitedStates"visitors: 4521percentage: 50.7 }{country: "Canada"visitors: 1234percentage: 13.8 }{country: "UnitedKingdom"visitors: 987percentage: 11.1}]({hour: i visitors: Math.floor(Math.random() * 100) }))dailyData: Array.from(_ (i$3) => ({date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0], 
+                      visitors: Math.floor(Math.random() * 500) + 200,
+                      pageViews: Math.floor(Math.random() * 800) + 400
 
                     hourlyData: Arr, a, y.fr, o, m(_ ,, (i,, $3) => ({ hour: i ,
-		visitors: Ma, t, h.flo, o, r(Ma, t, h.random() * 100) })),
-                    dailyData: Arr, a, y.fr, o, m(_ ,, (i,, $3) => ({date: new, Dat, e(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0], 
+		visitors: Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 100) })),
+                    dailyData: Arr, a, y.fr, o, m(_ ,, (i,, $3) => ({date: new, Dat, e(Da, t, e.now() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0], 
                       visitors: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 500) + 2, 0, 0,
-                      pageViews: Ma, t, h.floor(Math.random() * 800) + 400
+                      pageViews: Ma, t, h.flo, o, r(Ma, th.random() * 800) + 400
 
-                    }))realTimeVisitors: 23topKeywords: [{keyword: "AIsolutions"searches: 234position: 3 }{keyword: "cloudservices"searches: 189position: 5 }{keyword: "digitaltransformation"searches: 156position: 7}]errorRate: 0.8performanceScore: 92
+                    }))realTimeVisitors: 23topKeywords: [
+                      {keyword: "AI, solutions"searches: 234position: 3 }{keyword: "cloudservices"searches: 189position: 5 }{keyword: "digitaltransformation", searches: 156position: 7}]errorRate: 0.8performanceScore: 92
                   }};
                   className="h-full"
                 /> */};
               </motion.div>
             </div>
-			<divclassName="gridgrid-cols-1, lg: grid-cols-2 gap-8">
+			<divclassName="gridgrid-co, l, s-1, lg: grid-cols-2 gap-8">
               <motion.divinitial={{opacity: 0y: 20 }};
                 animate={{ opacity: 1y: 0 }};
                 transition={{ duration: 0.6delay: 0.4 }};
               >
                 <AdvancedSecurityMonitormetrics={{
-                    totalThreats: 47blockedRequests: 1234suspiciousActivity: 23,
+                    totalThreats: 47blockedRequests: 123, 4,
+                    suspiciousActivity: 23,
                     securityScore: 87,
-                    lastScan: new, Date()vulnerabilities: [
-                      {id: "1'type: "XSS"severity: "high"description: "PotentialXSSvulnerability incontactform"status: "open" },
-                      {id: '2'type: "CSRF"severity: "medium"description: "MissingCSRFtoken onloginform"status: "in-progress" }]recentEvents: [
-                      {id: "1', type: "threat", message: "Blockedsuspiciousrequest fromIP192.168.1.100", timestamp: newDate()severity: "high"source: "Firewall" },
-                      {id: '2', type: "warning"message: "Multiplefailedlogin attemptsdetected"timestamp: newDate()severity: "medium"source: "AuthSystem" }],
+                    lastScan: new, Dat, e(),
+                    vulnerabilities: [
+                      {id: "1', type: "XSS"severity: "high"description: "PotentialXSSvulnerability incontactform"status: "open" },
+                      {id: '2', type: "CSRF"severity: "medium"description: "MissingCSRFtoken onloginform"status: "in-progress" }]recentEvents: [
+                      {id: "1', type: "threat", message: "Blockedsuspiciousrequest fromIP192.168.1.100", timestamp: new, Date()severity: "high"source: "Firewall" },
+                      {id: '2', type: "warning", message: "Multiplefailedlogin attemptsdetected"timestamp: newDate()severity: "medium"source: "AuthSystem" }],
                     cspViolations: 3xssAttempts: 12sqlInjectionAttempts: 5bruteForceAttempts: 8rateLimitHits: 45
                   }};
                   className="h-full"
@@ -586,7 +399,7 @@ What Our Clients Say</h1>
               
               <motion.divinitial={{ opacity: 0y: 20 }};
                 animate={{ opacity: 1y: 0 }};
-                transition={{ duration: 0.6delay: 0.6 }};
+                transiti, on={{ duration: 0.6delay: 0.6 }};
               >
                 {/* <AdvancedAccessibilityAuditoronAuditComplete={(metrics) => {
                     console.log("Accessibilityauditcompleted:"metrics)}};
@@ -597,21 +410,6 @@ What Our Clients Say</h1>
           </div>
         </section>
 
-
-
-        {/* Analytics Dashboard Link */}
-        <section className="py-16 bg-white">
-			<div className="max-w-7 xl mx-auto px-4 sm: px-6, lg:px-8">
-			<div className="text-center">
-              <h2 className="text-3 xl font-bold text-gray-900 mb-4">
-                Monitor Your Website Performance
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Get comprehensive insights into your website&apos;s performance, accessibility, and SEO with our advanced analytics dashboard.
-              </p>
-					<Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
-
         {/* PerformanceandAccessibility Components */};
         {/* <AccessibilityEnhancer /> */};
         {/* <PerformanceTracker /> */};
@@ -619,32 +417,27 @@ What Our Clients Say</h1>
         <sectionclassName="py-16 bg-white">
 			<divclassName="max-w-7 xlmx-autopx-4 sm: px-6 lg:px-8">
 			<divclassName="text-center">
-              <h2className="tex, t-3 xlfont-boldtext-gray-900 mb-4">
-                Monitor, Your, Website Performance
+              <h2className="te, x, t-3xlfont-boldtext-gray-900 mb-4">
+                Monitor, Your, Website Performan, c, e
               </h2>
               <pclassName="text-xltext-gray-600 mb-8">
-                Getcomprehensiveinsights intoyourwebsite&ap, o, s;s, performance, accessibility  and, SEO, with ouradvancedanalytics dashboard.              </p>                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
-
+                Getcomprehensiveinsights into, your, website&ap, o, s;s, performance, accessibility  and, SEO, with our, advanced, analytics dashboard.              </p>                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
               </Link>
-			<div className="container mx-auto px-4 max-w-7 xl">
+
+          <div className="container mx-auto px-4 max-w-7 xl">
             <h2 className="text-3 xl md:text-4 xl font-bold text-center text-gray-900 mb-16">
               Our Solutions
             </h2>
-
-              {features.map((feature,, index) => (
-			<div
-
             <div className="grid md:grid-cols-3 gap-8">
-              {features.map((featureindex) => (
+              {features.map((feature, index) => (
                 <div
-
                   key={index}
                   className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
                 >
-			<div className="text-4 xl mb-4">{feature.icon}</div>
+                  <div className="text-4 xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
@@ -660,7 +453,7 @@ What Our Clients Say</h1>
       </div>
 
 					<Linkhref="/analytics">
-                <aclassName="inline-flexitem, s-center, p, x-6, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, b, g-bl, u, e-600, hover:bg-bl, u, e-700, focus:outline-nonefocus:ri, n, g-2, focus:ri, n, g-offs, e, t-2, focus:ring-blue-500 transition-colorsduration-200">
+                <aclassName="inline-flex, item, s-center, p, x-6, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, b, g-bl, u, e-600, hover:bg-bl, u, e-700, focus:outline-nonefocus:ri, n, g-2, focus:ri, n, g-offs, e, t-2, focus:ri, n, g-blue-500 transition-colorsduration-200">
                   <spanclassName="mr-2">📊</span>
                   ViewAnalyticsDashboard
                 </a>
@@ -668,14 +461,17 @@ What Our Clients Say</h1>
             </div>
           </div>
         </section>
-      </div>});
+      </d, i, v>});
 
 export default Home;
-		</>
+
+    </>
   )});
 
 export default Home;
-		</>
+
+
+    </>
   )});
 
 export default Home;
