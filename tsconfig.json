@@ -74,6 +74,9 @@
     "src/pages/**",
     "src/pages.disabled/**",
     "src/routes/**",
+
+    // "src/components/**", // Re-enabled for build
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
     "src/context/**",
     "src/services/**",
     "**/*.config.ts",

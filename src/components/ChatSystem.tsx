@@ -194,21 +194,27 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         key = {message.id}
         className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
       >
-        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
-          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}
-            <Image              className=h-8w-8rounded-full""
+
+        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}` }>
+          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}` }>
+            <Image
+              className="h-8 w-8 rounded-full"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
               width={32}
               height={32}
             />
           </div>
-          <div className={`${isUser ? 'text-right' : 'text-left'}`}
+
+          <div className={`${isUser ? 'text-right' : 'text-left'}` }>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             <div
-              className = {`px-4py-2rounded-lg ${
+              className = {`px-4 py-2rounded-lg ${
                 isUser
                   ? 'bg-blue-600text-white'                  : 'bg-gray-200text-gray-800'}
               }`}
+
             >
               {message.type === 'image' && message.metadata?.imageUrl && (                <div className=mb-2"">
                   <Image                    src={message.metadata.imageUrl}                    alt=Shared image""                    className=max-w-full h-auto rounded""
@@ -223,7 +229,9 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 </div>
               )}              <p className=text-sm"">{message.text}</p>
             </div>
-            <div className={`text-xs text-gray-500mt-1 ${isUser ? 'text-right' : 'text-left'}`}
+
+            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}` }>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               {formatTime(message.timestamp)}
             </div>
           </div>
@@ -233,16 +241,26 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className = {`flex flex-col h-96bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className=flex items-center justify-between p-4border-b border-gray-200"">        <div className=flex items-center"">
-          <Image            className=h-8w-8rounded-full mr-3""
+
+    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}` }>
+      {/* Header */}
+      <div className="flex items-center justify-between p-4 border-b border-gray-200">
+        <div className="flex items-center">
+          <Image
+            className="h-8 w-8 rounded-full mr-3"
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             src={botAvatar}
             alt={botName}
             width={32}
             height={32}
           />
-          <div>            <h3className=text-sm font-medium text-gray-900"" id="botname">{botName}</h3>            <div className=flex items-center"">
-              <div className={`h-2w-2rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}</div>              <span className=text-xs text-gray-500"">
+
+          <div>
+            <h3 className="text-sm font-medium text-gray-900" id="botname">{botName}</h3>
+            <div className="flex items-center">
+              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}` }></div>
+              <span className="text-xs text-gray-500">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 {isConnected ? 'Online' : 'Offline'}
               </span>
             </div>
@@ -270,7 +288,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 alt={botName}
                 width={32}
                 height={32}
-              />              <div className=bg-gray-200text-gray-800px-4py-2rounded-lg"">                <div className=flex space-x-1"">                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce""></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.1s' }}></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.2s' }}></div>
+              />              <div className=bg-gray-200text-gray-800px-4 py-2rounded-lg"">                <div className=flex space-x-1"">                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce""></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.1s' }}></div>                  <div className=w-2h-2bg-gray-500rounded-full animate-bounce"" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -290,7 +308,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           />
           <button
             onClick={() => handleSendMessage(inputText)}            aria-label=Send message""
-            disabled={!inputText.trim() || !isConnected}            className=px-4py-2bg-blue-600text-white rounded-md hover: bg-blue-700disabled:opacity-50disable,
+            disabled={!inputText.trim() || !isConnected}            className=px-4 py-2bg-blue-600text-white rounded-md hover: bg-blue-700disabled:opacity-50disable,
     d:cursor-not-allowed transition-colors""
           >
             Send

@@ -101,31 +101,34 @@ export const AdvancedAnalytics: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200p-8">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="animate-pulse">
-          <div className="h-6bg-gray-200rounded w-1/4mb-6"></div>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
+
+:temp-broken-components/AdvancedAnalytics.tsx
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="bg-gray-50rounded-lgp-4">
-                <div className="h-4bg-gray-200rounded w-3/4mb-2"></div>
-                <div className="h-8bg-gray-200rounded w-1/2mb-2"></div>
-                <div className="h-3bg-gray-200roundedw-1/4"></div>
+              <div key={i} className="bg-gray-50 rounded-lgp-4">
+                <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div className="h-8 bg-gray-200 rounded w-1/2 mb-2"></div>
+                <div className="h-3 bg-gray-200 roundedw-1/4"></div>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
               </div>
             ))}
           </div>
-          <div className="h-64bg-gray-200rounded"></div>
+          <div className="h-64 bg-gray-200rounded"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200p-6">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex justify-between items-centermb-6">
-        <h2className="text-2xl font-boldtext-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
+
+        <h2 className="text-2 xl font-boldtext-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
         <button
           onClick={exportData}
-          className="px-4py-2bg-blue-600text-white rounded-lg hover:bg-blue-700transition-colors duration-200flex items-center space-x-2"
+:temp-broken-components/AdvancedAnalytics.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
         >
           <span>📥</span>
           <span>Export Data</span>
@@ -133,41 +136,45 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Metric Cards */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
-        {metricCards.map((card, index) => (
-          <div key={index} className="bg-gradient-to-r from-blue-50to-indigo-50rounded-lg p-6borderborder-blue-100">
+
+:temp-broken-components/AdvancedAnalytics.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
             <div className="flex items-center justify-between mb-2">
-              <span className="text-2xl">{card.icon}</span>
+              <span className="text-2 xl">{card.icon}</span>
               <span className={`text-sm font-medium px-2py-1rounded-full ${
                 card.change >= 0 
-                  ? 'text-green-700bg-green-100' 
-                  : 'text-red-700bg-red-100'
-              }`}
+
+                  ? 'text-green-700 bg-green-100' 
+                  : 'text-red-700 bg-red-100'
+:temp-broken-components/AdvancedAnalytics.tsx
                 {card.change >= 0 ? '+' : ''}{card.change}%
               </span>
             </div>
-            <h3className="text-sm font-medium text-gray-600mb-1" id="cardtitle">{card.title}</h3>
-            <p className="text-2xl font-boldtext-gray-900">{card.value}</p>
+            <h3 className="text-sm font-medium text-gray-600 mb-1" id="cardtitle">{card.title}</h3>
+            <p className="text-2 xl font-boldtext-gray-900">{card.value}</p>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
           </div>
         ))}
       </div>
 
       {/* Chart Controls */}
       <div className="mb-6">
-        <label className="block text-sm font-medium text-gray-700mb-2">
+        <label className="block text-sm font-medium text-gray-700 mb-2">
           Select Metric to Display:
         </label>
         <div className="flex flex-wrapgap-2">
           {(['pageViews', 'uniqueVisitors', 'bounceRate', 'sessionDuration'] as const).map((metric) => (
             <button
               key={metric}
-              onClick={() =>setSelectedMetric(metric)}
+              onClick={() => setSelectedMetric(metric)}
               aria-label={`Select ${metric} metric`}
-              className={`px-4py-2rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-4 py-2rounded-lg font-medium transition-colors duration-200 ${
                 selectedMetric === metric
-                  ? 'bg-blue-600text-white'
-                  : 'bg-gray-100text-gray-700hover:bg-gray-200'
-              }`}
+
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
             </button>
           ))}
         </div>
@@ -175,7 +182,7 @@ export const AdvancedAnalytics: React.FC = () => {
 
 
       {/* Chart Visualization */}
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <DataVisualization
           type="line"
           data={getChartData()}
@@ -194,20 +201,24 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Additional Insights */}
-      <div className="mt-8grid grid-cols-1md:grid-cols-2gap-6">
-        <div className="bg-gray-50rounded-lgp-6">
-          <h3className="text-lg font-semibold text-gray-900mb-4" id="-key-insights">📈 Key Insights</h3>
-          <ul className="space-y-2text-sm text-gray-600">
-            <li>• Peak traffic occurs on Thursday with5K page views</li>
+
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2gap-6">
+        <div className="bg-gray-50 rounded-lgp-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-key-insights">📈 Key Insights</h3>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li>• Peak traffic occurs on Thursday with5 K page views</li>
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
             <li>• Bounce rate improved by5.2% compared to last week</li>
             <li>• Average session duration increased to4m32s</li>
             <li>• Weekend traffic shows consistent engagement</li>
           </ul>
         </div>
 
-        <div className="bg-gray-50rounded-lgp-6">
-          <h3className="text-lg font-semibold text-gray-900mb-4" id="-recommendations">🎯 Recommendations</h3>
-          <ul className="space-y-2text-sm text-gray-600">
+
+        <div className="bg-gray-50 rounded-lgp-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4" id="-recommendations">🎯 Recommendations</h3>
+          <ul className="space-y-2 text-sm text-gray-600">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/AdvancedAnalytics.tsx
             <li>• Focus marketing efforts on Thursday peaks</li>
             <li>• Optimize content to reduce bounce rate further</li>
             <li>• Implement engagement features for weekends</li>

@@ -85,7 +85,7 @@ const PerformanceDashboard: React.FC = () => {
 
   if (!isSupported) {
     return (
-      <div className="p-4bg-yellow-50border border-yellow-200rounded-md">
+      <div className="p-4 bg-yellow-50border border-yellow-200rounded-md">
         <p className="text-sm text-yellow-800">
           Performance monitoring is not supported in this browser.
         </p>
@@ -96,14 +96,9 @@ const PerformanceDashboard: React.FC = () => {
   const performanceScore = getPerformanceScore();
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2className="text-xl font-semibold text-gray-900" id="performance-dashboard">Performance Dashboard</h2>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className="text-sm text-blue-600hover:text-blue-800"
-        >
-          {isVisible ? 'Hide Details' : 'Show Details'}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
         </button>
       </div>
 
@@ -111,44 +106,44 @@ const PerformanceDashboard: React.FC = () => {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-gray-700">Overall Score</span>
-          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
             {performanceScore}
           </span>
         </div>
-        <div className="w-full bg-gray-200rounded-full h-2">
+        <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className={`h-2rounded-full ${getScoreBgColor(performanceScore)}`}
+
+            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}` }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
             style={{ width: `${performanceScore}%` }}
           ></div>
         </div>
       </div>
 
       {/* Core Web Vitals */}
-      <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
-        <div className="p-4border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">LCP</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xs text-gray-500">Largest Contentful Paint</p>
         </div>
 
-        <div className="p-4border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">FID</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xs text-gray-500">First Input Delay</p>
         </div>
 
-        <div className="p-4border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">CLS</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
@@ -156,8 +151,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1md: grid-cols-2l,
-    g:grid-cols-4gap-4">
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
         <AnimatePresence>
           {metrics.map((metric, index) => (
             <motion.div
@@ -166,17 +162,18 @@ const PerformanceDashboard: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-50rounded-lg p-4border border-gray-200"
+              className="bg-gray-50 rounded-lg p-4border border-gray-200"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3className="font-medium text-gray-900text-sm" id="metricname">{metric.name}</h3>
-                <div className={`flex items-center px-2py-1rounded-full text-xs ${getStatusColor(metric.status)}`}
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
                   {getStatusIcon(metric.status)}
                 </div>
               </div>
               
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold text-gray-900">
+:temp-broken-components/PerformanceDashboard.tsx
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
                 <span className="text-sm text-gray-500">{metric.unit}</span>
@@ -196,31 +193,33 @@ const PerformanceDashboard: React.FC = () => {
       {/* Detailed Metrics */}
       {isVisible && metrics && (
         <div className="space-y-4">
-          <h3className="text-lg font-medium text-gray-900" id="detailed-metrics">Detailed Metrics</h3>
+
+:temp-broken-components/PerformanceDashboard.tsx
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/PerformanceDashboard.tsx
           
-          <div className="grid grid-cols-1md:grid-cols-2gap-4">
-            <div className="p-3bg-gray-50rounded">
+          <div className="grid grid-cols-1 md:grid-cols-2gap-4">
+            <div className="p-3 bg-gray-50rounded">
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">Load Time</span>
                 <span className="text-sm font-medium">{Math.round(metrics.loadTime)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-50rounded">
+            <div className="p-3 bg-gray-50rounded">
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">DOM Content Loaded</span>
                 <span className="text-sm font-medium">{Math.round(metrics.domContentLoaded)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-50rounded">
+            <div className="p-3 bg-gray-50rounded">
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">First Paint</span>
                 <span className="text-sm font-medium">{Math.round(metrics.firstPaint)}ms</span>
               </div>
             </div>
             
-            <div className="p-3bg-gray-50rounded">
+            <div className="p-3 bg-gray-50rounded">
               <div className="flex justify-between">
                 <span className="text-sm text-gray-600">First Contentful Paint</span>
                 <span className="text-sm font-medium">{Math.round(metrics.firstContentfulPaint)}ms</span>

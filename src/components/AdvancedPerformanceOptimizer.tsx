@@ -156,9 +156,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   };
 
   const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value <= thresholds.good) return <CheckCircle className="w-5h-5text-green-500" />;
-    if (value <= thresholds.warning) return <AlertTriangle className="w-5h-5text-yellow-500" />;
-    return <XCircle className="w-5h-5text-red-500" />;
+    if (value <= thresholds.good) return <CheckCircle className="w-5 h-5text-green-500" />;
+    if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5text-yellow-500" />;
+    return <XCircle className="w-5 h-5text-red-500" />;
   };
 
   const getPriorityColor = (priority: string) => {
@@ -182,21 +182,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Zap className="w-8h-8text-yellow-500" />
+              <Zap className="w-8 h-8text-yellow-500" />
               <span>Advanced Performance Optimizer</span>
             </div>
             <div className="flex space-x-2">
               <button
                 onClick={measurePerformance}
                 disabled={isAnalyzing}
-                className="px-4py-2bg-gray-500text-white rounded-lg hover:bg-gray-600disabled:opacity-50transition-colors"
+                className="px-4 py-2bg-gray-500text-white rounded-lg hover:bg-gray-600disabled:opacity-50transition-colors"
                aria-label="{isAnalyzing ? 'Analyzing...' : 'Measure'}">
                 {isAnalyzing ? 'Analyzing...' : 'Measure'}
               </button>
               <button
                 onClick={performOptimization}
                 disabled={isOptimizing || optimizations.length === 0}
-                className="px-4py-2bg-yellow-500text-white rounded-lg hover:bg-yellow-600disabled:opacity-50transition-colors"
+                className="px-4 py-2bg-yellow-500text-white rounded-lg hover:bg-yellow-600disabled:opacity-50transition-colors"
                aria-label="{isOptimizing ? 'Optimizing...' : 'Optimize'}">
                 {isOptimizing ? 'Optimizing...' : 'Optimize'}
               </button>
@@ -208,91 +208,94 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         </CardHeader>
         <CardContent>
           {/* Performance Metrics Grid */}
-          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
-            <div className="bg-blue-50dark:bg-blue-900/20p-4rounded-lg">
+          <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6">
+            <div className="bg-blue-50 dark:bg-blue-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-blue-600dark:text-blue-400">Load Time</p>
+                  <p className="text-sm font-medium text-blue-600 dark:text-blue-400">Load Time</p>
                   <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}
                     {metrics.loadTime}ms
                   </p>
                 </div>
-                <Clock className="w-8h-8text-blue-500" />
+
+                <Clock className="w-8 h-8 text-blue-500" />
+
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
               </div>
             </div>
 
-            <div className="bg-green-50dark:bg-green-900/20p-4rounded-lg">
+            <div className="bg-green-50 dark:bg-green-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-green-600dark:text-green-400">Memory Usage</p>
+                  <p className="text-sm font-medium text-green-600 dark:text-green-400">Memory Usage</p>
                   <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}`}
                     {metrics.memoryUsage.toFixed(1)}%
                   </p>
                 </div>
-                <HardDrive className="w-8h-8text-green-500" />
+                <HardDrive className="w-8 h-8text-green-500" />
               </div>
             </div>
 
-            <div className="bg-purple-50dark:bg-purple-900/20p-4rounded-lg">
+            <div className="bg-purple-50 dark:bg-purple-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-purple-600dark:text-purple-400">CPU Usage</p>
+                  <p className="text-sm font-medium text-purple-600 dark:text-purple-400">CPU Usage</p>
                   <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage, { good: 30, warning: 70 })}`}
                     {metrics.cpuUsage.toFixed(1)}%
                   </p>
                 </div>
-                <Cpu className="w-8h-8text-purple-500" />
+                <Cpu className="w-8 h-8text-purple-500" />
               </div>
             </div>
 
-            <div className="bg-orange-50dark:bg-orange-900/20p-4rounded-lg">
+            <div className="bg-orange-50 dark:bg-orange-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-orange-600dark:text-orange-400">Network Latency</p>
+                  <p className="text-sm font-medium text-orange-600 dark:text-orange-400">Network Latency</p>
                   <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency, { good: 50, warning: 80 })}`}
                     {metrics.networkLatency.toFixed(0)}ms
                   </p>
                 </div>
-                <Wifi className="w-8h-8text-orange-500" />
+                <Wifi className="w-8 h-8text-orange-500" />
               </div>
             </div>
           </div>
 
           {/* Additional Metrics */}
-          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
-            <div className="bg-indigo-50dark:bg-indigo-900/20p-4rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3gap-4mb-6">
+            <div className="bg-indigo-50 dark:bg-indigo-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-indigo-600dark:text-indigo-400">Cache Hit Rate</p>
+                  <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Cache Hit Rate</p>
                   <p className={`text-xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate, { good: 20, warning: 40 })}`}
                     {metrics.cacheHitRate.toFixed(1)}%
                   </p>
                 </div>
-                <CheckCircle className="w-6h-6text-indigo-500" />
+                <CheckCircle className="w-6 h-6text-indigo-500" />
               </div>
             </div>
 
-            <div className="bg-pink-50dark:bg-pink-900/20p-4rounded-lg">
+            <div className="bg-pink-50 dark:bg-pink-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-pink-600dark:text-pink-400">Bundle Size</p>
+                  <p className="text-sm font-medium text-pink-600 dark:text-pink-400">Bundle Size</p>
                   <p className={`text-xl font-bold ${getPerformanceColor(metrics.bundleSize, { good: 300, warning: 500 })}`}
                     {metrics.bundleSize.toFixed(0)}KB
                   </p>
                 </div>
-                <HardDrive className="w-6h-6text-pink-500" />
+                <HardDrive className="w-6 h-6text-pink-500" />
               </div>
             </div>
 
-            <div className="bg-red-50dark:bg-red-900/20p-4rounded-lg">
+            <div className="bg-red-50 dark:bg-red-900/20p-4rounded-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-red-600dark:text-red-400">Error Rate</p>
+                  <p className="text-sm font-medium text-red-600 dark:text-red-400">Error Rate</p>
                   <p className={`text-xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}
                     {metrics.errorRate.toFixed(2)}%
                   </p>
                 </div>
-                <XCircle className="w-6h-6text-red-500" />
+                <XCircle className="w-6 h-6text-red-500" />
               </div>
             </div>
           </div>
@@ -300,14 +303,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           {/* Optimization Suggestions */}
           {optimizations.length > 0 && (
             <div className="mb-6">
-              <h3className="text-lg font-semibold text-gray-900dark:text-white mb-3" id="optimization-suggestions">
+              <h3className="text-lg font-semibold text-gray-900 dark:text-white mb-3" id="optimization-suggestions">
                 Optimization Suggestions
               </h3>
               <div className="space-y-2">
                 {optimizations.map((suggestion, index) => (
-                  <div key={index} className="flex items-start space-x-2p-3bg-yellow-50dark:bg-yellow-900/20rounded-lg">
-                    <AlertTriangle className="w-5h-5text-yellow-500mt-0.5flex-shrink-0" />
-                    <p className="text-sm text-yellow-800dark:text-yellow-200">{suggestion}</p>
+                  <div key={index} className="flex items-start space-x-2 p-3bg-yellow-50dark:bg-yellow-900/20rounded-lg">
+                    <AlertTriangle className="w-5 h-5text-yellow-500mt-0.5flex-shrink-0" />
+                    <p className="text-sm text-yellow-800 dark:text-yellow-200">{suggestion}</p>
                   </div>
                 ))}
               </div>
@@ -334,8 +337,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
                     {suggestion.priority.toUpperCase()}
                   </span>
                 </div>
-                <p className="text-gray-600mb-2">{suggestion.description}</p>
-                <div className="grid grid-cols-1md:grid-cols-2gap-4text-sm">
+
+                <p className="text-gray-600 mb-2">{suggestion.description}</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   <div>
                     <span className="font-medium text-green-700">Expected Impact:</span>
                     <p className="text-gray-600">{suggestion.impact}</p>
@@ -360,21 +366,24 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1md:grid-cols-2gap-4">
-            <div className="bg-blue-50dark:bg-blue-900/20p-4rounded-lg">
-              <h4className="font-semibold text-blue-900dark:text-blue-100mb-2" id="code-splitting">
+          <div className="grid grid-cols-1 md:grid-cols-2gap-4">
+            <div className="bg-blue-50 dark:bg-blue-900/20p-4rounded-lg">
+              <h4className="font-semibold text-blue-900 dark:text-blue-100mb-2" id="code-splitting">
                 Code Splitting
               </h4>
-              <p className="text-sm text-blue-700dark:text-blue-300">
+              <p className="text-sm text-blue-700 dark:text-blue-300">
                 Implement dynamic imports to reduce initial bundle size and improve load times.
               </p>
             </div>
 
-            <div className="bg-green-50dark:bg-green-900/20p-4rounded-lg">
-              <h4className="font-semibold text-green-900dark:text-green-100mb-2" id="caching-strategy">
+
+
+            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+              <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2" id="caching-strategy">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 Caching Strategy
               </h4>
-              <p className="text-sm text-green-700dark:text-green-300">
+              <p className="text-sm text-green-700 dark:text-green-300">
                 Use service workers and HTTP caching to improve repeat visit performance.
               </p>
             </div>

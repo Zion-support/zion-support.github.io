@@ -67,7 +67,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
     // Simulate real-time activity updates
     const interval = setInterval(() => {
       const newActivity: Activity = {
-        i, d: Date.now().toString(),
+        id: Date.now().toString(),
         type: ['task', 'project', 'comment', 'file'][Math.floor(Math.random() * 4)] as Activity['type'],
         user: ['Alice', 'Bob', 'Charlie', 'Diana'][Math.floor(Math.random() * 4)],
         action: ['created', 'updated', 'completed', 'commented on'][Math.floor(Math.random() * 4)],
@@ -123,44 +123,51 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
         ? 'bg-gray-800border-gray-700hover:border-gray-600' 
         : 'bg-white border-gray-200hover:border-gray-300'
     }`}
+
       <div className="flex items-center justify-between mb-6">
-        <h3className="text-xl font-semibold text-gray-900dark:text-white" id="activity-feed">
+        <h3className="text-xl font-semibold text-gray-900 dark:text-white" id="activity-feed">
           Activity Feed
         </h3>
         <div className="flex items-center space-x-2">
-          <div className="w-2h-2bg-green-500rounded-fullanimate-pulse"></div>
-          <span className="text-sm text-gray-600dark:text-gray-400">Live</span>
+
+          <div className="w-2 h-2 bg-green-500 rounded-fullanimate-pulse"></div>
+          <span className="text-sm text-gray-600 dark:text-gray-400">Live</span>
+
         </div>
       </div>
 
-      <div className="space-y-4max-h-96overflow-y-auto">
+      <div className="space-y-4 max-h-96 overflow-y-auto">
         {activities.map((activity) => (
           <div
             key={activity.id}
-            className="flex items-start space-x-3p-3rounded-lg hover:bg-gray-50dark:hover:bg-gray-700transition-colors"
+            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
             <div className="flex-shrink-0">
-              <div className="w-8h-8rounded-full bg-gray-200dark:bg-gray-600flex items-center justify-centertext-sm">
+              <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-centertext-sm">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                 {activity.avatar}
               </div>
             </div>
             
-            <div className="flex-1min-w-0">
-              <div className="flex items-center space-x-2mb-1">
-                <span className="text-sm font-medium text-gray-900dark:text-white">
+
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center space-x-2 mb-1">
+                <span className="text-sm font-medium text-gray-900 dark:text-white">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
                   {activity.user}
                 </span>
                 <span className={`text-sm ${getActivityColor(activity.type)}`}
+
                   {getActivityIcon(activity.type)}
                 </span>
-                <span className="text-sm text-gray-600dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">
                   {activity.action}
                 </span>
-                <span className="text-sm font-medium text-gray-900dark:text-whitetruncate">
+                <span className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
                   {activity.target}
                 </span>
               </div>
-              <p className="text-xs text-gray-500dark:text-gray-400">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 {formatTimestamp(activity.timestamp)}
               </p>
             </div>
@@ -168,8 +175,10 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProps): JSX.Ele
         ))}
       </div>
 
-      <div className="mt-4pt-4border-t border-gray-200dark:border-gray-600">
-        <button className="w-full text-sm text-blue-600dark:text-blue-400hover:text-blue-700dark:hover:text-blue-300font-medium" aria-label="View all activity">
+
+      <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+        <button className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium" aria-label="View all activity">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
           View all activity
         </button>
       </div>

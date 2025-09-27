@@ -83,9 +83,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 			setIsSubmitting(false);		}
 	};
 
-	if (submitStatus = == 'success') {
-		return (			<div className={`bg-green-50border border-green-200rounded-2xl p-8text-center `}
-				<div className="w-20h-20bg-green-100rounded-full flex items-center justify-center mx-auto mb-6">					<svg className=w-10h-10text-green-600"" fill="none" stroke="currentColor" viewBox="002424">						<path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />
+
+	if (submitStatus === 'success') {
+		return (
+			<div className={`bg-green-50 border border-green-200 rounded-2xl p-8 text-center ${className}` }>
+				<div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+					<svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
 					</svg>
 				</div>				<h3className=text-2xl font-bold text-green-800mb-4"" id="message-sent-successfully">Message Sent Successfully!</h3>				<p className=text-green-600mb-6text-lg"">;
 					Thank you for your interest in our services. We&apos;ll get back to you within24hours with a detailed proposal.
@@ -100,13 +105,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 	}
 
 	return (
-		<div className = {`bg-white rounded-2xl shadow-xl p-8 ${className}`}
-			{showTitle && (				<div className=mb-8"">					<h3className=text-3xl font-bold text-gray-800mb-3"" id="start-your-project">Start Your Project</h3>					<p className=text-gray-600text-lg"">;
+
+		<div className={`bg-white rounded-2xl shadow-xl p-8 ${className}` }>
+			{showTitle && (
+				<div className="mb-8">
+					<h3 className="text-3 xl font-bold text-gray-800 mb-3" id="start-your-project">Start Your Project</h3>
+					<p className="text-gray-600 text-lg">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
 						Tell us about your project and we&apos;ll provide a detailed proposal tailored to your needs.
 					</p>
 				</div>			)}
 			<form onSubmit = {handleSubmit} className=space-y-6"">				<div className=grid grid-cols-1md:grid-cols-2gap-6"">
-					<div>						<label htmlFor=name"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor=name"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Full Name *
 						</label>
 						<input							type=text""							id=name""							name=name""
@@ -116,7 +126,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     s:border-transparent transition-colors duration-200""							placeholder = John Doe""
 						/>
 					</div>
-					<div>						<label htmlFor=email"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor=email"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Email Address *
 						</label>
 						<input							type=email""							id=email""							name=email""
@@ -128,7 +138,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 				</div>
 				<div className=grid grid-cols-1m,
     d:grid-cols-2gap-6"">
-					<div>						<label htmlFor = company"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor = company"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Company *
 						</label>
 						<input							type=text""							id=company""							name=company""
@@ -138,7 +148,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     s:border-transparent transition-colors duration-200""							placeholder = Your Company""
 						/>
 					</div>
-					<div>						<label htmlFor=phone"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor=phone"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Phone Number
 						</label>
 						<input							type=tel""							id=phone""							name=phone""
@@ -149,7 +159,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 				</div>
 				<div className=grid grid-cols-1m,
     d:grid-cols-3gap-6"">
-					<div>						<label htmlFor = service"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor = service"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Service Interest *
 						</label>
 						<select							id=service""							name=service""
@@ -164,7 +174,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 							))}
 						</select>
 					</div>
-					<div>						<label htmlFor=budget"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor=budget"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Budget Range *
 						</label>
 						<select							id=budget""							name=budget""
@@ -179,7 +189,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 							))}
 						</select>
 					</div>
-					<div>						<label htmlFor=timeline"" className="block text-sm font-semibold text-gray-700mb-2">
+					<div>						<label htmlFor=timeline"" className="block text-sm font-semibold text-gray-700 mb-2">
 							Timeline *
 						</label>
 						<select							id=timeline""							name=timeline""
@@ -196,7 +206,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 					</div>
 				</div>
 
-				<div>					<label htmlFor=message"" className="block text-sm font-semibold text-gray-700mb-2">
+				<div>					<label htmlFor=message"" className="block text-sm font-semibold text-gray-700 mb-2">
 						Project Details *
 					</label>
 					<textarea						id=message""						name=message""
