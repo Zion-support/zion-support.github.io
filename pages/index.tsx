@@ -30,7 +30,7 @@ import dynamic from "next/dynamic";
 //  loading: () => <divclassName="h-64w-full, b, g-gr, a, y-200roundedanimate-pulse" />
 // });
 
-export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
+const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
 	const [performanceMetri, c, s, setPerformanceMetri, c, s] = useState(null);
 	const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
   const heroRef  = useR, e, f(null);
@@ -404,9 +404,9 @@ export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e]
           </div>
         </section>
       </d, i, v>
+});
 
-
-
+export default ;
 		</>
 
   )};

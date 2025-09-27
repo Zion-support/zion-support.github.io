@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import SEO from "../src/components/SEO";
 import { useAnalytics } from "../src/hooks/useAnalytics";
 
-export default function About(): JSX.Element {
+const About = React.memo(function About(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
