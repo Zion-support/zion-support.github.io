@@ -37,7 +37,7 @@ const AIQuantumHybridPlatform: React.FC = () => {const features = [>>>>>> cursor
 
   return (
 
-    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
+    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-800, to-slate-90, 0">
 
       <SEO title ="AI, Quantum Hybrid, Platform - Zion, Tech Group"
         description="Revolutionary, AI-Quantum, hybrid platform, combining classical, AI with, quantum computing, for unprecedented, computational power, and breakthrough, discoveries."
@@ -58,11 +58,11 @@ const AIQuantumHybridPlatform: React.FC = () => {const features = [>>>>>> cursor
         <div className ="absolute, inset-0, bg-gradient-to-r, from-indigo-90, 0/20, via-purple-90, 0/20, to-cyan-90, 0/20" />
         <div className ="container-responsive, relative z-10">
           <div className ="text-center, max-w-4, x, l, mx-auto">
-            <div className ="inline-flex, items-center, px-4, py-2, bg-indigo-4, 0, 0/10, border border-indigo-4, 0, 0/20, rounded-full, text-indigo-4, 0, 0, text-sm, font-medium, mb-6">
+            <div className ="inline-flex, items-center, px-4, py-2, bg-indigo-400/10, border border-indigo-400/20, rounded-full, text-indigo-400, text-sm, font-medium, mb-6">
               <CheckCircle className ="w-4, h-4, mr-2" />
               Quantum, AI Technology
             </div>
-            <h1 className ="text-5, x, l, md:text-6, x, l, font-bold, text-white, mb-6">AI, Quantum Hybrid, Platform</h1>
+            <h1 className ="text-5, xlmd:text-6, x, l, font-bold, text-white, mb-6">AI, Quantum Hybrid, Platform</h1>
             <p className ="text-xl, text-gray-300, mb-8, max-w-3, x, l, mx-auto">
 
               intelligence, with quantum, computing to, solve previously, impossible problems, and accelerate, breakthrough
@@ -74,10 +74,10 @@ const AIQuantumHybridPlatform: React.FC = () => {const features = [>>>>>> cursor
               </button>
               <button className ="px-8, py-4, bg-slate-800/50, border border-slate-600, text-white, font-semibold, rounded-lg, hover:bg-slate-700/50, transition-all, duration-200">
 
-              <button className ="px-8, py-4, bg-gradient-to-r, from-indigo-4, 0, 0, to-purple-5, 0, 0, text-white, font-semibold, rounded-lg, hover:from-indigo-5, 0, 0, hover:to-purple-6, 0, 0, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5, shadow-lg">
+              <button className ="px-8, py-4, bg-gradient-to-r, from-indigo-400, to-purple-500, text-white, font-semibold, rounded-lg, hover:from-indigo-500, hover:to-purple-600, transition-all, duration-200, hover:scale-105, shadow-lg">
                 Access, Platform
               </button>
-              <button className ="px-8, py-4, bg-slate-8, 0, 0/50, border border-slate-6, 0, 0, text-white, font-semibold, rounded-lg, hover:bg-slate-7, 0, 0/50, transition-all, duration-2, 0, 0">
+              <button className ="px-8, py-4, bg-slate-800/50, border border-slate-600, text-white, font-semibold, rounded-lg, hover:bg-slate-700/50, transition-all, duration-200">
 
               </button>
             </div>
@@ -106,9 +106,9 @@ Quantum-Classical, Hybrid Intelligence</h2>
                 <div className ="w-12, h-12, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-indigo-400/40, group-hover:to-purple-500/40, transition-all, duration-200">
 
             {features.map((feature, index) => (<div key ={index}
-                className="group, p-6, bg-slate-8, 0, 0/50, border border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5"
+                className="group, p-6, bg-slate-800/50, border border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-indigo-4, 0, 0/20, to-purple-5, 0, 0/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-indigo-4, 0, 0/40, group-hover:to-purple-5, 0, 0/40, transition-all, duration-2, 0, 0">
+                <div className ="w-12, h-12, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-indigo-400/40, group-hover:to-purple-500/40, transition-all, duration-200">
 
                   <feature.icon, className ="w-6, h-6, text-indigo-300" />
                 </div>
@@ -128,7 +128,7 @@ Quantum-Classical, Hybrid Intelligence</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From quantum machine learning to quantum cryptographyour platform delivers cutting-edge quantum
 
-      <section className="py-20 bg-slate-8, 0, 0/20">
+      <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4, x, l font-bold text-white mb-4">Advanced Quantum Capabilities</h2>
@@ -145,9 +145,9 @@ Quantum-Classical, Hybrid Intelligence</h2>
                 <div className ="w-12, h-12, bg-gradient-to-br, from-purple-400/20, to-cyan-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-purple-400/40, group-hover:to-cyan-500/40, transition-all, duration-200">
 
             {capabilities.map((capability, index) => (<div key ={index}
-                className="group, p-6, bg-slate-8, 0, 0/50, border border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5"
+                className="group, p-6, bg-slate-800/50, border border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200, hover:scale-105"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-purple-4, 0, 0/20, to-cyan-5, 0, 0/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-purple-4, 0, 0/40, group-hover:to-cyan-5, 0, 0/40, transition-all, duration-2, 0, 0">
+                <div className ="w-12, h-12, bg-gradient-to-br, from-purple-400/20, to-cyan-500/20, rounded-lg, flex items-center, justify-center, mb-4, group-hover:from-purple-400/40, group-hover:to-cyan-500/40, transition-all, duration-200">
 
                   <capability.icon, className ="w-6, h-6, text-indigo-300" />
                 </div>
@@ -179,7 +179,7 @@ Revolutionary Applications</h2>
               </p>
               <div className ="grid, grid-cols-1, md:grid-cols-2, gap-4">
                 {applications.map((application, index) => (<div key ={index} className="flex, items-center, space-x-3">
-                    <CheckCircle className ="w-5, h-5, text-indigo-4, 0, 0" />
+                    <CheckCircle className ="w-5, h-5, text-indigo-400" />
 
                     <span className ="text-gray-300">{application}</span>
                   </div>
@@ -189,7 +189,7 @@ Revolutionary Applications</h2>
             <div className="relative">
 
 
-              <div className="p-8 bg-slate-8, 0, 0/50 border border-indigo-4, 0, 0/20 rounded-xl">
+              <div className="p-8 bg-slate-800/50 border border-indigo-400/20 rounded-xl">
 
                 <div className="text-center">
                   <Rocket className="w-10 h-10 text-indigo-300 mx-auto mb-4" />
@@ -210,19 +210,19 @@ Revolutionary Applications</h2>
                     <div className="text-center">
                       <div className="text-3xl font-bold text-indigo-400">24/7</div>
 
-                      <div className="text-3, x, l font-bold text-indigo-4, 0, 0">∞</div>
+                      <div className="text-3, x, l font-bold text-indigo-400">∞</div>
                       <div className="text-gray-400">Potential</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x, l font-bold text-indigo-4, 0, 0">100, 0, x</div>
+                      <div className="text-3, x, l font-bold text-indigo-400">100, 0, x</div>
                       <div className="text-gray-400">Speedup</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x, l font-bold text-indigo-4, 0, 0">99.9%</div>
+                      <div className="text-3, x, l font-bold text-indigo-400">99.9%</div>
                       <div className="text-gray-400">Accuracy</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3, x, l font-bold text-indigo-4, 0, 0">24/7</div>
+                      <div className="text-3, x, l font-bold text-indigo-400">24/7</div>
 
                       <div className="text-gray-400">Access</div>
                     </div>
@@ -242,7 +242,7 @@ Revolutionary Applications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented computational capabilities that will revolutionize your researchdevelopment,
 
-      <section className="py-20 bg-slate-8, 0, 0/20">
+      <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4, x, l font-bold text-white mb-4">Transform Your Computational Power</h2>
@@ -259,9 +259,9 @@ Revolutionary Applications</h2>
                 <div className ="w-16, h-16, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-full, flex items-center, justify-center, mx-auto, mb-4">
 
             {benefits.map((benefit, index) => (<div key ={index}
-                className="text-center, p-6, bg-slate-8, 0, 0/50, border border-slate-7, 0, 0/50, rounded-xl, hover:bg-slate-7, 0, 0/50, hover:border-indigo-4, 0, 0/30, transition-all, duration-2, 0, 0"
+                className="text-center, p-6, bg-slate-800/50, border border-slate-700/50, rounded-xl, hover:bg-slate-700/50, hover:border-indigo-400/30, transition-all, duration-200"
               >
-                <div className ="w-16, h-16, bg-gradient-to-br, from-indigo-4, 0, 0/20, to-purple-5, 0, 0/20, rounded-full, flex items-center, justify-center, mx-auto, mb-4">
+                <div className ="w-16, h-16, bg-gradient-to-br, from-indigo-400/20, to-purple-500/20, rounded-full, flex items-center, justify-center, mx-auto, mb-4">
 
                   <CheckCircle className ="w-7, h-7, text-indigo-300" />
                 </div>
@@ -292,10 +292,10 @@ Revolutionary Applications</h2>
             </button>
             <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
 
-            <button className="px-8 py-4 bg-gradient-to-r from-indigo-4, 0, 0 to-purple-5, 0, 0 text-white font-semibold rounded-lg hover:from-indigo-5, 0, 0 hover:to-purple-6, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg">
+            <button className="px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 hover:scale-105 shadow-lg">
               Access Platform
             </button>
-            <button className="px-8 py-4 bg-slate-8, 0, 0/50 border border-slate-6, 0, 0 text-white font-semibold rounded-lg hover:bg-slate-7, 0, 0/50 transition-all duration-2, 0, 0">
+            <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
 
               Schedule Demo
             </button>

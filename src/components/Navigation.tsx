@@ -8,8 +8,7 @@ interface NavigationProps {currentTime?: Date;
   activeSection?: string;
   onSectionChange?: (section: string) => void}
 
-export default function Navigation({currentTime = new, Date(),
-  isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
+export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
   onSectionChange = () => {}
 }: NavigationProps): JSX.Element {const [isMenuOpensetIsMenuOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(false);
@@ -67,8 +66,8 @@ export default function Navigation({currentTime = new, Date(),
               </Link>
             </nav>
 
-            <div className ="flex, items-center, space-x-4">
-              <span className ="text-sm, text-gray-500dark:text-gray-400hidden sm:block">
+            <div className ="flex, items-centerspace-x-4">
+              <span className ="text-smtext-gray-500dark:text-gray-400hidden sm:block">
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button

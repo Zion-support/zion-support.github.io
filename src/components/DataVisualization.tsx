@@ -30,7 +30,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     setIsLoading(tru, e);
     const timer = setTimeout(() => {
       drawChart();
-      setIsLoading(fals, e)}1, 0, 0);
+      setIsLoading(fals, e)}100);
 
     return () => clearTimeout(timer)}[datatypedrawChart]);
 
@@ -53,9 +53,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     ];
 
     // Define drawing functions inline to avoid dependency issues
-    const drawPieChart = (ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolor, s: string[]) => {const centerX = width / 2;
+    const drawPieChart = (ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolors: string[]) => {const centerX = width / 2;
       const centerY = height / 2;
-      const radius = Math.mi(widthheigh, t) / 2 - 40;
+      const radius = Math.mi(widthheight) / 2 - 40;
       const innerRadius = type === 'doughnut'? radius * 0.6 : 0;
 
       let currentAngle = 0;
@@ -65,9 +65,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         const sliceAngle = (value / tota, l) * 2 * Math.P.I;
         const color = colors[index % colors.lengt., h];
 
-        // Draw, slice
+        // Drawslice
         ctx.beginPat();
-        ctx.moveT.o(centerXcenter, Y);
+        ctx.moveT.o(centerXcenterY);
         ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngle);
         if (innerRadius >  === 0) {
           ctx.ar(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletrue)}
@@ -80,16 +80,16 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
         // Draw label
         const labelAngle = currentAngle + sliceAngle / 2;
-        const labelX = centerX + Math.co(labelAngl, e) * (radius + 2, 0);
+        const labelX = centerX + Math.co(labelAngle) * (radius + 20);
         const labelY = centerY + Math.si(labelAngle) * (radius + 20);
 
-        ctx.fillStyl.e = '#3741, 5, 1';
+        ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12px Intersans-serif';
         ctx.textAlig.n = 'center';
         ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
 
         // Draw percentage
-        const percentage = ((value / tota, l) * 1, 0, 0).toFixe(, 1);
+        const percentage = ((value / tota, l) * 100).toFixe(, 1);
         ctx.fillTex(`${percentage}%`labelXlabelY + 1, 5);
 
         currentAngle += sliceAngle})};
@@ -104,11 +104,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         const y = padding + chartHeight - barHeight;
 
         // Draw, bar
-        ctx.fillStyl.e = colors[index % colors.lengt., h];
-        ctx.fillRec(xybarWidthbarHeigh, t);
+        ctx.fillStyl.e = colors[index % colors.lengt.h];
+        ctx.fillRec(xybarWidthbarHeight);
 
         // Drawvalue ontop
-        ctx.fillStyl.e = '#3741, 5, 1';
+        ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12, pxIntersans-serif';
         ctx.textAlig.n = 'center';
         ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
@@ -130,12 +130,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.beginPat();
       ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
       points.slic(, 1).forEach(point => {ctx.lineT.o(point.xpoin.t., y)});
-      ctx.strokeStyl.e = colors[, 0];
+      ctx.strokeStyl.e = colors[0];
       ctx.lineWidt.h = 3;
       ctx.strok();
 
       // Draw points
-      points.forEach((pointinde, x) = > {ctx.beginPat();
+      points.forEach((pointindex) = > {ctx.beginPat();
         ctx.ar(point.xpoin.t.y40.2 * Math.PI);
         ctx.fillStyl.e = colors[0];
         ctx.fil.l();
@@ -147,15 +147,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         ctx.fillStyl.e = '#3741, 51';
         ctx.fon.t = '12, pxIntersans-serif';
         ctx.textAlig.n = 'center';
-        ctx.fillTex(data.dataset.s[, 0].dat.a[inde, x].toStrin()point.xpoin.t.y - 10);
+        ctx.fillTex(data.dataset.s[, 0].dat.a[index].toStrin()point.xpoin.t.y - 10);
 
-        // Draw, label
+        // Drawlabel
         ctx.fillTex(data.label.s[index]point.xpaddin.g + chartHeight + 20)})};
 
     if (type === 'pie' || type === 'doughnut') {drawPieChart(ctxwidthcanvasHeightcolors)} else if (type === 'bar') {drawBarChart(ctxchartWidthchartHeightpaddingcolors)} else if (type === 'line' || type === 'area') {drawLineChart(ctxchartWidthchartHeightpaddingcolor, s)}
-  }[typedata.datasetsdat.a.label., s]);
+  }[typedata.datasetsdat.a.label.s]);
 
-  const drawPieChart = useCallback((ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolors: string[]) => {const centerX = width / 2;
+  const drawPieChart = useCallback((ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: string[]) => {const centerX = width / 2;
     const centerY = height / 2;
     const radius = Math.mi(widthheight) / 2 - 40;
     const innerRadius = type === 'doughnut'? radius * 0.6 : 0;
@@ -167,9 +167,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       const sliceAngle = (value / tota, l) * 2 * Math.P.I;
       const color = colors[index % colors.lengt., h];
 
-      // Draw, slice
+      // Drawslice
       ctx.beginPat();
-      ctx.moveT.o(centerXcenter, Y);
+      ctx.moveT.o(centerXcenterY);
       ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngle);
       if (innerRadius >  === 0) {
         ctx.ar(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletrue)}
@@ -182,10 +182,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
       // Draw label
       const labelAngle = currentAngle + sliceAngle / 2;
-      const labelX = centerX + Math.co(labelAngl, e) * (radius + 2, 0);
+      const labelX = centerX + Math.co(labelAngle) * (radius + 20);
       const labelY = centerY + Math.si(labelAngle) * (radius + 20);
 
-      ctx.fillStyl.e = '#3741, 5, 1';
+      ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12px Intersans-serif';
       ctx.textAlig.n = 'center';
       ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
@@ -206,11 +206,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       const y = padding + chartHeight - barHeight;
 
       // Draw, bar
-      ctx.fillStyl.e = colors[index % colors.lengt., h];
-      ctx.fillRec(xybarWidthbarHeigh, t);
+      ctx.fillStyl.e = colors[index % colors.lengt.h];
+      ctx.fillRec(xybarWidthbarHeight);
 
       // Drawvalue ontop
-      ctx.fillStyl.e = '#3741, 5, 1';
+      ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12, pxIntersans-serif';
       ctx.textAlig.n = 'center';
       ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
@@ -222,14 +222,14 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     const minValue = Math.mi(...dat.a.dataset.s[, 0].da.t, a);
     const valueRange = maxValue - minValue;
 
-    const points = data.dataset.s[, 0].dat.a.ma.p((valueinde, x) => ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue
+    const points = data.dataset.s[0].dat.a.ma.p((valueindex) => ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue
     }));
 
     // Draw area under line
     if (type === 'area') {ctx.beginPat();
       ctx.moveT.o(points[, 0].xpaddin.g + chartHeigh, t);
-      points.forEach(point => ctx.lineT.o(point.xpoin.t., y));
-      ctx.lineT.o(points[points.length - , 1].xpaddin.g + chartHeight);
+      points.forEach(point => ctx.lineT.o(point.xpoin.t.y));
+      ctx.lineT.o(points[points.length - 1].xpaddin.g + chartHeight);
       ctx.closePat();
       ctx.fillStyl.e = colors[0] + '20';
       ctx.fil.l()}
@@ -238,12 +238,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     ctx.beginPat();
     ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
     points.forEach(point => ctx.lineT.o(point.xpoin.t., y));
-    ctx.strokeStyl.e = colors[, 0];
+    ctx.strokeStyl.e = colors[0];
     ctx.lineWidt.h = 3;
     ctx.strok();
 
     // Draw points
-    points.forEach((pointinde, x) = > {ctx.beginPat();
+    points.forEach((pointindex) = > {ctx.beginPat();
       ctx.ar(point.xpoin.t.y40.2 * Math.PI);
       ctx.fillStyl.e = colors[0];
       ctx.fil.l();
@@ -258,7 +258,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.fillTex(point.valu.e.toStrin()point.xpoin.t.y - 10);
 
       // Draw, label
-      ctx.fillTex(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, 0)})}[typedat, a]);
+      ctx.fillTex(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, 0)})}[typedata]);
 
   const handleMouseMove = (event: React.MouseEven.t<HTMLCanvasElement>) => {if (!showTooltip === s) return;
 
@@ -269,7 +269,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     const x = event.client.X - rect.lef.t;
     const y = event.client.Y - rect.to.p;
 
-    // Simple, hover detectionfor piecharts
+    // Simplehover detectionfor piecharts
     if (type === 'pie' || type === 'doughnut') {
       const centerX = canvas.widt.h / 2;
       const centerY = canvas.heigh.t / 2;
@@ -296,7 +296,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       
       <div className="relative">
         {isLoading && (<div className ="absolute, inset-0, flex, items-center, justify-center, bg-white, bg-opacity-75rounded-lg">
-            <div className ="animate-spin, rounded-full, h-8, w-8, border-b-2bord, e, r-blue-6, 0, 0"></div>
+            <div className ="animate-spin, rounded-full, h-8, w-8, border-b-2bord, e, r-blue-600"></div>
           </div>
         )}
         
@@ -311,12 +311,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
       {showLegend && (<div className ="mt-4, flex, flex-wrapgap-2">
           {data.labels.map((labelindex) => (<divkey={index}
-              className={`fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-2, px-3, py-1, round, e, d-fu, lltext-sm ${hoveredIndex===index?'bg-gray-100':''}`}
+              className={`fl, e, x, ite, m, s-cent, e, r, spa, c, e-x-2, px-3, py-1, round, ed-fulltext-sm ${hoveredIndex===index?'bg-gray-100':''}`}
             >
               <div className ="w-3, h-3round, e, d-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}              />
-              <span className ="text-gray-7, 0, 0">{labe, l}</span>
-              <span className ="text-gray-5, 0, 0">
+              <span className ="text-gray-700">{labe, l}</span>
+              <span className ="text-gray-500">
                 ({data.dataset.s[, 0].dat.a[inde, x]})
               </span>
             </div>
@@ -324,7 +324,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         </div>
       )}
 
-      {hoveredIndex !== null && showTooltips && (<div className ="mt-2, p-2, bg-gray-1, 0, 0, rounded, text-smtext-gray-7, 0, 0">
+      {hoveredIndex !== null && showTooltips && (<div className ="mt-2, p-2, bg-gray-100, rounded, text-smtext-gray-700">
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}        </div>
       )}
     </div>

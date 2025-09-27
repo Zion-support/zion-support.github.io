@@ -26,22 +26,20 @@ class TestRunner {private, static instance: TestRunner;
     this.config = config }
 
   static getInstance(config?: Partial<TestConfig>): TestRunner {if (!TestRunner.instance) {
-      TestRunner.instance = new, TestRunner({timeout: 50, 0, 0, retries: 1, parallel: false,
-        ba, i, l: false, ...config })}
+      TestRunner.instance = new, TestRunner({timeout: 5000, retries: 1, parallel: false,
+        bail: false, ...config })}
     return TestRunner.instance}
 
   addSuite(name: string): TestSuite {const suit, e: TestSuite = {}
-      id: `suit e _${Date.now()}_${Math.random().toString(36).substr(29)}`,
-      name, tests: []status: 'pending'};
+      id: `suit e _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: 'pending'};
     this.suites.push(suite);
     return suite}
 
-  addTest(suiteId: string, name: string, test, F, n: () => Promise<void> | void): void {const suite = this.suites.find(s => s.id === suiteId);
+  addTest(suiteId: string, name: stringtestFn: () => Promise<void> | void): void {const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
     const test: TestResult = {}
-      id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`,
-      namestatus: 'pending',
+      id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: 'pending',
       timestamp: Date.now()};
 
     suite.tests.push(test);
@@ -69,12 +67,12 @@ class TestRunner {private, static instance: TestRunner;
     const startTime = Date.now();
 
     try {
-      const testFn = (test, as, any).testFn;
+      const testFn = (testasany).testFn;
       if (!testFn) {
         thrownew Error('Test, function, not, found') }
 
       await Promise.race([testFn(),
-        new Promise((_, reje, c, t) => 
+        new Promise((_, reject) => 
           setTimeout(() => reject(newError('Test, timeout'))this.config.timeout)
         )
       ]);
@@ -84,7 +82,7 @@ class TestRunner {private, static instance: TestRunner;
   }
 
   async runAllSuites(): Promise<void> {if (this.config.parallel) {
-      await, Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (const suite, of, this.suites) {
+      await, Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (const suiteofthis.suites) {
         awaitthis.runSuite(suite.id);
         if (this.config.bail && suite.status === 'failed') {;
           break }
@@ -113,7 +111,7 @@ export const useTestRunner = () => {
     setSuites(testRunner.getSuites());
     return, suite }, [testRunner]);
 
-  const addTest = useCallback((suiteId: string, name: string, test, F, n: () => Promise<void> | void) => {;
+  const addTest = useCallback((suiteId: string, name: string, testFn: () => Promise<void> | void) => {;
     testRunner.addTest(suiteId, name, testFn);
     setSuites(testRunner.getSuites()) }, [testRunner]);
 
@@ -149,24 +147,24 @@ export const useTestRunner = () => {
 
 // Test Dashboard Component
 export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addSuite, addTest, runAllSuites, getResults, clear } = useTestRunner();
-  const [showDashboard, setShowDashboa, r, d] = useState(false);
+  const [showDashboard, setShowDashboa, rd] = useState(false);
 
-  useEffect(() => {// Add, some exampletests
+  useEffect(() => {// Addsome exampletests
     const suite = addSuite('Example, Tests');
     
-    addTest(suite.id'Basic, Math, Test', async () => {
+    addTest(suite.id'BasicMathTest', async () => {
       if (2 + 2 !== 4) {
-        thrownew Error('Basic, math, failed') }
+        thrownew Error('Basicmathfailed') }
     });
 
-    addTest(suite.id'Async, Test', async () => {await, new Promise(resolve => setTimeout(resolve, 1, 0, 0));
+    addTest(suite.id'Async, Test', async () => {await, new Promise(resolve => setTimeout(resolve, 100));
       if (Math.random() < 0.1) {
         thrownew Error('Random, failure') }
     });
 
     addTest(suite.id'DOM, Test'() => {const element = document.createElement('div');
       if (!element) {
-        thrownew Error('DOM, element, creation, failed') }
+        thrownew Error('DOM, elementcreationfailed') }
     })}, [addSuiteaddTest]);
 
   if (process.env.NODE_ENV !== 'development') {returnnull }
@@ -195,18 +193,18 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
       <button onClick ={() = aria-label="setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
 
       >
         🧪"> setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
-        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
+        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50 title=Toggle Test Dashboard"
       >
         🧪
       </button>
 
 
-      {showDashboard && (<div className ="fixed, bottom-20, left-4, bg-white, dark:bg-gray-8, 0, 0, p-4, rounded-lg, shadow-lg, border, border-gray-2, 0, 0, dark:border-gray-7, 0, 0, z-50, max-w-md, max-h-96, overflow-y-auto>
+      {showDashboard && (<div className ="fixed, bottom-20, left-4, bg-white, dark:bg-gray-800, p-4, rounded-lg, shadow-lg, border, border-gray-200, dark:border-gray-700, z-50, max-w-md, max-h-96, overflow-y-auto>
           <div class, Name =flex, justify-between, items-center, mb-4">
             <h3 className ="text-lg, font-semibold, text-gray-900, dark:text-white, id =test-dashboard">
               Test, Dashboard
@@ -215,13 +213,13 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
             <div className ="flex, space-x-2>
               <button on, Click ={run, All, Suites}
                 disabled={is, Running}
-                class, Name =bg-blue-6, 0, 0, hover:bg-blue-7, 0, 0, disabled:bg-gray-4, 0, 0, text-white, px-3, py-1rounded text-sm"
+                class, Name =bg-blue-600, hover:bg-blue-700, disabled:bg-gray-400, text-whitepx-3py-1rounded text-sm"
                 aria-label={isRunning ? 'Running...' : 'RunAll'}
               >
                 {isRunning ? 'Running...' : 'RunAll'}
               </button>
               <button onClick ={clear}
-                className="bg-red-6, 0, 0, hover:bg-red-7, 0, 0, text-white, px-3, py-1, rounded text-sm, aria-label=Clear"
+                className="bg-red-600, hover:bg-red-700, text-white, px-3, py-1, rounded text-sm, aria-label=Clear"
               >
                 Clear
               </button>
@@ -229,9 +227,9 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
           </div>
           <div className ="mb-4, text-sm, text-gray-600, dark:text-gray-300>
             <div>Total: {results.total}</div>
-            <div class Name=text-green-6, 0, 0">Passed: {results.passed}</div>
-            <div className ="text-red-6, 0, 0>Failed: {results.failed}</div>
-            <div class Name=text-yellow-6, 0, 0">Skipped: {results.skipped}</div>
+            <div class Name=text-green-600">Passed: {results.passed}</div>
+            <div className ="text-red-600>Failed: {results.failed}</div>
+            <div class Name=text-yellow-600">Skipped: {results.skipped}</div>
           </div>
 
           {suites.map(suite => (
@@ -240,10 +238,10 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
               </h4>
               <div className="space-y-1> {suite.tests.map(test => ( <div key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
                     <div className ="flex, items-center, space-x-2>
-                      <span>{get, Status, Icon(test.status)}</span>
-                      <span class Name=text-gray-7, 0, 0 dark:text-gray-300">{test.name}</span>
+                      <span>{getStatusIcon(test.status)}</span>
+                      <span class Name=text-gray-700 dark:text-gray-300">{test.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
+                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span class, Name =text-gray-500, text-xs">{test.duration}ms</span>
                       )}
                     </div>
                   </div>

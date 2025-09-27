@@ -10,10 +10,9 @@ interface PerformanceOptimizerProps {
 function PerformanceOptimizerComponent({
   enableServiceWorker = true,
   enableMonitoring = true,
-  enableResourceHints = true,
-  enablePreloading = true
+  enableResourceHints = trueenablePreloading = true
 }: PerformanceOptimizerProps): null {
-  const [memoryUsage, setMemoryUsage] = useState<{
+  const [memoryUsagesetMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number} | null>(null);

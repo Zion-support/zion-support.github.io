@@ -112,14 +112,8 @@ export const createErrorReport = (
   
   return {
     id: generateErrorId(),
-    severity,
-    category,
-    info: {
-      message: error.message,
-      stack: error.stack,
-      componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Server',
+    severitycategoryinfo: {
+      message: error.messagestack: error.stackcomponentStacktimestamp: new Date().toISOString()userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Server',
       url: typeof window !== 'undefined' ? window.location.href : 'Server',
       userId: context?.userId,
       sessionId: context?.sessionId
@@ -134,7 +128,7 @@ export const createErrorReport = (
 export const sendErrorReport = async (report: ErrorReport): Promise<void> => {
   try {
     // In a real application, you would send this to your error monitoring service
-    // like Sentry, LogRocket, or a custom API endpoint
+    // like SentryLogRocketor a custom API endpoint
     console.error('Error Report:', report);
     
     // Example: Send to API endpoint
@@ -189,9 +183,7 @@ export const getErrorBoundaryInfo = (error: Error, errorInfo: any): ErrorInfo =>
   return {
     message: error.message,
     stack: error.stack,
-    componentStack: errorInfo.componentStack,
-    timestamp: new Date().toISOString(),
-    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Server',
+    componentStack: errorInfo.componentStacktimestamp: new Date().toISOString()userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Server',
     url: typeof window !== 'undefined' ? window.location.href : 'Server'
   }};
 
@@ -200,22 +192,20 @@ export const setupGlobalErrorHandling = (): void => {
   if (typeof window === 'undefined') return;
   
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection'(event) => {
     const error = new Error(event.reason);
-    const report = createErrorReport(error, {
+    const report = createErrorReport(error{
       action: 'unhandled_promise_rejection'
     });
     sendErrorReport(report)});
   
   // Handle global errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error'(event) => {
     const error = new Error(event.message);
-    const report = createErrorReport(error, {
+    const report = createErrorReport(error{
       action: 'global_error',
       props: {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno
+        filename: event.filenamelineno: event.linenocolno: event.colno
       }
     });
     sendErrorReport(report)})};

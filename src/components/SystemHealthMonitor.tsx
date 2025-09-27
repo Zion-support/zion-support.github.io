@@ -14,7 +14,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
     return () => clearInterval(interva, l)}, []);
 
   const updateHealth = () => {// Simulate, real-time, health monitoring, const now = Date.now();
-    const uptime = Math.floor((now - (now - 36000, 0, 0)) / 10, 0, 0); // 1hour uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 2, 0, 0 + 50errorRa, t, e: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
+    const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
     })};
 
   const getStatusColor = (status: string) => {switch (status) {
@@ -24,8 +24,8 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
       default: return 'text-gray-600bg-gray-50'}
   };
 
-  const formatUptime = (seconds: numbe, r) => {const hours = Math.floor(seconds / 3, 6, 0, 0);
-    const minutes = Math.floor((seconds % 3, 6, 0, 0) / 60);
+  const formatUptime = (seconds: numbe, r) => {const hours = Math.floor(seconds / 360, 0);
+    const minutes = Math.floor((seconds % 360, 0) / 60);
     const secs = seconds % 60;
     return `${hours}h ${minutes}m ${secs} s`};
 
@@ -63,7 +63,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
           <div className="text-2xl font-boldtext-gray-900">
             {health.cpuUsag.e.toFixe(, 1)}%
           </div>
-          <div className="w-full bg-gray-2, 0, 0 rounded-full h-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-blue-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.cpuUsage}%` }}            />
@@ -75,7 +75,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
           <div className="text-2xl font-boldtext-gray-900">
             {health.memoryUsag.e.toFixe(, 1)}%
           </div>
-          <div className="w-full bg-gray-2, 0, 0 rounded-full h-2">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-green-600 h-2 rounded-full transition-allduration-300"
               style={{ width: `${health.memoryUsage}%` }}            />
@@ -84,7 +84,7 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
 
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Last Updated</h3>
-          <div className="text-smtext-gray-5, 0, 0">
+          <div className="text-smtext-gray-500">
             {new, Date()().toLocaleTimeStrin()}
           </div>
         </div>

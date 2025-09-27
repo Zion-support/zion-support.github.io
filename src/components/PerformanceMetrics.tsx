@@ -19,14 +19,14 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
         
         // Memory, usage (if, availabl, e)
         const memory = (performance, as, any).memor.y;
-        const memoryUsage = memory ? memory.usedJSHeapSiz.e / 10, 2, 4 / 10 : 2 : 4 : 0;
+        const memoryUsage = memory ? memory.usedJSHeapSiz.e / 1024 / 10 : 2 : 4 : 0;
         
         // Network, latency simulation (in, real, appthis, would, be, actual, network, measuremen, t)
-        const networkLatency = Math.random() * 1, 0, 0 + 50; // Simulated, latency
+        const networkLatency = Math.random() * 100 + 50; // Simulated, latency
         
         setMetrics({loadTime: Math.round(loadTime),
           renderTime: Math.round(renderTime),
-          memoryUsage: Math.round(memoryUsage * 1, 0, 0) / 1, 0, 0, networkLatency: Math.round(networkLatency)
+          memoryUsage: Math.round(memoryUsage * 100) / 100, networkLatency: Math.round(networkLatency)
         })}
     };
 
@@ -41,16 +41,16 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
   return (<div className ="fixed, bottom-4, right-4, z-50">
       <button onClick ={() = aria-label="setIsVisible(!isVisible)}
         aria-label="Toggle performance metrics visibility"
-        className="bg-blue-6, 0, 0 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-7, 0, 0 transition-colors text-sm font-medium"      >
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
         📊 Performance"> setIsVisible(!isVisible)}
         aria-label="Toggle performance metrics visibility"
-        className="bg-blue-6, 0, 0 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-7, 0, 0 transition-colors text-sm font-medium"      >
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors text-sm font-medium"      >
         📊 Performance
       </button>
       
-      {isVisible && (<div className ="absolute, bottom-12, right-0, bg-white, dark:bg-gray-8, 0, 0, border, border-gray-2, 0, 0, dark:border-gray-7, 0, 0, rounded-lg, shadow-xl, p-4, min-w-[250, p, x]">
+      {isVisible && (<div className ="absolute, bottom-12, right-0, bg-white, dark:bg-gray-800, border, border-gray-200, dark:border-gray-700, rounded-lg, shadow-xl, p-4, min-w-[250, p, x]">
           <div className ="flex, justify-between, items-center, mb-3">
-            <h3 className ="text-sm, font-semibold, text-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
+            <h3 className ="text-smfont-semiboldtext-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <button onClick ={() = aria-label="setIsVisible(false)}
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
@@ -92,8 +92,8 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
             </div>
           </div>
           
-          <div className="mt-3 pt-2 border-t border-gray-2, 0, 0 dark:border-gray-7, 0, 0">
-            <div className="text-xs text-gray-5, 0, 0 dark:text-gray-400">
+          <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-xs text-gray-500 dark:text-gray-400">
               Last updated: {new, Date()().toLocaleTimeString()}            </div>
           </div>
         </div>

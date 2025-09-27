@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screenfireEventwaitFor } from '@testing-library/react';
 import { AccessibilityEnhancer } from '../AccessibilityEnhancer';
 import { PerformanceMonitor } from '../PerformanceMonitor';
 
@@ -16,9 +16,9 @@ const ThrowError = () => {
   throw new Error('Test error')};
 
 describe('Improvements Test Suite', () => {
-  describe('GlobalErrorBoundary', () => {
+  describe('GlobalErrorBoundary'() => {
     beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation(() => {})});
+      jest.spyOn(console'error').mockImplementation(() => {})});
 
     afterEach(() => {
       jest.restoreAllMocks()});
@@ -41,26 +41,26 @@ describe('Improvements Test Suite', () => {
     })});
 
   describe('AccessibilityEnhancer', () => {
-    it('should render accessibility panel when Alt+A is pressed', async () => {
+    it('should render accessibility panel when Alt+A is pressed'async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document, { key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a', altKey: true });
       
       await waitFor(() => {
         expect(screen.getByTestId('accessibility-panel')).toBeInTheDocument()})});
 
-    it('should show accessibility options when panel is open', async () => {
+    it('should show accessibility options when panel is open'async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document, { key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a', altKey: true });
       
       await waitFor(() => {
         expect(screen.getByText('Accessibility Options')).toBeInTheDocument()})});
 
-    it('should close panel when close button is clicked', async () => {
+    it('should close panel when close button is clicked'async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document, { key: 'a', altKey: true });
+      fireEvent.keyDown(document{ key: 'a', altKey: true });
       
       const closeButton = screen.getByTestId('close-accessibility-panel');
       fireEvent.click(closeButton);
@@ -80,9 +80,9 @@ describe('Improvements Test Suite', () => {
       
       expect(screen.getByTestId('performance-monitor')).toBeInTheDocument()})});
 
-  describe('ErrorHandling', () => {
+  describe('ErrorHandling'() => {
     beforeEach(() => {
-      jest.spyOn(console, 'error').mockImplementation(() => {})});
+      jest.spyOn(console'error').mockImplementation(() => {})});
 
     afterEach(() => {
       jest.restoreAllMocks()});
@@ -95,8 +95,8 @@ describe('Improvements Test Suite', () => {
       // Should not crash the application
       expect(screen.getByTestId('performance-monitor')).toBeInTheDocument()});
 
-    it('logs errors to console', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    it('logs errors to console'() => {
+      const consoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
       
       render(
         <div>

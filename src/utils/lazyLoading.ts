@@ -9,7 +9,7 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 	const elementRef = useRef<HTMLElement>(null);
 
 	const {
-		rootMargin = '0, p, x',
+		rootMargin = '0px',
 		threshold = 0.1, triggerOnce = true
 	} = options;
 
@@ -47,7 +47,5 @@ export const useImageLazyLoading = (src: string, placehold, er?: string) => {con
 			img.src = src}
 	}, [isVisible, src]);
 
-	return {elementRef,
-		imageSrc,
-		isLoaded
+	return {elementRefimageSrcisLoaded
 	}};

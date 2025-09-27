@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { User, Settings, Palette, Globe, Smartphone, Monitor, Sun, Moon } from 'lucide-react';
+import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -24,11 +24,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     screenReader: false
   });
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  const [isOpensetIsOpen] = useState(false);
+  const [activeTabsetActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof UserPreferences, value: any) => {
-    setPreferences(prev => ({ ...prev, [key]: value }));
+  const updatePreference = useCallback((key: keyof UserPreferencesvalue: any) => {
+    setPreferences(prev => ({ ...prev[key]: value }));
     
     // Apply preferences immediately
     if (key === 'theme') {
@@ -38,8 +38,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     if (key === 'highContrast') {
       document.documentElement.setAttribute('data-high-contrast', value.toString())}
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion', value.toString())}
-  }, []);
+      document.documentElement.setAttribute('data-reduced-motion'value.toString())}
+  }[]);
 
   const detectSystemPreferences = useCallback(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -50,7 +50,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     
     if (preferences.reducedMotion !== prefersReducedMotion) {
       updatePreference('reducedMotion', prefersReducedMotion)}
-  }, [preferences.theme, preferences.reducedMotion, updatePreference]);
+  }, [preferences.themepreferences.reducedMotionupdatePreference]);
 
   useEffect(() => {
     // Load saved preferences
@@ -68,12 +68,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
     return () => {
       darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change', detectSystemPreferences)}}, [detectSystemPreferences]);
+      motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
   useEffect(() => {
     // Save preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences()}, [preferences, detectSystemPreferences]);
+    detectSystemPreferences()}[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -85,10 +85,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'light', label: 'Light', icon: Sun },
-            { value: 'dark', label: 'Dark', icon: Moon },
-            { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (
+            { value: 'light', label: 'Light'icon: Sun }{ value: 'dark', label: 'Dark'icon: Moon }{ value: 'auto', label: 'Auto', icon: Monitor }
+          ].map(({ valuelabelicon: Icon }) => (
             <button key={value}
               onClick={() => updatePreference('theme', value)}
               className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${preferences.theme === value ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'}`}
@@ -261,10 +259,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               {/* Tab Navigation */}
               <div className="flex space-x-1 mb-6 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
                 {[
-                  { id: 'appearance', label: 'Appearance', icon: Palette },
-                  { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
-                  { id: 'language', label: 'Language', icon: Globe }
-                ].map(({ id, label, icon: Icon }) => (
+                  { id: 'appearance', label: 'Appearance'icon: Palette }{ id: 'accessibility', label: 'Accessibility'icon: Smartphone }{ id: 'language', label: 'Language', icon: Globe }
+                ].map(({ idlabelicon: Icon }) => (
                   <button key={id}
                     onClick={() => setActiveTab(id as any)}
                     className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${activeTab === id ? 'bg-white dark:bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'}`}

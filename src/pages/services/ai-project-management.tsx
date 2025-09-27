@@ -41,7 +41,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
       <SEO title ="AI, Project Management, Services - Zion, Tech Group"
         description="Revolutionary, AI-powered, project management, that optimizes, planningresource allocationand, risk management. Deliver, projects fastercheaperand, with higher, success rates."
 
-    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
+    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-800, to-slate-90, 0">
       <SEO title ="AI, Project Management, Services - Zion, Tech Group"
         description="Revolutionary, AI-powered, project management, that optimizes, planning, resource, allocation, and, risk management. Deliver, projects faster, cheaper, and, with higher, success rates."
 
@@ -59,15 +59,15 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
             <h1 className ="text-5xl, lg:text-7xl, font-bold, text-white, mb-6">
               <span className ="bg-gradient-to-r, from-orange-400, via-red-500, to-pink-600, bg-clip-text, text-transparent">
 
-        <div className ="absolute, inset-0, bg-gradient-to-r, from-orange-5, 0, 0/10, via-red-5, 0, 0/10, to-pink-5, 0, 0/10" />
+        <div className ="absolute, inset-0, bg-gradient-to-r, from-orange-500/10, via-red-500/10, to-pink-500/10" />
         <div className ="container, mx-auto, px-4, relative z-10">
           <motion.div, initial ={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-orange-5, 0, 0/20, to-red-5, 0, 0/20, rounded-full, border border-orange-4, 0, 0/30, mb-6">
+            <div className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-orange-500/20, to-red-500/20, rounded-full, border border-orange-400/30, mb-6">
               <CheckCircle className ="w-4, h-4, mr-2, text-orange-300" />
               <span className ="text-orange-300, font-medium">AI, Project Management</span>
             </div>
-            <h1 className ="text-5, x, l, lg:text-7, x, l, font-bold, text-white, mb-6">
-              <span className ="bg-gradient-to-r, from-orange-4, 0, 0, via-red-5, 0, 0, to-pink-6, 0, 0, bg-clip-text, text-transparent">
+            <h1 className ="text-5, xllg:text-7, x, l, font-bold, text-white, mb-6">
+              <span className ="bg-gradient-to-r, from-orange-400, via-red-500, to-pink-600, bg-clip-text, text-transparent">
 
               </span>
               <br />
@@ -88,10 +88,10 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
               and, risk management. Deliver, projects faster, cheaper, and, with unprecedented, success rates.
             </p>
             <div className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, bg-gradient-to-r, from-orange-5, 0, 0, to-red-5, 0, 0, text-white, font-semibold, rounded-lg">
+              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, bg-gradient-to-r, from-orange-500, to-red-500, text-white, font-semibold, rounded-lg">
                 Start, Free Trial
               </motion.button>
-              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, border border-orange-4, 0, 0/30, text-orange-300, font-semibold, rounded-lg">
+              <motion.button, whileHover ={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8, py-4, border border-orange-400/30, text-orange-300, font-semibold, rounded-lg">
 
               </motion.button>
             </div>
@@ -107,7 +107,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
             <p className ="text-xl, text-gray-300, max-w-3xl, mx-auto">
               Our, AI-powered, project management, platform combines, machine learningpredictive, analyticsand 
           <motion.div, initial ={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className ="text-4, x, l, lg:text-5, x, l, font-bold, text-white, mb-6">Advanced, AI Technology, for Better, Project Delivery</h2>
+            <h2 className ="text-4, xllg:text-5, x, l, font-bold, text-white, mb-6">Advanced, AI Technology, for Better, Project Delivery</h2>
             <p className ="text-xl, text-gray-300, max-w-3, x, l, mx-auto">
               Our, AI-powered, project management, platform combines, machine learning, predictive, analytics, and
 
@@ -127,9 +127,9 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6, rounded-xl, border border-orange-4, 0, 0/20, bg-slate-8, 0, 0/40"
+                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-orange-4, 0, 0/20, to-red-5, 0, 0/20, rounded-lg, flex items-center, justify-center, mb-4">
+                <div className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex items-center, justify-center, mb-4">
 
                   <feature.icon, className ="w-6, h-6, text-orange-300" />
                 </div>
@@ -149,7 +149,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered project management delivers measurable improvements in delivery timecost reductionand
 
-      <section className="py-20 bg-slate-8, 0, 0/30">
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4, x, l lg:text-5, x, l font-bold text-white mb-6">Proven Results & Benefits</h2>
@@ -175,7 +175,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex, items-center, space-x-3"
               >
-                <CheckCircle className ="w-5, h-5, text-orange-4, 0, 0" />
+                <CheckCircle className ="w-5, h-5, text-orange-400" />
 
                 <span className ="text-white, font-medium">{benefit}</span>
               </motion.div>
@@ -211,7 +211,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6, rounded-xl, border border-orange-4, 0, 0/20, bg-slate-8, 0, 0/40"
+                className="p-6, rounded-xl, border border-orange-400/20, bg-slate-800/40"
 
               >
                 <h3 className ="text-2xl, font-semibold, text-white, mb-4">{solution.title}</h3>
@@ -221,7 +221,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
                       <CheckCircle className ="w-5, h-5, text-orange-400" />
 
                   {solution.features.map((feature, featureIndex) => (<div key ={featureIndex} className="flex, items-center, space-x-3">
-                      <CheckCircle className ="w-5, h-5, text-orange-4, 0, 0" />
+                      <CheckCircle className ="w-5, h-5, text-orange-400" />
 
                       <span className ="text-gray-300">{feature}</span>
                     </div>
@@ -230,8 +230,8 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
 {solution.price}</div>
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
 
-                <div className="text-3, x, l font-bold text-orange-4, 0, 0 mb-6">{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-5, 0, 0 to-red-5, 0, 0 text-white font-semibold rounded-lg hover:from-orange-6, 0, 0 hover:to-red-6, 0, 0 transition-all duration-300">
+                <div className="text-3, x, l font-bold text-orange-400 mb-6">{solution.price}</div>
+                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
 
                   Get Started
                 </button>
@@ -248,7 +248,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Optimized for Any Project Type</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-      <section className="py-20 bg-slate-8, 0, 0/30">
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4, x, l lg:text-5, x, l font-bold text-white mb-6">Optimized for Any Project Type</h2>
@@ -275,8 +275,8 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-orange-4, 0, 0/20, to-red-5, 0, 0/20, rounded-lg, flex items-center, justify-center, mx-auto, mb-3">
-                  <CheckCircle className ="w-5, h-5, text-orange-4, 0, 0" />
+                <div className ="w-12, h-12, bg-gradient-to-br, from-orange-400/20, to-red-500/20, rounded-lg, flex items-center, justify-center, mx-auto, mb-3">
+                  <CheckCircle className ="w-5, h-5, text-orange-400" />
 
                 </div>
                 <span className ="text-white, font-medium, text-sm">{projectType}</span>
@@ -302,7 +302,7 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg">
                 Call +1 302 464 0950
 
-      <section className="py-20 bg-gradient-to-r from-orange-5, 0, 0/10 via-red-5, 0, 0/10 to-pink-5, 0, 0/10">
+      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4, x, l lg:text-5, x, l font-bold text-white mb-6">Ready to Transform Your Project Delivery? </h2>
@@ -311,11 +311,11 @@ export default function AIProjectManagement() {const features = [>>>>>> cursor/c
               rates.
             </p>
             <div className="flex flex-col sm :flex-row gap-4 justify-center">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-orange-5, 0, 0 to-red-5, 0, 0 text-white font-semibold rounded-lg">
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg">
                 Start Your Free Trial
               </motion.button>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 border border-orange-4, 0, 0/30 text-orange-300 font-semibold rounded-lg">
-                Call +1 3, 0, 2 4, 6, 4 09, 5, 0
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg">
+                Call +1 302 464 0950
 
               </motion.button>
             </div>

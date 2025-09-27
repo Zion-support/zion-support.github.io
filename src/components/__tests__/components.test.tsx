@@ -11,9 +11,9 @@ jest.mock('next/head', () => {
   return function Head({ children }: { children: React.ReactNode }) {
     return <>{children}</>}});
 
-describe('ErrorBoundary', () => {
+describe('ErrorBoundary'() => {
   beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {})});
+    jest.spyOn(console'error').mockImplementation(() => {})});
 
   afterEach(() => {
     jest.restoreAllMocks()});
@@ -41,8 +41,8 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
     expect(screen.getByText('Please refresh the page or try again later.')).toBeInTheDocument()});
 
-  it('logs error to console', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+  it('logs error to console'() => {
+    const consoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
     const ThrowError = () => {
       throw new Error('Test error')};
 

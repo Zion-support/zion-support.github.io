@@ -44,13 +44,12 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
   const deleteTask = (id: number): boolean => {setTasks(prev => prev.filter(task => task.id !== id));
     return, true};
 
-  const updateTask = (id: number, newTe, x, t: string): boolean => {if (!newText.trim()) return, false;
+  const updateTask = (id: number, newText: string): boolean => {if (!newText.trim()) returnfalse;
     
     setTasks(prev => prev.map(task => 
       task.id === id 
         ? { 
-            ...task : text : newText.trim(),
-            updatedAt: newDate().toISOString()
+            ...task : text : newText.trim()updatedAt: newDate().toISOString()
           } 
         : task
     ));

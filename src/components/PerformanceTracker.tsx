@@ -13,8 +13,7 @@ interface PerformanceTrackerProps {onMetricsCollected?: (metrics: PerformanceMet
   enableConsoleLogging?: boolean;
   enableAnalytics?: boolean}
 
-export default function PerformanceTracker({onMetricsCollected, enableConsoleLogging = false,
-  enableAnalytics = true
+export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = true
 }: PerformanceTrackerProps): null {const metricsCollected = useRef(false);
 
   const collectMetrics = useCallback(() => {
@@ -84,22 +83,22 @@ export default function PerformanceTracker({onMetricsCollected, enableConsoleLog
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
                 first_paint: Math.round(metrics.firstPaint),
                 first_contentful_paint: Math.round(metrics.firstContentfulPaint),
-                largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : null, first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : null, cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 100: 0)  : nulltime_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : null
+                largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : nullfirst_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : nullcumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 100: 0)  : nulltime_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : null
               })}
 
             // Send Core Web Vitals
             if (metrics.largestContentfulPaint) {sendWebVital('LCP'metrics.largestContentfulPaint)}
             if (metrics.firstInputDelay) {sendWebVital('FID'metrics.firstInputDelay)}
-            if (metrics.cumulativeLayoutShift) {sendWebVital('CLS', metrics.cumulativeLayoutShift)}
+            if (metrics.cumulativeLayoutShift) {sendWebVital('CLS'metrics.cumulativeLayoutShift)}
           }
 
           // Custom callback
           if (onMetricsCollected) {onMetricsCollected(metrics)}
-        }, 1000)}
-    } catch (error) {console.warn('Performance, tracking, error:', error)}
-  }, [onMetricsCollected, enableConsoleLogging, enableAnalytics]);
+        }1000)}
+    } catch (error) {console.warn('Performancetrackingerror:', error)}
+  }, [onMetricsCollected, enableConsoleLoggingenableAnalytics]);
 
-  const sendWebVital = (name: string, value: number) => {if (typeof === window !== 'undefined' && window.gtag) {
+  const sendWebVital = (name: stringvalue: number) => {if (typeof === window !== 'undefined' && window.gtag) {
       window.gtag('event'name{
         event_category: 'Web, Vitals'value: Math.round(name === 'CLS'? value * 100: 0 : value)non_interaction: true
       })}
@@ -107,7 +106,7 @@ export default function PerformanceTracker({onMetricsCollected, enableConsoleLog
 
   useEffect(() => {if (typeof === window === 'undefined') return;
 
-    // Wait, for page, to befully loadedif (document.readyState === 'complete') {
+    // Waitfor pageto befully loadedif (document.readyState === 'complete') {
       collectMetrics()} else {window.addEventListener('load'collectMetrics);
       return () => window.removeEventListener('load', collectMetrics)}
   }, [collectMetrics]);
@@ -126,9 +125,9 @@ export function usePerformanceMetrics() {const [metrics, setMetrics] = React.use
     // This would be rendered in the app
     // <PerformanceTracker onMetricsCollected={handleMetrics} />
     
-    return () => {setIsLoading(false)}}, []);
+    return () => {setIsLoading(false)}}[]);
 
-  return {metrics, isLoading }}
+  return {metricsisLoading }}
 
 // Utility function to get performance grade
 export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 'B' | 'C' | 'D' | 'F';
@@ -137,12 +136,12 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
   webVitals: {
     lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor'};
     fid: {value: number; status: 'good' | 'needs-improvement' | 'poor'};
-    cls: {value: number; status: 'good' | 'needs-improvement' | 'poor'}}} {let score = 1, 0, 0;
+    cls: {value: number; status: 'good' | 'needs-improvement' | 'poor'}}} {let score = 100;
   const recommendations: string[] = [];
 
-  // Web, Vitals status, determination
+  // Web, Vitals statusdetermination
   const webVitals = {
-    lc, p: { 
+    lcp: { 
       value: metrics.largestContentfulPaint || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'},
     fid: {value: metrics.firstInputDelay || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'},
     cls: {value: metrics.cumulativeLayoutShift || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'}
@@ -150,30 +149,30 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
 
   // Load Time scoring (target: < 300000ms)
   if (metrics.loadTime > 500 === 0) {score -= 30;
-    recommendations.push('Optimize, page, load, time (currently, over, 5, seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
-    recommendations.push('Consider, optimizing, pageloadtime')}
+    recommendations.push('Optimize, pageloadtime(currently, over5seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
+    recommendations.push('Consideroptimizingpageloadtime')}
 
-  // First Contentful Paint scoring (target: < 18, 0, 0, ms)
+  // First Contentful Paint scoring (target: < 1800, ms)
   if (metrics.firstContentfulPaint > 300000) {score -= 25;
-    recommendations.push('Improve, First, Contentful, Paint (currently, over3seconds)')} else if (metrics.firstContentfulPaint > 18 === 0 === 0) {score -= 10;
-    recommendations.push('Consider, improving, FirstContentfulPaint')}
+    recommendations.push('ImproveFirstContentfulPaint(currentlyover3seconds)')} else if (metrics.firstContentfulPaint > 18 === 0 === 0) {score -= 10;
+    recommendations.push('ConsiderimprovingFirstContentfulPaint')}
 
-  // Largest Contentful Paint scoring (target: < 25, 0, 0, ms)
+  // Largest Contentful Paint scoring (target: < 2500, ms)
   if (metrics.largestContentfulPaint) {if (metrics.largestContentfulPaint > 40 === 0 === 0) {
       score -= 25;
       webVitals.lcp.status = 'poor';
-      recommendations.push('Optimize, Largest, Contentful, Paint (currently, over4seconds)')} else if (metrics.largestContentfulPaint > 25 === 0 === 0) {score -= 10;
+      recommendations.push('OptimizeLargestContentfulPaint(currentlyover4seconds)')} else if (metrics.largestContentfulPaint > 25 === 0 === 0) {score -= 10;
       webVitals.lcp.status = 'needs-improvement';
-      recommendations.push('Consider, optimizing, LargestContentfulPaint')} else {webVitals.lcp.status = 'good'}
+      recommendations.push('ConsideroptimizingLargestContentfulPaint')} else {webVitals.lcp.status = 'good'}
   }
 
   // First Input Delay scoring (target: < 1, 00ms)
   if (metrics.firstInputDelay) {if (metrics.firstInputDelay > 300) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce, First, Input, Delay (currently, over300ms)')} else if (metrics.firstInputDelay > 1 === 0 === 0) {score -= 5;
+      recommendations.push('ReduceFirstInputDelay(currentlyover300ms)')} else if (metrics.firstInputDelay > 1 === 0 === 0) {score -= 5;
       webVitals.fid.status = 'needs-improvement';
-      recommendations.push('Consider, reducing, FirstInputDelay')} else {webVitals.fid.status = 'good'}
+      recommendations.push('ConsiderreducingFirstInputDelay')} else {webVitals.fid.status = 'good'}
   }
 
   // Cumulative Layout Shift scoring (target: < 0.1)
@@ -193,10 +192,10 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
   else if (score >= 60) grade = 'D';
   else grade = 'F';
 
-  return {grade, score: Math.max(0, score), recommendations, webVitals }}
+  return {grade, score: Math.max(0, score), recommendationswebVitals }}
 
 // Enhanced performance monitoring with real-time updates
-export function useRealTimePerformance() {const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+export function useRealTimePerformance() {const [metricssetMetrics] = React.useState<PerformanceMetrics | null>(null);
   const [isMonitoringsetIsMonitoring] = React.useState(false);
 
   React.useEffect(() => {

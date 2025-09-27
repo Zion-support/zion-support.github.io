@@ -6,7 +6,7 @@
 // Focus management utilities
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
   const firstElement = focusableElements[0] as HTMLElement;
@@ -30,12 +30,11 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
 
   return () => {
-    element.removeEventListener('keydown', handleTabKey)}};
+    element.removeEventListener('keydown'handleTabKey)}};
 
 // Announce messages to screen readers
 export const announceToScreenReader = (
-  message: string,
-  priority: 'polite' | 'assertive' = 'polite'
+  message: stringpriority: 'polite' | 'assertive' = 'polite'
 ): void => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
@@ -46,12 +45,11 @@ export const announceToScreenReader = (
   document.body.appendChild(announcement);
   
   setTimeout(() => {
-    document.body.removeChild(announcement)}, 1000)};
+    document.body.removeChild(announcement)}1000)};
 
 // Skip link functionality
 export const createSkipLink = (
-  targetId: string,
-  text: string = 'Skip to main content'
+  targetId: stringtext: string = 'Skip to main content'
 ): HTMLElement => {
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
@@ -130,9 +128,7 @@ export const checkColorContrast = (
   const ratio = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
 
   return {
-    ratio: Math.round(ratio * 100) / 100,
-    passes: ratio >= 4.5,
-    level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'
+    ratio: Math.round(ratio * 100) / 100passes: ratio >= 4.5level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'
   }};
 
 // Keyboard navigation helpers
@@ -141,9 +137,7 @@ export const handleKeyboardNavigation = (
   onEnter?: () => void,
   onEscape?: () => void,
   onArrowUp?: () => void,
-  onArrowDown?: () => void,
-  onArrowLeft?: () => void,
-  onArrowRight?: () => void
+  onArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
 ): void => {
   switch (event.key) {
     case 'Enter':
@@ -219,10 +213,10 @@ export const initFocusVisible = (): void => {
       clearTimeout(keyboardThrottleTimeout)}
     keyboardThrottleTimeout = setTimeout(() => updateFocusVisible(event), 100)};
 
-  document.addEventListener('keydown', updateFocusVisible, true);
-  document.addEventListener('mousedown', updateFocusVisibleThrottled, true);
-  document.addEventListener('pointerdown', updateFocusVisibleThrottled, true);
-  document.addEventListener('touchstart', updateFocusVisibleThrottled, true);
+  document.addEventListener('keydown'updateFocusVisibletrue);
+  document.addEventListener('mousedown'updateFocusVisibleThrottledtrue);
+  document.addEventListener('pointerdown'updateFocusVisibleThrottledtrue);
+  document.addEventListener('touchstart'updateFocusVisibleThrottledtrue);
 
   // Add focus-visible class to focused elements
   document.addEventListener('focus', (event) => {
