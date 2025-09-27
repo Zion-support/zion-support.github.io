@@ -106,38 +106,38 @@ export default function Home(): JSX.Element {
           </header>
 
 					{/* Features, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
+					<section, className="mb-20">
+						<h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
 							Our, Service, s
 						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+						<div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
 							{featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
 								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, classNam, e="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
-									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
-									<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
+									<div, className="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
+									<h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
+									<p, className="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
 								</d, i, v>
 							))};
 						</d, i, v>
 					</secti, o, n>
 
 					{/* Testimonials, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
+					<section, className="mb-20">
+						<h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
 							What, Our, Clients S, a, y
 						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+						<div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
 							{testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
 								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-6">
-									<div, classNam, e="flex, m, b-4">
+									<div, className="flex, m, b-4">
 										{[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
 											<span, ke, y={i} classNa, m, e="te, x, t-yell, o, w-400, tex, t-xl">⭐</sp, a, n>
 										))};
 									</d, i, v>
-									<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, itali, c">"{testimoni, a, l.conte, n, t}"</p>
+									<p, className="te, x, t-gr, a, y-600, m, b-4, itali, c">"{testimoni, a, l.conte, n, t}"</p>
 									<d, i, v>
-										<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</p>
-										<p, classNam, e="te, x, t-gr, a, y-500, tex, t-sm">{testimoni, a, l.compa, n, y}</p>
+										<p, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</p>
+										<p, className="te, x, t-gr, a, y-500, tex, t-sm">{testimoni, a, l.compa, n, y}</p>
 									</d, i, v>
 								</d, i, v>
 							))};
@@ -145,12 +145,12 @@ export default function Home(): JSX.Element {
 					</secti, o, n>
 
 					{/* CTA, Sectio, n */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
-							<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
+					<section, className="te, x, t-cent, e, r">
+						<div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
+							<h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
 								Ready, to, Transform Your, Busines, s?
 							</h2>
-							<p, classNam, e="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
+							<p, className="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
 							</p>
 							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};

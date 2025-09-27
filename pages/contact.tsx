@@ -62,7 +62,7 @@ export default function Contact(): JSX.Element {
 
 	if (isSubmitted) {
 		return (
-			<>
+    <>
 				<SEO />
 				<Head>
 					<title>Thank You - Zion App</title>
@@ -88,12 +88,13 @@ export default function Contact(): JSX.Element {
 						</div>
 					</div>
 				</div>
-			</>
-		);
+			
+    </>
+  );
 	}
 
 	return (
-		<>
+    <>
 			<SEO />
 			<Head>
 				<title>Contact Us - Zion App</title>
@@ -252,7 +253,7 @@ export default function Contact(): JSX.Element {
 										na, m, e="ema, i, l"
 										val, u, e={formDa, t, a.ema, i, l};
 										onChan, g, e={handleInputChan, g, e};
-										required, classNam, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+										required, className="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
 									/>
 								</d, i, v>
 
@@ -327,31 +328,31 @@ export default function Contact(): JSX.Element {
 								</div>
 							</div>
 
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
+									<div, className="flex, item, s-cent, e, r">
+										<div, className="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
+											<span, className="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
 										</d, i, v>
 										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
+											<p, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
+											<p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
 										</d, i, v>
 									</d, i, v>
 
-									<div, classNam, e="flex, item, s-cent, e, r">
-										<div, classNam, e="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, classNam, e="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
+									<div, className="flex, item, s-cent, e, r">
+										<div, className="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
+											<span, className="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
 										</d, i, v>
 										<d, i, v>
-											<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
-											<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
+											<p, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
+											<p, className="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
 										</d, i, v>
 									</d, i, v>
 								</d, i, v>
 							</d, i, v>
 
-							<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
-								<h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
-								<p, classNam, e="mb-6, opacit, y-90">
+							<div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
+								<h3, className="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
+								<p, className="mb-6, opacit, y-90">
 									Schedule, a, free consultation, to, discuss your, project, needs.
 								</p>
 								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
@@ -363,6 +364,7 @@ export default function Contact(): JSX.Element {
 						</d, i, v>
 					</d, i, v>
 				</d, i, v>
-			</d, i, v>		</>
-	);
+			</d, i, v>		
+    </>
+  );
 }

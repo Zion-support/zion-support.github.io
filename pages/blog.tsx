@@ -93,16 +93,15 @@ export default function Blog(): JSX.Element {
 
 	return (
     <>
-      
-      {/* <EnhancedSEO, titl, e="Bl, o, g - Zion, Tech, Solutions"
-				descripti, o, n="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
-				keywor, d, s={['Technology, Blo, g', 'AI, Insight, s', 'Cloud, Computin, g', 'Digital, Transformatio, n', 'Tech, Trend, s']};
-				u, r, l="htt, p, s://zi, o, n.app/bl, o, g"
-				ty, p, e="websi, t, e"
+      {/* <EnhancedSEO title="Bl, o, g - Zion, Tech, Solutions"
+				description="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
+				keywords={["Technology, Blo, g", "AI, Insight, s", "Cloud, Computin, g", "Digital, Transformatio, n", "Tech, Trend, s"]};
+				url="htt, p, s://zi, o, n.app/bl, o, g"
+				type="websi, t, e"
 			/> */};
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
+			<div, className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+				<div, className="container mx-auto px-4 py-8 max-w-7xl">
+					<nav, className="mb-8">
 						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
 							← Back, to, Home						</Link>
 					</nav>
@@ -117,8 +116,8 @@ export default function Blog(): JSX.Element {
 					</header>
 
 					{/* Category, Filte, r */};
-					<section, classNam, e="mb-12">
-						<div, classNam, e="flex, fle, x-wrap, justif, y-center, ga, p-4">
+					<section, className="mb-12">
+						<div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">
 							{categori, e, s.m, a, p((catego, r, y) => (
 								<button, ke, y={catego, r, y};
 									onCli, c, k={() => handleCategoryFilt, e, r(catego, r, y)};
@@ -134,23 +133,23 @@ export default function Blog(): JSX.Element {
 					</div>
 
 					{/* Blog, Post, s */};
-					<section, classNam, e="mb-16">
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
+					<section, className="mb-16">
+						<div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
 							{filteredPos, t, s.m, a, p((po, s, t) => (
 								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, classNam, e="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
-										<span, classNam, e="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
+									<div, className="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
+										<span, className="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
 									</d, i, v>
-									<div, classNam, e="p-6">
-										<div, classNam, e="flex, item, s-center, tex, t-sm, tex, t-gr, a, y-500, m, b-3">
+									<div, className="p-6">
+										<div, className="flex, item, s-center, tex, t-sm, tex, t-gr, a, y-500, m, b-3">
 											<sp, a, n>{po, s, t.auth, o, r}</sp, a, n>
-											<span, classNam, e="mx-2">•</sp, a, n>
+											<span, className="mx-2">•</sp, a, n>
 											<sp, a, n>{po, s, t.da, t, e}</sp, a, n>
-											<span, classNam, e="mx-2">•</sp, a, n>
+											<span, className="mx-2">•</sp, a, n>
 											<sp, a, n>{po, s, t.readTi, m, e}</sp, a, n>
 										</d, i, v>
-										<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
-										<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
+										<h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
+										<p, className="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
 										<button, onClic, k={() => handleReadMo, r, e(po, s, t)};
 											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hover:te, x, t-bl, u, e-800, transitio, n-colo, r, s"										>
 											Read More →
@@ -162,15 +161,15 @@ export default function Blog(): JSX.Element {
 					</div>
 
 					{/* Newsletter, Signu, p */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
-							<h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+					<section, className="te, x, t-cent, e, r">
+						<div, className="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
+							<h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 								Stay, Update, d
 							</h2>
-							<p, classNam, e="te, x, t-gr, a, y-600, m, b-6">
+							<p, className="te, x, t-gr, a, y-600, m, b-6">
 								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
 							</p>
-							<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
+							<div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
 								<input, typ, e="ema, i, l"
 									placehold, e, r="Enter, your, email"
 									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
@@ -184,6 +183,7 @@ export default function Blog(): JSX.Element {
 						</d, i, v>
 					</secti, o, n>
 				</d, i, v>
-			</d, i, v>		</>
-	);
+			</d, i, v>		
+    </>
+  );
 }

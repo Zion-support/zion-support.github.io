@@ -505,7 +505,7 @@ export default function Dashboard(): JSX.Element {
       <div className="min-h-screen bg-gray-50">
         {/* Navigation */}
         <nav className="bg-white shadow-sm border-b">
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
@@ -550,7 +550,7 @@ export default function Dashboard(): JSX.Element {
 
         {/* Footer */}
         <footer className="bg-white border-t">
-          <div className="max-w-7 xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-sm text-gray-500">© 2024 Zion Tech Solutions. All rights reserved.</p>
