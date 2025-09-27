@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-27T07:04:15.506Z",
+  "timestamp": "2025-09-27T07:13:03.620Z",
   "issues": [
     {
       "type": "warning",
@@ -374,7 +374,7 @@
       "file": "src/components/EnhancedSearch.tsx",
       "line": 193,
       "issue": "Click handler without keyboard support",
-      "code": "{query && (<buttononClick={(()) => {;",
+      "code": "{query && (<buttononClick={(()) = aria-label=\"Button\"> {;",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
@@ -382,7 +382,7 @@
       "file": "src/components/EnhancedSearch.tsx",
       "line": 237,
       "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => setSortOrd, e, r(prev => prev === \"asc' ? \"desc\" : \"asc\")}                    className=\"te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center\"",
+      "code": "<buttononClick={() = aria-label=\"Button\"> setSortOrd, e, r(prev => prev === \"asc' ? \"desc\" : \"asc\")}                    className=\"te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center\"",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
@@ -550,7 +550,7 @@
       "file": "src/components/Navigation.tsx",
       "line": 75,
       "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={(()) => {aria-label=\"{() => {",
+      "code": "<buttononClick={(()) = aria-label=\"Button\"> {aria-label=\"{() => {",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
@@ -566,7 +566,7 @@
       "file": "src/components/Navigation.tsx",
       "line": 75,
       "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={(()) => {aria-label=\"{() => {",
+      "code": "<buttononClick={(()) = aria-label=\"Button\"> {aria-label=\"{() => {",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
@@ -868,7 +868,7 @@
     {
       "type": "warning",
       "file": "pages/blog.tsx",
-      "line": 148,
+      "line": 183,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -876,23 +876,31 @@
     {
       "type": "warning",
       "file": "pages/blog.tsx",
-      "line": 104,
+      "line": 123,
       "issue": "Click handler without keyboard support",
-      "code": "onClick={() => handleCategoryChange(category)}",
+      "code": "onClick={() => trackClick(`filter-${category.toLowerCase()}`, 'engagement')}",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/blog.tsx",
-      "line": 132,
+      "line": 162,
       "issue": "Click handler without keyboard support",
-      "code": "onClick={() => handleReadMore(post)}",
+      "code": "onClick={() => {",
+      "suggestion": "Add keyboard event handlers for accessibility"
+    },
+    {
+      "type": "warning",
+      "file": "pages/blog.tsx",
+      "line": 189,
+      "issue": "Click handler without keyboard support",
+      "code": "onClick={() => {",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/contact.tsx",
-      "line": 71,
+      "line": 129,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -900,7 +908,7 @@
     {
       "type": "warning",
       "file": "pages/contact.tsx",
-      "line": 86,
+      "line": 144,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -908,7 +916,15 @@
     {
       "type": "warning",
       "file": "pages/contact.tsx",
-      "line": 101,
+      "line": 162,
+      "issue": "Input without proper label",
+      "code": "<input",
+      "suggestion": "Add label element or aria-label for form accessibility"
+    },
+    {
+      "type": "warning",
+      "file": "pages/contact.tsx",
+      "line": 176,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -916,7 +932,7 @@
     {
       "type": "warning",
       "file": "pages/dashboard.tsx",
-      "line": 29,
+      "line": 115,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -924,15 +940,7 @@
     {
       "type": "warning",
       "file": "pages/dashboard.tsx",
-      "line": 40,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 471,
+      "line": 229,
       "issue": "Input without proper label",
       "code": "<input",
       "suggestion": "Add label element or aria-label for form accessibility"
@@ -940,529 +948,89 @@
     {
       "type": "warning",
       "file": "pages/dashboard.tsx",
-      "line": 509,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 568,
-      "issue": "Input without proper label",
-      "code": "<input",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 634,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 669,
-      "issue": "Input without proper label",
-      "code": "<input",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 690,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 713,
-      "issue": "Input without proper label",
-      "code": "<input",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 726,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 777,
-      "issue": "Input without proper label",
-      "code": "<input",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 790,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"checkbox\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 157,
+      "line": 308,
       "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => handleTabChange(tab)}",
+      "code": "onClick={() => {",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
-      "file": "pages/dashboard.tsx",
+      "file": "pages/enhanced-home.tsx",
+      "line": 156,
+      "issue": "Click handler without keyboard support",
+      "code": "onClick={() => trackClick('hero-cta-get-started', 'conversion')}",
+      "suggestion": "Add keyboard event handlers for accessibility"
+    },
+    {
+      "type": "warning",
+      "file": "pages/enhanced-home.tsx",
+      "line": 162,
+      "issue": "Click handler without keyboard support",
+      "code": "onClick={() => trackClick('hero-cta-demo', 'engagement')}",
+      "suggestion": "Add keyboard event handlers for accessibility"
+    },
+    {
+      "type": "warning",
+      "file": "pages/enhanced-home.tsx",
+      "line": 240,
+      "issue": "Click handler without keyboard support",
+      "code": "onClick={() => handleSelectPlan(tier.id)}",
+      "suggestion": "Add keyboard event handlers for accessibility"
+    },
+    {
+      "type": "warning",
+      "file": "pages/enhanced-home.tsx",
       "line": 272,
       "issue": "Click handler without keyboard support",
-      "code": "onClick={() => handleTabChan, g, e(tab)};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 577,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 752,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => window.location.reload()}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 517,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => window.location.reload()};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 1120,
-      "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => handleTabChange(tab.id)}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/dashboard.tsx",
-      "line": 1165,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => handleTabChan, g, e(tab.id)};",
+      "code": "onClick={() => handleReadMore(post.slug)}",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/enhanced-home.tsx",
-      "line": 96,
+      "line": 293,
       "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => trackClick('hero-cta-primary''conversion')}",
+      "code": "onClick={() => trackClick('final-cta', 'conversion')}",
       "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/enhanced-home.tsx",
-      "line": 102,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('hero-cta-secondary''engagement')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/enhanced-home.tsx",
-      "line": 106,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"hero-c, ta-primary\"\"conversion\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/enhanced-home.tsx",
-      "line": 111,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"he, ro-cta-secondary\"\"engagement\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/enhanced-home.tsx",
-      "line": 215,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"fin, al-cta\"\"conversion\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/faq.tsx",
-      "line": 124,
-      "issue": "Input without proper label",
-      "code": "<input",
-      "suggestion": "Add label element or aria-label for form accessibility"
     },
     {
       "type": "warning",
       "file": "pages/faq.tsx",
       "line": 133,
-      "issue": "Input without proper label",
-      "code": "<inputtype=\"text\"",
-      "suggestion": "Add label element or aria-label for form accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/faq.tsx",
-      "line": 166,
       "issue": "Click handler without keyboard support",
-      "code": ",,onClick={() => toggleItem(item.id)}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/faq.tsx",
-      "line": 225,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('contact-us-faq''cta')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/faq.tsx",
-      "line": 233,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"contact-us-faq\"\"cta\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/faq.tsx",
-      "line": 262,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"schedule-call-faq\"\"cta\")};",
+      "code": "onClick={() => toggleItem(item.id)}",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/index.tsx",
-      "line": 173,
+      "line": 214,
       "issue": "Missing H1 heading",
-      "code": "              <h2className=\"text-4, xl, font-bold, tex, t-gray-900mb-4\">Why, Choose, Zion Tech?</h2>",
+      "code": "              <h2 className=\"text-4 xl font-bold text-gray-900 mb-4\">Why Choose Zion Tech?</h2>",
       "suggestion": "Add H1 heading for proper document structure"
     },
     {
       "type": "warning",
       "file": "pages/index.tsx",
-      "line": 151,
+      "line": 185,
       "issue": "Click handler without keyboard support",
-      "code": "onClick={handleGetStarted};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 155,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={(()) => {setSelectedCategory(category);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 166,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={(()) => {setSelectedCatego, r, y(category);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 248,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={(()) => {setSelectedProject(project.id);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 262,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={(()) => {setSelectedProje, c, t(project.id);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 347,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={(()) => {setSelectedProject(project.id);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 366,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={(()) => {setSelectedProje, c, t(project.id);",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 398,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('start-project-button''cta')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 406,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"sta, rt-project-button\"\"cta\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/portfolio.tsx",
-      "line": 435,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"view-case-studies-button\"\"cta\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/privacy-policy.tsx",
-      "line": 210,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('contact-privacy''cta')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/privacy-policy.tsx",
-      "line": 218,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"contact-privacy\"\"cta\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/privacy-policy.tsx",
-      "line": 232,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('view-faq-privacy''cta')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/privacy-policy.tsx",
-      "line": 236,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"vi, ew-faq-privacy\"\"cta\")};",
+      "code": "onClick={handleGetStarted}",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/services.tsx",
-      "line": 225,
+      "line": 208,
       "issue": "Click handler without keyboard support",
-      "code": ",,,, onClick={() => setSelectedService(null)}",
+      "code": "onClick={() => {",
       "suggestion": "Add keyboard event handlers for accessibility"
     },
     {
       "type": "warning",
       "file": "pages/services.tsx",
-      "line": 247,
+      "line": 284,
       "issue": "Click handler without keyboard support",
-      "code": ",, onClick={() => setSelectedService(null)};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/services.tsx",
-      "line": 421,
-      "issue": "Click handler without keyboard support",
-      "code": "onClick={() => trackClick('get-quote-button''cta')}",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/services.tsx",
-      "line": 429,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"g, et-quote-button\"\"cta\")};",
-      "suggestion": "Add keyboard event handlers for accessibility"
-    },
-    {
-      "type": "warning",
-      "file": "pages/services.tsx",
-      "line": 444,
-      "issue": "Click handler without keyboard support",
-      "code": "<buttononClick={() => trackClick(\"schedule-consultation-button\"\"cta\")};",
+      "code": "onClick={() => trackClick('services-cta-contact', 'conversion')}",
       "suggestion": "Add keyboard event handlers for accessibility"
     }
   ],
@@ -1494,9 +1062,9 @@
   ],
   "metrics": {
     "totalComponents": 51,
-    "componentsWithIssues": 46,
+    "componentsWithIssues": 44,
     "criticalIssues": 0,
-    "warningIssues": 183,
+    "warningIssues": 129,
     "infoIssues": 0
   }
 }

@@ -72,7 +72,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
                 {currentTi, m, e?.toLocaleTimeString() || '--:--:--"};
               </span>
-              <buttononClick={(()) => {aria-label="{() => {
+              <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
             ar, i, a-lab, e, l="setShowTaskManager(true)};
@@ -88,12 +88,12 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
               </button>
               <buttononClick={onToggleDarkMode};
                 className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colors"
-                ar, i, a-label="Toggledarkmode"              >
+                ar, i, a-label="Toggledarkmode"               aria-label="Button">
                 {isDarkMode ? "☀️' : '🌙"};
               </button>
               
               {/* MobileMenuButton */};
-              <buttononClick={(()) => {aria-label="{() => {
+              <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
             ar, i, a-lab, e, l="setIsMenuOpen(!isMenuOpen)};

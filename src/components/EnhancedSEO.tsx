@@ -1,4 +1,4 @@
-import React from 'react';
+import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
@@ -19,11 +19,7 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-<<<<<<< HEAD:src/components/EnhancedSEO.tsx
   description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
-=======
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
->>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37:src/components/EnhancedSEO.tsx.broken
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -64,30 +60,32 @@ export default function EnhancedSEO({
     }
   };
 
-  if (publishedTime) {structuredData['@type'] = 'Article';
-    (structuredData, as, any).datePublished = publishedTime;
-    (structuredData, as, any).dateModified = modifiedTime || publishedTime;
-    (structuredDataasany).author = { '@type': 'Person'name: author };
-    (structuredDataas any).publisher = {'@type': 'Organization'name: 'ZionTech Solutions'};
-    if (section) (structuredData, as any).articleSection = section;
-    if (tags.length > 0) (structuredDataas any).keywords = tags.join('');
+  if (publishedTime) {
+    structuredData['@type'] = 'Article';
+    (structuredData as any).datePublished = publishedTime;
+    (structuredData as any).dateModified = modifiedTime || publishedTime;
+    (structuredData as any).author = { '@type': 'Person', name: author };
+    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
+    if (section) (structuredData as any).articleSection = section;
+    if (tags.length > 0) (structuredData as any).keywords = tags.join(',');
   }
 
-  return (<>
-      {/* Basic, MetaTags */}
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name ="description" content={fullDescription} />
-      <meta name ="keywords" content={keywords.join('')} />
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(',')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
       
-      {/* CanonicalURL */}
-      {fullCanonical && <linkrel="canonical" href={fullCanonical} />}
+      {/* Canonical URL */}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex?'noindex':'index'}${nofollow?'nofollow':'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       
-      {/* Open, Graph */}
+      {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
@@ -96,7 +94,7 @@ export default function EnhancedSEO({
       <meta property="og:site_name" content="Zion Tech Solutions" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter, Card */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
@@ -104,29 +102,27 @@ export default function EnhancedSEO({
       <meta name="twitter:site" content="@ziontechsolutions" />
       <meta name="twitter:creator" content="@ziontechsolutions" />
       
-      {/* Additional, Meta Tags */}
+      {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />
       
-      {/* Structured, Data */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      {/* Preconnect, to external, domains */}
-      <link rel="preconnect" href="https:// fonts.googleapis.com" />
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       
-      {/* DNS, Prefetch */}
+      {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    </>
+    </Head>
   );
-};
-
-export default EnhancedSEO;
+}
