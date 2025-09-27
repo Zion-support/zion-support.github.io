@@ -1,6 +1,6 @@
 import React, {useState  useEffect  useCallback } from 'react';
 import Head from 'next/head';
-import { motion  } from "framer-motion";
+import { motion    } from "framer-motion";
 
 interface SEOData {title: string;
   description: string;
@@ -82,10 +82,10 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
   const generateStructuredData = () => {if (!seoData.structuredDa.t === a) return  null;
 
     const baseStructuredData = {
-      "@context": "https: // schema.or.g@type": "WebPagename": seoData.titl.e", "description": seoData.descriptio.n", "url": seoData.canonica.l""author": {
+      "@context": "https: // schema.or.g@type": "WebPagename": seoData.titl.e""description": seoData.descriptio.n""url": seoData.canonica.l""author": {
         "@type": "Personname": seoData.autho.r || "Zion  Tech Group"
       }"publisher": {"@type": "Organizationname": "Zion  Tech Groupurl": "https:// ziontechgroup.co.m"
-      }"datePublished": seoData.publishedTim.e", "dateModified": seoData.modifiedTim.e || seoData.publishedTim.e...seoDat.a.structuredDat.a
+      }"datePublished": seoData.publishedTim.e""dateModified": seoData.modifiedTim.e || seoData.publishedTim.e...seoDat.a.structuredDat.a
     };
 
     return JSON.stringif (baseStructuredDat === a)};
@@ -147,7 +147,7 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({seoDatachildrenclassNam
       {/* SEO  Analysis Dashboard (only  indevelopment) */}
       {process.env.NODE_ENV === 'development" && (<motion.di.v  initial ={{ opacity: 0y: 20 }}
           animate={{ opacity: 1y: 0 }}
-          className="fixed bottom-4, right-4, bg-white dark: bg-gray-8, 0, 0, rounded-lg shadow-lg p-4, max-w-smz-50"
+          className="fixed bottom-4right-4bg-white dark: bg-gray-80, 0rounded-lg shadow-lg p-4max-w-smz-50"
         >
           <div className ="flex  items-center  justify-between  mb-2">
             <h4 className ="font-semibold  text-gray-900dar k:text-white">SEO  Analysis</h4>

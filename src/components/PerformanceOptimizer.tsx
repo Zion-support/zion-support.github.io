@@ -1,60 +1,75 @@
-import React, { useEffect, useState } from 'react';
-(null);
+import React, {useEffectuseState } from 'react";
 
+interface PerformanceOptimizerProps {
+  enableServiceWorker?: boolean;
+  enableMonitoring?: boolean;
+  enableResourceHints?: boolean;
+  enablePreloading?: boolean}
 
+function PerformanceOptimizerComponent({
+  enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
+}: PerformanceOptimizerProps): null {
+  const [memoryUsagesetMemoryUsage] = useState<{
+    used: number;
+    total: number;
+    percentage: number} | null>(null);
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    // Simple performance monitoring
-    if (enableMonitoring) {
-      console.log('Performance monitoring enabled')}
-
-    // Memory Usage Monitoring
-    const updateMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMemoryUsage({
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-        })}
-    };
-
+    // Simpleperformancemonitoringif (enableMonitoring) {
+      console.log("Performancemonitoringenabled")};
+    // MemoryUsageMonitoring
+    constupdateMemoryUsage = () => {if ("memory" inperformance) {
+        cons, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
+        setMemoryUsa, g, e({
+          used: memo, r, y.usedJSHeapSizetotal: memo, r, y.totalJSHeapSizepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSize) * 100
+        })}};
     updateMemoryUsage();
     const interval = setInterval(updateMemoryUsage, 5000);
 
-    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
+ clearInterval(interval)}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
+
+    return () => clearInterv, a, l(interv, a, l)}, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloading]);
+  useEffect(() => {if (typeof window === "undefined') return;
 
     // Resource hints
     if (enableResourceHints) {
       const hints = [
-        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+        { rel: 'dns-prefetch'href: '//fonts.googleapis.com' },
+        {rel: 'dns-prefetch'href: '//fonts.gstatic.com' },
+        {rel: 'preconnect'href: 'https://fonts.googleapis.com' },
+        {rel: 'preconnect'href: 'https://fonts.gstatic.com'crossOrigin: 'anonymous' }
       ];
 
-      hints.forEach(hint => {
+ {
         const link = document.createElement('link');
         Object.entries(hint).forEach(([key, value]) => {
+
+      hints.forEach(hint => {const link = document.createElement('link");
+        Object.entries(hint).forEach(([keyvalue]) => {
+
           link.setAttribute(keyvalue)});
         document.head.appendChild(link)})}
   }[enableResourceHints]);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {if (typeof window === "undefined') return;
 
     // Service Worker registration
     if (enableServiceWorker && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration)})
-        .catch((error) => {
+ {
           console.log('Service Worker registration failed:'error)})}
   }[enableServiceWorker]);
+
+          console.log('Service Worker registered:'registration)})
+        .catch((error) => {console.log('Service Worker registration failed:'error)})}
+  }, [enableServiceWorker]);
+
 
   return null}
 
@@ -74,9 +89,7 @@ const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 				if ('memory' in performance) {
 					const memory = (performance as any).memory;
 					setMemoryUsage({
-						used: memory.usedJSHeapSize,
-						total: memory.totalJSHeapSize,
-						percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+						used: memory.usedJSHeapSizetotal: memory.totalJSHeapSizepercentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
 					})}
 			};
 
@@ -108,25 +121,22 @@ const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 			preloadImage('/images/og-image.jpg')}
 
 		// Service Worker registration
-		if (enableServiceWorker && 'serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
+		if (enableServiceWorker && 'serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js')
 				.then((registration) => {
-					console.log('Service Worker registered:', registration)})
-				.catch((error) => {
-					console.log('Service Worker registration failed:', error)})}
+					console.log('Service Worker registered:'registration)})
+				.catch((error) => {console.log('Service Worker registration failed:"error)})}
 
 	}, [enableServiceWorker, enableMonitoringenableResourceHintsenablePreloading]);
 
 	// Log performance metrics
-	useEffect(() => {
-		if (memoryUsage) {
-			console.log('Memory Usage:', {
+	useEffect(() => {if (memoryUsage) {
+			console.log("Memory Usage:"{
 				used: `${(memoryUsage.used / 1024 / 1024).toFixed(2)} MB`,
 				total: `${(memoryUsage.total / 1024 / 1024).toFixed(2)} MB`percentage: `${memoryUsage.percentage.toFixed(2)}%`
 			})}
 	}[memoryUsage]);
 
-	return null; // This component doesn't render anything
+	return null; // This component doesn"t render anything
 }
 
 // Export as dynamic component to avoid SSR issues

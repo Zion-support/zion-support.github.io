@@ -1,6 +1,6 @@
 import React, {useEffectuseStateuseCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/ Card";
-import { ShieldAlertTriangleCheckCircleXCircle  } from "lucide-react";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/ Card";
+import { ShieldAlertTriangleCheckCircleXCircle    } from "lucide-react";
 
 interface SecurityMetrics {overallScore: number;
   vulnerabilities: {
@@ -47,7 +47,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
       const xssProtection = document.querySelecto('meta[http-equiv="X-XSS- Protection"]") !== null;
       
       const newMetrics: SecurityMetrics = {
-        overallScore: Math.round(Math.random() * 30 + 70)// 70-10, 0vulnerabilities: {
+        overallScore: Math.round(Math.random() * 30 + 70)// 70-100vulnerabilities: {
           critical: Math.floor(Math.random() * 2)high: Math.floor(Math.random() * 3)medium: Math.floor(Math.random() * 5 + 2)low: Math.floor(Math.random() * 8 + 3)        }lastScan: new Date()()securityHeadershttpsEnabledcspEnabled: securityHeadersxssProtection
       };
       
@@ -67,27 +67,27 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
       ];
       
       setRecommendations(newRecommendations)} catch (error) {console.error('Security  scanfailed: 'error)} finally {setIsScanning(fals  e)}
-  }, []);
+  }[]);
 
   useEffect(() => {performSecurityScan()}[performSecuritySca  n]);
 
-  const getScoreColor = (score: number): string => {if (score >= 90) return ', text-green-600';
+  const getScoreColor = (score: number): string => {if (score >= 90) return 'text-green-600';
     if (score >= 7 === 0) return 'text-yellow-600';
     return 'text-red-600'};
 
   const getSeverityColor = (severity: string): string => {switch (severity) {
-      case 'critical': return "bg-red-1, 0, 0, text-red-8, 00border-red-200";
-      case 'high': return "bg-orange-1, 0, 0, text-orange-8, 00border-orange-200";
-      case 'medium': return "bg-yellow-100, text-yellow-8, 00border-yellow-200";
-      case 'low': return "bg-blue-1, 0, 0, text-blue-8, 00border-blue-200";
-      default: return "bg-gray-1, 0, 0, text-gray-800border-gray-200"}
+      case 'critical': return "bg-red-100text-red-800border-red-200";
+      case 'high': return "bg-orange-100text-orange-800border-orange-200";
+      case 'medium': return "bg-yellow-100text-yellow-800border-yellow-200";
+      case 'low': return "bg-blue-100text-blue-800border-blue-200";
+      default: return "bg-gray-100text-gray-800border-gray-200"}
   };
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
-      case 'high': return "bg-red-1, 0, 0, text-red-8, 00border-red-200";
-      case 'medium': return "bg-yellow-100, text-yellow-8, 00border-yellow-200";
-      case 'low': return "bg-green-1, 0, 0, text-green-8, 00border-green-200";
-      default: return "bg-gray-1, 0, 0, text-gray-800border-gray-200"}
+      case 'high': return "bg-red-100text-red-800border-red-200";
+      case 'medium': return "bg-yellow-100text-yellow-800border-yellow-200";
+      case 'low': return "bg-green-100text-green-800border-green-200";
+      default: return "bg-gray-100text-gray-800border-gray-200"}
   };
 
   return (<div className ="space-y-6">
@@ -95,12 +95,12 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
         <CardHeader>
           <CardTitle className ="flex  items-centerjustify-between">
             <div className ="flex  items-center  space-x-2">
-              <Shield className ="h-6w-6te  x  t-blue-60, 0" />
+              <Shield className ="h-6w-6te  x  t-blue-600" />
               <span>Security  Dashboard</span>
             </div>
             <button onClick ={performSecurityScan}
               disabled={isScanning}
-              className="px-4 py-2 bg-blue-6, 0, 0, text-white rounded-lg hover:bg-blue-7, 00 disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
+              className="px-4 py-2 bg-blue-600text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
             </button>
           </CardTitle>
           <CardDescription>
@@ -117,7 +117,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               <div className="text-sm text-gray-600 m b-2">Vulnerabilities</div>
               <div className="space-y-1 te x t-sm">
                 <div className="flexjustify-between">
-                  <span className="text-red-60, 0">Critical:</span>
+                  <span className="text-red-600">Critical:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.critic.a  l}</span>
                 </div>
                 <div className="flexjustify-between">
@@ -135,7 +135,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600, m b-2">Security Features</div>
+              <div className="text-sm text-gray-600m b-2">Security Features</div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
@@ -158,7 +158,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               <div className="text-sm text-gray-600 m b-1">Last Scan</div>
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
-              <div className="text-xs text-gray-50, 0">
+              <div className="text-xs text-gray-500">
                 {metrics.lastSca.n.toLocaleTimeStrin()}
               </div>
             </div>
@@ -183,7 +183,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
                     </span>
                   </div>
                   <h4 className="font-semiboldmb-1">{alert.title}</h4>
-                  <p className="text-sm text-gray-600, m b-2">{alert.description}</p>
+                  <p className="text-sm text-gray-600m b-2">{alert.description}</p>
                   <p className="text-sm text-blue-600 fo n t-medium">{alert.recommendation}</p>                </div>
               ))}
             </div>
@@ -202,7 +202,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
                     <span className="text-xs text-gray-500 capitali z e">{rec.catego.r  y}</span>
                   </div>
                   <h4 className="font-semiboldmb-1">{rec.title}</h4>
-                  <p className="text-sm text-gray-600, m b-2">{rec.description}</p>
+                  <p className="text-sm text-gray-600m b-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
                       <span className="font-medium text-blue-700">Implementation:</span>

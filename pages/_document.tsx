@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import {Html, HeadMainNextScript   } from "next/document";
 
 export default function Document() {
   return (
@@ -14,7 +14,7 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <meta name="description" content="Zion App - Advanced Technology Solutions" />
-        <meta name="keywords" content="technology, AI, cloud computing, digital transformation" />
+        <meta name="keywords" content="technologyAIcloud computingdigital transformation" />
         <meta name="author" content="Zion App" />
         <meta property="og: title" content="Zion App - Advanced Technology Solutions" />
         <meta property="og:description" content="Leading provider of cutting-edge technology solutions" />
@@ -32,7 +32,7 @@ export default function Document() {
            ,
 		__html: `
               if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
+                window.addEventListener('load'function() {
                   navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
                       console.log('SW registered: 'registration)})

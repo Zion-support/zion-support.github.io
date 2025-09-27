@@ -1,11 +1,4 @@
- {getCLS(reportWebVita, l, s);
-      getFID(reportWebVita, l, s);
-      getFCP(reportWebVita, l, s);
-      getLCP(reportWebVita, l, s);
-      getTTFB(reportWebVitals)})}, []);
-
-import { useEffect } from 'react';
-
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface WebVitalsMetric {
   name: string;
   value: number;
@@ -13,29 +6,27 @@ interface WebVitalsMetric {
   id: string;
   navigationType: string}
 
-export function reportWebVitals(metric: WebVitalsMetric) {
-  // Send to analytics service
+export function reportWebVitals(metric: WebVitalsMetric) {// Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event'metric.name{
-      event_category: 'Web Vitals'event_label: metric.idvalue: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true
-    })}
+ {
+    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vitals").th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, CPgetTTFB }) => {getC, L, S(reportWebVita, l, s);
+      getF, I, D(reportWebVita, l, s);
+      getF, C, P(reportWebVita, l, s);
+      getL, C, P(reportWebVita, ls);
+      getTTFB(reportWebVitals)})}[]);  // Log to console in development
+  if (process.env.NODE_ENV === "development') {console.log('Web Vitals:'metric)}
 
-
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:', metric)}
 }
 
-export function WebVitals() {
-  useEffect(() => {
+export function WebVitals() {useEffect(() => {
     // Load web-vitals library dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
       getCLS(reportWebVitals);
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);
-      getTTFB(reportWebVitals)})}, []);
+      getTTFB(reportWebVitals)})}[]);
 
   return null}
 
@@ -45,14 +36,17 @@ export function WebVitals() {
 			return}
 
 		// Import web-vitals dynamically to avoid SSR issues
-		import("web-vitals").then(({ getCLS, getFID, getFCP, getLCPgetTTFB }) => {
+ {
+
+		import("web-vitals").then(({getCLS, getFID, getFCPgetLCPgetTTFB }) => {
+
 			getCLS(reportWebVitals);
 			getFID(reportWebVitals);
 			getFCP(reportWebVitals);
 			getLCP(reportWebVitals);
 			getTTFB(reportWebVitals)})}[]);
 
-	return null; // This component doesn't render anything
+	return null; // This component doesn"t render anything
 }
 
 

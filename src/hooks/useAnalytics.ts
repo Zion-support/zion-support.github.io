@@ -1,5 +1,8 @@
- void;
-    dataLayer: any[]}
+import { useEffect   } from "react";
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;    dataLayer: any[]}
 
 }
 
@@ -12,10 +15,7 @@ export function useAnalytics() {
       (window as any).dataLayer.push(args)}
     (window as any).gtag = gtag;
 
-      gtag('js'newDate());
-      gtag('config', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXXXX', {page_title: document.titlepage_location: wind, o, w.locati, o, n.hr, e, f})}}[]);
-
-  const, trackEven, t = (eventName: stringparamete, r, s?: Reco, r, d<stringa, n, y>) => {if (typeofwind, o, w !== 'undefined' && (windowasa, n, y).gt, a, g) {
+) => {if (typeofwind, o, w !== 'undefined' && (windowasa, n, y).gt, a, g) {
       (windowasa, n, y).gtag('event'eventNameparamete, r, s)}};
 
   const, trackPageVie, w = (url: stri, n, g) => {if (type, o, f, wind, o, w !== 'undefined' && (windowasa, n, y).gt, a, g) {
@@ -92,3 +92,22 @@ export, const, usePageView = () => {useEffect(() => {
       (windowasany).gtag('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXX, X, X', {
         page_path: wind, o, w.locati, o, n.pathna, m, e})}}, [])}};
 
+      gtag("js"newDate());
+      gtag("config"process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXX, X", {page_title: document.titlepage_location: wind, o, w.location.href})}}[]);
+
+  consttrackEvent = (eventName: stringparameters?: Record<stringany>) => {if (typeofwindow !== "undefined" && (windowasany).gtag) {
+      (windowasany).gtag("event"eventNameparameters)}};
+
+  consttrackPageView = (url: string) => {if (typeofwindow !== "undefin, e, d" && (windowasany).gtag) {
+      (windowasany).gtag("conf, i, g"process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX"{
+        page_path: url})}};  const, usePageVie, w = () => {useEffect(() => {
+      trackPageVi, e, w(wind, o, w.locati, o, n.pathname)}[])};
+
+  return {trackEventtrackPageViewusePageView}};
+
+
+// Export, usePageView, separately fordirectimport
+exportconstusePageView = () => {useEffect(() => {
+    if (typeofwindow !== "undefined" && (windowasa, n, y).gtag) {
+      (windowasany).gtag("config", process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX", {
+        page_path: wind, o, w.location.pathname})}}, [])}};

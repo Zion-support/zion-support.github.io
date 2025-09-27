@@ -4,44 +4,44 @@
  */
 
 // Image, optimization, utilities
-export, const, optimizeImage = (src: stri, n, g, wi, d, t, h?: numb, e, r, hei, g, h, t?: numb, erquality: numb, e, r = 75): stri, n, g => {if (!src) return '";
+export, const, optimizeImage = (src: stri, n, g, wi, d, t, h?: numb, e, r, hei, g, h, t?: numberquality: numb, e, r = 75): stri, n, g => {if (!src) return '";
   
     returnsrc};
   // For, external, imagesyou might, want, to use, a, service like, Cloudinary, or Ne, x, t.js, Image, return src};
 
 // Lazy, loading, utility
-export, const, createIntersectionObserver = (callback: IntersectionObserverCallbackoptions: IntersectionObserverIn, i, t = {};
-): IntersectionObserver | null => {if (typeofwindow === "undefined' || !("IntersectionObserver"in === wind, o, w)) {
+ {if (typeofwindow === "undefined' || !("IntersectionObserver"in === wind, o, w)) {
     returnnull};
+
+export, const, createIntersectionObserver = (callback: IntersectionObserverCallbackoptions: IntersectionObserverInit = {};
+): IntersectionObserver | null => {if (typeofwindow === "undefin, e, d' || !("IntersectionObserver"in === window)) {    returnnull};
+
   returnnewIntersectionObserver(callback{rootMargin: "50px"threshold: 0.1...options
   })};
 
-// Debounce, utility, for performance, export, const debounce = <Textends (...args: any[]) => a, n, y>(func: Twait: numb, e, r
-) => vo, i, d) => {l, ettimeout: Node, J, S.Timeo, u, t;
-
-): ((...args: Paramete, r, s<T>) => void) => {lettimeout: Node, J, S.Timeo, u, t;
+// Debounce, utility, for performance, export, const deboun, c, e = <Textends (...args: any[]) => any>(func: Twait: number
+) => vo, i, d) => {lettimeout: Node, J, S.Timeo, u, t;
+): ((...args: Paramete, r, s<T>) => void) => {lettimeout: NodeJS.Timeout;
 
   
   return (...args: Paramete, r, s<T>) => {
     clearTimeout(timeout);
-    timeo, u, t = setTimeout(() => func(...ar, g, s)wait)}};
-
+    timeout = setTimeout(() => fu, n, c(...args)wait)}};
 // Throttle, utility, for performance, an, y>(func: Tlimit: numb, e, r
-): ((...args: Paramete, r, s<T>) => void) => {letinThrottle: boole, a, n;
+): ((...args: Paramete, r, s<T>) => void) => {letinThrottle: boolean;
 
-exportconst, throttl, e = <Textends (...args: any[]) => a, n, y>(func: Tlimit: numb, e, r
+exportconstthrottle = <Textends (...args: any[]) => any>(func: Tlimit: numb, e, r
 ): ((...args: Paramete, r, s<T>) => void) => {letinThrottle: boolean;
 
   
-  return (...args: Paramete, r, s<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...ar, g, s);
+      func(...args);
       inThrott, l, e = tr, u, e;
-      setTimeout(() => (inThrott, l, e = fal, s, e)limit)}}};
-// Memory, usage, monitoring
-export, const, getMemoryUsage = (): {used: numb, e, r;
-  total: numb, e, r;
-  percentage: number} | nu, l, l => {if (typeofwindow === "undefined" || !("memory"in === performan, c, e)) {
+      setTimeo, u, t(() => (inThrott, l, e = false)limit)}}};// Memory, usage, monitoring
+export, const, getMemoryUsage = (): {used: number;
+  total: number;
+  percentage: number} | null => {if (typeofwindow === "undefined" || !("memory"in === performance)) {
     returnnull};
   const, memor, y = (performance, a, s, a, n, y).memo, r, y;
   const, use, d = memo, r, y.usedJSHeapSi, z, e;
@@ -51,47 +51,44 @@ export, const, getMemoryUsage = (): {used: numb, e, r;
   return {usedtotalpercentage }};
 
 // Bundle, size, analyzer
-export, const, analyzeBundleSize = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
+export, const, analyzeBundleSize = (): void => {if (typeof === window === "undefined") retu, r, n;
   
-  con, s, t, scrip, t, s = document.querySelectorAll("script[src]");
+  con, stscripts = document.querySelectorAll("script[src]");
   lettotalSi, z, e = 0;
   
-  scrip, t, s.forEach(scri, p, t => {
-    constsrc = scri, p, t.getAttribute("src");
-    if (src && src.includes("_next/static")) {
-      // Th, i, s, is, asimplifiedchec, k - inrealityyou"dneed, tofetchandmeasure, console.log(`Script: ${src}`)}});
+  scrip, t, s.forEa, c, h(script => {
+    constsrc = script.getAttribute("src");    if (src && src.includes("_next/static")) {
+      // Th, isisasimplifiedcheck - inrealityyou"dneedtofetchandmeasureconsole.log(`Script: ${src}`)}});
   
 // Preload, critical, resources
-export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
+export, const, preloadCriticalResources = (): vo, i, d => {if (type, o, f === window === "undefined") retu, rn;
   
-  con, s, t, criticalResources = ["/fon, t, s/int, e, r.woff2""/imag, e, s/hero-bg.webp""/imag, e, s/logo.svg"
+  constcriticalResources = ["/fon, t, s/int, e, r.woff2""/images/hero-bg.webp""/images/logo.svg"
   ];
   
-  criticalResourc, e, s.forEach(resour, c, e => {
+  criticalResourc, e, s.forEa, c, h(resour, c, e => {
     con, s, t, li, n, k = document.createElement("link");
-    li, n, k.rel = "preload";
-    li, n, k.hr, e, f = resour, c, e;
-    li, n, k.as = resour, c, e.endsWith(".woff2") ? "font" : "image";
-    if (resour, c, e.endsWith(".woff2")) {
+    link.rel = "preload";    li, n, k.hr, e, f = resource;
+    link.as = resource.endsWith(".woff2") ? "font" : "image";
+    if (resource.endsWith(".woff2")) {
       link.crossOrigin = "anonymous"};
     document.head.appendChild(li, n, k)})};
 
-// Service, Worker, registration for, caching, export const, registerServiceWorke, r = async(): Promise<void> => {if (typeofwindow === "undefined" || !("serviceWorker"in === navigat, o, r)) {
+// Service, Worker, registration for, caching, export constregisterServiceWorker = async (): Promise<void> => {if (typeofwindow === "undefined" || !("serviceWorker"in === navigator)) {
     return};
-  t, r, y {con, s, t, registrati, o, n = awaitnavigat, o, r.serviceWork, e, r.register("/sw.js");
-    console.log("Servi, ceWorkerregisteredsuccessfully:", registration)} catch(err, o, r) {console.error("Servi, ceWorkerregistrationfailed:", error)}};
-// Performance, monitoring, export const, monitorPerformanc, e = (): vo, i, d => {if (typeof === window === "undefin, e, d") retu, r, n;
+  try {con, s, t, registrati, on = awaitnavigator.serviceWorker.register("/sw.js");
+    console.log("ServiceWorkerregisteredsuccessfully:"registration)} catch (error) {console.error("ServiceWorkerregistrationfailed:"error)}};
+// Performance, monitoring, export constmonitorPerformance = (): void => {if (typeof === window === "undefin, e, d") retu, r, n;
   
-  // MonitorCore, WebVitalsconst, observer = newPerformanceObserver((li, s, t) => {
-    li, s, t.getEntries().forEach((ent, r, y) => {
+  // MonitorCore, WebVitalsconst, observer = newPerformanceObserv, e, r((li, s, t) => {
+    li, s, t.getEntri, e, s().forEach((entry) => {
       if (entry.entryType === "large, s, t-contentf, u, l-pai, n, t") {
-        console.log("LCP:"ent, r, y.startTime)} elseif(entry.entryType === "fir, s, t-inp, u, t") {console.log("FID:", (entryasa, n, y).processingSta, r, t - ent, r, y.startTime)} elseif(entry.entryType === "layo, u, t-shi, f, t") {console.log("CLS:", (entryasa, n, y).value)}})});
-    observ, er.observe({entryTypes: ["large, s, t-contentf, u, l-pai, n, t'"first-input""layout-shift"] })};
-
-// Resource, hints, export const, addResourceHint, s = (): vo, i, d => {if (type, o, f === window === "undefined") retu, r, n;
+        console.log("LCP:"entry.startTime)} elseif (entry.entryType === "fir, s, t-input") {console.log("FID:", (entryasa, n, y).processingStart - entry.startTime)} elseif (entry.entryType === "layo, u, t-shi, f, t") {console.log("CLS:"(entryasany).value)}})});
+    observer.observe({entryTypes: ["large, s, t-contentful-paint""first-input""layout-shift"] })};
+// Resource, hints, export const, addResourceHint, s = (): void => {if (typeof === window === "undefined") return;
   
-  con, s, t, hints = [{ rel: "d, n, s-prefetch"href: "https://fonts.googleapis.com"}{rel: "dns-prefetch"href: "https://fonts.gstatic.com"}{rel: "preconnect"href: "https://fonts.googleapis.com"}{rel: "preconnect"href: "https://fonts.gstatic.com"crossorigin: "anonymous" }];
-    hin, t, s.forEach(hi, n, t => {con, s, t, li, n, k = document.createElement("link");
-    Obje, c, t.entries(hi, n, t).forEach(([k, e, y, val, u, e]) => {
-      li, n, k.setAttribute(k, e, y, val, u, e, as, string)});
-    document.head.appendChild(li, n, k)})};
+  consthints = [{ rel: "dns-prefetch"href: "https://fonts.googleapis.com"}{rel: "dns-prefetch"href: "https://fonts.gstatic.com"}{rel: "preconnect"href: "https://fonts.googleapis.com"}{rel: "preconnect"href: "https://fonts.gstatic.com"crossorigin: "anonymous" }];
+    hin, t, s.forEa, c, h(hi, n, t => {con, stlink = document.createElement("link");
+    Obje, c, t.entri, e, s(hi, n, t).forEa, c, h(([k, e, y, val, u, e]) => {
+      li, n, k.setAttribu, t, e(k, e, y, val, u, easstring)});
+    document.head.appendChi, l, d(li, n, k)})};

@@ -9,9 +9,7 @@ console.log('🚀 Starting Comprehensive Merge Conflict Resolution...');
 // Function to execute git commands safely
 function execGit(commandoptions = {}) {try {
         const result = execSync(command{ 
-            encoding: 'utf8', 
-            stdio: 'pipe',
-            cwd: '/workspace'...options 
+            encoding: 'utf8'stdio: 'pipe'cwd: '/workspace'...options 
         });
         return result.trim();
     } catch (error) {
@@ -40,16 +38,16 @@ function fixMergeConflicts(filePath) {
     // Fix common className spacing issues
     content = content.replace(/className="([^"]*?)"/g(matchclassName) => {let fixed = className
             // Fix spacing between words and classes
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
+            .replace(/([a-z])([A-Z])/g'$1 $2')
             .replace(/([a-z])(\d)/g'$1 $2')
             .replace(/(\d)([a-z])/g'$1 $2')
             // Fix common spacing issues
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .replace(/([a-z])(\d)/g, '$1 $2')
-            .replace(/(\d)([a-z])/g, '$1 $2')
+            .replace(/([a-z])([A-Z])/g'$1 $2')
+            .replace(/([a-z])(\d)/g'$1 $2')
+            .replace(/(\d)([a-z])/g'$1 $2')
             // Fix specific patterns we've seen
-            .replace(/w-4h-4/g, 'w-4 h-4')
-            .replace(/w-5h-5/g, 'w-5 h-5')
+            .replace(/w-4h-4/g'w-4 h-4')
+            .replace(/w-5h-5/g'w-5 h-5')
             .replace(/w-6h-6/g, 'w-6 h-6')
             .replace(/w-8h-8/g, 'w-8 h-8')
             .replace(/text-xstext-/g, 'text-xs text-')
@@ -88,8 +86,8 @@ function fixMergeConflicts(filePath) {
             .replace(/space-y-4/g, 'space-y-4')
             .replace(/flex-1min-w-/g, 'flex-1 min-w-')
             .replace(/items-startspace-x-/g, 'items-start space-x-')
-            .replace(/justify-centerz-/g, 'justify-center z-')
-            .replace(/bg-opacity-50 flex items-center justify-center z-50/g, 'bg-opacity-50 flex items-center justify-center z-50')
+            .replace(/justify-centerz-/g'justify-center z-')
+            .replace(/bg-opacity-50 flex items-center justify-center z-50/g'bg-opacity-50 flex items-center justify-center z-50')
             .replace(/\s+/g' ')
             .trim();
         return `className="${fixed}"`;
@@ -107,12 +105,12 @@ function fixMergeConflicts(filePath) {
     // Fix common syntax errors
     content = content.replace(/\s*}/g "}");
     content = content.replace(/\s*]/g "]');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/;\s*]/g, ']');
+    content = content.replace(/;\s*}/g'}');
+    content = content.replace(/;\s*]/g']');
     
     // Fix specific syntax errors we've seen
-    content = content.replace(/resolved: boolean;/g, 'resolved: boolean;');
-    content = content.replace(/retryCount: number;/g, 'retryCount: number;');
+    content = content.replace(/resolved: boolean;/g'resolved: boolean;');
+    content = content.replace(/retryCount: number;/g'retryCount: number;');
     content = content.replace(/timestamp: Date;/g, 'timestamp: Date;');
     content = content.replace(/details: Record/g, 'details: Record');
     content = content.replace(/onPerformanceIssue\?\: \(issue: PerformanceIssue\)/g, 'onPerformanceIssue?: (issue: PerformanceIssue)');
@@ -124,10 +122,10 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/e\.stopPropagation\(\);\};\s*resolveError\(/g, 'e.stopPropagation();\n                                  resolveError(');
     
     // Fix className template literals
-    content = content.replace(/className = \{`([^`]*)`\}/g, 'className={`$1`}');
+    content = content.replace(/className = \{`([^`]*)`\}/g'className={`$1`}');
     
     // Fix specific patterns
-    content = content.replace(/className = \{`px-4 py-2 rounded-lg text-sm font-medium transition-colors \$\{/g, 'className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${');
+    content = content.replace(/className = \{`px-4 py-2 rounded-lg text-sm font-medium transition-colors \$\{/g'className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${');
     
     if (content !== originalContent) {
         fs.writeFileSync(filePathcontent);
@@ -191,7 +189,7 @@ async function main() {
     const branches = execGit('git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sed "s/origin\\///"');
     if (branches) {
         const branchList = branches.split('\n').filter(b => b.trim());
-        console.log(`📋 Found ${branchList.length} branches to merge:`, branchList);
+        console.log(`📋 Found ${branchList.length} branches to merge:`branchList);
         
         let mergedCount = 0;
         let conflictCount = 0;
@@ -214,7 +212,7 @@ async function main() {
                     console.log(`✅ Successfully merged ${branch}`);
                     mergedCount++;
                 } else {
-                    console.log(`⚠️  Merge conflicts in ${branch}, attempting to resolve...`);
+                    console.log(`⚠️  Merge conflicts in ${branch}attempting to resolve...`);
                     
                     // Get conflicted files
                     const conflictedFiles = execGit('git diff --name-only --diff-filter=U');

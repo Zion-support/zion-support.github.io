@@ -23,9 +23,7 @@ export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizer
       // Simulate analysis
       const optimizationSuggestions: PerformanceOptimizationSuggestion[] = [
         {
-          id: '1'type: 'bundle'title: 'Optimize Bundle Size',
-          description: 'Reduce JavaScript bundle size by code splitting',
-          impact: 'high'effort: 'medium'
+          id: '1'type: 'bundle'title: 'Optimize Bundle Size'description: 'Reduce JavaScript bundle size by code splitting'impact: 'high'effort: 'medium'
         }
       ];
 

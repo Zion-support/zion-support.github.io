@@ -1,17 +1,16 @@
-import {useMemo, useCallback } from 'react';
-import React{useStateuseEffect }  from 'react";
-
+import { useMemouseCallback   } from "react";
+import React{useStateuseEffect }  from "react";
 interface, ErrorDetail, s {message: stri, n, g;
   sta, c, k?: stri, n, g;
   compone, n, t?: stri, n, g;
   timestamp: numb, e, r;
-  userAgent: stri, n, g;
+  userAgent: string;
   url: string};
 interface, ErrorBoundaryStat, e {hasError: boole, a, n;
   error: Err, o, r | nu, l, l;
-  errorInfo: React.ErrorI, n, f.o | null};
+  errorInfo: React.ErrorInf.o | null};
 interface, ErrorReporterProp, s {children: React.ReactN, o, d.e;
-  onErr, o, r?: (error: ErrorDeta, i, l, s) => void};
+  onErr, o, r?: (error: ErrorDeta, ils) => void};
 exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError 
 }) => {const [errorStatesetErrorState] = useState<ErrorBoundaryState>({
     hasError: falseerror: nullerrorInfo: null
@@ -19,116 +18,121 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
   const [errorHistorysetErrorHistory] = useState<ErrorDetails[]>([]);
 
- {consthandleGlobalErr, o, r = (event: ErrorEve, n, t) => {
+ {consthandleGlobalError = (event: ErrorEvent) => {
       consterrorDetails: ErrorDetai, l, s = {
 
   useEffect(() => {consthandleGlobalErr, o, r = (event: ErrorEve, n, t) => {
-      consterrorDetails: ErrorDetai, l, s = {
+      consterrorDetails: ErrorDetai, ls = {
 
-        message: eve, n, t.messagestack: eve, nt.error?.stackcomponent: "Glob, a, l",
-        timestamp: Da, t, e.now()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
-
+        message: event.messagestack: event.error?.stackcomponent: "Glob, a, l",
+        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.location.href      };
       setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onError(errorDetails)};
-      // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporting'{method: "POST"headers: {
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
           "Content-Type": "application/json"}body: JS, O, N.stringif(errorDeta, i, l === s)
       }).catc(conso, l, e.e, r, r.or)};
 
- {con, sterrorDetails: ErrorDetai, l, s = {
-        message: eve, n, t.reas, o, n? .message || "Unhandled: Promise, Rejection"  : stack: eve, n, t.reason?.stackcomponent: "Promise",
+ {consterrorDetails: ErrorDetai, l, s = {
+        message: event.reason? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : stack : event.reason?.stackcomponent: "Promise",
 
     consthandleUnhandledRejecti, o, n = (event: PromiseRejectionEve, n, t) => {consterrorDetails: ErrorDetai, l, s = {
-        message: eve, n, t.reas, o, n? .message || "Unhandled: Promise, Rejection"  : stack: eve, n, t.reason?.stackcomponent: "Promise",
+        message: event.reason? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : stack : event.reason?.stackcomponent: "Promise",
 
-        timestamp: Da, t, e.now()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
-
+        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.location.href      };
       setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onError(errorDetails)};
-      // Send, to, error reportingservicefetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.stringif(errorDeta, i, l === s)
-      }).catc(conso, l, e.e, r, r.or)};
+      if (onEr, ro === r) {onError(errorDetails)};
+      // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
+          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
+      }).ca, t, c(conso, l, e.err.or)};
+    window.addEventListene("error"handleGlobalError);
+    window.addEventListene("unhandledrejection"handleUnhandledRejection);
 
-    wind, o, w.addEventListene("error"handleGlobalErr, o, r);
-    wind, o, w.addEventListene("unhandledrejection"handleUnhandledRejecti, o, n);
+    return () => {window.removeEventListene("error"handleGlobalError);
+      window.removeEventListene("unhandledrejection"handleUnhandledRejection)}}[onError]);
 
-    return () => {wind, o, w.removeEventListene("error"handleGlobalErr, o, r);
-      wind, o, w.removeEventListene("unhandledrejection", handleUnhandledReject, ion)}}[onError]);
+  constclearErrorHistory = () => {setErrorHistory([])};
 
-  const, clearErrorHistor, y = () => {setErrorHistory([])};
-
-  const, retr, y = () => {setErrorState({
+  constretry = () => {setErrorState({
       hasError: falseerror: nullerrorInfo: null
     })};
 
 
-        <divclassName="max-w-m, d, w-full, b, g-white, rounde, d-lg, shado, w-lgp-6">
+        <divclassName="max-w-mdw-fullbg-white, rounde, d-lgshadow-lgp-6">
           <divclassName="flexitems-centermb-4">
             <divclassName ="flex-shrink-0">
-              <svgclassName="h-8 w-8 tex, t-red-500" fi, l, l="none" viewBox="0, 02424" stroke="currentColor">
-                <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2, m  0, 4h.0, 1, m-6.9, 3, 8, 4, h, 1, 3.8, 5, 6, c  1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5, L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L  3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.5, 1.7, 322.5z" />              </svg>
+              <svgclassName="h-8 w-8 text-red-500" fill="none" viewBox="002424" stroke="currentColor">
+                <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M129v2m  0, 4h.0, 1, m-6.9, 3, 8, 4, h, 1, 3.8, 5, 6, c  1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5, L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L  3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 922.51.7322.5z" />              </svg>
 
-  if (errorState.hasE, rr.o === r) {return (<divclassName="m, i, n-h-scre, e, n, bg-gr, a, y-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-centerp-4">
-        <divclassNam, e="m, a, x-w-md, w-fu, l, l, bg-whi, t, e, round, e, d-lgshadow-lgp-6">
-          <divclassNam, e="fl, e, x, ite, ms-centermb-4">
-            <divclassNam, e ="flex-shrink-0">
-              <svgclassNam, e="h-8, w-8, t, e, x, t-red-500" fi, l, l="none" viewBox="00, 2424" stroke="currentColor">
-                <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 3, 3.1, 9, 2, 2.51.7322.5z" />              </svg>
+  if (errorState.hasErr.o === r) {return (<divclassName="min-h-scree, n, bg-gr, a, y-50, fl, e, x, ite, m, s-cent, erjustify-centerp-4">
+        <divclassName="max-w-mdw-fu, l, l, bg-whi, terounded-lgshadow-lgp-6">
+          <divclassName="flexitems-centermb-4">
+            <divclassName ="flex-shrink-0">
+              <svgclassName="h-8 w-8 text-red-500" fi, ll="none" viewBox="002424" stroke="currentColor">
+                <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M129v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.7, 3, 2, 16.5c-.77.8, 33.1922.51.7322.5z" />              </svg>
 
             </div>
-            <div, className ="ml-3">
+
               <h3className="tex, t-lg, fo, n, t-medi, u, m, te, x, t-gray-900" id="somethi, n, g-went-wrong">
+
+            <divclassName ="ml-3">
+              <h3className="text-lgfon, t-medi, umtext-gray-900" id="something-went-wrong">
+
                 Somethi, n, g, went, wron, g
               </h3>
 
-                We&apos;resorrybu, t, something, unexpecte, d, happen, e, d.              </p>
+                We&apos;resorrybutsomethingunexpected, happened.              </p>
             </div>
           </div>
           
-          <div, className ="mt-4">
-            <buttononClick ={retry};
-              className="w-fu, l, l, bg-bl, u, e-6, 0, 0, te, x, t-whi, t, e, px-4, py-2, round, ed-mdhover:bg-bl, u, e-7, 00, transiti, o, n-colorsdurati, o, n-2, 0, 0"
 
-              <pclassName ="tex, t-smte, x, t-gray-500">
-                We&ap, o, s;re, sorry, bu, t, something, unexpecte, d, happen, e, d.              </p>
+
+          <divclassName ="mt-4">
+
+            <buttononClick ={retry};
+              className="w-fullbg-bl, u, e-6, 0, 0, te, x, t-whi, t, e, px-4, py-2, rounded-mdhover:bg-bl, u, e-7, 00, transiti, o, n-colorsduration-200"
+
+              <pclassName ="text-smtext-gray-500">
+                We&apo, s;re, sorry, bu, t, something, unexpectedhappened.              </p>
             </div>
           </div>
           
-          <div, className ="mt-4">
-            <buttononClick ={retry};
-              className="w-fu, l, l, bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colorsdurati, o, n-2, 0, 0"
 
-             aria-label="TryAga, i, n">              TryAga, i, n
+
+          <divclassName ="mt-4">
+
+            <buttononClick ={retry};
+              className="w-fullbg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colorsduration-200"
+
+             aria-label="TryAgain">              TryAgain
             </button>
           </div>
 
-          {proce, s, s.env.NODE_ENV === "developme, n, t"&& (
+          {process.env.NODE_ENV === "development"&& (
 
-              <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hover:te, x, t-gr, a, y-800">
+              <summaryclassName="cursor-pointerte, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hover:text-gray-800">
                 Err, o, r, Detai, l, s
               </summary>
-              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2, roundedoverfl, o, w-auto">
+              <preclassName="mt-2 text-xs, bg-gr, a, y-100 p-2 roundedoverflow-auto">
 
             <detailsclassName ="mt-4">
-              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600, hover:te, x, t-gr, a, y-800">
-                ErrorDetai, l, s
+              <summaryclassName="cursor-pointer, te, x, t-sm, te, x, t-gr, a, y-600 hover:text-gray-800">                ErrorDetai, l, s
               </summary>
-              <preclassName ="mt-2text-xs, b, g-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
+              <preclassName ="mt-2text-xsbg-gray-100p-2roundedoverflow-auto">
 
-                {errorSta, t, e.er, r, o.r? .toStrin()};
-                {errorSta, t, e.errorI, n, f.o?.componentSta.ck};
+                {errorSta, t, e.erro.r? .toStrin()};
+                {errorSta, t, e.errorInf.o?.componentSta.ck};
               </pre>
             </details>
           )};
         </div>
       </div>
     )};
-  return (<divclassName ="err, o, r-reporter">
+  return (<divclassName ="error-reporter">
       {children};
-      {proce, s, s.e, n, v.NODE_ENV === "development" && errorHisto, r, y.leng, t, h > 0 && (
+      {process.env.NODE_ENV === "development" && errorHistory.length > 0 && (
 
-          <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-betwe, enmb-2">
+
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
               className="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, hov: e : r :te, x, t-gray-700"
@@ -150,9 +154,31 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
                 <div, className ="te, x, t-gr, a, y-400">
                   {new, Date()(err, o, r.timesta, m, p).toLocaleTimeString()}                </div>
               </div>
+
+          <divclassName="flexitems-cent, e, r, justi, f, y-betwe, enmb-2">
+            <h4className="text-smfont-mediumtext-gray-900" id="error-history">ErrorHistory</h4>
+            <buttononClick ={clearErrorHistory};
+              className="text-xste, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+
+        <divclassName="fixedbott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0 rounded-lgshadow-lgp-4 ma x-w-sm">
+          <divclassName="flexite, m, s-centerjustify-betweenmb-2">
+            <h4className="text-smfont-medi, umtext-gray-900" id="error-history">Err, orHistory</h4>
+            <buttononClick ={clearErrorHistory};
+              className="text-xste, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+             aria-label="Clear">
+              Clear
+            </button>
+          </div>
+          <divclassName="space-y-2 m, a, x-h-32 overflow-y-auto">
+            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, orindex) => (<divkey ={index} className="text-xste, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-200 pl-2">
+                <divclassName ="font-medium">{error.component}</div>
+                <divclassName ="truncate">{error.message}</div>
+                <divclassName ="text-gray-400">
+                  {ne, w, Da, t, e()(err, o, r.timestamp).toLocaleTimeString()}                </div>              </div>
+
             ))};
           </div>
-        </d, i, v>
+        </div>
       )};
     </div>
   )};

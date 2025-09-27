@@ -1,6 +1,6 @@
 import React, {useStateuseEffectuseRef } from 'react';
 import Link from 'next/link';
-import { useRouter  } from "next/router";
+import { useRouter    } from "next/router";
 
 interface NavigationItem {label: string;
   href: string;
@@ -31,7 +31,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
     document.addEventListene('mousedown'handleClickOutside);
 
     return () => {window.removeEventListene('scroll'handleScroll);
-      document.removeEventListene('mousedown'handleClickOutsid  e)}}, []);
+      document.removeEventListene('mousedown'handleClickOutsid  e)}}[]);
 
   useEffect(() => {// Close  mobile menu  on route  change
     setIsMobileMenuOpen(fals  e);
@@ -55,7 +55,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
       <div className ="max-w-7x  l  mx-auto  px-4s  m: px-6l  g:px-8">        <div className ="flex  justify-between  items-centerh-16">
           {/* Logo */}
           <Link href ="/" 
-            className="flex items-center space-x-2, text-xl font-bold text-gray-900, hover:text-blue-6, 0, 0, transition-colorsduration-200"            aria-label="Home"
+            className="flex items-center space-x-2text-xl font-bold text-gray-900hover:text-blue-600transition-colorsduration-200"            aria-label="Home"
           >
             <span>{log  o}</span>
           </Link>
@@ -81,7 +81,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
                       </svg>
                     </button>
 
-                    {activeDropdown === item.label && (<div className ="absolute  top-full  left-0mt-2, w-56, bg-white  rounded-lg  shadow-lg  border  border-gray-2, 0, 0, py-2animate-in  fade-in  slide-in-from-top-2durati  o  n-200">
+                    {activeDropdown === item.label && (<div className ="absolute  top-full  left-0mt-2w-56bg-white  rounded-lg  shadow-lg  border  border-gray-200py-2animate-in  fade-in  slide-in-from-top-2durati  o  n-200">
                         {item.children.map((child) => (<Link key ={child.label}
                             href={child.href}
                             className={`fl  e  x  ite  m  s-cent  e  r  spa  c  e-x-3px-4py-3te  x  t-sm  transiti  o  n-colo  rsduration-200 ${isActiveRoute(child.href)?'bg-blue-50text-blue-600border-r-2border-blue-600':'text-gray-700hover:bg-gray-50'}`}
@@ -124,8 +124,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({itemslogo
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              {isMobileMenuOpen ? (<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M6  18L  18, 6M  66l  1 : 2 : 12" />
-              )  : (<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M4  6h16  M  412h16  M  418h  1, 6" />              )}
+              {isMobileMenuOpen ? (<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M6  18L  186M  66l  1 : 2 : 12" />
+              )  : (<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M4  6h16  M  412h16  M  418h  16" />              )}
             </svg>
           </button>
         </div>

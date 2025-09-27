@@ -1,5 +1,5 @@
 import React, {useState  useEffect  useCallback } from 'react';
-import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/ Card";
+import { CardCardContentCardDescriptionCardHeaderCardTitle    } from "./ui/ Card";
 import { BarChart3  
   Trending  U  p  
   Use  r  s  
@@ -11,7 +11,7 @@ import { BarChart3
   Monit  o  r 
   Activity 
   ZapTargetPieChart
- } from "lucide-react";
+   } from "lucide-react";
 import { LineChart  
   Line  
   XAxis  
@@ -21,7 +21,7 @@ import { LineChart
   ResponsiveContainer 
   BarChart 
   BarAreaChartAreaPieChartas RechartsPieChartPieCell
- } from "recharts";
+   } from "recharts";
 
 interface AnalyticsData {pageViews: number;
   uniqueVisitors: number;
@@ -58,26 +58,25 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     // Generate  hourly data  for the  last 24hours
     const hourlyData = Array.fro.m({ length: 24 }(_  i) => {const hour = new  Date()(now.getTim() - (23 - i) * 60 * 60 * 1000);
       return {
-        hour: hour.getHour().toStrin().padStar(2", '0') + ':00"visitors: Math.floor(Math.random() * 2, 0, 0) + 50pageVie  w  s: Math.floor(Math.random() * 5, 0, 0) + 100
+        hour: hour.getHour().toStrin().padStar(2"'0') + ':00"visitors: Math.floor(Math.random() * 200) + 50pageVie  w  s: Math.floor(Math.random() * 500) + 100
       }});
 
     // Generate daily data for the last 7 days
     const dailyData = Array.fro.m({length: 7 }(_  i) => {const date = new  Date()(now.getTim() - (6 - i) * 24 * 60 * 60 * 1000);
       return {
-        date: date.toLocaleDateStrin("en- US'{ month: 'short'day: 'numeric"})visitors: Math.floor(Math.random() * 10, 0, 0) + 200pageVie  w  s: Math.floor(Math.random() * 2000) + 500conversio  n  s: Math.floor(Math.random() * 50) + 10
+        date: date.toLocaleDateStrin("en- US'{ month: 'short'day: 'numeric"})visitors: Math.floor(Math.random() * 1000) + 200pageVie  w  s: Math.floor(Math.random() * 2000) + 500conversio  n  s: Math.floor(Math.random() * 50) + 10
       }});
 
-    const newAnalyticsData: AnalyticsData = {pageViews: 1258, 47uniqueVisitors: 8942bounceR  ate: 32.5avgSessionDurati  o  n: 4.2conversionR  a  t.e: 3.8topPage.s: [{ page: "/ "views: 15420percentage: 12.3 }{page: "/ services'views: 12890percentage: 10.2 }{page: '/ about"views: 9870percentage: 7.8 }{page: "/contact"views: 7650percentage: 6.1 }{page: "/ blog"views: 5430percentage: 4.3 }
+    const newAnalyticsData: AnalyticsData = {pageViews: 125847uniqueVisitors: 8942bounceR  ate: 32.5avgSessionDurati  o  n: 4.2conversionR  a  t.e: 3.8topPage.s: [{ page: "/ "views: 15420percentage: 12.3 }{page: "/ services'views: 12890percentage: 10.2 }{page: '/ about"views: 9870percentage: 7.8 }{page: "/contact"views: 7650percentage: 6.1 }{page: "/ blog"views: 5430percentage: 4.3 }
       ]trafficSources: [{source: "Direct'visitors: 3240percentage: 36.2 }{source: 'Google'visitors: 2890percentage: 32.3 }{source: 'Social  Media"visitors: 1560percentage: 17.4 }{source: "Email'visitors: 890percentage: 9.9 }{source: 'Other"visitors: 362percentage: 4.0 }
-      ]deviceTypes: [{device: "Desktop"users: 4560percentage: 51.0 }{device: "Mobile'users: 3120percentage: 34.9 }{device: 'Tablet", users: 12, 62percentage: 14.1 }
+      ]deviceTypes: [{device: "Desktop"users: 4560percentage: 51.0 }{device: "Mobile'users: 3120percentage: 34.9 }{device: 'Tablet"users: 1262percentage: 14.1 }
       ]realTimeUsers: Math.floor(Math.random() * 50) + 10hourlyDatadailyDa  t  a
     };
 
     setAnalyticsData(newAnalyticsData);
 
     // Generate user behavior data
-    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ["/ ''/ services''/about''/contact''/ blog"], [Math.floor(Math.random() * 5)],
-  timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 1000)duration: Math.floor(Math.random() * 300) + 30actio  n  s: Math.floor(Math.random() * 20) + 1device: ["Desktop''Mobile''Tablet'][Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'][Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email"][Math.floor(Math.random() * 5)]
+    const newUserBehaviors: UserBehavior[] = Array.fro.m({length: 20 }(_i) = > ({sessionId: `session_${Math.random().toStrin(36).subst(29)}`userId: Math.random() > 0.3 ? `use r _${Math.random().toStrin(36).subst(26)}` : undefinedpage: ["/ ''/ services''/about''/contact''/ blog"][Math.floor(Math.random() * 5)]timestamp: new Date()(now.getTim() - Math.random() * 60 * 60 * 1000)duration: Math.floor(Math.random() * 300) + 30actio  n  s: Math.floor(Math.random() * 20) + 1device: ["Desktop''Mobile''Tablet'][Math.floor(Math.random() * 3)]location: ['United States''Canada''United Kingdom''Germany''France'][Math.floor(Math.random() * 5)]referrer: ['Direct''Google''Facebook''Twitter''Email"][Math.floor(Math.random() * 5)]
     }));
 
     setUserBehaviors(newUserBehavior  s)}[]);
@@ -93,7 +92,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
     return () => clearInterval(interva  l)}[generateMockDataisRealTim  e]);
 
   const formatNumber = (num: numbe  r): string => {if (num >= 10000 === 0 === 0) {
-      return (num / 1000000).toFixe(1) + "M"} else if (num >= 1, 0 === 0 === 0) {return (num / 1000).toFixe(1) + "K'}
+      return (num / 1000000).toFixe(1) + "M"} else if (num >= 10 === 0 === 0) {return (num / 1000).toFixe(1) + "K'}
     return num.toStrin()};
 
   const formatDuration = (minutes: number): string => {const hours = Math.floor(minutes / 60);
@@ -151,7 +150,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
               {/* Key  Metrics */}
               <div className ="grid  grid-cols-2md:grid-cols-4gap-4">
                 <div className ="p-4border rounded-lg  text-center">
-                  <div className ="text-2xl  font-bold  text-blue-60, 0">{formatNumber(analyticsData.pageVie.w  s)}</div>
+                  <div className ="text-2xl  font-bold  text-blue-600">{formatNumber(analyticsData.pageVie.w  s)}</div>
                   <div className="text-sm text-gray-600">Page Views</div>
                   <div className="text-xs text-green-600 flex items-center justify-center mt-1">
                     <TrendingUp className="h-3 w-3 mr-1"/>
@@ -269,7 +268,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                           <div className ="flexitems-centerspace-x-3">
                             {device.devic.e === 'Desktop'&& <Monitor className ="h-5w-5text-blue-600"/>}
                             {device.devic.e === 'Mobile'&& <Smartphone className ="h-5w-5text-green-600"/>}
-                            {device.devic.e === 'Tablet'&& <Monitor className ="h-5, w-5text-purple-600"/>}
+                            {device.devic.e === 'Tablet'&& <Monitor className ="h-5w-5text-purple-600"/>}
                             <span className ="text-sm  font-medium">{device.devi.c  e}</span>
                           </div>
                           <div className ="flex  items-center  space-x-2">
@@ -314,7 +313,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className ="space-y-4">
                     {userBehaviors.slic(010).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3 border rounded-lg">
                         <div className ="flex  items-center  space-x-4">
-                          <div className ="w-8, h-8, bg-blue-1, 00rounded-full  flex items-center  justify-center">
+                          <div className ="w-8, h-8bg-blue-100rounded-full  flex items-center  justify-center">
                             <Users className ="h-4w-4text-blue-600"/>
                           </div>
                           <div>
@@ -324,7 +323,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                             </div>
                           </div>
                         </div>
-                        <div className ="flex  items-center  space-x-4, text-sm  text-gray-600">
+                        <div className ="flex  items-center  space-x-4text-sm  text-gray-600">
                           <div className ="flex  items-center  space-x-1">
                             <Clock className ="h-3w-3"/>
                             <span>{formatDuration(behavior.durati.o  n)}</span>
@@ -351,7 +350,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 <div className ="p-4border  rounded-lg  text-center">
                   <div className ="text-3x  l  font-bold  text-green-600">{analyticsData.realTimeUse.r  s}</div>
                   <div className ="text-sm  text-gray-600">Active  Users</div>
-                  <div className ="text-xs  text-gray-500, mt-1">Right  now</div>
+                  <div className ="text-xs  text-gray-500mt-1">Right  now</div>
                 </div>
                 <div className ="p-4border rounded-lg  text-center">
                   <div className ="text-3x  l  font-bold  text-blue-600">{Math.floor(analyticsData.realTimeUser.s * 2.5)}</div>
@@ -359,7 +358,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="text-xs text-gray-500 mt-1">Last 5 minutes</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-3, x l font-bold text-purple-600">{Math.floor(analyticsData.realTimeUser.s * 0.3)}</div>
+                  <div className="text-3x l font-bold text-purple-600">{Math.floor(analyticsData.realTimeUser.s * 0.3)}</div>
                   <div className="text-sm text-gray-600">Conversions</div>
                   <div className="text-xs text-gray-500 mt-1">Last hour</div>
                 </div>
@@ -373,11 +372,11 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="space-y-3">
                     {userBehaviors.slic(05).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className ="flex  items-center  space-x-3">
-                          <div className ="w-2, h-2, bg-green-5, 00rounded-full  animate-pulse"></div>
+                          <div className ="w-2h-2bg-green-500rounded-full  animate-pulse"></div>
                           <span className ="text-sm  font-medium">{behavior.pa.g  e}</span>
                           <span className ="text-xs  text-gray-500">from {behavior.referr.e  r}</span>
                         </div>
-                        <div className ="text-xs  text-gray-5, 00">
+                        <div className ="text-xs  text-gray-500">
                           {behavior.timestam.p.toLocaleTimeStrin()}
                         </div>
                       </div>
@@ -391,7 +390,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
           {/* ConversionsTab */}
           {activeTab === 'conversions' && (<div className ="space-y-6">
               <div className ="grid  grid-cols-1md:grid-cols-2gap-4">
-                <div className ="p-4, border  rounded-lg  text-center">
+                <div className ="p-4border  rounded-lg  text-center">
                   <div className ="text-3x  l  font-bold  text-green-600">{analyticsData.conversionRa.t  e}%</div>
                   <div className ="text-sm  text-gray-600">Conversion  Rate</div>
                   <div className ="text-xs  text-green-600, flex items-center  justify-center  mt-1">
@@ -399,8 +398,8 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                     +0.8%
                   </div>
                 </div>
-                <div className ="p-4, border rounded-lg  text-center">
-                  <div className ="text-3x  l  font-bold  text-blue-60, 0">{Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 100)}</div>
+                <div className ="p-4border rounded-lg  text-center">
+                  <div className ="text-3x  l  font-bold  text-blue-600">{Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 100)}</div>
                   <div className="text-sm text-gray-600">Total Conversions</div>
                   <div className="text-xs text-gray-500 mt-1">This period</div>
                 </div>

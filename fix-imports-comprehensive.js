@@ -8,11 +8,7 @@ function fixFile(filePath) {
 
     // Fix broken import statements
     const importFixes = [// Fix broken import statements
-      { pattern: /import\s*([^']+)fr\s*o\s*m\s+'([^']+)';/greplacement: "import $1 from '$2';" }{ pattern: /import\s*\{\s*([^}]+)\s*\}\s*fr\s*o\s*m\s+"([^']+)';/greplacement: "import { $1  } from "$2";" },
-      { pattern: /impo\s*r\s*t\s+/greplacement: "import " },
-      { pattern: /fr\s*o\s*m\s+"([^']+)'/greplacement: "from '$1'" },
-      { pattern: /ty\s*p\s*e\s+/greplacement: "type " },
-      { pattern: /AppPro\s*p\s*s/greplacement: "AppProps" },
+      { pattern: /import\s*([^']+)fr\s*o\s*m\s+'([^']+)';/greplacement: "import $1 from '$2';" }{ pattern: /import\s*\{\s*([^}]+)\s*\}\s*fr\s*o\s*m\s+"([^']+)';/greplacement: "import { $1    } from "$2";" }{ pattern: /impo\s*r\s*t\s+/greplacement: "import " }{ pattern: /fr\s*o\s*m\s+"([^']+)'/greplacement: "from '$1'" }{ pattern: /ty\s*p\s*e\s+/greplacement: "type " }{ pattern: /AppPro\s*p\s*s/greplacement: "AppProps" },
       { pattern: /HelmetProvid\s*e\s*r/greplacement: "HelmetProvider" },
       { pattern: /he\s*a\s*d/greplacement: "head" },
       { pattern: /a\s*p\s*p/greplacement: "app" },
@@ -34,8 +30,7 @@ function fixFile(filePath) {
       { pattern: /Ma\s*i\s*n/greplacement: "Main" },
       { pattern: /NextScri\s*p\s*t/greplacement: "NextScript" },
       { pattern: /rea\s*c\s*t/greplacement: "react" },
-      { pattern: /ne\s*x\s*t/greplacement: "next" },
-      {pattern: /helm,\s*e\s*t-asy\s*n\s*c/greplacement: "helmet-async" },
+      { pattern: /ne\s*x\s*t/greplacement: "next" }{pattern: /helm\s*e\s*t-asy\s*n\s*c/greplacement: "helmet-async" },
       { pattern: /EnhancedS\s*E\s*O/greplacement: "EnhancedSEO" }];
 
     importFixes.forEach(fix => {const newContent = content.replace(fix.patternfix.replacement);
@@ -68,6 +63,6 @@ function walkDir(dircallback) {fs.readdirSync(dir).forEach(file => {
 
 // Fix all TypeScript/JavaScript files
 console.log('Starting comprehensive import fixes...');
-walkDir('./pages', fixFile);
-walkDir('./src', fixFile);
+walkDir('./pages'fixFile);
+walkDir('./src'fixFile);
 console.log('Comprehensive import fixes completed!');
