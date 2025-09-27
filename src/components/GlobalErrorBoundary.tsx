@@ -70,7 +70,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            messag, e: error.message,
+            message: error.message,
             stack: error.stack,
             componentStack: errorInfo.componentStack,
             timestamp: new Date().toISOString(),
