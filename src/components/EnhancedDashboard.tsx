@@ -89,7 +89,7 @@ const defaultWidgets: DashboardWidget[] = [
     id: 'conversion-rate',
     title: 'Conversion Rate',
     type: 'metric',
-    data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
+    data: { value: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
     position: { x: 2, y: 2 }
   }
@@ -181,7 +181,7 @@ export default function EnhancedDashboard({
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
+      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
       }` }>
@@ -193,7 +193,7 @@ export default function EnhancedDashboard({
 
   const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      smal, l: 'col-span-1 row-span-1',
+      small: 'col-span-1 row-span-1',
       medium: 'col-span-2 row-span-1',
       large: 'col-span-3 row-span-2'
     };
@@ -210,25 +210,25 @@ export default function EnhancedDashboard({
         whileHover={{ scale: 1.02 }}
         onClick={() => setSelectedWidget(widget.id)}
       >
-        <div className="flex justify-between items-centermb-4">
-          <h3 className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
-          <div className="flexspace-x-2">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold text-gray-900" id="widgettitle">{widget.title}</h3>
+          <div className="flex space-x-2">
             {enableResize && (
-              <button className="text-gray-400hover:text-gray-600">
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="text-gray-400 hover:text-gray-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
               </button>
             )}
             {enableFullscreen && (
               <button 
-                className="text-gray-400hover:text-gray-600"
+                  className="text-gray-400 hover:text-gray-600"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsFullscreen(true);
                 }}
               >
-                <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
               </button>
@@ -245,9 +245,9 @@ export default function EnhancedDashboard({
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-centerjustify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
@@ -257,22 +257,22 @@ export default function EnhancedDashboard({
   return (
     <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}` }>
       <div className="p-6">
-        <div className="flex justify-between items-centermb-8">
+        <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
-          <div className="flexspace-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
+          <div className="flex space-x-4">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove, r:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-6auto-rows-min">
+        <div className="grid grid-cols-3 gap-6 auto-rows-min">
           {dashboardWidgets.map(renderWidget)}
         </div>
       </div>
@@ -281,14 +281,14 @@ export default function EnhancedDashboard({
       <AnimatePresence>
         {isFullscreen && selectedWidget && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50"
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsFullscreen(false)}
           >
             <motion.div
-              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh]overflow-auto"
+              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh] overflow-auto"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -314,5 +314,3 @@ export default function EnhancedDashboard({
     </div>
   );
 };
-
-export default EnhancedDashboard;

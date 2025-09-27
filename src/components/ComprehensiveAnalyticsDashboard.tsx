@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { Activity, Users, Target, Zap, Shield, Eye } from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -44,30 +46,30 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       const newData: AnalyticsData = {
-        visitor, s: {
-          tota, l: Math.floor(Math.random() * 10000 + 5000),
+        visitors: {
+          total: Math.floor(Math.random() * 10000 + 5000),
           unique: Math.floor(Math.random() * 8000 + 3000),
           returning: Math.floor(Math.random() * 3000 + 1000),
           growth: Math.round((Math.random() - 0.5) * 50)
         },
         performance: {
-          pageSpee, d: Math.round(Math.random() * 30 + 70),
+          pageSpeed: Math.round(Math.random() * 30 + 70),
           loadTime: Math.round(Math.random() * 2000 + 1000),
           bounceRate: Math.round(Math.random() * 30 + 20),
           conversionRate: Math.round(Math.random() * 10 + 2)
         },
         security: {
-          scor, e: Math.round(Math.random() * 20 + 80),
+          score: Math.round(Math.random() * 20 + 80),
           threats: Math.floor(Math.random() * 5),
           vulnerabilities: Math.floor(Math.random() * 10 + 2)
         },
         seo: {
-          scor, e: Math.round(Math.random() * 25 + 75),
+          score: Math.round(Math.random() * 25 + 75),
           keywords: Math.floor(Math.random() * 200 + 150),
           backlinks: Math.floor(Math.random() * 500 + 300)
         },
         accessibility: {
-          scor, e: Math.round(Math.random() * 20 + 80),
+          score: Math.round(Math.random() * 20 + 80),
           issues: Math.floor(Math.random() * 8 + 2)
         }
       };
@@ -89,20 +91,20 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   }, [fetchAnalyticsData]);
 
   const performanceData: ChartData[] = [
-    { nam, e: 'Page Speed', value: analyticsData.performance.pageSpeed, color: '#3B82F6' },
+        { name: 'Page Speed', value: analyticsData.performance.pageSpeed, color: '#3B82F6' },
     { name: 'Load Time', value: 100 - (analyticsData.performance.loadTime / 50), color: '#10B981' },
     { name: 'Conversion Rate', value: analyticsData.performance.conversionRate * 10, color: '#F59E0B' },
     { name: 'Bounce Rate', value: 100 - analyticsData.performance.bounceRate, color: '#EF4444' }
   ];
 
   const securityData: ChartData[] = [
-    { nam, e: 'Security Score', value: analyticsData.security.score, color: '#10B981' },
+        { name: 'Security Score', value: analyticsData.security.score, color: '#10B981' },
     { name: 'Vulnerabilities', value: Math.max(0, 100 - analyticsData.security.vulnerabilities * 10), color: '#EF4444' },
     { name: 'Threat Level', value: Math.max(0, 100 - analyticsData.security.threats * 20), color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { nam, e: 'SEO Score', value: analyticsData.seo.score, color: '#3B82F6' },
+        { name: 'SEO Score', value: analyticsData.seo.score, color: '#3B82F6' },
     { name: 'Accessibility', value: analyticsData.accessibility.score, color: '#8B5CF6' },
     { name: 'Keywords Ranking', value: Math.min(100, analyticsData.seo.keywords / 3), color: '#10B981' }
   ];
@@ -119,8 +121,8 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-centerh-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2border-blue-600"></div>
+      <div className="flex items-center justify-center h-96">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -130,7 +132,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className="h-6 w-6text-blue-600" />
+            <Activity className="h-6 w-6 text-blue-600" />
             <span>Comprehensive Analytics Dashboard</span>
           </CardTitle>
           <CardDescription>
@@ -138,7 +140,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex space-x-1 mb-6 bg-gray-100 p-1rounded-lg">
+          <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
               { key: 'overview', label: 'Overview', icon: Target },
               { key: 'performance', label: 'Performance', icon: Zap },
@@ -154,7 +156,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                     : 'text-gray-600 hover:text-gray-900'
                 }` }
               >
-                <Icon className="h-4w-4" />
+                <Icon className="h-4 w-4" />
                 <span>{label}</span>
               </button>
             ))}
@@ -163,14 +165,14 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-8 w-8text-blue-600" />
+                      <Users className="h-8 w-8 text-blue-600" />
                       <div>
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
-                        <div className="text-smtext-gray-600">Total Visitors</div>
+                        <div className="text-sm text-gray-600">Total Visitors</div>
                         <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}` }>
                           {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%
                         </div>
