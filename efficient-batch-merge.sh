@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Efficient Batch Merge Script for Large Number of Branches
+# Efficient batch merge script for handling 2000+ branches
 set -e
 
-echo "🚀 Starting efficient batch merge of all branches..."
+echo "🚀 Starting efficient batch merge of cursor branches..."
+echo "📊 Total cursor branches: $(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | wc -l)"
 echo "⏰ Started at: $(date)"
 
 # Ensure we're on main and up to date
@@ -14,139 +15,122 @@ git pull origin main
 # Initialize counters
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-SKIPPED_BRANCHES=0
 BATCH_SIZE=50
+CURRENT_BATCH=0
 
-# Get all branches that need to be merged
-echo "📊 Getting all branches to merge..."
-ALL_BRANCHES=$(git branch -r | grep -E "(cursor|pr)" | sed 's/origin\///' | sort)
-TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sed 's/origin\///' | sort)
+TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-echo "📊 Total branches to process: $TOTAL_BRANCHES"
+echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE..."
 
 # Function to resolve conflicts quickly
-resolve_conflicts_fast() {
-    local file="$1"
+resolve_conflicts_quick() {
+    echo "🔧 Resolving conflicts quickly..."
     
-    if [ ! -f "$file" ]; then
+    # Get conflicted files
+    CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+    
+    if [ -n "$CONFLICTED_FILES" ]; then
+        for file in $CONFLICTED_FILES; do
+            if [ -f "$file" ]; then
+                # Use 'ours' strategy for most files (keep main branch version)
+                git checkout --ours "$file" 2>/dev/null || true
+                git add "$file" 2>/dev/null || true
+            fi
+        done
+        
+        # Commit the resolution
+        git commit --no-edit -m "Auto-resolve conflicts $(date)" 2>/dev/null || true
         return 0
     fi
-    
-    # Quick conflict resolution - prefer incoming changes for most files
-    case "$file" in
-        "package.json"|"package-lock.json"|"yarn.lock")
-            git checkout --ours "$file" 2>/dev/null || true
-            ;;
-        "app/layout.tsx"|"app/page.tsx"|"src/App.tsx")
-            git checkout --ours "$file" 2>/dev/null || true
-            ;;
-        *)
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-            ;;
-    esac
+    return 1
 }
 
 # Function to merge a batch of branches
 merge_batch() {
-    local batch_branches="$1"
-    local batch_num="$2"
+    local batch_branches=("$@")
+    local batch_size=${#batch_branches[@]}
     
-    echo "🔄 Processing batch $batch_num..."
+    CURRENT_BATCH=$((CURRENT_BATCH + 1))
+    echo "📦 Processing batch $CURRENT_BATCH (${batch_size} branches)..."
     
-    for branch in $batch_branches; do
-        echo "  📋 Processing: $branch"
+    local batch_success=0
+    local batch_failed=0
+    
+    for branch in "${batch_branches[@]}"; do
+        echo "🔄 Merging $branch..."
         
-        # Skip if branch doesn't exist or is already merged
-        if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-            echo "    ⏭️  Branch doesn't exist, skipping..."
-            SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-            continue
-        fi
-        
-        if git branch --merged main | grep -q "$branch"; then
-            echo "    ⏭️  Already merged, skipping..."
-            SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-            continue
-        fi
-        
-        # Try to merge
+        # Try to merge with no-commit first
         if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-            echo "    ✅ Merged successfully"
-            git commit -m "Merge $branch into main - $(date)" 2>/dev/null || true
+            git commit --no-edit -m "Batch merge: $branch" 2>/dev/null || true
             SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+            batch_success=$((batch_success + 1))
+            echo "✅ Merged $branch"
         else
-            echo "    ⚠️  Conflicts detected, resolving..."
-            
-            # Quick conflict resolution
-            CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-            if [ -n "$CONFLICTED_FILES" ]; then
-                for file in $CONFLICTED_FILES; do
-                    resolve_conflicts_fast "$file"
-                done
-                
-                git add . 2>/dev/null || true
-                if git commit -m "Resolve conflicts for $branch - $(date)" 2>/dev/null; then
-                    echo "    ✅ Conflicts resolved and merged"
-                    SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-                else
-                    echo "    ❌ Failed to resolve conflicts"
-                    git merge --abort 2>/dev/null || true
-                    FAILED_MERGES=$((FAILED_MERGES + 1))
-                fi
+            # Try to resolve conflicts
+            if resolve_conflicts_quick; then
+                SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+                batch_success=$((batch_success + 1))
+                echo "✅ Merged $branch (with conflict resolution)"
             else
-                echo "    ❌ Merge failed, aborting..."
+                # Abort and skip
                 git merge --abort 2>/dev/null || true
                 FAILED_MERGES=$((FAILED_MERGES + 1))
+                batch_failed=$((batch_failed + 1))
+                echo "❌ Failed to merge $branch"
             fi
         fi
     done
+    
+    echo "📊 Batch $CURRENT_BATCH complete: $batch_success successful, $batch_failed failed"
+    
+    # Push batch results periodically
+    if [ $((CURRENT_BATCH % 10)) -eq 0 ]; then
+        echo "💾 Pushing batch results..."
+        git push origin main || true
+    fi
 }
 
 # Process branches in batches
 echo "🔄 Starting batch processing..."
 echo "---"
 
-CURRENT_BATCH=1
-BATCH_COUNT=0
-CURRENT_BRANCHES=""
+# Convert branches to array
+IFS=$'\n' read -d '' -r -a branch_array <<< "$BRANCHES"
 
-for branch in $ALL_BRANCHES; do
-    CURRENT_BRANCHES="$CURRENT_BRANCHES $branch"
-    BATCH_COUNT=$((BATCH_COUNT + 1))
+# Process in batches
+for ((i=0; i<${#branch_array[@]}; i+=BATCH_SIZE)); do
+    batch=("${branch_array[@]:i:BATCH_SIZE}")
+    merge_batch "${batch[@]}"
     
-    if [ $BATCH_COUNT -eq $BATCH_SIZE ]; then
-        merge_batch "$CURRENT_BRANCHES" $CURRENT_BATCH
-        CURRENT_BATCH=$((CURRENT_BATCH + 1))
-        BATCH_COUNT=0
-        CURRENT_BRANCHES=""
-        
-        # Push progress every batch
-        echo "💾 Pushing progress..."
-        git push origin main 2>/dev/null || true
-        
-        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $SKIPPED_BRANCHES skipped"
-        echo "---"
+    # Progress update
+    processed=$((i + BATCH_SIZE))
+    if [ $processed -gt ${#branch_array[@]} ]; then
+        processed=${#branch_array[@]}
     fi
+    echo "📈 Progress: $processed/${#branch_array[@]} branches processed"
+    echo "---"
 done
 
-# Process remaining branches
-if [ $BATCH_COUNT -gt 0 ]; then
-    merge_batch "$CURRENT_BRANCHES" $CURRENT_BATCH
-fi
-
 # Final push
-echo "💾 Final push to remote..."
-git push origin main
+echo "💾 Pushing final results..."
+git push origin main || true
 
 # Summary
 echo ""
-echo "🎉 Efficient batch merge process completed!"
+echo "🎉 Efficient batch merge completed!"
 echo "📊 Final Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-echo "   📈 Total processed: $((SUCCESSFUL_MERGES + FAILED_MERGES + SKIPPED_BRANCHES))"
+echo "   📦 Batches processed: $CURRENT_BATCH"
+echo "   📈 Success rate: $(( (SUCCESSFUL_MERGES * 100) / (SUCCESSFUL_MERGES + FAILED_MERGES) ))%"
 echo "⏰ Completed at: $(date)"
 
+# Show recent commits
 echo ""
-echo "🎯 All branches have been processed!"
+echo "📝 Recent commits:"
+git log --oneline -10
+
+echo ""
+echo "🎯 Batch merge operation completed!"

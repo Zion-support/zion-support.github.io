@@ -1,69 +1,80 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
-const path = require('path');
 
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix a file
 function fixFile(filePath) {
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // More comprehensive fixes
-    content = content
-      // Remove semicolons after function declarations
-      .replace(/function\s+([^{]+)\s*\{;/g, 'function $1 {')
-      // Remove semicolons after arrow functions
-      .replace(/=>\s*\{;/g, '=> {')
-      // Remove semicolons after if statements
-      .replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'))
-      // Remove semicolons after object properties
-      .replace(/(\w+):\s*([^,}]+);/g, '$1: $2,')
-      // Fix object syntax
-      .replace(/\{([^}]+);(\s*)\}/g, '{$1$2}')
-      // Remove semicolons in JSX
-      .replace(/<([^>]+);>/g, '<$1>')
-      // Fix array syntax
-      .replace(/\[([^\]]+);\]/g, '[$1]')
-      // Remove standalone semicolons
-      .replace(/^;$/gm, '')
-      // Fix function calls
-      .replace(/(\w+)\s*\(([^)]+);\)/g, '$1($2)')
-      // Fix object method calls
-      .replace(/(\w+)\.(\w+)\s*\(([^)]+);\)/g, '$1.$2($3)')
-      // Clean up multiple semicolons
-      .replace(/;+/g, ';')
-      // Remove trailing semicolons before closing braces
-      .replace(/;(\s*[}\]])/g, '$1')
-      // Fix template literals
-      .replace(/`([^`]+);([^`]+)`/g, '`$1$2`')
-      // Remove semicolons from JSX attributes
-      .replace(/(\w+)=([^>]+);/g, '$1=$2')
-      // Clean up empty lines
-      .replace(/^\s*$\n/gm, '');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  if (!fs.existsSync(filePath)) {
+    console.log(`⚠️  File not found: ${filePath}`);
+    return false;
   }
-}
-
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fixFile(filePath);
-    }
-  });
+  let content = fs.readFileSync(filePath, 'utf8');
+  let originalContent = content;
+  
+  // Fix common syntax errors
+  content = content.replace(/const, serviceDetail, s =/g, 'const serviceDetails =');
+  content = content.replace(/tit, l, e:/g, 'title:');
+  content = content.replace(/descripti, o, n:/g, 'description:');
+  content = content.replace(/imag, e, s\.forEach\(\(img: HTMLImageEleme, n, t\) => \{if \(!i, m, g\.a, l, t\) \{/g, 'images.forEach((img: HTMLImageElement) => {\n    if (!img.alt) {');
+  content = content.replace(/issu, e, s\.push\(\{/g, 'issues.push({');
+  content = content.replace(/type: "error",/g, 'type: "error",');
+  content = content.replace(/message: "Ima, gemissingaltattribute"element: imgrule: "alt-text"/g, 'message: "Image missing alt attribute", element: img, rule: "alt-text"');
+  content = content.replace(/\}\)\}\}\);/g, '});');
+  content = content.replace(/useEffect\(\(\) => \{if \(typeofwindow === 'undefined'\) return;/g, 'useEffect(() => {\n    if (typeof window === \'undefined\') return;');
+  content = content.replace(/console\.log\("Performancemonitoringenabled"\)\};/g, 'console.log("Performance monitoring enabled");\n    }');
+  content = content.replace(/if \("memory' in, performan, c, e\) \{/g, 'if ("memory" in performance) {');
+  content = content.replace(/con, s, t, memo, r, y = \(performan, c, e, as, a, n, y\)\.memo, r, y;/g, 'const memory = (performance as any).memory;');
+  
+  // Fix JSX syntax errors
+  content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
+  content = content.replace(/<SEO \/>\s*<Head>/g, '<SEO />\n      <Head>');
+  content = content.replace(/<title>([^<]*)<\/title>\s*<meta name="description"/g, '<title>$1</title>\n        <meta name="description"');
+  content = content.replace(/content="([^"]*)" \/>\s*<meta name="viewport"/g, 'content="$1" />\n        <meta name="viewport"');
+  content = content.replace(/initial-scale=1" \/>\s*<\/Head>/g, 'initial-scale=1" />\n      </Head>');
+  content = content.replace(/<\/Head>\s*<div className="min-h-screen/g, '</Head>\n      <div className="min-h-screen');
+  
+  // Fix specific malformed class names
+  content = content.replace(/className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">/g, 'className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">');
+  content = content.replace(/className="container mx-auto px-4 py-8 max-w-4 xl">/g, 'className="container mx-auto px-4 py-8 max-w-4xl">');
+  content = content.replace(/className="mb-8">/g, 'className="mb-8">');
+  content = content.replace(/className="text-blue-600hover:text-blue-800 font-medium transition-colors">/g, 'className="text-blue-600 hover:text-blue-800 font-medium transition-colors">');
+  
+  // Fix missing imports
+  if (content.includes('useAnalytics') && !content.includes("import { useAnalytics }")) {
+    content = content.replace(/import React, { useState, useEffect } from 'react';/, "import React, { useState, useEffect } from 'react';\nimport { useAnalytics } from '../src/hooks/useAnalytics';");
+  }
+  
+  if (content.includes('Link href=') && !content.includes("import Link from 'next/link'")) {
+    content = content.replace(/import React, { useState, useEffect } from 'react';/, "import React, { useState, useEffect } from 'react';\nimport Link from 'next/link';");
+  }
+  
+  if (content !== originalContent) {
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Fixed ${filePath}`);
+    return true;
+  }
+  return false;
 }
 
-// Start fixing from components directory
-walkDir('./components');
-walkDir('./hooks');
-walkDir('./lib');
-walkDir('./pages');
+// Fix all remaining problematic files
+const filesToFix = [
+  '/workspace/pages/enhanced-home.tsx',
+  '/workspace/pages/privacy-policy.tsx',
+  '/workspace/pages/services.tsx',
+  '/workspace/pages/contact.tsx',
+  '/workspace/pages/about.tsx',
+  '/workspace/src/components/AccessibilityAuditor.tsx',
+  '/workspace/src/components/PerformanceOptimizer.tsx'
+];
 
-console.log('Remaining syntax error fixing completed!');
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`🎉 Fixed ${fixedCount} files`);
