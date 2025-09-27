@@ -1,25 +1,18 @@
 import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-  takeRecords() { return []; }
-  root = null;
-  rootMargin = '';
-  thresholds = [];
-} as typeof IntersectionObserver;
+(global as unknown as { IntersectionObserver: jest.Mock }).IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
 
 // Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-  takeRecords() { return []; }
-} as typeof PerformanceObserver;
+(global as unknown as { PerformanceObserver: jest.Mock }).PerformanceObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn(),
+}));
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
