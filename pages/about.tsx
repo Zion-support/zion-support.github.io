@@ -1,49 +1,65 @@
-import React, {useStateuseEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useStateuseEffect   } from "react";
+import { useState, useEffect } from "react";
   const { trackClick } = useAnalytics();
 
 	const teamMembers = [
 		{name: 'Sarah Johnson',
 			role: 'CEO & Founder',
 			expertise: 'Strategic Leadership, AI Innovation',
-			image: '👩‍💼'description: '15+ years in technology leadershipformer VP at major tech companies.'
+			image: '👩‍💼',
+			description: '15+ years in technology leadership, former VP at major tech companies.'
 		},
 		{name: 'Michael Chen',
 			role: 'CTO',
-			expertise: 'Cloud Architecture, DevOps'image: '👨‍💻'description: 'Expert in scalable cloud solutions and modern development practices.'
+			expertise: 'Cloud Architecture, DevOps',
+			image: '👨‍💻',
+			description: 'Expert in scalable cloud solutions and modern development practices.'
 		},
 		{name: 'Emily Rodriguez',
 			role: 'Lead Designer',
-			expertise: 'UX/UI Design, Product Strategy'image: '👩‍🎨'description: 'Award-winning designer with expertise in user-centered design principles.'
+			expertise: 'UX/UI Design, Product Strategy',
+			image: '👩‍🎨',
+			description: 'Award-winning designer with expertise in user-centered design principles.'
 		},
 		{name: 'David Kim',
 			role: 'Senior Developer',
-			expertise: 'Full-Stack Development, AI/ML'image: '👨‍💻'description: 'Full-stack developer specializing in AI integration and modern web technologies.'		}
+			expertise: 'Full-Stack Development, AI/ML',
+			image: '👨‍💻',
+			description: 'Full-stack developer specializing in AI integration and modern web technologies.'
+		}
 	];
 
 	const values = [
 		{title: 'Innovation First',
-			description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.'icon: '🚀'color: 'blue'
+			description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.', icon: '🚀', color: 'blue'
 		},
 		{title: 'Client Success',
-			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.'icon: '🎯'color: 'green'
+			description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.', icon: '🎯', color: 'green'
 		},
 		{title: 'Quality Excellence',
-			description: 'We maintain the highest standards in everything we do, from code quality to user experience.'icon: '⭐'color: 'yellow'
+			description: 'We maintain the highest standards in everything we do, from code quality to user experience.', icon: '⭐', color: 'yellow'
 		},
 		{title: 'Transparent Communication',
-			description: 'Clear, honest communication is the foundation of our relationships with clients and team members.'icon: '💬'color: 'purple'
+			description: 'Clear, honest communication is the foundation of our relationships with clients and team members.', icon: '💬', color: 'purple'
 		},
 		{title: 'Continuous Learning',
-			description: "We embrace change and continuously learnadaptand improve to stay ahead in the fast-paced tech world."icon: '📚'color: 'indigo'
+			description: "We embrace change and continuously learn, adapt, and improve to stay ahead in the fast-paced tech world.",
+			icon: '📚',
+			color: 'indigo'
 		},
 		{title: 'Collaborative Approach',
-			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.'icon: '🤝'color: 'orange'		}
+			description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.',
+			icon: '🤝',
+			color: 'orange'
+		}
 	];
 
 	const stats = [
+
+      return (
+
 
       <SEO />
 			<Head>

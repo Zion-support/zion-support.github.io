@@ -5,38 +5,60 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 import { useAnalytics   } from "../src/hooks/useAnalytics";
 
 export default function Blog(): JSX.Element {
-	const [isVisiblesetIsVisible] = useState(false);
-	const [selectedCategorysetSelectedCategory] = useState<string>('all');
+	const [isVisible, setIsVisible] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
 	useEffect(() => {
-		setIsVisible(true)}[]);
+		setIsVisible(true);
+	}, []);
   const { trackClick } = useAnalytics();
 
 	const blogPosts = [
-		{id: 1title: 'The Future of AI in Business: Trends and Predictions for 2024'excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.'author: 'Sarah Johnson'date: '2024-01-15'readTime: '5 min read'category: 'AI & Machine Learning'image: '/api/placeholder/600/300'slug: 'future-ai-business-2024"
-		}{id: 2title: "Cloud Migration Best Practices: A Complete Guide'excerpt: 'Learn the essential strategies and considerations for successfully migrating your infrastructure to the cloud.'author: 'Michael Chen',
+		{id: 1,
+			title: 'The Future of AI in Business: Trends and Predictions for 2024',
+			excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.',
+			author: 'Sarah Johnson',
+			date: '2024-01-15',
+			readTime: '5 min read',
+			category: 'AI & Machine Learning',
+			image: '/api/placeholder/600/300',
+			slug: 'future-ai-business-2024'
+		},
+		{id: 2,
+			title: "Cloud Migration Best Practices: A Complete Guide",
+			excerpt: 'Learn the essential strategies and considerations for successfully migrating your infrastructure to the cloud.',
+			author: 'Michael Chen',
 			date: '2024-01-12',
 			readTime: '8 min read',
-			category: 'Cloud Computing'image: '/api/placeholder/600/300'slug: 'cloud-migration-best-practices"
-		}{id: 3title: "Building Scalable Web Applications with Modern Architecture',
+			category: 'Cloud Computing',
+			image: '/api/placeholder/600/300',
+			slug: 'cloud-migration-best-practices'
+		},
+		{id: 3,
+			title: "Building Scalable Web Applications with Modern Architecture",
 			excerpt: 'Discover the architectural patterns and technologies that enable web applications to scale efficiently and reliably.',
 			author: 'Emily Rodriguez',
 			date: '2024-01-10',
 			readTime: '6 min read',
-			category: 'Web Development'image: '/api/placeholder/600/300'slug: 'scalable-web-applications-architecture"
-		}{id: 4title: "Cybersecurity in 2024: Emerging Threats and Defense Strategies',
+			category: 'Web Development',
+			image: '/api/placeholder/600/300',
+			slug: 'scalable-web-applications-architecture'
+		},
+		{id: 4title: "Cybersecurity in 2024: Emerging Threats and Defense Strategies',
 			excerpt: 'Stay ahead of the latest cybersecurity threats and learn about the most effective defense strategies for modern businesses.',
 			author: 'David Kim',
 			date: '2024-01-08',
 			readTime: '7 min read',
 			category: 'Cybersecurity'image: '/api/placeholder/600/300'slug: 'cybersecurity-2024-threats-defense"
-		}{id: 5title: "Digital Transformation: A Step-by-Step Implementation Guide',
+		},
+		{id: 5title: "Digital Transformation: A Step-by-Step Implementation Guide',
 			excerpt: 'Navigate the complexities of digital transformation with our comprehensive guide to planning and executing successful initiatives.',
 			author: 'Sarah Johnson',
 			date: '2024-01-05',
 			readTime: '9 min read',
 			category: 'Digital Transformation'image: '/api/placeholder/600/300'slug: 'digital-transformation-implementation-guide"
-		}{id: 6title: "The Rise of Edge Computing: Benefits and Use Cases',
+		},
+		{id: 6title: "The Rise of Edge Computing: Benefits and Use Cases',
 			excerpt: 'Explore how edge computing is revolutionizing data processing and discover its potential applications across industries.',
 			author: 'Michael Chen',
 			date: '2024-01-03',

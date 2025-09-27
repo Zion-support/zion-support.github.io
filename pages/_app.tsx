@@ -5,21 +5,24 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
 
-export default function App({ ComponentpageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   // Setup global error handling
   React.useEffect(() => {
-    setupGlobalErrorHandling()}[]);  // Register service worker for performance optimization
+    setupGlobalErrorHandling();
+  }, []);  // Register service worker for performance optimization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw-performance.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:'registration)})
+          console.log('Service Worker registered successfully:', registration)})
         .catch((error) => {
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
+
+    return (
+
+
     <HelmetProvider>
 			<Head>
         <meta charSet="utf-8" />
@@ -43,7 +46,7 @@ export default function App({ ComponentpageProps }: AppProps) {
           box-sizing: border-box}
         html {
           scroll-behavior: smooth}
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
+
         .dark body {
           background-color: #0f172a;
          ,
@@ -100,17 +103,17 @@ export default function App({ ComponentpageProps }: AppProps) {
         .keyboard-navigation a:focus,
         .keyboard-navigation input:focus,
         .keyboard-navigation textarea:focus,
-        .keyboard-navigation select: focus {
-         ,
-		outline: 2px solid #2563eb !important;
-          outline-offset: 2px !important}
+        .keyboard-navigation select:focus {
+          outline: 2px solid #2563eb !important;
+          outline-offset: 2px !important;
+        }
         .sr-only {position: absolute;
           width: 1px;
           height: 1px;
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 000);
+          clip: rect(0, 0, 0, 0);
           white-space: nowrap;
           border: 0;
       `}</style>
@@ -120,4 +123,5 @@ export default function App({ ComponentpageProps }: AppProps) {
       <WebVitals />
       <AccessibilityAuditor />
     </HelmetProvider>
-  )}
+  );
+}

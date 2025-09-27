@@ -1,30 +1,40 @@
-import React, {useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics   } from "../src/hooks/useAnalytics";
 
-export default function Contact(): JSX.Element {const [formDatasetFormData] = useState({
-		name: ''email: ''company: ''phone: ''service: ''timeline: ''message: ''
+export default function Contact(): JSX.Element {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		company: '',
+		phone: '',
+		service: '',
+		timeline: '',
+		message: ''
 	});
-	const [isSubmittingsetIsSubmitting] = useState(false);
-	const [isSubmittedsetIsSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isSubmitted, setIsSubmitted] = useState(false);
   useEffect(() => {
-    setIsVisible(true)}[]);
+    // Component mounted
+  }, []);
 
   const { trackClick } = useAnalytics();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackClick('contact_form_submit'{ formData });
+    trackClick('contact_form_submit', { formData });
     // Handle form submission here
-    console.log('Form submitted:', formData)};
+    console.log('Form submitted:', formData);
+  };
 
-) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })};
+    });
+  };
 	return (
 		<>
       <SEO />
