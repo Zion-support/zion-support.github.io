@@ -3,145 +3,103 @@
 import fs from 'fs';
 import path from 'path';
 
-// List of files with syntax errors
 const filesToFix = [
-  'src/components/ChatSystem.tsx',
-  'src/components/ContactForm.tsx',
-  'src/components/EnhancedContactForm.tsx',
-  'src/components/EnhancedErrorBoundary.tsx',
-  'src/components/EnhancedNotificationSystem.tsx',
-  'src/components/EnhancedSearch.tsx',
-  'src/components/ErrorBoundary.tsx',
-  'src/components/FileUpload.tsx',
-  'src/components/Navigation.tsx',
-  'src/components/PerformanceDashboard.tsx',
-  'src/components/PerformanceMetrics.tsx',
-  'src/components/PerformanceOptimizations.tsx',
-  'src/components/PricingCard.tsx',
-  'src/components/ProjectManagement.tsx',
-  'src/components/SecurityDashboard.tsx',
-  'src/components/ServiceCard.tsx',
-  'src/components/SettingsPanel.tsx',
-  'src/components/TaskManager.tsx',
-  'src/components/TestDashboard.tsx',
-  'src/components/UserManagement.tsx'
+  'pages/index.tsx',
+  'pages/enhanced-home.tsx',
+  'pages/faq.tsx'
 ];
 
-// Common patterns to fix
-const fixes = [
-  // Fix malformed onClick handlers
-  {
-    pattern: /onClick=\{\(\)\s*=\s*aria-label="([^"]+)\)/g,
-    replacement: 'onClick={() => $1}\n            aria-label="$1"'
-  },
-  // Fix malformed onClick with setState
-  {
-    pattern: /onClick=\{\(\)\s*=\s*aria-label="([^"]+)\)/g,
-    replacement: 'onClick={() => $1}\n            aria-label="$1"'
-  },
-  // Fix malformed onClick with function calls
-  {
-    pattern: /onClick=\{\(\)\s*=\s*aria-label="([^"]+)\)/g,
-    replacement: 'onClick={() => $1}\n            aria-label="$1"'
-  },
-  // Fix missing closing tags
-  {
-    pattern: /<motion\.button([^>]*)>\s*$/gm,
-    replacement: '<motion.button$1>'
-  },
-  // Fix malformed JSX attributes
-  {
-    pattern: /(\w+)\s*=\s*aria-label="([^"]+)\)/g,
-    replacement: '$1={() => $2}\n            aria-label="$2"'
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /(\w+):\s*([^,}]+)\s*(\w+):/g,
-    replacement: '$1: $2,\n    $3:'
-  },
+function fixSyntaxErrors(content) {
+  // Fix malformed variable names with commas
+  content = content.replace(/, (\w+)/g, '$1');
+  content = content.replace(/(\w+), (\w+), (\w+)/g, '$1$2$3');
+  content = content.replace(/(\w+), (\w+)/g, '$1$2');
+  
+  // Fix malformed imports
+  content = content.replace(/useCallbackuseMemouseRef/g, 'useCallback, useMemo, useRef');
+  content = content.replace(/useStateuseEffect/g, 'useState, useEffect');
+  content = content.replace(/motionuseInViewAnimatePresence/g, 'motion, useInView, AnimatePresence');
+  
+  // Fix malformed function calls
+  content = content.replace(/useR, e, f/g, 'useRef');
+  content = content.replace(/useInVi, e, w/g, 'useInView');
+  content = content.replace(/setIsVisib, l, e/g, 'setIsVisible');
+  content = content.replace(/setIsLoadi, n, g/g, 'setIsLoading');
+  content = content.replace(/performanceMetri, c, s/g, 'performanceMetrics');
+  content = content.replace(/setPerformanceMetri, c, s/g, 'setPerformanceMetrics');
+  
+  // Fix malformed objects and arrays
+  content = content.replace(/li, s, t\.getEntri, e, s\(\)/g, 'list.getEntries()');
+  content = content.replace(/entri, e, s\.forEa, c, h/g, 'entries.forEach');
+  content = content.replace(/ent, r, y\./g, 'entry.');
+  content = content.replace(/domContentLoadedEventE, n, d/g, 'domContentLoadedEventEnd');
+  content = content.replace(/loadEventE, n, d/g, 'loadEventEnd');
+  content = content.replace(/fetchStartdomContentLoaded/g, 'fetchStart, domContentLoaded');
+  
+  // Fix malformed strings
+  content = content.replace(/`select-plan-\$\{tierId\}` "conversion'/g, "`select-plan-${tierId}`, 'conversion'");
+  content = content.replace(/`read-blog-\$\{slug\}` "engagement'/g, "`read-blog-${slug}`, 'engagement'");
+  content = content.replace(/console\.log\('Selected plan:"tierId\)/g, 'console.log("Selected plan:", tierId)');
+  content = content.replace(/console\.log\('Read more:", slug\)/g, 'console.log("Read more:", slug)');
+  
+  // Fix malformed function definitions
+  content = content.replace(/const handleSelectPlan\s*=\s*\(tierId:\s*string\)\s*=>\s*\{trackCli, ck/g, 'const handleSelectPlan = (tierId: string) => {\n\t\ttrackClick');
+  content = content.replace(/const handleReadMore\s*=\s*\(slug:\s*string\)\s*=>\s*\{trackCli, ck/g, 'const handleReadMore = (slug: string) => {\n\t\ttrackClick');
+  
+  // Fix malformed comments
+  content = content.replace(/\/\/ Performancemonitoringif/g, '// Performance monitoring\n\tif');
+  content = content.replace(/\/\/ Analyticstracking/g, '// Analytics tracking');
+  
+  // Fix malformed className attributes
+  content = content.replace(/className="([^"]*),([^"]*)"/g, 'className="$1$2"');
+  
+  // Fix malformed object properties
+  content = content.replace(/(\w+):\s*"([^"]*),([^"]*)"/g, '$1: "$2$3"');
+  
+  // Fix missing semicolons and brackets
+  content = content.replace(/\}\s*\{/g, '};\n\t{');
+  content = content.replace(/(\w+)\s*\{/g, '$1 = {');
+  
   // Fix malformed template literals
-  {
-    pattern: /`([^`]*)\$\{([^}]+)\}([^`]*)`\s*className/g,
-    replacement: '`$1${$2}$3`\n            className'
-  }
-];
+  content = content.replace(/`([^`]*),([^`]*)`/g, '`$1$2`');
+  
+  // Fix malformed destructuring
+  content = content.replace(/const\s*\{([^}]*),([^}]*)\}\s*=\s*([^;]+);/g, 'const { $1$2 } = $3;');
+  
+  // Fix malformed array destructuring
+  content = content.replace(/const\s*\[([^\]]*),([^\]]*)\]\s*=\s*([^;]+);/g, 'const [ $1$2 ] = $3;');
+  
+  return content;
+}
 
-function fixFile(filePath) {
+async function fixFile(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Apply fixes
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-
-    // Additional specific fixes
-    // Fix malformed onClick handlers with aria-label
-    content = content.replace(
-      /onClick=\{\(\)\s*=\s*aria-label="([^"]+)\)/g,
-      'onClick={() => $1}\n            aria-label="$1"'
-    );
-
-    // Fix malformed onClick with setState
-    content = content.replace(
-      /onClick=\{\(\)\s*=\s*aria-label="([^"]+)\)/g,
-      'onClick={() => $1}\n            aria-label="$1"'
-    );
-
-    // Fix missing closing tags for motion.button
-    content = content.replace(
-      /<motion\.button([^>]*)>\s*$/gm,
-      '<motion.button$1>'
-    );
-
-    // Fix malformed JSX attributes
-    content = content.replace(
-      /(\w+)\s*=\s*aria-label="([^"]+)\)/g,
-      '$1={() => $2}\n            aria-label="$2"'
-    );
-
-    // Fix missing commas in object literals
-    content = content.replace(
-      /(\w+):\s*([^,}]+)\s*(\w+):/g,
-      '$1: $2,\n    $3:'
-    );
-
-    // Fix malformed template literals
-    content = content.replace(
-      /`([^`]*)\$\{([^}]+)\}([^`]*)`\s*className/g,
-      '`$1${$2}$3`\n            className'
-    );
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
     } else {
-      console.log(`No changes needed: ${filePath}`);
-      return false;
+      console.log(`ℹ️  No changes needed for ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Fix all files
-let fixedCount = 0;
-for (const file of filesToFix) {
-  if (fixFile(file)) {
-    fixedCount++;
+async function main() {
+  console.log('🔧 Fixing syntax errors in files...\n');
+  
+  for (const file of filesToFix) {
+    if (fs.existsSync(file)) {
+      await fixFile(file);
+    } else {
+      console.log(`⚠️  File not found: ${file}`);
+    }
   }
+  
+  console.log('\n✨ Syntax error fixing completed!');
 }
 
-console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files.`);
+main().catch(console.error);
