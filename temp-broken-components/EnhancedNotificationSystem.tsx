@@ -195,7 +195,7 @@ export default function EnhancedNotificationSystem({
                     <button
                       key={index}
                       onClick={() => handleAction(notification.id, action.label)}
-                      aria-label={`${action.label} action`}
+                      aria-label={`${action.label} notification`}
                       className={`text-xs px-3 py-1 rounded ${
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover:bg-blue-700'

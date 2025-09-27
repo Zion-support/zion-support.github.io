@@ -239,15 +239,19 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     <div className={`w-full ${className}`}>
       {/* Drop Zone */}
       <div
-        className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
+        className = {`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
           isDragOver
             ? 'border-blue-400 bg-blue-50'
-            : 'border-gray-300 hover:border-gray-400'
+            : 'border-gray-300 hover:border-gray-400'}
         } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
+<<<<<<< HEAD:src/components/FileUpload.tsx
         role="button" tabIndex={0} onClick={() => !disabled && fileInputRef.current?.click()}
+=======
+        role="button" tabIndex="0" onClick={() => !disabled && fileInputRef.current?.click()}
+>>>>>>> b12ef9c0f174b8d76e8cb85e02ec47ce2d46a96b:temp-broken-components/FileUpload.tsx
       >
         <div className="space-y-2">
           <svg

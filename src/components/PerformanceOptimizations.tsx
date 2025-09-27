@@ -10,111 +10,99 @@ interface PerformanceOptimizationsProps {
   children: React.ReactNode;
   enableLazyLoading?: boolean;
   enableMemoization?: boolean;
-  enableCodeSplitting?: boolean;
-}
+  enableCodeSplitting?: boolean;}
 
 // Memoized component to prevent unnecessary re-renders
-const MemoizedCard = memo(({ title, content, onClick }: {
+const MemoizedCard = memo(({ title, content, onClick }: {;
   title: string;
   content: string;
-  onClick: () => void;
-}) => {
+  onClic,
+    k: () => void;}) => {
   return (
     <div 
-      className="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer"
-      onClick={onClick}
-      role="button"
+      className = "p-4border rounded-lg hover:shadow-md transition-shadow cursor-pointer"      onClick={onClick}      role=button""
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && onClick()}
       aria-label={`${title} card`}
-    >
-      <h3 className="font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{content}</p>
-    </div>
+    >      <h3className=font-semibold mb-2"">{title}</h3>      <p className=text-gray-600"">{content}</p>
+    </div>;
   );
 });
+MemoizedCard.displayName = 'MemoizedCard';
+
+MemoizedCard.displayName = 'MemoizedCard';
 
 MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
-const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
+const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {;
   items: any[];
   itemHeight?: number;
-  containerHeight?: number;
-}) => {
+  containerHeight?: number;}) => {
   const [scrollTop, setScrollTop] = React.useState(0);
   
-  const visibleItems = useMemo(() => {
+  const visibleItems = useMemo(() => {;
     const startIndex = Math.floor(scrollTop / itemHeight);
     const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight), items.length);
     
     return items.slice(startIndex, endIndex).map((item, index) => ({
       ...item,
-      index: startIndex + index
-    }));
+      index: startIndex + index    }));
   }, [items, scrollTop, itemHeight, containerHeight]);
 
   const totalHeight = items.length * itemHeight;
   const offsetY = scrollTop;
 
   return (
-    <div 
-      className="overflow-auto"
+    <div       className = overflow-auto""
       style={{ height: containerHeight }}
       onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
     >
       <div style={{ height: totalHeight, position: 'relative' }}>
         <div style={{ transform: `translateY(${offsetY}px)` }}>
           {visibleItems.map((item) => (
-            <div
-              key={item.index}
-              style={{ height: itemHeight }}
-              className="flex items-center p-2 border-b"
+            <div              key={item.index}
+              style={{ height: itemHeight }}              className=flex items-center p-2border-b""
             >
               {item.content}
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </div>;
   );
 });
+VirtualList.displayName = 'VirtualList';
+
+VirtualList.displayName = 'VirtualList';
 
 VirtualList.displayName = 'VirtualList';
 
 // Image optimization component
-const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
+const OptimizedImage = memo(({ src, alt, width, height, ...props }: {;
   src: string;
   alt: string;
   width?: number;
   height?: number;
-  [key: string]: any;
-}) => {
+  [ke,
+    y: string]: any;}) => {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [hasError, setHasError] = React.useState(false);
 
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
+  const handleLoad = useCallback(() => {;
+    setIsLoaded(true);  }, []);
 
-  const handleError = useCallback(() => {
-    setHasError(true);
-  }, []);
+  const handleError = useCallback(() => {;
+    setHasError(true);  }, []);
 
-  return (
-    <div className="relative">
+  return (    <div className = relative"">
       {!isLoaded && !hasError && (
-        <div 
-          className="bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
-        >
-          <div className="text-gray-400">Loading...</div>
+        <div           className=bg-gray-200animate-pulse flex items-center justify-center""          style={{ width, height }}
+        >          <div className=text-gray-400"">Loading...</div>
         </div>
       )}
       {hasError ? (
-        <div 
-          className="bg-gray-100 flex items-center justify-center text-gray-400"
-          style={{ width, height }}
+        <div           className=bg-gray-100flex items-center justify-center text-gray-400""          style={{ width, height }}
         >
           Image failed to load
         </div>
@@ -130,55 +118,54 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
           {...props}
         />
       )}
-    </div>
+    </div>;
   );
 });
+OptimizedImage.displayName = 'OptimizedImage';
 
 OptimizedImage.displayName = 'OptimizedImage';
 
-// Debounced search component
-const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
-  onSearch: (query: string) => void;
-  placeholder?: string;
-}) => {
+OptimizedImage.displayName = 'OptimizedImage';
+
+// Debounced search componentconst DebouncedSearch = memo(({ onSearch, placeholder = Search..."" }: {
+  onSearch: (quer,;
+    y: string) => void;
+  placeholder?: string;}) => {
   const [query, setQuery] = React.useState('');
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 
   const debouncedSearch = useCallback((value: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) {;
+      clearTimeout(timeoutRef.current);    }
     
-    timeoutRef.current = setTimeout(() => {
-      onSearch(value);
-    }, 300);
+    timeoutRef.current = setTimeout(() => {;
+      onSearch(value);    }, 300);
   }, [onSearch]);
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
     const value = e.target.value;
     setQuery(value);
-    debouncedSearch(value);
-  }, [debouncedSearch]);
+    debouncedSearch(value);  }, [debouncedSearch]);
 
   React.useEffect(() => {
     return () => {
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+        clearTimeout(timeoutRef.current);      }
     };
   }, []);
 
   return (
-    <input
-      type="text"
+    <input      type = text""
       value={query}
       onChange={handleChange}
-      placeholder={placeholder}
-      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      aria-label="Search input"
-    />
+      placeholder={placeholder}      className=w-full px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
+    s:ring-blue-500""      aria-label=Search input""
+    />;
   );
 });
+DebouncedSearch.displayName = 'DebouncedSearch';
+
+DebouncedSearch.displayName = 'DebouncedSearch';
 
 DebouncedSearch.displayName = 'DebouncedSearch';
 
@@ -187,28 +174,25 @@ export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = React.useState({
     renderTime: 0,
     memoryUsage: 0,
-    componentCount: 0
-  });
+    componentCount: 0;  });
 
-  const measureRender = useCallback((componentName: string, renderFn: () => void) => {
+  const measureRender = useCallback((componentName: string, renderFn: () => void) => {;
     const start = performance.now();
     renderFn();
     const end = performance.now();
     
-    setMetrics(prev => ({
+    setMetrics(prev = > ({
       ...prev,
       renderTime: end - start,
-      componentCount: prev.componentCount + 1
-    }));
+      componentCount: prev.componentCount + 1;    }));
   }, []);
 
   const measureMemory = useCallback(() => {
-    if ('memory' in performance) {
+    if ('memory' in performance) {;
       const memory = (performance as any).memory;
-      setMetrics(prev => ({
+      setMetrics(prev = > ({
         ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;      }));
     }
   }, []);
 
@@ -220,67 +204,52 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
   children,
   enableLazyLoading = true,
   enableMemoization = true,
-  enableCodeSplitting = true
-}) => {
-  const { metrics } = usePerformanceMonitor();
+  enableCodeSplitting = true}) => {;  const { metrics } = usePerformanceMonitor();
 
   // Memoized expensive calculations
   const expensiveValue = useMemo(() => {
-    // Simulate expensive calculation
+    // Simulate expensive calculation;
     let result = 0;
     for (let i = 0; i < 1000000; i++) {
-      result += Math.random();
-    }
+      result += Math.random();    }
     return result;
   }, []);
 
   // Memoized callback to prevent child re-renders
   const handleCardClick = useCallback((id: string) => {
-    console.log('Card clicked:', id);
-  }, []);
+    console.log('Card clicke,;
+    d:', id);  }, []);
 
   // Sample data for virtual list
   const sampleData = useMemo(() => 
     Array.from({ length: 1000 }, (_, i) => ({
-      id: i,
-      content: `Item ${i + 1}`
-    }))
+      id: i,      content: `Item ${i + 1}`
+    }));
   , []);
 
   return (
-    <ErrorBoundary>
-      <div className="space-y-6">
-        {/* Performance Metrics */}
-        <div className="bg-gray-100 p-4 rounded-lg">
-          <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>
-          <div className="grid grid-cols-3 gap-4 text-sm">
-            <div>
-              <span className="font-medium">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
+    <ErrorBoundary>      <div className = space-y-6"">
+        {/* Performance Metrics */}        <div className=bg-gray-100p-4rounded-lg"">          <h3className=text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className=grid grid-cols-3gap-4text-sm"">
+            <div>              <span className=font-medium"">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
             </div>
-            <div>
-              <span className="font-medium">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
+            <div>              <span className=font-medium"">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
             </div>
-            <div>
-              <span className="font-medium">Components:</span> {metrics.componentCount}
+            <div>              <span className=font-medium"">Components:</span> {metrics.componentCount}
             </div>
           </div>
         </div>
 
-        {/* Debounced Search */}
-        <div className="space-y-2">
-          <label className="block text-sm font-medium">Search (Debounced)</label>
+        {/* Debounced Search */}        <div className=space-y-2"">          <label className=block text-sm font-medium"">Search (Debounced)</label>
           <DebouncedSearch 
-            onSearch={(query) => console.log('Searching for:', query)}
-            placeholder="Type to search..."
+            onSearch={(query) => console.log('Searching for:', query)}            placeholder = Type to search...""
           />
         </div>
 
         {/* Memoized Cards */}
-        {enableMemoization && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Array.from({ length: 6 }, (_, i) => (
+        {enableMemoization && (          <div className=grid grid-cols-1md: grid-cols-2lg:grid-cols-3gap-4"">
+            {Array.from({ lengt,    h: 6 }, (_, i) => (
               <MemoizedCard
-                key={i}
+                key = {i}
                 title={`Card ${i + 1}`}
                 content={`This is memoized card content ${i + 1}`}
                 onClick={() => handleCardClick(`card-${i}`)}
@@ -289,17 +258,12 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
           </div>
         )}
 
-        {/* Virtual List */}
-        <div className="space-y-2">
-          <label className="block text-sm font-medium">Virtual List (1000 items)</label>
+        {/* Virtual List */}        <div className=space-y-2"">          <label className=block text-sm font-medium"">Virtual List (1000items)</label>
           <VirtualList items={sampleData} />
         </div>
 
-        {/* Optimized Images */}
-        <div className="space-y-2">
-          <label className="block text-sm font-medium">Optimized Images</label>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {Array.from({ length: 4 }, (_, i) => (
+        {/* Optimized Images */}        <div className=space-y-2"">          <label className=block text-sm font-medium"">Optimized Images</label>          <div className=grid grid-cols-2md: grid-cols-4gap-4"">
+            {Array.from({ lengt,    h: 4 }, (_, i) => (
               <OptimizedImage
                 key={i}
                 src={`https://picsum.photos/200/200?random=${i}`}
@@ -312,25 +276,19 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         </div>
 
         {/* Lazy Loaded Components */}
-        {enableLazyLoading && (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Lazy Loaded Components</h3>
-            <Suspense fallback={<div className="p-4 bg-gray-100 rounded">Loading chart...</div>}>
+        {enableLazyLoading && (          <div className=space-y-4"">            <h3className=text-lg font-semibold"">Lazy Loaded Components</h3>            <Suspense fallback={<div className=p-4bg-gray-100rounded"">Loading chart...</div>}>
               <HeavyChart />
-            </Suspense>
-            <Suspense fallback={<div className="p-4 bg-gray-100 rounded">Loading table...</div>}>
+            </Suspense>            <Suspense fallback={<div className=p-4bg-gray-100rounded"">Loading table...</div>}>
               <HeavyTable />
             </Suspense>
           </div>
         )}
 
-        {/* Main Content */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Main Content</h3>
+        {/* Main Content */}        <div className=space-y-4"">          <h3className=text-lg font-semibold"">Main Content</h3>
           {children}
         </div>
       </div>
-    </ErrorBoundary>
+    </ErrorBoundary>;
   );
 };
 

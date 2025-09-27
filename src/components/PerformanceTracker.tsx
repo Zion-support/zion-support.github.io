@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useCallback } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
+  firstPain, t: number;
+  firstContentfulPain, t: number;
   largestContentfulPaint?: number;
   firstInputDelay?: number;
   cumulativeLayoutShift?: number;
@@ -32,7 +32,7 @@ export default function PerformanceTracker({
       const paintEntries = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -117,8 +117,7 @@ export default function PerformanceTracker({
 
           // Send to analytics
           if (enableAnalytics && typeof window !== 'undefined') {
-            // Google Analytics 4
-            if (window.gtag) {
+            // Google Analytics4if (window.gtag) {
               window.gtag('event', 'page_load_metrics', {
                 load_time: Math.round(metrics.loadTime),
                 dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -205,9 +204,9 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   score: number;
   recommendations: string[];
   webVitals: {
-    lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
-    fid: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
-    cls: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    lcp: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
+    fid: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
+    cls: { valu, e: number; statu, s: 'good' | 'needs-improvement' | 'poor' };
   };
 } {
   let score = 100;
@@ -215,16 +214,16 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
 
   // Web Vitals status determination
   const webVitals = {
-    lcp: { 
-      value: metrics.largestContentfulPaint || 0, 
+    lc, p: { 
+      valu, e: metrics.largestContentfulPaint || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
     fid: { 
-      value: metrics.firstInputDelay || 0, 
+      valu, e: metrics.firstInputDelay || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
     cls: { 
-      value: metrics.cumulativeLayoutShift || 0, 
+      valu, e: metrics.cumulativeLayoutShift || 0, 
       status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     }
   };
@@ -232,7 +231,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   // Load Time scoring (target: < 3000ms)
   if (metrics.loadTime > 5000) {
     score -= 30;
-    recommendations.push('Optimize page load time (currently over 5 seconds)');
+    recommendations.push('Optimize page load time (currently over5seconds)');
   } else if (metrics.loadTime > 3000) {
     score -= 15;
     recommendations.push('Consider optimizing page load time');
@@ -241,7 +240,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
   // First Contentful Paint scoring (target: < 1800ms)
   if (metrics.firstContentfulPaint > 3000) {
     score -= 25;
-    recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
+    recommendations.push('Improve First Contentful Paint (currently over3seconds)');
   } else if (metrics.firstContentfulPaint > 1800) {
     score -= 10;
     recommendations.push('Consider improving First Contentful Paint');
@@ -252,7 +251,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     if (metrics.largestContentfulPaint > 4000) {
       score -= 25;
       webVitals.lcp.status = 'poor';
-      recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
+      recommendations.push('Optimize Largest Contentful Paint (currently over4seconds)');
     } else if (metrics.largestContentfulPaint > 2500) {
       score -= 10;
       webVitals.lcp.status = 'needs-improvement';
@@ -267,7 +266,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     if (metrics.firstInputDelay > 300) {
       score -= 20;
       webVitals.fid.status = 'poor';
-      recommendations.push('Reduce First Input Delay (currently over 300ms)');
+      recommendations.push('Reduce First Input Delay (currently over300ms)');
     } else if (metrics.firstInputDelay > 100) {
       score -= 5;
       webVitals.fid.status = 'needs-improvement';
@@ -282,7 +281,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {
     if (metrics.cumulativeLayoutShift > 0.25) {
       score -= 20;
       webVitals.cls.status = 'poor';
-      recommendations.push('Fix layout shifts (CLS over 0.25)');
+      recommendations.push('Fix layout shifts (CLS over0.25)');
     } else if (metrics.cumulativeLayoutShift > 0.1) {
       score -= 10;
       webVitals.cls.status = 'needs-improvement';
@@ -317,7 +316,7 @@ export function useRealTimePerformance() {
         const paintEntries = performance.getEntriesByType('paint');
         
         const currentMetrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.fetchStart,
+          loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
           firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0

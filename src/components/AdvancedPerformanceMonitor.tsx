@@ -8,8 +8,8 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number;
-  networkLatency: number;
-  renderTime: number;
+  networkLatenc, y: number;
+  renderTim, e: number;
 }
 
 interface PerformanceMonitorProps {
@@ -44,7 +44,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const renderTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 
       const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
         firstContentfulPaint: fcp,
         largestContentfulPaint: lcp,
         firstInputDelay: fid,
@@ -166,7 +166,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return cleanup;
   }, [startMonitoring]);
 
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreColor = (value: number, thresholds: { good: number; needsImprovemen, t: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
@@ -181,60 +181,60 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}
+      className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}
     >
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="performance-monitor">
+        <h3className="text-xl font-semibold text-gray-900dark:text-white" id="performance-monitor">
           Performance Monitor
         </h3>
         <div className="flex items-center space-x-2">
-          <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
-          <span className="text-sm text-gray-600 dark:text-gray-400">
+          <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`} />
+          <span className="text-sm text-gray-600dark:text-gray-400">
             {isMonitoring ? 'Monitoring' : 'Stopped'}
           </span>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Load Time</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4mb-6">
+        <div className="bg-gray-50dark:bg-gray-700rounded-lgp-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Load Time</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}
             {formatTime(metrics.loadTime)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">First Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>
+        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}
             {formatTime(metrics.firstContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Largest Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>
+        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Largest Contentful Paint</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}
             {formatTime(metrics.largestContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">First Input Delay</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}>
+        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">First Input Delay</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}
             {formatTime(metrics.firstInputDelay)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Cumulative Layout Shift</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
+        <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
+          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Cumulative Layout Shift</div>
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}
             {formatScore(metrics.cumulativeLayoutShift)}
           </div>
         </div>
 
         {metrics.memoryUsage && (
-          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Memory Usage</div>
-            <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}>
+          <div className="bg-gray-50dark: bg-gray-700rounded-lgp-4">
+            <div className="text-sm text-gray-600dark:text-gray-400mb-1">Memory Usage</div>
+            <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}
               {metrics.memoryUsage}MB
             </div>
           </div>
@@ -247,12 +247,12 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4"
+            className="bg-yellow-50dark: bg-yellow-900/20border border-yellow-200dark:border-yellow-800rounded-lgp-4"
           >
-            <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2" id="performance-alerts">Performance Alerts</h4>
+            <h4className="font-semibold text-yellow-800dark:text-yellow-200mb-2" id="performance-alerts">Performance Alerts</h4>
             <ul className="space-y-1">
               {alerts.map((alert, index) => (
-                <li key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                <li key={index} className="text-sm text-yellow-700dark:text-yellow-300">
                   {alert}
                 </li>
               ))}
@@ -261,20 +261,20 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </AnimatePresence>
 
-      <div className="mt-4 flex space-x-2">
+      <div className="mt-4flexspace-x-2">
         <button
           onClick={isMonitoring ? stopMonitoring : startMonitoring}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          className={`px-4 py-2rounded-lg text-sm font-medium transition-colors ${
             isMonitoring
-              ? 'bg-red-500 hover:bg-red-600 text-white'
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              ? 'bg-red-500hover:bg-red-600text-white'
+              : 'bg-green-500hover:bg-green-600text-white'
           }`}
          aria-label="{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}">
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
         <button
           onClick={collectMetrics}
-          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
+          className="px-4 py-2bg-blue-500hover:bg-blue-600text-white rounded-lg text-sm font-mediumtransition-colors"
          aria-label="Refresh Metrics">
           Refresh Metrics
         </button>

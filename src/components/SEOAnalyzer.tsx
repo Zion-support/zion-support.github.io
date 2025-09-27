@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 interface SEOIssue {
   type: 'error' | 'warning' | 'info';
-  message: string;
-  severity: 'high' | 'medium' | 'low';
+  messag, e: string;
+  severit, y: 'high' | 'medium' | 'low';
   suggestion?: string;
 }
 
@@ -18,27 +18,27 @@ interface SEOReport {
     keywords: string | null;
     ogTitle: string | null;
     ogDescription: string | null;
-    ogImage: string | null;
-    twitterCard: string | null;
+    ogImag, e: string | null;
+    twitterCar, d: string | null;
   };
   headings: {
     h1: number;
     h2: number;
     h3: number;
     h4: number;
-    h5: number;
-    h6: number;
+    h, 5: number;
+    h, 6: number;
   };
   images: {
     total: number;
-    withAlt: number;
-    withoutAlt: number;
+    withAl, t: number;
+    withoutAl, t: number;
   };
   links: {
     total: number;
     internal: number;
-    external: number;
-    broken: number;
+    externa, l: number;
+    broke, n: number;
   };
 }
 
@@ -60,7 +60,7 @@ const SEOAnalyzer: React.FC = () => {
     const title = document.querySelector('title')?.textContent || '';
     if (!title) {
       issues.push({
-        type: 'error',
+        typ, e: 'error',
         message: 'Missing title tag',
         severity: 'high',
         suggestion: 'Add a descriptive title tag to your page'
@@ -68,16 +68,16 @@ const SEOAnalyzer: React.FC = () => {
     } else if (title.length < 30) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too short (less than 30 characters)',
+        message: 'Title tag is too short (less than30characters)',
         severity: 'medium',
         suggestion: 'Make your title more descriptive and longer'
       });
     } else if (title.length > 60) {
       issues.push({
         type: 'warning',
-        message: 'Title tag is too long (more than 60 characters)',
+        message: 'Title tag is too long (more than60characters)',
         severity: 'medium',
-        suggestion: 'Shorten your title to under 60 characters'
+        suggestion: 'Shorten your title to under60characters'
       });
     } else {
       passedChecks++;
@@ -96,37 +96,37 @@ const SEOAnalyzer: React.FC = () => {
     } else if (metaDescription.length < 120) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too short (less than 120 characters)',
+        message: 'Meta description is too short (less than120characters)',
         severity: 'medium',
         suggestion: 'Make your meta description more descriptive'
       });
     } else if (metaDescription.length > 160) {
       issues.push({
         type: 'warning',
-        message: 'Meta description is too long (more than 160 characters)',
+        message: 'Meta description is too long (more than160characters)',
         severity: 'medium',
-        suggestion: 'Shorten your meta description to under 160 characters'
+        suggestion: 'Shorten your meta description to under160characters'
       });
     } else {
       passedChecks++;
     }
 
-    // Check for H1 tag
+    // Check for H1tag
     totalChecks++;
     const h1Tags = document.querySelectorAll('h1');
     if (h1Tags.length === 0) {
       issues.push({
         type: 'error',
-        message: 'Missing H1 tag',
+        message: 'Missing H1tag',
         severity: 'high',
-        suggestion: 'Add an H1 tag to your page'
+        suggestion: 'Add an H1tag to your page'
       });
     } else if (h1Tags.length > 1) {
       issues.push({
         type: 'warning',
-        message: 'Multiple H1 tags found',
+        message: 'Multiple H1tags found',
         severity: 'medium',
-        suggestion: 'Use only one H1 tag per page'
+        suggestion: 'Use only one H1tag per page'
       });
     } else {
       passedChecks++;
@@ -192,13 +192,13 @@ const SEOAnalyzer: React.FC = () => {
 
     // Check for Open Graph tags
     totalChecks++;
-    const ogTitle = document.querySelector('meta[property="og:title"]')?.getAttribute('content');
+    const ogTitle = document.querySelector('meta[property="og: title"]')?.getAttribute('content');
     const ogDescription = document.querySelector('meta[property="og:description"]')?.getAttribute('content');
-    const ogImage = document.querySelector('meta[property="og:image"]')?.getAttribute('content');
+    const ogImage = document.querySelector('meta[property="o, g:image"]')?.getAttribute('content');
     
     if (!ogTitle || !ogDescription || !ogImage) {
       issues.push({
-        type: 'warning',
+        typ, e: 'warning',
         message: 'Missing Open Graph tags',
         severity: 'medium',
         suggestion: 'Add Open Graph tags for better social media sharing'
@@ -209,10 +209,10 @@ const SEOAnalyzer: React.FC = () => {
 
     // Check for Twitter Card tags
     totalChecks++;
-    const twitterCard = document.querySelector('meta[name="twitter:card"]')?.getAttribute('content');
+    const twitterCard = document.querySelector('meta[name="twitter: card"]')?.getAttribute('content');
     if (!twitterCard) {
       issues.push({
-        type: 'info',
+        typ, e: 'info',
         message: 'Missing Twitter Card tags',
         severity: 'low',
         suggestion: 'Add Twitter Card tags for better Twitter sharing'
@@ -280,12 +280,12 @@ const SEOAnalyzer: React.FC = () => {
       metaTags,
       headings: headingCounts,
       images: {
-        total: images.length,
+        tota, l: images.length,
         withAlt: imagesWithAlt.length,
         withoutAlt: imagesWithoutAlt,
       },
       links: {
-        total: links.length,
+        tota, l: links.length,
         internal: internalLinks,
         external: externalLinks,
         broken: 0, // This would require checking each link
@@ -296,10 +296,10 @@ const SEOAnalyzer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-600 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-blue-600 bg-blue-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'high': return 'text-red-600bg-red-50';
+      case 'medium': return 'text-yellow-600bg-yellow-50';
+      case 'low': return 'text-blue-600bg-blue-50';
+      default: return 'text-gray-600bg-gray-50';
     }
   };
 
@@ -317,22 +317,20 @@ const SEOAnalyzer: React.FC = () => {
   }, [checkSEO]);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-900">SEO Analyzer</h2>
-        <div className="flex space-x-2">
+        <h2className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
+        <div className="flexspace-x-2">
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2text-sm font-medium text-white bg-blue-600rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
-          >
-            {isVisible ? 'Hide Details' : 'Show Details'}
+            className="px-4 py-2text-sm font-medium text-gray-700bg-gray-100rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -342,77 +340,67 @@ const SEOAnalyzer: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">SEO Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}>
+              <span className="text-sm font-mediumtext-gray-700">SEO Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200rounded-fullh-2">
               <div
-                className={`h-2 rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
-                style={{ width: `${report.score}%` }}
-              ></div>
+                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                style={{ width: `${report.score}%` }}</p></div>
             </div>
-            <p className="text-sm text-gray-600 mt-2">
+            <p className="text-sm text-gray-600mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
             </p>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="p-4 border rounded-lg text-center">
-              <p className="text-2xl font-bold text-blue-600">{report.headings.h1}</p>
-              <p className="text-sm text-gray-600">H1 Tags</p>
+          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+            <div className="p-4border rounded-lgtext-center">
+              <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
+              <p className="text-sm text-gray-600">H1Tags</p>
             </div>
-            <div className="p-4 border rounded-lg text-center">
-              <p className="text-2xl font-bold text-green-600">{report.images.withAlt}</p>
+            <div className="p-4border rounded-lgtext-center">
+              <p className="text-2xl font-boldtext-green-600">{report.images.withAlt}</p>
               <p className="text-sm text-gray-600">Images with Alt</p>
             </div>
-            <div className="p-4 border rounded-lg text-center">
-              <p className="text-2xl font-bold text-purple-600">{report.links.internal}</p>
+            <div className="p-4border rounded-lgtext-center">
+              <p className="text-2xl font-boldtext-purple-600">{report.links.internal}</p>
               <p className="text-sm text-gray-600">Internal Links</p>
             </div>
-            <div className="p-4 border rounded-lg text-center">
-              <p className="text-2xl font-bold text-orange-600">{report.links.external}</p>
+            <div className="p-4border rounded-lgtext-center">
+              <p className="text-2xl font-boldtext-orange-600">{report.links.external}</p>
               <p className="text-sm text-gray-600">External Links</p>
             </div>
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">❌</span>
+          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Errors</p>
-                  <p className="text-2xl font-bold text-red-600">
-                    {report.issues.filter(issue => issue.type === 'error').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
               </div>
             </div>
             
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">⚠️</span>
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Warnings</p>
-                  <p className="text-2xl font-bold text-yellow-600">
-                    {report.issues.filter(issue => issue.type === 'warning').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
               </div>
             </div>
             
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">ℹ️</span>
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Info</p>
-                  <p className="text-2xl font-bold text-blue-600">
-                    {report.issues.filter(issue => issue.type === 'info').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
               </div>
             </div>
           </div>
@@ -420,19 +408,19 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-gray-900">Issues Found</h3>
-              <div className="space-y-2 max-h-96 overflow-y-auto">
+              <h3className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
-                    className={`p-3 rounded-md border ${getSeverityColor(issue.severity)}`}
+                    className={`p-3rounded-md border ${getSeverityColor(issue.severity)}`}
                   >
-                    <div className="flex items-start space-x-2">
+                    <div className="flex items-startspace-x-2">
                       <span className="text-lg">{getTypeIcon(issue.type)}</span>
                       <div className="flex-1">
                         <p className="text-sm font-medium">{issue.message}</p>
                         {issue.suggestion && (
-                          <p className="text-xs text-gray-600 mt-1">
+                          <p className="text-xs text-gray-600mt-1">
                             💡 {issue.suggestion}
                           </p>
                         )}
@@ -445,9 +433,9 @@ const SEOAnalyzer: React.FC = () => {
           )}
 
           {report.issues.length === 0 && (
-            <div className="text-center py-8">
-              <div className="text-4xl mb-4">🎉</div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Excellent SEO!</h3>
+            <div className="text-centerpy-8">
+              <div className="text-4xlmb-4">🎉</div>
+              <h3className="text-lg font-medium text-gray-900mb-2">Excellent SEO!</h3>
               <p className="text-gray-600">No SEO issues found.</p>
             </div>
           )}

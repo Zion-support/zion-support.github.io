@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ErrorBoundary } from '../src/components/ErrorBoundary';
+// import { ErrorBoundary } from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): JSX.Element {
@@ -59,7 +59,7 @@ export default function PrivacyPolicy(): JSX.Element {
 	];
 
 	return (
-		<ErrorBoundary>
+		<>
 			<Head>
 				<title>Privacy Policy - Zion App</title>
 				<meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
@@ -231,6 +231,6 @@ export default function PrivacyPolicy(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</ErrorBoundary>
+		</>
 	);
 }

@@ -449,7 +449,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                aria-label={`Select ${category} category`}
+                aria-label={`Open ${category} settings`}
                 className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'

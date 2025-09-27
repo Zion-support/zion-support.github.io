@@ -75,8 +75,8 @@ export default function SEOOptimizer({
       <meta name="theme-color" content="#2563eb" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
   );
 }
