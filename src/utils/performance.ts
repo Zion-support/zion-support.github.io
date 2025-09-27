@@ -2,7 +2,7 @@
 
 // Declare gtag for Google Analytics
 declare global {
-  function gtag(...args: any[]): void;
+  function gtag(...args: unknown[]): void;
 }
 
 interface PerformanceEntryWithProcessingStart extends PerformanceEntry {

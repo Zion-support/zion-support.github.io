@@ -111,7 +111,7 @@ export const optimizeTreeShaking = {
   },
   
   // Dynamic imports for code splitting
-  splitComponent: <T extends React.ComponentType<any>>(importFn: () => Promise<{ default: T }>) => {
+  splitComponent: <T extends React.ComponentType<unknown>>(importFn: () => Promise<{ default: T }>) => {
     return React.lazy(importFn);
   }
 };
