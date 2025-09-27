@@ -371,6 +371,24 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'performance-optimizer':
+        return (
+          <div className="p-8">
+            <div className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => window.location.reload()}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            <AdvancedPerformanceOptimizer />
+          </div>
+        );
+>>>>>>> e033e69977c74d0cf5d44bdaaec7844d2c0e28b6
       case 'new-analytics':
         return (
           <div className="p-8">
@@ -401,6 +419,21 @@ const Dashboard: React.FC = () => {
             />
           </div>
         );
+      case 'error-monitoring':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <AdvancedErrorMonitoring />
+          </div>
+        );
+      case 'advanced-system-monitor':
+        return (
+          <div className="p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <AdvancedSystemMonitor />
+          </div>
+        );
+>>>>>>> e033e69977c74d0cf5d44bdaaec7844d2c0e28b6
       case 'error-handler':
         return (
           <div className="p-8">
