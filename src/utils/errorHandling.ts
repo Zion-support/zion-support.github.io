@@ -1,25 +1,10 @@
 /**
- * Comprehensive error handling utilities
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
  * Provides comprehensive error management functions
  */
 
 export interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string}
-
-  construct, o, r(messa, g, e: stringseveri, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcatego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
-  ) {
-    sup, e, r(messa, g, e);
-    th, i, s.na, m, e = 'EnhancedErr, o, r';
-    th, i, s.severi, t, y = severi, t, y;
-    th, i, s.catego, r, y = catego, r, y;
-    th, i, s.conte, x, t = conte, x, t;
-    th, i, s.timesta, m, p = n, e, w, Da, t, e().toISOStri, n, g();
-    th, i, s.user, I, d = conte, x, t?.user, I, d;
-    th, i, s.session, I, d = conte, x, t?.sessionId}};// Error, logging, utility
-export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t?: ErrorConte, x, t): vo, i, d => {con, s, t, errorIn, f, o: ErrorIn, f, o = {
+ {con, s, t, errorIn, f, o: ErrorIn, f, o = {
     messa, g, e: err, o, r.messa, g, e,
     sta, c, k: err, o, r.stacktimesta, m, p: newDa, t, e().toISOStri, n, g()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hrefuser, I, d: conte, x, t?.userIdsession, I, d: conte, x, t?.session, I, d
   };
@@ -64,3 +49,111 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
 
     wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, nt.reason){
         componentName: "Global"action: "unhandled_promise_rejection"      })})}};
+
+	message: string;
+	stack?: string;
+	componentStack?: string;
+	errorBoundary?: string;
+	timestamp: string;
+	userAgent: string;
+	url: string;
+	userId?: string;
+	sessionId?: string}
+
+export interface ErrorContext {
+	componentName?: string;
+	props?: Record<string, any>;
+	state?: Record<string, any>;
+	errorBoundary?: string}
+
+export class ErrorHandler {
+	private static instance: ErrorHandler;
+	private errorLog: ErrorInfo[] = [];
+	private maxLogSize = 100;
+
+	private constructor() {}
+
+	public static getInstance(): ErrorHandler {
+		if (!ErrorHandler.instance) {
+			ErrorHandler.instance = new ErrorHandler()}
+		return ErrorHandler.instance}
+
+	public logError(error: Error, errorInfo?: ErrorContext): void {
+		const errorData: ErrorInfo = {
+			message: error.message,
+			stack: error.stack,
+			componentStack: errorInfo?.componentStack,
+			errorBoundary: errorInfo?.errorBoundary,
+			timestamp: new Date().toISOString(),
+			userAgent: typeof window !== "undefined" ? window.navigator.userAgent : "Server",
+			url: typeof window !== "undefined" ? window.location.href : "Server",
+			userId: this.getUserId(),
+			sessionId: this.getSessionId()
+		};
+
+		this.errorLog.push(errorData);
+		
+		// Keep only the last maxLogSize errors
+		if (this.errorLog.length > this.maxLogSize) {
+			this.errorLog = this.errorLog.slice(-this.maxLogSize)}
+
+		// Log to console in development
+		if (process.env.NODE_ENV === "development") {
+			console.error("Error logged:", errorData)}
+
+		// Send to error reporting service in production
+		if (process.env.NODE_ENV === "production") {
+			this.sendToErrorService(errorData)}
+	}
+
+	public getErrors(): ErrorInfo[] {
+		return [...this.errorLog]}
+
+	public clearErrors(): void {
+		this.errorLog = []}
+
+	private getUserId(): string | undefined {
+		// Implement user ID retrieval logic
+		return undefined}
+
+	private getSessionId(): string | undefined {
+		// Implement session ID retrieval logic
+		return undefined}
+
+	private sendToErrorService(errorData: ErrorInfo): void {
+		// Implement error reporting service integration
+		// This could be Sentry, LogRocket, or any other service
+		console.log("Sending error to service:", errorData)}
+}
+
+export const errorHandler = ErrorHandler.getInstance();
+
+export const handleError = (error: Error, errorInfo?: ErrorContext): void => {
+	errorHandler.logError(error, errorInfo)};
+
+export const getErrorLog = (): ErrorInfo[] => {
+	return errorHandler.getErrors()};
+
+export const clearErrorLog = (): void => {
+	errorHandler.clearErrors()};
+
+export const setupGlobalErrorHandling = (): void => {
+	// Set up global error handlers
+	if (typeof window !== "undefined") {
+		// Handle unhandled promise rejections
+		window.addEventListener('unhandledrejection', (event) => {
+			console.error('Unhandled promise rejection:', event.reason);
+			errorHandler.logError(new Error(event.reason), {
+				componentName: 'Global',
+				errorBoundary: 'unhandledrejection'
+			})});
+
+		// Handle uncaught errors
+		window.addEventListener('error', (event) => {
+			console.error('Uncaught error:', event.error);
+			errorHandler.logError(event.error, {
+				componentName: 'Global',
+				errorBoundary: 'uncaught'
+			})})}
+};
+

@@ -142,7 +142,7 @@ const About = React.memo(function About(): JSX.Element {
 						<h2 className="text-3 xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
 						<div className="grid md:grid-cols-3 gap-8">							{teamMembers.map((member, index) => (
 								<div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-									<div className="text-6xl mb-4">{member.image}</div>
+									<div className="text-6 xl mb-4">{member.image}</div>
 									<h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
 									<p className="text-blue-600 font-medium mb-2">{member.role}</p>
 									<p className="text-sm text-gray-500 mb-3">{member.expertise}</p>
@@ -154,12 +154,12 @@ const About = React.memo(function About(): JSX.Element {
 
 					{/* Stats Section */}
 					<section className="mb-20">
-						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
-							<h2 className="text-4xl font-bold text-center mb-12">Our Impact</h2>
+						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2 xl p-8 md:p-12 text-white">
+							<h2 className="text-4 xl font-bold text-center mb-12">Our Impact</h2>
 							<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 								{stats.map((stat, index) => (
 									<div key={index} className="text-center">
-										<div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+										<div className="text-4 xl md:text-5 xl font-bold mb-2">{stat.number}</div>
 										<div className="text-blue-100">{stat.label}</div>
 									</div>
 								))}
@@ -177,4 +177,4 @@ const About = React.memo(function About(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642

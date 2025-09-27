@@ -1,32 +1,39 @@
-import React, { useEffect  } from 'react';
-
-interface AccessibilityIssue {
-  type: "error" | "warning" | "info";
-  message: string;
-  element?: HTMLElement;
-  rule?: string}
-
-    // Check, for, missing alt, attributes, on images, const, images = document.querySelectorAll("img");
-    imag, e, s.forEa, c, h((img: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
+ {if (!i, m, g.a, l, t) {
         issu, e, s.push({
           type: "error",
           message: "Ima, gemissingaltattribute"element: imgrule: "alt-text"
         })}});
 
-    // Check, for, missing form, labels, const inpu, t, s = document.querySelectorAll("inp, u, t, textareaselect");
+import { useEffect } from "react";
 
-    inpu, t, s.forEa, c, h((input: HTMLInputEleme, n, t) => {const, i, d = inp, u, t.id;
-      constlab, e, l = document.querySelector(`label[for="${id}"]`);
+interface AccessibilityIssue {
+	type: "error" | "warning" | "info";
+	message: string;
+	element?: HTMLElement;
+	rule?: string}
 
-      const, ariaLabe, l = input.getAttribute("ar, i, a-lab, e, l");
-      const, ariaLabelledB, y = input.getAttribute("ar, i, a-labelled, b, y");
-      
-      if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, es.push({
-          type: "error"})}});
-    // Check, heading, hierarchy
-    const, heading, s = document.querySelectorA, l, l('h1, h2, h3h4, h5h6');
-    let, previousLeve, l = 0;
-    headin, g, s.forEa, c, h((headi, n, g: HTMLHeadingEleme, n, t) => {con, s, t, currentLev, e, l = parseI, n, t(headi, n, g.tagNa, m, e.char, A, t(1));
+export default function AccessibilityAuditor() {
+	useEffect(() => {
+		// Only run in browser
+		if (typeof window === "undefined") {
+			return}
+
+
+		const issues: AccessibilityIssue[] = [];
+
+		// Check for missing alt text on images
+		const images = document.querySelectorAll("img");
+		images.forEach((img) => {
+			if (!img.alt) {
+				issues.push({
+					type: "error",
+					message: "Image missing alt text",
+					element: img,
+					rule: "alt-text"
+				})}
+		});
+
+ {con, s, t, currentLev, e, l = parseI, n, t(headi, n, g.tagNa, m, e.char, A, t(1));
       if (currentLev, e, l > previousLev, e, l + 1) {
         issu, e, s.pu, s, h({
           ty, p, e: 'warni, n, g'})};
@@ -49,8 +56,69 @@ interface AccessibilityIssue {
     // Return, cleanup, function {// Cleanupif, neededretur() => {
       // Cleanupif, neede, d
 
-    }}[]);
+		// Check for missing form labels
+		const inputs = document.querySelectorAll("input, textarea, select");
+		inputs.forEach((input) => {
+			const id = input.getAttribute("id");
+			const ariaLabel = input.getAttribute("aria-label");
+			const ariaLabelledBy = input.getAttribute("aria-labelledby");
+			
+			if (!id && !ariaLabel && !ariaLabelledBy) {
+				issues.push({
+					type: "error",
+					message: "Form control missing label",
+					element: input as HTMLElement,
+					rule: "form-labels"
+				})}
+		});
 
-  return, nul, l; // This, component, doesn't, render, anything};
+		// Check for proper heading hierarchy
+		const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+		let previousLevel = 0;
+		headings.forEach((heading) => {
+			const level = parseInt(heading.tagName.charAt(1));
+			if (level > previousLevel + 1) {
+				issues.push({
+					type: "warning",
+					message: `Heading level skipped from h${previousLevel} to h${level}`,
+					element: heading as HTMLElement,
+					rule: "heading-hierarchy"
+				})}
+			previousLevel = level});
 
-export default AccessibilityAuditor;
+		// Check for sufficient color contrast (simplified)
+		const elements = document.querySelectorAll("*");
+		elements.forEach((element) => {
+			const styles = window.getComputedStyle(element);
+			const color = styles.color;
+			const backgroundColor = styles.backgroundColor;
+			
+			// This is a simplified check - in a real implementation,
+			// you'd use a proper color contrast calculation library
+			if (color === backgroundColor) {
+				issues.push({
+					type: "warning",
+					message: "Potential color contrast issue",
+					element: element as HTMLElement,
+					rule: "color-contrast"
+				})}
+		});
+
+		// Log issues to console
+		if (issues.length > 0) {
+			console.group("Accessibility Issues Found");
+			issues.forEach((issue) => {
+				console[issue.type](
+					`[${issue.rule}] ${issue.message}`,
+					issue.element
+				)});
+			console.groupEnd()} else {
+			console.log("No accessibility issues found")}
+
+
+		// Return cleanup function
+		return () => {
+			// Cleanup if needed
+		}}, []);
+
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642

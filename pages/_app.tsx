@@ -5,7 +5,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
-import { WebVitals } from "../src/components/WebVitals";
+>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
