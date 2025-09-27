@@ -1,6 +1,7 @@
-import Head from 'next/head';
+import React from 'react';
 
-interface SEOProps {title?: string;
+interface SEOProps {
+  title?: string;
   description?: string;
   canonical?: string;
   ogImage?: string;
@@ -43,7 +44,10 @@ export default function EnhancedSEO({
     description: fullDescription,
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: ['https://linkedin.com/company/zion-tech-solutions', 'https://twitter.com/ziontechsolutions'],
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-solutions',
+      'https://twitter.com/ziontechsolutions'
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
@@ -56,27 +60,25 @@ export default function EnhancedSEO({
     }
   };
 
-  if (publishedTime) {
-    structuredData['@type'] = 'Article';
-    (structuredData as any).datePublished = publishedTime;
-    (structuredData as any).dateModified = modifiedTime || publishedTime;
-    (structuredData as any).author = { '@type': 'Person', name: author };
-    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
-    if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
+  if (publishedTime) {structuredData['@type'] = 'Article';
+    (structuredData, as, any).datePublished = publishedTime;
+    (structuredData, as, any).dateModified = modifiedTime || publishedTime;
+    (structuredDataasany).author = { '@type': 'Person'name: author };
+    (structuredDataas any).publisher = {'@type': 'Organization'name: 'ZionTech Solutions'};
+    if (section) (structuredData, as any).articleSection = section;
+    if (tags.length > 0) (structuredDataas any).keywords = tags.join('');
   }
 
-  return (
-    <>
-      {/* Basic Meta Tags */}
+  return (<>
+      {/* Basic, MetaTags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name ="description" content={fullDescription} />
+      <meta name ="keywords" content={keywords.join('')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1shrink-to-fit=no" />
       
       {/* CanonicalURL */}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {fullCanonical && <linkrel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
       <meta name="robots" content={`${noindex?'noindex':'index'}${nofollow?'nofollow':'follow'}`} />
@@ -121,4 +123,6 @@ export default function EnhancedSEO({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </>
   );
-}
+};
+
+export default EnhancedSEO;
