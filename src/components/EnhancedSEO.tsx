@@ -68,20 +68,20 @@ export default function EnhancedSEO({
 
   return (
     <>
-      {/* Basic, MetaTags */}
+      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name ="description" content={fullDescription} />
-      <meta name ="keywords" content={keywords.join(', ')} />
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       
-      {/* CanonicalURL */}
-      {fullCanonical && <linkrel="canonical" href={fullCanonical} />}
+      {/* Canonical URL */}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex?'noindex':'index'}${nofollow?'nofollow':'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}${nofollow ? 'nofollow' : 'follow'}`} />
       
-      {/* Open, Graph */}
+      {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
@@ -90,7 +90,7 @@ export default function EnhancedSEO({
       <meta property="og:site_name" content="Zion Tech Solutions" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter, Card */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
@@ -98,25 +98,25 @@ export default function EnhancedSEO({
       <meta name="twitter:site" content="@ziontechsolutions" />
       <meta name="twitter:creator" content="@ziontechsolutions" />
       
-      {/* Additional, Meta Tags */}
+      {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />
       
-      {/* Structured, Data */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      {/* Preconnect, to external, domains */}
-      <link rel="preconnect" href="https:// fonts.googleapis.com" />
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       
-      {/* DNS, Prefetch */}
+      {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </>
