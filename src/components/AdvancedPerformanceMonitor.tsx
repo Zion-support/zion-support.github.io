@@ -181,10 +181,10 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white dark:bg-gray-800rounded-lg shadow-lg p-6`}
+      className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}
     >
       <div className="flex items-center justify-between mb-6">
-        <h3className="text-xl font-semibold text-gray-900 dark:text-white" id="performance-monitor">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="performance-monitor">
           Performance Monitor
         </h3>
         <div className="flex items-center space-x-2">

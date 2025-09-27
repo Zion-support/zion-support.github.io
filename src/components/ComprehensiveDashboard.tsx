@@ -27,12 +27,11 @@ const ComprehensiveDashboard: React.FC = () => {
   return (
 
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7 xl mx-auto px-4 sm: px-6l,g:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h 1 className="text-3 xl font-boldtext-gray-900">Website Analytics Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Website Analytics Dashboard</h1>
           <p className="mt-2 text-gray-600">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
             Comprehensive monitoring and analysis of your website&apos;s performance, accessibility, and SEO.
           </p>
         </div>

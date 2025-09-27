@@ -290,7 +290,7 @@ export default function AdvancedAnalyticsInsights({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2className="text-2 xl font-bold text-gray-900">Analytics Insights</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
           <p className="text-gray-600">Comprehensive analytics and performance insights</p>
         </div>
         <div className="flex items-center space-x-2">
