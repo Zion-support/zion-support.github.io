@@ -163,6 +163,12 @@ export class PerformanceMonitor {
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    
+    // Clear performance marks and measures
+    if (typeof window !== 'undefined' && window.performance) {
+      window.performance.clearMarks();
+      window.performance.clearMeasures();
+    }
   }
 
   public getWebVitals(): WebVitalMetric[] {

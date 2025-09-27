@@ -9,6 +9,7 @@ import SEO from './components/SEO';
 import Home from './pages/Home';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { accessibilityManager } from './utils/accessibility';
+import { analytics } from './utils/analytics';
 import './index.css';
 import './styles/improvements.css';
 
@@ -25,6 +26,14 @@ export default function App(): React.JSX.Element {
     // Start enhanced performance monitoring
     performanceMonitor.startMeasure('app-render');
     performanceMonitor.reportCoreWebVitals();
+    
+    // Initialize analytics
+    analytics.trackPageLoad();
+    analytics.track('app_initialized', {
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      language: navigator.language
+    });
     
     return () => {
       performanceMonitor.endMeasure('app-render');

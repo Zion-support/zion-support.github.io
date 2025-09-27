@@ -12,6 +12,7 @@ export class AccessibilityManager {
   private options: AccessibilityOptions = {};
   private observers: MutationObserver[] = [];
   private keyboardEventListeners: Map<HTMLElement, (e: KeyboardEvent) => void> = new Map();
+  public isInitialized: boolean = false;
 
   public static getInstance(): AccessibilityManager {
     if (!AccessibilityManager.instance) {
@@ -25,6 +26,7 @@ export class AccessibilityManager {
     this.setupAccessibilityFeatures();
     this.observeDOMChanges();
     this.setupKeyboardNavigation();
+    this.isInitialized = true;
   }
 
   private setupAccessibilityFeatures(): void {
@@ -302,6 +304,72 @@ export class AccessibilityManager {
     }
   }
 
+  public handleKeyboardNavigation(event: KeyboardEvent): void {
+    // Handle keyboard navigation
+    if (event.key === 'Tab') {
+      this.handleTabNavigation(event);
+    } else if (event.key === 'Escape') {
+      this.handleEscapeKey(event);
+    } else if (event.key === 'Enter' || event.key === ' ') {
+      this.handleActivation(event);
+    }
+  }
+
+  private handleTabNavigation(event: KeyboardEvent): void {
+    // Implement tab navigation logic
+    const focusableElements = this.getFocusableElements();
+    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+    
+    if (event.shiftKey) {
+      // Shift + Tab - move backwards
+      if (currentIndex > 0) {
+        focusableElements[currentIndex - 1].focus();
+      } else {
+        focusableElements[focusableElements.length - 1].focus();
+      }
+    } else {
+      // Tab - move forwards
+      if (currentIndex < focusableElements.length - 1) {
+        focusableElements[currentIndex + 1].focus();
+      } else {
+        focusableElements[0].focus();
+      }
+    }
+  }
+
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
+    modals.forEach(modal => {
+      if (modal.getAttribute('aria-hidden') === 'false') {
+        (modal as HTMLElement).click();
+      }
+    });
+  }
+
+  private handleActivation(event: KeyboardEvent): void {
+    // Handle Enter and Space key activation
+    const target = event.target as HTMLElement;
+    if (target && (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button')) {
+      target.click();
+    }
+  }
+
+  private getFocusableElements(): HTMLElement[] {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])',
+      '[role="button"]:not([disabled])',
+      '[role="link"]:not([disabled])'
+    ];
+    
+    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+  }
+
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -310,6 +378,7 @@ export class AccessibilityManager {
       element.removeEventListener('keydown', handler);
     });
     this.keyboardEventListeners.clear();
+    this.isInitialized = false;
   }
 }
 
