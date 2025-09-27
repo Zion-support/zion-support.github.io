@@ -81,9 +81,9 @@ export const fetchWithCache = async <T>(
   const cacheKey = `api:${url}:${JSON.stringify(options)}`;
 
   // Check cache first
-  const cached = cache.get<T>(cacheKey);
+  const cached = cache.get(cacheKey);
   if (cached) {
-    return cached;
+    return cached as T;
   }
 
   // Fetch from API
