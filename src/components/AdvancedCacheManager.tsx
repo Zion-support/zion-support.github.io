@@ -6,8 +6,8 @@ interface CacheStats {
   missRate: number;
   totalRequests: number;
   cacheSize: number;
-  memoryUsag, e: number;
-  lastCleare, d: Date;
+  memoryUsage: number;
+  lastCleared: Date;
 }
 
 interface CacheManagerProps {
@@ -30,7 +30,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   const updateStats = useCallback(() => {
     // Simulate cache statistics
     const newStats: CacheStats = {
-      hitRat, e: Math.random() * 30 + 70, // 70-100%
+      hitRate: Math.random() * 30 + 70, // 70-100%
       missRate: Math.random() * 30, // 0-30%
       totalRequests: Math.floor(Math.random() * 10000) + 1000,
       cacheSize: Math.floor(Math.random() * 100) + 50, // 50-150MB
@@ -87,10 +87,15 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   };
 
   return (
-    <div className="{`advanced-cache-manager `}">
+<<<<<<< HEAD
+    <div className={`advanced-cache-manager `}>
       <div className="bg-white rounded-lg shadow-lg p-6">
+=======
+    <div className="{"`advanced-cache-manager `}>
+      <div className="bg-white rounded-lg shadow-lgp-6">
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 flexitems-center">
+          <h3 className="text-xl font-semibold text-gray-800 flex items-center">
             <Database className="w-5 h-5 mr-2" />
             Advanced Cache Manager
           </h3>
@@ -98,69 +103,98 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
             <button
               onClick={clearCache}
               disabled={isOptimizing}
-              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600disable, d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 disabled:opacity-50 flex items-center"
             >
               <Trash2 className="w-4 h-4 mr-2" />
               Clear Cache
-            </button> <button
+            </button>
+            <button
               onClick={optimizeCache}
               disabled={isOptimizing}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600disable, d:opacity-50 flexitems-center"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 flex items-center"
             >
+<<<<<<< HEAD
               <RefreshCw className={`w-4 h-4 mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
+=======
+              <RefreshCw className="{"`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
               Optimize
             </button>
           </div>
-        </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3ga p-6 mb-6">
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>
               <CheckCircle className="w-4 h-4 text-green-500" />
-            </div> <div className="{`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`} {stats.hitRate.toFixed(1)}% </div">
-          </div> <div className="bg-gray-50 rounded-lg p-4">
+            </div>
+<<<<<<< HEAD
+            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}>
+=======
+            <div className="{"`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-1b1b
+              {stats.hitRate.toFixed(1)}%
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Miss Rate</span>
               <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            </div> <div className="text-2xl font-bold text-red-500">
+            </div>
+            <div className="text-2xl font-bold text-red-500">
               {stats.missRate.toFixed(1)}%
             </div>
-          </div> <div className="bg-gray-50 rounded-lg p-4">
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Total Requests</span>
               <HardDrive className="w-4 h-4 text-blue-500" />
-            </div> <div className="text-2xl font-bold text-gray-800">
+            </div>
+            <div className="text-2xl font-bold text-gray-800">
               {stats.totalRequests.toLocaleString()}
             </div>
-          </div> <div className="bg-gray-50 rounded-lg p-4">
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Cache Size</span>
               <HardDrive className="w-4 h-4 text-purple-500" />
-            </div> <div className="text-2xl font-bold text-gray-800">
+            </div>
+            <div className="text-2xl font-bold text-gray-800">
               {stats.cacheSize} MB
             </div>
-          </div> <div className="bg-gray-50 rounded-lg p-4">
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Memory Usage</span>
               <HardDrive className="w-4 h-4 text-indigo-500" />
-            </div> <div className="text-2xl font-bold text-gray-800">
+            </div>
+            <div className="text-2xl font-bold text-gray-800">
               {stats.memoryUsage.toFixed(1)}%
             </div>
-          </div> <div className="bg-gray-50 rounded-lg p-4">
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-600">Last Cleared</span>
               <RefreshCw className="w-4 h-4 text-gray-500" />
-            </div> <div className="text-sm font-medium text-gray-800">
+            </div>
+            <div className="text-sm font-medium text-gray-800">
               {stats.lastCleared.toLocaleTimeString()}
             </div>
           </div>
         </div>
 
         {cacheStrategies.length > 0 && (
-          <div className="bg-green-50border border-green-200 rounded-lg p-4">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
             <h4 className="font-semibold text-green-800 mb-2">Optimization Strategies Applied:</h4>
             <ul className="space-y-1">
               {cacheStrategies.map((strategy, index) => (
-                <li key={index} className="text-sm text-green-700 flexitems-center">
+                <li key={index} className="text-sm text-green-700 flex items-center">
                   <CheckCircle className="w-3 h-3 mr-2" />
                   {strategy}
                 </li>

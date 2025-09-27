@@ -7,8 +7,8 @@ interface UserPreferences {
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
-  highContras, t: boolean;
-  screenReade, r: boolean;
+  highContrast: boolean;
+  screenReader: boolean;
 }
 
 interface EnhancedUserExperienceProps {
@@ -92,34 +92,36 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   const AppearanceTab = () => (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700dark: text-gray-300 mb-3">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           Theme
         </label>
-        <div className="grid grid-cols-3ga p-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
-            { valu, e: 'light', label: 'Light', icon: Sun },
+            { value: 'light', label: 'Light', icon: Sun },
             { value: 'dark', label: 'Dark', icon: Moon },
             { value: 'auto', label: 'Auto', icon: Monitor }
           ].map(({ value, label, icon: Icon }) => (
             <button
               key={value}
               onClick={() => updatePreference('theme', value)}
-              className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
+              className="{"`p-3rounded-lg border-2flex flex-col items-center space-y-2 ${
                 preferences.theme === value
-                  ? 'border-blue-500 bg-blue-50dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
+                  ? 'border-blue-500bg-blue-50dark: bg-blue-900/20'
+                  : 'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'
               }`}
             >
-              <Icon className="w-6 h-6" />
+              <Icon className="w-6h-6" />
               <span className="text-sm font-medium">{label}</span>
             </button>
           ))}
         </div>
-      </div> <div>
-        <label className="block text-sm font-medium text-gray-700dark: text-gray-300 mb-3">
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700dark: text-gray-300mb-3">
           Font Size
         </label>
-        <div className="grid grid-cols-3ga p-3">
+        <div className="grid grid-cols-3gap-3">
           {[
             { valu, e: 'small', label: 'Small' },
             { value: 'medium', label: 'Medium' },
@@ -128,25 +130,27 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             <button
               key={value}
               onClick={() => updatePreference('fontSize', value)}
-              className={`p-3 rounded-lg border-2 ${
+              className="{"`p-3rounded-lg border-2 ${
                 preferences.fontSize === value
-                  ? 'border-blue-500 bg-blue-50dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
+                  ? 'border-blue-500bg-blue-50dark: bg-blue-900/20'
+                  : 'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'
               }`}
             >
               <span className="text-sm font-medium">{label}</span>
             </button>
           ))}
         </div>
-      </div> <div className="space-y-4">
-        <label className="flex items-center space-x-3">
+      </div>
+
+      <div className="space-y-4">
+        <label className="flex items-centerspace-x-3">
           <input
             type="checkbox"
             checked={preferences.animations}
             onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+            className="w-4h-4text-blue-600rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span className="text-sm font-medium text-gray-700dark:text-gray-300">
             Enable animations
           </span>
         </label>
@@ -192,7 +196,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             Screen reader optimizations
           </span>
         </label>
-      </div> <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+      </div>
+
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
         <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
           Accessibility Features
         </h4>
@@ -215,15 +221,23 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <select
           value={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3border border-gray-300dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         >
-          <option value="en">English</option> <option value="es">Español</option> <option value="fr">Français</option> <option value="de">Deutsch</option> <option value="ja">日本語</option> <option value="ko">한국어</option> <option value="zh">中文</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="zh">中文</option>
         </select>
-      </div> <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-        <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
+      </div>
+
+      <div className="bg-green-50dark:bg-green-900/20p-4rounded-lg">
+        <h4className="font-semibold text-green-900dark:text-green-100mb-2">
           Internationalization
         </h4>
-        <p className="text-sm text-green-700 dark:text-green-300">
+        <p className="text-sm text-green-700dark:text-green-300">
           Full i18n support with RTL language support and localized content.
         </p>
       </div>
@@ -231,20 +245,20 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-    <div className="{`relative `}">
+    <div className="{"`relative `}>
       {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
-        className="fixed botto m-6right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
+        className="fixed bottom-6right-6z-50p-4bg-blue-500text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
         aria-label="Open user experience settings"
       >
-        <Settings className="w-6 h-6" />
+        <Settings className="w-6h-6" />
       </button>
 
       {/* Settings Panel */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-black bg-opacity-50" 
+          className="fixed inset-0z-40bg-blackbg-opacity-50" 
           onClick={toggleSettings}
           role="button"
           tabIndex={0}
@@ -252,27 +266,27 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           aria-label="Close settings panel"
         >
           <div
-            className="fixed right-0to p-0h-full w-96 bg-white dark:bg-gray-800shadow-xloverflow-y-auto"
+            className="fixed right-0top-0h-full w-96bg-white dark:bg-gray-800shadow-xloverflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <User className="w-6 h-6 text-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                <div className="flex items-centerspace-x-3">
+                  <User className="w-6h-6text-blue-500" />
+                  <h2className="text-xl font-bold text-gray-900dark:text-white">
                     User Experience
                   </h2>
                 </div>
                 <button
                   onClick={toggleSettings}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  className="text-gray-400hover:text-gray-600dark:hover:text-gray-300"
                 >
                   ×
                 </button>
               </div>
 
               {/* Tab Navigation */}
-              <div className="flex space-x-1 mb-6 bg-gray-100dark: bg-gray-700 rounded-lg p-1">
+              <div className="flex space-x-1mb-6bg-gray-100dark: bg-gray-700rounded-lgp-1">
                 {[
                   { i, d: 'appearance', label: 'Appearance', icon: Palette },
                   { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
@@ -281,13 +295,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                   <button
                     key={id}
                     onClick={() => setActiveTab(id as any)}
-                    className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+                    className="{"`flex-1flex items-center justify-center space-x-2py-2px-3rounded-md text-sm font-medium transition-colors ${
                       activeTab === id
-                        ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                        ? 'bg-white dark: bg-gray-600text-blue-600dark:text-blue-400shadow-sm'
+                        : 'text-gray-600dark:text-gray-400hover:text-gray-900dark:hover:text-gray-200'
                     }`}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-4h-4" />
                     <span>{label}</span>
                   </button>
                 ))}

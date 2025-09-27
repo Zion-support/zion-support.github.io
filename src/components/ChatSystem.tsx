@@ -182,7 +182,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     const isBot = message.sender === 'bot';
     const isSystem = message.sender === 'system';
 
-    if (isSystem) {      return (        <div key = {message.id} className="flex justify-cente"r"">          <div className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-ful"l"">
+    if (isSystem) {      return (        <div key = {message.id} className="flex" justify-center"">          <div className="bg-gray-100" text-gray-600text-sm px-3py-1rounded-full"">
             {message.text}
           </div>
         </div>;
@@ -192,36 +192,38 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     return (
       <div
         key = {message.id}
-        className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
+        className="{"`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
       >
-        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
-          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}
-            <Image              className="h-8 w-8 rounded-ful"l""
+        <div className="{"`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
+          <div className="{"`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}
+            <Image              className="h-8w-8rounded-full"""
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
               width={32}
               height={32}
             />
-          </div> <div className={`${isUser ? 'text-right' : 'text-left'}`}
+          </div>
+          <div className="{"`${isUser ? 'text-right' : 'text-left'}`}
             <div
-              className = {`px-4 py-2 rounded-lg ${
+              className = {`px-4 py-2rounded-lg ${
                 isUser
-                  ? 'bg-blue-600 text-white'                  : 'bg-gray-200 text-gray-800'}
+                  ? 'bg-blue-600text-white'                  : 'bg-gray-200text-gray-800'}
               }`}
             >
-              {message.type === 'image' && message.metadata?.imageUrl && (                <div className="mb-"2"">
-                  <Image                    src={message.metadata.imageUrl}                    alt="Shared imag"e""                    className="max-w-full h-auto rounde"d""
+              {message.type === 'image' && message.metadata?.imageUrl && (                <div className="mb-2""">
+                  <Image                    src={message.metadata.imageUrl}                    alt=Shared image""                    className="max-w-full" h-auto rounded""
                     width={300}
                     height={200}
                   />
                 </div>
               )}
-              {message.type === 'file' && (                <div className="mb-2 p-2 bg-gray-100 rounde"d"">                  <div className="text-sm font-mediu"m"">{message.metadata?.fileName}</div> <div className="text-xs text-gray-50"0"">
+              {message.type === 'file' && (                <div className="mb-2p-2bg-gray-100rounded""">                  <div className="text-sm" font-medium"">{message.metadata?.fileName}</div>                  <div className="text-xs" text-gray-500"">
                     {message.metadata?.fileSize ? `${(message.metadata.fileSize / 1024).toFixed(1)} KB` : ''}
                   </div>
                 </div>
-              )}              <p className="text-s"m"">{message.text}</p>
-            </div> <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}`}
+              )}              <p className="text-sm""">{message.text}</p>
+            </div>
+            <div className="{"`text-xs text-gray-500mt-1 ${isUser ? 'text-right' : 'text-left'}`}
               {formatTime(message.timestamp)}
             </div>
           </div>
@@ -231,44 +233,44 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className = {`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className="flex items-center justify-between p-4 border -b border-gray-20"0"">        <div className="flex items-cente"r"">
-          <Image            className="h-8 w-8 rounded-full mr-"3""
+    <div className = {`flex flex-col h-96bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
+      {/* Header */}      <div className="flex" items-center justify-between p-4border-b border-gray-200"">        <div className="flex" items-center"">
+          <Image            className="h-8w-8rounded-full" mr-3""
             src={botAvatar}
             alt={botName}
             width={32}
             height={32}
           />
-          <div>            <h3 className="text-sm font-medium text-gray-90"0"" id="botname">{botName}</h3>            <div className="flex items-cente"r"">
-              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}</div>              <span className="text-xs text-gray-50"0"">
+          <div>            <h3className="text-sm" font-medium text-gray-900"" id="botname">{botName}</h3>            <div className="flex" items-center"">
+              <div className="{"`h-2w-2rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}</div>              <span className="text-xs" text-gray-500"">
                 {isConnected ? 'Online' : 'Offline'}
               </span>
             </div>
           </div>
-        </div> <div className="flex space-x-"2"">
+        </div>        <div className="flex" space-x-2"">
           {enableFileUpload && (
-            <button              onClick={() => fileInputRef.current?.click()}              className="p-2 text-gray-400 hover:text-gray-60"0""              title=Upload file""
-            >              <svg className="h-5 w-"5"" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M15.1727l-6.5866.586a220102.8282.828l6.414-6.586a44000-5.656-5.656l-6.4156.585a660108.4868.486L20.513" />
+            <button              onClick={() => fileInputRef.current?.click()}              className="p-2text-gray-400hover:text-gray-600"""              title=Upload file""
+            >              <svg className="h-5w-5""" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M15.1727l-6.5866.586a220102.8282.828l6.414-6.586a44000-5.656-5.656l-6.4156.585a660108.4868.486L20.513" />
               </svg>
             </button>
           )}
           {enableImageUpload && (
-            <button              onClick={() => fileInputRef.current?.click()}              className="p-2 text-gray-400 hover:text-gray-60"0""              title=Upload image""
-            >              <svg className="h-5 w-"5"" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M416l4.586-4.586a220012.8280L1616 m-2-2l1.586-1.586a220012.8280L2014 m-6-6h.01M620h12a220002-2V6a22000-2-2H6a22000-22v12a2200022z" />
+            <button              onClick={() => fileInputRef.current?.click()}              className="p-2text-gray-400hover:text-gray-600"""              title=Upload image""
+            >              <svg className="h-5w-5""" fill="none" stroke="currentColor" viewBox="002424">                <path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M416l4.586-4.586a220012.8280L1616m-2-2l1.586-1.586a220012.8280L2014m-6-6h.01M620h12a220002-2V6a22000-2-2H6a22000-22v12a2200022z" />
               </svg>
             </button>
           )}
         </div>
       </div>
 
-      {/* Messages */}      <div className="flex-1overflow-y-auto p-4 space-y-"4"">
+      {/* Messages */}      <div className="flex-1overflow-y-auto" p-4space-y-4"">
         {messages.map(renderMessage)}
-        {isTyping && (          <div className="flex justify-star"t"">            <div className="flex items-cente"r"">
-              <Image                className="h-8 w-8 rounded-full mr-"3""                src={botAvatar}
+        {isTyping && (          <div className="flex" justify-start"">            <div className="flex" items-center"">
+              <Image                className="h-8w-8rounded-full" mr-3""                src={botAvatar}
                 alt={botName}
                 width={32}
                 height={32}
-              />              <div className="bg-gray-200 text-gray-800 px-4 py-2 rounded-l"g"">                <div className="flex space-x-"1"">                  <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounc"e""></div> <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounc"e"" style={{ animationDelay: '0.1s' }}></div> <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounc"e"" style={{ animationDelay: '0.2s' }}></div>
+              />              <div className="bg-gray-200text-gray-800px-4" py-2rounded-lg"">                <div className="flex" space-x-1"">                  <div className="w-2h-2bg-gray-500rounded-full" animate-bounce""></div>                  <div className="w-2h-2bg-gray-500rounded-full" animate-bounce"" style={{ animationDelay: '0.1s' }}></div>                  <div className="w-2h-2bg-gray-500rounded-full" animate-bounce"" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -277,18 +279,18 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}      <div className="p-4 border -t border-gray-20"0"">        <div className="flex space-x-"2"">
+      {/* Input */}      <div className="p-4border-t" border-gray-200"">        <div className="flex" space-x-2"">
           <input            type=text""
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={placeholder}            className="flex-1 px-3 py-2border border-gray-300 rounded-md focus: outline-none focus:ring-2focu",
+            placeholder={placeholder}            className="flex-1px-3py-2border" border-gray-300rounded-md focus: outline-none focus:ring-2focu,
     s:ring-blue-500""
-            disabled = {!isConnected}            aria-label="Type your messag"e""
+            disabled = {!isConnected}            aria-label=Type your message""
           />
           <button
-            onClick={() => handleSendMessage(inputText)}            aria-label="Send messag"e""
-            disabled={!inputText.trim() || !isConnected}            className="px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 disabled:opacity-50disable",
+            onClick={() => handleSendMessage(inputText)}            aria-label=Send message""
+            disabled={!inputText.trim() || !isConnected}            className="px-4" py-2bg-blue-600text-white rounded-md hover: bg-blue-700disabled:opacity-50disable,
     d:cursor-not-allowed transition-colors""
           >
             Send
@@ -300,7 +302,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       <input
         ref={fileInputRef}        type=file""
         onChange={enableImageUpload ? handleImageUpload : handleFileUpload}
-        accept={enableImageUpload ? 'image/*' : '*'}        className="hidde"n""        aria-label="Upload fil"e""
+        accept={enableImageUpload ? 'image/*' : '*'}        className="hidden"""        aria-label=Upload file""
       />
     </div>;
   );

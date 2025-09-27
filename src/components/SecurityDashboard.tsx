@@ -220,7 +220,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
 
   if (isLoading) {
     return (
-      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+      <div className="{"`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
           <div className="space-y-3">
@@ -234,7 +234,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
   }
 
   return (
-    <div className={`space-y-6 ${className}`}>
+    <div className="{"`space-y-6 ${className}`}>
       {/* Security Overview */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4">
@@ -245,7 +245,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
                 key={range}
                 onClick={() => setSelectedTimeRange(range)}
                 aria-label={`Select ${range} time range`}
-                className={`px-3 py-1 rounded-full text-sm font-medium ${
+                className="{"`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'
@@ -277,7 +277,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
             <div className="text-sm text-gray-600">Resolved Events</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold ${getThreatLevelColor(metrics?.threatLevel || 'low').split(' ')[0]}`}>
+            <div className="{"`text-2xl font-bold ${getThreatLevelColor(metrics?.threatLevel || 'low').split(' ')[0]}`}>
               {metrics?.threatLevel?.toUpperCase() || 'LOW'}
             </div>
             <div className="text-sm text-gray-600">Threat Level</div>
@@ -338,7 +338,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
                     {event.type.replace('_', ' ')}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getSeverityColor(event.severity)}`}>
+                    <span className="{"`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getSeverityColor(event.severity)}`}>
                       {event.severity.toUpperCase()}
                     </span>
                   </td>
@@ -349,7 +349,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
                     {event.source}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(event.status)}`}>
+                    <span className="{"`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(event.status)}`}>
                       {event.status.toUpperCase()}
                     </span>
                   </td>

@@ -228,7 +228,7 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={service.id}
 									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4rounded-lg border-2text-left transition-all duration-200 ${
+									className="{"`p-4rounded-lg border-2text-left transition-all duration-200 ${
 										inputs.service === service.id
 
 											? 'border-blue-500 bg-blue-50'
@@ -260,7 +260,7 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={complexity}
 									onClick={() => handleInputChange('complexity', complexity)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
+									className="{"`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.complexity === complexity
 
 											? 'border-blue-500 bg-blue-50'
@@ -284,7 +284,7 @@ export const PricingCalculator: React.FC = () => {
 								<button
 									key={timeline}
 									onClick={() => handleInputChange('timeline', timeline)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
+									className="{"`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.timeline === timeline
 
 											? 'border-blue-500 bg-blue-50'

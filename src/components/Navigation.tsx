@@ -38,45 +38,46 @@ export default function Navigation({
 
   return (
     <>
-      <header className = {`fixed to p-0w-full z-50transition-all duration-300 ${
+      <header className = {`fixed top-0w-full z-50transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-gray-800/90backdrop-blur-md shadow-lg' 
+          ? 'bg-white/90dark:bg-gray-800/90backdrop-blur-md shadow-lg' 
           : 'bg-transparent'      }`}
-        <div className="max-w-7xl mx-auto px-4sm: px-6 lg:px-8">          <div className="flex justify-between items-center h-1"6"">            <div className="flex items-cente"r"">              <h1 className="text-2xl font-bold text-gray-900dar",
+        <div className="max-w-7xl mx-auto px-4sm: px-6lg:px-8">          <div className="flex" justify-between items-center h-16"">            <div className="flex" items-center"">              <h1className="text-2xl" font-bold text-gray-900dar,
     k:text-white"" id = "zion-tech-group">
                 Zion Tech Group
               </h1>
             </div>
             
-            {/* Desktop Navigation */}            <nav className="hidden md: flex items-center space-x-"6"">              <Link href=/"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+            {/* Desktop Navigation */}            <nav className="hidden" md: flex items-center space-x-6"">              <Link href=/"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Home
-              </Link>              <Link href=/about"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/about"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 About
-              </Link>              <Link href=/services"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/services"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Services
-              </Link>              <Link href=/portfolio"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/portfolio"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Portfolio
-              </Link>              <Link href=/blog"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/blog"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Blog
-              </Link>              <Link href=/faq"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/faq"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 FAQ
-              </Link>              <Link href=/contact"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/contact"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Contact
-              </Link>              <Link href=/dashboard"" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400font-medium transition-colors">
+              </Link>              <Link href=/dashboard"" className="text-gray-600dark:text-gray-300hover:text-blue-600dark:hover:text-blue-400font-medium transition-colors">
                 Dashboard
               </Link>
             </nav>
-            <div className="flex items-center space-x-"4"">              <span className="text-sm text-gray-500 dark:text-gray-400hidden s",
+            <div className="flex" items-center space-x-4"">              <span className="text-sm" text-gray-500dark:text-gray-400hidden s,
     m:block"">
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick = {() => setShowTaskManager(true)}                aria-label="Open task manage"r""                className="p-2 rounded-md hover: bg-gray-100 dark:hove",
+                onClick = {() => setShowTaskManager(true)}                aria-label=Open task manager""                className="p-2rounded-md" hover: bg-gray-100dark:hove,
     r:bg-gray-700transition-colors""                title = Task Manager""
               >
                 📝
-              </button> <button
-                onClick={onToggleDarkMode}                className="p-2 rounded-md hover: bg-gray-100 dark:hove",
+              </button>
+              <button
+                onClick={onToggleDarkMode}                className="p-2rounded-md" hover: bg-gray-100dark:hove,
     r:bg-gray-700transition-colors""                aria-label = Toggle dark mode""
               >
                 {isDarkMode ? '☀️' : '🌙'}
@@ -84,7 +85,7 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}                aria-label="Toggle mobile men"u""                className="md: hidden p-2 rounded-md hover:bg-gray-100 dark:hove",
+                onClick={() => setIsMenuOpen(!isMenuOpen)}                aria-label=Toggle mobile menu""                className="md:" hidden p-2rounded-md hover:bg-gray-100dark:hove,
     r:bg-gray-700transition-colors""
               >
                 {isMenuOpen ? '✕' : '☰'}
@@ -93,21 +94,21 @@ export default function Navigation({
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (            <div className="md: hidden bg-white dark:bg-gray-800 border -t border-gray-200 dark:border-gray-70"0"">              <div className="px-2pt-2pb-3 space-y-"1"">                <Link href=/"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+          {isMenuOpen && (            <div className="md:" hidden bg-white dark:bg-gray-800border-t border-gray-200dark:border-gray-700"">              <div className="px-2pt-2pb-3space-y-1""">                <Link href=/"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   Home
-                </Link>                <Link href=/about"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/about"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   About
-                </Link>                <Link href=/services"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/services"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   Services
-                </Link>                <Link href=/portfolio"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/portfolio"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   Portfolio
-                </Link>                <Link href=/blog"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/blog"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   Blog
-                </Link>                <Link href=/faq"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/faq"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   FAQ
-                </Link>                <Link href=/contact"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                </Link>                <Link href=/contact"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hover:bg-gray-700">
                   Contact
-                </Link>                <Link href=/dashboard"" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hove,    r:bg-gray-700>
+                </Link>                <Link href=/dashboard"" className="block w-full text-left px-3py-2rounded-md text-base font-medium transition-colors text-gray-600dark:text-gray-300hover:bg-gray-100dark:hove,    r:bg-gray-700>
                   Dashboard
                 </Link>
               </div>
@@ -117,8 +118,8 @@ export default function Navigation({
 
       {/* Task Manager Modal */}
       <TaskManager 
-        isOpen={showTaskManager} 
-        onClose={() => setShowTaskManager(false)} 
+        isOpen={show Task Manager} 
+        on Close={() => set Show Task Manager(false)} 
       />
     </>;
   );}"
