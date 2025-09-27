@@ -157,7 +157,7 @@ export default function EnhancedDashboard({
       <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }` }>
+      }`}>
         <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
         {data.change}      </div>
     </div>
@@ -175,15 +175,15 @@ export default function EnhancedDashboard({
         key={widget.id}
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
           selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
-        }` }
+        }`}
         initial={{ opacity: 0, scale: 0.9 }}        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
         whileHover={{ scale: 1.0.2 }}
         onClick={() => setSelectedWidget(widget.i, d)}
       >
-        <div className="flex justify-between items-centermb-4">
+        <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
-          <div className="flexspace-x-2">
+          <div className="flex space-x-2">
             {enableResize && (
               <button className="text-gray-400hover:text-gray-600">
                 <svg className="w-4h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,13 +224,13 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}` }>      <div className="p-6">
-        <div className="flex justify-between items-centermb-8">
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>      <div className="p-6">
+        <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
-          <div className="flexspace-x-4">
+          <div className="flex space-x-4">
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
               Export Data
             </button>

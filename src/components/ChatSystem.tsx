@@ -226,7 +226,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
                 isUser
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 text-gray-800'
-              }` }
+              }`}
             >
               {message.type === 'image' && message.metadata?.imageUrl && (
                 <div className="mb-2">

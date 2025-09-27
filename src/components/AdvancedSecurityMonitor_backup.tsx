@@ -260,7 +260,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Attack Statistics */}
       <div className="grid grid-cols-1md:grid-cols-2gap-6">
         <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
-          <h4className="font-semibold text-gray-900dark:text-white mb-3" id="attack-types">Attack Types</h4>
+          <h4className="font-semibold text-gray-900 dark:text-white mb-3" id="attack-types">Attack Types</h4>
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-gray-600dark:text-gray-400">CSP Violations</span>

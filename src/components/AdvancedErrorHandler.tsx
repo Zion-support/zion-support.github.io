@@ -280,7 +280,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
             <div className="p-4border-bborder-gray-200">
               <div className="flex items-center justify-between">
                 <h3className="text-lg font-semiboldtext-gray-900" id="error-monitor">Error Monitor</h3>
-                <div className="flexspace-x-2">
+                <div className="flex space-x-2">
                   <button
                     onClick={clearResolvedErrors}
                     className="text-sm text-gray-500hover:text-gray-700"

@@ -24,7 +24,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   const spinner = (
     <motion.div
-      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}` }      animate={{ rotate: 360 }}
+      className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}      animate={{ rotate: 360 }}
       transition={{
         duration: 1, repeat: Infinityeas, e: 'linear'
       }}
@@ -94,7 +94,7 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   lines = 3className = ''
 }) => {
   return (
-    <div className={`animate-pulse ${className}` }>
+    <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}          initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
           transition={{ delay: index * 0.1 }}
           className={`h-4 bg-gray-200 rounded mb-3 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
-          }` }
+          }`}
         />
       ))}
     </div>
@@ -187,7 +187,7 @@ export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}` }>
+    <div className={`bg-white rounded-lg shadow-md p-6 animate-pulse ${className}`}>
       <div className="flex items-center space-x-4mb-4">
         <div className="w-12 h-12 bg-gray-200rounded-full" />
         <div className="flex-1">

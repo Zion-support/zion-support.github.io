@@ -28,7 +28,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     <article 
       className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }` }
+      }`}
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">

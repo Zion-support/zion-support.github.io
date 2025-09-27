@@ -178,11 +178,11 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   if (isLoading) {
     return (
       <div className="{`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${class Name}`}>
-        <div class Name="animate-pulse">
+        <div class Name=animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/4 mb-4></div>
-          <div class Name="space-y-3">
+          <div class Name=space-y-3">
             <div className="h-4 bg-gray-200 rounded></div>
-            <div class Name="h-4 bg-gray-200 rounded w-5/6"></div>
+            <div class Name=h-4 bg-gray-200 rounded w-5/6"></div>
             <div className="h-4 bg-gray-200 rounded w-4/6></div>
           </div>
         </div>
@@ -191,18 +191,18 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
   }
 
   return (
-    <div class Name="{"`space-y-6 ${className}`}>
+    <div class Name={"`space-y-6 ${className}`}>
       {/* Analytics Overview */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6>
-        <div class Name="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900 id="analytics-overview">Analytics Overview</h2>
+        <div class Name=flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold text-gray-900 id=analytics-overview">Analytics Overview</h2>
           <div className="flex space-x-2>
-            {(['1 h', '24h', '7d', '30d'] as const).map((range) => (
+            {(['1 h' '24 h' '7d' '30d'] as const).map((range) => (
               <button
                 key={range}
                 on Click={() => set Selected Time Range(range)}
                 aria-label={`Select ${range} time range`}
-                class Name="{"`px-3 py-1 rounded-full text-sm font-medium ${
+                class Name={"`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'
@@ -215,26 +215,26 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4>
-          <div class Name="text-center">
+          <div class Name=text-center">
             <div className="text-3 xl font-bold text-blue-600>
               {get Total Metric('page Views').to Locale String()}
             </div>
-            <div class Name="text-sm text-gray-600">Total Page Views</div>
+            <div class Name=text-sm text-gray-600">Total Page Views</div>
           </div>
           <div className="text-center>
-            <div class Name="text-3xl font-bold text-green-600">
+            <div class Name=text-3 xl font-bold text-green-600">
               {getTotalMetric('uniqueVisitors').toLocaleString()}
             </div>
             <div className="text-sm text-gray-600>Unique Visitors</div>
           </div>
-          <div class Name="text-center">
+          <div class Name=text-center">
             <div className="text-3 xl font-bold text-purple-600>
               {get Average Metric('bounce Rate').to Fixed(1)}%
             </div>
-            <div class Name="text-sm text-gray-600">Avg Bounce Rate</div>
+            <div class Name=text-sm text-gray-600">Avg Bounce Rate</div>
           </div>
           <div className="text-center>
-            <div class Name="text-3xl font-bold text-yellow-600">
+            <div class Name=text-3 xl font-bold text-yellow-600">
               ${getTotalMetric('revenue').toLocaleString()}
             </div>
             <div className="text-sm text-gray-600>Total Revenue</div>
@@ -243,16 +243,16 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
       </div>
 
       {/* Metric Selector and Main Chart */}
-      <div class Name="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div class Name=bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4>
-          <h 3 class Name="text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
+          <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2>
-            {(['page Views', 'unique Visitors', 'revenue'] as const).map((metric) => (
+            {(['page Views' 'unique Visitors', 'revenue'] as const).map((metric) => (
               <button
                 key={metric}
                 on Click={() => set Selected Metric(metric)}
                 aria-label={`Select ${metric} metric`}
-                class Name="{"`px-3 py-1 rounded-full text-sm font-medium ${
+                class Name={"`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedMetric === metric
                     ? 'bg-blue-100 text-blue-700'
                     : 'text-gray-500 hover:text-gray-700'
@@ -277,7 +277,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
       {/* Charts Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6>
         <Data Visualization
-          type="bar"
+          type=bar"
           data={getTopPagesData()}
           title="Top Pages"
           height={300}
@@ -293,42 +293,42 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
       {/* Device Types and Additional Metrics */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6>
         <Data Visualization
-          type="doughnut"
+          type=doughnut"
           data={getDeviceTypesData()}
           title="Device Types"
           height={300}
         />
         
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6>
-          <h 3 class Name="text-lg font-semibold text-gray-900 mb-4" id="key-metrics">Key Metrics</h3>
+          <h 3 class Name=text-lg font-semibold text-gray-900 mb-4" id="key-metrics">Key Metrics</h3>
           <div className="space-y-4>
-            <div class Name="flex justify-between items-center">
+            <div class Name=flex justify-between items-center">
               <span className="text-sm text-gray-600>Avg Session Duration</span>
-              <span class Name="text-sm font-medium text-gray-900">
+              <span class Name=text-sm font-medium text-gray-900">
                 {Math.round(getAverageMetric('avgSessionDuration'))}s
               </span>
             </div>
             <div className="flex justify-between items-center>
-              <span class Name="text-sm text-gray-600">Conversion Rate</span>
+              <span class Name=text-sm text-gray-600">Conversion Rate</span>
               <span className="text-sm font-medium text-gray-900>
                 {(get Average Metric('conversion Rate') * 100).to Fixed(2)}%
               </span>
             </div>
-            <div class Name="flex justify-between items-center">
+            <div class Name=flex justify-between items-center">
               <span className="text-sm text-gray-600>Latest Page Views</span>
-              <span class Name="text-sm font-medium text-gray-900">
+              <span class Name=text-sm font-medium text-gray-900">
                 {getLatestMetric('pageViews').toLocaleString()}
               </span>
             </div>
             <div className="flex justify-between items-center>
-              <span class Name="text-sm text-gray-600">Latest Unique Visitors</span>
+              <span class Name=text-sm text-gray-600">Latest Unique Visitors</span>
               <span className="text-sm font-medium text-gray-900>
                 {get Latest Metric('unique Visitors').to Locale String()}
               </span>
             </div>
-            <div class Name="flex justify-between items-center">
+            <div class Name=flex justify-between items-center">
               <span className="text-sm text-gray-600>Latest Revenue</span>
-              <span class Name="text-sm font-medium text-gray-900">
+              <span class Name=text-sm font-medium text-gray-900">
                 ${getLatestMetric('revenue').toLocaleString()}
               </span>
             </div>

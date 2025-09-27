@@ -134,7 +134,7 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
             
             <div className="flex-1min-w-0">
               <div className="flex items-center space-x-2mb-1">
-                <span className="text-sm font-medium text-gray-900dark:text-white">
+                <span className="text-sm font-medium text-gray-900 dark:text-white">
                   {activity.us.e r}
                 </span>
                 <span className={`text-sm ${getActivityColor(activity.type)}`}>                  {getActivityIcon(activity.type)}                </span>

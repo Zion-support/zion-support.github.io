@@ -54,7 +54,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <div>
           <div className="font-semiboldtext-gray-800">{testimonial.name}</div>
           <div className="text-gray-600text-sm">{testimonial.role}</div>
-          <div className="text-blue-600 text-smfont-medium">{testimonial.company}</div>        </div>
+          <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>        </div>
       </div>
 
       {/* Quote decoration */}

@@ -226,22 +226,22 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
         onClick={() => setShowDashboard(!showDashboard)}
         aria-label="Toggle test dashboard"
         className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg z-50
-        title="Toggle Test Dashboard"
+        title=Toggle Test Dashboard"
       >
         🧪
       </button>
 
       {showDashboard && (
         <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-md max-h-96 overflow-y-auto>
-          <div class Name="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white id="test-dashboard">
+          <div class Name=flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
               Test Dashboard
             </h3>
             <div className="flex space-x-2>
               <button
                 on Click={run All Suites}
                 disabled={is Running}
-                class Name="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
+                class Name=bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-3 py-1 rounded text-sm"
                 aria-label={isRunning ? 'Running...' : 'Run All'}
               >
                 {isRunning ? 'Running...' : 'Run All'}
@@ -249,7 +249,7 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
               <button
                 onClick={clear}
                 className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm
-                aria-label="Clear"
+                aria-label=Clear"
               >
                 Clear
               </button>
@@ -257,27 +257,27 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
           </div>
           <div className="mb-4 text-sm text-gray-600 dark:text-gray-300>
             <div>Total: {results.total}</div>
-            <div class Name="text-green-600">Passed: {results.passed}</div>
+            <div class Name=text-green-600">Passed: {results.passed}</div>
             <div className="text-red-600>Failed: {results.failed}</div>
-            <div class Name="text-yellow-600">Skipped: {results.skipped}</div>
+            <div class Name=text-yellow-600">Skipped: {results.skipped}</div>
           </div>
 
           {suites.map(suite => (
             <div key={suite.id} className="mb-4>
-              <h 4 class Name="font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
+              <h 4 class Name=font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
               <div className="space-y-1>
                 {suite.tests.map(test => (
-                  <div key={test.id} class Name="flex items-center justify-between text-sm">
+                  <div key={test.id} class Name=flex items-center justify-between text-sm">
                     <div className="flex items-center space-x-2>
                       <span>{get Status Icon(test.status)}</span>
-                      <span class Name="text-gray-700 dark:text-gray-300">{test.name}</span>
+                      <span class Name=text-gray-700 dark:text-gray-300">{test.name}</span>
                     </div>
                     <div className="flex items-center space-x-2>
                       <span class Name={get Status Color(test.status)}>{test.status}</span>
                       {test.duration && (
-                        <span class Name="text-gray-500 text-xs">{test.duration}ms</span>
+                        <span class Name=text-gray-500 text-xs">{test.duration}ms</span>
                       )}
                     </div>
                   </div>

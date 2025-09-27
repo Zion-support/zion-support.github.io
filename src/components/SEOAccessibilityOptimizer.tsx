@@ -50,7 +50,7 @@ interface OptimizationIssue {
 
 const SEOAccessibilityOptimizer: React.FC = () => {
   const [seoMetricssetSeoMetric, s] = useState<SEOMetrics>({
-    overallScore: 0, titleTag: falsemetaDescriptio, n: falseheadings: { h1Count: 0, h2Count: 0h3Coun, t: 0 }images: { total: 0, withAlt: 0missingAl, t: 0 }links: { internal: 0, external: 0broke, n: 0 }pageSpeed: 0, mobileOptimized: false
+    overallScore: 0, titleTag: falsemetaDescriptio, n: falseheadings: { h1Count: 0, h2Count: 0h3Count: 0 }images: { total: 0, withAlt: 0missingAl, t: 0 }links: { internal: 0, external: 0broke, n: 0 }pageSpeed: 0, mobileOptimized: false
   });
 
   const [accessibilityMetricssetAccessibilityMetric, s] = useState<AccessibilityMetrics>({

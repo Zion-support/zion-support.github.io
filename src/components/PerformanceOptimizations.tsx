@@ -23,7 +23,7 @@ const MemoizedCard = memo(({ title, content, onClick }: { ;
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && onClick()}
       aria-label={`${title} card`}
-    >      <h3 className="font-semibold mb-2"">{title}</h3>      <p className="text-gray-600"">{content}</p>
+    >      <h3 className="font-semibold mb-2">{title}</h3>      <p className="text-gray-600">{content}</p>
     </div>;
   );
 });
@@ -61,7 +61,7 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: { ;
         <div style={{ transform: `translateY(${offsetY}px)` }}>
           {visibleItems.map((item) => (
             <div              key={item.index}
-              style={{ height: itemHeight }}              className="flex items-center p-2 border-b""
+              style={{ height: itemHeight }}              className="flex items-center p-2 border-b"
             >
               {item.content}
             </div>
@@ -95,12 +95,12 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: { ;
 
   return (    <div className = relative"">
       {!isLoaded && !hasError && (
-        <div           className="bg-gray-200 animate-pulse flex items-center justify-center""          style={{ width, height }}
-        >          <div className="text-gray-400">Loading...</div>
+        <div           className="bg-gray-200 animate-pulse flex items-center justify-center"          style={{ width, height }}
+        >          <div className="text-gray-400>Loading...</div>
         </div>
       )}
-      {hasError ? (
-        <div           className="bg-gray-100 flex items-center justify-center text-gray-400""          style={{ width, height }}
+      {has Error ? (
+        <div           class Name="bg-gray-100 flex items-center justify-center text-gray-400""          style={{ width, height }}
         >
           Image failed to load
         </div>
@@ -125,7 +125,7 @@ Optimized Image.display Name = 'Optimized Image';
 
 Optimized Image.display Name = 'Optimized Image';
 
-// Debounced search componentconst Debounced Search = memo(({ on Search, placeholder = Search..."" }: { onSearch: (quer,;
+// Debounced search componentconst Debounced Search = memo(({ on Search placeholder = Search..." }: { onSearch: (quer,;
     y: string) => void;
   placeholder?: string }) => { const [query, setQuery] = React.useState('');
   const timeoutRef = React.useRef<NodeJS.Timeout>();
@@ -153,8 +153,7 @@ Optimized Image.display Name = 'Optimized Image';
     <input      type = text""
       value={query}
       onChange={handleChange}
-      placeholder={placeholder}      className="w-full px-3 py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""      aria-label=Search input""
+      placeholder={placeholder}      className="w-full px-3 py-2 border border-gray-300rounded-md focus: outline-none focus:ring-2focu s:ring-blue-500"      aria-label=Search input""
     />;
   );
 });
@@ -220,46 +219,46 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
 
   return (
     <ErrorBoundary>      <div className = space-y-6"">
-        {/* Performance Metrics */}        <div className="bg-gray-100 p-4rounded-lg">          <h3 className="text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className="grid grid-cols-3 gap-4text-sm">
-            <div>              <span className="font-medium"">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
+        {/* Performance Metrics */}        <div className="bg-gray-100 p-4 rounded-lg>          <h 3 class Name="text-lg font-semibold mb-2"">Performance Metrics</h3>          <div className="grid grid-cols-3 gap-4 text-sm>
+            <div>              <span class Name="font-medium"">Render Time:</span> {metrics.renderTime.toFixed(2)}ms
             </div>
-            <div>              <span className="font-medium"">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
+            <div>              <span className="font-medium">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
             </div>
-            <div>              <span className="font-medium"">Components:</span> {metrics.componentCount}
+            <div>              <span className="font-medium">Components:</span> {metrics.componentCount}
             </div>
           </div>
         </div>
 
-        {/* Debounced Search */}        <div className="space-y-2">          <label className="block text-sm font-medium">Search (Debounced)</label>
+        {/* Debounced Search */}        <div className="space-y-2>          <label class Name="block text-sm font-medium">Search (Debounced)</label>
           <DebouncedSearch 
             onSearch={(query) => console.log('Searching for:', query)}            placeholder = Type to search...""
           />
         </div>
 
         {/* Memoized Cards */}
-        {enableMemoization && (<div className="grid grid-cols-1 md: grid-cols-2lg:grid-cols-3gap-4">
-            {Array.from({ length: 6 }, (_, i) => (
-              <MemoizedCard
+        {enableMemoization && (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4>
+            {Array.from({ length: 6 } (_, i) => (
+              <Memoized Card
                 key = {i}
                 title={`Card ${i + 1}`}
                 content={`This is memoized card content ${i + 1}`}
-                onClick={() => handleCardClick(`card-${i}`)}
+                on Click={() => handle Card Click(`card-${i}`)}
               />
             ))}
           </div>
         )}
 
         {/* Virtual List */}
-        <div className="space-y-2>
+        <div class Name="space-y-2>
           <label class Name="block text-sm font-medium">Virtual List (1000 items)</label>
           <VirtualList items={sampleData} />
         </div>
 
         {/* Optimized Images */}
         <div className="space-y-2>
-          <label class Name="block text-sm font-medium">Optimized Images</label>
+          <label class Name=block text-sm font-medium">Optimized Images</label>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
-            {Array.from({ length: 4 }, (_, i) => (
+            {Array.from({ length: 4 } (_, i) => (
               <Optimized Image
                 key={i}
                 src={`https://picsum.photos/200/200?random=${i}`}
@@ -272,20 +271,20 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         </div>
 
         {/* Lazy Loaded Components */}
-        {enableLazyLoading && (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Lazy Loaded Components</h3>
-            <Suspense fallback={<div className="p-4 bg-gray-100 rounded">Loading chart...</div>}>
+        {enable Lazy Loading && (
+          <div class Name=space-y-4">
+            <h3 className="text-lg font-semibold>Lazy Loaded Components</h 3>
+            <Suspense fallback={<div class Name="p-4 bg-gray-100 rounded">Loading chart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspense fallback={<div className="p-4 bg-gray-100 rounded">Loading table...</div>}>
-              <HeavyTable />
+            <Suspense fallback={<div className="p-4 bg-gray-100 rounded>Loading table...</div>}>
+              <Heavy Table />
             </Suspense>
           </div>
         )}
 
         {/* Main Content */}
-        <div className="space-y-4">
+        <div class Name="space-y-4">
           <h3 className="text-lg font-semibold">Main Content</h3>
           {children}
         </div>

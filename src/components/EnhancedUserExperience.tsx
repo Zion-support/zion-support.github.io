@@ -103,7 +103,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
               }`}            >
               <Icon className="w-6h-6" />
-              <span className="text-smfont-medium">{label}</span>            </button>
+              <span className="text-sm font-medium">{label}</span>            </button>
           ))}
         </div>
       </div>
@@ -126,7 +126,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hove, r:border-gray-500'
               }`}            >
-              <span className="text-smfont-medium">{label}</span>            </button>
+              <span className="text-sm font-medium">{label}</span>            </button>
           ))}
         </div>
       </div>
@@ -204,7 +204,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <select
           value={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900dark:text-white"
+          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         >          <option value="en">English</option>
           <option value="es">Español</option>
           <option value="fr">Français</option>
