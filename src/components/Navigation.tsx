@@ -87,8 +87,8 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() = aria-label="setShowTaskManager(true)}
-                className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                onClick={() => setShowTaskManager(true)}
+                className=p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Open task manager"
                 title="Task Manager"
               >
@@ -109,8 +109,8 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() = aria-label="setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className=md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOpen)}

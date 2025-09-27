@@ -38,7 +38,7 @@ const notificationIcons = {
   error: AlertCircle,
   warning: AlertTriangle,
   info: Info,
-  custom: Bell
+  custom: Bell}
 };
 
 const notificationColors = {
@@ -46,14 +46,14 @@ const notificationColors = {
   error: 'bg-red-50 border-red-200 text-red-800',
   warning: 'bg-yellow-50 border-yellow-200 text-yellow-800',
   info: 'bg-blue-50 border-blue-200 text-blue-800',
-  custom: 'bg-gray-50 border-gray-200 text-gray-800'
+  custom: 'bg-gray-50 border-gray-200 text-gray-800'}
 };
 
 const priorityStyles = {
   low: 'opacity-75',
   medium: '',
   high: 'ring-2 ring-blue-300',
-  urgent: 'ring-2 ring-red-300 animate-pulse'
+  urgent: 'ring-2 ring-red-300 animate-pulse'}
 };
 
 export default function EnhancedNotificationSystem({
@@ -195,21 +195,21 @@ export default function EnhancedNotificationSystem({
                     <button
                       key={index}
                       onClick={() = aria-label="handleAction(notification.id, action.label)}
-                      className={`text-xs px-3 py-1 rounded ${
+                      className = {`text-xs px-3 py-1 rounded ${
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
                           : action.variant === 'danger'
                           ? 'bg-red-600 text-white hover:bg-red-700'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}
                       } transition-colors`}
                     >
                       {action.label}"> handleAction(notification.id, action.label)}
-                      className={`text-xs px-3 py-1 rounded ${
+                      className = {`text-xs px-3 py-1 rounded ${
                         action.variant === 'primary' 
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
                           : action.variant === 'danger'
                           ? 'bg-red-600 text-white hover:bg-red-700'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}
                       } transition-colors`}
                     >
                       {action.label}
@@ -324,7 +324,7 @@ export function useNotifications() {
     const newNotification: Notification = {
       ...notification,
       id,
-      timestamp: new Date()
+      timestamp: new Date()}
     };
     
     setNotifications(prev => [...prev, newNotification]);

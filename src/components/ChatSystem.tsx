@@ -74,7 +74,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       id: Date.now().toString(),
       text: text.trim(),
       sender: 'user',
-      timestamp: new Date()
+      timestamp: new Date()}
     };
 
     setMessages(prev => [...prev, userMessage].slice(-maxMessages));
@@ -91,7 +91,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         id: (Date.now() + 1).toString(),
         text: generateBotResponse(text),
         sender: 'bot',
-        timestamp: new Date()
+        timestamp: new Date()}
       };
 
       setMessages(prev => [...prev, botResponse].slice(-maxMessages));
@@ -146,7 +146,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     if (!file) return;
 
     const fileMessage: Message = {
-      id: Date.now().toString(),
+      id: Date.now().toString(),}
       text: `📎 ${file.name}`,
       sender: 'user',
       timestamp: new Date(),
@@ -182,7 +182,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         timestamp: new Date(),
         type: 'image',
         metadata: {
-          imageUrl: event.target?.result as string
+          imageUrl: event.target?.result as string}
         }
       };
 
@@ -236,10 +236,10 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           </div>
           <div className={`${isUser ? 'text-right' : 'text-left'}`}>
             <div
-              className={`px-4 py-2 rounded-lg ${
+              className = {`px-4 py-2 rounded-lg ${
                 isUser
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-800'
+                  : 'bg-gray-200 text-gray-800'}
               }`}
             >
               {message.type === 'image' && message.metadata?.imageUrl && (
