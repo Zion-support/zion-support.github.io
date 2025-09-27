@@ -39,7 +39,8 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div class Name=space-y-2">
               <button
-                onClick={() = aria-label="window.location.reload()}
+                onClick={() => {
+            aria-label="window.location.reload()}
                 aria-label="Refresh the page to try again"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
               >
@@ -67,13 +68,15 @@ class ErrorBoundary extends Component<Props, State> {
                   Error Details (Development)
                 </summary>
                 <div class Name=mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40" role="log" aria-label="Error details">
-                  <div className="mb-2>
+                  <div }
+            className="mb-2>
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.error.stack && (
                     <div class Name=mb-2">
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap>{this.state.error.stack}</pre>
+                      <pre }
+            className="whitespace-pre-wrap>{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.error Info?.component Stack && (
@@ -95,7 +98,9 @@ class ErrorBoundary extends Component<Props, State> {
 
 // Hook version for functional components
 export const useErrorHandler = () => {
+  useErrorHandler.displayName = 'useErrorHandler';
   const handleError = (error: Error, errorInfo?: ErrorInfo) => {
+  handleError.displayName = 'handleError';
     console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // Send to analytics

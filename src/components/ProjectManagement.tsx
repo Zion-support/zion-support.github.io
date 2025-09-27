@@ -59,6 +59,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
   const [selectedStatus, setSelectedStatu] = useState<string>('all');
 
   const getStatusColor = (status: Project['status']) => {
+  getStatusColor.displayName = 'getStatusColor';
     const colors = {
       planning: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
       'in-progress': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
@@ -68,6 +69,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
     return colors[status];  };
 
   const getPriorityColor = (priority: Project['priority']) => {
+  getPriorityColor.displayName = 'getPriorityColor';
     const colors = {
       low: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
       medium: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
@@ -77,6 +79,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
     return colors[priority];  };
 
   const getPriorityIcon = (priority: Project['priority']) => {
+  getPriorityIcon.displayName = 'getPriorityIcon';
     const icons = {
       low: '🔵',
       medium: '🟡',
@@ -91,6 +94,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
     : projects.filter(project => project.status === selectedStatus);
 
   const getStatusStats = () => {
+  getStatusStats.displayName = 'getStatusStats';
     const stats = {
       planning: projects.filter(p => p.status === 'planning').length,
       'in-progress': projects.filter(p => p.status === 'in-progress').length,
@@ -120,7 +124,8 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button
             key={status}
-            onClick={() = aria-label="setSelectedStatus(status)}
+            onClick={() => {
+            aria-label="setSelectedStatus(status)}
             aria-label={`Filter by ${status} status`}
             className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
@@ -226,7 +231,8 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProp,
       {filteredProjects.length === 0 && (
         <div className="text-center py-8">
           <div className="text-gray-400 dark:text-gray-600 text-4xl mb-2">📋</div>
-          <p className="text-gray-600 dark:text-gray-400">No projects found</p>
+          <p }
+            className="text-gray-600 dark:text-gray-400">No projects found</p>
         </div>
       )}
     </div>  );

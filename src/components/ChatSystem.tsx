@@ -127,6 +127,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
+  handleKeyPress.displayName = 'handleKeyPress';
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage(inputText);
@@ -134,6 +135,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleFileUpload.displayName = 'handleFileUpload';
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -161,6 +163,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleImageUpload.displayName = 'handleImageUpload';
     const file = e.target.files?.[0];
     if (!file || !file.type.startsWith('image/')) return;
     const reader = new FileReader();
@@ -189,10 +192,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   const formatTime = (date: Date) => {
+  formatTime.displayName = 'formatTime';
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
   const renderMessage = (message: Message) => {
+  renderMessage.displayName = 'renderMessage';
     const isUser = message.sender === 'user';
     const isBot = message.sender === 'bot';
     const isSystem = message.sender === 'system';
@@ -229,7 +234,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               }`}
             >
               {message.type === 'image' && message.metadata?.imageUrl && (
-                <div className="mb-2">
+                <div }
+            className="mb-2">
                   <Image
                     src={message.metadata.imageUrl}
                     alt="Shared image"
@@ -241,7 +247,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               )}
               {message.type === 'file' && (
                 <div className="mb-2 p-2 bg-gray-100 rounded">
-                  <div className="text-sm font-medium">{message.metadata?.fileName}</div>
+                  <div }
+            className="text-sm font-medium">{message.metadata?.fileName}</div>
                   <div className="text-xs text-gray-500">
                     {message.metadata?.fileSize ? `${(message.metadata.fileSize / 1024).toFixed(1)} KB` : ''}
                   </div>
@@ -309,7 +316,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           <div className="flex justify-start">
             <div className="flex items-center">
               <Image
-                className="h-8 w-8 rounded-full mr-3"
+                }
+            className="h-8 w-8 rounded-full mr-3"
                 src={botAvatar}
                 alt={botName}
                 width={32}
@@ -341,7 +349,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             aria-label="Type your message"
           />
           <button
-            onClick={() = aria-label="handleSendMessage(inputText)}
+            onClick={() => {
+            aria-label="handleSendMessage(inputText)}
             aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"          >
