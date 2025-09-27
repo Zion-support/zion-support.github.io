@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { PerformanceDashboard } from '../src/components/PerformanceDashboard';
+import PerformanceDashboard from '../src/components/PerformanceDashboard';
 import { SecurityDashboard } from '../src/components/SecurityDashboard';
 import { AnalyticsDashboard } from '../src/components/AnalyticsDashboard';
 import EnhancedDashboard from '../src/components/EnhancedDashboard';
