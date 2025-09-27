@@ -406,9 +406,10 @@ export class PerformanceOptimizer {
           const observer = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             entries.forEach(entry => {
-              console.log(`Web Vital ${vital}:`, entry.value || entry.startTime);
+              const value = (entry as any).value || entry.startTime;
+              console.log(`Web Vital ${vital}:`, value);
               // Send to analytics service
-              this.reportWebVital(vital, entry.value || entry.startTime);
+              this.reportWebVital(vital, value);
             });
           });
           
@@ -431,6 +432,7 @@ export class PerformanceOptimizer {
       });
     }
   }
+
 }
 
 // Utility functions
