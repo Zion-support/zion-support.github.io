@@ -72,7 +72,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
 
   useEffect(() => {
     performSecurityScan();
-    const interval = setInterval(performSecurityScan, 30000); // Scan every30seconds
+    const interval = setInterval(performSecurityScan, 30000); // Scan every 30 seconds
     return () => clearInterval(interval);
   }, [performSecurityScan]);
 
