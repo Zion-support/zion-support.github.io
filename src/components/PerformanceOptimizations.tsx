@@ -237,7 +237,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
 
         {/* Memoized Cards */}
         {enableMemoization && (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3gap-4>
-            {Array.from({ length: 6 } (_, i) => (
+            {Array.from({ length: 6 } (_  i) => (
               <Memoized Card
                 key = {i}
                 title={`Card ${i + 1}`}
@@ -258,7 +258,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
         <div className="space-y-2>
           <label class Name=block text-sm font-medium">Optimized Images</label>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
-            {Array.from({ length: 4 } (_, i) => (
+            {Array.from({ length: 4 } (_  i) => (
               <Optimized Image
                 key={i}
                 src={`https://picsum.photos/200/200?random=${i}`}

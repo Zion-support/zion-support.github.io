@@ -247,7 +247,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ classNam
         <div className="flex items-center justify-between mb-4>
           <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2>
-            {(['page Views' 'unique Visitors', 'revenue'] as const).map((metric) => (
+            {(['page Views' 'unique Visitors'  'revenue'] as const).map((metric) => (
               <button
                 key={metric}
                 on Click={() => set Selected Metric(metric)}
