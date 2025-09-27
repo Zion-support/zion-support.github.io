@@ -23,8 +23,7 @@ export default function Dashboard(): JSX.Element {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    trackClick(`dashboard-tab-${tab}`, 'navigation');
-  };
+    trackClick(`dashboard-tab-${tab}`, 'navigation')};
 
   const renderDashboard = () => {
     switch (activeTab) {
@@ -487,8 +486,7 @@ export default function Dashboard(): JSX.Element {
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
-        );
-    }
+        )}
   };
 
   return (

@@ -14,8 +14,7 @@ export default function Contact(): JSX.Element {
   });
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const { trackClick } = useAnalytics();
 
@@ -23,15 +22,13 @@ export default function Contact(): JSX.Element {
     e.preventDefault();
     trackClick('contact_form_submit', { formData });
     // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted:', formData)};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   return (
     <>
@@ -181,5 +178,4 @@ export default function Contact(): JSX.Element {
         </div>
       </div>
     </>
-  );
-}
+  )}

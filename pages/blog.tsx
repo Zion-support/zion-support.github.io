@@ -9,8 +9,7 @@ export default function Blog(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const { trackClick } = useAnalytics();
 
@@ -50,10 +49,8 @@ export default function Blog(): JSX.Element {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => {
-                    setSelectedCategory(category);
-                    trackClick('blog_category_filter', { category });
-                  }}
+                  onClick={(()) => {setSelectedCategory(category);
+                    trackClick('blog_category_filter', { category})}}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white shadow-lg'
@@ -114,5 +111,4 @@ export default function Blog(): JSX.Element {
         </div>
       </div>
     </>
-  );
-}
+  )}

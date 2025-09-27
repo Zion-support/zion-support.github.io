@@ -19,25 +19,19 @@ export default function App({ Component, pageProps }: AppProps) {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw-performance.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-        })
+          console.log('Service Worker registered successfully:', registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
+          console.log('Service Worker registration failed:', error)})}
   }, []);
 
   useEffect(() => {
-    setIsLoading(false);
-  }, []);
+    setIsLoading(false)}, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
-  }
+    return <div>Loading...</div>}
 
   if (error) {
-    return <div>Error: {error}</div>;
-  }
+    return <div>Error: {error}</div>}
 
   return (
     <HelmetProvider>
@@ -54,5 +48,4 @@ export default function App({ Component, pageProps }: AppProps) {
       
       <Component {...pageProps} />
     </HelmetProvider>
-  );
-}
+  )}
