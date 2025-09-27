@@ -18,14 +18,20 @@ import dynamic from 'next/dynamic';
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// Removed corrupted component
+// const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
 //   ssr: false,
 //   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// Removed corrupted component
+// const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // Removed broken component
 
@@ -34,17 +40,45 @@ import dynamic from 'next/dynamic';
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// Removed corrupted components - will be replaced with working versions
+// const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-// Removed corrupted component
+// const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-// Removed corrupted component
+// const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-// Removed corrupted component
+// const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-// Removed corrupted component
+// const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
-// Removed corrupted component
+// const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
+
+// const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
+
+// const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // Removed broken component
 
@@ -71,7 +105,10 @@ const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedU
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-// Removed corrupted component
+// const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
 //   ssr: false,
@@ -179,15 +216,7 @@ const Dashboard: React.FC = () => {
   const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-4">Analytics Dashboard</h3>
-              <p className="text-blue-700">Analytics dashboard component is being rebuilt. Coming soon!</p>
-            </div>
-          </div>
-        );
+        return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
         return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
@@ -195,15 +224,7 @@ const Dashboard: React.FC = () => {
       case 'security':
         return <div>Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Dashboard</h1>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-4">Enhanced Dashboard</h3>
-              <p className="text-green-700">Enhanced dashboard component is being rebuilt. Coming soon!</p>
-            </div>
-          </div>
-        );
+        return <EnhancedDashboard />;
       case 'search':
         return (
           <div className="p-8">
@@ -252,30 +273,45 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-4">Performance Monitor</h3>
-              <p className="text-blue-700">Performance monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            {/* <AdvancedPerformanceMonitor 
+              onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
+              showDashboard={true}
+            /> */}
+            <div className="text-center py-8 text-gray-500">Performance Monitor temporarily disabled</div>
           </div>
         );
       case 'advanced-security':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-red-900 mb-4">Security Monitor</h3>
-              <p className="text-red-700">Security monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            {/* <AdvancedSecurityMonitor 
+              metrics={{
+                totalThreats: 0,
+                blockedRequests: 0,
+                suspiciousActivity: 0,
+                securityScore: 95,
+                lastScan: new Date(),
+                vulnerabilities: [],
+                recentEvents: [],
+                cspViolations: 0,
+                xssAttempts: 0,
+                sqlInjectionAttempts: 0,
+                bruteForceAttempts: 0,
+                rateLimitHits: 0
+              }}
+              onThreatDetected={(event) => console.log('Security threat detected:', event)}
+            /> */}
+            <div className="text-center py-8 text-gray-500">Security Monitor temporarily disabled</div>
           </div>
         );
       case 'accessibility':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-4">Accessibility Auditor</h3>
-              <p className="text-green-700">Accessibility auditing component is being rebuilt. Coming soon!</p>
-            </div>
+            {/* <AdvancedAccessibilityAuditor 
+              onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
+            /> */}
+            <div className="text-center py-8 text-gray-500">Accessibility Auditor temporarily disabled</div>
           </div>
         );
       case 'system-monitor':
@@ -301,20 +337,20 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">System Monitor</h3>
-              <p className="text-gray-700">System monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            <SystemMonitor 
+              onAlert={(alert) => console.log('System alert:', alert)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+              enableRealTime={isRealTime}
+              refreshInterval={5000}
+            />
           </div>
         );
       case 'security-enhancements':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-orange-900 mb-4">Security Enhancements</h3>
-              <p className="text-orange-700">Security enhancements component is being rebuilt. Coming soon!</p>
-            </div>
+            {/* <AdvancedSecurityEnhancements /> */}
+            <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
           </div>
         );
       case 'new-performance':
@@ -366,10 +402,11 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-red-900 mb-4">Security Monitor</h3>
-              <p className="text-red-700">Security monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            <SecurityMonitor 
+              refreshInterval={isRealTime ? 5000 : 30000}
+              enableAlerts={true}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+            />
           </div>
         );
       case 'performance-optimizer':
@@ -412,10 +449,11 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-4">Enhanced Analytics</h3>
-              <p className="text-purple-700">Enhanced analytics component is being rebuilt. Coming soon!</p>
-            </div>
+            <EnhancedAnalytics 
+              refreshInterval={isRealTime ? 10000 : 60000}
+              enableRealTime={isRealTime}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            />
           </div>
         );
       case 'error-monitoring':
@@ -429,10 +467,7 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">System Monitor</h3>
-              <p className="text-gray-700">System monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
@@ -491,10 +526,51 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-4">Analytics Insights</h3>
-              <p className="text-purple-700">Advanced analytics insights component is being rebuilt. Coming soon!</p>
-            </div>
+            {/* <AdvancedAnalyticsInsights 
+              timeRange="30d"
+              data={{
+                pageViews: 125000,
+                uniqueVisitors: 45000,
+                bounceRate: 35.2,
+                avgSessionDuration: 180,
+                conversionRate: 12.5,
+                topPages: [
+                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
+                  { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
+                  { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
+                ],
+                trafficSources: [
+                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
+                  { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
+                  { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
+                ],
+                deviceTypes: [
+                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
+                  { device: 'Mobile', visitors: 15000, percentage: 33.3 },
+                  { device: 'Tablet', visitors: 5000, percentage: 11.1 }
+                ],
+                userBehavior: [
+                  { action: 'page_view', count: 1250, trend: 'up' },
+                  { action: 'click', count: 890, trend: 'stable' },
+                  { action: 'scroll', count: 2100, trend: 'down' }
+                ],
+                performance: {
+                  pageLoadTime: 1.2,
+                  firstContentfulPaint: 0.8,
+                  largestContentfulPaint: 1.5,
+                  cumulativeLayoutShift: 0.1,
+                  firstInputDelay: 50
+                },
+                realTime: [
+                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
+                  { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
+                ]
+              }}
+              enableRealTime={true}
+              refreshInterval={30000}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+            /> */}
+            <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
         );
       case 'comprehensive-monitoring':
@@ -570,22 +646,11 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">System Monitor</h3>
-              <p className="text-gray-700">System monitoring component is being rebuilt. Coming soon!</p>
-            </div>
+            <AdvancedSystemMonitor />
           </div>
         );
       default:
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-4">Analytics Dashboard</h3>
-              <p className="text-blue-700">Analytics dashboard component is being rebuilt. Coming soon!</p>
-            </div>
-          </div>
-        );
+        return <ComprehensiveAnalyticsDashboard />;
     }
   }, [activeTab, isRealTime]);
 
