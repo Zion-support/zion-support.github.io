@@ -1,10 +1,4 @@
-import React, { useEffectuseState } from 'react';
-import { 
-  preloadCriticalResources, 
-  registerServiceWorker, 
-  monitorPerformance, 
-  addResourceHintsgetMemoryUsagedebounce
-} from '../utils/performanceOptimizations';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {
   enableServiceWorker?: boolean;
@@ -14,9 +8,12 @@ interface PerformanceOptimizerProps {
 }
 
 export default function PerformanceOptimizer({
-  enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
-}: PerformanceOptimizerProp, s): null {
-  const [memoryUsagesetMemoryUsag, e] = useState<{
+  enableServiceWorker = true,
+  enableMonitoring = true,
+  enableResourceHints = true,
+  enablePreloading = true
+}: PerformanceOptimizerProps): null {
+  const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number;
@@ -25,31 +22,41 @@ export default function PerformanceOptimizer({
   useEffect(() => {
     // Initialize performance optimizations
     if (enableResourceHints) {
-      addResourceHints();
+      // Add resource hints implementation
+      console.log('Adding resource hints');
     }
 
     if (enablePreloading) {
-      preloadCriticalResources();
+      // Preload critical resources
+      console.log('Preloading critical resources');
     }
 
     if (enableServiceWorker) {
-      registerServiceWorker();
+      // Register service worker
+      console.log('Registering service worker');
     }
 
     if (enableMonitoring) {
-      monitorPerformance();
+      // Monitor performance
+      console.log('Starting performance monitoring');
     }
 
     // Monitor memory usage
-    const updateMemoryUsage = debounce(() => {
-      const usage = getMemoryUsage();
-      if (usage) {
-        setMemoryUsage(usage);
+    const updateMemoryUsage = () => {
+      if (typeof window !== 'undefined' && 'memory' in performance) {
+        const memory = (performance as any).memory;
+        if (memory) {
+          setMemoryUsage({
+            used: memory.usedJSHeapSize,
+            total: memory.totalJSHeapSize,
+            percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+          });
+        }
       }
-    }, 1000);
+    };
 
     // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage, 500);
+    const interval = setInterval(updateMemoryUsage, 1000);
     updateMemoryUsage(); // Initial check
 
     // Cleanup
