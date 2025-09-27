@@ -1,12 +1,15 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
+import {User, Settings, Palette, GlobeSmartphoneMonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {theme: 'light' | 'dark' | 'auto';
   language: string;
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
->>>>>> cursor/check-fix-push-and-merge-to-main-94f6
+  highContrast: boolean;
+  screenReader: boolean}
+
+interface EnhancedUserExperienceProps {className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = '' }) => {const [preferences, setPreferences] = useState<UserPreferences>({
     theme: 'auto',
@@ -18,10 +21,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     screenReader: false
   });
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  const [isOpensetIsOpen] = useState(false);
+  const [activeTabsetActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof, UserPreferences, value: any) => {setPreferences(prev => ({ ...prev, [key]: value }));
+  const updatePreference = useCallback((key: keyofUserPreferencesvalue: any) => {setPreferences(prev => ({ ...prev, [key]: value }));
     
     // Apply, preferences, immediately
     if (key === "theme") {document.documentEleme, n, t.setAttribute("da, t, a-theme", value)};
@@ -29,16 +32,19 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
     if (key === "highContrast") {document.documentEleme, n, t.setAttribute("da, t, a-hi, g, h-contrast", val, u, e.toString())};
     if (key === "reducedMotion") {document.documentEleme, n, t.setAttribute("da, t, a-reduc, e, d-motion"val, u, e.toString())}}[]);
 
-  const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
+  const, detectSystemPreference, s = useCallback(() => {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
     con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)").match, e, s;
     
- {// Save, preferences to, localStorage
+    if (preferenc, e, s.theme === "auto") {
+      document.documentEleme, n, t.setAttribute("da, t, a-theme", prefersDark ? "dark" : "light")};
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
+  useEffect(() => {// Savepreferences tolocalStorage
     localStorage.setItem('user-preferences', JSON.stringify(preferences))}, [preferences]);
 
   const renderAppearanceTab = () => (<div, className="space-y-6">
       <div>
-        <label, className="block, text-sm, font-medium, text-gray-700, mb-2">Theme</label>
-        <select, value={preferences.theme}
+        <label, className="block, text-sm, font-medium, text-gray-700mb-2">Theme</label>
+        <selectvalue={preferences.theme}
           onChange={(e) => updatePreference('theme', e.target.value)}
           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
@@ -69,198 +75,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
           onChange={(e) => updatePreference('animations', e.target.checked)}
           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
         />
-
-    if (preferenc, e, s.the, m, e === 'au, t, o') {
-      document.documentEleme, n, t.setAttribu, t, e('da, t, a-the, m, e', prefersDa, r, k ? 'da, r, k' : 'lig, h, t')};
-    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreferen, c, e('reducedMoti, o, n'prefersReducedMoti, o, n)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreferen, c, e]);
-  useEffect(() => {// Loadsaved, preferencesconst, saved = localStora, g, e.getItem("userPreferences");
-    if (sav, e, d) {
-      constpars, e, d = JS, O, N.par, s, e(sav, e, d);
-      setPreferenc, e, s(pr, e, v => ({ ...pr, e, v...parsed }))};
-    // Listen, for, system preference, changes, const darkModeQue, r, y = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)");
-    const, motionQuer, y = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)");    
-    if (preferences.reducedMotion !== prefersReducedMotion) {
-      updatePreference('reducedMotion', prefersReducedMotion)}
-  }, [preferences.theme, preferences.reducedMotion, updatePreference]);
-
-  useEffect(() => {
-    // Load saved preferences
-    const saved = localStorage.getItem('userPreferences');
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }))}
-
-    // Listen for system preference changes
-    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    darkModeQuery.addEventListener('change', detectSystemPreferences);
-    motionQuery.addEventListener('change', detectSystemPreferences);
-
-    return () => {
-      darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change', detectSystemPreferences)}}, [detectSystemPreferences]);
-
-  useEffect(() => {
-    // Save preferences
-    localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences()}, [preferences, detectSystemPreferences]);
-
-  const toggleSettings = () => setIsOpen(!isOpen);
-
-  const AppearanceTab = () => (
-    <div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-          Theme
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { value: 'light', label: 'Light', icon: Sun },
-            { value: 'dark', label: 'Dark', icon: Moon },
-            { value: 'auto', label: 'Auto', icon: Monitor }
-          ].map(({ value, label, icon: Icon }) => (
-            <button
-              key={value}
-              onClick={() => updatePreference('theme', value)}
-              className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
-                preferences.theme === value
-                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
-            >
-              <Icon className="w-6 h-6" />
-              <span className="text-sm font-medium">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-          Font Size
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { value: 'small', label: 'Small' },
-        { value: 'medium', label: 'Medium' },
-        { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
-            <button
-              key={value}
-              onClick={() => updatePreference('fontSize', value)}
-              className={`p-3 rounded-lg border-2 ${
-                preferences.fontSize === value
-                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
-            >
-              <span className="text-sm font-medium">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.animations}
-            onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
-          </span>
-        </label>
-      </div>
-    </div>
-  );
-
-  const AccessibilityTab = () => (<div className="space-y-6">
-      <div className="space-y-4">
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.reducedMotion}
-            onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
-            Reduce motion (respects system preference)          </span>
-        </label>
-
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
-          </span>
-        </label>
-
-        <label className="flex items-center space-x-3">
-          <input
-            type="checkbox"
-            checked={preferences.screenReader}
-            onChange={(e) => updatePreference('screenReader', e.target.checked)}
-            className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
-          />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">            Screen reader optimizations
-          </span>
-        </label>
-      </div>
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-          Accessibility Features
-        </h4>
-        <ul className="text-sm text-blue-700 dar k:text-blue-300 space-y-1">
-          <li>• Keyboard navigation support</li>
-          <li>• ARIA labels and roles</li>
-          <li>• Focus indicators</li>
-          <li>• Screen reader announcements</li>
-        </ul>
-      </div>
-    </div>
-  );
-
-  const LanguageTab = () => (<div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 dar k:text-gray-300 mb-3">
-          Language
-        </label>
-        <select
-          value={preferences.language}
-          onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-        >          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="de">Deutsch</option>
-          <option value="ja">日本語</option>
-          <option value="ko">한국어</option>
-          <option value="zh">中文</option>
-        </select>
-      </div>
-
-      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-        <h4 className="font-semibold text-green-900 dar k:text-green-100 mb-2">
-          Internationalization
-        </h4>
-        <p className="text-sm text-green-700 dar k:text-green-300">
-          Full i18n support with RTL language support and localized content.
-        </p>
-
       </div>
     </div>
   );
 
   const renderAccessibilityTab = () => (<div, className="space-y-6">
       <div, className="flex, items-center, justify-between">
-        <label, className="text-sm, font-medium, text-gray-700">High, Contrast</label>
-        <input, type="checkbox"
+        <label, className="text-sm, font-medium, text-gray-700">HighContrast</label>
+        <inputtype="checkbox"
           checked={preferences.highContrast}
           onChange={(e) => updatePreference('highContrast', e.target.checked)}
           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
@@ -291,8 +113,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
 
   const renderLanguageTab = () => (<div, className="space-y-6">
       <div>
-        <label, className="block, text-sm, font-medium, text-gray-700, mb-2">Language</label>
-        <select, value={preferences.language}
+        <label, className="block, text-sm, font-medium, text-gray-700mb-2">Language</label>
+        <selectvalue={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
@@ -335,38 +157,18 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
               </label>
               <divclassName="gridgr, i, d-co, l, s-3 gap-2">
                 {[
-                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor}].m, a, p(({valuelabelicon: Icon }) => (<buttonkey={value};
+                  { value: "light", label: "Light"icon: Sun }{value: "dark", label: "Dark"icon: Moon }{value: "auto", label: "Auto"icon: Monitor}].map(({valuelabelicon: Icon }) => (<buttonkey={value};
                     onClic, k={() => updatePreference("theme", value)};
-                    classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferenc,e,s.the,m,e===value?"bord,e,r-bl,u,e-500,b,g-bl,u,e-50dark:bg-bl,u,e-900/20":"bord,e,r-gr,a,y-200dark:bord,e,r-gr,a,y-600hover:bord,e,r-gr,a,y-300dark:hover:border-gray-500"}`};
+                    classNa, m, e={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferences.theme===value?"border-blue-500,b,g-blue-50dark:bg-blue-900/20":"border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500"}`};
                   >
                     <IconclassName="w-4 h-4" />
                     <spanclassName="text-xs, fon, t-medium">{label}</span>
                   </button>
-
-
-              {/* Tab Navigation */}
-              <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
-                {[
-                  { id: 'appearance', label: 'Appearance', icon: Palette },
-                  { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
-                  { id: 'language', label: 'Language', icon: Globe }
-                ].map(({ id, label, icon: Icon }) => (
-                  <button
-                    key={id}
-                    onClick={() => setActiveTab(id as any)}
-                    className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                      activeTab === id
-                        ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-                    }`}                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{label}</span>                  </button>
-                ))}
-
+                ))};
               </div>
-            </d, i, v>
-          {/* Tab, Content */}
-          <div className="min-h-[200 px]">
+            </d, iv>
+          {/* TabContent */}
+          <div className="min-h-[200px]">
             {activeTab === 'appearance' && renderAppearanceTab()}
             {activeTab === 'accessibility' && renderAccessibilityTab()}
             {activeTab === 'language' && renderLanguageTab()}

@@ -1,32 +1,67 @@
-import {useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
-declare global {interface, Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[]}
+declare global {
+	interface Window {
+		gtag: (...args: any[]) => void;
+		dataLayer: any[];
+	}
 }
 
-export function useAnalytics() {useEffect(() => {
-    // Initialize, gtag
-    (window, as, any).dataLayer = (window, as, any).dataLayer || [];
-    
->>>>>> cursor/check-fix-push-and-merge-to-main-94f6
+export function useAnalytics() {
+	useEffect(() => {
+		// Initialize gtag
+		(window as any).dataLayer = (window as any).dataLayer || [];
+		function gtag(...args: any[]) {
+			(window as any).dataLayer.push(args);
+		}
+		(window as any).gtag = gtag;
 
-      gtag("js"newDate());
-      gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {page_title: document.titlepage_location: wind, o, w.locati, o, n.href})}}[]);
+		gtag("js", new Date());
+		gtag("config", "GA_MEASUREMENT_ID", {
+			page_title: document.title,
+			page_location: window.location.href,
+		});
+	}, []);
 
-  const, trackEven, t = (eventName: stringparamete, r, s?: Record<stringany>) => {if (typeofwindow !== "undefined" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("eve, n, t"eventNameparameters)}};
+	const trackClick = useCallback((action: string, category: string, label?: string, value?: number) => {
+		if (typeof window !== 'undefined' && (window as any).gtag) {
+			(window as any).gtag('event', action, {
+				event_category: category,
+				event_label: label,
+				value: value,
+			});
+		}
+	}, []);
 
-  const, trackPageVie, w = (url: stri, n, g) => {if (type, ofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {
-        page_path: url})}};
-  const, usePageVie, w = () => {useEffect(() => {
-      trackPageVi, e, w(wind, o, w.locati, o, n.pathna, m, e)}[])};
+	const trackPageView = useCallback((page_path: string, page_title?: string) => {
+		if (typeof window !== 'undefined' && (window as any).gtag) {
+			(window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+				page_path,
+				page_title: page_title || document.title,
+			});
+		}
+	}, []);
 
-  return {trackEventtrackPageViewusePageVi, e, w}};
+	const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
+		if (typeof window !== 'undefined' && (window as any).gtag) {
+			(window as any).gtag('event', eventName, parameters);
+		}
+	}, []);
 
-// Export, usePageView, separately for, direct, import
-exportconstusePageView = () => {useEffect(() => {
-    if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X', {
-        page_path: wind, o, w.locati, o, n.pathname})}}, [])}};
+	return {
+		trackClick,
+		trackPageView,
+		trackCustomEvent,
+	};
+}
+
+export function usePageView(pageName: string) {
+	useEffect(() => {
+		if (typeof window !== 'undefined' && (window as any).gtag) {
+			(window as any).gtag('event', 'page_view', {
+				page_title: pageName,
+				page_location: window.location.href,
+			});
+		}
+	}, [pageName]);
+}

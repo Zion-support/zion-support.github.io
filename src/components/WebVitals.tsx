@@ -1,46 +1,119 @@
-import {useEffect } from 'react';
+import { useEffect } from "react";
 
-interface WebVitalsMetric {name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string}
-
-export function reportWebVitals(metric: WebVitalsMetric) {// Send, to analytics, service
-  if (typeof, window !== 'undefined' && 'gtag' in, window) {
-    (window, as, any).gtag('event', metric.name, {
-      event_category: 'Web, Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true
-    })};
-  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("WebVitals:"metric)}};
-export, function, WebVitals() {useEffect(() => {
-    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTTFB }) => {getC, L, S(reportWebVita, l, s);
-      getF, I, D(reportWebVita, l, s);
-      getF, C, P(reportWebVita, l, s);
-      getL, C, P(reportWebVita, l, s);
- {
-    const reportWebVitals = (metric: WebVitalsMetric) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true})}
-    };
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:', metric)}
-
+interface WebVitalsMetric {
+	name: string;
+	value: number;
+	delta: number;
+	id: string;
 }
 
-export function WebVitals() {useEffect(() => {
-    // Load, web-vitals, library dynamically, import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals)})}, []);
+interface WebVitalsProps {
+	onMetric?: (metric: WebVitalsMetric) => void;
+}
 
->>>>>> cursor/check-fix-push-and-merge-to-main-94f6
+export default function WebVitals({ onMetric }: WebVitalsProps) {
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+
+		const getCLS = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			let clsValue = 0;
+			let clsEntries: PerformanceEntry[] = [];
+			let sessionValue = 0;
+			let sessionEntries: PerformanceEntry[] = [];
+
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (!entry.hadRecentInput) {
+						const firstSessionEntry = sessionEntries[0];
+						const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+
+						if (sessionValue && entry.startTime - lastSessionEntry.startTime < 1000 && entry.startTime - firstSessionEntry.startTime < 5000) {
+							sessionValue += entry.value;
+							sessionEntries.push(entry);
+						} else {
+							sessionValue = entry.value;
+							sessionEntries = [entry];
+						}
+
+						if (sessionValue > clsValue) {
+							clsValue = sessionValue;
+							clsEntries = [...sessionEntries];
+						}
+					}
+				}
+
+				onPerfEntry?.({
+					name: 'CLS',
+					value: clsValue,
+					delta: clsValue,
+					id: `cls-${Date.now()}`
+				});
+			}).observe({ type: 'layout-shift', buffered: true });
+		};
+
+		const getFID = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					onPerfEntry?.({
+						name: 'FID',
+						value: entry.processingStart - entry.startTime,
+						delta: entry.processingStart - entry.startTime,
+						id: `fid-${Date.now()}`
+					});
+				}
+			}).observe({ type: 'first-input', buffered: true });
+		};
+
+		const getFCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (entry.name === 'first-contentful-paint') {
+						onPerfEntry?.({
+							name: 'FCP',
+							value: entry.startTime,
+							delta: entry.startTime,
+							id: `fcp-${Date.now()}`
+						});
+					}
+				}
+			}).observe({ type: 'paint', buffered: true });
+		};
+
+		const getLCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				const entries = entryList.getEntries();
+				const lastEntry = entries[entries.length - 1];
+				onPerfEntry?.({
+					name: 'LCP',
+					value: lastEntry.startTime,
+					delta: lastEntry.startTime,
+					id: `lcp-${Date.now()}`
+				});
+			}).observe({ type: 'largest-contentful-paint', buffered: true });
+		};
+
+		const getTTFB = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (entry.entryType === 'navigation') {
+						onPerfEntry?.({
+							name: 'TTFB',
+							value: entry.responseStart - entry.fetchStart,
+							delta: entry.responseStart - entry.fetchStart,
+							id: `ttfb-${Date.now()}`
+						});
+					}
+				}
+			}).observe({ type: 'navigation', buffered: true });
+		};
+
+		// Initialize all metrics
+		getCLS(onMetric);
+		getFID(onMetric);
+		getFCP(onMetric);
+		getLCP(onMetric);
+		getTTFB(onMetric);
+	}, [onMetric]);
+
+	return null; // This component doesn't render anything
+}

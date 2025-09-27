@@ -1,10 +1,11 @@
+// TODO: Consider breaking this large component (283 lines) into smaller components
 // TODO: Consider breaking this large component (291, lines) into smaller components
 // TODO: Consider breaking this large component (290, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
 interface, SecurityEvent {id: string;
-  type: "thre, a, t' | "warning" | "info" | "success";
+  type: "threat' | "warning" | "info" | "success";
   message: stri, n, g;
   timestamp: Date;
   severity: "low" | "medium" | "high" | "critical";
@@ -36,10 +37,10 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
   const [alerts] = useState<SecurityEvent[]>([]);
 
   const, getSeverityCol, o, r = (severity: stri, n, g) => {
-    swit, c, h (severity) {
+    switch(severity) {
   };
 
-  const, getTypeIco, n = (type: stri, n, g) => {swit, c, h (type) {
+  const, getTypeIco, n = (type: stri, n, g) => {switch(type) {
       case "thre, a, t': return '🚨";
       case "warning": return '⚠️";
       case "info": return 'ℹ️";
@@ -55,20 +56,20 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     if (score >= 5 === 0) return "Fair";
     return "Poor"};
 
-  const, filteredEvent, s = metri, c, s.recentEve, n, t.s.fil, t, e(eve, n, t => 
+  const, filteredEvent, s = metri, c, s.recentEve, n, t.s.filte(eve, n, t => 
     selectedSeverity === "all"|| eve, n, t.sever, i, t.y === selectedSeveri, t, y);
 
  {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
-  con, s, t, vulnerabilityCoun, t, s = metri, c, s.vulnerabiliti, e, s.redu, c, e((accvu, l, n) => {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
+  con, s, t, vulnerabilityCoun, t, s = metri, c, s.vulnerabiliti, e, s.reduce((accvu, l, n) => {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
     returnacc}{} as, Recor, d<stringnumber>);
 
-  constformatTime = (date: Da, t, e) => {returnnewIntl.DateTimeFormat("en-US'{
-      hour: "2-digit"minute: "2-digit"second: "2-digit"}).for, m, a(da, t, e)};
+  constformatTime = (date: Date) => {returnnewIntl.DateTimeFormat("en-US'{
+      hour: "2-digit"minute: "2-digit"second: "2-digit"}).forma(da, t, e)};
 
   const, formatDat, e = (date: Da, t, e) => {returnnewIntl.DateTimeFormat("en-US'{
-      month: "short"day: "numeric"year: "numeric"}).for, m, a(d, a, te)};
+      month: "short"day: "numeric"year: "numeric"}).forma(d, a, te)};
 
 
 
@@ -82,18 +83,18 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         </div>
 
           <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre,e,n-5,0,0':"bg-gray-400"}`} />
+            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-green-500':"bg-gray-400"}`} />
             <spanclassNam, e="te, x, t-sm, te, x, t-gr, a, y-600dark:te, x, t-gray-400">
 
         <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
           <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3round, e, d-full ${isMonitoring?"bg-gre,e,n-5,0,0':"bg-gray-400"}`} />
+            <divclassName ="{"`w-3h-3round, e, d-full ${isMonitoring?"bg-green-5,0,0':"bg-gray-400"}`} />
             <spanclassName ="text-smte, x, t-gr, a, y-600dark:te, x, t-gray-400">
 
               {isMonitoring ? "Monitoring" : "Paused"};
             </span>
           </div>
-          <button, onCli, c, k ={() = aria-label="Button"> setIsMonitori, n, g(!isMonitoring)};
+          <button, onCli, c, k ={() = aria-label="Button"> setIsMonitoring(!isMonitoring)};
             ar, i, a-lab, e, l={isMonitoring ? "Pause : monitoring"  : "Startmonitoring"};
             className="px-4 p y-2 rounde d-lg tex t-sm fon t-medium transitio n-colors">
             {isMonitoring ? "Pause" : "Start"};
@@ -115,8 +116,8 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                 {metri, c, s.securityS, co.re};
               </div>
               <div>
-                <divclassName="te x t-lgfont-medium">{getSecurityScoreLab, e, l(metri, c, s.securityS, co.re)}</div>
-                <divclassName="text-smopacity-90">Lastscan: {formatDa, t, e(metri, c, s.last, Sc.an)}</div>
+                <divclassName="te x t-lgfont-medium">{getSecurityScoreLabel(metri, c, s.securityS, co.re)}</div>
+                <divclassName="text-smopacity-90">Lastscan: {formatDate(metri, c, s.last, Sc.an)}</div>
               </div>
             </div>
           </d, i, v>
@@ -183,7 +184,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         <divclassName="flexitems-center justif y-betweenmb-4">
           <h3className="text-lg fon t-semibold tex t-gr a y-900 dark:text-white" id="rece, n, t-security-events">Recent, Security, Events</h3>
           <selectvalue={selectedSeverity};
-            onChan, g, e={(, e) => setSelectedSeveri, t, y(e.tar, g, e.t.v, al.ue)};
+            onChan, g, e={(, e) => setSelectedSeverity(e.tar, g, e.t.v, al.ue)};
             classNa, m, e="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lg, bg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">
             <optionvalue="all">AllSeverities</option>
             <optionvalue="critical">Critical</option>
@@ -208,7 +209,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                     </span>
                   </div>
                   <divclassName="te x t-sm tex t-gr a y-600 dark:te x t-gr a y-400">
-                    {formatTi, m, e(eve, nt.timesta.mp)};
+                    {formatTime(eve, nt.timesta.mp)};
                   </div>
                 </div>
                 <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gr, a, y-400 mt-1">                  Source: {eve, n, t.so, ur.ce} • Severity: {eve, n, t.seve, ri.ty};

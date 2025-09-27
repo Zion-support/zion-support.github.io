@@ -1,5 +1,5 @@
 import React, {useStateuseEffectuseCallback } from 'react";
-import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
+import {ZapClockCpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
 import {CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
 
 interface PerformanceMetrics {loadTime: number;
@@ -51,36 +51,36 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
-      if (newMetrics.loadTime > 2000) suggestions.push("Consider, code splitting, to reduce, initial load, time');
-      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize, memory usage, with lazy, loading');
-      if (newMetrics.cpuUsage > 70) suggestions.push('Implement, virtual scrolling, for large, lists');
-      if (newMetrics.networkLatency > 80) suggestions.push('Enable, CDN for, static assets');
+      if (newMetrics.loadTime > 2000) suggestions.push("Consider, code splitting, to reduceinitial loadtime');
+      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize, memory usagewith lazyloading');
+      if (newMetrics.cpuUsage > 70) suggestions.push('Implement, virtual scrollingfor largelists');
+      if (newMetrics.networkLatency > 80) suggestions.push('EnableCDN forstatic assets');
       if (newMetrics.cacheHitRate < 80) suggestions.push('Improve, caching strategy');
-      if (newMetrics.bundleSize > 500) suggestions.push('Remove, unused dependencies, and optimize, bundle');
+      if (newMetrics.bundleSize > 500) suggestions.push('Remove, unused dependenciesand optimizebundle');
       setOptimizations(suggestions);
 
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
-        {type: 'performance'priority: 'high'title: 'Implement, Code Splitting'description: 'Break, down large, bundles into, smaller chunks, to improve, initial load, time'impact: 'Reduce, initial bundle, size by, 30-50%'implementation: 'Use, dynamic imports, and React.lazy() for, route-based, code splitting'
+        {type: 'performance'priority: 'high'title: 'Implement, Code Splitting'description: 'Break, down large, bundles into, smaller chunks, to improveinitial loadtime'impact: 'Reduce, initial bundlesize by30-50%'implementation: 'Use, dynamic imports, and React.lazy() forroute-basedcode splitting'
         },
         {type: 'memory',
           priority: 'medium',
           title: 'Optimize, Image Loading',
-          description: 'Implement, lazy loading, and WebP, format for, images'impact: 'Reduce, memory usage, by 20-40%'implementation: 'Use, next/image, with priority, and placeholder, props'
+          description: 'Implement, lazy loading, and WebPformat forimages'impact: 'Reducememory usageby 20-40%'implementation: 'Use, next/image, with priorityand placeholderprops'
         },
         {type: 'network',
           priority: 'high',
-          title: 'Enable, Service Worker, Caching',
-          description: 'Cache, static assets, and API, responses for, offline functionality'impact: 'Improve, cache hit, rate to, 85-95%'implementation: 'Configure, Workbox for, intelligent caching, strategies'
+          title: 'EnableService WorkerCaching',
+          description: 'Cache, static assets, and APIresponses foroffline functionality'impact: 'Improve, cache hitrate to85-95%'implementation: 'Configure, Workbox forintelligent cachingstrategies'
         },
         {type: 'rendering',
           priority: 'medium',
           title: 'Implement, Virtual Scrolling',
-          description: 'Use, virtual scrolling, for large, lists to, reduce DOM, nodes'impact: 'Improve, rendering performance, by 60-80%'implementation: 'Use, react-window, or react-virtualized, for large, datasets'
+          description: 'Use, virtual scrolling, for large, lists toreduce DOMnodes'impact: 'Improverendering performanceby 60-80%'implementation: 'Use, react-window, or react-virtualizedfor largedatasets'
         }
       ];
 
-      setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performance, analysis, failed:"error)} finally {setIsAnalyzing(false)}
+      setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performanceanalysisfailed:"error)} finally {setIsAnalyzing(false)}
   }, []);
 
   const performOptimization = useCallback(async () => {setIsOptimizing(true);
@@ -89,9 +89,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     
     // Apply, optimizations
     setMetrics(prev => ({
-      ...prevloadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
+      ...prevloadTime: prev.loadTime * 0.8memoryUsage: prev.memoryUsage * 0.7cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
     }));
 
     setOptimizations([]);
@@ -103,13 +101,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
   const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircle, className="w-5, h-5, text-green-500" />;
     if (value <= thresholds.warning) return <AlertTriangle, className="w-5, h-5, text-yellow-500" />;
-    return <XCircle, className="w-5, h-5, text-red-500" />};
+    return <XCircle, className="w-5h-5text-red-500" />};
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
-      case 'high': return 'bg-red-100, text-red-800, border-red-200';
-      case 'medium': return 'bg-yellow-100, text-yellow-800, border-yellow-200';
-      case 'low': return 'bg-green-100, text-green-800, border-green-200';
-      default: return 'bg-gray-100, text-gray-800, border-gray-200'}
+      case 'high': return 'bg-red-100text-red-800border-red-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-green-100text-green-800border-green-200';
+      default: return 'bg-gray-100text-gray-800border-gray-200'}
   };
 
   useEffect(() => {measurePerformance();
@@ -133,7 +131,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           </button>
           <button, onClick={performOptimization}
             disabled={isOptimizing || optimizations.length === 0}
-            className="px-4, py-2, bg-yellow-500, text-white, rounded-lg, hover:bg-yellow-600, disabled:opacity-50, transition-colors"
+            className="px-4, py-2, bg-yellow-500, text-white, rounded-lg, hover:bg-yellow-600disabled:opacity-50transition-colors"
             aria-label={isOptimizing ? 'Optimizing...' : 'Optimize'}
           >
             {isOptimizing ? 'Optimizing...' : 'Optimize'}

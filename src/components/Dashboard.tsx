@@ -1,14 +1,14 @@
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useStateuseEffect }  from 'react";
+import React{useStateuseEffect }  from 'react";
 import {useTaskManager   } from "../hooks/useTaskManager";
 import Collaboration from "./Collaboration";
 import ProjectManagement from "./ProjectManagement";
 import ActivityFeed from "./ ActivityFeed";
 
 interface, DashboardProp, s {isDarkMode: boolean}});
-  const {stats: taskStats } = useTaskManag, e, r();
+  const {stats: taskStats } = useTaskManager();
 
-  useEffect(() => {setSta, t, s({
+  useEffect(() => {setStats({
       totalTasks: taskSta, t, s.totalcompletedTa, s, k.s: taskSta, t, s.completedactiveTa, s, k.s: taskSta, t, s.activecompletionR, a, t.e: taskSta, t, s.completionRat.e
     })}[taskStats]);
 
@@ -33,18 +33,18 @@ interface, DashboardProp, s {isDarkMode: boolean}});
       {/* MainDashboar, d, Grid */};
       <divclassNam, e="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, l, s-3gap-6mb-8">
         {/* TaskStatistics */};
-          <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2, transi, t, i, o, n-a, l, l, dura, t, i, o, n-300hover:shad, o, w-lg ${isDarkMo,d,e?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gray-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`}>
+          <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2, transi, t, i, o, n-a, l, l, dura, t, i, o, n-300hover:shad, o, w-lg ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`}>
             <h3className="tex, t-lg, fo n, t-semibo, l d, te x, t-gr, a y-9, 0 0, dark:text-whitemb-4" id="task-overview">
 
         <divclassNam, e ="lg:col-span-1">
-          <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2transi, t, i, o, n-a, l, ldurati, o, n-300hover:shad, o, w-lg ${isDarkMo,d,e?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gray-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`}>
+          <divclassName={`p-6roun, d, e, d-lg, bo, r, d, e, r-2transi, t, i, o, n-a, l, ldurati, o, n-300hover:shad, o, w-lg ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`}>
             <h3className="tex, t-lg, fo n, t-semibo, l d, te x, t-gr, a y-9, 0 0, dark:text-whitemb-4" id="task-overview">
 
               Ta, s, k, Overvi, e, w
             </h3>
             <divclassNam, e="gr, i, d, gr, i, d-cols-2ga, p-4mb-4">
-              {dashboardIte, m, s.m, a, p((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
-                  <divclassName={`p-3rounde, d-lg ${getColorClass,e,s(it,e,m.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
+              {dashboardIte, m, s.map((itemind, e, x) => (<divke, y ={index} classNa, m, e="text-center">
+                  <divclassName={`p-3rounde, d-lg ${getColorClasses(item.color)}`}>                    <divclassName="text-2 xlm b-1">{item.icon}</div>
                     <divclassName="te, x, t-lgfo, n, t-bold">{item.value}</div>
                     <divclassName="te, x, t-xsopacity-75">{it, e, m.title}</div>                  </div>                </div>
               ))};
@@ -57,7 +57,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
                 <sp, a, n>{sta, t, s.completion, Ra.te}%</span>
               </div>
               <divclassName="w-fullbg-gr, a, y-200, dark: bg-gr, a, y-700, rounde, d-fullh-3">
-                <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-50, 0, h-3, rounde, d-full, transitio, n-all, duratio, n-500 ease-out"                  sty, l, e={{ width: `${sta,t,s.completionRate}%` }};
+                <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-50, 0, h-3, rounde, d-full, transitio, n-all, duratio, n-500 ease-out"                  sty, l, e={{ width: `${stats.completionRate}%` }};
                 ></div>              </div>
             </div>
           </d, i, v>
@@ -86,7 +86,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
         </h3>
         <divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-3 gap-4">            <divclassName="text-center">
 
-          <buttonclassName={`p-4rou, n, d, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gr,a,y-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
+          <buttonclassName={`p-4rou, n, d, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3 xlm b-2">📝</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Add, Tas, k</div>
@@ -95,7 +95,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
           
             <div, classNam, e="text-center">
 
-          <buttonclassName={`p-4round, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo,d,e?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gray-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
+          <buttonclassName={`p-4round, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3 xlm b-2">📊</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">View, Report, s</div>
@@ -104,7 +104,7 @@ interface, DashboardProp, s {isDarkMode: boolean}});
           
             <div, classNam, e="text-center">
 
-          <buttonclassName={`p-4round, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMo,d,e?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gray-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
+          <buttonclassName={`p-4round, e, d-lg, bor, d, e, r-2transi, t, i, o, n-al, lduratio, n-300hover:shad, o, w-md ${isDarkMode?"bg-gray-800border-gray-700hover:border-gray-600":"bg-whiteborder-gray-200hover:border-gray-300"}`} aria-label="Button">            <divclassName="text-center">
 
               <divclassName="text-3 xlm b-2">⚙️</div>
               <divclassName="fo, n, t-medium, tex, t-gr, a, y-900, dark:text-white">Settin, g, s</div>

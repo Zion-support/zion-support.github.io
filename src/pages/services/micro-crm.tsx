@@ -127,7 +127,7 @@ Essenti, a, l, CRM, Features</h2>
               >
                 <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
 
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index};
+            {featur, e, s.map((featu, r, e, ind, e, x) => (<divke, y ={index};
                 classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
               >
                 <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
@@ -158,14 +158,14 @@ Essenti, a, l, CRM, Features</h2>
               Experience, the, benefits of, professional, CRM software, without, the complexity, and, cost of, enterprise, solutions.
             </p>
           </div>
-          <divclassName="grid, m, d :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
+          <divclassName="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
  (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
                 <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
 
  (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
                 <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
 
-            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
+            {benefi, t, s.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
                 <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
 
 
@@ -200,7 +200,7 @@ Perfect, For, Your Business</h2>
               >
                 <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
 
-            {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => (<divke, y ={index};
+            {useCas, e, s.map((useCa, s, e, ind, e, x) => (<divke, y ={index};
                 classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, duration-300"
               >
                 <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
@@ -233,7 +233,7 @@ Perfect, For, Your Business</h2>
           <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 : x : lmx-auto">
             Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4 justify-center">
+          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
             <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">              Start, Free, Trial
             </butt, o, n>
             <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
