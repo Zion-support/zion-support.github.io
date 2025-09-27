@@ -1,9 +1,10 @@
-import React from 'react';
-
-export const TestComponent: React.FC = () => {
+const TestComponent = () => {
   return (
     <div>
       <h1>Test Component</h1>
+      <p>This is a test component to verify JSX is working.</p>
     </div>
   );
 };
+
+export default TestComponent;

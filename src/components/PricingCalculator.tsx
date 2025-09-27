@@ -1,4 +1,4 @@
-import React, { useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PricingOption {
 	id: string;
@@ -18,46 +18,55 @@ interface CalculatorInputs {
 }
 
 export const PricingCalculator: React.FC = () => {
-	const [inputssetInput, s] = useState<CalculatorInputs>({
+	const [inputs, setInputs] = useState<CalculatorInputs>({
 		service: '', complexity: 'standard', timeline: 'standard', teamSize: 1, additionalFeatures: []
 	});
 
-	const [estimatedPricesetEstimatedPric, e] = useState(, 0);
-	const [breakdownsetBreakdow, n] = useState<any[]>([]);
+	const [estimatedPrice, setEstimatedPrice] = useState(0);
+	const [breakdown, setBreakdown] = useState<any[]>([]);
 
 	const services: PricingOption[] = [
 		{
-			id: 'web- dev',
+			id: 'web-dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
-			basePrice: 15000, features: ['Responsive Design''CMS Integration''SEO Optimization''Performance Optimization']
+			basePrice: 15000,
+			features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
 		},
 		{
 			id: 'mobile',
 			name: 'Mobile Development',
-			description: 'iOS and Android applications', basePrice: 25000, features: ['Native Apps''Cross- platform''App Store Optimization''Push Notifications']
+			description: 'iOS and Android applications',
+			basePrice: 25000,
+			features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
 		},
-        {
-			id: 'ai- ml',
+		{
+			id: 'ai-ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
-			basePrice: 35000, features: ['Custom Models''Data Processing''API Integration''Training & Optimization']
+			basePrice: 35000,
+			features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
 		},
 		{
 			id: 'cloud',
 			name: 'Cloud Solutions',
 			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000, features: ['Infrastructure Setup''DevOps''Monitoring''Security']
+			basePrice: 20000,
+			features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
 		},
-        {
-			id: 'data- analytics',
+		{
+			id: 'data-analytics',
 			name: 'Data Analytics',
 			description: 'Business intelligence and analytics',
-			basePrice: 18000, features: ['Data Visualization''Reporting''Predictive Analytics''Dashboard Creation']
+			basePrice: 18000,
+			features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
 		},
 		{
 			id: 'cybersecurity',
-			name: 'Cybersecurity', description: 'Security solutions and audits', basePrice: 12000, features: ['Security Audit''Penetration Testing''Compliance''Monitoring']
+			name: 'Cybersecurity',
+			description: 'Security solutions and audits',
+			basePrice: 12000,
+			features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
 		}
 	];
 

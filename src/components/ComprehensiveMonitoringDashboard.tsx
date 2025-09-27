@@ -101,7 +101,8 @@ export default function ComprehensiveMonitoringDashboard({
         resources,
         userExperience,
         errors,
-        security      };
+        security
+      };
 
       setMetrics(newMetrics);
       setLastUpdated(new Date());
@@ -261,7 +262,8 @@ export default function ComprehensiveMonitoringDashboard({
 
     if (enableRealTimeUpdates) {
       const interval = setInterval(collectMetrics, refreshInterval);
-      return () => clearInterval(interval);    }
+      return () => clearInterval(interval);
+    }
   }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
 
   const getPerformanceGrade = (score: number) => {

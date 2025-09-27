@@ -1,5 +1,5 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { User, Settings, Palette, Globe, Smartphone, Monitor, Sun, Moon } from 'lucide-react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -7,8 +7,8 @@ interface UserPreferences {
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
-  highContras, t: boolean;
-  screenReade, r: boolean;
+  highContrast: boolean;
+  screenReader: boolean;
 }
 
 interface EnhancedUserExperienceProps {
@@ -150,14 +150,16 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('animations', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Enable animations
           </span>
         </label>
       </div>
     </div>
   );
 
-  const AccessibilityTab = () => (<div className="space-y-6">
+  const AccessibilityTab = () => (
+    <div className="space-y-6">
       <div className="space-y-4">
         <label className="flex items-center space-x-3">
           <input
@@ -166,8 +168,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
-            Reduce motion (respects system preference)          </span>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Reduce motion (respects system preference)
+          </span>
         </label>
 
         <label className="flex items-center space-x-3">
@@ -177,7 +180,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('highContrast', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            High contrast mode
           </span>
         </label>
 
@@ -188,16 +192,17 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             onChange={(e) => updatePreference('screenReader', e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Screen reader optimizations
           </span>
         </label>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
+        <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -207,16 +212,18 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     </div>
   );
 
-  const LanguageTab = () => (<div className="space-y-6">
+  const LanguageTab = () => (
+    <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
           Language
         </label>
         <select
           value={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-        >          <option value="en">English</option>
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+        >
+          <option value="en">English</option>
           <option value="es">Español</option>
           <option value="fr">Français</option>
           <option value="de">Deutsch</option>
@@ -226,11 +233,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </select>
       </div>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
+      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
           Internationalization
         </h4>
-        <p className="text-sm text-green-700 dar k:text-green-300">
+        <p className="text-sm text-green-700 dark:text-green-300">
           Full i18n support with RTL language support and localized content.
         </p>
       </div>
@@ -238,12 +245,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-    <div className={`relative ${className}`}>      {/* Settings Toggle Button */}
+    <div className={`relative ${className}`}>
+      {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600transition-colors"
-        aria-label="Open user experience settings"      >
-        <Settings className="w-6h-6"/>
+        className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
+        aria-label="Open user experience settings"
+      >
+        <Settings className="w-6 h-6"/>
       </button>
 
       {/* Settings Panel */}
