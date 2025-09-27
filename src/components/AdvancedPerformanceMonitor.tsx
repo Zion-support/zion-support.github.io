@@ -195,46 +195,46 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4mb-6">
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Load Time</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>
             {formatTime(metrics.loadTime)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">First Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>
             {formatTime(metrics.firstContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Largest Contentful Paint</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>
             {formatTime(metrics.largestContentfulPaint)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">First Input Delay</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}>
             {formatTime(metrics.firstInputDelay)}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Cumulative Layout Shift</div>
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}
+          <div className={`text-2xl font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
             {formatScore(metrics.cumulativeLayoutShift)}
           </div>
         </div>
 
         {metrics.memoryUsage && (
-          <div className="bg-gray-50 dark: bg-gray-700 rounded-lgp-4">
+          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Memory Usage</div>
-            <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}
+            <div className={`text-2xl font-bold ${getScoreColor(metrics.memoryUsage, { good: 30, needsImprovement: 50 })}`}>
               {metrics.memoryUsage}MB
             </div>
           </div>
