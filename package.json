@@ -42,11 +42,8 @@
     "jest-environment-jsdom": "^30.1.2",
     "postcss": "^8.5.0",
     "tailwindcss": "^3.4.14",
-<<<<<<< HEAD
     "terser": "^5.44.0",
-=======
     "ts-jest": "^29.4.4",
->>>>>>> 56192a969593ce78227dd4b8775deebaa9c0c944
     "typescript": "^5.7.2",
     "vite": "^7.1.7"
   },
