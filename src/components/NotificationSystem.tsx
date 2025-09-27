@@ -194,7 +194,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               </div>
               <div className="ml-4flex-shrink-0flex">
                 <button
-                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2focu, s:ring-offset-2focu,s:ring-indigo-500"
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2focu, s:ring-offset-2focu s:ring-indigo-500"
                   onClick={() => removeNotification(notification.id)}
                 >
                   <span className="sr-only">Close</span>

@@ -76,7 +76,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
       </div>
 
       {/* Main Dashboard Grid */}
-      <div className="grid grid-cols-1lg:grid-cols-3gap-6mb-8">
+      <div className="grid grid-cols-1lg:grid-cols-3gap-6 mb-8">
         {/* Task Statistics */}
         <div className="lg:col-span-1">
           <div className={`p-6rounded-lg border-2transition-all duration-300 hover:shadow-lg ${
@@ -87,7 +87,7 @@ export default function Dashboard({ isDarkMode }: DashboardProps): JSX.Element {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-whitemb-4" id="task-overview">
               Task Overview
             </h3>
-            <div className="grid grid-cols-2gap-4mb-4">
+            <div className="grid grid-cols-2gap-4 mb-4">
               {dashboardItems.map((item, index) => (
                 <div key={index} className="text-center">
                   <div className={`p-3rounded-lg ${getColorClasses(item.color)}`}

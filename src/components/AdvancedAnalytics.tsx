@@ -104,7 +104,7 @@ export const AdvancedAnalytics: React.FC = () => {
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="animate-pulse">
           <div className="h-6bg-gray-200 rounded w-1/4mb-6"></div>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
+          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6 mb-8">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="bg-gray-50 rounded-lgp-4">
                 <div className="h-4bg-gray-200 rounded w-3/4mb-2"></div>
@@ -133,7 +133,7 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Metric Cards */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6 mb-8">
         {metricCards.map((card, index) => (
           <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6borderborder-blue-100">
             <div className="flex items-center justify-between mb-2">

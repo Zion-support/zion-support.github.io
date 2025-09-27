@@ -126,7 +126,7 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2gap-6mb-6">
+        <div className="grid grid-cols-1md:grid-cols-2gap-6 mb-6">
           <div className="space-y-4">
             <h4 className="font-semibold text-gray-800 mb-3">Accessibility Features</h4>
             

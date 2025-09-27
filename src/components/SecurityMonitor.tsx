@@ -165,7 +165,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
       </div>
 
       {/* Security Metrics */}
-      <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+      <div className="grid grid-cols-2md:grid-cols-4gap-4 mb-6">
         <div className="bg-gray-50 rounded-lg p-4text-center">
           <div className="text-2xl font-boldtext-red-600">{metrics.activeThreats}</div>
           <div className="text-sm text-gray-600">Active Threats</div>

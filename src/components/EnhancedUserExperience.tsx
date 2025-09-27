@@ -143,7 +143,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div className="space-y-4">
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.animations}
@@ -161,7 +161,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   const AccessibilityTab = () => (
     <div className="space-y-6">
       <div className="space-y-4">
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.reducedMotion}
@@ -173,7 +173,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           </span>
         </label>
 
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.highContrast}
@@ -185,7 +185,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           </span>
         </label>
 
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.screenReader}
@@ -271,7 +271,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-centerspace-x-3">
+                <div className="flex items-center space-x-3">
                   <User className="w-6h-6text-blue-500" />
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     User Experience

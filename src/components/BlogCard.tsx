@@ -77,7 +77,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         >
           Read More
           <svg 
-            className="w-4h-4ml-2group-hover/bt, n:translate-x-1transition-transformduration-300" 
+            className="w-4h-4ml-2group-hover/bt  n:translate-x-1transition-transformduration-300" 
             fill="none" 
             stroke="currentColor" 
             viewBox="002424"

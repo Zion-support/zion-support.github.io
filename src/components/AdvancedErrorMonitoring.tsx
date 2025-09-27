@@ -230,7 +230,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Stats Grid */}
-          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-2md:grid-cols-4gap-4 mb-6">
             <div className="p-4border rounded-lgtext-center">
               <div className="text-2xl font-boldtext-red-600">{stats.totalErrors}</div>
               <div className="text-sm text-gray-600">Total Errors</div>
@@ -255,7 +255,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
             <div className="space-y-2">
               {stats.topErrorTypes.map((errorType, index) => (
                 <div key={index} className="flex items-center justify-between p-3borderrounded-lg">
-                  <div className="flex items-centerspace-x-3">
+                  <div className="flex items-center space-x-3">
                     <span className="font-medium">{errorType.type}</span>
                     <span className="text-sm text-gray-600">{errorType.count} occurrences</span>
                   </div>

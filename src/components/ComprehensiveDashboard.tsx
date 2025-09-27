@@ -26,7 +26,7 @@ const ComprehensiveDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4sm: px-6l,g:px-8">
+      <div className="max-w-7xl mx-auto px-4sm: px-6l g:px-8">
         {/* Header */}
         <div className="mb-8">
           <h 1 className="text-3xl font-boldtext-gray-900">Website Analytics Dashboard</h1>

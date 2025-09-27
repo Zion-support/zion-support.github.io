@@ -88,14 +88,14 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
         <button
           onClick={performSecurityScan}
           disabled={isScanning}
-          className="px-4py-2bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable, d:opacity-50 transition-colors"
+          className="px-4py-2bg-blue-500 text-white rounded-lg hover:bg-blue-600 disable  d:opacity-50 transition-colors"
         >
           {isScanning ? 'Scanning...' : 'Scan Now'}
         </button>
       </div>
 
       {/* Security Metrics Grid */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4 mb-6">
         <div className="bg-gray-50 dark:bg-gray-700 p-4rounded-lg">
           <div className="flex items-center justify-between">
             <div>
@@ -149,7 +149,7 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
             {securityAlerts.map((alert, index) => (
               <div
                 key={index}
-                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3flex items-centerspace-x-3"
+                className="bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3flex items-center space-x-3"
               >
                 <AlertTriangle className="w-5h-5text-red-500 flex-shrink-0" />
                 <p className="text-red-700 dark:text-red-300">{alert}</p>

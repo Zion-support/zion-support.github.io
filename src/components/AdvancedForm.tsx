@@ -285,7 +285,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1bg-blue-600 text-white px-4py-2rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
+          className="flex-1bg-blue-600 text-white px-4py-2rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable, d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"
         >
           {isLoading ? (
             <div className="flex items-center justify-center">
@@ -305,7 +305,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({
             type="button"
             onClick={handleReset}
             disabled={isLoading}
-            className="px-4py-2border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable, d:opacity-50 disable, d:cursor-not-allowed transition-colorsduration-200"
+            className="px-4py-2border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2focus:ring-blue-500 focus:ring-offset-2disable, d:opacity-50 disable  d:cursor-not-allowed transition-colorsduration-200"
            aria-label="{resetText}">
             {resetText}
           </button>

@@ -321,7 +321,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <button
             onClick={auditAccessibility}
             disabled={isAuditing}
-            className="px-4py-2bg-blue-500 hover:bg-blue-600 disable, d:bg-gray-400 text-white rounded-lg text-sm font-mediumtransition-colors"
+            className="px-4py-2bg-blue-500 hover:bg-blue-600 disable  d:bg-gray-400 text-white rounded-lg text-sm font-medium transition-colors"
            aria-label="{isAuditing ? 'Auditing...' : 'Run Audit'}">
             {isAuditing ? 'Auditing...' : 'Run Audit'}
           </button>
@@ -353,7 +353,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           </div>
 
           {/* Issue Summary */}
-          <div className="grid grid-cols-1md:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-1md:grid-cols-4gap-4 mb-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

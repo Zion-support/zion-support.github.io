@@ -253,7 +253,7 @@ const AdvancedSystemMonitor: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-2md:grid-cols-4gap-4 mb-6">
             <div className="p-4borderrounded-lg">
               <div className="flex items-center justify-between mb-2">
                 <Cpu className="h-5w-5text-blue-600" />
@@ -306,7 +306,7 @@ const AdvancedSystemMonitor: React.FC = () => {
           </div>
 
           {/* Performance Charts */}
-          <div className="grid grid-cols-1lg:grid-cols-2gap-6mb-6">
+          <div className="grid grid-cols-1lg:grid-cols-2gap-6 mb-6">
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">CPU & Memory Usage</CardTitle>
@@ -398,7 +398,7 @@ const AdvancedSystemMonitor: React.FC = () => {
                 <div className="space-y-3">
                   {alerts.slice(0, 5).map((alert) => (
                     <div key={alert.id} className="flex items-center justify-between p-3borderrounded-lg">
-                      <div className="flex items-centerspace-x-3">
+                      <div className="flex items-center space-x-3">
                         {getStatusIcon(alert.severity === 'critical' ? 100 : 80, { warning: 70, critical: 90 })}
                         <div>
                           <div className="font-medium">{alert.message}</div>

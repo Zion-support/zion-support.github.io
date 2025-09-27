@@ -261,7 +261,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <button
               onClick={analyzePage}
               disabled={isAnalyzing}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"
             >
               {isAnalyzing ? 'Analyzing...' : 'Analyze Page'}
             </button>

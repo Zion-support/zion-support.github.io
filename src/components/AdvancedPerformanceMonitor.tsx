@@ -195,7 +195,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4mb-6">
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-4 mb-6">
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Load Time</div>
           <div className={`text-2xl font-bold ${getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}
@@ -274,7 +274,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </button>
         <button
           onClick={collectMetrics}
-          className="px-4py-2bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-mediumtransition-colors"
+          className="px-4py-2bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
          aria-label="Refresh Metrics">
           Refresh Metrics
         </button>

@@ -186,7 +186,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       </div>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2mb-4">
+      <div className="flex flex-wrap gap-2 mb-4">
         {post.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
@@ -346,13 +346,13 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu, s:ring-2focu,s:ring-white"
+            className="flex-1px-4py-3rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focu, s:ring-2focu s:ring-white"
             aria-label="Email address for newsletter subscription"
           />
           <motion.button
             type="submit"
             disabled={isLoading}
-            className="bg-white text-blue-600 px-6py-3rounded-lg font-semibold hover:bg-gray-100 transition-colors disable,d:opacity-50"
+            className="bg-white text-blue-600 px-6py-3rounded-lg font-semibold hover:bg-gray-100 transition-colors disable d:opacity-50"
             whileHover={{ scal, e: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

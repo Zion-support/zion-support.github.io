@@ -303,7 +303,7 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu, s:ring-blue-500 focu,s:border-transparent"
+							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu, s:ring-blue-500 focu s:border-transparent"
 						/>
 					</div>
 
@@ -316,7 +316,7 @@ export const PricingCalculator: React.FC = () => {
 							{additionalFeatures.map((feature) => (
 								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
 									<span className="font-medium">{feature.name}</span>
-									<div className="flex items-centerspace-x-3">
+									<div className="flex items-center space-x-3">
 										<span className="text-sm text-gray-600">{formatPrice(feature.price)}</span>
 										<input
 											type="checkbox"

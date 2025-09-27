@@ -81,7 +81,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4sm: px-6l,g:px-8">
+      <div className="max-w-7xl mx-auto px-4sm: px-6l g:px-8">
         <div className="flex justify-between items-centerh-16">
           {/* Logo */}
           <Link 
@@ -93,7 +93,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-centerspace-x-1" ref={dropdownRef}>
+          <div className="hidden md:flex items-center space-x-1" ref={dropdownRef}>
             {items.map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
@@ -176,7 +176,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu, s:ring-2focu,s:ring-blue-500"
+            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu, s:ring-2focu s:ring-blue-500"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >

@@ -29,7 +29,7 @@ export const Testimonials: React.FC = () => {
 				</div>
 
 				<div className="relative">
-					<div className="bg-white rounded-2xl shadow-xl p-8m, d:p-12 max-w-4xlmx-auto">
+					<div className="bg-white rounded-2xl shadow-xl p-8m  d:p-12 max-w-4xlmx-auto">
 						<div className="flex items-center justify-centermb-6">
 							{testimonials.map((_, index) => (
 								<button

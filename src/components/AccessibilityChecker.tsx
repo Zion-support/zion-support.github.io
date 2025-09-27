@@ -206,7 +206,7 @@ const AccessibilityChecker: React.FC = () => {
           <button
             onClick={checkAccessibility}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable d:cursor-not-allowed"
           >
             {isRunning ? 'Checking...' : 'Recheck'}
           </button>
@@ -238,7 +238,7 @@ const AccessibilityChecker: React.FC = () => {
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
+          <div className="grid grid-cols-1md:grid-cols-3gap-4 mb-6">
             <div className="p-4borderrounded-lg">
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>

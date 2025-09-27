@@ -89,8 +89,8 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6mb-8">
-          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4text-white">
+        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6 mb-8">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
               <Eye className="w-5h-5" />
               <span className="text-sm opacity-90">Page Views</span>
@@ -99,7 +99,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
             <div className="text-sm opacity-90">+12% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
               <Users className="w-5h-5" />
               <span className="text-sm opacity-90">Unique Visitors</span>
@@ -108,7 +108,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
             <div className="text-sm opacity-90">+8% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
               <MousePointer className="w-5h-5" />
               <span className="text-sm opacity-90">Bounce Rate</span>
@@ -117,7 +117,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
             <div className="text-sm opacity-90">-2% from yesterday</div>
           </div>
 
-          <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4text-white">
+          <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4 text-white">
             <div className="flex items-center justify-between mb-2">
               <Clock className="w-5h-5" />
               <span className="text-sm opacity-90">Avg. Session</span>

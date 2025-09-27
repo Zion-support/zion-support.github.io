@@ -99,7 +99,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-2md:grid-cols-5gap-4mb-6">
+      <div className="grid grid-cols-2md:grid-cols-5gap-4 mb-6">
         <div className="bg-blue-50 rounded-lg p-4text-center">
           <Eye className="w-6h-6mx-auto mb-2text-blue-600" />
           <div className="text-2xl font-boldtext-blue-600">{formatNumber(data.pageViews)}</div>

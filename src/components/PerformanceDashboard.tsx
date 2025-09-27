@@ -156,7 +156,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md: grid-cols-2 l,
+      <div className="grid grid-cols-1 md: grid-cols-2 l 
     g:grid-cols-4 gap-4">
         <AnimatePresence>
           {metrics.map((metric, index) => (

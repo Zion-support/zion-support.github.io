@@ -198,7 +198,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -208,7 +208,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4 mb-6">
             <div className="p-4border rounded-lgtext-center">
               <div className="text-sm text-gray-600 mb-1">Security Score</div>
               <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}

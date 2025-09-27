@@ -324,7 +324,7 @@ const SEOAnalyzer: React.FC = () => {
           <button
             onClick={checkSEO}
             disabled={isRunning}
-            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
           </button>
@@ -356,7 +356,7 @@ const SEOAnalyzer: React.FC = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+          <div className="grid grid-cols-2md:grid-cols-4gap-4 mb-6">
             <div className="p-4border rounded-lgtext-center">
               <p className="text-2xl font-boldtext-blue-600">{report.headings.h1}</p>
               <p className="text-sm text-gray-600">H 1 Tags</p>
@@ -376,7 +376,7 @@ const SEOAnalyzer: React.FC = () => {
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
+          <div className="grid grid-cols-1md:grid-cols-3gap-4 mb-6">
             <div className="p-4borderrounded-lg">
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>
