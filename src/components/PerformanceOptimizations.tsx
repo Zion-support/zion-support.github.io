@@ -37,6 +37,8 @@ MemoizedCard.displayName = 'MemoizedCard';
 
 MemoizedCard.displayName = 'MemoizedCard';
 
+MemoizedCard.displayName = 'MemoizedCard';
+
 // Virtual scrolling component for large lists
 const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
   items: any[];
@@ -80,6 +82,8 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
     </div>
   );
 });
+VirtualList.displayName = 'VirtualList';
+
 VirtualList.displayName = 'VirtualList';
 
 VirtualList.displayName = 'VirtualList';
@@ -139,6 +143,8 @@ OptimizedImage.displayName = 'OptimizedImage';
 
 OptimizedImage.displayName = 'OptimizedImage';
 
+OptimizedImage.displayName = 'OptimizedImage';
+
 // Debounced search component
 const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
   onSearch: (query: string) => void;
@@ -182,6 +188,8 @@ const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
     />
   );
 });
+DebouncedSearch.displayName = 'DebouncedSearch';
+
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 DebouncedSearch.displayName = 'DebouncedSearch';
