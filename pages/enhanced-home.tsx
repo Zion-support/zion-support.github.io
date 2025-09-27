@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { TestimonialCard } from '../src/components/TestimonialCard';
@@ -6,11 +7,11 @@ import { TestimonialCard } from '../src/components/TestimonialCard';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
-import { TESTIMONIALS  PRICING_TIERS  BLOG_POSTS } from '../src/utils/constants';
+import { TESTIMONIALS, PRICING_TIERS, BLOG_POSTS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [activeTab  setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
+	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
 		setIsVisible(true)}, []);
@@ -26,15 +27,16 @@ export default function Home(): JSX.Element {
 	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
 		// Handle blog navigation logic here
-		console.log('Read more:', slug)};
+		console.log('Read more:', slug);
+	};
 
 	return (
 		<>
 			<SEO />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
-				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI  cloud computing  web development  and digital transformation." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">

@@ -1,20 +1,21 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect  useMemo } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 // // import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
-import { blogPosts  categories  getPostsByCategory  getFeaturedPosts } from '../src/data/blogPosts';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
 // import { BlogSearch  BlogCard  BlogPagination  BlogNewsletter } from '../src/components/BlogEnhancements';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedCategory  setSelectedCategory] = useState<string>('all');
-	const [searchQuery  setSearchQuery] = useState('');
-	const [bookmarkedPosts  setBookmarkedPosts] = useState<Set<string>>(new Set());
-	const [currentPage  setCurrentPage] = useState(1);
-	const [isNewsletterLoading  setIsNewsletterLoading] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState<string>('all');
+	const [searchQuery, setSearchQuery] = useState('');
+	const [bookmarkedPosts, setBookmarkedPosts] = useState<Set<string>>(new Set());
+	const [currentPage, setCurrentPage] = useState(1);
+	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
 	const postsPerPage = 6;
 
 	useEffect(() => {
@@ -43,7 +44,7 @@ export default function Blog(): JSX.Element {
 				post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
 			)}
 		
-		return posts}, [selectedCategory  searchQuery]);
+		return posts}, [selectedCategory, searchQuery]);
 	
 	const featuredPosts = useMemo(() => getFeaturedPosts(), []);
 	const regularPosts = useMemo(() => 
@@ -55,13 +56,14 @@ export default function Blog(): JSX.Element {
 	const totalPages = Math.ceil(regularPosts.length / postsPerPage);
 	const paginatedPosts = useMemo(() => {
 		const startIndex = (currentPage - 1) * postsPerPage;
-		return regularPosts.slice(startIndex  startIndex + postsPerPage)}, [regularPosts  currentPage  postsPerPage]);
+		return regularPosts.slice(startIndex, startIndex + postsPerPage)}, [regularPosts, currentPage, postsPerPage]);
 
 	// Handlers
 	const handleSearch = (query: string) => {
 		setSearchQuery(query);
 		setCurrentPage(1);
-		trackClick('blog-search', 'search')};
+		trackClick('blog-search', 'search');
+	};
 
 	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
@@ -85,9 +87,10 @@ export default function Blog(): JSX.Element {
 	const handleNewsletterSubscribe = async (email: string) => {
 		setIsNewsletterLoading(true);
 		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve  1000));
+			await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false)};
+			setIsNewsletterLoading(false);
+		};
 
 	return (
 		<>

@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -18,8 +19,8 @@ export default function Contact(): JSX.Element {
 		budget: '',
 		timeline: ''
 	});
-	const [isSubmitting  setIsSubmitting] = useState(false);
-	const [submitStatus  setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
 	useEffect(() => {
 		setIsVisible(true)}, []);
@@ -28,11 +29,12 @@ export default function Contact(): JSX.Element {
 	const { trackClick } = useAnalytics();
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		const { name  value } = e.target;
+		const { name, value } = e.target;
 		setFormData(prev => ({
-			...prev 
+			...prev,
 			[name]: value
-		}))};
+		}));
+	};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -41,7 +43,7 @@ export default function Contact(): JSX.Element {
 
 		try {
 			// Simulate API call
-			await new Promise(resolve => setTimeout(resolve  2000));
+			await new Promise(resolve => setTimeout(resolve, 2000));
 			
 			// In a real application  you would send the data to your API
 			console.log('Form submitted:', formData);

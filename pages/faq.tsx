@@ -1,13 +1,14 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [openItems  setOpenItems] = useState<Set<number>>(new Set());
-	const [searchTerm  setSearchTerm] = useState('');
+	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+	const [searchTerm, setSearchTerm] = useState('');
 
 	useEffect(() => {
 		setIsVisible(true)}, []);
@@ -127,9 +128,9 @@ export default function FAQ(): JSX.Element {
 		setOpenItems(newOpenItems);
 		trackClick(`faq-toggle-${id}`, 'interaction')};
 
-	const filteredData = faqData.map(category => ({
-		...category 
-		questions: category.questions.filter(q => 
+  const filteredData = faqData.map(category => ({
+          ...category,
+          questions: category.questions.filter(q => 
 			q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 		)
@@ -139,8 +140,8 @@ export default function FAQ(): JSX.Element {
 		<>
 			<Head>
 				<title>FAQ - Zion App</title>
-				<meta name="description" content="Find answers to frequently asked questions about Zion App's services  development process  pricing  and technology solutions." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				<div className="container mx-auto px-4 py-8 max-w-6xl">
