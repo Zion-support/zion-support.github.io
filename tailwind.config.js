@@ -34,6 +34,19 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a'
+        },
+        // Zion Tech Group Brand Colors
+        zion: {
+          blue: '#1e40af',
+          'blue-light': '#3b82f6',
+          'blue-dark': '#1e3a8a',
+          purple: '#7c3aed',
+          'purple-light': '#a855f7',
+          'purple-dark': '#581c87',
+          cyan: '#06b6d4',
+          slate: '#64748b',
+          'slate-light': '#cbd5e1',
+          'slate-dark': '#1e293b'
         }
       },
       fontFamily: {
@@ -44,7 +57,10 @@ export default {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'bounce-slow': 'bounce 2s infinite',
-        'pulse-slow': 'pulse 3s infinite'
+        'pulse-slow': 'pulse 3s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'gradient': 'gradient 3s ease infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate'
       },
       keyframes: {
         fadeIn: {
@@ -54,6 +70,18 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' }
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' }
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' }
         }
       },
       spacing: {

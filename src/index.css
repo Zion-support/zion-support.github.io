@@ -15,42 +15,66 @@
 
 @layer components {
   .btn-primary {
+    background: linear-gradient(to right, #2563eb, #9333ea);
     color: white;
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     border-radius: 0.5rem;
     transition: all 0.3s;
-    background: linear-gradient(to right, #2563eb, #9333ea);
   }
   
   .btn-primary:hover {
-    background: linear-gradient(to right, #1d4ed8, #7c3aed);
+    background: linear-gradient(to right, #3b82f6, #a855f7);
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-
+  
   .btn-secondary {
+    background-color: #1e293b;
     color: white;
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     border-radius: 0.5rem;
+    border: 1px solid #475569;
     transition: all 0.3s;
-    background-color: #1f2937;
-    border: 1px solid #4b5563;
   }
   
   .btn-secondary:hover {
-    background-color: #374151;
+    background-color: #475569;
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
   .card {
-    border-radius: 0.5rem;
+    background-color: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    border-radius: 0.75rem;
     padding: 1.5rem;
     transition: all 0.3s;
-    background-color: rgba(31, 41, 55, 0.5);
-    border: 1px solid #374151;
   }
   
   .card:hover {
-    background-color: rgba(31, 41, 55, 0.7);
+    background-color: rgba(30, 41, 59, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #60a5fa, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(to bottom right, #1e3a8a, #2563eb, #581c87);
   }
 
   /* Accessibility utilities */
