@@ -10,6 +10,23 @@
 
 [build.environment]
   NODE_VERSION = "24.0.0"
+  # Disable Next.js auto-detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Explicitly disable Next.js plugin to prevent auto-detection
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
