@@ -14,17 +14,17 @@ interface PricingTi, e, r {
 interface PricingCardPro, p, s {
   ti, e, r: PricingTi, e, r;
   isVisib, l, e: boolean;
-  onSelectPl, a, n: (tier, I, d: string) => vo, i, d;
+  onSelectPl, a, n: (tier, I, d: string) => void;
 }
 
-export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({ 
+export const PricingCard: React.FC<PricingCardPro, p, s> = ({ 
   ti, e, r, 
   isVisib, l, e, 
   onSelectPl, a, n 
 }) => {
-  retu, r, n (
+  return (
     <d, i, v 
-      classNa, m, e={`relati v e p-8 bg-whi t e round e d-2 x l shad o w-lg hov e r:shad o w-2 x l transiti o n-a l l durati o n-5 0 0 bord e r-2 ${
+      className={`relati v e p-8 bg-whi t e round e d-2 x l shad o w-lg hov e r:shad o w-2 x l transiti o n-a l l durati o n-5 0 0 bord e r-2 ${
         ti e r.isPopul a r 
           ? 'bord e r-bl u e-5 0 0 sca l e-1 0 5' 
           : 'bord e r-gr a y-2 0 0 hov e r:bord e r-bl u e-3 0 0'
@@ -35,29 +35,29 @@ export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({
 
       {/* Popul, a, r bad, g, e */}
       {ti, e, r.isPopul, a, r && (
-        <d, i, v classNa, m, e="absolu, t, e -t, o, p-4 le, f, t-1/2 transfo, r, m -transla, t, e-x-1/2">
-          <sp, a, n classNa, m, e="bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 te, x, t-whi, t, e px-6 py-2 round, e, d-fu, l, l te, x, t-sm fo, n, t-semibo, l, d shad, o, w-lg">            Mo, s, t Popul, a, r
+        <d, i, v className="absolu, t, e -t, o, p-4 le, f, t-1/2 transfo, r, m -transla, t, e-x-1/2">
+          <sp, a, n className="bg-gradie, n, t-to-r from-bl, u, e-6, 0, 0 to-purp, l, e-6, 0, 0 te, x, t-whi, t, e px-6 py-2 round, e, d-fu, l, l te, x, t-sm fo, n, t-semibo, l, d shad, o, w-lg">            Mo, s, t Popul, a, r
           </sp, a, n>
         </d, i, v>
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
       )}
 
       {/* Head, e, r */}
-      <d, i, v classNa, m, e="te, x, t-cent, e, r mb-8">
-        <h3 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0 mb-2" id="tierna, m, e">{ti, e, r.na, m, e}</h3>
-        <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 mb-4">{ti, e, r.descripti, o, n}</p>
-        <d, i, v classNa, m, e="mb-4">
-          <sp, a, n classNa, m, e="te, x, t-5, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0">${ti, e, r.pri, c, e}</sp, a, n>
-          <sp, a, n classNa, m, e="te, x, t-gr, a, y-6, 0, 0 ml-2">/{ti, e, r.peri, o, d}</sp, a, n>
+      <d, i, v className="te, x, t-cent, e, r mb-8">
+        <h3 className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0 mb-2" id="tierna, m, e">{ti, e, r.na, m, e}</h3>
+        <p className="te, x, t-gr, a, y-6, 0, 0 mb-4">{ti, e, r.descripti, o, n}</p>
+        <d, i, v className="mb-4">
+          <sp, a, n className="te, x, t-5, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-8, 0, 0">${ti, e, r.pri, c, e}</sp, a, n>
+          <sp, a, n className="te, x, t-gr, a, y-6, 0, 0 ml-2">/{ti, e, r.peri, o, d}</sp, a, n>
         </d, i, v>
       </d, i, v>
 
       {/* Featur, e, s */}
-      <ul classNa, m, e="spa, c, e-y-4 mb-8">
+      <ul className="spa, c, e-y-4 mb-8">
         {ti, e, r.featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-          <li k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-cent, e, r">
+          <li k, e, y={ind, e, x} className="fl, e, x ite, m, s-cent, e, r">
             <s, v, g 
-              classNa, m, e="w-5 h-5 te, x, t-gre, e, n-5, 0, 0 mr-3 fl, e, x-shri, n, k-0" 
+              className="w-5 h-5 te, x, t-gre, e, n-5, 0, 0 mr-3 fl, e, x-shri, n, k-0" 
               fi, l, l="currentCol, o, r" 
               viewB, o, x="0 0 20 20"
             >
@@ -67,7 +67,7 @@ export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({
                 clipRu, l, e="eveno, d, d" 
               />
             </s, v, g>
-            <sp, a, n classNa, m, e="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>          </li>
+            <sp, a, n className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>          </li>
         ))}
       </ul>
 
@@ -76,7 +76,7 @@ export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({
       <butt, o, n
         onCli, c, k={() = ar, i, a-lab, e, l="onSelectPl, a, n(ti, e, r.id)}
         ar, i, a-lab, e, l={`Sele c t ${ti e r.na m e} pl a n`}
-        classNa, m, e={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
+        className={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
           ti e r.buttonVaria n t === 'prima r y'
             ? 'bg-gradie n t-to-r from-bl u e-6 0 0 to-purp l e-6 0 0 te x t-whi t e hov e r:from-bl u e-7 0 0 hov e r:to-purp l e-7 0 0 shad o w-lg hov e r:shad o w-xl'
             : 'bord e r-2 bord e r-bl u e-6 0 0 te x t-bl u e-6 0 0 hov e r:bg-bl u e-6 0 0 hov e r:te x t-whi t e'
@@ -84,7 +84,7 @@ export con, s, t PricingCard: React.FC<PricingCardPro, p, s> = ({
         }`}      >
         {ti, e, r.button, T, e.x t}"> onSelectPl, a, n(ti, e, r.id)}
         ar, i, a-lab, e, l={`Sele c t ${ti e r.na m e} pl a n`}
-        classNa, m, e={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
+        className={`w-fu l l py-4 px-6 round e d-xl fo n t-semibo l d te x t-lg transiti o n-a l l durati o n-3 0 0 transfo r m hov e r:-transla t e-y-1 ${
           ti e r.buttonVaria n t === 'prima r y'
             ? 'bg-gradie n t-to-r from-bl u e-6 0 0 to-purp l e-6 0 0 te x t-whi t e hov e r:from-bl u e-7 0 0 hov e r:to-purp l e-7 0 0 shad o w-lg hov e r:shad o w-xl'
             : 'bord e r-2 bord e r-bl u e-6 0 0 te x t-bl u e-6 0 0 hov e r:bg-bl u e-6 0 0 hov e r:te x t-whi t e'

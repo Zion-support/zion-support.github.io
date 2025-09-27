@@ -12,7 +12,7 @@ export default function SEOOptimiz, e, r({
   seoDataenableValidati, o, n = trueenableStructuredDa, t, a = true
 }: SEOOptimizerPr, o, p, s): J, S, X.Elem, e, n.t {
   // Valida, t, e S, E, O da, t, a if enabl, e, d
-  con, s, t validati, o, n = React.useM, e, m.o(() => 
+  const validati, o, n = React.useM, e, m.o(() => 
     enableValidati, o, n ? validateSEODa, t, a(seoD, a, t, a) : { isVal, i, d: trueerror, s: [] }[enableValidationseoD, a, t, a]
   );
 
@@ -24,11 +24,11 @@ export default function SEOOptimiz, e, r({
   }[validat, i, o, n]);
 
   // Genera, t, e structur, e, d da, t, a
-  con, s, t structuredDa, t, a = enableStructuredDa, t, a && seoDa, t, a.structuredD, a, t.a
+  const structuredDa, t, a = enableStructuredDa, t, a && seoDa, t, a.structuredD, a, t.a
     ? generateStructuredDa, t, a(seoDa, t, a.structured, D, a.t, a)
     : nu, l, l;
 
-  retu, r, n (
+  return (
     <He, a, d>
       {/* Bas, i, c me, t, a ta, g, s */}
       <tit, l, e>{seoDa, t, a.t, i, t.l e}</tit, l, e>

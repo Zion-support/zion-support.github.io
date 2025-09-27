@@ -6,7 +6,7 @@ import {
   HardDrive, 
   Wifi, 
   Databa, s, e, 
-  Activi, t, y,
+  Activity,
   AlertTriangle,
   CheckCircle,
   Clock,
@@ -64,9 +64,9 @@ interface SystemMetri, c, s {
 interface Ale, r, t {
   id: string;
   type: 'c, p, u' | 'memory' | 'di, s, k' | 'network' | 'databa, s, e';
-  severi, t, y: 'low' | 'medium' | 'high' | 'critic, a, l';
+  severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
-  timest, a, m, p: Da, t, e;
+  timest, a, m, p: Date;
   resolv, e, d: boolean;
 }
 
@@ -78,8 +78,8 @@ interface PerformanceDa, t, a {
   netw, o, r, k: number;
 }
 
-con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
-  con, s, t [metri, c, s, setMetri, c, s] = useState<SystemMetri, c, s>({
+const AdvancedSystemMonit, o, r: React.FC = () => {
+  const [metrics, setMetrics] = useState<SystemMetri, c, s>({
     c, p, u: { us, a, g, e: 0, cor, e, s: 8, temperatu, r, e: 0 },
     memory: { u, s, e, d: 0, tot, a, l: 0, percenta, g, e: 0 },
     di, s, k: { u, s, e, d: 0, tot, a, l: 0, percenta, g, e: 0, readSpe, e, d: 0, writeSpe, e, d: 0 },
@@ -89,12 +89,12 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
     loadAvera, g, e: [0, 0, 0]
   });
 
-  con, s, t [aler, t, s, setAler, t, s] = useState<Ale, r, t[]>([]);
-  con, s, t [performanceDa, t, a, setPerformanceDa, t, a] = useState<PerformanceDa, t, a[]>([]);
-  con, s, t [isMonitori, n, g, setIsMonitori, n, g] = useState(fal, s, e);
+  const [alerts, setAlerts] = useState<Ale, r, t[]>([]);
+  const [performanceDa, t, a, setPerformanceDa, t, a] = useState<PerformanceDa, t, a[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false);
 
-  con, s, t generateMockMetri, c, s = useCallback(() => {
-    con, s, t newMetri, c, s: SystemMetri, c, s = {
+  const generateMockMetri, c, s = useCallback(() => {
+    const newMetri, c, s: SystemMetri, c, s = {
       cp, u: {
         us, a, g, e: Ma, t, h.rou, n, d(Ma, t, h.rand, o, m() * 1, 0, 0),
         cor, e, s: 8,
@@ -133,12 +133,12 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
       ]
     };
 
-    setMetri, c, s(newMetri, c, s);
+    setMetrics(newMetri, c, s);
 
     // Genera, t, e performance da, t, a f, o, r char, t, s
-    con, s, t n, o, w = n, e, w Da, t, e();
-    con, s, t newPerformanceDa, t, a: PerformanceDa, t, a[] = Arr, a, y.from({ len, g, t, h: 20 }, (_, i) => ({
-      timesta, m, p: n, e, w Da, t, e(n, o, w.getTi, m, e() - (19 - i) * 600, 0, 0).toLocaleTimeStri, n, g(),
+    const n, o, w = new Date()();
+    const newPerformanceDa, t, a: PerformanceDa, t, a[] = Array.from({ len, g, t, h: 20 }, (_, i) => ({
+      timesta, m, p: new Date()(n, o, w.getTi, m, e() - (19 - i) * 600, 0, 0).toLocaleTimeStri, n, g(),
       c, p, u: Ma, t, h.rou, n, d(Ma, t, h.rand, o, m() * 1, 0, 0),
       memory: Ma, t, h.rou, n, d(Ma, t, h.rand, o, m() * 1, 0, 0),
       di, s, k: Ma, t, h.rou, n, d(Ma, t, h.rand, o, m() * 1, 0, 0),
@@ -147,17 +147,17 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
 
     setPerformanceDa, t, a(newPerformanceDa, t, a);
 
-    // Genera, t, e aler, t, s bas, e, d on metri, c, s
-    con, s, t newAler, t, s: Ale, r, t[] = [];
+    // Genera, t, e alerts bas, e, d on metrics
+    const newAler, t, s: Ale, r, t[] = [];
     
     if (newMetri, c, s.c, p, u.usa, g, e > 80) {
       newAler, t, s.pu, s, h({
         id: 'c, p, u-high',
         type: 'c, p, u',
-        severi, t, y: newMetri, c, s.c, p, u.usa, g, e > 95 ? 'critic, a, l' : 'high',
+        severity: newMetri, c, s.c, p, u.usa, g, e > 95 ? 'critical' : 'high',
         message: `Hi g h C P U us a g e: ${newMetri c s.c p u.usa g e}%`,
-        timesta, m, p: n, e, w Da, t, e(),
-        resolv, e, d: fal, s, e
+        timesta, m, p: new Date()(),
+        resolv, e, d: false
       });
     }
 
@@ -165,10 +165,10 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
       newAler, t, s.pu, s, h({
         id: 'memory-high',
         type: 'memory',
-        severi, t, y: newMetri, c, s.memory.percenta, g, e > 95 ? 'critic, a, l' : 'high',
+        severity: newMetri, c, s.memory.percenta, g, e > 95 ? 'critical' : 'high',
         message: `Hi g h memo r y us a g e: ${newMetri c s.memo r y.percenta g e}%`,
-        timesta, m, p: n, e, w Da, t, e(),
-        resolv, e, d: fal, s, e
+        timesta, m, p: new Date()(),
+        resolv, e, d: false
       });
     }
 
@@ -176,10 +176,10 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
       newAler, t, s.pu, s, h({
         id: 'di, s, k-high',
         type: 'di, s, k',
-        severi, t, y: 'high',
+        severity: 'high',
         message: `Di s k spa c e lo w: ${newMetri c s.di s k.percenta g e}% us e d`,
-        timesta, m, p: n, e, w Da, t, e(),
-        resolv, e, d: fal, s, e
+        timesta, m, p: new Date()(),
+        resolv, e, d: false
       });
     }
 
@@ -187,63 +187,63 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
       newAler, t, s.pu, s, h({
         id: 'db-slow',
         type: 'databa, s, e',
-        severi, t, y: 'medium',
+        severity: 'medium',
         message: `Sl o w databa s e quer i e s: ${newMetri c s.databa s e.queryTi m e}ms avera g e`,
-        timesta, m, p: n, e, w Da, t, e(),
-        resolv, e, d: fal, s, e
+        timesta, m, p: new Date()(),
+        resolv, e, d: false
       });
     }
 
-    setAler, t, s(pr, e, v => [...newAler, t, s, ...pr, e, v.sli, c, e(0, 10)]); // Ke, e, p on, l, y last, 1, 0 aler, t, s
+    setAlerts(pr, e, v => [...newAler, t, s, ...pr, e, v.sli, c, e(0, 10)]); // Ke, e, p on, l, y last, 1, 0 alerts
   }, []);
 
   useEffect(() => {
     generateMockMetri, c, s();
-    setIsMonitori, n, g(true);
+    setIsMonitoring(true);
 
-    con, s, t interv, a, l = setInterv, a, l(generateMockMetri, c, s, 50, 0, 0);
-    retu, r, n () => clearInterv, a, l(interv, a, l);
+    const interv, a, l = setInterv, a, l(generateMockMetri, c, s, 50, 0, 0);
+    return () => clearInterv, a, l(interv, a, l);
   }, [generateMockMetri, c, s]);
 
-  con, s, t getStatusCol, o, r = (val, u, e: number, threshol, d, s: { warning: number; criti, c, a, l: number }): string => {
-    if (val, u, e >= threshol, d, s.critic, a, l) retu, r, n 'te, x, t-r, e, d-6, 0, 0';
-    if (val, u, e >= threshol, d, s.warning) retu, r, n 'te, x, t-yellow-6, 0, 0';
-    retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
+  const getStatusCol, o, r = (val, u, e: number, threshol, d, s: { warning: number; criti, c, a, l: number }): string => {
+    if (val, u, e >= threshol, d, s.critical) return 'te, x, t-r, e, d-6, 0, 0';
+    if (val, u, e >= threshol, d, s.warning) return 'te, x, t-yellow-6, 0, 0';
+    return 'te, x, t-gre, e, n-6, 0, 0';
   };
 
-  con, s, t getStatusIc, o, n = (val, u, e: number, threshol, d, s: { warning: number; criti, c, a, l: number }) => {
-    if (val, u, e >= threshol, d, s.critic, a, l) retu, r, n <AlertTriangle classNa, m, e="h-4w-4te, x, t-r, e, d-6, 0, 0" />;
-    if (val, u, e >= threshol, d, s.warning) retu, r, n <AlertTriangle classNa, m, e="h-4w-4te, x, t-yellow-6, 0, 0" />;
-    retu, r, n <CheckCircle classNa, m, e="h-4w-4te, x, t-gre, e, n-6, 0, 0" />;
+  const getStatusIc, o, n = (val, u, e: number, threshol, d, s: { warning: number; criti, c, a, l: number }) => {
+    if (val, u, e >= threshol, d, s.critical) return <AlertTriangle className="h-4w-4te, x, t-r, e, d-6, 0, 0" />;
+    if (val, u, e >= threshol, d, s.warning) return <AlertTriangle className="h-4w-4te, x, t-yellow-6, 0, 0" />;
+    return <CheckCircle className="h-4w-4te, x, t-gre, e, n-6, 0, 0" />;
   };
 
-  con, s, t formatByt, e, s = (byt, e, s: number): string => {
-    con, s, t siz, e, s = ['B', 'KB', 'MB', 'GB', 'TB'];
-    if (byt, e, s === 0) retu, r, n '0B';
-    con, s, t i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(10, 2, 4));
-    retu, r, n Ma, t, h.rou, n, d(byt, e, s / Ma, t, h.p, o, w(10, 2, 4, i) * 1, 0, 0) / 1, 0, 0 + ' ' + siz, e, s[i];
+  const formatByt, e, s = (byt, e, s: number): string => {
+    const siz, e, s = ['B', 'KB', 'MB', 'GB', 'TB'];
+    if (byt, e, s === 0) return '0B';
+    const i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(10, 2, 4));
+    return Ma, t, h.rou, n, d(byt, e, s / Ma, t, h.p, o, w(10, 2, 4, i) * 1, 0, 0) / 1, 0, 0 + ' ' + siz, e, s[i];
   };
 
-  con, s, t formatUpti, m, e = (secon, d, s: number): string => {
-    con, s, t da, y, s = Ma, t, h.flo, o, r(secon, d, s / 864, 0, 0);
-    con, s, t hou, r, s = Ma, t, h.flo, o, r((secon, d, s % 864, 0, 0) / 36, 0, 0);
-    con, s, t minut, e, s = Ma, t, h.flo, o, r((secon, d, s % 36, 0, 0) / 60);
-    retu, r, n `${da y s}d ${hou r s}h ${minut e s}m`;
+  const formatUpti, m, e = (secon, d, s: number): string => {
+    const da, y, s = Ma, t, h.flo, o, r(secon, d, s / 864, 0, 0);
+    const hou, r, s = Ma, t, h.flo, o, r((secon, d, s % 864, 0, 0) / 36, 0, 0);
+    const minut, e, s = Ma, t, h.flo, o, r((secon, d, s % 36, 0, 0) / 60);
+    return `${da y s}d ${hou r s}h ${minut e s}m`;
   };
 
-  retu, r, n (
-    <d, i, v classNa, m, e="spa, c, e-y-6">
+  return (
+    <d, i, v className="spa, c, e-y-6">
       <Card>
         <CardHeader>
-          <CardTitle classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
-            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-              <Serv, e, r classNa, m, e="h-6 w-6te, x, t-bl, u, e-6, 0, 0" />
+          <CardTitle className="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
+            <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+              <Serv, e, r className="h-6 w-6te, x, t-bl, u, e-6, 0, 0" />
               <sp, a, n>Syst, e, m Monit, o, r</sp, a, n>
             </d, i, v>
-            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-              <d, i, v classNa, m, e={`w-3 h-3 round e d-fu l l ${isMonitori n g ? 'bg-gre e n-5 0 0' : 'bg-gr a y-4 0 0'}`}></d, i, v>
-              <sp, a, n classNa, m, e="te, x, t-smte, x, t-gr, a, y-6, 0, 0">
-                {isMonitori, n, g ? 'Monitori, n, g' : 'Stopp, e, d'}
+            <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+              <d, i, v className={`w-3 h-3 round e d-fu l l ${isMonitori n g ? 'bg-gre e n-5 0 0' : 'bg-gr a y-4 0 0'}`}></d, i, v>
+              <sp, a, n className="te, x, t-smte, x, t-gr, a, y-6, 0, 0">
+                {isMonitoring ? 'Monitori, n, g' : 'Stopp, e, d'}
               </sp, a, n>
             </d, i, v>
           </CardTitle>
@@ -253,63 +253,63 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* K, e, y Metri, c, s Gr, i, d */}
-          <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4 mb-6">
-            <d, i, v classNa, m, e="p-4 borderround, e, d-lg">
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                <Cpu classNa, m, e="h-5 w-5te, x, t-bl, u, e-6, 0, 0" />
-                {getStatusIc, o, n(metri, c, s.c, p, u.usa, g, e, { warning: 70, critic, a, l: 90 })}
+          <d, i, v className="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4 mb-6">
+            <d, i, v className="p-4 borderround, e, d-lg">
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+                <Cpu className="h-5 w-5te, x, t-bl, u, e-6, 0, 0" />
+                {getStatusIc, o, n(metrics.c, p, u.usa, g, e, { warning: 70, critical: 90 })}
               </d, i, v>
-              <d, i, v classNa, m, e={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.c p u.usa g e { warning: 70 critic a l: 90 })}` }>
-                {metri, c, s.c, p, u.usa, g, e}%
+              <d, i, v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.c p u.usa g e { warning: 70 critic a l: 90 })}` }>
+                {metrics.c, p, u.usa, g, e}%
               </d, i, v>
-              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">C, P, U Usa, g, e</d, i, v>
-              <d, i, v classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metri, c, s.c, p, u.temperatu, r, e}°C</d, i, v>
+              <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">C, P, U Usa, g, e</d, i, v>
+              <d, i, v className="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metrics.c, p, u.temperatu, r, e}°C</d, i, v>
             </d, i, v>
 
-            <d, i, v classNa, m, e="p-4 borderround, e, d-lg">
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                <HardDrive classNa, m, e="h-5 w-5te, x, t-gre, e, n-6, 0, 0" />
-                {getStatusIc, o, n(metri, c, s.memory.percenta, g, e, { warning: 80, critic, a, l: 95 })}
+            <d, i, v className="p-4 borderround, e, d-lg">
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+                <HardDrive className="h-5 w-5te, x, t-gre, e, n-6, 0, 0" />
+                {getStatusIc, o, n(metrics.memory.percenta, g, e, { warning: 80, critical: 95 })}
               </d, i, v>
-              <d, i, v classNa, m, e={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.memo r y.percenta g e { warning: 80 critic a l: 95 })}` }>
-                {metri, c, s.memory.percenta, g, e}%
+              <d, i, v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.memo r y.percenta g e { warning: 80 critic a l: 95 })}` }>
+                {metrics.memory.percenta, g, e}%
               </d, i, v>
-              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Memo, r, y</d, i, v>
-              <d, i, v classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metri, c, s.memory.us, e, d}GB / {metri, c, s.memory.tot, a, l}GB</d, i, v>
+              <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Memo, r, y</d, i, v>
+              <d, i, v className="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metrics.memory.us, e, d}GB / {metrics.memory.tot, a, l}GB</d, i, v>
             </d, i, v>
 
-            <d, i, v classNa, m, e="p-4 borderround, e, d-lg">
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                <Databa, s, e classNa, m, e="h-5 w-5te, x, t-purp, l, e-6, 0, 0" />
-                {getStatusIc, o, n(metri, c, s.di, s, k.percenta, g, e, { warning: 85, critic, a, l: 95 })}
+            <d, i, v className="p-4 borderround, e, d-lg">
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+                <Databa, s, e className="h-5 w-5te, x, t-purp, l, e-6, 0, 0" />
+                {getStatusIc, o, n(metrics.di, s, k.percenta, g, e, { warning: 85, critical: 95 })}
               </d, i, v>
-              <d, i, v classNa, m, e={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.di s k.percenta g e { warning: 85 critic a l: 95 })}` }>
-                {metri, c, s.di, s, k.percenta, g, e}%
+              <d, i, v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.di s k.percenta g e { warning: 85 critic a l: 95 })}` }>
+                {metrics.di, s, k.percenta, g, e}%
               </d, i, v>
-              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Di, s, k Usa, g, e</d, i, v>
-              <d, i, v classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metri, c, s.di, s, k.us, e, d}GB / {metri, c, s.di, s, k.tot, a, l}GB</d, i, v>
+              <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Di, s, k Usa, g, e</d, i, v>
+              <d, i, v className="te, x, t-xste, x, t-gr, a, y-5, 0, 0">{metrics.di, s, k.us, e, d}GB / {metrics.di, s, k.tot, a, l}GB</d, i, v>
             </d, i, v>
 
-            <d, i, v classNa, m, e="p-4 borderround, e, d-lg">
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                <Wifi classNa, m, e="h-5 w-5te, x, t-oran, g, e-6, 0, 0" />
-                <CheckCircle classNa, m, e="h-4 w-4te, x, t-gre, e, n-6, 0, 0" />
+            <d, i, v className="p-4 borderround, e, d-lg">
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+                <Wifi className="h-5 w-5te, x, t-oran, g, e-6, 0, 0" />
+                <CheckCircle className="h-4 w-4te, x, t-gre, e, n-6, 0, 0" />
               </d, i, v>
-              <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">
-                {metri, c, s.network.laten, c, y}ms
+              <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">
+                {metrics.network.laten, c, y}ms
               </d, i, v>
-              <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Laten, c, y</d, i, v>
-              <d, i, v classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">
-                {formatByt, e, s(metri, c, s.network.bytes, I, n)}/s in
+              <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Laten, c, y</d, i, v>
+              <d, i, v className="te, x, t-xste, x, t-gr, a, y-5, 0, 0">
+                {formatByt, e, s(metrics.network.bytes, I, n)}/s in
               </d, i, v>
             </d, i, v>
           </d, i, v>
 
           {/* Performan, c, e Char, t, s */}
-          <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6 mb-6">
+          <d, i, v className="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6 mb-6">
             <Card>
               <CardHeader>
-                <CardTitle classNa, m, e="te, x, t-lg">C, P, U & Memo, r, y Usa, g, e</CardTitle>
+                <CardTitle className="te, x, t-lg">C, P, U & Memo, r, y Usa, g, e</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={2, 0, 0}>
@@ -327,7 +327,7 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle classNa, m, e="te, x, t-lg">Netwo, r, k & Di, s, k I/O</CardTitle>
+                <CardTitle className="te, x, t-lg">Netwo, r, k & Di, s, k I/O</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={2, 0, 0}>
@@ -347,73 +347,73 @@ con, s, t AdvancedSystemMonit, o, r: React.FC = () => {
           {/* Databa, s, e Metri, c, s */}
           <Card>
             <CardHeader>
-              <CardTitle classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                <Databa, s, e classNa, m, e="h-5 w-5te, x, t-purp, l, e-6, 0, 0" />
+              <CardTitle className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                <Databa, s, e className="h-5 w-5te, x, t-purp, l, e-6, 0, 0" />
                 <sp, a, n>Databa, s, e Performan, c, e</sp, a, n>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2, m, d:gr, i, d-co, l, s-4g, a, p-4">
-                <d, i, v classNa, m, e="te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">
-                    {metri, c, s.databa, s, e.connectio, n, s}
+              <d, i, v className="gr, i, d gr, i, d-co, l, s-2, m, d:gr, i, d-co, l, s-4g, a, p-4">
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">
+                    {metrics.databa, s, e.connectio, n, s}
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Acti, v, e Connectio, n, s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xste, x, t-gr, a, y-5, 0, 0">
-                    M, a, x: {metri, c, s.databa, s, e.maxConnectio, n, s}
+                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Acti, v, e Connectio, n, s</d, i, v>
+                  <d, i, v className="te, x, t-xste, x, t-gr, a, y-5, 0, 0">
+                    M, a, x: {metrics.databa, s, e.maxConnectio, n, s}
                   </d, i, v>
                 </d, i, v>
-                <d, i, v classNa, m, e="te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">
-                    {metri, c, s.databa, s, e.queryTi, m, e}ms
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">
+                    {metrics.databa, s, e.queryTi, m, e}ms
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Que, r, y Ti, m, e</d, i, v>
+                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Que, r, y Ti, m, e</d, i, v>
                 </d, i, v>
-                <d, i, v classNa, m, e="te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-purp, l, e-6, 0, 0">
-                    {metri, c, s.databa, s, e.cacheHitRa, t, e}%
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-purp, l, e-6, 0, 0">
+                    {metrics.databa, s, e.cacheHitRa, t, e}%
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Cac, h, e H, i, t Ra, t, e</d, i, v>
+                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Cac, h, e H, i, t Ra, t, e</d, i, v>
                 </d, i, v>
-                <d, i, v classNa, m, e="te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-oran, g, e-6, 0, 0">
-                    {formatUpti, m, e(metri, c, s.upti, m, e)}
+                <d, i, v className="te, x, t-cent, e, r">
+                  <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-oran, g, e-6, 0, 0">
+                    {formatUpti, m, e(metrics.upti, m, e)}
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Upti, m, e</d, i, v>
+                  <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Upti, m, e</d, i, v>
                 </d, i, v>
               </d, i, v>
             </CardContent>
           </Card>
 
           {/* Syst, e, m Aler, t, s */}
-          {aler, t, s.leng, t, h > 0 && (
+          {alerts.leng, t, h > 0 && (
             <Card>
               <CardHeader>
-                <CardTitle classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                  <AlertTriangle classNa, m, e="h-5 w-5te, x, t-r, e, d-6, 0, 0" />
+                <CardTitle className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                  <AlertTriangle className="h-5 w-5te, x, t-r, e, d-6, 0, 0" />
                   <sp, a, n>Syst, e, m Aler, t, s</sp, a, n>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <d, i, v classNa, m, e="spa, c, e-y-3">
-                  {aler, t, s.sli, c, e(0, 5).m, a, p((ale, r, t) => (
-                    <d, i, v k, e, y={ale, r, t.id} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 borderround, e, d-lg">
-                      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                        {getStatusIc, o, n(ale, r, t.severi, t, y === 'critic, a, l' ? 1, 0, 0 : 80, { warning: 70, critic, a, l: 90 })}
+                <d, i, v className="spa, c, e-y-3">
+                  {alerts.sli, c, e(0, 5).m, a, p((ale, r, t) => (
+                    <d, i, v k, e, y={ale, r, t.id} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-3 borderround, e, d-lg">
+                      <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
+                        {getStatusIc, o, n(ale, r, t.severity === 'critical' ? 1, 0, 0 : 80, { warning: 70, critical: 90 })}
                         <d, i, v>
-                          <d, i, v classNa, m, e="fo, n, t-medium">{ale, r, t.message}</d, i, v>
-                          <d, i, v classNa, m, e="te, x, t-smte, x, t-gr, a, y-5, 0, 0">
+                          <d, i, v className="fo, n, t-medium">{ale, r, t.message}</d, i, v>
+                          <d, i, v className="te, x, t-smte, x, t-gr, a, y-5, 0, 0">
                             {ale, r, t.ty, p, e.toUpperCa, s, e()} • {ale, r, t.timesta, m, p.toLocaleTimeStri, n, g()}
                           </d, i, v>
                         </d, i, v>
                       </d, i, v>
-                      <sp, a, n classNa, m, e={`px-2 p y-1te x t-xs fo n t-medi u m round e d-fu l l ${
+                      <sp, a, n className={`px-2 p y-1te x t-xs fo n t-medi u m round e d-fu l l ${
                         ale r t.severi t y === 'critic a l' ? 'bg-r e d-1 0 0 te x t-r e d-8 0 0' :
                         ale r t.severi t y === 'hi g h' ? 'bg-oran g e-1 0 0 te x t-oran g e-8 0 0' :
                         ale r t.severi t y === 'medi u m' ? 'bg-yell o w-1 0 0 te x t-yell o w-8 0 0' :
                         'bg-bl u e-1 0 0 te x t-bl u e-8 0 0'
                       }`}>
-                        {ale, r, t.severi, t, y.toUpperCa, s, e()}
+                        {ale, r, t.severity.toUpperCa, s, e()}
                       </sp, a, n>
                     </d, i, v>
                   ))}

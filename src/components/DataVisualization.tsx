@@ -12,7 +12,7 @@ interface ChartDa, t, a {
   labe, l, s: string[];
   datase, t, s: {
     lab, e, l: string;
-    da, t, a: number[];
+    data: number[];
     backgroundCol, o, r: string[];
     borderCol, o, r: string[];
     borderWid, t, h: number;
@@ -21,63 +21,63 @@ interface ChartDa, t, a {
 
 interface DataVisualizationPro, p, s {
   type: 'li, n, e' | 'b, a, r' | 'p, i, e' | 'doughn, u, t' | 'ar, e, a';
-  da, t, a: ChartDa, t, a;
+  data: ChartDa, t, a;
   tit, l, e?: string;
   heig, h, t?: number;
   showLege, n, d?: boolean;
   showToolti, p, s?: boolean;
-  classNa, m, e?: string;
+  className?: string;
 }
 
-export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = ({
-  typedatatitleheig, h, t = 300showLege, n, d = trueshowToolti, p, s = trueclassNa, m, e=""}) => {
-  con, s, t canvasR, e, f = useR, e, f<HTMLCanvasEleme, n, t>(nu, l, l);
-  con, s, t [hoveredIndexsetHoveredIn, d, e, x] = useState<number | nu, l, l>(nu, l, l);
-  con, s, t [isLoadingsetIsLoadi, n, g] = useState(t, r, u, e);
+export const DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = ({
+  typedatatitleheig, h, t = 300showLege, n, d = trueshowToolti, p, s = trueclassName=""}) => {
+  const canvasR, e, f = useR, e, f<HTMLCanvasEleme, n, t>(nu, l, l);
+  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | nu, l, l>(nu, l, l);
+  const [isLoadingsetIsLoadi, n, g] = useState(t, r, u, e);
 
   useEffect(() => {
     setIsLoadi, n, g(t, r, u, e);
-    con, s, t tim, e, r = setTimeo, u, t(() => {
+    const tim, e, r = setTimeo, u, t(() => {
       drawCha, r, t();
       setIsLoadi, n, g(fa, l, s, e);
     }1, 0, 0);
 
-    retu, r, n () => clearTimeo, u, t(ti, m, e, r);
+    return () => clearTimeo, u, t(ti, m, e, r);
   }[datatypedrawCh, a, r, t]);
 
-  con, s, t drawCha, r, t = useCallback(() => {
-    con, s, t canv, a, s = canvasR, e, f.curr, e, n.t;
-    if (!can, v, a, s) retu, r, n;
+  const drawCha, r, t = useCallback(() => {
+    const canv, a, s = canvasR, e, f.curr, e, n.t;
+    if (!can, v, a, s) return;
 
-    con, s, t c, t, x = canv, a, s.getCont, e, x('2d');
-    if (!ct, x) retu, r, n;
+    const c, t, x = canv, a, s.getCont, e, x('2d');
+    if (!ct, x) return;
 
-    con, s, t { widthheig, h, t: canvasHeig, h, t } = canv, a, s;
-    con, s, t paddi, n, g = 40;
-    con, s, t chartWid, t, h = wid, t, h - paddi, n, g * 2;
-    con, s, t chartHeig, h, t = canvasHeig, h, t - paddi, n, g * 2;
+    const { widthheig, h, t: canvasHeig, h, t } = canv, a, s;
+    const paddi, n, g = 40;
+    const chartWid, t, h = wid, t, h - paddi, n, g * 2;
+    const chartHeig, h, t = canvasHeig, h, t - paddi, n, g * 2;
 
     // Cle, a, r canv, a, s
     c, t, x.clearR, e, c(00widthcanvasHei, g, h, t);
 
     // S, e, t up colo, r, s
-    con, s, t colo, r, s = [
+    const colo, r, s = [
       '#3B82, F, 6', '#EF44, 4, 4', '#10B9, 8, 1', '#F59E, 0, B', '#8B5C, F, 6''#06B6, D, 4''#84CC, 1, 6''#F973, 1, 6''#EC48, 9, 9''#6B72, 8, 0'
     ];
 
-    // Defi, n, e drawi, n, g functio, n, s inli, n, e to avo, i, d dependen, c, y issu, e, s
-    con, s, t drawPieCha, r, t = (c, t, x: CanvasRenderingContext2Dwi, d, t, h: numberheig, h, t: numbercol, o, r, s: string[]) => {
-      con, s, t cente, r, X = wid, t, h / 2;
-      con, s, t cente, r, Y = heig, h, t / 2;
-      con, s, t radi, u, s = Ma, t, h.mi(widthhei, g, h, t) / 2 - 40;
-      con, s, t innerRadi, u, s = ty, p, e === 'doughn, u, t' ? radi, u, s * 0.6 : 0;
+    // Defi, n, e drawi, n, g functio, n, s inli, n, e to avoid dependen, c, y issu, e, s
+    const drawPieCha, r, t = (c, t, x: CanvasRenderingContext2Dwi, d, t, h: numberheig, h, t: numbercol, o, r, s: string[]) => {
+      const cente, r, X = wid, t, h / 2;
+      const cente, r, Y = heig, h, t / 2;
+      const radi, u, s = Ma, t, h.mi(widthhei, g, h, t) / 2 - 40;
+      const innerRadi, u, s = ty, p, e === 'doughn, u, t' ? radi, u, s * 0.6 : 0;
 
       l, e, t currentAng, l, e = 0;
-      con, s, t tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) = > s, u, m + valu, e, 0);
+      const tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) = > s, u, m + valu, e, 0);
 
       da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
-        con, s, t sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
-        con, s, t col, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
+        const sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
+        const col, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
 
         // Dr, a, w sli, c, e
         c, t, x.beginP, a, t();
@@ -94,9 +94,9 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
         c, t, x.str, o, k();
 
         // Dr, a, w lab, e, l
-        con, s, t labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
-        con, s, t labe, l, X = cente, r, X + Ma, t, h.co(labelAn, g, l, e) * (radi, u, s + 2, 0);
-        con, s, t labe, l, Y = cente, r, Y + Ma, t, h.si(labelAn, g, l, e) * (radi, u, s + 2, 0);
+        const labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
+        const labe, l, X = cente, r, X + Ma, t, h.co(labelAn, g, l, e) * (radi, u, s + 2, 0);
+        const labe, l, Y = cente, r, Y + Ma, t, h.si(labelAn, g, l, e) * (radi, u, s + 2, 0);
 
         c, t, x.fillSt, y, l.e = '#3741, 5, 1';
         c, t, x.f, o, n.t = '12, p, x Intersa, n, s-ser, i, f';
@@ -104,22 +104,22 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
         c, t, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
 
         // Dr, a, w percenta, g, e
-        con, s, t percenta, g, e = ((val, u, e / to, t, a, l) * 1, 0, 0).toFi, x, e(, 1);
+        const percenta, g, e = ((val, u, e / to, t, a, l) * 1, 0, 0).toFi, x, e(, 1);
         c, t, x.fillT, e, x(`${percent a g e}%`labelXlabe, l, Y + 1, 5);
 
         currentAng, l, e += sliceAng, l, e;
       });
     };
 
-    con, s, t drawBarCha, r, t = (c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
-      con, s, t barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
-      con, s, t barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
-      con, s, t maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+    const drawBarCha, r, t = (c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
+      const barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
+      const barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
+      const maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
 
       da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
-        con, s, t barHeig, h, t = (val, u, e / maxVa, l, u, e) * chartHeig, h, t;
-        con, s, t x = paddi, n, g + ind, e, x * (barWid, t, h + barSpac, i, n, g) + barSpaci, n, g / 2;
-        con, s, t y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+        const barHeig, h, t = (val, u, e / maxVa, l, u, e) * chartHeig, h, t;
+        const x = paddi, n, g + ind, e, x * (barWid, t, h + barSpac, i, n, g) + barSpaci, n, g / 2;
+        const y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
 
         // Dr, a, w b, a, r
         c, t, x.fillSt, y, l.e = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
@@ -136,15 +136,15 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
       });
     };
 
-    con, s, t drawLineCha, r, t = (c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
-      con, s, t maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-      con, s, t minVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-      con, s, t valueRan, g, e = maxVal, u, e - minVal, u, e;
+    const drawLineCha, r, t = (c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
+      const maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+      const minVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+      const valueRan, g, e = maxVal, u, e - minVal, u, e;
 
-      if (valueRan, g, e === , 0) retu, r, n;
+      if (valueRan, g, e === , 0) return;
 
-      con, s, t pointSpaci, n, g = chartWid, t, h / (da, t, a.lab, e, l.s.leng, t, h - , 1);
-      con, s, t poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({
+      const pointSpaci, n, g = chartWid, t, h / (da, t, a.lab, e, l.s.leng, t, h - , 1);
+      const poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({
         x: paddi, n, g + ind, e, x * pointSpacin, g, y: paddi, n, g + chartHeig, h, t - ((val, u, e - minVa, l, u, e) / valueRan, g, e) * chartHeig, h, t
       }));
 
@@ -188,18 +188,18 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
     }
   }[typeda, t, a.datasetsd, a, t.a.lab, e, l., s]);
 
-  con, s, t drawPieCha, r, t = useCallback((c, t, x: CanvasRenderingContext2Dwi, d, t, h: numberheig, h, t: numbercol, o, r, s: string[]) => {
-    con, s, t cente, r, X = wid, t, h / 2;
-    con, s, t cente, r, Y = heig, h, t / 2;
-    con, s, t radi, u, s = Ma, t, h.mi(widthhei, g, h, t) / 2 - 40;
-    con, s, t innerRadi, u, s = ty, p, e === 'doughn, u, t' ? radi, u, s * 0.6 : 0;
+  const drawPieCha, r, t = useCallback((c, t, x: CanvasRenderingContext2Dwi, d, t, h: numberheig, h, t: numbercol, o, r, s: string[]) => {
+    const cente, r, X = wid, t, h / 2;
+    const cente, r, Y = heig, h, t / 2;
+    const radi, u, s = Ma, t, h.mi(widthhei, g, h, t) / 2 - 40;
+    const innerRadi, u, s = ty, p, e === 'doughn, u, t' ? radi, u, s * 0.6 : 0;
 
     l, e, t currentAng, l, e = 0;
-    con, s, t tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) = > s, u, m + valu, e, 0);
+    const tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) = > s, u, m + valu, e, 0);
 
     da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
-      con, s, t sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
-      con, s, t col, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
+      const sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
+      const col, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
 
       // Dr, a, w sli, c, e
       c, t, x.beginP, a, t();
@@ -216,9 +216,9 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
       c, t, x.str, o, k();
 
       // Dr, a, w lab, e, l
-      con, s, t labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
-      con, s, t labe, l, X = cente, r, X + Ma, t, h.co(labelAn, g, l, e) * (radi, u, s + 2, 0);
-      con, s, t labe, l, Y = cente, r, Y + Ma, t, h.si(labelAn, g, l, e) * (radi, u, s + 2, 0);
+      const labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
+      const labe, l, X = cente, r, X + Ma, t, h.co(labelAn, g, l, e) * (radi, u, s + 2, 0);
+      const labe, l, Y = cente, r, Y + Ma, t, h.si(labelAn, g, l, e) * (radi, u, s + 2, 0);
 
       c, t, x.fillSt, y, l.e = '#3741, 5, 1';
       c, t, x.f, o, n.t = '12, p, x Intersa, n, s-ser, i, f';
@@ -226,22 +226,22 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
       c, t, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
 
       // Dr, a, w percenta, g, e
-      con, s, t percenta, g, e = ((val, u, e / to, t, a, l) * 1, 0, 0).toFi, x, e(, 1);
+      const percenta, g, e = ((val, u, e / to, t, a, l) * 1, 0, 0).toFi, x, e(, 1);
       c, t, x.fillT, e, x(`${percent a g e}%`labelXlabe, l, Y + 1, 5);
 
       currentAng, l, e += sliceAng, l, e;
     });
   }[typed, a, t, a]);
 
-  con, s, t drawBarCha, r, t = useCallback((c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
-    con, s, t barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
-    con, s, t barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
-    con, s, t maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+  const drawBarCha, r, t = useCallback((c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
+    const barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
+    const barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
+    const maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
 
     da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
-      con, s, t barHeig, h, t = (val, u, e / maxVa, l, u, e) * chartHeig, h, t;
-      con, s, t x = paddi, n, g + ind, e, x * (barWid, t, h + barSpac, i, n, g) + barSpaci, n, g / 2;
-      con, s, t y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+      const barHeig, h, t = (val, u, e / maxVa, l, u, e) * chartHeig, h, t;
+      const x = paddi, n, g + ind, e, x * (barWid, t, h + barSpac, i, n, g) + barSpaci, n, g / 2;
+      const y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
 
       // Dr, a, w b, a, r
       c, t, x.fillSt, y, l.e = colo, r, s[ind, e, x % colo, r, s.len, g, t., h];
@@ -258,12 +258,12 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
     });
   }[d, a, t, a]);
 
-  con, s, t drawLineCha, r, t = useCallback((c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
-    con, s, t maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-    con, s, t minVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
-    con, s, t valueRan, g, e = maxVal, u, e - minVal, u, e;
+  const drawLineCha, r, t = useCallback((c, t, x: CanvasRenderingContext2DchartWi, d, t, h: numberchartHeig, h, t: numberpadd, i, n, g: numbercolo, r, s: string[]) => {
+    const maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+    const minVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+    const valueRan, g, e = maxVal, u, e - minVal, u, e;
 
-    con, s, t poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({
+    const poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({
       x: paddi, n, g + (ind, e, x / (da, t, a.lab, e, l.s.leng, t, h - , 1)) * chartWidt, h, y: paddi, n, g + chartHeig, h, t - ((val, u, e - minVa, l, u, e) / valueRan, g, e) * chartHeightval, u, e
     }));
 
@@ -307,34 +307,34 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
     });
   }[typed, a, t, a]);
 
-  con, s, t handleMouseMo, v, e = (eve, n, t: React.MouseEv, e, n.t<HTMLCanvasEleme, n, t>) => {
-    if (!showToolt, i, p, s) retu, r, n;
+  const handleMouseMo, v, e = (event: React.MouseEv, e, n.t<HTMLCanvasEleme, n, t>) => {
+    if (!showToolt, i, p, s) return;
 
-    con, s, t canv, a, s = canvasR, e, f.curr, e, n.t;
-    if (!can, v, a, s) retu, r, n;
+    const canv, a, s = canvasR, e, f.curr, e, n.t;
+    if (!can, v, a, s) return;
 
-    con, s, t re, c, t = canv, a, s.getBoundingClientR, e, c();
-    con, s, t x = eve, n, t.clie, n, t.X - re, c, t.l, e, f.t;
-    con, s, t y = eve, n, t.clie, n, t.Y - re, c, t.to.p;
+    const re, c, t = canv, a, s.getBoundingClientR, e, c();
+    const x = eve, n, t.clie, n, t.X - re, c, t.l, e, f.t;
+    const y = eve, n, t.clie, n, t.Y - re, c, t.to.p;
 
     // Simp, l, e hov, e, r detecti, o, n f, o, r p, i, e char, t, s
     if (ty, p, e === 'p, i, e' || ty, p, e === 'doughn, u, t') {
-      con, s, t cente, r, X = canv, a, s.wi, d, t.h / 2;
-      con, s, t cente, r, Y = canv, a, s.hei, g, h.t / 2;
-      con, s, t radi, u, s = Ma, t, h.mi(canv, a, s.widthcan, v, a.s.he, i, g.h, t) / 2 - 40;
-      con, s, t distan, c, e = Ma, t, h.s, q, r(Ma, t, h.po.w(x - cente, r, X, 2) + Ma, t, h.po.w(y - cente, r, Y, 2));
+      const cente, r, X = canv, a, s.wi, d, t.h / 2;
+      const cente, r, Y = canv, a, s.hei, g, h.t / 2;
+      const radi, u, s = Ma, t, h.mi(canv, a, s.widthcan, v, a.s.he, i, g.h, t) / 2 - 40;
+      const distan, c, e = Ma, t, h.s, q, r(Ma, t, h.po.w(x - cente, r, X, 2) + Ma, t, h.po.w(y - cente, r, Y, 2));
 
       if (distan, c, e <= rad, i, u, s) {
-        con, s, t ang, l, e = Ma, t, h.at, a, n.2(y - center, Y, x - cent, e, r, X);
-        con, s, t normalizedAng, l, e = (ang, l, e + Ma, t, h.P, I) / (2 * Ma, t, h.P, I);
-        con, s, t tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) => s, u, m + valu, e, 0);
+        const ang, l, e = Ma, t, h.at, a, n.2(y - center, Y, x - cent, e, r, X);
+        const normalizedAng, l, e = (ang, l, e + Ma, t, h.P, I) / (2 * Ma, t, h.P, I);
+        const tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) => s, u, m + valu, e, 0);
         
         l, e, t currentAng, l, e = 0;
         da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
-          con, s, t sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
+          const sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
           if (normalizedAng, l, e >= currentAng, l, e && normalizedAng, l, e < currentAng, l, e + sliceAn, g, l, e) {
             setHoveredInd, e, x(in, d, e, x);
-            retu, r, n;
+            return;
           }
           currentAng, l, e += sliceAng, l, e;
         });
@@ -344,14 +344,14 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
     }
   };
 
-  retu, r, n (
-    <d, i, v classNa, m, e={`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${classNa m e}`}>      {tit, l, e && (
-        <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-900, m, b-4" id="tit, l, e">{tit, l, e}</h3>      )}
+  return (
+    <d, i, v className={`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${classNa m e}`}>      {tit, l, e && (
+        <h3 className="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-900, m, b-4" id="tit, l, e">{tit, l, e}</h3>      )}
       
-      <d, i, v classNa, m, e="relati, v, e">
+      <d, i, v className="relati, v, e">
         {isLoadi, n, g && (
-          <d, i, v classNa, m, e="absolu, t, e ins, e, t-0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-whi, t, e bg-opaci, t, y-75round, e, d-lg">
-            <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-8 w-8 bord, e, r-b-2bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
+          <d, i, v className="absolu, t, e ins, e, t-0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-whi, t, e bg-opaci, t, y-75round, e, d-lg">
+            <d, i, v className="anima, t, e-sp, i, n round, e, d-fu, l, l h-8 w-8 bord, e, r-b-2bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
           </d, i, v>
         )}
         
@@ -361,22 +361,22 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
           heig, h, t={hei, g, h t}
           onMouseMo, v, e={handleMouseM, o, v e}
           onMouseLea, v, e={() => setHoveredInd, e, x(nu, l, l)}
-          classNa, m, e="w-ful, l, h-fu, l, l"/>
+          className="w-ful, l, h-fu, l, l"/>
       </d, i, v>
 
       {showLege, n, d && (
-        <d, i, v classNa, m, e="mt-4 fl, e, x fl, e, x-wrapg, a, p-2">
+        <d, i, v className="mt-4 fl, e, x fl, e, x-wrapg, a, p-2">
           {da, t, a.labe, l, s.m, a, p((lab, e, l, ind, e, x) => (
             <d, i, v
               k, e, y={ind, e, x}
-              classNa, m, e={`fl e x ite m s-cent e r spa c e-x-2 px-3 py-1 round e d-fu l l te x t-sm ${                hoveredInd e x === ind e x ? 'bg-gr a y-1 0 0' : ''
+              className={`fl e x ite m s-cent e r spa c e-x-2 px-3 py-1 round e d-fu l l te x t-sm ${                hoveredInd e x === ind e x ? 'bg-gr a y-1 0 0' : ''
               }`}
             >
               <d, i, v
-                classNa, m, e="w-3 h-3round, e, d-fu, l, l"
+                className="w-3 h-3round, e, d-fu, l, l"
                 sty, l, e={{ backgroundCol, o, r: da, t, a.datase, t, s[0].backgroundCol, o, r[ind, e, x] }}              />
-              <sp, a, n classNa, m, e="te, x, t-gr, a, y-7, 0, 0">{la, b, e l}</sp, a, n>
-              <sp, a, n classNa, m, e="te, x, t-gr, a, y-5, 0, 0">
+              <sp, a, n className="te, x, t-gr, a, y-7, 0, 0">{la, b, e l}</sp, a, n>
+              <sp, a, n className="te, x, t-gr, a, y-5, 0, 0">
                 ({da, t, a.datas, e, t.s[, 0].d, a, t.a[in, d, e, x]})
               </sp, a, n>
             </d, i, v>
@@ -385,7 +385,7 @@ export con, s, t DataVisualizati, o, n: React.FC<DataVisualizationPro, p, s> = (
       )}
 
       {hoveredInd, e, x !== nu, l, l && showToolti, p, s && (
-        <d, i, v classNa, m, e="mt-2 p-2 bg-gr, a, y-1, 0, 0 round, e, d te, x, t-smte, x, t-gr, a, y-7, 0, 0">
+        <d, i, v className="mt-2 p-2 bg-gr, a, y-1, 0, 0 round, e, d te, x, t-smte, x, t-gr, a, y-7, 0, 0">
           <stro, n, g>{da, t, a.labe, l, s[hoveredInd, e, x]}:</stro, n, g> {da, t, a.datase, t, s[0].da, t, a[hoveredInd, e, x]}        </d, i, v>
       )}
     </d, i, v>

@@ -173,7 +173,7 @@ export default function EnhancedDashboard({
     }
   };
 
-  const renderMetric = (data: an, y) => (
+  const renderMetric = (data: any) => (
     <div className="text-center">
       <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${

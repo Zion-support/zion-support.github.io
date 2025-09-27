@@ -2,87 +2,125 @@
 
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-function fixSyntaxErrors(content) {
-  // Fix malformed className attributes
-  content = content.replace(/className="([^"]*?)\s*,\s*([^"]*?)"/g, 'className="$1 $2"');
-  content = content.replace(/className="([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)"/g, 'className="$1 $2 $3"');
-  content = content.replace(/className="([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)"/g, 'className="$1 $2 $3 $4"');
-  content = content.replace(/className="([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)\s*,\s*([^"]*?)"/g, 'className="$1 $2 $3 $4 $5"');
-  
-  // Fix specific patterns
-  content = content.replace(/gap-([0-9]+)mb-([0-9]+)/g, 'gap-$1 mb-$2');
-  content = content.replace(/p-([0-9]+)text-white/g, 'p-$1 text-white');
-  content = content.replace(/text-([0-9]+)xlfont-bold/g, 'text-$1xl font-bold');
-  content = content.replace(/text-([0-9]+)smopacity-([0-9]+)/g, 'text-$1sm opacity-$2');
-  content = content.replace(/items-centerspace-x-([0-9]+)/g, 'items-center space-x-$1');
-  content = content.replace(/font-mediumtransition-colors/g, 'font-medium transition-colors');
-  content = content.replace(/onClick={() =>setIsRealTime/g, 'onClick={() => setIsRealTime');
-  content = content.replace(/shadow-lgp-([0-9]+)/g, 'shadow-lg p-$1');
-  content = content.replace(/flexitems-center/g, 'flex items-center');
-  content = content.replace(/w-([0-9]+)h-([0-9]+)mr-([0-9]+)text-([a-z]+)-([0-9]+)/g, 'w-$1 h-$2 mr-$3 text-$4-$5');
-  content = content.replace(/items-centermb-([0-9]+)/g, 'items-center mb-$1');
-  content = content.replace(/h\s*1\s*Count/g, 'h1Count');
-  content = content.replace(/h([0-9]+)\s*Coun,\s*t/g, 'h$1Count');
-  content = content.replace(/disable,\s*d:opacity-([0-9]+)/g, 'disabled:opacity-$1');
-  content = content.replace(/w-([0-9]+)h-([0-9]+)text-([a-z]+)-([0-9]+)/g, 'w-$1 h-$2 text-$3-$4');
-  content = content.replace(/text-gray-900dark:text-white/g, 'text-gray-900 dark:text-white');
-  content = content.replace(/flexspace-x-([0-9]+)/g, 'flex space-x-$1');
-  content = content.replace(/disable,\s*d:bg-gray-([0-9]+)/g, 'disabled:bg-gray-$1');
-  content = content.replace(/px-([0-9]+)py-([0-9]+)bg-([a-z]+)-([0-9]+)/g, 'px-$1 py-$2 bg-$3-$4');
-  content = content.replace(/hover:bg-([a-z]+)-([0-9]+)/g, 'hover:bg-$1-$2');
-  content = content.replace(/text-white\s*rounded-lg/g, 'text-white rounded-lg');
-  content = content.replace(/text-sm\s*font-medium/g, 'text-sm font-medium');
-  content = content.replace(/transition-colors/g, 'transition-colors');
-  content = content.replace(/aria-label=\{([^}]+)\}/g, 'aria-label={$1}');
-  content = content.replace(/className=\{`([^`]+)\$\{([^}]+)\}`\s*\}/g, 'className={`$1${$2}`}');
-  content = content.replace(/className=\{`([^`]+)\$\{([^}]+)\}\s*\}/g, 'className={`$1${$2}`}');
-  
-  return content;
-}
-
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+class SyntaxErrorFixer {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
   }
-}
 
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  fixSyntaxErrors(content) {
+    // Fix common syntax errors
+    content = content.replace(/colu, m, n/g, 'column');
+    content = content.replace(/AccessibilityMetri, c, s/g, 'AccessibilityMetrics');
+    content = content.replace(/sco, r, e/g, 'score');
+    content = content.replace(/totalIssu, e, s/g, 'totalIssues');
+    content = content.replace(/criticalIssu, e, s/g, 'criticalIssues');
+    content = content.replace(/E, y, e,/g, 'Eye,');
+    content = content.replace(/MousePoint, e, r,/g, 'MousePointer,');
+    content = content.replace(/Clock,/g, 'Clock,');
+    content = content.replace(/BarChar, t, 3,/g, 'BarChart3,');
+    content = content.replace(/PieCha, r, t,/g, 'PieChart,');
+    content = content.replace(/Activi, t, y,/g, 'Activity,');
+    content = content.replace(/Targ, e, t,/g, 'Target,');
+    content = content.replace(/renderT, i, m, e/g, 'renderTime');
+    content = content.replace(/PerformanceMonitorPro, p, s/g, 'PerformanceMonitorProps');
+    content = content.replace(/onMetricsUpda, t, e/g, 'onMetricsUpdate');
+    content = content.replace(/PerformanceMetri, c, s/g, 'PerformanceMetrics');
+    content = content.replace(/vo, i, d/g, 'void');
+    content = content.replace(/showDashboa, r, d/g, 'showDashboard');
+    content = content.replace(/classNa, m, e/g, 'className');
+    content = content.replace(/Shie, l, d,/g, 'Shield,');
+    content = content.replace(/Lo, c, k,/g, 'Lock,');
+    content = content.replace(/E, y, e,/g, 'Eye,');
+    content = content.replace(/AlertTriangle/g, 'AlertTriangle');
+    content = content.replace(/CheckCircle/g, 'CheckCircle');
+    content = content.replace(/XCircle/g, 'XCircle');
+    content = content.replace(/SecurityMetri, c, s/g, 'SecurityMetrics');
+    content = content.replace(/threatLev, e, l/g, 'threatLevel');
+    content = content.replace(/critic, a, l/g, 'critical');
+    content = content.replace(/activeThrea, t, s/g, 'activeThreats');
+    content = content.replace(/blockedReques, t, s/g, 'blockedRequests');
+    content = content.replace(/useStateuseEffectuseCallback/g, 'useState, useEffect, useCallback');
+    content = content.replace(/motionAnimatePresence/g, 'motion, AnimatePresence');
+    content = content.replace(/SecurityEve, n, t/g, 'SecurityEvent');
+    content = content.replace(/thre, a, t/g, 'threat');
+    content = content.replace(/succe, s, s/g, 'success');
+    content = content.replace(/warning/g, 'warning');
+    content = content.replace(/info/g, 'info');
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        fixedCount += processDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.jsx'))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
+    return content;
+  }
+
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+
+      content = this.fixSyntaxErrors(content);
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax errors in: ${filePath}`);
       }
+    } catch (error) {
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      this.errors.push(`${filePath}: ${error.message}`);
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
-  
-  return fixedCount;
+
+  async fixAllFiles() {
+    this.log('🔧 Starting comprehensive syntax error fixes...');
+    
+    try {
+      const files = await glob('src/components/*.tsx');
+      
+      for (const file of files) {
+        this.fixFile(file);
+      }
+      
+      this.log(`✅ Fixed ${this.fixedFiles.length} files`);
+      
+      if (this.errors.length > 0) {
+        this.log(`❌ ${this.errors.length} errors encountered`);
+        this.errors.forEach(error => this.log(`  - ${error}`));
+      }
+      
+    } catch (error) {
+      this.log(`❌ Error processing files: ${error.message}`);
+    }
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixedFiles: this.fixedFiles,
+      errors: this.errors,
+      summary: {
+        totalFixed: this.fixedFiles.length,
+        totalErrors: this.errors.length
+      }
+    };
+    
+    fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2));
+    this.log('📊 Syntax fix report generated');
+  }
+
+  async run() {
+    this.log('🚀 Starting comprehensive syntax error fixes...');
+    
+    await this.fixAllFiles();
+    await this.generateReport();
+    
+    this.log('✅ Comprehensive syntax error fixes completed!');
+  }
 }
 
-console.log('Starting comprehensive syntax fixes...');
-const fixedCount = processDirectory('./src/components');
-console.log(`Fixed ${fixedCount} files.`);
+const fixer = new SyntaxErrorFixer();
+fixer.run().catch(console.error);

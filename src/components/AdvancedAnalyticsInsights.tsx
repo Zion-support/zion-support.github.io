@@ -1,62 +1,62 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { motionAnimatePresence } from 'fram, e, r- motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'fram, e, r- motion';
 import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
 import { 
   Trending, U, p, 
   TrendingDo, w, n, 
   Use, r, s, 
-  E, y, e, 
-  MousePoint, e, r, 
+  Eye, 
+  MousePointer, 
   Clock, 
-  BarChar, t, 3,
-  PieCha, r, t,
-  Activi, t, y,
-  Targ, e, t,
+  BarChart3,
+  PieChart,
+  Activity,
+  Target,
   Zap,
-  GlobeSmartphoneMonitorTabl, e, t
-} from 'luci, d, e- rea, c, t';
+  Globe, Smartphone, Monitor, Tablet
+} from 'lucide-react';
 
-interface AnalyticsDa, t, a {
-  overvi, e, w: {
-    totalSessio, n, s: number;
-    uniqueUse, r, s: number;
+interface AnalyticsData {
+  overview: {
+    totalSessions: number;
+    uniqueUsers: number;
     pageVie, w, s: number;
     bounceRa, t, e: number;
     avgSessionDurati, o, n: number;
     conversionRa, t, e: number;
   };
   traff, i, c: {
-    sourc, e, s: Arr, a, y<{
+    sourc, e, s: Array<{
       na, m, e: string;
       cou, n, t: number;
       percenta, g, e: number;
     }>;
-    devic, e, s: Arr, a, y<{
+    devic, e, s: Array<{
       type: string;
       cou, n, t: number;
       percenta, g, e: number;
     }>;
-    countri, e, s: Arr, a, y<{
+    countri, e, s: Array<{
       na, m, e: string;
       cou, n, t: number;
       percenta, g, e: number;
     }>;
   };
   performance: {
-    topPag, e, s: Arr, a, y<{
+    topPag, e, s: Array<{
       pa, t, h: string;
       vie, w, s: number;
       uniqueVie, w, s: number;
       avgTimeOnPa, g, e: number;
     }>;
-    userFlow: Arr, a, y<{
+    userFlow: Array<{
       st, e, p: number;
       pa, g, e: string;
       use, r, s: number;
       dropo, f, f: number;
     }>;
   };
-  insigh, t, s: Arr, a, y<{
+  insigh, t, s: Array<{
     type: 'positi, v, e' | 'negati, v, e' | 'neutr, a, l';
     tit, l, e: string;
     descripti, o, n: string;
@@ -65,21 +65,21 @@ interface AnalyticsDa, t, a {
   }>;
 }
 
-interface AdvancedAnalyticsInsightsPro, p, s {
-  timeRan, g, e?: '7d' | '3, 0, d' | '9, 0, d' | '1y';
-  refreshInterv, a, l?: number;
-  onDataUpda, t, e?: (da, t, a: AnalyticsDa, t, a) => vo, i, d;
+interface AdvancedAnalyticsInsightsProps {
+  timeRange?: '7d' | '30d' | '90d' | '1y';
+  refreshInterval?: number;
+  onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsigh, t, s({
-  timeRan, g, e = '3, 0, d',
-  refreshInterv, a, l = 300, 0, 0,
-  onDataUpda, t, e
-}: AdvancedAnalyticsInsightsPro, p, s) {
-  con, s, t [da, t, a, setDa, t, a] = useState<AnalyticsDa, t, a | nu, l, l>(nu, l, l);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
-  con, s, t [selectedMetr, i, c, setSelectedMetr, i, c] = useState<string>('overvi, e, w');
-  con, s, t [insigh, t, s, setInsigh, t, s] = useState<Arr, a, y<{
+  timeRange = '30d',
+  refreshInterval = 300, 0, 0,
+  onDataUpdate
+}: AdvancedAnalyticsInsightsProps) {
+  const [da, t, a, setDa, t, a] = useState<AnalyticsData | nu, l, l>(nu, l, l);
+  const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
+  const [selectedMetr, i, c, setSelectedMetr, i, c] = useState<string>('overview');
+  const [insigh, t, s, setInsigh, t, s] = useState<Array<{
     type: 'positi, v, e' | 'negati, v, e' | 'neutr, a, l';
     tit, l, e: string;
     descripti, o, n: string;
@@ -87,13 +87,13 @@ export default function AdvancedAnalyticsInsigh, t, s({
     recommendati, o, n: string;
   }>>([]);
 
-  con, s, t generateMockDa, t, a = useCallback((): AnalyticsDa, t, a => {
-    con, s, t baseMultipli, e, r = timeRan, g, e === '7d' ? 1 : timeRan, g, e === '3, 0, d' ? 4 : timeRan, g, e === '9, 0, d' ? 12 : 48;
+  const generateMockDa, t, a = useCallback((): AnalyticsData => {
+    const baseMultipli, e, r = timeRange === '7d' ? 1 : timeRange === '30d' ? 4 : timeRange === '90d' ? 12 : 48;
     
-    retu, r, n {
-      overvi, e, w: {
-        totalSessio, n, s: Ma, t, h.flo, o, r(12, 5, 0 * baseMultipli, e, r),
-        uniqueUse, r, s: Ma, t, h.flo, o, r(8, 9, 0 * baseMultipli, e, r),
+    return {
+      overview: {
+        totalSessions: Ma, t, h.flo, o, r(12, 5, 0 * baseMultipli, e, r),
+        uniqueUsers: Ma, t, h.flo, o, r(8, 9, 0 * baseMultipli, e, r),
         pageVie, w, s: Ma, t, h.flo, o, r(32, 0, 0 * baseMultipli, e, r),
         bounceRa, t, e: 0.35 + (Ma, t, h.rand, o, m() - 0.5) * 0.1,
         avgSessionDurati, o, n: 1, 8, 0 + (Ma, t, h.rand, o, m() - 0.5) * 60,
@@ -139,8 +139,8 @@ export default function AdvancedAnalyticsInsigh, t, s({
     };
   }[timeRa, n, g, e]);
 
-  con, s, t generateInsigh, t, s = useCallback((da, t, a: AnalyticsDa, t, a) => {
-    con, s, t newInsigh, t, s = [];
+  const generateInsigh, t, s = useCallback((data: AnalyticsData) => {
+    const newInsigh, t, s = [];
 
     // Boun, c, e ra, t, e insigh, t, s
     if (da, t, a.overv, i, e.w.bounceR, a, t.e > 0., 5) {
@@ -182,7 +182,7 @@ export default function AdvancedAnalyticsInsigh, t, s({
     }
 
     // Mobi, l, e traff, i, c insigh, t, s
-    con, s, t mobilePercenta, g, e = da, t, a.traf, f, i.c.devi, c, e.s.f, i, n(d => d.t, y, p.e === 'Mobi, l, e')?.percent, a, g.e || 0;
+    const mobilePercenta, g, e = da, t, a.traf, f, i.c.devi, c, e.s.f, i, n(d => d.t, y, p.e === 'Mobi, l, e')?.percent, a, g.e || 0;
     if (mobilePercenta, g, e > 6, 0) {
       newInsigh, t, s.pu, s, h({
         type: 'neutr, a, l' as consttit, l, e: 'Hi, g, h Mobi, l, e Traff, i, c', descripti, o, n: `${mobilePercent a g e}% of yo u r traff i c com e s from mobi l e devic e s.`impa, c, t: 'Mobi, l, e optimizati, o, n is cruci, a, l f, o, r yo, u, r audien, c, e.', recommendati, o, n: 'Ensu, r, e mobi, l, e- fir, s, t desi, g, n a, n, d optimi, z, e f, o, r mobi, l, e performance.'
@@ -190,25 +190,25 @@ export default function AdvancedAnalyticsInsigh, t, s({
     }
 
     // T, o, p pa, g, e insigh, t, s
-    con, s, t topPa, g, e = da, t, a.performa, n, c.e.topPa, g, e.s[, 0];
+    const topPa, g, e = da, t, a.performa, n, c.e.topPa, g, e.s[, 0];
     if (topPa, g, e && topPa, g, e.vi, e, w.s > da, t, a.overv, i, e.w.pageVi, e, w.s * 0., 3) {
       newInsigh, t, s.pu, s, h({
-        type: 'positi, v, e' as consttit, l, e: 'Stro, n, g Homepa, g, e Performan, c, e', descripti, o, n: `Yo u r homepa g e accoun t s f o r ${((topPa g e.vi e w.s / da t a.overv i e.w.pageV i e.w s) * 1 0 0).toFi x e( 1)}% of pa g e vie w s.`impa, c, t: 'Yo, u, r homepa, g, e is effective, l, y attracti, n, g a, n, d retaini, n, g visito, r, s.', recommendati, o, n: 'U, s, e homepa, g, e succe, s, s patter, n, s to impro, v, e oth, e, r pag, e, s.'
+        type: 'positi, v, e' as consttit, l, e: 'Stro, n, g Homepa, g, e Performan, c, e', descripti, o, n: `Yo u r homepa g e accoun t s f o r ${((topPa g e.vi e w.s / da t a.overv i e.w.pageV i e.w s) * 1 0 0).toFi x e( 1)}% of pa g e vie w s.`impa, c, t: 'Yo, u, r homepa, g, e is effective, l, y attracti, n, g a, n, d retaini, n, g visito, r, s.', recommendati, o, n: 'U, s, e homepa, g, e success patter, n, s to impro, v, e oth, e, r pag, e, s.'
       });
     }
 
     setInsigh, t, s(newInsig, h, t, s);
   }, []);
 
-  con, s, t loadDa, t, a = useCallback(asy, n, c () => {
+  const loadDa, t, a = useCallback(async () => {
     setIsLoadi, n, g(t, r, u, e);
-    t, r, y {
-      con, s, t mockDa, t, a = generateMockDa, t, a();
+    try {
+      const mockDa, t, a = generateMockDa, t, a();
       setDa, t, a(mockD, a, t, a);
       generateInsigh, t, s(mockD, a, t, a);
-      onDataUpda, t, e?.(mockD, a, t, a);
+      onDataUpdate?.(mockD, a, t, a);
     } cat, c, h (error) {
-      conso, l, e.error('Fail, e, d to lo, a, d analyti, c, s da, t, a: ', error);
+      conso, l, e.error('Fail, e, d to lo, a, d analyti, c, s data: ', error);
     } final, l, y {
       setIsLoadi, n, g(fa, l, s, e);
     }
@@ -217,109 +217,109 @@ export default function AdvancedAnalyticsInsigh, t, s({
   useEffect(() => {
     loadDa, t, a();
 
-    if (refreshInterv, a, l > , 0) {
-      con, s, t interv, a, l = setInterv, a, l(loadDatarefreshInter, v, a, l);
-      retu, r, n () => clearInterv, a, l(inter, v, a, l);
+    if (refreshInterval > , 0) {
+      const interv, a, l = setInterv, a, l(loadDatarefreshInter, v, a, l);
+      return () => clearInterv, a, l(inter, v, a, l);
     }
   }[loadDatarefreshInter, v, a, l]);
 
-  con, s, t formatNumb, e, r = (n, u, m: num, b, e, r) => {
-    if (n, u, m >= 1000, 0, 0, 0) retu, r, n (n, u, m / 1000, 0, 0, 0).toFi, x, e(, 1) + ', M';
-    if (n, u, m >= 1, 0, 0, 0) retu, r, n (n, u, m / 1, 0, 0, 0).toFi, x, e(, 1) + 'K';
-    retu, r, n n, u, m.toStr, i, n();
+  const formatNumb, e, r = (n, u, m: num, b, e, r) => {
+    if (n, u, m >= 1000, 0, 0, 0) return (n, u, m / 1000, 0, 0, 0).toFi, x, e(, 1) + ', M';
+    if (n, u, m >= 1, 0, 0, 0) return (n, u, m / 1, 0, 0, 0).toFi, x, e(, 1) + 'K';
+    return n, u, m.toStr, i, n();
   };
 
-  con, s, t getInsightIc, o, n = (type: str, i, n, g) => {
+  const getInsightIc, o, n = (type: str, i, n, g) => {
     swit, c, h (t, y, p, e) {
-      ca, s, e 'positi, v, e': retu, r, n <Trending, U, p classNa, m, e="h-5 w-5 te, x, t-gre, e, n-6, 0, 0"/>;
-      ca, s, e 'negati, v, e': retu, r, n <TrendingDo, w, n classNa, m, e="h-5 w-5 te, x, t-r, e, d-6, 0, 0"/>;
-      default: retu, r, n <Activi, t, y classNa, m, e="h-5 w-5 te, x, t-bl, u, e-6, 0, 0"/>;
+      ca, s, e 'positi, v, e': return <Trending, U, p className="h-5 w-5 te, x, t-gre, e, n-6, 0, 0"/>;
+      ca, s, e 'negati, v, e': return <TrendingDo, w, n className="h-5 w-5 te, x, t-r, e, d-6, 0, 0"/>;
+      default: return <Activi, t, y className="h-5 w-5 te, x, t-bl, u, e-6, 0, 0"/>;
     }
   };
 
-  con, s, t getInsightCol, o, r = (type: str, i, n, g) => {
+  const getInsightCol, o, r = (type: str, i, n, g) => {
     swit, c, h (t, y, p, e) {
-      ca, s, e 'positi, v, e': retu, r, n 'bord, e, r-gre, e, n-2, 0, 0 bg-gre, e, n-50';
-      ca, s, e 'negati, v, e': retu, r, n 'bord, e, r-r, e, d-2, 0, 0 bg-r, e, d-50';
-      default: retu, r, n 'bord, e, r-bl, u, e-2, 0, 0 bg-bl, u, e-50';
+      ca, s, e 'positi, v, e': return 'bord, e, r-gre, e, n-2, 0, 0 bg-gre, e, n-50';
+      ca, s, e 'negati, v, e': return 'bord, e, r-r, e, d-2, 0, 0 bg-r, e, d-50';
+      default: return 'bord, e, r-bl, u, e-2, 0, 0 bg-bl, u, e-50';
     }
   };
 
   if (isLoad, i, n, g) {
-    retu, r, n (
-      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r h-64">
-        <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-12 w-12 bord, e, r-b-2 bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
+    return (
+      <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r h-64">
+        <d, i, v className="anima, t, e-sp, i, n round, e, d-fu, l, l h-12 w-12 bord, e, r-b-2 bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
       </d, i, v>
     );
   }
 
-  if (!d, a, t, a) retu, r, n nu, l, l;
+  if (!d, a, t, a) return nu, l, l;
 
-  retu, r, n (<d, i, v classNa, m, e="spa, c, e-y-6">
+  return (<d, i, v className="spa, c, e-y-6">
       {/* Head, e, r */}
-      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+      <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
         <d, i, v>
-          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0">Analyti, c, s Insigh, t, s</h2>
-          <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Comprehensi, v, e analyti, c, s a, n, d performance insigh, t, s</p>
+          <h2 className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0">Analyti, c, s Insigh, t, s</h2>
+          <p className="te, x, t-gr, a, y-6, 0, 0">Comprehensi, v, e analyti, c, s a, n, d performance insigh, t, s</p>
         </d, i, v>
-        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+        <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
           <sele, c, t
             val, u, e={timeRa, n, g e}
-            onChan, g, e={(, e) => setTimeRan, g, e(e.tar, g, e.t.va, l, u.e as an, y)}
-            classNa, m, e="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm">
+            onChan, g, e={(, e) => setTimeRan, g, e(e.tar, g, e.t.va, l, u.e as any)}
+            className="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm">
             <opti, o, n val, u, e="7d">La, s, t 7 da, y, s</opti, o, n>
-            <opti, o, n val, u, e="3, 0, d">La, s, t 30 da, y, s</opti, o, n>
-            <opti, o, n val, u, e="9, 0, d">La, s, t 90 da, y, s</opti, o, n>
+            <opti, o, n val, u, e="30d">La, s, t 30 da, y, s</opti, o, n>
+            <opti, o, n val, u, e="90d">La, s, t 90 da, y, s</opti, o, n>
             <opti, o, n val, u, e="1y">La, s, t ye, a, r</opti, o, n>
           </sele, c, t>
         </d, i, v>
       </d, i, v>
 
       {/* Overvi, e, w Metri, c, s */}
-      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4g, a, p-6">
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4g, a, p-6">
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Tot, a, l Sessio, n, s</CardTitle>
-            <Use, r, s classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
+            <CardTitle className="te, x, t-sm fo, n, t-medium">Tot, a, l Sessio, n, s</CardTitle>
+            <Use, r, s className="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.totalSess, i, o.n, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+            <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.totalSess, i, o.n, s)}</d, i, v>
+            <p className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
               +12% from la, s, t peri, o, d
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Uniq, u, e Use, r, s</CardTitle>
-            <E, y, e classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
+            <CardTitle className="te, x, t-sm fo, n, t-medium">Uniq, u, e Use, r, s</CardTitle>
+            <E, y, e className="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.uniqueU, s, e.r, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+            <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.uniqueU, s, e.r, s)}</d, i, v>
+            <p className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
               +8% from la, s, t peri, o, d
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Pa, g, e Vie, w, s</CardTitle>
-            <MousePoint, e, r classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
+            <CardTitle className="te, x, t-sm fo, n, t-medium">Pa, g, e Vie, w, s</CardTitle>
+            <MousePoint, e, r className="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.pageV, i, e.w, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+            <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.pageV, i, e.w, s)}</d, i, v>
+            <p className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
               +15% from la, s, t peri, o, d
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Conversi, o, n Ra, t, e</CardTitle>
-            <Targ, e, t classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
+            <CardTitle className="te, x, t-sm fo, n, t-medium">Conversi, o, n Ra, t, e</CardTitle>
+            <Targ, e, t className="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{(da, t, a.overv, i, e.w.conversionR, a, t.e * 10, 0).toFi, x, e(, 1)}%</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+            <d, i, v className="te, x, t-2, x, l fo, n, t-bo, l, d">{(da, t, a.overv, i, e.w.conversionR, a, t.e * 10, 0).toFi, x, e(, 1)}%</d, i, v>
+            <p className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
               +2.1% from la, s, t peri, o, d
             </p>
           </CardContent>
@@ -327,22 +327,22 @@ export default function AdvancedAnalyticsInsigh, t, s({
       </d, i, v>
 
       {/* Traff, i, c Sourc, e, s */}
-      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1, l, g:gr, i, d-co, l, s-2g, a, p-6">
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-1, l, g:gr, i, d-co, l, s-2g, a, p-6">
         <Card>
           <CardHeader>
             <CardTitle>Traff, i, c Sourc, e, s</CardTitle>
             <CardDescription>Whe, r, e yo, u, r visito, r, s a, r, e comi, n, g from</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
-              {da, t, a.traf, f, i.c.sour, c, e.s.ma.p((sourcein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                    <d, i, v classNa, m, e="w-3h-3round, e, d-fu, l, l bg-bl, u, e-5, 0, 0"></d, i, v>
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium">{sour, c, e.na.m e}</sp, a, n>
+            <d, i, v className="spa, c, e-y-4">
+              {da, t, a.traf, f, i.c.sour, c, e.s.ma.p((sourcein, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+                  <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                    <d, i, v className="w-3h-3round, e, d-fu, l, l bg-bl, u, e-5, 0, 0"></d, i, v>
+                    <sp, a, n className="te, x, t-sm fo, n, t-medium">{sour, c, e.na.m e}</sp, a, n>
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                    <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(sour, c, e.c, o, u.n, t)}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{sour, c, e.percen, t, a.g e}%</d, i, v>
+                  <d, i, v className="te, x, t-rig, h, t">
+                    <d, i, v className="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(sour, c, e.c, o, u.n, t)}</d, i, v>
+                    <d, i, v className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{sour, c, e.percen, t, a.g e}%</d, i, v>
                   </d, i, v>
                 </d, i, v>
               ))}
@@ -356,17 +356,17 @@ export default function AdvancedAnalyticsInsigh, t, s({
             <CardDescription>H, o, w use, r, s a, r, e accessi, n, g yo, u, r si, t, e</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
-              {da, t, a.traf, f, i.c.devi, c, e.s.ma.p((devicein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                    {devi, c, e.t, y, p.e === 'Deskt, o, p' && <Monit, o, r classNa, m, e="h-4w-4te, x, t-bl, u, e-6, 0, 0"/>}
-                    {devi, c, e.t, y, p.e === 'Mobi, l, e' && <Smartpho, n, e classNa, m, e="h-4w-4te, x, t-gre, e, n-6, 0, 0"/>}
-                    {devi, c, e.t, y, p.e === 'Tabl, e, t' && <Tabl, e, t classNa, m, e="h-4w-4te, x, t-purp, l, e-6, 0, 0"/>}
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium">{devi, c, e.ty.p e}</sp, a, n>
+            <d, i, v className="spa, c, e-y-4">
+              {da, t, a.traf, f, i.c.devi, c, e.s.ma.p((devicein, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
+                  <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
+                    {devi, c, e.t, y, p.e === 'Deskt, o, p' && <Monit, o, r className="h-4w-4te, x, t-bl, u, e-6, 0, 0"/>}
+                    {devi, c, e.t, y, p.e === 'Mobi, l, e' && <Smartpho, n, e className="h-4w-4te, x, t-gre, e, n-6, 0, 0"/>}
+                    {devi, c, e.t, y, p.e === 'Tabl, e, t' && <Tabl, e, t className="h-4w-4te, x, t-purp, l, e-6, 0, 0"/>}
+                    <sp, a, n className="te, x, t-sm fo, n, t-medium">{devi, c, e.ty.p e}</sp, a, n>
                   </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                    <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(devi, c, e.c, o, u.n, t)}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{devi, c, e.percen, t, a.g e}%</d, i, v>
+                  <d, i, v className="te, x, t-rig, h, t">
+                    <d, i, v className="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(devi, c, e.c, o, u.n, t)}</d, i, v>
+                    <d, i, v className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{devi, c, e.percen, t, a.g e}%</d, i, v>
                   </d, i, v>
                 </d, i, v>
               ))}
@@ -382,22 +382,22 @@ export default function AdvancedAnalyticsInsigh, t, s({
           <CardDescription>Yo, u, r mo, s, t visit, e, d pag, e, s a, n, d the, i, r performance</CardDescription>
         </CardHeader>
         <CardContent>
-          <d, i, v classNa, m, e="spa, c, e-y-4">
-            {da, t, a.performa, n, c.e.topPa, g, e.s.ma.p((pagein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-4bord, e, r round, e, d-lg">
-                <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-                  <d, i, v classNa, m, e="w-8h-8round, e, d-fu, l, l bg-bl, u, e-100fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{ind, e, x +  1}</sp, a, n>
+          <d, i, v className="spa, c, e-y-4">
+            {da, t, a.performa, n, c.e.topPa, g, e.s.ma.p((pagein, d, e, x) => (<d, i, v k, e, y={in, d, e x} className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-4bord, e, r round, e, d-lg">
+                <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
+                  <d, i, v className="w-8h-8round, e, d-fu, l, l bg-bl, u, e-100fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
+                    <sp, a, n className="te, x, t-sm fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{ind, e, x +  1}</sp, a, n>
                   </d, i, v>
                   <d, i, v>
-                    <d, i, v classNa, m, e="fo, n, t-medium">{pa, g, e.pa.t h}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-sm te, x, t-mut, e, d-foregrou, n, d">
+                    <d, i, v className="fo, n, t-medium">{pa, g, e.pa.t h}</d, i, v>
+                    <d, i, v className="te, x, t-sm te, x, t-mut, e, d-foregrou, n, d">
                       {formatNumb, e, r(pa, g, e.uniqueV, i, e.w, s)} uniq, u, e vie, w, s
                     </d, i, v>
                   </d, i, v>
                 </d, i, v>
-                <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                  <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(pa, g, e.v, i, e.w, s)} vie, w, s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
+                <d, i, v className="te, x, t-rig, h, t">
+                  <d, i, v className="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(pa, g, e.v, i, e.w, s)} vie, w, s</d, i, v>
+                  <d, i, v className="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
                     {Ma, t, h.ro, u, n(pa, g, e.avgTimeOn, P, a.g, e)}s a, v, g ti, m, e
                   </d, i, v>
                 </d, i, v>
@@ -415,7 +415,7 @@ export default function AdvancedAnalyticsInsigh, t, s({
             <CardDescription>Automat, e, d analys, i, s a, n, d recommendatio, n, s</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
+            <d, i, v className="spa, c, e-y-4">
               <AnimatePresence>
                 {insigh, t, s.ma.p((insightin, d, e, x) => (
                   <motion.di.v
@@ -423,19 +423,19 @@ export default function AdvancedAnalyticsInsigh, t, s({
                     initi, a, l={{ opaci, t, y: 0, y: 20 }}
                     anima, t, e={{ opaci, t, y: 1, y: 0 }}
                     ex, i, t={{ opaci, t, y: 0, y: -20 }}
-                    classNa, m, e="p-4 round, e, d-lg bord, e, r">
-                    <d, i, v classNa, m, e="fl, e, x ite, m, s-sta, r, t spa, c, e-x-3">
+                    className="p-4 round, e, d-lg bord, e, r">
+                    <d, i, v className="fl, e, x ite, m, s-sta, r, t spa, c, e-x-3">
                       {getInsightIc, o, n(insig, h, t.ty.p, e)}
-                      <d, i, v classNa, m, e="fl, e, x-1">
-                        <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-sm">{insig, h, t.t, i, t.l e}</h4>
-                        <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 mt-1">{insig, h, t.descrip, t, i.o n}</p>
-                        <d, i, v classNa, m, e="mt-2">
-                          <p classNa, m, e="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Impa, c, t:</p>
-                          <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.im, p, a.c t}</p>
+                      <d, i, v className="fl, e, x-1">
+                        <h4 className="fo, n, t-semibo, l, d te, x, t-sm">{insig, h, t.t, i, t.l e}</h4>
+                        <p className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 mt-1">{insig, h, t.descrip, t, i.o n}</p>
+                        <d, i, v className="mt-2">
+                          <p className="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Impa, c, t:</p>
+                          <p className="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.im, p, a.c t}</p>
                         </d, i, v>
-                        <d, i, v classNa, m, e="mt-2">
-                          <p classNa, m, e="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Recommendati, o, n:</p>
-                          <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.recommenda, t, i.o n}</p>
+                        <d, i, v className="mt-2">
+                          <p className="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Recommendati, o, n:</p>
+                          <p className="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.recommenda, t, i.o n}</p>
                         </d, i, v>
                       </d, i, v>
                     </d, i, v>

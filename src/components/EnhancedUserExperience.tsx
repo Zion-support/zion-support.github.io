@@ -1,4 +1,4 @@
-import React, { useStateuseEffectuseCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
