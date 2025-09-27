@@ -1,24 +1,17 @@
-const CACHE_NAME = 'zion-tech-v1';
+// Service Worker for Zion Website
+const CACHE_NAME = 'zion-website-v1';
 const urlsToCache = [
   '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/blog',
-  '/portfolio',
-  '/faq',
-  '/privacy-policy',
-  '/dashboard',
-  '/enhanced-home',
-  '/_next/static/css/',
-  '/_next/static/js/'];
+  '/static/css/main.css',
+  '/static/js/main.js',
+  '/offline.html'
+];
 
 // Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
@@ -30,22 +23,24 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        if (response) {
-          return response;
+        return response || fetch(event.request);
+      })
+      .catch(() => {
+        // If both fail, show offline page
+        if (event.request.destination === 'document') {
+          return caches.match('/offline.html');
         }
-        return fetch(event.request);
-      }
-    )
+      })
   );
 });
 
 // Activate event
-self.addEventListener('activate', (event) => {event.waitUntil(
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:'cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -53,15 +48,3 @@ self.addEventListener('activate', (event) => {event.waitUntil(
     })
   );
 });
-
-// Background sync for analytics
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
-  }
-});
-
-async function doBackgroundSync() {
-  // Send any pending analytics data
-  console.log('Background sync triggered');
-}

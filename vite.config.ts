@@ -8,10 +8,31 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html'
+      },
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['framer-motion', 'lucide-react']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+    sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
       }
     }
   },
   server: {
-    port: 3000
+    port: 3000,
+    hmr: {
+      overlay: false
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
   }
 })

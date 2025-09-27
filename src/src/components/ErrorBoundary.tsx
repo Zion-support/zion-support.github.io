@@ -21,6 +21,22 @@ class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Report error to analytics/monitoring service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      });
+    }
+    
+    // Store error for debugging
+    localStorage.setItem('lastError', JSON.stringify({
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()
+    }));
   }
 
   public render() {
