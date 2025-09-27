@@ -270,6 +270,7 @@ export class MemoryMonitor {
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
   }> = [];
+  private intervalId: NodeJS.Timeout | null = null;
 
   public static getInstance(): MemoryMonitor {
     if (!MemoryMonitor.instance) {
@@ -296,7 +297,7 @@ export class MemoryMonitor {
       }, intervalMs);
 
       // Store interval ID for cleanup
-      (this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId = interval;
+      this.intervalId = interval;
     }
   }
 
@@ -320,9 +321,9 @@ export class MemoryMonitor {
   }
 
   public stopMonitoring(): void {
-    if ((this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId) {
-      clearInterval((this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId);
-      (this as MemoryMonitor & { intervalId: NodeJS.Timeout | null }).intervalId = null;
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
     }
   }
 }
