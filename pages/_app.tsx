@@ -5,7 +5,10 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
->>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
+import { WebVitals } from "../src/components/WebVitals";
+
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
@@ -13,7 +16,8 @@ import '../src/styles/improvements.css';
 export default function App({ Component, pageProps }: AppProps) {
   // Setup global error handling
   React.useEffect(() => {
-    setupGlobalErrorHandling()}, []);
+    // setupGlobalErrorHandling()}, []);
+
   // Register service worker for performance optimization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
@@ -48,11 +52,14 @@ export default function App({ Component, pageProps }: AppProps) {
           box-sizing: border-box}
         html {
           scroll-behavior: smooth}
-        body {margin: 0;          padding: 0;
+        body {
+          margin: 0;
+          padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s easecolor 0.3s ease}        .dark body {
+          transition: background-color 0.3s ease, color 0.3s ease}
+        .dark body {
           background-color: #0f172a;
           color: #f1f5f9}
         h1, h2, h3, h4, h5, h6 {
@@ -120,21 +127,10 @@ export default function App({ Component, pageProps }: AppProps) {
           white-space: nowrap;
           border: 0}
       `}</style>
-          <PerformanceOptimizer>
-            <Component {...pageProps} />
-          </PerformanceOptimizer>
-          {/* <PerformanceMetrics /> */}
-          {/* <PerformanceMonitor />
-          <PerformanceTracker /> */}
-          <WebVitals />
-          <AccessibilityAuditor />
-          {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
-          {/* <AdvancedErrorHandler 
-            enableAutoRetry={true}
-            maxRetries={3}
-            enablePerformanceMonitoring={true}
-            enableErrorReporting={true}
-            enableUserFeedback={true}
-          /> */}
-        </HelmetProvider>
-  )};
+      <PerformanceOptimizer>
+        <Component {...pageProps} />
+      </PerformanceOptimizer>
+      <WebVitals />
+      <AccessibilityAuditor />
+    </HelmetProvider>
+  )}

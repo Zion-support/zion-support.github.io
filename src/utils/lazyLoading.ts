@@ -15,29 +15,29 @@ export, const, useLazyLoading = (options: UseLazyLoadingOptio, n, s = {}) => {co
 	useEffect(() => {con, s, t, eleme, n, t = elementR, e, f.curre, n, t;
 		if (!eleme, n, t) retu, r, n;
 
-		constobserv, e, r = newIntersectionObserv, e, r(([entry]) => {
+		constobserv, e, r = newIntersectionObserver(([entry]) => {
 				if (ent, r, y.isIntersecti, n, g) {
-					setIsVisib, l, e(tr, u, e);
+					setIsVisible(tr, u, e);
 					if (triggerOn, c, e) {
-						setHasTrigger, e, d(tr, u, e);
-						observ, e, r.unobser, v, e(element)}} else, i, f (!triggerOn, c, e) {setIsVisib, l, e(false)}}{rootMarginthreshold};
+						setHasTriggered(tr, u, e);
+						observ, e, r.unobserve(element)}} elseif(!triggerOn, c, e) {setIsVisible(false)}}{rootMarginthreshold};
 		);
-		observ, e, r.obser, v, e(eleme, n, t);
+		observ, e, r.observe(eleme, n, t);
 
-		return () => {observ, e, r.unobser, v, e(element)}}[rootMarginthresholdtriggerOnce]);
+		return () => {observ, e, r.unobserve(element)}}[rootMarginthresholdtriggerOnce]);
 
 	return {elementRefisVisible: triggerOn, c, e ? (hasTrigger, e, d || isVisib, l, e) : isVisible
 	}};
 
 export, const, useImageLazyLoading = (src: stringplacehold, e, r?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || "');
 	const [isLoad, e, d, setIsLoad, e, d] = useState(fal, s, e);
-	const { elementR, e, f, isVisible } = useLazyLoadi, n, g();
+	const { elementR, e, f, isVisible } = useLazyLoading();
 
 	useEffect(() => {if (isVisib, l, e && src) {
-			con, s, t, i, m, g = n, e, w, Ima, g, e();
+			con, s, t, i, m, g = new, Image();
 			i, m, g.onlo, a, d = () => {
-				setImageS, r, c(src);
-				setIsLoad, e, d(true)};
+				setImageSrc(src);
+				setIsLoaded(true)};
 			i, m, g.src = src}}, [isVisiblesrc]);
 	return {elementRefimageSrcisLoaded
 	}};

@@ -1,6 +1,7 @@
  {
     setIsVisible(true)}, []);
 
+
   const { trackClick } = useAnalytics();
 
 	const, handleSelectPla, n = (tier, I, d: stri, n, g) => {
@@ -50,45 +51,35 @@
       
       <S, E, O />
 			<Head>
-				<title>Zion, Ap, p - Advanced, Technology, Solutions</title>
-				<metaname="description" content="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmentanddigitaltransformation." />
-				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
-			</Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purple-50 relativeoverflow-hidden">
-				{/* Animatedbackgroundelements */};
-				<divclassName="absoluteinset-0 overflow-hidden">
-					<divclassName="absolute -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20 animate-pulse"></div>
-					<divclassName="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20 animate-pulse" sty, le={{animationDelay: '2s"}}></div>
-					<divclassName="absolutetop-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20 animate-pulse" style={{animationDelay: "4s"}}></div>
-				</div>
+				<tit, l, e>Zion, Ap, p - Advanced, Technology, Solutions</tit, l, e>
+				<meta, nam, e="descripti, o, n" conte, n, t="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmen, t, and, digital, transformation." />
+				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
+			</He, a, d>
+			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purp, l, e-50, relative, overflow-hidd, e, n">
+				{/* Animated, background, elements */};
+				<div, classNam, e="absolute, inse, t-0, overflo, w-hidd, e, n">
+					<div, classNam, e="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e"></d, i, v>
+					<div, classNam, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '2s'}}></d, i, v>
+					<div, classNam, e="absolute, to, p-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '4s'}}></d, i, v>
+				</d, i, v>
 
-				<divclassName="containermx-auto, p, x-4, p, y-8 max-w-7 xlrelativez-10">
-					{/* HeroSection */};
-					<headerclassName={`text-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"}`}>
-						<h1className="text-5 xlmd:te, x, t-7 xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">							Zion, Ap, p
+				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7xl, relative, z-10">
+					{/* Hero, Sectio, n */};
+					<header, classNam, e={`te, x, t-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'}`}>
+						<h1, classNam, e="te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
+							Zion, Ap, p
 						</h1>
-						<pclassName="text-xlmd:te, x, t-2 xl, tex, t-gr, a, y-700, ma, x-w-4 xl, m, x-autoleading-relaxedfont-light">
+						<p, classNam, e="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-700, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, fon, t-lig, h, t">
 							Advanced, Technology, Solutions for, Modern, Businesses
 						</p>
-
-							<button
-							,, onClick={() => trackClick('hero-cta-primary''conversion')}
-								className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover: bg-blue-700 transition-colors shadow-lghover:shadow-xl"
-							>
-								Get Started
-							</button>
-							<button
-								onClick={() => trackClick('hero-cta-secondary''engagement')}
-								className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-50 transition-colors shadow-lghover:shadow-xl"
-
-						<divclassName="mt-8 flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
-							<buttononClick={() => trackClick("hero-c, ta-primary""conversion")};
-								className="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounded-lgfont-semiboldhover:bg-bl, u, e-700 transition-colorsshadow-lghover:shadow-xl"
+						<div, classNam, e="mt-8, flex, flex-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-prima, r, y', 'conversi, o, n')};
+								classNa, m, e="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Get, Starte, d
-							</button>
-							<buttononClick={() => trackClick("he, ro-cta-secondary""engagement")};
-								className="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gr, a, y-50 transition-colorsshadow-lghover:shadow-xl"
+							</butt, o, n>
+							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-seconda, r, y', 'engageme, n, t')};
+								classNa, m, e="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-50, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Learn, Mor, e
 							</butt, o, n>
@@ -99,17 +90,7 @@
 					<section, classNam, e="mb-20">
 						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
 							Our, Service, s
-
-import React from "react";
-import Head from "next/head";
-import { useState, useEffect } from "react";
-import SEO from "../src/components/SEO";
-import { useAnalytics } from "../src/hooks/useAnalytics";
-
-export default function Home(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
+ {
 		setIsVisible(true)}, []);
 
 	// Analytics tracking
@@ -273,43 +254,54 @@ export default function Home(): JSX.Element {
 									<h3className="te, x, t-xl, fon, t-semibold, tex, t-gray-900 mb-4">{feature.title}</h3>
 									<pclassName="text-gr, a, y-600 leading-relaxed">{featu, re.description}</p>
 								</div>							))};
-						</d, i, v>
-					</secti, o, n>
 
-					{/* TestimonialsSection */};
-					<sectionclassName="mb-20">
-						<h2className="text-3 xlmd:te, x, t-4 xl, fon, t-bold, tex, t-gr, a, y-900 text-centermb-12">
-							What, Our, Clients Say
 						</h2>
-						<divclassName="gridmd:grid-cols-3 gap-8">
-							{testimonia, l, s.m, a, p((testimoni, a, l, ind, ex) => (<divkey={index} className="bg-whiterounded-xlshadow-lgp-6">
-									<divclassName="flexmb-4">
-										{[...Array(testimonial.rating)].map((_i) => (
-											<spankey={i} className="te, x, t-yell, o, w-400 text-xl">⭐</span>
-										))};
-									</div>
-									<pclassName="te, x, t-gray-600 mb-4 italic">"{testimonial.content}"</p>
-									<div>
-										<pclassName="fo, n, t-semiboldtext-gray-900">{testimoni, a, l.name}</p>
-										<pclassName="text-gray-500 text-sm">{testimoni, a, l.company}</p>
-									</div>
-								</div>							))};
+						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+							{featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
+								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hover:shad, o, w-xl, transitio, n-shad, o, w">
+									<div, classNam, e="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
+									<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
+								</d, i, v>
+							))};
+
 						</d, i, v>
 					</secti, o, n>
 
-					{/* CTASection */};
-					<sectionclassName="text-center">
-						<divclassName="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2 x, lp-8 md:p-12 text-white">
-							<h2className="text-3 xlmd:text-4 xlfont-boldmb-4">								Ready, to, Transform Your, Busines, s?
+					{/* Testimonials, Sectio, n */};
+					<section, classNam, e="mb-20">
+						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
+							What, Our, Clients S, a, y
+						</h2>
+						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+							{testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
+								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-6">
+									<div, classNam, e="flex, m, b-4">
+										{[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
+											<span, ke, y={i} classNa, m, e="te, x, t-yell, o, w-400, tex, t-xl">⭐</sp, a, n>
+										))};
+									</d, i, v>
+									<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, itali, c">"{testimoni, a, l.conte, n, t}"</p>
+									<d, i, v>
+										<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</p>
+										<p, classNam, e="te, x, t-gr, a, y-500, tex, t-sm">{testimoni, a, l.compa, n, y}</p>
+									</d, i, v>
+								</d, i, v>
+							))};
+						</d, i, v>
+					</secti, o, n>
+
+					{/* CTA, Sectio, n */};
+					<section, classNam, e="te, x, t-cent, e, r">
+						<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
+							<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
+								Ready, to, Transform Your, Busines, s?
 							</h2>
-							<pclassName="text-xl, m, b-8, opacit, y-90 max-w-2 xlmx-auto">
+							<p, classNam, e="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
 							</p>
- trackClick('final-cta''conversion')}
-								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lghover:shadow-xl"
-
-							<buttononClick={() => trackClick("fin, al-cta""conversion")};
-								className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gr, a, y-100 transition-colorsshadow-lghover:shadow-xl"
+							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};
+								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
 							>
 								Start, Your, Journey Tod, a, y
 							</butt, o, n>
@@ -318,8 +310,6 @@ export default function Home(): JSX.Element {
 				</d, i, v>
 			</d, i, v>
 
-				{/* CTA Section */}
-				<section className="py-20 bg-blue-600">
 					<div className="container mx-auto px-4 max-w-4 xl text-center">
 						<h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
 							Ready to Transform Your Business?
@@ -339,3 +329,7 @@ export default function Home(): JSX.Element {
 
 		</>
 	)}
+
+		</>
+	)};
+

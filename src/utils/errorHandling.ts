@@ -1,10 +1,14 @@
 /**
->>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+>>>>> origin/cursor/check-fix-push-and-merge-to-main-1642
+
+ * Comprehensive error handling utilities
+
  * Provides comprehensive error management functions
  */
 
 export interface ErrorInfo {
  {con, s, t, errorIn, f, o: ErrorIn, f, o = {
+
     messa, g, e: err, o, r.messa, g, e,
     sta, c, k: err, o, r.stacktimesta, m, p: newDa, t, e().toISOStri, n, g()userAge, n, t: navigat, o, r.userAgentu, r, l: wind, o, w.locati, o, n.hrefuser, I, d: conte, x, t?.userIdsession, I, d: conte, x, t?.session, I, d
   };
@@ -13,7 +17,8 @@ export interface ErrorInfo {
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
     // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.error("Productionerror:", errorInfo)}};
+    conso, l, e.err, o, r('Producti, o, n, err, o, r:', errorIn, f, o)}};
+
 // Error, boundary, helper
 export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.ErrorIn, f, o): ErrorIn, f, o => {return {
     messa, g, e: err, o, r.messa, g, e,
@@ -47,7 +52,7 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
         acti, o, n: 'unhandled_err, o, r'
       })});
 
-    wind, o, w.addEventListener("unhandledrejection"(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, nt.reason){
+ {logErr, o, r(n, e, w, Err, o, r(eve, nt.reason){
         componentName: "Global"action: "unhandled_promise_rejection"      })})}};
 
 	message: string;
@@ -156,4 +161,10 @@ export const setupGlobalErrorHandling = (): void => {
 				errorBoundary: 'uncaught'
 			})})}
 };
+
+
+    wind, o, w.addEventListen, e, r('unhandledrejecti, o, n'(eve, n, t) => {logErr, o, r(n, e, w, Err, o, r(eve, n, t.reas, o, n){
+        componentNa, m, e: 'Glob, a, l',
+        acti, o, n: 'unhandled_promise_rejecti, o, n'
+      })})}};
 

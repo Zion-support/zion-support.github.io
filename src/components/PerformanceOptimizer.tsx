@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from 'react';
 (null);
 
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
-      console.log("Performancemonitoringenabled")};
-    // MemoryUsageMonitoring
-    constupdateMemoryUsage = () => {if ("memo, r, y' in, performan, c, e) {
-        con, s, t, memo, r, y = (performan, c, e, as, a, n, y).memo, r, y;
-        setMemoryUsa, g, e({
-          used: memo, r, y.usedJSHeapSi, zetotal: memo, r, y.totalJSHeapSi, zepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 100
-        })}};
+    // Simple performance monitoring
+    if (enableMonitoring) {
+      console.log('Performance monitoring enabled')}
+
+    // Memory Usage Monitoring
+    const updateMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMemoryUsage({
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+        })}
+    };
+
     updateMemoryUsage();
     const interval = setInterval(updateMemoryUsage, 5000);
 
-    return () => clearInterv, a, l(interv, a, l)}, [enableServiceWork, e, r, enableMonitori, n, g, enableResourceHin, t, s, enablePreloadi, n, g]);
+    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -52,26 +61,7 @@ import React, { useEffect, useState } from 'react';
 // Export as default with React.memo for performance
 const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 
-export default PerformanceOptimizer;
-
-import dynamic from "next/dynamic";
-
-interface PerformanceOptimizerProps {
-	enableServiceWorker?: boolean;
-	enableMonitoring?: boolean;
-	enableResourceHints?: boolean;
-	enablePreloading?: boolean}
-
-function PerformanceOptimizerComponent({
-	enableServiceWorker = true,
-	enableMonitoring = true,
-	enableResourceHints = true,
-	enablePreloading = true
-}: PerformanceOptimizerProps): null {
-	const [memoryUsage, setMemoryUsage] = useState<{
-		used: number;
-		total: number;
-		percentage: number} | null>(null);
+(null);
 
 	useEffect(() => {
 		// Only run in browser
@@ -144,4 +134,7 @@ function PerformanceOptimizerComponent({
 export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
 	ssr: false
 });
+
+
+export default PerformanceOptimizer;
 

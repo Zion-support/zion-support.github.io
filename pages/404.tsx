@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function Custom404() {
 
+
       <Head>
         <title>404 - Page Not Found | Zion App</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
@@ -96,10 +97,7 @@ export default function Custom404() {
         </div>
       </div>
     </>
-  )}
 
-	return (
-		<>
 			<Head>
 				<title>404 - Page Not Found | Zion App</title>
 				<meta name="description" content="The page you're looking for doesn't exist." />
@@ -157,4 +155,7 @@ export default function Custom404() {
 			</div>
 		</>
 	)}
+
+
+  )}
 

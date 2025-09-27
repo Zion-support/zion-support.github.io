@@ -1,6 +1,7 @@
  {
     setIsVisible(true)}, []);
 
+
   const { trackClick } = useAnalytics();
 
   return (
@@ -15,22 +16,19 @@
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
+						</Link>
+					</nav>
 
-			title: "Changesto, This Policy",
-			content: "We, may, update this, privacy, policy from, time, to ti, m, e. We, will, notify you, of, any changes, by, posting the, new, privacy policyonthis pageandupdating the "Last, Update, d" da, t, e. Your, continued, use ofourservices afteranychanges constitutesacceptanceof theupdatedpolicy."
-		}];  return (
-    <>
-      
-      <Head>
-        <title>Privacy, Polic, y - Zion, Ap, p</title>
-        <metaname="description" content="Learn, about, how Zion, App, collects, us, e, s, and, protects, your personal, informatio, n. Our, comprehensive, privacy policy, explains, your rightsandour datapractices." />
-        <metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
-      </Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100">
-			<divclassName="containermx-auto, p, x-4 py-8 max-w-4 xl">
-				<navclassName="mb-8">
-					<Linkhref="/" className="text-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
-							← BacktoHome
+					<header className="text-center mb-16">
+						<h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+							Privacy Policy
+						</h1>
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
+							Your privacy is important to us. This policy explains how we collect  use  and protect your information.
+						</p>
+			<div className="mt-6 text-sm text-gray-500">
+							Last,
+		updated: December 26, 2024
 						</div>
 					</header>
 
@@ -39,13 +37,14 @@
 						<section className={`mb-16 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<divclassName="bg-whiterounded-3 xlshadow-xlp-8">
-								<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800 mb-6">
-									Introducti, o, n
+			<div className="bg-white rounded-3 xl shadow-xl p-8">
+								<h2 className="text-2 xl md:text-3 xl font-bold text-gray-800 mb-6">
+									Introduction
 								</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">
-									<pclassName="mb-4">
-										ZionApp (&qu, o, t;we &qu, o, t; &qu, o, t;o, u, r &qu, o, t; or &qu, o, t;us&qu, o, t;) is, committed, to protecting, your, privacy and, ensuring, the security, of, your personal, informatio, n. This, Privacy, Policy explains, how, we collect, use, disclose  and, safeguard, your information, when, you visitourwebsite oruseour services.									</p>
+			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+									<p className="mb-4">
+										Zion App (&quot;we &quot; &quot;our &quot; or &quot;us&quot;) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect  use  disclose  and safeguard your information when you visit our website or use our services.
+									</p>
 									<p className="mb-4">
 										By using our website and services  you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy  please do not use our website or services.
 									</p>
@@ -61,11 +60,12 @@
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-			<divclassName="bg-whiterounded-2, xlshadow-lghover: shadow-xltransition-shadowp-8">
-									<h2className="text-2, xlmd:te, x, t-3, xl, font-boldtext-gray-800 mb-6">
-										{secti, o, n.title};
+			<div className="bg-white rounded-2 xl shadow-lg hover: shadow-xl transition-shadow p-8">
+									<h2 className="text-2 xl, md:text-3 xl font-bold text-gray-800 mb-6">
+										{section.title}
 									</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">										<p>{section.content}</p>
+			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+										<p>{section.content}</p>
 									</div>
 								</div>
 							</section>
@@ -75,18 +75,15 @@
 						<section className={`mb-16 transition-all duration-700 delay-1000 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<divclassName="bg-gradient-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3 xlp-8 text-white">
-								<h2className="text-3, xlmd: text-4 xlfont-boldmb-6">
-									Contact, U, s
+			<div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3 xl p-8 text-white">
+								<h2 className="text-3 xl md: text-4 xl font-bold mb-6">
+									Contact Us
 								</h2>
-
-									If you have any questions about this Privacy Policy or our data practices  please contactus:
-
-								<pclassName="tex, t-xlmb-8 opacity-90">
-									If, you, have any, questions, about this, Privacy, Policy or, our, data practicespleasecontact us:
-
+								<p className="text-xl mb-8 opacity-90">
+									If you have any questions about this Privacy Policy or our data practices  please contact us:
 								</p>
-			<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-6">			<div>
+			<div className="grid grid-cols-1, md:grid-cols-2 gap-6">
+			<div>
 										<h3 className="text-xl font-semibold mb-3">Email</h3>
 										<p className="opacity-90">privacy@zion.app</p>
 									</div>
@@ -110,13 +107,15 @@
 						<section className={`mb-16 transition-all duration-700 delay-1100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<divclassName="bg-whiterounded-2 xlshadow-lgp-8">
-								<h2className="text-2, xlmd: te, x, t-3, xl, font-boldtext-gray-800 mb-6">
-									Legal, Complianc, e
+			<div className="bg-white rounded-2 xl shadow-lg p-8">
+								<h2 className="text-2 xl md: text-3 xl font-bold text-gray-800 mb-6">
+									Legal Compliance
 								</h2>
-			<divclassName="proseprose-lg, ma, x-w-none, tex, t-gray-600 leading-relaxed">
-									<pclassName="mb-4">
-										ThisPrivacyPolicy is, designed, to complywithapplicable dataprotectionlaws including:									</p>
+			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+									<p className="mb-4">
+										This Privacy Policy is designed to comply with applicable data protection laws ,
+		including:
+									</p>
 									<ul className="list-disc pl-6 mb-4">
 										<li>General Data Protection Regulation (GDPR)</li>
 										<li>California Consumer Privacy Act (CCPA)</li>
@@ -125,16 +124,7 @@
 									</ul>
 									<p>
 										If you are located in the European Union  you have additional rights under the GDPR  including the right to data portability  the right to erasure  and the right to object to processing. Please contact us if you wish to exercise these rights.
-
-import Head from "next/head";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
-
-export default function PrivacyPolicy(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
+ {
 		setIsVisible(true)}, []);
 
 	// Analytics tracking
@@ -211,15 +201,26 @@ export default function PrivacyPolicy(): JSX.Element {
 									<p className="text-gray-600 leading-relaxed">
 										{section.content}
 
+
+
 									</p>
 								</div>
-							))}
-						</div>
+							</div>
+						</section>
 
 
-			<divclassName="absoluteinset-0 opacity-10">
 			<divclassName="absoluteinset-0" style={{
 									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>							</div>
+
+						{/* CTA Section */}
+						<section className={`text-center py-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-16 text-white relative overflow-hidden transition-all duration-1000 delay-1200 ${
+							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+						}`}>
+			<div className="absolute inset-0 opacity-10">
+			<div className="absolute inset-0" style={{
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+							</div>
+
 			<div className="relative z-10">
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Questions About Privacy?
@@ -230,46 +231,32 @@ export default function PrivacyPolicy(): JSX.Element {
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
-											onClick={() => trackClick('contact-privacy''cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xlhover:shadow-2 xl transformhover:-translate-y-1 text-lg"
-
-								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90 font-lightleading-relaxed">
-									We&ap, o, s;re, here, to he, l, p. Contact, us, for any, privac, y-related, questions, or concer, n, s.
-								</p>
-			<divclassName="flexflex-colsm:fl, e, x-rowgap-6 justify-center">
-					<Linkhref="/contact">
-										<buttononClick={() => trackClick("contact-privacy""cta")};
-											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o, w-2, xltransformhover:-translate-y-1 text-lg"
-
+											onClick={() => trackClick('contact-privacy', 'cta')}
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
-											<spanclassName="flexitems-center justify-centergap-2">
-												ContactUs
-												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
-													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8l4, 4m0 0l-44m4-4H3" />												</svg>
+											<span className="flex items-center justify-center gap-2">
+												Contact Us
+												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+												</svg>
 											</span>
 										</button>
 									</Link>
 					<Link href="/faq">
 										<button 
-											onClick={() => trackClick('view-faq-privacy''cta')}
-											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-whitehover:text-blue-600 transition-all duration-300 transformhover:-translate-y-1 text-lg"
-
-					<Linkhref="/faq">
-										<buttononClick={() => trackClick("vi, ew-faq-privacy""cta")};
-											className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transformhover:-translate-y-1 text-lg"
-
+											onClick={() => trackClick('view-faq-privacy', 'cta')}
+											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 										>
-											<spanclassName="flexitems-center justify-centergap-2">
-												ViewFAQ
-												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1, transitio, n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
-													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228, 9, c.5, 4, 9-1.16, 5, 2.03-2 3.7, 7, 2-2 2.21, 0, 4 1.343, 4, 3 0 1.4-1.27, 8, 2.5, 7, 5-3.00, 6, 2.9, 0, 7-.5, 4, 2.1, 0, 4-.9, 9, 4.54-.99, 4, 1.093m0, 3, h.01M21, 12a9, 9 0, 1, 1-1809 900118 0z" />												</svg>
+											<span className="flex items-center justify-center gap-2">
+												View FAQ
+												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
 											</span>
 										</button>
 									</Link>
 								</div>
 
-						{/* Contact Information */}
-						<div className="mt-12 p-6 bg-gray-50 rounded-lg">
 							<h3 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h3>
 							<p className="text-gray-600 mb-4">
 								If you have any questions about this privacy policy or our data practices, please contact us:
@@ -309,4 +296,15 @@ export default function PrivacyPolicy(): JSX.Element {
 			</div>
 		</>
 	)}
+
+
+							</div>
+						</section>
+					</main>
+				</div>
+                        </div>
+                </div>
+            </div>
+        </>
+    )}
 

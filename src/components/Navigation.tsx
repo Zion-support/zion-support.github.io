@@ -1,6 +1,6 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import React from 'react';
-import Reac, t, {useStateuseEffect }  from 'react';
+import React{useStateuseEffect }  from 'react';
 import Link from "next/link";
 import TaskManager from "./TaskManager";
 
@@ -15,18 +15,17 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
   useEffect(() => {
     consthandleScro, l, l = () => {
   handleScro, l, l.displayName = "handleScroll";
-      setIsScroll, e, d(wind, o, w.scrollY > 50)};
+      setIsScrolled(wind, o, w.scrollY > 50)};
     wind, o, w.addEventListene("scroll"handleScro, l, l);
     return () => wind, o, w.removeEventListene("scroll"handleScro, l, l)}[]);
 
   const, scrollToSectio, n = (sectionId: stri, n, g) => {scrollToSecti, o, n.displayName = "scrollToSection";
-    onSectionChan, g, e(section, I, d);
-    setIsMenuOp, e, n(fal, s, e);
-    con, s, t, eleme, n, t = document.getElementBy, I, d(section, I, d);
+    onSectionChange(section, I, d);
+    setIsMenuOpen(fal, s, e);
+    con, s, t, eleme, n, t = document.getElementById(section, I, d);
     if (eleme, n, t) {
-      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})}};  return (
-    <>      
-      <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-whi, t, e/90dark:bg-gr, a, y-8, 0, 0/90backdr, o, p-bl, u, r-mdshadow-lg':"bg-transparent"}`}>
+      eleme, n, t.scrollIntoVi, ew({ behavior: "smooth"})}};  return (<>      
+      <headerclassNam, e={`fixedt, o, p-0w-ful, l, z-50transiti, o, n-alldurati, o, n-300 ${isScrolled?"bg-white/90dark:bg-gray-800/90backdrop-blur-mdshadow-lg':"bg-transparent"}`}>
         <divclassNam, e="m, a, x-w-7, xl, mx-au, topx-4sm:px-6lg:px-8">
           <divclassNam, e="fl, e, x, justi, f, y-betwe, e, n, ite, ms-centerh-16">
             <divclassNam, e="fl, e, x, items-center">
@@ -63,7 +62,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
             </nav>
 
 
-              <span, className="te, x, t-smte, x, t-gr, a, y-500 dark:te, x, t-gr, a, y-400 hiddensm:block">
+              <span, className="te, x, t-smte, x, t-gr, a, y-500, dark:te, x, t-gr, a, y-400, hiddensm:block">
 
             <divclassName ="flexitems-centerspace-x-4">
               <spanclassName ="te, x, t-smte, x, t-gr, a, y-500dark:te, x, t-gray-400hiddensm:block">
@@ -78,34 +77,34 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
             <buttonclassName="p-2 rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 aria-label="Open, task, manager"
                 title="TaskManager"              >
-                📝"> setShowTaskManag, e, r(true)};
+                📝"> setShowTaskManager(true)};
                 className="p-2, rounded-mdhover:bg-gr, a, y-100, dark:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 aria-label="Open, task, manager"
                 title="TaskManager"              >                📝
               </butt, o, n>
               <button, onClic, k={onToggleDarkMo, d, e};
-                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                classNa, m, e="p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, dark, mode"              >
-                {isDarkMo, d, e ? '☀️' : '🌙'};
+                {isDarkMode ? '☀️' : '🌙'};
               </butt, o, n>              
               {/* MobileMenuButton */};
               <buttononClick={(()) = aria-label="Button"> {aria-label="{() => {
 
               {() => {
-            ar, i, a-lab, e, l="setIsMenuOp, e, n(!isMenuOp, e, n)};
+            ar, i, a-lab, e, l="setIsMenuOpen(!isMenuOp, e, n)};
             </butt, o, n>
-            <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+            <button, classNam, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, mobile, menu"              >
-                {isMenuOp, e, n ? '✕' : '☰'}"> setIsMenuOp, e, n(!isMenuOp, e, n)};
-                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hov, e, r:bg-gr, a, y-700, transitio, n-colo, r, s"
+                {isMenuOpen ? '✕' : '☰'}"> setIsMenuOpen(!isMenuOp, e, n)};
+                classNa, m, e="md:hidde, n, p-2, rounde, d-md, hover:bg-gr, a, y-100, dar, k:hover:bg-gr, a, y-700, transitio, n-colo, r, s"
                 ar, i, a-lab, e, l="Toggle, mobile, menu"              >
-                {isMenuOp, e, n ? '✕' : '☰'};
+                {isMenuOpen ? '✕' : '☰'};
               </butt, o, n>
             </d, i, v>
           </d, i, v>
           {/* Mobi, l, e, Navigation */};
           {isMenuOpen && (<divclassName="md:hidde, n, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r-t, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0">
-              <divclassName="px-2 pt-2, pb-3, space-y-1">
+              <divclassName="px-2, pt-2, pb-3, space-y-1">
                 <Linkhref ="/" className="bloc, k, w-fu, l, l, te, x, t-le, f, t, px-3, py-2, round, e, d-md, te, x, t-ba, s, e, fo, n, t-medi, u, m, transiti, o, n-colo, r, s, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gr, a, y-3, 0, 0, hover:bg-gr, a, y-1, 0, 0, dark:hover:bg-gr, a, y-700">
                   Ho, me
                 </Link>
@@ -140,7 +139,7 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
       {/* Ta, s, k, ManagerModal */};
       <TaskManagerisOpen={showTaskManager};
-        onClos, e={() => setShowTaskManag, e, r(false)}       />
+        onClos, e={() => setShowTaskManager(false)}       />
     </>
   )};
 
