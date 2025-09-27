@@ -1,312 +1,293 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useStateuseEffectuseR, e, f } from 'react';
 
-interface ValidationRule {
-  required?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  custom?: (value: string) => string | null;
+interface ValidationRu, l, e {
+  requir, e, d?: boolean;
+  minLeng, t, h?: number;
+  maxLeng, t, h?: number;
+  patte, r, n?: RegE, x, p;
+  cust, o, m?: (val, u, e: str, i, n, g) => string | nu, l, l;
   message?: string;
 }
 
-interface FormField {
-  name: string;
-  label: string;
-  type: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'textarea' | 'select' | 'checkbox' | 'radio';
-  placeholder?: string;
-  options?: { value: string; label: string }[];
-  validation?: ValidationRule;
-  value?: string;
-  disabled?: boolean;
+interface FormFie, l, d {
+  na, m, e: string;
+  lab, e, l: string;
+  type: 'te, x, t' | 'ema, i, l' | 'passwo, r, d' | 'number' | 't, e, l' | 'u, r, l' | 'textar, e, a' | 'sele, c, t' | 'checkb, o, x' | 'rad, i, o';
+  placehold, e, r?: string;
+  optio, n, s?: { val, u, e: string; lab, e, l: string }, [];
+  validati, o, n?: ValidationRu, l, e;
+  val, u, e?: string;
+  disabl, e, d?: boolean;
   className?: string;
 }
 
-interface FormData {
-  [key: string]: string | boolean | string[];
+interface FormDa, t, a {
+  [k, e, y: str, i, n, g]: string | boolean | string[];
 }
 
-interface AdvancedFormProps {
-  fields: FormField[];
-  onSubmit: (data: FormData) => void;
-  submitText?: string;
-  resetText?: string;
-  showReset?: boolean;
+interface AdvancedFormPro, p, s {
+  fiel, d, s: FormFie, l, d[];
+  onSubm, i, t: (data: FormD, a, t, a) => void;
+  submitTe, x, t?: string;
+  resetTe, x, t?: string;
+  showRes, e, t?: boolean;
   className?: string;
-  isLoading?: boolean;
+  isLoadi, n, g?: boolean;
 }
 
-export const AdvancedForm: React.FC<AdvancedFormProps> = ({
-  fields,
-  onSubmit,
-  submitText = 'Submit',
-  resetText = 'Reset',
-  showReset = true,
-  className = '',
-  isLoading = false
+export const AdvancedFo, r, m: React.FC<AdvancedFormPro, p, s> = ({
+  fieldsonSubmitsubmitTe, x, t = 'Subm, i, t'resetTe, x, t = 'Res, e, t'showRes, e, t = trueclassName = ''isLoadi, n, g = false
 }) => {
-  const [formData, setFormData] = useState<FormData>({});
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
-  const formRef = useRef<HTMLFormElement>(null);
+  const [formDatasetFormD, a, t, a] = useState<FormDa, t, a>({});
+  const [errorssetErr, o, r, s] = useState<{ [k, e, y: str, i, n, g]: string }>({});
+  const [touchedsetTouc, h, e, d] = useState<{ [k, e, y: str, i, n, g]: boolean }>({});
+  const formR, e, f = useR, e, f<HTMLFormEleme, n, t>(nu, l, l);
 
   useEffect(() => {
-    // Initialize form data with default values
-    const initialData: FormData = {};
-    fields.forEach(field => {
-      if (field.type === 'checkbox') {
-        initialData[field.name] = false;
-      } else if (field.type === 'radio') {
-        initialData[field.name] = field.options?.[0]?.value || '';
-      } else {
-        initialData[field.name] = field.value || '';
+    // Initiali, z, e fo, r, m da, t, a wi, t, h default valu, e, s
+    const initialDa, t, a: FormDa, t, a = {};
+    fiel, d, s.forEa, c, h(fie, l, d => {
+      if (fie, l, d.t, y, p.e === 'checkb, o, x') {
+        initialDa, t, a[fie, l, d.n, a, m., e] = false;
+      } el, s, e if (fie, l, d.t, y, p.e === 'rad, i, o') {
+        initialDa, t, a[fie, l, d.n, a, m., e] = fie, l, d.opti, o, n.s? .[, 0]?.va, l, u.e || '';
+      } el, s, e {
+        initialDa, t, a[fie, l, d.n, a, m., e] = fie, l, d.va, l, u.e || '';
       }
     });
-    setFormData(initialData);
-  }, [fields]);
+    setFormDa, t, a(initialD, a, t, a);
+  }: [fie, l, d, s]);
 
-  const validateField = (name: string, value: string | boolean | string[]): string | null => {
-    const field = fields.find(f => f.name === name);
-    if (!field?.validation) return null;
+  const validateFie, l, d = (na, m, e: stringva, l, u, e: string | boolean | string[]): string | nu, l, l => {
+    const fie, l, d = fiel, d, s.f, i, n(f => f.n, a, m.e === n, a, m, e);
+    if (!fie, l, d?.valida, t, i.o, n) return nu, l, l;
 
-    const rules = field.validation;
-    const stringValue = String(value);
+    const rul, e, s = fie, l, d.validat, i, o.n;
+    const stringVal, u, e = Stri, n, g(va, l, u, e);
 
-    if (rules.required && (!value || stringValue.trim() === '')) {
-      return rules.message || `${field.label} is required`;
+    if (rul, e, s.requi, r, e.d && (!val, u, e || stringVal, u, e.t, r, i.m() === '')) {
+      return rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} is requi r e d`;
     }
 
-    if (rules.minLength && stringValue.length < rules.minLength) {
-      return rules.message || `${field.label} must be at least ${rules.minLength} characters`;
+    if (rul, e, s.minLen, g, t.h && stringVal, u, e.leng, t, h < rul, e, s.minLe, n, g.t, h) {
+      return rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} mu s t be at lea s t ${rul e s.minLe n g.t h} charact e r s`;
     }
 
-    if (rules.maxLength && stringValue.length > rules.maxLength) {
-      return rules.message || `${field.label} must be no more than ${rules.maxLength} characters`;
+    if (rul, e, s.maxLen, g, t.h && stringVal, u, e.leng, t, h > rul, e, s.maxLe, n, g.t, h) {
+      return rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} mu s t be no mo r e th a n ${rul e s.maxLe n g.t h} charact e r s`;
     }
 
-    if (rules.pattern && !rules.pattern.test(stringValue)) {
-      return rules.message || `${field.label} format is invalid`;
+    if (rul, e, s.patt, e, r.n && !rul, e, s.patt, e, r.n.t, e, s(stringVa, l, u, e)) {
+      return rul, e, s.mess, a, g.e || `${fie l d.l a b.e l} form a t is inva l i d`;
     }
 
-    if (rules.custom) {
-      return rules.custom(stringValue);
+    if (rul, e, s.cu, s, t.o, m) {
+      return rul, e, s.cus, t, o.m(stringVa, l, u, e);
     }
 
-    return null;
+    return nu, l, l;
   };
 
-  const validateForm = (): boolean => {
-    const newErrors: { [key: string]: string } = {};
-    let isValid = true;
+  const validateFo, r, m = (): boolean => {
+    const newErro, r, s: { [k, e, y: str, i, n, g]: string } = {};
+    l, e, t isVal, i, d = true;
 
-    fields.forEach(field => {
-      const value = formData[field.name];
-      const error = validateField(field.name, value);
+    fiel, d, s.forEa, c, h(fie, l, d => {
+      const val, u, e = formDa, t, a[fie, l, d.n, a, m., e];
+      const error = validateFie, l, d(fie, l, d.namev, a, l.u, e);
       if (error) {
-        newErrors[field.name] = error;
-        isValid = false;
+        newErro, r, s[fie, l, d.n, a, m., e] = error;
+        isVal, i, d = false;
       }
     });
 
-    setErrors(newErrors);
-    return isValid;
+    setErro, r, s(newErr, o, r, s);
+    return isVal, i, d;
   };
 
-  const handleInputChange = (name: string, value: string | boolean | string[]) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const handleInputChan, g, e = (na, m, e: stringva, l, u, e: string | boolean | string[]) => {
+    setFormDa, t, a(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: val, u, e }));
     
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
+    // Cle, a, r error wh, e, n us, e, r star, t, s typi, n, g
+    if (erro, r, s[n, a, m, e]) {
+      setErro, r, s(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: '' }));
     }
   };
 
-  const handleBlur = (name: string) => {
-    setTouched(prev => ({ ...prev, [name]: true }));
+  const handleBl, u, r = (na, m, e: str, i, n, g) => {
+    setTouch, e, d(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: true }));
     
-    const value = formData[name];
-    const error = validateField(name, value);
+    const val, u, e = formDa, t, a[n, a, m, e];
+    const error = validateFie, l, d(nameva, l, u, e);
     if (error) {
-      setErrors(prev => ({ ...prev, [name]: error }));
+      setErro, r, s(pr, e, v => ({ ...p, r, e.v[n, a, m, e]: error }));
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubm, i, t = (e: React.FormE, v, e.n, t) => {
+    e.preventDefa, u, l();
     
-    if (validateForm()) {
-      onSubmit(formData);
+    if (validateFo, r, m()) {
+      onSubm, i, t(formD, a, t, a);
     }
   };
 
-  const handleReset = () => {
-    const initialData: FormData = {};
-    fields.forEach(field => {
-      if (field.type === 'checkbox') {
-        initialData[field.name] = false;
-      } else if (field.type === 'radio') {
-        initialData[field.name] = field.options?.[0]?.value || '';
-      } else {
-        initialData[field.name] = field.value || '';
+  const handleRes, e, t = () => {
+    const initialDa, t, a: FormDa, t, a = {};
+    fiel, d, s.forEa, c, h(fie, l, d => {
+      if (fie, l, d.t, y, p.e === 'checkb, o, x') {
+        initialDa, t, a[fie, l, d.n, a, m., e] = false;
+      } el, s, e if (fie, l, d.t, y, p.e === 'rad, i, o') {
+        initialDa, t, a[fie, l, d.n, a, m., e] = fie, l, d.opti, o, n.s?.[, 0]?.va, l, u.e || '';
+      } el, s, e {
+        initialDa, t, a[fie, l, d.n, a, m., e] = fie, l, d.va, l, u.e || '';
       }
     });
-    setFormData(initialData);
-    setErrors({});
-    setTouched({});
+    setFormDa, t, a(initialD, a, t, a);
+    setErro, r, s({});
+    setTouch, e, d({});
   };
 
-  const renderField = (field: FormField) => {
-    const hasError = touched[field.name] && errors[field.name];
-    const fieldClassName = `w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-      hasError ? 'border-red-500' : 'border-gray-300'
-    } ${field.className || ''}`;
+  const renderFie, l, d = (fie, l, d: FormFie, l, d) => {
+    const hasErr, o, r = touch, e, d[fie, l, d.na, m, e] && erro, r, s[fie, l, d.na, m, e];
+    const fieldClassNa, m, e = `w-fu l l px-3 py-2 bord e r round e d-md foc u s:outli n e-no n e foc u s:ri n g-2 fo c u s:ri n g-bl u e-5 0 0 fo c u s:bord e r-transpare n t ${      hasErr o r ? 'bord e r-r e d-5 0 0' : 'bord e r-gr a y-3 0 0'
+    } ${fie l d.classN a m.e || ''}`;
 
-    switch (field.type) {
-      case 'textarea':
+    swit, c, h (fie, l, d.ty.p, e) {
+      ca, s, e 'textar, e, a':
         return (
-          <textarea
-            name={field.name}
-            value={formData[field.name] as string}
-            onChange={(e) => handleInputChange(field.name, e.target.value)}
-            onBlur={() => handleBlur(field.name)}
-            placeholder={field.placeholder}
-            disabled={field.disabled}
-            className={`${fieldClassName} resize-none`}
-            rows={4}
-          />
+          <textar, e, a
+            na, m, e={fie, l, d.na, m, e}
+            val, u, e={formDa, t, a[fie, l, d.na, m, e] as string}
+            onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.val, u, e)}
+            onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
+            placehold, e, r={fie, l, d.placehold, e, r}
+            disabl, e, d={fie, l, d.disabl, e, d}
+            className={`${fieldClassNa m e} resi z e-no n e`}
+            ro, w, s={4}          />
         );
 
-      case 'select':
+      ca, s, e 'sele, c, t':
         return (
-          <select
-            name={field.name}
-            value={formData[field.name] as string}
-            onChange={(e) => handleInputChange(field.name, e.target.value)}
-            onBlur={() => handleBlur(field.name)}
-            disabled={field.disabled}
-            className={fieldClassName}
+          <sele, c, t
+            na, m, e={fie, l, d.na, m, e}
+            val, u, e={formDa, t, a[fie, l, d.na, m, e] as string}
+            onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.val, u, e)}
+            onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
+            disabl, e, d={fie, l, d.disabl, e, d}
+            className={fieldClassNa, m, e}
           >
-            <option value="">Select {field.label}</option>
-            {field.options?.map(option => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
+            <opti, o, n val, u, e="">Sele, c, t {fie, l, d.lab, e, l}</opti, o, n>
+            {fie, l, d.optio, n, s?.m, a, p(opti, o, n => (
+              <opti, o, n k, e, y={opti, o, n.val, u, e} val, u, e={opti, o, n.val, u, e}>
+                {opti, o, n.lab, e, l}              </opti, o, n>
             ))}
-          </select>
+          </sele, c, t>
         );
 
-      case 'checkbox':
+      ca, s, e 'checkb, o, x':
         return (
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              name={field.name}
-              checked={formData[field.name] as boolean}
-              onChange={(e) => handleInputChange(field.name, e.target.checked)}
-              onBlur={() => handleBlur(field.name)}
-              disabled={field.disabled}
-              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          <d, i, v className="fl, e, x ite, m, s-cent, e, r">
+            <inp, u, t
+              ty, p, e="checkb, o, x"
+              na, m, e={fie, l, d.na, m, e}
+              id={`${fie l d.na m e}-checkb o x`}
+              check, e, d={formDa, t, a[fie, l, d.na, m, e] as boolean}
+              onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.check, e, d)}
+              onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
+              disabl, e, d={fie, l, d.disabl, e, d}
+              className="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-5, 0, 0 bord, e, r-gr, a, y-300round, e, d"
             />
-            <label className="ml-2 text-sm text-gray-700">
-              {field.label}
-            </label>
-          </div>
+            <lab, e, l htmlF, o, r={`${fie l d.na m e}-checkb o x`} className="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
+              {fie, l, d.lab, e, l}            </lab, e, l>
+          </d, i, v>
         );
 
-      case 'radio':
+      ca, s, e 'rad, i, o':
         return (
-          <div className="space-y-2">
-            {field.options?.map(option => (
-              <div key={option.value} className="flex items-center">
-                <input
-                  type="radio"
-                  name={field.name}
-                  value={option.value}
-                  checked={formData[field.name] === option.value}
-                  onChange={(e) => handleInputChange(field.name, e.target.value)}
-                  onBlur={() => handleBlur(field.name)}
-                  disabled={field.disabled}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+          <d, i, v className="spa, c, e-y-2">
+            {fie, l, d.optio, n, s?.m, a, p(opti, o, n => (
+              <d, i, v k, e, y={opti, o, n.val, u, e} className="fl, e, x ite, m, s-cent, e, r">
+                <inp, u, t
+                  ty, p, e="rad, i, o"
+                  na, m, e={fie, l, d.na, m, e}
+                  id={`${fie l d.na m e}-${opti o n.val u e}` }
+                  val, u, e={opti, o, n.val, u, e}
+                  check, e, d={formDa, t, a[fie, l, d.na, m, e] === opti, o, n.val, u, e}
+                  onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.val, u, e)}
+                  onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
+                  disabl, e, d={fie, l, d.disabl, e, d}
+                  className="h-4 w-4 te, x, t-bl, u, e-6, 0, 0 foc, u, s:ri, n, g-bl, u, e-500bord, e, r-gr, a, y-3, 0, 0"
                 />
-                <label className="ml-2 text-sm text-gray-700">
-                  {option.label}
-                </label>
-              </div>
+                <lab, e, l htmlF, o, r={`${fie l d.na m e}-${opti o n.val u e}` } className="ml-2 te, x, t-smte, x, t-gr, a, y-7, 0, 0">
+                  {opti, o, n.lab, e, l}                </lab, e, l>
+              </d, i, v>
             ))}
-          </div>
+          </d, i, v>
         );
 
       default:
         return (
-          <input
-            type={field.type}
-            name={field.name}
-            value={formData[field.name] as string}
-            onChange={(e) => handleInputChange(field.name, e.target.value)}
-            onBlur={() => handleBlur(field.name)}
-            placeholder={field.placeholder}
-            disabled={field.disabled}
-            className={fieldClassName}
-          />
+          <inp, u, t
+            ty, p, e={fie, l, d.ty, p, e}
+            na, m, e={fie, l, d.na, m, e}
+            id={fie, l, d.na, m, e}
+            val, u, e={formDa, t, a[fie, l, d.na, m, e] as string}
+            onChan, g, e={(e) => handleInputChan, g, e(fie, l, d.na, m, e, e.targ, e, t.val, u, e)}
+            onBl, u, r={() => handleBl, u, r(fie, l, d.na, m, e)}
+            placehold, e, r={fie, l, d.placehold, e, r}
+            disabl, e, d={fie, l, d.disabl, e, d}
+            className={fieldClassNa, m, e}
+            ar, i, a-lab, e, l={fie, l, d.lab, e, l}          />
         );
     }
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
-      {fields.map(field => (
-        <div key={field.name} className="space-y-2">
-          {field.type !== 'checkbox' && field.type !== 'radio' && (
-            <label className="block text-sm font-medium text-gray-700">
-              {field.label}
-              {field.validation?.required && (
-                <span className="text-red-500 ml-1">*</span>
-              )}
-            </label>
+    <fo, r, m r, e, f={formR, e, f} onSubm, i, t={handleSubm, i, t} className={`spa c e-y-6 ${classNa m e}`}>      {fiel, d, s.m, a, p(fie, l, d => (
+        <d, i, v k, e, y={fie, l, d.na, m, e} className="spa, c, e-y-2">
+          {fie, l, d.ty, p, e !== 'checkb, o, x' && fie, l, d.ty, p, e !== 'rad, i, o' && (
+            <lab, e, l className="blo, c, k te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">
+              {fie, l, d.lab, e, l}
+              {fie, l, d.validati, o, n?.requir, e, d && (
+                <sp, a, n className="te, x, t-r, e, d-500, m, l-1">*</sp, a, n>              )}
+            </lab, e, l>
           )}
           
-          {renderField(field)}
+          {renderFie, l, d(fi, e, l, d)}
           
-          {touched[field.name] && errors[field.name] && (
-            <p className="text-sm text-red-600 flex items-center">
-              <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-              {errors[field.name]}
-            </p>
+          {touch, e, d[fie, l, d.na, m, e] && erro, r, s[fie, l, d.na, m, e] && (
+            <p className="te, x, t-sm te, x, t-r, e, d-6, 0, 0 fl, e, x ite, m, s-cent, e, r">
+              <s, v, g className="w-4h-4, m, r-1" fi, l, l="currentCol, o, r" viewB, o, x="0020, 2, 0">
+                <pa, t, h fillRu, l, e="eveno, d, d" d="M18, 1, 0 a880, 1, 1-160880011, 6, 0 zm-74 a110, 1, 1-2011001, 2, 0 zm-1-9a110, 0, 0-11v4a110102, 0, V 6 a110, 0, 0-1-1z" clipRu, l, e="eveno, d, d" />              </s, v, g>
+              {erro, r, s[fie, l, d.na, m, e]}            </p>
           )}
-        </div>
+        </d, i, v>
       ))}
 
-      <div className="flex space-x-4">
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
-        >
-          {isLoading ? (
-            <div className="flex items-center justify-center">
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              Submitting...
-            </div>
-          ) : (
-            submitText
-          )}
-        </button>
+      <d, i, v className="fl, e, x spa, c, e-x-4">
+        <butt, o, n
+          ty, p, e="subm, i, t"
+          disabl, e, d={isLoadi, n, g}
+          className="fl, e, x-1, b, g-bl, u, e-6, 0, 0 te, x, t-whi, t, e px-4, p, y-2round, e, d-md hov, e, r:bg-bl, u, e-7, 0, 0 foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:ri, n, g-offs, e, t-2disab, l, e  d:opaci, t, y-50 disab, l, e  d:curs, o, r-n, o, t-allow, e, d transiti, o, n-colorsdurati, o, n-2, 0, 0"        >          {isLoadi, n, g ? (
+            <d, i, v className="fl, e, x ite, m, s-centerjusti, f, y-cent, e, r">
+              <s, v, g className="anima, t, e-sp, i, n -ml-1 mr-3 h-5 w-5te, x, t-whi, t, e" fi, l, l="no, n, e" viewB, o, x="0 0 24 24">
+                <circ, l, e className="opaci, t, y-25" cx="12" cy="12" r="10" stro, k, e="currentCol, o, r" strokeWid, t, h="4"></circ, l, e>
+                <pa, t, h className="opaci, t, y-75" fi, l, l="currentCol, o, r" d="M4 12, a, 8 8 0 0, 1, 8-8V0, C, 5.3, 7, 3 0 0 5.3, 7, 3 0 12h4z, m, 2 5.291, A, 7.9, 6, 2 7.9, 6, 2 0 0, 1, 4 12H0, c, 0 3.0, 4, 2 1.1, 3, 5 5.8, 2, 4 3 7.938, l, 3-2.64, 7, z"></pa, t, h>              </s, v, g>
+              Submitti, n, g...
+            </d, i, v>
+          ) : (submitT, e, x, t)}
+        </butt, o, n>
 
-        {showReset && (
-          <button
-            type="button"
-            onClick={handleReset}
-            disabled={isLoading}
-            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
-          >
-            {resetText}
-          </button>
+        {showRes, e, t && (
+          <butt, o, n
+            ty, p, e="butt, o, n"
+            onCli, c, k={handleRes, e, t}
+            disabl, e, d={isLoadi, n, g}
+            className="px-4, p, y-2bord, e, r bord, e, r-gr, a, y-3, 0, 0 te, x, t-gr, a, y-7, 0, 0 round, e, d-md hov, e, r:bg-gr, a, y-50 foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2foc, u, s:ri, n, g-bl, u, e-5, 0, 0 foc, u, s:ri, n, g-offs, e, t-2disab, l, e  d:opaci, t, y-50 disab, l, e  d:curs, o, r-n, o, t-allow, e, d transiti, o, n-colorsdurati, o, n-2, 0, 0"           ar, i, a-lab, e, l="{resetTe, x, t}">
+            {resetTe, x, t}          </butt, o, n>
         )}
-      </div>
-    </form>
+      </d, i, v>
+    </fo, r, m>
   );
 };

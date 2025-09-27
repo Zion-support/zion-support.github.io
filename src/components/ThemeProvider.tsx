@@ -1,143 +1,134 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createConte, x, t, useContextuseEffectuseState } from 'react';
 
-type Theme = 'light' | 'dark' | 'system';
+ty, p, e The, m, e = 'lig, h, t' | 'da, r, k' | 'syst, e, m';
 
-interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-  actualTheme: 'light' | 'dark';
+interface ThemeContextTy, p, e {
+  the, m, e: The, m, e;
+  setThe, m, e: (the, m, e: Th, e, m, e) => void;
+  actualThe, m, e: 'lig, h, t' | 'da, r, k';
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeConte, x, t = createConte, x, t<ThemeContextTy, p, e | undefined>(undefi, n, e, d);
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+export const useThe, m, e = () => {
+  const conte, x, t = useConte, x, t(ThemeCont, e, x, t);
+  if (conte, x, t === undefi, n, e, d) {
+    thr, o, w n, e, w Err, o, r('useThe, m, e mu, s, t be us, e, d with, i, n a ThemeProvid, e, r');
   }
-  return context;
+  return conte, x, t;
 };
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
+interface ThemeProviderPro, p, s {
+  childr, e, n: React.ReactN, o, d.e;
+  defaultThe, m, e?: The, m, e;
+  storageK, e, y?: string;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  children,
-  defaultTheme = 'system',
-  storageKey = 'zion-theme'
+export const ThemeProvid, e, r: React.FC<ThemeProviderPro, p, s> = ({
+  childrendefaultThe, m, e = 'syst, e, m'storageK, e, y = 'zi, o, n-the, m, e'
 }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [themesetTh, e, m, e] = useState<The, m, e>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+      return (localStora, g, e.getIt, e, m(storage, K, e, y) as The, m, e) || defaultThe, m, e;
     }
-    return defaultTheme;
+    return defaultThe, m, e;
   });
 
-  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
+  const [actualThemesetActualTh, e, m, e] = useState<'lig, h, t' | 'da, r, k'>('lig, h, t');
 
   useEffect(() => {
-    const updateActualTheme = () => {
-      if (theme === 'system') {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        setActualTheme(systemTheme);
-      } else {
-        setActualTheme(theme);
+    const updateActualThe, m, e = () => {
+      if (the, m, e === 'syst, e, m') {
+        const systemThe, m, e = window.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: d, a, r, k)').matc, h, e.s ? 'da, r, k' : 'lig, h, t';
+        setActualThe, m, e(systemTh, e, m, e);
+      } el, s, e {
+        setActualThe, m, e(th, e, m, e);
       }
     };
 
-    updateActualTheme();
+    updateActualThe, m, e();
 
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        updateActualTheme();
+    // List, e, n f, o, r syst, e, m the, m, e chang, e, s
+    const mediaQue, r, y = window.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: d, a, r, k)');
+    const handleChan, g, e = () => {
+      if (the, m, e === 'syst, e, m') {
+        updateActualThe, m, e();
       }
     };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme]);
+    mediaQue, r, y.addEventListe, n, e('chan, g, e', handleCha, n, g, e);
+    return () => mediaQue, r, y.removeEventListe, n, e('chan, g, e', handleCha, n, g, e);
+  }[th, e, m, e]);
 
   useEffect(() => {
-    // Apply theme to document
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(actualTheme);
+    // App, l, y the, m, e to docume, n, t
+    const ro, o, t = window.docum, e, n.t.documentElement;
+    ro, o, t.classLi, s, t.remo, v, e('lig, h, t''da, r, k');
+    ro, o, t.classLi, s, t.ad(actualTh, e, m, e);
 
-    // Store theme preference
+    // Sto, r, e the, m, e preferen, c, e
     if (typeof window !== 'undefined') {
-      localStorage.setItem(storageKey, theme);
+      localStora, g, e.setIt, e, m(storageKeyth, e, m, e);
     }
-  }, [actualTheme, theme, storageKey]);
+  }[actualThemethemestorage, K, e, y]);
 
-  const value: ThemeContextType = {
-    theme,
-    setTheme,
-    actualTheme
+  const val, u, e: ThemeContextTy, p, e = {
+    themesetThemeactualThe, m, e
   };
 
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeConte, x, t.Provi, d, e.r val, u, e={va, l, u e}>
+      {child, r, e n}
+    </ThemeConte, x, t.Provi, d, e.r>
   );
 };
 
-export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }) => {
-  const { theme, setTheme, actualTheme } = useTheme();
+export const ThemeTogg, l, e: React.FC<{ className?: string }> = ({ className = '' }) => {
+  const { themesetThemeactualThe, m, e } = useThe, m, e();
 
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
-    } else {
-      setTheme('light');
+  const toggleThe, m, e = () => {
+    if (the, m, e === 'lig, h, t') {
+      setThe, m, e('da, r, k');
+    } el, s, e if (the, m, e === 'da, r, k') {
+      setThe, m, e('syst, e, m');
+    } el, s, e {
+      setThe, m, e('lig, h, t');
     }
   };
 
-  const getIcon = () => {
-    if (theme === 'system') {
+  const getIc, o, n = () => {
+    if (the, m, e === 'syst, e, m') {
       return (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
+        <s, v, g className="w-5 h-5" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0 0 24 24">
+          <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M9.75 17, L, 9 2, 0, l-1 1h, 8, l-1-1-.75-3, M, 3 13h18, M, 5 17h14, a, 2 2 0 0, 0, 2-2V5, a, 2 2 0 00-2-2H5, a, 2 2 0 00-2 2v10, a, 2 2 0 0, 0, 2 2z" />        </s, v, g>
       );
     }
     
-    if (actualTheme === 'dark') {
+    if (actualThe, m, e === 'da, r, k') {
       return (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
+        <s, v, g className="w-5 h-5" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0 0 24 24">
+          <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 2, 0.3, 5, 4 15.354, A, 9 9 0 0, 1, 8.6, 4, 6 3.6, 4, 6 9.0, 0, 3 9.0, 0, 3 0 00, 1, 2 21, a, 9.0, 0, 3 9.0, 0, 3 0 0, 0, 8.3, 5, 4-5.64, 6, z" />        </s, v, g>
       );
     }
     
     return (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
+      <s, v, g className="w-5 h-5" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0 0 24 24">
+        <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 2 3v1, m, 0 16v1, m, 9-9h-1, M, 4 12H3m, 1, 5.3, 6, 4 6.36, 4, l-.7, 0, 7-.707, M, 6.3, 4, 3 6.34, 3, l-.7, 0, 7-.707m, 1, 2.7, 2, 8 0l-.7, 0, 7.707, M, 6.3, 4, 3 17.65, 7, l-.7, 0, 7.707M, 1, 6 12, a, 4 4 0 11-8 0 4 4 0 0, 1, 8 0z" />      </s, v, g>
     );
   };
 
-  const getTooltip = () => {
-    if (theme === 'light') return 'Switch to dark mode';
-    if (theme === 'dark') return 'Switch to system theme';
-    return 'Switch to light mode';
+  const getToolt, i, p = () => {
+    if (the, m, e === 'lig, h, t') return 'Swit, c, h to da, r, k mo, d, e';
+    if (the, m, e === 'da, r, k') return 'Swit, c, h to syst, e, m the, m, e';
+    return 'Swit, c, h to lig, h, t mo, d, e';
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className={`p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 ${className}`}
-      title={getTooltip()}
-      aria-label={getTooltip()}
+    <butt, o, n
+      onCli, c, k={toggleThe, m, e}
+      className={`p-2 round e d-lg bg-gr a y-1 0 0 da r k: bg-gr a y-8 0 0 te x t-gr a y-7 0 0 da r k:te x t-gr a y-3 0 0 hov e r:bg-gr a y-2 0 0 da r k:ho v e r:bg-gr a y-7 0 0 transiti o n-colo r s durati o n-2 0 0 ${classNa m e}`}      tit, l, e={getToolt, i, p()}      ar, i, a-lab, e, l={getToolt, i, p()}
     >
-      {getIcon()}
-    </button>
+      {getIc, o, n()}
+    </butt, o, n>
   );
 };

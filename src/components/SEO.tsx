@@ -26,7 +26,7 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://zion.app',
   type = 'website'
 }) => {
-  // This component is now a no-op since we're using Next.js Head component directly in pages
+  // This component is now a no-op since we're using Next.j.s Head component directly in pages
   // The SEO functionality is handled by the Head component in each page
   return null;
 };

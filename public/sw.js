@@ -1,13 +1,20 @@
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.ico'
+  '/about',
+  '/services',
+  '/contact',
+  '/blog',
+  '/portfolio',
+  '/faq',
+  '/privacy-policy',
+  '/dashboard',
+  '/enhanced-home',
+  '/_next/static/css/',
+  '/_next/static/js/',
 ];
 
-// Install event - cache resources
+// Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,19 +25,22 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve from cache when offline
+// Fetch event
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request);
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
       }
     )
   );
 });
 
-// Activate event - clean up old caches
+// Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -46,17 +56,14 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Background sync for offline form submissions
+// Background sync for analytics
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineFormSubmissions()
-    );
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-async function handleOfflineFormSubmissions() {
-  // Implementation for handling offline form submissions
-  console.log('Handling offline form submissions');
+async function doBackgroundSync() {
+  // Send any pending analytics data
+  console.log('Background sync triggered');
 }

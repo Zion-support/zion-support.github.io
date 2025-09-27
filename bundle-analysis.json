@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-09-27T00:04:59.414Z",
+  "bundleAnalysis": {
+    "totalSize": 1401316,
+    "fileSizes": {
+      ".next/static/build-1758931469473/_buildManifest.js": 1235,
+      ".next/static/build-1758931469473/_ssgManifest.js": 77,
+      ".next/static/chunks/104.144d806f18a4dd7d.js": 8180,
+      ".next/static/chunks/135.56a76fbbcd902d44.js": 6423,
+      ".next/static/chunks/2.f5ba7d84d32363f6.js": 6874,
+      ".next/static/chunks/224.7fa51e65315f6413.js": 7992,
+      ".next/static/chunks/236.2444615aa23c9a83.js": 31337,
+      ".next/static/chunks/277.1ccd333f69d8835c.js": 390951,
+      ".next/static/chunks/384.4a0a93d9c4584f44.js": 2902,
+      ".next/static/chunks/39.198caf8facc8883f.js": 5456,
+      ".next/static/chunks/429.293e567b30370fdd.js": 16056,
+      ".next/static/chunks/455.f841bc4af92e8489.js": 21273,
+      ".next/static/chunks/491.10b13cb69542dc89.js": 11660,
+      ".next/static/chunks/520.b172511d4a1a2889.js": 11175,
+      ".next/static/chunks/566.9ab755e6603326b9.js": 13707,
+      ".next/static/chunks/582.f62392d6a2bbdda2.js": 9412,
+      ".next/static/chunks/660.f98521bb98ea694d.js": 26144,
+      ".next/static/chunks/664-d254d21a6fe56bff.js": 6559,
+      ".next/static/chunks/675-8bfa09012e67fe54.js": 9525,
+      ".next/static/chunks/695.02e4bf86cff0bb2c.js": 10048,
+      ".next/static/chunks/718.772716fe7dcaa01c.js": 6122,
+      ".next/static/chunks/750.0e0cd45f93fb8661.js": 9901,
+      ".next/static/chunks/769.4972f295f71af242.js": 7522,
+      ".next/static/chunks/85.c6763da655d86dae.js": 5913,
+      ".next/static/chunks/863.708b8f8e6a63a477.js": 5934,
+      ".next/static/chunks/918.93ae8a352b64263f.js": 5052,
+      ".next/static/chunks/96.67e68af33dd1ad4e.js": 8904,
+      ".next/static/chunks/968.81bc6ce98ef78db7.js": 10631,
+      ".next/static/chunks/framework-64ad27b21261a9ce.js": 139978,
+      ".next/static/chunks/main-596479c92a13f6bd.js": 115852,
+      ".next/static/chunks/pages/404-407a9609729d266d.js": 2438,
+      ".next/static/chunks/pages/_app-e2ae0bfeb6ef5294.js": 173791,
+      ".next/static/chunks/pages/_error-7a92967bea80186d.js": 247,
+      ".next/static/chunks/pages/about-f1d896587596d1a5.js": 12164,
+      ".next/static/chunks/pages/analytics-0cd1971a21d4ca5c.js": 5128,
+      ".next/static/chunks/pages/blog-acc102cf738db5bc.js": 27301,
+      ".next/static/chunks/pages/contact-3e2c466d85bc260f.js": 12517,
+      ".next/static/chunks/pages/dashboard-713a21a0727dbfb6.js": 20750,
+      ".next/static/chunks/pages/enhanced-home-8413e95ebb1042e4.js": 18530,
+      ".next/static/chunks/pages/faq-248920e2d790bf1f.js": 13596,
+      ".next/static/chunks/pages/index-5a01e7f7e2f1dea7.js": 18011,
+      ".next/static/chunks/pages/portfolio-fd07dc3c20d0ef84.js": 14435,
+      ".next/static/chunks/pages/privacy-policy-7a0923e972d9a642.js": 12936,
+      ".next/static/chunks/pages/services-00e05563b98a6535.js": 29661,
+      ".next/static/chunks/polyfills-42372ed130431b0a.js": 112594,
+      ".next/static/chunks/webpack-c8521ce834fb519b.js": 3900,
+      ".next/static/css/580992c8a7aa4852.css": 10522
+    },
+    "totalSizeMB": "1.34"
+  },
+  "recommendations": {
+    "codeSplitting": [
+      "Implement dynamic imports for heavy components",
+      "Use React.lazy() for route-based code splitting",
+      "Split vendor bundles from application code",
+      "Implement component-level code splitting"
+    ],
+    "treeShaking": [
+      "Remove unused imports and exports",
+      "Use ES6 modules instead of CommonJS",
+      "Configure webpack to enable tree shaking",
+      "Remove unused CSS and dead code"
+    ],
+    "compression": [
+      "Enable gzip compression",
+      "Use Brotli compression for better ratios",
+      "Optimize images with WebP/AVIF formats",
+      "Minify CSS and JavaScript"
+    ],
+    "caching": [
+      "Implement proper cache headers",
+      "Use service workers for offline caching",
+      "Cache static assets with long TTL",
+      "Implement CDN for global distribution"
+    ],
+    "performance": [
+      "Implement lazy loading for images",
+      "Use intersection observer for scroll-based loading",
+      "Optimize critical rendering path",
+      "Reduce JavaScript execution time"
+    ]
+  },
+  "performanceScore": 90,
+  "nextSteps": [
+    "Maintain current optimization level",
+    "Monitor bundle size in future updates",
+    "Consider implementing service workers",
+    "Run bundle analyzer to identify large chunks",
+    "Test performance on slow networks",
+    "Implement performance monitoring"
+  ]
+}

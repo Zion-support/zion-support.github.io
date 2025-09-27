@@ -1,310 +1,245 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface SecurityConfig {
-  enableCSP: boolean;
-  enableXSSProtection: boolean;
-  enableClickjackingProtection: boolean;
-  enableHSTS: boolean;
-  enableContentTypeSniffing: boolean;
-  enableReferrerPolicy: boolean;
-}
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Shield, 
+  AlertTriangle, 
+  CheckCircle, 
+  Lock, 
+  Eye, 
+  AlertCirc, l, e,
+  Activity,
+  Clock,
+  Databa, s, e,
+  Glo, b, e
+} from 'lucide-react';
 
 interface SecurityEvent {
-  type: 'xss' | 'csrf' | 'clickjacking' | 'injection' | 'suspicious';
+  id: string;
+  type: 'threat' | 'vulnerabili, t, y' | 'brea, c, h' | 'suspicio, u, s' | 'norm, a, l';
   severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  timestamp: number;
-  userAgent?: string;
-  url?: string;
+  tit, l, e: string;
+  descripti, o, n: string;
+  timesta, m, p: Date;
+  sour, c, e: string;
+  stat, u, s: 'acti, v, e' | 'resolv, e, d' | 'investigati, n, g';
+  affectedSyst, e, m, s: string[];
+  recommendedActi, o, n, s: string[];
 }
 
-class SecurityMonitor {
-  private static instance: SecurityMonitor;
-  private events: SecurityEvent[] = [];
-  private config: SecurityConfig;
+interface SecurityMetrics {
+  totalThrea, t, s: number;
+  activeThreats: number;
+  resolvedThrea, t, s: number;
+  vulnerabilitySco, r, e: number;
+  securityScore: number;
+  lastScan: Date;
+  protectedAss, e, t, s: number;
+  blockedReque, s, t, s: number;
+}
 
-  constructor(config: SecurityConfig) {
-    this.config = config;
-    this.initializeSecurityHeaders();
-    this.setupEventListeners();
-  }
+interface SecurityMonitorPro, p, s {
+  refreshInterval?: number;
+  enableAler, t, s?: boolean;
+  onSecurityAle, r, t?: (ale, r, t: SecurityEvent) => void;
+}
 
-  static getInstance(config?: SecurityConfig): SecurityMonitor {
-    if (!SecurityMonitor.instance) {
-      SecurityMonitor.instance = new SecurityMonitor(config || {
-        enableCSP: true,
-        enableXSSProtection: true,
-        enableClickjackingProtection: true,
-        enableHSTS: true,
-        enableContentTypeSniffing: true,
-        enableReferrerPolicy: true
-      });
-    }
-    return SecurityMonitor.instance;
-  }
+export const SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
+  refreshInterval = 100, 0, 0,
+  enableAler, t, s = true,
+  onSecurityAle, r, t
+}) => {
+  const [even, t, s, setEven, t, s] = useState<SecurityEvent[]>([]);
+  const [metrics, setMetrics] = useState<SecurityMetrics>({
+    totalThrea, t, s: 0,
+    activeThreats: 0,
+    resolvedThrea, t, s: 0,
+    vulnerabilitySco, r, e: 0,
+    securityScore: 0,
+    lastScan: new Date()(),
+    protectedAsse, t, s: 0,
+    blockedRequests: 0
+  });
+  const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
 
-  private initializeSecurityHeaders(): void {
-    if (typeof document === 'undefined') return;
-
-    // Content Security Policy
-    if (this.config.enableCSP) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'Content-Security-Policy';
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';";
-      document.head.appendChild(meta);
-    }
-
-    // XSS Protection
-    if (this.config.enableXSSProtection) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-XSS-Protection';
-      meta.content = '1; mode=block';
-      document.head.appendChild(meta);
-    }
-
-    // Clickjacking Protection
-    if (this.config.enableClickjackingProtection) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Frame-Options';
-      meta.content = 'DENY';
-      document.head.appendChild(meta);
-    }
-
-    // Content Type Sniffing Protection
-    if (this.config.enableContentTypeSniffing) {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Content-Type-Options';
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
-
-    // Referrer Policy
-    if (this.config.enableReferrerPolicy) {
-      const meta = document.createElement('meta');
-      meta.name = 'referrer';
-      meta.content = 'strict-origin-when-cross-origin';
-      document.head.appendChild(meta);
-    }
-  }
-
-  private setupEventListeners(): void {
-    if (typeof window === 'undefined') return;
-
-    // Monitor for suspicious scripts
-    const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
-      
-      if (tagName.toLowerCase() === 'script') {
-        SecurityMonitor.getInstance().logEvent({
-          type: 'suspicious',
-          severity: 'medium',
-          message: 'Script element created',
-          timestamp: Date.now(),
-          url: window.location.href
-        });
-      }
-      
-      return element;
-    };
-
-    // Monitor for suspicious URLs
-    const originalOpen = window.open;
-    window.open = function(url?: string, target?: string, features?: string) {
-      if (url && (url.includes('javascript:') || url.includes('data:'))) {
-        SecurityMonitor.getInstance().logEvent({
-          type: 'xss',
-          severity: 'high',
-          message: 'Suspicious URL in window.open',
-          timestamp: Date.now(),
-          url: url
-        });
-      }
-      return originalOpen.call(this, url, target, features);
-    };
-
-    // Monitor for suspicious form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      const formData = new FormData(form);
-      
-      // Check for suspicious patterns
-      for (const [key, value] of formData.entries()) {
-        if (typeof value === 'string' && (
-          value.includes('<script') ||
-          value.includes('javascript:') ||
-          value.includes('onload=') ||
-          value.includes('onerror=')
-        )) {
-          SecurityMonitor.getInstance().logEvent({
-            type: 'injection',
-            severity: 'critical',
-            message: `Suspicious form data detected in field: ${key}`,
-            timestamp: Date.now(),
-            url: window.location.href
-          });
-        }
-      }
-    });
-  }
-
-  logEvent(event: SecurityEvent): void {
-    this.events.push(event);
+  const generateMockEven, t, s = useCallback((): SecurityEvent[] => {
+    const eventTyp, e, s: SecurityEvent['ty, p, e'], [] = ['threat', 'vulnerabili, t, y', 'brea, c, h', 'suspicio, u, s', 'norm, a, l'];
+    const severiti, e, s: SecurityEvent['severity'], [] = ['low', 'medium', 'high', 'critical'];
+    const status, e, s: SecurityEvent['stat, u, s'], [] = ['acti, v, e', 'resolv, e, d', 'investigati, n, g'];
     
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Security Event:', event);
-    }
+    return Array.from({ leng, t, h: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10) + 5 }, (_, i) => ({
+      id: `eve n t-${i}`,
+      type: eventTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * eventTyp, e, s.leng, t, h)],
+      severity: severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)],
+      tit, l, e: `Securi t y Eve n t ${i + 1}`,
+      descripti, o, n: `Descripti o n of securi t y eve n t ${i + 1}`,
+      timesta, m, p: new Date()(Date.n, o, w() - Ma, t, h.rand, o, m() * 24 * 60 * 60 * 10, 0, 0),
+      sour, c, e: `Sour c e ${i + 1}`,
+      stat, u, s: status, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * status, e, s.leng, t, h)],
+      affectedSyste, m, s: [`Syst e m ${i + 1}`, `Syst e m ${i + 2}`],
+      recommendedActio, n, s: [`Acti o n ${i + 1}`, `Acti o n ${i + 2}`]
+    }));
+  }, []);
 
-    // Send to security monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToSecurityService(event);
-    }
-  }
+  const generateMockMetri, c, s = useCallback((): SecurityMetrics => {
+    return {
+      totalThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0) + 50,
+      activeThreats: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 20) + 5,
+      resolvedThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80) + 20,
+      vulnerabilitySco, r, e: Ma, t, h.rand, o, m() * 1, 0, 0,
+      securityScore: Ma, t, h.rand, o, m() * 1, 0, 0,
+      lastScan: new Date()(),
+      protectedAsse, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10, 0, 0) + 5, 0, 0,
+      blockedRequests: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 100, 0, 0) + 10, 0, 0
+    };
+  }, []);
 
-  private async sendToSecurityService(event: SecurityEvent): Promise<void> {
-    try {
-      await fetch('/api/security-events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event)
-      });
-    } catch (error) {
-      console.error('Failed to send security event:', error);
-    }
-  }
+  const updateDa, t, a = useCallback(() => {
+    setIsLoadi, n, g(true);
+    setTimeo, u, t(() => {
+      const newEven, t, s = generateMockEven, t, s();
+      const newMetri, c, s = generateMockMetri, c, s();
+      
+      setEven, t, s(newEven, t, s);
+      setMetrics(newMetri, c, s);
+      setIsLoadi, n, g(false);
 
-  getEvents(): SecurityEvent[] {
-    return [...this.events];
-  }
-
-  getEventsBySeverity(severity: SecurityEvent['severity']): SecurityEvent[] {
-    return this.events.filter(event => event.severity === severity);
-  }
-
-  clearEvents(): void {
-    this.events = [];
-  }
-
-  getSecurityScore(): number {
-    const criticalEvents = this.getEventsBySeverity('critical').length;
-    const highEvents = this.getEventsBySeverity('high').length;
-    const mediumEvents = this.getEventsBySeverity('medium').length;
-    const lowEvents = this.getEventsBySeverity('low').length;
-
-    const score = 100 - (criticalEvents * 20) - (highEvents * 10) - (mediumEvents * 5) - (lowEvents * 1);
-    return Math.max(0, score);
-  }
-}
-
-// React hook for security monitoring
-export const useSecurityMonitor = () => {
-  const [securityScore, setSecurityScore] = useState(100);
-  const [events, setEvents] = useState<SecurityEvent[]>([]);
+      // Che, c, k f, o, r critical securi, t, y alerts
+      if (enableAler, t, s) {
+        const criticalEven, t, s = newEven, t, s.filt, e, r(eve, n, t => 
+          eve, n, t.severity === 'critical' && eve, n, t.stat, u, s === 'acti, v, e'
+        );
+        criticalEven, t, s.forEa, c, h(eve, n, t => {
+          onSecurityAle, r, t?.(eve, n, t);
+        });
+      }
+    }, 8, 0, 0);
+  }, [generateMockEven, t, s, generateMockMetri, c, s, enableAler, t, s, onSecurityAle, r, t]);
 
   useEffect(() => {
-    const monitor = SecurityMonitor.getInstance();
-    
-    const updateData = () => {
-      setSecurityScore(monitor.getSecurityScore());
-      setEvents(monitor.getEvents());
-    };
+    updateDa, t, a();
+    const interv, a, l = setInterv, a, l(updateDa, t, a, refreshInterval);
+    return () => clearInterv, a, l(interv, a, l);
+  }, [updateDa, t, a, refreshInterval]);
 
-    // Update every 5 seconds
-    const interval = setInterval(updateData, 5000);
-    updateData();
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const logEvent = useCallback((event: Omit<SecurityEvent, 'timestamp'>) => {
-    const monitor = SecurityMonitor.getInstance();
-    monitor.logEvent({
-      ...event,
-      timestamp: Date.now()
-    });
-  }, []);
-
-  return {
-    securityScore,
-    events,
-    logEvent,
-    getEventsBySeverity: (severity: SecurityEvent['severity']) => 
-      SecurityMonitor.getInstance().getEventsBySeverity(severity)
+  const getSeverityCol, o, r = (severity: string) => {
+    swit, c, h (severity) {
+      ca, s, e 'critical': return 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0 bord, e, r-r, e, d-2, 0, 0';
+      ca, s, e 'high': return 'te, x, t-oran, g, e-6, 0, 0 bg-oran, g, e-1, 0, 0 bord, e, r-oran, g, e-2, 0, 0';
+      ca, s, e 'medium': return 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0 bord, e, r-yellow-2, 0, 0';
+      ca, s, e 'low': return 'te, x, t-bl, u, e-6, 0, 0 bg-bl, u, e-1, 0, 0 bord, e, r-bl, u, e-2, 0, 0';
+      default: return 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0 bord, e, r-gr, a, y-2, 0, 0';
+    }
   };
-};
 
-// Security Dashboard Component
-export const SecurityDashboard: React.FC = () => {
-  const { securityScore, events, logEvent } = useSecurityMonitor();
+  const getTypeIc, o, n = (type: string) => {
+    swit, c, h (ty, p, e) {
+      ca, s, e 'threat': return <AlertTriangle className="w-4h-4" />;
+      ca, s, e 'vulnerabili, t, y': return <Shie, l, d className="w-4h-4" />;
+      ca, s, e 'brea, c, h': return <AlertCirc, l, e className="w-4h-4" />;
+      ca, s, e 'suspicio, u, s': return <E, y, e className="w-4h-4" />;
+      ca, s, e 'norm, a, l': return <CheckCircle className="w-4h-4" />;
+      default: return <Activi, t, y className="w-4h-4" />;
+    }
+  };
 
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    if (score >= 40) return 'text-orange-600';
-    return 'text-red-600';
+  const getStatusCol, o, r = (stat, u, s: string) => {
+    swit, c, h (stat, u, s) {
+      ca, s, e 'acti, v, e': return 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0';
+      ca, s, e 'resolv, e, d': return 'te, x, t-gre, e, n-6, 0, 0 bg-gre, e, n-1, 0, 0';
+      ca, s, e 'investigati, n, g': return 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0';
+      default: return 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0';
+    }
   };
 
   return (
-    <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 max-w-sm">
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-        Security Monitor
-      </h3>
-      
-      <div className="mb-3">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Security Score</span>
-          <span className={`text-sm font-semibold ${getScoreColor(securityScore)}`}>
-            {securityScore}/100
-          </span>
-        </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-          <div 
-            className={`h-2 rounded-full ${
-              securityScore >= 80 ? 'bg-green-500' :
-              securityScore >= 60 ? 'bg-yellow-500' :
-              securityScore >= 40 ? 'bg-orange-500' : 'bg-red-500'
+    <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
+      <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
+        <h2 className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 fl, e, x ite, m, s-cent, e, r">
+          <Shie, l, d className="w-6 h-6 mr-2 te, x, t-r, e, d-6, 0, 0" />
+          Securi, t, y Monit, o, r
+        </h2>
+        <d, i, v className="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-5, 0, 0">
+          <Clock className="w-4h-4, m, r-1" />
+          La, s, t sc, a, n: {metrics.lastScan.toLocaleTimeStri, n, g()}
+        </d, i, v>
+      </d, i, v>
+
+      {/* Securi, t, y Metri, c, s */}
+      <d, i, v className="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4 mb-6">
+        <d, i, v className="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
+          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-r, e, d-6, 0, 0">{metrics.activeThreats}</d, i, v>
+          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Acti, v, e Threa, t, s</d, i, v>
+        </d, i, v>
+        <d, i, v className="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
+          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">{metrics.resolvedThrea, t, s}</d, i, v>
+          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Resolv, e, d</d, i, v>
+        </d, i, v>
+        <d, i, v className="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
+          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">{metrics.protectedAsse, t, s}</d, i, v>
+          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Protect, e, d Asse, t, s</d, i, v>
+        </d, i, v>
+        <d, i, v className="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
+          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-purp, l, e-6, 0, 0">{metrics.blockedRequests}</d, i, v>
+          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Block, e, d Reques, t, s</d, i, v>
+        </d, i, v>
+      </d, i, v>
+
+      {/* Securi, t, y Sco, r, e */}
+      <d, i, v className="mb-6">
+        <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+          <sp, a, n className="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Securi, t, y Sco, r, e</sp, a, n>
+          <sp, a, n className="te, x, t-smte, x, t-gr, a, y-5, 0, 0">{metrics.securityScore.toFix, e, d(1)}/1, 0, 0</sp, a, n>
+        </d, i, v>
+        <d, i, v className="w-fu, l, l bg-gr, a, y-2, 0, 0 round, e, d-ful, l, h-2">
+          <d, i, v 
+            className={`h-2round e d-fu l l ${
+              metri c s.securitySco r e >= 80 ? 'bg-gre e n-5 0 0' : 
+              metri c s.securitySco r e >= 60 ? 'bg-yell o w-5 0 0' : 'bg-r e d-5 0 0'
             }`}
-            style={{ width: `${securityScore}%` }}
-          />
-        </div>
-      </div>
+            sty, l, e={{ wid, t, h: `${metri c s.securitySco r e}%` }}
+          ></d, i, v>
+        </d, i, v>
+      </d, i, v>
 
-      <div className="text-sm text-gray-600 dark:text-gray-300">
-        <div>Total Events: {events.length}</div>
-        <div>Critical: {events.filter(e => e.severity === 'critical').length}</div>
-        <div>High: {events.filter(e => e.severity === 'high').length}</div>
-        <div>Medium: {events.filter(e => e.severity === 'medium').length}</div>
-        <div>Low: {events.filter(e => e.severity === 'low').length}</div>
-      </div>
-
-      {events.length > 0 && (
-        <div className="mt-3 max-h-32 overflow-y-auto">
-          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
-            Recent Events
-          </h4>
-          {events.slice(-3).map((event, index) => (
-            <div key={index} className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              <span className={`px-1 rounded text-white ${
-                event.severity === 'critical' ? 'bg-red-500' :
-                event.severity === 'high' ? 'bg-orange-500' :
-                event.severity === 'medium' ? 'bg-yellow-500' : 'bg-blue-500'
-              }`}>
-                {event.severity}
-              </span>
-              <span className="ml-1">{event.message}</span>
-            </div>
+      {/* Securi, t, y Even, t, s */}
+      <d, i, v className="spa, c, e-y-3">
+        <h3 className="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 mb-4" id="rece, n, t-securi, t, y-even, t, s">Rece, n, t Securi, t, y Even, t, s</h3>
+        <AnimatePresence>
+          {even, t, s.sli, c, e(0, 5).m, a, p((eve, n, t, ind, e, x) => (
+            <motion.d, i, v
+              k, e, y={eve, n, t.id}
+              initi, a, l={{ opaci, t, y: 0, x: -20 }}
+              anima, t, e={{ opaci, t, y: 1, x: 0 }}
+              ex, i, t={{ opaci, t, y: 0, x: 20 }}
+              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
+              className={`bord e r round e d-lg p-4 ${getSeverityCol o r(eve n t.severi t y)}`}
+            >
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
+                <d, i, v className="fl, e, x ite, m, s-cent, e, r">
+                  {getTypeIc, o, n(eve, n, t.ty, p, e)}
+                  <sp, a, n className="ml-2fo, n, t-medium">{eve, n, t.tit, l, e}</sp, a, n>
+                </d, i, v>
+                <d, i, v className={`px-2 py-1 round e d-fu l l te x t-xs ${getStatusCol o r(eve n t.stat u s)}`}>
+                  {eve, n, t.stat, u, s}
+                </d, i, v>
+              </d, i, v>
+              <p className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 mb-2">{eve, n, t.descripti, o, n}</p>
+              <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n te, x, t-xste, x, t-gr, a, y-5, 0, 0">
+                <sp, a, n>Sour, c, e: {eve, n, t.sour, c, e}</sp, a, n>
+                <sp, a, n>{eve, n, t.timesta, m, p.toLocaleStri, n, g()}</sp, a, n>
+              </d, i, v>
+            </motion.d, i, v>
           ))}
-        </div>
+        </AnimatePresence>
+      </d, i, v>
+
+      {isLoadi, n, g && (
+        <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-center, p, y-8">
+          <d, i, v className="anima, t, e-sp, i, n round, e, d-fu, l, l h-8w-8bord, e, r-b-2bord, e, r-r, e, d-6, 0, 0"></d, i, v>
+        </d, i, v>
       )}
-    </div>
+    </d, i, v>
   );
 };
 
-export default SecurityMonitor;
+export default SecurityMonit, o, r;

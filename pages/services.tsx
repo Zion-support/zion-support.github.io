@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ServiceCard } from '../src/components/ServiceCard';
-import Navigation from '../src/components/Navigation';
+// import { ServiceCard } from '../src/components/ServiceCard';
+// import Navigation from '../src/components/Navigation';
 import { PricingCalculator } from '../src/components/PricingCalculator';
 import { SERVICES } from '../src/utils/constants';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+// import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
@@ -146,9 +146,9 @@ export default function Services(): JSX.Element {
 	};
 
 	return (
-		<ErrorBoundary>
+		<>
 			<SEO />
-			<Navigation />
+			{/* <Navigation /> */}
 			<Head>
 				<title>Services - Zion App</title>
 				<meta name="description" content="Explore our comprehensive technology services including AI, cloud solutions, web development, mobile apps, data analytics, and cybersecurity." />
@@ -190,14 +190,11 @@ export default function Services(): JSX.Element {
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}
 									>
-										<ServiceCard
-											service={service}
-											onClick={() => {
-												setSelectedService(service.id);
-												trackClick(`service-${service.id}`, 'service-selection');
-											}}
-											isSelected={selectedService === service.id}
-										/>
+										<div className="p-6 bg-white rounded-lg shadow-md">
+											<h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+											<p className="text-gray-600 mb-4">{service.description}</p>
+											<div className="text-blue-600 font-medium">Service Card (temporarily disabled)</div>
+										</div>
 									</div>
 								))}
 							</div>
@@ -385,6 +382,6 @@ export default function Services(): JSX.Element {
 				</div>
 			</div>
 			)}
-		</ErrorBoundary>
+		</>
 	);
 }

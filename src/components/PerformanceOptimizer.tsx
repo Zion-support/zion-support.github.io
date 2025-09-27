@@ -1,99 +1,55 @@
 import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
-}
+import dynamic from 'next/dynamic';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+  enableServiceWorker?: boolean;
+  enableMonitoring?: boolean;
+  enableResourceHints?: boolean;
+  enablePreloading?: boolean;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
+function PerformanceOptimizerComponent({
+  enableServiceWorker = true,
+  enableMonitoring = true,
+  enableResourceHints = true,
+  enablePreloading = true
+}: PerformanceOptimizerProps): null {
+  const [memoryUsage, setMemoryUsage] = useState<{
+    used: number;
+    total: number;
+    percentage: number;
+  } | null>(null);
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const startTime = performance.now();
-      
-      // Measure load time
-      const loadTime = performance.timing ? 
-        performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
-      
-      // Measure render time
-      const renderTime = performance.now() - startTime;
-      
-      // Measure memory usage (if available)
-      const memoryUsage = (performance as any).memory ? 
-        (performance as any).memory.usedJSHeapSize : 0;
-      
-      // Simulate network latency measurement
-      const networkLatency = performance.timing ? 
-        performance.timing.responseEnd - performance.timing.requestStart : 0;
+    if (typeof window === 'undefined') return;
 
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        networkLatency
-      });
+    // Simple performance monitoring
+    if (enableMonitoring) {
+      console.log('Performance monitoring enabled');
+    }
 
-      // Apply optimizations based on metrics
-      if (loadTime > 3000 || renderTime > 100) {
-        applyOptimizations();
+    // Memory Usage Monitoring
+    const updateMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMemoryUsage({
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+        });
       }
     };
 
-    const applyOptimizations = () => {
-      // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement;
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src;
-        }
-      });
+    updateMemoryUsage();
+    const interval = setInterval(updateMemoryUsage, 5000);
 
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
-      ];
+    return () => clearInterval(interval);
+  }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'font';
-        document.head.appendChild(link);
-      });
+  return null;
+}
 
-      setIsOptimized(true);
-    };
-
-    // Measure performance after component mount
-    const timer = setTimeout(measurePerformance, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="performance-optimizer">
-      {children}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-          <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-          <div>Render: {metrics.renderTime.toFixed(0)}ms</div>
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
-          <div>Network: {metrics.networkLatency.toFixed(0)}ms</div>
-          {isOptimized && <div className="text-green-400">✓ Optimized</div>}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default PerformanceOptimizer;
+// Export as a dynamic component that only renders on the client side
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
+  ssr: false
+});
