@@ -17,6 +17,20 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        navigator: 'readonly',
+        PerformanceObserver: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        JSX: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -28,8 +42,12 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'warn',
+      'no-undef': 'off',
+      'no-extra-semi': 'warn',
     },
     settings: {
       react: {

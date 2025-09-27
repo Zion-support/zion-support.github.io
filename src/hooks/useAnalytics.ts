@@ -32,3 +32,4 @@ exportconstusePageView = () => {useEffect(() => {
     if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
       (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX', {
         page_path: wind, o, w.locati, o, n.pathname})}}, [])}};
+}

@@ -306,3 +306,4 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
   )};
 
 export default AdvancedPerformanceOptimizer;
+}

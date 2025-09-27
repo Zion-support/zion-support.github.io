@@ -164,7 +164,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           <h2className="text-lg, fon, t-semibold, tex, t-gray-900" id="user-management">User, Managemen, t</h2>
           <buttononClick ={() = aria-lab, e, l="setShowCreateModal(true)};
             aria-label="Add, new, user"
-            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
+            className="bg-bl u e-600 tex t-white p x-4 p y-2 rounded-mdhover:bg-bl u e-700 transitio n-colors"          >
             AddUser"> setShowCreateModal(tr, u, e)};
             ar, i, a-label="Addnewuser"
             className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
@@ -395,3 +395,4 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         </div>
       </d, i, v>    </div>
   )};
+}

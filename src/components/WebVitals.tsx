@@ -33,3 +33,4 @@ export function WebVitals() {useEffect(() => {
   return null}
 
 export default WebVitals;
+}

@@ -14,7 +14,6 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
     total: number;
     percentage: number} | null>(null);
 
-  useEffect(() => {if (typeofwindow === 'undefined') return;
 
     // Simpleperformancemonitoringif(enableMonitori, n, g) {
       console.log("Performancemonitoringenabled")};
@@ -60,3 +59,4 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
 const PerformanceOptimizer = React.memo(PerformanceOptimizerComponent);
 
 export default PerformanceOptimizer;
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {title?: string;
@@ -15,7 +16,7 @@ interface SEOProps {title?: string;
   noindex?: boolean;
   nofollow?: boolean}
 
-export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-PoweredBusinessSolutions',
+const EnhancedSEO = React.memo(function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-PoweredBusinessSolutions',
   description = 'Leading, provider, of, AI-powered, business, solutions, cloud, infrastructure, and, digital, transformation, services. Transform, your, business, withcutting-edgetechnology.',
   canonical,
   ogImage = '/og-image.jpg',
@@ -114,3 +115,5 @@ export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Head>
   )}
+
+export default EnhancedSEO;

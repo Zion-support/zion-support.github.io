@@ -115,3 +115,4 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 			</div>
 		</section>
 	)};
+}

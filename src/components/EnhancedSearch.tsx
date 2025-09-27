@@ -301,3 +301,4 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
   )};
 
 export default EnhancedSearch;
+}

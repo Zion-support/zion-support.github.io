@@ -53,3 +53,4 @@ interface AccessibilityIssue {type: "error" | "warning" | "info";
   return, nul, l; // Thiscomponentdoesn't, render, anything};
 
 export default AccessibilityAuditor;
+}
