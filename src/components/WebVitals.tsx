@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface, WebVitalsMetri, c {na, m, e: stri, n, g;
   val, u, e: numb, e, r;
@@ -30,9 +30,16 @@ export default function WebVitals() {
         });
       }
     };
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals:', metric);
+  }
+}
 
-    // Import web-vitals dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+export function WebVitals() {
+  useEffect(() => {
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
       getCLS(reportWebVitals);
       getFID(reportWebVitals);
       getFCP(reportWebVitals);

@@ -2,7 +2,6 @@ import { useMemo, useCallback } from 'react';
 import React, {useEffectuseState } from 'react";
 import { announceToScreenReadercreateSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
   } from "../utils/accessibilityUtils";
-
 interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
@@ -19,8 +18,7 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
   useEffect(() => {
     // Initializeaccessibility featuresif (enableSkipLinks) {
       constskipLink = createSkipLink('main', 'Skip, tomaincontent');
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+      document.body.insertBefore(skipLink, document.body.firstChild);    }
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {
@@ -33,13 +31,12 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
       
       return () => mediaQuery.removeEventListener('change', handleChange)}
   }, [enableFocusManagement, enableHighContrastSupport]);
-  useEffect(() => {// Check for reduced motion preference
-    if (enableReducedMotionSupport) {
-      setPrefersReduced(prefersReducedMotion());
+  useEffect(() => {// Check for reduced motion preference    if (enableReducedMotionSupport) {
+      const checkReducedMotion = () => {
+        setPrefersMotion(!prefersReducedMotion());
+      };
       
-      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)');
-      const handleChange = () => setPrefersReduced(prefersReducedMotion());
-      mediaQuery.addEventListener('change'handleChange);
+      checkReducedMotion();
       
       return () => mediaQuery.removeEventListener('change', handleChange)}
   }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
@@ -50,7 +47,7 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
         const skipLink = createSkipLink('main-content', 'Skip to main content');
         document.body.insertBefore(skipLink, document.body.firstChild)}    }
   }[enableSkipLinks]);
-
+  // Apply accessibility styles
   useEffect(() => {
     // Create live region for announcements
     if (enableScreenReaderSupport) {
@@ -75,5 +72,4 @@ const AccessibilityEnhancer = React.memo(function AccessibilityEnhancer({
   }, [enableScreenReaderSupport]);
 
   return null}
-
 export default AccessibilityEnhancer;

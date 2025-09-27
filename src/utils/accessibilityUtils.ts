@@ -1,13 +1,16 @@
 /**
- * Accessibility, utility, functions
- * Provides, various, accessibility enhancement, function, s
+ * Accessibility utility functions
+ * Provides various accessibility enhancement functions
  */
 
-// Focus, management, utilities
-export, const, trapFocus = (element: HTMLEleme, n, t): (() => vo, i, d) => {con, s, t, focusableElemen, t, s = eleme, n, t.querySelectorA, l, l("butt, on[href]inputselecttextarea[tabindex]:not([tabindex="-1"])");
+// Focus management utilities
+export const trapFocus = (element: HTMLElement): (() => void) => {
+  const focusableElements = element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
   
-  con, s, t, firstEleme, n, t = focusableElemen, t, s[0] as, HTMLEleme, n, t;
-  con, s, t, lastEleme, n, t = focusableElemen, t, s[focusableElemen, t, s.leng, t, h - 1] asHTMLEleme, n, t;
+  const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
   consthandleTabK, e, y = (e: KeyboardEvent) => {
     if (e.key === "T, a, b") {
@@ -21,61 +24,224 @@ export, const, trapFocus = (element: HTMLEleme, n, t): (() => vo, i, d) => {con,
   
   // Focus, first, element
   firstEleme, n, t?.foc, u, s();
+  return () => {
+    element.removeEventListener('keydown', handleTabKey);
+  };
+};
 
-  return () => {element.removeEventListener("keydo, w, n"handleTabKey)}};
-
-// Announce, to, screen readers, export, const announceToScreenReader = (message: stringpriority: "poli, t, e' | "assertive" = "polite") => {con, s, t, announceme, n, t = document.createElement("div");
-  announceme, n, t.setAttribute("ar, i, a-live", priori, t, y);
-  announceme, n, t.setAttribute("ar, i, a-atomic", "true");
-  announceme, n, t.className = "sr-only";
-  announceme, n, t.textConte, n, t = messa, g, e;
+// Announce messages to screen readers
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
   
-  document.bo, d, y.appendChi, l, d(announceme, n, t);
+  document.body.appendChild(announcement);
   
-  setTimeo, u, t(() => {
-    document.bo, d, y.removeChi, l, d(announcement)}10, 0, 0)};
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+};
 
-// Skip, link, functionality
-export, const, createSkipLink = (targetId: stringlinkText: string = "Skiptomaincontent"): HTMLEleme, n, t => {con, s, t, skipLink = document.createElement("a");
-  skipLink.hr, e, f = `#${targetId}`;
-  skipLink.textConte, n, t = linkText;
-  skipLink.className = "sk, i, p-link, sr-onlyfocus:n, ot-sr-onlyfocus:absolutefocus:t, o, p-4, focus:le, f, t-4, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded, z-50";
+// Skip link functionality
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'skip-link';
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+  `;
   
-  return, skipLin, k};
-
-// ARIA, label, utilities
-export, const, generateAriaLabel = (element: stri, n, g, acti, o, n?: stri, n, g, conte, x, t?: stri, n, g): stri, n, g => {l, e, t, lab, e, l = eleme, n, t;
-  if (acti, o, n) lab, e, l = `${action} ${label}`;
-  if (conte, x, t) lab, e, l = `${label} ${context}`;
-  return, labe, l};
-
-// Color, contrast, checker (simplifi, e, d)
-export, const, checkColorContrast = (foreground: stri, ngbackground: stri, n, g): boole, a, n => {// Simplifi, e, d, contrast, chec, k - in, producti, o, n, u, s, e, a, prope, r, library, cons, t, getLuminan, c, e = (color: stri, n, g): numb, e, r => {
-    con, s, t, r, g, b = parseI, n, t(col, o, r.sli, c, e(1), 16);
-    con, s, t, r = (r, g, b >> 16) & 0x, f, f;
-    con, s, t, g = (r, g, b >> 8) & 0x, f, f;
-    con, s, t, b = (r, g, b >> 0) & 0x, f, f;
-    
-    const [rsgsbs] = [r, gb].m, a, p(c => {
-      c = c / 2, 5, 5;
-      retur, n, c <= 0.03928 ? c / 12.92 : Math.p, o, w((c + 0.0, 5, 5) / 1.0552.4)});
-    
-    retur, n, 0.21, 2, 6 * rs + 0.71, 5, 2 * gs + 0.07, 2, 2 * bs};
-
-  const, lum, 1 = getLuminan, c, e(foregrou, n, d);
-  const, lum, 2 = getLuminan, c, e(backgrou, n, d);
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '6px';
+  });
   
-  const, brightes, t = Ma, t, h.m, a, x(lum1lu, m, 2);
-  const, darkes, t = Ma, t, h.m, i, n(lum1lu, m, 2);
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px';
+  });
   
-  return (brighte, s, t + 0.05) / (darke, s, t + 0.05) >= 4.5};
+  return skipLink;
+};
 
-// Check, if, high contrast, mode, is enabled, export, const isHighContrastMo, d, e = (): boolean => {if (typeofwindow === "undefin, e, d") returnfal, s, e;
+// High contrast mode detection
+export const isHighContrastMode = (): boolean => {
+  if (typeof window === 'undefined') return false;
   
-  returnwindow.matchMedia("(prefe, rs-contrast: hi, g, h)").match, e, s ||
-         window.matchMedia("(prefe, rs-contrast: mo, r, e)").matches};
+  // Check for Windows High Contrast Mode
+  if (window.matchMedia('(-ms-high-contrast: active)').matches) {
+    return true;
+  }
+  
+  // Check for forced colors
+  if (window.matchMedia('(forced-colors: active)').matches) {
+    return true;
+  }
+  
+  return false;
+};
 
-// Check, if, reduced motion, is, preferred
-export, const, prefersReducedMotion = (): boole, a, n => {if (type, ofwindow === "undefin, e, d") returnfal, s, e;
+// Reduced motion detection
+export const prefersReducedMotion = (): boolean => {
+  if (typeof window === 'undefined') return false;
   
-  returnwindow.matchMedia("(prefe, r, s-reduc, ed-motion: redu, c, e)').matches};
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+};
+
+// Color contrast checker
+export const checkColorContrast = (foreground: string, background: string): {
+  ratio: number;
+  passes: boolean;
+  level: 'AA' | 'AAA' | 'fail';
+} => {
+  // Convert hex to RGB
+  const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : { r: 0, g: 0, b: 0 };
+  };
+
+  const fg = hexToRgb(foreground);
+  const bg = hexToRgb(background);
+
+  // Calculate relative luminance
+  const getLuminance = (r: number, g: number, b: number): number => {
+    const [rs, gs, bs] = [rgb].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  };
+
+  const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
+  const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
+
+  const ratio = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
+
+  return {
+    ratio: Math.round(ratio * 100) / 100,
+    passes: ratio >= 4.5,
+    level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'
+  };
+};
+
+// Keyboard navigation helpers
+export const handleKeyboardNavigation = (
+  event: KeyboardEvent,
+  onEnter?: () => void,
+  onEscape?: () => void,
+  onArrowUp?: () => void,
+  onArrowDown?: () => void,
+  onArrowLeft?: () => void,
+  onArrowRight?: () => void
+): void => {
+  switch (event.key) {
+    case 'Enter':
+    case ' ':
+      event.preventDefault();
+      onEnter?.();
+      break;
+    case 'Escape':
+      onEscape?.();
+      break;
+    case 'ArrowUp':
+      event.preventDefault();
+      onArrowUp?.();
+      break;
+    case 'ArrowDown':
+      event.preventDefault();
+      onArrowDown?.();
+      break;
+    case 'ArrowLeft':
+      event.preventDefault();
+      onArrowLeft?.();
+      break;
+    case 'ArrowRight':
+      event.preventDefault();
+      onArrowRight?.();
+      break;
+  }
+};
+
+// ARIA live region management
+export const createLiveRegion = (): HTMLElement => {
+  const liveRegion = document.createElement('div');
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.setAttribute('aria-atomic', 'true');
+  liveRegion.className = 'sr-only';
+  liveRegion.id = 'live-region';
+  
+  if (!document.getElementById('live-region')) {
+    document.body.appendChild(liveRegion);
+  }
+  
+  return liveRegion;
+};
+
+// Screen reader only text
+export const createScreenReaderText = (text: string): HTMLElement => {
+  const element = document.createElement('span');
+  element.className = 'sr-only';
+  element.textContent = text;
+  return element;
+};
+
+// Focus visible polyfill
+export const initFocusVisible = (): void => {
+  if (typeof window === 'undefined') return;
+  
+  let hadKeyboardEvent = true;
+  let keyboardThrottleTimeout: NodeJS.Timeout;
+
+  const inputTypes = new Set([
+    'text', 'search', 'url', 'tel', 'email', 'password', 'number', 'date', 'month', 'week', 'time', 'datetime-local'
+  ]);
+
+  const isKeyboardEvent = (event: Event): boolean => {
+    const { type, key } = event as KeyboardEvent;
+    return type === 'keydown' && key === 'Tab' || inputTypes.has((event.target as HTMLInputElement)?.type);
+  };
+
+  const updateFocusVisible = (event: Event): void => {
+    if (isKeyboardEvent(event)) {
+      hadKeyboardEvent = true;
+    } else {
+      hadKeyboardEvent = false;
+    }
+  };
+
+  const updateFocusVisibleThrottled = (event: Event): void => {
+    if (keyboardThrottleTimeout) {
+      clearTimeout(keyboardThrottleTimeout);
+    }
+    keyboardThrottleTimeout = setTimeout(() => updateFocusVisible(event), 100);
+  };
+
+  document.addEventListener('keydown', updateFocusVisible, true);
+  document.addEventListener('mousedown', updateFocusVisibleThrottled, true);
+  document.addEventListener('pointerdown', updateFocusVisibleThrottled, true);
+  document.addEventListener('touchstart', updateFocusVisibleThrottled, true);
+
+  // Add focus-visible class to focused elements
+  document.addEventListener('focus', (event) => {
+    if (hadKeyboardEvent) {
+      (event.target as HTMLElement).classList.add('focus-visible');
+    }
+  }, true);
+
+  document.addEventListener('blur', (event) => {
+    (event.target as HTMLElement).classList.remove('focus-visible');
+  }, true);
+};

@@ -12,7 +12,7 @@ import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 // import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
 import { WebVitals   } from "../src/components/WebVitals";
-import { setupGlobalErrorHandling   } from "../src/utils/errorHandling";
+// import { setupGlobalErrorHandling } from "../src/utils/errorHandling";
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
@@ -25,7 +25,6 @@ import '../src/styles/improvements.css';
 export default function A({ Compone, n, t, pagePro, p, s }: AppProps) {
   // Setup, global, error handling, Reac, t.useEffect(() => {
     setupGlobalErrorHandli, n, g()}, []);
-
   // Register, service, worker for, performance, optimization
   useEffect(() => {
     if (typeof, windo, w !== 'undefin, e, d' && 'serviceWork, e, r' in, navigato, r) {

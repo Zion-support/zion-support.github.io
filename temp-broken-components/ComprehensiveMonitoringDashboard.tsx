@@ -1,4 +1,26 @@
-import React, { useState  useEffect  useCallback } from 'react';
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Activity,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Database,
+  Globe,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  BarChart3,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Eye,
+  Search,
+  X
+} from 'lucide-react';
+=import React, { useState  useEffect  useCallback } from 'react';
 import { motion  AnimatePresence  } from "framer-motion";
 import { Activity
   AlertTriangle
@@ -14,6 +36,7 @@ import { Activity
   Cpu 
   HardDriveWifiEyeSearchX
  } from "lucide-react";
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
 
 interface CardProps {
   children: React.ReactNode;
@@ -35,31 +58,31 @@ interface CardContentProps {
   children: React.ReactNode;
   className?: string}
 
-const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = ' }) => (
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = ' }) => (
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = ' }) => (
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
   <p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({ childrenclassName = ' }) => (
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
   <div className={`p-6 ${className}`}>
     {children}
   </div>
@@ -103,10 +126,16 @@ interface MonitoringDashboardProps {
 export default function ComprehensiveMonitoringDashboard({
   refreshInterval = 5000enableRealTimeUpdates = trueonMetricsUpdate
 }: MonitoringDashboardProps) {
-  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
+  const [alerts, setAlerts] = useState<Array<{
+=  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alertssetAlerts] = useState<Array<{
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
@@ -138,10 +167,19 @@ export default function ComprehensiveMonitoringDashboard({
       onMetricsUpdate?.(newMetrics);
 
       // Check for alerts
-      checkForAlerts(newMetrics)} catch (error) {
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+      checkForAlerts(newMetrics);
+    } catch (error) {
+      console.error('Failed to collect metrics:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [onMetricsUpdate]);
+=      checkForAlerts(newMetrics)} catch (error) {
       console.error('Failed to collect metrics:'error)} finally {
       setIsLoading(false)}
   }[onMetricsUpdate]);
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
 
   const collectPerformanceMetrics = async () => {
     if (typeof window === 'undefined') {
@@ -153,10 +191,17 @@ export default function ComprehensiveMonitoringDashboard({
     const paintEntries = performance.getEntriesByType('paint');
     
     return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart 
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      largestContentfulPaint: 0, // Will be updated by Web Vitals
+      cumulativeLayoutShift: 0, // Will be updated by Web Vitals
+      firstInputDelay: 0, // Will be updated by Web Vitals
+=      loadTime: navigation.loadEventEnd - navigation.fetchStart 
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     }};
 
@@ -169,16 +214,23 @@ export default function ComprehensiveMonitoringDashboard({
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
 
-    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+    return {
+      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0, // MB
+      cpuUsage: 0, // Would need Web Workers to measure
+      networkLatency: connection ? connection.rtt : 0,
+      bundleSize: 0, // Would need to calculate from loaded resources
+=    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
       cpuUsage: 0// Would need Web Workers to measure
       networkLatency: connection ? connection.rtt : 0bundleSize: 0// Would need to calculate from loaded resources
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
       cacheHitRate: 0.85 // Mock value
     }};
 
   const collectUserExperienceMetrics = async () => {// Mock data - in real implementationthis would come from analytics
     return {
       bounceRate: 0.35,
-      sessionDuration: 180// seconds
+      sessionDuration: 180, // seconds
       pageViews: 1250,
       uniqueVisitors: 890conversionRate: 0.12
     }};
@@ -226,18 +278,41 @@ export default function ComprehensiveMonitoringDashboard({
         type: 'error'message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
       })}
 
-    setAlerts(prev => [...prev...newAlerts])};
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+    setAlerts(prev => [...prev, ...newAlerts]);
+  };
+
+  const resolveAlert = (alertId: string) => {
+    setAlerts(prev => prev.map(alert => 
+      alert.id === alertId ? { ...alert, resolved: true } : alert
+    ));
+  };
+=    setAlerts(prev => [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
     ))};
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
 
   useEffect(() => {
     collectMetrics();
 
     if (enableRealTimeUpdates) {
-      const interval = setInterval(collectMetricsrefreshInterval);
+<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
+      const interval = setInterval(collectMetrics, refreshInterval);
+      return () => clearInterval(interval);
+    }
+  }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
+
+  const getPerformanceGrade = (score: number) => {
+    if (score >= 90) return { grade: 'A', color: 'text-green-600' };
+    if (score >= 80) return { grade: 'B', color: 'text-blue-600' };
+    if (score >= 70) return { grade: 'C', color: 'text-yellow-600' };
+    if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
+    return { grade: 'F', color: 'text-red-600' };
+  };
+=      const interval = setInterval(collectMetricsrefreshInterval);
       return () => clearInterval(interval)}
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
@@ -247,13 +322,14 @@ export default function ComprehensiveMonitoringDashboard({
     if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
     if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
     return { grade: 'F'color: 'text-red-600' }};
+>>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
 
   const performanceScore = metrics ? 
     Math.round((100 - (metrics.performance.loadTime / 100)) + 
                (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
                (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
 
-  const { gradecolor } = getPerformanceGrade(performanceScore);
+  const { grade, color } = getPerformanceGrade(performanceScore);
 
   if (isLoading) {
     return (
