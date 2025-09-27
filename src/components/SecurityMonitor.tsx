@@ -203,7 +203,7 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
       {/* Security Events */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Security Events</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
         <AnimatePresence>
           {events.slice(0, 5).map((event, index) => (
             <motion.div

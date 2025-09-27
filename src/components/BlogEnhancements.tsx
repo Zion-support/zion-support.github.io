@@ -39,6 +39,7 @@ export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCate
                 ? 'border-blue-500 shadow-lg' 
                 : 'border-gray-300 hover:border-gray-400'
             } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`}
+            aria-label="Search articles"
           />
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -354,6 +355,7 @@ export function BlogNewsletter({ onSubscribe, isLoading = false }: BlogNewslette
             onChange={(e) => setEmail(e.target.value)}
             required
             className="flex-1 px-4 py-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            aria-label="Email address for newsletter subscription"
           />
           <motion.button
             type="submit"

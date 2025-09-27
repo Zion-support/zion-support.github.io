@@ -20,7 +20,7 @@ export const Testimonials: React.FC = () => {
 		<section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
 			<div className="container mx-auto px-4 max-w-6xl">
 				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-					<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+					<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" id="what-our-clients-say">
 						What Our Clients Say
 					</h2>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">

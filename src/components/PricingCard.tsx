@@ -44,7 +44,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 
       {/* Header */}
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-2">{tier.name}</h3>
+        <h3 className="text-2xl font-bold text-gray-800 mb-2" id="tiername">{tier.name}</h3>
         <p className="text-gray-600 mb-4">{tier.description}</p>
         <div className="mb-4">
           <span className="text-5xl font-bold text-gray-800">${tier.price}</span>
@@ -74,7 +74,14 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 
       {/* CTA Button */}
       <button
-        onClick={() => onSelectPlan(tier.id)}
+        onClick={() = aria-label="onSelectPlan(tier.id)}
+        className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
+          tier.buttonVariant === 'primary'
+            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+        }`}
+      >
+        {tier.buttonText}"> onSelectPlan(tier.id)}
         className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
           tier.buttonVariant === 'primary'
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'

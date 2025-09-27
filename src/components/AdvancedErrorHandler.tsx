@@ -279,12 +279,12 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
           >
             <div className="p-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-900">Error Monitor</h3>
+                <h3 className="text-lg font-semibold text-gray-900" id="error-monitor">Error Monitor</h3>
                 <div className="flex space-x-2">
                   <button
                     onClick={clearResolvedErrors}
                     className="text-sm text-gray-500 hover:text-gray-700"
-                  >
+                   aria-label="Clear Resolved">
                     Clear Resolved
                   </button>
                   <button
@@ -398,7 +398,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">Error Details</h3>
+                <h3 className="text-lg font-semibold" id="error-details">Error Details</h3>
                 <button
                   onClick={() => setSelectedError(null)}
                   className="text-gray-400 hover:text-gray-600"

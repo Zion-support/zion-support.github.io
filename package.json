@@ -30,6 +30,11 @@
 		"prepare": "echo 'Husky prepare script disabled'",
 		"sitemap": "node scripts/generate-sitemap.mjs",
 		"performance:monitor": "node scripts/performance-monitor.mjs",
+		"bundle:analyze": "node scripts/optimize-bundle.mjs",
+		"accessibility:audit": "node scripts/accessibility-audit.mjs",
+		"accessibility:fix": "node scripts/accessibility-fixer.mjs",
+		"improvements:comprehensive": "node scripts/comprehensive-improvements.mjs",
+		"improvements:all": "npm run accessibility:fix && npm run performance:optimize && npm run security:audit && npm run improvements:comprehensive",
 		"autonomous": "node automation/launch-enhanced-autonomous-system.js",
 		"autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
 		"autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -140,7 +145,9 @@
 		"design:cycle": "node automation/launch-design-improvement-automation.js cycle",
 		"design:status": "node automation/launch-design-improvement-automation.js status",
 		"design:stop": "node automation/launch-design-improvement-automation.js stop",
-		"design:all": "npm run design:layout && npm run design:navigation && npm run design:visual"
+		"design:all": "npm run design:layout && npm run design:navigation && npm run design:visual",
+		"optimize": "node scripts/optimize-application.js",
+		"optimize:full": "npm run optimize && npm run build && npm run test:smoke"
 	},
 	"pm2": {
 		"ecosystem": "ecosystem.maintenance.cjs"
@@ -176,9 +183,7 @@
 		"@supabase/supabase-js": "^2.39.3",
 		"@tailwindcss/postcss": "^4.1.13",
 		"@tanstack/react-query": "^5.17.19",
-		"@types/react": "^18.2.15",
 		"@types/react-datepicker": "^6.2.0",
-		"@types/react-dom": "^18.2.7",
 		"@vitejs/plugin-react": "^4.0.3",
 		"autoprefixer": "^10.4.21",
 		"axios": "^1.12.2",
@@ -243,7 +248,7 @@
 		"@types/jest": "^29.5.3",
 		"@types/node": "^24.5.2",
 		"@types/node-cron": "^3.0.11",
-		"@types/react": "^19.1.13",
+		"@types/react": "^19.1.14",
 		"@types/react-dom": "^19.1.9",
 		"@typescript-eslint/eslint-plugin": "^8.44.1",
 		"@typescript-eslint/parser": "^8.44.1",

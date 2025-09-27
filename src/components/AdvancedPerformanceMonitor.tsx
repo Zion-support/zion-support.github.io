@@ -184,7 +184,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}
     >
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="performance-monitor">
           Performance Monitor
         </h3>
         <div className="flex items-center space-x-2">
@@ -249,7 +249,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             exit={{ opacity: 0, height: 0 }}
             className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4"
           >
-            <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">Performance Alerts</h4>
+            <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2" id="performance-alerts">Performance Alerts</h4>
             <ul className="space-y-1">
               {alerts.map((alert, index) => (
                 <li key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
@@ -269,13 +269,13 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ? 'bg-red-500 hover:bg-red-600 text-white'
               : 'bg-green-500 hover:bg-green-600 text-white'
           }`}
-        >
+         aria-label="{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}">
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
         <button
           onClick={collectMetrics}
           className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
-        >
+         aria-label="Refresh Metrics">
           Refresh Metrics
         </button>
       </div>
