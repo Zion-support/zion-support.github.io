@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { analyticsManager } from '../utils/analytics';
 
 interface Props {
@@ -117,7 +117,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         'error_boundary_retry',
         'error',
         'retry',
+<<<<<<< HEAD
         undefined,
+=======
+        'retry_attempt',
+>>>>>>> 29942e097c4a972d9cb31d762eca2c0a667b7c1c
         this.retryCount,
         {
           error_id: this.state.errorId,
@@ -132,7 +136,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       'error_boundary_reload',
       'error',
       'reload',
+<<<<<<< HEAD
       undefined,
+=======
+      'page_reload',
+>>>>>>> 29942e097c4a972d9cb31d762eca2c0a667b7c1c
       undefined,
       {
         error_id: this.state.errorId
