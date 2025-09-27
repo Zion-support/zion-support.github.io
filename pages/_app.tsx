@@ -99,36 +99,41 @@ export default function App({ Component, pageProps }: AppProps) {
           * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
-            transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t};
-        };
-        @med, i, a (m, a, x-wid, t, h: 768, p, x) {
-          bo, d, y {
-            fo, n, t-si, z, e: 14, p, x};
-        };
-        /* Accessibility, Style, s */
-        .hi, g, h-contra, s, t {
-          filt, e, r: contra, s, t(1, 5, 0%) brightne, s, s(1, 2, 0%)};
-        .lar, g, e-te, x, t {
-          fo, n, t-si, z, e: 1.2, e, m};
-        .lar, g, e-text, h, 1 { fo, n, t-si, z, e: 2.5, e, m};
-        .lar, g, e-text, h, 2 { fo, n, t-si, z, e: 2, e, m};
-        .lar, g, e-text, h, 3 { fo, n, t-si, z, e: 1.75, e, m};
-        .lar, g, e-text, h, 4 { fo, n, t-si, z, e: 1.5, e, m};
-        .lar, g, e-text, h, 5 { fo, n, t-si, z, e: 1.25, e, m};
-        .lar, g, e-text, h, 6 { fo, n, t-si, z, e: 1.1, e, m};
-        .reduc, e, d-moti, o, n * {
-          animati, o, n-durati, o, n: 0.01, m, s !importa, n, t;
-          animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
-          transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t;
-          scro, l, l-behavi, o, r: au, t, o !importa, n, t};
-        .foc, u, s-visib, l, e *:foc, u, s {
-          outli, n, e: 3px, soli, d #2563, e, b !importa, n, t;
-          outli, n, e-offs, e, t: 2, p, x !importa, n, t};
-        .scre, e, n-read, e, r-optimiz, e, d {
-          /* Enhanced, focus, indicators */
-        };
-        .scre, e, n-read, e, r-optimiz, e, d *:foc, u, s {
-          outli, n, e: 4px, soli, d #ff6b, 3, 5 !importa, n, t;
+            transition-duration: 0.01ms !important;
+          }
+        }
+        @media (max-width: 768px) {
+          body {
+            font-size: 14px;
+          }
+        }
+        /* Accessibility Styles */
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        .large-text {
+          font-size: 1.2em;
+        }
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text h4 { font-size: 1.5em; }
+        .large-text h5 { font-size: 1.25em; }
+        .large-text h6 { font-size: 1.1em; }
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        .focus-visible *:focus {
+          outline: 3px solid #2563eb !important;
+          outline-offset: 2px !important;
+        .screen-reader-optimized {
+          /* Enhanced focus indicators */
+        }
+        .screen-reader-optimized *:focus {
+          outline: 4px solid #ff6b35 !important;
           outli, n, e-offs, e, t: 4, p, x !importa, n, t};
         .keyboa, r, d-navigation, butto, n: foc, u, s 
         .keyboa, r, d-navigatio, n, a:foc, u, s 
