@@ -62,7 +62,7 @@ export default function Portfolio(): React.JSX.Element {
         <meta property="og:description" content="Our success stories and project portfolio" />
       </Helmet>
       
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16" data-testid="portfolio-page">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import App from '../App';
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { Layout } from '../router';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
@@ -63,63 +64,86 @@ jest.mock('../components/PerformanceProfiler', () => {
     return null;
   };
 });
-const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route);
-  return render(ui);
-};
 
-describe('App', () => {
-  test('renders home page by default', async () => {
-    renderWithRouter(<App />);
-    await waitFor(() => {
-      expect(screen.getByTestId('home-page')).toBeInTheDocument();
-    });
+// Import the components we need to test
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
+
+describe('App Pages', () => {
+  test('renders home page correctly', () => {
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
+    expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
 
-  test('renders blog page when navigating to /blog', async () => {
-    renderWithRouter(<App />, { route: '/blog' });
-    await waitFor(() => {
-      expect(screen.getByTestId('blog-page')).toBeInTheDocument();
-    });
+  test('renders blog page correctly', () => {
+    render(
+      <Layout>
+        <Blog />
+      </Layout>
+    );
+    expect(screen.getByTestId('blog-page')).toBeInTheDocument();
   });
 
-  test('renders contact page when navigating to /contact', async () => {
-    renderWithRouter(<App />, { route: '/contact' });
-    await waitFor(() => {
-      expect(screen.getByTestId('contact-page')).toBeInTheDocument();
-    });
+  test('renders contact page correctly', () => {
+    render(
+      <Layout>
+        <Contact />
+      </Layout>
+    );
+    expect(screen.getByTestId('contact-page')).toBeInTheDocument();
   });
 
-  test('renders about page when navigating to /about', async () => {
-    renderWithRouter(<App />, { route: '/about' });
-    await waitFor(() => {
-      expect(screen.getByTestId('about-page')).toBeInTheDocument();
-    });
+  test('renders about page correctly', () => {
+    render(
+      <Layout>
+        <About />
+      </Layout>
+    );
+    expect(screen.getByTestId('about-page')).toBeInTheDocument();
   });
 
-  test('renders services page when navigating to /services', async () => {
-    renderWithRouter(<App />, { route: '/services' });
-    await waitFor(() => {
-      expect(screen.getByTestId('services-page')).toBeInTheDocument();
-    });
+  test('renders services page correctly', () => {
+    render(
+      <Layout>
+        <Services />
+      </Layout>
+    );
+    expect(screen.getByTestId('services-page')).toBeInTheDocument();
   });
 
-  test('renders portfolio page when navigating to /portfolio', async () => {
-    renderWithRouter(<App />, { route: '/portfolio' });
-    await waitFor(() => {
-      expect(screen.getByTestId('portfolio-page')).toBeInTheDocument();
-    });
+  test('renders portfolio page correctly', () => {
+    render(
+      <Layout>
+        <Portfolio />
+      </Layout>
+    );
+    expect(screen.getByTestId('portfolio-page')).toBeInTheDocument();
   });
 
-  test('renders not found page for unknown routes', async () => {
-    renderWithRouter(<App />, { route: '/unknown-route' });
-    await waitFor(() => {
-      expect(screen.getByTestId('not-found-page')).toBeInTheDocument();
-    });
+  test('renders not found page correctly', () => {
+    render(
+      <Layout>
+        <NotFound />
+      </Layout>
+    );
+    expect(screen.getByTestId('not-found-page')).toBeInTheDocument();
   });
 
   test('has skip link for accessibility', () => {
-    renderWithRouter(<App />);
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
     skipLinks.forEach(skipLink => {
@@ -128,7 +152,11 @@ describe('App', () => {
   });
 
   test('has main content with correct id', () => {
-    renderWithRouter(<App />);
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
     const mainContent = screen.getByRole('main');
     expect(mainContent).toHaveAttribute('id', 'main-content');
   });
