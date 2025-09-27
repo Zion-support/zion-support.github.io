@@ -6,6 +6,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import './index.css';
 
@@ -61,6 +62,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
+    
+    // Initialize advanced performance optimizer
+    performanceOptimizer.preloadCriticalResources();
+    performanceOptimizer.optimizeImages();
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
@@ -111,7 +116,9 @@ export default function App(): React.JSX.Element {
     window.addEventListener('beforeunload', trackEngagement);
 
     // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance) {
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }

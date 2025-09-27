@@ -11,8 +11,9 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
-        jsx: 'react-jsx',
+        jsx: 'react-jsx'
       },
+      useESM: true
     }],
   },
   testMatch: [
@@ -28,4 +29,5 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   verbose: true,
+  extensionsToTreatAsEsm: ['.ts', '.tsx']
 };

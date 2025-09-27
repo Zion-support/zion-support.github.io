@@ -19,6 +19,12 @@ export class LazyLoadManager {
   init(options: IntersectionObserverInit = {}): void {
     if (typeof window === 'undefined' || this.observer) return;
 
+    // Check if IntersectionObserver is available
+    if (typeof IntersectionObserver === 'undefined') {
+      console.warn('IntersectionObserver is not supported in this environment');
+      return;
+    }
+
     const defaultOptions: IntersectionObserverInit = {
       rootMargin: '50px',
       threshold: 0.1,
