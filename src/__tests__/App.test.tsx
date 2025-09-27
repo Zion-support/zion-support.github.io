@@ -1,6 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import App from '../App';
+import { Layout } from '../router';
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
