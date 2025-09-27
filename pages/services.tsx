@@ -19,7 +19,7 @@ export default function Services(): JSX.Element {
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
       features: [
         'Natural Language Processing (NLP)',
-        'Computer Vision & Image Recognition',
+        'Computer Vision',
         'Predictive Analytics',
         'Automated Decision Making'
       ]
@@ -49,7 +49,7 @@ export default function Services(): JSX.Element {
   return (
     <>
       <SEO 
-        title="Services - Zion App"
+        title="Services - Zion Tech Group"
         description="Comprehensive technology services including AI, cloud infrastructure, and cybersecurity."
         keywords="services, AI, cloud, cybersecurity, technology"
       />
@@ -89,4 +89,4 @@ export default function Services(): JSX.Element {
       </main>
     </>
   );
-};
+}

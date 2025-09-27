@@ -7,17 +7,12 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
 }
 
-export default function PerformanceOptimizer({ 
+const PerformanceOptimizer = React.memo(function PerformanceOptimizer({ 
   enableServiceWorker = true,
   enableLazyLoading = true,
   enableImageOptimization = true
 }: PerformanceOptimizerProps) {
   const [isOptimized, setIsOptimized] = useState(false);
-  const [memoryUsage, setMemoryUsage] = useState({
-    used: 0,
-    total: 0,
-    percentage: 0
-  });
 
   useEffect(() => {
     const optimizePerformance = () => {
@@ -38,24 +33,7 @@ export default function PerformanceOptimizer({
         images.forEach(img => imageObserver.observe(img));
       }
       
-      // Memory usage monitoring
-      const updateMemoryUsage = () => {
-        if ("memory" in performance) {
-          const memory = (performance as any).memory;
-          setMemoryUsage({
-            used: memory.usedJSHeapSize,
-            total: memory.totalJSHeapSize,
-            percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-          });
-        }
-      };
-      
-      updateMemoryUsage();
-      const interval = setInterval(updateMemoryUsage, 5000);
-      
       setIsOptimized(true);
-      
-      return () => clearInterval(interval);
     };
     
     optimizePerformance();
@@ -71,3 +49,6 @@ export default function PerformanceOptimizer({
     </div>
   );
 }
+
+
+export default PerformanceOptimizer;

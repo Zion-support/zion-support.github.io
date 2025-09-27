@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect  } from 'react';
 
 interface WebVitalsMetric {
   name: string;
@@ -8,7 +8,7 @@ interface WebVitalsMetric {
   navigationType: string;
 }
 
-export function reportWebVitals(metric: WebVitalsMetric) {
+const reportWebVitals = React.memo(function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', metric.name, {
@@ -34,3 +34,6 @@ export default function WebVitals() {
 
   return null;
 }
+
+
+export { reportWebVitals };

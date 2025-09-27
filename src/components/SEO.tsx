@@ -7,7 +7,7 @@ interface SEOProps {
   image?: string;
 }
 
-export default function SEO({ 
+const SEO = React.memo(function SEO({ 
   title = "Zion Tech Group", 
   description = "Leading technology solutions for modern businesses",
   keywords = ["technology", "solutions", "AI", "cloud"],
@@ -29,3 +29,6 @@ export default function SEO({
     </head>
   );
 }
+
+
+export default SEO;

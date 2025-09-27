@@ -71,4 +71,4 @@ export default function PrivacyPolicy(): JSX.Element {
       </div>
     </>
   );
-};
+}

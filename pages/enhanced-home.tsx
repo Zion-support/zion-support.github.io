@@ -185,4 +185,4 @@ export default function EnhancedHome(): JSX.Element {
       </div>
     </>
   );
-};
+}

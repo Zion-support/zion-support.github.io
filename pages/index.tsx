@@ -177,9 +177,9 @@ const Home = React.memo(function Home(): JSX.Element {
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech?
-              </h2>
+              </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We deliver comprehensive technology solutions that drive innovation and growth for modern businesses.
               </p>
@@ -207,7 +207,7 @@ const Home = React.memo(function Home(): JSX.Element {
         {performanceMetrics && (
           <div className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Performance Insights</h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-8">Performance Insights</h1>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white/80 rounded-lg p-6">
                   <div className="text-3xl font-bold text-blue-600 mb-2">

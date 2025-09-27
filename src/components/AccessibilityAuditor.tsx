@@ -32,7 +32,7 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
       // Check for missing form labels
       const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]');
       inputs.forEach((input) => {
-        const id = input.id;
+        const id = input.getAttribute('id');
         if (id && !document.querySelector(`label[for="${id}"]`)) {
           issues.push({
             type: 'warning',

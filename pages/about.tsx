@@ -171,4 +171,4 @@ export default function About(): JSX.Element {
         </div>
       </div>
     </>
-  )};
+  )}
