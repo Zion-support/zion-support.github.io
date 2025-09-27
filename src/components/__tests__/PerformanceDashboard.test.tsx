@@ -5,9 +5,9 @@ import { PerformanceDashboard } from '../PerformanceDashboard';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>
+    div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => <div {...props}>{children}</div>
   },
-  AnimatePresence: ({ children }: any) => children
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children
 }));
 
 describe('PerformanceDashboard', () => {
