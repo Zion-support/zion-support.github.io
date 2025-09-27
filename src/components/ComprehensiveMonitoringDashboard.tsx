@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {Activity,
   AlertTriangle,
   CheckCircle,
@@ -17,32 +17,37 @@ import {Activity,
   EyeSearchX
 } from 'lucide-react';
 
-interface CardProps {children: React.ReactNode;
+interface CardProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-interface CardHeaderProps {children: React.ReactNode;
+interface CardHeaderProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-interface CardTitleProps {children: React.ReactNode;
+interface CardTitleProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-interface CardDescriptionProps {children: React.ReactNode;
+interface CardDescriptionProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-interface CardContentProps {children: React.ReactNode;
+interface CardContentProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({childrenclassName = ''}) => (<div className ={`bg-whiterounded-lgshadow-mdborder ${className}`}>
+const Card: React.FC<CardProps> = ({children, className = ''}) => (<div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ''}) => (<div className ={`p-6border-b ${className}`}>
+const CardHeader: React.FC<CardHeaderProps> = ({children, className = ''}) => (<div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
@@ -53,12 +58,12 @@ const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = ''}) => (<pclassName={`text-smtext-gray-600 ${className}`}>
+const CardDescription: React.FC<CardDescriptionProps> = ({children, className = ''}) => (<p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({childrenclassName = ''}) => (<divclassName={`p-6 ${className}`}>
+const CardContent: React.FC<CardContentProps> = ({children, className = ''}) => (<div className={`p-6 ${className}`}>
     {children}
   </div>
 );

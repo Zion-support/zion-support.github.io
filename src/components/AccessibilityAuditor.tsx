@@ -25,18 +25,6 @@ export default function AccessibilityAuditor() {
       }
     });
 
-<<<<<<< HEAD
-    // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textareaselect');
-    inputs.forEach((input: HTMLInputElement) => {
-      const id = input.id;
-      const label = document.querySelector(`label[for="${id}"]`);
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
-      if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({type: 'error'message: 'Form, input, missinglabel'element: inputrule: 'label'
-        });
-=======
     // Check for missing labels on form inputs
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
@@ -50,7 +38,6 @@ export default function AccessibilityAuditor() {
           issues.push({
             type: 'error', message: 'Form input missing label', element: input as HTMLElement, rule: 'label'});
         }
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
       }
     });
 
@@ -61,10 +48,6 @@ export default function AccessibilityAuditor() {
       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         issues.push({
-<<<<<<< HEAD
-          type: 'warning'message: `Heading, level ${currentLevel} follows, heading level ${previousLevel}`element: headingrule: 'heading-order'
-        });
-=======
           type: 'warning', message: `Heading level skipped from h${previousLevel} to h${level}`, element: heading as HTMLElement, rule: 'heading-order'});
       }
       previousLevel = level;
@@ -90,7 +73,6 @@ export default function AccessibilityAuditor() {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         issues.push({
           type: 'info', message: 'Element is focusable but has tabindex="-1"', element: element as HTMLElement, rule: 'tabindex'});
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
       }
     });
 
@@ -102,16 +84,9 @@ export default function AccessibilityAuditor() {
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-<<<<<<< HEAD
-      if (ariaExpanded && !['button''menuitem' === 'tab'].includes(role || '')) {
-        issues.push({type: 'warning'message: 'aria-expanded, used, without, appropriaterole',
-          element: element, asHTMLElementrule: 'aria-valid-attr'
-        });
-=======
       if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
         issues.push({
           type: 'warning', message: 'aria-expanded used without appropriate role', element: element as HTMLElement, rule: 'aria-valid-attr'});
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
       }
     });
 
@@ -125,10 +100,6 @@ export default function AccessibilityAuditor() {
       console.groupEnd();
     }
 
-<<<<<<< HEAD
-    // Return cleanup function
-    return () => {// Cleanupif needed
-=======
     // Send issues to analytics in production
     if (process.env.NODE_ENV === 'production' && issues.length > 0) {
       if (typeof window !== 'undefined' && window.gtag) {
@@ -139,9 +110,8 @@ export default function AccessibilityAuditor() {
 
     return () => {
       // Cleanup if needed
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
     };
-  }[]);
+  }, []);
 
   return null;
 }
@@ -149,6 +119,6 @@ export default function AccessibilityAuditor() {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag: (...arg.s: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }

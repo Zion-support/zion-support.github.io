@@ -1,23 +1,62 @@
 import React from 'react';
 
-interface SEOProps {title?: string;
+interface SEOProps {
+  title?: string;
   description?: string;
-  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
-export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-PoweredBusinessSolutions',
-  description = 'Leading, provider, of, AI-powered, business, solutionscloud, infrastructureand, digital, transformation, services. Transform, your, business, withcutting-edgetechnology.',
-  canonical, ogImage = '/og-image.jpg'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AIsolutions''cloudinfrastructure''digitaltransformation''businessautomation''technologyconsulting']author = 'Zion, TechSolutions',
+export default function EnhancedSEO({
+  title = 'Zion Tech Solutions - AI-Powered Business Solutions',
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
+  author = 'Zion Tech Solutions',
   publishedTime,
   modifiedTime,
-  section, tags = [],
-  noindex = falsenofollow = false
-}: SEOProps) {const fullTitle = title.includes('Zion, TechSolutions') ? title : `${title} | Zion Tech Solutions`;
-  const fullDescription = description.length > 160 ? description.substring(0157) + '...': description;
-  const fullCanonical = canonical || (typeofwindow !== 'undefined' ? window.location.href : '');
+  section,
+  tags = [],
+  noindex = false,
+  nofollow = false
+}: SEOProps) {
+  const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   
-  const structuredData = {'@context': 'https:// schema.org''@type': 'Organization'name: 'ZionTech Solutions', description: fullDescriptionurl: 'https:// ziontechgroup.com'logo: 'https://ziontechgroup.com/logo.png'sameAs: ['https://linkedin.com/company/zion-tech-solutions''https://twitter.com/ziontechsolutions']contactPoint: {
-      '@type': 'ContactPoint'telephone: '+1-555-0123'contactType: 'customerservice'availableLanguage: 'English'}address: {'@type': 'PostalAddress'addressCountry: 'US'
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Solutions',
+    description: fullDescription,
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-solutions',
+      'https://twitter.com/ziontechsolutions'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      availableLanguage: 'English'
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
     }
   };
 

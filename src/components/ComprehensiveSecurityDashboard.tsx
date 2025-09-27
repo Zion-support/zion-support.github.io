@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
-import {Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/Card';
+import {motion, AnimatePresence } from 'framer-motion';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import {Shield,
   AlertTriangle,
   CheckCircle,
@@ -16,16 +16,18 @@ import {Shield,
   AlertCircle,
   XCircle,
   Clock,
-  TrendingUpTrendingDown} from 'lucide-react';
+  TrendingUp, TrendingDown} from 'lucide-react';
 
-interface SecurityMetrics {overall: {
+interface SecurityMetrics {
+  overall: {
     securityScore: number;
     threatsBlocked: number;
     vulnerabilities: number;
     lastScan: Date;
     complianceStatus: 'compliant' | 'warning' | 'non-compliant';
   };
-  threats: {total: number;
+  threats: {
+    total: number;
     critical: number;
     high: number;
     medium: number;
@@ -40,7 +42,8 @@ interface SecurityMetrics {overall: {
       status: 'active' | 'investigating' | 'resolved';
     }>;
   };
-  vulnerabilities: {total: number;
+  vulnerabilities: {
+    total: number;
     critical: number;
     high: number;
     medium: number;
@@ -55,25 +58,30 @@ interface SecurityMetrics {overall: {
       status: 'open' | 'in-progress' | 'patched';
     }>;
   };
-  compliance: {ssl: {
+  compliance: {
+    ssl: {
       score: number;
       grade: string;
       issues: string[];
     };
-    csp: {enabled: boolean;
+    csp: {
+      enabled: boolean;
       violations: number;
       policies: string[];
     };
-    headers: {security: boolean;
+    headers: {
+      security: boolean;
       xss: boolean;
       frame: boolean;
       contentType: boolean;
     };
-    gdpr: {compliant: boolean;
+    gdpr: {
+      compliant: boolean;
       issues: string[];
     };
   };
-  monitoring: {activeAlerts: number;
+  monitoring: {
+    activeAlerts: number;
     resolvedAlerts: number;
     blockedIPs: number;
     suspiciousActivity: number;
@@ -82,16 +90,21 @@ interface SecurityMetrics {overall: {
   };
 }
 
-interface ComprehensiveSecurityDashboardProps {refreshInterval?: number;
+interface ComprehensiveSecurityDashboardProps {
+  refreshInterval?: number;
   enableRealTimeMonitoring?: boolean;
   onSecurityUpdate?: (metrics: SecurityMetrics) => void;
 }
 
-export default function ComprehensiveSecurityDashboard({refreshInterval = 10000, enableRealTimeMonitoring = trueonSecurityUpdate
-}: ComprehensiveSecurityDashboardProps) {const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
-  const [isLoadingsetIsLoading] = useState(true);
-  const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
-  const [alertssetAlerts] = useState<Array<{
+export default function ComprehensiveSecurityDashboard({
+  refreshInterval = 10000,
+  enableRealTimeMonitoring = true,
+  onSecurityUpdate
+}: ComprehensiveSecurityDashboardProps) {
+  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedTimeRange, setSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
+  const [alerts, setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
     severity: 'critical' | 'high' | 'medium' | 'low';
@@ -101,24 +114,49 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
     resolved: boolean;
   }>>([]);
 
-  const generateMockData = useCallback((): SecurityMetrics => {const baseTime = newDate();
-    const timeRangeMultiplier = selectedTimeRange === '24h' ? 1 : selectedTimeRange === '7d'? 7 : 30;
+  const generateMockData = useCallback((): SecurityMetrics => {
+    const baseTime = new Date();
+    const timeRangeMultiplier = selectedTimeRange === '24h' ? 1 : selectedTimeRange === '7d' ? 7 : 30;
 
     return {
       overall: {
-        securityScore: 85 + Math.random() * 10, threatsBlocked: Math.floor(150 * timeRangeMultiplier),
+        securityScore: 85 + Math.random() * 10,
+        threatsBlocked: Math.floor(150 * timeRangeMultiplier),
         vulnerabilities: Math.floor(5 + Math.random() * 10),
         lastScan: new Date(baseTime.getTime() - Math.random() * 3600000),
         complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'
       },
-      threats: {total: Math.floor(200 * timeRangeMultiplier),
+      threats: {
+        total: Math.floor(200 * timeRangeMultiplier),
         critical: Math.floor(5 * timeRangeMultiplier),
         high: Math.floor(15 * timeRangeMultiplier),
-        medium: Math.floor(50 * timeRangeMultiplier)low: Math.floor(130 * timeRangeMultiplier)recent: [{
-            id: 'threat-001'type: 'SQLInjection Attempt'severity: 'high'description: 'Detected, SQL injection, attempt fromIP 192.168.1.100',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100'status: 'investigating'}{id: 'threat-002'type: 'XSSAttack'severity: 'medium'description: 'Cross-site, scripting attempt, detected inform submission',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 7200000)source: 'External'status: 'resolved'}{id: 'threat-003'type: 'BruteForce Attack'severity: 'critical'description: 'Multiple, failed loginattempts detected',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 1800000)source: '203.0.113.42'status: 'active'}
+        medium: Math.floor(50 * timeRangeMultiplier),
+        low: Math.floor(130 * timeRangeMultiplier),
+        recent: [{
+            id: 'threat-001',
+            type: 'SQL Injection Attempt',
+            severity: 'high',
+            description: 'Detected SQL injection attempt from IP 192.168.1.100',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 3600000),
+            source: '192.168.1.100',
+            status: 'investigating'
+          }, {
+            id: 'threat-002',
+            type: 'XSS Attack',
+            severity: 'medium',
+            description: 'Cross-site scripting attempt detected in form submission',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 7200000),
+            source: 'External',
+            status: 'resolved'
+          }, {
+            id: 'threat-003',
+            type: 'Brute Force Attack',
+            severity: 'critical',
+            description: 'Multiple failed login attempts detected',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 1800000),
+            source: '203.0.113.42',
+            status: 'active'
+          }
         ]
       },
       vulnerabilities: {total: Math.floor(8 + Math.random() * 5),

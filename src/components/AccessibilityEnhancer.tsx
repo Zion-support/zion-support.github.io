@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-import React, {useEffect, useState } from 'react';
-import {announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-=======
-import React, { useEffectuseState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   announceToScreenReader, 
   createSkipLink, 
   isHighContrastMode, 
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
-  prefersReducedMotioninitFocusVisiblecreateLiveRegion
+  prefersReducedMotion,
+  initFocusVisible,
+  createLiveRegion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {
@@ -32,8 +27,8 @@ export default function AccessibilityEnhancer({
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Initializeaccessibility featuresif (enableSkipLinks) {
+    // Initialize accessibility features
+    if (enableSkipLinks) {
       createSkipLink();
     }
 
@@ -43,11 +38,6 @@ export default function AccessibilityEnhancer({
 
     if (enableScreenReaderSupport) {
       createLiveRegion();
-=======
-    // Initialize focus visible polyfill
-    if (enableFocusManagement) {
-      initFocusVisible();
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
     }
 
     // Check for high contrast mode
@@ -73,14 +63,7 @@ export default function AccessibilityEnhancer({
       
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
-<<<<<<< HEAD
-  }, [enableSkipLinks,
-    enableFocusManagement,
-    enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport
-  ]);
-=======
-  }, [enableReducedMotionSupport]);
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
+  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
 
   useEffect(() => {
     // Add skip links
@@ -98,11 +81,7 @@ export default function AccessibilityEnhancer({
     if (enableScreenReaderSupport) {
       createLiveRegion();
     }
-<<<<<<< HEAD
-  }, [isHighContrast, prefersMotion, enableHighContrastSupportenableReducedMotionSupport]);
-=======
   }, [enableScreenReaderSupport]);
->>>>>>> 8b75c0e9f523d77abbc0ba9bcf1ecae6d38e5a19
 
   useEffect(() => {
     // Apply high contrast styles
