@@ -1,524 +1,524 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
-  Zap, 
-  Cpu, 
-  HardDrive, 
-  Netwo, r, k, 
-  Databa, s, e, 
-  Clock, 
-  Activi, t, y, 
+  Zap
+  Cpu
+  HardDrive
+  Network
+  Database
+  Clock
+  Activity
   AlertTriangle,
   CheckCircle,
-  Trending, U, p,
-  TrendingDo, w, n,
-  MonitorServerGlo, b, e
-} from 'luci, d, e- rea, c, t';
+  TrendingUp,
+  TrendingDown,
+  MonitorServerGlobe
+} from 'lucide- react';
 import { 
-  LineCha, r, t, 
-  Li, n, e, 
-  XAx, i, s, 
-  YAx, i, s, 
-  CartesianGr, i, d, 
-  Toolt, i, p, 
-  ResponsiveContain, e, r,
-  AreaChartAreaBarChartBarGau, g, e
-} from 'rechar, t, s';
+  LineChart
+  Line
+  XAxis
+  YAxis
+  CartesianGrid
+  Tooltip
+  ResponsiveContainer,
+  AreaChartAreaBarChartBarGauge
+} from 'recharts';
 
 interface PerformanceMetrics {
-  timesta, m, p: string;
-  c, p, u: number;
+  timestamp: string;
+  cpu: number;
   memory: number;
-  di, s, k: number;
+  disk: number;
   network: number;
-  databa, s, e: number;
-  responseTi, m, e: number;
-  throughp, u, t: number;
-  errorRa, t, e: number;
-  availabili, t, y: number;
+  database: number;
+  responseTime: number;
+  throughput: number;
+  errorRate: number;
+  availability: number;
 }
 
-interface PerformanceAle, r, t {
+interface PerformanceAlert {
   id: string;
-  type: 'c, p, u' | 'memory' | 'di, s, k' | 'network' | 'databa, s, e' | 'respon, s, e' | 'error';
-  severi, t, y: 'low' | 'medium' | 'high' | 'critic, a, l';
+  type: 'cpu' | 'memory' | 'disk' | 'network' | 'database' | 'response' | 'error';
+  severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
-  timesta, m, p: Da, t, e;
-  resolv, e, d: boolean;
-  thresho, l, d: number;
-  currentVal, u, e: number;
+  timestamp: Date;
+  resolved: boolean;
+  threshold: number;
+  currentValue: number;
 }
 
-interface PerformanceOptimizati, o, n {
+interface PerformanceOptimization {
   id: string;
-  tit, l, e: string;
-  descripti, o, n: string;
-  impa, c, t: 'low' | 'medium' | 'high';
-  effo, r, t: 'low' | 'medium' | 'high';
-  stat, u, s: 'pendi, n, g' | 'in-progre, s, s' | 'complet, e, d';
-  estimatedImproveme, n, t: number;
+  title: string;
+  description: string;
+  impact: 'low' | 'medium' | 'high';
+  effort: 'low' | 'medium' | 'high';
+  status: 'pending' | 'in-progress' | 'completed';
+  estimatedImprovement: number;
 }
 
-con, s, t AdvancedPerformanceSyst, e, m: React.FC = () => {
-  con, s, t [metricssetMetr, i, c, s] = useState<PerformanceMetri, c, s[]>([]);
-  con, s, t [alertssetAler, t, s] = useState<PerformanceAle, r, t[]>([]);
-  con, s, t [optimizationssetOptimizatio, n, s] = useState<PerformanceOptimizati, o, n[]>([]);
-  con, s, t [isMonitoringsetIsMonitori, n, g] = useState(fa, l, s, e);
-  con, s, t [selectedTimeRangesetSelectedTimeRa, n, g, e] = useState('1h');
-  con, s, t [activeTabsetActive, T, a, b] = useState('overvi, e, w');
+const AdvancedPerformanceSystem: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
+  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
+  const [optimizationssetOptimizations] = useState<PerformanceOptimization[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [selectedTimeRangesetSelectedTimeRange] = useState('1h');
+  const [activeTabsetActiveTab] = useState('overview');
 
-  con, s, t generateMockDa, t, a = useCallback(() => {
-    con, s, t n, o, w = n, e, w Da, t, e();
+  const generateMockData = useCallback(() => {
+    const now = new Date();
     
-    // Genera, t, e performance metri, c, s f, o, r t, h, e la, s, t ho, u, r
-    con, s, t newMetri, c, s: PerformanceMetri, c, s[] = Arr, a, y.f, r, o.m({ leng, t, h: 12 }(_, i) => {
-      con, s, t timesta, m, p = n, e, w Da, t, e(n, o, w.getT, i, m() - (11 - , i) * 5 * 60 * 10, 0, 0);
-      retu, r, n {
-        timesta, m, p: timesta, m, p.toLocaleTimeStr, i, n()c, p, u: Ma, t, h.ro, u, n(20 + Ma, t, h.rand, o, m() * 60)memory: Ma, t, h.ro, u, n(30 + Ma, t, h.rand, o, m() * 50)di, s, k: Ma, t, h.ro, u, n(40 + Ma, t, h.rand, o, m() * 40)network: Ma, t, h.ro, u, n(10 + Ma, t, h.rand, o, m() * 80)databa, s, e: Ma, t, h.ro, u, n(15 + Ma, t, h.rand, o, m() * 70)responseTi, m, e: Ma, t, h.ro, u, n(50 + Ma, t, h.rand, o, m() * 2, 0, 0)throughp, u, t: Ma, t, h.ro, u, n(1, 0, 0 + Ma, t, h.rand, o, m() * 9, 0, 0)errorRa, t, e: Ma, t, h.ro, u, n(Ma, t, h.rand, o, m() * 5)availabili, t, y: 99.5 + Ma, t, h.rand, o, m() * 0.5
+    // Generate performance metrics for the last hour
+    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_i) => {
+      const timestamp = new Date(now.getTim() - (11 - i) * 5 * 60 * 1000);
+      return {
+        timestamp: timestamp.toLocaleTimeStrin()cpu: Math.roun(20 + Math.random() * 60)memory: Math.roun(30 + Math.random() * 50)disk: Math.roun(40 + Math.random() * 40)network: Math.roun(10 + Math.random() * 80)database: Math.roun(15 + Math.random() * 70)responseTime: Math.roun(50 + Math.random() * 200)throughput: Math.roun(100 + Math.random() * 900)errorRate: Math.roun(Math.random() * 5)availability: 99.5 + Math.random() * 0.5
       };
     });
 
-    setMetri, c, s(newMetri, c, s);
+    setMetrics(newMetrics);
 
-    // Genera, t, e performance aler, t, s
-    con, s, t newAler, t, s: PerformanceAle, r, t[] = [
+    // Generate performance alerts
+    const newAlerts: PerformanceAlert[] = [
       {
         id: '1',
-        type: 'c, p, u', severi, t, y: 'high', message: 'C, P, U usa, g, e exceed, e, d 80% thresho, l, d', timesta, m, p: n, e, w Da, t, e(n, o, w.getT, i, m() - 10, 0, 0 * 60 * 15)resolv, e, d: falsethresh, o, l, d: 80, currentVal, u, e: 85
+        type: 'cpu'severity: 'high'message: 'CPU usage exceeded 80% threshold'timestamp: new Date(now.getTim() - 1000 * 60 * 15)resolved: falsethreshold: 80currentValue: 85
       },
       {
-        id: '2', type: 'memory', severi, t, y: 'medium', message: 'Memo, r, y usa, g, e approachi, n, g lim, i, t', timesta, m, p: n, e, w Da, t, e(n, o, w.getT, i, m() - 10, 0, 0 * 60 * 30)resolv, e, d: falsethresh, o, l, d: 85, currentVal, u, e: 78
+        id: '2'type: 'memory'severity: 'medium'message: 'Memory usage approaching limit'timestamp: new Date(now.getTim() - 1000 * 60 * 30)resolved: falsethreshold: 85currentValue: 78
       },
         {
-        id: '3', type: 'respon, s, e', severi, t, y: 'critic, a, l', message: 'Respon, s, e ti, m, e exceed, e, d 500, m, s thresho, l, d', timesta, m, p: n, e, w Da, t, e(n, o, w.getT, i, m() - 10, 0, 0 * 60 * 45)resolv, e, d: truethresh, o, l, d: 5, 0, 0, currentVal, u, e: 6, 5, 0
+        id: '3'type: 'response'severity: 'critical'message: 'Response time exceeded 500ms threshold'timestamp: new Date(now.getTim() - 1000 * 60 * 45)resolved: truethreshold: 500currentValue: 650
       }
     ];
 
-    setAler, t, s(newAle, r, t, s);
+    setAlerts(newAlerts);
 
-    // Genera, t, e performance optimizatio, n, s
-    con, s, t newOptimizatio, n, s: PerformanceOptimizati, o, n[] = [
+    // Generate performance optimizations
+    const newOptimizations: PerformanceOptimization[] = [
       {
         id: '1',
-        tit, l, e: 'Enab, l, e Gz, i, p Compressi, o, n',
-        descripti, o, n: 'Compre, s, s stat, i, c asse, t, s to redu, c, e bandwid, t, h usa, g, e',
-        impa, c, t: 'high',
-        effo, r, t: 'low', stat, u, s: 'pendi, n, g', estimatedImproveme, n, t: 30
+        title: 'Enable Gzip Compression',
+        description: 'Compress static assets to reduce bandwidth usage',
+        impact: 'high',
+        effort: 'low'status: 'pending'estimatedImprovement: 30
       },
       {
         id: '2',
-        tit, l, e: 'Impleme, n, t C, D, N',
-        descripti, o, n: 'U, s, e Conte, n, t Delive, r, y Netwo, r, k f, o, r glob, a, l ass, e, t distributi, o, n',
-        impa, c, t: 'high', effo, r, t: 'medium', stat, u, s: 'in- progre, s, s', estimatedImproveme, n, t: 40
+        title: 'Implement CDN',
+        description: 'Use Content Delivery Network for global asset distribution',
+        impact: 'high'effort: 'medium'status: 'in- progress'estimatedImprovement: 40
       },
       {
         id: '3',
-        tit, l, e: 'Databa, s, e Que, r, y Optimizati, o, n',
-        descripti, o, n: 'Optimi, z, e slow databa, s, e queri, e, s a, n, d a, d, d index, e, s',
-        impa, c, t: 'medium',
-        effo, r, t: 'high', stat, u, s: 'pendi, n, g', estimatedImproveme, n, t: 25
+        title: 'Database Query Optimization',
+        description: 'Optimize slow database queries and add indexes',
+        impact: 'medium',
+        effort: 'high'status: 'pending'estimatedImprovement: 25
       },
       {
         id: '4',
-        tit, l, e: 'Ima, g, e Optimizati, o, n', descripti, o, n: 'Compre, s, s a, n, d optimi, z, e imag, e, s f, o, r w, e, b delive, r, y', impa, c, t: 'medium', effo, r, t: 'low', stat, u, s: 'complet, e, d', estimatedImproveme, n, t: 20
+        title: 'Image Optimization'description: 'Compress and optimize images for web delivery'impact: 'medium'effort: 'low'status: 'completed'estimatedImprovement: 20
       }
     ];
 
-    setOptimizatio, n, s(newOptimizati, o, n, s);
-  }, []);
+    setOptimizations(newOptimizations);
+  }[]);
 
   useEffect(() => {
-    generateMockDa, t, a();
-    setIsMonitori, n, g(t, r, u, e);
+    generateMockData();
+    setIsMonitoring(true);
 
-    con, s, t interv, a, l = setInterv, a, l(generateMockData30, 0, 0, 0);
-    retu, r, n () => clearInterv, a, l(inter, v, a, l);
-  }[generateMockD, a, t, a]);
+    const interval = setInterval(generateMockData30000);
+    return () => clearInterval(interval);
+  }[generateMockData]);
 
-  con, s, t getStatusCol, o, r = (stat, u, s: str, i, n, g): string => {
-    swit, c, h (sta, t, u, s) {
-      ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
-      ca, s, e 'warning': retu, r, n 'te, x, t-yellow-6, 0, 0';
-      ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0';
+  const getStatusColor = (status: string): string => {
+    switch (status) {
+      case 'good': return 'text-green-600';
+      case 'warning': return 'text-yellow-600';
+      case 'critical': return 'text-red-600';
+      default: return 'text-gray-600';
     }
   };
 
-  con, s, t getSeverityCol, o, r = (severi, t, y: string): string => {
-    swit, c, h (sever, i, t, y) {
-      ca, s, e 'critic, a, l': retu, r, n 'bg-r, e, d-1, 0, 0 te, x, t-r, e, d-8, 0, 0 bord, e, r-r, e, d-2, 0, 0';
-      ca, s, e 'high': retu, r, n 'bg-oran, g, e-1, 0, 0 te, x, t-oran, g, e-8, 0, 0 bord, e, r-oran, g, e-2, 0, 0';
-      ca, s, e 'medium': retu, r, n 'bg-yellow-1, 0, 0 te, x, t-yellow-8, 0, 0 bord, e, r-yellow-2, 0, 0';
-      ca, s, e 'low': retu, r, n 'bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-8, 0, 0 bord, e, r-bl, u, e-2, 0, 0';
-      default: retu, r, n 'bg-gr, a, y-1, 0, 0 te, x, t-gr, a, y-8, 0, 0 bord, e, r-gr, a, y-2, 0, 0';
+  const getSeverityColor = (severity: string): string => {
+    switch (severity) {
+      case 'critical': return 'bg-red-100 text-red-800 border-red-200';
+      case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'low': return 'bg-blue-100 text-blue-800 border-blue-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
-  con, s, t getImpactCol, o, r = (impa, c, t: str, i, n, g): string => {
-    swit, c, h (imp, a, c, t) {
-      ca, s, e 'high': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
-      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-6, 0, 0';
-      ca, s, e 'low': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0';
+  const getImpactColor = (impact: string): string => {
+    switch (impact) {
+      case 'high': return 'text-red-600';
+      case 'medium': return 'text-yellow-600';
+      case 'low': return 'text-green-600';
+      default: return 'text-gray-600';
     }
   };
 
-  con, s, t getEffortCol, o, r = (effo, r, t: str, i, n, g): string => {
-    swit, c, h (eff, o, r, t) {
-      ca, s, e 'high': retu, r, n 'te, x, t-r, e, d-6, 0, 0';
-      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-6, 0, 0';
-      ca, s, e 'low': retu, r, n 'te, x, t-gre, e, n-6, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0';
+  const getEffortColor = (effort: string): string => {
+    switch (effort) {
+      case 'high': return 'text-red-600';
+      case 'medium': return 'text-yellow-600';
+      case 'low': return 'text-green-600';
+      default: return 'text-gray-600';
     }
   };
 
-  con, s, t getStatusIc, o, n = (stat, u, s: str, i, n, g) => {
-    swit, c, h (sta, t, u, s) {
-      ca, s, e 'complet, e, d': retu, r, n <CheckCircle classNa, m, e="h-4 w-4 te, x, t-gre, e, n-6, 0, 0"/>;
-      ca, s, e 'in-progre, s, s': retu, r, n <Activi, t, y classNa, m, e="h-4 w-4 te, x, t-bl, u, e-6, 0, 0"/>;
-      ca, s, e 'pendi, n, g': retu, r, n <Clock classNa, m, e="h-4 w-4 te, x, t-gr, a, y- 6, 0, 0"/>;
-      default: retu, r, n nu, l, l;
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-600"/>;
+      case 'in-progress': return <Activity className="h-4 w-4 text-blue-600"/>;
+      case 'pending': return <Clock className="h-4 w-4 text-gray- 600"/>;
+      default: return null;
     }
   };
 
-  con, s, t ta, b, s = [
-    { id: 'overvi, e, w', na, m, e: 'Overvi, e, w', ic, o, n: Monit, o, r },
-        { id: 'metri, c, s', na, m, e: 'Metri, c, s', ic, o, n: Activi, t, y },
-        { id: 'aler, t, s', na, m, e: 'Aler, t, s', ic, o, n: AlertTriangle },
-        { id: 'optimizatio, n, s', na, m, e: 'Optimizatio, n, s', ic, o, n: Zap },
-        { id: 'repor, t, s', na, m, e: 'Repor, t, s', ic, o, n: Trending, U, p }
+  const tabs = [
+    { id: 'overview'name: 'Overview'icon: Monitor },
+        { id: 'metrics'name: 'Metrics'icon: Activity },
+        { id: 'alerts'name: 'Alerts'icon: AlertTriangle },
+        { id: 'optimizations'name: 'Optimizations'icon: Zap },
+        { id: 'reports'name: 'Reports'icon: TrendingUp }
   ];
 
-  retu, r, n (<d, i, v classNa, m, e="spa, c, e-y-6">
+  return (<div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-              <Zap classNa, m, e="h-6 w-6 te, x, t-yellow-6, 0, 0"/>
-              <sp, a, n>Advanc, e, d Performan, c, e Syst, e, m</sp, a, n>
-            </d, i, v>
-            <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                <d, i, v classNa, m, e="w-3 h-3 round, e, d-fu, l, l"></d, i, v>
-                <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">
-                  {isMonitori, n, g ? 'Monitori, n, g' : 'Stopp, e, d'}
-                </sp, a, n>
-              </d, i, v>
-              <sele, c, t
-                val, u, e={selectedTimeRa, n, g e}
-                onChan, g, e={(, e) => setSelectedTimeRan, g, e(e.tar, g, e.t.v, a, l.u, e)}
-                classNa, m, e="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm">
-                <opti, o, n val, u, e="1h">La, s, t Ho, u, r</opti, o, n>
-                <opti, o, n val, u, e="6h">La, s, t 6 Hou, r, s</opti, o, n>
-                <opti, o, n val, u, e="2, 4, h">La, s, t 24 Hou, r, s</opti, o, n>
-                <opti, o, n val, u, e= "7d">La, s, t 7 Da, y, s</opti, o, n>
-              </sele, c, t>
-            </d, i, v>
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Zap className="h-6 w-6 text-yellow-600"/>
+              <span>Advanced Performance System</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 rounded-full"></div>
+                <span className="text-sm text-gray-600">
+                  {isMonitoring ? 'Monitoring' : 'Stopped'}
+                </span>
+              </div>
+              <select
+                value={selectedTimeRang e}
+                onChange={(e) => setSelectedTimeRange(e.targe.t.val.ue)}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm">
+                <option value="1h">Last Hour</option>
+                <option value="6h">Last 6 Hours</option>
+                <option value="24h">Last 24 Hours</option>
+                <option value= "7d">Last 7 Days</option>
+              </select>
+            </div>
           </CardTitle>
           <CardDescription>
-            Comprehensi, v, e performance monitoringoptimizationa, n, d alerti, n, g syst, e, m
+            Comprehensive performance monitoringoptimizationand alerting system
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {/* T, a, b Navigati, o, n */}
-          <d, i, v classNa, m, e="fl, e, x spa, c, e-x-1 mb-6 bord, e, r-b bord, e, r-gr, a, y-2, 0, 0">
-            {ta, b, s.ma.p((ta, b) => (
-              <butt, o, n
-                k, e, y={t, a, b.i d}
-                onCli, c, k={() => setActiveT, a, b(t, a, b.i, d)}
-                classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2 px-4 py-2 te, x, t-sm fo, n, t-medium bord, e, r-b-2 transiti, o, n-colo, r, s">
-                <t, a, b.i, c, o.n classNa, m, e="h-4 w-4"/>
-                <sp, a, n>{t, a, b.na.m e}</sp, a, n>
-              </butt, o, n>
+          {/* Tab Navigation */}
+          <div className="flex space-x-1 mb-6 border-b border-gray-200">
+            {tabs.ma.p((tab) => (
+              <button
+                key={tab.i d}
+                onClick={() => setActiveTab(tab.id)}
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors">
+                <tab.ico.n className="h-4 w-4"/>
+                <span>{tab.na.m e}</span>
+              </button>
             ))}
-          </d, i, v>
+          </div>
 
-          {/* Overvi, e, w T, a, b */}
-          {activeT, a, b === 'overvi, e, w' && (
-            <d, i, v classNa, m, e="spa, c, e-y-6">
-              {/* K, e, y Performan, c, e Indicato, r, s */}
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4">
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">99.8%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Upti, m, e</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p classNa, m, e="h-3 w-3 mr-1"/>
+          {/* Overview Tab */}
+          {activeTab === 'overview' && (
+            <div className="space-y-6">
+              {/* Key Performance Indicators */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-green-600">99.8%</div>
+                  <div className="text-sm text-gray-600">Uptime</div>
+                  <div className="text-xs text-green-600 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +0.2%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">1.2.s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Respon, s, e</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-r, e, d-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <TrendingDo, w, n classNa, m, e="h-3 w-3 mr-1"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-blue-600">1.2.s</div>
+                  <div className="text-sm text-gray-600">Avg Response</div>
+                  <div className="text-xs text-red-600 flex items-center justify-center mt-1">
+                    <TrendingDown className="h-3 w-3 mr-1"/>
                     +0.1.s
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">0.3%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Err, o, r Ra, t, e</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <TrendingDo, w, n classNa, m, e="h-3 w-3 mr-1"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-purple-600">0.3%</div>
+                  <div className="text-sm text-gray-600">Error Rate</div>
+                  <div className="text-xs text-green-600 flex items-center justify-center mt-1">
+                    <TrendingDown className="h-3 w-3 mr-1"/>
                     -0.1%
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-oran, g, e-6, 0, 0">2.1.K</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Throughp, u, t</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-gre, e, n-6, 0, 0 fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mt-1">
-                    <Trending, U, p classNa, m, e="h-3 w-3 mr-1"/>
+                  </div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <div className="text-2xl font-bold text-orange-600">2.1.K</div>
+                  <div className="text-sm text-gray-600">Throughput</div>
+                  <div className="text-xs text-green-600 flex items-center justify-center mt-1">
+                    <TrendingUp className="h-3 w-3 mr-1"/>
                     +15%
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+              </div>
 
-              {/* Performan, c, e Char, t, s */}
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 lg:gr, i, d-co, l, s-2 g, a, p-6">
+              {/* Performance Charts */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle classNa, m, e="te, x, t-lg">Syst, e, m Resourc, e, s</CardTitle>
+                    <CardTitle className="text-lg">System Resources</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                      <LineCha, r, t da, t, a={metr, i, c s}>
-                        <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                        <XAx, i, s dataK, e, y="timesta, m, p"/>
-                        <YAx, i, s />
-                        <Toolt, i, p />
-                        <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="c, p, u" stro, k, e="#3B82, F, 6" strokeWid, t, h={ 2} />
-                        <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="memory" stro, k, e="#10B9, 8, 1" strokeWid, t, h={ 2} />
-                        <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="di, s, k" stro, k, e="#F59E, 0, B" strokeWid, t, h={ 2} />
-                      </LineCha, r, t>
-                    </ResponsiveContain, e, r>
+                    <ResponsiveContainer width="100%" height={30 0}>
+                      <LineChart data={metric s}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="timestamp"/>
+                        <YAxis />
+                        <Tooltip />
+                        <Line type="monotone" dataKey="cpu" stroke="#3B82F6" strokeWidth={ 2} />
+                        <Line type="monotone" dataKey="memory" stroke="#10B981" strokeWidth={ 2} />
+                        <Line type="monotone" dataKey="disk" stroke="#F59E0B" strokeWidth={ 2} />
+                      </LineChart>
+                    </ResponsiveContainer>
                   </CardContent>
                 </Card>
 
                 <Card>
                   <CardHeader>
-                    <CardTitle classNa, m, e="te, x, t-lg">Netwo, r, k & Databa, s, e</CardTitle>
+                    <CardTitle className="text-lg">Network & Database</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                      <AreaCha, r, t da, t, a={metr, i, c s}>
-                        <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                        <XAx, i, s dataK, e, y="timesta, m, p"/>
-                        <YAx, i, s />
-                        <Toolt, i, p />
-                        <Ar, e, a ty, p, e="monoto, n, e" dataK, e, y="network" stack, I, d="1" stro, k, e="#8B5C, F, 6" fi, l, l="#8B5C, F, 6" />
-                        <Ar, e, a ty, p, e="monoto, n, e" dataK, e, y="databa, s, e" stack, I, d="1" stro, k, e="#EF44, 4, 4" fi, l, l="#EF44, 4, 4" />
-                      </AreaCha, r, t>
-                    </ResponsiveContain, e, r>
+                    <ResponsiveContainer width="100%" height={30 0}>
+                      <AreaChart data={metric s}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="timestamp"/>
+                        <YAxis />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="network" stackId="1" stroke="#8B5CF6" fill="#8B5CF6" />
+                        <Area type="monotone" dataKey="database" stackId="1" stroke="#EF4444" fill="#EF4444" />
+                      </AreaChart>
+                    </ResponsiveContainer>
                   </CardContent>
                 </Card>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           )}
 
-          {/* Metri, c, s T, a, b */}
-          {activeT, a, b === 'metri, c, s' && (
-            <d, i, v classNa, m, e="spa, c, e-y-6">
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-4 g, a, p-4">
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                    <Cpu classNa, m, e="h-5 w-5 te, x, t-bl, u, e-6, 0, 0"/>
-                    <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">8 cor, e, s</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">65%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">C, P, U Usa, g, e</d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                    <HardDrive classNa, m, e="h-5 w-5 te, x, t-gre, e, n-6, 0, 0"/>
-                    <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">16, G, B</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">78%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Memo, r, y Usa, g, e</d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                    <Databa, s, e classNa, m, e="h-5 w-5 te, x, t-purp, l, e-6, 0, 0"/>
-                    <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">500, G, B</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">45%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Di, s, k Usa, g, e</d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                    <Netwo, r, k classNa, m, e="h-5 w-5 te, x, t-oran, g, e-6, 0, 0"/>
-                    <sp, a, n classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">1Gb, p, s</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-oran, g, e-6, 0, 0">120, m, s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Laten, c, y</d, i, v>
-                </d, i, v>
-              </d, i, v>
+          {/* Metrics Tab */}
+          {activeTab === 'metrics' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Cpu className="h-5 w-5 text-blue-600"/>
+                    <span className="text-sm text-gray-500">8 cores</span>
+                  </div>
+                  <div className="text-2xl font-bold text-blue-600">65%</div>
+                  <div className="text-sm text-gray-600">CPU Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <HardDrive className="h-5 w-5 text-green-600"/>
+                    <span className="text-sm text-gray-500">16GB</span>
+                  </div>
+                  <div className="text-2xl font-bold text-green-600">78%</div>
+                  <div className="text-sm text-gray-600">Memory Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Database className="h-5 w-5 text-purple-600"/>
+                    <span className="text-sm text-gray-500">500GB</span>
+                  </div>
+                  <div className="text-2xl font-bold text-purple-600">45%</div>
+                  <div className="text-sm text-gray-600">Disk Usage</div>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <Network className="h-5 w-5 text-orange-600"/>
+                    <span className="text-sm text-gray-500">1Gbps</span>
+                  </div>
+                  <div className="text-2xl font-bold text-orange-600">120ms</div>
+                  <div className="text-sm text-gray-600">Latency</div>
+                </div>
+              </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle classNa, m, e="te, x, t-lg">Respon, s, e Ti, m, e & Throughp, u, t</CardTitle>
+                  <CardTitle className="text-lg">Response Time & Throughput</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                    <BarCha, r, t da, t, a={metr, i, c s}>
-                      <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                      <XAx, i, s dataK, e, y="timesta, m, p"/>
-                      <YAx, i, s yAxis, I, d="le, f, t"/>
-                      <YAx, i, s yAxis, I, d="rig, h, t" orientati, o, n="rig, h, t" />
-                      <Toolt, i, p />
-                      <B, a, r yAxis, I, d="le, f, t" dataK, e, y="responseTi, m, e" fi, l, l="#3B82, F, 6" />
-                      <B, a, r yAxis, I, d="rig, h, t" dataK, e, y="throughp, u, t" fi, l, l="#10B9, 8, 1" />
-                    </BarCha, r, t>
-                  </ResponsiveContain, e, r>
+                  <ResponsiveContainer width="100%" height={30 0}>
+                    <BarChart data={metric s}>
+                      <CartesianGrid strokeDasharray="3 3"/>
+                      <XAxis dataKey="timestamp"/>
+                      <YAxis yAxisId="left"/>
+                      <YAxis yAxisId="right" orientation="right" />
+                      <Tooltip />
+                      <Bar yAxisId="left" dataKey="responseTime" fill="#3B82F6" />
+                      <Bar yAxisId="right" dataKey="throughput" fill="#10B981" />
+                    </BarChart>
+                  </ResponsiveContainer>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
 
-          {/* Aler, t, s T, a, b */}
-          {activeT, a, b === 'aler, t, s' && (
-            <d, i, v classNa, m, e="spa, c, e-y-6">
-              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
-                <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d">Performan, c, e Aler, t, s</h3>
-                <d, i, v classNa, m, e="fl, e, x spa, c, e-x-2">
-                  <butt, o, n classNa, m, e="px-3 py-1 te, x, t-sm bg-yellow-6, 0, 0 te, x, t-whi, t, e round, e, d hov, e, r:bg-yellow-7, 0, 0">
-                    Acknowled, g, e A, l, l
-                  </butt, o, n>
-                  <butt, o, n classNa, m, e="px-3 py-1 te, x, t-sm bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d hov, e, r:bg-gr, a, y-50">
-                    Filt, e, r
-                  </butt, o, n>
-                </d, i, v>
-              </d, i, v>
+          {/* Alerts Tab */}
+          {activeTab === 'alerts' && (
+            <div className="space-y-6">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold">Performance Alerts</h3>
+                <div className="flex space-x-2">
+                  <button className="px-3 py-1 text-sm bg-yellow-600 text-white rounded hover:bg-yellow-700">
+                    Acknowledge All
+                  </button>
+                  <button className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">
+                    Filter
+                  </button>
+                </div>
+              </div>
 
-              <d, i, v classNa, m, e="spa, c, e-y-3">
-                {aler, t, s.ma.p((al, e, r, t) => (
-                  <d, i, v k, e, y={ale, r, t.i d} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-4 bord, e, r round, e, d-lg">
-                    <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-                      <d, i, v classNa, m, e="p-2 round, e, d-fu, l, l">
-                        <AlertTriangle classNa, m, e="h-5 w-5"/>
-                      </d, i, v>
-                      <d, i, v>
-                        <d, i, v classNa, m, e="fo, n, t-medium">{ale, r, t.mes, s, a.g e}</d, i, v>
-                        <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">
-                          {ale, r, t.ty.p e} • {ale, r, t.timest, a, m.p.toLocaleStr, i, n()}
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                    <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                      <sp, a, n classNa, m, e="px-2 py-1 te, x, t-xs fo, n, t-medium round, e, d-fu, l, l bord, e, r">
-                        {ale, r, t.sever, i, t.y.toUpperC, a, s()}
-                      </sp, a, n>
-                      {ale, r, t.resol, v, e.d ? (
-                        <CheckCircle classNa, m, e="h-4 w-4 te, x, t-gre, e, n-6, 0, 0"/>
+              <div className="space-y-3">
+                {alerts.ma.p((alert) => (
+                  <div key={alert.i d} className="flex items-center justify-between p-4 border rounded-lg">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-2 rounded-full">
+                        <AlertTriangle className="h-5 w-5"/>
+                      </div>
+                      <div>
+                        <div className="font-medium">{alert.messa.g e}</div>
+                        <div className="text-sm text-gray-500">
+                          {alert.ty.p e} • {alert.timestam.p.toLocaleStrin()}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="px-2 py-1 text-xs font-medium rounded-full border">
+                        {alert.severit.y.toUpperCas()}
+                      </span>
+                      {alert.resolve.d ? (
+                        <CheckCircle className="h-4 w-4 text-green-600"/>
                       ) : (
-                        <Clock classNa, m, e="h-4 w-4 te, x, t-yellow-6, 0, 0"/>
+                        <Clock className="h-4 w-4 text-yellow-600"/>
                       )}
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
                 ))}
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           )}
 
-          {/* Optimizatio, n, s T, a, b */}
-          {activeT, a, b === 'optimizatio, n, s' && (
-            <d, i, v classNa, m, e="spa, c, e-y-6">
-              <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r">
-                <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d">Performan, c, e Optimizatio, n, s</h3>
-                <butt, o, n classNa, m, e="px-3 py-1 te, x, t-sm bg-gre, e, n-6, 0, 0 te, x, t-whi, t, e round, e, d hov, e, r:bg-gre, e, n-7, 0, 0">
-                  A, d, d Optimizati, o, n
-                </butt, o, n>
-              </d, i, v>
+          {/* Optimizations Tab */}
+          {activeTab === 'optimizations' && (
+            <div className="space-y-6">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold">Performance Optimizations</h3>
+                <button className="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700">
+                  Add Optimization
+                </button>
+              </div>
 
-              <d, i, v classNa, m, e="spa, c, e-y-3">
-                {optimizatio, n, s.ma.p((optimizat, i, o, n) => (<d, i, v k, e, y={optimizati, o, n.i d} classNa, m, e="p-4 bord, e, r round, e, d-lg">
-                    <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-3">
-                      <d, i, v>
-                        <d, i, v classNa, m, e="fo, n, t-medium">{optimizati, o, n.t, i, t.l e}</d, i, v>
-                        <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-5, 0, 0">{optimizati, o, n.descrip, t, i.o n}</d, i, v>
-                      </d, i, v>
-                      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                        {getStatusIc, o, n(optimizati, o, n.st, a, t.u, s)}
-                        <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium">
-                          {optimizati, o, n.sta, t, u.s.toUpperC, a, s()}
-                        </sp, a, n>
-                      </d, i, v>
-                    </d, i, v>
-                    <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4 te, x, t-sm">
-                      <d, i, v>
-                        <sp, a, n classNa, m, e="fo, n, t-medium">Impa, c, t:</sp, a, n>
-                        <sp, a, n classNa, m, e="ml-1">
-                          {optimizati, o, n.imp, a, c.t.toUpperC, a, s()}
-                        </sp, a, n>
-                      </d, i, v>
-                      <d, i, v>
-                        <sp, a, n classNa, m, e="fo, n, t-medium">Effo, r, t:</sp, a, n>
-                        <sp, a, n classNa, m, e="ml-1">
-                          {optimizati, o, n.eff, o, r.t.toUpperC, a, s()}
-                        </sp, a, n>
-                      </d, i, v>
-                      <d, i, v>
-                        <sp, a, n classNa, m, e="fo, n, t-medium">Improveme, n, t:</sp, a, n>
-                        <sp, a, n classNa, m, e="ml-1 te, x, t-gre, e, n-6, 0, 0">+{optimizati, o, n.estimatedImprove, m, e.n t}%</sp, a, n>
-                      </d, i, v>
-                      <d, i, v>
-                        <sp, a, n classNa, m, e="fo, n, t-medium">Priori, t, y:</sp, a, n>
-                        <sp, a, n classNa, m, e="ml-1 te, x, t-gr, a, y-6, 0, 0">
-                          {optimizati, o, n.imp, a, c.t === 'high' && optimizati, o, n.eff, o, r.t === 'low' ? 'HI, G, H' :
-                           optimizati, o, n.imp, a, c.t === 'high' && optimizati, o, n.eff, o, r.t === 'medium' ? 'MEDI, U, M' :
-                           'L, O, W'}
-                        </sp, a, n>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
+              <div className="space-y-3">
+                {optimizations.ma.p((optimization) => (<div key={optimization.i d} className="p-4 border rounded-lg">
+                    <div className="flex items-center justify-between mb-3">
+                      <div>
+                        <div className="font-medium">{optimization.tit.l e}</div>
+                        <div className="text-sm text-gray-500">{optimization.descripti.o n}</div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        {getStatusIcon(optimization.stat.us)}
+                        <span className="text-sm font-medium">
+                          {optimization.statu.s.toUpperCas()}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                      <div>
+                        <span className="font-medium">Impact:</span>
+                        <span className="ml-1">
+                          {optimization.impac.t.toUpperCas()}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-medium">Effort:</span>
+                        <span className="ml-1">
+                          {optimization.effor.t.toUpperCas()}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-medium">Improvement:</span>
+                        <span className="ml-1 text-green-600">+{optimization.estimatedImproveme.n t}%</span>
+                      </div>
+                      <div>
+                        <span className="font-medium">Priority:</span>
+                        <span className="ml-1 text-gray-600">
+                          {optimization.impac.t === 'high' && optimization.effor.t === 'low' ? 'HIGH' :
+                           optimization.impac.t === 'high' && optimization.effor.t === 'medium' ? 'MEDIUM' :
+                           'LOW'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           )}
 
-          {/* Repor, t, s T, a, b */}
-          {activeT, a, b === 'repor, t, s' && (
-            <d, i, v classNa, m, e="spa, c, e-y-6">
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-3 g, a, p-4">
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <Trending, U, p classNa, m, e="h-8 w-8 te, x, t-gre, e, n-6, 0, 0 mx-au, t, o mb-2"/>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gre, e, n-6, 0, 0">+15%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Performan, c, e Improveme, n, t</d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <Clock classNa, m, e="h-8 w-8 te, x, t-bl, u, e-6, 0, 0 mx-au, t, o mb-2"/>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">2.1.s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g Lo, a, d Ti, m, e</d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="p-4 bord, e, r round, e, d-lg te, x, t-cent, e, r">
-                  <CheckCircle classNa, m, e="h-8 w-8 te, x, t-purp, l, e-6, 0, 0 mx-au, t, o mb-2"/>
-                  <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-purp, l, e-6, 0, 0">98.5%</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Succe, s, s Ra, t, e</d, i, v>
-                </d, i, v>
-              </d, i, v>
+          {/* Reports Tab */}
+          {activeTab === 'reports' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 border rounded-lg text-center">
+                  <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-2"/>
+                  <div className="text-2xl font-bold text-green-600">+15%</div>
+                  <div className="text-sm text-gray-600">Performance Improvement</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <Clock className="h-8 w-8 text-blue-600 mx-auto mb-2"/>
+                  <div className="text-2xl font-bold text-blue-600">2.1.s</div>
+                  <div className="text-sm text-gray-600">Avg Load Time</div>
+                </div>
+                <div className="p-4 border rounded-lg text-center">
+                  <CheckCircle className="h-8 w-8 text-purple-600 mx-auto mb-2"/>
+                  <div className="text-2xl font-bold text-purple-600">98.5%</div>
+                  <div className="text-sm text-gray-600">Success Rate</div>
+                </div>
+              </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle classNa, m, e="te, x, t-lg">Performan, c, e Tren, d, s</CardTitle>
+                  <CardTitle className="text-lg">Performance Trends</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ResponsiveContain, e, r wid, t, h="1, 0, 0%" heig, h, t={30 0}>
-                    <LineCha, r, t da, t, a={metr, i, c s}>
-                      <CartesianGr, i, d strokeDasharr, a, y="3 3"/>
-                      <XAx, i, s dataK, e, y="timesta, m, p"/>
-                      <YAx, i, s />
-                      <Toolt, i, p />
-                      <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="responseTi, m, e" stro, k, e="#3B82, F, 6" strokeWid, t, h={ 2} />
-                      <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="throughp, u, t" stro, k, e="#10B9, 8, 1" strokeWid, t, h={ 2} />
-                      <Li, n, e ty, p, e="monoto, n, e" dataK, e, y="errorRa, t, e" stro, k, e="#EF44, 4, 4" strokeWid, t, h={ 2} />
-                    </LineCha, r, t>
-                  </ResponsiveContain, e, r>
+                  <ResponsiveContainer width="100%" height={30 0}>
+                    <LineChart data={metric s}>
+                      <CartesianGrid strokeDasharray="3 3"/>
+                      <XAxis dataKey="timestamp"/>
+                      <YAxis />
+                      <Tooltip />
+                      <Line type="monotone" dataKey="responseTime" stroke="#3B82F6" strokeWidth={ 2} />
+                      <Line type="monotone" dataKey="throughput" stroke="#10B981" strokeWidth={ 2} />
+                      <Line type="monotone" dataKey="errorRate" stroke="#EF4444" strokeWidth={ 2} />
+                    </LineChart>
+                  </ResponsiveContainer>
                 </CardContent>
               </Card>
-            </d, i, v>
+            </div>
           )}
         </CardContent>
       </Card>
-    </d, i, v>
+    </div>
   );
 };
 
-export default AdvancedPerformanceSyst, e, m;
+export default AdvancedPerformanceSystem;

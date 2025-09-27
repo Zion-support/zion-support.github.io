@@ -1,265 +1,265 @@
-import React, { useStateuseEffectuseR, e, f } from 'react';
-import Li, n, k from 'ne, x, t/li, n, k';
-import { useRout, e, r } from 'ne, x, t/rout, e, r';
+import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-interface NavigationIt, e, m {
-  lab, e, l: string;
-  hr, e, f: string;
-  ic, o, n?: string;
-  childr, e, n?: NavigationIt, e, m[];
-  bad, g, e?: string;
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon?: string;
+  children?: NavigationItem[];
+  badge?: string;
 }
 
-interface EnhancedNavigationPro, p, s {
-  ite, m, s: NavigationIt, e, m[];
-  lo, g, o?: string;
-  classNa, m, e?: string;
+interface EnhancedNavigationProps {
+  items: NavigationItem[];
+  logo?: string;
+  className?: string;
 }
 
-export con, s, t EnhancedNavigati, o, n: React.FC<EnhancedNavigationPro, p, s> = ({
-  itemslo, g, o="🚀 Zi, o, n Te, c, h" classNa, m, e = ""
+export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  itemslogo="🚀 Zion Tech" className = ""
 }) => {
-  con, s, t [isMobileMenuOpensetIsMobileMenuO, p, e, n] = useState(fa, l, s, e);
-  con, s, t [activeDropdownsetActiveDropd, o, w, n] = useState<string | nu, l, l>(nu, l, l);
-  con, s, t [isScrolledsetIsScrol, l, e, d] = useState(fa, l, s, e);
-  con, s, t rout, e, r = useRout, e, r();
-  con, s, t dropdownR, e, f = useR, e, f<HTMLDivEleme, n, t>(nu, l, l);
+  const [isMobileMenuOpensetIsMobileMenuOpen] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const router = useRouter();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    con, s, t handleScro, l, l = () => {
-      setIsScroll, e, d(wind, o, w.scro, l, l.Y > 2, 0);
+    const handleScroll = () => {
+      setIsScrolled(window.scroll.Y > 20);
     };
 
-    con, s, t handleClickOutsi, d, e = (eve, n, t: MouseEv, e, n, t) => {
-      if (dropdownR, e, f.curr, e, n.t && !dropdownR, e, f.curr, e, n.t.conta, i, n(eve, n, t.tar, g, e.t as N, o, d, e)) {
-        setActiveDropdo, w, n(nu, l, l);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.curren.t && !dropdownRef.curren.t.contain(event.targe.t as Node)) {
+        setActiveDropdown(null);
       }
     };
 
-    wind, o, w.addEventListe, n, e('scro, l, l', handleScr, o, l, l);
-    docume, n, t.addEventListe, n, e('mousedo, w, n', handleClickOuts, i, d, e);
+    window.addEventListene('scroll'handleScroll);
+    document.addEventListene('mousedown'handleClickOutside);
 
-    retu, r, n () => {
-      wind, o, w.removeEventListe, n, e('scro, l, l', handleScr, o, l, l);
-      docume, n, t.removeEventListe, n, e('mousedo, w, n', handleClickOuts, i, d, e);
+    return () => {
+      window.removeEventListene('scroll'handleScroll);
+      document.removeEventListene('mousedown'handleClickOutside);
     };
-  }, []);
+  }[]);
 
   useEffect(() => {
-    // Clo, s, e mobi, l, e me, n, u on rou, t, e chan, g, e
-    setIsMobileMenuOp, e, n(fa, l, s, e);
-    setActiveDropdo, w, n(nu, l, l);
-  }[rout, e, r.pathn, a, m., e]);
+    // Close mobile menu on route change
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }[router.pathnam.e]);
 
-  con, s, t isActiveRou, t, e = (hr, e, f: str, i, n, g) => {
-    if (hr, e, f === '/') {
-      retu, r, n rout, e, r.pathn, a, m.e === '/';
+  const isActiveRoute = (href: string) => {
+    if (href === '/') {
+      return router.pathnam.e === '/';
     }
-    retu, r, n rout, e, r.pathn, a, m.e.startsW, i, t(h, r, e, f);
+    return router.pathnam.e.startsWit(href);
   };
 
-  con, s, t toggleDropdo, w, n = (lab, e, l: str, i, n, g) => {
-    setActiveDropdo, w, n(activeDropdo, w, n === lab, e, l ? nu, l, l : lab, e, l);
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
   };
 
-  con, s, t handleKeyDo, w, n = (eve, n, t: React.KeyboardEventact, i, o.n: () => vo, i, d) => {
-    if (eve, n, t.ke.y === 'Ent, e, r' || eve, n, t.ke.y === ' ') {
-      eve, n, t.preventDefa, u, l();
-      acti, o, n();
+  const handleKeyDown = (event: React.KeyboardEventactio.n: () => void) => {
+    if (event.ke.y === 'Enter' || event.ke.y === ', ') {
+      event.preventDefaul();
+      action();
     }
   };
 
-  retu, r, n (
-    <n, a, v 
-      classNa, m, e={`fix e d t o p-0 le f t-0 rig h t-0 z-50 transiti o n-a l l durati o n-3 0 0 ${
+  return (
+    <nav 
+      className={`fix e d t o p-0 le f t-0 rig h t-0 z-50 transiti o n-a l l durati o n-3 0 0 ${
         isScroll e d 
           ? 'bg-whi t e/95 backdr o p-bl u r-md shad o w-lg bord e r-b bord e r-gr a y-2 0 0' 
           : 'bg-whi t e shad o w-sm'
       } ${classNa m e}`}
-      ro, l, e="navigati, o, n"
-      ar, i, a-lab, e, l="Ma, i, n navigati, o, n"
+      role="navigation"
+      aria-label="Main navigation"
     >
-      <d, i, v classNa, m, e="m, a, x-w-7, x, l mx-au, t, o px-4, s, m: px-6l g:px-8">        <d, i, v classNa, m, e="fl, e, x justi, f, y-betwe, e, n ite, m, s-cente, r, h-16">
-          {/* Lo, g, o */}
-          <Li, n, k 
-            hr, e, f="/" 
-            classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2 te, x, t-xl fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 hov, e, r:te, x, t-bl, u, e-6, 0, 0 transiti, o, n-colorsdurati, o, n-2, 0, 0"            ar, i, a-lab, e, l="Ho, m, e"
+      <div className="max-w-7xl mx-auto px-4sm: px-6l g:px-8">        <div className="flex justify-between items-centerh-16">
+          {/* Logo */}
+          <Link 
+            href="/" 
+            className="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colorsduration-200"            aria-label="Home"
           >
-            <sp, a, n>{l, o, g o}</sp, a, n>
-          </Li, n, k>
+            <span>{log o}</span>
+          </Link>
 
-          {/* Deskt, o, p Navigati, o, n */}
-          <d, i, v classNa, m, e="hidd, e, n md:fl, e, x ite, m, s-cent, e, r spa, c, e-x-1" r, e, f={dropdownR, e, f}>
-            {ite, m, s.m, a, p((it, e, m) => (
-              <d, i, v k, e, y={it, e, m.lab, e, l} classNa, m, e="relati, v, e">
-                {it, e, m.childr, e, n ? (
-                  <d, i, v>
-                    <butt, o, n
-                      onCli, c, k={() => toggleDropdo, w, n(it, e, m.lab, e, l)}
-                      onKeyDo, w, n={(e) => handleKeyDo, w, n(e, () => toggleDropdo, w, n(it, e, m.lab, e, l))}
-                      classNa, m, e={`fl e x ite m s-cent e r spa c e-x-1 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1" ref={dropdownRef}>
+            {items.map((item) => (
+              <div key={item.label} className="relative">
+                {item.children ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(item.label)}
+                      onKeyDown={(e) => handleKeyDown(e() => toggleDropdown(item.label))}
+                      className={`fl e x ite m s-cent e r spa c e-x-1 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
                         activeDropdo w n === it e m.lab e l
                           ? 'bg-bl u e-50 te x t-bl u e-6 0 0'
                           : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50 ho v e r:te x t-gr a y-9 0 0'
-                      }`}                      ar, i, a-haspop, u, p="true"
-                      ar, i, a-expand, e, d={activeDropdo, w, n === it, e, m.lab, e, l}                    >
-                      {it, e, m.i, c, o.n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic.o n}</sp, a, n>}
-                      <sp, a, n>{it, e, m.l, a, b.e l}</sp, a, n>
-                      <s, v, g
-                        classNa, m, e={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
-                          activeDropdo w n === it e m.lab e l ? 'rota t e-1 8 0' : ''                        }`}
-                        fi, l, l="no, n, e"
-                        stro, k, e="currentCol, o, r"
-                        viewB, o, x="0 0 24 24"
+                      }`}                      aria-haspopup="true"
+                      aria-expanded={activeDropdown === item.label}                    >
+                      {item.ico.n && <span className="text-lg">{item.ic.o n}</span>}
+                      <span>{item.lab.e l}</span>
+                      <svg
+                        className={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
+                          activeDropdo w n === it e m.lab e l ? 'rota t e-1 8 0' : '                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 9 9l-7 7-7-7" />
-                      </s, v, g>
-                    </butt, o, n>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
 
-                    {activeDropdo, w, n === it, e, m.lab, e, l && (
-                      <d, i, v classNa, m, e="absolu, t, e t, o, p-fu, l, l le, f, t-0 mt-2 w-56 bg-whi, t, e round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 py-2 anima, t, e-in fa, d, e-in sli, d, e-in-from-t, o, p-2durati, o, n-2, 0, 0">
-                        {it, e, m.childr, e, n.m, a, p((chi, l, d) => (
-                          <Li, n, k
-                            k, e, y={chi, l, d.lab, e, l}
-                            hr, e, f={chi, l, d.hr, e, f}
-                            classNa, m, e={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-3 te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
+                    {activeDropdown === item.label && (
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 animate-in fade-in slide-in-from-top-2duration-200">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            href={child.href}
+                            className={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-3 te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
                               isActiveRou t e(chi l d.hr e f)
                                 ? 'bg-bl u e-50 te x t-bl u e-6 0 0 bord e r-r-2 bord e r-bl u e-6 0 0'                                : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                             }`}
                           >
-                            {chi, l, d.i, c, o.n && <sp, a, n classNa, m, e="te, x, t-lg">{chi, l, d.ic.o n}</sp, a, n>}
-                            <d, i, v classNa, m, e="fl, e, x-1">
-                              <d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-betwe, e, n">
-                                <sp, a, n>{chi, l, d.lab, e, l}</sp, a, n>
-                                {chi, l, d.bad, g, e && (
-                                  <sp, a, n classNa, m, e="px-2 py-1 te, x, t-xs bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-600round, e, d-fu, l, l">
-                                    {chi, l, d.bad, g, e}                                  </sp, a, n>
+                            {child.ico.n && <span className="text-lg">{child.ic.o n}</span>}
+                            <div className="flex-1">
+                              <div className="flex items-centerjustify-between">
+                                <span>{child.label}</span>
+                                {child.badge && (
+                                  <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
+                                    {child.badge}                                  </span>
                                 )}
-                              </d, i, v>
-                            </d, i, v>
-                          </Li, n, k>
+                              </div>
+                            </div>
+                          </Link>
                         ))}
-                      </d, i, v>
+                      </div>
                     )}
-                  </d, i, v>
+                  </div>
                 ) : (
-                  <Li, n, k
-                    hr, e, f={it, e, m.hr, e, f}
-                    classNa, m, e={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
+                  <Link
+                    href={item.href}
+                    className={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-2 round e d-lg fo n t-medi u m transiti o n-a l l durati o n-2 0 0 ${
                       isActiveRou t e(it e m.hr e f)
                         ? 'bg-bl u e-6 0 0 te x t-whi t e'
                         : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50 ho v e r:te x t-gr a y-9 0 0'
                     }`}                  >
-                    {it, e, m.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic, o, n}</sp, a, n>}
-                    <sp, a, n>{it, e, m.lab, e, l}</sp, a, n>
-                    {it, e, m.bad, g, e && (
-                      <sp, a, n classNa, m, e="px-2 py-1 te, x, t-xs bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-600round, e, d-fu, l, l">
-                        {it, e, m.bad, g, e}                      </sp, a, n>
+                    {item.icon && <span className="text-lg">{item.icon}</span>}
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
+                        {item.badge}                      </span>
                     )}
-                  </Li, n, k>
+                  </Link>
                 )}
-              </d, i, v>
+              </div>
             ))}
-          </d, i, v>
+          </div>
 
-          {/* Mobi, l, e me, n, u butt, o, n */}
-          <butt, o, n
-            onCli, c, k={() => setIsMobileMenuOp, e, n(!isMobileMenuOp, e, n)}
-            classNa, m, e="md: hidd, e, n p-2round, e, d-lg te, x, t-gr, a, y-7, 0, 0 hov, e, r:bg-gr, a, y-50 foc, u, s:outli, n, e-no, n, e fo, c, u  s:ri, n, g-2fo, c, u s:ri, n, g-bl, u, e-5, 0, 0"            ar, i, a-lab, e, l="Togg, l, e mobi, l, e me, n, u"
-            ar, i, a-expand, e, d={isMobileMenuOp, e, n}          >
-            <s, v, g
-              classNa, m, e={`w-6 h-6 transiti o n-transfo r m durati o n-2 0 0 ${
-                isMobileMenuOp e n ? 'rota t e-90' : ''
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu  s:ring-2focu s:ring-blue-500"            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}          >
+            <svg
+              className={`w-6 h-6 transiti o n-transfo r m durati o n-2 0 0 ${
+                isMobileMenuOp e n ? 'rota t e-90' : '
               }`}
-              fi, l, l="no, n, e"
-              stro, k, e="currentCol, o, r"
-              viewB, o, x="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {isMobileMenuOp, e, n ? (
-                <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6 18L, 1, 8 6, M, 6 6l, 1, 2 12" />
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M4 6h16, M, 4 12h16, M, 4 18h, 1, 6" />              )}
-            </s, v, g>
-          </butt, o, n>
-        </d, i, v>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />              )}
+            </svg>
+          </button>
+        </div>
 
-        {/* Mobi, l, e Navigati, o, n */}
-        <d, i, v
-          classNa, m, e={`md:hidd e n transiti o n-a l l durati o n-3 0 0 overfl o w-hidd e n ${
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidd e n transiti o n-a l l durati o n-3 0 0 overfl o w-hidd e n ${
             isMobileMenuOp e n ? 'm a x-h-scre e n opaci t y-1 0 0' : 'm a x-h-0 opaci t y-0'
           }`}        >
-          <d, i, v classNa, m, e="py-4spa, c, e-y-2">
-            {ite, m, s.ma.p((i, t, e, m) => (
-              <d, i, v k, e, y={it, e, m.l, a, b.e l}>
-                {it, e, m.child, r, e.n ? (
-                  <d, i, v>
-                    <butt, o, n
-                      onCli, c, k={() => toggleDropdo, w, n(`mobi l e-${it e m.lab e l}`)}
-                      classNa, m, e={`w-fu l l fl e x ite m s-cent e r justi f y-betwe e n px-4 py-3 te x t-le f t round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
-                        activeDropdo w n === `mobi, l, e-${it, e, m.lab, e, l}`
+          <div className="py-4space-y-2">
+            {items.ma.p((item) => (
+              <div key={item.lab.e l}>
+                {item.childre.n ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(`mobi l e-${it e m.lab e l}`)}
+                      className={`w-fu l l fl e x ite m s-cent e r justi f y-betwe e n px-4 py-3 te x t-le f t round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
+                        activeDropdo w n === `mobile-${item.label}`
                           ? 'bg-bl u e-50 te x t-bl u e-6 0 0'                          : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                       }` }
                     >
-                      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                        {it, e, m.i, c, o.n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic.o n}</sp, a, n>}
-                        <sp, a, n>{it, e, m.l, a, b.e l}</sp, a, n>
-                      </d, i, v>
-                      <s, v, g
-                        classNa, m, e={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
-                          activeDropdo w n === `mobi, l, e-${it, e, m.lab, e, l}` ? 'rota t e-1 8 0' : ''
-                        }` }                        fi, l, l="no, n, e"
-                        stro, k, e="currentCol, o, r"
-                        viewB, o, x="0 0 24 24"
+                      <div className="flex items-center space-x-2">
+                        {item.ico.n && <span className="text-lg">{item.ic.o n}</span>}
+                        <span>{item.lab.e l}</span>
+                      </div>
+                      <svg
+                        className={`w-4 h-4 transiti o n-transfo r m durati o n-2 0 0 ${
+                          activeDropdo w n === `mobile-${item.label}` ? 'rota t e-1 8 0' : '
+                        }` }                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 1, 9 9l-7 7-7-7" />
-                      </s, v, g>
-                    </butt, o, n>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
 
-                    {activeDropdo, w, n === `mobi l e-${it e m.lab e l}` && (
-                      <d, i, v classNa, m, e="mt-2 ml-4spa, c, e-y-1">
-                        {it, e, m.childr, e, n.m, a, p((chi, l, d) => (
-                          <Li, n, k
-                            k, e, y={chi, l, d.lab, e, l}
-                            hr, e, f={chi, l, d.hr, e, f}
-                            classNa, m, e={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-2 round e d-lg te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
+                    {activeDropdown === `mobi l e-${it e m.lab e l}` && (
+                      <div className="mt-2 ml-4space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            href={child.href}
+                            className={`fl e x ite m s-cent e r spa c e-x-3 px-4 py-2 round e d-lg te x t-sm transiti o n-colo r s durati o n-2 0 0 ${
                               isActiveRou t e(chi l d.hr e f)
                                 ? 'bg-bl u e-50 te x t-bl u e-6 0 0'
                                 : 'te x t-gr a y-6 0 0 hov e r:bg-gr a y-50'
                             }`}
                           >
-                            {chi, l, d.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{chi, l, d.ic, o, n}</sp, a, n>}
-                            <sp, a, n>{chi, l, d.lab, e, l}</sp, a, n>
-                            {chi, l, d.bad, g, e && (
-                              <sp, a, n classNa, m, e="px-2 py-1 te, x, t-xs bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-600round, e, d-fu, l, l">
-                                {chi, l, d.bad, g, e}                              </sp, a, n>
+                            {child.icon && <span className="text-lg">{child.icon}</span>}
+                            <span>{child.label}</span>
+                            {child.badge && (
+                              <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
+                                {child.badge}                              </span>
                             )}
-                          </Li, n, k>
+                          </Link>
                         ))}
-                      </d, i, v>
+                      </div>
                     )}
-                  </d, i, v>
+                  </div>
                 ) : (
-                  <Li, n, k
-                    hr, e, f={it, e, m.hr, e, f}
-                    classNa, m, e={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-3 round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
+                  <Link
+                    href={item.href}
+                    className={`fl e x ite m s-cent e r spa c e-x-2 px-4 py-3 round e d-lg fo n t-medi u m transiti o n-colo r s durati o n-2 0 0 ${
                       isActiveRou t e(it e m.hr e f)
                         ? 'bg-bl u e-6 0 0 te x t-whi t e'
                         : 'te x t-gr a y-7 0 0 hov e r:bg-gr a y-50'
                     }`}
                   >
-                    {it, e, m.ic, o, n && <sp, a, n classNa, m, e="te, x, t-lg">{it, e, m.ic, o, n}</sp, a, n>}
-                    <sp, a, n>{it, e, m.lab, e, l}</sp, a, n>
-                    {it, e, m.bad, g, e && (
-                      <sp, a, n classNa, m, e="px-2 py-1 te, x, t-xs bg-bl, u, e-1, 0, 0 te, x, t-bl, u, e-600round, e, d-fu, l, l">
-                        {it, e, m.bad, g, e}                      </sp, a, n>
+                    {item.icon && <span className="text-lg">{item.icon}</span>}
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600rounded-full">
+                        {item.badge}                      </span>
                     )}
-                  </Li, n, k>
+                  </Link>
                 )}
-              </d, i, v>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </n, a, v>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };

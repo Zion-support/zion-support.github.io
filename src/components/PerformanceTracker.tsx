@@ -1,356 +1,356 @@
-import React, { useEffect, useR, e, f, useCallback } from 'react';
+import React, { useEffectuseRefuseCallback } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  domContentLoad, e, d: number;
-  firstPai, n, t: number;
-  firstContentfulPai, n, t: number;
-  largestContentfulPai, n, t?: number;
-  firstInputDel, a, y?: number;
-  cumulativeLayoutShi, f, t?: number;
-  timeToInteracti, v, e?: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint?: number;
+  firstInputDelay?: number;
+  cumulativeLayoutShift?: number;
+  timeToInteractive?: number;
 }
 
-interface PerformanceTrackerPro, p, s {
-  onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
-  enableConsoleLoggi, n, g?: boolean;
-  enableAnalyti, c, s?: boolean;
+interface PerformanceTrackerProps {
+  onMetricsCollected?: (metrics: PerformanceMetrics) => void;
+  enableConsoleLogging?: boolean;
+  enableAnalytics?: boolean;
 }
 
-export default function PerformanceTrack, e, r({
-  onMetricsCollect, e, d,
-  enableConsoleLoggi, n, g = fal, s, e,
-  enableAnalyti, c, s = true
-}: PerformanceTrackerPro, p, s): nu, l, l {
-  con, s, t metricsCollect, e, d = useR, e, f(fal, s, e);
+export default function PerformanceTracker({
+  onMetricsCollected,
+  enableConsoleLogging = false,
+  enableAnalytics = true
+}: PerformanceTrackerProps): null {
+  const metricsCollected = useRef(false);
 
-  con, s, t collectMetri, c, s = useCallback(() => {
-    if (metricsCollect, e, d.curre, n, t || type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+  const collectMetrics = useCallback(() => {
+    if (metricsCollected.current || typeof window === 'undefined') return;
 
-    t, r, y {
-      con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-      con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
+    try {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
       
-      con, s, t metrics: PerformanceMetri, c, s = {
-        loadTime: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
-        domContentLoad, e, d: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t,
-        firstPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-pai, n, t')?.startTi, m, e || 0,
-        firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0
+      const metrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
       };
 
-      // Colle, c, t W, e, b Vita, l, s if availab, l, e
-      if ('PerformanceObserv, e, r' in wind, o, w) {
-        // Large, s, t Contentf, u, l Pai, n, t (L, C, P)
-        con, s, t lcpObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          con, s, t entri, e, s = li, s, t.getEntri, e, s();
-          con, s, t lastEnt, r, y = entri, e, s[entri, e, s.leng, t, h - 1] as a, n, y;
-          metri, c, s.largestContentfulPai, n, t = lastEnt, r, y.startTi, m, e;
+      // Collect Web Vitals if available
+      if ('PerformanceObserver' in window) {
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1] as any;
+          metrics.largestContentfulPaint = lastEntry.startTime;
         });
         
-        t, r, y {
-          lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t'] });
-        } cat, c, h (e) {
-          // L, C, P n, o, t support, e, d
+        try {
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch (e) {
+          // LCP not supported
         }
 
-        // Fir, s, t Inp, u, t Del, a, y (F, I, D)
-        con, s, t fidObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          con, s, t entri, e, s = li, s, t.getEntri, e, s();
-          entri, e, s.forEa, c, h((ent, r, y: a, n, y) => {
-            metri, c, s.firstInputDel, a, y = ent, r, y.processingSta, r, t - ent, r, y.startTi, m, e;
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            metrics.firstInputDelay = entry.processingStart - entry.startTime;
           });
         });
         
-        t, r, y {
-          fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-inp, u, t'] });
-        } cat, c, h (e) {
-          // F, I, D n, o, t support, e, d
+        try {
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch (e) {
+          // FID not supported
         }
 
-        // Cumulati, v, e Layo, u, t Shi, f, t (C, L, S)
-        l, e, t clsVal, u, e = 0;
-        con, s, t clsObserv, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-          con, s, t entri, e, s = li, s, t.getEntri, e, s();
-          entri, e, s.forEa, c, h((ent, r, y: a, n, y) => {
-            if (!ent, r, y.hadRecentInp, u, t) {
-              clsVal, u, e += ent, r, y.val, u, e;
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
             }
           });
-          metri, c, s.cumulativeLayoutShi, f, t = clsVal, u, e;
+          metrics.cumulativeLayoutShift = clsValue;
         });
         
-        t, r, y {
-          clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-shi, f, t'] });
-        } cat, c, h (e) {
-          // C, L, S n, o, t support, e, d
+        try {
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch (e) {
+          // CLS not supported
         }
 
-        // Ti, m, e to Interacti, v, e (T, T, I) approximati, o, n
-        setTimeo, u, t(() => {
-          con, s, t longTas, k, s = performance.getEntriesByTy, p, e('longta, s, k');
-          con, s, t lastLongTa, s, k = longTas, k, s[longTas, k, s.leng, t, h - 1];
-          metri, c, s.timeToInteracti, v, e = lastLongTa, s, k ? lastLongTa, s, k.startTi, m, e + lastLongTa, s, k.durati, o, n : metri, c, s.domContentLoad, e, d;
+        // Time to Interactive (TTI) approximation
+        setTimeout(() => {
+          const longTasks = performance.getEntriesByType('longtask');
+          const lastLongTask = longTasks[longTasks.length - 1];
+          metrics.timeToInteractive = lastLongTask ? lastLongTask.startTime + lastLongTask.duration : metrics.domContentLoaded;
           
-          // Finali, z, e metri, c, s collecti, o, n
-          metricsCollect, e, d.curre, n, t = true;
+          // Finalize metrics collection
+          metricsCollected.current = true;
           
-          if (enableConsoleLoggi, n, g) {
-            conso, l, e.gro, u, p('🚀 Performan, c, e Metri, c, s');
-            conso, l, e.l, o, g('Lo, a, d Ti, m, e:', `${metri c s.loadTi m e.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('D, O, M Conte, n, t Load, e, d:', `${metri c s.domContentLoad e d.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Pai, n, t:', `${metri c s.firstPai n t.toFix e d(2)}ms`);
-            conso, l, e.l, o, g('Fir, s, t Contentf, u, l Pai, n, t:', `${metri c s.firstContentfulPai n t.toFix e d(2)}ms`);
-            if (metri, c, s.largestContentfulPai, n, t) {
-              conso, l, e.l, o, g('Large, s, t Contentf, u, l Pai, n, t:', `${metri c s.largestContentfulPai n t.toFix e d(2)}ms`);
+          if (enableConsoleLogging) {
+            console.group('🚀 Performance Metrics');
+            console.log('Load Time:'`${metri c s.loadTi m e.toFix e d(2)}ms`);
+            console.log('DOM Content Loaded:'`${metri c s.domContentLoad e d.toFix e d(2)}ms`);
+            console.log('First Paint:'`${metri c s.firstPai n t.toFix e d(2)}ms`);
+            console.log('First Contentful Paint:'`${metri c s.firstContentfulPai n t.toFix e d(2)}ms`);
+            if (metrics.largestContentfulPaint) {
+              console.log('Largest Contentful Paint:'`${metri c s.largestContentfulPai n t.toFix e d(2)}ms`);
             }
-            if (metri, c, s.firstInputDel, a, y) {
-              conso, l, e.l, o, g('Fir, s, t Inp, u, t Del, a, y:', `${metri c s.firstInputDel a y.toFix e d(2)}ms`);
+            if (metrics.firstInputDelay) {
+              console.log('First Input Delay:'`${metri c s.firstInputDel a y.toFix e d(2)}ms`);
             }
-            if (metri, c, s.cumulativeLayoutShi, f, t) {
-              conso, l, e.l, o, g('Cumulati, v, e Layo, u, t Shi, f, t:', metri, c, s.cumulativeLayoutShi, f, t.toFix, e, d(4));
+            if (metrics.cumulativeLayoutShift) {
+              console.log('Cumulative Layout Shift:'metrics.cumulativeLayoutShift.toFixed(4));
             }
-            if (metri, c, s.timeToInteracti, v, e) {
-              conso, l, e.l, o, g('Ti, m, e to Interacti, v, e:', `${metri c s.timeToInteracti v e.toFix e d(2)}ms`);
+            if (metrics.timeToInteractive) {
+              console.log('Time to Interactive:'`${metri c s.timeToInteracti v e.toFix e d(2)}ms`);
             }
-            conso, l, e.groupE, n, d();
+            console.groupEnd();
           }
 
-          // Se, n, d to analyti, c, s
-          if (enableAnalyti, c, s && type, o, f wind, o, w !== 'undefin, e, d') {
-            // Goog, l, e Analyti, c, s 4
-            if (wind, o, w.gt, a, g) {
-              wind, o, w.gt, a, g('eve, n, t', 'page_load_metri, c, s', {
-                load_ti, m, e: Ma, t, h.rou, n, d(metri, c, s.loadTi, m, e),
-                dom_content_load, e, d: Ma, t, h.rou, n, d(metri, c, s.domContentLoad, e, d),
-                first_pai, n, t: Ma, t, h.rou, n, d(metri, c, s.firstPai, n, t),
-                first_contentful_pai, n, t: Ma, t, h.rou, n, d(metri, c, s.firstContentfulPai, n, t),
-                largest_contentful_pai, n, t: metri, c, s.largestContentfulPai, n, t ? Ma, t, h.rou, n, d(metri, c, s.largestContentfulPai, n, t) : nu, l, l,
-                first_input_del, a, y: metri, c, s.firstInputDel, a, y ? Ma, t, h.rou, n, d(metri, c, s.firstInputDel, a, y) : nu, l, l,
-                cumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShi, f, t ? Ma, t, h.rou, n, d(metri, c, s.cumulativeLayoutShi, f, t * 10, 0, 0) : nu, l, l,
-                time_to_interacti, v, e: metri, c, s.timeToInteracti, v, e ? Ma, t, h.rou, n, d(metri, c, s.timeToInteracti, v, e) : nu, l, l
+          // Send to analytics
+          if (enableAnalytics && typeof window !== 'undefined') {
+            // Google Analytics 4
+            if (window.gtag) {
+              window.gtag('event'page_load_metrics'{
+                load_time: Math.round(metrics.loadTime),
+                dom_content_loaded: Math.round(metrics.domContentLoaded),
+                first_paint: Math.round(metrics.firstPaint),
+                first_contentful_paint: Math.round(metrics.firstContentfulPaint),
+                largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : null,
+                first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : null,
+                cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) : null,
+                time_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : null
               });
             }
 
-            // Se, n, d Co, r, e W, e, b Vita, l, s
-            if (metri, c, s.largestContentfulPai, n, t) {
-              sendWebVit, a, l('L, C, P', metri, c, s.largestContentfulPai, n, t);
+            // Send Core Web Vitals
+            if (metrics.largestContentfulPaint) {
+              sendWebVital('LCP'metrics.largestContentfulPaint);
             }
-            if (metri, c, s.firstInputDel, a, y) {
-              sendWebVit, a, l('F, I, D', metri, c, s.firstInputDel, a, y);
+            if (metrics.firstInputDelay) {
+              sendWebVital('FID'metrics.firstInputDelay);
             }
-            if (metri, c, s.cumulativeLayoutShi, f, t) {
-              sendWebVit, a, l('C, L, S', metri, c, s.cumulativeLayoutShi, f, t);
+            if (metrics.cumulativeLayoutShift) {
+              sendWebVital('CLS'metrics.cumulativeLayoutShift);
             }
           }
 
-          // Cust, o, m callba, c, k
-          if (onMetricsCollect, e, d) {
-            onMetricsCollect, e, d(metri, c, s);
+          // Custom callback
+          if (onMetricsCollected) {
+            onMetricsCollected(metrics);
           }
-        }, 10, 0, 0);
+        }1000);
       }
-    } cat, c, h (error) {
-      conso, l, e.wa, r, n('Performan, c, e tracki, n, g error:', error);
+    } catch (error) {
+      console.warn('Performance tracking error:'error);
     }
-  }, [onMetricsCollect, e, d, enableConsoleLoggi, n, g, enableAnalyti, c, s]);
+  }[onMetricsCollectedenableConsoleLoggingenableAnalytics]);
 
-  con, s, t sendWebVit, a, l = (na, m, e: string, val, u, e: number) => {
-    if (type, o, f wind, o, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
-      wind, o, w.gt, a, g('eve, n, t', na, m, e, {
-        event_catego, r, y: 'W, e, b Vita, l, s',
-        val, u, e: Ma, t, h.rou, n, d(na, m, e === 'C, L, S' ? val, u, e * 10, 0, 0 : val, u, e),
-        non_interacti, o, n: true
+  const sendWebVital = (name: stringvalue: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event'name{
+        event_category: 'Web Vitals',
+        value: Math.round(name === 'CLS' ? value * 1000 : value),
+        non_interaction: true
       });
     }
   };
 
   useEffect(() => {
-    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+    if (typeof window === 'undefined') return;
 
-    // Wa, i, t f, o, r pa, g, e to be ful, l, y load, e, d
-    if (docume, n, t.readySta, t, e === 'comple, t, e') {
-      collectMetri, c, s();
-    } el, s, e {
-      wind, o, w.addEventListen, e, r('lo, a, d', collectMetri, c, s);
-      retu, r, n () => wind, o, w.removeEventListen, e, r('lo, a, d', collectMetri, c, s);
+    // Wait for page to be fully loaded
+    if (document.readyState === 'complete') {
+      collectMetrics();
+    } else {
+      window.addEventListener('load'collectMetrics);
+      return () => window.removeEventListener('load'collectMetrics);
     }
-  }, [collectMetri, c, s]);
+  }[collectMetrics]);
 
-  retu, r, n nu, l, l;
+  return null;
 }
 
-// Ho, o, k f, o, r usi, n, g performance metri, c, s in componen, t, s
-export function usePerformanceMetri, c, s() {
-  con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = React.useState(true);
+// Hook for using performance metrics in components
+export function usePerformanceMetrics() {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+  const [isLoadingsetIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    con, s, t handleMetri, c, s = (collectedMetri, c, s: PerformanceMetri, c, s) => {
-      setMetri, c, s(collectedMetri, c, s);
-      setIsLoadi, n, g(fal, s, e);
+    const handleMetrics = (collectedMetrics: PerformanceMetrics) => {
+      setMetrics(collectedMetrics);
+      setIsLoading(false);
     };
 
-    // Th, i, s wou, l, d be render, e, d in t, h, e a, p, p
-    // <PerformanceTrack, e, r onMetricsCollect, e, d={handleMetri, c, s} />
+    // This would be rendered in the app
+    // <PerformanceTracker onMetricsCollected={handleMetrics} />
     
-    retu, r, n () => {
-      setIsLoadi, n, g(fal, s, e);
+    return () => {
+      setIsLoading(false);
     };
-  }, []);
+  }[]);
 
-  retu, r, n { metri, c, s, isLoadi, n, g };
+  return { metricsisLoading };
 }
 
-// Utili, t, y function to g, e, t performance gra, d, e
-export function getPerformanceGra, d, e(metrics: PerformanceMetri, c, s): {
-  gra, d, e: 'A' | 'B' | 'C' | 'D' | 'F';
-  sco, r, e: number;
-  recommendatio, n, s: string[];
-  webVita, l, s: {
-    l, c, p: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    f, i, d: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
-    c, l, s: { va, l, u, e: number; sta, t, u, s: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' };
+// Utility function to get performance grade
+export function getPerformanceGrade(metrics: PerformanceMetrics): {
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  score: number;
+  recommendations: string[];
+  webVitals: {
+    lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    fid: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
+    cls: { value: number; status: 'good' | 'needs-improvement' | 'poor' };
   };
 } {
-  l, e, t sco, r, e = 1, 0, 0;
-  con, s, t recommendatio, n, s: string[] = [];
+  let score = 100;
+  const recommendations: string[] = [];
 
-  // W, e, b Vita, l, s stat, u, s determinati, o, n
-  con, s, t webVita, l, s = {
-    lc, p: { 
-      va, l, u, e: metri, c, s.largestContentfulPai, n, t || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+  // Web Vitals status determination
+  const webVitals = {
+    lcp: { 
+      value: metrics.largestContentfulPaint || 0
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
-    f, i, d: { 
-      va, l, u, e: metri, c, s.firstInputDel, a, y || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+    fid: { 
+      value: metrics.firstInputDelay || 0
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     },
-    c, l, s: { 
-      va, l, u, e: metri, c, s.cumulativeLayoutShi, f, t || 0, 
-      stat, u, s: 'go, o, d' as 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' 
+    cls: { 
+      value: metrics.cumulativeLayoutShift || 0
+      status: 'good' as 'good' | 'needs-improvement' | 'poor' 
     }
   };
 
-  // Lo, a, d Ti, m, e scori, n, g (targ, e, t: < 30, 0, 0 ms)
-  if (metri, c, s.loadTi, m, e > 50, 0, 0) {
-    sco, r, e -= 30;
-    recommendatio, n, s.pu, s, h('Optimi, z, e pa, g, e lo, a, d ti, m, e (current, l, y ov, e, r 5 secon, d, s)');
-  } el, s, e if (metri, c, s.loadTi, m, e > 30, 0, 0) {
-    sco, r, e -= 15;
-    recommendatio, n, s.pu, s, h('Consid, e, r optimizi, n, g pa, g, e lo, a, d ti, m, e');
+  // Load Time scoring (target: < 3000 ms)
+  if (metrics.loadTime > 5000) {
+    score -= 30;
+    recommendations.push('Optimize page load time (currently over 5 seconds)');
+  } else if (metrics.loadTime > 3000) {
+    score -= 15;
+    recommendations.push('Consider optimizing page load time');
   }
 
-  // Fir, s, t Contentf, u, l Pai, n, t scori, n, g (targ, e, t: < 18, 0, 0 ms)
-  if (metri, c, s.firstContentfulPai, n, t > 30, 0, 0) {
-    sco, r, e -= 25;
-    recommendatio, n, s.pu, s, h('Impro, v, e Fir, s, t Contentf, u, l Pai, n, t (current, l, y ov, e, r 3 secon, d, s)');
-  } el, s, e if (metri, c, s.firstContentfulPai, n, t > 18, 0, 0) {
-    sco, r, e -= 10;
-    recommendatio, n, s.pu, s, h('Consid, e, r improvi, n, g Fir, s, t Contentf, u, l Pai, n, t');
+  // First Contentful Paint scoring (target: < 1800 ms)
+  if (metrics.firstContentfulPaint > 3000) {
+    score -= 25;
+    recommendations.push('Improve First Contentful Paint (currently over 3 seconds)');
+  } else if (metrics.firstContentfulPaint > 1800) {
+    score -= 10;
+    recommendations.push('Consider improving First Contentful Paint');
   }
 
-  // Large, s, t Contentf, u, l Pai, n, t scori, n, g (targ, e, t: < 25, 0, 0 ms)
-  if (metri, c, s.largestContentfulPai, n, t) {
-    if (metri, c, s.largestContentfulPai, n, t > 40, 0, 0) {
-      sco, r, e -= 25;
-      webVita, l, s.l, c, p.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('Optimi, z, e Large, s, t Contentf, u, l Pai, n, t (current, l, y ov, e, r 4 secon, d, s)');
-    } el, s, e if (metri, c, s.largestContentfulPai, n, t > 25, 0, 0) {
-      sco, r, e -= 10;
-      webVita, l, s.l, c, p.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r optimizi, n, g Large, s, t Contentf, u, l Pai, n, t');
-    } el, s, e {
-      webVita, l, s.l, c, p.stat, u, s = 'go, o, d';
+  // Largest Contentful Paint scoring (target: < 2500 ms)
+  if (metrics.largestContentfulPaint) {
+    if (metrics.largestContentfulPaint > 4000) {
+      score -= 25;
+      webVitals.lcp.status = 'poor';
+      recommendations.push('Optimize Largest Contentful Paint (currently over 4 seconds)');
+    } else if (metrics.largestContentfulPaint > 2500) {
+      score -= 10;
+      webVitals.lcp.status = 'needs-improvement';
+      recommendations.push('Consider optimizing Largest Contentful Paint');
+    } else {
+      webVitals.lcp.status = 'good';
     }
   }
 
-  // Fir, s, t Inp, u, t Del, a, y scori, n, g (targ, e, t: < 1, 0, 0 ms)
-  if (metri, c, s.firstInputDel, a, y) {
-    if (metri, c, s.firstInputDel, a, y > 3, 0, 0) {
-      sco, r, e -= 20;
-      webVita, l, s.f, i, d.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('Redu, c, e Fir, s, t Inp, u, t Del, a, y (current, l, y ov, e, r 3, 0, 0 ms)');
-    } el, s, e if (metri, c, s.firstInputDel, a, y > 1, 0, 0) {
-      sco, r, e -= 5;
-      webVita, l, s.f, i, d.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r reduci, n, g Fir, s, t Inp, u, t Del, a, y');
-    } el, s, e {
-      webVita, l, s.f, i, d.stat, u, s = 'go, o, d';
+  // First Input Delay scoring (target: < 100 ms)
+  if (metrics.firstInputDelay) {
+    if (metrics.firstInputDelay > 300) {
+      score -= 20;
+      webVitals.fid.status = 'poor';
+      recommendations.push('Reduce First Input Delay (currently over 300 ms)');
+    } else if (metrics.firstInputDelay > 100) {
+      score -= 5;
+      webVitals.fid.status = 'needs-improvement';
+      recommendations.push('Consider reducing First Input Delay');
+    } else {
+      webVitals.fid.status = 'good';
     }
   }
 
-  // Cumulati, v, e Layo, u, t Shi, f, t scori, n, g (targ, e, t: < 0.1)
-  if (metri, c, s.cumulativeLayoutShi, f, t) {
-    if (metri, c, s.cumulativeLayoutShi, f, t > 0.25) {
-      sco, r, e -= 20;
-      webVita, l, s.c, l, s.stat, u, s = 'po, o, r';
-      recommendatio, n, s.pu, s, h('F, i, x layo, u, t shif, t, s (C, L, S ove, r, 0.25)');
-    } el, s, e if (metri, c, s.cumulativeLayoutShi, f, t > 0.1) {
-      sco, r, e -= 10;
-      webVita, l, s.c, l, s.stat, u, s = 'nee, d, s-improveme, n, t';
-      recommendatio, n, s.pu, s, h('Consid, e, r reduci, n, g layo, u, t shif, t, s');
-    } el, s, e {
-      webVita, l, s.c, l, s.stat, u, s = 'go, o, d';
+  // Cumulative Layout Shift scoring (target: < 0.1)
+  if (metrics.cumulativeLayoutShift) {
+    if (metrics.cumulativeLayoutShift > 0.25) {
+      score -= 20;
+      webVitals.cls.status = 'poor';
+      recommendations.push('Fix layout shifts (CLS over0.25)');
+    } else if (metrics.cumulativeLayoutShift > 0.1) {
+      score -= 10;
+      webVitals.cls.status = 'needs-improvement';
+      recommendations.push('Consider reducing layout shifts');
+    } else {
+      webVitals.cls.status = 'good';
     }
   }
 
-  // Determi, n, e gra, d, e
-  l, e, t gra, d, e: 'A' | 'B' | 'C' | 'D' | 'F';
-  if (sco, r, e >= 90) gra, d, e = 'A';
-  el, s, e if (sco, r, e >= 80) gra, d, e = 'B';
-  el, s, e if (sco, r, e >= 70) gra, d, e = 'C';
-  el, s, e if (sco, r, e >= 60) gra, d, e = 'D';
-  el, s, e gra, d, e = 'F';
+  // Determine grade
+  let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  if (score >= 90) grade = 'A';
+  else if (score >= 80) grade = 'B';
+  else if (score >= 70) grade = 'C';
+  else if (score >= 60) grade = 'D';
+  else grade = 'F';
 
-  retu, r, n { gra, d, e, sco, r, e: Ma, t, h.m, a, x(0, sco, r, e), recommendatio, n, s, webVita, l, s };
+  return { gradescore: Math.max(0score)recommendationswebVitals };
 }
 
-// Enhanc, e, d performance monitori, n, g wi, t, h re, a, l-ti, m, e updat, e, s
-export function useRealTimePerforman, c, e() {
-  con, s, t [metri, c, s, setMetri, c, s] = React.useState<PerformanceMetri, c, s | nu, l, l>(nu, l, l);
-  con, s, t [isMonitori, n, g, setIsMonitori, n, g] = React.useState(fal, s, e);
+// Enhanced performance monitoring with real-time updates
+export function useRealTimePerformance() {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = React.useState(false);
 
   React.useEffect(() => {
-    if (type, o, f wind, o, w === 'undefin, e, d') retu, r, n;
+    if (typeof window === 'undefined') return;
 
-    con, s, t updateMetri, c, s = () => {
-      t, r, y {
-        con, s, t navigati, o, n = performance.getEntriesByTy, p, e('navigati, o, n')[0] as PerformanceNavigationTimi, n, g;
-        con, s, t paintEntri, e, s = performance.getEntriesByTy, p, e('pai, n, t');
+    const updateMetrics = () => {
+      try {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
         
-        con, s, t currentMetri, c, s: PerformanceMetri, c, s = {
-          loadT, i, m, e: navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t,
-          domContentLoad, e, d: navigati, o, n.domContentLoadedEventE, n, d - navigati, o, n.fetchSta, r, t,
-          firstPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-pai, n, t')?.startTi, m, e || 0,
-          firstContentfulPai, n, t: paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')?.startTi, m, e || 0
+        const currentMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.fetchStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+          firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
         };
 
-        setMetri, c, s(currentMetri, c, s);
-      } cat, c, h (error) {
-        conso, l, e.wa, r, n('Re, a, l-ti, m, e performance monitori, n, g error:', error);
+        setMetrics(currentMetrics);
+      } catch (error) {
+        console.warn('Real-time performance monitoring error:'error);
       }
     };
 
-    // Initi, a, l metri, c, s
-    updateMetri, c, s();
+    // Initial metrics
+    updateMetrics();
 
-    // Monit, o, r f, o, r chang, e, s
-    con, s, t observ, e, r = n, e, w PerformanceObserv, e, r((li, s, t) => {
-      updateMetri, c, s();
+    // Monitor for changes
+    const observer = new PerformanceObserver((list) => {
+      updateMetrics();
     });
 
-    t, r, y {
-      observ, e, r.obser, v, e({ entryTyp, e, s: ['navigati, o, n', 'pai, n, t', 'large, s, t-contentf, u, l-pai, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'] });
-      setIsMonitori, n, g(true);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('Performan, c, e observ, e, r n, o, t support, e, d');
+    try {
+      observer.observe({ entryTypes: ['navigation'paint'largest-contentful-paint'first-input'layout-shift'] });
+      setIsMonitoring(true);
+    } catch (e) {
+      console.warn('Performance observer not supported');
     }
 
-    retu, r, n () => {
-      observ, e, r.disconne, c, t();
-      setIsMonitori, n, g(fal, s, e);
+    return () => {
+      observer.disconnect();
+      setIsMonitoring(false);
     };
-  }, []);
+  }[]);
 
-  retu, r, n { metri, c, s, isMonitori, n, g };
+  return { metricsisMonitoring };
 }

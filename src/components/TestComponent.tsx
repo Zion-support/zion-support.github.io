@@ -1,9 +1,9 @@
 import React from 'react';
 
-export con, s, t TestCompone, n, t: React.FC = () => {
-  retu, r, n (
-    <d, i, v>
-      <h1>Te, s, t Compone, n, t</h1>
-    </d, i, v>
+export const TestComponent: React.FC = () => {
+  return (
+    <div>
+      <h1>Test Component</h1>
+    </div>
   );
 };

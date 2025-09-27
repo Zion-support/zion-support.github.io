@@ -19,12 +19,12 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
+  description = 'Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.',
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
+  keywords = ['AI solutions'cloud infrastructure'digital transformation'business automation'technology consulting'],
   author = 'Zion Tech Solutions',
   publishedTime,
   modifiedTime,
@@ -34,8 +34,8 @@ export default function EnhancedSEO({
   nofollow = false
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullDescription = description.length > 160 ? description.substring(0157) + '...' : description;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : ');
   
   const structuredData = {
     '@context': 'https://schema.org',
@@ -64,10 +64,10 @@ export default function EnhancedSEO({
     structuredData['@type'] = 'Article';
     (structuredData as any).datePublished = publishedTime;
     (structuredData as any).dateModified = modifiedTime || publishedTime;
-    (structuredData as any).author = { '@type': 'Person', name: author };
-    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
+    (structuredData as any).author = { '@type': 'Person'name: author };
+    (structuredData as any).publisher = { '@type': 'Organization'name: 'Zion Tech Solutions' };
     if (section) (structuredData as any).articleSection = section;
-    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ');
+    if (tags.length > 0) (structuredData as any).keywords = tags.join(');
   }
 
   return (
@@ -75,9 +75,9 @@ export default function EnhancedSEO({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       
       {/* Canonical URL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}

@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  Lock, 
-  Eye, 
-  Globe, 
-  Server, 
+  Shield
+  AlertTriangle
+  CheckCircle
+  Lock
+  Eye
+  Globe
+  Server
   Key,
   FileText,
   Users,
@@ -18,7 +18,7 @@ import {
   XCircle,
   Clock,
   TrendingUp,
-  TrendingDown
+  TrendingDown,
 } from 'lucide-react';
 
 interface SecurityMetrics {
@@ -105,8 +105,8 @@ export default function ComprehensiveSecurityDashboard({
   onSecurityUpdate
 }: ComprehensiveSecurityDashboardProps) {
   const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedTimeRange, setSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
+  const [isLoadingsetIsLoading] = useState(true);
+  const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
   const [alerts, setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
@@ -201,7 +201,7 @@ export default function ComprehensiveSecurityDashboard({
         csp: {
           enabled: true,
           violations: Math.floor(2 + Math.random() * 5),
-          policies: ['default-src \'self\'', 'script-src \'self\' \'unsafe-inline\'', 'style-src \'self\' \'unsafe-inline\'']
+          policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\']
         },
         headers: {
           security: true,
@@ -223,7 +223,7 @@ export default function ComprehensiveSecurityDashboard({
         failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
     };
-  }, [selectedTimeRange]);
+  }[selectedTimeRange]);
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {
     const newAlerts = [];
@@ -281,8 +281,8 @@ export default function ComprehensiveSecurityDashboard({
       });
     }
 
-    setAlerts(prev => [...prev, ...newAlerts]);
-  }, []);
+    setAlerts(prev => [...prev...newAlerts]);
+  }[]);
 
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -292,15 +292,15 @@ export default function ComprehensiveSecurityDashboard({
       generateAlerts(mockData);
       onSecurityUpdate?.(mockData);
     } catch (error) {
-      console.error('Failed to load security metrics:', error);
+      console.error('Failed to load security metrics:'error);
     } finally {
       setIsLoading(false);
     }
-  }, [generateMockData, generateAlerts, onSecurityUpdate]);
+  }[generateMockDatagenerateAlertsonSecurityUpdate]);
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
+      alert.id === alertId ? { ...alertresolved: true } : alert
     ));
   };
 
@@ -308,10 +308,10 @@ export default function ComprehensiveSecurityDashboard({
     loadMetrics();
 
     if (enableRealTimeMonitoring) {
-      const interval = setInterval(loadMetrics, refreshInterval);
+      const interval = setInterval(loadMetricsrefreshInterval);
       return () => clearInterval(interval);
     }
-  }, [loadMetrics, enableRealTimeMonitoring, refreshInterval]);
+  }[loadMetricsenableRealTimeMonitoringrefreshInterval]);
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -375,17 +375,17 @@ export default function ComprehensiveSecurityDashboard({
       <AnimatePresence>
         {alerts.filter(alert => !alert.resolved).length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: -20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             className="space-y-2"
           >
             {alerts.filter(alert => !alert.resolved).map(alert => (
               <motion.div
                 key={alert.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
                 className={`p-4 rounded-lg border ${getSeverityColor(alert.severity)}`}
               >
                 <div className="flex items-center justify-between">
@@ -514,7 +514,7 @@ export default function ComprehensiveSecurityDashboard({
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {metrics.threats.recent.map((threat, index) => (
+              {metrics.threats.recent.map((threatindex) => (
                 <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
                   <div className="flex items-center space-x-3">
                     {getSeverityIcon(threat.severity)}

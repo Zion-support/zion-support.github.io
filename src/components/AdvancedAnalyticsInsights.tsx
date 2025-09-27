@@ -1,451 +1,452 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { motionAnimatePresence } from 'fram, e, r- motion';
-import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
-  Trending, U, p, 
-  TrendingDo, w, n, 
-  Use, r, s, 
-  E, y, e, 
-  MousePoint, e, r, 
-  Clock, 
-  BarChar, t, 3,
-  PieCha, r, t,
-  Activi, t, y,
-  Targ, e, t,
+  TrendingUp,
+  TrendingDown,
+  Users,
+  Eye,
+  MousePointer,
+  Clock,
+  BarChart3,
+  PieChart,
+  Activity,
+  Target,
   Zap,
-  GlobeSmartphoneMonitorTabl, e, t
-} from 'luci, d, e- rea, c, t';
+  GlobeSmartphoneMonitorTablet
+} from 'lucide- react';
 
-interface AnalyticsDa, t, a {
-  overvi, e, w: {
-    totalSessio, n, s: number;
-    uniqueUse, r, s: number;
-    pageVie, w, s: number;
-    bounceRa, t, e: number;
-    avgSessionDurati, o, n: number;
-    conversionRa, t, e: number;
+interface AnalyticsData {
+  overview: {
+    totalSessions: number;
+    uniqueUsers: number;
+    pageViews: number;
+    bounceRate: number;
+    avgSessionDuration: number;
+    conversionRate: number;
   };
-  traff, i, c: {
-    sourc, e, s: Arr, a, y<{
-      na, m, e: string;
-      cou, n, t: number;
-      percenta, g, e: number;
+  traffic: {
+    sources: Array<{
+      name: string;
+      count: number;
+      percentage: number;
     }>;
-    devic, e, s: Arr, a, y<{
+    devices: Array<{
       type: string;
-      cou, n, t: number;
-      percenta, g, e: number;
+      count: number;
+      percentage: number;
     }>;
-    countri, e, s: Arr, a, y<{
-      na, m, e: string;
-      cou, n, t: number;
-      percenta, g, e: number;
+    countries: Array<{
+      name: string;
+      count: number;
+      percentage: number;
     }>;
   };
   performance: {
-    topPag, e, s: Arr, a, y<{
-      pa, t, h: string;
-      vie, w, s: number;
-      uniqueVie, w, s: number;
-      avgTimeOnPa, g, e: number;
+    topPages: Array<{
+      path: string;
+      views: number;
+      uniqueViews: number;
+      avgTimeOnPage: number;
     }>;
-    userFlow: Arr, a, y<{
-      st, e, p: number;
-      pa, g, e: string;
-      use, r, s: number;
-      dropo, f, f: number;
+    userFlow: Array<{
+      step: number;
+      page: string;
+      users: number;
+      dropoff: number;
     }>;
   };
-  insigh, t, s: Arr, a, y<{
-    type: 'positi, v, e' | 'negati, v, e' | 'neutr, a, l';
-    tit, l, e: string;
-    descripti, o, n: string;
-    impa, c, t: string;
-    recommendati, o, n: string;
+  insights: Array<{
+    type: 'positive' | 'negative' | 'neutral';
+    title: string;
+    description: string;
+    impact: string;
+    recommendation: string;
   }>;
 }
 
-interface AdvancedAnalyticsInsightsPro, p, s {
-  timeRan, g, e?: '7d' | '3, 0, d' | '9, 0, d' | '1y';
-  refreshInterv, a, l?: number;
-  onDataUpda, t, e?: (da, t, a: AnalyticsDa, t, a) => vo, i, d;
+interface AdvancedAnalyticsInsightsProps {
+  timeRange?: '7d' | '30d' | '90d' | '1y';
+  refreshInterval?: number;
+  onDataUpdate?: (data: AnalyticsData) => void;
 }
 
-export default function AdvancedAnalyticsInsigh, t, s({
-  timeRan, g, e = '3, 0, d',
-  refreshInterv, a, l = 300, 0, 0,
-  onDataUpda, t, e
-}: AdvancedAnalyticsInsightsPro, p, s) {
-  con, s, t [da, t, a, setDa, t, a] = useState<AnalyticsDa, t, a | nu, l, l>(nu, l, l);
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
-  con, s, t [selectedMetr, i, c, setSelectedMetr, i, c] = useState<string>('overvi, e, w');
-  con, s, t [insigh, t, s, setInsigh, t, s] = useState<Arr, a, y<{
-    type: 'positi, v, e' | 'negati, v, e' | 'neutr, a, l';
-    tit, l, e: string;
-    descripti, o, n: string;
-    impa, c, t: string;
-    recommendati, o, n: string;
+export default function AdvancedAnalyticsInsights({
+  timeRange = '30d',
+  refreshInterval = 30000,
+  onDataUpdate
+}: AdvancedAnalyticsInsightsProps) {
+  const [datasetData] = useState<AnalyticsData | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [selectedMetricsetSelectedMetric] = useState<string>('overview');
+  const [insightssetInsights] = useState<Array<{
+    type: 'positive' | 'negative' | 'neutral';
+    title: string;
+    description: string;
+    impact: string;
+    recommendation: string;
   }>>([]);
 
-  con, s, t generateMockDa, t, a = useCallback((): AnalyticsDa, t, a => {
-    con, s, t baseMultipli, e, r = timeRan, g, e === '7d' ? 1 : timeRan, g, e === '3, 0, d' ? 4 : timeRan, g, e === '9, 0, d' ? 12 : 48;
+  const generateMockData = useCallback((): AnalyticsData => {
+    const baseMultiplier = timeRange === '7d' ? 1 : timeRange === '30d' ? 4 : timeRange === '90d' ? 12 : 48;
     
-    retu, r, n {
-      overvi, e, w: {
-        totalSessio, n, s: Ma, t, h.flo, o, r(12, 5, 0 * baseMultipli, e, r),
-        uniqueUse, r, s: Ma, t, h.flo, o, r(8, 9, 0 * baseMultipli, e, r),
-        pageVie, w, s: Ma, t, h.flo, o, r(32, 0, 0 * baseMultipli, e, r),
-        bounceRa, t, e: 0.35 + (Ma, t, h.rand, o, m() - 0.5) * 0.1,
-        avgSessionDurati, o, n: 1, 8, 0 + (Ma, t, h.rand, o, m() - 0.5) * 60,
-        conversionRa, t, e: 0.12 + (Ma, t, h.rand, o, m() - 0.5) * 0.05
+    return {
+      overview: {
+        totalSessions: Math.floor(1250 * baseMultiplier),
+        uniqueUsers: Math.floor(890 * baseMultiplier),
+        pageViews: Math.floor(3200 * baseMultiplier),
+        bounceRate: 0.35 + (Math.random() - 0.5) * 0.1,
+        avgSessionDuration: 180 + (Math.random() - 0.5) * 60,
+        conversionRate: 0.12 + (Math.random() - 0.5) * 0.05
       },
-      traff, i, c: {
-        sourc, e, s: [
-          { na, m, e: 'Dire, c, t', cou, n, t: Ma, t, h.flo, o, r(4, 5, 0 * baseMultipli, e, r), percenta, g, e: 36 },
-          { na, m, e: 'Goog, l, e', cou, n, t: Ma, t, h.flo, o, r(3, 8, 0 * baseMultipli, e, r), percenta, g, e: 30 },
-          { na, m, e: 'Soci, a, l Med, i, a', cou, n, t: Ma, t, h.flo, o, r(2, 0, 0 * baseMultipli, e, r), percenta, g, e: 16 },
-          { na, m, e: 'Ema, i, l', cou, n, t: Ma, t, h.flo, o, r(1, 2, 0 * baseMultipli, e, r), percenta, g, e: 10 },
-          { na, m, e: 'Referr, a, l', cou, n, t: Ma, t, h.flo, o, r(1, 0, 0 * baseMultipli, e, r), percenta, g, e: 8 }
+      traffic: {
+        sources: [
+          { name: 'Direct', count: Math.floor(450 * baseMultiplier), percentage: 36 },
+          { name: 'Google', count: Math.floor(380 * baseMultiplier), percentage: 30 },
+          { name: 'Social Media', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Email', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Referral', count: Math.floor(100 * baseMultiplier), percentage: 8 }
         ],
-        devic, e, s: [
-          { type: 'Deskt, o, p', cou, n, t: Ma, t, h.flo, o, r(6, 0, 0 * baseMultipli, e, r), percenta, g, e: 48 },
-        { type: 'Mobi, l, e', cou, n, t: Ma, t, h.flo, o, r(5, 0, 0 * baseMultipli, e, r), percenta, g, e: 40 },
-        { type: 'Tabl, e, t', cou, n, t: Ma, t, h.flo, o, r(1, 5, 0 * baseMultipli, e, r), percenta, g, e: 12 }
+        devices: [
+          { type: 'Desktop', count: Math.floor(600 * baseMultiplier), percentage: 48 },
+          { type: 'Mobile', count: Math.floor(500 * baseMultiplier), percentage: 40 },
+          { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
         ],
-        countri, e, s: [
-          { na, m, e: 'Unit, e, d Stat, e, s', cou, n, t: Ma, t, h.flo, o, r(4, 0, 0 * baseMultipli, e, r), percenta, g, e: 32 },
-        { na, m, e: 'Unit, e, d Kingd, o, m', cou, n, t: Ma, t, h.flo, o, r(2, 0, 0 * baseMultipli, e, r), percenta, g, e: 16 },
-          { na, m, e: 'Cana, d, a', cou, n, t: Ma, t, h.flo, o, r(1, 5, 0 * baseMultipli, e, r), percenta, g, e: 12 },
-        { na, m, e: 'Germa, n, y', cou, n, t: Ma, t, h.flo, o, r(1, 2, 0 * baseMultipli, e, r), percenta, g, e: 10 },
-          { na, m, e: 'Austral, i, a', cou, n, t: Ma, t, h.flo, o, r(1, 0, 0 * baseMultipli, e, r), percenta, g, e: 8 } na, m, e: 'Othe, r, s', cou, n, t: Ma, t, h.flo, o, r(2, 8, 0 * baseMultipli, e, r)percenta, g, e: 22 }
+        countries: [
+          { name: 'United States', count: Math.floor(400 * baseMultiplier), percentage: 32 },
+          { name: 'United Kingdom', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Canada', count: Math.floor(150 * baseMultiplier), percentage: 12 },
+          { name: 'Germany', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Australia', count: Math.floor(100 * baseMultiplier), percentage: 8 },
+          { name: 'Others', count: Math.floor(280 * baseMultiplier), percentage: 22 }
         ]
       },
   performance: {
-        topPag, e, s: [
-          { pa, t, h: '/ ', vie, w, s: Ma, t, h.flo, o, r(8, 0, 0 * baseMultipli, e, r)uniqueVie, w, s: Ma, t, h.flo, o, r(6, 0, 0 * baseMultipli, e, r)avgTimeOnPa, g, e: 1, 2, 0 },
-        { pa, t, h: '/ servic, e, s', vie, w, s: Ma, t, h.flo, o, r(4, 0, 0 * baseMultipli, e, r)uniqueVie, w, s: Ma, t, h.flo, o, r(3, 0, 0 * baseMultipli, e, r)avgTimeOnPa, g, e: 1, 8, 0 },
-        { pa, t, h: '/ abo, u, t', vie, w, s: Ma, t, h.flo, o, r(3, 0, 0 * baseMultipli, e, r)uniqueVie, w, s: Ma, t, h.flo, o, r(2, 5, 0 * baseMultipli, e, r)avgTimeOnPa, g, e: 90 },
-        { pa, t, h: '/conta, c, t', vie, w, s: Ma, t, h.flo, o, r(2, 0, 0 * baseMultipli, e, r)uniqueVie, w, s: Ma, t, h.flo, o, r(1, 8, 0 * baseMultipli, e, r)avgTimeOnPa, g, e: 2, 4, 0 },
-        { pa, t, h: '/bl, o, g', vie, w, s: Ma, t, h.flo, o, r(1, 5, 0 * baseMultipli, e, r)uniqueVie, w, s: Ma, t, h.flo, o, r(1, 2, 0 * baseMultipli, e, r)avgTimeOnPa, g, e: 3, 0, 0 }
+        topPages: [
+          { path: '/ 'views: Math.floor(800 * baseMultiplier)uniqueViews: Math.floor(600 * baseMultiplier)avgTimeOnPage: 120 },
+        { path: '/ services'views: Math.floor(400 * baseMultiplier)uniqueViews: Math.floor(300 * baseMultiplier)avgTimeOnPage: 180 },
+        { path: '/ about'views: Math.floor(300 * baseMultiplier)uniqueViews: Math.floor(250 * baseMultiplier)avgTimeOnPage: 90 },
+        { path: '/contact'views: Math.floor(200 * baseMultiplier)uniqueViews: Math.floor(180 * baseMultiplier)avgTimeOnPage: 240 },
+        { path: '/blog'views: Math.floor(150 * baseMultiplier)uniqueViews: Math.floor(120 * baseMultiplier)avgTimeOnPage: 300 }
         ],
   userFlow: [
-          { st, e, p: 1, pa, g, e: 'Homepa, g, e', use, r, s: Ma, t, h.flo, o, r(10, 0, 0 * baseMultipli, e, r)dropo, f, f: 0 },
-        { st, e, p: 2, pa, g, e: 'Servic, e, s', use, r, s: Ma, t, h.flo, o, r(6, 0, 0 * baseMultipli, e, r)dropo, f, f: 40 },
-        { st, e, p: 3, pa, g, e: 'Conta, c, t', use, r, s: Ma, t, h.flo, o, r(3, 0, 0 * baseMultipli, e, r)dropo, f, f: 50 },
-        { st, e, p: 4, pa, g, e: 'Conversi, o, n', use, r, s: Ma, t, h.flo, o, r(1, 5, 0 * baseMultipli, e, r)dropo, f, f: 50 }
+          { step: 1page: 'Homepage'users: Math.floor(1000 * baseMultiplier)dropoff: 0 },
+        { step: 2page: 'Services'users: Math.floor(600 * baseMultiplier)dropoff: 40 },
+        { step: 3page: 'Contact'users: Math.floor(300 * baseMultiplier)dropoff: 50 },
+        { step: 4page: 'Conversion'users: Math.floor(150 * baseMultiplier)dropoff: 50 }
         ]
       },
-  insigh, t, s: []
+  insights: []
     };
-  }[timeRa, n, g, e]);
+  }[timeRange]);
 
-  con, s, t generateInsigh, t, s = useCallback((da, t, a: AnalyticsDa, t, a) => {
-    con, s, t newInsigh, t, s = [];
+  const generateInsights = useCallback((data: AnalyticsData) => {
+    const newInsights = [];
 
-    // Boun, c, e ra, t, e insigh, t, s
-    if (da, t, a.overv, i, e.w.bounceR, a, t.e > 0., 5) {
-      newInsigh, t, s.pu, s, h({
-        type: 'negati, v, e' as consttit, l, e: 'Hi, g, h Boun, c, e Ra, t, e', descripti, o, n: `Yo u r boun c e ra t e is ${(da t a.overv i e.w.bounceR a t.e * 10 0).toFi x e( 1)}%whi c h is abo v e t h e recommended 4 0%.`,
-        impa, c, t: 'Use, r, s a, r, e leavi, n, g yo, u, r si, t, e quick, l, y, indicati, n, g po, o, r us, e, r experien, c, e or irreleva, n, t conte, n, t.',
-        recommendati, o, n: 'Impro, v, e pa, g, e lo, a, d spe, e, d, enhan, c, e conte, n, t relevancea, n, d optimi, z, e us, e, r experien, c, e.'
+    // Bounce rate insights
+    if (data.overvie.w.bounceRat.e > 0.5) {
+      newInsights.push({
+        type: 'negative' as consttitle: 'High Bounce Rate'description: `Yo u r boun c e ra t e is ${(da t a.overv i e.w.bounceR a t.e * 10 0).toFi x e( 1)}%whi c h is abo v e t h e recommended 4 0%.`,
+        impact: 'Users are leaving your site quicklyindicating poor user experience or irrelevant content.',
+        recommendation: 'Improve page load speedenhance content relevanceand optimize user experience.'
       });
-    } el, s, e if (da, t, a.overv, i, e.w.bounceR, a, t.e < 0., 3) {
-      newInsigh, t, s.pu, s, h({
-        type: 'positi, v, e' as consttit, l, e: 'Excelle, n, t Boun, c, e Ra, t, e', descripti, o, n: `Yo u r boun c e ra t e is ${(da t a.overv i e.w.bounceR a t.e * 10 0).toFi x e( 1)}%whi c h is excelle n t.`,
-        impa, c, t: 'Use, r, s a, r, e engag, e, d a, n, d findi, n, g val, u, e in yo, u, r conte, n, t.', recommendati, o, n: 'Contin, u, e creati, n, g high- qualityreleva, n, t conte, n, t a, n, d mainta, i, n curre, n, t UX practic, e, s.'
-      });
-    }
-
-    // Sessi, o, n durati, o, n insigh, t, s
-    if (da, t, a.overv, i, e.w.avgSessionDurati, o, n < 6, 0) {
-      newInsigh, t, s.pu, s, h({
-        type: 'negati, v, e' as consttit, l, e: 'Sho, r, t Sessi, o, n Durati, o, n', descripti, o, n: `Avera g e sessi o n durati o n is ${Ma t h.ro u n(da t a.overv i e.w.avgSessionDura t i.o n)} secon d s.`,
-        impa, c, t: 'Use, r, s a, r, e n, o, t spendi, n, g enou, g, h ti, m, e on yo, u, r si, t, e to enga, g, e wi, t, h conte, n, t.',
-        recommendati, o, n: 'A, d, d mo, r, e engagi, n, g conte, n, t, impro, v, e navigati, o, n, a, n, d optimi, z, e pa, g, e structu, r, e.'
-      });
-    } el, s, e if (da, t, a.overv, i, e.w.avgSessionDurati, o, n > 30, 0) {
-      newInsigh, t, s.pu, s, h({
-        type: 'positi, v, e' as consttit, l, e: 'Lo, n, g Sessi, o, n Durati, o, n', descripti, o, n: `Avera g e sessi o n durati o n is ${Ma t h.ro u n(da t a.overv i e.w.avgSessionDura t i.o n)} secon d s.`impa, c, t: 'Use, r, s a, r, e high, l, y engag, e, d a, n, d spendi, n, g significa, n, t ti, m, e on yo, u, r si, t, e.', recommendati, o, n: 'Levera, g, e th, i, s engageme, n, t f, o, r bett, e, r conversi, o, n opportuniti, e, s.'
+    } else if (data.overvie.w.bounceRat.e < 0.3) {
+      newInsights.push({
+        type: 'positive' as consttitle: 'Excellent Bounce Rate'description: `Yo u r boun c e ra t e is ${(da t a.overv i e.w.bounceR a t.e * 10 0).toFi x e( 1)}%whi c h is excelle n t.`,
+        impact: 'Users are engaged and finding value in your content.'recommendation: 'Continue creating high- qualityrelevant content and maintain current UX practices.'
       });
     }
 
-    // Conversi, o, n ra, t, e insigh, t, s
-    if (da, t, a.overv, i, e.w.conversionR, a, t.e < 0.0, 5) {
-      newInsigh, t, s.pu, s, h({
-        type: 'negati, v, e' as consttit, l, e: 'L, o, w Conversi, o, n Ra, t, e', descripti, o, n: `Conversi o n ra t e is ${(da t a.overv i e.w.conversionR a t.e * 10 0).toFi x e( 1)}%.`,
-        impa, c, t: 'Ve, r, y f, e, w visito, r, s a, r, e taki, n, g desir, e, d actio, n, s on yo, u, r si, t, e.', recommendati, o, n: 'Impro, v, e ca, l, l-to- acti, o, n placementoptimi, z, e landi, n, g pagesa, n, d enhan, c, e us, e, r experien, c, e.'
+    // Session duration insights
+    if (data.overvie.w.avgSessionDuration < 60) {
+      newInsights.push({
+        type: 'negative' as consttitle: 'Short Session Duration'description: `Avera g e sessi o n durati o n is ${Ma t h.ro u n(da t a.overv i e.w.avgSessionDura t i.o n)} secon d s.`,
+        impact: 'Users are not spending enough time on your site to engage with content.',
+        recommendation: 'Add more engaging contentimprove navigationand optimize page structure.'
       });
-    } el, s, e if (da, t, a.overv, i, e.w.conversionR, a, t.e > 0., 2) {
-      newInsigh, t, s.pu, s, h({
-        type: 'positi, v, e' as consttit, l, e: 'Hi, g, h Conversi, o, n Ra, t, e', descripti, o, n: `Conversi o n ra t e is ${(da t a.overv i e.w.conversionR a t.e * 10 0).toFi x e( 1)}%.`impa, c, t: 'Yo, u, r si, t, e is effective, l, y converti, n, g visito, r, s in, t, o custome, r, s.', recommendati, o, n: 'Sca, l, e successf, u, l strategi, e, s a, n, d identi, f, y wh, a, t driv, e, s conversio, n, s.'
-      });
-    }
-
-    // Mobi, l, e traff, i, c insigh, t, s
-    con, s, t mobilePercenta, g, e = da, t, a.traf, f, i.c.devi, c, e.s.f, i, n(d => d.t, y, p.e === 'Mobi, l, e')?.percent, a, g.e || 0;
-    if (mobilePercenta, g, e > 6, 0) {
-      newInsigh, t, s.pu, s, h({
-        type: 'neutr, a, l' as consttit, l, e: 'Hi, g, h Mobi, l, e Traff, i, c', descripti, o, n: `${mobilePercent a g e}% of yo u r traff i c com e s from mobi l e devic e s.`impa, c, t: 'Mobi, l, e optimizati, o, n is cruci, a, l f, o, r yo, u, r audien, c, e.', recommendati, o, n: 'Ensu, r, e mobi, l, e- fir, s, t desi, g, n a, n, d optimi, z, e f, o, r mobi, l, e performance.'
+    } else if (data.overvie.w.avgSessionDuration > 300) {
+      newInsights.push({
+        type: 'positive' as consttitle: 'Long Session Duration'description: `Avera g e sessi o n durati o n is ${Ma t h.ro u n(da t a.overv i e.w.avgSessionDura t i.o n)} secon d s.`impact: 'Users are highly engaged and spending significant time on your site.'recommendation: 'Leverage this engagement for better conversion opportunities.'
       });
     }
 
-    // T, o, p pa, g, e insigh, t, s
-    con, s, t topPa, g, e = da, t, a.performa, n, c.e.topPa, g, e.s[, 0];
-    if (topPa, g, e && topPa, g, e.vi, e, w.s > da, t, a.overv, i, e.w.pageVi, e, w.s * 0., 3) {
-      newInsigh, t, s.pu, s, h({
-        type: 'positi, v, e' as consttit, l, e: 'Stro, n, g Homepa, g, e Performan, c, e', descripti, o, n: `Yo u r homepa g e accoun t s f o r ${((topPa g e.vi e w.s / da t a.overv i e.w.pageV i e.w s) * 1 0 0).toFi x e( 1)}% of pa g e vie w s.`impa, c, t: 'Yo, u, r homepa, g, e is effective, l, y attracti, n, g a, n, d retaini, n, g visito, r, s.', recommendati, o, n: 'U, s, e homepa, g, e succe, s, s patter, n, s to impro, v, e oth, e, r pag, e, s.'
+    // Conversion rate insights
+    if (data.overvie.w.conversionRat.e < 0.05) {
+      newInsights.push({
+        type: 'negative' as consttitle: 'Low Conversion Rate'description: `Conversi o n ra t e is ${(da t a.overv i e.w.conversionR a t.e * 10 0).toFi x e( 1)}%.`,
+        impact: 'Very few visitors are taking desired actions on your site.'recommendation: 'Improve call-to- action placementoptimize landing pagesand enhance user experience.'
+      });
+    } else if (data.overvie.w.conversionRat.e > 0.2) {
+      newInsights.push({
+        type: 'positive' as consttitle: 'High Conversion Rate'description: `Conversi o n ra t e is ${(da t a.overv i e.w.conversionR a t.e * 10 0).toFi x e( 1)}%.`impact: 'Your site is effectively converting visitors into customers.'recommendation: 'Scale successful strategies and identify what drives conversions.'
       });
     }
 
-    setInsigh, t, s(newInsig, h, t, s);
-  }, []);
-
-  con, s, t loadDa, t, a = useCallback(asy, n, c () => {
-    setIsLoadi, n, g(t, r, u, e);
-    t, r, y {
-      con, s, t mockDa, t, a = generateMockDa, t, a();
-      setDa, t, a(mockD, a, t, a);
-      generateInsigh, t, s(mockD, a, t, a);
-      onDataUpda, t, e?.(mockD, a, t, a);
-    } cat, c, h (error) {
-      conso, l, e.error('Fail, e, d to lo, a, d analyti, c, s da, t, a: ', error);
-    } final, l, y {
-      setIsLoadi, n, g(fa, l, s, e);
+    // Mobile traffic insights
+    const mobilePercentage = data.traffi.c.device.s.fin(d => d.typ.e === 'Mobile')?.percentag.e || 0;
+    if (mobilePercentage > 60) {
+      newInsights.push({
+        type: 'neutral' as consttitle: 'High Mobile Traffic'description: `${mobilePercent a g e}% of yo u r traff i c com e s from mobi l e devic e s.`impact: 'Mobile optimization is crucial for your audience.'recommendation: 'Ensure mobile- first design and optimize for mobile performance.'
+      });
     }
-  }[generateMockDatagenerateInsightsonDataUpd, a, t, e]);
+
+    // Top page insights
+    const topPage = data.performanc.e.topPage.s[0];
+    if (topPage && topPage.view.s > data.overvie.w.pageView.s * 0.3) {
+      newInsights.push({
+        type: 'positive' as consttitle: 'Strong Homepage Performance'description: `Yo u r homepa g e accoun t s f o r ${((topPa g e.vi e w.s / da t a.overv i e.w.pageV i e.w s) * 1 0 0).toFi x e( 1)}% of pa g e vie w s.`impact: 'Your homepage is effectively attracting and retaining visitors.'recommendation: 'Use homepage success patterns to improve other pages.'
+      });
+    }
+
+    setInsights(newInsights);
+  }[]);
+
+  const loadData = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const mockData = generateMockData();
+      setData(mockData);
+      generateInsights(mockData);
+      onDataUpdate?.(mockData);
+    } catch (error) {
+      console.error('Failed to load analytics data: 'error);
+    } finally {
+      setIsLoading(false);
+    }
+  }[generateMockDatagenerateInsightsonDataUpdate]);
 
   useEffect(() => {
-    loadDa, t, a();
+    loadData();
 
-    if (refreshInterv, a, l > , 0) {
-      con, s, t interv, a, l = setInterv, a, l(loadDatarefreshInter, v, a, l);
-      retu, r, n () => clearInterv, a, l(inter, v, a, l);
+    if (refreshInterval > 0) {
+      const interval = setInterval(loadDatarefreshInterval);
+      return () => clearInterval(interval);
     }
-  }[loadDatarefreshInter, v, a, l]);
+  }[loadDatarefreshInterval]);
 
-  con, s, t formatNumb, e, r = (n, u, m: num, b, e, r) => {
-    if (n, u, m >= 1000, 0, 0, 0) retu, r, n (n, u, m / 1000, 0, 0, 0).toFi, x, e(, 1) + ', M';
-    if (n, u, m >= 1, 0, 0, 0) retu, r, n (n, u, m / 1, 0, 0, 0).toFi, x, e(, 1) + 'K';
-    retu, r, n n, u, m.toStr, i, n();
+  const formatNumber = (num: number) => {
+    if (num >= 1000000) return (num / 1000000).toFixe(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixe(1) + 'K';
+    return num.toStrin();
   };
 
-  con, s, t getInsightIc, o, n = (type: str, i, n, g) => {
-    swit, c, h (t, y, p, e) {
-      ca, s, e 'positi, v, e': retu, r, n <Trending, U, p classNa, m, e="h-5 w-5 te, x, t-gre, e, n-6, 0, 0"/>;
-      ca, s, e 'negati, v, e': retu, r, n <TrendingDo, w, n classNa, m, e="h-5 w-5 te, x, t-r, e, d-6, 0, 0"/>;
-      default: retu, r, n <Activi, t, y classNa, m, e="h-5 w-5 te, x, t-bl, u, e-6, 0, 0"/>;
-    }
-  };
-
-  con, s, t getInsightCol, o, r = (type: str, i, n, g) => {
-    swit, c, h (t, y, p, e) {
-      ca, s, e 'positi, v, e': retu, r, n 'bord, e, r-gre, e, n-2, 0, 0 bg-gre, e, n-50';
-      ca, s, e 'negati, v, e': retu, r, n 'bord, e, r-r, e, d-2, 0, 0 bg-r, e, d-50';
-      default: retu, r, n 'bord, e, r-bl, u, e-2, 0, 0 bg-bl, u, e-50';
+  const getInsightIcon = (type: string) => {
+    switch (type) {
+      case 'positive': return <TrendingUp className="h-5 w-5 text-green-600"/>;
+      case 'negative': return <TrendingDown className="h-5 w-5 text-red-600"/>;
+      default: return <Activity className="h-5 w-5 text-blue-600"/>;
     }
   };
 
-  if (isLoad, i, n, g) {
-    retu, r, n (
-      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r h-64">
-        <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-12 w-12 bord, e, r-b-2 bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
-      </d, i, v>
+  const getInsightColor = (type: string) => {
+    switch (type) {
+      case 'positive': return 'border-green-200 bg-green-50';
+      case 'negative': return 'border-red-200 bg-red-50';
+      default: return 'border-blue-200 bg-blue-50';
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      </div>
     );
   }
 
-  if (!d, a, t, a) retu, r, n nu, l, l;
+  if (!data) return null;
 
-  retu, r, n (<d, i, v classNa, m, e="spa, c, e-y-6">
-      {/* Head, e, r */}
-      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-        <d, i, v>
-          <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0">Analyti, c, s Insigh, t, s</h2>
-          <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0">Comprehensi, v, e analyti, c, s a, n, d performance insigh, t, s</p>
-        </d, i, v>
-        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-          <sele, c, t
-            val, u, e={timeRa, n, g e}
-            onChan, g, e={(, e) => setTimeRan, g, e(e.tar, g, e.t.va, l, u.e as an, y)}
-            classNa, m, e="px-3 py-1 bord, e, r bord, e, r-gr, a, y-3, 0, 0 round, e, d-md te, x, t-sm">
-            <opti, o, n val, u, e="7d">La, s, t 7 da, y, s</opti, o, n>
-            <opti, o, n val, u, e="3, 0, d">La, s, t 30 da, y, s</opti, o, n>
-            <opti, o, n val, u, e="9, 0, d">La, s, t 90 da, y, s</opti, o, n>
-            <opti, o, n val, u, e="1y">La, s, t ye, a, r</opti, o, n>
-          </sele, c, t>
-        </d, i, v>
-      </d, i, v>
+  return (<div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
+          <p className="text-gray-600">Comprehensive analytics and performance insights</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <select
+            value={timeRang e}
+            onChange={(e) => setTimeRange(e.targe.t.valu.e as any)}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm">
+            <option value="7d">Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+            <option value="90d">Last 90 days</option>
+            <option value="1y">Last year</option>
+          </select>
+        </div>
+      </div>
 
-      {/* Overvi, e, w Metri, c, s */}
-      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4g, a, p-6">
+      {/* Overview Metrics */}
+      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Tot, a, l Sessio, n, s</CardTitle>
-            <Use, r, s classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+            <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
+            <Users className="h-4 w-4 text-muted-foreground" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.totalSess, i, o.n, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
-              +12% from la, s, t peri, o, d
+            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.totalSessio.ns)}</div>
+            <p className="text-xs text-muted-foreground">
+              +12% from last period
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Uniq, u, e Use, r, s</CardTitle>
-            <E, y, e classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+            <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
+            <Eye className="h-4 w-4 text-muted-foreground" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.uniqueU, s, e.r, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
-              +8% from la, s, t peri, o, d
+            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.uniqueUse.rs)}</div>
+            <p className="text-xs text-muted-foreground">
+              +8% from last period
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Pa, g, e Vie, w, s</CardTitle>
-            <MousePoint, e, r classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+            <CardTitle className="text-sm font-medium">Page Views</CardTitle>
+            <MousePointer className="h-4 w-4 text-muted-foreground" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{formatNumb, e, r(da, t, a.overv, i, e.w.pageV, i, e.w, s)}</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
-              +15% from la, s, t peri, o, d
+            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.pageVie.ws)}</div>
+            <p className="text-xs text-muted-foreground">
+              +15% from last period
             </p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader classNa, m, e="fl, e, x fl, e, x-r, o, w ite, m, s-cent, e, r justi, f, y-betwe, e, n spa, c, e-y-0, p, b-2">
-            <CardTitle classNa, m, e="te, x, t-sm fo, n, t-medium">Conversi, o, n Ra, t, e</CardTitle>
-            <Targ, e, t classNa, m, e="h-4 w-4 te, x, t-mut, e, d-foregrou, n, d" />          </CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+            <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
+            <Target className="h-4 w-4 text-muted-foreground" />          </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d">{(da, t, a.overv, i, e.w.conversionR, a, t.e * 10, 0).toFi, x, e(, 1)}%</d, i, v>
-            <p classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
-              +2.1% from la, s, t peri, o, d
+            <div className="text-2xl font-bold">{(data.overvie.w.conversionRat.e * 100).toFixe(1)}%</div>
+            <p className="text-xs text-muted-foreground">
+              +2.1% from last period
             </p>
           </CardContent>
         </Card>
-      </d, i, v>
+      </div>
 
-      {/* Traff, i, c Sourc, e, s */}
-      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1, l, g:gr, i, d-co, l, s-2g, a, p-6">
+      {/* Traffic Sources */}
+      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Traff, i, c Sourc, e, s</CardTitle>
-            <CardDescription>Whe, r, e yo, u, r visito, r, s a, r, e comi, n, g from</CardDescription>
+            <CardTitle>Traffic Sources</CardTitle>
+            <CardDescription>Where your visitors are coming from</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
-              {da, t, a.traf, f, i.c.sour, c, e.s.ma.p((sourcein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                    <d, i, v classNa, m, e="w-3h-3round, e, d-fu, l, l bg-bl, u, e-5, 0, 0"></d, i, v>
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium">{sour, c, e.na.m e}</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                    <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(sour, c, e.c, o, u.n, t)}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{sour, c, e.percen, t, a.g e}%</d, i, v>
-                  </d, i, v>
-                </d, i, v>
+            <div className="space-y-4">
+              {data.traffi.c.source.s.ma.p((sourceindex) => (<div key={inde x} className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3h-3rounded-full bg-blue-500"></div>
+                    <span className="text-sm font-medium">{source.na.m e}</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-bold">{formatNumber(source.cou.nt)}</div>
+                    <div className="text-xs text-muted-foreground">{source.percenta.g e}%</div>
+                  </div>
+                </div>
               ))}
-            </d, i, v>
+            </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Devi, c, e Typ, e, s</CardTitle>
-            <CardDescription>H, o, w use, r, s a, r, e accessi, n, g yo, u, r si, t, e</CardDescription>
+            <CardTitle>Device Types</CardTitle>
+            <CardDescription>How users are accessing your site</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
-              {da, t, a.traf, f, i.c.devi, c, e.s.ma.p((devicein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-                  <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2">
-                    {devi, c, e.t, y, p.e === 'Deskt, o, p' && <Monit, o, r classNa, m, e="h-4w-4te, x, t-bl, u, e-6, 0, 0"/>}
-                    {devi, c, e.t, y, p.e === 'Mobi, l, e' && <Smartpho, n, e classNa, m, e="h-4w-4te, x, t-gre, e, n-6, 0, 0"/>}
-                    {devi, c, e.t, y, p.e === 'Tabl, e, t' && <Tabl, e, t classNa, m, e="h-4w-4te, x, t-purp, l, e-6, 0, 0"/>}
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium">{devi, c, e.ty.p e}</sp, a, n>
-                  </d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                    <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(devi, c, e.c, o, u.n, t)}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">{devi, c, e.percen, t, a.g e}%</d, i, v>
-                  </d, i, v>
-                </d, i, v>
+            <div className="space-y-4">
+              {data.traffi.c.device.s.ma.p((deviceindex) => (<div key={inde x} className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    {device.typ.e === 'Desktop' && <Monitor className="h-4w-4text-blue-600"/>}
+                    {device.typ.e === 'Mobile' && <Smartphone className="h-4w-4text-green-600"/>}
+                    {device.typ.e === 'Tablet' && <Tablet className="h-4w-4text-purple-600"/>}
+                    <span className="text-sm font-medium">{device.ty.p e}</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-bold">{formatNumber(device.cou.nt)}</div>
+                    <div className="text-xs text-muted-foreground">{device.percenta.g e}%</div>
+                  </div>
+                </div>
               ))}
-            </d, i, v>
+            </div>
           </CardContent>
         </Card>
-      </d, i, v>
+      </div>
 
-      {/* T, o, p Pag, e, s */}
+      {/* Top Pages */}
       <Card>
         <CardHeader>
-          <CardTitle>T, o, p Performi, n, g Pag, e, s</CardTitle>
-          <CardDescription>Yo, u, r mo, s, t visit, e, d pag, e, s a, n, d the, i, r performance</CardDescription>
+          <CardTitle>Top Performing Pages</CardTitle>
+          <CardDescription>Your most visited pages and their performance</CardDescription>
         </CardHeader>
         <CardContent>
-          <d, i, v classNa, m, e="spa, c, e-y-4">
-            {da, t, a.performa, n, c.e.topPa, g, e.s.ma.p((pagein, d, e, x) => (<d, i, v k, e, y={in, d, e x} classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n p-4bord, e, r round, e, d-lg">
-                <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-4">
-                  <d, i, v classNa, m, e="w-8h-8round, e, d-fu, l, l bg-bl, u, e-100fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r">
-                    <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-bo, l, d te, x, t-bl, u, e-6, 0, 0">{ind, e, x +  1}</sp, a, n>
-                  </d, i, v>
-                  <d, i, v>
-                    <d, i, v classNa, m, e="fo, n, t-medium">{pa, g, e.pa.t h}</d, i, v>
-                    <d, i, v classNa, m, e="te, x, t-sm te, x, t-mut, e, d-foregrou, n, d">
-                      {formatNumb, e, r(pa, g, e.uniqueV, i, e.w, s)} uniq, u, e vie, w, s
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v classNa, m, e="te, x, t-rig, h, t">
-                  <d, i, v classNa, m, e="te, x, t-sm fo, n, t-bo, l, d">{formatNumb, e, r(pa, g, e.v, i, e.w, s)} vie, w, s</d, i, v>
-                  <d, i, v classNa, m, e="te, x, t-xs te, x, t-mut, e, d-foregrou, n, d">
-                    {Ma, t, h.ro, u, n(pa, g, e.avgTimeOn, P, a.g, e)}s a, v, g ti, m, e
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+          <div className="space-y-4">
+            {data.performanc.e.topPage.s.ma.p((pageindex) => (<div key={inde x} className="flex items-center justify-between p-4border rounded-lg">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8h-8rounded-full bg-blue-100flex items-center justify-center">
+                    <span className="text-sm font-bold text-blue-600">{index +  1}</span>
+                  </div>
+                  <div>
+                    <div className="font-medium">{page.pa.t h}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {formatNumber(page.uniqueVie.ws)} unique views
+                    </div>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-sm font-bold">{formatNumber(page.vie.ws)} views</div>
+                  <div className="text-xs text-muted-foreground">
+                    {Math.roun(page.avgTimeOnPa.ge)}s avg time
+                  </div>
+                </div>
+              </div>
             ))}
-          </d, i, v>
+          </div>
         </CardContent>
       </Card>
 
-      {/* AI Insigh, t, s */}
-      {insigh, t, s.leng, t, h > 0 && (
+      {/* AI Insights */}
+      {insights.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle>AI-Power, e, d Insigh, t, s</CardTitle>
-            <CardDescription>Automat, e, d analys, i, s a, n, d recommendatio, n, s</CardDescription>
+            <CardTitle>AI-Powered Insights</CardTitle>
+            <CardDescription>Automated analysis and recommendations</CardDescription>
           </CardHeader>
           <CardContent>
-            <d, i, v classNa, m, e="spa, c, e-y-4">
+            <div className="space-y-4">
               <AnimatePresence>
-                {insigh, t, s.ma.p((insightin, d, e, x) => (
+                {insights.ma.p((insightindex) => (
                   <motion.di.v
-                    k, e, y={in, d, e x}
-                    initi, a, l={{ opaci, t, y: 0, y: 20 }}
-                    anima, t, e={{ opaci, t, y: 1, y: 0 }}
-                    ex, i, t={{ opaci, t, y: 0, y: -20 }}
-                    classNa, m, e="p-4 round, e, d-lg bord, e, r">
-                    <d, i, v classNa, m, e="fl, e, x ite, m, s-sta, r, t spa, c, e-x-3">
-                      {getInsightIc, o, n(insig, h, t.ty.p, e)}
-                      <d, i, v classNa, m, e="fl, e, x-1">
-                        <h4 classNa, m, e="fo, n, t-semibo, l, d te, x, t-sm">{insig, h, t.t, i, t.l e}</h4>
-                        <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 mt-1">{insig, h, t.descrip, t, i.o n}</p>
-                        <d, i, v classNa, m, e="mt-2">
-                          <p classNa, m, e="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Impa, c, t:</p>
-                          <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.im, p, a.c t}</p>
-                        </d, i, v>
-                        <d, i, v classNa, m, e="mt-2">
-                          <p classNa, m, e="te, x, t-xs fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Recommendati, o, n:</p>
-                          <p classNa, m, e="te, x, t-xs te, x, t-gr, a, y-6, 0, 0">{insig, h, t.recommenda, t, i.o n}</p>
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
+                    key={inde x}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    exit={{ opacity: 0y: -20 }}
+                    className="p-4 rounded-lg border">
+                    <div className="flex items-start space-x-3">
+                      {getInsightIcon(insight.ty.pe)}
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-sm">{insight.tit.l e}</h4>
+                        <p className="text-sm text-gray-600 mt-1">{insight.descripti.o n}</p>
+                        <div className="mt-2">
+                          <p className="text-xs font-medium text-gray-700">Impact:</p>
+                          <p className="text-xs text-gray-600">{insight.impa.c t}</p>
+                        </div>
+                        <div className="mt-2">
+                          <p className="text-xs font-medium text-gray-700">Recommendation:</p>
+                          <p className="text-xs text-gray-600">{insight.recommendati.o n}</p>
+                        </div>
+                      </div>
+                    </div>
                   </motion.di.v>
                 ))}
               </AnimatePresence>
-            </d, i, v>
+            </div>
           </CardContent>
         </Card>
       )}
-    </d, i, v>
+    </div>
   );
 }

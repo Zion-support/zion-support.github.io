@@ -1,154 +1,154 @@
-import React, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } from 'react';
+import React, { ComponentErrorInfoReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-interface Pro, p, s { childr, e, n: ReactNo, d, e;
-  fallba, c, k?: ReactNo, d, e;
-  onErr, o, r?: (er, r, o,
-    r: Err, o, r, errorIn, f, o: ErrorIn, f, o) => vo, i, d }
+interface Props { children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (erro,
+    r: ErrorerrorInfo: ErrorInfo) => void }
 
-interface Sta, t, e { hasErr, o, r: boolean;
-  error: Err, o, r | nu, l, l;
-  errorI, n, f,
-    o: ErrorIn, f, o | nu, l, l }
+interface State { hasError: boolean;
+  error: Error | null;
+  errorInf,
+    o: ErrorInfo | null }
 
-cla, s, s EnhancedErrorBounda, r, y exten, d, s Compone, n, t<Pro, p, s, Sta, t, e> { construct, o, r(pro, p, s: Pro, p, s) {
-    sup, e, r(pro, p, s);
-    th, i, s.sta, t, e = {
-      hasEr, r, o,
-    r: fal, s, e,
-      error: nu, l, l,
-      errorIn, f, o: nu, l, l };
+class EnhancedErrorBoundary extends Component<PropsState> { constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasErro,
+    r: false,
+      error: null,
+      errorInfo: null };
   }
 
-  stat, i, c getDerivedStateFromErr, o, r(error: Err, o, r): Sta, t, e {
-    retu, r, n {
-      hasEr, r, o,
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasErro,
     r: true,
       error,
-      errorIn, f, o: nu, l, l    };
+      errorInfo: null    };
   }
 
-  componentDidCat, c, h(error: Err, o, r, errorIn, f, o: ErrorIn, f, o) {
-    th, i, s.setSta, t, e({
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
+    this.setState({
       error,
-      errorIn, f, o    });
+      errorInfo    });
 
-    // L, o, g error to conso, l, e in developme, n, t
-    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') { ;
-      conso, l, e.error('Err, o, r caug, h, t by bounda, r, y:', error, errorIn, f, o) }
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') { ;
+      console.error('Error caught by boundary:'errorerrorInfo) }
 
-    // Se, n, d error to monitori, n, g servi, c, e
-    th, i, s.logErrorToServi, c, e(error, errorIn, f, o);
+    // Send error to monitoring service
+    this.logErrorToService(errorerrorInfo);
 
-    // Ca, l, l cust, o, m error handl, e, r
-    if (th, i, s.pro, p, s.onErr, o, r) { th, i, s.pro, p, s.onErr, o, r(error, errorIn, f, o) }
+    // Call custom error handler
+    if (this.props.onError) { this.props.onError(errorerrorInfo) }
   }
 
-  priva, t, e logErrorToServi, c, e = (error: Err, o, r, errorIn, f, o: ErrorIn, f, o) => {
-    t, r, y {
-      // Se, n, d to error reporti, n, g servi, c, e
-      if (type, o, f wind, o, w !== 'undefin, e, d' && wind, o, w.fet, c, h) {
-        fet, c, h('/a, p, i/error-reporti, n, g', {
-          meth, o, d: 'PO, S, T',
-          heade, r, s: {
-            'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'    },
-          bo, d, y: JS, O, N.stringi, f, y({
+  private logErrorToService = (error: ErrorerrorInfo: ErrorInfo) => {
+    try {
+      // Send to error reporting service
+      if (typeof window !== 'undefined' && window.fetch) {
+        fetch('/api/error-reporting'{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'    },
+          body: JSON.stringify({
             error: {
-              mess, a, g,
+              messag,
     e: error.message,
-              sta, c, k: error.sta, c, k,
-              na, m, e: error.na, m, e    },
-            errorIn, f, o: {
-              componentSt, a, c,
-    k: errorIn, f, o.componentSta, c, k    },
-            timesta, m, p: n, e, w Da, t, e().toISOStri, n, g(),
-            userAge, n, t: navigat, o, r.userAge, n, t,
-            u, r, l: wind, o, w.locati, o, n.hr, e, f
+              stack: error.stack,
+              name: error.name    },
+            errorInfo: {
+              componentStac,
+    k: errorInfo.componentStack    },
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            url: window.location.href
     });
-    }).cat, c, h(conso, l, e.error);
+    }).catch(console.error);
       }
-    } cat, c, h (e) { conso, l, e.error('Fail, e, d to l, o, g error to servi, c, e:', e) }
+    } catch (e) { console.error('Failed to log error to service:'e) }
   };
 
-  priva, t, e handleRet, r, y = () => { th, i, s.setSta, t, e({
-      hasErr, o, r: fal, s, e,
-      error: nu, l, l,
-      errorIn, f, o: nu, l, l });
+  private handleRetry = () => { this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null });
   };
 
-  priva, t, e handleRelo, a, d = () => { ;
-    wind, o, w.locati, o, n.relo, a, d() };
+  private handleReload = () => { ;
+    window.location.reload() };
 
-  rend, e, r() { if (th, i, s.sta, t, e.hasErr, o, r) {
-      if (th, i, s.pro, p, s.fallba, c, k) {
-        retu, r, n th, i, s.pro, p, s.fallba, c, k }
+  render() { if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback }
 
-      retu, r, n (
-        <d, i, v classNa, m, e = "m, i, n-h-scre, e, n fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r bg-gr, a, y-50, p, y-12, p, x-4, s, m: px-6l,    g:px-8>          <d, i, v classNa, m, e="m, a, x-w-md w-fu, l, l spa, c, e-y-8>            <d, i, v cla, s, s Na, m, e="te, x, t-cent, e, r">              <d, i, v classNa, m, e="mx-au, t, o h-12 w-12 te, x, t-r, e, d-5, 0, 0>
-                <s, v, g                  cla, s, s Na, m, e="h-12 w-12""                  fi, l, l=no, n, e""                  viewB, o, x=0024, 2, 4""                  stro, k, e=currentCol, o, r""                  ar, i, a-hidd, e, n=true""
+      return (
+        <div className = "min-h-screen flex items-center justify-center bg-gray-50py-12px-4sm: px-6l   g:px-8>          <div className="max-w-md w-full space-y-8>            <div class Name="text-center">              <div className="mx-auto h-12 w-12 text-red-500>
+                <svg                  class Name="h-12 w-12""                  fill=none""                  viewBox=002424""                  stroke=currentColor""                  aria-hidden=true""
                 >
-                  <pa, t, h                    strokeLinec, a, p=rou, n, d""                    strokeLinejo, i, n=rou, n, d""
-                    strokeWid, t, h={2}                    d=M129v2m0, 4, h.0, 1, m-6.9384h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7320, L, 3.732, 1, 6.5c-.77.8, 3, 3.19, 2, 2.51.73, 2, 2.5z""
+                  <path                    strokeLinecap=round""                    strokeLinejoin=round""
+                    strokeWidth={2}                    d=M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z""
                   />
-                </s, v, g>
-              </d, i, v>              <h2classNa, m, e="mt-6 te, x, t-3 xl fo, n, t-extrabo, l, d te, x, t-gr, a, y-9, 0, 0" id="somethi, n, g-we, n, t-wro, n, g">
-                Somethi, n, g we, n, t wro, n, g
-              </h2>              <p classNa, m, e="mt-2 te, x, t-sm te, x, t-gr, a, y-6, 0, 0">;
-                We&ap, o, s;re sor, r, y, b, u, t somethi, n, g unexpect, e, d happen, e, d. Plea, s, e t, r, y aga, i, n.
+                </svg>
+              </div>              <h2className="mt-6 text-3 xl font-extrabold text-gray-900" id="something-went-wrong">
+                Something went wrong
+              </h2>              <p className="mt-2 text-sm text-gray-600">;
+                We&apos;re sorrybut something unexpected happened. Please try again.
               </p>
-            </d, i, v>
-            <h1classNa, m, e = te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-900, m, b-4"" id="oo, p, s-somethi, n, g-we, n, t-wro, n, g">
-              Oo, p, s! Somethi, n, g we, n, t wro, n, g
+            </div>
+            <h1className = text-2xl font-bold text-gray-900mb-4"" id="oops-something-went-wrong">
+              Oops! Something went wrong
             </h1>
-                        <p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 mb-6">;
-              We&ap, o, s;re sor, r, y, b, u, t somethi, n, g unexpect, e, d happen, e, d. O, u, r te, a, m h, a, s be, e, n notifi, e, d a, n, d is worki, n, g to f, i, x th, i, s iss, u, e.
+                        <p className="text-gray-600 mb-6">;
+              We&apos;re sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
 
-            {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.error && (              <detai, l, s classNa, m, e="mb-6 te, x, t-le, f, t">                <summa, r, y classNa, m, e="curs, o, r-point, e, r te, x, t-sm te, x, t-gr, a, y-5, 0, 0 hov, e, r: te, x, t-gr, a, y-7, 0, 0 mb-2">
-                  Err, o, r Detai, l, s (Developme, n, t)
-                </summa, r, y>                <d, i, v classNa, m, e="bg-gr, a, y-1, 0, 0 p-4 round, e, d te, x, t-xs fo, n, t-mo, n, o te, x, t-gr, a, y-800overflow-au, t, o m, a, x-h-40>                  <d, i, v cla, s, s Na, m, e="mb-2">
-                    <stro, n, g>Er, r, o,    r:</stro, n, g> {th, i, s.sta, t, e.error.message}
-                  </d, i, v>                  <d, i, v classNa, m, e = mb-2"">
-                    <stro, n, g>Sta, c, k:</stro, n, g>                    <p, r, e classNa, m, e="whitespa, c, e-p, r, e-wr, a, p mt-1">{th, i, s.sta, t, e.error.sta, c, k}</p, r, e>
-                  </d, i, v>
-                  {th, i, s.sta, t, e.errorIn, f, o && (
-                    <d, i, v>                      <stro, n, g>Compone, n, t Sta, c, k:</stro, n, g>                      <p, r, e classNa, m, e="whitespa, c, e-p, r, e-wr, a, p mt-1">{th, i, s.sta, t, e.errorIn, f, o.componentSta, c, k}</p, r, e>
-                    </d, i, v>
+            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mb-6 text-left">                <summary className="cursor-pointer text-sm text-gray-500 hover: text-gray-700 mb-2">
+                  Error Details (Development)
+                </summary>                <div className="bg-gray-100 p-4 rounded text-xs font-mono text-gray-800overflow-auto max-h-40>                  <div class Name="mb-2">
+                    <strong>Erro   r:</strong> {this.state.error.message}
+                  </div>                  <div className = mb-2"">
+                    <strong>Stack:</strong>                    <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>                      <strong>Component Stack:</strong>                      <pre className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
+                    </div>
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
                   )}
-                </d, i, v>
-              </detai, l, s>
+                </div>
+              </details>
             )}
-            <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l sm:fl, e, x-r, o, w g, a, p-3>
-              <motion.butt, o, n
-                on Cli, c, k={th, i, s.hand, l, e Ret, r, y}                cla, s, s Na, m, e="gro, u, p relati, v, e w-fu, l, l fl, e, x justi, f, y-cent, e, r py-2 px-4bord, e, r bord, e, r-transpare, n, t te, x, t-sm fo, n, t-medium round, e, d-md te, x, t-whi, t, e bg-bl, u, e-600hov, e, r: bg-bl, u, e-700foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2foc, u, s:ri, n, g-offs, e, t-2fo, c, u,
-    s:ri, n, g-bl, u, e-5, 0, 0""
+            <div className="flex flex-col sm:flex-row gap-3>
+              <motion.button
+                on Click={this.handle Retry}                class Name="group relative w-full flex justify-center py-2 px-4border border-transparent text-sm font-medium rounded-md text-white bg-blue-600hover: bg-blue-700focus:outline-none focus:ring-2focus:ring-offset-2focu,
+    s:ring-blue-500""
               >
-                T, r, y Aga, i, n
-              </motion.butt, o, n>
+                Try Again
+              </motion.button>
               
-              <butt, o, n
-                onCli, c, k = {th, i, s.handleRelo, a, d}                classNa, m, e="gro, u, p relati, v, e w-fu, l, l fl, e, x justi, f, y-cent, e, r py-2 px-4 bord, e, r bord, e, r-gr, a, y-300te, x, t-sm fo, n, t-medium round, e, d-md te, x, t-gr, a, y-700, b, g-whi, t, e hov, e, r: bg-gr, a, y-50foc, u, s:outli, n, e-no, n, e foc, u, s:ri, n, g-2foc, u, s:ri, n, g-offs, e, t-2foc, u, s:ri, n, g-bl, u, e-5, 0, 0"               ar, i, a-lab, e, l=Relo, a, d Pa, g, e"">
-                Relo, a, d Pa, g, e
-              </butt, o, n>
-            </d, i, v>
+              <button
+                onClick = {this.handleReload}                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300text-sm font-medium rounded-md text-gray-700bg-white hover: bg-gray-50focus:outline-none focus:ring-2focus:ring-offset-2focus:ring-blue-500"               aria-label=Reload Page"">
+                Reload Page
+              </button>
+            </div>
 
 
-            {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.error && (              <d, i, v classNa, m, e="mt-8 p-4 bg-r, e, d-50bord, e, r bord, e, r-r, e, d-200round, e, d-md>                <h 3 cla, s, s Na, m, e="te, x, t-sm fo, n, t-medium te, x, t-r, e, d-8, 0, 0 mb-2"" id="error-detai, l, s">Err, o, r Deta, i, l,
-    s:</h3>                <p, r, e classNa, m, e="te, x, t-xs te, x, t-r, e, d-7, 0, 0 overflow-au, t, o">                  {th, i, s.sta, t, e.error.toStri, n, g()}
-                  {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
-                </p, r, e>
-              </d, i, v>
+            {process.env.NODE_ENV === 'development' && this.state.error && (              <div className="mt-8 p-4 bg-red-50border border-red-200rounded-md>                <h 3 class Name="text-sm font-medium text-red-800 mb-2"" id="error-details">Error Detail,
+    s:</h3>                <pre className="text-xs text-red-700 overflow-auto">                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </div>
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
             )}
-          </d, i, v>
-        </d, i, v>;
+          </div>
+        </div>;
       );
     }
 
-    retu, r, n th, i, s.pro, p, s.childr, e, n;
+    return this.props.children;
   }
 }
 
-export default EnhancedErrorBounda, r, y;
+export default EnhancedErrorBoundary;

@@ -14,21 +14,21 @@ export default function Navigation({
   currentTime = new Date(),
   isDarkMode = false,
   onToggleDarkMode = () => {},
-  activeSection = '',
+  activeSection = ',
   onSectionChange = () => {}
 }: NavigationProps): JSX.Element {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [showTaskManager, setShowTaskManager] = useState(false);
+  const [isMenuOpensetIsMenuOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [showTaskManagersetShowTaskManager] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
   handleScroll.displayName = 'handleScroll';
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListene('scroll', handleScrol, l);
-    return () => window.removeEventListene('scroll', handleScrol, l);
-  }, []);
+    window.addEventListene('scroll'handleScroll);
+    return () => window.removeEventListene('scroll'handleScroll);
+  }[]);
 
   const scrollToSection = (sectionId: string) => {
   scrollToSection.displayName = 'scrollToSection';

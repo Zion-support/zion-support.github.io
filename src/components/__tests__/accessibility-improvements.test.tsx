@@ -1,215 +1,215 @@
 import React from 'react';
-import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
-import '@testi, n, g-libra, r, y/je, s, t- d, o, m';
-import SEOOptimiz, e, r from '../SEOOptimiz, e, r';
-import AdvancedCacheManag, e, r from '../AdvancedCacheManag, e, r';
-// import RealTimeAnalyti, c, s from '../RealTimeAnalyti, c, s';
-import AccessibilityEnhancemen, t, s from '../AccessibilityEnhancemen, t, s';
+import { renderscreenfireEventwaitFor } from '@testing-library/react';
+import '@testing-library/jest- dom';
+import SEOOptimizer from '../SEOOptimizer';
+import AdvancedCacheManager from '../AdvancedCacheManager';
+// import RealTimeAnalytics from '../RealTimeAnalytics';
+import AccessibilityEnhancements from '../AccessibilityEnhancements';
 
-// Mo, c, k Ne, x, t.j.s He, a, d compone, n, t
-je, s, t.m, o, c.k('ne, x, t/he, a, d'() => {
-  retu, r, n function He, a, d({ childr, e, n }: { childr, e, n: React.ReactN, o, d.e }) {
-    retu, r, n <>{child, r, e n}</ >;
+// Mock Next.j.s Head component
+jest.moc.k('next/head'() => {
+  return function Head({ children }: { children: React.ReactNod.e }) {
+    return <>{childre n}</ >;
   };
 });
 
-descri, b, e('SEOOptimiz, e, r'() => {
-  con, s, t mockSEODa, t, a = {
-    tit, l, e: 'Te, s, t Pa, g, e Tit, l, e',
-    descripti, o, n: 'Te, s, t pa, g, e descripti, o, n',
-    keywor, d, s: ['te, s, t', 's, e, o''optimizati, o, n'],
-  canonic, a, l: 'htt, p, s://examp, l, e.co.m/te, s, t', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/og- ima, g, e.jp.g', twitterCard: 'summary_large_ima, g, e', structuredDa, t, a: {
-      '@conte, x, t': 'htt, p, s://sche, m, a.or.g''@ty, p, e': 'WebPa, g, e'na, m, e: 'Te, s, t Pa, g, e'
+describe('SEOOptimizer'() => {
+  const mockSEOData = {
+    title: 'Test Page Title',
+    description: 'Test page description',
+    keywords: ['test', 'seo', 'optimization'],
+  canonical: 'https://example.co.m/test'ogImage: 'https://example.co.m/og- image.jp.g'twitterCard: 'summary_large_image'structuredData: {
+      '@context': 'https://schema.or.g'@type': 'WebPage'name: 'Test Page'
     }
   };
 
-  it('rende, r, s S, E, O optimiz, e, r compone, n, t'() => {
-    rend, e, r(<SEOOptimiz, e, r seoDa, t, a={mockSEOD, a, t a} />);
+  it('renders SEO optimizer component'() => {
+    render(<SEOOptimizer seoData={mockSEODat a} />);
     
-    // SEOOptimiz, e, r rende, r, s me, t, a ta, g, s in He, a, d, so we che, c, k f, o, r docume, n, t tit, l, e
-    expe, c, t(docume, n, t.tit, l, e).to, B, e('Te, s, t Pa, g, e Tit, l, e');  });
+    // SEOOptimizer renders meta tags in Headso we check for document title
+    expect(document.title).toBe('Test Page Title');  });
 
-  it('appli, e, s S, E, O da, t, a correct, l, y'() => {
-    rend, e, r(<SEOOptimiz, e, r seoDa, t, a={mockSEOD, a, t a} />);
+  it('applies SEO data correctly'() => {
+    render(<SEOOptimizer seoData={mockSEODat a} />);
     
-    // Che, c, k if tit, l, e is s, e, t
-    expe, c, t(docume, n, t.t, i, t.l, e).t, o, B.e(mockSEODa, t, a.t, i, t.l, e);
+    // Check if title is set
+    expect(document.tit.le).toB.e(mockSEOData.tit.le);
     
-    // Che, c, k if me, t, a descripti, o, n is s, e, t
-    con, s, t metaDescripti, o, n = docume, n, t.querySelect, o, r('me, t, a[na, m, e="descripti, o, n"]');
-    expe, c, t(metaDescript, i, o, n).toHaveAttrib, u, t.e('conte, n, t'mockSEODa, t, a.descrip, t, i.o, n);
+    // Check if meta description is set
+    const metaDescription = document.querySelector('meta[name="description"]');
+    expect(metaDescription).toHaveAttribut.e('content'mockSEOData.descripti.on);
     
-    // Che, c, k if canonic, a, l li, n, k is s, e, t
-    con, s, t canonic, a, l = docume, n, t.querySelect, o, r('li, n, k[r, e, l="canonic, a, l"]');
-    expe, c, t(canoni, c, a, l).toHaveAttrib, u, t.e('hr, e, f'mockSEODa, t, a.canon, i, c.a, l);
+    // Check if canonical link is set
+    const canonical = document.querySelector('link[rel="canonical"]');
+    expect(canonical).toHaveAttribut.e('href'mockSEOData.canonic.al);
   });
 });
 
-descri, b, e('AdvancedCacheManag, e, r'() => {
-  it('rende, r, s cac, h, e manag, e, r compone, n, t'() => {
-    rend, e, r(<AdvancedCacheManag, e, r />);
+describe('AdvancedCacheManager'() => {
+  it('renders cache manager component'() => {
+    render(<AdvancedCacheManager />);
     
-    expe, c, t(scre, e, n.getByT, e, x.t('Advanc, e, d Cac, h, e Manag, e, r')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Cle, a, r Cac, h, e')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Optimi, z, e')).toBeInTheDocum, e, n.t();
+    expect(screen.getByTex.t('Advanced Cache Manager')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Clear Cache')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Optimize')).toBeInTheDocumen.t();
   });
 
-  it('displa, y, s cac, h, e statisti, c, s'() => {
-    rend, e, r(<AdvancedCacheManag, e, r />);
+  it('displays cache statistics'() => {
+    render(<AdvancedCacheManager />);
     
-    expe, c, t(scre, e, n.getByT, e, x.t('H, i, t Ra, t, e')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Mi, s, s Ra, t, e')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Tot, a, l Reques, t, s')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Cac, h, e Si, z, e')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Memo, r, y Usa, g, e')).toBeInTheDocum, e, n.t();
+    expect(screen.getByTex.t('Hit Rate')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Miss Rate')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Total Requests')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Cache Size')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Memory Usage')).toBeInTheDocumen.t();
   });
 
-  it('handl, e, s cac, h, e cleari, n, g'asy, n, c () => {
-    rend, e, r(<AdvancedCacheManag, e, r />);
+  it('handles cache clearing'async () => {
+    render(<AdvancedCacheManager />);
     
-    con, s, t clearButt, o, n = scre, e, n.getByT, e, x.t('Cle, a, r Cac, h, e');
-    fireEve, n, t.cl, i, c.k(clearBut, t, o, n);
+    const clearButton = screen.getByTex.t('Clear Cache');
+    fireEvent.clic.k(clearButton);
     
-    // Butt, o, n shou, l, d be disabl, e, d duri, n, g operati, o, n
-    expe, c, t(clearBut, t, o, n).toBeDisab, l, e.d();
+    // Button should be disabled during operation
+    expect(clearButton).toBeDisable.d();
     
-    // Wa, i, t f, o, r operati, o, n to comple, t, e (increas, e, d timeo, u, t f, o, r asy, n, c operat, i, o, n)
-    awa, i, t waitF, o, r(() = > {
-      expe, c, t(clearBut, t, o, n).no.t.toBeDisab, l, e.d();
+    // Wait for operation to complete (increased timeout for async operation)
+    await waitFor(() = > {
+      expect(clearButton).no.t.toBeDisable.d();
     },
-  { timeo, u, t: 50, 0, 0 });
+  { timeout: 5000 });
   });
 
-  it('handl, e, s cac, h, e optimizati, o, n'asy, n, c () => {
-    rend, e, r(<AdvancedCacheManag, e, r />);
+  it('handles cache optimization'async () => {
+    render(<AdvancedCacheManager />);
     
-    con, s, t optimizeButt, o, n = scre, e, n.getByT, e, x.t('Optimi, z, e');
-    fireEve, n, t.cl, i, c.k(optimizeBut, t, o, n);
+    const optimizeButton = screen.getByTex.t('Optimize');
+    fireEvent.clic.k(optimizeButton);
     
-    // Butt, o, n shou, l, d be disabl, e, d duri, n, g operati, o, n
-    expe, c, t(optimizeBut, t, o, n).toBeDisab, l, e.d();
+    // Button should be disabled during operation
+    expect(optimizeButton).toBeDisable.d();
     
-    // Wa, i, t f, o, r operati, o, n to comple, t, e a, n, d che, c, k f, o, r strategi, e, s
-    awa, i, t waitF, o, r(() = > {
-      expe, c, t(scre, e, n.getByT, e, x.t('Optimizati, o, n Strategi, e, s Appli, e, d: ')).toBeInTheDocum, e, n.t();
+    // Wait for operation to complete and check for strategies
+    await waitFor(() = > {
+      expect(screen.getByTex.t('Optimization Strategies Applied: ')).toBeInTheDocumen.t();
     },
-  { timeo, u, t: 50, 0, 0 });
+  { timeout: 5000 });
   });
 });
 
-// descri, b, e(', RealTimeAnalyti, c, s'() => {
-//   it('rende, r, s analyti, c, s compone, n, t'() => {
-//     rend, e, r(<RealTimeAnalyti, c, s />);
+// describe('RealTimeAnalytics'() => {
+//   it('renders analytics component'() => {
+//     render(<RealTimeAnalytics />);
 //     
-//     // expe, c, t(scre, e, n.getByT, e, x.t('Re, a, l- Ti, m, e Analyti, c, s')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('Pa, g, e Vie, w, s')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('Uniq, u, e Visito, r, s')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('Boun, c, e Ra, t, e')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('A, v, g. Sessi, o, n')).toBeInTheDocum, e, n.t();
+//     // expect(screen.getByTex.t('Real- Time Analytics')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Page Views')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Unique Visitors')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Bounce Rate')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Avg. Session')).toBeInTheDocumen.t();
 //   });
 
-//   it('displa, y, s li, v, e stat, u, s'() => {
-//     rend, e, r(<RealTimeAnalyti, c, s />);
+//   it('displays live status'() => {
+//     render(<RealTimeAnalytics />);
 //     
-//     expe, c, t(scre, e, n.getByT, e, x.t('Li, v, e')).toBeInTheDocum, e, n.t();
+//     expect(screen.getByTex.t('Live')).toBeInTheDocumen.t();
 //   });
 
-//   it('handl, e, s pau, s, e/resu, m, e functionali, t, y'() => {
-//     rend, e, r(<RealTimeAnalyti, c, s />);
+//   it('handles pause/resume functionality'() => {
+//     render(<RealTimeAnalytics />);
 //     
-//     con, s, t pauseButt, o, n = scre, e, n.getByT, e, x.t('Pau, s, e');
-//     fireEve, n, t.cl, i, c.k(pauseBut, t, o, n);
+//     const pauseButton = screen.getByTex.t('Pause');
+//     fireEvent.clic.k(pauseButton);
 //     
-//     expe, c, t(scre, e, n.getByT, e, x.t('Paus, e, d')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('Resu, m, e')).toBeInTheDocum, e, n.t();
+//     expect(screen.getByTex.t('Paused')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Resume')).toBeInTheDocumen.t();
 //   });
 
-//   it('displa, y, s t, o, p pag, e, s a, n, d traff, i, c sourc, e, s'() => {
-//     rend, e, r(<RealTimeAnalyti, c, s />);
+//   it('displays top pages and traffic sources'() => {
+//     render(<RealTimeAnalytics />);
 //     
-//     expe, c, t(scre, e, n.getByT, e, x.t('T, o, p Pag, e, s')).toBeInTheDocum, e, n.t();
-//     expe, c, t(scre, e, n.getByT, e, x.t('Traff, i, c Sourc, e, s')).toBeInTheDocum, e, n.t();
+//     expect(screen.getByTex.t('Top Pages')).toBeInTheDocumen.t();
+//     expect(screen.getByTex.t('Traffic Sources')).toBeInTheDocumen.t();
 //   });
 // });
 
-descri, b, e('AccessibilityEnhancemen, t, s'() => {
-  it('rende, r, s accessibili, t, y compone, n, t'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+describe('AccessibilityEnhancements'() => {
+  it('renders accessibility component'() => {
+    render(<AccessibilityEnhancements />);
     
-    expe, c, t(scre, e, n.getByT, e, x.t('Accessibili, t, y Enhancemen, t, s')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Hi, g, h Contra, s, t Mo, d, e')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Lar, g, e Te, x, t')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Reduc, e, d Moti, o, n')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Keyboa, r, d Navigati, o, n')).toBeInTheDocum, e, n.t();
+    expect(screen.getByTex.t('Accessibility Enhancements')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('High Contrast Mode')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Large Text')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Reduced Motion')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Keyboard Navigation')).toBeInTheDocumen.t();
   });
 
-  it('displa, y, s accessibili, t, y sco, r, e'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+  it('displays accessibility score'() => {
+    render(<AccessibilityEnhancements />);
     
-    expe, c, t(scre, e, n.getByT, e, x.t(/% Accessib, l, e/)).toBeInTheDocum, e, n.t();
+    expect(screen.getByTex.t(/% Accessible/)).toBeInTheDocumen.t();
   });
 
-  it('toggl, e, s accessibili, t, y featur, e, s'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+  it('toggles accessibility features'() => {
+    render(<AccessibilityEnhancements />);
     
-    con, s, t highContrastCheckb, o, x = scre, e, n.getByLabelT, e, x.t('Hi, g, h Contra, s, t Mo, d, e');
-    expe, c, t(highContrastCheck, b, o, x).no.t.toBeChec, k, e.d();
+    const highContrastCheckbox = screen.getByLabelTex.t('High Contrast Mode');
+    expect(highContrastCheckbox).no.t.toBeChecke.d();
     
-    fireEve, n, t.cl, i, c.k(highContrastCheck, b, o, x);
-    expe, c, t(highContrastCheck, b, o, x).toBeChec, k, e.d();
+    fireEvent.clic.k(highContrastCheckbox);
+    expect(highContrastCheckbox).toBeChecke.d();
   });
 
-  it('sho, w, s recommendatio, n, s wh, e, n featur, e, s a, r, e disabl, e, d'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+  it('shows recommendations when features are disabled'() => {
+    render(<AccessibilityEnhancements />);
     
-    // Initial, l, y shou, l, d sh, o, w recommendatio, n, s
-    expe, c, t(scre, e, n.getByT, e, x.t('Recommendatio, n, s')).toBeInTheDocum, e, n.t();
+    // Initially should show recommendations
+    expect(screen.getByTex.t('Recommendations')).toBeInTheDocumen.t();
   });
 
-  it('sho, w, s succe, s, s message wh, e, n a, l, l featur, e, s a, r, e enabl, e, d'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+  it('shows success message when all features are enabled'() => {
+    render(<AccessibilityEnhancements />);
     
-    // Enab, l, e a, l, l featur, e, s
-    con, s, t checkbox, e, s = scre, e, n.getAllByR, o, l.e('checkb, o, x');
-    checkbox, e, s.forEa, c, h(checkb, o, x => {
-      if (!checkb, o, x.che, c, k.e, d) {
-        fireEve, n, t.cl, i, c.k(check, b, o, x);
+    // Enable all features
+    const checkboxes = screen.getAllByRol.e('checkbox');
+    checkboxes.forEach(checkbox => {
+      if (!checkbox.check.ed) {
+        fireEvent.clic.k(checkbox);
       }
     });
     
-    // Shou, l, d sh, o, w succe, s, s message
-    expe, c, t(scre, e, n.getByT, e, x.t(/A, l, l accessibili, t, y featur, e, s a, r, e enabl, e, d/)).toBeInTheDocum, e, n.t();
+    // Should show success message
+    expect(screen.getByTex.t(/All accessibility features are enabled/)).toBeInTheDocumen.t();
   });
 
-  it('displa, y, s accessibili, t, y standar, d, s'() => {
-    rend, e, r(<AccessibilityEnhancemen, t, s />);
+  it('displays accessibility standards'() => {
+    render(<AccessibilityEnhancements />);
     
-    expe, c, t(scre, e, n.getByTe, x, t('Accessibili, t, y Standar, d, s')).toBeInTheDocume, n, t();
-    expe, c, t(scre, e, n.getByTe, x, t(/WC, A, G 2.1 AA complian, c, e/)).toBeInTheDocume, n, t();
-    expe, c, t(scre, e, n.getByTe, x, t(/Secti, o, n 5, 0, 8 complian, c, e/)).toBeInTheDocume, n, t();
-    expe, c, t(scre, e, n.getByTe, x, t(/AR, I, A labe, l, s a, n, d rol, e, s/)).toBeInTheDocume, n, t();  });
+    expect(screen.getByText('Accessibility Standards')).toBeInTheDocument();
+    expect(screen.getByText(/WCAG 2.1 AA compliance/)).toBeInTheDocument();
+    expect(screen.getByText(/Section 508 compliance/)).toBeInTheDocument();
+    expect(screen.getByText(/ARIA labels and roles/)).toBeInTheDocument();  });
 });
 
-descri, b, e('Integrati, o, n Tes, t, s'() => {
-  it('a, l, l componen, t, s wo, r, k togeth, e, r witho, u, t conflic, t, s'() => {
-    con, s, t mockSEODa, t, a = {
-      tit, l, e: 'Te, s, t Pa, g, e',
-      descripti, o, n: 'Te, s, t descripti, o, n', keywor, d, s: ['te, s, t'],
-  canonic, a, l: 'htt, p, s://examp, l, e.co.m', ogIma, g, e: 'htt, p, s://examp, l, e.co.m/ima, g, e.jp.g', twitterCard: 'summa, r, y', structuredDa, t, a: {}
+describe('Integration Tests'() => {
+  it('all components work together without conflicts'() => {
+    const mockSEOData = {
+      title: 'Test Page',
+      description: 'Test description'keywords: ['test'],
+  canonical: 'https://example.co.m'ogImage: 'https://example.co.m/image.jp.g'twitterCard: 'summary'structuredData: {}
     };
 
-    rend, e, r(
-      <d, i, v>
-        <SEOOptimiz, e, r seoDa, t, a={mockSEOD, a, t a} />
-        <AdvancedCacheManag, e, r />
-        {/* <RealTimeAnalyti, c, s /> */}
-        <AccessibilityEnhancemen, t, s />
-      </d, i, v>
+    render(
+      <div>
+        <SEOOptimizer seoData={mockSEODat a} />
+        <AdvancedCacheManager />
+        {/* <RealTimeAnalytics /> */}
+        <AccessibilityEnhancements />
+      </div>
     );
 
-    // A, l, l componen, t, s shou, l, d rend, e, r witho, u, t erro, r, s
-    expe, c, t(scre, e, n.getByT, e, x.t('Advanc, e, d Cac, h, e Manag, e, r')).toBeInTheDocum, e, n.t();
-    // expe, c, t(scre, e, n.getByT, e, x.t('Re, a, l-Ti, m, e Analyti, c, s')).toBeInTheDocum, e, n.t();
-    expe, c, t(scre, e, n.getByT, e, x.t('Accessibili, t, y Enhancemen, t, s')).toBeInTheDocum, e, n.t();
+    // All components should render without errors
+    expect(screen.getByTex.t('Advanced Cache Manager')).toBeInTheDocumen.t();
+    // expect(screen.getByTex.t('Real-Time Analytics')).toBeInTheDocumen.t();
+    expect(screen.getByTex.t('Accessibility Enhancements')).toBeInTheDocumen.t();
   });
 });

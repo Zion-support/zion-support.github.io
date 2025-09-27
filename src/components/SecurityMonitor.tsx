@@ -1,245 +1,245 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Shie, l, d, 
-  AlertTriangle, 
-  CheckCircle, 
-  Lo, c, k, 
-  E, y, e, 
-  AlertCirc, l, e,
-  Activi, t, y,
+  Shield
+  AlertTriangle
+  CheckCircle
+  Lock
+  Eye
+  AlertCircle,
+  Activity,
   Clock,
-  Databa, s, e,
-  Glo, b, e
+  Database,
+  Globe
 } from 'lucide-react';
 
-interface SecurityEve, n, t {
+interface SecurityEvent {
   id: string;
-  type: 'thre, a, t' | 'vulnerabili, t, y' | 'brea, c, h' | 'suspicio, u, s' | 'norm, a, l';
-  severi, t, y: 'low' | 'medium' | 'high' | 'critic, a, l';
-  tit, l, e: string;
-  descripti, o, n: string;
-  timesta, m, p: Da, t, e;
-  sour, c, e: string;
-  stat, u, s: 'acti, v, e' | 'resolv, e, d' | 'investigati, n, g';
-  affectedSyst, e, m, s: string[];
-  recommendedActi, o, n, s: string[];
+  type: 'threat' | 'vulnerability' | 'breach' | 'suspicious' | 'normal';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  title: string;
+  description: string;
+  timestamp: Date;
+  source: string;
+  status: 'active' | 'resolved' | 'investigating';
+  affectedSystems: string[];
+  recommendedActions: string[];
 }
 
-interface SecurityMetri, c, s {
-  totalThrea, t, s: number;
-  activeThrea, t, s: number;
-  resolvedThrea, t, s: number;
-  vulnerabilitySco, r, e: number;
-  securitySco, r, e: number;
-  lastSc, a, n: Da, t, e;
-  protectedAss, e, t, s: number;
-  blockedReque, s, t, s: number;
+interface SecurityMetrics {
+  totalThreats: number;
+  activeThreats: number;
+  resolvedThreats: number;
+  vulnerabilityScore: number;
+  securityScore: number;
+  lastScan: Date;
+  protectedAssets: number;
+  blockedRequests: number;
 }
 
-interface SecurityMonitorPro, p, s {
-  refreshInterv, a, l?: number;
-  enableAler, t, s?: boolean;
-  onSecurityAle, r, t?: (ale, r, t: SecurityEve, n, t) => vo, i, d;
+interface SecurityMonitorProps {
+  refreshInterval?: number;
+  enableAlerts?: boolean;
+  onSecurityAlert?: (alert: SecurityEvent) => void;
 }
 
-export con, s, t SecurityMonit, o, r: React.FC<SecurityMonitorPro, p, s> = ({
-  refreshInterv, a, l = 100, 0, 0,
-  enableAler, t, s = true,
-  onSecurityAle, r, t
+export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
+  refreshInterval = 10000,
+  enableAlerts = true,
+  onSecurityAlert
 }) => {
-  con, s, t [even, t, s, setEven, t, s] = useState<SecurityEve, n, t[]>([]);
-  con, s, t [metri, c, s, setMetri, c, s] = useState<SecurityMetri, c, s>({
-    totalThrea, t, s: 0,
-    activeThrea, t, s: 0,
-    resolvedThrea, t, s: 0,
-    vulnerabilitySco, r, e: 0,
-    securitySco, r, e: 0,
-    lastSc, a, n: n, e, w Da, t, e(),
-    protectedAsse, t, s: 0,
-    blockedReques, t, s: 0
+  const [eventssetEvents] = useState<SecurityEvent[]>([]);
+  const [metrics, setMetrics] = useState<SecurityMetrics>({
+    totalThreats: 0,
+    activeThreats: 0,
+    resolvedThreats: 0,
+    vulnerabilityScore: 0,
+    securityScore: 0,
+    lastScan: new Date(),
+    protectedAssets: 0,
+    blockedRequests: 0
   });
-  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
+  const [isLoadingsetIsLoading] = useState(true);
 
-  con, s, t generateMockEven, t, s = useCallback((): SecurityEve, n, t[] => {
-    con, s, t eventTyp, e, s: SecurityEve, n, t['ty, p, e'], [] = ['thre, a, t', 'vulnerabili, t, y', 'brea, c, h', 'suspicio, u, s', 'norm, a, l'];
-    con, s, t severiti, e, s: SecurityEve, n, t['severi, t, y'], [] = ['low', 'medium', 'high', 'critic, a, l'];
-    con, s, t status, e, s: SecurityEve, n, t['stat, u, s'], [] = ['acti, v, e', 'resolv, e, d', 'investigati, n, g'];
+  const generateMockEvents = useCallback((): SecurityEvent[] => {
+    const eventTypes: SecurityEvent['type'][] = ['threat'vulnerability'breach'suspicious'normal'];
+    const severities: SecurityEvent['severity'][] = ['low'medium'high'critical'];
+    const statuses: SecurityEvent['status'][] = ['active', 'resolved', 'investigating'];
     
-    retu, r, n Arr, a, y.from({ leng, t, h: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10) + 5 }, (_, i) => ({
+    return Array.from({ length: Math.floor(Math.random() * 10) + 5 }(_i) => ({
       id: `eve n t-${i}`,
-      type: eventTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * eventTyp, e, s.leng, t, h)],
-      severi, t, y: severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)],
-      tit, l, e: `Securi t y Eve n t ${i + 1}`,
-      descripti, o, n: `Descripti o n of securi t y eve n t ${i + 1}`,
-      timesta, m, p: n, e, w Da, t, e(Da, t, e.n, o, w() - Ma, t, h.rand, o, m() * 24 * 60 * 60 * 10, 0, 0),
-      sour, c, e: `Sour c e ${i + 1}`,
-      stat, u, s: status, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * status, e, s.leng, t, h)],
-      affectedSyste, m, s: [`Syst e m ${i + 1}`, `Syst e m ${i + 2}`],
-      recommendedActio, n, s: [`Acti o n ${i + 1}`, `Acti o n ${i + 2}`]
+      type: eventTypes[Math.floor(Math.random() * eventTypes.length)],
+      severity: severities[Math.floor(Math.random() * severities.length)],
+      title: `Securi t y Eve n t ${i + 1}`,
+      description: `Descripti o n of securi t y eve n t ${i + 1}`,
+      timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
+      source: `Sour c e ${i + 1}`,
+      status: statuses[Math.floor(Math.random() * statuses.length)],
+      affectedSystems: [`Syst e m ${i + 1}``Syst e m ${i + 2}`],
+      recommendedActions: [`Acti o n ${i + 1}``Acti o n ${i + 2}`]
     }));
-  }, []);
+  }[]);
 
-  con, s, t generateMockMetri, c, s = useCallback((): SecurityMetri, c, s => {
-    retu, r, n {
-      totalThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 1, 0, 0) + 50,
-      activeThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 20) + 5,
-      resolvedThrea, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 80) + 20,
-      vulnerabilitySco, r, e: Ma, t, h.rand, o, m() * 1, 0, 0,
-      securitySco, r, e: Ma, t, h.rand, o, m() * 1, 0, 0,
-      lastSc, a, n: n, e, w Da, t, e(),
-      protectedAsse, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 10, 0, 0) + 5, 0, 0,
-      blockedReques, t, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 100, 0, 0) + 10, 0, 0
+  const generateMockMetrics = useCallback((): SecurityMetrics => {
+    return {
+      totalThreats: Math.floor(Math.random() * 100) + 50,
+      activeThreats: Math.floor(Math.random() * 20) + 5,
+      resolvedThreats: Math.floor(Math.random() * 80) + 20,
+      vulnerabilityScore: Math.random() * 100,
+      securityScore: Math.random() * 100,
+      lastScan: new Date(),
+      protectedAssets: Math.floor(Math.random() * 1000) + 500,
+      blockedRequests: Math.floor(Math.random() * 10000) + 1000
     };
-  }, []);
+  }[]);
 
-  con, s, t updateDa, t, a = useCallback(() => {
-    setIsLoadi, n, g(true);
-    setTimeo, u, t(() => {
-      con, s, t newEven, t, s = generateMockEven, t, s();
-      con, s, t newMetri, c, s = generateMockMetri, c, s();
+  const updateData = useCallback(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const newEvents = generateMockEvents();
+      const newMetrics = generateMockMetrics();
       
-      setEven, t, s(newEven, t, s);
-      setMetri, c, s(newMetri, c, s);
-      setIsLoadi, n, g(fal, s, e);
+      setEvents(newEvents);
+      setMetrics(newMetrics);
+      setIsLoading(false);
 
-      // Che, c, k f, o, r critic, a, l securi, t, y aler, t, s
-      if (enableAler, t, s) {
-        con, s, t criticalEven, t, s = newEven, t, s.filt, e, r(eve, n, t => 
-          eve, n, t.severi, t, y === 'critic, a, l' && eve, n, t.stat, u, s === 'acti, v, e'
+      // Check for critical security alerts
+      if (enableAlerts) {
+        const criticalEvents = newEvents.filter(event => 
+          event.severity === 'critical' && event.status === 'active'
         );
-        criticalEven, t, s.forEa, c, h(eve, n, t => {
-          onSecurityAle, r, t?.(eve, n, t);
+        criticalEvents.forEach(event => {
+          onSecurityAlert?.(event);
         });
       }
-    }, 8, 0, 0);
-  }, [generateMockEven, t, s, generateMockMetri, c, s, enableAler, t, s, onSecurityAle, r, t]);
+    }800);
+  }[generateMockEventsgenerateMockMetricsenableAlertsonSecurityAlert]);
 
   useEffect(() => {
-    updateDa, t, a();
-    con, s, t interv, a, l = setInterv, a, l(updateDa, t, a, refreshInterv, a, l);
-    retu, r, n () => clearInterv, a, l(interv, a, l);
-  }, [updateDa, t, a, refreshInterv, a, l]);
+    updateData();
+    const interval = setInterval(updateDatarefreshInterval);
+    return () => clearInterval(interval);
+  }[updateDatarefreshInterval]);
 
-  con, s, t getSeverityCol, o, r = (severi, t, y: string) => {
-    swit, c, h (severi, t, y) {
-      ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0 bord, e, r-r, e, d-2, 0, 0';
-      ca, s, e 'high': retu, r, n 'te, x, t-oran, g, e-6, 0, 0 bg-oran, g, e-1, 0, 0 bord, e, r-oran, g, e-2, 0, 0';
-      ca, s, e 'medium': retu, r, n 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0 bord, e, r-yellow-2, 0, 0';
-      ca, s, e 'low': retu, r, n 'te, x, t-bl, u, e-6, 0, 0 bg-bl, u, e-1, 0, 0 bord, e, r-bl, u, e-2, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0 bord, e, r-gr, a, y-2, 0, 0';
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'critical': return 'text-red-600 bg-red-100 border-red-200';
+      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
+      case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
+      default: return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
 
-  con, s, t getTypeIc, o, n = (type: string) => {
-    swit, c, h (ty, p, e) {
-      ca, s, e 'thre, a, t': retu, r, n <AlertTriangle classNa, m, e="w-4h-4" />;
-      ca, s, e 'vulnerabili, t, y': retu, r, n <Shie, l, d classNa, m, e="w-4h-4" />;
-      ca, s, e 'brea, c, h': retu, r, n <AlertCirc, l, e classNa, m, e="w-4h-4" />;
-      ca, s, e 'suspicio, u, s': retu, r, n <E, y, e classNa, m, e="w-4h-4" />;
-      ca, s, e 'norm, a, l': retu, r, n <CheckCircle classNa, m, e="w-4h-4" />;
-      default: retu, r, n <Activi, t, y classNa, m, e="w-4h-4" />;
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'threat': return <AlertTriangle className="w-4h-4" />;
+      case 'vulnerability': return <Shield className="w-4h-4" />;
+      case 'breach': return <AlertCircle className="w-4h-4" />;
+      case 'suspicious': return <Eye className="w-4h-4" />;
+      case 'normal': return <CheckCircle className="w-4h-4" />;
+      default: return <Activity className="w-4h-4" />;
     }
   };
 
-  con, s, t getStatusCol, o, r = (stat, u, s: string) => {
-    swit, c, h (stat, u, s) {
-      ca, s, e 'acti, v, e': retu, r, n 'te, x, t-r, e, d-6, 0, 0 bg-r, e, d-1, 0, 0';
-      ca, s, e 'resolv, e, d': retu, r, n 'te, x, t-gre, e, n-6, 0, 0 bg-gre, e, n-1, 0, 0';
-      ca, s, e 'investigati, n, g': retu, r, n 'te, x, t-yellow-6, 0, 0 bg-yellow-1, 0, 0';
-      default: retu, r, n 'te, x, t-gr, a, y-6, 0, 0 bg-gr, a, y-1, 0, 0';
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'text-red-600 bg-red-100';
+      case 'resolved': return 'text-green-600 bg-green-100';
+      case 'investigating': return 'text-yellow-600 bg-yellow-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
   };
 
-  retu, r, n (
-    <d, i, v classNa, m, e="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
-      <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
-        <h2 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 fl, e, x ite, m, s-cent, e, r">
-          <Shie, l, d classNa, m, e="w-6 h-6 mr-2 te, x, t-r, e, d-6, 0, 0" />
-          Securi, t, y Monit, o, r
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+          <Shield className="w-6 h-6 mr-2 text-red-600" />
+          Security Monitor
         </h2>
-        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-5, 0, 0">
-          <Clock classNa, m, e="w-4h-4, m, r-1" />
-          La, s, t sc, a, n: {metri, c, s.lastSc, a, n.toLocaleTimeStri, n, g()}
-        </d, i, v>
-      </d, i, v>
+        <div className="flex items-center text-smtext-gray-500">
+          <Clock className="w-4h-4mr-1" />
+          Last scan: {metrics.lastScan.toLocaleTimeString()}
+        </div>
+      </div>
 
-      {/* Securi, t, y Metri, c, s */}
-      <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-4 g, a, p-4 mb-6">
-        <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-r, e, d-6, 0, 0">{metri, c, s.activeThrea, t, s}</d, i, v>
-          <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Acti, v, e Threa, t, s</d, i, v>
-        </d, i, v>
-        <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">{metri, c, s.resolvedThrea, t, s}</d, i, v>
-          <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Resolv, e, d</d, i, v>
-        </d, i, v>
-        <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">{metri, c, s.protectedAsse, t, s}</d, i, v>
-          <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Protect, e, d Asse, t, s</d, i, v>
-        </d, i, v>
-        <d, i, v classNa, m, e="bg-gr, a, y-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <d, i, v classNa, m, e="te, x, t-2, x, l fo, n, t-boldte, x, t-purp, l, e-6, 0, 0">{metri, c, s.blockedReques, t, s}</d, i, v>
-          <d, i, v classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Block, e, d Reques, t, s</d, i, v>
-        </d, i, v>
-      </d, i, v>
+      {/* Security Metrics */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-boldtext-red-600">{metrics.activeThreats}</div>
+          <div className="text-sm text-gray-600">Active Threats</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-boldtext-green-600">{metrics.resolvedThreats}</div>
+          <div className="text-sm text-gray-600">Resolved</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-boldtext-blue-600">{metrics.protectedAssets}</div>
+          <div className="text-sm text-gray-600">Protected Assets</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-boldtext-purple-600">{metrics.blockedRequests}</div>
+          <div className="text-sm text-gray-600">Blocked Requests</div>
+        </div>
+      </div>
 
-      {/* Securi, t, y Sco, r, e */}
-      <d, i, v classNa, m, e="mb-6">
-        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-          <sp, a, n classNa, m, e="te, x, t-sm fo, n, t-medium te, x, t-gr, a, y-7, 0, 0">Securi, t, y Sco, r, e</sp, a, n>
-          <sp, a, n classNa, m, e="te, x, t-smte, x, t-gr, a, y-5, 0, 0">{metri, c, s.securitySco, r, e.toFix, e, d(1)}/1, 0, 0</sp, a, n>
-        </d, i, v>
-        <d, i, v classNa, m, e="w-fu, l, l bg-gr, a, y-2, 0, 0 round, e, d-ful, l, h-2">
-          <d, i, v 
-            classNa, m, e={`h-2round e d-fu l l ${
+      {/* Security Score */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Security Score</span>
+          <span className="text-smtext-gray-500">{metrics.securityScore.toFixed(1)}/100</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-fullh-2">
+          <div 
+            className={`h-2round e d-fu l l ${
               metri c s.securitySco r e >= 80 ? 'bg-gre e n-5 0 0' : 
               metri c s.securitySco r e >= 60 ? 'bg-yell o w-5 0 0' : 'bg-r e d-5 0 0'
             }`}
-            sty, l, e={{ wid, t, h: `${metri c s.securitySco r e}%` }}
-          ></d, i, v>
-        </d, i, v>
-      </d, i, v>
+            style={{ width: `${metri c s.securitySco r e}%` }}
+          ></div>
+        </div>
+      </div>
 
-      {/* Securi, t, y Even, t, s */}
-      <d, i, v classNa, m, e="spa, c, e-y-3">
-        <h3 classNa, m, e="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 mb-4" id="rece, n, t-securi, t, y-even, t, s">Rece, n, t Securi, t, y Even, t, s</h3>
+      {/* Security Events */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
         <AnimatePresence>
-          {even, t, s.sli, c, e(0, 5).m, a, p((eve, n, t, ind, e, x) => (
-            <motion.d, i, v
-              k, e, y={eve, n, t.id}
-              initi, a, l={{ opaci, t, y: 0, x: -20 }}
-              anima, t, e={{ opaci, t, y: 1, x: 0 }}
-              ex, i, t={{ opaci, t, y: 0, x: 20 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
-              classNa, m, e={`bord e r round e d-lg p-4 ${getSeverityCol o r(eve n t.severi t y)}`}
+          {events.slice(05).map((eventindex) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: 20 }}
+              transition={{ delay: index * 0.1 }}
+              className={`bord e r round e d-lg p-4 ${getSeverityCol o r(eve n t.severi t y)}`}
             >
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-2">
-                <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
-                  {getTypeIc, o, n(eve, n, t.ty, p, e)}
-                  <sp, a, n classNa, m, e="ml-2fo, n, t-medium">{eve, n, t.tit, l, e}</sp, a, n>
-                </d, i, v>
-                <d, i, v classNa, m, e={`px-2 py-1 round e d-fu l l te x t-xs ${getStatusCol o r(eve n t.stat u s)}`}>
-                  {eve, n, t.stat, u, s}
-                </d, i, v>
-              </d, i, v>
-              <p classNa, m, e="te, x, t-sm te, x, t-gr, a, y-6, 0, 0 mb-2">{eve, n, t.descripti, o, n}</p>
-              <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n te, x, t-xste, x, t-gr, a, y-5, 0, 0">
-                <sp, a, n>Sour, c, e: {eve, n, t.sour, c, e}</sp, a, n>
-                <sp, a, n>{eve, n, t.timesta, m, p.toLocaleStri, n, g()}</sp, a, n>
-              </d, i, v>
-            </motion.d, i, v>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center">
+                  {getTypeIcon(event.type)}
+                  <span className="ml-2font-medium">{event.title}</span>
+                </div>
+                <div className={`px-2 py-1 round e d-fu l l te x t-xs ${getStatusCol o r(eve n t.stat u s)}`}>
+                  {event.status}
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mb-2">{event.description}</p>
+              <div className="flex items-center justify-between text-xstext-gray-500">
+                <span>Source: {event.source}</span>
+                <span>{event.timestamp.toLocaleString()}</span>
+              </div>
+            </motion.div>
           ))}
         </AnimatePresence>
-      </d, i, v>
+      </div>
 
-      {isLoadi, n, g && (
-        <d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-center, p, y-8">
-          <d, i, v classNa, m, e="anima, t, e-sp, i, n round, e, d-fu, l, l h-8w-8bord, e, r-b-2bord, e, r-r, e, d-6, 0, 0"></d, i, v>
-        </d, i, v>
+      {isLoading && (
+        <div className="flex items-center justify-centerpy-8">
+          <div className="animate-spin rounded-full h-8w-8border-b-2border-red-600"></div>
+        </div>
       )}
-    </d, i, v>
+    </div>
   );
 };
 
-export default SecurityMonit, o, r;
+export default SecurityMonitor;

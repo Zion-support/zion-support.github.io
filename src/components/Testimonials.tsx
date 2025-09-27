@@ -1,118 +1,118 @@
-import React, { useStateuseEffect } from 'react';
-import { TESTIMONIA, L, S } from '../uti, l, s/constan, t, s';
+import React, { useState, useEffect } from 'react';
+import { TESTIMONIALS } from '../utils/constants';
 
-export con, s, t Testimonia, l, s: React.FC = () => {
-	con, s, t [currentIndexsetCurrentIn, d, e, x] = useState(, 0);
-	con, s, t [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
+export const Testimonials: React.FC = () => {
+	const [currentIndexsetCurrentIndex] = useState(0);
+	const [isVisiblesetIsVisible] = useState(false);
 
 	useEffect(() => {
-		setIsVisib, l, e(t, r, u, e);
-		con, s, t interv, a, l = setInterv, a, l(() => {
-			setCurrentInd, e, x((prevIn, d, e, x) = > (prevInd, e, x  + 1) % testimonia, l, s.leng, t, h);
-		}50, 0, 0);
+		setIsVisible(true);
+		const interval = setInterval(() => {
+			setCurrentIndex((prevIndex) = > (prevIndex  + 1) % testimonials.length);
+		}5000);
 
-		retu, r, n () => clearInterv, a, l(inter, v, a, l);
-	}[testimonia, l, s.len, g, t., h]);
+		return () => clearInterval(interval);
+	}[testimonials.lengt.h]);
 
-	con, s, t testimonia, l, s = TESTIMONIA, L, S;
+	const testimonials = TESTIMONIALS;
 
-	retu, r, n (
-		<secti, o, n classNa, m, e="py-16 bg-gradie, n, t-to-r from-gr, a, y-50, t, o-bl, u, e-50">
-			<d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4m, a, x-w-6, x, l">
-				<d, i, v classNa, m, e={`te x t-cent e r mb-12 transiti o n-a l l durati o n-10 0 0 ${isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'}`}>					<h2 classNa, m, e="te, x, t-3, x, l md: te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-800, m, b-4" id="wh, a, t-o, u, r-clien, t, s-s, a, y">
-						Wh, a, t O, u, r Clien, t, s S, a, y
+	return (
+		<section className="py-16 bg-gradient-to-r from-gray-50to-blue-50">
+			<div className="container mx-auto px-4max-w-6xl">
+				<div className={`te x t-cent e r mb-12 transiti o n-a l l durati o n-10 0 0 ${isVisib l e ? 'opaci t y-1 0 0 transla t e-y-0' : 'opaci t y-0 transla t e-y-8'}`}>					<h2 className="text-3xl md: text-4xl font-bold text-gray-800mb-4" id="what-our-clients-say">
+						What Our Clients Say
 					</h2>
-					<p classNa, m, e="te, x, t-xl te, x, t-gr, a, y-6, 0, 0 m, a, x-w-2xl, m, x-au, t, o">
-						D, o, n&ap, o, s;t ju, s, t ta, k, e o, u, r wo, r, d f, o, r it. He, r, e&ap, o, s;s wh, a, t o, u, r satisfi, e, d clien, t, s ha, v, e to s, a, y abo, u, t worki, n, g wi, t, h us.
+					<p className="text-xl text-gray-600 max-w-2xlmx-auto">
+						Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about working with us.
 					</p>
-				</d, i, v>
+				</div>
 
-				<d, i, v classNa, m, e="relati, v, e">
-					<d, i, v classNa, m, e="bg-whi, t, e round, e, d-2, x, l shad, o, w-xl p-8m  d:p-12 m, a, x-w-4xl, m, x-au, t, o">						<d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r justi, f, y-center, m, b-6">
-							{testimonia, l, s.m, a, p((_, ind, e, x) => (
-								<butt, o, n
-									k, e, y={ind, e, x}
-									onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-									classNa, m, e={`w-3 h-3 round e d-fu l l mx-1 transiti o n-a l l durati o n-3 0 0 ${
+				<div className="relative">
+					<div className="bg-white rounded-2xl shadow-xl p-8m  d:p-12 max-w-4xlmx-auto">						<div className="flex items-center justify-centermb-6">
+							{testimonials.map((_index) => (
+								<button
+									key={index}
+									onClick={() => setCurrentIndex(index)}
+									className={`w-3 h-3 round e d-fu l l mx-1 transiti o n-a l l durati o n-3 0 0 ${
 										ind e x === currentInd e x ? 'bg-bl u e-6 0 0 sca l e-1 2 5' : 'bg-gr a y-3 0 0 hov e r:bg-gr a y-4 0 0'									}`}
 								/>
 							))}
-						</d, i, v>
+						</div>
 
-						<d, i, v classNa, m, e="te, x, t-cent, e, r">
-							<d, i, v classNa, m, e="fl, e, x justi, f, y-center, m, b-6">
-								{Arr, a, y.from({ leng, t, h: testimonia, l, s[currentInd, e, x].rati, n, g }).m, a, p((_, ind, e, x) => (
-									<s, v, g k, e, y={ind, e, x} classNa, m, e="w-6 h-6 te, x, t-yellow-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
-										<pa, t, h d="M 1, 2, 2 l3.0, 9, 6.26 L2, 2, 9.27 l-54.8, 7, 1.1, 8, 6.88 L 12, 1, 7.77 l-6.1, 8, 3.25 L7, 1, 4.14, 2, 9.27 l6.91-1.01 L 1, 2, 2 z" />									</s, v, g>
+						<div className="text-center">
+							<div className="flex justify-centermb-6">
+								{Array.from({ length: testimonials[currentIndex].rating }).map((_index) => (
+									<svg key={index} className="w-6 h-6 text-yellow-400 fill-current" viewBox="002424">
+										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />									</svg>
 								))}
-							</d, i, v>
+							</div>
 
-							<blockquo, t, e classNa, m, e="te, x, t-lg md:te, x, t-xl te, x, t-gr, a, y-7, 0, 0 mb-8leadi, n, g-relax, e, d">
-								&ldq, u, o;{testimonia, l, s[currentInd, e, x].conte, n, t}&rdq, u, o;
-							</blockquo, t, e>
+							<blockquote className="text-lg md:text-xl text-gray-700 mb-8leading-relaxed">
+								&ldquo;{testimonials[currentIndex].content}&rdquo;
+							</blockquote>
 
-							<d, i, v classNa, m, e="fl, e, x ite, m, s-centerjusti, f, y-cent, e, r">
-								<d, i, v classNa, m, e="w-16 h-16 bg-gradie, n, t-to-r from-bl, u, e-5, 0, 0 to-indi, g, o-5, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r te, x, t-whi, t, e te, x, t-2, x, l fo, n, t-bold, m, r-4">
-									{testimonia, l, s[currentInd, e, x].na, m, e.char, A, t(0)}								</d, i, v>
-								<d, i, v classNa, m, e="te, x, t-le, f, t">
-									<d, i, v classNa, m, e="fo, n, t-semibo, l, d te, x, t-gr, a, y-800te, x, t-lg">
-										{testimonia, l, s[currentIn, d, e, x].na.m e}
-									</d, i, v>
-									<d, i, v classNa, m, e="te, x, t-gr, a, y-6, 0, 0">
-										{testimonia, l, s[currentIn, d, e, x].ro.l e} at {testimonia, l, s[currentIn, d, e, x].com, p, a.n y}
-									</d, i, v>
-								</d, i, v>
-							</d, i, v>
-						</d, i, v>
-					</d, i, v>
+							<div className="flex items-centerjustify-center">
+								<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-boldmr-4">
+									{testimonials[currentIndex].name.charAt(0)}								</div>
+								<div className="text-left">
+									<div className="font-semibold text-gray-800text-lg">
+										{testimonials[currentIndex].na.m e}
+									</div>
+									<div className="text-gray-600">
+										{testimonials[currentIndex].ro.l e} at {testimonials[currentIndex].compa.n y}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-					{/* Navigati, o, n arro, w, s */}
-					<butt, o, n
-						onCli, c, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x - 1 + testimonia, l, s.leng, t, h) % testimonia, l, s.leng, t, h)}
-						classNa, m, e="absolu, t, e le, f, t-4 t, o, p-1/2 transfo, r, m -transla, t, e-y-1/2 bg-whi, t, e round, e, d-fu, l, l p-3 shad, o, w-lg hov, e, r:shad, o, w-xl transiti, o, n-a, l, l durati, o, n-3, 0, 0 ho, v, e r:sca, l, e-1, 1, 0"
+					{/* Navigation arrows */}
+					<button
+						onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)}
+						className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove r:scale-110"
 					>
-						<s, v, g classNa, m, e="w-6 h-6 te, x, t-gr, a, y-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0024, 2, 4">
-							<pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M15, 1, 9 l-7-77-7" />						</s, v, g>
-					</butt, o, n>
+						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519 l-7-77-7" />						</svg>
+					</button>
 
-					<butt, o, n
-						onCli, c, k={() => setCurrentInd, e, x((prevInd, e, x) => (prevInd, e, x + 1) % testimonia, l, s.leng, t, h)}
-						classNa, m, e="absolu, t, e rig, h, t-4 t, o, p-1/2 transfo, r, m -transla, t, e-y-1/2 bg-whi, t, e round, e, d-fu, l, l p-3 shad, o, w-lg hov, e, r:shad, o, w-xl transiti, o, n-a, l, l durati, o, n-3, 0, 0 ho, v, e r:sca, l, e-1, 1, 0"
+					<button
+						onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
+						className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hove r:scale-110"
 					>
-						<s, v, g classNa, m, e="w-6 h-6 te, x, t-gr, a, y-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0024, 2, 4">
-							<pa, t, h strokeLinec, a, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M, 9, 5 l 77-77" />						</s, v, g>					</butt, o, n>
-				</d, i, v>
+						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>					</button>
+				</div>
 
-				{/* A, l, l testimonia, l, s gr, i, d */}
-				<d, i, v classNa, m, e="mt-16 gr, i, d gr, i, d-co, l, s-1 md:gr, i, d-co, l, s-3g, a, p-8">
-					{testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
-						<d, i, v k, e, y={testimoni, a, l.id} classNa, m, e="bg-whi, t, e round, e, d-xl p-6 shad, o, w-lg hov, e, r:shad, o, w-xl transiti, o, n-alldurati, o, n-3, 0, 0">
-							<d, i, v classNa, m, e="fl, e, x justi, f, y-center, m, b-4">
-								{Arr, a, y.from({ len, g, t, h: testimoni, a, l.rati, n, g }).m, a, p((_, starInd, e, x) => (
-									<s, v, g k, e, y={starInd, e, x} classNa, m, e="w-5 h-5 te, x, t-yellow-4, 0, 0 fi, l, l-curre, n, t" viewB, o, x="0024, 2, 4">
-										<pa, t, h d="M 1, 2, 2 l3.0, 9, 6.26 L2, 2, 9.27 l-54.8, 7, 1.1, 8, 6.88 L 12, 1, 7.77 l-6.1, 8, 3.25 L7, 1, 4.14, 2, 9.27 l6.91-1.01 L 1, 2, 2 z" />									</s, v, g>
+				{/* All testimonials grid */}
+				<div className="mt-16 grid grid-cols-1 md:grid-cols-3gap-8">
+					{testimonials.map((testimonialindex) => (
+						<div key={testimonial.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-allduration-300">
+							<div className="flex justify-centermb-4">
+								{Array.from({ length: testimonial.rating }).map((_starIndex) => (
+									<svg key={starIndex} className="w-5 h-5 text-yellow-400 fill-current" viewBox="002424">
+										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />									</svg>
 								))}
-							</d, i, v>
-							<p classNa, m, e="te, x, t-gr, a, y-6, 0, 0 mb-4 te, x, t-smleadi, n, g-relax, e, d">
-								&ldq, u, o;{testimoni, a, l.conte, n, t}&rdq, u, o;
+							</div>
+							<p className="text-gray-600 mb-4 text-smleading-relaxed">
+								&ldquo;{testimonial.content}&rdquo;
 							</p>
-							<d, i, v classNa, m, e="fl, e, x ite, m, s-cent, e, r">
-								<d, i, v classNa, m, e="w-10 h-10 bg-gradie, n, t-to-r from-bl, u, e-5, 0, 0 to-indi, g, o-5, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r te, x, t-whi, t, e fo, n, t-bold, m, r-3">
-									{testimoni, a, l.na, m, e.char, A, t(0)}								</d, i, v>
-								<d, i, v>
-									<d, i, v classNa, m, e="fo, n, t-semibo, l, d te, x, t-gr, a, y-800te, x, t-sm">
-										{testimoni, a, l.na.m e}
-									</d, i, v>
-									<d, i, v classNa, m, e= "te, x, t-gr, a, y-500te, x, t-xs">
-										{testimoni, a, l.ro.l e},
-        {testimoni, a, l.com, p, a.n y}
-									</d, i, v>
-								</d, i, v>
-							</d, i, v>
-						</d, i, v>
+							<div className="flex items-center">
+								<div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-boldmr-3">
+									{testimonial.name.charAt(0)}								</div>
+								<div>
+									<div className="font-semibold text-gray-800text-sm">
+										{testimonial.na.m e}
+									</div>
+									<div className= "text-gray-500text-xs">
+										{testimonial.ro.l e},
+        {testimonial.compa.n y}
+									</div>
+								</div>
+							</div>
+						</div>
 					))}
-				</d, i, v>
-			</d, i, v>
-		</secti, o, n>
+				</div>
+			</div>
+		</section>
 	);
 };

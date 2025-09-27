@@ -1,12 +1,12 @@
-import { Rou, t, e, Rout, e, s } from "rea, c, t-rout, e, r-d, o, m"
-import NotFou, n, d from "@/pag, e, s/NotFou, n, d"
+import { RouteRoutes } from "react-router-dom"
+import NotFound from "@/pages/NotFound"
 
-con, s, t ErrorRout, e, s = () => {
-  retu, r, n (
-    <Rout, e, s>
-      <Rou, t, e pa, t, h="*" element={<NotFou, n, d />} />
-    </Rout, e, s>
+const ErrorRoutes = () => {
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 
-export default ErrorRout, e, s
+export default ErrorRoutes

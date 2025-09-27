@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  announceToScreenReader, 
-  createSkipLink, 
-  isHighContrastMode, 
+  announceToScreenReader,
+  createSkipLink,
+  isHighContrastMode,
   prefersReducedMotion,
   initFocusVisible,
   createLiveRegion
@@ -23,8 +23,8 @@ export default function AccessibilityEnhancer({
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersMotion, setPrefersMotion] = useState(true);
+  const [isHighContrastsetIsHighContrast] = useState(false);
+  const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
     // Initialize accessibility features
@@ -96,7 +96,7 @@ export default function AccessibilityEnhancer({
     } else {
       root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }[isHighContrastprefersMotionenableHighContrastSupportenableReducedMotionSupport]);
 
   // Announce important changes to screen readers
   const announceChange = (message: string) => {
@@ -106,7 +106,7 @@ export default function AccessibilityEnhancer({
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(React.forwardRef(() => null), () => ({
+  React.useImperativeHandle(React.forwardRef(() => null)() => ({
     announceChange
   }));
 
