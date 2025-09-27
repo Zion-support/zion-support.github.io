@@ -39,7 +39,7 @@ export default function App(): React.JSX.Element {
     keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
     ogType: 'website',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image',
+    twitterCard: 'summary_large_image' as const,
     structuredData: [
       seoManager.generateOrganizationStructuredData(),
       seoManager.generateWebsiteStructuredData()
@@ -142,7 +142,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', trackEngagement);
       memoryMonitor.stopMonitoring();
     };
-  }, []);
+  }, [preloadResource, recordMetric, seoData]);
 
   return (
     <ErrorBoundary fallback={<ErrorFallback />}>

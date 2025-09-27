@@ -5,7 +5,6 @@ import { lazyLoadManager, resourcePreloader, performanceMetricsCollector } from 
  * Custom hook for performance optimizations
  */
 export const usePerformanceOptimization = () => {
-  const observerRef = useRef<IntersectionObserver | null>(null);
   const performanceStartTime = useRef<number>(0);
 
   // Initialize performance monitoring

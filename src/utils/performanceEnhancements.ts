@@ -231,7 +231,7 @@ export class BundleAnalyzer {
     console.groupEnd();
   }
 
-  private getResourceSize(url: string): string {
+  private getResourceSize(): string {
     // This is a simplified version - in a real implementation,
     // you'd need to fetch the resource to get its actual size
     return 'Unknown size';
