@@ -230,8 +230,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
   if (isLoading) {
     return (      <div className = {`bg-white rounded-lg shadow-sm border border-gray-200p-6 ${className}`}
-        <div className="animate-pulse">          <div className=h-6bg-gray-300rounded w-1/4mb-4""></div>          <div className=space-y-3"">
-            {[...Array(5)].map((_, i) => (              <div key = {i} className=flex items-center space-x-4"">                <div className=h-10w-10bg-gray-300rounded-full""></div>                <div className=flex-1space-y-2"">                  <div className=h-4bg-gray-300rounded w-1/4""></div>                  <div className=h-3bg-gray-300rounded w-1/3""></div>
+        <div className="animate-pulse">          <div className="h-6bg-gray-300rounded" w-1/4mb-4""></div>          <div className="space-y-3""">
+            {[...Array(5)].map((_, i) => (              <div key = {i} className="flex" items-center space-x-4"">                <div className="h-10w-10bg-gray-300rounded-full"""></div>                <div className="flex-1space-y-2""">                  <div className="h-4bg-gray-300rounded" w-1/4""></div>                  <div className="h-3bg-gray-300rounded" w-1/3""></div>
                 </div>
               </div>
             ))}
@@ -243,31 +243,31 @@ export const UserManagement: React.FC<UserManagementProps> = ({
 
   return (
     <div className = {`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className=px-6py-4border-b border-gray-200"">        <div className=flex items-center justify-between"">          <h2className=text-lg font-semibold text-gray-900"" id="user-management">User Management</h2>
+      {/* Header */}      <div className="px-6py-4border-b" border-gray-200"">        <div className="flex" items-center justify-between"">          <h2className="text-lg" font-semibold text-gray-900"" id="user-management">User Management</h2>
           <button
-            onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className=bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors""
+            onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className="bg-blue-600text-white" px-4 py-2rounded-md hover:bg-blue-700transition-colors""
           >
             Add User
           </button>
         </div>
       </div>
 
-      {/* Filters and Search */}      <div className=px-6py-4border-b border-gray-200"">        <div className=flex flex-col sm:flex-row gap-4"">          <div className=flex-1"">
+      {/* Filters and Search */}      <div className="px-6py-4border-b" border-gray-200"">        <div className="flex" flex-col sm:flex-row gap-4"">          <div className="flex-1""">
             <input              type=text""              placeholder=Search users...""
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}              className=w-full px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
+              onChange={(e) => setSearchTerm(e.target.value)}              className="w-full" px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
     s:ring-blue-500""              aria-label = Search users""
             />
           </div>
           <select
             value={filterRole}
-            onChange={(e) => setFilterRole(e.target.value)}            className=px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
+            onChange={(e) => setFilterRole(e.target.value)}            className="px-3py-2border" border-gray-300rounded-md focus: outline-none focus:ring-2focu,
     s:ring-blue-500""
           >            <option value = all"">All Roles</option>            <option value=admin"">Admin</option>            <option value=moderator"">Moderator</option>            <option value=user"">User</option>            <option value=guest"">Guest</option>
           </select>
           <select
             value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}            className=px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
+            onChange={(e) => setFilterStatus(e.target.value)}            className="px-3py-2border" border-gray-300rounded-md focus: outline-none focus:ring-2focu,
     s:ring-blue-500""
           >            <option value=all"">All Status</option>            <option value=active"">Active</option>            <option value=inactive"">Inactive</option>            <option value=pending"">Pending</option>            <option value=suspended"">Suspended</option>
           </select>
@@ -275,25 +275,25 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       </div>
 
       {/* Bulk Actions */}
-      {selectedUsers.length > 0 && (        <div className=px-6py-3bg-gray-50border-b border-gray-200"">          <div className=flex items-center space-x-4"">            <span className=text-sm text-gray-600"">              {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
-            </span>            <div className=flex space-x-2"">
+      {selectedUsers.length > 0 && (        <div className="px-6py-3bg-gray-50border-b" border-gray-200"">          <div className="flex" items-center space-x-4"">            <span className="text-sm" text-gray-600"">              {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
+            </span>            <div className="flex" space-x-2"">
               <button
-                onClick={() => handleBulkAction('activate')}                aria-label=Activate selected users""                className=text-sm text-green-600hover:text-green-700""
+                onClick={() => handleBulkAction('activate')}                aria-label=Activate selected users""                className="text-sm" text-green-600hover:text-green-700""
               >
                 Activate
               </button>
               <button
-                onClick={() => handleBulkAction('deactivate')}                aria-label=Deactivate selected users""                className=text-sm text-gray-600hover:text-gray-700""
+                onClick={() => handleBulkAction('deactivate')}                aria-label=Deactivate selected users""                className="text-sm" text-gray-600hover:text-gray-700""
               >
                 Deactivate
               </button>
               <button
-                onClick={() => handleBulkAction('suspend')}                aria-label=Suspend selected users""                className=text-sm text-yellow-600hover:text-yellow-700""
+                onClick={() => handleBulkAction('suspend')}                aria-label=Suspend selected users""                className="text-sm" text-yellow-600hover:text-yellow-700""
               >
                 Suspend
               </button>
               <button
-                onClick={() => handleBulkAction('delete')}                aria-label=Delete selected users""                className=text-sm text-red-600hover:text-red-700""
+                onClick={() => handleBulkAction('delete')}                aria-label=Delete selected users""                className="text-sm" text-red-600hover:text-red-700""
               >
                 Delete
               </button>
@@ -302,68 +302,68 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         </div>
       )}
 
-      {/* Users Table */}      <div className=overflow-x-auto"">        <table className=min-w-full divide-y divide-gray-200"">          <thead className=bg-gray-50"">
-            <tr>              <th className=px-6py-3text-left"">
+      {/* Users Table */}      <div className="overflow-x-auto""">        <table className="min-w-full" divide-y divide-gray-200"">          <thead className="bg-gray-50""">
+            <tr>              <th className="px-6py-3text-left""">
                 <input                  type=checkbox""                  id=select-all-users""
                   checked={selectedUsers.length === sortedUsers.length && sortedUsers.length > 0}
-                  onChange={handleSelectAll}                  className=h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded""                  aria-label=Select all users""
+                  onChange={handleSelectAll}                  className="h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded"""                  aria-label=Select all users""
                 />
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className="px-6py-3text-left" text-xs font-medium text-gray-500uppercase tracking-wider"">
                 User
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className="px-6py-3text-left" text-xs font-medium text-gray-500uppercase tracking-wider"">
                 Role
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className="px-6py-3text-left" text-xs font-medium text-gray-500uppercase tracking-wider"">
                 Status
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className="px-6py-3text-left" text-xs font-medium text-gray-500uppercase tracking-wider"">
                 Last Login
-              </th>              <th className=px-6py-3text-left text-xs font-medium text-gray-500uppercase tracking-wider"">
+              </th>              <th className="px-6py-3text-left" text-xs font-medium text-gray-500uppercase tracking-wider"">
                 Actions
               </th>
             </tr>
-          </thead>          <tbody className=bg-white divide-y divide-gray-200"">
-            {sortedUsers.map((user) => (              <tr key={user.id} className=hover:bg-gray-50"">                <td className=px-6py-4whitespace-nowrap"">
+          </thead>          <tbody className="bg-white" divide-y divide-gray-200"">
+            {sortedUsers.map((user) => (              <tr key={user.id} className="hover:bg-gray-50""">                <td className="px-6py-4whitespace-nowrap""">
                   <input                    type=checkbox""
                     id={`user-${user.id}`}
                     checked={selectedUsers.includes(user.id)}
-                    onChange={() => handleUserSelect(user.id)}                    className=h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded""
+                    onChange={() => handleUserSelect(user.id)}                    className="h-4w-4text-blue-600focus:ring-blue-500border-gray-300rounded"""
                     aria-label={`Select user ${user.name}`}
                   />
-                </td>                <td className=px-6py-4whitespace-nowrap"">                  <div className=flex items-center"">                    <div className=flex-shrink-0h-10w-10"">
-                      <Image                        className=h-10w-10rounded-full""
+                </td>                <td className="px-6py-4whitespace-nowrap""">                  <div className="flex" items-center"">                    <div className="flex-shrink-0h-10w-10""">
+                      <Image                        className="h-10w-10rounded-full"""
                         src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=random`}
                         alt={user.name}
                         width={40}
                         height={40}
                       />
-                    </div>                    <div className=ml-4"">                      <div className=text-sm font-medium text-gray-900"">{user.name}</div>                      <div className=text-sm text-gray-500"">{user.email}</div>
+                    </div>                    <div className="ml-4""">                      <div className="text-sm" font-medium text-gray-900"">{user.name}</div>                      <div className="text-sm" text-gray-500"">{user.email}</div>
                     </div>
                   </div>
-                </td>                <td className=px-6py-4whitespace-nowrap"">
+                </td>                <td className="px-6py-4whitespace-nowrap""">
                   <select
                     value={user.role}
                     onChange={(e) => handleUserRoleChange(user.id, e.target.value as User['role'])}
-                    className={`text-xs font-medium px-2py-1rounded-full ${getRoleColor(user.role)}`}
+                    className="{"`text-xs font-medium px-2py-1rounded-full ${getRoleColor(user.role)}`}
                   >                    <option value=admin"">Admin</option>                    <option value=moderator"">Moderator</option>                    <option value=user"">User</option>                    <option value=guest"">Guest</option>
                   </select>
-                </td>                <td className=px-6py-4whitespace-nowrap"">
+                </td>                <td className="px-6py-4whitespace-nowrap""">
                   <select
                     value={user.status}
                     onChange={(e) => handleUserStatusChange(user.id, e.target.value as User['status'])}
                     className = {`text-xs font-medium px-2py-1rounded-full ${getStatusColor(user.status)}`}
                   >                    <option value=active"">Active</option>                    <option value=inactive"">Inactive</option>                    <option value=pending"">Pending</option>                    <option value=suspended"">Suspended</option>
                   </select>
-                </td>                <td className=px-6py-4whitespace-nowrap text-sm text-gray-500"">
+                </td>                <td className="px-6py-4whitespace-nowrap" text-sm text-gray-500"">
                   {user.lastLogin ? user.lastLogin.toLocaleDateString() : 'Never'}
-                </td>                <td className=px-6py-4whitespace-nowrap text-sm font-medium"">                  <div className=flex space-x-2"">
+                </td>                <td className="px-6py-4whitespace-nowrap" text-sm font-medium"">                  <div className="flex" space-x-2"">
                     <button
                       onClick={() => setEditingUser(user)}
-                      aria-label={`Edit user ${user.name}`}                      className=text-blue-600hover:text-blue-900""
+                      aria-label={`Edit user ${user.name}`}                      className="text-blue-600hover:text-blue-900"""
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => handleDeleteUser(user.id)}
-                      aria-label={`Delete user ${user.name}`}                      className=text-red-600hover:text-red-900""
+                      aria-label={`Delete user ${user.name}`}                      className="text-red-600hover:text-red-900"""
                     >
                       Delete
                     </button>
@@ -375,11 +375,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({
         </table>
       </div>
 
-      {/* Pagination */}      <div className=px-6py-4border-t border-gray-200"">        <div className=flex items-center justify-between"">          <div className=text-sm text-gray-700"">
+      {/* Pagination */}      <div className="px-6py-4border-t" border-gray-200"">        <div className="flex" items-center justify-between"">          <div className="text-sm" text-gray-700"">
             Showing {sortedUsers.length} of {users.length} users
-          </div>          <div className=flex space-x-2"">            <button className=px-3py-1text-sm border border-gray-300rounded-md hover: bg-gray-50"" aria-label="Previous">
+          </div>          <div className="flex" space-x-2"">            <button className="px-3py-1text-sm" border border-gray-300rounded-md hover: bg-gray-50"" aria-label="Previous">
               Previous
-            </button>            <button className=px-3py-1text-sm border border-gray-300rounded-md hove,
+            </button>            <button className="px-3py-1text-sm" border border-gray-300rounded-md hove,
     r:bg-gray-50"" aria-label="Next">
               Next
             </button>

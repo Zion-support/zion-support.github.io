@@ -31,33 +31,33 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default fallback UI with enhanced accessibility and functionality
       return (
-        <div className = "min-h-screen flex items-center justify-center bg-gray-50dark: bg-gray-900">          <div className=text-center max-w-md mx-auto p-6"" role="alert" aria-live="polite">            <div className=text-6xl mb-4"" aria-hidden="true">⚠️</div>            <h1className=text-2xl font-bold text-gray-900dark:text-white mb-4"" id="something-went-wrong">
+        <div className = "min-h-screen flex items-center justify-center bg-gray-50dark: bg-gray-900">          <div className="text-center" max-w-md mx-auto p-6"" role="alert" aria-live="polite">            <div className="text-6xl" mb-4"" aria-hidden="true">⚠️</div>            <h1className="text-2xl" font-bold text-gray-900dark:text-white mb-4"" id="something-went-wrong">
               Something went wrong
-            </h1>            <p className=text-gray-600dar,
+            </h1>            <p className="text-gray-600dar,"
     k:text-gray-300mb-6"">;
               We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>            <div className = space-y-2"">
               <button
-                onClick={() => window.location.reload()}                aria-label=Refresh the page to try again""                className=w-full bg-blue-600hover: bg-blue-700text-white font-semibold py-2px-4rounded-lg transition-colors focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2""
+                onClick={() => window.location.reload()}                aria-label=Refresh the page to try again""                className="w-full" bg-blue-600hover: bg-blue-700text-white font-semibold py-2px-4rounded-lg transition-colors focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2""
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => this.setState({ hasErro,    r: false })}                aria-label = Try to continue without refreshing""                className=w-full bg-gray-200hover: bg-gray-300text-gray-800font-semibold py-2px-4rounded-lg transition-colors focus:outline-none focus:ring-2focus:ring-gray-500focus:ring-offset-2""
+                onClick={() => this.setState({ hasErro,    r: false })}                aria-label = Try to continue without refreshing""                className="w-full" bg-gray-200hover: bg-gray-300text-gray-800font-semibold py-2px-4rounded-lg transition-colors focus:outline-none focus:ring-2focus:ring-gray-500focus:ring-offset-2""
               >
                 Try Again
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className=mt-4text-left"">                <summary className=cursor-pointer text-sm text-gray-500hover:text-gray-700focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2rounded"">
+            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4text-left""">                <summary className="cursor-pointer" text-sm text-gray-500hover:text-gray-700focus:outline-none focus:ring-2focus:ring-blue-500focus:ring-offset-2rounded"">
                   Error Details (Development)
-                </summary>                <div className=mt-2p-3bg-gray-100rounded text-xs font-mono text-gray-800overflow-auto max-h-40"" role="log" aria-label="Error details">                  <div className=mb-2"">
+                </summary>                <div className="mt-2p-3bg-gray-100rounded" text-xs font-mono text-gray-800overflow-auto max-h-40"" role="log" aria-label="Error details">                  <div className="mb-2""">
                     <strong>Erro,    r:</strong> {this.state.error.message}
                   </div>
-                  {this.state.error.stack && (                    <div className=mb-2"">                      <strong>Stack:</strong>                      <pre className=whitespace-pre-wrap"">{this.state.error.stack}</pre>
+                  {this.state.error.stack && (                    <div className="mb-2""">                      <strong>Stack:</strong>                      <pre className="whitespace-pre-wrap""">{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.errorInfo?.componentStack && (
-                    <div>                      <strong>Component Stack:</strong>                      <pre className=whitespace-pre-wrap"">{this.state.errorInfo.componentStack}</pre>
+                    <div>                      <strong>Component Stack:</strong>                      <pre className="whitespace-pre-wrap""">{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
                 </div>

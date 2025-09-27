@@ -92,7 +92,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   };
 
   return (
-    <div className={`p-6rounded-lg border-2transition-all duration-300 ${
+    <div className="{"`p-6rounded-lg border-2transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800border-gray-700hover:border-gray-600' 
         : 'bg-white border-gray-200hover:border-gray-300'
@@ -102,8 +102,8 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
           Team Collaboration
         </h3>
         <div className="flex items-center space-x-2">
-          <div className={`w-3h-3rounded-full ${getStatusColor(isOnline)}`}</p></div>
-          <span className={`text-sm font-medium ${getConnectionStatusColor()}`}
+          <div className="{"`w-3h-3rounded-full ${getStatusColor(isOnline)}`}</p></div>
+          <span className="{"`text-sm font-medium ${getConnectionStatusColor()}`}
             {connectionStatus}
           </span>
         </div>
@@ -119,7 +119,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               <div className="w-10h-10rounded-full bg-gray-200dark:bg-gray-600flex items-center justify-centertext-lg">
                 {user.avatar}
               </div>
-              <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
+              <div className="{"`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
               } ${getStatusColor(user.isActive)}`}</p></div>
             </div>

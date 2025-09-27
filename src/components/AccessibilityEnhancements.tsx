@@ -112,15 +112,15 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
   };
 
   return (
-    <div className={`accessibility-enhancements `}>
+    <div className="{"`accessibility-enhancements `}>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
           <h3className="text-xl font-semibold text-gray-800flexitems-center">
             <Accessibility className="w-5h-5mr-2" />
             Accessibility Enhancements
           </h3>
-          <div className={`px-4 py-2rounded-lg ${getScoreBgColor(score)}`}
-            <span className={`text-lg font-bold ${getScoreColor(score)}`}
+          <div className="{"`px-4 py-2rounded-lg ${getScoreBgColor(score)}`}
+            <span className="{"`text-lg font-bold ${getScoreColor(score)}`}
               {score}% Accessible
             </span>
           </div>

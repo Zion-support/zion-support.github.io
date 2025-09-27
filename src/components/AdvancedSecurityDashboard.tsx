@@ -211,7 +211,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
           <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
             <div className="p-4border rounded-lgtext-center">
               <div className="text-sm text-gray-600mb-1">Security Score</div>
-              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}
+              <div className="{"`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}
                 {metrics.overallScore}/100
               </div>
             </div>
@@ -288,7 +288,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {alerts.map((alert) => (
                 <div key={alert.id} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+                    <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                       {alert.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">
@@ -313,7 +313,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
               {recommendations.map((rec, index) => (
                 <div key={index} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}
+                    <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}
                       {rec.priority.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500capitalize">{rec.category}</span>

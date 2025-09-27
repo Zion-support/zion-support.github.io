@@ -84,14 +84,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 	};
 
 	if (submitStatus = == 'success') {
-		return (			<div className={`bg-green-50border border-green-200rounded-2xl p-8text-center `}
-				<div className="w-20h-20bg-green-100rounded-full flex items-center justify-center mx-auto mb-6">					<svg className=w-10h-10text-green-600"" fill="none" stroke="currentColor" viewBox="002424">						<path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />
+		return (			<div className="{"`bg-green-50border border-green-200rounded-2xl p-8text-center `}
+				<div className="w-20h-20bg-green-100rounded-full flex items-center justify-center mx-auto mb-6">					<svg className="w-10h-10text-green-600""" fill="none" stroke="currentColor" viewBox="002424">						<path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />
 					</svg>
-				</div>				<h3className=text-2xl font-bold text-green-800mb-4"" id="message-sent-successfully">Message Sent Successfully!</h3>				<p className=text-green-600mb-6text-lg"">;
+				</div>				<h3className="text-2xl" font-bold text-green-800mb-4"" id="message-sent-successfully">Message Sent Successfully!</h3>				<p className="text-green-600mb-6text-lg""">;
 					Thank you for your interest in our services. We&apos;ll get back to you within24hours with a detailed proposal.
 				</p>
 				<button
-					onClick = {() => setSubmitStatus('idle')}					aria-label=Send another message""					className=bg-green-600hover:bg-green-700text-white px-8py-3rounded-lg font-medium transition-colors duration-200""
+					onClick = {() => setSubmitStatus('idle')}					aria-label=Send another message""					className="bg-green-600hover:bg-green-700text-white" px-8py-3rounded-lg font-medium transition-colors duration-200""
 				>
 					Send Another Message
 				</button>
@@ -101,18 +101,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
 	return (
 		<div className = {`bg-white rounded-2xl shadow-xl p-8 ${className}`}
-			{showTitle && (				<div className=mb-8"">					<h3className=text-3xl font-bold text-gray-800mb-3"" id="start-your-project">Start Your Project</h3>					<p className=text-gray-600text-lg"">;
+			{showTitle && (				<div className="mb-8""">					<h3className="text-3xl" font-bold text-gray-800mb-3"" id="start-your-project">Start Your Project</h3>					<p className="text-gray-600text-lg""">;
 						Tell us about your project and we&apos;ll provide a detailed proposal tailored to your needs.
 					</p>
 				</div>			)}
-			<form onSubmit = {handleSubmit} className=space-y-6"">				<div className=grid grid-cols-1md:grid-cols-2gap-6"">
+			<form onSubmit = {handleSubmit} className="space-y-6""">				<div className="grid" grid-cols-1md:grid-cols-2gap-6"">
 					<div>						<label htmlFor=name"" className="block text-sm font-semibold text-gray-700mb-2">
 							Full Name *
 						</label>
 						<input							type=text""							id=name""							name=name""
 							value={formData.name}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200""							placeholder = John Doe""
 						/>
 					</div>
@@ -122,11 +122,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						<input							type=email""							id=email""							name=email""
 							value={formData.email}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focus:border-transparent transition-colors duration-200""							placeholder=john@company.com""
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focus:border-transparent transition-colors duration-200""							placeholder=john@company.com""
 						/>
 					</div>
 				</div>
-				<div className=grid grid-cols-1m,
+				<div className="grid" grid-cols-1m,
     d:grid-cols-2gap-6"">
 					<div>						<label htmlFor = company"" className="block text-sm font-semibold text-gray-700mb-2">
 							Company *
@@ -134,7 +134,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						<input							type=text""							id=company""							name=company""
 							value={formData.company}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200""							placeholder = Your Company""
 						/>
 					</div>
@@ -143,11 +143,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						</label>
 						<input							type=tel""							id=phone""							name=phone""
 							value={formData.phone}
-							onChange={handleInputChange}							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focus:border-transparent transition-colors duration-200""							placeholder=+1 (555) 123-4567""
+							onChange={handleInputChange}							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focus:border-transparent transition-colors duration-200""							placeholder=+1 (555) 123-4567""
 						/>
 					</div>
 				</div>
-				<div className=grid grid-cols-1m,
+				<div className="grid" grid-cols-1m,
     d:grid-cols-3gap-6"">
 					<div>						<label htmlFor = service"" className="block text-sm font-semibold text-gray-700mb-2">
 							Service Interest *
@@ -155,7 +155,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						<select							id=service""							name=service""
 							value={formData.service}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200""
 						>							<option value = "">Select a service</option>
 							{services.map((service) => (								<option key={service} value={service}>
@@ -170,7 +170,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						<select							id=budget""							name=budget""
 							value={formData.budget}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200""
 						>							<option value = "">Select budget</option>
 							{budgets.map((budget) => (								<option key={budget} value={budget}>
@@ -185,7 +185,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						<select							id=timeline""							name=timeline""
 							value={formData.timeline}
 							onChange={handleInputChange}
-							required							className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+							required							className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200""
 						>							<option value = "">Select timeline</option>
 							{timelines.map((timeline) => (								<option key={timeline} value={timeline}>
@@ -203,24 +203,24 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 						value={formData.message}
 						onChange={handleInputChange}
 						required
-						rows={6}						className=w-full px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
+						rows={6}						className="w-full" px-4 py-3border border-gray-300rounded-lg focus: ring-2focus:ring-blue-500focu,
     s:border-transparent transition-colors duration-200resize-none""						placeholder=Please describe your project requirements, goals, and any specific features or technologies you have in mind...""
 					/>
 				</div>
 
-				{submitStatus === 'error' && (					<div className=bg-red-50border border-red-200rounded-lg p-4"">						<p className=text-red-600"">Something went wrong. Please try again.</p>
+				{submitStatus === 'error' && (					<div className="bg-red-50border" border-red-200rounded-lg p-4"">						<p className="text-red-600""">Something went wrong. Please try again.</p>
 					</div>				)}
 
 				<button					type=submit""
-					disabled={isSubmitting}					className=w-full bg-gradient-to-r from-blue-600to-indigo-600hover: from-blue-700hover:to-indigo-700disabled:from-blue-400disabled:to-indigo-400text-white font-semibold py-4px-6rounded-lg transition-all duration-300flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5disabled:transform-none""
+					disabled={isSubmitting}					className="w-full" bg-gradient-to-r from-blue-600to-indigo-600hover: from-blue-700hover:to-indigo-700disabled:from-blue-400disabled:to-indigo-400text-white font-semibold py-4px-6rounded-lg transition-all duration-300flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5disabled:transform-none""
 				>
 					{isSubmitting ? (
-						<>							<svg className=animate-spin -ml-1mr-3h-5w-5text-white"" xmlns="htt,    p://www.w3.org/2000/svg fill=""none" viewBox="002424">								<circle className=opacity-25"" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>								<path className=opacity-75"" fill="currentColor" d="M412a880018-8V0C5.373005.373012h4zm25.291A7.9627.962001412H0c03.0421.1355.82437.938l3-2.647z"></path>
+						<>							<svg className="animate-spin" -ml-1mr-3h-5w-5text-white"" xmlns="htt,    p://www.w3.org/2000/svg fill=""none" viewBox="002424">								<circle className="opacity-25""" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>								<path className="opacity-75""" fill="currentColor" d="M412a880018-8V0C5.373005.373012h4zm25.291A7.9627.962001412H0c03.0421.1355.82437.938l3-2.647z"></path>
 							</svg>
 							Sending Message...
 						</>
 					) : (
-						<>							Send Project Proposal Request							<svg className=w-5h-5ml-2"" fill="none" stroke="currentColor" viewBox="002424">								<path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M178l44m00l-44m4-4H3" />
+						<>							Send Project Proposal Request							<svg className="w-5h-5ml-2""" fill="none" stroke="currentColor" viewBox="002424">								<path strokeLinecap=round"" strokeLinejoin="round" strokeWidth={2} d="M178l44m00l-44m4-4H3" />
 							</svg>
 						</>
 					)}

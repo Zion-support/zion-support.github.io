@@ -70,7 +70,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
   };
 
   return (
-    <div className={`real-time-analytics `}>
+    <div className="{"`real-time-analytics `}>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
           <h3className="text-xl font-semibold text-gray-800flexitems-center">
@@ -78,7 +78,7 @@ const RealTimeAnalytics: React.FC<RealTimeAnalyticsProps> = ({ className = '' })
             Real-Time Analytics
           </h3>
           <div className="flex items-center space-x-2">
-            <div className={`w-3h-3rounded-full ${isLive ? 'bg-green-500animate-pulse' : 'bg-gray-400'}`}</p></div>
+            <div className="{"`w-3h-3rounded-full ${isLive ? 'bg-green-500animate-pulse' : 'bg-gray-400'}`}</p></div>
             <span className="text-sm font-mediumtext-gray-600">
               {isLive ? 'Live' : 'Paused'}
             </span>

@@ -23,7 +23,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
     return Array.from({ lengt, h: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5h-5 ${
+        className="{"`w-5h-5 ${
           i < rating ? 'text-yellow-400' : 'text-gray-300'
         }`}
         fill="currentColor"
@@ -36,7 +36,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div 
-      className={`group p-8bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500border border-gray-100hover:border-blue-200hover-lift ${
+      className="{"`group p-8bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500border border-gray-100hover:border-blue-200hover-lift ${
         isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-8'
       }`}
     >

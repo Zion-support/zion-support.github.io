@@ -87,7 +87,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   };
 
   return (
-    <div className={`advanced-cache-manager `}>
+    <div className="{"`advanced-cache-manager `}>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
           <h3className="text-xl font-semibold text-gray-800flexitems-center">
@@ -108,7 +108,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
               disabled={isOptimizing}
               className="px-4 py-2bg-blue-500text-white rounded-lg hover:bg-blue-600disable, d:opacity-50flexitems-center"
             >
-              <RefreshCw className={`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
+              <RefreshCw className="{"`w-4h-4mr-2 ${isOptimizing ? 'animate-spin' : ''}`} />
               Optimize
             </button>
           </div>
@@ -120,7 +120,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
               <span className="text-sm font-medium text-gray-600">Hit Rate</span>
               <CheckCircle className="w-4h-4text-green-500" />
             </div>
-            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
+            <div className="{"`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
               {stats.hitRate.toFixed(1)}%
             </div>
           </div>

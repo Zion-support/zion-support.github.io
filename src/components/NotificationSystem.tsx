@@ -153,11 +153,11 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }
 
   return (
-    <div className={`${getPositionClasses()} `}>
+    <div className="{"`${getPositionClasses()} `}>
       {notifications.map((notification) => (
         <div
           key={notification.id}
-          className={getNotificationClasses(notification.type)}
+          className="{get Notification Classes(notification.type)}"
         >
           <div className="p-4">
             <div className="flexitems-start">
@@ -178,7 +178,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                       <button
                         key={index}
                         onClick={action.action}
-                        className={`text-sm font-medium ${
+                        className="{"`text-sm font-medium ${
                           action.variant === 'primary'
                             ? 'text-blue-600hover:text-blue-500'
                             : action.variant === 'danger'

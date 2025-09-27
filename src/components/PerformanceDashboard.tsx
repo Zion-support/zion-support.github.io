@@ -112,13 +112,13 @@ const PerformanceDashboard: React.FC = () => {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-gray-700">Overall Score</span>
-          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+          <span className="{"`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
             {performanceScore}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
+            className="{"`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
             style={{ width: `${performanceScore}%` }}
           ></div>
         </div>
@@ -129,7 +129,7 @@ const PerformanceDashboard: React.FC = () => {
         <div className="p-4 border rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-700">LCP</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+            <span className="{"`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
@@ -139,7 +139,7 @@ const PerformanceDashboard: React.FC = () => {
         <div className="p-4 border rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-700">FID</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+            <span className="{"`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
@@ -149,7 +149,7 @@ const PerformanceDashboard: React.FC = () => {
         <div className="p-4 border rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-700">CLS</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+            <span className="{"`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
@@ -170,7 +170,7 @@ const PerformanceDashboard: React.FC = () => {
             >
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-medium text-gray-900 text-sm" id="metricname">{metric.name}</h3>
-                <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
+                <div className="{"`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
                   {getStatusIcon(metric.status)}
                 </div>
               </div>

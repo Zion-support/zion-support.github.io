@@ -244,12 +244,12 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Activity className="h-6w-6text-blue-600" />
+              <Activity className="h-6 w-6 text-blue-600" />
               <span>Comprehensive Monitoring Dashboard</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
+                <div className="{"`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                 <span className="text-sm text-gray-600">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
@@ -277,7 +277,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
+                className="{"`flex items-center space-x-2px-4 py-2text-sm font-medium border-b-2transition-colors ${
                   activeTab === tab.id
                     ? 'border-blue-500text-blue-600'
                     : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
@@ -352,7 +352,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             <span className="text-sm font-medium">{item.metric}</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <span className={`text-sm font-bold ${getStatusColor(item.status)}`}
+                            <span className="{"`text-sm font-bold ${getStatusColor(item.status)}`}
                               {item.value}%
                             </span>
                             <span className="text-xs text-gray-500">
@@ -467,7 +467,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+                        <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                           {alert.severity.toUpperCase()}
                         </span>
                       </div>
@@ -537,13 +537,13 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                 {alerts.map((alert) => (
                   <div key={alert.id} className="flex items-center justify-between p-4border rounded-lg">
                     <div className="flex items-center space-x-4">
-                      <div className={`p-2rounded-full ${
+                      <div className="{"`p-2rounded-full ${
                         alert.severity === 'critical' ? 'bg-red-100' :
                         alert.severity === 'high' ? 'bg-orange-100' :
                         alert.severity === 'medium' ? 'bg-yellow-100' :
                         'bg-blue-100'
                       }`}
-                        <AlertTriangle className={`h-5w-5 ${
+                        <AlertTriangle className="{"`h-5w-5 ${
                           alert.severity === 'critical' ? 'text-red-600' :
                           alert.severity === 'high' ? 'text-orange-600' :
                           alert.severity === 'medium' ? 'text-yellow-600' :
@@ -558,7 +558,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+                      <span className="{"`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                         {alert.severity.toUpperCase()}
                       </span>
                       {alert.resolved && (

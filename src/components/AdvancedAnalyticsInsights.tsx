@@ -261,24 +261,24 @@ export default function AdvancedAnalyticsInsights({
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'positive': return <TrendingUp className="h-5w-5text-green-600" />;
-      case 'negative': return <TrendingDown className="h-5w-5text-red-600" />;
-      default: return <Activity className="h-5w-5text-blue-600" />;
+      case 'positive': return <TrendingUp className="h-5 w-5 text-green-600" />;
+      case 'negative': return <TrendingDown className="h-5 w-5 text-red-600" />;
+      default: return <Activity className="h-5 w-5 text-blue-600" />;
     }
   };
 
   const getInsightColor = (type: string) => {
     switch (type) {
-      case 'positive': return 'border-green-200bg-green-50';
-      case 'negative': return 'border-red-200bg-red-50';
-      default: return 'border-blue-200bg-blue-50';
+      case 'positive': return 'border-green-200 bg-green-50';
+      case 'negative': return 'border-red-200 bg-red-50';
+      default: return 'border-blue-200 bg-blue-50';
     }
   };
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12w-12border-b-2border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }

@@ -9,8 +9,8 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
-  imag, e: string;
-  slu, g: string;
+  image: string;
+  slug: string;
 }
 
 interface BlogCardProps {
@@ -26,12 +26,12 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <article 
-      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500overflow-hidden hover-lift ${
-        isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-8'
+      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       {/* Image */}
-      <div className="relative h-48overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         <Image 
           src={post.image} 
           alt={post.title}

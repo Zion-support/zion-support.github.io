@@ -113,20 +113,20 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         ? 'bg-gray-800border-gray-700hover: border-gray-600' 
         : 'bg-white border-gray-200hove,
     r:border-gray-300'    }`}
-      <div className = "flex items-center justify-between mb-6">        <h3className=text-xl font-semibold text-gray-900dark: text-white"" id="project-management">
+      <div className = "flex items-center justify-between mb-6">        <h3className="text-xl" font-semibold text-gray-900dark: text-white"" id="project-management">
           Project Management
-        </h3>        <button className=px-4 py-2bg-blue-600hove,
+        </h3>        <button className="px-4" py-2bg-blue-600hove,
     r:bg-blue-700text-white text-sm rounded-md transition-colors"" aria-label="+ New Project">
           + New Project
         </button>
       </div>
 
-      {/* Status Filter */}      <div className=flex space-x-2mb-6"">
+      {/* Status Filter */}      <div className="flex" space-x-2mb-6"">
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button            key = {status}
             onClick={() => setSelectedStatus(status)}
             aria-label={`Filter by ${status} status`}
-            className={`px-3py-1rounded-md text-sm font-medium transition-colors ${
+            className="{"`px-3py-1rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
                 ? 'bg-blue-600text-white'
                 : 'bg-gray-200dark: bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hove,
@@ -137,59 +137,59 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         ))}
       </div>
 
-      {/* Status Overview */}      <div className=grid grid-cols-4gap-4mb-6"">        <div className=text-center"">          <div className=text-2xl font-bold text-blue-600dark:text-blue-400"">{stats.planning}</div>          <div className=text-xs text-gray-600dark: text-gray-400"">Planning</div>
-        </div>        <div className=text-center"">          <div className=text-2xl font-bold text-yellow-600dar,
+      {/* Status Overview */}      <div className="grid" grid-cols-4gap-4mb-6"">        <div className="text-center""">          <div className="text-2xl" font-bold text-blue-600dark:text-blue-400"">{stats.planning}</div>          <div className="text-xs" text-gray-600dark: text-gray-400"">Planning</div>
+        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-yellow-600dar,
     k:text-yellow-400"">{stats['in-progress']}</div>          <div className = text-xs text-gray-600dark: text-gray-400"">In Progress</div>
-        </div>        <div className=text-center"">          <div className=text-2xl font-bold text-purple-600dar,
+        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-purple-600dar,
     k:text-purple-400"">{stats.review}</div>          <div className = text-xs text-gray-600dark: text-gray-400"">Review</div>
-        </div>        <div className=text-center"">          <div className=text-2xl font-bold text-green-600dar,
+        </div>        <div className="text-center""">          <div className="text-2xl" font-bold text-green-600dar,
     k:text-green-400"">{stats.completed}</div>          <div className = text-xs text-gray-600dark:text-gray-400"">Completed</div>
         </div>
       </div>
 
-      {/* Projects List */}      <div className=space-y-4"">
+      {/* Projects List */}      <div className="space-y-4""">
         {filteredProjects.map((project) => (
           <div            key={project.id}
-            className={`p-4rounded-lg border transition-all duration-200hover: shadow-md ${
+            className="{"`p-4rounded-lg border transition-all duration-200hover: shadow-md ${
               isDarkMode 
                 ? 'bg-gray-700border-gray-600hover:border-gray-500' 
                 : 'bg-gray-50border-gray-200hove,
     r:border-gray-300'            }`}
-          >            <div className = flex items-start justify-between mb-3"">              <div className=flex-1"">                <div className=flex items-center space-x-2mb-1"">                  <h4className=font-semibold text-gray-900dark:text-white"" id="projectname">
+          >            <div className = flex items-start justify-between mb-3"">              <div className="flex-1""">                <div className="flex" items-center space-x-2mb-1"">                  <h4className="font-semibold" text-gray-900dark:text-white"" id="projectname">
                     {project.name}
                   </h4>
-                  <span className={`px-2py-1rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}
+                  <span className="{"`px-2py-1rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}
                     {getPriorityIcon(project.priority)} {project.priority}
                   </span>
-                </div>                <p className=text-sm text-gray-600dark:text-gray-400mb-2"">
+                </div>                <p className="text-sm" text-gray-600dark:text-gray-400mb-2"">
                   {project.description}
-                </p>                <div className=flex items-center space-x-4text-xs text-gray-500dark: text-gray-500"">
+                </p>                <div className="flex" items-center space-x-4text-xs text-gray-500dark: text-gray-500"">
                   <span>Du,
     e: {new Date(project.dueDate).toLocaleDateString()}</span>
                   <span>Team: {project.team.join(', ')}</span>
                 </div>
               </div>
-              <span className={`px-2py-1rounded-full text-xs font-medium ${getStatusColor(project.status)}`}
+              <span className="{"`px-2py-1rounded-full text-xs font-medium ${getStatusColor(project.status)}`}
                 {project.status.replace('-', ' ')}
               </span>
             </div>
 
-            {/* Progress Bar */}            <div className = mb-3"">              <div className=flex justify-between text-xs text-gray-600dark:text-gray-400mb-1"">
+            {/* Progress Bar */}            <div className = mb-3"">              <div className="flex" justify-between text-xs text-gray-600dark:text-gray-400mb-1"">
                 <span>Progress</span>
                 <span>{project.progress}%</span>
-              </div>              <div className=w-full bg-gray-200dark: bg-gray-600rounded-full h-2"">
-                <div                   className=bg-blue-600h-2rounded-full transition-all duration-300""
+              </div>              <div className="w-full" bg-gray-200dark: bg-gray-600rounded-full h-2"">
+                <div                   className="bg-blue-600h-2rounded-full" transition-all duration-300""
                   style={{ widt,    h: `${project.progress}%` }}
                 ></div>
               </div>
             </div>
 
-            {/* Actions */}            <div className = flex items-center justify-between"">              <div className=flex space-x-2"">                <button className=px-3py-1text-xs bg-blue-600hover: bg-blue-700text-white rounded-md transition-colors"" aria-label="View Details">
+            {/* Actions */}            <div className = flex items-center justify-between"">              <div className="flex" space-x-2"">                <button className="px-3py-1text-xs" bg-blue-600hover: bg-blue-700text-white rounded-md transition-colors"" aria-label="View Details">
                   View Details
-                </button>                <button className=px-3py-1text-xs border border-gray-300dark:border-gray-600hover:bg-gray-100dark:hover:bg-gray-600text-gray-700dark:text-gray-300rounded-md transition-colors"" aria-label="Edit">
+                </button>                <button className="px-3py-1text-xs" border border-gray-300dark:border-gray-600hover:bg-gray-100dark:hover:bg-gray-600text-gray-700dark:text-gray-300rounded-md transition-colors"" aria-label="Edit">
                   Edit
                 </button>
-              </div>              <div className=text-xs text-gray-500dar,
+              </div>              <div className="text-xs" text-gray-500dar,
     k:text-gray-400"">
                 {project.progress = == 100 ? '✅ Complete' : '🔄 In Progress'}
               </div>
@@ -198,7 +198,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         ))}
       </div>
 
-      {filteredProjects.length === 0 && (        <div className=text-center py-8"">          <div className=text-gray-400dark: text-gray-600text-4xl mb-2"">📋</div>          <p className=text-gray-600dar,
+      {filteredProjects.length === 0 && (        <div className="text-center" py-8"">          <div className="text-gray-400dark:" text-gray-600text-4xl mb-2"">📋</div>          <p className="text-gray-600dar,"
     k:text-gray-400"">No projects found</p>
         </div>      )}
     </div>;
