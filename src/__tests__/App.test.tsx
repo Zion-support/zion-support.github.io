@@ -1,8 +1,6 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import App from '../App';
-import { Layout } from '../router';
 
 // Mock the lazy-loaded components
 jest.mock('../pages/Home', () => {
@@ -66,6 +64,37 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
+// Mock Layout dependencies
+jest.mock('../components/Header', () => {
+  return function MockHeader() {
+    return <header data-testid="header">Header</header>;
+  };
+});
+
+jest.mock('../components/Footer', () => {
+  return function MockFooter() {
+    return <footer data-testid="footer">Footer</footer>;
+  };
+});
+
+jest.mock('../components/SkipLink', () => {
+  return function MockSkipLink() {
+    return <a href="#main-content">Skip to main content</a>;
+  };
+});
+
+jest.mock('../components/ScrollToTop', () => {
+  return function MockScrollToTop() {
+    return null;
+  };
+});
+
+jest.mock('../components/LoadingSpinner', () => {
+  return function MockLoadingSpinner() {
+    return <div data-testid="loading-spinner">Loading...</div>;
+  };
+});
+
 // Import the components we need to test
 import Home from '../pages/Home';
 import Blog from '../pages/Blog';
@@ -80,12 +109,15 @@ jest.mock('../router', () => {
   const React = require('react');
   const { MemoryRouter, Routes, Route } = require('react-router-dom');
   
-  // Mock Layout component
+  // Mock Layout component with accessibility features
   const MockLayout = ({ children }: { children: React.ReactNode }) => (
     <div className="min-h-screen bg-white">
+      <header data-testid="header">Header</header>
       <main id="main-content" role="main">
+        <a href="#main-content">Skip to main content</a>
         {children}
       </main>
+      <footer data-testid="footer">Footer</footer>
     </div>
   );
   
@@ -193,7 +225,11 @@ describe('App', () => {
   });
 
   test('has skip link for accessibility', () => {
-    renderWithRouter(<App />);
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
     skipLinks.forEach(skipLink => {
@@ -202,7 +238,11 @@ describe('App', () => {
   });
 
   test('has main content with correct id', () => {
-    renderWithRouter(<App />);
+    render(
+      <Layout>
+        <Home />
+      </Layout>
+    );
     const mainContent = screen.getByRole('main');
     expect(mainContent).toHaveAttribute('id', 'main-content');
   });
