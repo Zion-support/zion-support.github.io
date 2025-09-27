@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -32,7 +33,8 @@ export default function Contact(): JSX.Element {
 		setFormData(prev => ({
 			...prev,
 			[name]: value
-		}))};
+		}));
+	};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();

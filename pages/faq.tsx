@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -143,8 +144,8 @@ export default function FAQ(): JSX.Element {
 		<>
 			<Head>
 				<title>FAQ - Zion App</title>
-				<meta name="description" content="Find answers to frequently asked questions about Zion App's services  development process  pricing  and technology solutions." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 			<div className="container mx-auto px-4 py-8 max-w-6xl">

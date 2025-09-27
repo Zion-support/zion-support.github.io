@@ -65,7 +65,7 @@ export default function AccessibilityEnhancer({enableSkipLinks = true,
     if (!prefersMotion) {root.classList.add('reduced-motion');
     } else {root.classList.remove('reduced-motion');
     }
-  }[isHighContrastprefersMotion]);
+  }, [isHighContrast, prefersMotion]);
 
   // Announce page changes to screen readers
   useEffect(() => {if (enableScreenReaderSupport) {

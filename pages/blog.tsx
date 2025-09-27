@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
@@ -61,7 +62,8 @@ export default function Blog(): JSX.Element {
 	const handleSearch = (query: string) => {
 		setSearchQuery(query);
 		setCurrentPage(1);
-		trackClick('blog-search', 'search')};
+		trackClick('blog-search', 'search');
+	};
 
 	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
