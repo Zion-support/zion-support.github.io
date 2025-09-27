@@ -37,7 +37,8 @@
     "types": [
       "node",
       "react",
-      "react-dom"
+      "react-dom",
+      "react/jsx-runtime"
     ],
     "incremental": true,
     "plugins": [
@@ -50,7 +51,8 @@
   "include": [
     "next-env.d.ts",
     "types.d.ts",
-    "App.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts"

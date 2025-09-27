@@ -16,7 +16,6 @@ const Home = React.memo(function Home(): JSX.Element {
 	const isFeaturesInView = useInView(featuresRef, { once: true });
 
 	useEffect(() => {
-		setIsVisible(true);
 		setIsLoading(false);
 
 		// Performance monitoring
@@ -25,9 +24,10 @@ const Home = React.memo(function Home(): JSX.Element {
 				const entries = list.getEntries();
 				entries.forEach((entry) => {
 					if (entry.entryType === "navigation") {
+						const navEntry = entry as PerformanceNavigationTiming;
 						setPerformanceMetrics({
-							loadTime: entry.loadEventEnd - entry.fetchStart,
-							domContentLoaded: entry.domContentLoadedEventEnd - entry.fetchStart
+							loadTime: navEntry.loadEventEnd - navEntry.fetchStart,
+							domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
 						});
 					}
 				});
