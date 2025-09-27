@@ -29,143 +29,130 @@ export const generateMetaTags = (seoData: SEOData): string => {
     ogTitle = title,
     ogDescription = description,
     ogImage,
-    ogType = "website",
-    twitterCard = "summary_large_image",
+    ogType = 'website',
+    twitterCard = 'summary_large_image',
     twitterTitle = title,
     twitterDescription = description,
-    twitterImage = ogImage
+    twitterImage,
+    structuredData
   } = seoData;
 
-  const tags = [
+  const metaTags = [
     `<title>${title}</title>`,
-    `<meta name="description" content="${description}"/>`,
-    keywords.length > 0 && `<meta name="keywords" content="${keywords.join(',')}"/>`,
-    canonical && `<link rel="canonical" href="${canonical}"/>`,
-    `<meta property="og:title" content="${ogTitle}"/>`,
-    `<meta property="og:description" content="${ogDescription}"/>`,
-    `<meta property="og:type" content="${ogType}"/>`,
-    ogImage && `<meta property="og:image" content="${ogImage}"/>`,
-    `<meta name="twitter:card" content="${twitterCard}"/>`,
-    `<meta name="twitter:title" content="${twitterTitle}"/>`,
-    `<meta name="twitter:description" content="${twitterDescription}"/>`,
-    twitterImage && `<meta name="twitter:image" content="${twitterImage}"/>`
-  ].filter(Boolean);
+    `<meta name="description" content="${description}" />`,
+    keywords.length > 0 && `<meta name="keywords" content="${keywords.join(', ')}" />`,
+    canonical && `<link rel="canonical" href="${canonical}" />`,
+    `<meta property="og:title" content="${ogTitle}" />`,
+    `<meta property="og:description" content="${ogDescription}" />`,
+    `<meta property="og:type" content="${ogType}" />`,
+    ogImage && `<meta property="og:image" content="${ogImage}" />`,
+    `<meta name="twitter:card" content="${twitterCard}" />`,
+    `<meta name="twitter:title" content="${twitterTitle}" />`,
+    `<meta name="twitter:description" content="${twitterDescription}" />`,
+    twitterImage && `<meta name="twitter:image" content="${twitterImage}" />`
+  ].filter(Boolean).join('\n');
 
-  return tags.join('\n');
+  const structuredDataScript = structuredData ? 
+    `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>` : '';
+
+  return metaTags + (structuredDataScript ? '\n' + structuredDataScript : '');
 };
 
-// Generate structured data
-export const generateStructuredData = (data: {
-  type: string;
+// Generate structured data for organization
+export const generateOrganizationStructuredData = (orgData: {
   name: string;
-  description?: string;
-  url?: string;
-  image?: string;
+  url: string;
   logo?: string;
-  sameAs?: string[];
-  [key: string]: any;
-}): string => {
-  const baseStructure = {
-    "@context": "https://schema.org",
-    "@type": data.type,
-    "name": data.name,
-    ...(data.description && { description: data.description }),
-    ...(data.url && { url: data.url }),
-    ...(data.image && { image: data.image }),
-    ...(data.logo && { logo: data.logo }),
-    ...(data.sameAs && { sameAs: data.sameAs })
+  description?: string;
+  socialProfiles?: string[];
+}) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: orgData.name,
+    url: orgData.url,
+    ...(orgData.logo && { logo: orgData.logo }),
+    ...(orgData.description && { description: orgData.description }),
+    ...(orgData.socialProfiles && orgData.socialProfiles.length > 0 && {
+      sameAs: orgData.socialProfiles
+    })
   };
-
-  // Add type-specific properties
-  switch (data.type) {
-    case "Organization":
-      return JSON.stringify({
-        ...baseStructure,
-        ...(data.foundingDate && { foundingDate: data.foundingDate }),
-        ...(data.contactPoint && { contactPoint: data.contactPoint })
-      });
-    
-    case "Website":
-      return JSON.stringify({
-        ...baseStructure,
-        ...(data.potentialAction && { potentialAction: data.potentialAction })
-      });
-    
-    case "Article":
-      return JSON.stringify({
-        ...baseStructure,
-        ...(data.author && { author: data.author }),
-        ...(data.publisher && { publisher: data.publisher }),
-        ...(data.datePublished && { datePublished: data.datePublished }),
-        ...(data.dateModified && { dateModified: data.dateModified })
-      });
-    
-    default:
-      return JSON.stringify(baseStructure);
-  }
 };
 
-// Generate breadcrumb structured data
+// Generate structured data for website
+export const generateWebsiteStructuredData = (siteData: {
+  name: string;
+  url: string;
+  description?: string;
+  publisher?: string;
+}) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteData.name,
+    url: siteData.url,
+    ...(siteData.description && { description: siteData.description }),
+    ...(siteData.publisher && { publisher: { '@type': 'Organization', name: siteData.publisher } })
+  };
+};
+
+// Generate structured data for breadcrumbs
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{
   name: string;
   url: string;
-}>): string => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((crumb, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": crumb.name,
-      "item": crumb.url
+}>) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url
     }))
   };
-
-  return JSON.stringify(structuredData);
 };
 
-// Generate FAQ structured data
+// Generate structured data for FAQ
 export const generateFAQStructuredData = (faqs: Array<{
   question: string;
   answer: string;
-}>): string => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+}>) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
       }
     }))
   };
-
-  return JSON.stringify(structuredData);
 };
 
-// Generate sitemap data
-export const generateSitemapData = (pages: Array<{
+// Generate sitemap XML
+export const generateSitemap = (pages: Array<{
   url: string;
-  lastModified: string;
-  changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority: number;
+  lastmod?: string;
+  changefreq?: string;
+  priority?: number;
 }>): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `<url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
-    <changefreq>${page.changeFrequency}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  <loc>${page.url}</loc>
+  ${page.lastmod ? `<lastmod>${page.lastmod}</lastmod>` : ''}
+  ${page.changefreq ? `<changefreq>${page.changefreq}</changefreq>` : ''}
+  ${page.priority ? `<priority>${page.priority}</priority>` : ''}
+</url>`).join('\n')}
 </urlset>`;
 
   return sitemap;
 };
 
-// Generate robots.txt content
+// Generate robots.txt
 export const generateRobotsTxt = (options: {
   allowAll?: boolean;
   disallowPaths?: string[];
@@ -173,62 +160,52 @@ export const generateRobotsTxt = (options: {
   crawlDelay?: number;
 }): string => {
   const { allowAll = true, disallowPaths = [], sitemapUrl, crawlDelay } = options;
-  
-  let content = "";
+
+  let content = '';
   
   if (allowAll) {
-    content += "User-agent: *\n";
-    content += "Allow: /\n";
+    content += 'User-agent: *\nAllow: /\n';
   } else {
-    content += "User-agent: *\n";
-    content += "Disallow: /\n";
+    content += 'User-agent: *\nDisallow: /\n';
   }
-  
-  disallowPaths.forEach(path => {
-    content += `Disallow: ${path}\n`;
-  });
-  
+
+  if (disallowPaths.length > 0) {
+    disallowPaths.forEach(path => {
+      content += `Disallow: ${path}\n`;
+    });
+  }
+
   if (crawlDelay) {
     content += `Crawl-delay: ${crawlDelay}\n`;
   }
-  
+
   if (sitemapUrl) {
     content += `Sitemap: ${sitemapUrl}\n`;
   }
-  
+
   return content;
 };
 
 // Validate SEO data
-export const validateSEOData = (seoData: SEOData): {
-  isValid: boolean;
-  errors: string[];
-} => {
+export const validateSEOData = (seoData: SEOData): { isValid: boolean; errors: string[] } => {
   const errors: string[] = [];
-  
+
   if (!seoData.title || seoData.title.length === 0) {
-    errors.push("Title is required");
+    errors.push('Title is required');
   } else if (seoData.title.length > 60) {
-    errors.push("Title should be 60 characters or less");
+    errors.push('Title should be 60 characters or less');
   }
-  
+
   if (!seoData.description || seoData.description.length === 0) {
-    errors.push("Description is required");
+    errors.push('Description is required');
   } else if (seoData.description.length > 160) {
-    errors.push("Description should be 160 characters or less");
+    errors.push('Description should be 160 characters or less');
   }
-  
-  if (seoData.keywords && seoData.keywords.length > 10) {
-    errors.push("Keywords should be 10 or fewer");
-  }
-  
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
+
+  return { isValid: errors.length === 0, errors };
 };
 
-// Generate meta viewport tag
+// Generate viewport meta tag
 export const generateViewportMeta = (options: {
   width?: string;
   initialScale?: number;
@@ -236,18 +213,18 @@ export const generateViewportMeta = (options: {
   userScalable?: boolean;
 }): string => {
   const {
-    width = "device-width",
+    width = 'device-width',
     initialScale = 1,
     maximumScale = 5,
     userScalable = true
   } = options;
-  
+
   const content = [
     `width=${width}`,
     `initial-scale=${initialScale}`,
     `maximum-scale=${maximumScale}`,
     `user-scalable=${userScalable ? 'yes' : 'no'}`
   ].join(', ');
-  
-  return `<meta name="viewport" content="${content}"/>`;
+
+  return `<meta name="viewport" content="${content}" />`;
 };

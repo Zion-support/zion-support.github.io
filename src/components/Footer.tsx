@@ -1,131 +1,97 @@
 import React from "react";
-import { Lin, k} from "react - router - dom";
- {retu, r: n (<footerclass N a m e ="b g - g r a y - 900t e x t - wh i t e">
-      <divclass N a m e ="containe r m x - aut o p x - 4p y - 1 2">
-        <divclass N a m e ="gri d, md: g r i d - c o l s - 4 g a p - 8">          {/* CompanyI n f o */};
-          <divclass N a m e ="sp a c e - y - 4">
-            <divclass N a m e ="flexit e m s - centersp a c e - x - 2">
-              <divclass N a m e ="w - 8 h - 8b g - grad i e n t - t o - r from - p u r p l e - 6 0 0 t o - p i n k - 6 0 0 ro u n d e d - lgflexit e m s - cen t e r just i f y - cen t e r">
-                <spanclass N a m e ="t e x t - whitef o n t - boldt e x t - l g">Z</ s p a n>
+import { Link } from "react-router-dom";
 
-exportconstFoo t e, r: React.F C = ()  => {retu, r: n (<footerclass N a m e ="b g - g r a y - 900t e x t - wh i t e">
-      <divclass N a m e ="containe r m x - aut o p x - 4p y - 1 2">
-        <divclass N a m e ="gri d, md: g r i d - c o l s - 4 g a p - 8">          {/* CompanyI n f o */};
-          <divclass N a m e ="sp a c e - y - 4">
-            <divclass N a m e ="f l e xit e m s - centersp a c e - x - 2">
-              <divclass N a m e ="w - 8 h - 8b g - grad i e n t - t o - r from - p u r p l e - 6 0 0 t o - p i n k - 6 0 0 ro u n d e d - lgflexit e m s - cen t e r just i f y - cen t e r">
-                <spanclass N a m e ="t e x t - whitef o n t - boldt e x t - l g">Z</ s p a n>
+export const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300">
+              Innovative technology solutions for modern businesses. 
+              Transforming ideas into reality with cutting-edge development.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
 
-              </ di v>
-              <spanclass N a m e ="te x t - xlf o n t - b o l d">Z i onTechGr o u p</ s p a n>            </ di v>
-            <pclass N a m e = "t e x t - g r a y - 40 0">
-              Lea d i n g th e fu t u r e o f techno l o g y w i t h AIblockchainandinnovativesoluti o n s.
-            </ p>
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Services</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/services/ai-ml" className="hover:text-white transition-colors">AI & Machine Learning</Link></li>
+              <li><Link to="/services/cloud" className="hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/services/web-development" className="hover:text-white transition-colors">Web Development</Link></li>
+              <li><Link to="/services/mobile" className="hover:text-white transition-colors">Mobile Development</Link></li>
+              <li><Link to="/services/data-analytics" className="hover:text-white transition-colors">Data Analytics</Link></li>
+              <li><Link to="/services/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
+            </ul>
+          </div>
 
-              <a h r e f ="#" classN a m e ="t e x t - g r a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Twit t e r">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M2 3.9 5 3 4.5 7 a 1 0 1 0 0 0 1 - 2.8 2 5.7 7 5 4.9 5 8 4.9 5 8 0 0 0 2.1 6 3 - 2.7 2 3 c -.9 5 1.5 5 5 - 2.0 0 5.9 5 9 - 3.1 2 7 1.1 8 4 a 4.9 2 4.9 2 0 0 0 - 8.3 8 4 4.4 8 2 C 7.6 9 8.0 9 5 4.0 6 7 6.1 3 1.6 4 3.1 6 2 a 4.8 2 2 4.8 2 2 0 0 0 -.6 6 6 2.4 7 5 c 0 1.7 1.8 7 3.2 1 3 2.1 8 8 4.0 9 6 a 4.9 0 4 4.9 0 4 0 0 1 - 2.2 2 8 -.6 1 6 v.0 6 a 4.9 2 3 4.9 2 3 0 0 0 3.9 4 6 4.8 2 7 4.9 9 6 4.9 9 6 0 0 1 - 2.2 1 2.0 8 5 4.9 3 6 4.9 3 6 0 0 0 4.6 0 4 3.4 1 7 9.8 6 7 9.8 6 7 0 0 1 - 6.1 0 2 2.1 0 5 c -.3 9 0 -.7 7 9 -.0 2 3 - 1.1 7 -.0 6 7 a 1 3.9 9 5 1 3.9 9 5 0 0 0 7.5 5 7 2.2 0 9 c 9.0 5 3 0 1 3.9 9 8 - 7.4 9 6 1 3.9 9 8 - 1 3.9 8 5 0 -.2 1 0 -.4 2 -.0 1 5 -.6 3 A 9.9 3 5 9.9 35000 2 4 4.5.9 z"/>
-                </ sv g>
-              </ a>
-              <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Linke d I n">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M2 0.4 4 7 2 0.4 5 2 h - 3.5 5 4 v - 5.5 6 9 c 0 - 1.3 2 8 -.0 2 7 - 3.0 3 7 - 1.8 5 2 - 3.0 3 7 - 1.8 5 3 0 - 2.1 3 6 1.4 4 5 - 2.1 3 6 2.9 3 9 v 5.6 6 7 H 9.3.5 1 V 9 h  3.4 1 4 v 1.5 6 1 h.0 4 6 c.4 7 7 -.9 1.6 3 7 - 1.8 5 3.3 7 - 1.8 5 3.6 0 1 0 4.2 6 7 2.3 7 4.2 6 7 5.4 5 5 v 6.2 8 6 z M  5.3 3 7 7.4 3 3 c - 1.1 4 4 0 - 2.0 6 3 -.9 2 6 - 2.0 6 3 - 2.0 6 5 0 - 1.1 3 8.9 2 - 2.0 6 3 2.0 6 3 - 2.0 6 3 1.1 4 0 2.0 6 4.9 2 5 2.0 6 4 2.0 6 3 0 1.1 3 9 -.9 2 5 2.0 6 5 - 2.0 6 4 2.0 6 5 z m  1.7 8 2 1 3.0 1 9 H 3.5.5 5 V 9 h  3.5 6 4 v 1 1.4.5 2 z M 2 2.2 2 5 0 H 1.7 7 1 C.7 9 2 0 0 .7 7 4 0 1.7 2 9 v 2 0.5 4 2 C 0 2 3.2 2 7.7 9 2 2 4 1.7 7 1 2 4 h 2 0.4 5 1 C 2 3.2 2 4 2 4 2 3.2 2 7 2 4 2 2.2 7 1 V 1.7 2 9 C 2 4 .7 7 42 3.2 0 2 2.2.2 2 0 h.0 0 3 z"/>                </ sv g>
-              </ a>
-              <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Git H u b">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M1 2 0 c - 6.6 2 6 0 - 1 2 5.3 7 3 - 1 2 1 2 0 5.3 0 2 3.4 3 8 9.8 8.2 0 7 1 1.3 8 7.5 9 9.1 1 1.7 9 3 -.2 6 1.7 9 3 -.5 7 7 v - 2.2 3 4 c - 3.3 3 8.7 2 6 - 4.0 3 3 - 1.4 1 6 - 4.0 3 3 - 1.4 1 6 -.5 4 6 - 1.3 8 7 - 1.3 3 3 - 1.7 5 6 - 1.3 3 3 - 1.7 5 6 - 1.0 8 9 -.7 4 5.0 8 3 -.7 2 9.0 8 3 -.7 2 9 1.2 0 5.0 8 4 1.8 3 9 1.2 3 7 1.8 3 9 1.2 3 7 1.0 7 1.8 3 4 2.8 0 7 1.3 0 4 3.4 9 2.9 9 7.1 0 7 -.7 7 5.4 1 8 - 1.3 0 5.7 6 2 - 1.6 0 4 - 2.6 6 5 -.3 0 5 - 5.4 6 7 - 1.3 3 4 - 5.4 6 7 - 5.9 3 1 0 - 1.3 1 1.4 6 9 - 2.3 8 1 1.2 3 6 - 3.2 2 1 -.1 2 4 -.3 0 3 -.5 3 5 - 1.5 2 4.1 1 7 - 3.1 7 6 0 0 1.0 0 8 -.3 2 2 3.3 0 1 1.2 3.9 5 7 -.2 6 6 1.9 8 3 -.3 9 9 3.0 0 3 -.4 0 4 1.0 2.0 0 5 2.0 4 7.1 3 8 3.0 0 6.4 0 4 2.2 9 1 - 1.5 5 2 3.2 9 7 - 1.2 3 3.2 9 7 - 1.2 3.6 5 3 1.6 5 3.2 4 2 2.8 7 4.1 1 8 3.1 7 6.7 7.8 4 1.2 3 5 1.9 1 1 1.2 3 5 3.2 2 1 0 4.6 0 9 - 2.8 0 7 5.6 2 4 - 5.4 7 9 5.9 2 1.4 3.3 7 2.8 2 3 1.1 0 2.8 2 3 2.2 2 2 v 3.2 9 3 c 0 .3 1 9.1 9 2.6 9 4.8 0 1.5 7 6 4.7 6 5 - 1.5 8 9 8.1 9 9 - 6.0 8 6 8.1 9 9 - 1 1.3 86 0 - 6.6.2 7 - 5.3.7 3 - 1 2 - 1 2 - 12 z"/>                </ sv g>
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Company</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="hover:text-white transition-colors">Our Team</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            </ul>
+          </div>
 
-            <divclass N a m e ="f l e x sp a c e - x - 4">
-              <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Twit t e r">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M2 3.9 5 3 4.5 7 a 10 1 0 0 0 1 - 2.8 2 5.7 7 5 4.9 5 8 4.9 5 8 0 0 0 2.1 6 3 - 2.7 2 3 c -.9 5 1.5 5 5 - 2.0 0 5.9 5 9 - 3.1 2 7 1.1 8 4 a 4.9 2 4.9 2 0 0 0 - 8.3 8 4 4.4 8 2 C 7.6 9 8.0 9 5 4.0 6 7 6.1 3 1.6 4 3.1 6 2 a 4.8 2 2 4.8 2 2 0 0 0 -.6 6 6 2.4 7 5 c 0 1.7 1.8 7 3.2 1 3 2.1 8 8 4.0 9 6 a 4.9 0 4 4.9 0 4 0 0 1 - 2.2 2 8 -.6 1 6 v.0 6 a 4.9 2 3 4.9 2 3 0 0 0 3.9 4 6 4.8 2 7 4.9 9 6 4.9 9 6 0 0 1 - 2.2 1 2.0 8 5 4.9 3 6 4.9 3 6 0 0 0 4.6 0 4 3.4 1 7 9.8 6 7 9.8 6 7 0 0 1 - 6.1 0 2 2.1 0 5 c -.3 9 0 -.7 7 9 -.0 2 3 - 1.1 7 -.0 6 7 a 1 3.9 9 5 1 3.9 9 5 0 0 0 7.5 5 7 2.2 0 9 c 9.0 5 3 0 1 3.9 9 8 - 7.4 9 6 1 3.9 9 8 - 1 3.9 8 5 0 -.2 1 0 -.4 2 -.0 1 5 -.6 3 A 9.9 3 5 9.9 35000 2 4 4.5.9 z"/>
-                </ sv g>
-              </ a>
-              <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Linke d I n">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M2 0.4 4 7 2 0.4 5 2 h - 3.5 5 4 v - 5.5 6 9 c 0 - 1.3 2 8 -.0 2 7 - 3.0 3 7 - 1.8 5 2 - 3.0 3 7 - 1.8 5 3 0 - 2.1 3 6 1.4 4 5 - 2.1 3 6 2.9 3 9 v 5.6 6 7 H 9.3.5 1 V 9 h  3.4 1 4 v 1.5 6 1 h.0 4 6 c.4 7 7 -.9 1.6 3 7 - 1.8 5 3.3 7 - 1.8 5 3.6 0 1 0 4.2 6 7 2.3 7 4.2 6 7 5.4 5 5 v 6.2 8 6 z M  5.3 3 7 7.4 3 3 c - 1.1 4 4 0 - 2.0 6 3 -.9 2 6 - 2.0 6 3 - 2.0 6 5 0 - 1.1 3 8.9 2 - 2.0 6 3 2.0 6 3 - 2.0 6 3 1.1 4 0 2.0 6 4.9 2 5 2.0 6 4 2.0 6 3 0 1.1 3 9 -.9 2 5 2.0 6 5 - 2.0 6 4 2.0 6 5 z m  1.7 8 2 1 3.0 1 9 H 3.5.5 5 V 9 h  3.5 6 4 v 1 1.4.5 2 z M 2 2.2 2 5 0 H 1.7 7 1 C.7 9 2 0 0 .7 7 4 0 1.7 2 9 v 2 0.5 4 2 C 0 2 3.2 2 7.7 9 2 2 4 1.7 7 1 2 4 h 2 0.4 5 1 C 2 3.2 2 4 2 4 2 3.2 2 7 2 4 2 2.2 7 1 V 1.7 2 9 C 2 4 .7 7 42 3.2 0 2 2.2.2 2 0 h.0 0 3 z"/>                </ sv g>
-              </ a>
-              <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s" a r i a - la b e l ="Git H u b">
-                <svgclass N a m e ="w - 6 h - 6" f i l l ="currentCo l o r" view B o x ="002 4 2 4">
-                  <p a t h d ="M1 2 0 c - 6.6 2 6 0 - 1 2 5.3 7 3 - 1 2 1 2 0 5.3 0 2 3.4 3 8 9.8 8.2 0 7 1 1.3 8 7.5 9 9.1 1 1.7 9 3 -.2 6 1.7 9 3 -.5 7 7 v - 2.2 3 4 c - 3.3 3 8.7 2 6 - 4.0 3 3 - 1.4 1 6 - 4.0 3 3 - 1.4 1 6 -.5 4 6 - 1.3 8 7 - 1.3 3 3 - 1.7 5 6 - 1.3 3 3 - 1.7 5 6 - 1.0 8 9 -.7 4 5.0 8 3 -.7 2 9.0 8 3 -.7 2 9 1.2 0 5.0 8 4 1.8 3 9 1.2 3 7 1.8 3 9 1.2 3 7 1.0 7 1.8 3 4 2.8 0 7 1.3 0 4 3.4 9 2.9 9 7.1 0 7 -.7 7 5.4 1 8 - 1.3 0 5.7 6 2 - 1.6 0 4 - 2.6 6 5 -.3 0 5 - 5.4 6 7 - 1.3 3 4 - 5.4 6 7 - 5.9 3 1 0 - 1.3 1 1.4 6 9 - 2.3 8 1 1.2 3 6 - 3.2 2 1 -.1 2 4 -.3 0 3 -.5 3 5 - 1.5 2 4.1 1 7 - 3.1 7 6 0 0 1.0 0 8 -.3 2 2 3.3 0 1 1.2 3.9 5 7 -.2 6 6 1.9 8 3 -.3 9 9 3.0 0 3 -.4 0 4 1.0 2.0 0 5 2.0 4 7.1 3 8 3.0 0 6.4 0 4 2.2 9 1 - 1.5 5 2 3.2 9 7 - 1.2 3 3.2 9 7 - 1.2 3.6 5 3 1.6 5 3.2 4 2 2.8 7 4.1 1 8 3.1 7 6.7 7.8 4 1.2 3 5 1.9 1 1 1.2 3 5 3.2 2 1 0 4.6 0 9 - 2.8 0 7 5.6 2 4 - 5.4 7 9 5.9 2 1.4 3.3 7 2.8 2 3 1.1 0 2.8 2 3 2.2 2 2 v 3.2 9 3 c 0 .3 1 9.1 9 2.6 9 4.8 0 1.5 7 6 4.7 6 5 - 1.5 8 9 8.1 9 9 - 6.0 8 6 8.1 9 9 - 1 1.3 86 0 - 6.6.2 7 - 5.3.7 3 - 1 2 - 1 2 - 12 z"/>                </ sv g>
+          {/* Contact */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>123 Tech Street</p>
+              <p>Innovation City, IC 12345</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Email: contact@ziontechgroup.com</p>
+            </div>
+          </div>
+        </div>
 
-              </ a>
-            </ di v>
-          </ di v>
-
-          {/* QuickLi n k s */};
-          <divclass N a m e ="sp a c e - y - 4">
-            <h3class N a m e ="t e x t - lgf o n t - semib o l d" i d ="qu i c k - li n k s">Qu i c k Li n k s</ h 3>
-            <ulclass N a m e ="sp a c e - y - 2">
-              <l i>
-                <Li n k t o ="/" classN a m e ="t e x t - g r a y - 4 00ho v, er: t e x t - whitetransit i o n - col o r s">
-                  H o m e;
-                </ Link>
-              </ l i>
-              <l i>
-                <Li n k t o ="/ b l o g" classN a m e ="t e x t - g r a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  Blog;
-                </ Link>
-              </ l i>
-              <l i>
-                <Li n k t o ="/ cont a c t" classN a m e ="t e x t - g r a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  Co n t a c t;
-                </ Link>
-              </ l i>
-            </ u l>
-          </ di v>
-
-          {/* Servi c e s */};
-          <divclass N a m e ="sp a c e - y - 4">
-            <h3class N a m e ="t e x t - lgf o n t - semib o l d" i d ="servi c e s">Servi c e s</ h 3>
-            <ulclass N a m e ="sp a c e - y - 2">
-              <l i>
-                <a h r e f ="#" classN a m e ="t e x t - gr a y - 4 0 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  A I Solu t i o n s;
-                </ a>
-              </ l i>
-              <l i>
-                <a h r e f ="#" classN a m e ="t e x t - g r a y - 40 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  Block c h a i n;
-                </ a>
-              </ l i>
-              <l i>
-                <a h r e f ="#" classN a m e ="t e x t - g r a y - 40 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  Cl o u d Ser v i c e s;
-                </ a>
-              </ l i>
-              <l i>
-                <a h r e f ="#" classN a m e ="t e x t - g r a y - 40 0 ho v, er: t e x t - whitetransit i o n - col o r s">
-                  Cybersec u r i t y;
-                </ a>
-              </ l i>
-            </ u l>
-          </ di v>
-
-          {/* ContactI n f o */};
-            <h3class N a m e ="t e x t - lgf o n t - semib o l d" i d ="cont a c t">Contact</ h 3>
-            <divclass N a m e ="sp a c e - y - 2">
-              <pclass N a m e ="t e x t - g r a y - 40 0">Em a, il: i n f o@ziontechgr o u p.c.o m</ p>
-              <pclass N a m e ="t e x t - g r a y - 40 0">Ph o n, e: + 1 (5, 5, 5) 1 2 3 - 4 5 6 7</ p>
-              <pclass N a m e ="t e x t - g r a y - 40 0">Addr e, ss: 123TechStr e e t  InnovationC i t y</ p>            </ di v>
-
-          <divclass N a m e ="sp a c e - y - 4">
-            <h3class N a m e ="t e x t - lgf o n t - semib o l d" i d ="cont a c t">Contact</ h 3>
-            <divclass N a m e ="sp a c e - y - 2">
-              <pclass N a m e ="t e x t - g r a y - 40 0">Em a, il: i n f o@ziontechgr o u p.c.o m</ p>
-              <pclass N a m e ="t e x t - g r a y - 40 0">Ph o n, e: + 1 (5, 5, 5) 12 3 - 4 5 6 7</ p>
-              <pclass N a m e ="t e x t - g r a y - 40 0">Addr e, ss: 123TechStr e e t  InnovationC i t y</ p>            </ di v>
-
-          </ di v>
-        </ di v>
-
-        <divclass N a m e ="b o r d e r - t bo r d e r - g r a y - 80 0 m t - 8p t - 8 t e x t - cen t e r">
-          <pclass N a m e ="t e x t - g r a y - 40 0">
-            © 2025ZionT e c h Gr o u p. Al l rig h t s reser v e d.
-          </ p>
-        </ di v>
-      </ di v>
-    </ foo t e r>
-  )};
-
-export default Foo t e r;
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-300 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link to="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link to="/cookies" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
