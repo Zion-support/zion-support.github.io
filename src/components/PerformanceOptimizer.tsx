@@ -14,6 +14,21 @@ function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e,
 
   useEffect(() => {if (typeofwindow === "undefin, e, d") retu, r, n;
 
+<<<<<<< HEAD
+    // Simpleperformance monitoringif (enableMonitoring) {
+      console.log('Performance monitoring enabled');
+    }
+
+    // Memory Usage Monitoring
+    const updateMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMemoryUsage({
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+        })}
+=======
     // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
       console.log("Performancemonitoringenabled")};
     // MemoryUsageMonitoring
@@ -22,6 +37,7 @@ function, PerformanceOptimizerComponen, t({enableServiceWork, e, r = tr, u, e,
         setMemoryUsa, g, e({
           used: memo, r, y.usedJSHeapSi, zetotal: memo, r, y.totalJSHeapSi, zepercentage: (memo, r, y.usedJSHeapSi, z, e / memo, r, y.totalJSHeapSi, z, e) * 100
         })};
+>>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37
     };
 
     updateMemoryUsa, g, e();

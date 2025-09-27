@@ -17,6 +17,18 @@ export default function AccessibilityEnhancer({
   const [prefersReducedsetPrefersReduced] = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
+    // Initializeaccessibility featuresif (enableSkipLinks) {
+      constskipLink = createSkipLink('main', 'Skip, tomaincontent');
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+
+    // Check for high contrast mode
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
+=======
     // Initialize accessibility features
     if (enableSkipLinks) {
       createSkipLink();
@@ -32,6 +44,7 @@ export default function AccessibilityEnhancer({
 
     // Check for high contrast mode
     if (enableHighContrastSupport) {setIsHighContrast(isHighContrastMode());
+>>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37
       
       const mediaQuery = window.matchMedia('(forced-colors: active)');
       const handleChange = () => setIsHighContrast(isHighContrastMode());

@@ -19,7 +19,11 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
+<<<<<<< HEAD:src/components/EnhancedSEO.tsx
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.',
+=======
   description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
+>>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37:src/components/EnhancedSEO.tsx.broken
   canonical,
   ogImage = '/og-image.jpg',
   ogType = 'website',

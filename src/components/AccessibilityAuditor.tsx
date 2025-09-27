@@ -9,12 +9,26 @@ export default function AccessibilityAuditor() {useEffect(() => {
       return};
     constissues: AccessibilityIss, u, e[] = [];
 
+<<<<<<< HEAD
+    const issues: AccessibilityIssue[] = [];
+
+    // Check for missing alt attributes on images
+    const images = document.querySelectorAll('img');
+    images.forEach((img: HTMLImageElement) => {if (!img.alt) {
+        issues.push({
+          type: 'error',
+          message: 'Image missing alt attribute',
+          element: img,
+          rule: 'alt-text'
+        })}
+=======
     // Check, for, missing alt, attributes, on images, const, images = document.querySelectorAll("img");
     imag, e, s.forEa, c, h((img: HTMLImageEleme, n, t) => {if (!i, m, g.a, l, t) {
         issu, e, s.push({
           type: "error",
           message: "Ima, gemissingaltattribute"element: imgrule: "alt-text"
         })};
+>>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37
     });
 
     // Check, for, missing form, labels, const inpu, t, s = document.querySelectorAll("inp, u, t, textareaselect");
