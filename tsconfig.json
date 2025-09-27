@@ -7,30 +7,23 @@
       "DOM.Iterable"
     ],
     "allowJs": true,
+    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
     "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
-      ],
-      "@/app/*": [
-        "app/*"
-      ],
-      "@/components/*": [
-        "app/components/*"
-      ],
-      "@/lib/*": [
-        "app/lib/*"
+        "src/src/*"
       ]
     },
     "noUnusedLocals": false,
@@ -55,16 +48,14 @@
     "strictNullChecks": false
   },
   "include": [
-    "app",
-    "src/types/offline-shims.d.ts",
-    ".next/types/**/*.ts"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
-    "src/**",
+    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -77,22 +68,6 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts",
-    // Temporarily exclude corrupted or legacy areas until cleaned
-    "src/routes",
-    "src/utils/errorBoundary.tsx",
-    "src/utils/imageOptimizer.tsx",
-    "src/utils/cartUtils.ts",
-    "src/pages/solutions",
-    "src/pages/services",
-    "src/pages",
-    "src/pages-disabled",
-    "src/components",
-    "src/context",
-    "src/legal",
-    "src/i18n.js",
-    "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
-    "src/utils/cartUtils.js"
+    "vitest.config.ts"
   ]
 }

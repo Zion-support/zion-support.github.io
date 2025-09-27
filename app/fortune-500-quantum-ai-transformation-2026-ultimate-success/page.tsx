@@ -1,11 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
 import SEO from '../../components/SEO';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'Fortune 500 Quantum AI Transformation 2026: Ultimate Success Story | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through quantum AI transformation. Complete case study with implementation details and results.',
   keywords: ['Fortune 500', 'quantum AI', 'transformation', 'ROI', 'success', '2026', 'case study'],
@@ -361,14 +361,12 @@ export default function Fortune500QuantumAISuccessPage() {
             Transform your enterprise with quantum AI. Achieve 500%+ ROI with strategic quantum implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/quantum-ai"
+            <Link to="/services/quantum-ai"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Quantum AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Get Quantum AI Consultation
@@ -379,8 +377,7 @@ export default function Fortune500QuantumAISuccessPage() {
 
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/"
+        <Link to="/"
           className="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

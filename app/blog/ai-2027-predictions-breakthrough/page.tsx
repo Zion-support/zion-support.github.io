@@ -1,8 +1,8 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2027 Predictions: The Next Frontier of Artificial Intelligence',
   description: 'Explore groundbreaking predictions for AI in 2027, including quantum AI, autonomous systems, and the future of human-AI collaboration.',
   keywords: ['AI predictions', '2027', 'quantum AI', 'autonomous systems', 'future technology', 'artificial intelligence'],
@@ -193,14 +193,12 @@ export default function AI2027PredictionsPage() {
             Contact Zion Tech Group for comprehensive AI strategy consulting and implementation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors"
             >
               Get AI Strategy Consultation
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Services

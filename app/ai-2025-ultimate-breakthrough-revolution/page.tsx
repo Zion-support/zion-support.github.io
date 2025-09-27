@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+// Removed Next.js Metadata import
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI 2025 Ultimate Breakthrough Revolution - Zion Tech Group',
   description: 'Discover the revolutionary AI 2025 breakthrough technologies delivering 2,500-5,000% ROI. Quantum computing, neural interfaces, and autonomous operations transforming businesses worldwide.',
   keywords: ['AI 2025', 'Breakthrough Revolution', 'Quantum Computing', 'Neural Interfaces', 'Autonomous Operations', 'ROI 2500%', 'Revolutionary Technology'],
@@ -27,14 +27,12 @@ export default function AI2025UltimateBreakthroughRevolution() {
               neural interface technology, and autonomous operations delivering unprecedented 2,500-5,000% ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="#breakthrough-features" 
+              <Link to="#breakthrough-features" 
                 className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Explore Breakthrough Features
               </Link>
-              <Link 
-                href="/case-studies/ai-2025-global-transformation-breakthrough" 
+              <Link to="/case-studies/ai-2025-global-transformation-breakthrough" 
                 className="bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 View Success Stories
@@ -227,8 +225,7 @@ export default function AI2025UltimateBreakthroughRevolution() {
                   24/7 expert support
                 </li>
               </ul>
-              <Link 
-                href="/resources/ai-2025-ultimate-implementation-toolkit" 
+              <Link to="/resources/ai-2025-ultimate-implementation-toolkit" 
                 className="mt-6 inline-block bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Download Toolkit
@@ -259,8 +256,7 @@ export default function AI2025UltimateBreakthroughRevolution() {
                   Ongoing support and monitoring
                 </li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="mt-6 inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Schedule Consultation
@@ -281,14 +277,12 @@ export default function AI2025UltimateBreakthroughRevolution() {
             Limited time offer - Start your transformation today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough" 
+            <Link to="/case-studies/ai-2025-global-transformation-breakthrough" 
               className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               View Success Stories
             </Link>
-            <Link 
-              href="/tools/ai-2025-roi-calculator" 
+            <Link to="/tools/ai-2025-roi-calculator" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Calculate Your ROI

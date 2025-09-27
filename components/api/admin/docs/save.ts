@@ -30,7 +30,7 @@ const jsonString =,
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2),    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2),;
 const ts = new Date(),
       .toISOString(),
-      .replace(/[-:T && T.Z]/g, ''),
+      .replace(/[-:T.Z]/g, ''),
       .slice(0, 14),
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8'),
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8'),

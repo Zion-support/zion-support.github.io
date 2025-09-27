@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026NeuralInterfaceBusinessTransformation() {
   return (
@@ -229,14 +229,12 @@ export default function AI2026NeuralInterfaceBusinessTransformation() {
               services to help you integrate this transformative technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Schedule Consultation
               </Link>
-              <Link 
-                href="/services" 
+              <Link to="/services" 
                 className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-center"
               >
                 View Our Services

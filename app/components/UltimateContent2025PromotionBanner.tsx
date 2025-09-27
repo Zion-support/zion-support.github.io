@@ -14,7 +14,6 @@ const UltimateContent2025PromotionBanner = () => {
     if (!dismissed) {
       setIsVisible(true);
     }
-
   }, []);
 
   const handleDismiss = () => {
@@ -130,24 +129,24 @@ const UltimateContent2025PromotionBanner = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${currentContent.badgeColor}`}>
-                  {currentContent.badge}
+                <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${currentContent?.badgeColor || ''}`}>
+                  {currentContent?.badge}
                 </span>
-                <span className="text-sm text-white/80">{currentContent.type}</span>
+                <span className="text-sm text-white/80">{currentContent?.type}</span>
               </div>
               
               <h2 className="text-2xl lg:text-3xl font-bold leading-tight">
-                {currentContent.title}
+                {currentContent?.title}
               </h2>
               
               <p className="text-white/90 text-lg leading-relaxed">
-                {currentContent.description}
+                {currentContent?.description}
               </p>
             </div>
 
             {/* Success Metrics */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
+              {currentContent && Object.entries(currentContent.metrics || {}).map(([key, value]) => (
                 <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
                   <div className="text-lg font-bold text-yellow-400">{value}</div>
                   <div className="text-xs text-white/70 capitalize">{key.replace('_', ' ')}</div>
@@ -157,10 +156,10 @@ const UltimateContent2025PromotionBanner = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href={currentContent.url}
+                href={currentContent?.url || '#'}
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Read Full {currentContent.type}
+                Read Full {currentContent?.type}
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Link>
               <Link

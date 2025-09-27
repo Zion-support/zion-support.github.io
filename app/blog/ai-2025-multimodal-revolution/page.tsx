@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag, Brain, Eye, Mic, Image, Video } from 'lucide-react';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Multimodal Revolution 2025: The Future of Human-Computer Interaction',
   description: 'Explore the groundbreaking multimodal AI revolution transforming how humans interact with technology through text, voice, images, and video in 2025.',
   keywords: 'multimodal AI, AI revolution, human-computer interaction, AI trends 2025, multimodal learning',
@@ -72,8 +72,7 @@ export default function AIMultimodalRevolution() {
             </div>
             <div className="group">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                <Image className="w-8 h-8 text-purple-600" />
+                <Image className="w-8 h-8 text-purple-600" alt="Multimodal AI image processing" />
               </div>
               <h3 className="font-semibold text-gray-900">Images</h3>
               <p className="text-sm text-gray-600">Visual Content Generation</p>
@@ -353,15 +352,13 @@ export default function AIMultimodalRevolution() {
                 integrate cutting-edge multimodal capabilities into your applications and workflows.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-medium rounded-lg hover:bg-purple-50 transition-colors"
                 >
                   Start Your Multimodal Journey
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <Link 
-                  href="/services/ai-consulting" 
+                <Link to="/services/ai-consulting" 
                   className="inline-flex items-center px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Learn About Our Services
@@ -377,7 +374,7 @@ export default function AIMultimodalRevolution() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Explore More AI Innovation</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
+            <Link to="/blog/ai-2025-breakthrough-innovations" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   AI 2025 Breakthrough Innovations
@@ -388,7 +385,7 @@ export default function AIMultimodalRevolution() {
               </div>
             </Link>
             
-            <Link href="/blog/ai-2025-industry-disruption" className="group">
+            <Link to="/blog/ai-2025-industry-disruption" className="group">
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   AI Industry Disruption 2025

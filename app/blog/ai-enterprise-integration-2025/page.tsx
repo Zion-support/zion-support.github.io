@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Removed Next.js Metadata import
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 
-export const metadata: Metadata = {
+// Removed Next.js metadata export
   title: 'AI Enterprise Integration 2025: A Complete Implementation Guide | Zion Tech Group',
   description: 'Comprehensive guide to AI enterprise integration in 2025. Learn best practices, implementation strategies, and common pitfalls for successful AI adoption.',
   keywords: 'AI enterprise integration, artificial intelligence implementation, AI adoption, enterprise AI, digital transformation',
@@ -22,8 +22,7 @@ export default function AIEnterpriseIntegration2025() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Back Button */}
-        <Link 
-          href="/blog" 
+        <Link to="/blog" 
           className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -425,8 +424,7 @@ export default function AIEnterpriseIntegration2025() {
               Our AI integration experts can help you develop and execute a comprehensive 
               AI strategy that delivers measurable business value.
             </p>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your AI Journey

@@ -1,18 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-
 export default function AI2025EnterpriseAutomationMastery() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <SEO
-        title="AI 2025 Enterprise Automation Mastery: Complete Implementation Guide"
-        description="Master enterprise AI automation in 2025 with our comprehensive guide. Learn proven strategies, implementation frameworks, and real-world case studies for 40% cost reduction and 300% productivity gains."
-        keywords="AI automation, enterprise AI, automation strategy, AI implementation, cost reduction, productivity gains, 2025 AI trends"
-        url="/blog/ai-2025-enterprise-automation-mastery"
-      />
-      
-      <article className="prose prose-lg max-w-none">
+            <article className="prose prose-lg max-w-none">
         <div className="mb-8">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">🚀 NEW CONTENT</span>

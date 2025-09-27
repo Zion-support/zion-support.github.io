@@ -1,18 +1,10 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIDataPrivacy2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Data Privacy in 2025: Balancing Innovation with Protection"
-        description="Navigate the complex landscape of AI data privacy in 2025. Learn about new regulations, privacy-preserving techniques, and compliance strategies."
-        keywords="AI data privacy, GDPR compliance, privacy-preserving AI, data protection, AI regulations"
-        url="/blog/ai-data-privacy-2025"
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">

@@ -1,19 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export default function AIMultimodalImplementationGuide2025() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Multimodal Implementation Guide 2025 - Free Download"
-        description="Complete guide for implementing multimodal AI applications. Covers vision, audio, video, and cross-modal AI with practical frameworks and code examples."
-        keywords="AI multimodal implementation, computer vision guide, audio AI, video AI, cross-modal AI, implementation guide"
-        url="/resources/ai-multimodal-implementation-guide-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+            <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

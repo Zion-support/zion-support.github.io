@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'AI 2026: Evidence‑Led Operations — Practical Blueprint',
@@ -44,10 +44,10 @@ export default function Page() {
 				<div className="mt-10 p-6 rounded-xl bg-gray-50 border border-gray-200">
 					<h3 className="m-0">Related resources</h3>
 					<ul>
-						<li><Link href="/blog/ai-2026-evidence-hub-architecture">Evidence Hub Architecture</Link></li>
-						<li><Link href="/blog/ai-2026-operational-evals-blueprint">Operational Evals Blueprint</Link></li>
-						<li><Link href="/blog/ai-2026-agent-slo-blueprint">Agent SLO Blueprint</Link></li>
-						<li><Link href="/blog/ai-2026-eval-gated-ci-cd-blueprint">Eval‑Gated CI/CD</Link></li>
+						<li><Link to="/blog/ai-2026-evidence-hub-architecture">Evidence Hub Architecture</Link></li>
+						<li><Link to="/blog/ai-2026-operational-evals-blueprint">Operational Evals Blueprint</Link></li>
+						<li><Link to="/blog/ai-2026-agent-slo-blueprint">Agent SLO Blueprint</Link></li>
+						<li><Link to="/blog/ai-2026-eval-gated-ci-cd-blueprint">Eval‑Gated CI/CD</Link></li>
 					</ul>
 				</div>
 			</main>

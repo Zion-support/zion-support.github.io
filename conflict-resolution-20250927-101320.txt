@@ -6913,3 +6913,17 @@
 2025-09-27 10:19:24 - Resolving conflicts in services/qrCodeService.ts for branch backup-main-20250926-044137
 2025-09-27 10:19:24 - Resolving conflicts in services/urlShortenerService.ts for branch backup-main-20250926-044137
 2025-09-27 10:19:24 - Resolving conflicts in src/components/InteractiveTechShowcase.tsx for branch backup-main-20250926-044137
+2025-09-27 10:19:28 - Merge conflicts detected in backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in .eslintrc.cjs for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in .yarn/install-state.gz for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in app/ai-innovations-2025/page.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in app/ai-trends-2025-ultimate/page.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in app/blog/ai-2025-enterprise-transformation-complete-guide/page.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in app/blog/ai-2026-evidence-led-governance-blueprint/page.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in app/components/Navigation.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:28 - Resolving conflicts in components/SEO.tsx for branch backup-main-20250926-063009
+2025-09-27 10:19:29 - Resolving conflicts in data/missing-slugs.json for branch backup-main-20250926-063009
+2025-09-27 10:19:29 - Resolving conflicts in index.html for branch backup-main-20250926-063009
+2025-09-27 10:19:29 - Resolving conflicts in next-env.d.ts for branch backup-main-20250926-063009
+2025-09-27 10:19:29 - Resolving conflicts in package-lock.json for branch backup-main-20250926-063009
+2025-09-27 10:19:29 - Resolving conflicts in package.json for branch backup-main-20250926-063009
