@@ -1,4 +1,5 @@
 import React, { memo, useMemo, useCallback, lazy, Suspense } from 'react';
+import Image from 'next/image';
 import { ErrorBoundary } from './ErrorBoundary';
 
 // Lazy load heavy components
@@ -13,11 +14,11 @@ interface PerformanceOptimizationsProps {
 }
 
 // Memoized component to prevent unnecessary re-renders
-const MemoizedCard = memo(({ title, content, onClick }: {
+const MemoizedCard = memo(function MemoizedCard({ title, content, onClick }: {
   title: string;
   content: string;
   onClick: () => void;
-}) => {
+}) {
   return (
     <div 
       className="p-4 border rounded-lg hover:shadow-md transition-shadow cursor-pointer"
@@ -35,11 +36,11 @@ const MemoizedCard = memo(({ title, content, onClick }: {
 MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
-const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
+const VirtualList = memo(function VirtualList({ items, itemHeight = 50, containerHeight = 400 }: {
   items: any[];
   itemHeight?: number;
   containerHeight?: number;
-}) => {
+}) {
   const [scrollTop, setScrollTop] = React.useState(0);
   
   const visibleItems = useMemo(() => {
@@ -80,13 +81,13 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
 VirtualList.displayName = 'VirtualList';
 
 // Image optimization component
-const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
+const OptimizedImage = memo(function OptimizedImage({ src, alt, width, height, ...props }: {
   src: string;
   alt: string;
   width?: number;
   height?: number;
   [key: string]: any;
-}) => {
+}) {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [hasError, setHasError] = React.useState(false);
 
@@ -116,15 +117,13 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
           Image failed to load
         </div>
       ) : (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          width={width || 200}
+          height={height || 200}
           onLoad={handleLoad}
           onError={handleError}
-          loading="lazy"
           className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           {...props}
         />
@@ -135,10 +134,10 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
 OptimizedImage.displayName = 'OptimizedImage';
 
 // Debounced search component
-const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
+const DebouncedSearch = memo(function DebouncedSearch({ onSearch, placeholder = "Search..." }: {
   onSearch: (query: string) => void;
   placeholder?: string;
-}) => {
+}) {
   const [query, setQuery] = React.useState('');
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 

@@ -125,7 +125,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           </div>
           <button
             onClick={() => setIsMonitoring(!isMonitoring)}
-            aria-label={isMonitoring ? 'Pause monitoring' : 'Start monitoring'}
+            aria-label={isMonitoring ? 'Stop monitoring' : 'Start monitoring'}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               isMonitoring
                 ? 'bg-red-500 hover:bg-red-600 text-white'
