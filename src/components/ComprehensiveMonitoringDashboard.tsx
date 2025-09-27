@@ -282,6 +282,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
+
               >
                 <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>
@@ -295,19 +296,19 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
               {/* Key Metrics Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">98.5%</div>
+                  <div className="text-2 xl font-bold text-blue-600">98.5%</div>
                   <div className="text-sm text-gray-600">Uptime</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-600">1.2s</div>
+                  <div className="text-2 xl font-bold text-green-600">1.2s</div>
                   <div className="text-sm text-gray-600">Avg Response</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">2,847</div>
+                  <div className="text-2 xl font-bold text-purple-600">2,847</div>
                   <div className="text-sm text-gray-600">Active Users</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-600">0.3%</div>
+                  <div className="text-2 xl font-bold text-orange-600">0.3%</div>
                   <div className="text-sm text-gray-600">Error Rate</div>
                 </div>
               </div>
@@ -437,15 +438,15 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 border rounded-lg text-center">
                   <Shield className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">Secure</div>
+                  <div className="text-2 xl font-bold text-green-600">Secure</div>
                   <div className="text-sm text-gray-600">Overall Status</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">0</div>
+                  <div className="text-2 xl font-bold text-blue-600">0</div>
                   <div className="text-sm text-gray-600">Active Threats</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">24/7</div>
+                  <div className="text-2 xl font-bold text-purple-600">24/7</div>
                   <div className="text-sm text-gray-600">Monitoring</div>
                 </div>
               </div>
@@ -487,7 +488,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <Cpu className="h-5 w-5 text-blue-600" />
                     <span className="text-sm text-gray-500">8 cores</span>
                   </div>
-                  <div className="text-2xl font-bold text-blue-600">65%</div>
+                  <div className="text-2 xl font-bold text-blue-600">65%</div>
                   <div className="text-sm text-gray-600">CPU Usage</div>
                 </div>
                 <div className="p-4 border rounded-lg">
@@ -495,7 +496,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <HardDrive className="h-5 w-5 text-green-600" />
                     <span className="text-sm text-gray-500">16GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-green-600">78%</div>
+                  <div className="text-2 xl font-bold text-green-600">78%</div>
                   <div className="text-sm text-gray-600">Memory Usage</div>
                 </div>
                 <div className="p-4 border rounded-lg">
@@ -503,7 +504,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <Database className="h-5 w-5 text-purple-600" />
                     <span className="text-sm text-gray-500">500GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-purple-600">45%</div>
+                  <div className="text-2 xl font-bold text-purple-600">45%</div>
                   <div className="text-sm text-gray-600">Disk Usage</div>
                 </div>
                 <div className="p-4 border rounded-lg">
@@ -511,7 +512,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     <Network className="h-5 w-5 text-orange-600" />
                     <span className="text-sm text-gray-500">1Gbps</span>
                   </div>
-                  <div className="text-2xl font-bold text-orange-600">120ms</div>
+                  <div className="text-2 xl font-bold text-orange-600">120ms</div>
                   <div className="text-sm text-gray-600">Latency</div>
                 </div>
               </div>

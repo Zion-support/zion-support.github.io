@@ -215,11 +215,12 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-4right-4bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4max-w-smz-50"
+          className="fixed bottom-4 right-4bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4max-w-smz-50"
         >
           <div className="flex items-center justify-between mb-2">
             <h4 className="font-semibold text-gray-900 dark:text-white">SEO Analysis</h4>
             <div className={`text-2xl font-bold ${getScoreColor(seoScore)}`}
+
               {seoScore}
             </div>
           </div>

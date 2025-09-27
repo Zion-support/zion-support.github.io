@@ -96,14 +96,7 @@ const PerformanceDashboard: React.FC = () => {
   const performanceScore = getPerformanceScore();
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-900" id="performance-dashboard">Performance Dashboard</h2>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className="text-sm text-blue-600 hover:text-blue-800"
-        >
-          {isVisible ? 'Hide Details' : 'Show Details'}
+:temp-broken-components/PerformanceDashboard.tsx
         </button>
       </div>
 
@@ -111,44 +104,34 @@ const PerformanceDashboard: React.FC = () => {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-gray-700">Overall Score</span>
-          <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+:temp-broken-components/PerformanceDashboard.tsx
             {performanceScore}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}`}
+            className={`h-2 rounded-full ${getScoreBgColor(performanceScore)}` }
             style={{ width: `${performanceScore}%` }}
           ></div>
         </div>
       </div>
 
       {/* Core Web Vitals */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div className="p-4 border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">LCP</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('LCP', vitals.LCP))}`}>
+:temp-broken-components/PerformanceDashboard.tsx
               {vitals.LCP ? `${Math.round(vitals.LCP)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xs text-gray-500">Largest Contentful Paint</p>
         </div>
 
-        <div className="p-4 border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">FID</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('FID', vitals.FID))}`}>
+:temp-broken-components/PerformanceDashboard.tsx
               {vitals.FID ? `${Math.round(vitals.FID)}ms` : 'N/A'}
             </span>
           </div>
           <p className="text-xs text-gray-500">First Input Delay</p>
         </div>
 
-        <div className="p-4 border rounded-lg">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-gray-700">CLS</span>
-            <span className={`text-sm font-bold ${getVitalColor(getVitalScore('CLS', vitals.CLS))}`}>
+:temp-broken-components/PerformanceDashboard.tsx
               {vitals.CLS ? vitals.CLS.toFixed(3) : 'N/A'}
             </span>
           </div>
@@ -156,8 +139,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-4">
+:temp-broken-components/PerformanceDashboard.tsx
         <AnimatePresence>
           {metrics.map((metric, index) => (
             <motion.div
@@ -169,14 +151,13 @@ const PerformanceDashboard: React.FC = () => {
               className="bg-gray-50 rounded-lg p-4 border border-gray-200"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3 className="font-medium text-gray-900 text-sm" id="metricname">{metric.name}</h3>
-                <div className={`flex items-center px-2 py-1 rounded-full text-xs ${getStatusColor(metric.status)}`}>
+:temp-broken-components/PerformanceDashboard.tsx
                   {getStatusIcon(metric.status)}
                 </div>
               </div>
               
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl font-bold text-gray-900">
+:temp-broken-components/PerformanceDashboard.tsx
                   {metric.value.toFixed(metric.unit === 'score' ? 2 : 0)}
                 </span>
                 <span className="text-sm text-gray-500">{metric.unit}</span>
@@ -196,7 +177,7 @@ const PerformanceDashboard: React.FC = () => {
       {/* Detailed Metrics */}
       {isVisible && metrics && (
         <div className="space-y-4">
-          <h3 className="text-lg font-medium text-gray-900" id="detailed-metrics">Detailed Metrics</h3>
+:temp-broken-components/PerformanceDashboard.tsx
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-3 bg-gray-50 rounded">

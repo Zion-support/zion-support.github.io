@@ -75,7 +75,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       case 'disconnected':
         return 'text-red-600 dark:text-red-400';
       default:
-        return 'text-gray-600 dark:text-gray-400';
+:temp-broken-components/Collaboration.tsx
     }
   };
 
@@ -95,15 +95,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
     <div className={`p-6rounded-lg border-2transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-        : 'bg-white border-gray-200 hover:border-gray-300'
-    }`}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-          Team Collaboration
-        </h3>
-        <div className="flex items-center space-x-2">
-          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}</p></div>
-          <span className={`text-sm font-medium ${getConnectionStatusColor()}`}
+:temp-broken-components/Collaboration.tsx
             {connectionStatus}
           </span>
         </div>
@@ -113,7 +105,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         {users.map((user) => (
           <div
             key={user.id}
-            className="flex items-center space-x-3p-3rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+            className="flex items-center space-x-3 p-3rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
             <div className="relative">
               <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-centertext-lg">
@@ -121,30 +113,29 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               </div>
               <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
-              } ${getStatusColor(user.isActive)}`}</p></div>
+:temp-broken-components/Collaboration.tsx
             </div>
             
-            <div className="flex-1min-w-0">
+            <div className="flex-1 min-w-0">
               <div className="flex items-center space-x-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
                   {user.name}
                 </p>
                 {user.isActive && (
-                  <span className="inline-flex items-center px-2py-0.5rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dark:text-green-200">
+                  <span className="inline-flex items-center px-2 py-0.5rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dark:text-green-200">
                     Active
                   </span>
                 )}
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
+:temp-broken-components/Collaboration.tsx
               </p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <button className="p-1rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+:temp-broken-components/Collaboration.tsx
                 💬
               </button>
-              <button className="p-1rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
                 📞
               </button>
             </div>
@@ -152,7 +143,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         ))}
       </div>
 
-      <div className="mt-6pt-4border-t border-gray-200 dark:border-gray-600">
+      <div className="mt-6 pt-4border-t border-gray-200 dark:border-gray-600">
         <div className="flex items-center justify-between">
           <div className="text-sm text-gray-600 dark:text-gray-400">
             <span className="font-medium">{users.filter(u =</u.isActive).length}> of{' '}
@@ -165,11 +156,11 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       </div>
 
       {/* Quick Actions */}
-      <div className="mt-4grid grid-cols-2gap-2">
-        <button className="px-3py-2text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
+      <div className="mt-4 grid grid-cols-2gap-2">
+        <button className="px-3 py-2text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
           Start Meeting
         </button>
-        <button className="px-3py-2text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-mdtransition-colors">
+        <button className="px-3 py-2text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-mdtransition-colors">
           Share Screen
         </button>
       </div>

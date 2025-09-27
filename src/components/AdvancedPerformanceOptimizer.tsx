@@ -218,6 +218,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
                   </p>
                 </div>
                 <Clock className="w-8 h-8 text-blue-500" />
+
               </div>
             </div>
 
@@ -335,6 +336,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
                   </span>
                 </div>
                 <p className="text-gray-600 mb-2">{suggestion.description}</p>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="font-medium text-green-700">Expected Impact:</span>
@@ -369,6 +371,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
                 Implement dynamic imports to reduce initial bundle size and improve load times.
               </p>
             </div>
+
 
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
               <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2" id="caching-strategy">

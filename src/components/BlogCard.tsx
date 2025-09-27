@@ -29,6 +29,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
       className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0translate-y-8'
       }`}
+
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
@@ -38,8 +39,8 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           fill
           className="object-cover group-hover:scale-110 transition-transformduration-500"
         />
-        <div className="absolute top-4left-4">
-          <span className="bg-blue-600 text-white px-3py-1rounded-full text-sm font-medium">
+        <div className="absolute top-4 left-4">
+          <span className="bg-blue-600 text-white px-3 py-1rounded-full text-sm font-medium">
             {post.category}
           </span>
         </div>
@@ -47,18 +48,18 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-3group-hover:text-blue-600 transition-colors duration-300 line-clamp-2" id="posttitle">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2" id="posttitle">
           {post.title}
         </h3>
         
-        <p className="text-gray-600 mb-4line-clamp-3">
+        <p className="text-gray-600 mb-4 line-clamp-3">
           {post.excerpt}
         </p>
 
         {/* Meta */}
         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
           <div className="flexitems-center">
-            <div className="w-8h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">
+            <div className="w-8 h-8bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xsmr-3">
               {post.author.charAt(0)}
             </div>
             <span>{post.author}</span>
@@ -77,7 +78,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         >
           Read More
           <svg 
-            className="w-4h-4ml-2group-hover/bt, n:translate-x-1transition-transformduration-300" 
+            className="w-4 h-4ml-2group-hover/bt, n:translate-x-1transition-transformduration-300" 
             fill="none" 
             stroke="currentColor" 
             viewBox="002424"

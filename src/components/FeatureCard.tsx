@@ -37,11 +37,12 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
 	const currentColor = colorClasses[color];
 
 	return (
-		<div className="group text-center p-6rounded-2xl transition-all duration-500 hover-lift">
+		<div className="group text-center p-6 rounded-2xl transition-all duration-500 hover-lift">
 			<div className={`w-20 h-20 ${currentColor.bg} ${currentColor.hover} rounded-2xl flex items-center justify-center mx-auto mb-6transition-all duration-500 group-hover:scale-110 group-hover:rotate-3shadow-lg ${currentColor.shadow}`}
-				<span className="text-3xl group-hover:scale-110 transition-transformduration-300">{icon}</span>
+				<span className="text-3 xl group-hover:scale-110 transition-transformduration-300">{icon}</span>
 			</div>
 			<h3 className={`text-2xl font-bold mb-4transition-colors duration-300 group-hover:${currentColor.text}`} id="title">
+
 				{title}
 			</h3>
 			<p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colorsduration-300">

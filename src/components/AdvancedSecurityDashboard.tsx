@@ -66,6 +66,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       const newMetric, s: SecurityMetrics = {
         overallScor, e: Math.round(Math.random() * 30 + 70), // 70-100 vulnerabilities: {
           critica, l: Math.floor(Math.random() * 2),
+
           high: Math.floor(Math.random() * 3),
           medium: Math.floor(Math.random() * 5 + 2),
           low: Math.floor(Math.random() * 8 + 3)
@@ -82,7 +83,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       // Generate security alerts
       const newAlerts: SecurityAlert[] = [
         {
-          i, d: '1',
+          id: '1',
           severity: 'high',
           title: 'Missing Content Security Policy',
           description: 'Your application lacks a proper Content Security Policy header',
@@ -192,13 +193,14 @@ const AdvancedSecurityDashboard: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Shield className="h-6w-6text-blue-600" />
+              <Shield className="h-6 w-6text-blue-600" />
+
               <span>Security Dashboard</span>
             </div>
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
-              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
+              className="px-4 py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -208,16 +210,17 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4mb-6">
-            <div className="p-4border rounded-lgtext-center">
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-4mb-6">
+            <div className="p-4 border rounded-lgtext-center">
               <div className="text-sm text-gray-600 mb-1">Security Score</div>
               <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}
+
                 {metrics.overallScore}/100
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
+            <div className="p-4 borderrounded-lg">
               <div className="text-sm text-gray-600 mb-2">Vulnerabilities</div>
-              <div className="space-y-1text-sm">
+              <div className="space-y-1 text-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-600">Critical:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.critical}</span>
@@ -236,33 +239,33 @@ const AdvancedSecurityDashboard: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
+            <div className="p-4 borderrounded-lg">
               <div className="text-sm text-gray-600 mb-2">Security Features</div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
                   {metrics.httpsEnabled ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm">CSP</span>
                   {metrics.cspEnabled ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm">XSS Protection</span>
                   {metrics.xssProtection ? 
-                    <CheckCircle className="h-4w-4text-green-600" /> : 
-                    <XCircle className="h-4w-4text-red-600" />
+                    <CheckCircle className="h-4 w-4text-green-600" /> : 
+                    <XCircle className="h-4 w-4text-red-600" />
                   }
                 </div>
               </div>
             </div>
-            <div className="p-4borderrounded-lg">
+            <div className="p-4 borderrounded-lg">
               <div className="text-sm text-gray-600 mb-1">Last Scan</div>
               <div className="text-sm font-semibold">
                 {metrics.lastScan.toLocaleDateString()}
@@ -275,11 +278,12 @@ const AdvancedSecurityDashboard: React.FC = () => {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <AlertTriangle className="h-5w-5text-orange-600" />
+              <AlertTriangle className="h-5 w-5text-orange-600" />
+
               <span>Security Alerts</span>
             </CardTitle>
           </CardHeader>
@@ -289,13 +293,14 @@ const AdvancedSecurityDashboard: React.FC = () => {
                 <div key={alert.id} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
+
                       {alert.severity.toUpperCase()}
                     </span>
                     <span className="text-xstext-gray-500">
                       {alert.timestamp.toLocaleTimeString()}
                     </span>
                   </div>
-                  <h4 className="font-semiboldmb-1">{alert.title}</h4>
+                  <h4 className="font-semibold mb-1">{alert.title}</h4>
                   <p className="text-sm text-gray-600 mb-2">{alert.description}</p>
                   <p className="text-sm text-blue-600 font-medium">{alert.recommendation}</p>
                 </div>
@@ -314,19 +319,20 @@ const AdvancedSecurityDashboard: React.FC = () => {
                 <div key={index} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
                     <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}
+
                       {rec.priority.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500 capitalize">{rec.category}</span>
                   </div>
-                  <h4 className="font-semiboldmb-1">{rec.title}</h4>
+                  <h4 className="font-semibold mb-1">{rec.title}</h4>
                   <p className="text-sm text-gray-600 mb-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
-                      <span className="font-mediumtext-blue-700">Implementation:</span>
+                      <span className="font-medium text-blue-700">Implementation:</span>
                       <p className="text-gray-600">{rec.implementation}</p>
                     </div>
                     <div>
-                      <span className="font-mediumtext-green-700">Impact:</span>
+                      <span className="font-medium text-green-700">Impact:</span>
                       <p className="text-gray-600">{rec.impact}</p>
                     </div>
                   </div>

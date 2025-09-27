@@ -292,6 +292,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6">
+
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
@@ -354,17 +355,17 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                   <div className="text-xs text-gray-500 mt-1">Out of 100</div>
                 </div>
                 <div className="p-6 border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-green-600">{metrics.threatsBlocked}</div>
+                  <div className="text-4 xl font-bold text-green-600">{metrics.threatsBlocked}</div>
                   <div className="text-sm text-gray-600">Threats Blocked</div>
                   <div className="text-xs text-gray-500 mt-1">Last 24h</div>
                 </div>
                 <div className="p-6 border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-blue-600">{metrics.vulnerabilities}</div>
+                  <div className="text-4 xl font-bold text-blue-600">{metrics.vulnerabilities}</div>
                   <div className="text-sm text-gray-600">Vulnerabilities</div>
                   <div className="text-xs text-gray-500 mt-1">Found</div>
                 </div>
                 <div className="p-6 border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-purple-600">{metrics.patchesApplied}</div>
+                  <div className="text-4 xl font-bold text-purple-600">{metrics.patchesApplied}</div>
                   <div className="text-sm text-gray-600">Patches Applied</div>
                   <div className="text-xs text-gray-500 mt-1">This Week</div>
                 </div>
@@ -610,15 +611,15 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 border rounded-lg text-center">
                   <CheckCircle className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">95%</div>
+                  <div className="text-2 xl font-bold text-green-600">95%</div>
                   <div className="text-sm text-gray-600">Overall Compliance</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">12</div>
+                  <div className="text-2 xl font-bold text-blue-600">12</div>
                   <div className="text-sm text-gray-600">Standards Met</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-yellow-600">2</div>
+                  <div className="text-2 xl font-bold text-yellow-600">2</div>
                   <div className="text-sm text-gray-600">Needs Attention</div>
                 </div>
               </div>

@@ -95,7 +95,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-3">
           Theme
         </label>
-        <div className="grid grid-cols-3gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
             { valu, e: 'light', label: 'Light', icon: Sun },
             { value: 'dark', label: 'Dark', icon: Moon },
@@ -109,8 +109,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
               }`}
+
             >
-              <Icon className="w-6h-6" />
+              <Icon className="w-6 h-6" />
               <span className="text-sm font-medium">{label}</span>
             </button>
           ))}
@@ -121,7 +122,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-3">
           Font Size
         </label>
-        <div className="grid grid-cols-3gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
             { valu, e: 'small', label: 'Small' },
             { value: 'medium', label: 'Medium' },
@@ -135,6 +136,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
                   : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
               }`}
+
             >
               <span className="text-sm font-medium">{label}</span>
             </button>
@@ -143,12 +145,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div className="space-y-4">
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.animations}
             onChange={(e) => updatePreference('animations', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Enable animations
@@ -161,36 +163,36 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   const AccessibilityTab = () => (
     <div className="space-y-6">
       <div className="space-y-4">
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.reducedMotion}
             onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Reduce motion (respects system preference)
           </span>
         </label>
 
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.highContrast}
             onChange={(e) => updatePreference('highContrast', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             High contrast mode
           </span>
         </label>
 
-        <label className="flex items-centerspace-x-3">
+        <label className="flex items-center space-x-3">
           <input
             type="checkbox"
             checked={preferences.screenReader}
             onChange={(e) => updatePreference('screenReader', e.target.checked)}
-            className="w-4h-4text-blue-600 rounded focus:ring-blue-500"
+            className="w-4 h-4text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Screen reader optimizations
@@ -198,7 +200,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
         <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
           Accessibility Features
         </h4>
@@ -221,7 +223,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <select
           value={preferences.language}
           onChange={(e) => updatePreference('language', e.target.value)}
-          className="w-full p-3border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         >
           <option value="en">English</option>
           <option value="es">Español</option>
@@ -233,7 +235,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </select>
       </div>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
+      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
         <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
           Internationalization
         </h4>
@@ -246,19 +248,20 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   return (
     <div className={`relative `}>
+
       {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
-        className="fixed bottom-6right-6z-50 p-4bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
+        className="fixed bottom-6 right-6z-50 p-4bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
         aria-label="Open user experience settings"
       >
-        <Settings className="w-6h-6" />
+        <Settings className="w-6 h-6" />
       </button>
 
       {/* Settings Panel */}
       {isOpen && (
         <div 
-          className="fixed inset-0z-40 bg-blackbg-opacity-50" 
+          className="fixed inset-0 z-40 bg-blackbg-opacity-50" 
           onClick={toggleSettings}
           role="button"
           tabIndex={0}
@@ -266,14 +269,15 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           aria-label="Close settings panel"
         >
           <div
-            className="fixed right-0top-0h-full w-96 bg-white dark:bg-gray-800 shadow-xloverflow-y-auto"
+            className="fixed right-0 top-0h-full w-96 bg-white dark:bg-gray-800 shadow-xloverflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-centerspace-x-3">
-                  <User className="w-6h-6text-blue-500" />
+                  <User className="w-6 h-6text-blue-500" />
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+
                     User Experience
                   </h2>
                 </div>
@@ -286,9 +290,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               </div>
 
               {/* Tab Navigation */}
-              <div className="flex space-x-1mb-6bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
+              <div className="flex space-x-1 mb-6bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
                 {[
-                  { i, d: 'appearance', label: 'Appearance', icon: Palette },
+                  { id: 'appearance', label: 'Appearance', icon: Palette },
                   { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
                   { id: 'language', label: 'Language', icon: Globe }
                 ].map(({ id, label, icon: Icon }) => (
@@ -300,8 +304,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
                         : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                     }`}
+
                   >
-                    <Icon className="w-4h-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{label}</span>
                   </button>
                 ))}
