@@ -112,4 +112,5 @@ export default function Blog(): JSX.Element {
         </div>
       </div>
     </>
-  )}
+  );
+}

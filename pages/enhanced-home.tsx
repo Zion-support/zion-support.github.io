@@ -132,32 +132,34 @@ export default function Home(): JSX.Element {
 										))};
 									</d, i, v>
 									<p, className="te, x, t-gr, a, y-600, m, b-4 itali c">"{testimoni, a, l.conte, n, t}"</p>
-									<d, i, v>
-										<p, className="fo, n, t-semibold, tex, t-gr, a, y-9 0 0">{testimoni, a, l.na, m, e}</p>
-										<p, className="te, x, t-gr, a, y-500 tex t-sm">{testimoni, a, l.compa, n, y}</p>
-									</d, i, v>
-								</d, i, v>
-							))};
-						</d, i, v>
-					</secti, o, n>
+									<div>
+										<p className="font-semibold text-gray-900">{testimonial.name}</p>
+										<p className="text-gray-500 text-sm">{testimonial.company}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</section>
 
-					{/* CTA, Sectio, n */};
-					<section, className="te, x, t-cent e r">
-						<div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi t e">
-							<h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold m b-4">
-								Ready, to, Transform Your, Busines, s?
+					{/* CTA Section */}
+					<section className="text-center">
+						<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
+							<h2 className="text-3xl md:text-4xl font-bold mb-4">
+								Ready to Transform Your Business?
 							</h2>
-							<p, className="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au t o">
-								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
+							<p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+								Join hundreds of companies that have already revolutionized their operations with our technology solutions.
 							</p>
-							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};
-								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
+							<button onClick={() => trackClick('final-cta', 'conversion')}
+								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
 							>
-								Start, Your, Journey Tod, a, y
-							</butt, o, n>
-						</d, i, v>
-					</secti, o, n>
-				</d, i, v>
-			</d, i, v>
+								Start Your Journey Today
+							</button>
+						</div>
+					</section>
+				</div>
+			</div>
     </>
-	)};
+	);
+}
+}
