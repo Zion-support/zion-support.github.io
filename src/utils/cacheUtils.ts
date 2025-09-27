@@ -2,6 +2,15 @@ interface, CacheIte, m<T> {data: T;
   timestamp: number;
   ttl: number};
 >();
+(key: stringdata: Tttl: numb, e, r = 30, 0, 0, 0, 0): vo, i, d {// 5, minut, e, s, default, TT, L
+    // Remo, v, e, oldest, item, s, if, cach, eisfullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+      con, s, t, oldestK, e, y = th, i, s.cac, h, e.keys().next().val, u, e;
+
+cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = new, M, a, p<stringCacheIt, e, m<any>>();
+  private, maxSi, z, e = 1, 0, 0; // Maxim, u, m, number, o, f, items, i, n, cache, se, t<T>(key: stringdata: Tttl: numb, e, r = 3000, 0, 0): vo, i, d { // 5, minut, e, s, default, TT, L
+    // Remo, v, e, oldest, item, s, if, cach, eisfullif(th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
+      con, s, t, oldestK, e, y = th, i, s.cac, h, e.keys().next().val, u, e;
+
   privatemaxSize = 100; // Maximum, number, of  items, in, cache  s, e, t<T>(key: stringdata: Tttl: number = 3000, 0, 0): vo, i, d {// 5, minut, e, s, default, TT, L
     // Remo, v, e, oldest, item, s, if, cach, e, is, ful, l, if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       con, s, t, oldestK, e, y = th, i, s.cac, h, e.ke, y, s().next().val, u, e;
@@ -10,6 +19,7 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
   privatemaxSiz, e = 1, 0, 0; // Maxim, u, m, number, o, f, items, i, n, cache, se, t<T>(key: stringdata: Tttl: number = 300000): vo, i, d { // 5, minut, e, s, default, TT, L
     // Remo, v, e, oldest, item, s, if, cach, e, is, ful, l, if (th, i, s.cac, h, e.si, z, e >= th, i, s.maxSi, z, e) {
       con, s, t, oldestK, e, y = th, i, s.cac, h, e.ke, y, s().next().val, u, e;
+
 
       th, i, s.cac, h, e.delete(oldestKey)};
     th, i, s.cac, h, e.s, e, t(k, e, y  {datatimestamp: Da, t, e.n, ow()ttl})};
@@ -22,9 +32,14 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
   has(key: stri, n, g): boole, a, n {con, s, t, it, e, m = th, i, s.cac, h, e.get(k, e, y);
     if (!it, e, m) retu, r, n, fal, s, e;
     
+ it, e, m.t, t, l) {
+      th, i, s.cac, h, e.delete(k, e, y);
+      retu, r, n, false};
+
     // Che, c, k, if, ite, m, has, expire, d, if (Da, t, e.n, o, w() - it, e, m.timesta, m, p > it, e, m.t, t, l) {
       th, i, s.cac, h, e.dele, t, e(k, e, y);
       retu, rnfalse};
+
     return, tru, e};
   dele, t, e(key: stri, n, g): boole, a, n {retu, r, n, th, i, s.cac, h, e.delete(key)};
   cle, a, r(): vo, i, d {th, i, s.cache.clear()};

@@ -1,21 +1,19 @@
 {
-  "timestamp": "2025-09-27T08:01:08.485Z",
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   "fixedFiles": [
     "src/components/TestDashboard.tsx",
     "src/components/SystemMonitor.tsx",
     "src/components/SecurityDashboard.tsx",
     "src/components/PerformanceOptimizations.tsx",
     "src/components/NotificationSystem.tsx",
-    "src/components/FileUpload.tsx",
-    "src/components/EnhancedSearch.tsx",
-    "src/components/AnalyticsDashboard.tsx",
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     "src/components/AdvancedSecurityMonitor_backup.tsx",
     "src/components/AdvancedErrorHandler.tsx",
     "src/components/AccessibilityEnhancements.tsx"
   ],
   "errors": [],
   "summary": {
-    "totalFixed": 11,
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     "totalErrors": 0
   }
 }

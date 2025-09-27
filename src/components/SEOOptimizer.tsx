@@ -53,8 +53,12 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
         />
       )};
       {/* DevelopmentWarning */};
+
+      )};
+
       {process.env.NODE_ENV === "development" && !validation.isValid && (
         <metaname="seo-validation-warning" content={`SEOvalidationfailed: ${validation.errors.join("')}`} />      )};
+
     </Head>
   )};
 

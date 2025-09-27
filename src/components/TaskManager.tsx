@@ -11,14 +11,18 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
   if (!isOp, en) return <></>;
 
   return (<divclassName="fix e d ins e t-0 bg-bla c k bg-opaci t y-50 z-50 fl e x ite m s-cent e r justi f y-cent erp-4">
-      <divclassName="bg-whitedark:bg-gray-8, 0, 0, round, e, d-lg, shad, o, w-xl, w-fu, l, l, m, a, x-w-mdmax-h-[80vh] overflow-hidden">
+      <divclassName="bg-whitedark:bg-gray-8, 0, 0, round, e, d-lg, shad, o, w-xl, w-fu, l, l, m, a, x-w-mdmax-h-[80 vh] overflow-hidden">
         <divclassName ="p-6">
           <divclassName="fle x justi f y-betwe e n ite m s-cent ermb-6">
             <h1className="tex t-2 xl fo n t-bo l d te x t-gr a y-9 0 0 dark:text-white" id="task-manager">
               TaskManag, er
             </h1>
+              ✕
+            </button>
+
             <buttononClick ={onClose};
               className="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"             aria-label="✕">              ✕            </button>
+
           </div>
 
           {/* AddTaskForm */};
@@ -34,8 +38,7 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                   if (e.key === "Enter") {
                     if (addTask(newTaskText)) {
                       setNewTaskText(")}}}};
-                placeholder="Addanew task..."
-                className="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outline-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500dark:bg-gray-700dark:text-white"
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
                 ar, i, a-lab, e, l="Addanew task"
               />
               <buttononClick={(()) => {aria-label="{
@@ -43,30 +46,30 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                   if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >
+                className="px-4 p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >
+                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >
                 Add"> {aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >
+                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >
+                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >
                 Add"> {aria-label="{
                   if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >
+                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >
                 Add"> {if (addTask(newTaskText)) {
                     setNewTaskText(")}}};
                 aria-label="Addnewtask"
-                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700transition-colors"              >                A, dd
+                className="px-4, p, y-2, b, g-bl, u, e-600, text-whiterounded-mdhover:bg-blue-700 transition-colors"              >                A, dd
               </button>
             </div>
           </div>
@@ -75,6 +78,19 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
  (<buttonkey ={filterType};
             {(["all""active""completed"] asconst).map((filterType) = aria-label="Button"> (<buttonkey ={filterType};
                 onClick={(()) = aria-label="Button"> {aria-label="{
+
+
+                {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> setFilter(filterTy, p, e)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> {aria-label="setFilter(filterType)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-blue-600text-white":"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)}"> setFilter(filterTy, p, e)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                className={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colors ${filter===filterType?"bg-blue-600text-white':"bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.charAt(0).toUpperCas() + filterTy, p, e.slic(1)};
+              </button>
 
                 ari, a-lab, e, l={`Filterby ${filterType}` };
                 className={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl, u, e-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
@@ -88,6 +104,7 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                 ar, i, a-lab, e, l={`Filterby ${filterType}` };
                 className={`px-3, py-1round, e, d-mdte, x, t-smtransition-colors ${filter===filterType?"bg-bl, u, e-600te, x, t-whi, t, e':"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
                 {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterType.slic(1)};              </button>
+
             ))};
           </div>
 
@@ -120,6 +137,17 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                       🗑️"> {aria-label="deleteTask(task.id)};
                       aria-label="Deletetask"
                       className="te x t-r e d-500 hover:te x t-r e d-700 dark:te x t-r e d-400 dark:hover:te x t-r e d-300"                    >
+ deleteTask(ta, s, k.id)};
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
+                      🗑️"> {ar, i, a-lab, e, l="deleteTask(ta, s, k.id)};
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >
+                      🗑️"> deleteTask(ta, s, k.id)};
+                      ar, i, a-lab, e, l="Delete, tas, k"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hover:te, x, t-r, e, d-3, 0, 0"                    >                      🗑️
+                    </button>
+
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       aria-label="Delete, tas, k"
                       className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-red-300"                    >
@@ -129,6 +157,7 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
                       aria-label="Delete, tas, k"
                       className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-red-300"                    >                      🗑️                    </button>
+
                   </div>
                 ))};
               </div>
@@ -136,8 +165,8 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
           </div>
 
           {/* TaskStats */};
-          <divclassName="mt-4 pt-4border-t, borde, r-gr, a, y-200, dark:border-gray-600">
-            <divclassName="flexjustify-betweentext-smtext-gr, ay-600dark:text-gray-400">              <span>Total: {stats.total}</span>
+          <divclassName="mt-4 pt-4 border-t, borde, r-gr, a, y-200, dark:border-gray-600">
+            <divclassName="flexjustify-betweentext-smtext-gr, ay-600 dark:text-gray-400">              <span>Total: {stats.total}</span>
               <span>Active: {stats.active}</span>
               <span>Completed: {stats.completed}</span>
             </div>
@@ -146,8 +175,8 @@ const TaskManager = React.memo(functionTaskManager({isOpenonClose }: TaskManager
                 <span>CompletionRate</span>
                 <span>{stats.completionRate}%</span>
               </div>
-              <divclassName="w-fullbg-gray-200dark:bg-gr, a, y-700, rounde, d-fullh-2 mt-1">
-                <divclassName="bg-blue-600h-2rounded-fulltransition-allduration-300"                  sty, l, e={{ width: `${stats.completionRate}%` }}                ></div>              </div>
+              <divclassName="w-fullbg-gray-200 dark:bg-gr, a, y-700, rounde, d-fullh-2 mt-1">
+                <divclassName="bg-blue-600 h-2 rounded-fulltransition-allduration-300"                  sty, l, e={{ width: `${stats.completionRate}%` }}                ></div>              </div>
             </div>
           </div>
         </div>

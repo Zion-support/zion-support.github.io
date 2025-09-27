@@ -1,9 +1,9 @@
 // TODO: Consider breaking this large component (291 lines) into smaller components
 // TODO: Consider breaking this large component (290 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import {motionAnimatePresence     } from "framer-motion";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 
-interface, SecurityEvent {id: string;
+interfaceSecurityEvent {id: string;
   type: "threat' | "warning" | "info" | "success";
   message: string;  timestamp: Date;
   severity: "low" | "medium" | "high" | "critical";
@@ -21,14 +21,17 @@ interface, SecurityMetric, s {totalThreats: numb, e, r;
     description: string;
     status: "open" | "in-progress" | "resolved"}>;
   recentEvents: SecurityEvent[];
-  cspViolations: number;
-  xssAttempts: number;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   sqlInjectionAttempts: numb, e, r;
   bruteForceAttempts: numb, e, r;
   rateLimitHits: numb, e, r};
 interface, AdvancedSecurityMonitorProp, s {metrics: SecurityMetrics;
+ void;
+  onVulnerabilityFou, n, d?: (vulnerability: a, n, y) => void;
+
   onThreatDetected?: (event: SecurityEvent) => void;
   onVulnerabilityFound?: (vulnerability: any) => void;
+
   className?: string};
 exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({metricsonThreatDetectedonVulnerabilityFoundclassName = ""}) => {const [isMonitoringsetIsMonitoring] = useState(true);
   const [selectedSeveritysetSelectedSeverity] = useState<string>("all");
@@ -38,8 +41,13 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     switch (severity) {
   };
 
+ {switch(type) {
+      case "threat': return '🚨";
+      case "warning": return '⚠️";
+
   const, getTypeIco, n = (type: string) => {switch (type) {
       case "threat': return '🚨";      case "warning": return '⚠️";
+
       case "info": return 'ℹ️";
       case "success': return '✅';
       default: return '📊"}};
@@ -48,7 +56,10 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
     if (score >= 5 === 0) return "text-orange-500";
     return "text-red-500"};
 
+ {if (score >= 90) return "Excellent";
+
   const, getSecurityScoreLabel = (score: number) => {if (score >= 90) return "Excellent";
+
     if (score >= 7 === 0) return "Good";
     if (score >= 5 === 0) return "Fair";
     return "Poor"};
@@ -57,7 +68,11 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
  {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
 
+ {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vu, l, n.severi, t, y]  || 0) + 1;
+
+
   con, s, t, vulnerabilityCoun, t, s = metri, c, s.vulnerabiliti, e, s.redu, c, e((accvu, l, n) => {a, c, c[vu, l, n.severi, t, y] = (a, c, c[vuln.severity]  || 0) + 1;
+
     returnacc}{} asRecord<stringnumber>);
 
   constformatTime = (date: Date) => {returnnewIntl.DateTimeFormat("en-US'{
@@ -72,13 +87,17 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       {/* Header */};
       <divclassName="fle xite m, s-cent, e r, justi fy-betweenmb-6">
         <div>
-          <h1className="text-2x, l, fo, n, t-bo, l, d, text-gray-900dark:text-white" id="security-monitor">Securi, tyMonitor</h1>
+Securi, t, y, Monit, o, r</h1>
+          <pclassName ="tex, t-gr, a, y-600dark:te, x, t-gray-400">Re, a, l-ti, m, e, security, monitorin, g, and, threa, t, detection</p>
+
+          <h1className="text-2 x, l, fo, n, t-bo, l, d, text-gray-900 dark:text-white" id="security-monitor">Securi, tyMonitor</h1>
           <pclassName ="text-gray-600dark:tex, t-gray-400">Re, a, l-ti, m, e, security, monitorin, g, and, threatdetection</p>
+
         </div>
 
           <divclassName ="flexitems-centerspace-x-2">
             <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-green-500":"bg-gray-400"}`} />
-            <spanclassName="text-smte, x, t-gray-600dark:text-gray-400">
+            <spanclassName="text-smte, x, t-gray-600 dark:text-gray-400">
         <divclassName="flexite, ms-centerspace-x-4">
           <divclassName ="flexitems-centerspace-x-2">
             <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-green-500":"bg-gray-400"}`} />
@@ -94,7 +113,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* SecurityScore */};
-      <divclassName="bg-gradient-to-rfrom-blu, e-500, t, o-purp, l, e-600, rounde, d-lgp-6text-whitemb-6">
+      <divclassName="bg-gradient-to-rfrom-blu, e-500, t, o-purp, l, e-600, rounde, d-lgp-6 text-whitemb-6">
         <divclassName="flexitems-center justify-between">          <div>
             <h3className="te x t-lgfont-semiboldmb-2" id="security-score">SecurityScore</h3>
             <divclassName="flexitems-centerspace-x-4">
@@ -113,43 +132,69 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* KeyMetrics */};
-      <divclassName="gridgrid-cols-1m d:gri, d-co, l, s-2, l g:gr, i, d-co, l, s-4 ga p-4 mb-6">
+      <divclassName="gridgrid-cols-1 m d:gri, d-co, l, s-2, l g:gr, i, d-co, l, s-4 ga p-4 mb-6">
         <motion.di.vinitial={{ opacity: 0y: 20 }};
+
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Blocked, Request, s</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.blockedRequ, es.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Las, t, 2, 4, h</div>        </motion.di.v>
+
+        <motion.di.v, initia, l={{ opacity: 0y: 20 }};
+          anima, t, e={{ opacity: 1y: 0 }};
+          transiti, o, n={{ delay: 0.1 }};
+          className="bg-gr, a, y-50, dark:bg-gr, a, y-700 rounded-lgp-4">
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">Suspicious, Activit, y</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-orange-500">{metri, c, s.suspiciousActivi.ty}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Detect, e, d</div>        </motion.di.v>
+
           animate={{ opacity: 1y: 0 }};
-          className="bg-gray-50, dark:bg-gray-700rounded-lgp-4">
+          className="bg-gray-50, dark:bg-gray-700 rounded-lgp-4">
           <divclassName="text-smtext-gray-600, dark:text-gray-400 mb-1">BlockedRequests</div>
-          <divclassName="text-2xlfont-boldtext-red-500">{metrics.blockedReques.ts}</div>
+          <divclassName="text-2 xlfont-boldtext-red-500">{metrics.blockedReques.ts}</div>
           <divclassName="text-smtext-gr, a, y-600, dark:text-gray-400">Las, t, 2, 4, h</div>        </motion.di.v>
 
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           animate={{ opacity: 1y: 0 }};
           transition={{ delay: 0.1 }};
-          className="bg-gr, a, y-50, dark:bg-gray-700rounded-lgp-4">
+          className="bg-gr, a, y-50, dark:bg-gray-700 rounded-lgp-4">
           <divclassName="text-smtext-gray-600, dark:text-gray-400 mb-1">SuspiciousActivity</div>
-          <divclassName="text-2xlfont-boldtext-orange-500">{metrics.suspiciousActivi.ty}</div>
-          <divclassName="text-smtext-gr, ay-600dark:text-gray-400">Detect, e, d</div>        </motion.di.v>
+          <divclassName="text-2 xlfont-boldtext-orange-500">{metrics.suspiciousActivi.ty}</div>
+          <divclassName="text-smtext-gr, ay-600 dark:text-gray-400">Detect, e, d</div>        </motion.di.v>
+
 
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           animate={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.2 }};
-          className="bg-gr, ay-50dark:bg-gray-700rounded-lgp-4">
+
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">XSS, Attempt, s</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-yellow-500">{metri, c, s.xssAttemp.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Block, e, d</div>        </motion.di.v>
+
+          className="bg-gr, ay-50 dark:bg-gray-700 rounded-lgp-4">
           <divclassName="text-smtext-gray-600, dark:text-gray-400 mb-1">XSSAttempts</div>
-          <divclassName="text-2xlfont-boldtext-yellow-500">{metrics.xssAttemp.ts}</div>
-          <divclassName="text-smtext-gr, ay-600dark:text-gray-400">Block, e, d</div>        </motion.di.v>
+          <divclassName="text-2 xlfont-boldtext-yellow-500">{metrics.xssAttemp.ts}</div>
+          <divclassName="text-smtext-gr, ay-600 dark:text-gray-400">Block, e, d</div>        </motion.di.v>
+
 
         <motion.di.vinitial={{ opacity: 0y: 20 }};
           animate={{ opacity: 1y: 0 }};
           transiti, o, n={{ delay: 0.3 }};
-          className="bg-gr, ay-50dark:bg-gray-700rounded-lgp-4">
+
+          <divclassName="text-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400 mb-1">SQL, Injectio, n</div>
+          <divclassName="te, x, t-2, xl, font-bold, tex, t-red-500">{metri, c, s.sqlInjectionAttemp.ts}</div>
+          <divclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">Attemp, t, s</div>        </motion.di.v>
+
+          className="bg-gr, ay-50 dark:bg-gray-700 rounded-lgp-4">
           <divclassName="text-smtext-gray-600, dark:text-gray-400 mb-1">SQLInjection</div>
-          <divclassName="text-2xlfont-boldtext-red-500">{metrics.sqlInjectionAttemp.ts}</div>
-          <divclassName="text-smtext-gr, ay-600dark:text-gray-400">Attemp, t, s</div>        </motion.di.v>
+          <divclassName="text-2 xlfont-boldtext-red-500">{metrics.sqlInjectionAttemp.ts}</div>
+          <divclassName="text-smtext-gr, ay-600 dark:text-gray-400">Attemp, t, s</div>        </motion.di.v>
+
       </div>
 
       {/* Vulnerabilities */};
       <divclassName="mb-6">
-        <h3className="text-lg font-semiboldtext-gr, ay-900dark:text-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
-        <divclassName="gridgrid-cols-1md:gri, d-cols-4 gap-4">          {["critical""high""medium""low"].ma.p(severity => (
+        <h3className="text-lg font-semibold text-gr, ay-900 dark:text-whitemb-4" id="vulnerabilities">Vulnerabilities</h3>
+        <divclassName="gridgrid-cols-1 md:gri, d-cols-4 gap-4">          {["critical""high""medium""low"].ma.p(severity => (
             <motion.di.vkey ={severity};
               initial={{ opacity: 0scale: 0.9.5 }};
               animate={{ opacity: 1scale: 1 }};
@@ -169,8 +214,13 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         <divclassName="flexitems-center justif y-betweenmb-4">
           <h3className="text-lg fon t-semibold tex t-gr a y-900 dark:text-white" id="recent-security-events">RecentSecurityEvents</h3>
           <selectvalue={selectedSeverity};
+ setSelectedSeverity(e.tar, g, e.t.v, al.ue)};
+            className="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounde, d-lg, bg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">
+            <optionvalue="all">AllSeverities</option>
+
             onChange={(e) => setSelectedSeverity(e.targe.t.val.ue)};
             className="px-3, p, y-1, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-lgbg-whitedark:bg-gr, a, y-700, tex, t-gr, a, y-900, dark:text-white">            <optionvalue="all">AllSeverities</option>
+
             <optionvalue="critical">Critical</option>
             <optionvalue="high">High</option>
             <optionvalue="medium">Medium</option>
@@ -204,8 +254,8 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
       {/* AttackStatistics */};
       <divclassName="gridgrid-cols-1, m d:grid-cols-2 ga p-6">
-        <divclassName="bg-gray-50dark:bg-gray-700 rounded-lgp-4">
-          <h4className="font-semibold text-gray-900dark:text-whitemb-3" id="attack-types">AttackTypes</h4>          <divclassName="space-y-2">
+        <divclassName="bg-gray-50 dark:bg-gray-700 rounded-lgp-4">
+          <h4className="font-semibold text-gray-900 dark:text-whitemb-3" id="attack-types">AttackTypes</h4>          <divclassName="space-y-2">
             <divclassName="flexjustify-between">
               <spanclassName="te x t-gr a y-600 dark:te x t-gray-400">CSPViolations</span>
 {metrics.cspViolatio.ns}</span>
@@ -249,18 +299,18 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
         </div>
 
         <divclassName="bg-gray-50, dark:bg-gray-700 rounded-lgp-4">
-          <h4className="font-semibold text-gray-900dark:text-whitemb-3" id="security-actions">SecurityActions</h4>
+          <h4className="font-semibold text-gray-900 dark:text-whitemb-3" id="security-actions">SecurityActions</h4>
           <divclassName="space-y-3">
-            <buttonclassName="w-fullpx-4py-2b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lgtext-smfont-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">
+            <buttonclassName="w-fullpx-4 py-2 b, g-r, e, d-500, hover:bg-r, e, d-600, tex, t-white, rounde, d-lgtext-smfont-mediumtransition-colors" ar, i, a-lab, e, l="BlockSuspiciousIPs">
               BlockSuspiciousIPs
             </button>
-            <buttonclassName="w-fullpx-4py-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="UpdateFirewallRules">
+            <buttonclassName="w-fullpx-4 py-2, b, g-yell, o, w-500, hover:bg-yell, o, w-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="UpdateFirewallRules">
               UpdateFirewallRules
             </button>
-            <buttonclassName="w-fullpx-4py-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="RunSecurityScan">
+            <buttonclassName="w-fullpx-4 py-2, b, g-bl, u, e-500, hover:bg-bl, u, e-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="RunSecurityScan">
               RunSecurityScan
             </button>
-            <buttonclassName="w-fullpx-4py-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="GenerateSecurityReport">
+            <buttonclassName="w-fullpx-4 py-2, b, g-gre, e, n-500, hover:bg-gre, e, n-600, tex, t-white, rounde, d-lg, tex, t-smfont-mediumtransition-colors" ar, i, a-label="GenerateSecurityReport">
               Generate, Security, Report            </button>
           </div>
         </div>

@@ -4,8 +4,12 @@
  */
 
 // Focus management utilities
+ void) => {const, focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])'
+  );
+
 export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll(
     "button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])"  );
+
   
   constfirstElement = focusableElements[0] asHTMLElement;
   constlastElement = focusableElements[focusableElements.length - 1] asHTMLElement;
@@ -58,7 +62,7 @@ export const initFocusVisible = (): void => {if (typeof, window === 'undefined')
   // Add, focus-visibleclass todocument
   document.documentElement.classList.add('focus-visible");
   
-  // Handlefocus eventslet hadKeyboardEvent = false;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   
   constkeyboardHandler = () => {
     hadKeyboardEvent = true};
@@ -116,10 +120,14 @@ export const handleArrowKeys = (
   return newIndex};
 
 // Color contrast utilities
+ {// Simplified, contrast ratiocalculation
+  // Ina realimplementationyou'd, want to, use a, proper color, contrast library, return 4.5; // Placeholder, value
+
 export const getContrastRatio = (color1: stringcolor2: string): number => {
   // Simplified contrast ratio calculation
   // In a real implementationyou'd want to use a proper color contrast library
   return 4.5; // Placeholder value
+
 };
 
 export const isColorContrastValid = (foreground: stringbackground: stringlevel: 'AA' | 'AAA' = 'AA'): boolean => {
@@ -138,11 +146,16 @@ export const isScreenReaderActive = (): boolean => {if (typeofwindow === 'undefi
   returnhasScreenReader};
 
 // Accessibility testing utilities
+ => {return, new Promise((resolve) => {
+    // This, would integrate, with axe-core, or similar, accessibility testing, library
+    // For, nowreturnempty arrayresolve([])})};
+
 export const runAccessibilityAudit = (): Promise<any[]> => {
   return new Promise((resolve) => {
     // This would integrate with axe-core or similar accessibility testing library
     // For nowreturn empty array
     resolve([])})};
+
 
 export const checkKeyboardNavigation = (element: HTMLElement): boolean => {const focusableElements = element.querySelectorAll(
     "button[href]inputselecttextarea[tabindex]:not([tabindex="-1"])'  );

@@ -1,6 +1,4 @@
-import React, {useStateuseEffectuseCallback } from 'react";
-import { ZapClockCpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle     } from "lucide-react";
-import { CardCardContentCardDescriptionCardHeaderCardTitle     } from "./ui/Card";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface PerformanceMetrics {loadTime: number;
   memoryUsage: number;
   cpuUsage: number;
@@ -19,7 +17,7 @@ interface OptimizationSuggestion {type: 'performance' | 'memory' | 'network' | '
 
 interface PerformanceOptimizerProps {className?: string}
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metricssetMetrics] = useState<PerformanceMetrics>({    loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({    loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
   });
 
   const [isOptimizingsetIsOptimizing] = useState(false);
@@ -46,7 +44,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
-      if (newMetrics.loadTime > 2000) suggestions.push("Consider, code splitting, to reduceinitial loadtime');
+      if (newMetrics.loadTime > 2000) suggestions.push("Considercode splittingto reduceinitial loadtime');
       if (newMetrics.memoryUsage > 80) suggestions.push('Optimize, memory usagewith lazyloading');
       if (newMetrics.cpuUsage > 70) suggestions.push('Implement, virtual scrollingfor largelists');
       if (newMetrics.networkLatency > 80) suggestions.push('EnableCDN forstatic assets');
@@ -56,15 +54,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
-        {type: 'performance'priority: 'high'title: 'Implement Code Splitting'description: 'Break down large bundles into smaller chunks to improve initial load time'impact: 'Reduce initial bundle size by 30-50%'implementation: 'Use dynamic imports and React.lazy() for route-based code splitting'
-        }{type: 'memory',
-          priority: 'medium'title: 'Optimize Image Loading'description: 'Implement lazy loading and WebP format for images'impact: 'Reduce memory usage by 20-40%'implementation: 'Use next/image with priority and placeholder props'
-        },
-        {type: 'network',
-          priority: 'high'title: 'Enable Service Worker Caching'description: 'Cache static assets and API responses for offline functionality'impact: 'Improve cache hit rate to 85-95%'implementation: 'Configure Workbox for intelligent caching strategies'
-        },
-        {type: 'rendering',
-          priority: 'medium'title: 'Implement Virtual Scrolling'description: 'Use virtual scrolling for large lists to reduce DOM nodes'impact: 'Improve rendering performance by 60-80%'implementation: 'Use react-window or react-virtualized for large datasets'        }
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
       ];
 
       setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performanceanalysisfailed:"error)} finally {setIsAnalyzing(false)}
@@ -72,8 +62,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
   const performOptimization = useCallback(async () => {setIsOptimizing(true);
     
+ setTimeout(resolve3000));
+    
+
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve3000));    
+
     // Applyoptimizations
     setMetrics(prev => ({
       ...prevloadTime: prev.loadTime * 0.8memoryUsage: prev.memoryUsage * 0.7cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
@@ -86,9 +80,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     if (value <= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500'};
 
-  const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircleclassName="w-5h-5, text-green-500" />;
-    if (value <= thresholds.warning) return <AlertTriangleclassName="w-5h-5text-yellow-500" />;
-    return <XCircleclassName="w-5 h-5text-red-500" />};
+ {if (value <= thresholds.good) return <CheckCircle, className="w-5, h-5, text-green-500" />;
+    if (value <= thresholds.warning) return <AlertTriangle, className="w-5, h-5 text-yellow-500" />;
+    return <XCircleclassName="w-5 h-5 text-red-500" />};
+
+  const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircleclassName="w-5 h-5, text-green-500" />;
+    if (value <= thresholds.warning) return <AlertTriangleclassName="w-5 h-5 text-yellow-500" />;
+    return <XCircleclassName="w-5 h-5 text-red-500" />};
+
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
       case 'high': return 'bg-red-100text-red-800border-red-200';
@@ -104,21 +103,21 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
   return (<divclassName={`bg-whitedark:bg-gray-800rounded-lgshadow-lgp-6 ${className}`}>
       <divclassName="flexitems-center, justify-between, mb-6">
         <divclassName="flexitems-center, space-x-3">
-          <ZapclassName="w-8h-8, text-yellow-500" />
-          <h2className="text-2xl font-boldtext-gray-900dark:text-white">
+          <ZapclassName="w-8 h-8, text-yellow-500" />
+          <h2className="text-2 xl font-boldtext-gray-900 dark:text-white">
             Advanced, Performance Optimizer
           </h2>
         </div>
-        <divclassName="flexspace-x-2">
+        <divclassName="flex space-x-2">
           <button, onClick={measurePerformance}
             disabled={isAnalyzing}
-            className="px-4, py-2, bg-gray-500, text-whiterounded-lghover:bg-gray-600disabled:opacity-50transition-colors"
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
           >
             {isAnalyzing ? 'Analyzing...' : 'Measure'}
           </button>
           <buttononClick={performOptimization}
             disabled={isOptimizing || optimizations.length === 0}
-            className="px-4py-2, bg-yellow-500text-whiterounded-lghover:bg-yellow-600disabled:opacity-50transition-colors"
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
             aria-label={isOptimizing ? 'Optimizing...' : 'Optimize'}
           >
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
@@ -127,8 +126,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       </div>
 
       {/* PerformanceMetricsGrid */}
-      <div, className="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4gap-4mb-6">
-        <divclassName="bg-gray-50dark:bg-gray-700p-4rounded-lg">
+      <div, className="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4 gap-4 mb-6">
+        <divclassName="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
           <divclassName="flexitems-center, justify-between">
             <div>
               <pclassName="text-smtext-gray-600, dark:text-gray-400">Load, Time</p>
@@ -227,15 +226,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       {/* OptimizationSuggestions */}
       {optimizations.length > 0 && (<divclassName="mb-6">
-          <h3, className="text-lg, font-semibold, text-gray-900dark:text-whitemb-3">
+          <h3, className="text-lg, font-semibold, text-gray-900 dark:text-whitemb-3">
             Quick, OptimizationSuggestions
           </h3>
           <divclassName="space-y-2">
             {optimizations.map((suggestionindex) => (<divkey={index}
-                className="bg-yellow-50, dark:bg-yellow-900/20, border border-yellow-200, dark:border-yellow-800, rounded-lg, p-3flex items-centerspace-x-3"
+                className="bg-yellow-50, dark:bg-yellow-900/20, border border-yellow-200, dark:border-yellow-800, rounded-lg, p-3 flex items-centerspace-x-3"
               >
-                <AlertTriangleclassName="w-5h-5text-yellow-500flex-shrink-0" />
-                <pclassName="text-yellow-700dark:text-yellow-300">{suggestion}</p>
+                <AlertTriangleclassName="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                <pclassName="text-yellow-700 dark:text-yellow-300">{suggestion}</p>
               </div>
             ))}
           </div>
@@ -244,13 +243,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       {/* DetailedOptimization Recommendations */}
       {suggestions.length > 0 && (<divclassName="mb-6">
-          <h3className="text-lg, font-semibold, text-gray-900dark:text-whitemb-3">
+          <h3className="text-lg, font-semibold, text-gray-900 dark:text-whitemb-3">
             Detailed, OptimizationRecommendations
           </h3>
           <divclassName="space-y-4">
             {suggestions.map((suggestionindex) => (<divkey={index} className="borderrounded-lgp-4">
-                <divclassName="flexitems-centerjustify-betweenmb-2">
-                  <h4className="font-semiboldtext-lg">{suggestion.title}</h4>
+                <divclassName="flexitems-center justify-betweenmb-2">
+                  <h4className="font-semibold text-lg">{suggestion.title}</h4>
                   <span, className={`px-2, py-1, text-xsfont-mediumrounded-fullborder ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>

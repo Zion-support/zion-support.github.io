@@ -1,12 +1,7 @@
 // TODO: Consider breaking this large component (297 lines) into smaller components
 // TODO: Consider breaking this large component (296 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import {motionAnimatePresence     } from "framer-motion";
-
-interface, SystemAlert {id: string;
-  type: "error" | "warning" | "info" | "success";  title: stri, n, g;
-  message: string;
-  timestamp: Date;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   source: string;
   severity: "low" | "medium" | "high" | "critical";
   resolved: boolean;
@@ -25,10 +20,15 @@ interfaceSystemMetrics {cpu: number;
 interface, SystemMonitorProp, s {onAle, r, t?: (alert: SystemAle, r, t) => void;
   onMetricsUpdate?: (metrics: SystemMetri, c, s) => void;
   enableRealTi, m, e?: boole, a, n;
+ = ({onAlert, onMetricsUpdate, enableReal, T, i, m, e = tr, u, e, refreshInterv, a, l = 5000
+}) => {const [aler, t, s, setAler, t, s] = useState<SystemAlert[]>([]);
+  const [metrics, setMetri, cs] = useState<SystemMetrics>({cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
+
   refreshInterval?: number};
 exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdateenableRealTi, m, e = tr, u, e, refreshInterval = 5000
 }) => {const [aler, t, s, setAlerts] = useState<SystemAlert[]>([]);
-  const [metricssetMetrics] = useState<SystemMetrics>({cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
+  const [metrics, setMetrics] = useState<SystemMetrics>({cpu: 0memory: 0disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
+
   });
   const [isMonitoringsetIsMonitoring] = useState(false);
 
@@ -81,10 +81,16 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
   const, addAler, t = useCallba, c, k((alert: SystemAle, r, t) => {setAler, t, s(pr, e, v => [ale, r, t  ...pr, e, v.sli, c, e(0, 49)]); // Ke, e, p, only, last5, 0, alertsonAlert? .(alert)}[onAlert]);
   // MonitoringeffectuseEffect(() => {if (!enableRealTi, m, e) retu, r, n;
 
+ {
+      constnewMetrics = generateMetrics();
+      setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+
     con, s, t, interv, a, l = setInterv, a, l(() => {
       constnewMetri, c, s = generateMetri, c, s();
       setMetri, c, s(newMetri, c, s);
       onMetricsUpdate?.(newMetri, c, s);
+
 
       // Generatealerts, basedon, metricsif (newMetri, c, s.c, p, u > 90) {
         addAlert(generateAlert())};
@@ -99,6 +105,18 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
       case "success": return <CheckCircleclassName ="h-5w-5text-green-500" />};
       setIsMonitoring(fals, e)}}[enableRealTimerefreshIntervalgenerateMetri  csonMetricsUpdateaddAlertgenerateAle: rt]);
 
+ {switch(type) {
+      case "err, o, r': return <XCircleclassName ="h-5w-5text-red-500" />;
+      ca, s, e "warning": return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
+      ca, s, e "info": return <InfoclassNam, e ="h-5w-5te, x, t-blue-500" />;
+      ca, s, e "success": return <CheckCircleclassName ="h-5w-5text-green-500" />}};
+
+  constgetAlertColor = (type: SystemAlert["type"]) => {switch(type) {
+      case "error': return "bord, e, r-r, e, d-200bg-red-50";
+      ca, s, e "warning": return "bord, e, r-yell, o, w-200bg-yellow-50";
+      ca, s, e "info": return "bord, e, r-bl, u, e-200bg-blue-50";
+      ca, s, e "success": return "bord, e, r-green-200bg-green-50"}};
+
   constgetAlertIcon = (type : SystemAlert["type"]) => {switch (type) {      case "error": return <XCircleclassName ="h-5w-5text-red-500" />;
       case "warning": return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
       case "info": return <InfoclassName ="h-5w-5text-blue-500" />;
@@ -110,6 +128,7 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
       ca, s, e "info": return "border-blue-200bg-blue-50";
       case "success": return "border-green-200bg-green-50"}};
 
+
   const, getSeverityColo, r = (severity: SystemAlert["severity"]) => {switch (severity) {
       case "low": return "text-gray-600";
       case "medium": return "te, xt-yellow-600";
@@ -119,10 +138,24 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
       case "l, o, w': return "te, x, t-gray-600";
       ca, s, e "medium": return "te, xt-yellow-600";
       ca, s, e "high": return "te, xt-orange-600";
+ {switch(severi, t, y) {
+      case 'low': return 'te, x, t-gray-600';
+      ca, s, e 'medium': return 'te, xt-yellow-600';
+      ca, s, e 'high': return 'te, xt-orange-600';
+      ca, s, e 'critical': return 'te, xt-red-600'}};
+ {con, s, t, da, y, s = Math.floor(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
+    con, s, t, hou, r, s = Math.floor((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
+    con, s, t, minut, e, s = Math.floor((upti, m, e % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
+
+  con, s, t, formatUpti, m, e = (uptime: numb, e, r) => {con, s, t, da, y, s = Math.floor(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
+    con, s, t, hou, r, s = Math.floor((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
+    con, s, t, minut, e, s = Math.floor((upti, m, e % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
+
       ca, se 'critical': return "text-red-600"}};
  {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
     con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
     con, s, t, minut, e, s = Ma, t, h.flo, o, r((upti, m, e % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
+
 
   con, s, t, formatUpti, m, e = (uptime: numb, e, r) => {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
     con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
@@ -140,13 +173,20 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
               <pclassName="text-smfont-mediumtext-gray-600">CPUUsa, g, e</p>
               <pclassName ="text-2xlfont-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
             </div>
-            <ServerclassName="h-8 w-8text-blue-500" />
+            <ServerclassName="h-8 w-8 text-blue-500" />
           </div>
           <divclassName="mt-4">
+
+              <div90?"bg-red-500":metri, c, s.cpu>70?"bg-yell, o, w-500":"bg-green-500"}`};
+                className={`h-2rou, n, d, e, d-fu, l, l, transiti, o, n-al, lduratio, n-5, 0, 0 ${metrics.cpu>90?"bg-red-500":metrics.cpu>70?"bg-yellow-500":"bg-green-500"}`};
+                sty, l, e={{ width: `${metrics.cpu}%` }};
+              />
+
             <divclassName="w-fullbg-gray-200 rounded-fullh-2">
               <div90?"bg-red-500":metrics.cpu>70?"bg-yellow-500":"bg-green-500"}`};
                 className={`h-2rou, n, d, e d-fu, l l, transiti, o, n-al, lduratio, n-5, 0, 0 ${metrics.cpu>90?"bg-red-500":metrics.cpu>70?"bg-yellow-500":"bg-green-500"}`};
                 sty, le={{ width: `${metrics.cpu}%` }};              />
+
             </div>
           </div>
         </motion.div>
@@ -159,15 +199,22 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
           <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="text-smfont-mediumtext-gray-600">MemoryUsage</p>
-              <pclassName="text-2xlfont-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
+              <pclassName="text-2 xlfont-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
             </div>
-            <DatabaseclassName="h-8 w-8tex t-green-500" />
+            <DatabaseclassName="h-8 w-8 tex t-green-500" />
           </div>
           <divclassName="mt-4">
+
+              <div85?"bg-red-500":metri, c, s.memory>70?"bg-yell, o, w-500":"bg-green-500"}`};
+                className={`h-2rou, n, d, e, d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metrics.memory>85?"bg-red-500":metrics.memory>70?"bg-yellow-500":"bg-green-500"}`};
+                sty, l, e={{ width: `${metrics.memory}%` }};
+              />
+
             <divclassName="w-fullbg-gray-200 rounded-fullh-2">
               <div85?"bg-red-500":metrics.memory>70?"bg-yellow-500":"bg-green-500"}`};
                 className={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metrics.memory>85?"bg-red-500":metrics.memory>70?"bg-yellow-500":"bg-green-500"}`};
                 sty, le={{ width: `${metrics.memory}%` }};              />
+
             </div>
           </div>
         </motion.div>
@@ -180,15 +227,22 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
           <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="text-smfont-mediumtext-gray-600">ResponseTime</p>
-              <pclassName="text-2xlfont-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
+              <pclassName="text-2 xlfont-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
             </div>
-            <ActivityclassName="h-8 w-8tex t-purple-500" />
+            <ActivityclassName="h-8 w-8 tex t-purple-500" />
           </div>
           <divclassName="mt-4">
+
+              <div1000?"bg-red-500":metri, c, s.responseTi, m, e>500?"bg-yell, o, w-500":"bg-green-500"}`};
+                className={`h-2rou, n, d, e, d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metrics.responseTime>10,0,0?"bg-red-500":metrics.responseTime>5,0,0?"bg-yellow-500":"bg-green-500"}`};
+                sty, l, e={{ width: `${Math.min(1,0,0(metrics.responseTime/10,0,0)*100)}%` }};
+              />
+
             <divclassName="w-fullbg-gray-200 rounded-fullh-2">
               <div1000?"bg-red-500":metrics.responseTime>500?"bg-yellow-500":"bg-green-500"}`};
                 className={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metri, c, s.responseTime>1000?"bg-red-500":metrics.responseTime>500?"bg-yellow-500":"bg-green-500"}`};
                 sty, l, e={{ width: `${Ma, t, h.m, i, n(1, 0, 0(metri, c, s.responseTime/1000)*100)}%` }};              />
+
             </div>
           </div>
         </motion.div>
@@ -201,20 +255,20 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
           <divclassName="flexitems-center justify-between">
             <div>
               <pclassName="text-smfont-mediumtext-gray-600">Uptime</p>
-              <pclassName="text-2xlfont-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>            </div>
-            <GlobeclassName="h-8 w-8tex t-indigo-500" />
+              <pclassName="text-2 xlfont-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>            </div>
+            <GlobeclassName="h-8 w-8 tex t-indigo-500" />
           </div>
         </motion.div>
       </div>
 
       {/* AlertsSection */};
-        <divclassName="px-6 py-4border-bborde, r-gray-200">
+        <divclassName="px-6 py-4 border-bborde, r-gray-200">
           <divclassName="flexitems-center justify-between">
             <h3className="text-lgfont-mediumtext-gray-900" id="system-alerts">SystemAlerts</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2rounded-full ${isMonitoring?"bg-green-500":"bg-gray-400"}`} />
       <divclassName="bg-whiterounded-lgshadow-smborderborder-gray-200">
-        <divclassName="px-6 py-4border-bborder-gray-200">
+        <divclassName="px-6 py-4 border-b border-gray-200">
           <divclassName="flexitems-center justify-between">
             <h3className="text-lgfont-mediumtext-gray-900" id="system-alerts">SystemAlerts</h3>
             <divclassName="flexitems-centerspace-x-2">
@@ -229,13 +283,13 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
         <divclassName="max-h-96 overflow-y-auto">
           <AnimatePresence>
 
-                <CheckCircleclassName="h-12w-12mx-automb-4 text-green-500" />
+                <CheckCircleclassName="h-12 w-12 mx-automb-4 text-green-500" />
                 <p>Noalertsat  thistime</p>
                 <pclassName ="text-sm">Systemisrunning: smoothly</p>
               </div>
             )  : (alerts.m, ap((alertindex) => (<motion.divkey ={alert.id};
-            {alerts.length === 0 ? (<divclassName="p-6text-centerte, x, t-gr, a, y-500">
-                <CheckCircleclassName="h-12w-12m, x-au, t, o, mb-4text-green-500" />
+            {alerts.length === 0 ? (<divclassName="p-6 text-centerte, x, t-gr, a, y-500">
+                <CheckCircleclassName="h-12 w-12 m, x-au, t, o, mb-4 text-green-500" />
                 <p>Noalertsatthistime</p>
                 <pclassName ="text-sm">Systemisrunning: smoothly</p>
               </div>
@@ -244,7 +298,10 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlertonMetricsUpdat
                   animate={{ opacity: 1x: 0 }};
                   ex, i, t={{ opacity: 0x: 20 }};
                   transiti, o, n={{ delay: index * 0.1 }};
+
+
                   className={`p-4border-l-4 ${getAlertColor(alert.type)} ${alert.resolved?"opacity-50":''}`};                >
+
                   <divclassName="flexitems-startjustify-between">
                     <divclassName="flexitems-start space-x-3">
                       {getAlertIcon(alert.type)};

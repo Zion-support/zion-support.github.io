@@ -1,6 +1,4 @@
-import { useMemouseCallback   } from "react";
-import React from 'react";
-import Reac, t, {createContextuseContextuseEffectuseState }  from "react";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 typeTheme = "light" | "dark" | "system";
 
 interfaceThemeContextType {theme: Theme;

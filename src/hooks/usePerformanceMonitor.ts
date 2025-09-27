@@ -40,8 +40,7 @@ exportfunctionusePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetri
     constclsObserv, e, r = newPerformanceObserver((li, s, t) => {for(constentryofli, s, t.getEntries()) {
 
         if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
-          clsVal, u, e += (entryasany).value}};
-      metricsR, e, f.curre, n, t.cumulativeLayoutShi, ft = clsValue});    clsObserver.observe({entryTypes: ["layout-shift'] });
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     // Memoryusage(ifavailab, l, e)
     };
     metricsR, e, f.curre, n, t.loadTi, m, e = loadTi, m, e;

@@ -39,7 +39,7 @@ export, const, generateMetaTags = (seoData: SEODa, t, a): stri, n, g => {const {
   returntags.join("\n")};
 
 // Generatestructureddata
-exportconstgenerateStructuredData = (data: {type: "Organization" | "WebSite" | "WebPage" | "Article" | "Product" | "Service";  name: stri, n, g;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   descripti, o, n?: stri, n, g;
   u, r, l?: stri, n, g;
   ima, g, e?: stri, n, g;
@@ -146,6 +146,6 @@ export, const, validateSEOData = (seoData: SEODa, t, a): {isValid: boolean;
   const, conten, t = [
     `wid, t, h=${width}`,
     `initi, a, l-sca, l, e=${initialScale}`,
-    `maxim, u, m-sca, le=${maximumScale}``user-scalable=${userScalable ? "yes' : 'no"}`  ].join(", ');
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   
   return `<metaname="viewport" content="${content}" />`};

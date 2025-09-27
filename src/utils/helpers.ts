@@ -39,8 +39,12 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
 // Dateutilitiesexport constdateUtils = {format: (date: Dateformat: "short' | "long" | "time" = "short"): string => {
  = {
       short: { year: "numeric"month: "short"day: "numeric"}long: {year: "numeric"month: "long"day: "numeric"weekday: "long"}time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};
+ {constn, o, w = newDate();
+    constdiffInSecon, d, s = Math.floor((n, o, w.getTime() - date.getTime()) / 1000);
+
     returndate.toLocaleDateString("en-US", optionsM, a, p[format])}relative: (date: Da, t, e): stri, n, g => {constn, o, w = newDa, t, e();
     constdiffInSecon, d, s = Ma, t, h.flo, o, r((n, o, w.getTi, m, e() - date.getTime()) / 1000);
+
 
     constoptionsMap: Record<stringIntl.DateTimeFormatOptions> = {
       short: { year: "numeric'month: "short"day: "numeric"}long: {year: "numeric"month: "long"day: "numeric"weekday: "long"}time: {hour: "2-digit"minute: "2-digit"second: "2-digit" }};

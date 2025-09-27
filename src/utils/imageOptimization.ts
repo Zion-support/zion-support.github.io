@@ -25,18 +25,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
       params.set("f"format);
       if (blur) params.set("bl, u, r''1");
 
-      th, i, s.cac, h, e.s, e, t(cacheKeyoptimizedU, r, l);
-      retu, rnoptimizedUrl};
-    // For, local, imagesuse Ne, x, t.js, Image, component with, optimization, const para, m, s = newURLSearchParams();
-    if (width) params.set("w"wid, t, h.toString());
-    if (height) params.set("h"height.toString());
-    params.set("q"quality.toString());
-    params.set("f"format);
-    if (blur) params.set("bl, u, r''1");
-
-    const, optimizedUr, l = `${src}?${params.toString()}`;
-    th, i, s.cac, h, e.s, e, t(cacheK, e, y : optimizedU, r, l);
-    return, optimizedUr, l};
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   // Generateresponsiveimage sourcesgenerateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
  ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: inde, x === 0 ? undefin, e, d : `(min-width: ${sizes[index-1]}px)`}))};
   ): {src: stri, n, g; width: numb, e, r; media?: string }[] {retu, r, n, siz, e, s.m, a, p((wid, t, h, ind, e, x) => ({src: th, i, s.generateOptimizedUrl(src  { ...optionswidth })widthmedia: ind, e, x === 0 ? undefin, e, d : `(min-width: ${sizes[index-1]}px)`}))};
@@ -88,9 +77,13 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     let, heigh, t = maxWid, t, h / aspectRat, i, o;
     
     if (heig, h, t > maxHeig, h, t) {heig, h, t = maxHeig, h, t;
+ 
+
+
       wid, t, h = maxHeight * aspectRatio};
     return {width: Ma, t, h.rou, n, d(wid, t, h)height: Ma, t, h.round(height)}}// Generate, image, alt text, generateAltTex, t(src: stringconte, x, t?: stri, n, g): string {constfilename = src.split("/").pop()?.split(".')[0] || '";
     constwor, d, s = filena, m, e.spl, i, t(/[-_]/).m, a, p(wo, r, d => 
+
       wo, r, d.charAt(0).toUpperCase() + word.slice(1)
     );
     

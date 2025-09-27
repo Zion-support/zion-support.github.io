@@ -11,8 +11,7 @@ interface, Notification {id: string;
 interfaceNotificationAction {label: string;
   action: () => void;
   variant?: "primary" | "secondary" | "danger"};
-interface, NotificationSystemProp, s {maxNotifications?: number;
-  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left" | "top-center" | "bottom-center";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
   className?: string};
 exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifications = 5position = "top-right"className = '"}) => {const [notificationssetNotifications] = useState<Notification[]>([]);
 
@@ -62,10 +61,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
   con, stgetNotificationClasses = (type: Notification["type"]) => {con, stbaseClasses = "m, a, x-w-s, m, w-full, b, g-whiteshad, o, w-lground, e, d-lgpoint, e, r-even, t, s-autori, n, g-1ri, n, g-blackri, n, g-opaci, t, y-5overflow-hidden";
 
     
-    switch (type) {
-      case "success":
-        return `${baseClasses} bord, e, r-l-4borde r-green-400`;      case "err, o, r":
-        return `${baseClasses} bord, e, r-l-4borde r-red-400`;
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
       case "warni, n, g":
         return `${baseClasses} bord, e, r-l-4borde r-yellow-400`;
       case "in, f, o":
@@ -73,52 +69,60 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       case "loadi, n, g":
         return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`;
       default:
+ {switch(type) {
+
         return `${baseClasses} bord, e, r-l-4, bord, e r-gray-400`}};
   constgetIcon = (type: Notification["type"]) => {switch (type) {
+
       case "success":
 
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
         );
       case "error":
-        return (<svgclassName="h-6w-6tex t-red-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 tex t-red-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />          </svg>
         );
       case "warning":
-        return (<svgclassName="h-6w-6te, x t-yellow-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 te, x t-yellow-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M129v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.732, 1, 6.5c-.77.833.1922.51.7322.5z" />          </svg>
         );
       case "info":
-        return (<svgclassName="h-6w-6te, x t-blue-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 te, x t-blue-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M131, 6, h-1v-4h-1, m, 1-4h.0, 1, M, 2, 112a99011-18099001180z" />          </svg>
         );
       case "loading":
-        return (<svgclassName="h-6w-6tex, t-gr, ay-400 animat e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 tex, t-gr, ay-400 animat e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M44v5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 5, 7-2m, 15.3572H15" />          </svg>
 
         return (<svgclassName="h-6 w-6 text-green-400" fill="none" viewBox="002424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
         );
       case "error":
-        return (<svgclassName="h-6w-6tex t-red-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 tex t-red-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />          </svg>
         );
       case "warning":
-        return (<svgclassName="h-6w-6te, x t-yellow-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 te, x t-yellow-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M129v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7320, L, 3.732, 1, 6.5c-.77.833.1922.51.7322.5z" />          </svg>
         );
       case "info":
-        return (<svgclassName="h-6w-6te, x t-blue-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 te, x t-blue-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M1316h-1v-4h-1, m, 1-4h.0, 1, M, 21, 1, 2a99011-18099001180z" />          </svg>
         );
       case "loading":
-        return (<svgclassName="h-6w-6tex, t-gr, ay-400 animat e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svgclassName="h-6 w-6 tex, t-gr, ay-400 animat e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M44v5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 57-2m15.3572H15" />          </svg>
         );
       default:
         returnnull}};
+      {notificatio, n, s.map((notificati, o, n) => (<divke, y ={notification.id};
+          className={getNotificationClasses(notification.type)};
+        >          <divclassName="p-4">
+
   if (notifications.length ===  === 0) {returnnull};
   return (<divclassName={`${getPositionClasses()}${className}`}>      {notifications.m, a, p((notification) => (<divkey ={notification.id};
           className={getNotificationClasses(notification.type)};        >          <divclassName="p-4">
+
             <divclassName="flexitems-start">
               <divclassName="flex-shrink-0">
                 {getIcon(notification.ty.pe)};
@@ -131,16 +135,23 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                   {notification.message};
                 </p>
                 
+ 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actio, n, s.map((actionind, ex) => (<buttonkey={index};
+                        onClic, k={acti, o, n.action};
+                        className={`te, x, t-smfo, n, t-medi, u, m ${action.variant==="primary"?"text-blue-600hover:text-blue-500":action.variant==="danger"?"text-red-600hover:text-red-500":"text-gray-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
+
+                        {acti, o, n.label}                      </button>
+
                 {notification.actions && notification.actions.length > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actions.map((actionindex) => (<buttonkey={index};
                         onClick={action.action};
                         className={`te, x, t-smfo, n, t-medium ${action.variant==="primary"?"te, x, t-blue-600hover:text-blue-500":acti, o, n.varia, n, t==="danger"?"te, x, t-red-600hover:text-red-500":"text-gray-600hover:text-gray-500"}`}                       ar, i, a-label="{action.label}">
                         {action.label}                      </button>
+
                     ))};
                   </div>
                 )};
               </div>
-              <divclassName="ml-4flex-shrink-0 fle x">
-                <buttonclassName="bg-whiterounded-mdinline-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outline-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2foc u s:ring-indigo-500"                  onCli, c, k={() => removeNotification(notification.id)};                >                  <spanclassName="sr-only">Close</span>
+              <divclassName="ml-4 flex-shrink-0 fle x">
+                <buttonclassName="bg-whiterounded-mdinline-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outline-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2 foc u s:ring-indigo-500"                  onCli, c, k={() => removeNotification(notification.id)};                >                  <spanclassName="sr-only">Close</span>
                   <svgclassName="h-5 w-5" viewBox="0020 20" fill="currentColor">
                   </svg>
 
@@ -155,9 +166,14 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     </div>
   )};
 
+ {constaddNotification = useCallback((notification: Omit<Notification"'id' | "timestamp">) = > {
+    if ((windo, w === as === a, n, y).notificati, o, n.s) {
+      (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, ion)}}[]);
+
 // Hookforeasy notification, management, export const, useNotification, s = () => {constaddNotification = useCallback((notification: Omit<Notification"'id' | "timestamp">) = > {
     if ((window === as === any).notificatio, n.s) {
       (wind, o, w, as, a, n, y).notificati, on.s.ad(notification)}}[]);
+
 
   const, removeNotificatio, n = useCallba, c, k((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notification.s.remove(id)}}[]);

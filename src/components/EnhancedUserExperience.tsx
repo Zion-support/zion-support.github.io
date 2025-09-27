@@ -1,5 +1,4 @@
-import React, {useStateuseEffectuseCallback } from 'react";
-import { UserSettingsPaletteGlobeSmartphoneMonitorSunMoon   } from "lucide-react";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface UserPreferences {theme: 'light' | 'dark' | 'auto';
   language: string;
   fontSize: 'small' | 'medium' | 'large';
@@ -10,8 +9,16 @@ interface UserPreferences {theme: 'light' | 'dark' | 'auto';
 
 interface EnhancedUserExperienceProps {className?: string}
 
+ = ({className = '' }) => {const [preferences, setPreferences] = useState<UserPreferences>({
+    theme: 'auto',
+    language: 'en',
+    fontSize: 'medium',
+    animations: true,
+    reducedMotion: falsehighContrast: falsescreenReader: false
+
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {const [preferencessetPreferences] = useState<UserPreferences>({
     theme: 'auto'language: 'en'fontSize: 'medium'animations: truereducedMotion: falsehighContrast: falsescreenReader: false
+
   });
 
   const [isOpensetIsOpen] = useState(false);
@@ -28,6 +35,22 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   const, detectSystemPreference, s = useCallba, c, k(() => {con, s, t, prefersDa, r, k = window.matchMedia("(prefers-color-scheme: dark)").match, e, s;
     con, s, t, prefersReducedMoti, o, n = window.matchMedia("(prefers-reduced-motion: reduce)").match, es;
     
+ {con, s, t, prefersDa, r, k = wind, o, w.matchMedia("(prefe, r, s-col, or-scheme: dark)").match, e, s;
+    con, s, t, prefersReducedMoti, o, n = wind, o, w.matchMedia("(prefe, r, s-reduc, ed-motion: reduce)").match, e, s;
+    
+    if (preferenc, e, s.theme === "auto") {
+      document.documentEleme, n, t.setAttribute("da, t, a-theme", prefersDark ? "dark" : "light")};
+    if (preferenc, e, s.reducedMoti, o, n !== prefersReducedMoti, o, n) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferenc, e, s.reducedMotionupdatePreference]);
+  useEffect(() => {// Savepreferences tolocalStorage
+    localStorage.setItem('user-preferences', JSON.stringify(preferences))}, [preferences]);
+
+  const renderAppearanceTab = () => (<div, className="space-y-6">
+      <div>
+        <label, className="block, text-smfont-mediumtext-gray-700 mb-2">Theme</label>
+        <selectvalue={preferences.theme}
+          onChange={(e) => updatePreference('theme', e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
     if (preferences.theme === "auto") {
       document.documentElement.setAttribute("data-theme"prefersDark ? "dark" : "light")};
     if (preferenc, e, s.reducedMotion !== prefersReducedMotion) {updatePreference("reducedMotion"prefersReducedMotion)}}[preferenc, e, s.themepreferences.reducedMotionupdatePreference]);
@@ -39,6 +62,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <select
           value={preferences.theme}
           onChange={(e) => updatePreference('theme'e.target.value)}          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
         >
           <option value="light">Light</option>
           <option value="dark">Dark</option>
@@ -71,9 +95,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     </div>
   );
 
+ (<div, className="space-y-6">
+      <div, className="flex, items-center, justify-between">
+        <label, className="text-smfont-mediumtext-gray-700">HighContrast</label>
+
   const renderAccessibilityTab = () => (<divclassName="space-y-6">
-      <div, className="flexitems-centerjustify-between">
+      <div, className="flexitems-center justify-between">
         <labelclassName="text-smfont-medium, text-gray-700">HighContrast</label>
+
         <inputtype="checkbox"
           checked={preferences.highContrast}
           onChange={(e) => updatePreference('highContrast'e.target.checked)}
@@ -105,10 +134,16 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   const renderLanguageTab = () => (<divclassName="space-y-6">
       <div>
+Language</label>
+        <selectvalue={preferences.language}
+          onChange={(e) => updatePreference('language', e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
         <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
         <select
           value={preferences.language}
           onChange={(e) => updatePreference('language'e.target.value)}          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
         >
           <option value="en">English</option>
           <option value="es">Spanish</option>
@@ -131,9 +166,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </button>
 
       {/* SettingsPanel */}
-      {isOpen && (<div, className="absolute, bottom-16, right-0, w-80, bg-white, rounded-lg, shadow-xl, borderborder-gray-200p-6">
-          <divclassName="flexitems-centerjustify-betweenmb-4">
-            <h3className="text-lgfont-semibold, text-gray-900">UserExperience</h3>
+      {isOpen && (<div, className="absolute, bottom-16, right-0, w-80, bg-white, rounded-lg, shadow-xl, borderborder-gray-200 p-6">
+          <divclassName="flexitems-center justify-betweenmb-4">
+            <h3className="text-lg font-semibold, text-gray-900">UserExperience</h3>
             <buttononClick={() => setIsOpen(false)}
               className="text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Close settings"
@@ -142,23 +177,37 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             </button>
           </div>
 
+
+
           <divclassName="space-y-4">
+
             <div>
               <labelclassName="blo, c, k, te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-7, 0, 0, dark:text-gray-300 mb-2">
                 Theme
               </label>
               <divclassName="gridgrid-cols-3 gap-2">
                 {[
+ (<buttonkey={value};
+                    onClic, k={() => updatePreference("theme", value)};
+                    className={`p-2, round, e, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferences.theme===value?"border-blue-500,b,g-blue-50dark:bg-blue-900/20":"border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500"}`};
+                  >
+                    <IconclassName="w-4 h-4" />
+                    <spanclassName="text-xs, font-medium">{label}</span>
+
                   { value: "light"label: "Light"icon: Sun }{value: "dark"label: "Dark"icon: Moon }{value: "auto"label: "Auto"icon: Monitor}].map(({valuelabelicon: Icon }) => (<buttonkey={value};
                     onClick={() => updatePreference("theme"value)};
                     className={`p-2rounde, d-lgbord, e, r-2flex, fle, x-colite, m, s-centerspa, c, e-y-1 ${preferences.theme===value?"bord, e, r-bl, u, e-500, b, g-bl, u, e-50dark:bg-bl, u, e-900/20":"bord, e, r-gr, a, y-200dark:bord, e, r-gray-600hover:border-gray-300dark:hover:border-gray-500"}`};                  >
                     <IconclassName="w-4 h-4" />
                     <spanclassName="text-xsfont-medium">{label}</span>
+
                   </button>
                 ))};
               </div>
             </div>
-          {/* Tab Content */}          <div className="min-h-[200px]">
+
+
+          {/* Tab Content */}          <div className="min-h-[200 px]">
+
             {activeTab === 'appearance' && renderAppearanceTab()}
             {activeTab === 'accessibility' && renderAccessibilityTab()}
             {activeTab === 'language' && renderLanguageTab()}

@@ -60,9 +60,7 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
     // Click, tracking, if (th, i, s.config.enableClickTracking) {document.addEventListener("click"(eve, n, t) => {
         
         if (eleme, n, t) {
-          consttagNa, m, e = eleme, n, t.tagNa, m, e.toLowerCa, s, e();
-          constte, x, t = element.textContent? .trim() || "";
-          con, sthref = element.getAttribute("href') || '";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
           
           this.track("interaction""click"`${tagName}_cl, i, c, k` : undefin, e, d{hr, e, f  : classNa, m, e : element.classNameid: element.id
           })}})};
@@ -118,6 +116,9 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
         method: "POST"headers: {
           "Content-Type": "application/json"}body: JS, O, N.stringi, f, y({events: eventsToSendsession: this.session
         })
+ {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstance());
+    category: stri, ngaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
+
       })} cat, c, h (error) {console.error("Failedtosendanalyticsevents:'error)};
   getSessi, o, n(): UserSessi, o, n {return { ...this.session }};
   getEven, t, s(): AnalyticsEve, n, t[] {return [...this.events]};
@@ -127,6 +128,7 @@ class, AdvancedAnalytic, s {privatestaticinstance: AdvancedAnalyti, c, s;
     th, i, s.flu, s, h()}};
 // React, hook, for analytics, export, const useAdvancedAnalyti, c, s = () => {const [analytics] = useState(() => AdvancedAnalyti, c, s.getInstan, c, e());
     category: stringaction: stri, n, g, lab, e, l?: stri, n, g, va, l, u, e?: numb, e, r, metad, a, t, a?: Reco, r, d<stringany>
+
   ) => {
     analytics.track(categor, y, acti, o, n, lab, e, l, val, uemetadata)}, [analytics]);
 

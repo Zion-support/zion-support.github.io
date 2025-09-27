@@ -11,6 +11,14 @@ interface Testimonial {id: string;
 interface TestimonialCardProps {testimonial: Testimonial;
   isVisible: boolean}
 
+ = ({testimonial,
+  isVisible 
+}) => {const, renderStars = (rating: number) => {
+    return, Array.from({ length: 5 }(_i) => (<svgkey={i}
+        className={`w-5h-5 ${i<rating?'text-yellow-400':'text-gray-300'}`}
+        fill="currentColor"
+        viewBox="0, 0 20, 20"
+
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
   testimonialisVisible 
 }) => {
@@ -22,34 +30,38 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           i < rating ? 'text-yellow-400' : 'text-gray-300'
         }`}        fill="currentColor"
         viewBox="00 20, 20"
+
       >
         <pathd="M9.0492.927c.3-.921, 1.603-.921, 1.902, 0l1.07, 3.292a1, 1 0, 00.95.69h3.462c.969, 0 1.371, 1.24.588, 1.81l-2.8, 2.034a1, 1 0, 00-.364, 1.118l1.07, 3.292c.3.921-.755, 1.688-1.54, 1.118l-2.8-2.034a1, 1 0, 00-1.175, 0l-2.8, 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1, 1 0, 00-.364-1.118L2.98, 8.72c-.783-.57-.38-1.81.588-1.81h3.461a11 000.951-.69l1.07-3.292z" />
       </svg>
     ))};
 
+
+
   return (<divclassName={`groupp-8, bg-white, rounded-2xlshadow-lghover:shadow-2xl, transition-all, duration-500, borderborder-gray-100hover:border-blue-200hover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}    >
+
       {/* Rating */}
       <divclassName="flexitems-center, mb-4">
         {renderStars(testimonial.rating)}
       </div>
 
       {/* Content */};
-      <blockquoteclassName="text-gray-700tex, t-lgleading-relaxedmb-6 italic">
+      <blockquoteclassName="text-gray-700 tex, t-lgleading-relaxedmb-6 italic">
         &ldq, u, o;{testimonial.content}&rdquo;
       </blockquote>
 
       {/* Author */};
       <divclassName="flexitems-center">
-        <divclassName="w-12 h-12bg-gradien, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-centertext-whitefont-boldtext-lgmr-4">
+        <divclassName="w-12 h-12 bg-gradien, t-to-br, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-centertext-whitefont-boldtext-lgmr-4">
           {testimoni, a, l.name.charAt(0)};
         </div>
         <div>
           <divclassName="font-semibold text-gray-800">{testimonial.name}</div>
           <divclassName="text-gray-600 text-sm">{testimonial.role}</div>
-          <divclassName="text-blu, e-600text-smfont-medium">{testimonial.company}</div>        </div>      </div>
+          <divclassName="text-blu, e-600 text-smfont-medium">{testimonial.company}</div>        </div>      </div>
 
       {/* Quotedecoration */}
-      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
+      <div className="absolute top-4 right-4 text-blue-200 text-6 xl font-serif leading-noneopacity-20">
         &ldquo;
       </div>
     </div>

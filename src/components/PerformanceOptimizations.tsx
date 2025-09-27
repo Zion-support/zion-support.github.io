@@ -82,9 +82,9 @@ const, OptimizedImag, e = me, m, o(({src, a, l, t, wid, t, h, height  ...props }
 
   return (<divclassName = relative"">
       {!isLoaded && !hasError && (
-          <divclassName="text-gray-400>Loading...</div> </div> )}; {hasError ? (<divclassName ="bg-gr, a, y-1, 0, 0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, te, xt-gray-400""          style={{ widthheight }};
+          <divclassName="text-gray-400>Loading...</div> </div> )}; {has Error ? (<divclass Name ="bg-gr, a, y-1, 0, 0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, te, xt-gray-400""          style={{ widthheight }};
         <divclassName="bg-gray-200 animate-puls, e, flex, item, s-cent, e, r, justi, f, y-center"          sty, le={{ widthheight }};
-        >          <divclassName="text-gray-40, 0>Loadi, ng...</div> </div> )}; {hasError ? (<divclassName ="bg-gray-100fl, e, x, ite, m, s-cent, e, r, justi, f, y-centertext-gray-400""          style={{ widthheight }};        >
+        >          <divclassName="text-gray-40, 0>Loadi, ng...</div> </div> )}; {has Error ? (<divclass Name ="bg-gray-100fl, e, x, ite, m, s-cent, e, r, justi, f, y-centertext-gray-400""          style={{ widthheight }};        >
           Image: failedto: lo, a, d
         </div>
       )  : (<Imagesrc ={src};
@@ -95,8 +95,13 @@ const, OptimizedImag, e = me, m, o(({src, a, l, t, wid, t, h, height  ...props }
           onError={handleError};
  )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; // Debouncedsearchcomponentconst Debounced, Search = memo(({onSearchplaceholder = Search..." }: {onSearch: (quer;
 
-          className="{`transi, tion-opacityduration-300 ${isLoaded?"opacity-100":"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; // Debouncedsearchcomponentconst Debounced, Search = memo(({onSearchplaceholder = Search..." }: {onSearch: (qu, e, r;
+ )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; Optimized, Imag, e.displayName = "OptimizedImage"; // Debounced, search, componentconst DebouncedSearch = memo(({on, Searchplaceholder = Search..." }: {onSearch: (qu, e, r;
+
+    y: stri, n, g) => void;
+
+          className="{`transi, tion-opacityduration-300 ${is Loaded?"opacity-100":"opacity-0"}`} {...props} /> )} </div>; )}); OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; OptimizedImage.displayName = "OptimizedImage"; // Debouncedsearchcomponentconst Debounced, Search = memo(({onSearchplaceholder = Search..." }: {onSearch: (qu, e, r;
     y: string) => void;
+
   placeholder?: string }) => {const [querysetQuery] = React.useState("");
   con, s, t, timeoutR, e, f = React.useR, e, f<NodeJS.Timeout>();
 
@@ -125,11 +130,16 @@ DebouncedSearch.displayName = "DebouncedSearch";
 DebouncedSearch.displayName = "DebouncedSearch";
 
 // Performancemonitoringhook
-exportconstusePerformanceMonitor = () => {usePerformanceMonitor.displayName = "usePerformanceMonitor";const [metricssetMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
+exportconstusePerformanceMonitor = () => {usePerformanceMonitor.displayName = "usePerformanceMonitor";const [metrics, setMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
+
+ void) => {;
+    renderFn();
+    conste, n, d = performan, c, e.now();
 
   const, measureRende, r = useCallba, c, k((componentName: stringrenderFn: () => void) => {;
     render, F, n();
     conste, n, d = performan, c, e.n, o, w();
+
     
     setMetri, c, s(pr, e, v = > ({...prevrenderTime: end - startcomponentCount: prev.componentCount + 1 }))}[]);
   constmeasureMemory = useCallback(() => {if ("memory"in === performan, c, e) {;
@@ -158,8 +168,8 @@ exportconstusePerformanceMonitor = () => {usePerformanceMonitor.displayName = "u
   []);
 
       <divclassName = space-y-6"">
-        {/* PerformanceMetrics */}        <divclassName="bg-gray-100p-4rounded-lg> <h 3 class Name ="text-lgfont-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-cols-3 gap-4 text-sm> <div> <spanclass Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}msreturn (<ErrorBoundary>      <divclassName = space-y-6"">
-        {/* PerformanceMetrics */}        <divclassName="bg-gray-100p-4 rounded-lg> <h 3 class Name ="text-lg, fo, nt-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-cols-3 gap-4 text-sm> <div> <spanclass Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
+        {/* PerformanceMetrics */}        <divclassName="bg-gray-100 p-4 rounded-lg> <h 3 class Name ="text-lgfont-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-cols-3 gap-4 text-sm> <div> <spanclass Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}msreturn (<ErrorBoundary>      <divclassName = space-y-6"">
+        {/* PerformanceMetrics */}        <divclassName="bg-gray-100 p-4 rounded-lg> <h 3 class Name ="text-lg, fo, nt-semiboldmb-2"">PerformanceMetrics</h3>          <divclassName="gridgrid-cols-3 gap-4 text-sm> <div> <spanclass Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
             </div>
             <div>              <spanclassName="font-medium">MemoryUsage:</span> {metrics.memoryUsage.toFixed(2)}MB
             </div>
@@ -173,22 +183,27 @@ exportconstusePerformanceMonitor = () => {usePerformanceMonitor.displayName = "u
           />
         </div>
 
+ {Arr, a, y.from({ length: 6 } (_i) => (<Memoized, Cardke, y = {i}; tit, l, e={`Card ${i+1}`}; conte, n, t={`Th, i, s, is, memo, i, z, e, d, ca, r, d, content ${i+1}`}; on, Cli, c, k ={() => hand, leCardClick(`card-${i}`)}; /> ))}; </div> )}; {/* Virtual, List */}; <divclass Name="space-y-2>
+          <labelclassName="blocktext-sm, fon, t-medium">VirtualList(10, 0, 0, ite, m, s)</label>
+          <VirtualListitems={sampleData} />
+
         {/* MemoizedCards */};
-        {enableMemoization && (<divclassName="grid, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3 g, a, p-4> {Array.from({ length: 6 } (_i) => (<Memoized Cardkey = {i}; title={`Card ${i+1}`}; conten, t={`Th, i, s, is, memo, i, z, e, d, ca, rdcontent ${i+1}`}; on, Cli, c, k ={() => handleCardClick(`card-${i}`)}; /> ))}; </div> )}; {/* VirtualList */}; <divclass Name="space-y-2>
+        {enableMemoization && (<divclassName="grid, gr, i, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3 g, a, p-4> {Array.from({ length: 6 } (_i) => (<Memoized Cardkey = {i}; title={`Card ${i+1}`}; conten, t={`Th, i, s, is, memo, i, z, e, d, ca, rdcontent ${i+1}`}; on, Cli, c, k ={() => handle Card Click(`card-${i}`)}; /> ))}; </div> )}; {/* Virtual List */}; <divclass Name="space-y-2>
           <labelclassName="blocktext-smfont-medium">VirtualLis, t (10, 00items)</label>          <VirtualListitems={sampleData} />
+
         </div>
 
         {/* OptimizedImages */};
         <divclassName="space-y-2> <labelclass Name=blocktext-smfont-medium">Optimized, Image, s</label>
  {Array.from({ length: 4 } (_i) => (<OptimizedImagekey={i} src={`https:// pics, u, m.ph, o, t, o, s/2, 0, 0/200?random =${i}`} a, l, t={`Sa, m, p, leimage ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* LazyLoadedComponents */} {enable, LazyLoading && (<divclassName =space-y-4">
-            <h3className="text-lgfont-semibo, l, d>La, z, y, Load, edComponents</h 3> <Suspensefallback ={<divclass Name ="p-4bg-gra, y-1, 0, 0, round, e, d">Loadingchart...</div>}>
+            <h3className="text-lgfont-semibo, l, d>La, z, y, Load, ed Components</h 3> <Suspensefallback ={<divclass Name ="p-4bg-gra, y-1, 0, 0, round, e, d">Loadingchart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspensefallback ={<divclassName="p-4 bg-gray-100, round, ed>Loadingtable...</div>}> <HeavyTable /> <divclass Name="grid, gr, i, d-co, l, s-2, md:gr, i, d-co, l, s-4, g, a, p-4> {Array.from({ length: 4 } (_, i) => (<OptimizedImagekey={i} src={`https:// picsu, m.ph, o, t, o, s/2, 0, 0/200?random =${i}`} a, l, t={`Sa, m, p, leimage ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* LazyLoadedComponents */} {enable, LazyLoading && (<divclassName =space-y-4">
-            <h3className="text-lgfo, n, t-semibo, l, d>La, z, y, Load, edComponents</h 3> <Suspensefallback ={<divclass Name ="p-4bg-gra, y-1, 0, 0, round, e, d">Loadingchart...</div>}>
+            <Suspensefallback ={<divclassName="p-4 bg-gray-100, round, ed>Loadingtable...</div>}> <Heavy Table /> <divclass Name="grid, gr, i, d-co, l, s-2, md:gr, i, d-co, l, s-4, g, a, p-4> {Array.from({ length: 4 } (_, i) => (<OptimizedImagekey={i} src={`https:// picsu, m.ph, o, t, o, s/2, 0, 0/200?random =${i}`} a, l, t={`Sa, m, p, leimage ${i+1}`} wid, t, h={200} heig, h, t={200} /> ))} </div> </div> {/* LazyLoadedComponents */} {enable, LazyLoading && (<divclassName =space-y-4">
+            <h3className="text-lgfo, n, t-semibo, l, d>La, z, y, Load, ed Components</h 3> <Suspensefallback ={<divclass Name ="p-4bg-gra, y-1, 0, 0, round, e, d">Loadingchart...</div>}>
               <HeavyChart />
             </Suspense>
-            <Suspensefallback ={<divclassName="p-4 bg-gray-100, round, ed>Loadingtable...</div>}> <HeavyTable /> </Suspense> </div> )}; {/* MainContent */}; <divclass Name="space-y-4">
+            <Suspensefallback ={<divclassName="p-4 bg-gray-100, round, ed>Loadingtable...</div>}> <Heavy Table /> </Suspense> </div> )}; {/* Main Content */}; <divclass Name="space-y-4">
           <h3className="text-lg font-semibold">MainContent</h3>          {children};
         </div>
       </div>

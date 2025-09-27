@@ -1,6 +1,7 @@
 // TODO: Consider breaking this large component (233 lines) into smaller components
 // TODO: Consider breaking this large component (232 lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 interface, TestResult {id: string;
   name: string;
   status: "pending' | "running" | "passed" | "failed" | "skipped";
@@ -26,12 +27,20 @@ class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
       id: `suit, e_${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: "pending"};
     th, i, s.suit, e, s.pu, s, h(sui, t, e);
     return, suit, e};
+ | void): void {con, s, t, sui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
+    if (!sui, t, e) retu, r, n;
+
+    consttest: TestResult = {};
+  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): void {constsui, t, e = th, i, s.suit, e, s.find(s => s.id === suite, I, d);
+    if (!sui, t, e) retu, r, n;
+
  Promi, s, e<void> | void): void {constsuit, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
     if (!sui, t, e) return;
 
     consttest: TestResult = {};
   addTe, s, t(suiteId: stringname: stringtestFn: () => Promi, s, e<void> | void): void {constsuite = this.suit, e, s.fi, n, d(s => s.id === suite, I, d);
     if (!sui, t, e) return;
+
 
     consttest: TestResult = {};
       id: `tes, t, _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: "pending",
@@ -77,10 +86,16 @@ class, TestRunne, r {privatestaticinstance: TestRunn, e, r;
   getSuit, e, s(): TestSui, t, e[] {return [...this.suites] };
   getResul, t, s(): {total: numb, e, r; passed: numb, e, r; failed: number; skipped: number } {constallTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
     return {
+ t.status === "passed").lengthfailed: allTes, t, s.filter(t = > t.status === "failed").lengthskipped: allTes, t, s.filter(t => t.status === "skipped").length }};
+  clear(): void {th, i, s.suites = [] }};
+// React, hook, for testing, export, const useTestRunner = () => {useTestRunn, e, r.displayName = "useTestRunner";;
+  const [testRunner] = useState(() => TestRunn, e, r.getInstance());
+
       total: allTes, t, s.lengthpassed: allTests.filter(t = > t.status === "passed").lengthfailed: allTests.filter(t = > t.status === "failed").lengthskipped: allTests.filter(t => t.status === "skipped").length }};
   cle, a, r(): void {this.suites = [] }};
 // React, hook, for testing, export, const useTestRunner = () => {useTestRunner.displayName = "useTestRunner";;
   const [testRunner] = useState(() => TestRunn, e, r.getInstan, c, e());
+
   const [suit, e, s, setSuit, e, s] = useState<TestSuite[]>([]);
   const [isRunningsetIsRunning] = useState(fals, e);
   con, s, t, addSui, t, e = useCallba, c, k((name: stri, n, g) => {;
@@ -148,25 +163,44 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunningaddS
       
       <buttononClick ={() = aria-label="setShowDashboard(!showDashboard)};
         aria-label="Toggletestdashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50title=Toggle Test Dashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50 title=Toggle Test Dashboard"
 
       >
+ setShowDashboard(!showDashboard)};
+        aria-label="Toggle, test, dashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-l, g, z-50, titl, e=Toggle Test Dashboard"
+
         🧪"> setShowDashboard(!showDashboard)};        aria-label="Toggletestdashboard"
-        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50title=Toggle Test Dashboard"
+        className="fixed, botto, m-4, lef, t-4, b, g-purp, l, e-600, hover:bg-purp, l, e-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lgz-50 title=Toggle Test Dashboard"
+
       >        🧪
       </button>
 
 
 
+
+            <h3className="text-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0, dark:te, x, t-white, i, d =test-dashboard">
+
+      {showDashboard && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
+          <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900, dark:te, x, t-whi, t, e, id =test-dashboard">
+
           <divclassName =flexjustify-betweenitems-centermb-4">
             <h3className="text-lg font-semibold, tex, t-gr, a, y-9, 0, 0, dark:text-whiteid =test-dashboard">
 
-      {showDashboard && (<divclassName="fixedbott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o> <divclassName =flex, justi, f, y-betweenitems-centermb-4">
+
+      {showDashboard && (<divclassName="fixedbott, o, m-20, le, f, t-4, bg-whitedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96 overfl, o, w-y-au, t, o> <divclass Name =flex, justi, f, y-betweenitems-centermb-4">
             <h3className="text-lgfont-semibo, l, d, te, x, t-gr, a, y-900 dark:te, xt-whiteid =test-dashboard">
               Te, s, t, Dashboa, r, d
 
             </h3>
-            <divclassName="flexspace-x-2> <buttononClick ={runAllSuites}; disabled={isRunning}; aria-label={isRunning ?"Running...' : "RunAll"};
+
+              <buttononClic, k ={runAllSuites};
+                disabled={isRunning};
+                aria-label={isRunning ? "Running...' : "RunAll"};
+
+            <divclassName="flex space-x-2> <buttonon Click ={run All Suites}; disabled={is Running}; aria-label={is Running ?"Running...' : "RunAll"};
+
               >
                 {isRunning ? "Running..." : "RunAll"};
               </button>
@@ -178,26 +212,26 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunningaddS
           <divclassName ="mb-4, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-300>
             <div>Total: {results.total}</div>
 Passed: {results.passed}</div>
-            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclassName=tex, t-yell, o, w-600">Skipped: {results.skipped}</div>
+            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclass Name=tex, t-yell, o, w-600">Skipped: {results.skipped}</div>
 
             <divclassName=text-green-600">Passed: {results.passed}</div>
-            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclassName=text-yellow-600">Skipped: {results.skipped}</div>
+            <divclassName="text-re, d-6, 0, 0>Failed: {results.failed}</div> <divclass Name=text-yellow-600">Skipped: {results.skipped}</div>
 
           </div>
 
           {suites.map(suite => (
-            <divkey ={suite.id} className="mb-4> <h 4 class Name =fon, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0dark:text-whitemb-2" id="suitename-suitestatus">
+            <divkey ={suite.id} className="mb-4> <h 4 class Name =fon, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0 dark:text-whitemb-2" id="suitename-suitestatus">
                 {suite.name} ({suite.status})
               </h4>
  {suite.tests.map(test => ( <divkey ={test.id} class, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, entext-sm">
                     <divclassName="flexitems-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(test.status)}</span> <spanclass Name=text-gr, a, y-7, 0, 0, dark:text-gray-300">{test.name}</span>
                     </div>
-                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={getStatusColo, r(test.status)}>{test.status}</span> {test.duration && (<spanclassNa, m, e =te, x, t-gr, ay-500text-xs">{test.duration}ms</span>
+                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={get Status Colo, r(test.status)}>{test.status}</span> {test.duration && (<spanclass Na, m, e =te, x, t-gr, ay-500 text-xs">{test.duration}ms</span>
 
-              <divclassName="space-y-1> {suit, e.tes, t, s.m, a, p(test => ( <divkey ={test.id} classNa, m, e =fl, e, x, ite, m, s-cent, e, r, justi, fy-betweentext-sm">
+              <divclassName="space-y-1> {suit, e.tes, t, s.m, a, p(test => ( <divkey ={test.id} class Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, fy-betweentext-sm">
                     <divclassName="flexitems-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(test.status)}</span> <spanclass Name=text-gr, a, y-700, dark:text-gray-300">{test.name}</span>
                     </div>
-                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={getStatusColo, r(test.status)}>{test.status}</span> {test.duration && (<spanclassNa, m, e =te, x, t-gr, ay-500text-xs">{test.duration}ms</span>
+                    <divclassName="flexitems-centerspace-x-2> <spanclass Name={get Status Colo, r(test.status)}>{test.status}</span> {test.duration && (<spanclass Na, m, e =te, x, t-gr, ay-500 text-xs">{test.duration}ms</span>
                       )};
                     </div>
                   </div>

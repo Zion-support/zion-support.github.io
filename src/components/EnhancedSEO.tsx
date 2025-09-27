@@ -16,10 +16,13 @@ interface SEOProps {title?: string;
   noindex?: boolean;
   nofollow?: boolean}
 
+ 160 ? description.substring(0, 157) + '...' : description;
+
 export default function EnhancedSEO({title = 'Zion Tech Solutions - AI-Powered Business Solutions'description = 'Leading provider of AI-powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/og-image.jpg'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
   author = 'Zion Tech Solutions"publishedTimemodifiedTimesectiontags = []noindex = falsenofollow = false
 }: SEOProps) {
   const fullTitle = title.includes("Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+
   const fullCanonical = canonical || (typeof, window !== 'undefined' ? window.location.href : '');
   
   const structuredData = {'@context': 'https://schema.org',
@@ -38,6 +41,16 @@ export default function EnhancedSEO({title = 'Zion Tech Solutions - AI-Powered B
   };
 
   if (publishedTime) {structuredData['@type'] = 'Article';
+ 0) (structuredDataas any).keywords = tags.join(',')}
+
+  return (<Head>
+      {/* BasicMetaTags */}
+      <title>{fullTitle}</title>
+      <metaname="description" content={fullDescription} />
+      <metaname="keywords" content={keywords.join(',')} />
+      <meta name="author" content={author} />
+      <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
+
     (structuredData as any).datePublished = publishedTime;
     (structuredData as any).dateModified = modifiedTime || publishedTime;
     (structuredData as any).author = { '@type': 'Person'name: author };
@@ -50,6 +63,7 @@ export default function EnhancedSEO({title = 'Zion Tech Solutions - AI-Powered B
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join('')} />      <meta name="author" content={author} />
       <meta name="viewport" content="width=device-widthinitial-scale=1,shrink-to-fit=no" />
+
       
       {/* CanonicalURL */}
       {fullCanonical && <linkrel="canonical" href={fullCanonical} />}

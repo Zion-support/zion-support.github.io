@@ -17,7 +17,7 @@ export, class, AdvancedCache<T = any> {privatecache = ne, w, M, ap<stringCacheIt
 
   constructor(options: CacheOptions = {}) {this.optio, n, s = {
 
-    // Remo, v, e, existing, ite, m, if, i, t, exists, i, f (th, i, s.cac, h, e.h, a, s(k, e, y)) {
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
       th, i, s.remove(key)};
     // Check, if, we need, to, evict items, thi, s.evictIfNeed, e, d();
     constitem: CacheIt, e, m<T> = {valuetimestamp: nowttl: itemTTLhits: 0lastAccessed: now
@@ -77,6 +77,26 @@ export, class, AdvancedCache<T = any> {privatecache = ne, w, M, ap<stringCacheIt
       case "fifo":
         th, i, s.evictFI, F, O(keys);
         break}};
+ {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
+      con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
+      retu, r, n, ite, m, A.lastAccess, e, d - ite, m, B.lastAccessed});
+
+    // Remove, oldest, 10% of, items, const toRemove = Math.ceil(sortedKe, y, s.leng, t, h * 0.1);
+    for(l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.delete(sortedKe, y, s[i]);
+      th, i, s.sta, t, s.evictions++}};
+  privateevictLFU(keys: stri, n, g[]): vo, i, d {// So, r, t, by, hitcount(lea, s, t, freque, n, t, fir, s, t)
+    con, s, t, sortedKe, y, s = ke, y, s.sort((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
+      con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
+      retu, r, n, ite, m, A.hi, t, s - ite, m, B.hits});
+
+    // Remove, least, frequent 10% of, items, const toRemove = Math.ceil(sortedKe, y, s.leng, t, h * 0.1);
+    for(l, e, t, i = 0; i < toRemove; i++) {this.cac, h, e.delete(sortedKe, y, s[i]);
+      th, i, s.sta, t, s.evictions++}};
+  privateevictFIFO(keys: stri, n, g[]): vo, i, d {// So, rtbytimestamp(olde, s, t, fir, s, t)
+    con, s, t, sortedKe, y, s = ke, y, s.sort((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.get(a)!;
+      con, s, t, ite, m, B = th, i, s.cac, h, e.get(b)!;
+      retu, r, n, ite, m, A.timesta, m, p - ite, m, B.timestamp});
+
   private, evictLR, U(keys: stri, n, g[]): vo, i, d {// So, r, t, by, las, t, accessed, tim, e (olde, s, t, fir, s, t)
     con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
       con, s, t, ite, m, B = th, i, s.cac, h, e.g, e, t(b)!;
@@ -97,6 +117,7 @@ export, class, AdvancedCache<T = any> {privatecache = ne, w, M, ap<stringCacheIt
     con, s, t, sortedKe, y, s = ke, y, s.so, r, t((a, b) => {      con, s, t, ite, m, A = th, i, s.cac, h, e.g, e, t(a)!;
       con, s, t, ite, m, B = th, i, s.cac, h, e.g, e, t(b)!;
       retu, r, n, ite, m, A.timesta, m, p - itemB.timestamp});
+
 
     // Remove, oldest, 10% of, items, const toRemo, v, e = Ma, t, h.ce, i, l(sortedKe, y, s.leng, t, h * 0.1);
     f, o, r (l, e, t, i = 0; i < toRemove; i++) {this.cache.delete(sortedKe, y, s[i]);
@@ -125,11 +146,7 @@ export, class, AdvancedCache<T = any> {privatecache = ne, w, M, ap<stringCacheIt
   private, formatByte, s(bytes: number): string {if (bytes === 0) return "0, Bytes";
     constk = 1024;
     constsizes = ["Bytes''KB''MB''GB"];
-    con, s, t, i = Ma, t, h.flo, o, r(Ma, t, h.l, o, g(byt, e, s) / Ma, t, h.l, o, g(k));
-    returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + " ' + sizes[i]}};
-// Global, cache, instancesexport, const, memoryCache = new, AdvancedCach, e({ttl: 5 * 60 * 10, 00maxSize: 1000 });
-export, const, sessionCache = new, AdvancedCach, e({ttl: 30 * 60 * 10, 00maxSize: 500 });
-export, const, persistentCache = new, AdvancedCach, e({ttl: 24 * 60 * 60 * 10, 00maxSize: 2000 });
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
 
 // Cache, decorator, for functions, export, function cached<Textends (...args: any[]) => any>(fn: Toptions: CacheOptions = {};
   return ((...args: any[]) => {constke, y = JS, O, N.stringi, f, y(ar, g, s);

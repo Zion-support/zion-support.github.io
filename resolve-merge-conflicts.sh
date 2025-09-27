@@ -1,39 +1,44 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the incoming changes
-# This script will resolve conflicts in favor of the incoming branch
-
-echo "Resolving merge conflicts..."
+echo "🔧 Resolving merge conflicts by choosing main branch version..."
 
 # List of conflicted files
 conflicted_files=(
-    "src/components/AccessibilityEnhancer.tsx"
-    "src/components/EnhancedSEO.tsx"
-    "src/components/EnhancedUserExperience.tsx"
+    "middleware.ts"
+    "pages/404.tsx"
+    "pages/_app.tsx"
+    "pages/about.tsx"
+    "pages/api/analytics.ts"
+    "pages/api/error-reporting.ts"
+    "pages/api/health.ts"
+    "pages/api/image-optimization.ts"
+    "pages/api/security-events.ts"
+    "pages/dashboard.tsx"
+    "pages/enhanced-home.tsx"
+    "pages/faq.tsx"
+    "pages/index.tsx"
+    "pages/portfolio.tsx"
+    "pages/privacy-policy.tsx"
+    "pages/services.tsx"
+    "src/components/AccessibilityAuditor.tsx"
     "src/components/PerformanceOptimizer.tsx"
     "src/components/SEO.tsx"
-    "src/components/TestimonialCard.tsx"
     "src/components/WebVitals.tsx"
-    "src/data/blogPosts.ts"
     "src/hooks/useAnalytics.ts"
-    "src/utils/accessibilityUtils.ts"
-    "src/utils/constants.ts"
     "src/utils/errorHandling.ts"
 )
 
+# Resolve conflicts by choosing main branch version
 for file in "${conflicted_files[@]}"; do
     if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file..."
-        
-        # Use git checkout to accept the incoming version (theirs)
+        echo "📝 Resolving conflicts in $file..."
         git checkout --theirs "$file"
         git add "$file"
-        
-        echo "✓ Resolved conflicts in $file"
+        echo "✅ Resolved $file"
     else
-        echo "⚠ File $file not found, skipping..."
+        echo "⚠️ File $file not found, skipping..."
     fi
 done
 
-echo "All merge conflicts resolved!"
-echo "Files have been staged for commit."
+echo "🎉 All merge conflicts resolved!"
+echo "📊 Summary: Resolved ${#conflicted_files[@]} files"

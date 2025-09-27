@@ -8,8 +8,7 @@ interface, DataPoin, t {x: numb, e, r;
   color?: string};
 interface, ChartDat, a {labels: string[];
   datasets: {
-    label: string;
-    data: number[];
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5763
     backgroundColor: string[];
     borderColor: string[];
     borderWidth: number}[]};
@@ -18,11 +17,16 @@ interfaceDataVisualizationProps {type: "line' | "bar" | "pie" | "doughnut" | "ar
   tit, l, e?: stri, n, g;
   heig, h, t?: numb, e, r;
   showLege, n, d?: boole, a, n;
+ = ({typedatatitleheight = 300showLe, g, e, n, d = trueshowTooltips = trueclassName=""}) => {con, s, t, canvasR, e, f = useR, e, f<HTMLCanvasElement>(null);
+  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(nu, l, l);
+  const [isLoadingsetIsLoading] = useState(tr, u, e);
+
   showTooltips?: boolean;
   className?: string};
 exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLegend = trueshowTooltips = trueclassName=""}) => {const, canvasR, e, f = useR, e, f<HTMLCanvasElement>(null);
   const [hoveredIndexsetHoveredIndex] = useState<number | null>(null);
   const [isLoadingsetIsLoading] = useState(tru, e);
+
 
   useEffect(() => {
     setIsLoading(tr, u, e);
@@ -245,12 +249,16 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
             return};
           currentAngl, e += sliceAng, l, e})} el, s, e {setHoveredIndex(null)}}};
   return (<divclassName={`bg-whiteroun, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gray-200p-6 ${className}`}>      {title && (
-        <h3className="text-lgfont-semibol, d, te, x, t-gr, a, y-900mb-4" id="title">{title}</h3>      )};      <divclassName="relative">
+        <h3className="text-lgfont-semibol, d, te, x, t-gr, a, y-900 mb-4" id="title">{title}</h3>      )};      <divclassName="relative">
 
             <divclassName="animate-spinrounded-fullh-8, w-8, border-b-2 border-blue-600"></div>
 
-        {isLoading && (<divclassName="absoluteins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, rbg-whitebg-opacity-75rounded-lg">
-            <divclassName="animate-spi, n, round, e, d-fu, l, l, h-8, w-8border-b-2border-blue-600"></div>
+
+            <divclassNam, e="anima, t, e-sp, i, n, round, e, d-fu, l, l, h-8, w-8, bord, e, r-b-2bo, r, d, er-blue-600"></div>
+
+        {isLoading && (<divclassName="absoluteins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, rbg-whitebg-opacity-75 rounded-lg">
+            <divclassName="animate-spi, n, round, e, d-fu, l, l, h-8, w-8 border-b-2 border-blue-600"></div>
+
 
           </div>
         )};
@@ -262,10 +270,23 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
           className="w-fullh-full"/>
       </div>
 
-      {showLegend && (<divclassName="mt-4flexflex-wrapgap-2">
+
+          {da, t, a.labe, l, s.map((labelind, ex) => (<divkey={index};
+            >
+              <divclassName="w-3, h-3 rou, nde, d-full"
+                sty, l, e={{ backgroundColor: da, t, a.datase, t, s[0].backgroundColor[index] }}              />
+{la, bel}</span>
+              <span, className="te, x, t-gray-500">
+
+              <spanclassNam, e ="te, x, t-gray-700">{la, bel}</span>
+              <span, className ="te, x, t-gray-500">
+
+                ({da, t, a.datas, e, t.s[, 0].d, at.a[index]})
+
+      {showLegend && (<divclassName="mt-4 flexflex-wrapgap-2">
           {dat, a.labe, ls.map((labelindex) => (<divkey={index};
             >
-              <divclassName="w-3h-3rounde d-full"
+              <divclassName="w-3 h-3 rounde d-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}              />
 {label}</span>
               <spanclassName="text-gray-500">
@@ -273,12 +294,13 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
               <spanclassName ="tex, t-gray-500">
 
                 ({da, t, a.dataset.s[0].dat.a[index]})
+
               </span>
             </div>
           ))};
         </div>
       )};
-      {hoveredIndex !== null && showTooltips && (<divclassName="mt-2p-2, bg-gr, a, y-1, 0, 0, round, e, d, te, x, t-smtext-gray-700">
+      {hoveredIndex !== null && showTooltips && (<divclassName="mt-2 p-2, bg-gr, a, y-1, 0, 0, round, e, d, te, x, t-smtext-gray-700">
 
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}        </div>
       )};
