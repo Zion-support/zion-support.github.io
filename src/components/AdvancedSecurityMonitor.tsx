@@ -51,11 +51,11 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600bg-red-100dark:bg-red-900/20';
-      case 'high': return 'text-orange-600bg-orange-100dark:bg-orange-900/20';
-      case 'medium': return 'text-yellow-600bg-yellow-100dark:bg-yellow-900/20';
-      case 'low': return 'text-blue-600bg-blue-100dark:bg-blue-900/20';
-      default: return 'text-gray-600bg-gray-100dark:bg-gray-900/20';
+      case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
+      case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
+      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
+      case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/20';
+      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
     }
   };
 
@@ -109,8 +109,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
   };
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>
-      {/* Header */}
+    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6`}>>
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="security-monitor">Security Monitor</h2>
@@ -164,44 +163,44 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-50dark:bg-gray-700rounded-lg p-4"
+          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Blocked Requests</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Blocked Requests</div>
           <div className="text-2xl font-bold text-red-500">{metrics.blockedRequests}</div>
-          <div className="text-sm text-gray-600dark:text-gray-400">Last24h</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Last 24h</div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gray-50dark:bg-gray-700rounded-lg p-4"
+          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">Suspicious Activity</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Suspicious Activity</div>
           <div className="text-2xl font-bold text-orange-500">{metrics.suspiciousActivity}</div>
-          <div className="text-sm text-gray-600dark:text-gray-400">Detected</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Detected</div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gray-50dark:bg-gray-700rounded-lg p-4"
+          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">XSS Attempts</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">XSS Attempts</div>
           <div className="text-2xl font-bold text-yellow-500">{metrics.xssAttempts}</div>
-          <div className="text-sm text-gray-600dark:text-gray-400">Blocked</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Blocked</div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gray-50dark:bg-gray-700rounded-lg p-4"
+          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
         >
-          <div className="text-sm text-gray-600dark:text-gray-400mb-1">SQL Injection</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>
           <div className="text-2xl font-bold text-red-500">{metrics.sqlInjectionAttempts}</div>
-          <div className="text-sm text-gray-600dark:text-gray-400">Attempts</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Attempts</div>
         </motion.div>
       </div>
 
