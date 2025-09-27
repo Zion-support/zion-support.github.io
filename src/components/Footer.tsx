@@ -1,58 +1,164 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, ArrowRight, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-export default function Footer() {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Cloud Services', href: '/services/cloud' },
+    { name: 'Blockchain', href: '/services/blockchain' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News', href: '/news' },
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
+  ];
+
+  const socialLinks = [
+    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
+  ];
+
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Leading the future of technology with AI, blockchain, and innovative solutions.
+    <footer className="bg-zion-slate-dark border-t border-zion-blue-light/20">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center space-x-2 mb-6 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple-light rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl group-hover:text-zion-cyan transition-colors duration-300">
+                Zion Tech Group
+              </span>
+            </Link>
+            <p className="text-zion-slate-light mb-6 leading-relaxed">
+              Leading the future of technology with innovative solutions, cutting-edge AI, 
+              and transformative digital experiences.
             </p>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link to="/services" className="hover:text-white transition-colors">AI Solutions</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Blockchain</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Cloud Services</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-zion-blue/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:bg-zion-blue/30 transition-all duration-300 hover:scale-110"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.href}
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
+            <ul className="space-y-3">
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <Mail className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-zion-slate-light text-sm">Email</p>
+                  <a href="mailto:hello@ziontechgroup.com" className="text-white hover:text-zion-cyan transition-colors duration-300">
+                    hello@ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-zion-slate-light text-sm">Phone</p>
+                  <a href="tel:+15551234567" className="text-white hover:text-zion-cyan transition-colors duration-300">
+                    +1 (555) 123-4567
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-zion-slate-light text-sm">Location</p>
+                  <p className="text-white">San Francisco, CA</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+
+        {/* Bottom Section */}
+        <div className="border-t border-zion-blue-light/20 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-zion-slate-light text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

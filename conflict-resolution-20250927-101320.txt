@@ -7251,3 +7251,5 @@
 2025-09-27 10:19:39 - Resolving conflicts in services/performanceMonitor.ts for branch backup-main-20250926-064003
 2025-09-27 10:19:39 - Resolving conflicts in services/qrCodeService.ts for branch backup-main-20250926-064003
 2025-09-27 10:19:39 - Resolving conflicts in services/urlShortenerService.ts for branch backup-main-20250926-064003
+2025-09-27 10:19:42 - Merge conflicts detected in backup-main-20250926-064249
+2025-09-27 10:19:42 - Resolving conflicts in App.tsx for branch backup-main-20250926-064249

@@ -26428,3 +26428,26 @@ services/urlShortenerService.ts
 [2025-09-27 10:19:39] 🔧 Resolving conflicts in services/performanceMonitor.ts for branch backup-main-20250926-064003...
 [2025-09-27 10:19:39] 🔧 Resolving conflicts in services/qrCodeService.ts for branch backup-main-20250926-064003...
 [2025-09-27 10:19:39] 🔧 Resolving conflicts in services/urlShortenerService.ts for branch backup-main-20250926-064003...
+[2025-09-27 10:19:39] ✅ Successfully resolved conflicts and merged backup-main-20250926-064003
+[2025-09-27 10:19:39] ✅ Branch backup-main-20250926-064003 processed successfully
+[2025-09-27 10:19:39] 📊 Batch progress: 8 successful, 0 failed
+[2025-09-27 10:19:39] 📊 Overall progress: 8 successful, 0 failed, 5938 conflicts resolved
+[2025-09-27 10:19:39] 📋 Processing branch 9: backup-main-20250926-064039
+[2025-09-27 10:19:40] 🔄 Attempting to merge backup-main-20250926-064039...
+[2025-09-27 10:19:40] ✅ Successfully merged backup-main-20250926-064039
+[2025-09-27 10:19:40] ✅ Branch backup-main-20250926-064039 processed successfully
+[2025-09-27 10:19:40] 📊 Batch progress: 9 successful, 0 failed
+[2025-09-27 10:19:40] 📊 Overall progress: 9 successful, 0 failed, 5938 conflicts resolved
+[2025-09-27 10:19:40] 📋 Processing branch 10: backup-main-20250926-064052
+[2025-09-27 10:19:41] 🔄 Attempting to merge backup-main-20250926-064052...
+[2025-09-27 10:19:41] ✅ Successfully merged backup-main-20250926-064052
+[2025-09-27 10:19:41] ✅ Branch backup-main-20250926-064052 processed successfully
+[2025-09-27 10:19:41] 📊 Batch progress: 10 successful, 0 failed
+[2025-09-27 10:19:41] 📊 Overall progress: 10 successful, 0 failed, 5938 conflicts resolved
+[2025-09-27 10:19:41] 📋 Processing branch 11: backup-main-20250926-064249
+[2025-09-27 10:19:42] 🔄 Attempting to merge backup-main-20250926-064249...
+[2025-09-27 10:19:42] ⚠️  Merge conflicts detected in backup-main-20250926-064249, resolving...
+[2025-09-27 10:19:42] 📋 Conflicted files: App.tsx
+[2025-09-27 10:19:42] 🔧 Resolving conflicts in App.tsx for branch backup-main-20250926-064249...
+[2025-09-27 10:19:42] 🧩 Generic file: prefer main version
+[2025-09-27 10:19:42] ✅ Resolved conflicts in App.tsx
