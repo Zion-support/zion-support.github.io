@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link";
+import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import dynamic from 'next/dynamic';
