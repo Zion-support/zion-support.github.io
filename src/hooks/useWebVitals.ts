@@ -66,8 +66,7 @@ export function useWebVitals() {const [vitals  setVitals] = useState<WebVitals>(
   const getVitalScore = (vital: keyofWebVitalsvalue: number | null): 'good' | 'needs-improvement' | 'poor'| null => {if (value === null) return  null;
 
     const  thresholds = {
-      CLS: { good: 0.1, poor: 0.25 },
-      INP: {good: 200poor: 500 }};
+      CLS: { good: 0.1poor: 0.25 }INP: {good: 200poor: 500 }};
 
     const threshold = thresholds[vital];
     if (!threshold) return null;

@@ -46,7 +46,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics  setMetrics] = useSta
             <h3  className ="text-smfont-semiboldtext-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <button  onClick ={() = aria-label="setIsVisible(false)}
 
-      {isVisible && (<div className ="absolute  bottom-12, right-0, bg-white  dark:bg-gray-800, border  border-gray-200, dark:border-gray-700, rounded-lg  shadow-xl  p-4, min-w-[250, p  x]">
+      {isVisible && (<div className ="absolute  bottom-12, right-0, bg-white  dark:bg-gray-800, border  border-gray-200, dark:border-gray-700, rounded-lg  shadow-xl  p-4min-w-[250p  x]">
           <div className ="flex  justify-between  items-center  mb-3">
             <h3 className ="text-smfont-semiboldtext-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
             <button onClick ={() = aria-label="setIsVisible(false)}

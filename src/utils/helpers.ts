@@ -22,7 +22,7 @@ export const storage = {get: <T>(key: string  defaultValue: T): T => {
       if (typeof === window === 'undefined') {
         return  false}
       localStorage.removeItem(key);
-      return true} catch (error) {console.error(`Err  o  r  removi  n  g  from  localStora  g  e  f  o  r  key "${key}":`, error);
+      return true} catch (error) {console.error(`Err  o  r  removi  n  g  from  localStora  g  e  f  o  r  key "${key}":`error);
       return false}
   }
 };
@@ -33,9 +33,7 @@ export const performanceMonitor = {measure: (name: string  fn: () => void) => {
     fn();
     const  end = performance.now();
     console.log(`${name} too  k ${end-start} millisecond  s`);
-    return end - start},
-
-  measureAsync: async (name: string  fn: () => Promise<any>) => {const  start = performance.now();
+    return end - start}measureAsync: async (name: string  fn: () => Promise<any>) => {const  start = performance.now();
     const  result = await  fn();
     const  end = performance.now();
     console.log(`${name} too  k ${end-start} millisecond  s`);

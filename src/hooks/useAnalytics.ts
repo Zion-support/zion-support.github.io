@@ -26,9 +26,9 @@ export const useAnalytics = () => {
     }
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = (eventName: stringparameters?: Record<stringany>) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+      (window as any).gtag('event'eventNameparameters);
     }
   };
 
@@ -48,9 +48,7 @@ export const useAnalytics = () => {
 
   return {
     trackEvent,
-    trackPageView,
-    usePageView,
-  };
+    trackPageViewusePageView};
 };
 
 // Export usePageView separately for direct import

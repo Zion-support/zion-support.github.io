@@ -58,7 +58,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
             Accessibility  Enhancements
           </h3>
-          <div  className={`px-4, py-2, rounded-lg ${getScoreBgColor(score)}`}>
+          <div  className={`px-4, py-2rounded-lg ${getScoreBgColor(score)}`}>
             <span className={`te  x  t-lg  fo  nt-bol  d ${getScoreColor(score)}`}>
               {score}% Accessible            </span>
           </div>
@@ -66,7 +66,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="space-y-4">
-            <h4 className="font-semibold text-gray-800, m  b-3">Accessibility Features</h4>
+            <h4 className="font-semibold text-gray-800m  b-3">Accessibility Features</h4>
             
             <div className="space-y-3">
               <label className="flex items-center justify-between p-3 bg-gray-50 rounded-lg cursor-pointer hove r:bg-gray-100">
@@ -160,7 +160,7 @@ export const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps>
                 ))}
               </div>
             )  : (<div className ="flex  items-center  p-4, bg-green-50, border border-green-200rounded-lg">
-                <CheckCircle className ="w-5, h-5, mr-2te  x  t-green-500" />
+                <CheckCircle className ="w-5h-5mr-2te  x  t-green-500" />
                 <span className ="text-sm  font-medium  text-green-800">                  All  accessibility features  are enabled! Great  job!
 
                 </span>

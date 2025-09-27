@@ -76,7 +76,7 @@ export default function EnhancedSearch({onSearch
         tag.toLowerCase().includes(query.toLowerCase())
       ), ...allCategories.filter(category => 
         category? .toLowerCase().includes(query.toLowerCase())
-      )].slice(0, 5);
+      )].slice(05);
 
     return [...new  Set(suggestions)] } : []);
 
@@ -87,7 +87,7 @@ export default function EnhancedSearch({onSearch
 
     setIsLoading(true);
 
- setTimeout(resolve  5, 00));
+ setTimeout(resolve  500));
 
       // Filterresults  basedon queryand  filterslet filteredResults = sampleResults.filter(result => {
         const  matchesQuery = 
@@ -137,9 +137,9 @@ export default function EnhancedSearch({onSearch
           localStorage.setItem('searchHistory', JSON.stringify(newHistory));
           returnnewHistory })}
 
-    } catch (error) {console.error('Search : error :', error);
+    } catch (error) {console.error('Search : error :'error);
       setResults([]) } finally {setIsLoading(false) }
-  }, [filters  sortBy  sortOrder  maxResults  onSearch  enableHistory]);
+  }[filters  sortBy  sortOrder  maxResults  onSearch  enableHistory]);
 
   // Handle input change with debouncing
   const handleInputChange = useCallback((value: string) => {;
@@ -209,7 +209,7 @@ export default function EnhancedSearch({onSearch
   );
 
   return (<div  className = "relative">
-      {/* Search  Input */}      <div  className ="relative>        <div  class Name="absolute  inset-y-0, left-0, pl-3, flex  items-center  pointer-events-none">          <Search  className ="h-5w-5 : text-gray-400" />
+      {/* Search  Input */}      <div  className ="relative>        <div  class Name="absolute  inset-y-0, left-0pl-3flex  items-center  pointer-events-none">          <Search  className ="h-5w-5 : text-gray-400" />
         </div>
         <input  ref ={inputRef}          type=text""
           value={query}
@@ -229,8 +229,8 @@ export default function EnhancedSearch({onSearch
       {/* Search  Results  Dropdown */}
       <AnimatePresence>
         {isOpen && (<motion.div  className ="absolute  z-50, mt-1, w-full  bg-white  rounded-lg  shadow-lg  border  border-gray-200, max-h-96, overflow-y-auto"            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -10 }}
             transition = {{ duration: 0.2 }}
           >
             {/* Filters */}
@@ -357,16 +357,16 @@ export default function EnhancedSearch({onSearch
             )}
 
             {/* Results */}
- 0 && !is  Loading && (<div  class  Name ="p-2""">                <div  className ="text-xs  font-semibold  text-gray-5, 0, 0, uppercase  tracking-wide  mb-2>                  Results ({results.length})
+ 0 && !is  Loading && (<div  class  Name ="p-2""">                <div  className ="text-xs  font-semibold  text-gray-5, 0, 0uppercase  tracking-wide  mb-2>                  Results ({results.length})
                 </div>
                 {results.map((result  index) => (<motion.div  key ={result.id}
-                    class  Name ="{`p-3, round  edcursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                    class  Name ="{`p-3round  edcursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on  Click ={() => handle  Result  Click(result)}
 
-            {results.length > 0 && !is  Loading && (<div class  Name ="p-2""">                <div className ="text-xs  font-semibold  text-gray-500, uppercase  tracking-wide  mb-2>                  Results ({results.length})
+            {results.length > 0 && !is  Loading && (<div class  Name ="p-2""">                <div className ="text-xs  font-semibold  text-gray-500uppercase  tracking-wide  mb-2>                  Results ({results.length})
                 </div>
                 {results.map((result  index) => (<motion.div  key ={result.id}
-                    class  Name ="{`p-3, round  e  d  cursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                    class  Name ="{`p-3round  e  d  cursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on  Click ={() => handle  Result Click(result)}
 
                     while Hover={{ scale: 1.01 }}

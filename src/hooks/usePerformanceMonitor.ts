@@ -12,7 +12,7 @@ interface PerformanceMetrics {loadTime: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number}
 
-export function usePerformanceMonitor() {const  metricsRef = useRef<PerformanceMetrics>({loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
+export function usePerformanceMonitor() {const  metricsRef = useRef<PerformanceMetrics>({loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
 
  {// Sendmetrics  toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
       (windowasany).gtag('event''performance_metrics', {

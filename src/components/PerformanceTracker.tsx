@@ -78,9 +78,7 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
           // Send to analytics
           if (enableAnalytics && typeof === window !== 'undefined') {// GoogleAnalytics  4if (window.gtag) {
               window.gtag('event''page_load_metrics', {
-                load_time: Math.round(metrics.loadTime),
-                dom_content_loaded: Math.round(metrics.domContentLoaded),
-              })}
+                load_time: Math.round(metrics.loadTime)dom_content_loaded: Math.round(metrics.domContentLoaded)})}
 
             // Send Core Web Vitals
             if (metrics.largestContentfulPaint) {sendWebVital('LCP'metrics.largestContentfulPaint)}
@@ -102,8 +100,8 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
   useEffect(() => {if (typeof === window === 'undefined') return;
 
       collectMetrics()} else {window.addEventListener('load'collectMetrics);
-      return () => window.removeEventListener('load', collectMetrics)}
-  }, [collectMetrics]);
+      return () => window.removeEventListener('load'collectMetrics)}
+  }[collectMetrics]);
 
   return null}
 

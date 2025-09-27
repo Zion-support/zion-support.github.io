@@ -19,9 +19,7 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions',
-  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.',
-  canonical,
-  ogImage = '/og-image.jpg',
+  description = 'Leading provider of AI-powered business solutions, cloud infrastructure and digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation', 'technology consulting'],
@@ -29,9 +27,7 @@ export default function EnhancedSEO({
   publishedTime,
   modifiedTime,
   section,
-  tags = [],
-  noindex = false,
-  nofollow = false
+  tags = []noindex = falsenofollow = false
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Solutions') ? title : `${title} | Zion Tech Solutions`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
@@ -40,9 +36,7 @@ export default function EnhancedSEO({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Solutions',
-    description: fullDescription,
-    url: 'https://ziontechgroup.com',
+    name: 'Zion Tech Solutions'description: fullDescriptionurl: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     sameAs: ['https://linkedin.com/company/zion-tech-solutions', 'https://twitter.com/ziontechsolutions'],
     contactPoint: {
@@ -74,7 +68,7 @@ export default function EnhancedSEO({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       
       {/* CanonicalURL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}

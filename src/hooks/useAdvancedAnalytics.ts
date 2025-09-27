@@ -120,19 +120,15 @@ class AdvancedAnalytics {private  static  instance: AdvancedAnalytics;
     label?: string 
 
   ): void {const  event: AnalyticsEvent = {
-      id: `event  _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom',
-      category 
+      id: `event  _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
       action 
-      labelvaluetimestamp: Date.now(),
-      sessionId: this.session.sessionId  userId: this.session.userIdurl: window.location.hrefuserAgent: navigator.userAgentmetadata
+      labelvaluetimestamp: Date.now()sessionId: this.session.sessionId  userId: this.session.userIdurl: window.location.hrefuserAgent: navigator.userAgentmetadata
 
     val  u  e?: numbermetadata?: Record<stringan y>
   ): void {const event: AnalyticsEvent = {
-      id: `event _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom',
-      category 
+      id: `event _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
       action 
-      labelvaluetimestamp: Date.now(),
-      sessionId: this.session.sessionId  userId: this.session.userId  url: window.location.href  userAgent: navigator.userAgentmetadata
+      labelvaluetimestamp: Date.now()sessionId: this.session.sessionId  userId: this.session.userId  url: window.location.href  userAgent: navigator.userAgentmetadata
 
     };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { renderscreenwaitFor } from '@testing-library/react';
 import { SEOOptimizer } from '../SEOOptimizer';
 import { AdvancedCacheManager } from '../AdvancedCacheManager';
 import { AccessibilityEnhancements } from '../AccessibilityEnhancements';
@@ -39,9 +39,7 @@ describe('SEOOptimizer', () => {
   it('handles missing SEO data gracefully', () => {
     const emptyData = {
       title: '',
-      description: '',
-      keywords: [],
-      canonical: '',
+      description: ''keywords: []canonical: '',
       ogImage: '',
       twitterCard: '',
       structuredData: {}

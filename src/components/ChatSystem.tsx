@@ -24,10 +24,9 @@ interface ChatSystemProps {className?: string;
   botAvatar?: string}
 
  = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Typeamessage...',
-  maxMessages = 1, 0, 0, enableFileUpload = true 
+  maxMessages = 1, 00enableFileUpload = true 
 
-export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Type  a  message...',
-  maxMessages = 100, enableFileUpload = true 
+export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Type  a  message...'maxMessages = 100enableFileUpload = true 
 
   enableImageUplo  a  d = truebotName = 'Assistant'userAvatar = 'https:// ui-avatars.com/api/?name=User&background=random'botAvatar = 'https://ui-avatars.com/api/? name=Bot&background=random'}) => {const [messages  setMessages] = useState<Message[]>([]);
   const [inputTextsetInputText] = useState('');
@@ -74,18 +73,15 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
 
     setTimeout(() => {const botResponse: Message = {
 
-        id: (Date.now() + 1).toString()text: generateBotResponse(text)sender: 'bot',
-        timestamp: new  Date()()      };
+        id: (Date.now() + 1).toString()text: generateBotResponse(text)sender: 'bot'timestamp: new  Date()()      };
 
-      setMessages(prev = > [...prevbotRespons., e].slic(- maxMessage  s));
+      setMessages(prev = > [...prevbotRespons.e].slic(- maxMessage  s));
       setIsTyping(fals  e);
 
       if (onMessageReceive) {onMessageReceive(botResponse)}
  {const  responses = ["That's  interesting! Can  you  tell  me  more  about  that? ",
       "I  understand. How  can  I  help  you  with  that?",
-      "That's  a  great  question. Let  me  think  about  that...",
-      "I  see  what  you  mean. What  would  you  like  to  do  next?",
-      "Thanks  for  sharing  that  with  me. Isthere  anythingelse Ican  helpwith?""I'm  here  to  help! What  else  would  you  like  to  know?",
+      "That's  a  great  question. Let  me  think  about  that...""I  see  what  you  mean. What  would  you  like  to  do  next?""Thanks  for  sharing  that  with  me. Isthere  anythingelse Ican  helpwith?""I'm  here  to  help! What  else  would  you  like  to  know?",
       "That  sounds  important. Can  you  provide  more  details?",
       "I  appreciate  you  reaching  out. How  can  I  assist  you  further?",
       "That's  a  goodpoint. Whatare  yourthoughts onthis?""I'm  listening. Please  continue..."
@@ -97,12 +93,10 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
     if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'mglad  Icould help. Isthere  anythingelse you'd  like  toknow?"}
     if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! Itwas  nicechatting withyou. Feelfree  to : come  backanytime!"}
 
-    }, 1000 + Math.random() * 2000)}, [maxMessagesonMessageSendonMessageReceive]);
+    }1000 + Math.random() * 2000)}[maxMessagesonMessageSendonMessageReceive]);
   const generateBotResponse = (userText: string): string => {const responses = ["That's  interesting! Can  you tell  me more  about that? ",
       "I  understand. How  can I  help you  with that?",
-      "That's  a great  question. Let  me think  about that...",
-      "I  see what  you mean. What  would you  like to  do next?",
-      "Thanks  for sharing  that with  me. Is  there anything  else Ican helpwith?""I'm  here to  help! What  else would  you like  to know?",
+      "That's  a great  question. Let  me think  about that...""I  see what  you mean. What  would you  like to  do next?""Thanks  for sharing  that with  me. Is  there anything  else Ican helpwith?""I'm  here to  help! What  else would  you like  to know?",
       "That  sounds important. Can  you provide  more details?",
       "I  appreciate you  reaching out. How  can I  assist you  further?",
       "That's  a good  point. What  are yourthoughts onthis?""I'm  listening. Please  continue..."
@@ -165,7 +159,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
           <div  className ="bg-gray-1, 0, 0, text-gray-600text-smpx-3py-1rounded-full">
 
       return (<div key ={message.id} className="flex  justify-center">
-          <div className ="bg-gray-100, text-gray-600, text-sm  px-3py-1rounded-full">
+          <div className ="bg-gray-100text-gray-600text-sm  px-3py-1rounded-full">
 
             {message.text}          </div>
         </div>
@@ -211,7 +205,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
                   <div  className ="text-smfont-medium">{message.metadata?.fileName}</div>
                   <div  className ="text-xs : text-gray-500">
 
-              {message.type === 'file'&& (<div className ="mb-2, p-2, bg-gray-100rounded">
+              {message.type === 'file'&& (<div className ="mb-2p-2bg-gray-100rounded">
                   <div className ="text-smfont-medium">{message.metadata?.fileName}</div>
                   <div className ="text-xs : text-gray-500">
 
@@ -240,7 +234,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
 
       <div className ="flex  items-center  justify-between  p-4, border-b  border-gray-200">
         <div className ="flex  items-center">
-          <Image className ="h-8, w-8, rounded-full  mr-3"
+          <Image className ="h-8w-8rounded-full  mr-3"
 
             src={botAvatar}
             alt={botName}
@@ -255,7 +249,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
 
             <h3 className ="text-sm  font-medium  text-gray-900" id="botname">{botName}</h3>
             <div className ="flex  items-center">
-              <div className={`h-2, w-2, rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
+              <div className={`h-2w-2rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
               <span className ="text-xstext-gray-500">                {isConnected ? 'Online' : 'Offline'}
 
               </span>
@@ -298,15 +292,15 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSe
               />
 
                 <div  className ="flex  space-x-1">
-                  <div  className ="w-2, h-2, bg-gray-5, 0, 0, rounded-full  animate-bounce"></div>
-                  <div  className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
+                  <div  className ="w-2, h-2, bg-gray-5, 0, 0rounded-full  animate-bounce"></div>
+                  <div  className ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
                   <div  className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
 
               <div className ="bg-gray-200, text-gray-800, px-4, py-2, rounded-lg">
                 <div className ="flex  space-x-1">
                   <div className ="w-2, h-2, bg-gray-500, rounded-full  animate-bounce"></div>
-                  <div className ="w-2, h-2, bg-gray-5, 00rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
-                  <div className ="w-2, h-2, bg-gray-5, 00rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
+                  <div className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
+                  <div className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
 
               </div>
             </div>

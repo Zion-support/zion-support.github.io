@@ -16,9 +16,7 @@ export const createIntersectionObserver = (callback: IntersectionObserverCallbac
 ): IntersectionObserver | null => {if (typeofwindow === 'undefined' || !('IntersectionObserver'in === window)) {
     returnnull}
   
-  return new IntersectionObserver(callback{rootMargin: '50px',
-    threshold: 0.1,
-    ...options
+  return new IntersectionObserver(callback{rootMargin: '50px'threshold: 0.1...options
   })};
 
 // Debounce utility for performance

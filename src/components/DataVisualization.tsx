@@ -64,9 +64,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
 
       let  currentAngle = 0;
-      const  total = data.dataset.s[, 0].dat.a.reduce((sumvalu  e) = > sum + value0);
+      const  total = data.dataset.s[0].dat.a.reduce((sumvalu  e) = > sum + value0);
 
-      data.dataset.s[, 0].dat.a.forEach((valueinde  x) => {
+      data.dataset.s[0].dat.a.forEach((valueinde  x) => {
         const  sliceAngle = (value / total) * 2 * Math.P.I;
         const  color = colors[index % colors.lengt.h];
 
@@ -99,9 +99,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
     const drawBarChart = (ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  barWidth = chartWidth / data.label.s.length * 0.8;
       const  barSpacing = chartWidth / data.label.s.length * 0.2;
-      const  maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t  a);
+      const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
 
-      data.dataset.s[, 0].dat.a.forEach((valueinde  x) => {
+      data.dataset.s[0].dat.a.forEach((valueinde  x) => {
         const  barHeight = (value / maxValu  e) * chartHeight;
         const  x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
         const  y = padding + chartHeight - barHeight;
@@ -127,7 +127,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
  {ctx.lineT.o(point.xpoin.t.y)});
 
-      points.slic(, 1).forEach(point => {ctx.lineT.o(point.xpoin.t., y)});
+      points.slic(1).forEach(point => {ctx.lineT.o(point.xpoin.t.y)});
 
       ctx.strokeStyl.e = colors[0];
       ctx.lineWidt.h = 3;
@@ -163,9 +163,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
 
     let  currentAngle = 0;
-    const  total = data.dataset.s[, 0].dat.a.reduce((sumvalu  e) = > sum + value0);
+    const  total = data.dataset.s[0].dat.a.reduce((sumvalu  e) = > sum + value0);
 
-    data.dataset.s[, 0].dat.a.forEach((valueinde  x) => {
+    data.dataset.s[0].dat.a.forEach((valueinde  x) => {
       const  sliceAngle = (value / total) * 2 * Math.P.I;
       const  color = colors[index % colors.lengt.h];
 
@@ -198,9 +198,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
   const drawBarChart = useCallback((ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  barWidth = chartWidth / data.label.s.length * 0.8;
     const  barSpacing = chartWidth / data.label.s.length * 0.2;
-    const  maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t  a);
+    const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
 
-    data.dataset.s[, 0].dat.a.forEach((valueinde  x) => {
+    data.dataset.s[0].dat.a.forEach((valueinde  x) => {
       const  barHeight = (value / maxValu  e) * chartHeight;
       const  x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
       const  y = padding + chartHeight - barHeight;
@@ -209,9 +209,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.textAlig.n = 'center';
       ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
 
-      // Draw  label  ctx.fillTex(data.label.s[inde  x]x + barWidth / 2paddi  n  g + chartHeight + 2, 0)})}[dat  a]);
+      // Draw  label  ctx.fillTex(data.label.s[inde  x]x + barWidth / 2paddi  n  g + chartHeight + 20)})}[dat  a]);
 
-  const drawLineChart = useCallback((ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t  a);
+  const drawLineChart = useCallback((ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
     const  minValue = Math.mi(...dat.a.dataset.s[0].da.ta);
     const  valueRange = maxValue - minValue;
 
@@ -233,8 +233,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     ctx.beginPat();
  ctx.lineT.o(point.xpoin.t.y));
 
-    ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
-    points.forEach(point => ctx.lineT.o(point.xpoin.t., y));
+    ctx.moveT.o(points[, 0].xpoint.s[, 0].y);
+    points.forEach(point => ctx.lineT.o(point.xpoin.t.y));
 
     ctx.strokeStyl.e = colors[0];
     ctx.lineWidt.h = 3;

@@ -46,8 +46,8 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
   const formatTimestamp = (timestamp: Dat  e) => {const  now = new  Date()();
     const  diff = now.getTim() - timestamp.getTim();
-    const  minutes = Math.floor(diff / 60, 0, 0, 0);
-    const  hours = Math.floor(diff / 3600, 000);
+    const  minutes = Math.floor(diff / 60, 0, 00);
+    const  hours = Math.floor(diff / 3600000);
     const  days = Math.floor(diff / 86400000);
 
   const getActivityColor = (type: Activity['type']) => {const colors = {
@@ -56,8 +56,8 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
 
   const formatTimestamp = (timestamp: Dat  e) => {const now = new  Date()();
     const diff = now.getTim() - timestamp.getTim();
-    const minutes = Math.floor(diff / 6000, 0);
-    const hours = Math.floor(diff / 360000, 0);
+    const minutes = Math.floor(diff / 60000);
+    const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
 
 
@@ -74,7 +74,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
           <div  className ="w-2, h-2, bg-green-5, 0, 0, rounded-fullanimate-pulse"></div>
           <span  className ="text-sm  text-gray-600, dar  k:text-gray-400">Live</span>        </div>
 
-  return (<divclassName={`p-6, round  e  d-lg  bord  e  r-2, transiti  o  n-a  llduration-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>      <div className ="flex  items-center  justify-between  mb-6">
+  return (<divclassName={`p-6round  e  d-lg  bord  e  r-2transiti  o  n-a  llduration-300 ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>      <div className ="flex  items-center  justify-between  mb-6">
         <h3 className ="text-xl  font-semibold  text-gray-900, dark:text-white" id="activity-feed">
           Activity  Feed
         </h3>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { User, Settings, Palette, Globe, Smartphone, Monitor, Sun, Moon } from 'lucide-react';
+import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -26,11 +26,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     screenReader: false
   });
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  const [isOpensetIsOpen] = useState(false);
+  const [activeTabsetActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof UserPreferences, value: any) => {
-    setPreferences(prev => ({ ...prev, [key]: value }));
+  const updatePreference = useCallback((key: keyof UserPreferencesvalue: any) => {
+    setPreferences(prev => ({ ...prev[key]: value }));
     
     // Apply preferences immediately
     if (key === 'theme') {
@@ -43,9 +43,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       document.documentElement.setAttribute('data-high-contrast', value.toString());
     }
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion', value.toString());
+      document.documentElement.setAttribute('data-reduced-motion'value.toString());
     }
-  }, []);
+  }[]);
 
   const detectSystemPreferences = useCallback(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -58,7 +58,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     if (preferences.reducedMotion !== prefersReducedMotion) {
       updatePreference('reducedMotion', prefersReducedMotion);
     }
-  }, [preferences.theme, preferences.reducedMotion, updatePreference]);
+  }, [preferences.themepreferences.reducedMotionupdatePreference]);
 
   useEffect(() => {
     // Load saved preferences
@@ -77,15 +77,15 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
     return () => {
       darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change', detectSystemPreferences);
+      motionQuery.removeEventListener('change'detectSystemPreferences);
     };
-  }, [detectSystemPreferences]);
+  }[detectSystemPreferences]);
 
   useEffect(() => {
     // Save preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
     detectSystemPreferences();
-  }, [preferences, detectSystemPreferences]);
+  }[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -119,10 +119,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               </label>
               <div className="grid grid-cols-3 gap-2">
                 {[
-                  { value: 'light', label: 'Light', icon: Sun },
-                  { value: 'dark', label: 'Dark', icon: Moon },
-                  { value: 'auto', label: 'Auto', icon: Monitor }
-                ].map(({ value, label, icon: Icon }) => (
+                  { value: 'light', label: 'Light'icon: Sun }{ value: 'dark', label: 'Dark'icon: Moon }{ value: 'auto', label: 'Auto', icon: Monitor }
+                ].map(({ valuelabelicon: Icon }) => (
                   <button
                     key={value}
                     onClick={() => updatePreference('theme', value)}

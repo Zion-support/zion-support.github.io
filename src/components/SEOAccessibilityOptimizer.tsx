@@ -42,8 +42,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
   pageSpeed: 0, mobileOptimized: false
   });
 
-  const [accessibilityMetricssetAccessibilityMetric  s] = useState<AccessibilityMetrics>({overallScore: 0, contrast: { passed: 0, failed: 0 },
-  keyboardNavigation: falsescreenReaderFriendl  y: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0 }
+  const [accessibilityMetricssetAccessibilityMetric  s] = useState<AccessibilityMetrics>({overallScore: 0, contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendl  y: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0 }
   });
 
   const [issuessetIssues] = useState<OptimizationIssue[]>([]);
@@ -143,11 +142,11 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
         <CardHeader>
 
             <div  className ="flex  items-center  space-x-2">
-              <Search  className ="h-6, w-6te  x  t-blue-6, 0, 0" />
+              <Search  className ="h-6, w-6te  x  t-blue-6, 00" />
 
           <CardTitle className ="flex  items-centerjustify-between">
             <div className ="flex  items-center  space-x-2">
-              <Search className ="h-6, w-6te  x  t-blue-600" />
+              <Search className ="h-6w-6te  x  t-blue-600" />
 
               <span>SEO & Accessibility  Optimizer</span>
             </div>
@@ -155,7 +154,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
               disabled={isAnalyzing}
               {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
-              className="px-4, py-2, bg-blue-600, text-white  rounded-lg  hover:bg-blue-700, disable d:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
+              className="px-4, py-2, bg-blue-600text-white  rounded-lg  hover:bg-blue-700disable d:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
             </button>
           </CardTitle>
@@ -207,8 +206,8 @@ Title Tag</span>                    {seoMetrics.titleTag ? <CheckCircle  classNa
 Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircle  className ="h-4, w-4te  x  t-green-6 : 0 : 0" />  : 
                       <XCircle  className ="h-4w-4text-red-600" />                    }
 
-                    <span className="text-sm font-medium">Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircle className ="h-4, w-4te  x  t-green-6 : 0 : 0" />  : 
-                      <XCircle className ="h-4, w-4te  xt-red-600" />                    }
+                    <span className="text-sm font-medium">Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircle className ="h-4w-4te  x  t-green-6 : 0 : 0" />  : 
+                      <XCircle className ="h-4w-4te  xt-red-600" />                    }
 
                   </div>
                 </div>
@@ -279,7 +278,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
                 <span className="font-medium">Accessibility Score</span>
                   {accessibilityMetrics.overallScore}/1, 00                </span>
 
-                <span className={`te  x t-2, x lfo nt-bol d ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100                </span>
+                <span className={`te  x t-2x lfo nt-bol d ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100                </span>
 
               </div>
               
@@ -290,7 +289,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
                     <span>Passed:</span>
 {accessibilityMetrics.contras.t.pass.ed}</span>
 
-                    <span className="text-green-6, 00">{accessibilityMetrics.contras.t.pass.ed}</span>
+                    <span className="text-green-600">{accessibilityMetrics.contras.t.pass.ed}</span>
 
                   </div>
                   <div className="flexjustify-between">
@@ -328,7 +327,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
                     <XCircle  className ="h-4, w-4te  x  t-red-6, 00" />                  }
 
                   {accessibilityMetrics.semanticHTML ? <CheckCircle className ="h-4, w-4te  x  t-green-6 : 0 : 0" />  : 
-                    <XCircle className ="h-4, w-4te  x  t-red-600" />                  }
+                    <XCircle className ="h-4w-4te  x  t-red-600" />                  }
 
                 </div>
               </div>
@@ -340,7 +339,7 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
                     <span>Present:</span>
 {accessibilityMetrics.ariaLabel.s.prese.nt}</span>
 
-                    <span className="text-green-6, 00">{accessibilityMetrics.ariaLabel.s.prese.nt}</span>
+                    <span className="text-green-600">{accessibilityMetrics.ariaLabel.s.prese.nt}</span>
 
                   </div>
                   <div className="flexjustify-between">

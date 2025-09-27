@@ -5,7 +5,7 @@
 
 // Focus management utilities
 export const trapFocus = (element: HTMLElement): (() => void) => {
-  const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  const focusableElements = element.querySelectorAll('button, [href], input, selecttextarea[tabindex]:not([tabindex="-1"])');
   
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -32,12 +32,12 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
 
   return () => {
-    element.removeEventListener('keydown', handleTabKey);
+    element.removeEventListener('keydown'handleTabKey);
   };
 };
 
 // Announce to screen readers
-export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+export const announceToScreenReader = (message: stringpriority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
@@ -48,11 +48,11 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
   
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }, 1000);
+  }1000);
 };
 
 // Skip link functionality
-export const createSkipLink = (targetId: string, linkText: string = 'Skip to main content'): HTMLElement => {
+export const createSkipLink = (targetId: stringlinkText: string = 'Skip to main content'): HTMLElement => {
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = linkText;
@@ -89,8 +89,8 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const lum1 = getLuminance(foreground);
   const lum2 = getLuminance(background);
   
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+  const brightest = Math.max(lum1lum2);
+  const darkest = Math.min(lum1lum2);
   
   return (brightest + 0.05) / (darkest + 0.05) >= 4.5;
 };

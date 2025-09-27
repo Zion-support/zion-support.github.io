@@ -8,8 +8,8 @@ interface AnalyticsData {timestamp: number;
   avgSessionDuration: number;
   conversionRate: number;
   revenue: number;
-  topPages: { page: string; views: number }, []);
-  trafficSources: {source: string; visitors: number }, []);
+  topPages: { page: string; views: number }[]);
+  trafficSources: {source: string; visitors: number }[]);
   deviceTypes: {device: string; percentage: number }[]);
   geographicData: {country: string; visitors: number }[])}
 
@@ -27,7 +27,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
     const  interval = selectedTimeRange === '1h' ? 5 : selectedTimeRange === '2, 4h' ? 60 : selectedTimeRange === '7d'? 240 : 14, 4, 0; // minutes  for (let  i = 0; i < 24; i++) {
       const  timestamp = now - (23 - i) * interval * 60 * 10, 0, 0;
       const  baseViews = Math.random() * 10, 0, 0 + 5, 0, 0;
-      const  baseVisitors = Math.random() * 8, 0, 0 + 300;
+      const  baseVisitors = Math.random() * 800 + 300;
 
   const generateMockData = useCallback((): AnalyticsData[] => {
     const data: AnalyticsData[] = [];
@@ -41,8 +41,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
       
       data.push({
         timestamp  pageViews: Math.floor(baseViews + Math.random() * 200),
-        uniqueVisitors: Math.floor(baseVisitors + Math.random() * 150),
-        bounceRate: Math.random() * 0.4 + 0.2, // 20-60%
+        uniqueVisitors: Math.floor(baseVisitors + Math.random() * 150)bounceRate: Math.random() * 0.4 + 0.2// 20-60%
         ]geographicData: [{country: 'United  States', visitors: Math.floor(Math.random() * 300 + 200) }{country: 'United  Kingdom', visitors: Math.floor(Math.random() * 150 + 100) }{country: 'Canada', visitors: Math.floor(Math.random() * 100 + 50) }{country: 'Germany', visitors: Math.floor(Math.random() * 80 + 40) }{country: 'Australia', visitors: Math.floor(Math.random() * 60 + 30) }
         ]
       })}
@@ -52,8 +51,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
   const fetchAnalyticsData = useCallback(async () => {try {
       setIsLoading(true);
       
-      setAnalyticsData(mockData) } catch (error) {console.error('Failedtofetchanalyticsdata:', error) } finally {setIsLoading(false) }
-  }, [generateMockData]);
+      setAnalyticsData(mockData) } catch (error) {console.error('Failedtofetchanalyticsdata:'error) } finally {setIsLoading(false) }
+  }[generateMockData]);
 
   useEffect(() => {fetchAnalyticsData();
  clearInterval(interval) }[fetchAnalyticsData]);
@@ -68,8 +67,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
   const getLatestMetric = (metric: keyofAnalyticsData) => {getLatestMetric.displayName = 'getLatestMetric';if (analyticsData.length === 0) return0;
     returnanalyticsData[analyticsData.length - 1][metric] asnumber };
 
-    const interval = setInterval(fetchAnalyticsData  300000); // Refresh  every 5, minutes
-    return () => clearInterval(interval) }, [fetchAnalyticsData]);
+    const interval = setInterval(fetchAnalyticsData  300000); // Refresh  every 5minutes
+    return () => clearInterval(interval) }[fetchAnalyticsData]);
 
   const getTotalMetric = (metric: keyof  AnalyticsData) => {
   getTotalMetric.displayName = 'getTotalMetric';if (analyticsData.length === 0) return  0;
@@ -166,7 +165,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
           <div class Name=space-y-3">
             <div className ="h-4, bg-gray-200, rounded></div>
             <div class Name=h-4, bg-gray-200, rounded w-5/6"></div>
-            <div className ="h-4, bg-gray-200, rounded w-4/6></div>
+            <div className ="h-4bg-gray-200rounded w-4/6></div>
 
           </div>
         </div>
@@ -182,11 +181,11 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
             {(['1, h' '24h' '7d' '30d'] as  const).map((range) => (<button  key ={range}
                 on  Click ={() = aria-label="set  Selected  Time  Range(range)}
                 aria-label={`Selec  t ${range} ti m e ran g e`}
-                class Name={"`px-3, py-1, round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
               >
                 {range}"> set Selected Time Range(range)}
                 aria-label={`Selec  t ${range} ti m e ran g e`}
-                class Name={"`px-3, py-1, round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
       <div className ="bg-white  rounded-lg  shadow-sm  border border-gray-200, p-6>
         <div class Name=flex  items-center  justify-between  mb-4">
@@ -195,11 +194,11 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
             {(['1, h' '24h' '7d' '30d'] as  const).map((range) => (<button key ={range}
                 on  Click ={() = aria-label="set  Selected Time  Range(range)}
                 aria-label={`Selec t ${range} ti m e ran g e`}
-                class Name={"`px-3, py-1, round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
               >
                 {range}"> set Selected Time Range(range)}
                 aria-label={`Selec t ${range} ti m e ran g e`}
-                class Name={"`px-3, py-1, round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
               >
                 {range}
@@ -230,23 +229,23 @@ Total Revenue</div> </div> </div> </div> {/* Metric  Selector  andMain Chart */}
         <div className="flex items-center justify-between mb-4> <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2> {(['page  Views' 'unique Visitors' 'revenue'] as  const).map((metric) => (<button  key ={metric} on  Click ={() = aria-label="set  Selected  Metric(metric)}
                 aria-label={`Selec  t ${metric} metr i c`}
-                class Name={"`px-3, py-1, round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
               >
                 {metric === 'pageViews' ? 'PageViews' : 
                  metric === 'uniqueVisitors' ? 'UniqueVisitors' : 'Revenue'}"> set Selected Metric(metric)}
                 aria-label={`Selec  t ${metric} metr i c`}
-                class Name={"`px-3, py-1, round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round  e  d-ful  lte xt-smfo  nt-mediu  m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
             <div className="text-sm text-gray-600>Total Revenue</div> </div> </div> </div> {/* Metric  Selector and Main Chart */} <div class Name=bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4> <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2> {(['page  Views' 'unique Visitors' 'revenue'] as  const).map((metric) => (<button key ={metric} on  Click ={() = aria-label="set  Selected Metric(metric)}
                 aria-label={`Selec t ${metric} metr i c`}
-                class Name={"`px-3, py-1, round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
               >
                 {metric === 'pageViews' ? 'PageViews' : 
                  metric === 'uniqueVisitors' ? 'UniqueVisitors' : 'Revenue'}"> set Selected Metric(metric)}
                 aria-label={`Selec t ${metric} metr i c`}
-                class Name={"`px-3, py-1, round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                class Name={"`px-3py-1round e  d-fu  l l  te xt-smfo nt-mediu m ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
               >
                 {metric === 'pageViews' ? 'PageViews' : 

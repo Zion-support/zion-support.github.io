@@ -47,7 +47,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 						<path  strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5  13, l  4, 4L  1, 9, 7" />					</svg>
 				</div>
 				<h3  className ="text-2xl  font-bold  text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message  Sent  Successfully!</h3>
-				<p  className ="text-green-6, 0, 0, mb-6, text-lg">
+				<p  className ="text-green-6, 0, 0mb-6text-lg">
 					Thank  you  for  your  interest  in  our  services. We&apos;llget  backto youwithin  24hours witha  detailedproposal.
 
 	if (submitStatus === 'success') {return (<div className={`bg-gre  e  n-50, bord  e  r  bord  e  r-gre  e  n-200, round  e  d-2, x  l  p-8, te  xt-center ${className}`}>
@@ -56,7 +56,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 						<path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5  13, l  4, 4L  197" />					</svg>
 				</div>
 				<h3 className ="text-2xl  font-bold  text-green-800, mb-4" id="message-sent-successfully">Message  Sent Successfully!</h3>
-				<p className ="text-green-600, mb-6, text-lg">
+				<p className ="text-green-600mb-6text-lg">
 					Thank  you for  your interest  in our  services. We&apos;ll  get back  to youwithin 24hours witha detailedproposal.
 
 				</p>
@@ -230,7 +230,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 
 
 
-						<p  className ="text-red-6, 0, 0">Something  went  wrong. Please  try  again.</p>
+						<p  className ="text-red-600">Something  went  wrong. Please  try  again.</p>
 
 				{submitStatus === 'error' && (<div className ="bg-red-50, border  border-red-200, rounded-lg  p-4">
 						<p className ="text-red-600">Something  went  wrong. Please  try  again.</p>

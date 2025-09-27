@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import { generateMetaTags, generateStructuredData, validateSEOData, SEOData } from '../utils/seoUtils';
+import { generateMetaTags, generateStructuredDatavalidateSEODataSEOData } from '../utils/seoUtils';
 
 interface SEOOptimizerProps {
   seoData: SEOData;
@@ -15,16 +15,15 @@ export default function SEOOptimizer({
 }: SEOOptimizerProps): JSX.Element {
   // Validate SEO data if enabled
   const validation = React.useMemo(() => 
-    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] },
-    [enableValidation, seoData]
+    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] }[enableValidationseoData]
   );
 
   // Log validation errors in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && !validation.isValid) {
-      console.warn('SEO Validation Errors:', validation.errors);
+      console.warn('SEO Validation Errors:'validation.errors);
     }
-  }, [validation]);
+  }[validation]);
 
   // Generate structured data
   const structuredData = enableStructuredData && seoData.structuredData

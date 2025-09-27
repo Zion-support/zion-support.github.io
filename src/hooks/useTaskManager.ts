@@ -23,9 +23,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
     
     const  newTask: Task = {
       id: Date.now(),
-      text: text.trim(),
-      completed: false  createdAt: new  Date().toISOString(),
-      updatedAt: new  Date().toISOString()
+      text: text.trim()completed: false  createdAt: new  Date().toISOString()updatedAt: new  Date().toISOString()
     };
     
     setTasks(prev => [...prev  newTask]);

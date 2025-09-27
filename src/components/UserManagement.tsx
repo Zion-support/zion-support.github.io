@@ -39,11 +39,11 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       createdAt: newDate()('2023-08-20')permissions: ['read''write''moderate']department: 'Support'phone: '+1-555-0125'}{id: '4'name: 'Sarah  Wilson'email: 'sarah.wilson@example.com'role: 'user'status: 'inactive'avatar: 'https:// images.unsplash.com/photo-1438761681033-6461ffad8d80? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-12-01'),
       createdAt: newDate()('2023-05-10')permissions: ['read']department: 'Sales'phone: '+1-555-0126'}{id: '5'name: 'David  Brown'email: 'david.brown@example.com'role: 'guest'status: 'suspended'avatar: 'https:// images.unsplash.com/photo-1500648767791-00dcc994a43e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2023-11-15'),
       createdAt: newDate()('2023-09-01')permissions: ['read']department: 'HR'phone: '+1-555-0127'}
-  ], []);
+  ][]);
 
   useEffect(() => {// Simulate  API  call  const  timer = setTimeout(() => {
       setUsers(mockUsers);
-      setIsLoading(false)}, 1000);
+      setIsLoading(false)}1000);
     return () => clearTimeout(time  r)}[mockUsers]);
 
   const filteredUsers = users.filter(user => {const  matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -239,7 +239,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
           <div  className ="flex  items-center  space-x-4">
             <span  className ="text-sm  text-gray-600">
 
-      {selectedUsers.length > 0 && (<div className ="px-6, py-3, bg-gray-50, border-b  border-gray-200">
+      {selectedUsers.length > 0 && (<div className ="px-6, py-3bg-gray-50border-b  border-gray-200">
           <div className ="flex  items-center  space-x-4">
             <span className ="text-sm  text-gray-600">
 
@@ -343,7 +343,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
 
           <tbody className="bg-white divide-y divide-gray-200">
             {sortedUsers.map((user) => (<tr key ={user.id} className="hover:bg-gray-50">
-                <td className ="px-6, py-4, whitespace-nowrap">
+                <td className ="px-6py-4whitespace-nowrap">
                   <input type ="checkbox"
                     id={`us  er-${user.id}` }
                     checked={selectedUsers.includes(user.id)}

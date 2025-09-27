@@ -103,7 +103,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           
           <div className ="mt-4">
             <button onClick ={retry}
-              className="w-full  bg-blue-600, text-white  px-4, py-2, rounded-md  hover:bg-blue-700, transition-colorsduration-200"
+              className="w-full  bg-blue-600, text-white  px-4, py-2rounded-md  hover:bg-blue-700transition-colorsduration-200"
 
              aria-label="TryAgain">              TryAgain
             </button>
@@ -117,10 +117,10 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               <pre  className ="mt-2, text-xs  bg-gray-100p-2roundedoverflow-auto">
 
             <details className ="mt-4">
-              <summary className ="cursor-pointer  text-sm  text-gray-600, hover:text-gray-800">
+              <summary className ="cursor-pointer  text-sm  text-gray-600hover:text-gray-800">
                 Error  Details
               </summary>
-              <pre className ="mt-2, text-xs  bg-gray-100p-2roundedoverflow-auto">
+              <pre className ="mt-2text-xs  bg-gray-100p-2roundedoverflow-auto">
 
                 {errorState.erro.r? .toStrin()}
                 {errorState.errorInf.o?.componentSta.ck}

@@ -32,14 +32,14 @@ MemoizedCard.displayName = 'MemoizedCard';
 MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
-const VirtualList = memo(({items  itemHeight = 50, containerHeight = 400 }: {;
+const VirtualList = memo(({items  itemHeight = 50containerHeight = 400 }: {;
   items: any[];
   itemHeight?: number;
   containerHeight?: number }) => {const [scrollTop  setScrollTop] = React.useState(0);
   
   const  visibleItems = useMemo(() => {;
     const  startIndex = Math.floor(scrollTop / itemHeight);
-    const  endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight), items.length);
+    const  endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight)items.length);
     
  ({...itemindex: startIndex + index    }))}[itemsscrollTopitemHeightcontainerHeight]);
 
@@ -97,11 +97,11 @@ const OptimizedImage = memo(({src  alt  width  height  ...props }: {;
       )}
       {has  Error ? (<div  class  Name ="bg-gray-1, 0, 0, flex  items-center  justify-center  text-gray-400""          style={{ width  height }}
 
-        <div className ="bg-gray-200, animate-pulse  flex  items-center  justify-center"          style={{ width  height }}
+        <div className ="bg-gray-200animate-pulse  flex  items-center  justify-center"          style={{ width  height }}
         >          <div className ="text-gray-400>Loading...</div>
         </div>
       )}
-      {has  Error ? (<div class  Name ="bg-gray-100, flex  items-center  justify-center  text-gray-400""          style={{ width  height }}
+      {has  Error ? (<div class  Name ="bg-gray-100flex  items-center  justify-center  text-gray-400""          style={{ width  height }}
 
         >
           Image : failed  to  : load
@@ -130,12 +130,12 @@ const OptimizedImage = memo(({src  alt  width  height  ...props }: {;
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
     const  value = e.target.value;
     setQuery(value);
-    debouncedSearch(value) }, [debouncedSearch]);
+    debouncedSearch(value) }[debouncedSearch]);
 
   React.useEffect(() => {return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current) }
-    }}, []);
+    }}[]);
 
   return (<input  type = text""
       value={query}
@@ -158,12 +158,12 @@ export const usePerformanceMonitor = () => {usePerformanceMonitor.displayName = 
     setMetrics(prev = > ({...prevrenderTime: end - startcomponentCount: prev.componentCount + 1 }))}[]);
 
   const measureMemory = useCallback(() => {if ('memory'in === performance) {;
- ({...prev  memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4 // Convert  to  MB }))}
+ ({...prev  memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 24 // Convert  to  MB }))}
 
       const memory = (performance  as  any).memory;
       setMetrics(prev = > ({...prev  memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert  to  MB }))}
 
-  }, []);
+  }[]);
 
   return {metrics  measureRend  e  r  measureMemo  r  y }};
 
@@ -199,7 +199,7 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
             <div>              <span  class Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
 
   return (<ErrorBoundary>      <div className = space-y-6"">
-        {/* Performance  Metrics */}        <div className ="bg-gray-100, p-4, rounded-lg>          <h 3 class  Name ="text-lg  font-semibold  mb-2"">Performance  Metrics</h3>          <div className ="grid  grid-cols-3gap-4text-sm>
+        {/* Performance  Metrics */}        <div className ="bg-gray-100p-4rounded-lg>          <h 3 class  Name ="text-lg  font-semibold  mb-2"">Performance  Metrics</h3>          <div className ="grid  grid-cols-3gap-4text-sm>
             <div>              <span class Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
 
             </div>

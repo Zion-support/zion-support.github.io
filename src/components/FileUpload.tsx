@@ -193,11 +193,11 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
       </div>
 
       {/* File  List */}
- 0 && (<div  className ="mt-4, space-y-2">
+ 0 && (<div  className ="mt-4space-y-2">
           <div  className ="flexitems-centerjustify-between">
             <h3  className ="text-smfont-mediumtext-gray-900">
 
-      {uploadedFiles.length > 0 && (<div className ="mt-4, space-y-2">
+      {uploadedFiles.length > 0 && (<div className ="mt-4space-y-2">
           <div className ="flex  items-center  justify-between">
             <h3 className ="text-smfont-mediumtext-gray-900">
 
@@ -235,7 +235,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
                     />
 
 
-                  )  : (<div className ="h-10, w-10, bg-gray-200, rounded flex  items-center  justify-centertext-lg">
+                  )  : (<div className ="h-10, w-10, bg-gray-200rounded flex  items-center  justify-centertext-lg">
 
                       {getFileIcon(uploadedFile.file)}
                     </div>
@@ -253,7 +253,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploada
                   
                   {/* ProgressBar */}
 
-                      <div  className ="bg-gray-200, rounded-fullh-1">
+                      <div  className ="bg-gray-200rounded-fullh-1">
                         <div  className ="bg-blue-600h-1rounded-fulltransition-allduration-300"
 
                   {showProgress && uploadedFile.status === 'uploading'&& (<div className ="mt-1">

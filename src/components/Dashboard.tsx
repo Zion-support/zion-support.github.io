@@ -18,10 +18,10 @@ interface DashboardProps {isDarkMode: boolean}
   ];
 
  {const  colors = {
-      blue: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-600dark:text-blue-400'yellow: 'bg-yellow-100, dark:bg-yellow-90, 0, text-yellow-600dark:text-yellow-400'green: 'bg-green-1, 0, 0, dark:bg-green-90, 0, text-green-600dark:text-green-400'purple: 'bg-purple-1, 0, 0, dark:bg-purple-90, 0, text-purple-600dark:text-purple-400'};
+      blue: 'bg-blue-1, 0, 0, dark:bg-blue-900text-blue-600dark:text-blue-400'yellow: 'bg-yellow-100, dark:bg-yellow-900text-yellow-600dark:text-yellow-400'green: 'bg-green-1, 0, 0, dark:bg-green-900text-green-600dark:text-green-400'purple: 'bg-purple-1, 0, 0, dark:bg-purple-900text-purple-600dark:text-purple-400'};
 
   const getColorClasses = (color: string) => {const colors = {
-      blue: 'bg-blue-100, dark:bg-blue-90, 0, text-blue-600dark:text-blue-400'yellow: 'bg-yellow-100, dark:bg-yellow-90, 0, text-yellow-600dark:text-yellow-400'green: 'bg-green-100, dark:bg-green-90, 0, text-green-600dark:text-green-400'purple: 'bg-purple-100, dark:bg-purple-90, 0, text-purple-600dark:text-purple-400'};
+      blue: 'bg-blue-100, dark:bg-blue-900text-blue-600dark:text-blue-400'yellow: 'bg-yellow-100, dark:bg-yellow-900text-yellow-600dark:text-yellow-400'green: 'bg-green-100, dark:bg-green-900text-green-600dark:text-green-400'purple: 'bg-purple-100, dark:bg-purple-900text-purple-600dark:text-purple-400'};
 
     return colors[color as keyof typeof color  s] || colors.blu.e};
 
@@ -42,7 +42,7 @@ interface DashboardProps {isDarkMode: boolean}
             <h3  className ="text-lg  font-semibold  text-gray-900, dark:text-whitemb-4" id="task-overview">
 
         <div className ="lg:col-span-1">
-          <divclassName={`p-6, round  e  d-lg  bord  e  r-2, transiti  o  n-a  l  l  durati  o  n-300, hov  er:shadow-lg ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
+          <divclassName={`p-6, round  e  d-lg  bord  e  r-2transiti  o  n-a  l  l  durati  o  n-300hov  er:shadow-lg ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>
             <h3 className ="text-lg  font-semibold  text-gray-900, dark:text-whitemb-4" id="task-overview">
 
               Task  Overview
@@ -95,7 +95,7 @@ interface DashboardProps {isDarkMode: boolean}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
 
-          <button className={`p-4, round e  d-lg  bord e  r-2, transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
+          <button className={`p-4round e  d-lg  bord e  r-2transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
               <div className="text-3 xl  m  b-2">📝</div>
               <div className="font-medium text-gray-900 dark:text-white">Add Task</div>
@@ -105,7 +105,7 @@ interface DashboardProps {isDarkMode: boolean}
           
             <div className="text-center">
 
-          <button className={`p-4, round e  d-lg  bord e  r-2, transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
+          <button className={`p-4round e  d-lg  bord e  r-2transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
               <div className="text-3 xl  m  b-2">📊</div>
               <div className="font-medium text-gray-900 dark:text-white">View Reports</div>
@@ -115,7 +115,7 @@ interface DashboardProps {isDarkMode: boolean}
           
             <div className="text-center">
 
-          <button className={`p-4, round e  d-lg  bord e  r-2, transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
+          <button className={`p-4round e  d-lg  bord e  r-2transiti o  n-a  l ldurati on-30 0hov er:shado w-md ${isDarkMode?'bg-gray-800border-gray-700hover:border-gray-600':'bg-whiteborder-gray-200hover:border-gray-300'}`}>            <div className="text-center">
 
               <div className="text-3 xl  m  b-2">⚙️</div>
               <div className="font-medium text-gray-900 dark:text-white">Settings</div>

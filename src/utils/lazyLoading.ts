@@ -23,14 +23,13 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 						setHasTriggered(true);
 						observer.unobserve(element)}
 				} else if (!triggerOnce) {setIsVisible(false)}
-			},
-			{rootMargin  threshold
+			}{rootMargin  threshold
 			}
 		);
 
 		observer.observe(element);
 
-		return () => {observer.unobserve(element)}}, [rootMargin  threshold  triggerOnce]);
+		return () => {observer.unobserve(element)}}[rootMargin  threshold  triggerOnce]);
 
 	return {elementRef  isVisible: triggerOnce ? (hasTriggered || isVisible) : isVisible
 	}};

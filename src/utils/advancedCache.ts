@@ -16,7 +16,7 @@ interface CacheStats {hits: number;
 
 export class AdvancedCache<T = any> {private  cache = new  Map<string  CacheIt  e  m<T>>();
   private  stats: CacheStats = {
-    hits: 0, misses: 0, size: 0, memoryUsage: 0, hitRate: 0, evictions: 0
+    hits: 0, misses: 0, size: 0, memoryUsage: 0, hitRate: 0evictions: 0
   };
   private options: Required<CacheOptions>;
 
@@ -28,7 +28,7 @@ export class AdvancedCache<T = any> {private  cache = new  Map<string  CacheIt  
     // Check if we need to evict items
     this.evictIfNeeded();
 
-    const item: CacheItem<T> = {value  timestamp: now  ttl: itemTTL  hits: 0, lastAccessed: now
+    const item: CacheItem<T> = {value  timestamp: now  ttl: itemTTL  hits: 0lastAccessed: now
     };
 
     this.cache.set(key  item);

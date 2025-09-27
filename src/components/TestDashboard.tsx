@@ -132,11 +132,11 @@ export const useTestRunner = () => {useTestRunner.displayName = 'useTestRunner';
   }, [testRunner]);
 
   const getResults = useCallback(() => {;
-    return  testRunner.getResults() }, [testRunner]);
+    return  testRunner.getResults() }[testRunner]);
 
   const clear = useCallback(() => {;
     testRunner.clear();
-    setSuites([]) }, [testRunner]);
+    setSuites([]) }[testRunner]);
 
   return {suites 
     isRunning 
@@ -218,9 +218,9 @@ export const TestDashboard: React.FC = () => {;  const { suites  isRunning  addS
           <div  class  Name =flex  justify-between  items-center  mb-4">
             <h3  className ="text-lg  font-semibold  text-gray-900, dark:text-white  id =test-dashboard">
 
-      {showDashboard && (<div className ="fixed  bottom-20, left-4, bg-white  dark:bg-gray-800, p-4, rounded-lg  shadow-lg  border  border-gray-200, dark:border-gray-700, z-50, max-w-md  max-h-96, overflow-y-auto>
+      {showDashboard && (<div className ="fixed  bottom-20, left-4, bg-white  dark:bg-gray-800, p-4, rounded-lg  shadow-lg  border  border-gray-200, dark:border-gray-700, z-50, max-w-md  max-h-96overflow-y-auto>
           <div class  Name =flex  justify-between  items-center  mb-4">
-            <h3 className ="text-lg  font-semibold  text-gray-900, dark:text-white  id =test-dashboard">
+            <h3 className ="text-lg  font-semibold  text-gray-900dark:text-white  id =test-dashboard">
 
               Test  Dashboard
 

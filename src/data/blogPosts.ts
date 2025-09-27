@@ -28,19 +28,15 @@ export const blogPosts: BlogPost[] = [{
     </ul>
     
     <h2>Getting Started with AI</h2>
-    <p>The key to successful AI implementation is starting small and scaling gradually. Begin with pilot projects in areas where you can measure clear ROI, such as customer service automation or inventory management.</p>
-  `,
-  author: 'Dr. Sarah Chen',
-  publishDate: '2024-01-15',
-  readTime: 8,
-  tags: ['AI', 'Automation', 'Business Strategy', 'Technology'],
+    <p>The key to successful AI implementation is starting small and scaling gradually. Begin with pilot projects in areas where you can measure clear ROIsuch as customer service automation or inventory management.</p>
+  `author: 'Dr. Sarah Chen',
+  publishDate: '2024-01-15'readTime: 8tags: ['AI', 'Automation', 'Business Strategy', 'Technology'],
   category: 'Artificial Intelligence',
-  image: '/images/blog/ai-business-automation.jpg',
-  featured: true
-}, {
+  image: '/images/blog/ai-business-automation.jpg'featured: true
+}{
   id: '2',
   title: 'Cloud Migration Strategies for Modern Enterprises',
-  excerpt: 'Learn the best practices for migrating your infrastructure to the cloud, while ensuring security, performance, and cost-effectiveness.',
+  excerpt: 'Learn the best practices for migrating your infrastructure to the cloud, while ensuring securityperformanceand cost-effectiveness.',
   content: `
     <p>Cloud migration is no longer a question of 'if' but 'when' and 'how'. With the right strategy, businesses can achieve greater flexibility, scalability, and cost efficiency.</p>
     
@@ -53,12 +49,9 @@ export const blogPosts: BlogPost[] = [{
     </ul>
     
     <h2>Best Practices</h2>
-    <p>Successful cloud migration requires careful planning, stakeholder buy-in, and a phased approach. Start with non-critical applications and gradually move mission-critical systems.</p>
-  `,
-  author: 'Michael Rodriguez',
-  publishDate: '2024-01-10',
-  readTime: 6,
-  tags: ['Cloud Computing', 'Migration', 'Infrastructure', 'Strategy'],
+    <p>Successful cloud migration requires careful planning, stakeholder buy-inand a phased approach. Start with non-critical applications and gradually move mission-critical systems.</p>
+  `author: 'Michael Rodriguez',
+  publishDate: '2024-01-10'readTime: 6tags: ['Cloud Computing', 'Migration', 'Infrastructure', 'Strategy'],
   category: 'Cloud Solutions',
   image: '/images/blog/cloud-migration.jpg',
   featured: false

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotion
+  createSkipLinkisHighContrastModeprefersReducedMotion
 } from '../utils/accessibilityUtils';
 
 interface AccessibilityEnhancerProps {
@@ -21,8 +19,8 @@ export default function AccessibilityEnhancer({
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [prefersMotion, setPrefersMotion] = useState(true);
+  const [isHighContrastsetIsHighContrast] = useState(false);
+  const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
     // Initialize accessibility features
@@ -64,7 +62,7 @@ export default function AccessibilityEnhancer({
         mediaQuery.removeEventListener('change', checkReducedMotion);
       };
     }
-  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
 
   // Apply accessibility styles
   useEffect(() => {
@@ -81,7 +79,7 @@ export default function AccessibilityEnhancer({
     } else {
       root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion]);
+  }[isHighContrastprefersMotion]);
 
   // Announce page changes to screen readers
   useEffect(() => {

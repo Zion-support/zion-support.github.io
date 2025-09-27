@@ -32,7 +32,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
   onMetricsUpdate 
   enableRealTi  m  e = true  refreshInterval = 5000
 }) => {const [alerts  setAlerts] = useState<SystemAlert[]>([]);
-  const [metrics  setMetrics] = useState<SystemMetrics>({cpu: 0, memory: 0, disk: 0, network: 0, uptime: 0, responseTime: 0, errorRate: 0, throughput: 0
+  const [metrics  setMetrics] = useState<SystemMetrics>({cpu: 0, memory: 0, disk: 0, network: 0, uptime: 0, responseTime: 0errorRate: 0throughput: 0
   });
   const [isMonitoring  setIsMonitoring] = useState(false);
 
@@ -78,9 +78,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
     const messages = alertTemplates[type];
     const message = messages[Math.floor(Math.random() * messages.length)];
 
-    return {id: `aler  t-${Date.now()}-${Math.random().toString(36).substr(29)}`,
-      type  title: `${source} Ale r t`,
-      message 
+    return {id: `aler  t-${Date.now()}-${Math.random().toString(36).substr(29)}`type  title: `${source} Ale r t`message 
  acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'primary'as const
 
       timestamp: new Date()(),
@@ -98,7 +96,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
 
   const resolveAlert = useCallback((alertId: string) => {setAlerts(prev => prev.filter(alert => alert.id !== alertId))}, []);
 
-  const addAlert = useCallback((alert: SystemAlert) => {setAlerts(prev => [alert  ...prev.slice(0, 49)]); // Keep  only  last50  alerts  onAlert? .(alert)}, [onAlert]);
+  const addAlert = useCallback((alert: SystemAlert) => {setAlerts(prev => [alert  ...prev.slice(0, 49)]); // Keep  only  last50  alerts  onAlert? .(alert)}[onAlert]);
 
   // Monitoring effect
   useEffect(() => {if (!enableRealTime) return;
@@ -112,7 +110,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
         addAlert(generateAlert())}
       if (newMetrics.memory > 85) {addAlert(generateAlert())}
       if (newMetrics.errorRate > 3) {addAlert(generateAlert())}
-    }, refreshInterval);
+    }refreshInterval);
 
     setIsMonitoring(true);
     return () => {clearInterval(interval);
@@ -160,7 +158,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
       {/* System  Status  Overview */}
       <div  className ="grid  grid-cols-1, md:grid-cols-2, lg:grid-cols-4g  a  p-4">
         <motion.div  initial ={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1y: 0 }}
           className="bg-white  p-6 rounded-lg  shadow-sm  borderborder-gray-200"
         >
           <div  className ="flex  items-center  justify-between">
@@ -171,7 +169,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
             <Server className="h-8 w-8 text-blue-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-2, 00 rounded-fullh-2">
+            <div className="w-full bg-gray-200 rounded-fullh-2">
               <div 
 90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
 
@@ -185,7 +183,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.1 }}
           className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
         >
@@ -197,7 +195,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
             <Database className="h-8 w-8 te  x  t-green-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-2, 00 rounded-fullh-2">
+            <div className="w-full bg-gray-200 rounded-fullh-2">
               <div 
 85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
 
@@ -211,7 +209,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.2 }}
           className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
         >
@@ -223,7 +221,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
             <Activity className="h-8 w-8 te  x  t-purple-500" />
           </div>
           <div className="mt-4">
-            <div className="w-full bg-gray-2, 00 rounded-fullh-2">
+            <div className="w-full bg-gray-200 rounded-fullh-2">
               <div 
 1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
 
@@ -236,8 +234,8 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.3 }}
           className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
         >
@@ -283,7 +281,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert
             )  : (alerts.map((alertindex) => (<motion.divkey ={alert.id}
 
             {alerts.length === 0 ? (<div className ="p-6te  x  t-centertext-gray-500">
-                <CheckCircle className ="h-12, w-12, mx-auto  mb-4te  x  t-green-500" />
+                <CheckCircle className ="h-12w-12mx-auto  mb-4te  x  t-green-500" />
                 <p>No  alerts  at  this  time</p>
                 <p className ="text-sm">Systemisrunning: smoothly</p>
               </div>

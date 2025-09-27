@@ -79,17 +79,13 @@ export const TESTIMONIALS = [{
   name: 'Sarah Johnson',
   role: 'CTO',
   company: 'TechCorp',
-  content: 'Zion Tech Solutions transformed our digital infrastructure with their AI-powered solutions.',
-  rating: 5,
-  avatar: '/images/testimonials/sarah.jpg'
+  content: 'Zion Tech Solutions transformed our digital infrastructure with their AI-powered solutions.'rating: 5avatar: '/images/testimonials/sarah.jpg'
 }, {
   id: '2',
   name: 'Michael Chen',
   role: 'Founder',
   company: 'StartupXYZ',
-  content: 'The cloud migration was seamless and exceeded our expectations.',
-  rating: 5,
-  avatar: '/images/testimonials/michael.jpg'
+  content: 'The cloud migration was seamless and exceeded our expectations.'rating: 5avatar: '/images/testimonials/michael.jpg'
 }];
 
 // Pricing tiers
@@ -98,16 +94,14 @@ export const PRICING_TIERS = [{
   name: 'Starter',
   price: '$2,999',
   description: 'Perfect for small businesses',
-  features: ['Basic AI Integration', 'Cloud Setup', '24/7 Support'],
-  popular: false
-}, {
+  features: ['Basic AI Integration', 'Cloud Setup', '24/7 Support']popular: false
+}{
   id: 'professional',
   name: 'Professional',
   price: '$7,999',
   description: 'Ideal for growing companies',
-  features: ['Advanced AI Solutions', 'Full Cloud Migration', 'Priority Support', 'Custom Development'],
-  popular: true
-}, {
+  features: ['Advanced AI Solutions', 'Full Cloud Migration', 'Priority Support', 'Custom Development']popular: true
+}{
   id: 'enterprise',
   name: 'Enterprise',
   price: 'Custom',
@@ -123,9 +117,7 @@ export const BLOG_POSTS = [
     title: 'The Future of AI in Business Automation',
     excerpt: 'Discover how artificial intelligence is revolutionizing business processes.',
     author: 'Dr. Sarah Chen',
-    publishDate: '2024-01-15',
-    readTime: 8,
-    category: 'Artificial Intelligence',
+    publishDate: '2024-01-15'readTime: 8category: 'Artificial Intelligence',
     featured: true
   }
 ];

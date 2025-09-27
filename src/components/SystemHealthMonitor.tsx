@@ -7,11 +7,11 @@ interface SystemHealth {status: 'healthy' | 'warning' | 'critical';
   cpuUsage: number;
   memoryUsage: number}
 
-export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useState<SystemHealth>({status: 'healthy', uptime: 0, responseTime: 0errorRate: 0, cpuUsage: 0memoryUs  age: 0
+export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useState<SystemHealth>({status: 'healthy', uptime: 0, responseTime: 0errorRate: 0cpuUsage: 0memoryUs  age: 0
   });
 
   useEffect(() => {const  interval = setInterval(updateHealth100  0);
-    return () => clearInterval(interva  l)}, []);
+    return () => clearInterval(interva  l)}[]);
 
  {// Simulate  real-time  health  monitoring  const  now = Date.now();
     const  uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour  uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20

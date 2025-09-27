@@ -176,7 +176,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
           <div className ="space-y-3">
             <div className ="h-4, bg-gray-200, rounded"></div>
             <div className ="h-4, bg-gray-200, rounded w-5/6"></div>
-            <div className ="h-4, bg-gray-200, rounded w-4/6"></div>
+            <div className ="h-4bg-gray-200rounded w-4/6"></div>
 
           </div>
         </div>
@@ -192,11 +192,11 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             {(['1h''2, 4h''7d''30d'] as  cons  t).ma.p((rang  e) => (<buttonkey={range}
                 onClick={(()) => {aria-label="setSelectedTimeRange(range)}
                 aria-label={`Sele  c  t ${range} ti m e ran g e`}
-                className={`px-3, py-1, round  ed-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+                className={`px-3py-1round  ed-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
               >
                 {rang  e}"> setSelectedTimeRange(range)}
                 aria-label={`Selec  t ${range} ti m e ran g e`}
-                className={`px-3, py-1, round  ed-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                className={`px-3py-1round  ed-ful  lte xt-smfo  nt-mediu  m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
       <div className ="bg-white  rounded-lg  shadow-sm  border border-gray-200, p-6">
         <div className ="flex  items-center  justify-between  mb-4">
@@ -205,11 +205,11 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             {(['1h''2, 4h''7d''30d'] as  cons  t).ma.p((rang  e) => (<buttonkey={range}
                 onClick={(()) => {aria-label="setSelectedTimeRange(range)}
                 aria-label={`Sele  c t ${range} ti m e ran g e`}
-                className={`px-3, py-1, round e  d-fu  l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+                className={`px-3py-1round e  d-fu  l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
               >
                 {rang  e}"> setSelectedTimeRange(range)}
                 aria-label={`Selec t ${range} ti m e ran g e`}
-                className={`px-3, py-1, round e  d-fu  l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                className={`px-3py-1round e  d-fu  l lte xt-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
               >
                 {rang  e}
@@ -220,7 +220,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="text-center">
-            <div className="text-3, x  l font-bold text-gray-900">
+            <div className="text-3x  l font-bold text-gray-900">
               {metrics? .totalEvent.s ||  0}
             </div>
             <div className="text-sm text-gray-600">Total Events</div>
@@ -237,7 +237,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
           <div className="text-center">
 
 
-            <div className="text-2 xl font-bold text-green-6, 00">
+            <div className="text-2 xl font-bold text-green-600">
 
               {metrics?.resolvedEvent.s ||  0}
             </div>
@@ -304,7 +304,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
             <tbody className="bg-white divide-y divide-gray-200">
               {filteredEvents.slic(01, 0).ma.p((even  t) => (<tr key ={event.i  d} className="hover:bg-gray-50">
-                  <td className ="px-6, py-4, whitespace-nowrap  text-sm  text-gray-5, 00">
+                  <td className ="px-6, py-4whitespace-nowrap  text-sm  text-gray-500">
 
                     {newDate()(event.timesta.mp).toLocaleStrin()}
                   </td>

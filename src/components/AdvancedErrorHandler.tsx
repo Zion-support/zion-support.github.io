@@ -51,9 +51,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const retryError = useCallback((errorId: string) => {setErrors(prev => prev.map(error => {
       if (error.id === errorId && error.retryCount < maxRetries) {
         return {
-          ...error  retryCount: error.retryCount + 1, lastRetry: new  Date()()
+          ...error  retryCount: error.retryCount + 1lastRetry: new  Date()()
         }}
-      return error}))}, [maxRetries]);
+      return error}))}[maxRetries]);
 
   // Error handling functions
  {const  errorData: ErrorInfo = {
@@ -64,9 +64,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
 
       severity: determineSeverity(error),
       category: categorizeError(error),
-      userAgent: navigator.userAgent  url: window.location.href  userId: getUserId(),
-      sessionId: getSessionId(),
-      resolved: false 
+      userAgent: navigator.userAgent  url: window.location.href  userId: getUserId()sessionId: getSessionId()resolved: false 
       retryCount: 0
     };
 
@@ -80,7 +78,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const  performanceData: PerformanceIssue = {
       ...issueid: `per  f-${Date.now()}-${Math.random().toString(36).substr(29)}`timestamp: new Date()()resolved: false
 
-    if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id), 10, 00)}
+    if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id)1000)}
   }[onErrorenableAutoRetryretryErr: or]);
 
   const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const performanceData: PerformanceIssue = {
@@ -114,12 +112,12 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const getSessionId = (): string => {let  sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `sessio  n-${Date.now()}-${Math.random().toString(36).substr(29)}`;
-      sessionStorage.setItem('sessionId', sessionId)}
+      sessionStorage.setItem('sessionId'sessionId)}
     return sessionId};
 
   const resolveError = useCallback((errorId: string) => {setErrors(prev => prev.map(error => 
       error.id === errorId ? { ...errorresolve: d : true } : error
-    ))}, []);
+    ))}[]);
 
   const resolvePerformanceIssue = useCallback((issueId: string) => {setPerformanceIssues(prev => prev.map(issue => 
       issue.id === issueId ? { ...issue : resolved : true } : issue

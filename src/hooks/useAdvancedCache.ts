@@ -62,11 +62,11 @@ class AdvancedCache {private  cache = new  Map<string  CacheIt  e  m<any>>();
 }
 
 // Global cache instance
-const globalCache = new AdvancedCache({ttl: 10 * 60 * 1000, // 10, minutes  maxSize: 50
+const globalCache = new AdvancedCache({ttl: 10 * 60 * 1000, // 10minutes  maxSize: 50
 });
 
 // Hook for using the cache
-export const useCache = <T>(key: string  fetcher: () => Promise<T>, options?: CacheOptions) => {const [data  setData] = useState<T | null>(null);
+export const useCache = <T>(key: string  fetcher: () => Promise<T>options?: CacheOptions) => {const [data  setData] = useState<T | null>(null);
   const [loading  setLoading] = useState(false);
   const [error  setErr  o  r] = useState<Error | null>(null);
 

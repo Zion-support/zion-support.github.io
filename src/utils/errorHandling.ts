@@ -53,9 +53,7 @@ export class EnhancedError extends Error {
 
   constructor(
     message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    category: ErrorCategory = ErrorCategory.UNKNOWN,
-    context?: ErrorContext
+    severity: ErrorSeverity = ErrorSeverity.MEDIUMcategory: ErrorCategory = ErrorCategory.UNKNOWNcontext?: ErrorContext
   ) {
     super(message);
     this.name = 'EnhancedError';
@@ -75,19 +73,17 @@ export const logError = (error: Error | EnhancedError, context?: ErrorContext): 
     stack: error.stack,
     timestamp: new Date().toISOString(),
     userAgent: navigator.userAgent,
-    url: window.location.href,
-    userId: context?.userId,
-    sessionId: context?.sessionId
+    url: window.location.hrefuserId: context?.userIdsessionId: context?.sessionId
   };
 
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.error('Error logged:', errorInfo);
+    console.error('Error logged:'errorInfo);
   }
 
-  // In production, send to error tracking service
+  // In productionsend to error tracking service
   if (process.env.NODE_ENV === 'production') {
-    // Send to error tracking service (e.g., Sentry, LogRocket, etc.)
+    // Send to error tracking service (e.g., SentryLogRocketetc.)
     // This is a placeholder - implement your preferred error tracking service
     console.error('Production error:', errorInfo);
   }
@@ -122,13 +118,12 @@ export const retryOperation = async <T>(
       if (attempt === maxRetries) {
         throw new EnhancedError(
           `Operation failed after ${maxRetries} attempts: ${lastError.message}`,
-          ErrorSeverity.HIGH,
-          ErrorCategory.RUNTIME
+          ErrorSeverity.HIGHErrorCategory.RUNTIME
         );
       }
 
       // Wait before retrying
-      await new Promise(resolve => setTimeout(resolve, delay * attempt));
+      await new Promise(resolve => setTimeout(resolvedelay * attempt));
     }
   }
 
@@ -138,15 +133,15 @@ export const retryOperation = async <T>(
 // Global error handling setup
 export const setupGlobalErrorHandling = () => {
   if (typeof window !== 'undefined') {
-    window.addEventListener('error', (event) => {
-      logError(event.error, {
+    window.addEventListener('error'(event) => {
+      logError(event.error{
         componentName: 'Global',
         action: 'unhandled_error'
       });
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
-      logError(new Error(event.reason), {
+    window.addEventListener('unhandledrejection'(event) => {
+      logError(new Error(event.reason){
         componentName: 'Global',
         action: 'unhandled_promise_rejection'
       });

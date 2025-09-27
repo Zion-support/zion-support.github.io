@@ -80,8 +80,8 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
       {/* Header */}
       <div  className ="flex  items-center  justify-between  mb-6">
         <div>
-          <h2  className ="text-2xl  font-bold  text-gray-900, dark:text-white" id="security-monitor">Security  Monitor</h2>
-          <p  className ="text-gray-600, dark:text-gray-400">Real-time  security  monitoring  and  threat  detection</p>
+          <h2  className ="text-2xl  font-bold  text-gray-900dark:text-white" id="security-monitor">Security  Monitor</h2>
+          <p  className ="text-gray-600dark:text-gray-400">Real-time  security  monitoring  and  threat  detection</p>
         </div>
 
           <div  className ="flex  items-center  space-x-2">
@@ -90,7 +90,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
         <div className ="flex  items-center  space-x-4">
           <div className ="flex  items-center  space-x-2">
-            <div className ="{"`w-3, h-3, rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <div className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
             <span className ="text-sm  text-gray-600dark:text-gray-400">
 
               {isMonitoring ? 'Monitoring' : 'Paused'}
@@ -158,8 +158,8 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </motion.di.v>
 
         <motion.di.v
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.3 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>

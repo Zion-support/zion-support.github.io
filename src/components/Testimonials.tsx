@@ -18,13 +18,13 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde  
 	const testimonials = TESTIMONIALS;
 
 
-			<div  className ="container  mx-auto  px-4m  a  x-w-6, x  l">
-				<div  className={`te  x  t-cent  e  r  mb-12, transition-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2  className ="text-3, xlmd: text-4, x  l  font-bold  text-gray-800, m  b-4" id="what-our-clients-say">
+			<div  className ="container  mx-auto  px-4m  a  x-w-6x  l">
+				<div  className={`te  x  t-cent  e  r  mb-12transition-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2  className ="text-3, xlmd: text-4, x  l  font-bold  text-gray-800, m  b-4" id="what-our-clients-say">
 						What  Our  Clients  Say
 
 	return (<section className ="py-16, bg-gradient-to-r  from-gray-50, t  o-blue-50">
-			<div className ="container  mx-auto  px-4m  a  x-w-6, x  l">
-				<div className={`te  x  t-cent  e  r  mb-12, transiti  o  n-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, xlmd: text-4, x  l  font-bold  text-gray-800, m  b-4" id="what-our-clients-say">
+			<div className ="container  mx-auto  px-4m  a  x-w-6x  l">
+				<div className={`te  x  t-cent  e  r  mb-12transiti  o  n-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, xlmd: text-4, x  l  font-bold  text-gray-800, m  b-4" id="what-our-clients-say">
 						What  Our Clients  Say
 
 					</h2>
