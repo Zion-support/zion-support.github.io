@@ -1,81 +1,106 @@
-export, interface, Service {id: stri, n, g;
-  title: stri, n, g;
-  description: stri, n, g;
-  icon: stri, n, g;
-  featur, e, s?: stri, n, g[];
-  pri, c, e?: string};
-exportconstSERVICES: Servi, c, e[] = [{id: 'ai-ml',
-  title: "AI & Machi, neLearning",
-  description: "Cutti, n, g-ed, g, e, artificialintelligencesolutionstoautomateandoptimizeyourbusinessprocesses."icon: '🤖',
-  features: ["Cust, omAIModels", "Machi, neLearningPipelines", "Natur, alLanguageProcessing", "Comput, erVision", "PredictiveAnalytics"]price: "From $5K"
-}, {id: "cloud",
-  title: "Clo, udSolutions",
-  description: "Scalablecloudinfrastructureanddeploymentsolutionsformodernapplications."icon: '☁️',
-  features: ["Clo, udMigration", "DevOps & CI/CD", "Contain, erOrchestration", "Serverle, ssArchitecture", "CloudSecurity"]price: "From $3K"
-}, {id: "web-dev",
-  title: "W, ebDevelopment",
-  description: "Mode, r, n, responsi, v, e, webapplicationsbuiltwiththelatesttechnologiesandbestpractices."icon: '💻',
-  features: ["React/Ne, xt.jsApps", "Progressi, veWebApps", "E-commer, ceSolutions", "A, PIDevelopment", "PerformanceOptimization"]price: "From $2K"
-}, {id: "mobile",
-  title: "Mobi, leDevelopment",
-  description: "Nati, v, e, and, cros, s-platformmobileapplicationsforiOSandAndroidplatforms."icon: '📱',
-  features: ["Nati, v, e, iOS/Android", "React, NativeApps", "Flutt, erDevelopment", "A, ppStoreOptimization", "PushNotifications"]price: "From $4K"
-}, {id: "data-analytics",
-  title: "Da, taAnalytics",
-  description: "Advanc, e, d, dataanalysisandbusinessintelligencesolutionstodriveinformeddecisions."icon: '📊',
-  features: ["Da, taVisualization", "Busine, ssIntelligence", "Re, a, l-ti, meDashboards", "Da, taWarehousing", "MachineLearningAnalytics"]price: "From $3K"
-}, {id: "cybersecurity",
-  title: "Cybersecurity",
-  description: "Comprehensi, v, e, securitysolutionstoprotectyourdigitalassetsandinfrastructure."icon: '🔒',
-  features: ["Securi, tyAudits", "Penetrati, onTesting", "Complian, ceManagement", "SecurityMonitoring""IncidentResponse"]price: "From $2K"
-}];
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  features?: string[];
+  price?: string;
+}
 
-exportconstFEATURES = [{icon: "⚡',
-  title: "Fa, stDelivery"description: "Rapiddevelopmentanddeploymentofhigh-qualitysolutions"color: "blue"
-} as, const{icon: "🛡️',
-  title: "Secure & Reliable",
-  description: "Enterpri, s, e-gra, d, esecurityandreliabilityforyourapplications"color: "green"
-} asconst{icon: "📈',
-  title: "Scalab, leSolutions",
-  description: "Bui, l, ttogrowwithyourbusiness, andhandleincreasingdemands"color: "purple"
-} as, const{icon: "🎯',
-  title: "Cust, omSolutions"description: "Tailoredsolutionsdesignedspecificallyforyour, uniquerequirements"color: "orange"
-} as, cons, t];
+export const SERVICES: Service[] = [
+  {
+    id: 'ai-ml',
+    title: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
+    icon: '🤖',
+    features: ['Custom AI Models', 'Machine Learning Pipelines', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    price: 'From $5K'
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
+    icon: '☁️',
+    features: ['Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration', 'Serverless Architecture', 'Cloud Security'],
+    price: 'From $3K'
+  },
+  {
+    id: 'web-dev',
+    title: 'Web Development',
+    description: 'Modern, responsive web applications built with the latest technologies and best practices.',
+    icon: '💻',
+    features: ['React/Next.js Apps', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development', 'Performance Optimization'],
+    price: 'From $2K'
+  },
+  {
+    id: 'mobile',
+    title: 'Mobile Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    icon: '📱',
+    features: ['Native iOS/Android', 'React Native', 'Flutter Apps', 'App Store Optimization', 'Push Notifications'],
+    price: 'From $4K'
+  },
+  {
+    id: 'data-analytics',
+    title: 'Data Analytics',
+    description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+    icon: '📊',
+    features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Predictive Modeling'],
+    price: 'From $3K'
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+    icon: '🔒',
+    features: ['Security Audits', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Incident Response'],
+    price: 'From $4K'
+  }
+];
 
-// Testimonialsdataexport constTESTIMONIALS = [{id: "1',
-  name: "Sar, ahJohnson",
-  role: "CTO",
-  company: "TechCorp",
-  content: "Zi, o, n, Tech, Solution, s, transformed, ourdigital, infrastructurewith, theirAI-poweredsolutions."rating: 5avatar: "/imag, e, s/testimonials/sarah.jpg"
-}, {id: '2',
-  name: "Micha, elChen",
-  role: "Founder",
-  company: "StartupXYZ",
-  content: "Thecloudmigrationwasseamlessand, exceededourexpectations."rating: 5avatar: "/imag, e, s/testimonials/michael.jpg"
-}];
+export const NAVIGATION_ITEMS = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Blog', href: '/blog' }
+];
 
-// Pricing, tiers, export const, PRICING_TIER, S = [{id: "starter",
-  name: "Starter",
-  price: "$2,999",
-  description: "Perfectforsmallbusinesses",
-  features: ["Bas, icAIIntegration", "Clo, udSetup", "24/7, Support"]popular: false
-}{id: "professional",
-  name: "Professional",
-  price: "$7,999",
-  description: "Idealforgrowingcompanies",
-  features: ["Advanc, edAISolutions", "Fu, llCloudMigration", "Priori, tySupport", "Cust, omDevelopment"]popular: true
-}{id: "enterprise",
-  name: "Enterprise",
-  price: "Custom",
-  description: "Tailoredforlargeorganizations",
-  features: ["Cust, omAISolutions", "Dedicat, edTeam", "Whi, t, e-lab, elOptions", "Advanc, edSecurity"]popular: false
-}];
+export const SOCIAL_LINKS = {
+  twitter: 'https://twitter.com/ziontechgroup',
+  linkedin: 'https://linkedin.com/company/ziontechgroup',
+  github: 'https://github.com/ziontechgroup',
+  email: 'contact@ziontechgroup.com'
+};
 
-// Blogpostspreview(importedfrom, blogPost, s.ts)
-exportconstBLOG_POSTS = [
-  {id: '1',
-    title: "T, h, e, FutureofAIinBusiness, Automation",
-    excerpt: "Discoverhowartificialintelligenceisrevolutionizing, businessprocesses.",
-    author: "Dr. Sar, ahChen",
-    publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence",
-    featured: true}];
+export const COMPANY_INFO = {
+  name: 'Zion Tech Group',
+  tagline: 'Innovative Technology Solutions',
+  description: 'Leading provider of cutting-edge technology solutions for modern businesses.',
+  address: '123 Tech Street, Innovation City, IC 12345',
+  phone: '+1 (555) 123-4567',
+  email: 'contact@ziontechgroup.com'
+};
+
+export const API_ENDPOINTS = {
+  services: '/api/services',
+  contact: '/api/contact',
+  newsletter: '/api/newsletter',
+  analytics: '/api/analytics'
+};
+
+export const PERFORMANCE_THRESHOLDS = {
+  LCP: 2500, // Largest Contentful Paint (ms)
+  FID: 100,  // First Input Delay (ms)
+  CLS: 0.1,  // Cumulative Layout Shift
+  FCP: 1800, // First Contentful Paint (ms)
+  TTFB: 600  // Time to First Byte (ms)
+};
+
+export const SEO_DEFAULTS = {
+  title: 'Zion Tech Group - Innovative Technology Solutions',
+  description: 'Leading provider of AI, cloud, web development, and cybersecurity solutions. Transform your business with cutting-edge technology.',
+  keywords: ['technology', 'AI', 'machine learning', 'cloud computing', 'web development', 'cybersecurity', 'innovation'],
+  ogType: 'website',
+  twitterCard: 'summary_large_image'
+};
