@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Log error using our error handling utility
     const errorHandler = createErrorBoundaryHandler('AppErrorBoundary');
-    errorHandler(error, errorInfo);
+    errorHandler(error, { componentStack: errorInfo.componentStack || '' });
     
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
