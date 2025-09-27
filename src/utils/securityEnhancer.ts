@@ -394,16 +394,17 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    const self = this;
-    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
-      if (typeof url === 'string' && self.isSuspiciousURL(url)) {
-        self.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
-        self.metrics.blockedRequests++;
-        throw new Error('Suspicious URL blocked');
-      }
-      
-      return (originalXHR as any).apply(this, [method, url, ...args]);
-    };
+    (XMLHttpRequest.prototype.open as any) = ((instance: SecurityEnhancer) => {
+      return function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
+        if (typeof url === 'string' && instance.isSuspiciousURL(url)) {
+          instance.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+          instance.metrics.blockedRequests++;
+          throw new Error('Suspicious URL blocked');
+        }
+        
+        return (originalXHR as any).apply(this, [method, url, ...args]);
+      };
+    })(this);
   }
 
   private monitorDOMChanges(): void {

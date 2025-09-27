@@ -177,7 +177,7 @@ class AdvancedAnalyticsManager {
     }
   }
 
-  private async flushEventQueue(immediate = false): Promise<void> {
+  private async flushEventQueue(): Promise<void> {
     if (!this.isOnline || this.eventQueue.length === 0) return;
 
     const events = [...this.eventQueue];

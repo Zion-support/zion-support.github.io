@@ -142,7 +142,7 @@ class AdvancedSecurityManager {
     }
   }
 
-  private handleBeforeUnload(event: BeforeUnloadEvent): void {
+  private handleBeforeUnload(_event: BeforeUnloadEvent): void {
     this.logEvent('page_unload', 'low', 'Page unload detected');
   }
 
