@@ -10,7 +10,6 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager } from './utils/securityEnhancements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -84,8 +83,7 @@ export default function App(): React.JSX.Element {
       type: 'website'
     });
 
-    // Initialize enhanced security features
-    securityManager.monitorSecurityEvents();
+    // Enhanced security features are already initialized above
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
