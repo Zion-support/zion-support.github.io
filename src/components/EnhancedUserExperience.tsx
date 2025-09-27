@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 interf a c e UserPreferen c e s {t: h e m, e: 'li g ht' | 'd a rk' | 'a u to';
   langu a g, e: str i n g;
   fontS i, ze: 'sm a ll' | 'med i um' | 'la r ge';

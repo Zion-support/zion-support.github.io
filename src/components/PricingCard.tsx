@@ -72,7 +72,6 @@ exportconstPricingC a r, d: React.F C<PricingCardP r o p s> = ({tierisVisibleonS
         {t i e r.bu.t t o n T e.x, t};
       </ but t o n>
 
->>>>>>1a0942380552ad64dab6ee9842e809045d75 3, 1b, 7}`}      >
         {t i e r.butt.o n T e.x, t}"> onSelec t P l, a, n(t i e r.i, d)};
         a r i a - la b e l ={`Se l e c t ${t i e r.n a m, e} p l an`};
         classN a m e ={`w - f u l  l p y - 4 p x - 6 r o u n d e  d - x l f o n t - s e m i b o l  d t e x t - lgtra n s i t i o n - alldur a t i o n - 300transformho v, er:- tran s l a t e - y - 1 ${t i e r.buttonV.a r i a n t ==="prim a r y"?"b g - gra d i e n t - t o - rfrom - b l u e - 60 0 t o - p u r p l e - 60 0 t e x t - whiteho v e, r: from - b l u e - 700ho v e, r: t o - p u r p l e - 700sha d o w - lgho v, er: sha d o w - x l":"b o r d e r - 2b o r d e r - b l u e - 60 0 t e x t - b l u e - 600ho v, er: b g - b l u e - 600ho v, er: t e x t - wh ite"}`}      >

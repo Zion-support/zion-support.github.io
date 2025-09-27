@@ -1,6 +1,5 @@
 // T O D, O: Consi d e r break i n g t h i s la r g e compon e, n, t(2, 3 3 li n e, s) i n t o smal l e r components;// T O D, O: Consi d e r break i n g t h i s la r g e compon e, n, t(2, 3 2 li n e, s) i n t o smal l e r components;
 import R e a c t {useSt, a: t: e useEffectuseCallb a c, k}  from 'react";
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 interf a c e TestRes u l t {i: d: str i n g;
   nam, e: str i n g;
   sta t, us: "pend i ng' | "runn i n g" | "pas s e d" | "fai l e d" | "skip p e d";

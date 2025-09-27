@@ -7,7 +7,6 @@ interf a c e DataP o i n t {x: n u m b e r;
   co l o r ?: str i n, g};
 interf a c e Chart D a t a {l: a: b e l, s: str i, n, g[];
   datas e t, s: {
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
     backgroundCo l o, r: str i, n, g[];
     borderCo l o, r: str i, n, g[];
     borderWi d t, h: numbe, r}[]};

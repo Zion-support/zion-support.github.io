@@ -17,7 +17,6 @@ export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privat, e: c: a, c, h, e = 
 
   construc, t, o, r(opt, i, o, n, s: CacheOpti, o, n, s = {}) {t: h, i, s.o.p, t, i, o, n, s = {
 
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;
       t, h, i, s.re.m, o, v, e(k, e, y)};// Ch, e, c, k, i, f, w, e n, e, e, d, t, o, ev, i, c, t it, e, m, s, th, i, s.evictIf.N, e, e, d, e, d();
     consti, t, e, m: Cach, e, I, t, e, m<T> = {valuetim, e: s: t, a, m, p: now, t, t, l: itemTTLh, i, t, s: 0lastAcces, s, e, d: no, w;
     };
@@ -130,7 +129,6 @@ export, cl, a, s, s, AdvancedCa, c, h, e<T = an, y> {privat, e: c: a, c, h, e = 
   priv, a, t, e, formatB, y, t, e, s(b, y, t, e, s: numbe, r): str, i, n, g {i: f (b, y, t, e, s === 0) return "0, By, t, es";
     con, s, t, k = 1, 0, 2, 4;
     constsi, z, e, s = ["By, t, e, s''K,B''M,B''GB"];
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;// Ca, c, h, e, decora, t, o, r, fo, r functi, o, n, s, export, function cac, h, e, d<Text e, n, d, s (...a, r, g, s: an, y[]) => an, y>(f, n: Topti, o, n, s: CacheOpti, o, n, s = {};
   retur, n((...a, r, g, s: an, y[])  => {c, o: n: s, t, k, e, y = J, S, O, N.str.i, n, g, i, f, y(a, r, g, s);
     
     i, f (c, a, c, h, e.h.a.s(k, e, y)) {

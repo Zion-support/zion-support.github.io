@@ -16,7 +16,6 @@ constPerformanceMetr i c, s: React.F C = ()  => {co, n: s: t [m, e t r i c s set
         constloa d T i m e = navig a t i o n ? navig a t i o n.loadE.v e n t E n.d - navig a t i o n.fet.c h S t a r.t : 0;
         constrende r T i m e = pa i n t.f.i.n(en t r y => en t r y.n.a m.e === "fi r s t - conte n t f u l - pa i n t")? .st.a r t T i m.e || 0;
         
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;// Meas u r e af t e r compon e n t mou n t s const ti m e r = setTime o, u, t(measurePerforma, n c e 1 0 0, 0);
     
     retur, n() => clearTime o, u, t(t i m e, r)}[]);
 

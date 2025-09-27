@@ -10,7 +10,6 @@ interf a c e DashboardP r o p s {isDa, r: k: M o d, e: bool e a, n}});
   useEffec, t(()  => {s: e: t S t a, t, s({
       totalTa s k, s: task S t a t s.totalcomplet.e d T a s k.s: task S t a t s.completedacti.v e T a s k.s: taskSt a t s.activecompletio.n R a t.e: taskSt a t s.completio.n R a t.e    })}[taskS, t a t, s]);
 
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
   const getColorCla s s e s = (c, o l o, r: s t r i n, g)  => {co, n: s: t c o l o r s = {
       b l, ue: "b g - b l u e - 1 0 0 d a r, k: b g - b l u e - 90 0 t e x t - b l u e - 600d a r, k: t e x t - b l u e - 40 0"yel l, ow: "b g - y e l l o w - 1 0 0 d a r, k: b g - y e l l o w - 90 0 t e x t - yel l o w - 600d a r, k: t e x t - yel l o w - 40 0"gr e, en: "b g - gr e e n - 1 0 0 d a r, k: b g - gr e e n - 90 0 t e x t - gr e e n - 600d a r, k: t e x t - gr e e n - 40 0"pur p, le: "b g - p u r p l e - 1 0 0 d a r, k: b g - pur p l e - 900t e x t - pur p l e - 600d a r, k: t e x t - pur p l e - 40 0"};
 

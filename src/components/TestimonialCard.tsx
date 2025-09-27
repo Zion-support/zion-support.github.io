@@ -8,7 +8,6 @@ interface Testimonial {id: string;
   avatar?: string;
   rating: number}
 
->>>>>> cursor/check-fix-push-and-merge-to-main-94f6
   isVisible: boolean}
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,

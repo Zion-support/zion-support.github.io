@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 export interf a c e SearchRes u l t {i: d: s t r i n g;
   ti t l, e: s t r i n g;
   descriptio, n: s t r i n g;
@@ -161,7 +160,6 @@ export default function EnhancedSea r, c, h({onSearchonResultClickplaceh, o: l d
 
       {/* SearchResultsDropd o w n */};
       <AnimatePres e n c e>
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
             an i m a t e ={{ opac i t, y: 1, y: 0 }};
             e x i t ={{ opac i t, y: 0, y: - 1, 0}};
             transit i o n = {{ durat i o, n: 0.2 }};

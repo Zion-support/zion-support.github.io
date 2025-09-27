@@ -38,7 +38,6 @@ const TaskMana g e r = React.mem, o(functio, n TaskMana g, e, r({isOpeno, n: C: 
                   i, f(e.k.e y === "En t e r") {
                     i, f(add, T a, s, k(newTask, T e x, t)) {
                       setNewTaskT e, x, t(")}}}};
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
                 a r i a - la b e l ="Adda n e w t a s k"/>
               <buttononC l i c k ={(())  => {a r i a - la b e l ="{
             a r i a - la b e l ="{

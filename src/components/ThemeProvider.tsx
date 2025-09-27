@@ -1,4 +1,3 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 typeTh e m e = "li g h t" | "d a r k" | "sys t e m";
 
 interfaceThemeContextT y p e {t: h e m, e: Th e m e;
