@@ -3,9 +3,7 @@ import type { AppProps  } from 'next/app';
 import { HelmetProvider  } from "react-helmet-async";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-// import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
-// import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
-import WebVitals from "../src/components/WebVitals";
+ursor/check-fix-push-and-merge-to-main-2926
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
@@ -20,13 +18,4 @@ export default function App({ Component, pageProps  }: AppProps) {
   .catch((registrationError) => {
   console.log('SW registration failed: ', registrationError);  });  });  }  }, []);
   return (
-  <HelmetProvider>      <Head>
-  <title>Zion App - Advanced Technology Solutions</title>
-  <meta name="description" content="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/favicon.ico" />      </Head>
-  <Component {...pageProps} />
-  {/* <AccessibilityAuditor />
-  <PerformanceOptimizer /> */}
-  <WebVitals />
-  </HelmetProvider>  );  }
+ursor/check-fix-push-and-merge-to-main-2926
