@@ -1,46 +1,49 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
-// import { Footer } from './components/Footer';
-import Home from './pages/Home';
+import Footer from './components/Footer';
+import SkipLink from './components/SkipLink';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
+import ErrorFallback from './components/ErrorFallback';
 import './index.css';
+
+// Lazy load components for better performance
+const Home = lazy(() => import('./pages/Home'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Contact = lazy(() => import('./pages/Contact'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App(): React.JSX.Element {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-                <p className="text-xl text-gray-600">Latest insights and updates</p>
-              </div>
-            </main>
-          } />
-          <Route path="/contact" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-                <p className="text-xl text-gray-600">Get in touch with our team</p>
-              </div>
-            </main>
-          } />
-          <Route path="*" element={
-            <main className="container mx-auto px-4 py-16 text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
-              <p className="text-xl text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>
-            </main>
-          } />
-        </Routes>
-        
-        {/* <Footer /> */}
-      </div>
-    </Router>
+    <ErrorBoundary fallback={<ErrorFallback />}>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <SkipLink />
+          <ScrollToTop />
+          <Header />
+          
+          <main id="main-content">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }

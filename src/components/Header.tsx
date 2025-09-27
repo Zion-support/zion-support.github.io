@@ -21,15 +21,24 @@ export default function Header() {
             <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
               Home
             </Link>
+            <Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Services
+            </Link>
+            <Link to="/portfolio" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Portfolio
+            </Link>
             <Link to="/blog" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
               Blog
             </Link>
             <Link to="/contact" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
               Contact
             </Link>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Get Started
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -58,6 +67,27 @@ export default function Header() {
                 Home
               </Link>
               <Link 
+                to="/about" 
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/portfolio" 
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link 
                 to="/blog" 
                 className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
@@ -71,9 +101,13 @@ export default function Header() {
               >
                 Contact
               </Link>
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold w-fit">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold w-fit"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Started
-              </button>
+              </Link>
             </nav>
           </div>
         )}
