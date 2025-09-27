@@ -118,15 +118,15 @@ export default function Contact(): JSX.Element {
 		'Flexible'
 	];
 
-	return (
-     <>
-       <SEO />
-       {/* <Navigation /> */}
-       <Head>
-				<title>Contact Us - Zion App</title>
-				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
-			</Head>
+  return (
+    <>
+      <SEO />
+      {/* <Navigation /> */}
+      <Head>
+        <title>Contact Us - Zion App</title>
+        <meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">

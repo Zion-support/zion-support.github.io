@@ -22,8 +22,7 @@ export default function FAQ(): JSX.Element {
 			category: 'General',
 			questions: [
 				{
-				,
-		id: 1,
+					id: 1,
 					question: 'What services does Zion App offer?',
 					answer: 'Zion App provides comprehensive technology solutions including AI development  cloud computing  web development  mobile applications  data analytics  and cybersecurity services. We specialize in custom software development  digital transformation  and technology consulting.'
 				},

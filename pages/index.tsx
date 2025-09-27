@@ -73,7 +73,7 @@ export default function Home(): JSX.Element {
       return () => observer.disconnect()}
   }, []);
 
-	const, handleGetStarted = useCallback(() => {
+  const handleGetStarted = useCallback(() => {
     // Track user interaction
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
