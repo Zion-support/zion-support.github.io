@@ -10,8 +10,7 @@ export default function Home(): JSX.Element {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const { trackClick } = useAnalytics();
 

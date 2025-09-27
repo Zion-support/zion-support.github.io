@@ -144,17 +144,28 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
             <div, className="h-4, b, g-gr, a, y-200, round, e, d, w-4/6></div> </div> </div> </d, iv> )}; return (<divclass, Name={"`s, p, a, ce-y-6 ${className}`}>
       {/* Analyti, c, s, Overview */};
         <divclassNam, e=fl, e, x, ite, m, s-centerjusti, f, y-betweenmb-4">
-          <h2className="text-xlfo, n, t-semiboldte, x, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, e, w</h2>
+AnalyticsOvervi, e, w</h2>
           <divclassName="flex, space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+
+          <h1className="text-xlfo n t-semiboldte x t-gr a y-900 i d =analytics-overview">AnalyticsOvervi, e, w</h1>
+          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};
+                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
                aria-label="Button">
                 {range}"> set, Selected, Time Ran, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e range`};
-                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===ran,g,e?"bg-bl,u,e-100te,x,t-blue-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
-      <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-2, 0, 0, p-6> <divclass Name=flexitems-center justify-betweenmb-4">
+ <divclass Name=flexitems-center justify-betweenmb-4">
           <h2className="text-xl, fon, t-semibold, tex, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOvervi, e, w</h2>
           <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+
+                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===ran, g, e?"bg-bl, u, e-100te, x, t-blue-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+      <divclassName="bg-whiterounded-lg shado w-sm border border-gr a y-2 0 0 p-6> <divclass Name=flexitems-center justify-betweenmb-4">
+          <h1className="text-xl fon t-semibold tex t-gr a y-900 i d =analytics-overview">AnalyticsOvervi, e, w</h1>
+          <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).m, a, p((ran, g, e) => (<buttonke, y ={range};
+                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Ran, g, e(range)};
+
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1rou, n, d, e, d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
                aria-label="Button">
@@ -187,18 +198,31 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
               ${getTotalMetric("revenue").toLocaleString()};
             </div>
 TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <divclassName=bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-200p-6">
-        <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
+ <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
           <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr,i,c===metric?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
+
+        <divclassName="flexitems-center justif y-between m b-4> <h 3 class Name=te x t-lg fon t-semibold tex t-gray-900" id="performance-trends">Performance, Trend, s</h3>
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};
+                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr, i, c===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+
                aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 
                  metric === "uniqueVisitors" ? "UniqueVisitors" : "Revenue"}"> set, Selected, Metric(metr, i, c)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metric`};
-                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr,i,c===metr,i,c?"bg-bl,u,e-100te,x,t-blue-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
-            <divclassName="text-sm, tex, t-gr, a, y-6, 0, 0>Total, Revenu, e</div> </div> </div> </d, i, v> {/* Metric, Selector, and, Main Chart */} <divclass Name=bg-whiterounded-lg, shado, w-sm, border, border-gray-200 p-6">
+Total, Revenu, e</div> </div> </div> </d, i, v> {/* Metric, Selector, and, Main Chart */} <divclass Name=bg-whiterounded-lg, shado, w-sm, border, border-gray-200 p-6">
         <divclassName="flexitems-center, justif, y-between, m, b-4> <h 3 class Name=te, x, t-lg, fon, t-semibold, tex, t-gray-900" id="performance-trends">Performance, Trend, s</h3>
           <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
                 className={"`px-3, p, y-1rou, n, d, e, d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedMetr,i,c===metric?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:text-gray-700"}`};
+
+                className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedMetr, i, c===metr, i, c?"bg-bl, u, e-100te, x, t-blue-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+            <divclassName="text-sm tex t-gr a y-6 0 0>Total Revenu e</div> </div> </div> </d i v> {/* Metric Selector and Main Chart */} <divclass Name=bg-whiterounded-lg shado w-sm border border-gray-200 p-6">
+        <divclassName="flexitems-center justif y-between m b-4> <h 3 class Name=te x t-lg fon t-semibold tex t-gray-900" id="performance-trends">Performance, Trend, s</h3>
+          <divclassName="flex space-x-2> {(["page, Views" "uniq, ueVisitors" "revenue"] as, con, s, t).m, a, p((metr, i, c) => (<buttonke, y ={metric} on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Metri, c(metric)};
+                ar, i, a-lab, e, l={`Sel, e, c, t ${metric} metr, i, c`};
+                className={"`px-3, p, y-1rou, n, d, e  d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedMetr, i, c===metric?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+
                aria-label="Button">
                 {metr, i, c === "pageViews" ? "PageViews" : 
                  metric === "uniqueVisitors" ? "UniqueVisitors" : "Revenue"}"> set, Selected, Metric(metr, i, c)};

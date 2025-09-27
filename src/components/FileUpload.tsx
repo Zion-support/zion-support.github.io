@@ -216,7 +216,10 @@ exportconstFileUpload: React.FC<FileUploadProps> = ({onFileSelectonFileUploadacc
 
                 {/* FileInfo */};
                 <divclassName="flex-1 min-w-0">
+
+
                   <pclassName="te, x, t-sm, fon, t-medium, tex, t-gray-900 truncate">
+
                     {uploadedFi, l, e.fi, l, e.name};
                   </p>
                   <pclassName="text-xs, tex, t-gray-500">

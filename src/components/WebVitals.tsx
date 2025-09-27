@@ -20,9 +20,20 @@ export, function, WebVitals() {useEffect(() => {
       getF, I, D(reportWebVita, l, s);
       getF, C, P(reportWebVita, l, s);
       getL, C, P(reportWebVita, l, s);
-      getTT, F, B(reportWebVitals)})}, []);
+ {
+    const reportWebVitals = (metric: WebVitalsMetric) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          event_label: metric.id,
+          non_interaction: true})}
+    };
   // Log to console in development
-  if (process.env.NODE_ENV === 'development') {console.log('Web, Vitals:', metric)}
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals:', metric)}
+
 }
 
 export function WebVitals() {useEffect(() => {
@@ -32,6 +43,4 @@ export function WebVitals() {useEffect(() => {
       getLCP(reportWebVitals);
       getTTFB(reportWebVitals)})}, []);
 
-  return null}
-
-export default WebVitals;
+>>>>>> cursor/check-fix-push-and-merge-to-main-94f6

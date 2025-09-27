@@ -102,8 +102,13 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
       </div>
 
       {/* Securi, tyScore */};
-      <divclassName="bg-gradient-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-l, g, p-6, tex, t-whitemb-6">
+
         <divclassName="flexitems-center justify-between">          <div>
+
+      <divclassName="bg-gradient-to-r fro m-bl u e-500 t o-purp l e-600 rounde d-l g p-6 tex t-whitemb-6">
+        <divclassName="flexitems-center justify-between">
+          <div>
+
             <h3className="te x t-lgfont-semiboldmb-2" id="security-score">Security, Scor, e</h3>
             <divclassName="flexitems-centerspace-x-4">
               <divclassName="te x t-4 xlfont-bold">

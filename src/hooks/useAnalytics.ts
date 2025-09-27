@@ -9,9 +9,7 @@ export function useAnalytics() {useEffect(() => {
     // Initialize, gtag
     (window, as, any).dataLayer = (window, as, any).dataLayer || [];
     
-    function, gtag(...args: any[]) {
-      (window, as, any).dataLayer.push(args)}
-    (window, as any).gtag = gtag;
+>>>>>> cursor/check-fix-push-and-merge-to-main-94f6
 
       gtag("js"newDate());
       gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {page_title: document.titlepage_location: wind, o, w.locati, o, n.href})}}[]);

@@ -43,7 +43,10 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
       <divclassName="bg-whiterounded-lg, shado, w-lgp-6">
         <divclassName="flexitems-center justify-betweenmb-6">
           <h3className="text-xl, fon, t-semibold, tex, t-gr, a, y-8, 0, 0, flexitems-center">
+
+
             <AccessibilityclassName="w-5 h-5 m r-2" />
+
 
   return (<divclassNam, e={`accessibi, l, i, t, y-enhancemen, ts ${className}`}>
       <divclassName="bg-whi, t, e, round, e, d-lg, shad, ow-lgp-6">

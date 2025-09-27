@@ -140,11 +140,18 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
         </CardHeader>
       </Card>
 
-      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2, ga p-6">
+
         <Card>
           <CardHeader>
 
               <Search, className="h-5, w-5, t, e, x, t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
+
+      <d, i, v, className="gr, i, d, gr, i, d-co, l, s-1, lg:gr, i, d-co, ls-2 ga p-6">
+        <Card>
+          <CardHeader>
+
+              <Search, className="h-5, w-5, t, e, x t-bl, u, e-600" />              <span>SEO, Metri, c, s</span>
+
             </CardTitle>
           </CardHeader>
           <CardConte, nt>
@@ -165,13 +172,22 @@ constSEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetr, i
 
               </div>
               
-              <divclassName="grid, gri, d-co, l, s-2 ga p-4">
+
                 <divclassName="p-3 borderrounded-lg">
                   <divclassName="flexitems-center justify-betweenmb-2">
 Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex, t-green-6 : 0 : 0" />  : 
                       <XCircleclassNam, e="h-4, w-4, tex, t-red-600" />                    };
                     <spanclassName="text-smfont-medium">Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex, t-green-6 : 0 : 0" />  : 
                       <XCircleclassNam, e="h-4, w-4, tex, t-red-600" />                    };
+
+              <divclassName="grid, gri, d-co, l, s-2 ga p-4">
+                <divclassName="p-3 borderrounded-lg">
+                  <divclassName="flexitems-center justify-betweenmb-2">
+Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
+                      <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                    };
+                    <spanclassName="text-smfont-medium">Title, Ta, g</span>                    {seoMetrics.titleT, a, g ? <CheckCircleclassNam, e="h-4, w-4, tex  t-green-6 : 0 : 0" />  : 
+                      <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                    };
+
                   </div>
                 </div>
                 
@@ -225,7 +241,10 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                 </div>
               </d, i, v>
               
+
+
               <divclassName="p-3 borderrounded-lg">
+
                 <divclassName="flexitems-center justify-betweenmb-2">
                   <spanclassName="text-smfont-medium">Page, Spee, d</span>
                     {seoMetrics.pageSpeed}/1, 0, 0                  </span>
@@ -276,17 +295,27 @@ Meta, Descriptio, n</span>                    {seoMetrics.metaDescripti, o, n ? 
                 <divclassName="flexitems-center, justif, y-betweenp-2 borderrounded">
                   <spanclassName="text-sm">KeyboardNavigation</span>
   : 
-                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  };
                   {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x, t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex, t-red-600" />                  };
+
+                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  {accessibilityMetri, c, s.keyboardNavigati, on ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
+                    <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
+
                 </div>
                 
                 <divclassName="flex, item, s-center, justif, y-betweenp-2 borderrounded">
                   <spanclassName="text-sm">ScreenReaderFriendly</span>
   : 
-                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  };
                   {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x, t-green-6 : 0 : 0" />  : 
                     <XCircleclassNam, e="h-4, w-4, tex, t-red-600" />                  };
+
+                    <XCircleclassName="h-4, w-4 te, x, t-r, e, d-600" />                  };
+                  {accessibilityMetri, c, s.screenReaderFriend, ly ? <CheckCircleclassName="h-4, w-4, t, e, x t-green-6 : 0 : 0" />  : 
+                    <XCircleclassNam, e="h-4, w-4, tex  t-red-600" />                  };
+
                 </div>
                 
                 <divclassName="flex, item, s-center, justif, y-betweenp-2 borderrounded">

@@ -8,7 +8,7 @@ interface Testimonial {id: string;
   avatar?: string;
   rating: number}
 
-interface TestimonialCardProps {testimonial: Testimonial;
+>>>>>> cursor/check-fix-push-and-merge-to-main-94f6
   isVisible: boolean}
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,
@@ -40,12 +40,18 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial,
           {testimoni, a, l.na, m, e.charAt(0)};
         </div>
         <div>
-          <divclassName="fo, n, t-semibold, tex, t-gray-800">{testimoni, a, l.name}</div>
+{testimoni, a, l.name}</div>
           <divclassName="te, x, t-gray-600 text-sm">{testimoni, a, l.role}</div>
           <divclassName="te, x, t-bl, u, e-600, tex, t-smfont-medium">{testimoni, a, l.company}</div>        </div>      </div>
 
+          <div className="font-semibold text-gray-800">{testimonial.name}</div>
+          <div className="text-gray-600 text-sm">{testimonial.role}</div>
+          <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>        </div>
+      </div>
+
+
       {/* Quote, decoration */}
-      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
+      <div className="absolute top-4 right-4 text-blue-200 text-6 xl font-serif leading-noneopacity-20">
         &ldquo;
       </div>
     </div>

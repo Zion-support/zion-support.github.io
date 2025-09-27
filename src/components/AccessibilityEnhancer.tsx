@@ -22,15 +22,7 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   const [prefersMotion, setPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize, accessibility features, if (enableSkipLinks) {
-      createSkipLink()}
-
-    if (enableFocusManagement) {initFocusVisible()}
-
-    if (enableScreenReaderSupport) {createLiveRegion()}
-
-    // Check for high contrast mode
-    if (enableHighContrastSupport) {const, checkHighContrast = () => {
+ {
         setIsHighContrast(isHighContrastMode())};
       
       checkHighContrast();
@@ -39,6 +31,24 @@ const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(
   }[enableFocusManagementenableHighContrastSupport]);
     // Check for reduced motion preference
     if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
+
+    // Initializeaccessibility featuresif (enableSkipLinks) {
+      constskipLink = createSkipLink('main', 'Skip, tomaincontent');
+      document.body.insertBefore(skipLink, document.body.firstChild)}
+
+    // Check for high contrast mode
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode())};      
+      const mediaQuery = window.matchMedia('(forced-colors: active)');
+      const handleChange = () => setIsHighContrast(isHighContrastMode());
+      mediaQuery.addEventListener('change'handleChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleChange)}
+  }, [enableFocusManagement, enableHighContrastSupport]);
+  useEffect(() => {// Check for reduced motion preference    if (enableReducedMotionSupport) {
+      const checkReducedMotion = () => {
+
         setPrefersMotion(!prefersReducedMotion())};
       
       checkReducedMotion();

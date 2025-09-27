@@ -178,10 +178,16 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
               >
                 {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-7,0,0':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
-      <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, ay-200 p-6">
+
         <divclassName="flexitems-center justify-betweenmb-4">
           <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>          <divclassName ="flexspace-x-2">
+
+                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+      <divclassName="bg-whiterounded-lg shado w-sm border border-gr ay-200 p-6">
+        <divclassName="flexitems-center justify-betweenmb-4">
+          <h1className="text-xl fon t-semibold tex t-gray-900" id="security-overview">SecurityOvervi, e, w</h1>
+          <divclassName ="flexspace-x-2">
+
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
                 onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
                 ar, i, a-lab, e, l={`Se, l, e, c, t ${range} ti, m, e ran, g, e`};

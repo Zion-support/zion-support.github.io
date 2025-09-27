@@ -20,7 +20,10 @@ interface OptimizationSuggestion {type: 'performance' | 'memory' | 'network' | '
 
 interface PerformanceOptimizerProps {className?: string}
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+ = ({className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '" }) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     loadTime: 0memoryUsage: 0cpuUsage: 0networkLatency: 0cacheHitRate: 0bundleSize: 0renderTime: 0errorRate: 0
   });
 

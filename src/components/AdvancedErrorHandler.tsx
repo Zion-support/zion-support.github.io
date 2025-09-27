@@ -241,7 +241,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
             <divclassName="overflow-y-auto max-h-64">
 
+
+
                   <CheckCircleclassName="w-8 h-8, m x-auto, m, b-2 te, x, t-green-500" />
+
 
               {erro, r, s.leng, t, h === 0 && performanceIssu, e, s.leng, t, h === 0 ? (<divclassNam, e="p-4, t, e, x, t-centerte, x, t-gray-500">
                   <CheckCircleclassNam, e="w-8h-8, m, x-au, t, o, mb-2, t, e, x, t-green-500" />
@@ -255,10 +258,14 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                       onCli, c, k={() => setSelectedError(error)};
                     >
                       <divclassName="flexitems-start space-x-3">
-                        <divclassName={`p-1roun, d, e, d ${getSeverityCol,o,r(err,o,r.severity)}`};
+
+                        <divclassName="fl, e, x-1 min-w-0">
+
+                        <divclassName={`p-1roun, d, e, d ${getSeverityCol, o, r(err, o, r.severity)}`};
                           {getCategoryIc, o, n(error.category)};
                         </div>
                         <divclassName="fl, e, x-1 min-w-0">
+
                           <divclassName="flexitems-center justify-between">
                               {err, o, r.severi, t, y.toUpperCase()};
                             </span>

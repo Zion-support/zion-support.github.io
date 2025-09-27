@@ -19,7 +19,7 @@ const Home = React.memo(function Home(): JSX.Element {
   const isHeroInView = useInView(heroRef, { once: true });
   const isFeaturesInView = useInView(featuresRef, { once: true });
 
-// constAdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
+ import("../src/components/AdvancedPerformanceMonitor"), {//   ssr: false 
 //  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
@@ -63,6 +63,11 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
       
       return () => observer.disconnect()}
   }, []);
+
+  useEffect(() => {
+    setIsVisible(true);
+    setIsLoading(false)}, []);
+
 
   const handleGetStarted = useCallback(() => {
     // Track user interaction
@@ -153,7 +158,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
               anima, te={isHeroInVi, ew ? { y: 0opacity: 1 } : {y: 50opacity: 0 }};
               transition={{ duration: 0.8ease: "easeOut" }};            >
               <motion.h1 
-                className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                className="text-5 xl md:text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -234,7 +239,7 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
                       transiti, on={{ duration: 0.3 }};
                     >
                       <spanclassName="text-3 xl">{feature.icon}</span>                    </motion.div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <pclassName="text-gr, a, y-600 leading-relaxed">
@@ -271,9 +276,9 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7 xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h1>
+              <h1 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h1>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
 

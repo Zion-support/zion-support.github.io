@@ -9,10 +9,15 @@ export default function Blog(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
-  const { trackClick } = useAnalytics();
+ {
+		setIsNewsletterLoading(true);
+		// Simulate API call
+		await new Promise(resolve => setTimeout(resolve, 1000));
+		trackClick('newsletter-signup', 'cta');
+		setIsNewsletterLoading(false)};
+
 
   const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
@@ -29,7 +34,7 @@ export default function Blog(): JSX.Element {
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="container mx-auto px-4 py-8 max-w-7 xl">
           <nav className="mb-8">
             <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
               ← Back to Home
@@ -37,10 +42,10 @@ export default function Blog(): JSX.Element {
           </nav>
 
           <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Tech Insights & Updates
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
               Stay ahead with the latest technology trends, insights, and best practices from our expert team.
             </p>
           </header>
@@ -50,10 +55,8 @@ export default function Blog(): JSX.Element {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => {
-                    setSelectedCategory(category);
-                    trackClick('blog_category_filter', { category });
-                  }}
+                  onClick={(()) => {setSelectedCategory(category);
+                    trackClick('blog_category_filter', { category})}}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white shadow-lg'
@@ -106,13 +109,38 @@ export default function Blog(): JSX.Element {
             ))}
           </div>
 
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
+
               <p className="text-gray-500 text-lg">No posts found in this category.</p>
             </div>
           )}
         </div>
       </div>
     </>
-  );
-}
+  )}
+
+					{/* Newsletter, Signu, p */};
+					<section, classNam, e="te, x, t-cent, e, r">
+						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
+							<h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+								Stay, Update, d
+							</h2>
+							<p, classNam, e="te, x, t-gr, a, y-600, m, b-6">
+								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
+							</p>
+							<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
+								<input, typ, e="ema, i, l"
+									placehold, e, r="Enter, your, email"
+									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+								/>
+								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
+									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+								>
+									Subscri, b, e
+								</butt, o, n>
+							</d, i, v>
+						</d, i, v>
+					</secti, o, n>
+				</d, i, v>
+			</d, i, v>		</>
+	)}
+

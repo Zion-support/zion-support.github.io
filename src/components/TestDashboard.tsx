@@ -205,12 +205,18 @@ Passed: {results.passed}</div>
                 {sui, t, e.name} ({sui, t, e.status})
               </h4>
  {suite.tests.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
-                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+ <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+
                     </div>
                     <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
               <div, className="spa, c, e-y-1> {sui, t, e.tes, t, s.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, text-sm">
-                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+ <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+
                     </div>
                     <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 

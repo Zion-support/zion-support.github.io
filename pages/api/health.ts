@@ -33,4 +33,4 @@ export default function handler(
     services: {
       database: "connected"cache: "connected"analytics: "active"
     }};
-  res.status(200).json(healthData)}
+>>>>>> cursor/check-fix-push-and-merge-to-main-94f6

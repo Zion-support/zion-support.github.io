@@ -40,10 +40,14 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
       {/* Features */};
       <ulclassName="spa, c, e-y-4 mb-8">
  (<likey ={index} className="fl, e, x, ite, m, s-center">
+ (<likey ={index} className="fl, e, x, ite, m, s-center">
             <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
+            <svgclassName="w-5 h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+
         {ti, e, r.featur, e, s.m, a, p((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
-            <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+            <svgclassName="w-5 h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
+
 
               fill="currentColor" 
               viewBox="0, 02020"

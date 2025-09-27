@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import React from 'react';
 
 interface SEOProps {title?: string;
   description?: string;
@@ -54,27 +54,41 @@ export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered
     }
   };
 
-  if (publishedTime) {structuredData['@type'] = 'Article';
-    (structuredData, as, any).datePublished = publishedTime;
-    (structuredData, as, any).dateModified = modifiedTime || publishedTime;
-    (structuredData, as, any).author = { '@type': 'Person', name: author };
-    (structuredData, as any).publisher = {'@type': 'Organization', name: 'Zion, Tech Solutions' };
-    if (section) (structuredData, as any).articleSection = section;
-    if (tags.length > 0) (structuredData, as any).keywords = tags.join(',')}
+ 0) (structuredData, as any).keywords = tags.join(',')}
 
   return (<Head>
       {/* Basic, Meta, Tags */}
       <title>{fullTitle}</title>
       <meta, name="description" content={fullDescription} />
       <meta, name="keywords" content={keywords.join(',')} />
+
+  if (publishedTime) {
+    (structuredData as any)['@type'] = 'Article';
+    (structuredData as any).datePublished = publishedTime;
+    (structuredData as any).dateModified = modifiedTime || publishedTime;
+    (structuredData as any).author = { '@type': 'Person', name: author };
+    (structuredData as any).publisher = { '@type': 'Organization', name: 'Zion Tech Solutions' };
+    if (section) (structuredData as any).articleSection = section;
+    if (tags.length > 0) (structuredData as any).keywords = tags.join(', ')}
+
+  return (
+    <>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(', ')} />
+
       <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       
       {/* Canonical, URL */}
       {fullCanonical && <link, rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex?'noindex':'index'},${nofollow?'nofollow':'follow'}`} />
+
+
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+
       
       {/* Open, Graph */}
       <meta property="og:type" content={ogType} />
@@ -114,5 +128,9 @@ export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered
       {/* DNS, Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    </Head>
+
   )}
+
+    </>
+  )};
+

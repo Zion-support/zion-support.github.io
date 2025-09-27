@@ -13,8 +13,9 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
     used: number;
     total: number;
     percentage: number} | null>(null);
+ {if (typeof, window === 'undefined') return;
 
-  useEffect(() => {if (typeof, window === 'undefined') return;
+
 
     // Simpleperformance, monitoringi, f (enableMonitori, n, g) {
       console.log("Performancemonitoringenabled")};

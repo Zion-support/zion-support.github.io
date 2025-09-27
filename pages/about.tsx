@@ -8,8 +8,7 @@ export default function About(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const { trackClick } = useAnalytics();
 

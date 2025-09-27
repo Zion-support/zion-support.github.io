@@ -137,7 +137,10 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
 
   return (<divclassNam, e ="space-y-6">
       {/* Syst, e, m, Stat, u, sOverview */};
-      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4, ga p-4">
+
+
+      <divclassName="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4 ga p-4">
+
         <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
           anima, t, e={{ opacity: 1y: 0 }};
           className="bg-whi, t, e, p-6, round, e, d-lg, shad, o, w-sm, borderbord, e, r-gr, a, y-200"
@@ -219,14 +222,20 @@ exportconstSystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpd
       </div>
 
       {/* Alerts, Section */};
+
+
         <divclassName="px-6 py-4, borde, r-b, borde, r-gray-200">
+
           <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">
               <divclassName={`w-2h-2round, e, d-fu, l, l ${isMonitoring?"bg-gre,e,n-500":"bg-gray-400"}`} />
 
       <divclassName="bg-whiterounded-lg, shado, w-sm, borderborde, r-gray-200">
+
+
         <divclassName="px-6 py-4, borde, r-b, border-gray-200">
+
           <divclassName="flexitems-center justify-between">
             <h3className="text-lg, fon, t-medium, tex, t-gray-900" id="system-alerts">System, Alert, s</h3>
             <divclassName="flexitems-centerspace-x-2">

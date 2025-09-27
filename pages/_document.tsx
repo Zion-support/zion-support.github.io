@@ -36,7 +36,7 @@ export default function Document() {
                     .then(function(registration) {
                       console.log('SW registered: 'registration)})
                     .catch(function(registrationError) {
-                      console.log('SW registration failed: 'registrationError)})})}            `}}
+>>>>>> cursor/check-fix-push-and-merge-to-main-94f6
         />
       </Head>
       <body>

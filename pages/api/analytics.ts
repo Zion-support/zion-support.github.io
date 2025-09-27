@@ -11,8 +11,11 @@ export default async function handler(req: any, res: any) {
       return res.status(400).json({ error: "Invalid events data" })}
 
     // Process analytics events
-    console.log("Analytics events received:", events.length);
-    console.log("Session data:", session);
+ ({
+      ...event,
+      timestamp: new Date().toISOString(),
+      sessionId: session?.id || 'anonymous'}));
+
 
     // Here you would typically:
     // 1. Store events in a database
