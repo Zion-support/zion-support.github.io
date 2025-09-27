@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
@@ -6,11 +6,6 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 export default function FAQ(): React.ReactElement {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState(new Set());
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const { trackClick } = useAnalytics();
 
