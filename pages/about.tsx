@@ -84,8 +84,8 @@ export default function About(): JSX.Element {
 		<>
 			<Head>
 				<title>About Us - Zion App</title>
-				<meta name="description" content="Learn about Zion App's mission  values  and commitment to delivering cutting-edge technology solutions." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -122,7 +122,7 @@ export default function About(): JSX.Element {
 								</div>
 
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-									{stats.map((stat  index) => (
+          {stats.map((stat, index) => (
 										<div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
 											<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 												{stat.number}
@@ -150,7 +150,7 @@ export default function About(): JSX.Element {
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-								{values.map((value  index) => (
+         {values.map((value, index) => (
 									<div key={index} className={`transform transition-all duration-700 delay-${300 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -193,7 +193,7 @@ export default function About(): JSX.Element {
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-								{teamMembers.map((member  index) => (
+         {teamMembers.map((member, index) => (
 									<div key={index} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -240,7 +240,7 @@ export default function About(): JSX.Element {
 									{ name: 'Cybersecurity', icon: '🔒' },
 									{ name: 'DevOps', icon: '⚙️' },
 									{ name: 'UI/UX Design', icon: '🎨' }
-								].map((tech  index) => (
+         ].map((tech, index) => (
 									<div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
 										<div className="text-3xl mb-3">{tech.icon}</div>
 										<h3 className="text-sm font-medium text-gray-800">{tech.name}</h3>

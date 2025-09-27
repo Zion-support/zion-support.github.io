@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect  useCallback  useMemo  useRef } from 'react';
-import { motion  useInView  AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
@@ -37,12 +37,12 @@ const AccessibilityEnhancer = dynamic(() => import('../src/components/Accessibil
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
-  const [performanceMetrics  setPerformanceMetrics] = useState(null);
-  const [isLoading  setIsLoading] = useState(true);
+  const [performanceMetrics, setPerformanceMetrics] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const isHeroInView = useInView(heroRef  { once: true });
-  const isFeaturesInView = useInView(featuresRef  { once: true });
+  const isHeroInView = useInView(heroRef, { once: true });
+  const isFeaturesInView = useInView(featuresRef, { once: true });
 
   useEffect(() => {
     setIsVisible(true);

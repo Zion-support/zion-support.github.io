@@ -2,15 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [openItems  setOpenItems] = useState<Set<number>>(new Set());
-	const [searchTerm  setSearchTerm] = useState('');
+	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+	const [searchTerm, setSearchTerm] = useState('');
 
 	useEffect(() => {
-		setIsVisible(true)}, []);
+		setIsVisible(true);
+	}, []);
 
 	// Analytics tracking
 	usePageView('faq');
@@ -122,17 +123,20 @@ export default function FAQ(): JSX.Element {
 	const toggleItem = (id: number) => {
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
-			newOpenItems.delete(id)} else {
-			newOpenItems.add(id)}
+			newOpenItems.delete(id);
+		} else {
+			newOpenItems.add(id);
+		}
 		setOpenItems(newOpenItems);
-		trackClick(`faq-toggle-${id}`, 'interaction')};
+		trackClick(`faq-toggle-${id}`, 'interaction');
+	};
 
-	const filteredData = faqData.map(category => ({
-		...category 
-		questions: category.questions.filter(q => 
-			q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-		)
+  const filteredData = faqData.map(category => ({
+          ...category,
+          questions: category.questions.filter(q => 
+                  q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+          )
 	})).filter(category => category.questions.length > 0);
 
 	return (
@@ -181,7 +185,7 @@ export default function FAQ(): JSX.Element {
 						</section>
 
 						{/* FAQ Categories */}
-						{filteredData.map((category  categoryIndex) => (
+      {filteredData.map((category, categoryIndex) => (
 							<section key={category.category} className={`mb-16 transition-all duration-700 delay-${200 + categoryIndex * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -189,7 +193,7 @@ export default function FAQ(): JSX.Element {
 									{category.category}
 								</h2>
 								<div className="space-y-4">
-									{category.questions.map((item  index) => (
+          {category.questions.map((item, index) => (
 										<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
@@ -276,4 +280,5 @@ export default function FAQ(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}

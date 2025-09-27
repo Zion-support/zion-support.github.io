@@ -2,15 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedCategory  setSelectedCategory] = useState<string>('all');
-	const [selectedProject  setSelectedProject] = useState<number | null>(null);
+	const [selectedCategory, setSelectedCategory] = useState<string>('all');
+	const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
 	useEffect(() => {
-		setIsVisible(true)}, []);
+		setIsVisible(true);
+	}, []);
 
 	// Analytics tracking
 	usePageView('portfolio');

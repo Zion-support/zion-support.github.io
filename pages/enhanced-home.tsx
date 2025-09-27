@@ -6,14 +6,15 @@ import { TestimonialCard } from '../src/components/TestimonialCard';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
-import { TESTIMONIALS  PRICING_TIERS  BLOG_POSTS } from '../src/utils/constants';
+import { TESTIMONIALS, PRICING_TIERS, BLOG_POSTS } from '../src/utils/constants';
 
 export default function Home(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [activeTab  setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
+	const [activeTab, setActiveTab] = useState<'testimonials' | 'pricing' | 'blog'>('testimonials');
 
 	useEffect(() => {
-		setIsVisible(true)}, []);
+		setIsVisible(true);
+	}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -21,12 +22,14 @@ export default function Home(): JSX.Element {
 	const handleSelectPlan = (tierId: string) => {
 		trackClick(`select-plan-${tierId}`, 'conversion');
 		// Handle plan selection logic here
-		console.log('Selected plan:', tierId)};
+		console.log('Selected plan:', tierId);
+	};
 
 	const handleReadMore = (slug: string) => {
 		trackClick(`read-blog-${slug}`, 'engagement');
 		// Handle blog navigation logic here
-		console.log('Read more:', slug)};
+          console.log('Read more:', slug);
+	};
 
 	return (
 		<>
@@ -101,7 +104,7 @@ export default function Home(): JSX.Element {
 									What Our Clients Say
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-									{TESTIMONIALS.map((testimonial  index) => (
+          {TESTIMONIALS.map((testimonial, index) => (
 										<div 
 											key={testimonial.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -122,7 +125,7 @@ export default function Home(): JSX.Element {
 									Choose Your Plan
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-									{PRICING_TIERS.map((tier  index) => (
+          {PRICING_TIERS.map((tier, index) => (
 										<div 
 											key={tier.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -144,7 +147,7 @@ export default function Home(): JSX.Element {
 									Latest Insights
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-									{BLOG_POSTS.map((post  index) => (
+          {BLOG_POSTS.map((post, index) => (
 										<div 
 											key={post.id}
 											className={`transition-all duration-700 delay-${index * 100} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -209,4 +212,5 @@ export default function Home(): JSX.Element {
 				</div>
 			</div>
 		</>
-	)}
+	);
+}
