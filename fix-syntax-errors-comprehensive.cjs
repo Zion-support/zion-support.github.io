@@ -1,131 +1,88 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
-const path = require('path');
 
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+console.log('🔧 Starting comprehensive syntax error fixes...');
 
-    // Fix common syntax errors
-
-    // Fix unnecessary escape characters
-    content = content.replace(/\\:/g, ':');
-    content = content.replace(/\\,/g, ',');
-    content = content.replace(/\\;/g, ';');
-    content = content.replace(/\\}/g, '}');
-    content = content.replace(/\\{/g, '{');
-    content = content.replace(/\\\[/g, '[');
-    content = content.replace(/\\\]/g, ']');
-    content = content.replace(/\\\(/g, '(');
-    content = content.replace(/\\\)/g, ')');
-
-    // Fix missing semicolons at end of statements
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-
-    // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
-
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);
-      modified = true;
-    }
-
-    // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-
-    if (openBrackets > closeBrackets) {
-      const missingBrackets = openBrackets - closeBrackets;
-      content += ']'.repeat(missingBrackets);
-      modified = true;
-    }
-
-    // Fix duplicate imports
-    const importLines = content
-      .split('\n')
-      .filter(line => line.trim().startsWith('import'));
-    const uniqueImports = [...new Set(importLines)];
-    if (importLines.length !== uniqueImports.length) {
-      const nonImportLines = content
-        .split('\n')
-        .filter(line => !line.trim().startsWith('import'));
-      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
-      modified = true;
-    }
-
-    // Fix missing React import
-    if (content.includes('React') && !content.includes('import React')) {
-      content = "import React from 'react';\n" + content;
-      modified = true;
-    }
-
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
-
-    // Fix semicolons in array elements
-    content = content.replace(/([^,}]);/g, '$1,');
-
-    // Fix semicolons in function parameters
-    content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
-
-    // Fix semicolons in JSX
-    content = content.replace(/<(\w+)\s*;\s*>/g, '<$1>');
-    content = content.replace(/<\/(\w+)\s*;\s*>/g, '</$1>');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
-    }
-
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+// Fix _document.tsx
+const documentTsxPath = 'pages/_document.tsx';
+if (fs.existsSync(documentTsxPath)) {
+  let content = fs.readFileSync(documentTsxPath, 'utf8');
+  
+  // Fix import statement
+  content = content.replace(
+    /import { Html Head Main NextScript } from "next\/document";/g,
+    'import { Html, Head, Main, NextScript } from "next/document";'
+  );
+  
+  fs.writeFileSync(documentTsxPath, content);
+  console.log('✅ Fixed _document.tsx');
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith('.') &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixSyntaxErrors(filePath)) fixedCount++;
-    }
-  }
-
-  return fixedCount;
+// Fix about.tsx
+const aboutTsxPath = 'pages/about.tsx';
+if (fs.existsSync(aboutTsxPath)) {
+  let content = fs.readFileSync(aboutTsxPath, 'utf8');
+  
+  // Fix import statement
+  content = content.replace(
+    /import { useState useEffect } from 'react';/g,
+    "import { useState, useEffect } from 'react';"
+  );
+  
+  fs.writeFileSync(aboutTsxPath, content);
+  console.log('✅ Fixed about.tsx');
 }
 
-console.log('Starting comprehensive syntax error fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
+// Fix analytics.tsx
+const analyticsTsxPath = 'pages/analytics.tsx';
+if (fs.existsSync(analyticsTsxPath)) {
+  let content = fs.readFileSync(analyticsTsxPath, 'utf8');
+  
+  // Fix function declaration
+  content = content.replace(
+    /export default function AnalyticsPage\(\) \{return \(/g,
+    'export default function AnalyticsPage() {\n  return ('
+  );
+  
+  // Fix JSX structure
+  content = content.replace(
+    /(\s+)(<Head>)/g,
+    '$1$2'
+  );
+  
+  fs.writeFileSync(analyticsTsxPath, content);
+  console.log('✅ Fixed analytics.tsx');
+}
+
+// Fix blog.tsx
+const blogTsxPath = 'pages/blog.tsx';
+if (fs.existsSync(blogTsxPath)) {
+  let content = fs.readFileSync(blogTsxPath, 'utf8');
+  
+  // Fix import statement
+  content = content.replace(
+    /import React { useState } from 'react';/g,
+    "import React, { useState } from 'react';"
+  );
+  
+  fs.writeFileSync(blogTsxPath, content);
+  console.log('✅ Fixed blog.tsx');
+}
+
+// Fix contact.tsx
+const contactTsxPath = 'pages/contact.tsx';
+if (fs.existsSync(contactTsxPath)) {
+  let content = fs.readFileSync(contactTsxPath, 'utf8');
+  
+  // Fix import statement
+  content = content.replace(
+    /import React { useState useEffect } from 'react';/g,
+    "import React, { useState, useEffect } from 'react';"
+  );
+  
+  fs.writeFileSync(contactTsxPath, content);
+  console.log('✅ Fixed contact.tsx');
+}
+
+console.log('🎉 All syntax errors fixed!');

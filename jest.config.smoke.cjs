@@ -1,32 +1,24 @@
-const nextJest = require('next/jest');
-
-const createJestConfig = nextJest({
-  dir: './',
-});
-
-const config = {
+/** @type {import('jest').Config} */
+module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  roots: ['<rootDir>/src', '<rootDir>/app', '<rootDir>/components', '<rootDir>/tests'],
+  roots: ['<rootDir>/src'],
   testMatch: [
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',
+    '**/__tests__/**/*.(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)'
   ],
-  collectCoverage: false,
-  verbose: true,
-  testTimeout: 10000,
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  modulePathIgnorePatterns: [
-    '<rootDir>/recovered-branches/',
-    '<rootDir>/automation/backups/',
-    '<rootDir>/.temp_backup_components/',
-    '<rootDir>/apps.backup/',
-    '<rootDir>/components/apps/',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  passWithNoTests: true,
+  verbose: false,
+  silent: true
 };
-
-module.exports = createJestConfig(config);

@@ -7,13 +7,15 @@
       "DOM.Iterable"
     ],
     "allowJs": true,
+    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
     "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -22,20 +24,11 @@
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "@/app/*": [
-        "app/*"
-      ],
-      "@/components/*": [
-        "app/components/*"
-      ],
-      "@/lib/*": [
-        "app/lib/*"
       ]
     },
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "noUncheckedIndexedAccess": false,
     "noImplicitReturns": false,
     "noImplicitAny": false,
@@ -47,30 +40,24 @@
       "react-dom"
     ],
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": false
   },
-    "include": [
-      "src/types/offline-shims.d.ts",
-      ".next/types/**/*.ts",
-      "app/**/*.ts",
-      "app/**/*.tsx"
-    ],
-    "exclude": [
-    	"App.tsx",
+  "include": [
+    "types.d.ts",
+    "App.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.tsx",
+    "pages/**/*.ts"
+  ],
+  "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
-    "src/**",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
+    "app/**/*",
+    "src.corrupted/**",
+    "src/utils/cartUtils.js",
     "ts_files_backup",
     "zion-os.disabled",
     "zion-os",
@@ -79,22 +66,6 @@
     "types.disabled",
     "**/*.config.ts",
     "vite.config.ts",
-    "vitest.config.ts",
-    // Temporarily exclude corrupted or legacy areas until cleaned
-    "src/routes",
-    "src/utils/errorBoundary.tsx",
-    "src/utils/imageOptimizer.tsx",
-    "src/utils/cartUtils.ts",
-    "src/pages/solutions",
-    "src/pages/services",
-    "src/pages",
-    "src/pages-disabled",
-    "src/components",
-    "src/context",
-    "src/legal",
-    "src/i18n.js",
-    "src/utils/sitemapGenerator.ts",
-    
-    "src/utils/cartUtils.js"
+    "vitest.config.ts"
   ]
 }

@@ -1,34 +1,15 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
- 
 [build]
   command = "npm run build"
-  publish = "dist"
-  functions = "netlify/functions"
-  command_timeout = "30m"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "24.0.0"
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
+  NODE_VERSION = "22"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
 
-# Compression is handled by Netlify's built-in compression
-# No additional plugin needed
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "npm run build"
-
-[context.branch-deploy]
-  command = "npm run build"
+[functions]
+  node_bundler = "esbuild"

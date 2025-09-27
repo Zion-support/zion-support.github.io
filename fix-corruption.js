@@ -1,78 +1,81 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
-// Function to recursively find all TypeScript and JavaScript files,
-function findFiles(dir, extensions = ['.ts', .tsx', .js', .jsx']) {
-  let results = [],
-  const list = fs.readdirSync(dir),
-  list.forEach(file => {
-    const filePath = path.join(dir, file),
-    const stat = fs.statSync(filePath),
-    if (stat && stat.isDirectory()) {
-      // Skip node_modules and .git directories,
-      if (file !== node_modules' && file !== .git' && !file.startsWith('.')) {
-        results = results.concat(findFiles(filePath, extensions))}
-    } else {
-      const ext = path.extname(file),
-      if (extensions.includes(ext)) {
-        results.push(filePath)}
-    }
-  }),
-  return results}
-,
-// Function to fix a single file by removing extraneous single quotes,
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Common corruption patterns to fix
+const corruptionPatterns = [
+  // Fix spaces in variable names and object properties
+  { pattern: /(\w+)\s+(\w+)/g, replacement: '$1$2' },
+  // Fix spaces in import statements
+  { pattern: /import\s+{\s*([^}]+)\s*}\s+from/g, replacement: 'import { $1 } from' },
+  // Fix spaces in function parameters
+  { pattern: /\(\s*([^)]+)\s*\)/g, replacement: '($1)' },
+  // Fix spaces in object destructuring
+  { pattern: /{\s*([^}]+)\s*}/g, replacement: '{$1}' },
+  // Fix spaces in array destructuring
+  { pattern: /\[\s*([^\]]+)\s*\]/g, replacement: '[$1]' },
+  // Fix spaces in template literals
+  { pattern: /`([^`]+)`/g, replacement: '`$1`' },
+  // Fix spaces in string literals
+  { pattern: /'([^']+)'/g, replacement: "'$1'" },
+  { pattern: /"([^"]+)"/g, replacement: '"$1"' },
+  // Fix spaces in JSX attributes
+  { pattern: /className\s*=\s*"([^"]+)"/g, replacement: 'className="$1"' },
+  // Fix spaces in function calls
+  { pattern: /(\w+)\s*\(\s*([^)]*)\s*\)/g, replacement: '$1($2)' },
+  // Fix spaces in object property access
+  { pattern: /(\w+)\.(\w+)/g, replacement: '$1.$2' },
+  // Fix spaces in array access
+  { pattern: /(\w+)\[(\w+)\]/g, replacement: '$1[$2]' },
+  // Fix spaces in operators
+  { pattern: /(\w+)\s*=\s*(\w+)/g, replacement: '$1 = $2' },
+  { pattern: /(\w+)\s*:\s*(\w+)/g, replacement: '$1: $2' },
+  { pattern: /(\w+)\s*,\s*(\w+)/g, replacement: '$1, $2' },
+  { pattern: /(\w+)\s*;\s*(\w+)/g, replacement: '$1; $2' },
+  // Fix spaces in JSX tags
+  { pattern: /<\s*(\w+)\s*>/g, replacement: '<$1>' },
+  { pattern: /<\s*\/\s*(\w+)\s*>/g, replacement: '</$1>' },
+  // Fix spaces in comments
+  { pattern: /\/\*\s*([^*]+)\s*\*\//g, replacement: '/* $1 */' },
+  { pattern: /\/\/\s*([^\n]+)/g, replacement: '// $1' },
+];
+
+function fixCorruption(content) {
+  let fixed = content;
+  
+  // Apply all corruption patterns
+  corruptionPatterns.forEach(({ pattern, replacement }) => {
+    fixed = fixed.replace(pattern, replacement);
+  });
+  
+  return fixed;
+}
+
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8'),
-    let originalContent = content,
-    // Remove all sequences of 3 or more single quotes,
-    content = content.replace(/'{3}/g),
-    // Remove sequences of single quotes that appear after semicolons or at line ends,
-    content = content.replace(/,{1}/g),
-    content = content.replace(/'{1}$/gm),
-    // Remove sequences of single quotes that appear after closing braces,
-    content = content.replace(/}{1}/g}),
-    // Remove sequences of single quotes that appear after closing parentheses,
-    content = content.replace(/){1}/g)),
-    // Remove sequences of single quotes that appear after closing brackets,
-    content = content.replace(/]{1}/g]),
-    // Remove sequences of single quotes that appear after closing angle brackets,
-    content = content.replace(/>{1}/g>),
-    // Remove sequences of single quotes that appear after commas,
-    content = content.replace(/,{1}{1}/g),
-    // Remove sequences of single quotes that appear after spaces,
-    content = content.replace(/ {1}/g),
-    // Remove sequences of single quotes that appear after tabs,
-    content = content.replace(/\t'{1}/g, \t'),
-    // Remove sequences of single quotes that appear after newlines,
-    content = content.replace(/\n'{1}/g, \n'),
-    // Remove sequences of single quotes that appear after carriage returns,
-    content = content.replace(/\r'{1}/g, \r'),
-    // If content changed, write it back,
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, utf8'),
-      // // console.log(`✅ Fixed: ${filePath}`),
-      return true}
-    return false} catch (error) {
-    console.error(`❌ Error fixing ${filePath}: ${error.message}`),
-    return false}
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixCorruption(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
-,
-// // console.log('🚀 Starting corruption fix script...'),
-// Find all TypeScript and JavaScript files,
-const files = findFiles('.', ['.ts', .tsx', .js', .jsx']),
-// // console.log(`📁 Found ${files.length} files to check`),
-let fixedCount = 0,
+
+// Fix all TypeScript/JavaScript files in pages directory
+const pagesDir = path.join(__dirname, 'pages');
+const files = fs.readdirSync(pagesDir);
+
 files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++}
-}),
-// // console.log(`\n✨ Fixed ${fixedCount} files.`),
-// // console.log('\n🔍 Running syntax check...'),
-try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' }),
-  // // console.log('✅ TypeScript syntax check passed')} catch (error) {
-  console.error('⚠️ TypeScript syntax check failed - some files may still need manual fixing')}
-,
-// // console.log('\n🚀 Ready to commit and push changes!'),
+  if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+    fixFile(path.join(pagesDir, file));
+  }
+});
+
+console.log('Corruption fix completed!');
