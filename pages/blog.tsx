@@ -1,165 +1,108 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
-import SEO from '../src/components/SEO';
+import { blogPosts } from '../src/data/blogPosts';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
-  const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const { trackClick } = useAnalytics();
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of AI in Business: Trends and Predictions for 2024',
-      excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.',
-      author: 'Sarah Johnson',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI & Machine Learning',
-      image: '/api/placeholder/600/300',
-      slug: 'future-ai-business-2024'
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt: 'Learn the essential strategies and considerations for successfully migrating your infrastructure to the cloud.',
-      author: 'Michael Chen',
-      date: '2024-01-12',
-      readTime: '8 min read',
-      category: 'Cloud Computing',
-      image: '/api/placeholder/600/300',
-      slug: 'cloud-migration-best-practices'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity Trends for 2024: What You Need to Know',
-      excerpt: 'Stay ahead of the latest cybersecurity threats and learn about emerging security technologies and best practices.',
-      author: 'Emily Rodriguez',
-      date: '2024-01-10',
-      readTime: '6 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/600/300',
-      slug: 'cybersecurity-trends-2024'
-    }
-  ];
+  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsNewsletterLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsNewsletterLoading(false);
-    trackClick('newsletter-subscribe', 'engagement');
-  };
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
     <>
-      <SEO
-        title="Blog - Zion Tech Solutions"
-        description="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and digital transformation from our expert team."
-        keywords={['tech blog', 'AI insights', 'cloud computing', 'cybersecurity', 'digital transformation', 'technology trends']}
-      />
+      <Head>
+        <title>Blog - Zion Tech Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Updates
-              </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Stay ahead with the latest trends, insights, and best practices in technology, AI, and digital transformation.
-              </p>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
-        {/* Blog Posts */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width={600}
-                      height={300}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-blue-600 font-semibold">{post.category}</span>
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                    </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-blue-600 font-semibold text-sm">
-                            {post.author.split(' ').map(n => n[0]).join('')}
-                          </span>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                          <p className="text-sm text-gray-500">{post.date}</p>
-                        </div>
-                      </div>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium"
-                        onClick={() => trackClick(`blog-post-${post.id}`, 'engagement')}
-                      >
-                        Read More →
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Section */}
-        <section className="bg-gray-900 py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated with Our Latest Insights
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get the latest tech insights, industry trends, and expert analysis delivered to your inbox.
+          <header className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Blog</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
-              <div className="flex gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={isNewsletterLoading}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isNewsletterLoading ? 'Subscribing...' : 'Subscribe'}
-                </button>
-              </div>
-            </form>
+          </header>
+
+          <div className="flex flex-wrap gap-2 mb-8 justify-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  trackClick(`blog-category-${category}`, 'filter');
+                }}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-        </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {new Date(post.date).toLocaleDateString()}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">
+                      {post.readTime} min read
+                    </span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                      onClick={() => trackClick(`blog-read-${post.slug}`, 'click')}
+                    >
+                      Read More →
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-gray-500 text-lg">No posts found in this category.</p>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

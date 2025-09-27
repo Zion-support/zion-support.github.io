@@ -1,0 +1,54 @@
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import {Link} from "react-router-dom",
+import {Button} from "@/components/ui/button",
+<<<<<<< HEAD
+export function EnterpriseCallToAction() {;
+return (
+=======
+export function EnterpriseCallToAction() {
+  return (
+>>>>>>> origin/backup-main-20250926-044137
+    <div className="mt-12 text-center">,
+      <Link to="/request-quote">,
+        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">,
+          Get Custom Enterprise Quote,
+<<<<<<< HEAD
+
+      <p className="mt-4 text-zion-slate-light">,
+        Need volume pricing or custom SLAs? Contact our enterprise sales team.,
+      
+    </div>)}
+  )),
+export function EnterpriseCallToAction() {;
+return (
+=======
+        </Button>,
+      </Link>,
+      <p className="mt-4 text-zion-slate-light">,
+        Need volume pricing or custom SLAs? Contact our enterprise sales team.,
+      </p>,
+    </div>)}
+  )),
+export function EnterpriseCallToAction() {
+  return (
+>>>>>>> origin/backup-main-20250926-044137
+    <div className="mt-12 text-center">,
+      <Link to="/request-quote">,
+        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">,
+          Get Custom Enterprise Quote,
+<<<<<<< HEAD
+
+      <p className="mt-4 text-zion-slate-light">,
+        Need volume pricing or custom SLAs? Contact our enterprise sales team.,
+      
+=======
+        </Button>,
+      </Link>,
+      <p className="mt-4 text-zion-slate-light">,
+        Need volume pricing or custom SLAs? Contact our enterprise sales team.,
+      </p>,
+>>>>>>> origin/backup-main-20250926-044137
+    </div>)}

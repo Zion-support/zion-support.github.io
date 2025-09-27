@@ -1,0 +1,51 @@
+
+import { Skill } from '@/types/resume',
+<<<<<<< HEAD
+export interface SkillsFormProps {,
+resumeId: string,
+=======
+export interface SkillsFormProps {
+  resumeId: string,
+>>>>>>> origin/backup-main-20250926-044137
+  skills: Skill[],
+  onComplete: () => void,
+  onBack: () => void}
+,
+<<<<<<< HEAD
+export interface SkillItemProps {,
+skill: Skill,
+  category: string,
+  onDelete: (id: string, category: string) => Promise<void>}
+,
+export interface SkillCategoryProps {,
+category: string,
+  skills: Skill[],
+  onDelete: (id: string, category: string) => Promise<void>}
+,
+export interface AddSkillFormProps {,
+resumeId: string,
+  onAddSkill: (skill: Skill) => Promise<boolean>,
+  defaultCategory?: string}
+,
+export interface BulkAddSkillsProps {,
+resumeId: string,
+=======
+export interface SkillItemProps {
+  skill: Skill,
+  category: string,
+  onDelete: (id: string, category: string) => Promise<void>}
+,
+export interface SkillCategoryProps {
+  category: string,
+  skills: Skill[],
+  onDelete: (id: string, category: string) => Promise<void>}
+,
+export interface AddSkillFormProps {
+  resumeId: string,
+  onAddSkill: (skill: Skill) => Promise<boolean>,
+  defaultCategory?: string}
+,
+export interface BulkAddSkillsProps {
+  resumeId: string,
+>>>>>>> origin/backup-main-20250926-044137
+  onSuccess: () => Promise<void>}

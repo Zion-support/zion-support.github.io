@@ -1,0 +1,24 @@
+export default function About() {
+  return (
+<<<<<<< HEAD
+    <div>
+      <main>
+        <h1>About Zion Tech Group</h1>
+        <p>
+          We are a leading provider of advanced IT solutions and AI services.
+        </p>
+      </main>
+    </div>
+  );
+}
+=======
+    <div>,
+      <main>,
+        <h1>About Zion Tech Group</h1>,
+        <p>,
+          We are a leading provider of advanced IT solutions and AI services.,
+        </p>,
+      </main>,
+    </div>)}
+,
+>>>>>>> origin/backup-main-20250924-182607

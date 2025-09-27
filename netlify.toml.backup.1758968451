@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+ 
+=======
+>>>>>>> origin/backup-main-20250927-073401
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "24.0.0"
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  [plugins.inputs]
+=======
+  NODE_VERSION = "22"
+>>>>>>> origin/backup-main-20250927-073401
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+<<<<<<< HEAD
+# Compression is handled by Netlify's built-in compression
+# No additional plugin needed
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+>>>>>>> origin/backup-main-20250927-073401
+
+[functions]
+  node_bundler = "esbuild"

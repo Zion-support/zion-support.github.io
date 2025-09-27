@@ -1,43 +1,23 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface HealthResponse {
-  status: 'healthy' | 'unhealthy';
-  timestamp: string;
-  uptime: number;
-  services: {
-    database: 'connected' | 'disconnected';
-    cache: 'connected' | 'disconnected';
-    analytics: 'active' | 'inactive';
-  }
+	status: "healthy" | "unhealthy";
+	timestamp: string;
+	uptime: number;
+	version: string;
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<HealthResponse>
-) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({
-      status: 'unhealthy',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      services: {
-        database: 'disconnected',
-        cache: 'disconnected',
-        analytics: 'inactive'
-      }
-    });
-  }
+export default function handler(req: NextApiRequest, res: NextApiResponse<HealthResponse>) {
+	if (req.method !== 'GET') {
+		return res.status(405).json({ error: 'Method not allowed' });
+	}
 
-  const healthResponse: HealthResponse = {
-    status: 'healthy',
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    services: {
-      database: 'connected',
-      cache: 'connected',
-      analytics: 'active'
-    }
-  };
+	const healthResponse: HealthResponse = {
+		status: "healthy",
+		timestamp: new Date().toISOString(),
+		uptime: process.uptime(),
+		version: process.env.npm_package_version || "1.0.0"
+	};
 
-  res.status(200).json(healthResponse);
+	return res.status(200).json(healthResponse);
 }

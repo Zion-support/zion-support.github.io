@@ -1,0 +1,98 @@
+module.exports = {
+<<<<<<< HEAD
+  parser: require.resolve('@typescript-eslint/parser'),
+  plugins: ['@typescript-eslint', 'import', '@next/next'],
+=======
+  plugins: ['@typescript-eslint', 'react-hooks', 'import', '@next/next'],
+=======
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import'],
+>>>>>>> origin/backup-main-20250926-044137
+  extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    // Disable to avoid escaping quotes in static content pages
+    'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-explicit-any': 'warn',
+<<<<<<< HEAD
+    '@typescript-eslint/no-empty-interface': 'warn',
+=======
+    '@typescript-eslint/no-empty-object-type': 'warn',
+=======
+    
+>>>>>>> origin/backup-main-20250926-044137
+    '@next/next/no-html-link-for-pages': 'warn',
+    'import/order': [
+      'warn',
+      { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
+    ],
+<<<<<<< HEAD
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'warn',
+=======
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+>>>>>>> origin/backup-main-20250926-044137
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+=======
+    'no-console': 'warn',
+    'no-debugger': 'warn',
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'apps/',
+    // Exclude large or archived areas with known invalid code/tests
+    '__tests__/**',
+    'tests/**',
+    'backups/**',
+    'backup*/**',
+    'backup-problematic-files/**',
+    'corrupted_backup/**',
+    'temp_exclude/**',
+    'temp_*/**',
+    'ts_files_backup/**',
+    // Consolidated ignores from both branches
+    'components/**',
+    'components.disabled/**',
+    'components.browserstack.config.ts',
+    'pages.disabled/**',
+    'pages_backup/**',
+    'pages.bak/**',
+    'pages._archive_corrupted/**',
+    'pages-disabled/**',
+    'src.disabled/**',
+    'src-disabled/**',
+    'src_backup/**',
+    'src_backup_all/**',
+    'src_backup_temp/**',
+    'src.broken/**',
+    'src.corrupted/**',
+    'components.disabled_full/**',
+    'pages.disabled_full/**',
+    'apps.backup/**',
+    'app_backup/**',
+    // Additional large directories or mixed-quality code not part of the main Next.js app
+    'src/**',
+    'lib/**',
+    'backend/**',
+    'server/**',
+    'zion-os/**',
+    'zion-website/**',
+    'zion-ai-assistant/**',
+<<<<<<< HEAD
+    'data/**',
+    'utils/**',
+    'types/**',
+=======
+>>>>>>> origin/backup-main-20250926-044137
+  ],
+};

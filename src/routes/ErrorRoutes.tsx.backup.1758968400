@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
+
+const ErrorRoutes = () => {
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
+=======
+import { Route, Routes } from "react-router-dom"
+import NotFound from "@/pages/NotFound"
+>>>>>>> origin/backup-main-20250926-070240
+
+const ErrorRoutes = () => {
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
+}
+
+export default ErrorRoutes

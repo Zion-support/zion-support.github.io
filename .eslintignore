@@ -1,21 +1,13 @@
-# Build output
+zion-website/
+
+# Exclude non-app directories and archived content from linting
+node_modules/
 .next/
 out/
+build/
 dist/
 coverage/
-
-# Dependencies
-node_modules/
-
-# Generated artifacts
-*.log
-**/*.generated.*
-zion.app/recovered-content/**
-
-# Exclude corrupted or non-app source directories (keep main src for linting)
-# Allow linting of active app source under src/
-# src/
-# components/
+.cache/
 
 # Large mono-repo subprojects not part of the current app build
 automation/
@@ -54,18 +46,6 @@ zion-website/
 zion-ai-assistant/
 zion_academy/
 zion-film/
-src.corrupted/**
-
-# Ignore known corrupted or unused source areas (excluded from tsconfig build)
-# Keep targeted ignores inside src minimal to allow lint to run
-# src/components/**
-# src/pages/**
-# src/routes/**
-# src/context/**
-src/utils/cartUtils.js
-**/*.config.ts
-vite.config.ts
-vitest.config.ts
 
 # Misc top-level jsx/js playground files
 *.backup

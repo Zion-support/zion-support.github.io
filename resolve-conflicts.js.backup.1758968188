@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+
+// Function to resolve common merge conflicts;
+function resolveConflicts(content) {
+  // Remove merge conflict markers,
+content = content.replace(/
+  
+  // Fix common syntax issues,
+content = content.replace(/^"use client",/gm, '"use client";');,
+content = content.replace(/;
+import /g, ';\nimport ');,
+content = content.replace(/;
+
+export /g, ';\n\nexport ');,
+content = content.replace(/;
+const /g, ';\nconst ');,
+content = content.replace(/;
+let /g, ';\nlet ');,
+content = content.replace(/;
+var /g, ';\nvar ');,
+content = content.replace(/;
+function /g, ';\nfunction ');,
+content = content.replace(/;
+if /g, ';\nif ');,
+content = content.replace(/;
+return /g, ';\nreturn ');
+  
+  // Fix missing commas in arrays and objects,
+content = content.replace(/(\w+)\s*\n\s*{/g, '$1,\n{');,
+content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n}');
+  
+  // Fix missing semicolons,
+content = content.replace(/([^;}])\s*\n\s*const /g, '$1;\nconst ');,
+content = content.replace(/([^;}])\s*\n\s*let /g, '$1;\nlet ');,
+content = content.replace(/([^;}])\s*\n\s*var /g, '$1;\nvar ');
+;
+return content;
+}
+
+// Function to process a file;
+function processFile(filePath) {
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts;
+if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+      console.log(`Processing: ${filePath}`);
+;
+const resolvedContent = resolveConflicts(content);
+      fs.writeFileSync(filePath, resolvedContent, 'utf8');
+      
+      console.log(`✓ Resolved conflicts in: ${filePath}`);
+      return true;
+    }
+;
+return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find files with conflicts;
+function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx', '.json']) {;
+const files = [];
+;
+function walkDir(currentDir) {
+    try {;
+const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {;
+const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+;
+if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      // Skip directories we can't read
+}
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+console.log('🔍 Scanning for files with merge conflicts...');
+;
+const filesWithConflicts = findFilesWithConflicts('/workspace');
+let processedCount = 0;
+let resolvedCount = 0;
+
+console.log(`Found ${filesWithConflicts.length} files to check`);
+
+for (const file of filesWithConflicts) {;
+if (processFile(file)) {
+    resolvedCount++;
+  }
+  processedCount++;
+;
+if (processedCount % 100 === 0) {
+    console.log(`Processed ${processedCount}/${filesWithConflicts.length} files...`);
+  }
+}
+
+console.log(`\n✅ Conflict resolution complete!`);
+console.log(`📊 Processed: ${processedCount} files`);
+console.log(`🔧 Resolved: ${resolvedCount} files`);
+=======
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync } = require('child_process'), function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'), let resolvedContent = content fs.writeFileSync(filePath,resolvedContent), return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message), return false} } function findFilesWithConflicts() { try {
+}}
+>>>>>>> origin/backup-main-20250924-182607

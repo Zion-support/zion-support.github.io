@@ -1,0 +1,106 @@
+
+,
+<<<<<<< HEAD
+interface SeverityDisplayProps {,
+severity: string}
+,
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity}) => {;
+return (
+    <SeverityIndicator,
+severity={severity as "safe" | "suspicious" | "dangerous"}
+=======
+interface SeverityDisplayProps {
+  severity: string}
+,
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity}) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+>>>>>>> origin/backup-main-20250926-044137
+      showIcon={true}
+      showText={true}
+,
+    />)}
+,
+<<<<<<< HEAD
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+return (
+    />),
+    <SeverityIndicator,
+severity={severity as "safe" | "suspicious" | "dangerous"} ,
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+interface SeverityDisplayProps {,
+severity: string}
+,
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+return (
+    <SeverityIndicator,
+severity={severity as "safe" | "suspicious" | "dangerous"} ,
+      showIcon={true}
+      showText={true}
+    />),;
+return (
+    <SeverityIndicator,
+severity={severity as "safe" | "suspicious" | "dangerous"}
+=======
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    />),
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"} ,
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+interface SeverityDisplayProps {
+  severity: string}
+,
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"} ,
+      showIcon={true}
+      showText={true}
+    />),
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+>>>>>>> origin/backup-main-20250926-044137
+      show_icon={true}
+      show_text={true}
+    />)}
+,
+import React from './react',
+import { SeverityIndicator  } from '@/components / ui / severity - indicator',
+<<<<<<< HEAD
+interface SeverityDisplayProps {,
+severity: string}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity
+}) => {;
+return (
+    <SeverityIndicator,
+severity={severity as "safe" | "suspicious" | "dangerous"}
+=======
+interface SeverityDisplayProps {
+  severity: string}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity
+}) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+>>>>>>> origin/backup-main-20250926-044137
+      show_icon={true}
+      show_text={true}
+    />)}
+,
+<<<<<<< HEAD
+interface SeverityDisplayProps {,
+severity: string}
+=======
+interface SeverityDisplayProps {
+  severity: string}
+>>>>>>> origin/backup-main-20250926-044137
+},
