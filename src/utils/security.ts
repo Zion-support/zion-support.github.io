@@ -240,7 +240,11 @@ export class SecurityManager {
     return {
       cspViolations: recentViolations.length,
       suspiciousActivities: recentActivities.length,
-      recentViolations: recentViolations.slice(-10) // Last 10 violations
+      recentViolations: recentViolations.slice(-10).map(v => ({ 
+        timestamp: v.timestamp, 
+        type: v.violation, 
+        details: { source: v.source, blockedURI: v.blockedURI } 
+      })) // Last 10 violations
     };
   }
 

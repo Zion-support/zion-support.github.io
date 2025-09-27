@@ -89,10 +89,10 @@ export class EnhancedErrorHandler {
     if (event.target !== window) {
       const errorReport: ErrorReport = {
         id: this.generateErrorId(event),
-        message: `Resource loading error: ${(event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href}`,
+        message: `Resource loading error: ${(event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href}`,
         context: this.getErrorContext({
           resourceType: (event.target as HTMLElement)?.tagName,
-          resourceUrl: (event.target as HTMLImageElement | HTMLLinkElement)?.src || (event.target as HTMLLinkElement)?.href
+          resourceUrl: (event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href
         }),
         severity: 'medium',
         category: 'resource',
@@ -189,7 +189,7 @@ export class EnhancedErrorHandler {
         EnhancedErrorHandler.getInstance().processError(errorReport);
       });
 
-      return originalSend.apply(this, [data]);
+      return originalSend.apply(this, [data] as Parameters<typeof originalSend>);
     };
   }
 
@@ -239,8 +239,8 @@ export class EnhancedErrorHandler {
   }
 
   private generateErrorId(error: Error | Event | unknown): string {
-    const message = error?.message || error?.toString() || 'unknown';
-    const stack = error?.stack || '';
+    const message = (error as any)?.message || error?.toString() || 'unknown';
+    const stack = (error as any)?.stack || '';
     return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
   }
 
@@ -254,7 +254,7 @@ export class EnhancedErrorHandler {
   }
 
   private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
-    const message = error?.message || error?.toString() || '';
+    const message = (error as any)?.message || error?.toString() || '';
     
     if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
       return 'medium'; // Chunk loading errors are usually recoverable
@@ -408,7 +408,7 @@ export const withErrorBoundary = <P extends object>(
   fallback?: React.ComponentType<{ error: Error }>
 ) => {
   const WrappedComponent = (props: P) => 
-    React.createElement(ReactErrorBoundary, { fallback },
+    React.createElement(ReactErrorBoundary, { fallback, children: null },
       React.createElement(Component, props)
     );
   
