@@ -1,87 +1,95 @@
-"use client",
+"use client";
+
 import Head from 'next/head',
 import Link from 'next/link',
 CpuGaugeGitBranchRocketShieldCheckZapActivityGlobeLayersBarChart3SearchLink2PaletteLineChart,
 import { motionuseScrolluseSpring } from 'framer-motion',
 import { useEffectuseState } from 'react',
-export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll(),
-  const progressX = useSpring(scrollYProgress{ stiffness: 90damping: 20mass: 0.2 }),
-  const [showToTopsetShowToTop] = useState(false),
-  const [mobileOpensetMobileOpen] = useState(false),
-  useEffect(() => {
-    const onScroll = () => setShowToTop(window.scrollY > 400),
+export default function MainFrontIndex() {;
+const { scrollYProgress } = useScroll(),;
+const progressX = useSpring(scrollYProgress{ stiffness: 90damping: 20mass: 0.2 }),;
+const [showToTopsetShowToTop] = useState(false),;
+const [mobileOpensetMobileOpen] = useState(false),
+  useEffect(() => {;
+const onScroll = () => setShowToTop(window.scrollY > 400),
     window.addEventListener(scroll', 'onScroll{ passive: true } as any),
-    onScroll(),
-    return () => window.removeEventListener(scroll', 'onScroll)}[]),
-  return (
+    onScroll(),;
+return () => window.removeEventListener(scroll', 'onScroll)}[]),;
+return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
       <Head>,
-        <title>Zion — Front Systems Hub | Autonomous Cloud Automations</title>,
+        <title>Zion — Front Systems Hub | Autonomous Cloud Automations
         <meta name="description" content="Futuristic front experience showcasing 'Zions autonomous cloud automations — featurescapabilitiesand benefits." />,
         <meta property="og: title" content="Zion — Front Systems Hub" />,
         <meta property="og:description" content="Explore the featurescapabilitiesand benefits behind our autonomous cloud automations." />,
         <meta name="twitter:card" content="summary_large_image" />,
         <meta property="og:type" content="website" />,
         <meta property="og:image" content="/og-image.png" />,
-      </Head>,
+
       {/* Scroll progress bar */}
       <motion.div style={{ scaleX: progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />,
+
       {/* Animated Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">,
+
         {/* Aurora orbs */}
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />,
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />,
         <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />,
+
         {/* Subtle animated grid */}
         <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />,
         <div className="absolute inset-0 opacity-[0.06] hex-grid" />,
+
         {/* Star field */}
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">,
           <div className="twinkle-field absolute inset-0" />,
-        </div>,
+        
         <div className="absolute inset-0 bg-aurora opacity-[0.18]" />,
+
         {/* Extra futuristic layers */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">,
           <div className="absolute h-[52rem] w-[52rem] rounded-full border border-cyan-400/10 animate-[spin_60s_linear_infinite]" />,
           <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction: reverse]" />,
           <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]" />,
-        </div>,
+        
         <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines" />,
+
         {/* Neural mesh lines */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]" />,
         <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />,
+
         {/* Futuristic beams layers */}
         <div className="absolute inset-0 beams-layer beams-45" />,
         <div className="absolute inset-0 beams-layer beams--45" />,
         <div className="pointer-events-none absolute inset-0 beams opacity-[0.06]" />,
-      </div>,
+
       {/* Header */}
       <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-slate-950/55 border-b border-white/10">,
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">,
           <div className="text-2xl font-bold tracking-wide">,
-            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>,
-          </div>,
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion
+          
           <div className="hidden items-center gap-6 md: flex">,
-            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>,
-            <Link href="#command-center"><a className="text-white/80 hover:text-white">Command</a></Link>,
-            <Link href="#features"><a className="text-white/80 hover:text-white">Features</a></Link>,
-            <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a></Link>,
-            <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a></Link>,
-            <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a></Link>,
-            <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use Cases</a></Link>,
-            <Link href="#pillars"><a className="text-white/80 hover:text-white">Pillars</a></Link>,
-            <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a></Link>,
-            <Link href="#templates"><a className="text-white/80 hover:text-white">Templates</a></Link>,
-            <Link href="#demos"><a className="text-white/80 hover:text-white">Demos</a></Link>,
-            <Link href="#highlights"><a className="text-white/80 hover:text-white">Highlights</a></Link>,
-            <Link href="#cases"><a className="text-white/80 hover:text-white">Cases</a></Link>,
-            <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a></Link>,
-            <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a></Link>,
-            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>,
-          </div>,
-          <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md: hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>,
-        </nav>,
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a>
+            <Link href="#command-center"><a className="text-white/80 hover:text-white">Command</a>
+            <Link href="#features"><a className="text-white/80 hover:text-white">Features</a>
+            <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a>
+            <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a>
+            <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a>
+            <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use Cases</a>
+            <Link href="#pillars"><a className="text-white/80 hover:text-white">Pillars</a>
+            <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a>
+            <Link href="#templates"><a className="text-white/80 hover:text-white">Templates</a>
+            <Link href="#demos"><a className="text-white/80 hover:text-white">Demos</a>
+            <Link href="#highlights"><a className="text-white/80 hover:text-white">Highlights</a>
+            <Link href="#cases"><a className="text-white/80 hover:text-white">Cases</a>
+            <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a>
+            <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a>
+          
+          <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md: hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu
+        
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div,
@@ -99,39 +107,55 @@ export default function MainFrontIndex() {
               onClick={(e) => e.stopPropagation()}
             >,
               <div className="mb-4 flex items-center justify-between">,
-                <div className="text-lg font-semibold">Navigate</div>,
-                <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close</button>,
-              </div>,
+                <div className="text-lg font-semibold">Navigate
+                <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close
+              
               <div className="grid grid-cols-2 gap-3 text-sm">,
+
                 {[
                   ['Home','/'],
+
                   ['Command#command-center'],
+
                   ['Features#features'],
+
                   ['Map#feature-map'],
+
                   ['Suites#suites'],
+
                   ['Capabilities#capabilities'],
+
                   ['Use Cases#use-cases'],
+
                   ['Pillars#pillars'],
+
                   ['Benefits#benefits'],
+
                   ['Templates#templates'],
+
                   ['Demos#demos'],
+
                   ['Highlights#highlights'],
+
                   ['Cases#cases'],
+
                   ['Reports#reports'],
+
                   ['Docs#roadmap'],
+
                   ['Automations/automation']].map(([labelhref]) => (
                   (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string}</a>) : (
                     <Link key={label as string} href={href as string}>,
-                      <a onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string}</a>,
+                      <a onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string}
                     </Link>)))}
-              </div>,
+              
               <div className="mt-4 flex justify-end">,
-                <Link href="/automation"><a onClick={_() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a></Link>,
-              </div>,
+                <Link href="/automation"><a onClick={_() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a>
+              
             </motion.div>,
           </motion.div>)}
-      </header>,
+      
       {/* Hero */}
       <div role="main" className="relative z-10">,
         <motion.section,
@@ -143,60 +167,64 @@ export default function MainFrontIndex() {
             <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">,
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />,
               Front systems hub — tailored view of our autonomous capabilities,
-            </div>,
+            
                         <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md: text-6xl">,
-              <span className="gradient-text animate-shimmer bg-[length:200%_100%]">Futuristic Front Experience</span>,
-            </h1>,
+              <span className="gradient-text animate-shimmer bg-[length:200%_100%]">Futuristic Front Experience
+            
             <div className="mx-auto mt-3 flex max-w-2xl items-center justify-center gap-2 text-xs text-white/60">,
-              <a href="#feature-map" className="hover:text-white">Feature Map</a>,
-              <span aria-hidden>•</span>,
-              <a href="#capabilities" className="hover:text-white">Capabilities</a>,
-              <span aria-hidden>•</span>,
-              <a href="#benefits" className="hover:text-white">Benefits</a>,
-              <span aria-hidden>•</span>,
-              <a href="#reports" className="hover:text-white">Integrations</a>,
-            </div>,
+              <a href="#feature-map" className="hover:text-white">Feature Map
+              <span aria-hidden>•
+              <a href="#capabilities" className="hover:text-white">Capabilities
+              <span aria-hidden>•
+              <a href="#benefits" className="hover:text-white">Benefits
+              <span aria-hidden>•
+              <a href="#reports" className="hover:text-white">Integrations
+            
             <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">,
               Explore the featurescapabilitiesand benefits that power 'Zions autonomous cloud automations — optimized for your front‑of‑house experience.,
-            </p>,
+            
             <div className="mt-8 flex flex-wrap justify-center gap-3">,
-              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>,
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10">View Cloud Automations</a></Link>,
-            </div>,
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10">View Cloud Automations</a>
+            
             {/* Cloud Automations Spotlight */}
             <div className="mx-auto mt-6 max-w-5xl text-left">,
-              <div className="mb-2 text-xs uppercase tracking-wide text-white/60">Cloud Automations (live)</div>,
+              <div className="mb-2 text-xs uppercase tracking-wide text-white/60">Cloud Automations (live)
               <div className="grid grid-cols-1 gap-3 sm: grid-cols-2 lg:grid-cols-4">,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/agent-swarm-orchestrator">Agent Swarm Orchestrator ↗</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/ultra-rapid-sync.yml" target="_blank" rel="noopener">Ultra Rapid Sync →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-advertiser.yml" target="_blank" rel="noopener">Automation Advertiser →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/knowledge-graph-radar.yml" target="_blank" rel="noopener">Knowledge Graph & Radar →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/site-health-guardian.yml" target="_blank" rel="noopener">Site Health Guardian →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/autonomous-meta-orchestrator">Meta Orchestrator →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-error-guardian.yml" target="_blank" rel="noopener">Autonomous Error Guardian →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/a11y-contrast-guardian.yml" target="_blank" rel="noopener">A11y & Contrast Guardian →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-pulse.yml" target="_blank" rel="noopener">Marketing Pulse →</a>,
-                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/repo-radar-knowledge.yml" target="_blank" rel="noopener">Repo Radar & Knowledge →</a>,
-              </div>,
-            </div>,
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/agent-swarm-orchestrator">Agent Swarm Orchestrator ↗
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/ultra-rapid-sync.yml" target="_blank" rel="noopener">Ultra Rapid Sync →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/automation-advertiser.yml" target="_blank" rel="noopener">Automation Advertiser →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/knowledge-graph-radar.yml" target="_blank" rel="noopener">Knowledge Graph & Radar →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/site-health-guardian.yml" target="_blank" rel="noopener">Site Health Guardian →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="/.netlify/functions/autonomous-meta-orchestrator">Meta Orchestrator →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-error-guardian.yml" target="_blank" rel="noopener">Autonomous Error Guardian →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/a11y-contrast-guardian.yml" target="_blank" rel="noopener">A11y & Contrast Guardian →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/marketing-pulse.yml" target="_blank" rel="noopener">Marketing Pulse →
+                <a className="glow-card rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:bg-white/10" href="https://github.com/Zion-Holdings/zion.app/actions/workflows/repo-radar-knowledge.yml" target="_blank" rel="noopener">Repo Radar & Knowledge →
+
             {/* Live metrics strip */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm: grid-cols-4">,
+
               {[
                 ['24/7'Autonomous'],
+
                 [Main', 'Direct Sync'],
+
                 ['0 'OpsCloud‑Native'],
+
                 [', 'SafetyGuardrails']].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">,
-                  <div className="text-lg font-bold text-white">{k}</div>,
-                  <div className="text-xs text-white/70">{v}</div>,
+                  <div className="text-lg font-bold text-white">{k}
+                  <div className="text-xs text-white/70">{v}
                 </div>))}
-            </div>,
+            
             {/* Futuristic marquee */}
             <div className="relative mx-auto mt-8 max-w-5xl overflow-hidden">,
               <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />,
               <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />,
               <div className="marquee">,
                 <div className="marquee__track">,
+
                   {[
                     'Autonomous AgentsRepo Sync to Main',
                     'Zero‑Ops CloudSafety Guardrails',
@@ -205,11 +233,10 @@ export default function MainFrontIndex() {
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">,
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
                     </span>))}
-                </div>,
-              </div>,
-            </div>,
+
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">,
+
               {[
                 ['Automation Hub'/automation'],
 
@@ -221,11 +248,11 @@ export default function MainFrontIndex() {
 
                 ['Site Health'/site-health']].map(([labelhref]) => (
                 <Link key={label as string} href={href as string}>,
-                  <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">{label as string}</a>,
+                  <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">{label as string}
                 </Link>))}
-            </div>,
-          </div>,
+
         </motion.section>,
+
                  {/* Showcase */}
          <motion.section,
            id="showcase",
@@ -234,95 +261,103 @@ export default function MainFrontIndex() {
            viewport={{ once: trueamount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-14">,
-           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase: FeaturesCapabilitiesBenefits</h2>,
-           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p>,
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase: FeaturesCapabilitiesBenefits
+           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.
            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">,
             <Link href="#features">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Zap className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Explore Features</h3></div>,
-                <p className="mt-1 text-sm text-white/75">Self‑improving systemscomposable factoriesobservability and more.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Zap className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Explore Features</h3>
+                <p className="mt-1 text-sm text-white/75">Self‑improving systemscomposable factoriesobservability and more.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link href="#capabilities">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Cpu className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Browse Capabilities</h3></div>,
-                <p className="mt-1 text-sm text-white/75">Design evolutionSEOa11yperformancerefactorsand policy.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Cpu className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Browse Capabilities</h3>
+                <p className="mt-1 text-sm text-white/75">Design evolutionSEOa11yperformancerefactorsand policy.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link href="#benefits">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Gauge className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">See Benefits</h3></div>,
-                <p className="mt-1 text-sm text-white/75">Momentumqualitysafetyand measurable outcomes.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Gauge className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">See Benefits</h3>
+                <p className="mt-1 text-sm text-white/75">Momentumqualitysafetyand measurable outcomes.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link href="#feature-map">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Feature Map</h3></div>,
-                <p className="mt-1 text-sm text-white/75">A quick overview of what you can explore right now.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Feature Map</h3>
+                <p className="mt-1 text-sm text-white/75">A quick overview of what you can explore right now.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link href="#guardrails">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Guardrails</h3></div>,
-                <p className="mt-1 text-sm text-white/75">Defense‑in‑depth checks and safety before shipping.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Guardrails</h3>
+                <p className="mt-1 text-sm text-white/75">Defense‑in‑depth checks and safety before shipping.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link href="/automation">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Automation Hub</h3></div>,
-                <p className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows in one place.</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
-          </div>,
+                <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Automation Hub</h3>
+                <p className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows in one place.
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
         </motion.section>,
+
         {/* Auto-Promoted Features (auto-generated) */}
         <section className="mx-auto max-w-7xl px-6 pb-16">,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">,
-            <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Live agents & workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformancelinks</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-            <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals powering strategy</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-            <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Product evolution</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-            <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-            <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-          </div>,
-        </section>,
+            <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Live agents & workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformancelinks</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+            <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals powering strategy</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+            <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Product evolution</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+            <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+            <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+
         {/* Floating Quick-Nav Dock */}
         <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">,
           <nav aria-label="Quick section navigation" className="space-y-2">,
+
             {[
               ['#command-'centerCommand'],
+
               ['#feature-'mapMap'],
+
               ['#'enginesEngines'],
+
               ['#'suitesSuites'],
+
               ['#'capabilitiesCapabilities'],
+
               ['#use-'casesUse Cases'],
+
               ['#'pillarsPillars'],
+
               ['#'benefitsBenefits'],
+
               ['#'templatesTemplates'],
+
               ['#'demosDemos'],
+
               ['#'highlightsHighlights'],
+
               ['#'casesCases'],
+
               ['#'reportsReports'],
+
               ['#'guardrailsGuardrails'],
+
               ['#'roadmapDocs']].map(([hreflabel]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover: border-cyan-400/40 hover:text-white">,
+
                 {label}
               </a>))}
-          </nav>,
-        </aside>,
+
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section,
           id="engines",
@@ -331,110 +366,109 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Engines (Beyond GitHub Actions)</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Engines (Beyond GitHub Actions)
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.
                     <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
-             <a
-               href="/.netlify/functions/front-enhancer",
+             <a,
+href="/.netlify/functions/front-enhancer",
                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-               <div className="text-lg font-semibold">Netlify Scheduled Functions</div>,
-               <p className="mt-1 text-sm text-white/75">Cron-like cloud jobs that run every 20 minutes to enhance the front experience.</p>,
-               <div className="mt-3 text-xs text-cyan-300/90">View logs via Netlify →</div>,
-             </a>,
-             <a
-               href="https://github.com/Zion-Holdings/zion.app/tree/main/automation",
+               <div className="text-lg font-semibold">Netlify Scheduled Functions
+               <p className="mt-1 text-sm text-white/75">Cron-like cloud jobs that run every 20 minutes to enhance the front experience.
+               <div className="mt-3 text-xs text-cyan-300/90">View logs via Netlify →
+             
+             <a,
+href="https://github.com/Zion-Holdings/zion.app/tree/main/automation",
                target="_blank" rel="noopener",
                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-               <div className="text-lg font-semibold">Local Orchestrators</div>,
-               <p className="mt-1 text-sm text-white/75">Node-based orchestrators that can run on any scheduler or platform.</p>,
-               <div className="mt-3 text-xs text-cyan-300/90">Browse orchestration scripts ↗</div>,
-             </a>,
-             <a
-               href="/automation",
+               <div className="text-lg font-semibold">Local Orchestrators
+               <p className="mt-1 text-sm text-white/75">Node-based orchestrators that can run on any scheduler or platform.
+               <div className="mt-3 text-xs text-cyan-300/90">Browse orchestration scripts ↗
+             
+             <a,
+href="/automation",
                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-               <div className="text-lg font-semibold">Autonomous Cloud Orchestrator</div>,
-               <p className="mt-1 text-sm text-white/75">End-to-end agents launching factories and syncing safe diffs to main.</p>,
-               <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub →</div>,
-             </a>,
-           </div>,
+               <div className="text-lg font-semibold">Autonomous Cloud Orchestrator
+               <p className="mt-1 text-sm text-white/75">End-to-end agents launching factories and syncing safe diffs to main.
+               <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub →
+
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">,
             <a href="/.netlify/functions/internal-link-graph-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Internal Link Graph</div>,
-              <p className="mt-1 text-sm text-white/75">Live graph of internal navigation across pages.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now →</div>,
-            </a>,
+              <div className="text-lg font-semibold">Internal Link Graph
+              <p className="mt-1 text-sm text-white/75">Live graph of internal navigation across pages.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now →
+            
             <a href="/.netlify/functions/robots-enhancer-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Robots.txt Enhancer</div>,
-              <p className="mt-1 text-sm text-white/75">Ensures sitemap and sensible defaults for crawling.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now →</div>,
-            </a>,
+              <div className="text-lg font-semibold">Robots.txt Enhancer
+              <p className="mt-1 text-sm text-white/75">Ensures sitemap and sensible defaults for crawling.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now →
+            
             <a href="/.netlify/functions/alt-text-indexer-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Alt Text Indexer</div>,
-              <p className="mt-1 text-sm text-white/75">Humanized alt suggestions for images across the site.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now →</div>,
-            </a>,
+              <div className="text-lg font-semibold">Alt Text Indexer
+              <p className="mt-1 text-sm text-white/75">Humanized alt suggestions for images across the site.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now →
+            
             <a href="/.netlify/functions/content-registry-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Content Registry Builder</div>,
-              <p className="mt-1 text-sm text-white/75">Continuously indexes pages and reports for discovery.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now →</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/autonomous-meta-orchestrator",
+              <div className="text-lg font-semibold">Content Registry Builder
+              <p className="mt-1 text-sm text-white/75">Continuously indexes pages and reports for discovery.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now →
+            
+            <a,
+href="/.netlify/functions/autonomous-meta-orchestrator",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Autonomous Meta Orchestrator</div>,
-              <p className="mt-1 text-sm text-white/75">Optimizes metadatachangelogsand docs, commits results every 3m.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now ↗</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/rapid-sync",
+              <div className="text-lg font-semibold">Autonomous Meta Orchestrator
+              <p className="mt-1 text-sm text-white/75">Optimizes metadatachangelogsand docs, commits results every 3m.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now ↗
+            
+            <a,
+href="/.netlify/functions/rapid-sync",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Rapid Sync (2m)</div>,
-              <p className="mt-1 text-sm text-white/75">High‑frequency repo sync to push autonomous changes quickly.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Run now ↗</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/content-freshness-runner",
+              <div className="text-lg font-semibold">Rapid Sync (2m)
+              <p className="mt-1 text-sm text-white/75">High‑frequency repo sync to push autonomous changes quickly.
+              <div className="mt-3 text-xs text-cyan-300/90">Run now ↗
+            
+            <a,
+href="/.netlify/functions/content-freshness-runner",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Content Freshness Audit</div>,
-              <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update, commits freshness reports.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/docs-link-audit-runner",
+              <div className="text-lg font-semibold">Content Freshness Audit
+              <p className="mt-1 text-sm text-white/75">Scores pages and docs by last update, commits freshness reports.
+              <div className="mt-3 text-xs text-cyan-300/90">Open →
+            
+            <a,
+href="/.netlify/functions/docs-link-audit-runner",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Docs Link Audit</div>,
-              <p className="mt-1 text-sm text-white/75">Scans docs for broken relative links and commits a CSV report.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/image-dimension-audit-runner",
+              <div className="text-lg font-semibold">Docs Link Audit
+              <p className="mt-1 text-sm text-white/75">Scans docs for broken relative links and commits a CSV report.
+              <div className="mt-3 text-xs text-cyan-300/90">Open →
+            
+            <a,
+href="/.netlify/functions/image-dimension-audit-runner",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Image Dimension Audit</div>,
-              <p className="mt-1 text-sm text-white/75">Detects missing width/height in images and logs a report.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>,
-            </a>,
-            <a
-              href="/.netlify/functions/autonomous-master-orchestrator",
+              <div className="text-lg font-semibold">Image Dimension Audit
+              <p className="mt-1 text-sm text-white/75">Detects missing width/height in images and logs a report.
+              <div className="mt-3 text-xs text-cyan-300/90">Open →
+            
+            <a,
+href="/.netlify/functions/autonomous-master-orchestrator",
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Autonomous Master Orchestrator</div>,
-              <p className="mt-1 text-sm text-white/75">Runs every minute: triggers all cloud functions and syncs to main.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Open ↗</div>,
-            </a>,
-          </div>,
+              <div className="text-lg font-semibold">Autonomous Master Orchestrator
+              <p className="mt-1 text-sm text-white/75">Runs every minute: triggers all cloud functions and syncs to main.
+              <div className="mt-3 text-xs text-cyan-300/90">Open ↗
+
         </motion.section>,
+
         {/* Autonomous Innovations */}
         <motion.section,
           id="innovations",
@@ -443,68 +477,76 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">New intelligent cloud automations running 24/7 — no human intervention required.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Innovations
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">New intelligent cloud automations running 24/7 — no human intervention required.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             <a href="/.netlify/functions/autonomous-content-curator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="flex items-center gap-2"><Activity className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Content Curator</h3></div>,
-              <p className="mt-1 text-sm text-white/75">Curates and promotes highlights on front pages, syncs to main.</p>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-            </a>,
+              <div className="flex items-center gap-2"><Activity className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Content Curator</h3>
+              <p className="mt-1 text-sm text-white/75">Curates and promotes highlights on front pages, syncs to main.
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+            
             <a href="/.netlify/functions/revenue-ideas-lab" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="flex items-center gap-2"><LineChart className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Revenue Ideas Lab</h3></div>,
-              <p className="mt-1 text-sm text-white/75">Monetization experiments with safeautomatic repository sync.</p>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-            </a>,
+              <div className="flex items-center gap-2"><LineChart className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Revenue Ideas Lab</h3>
+              <p className="mt-1 text-sm text-white/75">Monetization experiments with safeautomatic repository sync.
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+            
             <a href="/.netlify/functions/autonomous-invention-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Invention Orchestrator</h3></div>,
-              <p className="mt-1 text-sm text-white/75">Continuously invents and applies front enhancements.</p>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-            </a>,
-          </div>,
+              <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Autonomous Invention Orchestrator</h3>
+              <p className="mt-1 text-sm text-white/75">Continuously invents and applies front enhancements.
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
         </motion.section>,
+
         {/* Autonomous Cloud Runners */}
         <section id="cloud-runners" className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { title: 'Automation Guardian (10m)'desc: 'Monitors and auto-heals automations, commits fixes safely.'href: '/.netlify/functions/automation-guardian-runner' },
+
               { title: 'Components Docs Runner (30m)'desc: 'Regenerates components/docs indexes and READMEthen pushes.'href: '/.netlify/functions/components-docs-runner' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <h3 className="text-lg font-semibold">{tool.title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{tool.desc}</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                <h3 className="text-lg font-semibold">{tool.title}
+                <p className="mt-1 text-sm text-white/75">{tool.desc}
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
               </a>))}
-          </div>,
-        </section>,
+
         {/* Command Center */}
         <section id="command-center" className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Command Center</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Command Center
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { title: 'Automation 'Hubdesc: 'Runbooksfactoriesand live autonomous agents.'href: '/automation' },
+
               { title: 'Site 'Healthdesc: 'A11yperformanceand link‑health dashboards.'href: '/site-health' },
+
               { title: 'SEO 'Auditdesc: 'Continuous on‑site SEO scans with proposed diffs.'href: '/reports/seo' },
+
               { title: 'AI 'Trendsdesc: 'Intelligence signals from the AI/cloud ecosystem.'href: '/reports/ai-trends' },
+
               { title: ''Newsroomdesc: 'Curated updates and product evolution highlights.'href: '/newsroom' },
+
               { title: 'Cloud 'Automationsdesc: 'Netlify scheduled functions powering jobs 24/7.'href: '/automation' },
+
               { title: ''Docsdesc: 'Technical notes and guides for the platform.'href: '/reports/'seoexternal: true },
+
               { title: 'AI 'Changelogdesc: 'Summarized autonomous changes and highlights.'href: '/'newsroomexternal: true }
             ].map((card) => (
               <article key={card.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 holo tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <h3 className="text-lg font-semibold">{card.title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{card.desc}</p>,
+                <h3 className="text-lg font-semibold">{card.title}
+                <p className="mt-1 text-sm text-white/75">{card.desc}
                 {card.external ? (
                   <a href={card.href} target="_blank" rel="noopener" className="mt-3 inline-block text-sm text-cyan-300 hover: text-cyan-200 underline">Open</a>) : (
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover: text-cyan-200 underline">Open</a></Link>)}
               </article>))}
-          </div>,
-        </section>,
+
         {/* Netlify Automations */}
         <motion.section,
           id="netlify-automations",
@@ -513,50 +555,60 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Zero‑ops scheduled functions power background tasks that improve the site and ship smallsafe diffs to main.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Zero‑ops scheduled functions power background tasks that improve the site and ship smallsafe diffs to main.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { label: 'Autonomous Cloud Brain (1m)'desc: 'Selectively triggers and syncs key pipelines every minute.'href: '/.netlify/functions/autonomous-cloud-brain' },
+
               { label: 'Homepage 'Advertiserdesc: 'Curates and updates the home explore section.'href: '/.netlify/functions/homepage_advertiser' },
+
               { label: 'Autonomous Meta 'Orchestratordesc: 'Intelligently triggers cloud functions and syncs to main every minute.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
+
               { label: 'Cloud 'Orchestratordesc: 'Runs fast improvement cycle and git sync.'href: '/.netlify/functions/cloud_orchestrator' },
+
               { label: 'Autonomous Meta Orchestrator (1m)'desc: 'Curates and triggers critical cloud functionsthen syncs.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
 
               { label: 'Cloud Trigger Hub (2m)'desc: 'Triggers most functions concurrentlythen rebuilds/stamps.'href: '/.netlify/functions/cloud-trigger-hub' },
+
               { label: 'Sitemap 'Runnerdesc: 'Keeps sitemap fresh for SEO visibility.'href: '/.netlify/functions/sitemap_runner' },
+
               { label: 'SEO Audit 'Runnerdesc: 'Analyzes meta and content signals, writes public report.'href: '/.netlify/functions/seo-audit-runner' },
+
               { label: 'AI Trends 'Radardesc: 'Builds AI trends report from curated sources.'href: '/.netlify/functions/ai-trends-radar-runner' },
+
               { label: 'Dependency Auto‑'Upgradedesc: 'Safely bumps deps and verifies a clean build.'href: '/.netlify/functions/deps-auto-upgrade-runner' },
+
               { label: 'Autonomous Meta 'Orchestratordesc: 'Invents and triggers cloud automations, syncs changes.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
+
               { label: 'Trigger All & 'Commitdesc: 'Invokes all functions and triggers a build or commit.'href: '/.netlify/functions/trigger-all-and-commit' }
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-lg font-semibold">{f.label}</div>,
-                <div className="mt-1 text-sm text-white/75">{f.desc}</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>,
+                <div className="text-lg font-semibold">{f.label}
+                <div className="mt-1 text-sm text-white/75">{f.desc}
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span>
               </a>))}
-          </div>,
+          
         </motion.section>,
+
         {/* New Cloud Automations */}
         <section className="mx-auto max-w-7xl px-6 pb-14">,
-          <h3 className="text-center text-xl font-bold tracking-wide text-white/90">New Cloud Automations</h3>,
+          <h3 className="text-center text-xl font-bold tracking-wide text-white/90">New Cloud Automations
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             <a href="/.netlify/functions/stale-content-auditor-runner" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Stale Content Auditor</div>,
-              <div className="mt-1 text-sm text-white/75">Finds stale pages/components/docs and publishes a report.</div>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>,
-            </a>,
+              <div className="text-lg font-semibold">Stale Content Auditor
+              <div className="mt-1 text-sm text-white/75">Finds stale pages/components/docs and publishes a report.
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span>
+            
             <a href="/.netlify/functions/autonomous-invention-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-lg font-semibold">Autonomous Invention Orchestrator</div>,
-              <div className="mt-1 text-sm text-white/75">Invents and curates fresh automations and safely syncs diffs to main.</div>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>,
-            </a>,
-          </div>,
-        </section>,
+              <div className="text-lg font-semibold">Autonomous Invention Orchestrator
+              <div className="mt-1 text-sm text-white/75">Invents and curates fresh automations and safely syncs diffs to main.
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span>
+
         {/* Feature Spotlight */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -564,47 +616,53 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { Icon: Rocketitle: 'Automation 'Hubdesc: 'Factoriesagentsand live 'workflowshref: '/automation' },
+
               { Icon: Searchtitle: 'AI SEO 'Auditordesc: 'Continuous on‑site SEO 'improvementshref: '/reports/seo' },
+
               { Icon: Gaugetitle: 'Site 'Healthdesc: 'A11yperformanceand link 'integrityhref: '/site-health' },
+
               { Icon: Globetitle: 'AI Trends 'Radardesc: 'Signals that inspire new 'automationshref: '/reports/ai-trends' },
+
               { Icon: GitBranchtitle: 'Main 'Syncdesc: 'Safeincremental diffs shipped 'continuouslyhref: '/automation' },
+
               { Icon: ShieldChecktitle: ''Guardrailsdesc: 'Defense‑in‑depth quality 'gateshref: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-2">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-1 text-sm text-white/75">{desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* AUTO-GENERATED: FRONT_ADS_START */}
         <section className="mx-auto max-w-7xl px-6 pb-16">,
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl">,
             <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,2.5rem_2.5rem,2.5rem_2.5rem] animate-grid" />,
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore Zion Systems</h2>,
-            <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Discover key featurescapabilitiesand benefits. Each card links to a dedicated page or live hub.</p>,
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore Zion Systems
+            <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Discover key featurescapabilitiesand benefits. Each card links to a dedicated page or live hub.
             <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">,
-              <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Automation Hub</h3><p className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-              <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">AI SEO Auditor</h3><p className="mt-1 text-sm text-white/75">Continuous on‑site SEO improvements</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-              <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Site Health</h3><p className="mt-1 text-sm text-white/75">A11yperformanceand link integrity</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-              <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">AI Trends Radar</h3><p className="mt-1 text-sm text-white/75">Signals that inspire new automations</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-              <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Newsroom</h3><p className="mt-1 text-sm text-white/75">Latest autonomous updates</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-              <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Live Workflows</h3><p className="mt-1 text-sm text-white/75">Observe pipelines running 24/7</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>,
-            </div>,
-          </div>,
-        </section>,
+              <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Automation Hub</h3><p className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+              <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">AI SEO Auditor</h3><p className="mt-1 text-sm text-white/75">Continuous on‑site SEO improvements</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+              <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Site Health</h3><p className="mt-1 text-sm text-white/75">A11yperformanceand link integrity</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+              <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">AI Trends Radar</h3><p className="mt-1 text-sm text-white/75">Signals that inspire new automations</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+              <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Newsroom</h3><p className="mt-1 text-sm text-white/75">Latest autonomous updates</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+              <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Live Workflows</h3><p className="mt-1 text-sm text-white/75">Observe pipelines running 24/7</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+
         {/* AUTO-GENERATED: FRONT_ADS_END */}
 ,
+
         {/* Outcome Benefits */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -612,24 +670,31 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcome‑Focused Benefits</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcome‑Focused Benefits
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { label: 'Grow organic 'trafficdesc: 'On‑site SEO improvementsbetter metadataricher 'linkshref: '/reports/seo' },
+
               { label: 'Improve UX 'qualitydesc: 'A11y fixesperformance gainsresilient 'linkshref: '/site-health' },
+
               { label: 'Reduce engineering 'toildesc: 'Automated upgradesrefactorsand 'maintenancehref: '/automation' },
+
               { label: 'Ship faster with 'confidencedesc: 'Small safe diffs synced to 'mainhref: '/automation' },
+
               { label: 'Stay compliant & 'accessibledesc: 'Policy guardrails and WCAG 'checkshref: '/site-health' },
+
               { label: 'Learn from market 'signalsdesc: 'AI + cloud trends to guide 'strategyhref: '/reports/ai-trends' }].map((b) => (
               <Link key={b.label} href={b.href}>,
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover: border-fuchsia-400/30">,
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />,
-                  <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>,
-                </a>,
+                  <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span>
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Suites */}
         <motion.section,
           id="suites",
@@ -638,29 +703,39 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { title: 'Quick 'Fixesdesc: 'Build rescuesitemap/robotsecurity 'remediationhref: '/automation' },
+
               { title: 'Deep 'Maintenancedesc: 'Orchestrated smoke tests and link 'checkshref: '/automation' },
+
               { title: 'Marketing & 'SEOdesc: 'Content factories and on‑site 'optimizationshref: '/automation' },
+
               { title: 'Content 'Curationdesc: 'Homepage promos generated 'continuouslyhref: '/automation' },
+
               { title: 'Dependency 'Upgradesdesc: 'Minor/patch bumps with safe auto‑'mergehref: '/automation' },
+
               { title: 'Live 'Workflowsdesc: 'Observe pipelines running 24/7'href: '/site-'healthexternal: true },
+
               { title: 'Site 'Healthdesc: 'A11yperformancelink checks 'dashboardshref: '/site-health' },
+
               { title: 'AI SEO 'Auditordesc: 'Continuous on‑site audits with safe proposed 'diffshref: '/reports/seo' },
+
               { title: 'AI Trends 'Radardesc: 'Signal scanning to inspire new 'factorieshref: '/reports/ai-trends' }].map((suite) => (
               <article key={suite.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <h3 className="text-lg font-semibold">{suite.title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{suite.desc}</p>,
+                <h3 className="text-lg font-semibold">{suite.title}
+                <p className="mt-1 text-sm text-white/75">{suite.desc}
                 {suite.href && (
                   suite.external ? (
                     <a href={suite.href} target="_blank" rel="noopener" className="mt-3 inline-block text-sm text-cyan-300 hover: text-cyan-200 underline">Open</a>) : (
                     <Link href={suite.href}><a className="mt-3 inline-block text-sm text-cyan-300 hover: text-cyan-200 underline">Open</a></Link>))}
               </article>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Superpowers */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -668,20 +743,24 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-3">,
+
             {[
               { Icon: Rocketitle: 'Generative 'Factoriesdesc: 'Spins up domain‑specific automation factories that build for you.' },
+
               { Icon: ShieldChecktitle: 'Safety by 'Designdesc: 'Layered validations — type checksbuildsa11ylinksand more.' },
+
               { Icon: GitBranchtitle: 'Main 'Syncdesc: 'Smallreviewable edits committed and pushed continuously.' }].map(({ Icontitledesc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                 <Icon className="h-6 w-6 text-cyan-300" />,
-                <h3 className="mt-3 text-lg font-semibold">{title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{desc}</p>,
+                <h3 className="mt-3 text-lg font-semibold">{title}
+                <p className="mt-1 text-sm text-white/75">{desc}
               </article>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Get Started */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -689,38 +768,34 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Get Started in Minutes</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Get Started in Minutes
           <div className="mx-auto mt-6 grid max-w-5xl grid-cols-1 gap-5 md: grid-cols-4">,
             <Link href="/automation">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">1. Explore Automations</span></div>,
-                <p className="mt-1 text-xs text-white/75">See live autonomous suites and workflows.</p>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">1. Explore Automations</span>
+                <p className="mt-1 text-xs text-white/75">See live autonomous suites and workflows.
+
             <Link href="/reports/seo">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Search className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">2. Run SEO Audit</span></div>,
-                <p className="mt-1 text-xs text-white/75">Get prioritized improvements and artifacts.</p>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Search className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">2. Run SEO Audit</span>
+                <p className="mt-1 text-xs text-white/75">Get prioritized improvements and artifacts.
+
             <Link href="/site-health">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Gauge className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">3. Check Site Health</span></div>,
-                <p className="mt-1 text-xs text-white/75">A11yperformanceand link health dashboards.</p>,
-              </a>,
-            </Link>,
+                <div className="flex items-center gap-2"><Gauge className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">3. Check Site Health</span>
+                <p className="mt-1 text-xs text-white/75">A11yperformanceand link health dashboards.
+
             <Link href="/reports/ai-trends">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">4. Track AI Trends</span></div>,
-                <p className="mt-1 text-xs text-white/75">Stay ahead with intelligence signals.</p>,
-              </a>,
-            </Link>,
-          </div>,
+                <div className="flex items-center gap-2"><Globe className="h-5 w-5 text-cyan-300" /><span className="text-sm font-semibold">4. Track AI Trends</span>
+                <p className="mt-1 text-xs text-white/75">Stay ahead with intelligence signals.
+
         </motion.section>,
+
         {/* Features */}
         <motion.section,
           id="features",
@@ -729,40 +804,72 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { Icon: Zaptitle: 'Self‑'Improvingdesc: 'Agents continuously analyzeinventand evolve automations.'href: '/automation' },
+
               { Icon: GitBranchtitle: 'Repo 'Syncdesc: 'Changes are committed and pushed automatically to main.'href: '/automation' },
+
               { Icon: Cputitle: 'Zero 'Opsdesc: 'Runs fully in the cloud—no servers or manual intervention.'href: '/automation' },
+
               { Icon: ShieldChecktitle: 'Safety‑'Firstdesc: 'Conservative edits with logsreportsand guardrails.'href: '/site-health' },
+
               { Icon: Gaugetitle: ''Observabilitydesc: 'Dashboardsreportsand cloud automation artifacts.'href: '/site-health' },
+
               { Icon: Layerstitle: 'Composable 'Systemsdesc: 'Chain multiple factories into higher‑order workflows.'href: '/automation' },
+
               { Icon: Activitytitle: 'AI SEO 'Auditordesc: 'Continuously scans pages and proposes SEO improvements.'href: '/reports/seo' },
+
               { Icon: Globetitle: 'AI Trends 'Radardesc: 'Tracks AI and cloud signals to inspire new automations.'href: '/reports/ai-trends' },
+
               { Icon: Searchtitle: 'Deep 'Indexingdesc: 'Content and code search powering smart linking and PRs.'href: '/newsroom' },
+
               { Icon: BarChart3title: 'Live 'Dashboardsdesc: 'Real‑time quality and impact metrics at a glance.'href: '/site-health' },
+
               { Icon: Activitytitle: 'Health 'Monitorsdesc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
+
               { Icon: Globetitle: 'Intelligence 'Signalsdesc: 'AI research integrated into product improvements.'href: '/reports/ai-trends' },
+
               { Icon: ShieldChecktitle: 'Security 'Scansdesc: 'Audit dependencies and surface risks with reports.'href: '/site-health' },
+
               { Icon: GitBranchtitle: 'Automated 'Changelogsdesc: 'Summarized changes and AI notes published continuously.'href: '/newsroom' },
+
               { Icon: Rocketitle: 'OG Image 'Makerdesc: 'Auto‑generates rich Open Graph images for content.'href: '/newsroom' },
+
               { Icon: ShieldChecktitle: 'Policy & 'Compliancedesc: 'Safety rails and audits applied before shipping.'href: '/site-health' },
+
               { Icon: Layerstitle: 'Factories 'Librarydesc: 'Reusable building blocks for new automations.'href: '/automation' },
+
               { Icon: Gaugetitle: 'Site Health 'APIdesc: 'Programmatic access to health signals and artifacts.'href: '/site-health' },
+
               { Icon: Searchtitle: 'Link 'Integritydesc: 'Broken links detected and fixed before shipping.'href: '/site-health' },
+
               { Icon: Palettetitle: 'Design System 'Evolutiondesc: 'Consistentmodern UI upgrades across the app.'href: '/newsroom' },
+
               { Icon: BarChart3title: 'Analytics 'Exportsdesc: 'Download artifacts and reports for deeper analysis.'href: '/reports/seo' },
+
               { Icon: Searchtitle: 'Automated PR 'Reviewsdesc: 'Bots review diffs for qualitystyleand policy.'href: '/automation' },
+
               { Icon: Gaugetitle: 'Asset 'Optimizerdesc: 'Compresses images and scripts for faster pages.'href: '/site-health' },
+
               { Icon: Layerstitle: 'i18n 'Readinessdesc: 'Prepares content and routes for localization.'href: '/newsroom' },
+
               { Icon: Globetitle: 'Sitemap & 'Robotsdesc: 'Maintains search‑friendly routing metadata.'href: '/site-health' },
+
               { Icon: Palettetitle: 'Design 'Tokensdesc: 'Automates consistent theming and spacing.'href: '/newsroom' },
+
               { Icon: LineChartitle: 'Experiment 'Telemetrydesc: 'Measures impact across experiments and releases.'href: '/reports/seo' },
+
               { Icon: Activitytitle: 'Automated 'Dependenciesdesc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
+
               { Icon: Searchtitle: 'Broken Link 'Defenderdesc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
+
               { Icon: LineChartitle: ''Experimentationdesc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
+
               { Icon: Palettetitle: 'Design Tokens & 'Themingdesc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
+
               { Icon: Gaugetitle: 'Image 'Pipelinedesc: 'Optimize and transform media assets automatically.'href: '/site-health' }
             ].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
@@ -770,14 +877,15 @@ export default function MainFrontIndex() {
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-3">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-2 text-sm text-white/75">{desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" /></div>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-2 text-sm text-white/75">{desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" />
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Outcomes */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -785,35 +893,42 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcomes</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcomes
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">,
             Tangiblemeasurable wins delivered by autonomous cloud agents.,
-          </p>,
+          
           <div className="relative mx-auto mt-6 max-w-6xl overflow-hidden">,
             <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />,
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />,
             <div className="marquee">,
               <div className="marquee__track">,
+
                 {[
                   { label: 'Accessibility 'fixeshref: '/site-health' },
+
                   { label: 'Performance 'boostshref: '/site-health' },
+
                   { label: 'SEO 'improvementshref: '/reports/seo' },
+
                   { label: 'Safer main 'mergeshref: '/automation' },
+
                   { label: 'Cleaner 'codebasehref: '/automation' },
+
                   { label: 'Better content 'curationhref: '/newsroom' },
+
                   { label: 'Operational 'visibilityhref: '/site-health' },
+
                   { label: 'Experiment 'velocityhref: '/automation' }],
                   .flatMap((item) => [item]),
                   .map((itemidx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>,
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">,
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
-                      </a>,
+                      
                     </Link>))}
-              </div>,
-            </div>,
-          </div>,
+
         </motion.section>,
+
         {/* Feature Map */}
         <motion.section,
           id="feature-map",
@@ -822,61 +937,74 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Map</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Map
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">,
             A fast overview of what you can explore right now across the platform.,
-          </p>,
+          
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { label: 'Automation 'Hubdesc: 'Live agents & 'workflowshref: '/automation' },
+
               { label: 'Repo Sync to 'Maindesc: 'Safeincremental 'editshref: '/automation' },
+
               { label: 'Zero‑Ops 'Clouddesc: 'Fully managed 'executionhref: '/automation' },
+
               { label: 'Safety 'Guardrailsdesc: 'Defense‑in‑depth 'checkshref: '/site-health' },
+
               { label: ''Observabilitydesc: 'Dashboards & 'artifactshref: '/site-health' },
+
               { label: 'Composable 'Systemsdesc: 'Higher‑order 'workflowshref: '/automation' },
+
               { label: 'AI SEO 'Auditordesc: 'On‑site 'improvementshref: '/reports/seo' },
+
               { label: 'AI Trends 'Radardesc: 'Intelligence 'signalshref: '/reports/ai-trends' },
+
               { label: 'Deep 'Indexingdesc: 'Smart linking & 'PRshref: '/newsroom' },
+
               { label: 'Live 'Dashboardsdesc: 'Impact at a 'glancehref: '/site-health' },
+
               { label: 'Health 'Monitorsdesc: ''A11yperflinkshref: '/site-health' },
+
               { label: 'Docs & 'Guidesdesc: 'Technical 'noteshref: '/reports/'seoexternal: true }].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <div className="text-base font-semibold">{item.label}</div>,
-                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                  <div className="text-base font-semibold">{item.label}
+                  <div className="mt-1 text-sm text-white/75">{item.desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
                 </a>) : (
                 <Link key={item.label} href={item.href as string}>,
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                    <div className="text-base font-semibold">{item.label}</div>,
-                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                  </a>,
+                    <div className="text-base font-semibold">{item.label}
+                    <div className="mt-1 text-sm text-white/75">{item.desc}
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* AUTO: catalog injection for automated advertising */}
         {/* AUTO: FRONT_INDEX_DIRECTORY_START */,
 <section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">,
-  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>,
-  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Auto‑discovered featurescapabilitiesand resources. Kept fresh by in‑repo Node tools.</p>,
+  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog
+  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Auto‑discovered featurescapabilitiesand resources. Kept fresh by in‑repo Node tools.
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">,
-          <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformanceand link dashboards</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">Continuous on‑site SEO improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals that inspire new automations</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Curated updates and product evolution highlights</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <Link href="/main/front"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Front Systems Hub</div><div className="mt-1 text-sm text-white/75">Curatedfuturistic front experience</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>,
-          <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes and architecture</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-          <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized autonomous changes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-          <a href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts 24/7</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Zion Cloud</div><div className="mt-1 text-sm text-white/75">Deployments and cloud platform</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>,
-  </div>,
-</section>,
+          <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformanceand link dashboards</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">Continuous on‑site SEO improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals that inspire new automations</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Curated updates and product evolution highlights</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <Link href="/main/front"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Front Systems Hub</div><div className="mt-1 text-sm text-white/75">Curatedfuturistic front experience</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
+          <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes and architecture</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+          <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized autonomous changes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+          <a href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts 24/7</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+          <a href="https://ziontechgroup.com" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Zion Cloud</div><div className="mt-1 text-sm text-white/75">Deployments and cloud platform</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+
 /* AUTO:FRONT_INDEX_DIRECTORY_END */}
 ,
+
         {/* Platform Modules */}
         <motion.section,
            id="modules",
@@ -885,31 +1013,41 @@ export default function MainFrontIndex() {
            viewport={{ once: trueamount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-16">,
-           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>,
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { Icon: Rocketitle: 'Autonomous 'Factoriesdesc: 'Composabledomain‑specific automation factories.'href: '/automation' },
+
               { Icon: ShieldChecktitle: ''Guardrailsdesc: 'Defense‑in‑depth validations and policy enforcement.'href: '/site-health' },
+
               { Icon: Gaugetitle: ''Observabilitydesc: 'Dashboardsartifactsand live CI telemetry.'href: '/site-health' },
+
               { Icon: Activitytitle: 'SEO 'Opsdesc: 'Continuous audits and safesuggested diffs.'href: '/reports/seo' },
+
               { Icon: Globetitle: 'AI 'Intelligencedesc: 'Trends radar to guide new automation ideas.'href: '/reports/ai-trends' },
+
               { Icon: Layerstitle: 'Workflow 'Composerdesc: 'Chain factories into higher‑order systems.'href: '/automation' },
+
               { Icon: GitBranchtitle: 'Main Sync 'Enginedesc: 'Smallreviewable edits merged continuously.'href: '/automation' },
+
               { Icon: Cputitle: 'Zero‑Ops 'Runtimedesc: 'Cloud‑native execution with no servers to manage.'href: '/automation' },
+
               { Icon: BarChart3title: 'Impact 'Analyticsdesc: 'Track outcomes and ROI from automations.'href: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover neon-ring">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-3">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-2 text-sm text-white/75">{desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-2 text-sm text-white/75">{desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" />
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Neural Feature Matrix */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -917,44 +1055,61 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denserat-a-glance atlas of what Zion ships autonomously. Every tile links to the live hubreportor docs.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denserat-a-glance atlas of what Zion ships autonomously. Every tile links to the live hubreportor docs.
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { label: 'Automation 'Hubdesc: ''Factoriesagentsworkflowshref: '/automation' },
+
               { label: 'Main Sync 'Enginedesc: 'Safe diffs to 'mainhref: '/automation' },
+
               { label: 'Zero‑Ops 'Clouddesc: 'Run in the cloudno 'servershref: '/automation' },
+
               { label: ''Guardrailsdesc: 'Policy + safety 'gateshref: '/site-health' },
+
               { label: 'Site 'Healthdesc: ''A11yperformancelinkshref: '/site-health' },
+
               { label: 'AI SEO 'Auditordesc: 'Continuous on‑site 'SEOhref: '/reports/seo' },
+
               { label: 'AI Trends 'Radardesc: 'Signals powering 'strategyhref: '/reports/ai-trends' },
+
               { label: 'Content 'Curationdesc: 'Promos and deep 'linkshref: '/newsroom' },
+
               { label: 'Factories 'Librarydesc: 'Composable building 'blockshref: '/automation' },
+
               { label: 'Impact 'Dashboardsdesc: 'Artifacts and 'telemetryhref: '/site-health' },
+
               { label: 'Link 'Integritydesc: 'Broken links 'defenderhref: '/site-health' },
+
               { label: 'Design 'Evolutiondesc: 'Futuristic UI 'upgradeshref: '/newsroom' },
+
               { label: 'Docs & 'Guidesdesc: 'Technical 'noteshref: '/reports/'seoexternal: true },
+
               { label: 'AI 'Changelogdesc: 'Summarized 'updateshref: '/'newsroomexternal: true },
+
                              { label: 'Cloud 'Automationsdesc: 'Netlify scheduled 'functionshref: '/automation' },
+
                { label: 'Roadmap & 'Issuesdesc: "'What', 's next"href: '//'issuesexternal: true }
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover neon-ring">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <div className="text-base font-semibold">{item.label}</div>,
-                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                  <div className="text-base font-semibold">{item.label}
+                  <div className="mt-1 text-sm text-white/75">{item.desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
                 </a>) : (
                 <Link key={item.label} href={item.href as string}>,
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover neon-ring">,
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                    <div className="text-base font-semibold">{item.label}</div>,
-                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                  </a>,
+                    <div className="text-base font-semibold">{item.label}
+                    <div className="mt-1 text-sm text-white/75">{item.desc}
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Extended Feature Directory */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -962,36 +1117,46 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hubreportor live workflow.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hubreportor live workflow.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { Icon: GitBranchtitle: 'Automated 'Changelogsdesc: 'AI-authored CHANGELOG with continuous updates.'href: '/'newsroomexternal: true },
+
               { Icon: Rocketitle: 'Content 'Curationdesc: 'Homepage promos and deep links generated on the fly.'href: '/newsroom' },
+
               { Icon: Searchtitle: 'Deep Site 'Indexdesc: 'Smarter internal linking and content discovery.'href: '/newsroom' },
+
               { Icon: ShieldChecktitle: 'Policy & 'Compliancedesc: 'Safety rails and audits before changes ship.'href: '/site-health' },
+
               { Icon: BarChart3title: 'Impact 'Dashboardsdesc: 'Real-time visibility into outcomes and ROI.'href: '/site-health' },
+
               { Icon: Layerstitle: 'Factories 'Librarydesc: 'Composable building blocks for new automations.'href: '/automation' },
+
               { Icon: Activitytitle: 'Health 'Monitorsdesc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
+
               { Icon: Cputitle: 'Zero-Ops 'Runtimedesc: 'Fully managed cloud execution with no servers.'href: '/automation' },
+
               { Icon: Globetitle: 'Intelligence 'Signalsdesc: 'AI + cloud trend tracking fueling new ideas.'href: '/reports/ai-trends' }].map(({ Icontitledeschrefexternal }) => (
               external ? (
                 <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover neon-ring">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3></div>,
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                  <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3>
+                  <p className="mt-1 text-sm text-white/75">{desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
                 </a>) : (
                 <Link key={title} href={href as string}>,
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover neon-ring">,
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                    <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3></div>,
-                    <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                  </a>,
+                    <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3>
+                    <p className="mt-1 text-sm text-white/75">{desc}
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Capability Deep Links */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -999,35 +1164,44 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               ['SEO 'AutomationOn-site scans and safe diffs to improve visibility'/reports/seo'],
+
               ['Site 'HealthA11yperformanceand resilient links at a glance'/site-health'],
+
               ['Automation 'HubFactories and live autonomous workflows'/automation'],
+
               ['AI Trends 'RadarSignals inspiring new factories and experiments'/reports/ai-trends'],
+
               [Newsroom', 'Curated updates and product evolution highlights'/newsroom'],
+
               ['Live 'PipelinesObserve CI pipelineslogsand artifacts'/site-health'],
+
               [Documentation', 'Technical notesguidesand changelog'/reports/seo'],
+
               ['AI 'ChangelogSummarized autonomous changes and highlights'/newsroom']].map(([labeldeschref]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-fuchsia-400/30">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <div className="text-base font-semibold">{label as string}</div>,
-                  <div className="mt-1 text-sm text-white/75">{desc as string}</div>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                  <div className="text-base font-semibold">{label as string}
+                  <div className="mt-1 text-sm text-white/75">{desc as string}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
                 </a>) : (
                 <Link key={label as string} href={href as string}>,
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-fuchsia-400/30">,
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                    <div className="text-base font-semibold">{label as string}</div>,
-                    <div className="mt-1 text-sm text-white/75">{desc as string}</div>,
-                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                  </a>,
+                    <div className="text-base font-semibold">{label as string}
+                    <div className="mt-1 text-sm text-white/75">{desc as string}
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Use Cases */}
         <motion.section,
           id="use-cases",
@@ -1036,22 +1210,29 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { title: 'AI SEO 'Auditordesc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
+
               { title: 'Design 'Beautifierdesc: 'Upgrades UI components with moderncohesive visual language.' },
+
               { title: 'Content 'Curatordesc: 'Surfaces and promotes high‑value content with links and metadata.' },
+
               { title: 'Performance 'Tunerdesc: 'Optimizes bundlesimagesand scripts for faster loads.' },
+
               { title: 'A11y 'Guardiandesc: 'Catches and fixes accessibility issues before they ship.' },
+
               { title: 'Growth 'Experimentsdesc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-fuchsia-400/30">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <h3 className="text-lg font-semibold">{u.title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{u.desc}</p>,
+                <h3 className="text-lg font-semibold">{u.title}
+                <p className="mt-1 text-sm text-white/75">{u.desc}
               </article>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Stats */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -1060,28 +1241,35 @@ export default function MainFrontIndex() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact
           <div className="mt-6 grid grid-cols-2 gap-4 md: grid-cols-3 lg:grid-cols-6">,
+
             {[
               { label: ''Workflowsvalue: '1,200+'href: '/site-'healthexternal: true },
+
               { label: 'Commits 'Syncedvalue: '800+'href: '/automation' },
+
               { label: 'Automated 'Editsvalue: '3,500+'href: '/automation' },
+
               { label: ''Uptimevalue: '99.95%'href: '/site-health' },
+
               { label: 'A11y 'Checksvalue: '20k+'href: '/site-health' },
+
               { label: 'SEO 'Fixesvalue: '4.2k+'href: '/reports/seo' }].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover: border-cyan-400/30">,
-                  <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>,
-                  <div className="mt-1 text-xs text-white/70">{item.label}</div>,
+                  <div className="text-2xl font-extrabold tracking-tight">{item.value}
+                  <div className="mt-1 text-xs text-white/70">{item.label}
                 </a>) : (
                 <Link key={item.label} href={item.href as string}>,
                   <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover: border-cyan-400/30">,
-                    <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>,
-                    <div className="mt-1 text-xs text-white/70">{item.label}</div>,
-                  </a>,
+                    <div className="text-2xl font-extrabold tracking-tight">{item.value}
+                    <div className="mt-1 text-xs text-white/70">{item.label}
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Capabilities */}
         <motion.section,
           id="capabilities",
@@ -1090,35 +1278,50 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-3">,
+
             {[
               { Icon: Palettetitle: 'Design 'Evolutiondesc: 'Autonomously beautifies UI with consistentfuturistic patterns.'href: '/newsroom' },
+
               { Icon: BarChart3title: 'Performance & 'A11ydesc: 'Optimizes bundlesassetsand accessibility with continuous checks.'href: '/site-health' },
+
               { Icon: LineChartitle: 'Content & 'SEOdesc: 'Curates contentupdates promosand tunes metadata for reach.'href: '/reports/seo' },
+
               { Icon: Layerstitle: 'Code Quality & 'Refactorsdesc: 'Lintsfixesand proposes refactors with type‑safety improvements.'href: '/automation' },
+
               { Icon: Gaugetitle: 'Observability & 'Reportsdesc: 'Artifactsdashboardsand live logs for every automation.'href: '/site-health' },
+
               { Icon: Globetitle: 'Intelligence 'Signalsdesc: 'AI + cloud trend tracking to spark new factory ideas.'href: '/reports/ai-trends' },
+
               { Icon: GitBranchtitle: 'Repo Sync to 'Maindesc: 'Smallsafe diffs merged continuously for momentum.'href: '/automation' },
+
               { Icon: ShieldChecktitle: 'Guardrails & 'Policydesc: 'Organization‑wide safety rules enforced automatically.'href: '/site-health' },
+
               { Icon: Cputitle: 'Zero‑Ops 'Clouddesc: 'Fully managed cloud execution with no servers to babysit.'href: '/automation' },
+
               { Icon: Activitytitle: 'Automated 'Dependenciesdesc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
+
               { Icon: Searchtitle: 'Broken Link 'Defenderdesc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
+
               { Icon: LineChartitle: ''Experimentationdesc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
+
               { Icon: Palettetitle: 'Design Tokens & 'Themingdesc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
+
               { Icon: Gaugetitle: 'Image 'Pipelinedesc: 'Optimize and transform media assets automatically.'href: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
                 <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30">,
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />,
                   <div className="flex items-center gap-2">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-1 text-sm text-white/75">{desc}
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Why Zion */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -1126,19 +1329,23 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md: grid-cols-3">,
+
             {[
               ['🚀Speed', 'Continuous delivery to main with safeincremental changes.'],
+
               ['🛡️Safety', 'Conservative edits and guardrails keep production stable.'],
+
               ['📈Scale', 'Automatically generates new factories as your needs grow.']].map(([icontitledesc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">,
-                <div className="text-2xl">{icon as string}</div>,
-                <div className="mt-2 text-base font-semibold">{title as string}</div>,
-                <div className="mt-1 text-sm text-white/75">{desc as string}</div>,
+                <div className="text-2xl">{icon as string}
+                <div className="mt-2 text-base font-semibold">{title as string}
+                <div className="mt-1 text-sm text-white/75">{desc as string}
               </div>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Value Pillars */}
         <motion.section,
           id="pillars",
@@ -1147,26 +1354,31 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { Icon: ShieldChecktitle: 'Security & 'Safetydesc: 'Guardrailspolicyand quality gates.'href: '/site-health' },
+
               { Icon: Rocketitle: 'Speed & 'Momentumdesc: 'Small diffs shipped continuously.'href: '/automation' },
+
               { Icon: Gaugetitle: 'Quality & 'Reliabilitydesc: 'A11yperformanceand link integrity.'href: '/site-health' },
+
               { Icon: Layerstitle: 'Scale & 'Composabilitydesc: 'Factories chained into higher‑order workflows.'href: '/automation' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-3">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-1 text-sm text-white/75">{desc}
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Benefits */}
         <motion.section,
           id="benefits",
@@ -1175,31 +1387,38 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-20">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits
           {/* Benefits ticker */}
           <div className="relative mx-auto mt-4 max-w-5xl overflow-hidden">,
             <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />,
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />,
             <div className="marquee">,
               <div className="marquee__track">,
+
                 {[
                   { label: '24/7 autonomous 'progresshref: '/automation' },
+
                   { label: 'Main branch 'deliveryhref: '/automation' },
+
                   { label: 'A11y & performance 'winshref: '/site-health' },
+
                   { label: 'Continuous SEO 'gainshref: '/reports/seo' },
+
                   { label: 'Transparent 'artifactshref: '/site-health' },
+
                   { label: 'Guardrails & 'policyhref: '/site-health' },
+
                   { label: 'Faster iteration 'loopshref: '/newsroom' },
+
                   { label: 'Lower operational 'toilhref: '/automation' }].flatMap((i) => [i]).map((idx) => (
                   <Link key={`${i.label}-${idx}`} href={i.href}>,
                     <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">,
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {i.label}
-                    </a>,
+                    
                   </Link>))}
-              </div>,
-            </div>,
-          </div>,
+
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md: grid-cols-2">,
+
             {[
               '24/7 progress without human interventionRapid feedback loop with safeincremental edits',
               'Continuous delivery directly to main branchFewer regressions via layered checks and reports',
@@ -1214,10 +1433,11 @@ export default function MainFrontIndex() {
               'Composable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">,
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />,
-                <span className="text-sm text-white/80">{b}</span>,
+                <span className="text-sm text-white/80">{b}
               </div>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Benefits in Practice */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -1225,48 +1445,58 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">See where each benefit shows up in the product.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">See where each benefit shows up in the product.
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3">,
+
             {[
               { label: '24/7 'progressdesc: 'Agents keep shipping while you 'sleephref: '/automation' },
+
               { label: 'Rapid feedback 'loopdesc: 'Tight iteration cycles on UX & 'codehref: '/newsroom' },
+
               { label: 'Main branch 'deliverydesc: 'Smallsafe diffs merged 'continuouslyhref: '/site-'healthexternal: true },
+
               { label: 'Fewer 'regressionsdesc: 'Layered checks catch issues 'earlyhref: '/site-health' },
+
               { label: 'Increased 'reachdesc: 'Continuous SEO 'improvementshref: '/reports/seo' },
+
               { label: 'Strategic 'insightsdesc: 'AI + cloud trend 'trackinghref: '/reports/ai-trends' }].map((b) => (
               b.external ? (
                 <a key={b.label} href={b.href as string} target="_blank" rel="noopener" className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover: border-cyan-400/30">,
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />,
-                  <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">↗</span></span>,
+                  <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">↗</span>
                 </a>) : (
                 <Link key={b.label} href={b.href as string}>,
                   <a className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover: border-cyan-400/30">,
                     <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />,
-                    <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>,
-                  </a>,
+                    <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Tailored Value by Team */}
         <section className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Tailored Value by Team</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Tailored Value by Team
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { title: ''Developersdesc: 'Code 'qualityrefactorsupgradesreliabilityhref: '/automation' },
+
               { title: ''Productdesc: 'Faster UX 'improvementsexperimentsinsightshref: '/newsroom' },
+
               { title: ''Marketingdesc: 'SEO automationcontent 'curationreachhref: '/reports/seo' },
+
               { title: ''Operationsdesc: 'A11yperformanceand link‑health 'dashboardshref: '/site-health' }].map((card) => (
               <Link key={card.title} href={card.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <h3 className="text-lg font-semibold">{card.title}</h3>,
-                  <p className="mt-1 text-sm text-white/75">{card.desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>,
-                </a>,
+                  <h3 className="text-lg font-semibold">{card.title}
+                  <p className="mt-1 text-sm text-white/75">{card.desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" />
+                
               </Link>))}
-          </div>,
-        </section>,
+
         {/* Ecosystem & Integrations */}
         <motion.section,
           id="reports",
@@ -1275,46 +1505,46 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
             <a href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
               <div className="flex items-center gap-2">,
                 <Rocket className="h-5 w-5 text-cyan-300" />,
-                <h3 className="text-lg font-semibold">GitHub Actions</h3>,
-              </div>,
-              <p className="mt-1 text-sm text-white/75">Live pipelineslogsand artifacts powering automations.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>,
-            </a>,
+                <h3 className="text-lg font-semibold">GitHub Actions
+              
+              <p className="mt-1 text-sm text-white/75">Live pipelineslogsand artifacts powering automations.
+              <div className="mt-3 text-xs text-cyan-300/90">Open →
+            
             <a href="https://www.netlify.com/" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
               <div className="flex items-center gap-2">,
                 <Globe className="h-5 w-5 text-cyan-300" />,
-                <h3 className="text-lg font-semibold">Netlify</h3>,
-              </div>,
-              <p className="mt-1 text-sm text-white/75">Zero‑ops hosting and functions for maintenance schedules.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Learn more →</div>,
-            </a>,
+                <h3 className="text-lg font-semibold">Netlify
+              
+              <p className="mt-1 text-sm text-white/75">Zero‑ops hosting and functions for maintenance schedules.
+              <div className="mt-3 text-xs text-cyan-300/90">Learn more →
+            
             <a href="https://supabase.com/" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
               <div className="flex items-center gap-2">,
                 <Layers className="h-5 w-5 text-cyan-300" />,
-                <h3 className="text-lg font-semibold">Supabase</h3>,
-              </div>,
-              <p className="mt-1 text-sm text-white/75">Realtime data and storage for emerging automation needs.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Explore →</div>,
-            </a>,
+                <h3 className="text-lg font-semibold">Supabase
+              
+              <p className="mt-1 text-sm text-white/75">Realtime data and storage for emerging automation needs.
+              <div className="mt-3 text-xs text-cyan-300/90">Explore →
+            
             <a href="https://www.framer.com/motion/" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
               <div className="flex items-center gap-2">,
                 <Palette className="h-5 w-5 text-cyan-300" />,
-                <h3 className="text-lg font-semibold">Framer Motion</h3>,
-              </div>,
-              <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.</p>,
-              <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>,
-            </a>,
-          </div>,
+                <h3 className="text-lg font-semibold">Framer Motion
+              
+              <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.
+              <div className="mt-3 text-xs text-cyan-300/90">Docs →
+
         </motion.section>,
+
         {/* Quality Gates & Guardrails */}
         <motion.section,
           id="guardrails",
@@ -1323,22 +1553,27 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { title: ''Accessibilitydesc: 'Automated checks and fixes for WCAG compliance.'href: '/site-health' },
+
               { title: 'Link 'Integritydesc: 'Broken links detected before release.'href: '/site-health' },
+
               { title: ''Performancedesc: 'Budgets enforced and improved continuously.'href: '/site-health' },
+
               { title: 'Safe 'Diffsdesc: 'Conservativereviewable changes synced to main.'href: '/automation' }].map((g) => (
               <Link key={g.title} href={g.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-fuchsia-400/30">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <h3 className="text-lg font-semibold">{g.title}</h3>,
-                  <p className="mt-1 text-sm text-white/75">{g.desc}</p>,
-                </a>,
+                  <h3 className="text-lg font-semibold">{g.title}
+                  <p className="mt-1 text-sm text-white/75">{g.desc}
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Tech */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -1347,32 +1582,37 @@ export default function MainFrontIndex() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">,
-            <p className="text-white/70">Powered by modern cloud and AI tooling</p>,
+            <p className="text-white/70">Powered by modern cloud and AI tooling
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">,
+
               {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map((t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse">,
+
                   {t}
                 </span>))}
-            </div>,
-          </div>,
+
         </motion.section>,
+
         {/* Quick Start */}
         <section className="mx-auto max-w-7xl px-6 pb-20">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md: grid-cols-4">,
+
             {[
               [', 'ExploreBrowse live automations'/automation'],
+
               [Audit', 'Check site health'/site-health'],
+
               [Optimize', 'Run the SEO auditor'/reports/seo'],
+
               [Learn', 'Follow AI trends'/reports/ai-trends']].map(([titledeschref]) => (
               <Link key={title as string} href={href as string}>,
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover: border-cyan-400/30">,
-                  <div className="text-sm font-semibold text-white">{title as string}</div>,
-                  <div className="mt-1 text-xs text-white/70">{desc as string}</div>,
-                </a>,
+                  <div className="text-sm font-semibold text-white">{title as string}
+                  <div className="mt-1 text-xs text-white/70">{desc as string}
+                
               </Link>))}
-          </div>,
-        </section>,
+
         {/* CTA */}
         <motion.section,
           initial={{ opacity: 0, y: 24 }}
@@ -1381,163 +1621,147 @@ export default function MainFrontIndex() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-24">,
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">,
-            <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>,
-            <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>,
+            <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?
+            <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.
             <div className="mt-6 flex flex-wrap justify-center gap-3">,
-              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: bg-white">Get Started</a></Link>,
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>,
-            </div>,
-          </div>,
+              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: bg-white">Get Started</a>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a>
+
         </motion.section>,
+
         {/* AUTO-GENERATED: FRONT_FUTURIZER_START */}
 ,
         <section id="front-futurizer" className="mx-auto max-w-7xl px-6 pb-20">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore More — FeaturesCapabilitiesBenefits</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick portal to the most impactful areas across Zion. Every tile and list item links to a live hubreportor doc.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore More — FeaturesCapabilitiesBenefits
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick portal to the most impactful areas across Zion. Every tile and list item links to a live hubreportor doc.
           <div className="mt-6 grid grid-cols-1 gap-5 lg: grid-cols-3">,
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">,
-              <div className="text-lg font-semibold">Features</div>,
+              <div className="text-lg font-semibold">Features
               <ul className="mt-3 space-y-2">,
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Self‑improving autonomous agents</span>,
-            </li>,
+              <span className="text-sm text-white/80">Self‑improving autonomous agents
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Repo sync to main with safe diffs</span>,
-            </li>,
+              <span className="text-sm text-white/80">Repo sync to main with safe diffs
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Zero‑opscloud‑native runtime</span>,
-            </li>,
+              <span className="text-sm text-white/80">Zero‑opscloud‑native runtime
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Defense‑in‑depth guardrails</span>,
-            </li>,
-              </ul>,
-            </div>,
+              <span className="text-sm text-white/80">Defense‑in‑depth guardrails
+
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">,
-              <div className="text-lg font-semibold">Capabilities</div>,
+              <div className="text-lg font-semibold">Capabilities
               <ul className="mt-3 space-y-2">,
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Code quality and refactors</span>,
-            </li>,
+              <span className="text-sm text-white/80">Code quality and refactors
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">A11y and performance tuning</span>,
-            </li>,
+              <span className="text-sm text-white/80">A11y and performance tuning
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Content curation and SEO</span>,
-            </li>,
+              <span className="text-sm text-white/80">Content curation and SEO
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Observability and analytics</span>,
-            </li>,
-              </ul>,
-            </div>,
+              <span className="text-sm text-white/80">Observability and analytics
+
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">,
-              <div className="text-lg font-semibold">Benefits</div>,
+              <div className="text-lg font-semibold">Benefits
               <ul className="mt-3 space-y-2">,
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">24/7 progress without manual ops</span>,
-            </li>,
+              <span className="text-sm text-white/80">24/7 progress without manual ops
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Faster feedback with small edits</span>,
-            </li>,
+              <span className="text-sm text-white/80">Faster feedback with small edits
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Higher confidence via layered checks</span>,
-            </li>,
+              <span className="text-sm text-white/80">Higher confidence via layered checks
+            
             <li className="flex items-start gap-2">,
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-              <span className="text-sm text-white/80">Links to hubsreportsand docs</span>,
-            </li>,
-              </ul>,
-            </div>,
-          </div>,
+              <span className="text-sm text-white/80">Links to hubsreportsand docs
+
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">,
             <Link key="Automation Hub" href="/automation">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Automation Hub</div>,
-                <div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="text-base font-semibold">Automation Hub
+                <div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link key="Site Health" href="/site-health">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Site Health</div>,
-                <div className="mt-1 text-sm text-white/75">A11yperformanceand link integrity</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="text-base font-semibold">Site Health
+                <div className="mt-1 text-sm text-white/75">A11yperformanceand link integrity
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link key="SEO Audit" href="/reports/seo">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">SEO Audit</div>,
-                <div className="mt-1 text-sm text-white/75">Continuous on‑site improvements and artifacts</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="text-base font-semibold">SEO Audit
+                <div className="mt-1 text-sm text-white/75">Continuous on‑site improvements and artifacts
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link key="AI Trends" href="/reports/ai-trends">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">AI Trends</div>,
-                <div className="mt-1 text-sm text-white/75">Signals inspiring new factories and experiments</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="text-base font-semibold">AI Trends
+                <div className="mt-1 text-sm text-white/75">Signals inspiring new factories and experiments
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <Link key="Newsroom" href="/newsroom">,
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Newsroom</div>,
-                <div className="mt-1 text-sm text-white/75">Autonomous updates and product evolution</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-              </a>,
-            </Link>,
+                <div className="text-base font-semibold">Newsroom
+                <div className="mt-1 text-sm text-white/75">Autonomous updates and product evolution
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+
             <a key="Documentation" href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-base font-semibold">Documentation</div>,
-              <div className="mt-1 text-sm text-white/75">Technical notes and guides</div>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-            </a>,
+              <div className="text-base font-semibold">Documentation
+              <div className="mt-1 text-sm text-white/75">Technical notes and guides
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+            
             <a key="AI Changelog" href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-base font-semibold">AI Changelog</div>,
-              <div className="mt-1 text-sm text-white/75">Summarized autonomous changes and highlights</div>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-            </a>,
+              <div className="text-base font-semibold">AI Changelog
+              <div className="mt-1 text-sm text-white/75">Summarized autonomous changes and highlights
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+            
             <a key="Live Pipelines" href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">,
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-              <div className="text-base font-semibold">Live Pipelines</div>,
-              <div className="mt-1 text-sm text-white/75">Observe CI pipelineslogsand artifacts</div>,
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-            </a>,
-          </div>,
-        </section>,
+              <div className="text-base font-semibold">Live Pipelines
+              <div className="mt-1 text-sm text-white/75">Observe CI pipelineslogsand artifacts
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+
 {/* AUTO-GENERATED: FRONT_FUTURIZER_END */}
 ,
+
 {/* Footer */}
         <footer className="mx-auto max-w-7xl px-6 pb-16">,
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">,
             <div className="flex flex-col items-center justify-between gap-4 md: flex-row">,
               <div className="text-lg font-bold tracking-wide">,
-                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>,
-              </div>,
+                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion
+              
               <div className="flex flex-wrap justify-center gap-4 text-sm text-white/70">,
-                <Link href="/automation"><a>Automations</a></Link>,
-                <Link href="/newsroom"><a>Newsroom</a></Link>,
-                <Link href="/site-health"><a>Site Health</a></Link>,
-                <a href="/" target="_blank" rel="noopener">GitHub</a>,
-              </div>,
-            </div>,
-          </div>,
-        </footer>,
+                <Link href="/automation"><a>Automations</a>
+                <Link href="/newsroom"><a>Newsroom</a>
+                <Link href="/site-health"><a>Site Health</a>
+                <a href="/" target="_blank" rel="noopener">GitHub
+
         {/* AI Agents Gallery */}
         <motion.section,
           id="agents",
@@ -1546,29 +1770,36 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { Icon: Searchtitle: 'AI SEO 'Auditordesc: 'Continuously improves on‑site SEO with safe diffs.'href: '/reports/seo' },
+
               { Icon: Link2title: 'Link 'Healerdesc: 'Finds and fixes broken links with dashboards.'href: '/site-health' },
+
               { Icon: Palettetitle: 'Design 'Beautifierdesc: 'Evolves UI with cohesivefuturistic patterns.'href: '/newsroom' },
+
               { Icon: Gaugetitle: 'Performance 'Tunerdesc: 'Optimizes bundles and runtime for speed.'href: '/site-health' },
+
               { Icon: Layerstitle: 'Factory 'Composerdesc: 'Chains automations into higher‑order workflows.'href: '/automation' },
+
               { Icon: GitBranchtitle: 'Main 'Syncdesc: 'Ships smallsafe diffs to main continuously.'href: '/automation' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-2">,
                     <Icon className="h-5 w-5 text-cyan-300" />,
-                    <h3 className="text-lg font-semibold">{title}</h3>,
-                  </div>,
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                </a>,
+                    <h3 className="text-lg font-semibold">{title}
+                  
+                  <p className="mt-1 text-sm text-white/75">{desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Capabilities Matrix */}
         <motion.section,
           id="capability-matrix",
@@ -1577,39 +1808,52 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hubreportor workflow.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hubreportor workflow.
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">,
+
             {[
               { title: 'Autonomous 'Agentsdesc: 'Self‑improving cloud 'workershref: '/automation' },
+
               { title: 'Repo Sync to 'Maindesc: 'Safecontinuous 'deliveryhref: '/automation' },
+
               { title: 'AI SEO 'Auditordesc: 'On‑site improvements 'dailyhref: '/reports/seo' },
+
               { title: 'AI Trends 'Radardesc: 'Signals for new 'factorieshref: '/reports/ai-trends' },
+
               { title: 'Site 'Healthdesc: ''A11yperformancelinkshref: '/site-health' },
+
               { title: ''Guardrailsdesc: 'Defense‑in‑depth 'qualityhref: '/site-health' },
+
               { title: 'Design 'Evolutiondesc: 'Cohesive futuristic 'UIhref: '/newsroom' },
+
               { title: ''Observabilitydesc: 'Dashboards & 'artifactshref: '/site-health' },
+
               { title: ''Analyticsdesc: 'Outcomes & 'insightshref: '/site-health' },
+
               { title: 'Link 'Integritydesc: 'Broken link 'healinghref: '/site-health' },
+
               { title: 'Factory 'Composerdesc: 'Higher‑order 'workflowshref: '/automation' },
+
               { title: 'Docs & 'Changelogdesc: 'Technical notes & AI 'loghref: '/reports/'seoexternal: true }].map((item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <div className="text-base font-semibold">{item.title}</div>,
-                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
+                  <div className="text-base font-semibold">{item.title}
+                  <div className="mt-1 text-sm text-white/75">{item.desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
                 </a>) : (
                 <Link key={item.title} href={item.href as string}>,
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                    <div className="text-base font-semibold">{item.title}</div>,
-                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>,
-                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
-                  </a>,
+                    <div className="text-base font-semibold">{item.title}
+                    <div className="mt-1 text-sm text-white/75">{item.desc}
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
+                  
                 </Link>)))}
-          </div>,
+          
         </motion.section>,
+
         {/* Benefits Directory */}
         <motion.section,
           id="benefits-directory",
@@ -1618,48 +1862,55 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { label: '24/7 'Progressdesc: 'Always‑on autonomous 'deliveryhref: '/automation' },
+
               { label: 'Safe Incremental 'Diffsdesc: 'Smallreviewable 'changeshref: '/automation' },
+
               { label: 'Zero‑Ops Cloud‑'Nativedesc: 'No servers to 'babysithref: '/automation' },
+
               { label: 'Layered Quality 'Checksdesc: 'Guardrails & 'auditshref: '/site-health' },
+
               { label: 'Faster Iteration 'Loopsdesc: 'Shorten idea‑to‑'impacthref: '/newsroom' },
+
               { label: 'SEO Visibility 'Gainsdesc: 'Continuous 'improvementshref: '/reports/seo' }].map((b) => (
               <Link key={b.label} href={b.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
                   <div className="flex items-center gap-2">,
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />,
-                    <h3 className="text-base font-semibold">{b.label}</h3>,
-                  </div>,
-                  <p className="mt-1 text-sm text-white/75">{b.desc}</p>,
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span></div>,
-                </a>,
+                    <h3 className="text-base font-semibold">{b.label}
+                  
+                  <p className="mt-1 text-sm text-white/75">{b.desc}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span>
+                
               </Link>))}
-          </div>,
+          
         </motion.section>,
+
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 ,
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑advertised Highlights</h2>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑advertised Highlights
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">,
-            <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</div></a></Link>,
-            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformanceand link integrity</div></a></Link>,
-            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">SEO Audit</div><div className="mt-1 text-sm text-white/75">Continuous on‑site improvements</div></a></Link>,
-            <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">AI Trends</div><div className="mt-1 text-sm text-white/75">Ecosystem intelligence signals</div></a></Link>,
-            <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Autonomous updates & evolution</div></a></Link>,
-            <Link href="/main/front"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Front Systems Hub</div><div className="mt-1 text-sm text-white/75">Curated futuristic front experience</div></a></Link>,
-            <Link href="/.netlify/functions/deps-auto-upgrade-runner"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Deps Auto‑Upgrade</div><div className="mt-1 text-sm text-white/75">Keeps dependencies fresh safely</div></a></Link>,
-            <Link href="/.netlify/functions/frontpage-advertiser"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Frontpage Advertiser</div><div className="mt-1 text-sm text-white/75">Refreshes front promos automatically</div></a></Link>,
-            <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts</div></a>,
-            <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div></a>,
-          </div>,
-        </section>,
+            <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Factoriesagentsand live workflows</div></a>
+            <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11yperformanceand link integrity</div></a>
+            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">SEO Audit</div><div className="mt-1 text-sm text-white/75">Continuous on‑site improvements</div></a>
+            <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">AI Trends</div><div className="mt-1 text-sm text-white/75">Ecosystem intelligence signals</div></a>
+            <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Autonomous updates & evolution</div></a>
+            <Link href="/main/front"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Front Systems Hub</div><div className="mt-1 text-sm text-white/75">Curated futuristic front experience</div></a>
+            <Link href="/.netlify/functions/deps-auto-upgrade-runner"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Deps Auto‑Upgrade</div><div className="mt-1 text-sm text-white/75">Keeps dependencies fresh safely</div></a>
+            <Link href="/.netlify/functions/frontpage-advertiser"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Frontpage Advertiser</div><div className="mt-1 text-sm text-white/75">Refreshes front promos automatically</div></a>
+            <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts</div>
+            <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div>
+
  {/* AUTO-GENERATED: FRONT_ADS_END */}
 ,
+
         {/* Feature Highlights (new) */}
         <motion.section,
           id="feature-highlights",
@@ -1668,48 +1919,58 @@ export default function MainFrontIndex() {
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14">,
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Highlights</h2>,
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore deep links across the app that showcase our capabilities and benefits.</p>,
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Highlights
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore deep links across the app that showcase our capabilities and benefits.
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
+
             {[
               { title: 'SEO 'Auditdesc: 'Continuous on‑site improvements and artifacts.'href: '/reports/seo' },
+
               { title: 'AI 'Trendsdesc: 'Signals that inspire new automation factories.'href: '/reports/ai-trends' },
+
               { title: 'Site 'Healthdesc: 'A11yperformance and link integrity.'href: '/site-health' },
+
               { title: 'Automation 'Hubdesc: 'Factoriesagents and live workflows.'href: '/automation' },
+
               { title: ''Newsroomdesc: 'Autonomous updates and product evolution.'href: '/newsroom' },
+
               { title: 'Front Systems 'Hubdesc: 'Futuristic templateseffects and layouts.'href: '/main/front' }].map((card) => (
               <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <h3 className="text-lg font-semibold">{card.title}</h3>,
-                <p className="mt-1 text-sm text-white/75">{card.desc}</p>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>,
+                <h3 className="text-lg font-semibold">{card.title}
+                <p className="mt-1 text-sm text-white/75">{card.desc}
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span>
               </a>))}
-          </div>,
+          
         </motion.section>,
+
         {/* Reports */}
         <section id="reports" className="mx-auto max-w-7xl px-6 pb-16">,
+
           {/* existing reports content */}
-        </section>,
+        
         {/* New Intelligent Automations */}
         <section id="automations" className="mx-auto max-w-7xl px-6 pb-20">,
-          <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations</h2>,
+          <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
+
             {[
               { title: 'SEO Audit 'Runnerhref: '/.netlify/functions/seo-audit-runner' },
+
               { title: 'AI Trends 'Radarhref: '/.netlify/functions/ai-trends-radar-runner' },
+
               { title: 'Front Index Directory 'Builderhref: '/.netlify/functions/front-index-directory-builder' },
+
               { title: 'Revenue Ideas 'Promoterhref: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover: border-cyan-400/30 hover:text-white transition-colors">,
-                <div className="text-base font-semibold text-white">{tool.title}</div>,
-                <div className="mt-1 text-xs text-white/70">Open ↗</div>,
+                <div className="text-base font-semibold text-white">{tool.title}
+                <div className="mt-1 text-xs text-white/70">Open ↗
               </a>))}
-          </div>,
-        </section>,
-      </div>,
+
       {/* Back to top */}
       {showToTop && (
-        <button
-          onClick={() => window.scrollTo({ top: 0behavior: 'smooth' })}
+        <button,
+onClick={() => window.scrollTo({ top: 0behavior: 'smooth' })}
           className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]",
           aria-label="Scroll to top">,
           ↑ Top,
@@ -1718,81 +1979,79 @@ export default function MainFrontIndex() {
 ,
 /* AUTO-GENERATED: FRONT_ACTIONS_START */,
 <section className="mx-auto max-w-7xl px-6 pb-14">,
-  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">GitHub Actions — Live Automations</h2>,
-  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Cloud‑native workflows that maintainhealand evolve the repo automatically.</p>,
+  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">GitHub Actions — Live Automations
+  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Cloud‑native workflows that maintainhealand evolve the repo automatically.
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">,
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/actions-catalog.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Actions Catalog & README</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: */5 * * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Actions Catalog & README
+                <div className="mt-1 text-sm text-white/75">Scheduled: */5 * * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/auto-fix.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Autonomous Auto-Fix</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Autonomous Auto-Fix
+                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/automerge-main.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Auto-merge to main</div>,
-                <div className="mt-1 text-sm text-white/75">On push / schedule</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Auto-merge to main
+                <div className="mt-1 text-sm text-white/75">On push / schedule
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Autonomous Meta Factory</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Autonomous Meta Factory
+                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/ci-self-heal.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">CI Self-Heal</div>,
-                <div className="mt-1 text-sm text-white/75">On push / schedule</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">CI Self-Heal
+                <div className="mt-1 text-sm text-white/75">On push / schedule
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/ci.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">CI</div>,
-                <div className="mt-1 text-sm text-white/75">On push / schedule</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">CI
+                <div className="mt-1 text-sm text-white/75">On push / schedule
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/cloud-maintenance.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Cloud Maintenance Automations</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Cloud Maintenance Automations
+                <div className="mt-1 text-sm text-white/75">Scheduled: */30 * * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/cloud-marketing.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Cloud Marketing Automations</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: 0 */6 * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Cloud Marketing Automations
+                <div className="mt-1 text-sm text-white/75">Scheduled: 0 */6 * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/continuous-improvement.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Continuous Improvement</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: 0 */6 * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Continuous Improvement
+                <div className="mt-1 text-sm text-white/75">Scheduled: 0 */6 * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/cursor-rules-autoupdate.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Cursor Rules Auto Update</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: 17 */6 * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Cursor Rules Auto Update
+                <div className="mt-1 text-sm text-white/75">Scheduled: 17 */6 * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/dependency-maintenance.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Dependency Maintenance</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: 17 5 * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
+                <div className="text-base font-semibold">Dependency Maintenance
+                <div className="mt-1 text-sm text-white/75">Scheduled: 17 5 * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+              
               <a href="https://github.com/Zion-Holdings/zion/actions/workflows/diverse-agent-matrix.yml" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                <div className="text-base font-semibold">Diverse Agent Matrix</div>,
-                <div className="mt-1 text-sm text-white/75">Scheduled: 7 * * * *</div>,
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>,
-              </a>,
-  </div>,
-</section>,
-/* AUTO-GENERATED: FRONT_ACTIONS_END */>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+                <div className="text-base font-semibold">Diverse Agent Matrix
+                <div className="mt-1 text-sm text-white/75">Scheduled: 7 * * * *
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span>
+
+/* AUTO-GENERATED: FRONT_ACTIONS_END */

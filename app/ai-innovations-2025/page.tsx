@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import Link from 'next/link';
 import ErrorBoundary from '@/components/ErrorBoundary';
-
-export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'AI Innovations 2025 - Revolutionary Breakthrough Technologies',
@@ -14,12 +11,6 @@ export const metadata = {
 export default function AIInnovations2025Page() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="AI Innovations 2025 - Revolutionary Breakthrough Technologies"
-        description="Explore the latest AI innovations and breakthrough technologies of 2025. Neural superintelligence, quantum AI, autonomous systems, and more."
-        keywords="AI innovations 2025, artificial intelligence, breakthrough technologies, neural superintelligence, quantum AI, autonomous systems"
-        url="/ai-innovations-2025"
-      />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
@@ -44,12 +35,14 @@ export default function AIInnovations2025Page() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link to="#innovations"
+                <Link
+                  href="#innovations"
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-6 rounded-2xl font-bold text-2xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Innovations
                 </Link>
-                <Link to="/contact"
+                <Link
+                  href="/contact"
                   className="border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-2xl hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
                   Get Started
@@ -93,7 +86,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Revolutionary</span>
                   </div>
                 </div>
-                <Link to="/ai-2025/neural-superintelligence"
+                <Link
+                  href="/ai-2025/neural-superintelligence"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   Learn More →
@@ -121,7 +115,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Transformative</span>
                   </div>
                 </div>
-                <Link to="/quantum-ai-2026"
+                <Link
+                  href="/quantum-ai-2026"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   Explore Now →
@@ -149,7 +144,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Disruptive</span>
                   </div>
                 </div>
-                <Link to="/autonomous-business-systems-2026"
+                <Link
+                  href="/autonomous-business-systems-2026"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   Discover More →
@@ -177,7 +173,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Revolutionary</span>
                   </div>
                 </div>
-                <Link to="/neural-interface-2025"
+                <Link
+                  href="/neural-interface-2025"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   See Details →
@@ -205,7 +202,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Transformative</span>
                   </div>
                 </div>
-                <Link to="/synthetic-intelligence-2026"
+                <Link
+                  href="/synthetic-intelligence-2026"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   Explore →
@@ -233,7 +231,8 @@ export default function AIInnovations2025Page() {
                     <span className="text-blue-400 font-bold">Strategic</span>
                   </div>
                 </div>
-                <Link to="/ai-2026-future-predictions"
+                <Link
+                  href="/ai-2026-future-predictions"
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                 >
                   View Predictions →
@@ -296,12 +295,14 @@ export default function AIInnovations2025Page() {
               Join thousands of businesses already leveraging these revolutionary AI innovations for unprecedented growth and success.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/contact"
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-6 rounded-2xl font-bold text-2xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your AI Journey
               </Link>
-              <Link to="/services"
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-2xl hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 View All Services

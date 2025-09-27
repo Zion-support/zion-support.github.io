@@ -11,7 +11,7 @@ interface SEOOptimizerProps {
   ogImage?: string
   ogType?: string
   twitterCard?: string
-  structuredData?: Record<string, unknown>
+  structuredData?: any
   noindex?: boolean
   nofollow?: boolean
 }

@@ -1,4 +1,1 @@
-// SEO component placeholder - avoiding circular import
-export default function SEO() {
-  return null;
-}
+export { default } from '../../components/SEO';

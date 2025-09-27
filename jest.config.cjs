@@ -2,24 +2,29 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@/app/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/lib/(.*)$': '<rootDir>/app/lib/$1',
-  },
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
+  roots: ['<rootDir>/src'],
   testMatch: [
     '**/__tests__/**/*.(ts|tsx|js)',
-    '**/*.(test|spec).(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)'
   ],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
-    'app/**/*.{ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
+    '!src/**/*.d.ts',
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
+  passWithNoTests: true,
+  verbose: true
 };

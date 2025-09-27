@@ -23,143 +23,151 @@ import { generateSearchSuggestions } from '@/data / marketplace_data',
 import { SearchSuggestion } from '@/types / search',
 import { useAISearch } from '@/hooks / useAISearch',
 import { AppLayout } from '@/layout / AppLayout',
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") || "",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") |"",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") || "",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  useEffect(() => {
-    if (initial) {
+export default function SearchPage() {;
+const [params] = useSearchParams(),;
+const navigate = useNavigate(),;
+const initial = params.get("q") || "",;
+const [query, setQuery] = useState(initial),;
+const { results, loading, search } = useAISearch(),
+export default function SearchPage() {;
+const [params] = useSearchParams(),;
+const navigate = useNavigate(),;
+const initial = params.get("q") |"",;
+const [query, setQuery] = useState(initial),;
+const { results, loading, search } = useAISearch(),;
+const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+export default function SearchPage() {;
+const [params] = useSearchParams(),;
+const navigate = useNavigate(),;
+const initial = params.get("q") || "",;
+const [query, setQuery] = useState(initial),;
+const { results, loading, search } = useAISearch(),;
+const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  useEffect(() => {;
+if (initial) {
       search(initial)}
-}, [initial]),
-  const handleSubmit = (e: React && React.FormEvent) => {
+},
+ [initial]),;
+const handleSubmit = (e: React && React.FormEvent) => {
     e && e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)}
-  }, [initial]),
-  const handleSubmit = (e: React.FormEvent) => {
+  },
+ [initial]),;
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)},
-  return (
+    search(query)},;
+return (
     <AppLayout>,
       <main className="container mx-auto px-4 py-8">,
         <form onSubmit={handleSubmit} className="mb-6">,
-          <EnhancedSearchInput
-            value={query}
+          <EnhancedSearchInput,
+value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects...",
           />,
-        </form>,
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") || "",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  useEffect(() => {
-    if (initial) {
+        
+export default function SearchPage() {;
+const [params] = useSearchParams(),;
+const navigate = useNavigate(),;
+const initial = params.get("q") || "",;
+const [query, setQuery] = useState(initial),;
+const { results, loading, search } = useAISearch(),;
+const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  useEffect(() => {;
+if (initial) {
       search(initial)}
-  }, [initial]),
-  const handleSubmit = (e: React.FormEvent) => {
+  },
+ [initial]),;
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)},
-  return (
+    search(query)},;
+return (
     <AppLayout>,
       <main className="container mx-auto px-4 py-8">,
         <form onSubmit={handleSubmit} className="mb-6">,
-          <EnhancedSearchInput
-            value={query}
+          <EnhancedSearchInput,
+value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects...",
           />,
-        </form>,
+
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>)}
         {!loading && results && results.length > 0 && (
           <div className="space-y-4">,
+
             {results && results.map((r) => (
-              <div
-                key={`${r && r.type}-${r && r.id}`}
+              <div,
+key={`${r && r.type}-${r && r.id}`}
                 className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">,
                 <p className="text-xs uppercase text-zion-slate-light mb-1">,
+
                   {r && r.type}
-                </p>,
-                <h3 className="text-lg font-bold text-white">{r && r.title}</h3>,
-                <p className="text-zion-slate-light">{r && r.description}</p>,
+                
+                <h3 className="text-lg font-bold text-white">{r && r.title}
+                <p className="text-zion-slate-light">{r && r.description}
               </div>))}
           </div>)}
 ,
-      </main>,
+      
     </AppLayout>)}
 ,
 export default /**,
  * SearchPage - Function description,
- */,
-function SearchPage() {
-  const [params] = useSearchParams (),
-  const navigate = use_navigate (),
-  const initial = params.get ("q") || "",
-  const [query, set_query] = useState (initial),
-  const { results, loading, search } = useAISearch (),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions (),
+ */,;
+function SearchPage() {;
+const [params] = useSearchParams (),;
+const navigate = use_navigate (),;
+const initial = params.get ("q") || "",;
+const [query, set_query] = useState (initial),;
+const { results, loading, search } = useAISearch (),;
+const suggestions: SearchSuggestion[] = generateSearchSuggestions (),
   useEffect (() => {
-    // Check condition,
+    // Check condition,;
 if ( {) {
   $2}
       search (initial)}
-  }, [initial]),
-  const handle_submit = (e: React.FormEvent) =>: any {
+  },
+ [initial]),;
+const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default (),
     navigate (`/search?q=${encodeURIComponent (query)}`),
     search (query)}
-,
-  return (
+,;
+return (
     <AppLayout>,
       <main className="container mx - auto px - 4 py - 8">,
         <form on_submit={handle_submit} className="mb - 6">,
-          <EnhancedSearchInput
-            value={query}
+          <EnhancedSearchInput,
+value={query}
             on_change={set_query}
             search_suggestions={suggestions}
             placeholder="Search talent, jobs, and projects...",
           />,
-        </form>,
+
         {loading && <p className="text - zion - slate - light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text - zion - slate - light">No results found.</p>)}
         {!loading && results.length > 0 && (
           <div className="space - y-4">,
+
             {results.map ((r) => (
-              <div
-                key={`${r.type}-${r.id}`}
+              <div,
+key={`${r.type}-${r.id}`}
                 className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">,
                 <p className="text - xs uppercase text - zion - slate - light mb - 1">,
+
                   {r.type}
-                </p>,
-                <h3 className="text - lg font - bold text - white">{r.title}</h3>,
-                <p className="text - zion - slate - light">{r.description}</p>,
+                
+                <h3 className="text - lg font - bold text - white">{r.title}
+                <p className="text - zion - slate - light">{r.description}
               </div>))}
           </div>)}
-      </main>,
+      
     </AppLayout>)}

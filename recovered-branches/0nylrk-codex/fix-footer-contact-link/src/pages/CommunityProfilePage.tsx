@@ -26,9 +26,9 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-// Mock user data,
-const mockUser: CommunityUser = {
-  id: "user1",
+// Mock user data,;
+const mockUser: CommunityUser = {,
+id: "user1",
   name: "Alex Johnson",
   avatar: "https://i.pravatar.cc/150?img=3",
   role: "Verified Talent",
@@ -62,10 +62,10 @@ id: "badge3",
   is_verified: true,
   is_moderator: false}
 ,
-// Mock posts by this user,
+// Mock posts by this user,;
 const user_posts: ForumPost[] = [
-  {
-    id: "1",
+  {,
+id: "1",
     title: "Best practices for AI model fine - tuning",
     content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
     author_id: "user1",
@@ -81,8 +81,8 @@ const user_posts: ForumPost[] = [
     reply_count: 12,
     is_answered: true,
     is_featured: true}
-  {
-    id: "11",
+  {,
+id: "11",
     title: "How to structure an AI prompt for best results",
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
     authorId: "user1",
@@ -96,8 +96,8 @@ const user_posts: ForumPost[] = [
     upvotes: 36,
     downvotes: 1,
     replyCount: 8}
-  {
-    id: "12",
+  {,
+id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
     authorId: "user1",
@@ -112,17 +112,17 @@ const user_posts: ForumPost[] = [
     downvotes: 0,
     replyCount: 6}
 ],
-export default function CommunityProfilePage() {
-  const { userId } = useParams(),
-  const [user, setUser] = useState<CommunityUser | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([])],
+export default function CommunityProfilePage() {;
+const { userId } = useParams(),;
+const [user, setUser] = useState<CommunityUser | null>(null),;
+const [isLoading, setIsLoading] = useState(true),;
+const [posts, setPosts] = useState<ForumPost[]>([])],
   isVerified: true,
   isModerator: false},
-// Mock posts by this user,
+// Mock posts by this user,;
 const userPosts: ForumPost[] = [
-  {
-    id: "12",
+  {,
+id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
     authorId: "user1",
@@ -137,48 +137,48 @@ const userPosts: ForumPost[] = [
     downvotes: 0,
     replyCount: 6}
 ],
-export default function CommunityProfilePage() {
-  const { userId } = useParams(),
-  const [user, setUser] = useState<CommunityUser | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([]),
-export default function CommunityProfilePage() {
-  const { userId } = useParams(),
-  const [user, setUser] = useState<CommunityUser | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([]),
+export default function CommunityProfilePage() {;
+const { userId } = useParams(),;
+const [user, setUser] = useState<CommunityUser | null>(null),;
+const [isLoading, setIsLoading] = useState(true),;
+const [posts, setPosts] = useState<ForumPost[]>([]),
+export default function CommunityProfilePage() {;
+const { userId } = useParams(),;
+const [user, setUser] = useState<CommunityUser | null>(null),;
+const [isLoading, setIsLoading] = useState(true),;
+const [posts, setPosts] = useState<ForumPost[]>([]),
   useEffect(() => {
     // In a real app, we would fetch the user data here,
     // For now, we'll just use the mock data,
     setUser(mockUser),
     setPosts(userPosts),
-    setIsLoading(false)}, [userId])}, [userId]),
-  if (isLoading) {
-    return (
+    setIsLoading(false)},
+ [userId])},
+ [userId]),;
+if (isLoading) {;
+return (
       <AppLayout>,
         <div className="container py-8">,
           <div className="flex justify-center items-center h-64">,
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>,
-          </div>,
-        </div>,
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple">
+
       </AppLayout>)}
-  if (!user) {
-    return (
+  if (!user) {;
+return (
       <AppLayout>,
         <div className="container py-8">,
-          <h1>User not found</h1>,
+          <h1>User not found
           <Button asChild className="mt-4">,
-            <Link to="/community">Back to Community</Link>,
-          </Button>,
-        </div>,
+            <Link to="/community">Back to Community
+
       </AppLayout>)}
   return (
     <AppLayout>,
       <SEO
       <SEO
-// Mock user data,
-const mockUser: CommunityUser = {
-  id: "user1",
+// Mock user data,;
+const mockUser: CommunityUser = {,
+id: "user1",
   name: "Alex Johnson",
   avatar: "https://i && i.pravatar.cc/150?img=3",
   role: "Verified Talent",
@@ -186,20 +186,22 @@ const mockUser: CommunityUser = {
   postCount: 14,
   replyCount: 47,
   badges: [
-    {
-      id: "badge1",
+    {,
+id: "badge1",
       name: "Answer Hero",
       description: "Provided 10 accepted answers",
       icon: "Award",
       color: "#10B981"},
-    {
-      id: "badge2",
+
+    {,
+id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
       color: "#F59E0B"},
-    {
-      id: "badge3",
+
+    {,
+id: "badge3",
       name: "First Post",
       description: "Created your first forum post",
       icon: "Star",
@@ -207,10 +209,10 @@ const mockUser: CommunityUser = {
   ],
   isVerified: true,
   isModerator: false},
-// Mock posts by this user,
+// Mock posts by this user,;
 const userPosts: ForumPost[] = [
-  {
-    id: "1",
+  {,
+id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
     authorId: "user1",
@@ -226,8 +228,9 @@ const userPosts: ForumPost[] = [
     replyCount: 12,
     isAnswered: true,
     isFeatured: true},
-  {
-    id: "11",
+
+  {,
+id: "11",
     title: "How to structure an AI prompt for best results",
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
     authorId: "user1",
@@ -241,8 +244,9 @@ const userPosts: ForumPost[] = [
     upvotes: 36,
     downvotes: 1,
     replyCount: 8},
-  {
-    id: "12",
+
+  {,
+id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
     authorId: "user1",
@@ -257,41 +261,41 @@ const userPosts: ForumPost[] = [
     downvotes: 0,
     replyCount: 6}
 ],
-export default function CommunityProfilePage() {
-  const { userId } = useParams(),
-  const [user, setUser] = useState<CommunityUser | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([]),
+export default function CommunityProfilePage() {;
+const { userId } = useParams(),;
+const [user, setUser] = useState<CommunityUser | null>(null),;
+const [isLoading, setIsLoading] = useState(true),;
+const [posts, setPosts] = useState<ForumPost[]>([]),
   useEffect(() => {
     // In a real app, we would fetch the user data here,
     // For now, we'll just use the mock data,
     setUser(mockUser),
     setPosts(userPosts),
-    setIsLoading(false)}, [userId]),
-  if (isLoading) {
-    return (
+    setIsLoading(false)},
+ [userId]),;
+if (isLoading) {;
+return (
       <AppLayout>,
         <div className="container py-8">,
           <div className="flex justify-center items-center h-64">,
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>,
-          </div>,
-        </div>,
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple">
+
       </AppLayout>)}
-,
-  if (!user) {
-    return (
+,;
+if (!user) {;
+return (
       <AppLayout>,
         <div className="container py-8">,
-          <h1>User not found</h1>,
+          <h1>User not found
           <Button asChild className="mt-4">,
-            <Link to="/community">Back to Community</Link>,
-          </Button>,
-        </div>,
+            <Link to="/community">Back to Community
+
       </AppLayout>)}
-,
-  return (
+,;
+return (
     <AppLayout>,
       <SEO
+
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -300,12 +304,12 @@ export default function CommunityProfilePage() {
         <div className="flex items-center gap-3 mb-6">,
           <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">,
             Forum,
-          </Link>,
-          <span className="text-muted-foreground">/</span>,
-          <span className="text-sm font-medium">Profile</span>,
-          <span className="text-muted-foreground">/</span>,
-          <span className="text-sm font-medium">{user.name}</span>,
-        </div>,
+          
+          <span className="text-muted-foreground">/
+          <span className="text-sm font-medium">Profile
+          <span className="text-muted-foreground">/
+          <span className="text-sm font-medium">{user.name}
+        
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
           <div className="md:col-span-1">,
             <Card>,
@@ -313,20 +317,19 @@ export default function CommunityProfilePage() {
                 <div className="flex justify-center mb-4">,
                   <Avatar className="h-24 w-24">,
                     <AvatarImage src={user.avatar} />,
-                    <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>,
-                  </Avatar>,
-                </div>,
+                    <AvatarFallback>{user.name.charAt(0)}
+
                 <CardTitle className="text-2xl flex items-center justify-center gap-2">,
+
                   {user.name}
                   {user.isVerified && (
                     <span className="text-blue-500">,
                       <svg xmlns="http: //www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">,
                         <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />,
-                      </svg>,
-                    </span>,
+
     <AppLayout>,
-      <SEO
-        title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
+      <SEO,
+title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user && user.name}`}
       />,
@@ -334,12 +337,12 @@ export default function CommunityProfilePage() {
         <div className="flex items-center gap-3 mb-6">,
           <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">,
             Forum,
-          </Link>,
-          <span className="text-muted-foreground">/</span>,
-          <span className="text-sm font-medium">Profile</span>,
-          <span className="text-muted-foreground">/</span>,
-          <span className="text-sm font-medium">{user && user.name}</span>,
-        </div>,
+          
+          <span className="text-muted-foreground">/
+          <span className="text-sm font-medium">Profile
+          <span className="text-muted-foreground">/
+          <span className="text-sm font-medium">{user && user.name}
+        
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
           <div className="md:col-span-1">,
             <Card>,
@@ -347,219 +350,205 @@ export default function CommunityProfilePage() {
                 <div className="flex justify-center mb-4">,
                   <Avatar className="h-24 w-24">,
                     <AvatarImage src={user && user.avatar} />,
-                    <AvatarFallback>{user && user.name.charAt(0)}</AvatarFallback>,
-                  </Avatar>,
-                </div>,
+                    <AvatarFallback>{user && user.name.charAt(0)}
+
                 <CardTitle className="text-2xl flex items-center justify-center gap-2">,
+
                   {user && user.name}
                   {user && user.isVerified && (
                     <span className="text-blue-500">,
                       <svg xmlns="http: //www && www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">,
                         <path fillRule="evenodd" d="M8 && M8.603 3 && 3.799A4.49 4 && 4.49 0 0112 2 && 2.25c1.357 0 2 && 2.573.6 3 && 3.397 1 && 1.549a4.49 4 && 4.49 0 013 && 013.498 1 && 1.307 4 && 4.491 4 && 4.491 0 011 && 011.307 3 && 3.497A4.49 4 && 4.49 0 0121 && 0121.75 12a4 && 12a4.49 4 && 4.49 0 01-1 && 1.549 3 && 3.397 4 && 4.491 4 && 4.491 0 01-1 && 1.307 3 && 3.497 4 && 4.491 4 && 4.491 0 01-3 && 3.497 1 && 1.307A4.49 4 && 4.49 0 0112 21 && 21.75a4.49 4 && 4.49 0 01-3 && 3.397-1 && 1.549 4 && 4.49 4 && 4.49 0 01-3 && 3.498-1 && 1.306 4 && 4.491 4 && 4.491 0 01-1 && 1.307-3 && 3.498A4.49 4 && 4.49 0 012 && 012.25 12c0-1 && 1.357.6-2 && 2.573 1 && 1.549-3 && 3.397a4.49 4 && 4.49 0 011 && 011.307-3 && 3.497 4 && 4.49 4 && 4.49 0 013 && 013.497-1 && 1.307zm7.007 6 && 6.387a.75 && 75.75 0 10-1 && 1.22-.872l-3 && 3.236 4 && 4.53L9.53 12 && 12.22a.75 && 75.75 0 00-1 && 1.06 1 && 1.06l2.25 2 && 2.25a.75 && 75.75 0 001 && 001.14-.094l3 && 094l3.75-5 && 5.25z" clipRule="evenodd" />,
-                      </svg>,
+                      
                     </span>)}
-                </CardTitle>,
+                
                 {user && user.role && (
                   <Badge variant="outline" className="mt-1">,
+
                     {user && user.role}
                   </Badge>)}
 ,
+
                 {user.isModerator && (
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>)}
-              </CardHeader>,
+              
               <CardContent className="space-y-6">,
                 <div>,
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>,
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation
                   <ReputationDisplay reputation={user.reputation} size="lg" />,
-                </div>,
+                
                 <div>,
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>,
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges
                   <UserBadges badges={user.badges} />,
-                </div>,
+                
                 <div className="grid grid-cols-2 gap-4">,
                   <Card>,
                     <CardContent className="p-4 text-center">,
-                      <div className="text-2xl font-bold">{user.postCount}</div>,
-                      <p className="text-sm text-muted-foreground">Posts</p>,
-                    </CardContent>,
-                  </Card>,
+                      <div className="text-2xl font-bold">{user.postCount}
+                      <p className="text-sm text-muted-foreground">Posts
+
                   <Card>,
                     <CardContent className="p-4 text-center">,
-                      <div className="text-2xl font-bold">{user.replyCount}</div>,
-                      <p className="text-sm text-muted-foreground">Replies</p>,
-                    </CardContent>,
-                  </Card>,
-                </div>,
+                      <div className="text-2xl font-bold">{user.replyCount}
+                      <p className="text-sm text-muted-foreground">Replies
+
                 <div className="text-sm text-muted-foreground">,
-                  <p>Member since April 2025</p>,
-                </div>,
-              </CardContent>,
-            </Card>,
-          </div>,
+                  <p>Member since April 2025
+
           <div className="md: col-span-2">,
             <Tabs defaultValue="posts">,
               <TabsList>,
-                <TabsTrigger value="posts">Posts</TabsTrigger>,
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>,
-              </TabsList>,
+                <TabsTrigger value="posts">Posts
+                <TabsTrigger value="activity">Recent Activity
+              
               <TabsContent value="posts" className="mt-6">,
-                <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>,
+                <h2 className="text-xl font-bold mb-4">Posts by {user.name}
                 {posts.length > 0 ? (
                   <div className="space-y-4">,
+
                     {posts.map((post) => (
                       <PostCard key={post.id} post={post} />))}
                   </div>) : (
                   <Card>,
                     <CardContent className="p-6 text-center">,
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>,
-                    </CardContent>,
+                      <p className="text-muted-foreground">This user hasn't created any posts yet.
+                    
                   </Card>)}
-              </TabsContent>,
+              
               <TabsContent value="activity" className="mt-6">,
-                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>,
+                <h2 className="text-xl font-bold mb-4">Recent Activity
                 <Card>,
                   <CardContent className="p-6">,
                     <ul className="space-y-4">,
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover: underline">Looking for feedback on my automated testing approach</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover: underline">Looking for feedback on my automated testing approach</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Earned badge <span className="font-medium">Top Contributor</span></p>,
-                        </div>,
-                      </li>,
+                          <p>Earned badge <span className="font-medium">Top Contributor</span>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover: underline">Comparing different vector embedding models</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover: underline">Comparing different vector embedding models</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover: underline">Best practices for AI model fine-tuning</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover: underline">Best practices for AI model fine-tuning</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>,
-                        </div>,
-                      </li>,
-                    </ul>,
-                  </CardContent>,
-                </Card>,
-              </TabsContent>,
-            </Tabs>,
-          </div>,
-        </div>,
-      </div>,
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link>
+
     </AppLayout>),
+
                 {user.isModerator && (
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>)}
 ,
                 <div>,
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>,
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges
                   <UserBadges badges={user && user.badges} />,
-                </div>,
+                
                 <div className="grid grid-cols-2 gap-4">,
                   <Card>,
                     <CardContent className="p-4 text-center">,
-                      <div className="text-2xl font-bold">{user && user.postCount}</div>,
-                      <p className="text-sm text-muted-foreground">Posts</p>,
-                    </CardContent>,
-                  </Card>,
+                      <div className="text-2xl font-bold">{user && user.postCount}
+                      <p className="text-sm text-muted-foreground">Posts
+
                   <Card>,
                     <CardContent className="p-4 text-center">,
-                      <div className="text-2xl font-bold">{user && user.replyCount}</div>,
-                      <p className="text-sm text-muted-foreground">Replies</p>,
-                    </CardContent>,
-                  </Card>,
-                </div>,
+                      <div className="text-2xl font-bold">{user && user.replyCount}
+                      <p className="text-sm text-muted-foreground">Replies
+
                 <div className="text-sm text-muted-foreground">,
-                  <p>Member since April 2025</p>,
-                </div>,
-              </CardContent>,
-            </Card>,
-          </div>,
+                  <p>Member since April 2025
+
           <div className="md: col-span-2">,
             <Tabs defaultValue="posts">,
               <TabsList>,
-                <TabsTrigger value="posts">Posts</TabsTrigger>,
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>,
-              </TabsList>,
+                <TabsTrigger value="posts">Posts
+                <TabsTrigger value="activity">Recent Activity
+              
               <TabsContent value="posts" className="mt-6">,
-                <h2 className="text-xl font-bold mb-4">Posts by {user && user.name}</h2>,
+                <h2 className="text-xl font-bold mb-4">Posts by {user && user.name}
                 {posts && posts.length > 0 ? (
                   <div className="space-y-4">,
+
                     {posts && posts.map((post) => (
                       <PostCard key={post && post.id} post={post} />))}
                   </div>) : (
                   <Card>,
                     <CardContent className="p-6 text-center">,
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>,
-                    </CardContent>,
+                      <p className="text-muted-foreground">This user hasn't created any posts yet.
+                    
                   </Card>)}
 ,
-              </TabsContent>,
+              
               <TabsContent value="activity" className="mt-6">,
-                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>,
+                <h2 className="text-xl font-bold mb-4">Recent Activity
                 <Card>,
                   <CardContent className="p-6">,
                     <ul className="space-y-4">,
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover: underline">Looking for feedback on my automated testing approach</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover: underline">Looking for feedback on my automated testing approach</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Earned badge <span className="font-medium">Top Contributor</span></p>,
-                        </div>,
-                      </li>,
+                          <p>Earned badge <span className="font-medium">Top Contributor</span>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover: underline">Comparing different vector embedding models</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover: underline">Comparing different vector embedding models</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover: underline">Best practices for AI model fine-tuning</Link></p>,
-                        </div>,
-                      </li>,
+                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover: underline">Best practices for AI model fine-tuning</Link>
+
                       <li className="flex items-start gap-4">,
                         <div className="min-w-fit text-sm text-muted-foreground">,
+
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
 ,
-                        </div>,
+                        
                         <div>,
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>,
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link>
     author_id: "user1",
     author_name: "Alex Johnson",
     author_avatar: "https://i.pravatar.cc / 150?img = 3",
@@ -571,8 +560,8 @@ export default function CommunityProfilePage() {
     upvotes: 36,
     downvotes: 1,
     reply_count: 8}
-  {
-    id: "12",
+  {,
+id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
     author_id: "user1",
@@ -589,45 +578,44 @@ export default function CommunityProfilePage() {
 ],
 export default /**,
  * CommunityProfilePage - Function description,
- */,
-function CommunityProfilePage() {
-  const { user_id } = use_params (),
-  const [user, set_user] = useState < CommunityUser | null>(null),
-  const [is_loading, setIsLoading] = useState (true),
-  const [posts, set_posts] = useState < ForumPost[]>([]),
+ */,;
+function CommunityProfilePage() {;
+const { user_id } = use_params (),;
+const [user, set_user] = useState < CommunityUser | null>(null),;
+const [is_loading, setIsLoading] = useState (true),;
+const [posts, set_posts] = useState < ForumPost[]>([]),
   useEffect (() => {
     // In a real app, we would fetch the user data here,
     // For now, we'll just use the mock data,
     set_user (mock_user),
     set_posts (user_posts),
-    setIsLoading (false)}, [user_id]),
-  // Check condition,
+    setIsLoading (false)},
+ [user_id]),
+  // Check condition,;
 if ( {) {
   $2}
     return (
       <AppLayout>,
         <div className="container py - 8">,
           <div className="flex justify - center items - center h - 64">,
-            <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>,
-          </div>,
-        </div>,
+            <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple">
+
       </AppLayout>)}
-  // Check condition,
+  // Check condition,;
 if ( {) {
   $2}
     return (
       <AppLayout>,
         <div className="container py - 8">,
-          <h1 > User not found</h1>,
+          <h1 > User not found
           <Button as_child className="mt - 4">,
-            <Link to="/community">Back to Community</Link>,
-          </Button>,
-        </div>,
+            <Link to="/community">Back to Community
+
       </AppLayout>)}
   return (
     <AppLayout>,
-      <SEO
-        title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
+      <SEO,
+title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />,
@@ -635,12 +623,12 @@ if ( {) {
         <div className="flex items - center gap - 3 mb - 6">,
           <Link to="/community" className="text - sm text - muted - foreground hover: text - foreground">,
             Forum,
-          </Link>,
-          <span className="text - muted - foreground">/</span>,
-          <span className="text - sm font - medium">Profile</span>,
-          <span className="text - muted - foreground">/</span>,
-          <span className="text - sm font - medium">{user.name}</span>,
-        </div>,
+          
+          <span className="text - muted - foreground">/
+          <span className="text - sm font - medium">Profile
+          <span className="text - muted - foreground">/
+          <span className="text - sm font - medium">{user.name}
+        
         <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 8">,
           <div className="md:col - span - 1">,
             <Card>,
@@ -648,124 +636,112 @@ if ( {) {
                 <div className="flex justify - center mb - 4">,
                   <Avatar className="h - 24 w - 24">,
                     <AvatarImage src={user.avatar} />,
-                    <AvatarFallback>{user.name.char_at (0)}</AvatarFallback>,
-                  </Avatar>,
-                </div>,
+                    <AvatarFallback>{user.name.char_at (0)}
+
                 <CardTitle className="text - 2xl flex items - center justify - center gap - 2">,
+
                   {user.name}
                   {user.is_verified && (
                     <span className="text - blue - 500">,
                       <svg xmlns="http: //www.w3.org / 2000 / svg" view_box="0 0 24 24" fill="current_color" className="w - 5 h - 5">,
                         <path fill_rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01 - 1.549 3.397 4.491 4.491 0 01 - 1.307 3.497 4.491 4.491 0 01 - 3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01 - 3.397 - 1.549 4.49 4.49 0 01 - 3.498 - 1.306 4.491 4.491 0 01 - 1.307 - 3.498A4.49 4.49 0 012.25 12c0 - 1.357.6 - 2.573 1.549 - 3.397a4.49 4.49 0 011.307 - 3.497 4.49 4.49 0 013.497 - 1.307zm7.007 6.387a.75.75 0 10 - 1.22-.872l - 3.236 4.53L9.53 12.22a.75.75 0 00 - 1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75 - 5.25z" clip_rule="evenodd" />,
-                      </svg>,
+                      
                     </span>)}
-                </CardTitle>,
+                
                 {user.role && (
                   <Badge variant="outline" className="mt - 1">,
+
                     {user.role}
                   </Badge>)}
                 {user.is_moderator && (
                   <Badge className="mt - 2 bg - blue - 500">Moderator</Badge>)}
-              </CardHeader>,
+              
               <CardContent className="space - y-6">,
                 <div>,
-                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Reputation</h3>,
+                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Reputation
                   <ReputationDisplay reputation={user.reputation} size="lg" />,
-                </div>,
+                
                 <div>,
-                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Badges</h3>,
+                  <h3 className="text - sm font - medium text - muted - foreground mb - 2">Badges
                   <UserBadges badges={user.badges} />,
-                </div>,
+                
                 <div className="grid grid - cols - 2 gap - 4">,
                   <Card>,
                     <CardContent className="p - 4 text - center">,
-                      <div className="text - 2xl font - bold">{user.post_count}</div>,
-                      <p className="text - sm text - muted - foreground">Posts</p>,
-                    </CardContent>,
-                  </Card>,
+                      <div className="text - 2xl font - bold">{user.post_count}
+                      <p className="text - sm text - muted - foreground">Posts
+
                   <Card>,
                     <CardContent className="p - 4 text - center">,
-                      <div className="text - 2xl font - bold">{user.reply_count}</div>,
-                      <p className="text - sm text - muted - foreground">Replies</p>,
-                    </CardContent>,
-                  </Card>,
-                </div>,
+                      <div className="text - 2xl font - bold">{user.reply_count}
+                      <p className="text - sm text - muted - foreground">Replies
+
                 <div className="text - sm text - muted - foreground">,
-                  <p > Member since April 2025</p>,
-                </div>,
-              </CardContent>,
-            </Card>,
-          </div>,
+                  <p > Member since April 2025
+
           <div className="md: col - span - 2">,
             <Tabs default_value="posts">,
               <TabsList>,
-                <TabsTrigger value="posts">Posts</TabsTrigger>,
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>,
-              </TabsList>,
+                <TabsTrigger value="posts">Posts
+                <TabsTrigger value="activity">Recent Activity
+              
               <TabsContent value="posts" className="mt - 6">,
-                <h2 className="text - xl font - bold mb - 4">Posts by {user.name}</h2>,
+                <h2 className="text - xl font - bold mb - 4">Posts by {user.name}
                 {posts.length > 0 ? (
                   <div className="space - y-4">,
+
                     {posts.map ((post) => (
                       <PostCard key={post.id} post={post} />))}
                   </div>) : (
                   <Card>,
                     <CardContent className="p - 6 text - center">,
-                      <p className="text - muted - foreground">This user hasn't created any posts yet.</p>,
-                    </CardContent>,
+                      <p className="text - muted - foreground">This user hasn't created any posts yet.
+                    
                   </Card>)}
-              </TabsContent>,
+              
               <TabsContent value="activity" className="mt - 6">,
-                <h2 className="text - xl font - bold mb - 4">Recent Activity</h2>,
+                <h2 className="text - xl font - bold mb - 4">Recent Activity
                 <Card>,
                   <CardContent className="p - 6">,
                     <ul className="space - y-4">,
                       <li className="flex items - start gap - 4">,
                         <div className="min - w-fit text - sm text - muted - foreground">,
+
                           {formatDistanceToNow (new Date ("2025 - 04 - 10T14:30:00Z"), { add_suffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p > Replied to <Link to="/community / post / 3" className="text - zion - purple hover: underline">Looking for feedback on my automated testing approach</Link></p>,
-                        </div>,
-                      </li>,
+                          <p > Replied to <Link to="/community / post / 3" className="text - zion - purple hover: underline">Looking for feedback on my automated testing approach</Link>
+
                       <li className="flex items - start gap - 4">,
                         <div className="min - w-fit text - sm text - muted - foreground">,
+
                           {formatDistanceToNow (new Date ("2025 - 04 - 08T09:15:00Z"), { add_suffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p > Earned badge <span className="font - medium">Top Contributor</span></p>,
-                        </div>,
-                      </li>,
+                          <p > Earned badge <span className="font - medium">Top Contributor</span>
+
                       <li className="flex items - start gap - 4">,
                         <div className="min - w-fit text - sm text - muted - foreground">,
+
                           {formatDistanceToNow (new Date ("2025 - 04 - 05T16:40:00Z"), { add_suffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p > Replied to <Link to="/community / post / 7" className="text - zion - purple hover: underline">Comparing different vector embedding models</Link></p>,
-                        </div>,
-                      </li>,
+                          <p > Replied to <Link to="/community / post / 7" className="text - zion - purple hover: underline">Comparing different vector embedding models</Link>
+
                       <li className="flex items - start gap - 4">,
                         <div className="min - w-fit text - sm text - muted - foreground">,
+
                           {formatDistanceToNow (new Date ("2025 - 04 - 01T12:00:00Z"), { add_suffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p > Created post <Link to="/community / post / 1" className="text - zion - purple hover: underline">Best practices for AI model fine - tuning</Link></p>,
-                        </div>,
-                      </li>,
+                          <p > Created post <Link to="/community / post / 1" className="text - zion - purple hover: underline">Best practices for AI model fine - tuning</Link>
+
                       <li className="flex items - start gap - 4">,
                         <div className="min - w-fit text - sm text - muted - foreground">,
+
                           {formatDistanceToNow (new Date ("2025 - 03 - 25T08:20:00Z"), { add_suffix: true })}
-                        </div>,
+                        
                         <div>,
-                          <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion - purple hover: underline">How to optimize RAG systems for better results</Link></p>,
-                        </div>,
-                      </li>,
-                    </ul>,
-                  </CardContent>,
-                </Card>,
-              </TabsContent>,
-            </Tabs>,
-          </div>,
-        </div>,
-      </div>,
+                          <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion - purple hover: underline">How to optimize RAG systems for better results</Link>
+
     </AppLayout>)}

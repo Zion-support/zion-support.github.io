@@ -20,11 +20,11 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO",
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
-export default function EnterprisePlans() {
-  return (
+export default function EnterprisePlans() {;
+return (
     <>,
-      <SEO
-        title="Enterprise Plans - Zion AI Marketplace",
+      <SEO,
+title="Enterprise Plans - Zion AI Marketplace",
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.",
       />,
       <Header />,
@@ -35,25 +35,25 @@ export default function EnterprisePlans() {
         <EnterpriseTestimonials />,
         <EnterpriseTrustBadges />,
         <EnterpriseCTA />,
-      </main>,
+      
       <Footer />,
     </>),
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {;
+constructor(props) {
     super(props),
     this.state = { hasError: false },
   }
 ,
-  static getDerivedStateFromError(error) {
-    return { hasError: true },
+  static getDerivedStateFromError(error) {;
+return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
 ,
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>}
-,
-    return this.props.children}
+  render() {;
+if (this.state.hasError) {;
+return <div>Something went wrong.</div>}
+,;
+return this.props.children}
 }

@@ -1,33 +1,46 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import './App.css';
-// Lazy load components
-const Home = React.lazy(() => import('./pages/Home'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
-// Loading Component
-const LoadingSpinner = () => (
-  <div className='flex items-center justify-center min-h-screen'>
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
-  </div>
-);
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import Header from './components/Header';
+// import { Footer } from './components/Footer';
+import Home from './pages/Home';
+import './index.css';
 
-function App() {
+export default function App(): React.JSX.Element {
   return (
-    <div className='App'>
-      <Navigation />
-      <Suspense fallback={<LoadingSpinner />}>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <Header />
+        
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+                <p className="text-xl text-gray-600">Latest insights and updates</p>
+              </div>
+            </main>
+          } />
+          <Route path="/contact" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+                <p className="text-xl text-gray-600">Get in touch with our team</p>
+              </div>
+            </main>
+          } />
+          <Route path="*" element={
+            <main className="container mx-auto px-4 py-16 text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+              <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
+            </main>
+          } />
         </Routes>
-      </Suspense>
-    </div>
+        
+        {/* <Footer /> */}
+      </div>
+    </Router>
   );
 }
-
-export default App;

@@ -1,24 +1,12 @@
-// Removed Next.js Metadata import
-// Removed Next.js font import
-import './globals.css';
+import type { Metadata } from 'next'
+import React, { ReactNode } from 'react'
 
-// Removed Next.js font
+export const metadata: Metadata = { title: 'Zion App', description: 'Zion App' };
 
-// Removed Next.js metadata export
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
