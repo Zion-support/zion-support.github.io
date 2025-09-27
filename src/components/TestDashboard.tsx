@@ -47,7 +47,7 @@ class TestRunner {
   }
 
   addSuite(name: string): TestSuite {
-    const suite: TestSuite = {
+    const suite: TestSuite = {}
       id: `suite_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       name,
       tests: [],
@@ -61,7 +61,7 @@ class TestRunner {
     const suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
-    const test: TestResult = {
+    const test: TestResult = {}
       id: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       name,
       status: 'pending',

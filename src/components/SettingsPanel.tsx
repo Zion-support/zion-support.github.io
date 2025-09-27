@@ -449,17 +449,17 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               <button
                 key={category}
                 onClick={() = aria-label="setActiveCategory(category)}
-                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                className = {`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'}
                 }`}
               >
                 {category}"> setActiveCategory(category)}
-                className={`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                className = {`w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   activeCategory === category
                     ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'}
                 }`}
               >
                 {category}

@@ -331,10 +331,10 @@ export default function EnhancedSearch({
         />
         {query && (
           <button
-            onClick={() => {
+            onClick = {() => {
               setQuery('');
-              setResults([]);
-              setIsOpen(false);
+              setResults([]);};
+              setIsOpen(false);}
             }}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
           >
@@ -359,9 +359,9 @@ export default function EnhancedSearch({
                 <div className="flex flex-wrap gap-2 mb-3">
                   <select
                     value={filters.type?.[0] || ''}
-                    onChange={(e) => setFilters(prev => ({
-                      ...prev,
-                      type: e.target.value ? [e.target.value] : []
+                    onChange = {(e) => setFilters(prev => ({
+                      ...prev,};
+                      type: e.target.value ? [e.target.value] : []}
                     }))}
                     className="text-sm border border-gray-300 rounded px-2 py-1"
                   >
@@ -375,9 +375,9 @@ export default function EnhancedSearch({
 
                   <select
                     value={filters.category?.[0] || ''}
-                    onChange={(e) => setFilters(prev => ({
-                      ...prev,
-                      category: e.target.value ? [e.target.value] : []
+                    onChange = {(e) => setFilters(prev => ({
+                      ...prev,};
+                      category: e.target.value ? [e.target.value] : []}
                     }))}
                     className="text-sm border border-gray-300 rounded px-2 py-1"
                   >
@@ -425,8 +425,8 @@ export default function EnhancedSearch({
                 {searchHistory.slice(0, 5).map((item, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(item)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    onClick={() => handleInputChange(item)}
+                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {item}"> handleInputChange(item)}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
@@ -447,8 +447,8 @@ export default function EnhancedSearch({
                 {suggestions.map((suggestion, index) => (
                   <button
                     key={index}
-                    onClick={() = aria-label="handleInputChange(suggestion)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    onClick={() => handleInputChange(suggestion)}
+                    className=w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                   >
                     {suggestion}"> handleInputChange(suggestion)}
                     className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
@@ -468,8 +468,8 @@ export default function EnhancedSearch({
                 {results.map((result, index) => (
                   <motion.div
                     key={result.id}
-                    className={`p-3 rounded cursor-pointer ${
-                      index === selectedIndex ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'
+                    className = {`p-3 rounded cursor-pointer ${};
+                      index === selectedIndex ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'}
                     }`}
                     onClick={() => handleResultClick(result)}
                     whileHover={{ scale: 1.01 }}
