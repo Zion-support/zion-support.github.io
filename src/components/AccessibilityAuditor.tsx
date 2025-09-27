@@ -21,23 +21,23 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
       images.forEach((img) => {
         if (!img.getAttribute('alt')) {
           issues.push({
-            type: 'error',
-            message: 'Image missing alt attribute',
-            element: img,
+            type: 'error'
+            message: 'Image missing alt attribute'
+            element: img
             rule: 'img-alt'
           });
         }
       });
       
       // Check for missing form labels
-      const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]');
+      const inputs = document.querySelectorAll('input[type="text"] input[type="email"] input[type="password"]');
       inputs.forEach((input) => {
         const id = input.getAttribute('id');
         if (id && !document.querySelector(`label[for="${id}"]`)) {
           issues.push({
-            type: 'warning',
-            message: 'Input missing associated label',
-            element: input as HTMLElement,
+            type: 'warning'
+            message: 'Input missing associated label'
+            element: input as HTMLElement
             rule: 'label'
           });
         }
@@ -49,7 +49,7 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
     };
     
     checkAccessibility();
-  }, [onIssuesFound]);
+  } [onIssuesFound]);
   
   return null;
 }

@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React { useState useEffect useMemo useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 // Lazy load heavy components to reduce initial bundle size
-// const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
-//   ssr: false,
+// const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })) {
+//   ssr: false
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })), {
-//   ssr: false,
+// const SecurityDashboard = dynamic(() => import('../src/components/SecurityDashboard').then(mod => ({ default: mod.SecurityDashboard })) {
+//   ssr: false
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
 export default function Dashboard(): JSX.Element {
-  const [activeTab, setActiveTab] = useState('comprehensive');
-  const [isRealTime, setIsRealTime] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [activeTab setActiveTab] = useState('comprehensive');
+  const [isRealTime setIsRealTime] = useState(false);
+  const [isLoading setIsLoading] = useState(false);
+  const [error setError] = useState<string | null>(null);
   const { trackClick } = useAnalytics();
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    trackClick(`dashboard-tab-${tab}`, 'navigation');
+    trackClick(`dashboard-tab-${tab}` 'navigation');
   };
 
   const renderDashboard = () => {
@@ -44,8 +44,8 @@ export default function Dashboard(): JSX.Element {
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
       <div className="max-w-2xl">
               {/* <EnhancedSearch 
-                onSearch={(query, results) => console.log('Search:', query, results)}
-                onResultClick={(result) => console.log('Result clicked:', result)}
+                onSearch={(query results) => console.log('Search:' query results)}
+                onResultClick={(result) => console.log('Result clicked:' result)}
                 enableFilters={true}
                 enableSuggestions={true}
                 enableHistory={true}
@@ -83,7 +83,7 @@ export default function Dashboard(): JSX.Element {
       <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Total Users</p>
-                    <p className="text-2 xl font-bold text-gray-900">1,234</p>
+                    <p className="text-2 xl font-bold text-gray-900">1234</p>
                   </div>
       <div className="bg-blue-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default function Dashboard(): JSX.Element {
       <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm">Revenue</p>
-                    <p className="text-2 xl font-bold text-gray-900">$12,345</p>
+                    <p className="text-2 xl font-bold text-gray-900">$12345</p>
                   </div>
       <div className="bg-yellow-100 p-3 rounded-full">
                     <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,8 +147,8 @@ export default function Dashboard(): JSX.Element {
                 </div>              </div>
             </div>
             <SystemMonitor 
-              onAlert={(alert) => console.log('System alert:', alert)}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+              onAlert={(alert) => console.log('System alert:' alert)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
             />
@@ -214,7 +214,7 @@ export default function Dashboard(): JSX.Element {
             <SecurityMonitor 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
-              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
+              onSecurityAlert={(alert) => console.log('Security alert:' alert)}
             />
           </div>
         );
@@ -261,7 +261,7 @@ export default function Dashboard(): JSX.Element {
             <EnhancedAnalytics 
               refreshInterval={isRealTime ? 10000 : 60000}
               enableRealTime={isRealTime}
-              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
             />
           </div>
         );
@@ -294,8 +294,8 @@ export default function Dashboard(): JSX.Element {
               </div>
             </div>
             {/* <AdvancedErrorHandler 
-              onError={(error) => console.log('Error captured:', error)}
-              onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
+              onError={(error) => console.log('Error captured:' error)}
+              onPerformanceIssue={(issue) => console.log('Performance issue:' issue)}
               enableAutoRetry={true}
               maxRetries={3}
               enablePerformanceMonitoring={true}
@@ -338,46 +338,46 @@ export default function Dashboard(): JSX.Element {
             {/* <AdvancedAnalyticsInsights 
               timeRange="30d"
               data={{
-                pageViews: 125000,
-                uniqueVisitors: 45000,
-                bounceRate: 35.2,
-                avgSessionDuration: 180,
-                conversionRate: 12.5,
+                pageViews: 125000
+                uniqueVisitors: 45000
+                bounceRate: 35.2
+                avgSessionDuration: 180
+                conversionRate: 12.5
                 topPages: [
-                  { page: '/', views: 25000, bounceRate: 28.5, avgTime: 120 },
-                  { page: '/services', views: 18000, bounceRate: 32.1, avgTime: 95 },
-                  { page: '/blog', views: 15000, bounceRate: 45.2, avgTime: 180 }
-                ],
+                  { page: '/' views: 25000 bounceRate: 28.5 avgTime: 120 }
+                  { page: '/services' views: 18000 bounceRate: 32.1 avgTime: 95 }
+                  { page: '/blog' views: 15000 bounceRate: 45.2 avgTime: 180 }
+                ]
                 trafficSources: [
-                  { source: 'Organic Search', visitors: 25000, percentage: 55.6, conversionRate: 12.5 },
-                  { source: 'Direct', visitors: 12000, percentage: 26.7, conversionRate: 15.2 },
-                  { source: 'Social Media', visitors: 8000, percentage: 17.8, conversionRate: 8.9 }
-                ],
+                  { source: 'Organic Search' visitors: 25000 percentage: 55.6 conversionRate: 12.5 }
+                  { source: 'Direct' visitors: 12000 percentage: 26.7 conversionRate: 15.2 }
+                  { source: 'Social Media' visitors: 8000 percentage: 17.8 conversionRate: 8.9 }
+                ]
                 deviceTypes: [
-                  { device: 'Desktop', visitors: 25000, percentage: 55.6 },
-                  { device: 'Mobile', visitors: 15000, percentage: 33.3 },
-                  { device: 'Tablet', visitors: 5000, percentage: 11.1 }
-                ],
+                  { device: 'Desktop' visitors: 25000 percentage: 55.6 }
+                  { device: 'Mobile' visitors: 15000 percentage: 33.3 }
+                  { device: 'Tablet' visitors: 5000 percentage: 11.1 }
+                ]
                 userBehavior: [
-                  { action: 'page_view', count: 1250, trend: 'up' },
-                  { action: 'click', count: 890, trend: 'stable' },
-                  { action: 'scroll', count: 2100, trend: 'down' }
-                ],
+                  { action: 'page_view' count: 1250 trend: 'up' }
+                  { action: 'click' count: 890 trend: 'stable' }
+                  { action: 'scroll' count: 2100 trend: 'down' }
+                ]
                 performance: {
-                  pageLoadTime: 1.2,
-                  firstContentfulPaint: 0.8,
-                  largestContentfulPaint: 1.5,
-                  cumulativeLayoutShift: 0.1,
+                  pageLoadTime: 1.2
+                  firstContentfulPaint: 0.8
+                  largestContentfulPaint: 1.5
+                  cumulativeLayoutShift: 0.1
                   firstInputDelay: 50
-                },
+                }
                 realTime: [
-                  { activeUsers: 45, currentPage: '/', location: 'US', device: 'desktop' },
-                  { activeUsers: 23, currentPage: '/services', location: 'CA', device: 'mobile' }
+                  { activeUsers: 45 currentPage: '/' location: 'US' device: 'desktop' }
+                  { activeUsers: 23 currentPage: '/services' location: 'CA' device: 'mobile' }
                 ]
               }}
               enableRealTime={true}
               refreshInterval={30000}
-              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
+              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
             /> */}
       <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
@@ -399,7 +399,7 @@ export default function Dashboard(): JSX.Element {
             {/* <ComprehensiveMonitoringDashboard 
               refreshInterval={5000}
               enableRealTimeUpdates={true}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
             /> */}
           </div>
         );
@@ -420,7 +420,7 @@ export default function Dashboard(): JSX.Element {
             {/* <ComprehensiveSecurityDashboard 
               refreshInterval={10000}
               enableRealTimeMonitoring={true}
-              onSecurityUpdate={(metrics) => console.log('Security metrics updated:', metrics)}
+              onSecurityUpdate={(metrics) => console.log('Security metrics updated:' metrics)}
             /> */}
           </div>
         );
@@ -495,8 +495,8 @@ export default function Dashboard(): JSX.Element {
     <>
       <Head>
         <title>Advanced Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring, security analysis, SEO optimization, and accessibility insights" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Comprehensive analytics dashboard with advanced performance monitoring security analysis SEO optimization and accessibility insights" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Navigation */}

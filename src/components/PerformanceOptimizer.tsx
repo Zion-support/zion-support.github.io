@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect useState } from 'react';
 import dynamic from "next/dynamic";
 
 interface PerformanceOptimizerProps {
@@ -8,14 +8,14 @@ interface PerformanceOptimizerProps {
 }
 
 export default function PerformanceOptimizer({ 
-  enableServiceWorker = true,
-  enableLazyLoading = true,
+  enableServiceWorker = true
+  enableLazyLoading = true
   enableImageOptimization = true
 }: PerformanceOptimizerProps) {
-  const [isOptimized, setIsOptimized] = useState(false);
-  const [memoryUsage, setMemoryUsage] = useState({
-    used: 0,
-    total: 0,
+  const [isOptimized setIsOptimized] = useState(false);
+  const [memoryUsage setMemoryUsage] = useState({
+    used: 0
+    total: 0
     percentage: 0
   });
 
@@ -43,15 +43,15 @@ export default function PerformanceOptimizer({
         if ("memory" in performance) {
           const memory = (performance as any).memory;
           setMemoryUsage({
-            used: memory.usedJSHeapSize,
-            total: memory.totalJSHeapSize,
+            used: memory.usedJSHeapSize
+            total: memory.totalJSHeapSize
             percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
           });
         }
       };
       
       updateMemoryUsage();
-      const interval = setInterval(updateMemoryUsage, 5000);
+      const interval = setInterval(updateMemoryUsage 5000);
       
       setIsOptimized(true);
       
@@ -59,7 +59,7 @@ export default function PerformanceOptimizer({
     };
     
     optimizePerformance();
-  }, [enableLazyLoading]);
+  } [enableLazyLoading]);
   
   return (
     <div className="performance-optimizer">

@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React { useState useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState(new Set());
-  const [isVisible, setIsVisible] = useState(false);
+  const [searchTerm setSearchTerm] = useState('');
+  const [openItems setOpenItems] = useState(new Set());
+  const [isVisible setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  } []);
 
   const { trackClick } = useAnalytics();
 
   const faqData = [
     {
-      category: 'General',
+      category: 'General'
       questions: [
         {
-          question: 'What services do you offer?',
-          answer: 'We offer comprehensive technology solutions including AI development, cloud infrastructure, digital transformation, cybersecurity, and more.'
-        },
+          question: 'What services do you offer?'
+          answer: 'We offer comprehensive technology solutions including AI development cloud infrastructure digital transformation cybersecurity and more.'
+        }
         {
-          question: 'How can I get started?',
+          question: 'How can I get started?'
           answer: 'Contact us through our contact page or call us directly. We will schedule a consultation to discuss your needs.'
-        },
+        }
         {
-          question: 'Do you provide ongoing support?',
-          answer: 'Yes, we provide comprehensive ongoing support and maintenance for all our solutions.'
+          question: 'Do you provide ongoing support?'
+          answer: 'Yes we provide comprehensive ongoing support and maintenance for all our solutions.'
         }
       ]
     }
@@ -42,11 +42,11 @@ export default function FAQ(): JSX.Element {
       newOpenItems.add(id);
     }
     setOpenItems(newOpenItems);
-    trackClick(`faq-toggle-${id}`, 'interaction');
+    trackClick(`faq-toggle-${id}` 'interaction');
   };
 
   const filteredData = faqData.map(category => ({
-    ...category,
+    ...category
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
@@ -57,8 +57,8 @@ export default function FAQ(): JSX.Element {
     <>
       <Head>
         <title>FAQ - Zion App</title>
-        <meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Find answers to frequently asked questions about Zion App's services development process pricing and technology solutions." />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -73,7 +73,7 @@ export default function FAQ(): JSX.Element {
               Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our services, development process, and technology solutions.
+              Find answers to common questions about our services development process and technology solutions.
             </p>
           </header>
 
@@ -89,12 +89,12 @@ export default function FAQ(): JSX.Element {
             </div>
 
             <div className="space-y-6">
-              {filteredData.map((category, categoryIndex) => (
+              {filteredData.map((category categoryIndex) => (
                 <div key={categoryIndex} className="bg-white rounded-xl shadow-sm overflow-hidden">
                   <div className="p-6">
                     <h2 className="text-xl font-semibold text-gray-900 mb-4">{category.category}</h2>
                     <div className="space-y-4">
-                      {category.questions.map((faq, index) => {
+                      {category.questions.map((faq index) => {
                         const id = categoryIndex * 100 + index;
                         const isOpen = openItems.has(id);
                         return (
