@@ -53,27 +53,27 @@ export default function Blog(): JSX.Element {
 
 	// Pagination
 	const totalPages = Math.ceil(regularPosts.length / postsPerPage);
-	const paginatedPosts = useMemo(() => {
+	const, paginatedPosts = useMemo(() => {
 		const startIndex = (currentPage - 1) * postsPerPage;
 		return regularPosts.slice(startIndex, startIndex + postsPerPage)}, [regularPosts, currentPage, postsPerPage]);
 
 	// Handlers
-	const handleSearch = (query: string) => {
+	const handleSearch = (query:, string) => {
 		setSearchQuery(query);
 		setCurrentPage(1);
 		trackClick('blog-search', 'search')};
 
-	const handleCategoryFilter = (category: string) => {
+	const handleCategoryFilter = (category:, string) => {
 		setSelectedCategory(category.toLowerCase());
 		setCurrentPage(1);
 		trackClick(`blog-category-${category}`, 'filter')};
 
-	const handleReadMore = (post: any) => {
+	const handleReadMore = (post:, any) => {
 		trackClick(`read-post-${post.id}`, 'cta');
 		// Navigate to post detail page or open modal
 		console.log('Read more:', post.title)};
 
-	const handleBookmark = (post: any) => {
+	const handleBookmark = (post:, any) => {
 		const newBookmarks = new Set(bookmarkedPosts);
 		if (newBookmarks.has(post.id)) {
 			newBookmarks.delete(post.id)} else {
@@ -82,13 +82,12 @@ export default function Blog(): JSX.Element {
 		localStorage.setItem('blog-bookmarks', JSON.stringify([...newBookmarks]));
 		trackClick(`bookmark-post-${post.id}`, 'engagement')};
 
-	const handleNewsletterSubscribe = async (email: string) => {
+	const handleNewsletterSubscribe = async (email:, string) => {
 		setIsNewsletterLoading(true);
 		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve  1000));
+		await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
 		setIsNewsletterLoading(false)};
-
 	return (
 		<>
 			<EnhancedSEO
@@ -99,9 +98,9 @@ export default function Blog(): JSX.Element {
 				type="website"
 			/>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -136,9 +135,9 @@ export default function Blog(): JSX.Element {
 								<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
 									Featured Articles
 								</h2>
-								<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 									<AnimatePresence>
-										{featuredPosts.map((post  index) => (
+										{featuredPosts.map((post , index) => (
 											<motion.div
 												key={post.id}
 												initial={{ opacity: 0, y: 20 }}
@@ -167,9 +166,9 @@ export default function Blog(): JSX.Element {
 							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
 								{selectedCategory === 'all' ? 'Latest Articles' : `${selectedCategory} Articles`}
 							</h2>
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 								<AnimatePresence mode="wait">
-									{paginatedPosts.map((post  index) => (
+									{paginatedPosts.map((post , index) => (
 										<motion.div
 											key={post.id}
 											initial={{ opacity: 0, y: 20 }}

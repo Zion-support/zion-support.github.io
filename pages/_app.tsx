@@ -36,10 +36,9 @@ export default function App({ Component, pageProps }: AppProps) {
         .catch((error) => {
           console.log('Service Worker registration failed:', error)})}
   }, []);
-
-  return (
+	return (
     <HelmetProvider>
-          <Head>
+			<Head>
             <meta charSet="utf-8" />
             <meta name="robots" content="index  follow" />
             <meta name="author" content="Zion App" />
@@ -55,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="apple-touch-icon" href="/icon-192x192.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-          </Head>
+			</Head>
       <style jsx global>{`
         * {
           box-sizing: border-box}

@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
       return () => observer.disconnect()}
   }, []);
 
-  const handleGetStarted = useCallback(() => {
+  const, handleGetStarted = useCallback(() => {
     // Track user interaction
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
@@ -75,7 +75,7 @@ export default function Home(): JSX.Element {
       })}
   }, []);
 
-  const features = useMemo(() => [
+  const, features = useMemo(() => [
     {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
@@ -105,9 +105,8 @@ export default function Home(): JSX.Element {
       delay: 0.4
     }
   ], []);
-
-  return (
-    <>
+	return (
+		<>
       <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
@@ -123,7 +122,7 @@ export default function Home(): JSX.Element {
           'enterprise solutions'
         ]}
       />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
         <section 
@@ -137,11 +136,10 @@ export default function Home(): JSX.Element {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+			<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl animate-pulse"></div>
+			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </motion.div>
-
-          <div className="max-w-7xl mx-auto relative z-10">
+			<div className="max-w-7xl mx-auto relative z-10">
             <motion.div
               className="text-center"
               initial={{ y: 50, opacity: 0 }}
@@ -172,14 +170,14 @@ export default function Home(): JSX.Element {
                 animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <Link 
+					<Link 
                   href="/dashboard" 
                   onClick={handleGetStarted}
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   View Dashboard
                 </Link>
-                <Link 
+					<Link 
                   href="/services" 
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600 hover:shadow-xl"
                 >
@@ -195,7 +193,7 @@ export default function Home(): JSX.Element {
           ref={featuresRef}
           className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
         >
-          <div className="max-w-7xl mx-auto">
+			<div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
               initial={{ y: 30, opacity: 0 }}
@@ -207,8 +205,8 @@ export default function Home(): JSX.Element {
                 We deliver innovative technology solutions that drive business growth and operational excellence.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature  index) => (
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature , index) => (
                 <motion.div 
                   key={index}
                   initial={{ y: 50, opacity: 0 }}
@@ -217,7 +215,7 @@ export default function Home(): JSX.Element {
                   whileHover={{ y: -5 }}
                   className="group"
                 >
-                  <div className="text-center p-6 rounded-2xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
+			<div className="text-center p-6 rounded-2xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
                     <motion.div 
                       className={`w-20 h-20 bg-gradient-to-br ${
                         feature.color === 'blue' ? 'from-blue-100 to-blue-200' :
@@ -244,21 +242,21 @@ export default function Home(): JSX.Element {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
+			<div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Get started with our comprehensive suite of AI-powered solutions and cloud services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+			<div className="flex flex-col sm:flex-row gap-4 justify-center">
+					<Link 
                 href="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
               >
                 Get Started Today
               </Link>
-              <Link 
+					<Link 
                 href="/portfolio" 
                 className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 border-2 border-white font-semibold"
               >
@@ -270,25 +268,25 @@ export default function Home(): JSX.Element {
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+			<div className="max-w-7xl mx-auto">
+			<div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Zion Tech transformed our business with their AI solutions. Highly recommended!&quot;</p>
-                <div className="font-semibold text-gray-900">- Sarah Johnson  CEO</div>
+			<div className="font-semibold text-gray-900">- Sarah Johnson  CEO</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Outstanding cloud migration service. Professional and efficient team.&quot;</p>
-                <div className="font-semibold text-gray-900">- Michael Chen  CTO</div>
+			<div className="font-semibold text-gray-900">- Michael Chen  CTO</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+			<div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-600 mb-4">&quot;Excellent support and innovative solutions. Great partnership!&quot;</p>
-                <div className="font-semibold text-gray-900">- Emily Rodriguez  Director</div>
+			<div className="font-semibold text-gray-900">- Emily Rodriguez  Director</div>
               </div>
             </div>
           </div>
@@ -296,15 +294,14 @@ export default function Home(): JSX.Element {
 
         {/* Advanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+			<div className="max-w-7xl mx-auto">
+			<div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Advanced Monitoring & Analytics</h2>
               <p className="text-xl text-gray-300">
                 Real-time performance monitoring  security analysis  and accessibility auditing
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -349,8 +346,8 @@ export default function Home(): JSX.Element {
                       { country: 'Canada', visitors: 1234, percentage: 13.8 },
                       { country: 'United Kingdom', visitors: 987, percentage: 11.1 }
                     ],
-                    hourlyData: Array.from({ length: 24 }, (_  i) => ({ hour: i  visitors: Math.floor(Math.random() * 100) })),
-                    dailyData: Array.from({ length: 30 }, (_  i) => ({ 
+                    hourlyData: Array.from(_ ,, (i, $3) => ({ hour: i  visitors: Math.floor(Math.random() * 100) })),
+                    dailyData: Array.from(_ ,, (i, $3) => ({ 
                       date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
                       visitors: Math.floor(Math.random() * 500) + 200,
                       pageViews: Math.floor(Math.random() * 800) + 400
@@ -368,8 +365,7 @@ export default function Home(): JSX.Element {
                 /> */}
               </motion.div>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -421,15 +417,15 @@ export default function Home(): JSX.Element {
 
         {/* Analytics Dashboard Link */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Monitor Your Website Performance
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Get comprehensive insights into your website&apos;s performance  accessibility  and SEO with our advanced analytics dashboard.
               </p>
-              <Link href="/analytics">
+					<Link href="/analytics">
                 <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
@@ -439,5 +435,5 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
-    </>
+		</>
   )}

@@ -79,7 +79,6 @@ export default function About(): JSX.Element {
 		{ number: '10+', label: 'Years Experience' },
 		{ number: '24/7', label: 'Support Available' }
 	];
-
 	return (
 		<>
 			<Head>
@@ -88,9 +87,9 @@ export default function About(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -109,8 +108,8 @@ export default function About(): JSX.Element {
 						<section className={`mb-20 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-								<div className="text-center mb-12">
+			<div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+			<div className="text-center mb-12">
 									<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
 										Our Mission
 									</h2>
@@ -120,14 +119,13 @@ export default function About(): JSX.Element {
 										compete  and succeed in the digital age.
 									</p>
 								</div>
-
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-									{stats.map((stat  index) => (
-										<div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
-											<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+									{stats.map((stat , index) => (
+			<div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
+			<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 												{stat.number}
 											</div>
-											<div className="text-gray-600 font-medium">
+			<div className="text-gray-600 font-medium">
 												{stat.label}
 											</div>
 										</div>
@@ -140,7 +138,7 @@ export default function About(): JSX.Element {
 						<section className={`mb-20 transition-all duration-700 delay-200 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="text-center mb-12">
+			<div className="text-center mb-12">
 								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Our Values
 								</h2>
@@ -148,15 +146,14 @@ export default function About(): JSX.Element {
 									The principles that guide everything we do
 								</p>
 							</div>
-
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-								{values.map((value  index) => (
-									<div key={index} className={`transform transition-all duration-700 delay-${300 + index * 100} ${
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+								{values.map((value , index) => (
+			<div key={index} className={`transform transition-all duration-700 delay-${300 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
-										<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 h-full">
-											<div className="flex items-start space-x-4">
-												<div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl ${
+			<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 h-full">
+			<div className="flex items-start space-x-4">
+			<div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl ${
 													value.color === 'blue' ? 'bg-blue-100' :
 													value.color === 'green' ? 'bg-green-100' :
 													value.color === 'purple' ? 'bg-purple-100' :
@@ -164,7 +161,7 @@ export default function About(): JSX.Element {
 												}`}>
 													{value.icon}
 												</div>
-												<div className="flex-1">
+			<div className="flex-1">
 													<h3 className="text-xl font-semibold text-gray-800 mb-3">
 														{value.title}
 													</h3>
@@ -183,7 +180,7 @@ export default function About(): JSX.Element {
 						<section className={`mb-20 transition-all duration-700 delay-500 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="text-center mb-12">
+			<div className="text-center mb-12">
 								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Meet Our Team
 								</h2>
@@ -191,14 +188,13 @@ export default function About(): JSX.Element {
 									The experts behind our innovative solutions
 								</p>
 							</div>
-
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-								{teamMembers.map((member  index) => (
-									<div key={index} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+								{teamMembers.map((member , index) => (
+			<div key={index} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
-										<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
-											<div className="text-6xl mb-4">{member.image}</div>
+			<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
+			<div className="text-6xl mb-4">{member.image}</div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-2">
 												{member.name}
 											</h3>
@@ -221,7 +217,7 @@ export default function About(): JSX.Element {
 						<section className={`mb-20 transition-all duration-700 delay-700 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="text-center mb-12">
+			<div className="text-center mb-12">
 								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Our Expertise
 								</h2>
@@ -229,8 +225,7 @@ export default function About(): JSX.Element {
 									Cutting-edge technologies and methodologies we master
 								</p>
 							</div>
-
-							<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+			<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 								{[
 									{ name: 'Artificial Intelligence', icon: '🤖' },
 									{ name: 'Cloud Computing', icon: '☁️' },
@@ -240,9 +235,9 @@ export default function About(): JSX.Element {
 									{ name: 'Cybersecurity', icon: '🔒' },
 									{ name: 'DevOps', icon: '⚙️' },
 									{ name: 'UI/UX Design', icon: '🎨' }
-								].map((tech  index) => (
-									<div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
-										<div className="text-3xl mb-3">{tech.icon}</div>
+								].map((tech , index) => (
+			<div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
+			<div className="text-3xl mb-3">{tech.icon}</div>
 										<h3 className="text-sm font-medium text-gray-800">{tech.name}</h3>
 									</div>
 								))}
@@ -253,20 +248,19 @@ export default function About(): JSX.Element {
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-800 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="absolute inset-0 opacity-10">
-								<div className="absolute inset-0" style={{
+			<div className="absolute inset-0 opacity-10">
+			<div className="absolute inset-0" style={{
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-							
-							<div className="relative z-10">
+			<div className="relative z-10">
 								<h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Work Together?
 								</h2>
 								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss how we can help transform your business with innovative technology solutions.
 								</p>
-								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-									<Link href="/contact">
+			<div className="flex flex-col sm:flex-row gap-6 justify-center">
+					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('get-started-button', 'cta')}
 											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"

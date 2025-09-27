@@ -116,7 +116,6 @@ export default function Contact(): JSX.Element {
 		'6+ months',
 		'Flexible'
 	];
-
 	return (
 		<>
 			<SEO />
@@ -127,9 +126,9 @@ export default function Contact(): JSX.Element {
 				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -144,31 +143,31 @@ export default function Contact(): JSX.Element {
 					</header>
 
 					<main>
-						<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
 							{/* Contact Form */}
-							<div className={`transition-all duration-700 delay-100 ${
+			<div className={`transition-all duration-700 delay-100 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<div className="bg-white rounded-3xl shadow-2xl p-8">
+			<div className="bg-white rounded-3xl shadow-2xl p-8">
 									<h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
 										Send us a Message
 									</h2>
 									
 									{submitStatus === 'success' && (
-										<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+			<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
 											Thank you for your message! We&apos;ll get back to you within 24 hours.
 										</div>
 									)}
 									
 									{submitStatus === 'error' && (
-										<div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+			<div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
 											There was an error sending your message. Please try again.
 										</div>
 									)}
 
 									<form onSubmit={handleSubmit} className="space-y-6">
-										<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-											<div>
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div>
 												<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
 													Full Name *
 												</label>
@@ -182,8 +181,7 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												/>
 											</div>
-
-											<div>
+			<div>
 												<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 													Email Address *
 												</label>
@@ -198,9 +196,8 @@ export default function Contact(): JSX.Element {
 												/>
 											</div>
 										</div>
-
-										<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-											<div>
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div>
 												<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
 													Company
 												</label>
@@ -213,8 +210,7 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												/>
 											</div>
-
-											<div>
+			<div>
 												<label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
 													Phone Number
 												</label>
@@ -228,9 +224,8 @@ export default function Contact(): JSX.Element {
 												/>
 											</div>
 										</div>
-
-										<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-											<div>
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div>
 												<label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
 													Service Interest
 												</label>
@@ -242,13 +237,12 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												>
 													<option value="">Select a service</option>
-													{services.map((service  index) => (
+													{services.map((service , index) => (
 														<option key={index} value={service}>{service}</option>
 													))}
 												</select>
 											</div>
-
-											<div>
+			<div>
 												<label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
 													Budget Range
 												</label>
@@ -260,14 +254,13 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												>
 													<option value="">Select budget range</option>
-													{budgetRanges.map((range  index) => (
+													{budgetRanges.map((range , index) => (
 														<option key={index} value={range}>{range}</option>
 													))}
 												</select>
 											</div>
 										</div>
-
-										<div>
+			<div>
 											<label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
 												Project Timeline
 											</label>
@@ -279,13 +272,12 @@ export default function Contact(): JSX.Element {
 												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 											>
 												<option value="">Select timeline</option>
-												{timelines.map((timeline  index) => (
+												{timelines.map((timeline , index) => (
 													<option key={index} value={timeline}>{timeline}</option>
 												))}
 											</select>
 										</div>
-
-										<div>
+			<div>
 											<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 												Message *
 											</label>
@@ -323,19 +315,19 @@ export default function Contact(): JSX.Element {
 							</div>
 
 							{/* Contact Information */}
-							<div className={`transition-all duration-700 delay-200 ${
+			<div className={`transition-all duration-700 delay-200 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<div className="space-y-8">
-									<div className="bg-white rounded-3xl shadow-2xl p-8">
+			<div className="space-y-8">
+			<div className="bg-white rounded-3xl shadow-2xl p-8">
 										<h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
 											Get in Touch
 										</h2>
-										<div className="space-y-6">
-											{contactInfo.map((info  index) => (
-												<div key={index} className="flex items-start space-x-4">
-													<div className="text-2xl">{info.icon}</div>
-													<div>
+			<div className="space-y-6">
+											{contactInfo.map((info , index) => (
+			<div key={index} className="flex items-start space-x-4">
+			<div className="text-2xl">{info.icon}</div>
+			<div>
 														<h3 className="text-lg font-semibold text-gray-800 mb-1">
 															{info.title}
 														</h3>
@@ -350,8 +342,7 @@ export default function Contact(): JSX.Element {
 											))}
 										</div>
 									</div>
-
-									<div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl shadow-2xl p-8 text-white">
+			<div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl shadow-2xl p-8 text-white">
 										<h3 className="text-xl font-semibold mb-4">Why Choose Zion App?</h3>
 										<ul className="space-y-3">
 											<li className="flex items-center">

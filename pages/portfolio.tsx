@@ -112,7 +112,6 @@ export default function Portfolio(): JSX.Element {
 		{ number: '2M+', label: 'Users Impacted' },
 		{ number: '5 Years', label: 'Average Partnership' }
 	];
-
 	return (
 		<>
 			<Head>
@@ -121,9 +120,9 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -142,13 +141,13 @@ export default function Portfolio(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-								{stats.map((stat  index) => (
-									<div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
-										<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+			<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+								{stats.map((stat , index) => (
+			<div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
+			<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 											{stat.number}
 										</div>
-										<div className="text-gray-600 font-medium">
+			<div className="text-gray-600 font-medium">
 											{stat.label}
 										</div>
 									</div>
@@ -160,8 +159,8 @@ export default function Portfolio(): JSX.Element {
 						<section className={`mb-12 transition-all duration-700 delay-200 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="flex flex-wrap justify-center gap-4">
-								{categories.map((category  index) => (
+			<div className="flex flex-wrap justify-center gap-4">
+								{categories.map((category , index) => (
 									<button
 										key={category}
 										onClick={(()) => {setSelectedCategory(category);
@@ -186,15 +185,15 @@ export default function Portfolio(): JSX.Element {
 								<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
 									Featured Projects
 								</h2>
-								<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-									{featuredProjects.map((project  index) => (
-										<div key={project.id} className={`transform transition-all duration-700 delay-${400 + index * 100} ${
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+									{featuredProjects.map((project , index) => (
+			<div key={project.id} className={`transform transition-all duration-700 delay-${400 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
-											<div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow p-8 h-full">
-												<div className="flex items-center mb-6">
-													<div className="text-5xl mr-4">{project.image}</div>
-													<div>
+			<div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow p-8 h-full">
+			<div className="flex items-center mb-6">
+			<div className="text-5xl mr-4">{project.image}</div>
+			<div>
 														<span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
 															{project.category}
 														</span>
@@ -207,10 +206,10 @@ export default function Portfolio(): JSX.Element {
 												<p className="text-gray-600 mb-4 leading-relaxed">
 													{project.description}
 												</p>
-												<div className="mb-4">
+			<div className="mb-4">
 													<h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
 													<ul className="space-y-1">
-														{project.results.map((result  resultIndex) => (
+														{project.results.map((result , resultIndex) => (
 															<li key={resultIndex} className="flex items-center text-sm text-gray-600">
 																<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 																	<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -220,14 +219,14 @@ export default function Portfolio(): JSX.Element {
 														))}
 													</ul>
 												</div>
-												<div className="flex flex-wrap gap-2 mb-4">
-													{project.technologies.map((tech  techIndex) => (
+			<div className="flex flex-wrap gap-2 mb-4">
+													{project.technologies.map((tech , techIndex) => (
 														<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 															{tech}
 														</span>
 													))}
 												</div>
-												<div className="flex items-center justify-between">
+			<div className="flex items-center justify-between">
 													<span className="text-sm font-medium text-gray-600">{project.client}</span>
 													<button 
 														onClick={(()) => {setSelectedProject(project.id);
@@ -251,15 +250,15 @@ export default function Portfolio(): JSX.Element {
 							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
 								{selectedCategory === 'all' ? 'All Projects' : `${selectedCategory} Projects`}
 							</h2>
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-								{regularProjects.map((project  index) => (
-									<div key={project.id} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+								{regularProjects.map((project , index) => (
+			<div key={project.id} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
-										<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 h-full">
-											<div className="flex items-center mb-4">
-												<div className="text-3xl mr-3">{project.image}</div>
-												<div>
+			<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 h-full">
+			<div className="flex items-center mb-4">
+			<div className="text-3xl mr-3">{project.image}</div>
+			<div>
 													<span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
 														{project.category}
 													</span>
@@ -272,10 +271,10 @@ export default function Portfolio(): JSX.Element {
 											<p className="text-gray-600 mb-4 text-sm leading-relaxed">
 												{project.description}
 											</p>
-											<div className="mb-4">
+			<div className="mb-4">
 												<h4 className="text-xs font-semibold text-gray-700 mb-2">Results:</h4>
 												<ul className="space-y-1">
-													{project.results.slice(0, 2).map((result  resultIndex) => (
+													{project.results.slice(0, 2).map((result , resultIndex) => (
 														<li key={resultIndex} className="flex items-center text-xs text-gray-600">
 															<svg className="w-3 h-3 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
 																<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -285,8 +284,8 @@ export default function Portfolio(): JSX.Element {
 													))}
 												</ul>
 											</div>
-											<div className="flex flex-wrap gap-1 mb-4">
-												{project.technologies.slice(0, 3).map((tech  techIndex) => (
+			<div className="flex flex-wrap gap-1 mb-4">
+												{project.technologies.slice(0, 3).map((tech , techIndex) => (
 													<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 														{tech}
 													</span>
@@ -297,7 +296,7 @@ export default function Portfolio(): JSX.Element {
 													</span>
 												)}
 											</div>
-											<div className="flex items-center justify-between">
+			<div className="flex items-center justify-between">
 												<span className="text-xs font-medium text-gray-600">{project.client}</span>
 												<button 
 													onClick={(()) => {setSelectedProject(project.id);
@@ -317,20 +316,19 @@ export default function Portfolio(): JSX.Element {
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-16 text-white relative overflow-hidden transition-all duration-1000 delay-700 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="absolute inset-0 opacity-10">
-								<div className="absolute inset-0" style={{
+			<div className="absolute inset-0 opacity-10">
+			<div className="absolute inset-0" style={{
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-							
-							<div className="relative z-10">
+			<div className="relative z-10">
 								<h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Start Your Project?
 								</h2>
 								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss how we can help bring your vision to life with our proven expertise.
 								</p>
-								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-									<Link href="/contact">
+			<div className="flex flex-col sm:flex-row gap-6 justify-center">
+					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('start-project-button', 'cta')}
 											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
