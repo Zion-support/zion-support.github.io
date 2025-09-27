@@ -75,6 +75,9 @@ class SecurityEnhancer {
 
     this.config = { ...this.config, ...config };
     
+    // Set global reference for XMLHttpRequest monitoring
+    (window as any).__securityEnhancerInstance = this;
+    
     this.setupCSP();
     this.setupXSSProtection();
     this.setupCSRFProtection();

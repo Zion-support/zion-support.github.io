@@ -104,6 +104,8 @@ export default function App(): React.JSX.Element {
     
     // Initialize security enhancer
     const securityEnhancer = SecurityEnhancer.getInstance();
+    // Set global reference for XMLHttpRequest monitoring
+    (window as any).__securityEnhancerInstance = securityEnhancer;
     securityEnhancer.initialize({
       enableCSP: true,
       enableXSSProtection: true,
