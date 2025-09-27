@@ -394,11 +394,10 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    const self = this;
-    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
-      if (typeof url === 'string' && self.isSuspiciousURL(url)) {
-        self.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
-        self.metrics.blockedRequests++;
+    (XMLHttpRequest.prototype.open as any) = (method: string, url: string | URL, ...args: any[]) => {
+      if (typeof url === 'string' && this.isSuspiciousURL(url)) {
+        this.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+        this.metrics.blockedRequests++;
         throw new Error('Suspicious URL blocked');
       }
       
