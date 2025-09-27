@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function PrivacyPolicy(): JSX.Element {
+export default function PrivacyPolicy(): React.ReactElement {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

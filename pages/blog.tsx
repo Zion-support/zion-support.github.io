@@ -5,7 +5,7 @@ import Image from 'next/image';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Blog(): JSX.Element {
+export default function Blog(): React.ReactElement {
   const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
   const { trackClick } = useAnalytics();
 

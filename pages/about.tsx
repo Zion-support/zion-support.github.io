@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-const About = (): JSX.Element => {
+const About = (): React.ReactElement => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

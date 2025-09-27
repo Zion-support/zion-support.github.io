@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function FAQ(): JSX.Element {
+export default function FAQ(): React.ReactElement {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState(new Set());
   const [isVisible, setIsVisible] = useState(false);

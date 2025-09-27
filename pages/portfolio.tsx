@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio(): React.ReactElement {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 

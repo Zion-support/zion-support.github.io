@@ -13,7 +13,7 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-export default function Dashboard(): JSX.Element {
+export default function Dashboard(): React.ReactElement {
   const [activeTab, setActiveTab] = useState('comprehensive');
   const [isRealTime, setIsRealTime] = useState(false);
   const { trackClick } = useAnalytics();

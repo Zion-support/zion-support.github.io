@@ -1,43 +1,137 @@
-export, interf, a, c, e, Serv, i, c, e {i: d: s, t, r, i, n, g;
-  ti, t, l, e: s, t, r, i, n, g;
-  descriptio, n: s, t, r, i, n, g;
-  i, c, o, n: s, t, r, i, n, g;
-  fea, t, u, r, e, s ?: s, t, r, i, n, g[];
-  pr, i, c, e ?: str, i, n, g};
-exportconstSERVI, C, E, S: Se, r, v, i, c, e[] = [{i: d: 'ai - m,l',
-  ti, t, l, e: "A, I & Ma, c, h, i, neLearn, i, ng",
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;
-exportconstFEATU, R, E, S = [{i: c, o, n: "⚡'ti, t, l, e: "FastDeliv, e, r, y",
-      descriptio, n: "Rapiddevelopmentanddeploymentofh, i, g, h - qualitysoluti, o, n, s"co, l, o, r: "b, l, u, e"
-} a, s, const {ico,n:"🛡️',
-  ti, t, l, e: "Sec, u, r, e & Relia, b, le",
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;// Testimonialsdataexport constTESTIMONI, A, L, S = [{i: d: "1',
-  nam, e: "Sa, r, ahJohn, s, o, n",
-  r, o, l, e: "CT, O",
-  comp, a, n, y: "TechC, o, r, p",
-  cont, e, n, t: "Z, i, o, nTechSolutionstransformedourdigitalinfrastructurew, i, t, h thei, r, A, I - poweredsoluti, o, n, s."rat, i, n, g: 5ava, t, a, r: "/ ima, g, e, s / testimoni, a, l, s / sa, r, a, h.j.p, g"
-}, {i, d: '2',
-  nam, e: "Mi, c, h, a, elC, h, e, n",
-  r, o, l, e: "Foun, d, e, r"comp, a, n, y: "Startup, X, Y, Z"cont, e, n, t: "Thecloudmigrationwasseamless, a, n, d exceededourexpectati, o, n, s."rat, i, n, g: 5ava, t, a, r: "/ ima, g, e, s / testimoni, a, l, s / mich, a, e, l.j.p, g"}];// Pric, i, n, g, ti, e, r, s, export constPRICING_TI, E, R, S = [{i, d: "star, t, e, r",
-  nam, e: "Star, t, e, r",
-  pr, i, c, e: "$2,99, 9",
-  descriptio, n: "Perfectforsmallbusines, s, e, s",
-  featu, r, e, s: ["Ba, s, icAIIntegrat, i, o, n""Cl, o, udSe, t, u, p""2, 4 / 7Supp, o, rt"]popu, l, a, r: false;
-}{i: d: "professio, n, al",
-  nam, e: "Professio, n, al",
-  pr, i, c, e: "$7,999",
-  descriptio, n: "Idealforgrowingcompan, i, es",
-  featu, r, e, s: ["Adv, a, n, cedAISolutions", "F, u, llCloudMigrat, i, on", "Pri, o, r, i, tySupp, o, rt""CustomDevelopm, e, nt"]popu, l, a, r: true;
-}{i: d: "enterpr, i, se",
-  nam, e: "Enterpr, i, se",
-  pr, i, c, e: "Cus, t, om",
-  descriptio, n: "Tailoredforlargeorganizati, o, ns",
-  featu, r, e, s: ["C, u, s, tomAISolutions", "Dedi, c, a, t, edT, e, am", "Wh, i, t, e - labelOpti, o, ns""AdvancedSecur, i, ty"]popu, l, a, r: false;
-}];
+// Application constants
+export const APP_NAME = "Zion Tech Solutions";
+export const APP_VERSION = "1.0.0";
 
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5, 7, 6, 3;
-exportconstBLOG_PO, S, TS = [
-  {i,d:"1',
-    ti, t, l, e: "T, heFutureofAIinBusin, e, s, s Automat, i, o, n",
-    exce, r, p, t: "Discoverhowartificialintelligenceisrevolutioniz, i, n, g businessproces, s, e, s.",    aut, h, o, r: "D, r. Sa, r, ahC, h, e, n",
-    publishD, a, t, e: "2, 0, 2, 4 - 0, 1 - 1, 5"readT, i, m, e: 8categ, o, r, y: "ArtificialIntellige, n, c, e"featu, r, e, d: tru, e}];
+// API endpoints
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+
+// Feature flags
+export const FEATURES = {
+  ANALYTICS: true,
+  PERFORMANCE_MONITORING: true,
+  ERROR_REPORTING: true,
+  SECURITY_MONITORING: true,
+  IMAGE_OPTIMIZATION: true
+} as const;
+
+// Service features
+export const SERVICE_FEATURES = [
+  {
+    id: "1",
+    icon: "🚀",
+    title: "Fast & Scalable",
+    description: "Rapid development and deployment of high-quality solutions",
+    color: "blue"
+  },
+  {
+    id: "2", 
+    icon: "🛡️",
+    title: "Secure & Reliable",
+    description: "Enterprise-grade security and reliability",
+    color: "green"
+  },
+  {
+    id: "3",
+    icon: "⚡",
+    title: "AI-Powered",
+    description: "Advanced AI and machine learning capabilities",
+    color: "purple"
+  }
+] as const;
+
+// Testimonials data
+export const TESTIMONIALS = [
+  {
+    id: "1",
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp",
+    content: "Zion Tech Solutions transformed our digital infrastructure with their AI-powered solutions.",
+    rating: 5,
+    avatar: "/images/testimonials/sarah.jpg"
+  },
+  {
+    id: "2",
+    name: "Michael Chen", 
+    role: "Founder",
+    company: "StartupXYZ",
+    content: "The cloud migration was seamless and exceeded our expectations.",
+    rating: 5,
+    avatar: "/images/testimonials/michael.jpg"
+  }
+] as const;
+
+// Pricing tiers
+export const PRICING_TIERS = [
+  {
+    id: "starter",
+    name: "Starter",
+    price: "$2,999",
+    description: "Perfect for small businesses",
+    features: ["Basic AI Integration", "Cloud Setup", "24/7 Support"],
+    popular: false
+  },
+  {
+    id: "professional", 
+    name: "Professional",
+    price: "$7,999",
+    description: "Ideal for growing companies",
+    features: ["Advanced AI Solutions", "Full Cloud Migration", "Priority Support", "Custom Development"],
+    popular: true
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise", 
+    price: "Custom",
+    description: "Tailored for large organizations",
+    features: ["Custom AI Solutions", "Dedicated Team", "White-label Options", "Advanced Security"],
+    popular: false
+  }
+] as const;
+
+// Blog posts data
+export const BLOG_POSTS = [
+  {
+    id: "1",
+    title: "The Future of AI in Business Automation",
+    excerpt: "Discover how AI is revolutionizing business processes and automation.",
+    publishDate: "2024-01-15",
+    readTime: 8,
+    category: "Artificial Intelligence",
+    featured: true
+  }
+] as const;
+
+// Performance thresholds
+export const PERFORMANCE_THRESHOLDS = {
+  LCP: 2500, // Largest Contentful Paint
+  FID: 100,  // First Input Delay
+  CLS: 0.1,  // Cumulative Layout Shift
+  FCP: 1800, // First Contentful Paint
+  TTFB: 600  // Time to First Byte
+} as const;
+
+// Cache durations (in milliseconds)
+export const CACHE_DURATIONS = {
+  SHORT: 5 * 60 * 1000,      // 5 minutes
+  MEDIUM: 30 * 60 * 1000,    // 30 minutes
+  LONG: 24 * 60 * 60 * 1000, // 24 hours
+  VERY_LONG: 7 * 24 * 60 * 60 * 1000 // 7 days
+} as const;
+
+// Error messages
+export const ERROR_MESSAGES = {
+  NETWORK_ERROR: "Network connection failed. Please check your internet connection.",
+  SERVER_ERROR: "Server error occurred. Please try again later.",
+  VALIDATION_ERROR: "Please check your input and try again.",
+  UNAUTHORIZED: "You are not authorized to perform this action.",
+  NOT_FOUND: "The requested resource was not found."
+} as const;
+
+// Success messages
+export const SUCCESS_MESSAGES = {
+  SAVE_SUCCESS: "Changes saved successfully.",
+  DELETE_SUCCESS: "Item deleted successfully.",
+  UPDATE_SUCCESS: "Item updated successfully.",
+  CREATE_SUCCESS: "Item created successfully."
+} as const;
