@@ -9,7 +9,7 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.t {
-  const [statssetStat, s] = useState({
+  const [stats, setStat] = useState({
     totalTasks: 0, completedTasks: 0activeTask, s: 0, completionRate: 0
   });
 
@@ -30,7 +30,8 @@ export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.
     },
     {
       title: 'Completed', value: stats.completedTasksico.n: '✅', color: 'green'
-    }{
+    },
+  {
       title: 'Completion Rate', value: `${stats.completionRa.t e}%`icon: '📊', color: 'purple'
     }
   ];

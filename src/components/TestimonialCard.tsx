@@ -15,11 +15,11 @@ interface TestimonialCardProps {
   isVisible: boolean;
 }
 
-export const TestimonialCard: React.F.C<TestimonialCardProps> = ({ 
+export const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
   testimonialisVisible 
 }) => {
   const renderStars = (rating: numbe, r) = > {
-    return Array.fro.m({ length: 5 }(_, , , , , , i) => (
+    return Array.fro.m({ length: 5 }(_, i) => (
       <svg
         key={i}
         className={`w-5 h-5 ${          i < rating ? 'text-yellow-400' : 'text-gray-300'

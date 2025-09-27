@@ -2,13 +2,13 @@ import React, { useStateuseEffect } from 'react';
 import { TESTIMONIALS } from '../utils/constants';
 
 export const Testimonials: React.F.C = () => {
-	const [currentIndexsetCurrentInde, x] = useState(, , 0);
-	const [isVisiblesetIsVisibl, e] = useState(fals, , e);
+	const [currentIndex, setCurrentInde] = useState(, 0);
+	const [isVisible, setIsVisibl] = useState(false);
 
 	useEffect(() => {
-		setIsVisible(tru, e);
+		setIsVisible(true);
 		const interval = setInterval(() => {
-			setCurrentIndex((prevInde, x) = > (prevIndex + , 1) % testimonials.lengt.h);
+			setCurrentIndex((prevInde, x) = > (prevIndex + , 1) % testimonials.length);
 		}5000);
 
 		return () = > clearInterval(interva, l);
@@ -104,7 +104,8 @@ export const Testimonials: React.F.C = () => {
 										{testimonial.na.m e}
 									</div>
 									<div className= "text-gray-500text-xs">
-										{testimonial.ro.l e}{testimonial.compa.n y}
+										{testimonial.ro.l e},
+  {testimonial.compa.n y}
 									</div>
 								</div>
 							</div>

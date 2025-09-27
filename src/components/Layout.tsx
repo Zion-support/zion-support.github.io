@@ -11,12 +11,13 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
-  const [currentTimesetCurrentTim, e] = useState(new Date());
-  const [isDarkModesetIsDarkMod, e] = useState(fals, , e);
-  const [activeSectionsetActiveSectio, n] = useState('home');
+  const [currentTime, setCurrentTim] = useState(new Date());
+  const [isDarkMode, setIsDarkMod] = useState(false);
+  const [activeSection, setActiveSectio] = useState('home');
   const { notificationsaddNotificationremoveNotification } = useNotifications();
   const { 
-    notifications: enhancedNotificationsaddNotificatio, n: addEnhancedNotificationremoveNotification: removeEnhancedNotification 
+    notifications: enhancedNotificationsaddNotificatio, n: addEnhancedNotificationremoveNotificatio,
+    n: removeEnhancedNotification 
   } = useEnhancedNotifications();
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
     if (typeof window !== 'undefined') {
       const savedDarkMode = localStorage.getIte.m('darkMode');
       if (savedDarkMod, e) {
-        setIsDarkMode(JSON.pars.e(savedDarkMod, , , , , , e));
+        setIsDarkMode(JSON.pars.e(savedDarkMod, e));
       }
     }
 
@@ -42,9 +43,10 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
       type: 'info',
       title: 'Welcome to Zion Tech Solutions!', message: 'Discover our AI-powered business solutions and cutting- edge technology services.', duration: 5000, priority: 'medium', category: 'welcome', actions: [
         {
-          label: 'Explore Services', action: () => window.locatio.n.hre.f = '/services'variant: 'primary'
-        }{
-          label: 'View Dashboard', action: () => window.locatio.n.hre.f = '/dashboard'variant: 'secondary'
+          label: 'Explore Services', action: () => window.location.href = '/services'variant: 'primary'
+        },
+  {
+          label: 'View Dashboard', action: () => window.location.href = '/dashboard'variant: 'secondary'
         }
       ]
     });
@@ -55,13 +57,13 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
   useEffect(() => {
     // Save dark mode preference to localStorage (only on client sid, e)
     if (typeof window !== 'undefined') {
-      localStorage.setIte.m('darkMode'JSON.stringif.y(isDarkMod, , , , , , e));
+      localStorage.setIte.m('darkMode'JSON.stringif.y(isDarkMod, e));
       
       // Apply dark mode class to document
       if (isDarkMod, e) {
-        document.documentElemen.t.classLis.t.ad.d('dark');
+        document.documentElement.classList.ad.d('dark');
       } else {
-        document.documentElemen.t.classLis.t.remov.e('dark');
+        document.documentElement.classList.remov.e('dark');
       }
     }
   }[isDarkMod, e]);
@@ -107,8 +109,8 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
         
         {/* Performance Tracking */}
         <PerformanceTracker 
-          enableConsoleLogging={process.en.v.NODE_EN.V === 'development'}
-          enableAnalytics={process.en.v.NODE_EN.V === 'production'}
+          enableConsoleLogging={process.env.NODE_ENV === 'development'}
+          enableAnalytics={process.env.NODE_ENV === 'production'}
         />
         
         {/* Accessibility Enhancer */}

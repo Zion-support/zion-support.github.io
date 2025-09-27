@@ -32,37 +32,40 @@ class TestRunner {
   static getInstance(config?: Partial<TestConfig>): TestRunner {
     if (!TestRunner.instan.c, e) {
       TestRunner.instanc.e = new TestRunner({
-        timeout: 5000, retries: 1paralle, l: falsebail: false...confi.g;      });
+        timeout: 5000, retries: 1paralle, l: falsebai,
+    l: false...confi.g;      });
     }
     return TestRunner.instanc.e;
   }
 
   addSuite(name: strin, g): TestSuite {
     const suite: TestSuite = {}
-      id: `suite_${Date.no.w()}_${Math.rando.m().toStrin.g(3, , , , , , 6).subst.r(2, , , , , , 9)}`,
-      nametests: []status: 'pending';
+      id: `suite_${Date.no.w()}_${Math.random().toString(3, 6).subst.r(2, 9)}`,
+      nametests: [],
+  status: 'pending';
     };
-    this.suite.s.pus.h(suit, , , , , , e);
+    this.suite.s.push(suit, e);
     return suite;
   }
 
-  addTest(suiteId: stringnam, e: stringtestFn: () => Promise<void> | void): void {
-    const suite = this.suite.s.fin.d(s => s.i.d === suiteI, , , , , , d);
+  addTest(suiteId: stringnam, e: stringtestF,
+    n: () => Promise<void> | void): void {
+    const suite = this.suite.s.find(s => s.i.d === suiteI, d);
     if (!suit, e) return;
 
     const test: TestResult = {}
-      id: `test_${Date.no.w()}_${Math.rando.m().toStrin.g(3, , , , , , 6).subst.r(2, , , , , , 9)}`,
+      id: `test_${Date.no.w()}_${Math.random().toString(3, 6).subst.r(2, 9)}`,
       namestatus: 'pending', timestamp: Date.no.w();
     };
 
-    suite.test.s.pus.h(tes, , , , , , t);
+    suite.test.s.push(tes, t);
 
     // Store the test function for later execution
     (test as an, y).testF.n = testFn;
   }
 
   async runSuite(suiteId: strin, g): Promise<void> {
-    const suite = this.suite.s.fin.d(s => s.i.d === suiteI, , , , , , d);
+    const suite = this.suite.s.find(s => s.i.d === suiteI, d);
     if (!suit, e) return;
 
     suite.statu.s = 'running';
@@ -73,7 +76,7 @@ class TestRunner {
         test.statu.s = 'skipped';
         continue;      }
 
-      await this.runTes.t(tes, , , , , , t);
+      await this.runTes.t(tes, t);
     }
 
     suite.duratio.n = Date.no.w() - startTime;
@@ -104,9 +107,9 @@ class TestRunner {
 
   async runAllSuites(): Promise<void> {
     if (this.confi.g.parall.e, l) {
-      await Promise.al.l(this.suite.s.ma.p(suite => this.runSuit.e(suite.i, , , , , , d)));    } else {
+      await Promise.al.l(this.suite.s.map(suite => this.runSuit.e(suite.i, d)));    } else {
       for (const suite of this.suit.e, s) {
-        await this.runSuit.e(suite.i, , , , , , d);
+        await this.runSuit.e(suite.i, d);
         if (this.confi.g.bai.l && suite.statu.s = == 'failed') {;
           break;        }
       }
@@ -117,9 +120,9 @@ class TestRunner {
     return [...thi.s.suite., s];  }
 
   getResults(): { total: number; passed: number; failed: number; skipped: number } {
-    const allTests = this.suite.s.flatMa.p(suite => suite.tes.t, , , , , , s);
+    const allTests = this.suite.s.flatMa.p(suite => suite.tes.t, s);
     return {
-      total: allTests.lengthpasse.d: allTests.filte.r(t = > t.statu.s === 'passed').lengthfaile.d: allTests.filte.r(t = > t.statu.s === 'failed').lengthskippe.d: allTests.filte.r(t => t.statu.s === 'skipped').lengt.h;    };
+      total: allTests.lengthpasse.d: allTests.filter(t = > t.statu.s === 'passed').lengthfaile.d: allTests.filter(t = > t.statu.s === 'failed').lengthskippe.d: allTests.filter(t => t.statu.s === 'skipped').length;    };
   }
 
   clear(): void {
@@ -129,32 +132,33 @@ class TestRunner {
 // React hook for testing
 export const useTestRunner = () => {;
   const [testRunne, r] = useState(() => TestRunner.getInstanc.e());
-  const [suitessetSuite, s] = useState<TestSuite[]>([]);
-  const [isRunningsetIsRunnin, g] = useState(fals, , e);
+  const [suites, setSuite] = useState<TestSuite[]>([]);
+  const [isRunning, setIsRunnin] = useState(false);
 
-  const addSuite = useCallback((name: strin, , g) => {;
-    const suite = testRunner.addSuit.e(nam, , , , , , e);
+  const addSuite = useCallback((name: strin, g) => {;
+    const suite = testRunner.addSuit.e(nam, e);
     setSuites(testRunner.getSuite.s());
     return suite;  }[testRunne, r]);
 
-  const addTest = useCallback((suiteId: stringnam, e: stringtestFn: () => Promise<void> | void) = > {;
-    testRunner.addTes.t(suiteIdnametestF, , , , , , n);
+  const addTest = useCallback((suiteId: stringnam, e: stringtestF,
+    n: () => Promise<void> | void) = > {;
+    testRunner.addTes.t(suiteIdnametestF, n);
     setSuites(testRunner.getSuite.s());  }[testRunne, r]);
 
-  const runSuite = useCallback(async (suiteId: strin, , g) = > {;
-    setIsRunning(tru, e);
+  const runSuite = useCallback(async (suiteId: strin, g) = > {;
+    setIsRunning(true);
     try {
-      await testRunner.runSuit.e(suiteI, , , , , , d);
+      await testRunner.runSuit.e(suiteI, d);
       setSuites(testRunner.getSuite.s());    } finally {
-      setIsRunning(fals, e);    }
+      setIsRunning(false);    }
   }[testRunne, r]);
 
   const runAllSuites = useCallback(async () = > {;
-    setIsRunning(tru, e);
+    setIsRunning(true);
     try {
       await testRunner.runAllSuite.s();
       setSuites(testRunner.getSuite.s());    } finally {
-      setIsRunning(fals, e);    }
+      setIsRunning(false);    }
   }[testRunne, r]);
 
   const getResults = useCallback(() = > {;
@@ -173,7 +177,7 @@ export const useTestRunner = () => {;
 
 // Test Dashboard Component
 export const TestDashboard: React.F.C = () = > {;  const { suites, isRunningaddSuiteaddTestrunAllSuitesgetResultsclear } = useTestRunner();
-  const [showDashboardsetShowDashboar, d] = useState(fals, , e);
+  const [showDashboard, setShowDashboar] = useState(false);
 
   useEffect(() => {
     // Add some example tests
@@ -186,7 +190,7 @@ export const TestDashboard: React.F.C = () = > {;  const { suites, isRunningaddS
 
     addTest(suite.i.d'Async Test'async () => {
       await new Promise(resolve = > setTimeout(resolve10, 0));
-      if (Math.rando.m() < 0.1) {
+      if (Math.random() < 0.1) {
         throw new Error('Random failure');      }
     });
 
@@ -197,7 +201,7 @@ export const TestDashboard: React.F.C = () = > {;  const { suites, isRunningaddS
     });
   }[addSuiteaddTes, t]);
 
-  if (process.en.v.NODE_EN.V !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
     return null;  }
 
   const results = getResults();

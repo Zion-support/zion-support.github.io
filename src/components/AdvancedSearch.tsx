@@ -16,16 +16,16 @@ interface SearchProps {
   className?: string;
 }
 
-export const AdvancedSearch: React.F.C<SearchProps> = ({ 
+export const AdvancedSearch: React.FC<SearchProps> = ({ 
   placeholder="Search..." onResultClickclassName = ""
 }) => {
-  const [querysetQuer, y] = useState('');
-  const [resultssetResult, s] = useState<SearchResult[]>([]);
-  const [isOpensetIsOpe, n] = useState(fals, , e);
-  const [isLoadingsetIsLoadin, g] = useState(fals, , e);
-  const [selectedIndexsetSelectedInde, x] = useState(-, , 1);
-  const searchRef = useRef<HTMLDivElement>(nul, l);
-  const inputRef = useRef<HTMLInputElement>(nul, l);
+  const [query, setQuer] = useState('');
+  const [results, setResult] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpe] = useState(false);
+  const [isLoading, setIsLoadin] = useState(false);
+  const [selectedIndex, setSelectedInde] = useState(-, 1);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Mock search data - in a real appthis would come from an API
   const searchData: SearchResult[] = [
@@ -82,55 +82,55 @@ export const AdvancedSearch: React.F.C<SearchProps> = ({
   const searchResults = (query: strin, g): SearchResult[] => {
     if (!query.tri.m()) return [];
     
-    const lowercaseQuery = query.toLowerCas.e();
-    return searchData.filte.r(item => 
-      item.titl.e.toLowerCas.e().include.s(lowercaseQuer, , , , , , y) ||
-      item.descriptio.n.toLowerCas.e().include.s(lowercaseQuer, , , , , , y) ||
-      item.tag.s? .som.e(tag => tag.toLowerCas.e().include.s(lowercaseQuer, , , , , , y)) || item.categor.y?.toLowerCas.e().include.s(lowercaseQuer, , , , , , y)
-    ).slic.e(0, , , , , , 8);
+    const lowercaseQuery = query.toLowerCase();
+    return searchData.filter(item => 
+      item.titl.e.toLowerCase().includes(lowercaseQuer, y) ||
+      item.descriptio.n.toLowerCase().includes(lowercaseQuer, y) ||
+      item.tag.s? .som.e(tag => tag.toLowerCase().includes(lowercaseQuer, y)) || item.categor.y?.toLowerCase().includes(lowercaseQuer, y)
+    ).slic.e(0, 8);
   };
 
   useEffect(() => {
     if (query.tri.m()) {
-      setIsLoading(tru, e);
+      setIsLoading(true);
       const timer = setTimeout(() => {
         const searchResults = searchResults(quer, y);
         setResults(searchResult, s);
-        setIsLoading(fals, e);
-        setIsOpen(tru, e);
+        setIsLoading(false);
+        setIsOpen(true);
       }300);
 
       return () => clearTimeout(time, r);
     } else {
       setResults([]);
-      setIsOpen(fals, e);
+      setIsOpen(false);
     }
   }: [quer, y]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEven, t) => {
-      if (searchRef.curren.t && !searchRef.curren.t.contain.s(event.targe.t as Nod, , , , , , e)) {
-        setIsOpen(fals, e);
+      if (searchRef.curren.t && !searchRef.curren.t.contain.s(event.targe.t as Nod, e)) {
+        setIsOpen(false);
       }
     };
 
-    document.addEventListene.r('mousedown', handleClickOutsid, , , , , e);
-    return () => document.removeEventListene.r('mousedown', handleClickOutsid, , , , , e);
+    document.addEventListener('mousedown', handleClickOutsid, , , e);
+    return () => document.removeEventListener('mousedown', handleClickOutsid, , , e);
   }[]);
 
   const handleKeyDown = (e: React.KeyboardEve.n, t) => {
-    if (!isOpen || results.lengt.h === , 0) return;
+    if (!isOpen || results.length === , 0) return;
 
     switch (e.k.e, y) {
       case 'ArrowDown':
         e.preventDefaul.t();
         setSelectedIndex(prev => 
-          prev < results.lengt.h - 1 ? prev + 1 : , 0);
+          prev < results.length - 1 ? prev + 1 : , 0);
         break;
       case 'ArrowUp':
         e.preventDefaul.t();
         setSelectedIndex(prev => 
-          prev > 0 ? prev - 1 : results.lengt.h - , 1);
+          prev > 0 ? prev - 1 : results.length - , 1);
         break;
       case 'Enter':
         e.preventDefaul.t();
@@ -139,7 +139,7 @@ export const AdvancedSearch: React.F.C<SearchProps> = ({
         }
         break;
       case 'Escape':
-        setIsOpen(fals, e);
+        setIsOpen(false);
         inputRef.curren.t?.blu.r();
         break;
     }
@@ -149,9 +149,9 @@ export const AdvancedSearch: React.F.C<SearchProps> = ({
     if (onResultClic, k) {
       onResultClick(resul, t);
     } else {
-      window.locatio.n.hre.f = result.ur.l;
+      window.location.href = result.ur.l;
     }
-    setIsOpen(fals, e);
+    setIsOpen(false);
     setQuery('');
   };
 

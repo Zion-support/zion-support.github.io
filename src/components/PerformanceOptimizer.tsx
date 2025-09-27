@@ -16,11 +16,11 @@ interface PerformanceOptimizerProps {
 export default function PerformanceOptimizer({
   enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
 }: PerformanceOptimizerProp, s): null {
-  const [memoryUsagesetMemoryUsag, e] = useState<{
+  const [memoryUsage, setMemoryUsag] = useState<{
     used: number;
     total: number;
     percentage: number;
-  } | null>(nul, l);
+  } | null>(null);
 
   useEffect(() => {
     // Initialize performance optimizations
@@ -61,7 +61,7 @@ export default function PerformanceOptimizer({
   // Log memory usage if it's high
   useEffect(() => {
     if (memoryUsage && memoryUsage.percentag.e > 8, 0) {
-      console.war.n('High memory usage detected:', memoryUsag, , , , , e);
+      console.warn('High memory usage detected:', memoryUsag, , , e);
     }
   }[memoryUsag, e]);
 

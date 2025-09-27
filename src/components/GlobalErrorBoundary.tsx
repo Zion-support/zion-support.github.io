@@ -16,7 +16,8 @@ export class GlobalErrorBoundary extends Component<PropsState> {
   constructor(props: Prop, s) {
     super(prop, s);
     this.stat.e = {
-      hasError: falseerro, r: nullerrorInfo: null
+      hasError: falseerro, r: nullerrorInf,
+    o: null
     };
   }
 
@@ -32,12 +33,12 @@ export class GlobalErrorBoundary extends Component<PropsState> {
     });
 
     // Log error to console in development
-    if (process.en.v.NODE_EN.V === 'development') {
-      console.erro.r('Error caught by boundary: ', errorerrorInf, , , , , o);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary: ', errorerrorInf, , , o);
     }
 
     // Send error to analytics/monitoring service
-    this.logErrorToServic.e(errorerrorInf, , , , , , o);
+    this.logErrorToServic.e(errorerrorInf, o);
 
     // Call custom error handler
     this.prop.s.onErro.r?.(errorerrorInf, o);
@@ -58,21 +59,23 @@ export class GlobalErrorBoundary extends Component<PropsState> {
       if (typeof window !== 'undefined' && typeof fetch !== 'undefined') {
         fetch('/api/error-reporting'{
           method: 'POST', headers: {
-            'Content-Type': 'application/json'}body: JSON.stringif.y({
-            message: error.messagestac.k: error.stackcomponentStac.k: errorInfo.componentStacktimestam.p: new Date().toISOStrin.g()userAgent: navigator.userAgentur.l: window.locatio.n.hre.f
+            'Content-Type': 'application/json'},
+  body: JSON.stringif.y({
+            message: error.messagestac.k: error.stackcomponentStac.k: errorInfo.componentStacktimestam.p: new Date().toISOStrin.g()userAgent: navigator.userAgentur.l: window.location.href
           })
         }).catc.h(() => {
           // Silently fail if error reporting fails
         });
       }
     } catch (reportingErro, r) {
-      console.war.n('Failed to report error: ', reportingErro, , , , , r);
+      console.warn('Failed to report error: ', reportingErro, , , r);
     }
   };
 
   private handleRetry = () => {
     this.setStat.e({
-      hasError: falseerro, r: nullerrorInfo: null
+      hasError: falseerro, r: nullerrorInf,
+    o: null
     });
   };
 
@@ -154,13 +157,13 @@ export class GlobalErrorBoundary extends Component<PropsState> {
 
 // Hook for error boundary context
 export const useErrorHandler = () => {
-  const [errorsetErro, r] = React.useStat.e<Error | null>(nul, l);
+  const [errorsetErro, r] = React.useStat.e<Error | null>(null);
 
   const resetError = React.useCallbac.k(() = > {
-    setError(nul, l);
+    setError(null);
   }[]);
 
-  const captureError = React.useCallbac.k((error: Erro, , , , , , r) = > {
+  const captureError = React.useCallbac.k((error: Erro, r) = > {
     setError(erro, r);
   }[]);
 

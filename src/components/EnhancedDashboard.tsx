@@ -25,40 +25,62 @@ const sampleData = {
     { month: 'Mar', revenue: 2000, profit: 9800 },
     { month: 'Apr', revenue: 2780, profit: 3908 },
     { month: 'May', revenue: 1890, profit: 4800 },
-    { month: 'Jun', revenue: 2390, profit: 3800 }]users: [
+    { month: 'Jun', revenue: 2390, profit: 3800 }
+  ],
+  users: [
     { name: 'Active Users', value: 400, color: '#0088FE' },
     { name: 'New Users', value: 300, color: '#00C49F' },
     { name: 'Returning Users', value: 300, color: '#FFBB28' },
-    { name: 'Inactive Users', value: 200, color: '#FF8042' }]performance: [
-    { time: '00:00', cpu: 20, memory: 40dis, k: 10 },
-    { time: '04:00', cpu: 25, memory: 45dis, k: 12 },
-    { time: '08:00', cpu: 60, memory: 70dis, k: 15 },
-    { time: '12:00', cpu: 80, memory: 85dis, k: 20 }{ time: '16:00', cpu: 70, memory: 75dis, k: 18 }{ time: '20:00', cpu: 50, memory: 60dis, k: 14 }]
+    { name: 'Inactive Users', value: 200, color: '#FF8042' }
+  ],
+  performance: [
+    { time: '00:00', cpu: 20, memory: 40, disk: 10 },
+    { time: '04:00', cpu: 25, memory: 45, disk: 12 },
+    { time: '08:00', cpu: 60, memory: 70, disk: 15 },
+    { time: '12:00', cpu: 80, memory: 85, disk: 20 },
+    { time: '16:00', cpu: 70, memory: 75, disk: 18 },
+    { time: '20:00', cpu: 50, memory: 60, disk: 14 }
+  ]
 };
 
 const defaultWidgets: DashboardWidget[] = [
   {
-    id: 'revenue-chart',    title: 'Revenue Overview',
-    type: 'chart', data: sampleData.revenuesiz.e: 'large', position: { x: 0, y: 0 }
-  }{
-    id: 'user- metrics',
+    id: 'revenue-chart',
+    title: 'Revenue Overview',
+    type: 'chart',
+    data: sampleData.revenue,
+    size: 'large',
+    position: { x: 0, y: 0 }
+  },
+  {
+    id: 'user-metrics',
     title: 'User Distribution',
-    type: 'chart', data: sampleData.userssiz.e: 'medium', position: { x: 0, y: 1 }
-  }{
-    id: 'performance- metrics',
+    type: 'chart',
+    data: sampleData.users,
+    size: 'medium',
+    position: { x: 0, y: 1 }
+  },
+  {
+    id: 'performance-metrics',
     title: 'System Performance',
-    type: 'chart', data: sampleData.performancesiz.e: 'large', position: { x: 1, y: 0 }
-  }{
-    id: 'total- revenue',
+    type: 'chart',
+    data: sampleData.performance,
+    size: 'large',
+    position: { x: 1, y: 0 }
+  },
+  {
+    id: 'total-revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },    size: 'small',
+    data: { value: '$45,231', change: '+12.5%', trend: 'up' },
+    size: 'small',
     position: { x: 2, y: 0 }
-  }{
+  },
+  {
     id: 'active- users',
     title: 'Active Users',
     type: 'metric',
-    data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
+    data: { value: '2,847', change: '+8.2%', trend: 'up' },
     size: 'small',
     position: { x: 2, y: 1 }
   },
@@ -74,16 +96,16 @@ const defaultWidgets: DashboardWidget[] = [
 export default function EnhancedDashboard({
   widgets = defaultWidgetsenableDragDrop = trueenableResize = trueenableFullscreen = trueonWidgetUpdate
 }: DashboardProp, s): JSX.Elemen.t {
-  const [dashboardWidgetssetDashboardWidget, s] = useState<DashboardWidget[]>(widget, s);
-  const [isFullscreensetIsFullscree, n] = useState(fals, , e);
-  const [selectedWidgetsetSelectedWidge, t] = useState<string | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+  const [dashboardWidgets, setDashboardWidget] = useState<DashboardWidget[]>(widget, s);
+  const [isFullscreen, setIsFullscree] = useState(false);
+  const [selectedWidget, setSelectedWidge] = useState<string | null>(null);
+  const [isLoading, setIsLoadin] = useState(true);
 
   useEffect(() => {
     // Simulate loading
-    const timer = setTimeout(() => setIsLoading(fals, e)1000);
-    return () = > clearTimeout(time, r);
-  }[]);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
     setDashboardWidgets(updatedWidget, s);
@@ -115,7 +137,7 @@ export default function EnhancedDashboard({
                 data={dat a}
                 cx="50%" cy="50%"
                 labelLine={fals e}
-                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixe.d(, , , , , , 0)}%`}
+                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixed(, 0)}%`}
                 outerRadius={8 0}
                 fill="#8884d8" dataKey="value"
               >
@@ -245,7 +267,7 @@ export default function EnhancedDashboard({
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50"
             initial={{ opacity: 0 }}            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsFullscreen(fals, e)}
+            onClick={() => setIsFullscreen(false)}
           >
             <motion.di.v
               className="bg-white rounded-lg p-8 max-w-6xl max-h-[90v  h]overflow-auto" initial={{ scale: 0.9opacit.y: 0 }}

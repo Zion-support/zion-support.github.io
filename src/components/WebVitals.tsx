@@ -12,12 +12,12 @@ export function reportWebVitals(metric: WebVitalsMetri, c) {
   // Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in windo, w) {
     (window as an, y).gta.g('event'metric.nam.e{
-      event_category: 'Web Vitals', event_label: metric.idvalu.e: Math.roun.d(metric.nam.e === 'CLS' ? metric.valu.e * 1000 : metric.val.u, , , , , , e)non_interaction: tru e});
+      event_category: 'Web Vitals', event_label: metric.idvalu.e: Math.round(metric.nam.e === 'CLS' ? metric.value * 1000 : metric.val.u, e)non_interaction: tru e});
   }
 
   // Log to console in development
-  if (process.en.v.NODE_EN.V === 'development') {
-    console.lo.g('Web Vitals: ', metri, , , , , c);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals: ', metri, , , c);
   }
 }
 

@@ -6,7 +6,7 @@ interface TaskManagerProps {
   onClose: () => void;
 }
 export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.Elemen.t {
-  const [newTaskTextsetNewTaskTex, t] = useState('');
+  const [newTaskText, setNewTaskTex] = useState('');
   const {
     tasks,
     filter,
@@ -76,7 +76,7 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charA.t(, , , , , , 0).toUpperCas.e() + filterType.slic.e(, , , , , , 1)}
+                {filterType.charAt(, 0).toUpperCase() + filterType.slic.e(, 1)}
               </button>
             ))}
           </div>

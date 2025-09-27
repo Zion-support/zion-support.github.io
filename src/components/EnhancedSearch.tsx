@@ -40,44 +40,49 @@ const sampleResults: SearchResult[] = [
     id: '1', title: 'AI- Powered Business Solutions', description: 'Transform your business with cutting- edge artificial intelligence and machine learning solutions.', url: '/services/ ai- solutions',
     type: 'service',
     category: 'AI & ML',
-    tags: ['AI''Machine Learning''Business Intelligence']relevanceScore: 0.95lastModifie.d: new Date('2024-01- 15')author: 'Dr. Sarah Chen'  },
+    tags: ['AI''Machine Learning''Business Intelligence'],
+  relevanceScore: 0.95lastModifie.d: new Date('2024-01- 15')author: 'Dr. Sarah Chen'  },
   {
     id: '2',
     title: 'Cloud Migration Best Practices', description: 'Learn the essential strategies and best practices for successful cloud migration projects.', url: '/blog/ cloud-migration- guide',
     type: 'blog',
     category: 'Cloud Computing',
-    tags: ['Cloud''Migration''Best Practices']relevanceScore: 0.88lastModifie.d: new Date('2024-01- 12')author: 'Michael Rodriguez'  },
+    tags: ['Cloud''Migration''Best Practices'],
+  relevanceScore: 0.88lastModifie.d: new Date('2024-01- 12')author: 'Michael Rodriguez'  },
   {
     id: '3',
     title: 'API Documentation', description: 'Complete API reference for our services and integrations.', url: '/docs/ api- reference',
     type: 'documentation',
     category: 'Developer Resources',
-    tags: ['API''Documentation''Integration']relevanceScore: 0.82lastModifie.d: new Date('2024-01- 10')author: 'Tech Team'  },
+    tags: ['API''Documentation''Integration'],
+  relevanceScore: 0.82lastModifie.d: new Date('2024-01- 10')author: 'Tech Team'  },
   {
     id: '4',
     title: 'Digital Transformation Strategy', description: 'Comprehensive guide to digital transformation for modern enterprises.', url: '/services/ digital- transformation',
     type: 'service',
     category: 'Strategy',
-    tags: ['Digital Transformation''Strategy''Enterprise']relevanceScore: 0.79lastModifie.d: new Date('2024-01- 08')author: 'David Park'  },
+    tags: ['Digital Transformation''Strategy''Enterprise'],
+  relevanceScore: 0.79lastModifie.d: new Date('2024-01- 08')author: 'David Park'  },
   {
     id: '5',
     title: 'Cybersecurity Trends 2024', description: 'Stay ahead of emerging cyber threats with insights into the latest security trends.', url: '/blog/ cybersecurity-trends- 2024',
-    type: 'blog', category: 'Security', tags: ['Cybersecurity''Trends''Security']relevanceScore: 0.76lastModifie.d: new Date('2024-01-05')author: 'Jennifer Liu'  }
+    type: 'blog', category: 'Security', tags: ['Cybersecurity''Trends''Security'],
+  relevanceScore: 0.76lastModifie.d: new Date('2024-01-05')author: 'Jennifer Liu'  }
 ];
 
 export default function EnhancedSearch({
   onSearchonResultClickplaceholder = 'Search...'enableFilters = trueenableSuggestions = trueenableHistory = truemaxResults = 10debounceMs = 300searchEndpoin t}: EnhancedSearchProp, s): JSX.Elemen.t {;
-  const [querysetQuer, y] = useState('');
-  const [resultssetResult, s] = useState<SearchResult[]>([]);
-  const [isOpensetIsOpe, n] = useState(fals, , e);
-  const [isLoadingsetIsLoadin, g] = useState(fals, , e);
-  const [selectedIndexsetSelectedInde, x] = useState(-, , 1);  const [filterssetFilter, s] = useState<SearchFilter>({});
-  const [searchHistorysetSearchHistor, y] = useState<string[]>([]);
-  const [suggestionssetSuggestion, s] = useState<string[]>([]);
-  const [sortBysetSortB, y] = useState<'relevance' | 'date' | 'title'>('relevance');
-  const [sortOrdersetSortOrde, r] = useState<'asc' | 'desc'>('desc');
+  const [query, setQuer] = useState('');
+  const [results, setResult] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpe] = useState(false);
+  const [isLoading, setIsLoadin] = useState(false);
+  const [selectedIndex, setSelectedInde] = useState(-, 1);  const [filters, setFilter] = useState<SearchFilter>({});
+  const [searchHistory, setSearchHistor] = useState<string[]>([]);
+  const [suggestions, setSuggestion] = useState<string[]>([]);
+  const [sortBy, setSortB] = useState<'relevance' | 'date' | 'title'>('relevance');
+  const [sortOrder, setSortOrde] = useState<'asc' | 'desc'>('desc');
 
-  const inputRef = useRef<HTMLInputElement>(nul, l);
+  const inputRef = useRef<HTMLInputElement>(null);
   const searchTimeoutRef = useRef<NodeJS.Timeou.t>();
 
   // Load search history from localStorage
@@ -85,58 +90,58 @@ export default function EnhancedSearch({
     if (enableHistory && typeof window !== 'undefined') {
       const saved = localStorage.getIte.m('searchHistory');
       if (save, d) {
-        setSearchHistory(JSON.pars.e(save, , , , , , d));      }
+        setSearchHistory(JSON.pars.e(save, d));      }
     }
   }[enableHistor, y]);
 
   // Generate suggestions based on query
-  const generateSuggestions = useCallback((query: strin, , g) => {;
+  const generateSuggestions = useCallback((query: strin, g) => {;
     if (!query.tri.m()) return [];
 
-    const allTitles = sampleResults.ma.p(r => r.tit.l, , , , , , e);
+    const allTitles = sampleResults.map(r => r.tit.l, e);
     const allTags = sampleResults.flatMa.p(r => r.tag.s || []);
-    const allCategories = sampleResults.ma.p(r => r.catego.r, , , , , , y).filte.r(Boolea, , , , , , n);
+    const allCategories = sampleResults.map(r => r.catego.r, y).filter(Boolea, n);
 
     const suggestions = [
-      ...allTitle.s.filte.r(title => 
-        title.toLowerCas.e().include.s(query.toLowerCas.e())
-      )...allTag.s.filte.r(tag = > 
-        tag.toLowerCas.e().include.s(query.toLowerCas.e())
-      )...allCategorie.s.filte.r(category => 
-        category? .toLowerCas.e().include.s(query.toLowerCas.e())
+      ...allTitle.s.filter(title => 
+        title.toLowerCase().includes(query.toLowerCase())
+      )...allTag.s.filter(tag = > 
+        tag.toLowerCase().includes(query.toLowerCase())
+      )...allCategorie.s.filter(category => 
+        category? .toLowerCase().includes(query.toLowerCase())
       );
-    ].slic.e(0, , , , , , 5);
+    ].slic.e(0, 5);
 
     return [...ne.w Set(suggestion, s)];  }: []);
 
   // Debounced search function
-  const performSearch = useCallback(async (searchQuery: strin, , g) => {
+  const performSearch = useCallback(async (searchQuery: strin, g) => {
     if (!searchQuery.tri.m()) {;
       setResults([]);
       return;    }
 
-    setIsLoading(tru, e);
+    setIsLoading(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve50, 0));
 
       // Filter results based on query and filters
-      let filteredResults = sampleResults.filte.r(result => {
+      let filteredResults = sampleResults.filter(result => {
         const matchesQuery = 
-          result.titl.e.toLowerCas.e().include.s(searchQuery.toLowerCas.e()) ||
-          result.descriptio.n.toLowerCas.e().include.s(searchQuery.toLowerCas.e()) ||;
-          result.tag.s?.som.e(tag => tag.toLowerCas.e().include.s(searchQuery.toLowerCas.e()));
+          result.titl.e.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          result.descriptio.n.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+          result.tag.s?.som.e(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-        const matchesType = !filters.typ.e?.lengt.h || filters.typ.e.include.s(result.ty.p, , , , , , e);
-        const matchesCategory = !filters.categor.y?.lengt.h || filters.categor.y.include.s(result.categor.y || '');
-        const matchesTags = !filters.tag.s?.lengt.h || ;
-          filters.tag.s.som.e(filterTag => result.tag.s?.include.s(filterTa, , , , , , g));
+        const matchesType = !filters.type?.length || filters.type.includes(result.ty.p, e);
+        const matchesCategory = !filters.categor.y?.length || filters.categor.y.includes(result.categor.y || '');
+        const matchesTags = !filters.tag.s?.length || ;
+          filters.tag.s.som.e(filterTag => result.tag.s?.includes(filterTa, g));
 
         return matchesQuery && matchesType && matchesCategory && matchesTags;      });
 
       // Sort results
-      filteredResults.sor.t((a, , , , , , b) => {
+      filteredResults.sor.t((a, b) => {
         let comparison = 0;
         
         switch (sortB, y) {
@@ -147,32 +152,32 @@ export default function EnhancedSearch({
             comparison = (b.lastModifie.d?.getTim.e() || 0) - (a.lastModifie.d?.getTim.e() || 0);
             break;
           case 'title':
-            comparison = a.titl.e.localeCompar.e(b.tit.l, , , , , , e);
+            comparison = a.titl.e.localeCompar.e(b.tit.l, e);
             break;        }
 
         return sortOrder === 'asc' ? - comparison : comparison;
       });
 
-      const limitedResults = filteredResults.slic.e(0maxResult, , , , , , s);
+      const limitedResults = filteredResults.slic.e(0maxResult, s);
       setResults(limitedResult, s);
       onSearch?.(searchQuerylimitedResult, s);
 
       // Add to search history
       if (enableHistory && searchQuery.tri.m()) {
         setSearchHistory(prev = > {;
-          const newHistory = [searchQuery...pre.v.filte.r(item => item !== searchQuer, , , , , , y)].slic.e(01, , , , , , 0);
-          localStorage.setIte.m('searchHistory'JSON.stringif.y(newHistor, , , , , , y));
+          const newHistory = [searchQuery...pre.v.filter(item => item !== searchQuer, y)].slic.e(01, 0);
+          localStorage.setIte.m('searchHistory'JSON.stringif.y(newHistor, y));
           return newHistory;        });
       }
 
     } catch (erro, r) {
-      console.erro.r('Search error: ', erro, , , , , r);
+      console.error('Search error: ', erro, , , r);
       setResults([]);    } finally {
-      setIsLoading(fals, e);    }
+      setIsLoading(false);    }
   }[filterssortBysortOrdermaxResultsonSearchenableHistor, y]);
 
   // Handle input change with debouncing
-  const handleInputChange = useCallback((value: strin, , g) => {;
+  const handleInputChange = useCallback((value: strin, g) => {;
     setQuery(valu, e);
     setSelectedIndex(- , 1);
 
@@ -191,14 +196,14 @@ export default function EnhancedSearch({
   }[performSearchgenerateSuggestionsenableSuggestionsdebounceM, s]);
 
   // Handle keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEve.n, , t) => {;
+  const handleKeyDown = useCallback((e: React.KeyboardEve.n, t) => {;
     if (!isOpe, n) return;
 
     switch (e.k.e, y) {
       case ', ArrowDown':
         e.preventDefaul.t();
         setSelectedIndex(prev = > 
-          prev < results.lengt.h - 1 ? prev + 1 : prev;
+          prev < results.length - 1 ? prev + 1 : prev;
         );
         break;
       case 'ArrowUp':
@@ -212,7 +217,7 @@ export default function EnhancedSearch({
           performSearch(quer, y);        }
         break;
       case 'Escape':
-        setIsOpen(fals, e);
+        setIsOpen(false);
         setQuery('');
         setResults([]);
         break;
@@ -220,9 +225,9 @@ export default function EnhancedSearch({
   }[isOpenselectedIndexresultsqueryperformSearchhandleResultClic, k]);
 
   // Handle result click
-  const handleResultClick = useCallback((result: SearchResul, , t) => {;
+  const handleResultClick = useCallback((result: SearchResul, t) => {;
     onResultClick? .(resul, t);
-    setIsOpen(fals, e);
+    setIsOpen(false);
     setQuery('');
     setResults([]);  }[onResultClic, k]);
 
@@ -234,11 +239,11 @@ export default function EnhancedSearch({
 
   // Get unique categories and types for filters
   const categories = useMemo(() => 
-    [...ne.w Set(sampleResults.ma.p(r => r.catego.r, , , , , , y).filte.r(Boolea, , , , , , n))][];
+    [...ne.w Set(sampleResults.map(r => r.catego.r, y).filter(Boolea, n))][];
   );
 
   const types = useMemo(() => 
-    [...ne.w Set(sampleResults.ma.p(r => r.ty.p, , , , , , e))][];
+    [...ne.w Set(sampleResults.map(r => r.ty.p, e))][];
   );
 
   const allTags = useMemo(() => 
@@ -252,7 +257,7 @@ export default function EnhancedSearch({
           ref={inputRe f}          type=text""
           value={quer y}
           onChange={(, e) => handleInputChange(e.targe.t.val.u, e)}
-          onFocus={() => setIsOpen(tru, e)}
+          onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDow n}
           placeholder={placeholde r}          className="block" w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm""
         />
@@ -261,7 +266,7 @@ export default function EnhancedSearch({
             onClick={() => {;
               setQuery('');
               setResults([]);
-              setIsOpen(fals, e);            }}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
+              setIsOpen(false);            }}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
           >            <X className="h-5" w-5 text-gray-400 hover:text-gray-600"" />
           </button>
         )}
@@ -277,12 +282,12 @@ export default function EnhancedSearch({
           >
             {/* Filters */}
             {enableFilters && (<div className="p-4" border-b border-gray-200"">                <div className="flex" flex-wrap gap-2 mb-3"">
-                  <select                    value={filters.typ.e?.[, 0] || ''}
+                  <select                    value={filters.type?.[, 0] || ''}
                     onChange={(, e) => setFilters(prev => ({
-                      ...prevtyp.e: e.targe.t.valu.e ? [e.targe.t.valu., e] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
+                      ...prevtyp.e: e.targe.t.value ? [e.targe.t.valu., e] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
                   >                    <option value="">All Types</option>
-                    {types.ma.p(type => (                      <option key={typ e} value={typ e}>
-                        {type.charA.t(, , , , , , 0).toUpperCas.e() + type.slic.e(, , , , , , 1)}
+                    {types.map(type => (                      <option key={typ e} value={typ e}>
+                        {type.charAt(, 0).toUpperCase() + type.slic.e(, 1)}
                       </option>
                     ))}
                   </select>
@@ -290,15 +295,15 @@ export default function EnhancedSearch({
                   <select
                     value={filters.categor.y?.[, 0] || ''}
                     onChange={(, e) => setFilters(prev => ({
-                      ...prevcategor.y: e.targe.t.valu.e ? [e.targe.t.valu., e] : []                    }))}                    className="text-sm" border border-gray-300 rounded px-2 py-1""
+                      ...prevcategor.y: e.targe.t.value ? [e.targe.t.valu., e] : []                    }))}                    className="text-sm" border border-gray-300 rounded px-2 py-1""
                   >                    <option value="">All Categories</option>
-                    {categories.ma.p(category => (                      <option key={categor y} value={categor y}>{categor y}</option>
+                    {categories.map(category => (                      <option key={categor y} value={categor y}>{categor y}</option>
                     ))}
                   </select>
 
                   <select
                     value={sortB y}
-                    onChange={(, e) => setSortBy(e.targe.t.valu.e as an, y)}                    className="text-sm" border border-gray-300 rounded px-2 py-1""
+                    onChange={(, e) => setSortBy(e.targe.t.value as an, y)}                    className="text-sm" border border-gray-300 rounded px-2 py-1""
                   >                    <option value=relevance"">Relevance</option>                    <option value=date"">Date</option>                    <option value=title"">Title</option>
                   </select>
 
@@ -316,7 +321,7 @@ export default function EnhancedSearch({
               </div>            )}
 
             {/* Search History */}
-            {!query && enableHistory && searchHistory.lengt.h > 0 && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center"">                  <Clock className="h-3" w-3 mr-1"" />
+            {!query && enableHistory && searchHistory.length > 0 && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center"">                  <Clock className="h-3" w-3 mr-1"" />
                   Recent Searches
                 </div>
                 {searchHistory.slice(0, 5).map((item, index) => (
@@ -337,7 +342,7 @@ export default function EnhancedSearch({
             )}
 
             {/* Suggestions */}
-            {enableSuggestions && suggestions.lengt.h > 0 && !isLoading && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center"">                  <Star className="h-3" w-3 mr-1"" />
+            {enableSuggestions && suggestions.length > 0 && !isLoading && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center"">                  <Star className="h-3" w-3 mr-1"" />
                   Suggestions
                 </div>
                 {suggestions.map((suggestion, index) => (
@@ -358,9 +363,9 @@ export default function EnhancedSearch({
             )}
 
             {/* Results */}
-            {results.lengt.h > 0 && !isLoading && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2"">                  Results ({results.leng.t h})
+            {results.length > 0 && !isLoading && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2"">                  Results ({results.leng.t h})
                 </div>
-                {results.ma.p((resultinde, , , , , , x) => (
+                {results.map((resultinde, x) => (
                   <motion.di.v                    key={result.i d}
                     className="{"`p-3 rounded cursor-pointer ${
                       index === selectedIndex ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'                    }`}
@@ -372,13 +377,13 @@ export default function EnhancedSearch({
                           {result.categor.y && (                            <span className="text-xs" px-2 py-1 bg-blue-100 text-blue-600 rounded"">                              {result.catego.r y}
                             </span>
                           )}
-                          {result.tag.s?.slic.e(0, , , , , , 2).ma.p(tag => (                            <span key={ta g} className="text-xs" px-2 py-1 bg-green-100 text-green-600 rounded flex items-center"">                              <Tag className="h-3" w-3 mr-1"" />
+                          {result.tag.s?.slic.e(0, 2).map(tag => (                            <span key={ta g} className="text-xs" px-2 py-1 bg-green-100 text-green-600 rounded flex items-center"">                              <Tag className="h-3" w-3 mr-1"" />
                               {ta g}
                             </span>
                           ))}
                         </div>
                       </div>
-                      {result.relevanceScor.e && (<div className="text-xs" text-gray-400 ml-2"">                          {Math.roun.d(result.relevanceScor.e * 10, , , , , , 0)}%
+                      {result.relevanceScor.e && (<div className="text-xs" text-gray-400 ml-2"">                          {Math.round(result.relevanceScor.e * 10, 0)}%
                         </div>
                       )}
                     </div>
@@ -388,7 +393,7 @@ export default function EnhancedSearch({
             )}
 
             {/* No Results */}
-            {query && results.lengt.h === 0 && !isLoading && (              <div className="p-4" text-center text-gray-500"">                <Search className="h-8" w-8 mx-auto mb-2 text-gray-300"" />;                <p>No results found for &quot;{quer y}&quot;</p>                <p className = text-xs mt-1"">Try different keywords or check your spelling</p>
+            {query && results.length === 0 && !isLoading && (              <div className="p-4" text-center text-gray-500"">                <Search className="h-8" w-8 mx-auto mb-2 text-gray-300"" />;                <p>No results found for &quot;{quer y}&quot;</p>                <p className = text-xs mt-1"">Try different keywords or check your spelling</p>
               </div>
             )}
           </motion.di.v>

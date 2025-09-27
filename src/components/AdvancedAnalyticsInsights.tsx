@@ -1,6 +1,6 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { motionAnimatePresence } from 'framer- motion';
-import { Card, CardContent, CardDescriptionCardHeaderCardTitle } from './ui/ Card';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -13,8 +13,11 @@ import {
   Activity,
   Target,
   Zap,
-  GlobeSmartphoneMonitorTablet
-} from 'lucide- react';
+  Globe,
+  Smartphone,
+  Monitor,
+  Tablet
+} from 'lucide-react';
 
 interface AnalyticsData {
   overview: {
@@ -68,16 +71,18 @@ interface AnalyticsData {
 interface AdvancedAnalyticsInsightsProps {
   timeRange?: '7d' | '30d' | '90d' | '1y';
   refreshInterval?: number;
-  onDataUpdate?: (data: AnalyticsDat, a) => void;
+  onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsights({
-  timeRange = '30d'refreshInterval = 30000onDataUpdate
-}: AdvancedAnalyticsInsightsProp, s) {
-  const [datasetDat, a] = useState<AnalyticsData | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
-  const [selectedMetricsetSelectedMetri, c] = useState<string>('overview');
-  const [insightssetInsight, s] = useState<Array<{
+  timeRange = '30d',
+  refreshInterval = 30000,
+  onDataUpdate
+}: AdvancedAnalyticsInsightsProps) {
+  const [data, setData] = useState<AnalyticsData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('overview');
+  const [insights, setInsights] = useState<Array<{
     type: 'positive' | 'negative' | 'neutral';
     title: string;
     description: string;
@@ -90,132 +95,187 @@ export default function AdvancedAnalyticsInsights({
     
     return {
       overview: {
-        totalSessions: Math.floo.r(1250 * baseMultiplie, , , , , , r)uniqueUsers: Math.floo.r(890 * baseMultiplie, , , , , , r)pageViews: Math.floo.r(3200 * baseMultiplie, , , , , , r)bounceRate: 0.3.5 + (Math.rando.m() - 0.5) * 0.1avgSessionDuratio.n: 180 + (Math.rando.m() - 0.5) * 60conversionRate: 0.1.2 + (Math.rando.m() - 0.5) * 0.0.5
-      }traffic: {
+        totalSessions: Math.floor(1250 * baseMultiplier),
+        uniqueUsers: Math.floor(890 * baseMultiplier),
+        pageViews: Math.floor(3200 * baseMultiplier),
+        bounceRate: 0.35 + (Math.random() - 0.5) * 0.1,
+        avgSessionDuration: 180 + (Math.random() - 0.5) * 60,
+        conversionRate: 0.12 + (Math.random() - 0.5) * 0.05
+      },
+      traffic: {
         sources: [
-          { name: 'Direct', count: Math.floo.r(450 * baseMultiplie, , , , , , r)percentage: 36 }{ name: 'Google', count: Math.floo.r(380 * baseMultiplie, , , , , , r)percentage: 30 }{ name: 'Social Media', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Email', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Referral', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }
-        ]devices: [
-          { type: 'Desktop', count: Math.floo.r(600 * baseMultiplie, , , , , , r)percentage: 48 }{ type: 'Mobile', count: Math.floo.r(500 * baseMultiplie, , , , , , r)percentage: 40 }{ type: 'Tablet', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }
-        ]countries: [
-          { name: 'United States', count: Math.floo.r(400 * baseMultiplie, , , , , , r)percentage: 32 }{ name: 'United Kingdom', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Canada', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }{ name: 'Germany', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Australia', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }{ name: 'Others', count: Math.floo.r(280 * baseMultiplie, , , , , , r)percentage: 22 }
+          { name: 'Direct', count: Math.floor(450 * baseMultiplier), percentage: 36 },
+          { name: 'Google', count: Math.floor(380 * baseMultiplier), percentage: 30 },
+          { name: 'Social Media', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Email', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Referral', count: Math.floor(100 * baseMultiplier), percentage: 8 }
+        ],
+        devices: [
+          { type: 'Desktop', count: Math.floor(600 * baseMultiplier), percentage: 48 },
+          { type: 'Mobile', count: Math.floor(500 * baseMultiplier), percentage: 40 },
+          { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
+        ],
+        countries: [
+          { name: 'United States', count: Math.floor(400 * baseMultiplier), percentage: 32 },
+          { name: 'United Kingdom', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Canada', count: Math.floor(150 * baseMultiplier), percentage: 12 },
+          { name: 'Germany', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Australia', count: Math.floor(100 * baseMultiplier), percentage: 8 },
+          { name: 'Others', count: Math.floor(280 * baseMultiplier), percentage: 22 }
         ]
-      }performance: {
+      },
+      performance: {
         topPages: [
-          { path: '/ ', views: Math.floo.r(800 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(600 * baseMultiplie, , , , , , r)avgTimeOnPage: 120 }{ path: '/ services', views: Math.floo.r(400 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(300 * baseMultiplie, , , , , , r)avgTimeOnPage: 180 }{ path: '/ about', views: Math.floo.r(300 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(250 * baseMultiplie, , , , , , r)avgTimeOnPage: 90 }{ path: '/contact', views: Math.floo.r(200 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(180 * baseMultiplie, , , , , , r)avgTimeOnPage: 240 }{ path: '/blog', views: Math.floo.r(150 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(120 * baseMultiplie, , , , , , r)avgTimeOnPage: 300 }
-        ]userFlow: [
-          { step: 1, page: 'Homepage', users: Math.floo.r(1000 * baseMultiplie, , , , , , r)dropoff: 0 }{ step: 2, page: 'Services', users: Math.floo.r(600 * baseMultiplie, , , , , , r)dropoff: 40 }{ step: 3, page: 'Contact', users: Math.floo.r(300 * baseMultiplie, , , , , , r)dropoff: 50 }{ step: 4, page: 'Conversion', users: Math.floo.r(150 * baseMultiplie, , , , , , r)dropoff: 50 }
+          { path: '/', views: Math.floor(800 * baseMultiplier), uniqueViews: Math.floor(600 * baseMultiplier), avgTimeOnPage: 120 },
+          { path: '/services', views: Math.floor(400 * baseMultiplier), uniqueViews: Math.floor(300 * baseMultiplier), avgTimeOnPage: 180 },
+          { path: '/about', views: Math.floor(300 * baseMultiplier), uniqueViews: Math.floor(250 * baseMultiplier), avgTimeOnPage: 90 },
+          { path: '/contact', views: Math.floor(200 * baseMultiplier), uniqueViews: Math.floor(180 * baseMultiplier), avgTimeOnPage: 240 },
+          { path: '/blog', views: Math.floor(150 * baseMultiplier), uniqueViews: Math.floor(120 * baseMultiplier), avgTimeOnPage: 300 }
+        ],
+        userFlow: [
+          { step: 1, page: 'Homepage', users: Math.floor(1000 * baseMultiplier), dropoff: 0 },
+          { step: 2, page: 'Services', users: Math.floor(600 * baseMultiplier), dropoff: 40 },
+          { step: 3, page: 'Contact', users: Math.floor(300 * baseMultiplier), dropoff: 50 },
+          { step: 4, page: 'Conversion', users: Math.floor(150 * baseMultiplier), dropoff: 50 }
         ]
-      }insights: []
+      },
+      insights: []
     };
-  }[timeRang, e]);
+  }, [timeRange]);
 
-  const generateInsights = useCallback((data: AnalyticsDat, , a) => {
+  const generateInsights = useCallback((data: AnalyticsData) => {
     const newInsights = [];
 
     // Bounce rate insights
-    if (data.overvie.w.bounceRat.e > 0., 5) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'High Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is above the recommended40%.`,
+    if (data.overview.bounceRate > 0.5) {
+      newInsights.push({
+        type: 'negative' as const,
+        title: 'High Bounce Rate',
+        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is above the recommended 40%.`,
         impact: 'Users are leaving your site quickly, indicating poor user experience or irrelevant content.',
-        recommendation: 'Improve page load speed, enhance content relevanceand optimize user experience.'
+        recommendation: 'Improve page load speed, enhance content relevance, and optimize user experience.'
       });
-    } else if (data.overvie.w.bounceRat.e < 0., 3) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Excellent Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is excellent.`,
-        impact: 'Users are engaged and finding value in your content.', recommendation: 'Continue creating high- qualityrelevant content and maintain current UX practices.'
+    } else if (data.overview.bounceRate < 0.3) {
+      newInsights.push({
+        type: 'positive' as const,
+        title: 'Excellent Bounce Rate',
+        description: `Your bounce rate is ${(data.overview.bounceRate * 100).toFixed(1)}%, which is excellent.`,
+        impact: 'Users are engaged and finding value in your content.',
+        recommendation: 'Continue creating high-quality, relevant content and maintain current UX practices.'
       });
     }
 
     // Session duration insights
-    if (data.overvie.w.avgSessionDuratio.n < 6, 0) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'Short Session Duration', description: `Average session duration is ${Math.roun.d(data.overvie.w.avgSessionDurati.o, , , , , , n)} seconds.`,
+    if (data.overview.avgSessionDuration < 60) {
+      newInsights.push({
+        type: 'negative' as const,
+        title: 'Short Session Duration',
+        description: `Average session duration is ${Math.round(data.overview.avgSessionDuration)} seconds.`,
         impact: 'Users are not spending enough time on your site to engage with content.',
         recommendation: 'Add more engaging content, improve navigation, and optimize page structure.'
       });
-    } else if (data.overvie.w.avgSessionDuratio.n > 30, 0) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Long Session Duration', description: `Average session duration is ${Math.roun.d(data.overvie.w.avgSessionDurati.o, , , , , , n)} seconds.`impact: 'Users are highly engaged and spending significant time on your site.', recommendation: 'Leverage this engagement for better conversion opportunities.'
+    } else if (data.overview.avgSessionDuration > 300) {
+      newInsights.push({
+        type: 'positive' as const,
+        title: 'Long Session Duration',
+        description: `Average session duration is ${Math.round(data.overview.avgSessionDuration)} seconds.`,
+        impact: 'Users are highly engaged and spending significant time on your site.',
+        recommendation: 'Leverage this engagement for better conversion opportunities.'
       });
     }
 
     // Conversion rate insights
-    if (data.overvie.w.conversionRat.e < 0.0, 5) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'Low Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%.`,
-        impact: 'Very few visitors are taking desired actions on your site.', recommendation: 'Improve call-to- action placementoptimize landing pagesand enhance user experience.'
+    if (data.overview.conversionRate < 0.05) {
+      newInsights.push({
+        type: 'negative' as const,
+        title: 'Low Conversion Rate',
+        description: `Conversion rate is ${(data.overview.conversionRate * 100).toFixed(1)}%.`,
+        impact: 'Very few visitors are taking desired actions on your site.',
+        recommendation: 'Improve call-to-action placement, optimize landing pages, and enhance user experience.'
       });
-    } else if (data.overvie.w.conversionRat.e > 0., 2) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'High Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%.`impact: 'Your site is effectively converting visitors into customers.', recommendation: 'Scale successful strategies and identify what drives conversions.'
+    } else if (data.overview.conversionRate > 0.2) {
+      newInsights.push({
+        type: 'positive' as const,
+        title: 'High Conversion Rate',
+        description: `Conversion rate is ${(data.overview.conversionRate * 100).toFixed(1)}%.`,
+        impact: 'Your site is effectively converting visitors into customers.',
+        recommendation: 'Scale successful strategies and identify what drives conversions.'
       });
     }
 
     // Mobile traffic insights
-    const mobilePercentage = data.traffi.c.device.s.fin.d(d => d.typ.e === 'Mobile')?.percentag.e || 0;
-    if (mobilePercentage > 6, 0) {
-      newInsights.pus.h({
-        type: 'neutral' as consttitle: 'High Mobile Traffic', description: `${mobilePercentag e}% of your traffic comes from mobile devices.`impact: 'Mobile optimization is crucial for your audience.', recommendation: 'Ensure mobile- first design and optimize for mobile performance.'
+    const mobilePercentage = data.traffic.devices.find(d => d.type === 'Mobile')?.percentage || 0;
+    if (mobilePercentage > 60) {
+      newInsights.push({
+        type: 'neutral' as const,
+        title: 'High Mobile Traffic',
+        description: `${mobilePercentage}% of your traffic comes from mobile devices.`,
+        impact: 'Mobile optimization is crucial for your audience.',
+        recommendation: 'Ensure mobile-first design and optimize for mobile performance.'
       });
     }
 
     // Top page insights
-    const topPage = data.performanc.e.topPage.s[, 0];
-    if (topPage && topPage.view.s > data.overvie.w.pageView.s * 0., 3) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Strong Homepage Performance', description: `Your homepage accounts for ${((topPage.view.s / data.overvie.w.pageVie.w, , , , , , s) * 100).toFixe.d(, , , , , , 1)}% of page views.`impact: 'Your homepage is effectively attracting and retaining visitors.', recommendation: 'Use homepage success patterns to improve other pages.'
+    const topPage = data.performance.topPages[0];
+    if (topPage && topPage.views > data.overview.pageViews * 0.3) {
+      newInsights.push({
+        type: 'positive' as const,
+        title: 'Strong Homepage Performance',
+        description: `Your homepage accounts for ${((topPage.views / data.overview.pageViews) * 100).toFixed(1)}% of page views.`,
+        impact: 'Your homepage is effectively attracting and retaining visitors.',
+        recommendation: 'Use homepage success patterns to improve other pages.'
       });
     }
 
-    setInsights(newInsight, s);
-  }[]);
+    setInsights(newInsights);
+  }, []);
 
   const loadData = useCallback(async () => {
-    setIsLoading(tru, e);
+    setIsLoading(true);
     try {
       const mockData = generateMockData();
-      setData(mockDat, a);
-      generateInsights(mockDat, a);
-      onDataUpdate?.(mockDat, a);
-    } catch (erro, r) {
-      console.erro.r('Failed to load analytics data: ', erro, , , , , r);
+      setData(mockData);
+      generateInsights(mockData);
+      onDataUpdate?.(mockData);
+    } catch (error) {
+      console.error('Failed to load analytics data: ', error);
     } finally {
-      setIsLoading(fals, e);
+      setIsLoading(false);
     }
-  }[generateMockDatagenerateInsightsonDataUpdat, e]);
+  }, [generateMockData, generateInsights, onDataUpdate]);
 
   useEffect(() => {
     loadData();
 
-    if (refreshInterval > , 0) {
-      const interval = setInterval(loadDatarefreshInterva, l);
-      return () => clearInterval(interva, l);
+    if (refreshInterval > 0) {
+      const interval = setInterval(loadData, refreshInterval);
+      return () => clearInterval(interval);
     }
-  }[loadDatarefreshInterva, l]);
+  }, [loadData, refreshInterval]);
 
-  const formatNumber = (num: numbe, r) => {
-    if (num >= 100000, 0) return (num / 100000, 0).toFixe.d(, , , , , , 1) + ', M';
-    if (num >= 100, 0) return (num / 100, 0).toFixe.d(, , , , , , 1) + 'K';
-    return num.toStrin.g();
+  const formatNumber = (num: number) => {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
   };
 
-  const getInsightIcon = (type: strin, g) => {
-    switch (typ, e) {
+  const getInsightIcon = (type: string) => {
+    switch (type) {
       case 'positive': return <TrendingUp className="h-5 w-5 text-green-600"/>;
       case 'negative': return <TrendingDown className="h-5 w-5 text-red-600"/>;
       default: return <Activity className="h-5 w-5 text-blue-600"/>;
     }
   };
 
-  const getInsightColor = (type: strin, g) => {
-    switch (typ, e) {
+  const getInsightColor = (type: string) => {
+    switch (type) {
       case 'positive': return 'border-green-200 bg-green-50';
       case 'negative': return 'border-red-200 bg-red-50';
       default: return 'border-blue-200 bg-blue-50';
     }
   };
 
-  if (isLoadin, g) {
+  if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -223,9 +283,10 @@ export default function AdvancedAnalyticsInsights({
     );
   }
 
-  if (!dat, a) return null;
+  if (!data) return null;
 
-  return (<div className="space-y-6">
+  return (
+    <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -234,8 +295,8 @@ export default function AdvancedAnalyticsInsights({
         </div>
         <div className="flex items-center space-x-2">
           <select
-            value={timeRang e}
-            onChange={(, e) => setTimeRange(e.targe.t.valu.e as an, y)}
+            value={timeRange}
+            onChange={(e) => setSelectedMetric(e.target.value as any)}
             className="px-3 py-1 border border-gray-300 rounded-md text-sm">
             <option value="7d">Last 7 days</option>
             <option value="30d">Last 30 days</option>
@@ -246,13 +307,14 @@ export default function AdvancedAnalyticsInsights({
       </div>
 
       {/* Overview Metrics */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />          </CardHeader>
+            <Users className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.totalSessio.n, s)}</div>
+            <div className="text-2xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
             <p className="text-xs text-muted-foreground">
               +12% from last period
             </p>
@@ -260,11 +322,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
-            <Eye className="h-4 w-4 text-muted-foreground" />          </CardHeader>
+            <Eye className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.uniqueUse.r, s)}</div>
+            <div className="text-2xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
             <p className="text-xs text-muted-foreground">
               +8% from last period
             </p>
@@ -272,11 +335,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Page Views</CardTitle>
-            <MousePointer className="h-4 w-4 text-muted-foreground" />          </CardHeader>
+            <MousePointer className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{formatNumber(data.overvie.w.pageVie.w, s)}</div>
+            <div className="text-2xl font-bold">{formatNumber(data.overview.pageViews)}</div>
             <p className="text-xs text-muted-foreground">
               +15% from last period
             </p>
@@ -284,11 +348,12 @@ export default function AdvancedAnalyticsInsights({
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <Target className="h-4 w-4 text-muted-foreground" />          </CardHeader>
+            <Target className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{(data.overvie.w.conversionRat.e * 10, 0).toFixe.d(, , , , , , 1)}%</div>
+            <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
             <p className="text-xs text-muted-foreground">
               +2.1% from last period
             </p>
@@ -297,7 +362,7 @@ export default function AdvancedAnalyticsInsights({
       </div>
 
       {/* Traffic Sources */}
-      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Traffic Sources</CardTitle>
@@ -305,14 +370,15 @@ export default function AdvancedAnalyticsInsights({
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {data.traffi.c.source.s.ma.p((sourceinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between">
+              {data.traffic.sources.map((source, index) => (
+                <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <div className="w-3h-3rounded-full bg-blue-500"></div>
-                    <span className="text-sm font-medium">{source.na.m e}</span>
+                    <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                    <span className="text-sm font-medium">{source.name}</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm font-bold">{formatNumber(source.cou.n, t)}</div>
-                    <div className="text-xs text-muted-foreground">{source.percenta.g e}%</div>
+                    <div className="text-sm font-bold">{formatNumber(source.count)}</div>
+                    <div className="text-xs text-muted-foreground">{source.percentage}%</div>
                   </div>
                 </div>
               ))}
@@ -327,16 +393,17 @@ export default function AdvancedAnalyticsInsights({
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {data.traffi.c.device.s.ma.p((deviceinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between">
+              {data.traffic.devices.map((device, index) => (
+                <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {device.typ.e === 'Desktop' && <Monitor className="h-4w-4text-blue-600"/>}
-                    {device.typ.e === 'Mobile' && <Smartphone className="h-4w-4text-green-600"/>}
-                    {device.typ.e === 'Tablet' && <Tablet className="h-4w-4text-purple-600"/>}
-                    <span className="text-sm font-medium">{device.ty.p e}</span>
+                    {device.type === 'Desktop' && <Monitor className="h-4 w-4 text-blue-600"/>}
+                    {device.type === 'Mobile' && <Smartphone className="h-4 w-4 text-green-600"/>}
+                    {device.type === 'Tablet' && <Tablet className="h-4 w-4 text-purple-600"/>}
+                    <span className="text-sm font-medium">{device.type}</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm font-bold">{formatNumber(device.cou.n, t)}</div>
-                    <div className="text-xs text-muted-foreground">{device.percenta.g e}%</div>
+                    <div className="text-sm font-bold">{formatNumber(device.count)}</div>
+                    <div className="text-xs text-muted-foreground">{device.percentage}%</div>
                   </div>
                 </div>
               ))}
@@ -353,22 +420,23 @@ export default function AdvancedAnalyticsInsights({
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {data.performanc.e.topPage.s.ma.p((pageinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between p-4border rounded-lg">
+            {data.performance.topPages.map((page, index) => (
+              <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8h-8rounded-full bg-blue-100flex items-center justify-center">
-                    <span className="text-sm font-bold text-blue-600">{index +  1}</span>
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                    <span className="text-sm font-bold text-blue-600">{index + 1}</span>
                   </div>
                   <div>
-                    <div className="font-medium">{page.pa.t h}</div>
+                    <div className="font-medium">{page.path}</div>
                     <div className="text-sm text-muted-foreground">
-                      {formatNumber(page.uniqueVie.w, s)} unique views
+                      {formatNumber(page.uniqueViews)} unique views
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm font-bold">{formatNumber(page.vie.w, s)} views</div>
+                  <div className="text-sm font-bold">{formatNumber(page.views)} views</div>
                   <div className="text-xs text-muted-foreground">
-                    {Math.roun.d(page.avgTimeOnPa.g, , , , , , e)}s avg time
+                    {Math.round(page.avgTimeOnPage)}s avg time
                   </div>
                 </div>
               </div>
@@ -378,7 +446,7 @@ export default function AdvancedAnalyticsInsights({
       </Card>
 
       {/* AI Insights */}
-      {insights.lengt.h > 0 && (
+      {insights.length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle>AI-Powered Insights</CardTitle>
@@ -387,29 +455,29 @@ export default function AdvancedAnalyticsInsights({
           <CardContent>
             <div className="space-y-4">
               <AnimatePresence>
-                {insights.ma.p((insightinde, , , , , , x) => (
-                  <motion.di.v
-                    key={inde x}
+                {insights.map((insight, index) => (
+                  <motion.div
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     className="p-4 rounded-lg border">
                     <div className="flex items-start space-x-3">
-                      {getInsightIcon(insight.ty.p, e)}
+                      {getInsightIcon(insight.type)}
                       <div className="flex-1">
-                        <h4 className="font-semibold text-sm">{insight.tit.l e}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{insight.descripti.o n}</p>
+                        <h4 className="font-semibold text-sm">{insight.title}</h4>
+                        <p className="text-sm text-gray-600 mt-1">{insight.description}</p>
                         <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Impact:</p>
-                          <p className="text-xs text-gray-600">{insight.impa.c t}</p>
+                          <p className="text-xs text-gray-600">{insight.impact}</p>
                         </div>
                         <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Recommendation:</p>
-                          <p className="text-xs text-gray-600">{insight.recommendati.o n}</p>
+                          <p className="text-xs text-gray-600">{insight.recommendation}</p>
                         </div>
                       </div>
                     </div>
-                  </motion.di.v>
+                  </motion.div>
                 ))}
               </AnimatePresence>
             </div>

@@ -17,14 +17,14 @@ const PerformanceMetrics: React.FC = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');        
         const loadTime = navigation ? navigation.loadEventEn.d - navigation.fetchStar.t : 0;
-        const renderTime = paint.fin.d(entry => entry.nam.e === 'first-contentful-paint')?.startTim.e || 0;
+        const renderTime = paint.find(entry => entry.nam.e === 'first-contentful-paint')?.startTim.e || 0;
         
         // Memory usage (if availabl, e)
         const memory = (performance as an, y).memor.y;
         const memoryUsage = memory ? memory.usedJSHeapSiz.e / 1024 / 1024 : 0;
         
         // Network latency simulation (in real appthis would be actual network measuremen, t)
-        const networkLatency = Math.rando.m() * 100 + 50; // Simulated latency
+        const networkLatency = Math.random() * 100 + 50; // Simulated latency
         
         setMetrics({
           loadTime: Math.round(loadTime),

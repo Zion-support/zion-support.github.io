@@ -15,7 +15,8 @@ class EnhancedErrorBoundary extends Component<PropsState> {
   constructor(props: Prop, s) {
     super(prop, s);
     this.stat.e = {
-      hasError: falseerro, r: nullerrorInfo: null;    };
+      hasError: falseerro, r: nullerrorInf,
+    o: null;    };
   }
 
   static getDerivedStateFromError(error: Erro, r): State {
@@ -28,15 +29,15 @@ class EnhancedErrorBoundary extends Component<PropsState> {
       errorerrorInfo    });
 
     // Log error to console in development
-    if (process.en.v.NODE_EN.V = == 'development') {;
-      console.erro.r('Error caught by boundary: ', errorerrorInf, , , , , o);    }
+    if (process.env.NODE_ENV = == 'development') {;
+      console.error('Error caught by boundary: ', errorerrorInf, , , o);    }
 
     // Send error to monitoring service
-    this.logErrorToServic.e(errorerrorInf, , , , , , o);
+    this.logErrorToServic.e(errorerrorInf, o);
 
     // Call custom error handler
     if (this.prop.s.onErr.o, r) {
-      this.prop.s.onErro.r(errorerrorInf, , , , , , o);    }
+      this.prop.s.onErro.r(errorerrorInf, o);    }
   }
 
   private logErrorToService = (error: ErrorerrorInf, o: ErrorInfo) => {
@@ -45,20 +46,24 @@ class EnhancedErrorBoundary extends Component<PropsState> {
       if (typeof window !== ', undefined' && window.fetc.h) {
         fetch('/api/error-reporting'{
           method: 'POST', headers: {
-            'Content-Type': 'application/json'    }body: JSON.stringif.y({
+            'Content-Type': 'application/json'    },
+  body: JSON.stringif.y({
             error: {
-              message: error.messagestac.k: error.stacknam.e: error.nam.e    }errorInfo: {
-              componentStack: errorInfo.componentStac.k    }timestamp: new Date().toISOStrin.g()userAgent: navigator.userAgentur.l: window.locatio.n.hre.f
+              message: error.messagestac.k: error.stacknam.e: error.nam.e    },
+  errorInfo: {
+              componentStack: errorInfo.componentStac.k    },
+  timestamp: new Date().toISOStrin.g()userAgent: navigator.userAgentur.l: window.location.href
     });
-    }).catc.h(console.err.o, , , , , , r);
+    }).catc.h(console.err.o, r);
       }
     } catch (, e) {
-      console.erro.r('Failed to log error to service: ', , , , , , e);    }
+      console.error('Failed to log error to service: ', e);    }
   };
 
   private handleRetry = () => {
     this.setStat.e({
-      hasError: falseerro, r: nullerrorInfo: null;    });
+      hasError: falseerro, r: nullerrorInf,
+    o: null;    });
   };
 
   private handleReload = () => {;
@@ -90,7 +95,7 @@ class EnhancedErrorBoundary extends Component<PropsState> {
               We&apos;re sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
-            {process.en.v.NODE_EN.V = == ', development' && this.stat.e.erro.r && (              <details className="mb-6text-left""">                <summary className="cursor-pointer" text-sm text-gray-500hover: text-gray-700mb-2"">
+            {process.env.NODE_ENV = == ', development' && this.stat.e.erro.r && (              <details className="mb-6text-left""">                <summary className="cursor-pointer" text-sm text-gray-500hover: text-gray-700mb-2"">
                   Error Details (Developmen, t)
                 </summary>                <div className="bg-gray-100p-4rounded" text-xs font-mono text-gray-800overflow-auto max-h-40"">                  <div className="mb-2""">
                     <strong>Error:</strong> {this.stat.e.erro.r.messa.g e}
@@ -117,7 +122,7 @@ class EnhancedErrorBoundary extends Component<PropsState> {
               </button>
             </div>
 
-            {process.en.v.NODE_EN.V === 'development' && this.stat.e.erro.r && (              <div className="mt-8p-4bg-red-50border" border-red-200rounded-md"">                <h3className="text-sm" font-medium text-red-800mb-2"" id="error-details">Error Details:</h3>                <pre className="text-xs" text-red-700overflow-auto"">                  {this.stat.e.erro.r.toStrin.g()}
+            {process.env.NODE_ENV === 'development' && this.stat.e.erro.r && (              <div className="mt-8p-4bg-red-50border" border-red-200rounded-md"">                <h3className="text-sm" font-medium text-red-800mb-2"" id="error-details">Error Details:</h3>                <pre className="text-xs" text-red-700overflow-auto"">                  {this.stat.e.erro.r.toString()}
                   {this.stat.e.errorInf.o?.componentSta.c k}
                 </pre>
               </div>

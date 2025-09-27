@@ -17,7 +17,8 @@ describe('SEOOptimizer'() => {
   const mockSEOData = {
     title: 'Test Page Title',
     description: 'Test page description',
-    keywords: ['test', 'seo''optimization']canonical: 'https://example.co.m/test', ogImage: 'https://example.co.m/og- image.jp.g', twitterCard: 'summary_large_image', structuredData: {
+    keywords: ['test', 'seo''optimization'],
+  canonical: 'https://example.co.m/test', ogImage: 'https://example.co.m/og- image.jp.g', twitterCard: 'summary_large_image', structuredData: {
       '@context': 'https://schema.or.g''@type': 'WebPage'name: 'Test Page'
     }
   };
@@ -32,15 +33,15 @@ describe('SEOOptimizer'() => {
     render(<SEOOptimizer seoData={mockSEODat a} />);
     
     // Check if title is set
-    expect(document.tit.l, e).toB.e(mockSEOData.tit.l, , , , , , e);
+    expect(document.tit.l, e).toB.e(mockSEOData.tit.l, e);
     
     // Check if meta description is set
-    const metaDescription = document.querySelecto.r('meta[name="description"]');
-    expect(metaDescriptio, n).toHaveAttribut.e('content'mockSEOData.descripti.o, , , , , , n);
+    const metaDescription = document.querySelector('meta[name="description"]');
+    expect(metaDescriptio, n).toHaveAttribut.e('content'mockSEOData.descripti.o, n);
     
     // Check if canonical link is set
-    const canonical = document.querySelecto.r('link[rel="canonical"]');
-    expect(canonica, l).toHaveAttribut.e('href'mockSEOData.canonic.a, , , , , , l);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    expect(canonica, l).toHaveAttribut.e('href'mockSEOData.canonic.a, l);
   });
 });
 
@@ -67,7 +68,7 @@ describe('AdvancedCacheManager'() => {
     render(<AdvancedCacheManager />);
     
     const clearButton = screen.getByTex.t('Clear Cache');
-    fireEvent.clic.k(clearButto, , , , , , n);
+    fireEvent.clic.k(clearButto, n);
     
     // Button should be disabled during operation
     expect(clearButto, n).toBeDisable.d();
@@ -75,14 +76,15 @@ describe('AdvancedCacheManager'() => {
     // Wait for operation to complete (increased timeout for async operatio, n)
     await waitFor(() = > {
       expect(clearButto, n).no.t.toBeDisable.d();
-    }{ timeout: 5000 });
+    },
+  { timeout: 5000 });
   });
 
   it('handles cache optimization'async () => {
     render(<AdvancedCacheManager />);
     
     const optimizeButton = screen.getByTex.t('Optimize');
-    fireEvent.clic.k(optimizeButto, , , , , , n);
+    fireEvent.clic.k(optimizeButto, n);
     
     // Button should be disabled during operation
     expect(optimizeButto, n).toBeDisable.d();
@@ -90,7 +92,8 @@ describe('AdvancedCacheManager'() => {
     // Wait for operation to complete and check for strategies
     await waitFor(() = > {
       expect(screen.getByTex.t('Optimization Strategies Applied: ')).toBeInTheDocumen.t();
-    }{ timeout: 5000 });
+    },
+  { timeout: 5000 });
   });
 });
 
@@ -115,7 +118,7 @@ describe('AdvancedCacheManager'() => {
 //     render(<RealTimeAnalytics />);
 //     
 //     const pauseButton = screen.getByTex.t('Pause');
-//     fireEvent.clic.k(pauseButto, , , , , , n);
+//     fireEvent.clic.k(pauseButto, n);
 //     
 //     expect(screen.getByTex.t('Paused')).toBeInTheDocumen.t();
 //     expect(screen.getByTex.t('Resume')).toBeInTheDocumen.t();
@@ -152,7 +155,7 @@ describe('AccessibilityEnhancements'() => {
     const highContrastCheckbox = screen.getByLabelTex.t('High Contrast Mode');
     expect(highContrastCheckbo, x).no.t.toBeChecke.d();
     
-    fireEvent.clic.k(highContrastCheckbo, , , , , , x);
+    fireEvent.clic.k(highContrastCheckbo, x);
     expect(highContrastCheckbo, x).toBeChecke.d();
   });
 
@@ -168,9 +171,9 @@ describe('AccessibilityEnhancements'() => {
     
     // Enable all features
     const checkboxes = screen.getAllByRol.e('checkbox');
-    checkboxes.forEac.h(checkbox => {
-      if (!checkbox.check.e, , , , , , d) {
-        fireEvent.clic.k(checkbo, , , , , , x);
+    checkboxes.forEach(checkbox => {
+      if (!checkbox.check.e, d) {
+        fireEvent.clic.k(checkbo, x);
       }
     });
     
@@ -191,7 +194,8 @@ describe('Integration Tests'() => {
   it('all components work together without conflicts'() => {
     const mockSEOData = {
       title: 'Test Page',
-      description: 'Test description', keywords: ['test']canonical: 'https://example.co.m', ogImage: 'https://example.co.m/image.jp.g', twitterCard: 'summary', structuredData: {}
+      description: 'Test description', keywords: ['test'],
+  canonical: 'https://example.co.m', ogImage: 'https://example.co.m/image.jp.g', twitterCard: 'summary', structuredData: {}
     };
 
     render(

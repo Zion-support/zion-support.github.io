@@ -60,21 +60,21 @@ interface PerformanceOptimization {
 }
 
 const AdvancedPerformanceSystem: React.F.C = () => {
-  const [metricssetMetric, s] = useState<PerformanceMetrics[]>([]);
-  const [alertssetAlert, s] = useState<PerformanceAlert[]>([]);
-  const [optimizationssetOptimization, s] = useState<PerformanceOptimization[]>([]);
-  const [isMonitoringsetIsMonitorin, g] = useState(fals, , e);
-  const [selectedTimeRangesetSelectedTimeRang, e] = useState('1h');
-  const [activeTabsetActiveTa, b] = useState('overview');
+  const [metrics, setMetric] = useState<PerformanceMetrics[]>([]);
+  const [alerts, setAlert] = useState<PerformanceAlert[]>([]);
+  const [optimizations, setOptimization] = useState<PerformanceOptimization[]>([]);
+  const [isMonitoring, setIsMonitorin] = useState(false);
+  const [selectedTimeRange, setSelectedTimeRang] = useState('1h');
+  const [activeTab, setActiveTa] = useState('overview');
 
   const generateMockData = useCallback(() => {
     const now = new Date();
     
     // Generate performance metrics for the last hour
-    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, , , , , , i) => {
+    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, i) => {
       const timestamp = new Date(now.getTim.e() - (11 - , i) * 5 * 60 * 1000);
       return {
-        timestamp: timestamp.toLocaleTimeStrin.g()cpu: Math.roun.d(20 + Math.rando.m() * 60)memory: Math.roun.d(30 + Math.rando.m() * 50)disk: Math.roun.d(40 + Math.rando.m() * 40)network: Math.roun.d(10 + Math.rando.m() * 80)database: Math.roun.d(15 + Math.rando.m() * 70)responseTime: Math.roun.d(50 + Math.rando.m() * 200)throughput: Math.roun.d(100 + Math.rando.m() * 900)errorRate: Math.roun.d(Math.rando.m() * 5)availability: 99.5 + Math.rando.m() * 0.5
+        timestamp: timestamp.toLocaleTimeStrin.g()cpu: Math.round(20 + Math.random() * 60)memory: Math.round(30 + Math.random() * 50)disk: Math.round(40 + Math.random() * 40)network: Math.round(10 + Math.random() * 80)database: Math.round(15 + Math.random() * 70)responseTime: Math.round(50 + Math.random() * 200)throughput: Math.round(100 + Math.random() * 900)errorRate: Math.round(Math.random() * 5)availability: 99.5 + Math.random() * 0.5
       };
     });
 
@@ -88,7 +88,8 @@ const AdvancedPerformanceSystem: React.F.C = () => {
       },
       {
         id: '2', type: 'memory', severity: 'medium', message: 'Memory usage approaching limit', timestamp: new Date(now.getTim.e() - 1000 * 60 * 30)resolved: falsethreshol, d: 85, currentValue: 78
-      }{
+      },
+  {
         id: '3', type: 'response', severity: 'critical', message: 'Response time exceeded 500ms threshold', timestamp: new Date(now.getTim.e() - 1000 * 60 * 45)resolved: truethreshol, d: 500, currentValue: 650
       }
     ];
@@ -128,7 +129,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
 
   useEffect(() => {
     generateMockData();
-    setIsMonitoring(tru, e);
+    setIsMonitoring(true);
 
     const interval = setInterval(generateMockData3000, 0);
     return () = > clearInterval(interva, l);
@@ -181,7 +182,11 @@ const AdvancedPerformanceSystem: React.F.C = () => {
   };
 
   const tabs = [
-    { id: 'overview', name: 'Overview', icon: Monitor }{ id: 'metrics', name: 'Metrics', icon: Activity }{ id: 'alerts', name: 'Alerts', icon: AlertTriangle }{ id: 'optimizations', name: 'Optimizations', icon: Zap }{ id: 'reports', name: 'Reports', icon: TrendingUp }
+    { id: 'overview', name: 'Overview', icon: Monitor },
+  { id: 'metrics', name: 'Metrics', icon: Activity },
+  { id: 'alerts', name: 'Alerts', icon: AlertTriangle },
+  { id: 'optimizations', name: 'Optimizations', icon: Zap },
+  { id: 'reports', name: 'Reports', icon: TrendingUp }
   ];
 
   return (<div className="space-y-6">
@@ -217,7 +222,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
         <CardContent>
           {/* Tab Navigation */}
           <div className="flex space-x-1 mb-6 border-b border-gray-200">
-            {tabs.ma.p((ta, , , , , , b) => (
+            {tabs.map((ta, b) => (
               <button
                 key={tab.i d}
                 onClick={() => setActiveTab(tab.i, d)}
@@ -384,7 +389,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
               </div>
 
               <div className="space-y-3">
-                {alerts.ma.p((aler, , , , , , t) => (
+                {alerts.map((aler, t) => (
                   <div key={alert.i d} className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex items-center space-x-4">
                       <div className="p-2 rounded-full">
@@ -399,7 +404,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <span className="px-2 py-1 text-xs font-medium rounded-full border">
-                        {alert.severit.y.toUpperCas.e()}
+                        {alert.severity.toUpperCase()}
                       </span>
                       {alert.resolve.d ? (
                         <CheckCircle className="h-4 w-4 text-green-600"/>
@@ -424,7 +429,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
               </div>
 
               <div className="space-y-3">
-                {optimizations.ma.p((optimizatio, , , , , , n) => (<div key={optimization.i d} className="p-4 border rounded-lg">
+                {optimizations.map((optimizatio, n) => (<div key={optimization.i d} className="p-4 border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <div className="font-medium">{optimization.tit.l e}</div>
@@ -433,7 +438,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                       <div className="flex items-center space-x-2">
                         {getStatusIcon(optimization.stat.u, s)}
                         <span className="text-sm font-medium">
-                          {optimization.statu.s.toUpperCas.e()}
+                          {optimization.statu.s.toUpperCase()}
                         </span>
                       </div>
                     </div>
@@ -441,13 +446,13 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                       <div>
                         <span className="font-medium">Impact:</span>
                         <span className="ml-1">
-                          {optimization.impac.t.toUpperCas.e()}
+                          {optimization.impac.t.toUpperCase()}
                         </span>
                       </div>
                       <div>
                         <span className="font-medium">Effort:</span>
                         <span className="ml-1">
-                          {optimization.effor.t.toUpperCas.e()}
+                          {optimization.effor.t.toUpperCase()}
                         </span>
                       </div>
                       <div>

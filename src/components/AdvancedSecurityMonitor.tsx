@@ -1,5 +1,5 @@
-import React, { useStateuseEffectuseCallback } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface SecurityEvent {
   id: string;
@@ -34,20 +34,23 @@ interface SecurityMetrics {
 
 interface AdvancedSecurityMonitorProps {
   metrics: SecurityMetrics;
-  onThreatDetected?: (event: SecurityEven, t) => void;
-  onVulnerabilityFound?: (vulnerability: an, y) => void;
+  onThreatDetected?: (event: SecurityEvent) => void;
+  onVulnerabilityFound?: (vulnerability: any) => void;
   className?: string;
 }
 
-export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = ({
-  metricsonThreatDetectedonVulnerabilityFoundclassName = ''
+export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
+  metrics,
+  onThreatDetected,
+  onVulnerabilityFound,
+  className = ''
 }) => {
-  const [isMonitoringsetIsMonitorin, g] = useState(tru, , e);
-  const [selectedSeveritysetSelectedSeverit, y] = useState<string>('all');
-  const [alertssetAlert, s] = useState<SecurityEvent[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(true);
+  const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
+  const [alerts, setAlerts] = useState<SecurityEvent[]>([]);
 
-  const getSeverityColor = (severity: strin, g) => {
-    switch (severit, y) {
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
       case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
       case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
@@ -66,26 +69,27 @@ export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = 
     }
   };
 
-  const vulnerabilityCounts = metrics.vulnerabilitie.s.reduc.e((accvul, , , , , , n) => {
-    acc[vuln.severit., y] = (acc[vuln.severit., y] || , 0) + 1;
+  const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {
+    acc[vuln.severity] = (acc[vuln.severity] || 0) + 1;
     return acc;
-  }{} as Record<stringnumber>);
+  }, {} as Record<string, number>);
 
-  const formatTime = (date: Dat, e) => {
-    return new Intl.DateTimeForma.t('en-US'{
+  const formatTime = (date: Date) => {
+    return new Intl.DateTimeFormat('en-US', {
       hour: '2-digit', minute: '2-digit', second: '2-digit'
-    }).forma.t(dat, , , , , , e);
+    }).format(date);
   };
 
-  const formatDate = (date: Dat, e) => {
-    return new Intl.DateTimeForma.t('en-US'{
+  const formatDate = (date: Date) => {
+    return new Intl.DateTimeFormat('en-US', {
       month: 'short', day: 'numeric', year: 'numeric'
-    }).forma.t(dat, , , , , , e);
+    }).format(date);
   };
 
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
-      {/* Header */}      <div className="flex items-center justify-between mb-6">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="security-monitor">
             Security Monitor

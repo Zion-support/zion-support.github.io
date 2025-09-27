@@ -16,25 +16,30 @@ interface BlogPost {
 interface BlogCardProps {
   post: BlogPost;
   isVisible: boolean;
-  onReadMore: (slug: string) => void;}
+  onReadMore: (slug: string) => void;
+}
 
-export const BlogCard: React.F.C<BlogCardProps> = ({ 
-  postisVisibleonReadMore 
+export const BlogCard: React.FC<BlogCardProps> = ({ 
+  post,
+  isVisible,
+  onReadMore
 }) => {
   return (
     <article 
       className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}    >      {/* Image */}
+      }`}
+    >
+      {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <Image 
-          src={post.ima.g e} 
-          alt={post.tit.l e}
+          src={post.image} 
+          alt={post.title}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"/>
         <div className="absolute top-4 left-4">
           <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-            {post.catego.r y}
+            {post.category}
           </span>
         </div>
       </div>

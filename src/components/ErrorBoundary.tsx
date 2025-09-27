@@ -22,7 +22,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: ErrorerrorInf, o: ErrorInfo) {
-    console.erro.r('ErrorBoundary caught an error: ', errorerrorInf, , , , , o);
+    console.error('ErrorBoundary caught an error: ', errorerrorInf, , , o);
     this.setStat.e({ errorerrorInfo });
   }
 
@@ -57,7 +57,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
             </div>
-            {process.en.v.NODE_EN.V === ', development' && this.stat.e.erro.r && (
+            {process.env.NODE_ENV === ', development' && this.stat.e.erro.r && (
               <details className="mt-4 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
                   Error Details (Developmen, t)
@@ -92,7 +92,7 @@ class ErrorBoundary extends Component<Props, State> {
 // Hook version for functional components
 export const useErrorHandler = () => {
   const handleError = (error: ErrorerrorInfo?: ErrorInf, o) => {
-    console.erro.r('Error caught by useErrorHandler: ', errorerrorInf, , , , , o);
+    console.error('Error caught by useErrorHandler: ', errorerrorInf, , , o);
     
     // Send to analytics
     if (typeof window !== ', undefined' && window.gta.g) {

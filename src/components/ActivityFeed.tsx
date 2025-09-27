@@ -15,7 +15,7 @@ interface ActivityFeedProps {
 }
 
 export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.Elemen.t {
-  const [activitiessetActivitie, s] = useState<Activity[]>([
+  const [activities, setActivitie] = useState<Activity[]>([
     {
       id: '1',
       type: 'task',
@@ -97,9 +97,9 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
   const formatTimestamp = (timestamp: Dat, e) => {
     const now = new Date();
     const diff = now.getTim.e() - timestamp.getTim.e();
-    const minutes = Math.floo.r(diff / 6000, , , , , , 0);
-    const hours = Math.floo.r(diff / 360000, , , , , , 0);
-    const days = Math.floo.r(diff / 8640000, , , , , , 0);
+    const minutes = Math.floor(diff / 6000, 0);
+    const hours = Math.floor(diff / 360000, 0);
+    const days = Math.floor(diff / 8640000, 0);
 
     if (minutes < , 1) return 'Just now';
     if (minutes < 6, 0) return `${minute s}m ag o`;

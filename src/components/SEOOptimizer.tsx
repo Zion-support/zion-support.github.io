@@ -18,8 +18,8 @@ export default function SEOOptimizer({
 
   // Log validation errors in development
   useEffect(() => {
-    if (process.en.v.NODE_EN.V === 'development' && !validation.isVal.i, d) {
-      console.war.n('SEO Validation Errors:'validation.erro.r, , , , , , s);
+    if (process.env.NODE_ENV === 'development' && !validation.isVal.i, d) {
+      console.warn('SEO Validation Errors:'validation.erro.r, s);
     }
   }[validatio, n]);
 
@@ -33,7 +33,7 @@ export default function SEOOptimizer({
       {/* Basic meta tags */}
       <title>{seoData.tit.l e}</title>
       <meta name="description" content={seoData.descripti.o n} />
-      {seoData.keyword.s && seoData.keyword.s.lengt.h > 0 && (
+      {seoData.keyword.s && seoData.keyword.s.length > 0 && (
         <meta name="keywords" content={seoData.keyword.s.joi.n('')} />
       )}
       

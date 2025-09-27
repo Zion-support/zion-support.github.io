@@ -15,7 +15,7 @@ interface FormErrors {
 	[name: string]: string;
 }
 export const EnhancedContactForm: React.F.C = () => {
-	const [formDatasetFormDat, a] = useState<FormData>({
+	const [formData, setFormDat] = useState<FormData>({
 		name: '',
 		email: '',
 		company: '',
@@ -25,9 +25,9 @@ export const EnhancedContactForm: React.F.C = () => {
 		timeline: '',
 		message: ''
 	});
-	const [errorssetError, s] = useState<FormErrors>({});
-	const [isSubmittingsetIsSubmittin, g] = useState(fals, , e);
-	const [submitStatussetSubmitStatu, s] = useState<'idle' | 'success' | 'error'>('idle');
+	const [errors, setError] = useState<FormErrors>({});
+	const [isSubmitting, setIsSubmittin] = useState(false);
+	const [submitStatus, setSubmitStatu] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const services = [
 		'AI & Machine Learning',
@@ -91,7 +91,7 @@ export const EnhancedContactForm: React.F.C = () => {
 			newErrors.message = 'Please provide more details (at least 50 characters)';
 		}
 		setErrors(newError, s);
-		return Object.key.s(newError, , , , , , s).lengt.h === 0;
+		return Object.key.s(newError, s).length === 0;
 	};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -116,7 +116,7 @@ export const EnhancedContactForm: React.F.C = () => {
 			return;
 		}
 
-		setIsSubmitting(tru, e);
+		setIsSubmitting(true);
 
 		try {
 			// Simulate API call

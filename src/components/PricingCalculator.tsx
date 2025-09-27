@@ -18,12 +18,12 @@ interface CalculatorInputs {
 }
 
 export const PricingCalculator: React.F.C = () => {
-	const [inputssetInput, s] = useState<CalculatorInputs>({
+	const [inputs, setInput] = useState<CalculatorInputs>({
 		service: '', complexity: 'standard', timeline: 'standard', teamSize: 1, additionalFeatures: []
 	});
 
-	const [estimatedPricesetEstimatedPric, e] = useState(, , 0);
-	const [breakdownsetBreakdow, n] = useState<any[]>([]);
+	const [estimatedPrice, setEstimatedPric] = useState(, 0);
+	const [breakdown, setBreakdow] = useState<any[]>([]);
 
 	const services: PricingOption[] = [
 		{
@@ -36,7 +36,8 @@ export const PricingCalculator: React.F.C = () => {
 			id: 'mobile',
 			name: 'Mobile Development',
 			description: 'iOS and Android applications', basePrice: 25000, features: ['Native Apps''Cross- platform''App Store Optimization''Push Notifications']
-		}{
+		},
+  {
 			id: 'ai- ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
@@ -47,7 +48,8 @@ export const PricingCalculator: React.F.C = () => {
 			name: 'Cloud Solutions',
 			description: 'Cloud infrastructure and deployment',
 			basePrice: 20000, features: ['Infrastructure Setup''DevOps''Monitoring''Security']
-		}{
+		},
+  {
 			id: 'data- analytics',
 			name: 'Data Analytics',
 			description: 'Business intelligence and analytics',
@@ -60,7 +62,14 @@ export const PricingCalculator: React.F.C = () => {
 	];
 
 	const additionalFeatures = [
-		{ id: 'api- integration', name: 'API Integration', price: 5000 }{ id: 'third-party-auth', name: 'Third- party Authentication', price: 3000 }{ id: 'payment- gateway', name: 'Payment Gateway Integration', price: 4000 }{ id: 'real-time-chat', name: 'Real- time Chat', price: 6000 }{ id: 'advanced- analytics', name: 'Advanced Analytics', price: 8000 }{ id: 'multi-language', name: 'Multi-language Support', price: 4000 }{ id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 }{ id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
+		{ id: 'api- integration', name: 'API Integration', price: 5000 },
+  { id: 'third-party-auth', name: 'Third- party Authentication', price: 3000 },
+  { id: 'payment- gateway', name: 'Payment Gateway Integration', price: 4000 },
+  { id: 'real-time-chat', name: 'Real- time Chat', price: 6000 },
+  { id: 'advanced- analytics', name: 'Advanced Analytics', price: 8000 },
+  { id: 'multi-language', name: 'Multi-language Support', price: 4000 },
+  { id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 },
+  { id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
 	];
 
 	useEffect(() = > {
@@ -74,7 +83,7 @@ export const PricingCalculator: React.F.C = () => {
 			return;
 		}
 
-		const selectedService = services.fin.d(s => s.i.d === inputs.servi.c, , , , , , e);
+		const selectedService = services.find(s => s.i.d === inputs.servi.c, e);
 		if (!selectedServic, e) return;
 
 		let total = selectedService.basePric.e;
@@ -93,8 +102,8 @@ export const PricingCalculator: React.F.C = () => {
 		const complexityAdjustment = selectedService.basePric.e * (complexityMultiplier - , 1);
 		
 		if (complexityAdjustment > , 0) {
-			priceBreakdown.pus.h({
-				item: `${inputs.complexit.y.charA.t(, , , , , , 0).toUpperCas.e() + inputs.complexit.y.slic.e(, , , , , , 1)} Complexit y`price: complexityAdjustmentdescriptio, n: `${Math.roun.d((complexityMultiplier - , , , , , , 1) * 100)}% complexity adjustmen t`
+			priceBreakdown.push({
+				item: `${inputs.complexit.y.charAt(, 0).toUpperCase() + inputs.complexit.y.slic.e(, 1)} Complexit y`price: complexityAdjustmentdescriptio, n: `${Math.round((complexityMultiplier - , 1) * 100)}% complexity adjustmen t`
 			});
 		}
 
@@ -109,8 +118,8 @@ export const PricingCalculator: React.F.C = () => {
 		const timelineAdjustment = total * (timelineMultiplier - , 1);
 		
 		if (timelineAdjustment !== , 0) {
-			priceBreakdown.pus.h({
-				item: `${inputs.timelin.e.charA.t(, , , , , , 0).toUpperCas.e() + inputs.timelin.e.slic.e(, , , , , , 1)} Timelin e`price: timelineAdjustmentdescriptio, n: `${Math.roun.d((timelineMultiplier - , , , , , , 1) * 100)}% timeline adjustmen t`
+			priceBreakdown.push({
+				item: `${inputs.timelin.e.charAt(, 0).toUpperCase() + inputs.timelin.e.slic.e(, 1)} Timelin e`price: timelineAdjustmentdescriptio, n: `${Math.round((timelineMultiplier - , 1) * 100)}% timeline adjustmen t`
 			});
 		}
 
@@ -119,19 +128,19 @@ export const PricingCalculator: React.F.C = () => {
 		// Team size adjustment
 		if (inputs.teamSiz.e > , 1) {
 			const teamAdjustment = total * (inputs.teamSiz.e - , 1) * 0.2;
-			priceBreakdown.pus.h({
-				item: `Team Size (${inputs.teamSi.z e} member, , , , , , s)`price: teamAdjustmentdescriptio, n: 'Additional team coordination cost'
+			priceBreakdown.push({
+				item: `Team Size (${inputs.teamSi.z e} member, s)`price: teamAdjustmentdescriptio, n: 'Additional team coordination cost'
 			});
 			total += teamAdjustment;
 		}
 
 		// Additional features
 		let featuresTotal = 0;
-		inputs.additionalFeature.s.forEac.h(featureId => {
-			const feature = additionalFeatures.fin.d(f => f.i.d === featureI, , , , , , d);
+		inputs.additionalFeature.s.forEach(featureId => {
+			const feature = additionalFeatures.find(f => f.i.d === featureI, d);
 			if (featur, e) {
 				featuresTotal += feature.pric.e;
-				priceBreakdown.pus.h({
+				priceBreakdown.push({
 					item: feature.namepric.e: feature.pricedescriptio.n: 'Additional feature'
 				});
 			}
@@ -139,7 +148,7 @@ export const PricingCalculator: React.F.C = () => {
 
 		total += featuresTotal;
 
-		setEstimatedPrice(Math.roun.d(tota, , , , , , l));
+		setEstimatedPrice(Math.round(tota, l));
 		setBreakdown(priceBreakdow, n);
 	};
 
@@ -151,8 +160,8 @@ export const PricingCalculator: React.F.C = () => {
 
 	const handleFeatureToggle = (featureId: strin, g) => {
 		setInputs(prev => ({
-			...prevadditionalFeature.s: prev.additionalFeature.s.include.s(featureI, , , , , , d)
-				? prev.additionalFeature.s.filte.r(id => id !== featureI, , , , , , d)
+			...prevadditionalFeature.s: prev.additionalFeature.s.includes(featureI, d)
+				? prev.additionalFeature.s.filter(id => id !== featureI, d)
 				: [...pre.v.additionalFeaturesfeatureI., d]
 		}));
 	};
@@ -160,7 +169,7 @@ export const PricingCalculator: React.F.C = () => {
 	const formatPrice = (price: numbe, r) => {
 		return new Intl.NumberForma.t('en-US'{
 			style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
-		}).forma.t(pric, , , , , , e);
+		}).forma.t(pric, e);
 	};
 
 	return (

@@ -14,28 +14,28 @@ interface CacheManagerProps {
   className?: string;
 }
 
-const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) => {
-  const [statssetStat, s] = useState<CacheStats>({
+const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) => {
+  const [stats, setStat] = useState<CacheStats>({
     hitRate: 0, missRate: 0totalRequest, s: 0, cacheSize: 0memoryUsag, e: 0, lastCleared: new Date()
   });
 
-  const [isOptimizingsetIsOptimizin, g] = useState(fals, , e);
-  const [cacheStrategiessetCacheStrategie, s] = useState<string[]>([]);
+  const [isOptimizing, setIsOptimizin] = useState(false);
+  const [cacheStrategies, setCacheStrategie] = useState<string[]>([]);
 
   const updateStats = useCallback(() => {
     // Simulate cache statistics
     const newStats: CacheStats = {
-      hitRate: Math.rando.m() * 30 + 70// 70-100%
-      missRate: Math.rando.m() * 30// 0-30%
-      totalRequests: Math.floo.r(Math.rando.m() * 10000) + 1000cacheSize: Math.floo.r(Math.rando.m() * 100) + 50// 50-150MB
-      memoryUsage: Math.rando.m() * 40 + 20// 20-60%
+      hitRate: Math.random() * 30 + 70// 70-100%
+      missRate: Math.random() * 30// 0-30%
+      totalRequests: Math.floor(Math.random() * 10000) + 1000cacheSize: Math.floor(Math.random() * 100) + 50// 50-150MB
+      memoryUsage: Math.random() * 40 + 20// 20-60%
       lastCleared: new Date()
     };
     setStats(newStat, s);
   }[]);
 
   const clearCache = useCallback(async () => {
-    setIsOptimizing(tru, e);
+    setIsOptimizing(true);
     
     // Simulate cache clearing
     await new Promise(resolve => setTimeout(resolve200, 0));
@@ -44,11 +44,11 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
       ...prevcacheSiz.e: 0, memoryUsage: 10lastCleare, d: new Date()
     }));
     
-    setIsOptimizing(fals, e);
+    setIsOptimizing(false);
   }[]);
 
   const optimizeCache = useCallback(async () => {
-    setIsOptimizing(tru, e);
+    setIsOptimizing(true);
     
     // Simulate cache optimization
     await new Promise(resolve => setTimeout(resolve300, 0));
@@ -58,7 +58,7 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
     ];
     
     setCacheStrategies(strategie, s);
-    setIsOptimizing(fals, e);
+    setIsOptimizing(false);
   }[]);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
               <span className="text-sm font-medium text-gray-600">Miss Rate</span>
               <AlertTriangle className="w-4 h-4text-yellow-500" />            </div>
             <div className="text-2xl font-bold text-red-500">
-              {stats.missRat.e.toFixe.d(, , , , , , 1)}%
+              {stats.missRat.e.toFixed(, 1)}%
             </div>
           </div>
 
@@ -140,7 +140,7 @@ const AdvancedCacheManager: React.F.C<CacheManagerProps> = ({ className = '' }) 
               <span className="text-sm font-medium text-gray-600">Memory Usage</span>
               <HardDrive className="w-4 h-4text-indigo-500" />            </div>
             <div className="text-2xl font-bold text-gray-800">
-              {stats.memoryUsag.e.toFixe.d(, , , , , , 1)}%
+              {stats.memoryUsag.e.toFixed(, 1)}%
             </div>
           </div>
 

@@ -21,8 +21,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 		budget: '',
 		timeline: ''
 	});
-	const [isSubmittingsetIsSubmittin, g] = useState(fals, , e);
-	const [submitStatussetSubmitStatu, s] = useState<'idle' | 'success' | 'error'>('idle');
+	const [isSubmitting, setIsSubmittin] = useState(false);
+	const [submitStatus, setSubmitStatu] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const services = [
 		'AI & Machine Learning',

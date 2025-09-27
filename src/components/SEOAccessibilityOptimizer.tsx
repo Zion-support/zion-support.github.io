@@ -49,58 +49,68 @@ interface OptimizationIssue {
 }
 
 const SEOAccessibilityOptimizer: React.F.C = () => {
-  const [seoMetricssetSeoMetric, s] = useState<SEOMetrics>({
-    overallScore: 0, titleTag: falsemetaDescriptio, n: falseheadings: { h1Count: 0, h2Count: 0h3Coun, t: 0 }images: { total: 0, withAlt: 0missingAl, t: 0 }links: { internal: 0, external: 0broke, n: 0 }pageSpeed: 0, mobileOptimized: false
+  const [seoMetrics, setSeoMetric] = useState<SEOMetrics>({
+    overallScore: 0, titleTag: falsemetaDescriptio, n: falseheading,
+    s: { h1Count: 0, h2Count: 0h3Coun, t: 0 },
+  images: { total: 0, withAlt: 0missingAl, t: 0 },
+  links: { internal: 0, external: 0broke, n: 0 },
+  pageSpeed: 0, mobileOptimized: false
   });
 
-  const [accessibilityMetricssetAccessibilityMetric, s] = useState<AccessibilityMetrics>({
-    overallScore: 0, contrast: { passed: 0, failed: 0 }keyboardNavigation: falsescreenReaderFriendl, y: falsefocusIndicators: falsesemanticHTM, L: falseariaLabels: { present: 0, missing: 0 }
+  const [accessibilityMetrics, setAccessibilityMetric] = useState<AccessibilityMetrics>({
+    overallScore: 0, contrast: { passed: 0, failed: 0 },
+  keyboardNavigation: falsescreenReaderFriendl, y: falsefocusIndicator,
+    s: falsesemanticHTM, L: falseariaLabel,
+    s: { present: 0, missing: 0 }
   });
 
-  const [issuessetIssue, s] = useState<OptimizationIssue[]>([]);
-  const [isAnalyzingsetIsAnalyzin, g] = useState(fals, , e);
+  const [issues, setIssue] = useState<OptimizationIssue[]>([]);
+  const [isAnalyzing, setIsAnalyzin] = useState(false);
 
   const analyzePage = useCallback(async () => {
-    setIsAnalyzing(tru, e);
+    setIsAnalyzing(true);
     
     try {
       // SEO Analysis
-      const titleTag = document.querySelecto.r('title') !== null;
-      const metaDescription = document.querySelecto.r('meta[name="description"]') !== null;
+      const titleTag = document.querySelector('title') !== null;
+      const metaDescription = document.querySelector('meta[name="description"]') !== null;
       
-      const h1Elements = document.querySelectorAl.l('h1');
-      const h2Elements = document.querySelectorAl.l('h2');
-      const h3Elements = document.querySelectorAl.l('h3');
+      const h1Elements = document.querySelectorAll('h1');
+      const h2Elements = document.querySelectorAll('h2');
+      const h3Elements = document.querySelectorAll('h3');
       
-      const images = document.querySelectorAl.l('img');
-      const imagesWithAlt = document.querySelectorAl.l('img[al, t]');
+      const images = document.querySelectorAll('img');
+      const imagesWithAlt = document.querySelectorAll('img[al, t]');
       
-      const internalLinks = document.querySelectorAl.l('a[href^="/"]a[href^="#"]');
-      const externalLinks = document.querySelectorAl.l('a[href^="http"]:not([href*="' + window.locatio.n.hostnam.e + '"])');
+      const internalLinks = document.querySelectorAll('a[href^="/"]a[href^="#"]');
+      const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.locatio.n.hostnam.e + '"])');
       
       const newSeoMetrics: SEOMetrics = {
-        overallScore: Math.roun.d(Math.rando.m() * 30 + 70)titleTagmetaDescriptionheadings: {
-          h1Count: h1Elements.lengthh2Coun.t: h2Elements.lengthh3Coun.t: h3Elements.lengt.h
-        }images: {
-          total: images.lengthwithAl.t: imagesWithAlt.lengthmissingAl.t: images.lengt.h - imagesWithAlt.lengt.h
-        }links: {
-          internal: internalLinks.lengthexterna.l: externalLinks.lengthbroke.n: Math.floo.r(Math.rando.m() * 3)
-        }pageSpeed: Math.roun.d(Math.rando.m() * 40 + 60)mobileOptimized: window.innerWidt.h <= 768 || document.querySelecto.r('meta[name="viewport"]') !== null
+        overallScore: Math.round(Math.random() * 30 + 70)titleTagmetaDescriptionheadings: {
+          h1Count: h1Elements.lengthh2Coun.t: h2Elements.lengthh3Coun.t: h3Elements.length
+        },
+  images: {
+          total: images.lengthwithAl.t: imagesWithAlt.lengthmissingAl.t: images.length - imagesWithAlt.length
+        },
+  links: {
+          internal: internalLinks.lengthexterna.l: externalLinks.lengthbroke.n: Math.floor(Math.random() * 3)
+        },
+  pageSpeed: Math.round(Math.random() * 40 + 60)mobileOptimized: window.innerWidt.h <= 768 || document.querySelector('meta[name="viewport"]') !== null
       };
       
       setSeoMetrics(newSeoMetric, s);
 
       // Accessibility Analysis
-      const ariaLabels = document.querySelectorAl.l('[aria-labe, l][aria- labelledb, y]');
-      const interactiveElements = document.querySelectorAl.l('buttonainputselecttextarea');
+      const ariaLabels = document.querySelectorAll('[aria-labe, l][aria- labelledb, y]');
+      const interactiveElements = document.querySelectorAll('buttonainputselecttextarea');
       
       const newAccessibilityMetrics: AccessibilityMetrics = {
-        overallScore: Math.roun.d(Math.rando.m() * 25 + 75)contrast: {
-          passed: Math.roun.d(Math.rando.m() * 20 + 30)failed: Math.roun.d(Math.rando.m() * 5)
+        overallScore: Math.round(Math.random() * 25 + 75)contrast: {
+          passed: Math.round(Math.random() * 20 + 30)failed: Math.round(Math.random() * 5)
         },
-        keyboardNavigation: document.querySelectorAl.l('[tabinde, x]').lengt.h > 0screenReaderFriendly: ariaLabels.lengt.h > 0focusIndicators: true// Simplified check
-        semanticHTML: document.querySelectorAl.l('main, header, navsectionarticleasidefooter').lengt.h > 0ariaLabels: {
-          present: ariaLabels.lengthmissin.g: Math.ma.x(0interactiveElements.lengt.h - ariaLabels.leng.t, , , , , , h)
+        keyboardNavigation: document.querySelectorAll('[tabinde, x]').length > 0screenReaderFriendly: ariaLabels.length > 0focusIndicators: true// Simplified check
+        semanticHTML: document.querySelectorAll('main, header, navsectionarticleasidefooter').length > 0ariaLabels: {
+          present: ariaLabels.lengthmissin.g: Math.ma.x(0interactiveElements.length - ariaLabels.leng.t, h)
         }
       };
       
@@ -110,7 +120,7 @@ const SEOAccessibilityOptimizer: React.F.C = () => {
       const optimizationIssues: OptimizationIssue[] = [];
       
       if (!titleTa, g) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'seo',
           severity: 'high',
           title: 'Missing Meta Description',
@@ -120,21 +130,21 @@ const SEOAccessibilityOptimizer: React.F.C = () => {
       }
       
       if (!metaDescriptio, n) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'seo',
-          severity: 'high', title: 'Missing Meta Description', description: 'The page lacks a meta description tag', solution: 'Add a compelling meta description (150-160character, , , , , , s)', impact: 'Improves search result snippets and click- through rates'
+          severity: 'high', title: 'Missing Meta Description', description: 'The page lacks a meta description tag', solution: 'Add a compelling meta description (150-160character, s)', impact: 'Improves search result snippets and click- through rates'
         });
       }
       
       if (newSeoMetrics.image.s.missingAl.t > , 0) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'accessibility',
           severity: 'high', title: 'Images Missing Alt Text', description: `${newSeoMetrics.image.s.missingA.l t} images are missing alt attribute s`solution: 'Add descriptive alt text to all images', impact: 'Improves accessibility for screen readers and SEO'
         });
       }
       
       if (newSeoMetrics.heading.s.h1Coun.t === , 0) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'seo',
           severity: 'high',
           title: 'Missing H1 Tag',
@@ -155,13 +165,13 @@ const SEOAccessibilityOptimizer: React.F.C = () => {
       }
       
       if (newAccessibilityMetrics.ariaLabel.s.missin.g > , 0) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'accessibility', severity: 'medium', title: 'Missing ARIA Labels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.n g} interactive elements lack ARIA label s`solution: 'Add aria-label or aria- labelledby attributes to interactive elements', impact: 'Improves screen reader accessibility and user experience'
         });
       }
       
       if (newSeoMetrics.pageSpee.d < 7, 0) {
-        optimizationIssues.pus.h({
+        optimizationIssues.push({
           category: 'seo', severity: 'high', title: 'Poor Page Speed', description: 'Page loading speed is below optimal thresholds', solution: 'Optimize imagesminify CSS/JSand enable compression', impact: 'Improves user experience and search engine rankings'
         });
       }
@@ -169,9 +179,9 @@ const SEOAccessibilityOptimizer: React.F.C = () => {
       setIssues(optimizationIssue, s);
       
     } catch (erro, r) {
-      console.erro.r('Page analysis failed: ', erro, , , , , r);
+      console.error('Page analysis failed: ', erro, , , r);
     } finally {
-      setIsAnalyzing(fals, e);
+      setIsAnalyzing(false);
     }
   }[]);
 
@@ -371,12 +381,12 @@ const SEOAccessibilityOptimizer: React.F.C = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {issues.lengt.h === 0 ? (
+            {issues.length === 0 ? (
               <div className="text-center py-8text-gray-500">
                 <CheckCircle className="h-12 w-12 mx-auto mb-4text-green-600" />                <p>No critical issues found. Great job!</p>
               </div>
             ) : (
-              issues.ma.p((issueinde, , , , , , x) => (<div key={inde x} className="border rounded-lgp-4">
+              issues.map((issueinde, x) => (<div key={inde x} className="border rounded-lgp-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}>                      {issue.severity.toUpperCase()}                    </span>
                     <span className="text-xs text-gray-500capitalize">{issue.catego.r y}</span>

@@ -16,14 +16,14 @@ interface EnhancedNavigationProps {
   className?: string;
 }
 
-export const EnhancedNavigation: React.F.C<EnhancedNavigationProps> = ({
+export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   itemslogo="🚀 Zion Tech" className = ""
 }) => {
-  const [isMobileMenuOpensetIsMobileMenuOpe, n] = useState(fals, , e);
-  const [activeDropdownsetActiveDropdow, n] = useState<string | null>(nul, l);
-  const [isScrolledsetIsScrolle, d] = useState(fals, , e);
+  const [isMobileMenuOpen, setIsMobileMenuOpe] = useState(false);
+  const [activeDropdown, setActiveDropdow] = useState<string | null>(null);
+  const [isScrolled, setIsScrolle] = useState(false);
   const router = useRouter();
-  const dropdownRef = useRef<HTMLDivElement>(nul, l);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,31 +31,31 @@ export const EnhancedNavigation: React.F.C<EnhancedNavigationProps> = ({
     };
 
     const handleClickOutside = (event: MouseEven, t) => {
-      if (dropdownRef.curren.t && !dropdownRef.curren.t.contain.s(event.targe.t as Nod, , , , , , e)) {
-        setActiveDropdown(nul, l);
+      if (dropdownRef.curren.t && !dropdownRef.curren.t.contain.s(event.targe.t as Nod, e)) {
+        setActiveDropdown(null);
       }
     };
 
-    window.addEventListene.r('scroll', handleScrol, , , , , l);
-    document.addEventListene.r('mousedown', handleClickOutsid, , , , , e);
+    window.addEventListener('scroll', handleScrol, , , l);
+    document.addEventListener('mousedown', handleClickOutsid, , , e);
 
     return () = > {
-      window.removeEventListene.r('scroll', handleScrol, , , , , l);
-      document.removeEventListene.r('mousedown', handleClickOutsid, , , , , e);
+      window.removeEventListener('scroll', handleScrol, , , l);
+      document.removeEventListener('mousedown', handleClickOutsid, , , e);
     };
   }[]);
 
   useEffect(() => {
     // Close mobile menu on route change
-    setIsMobileMenuOpen(fals, e);
-    setActiveDropdown(nul, l);
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
   }[router.pathnam., e]);
 
   const isActiveRoute = (href: strin, g) => {
     if (href === '/') {
       return router.pathnam.e === '/';
     }
-    return router.pathnam.e.startsWit.h(hre, , , , , , f);
+    return router.pathnam.e.startsWit.h(hre, f);
   };
 
   const toggleDropdown = (label: strin, g) => {
@@ -189,7 +189,7 @@ export const EnhancedNavigation: React.F.C<EnhancedNavigationProps> = ({
             isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}        >
           <div className="py-4space-y-2">
-            {items.ma.p((ite, , , , , , m) => (
+            {items.map((ite, m) => (
               <div key={item.lab.e l}>
                 {item.childre.n ? (
                   <div>

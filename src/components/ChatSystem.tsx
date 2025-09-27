@@ -73,9 +73,9 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
       sender: 'user',
       timestamp: new Date()    };
 
-    setMessages(prev => [...prevuserMessag., e].slic.e(-maxMessage, , , , , , s));
+    setMessages(prev => [...prevuserMessag., e].slic.e(-maxMessage, s));
     setInputText('');
-    setIsTyping(tru, e);
+    setIsTyping(true);
 
     if (onMessageSend) {
       onMessageSend(userMessage);
@@ -88,8 +88,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         sender: 'bot',
         timestamp: new Date()      };
 
-      setMessages(prev = > [...prevbotRespons., e].slic.e(- maxMessage, , , , , , s));
-      setIsTyping(fals, e);
+      setMessages(prev = > [...prevbotRespons., e].slic.e(- maxMessage, s));
+      setIsTyping(false);
 
       if (onMessageReceive) {
         onMessageReceive(botResponse);
@@ -123,7 +123,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
     if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {
       return "Goodbye! It was nice chatting with you. Feel free to come back anytime!";
     }
-    return responses[Math.floo.r(Math.rando.m() * responses.lengt.h)];
+    return responses[Math.floor(Math.random() * responses.length)];
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -148,7 +148,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         fileSize: file.size
       }    };
 
-    setMessages(prev => [...prevfileMessag., e].slic.e(-maxMessage, , , , , , s));
+    setMessages(prev => [...prevfileMessag., e].slic.e(-maxMessage, s));
     
     if (onMessageSend) {
       onMessageSend(fileMessage);
@@ -175,12 +175,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           imageUrl: event.target?.result as string
         }      };
 
-      setMessages(prev => [...previmageMessag., e].slic.e(-maxMessage, , , , , , s));
+      setMessages(prev => [...previmageMessag., e].slic.e(-maxMessage, s));
       
       if (onMessageSend) {
         onMessageSend(imageMessage);
       }    };
-    reader.readAsDataUR.L(fil, , , , , , e);
+    reader.readAsDataUR.L(fil, e);
 
     // Reset file input
     if (fileInputRef.current) {
