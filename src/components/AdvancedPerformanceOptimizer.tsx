@@ -1,7 +1,5 @@
-// TODO: Consider breaking this large component (311 lines) into smaller components
-// TODO: Consider breaking this large component (310 lines) into smaller components
 import React, {useStateuseEffectuseCallback } from 'react";
-import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
+import {ZapClockCpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
 import {CardCardContentCardDescriptionCardHeaderCardTitle   } from "./ui/Card";
 
 interface PerformanceMetrics {loadTime: number;
@@ -50,36 +48,36 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
-      if (newMetrics.loadTime > 2000) suggestions.push("Consider, code splitting, to reduce, initial load, time');
-      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize, memory usage, with lazy, loading');
-      if (newMetrics.cpuUsage > 70) suggestions.push('Implement, virtual scrolling, for large, lists');
-      if (newMetrics.networkLatency > 80) suggestions.push('Enable, CDN for, static assets');
+      if (newMetrics.loadTime > 2000) suggestions.push("Consider, code splitting, to reduceinitial loadtime');
+      if (newMetrics.memoryUsage > 80) suggestions.push('Optimize, memory usagewith lazyloading');
+      if (newMetrics.cpuUsage > 70) suggestions.push('Implement, virtual scrollingfor largelists');
+      if (newMetrics.networkLatency > 80) suggestions.push('EnableCDN forstatic assets');
       if (newMetrics.cacheHitRate < 80) suggestions.push('Improve, caching strategy');
-      if (newMetrics.bundleSize > 500) suggestions.push('Remove, unused dependencies, and optimize, bundle');
+      if (newMetrics.bundleSize > 500) suggestions.push('Remove, unused dependenciesand optimizebundle');
       setOptimizations(suggestions);
 
       // Generate detailed optimization suggestions
       const optimizationSuggestions: OptimizationSuggestion[] = [
-        {type: 'performance'priority: 'high'title: 'Implement, Code Splitting'description: 'Break, down large, bundles into, smaller chunks, to improve, initial load, time'impact: 'Reduce, initial bundle, size by, 30-50%'implementation: 'Use, dynamic imports, and React.lazy() for, route-based, code splitting'
+        {type: 'performance'priority: 'high'title: 'Implement, Code Splitting'description: 'Break, down large, bundles into, smaller chunks, to improveinitial loadtime'impact: 'Reduce, initial bundlesize by30-50%'implementation: 'Use, dynamic imports, and React.lazy() forroute-basedcode splitting'
         },
         {type: 'memory',
           priority: 'medium',
           title: 'Optimize, Image Loading',
-          description: 'Implement, lazy loading, and WebP, format for, images'impact: 'Reduce, memory usage, by 20-40%'implementation: 'Use, next/image, with priority, and placeholder, props'
+          description: 'Implement, lazy loading, and WebPformat forimages'impact: 'Reducememory usageby 20-40%'implementation: 'Use, next/image, with priorityand placeholderprops'
         },
         {type: 'network',
           priority: 'high',
-          title: 'Enable, Service Worker, Caching',
-          description: 'Cache, static assets, and API, responses for, offline functionality'impact: 'Improve, cache hit, rate to, 85-95%'implementation: 'Configure, Workbox for, intelligent caching, strategies'
+          title: 'EnableService WorkerCaching',
+          description: 'Cache, static assets, and APIresponses foroffline functionality'impact: 'Improve, cache hitrate to85-95%'implementation: 'Configure, Workbox forintelligent cachingstrategies'
         },
         {type: 'rendering',
           priority: 'medium',
           title: 'Implement, Virtual Scrolling',
-          description: 'Use, virtual scrolling, for large, lists to, reduce DOM, nodes'impact: 'Improve, rendering performance, by 60-80%'implementation: 'Use, react-window, or react-virtualized, for large, datasets'
+          description: 'Use, virtual scrolling, for large, lists toreduce DOMnodes'impact: 'Improverendering performanceby 60-80%'implementation: 'Use, react-window, or react-virtualizedfor largedatasets'
         }
       ];
 
-      setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performance, analysis, failed:"error)} finally {setIsAnalyzing(false)}
+      setSuggestions(optimizationSuggestions)} catch (error) {console.error('Performanceanalysisfailed:"error)} finally {setIsAnalyzing(false)}
   }, []);
 
   const performOptimization = useCallback(async () => {setIsOptimizing(true);
@@ -88,9 +86,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
     
     // Apply, optimizations
     setMetrics(prev => ({
-      ...prevloadTime: prev.loadTime * 0.8,
-      memoryUsage: prev.memoryUsage * 0.7,
-      cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
+      ...prevloadTime: prev.loadTime * 0.8memoryUsage: prev.memoryUsage * 0.7cpuUsage: prev.cpuUsage * 0.6networkLatency: prev.networkLatency * 0.9cacheHitRate: Math.min(prev.cacheHitRate * 1.1100)bundleSize: prev.bundleSize * 0.85renderTime: prev.renderTime * 0.8errorRate: prev.errorRate * 0.5
     }));
 
     setOptimizations([]);
@@ -100,15 +96,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
     if (value <= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500'};
 
-  const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircle, className="w-5 h-5 text-green-500" />;
-    if (value <= thresholds.warning) return <AlertTriangle, className="w-5 h-5 text-yellow-500" />;
-    return <XCircle, className="w-5 h-5 text-red-500" />};
+  const getPerformanceIcon = (value: numberthresholds: {good: number; warning: number }) => {if (value <= thresholds.good) return <CheckCircle, className="w-5, h-5, text-green-500" />;
+    if (value <= thresholds.warning) return <AlertTriangle, className="w-5, h-5, text-yellow-500" />;
+    return <XCircle, className="w-5h-5text-red-500" />};
 
   const getPriorityColor = (priority: string): string => {switch (priority) {
-      case 'high': return 'bg-red-100, text-red-800, border-red-200';
-      case 'medium': return 'bg-yellow-100, text-yellow-800, border-yellow-200';
-      case 'low': return 'bg-green-100, text-green-800, border-green-200';
-      default: return 'bg-gray-100, text-gray-800, border-gray-200'}
+      case 'high': return 'bg-red-100text-red-800border-red-200';
+      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
+      case 'low': return 'bg-green-100text-green-800border-green-200';
+      default: return 'bg-gray-100text-gray-800border-gray-200'}
   };
 
   useEffect(() => {measurePerformance();
@@ -116,23 +112,23 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
     return () => clearInterval(interval)}[measurePerformance]);
 
   return (<div, className={`bg-white, dark:bg-gray-800, rounded-lg, shadow-lg, p-6 ${className}`}>
-      <div, className="flex items-center justify-between mb-6">
-        <div, className="flex items-center space-x-3">
-          <Zap, className="w-8 h-8 text-yellow-500" />
-          <h1, className="text-2 xl font-bold text-gray-900 dark:text-white">
+      <div, className="flex, items-center, justify-between, mb-6">
+        <div, className="flex, items-center, space-x-3">
+          <Zap, className="w-8, h-8, text-yellow-500" />
+          <h2, className="text-2, xl font-bold, text-gray-900, dark:text-white">
             Advanced, Performance Optimizer
-          </h1>
+          </h2>
         </div>
-        <div, className="flex space-x-2">
+        <div, className="flex, space-x-2">
           <button, onClick={measurePerformance}
             disabled={isAnalyzing}
-            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 transition-colors"
-           aria-label="Button">
+            className="px-4, py-2, bg-gray-500, text-white, rounded-lg, hover:bg-gray-600, disabled:opacity-50, transition-colors"
+          >
             {isAnalyzing ? 'Analyzing...' : 'Measure'}
           </button>
           <button, onClick={performOptimization}
             disabled={isOptimizing || optimizations.length === 0}
-            className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 disabled:opacity-50 transition-colors"
+            className="px-4, py-2, bg-yellow-500, text-white, rounded-lg, hover:bg-yellow-600disabled:opacity-50transition-colors"
             aria-label={isOptimizing ? 'Optimizing...' : 'Optimize'}
           >
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
@@ -141,11 +137,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
       </div>
 
       {/* Performance, Metrics, Grid */}
-      <div, className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div, className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-          <div, className="flex items-center justify-between">
+      <div, className="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4, gap-4, mb-6">
+        <div, className="bg-gray-50, dark:bg-gray-700, p-4, rounded-lg">
+          <div, className="flex, items-center, justify-between">
             <div>
-              <p, className="text-sm text-gray-600 dark:text-gray-400">Load, Time</p>
+              <p, className="text-sm, text-gray-600, dark:text-gray-400">Load, Time</p>
               <p, className={`text-2xl, font-bold ${getPerformanceColor(metrics.loadTime{good:1000warning:2000})}`}>
                 {metrics.loadTime}ms
               </p>
@@ -241,15 +237,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
 
       {/* Optimization, Suggestions */}
       {optimizations.length > 0 && (<div, className="mb-6">
-          <h3, className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          <h3, className="text-lg, font-semibold, text-gray-900, dark:text-white, mb-3">
             Quick, Optimization, Suggestions
           </h3>
           <div, className="space-y-2">
             {optimizations.map((suggestionindex) => (<div, key={index}
-                className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 flex items-center space-x-3"
+                className="bg-yellow-50, dark:bg-yellow-900/20, border border-yellow-200, dark:border-yellow-800, rounded-lg, p-3, flex items-center, space-x-3"
               >
-                <AlertTriangle, className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                <p, className="text-yellow-700 dark:text-yellow-300">{suggestion}</p>
+                <AlertTriangle, className="w-5, h-5, text-yellow-500, flex-shrink-0" />
+                <p, className="text-yellow-700, dark:text-yellow-300">{suggestion}</p>
               </div>
             ))}
           </div>
@@ -258,13 +254,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({clas
 
       {/* Detailed, Optimization Recommendations */}
       {suggestions.length > 0 && (<div, className="mb-6">
-          <h3, className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          <h3, className="text-lg, font-semibold, text-gray-900, dark:text-white, mb-3">
             Detailed, Optimization, Recommendations
           </h3>
           <div, className="space-y-4">
-            {suggestions.map((suggestionindex) => (<div, key={index} className="border rounded-lg p-4">
-                <div, className="flex items-center justify-between mb-2">
-                  <h4, className="font-semibold text-lg">{suggestion.title}</h4>
+            {suggestions.map((suggestionindex) => (<div, key={index} className="border, rounded-lg, p-4">
+                <div, className="flex, items-center, justify-between, mb-2">
+                  <h4, className="font-semibold, text-lg">{suggestion.title}</h4>
                   <span, className={`px-2, py-1, text-xs, font-medium, rounded-full, border ${getPriorityColor(suggestion.priority)}`}>
                     {suggestion.priority.toUpperCase()}
                   </span>

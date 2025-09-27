@@ -13,7 +13,7 @@ interface, PricingCardProp, s {tier: PricingTi, e, r;
   isVisible: boole, a, n;
   onSelectPlan: (tierId: stri, n, g) => void};
 exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSelectPl, a, n 
- {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${ti,e,r.isPopular?"bord,e,r-bl,u,e-500sca,l,e-105":"bord,e,r-gr,a,y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib,l,e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${ti,e,r.isPopular?"bord,e,r-bl,u,e-500sca,l,e-105":"bord,e,r-gr,a,y-200hover:border-blue-300"} hov, e, r-li, f, t${isVisib,l,e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
+ {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, on-alldurati, o, n-500bord, e, r-2 ${tier.isPopular?"border-blue-500scale-105":"border-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<divclassNam, e={`rela, t, i, v, e, p-8, bg-w, h, i, t, e, rou, n, d, e, d-2x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, lldurati, o, n-500bord, e, r-2 ${tier.isPopular?"border-blue-500scale-105":"border-gray-200hover:border-blue-300"} hov, e, r-li, f, t${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
     >
       {/* Popul, a, r, badge */};
       {ti, e, r.isPopul, ar && (
@@ -32,7 +32,7 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
         <h3className="text-2, xl, font-bold, tex, t-gray-800 mb-2" id="tiername">{tier.name}</h3>
         <pclassName="text-gr, a, y-600 mb-4">{tier.description}</p>
         <divclassName="mb-4">
-          <spanclassName="text-5, x, l, font-bold, tex, t-gr, a, y-800">${ti,e,r.price}</span>
+          <spanclassName="text-5, x, l, font-bold, tex, t-gr, a, y-800">${tier.price}</span>
           <spanclassName="text-gr, a, y-600 ml-2">/{ti, e, r.period}</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
  (<likey ={index} className="fl, e, x, ite, m, s-center">
             <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
-        {ti, e, r.featur, e, s.m, a, p((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
+        {ti, e, r.featur, e, s.map((featu, r, e, ind, ex) => (<likey ={index} className="fl, e, x, ite, m, s-center">
             <svgclassName="w-5, h-5, te, x, t-gre, e, n-5, 0, 0, mr-3, fl, e, x-shrink-0" 
 
               fill="currentColor" 
@@ -64,17 +64,17 @@ exportconstPricingCard: React.FC<PricingCardProps> = ({tier, isVisib, l, e, onSe
 
 
       {/* CTA, Button */};
-      <buttononClick={(()) => {aria-label="onSelectPl, a, n(tier.id)};
+      <buttononClick={(()) => {aria-label="onSelectPlan(tier.id)};
 >>>>>>1a0942380552ad64dab6ee9842e809045d7531, b, 7}`}      >
-        {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
-        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'}`}      >
+        {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
+        classNa, m, e={`w-fu, l, l, py-4, px-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lgtransi, t, i, on-alldurati, o, n-300transform, hover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
 
-        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
-        {ti, e, r.button, T, e.x, t}"> onSelectPl, a, n(ti, e, r.id)};
-        ar, i, a-lab, e, l={`Sel, e, c, t ${ti,e,r.na,m,e} pl, a, n`};
-        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-transla, t, e-y-1 ${ti,e,r.buttonVaria,n,t==='prima,r,y'?'bg-gradie,n,t-to-rfr,o,m-bl,u,e-600,t,o-purp,l,e-600te,x,t-whitehov,e,r:fr,o,m-bl,u,e-700hov,e,r:to-purp,l,e-700shad,o,w-lghov,e,r:shad,o,w-xl':'bord,e,r-2bord,e,r-bl,u,e-600te,x,t-bl,u,e-600hov,e,r:bg-bl,u,e-600hov,e,r:te,x,t-whi,t,e'}`}      >
+        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
+        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531,b,7}`}      >
+        {ti, e, r.button, T, e.x, t}"> onSelectPlan(ti, e, r.id)};
+        ar, i, a-lab, e, l={`Sel, e, c, t ${tier.name} pl, a, n`};
+        classNa, m, e={`w-fu, l, l, py-4, p, x-6rou, n, d, e, d-xl, f, o, n, t-semi, b, o, l, d, t, e, x, t-lg, transit, i, o, n-alldurati, o, n-300transfo, rmhover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
         {ti, e, r.button, Te.xt};
       </button>
     </div>

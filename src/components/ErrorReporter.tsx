@@ -1,5 +1,5 @@
 import {useMemo, useCallback } from 'react';
-import Reac, t, {useStateuseEffect }  from 'react";
+import React{useStateuseEffect }  from 'react";
 
 interface, ErrorDetail, s {message: stri, n, g;
   sta, c, k?: stri, n, g;
@@ -26,29 +26,29 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
       consterrorDetails: ErrorDetai, l, s = {
 
         message: eve, n, t.messagestack: eve, nt.error?.stackcomponent: "Glob, a, l",
-        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
+        timestamp: Da, t, e.now()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
+      setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onErr, o, r(errorDetails)};
+      if (onEr, r, o === r) {onError(errorDetails)};
       // Sendtoerror reportingservicefetch("/a, p, i/err, o, r-reporti, n, g'{method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
-      }).ca, t, c(conso, l, e.e, r, r.or)};
+          "Content-Type": "application/json"}body: JS, O, N.stringif(errorDeta, i, l === s)
+      }).catc(conso, l, e.e, r, r.or)};
 
  {con, sterrorDetails: ErrorDetai, l, s = {
-        message: eve, n, t.reas, o, n? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : eve, n, t.reason?.stackcomponent: "Promise",
+        message: eve, n, t.reas, o, n? .message || "Unhandled: Promise, Rejection"  : stack: eve, n, t.reason?.stackcomponent: "Promise",
 
     consthandleUnhandledRejecti, o, n = (event: PromiseRejectionEve, n, t) => {consterrorDetails: ErrorDetai, l, s = {
-        message: eve, n, t.reas, o, n? .message || "Unhandl, e, d : Promi, s, e, Rejection"  : sta, c, k : eve, n, t.reason?.stackcomponent: "Promise",
+        message: eve, n, t.reas, o, n? .message || "Unhandled: Promise, Rejection"  : stack: eve, n, t.reason?.stackcomponent: "Promise",
 
-        timestamp: Da, t, e.n, o, w()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
+        timestamp: Da, t, e.now()userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.href      };
 
-      setErrorHisto, r, y(pr, e, v = > [...preverrorDetail.s]);
+      setErrorHistory(pr, e, v = > [...preverrorDetail.s]);
       
-      if (onEr, r, o === r) {onErr, o, r(errorDetails)};
+      if (onEr, r, o === r) {onError(errorDetails)};
       // Send, to, error reportingservicefetch("/a, p, i/err, o, r-reporting"{method: "POST"headers: {
-          "Content-Type": "application/json"}body: JS, O, N.string, i, f (errorDeta, i, l === s)
-      }).ca, t, c(conso, l, e.e, r, r.or)};
+          "Content-Type": "application/json"}body: JS, O, N.stringif(errorDeta, i, l === s)
+      }).catc(conso, l, e.e, r, r.or)};
 
     wind, o, w.addEventListene("error"handleGlobalErr, o, r);
     wind, o, w.addEventListene("unhandledrejection"handleUnhandledRejecti, o, n);
@@ -131,24 +131,24 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-betwe, enmb-2">
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, hov: e : r :te, x, t-gray-700"
 
         <divclassNam, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shadow-lgp-4ma, x-w-sm">
           <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-2">
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
-              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
+              classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, hov: e : r :te, x, t-gray-700"
 
              ar, i, a-lab, e, l="Clear">
               Cle, a, r
             </button>
           </div>
           <div, className="spa, c, e-y-2, m, a, x-h-32, overfl, o, w-y-auto">
-            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0, pl-2">
+            {errorHisto, r, y.slice(-5).map((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0, pl-2">
                 <divclassNam, e ="font-medium">{err, o, r.component}</div>
                 <div, classNa, m, e ="truncate">{err, o, r.message}</div>
                 <div, className ="te, x, t-gr, a, y-400">
-                  {n, e, w, Da, t, e()(err, o, r.timesta, m, p).toLocaleTimeString()}                </div>
+                  {new, Date()(err, o, r.timesta, m, p).toLocaleTimeString()}                </div>
               </div>
             ))};
           </div>

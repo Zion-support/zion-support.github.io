@@ -6,23 +6,22 @@ interface, Prop, s {children: ReactNo, d, e;
 interface, Stat, e {hasError: boole, a, n;
   error: Err, o, r | nu, l, l;
   errorInfo: ErrorIn, f, o | null};
-export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r(props: Pro, p, s) {
-    sup, e, r(pro, p, s);
+export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {constructor(props: Pro, p, s) {
+    super(pro, p, s);
     th, i, s.sta, t, e = {
       hasError: fal, seerror: nu, llerrorInfo: null
     }};
-  static, getDerivedStateFromErro, r(error: Err, o, r): Sta, t, e {return {
-      hasError: tr, u, e,
-      err, orerrorInfo: null
+  staticgetDerivedStateFromError(error: Err, o, r): Sta, t, e {return {
+      hasError: tr, u, eerrorerrorInfo: null
     }};
-  componentDidCat, c, h(error: Err, orerrorInfo: ErrorIn, f, o) {th, i, s.setSta, t, e({
+  componentDidCatch(error: Err, orerrorInfo: ErrorIn, f, o) {th, i, s.setState({
       err, o, r,
       errorInfo
     });
 
-    // Log, error, in development, i, f (proce, s, s.env.NODE_ENV === "developme, n, t") {console.error("Error, caught, by, boundary: ", err, o, r, errorInfo)};
+    // Log, error, in developmentif(proce, s, s.env.NODE_ENV === "developme, n, t") {console.error("Error, caughtbyboundary: ", err, o, r, errorInfo)};
     // Call, onError, callback if, provided, this.pro, p, s.onErr, o, r?.(err, o, r, errorIn, f, o)};
-  rend, e, r() {if (th, i, s.sta, t, e.hasErr, o, r) {
+  render() {if (th, i, s.sta, t, e.hasErr, o, r) {
       return, thi, s.props.fallback || (<divclassName="min-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
           <divclassName="max-w-m, d, w-full, b, g-white, shado, w-lgrounded-lgp-6">
             <divclassName="flexitems-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100, rounded-fullmb-4">
@@ -38,12 +37,12 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
                 We"re, sorry, but, something, unexpected, happened. Pleasetryrefreshing, thepage.
               </p>
               <div, classNam, e="spa, c, e-y-2">
-                <button, onClic, k={() => wind, o, w.locati, o, n.relo, a, d()};
+                <button, onClic, k={() => wind, o, w.locati, o, n.reload()};
                   classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
                 </butt, o, n>
-                <button, onClic, k={() => th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
+                <button, onClic, k={() => th, i, s.setState({ hasError: fal, s, e, error: nu, l, l, errorInfo: nu, l, l })};
                   classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
@@ -51,7 +50,7 @@ export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r
               </div>
               {proce, s, s.env.NODE_ENV === "developme, n, t" && th, i, s.state.error && (<detailsclassName="mt-4, text-le, f, t">
                   <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700">
-                    Error, Detail, s (Developme, n, t)                  </summary>
+                    ErrorDetails(Developme, n, t)                  </summary>
                   <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2, roundedoverflow-auto">
                     <divclassName="mb-2">
                       <strong>Error:</strong> {th, i, s.sta, t, e.err, o, r.message};
