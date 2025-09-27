@@ -240,7 +240,7 @@ export class SecurityManager {
     let clickCount = 0;
     let lastClickTime = 0;
     
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', () => {
       const now = Date.now();
       if (now - lastClickTime < 100) {
         clickCount++;
@@ -262,8 +262,8 @@ export class SecurityManager {
     }
   }
 
-  private isSecurityRelatedError(error: any): boolean {
-    if (!error || typeof error.message !== 'string') return false;
+  private isSecurityRelatedError(error: unknown): boolean {
+    if (!error || typeof error !== 'object' || !('message' in error) || typeof error.message !== 'string') return false;
     
     const securityKeywords = [
       'script', 'eval', 'unsafe', 'blocked', 'csp', 'cors', 'mixed content'
@@ -274,7 +274,7 @@ export class SecurityManager {
     );
   }
 
-  private reportSecurityEvent(type: string, details: any): void {
+  private reportSecurityEvent(type: string, details: Record<string, unknown>): void {
     // In a real application, this would send to your security monitoring service
     console.warn(`Security Event [${type}]:`, details);
     

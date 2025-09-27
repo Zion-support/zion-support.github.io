@@ -1,18 +1,20 @@
 import '@testing-library/jest-dom';
 
 // Global declarations for test environment
-declare const global: any;
-declare const jest: any;
+declare const global: typeof globalThis & {
+  IntersectionObserver: jest.Mock;
+  PerformanceObserver: typeof PerformanceObserver;
+};
 
 // Mock IntersectionObserver
-(global as any).IntersectionObserver = jest.fn().mockImplementation(() => ({
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
 
 // Mock PerformanceObserver
-(global as any).PerformanceObserver = class PerformanceObserver {
+global.PerformanceObserver = class PerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = [];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   constructor(_callback: PerformanceObserverCallback) {}

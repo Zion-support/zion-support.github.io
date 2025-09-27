@@ -48,7 +48,6 @@ class ErrorReporter {
   private static instance: ErrorReporter;
   private reports: ErrorReport[] = [];
   private maxReports = 100;
-  private isReporting = false;
   private sessionId: string;
   private isInitialized = false;
   private isReporting = false;
@@ -314,7 +313,7 @@ class ErrorReporter {
           body: JSON.stringify(report),
         });
       }
-    } catch (error) {
+    } catch {
       // Fallback: store in localStorage for later retry
       try {
         if (typeof localStorage !== 'undefined') {

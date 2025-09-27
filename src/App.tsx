@@ -9,7 +9,7 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager, SecurityManager } from './utils/securityEnhancements';
+import { SecurityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -42,7 +42,7 @@ export default function App(): React.JSX.Element {
     initOptimizations();
     
     // Initialize security features
-    const securityManager = SecurityManager.getInstance();
+    SecurityManager.getInstance();
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();

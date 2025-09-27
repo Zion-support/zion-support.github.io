@@ -64,14 +64,7 @@ jest.mock('../components/PerformanceProfiler', () => {
   };
 });
 
-// Import the components we need to test
-import Home from '../pages/Home';
-import Blog from '../pages/Blog';
-import Contact from '../pages/Contact';
-import About from '../pages/About';
-import Services from '../pages/Services';
-import Portfolio from '../pages/Portfolio';
-import NotFound from '../pages/NotFound';
+// Components are mocked above, no need to import them
 
 // Mock the router to use MemoryRouter for tests
 jest.mock('../router', () => {
