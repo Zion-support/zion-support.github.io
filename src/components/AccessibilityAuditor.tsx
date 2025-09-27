@@ -19,11 +19,11 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
       images.forEach((img) => {
         if (!img.getAttribute('alt')) {
           issues.push({
-            type: 'error'
-            message: 'Image missing alt attribute'
-            element: img
+            type: 'error',
+            message: 'Image missing alt attribute',
+            element: img,
             rule: 'img-alt'
-          })}
+          });
       });
       
       // Check for missing form labels
