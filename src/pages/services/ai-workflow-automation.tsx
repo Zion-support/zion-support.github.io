@@ -1,306 +1,268 @@
 import React from "react"
-import { SEO } from "../../components/SEO"
-import { motion } from "framer-motion"
-<<<<<<< HEAD
-import { WorkflowBrainTargetTrendingUpShieldUsersCheckCircle } from "lucide-react"
-=======
-import { Workflow, Bra, i, n, Targ, e, t, Trending, U, p, Shie, l, d, Use, r, s, CheckCircle } from "lucide-react"
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
+import {SEO  } from "../../components/SEO"
+import {motion  } from "fram, e, r-motion"
 
-export default function AIWorkflowAutomation() {
-  const features = [
-    {
-      icon: Workflow,
-<<<<<<< HEAD
-      title: "Intelligent Process Automation",
-=======
-      tit, l, e: "Intelligent Process Automation",
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
+export default function AIWorkflowAutomation() {constfeatures = [{
+      icon: Workflow 
+        "AI-powere, d, workflow, automatio, n, that, learn, s, and, optimize, s, your, businessprocessesautomatically."},
+    {icon: Braintitle: "Machi, n, e, LearningIntegration",
       description:
-        "AI-powered workflow automation that learns and optimizes your business processes automatically.",
-    },
-    {
-      icon: Brain,
-      title: "Machine Learning Integration",
+        "Seamle, s, s, integration, wit, h, ML, model, s, for, predictiv, e, workflow, optimizationanddecision-making."},
+    {icon: Targ, ettitle: "Go, a, l-Orient, edAutomation",
       description:
-        "Seamless integration with ML models for predictive workflow optimization and decision-making.",
-    },
-    {
-      icon: Target,
-      title: "Goal-Oriented Automation",
+        "Workflo, w, s, that, adap, t, and, optimiz, e, based, o, n, your, busines, sobjectivesandKPIs."},
+    {icon: Trending, Uptitle: "Performan, ceAnalytics",
       description:
-        "Workflows that adapt and optimize based on your business objectives and KPIs.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Analytics",
+        "Re, a, l-ti, m, e, insights, int, o, workflow, efficienc, yandoptimizationopportunities."},
+    {icon: Shie, ldtitle: "Secure & Compliant",
       description:
-        "Real-time insights into workflow efficiency and optimization opportunities.",
-    },
-    {
-      icon: Shield,
-      title: "Secure & Compliant",
+        "Enterpri, s, e-gra, d, e, security, wit, h, bui, l, t-in, compliance, monitorin, gandaudittrails."},
+    {icon: Use, rstitle: "Te, amCollaboration",
       description:
-        "Enterprise-grade security with built-in compliance monitoring and audit trails.",
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description:
-        "Enhanced team productivity with intelligent task routing and workload balancing.",
-    },
-  ]
+        "Enhanc, e, d, team, productivit, y, with, intelligen, t, task, routin, gandworkloadbalancing."}];
+  const, benefit, s = ["Reducemanualtasks byupto 80%",
+    "Improveprocessefficiency by60%",
+    "Cutoperationalcosts by40%",
+    "Enhancecustomersatisfaction",
+    "Ensureregulatorycompliance",
+    "Scaleoperationsseamlessly"];
+  return (<SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
+        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, tasksimprov, e, efficiencyand, scaleoperationsseamlessly."
 
-  const benefits = [
-    "Reduce manual tasks by up to 80%",
-    "Improve process efficiency by 60%",
-    "Cut operational costs by 40%",
-    "Enhance customer satisfaction",
-    "Ensure regulatory compliance",
-    "Scale operations seamlessly",
-  ]
 
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasksimprove efficiencyand scale operations seamlessly."
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-90, 0 via-slate-8, 0, 0 to-slate-90, 0">
-      <SEO
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
+      <SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
+        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scaleoperationsseamlessly."
+
+    <divclassNam, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0to-slate-900">
+      <SEOtitl, e ="AI, Workflow, Automatio, n - Zi, onTechGroup"
+        descripti, o, n="Transfo, r, m, your, busines, s, with, intelligen, t, AI-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scaleoperationsseamlessly."
+
+
       />
 
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+      {/* He, r, o, Section */};
+      <sectionclassNam, e="relati, v, e, py-20, overflow-hidden">
+
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+          <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
+            anima, t, e={{ opacity: 1y: 0 }};
+            transiti, o, n={{ duration: 0.6 }};
+            classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, xlmx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              AI-Powered Automation
+            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, fo, nt-mediummb-6">
+              <CheckCircleclassNam, e="w-4h-4mr-2" />
+              AI-Power, e, d, Automati, on
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">AI Workflow Automation</h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Transform your business operations with intelligentAI-powered workflow automation. Reduce manual
-              tasksimprove efficiencyand scale your operations seamlessly.
+            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
+              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, tasksimprov, e, efficiencyand, scal, e, your, operation, s, seamless, ly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
-                Get Started
+            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
+                G, e, t, Start, e, d
               </button>
-              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-5, 0, 0/10 via-blue-5, 0, 0/10 to-purple-5, 0, 0/10" />
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4, x, l mx-auto"
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+
+        <divclassNam, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/10, v, i, a-bl, u, e-5, 0, 0/10, to-purple-500/10" />
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+
+          <motion.div, initi, a, l ={{ opacity: 0y: 20 }};
+            anima, t, e={{ opacity: 1y: 0 }};
+            transiti, o, n={{ duration: 0.6 }};
+            classNa, m, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-5, 0, 0/20 border border-cyan-4, 0, 0/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              AI-Powered Automation
+
+              <CheckCircleclassNam, e="w-4h-4mr-2" />
+              AI-Power, e, d, Automati, on
             </div>
-            <h1 className="text-5, x, l md:text-6, x, l font-bold text-white mb-6">AI Workflow Automation</h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Transform your business operations with intelligent, AI-powered workflow automation. Reduce manual
-              tasks, improve efficiency, and scale your operations seamlessly.
+            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
+              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scal, e, your, operation, s, seamless, ly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg shadow-cyan-5, 0, 0/20">
-                Get Started
+            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
+                G, e, t, Start, e, d
               </button>
-              <button className="px-8 py-4 border border-cyan-4, 0, 0/30 text-cyan-4, 0, 0 font-semibold rounded-lg hover:bg-cyan-4, 0, 0/10 transition-all duration-2, 0, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                Watch Demo
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-cy, a, n-5, 0, 0/20, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, round, e, d-fu, l, l, te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, fo, nt-mediummb-6">
+              <CheckCircleclassNam, e="w-4h-4mr-2" />
+              AI-Power, e, d, Automati, on
+            </div>
+            <h1className="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, x, t-whi, temb-6">AI, WorkflowAutomation</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leadi, n, g-relaxed">
+              Transfo, r, m, your, busines, s, operations, wit, h, intelligent, A, I-power, e, d, workflow, automatio, n. Redu, c, e, manual, task, s, improve, efficienc, y, and, scal, e, your, operation, s, seamless, ly.
+            </p>
+            <divclassName="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justi, f, y-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0, to-bl, u, e-6, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-4, 0, 0, hover:to-bl, u, e-5, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, o, w-lg, shad, o, w-cyan-500/20">
+                G, e, t, Start, e, d
+              </button>
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-4, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+
               </button>
             </div>
-          </motion.div>
+          </motion.d, i, v>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Featur, e, s, Section */};
+      <sectionclassNam, e ="py-20">
+        <divclassName="containe, r, mx-au, topx-4">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+
+            <h2className="tex, t-4, x, l, fo, n, t-bo, l, d, te, x, t-whi, temb-4">Intellige, n, t, Automation, Features</h2>
+            <pclassName="text-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, l, mx-auto">
+
+            initi, a, l={{ opacity: 0y: 20 }};
+            whileInVi, e, w={{ opacity: 1y: 0 }};
+            transiti, o, n={{ duration: 0.6 }};
+            className="te, x, t-cent, ermb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Intelligent Automation Features</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-=======
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4, x, l font-bold text-white mb-4">Intelligent Automation Features</h2>
-            <p className="text-xl text-slate-300 max-w-3, x, l mx-auto">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-              Our AI workflow automation platform combines cutting-edge technology with intuitive design to deliver
-              powerful automation capabilities.
+            <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-4">Intellige, n, t, Automation, Feature, s</h2>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, lmx-auto">
+
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6 rounded-xl border border-cyan-400/20 bg-slate-800/40"
+          <div, classNa, m, e="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-3gap-8">
+ (<motion.div, k, e, y ={index};
+                initi, a, l={{ opacity: 0y: 20 }};
+                whileInVi, e, w={{ opacity: 1y: 0 }};
+                transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
+                classNa, m, e="p-6, round, e, d-xl, border, borde, r-cy, a, n-4, 0, 0/20, bg-slate-800/40"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-=======
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 rounded-xl border border-cyan-4, 0, 0/20 bg-slate-8, 0, 0/40"
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
+                initi, a, l={{ opacity: 0y: 20 }};
+                whileInVi, e, w={{ opacity: 1y: 0 }};
+                transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+                classNa, m, e="p-6, round, e, d-xl, border, borde, r-cy, a, n-4, 0, 0/20, bg-slate-800/40"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-4, 0, 0/20 to-blue-5, 0, 0/20 rounded-lg flex items-center justify-center mb-4">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                  <feature.icon className="w-6 h-6 text-cyan-300" />
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+
+                  <feature.icon, classNa, m, e="w-6, h-6, te, x, t-cyan-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+                <h3classNam, e="te, x, t-xl, fo, n, t-semibo, l, d, te, xt-whitemb-3">{featu, r, e.title}</h3>
+                <pclassName="tex, t-sla, t, e-3, 0, 0, leading-relaxed">{featu, r, e.description}</p>
               </motion.div>
-            ))}
+            ))};
           </div>
-        </div>
+        </d, i, v>
       </section>
 
-      {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0x: -20 }} whileInView={{ opacity: 1x: 0 }} transition={{ duration: 0.6 }}>
-              <h2 className="text-4xl font-bold text-white mb-6">Transform Your Business Operations</h2>
-              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Our AI workflow automation delivers measurable results that directly impact your bottom line. From cost
-                reduction to improved customer satisfactionthe benefits are clear and quantifiable.
+      {/* Benefits, Section */};
+        <divclassName="containermx-autopx-4">
+          <divclassName="gridlg:gr, i, d-co, l, s-2, ga, p-12items-center">
+            <motion.divinitial={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
+              <h2className="text-4, xl, font-boldtext-whitemb-6">Transform, Your, Business Operatio, n, s</h2>
+              <pclassName="text-lg, tex, t-sla, t, e-300, m, b-8leading-relaxed">
+                Our, AI, workflow automation, delivers, measurable results, that, directly impact, your, bottom li, n, e. From, cost, reduction to, improved, customer satisfactionthe, benefits, are clear, and, quantifiable.
               </p>
-              <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefitindex) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400" />
-=======
-      <section className="py-20 bg-slate-8, 0, 0/30">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-              <h2 className="text-4, x, l font-bold text-white mb-6">Transform Your Business Operations</h2>
-              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Our AI workflow automation delivers measurable results that directly impact your bottom line. From cost
-                reduction to improved customer satisfaction, the benefits are clear and quantifiable.
+              <divclassName="gridgrid-cols-1gap-4">
+                {benefi, t, s.m, a, p((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+
+        <divclassNam, e="contain, e, rmx-autopx-4">
+          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+
+      <sectionclassNam, e="py-20, bg-slate-800/30">
+        <divclassNam, e="contain, e, rmx-autopx-4">
+          <divclassNam, e="gridlg:gr, i, d-co, l, s-2, g, a, p-12, items-center">
+
+            <motion.div, initi, a, l ={{ opacity: 0x: -20 }} whileInVi, e, w={{ opacity: 1x: 0 }} transiti, o, n={{ duration: 0.6 }}>
+              <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Transfo, r, m, Your, Busines, s, Operatio, n, s</h2>
+              <pclassName="tex, t-lg, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+                O, u, r, AI, workflo, w, automation, deliver, s, measurable, result, s, that, directl, y, impact, you, r, bottom, lin, e. Fr, o, m, cost, reductio, n, to, improve, d, customer, satisfactio, n, the, benefit, s, are, clea, r, and, quantifiabl, e.
               </p>
-              <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-4, 0, 0" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                    <span className="text-slate-300">{benefit}</span>
+
+                {benefits.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+              <divclassNam, e="gr, i, d, gr, i, d-co, ls-1gap-4">
+                {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                    <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
+
+
+                    <spanclassNam, e ="te, x, t-slate-300">{benefit}</span>
                   </div>
-                ))}
+                ))};
               </div>
-            </motion.div>
+            </moti, o, n.d, i, v>
 
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0x: 20 }}
-              whileInView={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="p-8 rounded-2xl border border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-blue-500/20"
+
+              <divclassName="text-center">
+                <divclassName="w-20h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+
+              initi, a, l={{ opacity: 0x: 20 }};
+              whileInVi, e, w={{ opacity: 1x: 0 }};
+              transiti, o, n={{ duration: 0.6 }};
+              classNa, m, e="p-8, rounde, d-2, x, l, border bord, e, r-cy, a, n-4, 0, 0/30, b, g-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-blue-500/20"
             >
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-=======
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="p-8 rounded-2, x, l border border-cyan-4, 0, 0/30 bg-gradient-to-br from-cyan-5, 0, 0/20 to-blue-5, 0, 0/20"
-            >
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-4, 0, 0 to-blue-5, 0, 0 rounded-full flex items-center justify-center mx-auto mb-6">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                  <Workflow className="w-10 h-10 text-white" />
+              <divclassName="text-center">
+                <divclassName="w-2, 0, h-20, b, g-gradie, n, t-to-br, fro, m-cy, a, n-400, t, o-bl, u, e-500, rounde, d-full, flex, items-center, justif, y-centermx-automb-6">
+
+                  <WorkflowclassName="w-10h-10text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
-                <p className="text-slate-300 mb-6">
-                  Start your AI workflow automation journey today and see the transformation in action.
+                <h3className="te, x, t-2, xl, font-boldtext-whitemb-4">Ready, to, Automate?</h3>
+                <pclassName="text-slate-300mb-6">
+                  Start, your, AI workflow, automation, journey today, and, see the, transformation, in acti, o, n.
                 </p>
-<<<<<<< HEAD
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
-=======
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                  Schedule Demo
+
+
+                <buttonclassName="w-fullpx-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-allduration-200">
+
+                  Schedule, Dem, o
                 </button>
               </div>
-            </motion.div>
+            </motion.d, i, v>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
+      {/* C, T, A, Section */};
+      <sectionclassName="py-20">
+        <divclassName="containermx-auto, p, x-4, tex, t-center">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+
+            <h2className="text-4, xl, font-bold, tex, t-whitemb-6">Ready, to, Automate Your, Workflow, s?</h2>
+
+            initial={{ opacity: 0y: 20 }};
+            whileInView={{ opacity: 1y: 0 }};
+            transiti, o, n={{ duration: 0.6 }};
+            className="m, a, x-w-3, x, l, mx-auto"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
-=======
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3, x, l mx-auto"
-          >
-            <h2 className="text-4, x, l font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-            <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of businesses that have already transformed their operations with AI workflow automation.
+            <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Automate Your, Workflow, s?</h2>
+
+            <pclassName="text-xl, tex, t-slate-300mb-8">
+              Join, hundreds, of businesses, that, have already, transformed, their operations, with, AI workflow, automatio, n.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
-                Get Started Now
+            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+
+                Get, Started, Now
               </button>
-              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-=======
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg shadow-cyan-5, 0, 0/20">
-                Get Started Now
+              <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+
+              <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-400, hover:to-bl, u, e-500, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shado, w-lg, shado, w-cyan-500/20">
+                Get, Started, Now
               </button>
-              <button className="px-8 py-4 border border-cyan-4, 0, 0/30 text-cyan-4, 0, 0 font-semibold rounded-lg hover:bg-cyan-4, 0, 0/10 transition-all duration-2, 0, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                Contact Sales
+              <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-400, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+
+                Contact, Sale, s
               </button>
             </div>
-          </motion.div>
+          </motion.d, i, v>
         </div>
       </section>
     </div>
   )
-}
+};

@@ -10,60 +10,54 @@ function fixJSXErrors(content) {
   // Fix remaining patterns
   const patterns = [
     // Fix remaining className issues
-    { from: /bg-whi\s*t\s*e\s*da\s*r\s*k:bg-gr\s*a\s*y-8\s*0\s*0\s*round\s*e\s*d-lg\s*shad\s*o\s*w-lg\s*p-6/g, to: 'bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6' },
-    { from: /classNa\s*m\s*e/g, to: 'className' },
-    { from: /text-gray-6,\s*0,\s*0/g, to: 'text-gray-600' },
-    { from: /text-gray-4,\s*0,\s*0/g, to: 'text-gray-400' },
-    
-    // Fix motion import issues - check if framer-motion is properly imported
-    { from: /import\s*{\s*motion,\s*AnimatePresence\s*}\s*from\s*'framer-motion';/g, to: "import { motion, AnimatePresence } from 'framer-motion';" },
+    { from: /bg-whi\s*t\s*e\s*da\s*r\s*k:bg-gr\s*a\s*y-8\s*0\s*0\s*round\s*e\s*d-lg\s*shad\s*o\s*w-lg\s*p-6/gto: 'bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6' }{ from: /classNa\s*m\s*e/gto: 'className" },
+    { from: /text-gray-6\s*0\s*0/gto: "text-gray-600" },
+    { from: /text-gray-4\s*0\s*0/gto: "text-gray-400" }// Fix motion import issues - check if framer-motion is properly imported
+    { from: /import\s*{\s*motion\s*AnimatePresence\s*}\s*from\s*"framer-motion';/gto: "import {motionAnimatePresence  } from "framer-motion";" },
     
     // Fix any remaining corrupted variable names
-    { from: /contrastIssu\s*e\s*s/g, to: 'contrastIssues' },
-    { from: /timeRang\s*e/g, to: 'timeRange' },
+    { from: /contrastIssu\s*e\s*s/gto: 'contrastIssues' },
+    { from: /timeRang\s*e/gto: 'timeRange" },
     
     // Fix remaining numeric values
-    { from: /Math\.floor\(10,\s*0,\s*0/g, to: 'Math.floor(1000' },
-    { from: /Math\.floor\(3,\s*0,\s*0/g, to: 'Math.floor(300' },
-    { from: /Math\.floor\(2,\s*5,\s*0/g, to: 'Math.floor(250' },
-    { from: /Math\.floor\(1,\s*5,\s*0/g, to: 'Math.floor(150' },
-    { from: /Math\.floor\(1,\s*2,\s*0/g, to: 'Math.floor(120' },
-    { from: /Math\.floor\(1,\s*8,\s*0/g, to: 'Math.floor(180' },
-    { from: /Math\.floor\(2,\s*0,\s*0/g, to: 'Math.floor(200' },
-    { from: /Math\.floor\(4,\s*0,\s*0/g, to: 'Math.floor(400' },
-    { from: /Math\.floor\(6,\s*0,\s*0/g, to: 'Math.floor(600' },
-    { from: /Math\.floor\(8,\s*0,\s*0/g, to: 'Math.floor(800' },
+    { from: /Math\.floor\(10\s*0\s*0/gto: "Math.floor(1000" },
+    { from: /Math\.floor\(3\s*0\s*0/gto: "Math.floor(300" },
+    { from: /Math\.floor\(2\s*5\s*0/gto: "Math.floor(250" },
+    { from: /Math\.floor\(1\s*5\s*0/gto: "Math.floor(150" },
+    { from: /Math\.floor\(1\s*2\s*0/gto: "Math.floor(120" },
+    { from: /Math\.floor\(1\s*8\s*0/gto: "Math.floor(180" },
+    { from: /Math\.floor\(2\s*0\s*0/gto: "Math.floor(200" },
+    { from: /Math\.floor\(4\s*0\s*0/gto: "Math.floor(400" },
+    { from: /Math\.floor\(6\s*0\s*0/gto: "Math.floor(600" },
+    { from: /Math\.floor\(8\s*0\s*0/gto: "Math.floor(800" },
     
     // Fix remaining time values
-    { from: /1,\s*2,\s*0/g, to: '120' },
-    { from: /1,\s*8,\s*0/g, to: '180' },
-    { from: /2,\s*4,\s*0/g, to: '240' },
-    { from: /3,\s*0,\s*0/g, to: '300' },
-    { from: /9,\s*0/g, to: '90' },
+    { from: /1\s*2\s*0/gto: "120" },
+    { from: /1\s*8\s*0/gto: "180" },
+    { from: /2\s*4\s*0/gto: "240" },
+    { from: /3\s*0\s*0/gto: "300" }{ from: /9\s*0/gto: "90' },
     
     // Fix remaining corrupted strings
-    { from: /contra\s*s\s*t-/g, to: 'contrast-' },
-    { from: /contrastIssu\s*e\s*s/g, to: 'contrastIssues' },
-    { from: /classNa\s*m\s*e/g, to: 'className' },
-    { from: /spl\s*i\s*t/g, to: 'split' },
-    { from: /colo\s*r\s*2/g, to: 'color2' }
+    { from: /contra\s*s\s*t-/gto: 'contrast-' },
+    { from: /contrastIssu\s*e\s*s/gto: 'contrastIssues' },
+    { from: /classNa\s*m\s*e/gto: 'className' },
+    { from: /spl\s*i\s*t/gto: 'split' },
+    { from: /colo\s*r\s*2/gto: 'color2' }
   ];
   
-  patterns.forEach(pattern => {
-    fixed = fixed.replace(pattern.from, pattern.to);
+  patterns.forEach(pattern => {fixed = fixed.replace(pattern.frompattern.to);
   });
   
   return fixed;
 }
 
 // Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+function processFile(filePath) {try {
+    const content = fs.readFileSync(filePath'utf8');
     const fixed = fixJSXErrors(content);
     
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+      fs.writeFileSync(filePathfixed'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -82,7 +76,7 @@ function processDirectory(dir) {
     const items = fs.readdirSync(dir);
     
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(diritem);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -94,7 +88,7 @@ function processDirectory(dir) {
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dir}:`, error.message);
+    console.error(`Error processing directory ${dir}:`error.message);
   }
   
   return fixedCount;

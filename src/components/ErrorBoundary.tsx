@@ -1,113 +1,83 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import Reac, t, {Compone, n, t, ErrorIn, f, o, ReactNode }  from 'react";
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
+interface, Prop, s {children: ReactNo, d, e;
+  fallba, c, k?: ReactNo, d, e;
+  onErr, o, r?: (error: Err, orerrorInfo: ErrorIn, f, o) => void};
+interface, Stat, e {hasError: boole, a, n;
+  error: Err, o, r | nu, l, l;
+  errorInfo: ErrorIn, f, o | null};
+export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r(props: Pro, p, s) {
+    sup, e, r(pro, p, s);
+    th, i, s.sta, t, e = {
+      hasError: fal, seerror: nu, llerrorInfo: null
+    }};
+  static, getDerivedStateFromErro, r(error: Err, o, r): Sta, t, e {return {
+      hasError: tr, u, e,
+      err, orerrorInfo: null
+    }};
+  componentDidCat, c, h(error: Err, orerrorInfo: ErrorIn, f, o) {th, i, s.setSta, t, e({
+      err, o, r,
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary: ', error, errorInfo);
-    }
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+    // Log, error, in development, i, f (proce, s, s.env.NODE_ENV === "developme, n, t") {console.error("Error, caught, by boundary: ", err, o, r, errorInfo)};
+    // Call, onError, callback if, provided, this.pro, p, s.onErr, o, r?.(err, o, r, errorIn, f, o)};
+  rend, e, r() {if (th, i, s.sta, t, e.hasErr, o, r) {
+      return, thi, s.props.fallback || (
+        <divclassName="min-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
+          <divclassName="max-w-m, d, w-full, b, g-white, shado, w-lgrounded-lgp-6">
+            <divclassName="flexitems-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100rounded-fullmb-4">
+              <svgclassName="w-6 h-6text-red-600" fi, l, l="none" stroke="currentColor" viewBox="0024 24">
+                <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0, 4h.0, 1, m-6.938, 4h1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.732, 0L, 3.732, 1, 6.5c-.77.8, 3, 3.1922.5 1.7322.5z" />
               </svg>
             </div>
-            <div className="text-center">
-              <h1 className="text-xl font-semibold text-gray-900 mb-2">
-                Something went wrong
+            <divclassName="text-center">
+              <h1className="text-xl, fon, t-semibold, tex, t-gray-900mb-2">
+                Something, went, wrong
               </h1>
-              <p className="text-gray-600 mb-4">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+              <pclassName="text-gray-600mb-4">
+                We"re, sorry, but something, unexpected, happened. Pleasetryrefreshing thepage.
               </p>
-              <div className="space-y-2">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+              <divclassName="space-y-2">
+                <buttononClick={() => wind, o, w.location.reload()};
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
-                  Refresh Page
+                  Refresh, Pag, e
                 </button>
-                <button
-                  onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
-                  className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
+                <buttononClick={() => th, i, s.setSta, t, e({ hasError: falseerror: nullerrorInfo: null })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
-                  Try Again
+                  Try, Agai, n
                 </button>
               </div>
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-4 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                    Error Details (Development)
+              {proce, s, s.env.NODE_ENV === "developme, n, t" && th, i, s.state.error && (
+                <detailsclassName="mt-4text-le, f, t">
+                  <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700">
+                    Error, Detail, s (Developme, n, t)
                   </summary>
-                  <div className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
+                  <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverflow-auto">
+                    <divclassName="mb-2">
+                      <strong>Error:</strong> {th, i, s.sta, t, e.err, o, r.message};
                     </div>
-                    {this.state.error.stack && (
-                      <div className="mb-2">
+                    {this.sta, t, e.error.stack && (
+                      <divclassName="mb-2">
                         <strong>Stack:</strong>
-                        <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                        <preclassName="whitespa, c, e-p, r, e-wrap">{th, i, s.sta, t, e.err, o, r.stack}</pre>
                       </div>
-                    )}
-                    {this.state.errorInfo?.componentStack && (
+                    )};
+                    {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k && (
                       <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                        <strong>ComponentStack:</strong>
+                        <preclassName="whitespa, c, e-p, r, e-wrap">{th, i, s.sta, t, e.errorIn, f, o.componentStack}</pre>
                       </div>
-                    )}
+                    )};
                   </div>
-                </details>
-              )}
+                </detai, l, s>
+              )};
             </div>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
+      )};
+    return, thi, s.pro, p, s.childr, e, n};
+};
 export default ErrorBoundary;

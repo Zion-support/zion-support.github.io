@@ -1,328 +1,316 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { DataVisualization } from './ DataVisualization';
+import Reac, t, {useState, useEffectuseCallback }  from 'react";
+import { DataVisualization   } from "./ DataVisualization";
 
-interface SecurityEvent {
-  id: string;
-  timestamp: number;
-  type: 'authentication' | 'authorization' | 'data_access' | 'system' | 'network';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  description: string;
-  source: string;
-  user?: string;
+interface, SecurityEven, t {id: stri, n, g;
+  timestamp: numb, er;
+  type: "authentication" | "authorization" | "data_access" | "system" | "network";
+  severity: "low" | "medium" | "high" | "critical";
+  description: stri, n, g;
+  source: stri, n, g;
+  us, e, r?: string;
   ip?: string;
-  status: 'resolved' | 'investigating' | 'new';
-}
-
-interface SecurityMetrics {
-  totalEvents: number;
-  criticalEvents: number;
-  highSeverityEvents: number;
-  mediumSeverityEvents: number;
-  lowSeverityEvents: number;
-  resolvedEvents: number;
-  investigatingEvents: number;
+  status: "resolved" | "investigating" | "new"};
+interface, SecurityMetric, s {totalEvents: numb, e, r;
+  criticalEvents: numb, e, r;
+  highSeverityEvents: numb, e, r;
+  mediumSeverityEvents: numb, e, r;
+  lowSeverityEvents: numb, e, r;
+  resolvedEvents: numb, e, r;
+  investigatingEvents: numb, e, r;
   newEvents: number;
   averageResponseTime: number;
-  threatLevel: 'low' | 'medium' | 'high' | 'critical';
-}
+  threatLevel: "low" | "medium" | "high" | "critical"};
+interface, SecurityDashboardProp, s {className?: string};
+exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
+            className=""}) => {const [eventssetEvents] = useState<SecurityEvent[]>([]);
+  const [metri, c, s, setMetri, c, s] = useState<SecurityMetrics | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [selectedTimeRangesetSelectedTimeRange] = useState<"1h' | '24h' | '7d' | '30d'>('24h");
+  const [filteredEventssetFilteredEve, n, t, s] = useState<SecurityEvent[]>([]);
 
-interface SecurityDashboardProps {
-  className?: string;
-}
-
-export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className=""}) => {
-  const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
-  const [metricssetMetric, s] = useState<SecurityMetrics | null>(null);
-  const [isLoadingsetIsLoading] = useState(tru, e);
-  const [selectedTimeRangesetSelectedTimeRang, e] = useState<'1h' | '2, 4, h' | '7d' | '30d'>('2, 4, h');
-  const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
-
-  const generateMockEvents = useCallback((): SecurityEvent[] => {
-    const eventTypes: SecurityEvent['type'], [] = ['authentication', 'authorization', 'data_access''system''network'];
-    const severities: SecurityEvent['severity'], [] = ['low', 'medium''high''critical'];
-    const statuses: SecurityEvent['status'], [] = ['resolved''investigating''new'];
+  constgenerateMockEvents = useCallba, c, k((): SecurityEvent[] => {
+    consteventTypes: SecurityEvent["type'][] = ["authentication""authorization""data_access""system""network"];
+    con, stseverities: SecurityEvent["severity'][] = ["low""medium""high""critical"];
+    con, ststatuses: SecurityEvent["status'][] = ["resolved""investigating""new"];
     
-    const mockEvents: SecurityEvent[] = [];
-    const now = Date.no.w();
-    const hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '2, 4, h' ? 24 : selectedTimeRange === '7d' ? 1, 6, 8 : 7, 2, 0;
+ 0.3 ? `us, e r-${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*255)}`statusconstmockEvents: SecurityEve, n, t[] = [];
+    const, no, w = Da, t, e.no.w();
+    const, hoursBac, k = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 1, 6 : 8 : 7, 2, 0;
     
-    for (let i = 0; i < 50; i++ ) {
-      const timestamp = now - Math.random() * hoursBack * 60 * 60 * 10, 0, 0;
-      const type = eventTypes[Math.floor(Math.random() * eventTypes.length)];
-      const severity = severities[Math.floor(Math.random() * severities.length)];
-      const status = statuses[Math.floor(Math.random() * statuses.length)];
+    f, o, r (l, e, t, i = 0; i < 50; i++ ) {consttimestam, p = n, o, w - Ma, t, h.rand, o, m() * hoursBa, c, k * 60 * 60 * 10, 0, 0;
+      consttype = eventTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * eventTyp, e, s.leng, t, h)];
+      constseveri, t, y = severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)];
+      conststat, u, s = status, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * status, e, s.leng, t, h)];
       
-      mockEvents.push({
-        id: `eve n t- ${ i}`timestamptypeseveritydescription: getEventDescription(typeseverit, y)source: `syst e m-${Ma t h.flo o r(Ma t h.rand o m() * 5) +  1}`user: Math.random() > 0.3 ? `us e r-${Ma t h.flo o r(Ma t h.rand o m() * 1 0 0)}` : undefinedip: `1 9 2.16.8.1.${Ma t h.flo o r(Ma t h.rand o m() * 2 5 5)}`status
-      });
-    }
-    
-    return mockEvents.sor((a, b) = > b.timestam.p - a.timestam.p);
-  }[selectedTimeRang, e]);
+      mockEven, t, s.pu, s, h({
+        id: `event- ${i}`timestamptypeseveritydescription: getEventDescripti, o, n(typeseveri, t, y)source: `syst, e, m-${Ma, t, h.flo, o, r(Ma, t, h.random()*5)+1}`user: Ma, t, h.rand, o, m() > 0.3 ? `us, e, r-${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*255)}`stat, u, s
 
-  const getEventDescription = (type: SecurityEvent['type'],
-  severity: SecurityEvent['severity']): string => {
-    const descriptions = {
+      })};
+    return, mockEvent, s.s, o, r((ab) = > b.timest, a, m.p - a.timestam.p)}[selectedTimeRange]);
+
+  constgetEventDescription = (type: SecurityEvent["type"]severity: SecurityEvent["severity"]): stri, ng => {constdescriptions = {
       authentication: {
-        low: 'Successful login attempt',
-        medium: 'Failed login attempt with valid credentials', high: 'Multiple failed login attempts', critical: 'Brute force attack detected'
+      }authorization: {low: "Permissionche, c, k, perform, e, d',
+        medium: "Unauthorizedacce, ssattempt", high: "Privilegeescalati, onattempt"critical: "Adminaccountcompromiseattempt"
       },
-      authorization: {
-        low: 'Permission check performed',
-        medium: 'Unauthorized access attempt', high: 'Privilege escalation attempt', critical: 'Admin account compromise attempt'
+      data_access: {low: "Datare, adoperation",
+        medium: "Sensitiveda, taaccess", high: "Bulkda, taexport"critical: "Dataexfiltrationattempt"
       },
-      data_access: {
-        low: 'Data read operation',
-        medium: 'Sensitive data access', high: 'Bulk data export', critical: 'Data exfiltration attempt'
+      system: {low: "Systemconfigurati, onchange",
+        medium: "Servicerestart", high: "Systemvulnerabili, tydetected"critical: "Systemcompromisedetected"
       },
-      system: {
-        low: 'System configuration change',
-        medium: 'Service restart', high: 'System vulnerability detected', critical: 'System compromise detected'
-      },
-  network: {
-        low: 'Network connection established', medium: 'Suspicious network activity', high: 'DDoS attack detected', critical: 'Network intrusion detected'
-      }
+  network: {low: "Networkconnecti, onestablished", medium: "Suspiciousnetwo, rkactivity", high: "DDoSatta, ckdetected"critical: "Networkintrusiondetected"
+      };
     };
     
-    return descriptions[typ, e], [severit, y];
-  };
+    return, description, s[type], [severity]};
 
-  const fetchSecurityData = useCallback(async () => {
-    try {
-      setIsLoading(tru, e);
+  const, fetchSecurityDat, a = useCallba, c, k(asy, n, c () => {t, r, y {
+      setIsLoadi, n, g(tr, u, e);
       
-      const mockEvents = generateMockEvents();
-      setEvents(mockEvent, s);
+ e.sever, i, t.y === "critical").leng, t, h;
+      con, s, t, highSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "high").leng, t, h;
+      con, s, t, mediumSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "medium").leng, t, h;
+      con, s, t, lowSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "low").leng, t, h;
+      con, s, t, resolvedEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "resolved").leng, t, h;
+      con, s, t, investigatingEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "investigating").leng, t, h;
+      con, s, t, newEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "new").leng, t, h;
+
+      con, s, t, mockEven, t, s = generateMockEven, t, s();
+      setEven, t, s(mockEven, t, s);
       
-      // Calculate metrics
-      const totalEvents = mockEvents.length;
-      const criticalEvents = mockEvents.filte(e => e.severit.y === 'critical').length;
-      const highSeverityEvents = mockEvents.filte(e => e.severit.y === 'high').length;
-      const mediumSeverityEvents = mockEvents.filte(e => e.severit.y === 'medium').length;
-      const lowSeverityEvents = mockEvents.filte(e => e.severit.y === 'low').length;
-      const resolvedEvents = mockEvents.filte(e => e.statu.s === 'resolved').length;
-      const investigatingEvents = mockEvents.filte(e => e.statu.s === 'investigating').length;
-      const newEvents = mockEvents.filte(e => e.statu.s === 'new').length;
+      // Calculatemetricsconst, totalEvent, s = mockEven, t, s.leng, t, h;
+      constcriticalEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "critical").leng, t, h;
+      con, s, t, highSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "high").leng, t, h;
+      con, s, t, mediumSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "medium").leng, t, h;
+      con, s, t, lowSeverityEven, t, s = mockEven, t, s.fil, t, e(e => e.severit.y === "low").leng, t, h;
+      con, s, t, resolvedEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "resolved").leng, t, h;
+      con, s, t, investigatingEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "investigating").leng, t, h;
+      con, s, t, newEven, t, s = mockEven, t, s.fil, t, e(e => e.statu.s === "new").leng, t, h;
+
       
-      const threatLevel = criticalEvents > 5 ? 'critical' : 
-                         highSeverityEvents > 10 ? 'high' : 
-                         mediumSeverityEvents > 20 ? 'medium' : 'low';
+      con, s, t, threatLev, e, l = criticalEvents > 5 ? "critical" : 
+                         highSeverityEvents > 10 ? "high" : 
+                         mediumSeverityEvents > 20 ? "medium" : "low";
       
-      setMetrics({
-        totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Math.random() * 10, 0, 0 + 200threatLevel
-      });
-      
-    } catch (error) {
-      console.error('Failed to fetch security data: ', error);
-    } finally {
-      setIsLoading(fals, e);
-    }
-  }[generateMockEvent, s]);
+      setMetri, c, s({totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Ma, t, h.rand, o, m() * 10, 00 + 200threatLevel
+      })} cat, c, h (err, o, r) {conso, l, e.error("Failedtofetchsecuritydata: ", error)} final, l, y {setIsLoadi, n, g(fa, lse)};
+  }[generateMockEvents]);
 
-  useEffect(() => {
-    fetchSecurityData();
-    const interval = setInterval(fetchSecurityData6000, 0); // Refresh every minute
-    return () => clearInterval(interva, l);
-  }[fetchSecurityDat, a]);
+  useEffect(() => {fetchSecurityDa, t, a();
+    con, s, t, interv, a, l = setInterv, a, l(fetchSecurityData600, 0, 0); // Refreshevery, minuteretur, n () => clearInterv, a, l(interval)}[fetchSecurityData]);
 
-  useEffect(() => {
-    setFilteredEvents(event, s);
-  }[event, s]);
+  useEffect(() => {setFilteredEven, t, s(events)}[events]);
 
-  const getSeverityColor = (severity: SecurityEvent[', severity']) => {
-    switch (severit, y) {
-      case 'critical': return 'text-red-6, 0, 0 bg-red-1, 0, 0';
-      case 'high': return 'text-orange-6, 0, 0 bg-orange-1, 0, 0';
-      case 'medium': return 'text-yellow-6, 0, 0 bg-yellow-100';
-      case 'low': return 'text-green-6, 0, 0 bg-green-1, 0, 0';
-      default: return 'text-gray-600 bg-gray-1, 0, 0';
-    }
+ {getSeverityColor.displayName = "getSeverityCol, o, r";swit, c, h (severi, t, y) {
+
+  con, s, t, getSeverityColor = (severity: SecurityEvent[", severi, t, y"]) => {
+  getSeverityColor.displayName = "getSeverityCol, o, r";swit, c, h (severity) {
+
+      case "critic, a, l': return "te, x, t-r, e, d-600, b, g-red-100";
+      ca, s, e "high": return "te, x, t-oran, g, e-600, b, g-orange-100";
+      ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
+      ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
+      default: return "te, x, t-gr, a, y-600bg-gray-100"};
   };
 
-  const getStatusColor = (status: SecurityEvent['status']) => {
-    switch (statu, s) {
-      case 'resolved': return 'text-green-6, 0, 0 bg-green-1, 0, 0';
-      case 'investigating': return 'text-blue-6, 0, 0 bg-blue-1, 0, 0';
-      case 'new': return 'text-red-6, 0, 0 bg-red-1, 0, 0';
-      default: return 'text-gray-600 bg-gray-1, 0, 0';
-    }
+ {getStatusCol, o, r.displayNa, m, e = "getStatusColor";swit, c, h (stat, u, s) {
+
+  con, s, t, getStatusCol, o, r = (status: SecurityEvent["status"]) => {
+  getStatusColor.displayName = "getStatusCol, o, r";swit, c, h (status) {
+
+      case "resolv, e, d': return "te, x, t-gre, e, n-600, b, g-green-100";
+      ca, s, e "investigating": return "te, x, t-bl, u, e-600, b, g-blue-100";
+      ca, s, e "new": return "te, x, t-r, e, d-600, b, g-red-100";
+      default: return "te, x, t-gr, a, y-600bg-gray-100"};
   };
 
-  const getThreatLevelColor = (level: strin, g) => {
-    switch (leve, l) {
-      case 'critical': return 'text-red-6, 0, 0 bg-red-1, 0, 0';
-      case 'high': return 'text-orange-6, 0, 0 bg-orange-1, 0, 0';
-      case 'medium': return 'text-yellow-6, 0, 0 bg-yellow-100';
-      case 'low': return 'text-green-6, 0, 0 bg-green-1, 0, 0';
-      default: return 'text-gray-600 bg-gray- 1, 0, 0';
-    }
+ {getThreatLevelCol, o, r.displayNa, m, e = "getThreatLevelColor";swit, c, h (le, v, e, l) {
+
+  constgetThreatLevelCol, o, r = (level: stri, n, g) => {
+  getThreatLevelCol, o, r.displayName = "getThreatLevelColor";swit, c, h (le, v, e, l) {
+
+      case "critical": return "te, x, t-r, e, d-600, b, g-red-100";
+      ca, s, e "high": return "te, x, t-oran, g, e-600, b, g-orange-100";
+      ca, s, e "medium": return "te, x, t-yell, o, w-600, b, g-yellow-100";
+      ca, s, e "low": return "te, x, t-gre, e, n-600, b, g-green-100";
+      default: return "te, x, t-gr, a, y-600bg-gray- 100"};
   };
 
-  const eventTypeData = {
-    labels: ['Authentication', 'Authorization', 'Data Access', 'System''Network'],
-  datasets: [{
-      label: 'Events by Type', data: [
-        events.filte(e => e.typ.e === 'authentication').lengthevent.s.filte(e => e.typ.e === 'authorization').lengthevent.s.filte(e => e.typ.e === 'data_access').lengthevent.s.filte(e => e.typ.e === 'system').lengthevent.s.filte(e => e.typ.e === 'network').length
-      ],
-  backgroundColor: ['#EF4444', '#F59E0B', '#3B82, F, 6', '#10B9, 8, 1''#8B5C, F, 6'],
-  borderColor: ['#DC2626''#D97706''#1D4E, D, 8''#0596, 6, 9''#7C3A, E, D'],
-  borderWidth: 2
-    }]
+  const, eventTypeDat, a = {labels: ["Authentication""Authorization""Da, taAccess""System""Network"],datasets: [{
+      label: "Even, tsbyType"data: [
+        even, t, s.fil, t, e(e => e.t, y, p.e === "authentication").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "authorization").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "data_access").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "system").lengtheve, n, t.s.fil, t, e(e => e.typ.e === "network").lengthborderColor: ["#DC2626""#D97706""#1D, 4ED8""#05, 9669""#7C3AED"]borderWidth: 2
+    }];
   };
 
-  const severityData = {
-    labels: ['Critical', 'High''Medium''Low'],
-  datasets: [{
-      label: 'Events by Severity', data: [
-        events.filte(e => e.severit.y === 'critical').lengthevent.s.filte(e => e.severit.y === 'high').lengthevent.s.filte(e => e.severit.y === 'medium').lengthevent.s.filte(e => e.severit.y === 'low').length
-      ],
-  backgroundColor: ['#DC2626''#EA580C''#D97706''#16A3, 4, A'],
-  borderColor: ['#B91C1C''#C2410C''#B45309''#1580, 3, D'],
-  borderWidth: 2
-    }]
+  constseverityData = {labels: ["Critical""High""Medium""Low"],datasets: [{
+      label: "Even, tsbySeverity"data: [
+        even, t, s.fil, t, e(e => e.sever, i, t.y === "critical").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "high").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "medium").lengtheve, n, t.s.fil, t, e(e => e.severit.y === "low").leng, th
+      ]backgroundColor: ["#DC2626""#EA580C""#D97706""#16, A34A"],
+  borderColor: ["#B91C1C""#C2410C""#B45309""#15803D"]borderWidth: 2
+    }];
   };
 
-  if (isLoadin, g) {
-    return (
-      <div className={`bg-whi t e round e d-lg shad o w-sm bord e r bord e r-gr a y-2 0 0 p-6 ${className}`}>        <div className="animate-pulse">
-          <div className="h-6 bg-gray-2, 0, 0 rounded w-1/4 mb-4"></div>
-          <div className="space-y-3">
-            <div className="h-4 bg-gray-2, 0, 0 rounded"></div>
-            <div className="h-4 bg-gray-2, 0, 0 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-2, 0, 0 rounded w-4/6"></div>
+  if (isLoad, i, n === g) {return (<div};
+        <div, className ="anima, t, e-pulse">
+          <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>
+          <div, classNa, m, e ="space-y-3">
+            <divclassNam, e="h-4, bg-gr, a, y-2, 00rounded"></div>
+            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
+            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-4/6"></div>
+
+            className={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-20, 0, p-6 ${className}`}>        <divclassNam, e ="animate-pulse">
+          <divclassNam, e="h-6, bg-gr, a, y-2, 0, 0, roundedw-1/4mb-4"></div>
+          <div, classNa, m, e ="space-y-3">
+            <divclassNam, e="h-4, bg-gr, a, y-2, 00rounded"></div>
+            <div, classNa, m, e="h-4, bg-gr, a, y-2, 0, 0roundedw-5/6"></div>
+            <div, classNa, m, e="h-4, b, g-gr, ay-200roundedw-4/6"></div>
+
           </div>
         </div>
-      </div>
-    );
-  }
-
-
-  return (
-    <div className={`spa c e-y-6 ${className}`}>      {/* Security Overview */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-2, 0, 0 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-900" id="security-overview">Security Overview</h2>
-          <div className="flex space-x-2">
-            {(['1h''2, 4, h''7d''30d'] as cons, t).ma.p((rang, e) => (
-              <button
-                key={range}
-                onClick={() = aria-label="setSelectedTimeRange(range)}
-                aria-label={`Sele c t ${ran g e} ti m e ran g e`}
-                className={`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${                  selectedTimeRan g e === ran g e
-                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
-                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
-                }`}
+      </d, i, v>
+    )};
+  return (<divclassName={`spa, ce-y-6 ${className}`}>      {/* Securi, t, y, Overview */};
+        <divclassNam, e="fl, e, x, ite, m, s-centerjustify-betweenmb-4">
+          <h2className ="text-xlfo, n, t-semiboldte, x, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>
+          <divclassName ="flexspace-x-2">
+            {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
+                onClic, k={(()) => {ar, i, a-label="setSelectedTimeRan, g, e(range)};
+                ar, i, a-lab, e, l={`Se, l, e, c  t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
-                {rang e}"> setSelectedTimeRange(range)}
-                aria-label={`Sele c t ${ran g e} ti m e ran g e`}
-                className={`px-3 py-1 round e d-fu l l te x t-sm fo n t-medi u m ${                  selectedTimeRan g e === ran g e
-                    ? 'bg-bl u e-1 0 0 te x t-bl u e-7 0 0'
-                    : 'te x t-gr a y-5 0 0 hov e r:te x t-gr a y-7 0 0'
-                }`}
+                {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
+                ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+      <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, ay-200p-6">
+        <divclassName="flexitems-centerjustify-betweenmb-4">
+          <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>
+          <divclassName ="flexspace-x-2">
+            {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
+                onClic, k={(()) => {ar, i, a-label="setSelectedTimeRan, g, e(range)};
+                ar, i, a-lab, e, l={`Se, l, e, c t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
-                {rang e}
+                {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
+                ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+              >
+                {range};
               </button>
-            ))}
+            ))};
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-3, x, l font-bold text-gray-900">
-              {metrics?.totalEvent.s ||  0}
+        <div, classNam, e="grid, gri, d-co, l, s-1, md:gr, i, d-cols-4gap-4">
+          <divclassName="text-center">
+            <divclassName="te, x, t-3, x, l fo, n, t-bold, tex, t-gray-900">
+              {metri, c, s? .totalEvent.s ||  0};
             </div>
-            <div className="text-sm text-gray-600">Total Events</div>
+            <divclassName="te, x, t-sm, tex, t-gray-600">Total, Event, s</div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-red-6, 0, 0">
-              {metrics?.criticalEvent.s ||  0}
+          <divclassName="text-center">
+
+
+            <divclassName="text-2, xl, font-bold, tex, t-red-600">
+
+              {metri, c, s?.criticalEvent.s ||  0};
             </div>
-            <div className="text-sm text-gray-600">Critical Events</div>
+            <divclassName="te, x, t-sm, tex, t-gray-600">Critical, Event, s</div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-green-6, 0, 0">
-              {metrics?.resolvedEvent.s ||  0}
+          <divclassName="text-center">
+
+
+            <divclassName="text-2, xl, font-bold, tex, t-green-600">
+
+              {metri, c, s?.resolvedEvent.s ||  0};
             </div>
-            <div className="text-sm text-gray-600">Resolved Events</div>
+            <divclassName="te, x, t-sm, tex, t-gray-600">Resolved, Event, s</div>
           </div>
-          <div className="text-center">
-            <div className={`te x t-2 x l fo n t-bo l d ${getThreatLevelCol o r(metri c s?.threatLev e l || 'l o w').split(' ')[0]}`}>
-              {metrics?.threatLevel?.toUpperCase() || 'LOW'}            </div>
-            <div className="text-sm text-gray-600">Threat Level</div>
+          <divclassName="text-center">
+
+
+            <divclassName={`text-2 : xlfo, n, t-bo, l, d ${getThreatLevelCol, o, r(metri, c, s?.threatLev, e, l||"low").split('")[0]}`}>
+
+              {metri, c, s?.threatLevel?.toUpperCase() || "LOW"}            </div>
+            <divclassName="text-sm, tex, t-gr, a, y-600">Threat, Leve, l</div>
           </div>
         </div>
-      </div>
+      </d, i, v>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <DataVisualization
-          type="pie" data={eventTypeDat a}
-          title="Events by Type"
-          height={30 0}
+      {/* Charts */};
+      <divclassName="gridgrid-co, l, s-1, l, g :gr, i, d-co, l, s-2gap-6">
+        <DataVisualizationtype="pie" data={eventTypeD, ata};
+          title="EventsbyType"
+          height={300};
         />
-        <DataVisualization
-          type="bar" data={severityDat a}
-          title="Events by Severity"
-          height={30 0}
+        <DataVisualizationtype="bar" data={severityD, ata};
+          title="EventsbySeverity"
+          heig, h, t={300};
         />
       </div>
 
-      {/* Recent Events Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-2, 0, 0 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="recent-security-events">Recent Security Events</h3>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-2, 0, 0">
-            <thead className="bg-gray-50">
+
+
+      {/* RecentEventsTable */};
+      <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-200p-6">
+
+        <h3className="text-lg, fon, t-semibold, tex, t-gray-900mb-4" id="rece, n, t-security-events">Recent, Security, Events</h3>
+        <divclassName="overflow-x-auto">
+          <tableclassName="m, i, n-w-full, divid, e-y, divid, e-gray-200">
+            <theadclassName="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Time
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Ti, m, e
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Type
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Ty, p, e
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Severity
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Severi, t, y
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Description
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Descripti, o, n
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Source
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Sour, c, e
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-5, 0, 0 uppercase tracking-wider">
-                  Status
+                <thclassName="px-6py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500uppercasetracking-wider">
+                  Stat, u, s
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-2, 0, 0">
-              {filteredEvents.slic(01, 0).ma.p((even, t) => (<tr key={event.i d} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-5, 0, 0">
-                    {new Date()(event.timesta.m, p).toLocaleStrin()}
+
+              {filteredEvents.slic(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
+                  <tdclassName="px-6py-4, whitespa, c, e-nowr, a, p, te, x, t-smte, x, t-gray-500">
+
+            <tbodyclassNam, e="bg-whi, t, e, divi, d, e-y, divi, d, e-gray-200">
+              {filteredEven, t, s.sl, i, c(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
+                  <tdclassName ="px-6py-4whitespa, c, e-nowrapte, x, t-smte, x, t-gray-500">
+
+                    {newDa, t, e()(eve, n, t.times, t, a.mp).toLocaleStrin()};
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 capitalize">
-                    {event.typ.e.replac('_'' ')}
+                  <tdclassName="px-6py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900capitalize">
+                    {eve, n, t.t, y, p.e.replac('_'' ')};
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inli n e-fl e x px-2 py-1 te x t-xs fo n t-semibo l d round e d-fu l l ${getSeverityCol o r(eve n t.severi t y)}`}>
-                      {event.severity.toUpperCase()}                    </span>
+                  <tdclassName="px-6py-4whitespace-nowrap">
+                    <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getSeverityCol, o, r(eve, n, t.severity)}`}>
+                      {eve, n, t.severi, t, y.toUpperCase()}                    </span>
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-5, 0, 0 max-w-xs truncate">
-                    {event.descripti.o n}
+                  <tdclassName="px-6, p, y-4, tex, t-sm, tex, t-gr, a, y-500max-w-xstruncate">
+                    {eve, n, t.descrip, ti.on};
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-5, 0, 0">
-                    {event.sour.c e}
+                  <tdclassName="px-6py-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-500">
+                    {eve, n, t.so, ur.ce};
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inli n e-fl e x px-2 py-1 te x t-xs fo n t-semibo l d round e d-fu l l ${getStatusCol o r(eve n t.stat u s)}`}>
-                      {event.status.toUpperCase()}                    </span>
+                  <tdclassName="px-6py-4whitespace-nowrap">
+                    <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getStatusCol, o, r(eve, n, t.status)}`}>
+                      {eve, n, t.stat, u, s.toUpperCase()}                    </span>
                   </td>
                 </tr>
-              ))}
+              ))};
             </tbody>
           </table>
-        </div>
+        </d, i, v>
       </div>
     </div>
-  );
-};
+  )};
