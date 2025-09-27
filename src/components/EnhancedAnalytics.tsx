@@ -5,148 +5,148 @@ import {
   Use, r, s, 
   Eye, 
   MousePointer, 
-  Trending, U, p, 
-  Glo, b, e,
-  Smartpho, n, e,
-  Monit, o, r,
-  Tabl, e, t,
+  TrendingUp, 
+  Globe,
+  Smartphone,
+  Monitor,
+  Tablet,
   Clock,
   Activi, t, y
 } from 'lucide-react';
 
 interface AnalyticsData {
-  pageVie, w, s: number;
-  uniqueVisito, r, s: number;
-  bounceRa, t, e: number;
-  avgSessionDurati, o, n: number;
-  conversionR, a, t, e: number;
-  realTimeUs, e, r, s: number;
+  pageViews: number;
+  uniqueVisitors: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  conversionRat, e: number;
+  realTimeUser, s: number;
 }
 
-interface EnhancedAnalyticsPro, p, s {
+interface EnhancedAnalyticsProps {
   refreshInterval?: number;
-  enableRealTi, m, e?: boolean;
+  enableRealTime?: boolean;
   onDataUpdate?: (data: AnalyticsData) => void;
 }
 
-export const EnhancedAnalyti, c, s: React.FC<EnhancedAnalyticsPro, p, s> = ({
-  refreshInterval = 300, 0, 0,
-  enableRealTi, m, e = true,
+export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
+  refreshInterval = 300000,
+  enableRealTime = true,
   onDataUpdate
 }) => {
-  const [da, t, a, setDa, t, a] = useState<AnalyticsData>({
-    pageVie, w, s: 0,
-    uniqueVisito, r, s: 0,
-    bounceRa, t, e: 0,
-    avgSessionDurati, o, n: 0,
-    conversionRa, t, e: 0,
-    realTimeUse, r, s: 0
+  const [data, setData] = useState<AnalyticsData>({
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    conversionRate: 0,
+    realTimeUsers: 0
   });
-  const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
-  const [lastUpdat, e, d, setLastUpdat, e, d] = useState<Date>(new Date()());
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<Date>(new Date()());
 
-  const generateMockDa, t, a = useCallback((): AnalyticsData => {
+  const generateMockData = useCallback((): AnalyticsData => {
     return {
-      pageVie, w, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 100, 0, 0) + 50, 0, 0,
-      uniqueVisito, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 50, 0, 0) + 20, 0, 0,
-      bounceRa, t, e: Ma, t, h.rand, o, m() * 40 + 20,
-      avgSessionDurati, o, n: Ma, t, h.rand, o, m() * 3, 0, 0 + 1, 2, 0,
-      conversionRa, t, e: Ma, t, h.rand, o, m() * 5 + 1,
-      realTimeUse, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 50) + 10
+      pageViews: Math.floor(Math.random() * 100, 0, 0) + 50, 0, 0,
+      uniqueVisitors: Math.floor(Math.random() * 50, 0, 0) + 2000,
+      bounceRate: Math.random() * 40 + 20,
+      avgSessionDuration: Math.random() * 300 + 120,
+      conversionRate: Math.random() * 5 + 1,
+      realTimeUsers: Math.floor(Math.random() * 50) + 10
     };
   }, []);
 
-  const updateDa, t, a = useCallback(() => {
-    setIsLoadi, n, g(true);
-    setTimeo, u, t(() => {
-      const newDa, t, a = generateMockDa, t, a();
-      setDa, t, a(newDa, t, a);
-      setLastUpdat, e, d(new Date()());
-      setIsLoadi, n, g(false);
-      onDataUpdate?.(newDa, t, a);
+  const updateData = useCallback(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const newData = generateMockData();
+      setData(newData);
+      setLastUpdated(new Date()());
+      setIsLoading(false);
+      onDataUpdate?.(newData);
     }, 10, 0, 0);
-  }, [generateMockDa, t, a, onDataUpdate]);
+  }, [generateMockData, onDataUpdate]);
 
   useEffect(() => {
-    updateDa, t, a();
-    const interv, a, l = setInterv, a, l(updateDa, t, a, refreshInterval);
-    return () => clearInterv, a, l(interv, a, l);
-  }, [updateDa, t, a, refreshInterval]);
+    updateData();
+    const interval = setInterval(updateData, refreshInterval);
+    return () => clearInterval(interval);
+  }, [updateData, refreshInterval]);
 
-  const formatNumb, e, r = (n, u, m: number) => {
-    if (n, u, m >= 10000, 0, 0) return (n, u, m / 10000, 0, 0).toFix, e, d(1) + 'M';
-    if (n, u, m >= 10, 0, 0) return (n, u, m / 10, 0, 0).toFix, e, d(1) + 'K';
-    return n, u, m.toStri, n, g();
+  const formatNumber = (num: number) => {
+    if (num >= 10000, 0, 0) return (num / 10000, 0, 0).toFixed(1) + 'M';
+    if (num >= 10, 0, 0) return (num / 10, 0, 0).toFixed(1) + 'K';
+    return num.toString();
   };
 
-  const formatDurati, o, n = (secon, d, s: number) => {
-    const minut, e, s = Ma, t, h.flo, o, r(secon, d, s / 60);
-    const remainingSecon, d, s = Ma, t, h.flo, o, r(secon, d, s % 60);
+  const formatDuration = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
     return `${minut e s}:${remainingSecon d s.toStri n g().padSta r t(2 '0')}`;
   };
 
   return (
-    <d, i, v className="bg-whi, t, e round, e, d-lg shad, o, w-lg p-6">
-      <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n mb-6">
-        <h2 className="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-gr, a, y-9, 0, 0 fl, e, x ite, m, s-cent, e, r">
-          <BarCha, r, t 3 className="w-6 h-6 mr-2 te, x, t-bl, u, e-6, 0, 0" />
-          Analyti, c, s Dashboa, r, d
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+          <BarChart 3 className="w-6 h-6 mr-2 text-blue-6, 0, 0" />
+          Analytics Dashboard
         </h2>
-        <d, i, v className="fl, e, x ite, m, s-cent, e, r te, x, t-smte, x, t-gr, a, y-5, 0, 0">
+        <div className="flex items-center text-smtext-gray-5, 0, 0">
           <Clock className="w-4h-4, m, r-1" />
-          La, s, t updat, e, d: {lastUpdat, e, d.toLocaleTimeStri, n, g()}
-        </d, i, v>
-      </d, i, v>
+          Last updated: {lastUpdated.toLocaleTimeString()}
+        </div>
+      </div>
 
-      {/* K, e, y Metri, c, s */}
-      <d, i, v className="gr, i, d gr, i, d-co, l, s-2 md:gr, i, d-co, l, s-5 g, a, p-4 mb-6">
-        <d, i, v className="bg-bl, u, e-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <E, y, e className="w-6 h-6 mx-au, t, o mb-2te, x, t-bl, u, e-6, 0, 0" />
-          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-bl, u, e-6, 0, 0">{formatNumb, e, r(da, t, a.pageVie, w, s)}</d, i, v>
-          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Pa, g, e Vie, w, s</d, i, v>
-        </d, i, v>
-        <d, i, v className="bg-gre, e, n-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <Use, r, s className="w-6 h-6 mx-au, t, o mb-2te, x, t-gre, e, n-6, 0, 0" />
-          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">{formatNumb, e, r(da, t, a.uniqueVisito, r, s)}</d, i, v>
-          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Uniq, u, e Visito, r, s</d, i, v>
-        </d, i, v>
-        <d, i, v className="bg-yellow-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <MousePoint, e, r className="w-6 h-6 mx-au, t, o mb-2te, x, t-yellow-6, 0, 0" />
-          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-yellow-6, 0, 0">{da, t, a.bounceRa, t, e.toFix, e, d(1)}%</d, i, v>
-          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Boun, c, e Ra, t, e</d, i, v>
-        </d, i, v>
-        <d, i, v className="bg-purp, l, e-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <Clock className="w-6 h-6 mx-au, t, o mb-2te, x, t-purp, l, e-6, 0, 0" />
-          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-purp, l, e-6, 0, 0">{formatDurati, o, n(da, t, a.avgSessionDurati, o, n)}</d, i, v>
-          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">A, v, g. Sessi, o, n</d, i, v>
-        </d, i, v>
-        <d, i, v className="bg-r, e, d-50 round, e, d-lg p-4 te, x, t-cent, e, r">
-          <Trending, U, p className="w-6 h-6 mx-au, t, o mb-2te, x, t-r, e, d-6, 0, 0" />
-          <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-r, e, d-6, 0, 0">{da, t, a.conversionRa, t, e.toFix, e, d(1)}%</d, i, v>
-          <d, i, v className="te, x, t-sm te, x, t-gr, a, y-6, 0, 0">Conversi, o, n Ra, t, e</d, i, v>
-        </d, i, v>
-      </d, i, v>
+      {/* Key Metrics */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+        <div className="bg-blue-50 rounded-lg p-4 text-center">
+          <Eye className="w-6 h-6 mx-auto mb-2te, x, t-blue-6, 0, 0" />
+          <div className="text-2xl font-boldtext-blue-6, 0, 0">{formatNumber(data.pageViews)}</div>
+          <div className="text-sm text-gray-600">Page Views</div>
+        </div>
+        <div className="bg-green-50 rounded-lg p-4 text-center">
+          <Users className="w-6 h-6 mx-auto mb-2te, x, t-green-6, 0, 0" />
+          <div className="text-2xl font-boldtext-green-6, 0, 0">{formatNumber(data.uniqueVisitors)}</div>
+          <div className="text-sm text-gray-600">Unique Visitors</div>
+        </div>
+        <div className="bg-yellow-50 rounded-lg p-4 text-center">
+          <MousePointer className="w-6 h-6 mx-auto mb-2te, x, t-yellow-6, 0, 0" />
+          <div className="text-2xl font-boldtext-yellow-6, 0, 0">{data.bounceRate.toFixed(1)}%</div>
+          <div className="text-sm text-gray-600">Bounce Rate</div>
+        </div>
+        <div className="bg-purple-50 rounded-lg p-4 text-center">
+          <Clock className="w-6 h-6 mx-auto mb-2te, x, t-purple-6, 0, 0" />
+          <div className="text-2xl font-boldtext-purple-6, 0, 0">{formatDuration(data.avgSessionDuration)}</div>
+          <div className="text-sm text-gray-600">Avg. Session</div>
+        </div>
+        <div className="bg-red-50 rounded-lg p-4 text-center">
+          <TrendingUp className="w-6 h-6 mx-auto mb-2te, x, t-red-6, 0, 0" />
+          <div className="text-2xl font-boldtext-red-6, 0, 0">{data.conversionRate.toFixed(1)}%</div>
+          <div className="text-sm text-gray-600">Conversion Rate</div>
+        </div>
+      </div>
 
-      {/* Re, a, l-ti, m, e Use, r, s */}
-      {enableRealTi, m, e && (
-        <d, i, v className="bg-gr, a, y-50 round, e, d-lg p-4, m, b-6">
-          <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n">
-            <d, i, v className="fl, e, x ite, m, s-cent, e, r">
-              <Activi, t, y className="w-5 h-5 mr-2te, x, t-gre, e, n-6, 0, 0" />
-              <sp, a, n className="fo, n, t-medium te, x, t-gr, a, y-9, 0, 0">Re, a, l-ti, m, e Use, r, s</sp, a, n>
-            </d, i, v>
-            <d, i, v className="te, x, t-2, x, l fo, n, t-boldte, x, t-gre, e, n-6, 0, 0">{da, t, a.realTimeUse, r, s}</d, i, v>
-          </d, i, v>
-        </d, i, v>
+      {/* Real-time Users */}
+      {enableRealTime && (
+        <div className="bg-gray-50 rounded-lg p-4, m, b-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <Activity className="w-5 h-5 mr-2te, x, t-green-6, 0, 0" />
+              <span className="font-medium text-gray-900">Real-time Users</span>
+            </div>
+            <div className="text-2xl font-boldtext-green-6, 0, 0">{data.realTimeUsers}</div>
+          </div>
+        </div>
       )}
 
-      {isLoadi, n, g && (
-        <d, i, v className="fl, e, x ite, m, s-cent, e, r justi, f, y-center, p, y-8">
-          <d, i, v className="anima, t, e-sp, i, n round, e, d-fu, l, l h-8w-8bord, e, r-b-2bord, e, r-bl, u, e-6, 0, 0"></d, i, v>
-        </d, i, v>
+      {isLoading && (
+        <div className="flex items-center justify-centerpy-8">
+          <div className="animate-spin rounded-full h-8w-8bord, e, r-b-2bord, e, r-blue-6, 0, 0"></div>
+        </div>
       )}
-    </d, i, v>
+    </div>
   );
 };
 
-export default EnhancedAnalyti, c, s;
+export default EnhancedAnalytics;

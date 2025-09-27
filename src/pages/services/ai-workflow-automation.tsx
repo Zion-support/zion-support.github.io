@@ -1,198 +1,198 @@
-import React from "rea, c, t"
-import { S, E, O } from "../../componen, t, s/S, E, O"
-import { motion } from "fram, e, r-motion"
-import { Workflow, Bra, i, n, Targ, e, t, Trending, U, p, Shie, l, d, Use, r, s, CheckCircle } from "luci, d, e-rea, c, t"
+import React from "react"
+import { SEO } from "../../components/SEO"
+import { motion } from "framer-motion"
+import { Workflow, Bra, i, n, Targ, e, t, Trending, U, p, Shie, l, d, Use, r, s, CheckCircle } from "lucide-react"
 
-export default function AIWorkflowAutomati, o, n() {
-  con, s, t featur, e, s = [
+export default function AIWorkflowAutomation() {
+  const features = [
     {
-      ic, o, n: Workflow,
-      tit, l, e: "Intellige, n, t Proce, s, s Automati, o, n",
-      descripti, o, n:
-        "AI-power, e, d workflow automati, o, n th, a, t lear, n, s a, n, d optimiz, e, s yo, u, r busine, s, s process, e, s automatical, l, y.",
+      icon: Workflow,
+      tit, l, e: "Intelligent Process Automation",
+      description:
+        "AI-powered workflow automation that learns and optimizes your business processes automatically.",
     },
     {
-      ic, o, n: Bra, i, n,
-      tit, l, e: "Machi, n, e Learni, n, g Integrati, o, n",
-      descripti, o, n:
-        "Seamle, s, s integrati, o, n wi, t, h ML mode, l, s f, o, r predicti, v, e workflow optimizati, o, n a, n, d decisi, o, n-maki, n, g.",
+      icon: Brain,
+      title: "Machine Learning Integration",
+      description:
+        "Seamless integration with ML models for predictive workflow optimization and decision-making.",
     },
     {
-      ic, o, n: Targ, e, t,
-      tit, l, e: "Go, a, l-Orient, e, d Automati, o, n",
-      descripti, o, n:
-        "Workflo, w, s th, a, t ada, p, t a, n, d optimi, z, e bas, e, d on yo, u, r busine, s, s objectiv, e, s a, n, d KP, I, s.",
+      icon: Target,
+      title: "Goal-Oriented Automation",
+      description:
+        "Workflows that adapt and optimize based on your business objectives and KPIs.",
     },
     {
-      ic, o, n: Trending, U, p,
-      tit, l, e: "Performan, c, e Analyti, c, s",
-      descripti, o, n:
-        "Re, a, l-ti, m, e insigh, t, s in, t, o workflow efficien, c, y a, n, d optimizati, o, n opportuniti, e, s.",
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description:
+        "Real-time insights into workflow efficiency and optimization opportunities.",
     },
     {
-      ic, o, n: Shie, l, d,
-      tit, l, e: "Secu, r, e & Complia, n, t",
-      descripti, o, n:
-        "Enterpri, s, e-gra, d, e securi, t, y wi, t, h bui, l, t-in complian, c, e monitori, n, g a, n, d aud, i, t trai, l, s.",
+      icon: Shield,
+      title: "Secure & Compliant",
+      description:
+        "Enterprise-grade security with built-in compliance monitoring and audit trails.",
     },
     {
-      ic, o, n: Use, r, s,
-      tit, l, e: "Te, a, m Collaborati, o, n",
-      descripti, o, n:
-        "Enhanc, e, d te, a, m productivi, t, y wi, t, h intellige, n, t ta, s, k routi, n, g a, n, d worklo, a, d balanci, n, g.",
+      icon: Users,
+      title: "Team Collaboration",
+      description:
+        "Enhanced team productivity with intelligent task routing and workload balancing.",
     },
   ]
 
-  con, s, t benefi, t, s = [
-    "Redu, c, e manu, a, l tas, k, s by up to 80%",
-    "Impro, v, e proce, s, s efficien, c, y by 60%",
-    "C, u, t operation, a, l cos, t, s by 40%",
-    "Enhan, c, e custom, e, r satisfacti, o, n",
-    "Ensu, r, e regulato, r, y complian, c, e",
-    "Sca, l, e operatio, n, s seamless, l, y",
+  const benefits = [
+    "Reduce manual tasks by up to 80%",
+    "Improve process efficiency by 60%",
+    "Cut operational costs by 40%",
+    "Enhance customer satisfaction",
+    "Ensure regulatory compliance",
+    "Scale operations seamlessly",
   ]
 
-  retu, r, n (
-    <d, i, v classNa, m, e="m, i, n-h-scre, e, n bg-gradie, n, t-to-br from-sla, t, e-9, 0, 0 v, i, a-sla, t, e-8, 0, 0 to-sla, t, e-9, 0, 0">
-      <S, E, O
-        tit, l, e="AI Workflow Automati, o, n - Zi, o, n Te, c, h Gro, u, p"
-        descripti, o, n="Transfo, r, m yo, u, r busine, s, s wi, t, h intellige, n, t AI-power, e, d workflow automati, o, n. Redu, c, e manu, a, l tas, k, s, impro, v, e efficien, c, y, a, n, d sca, l, e operatio, n, s seamless, l, y."
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-90, 0 via-slate-8, 0, 0 to-slate-90, 0">
+      <SEO
+        title="AI Workflow Automation - Zion Tech Group"
+        description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
       />
 
-      {/* He, r, o Secti, o, n */}
-      <secti, o, n classNa, m, e="relati, v, e py-20 overflow-hidd, e, n">
-        <d, i, v classNa, m, e="absolu, t, e ins, e, t-0 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/10 v, i, a-bl, u, e-5, 0, 0/10 to-purp, l, e-5, 0, 0/10" />
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4 relati, v, e z-10">
-          <motion.d, i, v
-            initi, a, l={{ opaci, t, y: 0, y: 20 }}
-            anima, t, e={{ opaci, t, y: 1, y: 0 }}
-            transiti, o, n={{ durati, o, n: 0.6 }}
-            classNa, m, e="te, x, t-cent, e, r m, a, x-w-4, x, l mx-au, t, o"
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-5, 0, 0/10 via-blue-5, 0, 0/10 to-purple-5, 0, 0/10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4, x, l mx-auto"
           >
-            <d, i, v classNa, m, e="inli, n, e-fl, e, x ite, m, s-cent, e, r px-4 py-2 bg-cy, a, n-5, 0, 0/20 bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 round, e, d-fu, l, l te, x, t-cy, a, n-3, 0, 0 te, x, t-sm fo, n, t-medium mb-6">
-              <CheckCircle classNa, m, e="w-4 h-4 mr-2" />
-              AI-Power, e, d Automati, o, n
-            </d, i, v>
-            <h1 classNa, m, e="te, x, t-5, x, l md:te, x, t-6, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">AI Workflow Automati, o, n</h1>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 mb-8 leadi, n, g-relax, e, d">
-              Transfo, r, m yo, u, r busine, s, s operatio, n, s wi, t, h intellige, n, t, AI-power, e, d workflow automati, o, n. Redu, c, e manu, a, l
-              tas, k, s, impro, v, e efficien, c, y, a, n, d sca, l, e yo, u, r operatio, n, s seamless, l, y.
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-5, 0, 0/20 border border-cyan-4, 0, 0/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              AI-Powered Automation
+            </div>
+            <h1 className="text-5, x, l md:text-6, x, l font-bold text-white mb-6">AI Workflow Automation</h1>
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Transform your business operations with intelligent, AI-powered workflow automation. Reduce manual
+              tasks, improve efficiency, and scale your operations seamlessly.
             </p>
-            <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l sm:fl, e, x-r, o, w g, a, p-4 justi, f, y-cent, e, r">
-              <butt, o, n classNa, m, e="px-8 py-4 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0 to-bl, u, e-6, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d round, e, d-lg hov, e, r:from-cy, a, n-4, 0, 0 hov, e, r:to-bl, u, e-5, 0, 0 transiti, o, n-a, l, l durati, o, n-2, 0, 0 hov, e, r:sca, l, e-1, 0, 5 shad, o, w-lg shad, o, w-cy, a, n-5, 0, 0/20">
-                G, e, t Start, e, d
-              </butt, o, n>
-              <butt, o, n classNa, m, e="px-8 py-4 bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 te, x, t-cy, a, n-4, 0, 0 fo, n, t-semibo, l, d round, e, d-lg hov, e, r:bg-cy, a, n-4, 0, 0/10 transiti, o, n-a, l, l durati, o, n-2, 0, 0">
-                Wat, c, h De, m, o
-              </butt, o, n>
-            </d, i, v>
-          </motion.d, i, v>
-        </d, i, v>
-      </secti, o, n>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg shadow-cyan-5, 0, 0/20">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-cyan-4, 0, 0/30 text-cyan-4, 0, 0 font-semibold rounded-lg hover:bg-cyan-4, 0, 0/10 transition-all duration-2, 0, 0">
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-      {/* Featur, e, s Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4">
-          <motion.d, i, v
-            initi, a, l={{ opaci, t, y: 0, y: 20 }}
-            whileInVi, e, w={{ opaci, t, y: 1, y: 0 }}
-            transiti, o, n={{ durati, o, n: 0.6 }}
-            classNa, m, e="te, x, t-cent, e, r mb-12"
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-4">Intellige, n, t Automati, o, n Featur, e, s</h2>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 m, a, x-w-3, x, l mx-au, t, o">
-              O, u, r AI workflow automati, o, n platfo, r, m combin, e, s cutti, n, g-ed, g, e technolo, g, y wi, t, h intuiti, v, e desi, g, n to deliv, e, r
-              powerf, u, l automati, o, n capabiliti, e, s.
+            <h2 className="text-4, x, l font-bold text-white mb-4">Intelligent Automation Features</h2>
+            <p className="text-xl text-slate-300 max-w-3, x, l mx-auto">
+              Our AI workflow automation platform combines cutting-edge technology with intuitive design to deliver
+              powerful automation capabilities.
             </p>
-          </motion.d, i, v>
+          </motion.div>
 
-          <d, i, v classNa, m, e="gr, i, d md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-3 g, a, p-8">
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-              <motion.d, i, v
-                k, e, y={ind, e, x}
-                initi, a, l={{ opaci, t, y: 0, y: 20 }}
-                whileInVi, e, w={{ opaci, t, y: 1, y: 0 }}
-                transiti, o, n={{ durati, o, n: 0.6, del, a, y: ind, e, x * 0.1 }}
-                classNa, m, e="p-6 round, e, d-xl bord, e, r bord, e, r-cy, a, n-4, 0, 0/20 bg-sla, t, e-8, 0, 0/40"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="p-6 rounded-xl border border-cyan-4, 0, 0/20 bg-slate-8, 0, 0/40"
               >
-                <d, i, v classNa, m, e="w-12 h-12 bg-gradie, n, t-to-br from-cy, a, n-4, 0, 0/20 to-bl, u, e-5, 0, 0/20 round, e, d-lg fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mb-4">
-                  <featu, r, e.ic, o, n classNa, m, e="w-6 h-6 te, x, t-cy, a, n-3, 0, 0" />
-                </d, i, v>
-                <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-whi, t, e mb-3">{featu, r, e.tit, l, e}</h3>
-                <p classNa, m, e="te, x, t-sla, t, e-3, 0, 0 leadi, n, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
-              </motion.d, i, v>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-4, 0, 0/20 to-blue-5, 0, 0/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-cyan-300" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+              </motion.div>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+          </div>
+        </div>
+      </section>
 
-      {/* Benefi, t, s Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20 bg-sla, t, e-8, 0, 0/30">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4">
-          <d, i, v classNa, m, e="gr, i, d lg:gr, i, d-co, l, s-2 g, a, p-12 ite, m, s-cent, e, r">
-            <motion.d, i, v initi, a, l={{ opaci, t, y: 0, x: -20 }} whileInVi, e, w={{ opaci, t, y: 1, x: 0 }} transiti, o, n={{ durati, o, n: 0.6 }}>
-              <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">Transfo, r, m Yo, u, r Busine, s, s Operatio, n, s</h2>
-              <p classNa, m, e="te, x, t-lg te, x, t-sla, t, e-3, 0, 0 mb-8 leadi, n, g-relax, e, d">
-                O, u, r AI workflow automati, o, n delive, r, s measurab, l, e resul, t, s th, a, t direct, l, y impa, c, t yo, u, r bott, o, m li, n, e. Fr, o, m co, s, t
-                reducti, o, n to improv, e, d custom, e, r satisfacti, o, n, t, h, e benefi, t, s a, r, e cle, a, r a, n, d quantifiab, l, e.
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-8, 0, 0/30">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+              <h2 className="text-4, x, l font-bold text-white mb-6">Transform Your Business Operations</h2>
+              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+                Our AI workflow automation delivers measurable results that directly impact your bottom line. From cost
+                reduction to improved customer satisfaction, the benefits are clear and quantifiable.
               </p>
-              <d, i, v classNa, m, e="gr, i, d gr, i, d-co, l, s-1 g, a, p-4">
-                {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (
-                  <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-cent, e, r spa, c, e-x-3">
-                    <CheckCircle classNa, m, e="w-5 h-5 te, x, t-cy, a, n-4, 0, 0" />
-                    <sp, a, n classNa, m, e="te, x, t-sla, t, e-3, 0, 0">{benef, i, t}</sp, a, n>
-                  </d, i, v>
+              <div className="grid grid-cols-1 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-4, 0, 0" />
+                    <span className="text-slate-300">{benefit}</span>
+                  </div>
                 ))}
-              </d, i, v>
-            </motion.d, i, v>
+              </div>
+            </motion.div>
 
-            <motion.d, i, v
-              initi, a, l={{ opaci, t, y: 0, x: 20 }}
-              whileInVi, e, w={{ opaci, t, y: 1, x: 0 }}
-              transiti, o, n={{ durati, o, n: 0.6 }}
-              classNa, m, e="p-8 round, e, d-2, x, l bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 bg-gradie, n, t-to-br from-cy, a, n-5, 0, 0/20 to-bl, u, e-5, 0, 0/20"
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="p-8 rounded-2, x, l border border-cyan-4, 0, 0/30 bg-gradient-to-br from-cyan-5, 0, 0/20 to-blue-5, 0, 0/20"
             >
-              <d, i, v classNa, m, e="te, x, t-cent, e, r">
-                <d, i, v classNa, m, e="w-20 h-20 bg-gradie, n, t-to-br from-cy, a, n-4, 0, 0 to-bl, u, e-5, 0, 0 round, e, d-fu, l, l fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mx-au, t, o mb-6">
-                  <Workflow classNa, m, e="w-10 h-10 te, x, t-whi, t, e" />
-                </d, i, v>
-                <h3 classNa, m, e="te, x, t-2, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-4">Rea, d, y to Automa, t, e?</h3>
-                <p classNa, m, e="te, x, t-sla, t, e-3, 0, 0 mb-6">
-                  Sta, r, t yo, u, r AI workflow automati, o, n journ, e, y tod, a, y a, n, d s, e, e t, h, e transformati, o, n in acti, o, n.
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-4, 0, 0 to-blue-5, 0, 0 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Workflow className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
+                <p className="text-slate-300 mb-6">
+                  Start your AI workflow automation journey today and see the transformation in action.
                 </p>
-                <butt, o, n classNa, m, e="w-fu, l, l px-6 py-3 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0 to-bl, u, e-6, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d round, e, d-lg hov, e, r:from-cy, a, n-4, 0, 0 hov, e, r:to-bl, u, e-5, 0, 0 transiti, o, n-a, l, l durati, o, n-2, 0, 0">
-                  Schedu, l, e De, m, o
-                </butt, o, n>
-              </d, i, v>
-            </motion.d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0">
+                  Schedule Demo
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-      {/* C, T, A Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4 te, x, t-cent, e, r">
-          <motion.d, i, v
-            initi, a, l={{ opaci, t, y: 0, y: 20 }}
-            whileInVi, e, w={{ opaci, t, y: 1, y: 0 }}
-            transiti, o, n={{ durati, o, n: 0.6 }}
-            classNa, m, e="m, a, x-w-3, x, l mx-au, t, o"
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3, x, l mx-auto"
           >
-            <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">Rea, d, y to Automa, t, e Yo, u, r Workflo, w, s?</h2>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 mb-8">
-              Jo, i, n hundre, d, s of business, e, s th, a, t ha, v, e alrea, d, y transform, e, d the, i, r operatio, n, s wi, t, h AI workflow automati, o, n.
+            <h2 className="text-4, x, l font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Join hundreds of businesses that have already transformed their operations with AI workflow automation.
             </p>
-            <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l sm:fl, e, x-r, o, w g, a, p-4 justi, f, y-cent, e, r">
-              <butt, o, n classNa, m, e="px-8 py-4 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0 to-bl, u, e-6, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d round, e, d-lg hov, e, r:from-cy, a, n-4, 0, 0 hov, e, r:to-bl, u, e-5, 0, 0 transiti, o, n-a, l, l durati, o, n-2, 0, 0 hov, e, r:sca, l, e-1, 0, 5 shad, o, w-lg shad, o, w-cy, a, n-5, 0, 0/20">
-                G, e, t Start, e, d N, o, w
-              </butt, o, n>
-              <butt, o, n classNa, m, e="px-8 py-4 bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 te, x, t-cy, a, n-4, 0, 0 fo, n, t-semibo, l, d round, e, d-lg hov, e, r:bg-cy, a, n-4, 0, 0/10 transiti, o, n-a, l, l durati, o, n-2, 0, 0">
-                Conta, c, t Sal, e, s
-              </butt, o, n>
-            </d, i, v>
-          </motion.d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </d, i, v>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-5, 0, 0 to-blue-6, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-4, 0, 0 hover:to-blue-5, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg shadow-cyan-5, 0, 0/20">
+                Get Started Now
+              </button>
+              <button className="px-8 py-4 border border-cyan-4, 0, 0/30 text-cyan-4, 0, 0 font-semibold rounded-lg hover:bg-cyan-4, 0, 0/10 transition-all duration-2, 0, 0">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   )
 }

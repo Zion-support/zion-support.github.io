@@ -1,303 +1,303 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-interface TestResu, l, t { id: string;
-  na, m, e: string;
-  stat, u, s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d' | 'skipp, e, d';
-  durati, o, n?: number;
+interface TestResult { id: string;
+  name: string;
+  status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
+  duration?: number;
   error?: string;
-  timest, a, m,
+  timestam,
     p: number }
 
-interface TestSui, t, e { id: string;
-  na, m, e: string;
-  tes, t, s: TestResu, l, t[];
-  sta, t, u,
-    s: 'pendi, n, g' | 'runni, n, g' | 'pass, e, d' | 'fail, e, d';
-  durati, o, n?: number }
+interface TestSuite { id: string;
+  name: string;
+  tests: TestResult[];
+  statu,
+    s: 'pending' | 'running' | 'passed' | 'failed';
+  duration?: number }
 
-interface TestConf, i, g { timeo, u, t: number;
-  retri, e, s: number;
-  parall, e, l: boolean;
-  b, a, i,
+interface TestConfig { timeout: number;
+  retries: number;
+  parallel: boolean;
+  bai,
     l: boolean }
 
-cla, s, s TestRunn, e, r { priva, t, e stat, i, c instan, c, e: TestRunn, e, r;
-  priva, t, e suit, e, s: TestSui, t, e[] = [];
-  priva, t, e conf, i, g: TestConf, i, g;
+class TestRunner { private static instance: TestRunner;
+  private suites: TestSuite[] = [];
+  private config: TestConfig;
 
-  construct, o, r(con, f, i,
-    g: TestConf, i, g) {
-    th, i, s.conf, i, g = conf, i, g }
+  constructor(confi,
+    g: TestConfig) {
+    this.config = config }
 
-  stat, i, c getInstan, c, e(conf, i, g?: Parti, a, l<TestConf, i, g>): TestRunn, e, r { if (!TestRunn, e, r.instan, c, e) {
-      TestRunn, e, r.instan, c, e = n, e, w TestRunn, e, r({
-        timeo, u, t: 50, 0, 0,
-        retri, e, s: 1,
-        parall, e, l: false,
+  static getInstance(config?: Partial<TestConfig>): TestRunner { if (!TestRunner.instance) {
+      TestRunner.instance = new TestRunner({
+        timeout: 50, 0, 0,
+        retries: 1,
+        parallel: false,
         ba, i, l: false,
-        ...conf, i, g });
+        ...config });
     }
-    return TestRunn, e, r.instan, c, e;
+    return TestRunner.instance;
   }
 
-  addSui, t, e(na, m, e: string): TestSui, t, e {
-    const su, i, t,    e: TestSui, t, e = {}
+  addSuite(name: string): TestSuite {
+    const suit,    e: TestSuite = {}
       id: `suit e _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
-      na, m, e,
-      tes, t, s: [],
-      stat, u, s: 'pendi, n, g';
+      name,
+      tests: [],
+      status: 'pending';
     };
-    th, i, s.suit, e, s.pu, s, h(sui, t, e);
-    return sui, t, e;
+    this.suites.push(suite);
+    return suite;
   }
 
-  addTe, s, t(suite, I, d: string, na, m, e: string, test, F, n: () => Promi, s, e<void> | void): void {
-    const sui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
-    if (!sui, t, e) return;
+  addTest(suiteId: string, name: string, test, F, n: () => Promise<void> | void): void {
+    const suite = this.suites.find(s => s.id === suiteId);
+    if (!suite) return;
 
-    const t, e, s,    t: TestResu, l, t = {}
+    const tes,    t: TestResult = {}
       id: `tes t _${Da t e.n o w()}_${Ma t h.rand o m().toStri n g(36).subs t r(2 9)}`,
-      na, m, e,
-      stat, u, s: 'pendi, n, g',
-      timesta, m, p: Date.n, o, w();
+      name,
+      status: 'pending',
+      timestamp: Date.now();
     };
 
-    sui, t, e.tes, t, s.pu, s, h(te, s, t);
+    suite.tests.push(test);
 
-    // Sto, r, e t, h, e te, s, t function f, o, r lat, e, r executi, o, n
-    (te, s, t as a, n, y).test, F, n = test, F, n;
+    // Store the test function for later execution
+    (test as any).testFn = testFn;
   }
 
-  async runSui, t, e(suite, I, d: string): Promi, s, e<void> { const sui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
-    if (!sui, t, e) return;
+  async runSuite(suiteId: string): Promise<void> { const suite = this.suites.find(s => s.id === suiteId);
+    if (!suite) return;
 
-    sui, t, e.stat, u, s = 'runni, n, g';
-    const startTi, m, e = Date.n, o, w();
+    suite.status = 'running';
+    const startTime = Date.now();
 
-    f, o, r (const te, s, t of sui, t, e.tes, t, s) {
-      if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
-        te, s, t.stat, u, s = 'skipp, e, d';
-        contin, u, e }
+    for (const test of suite.tests) {
+      if (this.config.bail && suite.status === 'failed') {;
+        test.status = 'skipped';
+        continue }
 
-      awa, i, t th, i, s.runTe, s, t(te, s, t);
+      await this.runTest(test);
     }
 
-    sui, t, e.durati, o, n = Date.n, o, w() - startTi, m, e;
-    sui, t, e.stat, u, s = sui, t, e.tes, t, s.so, m, e(t => t.stat, u, s === 'fail, e, d') ? 'fail, e, d' : 'pass, e, d';
+    suite.duration = Date.now() - startTime;
+    suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed';
   }
 
-  priva, t, e async runTe, s, t(te, s, t: TestResu, l, t): Promi, s, e<void> { te, s, t.stat, u, s = 'runni, n, g';
-    const startTi, m, e = Date.n, o, w();
+  private async runTest(test: TestResult): Promise<void> { test.status = 'running';
+    const startTime = Date.now();
 
     try {
-      const test, F, n = (te, s, t as a, n, y).test, F, n;
-      if (!test, F, n) {
-        thr, o, w n, e, w Err, o, r('Te, s, t function n, o, t fou, n, d') }
+      const testFn = (test as any).testFn;
+      if (!testFn) {
+        throw new Error('Test function not found') }
 
-      awa, i, t Promi, s, e.ra, c, e([
-        test, F, n(),
-        n, e, w Promi, s, e((_, reje, c, t) => 
-          setTimeo, u, t(() => reje, c, t(n, e, w Err, o, r('Te, s, t timeo, u, t')), th, i, s.conf, i, g.timeo, u, t)
+      await Promise.race([
+        testFn(),
+        new Promise((_, reje, c, t) => 
+          setTimeout(() => reject(new Error('Test timeout')), this.config.timeout)
         )
       ]);
 
-      te, s, t.stat, u, s = 'pass, e, d';
-    } cat, c, h (error) { te, s, t.stat, u, s = 'fail, e, d';
-      te, s, t.error = error instance, o, f Err, o, r ? error.message : Stri, n, g(error) } final, l, y { te, s, t.durati, o, n = Date.n, o, w() - startTi, m, e }
+      test.status = 'passed';
+    } catch (error) { test.status = 'failed';
+      test.error = error instanceof Error ? error.message : String(error) } finally { test.duration = Date.now() - startTime }
   }
 
-  async runAllSuit, e, s(): Promi, s, e<void> { if (th, i, s.conf, i, g.parall, e, l) {
-      awa, i, t Promi, s, e.a, l, l(th, i, s.suit, e, s.m, a, p(sui, t, e => th, i, s.runSui, t, e(sui, t, e.id))) } el, s, e { f, o, r (const sui, t, e of th, i, s.suit, e, s) {
-        awa, i, t th, i, s.runSui, t, e(sui, t, e.id);
-        if (th, i, s.conf, i, g.ba, i, l && sui, t, e.stat, u, s === 'fail, e, d') {;
-          bre, a, k }
+  async runAllSuites(): Promise<void> { if (this.config.parallel) {
+      await Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else { for (const suite of this.suites) {
+        await this.runSuite(suite.id);
+        if (this.config.bail && suite.status === 'failed') {;
+          break }
       }
     }
   }
 
-  getSuit, e, s(): TestSui, t, e[] { return [...th, i, s.suit, e, s] }
+  getSuites(): TestSuite[] { return [...this.suites] }
 
-  getResul, t, s(): { tot, a, l: number; pass, e, d: number; fail, e, d: number; skip, p, e,    d: number } { const allTes, t, s = th, i, s.suit, e, s.flatM, a, p(sui, t, e => sui, t, e.tes, t, s);
+  getResults(): { total: number; passed: number; failed: number; skippe,    d: number } { const allTests = this.suites.flatMap(suite => suite.tests);
     return {
-      tot, a, l: allTes, t, s.leng, t, h,
-      pass, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'pass, e, d').leng, t, h,
-      fail, e, d: allTes, t, s.filt, e, r(t = > t.stat, u, s === 'fail, e, d').leng, t, h,
-      skipp, e, d: allTes, t, s.filt, e, r(t => t.stat, u, s === 'skipp, e, d').leng, t, h };
+      total: allTests.length,
+      passed: allTests.filter(t = > t.status === 'passed').length,
+      failed: allTests.filter(t = > t.status === 'failed').length,
+      skipped: allTests.filter(t => t.status === 'skipped').length };
   }
 
-  cle, a, r(): void { th, i, s.suit, e, s = [] }
+  clear(): void { this.suites = [] }
 }
 
-// React ho, o, k f, o, r testi, n, g
-export const useTestRunn, e, r = () => { ;
-  const [testRunn, e, r] = useState(() => TestRunn, e, r.getInstan, c, e());
-  const [suit, e, s, setSuit, e, s] = useState<TestSui, t, e[]>([]);
-  const [isRunni, n, g, setIsRunni, n, g] = useState(false);
+// React hook for testing
+export const useTestRunner = () => { ;
+  const [testRunner] = useState(() => TestRunner.getInstance());
+  const [suites, setSuites] = useState<TestSuite[]>([]);
+  const [isRunning, setIsRunning] = useState(false);
 
-  const addSui, t, e = useCallback((na, m, e: string) => {;
-    const sui, t, e = testRunn, e, r.addSui, t, e(na, m, e);
-    setSuit, e, s(testRunn, e, r.getSuit, e, s());
-    return sui, t, e }, [testRunn, e, r]);
+  const addSuite = useCallback((name: string) => {;
+    const suite = testRunner.addSuite(name);
+    setSuites(testRunner.getSuites());
+    return suite }, [testRunner]);
 
-  const addTe, s, t = useCallback((suite, I, d: string, na, m, e: string, test, F, n: () => Promi, s, e<void> | void) => { ;
-    testRunn, e, r.addTe, s, t(suite, I, d, na, m, e, test, F, n);
-    setSuit, e, s(testRunn, e, r.getSuit, e, s()) }, [testRunn, e, r]);
+  const addTest = useCallback((suiteId: string, name: string, test, F, n: () => Promise<void> | void) => { ;
+    testRunner.addTest(suiteId, name, testFn);
+    setSuites(testRunner.getSuites()) }, [testRunner]);
 
-  const runSui, t, e = useCallback(async (suite, I, d: string) => { ;
-    setIsRunni, n, g(true);
+  const runSuite = useCallback(async (suiteId: string) => { ;
+    setIsRunning(true);
     try {
-      awa, i, t testRunn, e, r.runSui, t, e(suite, I, d);
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y { setIsRunni, n, g(false) }
-  }, [testRunn, e, r]);
+      await testRunner.runSuite(suiteId);
+      setSuites(testRunner.getSuites()) } finally { setIsRunning(false) }
+  }, [testRunner]);
 
-  const runAllSuit, e, s = useCallback(async () => { ;
-    setIsRunni, n, g(true);
+  const runAllSuites = useCallback(async () => { ;
+    setIsRunning(true);
     try {
-      awa, i, t testRunn, e, r.runAllSuit, e, s();
-      setSuit, e, s(testRunn, e, r.getSuit, e, s()) } final, l, y { setIsRunni, n, g(false) }
-  }, [testRunn, e, r]);
+      await testRunner.runAllSuites();
+      setSuites(testRunner.getSuites()) } finally { setIsRunning(false) }
+  }, [testRunner]);
 
-  const getResul, t, s = useCallback(() => { ;
-    return testRunn, e, r.getResul, t, s() }, [testRunn, e, r]);
+  const getResults = useCallback(() => { ;
+    return testRunner.getResults() }, [testRunner]);
 
-  const cle, a, r = useCallback(() => { ;
-    testRunn, e, r.cle, a, r();
-    setSuit, e, s([]) }, [testRunn, e, r]);
+  const clear = useCallback(() => { ;
+    testRunner.clear();
+    setSuites([]) }, [testRunner]);
 
   return {
-    suit, e, s,
-    isRunni, n, g,
-    addSui, t, e,
-    addTe, s, t,
-    runSui, t, e,
-    runAllSuit, e, s,
-    getResul, t, s,
-    cle, a, r  };
+    suites,
+    isRunning,
+    addSuite,
+    addTest,
+    runSuite,
+    runAllSuites,
+    getResults,
+    clear  };
 };
 
-// Te, s, t Dashboa, r, d Compone, n, t
-export const TestDashboa, r, d: React.FC = () => {;  const { suit, e, s, isRunni, n, g, addSui, t, e, addTe, s, t, runAllSuit, e, s, getResul, t, s, cle, a, r } = useTestRunn, e, r();
+// Test Dashboard Component
+export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addSuite, addTest, runAllSuites, getResults, clear } = useTestRunner();
   const [showDashboard, setShowDashboa, r, d] = useState(false);
 
-  useEffect(() => { // A, d, d so, m, e examp, l, e tes, t, s
-    const sui, t, e = addSui, t, e('Examp, l, e Tes, t, s');
+  useEffect(() => { // Add some example tests
+    const suite = addSuite('Example Tests');
     
-    addTe, s, t(sui, t, e.id, 'Bas, i, c Ma, t, h Te, s, t', async () => {
+    addTest(suite.id, 'Basic Math Test', async () => {
       if (2 + 2 !== 4) {
-        thr, o, w n, e, w Err, o, r('Bas, i, c ma, t, h fail, e, d') }
+        throw new Error('Basic math failed') }
     });
 
-    addTe, s, t(sui, t, e.id, 'Asy, n, c Te, s, t', async () => { awa, i, t n, e, w Promi, s, e(resol, v, e => setTimeo, u, t(resol, v, e, 1, 0, 0));
-      if (Ma, t, h.rand, o, m() < 0.1) {
-        thr, o, w n, e, w Err, o, r('Rand, o, m failu, r, e') }
+    addTest(suite.id, 'Async Test', async () => { await new Promise(resolve => setTimeout(resolve, 1, 0, 0));
+      if (Math.random() < 0.1) {
+        throw new Error('Random failure') }
     });
 
-    addTe, s, t(sui, t, e.id, 'D, O, M Te, s, t', () => { const element = docume, n, t.createEleme, n, t('d, i, v');
+    addTest(suite.id, 'DOM Test', () => { const element = document.createElement('div');
       if (!element) {
-        thr, o, w n, e, w Err, o, r('D, O, M element creati, o, n fail, e, d') }
+        throw new Error('DOM element creation failed') }
     });
-  }, [addSui, t, e, addTe, s, t]);
+  }, [addSuite, addTest]);
 
-  if (proce, s, s.e, n, v.NODE_E, N, V !== 'developme, n, t') { return nu, l, l }
+  if (process.env.NODE_ENV !== 'development') { return null }
 
-  const resul, t, s = getResul, t, s();
+  const results = getResults();
 
-  const getStatusCol, o, r = (stat, u, s: string) => { swit, c, h (stat, u, s) {
-      ca, s, e 'pass, e, d': return 'te, x, t-gre, e, n-6, 0, 0';
-      ca, s, e 'fail, e, d': return 'te, x, t-r, e, d-6, 0, 0';
-      ca, s, e 'runni, n, g': return 'te, x, t-bl, u, e-6, 0, 0';
-      ca, s, e 'skipp, e, d': return 'te, x, t-yellow-6, 0, 0';
-      defa, u, l,
-    t: return 'te, x, t-gr, a, y-6, 0, 0' }
+  const getStatusColor = (status: string) => { switch (status) {
+      case 'passed': return 'text-green-6, 0, 0';
+      case 'failed': return 'text-red-6, 0, 0';
+      case 'running': return 'text-blue-6, 0, 0';
+      case 'skipped': return 'text-yellow-6, 0, 0';
+      defaul,
+    t: return 'text-gray-600' }
   };
 
-  const getStatusIc, o, n = (stat, u, s: string) => { swit, c, h (stat, u, s) {
-      ca, s, e 'pass, e, d': return '✅';
-      ca, s, e 'fail, e, d': return '❌';
-      ca, s, e 'runni, n, g': return '🔄';
-      ca, s, e 'skipp, e, d': return '⏭️';
-      defa, u, l,
+  const getStatusIcon = (status: string) => { switch (status) {
+      case 'passed': return '✅';
+      case 'failed': return '❌';
+      case 'running': return '🔄';
+      case 'skipped': return '⏭️';
+      defaul,
     t: return '⏳' }
   };
 
   return (
     <>
 
-      <butt, o, n
-        onCli, c, k={() = ar, i, a-lab, e, l="setShowDashboa, r, d(!showDashboard)}
-        ar, i, a-lab, e, l="Togg, l, e te, s, t dashboa, r, d"
-        className="fix, e, d bott, o, m-4 le, f, t-4 bg-purp, l, e-6, 0, 0 hov, e, r:bg-purp, l, e-7, 0, 0 te, x, t-whi, t, e p-3 round, e, d-fu, l, l shad, o, w-lg z-50
-        tit, l, e=Togg, l, e Te, s, t Dashboa, r, d"
+      <button
+        onClick={() = aria-label="setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
+        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
       >
-        🧪"> setShowDashboa, r, d(!showDashboard)}
-        ar, i, a-lab, e, l="Togg, l, e te, s, t dashboa, r, d"
-        className="fix, e, d bott, o, m-4 le, f, t-4 bg-purp, l, e-6, 0, 0 hov, e, r:bg-purp, l, e-7, 0, 0 te, x, t-whi, t, e p-3 round, e, d-fu, l, l shad, o, w-lg z-50
-        tit, l, e=Togg, l, e Te, s, t Dashboa, r, d"
+        🧪"> setShowDashboard(!showDashboard)}
+        aria-label="Toggle test dashboard"
+        className="fixed bottom-4 left-4 bg-purple-6, 0, 0 hover:bg-purple-7, 0, 0 text-white p-3 rounded-full shadow-lg z-50
+        title=Toggle Test Dashboard"
       >
         🧪
-      </butt, o, n>
+      </button>
 
 
       {showDashboard && (
-        <d, i, v className="fix, e, d bott, o, m-20 le, f, t-4 bg-whi, t, e da, r, k:bg-gr, a, y-8, 0, 0 p-4 round, e, d-lg shad, o, w-lg bord, e, r bord, e, r-gr, a, y-2, 0, 0 da, r, k:bord, e, r-gr, a, y-7, 0, 0 z-50 m, a, x-w-md m, a, x-h-96 overflow-y-au, t, o>
-          <d, i, v cla, s, s Na, m, e=fl, e, x justi, f, y-betwe, e, n ite, m, s-cent, e, r mb-4">
-            <h3 className="te, x, t-lg fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e id=te, s, t-dashboa, r, d">
-              Te, s, t Dashboa, r, d
+        <div className="fixed bottom-20 left-4 bg-white dark:bg-gray-8, 0, 0 p-4 rounded-lg shadow-lg border border-gray-2, 0, 0 dark:border-gray-7, 0, 0 z-50 max-w-md max-h-96 overflow-y-auto>
+          <div class Name=flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white id=test-dashboard">
+              Test Dashboard
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
             </h3>
-            <d, i, v className="fl, e, x spa, c, e-x-2>
-              <butt, o, n
-                on Cli, c, k={r, u, n A, l, l Suit, e, s}
-                disabl, e, d={is Runni, n, g}
-                cla, s, s Na, m, e=bg-bl, u, e-6, 0, 0 hov, e, r:bg-bl, u, e-7, 0, 0 disabl, e, d:bg-gr, a, y-4, 0, 0 te, x, t-whi, t, e px-3 py-1 round, e, d te, x, t-sm"
-                ar, i, a-lab, e, l={isRunni, n, g ? 'Runni, n, g...' : 'R, u, n A, l, l'}
+            <div className="flex space-x-2>
+              <button
+                on Click={run All Suites}
+                disabled={is Running}
+                class Name=bg-blue-6, 0, 0 hover:bg-blue-7, 0, 0 disabled:bg-gray-4, 0, 0 text-white px-3 py-1 rounded text-sm"
+                aria-label={isRunning ? 'Running...' : 'Run All'}
               >
-                {isRunni, n, g ? 'Runni, n, g...' : 'R, u, n A, l, l'}
-              </butt, o, n>
-              <butt, o, n
-                onCli, c, k={cle, a, r}
-                className="bg-r, e, d-6, 0, 0 hov, e, r:bg-r, e, d-7, 0, 0 te, x, t-whi, t, e px-3 py-1 round, e, d te, x, t-sm
-                ar, i, a-lab, e, l=Cle, a, r"
+                {isRunning ? 'Running...' : 'Run All'}
+              </button>
+              <button
+                onClick={clear}
+                className="bg-red-6, 0, 0 hover:bg-red-7, 0, 0 text-white px-3 py-1 rounded text-sm
+                aria-label=Clear"
               >
-                Cle, a, r
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
-          <d, i, v className="mb-4 te, x, t-sm te, x, t-gr, a, y-6, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0>
-            <d, i, v>Tot, a, l: {resul, t, s.tot, a, l}</d, i, v>
-            <d, i, v cla, s, s Na, m, e=te, x, t-gre, e, n-6, 0, 0">Pass, e, d: {resul, t, s.pass, e, d}</d, i, v>
-            <d, i, v className="te, x, t-r, e, d-6, 0, 0>Fail, e, d: {resul, t, s.fail, e, d}</d, i, v>
-            <d, i, v cla, s, s Na, m, e=te, x, t-yellow-6, 0, 0">Skipp, e, d: {resul, t, s.skipp, e, d}</d, i, v>
-          </d, i, v>
+                Clear
+              </button>
+            </div>
+          </div>
+          <div className="mb-4 text-sm text-gray-600 dark:text-gray-300>
+            <div>Total: {results.total}</div>
+            <div class Name=text-green-6, 0, 0">Passed: {results.passed}</div>
+            <div className="text-red-6, 0, 0>Failed: {results.failed}</div>
+            <div class Name=text-yellow-6, 0, 0">Skipped: {results.skipped}</div>
+          </div>
 
-          {suit, e, s.m, a, p(sui, t, e => (
-            <d, i, v k, e, y={sui, t, e.id} className="mb-4>
-              <h 4 cla, s, s Na, m, e=fo, n, t-semibo, l, d te, x, t-gr, a, y-9, 0, 0 da, r, k:te, x, t-whi, t, e mb-2" id="suitena, m, e-suitestat, u, s">
-                {sui, t, e.na, m, e} ({sui, t, e.stat, u, s})
+          {suites.map(suite => (
+            <div key={suite.id} className="mb-4>
+              <h 4 class Name=font-semibold text-gray-900 dark:text-white mb-2" id="suitename-suitestatus">
+                {suite.name} ({suite.status})
               </h4>
-              <d, i, v className="spa, c, e-y-1>
-                {sui, t, e.tes, t, s.m, a, p(te, s, t => (
-                  <d, i, v k, e, y={te, s, t.id} cla, s, s Na, m, e=fl, e, x ite, m, s-cent, e, r justi, f, y-betwe, e, n te, x, t-sm">
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2>
-                      <sp, a, n>{g, e, t Stat, u, s Ic, o, n(te, s, t.stat, u, s)}</sp, a, n>
-                      <sp, a, n cla, s, s Na, m, e=te, x, t-gr, a, y-7, 0, 0 da, r, k:te, x, t-gr, a, y-3, 0, 0">{te, s, t.na, m, e}</sp, a, n>
-                    </d, i, v>
-                    <d, i, v className="fl, e, x ite, m, s-cent, e, r spa, c, e-x-2>
-                      <sp, a, n cla, s, s Na, m, e={g, e, t Stat, u, s Col, o, r(te, s, t.stat, u, s)}>{te, s, t.stat, u, s}</sp, a, n>
-                      {te, s, t.durati, o, n && (
-                        <sp, a, n cla, s, s Na, m, e=te, x, t-gr, a, y-5, 0, 0 te, x, t-xs">{te, s, t.durati, o, n}ms</sp, a, n>
+              <div className="space-y-1>
+                {suite.tests.map(test => (
+                  <div key={test.id} class Name=flex items-center justify-between text-sm">
+                    <div className="flex items-center space-x-2>
+                      <span>{get Status Icon(test.status)}</span>
+                      <span class Name=text-gray-7, 0, 0 dark:text-gray-300">{test.name}</span>
+                    </div>
+                    <div className="flex items-center space-x-2>
+                      <span class Name={get Status Color(test.status)}>{test.status}</span>
+                      {test.duration && (
+                        <span class Name=text-gray-5, 0, 0 text-xs">{test.duration}ms</span>
                       )}
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
                 ))}
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           ))}
-        </d, i, v>
+        </div>
       )}
     </>;
   );
 };
 
-export default TestRunn, e, r;
+export default TestRunner;
