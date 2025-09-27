@@ -54,7 +54,7 @@ export default function Blog(): JSX.Element {
 		}
 	];
 
-	const handleCategoryFilter = (category: string) => {
+  const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
 		trackClick(`blog-category-${category}`, 'filter')};
 
@@ -65,7 +65,6 @@ export default function Blog(): JSX.Element {
 	const filteredPosts = selectedCategory === 'all' 
 		? blogPosts 
 		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
-
 	return (
 		<>
 			{/* <EnhancedSEO
@@ -76,15 +75,16 @@ export default function Blog(): JSX.Element {
 				type="website"
 			/> */}
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl,
+		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Blog
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -94,11 +94,11 @@ export default function Blog(): JSX.Element {
 
 					{/* Category Filter */}
 					<section className="mb-12">
-						<div className="flex flex-wrap justify-center gap-4">
-							{categories.map((category) => (
+			<div className="flex flex-wrap justify-center gap-4">
+						,, {categories.map((category) => (
 								<button
 									key={category}
-									onClick={() => handleCategoryFilter(category)}
+								,, onClick={() => handleCategoryFilter(category)}
 									className={`px-6 py-2 rounded-full font-medium transition-colors ${
 										selectedCategory === category.toLowerCase() || (category === 'All' && selectedCategory === 'all')
 											? 'bg-blue-600 text-white'
@@ -113,14 +113,15 @@ export default function Blog(): JSX.Element {
 
 					{/* Blog Posts */}
 					<section className="mb-16">
-						<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div className="grid md: grid-cols-2,
+		lg:grid-cols-3 gap-8">
 							{filteredPosts.map((post) => (
 								<article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-									<div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+			<div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
 										<span className="text-white text-lg font-semibold">{post.category}</span>
 									</div>
-									<div className="p-6">
-										<div className="flex items-center text-sm text-gray-500 mb-3">
+			<div className="p-6">
+			<div className="flex items-center text-sm text-gray-500 mb-3">
 											<span>{post.author}</span>
 											<span className="mx-2">•</span>
 											<span>{post.date}</span>
@@ -130,7 +131,7 @@ export default function Blog(): JSX.Element {
 										<h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
 										<p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
 										<button
-											onClick={() => handleReadMore(post)}
+										,, onClick={() => handleReadMore(post)}
 											className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
 										>
 											Read More →
@@ -143,18 +144,19 @@ export default function Blog(): JSX.Element {
 
 					{/* Newsletter Signup */}
 					<section className="text-center">
-						<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto">
+			<div className="bg-white rounded-2xl shadow-xl p-8 md: p-12 max-w-2xl mx-auto">
 							<h2 className="text-3xl font-bold text-gray-900 mb-4">
 								Stay Updated
 							</h2>
 							<p className="text-gray-600 mb-6">
 								Get the latest insights and updates delivered to your inbox.
 							</p>
-							<div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+			<div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
 								<input
 									type="email"
 									placeholder="Enter your email"
-									className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+									className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2,
+		focus:ring-blue-500"
 								/>
 								<button
 									onClick={() => trackClick('newsletter-signup', 'cta')}

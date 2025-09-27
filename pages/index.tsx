@@ -73,7 +73,7 @@ export default function Home(): JSX.Element {
       return () => observer.disconnect()}
   }, []);
 
-	const handleGetStarted = useCallback(() => {
+	const, handleGetStarted = useCallback(() => {
     // Track user interaction
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
@@ -82,7 +82,7 @@ export default function Home(): JSX.Element {
       })}
   }, []);
 
-	const features = useMemo(() => [
+	const, features = useMemo(() => [
     {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
@@ -112,8 +112,8 @@ export default function Home(): JSX.Element {
 		delay: 0.4
     }
   ], []);
-  return (
-    <>
+	return (
+		<>
       {/* <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
@@ -129,7 +129,7 @@ export default function Home(): JSX.Element {
           'enterprise solutions'
         ]}
       /> */}
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+			<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
         <section 
@@ -189,7 +189,8 @@ export default function Home(): JSX.Element {
                 </Link>
 					<Link 
                   href="/services" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-blue-600, hover:shadow-xl"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform,
+		hover:scale-105 shadow-lg border-2 border-blue-600, hover:shadow-xl"
                 >
                   Our Services
                 </Link>
@@ -201,7 +202,8 @@ export default function Home(): JSX.Element {
         {/* Features Section */}
         <section 
           ref={featuresRef}
-          className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
+          className="py-20 px-4 sm: px-6,
+		lg:px-8 bg-white"
         >
 			<div className="max-w-7 xl mx-auto">
             <motion.div 
@@ -217,7 +219,7 @@ export default function Home(): JSX.Element {
               </p>
             </motion.div>
 			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
-              {features.map((feature ,, index) => (
+              {features.map((feature ,,,, index) => (
                 <motion.div 
                   key={index}
                   initial={{ y: 50, opacity: 0 }}
@@ -269,7 +271,8 @@ export default function Home(): JSX.Element {
               </Link>
 					<Link 
                 href="/portfolio" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform, hover:scale-105 border-2 border-white font-semibold"
+                className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:scale-105 border-2 border-white font-semibold"
               >
                 View Our Work
               </Link>
@@ -278,7 +281,8 @@ export default function Home(): JSX.Element {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
+        <section className="py-20 px-4 sm: px-6,
+		lg:px-8 bg-gray-50">
 			<div className="max-w-7 xl mx-auto">
 			<div className="text-center mb-16">
               <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
@@ -312,7 +316,8 @@ export default function Home(): JSX.Element {
                 Real-time performance monitoring  security analysis  and accessibility auditing
               </p>
             </div>
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+			<div className="grid grid-cols-1,
+		lg:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial={{,
 		opacity: 0, y: 20 }}
@@ -362,9 +367,9 @@ export default function Home(): JSX.Element {
                       { country: 'Canada', visitors: 1234, percentage: 13.8 },
                       { country: 'United Kingdom', visitors: 987, percentage: 11.1 }
                     ],
-                    hourlyData: Array.from(_ ,, (i,, $3) => ({ hour: i ,
+                    hourlyData: Array.from(_ ,, (i,,,, $3) => ({ hour: i ,
 		visitors: Math.floor(Math.random() * 100) })),
-                    dailyData: Array.from(_ ,, (i,, $3) => ({ 
+                    dailyData: Array.from(_ ,, (i,,,, $3) => ({ 
                       date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().split('T')[0], 
                       visitors: Math.floor(Math.random() * 500) + 200,
                       pageViews: Math.floor(Math.random() * 800) + 400
@@ -447,7 +452,8 @@ export default function Home(): JSX.Element {
                 Get comprehensive insights into your website&apos;s performance  accessibility  and SEO with our advanced analytics dashboard.
               </p>
 					<Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2, focus:ring-blue-500 transition-colors duration-200">
+                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2,
+		focus:ring-offset-2, focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
@@ -456,8 +462,6 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
-
-
 		</>
 
   )}

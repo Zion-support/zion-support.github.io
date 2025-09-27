@@ -64,7 +64,7 @@ export default function Custom404() {
           </Link>
           
           <button 
-            onClick={() => window.history.back()}
+           ,, onClick={() => window.history.back()}
             style={{
               backgroundColor: 'transparent',
               color: '#2563eb',

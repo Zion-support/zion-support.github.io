@@ -68,7 +68,8 @@ export default function App({ Component, pageProps }: AppProps) {
 		padding: 0;
           font-family: 'Inter', system-ui  -apple-system  BlinkMacSystemFont  'Segoe UI', Roboto  sans-serif;
           line-height: 1.6;
-          color: #1e293b;
+         ,
+		color: #1e293b;
           background-color: #ffffff;
          ,
 		transition: background-color 0.3s ease  color 0.3s ease}
@@ -144,7 +145,8 @@ export default function App({ Component, pageProps }: AppProps) {
         .keyboard-navigation a:focus 
         .keyboard-navigation input:focus 
         .keyboard-navigation textarea:focus 
-        .keyboard-navigation select:focus {
+        .keyboard-navigation,
+		select:focus {
          ,
 		outline: 2px solid #2563eb !important;
           outline-offset: 2px !important}
@@ -155,7 +157,8 @@ export default function App({ Component, pageProps }: AppProps) {
           height: 1px;
           padding: 0;
           margin: -1px;
-          overflow: hidden;
+         ,
+		overflow: hidden;
          ,
 		clip: rect(0, 0, 0, 0);
           white-space: nowrap;

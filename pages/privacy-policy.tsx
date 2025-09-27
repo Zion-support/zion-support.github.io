@@ -56,24 +56,24 @@ export default function PrivacyPolicy(): JSX.Element {
 			content: 'We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date. Your continued use of our services after any changes constitutes acceptance of the updated policy.'
 		}
 	];
-
-  return (
-    <>
-      <Head>
+	return (
+		<>
+			<Head>
         <title>Privacy Policy - Zion App</title>
         <meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 			<div className="container mx-auto px-4 py-8 max-w-4 xl">
 				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl,
+		md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Privacy Policy
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
@@ -109,7 +109,7 @@ export default function PrivacyPolicy(): JSX.Element {
 						</section>
 
 						{/* Policy Sections */}
-						{sections.map((section ,, index) => (
+						{sections.map((section ,,,, index) => (
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -133,7 +133,8 @@ export default function PrivacyPolicy(): JSX.Element {
 									Contact Us
 								</h2>
 								<p className="text-xl mb-8 opacity-90">
-									If you have any questions about this Privacy Policy or our data practices  please contact us:
+									If you have any questions about this Privacy Policy or our data practices  please contact,
+		us:
 								</p>
 			<div className="grid grid-cols-1, md:grid-cols-2 gap-6">
 			<div>
@@ -194,14 +195,16 @@ export default function PrivacyPolicy(): JSX.Element {
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Questions About Privacy?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									We&apos;re here to help. Contact us for any privacy-related questions or concerns.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-privacy', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Contact Us
@@ -214,7 +217,8 @@ export default function PrivacyPolicy(): JSX.Element {
 					<Link href="/faq">
 										<button 
 											onClick={() => trackClick('view-faq-privacy', 'cta')}
-											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												View FAQ
@@ -230,8 +234,6 @@ export default function PrivacyPolicy(): JSX.Element {
 					</main>
 				</div>
 			</div>
-
-
 		</>
 
 	)}

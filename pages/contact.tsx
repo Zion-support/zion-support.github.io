@@ -16,20 +16,19 @@ export default function Contact(): JSX.Element {
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
 		setFormData(prev => ({
 			...prev,
 			[name]: value
 		}))};
 
-	const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		trackClick('contact-form-submit', 'conversion');
 		console.log('Form submitted:', formData);
 		// Handle form submission logic here
 	};
-
 	return (
 		<>
 			<SEO />
@@ -39,9 +38,9 @@ export default function Contact(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -54,13 +53,13 @@ export default function Contact(): JSX.Element {
 							Ready to transform your business? Let's start the conversation.
 						</p>
 					</header>
-
-					<div className="grid lg:grid-cols-2 gap-12">
+			<div className="grid,
+		lg:grid-cols-2 gap-12">
 						{/* Contact Form */}
-						<div className="bg-white rounded-2xl shadow-xl p-8">
+			<div className="bg-white rounded-2xl shadow-xl p-8">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
 							<form onSubmit={handleSubmit} className="space-y-6">
-								<div>
+			<div>
 									<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
 										Full Name
 									</label>
@@ -71,11 +70,11 @@ export default function Contact(): JSX.Element {
 										value={formData.name}
 										onChange={handleInputChange}
 										required
-										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2,
+		focus:ring-blue-500"
 									/>
 								</div>
-
-								<div>
+			<div>
 									<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 										Email Address
 									</label>
@@ -86,11 +85,11 @@ export default function Contact(): JSX.Element {
 										value={formData.email}
 										onChange={handleInputChange}
 										required
-										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2,
+		focus:ring-blue-500"
 									/>
 								</div>
-
-								<div>
+			<div>
 									<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
 										Company
 									</label>
@@ -100,11 +99,11 @@ export default function Contact(): JSX.Element {
 										name="company"
 										value={formData.company}
 										onChange={handleInputChange}
-										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2,
+		focus:ring-blue-500"
 									/>
 								</div>
-
-								<div>
+			<div>
 									<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 										Message
 									</label>
@@ -115,13 +114,14 @@ export default function Contact(): JSX.Element {
 										onChange={handleInputChange}
 										required
 										rows={5}
-										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500"
 									/>
 								</div>
 
 								<button
 									type="submit"
-									className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+									className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold,
+		hover:bg-blue-700 transition-colors"
 								>
 									Send Message
 								</button>
@@ -129,43 +129,40 @@ export default function Contact(): JSX.Element {
 						</div>
 
 						{/* Contact Information */}
-						<div className="space-y-8">
-							<div className="bg-white rounded-2xl shadow-xl p-8">
+			<div className="space-y-8">
+			<div className="bg-white rounded-2xl shadow-xl p-8">
 								<h2 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h2>
-								<div className="space-y-4">
-									<div className="flex items-center">
-										<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+			<div className="space-y-4">
+			<div className="flex items-center">
+			<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
 											<span className="text-blue-600 text-xl">📧</span>
 										</div>
-										<div>
+			<div>
 											<p className="font-semibold text-gray-900">Email</p>
 											<p className="text-gray-600">hello@zion.app</p>
 										</div>
 									</div>
-
-									<div className="flex items-center">
-										<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+			<div className="flex items-center">
+			<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
 											<span className="text-blue-600 text-xl">📞</span>
 										</div>
-										<div>
+			<div>
 											<p className="font-semibold text-gray-900">Phone</p>
 											<p className="text-gray-600">+1 (555) 123-4567</p>
 										</div>
 									</div>
-
-									<div className="flex items-center">
-										<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+			<div className="flex items-center">
+			<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
 											<span className="text-blue-600 text-xl">📍</span>
 										</div>
-										<div>
+			<div>
 											<p className="font-semibold text-gray-900">Address</p>
 											<p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
 										</div>
 									</div>
 								</div>
 							</div>
-
-							<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+			<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
 								<h3 className="text-xl font-bold mb-4">Ready to get started?</h3>
 								<p className="mb-6 opacity-90">
 									Schedule a free consultation to discuss your project needs.

@@ -144,9 +144,8 @@ export default function Services(): JSX.Element {
 			]
 		}
 	};
-
 	return (
-		<div>
+			<div>
 			<SEO />
 			{/* <Navigation /> */}
 			<Head>
@@ -183,7 +182,7 @@ export default function Services(): JSX.Element {
 						{/* Services Grid */}
 						<section className="mb-20">
 			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
-								{SERVICES.map((service ,, index) => (
+								{SERVICES.map((service ,,,, index) => (
 			<div
 										key={service.id}
 										className={`transform transition-all duration-700 delay-${index * 100} ${
@@ -216,7 +215,7 @@ export default function Services(): JSX.Element {
 											</p>
 										</div>
 										<button
-										,, onClick={() => setSelectedService(null)}
+										,,,, onClick={() => setSelectedService(null)}
 											className="text-gray-400 hover:text-gray-600 transition-colors"
 										>
 											<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,7 +228,7 @@ export default function Services(): JSX.Element {
 			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature ,, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature ,,,, index) => (
 													<li key={index} className="flex items-center text-gray-600">
 														<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -244,7 +243,7 @@ export default function Services(): JSX.Element {
 			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
 			<div className="flex flex-wrap gap-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech ,, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech ,,,, index) => (
 													<span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
 														{tech}
 													</span>
@@ -256,7 +255,7 @@ export default function Services(): JSX.Element {
 			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit ,, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit ,,,, index) => (
 													<li key={index} className="flex items-start text-gray-600">
 														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -298,7 +297,8 @@ export default function Services(): JSX.Element {
 									<h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Results</h3>
 									<p className="text-gray-600">Track record of successful projects and satisfied clients across industries</p>
 								</div>
-			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg,
+		hover:shadow-xl transition-shadow">
 			<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
 										<span className="text-2 xl">🔄</span>
 									</div>
@@ -327,14 +327,16 @@ export default function Services(): JSX.Element {
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Get Started?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss your project requirements and find the perfect solution for your business.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('get-quote-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Get a Quote
@@ -346,7 +348,8 @@ export default function Services(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('schedule-consultation-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Schedule Consultation

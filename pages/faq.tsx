@@ -22,7 +22,8 @@ export default function FAQ(): JSX.Element {
 			category: 'General',
 			questions: [
 				{
-					id: 1,
+				,
+		id: 1,
 					question: 'What services does Zion App offer?',
 					answer: 'Zion App provides comprehensive technology solutions including AI development  cloud computing  web development  mobile applications  data analytics  and cybersecurity services. We specialize in custom software development  digital transformation  and technology consulting.'
 				},
@@ -42,7 +43,8 @@ export default function FAQ(): JSX.Element {
 			category: 'Services & Pricing',
 			questions: [
 				{
-					id: 4,
+				,
+		id: 4,
 					question: 'How do you determine project pricing?',
 					answer: 'Our pricing is based on project scope  complexity  timeline  and specific requirements. We offer flexible pricing models including fixed-price projects  time and materials  and retainer agreements. We provide detailed quotes after understanding your needs and can work within various budget ranges.'
 				},
@@ -62,7 +64,8 @@ export default function FAQ(): JSX.Element {
 			category: 'Development Process',
 			questions: [
 				{
-					id: 7,
+				,
+		id: 7,
 					question: 'What is your development process?',
 					answer: 'We follow an agile development methodology with regular sprints, client feedback loops, and iterative improvements. Our process includes discovery and planning, design and prototyping, development and testing, deployment, and ongoing support. We maintain transparent communication throughout the entire process.'
 				},
@@ -82,7 +85,8 @@ export default function FAQ(): JSX.Element {
 			category: 'AI & Technology',
 			questions: [
 				{
-					id: 10,
+				,
+		id: 10,
 					question: 'How do you implement AI solutions?',
 					answer: 'We use machine learning frameworks like TensorFlow and PyTorch, cloud AI services from AWS and Google Cloud, and custom AI model development. Our approach includes data analysis, model training, integration with existing systems, and continuous optimization based on performance metrics.'
 				},
@@ -102,7 +106,8 @@ export default function FAQ(): JSX.Element {
 			category: 'Support & Communication',
 			questions: [
 				{
-					id: 13,
+				,
+		id: 13,
 					question: 'How do you communicate with clients during projects?',
 					answer: 'We maintain regular communication through scheduled meetings, progress reports, project management tools, and direct access to your project team. We provide weekly status updates, demo sessions, and are available for questions and feedback throughout the development process.'
 				},
@@ -120,7 +125,7 @@ export default function FAQ(): JSX.Element {
 		}
 	];
 
-  const toggleItem = (id: number) => {
+  const toggleItem = (id:,, number) => {
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
 			newOpenItems.delete(id)} else {
@@ -170,8 +175,9 @@ export default function FAQ(): JSX.Element {
 										type="text"
 										placeholder="Search questions..."
 										value={searchTerm}
-									,, onChange={(e) => setSearchTerm(e.target.value)}
-										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-none focus:ring-2, focus:ring-blue-500 text-lg"
+									,,,, onChange={(e) => setSearchTerm(e.target.value)}
+										className="w-full px-6 py-4 pl-12 bg-white rounded-2 xl shadow-lg border-0 focus: outline-none,
+		focus:ring-2, focus:ring-blue-500 text-lg"
 									/>
 									<svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -181,7 +187,7 @@ export default function FAQ(): JSX.Element {
 						</section>
 
 						{/* FAQ Categories */}
-						{filteredData.map((category ,, categoryIndex) => (
+						{filteredData.map((category ,,,, categoryIndex) => (
 							<section key={category.category} className={`mb-16 transition-all duration-700 delay-${200 + categoryIndex * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -189,14 +195,15 @@ export default function FAQ(): JSX.Element {
 									{category.category}
 								</h2>
 			<div className="space-y-4">
-									{category.questions.map((item ,, index) => (
+									{category.questions.map((item ,,,, index) => (
 			<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
 			<div className="bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
 												<button
-												,, onClick={() => toggleItem(item.id)}
-													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2 focus:ring-blue-500 rounded-2 xl"
+												,,,, onClick={() => toggleItem(item.id)}
+													className="w-full px-8 py-6 text-left flex items-center justify-between focus: outline-none focus:ring-2,
+		focus:ring-blue-500 rounded-2 xl"
 												>
 													<h3 className="text-lg, md:text-xl font-semibold text-gray-800 pr-4">
 														{item.question}
@@ -240,14 +247,16 @@ export default function FAQ(): JSX.Element {
 								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Still Have Questions?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl,
+		md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Our team is here to help. Contact us for personalized answers and expert guidance.
 								</p>
 			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-us-faq', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl,
+		hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Contact Us
@@ -259,7 +268,8 @@ export default function FAQ(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('schedule-call-faq', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white,
+		hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Schedule a Call
@@ -274,8 +284,6 @@ export default function FAQ(): JSX.Element {
 					</main>
 				</div>
 			</div>
-
-
 		</>
 
 	)}
