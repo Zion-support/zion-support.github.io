@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
-import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
+import { ActivityTrendingUpUsersZapShieldBarChart3 } from 'lucide-react';
+import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine } from 'recharts';
 interface DashboardWidget {
   id: string;
   title: string;
@@ -14,33 +14,33 @@ interface DashboardWidget {
 interface DashboardProps {
   widgets: DashboardWidget[];
   onWidgetUpdate?: (widget: DashboardWidget) => void;
-  onWidgetAdd?: (widget: Omit<DashboardWidget, 'id'>) => void;
+  onWidgetAdd?: (widget: Omit<DashboardWidget'id'>) => void;
   onWidgetRemove?: (widgetId: string) => void;
   className?: string;
 }
 
 const sampleData = {
   revenue: [
-    { month: 'Jan', revenue: 4000, profit: 2400 },
-    { month: 'Feb', revenue: 3000, profit: 1398 },
-    { month: 'Mar', revenue: 2000, profit: 9800 },
-    { month: 'Apr', revenue: 2780, profit: 3908 },
-    { month: 'May', revenue: 1890, profit: 4800 },
-    { month: 'Jun', revenue: 2390, profit: 3800 }
+    { month: 'Jan'revenue: 4000profit: 2400 },
+    { month: 'Feb'revenue: 3000profit: 1398 },
+    { month: 'Mar'revenue: 2000profit: 9800 },
+    { month: 'Apr'revenue: 2780profit: 3908 },
+    { month: 'May'revenue: 1890profit: 4800 },
+    { month: 'Jun'revenue: 2390profit: 3800 }
   ],
   users: [
-    { name: 'Active Users', value: 400, color: '#0088FE' },
-    { name: 'New Users', value: 300, color: '#00C49F' },
-    { name: 'Returning Users', value: 300, color: '#FFBB28' },
-    { name: 'Inactive Users', value: 200, color: '#FF8042' }
+    { name: 'Active Users'value: 400color: '#0088FE' },
+    { name: 'New Users'value: 300color: '#00C49F' },
+    { name: 'Returning Users'value: 300color: '#FFBB28' },
+    { name: 'Inactive Users'value: 200color: '#FF8042' }
   ],
   performance: [
-    { time: '00:00', cpu: 20, memory: 40, disk: 10 },
-    { time: '04:00', cpu: 25, memory: 45, disk: 12 },
-    { time: '08:00', cpu: 60, memory: 70, disk: 15 },
-    { time: '12:00', cpu: 80, memory: 85, disk: 20 },
-    { time: '16:00', cpu: 70, memory: 75, disk: 18 },
-    { time: '20:00', cpu: 50, memory: 60, disk: 14 }
+    { time: '00:00'cpu: 20memory: 40disk: 10 },
+    { time: '04:00'cpu: 25memory: 45disk: 12 },
+    { time: '08:00'cpu: 60memory: 70disk: 15 },
+    { time: '12:00'cpu: 80memory: 85disk: 20 },
+    { time: '16:00'cpu: 70memory: 75disk: 18 },
+    { time: '20:00'cpu: 50memory: 60disk: 14 }
   ]
 };
 
@@ -51,7 +51,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.revenue,
     size: 'large',
-    position: { x: 0, y: 0 }
+    position: { x: 0y: 0 }
   },
   {
     id: 'user-metrics',
@@ -59,7 +59,7 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.users,
     size: 'medium',
-    position: { x: 0, y: 1 }
+    position: { x: 0y: 1 }
   },
   {
     id: 'performance-metrics',
@@ -67,30 +67,30 @@ const defaultWidgets: DashboardWidget[] = [
     type: 'chart',
     data: sampleData.performance,
     size: 'large',
-    position: { x: 1, y: 0 }
+    position: { x: 1y: 0 }
   },
         {
     id: 'total- revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },    size: 'small',
-    position: { x: 2, y: 0 }
+    data: { value: '$45,231'change: '+12.5%'trend: 'up' }   size: 'small',
+    position: { x: 2y: 0 }
   },
         {
     id: 'active- users',
     title: 'Active Users',
     type: 'metric',
-    data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
+    data: { value: '2,847'change: '+8.2%'trend: 'up' },
     size: 'small',
-    position: { x: 2, y: 1 }
+    position: { x: 2y: 1 }
   },
   {
     id: 'conversion-rate',
     title: 'Conversion Rate',
     type: 'metric',
-    data: { value: '3.24%', change: '-2.1%', trend: 'down' },
+    data: { value: '3.24%'change: '-2.1%'trend: 'down' },
     size: 'small',
-    position: { x: 2, y: 2 }
+    position: { x: 2y: 2 }
   }
 ];
 
@@ -101,16 +101,16 @@ export default function EnhancedDashboard({
   enableFullscreen = true,
   onWidgetUpdate
 }: DashboardProps): JSX.Element {
-  const [dashboardWidgets, setDashboardWidgets] = useState<DashboardWidget[]>(widgets);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [selectedWidget, setSelectedWidget] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [dashboardWidgetssetDashboardWidgets] = useState<DashboardWidget[]>(widgets);
+  const [isFullscreensetIsFullscreen] = useState(false);
+  const [selectedWidgetsetSelectedWidget] = useState<string | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000);
+    const timer = setTimeout(() => setIsLoading(false)1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
     setDashboardWidgets(updatedWidgets);
@@ -118,7 +118,7 @@ export default function EnhancedDashboard({
   };
 
   const renderChart = (widget: DashboardWidget) => {
-    const { data, id } = widget;
+    const { dataid } = widget;
     
     switch (id) {
       case 'revenue-chart':
@@ -142,11 +142,11 @@ export default function EnhancedDashboard({
                 data={data}
                 cx="50%" cy="50%"
                 labelLine={false}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={({ namepercent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                 outerRadius={80}
                 fill="#8884d8" dataKey="value"
               >
-                {data.map((entry: any, index: number) => (
+                {data.map((entry: anyindex: number) => (
                   <Cell key={`cell-${index}` } fill={entry.color} />                ))}
               </Pie>
               <Tooltip />
@@ -184,9 +184,9 @@ export default function EnhancedDashboard({
     </div>
   );
 
-  const renderWidget = (widget: DashboardWidge, t) => {
+  const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      smal, l: 'col-span-1 row-span-1',
+      small: 'col-span-1 row-span-1',
       medium: 'col-span-2 row-span-1',
       large: 'col-span-3 row-span-2'
     };
@@ -195,10 +195,10 @@ export default function EnhancedDashboard({
       <motion.div
         key={widget.id}
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
-          selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
+          selectedWidget === widget.id ? 'ring-2 ring-blue-500' : '
         }`}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0scale: 0.9 }}
+        animate={{ opacity: 1scale: 1 }}
         transition={{ duration: 0.3 }}
         whileHover={{ scale: 1.02 }}
         onClick={() => setSelectedWidget(widget.id)}
@@ -234,7 +234,7 @@ export default function EnhancedDashboard({
     );
   };
 
-  if (isLoadin, g) {
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-centerjustify-center">
         <div className="text-center">
@@ -246,7 +246,7 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>      <div className="p-6">
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : '}`}>      <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
@@ -278,9 +278,9 @@ export default function EnhancedDashboard({
           >
             <motion.div
               className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh] overflow-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9opacity: 0 }}
+              animate={{ scale: 1opacity: 1 }}
+              exit={{ scale: 0.9opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">

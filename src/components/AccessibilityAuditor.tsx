@@ -30,7 +30,7 @@ export default function AccessibilityAuditor() {
     });
 
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll('inputtextareaselect');
     inputs.forEach((input: HTMLInputElement) => {
       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
@@ -48,7 +48,7 @@ export default function AccessibilityAuditor() {
     });
 
     // Check heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headings = document.querySelectorAll('h1h2h3h4h5h6');
     let previousLevel = 0;
     headings.forEach((heading: HTMLHeadingElement) => {
       const currentLevel = parseInt(heading.tagName.charAt(1));

@@ -1,196 +1,196 @@
-import React from "rea, c, t"
-import { Use, r, s, Targ, e, t, CheckCircle, Pho, n, e, Calend, a, r, BarChar, t, 3, Buildi, n, g } from "luci, d, e-rea, c, t"
-import { S, E, O } from "../../componen, t, s/S, E, O"
+import React from "react"
+import { UsersTargetCheckCirclePhoneCalendarBarChart3Building } from "lucide-react"
+import { SEO } from "../../components/SEO"
 
-export default function MicroC, R, M() {
-  con, s, t featur, e, s = [
+export default function MicroCRM() {
+  const features = [
     {
-      ic, o, n: Use, r, s,
-      tit, l, e: "Conta, c, t Manageme, n, t",
-      descripti, o, n:
-        "Centraliz, e, d databa, s, e f, o, r a, l, l custom, e, r contac, t, s wi, t, h detail, e, d profil, e, s a, n, d interacti, o, n histo, r, y.",
+      icon: Users,
+      title: "Contact Management",
+      description:
+        "Centralized database for all customer contacts with detailed profiles and interaction history.",
     },
     {
-      ic, o, n: Targ, e, t,
-      tit, l, e: "Le, a, d Tracki, n, g",
-      descripti, o, n:
-        "Tra, c, k lea, d, s throu, g, h t, h, e sal, e, s funn, e, l wi, t, h automat, e, d scori, n, g a, n, d qualificati, o, n process, e, s.",
+      icon: Target,
+      title: "Lead Tracking",
+      description:
+        "Track leads through the sales funnel with automated scoring and qualification processes.",
     },
     {
-      ic, o, n: Calend, a, r,
-      tit, l, e: "Ta, s, k Manageme, n, t",
-      descripti, o, n:
-        "Schedu, l, e follow-u, p, s, meetin, g, s, a, n, d reminde, r, s wi, t, h integrat, e, d calend, a, r functionali, t, y.",
+      icon: Calendar,
+      title: "Task Management",
+      description:
+        "Schedule follow-upsmeetingsand reminders with integrated calendar functionality.",
     },
     {
-      ic, o, n: BarChar, t, 3,
-      tit, l, e: "Sal, e, s Analyti, c, s",
-      descripti, o, n:
-        "Comprehensi, v, e reporti, n, g a, n, d analyti, c, s to tra, c, k performance a, n, d identi, f, y opportuniti, e, s.",
+      icon: BarChart3,
+      title: "Sales Analytics",
+      description:
+        "Comprehensive reporting and analytics to track performance and identify opportunities.",
     },
   ]
 
-  con, s, t benefi, t, s = [
-    "Streamli, n, e custom, e, r relationsh, i, p manageme, n, t",
-    "Impro, v, e sal, e, s te, a, m productivi, t, y",
-    "Enhan, c, e custom, e, r communicati, o, n",
-    "Tra, c, k sal, e, s performance metri, c, s",
-    "Automa, t, e repetiti, v, e tas, k, s",
-    "Centrali, z, e custom, e, r da, t, a",
+  const benefits = [
+    "Streamline customer relationship management",
+    "Improve sales team productivity",
+    "Enhance customer communication",
+    "Track sales performance metrics",
+    "Automate repetitive tasks",
+    "Centralize customer data",
   ]
 
-  con, s, t useCas, e, s = [
+  const useCases = [
     {
-      tit, l, e: "Sma, l, l Busine, s, s C, R, M",
-      descripti, o, n:
-        "Perfe, c, t f, o, r sma, l, l business, e, s looki, n, g to mana, g, e custom, e, r relationshi, p, s efficient, l, y.",
-      ic, o, n: Buildi, n, g,
+      title: "Small Business CRM",
+      description:
+        "Perfect for small businesses looking to manage customer relationships efficiently.",
+      icon: Building,
     },
     {
-      tit, l, e: "Sal, e, s Te, a, m Manageme, n, t",
-      descripti, o, n:
-        "Empow, e, r sal, e, s tea, m, s wi, t, h too, l, s to tra, c, k lea, d, s a, n, d mana, g, e custom, e, r interactio, n, s.",
-      ic, o, n: Use, r, s,
+      title: "Sales Team Management",
+      description:
+        "Empower sales teams with tools to track leads and manage customer interactions.",
+      icon: Users,
     },
     {
-      tit, l, e: "Custom, e, r Suppo, r, t",
-      descripti, o, n:
-        "Tra, c, k custom, e, r issu, e, s a, n, d provi, d, e time, l, y suppo, r, t wi, t, h integrat, e, d ticketi, n, g.",
-      ic, o, n: Pho, n, e,
+      title: "Customer Support",
+      description:
+        "Track customer issues and provide timely support with integrated ticketing.",
+      icon: Phone,
     },
     {
-      tit, l, e: "Marketi, n, g Campaig, n, s",
-      descripti, o, n:
-        "Mana, g, e marketi, n, g campaig, n, s a, n, d tra, c, k custom, e, r engageme, n, t a, n, d respons, e, s.",
-      ic, o, n: Targ, e, t,
+      title: "Marketing Campaigns",
+      description:
+        "Manage marketing campaigns and track customer engagement and responses.",
+      icon: Target,
     },
   ]
 
-  retu, r, n (
-    <d, i, v classNa, m, e="m, i, n-h-scre, e, n bg-gradie, n, t-to-br from-sla, t, e-9, 0, 0 v, i, a-sla, t, e-8, 0, 0 to-sla, t, e-9, 0, 0">
-      <S, E, O
-        tit, l, e="Mic, r, o C, R, M - Zi, o, n Te, c, h Gro, u, p"
-        descripti, o, n="Streamli, n, e yo, u, r custom, e, r relationsh, i, p manageme, n, t wi, t, h o, u, r Mic, r, o C, R, M soluti, o, n. Perfe, c, t f, o, r sma, l, l business, e, s a, n, d growi, n, g tea, m, s."
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Micro CRM - Zion Tech Group"
+        description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
 
-      {/* He, r, o Secti, o, n */}
-      <secti, o, n classNa, m, e="relati, v, e py-20 overflow-hidd, e, n">
-        <d, i, v classNa, m, e="absolu, t, e ins, e, t-0 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/10 v, i, a-bl, u, e-5, 0, 0/10 to-purp, l, e-5, 0, 0/10" />
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4 relati, v, e z-10">
-          <d, i, v classNa, m, e="te, x, t-cent, e, r m, a, x-w-4, x, l mx-au, t, o">
-            <d, i, v classNa, m, e="inli, n, e-fl, e, x ite, m, s-cent, e, r px-4 py-2 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/20 to-bl, u, e-5, 0, 0/20 round, e, d-fu, l, l bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 mb-6">
-              <CheckCircle classNa, m, e="w-4 h-4 mr-2 te, x, t-cy, a, n-3, 0, 0" />
-              <sp, a, n classNa, m, e="te, x, t-cy, a, n-3, 0, 0 te, x, t-sm fo, n, t-medium">Custom, e, r Relationsh, i, p Manageme, n, t</sp, a, n>
-            </d, i, v>
-            <h1 classNa, m, e="te, x, t-5, x, l md:te, x, t-6, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">Mic, r, o C, R, M</h1>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 mb-8 leadi, n, g-relax, e, d">
-              Streamli, n, e yo, u, r custom, e, r relationshi, p, s wi, t, h o, u, r lightweig, h, t, powerf, u, l C, R, M soluti, o, n design, e, d f, o, r sma, l, l
-              business, e, s a, n, d growi, n, g tea, m, s.
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
+              <CheckCircle className="w-4 h-4 mr-2 text-cyan-300" />
+              <span className="text-cyan-300 text-sm font-medium">Customer Relationship Management</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Micro CRM</h1>
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Streamline your customer relationships with our lightweightpowerful CRM solution designed for small
+              businesses and growing teams.
             </p>
-            <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l sm:fl, e, x-r, o, w g, a, p-4 justi, f, y-cent, e, r">
-              <butt, o, n classNa, m, e="px-8 py-4 bg-gradie, n, t-to-r from-cy, a, n-4, 0, 0 to-bl, u, e-5, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d round, e, d-lg hov, e, r:from-cy, a, n-5, 0, 0 hov, e, r:to-bl, u, e-6, 0, 0 transiti, o, n-a, l, l durati, o, n-2, 0, 0 hov, e, r:sca, l, e-1, 0, 5 shad, o, w-lg hov, e, r:shad, o, w-cy, a, n-4, 0, 0/25">
-                Sta, r, t Fr, e, e Tri, a, l
-              </butt, o, n>
-              <butt, o, n classNa, m, e="px-8 py-4 bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 te, x, t-cy, a, n-3, 0, 0 fo, n, t-semibo, l, d round, e, d-lg hov, e, r:bg-cy, a, n-4, 0, 0/10 transiti, o, n-a, l, l durati, o, n-2, 0, 0">
-                Wat, c, h De, m, o
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
+                Watch Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Featur, e, s Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4">
-          <d, i, v classNa, m, e="te, x, t-cent, e, r mb-16">
-            <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-4">Essenti, a, l C, R, M Featur, e, s</h2>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 m, a, x-w-3, x, l mx-au, t, o">
-              O, u, r Mic, r, o C, R, M provid, e, s a, l, l t, h, e essenti, a, l featur, e, s y, o, u ne, e, d to mana, g, e custom, e, r relationshi, p, s witho, u, t t, h, e
-              complexi, t, y of enterpri, s, e solutio, n, s.
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Essential CRM Features</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our Micro CRM provides all the essential features you need to manage customer relationships without the
+              complexity of enterprise solutions.
             </p>
-          </d, i, v>
-          <d, i, v classNa, m, e="gr, i, d md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-4 g, a, p-8">
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-              <d, i, v
-                k, e, y={ind, e, x}
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50 bord, e, r bord, e, r-sla, t, e-7, 0, 0/50 round, e, d-xl p-6 hov, e, r:bord, e, r-cy, a, n-4, 0, 0/30 transiti, o, n-a, l, l durati, o, n-3, 0, 0 hov, e, r:sca, l, e-1, 0, 5"
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((featureindex) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
               >
-                <d, i, v classNa, m, e="w-12 h-12 bg-gradie, n, t-to-br from-cy, a, n-4, 0, 0/20 to-bl, u, e-5, 0, 0/20 round, e, d-lg fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mb-4">
-                  <featu, r, e.ic, o, n classNa, m, e="w-6 h-6 te, x, t-cy, a, n-3, 0, 0" />
-                </d, i, v>
-                <h3 classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-whi, t, e mb-3">{featu, r, e.tit, l, e}</h3>
-                <p classNa, m, e="te, x, t-sla, t, e-3, 0, 0">{featu, r, e.descripti, o, n}</p>
-              </d, i, v>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-cyan-300" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-300">{feature.description}</p>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+          </div>
+        </div>
+      </section>
 
-      {/* Benefi, t, s Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20 bg-sla, t, e-8, 0, 0/30">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4">
-          <d, i, v classNa, m, e="te, x, t-cent, e, r mb-16">
-            <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-4">W, h, y Choo, s, e Mic, r, o C, R, M?</h2>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 m, a, x-w-3, x, l mx-au, t, o">
-              Experien, c, e t, h, e benefi, t, s of profession, a, l C, R, M softwa, r, e witho, u, t t, h, e complexi, t, y a, n, d co, s, t of enterpri, s, e
-              solutio, n, s.
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Micro CRM?</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Experience the benefits of professional CRM software without the complexity and cost of enterprise
+              solutions.
             </p>
-          </d, i, v>
-          <d, i, v classNa, m, e="gr, i, d md:gr, i, d-co, l, s-2 lg:gr, i, d-co, l, s-3 g, a, p-6">
-            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (
-              <d, i, v k, e, y={ind, e, x} classNa, m, e="fl, e, x ite, m, s-sta, r, t spa, c, e-x-3">
-                <CheckCircle classNa, m, e="w-5 h-5 te, x, t-cy, a, n-4, 0, 0 fl, e, x-shri, n, k-0 mt-1" />
-                <sp, a, n classNa, m, e="te, x, t-sla, t, e-3, 0, 0 te, x, t-lg">{benef, i, t}</sp, a, n>
-              </d, i, v>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefitindex) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                <span className="text-slate-300 text-lg">{benefit}</span>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+          </div>
+        </div>
+      </section>
 
-      {/* U, s, e Cas, e, s Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4">
-          <d, i, v classNa, m, e="te, x, t-cent, e, r mb-16">
-            <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-4">Perfe, c, t F, o, r Yo, u, r Busine, s, s</h2>
-            <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 m, a, x-w-3, x, l mx-au, t, o">
-              Wheth, e, r y, o, u&ap, o, s;re a sma, l, l busine, s, s own, e, r or managi, n, g a growi, n, g sal, e, s te, a, m, o, u, r Mic, r, o C, R, M adap, t, s to yo, u, r
-              nee, d, s.
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Perfect For Your Business</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Whether you&apos;re a small business owner or managing a growing sales teamour Micro CRM adapts to your
+              needs.
             </p>
-          </d, i, v>
-          <d, i, v classNa, m, e="gr, i, d md:gr, i, d-co, l, s-2 g, a, p-8">
-            {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => (
-              <d, i, v
-                k, e, y={ind, e, x}
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50 bord, e, r bord, e, r-sla, t, e-7, 0, 0/50 round, e, d-xl p-8 hov, e, r:bord, e, r-cy, a, n-4, 0, 0/30 transiti, o, n-a, l, l durati, o, n-3, 0, 0"
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCaseindex) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
               >
-                <d, i, v classNa, m, e="w-16 h-16 bg-gradie, n, t-to-br from-cy, a, n-4, 0, 0/20 to-bl, u, e-5, 0, 0/20 round, e, d-xl fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r mb-6">
-                  <useCa, s, e.ic, o, n classNa, m, e="w-8 h-8 te, x, t-cy, a, n-3, 0, 0" />
-                </d, i, v>
-                <h3 classNa, m, e="te, x, t-2, x, l fo, n, t-semibo, l, d te, x, t-whi, t, e mb-4">{useCa, s, e.tit, l, e}</h3>
-                <p classNa, m, e="te, x, t-sla, t, e-3, 0, 0 te, x, t-lg leadi, n, g-relax, e, d">{useCa, s, e.descripti, o, n}</p>
-              </d, i, v>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-cyan-300" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-slate-300 text-lg leading-relaxed">{useCase.description}</p>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
+          </div>
+        </div>
+      </section>
 
-      {/* C, T, A Secti, o, n */}
-      <secti, o, n classNa, m, e="py-20 bg-gradie, n, t-to-r from-cy, a, n-5, 0, 0/10 v, i, a-bl, u, e-5, 0, 0/10 to-purp, l, e-5, 0, 0/10">
-        <d, i, v classNa, m, e="contain, e, r mx-au, t, o px-4 te, x, t-cent, e, r">
-          <h2 classNa, m, e="te, x, t-4, x, l fo, n, t-bo, l, d te, x, t-whi, t, e mb-6">Rea, d, y to Transfo, r, m Yo, u, r Custom, e, r Relationshi, p, s?</h2>
-          <p classNa, m, e="te, x, t-xl te, x, t-sla, t, e-3, 0, 0 mb-8 m, a, x-w-2, x, l mx-au, t, o">
-            Jo, i, n thousan, d, s of business, e, s th, a, t ha, v, e improv, e, d the, i, r custom, e, r manageme, n, t wi, t, h o, u, r Mic, r, o C, R, M soluti, o, n.
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Relationships?</h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses that have improved their customer management with our Micro CRM solution.
           </p>
-          <d, i, v classNa, m, e="fl, e, x fl, e, x-c, o, l sm:fl, e, x-r, o, w g, a, p-4 justi, f, y-cent, e, r">
-            <butt, o, n classNa, m, e="px-8 py-4 bg-gradie, n, t-to-r from-cy, a, n-4, 0, 0 to-bl, u, e-5, 0, 0 te, x, t-whi, t, e fo, n, t-semibo, l, d round, e, d-lg hov, e, r:from-cy, a, n-5, 0, 0 hov, e, r:to-bl, u, e-6, 0, 0 transiti, o, n-a, l, l durati, o, n-2, 0, 0 hov, e, r:sca, l, e-1, 0, 5 shad, o, w-lg hov, e, r:shad, o, w-cy, a, n-4, 0, 0/25">
-              Sta, r, t Fr, e, e Tri, a, l
-            </butt, o, n>
-            <butt, o, n classNa, m, e="px-8 py-4 bord, e, r bord, e, r-cy, a, n-4, 0, 0/30 te, x, t-cy, a, n-3, 0, 0 fo, n, t-semibo, l, d round, e, d-lg hov, e, r:bg-cy, a, n-4, 0, 0/10 transiti, o, n-a, l, l durati, o, n-2, 0, 0">
-              Schedu, l, e De, m, o
-            </butt, o, n>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </d, i, v>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }

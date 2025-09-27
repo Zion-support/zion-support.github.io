@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { Activity, Zap, Shield, Eye } from 'lucide-react';
+import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell } from 'recharts';
+import { ActivityZapShieldEye } from 'lucide-react';
 
 interface ChartData {
   name: string;
@@ -29,25 +29,25 @@ interface CardContentProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = ' }) => (
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = ' }) => (
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+const CardContent: React.FC<CardContentProps> = ({ childrenclassName = ' }) => (
   <div className={`p-6 ${className}`}>
     {children}
   </div>
@@ -99,12 +99,12 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   data,
   onDataRefresh,
   isRealTime = false,
-  className = ''
+  className = '
 }) => {
-  const [selectedMetric, setSelectedMetric] = useState<string>('pageViews');
-  const [timeRange, setTimeRange] = useState<string>('7d');
-  const [isLoading, setIsLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>('overview');
+  const [selectedMetricsetSelectedMetric] = useState<string>('pageViews');
+  const [timeRangesetTimeRange] = useState<string>('7d');
+  const [isLoadingsetIsLoading] = useState(false);
+  const [activeTabsetActiveTab] = useState<string>('overview');
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
@@ -125,21 +125,21 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   }
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed', value: data.performance.pageSpeed, color: '#10B981' },
-    { name: 'Load Time', value: data.performance.loadTime / 100, color: '#F59E0B' },
-    { name: 'Bounce Rate', value: data.performance.bounceRate, color: '#EF4444' },
-    { name: 'Conversion', value: data.performance.conversionRate * 10, color: '#8B5CF6' }
+    { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' },
+    { name: 'Load Time'value: data.performance.loadTime / 100color: '#F59E0B' },
+    { name: 'Bounce Rate'value: data.performance.bounceRatecolor: '#EF4444' },
+    { name: 'Conversion'value: data.performance.conversionRate * 10color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score', value: data.security.score, color: '#10B981' },
-    { name: 'Threats', value: data.security.threats * 20, color: '#EF4444' },
-    { name: 'Vulnerabilities', value: data.security.vulnerabilities * 10, color: '#F59E0B' }
+    { name: 'Security Score'value: data.security.scorecolor: '#10B981' },
+    { name: 'Threats'value: data.security.threats * 20color: '#EF4444' },
+    { name: 'Vulnerabilities'value: data.security.vulnerabilities * 10color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: data.seo.score, color: '#3B82F6' },
-    { name: 'Accessibility', value: data.accessibility.score, color: '#8B5CF6' }
+    { name: 'SEO Score'value: data.seo.scorecolor: '#3B82F6' },
+    { name: 'Accessibility'value: data.accessibility.scorecolor: '#8B5CF6' }
   ];
 
   return (
@@ -151,17 +151,17 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
             <span>Comprehensive Analytics Dashboard</span>
           </CardTitle>
           <CardDescription>
-            Monitor your application's performance, security, and SEO metrics
+            Monitor your application's performancesecurityand SEO metrics
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
-              { id: 'overview', label: 'Overview', icon: Activity },
-              { id: 'performance', label: 'Performance', icon: Zap },
-              { id: 'security', label: 'Security', icon: Shield },
-              { id: 'seo', label: 'SEO & A11y', icon: Eye }
-            ].map(({ id, label, icon: Icon }) => (
+              { id: 'overview'label: 'Overview'icon: Activity },
+              { id: 'performance'label: 'Performance'icon: Zap },
+              { id: 'security'label: 'Security'icon: Shield },
+              { id: 'seo'label: 'SEO & A11y'icon: Eye }
+            ].map(({ idlabelicon: Icon }) => (
               <button
                 key={id}
                 onClick={() => setActiveTab(id as any)}
@@ -190,7 +190,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
                         <div className="text-smtext-gray-600">Total Visitors</div>
                         <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}>
-                          {analyticsData.visitors.growth >= 0 ? '+' : ''},
+                          {analyticsData.visitors.growth >= 0 ? '+' : '},
         {analyticsData.visitors.growth}%                        </div>
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={300}>
-                      <LineChart data={[...securityData, ...seoAccessibilityData]}>
+                      <LineChart data={[...securityData...seoAccessibilityData]}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />                        <YAxis />
                         <Tooltip />

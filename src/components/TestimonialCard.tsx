@@ -20,7 +20,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   isVisible 
 }) => {
   const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+    return Array.from({ length: 5 }(_i) => (
       <svg
         key={i}
         className={`w-5 h-5 ${
@@ -36,7 +36,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div 
-      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hove, r:border-blue-200 hover-lift ${
+      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}    >
       {/* Rating */}

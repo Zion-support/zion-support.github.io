@@ -8,14 +8,14 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps): JSX.Element {
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [currentTimesetCurrentTime] = useState(new Date());
+  const [isDarkModesetIsDarkMode] = useState(false);
+  const [activeSectionsetActiveSection] = useState('home');
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000);
+    }1000);
 
     // Load dark mode preference from localStorage (only on client side)
     if (typeof window !== 'undefined') {
@@ -26,18 +26,18 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     }
 
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   const toggleDarkMode = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
+      localStorage.setItem('darkMode'JSON.stringify(newDarkMode));
     }
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
+    <div className={`min-h-screen ${isDarkMode ? 'dark' : '}`}>
       <ErrorBoundary>
         <Navigation 
           currentTime={currentTime}

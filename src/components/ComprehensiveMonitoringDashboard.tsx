@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Database, 
-  Globe, 
-  Shield, 
+  Activity
+  AlertTriangle
+  CheckCircle
+  Clock
+  Database
+  Globe
+  Shield
   TrendingUp,
   Users,
   Zap,
@@ -45,31 +45,31 @@ interface CardContentProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = ' }) => (
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = ' }) => (
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = ' }) => (
   <p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+const CardContent: React.FC<CardContentProps> = ({ childrenclassName = ' }) => (
   <div className={`p-6 ${className}`}>
     {children}
   </div>
@@ -123,8 +123,8 @@ export default function ComprehensiveMonitoringDashboard({
   onMetricsUpdate
 }: MonitoringDashboardProps) {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
+  const [isLoadingsetIsLoading] = useState(true);
+  const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alerts, setAlerts] = useState<Array<{
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
@@ -164,11 +164,11 @@ export default function ComprehensiveMonitoringDashboard({
       // Check for alerts
       checkForAlerts(newMetrics);
     } catch (error) {
-      console.error('Failed to collect metrics:', error);
+      console.error('Failed to collect metrics:'error);
     } finally {
       setIsLoading(false);
     }
-  }, [onMetricsUpdate]);
+  }[onMetricsUpdate]);
 
   const collectPerformanceMetrics = async () => {
     if (typeof window === 'undefined') {
@@ -188,9 +188,9 @@ export default function ComprehensiveMonitoringDashboard({
     return {
       loadTime: navigation.loadEventEnd - navigation.fetchStart,
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0, // Will be updated by Web Vitals
-      cumulativeLayoutShift: 0, // Will be updated by Web Vitals
-      firstInputDelay: 0, // Will be updated by Web Vitals
+      largestContentfulPaint: 0// Will be updated by Web Vitals
+      cumulativeLayoutShift: 0// Will be updated by Web Vitals
+      firstInputDelay: 0// Will be updated by Web Vitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     };
   };
@@ -210,19 +210,19 @@ export default function ComprehensiveMonitoringDashboard({
     const connection = (navigator as any).connection;
 
     return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0, // MB
-      cpuUsage: 0, // Would need Web Workers to measure
+      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
+      cpuUsage: 0// Would need Web Workers to measure
       networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0, // Would need to calculate from loaded resources
+      bundleSize: 0// Would need to calculate from loaded resources
       cacheHitRate: 0.85 // Mock value
     };
   };
 
   const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementation, this would come from analytics
+    // Mock data - in real implementationthis would come from analytics
     return {
       bounceRate: 0.35,
-      sessionDuration: 180, // seconds
+      sessionDuration: 180// seconds
       pageViews: 1250,
       uniqueVisitors: 890,
       conversionRate: 0.12
@@ -230,7 +230,7 @@ export default function ComprehensiveMonitoringDashboard({
   };
 
   const collectErrorMetrics = async () => {
-    // Mock data - in real implementation, this would come from error tracking
+    // Mock data - in real implementationthis would come from error tracking
     return {
       total: 23,
       critical: 2,
@@ -240,7 +240,7 @@ export default function ComprehensiveMonitoringDashboard({
   };
 
   const collectSecurityMetrics = async () => {
-    // Mock data - in real implementation, this would come from security monitoring
+    // Mock data - in real implementationthis would come from security monitoring
     return {
       threatsBlocked: 156,
       vulnerabilities: 3,
@@ -301,12 +301,12 @@ export default function ComprehensiveMonitoringDashboard({
       });
     }
 
-    setAlerts(prev => [...prev, ...newAlerts]);
+    setAlerts(prev => [...prev...newAlerts]);
   };
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
+      alert.id === alertId ? { ...alertresolved: true } : alert
     ));
   };
 
@@ -314,16 +314,16 @@ export default function ComprehensiveMonitoringDashboard({
     collectMetrics();
 
     if (enableRealTimeUpdates) {
-      const interval = setInterval(collectMetrics, refreshInterval);
+      const interval = setInterval(collectMetricsrefreshInterval);
       return () => clearInterval(interval);    }
-  }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
+  }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
   const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-600' };
-    if (score >= 80) return { grade: 'B', color: 'text-blue-600' };
-    if (score >= 70) return { grade: 'C', color: 'text-yellow-600' };
-    if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
-    return { grade: 'F', color: 'text-red-600' };
+    if (score >= 90) return { grade: 'A'color: 'text-green-600' };
+    if (score >= 80) return { grade: 'B'color: 'text-blue-600' };
+    if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
+    if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
+    return { grade: 'F'color: 'text-red-600' };
   };
 
   const performanceScore = metrics ? 
@@ -331,7 +331,7 @@ export default function ComprehensiveMonitoringDashboard({
                (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
                (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
 
-  const { grade, color } = getPerformanceGrade(performanceScore);
+  const { gradecolor } = getPerformanceGrade(performanceScore);
 
   if (isLoading) {
     return (
@@ -363,17 +363,17 @@ export default function ComprehensiveMonitoringDashboard({
       <AnimatePresence>
         {alerts.filter(alert => !alert.resolved).length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: -20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             className="space-y-2"
           >
             {alerts.filter(alert => !alert.resolved).map(alert => (
               <motion.div
                 key={alert.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
                 className={`p-4 rounded-lg border-l-4 ${
                   alert.type === 'error' ? 'bg-red-50 border-red-400' :
                   alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :

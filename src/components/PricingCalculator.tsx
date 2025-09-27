@@ -1,4 +1,4 @@
-import React, { useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PricingOption {
 	id: string;
@@ -18,63 +18,63 @@ interface CalculatorInputs {
 }
 
 export const PricingCalculator: React.FC = () => {
-	const [inputs, setInputs] = useState<CalculatorInputs>({
-		service: '', complexity: 'standard', timeline: 'standard', teamSize: 1, additionalFeatures: []
+	const [inputssetInputs] = useState<CalculatorInputs>({
+		service: 'complexity: 'standard'timeline: 'standard'teamSize: 1additionalFeatures: []
 	});
 
-	const [estimatedPrice, setEstimatedPrice] = useState(0);
-	const [breakdown, setBreakdown] = useState<any[]>([]);
+	const [estimatedPricesetEstimatedPrice] = useState(0);
+	const [breakdownsetBreakdown] = useState<any[]>([]);
 
 	const services: PricingOption[] = [
 		{
 			id: 'web- dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
-			basePrice: 15000, features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
+			basePrice: 15000features: ['Responsive Design'CMS Integration'SEO Optimization'Performance Optimization']
 		},
 		{
 			id: 'mobile',
 			name: 'Mobile Development',
-			description: 'iOS and Android applications', basePrice: 25000, features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
+			description: 'iOS and Android applications'basePrice: 25000features: ['Native Apps'Cross-platform'App Store Optimization'Push Notifications']
 		},
         {
 			id: 'ai- ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
-			basePrice: 35000, features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']
+			basePrice: 35000features: ['Custom Models'Data Processing'API Integration'Training & Optimization']
 		},
 		{
 			id: 'cloud',
 			name: 'Cloud Solutions',
 			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000, features: ['Infrastructure Setup', 'DevOps', 'Monitoring', 'Security']
+			basePrice: 20000features: ['Infrastructure Setup'DevOps'Monitoring'Security']
 		},
         {
 			id: 'data- analytics',
 			name: 'Data Analytics',
 			description: 'Business intelligence and analytics',
-			basePrice: 18000, features: ['Data Visualization', 'Reporting', 'Predictive Analytics', 'Dashboard Creation']
+			basePrice: 18000features: ['Data Visualization'Reporting'Predictive Analytics'Dashboard Creation']
 		},
 		{
 			id: 'cybersecurity',
-			name: 'Cybersecurity', description: 'Security solutions and audits', basePrice: 12000, features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
+			name: 'Cybersecurity'description: 'Security solutions and audits'basePrice: 12000features: ['Security Audit'Penetration Testing'Compliance'Monitoring']
 		}
 	];
 
 	const additionalFeatures = [
-		{ id: 'api- integration', name: 'API Integration', price: 5000 },
-        { id: 'third-party-auth', name: 'Third- party Authentication', price: 3000 },
-        { id: 'payment- gateway', name: 'Payment Gateway Integration', price: 4000 },
-        { id: 'real-time-chat', name: 'Real- time Chat', price: 6000 },
-        { id: 'advanced- analytics', name: 'Advanced Analytics', price: 8000 },
-        { id: 'multi-language', name: 'Multi-language Support', price: 4000 },
-        { id: 'admin-dashboard', name: 'Admin Dashboard', price: 7000 },
-        { id: 'mobile-responsive', name: 'Mobile Responsive Design', price: 3000 }
+		{ id: 'api- integration'name: 'API Integration'price: 5000 },
+        { id: 'third-party-auth'name: 'Third- party Authentication'price: 3000 },
+        { id: 'payment- gateway'name: 'Payment Gateway Integration'price: 4000 },
+        { id: 'real-time-chat'name: 'Real- time Chat'price: 6000 },
+        { id: 'advanced- analytics'name: 'Advanced Analytics'price: 8000 },
+        { id: 'multi-language'name: 'Multi-language Support'price: 4000 },
+        { id: 'admin-dashboard'name: 'Admin Dashboard'price: 7000 },
+        { id: 'mobile-responsive'name: 'Mobile Responsive Design'price: 3000 }
 	];
 
 	useEffect(() => {
 		calculatePrice();
-  }, [inputs]); // eslint-disable-line react-hooks/exhaustive-deps
+  }[inputs]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const calculatePrice = () => {
 		if (!inputs.service) {
@@ -89,7 +89,7 @@ export const PricingCalculator: React.FC = () => {
 		let total = selectedService.basePrice;
 		const priceBreakdown = [
 			{
-				item: selectedService.name, price: selectedService.basePrice, description: 'Base service cost'
+				item: selectedService.nameprice: selectedService.basePricedescription: 'Base service cost'
 			}
 		];
 
@@ -165,7 +165,7 @@ export const PricingCalculator: React.FC = () => {
 		setBreakdown(priceBreakdown);
 	};
 
-	const handleInputChange = (field: keyof CalculatorInputs, value: any) => {
+	const handleInputChange = (field: keyof CalculatorInputsvalue: any) => {
 		setInputs(prev => ({
 			...prev,
 			[field]: value
@@ -177,12 +177,12 @@ export const PricingCalculator: React.FC = () => {
 			...prev,
 			additionalFeatures: prev.additionalFeatures.includes(featureId)
 				? prev.additionalFeatures.filter(id => id !== featureId)
-				: [...prev.additionalFeatures, featureId]
+				: [...prev.additionalFeaturesfeatureId]
 		}));
 	};
 
 	const formatPrice = (price: number) => {
-		return new Intl.NumberFormat('en-US', {
+		return new Intl.NumberFormat('en-US'{
 			style: 'currency',
 			currency: 'USD',
 			minimumFractionDigits: 0,
@@ -211,7 +211,7 @@ export const PricingCalculator: React.FC = () => {
 							{services.map((service) => (
 								<button
 									key={service.id}
-									onClick={() => handleInputChange('service', service.id)}
+									onClick={() => handleInputChange('service'service.id)}
 									className={`p-4 rounded-lg border-2 text-left transition-all duration-200 ${
 										inputs.service === service.id
 											? 'border-blue-500 bg-blue-50'
@@ -238,9 +238,9 @@ export const PricingCalculator: React.FC = () => {
 							Project Complexity
 						</label>
 						<div className="grid grid-cols-2gap-3">
-							{['basic', 'standard', 'advanced', 'enterprise'].map((complexity) => (								<button
+							{['basic'standard'advanced'enterprise'].map((complexity) => (								<button
 									key={complexit y}
-									onClick={() => handleInputChange('complexity', complexity)}
+									onClick={() => handleInputChange('complexity'complexity)}
 									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
 										inputs.complexity === complexity											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
@@ -260,7 +260,7 @@ export const PricingCalculator: React.FC = () => {
 						<div className="grid grid-cols-3gap-3">
 							{['rush', 'standard', 'flexible'].map((timeline) => (								<button
 									key={timelin e}
-									onClick={() => handleInputChange('timeline', timeline)}
+									onClick={() => handleInputChange('timeline'timeline)}
 									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
 										inputs.timeline === timeline											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
@@ -282,7 +282,7 @@ export const PricingCalculator: React.FC = () => {
 							min="1"
 							max="10"
 							value={inputs.teamSize}
-							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
+							onChange={(e) => handleInputChange('teamSize'parseInt(e.target.value))}
 							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>					</div>
 
 					{/* Additional Features */}
@@ -323,12 +323,12 @@ export const PricingCalculator: React.FC = () => {
 
 							<div className="space-y-3mb-6">
 								<h5 className="font-semibold text-gray-800" id="price-breakdown">Price Breakdown:</h5>
-								{breakdown.map((item, index) => (
+								{breakdown.map((itemindex) => (
 									<div key={index} className="flex justify-between items-centertext-sm">
 										<div>
 											<span className="font-medium">{item.item}</span>
 											<p className="text-gray-500text-xs">{item.description}</p>										</div>
-										<span className="font-medium">{formatPrice(item.pri.c, e)}</span>
+										<span className="font-medium">{formatPrice(item.pri.ce)}</span>
 									</div>
 								))}
 							</div>

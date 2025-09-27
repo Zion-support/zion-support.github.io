@@ -1,43 +1,43 @@
-import { Rou, t, e, Rout, e, s } from "rea, c, t-rout, e, r-d, o, m"
-import Log, i, n from "@/pag, e, s/Log, i, n"
-import Sign, u, p from "@/pag, e, s/Sign, u, p"
-import { ProtectedRou, t, e } from "@/componen, t, s/ProtectedRou, t, e"
+import { RouteRoutes } from "react-router-dom"
+import Login from "@/pages/Login"
+import Signup from "@/pages/Signup"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
 
-con, s, t AuthRout, e, s = () => {
-  retu, r, n (
-    <Rout, e, s>
-      <Rou, t, e pa, t, h="/log, i, n" element={<Log, i, n />} />
-      <Rou, t, e pa, t, h="/sign, u, p" element={<Sign, u, p />} />
+const AuthRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
 
-      {/* Protect, e, d rout, e, s th, a, t requi, r, e authenticati, o, n */}
-      <Rou, t, e
-        pa, t, h="/profi, l, e"
+      {/* Protected routes that require authentication */}
+      <Route
+        path="/profile"
         element={
-          <ProtectedRou, t, e>
-            <d, i, v>Profi, l, e Pa, g, e</d, i, v>
-          </ProtectedRou, t, e>
+          <ProtectedRoute>
+            <div>Profile Page</div>
+          </ProtectedRoute>
         }
       />
 
-      <Rou, t, e
-        pa, t, h="/dashboa, r, d"
+      <Route
+        path="/dashboard"
         element={
-          <ProtectedRou, t, e>
-            <d, i, v>Dashboa, r, d</d, i, v>
-          </ProtectedRou, t, e>
+          <ProtectedRoute>
+            <div>Dashboard</div>
+          </ProtectedRoute>
         }
       />
 
-      <Rou, t, e
-        pa, t, h="/settin, g, s"
+      <Route
+        path="/settings"
         element={
-          <ProtectedRou, t, e>
-            <d, i, v>Settin, g, s</d, i, v>
-          </ProtectedRou, t, e>
+          <ProtectedRoute>
+            <div>Settings</div>
+          </ProtectedRoute>
         }
       />
-    </Rout, e, s>
+    </Routes>
   )
 }
 
-export default AuthRout, e, s
+export default AuthRoutes
