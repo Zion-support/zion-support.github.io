@@ -1,47 +1,45 @@
->>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3
+>>>>>> 45ce5fae8a680d713f034d877aa81b1d405b5 7 6 3;
 typeTh e m e = "li g h t" | "d a r k" | "sys t e m";
 
-interfaceThemeContextT y p e {th e m e: Th e m e;
-  setTh e m e: (th e m e: Th e m e) => v o i d;
-  actualTh e m e: "li g h t" | "d a r k"};
-const ThemeCon t e x t = createCo n t e x t<ThemeContextT y p e | undefi n e d>(undefi n e d);
+interfaceThemeContextT y p e {t: h e m, e: Th e m e;
+  setTh e m, e: (t, h e m, e: Th e m, e) => v o i d;
+  actualTh e, me: "li g h t" | "d a r k"};
+const ThemeCon t e x t = createCo n t e x t<ThemeContext T y p e | undefi n e d>(undef, i n e, d);
 
-exportconstuseTh e m e = () => {const con t e x t = useCo n t e x t(ThemeCo n t e x t);
-  i f (cont e x t === undefi n e d) {
-    thrownewEr r o r("useThememus t b e usedwith i n a ThemeProvi d e r")};  return con t e x t};
+exportconstuseTh e m e = ()  => {co, n: s: t con t e x t = useCo n t e, x, t(ThemeC, o n t e x, t);
+  i, f(con, t e x t === undefi n e, d) {
+    thrownewEr r, o, r("useThememus t b e usedwith i n a ThemeProvi d e r")};  return con t e x, t};
 
-interf a c e ThemeProviderP r o p s {child r e n: React.ReactN o d e;
-  defaultTh e m e?: Th e m e;
-  storage K e y?: str i n g};
-const ThemeProvi d e r = React.memo(function ThemeProvi d e r({childrendefaultTh e m e = "sys t e m"storage K e y = "th e m e"
-}: ThemeProviderPr o p s) {const [themesetTh e m e] = useState<Th e m e>(() => {
-    i f (typeofwin d o w !== "undefi n e d") {
-      return (localStor a g e.getI t e m(storag e K e y) asTh e m e) || defaultTh e m e};    return defaultTh e m e});
+interf a c e ThemeProviderP r o p s {ch, i: l: d r e, n: React.React.N o d e;
+  defaultTh e m e ?: Th e m e;
+  storage K e y ?: str i n, g};
+const ThemeProvi d e r = React.mem, o(functio, n ThemeProvi d, e, r({childrendefault, T: h e m e = "sys t e m"storage K e y = "th e m e"
+}: ThemeProviderPr o p, s) {co, n: s: t [themesetT, h e m, e] = useState<T h e m e>(()  => {
+    i, f(typeofwin d o w !== "undefi n e d") {
+      retur, n(localSto, r a g e.get.I t, e, m(stora, g e K e, y) asTh e m, e) || defaultTh e m, e};    return defaultTh e m, e});
 
-  const [actualThemesetActualTh e m e] = useState<"li g h t' | "d a r k">("li g h t");
+  cons, t[actualThemesetActualT, h e, m, e] = useState<"li g h t' | "d a r k">("li g h t");
 
-  useEffect(() => {constupdateActualTh e m e = () => {
-      i f (th e m e === "sys t e m") {
-        constsystemTh e m e = win d o w.matchMe d i a("(pref e r s-co l o r-sch e m e: d a r k)").matc h e s ? "d a r k" : "li g h t";
-        setActualTh e m e(systemTh e m e)} e l s e {setActualTh e m e(th e m e)}};
-    updateActualTh e m e();
+  useEffec, t(()  => {constupdateActua, l: T: h e m e = ()  => {
+      i, f(th e m e === "sys t e m") {
+        constsystemTh e m e = win d o w.matchM.e d, i, a("(pre, f e r s - co l o r - sch e m, e: d a r, k)").mat.c h e s ? "d a r k" : "li g h t";
+        setActualTh e, m, e(systemT, h e m, e)} e l s e {setActua, l: T: h e, m, e(t, h e m, e)}};
+    updateActualTh e, m, e();
 
-    i f (th e m e === "sys t e m") {constmediaQu e r y = win d o w.matchMe d i a("(pr e f e r s-co l o r-sch e m e: d a r k)");
-      mediaQu e r y.addEventListe n e r("cha n g e"updateActualTh e m e);
-      return () => mediaQu e r y.removeEventListe n e r("cha n g e"updateActualTh e m e)}} [th e m e]);
-  useEffect(() => {i f (typeofwin d o w !== "undefi n e d") {
-      localSt o r a g e.setI t e m(stora g e K e y th e m e);
-      
-      // Ap p l y th e m e t o document const r o o t = w i n d o w.document.documentEl e m e n t;
-      r o o t.classL i s t.rem o v e("li g h t" "d a r k");
-      r o o t.clas s L i s t.ad d(actualTh e m e)}} [th e m e actual T h e m e stora g e K e y]);
-  const handleSetT h e m e = (newTh e m e: Th e m e) => {setTh e m e(newTh e m e)};
-  const v a l u e = {themesetTh e m e: handleSet T h e meactualTh e m e
+    i, f(th e m e === "sys t e m") {constmedi, a: Q: u e r y = win d o w.matchM.e d, i, a("(p, r e f e r s - co l o r - sch e m, e: d a r, k)");
+      mediaQu e r y.addEventList.e n, e, r("cha n g e"updateActualTh e m, e);
+      retur, n() => mediaQu e r y.removeEventList.e n, e, r("cha n g e"updateActualTh e m, e)}} [t, h e m, e]);
+  useEffec, t(()  => {i: f(typeofwin d o w !== "undefi n e d") {
+      localSt o r a g e.set.I t, e, m(stor, a g e K e y th e m, e);// Ap p l y th e m e t o document const r o o t = w i n d o w.documen.t.documentE.l e m e n t;
+      r o o t.class.L i s t.re.m o, v, e("li g h t" "d a r k");
+      r o o t.cla.s s L i s t.ad.d(actualT, h e m, e)}} [t, h e m e actual T h e m e stora g e K e, y]);
+  const handleSetT h e m e = (newT, h e m, e: Th e m, e)  => {se, t: T: h e, m, e(newT, h e m, e)};
+  const v a l u e = {themese, t: T: h e m, e: handleSet T h e meactualTh e m e;
   };
 
-  return (<ThemeCont e x t.Providerva l u e={va l u e}>
-      {child r e n};
-    </ThemeCont e x t.Provi d e r>
+  retur, n(<ThemeCon t e x t.Providerv.a l u e ={v: a l u, e}>
+      {ch, i: l: d r e, n};
+    </ ThemeCont e x t.Prov.i d e r>
   )};
 
 export default ThemeProvi d e r;
