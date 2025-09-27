@@ -296,23 +296,6 @@ export default function Dashboard(): JSX.Element {
             /> */}
           </div>
         );
-      case 'performance-optimizer':
-        return (
-      <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Performance Optimizer</h1>
-      <div className="flex items-center space-x-4">
-                <button 
-                  onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Refresh
-                </button>
-              </div>
-            </div>
-            {/* <AdvancedPerformanceOptimizer /> */}
-          </div>
-        );
       case 'analytics-insights':
         return (
       <div className="p-8">
