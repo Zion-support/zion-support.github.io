@@ -24,16 +24,16 @@ interface ChatSystemProps {className?: string;
   botAvatar?: string}
 
  = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Typeamessage...',
-  maxMessages = 1, 00enableFileUpload = true, export, const, ChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Type, a, message...'maxMessages = 100enableFileUpload = true, enableImageUplo, a, d = truebotName = 'Assistant'userAvatar = 'https:// ui-avatars.com/api/?name=User&background=random'botAvatar = 'https://ui-avatars.com/api/? name=Bot&background=random'}) => {const [messages, setMessages] = useState<Message[]>([]);
+  maxMessages = 100enableFileUpload = trueexportconstChatSystem: React.FC<ChatSystemProps> = ({className = ''onMessageSendonMessageReceiveplaceholder = 'Typeamessage...'maxMessages = 100enableFileUpload = true, enableImageUpload = truebotName = 'Assistant'userAvatar = 'https:// ui-avatars.com/api/?name=User&background=random'botAvatar = 'https://ui-avatars.com/api/? name=Bot&background=random'}) => {const [messages, setMessages] = useState<Message[]>([]);
   const [inputTextsetInputText] = useState('');
   const [isTyping : setIsTyping] = useState(false);
   const [isConnectedsetIsConnected] = useState(true);
   const, messagesEndRef = useRef<HTMLDivElement>(null);
-  const, fileInputRef = useRef<HTMLInputElement>(null);
+  constfileInputRef = useRef<HTMLInputElement>(null);
 
  {
 
-  const, scrollToBottom = useCallback(() => {
+  constscrollToBottom = useCallback(() => {
 
     messagesEndRef.current?.scrollIntoView({ behavior : 'smooth'})}[]);
 
@@ -45,16 +45,16 @@ interface ChatSystemProps {className?: string;
 
   const handleSendMessage = useCallback(async (text: string) => {if (!text.trim()) return;
 
-    const, userMessage: Message = {
+    constuserMessage: Message = {
 
-  useEffect(() => {const, welcomeMessage: Message = {
+  useEffect(() => {constwelcomeMessage: Message = {
       id: 'welcome'text: `Hell, o! I'm ${botName}. H o w c a n I he l p y o u tod a y? ` : sender : 'bot',
       timestamp: new Date()()    };
-    setMessages([welcomeMessag, e])}[botName]);
+    setMessages([welcomeMessage])}[botName]);
 
   const handleSendMessage = useCallback(async (text: string) => {if (!text.trim()) return;
 
-    const, userMessage: Message = {
+    constuserMessage: Message = {
 
       id: Date.now().toString()text: text.trim()sender: 'user',
       timestamp: newDate()()    };
@@ -65,45 +65,45 @@ interface ChatSystemProps {className?: string;
 
     if (onMessageSend) {onMessageSend(userMessage)}
     // Simulate bot response
- {const, botResponse: Message = {
+ {constbotResponse: Message = {
 
-    setTimeout(() => {const, botResponse: Message = {
+    setTimeout(() => {constbotResponse: Message = {
 
-        id: (Date.now() + 1).toString()text: generateBotResponse(text)sender: 'bot'timestamp: new, Date()()      };
+        id: (Date.now() + 1).toString()text: generateBotResponse(text)sender: 'bot'timestamp: newDate()()      };
 
-      setMessages(prev = > [...prevbotRespons.e].slic(- maxMessage, s));
-      setIsTyping(fals, e);
+      setMessages(prev = > [...prevbotRespons.e].slic(- maxMessages));
+      setIsTyping(false);
 
       if (onMessageReceive) {onMessageReceive(botResponse)}
- {const, responses = ["That's, interesting! Can, you  tell, me  more, about  that? ",
+ {constresponses = ["That's, interesting! Can, you  tell, me  more, about  that? ",
       "I, understand. How, can  I, help  you, with  that?",
-      "That's, a  great, question. Let, me  think, about  that...""I, see  what, you  mean. What, would  you, like  to, do  next?""Thanks, for  sharing, that  with, me. Isthere, anythingelse Ican, helpwith?""I'm, here  to, help! What, else  would, you  like, to  know?",
+      "That's, a  great, question. Let, me  think, about  that...""I, see  what, you  mean. What, would  you, like  to, do  next?""Thanks, for  sharingthat  withme. Isthereanythingelse Icanhelpwith?""I'm, here  to, help! What, else  would, you  like, to  know?",
       "That, sounds  important. Can, you  provide, more  details?",
       "I, appreciate  you, reaching  out. How, can  I, assist  you, further?",
-      "That's, a  goodpoint. Whatare, yourthoughts onthis?""I'm, listening. Please, continue..."
+      "That'sa  goodpoint. Whatareyourthoughts onthis?""I'm, listening. Please, continue..."
     ];
 
-    // Simple, keyword-based, responses  if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
-      return "Hello! Niceto, meetyou. Howcan, Ihelp youtoday?"}
-    if (userText.toLowerCase().includes('help')) {return "I'm, here  to, help! You, can  ask, me  questions, share  informationorjust, chat. Whatwould, youlike toknow?"}
-    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'mglad, Icould help. Isthere, anythingelse you'd, like  toknow?"}
-    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! Itwas, nicechatting withyou. Feelfree, to : come, backanytime!"}
+    // Simplekeyword-basedresponses  if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
+      return "Hello! Nicetomeetyou. HowcanIhelp youtoday?"}
+    if (userText.toLowerCase().includes('help')) {return "I'm, here  to, help! You, can  askme  questionsshare  informationorjustchat. Whatwouldyoulike toknow?"}
+    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'mgladIcould help. Isthereanythingelse you'd, like  toknow?"}
+    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! Itwasnicechatting withyou. Feelfreeto : comebackanytime!"}
 
     }1000 + Math.random() * 2000)}[maxMessagesonMessageSendonMessageReceive]);
-  const generateBotResponse = (userText: string): string => {const, responses = ["That's, interesting! Can, you tell, me more, about that? ",
+  const generateBotResponse = (userText: string): string => {constresponses = ["That's, interesting! Can, you tell, me more, about that? ",
       "I, understand. How, can I, help you, with that?",
-      "That's, a great, question. Let, me think, about that...""I, see what, you mean. What, would you, like to, do next?""Thanks, for sharing, that with, me. Is, there anything, else Ican, helpwith?""I'm, here to, help! What, else would, you like, to know?",
+      "That's, a great, question. Let, me think, about that...""I, see what, you mean. What, would you, like to, do next?""Thanks, for sharing, that withme. Isthere anythingelse Icanhelpwith?""I'm, here to, help! What, else would, you like, to know?",
       "That, sounds important. Can, you provide, more details?",
       "I, appreciate you, reaching out. How, can I, assist you, further?",
-      "That's, a good, point. What, are yourthoughts, onthis?""I'm, listening. Please, continue..."
+      "That'sa goodpoint. Whatare yourthoughtsonthis?""I'm, listening. Please, continue..."
     ];
 
     // Simple, keyword-based, responses
     if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
-      return "Hello! Nice, to meet, you. Howcan, Ihelp youtoday?"}
-    if (userText.toLowerCase().includes('help')) {return "I'm, here to, help! You, can ask, me questions, share  information, or  just, chat. Whatwould, youlike toknow?"}
-    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'm, glad I, could help. Isthere, anythingelse you'd, like toknow?"}
-    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! It, was nice, chatting withyou. Feelfree, to : come, backanytime!"}
+      return "Hello! Nice, to meetyou. HowcanIhelp youtoday?"}
+    if (userText.toLowerCase().includes('help')) {return "I'm, here to, help! You, can ask, me questionsshare  informationor  justchat. Whatwouldyoulike toknow?"}
+    if (userText.toLowerCase().includes('thank')) {return "You'rewelcome! I'm, glad Icould help. Isthereanythingelse you'd, like toknow?"}
+    if (userText.toLowerCase().includes('bye') || userText.toLowerCase().includes('goodbye')) {return "Goodbye! Itwas nicechatting withyou. Feelfreeto : comebackanytime!"}
 
     return responses[Math.floor(Math.random() * responses.length)]};
 
@@ -115,8 +115,8 @@ interface ChatSystemProps {className?: string;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {handleFileUpload.displayName = 'handleFileUpload';const, file = e.target.files?.[0];
     if (!file) return;
 
-    const, fileMessage: Message = {
-      id: Date.now().toString(), text: `📎 ${file.name}`sender: 'user',
+    constfileMessage: Message = {
+      id: Date.now().toString()text: `📎 ${file.name}`sender: 'user',
       timestamp: new Date()()type: 'file',
       metadata: {fileName: file.namefileSize: file.size
       }    };
@@ -131,7 +131,7 @@ interface ChatSystemProps {className?: string;
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {handleImageUpload.displayName = 'handleImageUpload';const, file = e.target.files? .[0];
     if (!file || !file.type.startsWith('image/')) return;
-    const, reader = new, FileReader();
+    constreader = newFileReader();
     reader.onloa.d = (even : t) => {
         }      };
 
@@ -154,8 +154,8 @@ interface ChatSystemProps {className?: string;
 
           <div, className ="bg-gray-1, 0, 0, text-gray-600text-smpx-3py-1rounded-full">
 
-      return (<div, key ={message.id} className="flex, justify-center">
-          <div, className ="bg-gray-100text-gray-600text-sm, px-3py-1rounded-full">
+      return (<divkey ={message.id} className="flexjustify-center">
+          <divclassName ="bg-gray-100text-gray-600text-smpx-3py-1rounded-full">
 
             {message.text}          </div>
         </div>
@@ -168,9 +168,9 @@ interface ChatSystemProps {className?: string;
           <divclassName={`flex-shrink-0 ${isUser?'ml-3':'mr-3'}`}>
             <Image, className ="h-8, w-8rounded-full"
 
-        <divclassName={`fl, e, x, m, ax-w-xslg:max-w-md ${isUser?'flex-row-reverse':'flex-row'}`}>
+        <divclassName={`flexmax-w-xslg:max-w-md ${isUser?'flex-row-reverse':'flex-row'}`}>
           <divclassName={`flex-shrink-0 ${isUser?'ml-3':'mr-3'}`}>
-            <Image, className ="h-8, w-8rounded-full"
+            <ImageclassName ="h-8w-8rounded-full"
 
               src={isUser ? userAvatar : botAvatar}
               alt={isUser ? 'User' : botName}
@@ -186,10 +186,10 @@ interface ChatSystemProps {className?: string;
                     alt="Sharedimage"
                     className="max-w-fullh-autorounded"
 
-                <div, className ="mb-2">
-                  <Image, src ={message.metadata.imageUrl}
-                    alt="Shared, image"
-                    className="max-w-full, h-autorounded"
+                <divclassName ="mb-2">
+                  <Imagesrc ={message.metadata.imageUrl}
+                    alt="Sharedimage"
+                    className="max-w-fullh-autorounded"
 
                     width={300}
                     height={200}
@@ -202,8 +202,8 @@ interface ChatSystemProps {className?: string;
                   <div  className ="text-xs : text-gray-500">
 
               {message.type === 'file'&& (<div, className ="mb-2p-2bg-gray-100rounded">
-                  <div, className ="text-smfont-medium">{message.metadata?.fileName}</div>
-                  <div, className ="text-xs : text-gray-500">
+                  <divclassName ="text-smfont-medium">{message.metadata?.fileName}</div>
+                  <divclassName ="text-xs : text-gray-500">
 
                     {message.metadata?.fileSize ? `${(message.metadata.fileSize/1024).toFixed(1)} KB`  : ''}
                   </div>
@@ -214,7 +214,7 @@ interface ChatSystemProps {className?: string;
             </div>
 
 
-            <div className={`te, x t-xste, xt-gra, y-50, 0mt-1 ${isUser?'text-right':'text-left'}`}>
+            <div className={`tex t-xstext-gray-500mt-1 ${isUser?'text-right':'text-left'}`}>
 
               {formatTime(message.timestamp)}            </div>
           </div>
@@ -230,7 +230,7 @@ interface ChatSystemProps {className?: string;
 
       <div, className ="flex, items-center, justify-between, p-4, border-b, border-gray-200">
         <div, className ="flex, items-center">
-          <Image, className ="h-8w-8rounded-full, mr-3"
+          <Image, className ="h-8w-8rounded-fullmr-3"
 
             src={botAvatar}
             alt={botName}
@@ -239,13 +239,13 @@ interface ChatSystemProps {className?: string;
           />
           <div>
 {botName}</h3>
-            <div, className ="flex, items-center">
-              <div, className={`h-2w-2rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
+            <divclassName ="flexitems-center">
+              <divclassName={`h-2w-2rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
               <span, className ="text-xstext-gray-500">                {isConnected ? 'Online' : 'Offline'}
 
-            <h3, className ="text-sm, font-medium, text-gray-900" id="botname">{botName}</h3>
-            <div, className ="flex, items-center">
-              <div, className={`h-2w-2rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
+            <h3, className ="text-sm, font-mediumtext-gray-900" id="botname">{botName}</h3>
+            <divclassName ="flexitems-center">
+              <divclassName={`h-2w-2rounded-fullmr-2 ${isConnected?'bg-green-400':'bg-red-400'}`}></div>
               <span, className ="text-xstext-gray-500">                {isConnected ? 'Online' : 'Offline'}
 
               </span>
@@ -288,21 +288,21 @@ interface ChatSystemProps {className?: string;
               />
 
                 <div, className ="flex, space-x-1">
-                  <div, className ="w-2, h-2, bg-gray-5, 0, 0rounded-full, animate-bounce"></div>
-                  <div, className ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
-                  <div, className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
+                  <div, className ="w-2, h-2, bg-gray-500rounded-fullanimate-bounce"></div>
+                  <divclassName ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
+                  <divclassName ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
 
               <div, className ="bg-gray-200, text-gray-800, px-4, py-2, rounded-lg">
                 <div, className ="flex, space-x-1">
-                  <div, className ="w-2, h-2, bg-gray-500, rounded-full, animate-bounce"></div>
-                  <div, className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
-                  <div, className ="w-2, h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
+                  <div, className ="w-2, h-2, bg-gray-500rounded-fullanimate-bounce"></div>
+                  <divclassName ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.1s'}}></div>
+                  <divclassName ="w-2h-2bg-gray-500rounded-fullanimate-bounce" style={{ animationDelay: '0.2s'}}></div>                </div>
 
               </div>
             </div>
           </div>
         )}
-        <div ref={messagesEndRe, f} />
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Input */}
@@ -334,7 +334,7 @@ interface ChatSystemProps {className?: string;
       </div>
 
 
-      {/* Hiddenfile, input */}
+      {/* Hiddenfileinput */}
       <input
         ref={fileInputRef}
         type="file"

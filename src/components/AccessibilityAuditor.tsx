@@ -7,8 +7,8 @@ interface AccessibilityIssue {type: 'error' | 'warning' | 'info';
 }
 
 export default function AccessibilityAuditor() {useEffect(() => {
-    // Only, run in, browser
-    if (typeof, window === 'undefined') {
+    // Only, run inbrowser
+    if (typeofwindow === 'undefined') {
       return;
     }
 
@@ -19,8 +19,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
     images.forEach((img: HTMLImageElement) => {if (!img.alt) {
         issues.push({
           type: 'error',
-          message: 'Image, missing, alt, attribute',
-          element: img, rule: 'alt-text'
+          message: 'Image, missingaltattribute'element: imgrule: 'alt-text'
         });
       }
     });
@@ -28,8 +27,8 @@ export default function AccessibilityAuditor() {useEffect(() => {
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, textarea  select');
 
-    inputs.forEach((input: HTMLInputElement) => {const, id = input.id;
-      const, label = document.querySelector(`label[for="${id}"]`);
+    inputs.forEach((input: HTMLInputElement) => {constid = input.id;
+      constlabel = document.querySelector(`label[for="${id}"]`);
 
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
@@ -40,7 +39,7 @@ export default function AccessibilityAuditor() {useEffect(() => {
     });
 
     // Check heading hierarchy
-    const headings = document.querySelectorAll('h1, h2  h3, h4  h5, h6');
+    const headings = document.querySelectorAll('h1, h2  h3h4  h5h6');
     let previousLevel = 0;
     headings.forEach((heading: HTMLHeadingElement) => {const, currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
@@ -65,12 +64,12 @@ export default function AccessibilityAuditor() {useEffect(() => {
     // Log issues to console in development
     if (process.env.NODE_ENV === 'development' && issues.length > 0) {console.group('🔍 AccessibilityAuditResults');
       issues.forEach(issue => {
-        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule)});
+        console.log(`${prefix} ${issue.message}`issue.elementissue.rule)});
       console.groupEnd()}
 
     // Return cleanup function
- {// Cleanup, if needed, return () => {
-      // Cleanup, if needed
+ {// Cleanupif neededreturn () => {
+      // Cleanupif needed
 
     }}[]);
 

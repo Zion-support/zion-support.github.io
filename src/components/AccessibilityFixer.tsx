@@ -2,9 +2,9 @@ import React from 'react';
 
 interface AccessibilityFixerProps {onFix?: () => void}
 
-export const AccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) => {const, fixAccessibilityIssues = () => {
-    // Add, aria-labelsto, allbuttons
-    const, buttons = document.querySelectorAll('button:not([aria-label])');
+export const AccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) => {constfixAccessibilityIssues = () => {
+    // Addaria-labelstoallbuttons
+    constbuttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach((buttonindex) => {
       if (!button.getAttribute('aria-label')) {
         button.setAttribut('aria-label'`Button ${index+1}`)}

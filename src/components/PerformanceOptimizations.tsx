@@ -17,7 +17,7 @@ const MemoizedCard = memo(({title, content, onClick }: {;
   content: string;
  void }) => {return (<div, className = "p-4borderrounded-lghover:shadow-mdtransition-shadowcursor-pointer"      onClick={onClick}      role=button""
 
-  onClic, k: () => void }) => {return (<div, className = "p-4bord, e, rrounded-lghover:shadow-mdtransition-shadowcursor-pointer"      onClick={onClick}      role=button""
+  onClick: () => void }) => {return (<divclassName = "p-4borderrounded-lghover:shadow-mdtransition-shadowcursor-pointer"      onClick={onClick}      role=button""
 
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && onClick()}
@@ -39,17 +39,17 @@ const VirtualList = memo(({items, itemHeight = 50containerHeight = 400 }: {;
   
   const, visibleItems = useMemo(() => {;
     const, startIndex = Math.floor(scrollTop / itemHeight);
-    const, endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight)items.length);
+    constendIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight)items.length);
     
  ({...itemindex: startIndex + index    }))}[itemsscrollTopitemHeightcontainerHeight]);
 
-    return  items.slice(startIndex, endIndex).map((item, index) => ({...itemindex: startIndex + index    }))}[itemsscrollTopitemHeightcontainerHeight]);
+    return  items.slice(startIndexendIndex).map((itemindex) => ({...itemindex: startIndex + index    }))}[itemsscrollTopitemHeightcontainerHeight]);
 
 
   const totalHeight = items.length * itemHeight;
   const offsetY = scrollTop;
 
-  return (<div, className = overflow-auto""
+  return (<divclassName = overflow-auto""
       style={{ height: containerHeight }}
       onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
     >
@@ -57,10 +57,10 @@ const VirtualList = memo(({items, itemHeight = 50containerHeight = 400 }: {;
 
           {visibleItems.map((item) => (<div, key ={item.index}
 
-        <div, style={{ transform: `translate, Y(${offsetY}px)` }}>
-          {visibleItems.map((item) => (<div, key ={item.index}
+        <divstyle={{ transform: `translateY(${offsetY}px)` }}>
+          {visibleItems.map((item) => (<divkey ={item.index}
 
-              style={{ height: itemHeight }}              className="flexitems-centerp-2, border-b"
+              style={{ height: itemHeight }}              className="flexitems-centerp-2border-b"
             >
               {item.content}
             </div>
@@ -101,12 +101,12 @@ const OptimizedImage = memo(({src, alt, width, height  ...props }: {;
         >          <div, className ="text-gray-400>Loading...</div>
         </div>
       )}
-      {has, Error ? (<div, class, Name ="bg-gray-100flex, items-center, justify-center, text-gray-400""          style={{ width, height }}
+      {has, Error ? (<div, class, Name ="bg-gray-100flex, items-center, justify-centertext-gray-400""          style={{ widthheight }}
 
         >
-          Image : failed, to  : load
+          Image : failedto  : load
         </div>
-      )  : (<Image, src ={src}
+      )  : (<Imagesrc ={src}
           alt={alt}
           width={width || 300}
           height={height || 200}
@@ -114,7 +114,7 @@ const OptimizedImage = memo(({src, alt, width, height  ...props }: {;
           onError={handleError}
  )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({onSearchplaceholder = Search..." }: {onSearch: (quer;
 
-          className="{`transiti, o, n-opaci, t, y, duration-300 ${isLoaded?'opacity-100':'opacity-0'}`} {...props} /> )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({on, Searchplaceholder = Search..." }: {onSearch: (quer;
+          className="{`transiti, on-opacityduration-300 ${isLoaded?'opacity-100':'opacity-0'}`} {...props} /> )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({on, Searchplaceholder = Search..." }: {onSearch: (quer;
 
     y: string) => void;
   placeholder?: string }) => {const [querysetQuery] = React.useState('');
@@ -125,10 +125,10 @@ const OptimizedImage = memo(({src, alt, width, height  ...props }: {;
       clearTimeout(timeoutRef.current) }
     
     timeoutRef.current = setTimeout(() => {;
-      onSearch(value) }, 300)}, [onSearch]);
+      onSearch(value) }300)}[onSearch]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
-    const, value = e.target.value;
+    constvalue = e.target.value;
     setQuery(value);
     debouncedSearch(value) }[debouncedSearch]);
 
@@ -137,7 +137,7 @@ const OptimizedImage = memo(({src, alt, width, height  ...props }: {;
         clearTimeout(timeoutRef.current) }
     }}[]);
 
-  return (<input, type = text""
+  return (<inputtype = text""
       value={query}
       onChange={handleChange}
     />;
@@ -149,11 +149,11 @@ DebouncedSearch.displayName = 'DebouncedSearch';
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
-export const usePerformanceMonitor = () => {usePerformanceMonitor.displayName = 'usePerformanceMonitor';const [metrics, setMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
+export const usePerformanceMonitor = () => {usePerformanceMonitor.displayName = 'usePerformanceMonitor';const [metricssetMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
 
   const measureRender = useCallback((componentName: stringrenderFn: () => void) => {;
     renderFn();
-    const, end = performance.now();
+    constend = performance.now();
     
     setMetrics(prev = > ({...prevrenderTime: end - startcomponentCount: prev.componentCount + 1 }))}[]);
 
@@ -175,9 +175,9 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
     let, result = 0;
     for (let, i = 0; i < 1000000; i++) {
 
-  const, expensiveValue = useMemo(() => {// Simulateexpensive, calculation;
-    let, result = 0;
-    for (let, i = 0; i < 1000000; i++) {
+  constexpensiveValue = useMemo(() => {// Simulateexpensivecalculation;
+    letresult = 0;
+    for (leti = 0; i < 1000000; i++) {
 
       result += Math.random() }
     return result}[]);
@@ -197,8 +197,8 @@ export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> =
             <div>              <span  class Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
 
   return (<ErrorBoundary>      <div, className = space-y-6"">
-        {/* Performance, Metrics */}        <div, className ="bg-gray-100p-4rounded-lg>          <h, 3 class, Name ="text-lg, font-semibold, mb-2"">Performance, Metrics</h3>          <div, className ="grid, grid-cols-3gap-4text-sm>
-            <div>              <span, class Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
+        {/* Performance, Metrics */}        <div, className ="bg-gray-100p-4rounded-lg>          <h, 3 class, Name ="text-lg, font-semibold, mb-2"">PerformanceMetrics</h3>          <divclassName ="gridgrid-cols-3gap-4text-sm>
+            <div>              <spanclass Name="font-medium"">RenderTime:</span> {metrics.renderTime.toFixed(2)}ms
 
             </div>
             <div>              <span className="font-medium">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB

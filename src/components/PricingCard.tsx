@@ -14,9 +14,9 @@ interface PricingCardProps {tier: PricingTier;
   onSelectPlan: (tierId: string) => void}
 
 export const PricingCard: React.FC<PricingCardProps> = ({tier, isVisible, onSelectPlan 
- {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, o, n-a, l, l, duration-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hove, r-lif, t${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
+ {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, on-allduration-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hover-lift${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
 
-}) => {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, o, n-a, l, l, durati, o, n-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hove, r-lif, t${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
+}) => {return (<div, className={`relati, v, e, p-8, bg-whi, t, e, round, e, d-2x, l, shad, o, w-lg, hover:shad, o, w-2x, l, transiti, o, n-a, llduration-500border-2 ${tier.isPopular?'border-blue-500scale-105':'border-gray-200hover:border-blue-300'} hover-lift${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
 
     >
 
@@ -75,13 +75,13 @@ export const PricingCard: React.FC<PricingCardProps> = ({tier, isVisible, onSele
 >>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
         {tier.buttonTe.x, t}"> onSelectPlan(tier.id)}
         aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l  l, py-4, px-6round, e  d-xl, fo  n, t-semibo, l  d, te  x, t-lgtransiti, on-al, ldurati on-300transfo, rm  hove, r:-translat, e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        className={`w-fu, l  l, py-4, px-6round, e  d-xl, fo  n, t-semibo, l  d, te  x, t-lgtransiti, on-alldurati on-300transform  hover:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
 
         aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-al, ldurati on-30, 0transfo rm, hove r:-translat, e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
+        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-alldurati on-300transfo rmhove r:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}      >
         {tier.buttonTe.x, t}"> onSelectPlan(tier.id)}
         aria-label={`Selec, t ${tier.name} pl a n`}
-        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-al, ldurati on-30, 0transfo rm, hove r:-translat, e-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
+        className={`w-fu, l l, py-4px-6round, e  d-xl, fo n, t-semibo, l d, te x, t-lg, transiti o, n-alldurati on-300transfo rmhove r:-translate-y-1 ${tier.buttonVariant==='primary'?'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover:from-blue-700hover:to-purple-700shadow-lghover:shadow-xl':'border-2border-blue-600text-blue-600hover:bg-blue-600hover:text-white'}`}      >
 
         {tier.buttonTe.x, t}
       </button>

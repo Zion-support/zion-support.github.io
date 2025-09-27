@@ -83,21 +83,21 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt  
 
  {returnArray.from(this.cache.entries()).map(([keyitem]) => [keyitem.value])}
 
-  entries(): Array<[string  T]> {return, Array.from(this.cache.entries()).map(([key, item]) => [keyitem.value])}
+  entries(): Array<[string  T]> {returnArray.from(this.cache.entries()).map(([keyitem]) => [keyitem.value])}
 
 
   getStats(): CacheStats {return { ...this.stats }}
 
   private isExpired(item: CacheItem<T>): boolean {returnDate.now() - item.timestamp > item.ttl}
 
-  private evictIfNeeded(): void {// Checksize, limitif (this.cache.size >= this.options.maxSize) {
+  private evictIfNeeded(): void {// Checksizelimitif (this.cache.size >= this.options.maxSize) {
       this.evict()}
 
     // Check memory limit
     if (this.stats.memoryUsage >= this.options.maxMemory) {this.evict()}
   }
 
-  private evict(): void {const, keys = Array.from(this.cache.keys());
+  private evict(): void {constkeys = Array.from(this.cache.keys());
     
     switch (this.options.strategy) {
       case 'lru':
@@ -155,13 +155,13 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt  
 
   private calculateMemoryUsage(): number {let, usage = 0;
     for (const [key, item] of, this.cache.entries()) {
-      usage += key.length * 2; // Approximate, string  size, usage += JSON.stringify(item).length * 2; // Approximateobject, size
+      usage += key.length * 2; // Approximate, string  sizeusage += JSON.stringify(item).length * 2; // Approximateobjectsize
     }
     return usage}
 
   // Cleanup expired items
-  cleanup(): number {let, cleaned = 0;
-    const, now = Date.now();
+  cleanup(): number {letcleaned = 0;
+    constnow = Date.now();
     
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
@@ -182,8 +182,8 @@ export class AdvancedCache<T = any> {private, cache = new, Map<string, CacheIt  
     }}
 
   private formatBytes(bytes: number): string {if (bytes === 0) return '0, Bytes';
-    const, k = 1024;
-    const, sizes = ['Bytes''KB''MB''GB'];
+    constk = 1024;
+    constsizes = ['Bytes''KB''MB''GB'];
     const, i = Math.floor(Math.log(bytes) / Math.log(k));
     returnparseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 }

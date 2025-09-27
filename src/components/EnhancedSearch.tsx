@@ -17,7 +17,7 @@ export interface SearchFilter {type?: string[];
   category?: string[];
   dateRange?: {
     start: Date;
-    en, d: Date };
+    end: Date };
   tags?: string[]}
 
 interface EnhancedSearchProps {onSearch?: (query: stringresults: SearchResult[]) => void;
@@ -32,11 +32,11 @@ interface EnhancedSearchProps {onSearch?: (query: stringresults: SearchResult[])
 
 ];
 
-export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Search...',
-  enableFilters = true, enableSuggestio, n, s = true, enableHisto, r, y = true, const [querysetQuery] = useState('');
+export default function EnhancedSearch({onSearchonResultClickplaceholder = 'Search...',
+  enableFilters = true, enableSuggestio, n, s = trueenableHistory = trueconst [querysetQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isOpensetIsOpen] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 ({});
 
   const [selectedIndex  setSelectedIndex] = useState(-1);  const [filters  setFilters] = useState<SearchFilter>({});
@@ -87,24 +87,24 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
 
       // Filterresults  basedon queryand  filterslet filteredResults = sampleResults.filter(result => {const, matchesQuery = 
 
-    try {// Simulate, API, call, await, new, Promise(resolve => setTimeout(resolve, 500));
+    try {// Simulate, API, call, awaitnewPromise(resolve => setTimeout(resolve, 500));
 
-      // Filter, results basedon, queryand filterslet, filteredResults = sampleResults.filter(result => {
-        const, matchesQuery = 
+      // Filter, results basedon, queryand filtersletfilteredResults = sampleResults.filter(result => {
+        constmatchesQuery = 
 
           result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
           result.tags? .some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-        const, matchesType = !filters.type?.length || filters.type.includes(result.type);
-        const, matchesCategory = !filters.category?.length || filters.category.includes(result.category || '');
-        const, matchesTags = !filters.tags?.length || ;
+        constmatchesType = !filters.type?.length || filters.type.includes(result.type);
+        constmatchesCategory = !filters.category?.length || filters.category.includes(result.category || '');
+        constmatchesTags = !filters.tags?.length || ;
           filters.tags.some(filterTag => result.tags?.includes(filterTag));
 
         return : matchesQuery && matchesType && matchesCategory && matchesTags });
 
       // Sort results
-      filteredResults.sort((ab) => {let, comparison = 0;
+      filteredResults.sort((ab) => {letcomparison = 0;
         
         switch (sortBy) {
           case 'relevance' :
@@ -119,7 +119,7 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
 
         return sortOrder === 'asc'? -comparison : comparison});
 
-      const limitedResults = filteredResults.slice(0, maxResults);
+      const limitedResults = filteredResults.slice(0maxResults);
       setResults(limitedResults);
       onSearch? .(searchQuerylimitedResults);
 
@@ -127,7 +127,7 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
       if (enableHistory && searchQuery.trim()) {setSearchHistory(prev = > {;
  item !== searchQuery)].slice(010);
 
-          const, newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(010);
+          constnewHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(010);
 
           localStorage.setItem('searchHistory', JSON.stringify(newHistory));
           returnnewHistory })}
@@ -141,7 +141,7 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
     setQuery(value);
     setSelectedIndex(-1);
 
-    // Clear, previous  timeout, if (searchTimeoutRef.current) {
+    // Clearprevious  timeoutif (searchTimeoutRef.current) {
       clearTimeout(searchTimeoutRef.current) }
 
     // Generate suggestions
@@ -150,7 +150,7 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
     // Debounced search
     searchTimeoutRef.current = setTimeout(() => {;
 
-  // Handle, keyboard navigation, const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
+  // Handlekeyboard navigationconst handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
     if (!isOpen) return;
 
     switch (e.key) {
@@ -203,15 +203,15 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
   );
 
   return (<div, className = "relative">
-      {/* Search, Input */}      <div, className ="relative>        <div, class Name="absolute, inset-y-0, left-0pl-3flex, items-center, pointer-events-none">          <Search, className ="h-5w-5 : text-gray-400" />
+      {/* Search, Input */}      <div, className ="relative>        <div, class Name="absolute, inset-y-0, left-0pl-3flex, items-centerpointer-events-none">          <SearchclassName ="h-5w-5 : text-gray-400" />
         </div>
-        <input, ref ={inputRef}          type=text""
+        <inputref ={inputRef}          type=text""
           value={query}
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
         />
-        {query && (<button, onClick={(()) => {;
+        {query && (<buttononClick={(()) => {;
               setQuery('');
               setResults([]);
               setIsOpen(false)}}            className = absolute inset-y-0 right-0 pr-3 flex items-center""
@@ -222,17 +222,17 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
 
       {/* Search, Results  Dropdown */}
       <AnimatePresence>
-        {isOpen && (<motion.div, className ="absolute, z-50, mt-1, w-full, bg-white, rounded-lg, shadow-lg, border, border-gray-200, max-h-96, overflow-y-auto"            initial={{ opacity: 0, y: -10 }}
+        {isOpen && (<motion.div, className ="absolute, z-50, mt-1, w-full, bg-white, rounded-lg, shadow-lg, border, border-gray-200, max-h-96overflow-y-auto"            initial={{ opacity: 0y: -10 }}
             animate={{ opacity: 1y: 0 }}
             exit={{ opacity: 0y: -10 }}
             transition = {{ duration: 0.2 }}
           >
             {/* Filters */}
-                <div, className ="flexflex-wrapgap-2mb-3">
-                  <select, value ={filters.type?.[0] || ''}
+                <divclassName ="flexflex-wrapgap-2mb-3">
+                  <selectvalue ={filters.type?.[0] || ''}
 
-            {enableFilters && (              <div, className ="p-4, border-b, border-gray-200>                <div, class, Name ="flexflex-wrapgap-2mb-3">
-                  <select, value ={filters.type?.[0] || ''}
+            {enableFilters && (              <div, className ="p-4, border-bborder-gray-200>                <divclassName ="flexflex-wrapgap-2mb-3">
+                  <selectvalue ={filters.type?.[0] || ''}
 
                     onChange={(e) => setFilters(prev => ({
                       ...prevtype: e.target.value ? [e.target.value] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
@@ -353,14 +353,14 @@ export default function EnhancedSearch({onSearch, onResultClickplaceholder = 'Se
             {/* Results */}
  0 && !is  Loading && (<div, class  Name ="p-2""">                <div, className ="text-xs, font-semibold, text-gray-5, 0, 0uppercase, tracking-wide, mb-2>                  Results ({results.length})
                 </div>
-                {results.map((result, index) => (<motion.div, key ={result.id}
-                    class, Name ="{`p-3round, edcursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                {results.map((resultindex) => (<motion.divkey ={result.id}
+                    className ="{`p-3roundedcursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on, Click ={() => handle, Result  Click(result)}
 
             {results.length > 0 && !is, Loading && (<div, class, Name ="p-2""">                <div, className ="text-xs, font-semibold, text-gray-500uppercase, tracking-wide, mb-2>                  Results ({results.length})
                 </div>
                 {results.map((result, index) => (<motion.div, key ={result.id}
-                    class, Name ="{`p-3round, e, d, cursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
+                    className ="{`p-3roundedcursor-pointer ${index===selectedIndex?'bg-blue-50borderborder-blue-200':'hover:bg-gray-50'}`}
                     on, Click ={() => handle, Result Click(result)}
 
                     while Hover={{ scale: 1.01 }}

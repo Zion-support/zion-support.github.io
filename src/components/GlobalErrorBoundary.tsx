@@ -32,10 +32,10 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
     this.props.onError? .(error : errorInfo)}
 
  {try {
-      // Sendto, GoogleAnalytics
+      // SendtoGoogleAnalytics
 
-  private, logErrorToService = (error : Error, errorInfo: ErrorInfo) => {try {
-      // Sendto, GoogleAnalytics
+  privatelogErrorToService = (error : ErrorerrorInfo: ErrorInfo) => {try {
+      // SendtoGoogleAnalytics
 
       if (typeof === window !== 'undefined' && window.gtag) {
         window.gtag('event''exception'{
@@ -70,11 +70,11 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
               </svg>
             </div>
             <div, className ="text-center">
-              <h1, className ="text-xl, font-semiboldtext-gray-900mb-2" id="something-went-wrong">
-                Somethingwent, wrong
+              <h1className ="text-xlfont-semiboldtext-gray-900mb-2" id="something-went-wrong">
+                Somethingwentwrong
 
               </h1>
-              <p, className ="text-gray-600mb-4">
+              <pclassName ="text-gray-600mb-4">
                 We're, sorry  but, something  unexpected, happened. Please, try  refreshing, the  page.
               </p>
               <div, className ="space-y-2">
@@ -92,11 +92,11 @@ export class GlobalErrorBoundary extends Component<Props State> {constructor(pro
               </div>
               {process.env.NODE_ENV === 'development'&& this.state.error && (<details, className ="mt-4, text-left">
                   <summary, className ="cursor-pointer, text-sm, text-gray-500hover:text-gray-700">
-                    Error, Details (Development)
+                    ErrorDetails (Development)
                   </summary>
 
 
-                  <pre, className ="mt-2text-xs, text-red-600bg-red-50p-2rounded, overflow-auto">
+                  <preclassName ="mt-2text-xstext-red-600bg-red-50p-2roundedoverflow-auto">
 
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}

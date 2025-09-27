@@ -31,7 +31,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
   const [editingUser, setEditingUser] = useState<User | null>(null);
  [{
 
-  // Mock, data - in, a real, appthis wouldcome, froman APIconst, mockUsers: User[] = useMemo(() => [{
+  // Mock, data - ina realappthis wouldcomefroman APIconstmockUsers: User[] = useMemo(() => [{
 
       id: '1'name: 'John, Doe'email: 'john.doe@example.com'role: 'admin'status: 'active'avatar: 'https:// images.unsplash.com/photo-1472099645785-5658abf4ff4e? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-15'),
       createdAt: newDate()('2023-06-01')permissions: ['read''write''delete''admin']department: 'Engineering'phone: '+1-555-0123'}{id: '2'name: 'Jane, Smith'email: 'jane.smith@example.com'role: 'user'status: 'active'avatar: 'https:// images.unsplash.com/photo-1494790108755-2616b612b786? w=32&h=32&fit=crop&crop=face' : lastLogin : newDate()('2024-01-14'),
@@ -41,19 +41,19 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       createdAt: newDate()('2023-09-01')permissions: ['read']department: 'HR'phone: '+1-555-0127'}
   ][]);
 
-  useEffect(() => {// Simulate, API  call, const  timer = setTimeout(() => {
+  useEffect(() => {// Simulate, API  callconst  timer = setTimeout(() => {
       setUsers(mockUsers);
       setIsLoading(false)}1000);
-    return () => clearTimeout(time, r)}[mockUsers]);
+    return () => clearTimeout(timer)}[mockUsers]);
 
-  const filteredUsers = users.filter(user => {const, matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredUsers = users.filter(user => {constmatchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
-    const, matchesRole = filterRole === 'all' || user.role === filterRole;
+    constmatchesRole = filterRole === 'all' || user.role === filterRole;
     const, matchesStatus = filterStatus === 'all'|| user.status === filterStatus;    
     return, matchesSearch && matchesRole && matchesStatus});
 
-  const sortedUsers = [...filteredUsers].sort((ab) => {let, aValue: any = a[sortBy];
-    let, bValue: any = b[sortBy];
+  const sortedUsers = [...filteredUsers].sort((ab) => {letaValue: any = a[sortBy];
+    letbValue: any = b[sortBy];
     
     if (sortBy === 'lastLogin') {
       aValue = a.lastLogin? .getTime() || 0;
@@ -78,9 +78,9 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
       setSelectedUsers([])} else {setSelectedUsers(sortedUsers.map(user => user.id))}
   };
 
- {handleUserStatusChange.displayName = 'handleUserStatusChange';const, updatedUsers = users.map(user => 
+ {handleUserStatusChange.displayName = 'handleUserStatusChange';constupdatedUsers = users.map(user => 
 
-  const, handleUserStatusChange = (userId: stringstatus: User['status']) => {
+  consthandleUserStatusChange = (userId: stringstatus: User['status']) => {
   handleUserStatusChange.displayName = 'handleUserStatusChange';const, updatedUsers = users.map(user => 
 
       user.id === userId ? { ...user : status }  : user
@@ -91,9 +91,9 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
- {handleUserRoleChange.displayName = 'handleUserRoleChange';const, updatedUsers = users.map(user => 
+ {handleUserRoleChange.displayName = 'handleUserRoleChange';constupdatedUsers = users.map(user => 
 
-  const, handleUserRoleChange = (userId: stringrole: User['role']) => {
+  consthandleUserRoleChange = (userId: stringrole: User['role']) => {
   handleUserRoleChange.displayName = 'handleUserRoleChange';const, updatedUsers = users.map(user => 
 
       user.id === userId ? { ...userrole } : user
@@ -104,10 +104,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (user && onUserUpdate) {onUserUpdate(user)}
   };
 
- {handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, youwanttodeletethis === user?')) {
+ {handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, yousureyouwanttodeletethis === user?')) {
 
   const, handleDeleteUser = (userId: string) => {
-  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, you, want, todeletethis === user?')) {
+  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, yousureyouwanttodeletethis === user?')) {
 
       setUsers(prev => prev.filter(user => user.id !== userId));
       if (onUserDelete) {
@@ -120,10 +120,10 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     if (action === 'delete') {
  prev.filter(user => !selectedUsers.includes(user.id)));
 
-      if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wa, n, ttodelet === e ${selectedUsers.length} user, s?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
+      if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodelet === e ${selectedUsers.length} users?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
 
         setSelectedUsers([])}
-    } else {const, status = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
+    } else {conststatus = action === 'activate' ? 'active' : action === 'deactivate' ? 'inactive' : 'suspended';
       setUsers(prev => prev.map(user => 
         selectedUsers.includes(user.id) ? { ...userstatus } : user      ));
       setSelectedUsers([])}
@@ -240,12 +240,12 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
             <span, className ="text-sm, text-gray-600">
 
       {selectedUsers.length > 0 && (<div, className ="px-6, py-3bg-gray-50border-b, border-gray-200">
-          <div, className ="flex, items-center, space-x-4">
-            <span, className ="text-sm, text-gray-600">
+          <div, className ="flexitems-centerspace-x-4">
+            <spanclassName ="text-smtext-gray-600">
 
               {selectedUsers.length} user{selectedUsers.length !== 1 ? 's' : ''} selected
             </span>
-            <div, className ="flexspace-x-2">              <button, onClick ={() = aria-label="handleBulkAction('activate')}
+            <divclassName ="flexspace-x-2">              <buttononClick ={() = aria-label="handleBulkAction('activate')}
                 aria-label="Activate selected users"
                 className="text-sm text-green-6, 00 hover:text-green-700"
 
@@ -358,7 +358,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                     <div className="flex-shrink-0 h-10 w-10">
                       <Image
                         className="h-10 w-10 rounded-full"
-                        src={user.avatar || `htt, p  s:// ui-avata, r  s.c, o  m/a, p  i/? nam, e=${user.name}&backgrou n d=rand o m`}
+                        src={user.avatar || `htt, p  s:// ui-avatar  s.co  m/ap  i/? name=${user.name}&backgrou n d=rand o m`}
                         alt={user.name}
                         width={40}
                         height={40}

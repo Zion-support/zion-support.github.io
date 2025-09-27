@@ -13,19 +13,18 @@ interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
 export default function AccessibilityEnhancer({enableSkipLinks = true,
   enableFocusManagement = true,
   enableScreenReaderSupport = true,
-  enableHighContrastSupport = true,
-  enableReducedMotionSupport = true
+  enableHighContrastSupport = trueenableReducedMotionSupport = true
 }: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize, accessibility features, if (enableSkipLinks) {
-      const, skipLink = createSkipLink('main', 'Skip, to, main, content');
-      document.body.insertBefore(skipLink, document.body.firstChild);
+    // Initializeaccessibility featuresif (enableSkipLinks) {
+      constskipLink = createSkipLink('main', 'Skip, tomaincontent');
+      document.body.insertBefore(skipLinkdocument.body.firstChild);
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {const, checkHighContrast = () => {
+    if (enableHighContrastSupport) {constcheckHighContrast = () => {
         setIsHighContrast(isHighContrastMode());
       };
       
@@ -35,12 +34,12 @@ export default function AccessibilityEnhancer({enableSkipLinks = true,
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       mediaQuery.addEventListener('change', checkHighContrast);
       
-      return () => {mediaQuery.removeEventListener('change', checkHighContrast);
+      return () => {mediaQuery.removeEventListener('change'checkHighContrast);
       };
     }
 
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
+    if (enableReducedMotionSupport) {constcheckReducedMotion = () => {
         setPrefersMotion(!prefersReducedMotion());
       };
       
@@ -53,10 +52,10 @@ export default function AccessibilityEnhancer({enableSkipLinks = true,
       return () => {mediaQuery.removeEventListener('change', checkReducedMotion);
       };
     }
-  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
+  }[enableSkipLinksenableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
 
   // Apply accessibility styles
-  useEffect(() => {const, root = document.documentElement;
+  useEffect(() => {constroot = document.documentElement;
     
     if (isHighContrast) {
       root.classList.add('high-contrast');

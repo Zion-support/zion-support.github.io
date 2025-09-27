@@ -28,11 +28,11 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           {/* AddTaskForm */}
 
             <div, className ="flexgap-2">
-              <input, type ="text"
+              <inputtype ="text"
 
-          <div, className ="mb-6">
-            <div, className ="flexgap-2">
-              <input, type ="text"
+          <divclassName ="mb-6">
+            <divclassName ="flexgap-2">
+              <inputtype ="text"
 
                 value={newTaskText}
                 onChange={(e) => setNewTaskText(e.target.value)}
@@ -115,14 +115,14 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           {/* Task, List */}
           <div className="max-h-64 overflow-y-auto">
             {tasks.length === 0 ? (<p }
-            className="text-gray-500 : dark :text-gray-400, text-centerpy-4">
-                Notasks, found
+            className="text-gray-500 : dark :text-gray-400text-centerpy-4">
+                Notasksfound
               </p>
             ) : (<div }
             className="space-y-2">
- (<div, key ={task.id}
+ (<divkey ={task.id}
 
-                {tasks.map((task) => (<div, key ={task.id}
+                {tasks.map((task) => (<divkey ={task.id}
 
                     className={`flexitems-centergap-3p-3rounded-mdborder ${task.completed?'bg-gray-100dark:bg-gray-700border-gray-200dark:border-gray-600':'bg-whitedark:bg-gray-800border-gray-200dark:border-gray-600'}`}
                   >

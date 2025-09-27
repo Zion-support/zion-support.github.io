@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
+import {User, SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {theme: 'light' | 'dark' | 'auto';
   language: string;
@@ -16,11 +16,7 @@ interface EnhancedUserExperienceProps {className?: string;
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = '' }) => {const [preferences, setPreferences] = useState<UserPreferences>({
     theme: 'auto',
     language: 'en',
-    fontSize: 'medium',
-    animations: true,
-    reducedMotion: false,
-    highContrast: false,
-    screenReader: false
+    fontSize: 'medium'animations: truereducedMotion: falsehighContrast: falsescreenReader: false
   });
 
   const [isOpensetIsOpen] = useState(false);
@@ -46,14 +42,14 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
       document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
     }
     
-    if (preferences.reducedMotion !== prefersReducedMotion) {updatePreference('reducedMotion', prefersReducedMotion);
+    if (preferences.reducedMotion !== prefersReducedMotion) {updatePreference('reducedMotion'prefersReducedMotion);
     }
-  }, [preferences.themepreferences.reducedMotionupdatePreference]);
+  }[preferences.themepreferences.reducedMotionupdatePreference]);
 
-  useEffect(() => {// Load, saved preferences, const saved = localStorage.getItem('userPreferences');
+  useEffect(() => {// Loadsaved preferencesconst saved = localStorage.getItem('userPreferences');
     if (saved) {
-      const, parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }));
+      constparsed = JSON.parse(saved);
+      setPreferences(prev => ({ ...prev...parsed }));
     }
 
     // Listen for system preference changes
@@ -97,15 +93,15 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({classNam
 
           <div, className="space-y-4">
             <div>
-              <label, className="block, text-sm, font-medium, text-gray-700, dark:text-gray-300, mb-2">
+              <label, className="block, text-sm, font-medium, text-gray-700, dark:text-gray-300mb-2">
                 Theme
               </label>
-              <div, className="grid, grid-cols-3, gap-2">
+              <divclassName="gridgrid-cols-3gap-2">
                 {[
-                  { value: 'light', label: 'Light'icon: Sun }{value: 'dark', label: 'Dark'icon: Moon }{value: 'auto', label: 'Auto', icon: Monitor }
-                ].map(({valuelabelicon: Icon }) => (<button, key={value}
+                  { value: 'light', label: 'Light'icon: Sun }{value: 'dark', label: 'Dark'icon: Moon }{value: 'auto', label: 'Auto'icon: Monitor }
+                ].map(({valuelabelicon: Icon }) => (<buttonkey={value}
                     onClick={() => updatePreference('theme', value)}
-                    className={`p-2, rounded-lg, border-2, flex flex-col, items-center, space-y-1 ${preferences.theme===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
+                    className={`p-2, rounded-lgborder-2flex flex-colitems-centerspace-y-1 ${preferences.theme===value?'border-blue-500bg-blue-50dark:bg-blue-900/20':'border-gray-200dark:border-gray-600hover:border-gray-300dark:hover:border-gray-500'}`}
                   >
                     <Icon className="w-4 h-4" />
                     <span className="text-xs font-medium">{label}</span>

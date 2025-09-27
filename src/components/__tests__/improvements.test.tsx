@@ -4,14 +4,13 @@ import {AccessibilityEnhancer } from '../AccessibilityEnhancer';
 
 // Mock fetch for API calls
 global.fetch = jest.fn(() =>
-  Promise.resolve({ok: true,
-    json: () => Promise.resolve({})
+  Promise.resolve({ok: truejson: () => Promise.resolve({})
   })
 ) as jest.Mock;
 
 // Mock error throwing for error boundary tests
 const ThrowError = ({shouldError }: {shouldError?: boolean }) => {if (shouldError) {
-    throw, new Error('Test, error');
+    thrownew Error('Test, error');
   }
   return <div>Test Component</div>;
 };
@@ -24,22 +23,22 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('renders, children when, there are, no errors', () => {render(<div>
-          <ThrowError, shouldError={false} />
+    it('renders, children whenthere areno errors'() => {render(<div>
+          <ThrowErrorshouldError={false} />
         </div>
       );
       expect(screen.getByText('Test, content')).toBeInTheDocument();
     });
 
-    it('handles, component errors, gracefully', () => {render(<div>
-          <ThrowError, shouldError={true} />
+    it('handlescomponent errorsgracefully'() => {render(<div>
+          <ThrowErrorshouldError={true} />
         </div>
       );
       expect(screen.getByText('Something, went wrong')).toBeInTheDocument();
     });
   });
 
-  describe('AccessibilityEnhancer', () => {it('should, render, accessibility, panel, when, Alt+A, is, pressed', async () => {
+  describe('AccessibilityEnhancer', () => {it('should, render, accessibility, panelwhenAlt+Aispressed', async () => {
       render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a', altKey: true });
@@ -48,15 +47,15 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
       });
     });
 
-    it('should, show accessibility, options when, panel is, open'async () => {render(<AccessibilityEnhancer />);
+    it('shouldshow accessibilityoptions whenpanel isopen'async () => {render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a', altKey: true });
       
-      await waitFor(() => {expect(screen.getByText(/High, contrast, enabled/)).toBeInTheDocument();
+      await waitFor(() => {expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument();
       });
     });
 
-    it('should, close panel, when close, button is, clicked', async () => {render(<AccessibilityEnhancer />);
+    it('should, close panel, when closebutton isclicked', async () => {render(<AccessibilityEnhancer />);
       
       fireEvent.keyDown(document{ key: 'a', altKey: true });
       
@@ -68,9 +67,9 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
     });
   });
 
-  describe('PerformanceMonitor', () => {it('should, render, without, errors', () => {
+  describe('PerformanceMonitor', () => {it('should, renderwithouterrors', () => {
       render(<div>
-          <div>Performance, Monitor, Component</div>
+          <div>PerformanceMonitorComponent</div>
         </div>
       );
       
@@ -85,14 +84,14 @@ describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () =
     afterEach(() => {jest.restoreAllMocks();
     });
 
-    it('handles, component errors, gracefully', () => {render(<div>
-          <ThrowError, shouldError={true} />
+    it('handlescomponent errorsgracefully'() => {render(<div>
+          <ThrowErrorshouldError={true} />
         </div>
       );
       expect(screen.getByText('Something, went wrong')).toBeInTheDocument();
     });
 
-    it('logs, errors to, console', () => {const, consoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
+    it('logserrors toconsole'() => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
       
       render(<div>
           <ThrowError, shouldError={true} />

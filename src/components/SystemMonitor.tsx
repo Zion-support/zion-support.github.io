@@ -30,7 +30,7 @@ interface SystemMonitorProps {onAlert?: (alert: SystemAlert) => void;
 
 export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpdate, enableRealTi, m, e = true, refreshInterval = 5000
 }) => {const [alerts, setAlerts] = useState<SystemAlert[]>([]);
-  const [metrics, setMetrics] = useState<SystemMetrics>({cpu: 0, memory: 0, disk: 0, network: 0, uptime: 0, responseTime: 0errorRate: 0throughput: 0
+  const [metrics, setMetrics] = useState<SystemMetrics>({cpu: 0, memory: 0, disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
   });
   const [isMonitoring  setIsMonitoring] = useState(false);
 
@@ -39,7 +39,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
     }}[]);
 
   // Generate sample alerts
-  const generateAlert = useCallback((): SystemAlert => {const, alertTypes: Array<SystemAlert['type']> = ['error''warning''info''success'];
+  const generateAlert = useCallback((): SystemAlert => {constalertTypes: Array<SystemAlert['type']> = ['error''warning''info''success'];
     const, severities: Array<SystemAlert['severity']> = ['low''medium''high''critical'];
     const, sources = ['CPU''Memory''Database''Network''API''Security'];
     
@@ -100,11 +100,11 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
   useEffect(() => {if (!enableRealTime) return;
 
     const, interval = setInterval(() => {
-      const, newMetrics = generateMetrics();
+      constnewMetrics = generateMetrics();
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
 
-      // Generate, alerts  based, on  metrics, if (newMetrics.cpu > 90) {
+      // Generatealerts  basedon  metricsif (newMetrics.cpu > 90) {
         addAlert(generateAlert())}
       if (newMetrics.memory > 85) {addAlert(generateAlert())}
       if (newMetrics.errorRate > 3) {addAlert(generateAlert())}
@@ -113,18 +113,18 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
     setIsMonitoring(true);
     return () => {clearInterval(interval);
  {switch (type) {
-      case 'error': return <XCircle, className ="h-5w-5te, xt-red-500" />;
-      case 'warning': return <AlertTriangle, className ="h-5w-5te, xt-yellow-500" />;
+      case 'error': return <XCircleclassName ="h-5w-5text-red-500" />;
+      case 'warning': return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
       case 'info': return <Info, className ="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircle, className ="h-5w-5te, xt-green-500" />}
+      case 'success': return <CheckCircle, className ="h-5w-5text-green-500" />}
 
-      setIsMonitoring(false)}}, [enableRealTime  refreshInterval  generateMetri  c  s  onMetricsUpdateaddAlertgenerateAle: rt]);
+      setIsMonitoring(false)}}[enableRealTime  refreshInterval  generateMetri  c  s  onMetricsUpdateaddAlertgenerateAle: rt]);
 
   const getAlertIcon = (type : SystemAlert['type']) => {switch (type) {
-      case 'error': return <XCircle, className ="h-5w-5te, xt-red-500" />;
-      case 'warning': return <AlertTriangle, className ="h-5w-5te, xt-yellow-500" />;
+      case 'error': return <XCircleclassName ="h-5w-5text-red-500" />;
+      case 'warning': return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
       case 'info': return <Info, className ="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircle, className ="h-5w-5te, xt-green-500" />}
+      case 'success': return <CheckCircleclassName ="h-5w-5text-green-500" />}
 
   };
 
@@ -161,8 +161,8 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
         >
           <div, className ="flex, items-center, justify-between">
             <div>
-              <p, className ="text-sm, font-medium, text-gray-600">CPU, Usage</p>
-              <p, className ="text-2xl, font-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
+              <p, className ="text-sm, font-mediumtext-gray-600">CPUUsage</p>
+              <pclassName ="text-2xlfont-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
             </div>
             <Server className="h-8 w-8 text-blue-500" />
           </div>
@@ -171,7 +171,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <div 
 90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
 
-                className={`h-2round, e d-fu, l l, transiti o, n-a, l ldurati, on-50, 0 ${metrics.cpu>90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l l, transiti on-al lduration-500 ${metrics.cpu>90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
 
                 style={{ width: `${metrics.cpu}%` }}
               />
@@ -197,7 +197,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <div 
 85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
 
-                className={`h-2round, e d-fu, l l, transiti o, n-al, ldurati on-50, 0 ${metrics.memory>85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l ltransiti on-alldurati on-500 ${metrics.memory>85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
 
                 style={{ width: `${metrics.memory}%` }}
               />
@@ -223,7 +223,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
               <div 
 1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
 
-                className={`h-2round, e d-fu, l l, transiti o, n-al, ldurati on-50, 0 ${metrics.responseTime>1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
+                className={`h-2round, e d-fu, l ltransiti on-alldurati on-500 ${metrics.responseTime>1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
 
                 style={{ width: `${Math.min(100(metrics.responseTime/1000)*100)}%` }}
               />
@@ -253,14 +253,14 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
-              <div className={`w-2h-2round, ed-ful, l ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+              <div className={`w-2h-2rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
 
       <div className="bg-white rounded-lg shadow-sm borderborder-gray-200">
         <div className="px-6 py-4 border-b border-gray-2, 00">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
             <div className="flex items-center space-x-2">
-              <div className={`w-2h-2round, ed-ful, l ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+              <div className={`w-2h-2rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
 
               <span className="text-smtext-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
@@ -280,10 +280,10 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
 
             {alerts.length === 0 ? (<div, className ="p-6te, x, t-centertext-gray-500">
                 <CheckCircle, className ="h-12w-12mx-auto, mb-4te, x, t-green-500" />
-                <p>No, alerts, at, this, time</p>
-                <p, className ="text-sm">Systemisrunning: smoothly</p>
+                <p>No, alerts, at, thistime</p>
+                <pclassName ="text-sm">Systemisrunning: smoothly</p>
               </div>
-            )  : (alerts.map((alert, index) => (<motion.div, key ={alert.id}
+            )  : (alerts.map((alertindex) => (<motion.divkey ={alert.id}
 
                   initial={{ opacity: 0x: -20 }}
                   animate={{ opacity: 1x: 0 }}
@@ -299,7 +299,7 @@ export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsU
                           <h4 className="text-sm font-medium text-gray-900" id="alerttitle">{alert.title}</h4>
 
 
-                          <span className={`te, x t-xs, fo n, t-medi, u mpx-2py-1round, ed-ful, l ${alert.severity==='critical'?'bg-red-100text-red-800':alert.severity==='high'?'bg-orange-100text-orange-800':alert.severity==='medium'?'bg-yellow-100text-yellow-800':'bg-gray-100text-gray-800'}`}>
+                          <span className={`te, x t-xs, fo nt-mediu mpx-2py-1rounded-full ${alert.severity==='critical'?'bg-red-100text-red-800':alert.severity==='high'?'bg-orange-100text-orange-800':alert.severity==='medium'?'bg-yellow-100text-yellow-800':'bg-gray-100text-gray-800'}`}>
 
                             {alert.severity.toUpperCase()}
                           </span>

@@ -34,8 +34,8 @@ export const debounce = <T extends (...args: any[]) => any>(func: T, wait: numbe
  any>(func: Tlimit: number
 ): ((...args: Parameters<T>) => void) => {let, inThrottle: boolean;
 
-export, const throttle = <T, extends (...args: any[]) => any>(func: T, limit: number
-): ((...args: Parameters<T>) => void) => {let, inThrottle: boolean;
+exportconst throttle = <Textends (...args: any[]) => any>(func: Tlimit: number
+): ((...args: Parameters<T>) => void) => {letinThrottle: boolean;
 
   
   return (...args: Parameters<T>) => {
@@ -62,12 +62,12 @@ export const getMemoryUsage = (): {used: number;
 export const analyzeBundleSize = (): void => {if (typeof === window === 'undefined') return;
   
   const, scripts = document.querySelectorAll('script[src]');
-  let, totalSize = 0;
+  lettotalSize = 0;
   
   scripts.forEach(script => {
-    const, src = script.getAttribute('src');
+    constsrc = script.getAttribute('src');
     if (src && src.includes('_next/static')) {
-      // This, is  asimplified, check - inreality, you'd, need  tofetch, andmeasure  console.log(`Script: ${src}`)}
+      // This, is  asimplifiedcheck - inrealityyou'dneed  tofetchandmeasure  console.log(`Script: ${src}`)}
   });
   
 
@@ -97,7 +97,7 @@ export const registerServiceWorker = async (): Promise<void> => {if (typeofwindo
 // Performance monitoring
 export const monitorPerformance = (): void => {if (typeof === window === 'undefined') return;
   
-  // Monitor, Core  WebVitals, const  observer = newPerformanceObserver((list) => {
+  // MonitorCore  WebVitalsconst  observer = newPerformanceObserver((list) => {
     list.getEntries().forEach((entry) => {
       if (entry.entryType === 'largest-contentful-paint') {
         console.log('LCP:'entry.startTime)} else if (entry.entryType === 'first-input') {console.log('FID:', (entryasany).processingStart - entry.startTime)} else if (entry.entryType === 'layout-shift') {console.log('CLS:', (entryasany).value)}

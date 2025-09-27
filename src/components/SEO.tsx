@@ -8,13 +8,13 @@ interface SEOProps {title?: string;
   type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({title = 'Zion, App - Advanced, Technology, Solutions',
-  description = 'Leading, technology, solutions, provider, specializing, in, AIcloud, computingweb, development, and, digital, transformation.',
+const SEO: React.FC<SEOProps> = ({title = 'Zion, App - AdvancedTechnologySolutions',
+  description = 'Leading, technology, solutions, provider, specializing, in, AIcloud, computingwebdevelopmentanddigitaltransformation.',
   keywords = ['AI, development', 'cloud, solutions', 'web, development', 'mobile, apps', 'data, analytics', 'cybersecurity', 'technology, consulting', 'Zion, App'],
   image = '/og-image.jpg',
   url = 'https://zion.app',
   type = 'website'
-}) => {// This, component is, now a, no-op, since we're, using Next.js, Head component, directly in, pages
+}) => {// Thiscomponent isnow ano-opsince we're, using Next.js, Head component, directly in, pages
   // The, SEO functionality, is handled, by the, Head component, in each, page
   return, null;
 };

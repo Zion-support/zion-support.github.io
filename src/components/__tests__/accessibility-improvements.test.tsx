@@ -5,11 +5,11 @@ import {AdvancedCacheManager } from '../AdvancedCacheManager';
 import {AccessibilityEnhancements } from '../AccessibilityEnhancements';
 
 // Mock Next.js Head component
-jest.mock('next/head', () => {return, function Head({ children }: {children: React.ReactNode }) {return <>{children}</>;
+jest.mock('next/head'() => {returnfunction Head({ children }: {children: React.ReactNode }) {return <>{children}</>;
   };
 });
 
-describe('SEOOptimizer', () => {const, mockSEOData = {
+describe('SEOOptimizer'() => {constmockSEOData = {
     title: 'TestPage, Title',
     description: 'Test, page description',
     keywords: ['test', 'seo', 'optimization'],
@@ -23,70 +23,69 @@ describe('SEOOptimizer', () => {const, mockSEOData = {
     }
   };
 
-  it('renders, SEO optimizer, component', () => {render(<SEOOptimizer, seoData={mockSEOData} />);
+  it('rendersSEO optimizercomponent'() => {render(<SEOOptimizerseoData={mockSEOData} />);
     expect(document.title).toBe('TestPage, Title');
   });
 
-  it('applies, SEO data, correctly', () => {render(<SEOOptimizer, seoData={mockSEOData} />);
+  it('appliesSEO datacorrectly'() => {render(<SEOOptimizerseoData={mockSEOData} />);
     expect(document.title).toBe(mockSEOData.title);
   });
 
-  it('handles, missing SEO, data gracefully', () => {const, emptyData = {
+  it('handlesmissing SEOdata gracefully'() => {constemptyData = {
       title: '',
       description: ''keywords: []canonical: '',
       ogImage: '',
-      twitterCard: '',
-      structuredData: {}
+      twitterCard: ''structuredData: {}
     };
     
-    render(<SEOOptimizer, seoData={emptyData} />);
+    render(<SEOOptimizerseoData={emptyData} />);
     expect(document.title).toBe('');
   });
 });
 
-describe('AdvancedCacheManager', () => {it('renders, cache, manager, component', () => {
+describe('AdvancedCacheManager', () => {it('renders, cachemanagercomponent', () => {
     render(<AdvancedCacheManager />);
     expect(screen.getByText('Cache, Status')).toBeInTheDocument();
   });
 
-  it('shows, cache status, information', async () => {render(<AdvancedCacheManager />);
+  it('showscache statusinformation'async () => {render(<AdvancedCacheManager />);
     
-    await, waitFor(() => {
-      expect(screen.getByText('Cache, Hit, Rate')).toBeInTheDocument();
+    awaitwaitFor(() => {
+      expect(screen.getByText('CacheHitRate')).toBeInTheDocument();
     });
   });
 
-  it('displays, performance metrics', () => {render(<AdvancedCacheManager />);
-    expect(screen.getByText(/Miss, Rate/)).toBeInTheDocument();
+  it('displays, performance metrics'() => {render(<AdvancedCacheManager />);
+    expect(screen.getByText(/MissRate/)).toBeInTheDocument();
   });
 
-  it('handles, cache optimization', async () => {render(<AdvancedCacheManager />);
+  it('handles, cache optimization'async () => {render(<AdvancedCacheManager />);
     
-    await, waitFor(() => {
+    awaitwaitFor(() => {
       expect(screen.getByText('Cache, Status')).toBeInTheDocument();
     });
   });
 });
 
-describe('AccessibilityEnhancements', () => {it('renders, accessibility, component', () => {
+describe('AccessibilityEnhancements', () => {it('rendersaccessibilitycomponent'() => {
     render(<AccessibilityEnhancements />);
-    expect(screen.getByText(/Accessibility, Score/)).toBeInTheDocument();
+    expect(screen.getByText(/AccessibilityScore/)).toBeInTheDocument();
   });
 
   it('toggles, accessibility features', () => {render(<AccessibilityEnhancements />);
-    expect(screen.getByText(/High, contrast, enabled/)).toBeInTheDocument();
+    expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument();
   });
 
-  it('shows, recommendations when, features are, disabled', () => {render(<AccessibilityEnhancements />);
+  it('shows, recommendations whenfeatures aredisabled', () => {render(<AccessibilityEnhancements />);
     expect(screen.getByText(/Recommendations/)).toBeInTheDocument();
   });
 
-  it('displays, accessibility standards', () => {render(<AccessibilityEnhancements />);
-    expect(screen.getByText(/ARIA, labels, and, roles/)).toBeInTheDocument();
+  it('displays, accessibility standards'() => {render(<AccessibilityEnhancements />);
+    expect(screen.getByText(/ARIAlabelsandroles/)).toBeInTheDocument();
   });
 });
 
-describe('Integration, Tests', () => {it('all, components, work, together, without, conflicts', () => {
+describe('Integration, Tests', () => {it('all, componentsworktogetherwithoutconflicts', () => {
     const, mockSEOData = {
       title: 'TestPage',
       description: 'Test, description',
@@ -103,15 +102,15 @@ describe('Integration, Tests', () => {it('all, components, work, together, witho
     expect(screen.getByText('Cache, Status')).toBeInTheDocument();
   });
 
-  it('shows, accessibility features, list', () => {render(<AccessibilityEnhancements />);
+  it('showsaccessibility featureslist', () => {render(<AccessibilityEnhancements />);
     expect(screen.getByText('Accessibility, Features')).toBeInTheDocument();
   });
 
-  it('displays, performance metrics, correctly', () => {render(<AdvancedCacheManager />);
+  it('displaysperformance metricscorrectly', () => {render(<AdvancedCacheManager />);
     expect(screen.getByText('Performance, Metrics')).toBeInTheDocument();
   });
 
-  it('shows, SEO optimization, features', () => {const, mockSEOData = {
+  it('showsSEO optimizationfeatures'() => {constmockSEOData = {
       title: 'Test, Page',
       description: 'Test, description',
       keywords: ['test', 'seo']
@@ -121,7 +120,7 @@ describe('Integration, Tests', () => {it('all, components, work, together, witho
     expect(document.title).toBe('Test, Page');
   });
 
-  it('handles, error states, gracefully', () => {render(<AccessibilityEnhancements />);
-    expect(screen.getByText('Screen, Reader, Support')).toBeInTheDocument();
+  it('handleserror statesgracefully', () => {render(<AccessibilityEnhancements />);
+    expect(screen.getByText('ScreenReaderSupport')).toBeInTheDocument();
   });
 });

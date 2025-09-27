@@ -46,8 +46,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 					<svg  className ="w-10, h-10, text-green-6, 0, 0" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
 						<path  strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5  13, l  4, 4L  1, 9, 7" />					</svg>
 				</div>
-				<h3  className ="text-2xl  font-bold  text-green-8, 0, 0, mb-4" id="message-sent-successfully">Message  Sent  Successfully!</h3>
-				<p  className ="text-green-6, 0, 0mb-6text-lg">
+				<h3  className ="text-2xl  font-bold  text-green-8, 00mb-4" id="message-sent-successfully">Message  Sent  Successfully!</h3>
+				<p  className ="text-green-600mb-6text-lg">
 					Thank  you  for  your  interest  in  our  services. We&apos;llget  backto youwithin  24hours witha  detailedproposal.
 
 	if (submitStatus === 'success') {return (<div, className={`bg-gre, e, n-50, bord, e, r, bord, e, r-gre, e, n-200, round, e, d-2, x, l, p-8, te, xt-center ${className}`}>
@@ -57,11 +57,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 				</div>
 				<h3, className ="text-2xl, font-bold, text-green-800, mb-4" id="message-sent-successfully">Message, Sent Successfully!</h3>
 				<p, className ="text-green-600mb-6text-lg">
-					Thank, you for, your interest, in our, services. We&apos;ll, get back, to youwithin, 24hours witha, detailedproposal.
+					Thank, you for, your interest, in our, services. We&apos;ll, get backto youwithin24hours withadetailedproposal.
 
 				</p>
 
-				<button, onClick ={() = aria-label="setSubmitStatus('idle')}
+				<buttononClick ={() = aria-label="setSubmitStatus('idle')}
 					aria-label="Send another message"
 					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 
@@ -86,7 +86,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 					<h3, className ="text-3, x, l, font-bold, text-gray-800, mb-3" id="start-your-project">Start, Your, Project</h3>
 					<p, className ="text-gray-600, text-lg">
 
-						Tell, us, about, your, project, and, we&apos;ll, provide, a, detailed, proposal, tailored, to, your, needs.
+						Tell, us, about, your, project, and, we&apos;ll, provide, a, detailed, proposal, tailored, to, yourneeds.
 
 					</p>
 				</div>
@@ -170,7 +170,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
 						>
 							<option value="">Select a service</option>
-							{services.map((service) => (<option, key ={service} value={service}>
+							{services.map((service) => (<optionkey ={service} value={service}>
 									{service}								</option>
 							))}
 						</select>
@@ -188,7 +188,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
 						>
 							<option value="">Select budget</option>
-							{budgets.map((budget) => (<option, key ={budget} value={budget}>
+							{budgets.map((budget) => (<optionkey ={budget} value={budget}>
 									{budget}								</option>
 							))}
 						</select>
@@ -206,7 +206,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = tru
 							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
 						>
 							<option value="">Select timeline</option>
-							{timelines.map((timeline) => (<option, key ={timeline} value={timeline}>
+							{timelines.map((timeline) => (<optionkey ={timeline} value={timeline}>
 									{timeline}								</option>
 							))}
 						</select>

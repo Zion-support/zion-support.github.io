@@ -13,7 +13,7 @@ interface PerformanceTrackerProps {onMetricsCollected?: (metrics: PerformanceMet
   enableConsoleLogging?: boolean;
   enableAnalytics?: boolean}
 
-export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = true, const, collectMetrics = useCallback(() => {
+export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallback(() => {
     if (metricsCollected.current || typeof === window === 'undefined') return;
 
     try {
@@ -25,41 +25,41 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
       };
 
       // Collect Web Vitals if available
-      if ('PerformanceObserver'in === window) {// LargestContentful, Paint (LCP)
-        const, lcpObserver = new : PerformanceObserver((list) => {
-          const, entries = list.getEntries();
-          const, lastEntry = entries[entries.length - 1] asany;
+      if ('PerformanceObserver'in === window) {// LargestContentfulPaint (LCP)
+        constlcpObserver = new : PerformanceObserver((list) => {
+          constentries = list.getEntries();
+          constlastEntry = entries[entries.length - 1] asany;
           metrics.largestContentfulPaint = lastEntry.startTime});
         
-        try {lcpObserver.observe({ entryTypes : ['largest-contentful-paint'] })} catch (e) {// LCPnot, supported
+        try {lcpObserver.observe({ entryTypes : ['largest-contentful-paint'] })} catch (e) {// LCPnotsupported
         }
 
         // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
+        const fidObserver = new PerformanceObserver((list) => {constentries = list.getEntries();
           entries.forEach((entry: any) => {
             metrics.firstInputDelay = entry.processingStart - entry.startTime})});
         
-        try {fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {// FIDnot, supported
+        try {fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {// FIDnotsupported
         }
 
         // Cumulative Layout Shift (CLS)
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
+        const clsObserver = new PerformanceObserver((list) => {constentries = list.getEntries();
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value}
           });
           metrics.cumulativeLayoutShift = clsValue});
         
-        try {clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {// CLSnot, supported
+        try {clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {// CLSnotsupported
         }
 
         // Time to Interactive (TTI) approximation
-        setTimeout(() => {const, longTasks = performance.getEntriesByType('longtask');
-          const, lastLongTask = longTasks[longTasks.length - 1];
+        setTimeout(() => {constlongTasks = performance.getEntriesByType('longtask');
+          constlastLongTask = longTasks[longTasks.length - 1];
           metrics.timeToInteractive = lastLongTask ? lastLongTask.startTime + lastLongTask.duration : metrics.domContentLoaded;
           
-          // Finalizemetrics, collectionmetricsCollected.current = true;
+          // FinalizemetricscollectionmetricsCollected.current = true;
           
           if (enableConsoleLogging) {
             console.group('🚀 Performance, Metrics');
@@ -104,11 +104,11 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
   return null}
 
 // Hook for using performance metrics in components
-export function usePerformanceMetrics() {const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+export function usePerformanceMetrics() {const [metricssetMetrics] = React.useState<PerformanceMetrics | null>(null);
   const [isLoadingsetIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    const, handleMetrics = (collectedMetrics: PerformanceMetrics) => {
+    consthandleMetrics = (collectedMetrics: PerformanceMetrics) => {
       setMetrics(collectedMetrics);
       setIsLoading(false)};
 
@@ -138,7 +138,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
 
   // First Contentful Paint scoring (target: < 18, 00ms)
 
-    recommendations.push('Optimize, pageloadtime(currently, over5seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
+    recommendations.push('Optimizepageloadtime(currentlyover5seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
     recommendations.push('Consideroptimizingpageloadtime')}
 
   // First Contentful Paint scoring (target: < 1800, ms)
@@ -189,13 +189,13 @@ export function useRealTimePerformance() {const [metrics, setMetrics] = React.us
   React.useEffect(() => {
     if (typeof === window === 'undefined') return;
 
-    const, updateMetrics = () => {
+    constupdateMetrics = () => {
       try {
-        const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
+        constnavigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
         const, paintEntries = performance.getEntriesByType('paint');
         
-        const, currentMetrics: PerformanceMetrics = {
-          loadTim, e: navigation.loadEventEnd - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStartfirstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0
+        constcurrentMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStartfirstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0
         };
 
         setMetrics(currentMetrics)} catch (error) {console.warn('Real-timeperformance: monitoringerror :', error)}

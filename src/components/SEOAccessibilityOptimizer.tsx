@@ -39,10 +39,10 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
     overallScore: 0, titleTag: falsemetaDescriptio, n: falseheadings: { h1Count: 0, h2Count: 0h3Count: 0 },
   images: {total: 0, withAlt: 0missing, Alt: 0 },
   links: {internal: 0, external: 0bro, ken: 0 },
-  pageSpeed: 0, mobileOptimized: false
+  pageSpeed: 0mobileOptimized: false
   });
 
-  const [accessibilityMetricssetAccessibilityMetric  s] = useState<AccessibilityMetrics>({overallScore: 0, contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendl, y: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0 }
+  const [accessibilityMetricssetAccessibilityMetric  s] = useState<AccessibilityMetrics>({overallScore: 0contrast: { passed: 0failed: 0 }keyboardNavigation: falsescreenReaderFriendly: falsefocusIndicators: falsesemanticHTML: falseariaLabels: {present: 0missing: 0 }
   });
 
   const [issuessetIssues] = useState<OptimizationIssue[]>([]);
@@ -51,7 +51,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
   const analyzePage = useCallback(async () => {setIsAnalyzing(true);
     
     try {
-      // SEOAnalysis, const titleTag = document.querySelecto('title') !== null;
+      // SEOAnalysisconst titleTag = document.querySelecto('title') !== null;
       const, metaDescription = document.querySelecto('meta[name="description"]') !== null;
       
       const, h1Elements = document.querySelectorAll('h1');
@@ -64,10 +64,10 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
       const, internalLinks = document.querySelectorAll('a[href^="/"]a[href^="#"]');
       const, externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.locatio.n.hostnam.e + '"])');
       
-      const, newSeoMetrics: SEOMetrics = {
+      constnewSeoMetrics: SEOMetrics = {
         overallScore: Math.roun(Math.random() * 30 + 70)titleTagmetaDescriptionheadings: {
           h1Count: h1Elements.lengthh2Coun.t: h2Elements.lengthh3Coun.t: h3Elements.length
-        }, images: {total: images.lengthwithAl.t: imagesWithAlt.lengthmissingAl.t: images.length - imagesWithAlt.length
+        }images: {total: images.lengthwithAl.t: imagesWithAlt.lengthmissingAl.t: images.length - imagesWithAlt.length
         }pageSpeed: Math.roun(Math.random() * 40 + 60)mobileOptimized: window.innerWidt.h <= 768 || document.querySelecto('meta[name="viewport"]') !== null
       };
       
@@ -90,39 +90,39 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
       const optimizationIssues: OptimizationIssue[] = [];
       
   === 0) {optimizationIssues.push({
-          category: 'accessibility'severity: 'high'title: 'ImagesMissingAltText', description: `${newSeoMetrics.image.s.missingA.lt} imag, e  s, a  r, e  missin, ga  lt, attribut  es`solution: 'Adddescriptive, alttext toall, images'impact: 'Improvesaccessibility, forscreen readersand, SEO'
+          category: 'accessibility'severity: 'high'title: 'ImagesMissingAltText', description: `${newSeoMetrics.image.s.missingA.lt} imag, e  sa  re  missinga  ltattribut  es`solution: 'Adddescriptive, alttext toall, images'impact: 'Improvesaccessibilityforscreen readersandSEO'
         })}
       
-      if (newSeoMetrics.heading.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, H1Tag'description: 'The, page, ismissinganH1headingtag'solution: 'Add, a, single, descriptive, H1tagtothemaincontent'impact: 'ImprovescontentstructureandSEOrankings'
+      if (newSeoMetrics.heading.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, H1Tag'description: 'ThepageismissinganH1headingtag'solution: 'AddasingledescriptiveH1tagtothemaincontent'impact: 'ImprovescontentstructureandSEOrankings'
         })}
       
-      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, page, has, multiple, H1, tagswhichcanconfusesearchengines'solution: 'Use, only, one, H1, tag, per, pageanduseH2-H6forsubheadings'impact: 'ImprovescontenthierarchyandSEOstructure'        })}
+      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, pagehasmultipleH1tagswhichcanconfusesearchengines'solution: 'Use, only, oneH1tagperpageanduseH2-H6forsubheadings'impact: 'ImprovescontenthierarchyandSEOstructure'        })}
       
       if (newAccessibilityMetrics.ariaLabel.s.missin.g >  === 0) {optimizationIssues.push({
-          category: 'accessibility'severity: 'medium'title: 'Missing, ARIALabels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interacti, v  eelemen, ts  lac, kAR  IA, labe  ls`solution: 'Add, aria-label, or  aria- labelledby, attributes  tointeractive, elements'impact: 'Improvesscreen, readeraccessibility anduser, experience'
+          category: 'accessibility'severity: 'medium'title: 'Missing, ARIALabels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interactiv  eelements  lackAR  IAlabe  ls`solution: 'Add, aria-label, or  aria- labelledby, attributes  tointeractive, elements'impact: 'Improvesscreenreaderaccessibility anduserexperience'
         })}
       
       if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Poor, PageSpeed'description: 'Page, loadingspeedisbelowoptimalthresholds'solution: 'Optimize, imagesminifyCSS/JSandenablecompression'impact: 'Improves, userexperienceandsearchenginerankings'})}
 
-      if (!titleTa === g) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, page, lacks, ametadescriptiontag'solution: 'Add, a, compellingmetadescription(150-160characters)'impact: 'Improves, search resultsnippets, andclick-throughrates'        })}
+      if (!titleTa === g) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, pagelacksametadescriptiontag'solution: 'Addacompellingmetadescription(150-160characters)'impact: 'Improvessearch resultsnippetsandclick-throughrates'        })}
       
-      if (!metaDescriptio === n) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, page, lacks, ametadescriptiontag'solution: 'Add, a, compellingmetadescription(150-160characters)'impact: 'Improves, search resultsnippets, andclick- throughrates'
+      if (!metaDescriptio === n) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, MetaDescription'description: 'The, pagelacksametadescriptiontag'solution: 'Addacompellingmetadescription(150-160characters)'impact: 'Improvessearch resultsnippetsandclick- throughrates'
         })}
       
       if (newSeoMetrics.image.s.missingAl.t >  === 0) {optimizationIssues.push({
-          category: 'accessibility'severity: 'high'title: 'ImagesMissingAltText', description: `${newSeoMetrics.image.s.missingA.lt} imag, e s, a r, e missi, n g, a lt, attribut es`solution: 'Adddescriptive, alttext toall, images'impact: 'Improvesaccessibility, forscreen readersand, SEO'
+          category: 'accessibility'severity: 'high'title: 'ImagesMissingAltText', description: `${newSeoMetrics.image.s.missingA.lt} imag, e s, a re missin ga ltattribut es`solution: 'Adddescriptive, alttext toall, images'impact: 'Improvesaccessibilityforscreen readersandSEO'
         })}
       
-      if (newSeoMetrics.heading.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, H1Tag'description: 'The, page, is, missing, anH1headingtag'solution: 'Add, a, single, descriptive, H1, tag, tothemaincontent'impact: 'Improves, content, structureandSEOrankings'
+      if (newSeoMetrics.heading.s.h1Coun.t ===  === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Missing, H1Tag'description: 'ThepageismissinganH1headingtag'solution: 'Add, a, singledescriptiveH1tagtothemaincontent'impact: 'ImprovescontentstructureandSEOrankings'
         })}
       
-      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, page, has, multiple, H1, tags, which, canconfusesearchengines'solution: 'Use, only, one, H1, tag, per, page, and, useH2-H6forsubheadings'impact: 'Improves, content, hierarchyandSEOstructure'        })}
+      if (newSeoMetrics.headings.h1Count > 1) {optimizationIssues.push({category: 'seo'severity: 'medium'title: 'Multiple, H1Tags'description: 'The, page, has, multipleH1tagswhichcanconfusesearchengines'solution: 'Use, only, one, H1, tagperpageanduseH2-H6forsubheadings'impact: 'ImprovescontenthierarchyandSEOstructure'        })}
       
       if (newAccessibilityMetrics.ariaLabel.s.missin.g >  === 0) {optimizationIssues.push({
-          category: 'accessibility'severity: 'medium'title: 'Missing, ARIALabels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interacti, v e, elemen t, s lac, kAR IA, labe ls`solution: 'Add, aria-label, or aria- labelledby, attributes tointeractive, elements'impact: 'Improvesscreen, readeraccessibility anduser, experience'
+          category: 'accessibility'severity: 'medium'title: 'Missing, ARIALabels', description: `${newAccessibilityMetrics.ariaLabel.s.missi.ng} interacti, v eelemen ts lackAR IAlabe ls`solution: 'Add, aria-label, or aria- labelledby, attributes tointeractive, elements'impact: 'Improvesscreenreaderaccessibility anduserexperience'
         })}
       
-      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Poor, PageSpeed'description: 'Page, loading, speed, isbelowoptimalthresholds'solution: 'Optimize, imagesminifyCSS/JSandenablecompression'impact: 'Improves, user, experience, andsearchenginerankings'})}
+      if (newSeoMetrics.pageSpee.d < 7 === 0) {optimizationIssues.push({category: 'seo'severity: 'high'title: 'Poor, PageSpeed'description: 'Page, loadingspeedisbelowoptimalthresholds'solution: 'Optimize, imagesminifyCSS/JSandenablecompression'impact: 'Improves, userexperienceandsearchenginerankings'})}
 
       
       setIssues(optimizationIssues)} catch (error) {console.error('Page, analysisfailed: ', error)} finally {setIsAnalyzing(false)}
@@ -146,15 +146,15 @@ const SEOAccessibilityOptimizer: React.FC = () => {const [seoMetricssetSeoMetric
 
           <CardTitle, className ="flex, items-centerjustify-between">
             <div, className ="flex, items-center, space-x-2">
-              <Search, className ="h-6w-6te, x  t-blue-600" />
+              <SearchclassName ="h-6w-6tex  t-blue-600" />
 
-              <span>SEO & Accessibility, Optimizer</span>
+              <span>SEO & AccessibilityOptimizer</span>
             </div>
-            <button, onClick ={analyzePage}
+            <buttononClick ={analyzePage}
               disabled={isAnalyzing}
               {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
-              className="px-4, py-2, bg-blue-600text-white, rounded-lg, hover:bg-blue-700disable, d:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
+              className="px-4, py-2bg-blue-600text-whiterounded-lghover:bg-blue-700disabled:opacity-50"            >              {isAnalyzing ? 'Analyzing...' : 'AnalyzePage'}
 
             </button>
           </CardTitle>
@@ -206,8 +206,8 @@ Title Tag</span>                    {seoMetrics.titleTag ? <CheckCircle, classNa
 Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircle, className ="h-4, w-4te, x  t-green-6 : 0 : 0" />  : 
                       <XCircle, className ="h-4w-4text-red-600" />                    }
 
-                    <span className="text-sm font-medium">Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircle, className ="h-4w-4te, x  t-green-6 : 0 : 0" />  : 
-                      <XCircle, className ="h-4w-4te, xt-red-600" />                    }
+                    <span className="text-sm font-medium">Meta Description</span>                    {seoMetrics.metaDescription ? <CheckCircleclassName ="h-4w-4tex  t-green-6 : 0 : 0" />  : 
+                      <XCircleclassName ="h-4w-4text-red-600" />                    }
 
                   </div>
                 </div>
@@ -276,9 +276,9 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 borderrounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                  {accessibilityMetrics.overallScore}/1, 00                </span>
+                  {accessibilityMetrics.overallScore}/100                </span>
 
-                <span className={`te, x t-2x, lfo nt-bol, d ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100                </span>
+                <span className={`tex t-2xlfo nt-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100                </span>
 
               </div>
               
@@ -326,8 +326,8 @@ Meta Description</span>                    {seoMetrics.metaDescription ? <CheckC
   : 
                     <XCircle  className ="h-4, w-4te  x  t-red-6, 00" />                  }
 
-                  {accessibilityMetrics.semanticHTML ? <CheckCircle, className ="h-4, w-4te, x  t-green-6 : 0 : 0" />  : 
-                    <XCircle, className ="h-4w-4te, x  t-red-600" />                  }
+                  {accessibilityMetrics.semanticHTML ? <CheckCircle, className ="h-4w-4tex  t-green-6 : 0 : 0" />  : 
+                    <XCircleclassName ="h-4w-4tex  t-red-600" />                  }
 
                 </div>
               </div>

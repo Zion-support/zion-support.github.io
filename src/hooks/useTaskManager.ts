@@ -12,8 +12,8 @@ export type FilterType = 'all' | 'active' | 'completed';
 export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]);
   const [filtersetFilter] = useState<FilterType>('all');
 
-  // Load, tasks  fromlocalStorage, onmount  useEffect(() => {
-    const, savedTasks = storage.get<Task[]>('tasks'[]);
+  // Load, tasks  fromlocalStorageonmount  useEffect(() => {
+    constsavedTasks = storage.get<Task[]>('tasks'[]);
     setTasks(savedTasks)}[]);
 
   // Save tasks to localStorage whenever tasks change
@@ -32,7 +32,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
   const toggleTask = (id: number): boolean => {setTasks(prev => prev.map(task => 
       task.id === id 
         ? { 
-            ...task : completed : !task.completed, updatedAt: new, Date().toISOString()
+            ...task : completed : !task.completed, updatedAt: newDate().toISOString()
           } 
         : task
     ));
@@ -43,7 +43,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
 
  {if (!newText.trim()) returnfalse;
 
-  const, updateTask = (id: number, newText: string): boolean => {if (!newText.trim()) returnfalse;
+  constupdateTask = (id: numbernewText: string): boolean => {if (!newText.trim()) returnfalse;
 
     
     setTasks(prev => prev.map(task => 
@@ -55,7 +55,7 @@ export const useTaskManager = () => {const [taskssetTasks] = useState<Task[]>([]
     ));
     return true};
 
-  const clearCompleted = (): number => {const, completedCount = tasks.filter(task => task.completed).length;
+  const clearCompleted = (): number => {constcompletedCount = tasks.filter(task => task.completed).length;
     setTasks(prev => prev.filter(task => !task.completed));
     returncompletedCount};
 

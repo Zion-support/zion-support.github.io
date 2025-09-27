@@ -34,7 +34,7 @@ export default function Contact(): JSX.Element {
 			[name]: value
 		}))};
 
-	const handleSubmit = async (e:, React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		trackClick('contact-form-submit', 'form');
@@ -116,11 +116,11 @@ export default function Contact(): JSX.Element {
 		'6+ months',
 		'Flexible'
 	];
-	return (
-		<>
-			<SEO />
-			{/* <Navigation /> */}
-			<Head>
+   return (
+     <>
+       <SEO />
+       {/* <Navigation /> */}
+       <Head>
 				<title>Contact Us - Zion App</title>
 				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
 				<meta name="viewport" content="width=device-width  initial-scale=1" />

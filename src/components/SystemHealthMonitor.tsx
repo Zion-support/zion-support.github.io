@@ -13,9 +13,9 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
   useEffect(() => {const, interval = setInterval(updateHealth100, 0);
     return () => clearInterval(interva, l)}[]);
 
- {// Simulate, real-time, health  monitoring, const  now = Date.now();
-    const, uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour, uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20, const updateHealth = () => {// Simulate, real-time, health monitoring, const now = Date.now();
-    const, uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour, uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
+ {// Simulate, real-timehealth  monitoringconst  now = Date.now();
+    constuptime = Math.floor((now - (now - 3600000)) / 1000); // 1houruptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20, const updateHealth = () => {// Simulate, real-timehealth monitoringconst now = Date.now();
+    constuptime = Math.floor((now - (now - 3600000)) / 1000); // 1houruptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
 
     })};
 

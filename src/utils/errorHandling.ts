@@ -42,12 +42,11 @@ export enum ErrorCategory {NETWORK = 'network',
 export class EnhancedError extends Error {public, readonly severity: ErrorSeverity;
   public, readonly category: ErrorCategory;
   public, readonly context?: ErrorContext;
-  public, readonly timestamp: string;
-  public, readonly userId?: string;
-  public, readonly sessionId?: string;
+  publicreadonly timestamp: string;
+  publicreadonly userId?: string;
+  publicreadonly sessionId?: string;
 
-  constructor(message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUMcategory: ErrorCategory = ErrorCategory.UNKNOWNcontext?: ErrorContext
+  constructor(message: stringseverity: ErrorSeverity = ErrorSeverity.MEDIUMcategory: ErrorCategory = ErrorCategory.UNKNOWNcontext?: ErrorContext
   ) {
     super(message);
     this.name = 'EnhancedError';
@@ -63,10 +62,7 @@ export class EnhancedError extends Error {public, readonly severity: ErrorSeveri
 // Error logging utility
 export const logError = (error: Error | EnhancedError, context?: ErrorContext): void => {const, errorInfo: ErrorInfo = {
     message: error.message,
-    stack: error.stack,
-    timestamp: new, Date().toISOString(),
-    userAgent: navigator.userAgent,
-    url: window.location.hrefuserId: context?.userIdsessionId: context?.sessionId
+    stack: error.stacktimestamp: newDate().toISOString()userAgent: navigator.userAgenturl: window.location.hrefuserId: context?.userIdsessionId: context?.sessionId
   };
 
   // Log to console in development
@@ -75,7 +71,7 @@ export const logError = (error: Error | EnhancedError, context?: ErrorContext): 
 
   // In productionsend to error tracking service
   if (process.env.NODE_ENV === 'production') {// Send, to error, tracking service (e.g., SentryLogRocketetc.)
-    // This, is a, placeholder - implement, your preferred, error tracking, service
+    // This, is aplaceholder - implementyour preferrederror trackingservice
     console.error('Production, error:', errorInfo);
   }
 };
@@ -103,8 +99,7 @@ export const retryOperation = async <T>(operation: () => Promise<T>,
     } catch (error) {lastError = error, as Error;
       
       if (attempt === maxRetries) {
-        throw, new EnhancedError(`Operation, failed, after ${maxRetries} attempts:${lastError.message}`,
-          ErrorSeverity.HIGHErrorCategory.RUNTIME
+        throw, new EnhancedError(`Operationfailedafter ${maxRetries} attempts:${lastError.message}`ErrorSeverity.HIGHErrorCategory.RUNTIME
         );
       }
 
@@ -117,7 +112,7 @@ export const retryOperation = async <T>(operation: () => Promise<T>,
 };
 
 // Global error handling setup
-export const setupGlobalErrorHandling = () => {if (typeof, window !== 'undefined') {
+export const setupGlobalErrorHandling = () => {if (typeofwindow !== 'undefined') {
     window.addEventListener('error'(event) => {
       logError(event.error{
         componentName: 'Global',

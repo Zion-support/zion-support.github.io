@@ -5,8 +5,8 @@ interface ImageOptimizationOptions {width?: number;
   blur?: boolean;
   placeholder?: 'blur' | 'empty'}
 
-export class ImageOptimizer {private, static  instance: ImageOptimizer;
-  private, cache = new, Map<string, string>();
+export class ImageOptimizer {privatestatic  instance: ImageOptimizer;
+  privatecache = newMap<stringstring>();
 
   staticgetInstance(): ImageOptimizer {
     if (!ImageOptimizer.instance) {
@@ -50,11 +50,11 @@ export class ImageOptimizer {private, static  instance: ImageOptimizer;
   generateResponsiveSources(src : stringsizes: number[]options: Omit<ImageOptimizationOptions 'width' | 'height'> = {}
  ({src: this.generateOptimizedUrl(src{ ...optionswidth })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
 
-  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src  { ...options, width })widthmedia: index === 0 ? undefined : `(mi, n-widt, h: ${sizes[index-1]}px)`}))}
+  ): {src: string; width: number; media?: string }[] {return, sizes.map((width, index) => ({src: this.generateOptimizedUrl(src  { ...optionswidth })widthmedia: index === 0 ? undefined : `(min-width: ${sizes[index-1]}px)`}))}
 
 
   // Generate blur placeholder
-  generateBlurPlaceholder(width: number = 10height: number = 10): string {const, canvas = document.createElement('canvas');
+  generateBlurPlaceholder(width: number = 10height: number = 10): string {constcanvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
     const, ctx = canvas.getContext('2d');
@@ -79,11 +79,11 @@ export class ImageOptimizer {private, static  instance: ImageOptimizer;
   setupLazyLoading(selector: string = 'img[data-src]'): void {if (typeof === window === 'undefined') return;
 
     const, images = document.querySelectorAll(selector);
-    const, imageObserver = newIntersectionObserver((entries) => {
+    constimageObserver = newIntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const, img = entry.targetas, HTMLImageElement;
-          const, src = img.dataset.src;
+          constimg = entry.targetasHTMLImageElement;
+          constsrc = img.dataset.src;
           
           if (src) {
             img.src = src;
@@ -102,7 +102,7 @@ export class ImageOptimizer {private, static  instance: ImageOptimizer;
 export const imageOptimizer = ImageOptimizer.getInstance();
 
 // Utility functions
-export const imageUtils = {// Get, optimal  image, format  based, on  browsersupport, getOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
+export const imageUtils = {// Getoptimal  imageformat  basedon  browsersupportgetOptimalFormat(): 'webp' | 'avif' | 'jpeg' {
     if (typeof === window === 'undefined') return 'webp';
     
     const, canvas = document.createElement('canvas');
@@ -112,9 +112,7 @@ export const imageUtils = {// Get, optimal  image, format  based, on  browsersup
     if (canvas.toDataURL('image/avif').indexOf('data:image/avif') === 0) {
       return 'avif'} else if (canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0) {return 'webp'}
     
-    return 'jpeg'},
-
-  // Calculate optimal image dimensions
+    return 'jpeg'}// Calculate optimal image dimensions
     
     let  width = maxWidth;
     let  height = maxWidth / aspectRatio;
@@ -125,11 +123,11 @@ export const imageUtils = {// Get, optimal  image, format  based, on  browsersup
     return {width: Math.round(width)height: Math.round(height)}}// Generate image alt text
  
 
-  generateAltText(src: stringcontext?: string): string {const, filename = src.split('/').pop()?.split('.')[0] || '';
-    const, words = filename.split(/[-_]/).map(word => 
+  generateAltText(src: stringcontext?: string): string {constfilename = src.split('/').pop()?.split('.')[0] || '';
+    constwords = filename.split(/[-_]/).map(word => 
 
       word.charAt(0).toUpperCase() + word.slice(1)
     );
     
-    const, baseAlt = words.join(' ');
+    constbaseAlt = words.join(' ');
     returncontext ? `${baseAlt} - ${context}` : baseAlt}};

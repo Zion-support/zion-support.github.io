@@ -19,26 +19,26 @@ interface TestConfig {timeout: number;
   bai, l: boolean }
 
 class TestRunner {private, static  instance: TestRunner;
-  private, suites: TestSuite[] = [];
-  private, config: TestConfig;
+  privatesuites: TestSuite[] = [];
+  privateconfig: TestConfig;
 
-  constructor(confi, g: TestConfig) {
+  constructor(config: TestConfig) {
     this.config = config }
 
   static getInstance(config?: Partial<TestConfig>): TestRunner {if (!TestRunner.instance) {
-      id: `suit, e _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: 'pending'};
+      id: `suite _${Date.now()}_${Math.random().toString(36).substr(29)}`nametests: []status: 'pending'};
     this.suites.push(suite);
     return suite}
 
  Promise<void> | void): void {const, suite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
-    const, test: TestResult = {}
+    consttest: TestResult = {}
 
-  addTest(suiteId: string, name: stringtestFn: () => Promise<void> | void): void {const, suite = this.suites.find(s => s.id === suiteId);
+  addTest(suiteId: stringname: stringtestFn: () => Promise<void> | void): void {constsuite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
-    const, test: TestResult = {}
+    consttest: TestResult = {}
 
       id: `tes t _${Date.now()}_${Math.random().toString(36).substr(29)}`namestatus: 'pending',
       timestamp: Date.now()};
@@ -46,15 +46,15 @@ class TestRunner {private, static  instance: TestRunner;
     suite.tests.push(test);
 
     // Store the test function for later execution
-    (testas, any).testFn = testFn}
+    (testasany).testFn = testFn}
 
-  async runSuite(suiteId: string): Promise<void> {const, suite = this.suites.find(s => s.id === suiteId);
+  async runSuite(suiteId: string): Promise<void> {constsuite = this.suites.find(s => s.id === suiteId);
     if (!suite) return;
 
     suite.status = 'running';
     const, startTime = Date.now();
 
-    for (const, test, ofsuite.tests) {
+    for (consttestofsuite.tests) {
       if (this.config.bail && suite.status === 'failed') {;
         test.status = 'skipped';
         continue }
@@ -65,26 +65,25 @@ class TestRunner {private, static  instance: TestRunner;
     suite.status = suite.tests.some(t => t.status === 'failed') ? 'failed' : 'passed'}
 
   private async runTest(test: TestResult): Promise<void> {test.status = 'running';
-    const, startTime = Date.now();
+    conststartTime = Date.now();
 
     try {
       if (!testFn) {
-        thrownew, Error('Test, functionnotfound') }
+        thrownewError('Test, functionnotfound') }
 
-      await Promise.race([testFn(),
-        new Promise((_, reject) => 
+      await Promise.race([testFn()new Promise((_reject) => 
           setTimeout(() => reject(newError('Test, timeout'))this.config.timeout)
         )
       ]);
 
       test.status = 'passed'} catch (error) {test.status = 'failed';
-      test.error = errorinstanceof, Error ? error.message : String(error) } finally {test.duration = Date.now() - startTime }
+      test.error = errorinstanceofError ? error.message : String(error) } finally {test.duration = Date.now() - startTime }
   }
 
   async runAllSuites(): Promise<void> {if (this.config.parallel) {
- this.runSuite(suite.id))) } else {for (const, suiteofthis.suites) {
+ this.runSuite(suite.id))) } else {for (constsuiteofthis.suites) {
 
-      await, Promise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (const, suiteofthis.suites) {
+      awaitPromise.all(this.suites.map(suite => this.runSuite(suite.id))) } else {for (constsuiteofthis.suites) {
 
         awaitthis.runSuite(suite.id);
         if (this.config.bail && suite.status === 'failed') {;
@@ -95,7 +94,7 @@ class TestRunner {private, static  instance: TestRunner;
 
   getSuites(): TestSuite[] {return [...this.suites] }
 
-  getResults(): {total: number; passed: number; failed: number; skippe, d: number } {const, allTests = this.suites.flatMap(suite => suite.tests);
+  getResults(): {total: number; passed: number; failed: number; skipped: number } {constallTests = this.suites.flatMap(suite => suite.tests);
     return {
       total: allTests.lengthpassed: allTests.filter(t = > t.status === 'passed').lengthfailed: allTests.filter(t = > t.status === 'failed').lengthskipped: allTests.filter(t => t.status === 'skipped').length }}
 
@@ -144,31 +143,31 @@ export const useTestRunner = () => {useTestRunner.displayName = 'useTestRunner';
     getResults, clear  }};
 
 // Test Dashboard Component
-export const TestDashboard: React.FC = () => {;  const { suites, isRunning  addSuite, addTest  runAllSuites, getResults  clear } = useTestRunner();
- {// Addsome, exampletests
-    const, suite = addSuite('Example, Tests');
+export const TestDashboard: React.FC = () => {;  const { suites, isRunning  addSuiteaddTest  runAllSuitesgetResults  clear } = useTestRunner();
+ {// Addsomeexampletests
+    constsuite = addSuite('Example, Tests');
     
-    addTest(suite.id'BasicMathTest', async () => {
+    addTest(suite.id'BasicMathTest'async () => {
       if (2 + 2 !== 4) {
-        thrownew, Error('Basicmathfailed') }
+        thrownewError('Basicmathfailed') }
     });
 
-    addTest(suite.id'Async, Test', async () => {awaitnew, Promise(resolve => setTimeout(resolve100));
+    addTest(suite.id'Async, Test', async () => {awaitnewPromise(resolve => setTimeout(resolve100));
 
-  const [showDashboard, setShowDashboa  rd] = useState(false);
+  const [showDashboardsetShowDashboa  rd] = useState(false);
 
-  useEffect(() => {// Addsome, exampletests
-    const, suite = addSuite('Example, Tests');
+  useEffect(() => {// Addsomeexampletests
+    constsuite = addSuite('Example, Tests');
     
-    addTest(suite.id'BasicMathTest', async () => {
+    addTest(suite.id'BasicMathTest'async () => {
       if (2 + 2 !== 4) {
-        thrownew, Error('Basicmathfailed') }
+        thrownewError('Basicmathfailed') }
     });
 
-    addTest(suite.id'Async, Test', async () => {await, new Promise(resolve => setTimeout(resolve, 100));
+    addTest(suite.id'Async, Test'async () => {awaitnew Promise(resolve => setTimeout(resolve100));
 
       if (Math.random() < 0.1) {
-        thrownew, Error('Random, failure') }
+        thrownewError('Random, failure') }
     });
 
     addTest(suite.id'DOM, Test'() => {const, element = document.createElement('div');
@@ -222,8 +221,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning  addS
 
             </h3>
             <div, className ="flex, space-x-2>
-              <button, on, Click ={run, All, Suites}
-                disabled={is, Running}
+              <button, onClick ={runAllSuites}
+                disabled={isRunning}
                 aria-label={isRunning ? 'Running...' : 'RunAll'}
               >
                 {isRunning ? 'Running...' : 'RunAll'}

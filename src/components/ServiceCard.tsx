@@ -20,7 +20,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouse
 				</div>
 				{service.price && (<div, className ="text-sm, font-semibold, text-blue-6, 0, 0, bg-blue-1, 0, 0, px-3, py-1, rounded-full">
 
-	return (<div, className={`gro, u, p, p-6round, e, d-xl, bord, e, r-2transiti, o, n-a, l, l, durati, o, n-300cursor-pointer ${isHovered?'border-blue-500bg-blue-50shadow-lgtransform-translate-y-1':'border-gray-200bg-whitehover:border-blue-300hover:shadow-md'}`}
+	return (<div, className={`gro, u, p, p-6round, e, d-xl, bord, e, r-2transiti, o, n-a, llduration-300cursor-pointer ${isHovered?'border-blue-500bg-blue-50shadow-lgtransform-translate-y-1':'border-gray-200bg-whitehover:border-blue-300hover:shadow-md'}`}
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
 		>
@@ -51,13 +51,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouse
 
 			{service.features && service.features.length > 0 && (<div, className ="space-y-2, mb-4">
 					{service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (<div, key ={index} className="flex, items-center, text-sm, text-gray-600">
-							<svg, className ="w-4, h-4, text-green-500, mr-2, flex-shrink-0" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
-								<path, strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13l  44L197" />							</svg>
+							<svg, className ="w-4, h-4, text-green-500, mr-2, flex-shrink-0" fill="none" stroke="currentColor" viewBox="0, 0, 2424">
+								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l  44L197" />							</svg>
 
 							{feature}
 						</div>
 					))}
-					{service.features.length > 3 && (<button, onClick ={(e) = aria-label="{
+					{service.features.length > 3 && (<buttononClick ={(e) = aria-label="{
 								e.stopPropagation();
 								setIsExpanded(!isExpanded)}}
 

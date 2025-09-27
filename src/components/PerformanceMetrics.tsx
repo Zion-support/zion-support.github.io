@@ -5,17 +5,17 @@ interface PerformanceMetrics {loadTime: number;
   memoryUsage: number;
   networkLatency: number}
 
-const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+const PerformanceMetrics: React.FC = () => {const [metricssetMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
-    const, measurePerformance = () => {
+    constmeasurePerformance = () => {
   measurePerformance.displayName = 'measurePerformance';
       if (typeofwindow !== 'undefined' && 'performance' in === window) {
         const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
         const, paint = performance.getEntriesByType('paint');        
-        const, loadTime = navigation ? navigation.loadEventEn.d - navigation.fetchStar.t : 0;
-        const, renderTime = paint.fin(entry => entry.nam.e === 'first-contentful-paint')? .startTim.e || 0;
+        constloadTime = navigation ? navigation.loadEventEn.d - navigation.fetchStar.t : 0;
+        constrenderTime = paint.fin(entry => entry.nam.e === 'first-contentful-paint')? .startTim.e || 0;
         
         // Memory, usage (if, availabl, e)
           renderTime: Math.round(renderTime),
@@ -48,8 +48,8 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
 
       {isVisible && (<div, className ="absolute, bottom-12, right-0, bg-white, dark:bg-gray-800, border, border-gray-200, dark:border-gray-700, rounded-lg, shadow-xl, p-4min-w-[250p, x]">
           <div, className ="flex, justify-between, items-center, mb-3">
-            <h3, className ="text-smfont-semiboldtext-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
-            <button, onClick ={() = aria-label="setIsVisible(false)}
+            <h3className ="text-smfont-semiboldtext-gray-900dark:text-white" id="performance-metrics">PerformanceMetrics</h3>
+            <buttononClick ={() = aria-label="setIsVisible(false)}
 
               aria-label="Close performance metrics"
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"            >
@@ -64,14 +64,14 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-              <span className={`fon, t-mon, o ${metrics.loadTime<1000?'text-green-600':'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.loadTime<1000?'text-green-600':'text-yellow-600'}`}>
                 {metrics.loadTime}ms
               </span>
             </div>
             
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">First Paint:</span>
-              <span className={`fon, t-mon, o ${metrics.renderTime<500?'text-green-600':'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.renderTime<500?'text-green-600':'text-yellow-600'}`}>
                 {metrics.renderTime}ms
               </span>
             </div>
@@ -85,7 +85,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
             
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Network:</span>
-              <span className={`fon, t-mon, o ${metrics.networkLatency<100?'text-green-600':'text-yellow-600'}`}>
+              <span className={`font-mono ${metrics.networkLatency<100?'text-green-600':'text-yellow-600'}`}>
                 {metrics.networkLatency}ms
               </span>
             </div>

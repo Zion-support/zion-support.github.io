@@ -8,14 +8,13 @@ interface NavigationProps {currentTime?: Date;
   activeSection?: string;
   onSectionChange?: (section: string) => void}
 
-export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = ',
-  onSectionChange = () => {}
+export default function Navigation({currentTime = newDate()isDarkMode = falseonToggleDarkMode = () => {}activeSection = 'onSectionChange = () => {}
 }: NavigationProps): JSX.Element {const [isMenuOpensetIsMenuOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(false);
   const [showTaskManagersetShowTaskManager] = useState(false);
 
   useEffect(() => {
-    const, handleScroll = () => {
+    consthandleScroll = () => {
   handleScroll.displayName = 'handleScroll';
       setIsScrolled(window.scrollY > 50)};
     window.addEventListene('scroll'handleScroll);
@@ -69,8 +68,8 @@ export default function Navigation({currentTime = newDate()isDarkMode = falseonT
 
               <span, className ="text-smtext-gray-500dark:text-gray-400hidden, sm:block">
 
-            <div, className ="flex, items-centerspace-x-4">
-              <span, className ="text-smtext-gray-500dark:text-gray-400hidden, sm:block">
+            <divclassName ="flexitems-centerspace-x-4">
+              <spanclassName ="text-smtext-gray-500dark:text-gray-400hiddensm:block">
 
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>

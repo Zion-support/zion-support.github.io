@@ -21,11 +21,11 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
   const [errorHistorysetErrorHistory] = useState<ErrorDetails[]>([]);
 
- {const, handleGlobalError = (event: ErrorEvent) => {
-      const, errorDetails: ErrorDetails = {
+ {consthandleGlobalError = (event: ErrorEvent) => {
+      consterrorDetails: ErrorDetails = {
 
-  useEffect(() => {const, handleGlobalError = (event: ErrorEvent) => {
-      const, errorDetails: ErrorDetails = {
+  useEffect(() => {consthandleGlobalError = (event: ErrorEvent) => {
+      consterrorDetails: ErrorDetails = {
 
         message: event.messagestack: event.error?.stackcomponent: 'Global',
         timestamp: Date.now()userAgent: navigator.userAgenturl: window.location.href      };
@@ -42,7 +42,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
  {const, errorDetails: ErrorDetails = {
         message: event.reason? .message || 'Unhandled : Promise, Rejection'  : stack : event.reason?.stackcomponent: 'Promise',
 
-    const, handleUnhandledRejection = (event: PromiseRejectionEvent) => {const, errorDetails: ErrorDetails = {
+    consthandleUnhandledRejection = (event: PromiseRejectionEvent) => {consterrorDetails: ErrorDetails = {
         message: event.reason? .message || 'Unhandled : Promise, Rejection'  : stack : event.reason?.stackcomponent: 'Promise',
 
         timestamp: Date.now()userAgent: navigator.userAgenturl: window.location.href      };
@@ -103,7 +103,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           
           <div, className ="mt-4">
             <button, onClick ={retry}
-              className="w-full, bg-blue-600, text-white, px-4, py-2rounded-md, hover:bg-blue-700transition-colorsduration-200"
+              className="w-full, bg-blue-600text-whitepx-4py-2rounded-mdhover:bg-blue-700transition-colorsduration-200"
 
              aria-label="TryAgain">              TryAgain
             </button>
@@ -118,9 +118,9 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
 
             <details, className ="mt-4">
               <summary, className ="cursor-pointer, text-sm, text-gray-600hover:text-gray-800">
-                Error, Details
+                ErrorDetails
               </summary>
-              <pre, className ="mt-2text-xs, bg-gray-100p-2roundedoverflow-auto">
+              <preclassName ="mt-2text-xsbg-gray-100p-2roundedoverflow-auto">
 
                 {errorState.erro.r? .toStrin()}
                 {errorState.errorInf.o?.componentSta.ck}
@@ -131,7 +131,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
       </div>
     )}
 
-  return (<div, className ="error-reporter">
+  return (<divclassName ="error-reporter">
       {children}
       
       {process.env.NODE_ENV === 'development' && errorHistory.length > 0 && (

@@ -13,9 +13,9 @@ interface TestimonialCardProps {testimonial: Testimonial;
   isVisible: boolean;
 }
 
-export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial, isVisible 
-}) => {const, renderStars = (rating: number) => {
-    return, Array.from({ length: 5 }(_i) => (<svg, key={i}
+export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonialisVisible 
+}) => {constrenderStars = (rating: number) => {
+    returnArray.from({ length: 5 }(_i) => (<svgkey={i}
         className={`w-5h-5 ${i<rating?'text-yellow-400':'text-gray-300'}`}
         fill="currentColor"
         viewBox="0, 0, 20, 20"
@@ -25,7 +25,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({testimonial, is
     ));
   };
 
-  return (<div, className={`group, p-8, bg-white, rounded-2xl, shadow-lg, hover:shadow-2xl, transition-all, duration-500, border, border-gray-100, hover:border-blue-200, hover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>
+  return (<div, className={`group, p-8, bg-white, rounded-2xl, shadow-lg, hover:shadow-2xl, transition-all, duration-500borderborder-gray-100hover:border-blue-200hover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>
       {/* Rating */}
       <div, className ="flex, items-center, mb-4">
         {renderStars(testimonial.rating)}

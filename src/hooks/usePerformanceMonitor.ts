@@ -12,15 +12,15 @@ interface PerformanceMetrics {loadTime: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number}
 
-export function usePerformanceMonitor() {const, metricsRef = useRef<PerformanceMetrics>({loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
+export function usePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetrics>({loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
 
- {// Sendmetrics, toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
-      (windowasany).gtag('event''performance_metrics', {
+ {// Sendmetricstoanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
+      (windowasany).gtag('event''performance_metrics'{
         load_time: metrics.loadTimefirst_contentful_paint: metrics.firstContentfulPaintlargest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
 
-  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetrics, toanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
+  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetricstoanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
       (windowasany).gtag('event''performance_metrics', {
-        load_time: metrics.loadTime, first_contentful_paint: metrics.firstContentfulPaint, largest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
+        load_time: metrics.loadTimefirst_contentful_paint: metrics.firstContentfulPaintlargest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
 
 
     // Log to console in development
@@ -32,27 +32,27 @@ export function usePerformanceMonitor() {const, metricsRef = useRef<PerformanceM
     const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
     const, paintEntries = performance.getEntriesByType('paint');
     
-    const, loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    const, firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0;
+    constloadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    constfirstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0;
     
     // Measure : LCP, const lcpObserver = newPerformanceObserver((list) => {
-      const, entries = list.getEntries();
-      const, lastEntry = entries[entries.length - 1];
+      constentries = list.getEntries();
+      constlastEntry = entries[entries.length - 1];
       metricsRef.current.largestContentfulPaint = lastEntry.startTime});
     lcpObserver.observe({entryTypes : ['largest-contentful-paint'] });
 
     // Measure FID
     const fidObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
       entries.forEach((entry) => {
-        const, fidEntry = entryas, PerformanceEventTiming;
+        constfidEntry = entryasPerformanceEventTiming;
         metricsRef.current.firstInputDelay = fidEntry.processingStart - fidEntry.startTime})});
     fidObserver.observe({entryTypes: ['first-input'] });
 
     // Measure CLS
     let clsValue = 0;
- {for (const, entryoflist.getEntries()) {
+ {for (constentryoflist.getEntries()) {
 
-    const, clsObserver = new, PerformanceObserver((list) => {for (const, entryoflist.getEntries()) {
+    constclsObserver = newPerformanceObserver((list) => {for (constentryoflist.getEntries()) {
 
         if (!(entry === as === any).hadRecentInput) {
           clsValue += (entryasany).value}

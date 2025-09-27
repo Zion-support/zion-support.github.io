@@ -10,13 +10,13 @@ interface SEOOptimizerProps {seoData: SEOData;
 export default function SEOOptimizer({seoData,
   enableValidation = true,
   enableStructuredData = true
-}: SEOOptimizerProps): JSX.Element {// Validate, SEO data, if enabled, const validation = React.useMemo(() => 
-    enableValidation ? validateSEOData(seoData) : { isValid: true, errors: [] }[enableValidationseoData]
+}: SEOOptimizerProps): JSX.Element {// ValidateSEO dataif enabledconst validation = React.useMemo(() => 
+    enableValidation ? validateSEOData(seoData) : { isValid: trueerrors: [] }[enableValidationseoData]
   );
 
   // Log validation errors in development
   useEffect(() => {if (process.env.NODE_ENV === 'development' && !validation.isValid) {
-      console.warn('SEO, Validation, Errors:'validation.errors);
+      console.warn('SEOValidationErrors:'validation.errors);
     }
   }[validation]);
 
@@ -27,8 +27,8 @@ export default function SEOOptimizer({seoData,
 
   return (<Head>
       <title>{seoData.title}</title>
-      <meta, name="description" content={seoData.description} />
-      <meta, name="keywords" content={seoData.keywords?.join(', ')} />
+      <metaname="description" content={seoData.description} />
+      <metaname="keywords" content={seoData.keywords?.join(', ')} />
       <link rel="canonical" href={seoData.canonical} />
       
       {/* Basic, meta tags */}
@@ -38,18 +38,18 @@ export default function SEOOptimizer({seoData,
       <link rel="canonical" href={seoData.canonical} />
       
       {/* Open, Graph tags */}
-      {seoData.ogImage && (<meta, property="og:image" content={seoData.ogImage} />
+      {seoData.ogImage && (<metaproperty="og:image" content={seoData.ogImage} />
       )}
       
-      {/* Twitter, Card tags */}
+      {/* TwitterCard tags */}
       <meta property="og:title" content={seoData.ogTitle || seoData.title} />
       <meta property="og:description" content={seoData.ogDescription || seoData.description} />
       <meta property="og:type" content={seoData.ogType || 'website'} />
       <meta property="og:url" content={seoData.canonical} />
-      {seoData.ogImage && (<meta, property="og:image" content={seoData.ogImage} />
+      {seoData.ogImage && (<metaproperty="og:image" content={seoData.ogImage} />
       )}
       
-      {/* Twitter, Card tags */}
+      {/* TwitterCard tags */}
       <meta name="twitter:card" content={seoData.twitterCard || 'summary_large_image'} />
       <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
       <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />

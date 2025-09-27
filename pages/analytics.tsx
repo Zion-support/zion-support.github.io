@@ -17,13 +17,13 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 // });
 
 export default function AnalyticsPage() {
-	return (
-		<>
-			<Head>
+  return (
+    <>
+      <Head>
         <title>Analytics Dashboard - Zion Tech Solutions</title>
         <meta name="description" content="Comprehensive website analytics dashboard for performance  accessibility  and SEO monitoring." />
         <meta name="robots" content="noindex  nofollow" />
-			</Head>
+      </Head>
       
       <EnhancedSEO
         title="Analytics Dashboard - Zion Tech Solutions"

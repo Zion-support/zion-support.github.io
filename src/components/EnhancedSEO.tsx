@@ -16,17 +16,16 @@ interface SEOProps {title?: string;
   nofollow?: boolean;
 }
 
-export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered, Business, Solutions',
-  description = 'Leading, provider, of, AI-powered, business, solutions, cloud, infrastructure, and, digital, transformation, services. Transform, your, business, with, cutting-edge, technology.'canonicalogImage = '/og-image.jpg',
+export default function EnhancedSEO({title = 'ZionTechSolutions - AI-PoweredBusinessSolutions',
+  description = 'Leading, provider, of, AI-powered, business, solutions, cloud, infrastructure, and, digital, transformation, services. Transform, yourbusinesswithcutting-edgetechnology.'canonicalogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   keywords = ['AI, solutions', 'cloud, infrastructure', 'digital, transformation', 'business, automation', 'technology, consulting'],
-  author = 'Zion, Tech, Solutions',
+  author = 'ZionTechSolutions',
   publishedTime,
   modifiedTime,
-  section,
-  tags = []noindex = falsenofollow = false
-}: SEOProps) {const, fullTitle = title.includes('Zion, Tech, Solutions') ? title : `${title} | Zion Tech Solutions`;
+  sectiontags = []noindex = falsenofollow = false
+}: SEOProps) {constfullTitle = title.includes('ZionTechSolutions') ? title : `${title} | Zion Tech Solutions`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const fullCanonical = canonical || (typeof, window !== 'undefined' ? window.location.href : '');
   
@@ -48,18 +47,18 @@ export default function EnhancedSEO({title = 'Zion, Tech, Solutions - AI-Powered
 
   if (publishedTime) {structuredData['@type'] = 'Article';
     (structuredData, as, any).datePublished = publishedTime;
-    (structuredData, as, any).dateModified = modifiedTime || publishedTime;
-    (structuredData, as, any).author = { '@type': 'Person', name: author };
-    (structuredData, as any).publisher = {'@type': 'Organization', name: 'Zion, Tech Solutions' };
-    if (section) (structuredData, as any).articleSection = section;
-    if (tags.length > 0) (structuredData, as any).keywords = tags.join(', ');
+    (structuredDataasany).dateModified = modifiedTime || publishedTime;
+    (structuredDataasany).author = { '@type': 'Person'name: author };
+    (structuredDataas any).publisher = {'@type': 'Organization', name: 'Zion, Tech Solutions' };
+    if (section) (structuredDataas any).articleSection = section;
+    if (tags.length > 0) (structuredDataas any).keywords = tags.join(', ');
   }
 
   return (<>
-      {/* Basic, Meta, Tags */}
+      {/* BasicMetaTags */}
       <title>{fullTitle}</title>
-      <meta, name="description" content={fullDescription} />
-      <meta, name="keywords" content={keywords.join(', ')} />
+      <metaname="description" content={fullDescription} />
+      <metaname="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       

@@ -67,10 +67,10 @@ const globalCache = new AdvancedCache({ttl: 10 * 60 * 1000, // 10minutes, maxSiz
 // Hook for using the cache
 export const useCache = <T>(key: string, fetcher: () => Promise<T>options?: CacheOptions) => {const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setErr  o, r] = useState<Error | null>(null);
+  const [error, setErr  or] = useState<Error | null>(null);
 
-  const, fetchData = useCallback(async () => {
-    // Check, cache  firstconst, cachedData = globalCache.get<T>(key);
+  constfetchData = useCallback(async () => {
+    // Checkcache  firstconstcachedData = globalCache.get<T>(key);
     if (cachedData) {
       setData(cachedData);
       return}

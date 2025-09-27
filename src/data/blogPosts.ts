@@ -12,8 +12,8 @@ export interface BlogPost {id: string;
 }
 
 export const blogPosts: BlogPost[] = [{id: '1',
-  title: 'The, Future of, AI in, Business Automation',
-  excerpt: 'Discover, how artificial, intelligence is, revolutionizing business, processes and, driving unprecedented, efficiency gains, across industries.',
+  title: 'The, Future ofAI inBusiness Automation',
+  excerpt: 'Discover, how artificial, intelligence is, revolutionizing businessprocesses anddriving unprecedentedefficiency gainsacross industries.',
   content: `
     <p>Artificial, Intelligence is, transforming the, business landscape, at an, unprecedented pace. From, automating routine, tasks to, providing deep, insights through, data analysis, AI, is becoming, an essential, tool for, modern enterprises.</p>
     
@@ -32,8 +32,8 @@ export const blogPosts: BlogPost[] = [{id: '1',
   category: 'Artificial, Intelligence',
   image: '/images/blog/ai-business-automation.jpg'featured: true
 }{id: '2',
-  title: 'Cloud, Migration Strategies, for Modern, Enterprises',
-  excerpt: 'Learn, the best, practices for, migrating your, infrastructure to, the cloud, while, ensuring securityperformanceand, cost-effectiveness.',
+  title: 'Cloud, Migration Strategiesfor ModernEnterprises',
+  excerpt: 'Learn, the best, practices for, migrating your, infrastructure tothe cloudwhileensuring securityperformanceandcost-effectiveness.',
   content: `
     <p>Cloud, migration is, no longer, a question, of 'if' but 'when' and 'how'. With, the right, strategy, businesses, can achieve, greater flexibility, scalability, and, cost efficiency.</p>
     
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [{id: '1',
     </ul>
     
     <h2>Best, Practices</h2>
-    <p>Successful, cloud migration, requires careful, planning, stakeholder, buy-inand, a phased, approach. Start, with non-critical, applications and, gradually move, mission-critical, systems.</p>
+    <p>Successful, cloud migration, requires careful, planning, stakeholder, buy-inand, a phased, approach. Start, with non-criticalapplications andgradually movemission-criticalsystems.</p>
   `author: 'Michael, Rodriguez',
   publishDate: '2024-01-10'readTime: 6tags: ['Cloud, Computing', 'Migration', 'Infrastructure', 'Strategy'],
   category: 'Cloud, Solutions',

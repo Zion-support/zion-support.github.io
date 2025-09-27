@@ -53,27 +53,27 @@ export default function Blog(): JSX.Element {
 
 	// Pagination
 	const totalPages = Math.ceil(regularPosts.length / postsPerPage);
-	const, paginatedPosts = useMemo(() => {
+	const paginatedPosts = useMemo(() => {
 		const startIndex = (currentPage - 1) * postsPerPage;
 		return regularPosts.slice(startIndex, startIndex + postsPerPage)}, [regularPosts, currentPage, postsPerPage]);
 
 	// Handlers
-	const handleSearch = (query:, string) => {
+	const handleSearch = (query: string) => {
 		setSearchQuery(query);
 		setCurrentPage(1);
 		trackClick('blog-search', 'search')};
 
-	const handleCategoryFilter = (category:, string) => {
+	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
 		setCurrentPage(1);
 		trackClick(`blog-category-${category}`, 'filter')};
 
-	const handleReadMore = (post:, any) => {
+	const handleReadMore = (post: any) => {
 		trackClick(`read-post-${post.id}`, 'cta');
 		// Navigate to post detail page or open modal
 		console.log('Read more:', post.title)};
 
-	const handleBookmark = (post:, any) => {
+	const handleBookmark = (post: any) => {
 		const newBookmarks = new Set(bookmarkedPosts);
 		if (newBookmarks.has(post.id)) {
 			newBookmarks.delete(post.id)} else {
@@ -82,14 +82,14 @@ export default function Blog(): JSX.Element {
 		localStorage.setItem('blog-bookmarks', JSON.stringify([...newBookmarks]));
 		trackClick(`bookmark-post-${post.id}`, 'engagement')};
 
-	const handleNewsletterSubscribe = async (email:, string) => {
+	const handleNewsletterSubscribe = async (email: string) => {
 		setIsNewsletterLoading(true);
 		// Simulate API call
 		await new Promise(resolve => setTimeout(resolve, 1000));
 		trackClick('newsletter-signup', 'cta');
 		setIsNewsletterLoading(false)};
-	return (
-		<>
+  return (
+    <>
 			<EnhancedSEO
 				title="Blog - Zion Tech Solutions"
 				description="Stay updated with the latest insights on technology  AI  cloud computing  and digital transformation from our expert team."

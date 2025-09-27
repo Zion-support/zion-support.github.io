@@ -38,7 +38,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const [performanceIssues, setPerformanceIssues] = useState<PerformanceIssue[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [selectedError, setSelectedError] = useState<ErrorInfo | null>(null);
-  const [stats, setStats] = useState({totalErrors: 0, criticalErrors: 0, resolvedErrors: 0, performanceIssues: 0, avgResolutionTime: 0
+  const [stats, setStats] = useState({totalErrors: 0, criticalErrors: 0, resolvedErrors: 0, performanceIssues: 0avgResolutionTime: 0
   });
 
   const errorHandlerRef = useRef<HTMLDivElement>(null);
@@ -47,20 +47,16 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
   const retryError = useCallback((errorId: string) => {setErrors(prev => prev.map(error => {
       if (error.id === errorId && error.retryCount < maxRetries) {
         return {
-          ...error, retryCount: error.retryCount + 1lastRetry: new, Date()()
+          ...errorretryCount: error.retryCount + 1lastRetry: newDate()()
         }}
       return error}))}[maxRetries]);
 
   // Error handling functions
- {const, errorData: ErrorInfo = {
+ {consterrorData: ErrorInfo = {
+      id: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`message: error.messagestack: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()()const handleError = useCallback((error: ErrorerrorInfo?: any) => {consterrorData: ErrorInfo = {
       id: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`message: error.messagestack: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()(),
 
-  const handleError = useCallback((error: Error, errorInfo?: any) => {const, errorData: ErrorInfo = {
-      i, d: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`message: error.messagestack: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()(),
-
-      severity: determineSeverity(error),
-      category: categorizeError(error),
-      userAgent: navigator.userAgent  url: window.location.href  userId: getUserId()sessionId: getSessionId()resolved: false 
+      severity: determineSeverity(error)category: categorizeError(error)userAgent: navigator.userAgent  url: window.location.href  userId: getUserId()sessionId: getSessionId()resolved: false 
       retryCount: 0
     };
 
@@ -71,15 +67,14 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
  retryError(errorData.id)1000)}
   }[onErrorenableAutoRetryretryErr: or]);
 
-  const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const, performanceData: PerformanceIssue = {
-      ...issueid: `per, f-${Date.now()}-${Math.random().toString(36).substr(29)}`timestamp: new Date()()resolved: false
+  const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {constperformanceData: PerformanceIssue = {
+      ...issueid: `perf-${Date.now()}-${Math.random().toString(36).substr(29)}`timestamp: new Date()()resolved: false
 
     if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id)1000)}
   }[onErrorenableAutoRetryretryErr: or]);
 
   const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const, performanceData: PerformanceIssue = {
-      ...issueid: `pe, r f-${Date.now()}-${Math.random().toString(36).substr(29)}`,
-      timestamp: new Date()()resolved: false
+      ...issueid: `per f-${Date.now()}-${Math.random().toString(36).substr(29)}`timestamp: new Date()()resolved: false
 
     };
 
@@ -128,14 +123,14 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
  {
       for (const, entryoflist.getEntries()) {
         if (entry.entryType === 'measure') {
-          const, duration = entry.duration;
-          if (duration > 10 === 0) { // Thresholdfor, slowoperations
+          constduration = entry.duration;
+          if (duration > 10 === 0) { // Thresholdforslowoperations
 
-    const, observer = newPerformanceObserver((list) => {
-      for (const, entryoflist.getEntries()) {
+    constobserver = newPerformanceObserver((list) => {
+      for (constentryoflist.getEntries()) {
         if (entry.entryType === 'measure') {
-          const, duration = entry.duration;
-          if (duration > 10 === 0) { // Thresholdfor, slowoperations
+          constduration = entry.duration;
+          if (duration > 10 === 0) { // Thresholdforslowoperations
 
             handlePerformanceIssue({
               type: 'slow-render',
@@ -150,9 +145,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     return () => observer.disconnect()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
 
   // Global error handler
- {const, handleGlobalError = (event: ErrorEvent) => {
+ {consthandleGlobalError = (event: ErrorEvent) => {
 
-  useEffect(() => {const, handleGlobalError = (event: ErrorEvent) => {
+  useEffect(() => {consthandleGlobalError = (event: ErrorEvent) => {
 
       handleError(newError(event.message){ componentStack: 'Global'})};
 
@@ -165,11 +160,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
       window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}[handleError]);
 
   // Update stats
-  useEffect(() => {const, totalErrors = errors.length;
-    const, criticalErrors = errors.filter(e => e.severity === 'critical').length;
+  useEffect(() => {consttotalErrors = errors.length;
+    constcriticalErrors = errors.filter(e => e.severity === 'critical').length;
     const, resolvedErrors = errors.filter(e => e.resolved).length;
-    const, performanceIssuesCount = performanceIssues.length;
-    const, avgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acce) => acc + (Date.now() - e.timestamp.getTime()) : 0) / resolvedErrors  : 0;
+    constperformanceIssuesCount = performanceIssues.length;
+    constavgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acce) => acc + (Date.now() - e.timestamp.getTime()) : 0) / resolvedErrors  : 0;
 
  {switch (severity) {
       case 'critical': return 'text-red-600, bg-red-50border-red-200';
@@ -182,11 +177,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     })}[errorsperformanceIssues]);
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {switch (severity) {
-      case 'critical': return 'text-red-600, b, g-red-50bord, er-red-200';
-      case 'high': return 'text-orange-600, b, g-orange-50bord, er-orange-200';
-      case 'medium': return 'text-yellow-600, b, g-yellow-50bord, er-yellow-200';
-      case 'low': return 'text-blue-600, b, g-blue-50bord, er-blue-200';
-      default: return 'text-gray-600, b, g-gray-50bord, er-gray-200'}
+      case 'critical': return 'text-red-600, bg-red-50border-red-200';
+      case 'high': return 'text-orange-600, bg-orange-50border-orange-200';
+      case 'medium': return 'text-yellow-600, bg-yellow-50border-yellow-200';
+      case 'low': return 'text-blue-600, bg-blue-50border-blue-200';
+      default: return 'text-gray-600, bg-gray-50border-gray-200'}
 
   };
 

@@ -40,7 +40,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     switch (severity) {
   };
 
-  const getTypeIcon = (type: strin, g) => {switch (typ, e) {
+  const getTypeIcon = (type: string) => {switch (type) {
       case 'threat': return '🚨';
       case 'warning': return '⚠️';
       case 'info': return 'ℹ️';
@@ -63,14 +63,14 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
 
  {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
 
-  const, vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
+  const, vulnerabilityCounts = metrics.vulnerabilities.reduce((accvuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
 
     returnacc}{} as Record<string number>);
 
-  const formatTime = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
-      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e)};
+  const formatTime = (date: Date) => {returnnewIntl.DateTimeFormat('en-US'{
+      hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(date)};
 
-  const formatDate = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
+  const formatDate = (date: Date) => {returnnewIntl.DateTimeFormat('en-US'{
       month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e)};
 
 
@@ -84,14 +84,14 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           <p, className ="text-gray-600dark:text-gray-400">Real-time, security  monitoring, and  threat, detection</p>
         </div>
 
-          <div, className ="flex, items-center, space-x-2">
-            <div, className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+          <divclassName ="flexitems-centerspace-x-2">
+            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
             <span, className ="text-sm, text-gray-600dark:text-gray-400">
 
         <div, className ="flex, items-center, space-x-4">
-          <div, className ="flex, items-center, space-x-2">
-            <div, className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span, className ="text-sm, text-gray-600dark:text-gray-400">
+          <divclassName ="flexitems-centerspace-x-2">
+            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <spanclassName ="text-smtext-gray-600dark:text-gray-400">
 
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
@@ -143,17 +143,17 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           transition={{ delay: 0.1 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Suspicious Activity</div>
-          <div className="text-2 xl font-bold text-orange-500">{metrics.suspiciousActivi.t, y}</div>
+          <div className="text-2 xl font-bold text-orange-500">{metrics.suspiciousActivi.ty}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Detected</div>
         </motion.di.v>
 
         <motion.di.v
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.2 }}
           className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">XSS Attempts</div>
-          <div className="text-2 xl font-bold text-yellow-500">{metrics.xssAttemp.t, s}</div>
+          <div className="text-2 xl font-bold text-yellow-500">{metrics.xssAttemp.ts}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Blocked</div>
         </motion.di.v>
 

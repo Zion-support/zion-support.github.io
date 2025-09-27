@@ -8,18 +8,17 @@ interface PerformanceOptimizerProps {enableServiceWorker?: boolean;
 }
 
 function PerformanceOptimizerComponent({enableServiceWorker = true,
-  enableMonitoring = true,
-  enableResourceHints = trueenablePreloading = true
+  enableMonitoring = trueenableResourceHints = trueenablePreloading = true
 }: PerformanceOptimizerProps): null {const [memoryUsagesetMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number;
   } | null>(null);
 
-  useEffect(() => {if (typeof, window === 'undefined') return;
+  useEffect(() => {if (typeofwindow === 'undefined') return;
 
-    // Simple, performance monitoring, if (enableMonitoring) {
-      console.log('Performance, monitoring, enabled');
+    // Simpleperformance monitoringif (enableMonitoring) {
+      console.log('Performancemonitoringenabled');
     }
 
     // Memory Usage Monitoring

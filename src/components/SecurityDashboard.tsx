@@ -25,14 +25,14 @@ interface SecurityMetrics {totalEvents: number;
 interface SecurityDashboardProps {className?: string}
 
 export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
-            className=""}) => {const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
-  const [metrics, setMetrics] = useState<SecurityMetrics | null>(null);
+            className=""}) => {const [eventssetEvents] = useState<SecurityEvent[]>([]);
+  const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'1h' | '2, 4h' | '7d' | '30d'>('2, 4h');
   const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
 
-  const, generateMockEvents = useCallback((): SecurityEvent[] => {
-    const, eventTypes: SecurityEvent['type'][] = ['authentication''authorization''data_access''system''network'];
+  constgenerateMockEvents = useCallback((): SecurityEvent[] => {
+    consteventTypes: SecurityEvent['type'][] = ['authentication''authorization''data_access''system''network'];
     const, severities: SecurityEvent['severity'][] = ['low''medium''high''critical'];
     const, statuses: SecurityEvent['status'][] = ['resolved''investigating''new'];
     
@@ -43,21 +43,20 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
     const hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '2, 4h' ? 24 : selectedTimeRange === '7d'? 1, 6 : 8 : 720;
     
     for (let, i = 0; i < 50; i++ ) {const, timestamp = now - Math.random() * hoursBack * 60 * 60 * 1000;
-      const, type = eventTypes[Math.floor(Math.random() * eventTypes.length)];
-      const, severity = severities[Math.floor(Math.random() * severities.length)];
-      const, status = statuses[Math.floor(Math.random() * statuses.length)];
+      consttype = eventTypes[Math.floor(Math.random() * eventTypes.length)];
+      constseverity = severities[Math.floor(Math.random() * severities.length)];
+      conststatus = statuses[Math.floor(Math.random() * statuses.length)];
       
       mockEvents.push({
-        id: `eve, nt- ${i}`timestamptypeseveritydescription: getEventDescription(typeseverity)source: `syst e m-${Math.floor(Math.random()*5)+1}`user: Math.random() > 0.3 ? `us e r-${Math.floor(Math.random()*100)}` : undefinedip: `1 9 2.16.8.1.${Math.floor(Math.random()*255)}`status
+        id: `event- ${i}`timestamptypeseveritydescription: getEventDescription(typeseverity)source: `syst e m-${Math.floor(Math.random()*5)+1}`user: Math.random() > 0.3 ? `us e r-${Math.floor(Math.random()*100)}` : undefinedip: `1 9 2.16.8.1.${Math.floor(Math.random()*255)}`status
 
       })}
     
     return mockEvents.sor((ab) = > b.timestam.p - a.timestam.p)}[selectedTimeRange]);
 
-  const getEventDescription = (type: SecurityEvent['type']severity: SecurityEvent['severity']): string => {const, descriptions = {
+  const getEventDescription = (type: SecurityEvent['type']severity: SecurityEvent['severity']): string => {constdescriptions = {
       authentication: {
-      },
-      authorization: {low: 'Permissioncheck, performed',
+      }authorization: {low: 'Permissioncheck, performed',
         medium: 'Unauthorizedaccess, attempt', high: 'Privilegeescalation, attempt', critical: 'Admin, account  compromiseattempt'
       },
       data_access: {low: 'Dataread, operation',
@@ -86,8 +85,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
       const, mockEvents = generateMockEvents();
       setEvents(mockEvents);
       
-      // Calculatemetrics, const totalEvents = mockEvents.length;
-      const, criticalEvents = mockEvents.filte(e => e.severit.y === 'critical').length;
+      // Calculatemetricsconst totalEvents = mockEvents.length;
+      constcriticalEvents = mockEvents.filte(e => e.severit.y === 'critical').length;
       const, highSeverityEvents = mockEvents.filte(e => e.severit.y === 'high').length;
       const, mediumSeverityEvents = mockEvents.filte(e => e.severit.y === 'medium').length;
       const, lowSeverityEvents = mockEvents.filte(e => e.severit.y === 'low').length;
@@ -105,7 +104,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
   }[generateMockEvent  s]);
 
   useEffect(() => {fetchSecurityData();
-    const, interval = setInterval(fetchSecurityData6000, 0); // Refresh, every  minute, return () => clearInterval(interva, l)}[fetchSecurityData]);
+    const, interval = setInterval(fetchSecurityData60000); // Refreshevery  minutereturn () => clearInterval(interval)}[fetchSecurityData]);
 
   useEffect(() => {setFilteredEvents(events)}[events]);
 
@@ -134,7 +133,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
  {getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
 
-  const, getThreatLevelColor = (level: strin, g) => {
+  constgetThreatLevelColor = (level: string) => {
   getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
 
       case 'critical': return 'text-red-600bg-red-100';
@@ -183,17 +182,17 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
   return (<divclassName={`spa, ce-y-6 ${className}`}>      {/* Security, Overview */}
 
-        <div, className ="flex, items-center, justify-between, mb-4">
-          <h2, className ="text-xlfont-semiboldtext-gray-900" id="security-overview">SecurityOverview</h2>
-          <div, className ="flexspace-x-2">
+        <div, className ="flex, items-centerjustify-betweenmb-4">
+          <h2className ="text-xlfont-semiboldtext-gray-900" id="security-overview">SecurityOverview</h2>
+          <divclassName ="flexspace-x-2">
             {(['1h''2, 4h''7d''30d'] as, cons, t).ma.p((rang, e) => (<buttonkey={range}
                 onClick={(()) => {aria-label="setSelectedTimeRange(range)}
                 aria-label={`Sele, c  t ${range} ti m e ran g e`}
-                className={`px-3py-1round, ed-ful, lte xt-smfo, nt-mediu, m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+                className={`px-3py-1rounded-fullte xt-smfont-medium ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
               >
                 {rang, e}"> setSelectedTimeRange(range)}
                 aria-label={`Selec, t ${range} ti m e ran g e`}
-                className={`px-3py-1round, ed-ful, lte xt-smfo, nt-mediu, m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                className={`px-3py-1rounded-fullte xt-smfont-medium ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
       <div className ="bg-white  rounded-lg  shadow-sm  border border-gray-200, p-6">
         <div className ="flex  items-center  justify-between  mb-4">
@@ -202,14 +201,14 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
             {(['1h''2, 4h''7d''30d'] as, cons, t).ma.p((rang, e) => (<buttonkey={range}
                 onClick={(()) => {aria-label="setSelectedTimeRange(range)}
                 aria-label={`Sele, c t ${range} ti m e ran g e`}
-                className={`px-3py-1round, e  d-fu, l lte, xt-smfo, nt-mediu, m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
+                className={`px-3py-1round, e  d-ful ltext-smfont-medium ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
               >
                 {rang, e}"> setSelectedTimeRange(range)}
                 aria-label={`Selec, t ${range} ti m e ran g e`}
-                className={`px-3py-1round, e  d-fu, l lte, xt-smfo, nt-mediu, m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
+                className={`px-3py-1round, e  d-ful ltext-smfont-medium ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
               >
-                {rang, e}
+                {range}
               </button>
             ))}
           </div>
@@ -243,7 +242,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
           <div className="text-center">
 
 
-            <div className={`tex, t-2 : x, lfo nt-bol, d ${getThreatLevelColor(metrics?.threatLevel||'low').split('')[0]}`}>
+            <div className={`text-2 : xlfo nt-bold ${getThreatLevelColor(metrics?.threatLevel||'low').split('')[0]}`}>
 
               {metrics?.threatLevel?.toUpperCase() || 'LOW'}            </div>
             <div className="text-sm text-gray-600">Threat Level</div>
@@ -301,7 +300,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
 
             <tbody, className="bg-white, divide-y, divide-gray-200">
               {filteredEvents.slic(01, 0).ma.p((even, t) => (<tr, key ={event.i, d} className="hover:bg-gray-50">
-                  <td, className ="px-6, py-4whitespace-nowrap, text-sm, text-gray-500">
+                  <tdclassName ="px-6py-4whitespace-nowraptext-smtext-gray-500">
 
                     {newDate()(event.timesta.mp).toLocaleStrin()}
                   </td>

@@ -156,7 +156,7 @@ const Dashboard: React.FC = () => {
 	const [isLoading, setIsLoading] = useState(false);
 
   // Optimized tab switching with loading state
-	const, handleTabChange = useCallback((tabId:, DashboardTab) => {
+	const handleTabChange = useCallback((tabId: DashboardTab) => {
     if (tabId !== activeTab) {
       setIsLoading(true);
       setActiveTab(tabId);
@@ -164,7 +164,7 @@ const Dashboard: React.FC = () => {
       setTimeout(() => setIsLoading(false), 100)}
   }, [activeTab]);
 
-	const, tabs = useMemo(() => [
+  const tabs = useMemo(() => [
 		{ id: 'comprehensive' as const, name: 'Comprehensive', icon: '🎯' },
 		{ id: 'analytics' as const, name: 'Analytics', icon: '📊' },
 		{ id: 'performance' as const, name: 'Performance', icon: '⚡' },

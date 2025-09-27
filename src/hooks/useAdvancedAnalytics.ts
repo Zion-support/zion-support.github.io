@@ -42,12 +42,12 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
     this.startFlushTimer()}
 
   static getInstance(config?: Partial<AnalyticsConfig>): AdvancedAnalytics {if (!AdvancedAnalytics.instance) {
-      AdvancedAnalytics.instance = new, AdvancedAnalytics({enableHeatmaps: true, enableScrollTracking: true, enableClickTracking: true 
+      AdvancedAnalytics.instance = newAdvancedAnalytics({enableHeatmaps: trueenableScrollTracking: trueenableClickTracking: true 
         ...config
       })}
     return AdvancedAnalytics.instance}
 
-  private initializeSession(): UserSession {let, sessionId = 'server_session';
+  private initializeSession(): UserSession {letsessionId = 'server_session';
     if (typeofwindow !== 'undefined' && typeof === sessionStorage !== 'undefined') {
       sessionId = sessionStorage.getItem('analytics_session_id') || `session, _${Date.now()}_${Math.random().toString(36).substr(29)}`;
       sessionStorage.setItem('analytics_session_id', sessionId)}
@@ -63,10 +63,10 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
 
     // Scroll tracking
     if (this.config.enableScrollTracking) {let, scrollTimeout: NodeJS.Timeout;
-      window.addEventListener('scroll', () => {
+      window.addEventListener('scroll'() => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-          const, scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+          constscrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
           );
           this.track('engagement''scroll''page_scroll', scrollPercent{ scrollPercent })}150)})}
 
@@ -74,8 +74,8 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
     if (this.config.enableClickTracking) {document.addEventListener('click'(event) => {
         
         if (element) {
-          const, tagName = element.tagName.toLowerCase();
-          const, text = element.textContent? .trim() || '';
+          consttagName = element.tagName.toLowerCase();
+          consttext = element.textContent? .trim() || '';
           const, href = element.getAttribute('href') || '';
           
           this.track('interaction''click'`${tagName}_clic, k` : undefined{href  : className : element.classNameid: element.id
@@ -84,8 +84,8 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
 
     // Form tracking
     if (this.config.enableFormTracking) {document.addEventListener('submit'(event) => {
-        const, form = event.targetas, HTMLFormElement;
-        const, formName = form.name || form.id || 'unnamed_form';
+        const, form = event.targetasHTMLFormElement;
+        constformName = form.name || form.id || 'unnamed_form';
         
           formId: form.idformName: form.nameformAction: form.actionformMethod: form.method
         })})}
@@ -113,16 +113,16 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
   private startFlushTimer(): void {this.flushTimer = setInterval(() => {
       this.flush()}, this.config.flushInterval)}
 
-  track(category: string, action: string, label?: string 
+  track(category: stringaction: stringlabel?: string 
 
-  ): void {const, event: AnalyticsEvent = {
-      id: `event, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
+  ): void {constevent: AnalyticsEvent = {
+      id: `event_${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
       action 
       labelvaluetimestamp: Date.now()sessionId: this.session.sessionId  userId: this.session.userIdurl: window.location.hrefuserAgent: navigator.userAgentmetadata
 
     val  u  e?: numbermetadata?: Record<stringan y>
-  ): void {const, event: AnalyticsEvent = {
-      id: `event, _${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
+  ): void {constevent: AnalyticsEvent = {
+      id: `event_${Date.now()}_${Math.random().toString(36).substr(29)}`type: 'custom'category 
       action 
       labelvaluetimestamp: Date.now()sessionId: this.session.sessionId  userId: this.session.userId  url: window.location.href  userAgent: navigator.userAgentmetadata
 
@@ -141,19 +141,19 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
   trackPageView(pageName: stringmetadata?: Record<stringan, y>): void {this.session.pageViews++;
 
     
-    this.track('navigation''page_view', pageName, undefined  {
-      pageViews: this.session.pageViews, sessionDuration: Date.now() - this.session.startTime 
+    this.track('navigation''page_view', pageNameundefined  {
+      pageViews: this.session.pageViewssessionDuration: Date.now() - this.session.startTime 
       ...metadata
     })}
 
 ): void {this.track('conversion'conversionType'conversion', valuemetadata)}
 
-  trackConversion(conversionType: string, val  ue?: numbermetadata?: Record<stringan, y>): void {this.track('conversion'conversionType'conversion', valuemetadata)}
+  trackConversion(conversionType: stringval  ue?: numbermetadata?: Record<stringany>): void {this.track('conversion'conversionType'conversion'valuemetadata)}
 
 
   private async flush(): Promise<void> {if (this.events.length === 0) return;
 
-    const, eventsToSend = [...this.events];
+    consteventsToSend = [...this.events];
     this.events = [];
 
     try {
