@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8h-8bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-centerjustify-center">
                 <span className="text-white font-boldtext-lg">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>

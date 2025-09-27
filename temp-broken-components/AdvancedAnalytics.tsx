@@ -103,8 +103,8 @@ export const AdvancedAnalytics: React.FC = () => {
     return (
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="animate-pulse">
-          <div className="h-6bg-gray-200 rounded w-1/4mb-6"></div>
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6 mb-8">
+          <div className="h-6 bg-gray-200 rounded w-1/4mb-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="bg-gray-50 rounded-lgp-4">
                 <div className="h-4bg-gray-200 rounded w-3/4mb-2"></div>
@@ -125,7 +125,7 @@ export const AdvancedAnalytics: React.FC = () => {
         <h2 className="text-2xl font-boldtext-gray-900" id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h2>
         <button
           onClick={exportData}
-          className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
         >
           <span>📥</span>
           <span>Export Data</span>
@@ -133,16 +133,16 @@ export const AdvancedAnalytics: React.FC = () => {
       </div>
 
       {/* Metric Cards */}
-      <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metricCards.map((card, index) => (
-          <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6borderborder-blue-100">
+          <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 borderborder-blue-100">
             <div className="flex items-center justify-between mb-2">
               <span className="text-2xl">{card.icon}</span>
               <span className={`text-sm font-medium px-2py-1rounded-full ${
                 card.change >= 0 
                   ? 'text-green-700 bg-green-100' 
                   : 'text-red-700 bg-red-100'
-              }`}
+              }` }>
                 {card.change >= 0 ? '+' : ''}{card.change}%
               </span>
             </div>
@@ -161,13 +161,13 @@ export const AdvancedAnalytics: React.FC = () => {
           {(['pageViews', 'uniqueVisitors', 'bounceRate', 'sessionDuration'] as const).map((metric) => (
             <button
               key={metric}
-              onClick={() =>setSelectedMetric(metric)}
+              onClick={() => setSelectedMetric(metric)}
               aria-label={`Select ${metric} metric`}
               className={`px-4py-2rounded-lg font-medium transition-colors duration-200 ${
                 selectedMetric === metric
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              }` }
             </button>
           ))}
         </div>

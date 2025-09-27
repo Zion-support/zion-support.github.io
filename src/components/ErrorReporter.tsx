@@ -117,7 +117,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
               </svg>
             </div>
             <div className="ml-3">
-              <h3 className="text-lg font-mediumtext-gray-900" id="something-went-wrong">
+              <h3 className="text-lg font-medium text-gray-900" id="something-went-wrong">
                 Something went wrong
               </h3>
               <p className="text-smtext-gray-500">
@@ -156,9 +156,9 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({
       {children}
       
       {process.env.NODE_ENV === 'development' && errorHistory.length > 0 && (
-        <div className="fixed bottom-4right-4bg-white border border-gray-200 rounded-lg shadow-lg p-4max-w-sm">
+        <div className="fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4max-w-sm">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="text-sm font-mediumtext-gray-900" id="error-history">Error History</h4>
+            <h4 className="text-sm font-medium text-gray-900" id="error-history">Error History</h4>
             <button
               onClick={clearErrorHistory}
               className="text-xs text-gray-500 hover:text-gray-700"

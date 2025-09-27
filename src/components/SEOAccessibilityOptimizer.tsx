@@ -253,9 +253,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center justify-between">
+          <CardTitle className="flex items-centerjustify-between">
             <div className="flex items-center space-x-2">
-              <Search className="h-6w-6text-blue-600" />
+              <Search className="h-6 w-6text-blue-600" />
               <span>SEO & Accessibility Optimizer</span>
             </div>
             <button
@@ -276,7 +276,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Search className="h-5w-5text-blue-600" />
+              <Search className="h-5 w-5text-blue-600" />
               <span>SEO Metrics</span>
             </CardTitle>
           </CardHeader>
@@ -284,15 +284,15 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Overall SEO Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}
+                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}` }>
                   {seoMetrics.overallScore}/100
                 </span>
               </div>
               
               <div className="grid grid-cols-2gap-4">
-                <div className="p-3borderrounded-lg">
+                <div className="p-3 borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium">Title Tag</span>
+                    <span className="text-smfont-medium">Title Tag</span>
                     {seoMetrics.titleTag ? 
                       <CheckCircle className="h-4w-4text-green-600" /> : 
                       <XCircle className="h-4w-4text-red-600" />
@@ -300,9 +300,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="p-3borderrounded-lg">
+                <div className="p-3 borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium">Meta Description</span>
+                    <span className="text-smfont-medium">Meta Description</span>
                     {seoMetrics.metaDescription ? 
                       <CheckCircle className="h-4w-4text-green-600" /> : 
                       <XCircle className="h-4w-4text-red-600" />
@@ -351,10 +351,10 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 </div>
               </div>
               
-              <div className="p-3borderrounded-lg">
+              <div className="p-3 borderrounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium">Page Speed</span>
-                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}
+                  <span className="text-smfont-medium">Page Speed</span>
+                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}` }>
                     {seoMetrics.pageSpeed}/100
                   </span>
                 </div>
@@ -366,7 +366,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Eye className="h-5w-5text-purple-600" />
+              <Eye className="h-5 w-5text-purple-600" />
               <span>Accessibility Metrics</span>
             </CardTitle>
           </CardHeader>
@@ -374,7 +374,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}
+                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}` }>
                   {accessibilityMetrics.overallScore}/100
                 </span>
               </div>
@@ -444,7 +444,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <AlertCircle className="h-5w-5text-orange-600" />
+            <AlertCircle className="h-5 w-5text-orange-600" />
             <span>Optimization Issues</span>
           </CardTitle>
         </CardHeader>
@@ -459,20 +459,20 @@ const SEOAccessibilityOptimizer: React.FC = () => {
               issues.map((issue, index) => (
                 <div key={index} className="border rounded-lgp-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}` }>
                       {issue.severity.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500 capitalize">{issue.category}</span>
                   </div>
                   <h4 className="font-semiboldmb-2">{issue.title}</h4>
-                  <p className="text-sm text-gray-600 mb-3">{issue.description}</p>
-                  <div className="grid grid-cols-1md:grid-cols-2gap-3text-sm">
+                  <p className="text-sm text-gray-600mb-3">{issue.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3text-sm">
                     <div>
-                      <span className="font-mediumtext-blue-700">Solutio, n:</span>
+                      <span className="font-medium text-blue-700">Solutio, n:</span>
                       <p className="text-gray-600">{issue.solution}</p>
                     </div>
                     <div>
-                      <span className="font-mediumtext-green-700">Impact:</span>
+                      <span className="font-medium text-green-700">Impact:</span>
                       <p className="text-gray-600">{issue.impact}</p>
                     </div>
                   </div>

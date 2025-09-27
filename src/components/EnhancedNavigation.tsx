@@ -77,7 +77,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
           : 'bg-white shadow-sm'
-      } `}
+      } ${className}` }
       role="navigation"
       aria-label="Main navigation"
     >
@@ -104,8 +104,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       className={`flex items-center space-x-1px-4py-2rounded-lg font-medium transition-all duration-200 ${
                         activeDropdown === item.label
                           ? 'bg-blue-50 text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                      }`}
+                          : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
+                      }` }
                       aria-haspopup="true"
                       aria-expanded={activeDropdown === item.label}
                     >
@@ -114,7 +114,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       <svg
                         className={`w-4h-4transition-transform duration-200 ${
                           activeDropdown === item.label ? 'rotate-180' : ''
-                        }`}
+                        }` }
                         fill="none"
                         stroke="currentColor"
                         viewBox="002424"
@@ -133,7 +133,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                               isActiveRoute(child.href)
                                 ? 'bg-blue-50 text-blue-600 border-r-2border-blue-600'
                                 : 'text-gray-700 hover:bg-gray-50'
-                            }`}
+                            }` }
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <div className="flex-1">
@@ -157,8 +157,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                     className={`flex items-center space-x-2px-4py-2rounded-lg font-medium transition-all duration-200 ${
                       isActiveRoute(item.href)
                         ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                    }`}
+                        : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
+                    }` }
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
@@ -183,7 +183,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <svg
               className={`w-6h-6transition-transform duration-200 ${
                 isMobileMenuOpen ? 'rotate-90' : ''
-              }`}
+              }` }
               fill="none"
               stroke="currentColor"
               viewBox="002424"
@@ -200,8 +200,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0opacity-0'
-          }`}
+            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          }` }
         >
           <div className="py-4space-y-2">
             {items.map((item) => (
@@ -214,7 +214,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         activeDropdown === `mobile-${item.label}`
                           ? 'bg-blue-50 text-blue-600'
                           : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                      }` }
                     >
                       <div className="flex items-center space-x-2">
                         {item.icon && <span className="text-lg">{item.icon}</span>}
@@ -223,7 +223,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       <svg
                         className={`w-4h-4transition-transform duration-200 ${
                           activeDropdown === `mobile-${item.label}` ? 'rotate-180' : ''
-                        }`}
+                        }` }
                         fill="none"
                         stroke="currentColor"
                         viewBox="002424"
@@ -242,7 +242,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                               isActiveRoute(child.href)
                                 ? 'bg-blue-50 text-blue-600'
                                 : 'text-gray-600 hover:bg-gray-50'
-                            }`}
+                            }` }
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <span>{child.label}</span>
@@ -263,7 +263,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       isActiveRoute(item.href)
                         ? 'bg-blue-600 text-white'
                         : 'text-gray-700 hover:bg-gray-50'
-                    }`}
+                    }` }
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>

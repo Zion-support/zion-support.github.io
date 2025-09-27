@@ -107,8 +107,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               className={`p-3rounded-lg border-2flex flex-col items-center space-y-2 ${
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
+              }` }
             >
               <Icon className="w-6h-6" />
               <span className="text-sm font-medium">{label}</span>
@@ -133,8 +133,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               className={`p-3rounded-lg border-2 ${
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark: bg-blue-900/20'
-                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-              }`}
+                  : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dar, k:hove, r:border-gray-500'
+              }` }
             >
               <span className="text-sm font-medium">{label}</span>
             </button>
@@ -245,7 +245,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
   );
 
   return (
-    <div className={`relative `}>
+    <div className={`relative ${className}` }>
       {/* Settings Toggle Button */}
       <button
         onClick={toggleSettings}
@@ -272,8 +272,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <User className="w-6h-6text-blue-500" />
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <User className="w-6 h-6text-blue-500" />
+                  <h2 className="text-xl font-bold text-gray-900dark:text-white">
                     User Experience
                   </h2>
                 </div>
@@ -288,7 +288,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
               {/* Tab Navigation */}
               <div className="flex space-x-1mb-6bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
                 {[
-                  { i, d: 'appearance', label: 'Appearance', icon: Palette },
+                  { id: 'appearance', label: 'Appearance', icon: Palette },
                   { id: 'accessibility', label: 'Accessibility', icon: Smartphone },
                   { id: 'language', label: 'Language', icon: Globe }
                 ].map(({ id, label, icon: Icon }) => (
@@ -298,8 +298,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                     className={`flex-1flex items-center justify-center space-x-2py-2px-3rounded-md text-sm font-medium transition-colors ${
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-                    }`}
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dar, k:hove, r:text-gray-200'
+                    }` }
                   >
                     <Icon className="w-4h-4" />
                     <span>{label}</span>

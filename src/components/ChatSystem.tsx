@@ -224,8 +224,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
         key={message.id}
         className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}
       >
-        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
-          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}`}>
+        <div className={`flex max-w-xs lg:max-w-md ${isUser ? 'flex-row-reverse' : 'flex-row'}` }>
+          <div className={`flex-shrink-0 ${isUser ? 'ml-3' : 'mr-3'}` }>
             <Image
               className="h-8 w-8 rounded-full"
               src={isUser ? userAvatar : botAvatar}
@@ -234,13 +234,13 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               height={32}
             />
           </div>
-          <div className={`${isUser ? 'text-right' : 'text-left'}`}>
+          <div className={`${isUser ? 'text-right' : 'text-left'}` }>
             <div
               className = {`px-4 py-2 rounded-lg ${
                 isUser
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-800'}
-              }`}
+                  : 'bg-gray-200 text-gray-800'
+              }` }
             >
               {message.type === 'image' && message.metadata?.imageUrl && (
                 <div className="mb-2">
@@ -263,7 +263,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
               )}
               <p className="text-sm">{message.text}</p>
             </div>
-            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}`}>
+            <div className={`text-xs text-gray-500 mt-1 ${isUser ? 'text-right' : 'text-left'}` }>
               {formatTime(message.timestamp)}
             </div>
           </div>
@@ -273,7 +273,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
   };
 
   return (
-    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
+    <div className={`flex flex-col h-96 bg-white rounded-lg shadow-sm border border-gray-200 ${className}` }>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">
@@ -287,7 +287,7 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
           <div>
             <h3 className="text-sm font-medium text-gray-900" id="botname">{botName}</h3>
             <div className="flex items-center">
-              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}></div>
+              <div className={`h-2 w-2 rounded-full mr-2 ${isConnected ? 'bg-green-400' : 'bg-red-400'}` }></div>
               <span className="text-xs text-gray-500">
                 {isConnected ? 'Online' : 'Offline'}
               </span>

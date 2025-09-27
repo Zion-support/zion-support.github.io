@@ -171,7 +171,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Activity className="h-6w-6text-blue-600" />
+            <Activity className="h-6 w-6text-blue-600" />
             <span>Comprehensive Analytics Dashboard</span>
           </CardTitle>
           <CardDescription>
@@ -193,7 +193,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                   activeTab === key
                     ? 'bg-white text-blue-600 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
-                }`}
+                }` }
               >
                 <Icon className="h-4w-4" />
                 <span>{label}</span>
@@ -204,15 +204,15 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4">
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Users className="h-8w-8text-blue-600" />
+                      <Users className="h-8 w-8text-blue-600" />
                       <div>
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
-                        <div className="text-sm text-gray-600">Total Visitors</div>
-                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}
+                        <div className="text-smtext-gray-600">Total Visitors</div>
+                        <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}` }>
                           {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%
                         </div>
                       </div>
@@ -223,9 +223,9 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Zap className="h-8w-8text-green-600" />
+                      <Zap className="h-8 w-8text-green-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}`}
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.performance.pageSpeed)}` }>
                           {analyticsData.performance.pageSpeed}
                         </div>
                         <div className="text-sm text-gray-600">Performance Score</div>
@@ -238,9 +238,9 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Shield className="h-8w-8text-purple-600" />
+                      <Shield className="h-8 w-8text-purple-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}`}
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.security.score)}` }>
                           {analyticsData.security.score}
                         </div>
                         <div className="text-sm text-gray-600">Security Score</div>
@@ -253,9 +253,9 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
                 <Card>
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-2">
-                      <Globe className="h-8w-8text-orange-600" />
+                      <Globe className="h-8 w-8text-orange-600" />
                       <div>
-                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}`}
+                        <div className={`text-2xl font-bold ${getScoreColor(analyticsData.seo.score)}` }>
                           {analyticsData.seo.score}
                         </div>
                         <div className="text-sm text-gray-600">SEO Score</div>
@@ -308,7 +308,7 @@ const ComprehensiveAnalyticsDashboard: React.FC = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
-                    <AlertTriangle className="h-5w-5text-orange-600" />
+                    <AlertTriangle className="h-5 w-5text-orange-600" />
                     <span>Priority Actions</span>
                   </CardTitle>
                 </CardHeader>

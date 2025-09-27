@@ -330,7 +330,7 @@ const SEOAnalyzer: React.FC = () => {
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4py-2text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
+            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -340,15 +340,16 @@ const SEOAnalyzer: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-700">SEO Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
+              <span className="text-sm font-medium text-gray-700">SEO Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}` }>
                 {report.score}%
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-fullh-2">
               <div
-                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
-                style={{ width: `${report.score}%` }}</p></div>
+                className={`h-2 rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}` }
+                style={{ width: `${report.score}%` }}
+              ></div>
             </div>
             <p className="text-sm text-gray-600 mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
@@ -381,8 +382,10 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
-                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}
+                  >
+                </div>
               </div>
             </div>
             
@@ -390,8 +393,10 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
-                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}
+                  >
+                </div>
               </div>
             </div>
             
@@ -399,8 +404,10 @@ const SEOAnalyzer: React.FC = () => {
               <div className="flexitems-center">
                 <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-mediumtext-gray-900">Info</p>
-                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
+                  <p className="text-sm font-medium text-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -408,12 +415,12 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-              <h3 className="text-lg font-mediumtext-gray-900">Issues Found</h3>
-              <div className="space-y-2max-h-96 overflow-y-auto">
+              <h3 className="text-lg font-medium text-gray-900">Issues Found</h3>
+              <div className="space-y-2 max-h-96overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
-                    className={`p-3rounded-md border ${getSeverityColor(issue.severity)}`}
+                    className={`p-3 rounded-md border ${getSeverityColor(issue.severity)}` }
                   >
                     <div className="flex items-startspace-x-2">
                       <span className="text-lg">{getTypeIcon(issue.type)}</span>

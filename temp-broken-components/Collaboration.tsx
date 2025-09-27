@@ -75,7 +75,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       case 'disconnected':
         return 'text-red-600 dark:text-red-400';
       default:
-        return 'text-gray-600 dark:text-gray-400';
+        return 'text-gray-600 dar, k:text-gray-400';
     }
   };
 
@@ -95,15 +95,15 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
     <div className={`p-6rounded-lg border-2transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-        : 'bg-white border-gray-200 hover:border-gray-300'
-    }`}
+        : 'bg-white border-gray-200 hove, r:border-gray-300'
+    }` }>
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-xl font-semibold text-gray-900dark:text-white">
           Team Collaboration
         </h3>
         <div className="flex items-center space-x-2">
-          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}</p></div>
-          <span className={`text-sm font-medium ${getConnectionStatusColor()}`}
+          <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}` }></div>
+          <span className={`text-sm font-medium ${getConnectionStatusColor()}` }>
             {connectionStatus}
           </span>
         </div>
@@ -121,7 +121,7 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               </div>
               <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
-              } ${getStatusColor(user.isActive)}`}</p></div>
+              } ${getStatusColor(user.isActive)}` }></div>
             </div>
             
             <div className="flex-1min-w-0">
@@ -135,13 +135,13 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
                   </span>
                 )}
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
+              <p className="text-xs text-gray-500dark:text-gray-400">
+                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}` }
               </p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <button className="p-1rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 💬
               </button>
               <button className="p-1rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">

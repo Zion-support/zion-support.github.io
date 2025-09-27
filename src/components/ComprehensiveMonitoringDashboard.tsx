@@ -240,48 +240,43 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Activity className="h-6 w-6 text-blue-600" />
-              <span>Comprehensive Monitoring Dashboard</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
-                <span className="text-sm text-gray-600">
-                  {isMonitoring ? 'Monitoring' : 'Stopped'}
-                </span>
-              </div>
-              <select
-                value={selectedTimeRange}
-                onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-              >
-                <option value="1h">Last Hour</option>
-                <option value="6h">Last 6 Hours</option>
-                <option value="24h">Last 24 Hours</option>
-                <option value="7d">Last 7 Days</option>
-              </select>
-            </div>
-          </CardTitle>
-          <CardDescription>
-            Real-time system monitoring with comprehensive analytics and alerting
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {/* Tab Navigation */}
-          <div className="flex space-x-1 mb-6 border-b border-gray-200">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === tab.id
-                    ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
+          <p className="text-gray-600">Real-time system performance and health metrics</p>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="text-sm text-gray-500">
+            Last updated: {lastUpdated.toLocaleTimeString()}
+          </div>
+          <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}` }>
+            Performance: {grade}
+          </div>
+        </div>
+      </div>
+
+      {/* Alerts */}
+      <AnimatePresence>
+        {alerts.filter(alert => !alert.resolved).length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-2"
+          >
+            {alerts.filter(alert => !alert.resolved).map(alert => (
+              <motion.div
+                key={alert.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                className={`p-4 rounded-lg border-l-4 ${
+                  alert.type === 'error' ? 'bg-red-50 border-red-400' :
+                  alert.type === 'warning' ? 'bg-yellow-50 border-yellow-400' :
+                  alert.type === 'info' ? 'bg-blue-50 border-blue-400' :
+                  'bg-green-50 border-green-400'
+                }` }
               >
                 <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>

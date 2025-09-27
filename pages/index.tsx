@@ -20,10 +20,10 @@ const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/Advan
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor'), {
   ssr: false,
@@ -330,7 +330,7 @@ export default function Home(): JSX.Element {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <AdvancedAnalyticsDashboard 
+                {/* <AdvancedAnalyticsDashboard 
                   data={{
                     pageViews: 12543,
                     uniqueVisitors: 8921,
@@ -373,7 +373,7 @@ export default function Home(): JSX.Element {
                     performanceScore: 92
                   }}
                   className="h-full"
-                />
+                /> */}
               </motion.div>
             </div>
             

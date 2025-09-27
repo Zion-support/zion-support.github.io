@@ -32,7 +32,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
-      i, d: '1',
+      id: '1',
       title: 'AI & Machine Learning Services',
       description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
       url: '/services#ai-ml',
@@ -211,7 +211,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
   };
 
   return (
-    <div ref={searchRef} className={`relative `}>
+    <div ref={searchRef} className={`relative ${className}` }>
       <div className="relative">
         <div className="absolute inset-y-0left-0pl-3flex items-centerpointer-events-none">
           <svg className="h-5w-5text-gray-400" fill="none" stroke="currentColor" viewBox="002424">
@@ -247,7 +247,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
               role="button" tabIndex={0} onClick={() => handleResultClick(result)}
               className={`cursor-pointer select-none relative py-3px-4hover:bg-gray-50 ${
                 index === selectedIndex ? 'bg-blue-50' : ''
-              }`}
+              }` }
             >
               <div className="flexitems-center">
                 <div className="flex-shrink-0mr-3">
@@ -258,7 +258,7 @@ export const AdvancedSearch: React.FC<SearchProps> = ({
                     <p className="text-sm font-medium text-gray-900 truncate">
                       {result.title}
                     </p>
-                    <span className={`inline-flex items-center px-2py-0.5rounded-full text-xs font-medium ${getTypeColor(result.type)}`}
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getTypeColor(result.type)}` }>
                       {result.type}
                     </span>
                   </div>

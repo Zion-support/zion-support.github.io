@@ -31,7 +31,7 @@ export const PricingCalculator: React.FC = () => {
 
 	const services: PricingOption[] = [
 		{
-			i, d: 'web-dev',
+			id: 'web-dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
 			basePrice: 15000,
@@ -231,14 +231,14 @@ export const PricingCalculator: React.FC = () => {
 										inputs.service === service.id
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}`}
+									}` }
 								>
 									<div className="flex justify-betweenitems-start">
 										<div>
 											<h4 className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
 											<p className="text-sm text-gray-600">{service.description}</p>
 										</div>
-										<span className="text-sm font-mediumtext-blue-600">
+										<span className="text-sm font-medium text-blue-600">
 											{formatPrice(service.basePrice)}
 										</span>
 									</div>
@@ -261,7 +261,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.complexity === complexity
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}`}
+									}` }
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
 								</button>
@@ -283,7 +283,7 @@ export const PricingCalculator: React.FC = () => {
 										inputs.timeline === timeline
 											? 'border-blue-500 bg-blue-50'
 											: 'border-gray-200 hover:border-gray-300'
-									}`}
+									}` }
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
 								</button>
@@ -317,10 +317,10 @@ export const PricingCalculator: React.FC = () => {
 								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
 									<span className="font-medium">{feature.name}</span>
 									<div className="flex items-center space-x-3">
-										<span className="text-sm text-gray-600">{formatPrice(feature.price)}</span>
+										<span className="text-smtext-gray-600">{formatPrice(feature.price)}</span>
 										<input
 											type="checkbox"
-											id={`feature-${feature.id}`}
+											id={`feature-${feature.id}` }
 											checked={inputs.additionalFeatures.includes(feature.id)}
 											onChange={() => handleFeatureToggle(feature.id)}
 											className="w-4h-4text-blue-600 border-gray-300 roundedfocus:ring-blue-500"

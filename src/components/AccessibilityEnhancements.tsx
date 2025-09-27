@@ -112,29 +112,29 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
   };
 
   return (
-    <div className={`accessibility-enhancements `}>
+    <div className={`accessibility-enhancements ${className}` }>
       <div className="bg-white rounded-lg shadow-lgp-6">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flexitems-center">
             <Accessibility className="w-5h-5mr-2" />
             Accessibility Enhancements
           </h3>
-          <div className={`px-4py-2rounded-lg ${getScoreBgColor(score)}`}
-            <span className={`text-lg font-bold ${getScoreColor(score)}`}
+          <div className={`px-4 py-2 rounded-lg ${getScoreBgColor(score)}` }>
+            <span className={`text-lg font-bold ${getScoreColor(score)}` }>
               {score}% Accessible
             </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="space-y-4">
             <h4 className="font-semibold text-gray-800 mb-3">Accessibility Features</h4>
             
             <div className="space-y-3">
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <Eye className="w-4h-4mr-3text-blue-500" />
-                  <span className="text-sm font-mediumtext-gray-700">High Contrast Mode</span>
+                  <Eye className="w-4 h-4 mr-3text-blue-500" />
+                  <span className="text-sm font-medium text-gray-700">High Contrast Mode</span>
                 </div>
                 <input
                   type="checkbox"
@@ -146,8 +146,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <Volume 2 className="w-4h-4mr-3text-green-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Large Text</span>
+                  <Volume2 className="w-4 h-4 mr-3text-green-500" />
+                  <span className="text-sm font-medium text-gray-700">Large Text</span>
                 </div>
                 <input
                   type="checkbox"
@@ -159,8 +159,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <MousePointer className="w-4h-4mr-3text-purple-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Reduced Motion</span>
+                  <MousePointer className="w-4 h-4 mr-3text-purple-500" />
+                  <span className="text-sm font-medium text-gray-700">Reduced Motion</span>
                 </div>
                 <input
                   type="checkbox"
@@ -172,8 +172,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <Keyboard className="w-4h-4mr-3text-orange-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Keyboard Navigation</span>
+                  <Keyboard className="w-4 h-4 mr-3text-orange-500" />
+                  <span className="text-sm font-medium text-gray-700">Keyboard Navigation</span>
                 </div>
                 <input
                   type="checkbox"
@@ -185,8 +185,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <Accessibility className="w-4h-4mr-3text-indigo-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Screen Reader Support</span>
+                  <Accessibility className="w-4 h-4 mr-3text-indigo-500" />
+                  <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>
                 </div>
                 <input
                   type="checkbox"
@@ -198,8 +198,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <CheckCircle className="w-4h-4mr-3text-teal-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Focus Indicators</span>
+                  <CheckCircle className="w-4 h-4 mr-3text-teal-500" />
+                  <span className="text-sm font-medium text-gray-700">Focus Indicators</span>
                 </div>
                 <input
                   type="checkbox"
@@ -211,8 +211,8 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
 
               <label className="flex items-center justify-between p-3bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div className="flexitems-center">
-                  <Eye className="w-4h-4mr-3text-pink-500" />
-                  <span className="text-sm font-mediumtext-gray-700">Color Blind Support</span>
+                  <Eye className="w-4 h-4 mr-3text-pink-500" />
+                  <span className="text-sm font-medium text-gray-700">Color Blind Support</span>
                 </div>
                 <input
                   type="checkbox"
@@ -236,9 +236,9 @@ const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ c
                 ))}
               </div>
             ) : (
-              <div className="flex items-center p-4bg-green-50 border border-green-200 rounded-lg">
-                <CheckCircle className="w-5h-5mr-2text-green-500" />
-                <span className="text-sm font-mediumtext-green-800">
+              <div className="flex items-center p-4 bg-green-50 border border-green-200rounded-lg">
+                <CheckCircle className="w-5 h-5 mr-2text-green-500" />
+                <span className="text-sm font-medium text-green-800">
                   All accessibility features are enabled! Great job!
                 </span>
               </div>

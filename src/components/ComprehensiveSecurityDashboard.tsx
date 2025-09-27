@@ -292,6 +292,200 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>
+          <p className="text-gray-600">Comprehensive security monitoring and threat analysis</p>
+        </div>
+        <div className="flex items-center space-x-4">
+          <select
+            value={selectedTimeRange}
+            onChange={(e) => setSelectedTimeRange(e.target.value as any)}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+          >
+            <option value="24h">Last 24 hours</option>
+            <option value="7d">Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+          </select>
+          <div className={`px-3 py-1 rounded-full text-sm font-medium ${
+            metrics.overall.securityScore >= 90 ? 'text-green-600 bg-green-100' :
+            metrics.overall.securityScore >= 70 ? 'text-yellow-600 bg-yellow-100' :
+            'text-red-600 bg-red-100'
+          }` }>
+            Security Score: {Math.round(metrics.overall.securityScore)}
+          </div>
+        </div>
+      </div>
+
+      {/* Security Alerts */}
+      <AnimatePresence>
+        {alerts.filter(alert => !alert.resolved).length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-2"
+          >
+            {alerts.filter(alert => !alert.resolved).map(alert => (
+              <motion.div
+                key={alert.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                className={`p-4 rounded-lg border ${getSeverityColor(alert.severity)}` }
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    {getSeverityIcon(alert.severity)}
+                    <div>
+                      <h4 className="font-semibold text-sm">{alert.title}</h4>
+                      <p className="text-sm">{alert.description}</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => resolveAlert(alert.id)}
+                    className="text-gray-400 hover:text-gray-600"
+                  >
+                    <XCircle className="h-4 w-4" />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Overview Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Threats Blocked</CardTitle>
+            <Shield className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.overall.threatsBlocked}</div>
+            <p className="text-xs text-muted-foreground">
+              +{Math.floor(Math.random() * 20)}% from last period
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Vulnerabilities</CardTitle>
+            <AlertTriangle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.vulnerabilities.total}</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.vulnerabilities.critical} critical
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Active Alerts</CardTitle>
+            <Activity className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{metrics.monitoring.activeAlerts}</div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.monitoring.resolvedAlerts} resolved
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Compliance</CardTitle>
+            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">
+              {metrics.overall.complianceStatus === 'compliant' ? '100%' : '85%'}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {metrics.overall.complianceStatus}
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Threat Analysis */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Threat Severity Distribution</CardTitle>
+            <CardDescription>Breakdown of threats by severity level</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <span className="text-sm font-medium">Critical</span>
+                </div>
+                <span className="text-sm font-bold">{metrics.threats.critical}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                  <span className="text-sm font-medium">High</span>
+                </div>
+                <span className="text-sm font-bold">{metrics.threats.high}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <span className="text-sm font-medium">Medium</span>
+                </div>
+                <span className="text-sm font-bold">{metrics.threats.medium}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <span className="text-sm font-medium">Low</span>
+                </div>
+                <span className="text-sm font-bold">{metrics.threats.low}</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent Threats</CardTitle>
+            <CardDescription>Latest security threats detected</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {metrics.threats.recent.map((threat, index) => (
+                <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
+                  <div className="flex items-center space-x-3">
+                    {getSeverityIcon(threat.severity)}
+                    <div>
+                      <div className="text-sm font-medium">{threat.type}</div>
+                      <div className="text-xs text-muted-foreground">{threat.source}</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className={`text-xs px-2 py-1 rounded-full ${getSeverityColor(threat.severity)}` }>
+                      {threat.status}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      {threat.timestamp.toLocaleTimeString()}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Compliance Status */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">

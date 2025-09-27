@@ -59,7 +59,7 @@ export function BlogSearch({ onSearch, onCategoryFilter, categories, currentCate
               currentCategory === category || (currentCategory === 'all' && category === 'All')
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+            }` }
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           </motion.button>
@@ -85,9 +85,9 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       case 'featured':
         return 'bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow p-8h-full';
       case 'compact':
-        return 'bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4h-full';
+        return 'bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 h-full';
       default:
-        return 'bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6h-full';
+        return 'bg-white rounded-2xl shadow-lg hove, r:shadow-xl transition-shadow p-6 h-full';
     }
   };
 
@@ -96,9 +96,9 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       case 'featured':
         return 'text-2xl font-bold text-gray-800 mb-3hover: text-blue-600 transition-colors';
       case 'compact':
-        return 'text-lg font-bold text-gray-800 mb-2hover:text-blue-600 transition-colors';
+        return 'text-lg font-bold text-gray-800 mb-2 hover:text-blue-600 transition-colors';
       default:
-        return 'text-lg font-bold text-gray-800 mb-3hover:text-blue-600 transition-colors';
+        return 'text-lg font-bold text-gray-800 mb-3 hove, r:text-blue-600 transition-colors';
     }
   };
 
@@ -123,7 +123,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           <div>
             <span className={`px-3py-1rounded-full text-sm font-medium ${
               variant === 'featured' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-700'
-            }`}
+            }` }>
               {post.category}
             </span>
             <span className="ml-2text-smtext-gray-500">{post.readTime} min read</span>
@@ -135,8 +135,8 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
           className={`p-2rounded-full transition-colors ${
             isBookmarked 
               ? 'text-yellow-500 hover:text-yellow-600' 
-              : 'text-gray-400 hover:text-yellow-500'
-          }`}
+              : 'text-gray-400 hove, r:text-yellow-500'
+          }` }
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -154,7 +154,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       {/* Excerpt */}
       <p className={`text-gray-600 mb-4leading-relaxed ${
         variant === 'compact' ? 'text-sm' : ''
-      }`}
+      }` }>
         {post.excerpt}
       </p>
 
@@ -162,23 +162,23 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       <div className="flex items-center justify-between mb-4">
         <div className="flexitems-center">
           <div className={`bg-gray-200 rounded-full flex items-center justify-center mr-3 ${
-            variant === 'featured' ? 'w-8h-8' : 'w-6h-6'
-          }`}
+            variant === 'featured' ? 'w-8 h-8' : 'w-6 h-6'
+          }` }>
             <span className={`font-medium text-gray-600 ${
               variant === 'featured' ? 'text-sm' : 'text-xs'
-            }`}
+            }` }>
               {post.author.split(' ').map(n => n[0]).join('')}
             </span>
           </div>
           <div>
             <p className={`font-medium text-gray-800 ${
               variant === 'featured' ? 'text-sm' : 'text-xs'
-            }`}
+            }` }>
               {post.author}
             </p>
             <p className={`text-gray-500 ${
               variant === 'featured' ? 'text-xs' : 'text-xs'
-            }`}
+            }` }>
               {new Date(post.publishDate).toLocaleDateString()}
             </p>
           </div>
@@ -201,7 +201,7 @@ export function BlogCard({ post, variant = 'regular', onReadMore, onBookmark, is
       <motion.button
         onClick={() => onReadMore(post)}
         className="text-blue-600 hover:text-blue-800 font-medium transition-colors flexitems-center"
-        whileHover={{ , x: 5 }}
+        whileHover={{ x: 5 }}
       >
         Read More
         <motion.svg
@@ -255,7 +255,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           currentPage === 1
             ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
-        }`}
+        }` }
         whileHover={{ scale: currentPage === 1 ? 1 : 1.05 }}
         whileTap={{ scale: currentPage === 1 ? 1 : 0.95 }}
       </motion.button>
@@ -268,7 +268,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
             currentPage === page
               ? 'bg-blue-600 text-white'
               : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
-          }`}
+          }` }
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         </motion.button>
@@ -281,7 +281,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
           currentPage === totalPages
             ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
-        }`}
+        }` }
         whileHover={{ scale: currentPage === totalPages ? 1 : 1.05 }}
         whileTap={{ scale: currentPage === totalPages ? 1 : 0.95 }}
       </motion.button>

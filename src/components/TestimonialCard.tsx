@@ -25,7 +25,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         key={i}
         className={`w-5h-5 ${
           i < rating ? 'text-yellow-400' : 'text-gray-300'
-        }`}
+        }` }
         fill="currentColor"
         viewBox="002020"
       >
@@ -36,9 +36,9 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div 
-      className={`group p-8bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 hover-lift ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0translate-y-8'
-      }`}
+      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hove, r:border-blue-200 hover-lift ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }` }
     >
       {/* Rating */}
       <div className="flex items-centermb-4">
