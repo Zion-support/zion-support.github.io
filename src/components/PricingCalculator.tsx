@@ -238,7 +238,7 @@ export const PricingCalculator: React.FC = () => {
 											<h4 className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
 											<p className="text-smtext-gray-600">{service.description}</p>
 										</div>
-										<span className="text-sm font-medium text-blue-600">
+										<span className="text-sm font-mediumtext-blue-600">
 											{formatPrice(service.basePrice)}
 										</span>
 									</div>
