@@ -234,7 +234,7 @@ const Dashboard: React.FC = () => {
     performanceScore: 92
   }), []);
 
-	const, renderDashboard = useMemo(() => {
+	const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
