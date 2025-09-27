@@ -74,7 +74,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
         low: 'Successful login attempt',
         medium: 'Failed login attempt with valid credentials',
         high: 'Multiple failed login attempts',
-        critical: 'Brute force attack detected'}
+        critical: 'Brute force attack detected'
       },
       authorization: {
         low: 'Permission check performed',
@@ -198,7 +198,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       ],
       backgroundColor: ['#EF4444', '#F59E0B', '#3B82F6', '#10B981', '#8B5CF6'],
       borderColor: ['#DC2626', '#D97706', '#1D4ED8', '#059669', '#7C3AED'],
-      borderWidth: 2}
+      borderWidth: 2
     }]
   };
 
@@ -214,7 +214,7 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
       ],
       backgroundColor: ['#DC2626', '#EA580C', '#D97706', '#16A34A'],
       borderColor: ['#B91C1C', '#C2410C', '#B45309', '#15803D'],
-      borderWidth: 2}
+      borderWidth: 2
     }]
   };
 
@@ -243,18 +243,12 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className 
             {(['1h', '24h', '7d', '30d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() = aria-label="setSelectedTimeRange(range)}
-                className = {`px-3 py-1 rounded-full text-sm font-medium ${
+                onClick={() => setSelectedTimeRange(range)}
+                aria-label={`Select ${range} time range`}
+                className={`px-3 py-1 rounded-full text-sm font-medium ${
                   selectedTimeRange === range
                     ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'}
-                }`}
-              >
-                {range}"> setSelectedTimeRange(range)}
-                className = {`px-3 py-1 rounded-full text-sm font-medium ${
-                  selectedTimeRange === range
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-500 hover:text-gray-700'}
+                    : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
                 {range}

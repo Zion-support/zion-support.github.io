@@ -35,6 +35,10 @@ const MemoizedCard = memo(({ title, content, onClick }: {
 });
 MemoizedCard.displayName = 'MemoizedCard';
 
+MemoizedCard.displayName = 'MemoizedCard';
+
+MemoizedCard.displayName = 'MemoizedCard';
+
 // Virtual scrolling component for large lists
 const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
   items: any[];
@@ -78,6 +82,10 @@ const VirtualList = memo(({ items, itemHeight = 50, containerHeight = 400 }: {
     </div>
   );
 });
+VirtualList.displayName = 'VirtualList';
+
+VirtualList.displayName = 'VirtualList';
+
 VirtualList.displayName = 'VirtualList';
 
 // Image optimization component
@@ -124,7 +132,6 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
           height={height || 200}
           onLoad={handleLoad}
           onError={handleError}
-          loading="lazy"
           className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           {...props}
         />
@@ -132,6 +139,10 @@ const OptimizedImage = memo(({ src, alt, width, height, ...props }: {
     </div>
   );
 });
+OptimizedImage.displayName = 'OptimizedImage';
+
+OptimizedImage.displayName = 'OptimizedImage';
+
 OptimizedImage.displayName = 'OptimizedImage';
 
 // Debounced search component
@@ -177,6 +188,10 @@ const DebouncedSearch = memo(({ onSearch, placeholder = "Search..." }: {
     />
   );
 });
+DebouncedSearch.displayName = 'DebouncedSearch';
+
+DebouncedSearch.displayName = 'DebouncedSearch';
+
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook

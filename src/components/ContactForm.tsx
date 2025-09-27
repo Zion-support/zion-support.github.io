@@ -105,10 +105,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 					Thank you for your interest in our services. We&apos;ll get back to you within 24 hours with a detailed proposal.
 				</p>
 				<button
-					onClick={() = aria-label="setSubmitStatus('idle')}
-					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
-				>
-					Send Another Message"> setSubmitStatus('idle')}
+					onClick={() => setSubmitStatus('idle')}
+					aria-label="Send another message"
 					className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
 				>
 					Send Another Message

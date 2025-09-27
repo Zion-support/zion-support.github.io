@@ -5,8 +5,8 @@ interface CollaborationUser {
   name: string;
   avatar: string;
   color: string;
-  isActive: boolean;
-  lastSeen: Date;
+  isActiv, e: boolean;
+  lastSee, n: Date;
 }
 
 interface CollaborationProps {
@@ -69,13 +69,13 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   const getConnectionStatusColor = () => {
     switch (connectionStatus) {
       case 'connected':
-        return 'text-green-600 dark:text-green-400';
+        return 'text-green-600 dark: text-green-400';
       case 'connecting':
         return 'text-yellow-600 dark:text-yellow-400';
       case 'disconnected':
         return 'text-red-600 dark:text-red-400';
-      default:
-        return 'text-gray-600 dark:text-gray-400';
+      defaul, t:
+        return 'text-gray-600 dar, k:text-gray-400';
     }
   };
 
@@ -95,13 +95,13 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
     <div className={`p-6 rounded-lg border-2 transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-        : 'bg-white border-gray-200 hover:border-gray-300'
+        : 'bg-white border-gray-200 hove, r:border-gray-300'
     }`}>
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+      <div className="flex items-center justify-betweenmb-6">
+        <h3 className="text-xl font-semibold text-gray-900dark:text-white">
           Team Collaboration
         </h3>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-centerspace-x-2">
           <div className={`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}></div>
           <span className={`text-sm font-medium ${getConnectionStatusColor()}`}>
             {connectionStatus}
@@ -113,10 +113,10 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
         {users.map((user) => (
           <div
             key={user.id}
-            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hove, r:bg-gray-700transition-colors"
           >
             <div className="relative">
-              <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center text-lg">
+              <div className="w-10 h-10 rounded-full bg-gray-200 dar, k:bg-gray-600 flex items-center justify-centertext-lg">
                 {user.avatar}
               </div>
               <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 ${
@@ -124,27 +124,27 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
               } ${getStatusColor(user.isActive)}`}></div>
             </div>
             
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center space-x-2">
-                <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
+            <div className="flex-1min-w-0">
+              <div className="flex items-centerspace-x-2">
+                <p className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
                   {user.name}
                 </p>
                 {user.isActive && (
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dar,k:text-green-200">
                     Active
                   </span>
                 )}
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-xs text-gray-500dark:text-gray-400">
                 {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
               </p>
             </div>
 
-            <div className="flex items-center space-x-2">
-              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <div className="flex items-centerspace-x-2">
+              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 💬
               </button>
-              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <button className="p-1 rounded-md hover:bg-gray-200 dar, k:hove, r:bg-gray-600transition-colors">
                 📞
               </button>
             </div>
@@ -153,23 +153,23 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       </div>
 
       <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            <span className="font-medium">{users.filter(u => u.isActive).length}</span> of{' '}
+        <div className="flex items-centerjustify-between">
+          <div className="text-sm text-gray-600 dar,k:text-gray-400">
+            <span className="font-medium">{users.filter(u =</u.isActive).length}> of{' '}
             <span className="font-medium">{users.length}</span> team members online
           </div>
-          <button className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+          <button className="text-sm text-blue-600 dark: text-blue-400 hover:text-blue-700 dar, k:hove, r:text-blue-300font-medium">
             View all
           </button>
         </div>
       </div>
 
       {/* Quick Actions */}
-      <div className="mt-4 grid grid-cols-2 gap-2">
-        <button className="px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
+      <div className="mt-4 grid grid-cols-2gap-2">
+        <button className="px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
           Start Meeting
         </button>
-        <button className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md transition-colors">
+        <button className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hove, r:bg-gray-700 text-gray-700 dar, k:text-gray-300 rounded-mdtransition-colors">
           Share Screen
         </button>
       </div>

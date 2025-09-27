@@ -25,10 +25,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div 
-      className = {`relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${
+      className={`relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${
         tier.isPopular 
           ? 'border-blue-500 scale-105' 
-          : 'border-gray-200 hover:border-blue-300'}
+          : 'border-gray-200 hover:border-blue-300'
       } hover-lift ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
@@ -74,18 +74,12 @@ export const PricingCard: React.FC<PricingCardProps> = ({
 
       {/* CTA Button */}
       <button
-        onClick={() = aria-label="onSelectPlan(tier.id)}
-        className = {`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
+        onClick={() => onSelectPlan(tier.id)}
+        aria-label={`Select ${tier.name} plan`}
+        className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
           tier.buttonVariant === 'primary'
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'}
-        }`}
-      >
-        {tier.buttonText}"> onSelectPlan(tier.id)}
-        className = {`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-1 ${
-          tier.buttonVariant === 'primary'
-            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'}
+            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
         }`}
       >
         {tier.buttonText}
