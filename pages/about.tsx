@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import, SEO, from '../src/components/S, E, O';
 import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Abo(): J, S, X.Eleme, n, t {
+const Abo = React.memo(function Abo(): J, S, X.Eleme, n, t {
 	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 
 	useEffect(() => {
