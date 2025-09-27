@@ -18,6 +18,7 @@ export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
+  private intervalId: NodeJS.Timeout | null = null;
 
   private constructor() {
     this.initializeObservers();
@@ -51,9 +52,12 @@ export class PerformanceMonitor {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntryWithProcessingStart) => {
-            this.metrics.set('FID', entry.processingStart - entry.startTime);
-            this.reportMetric('FID', entry.processingStart - entry.startTime);
+          entries.forEach((entry) => {
+            const fidEntry = entry as PerformanceEntryWithProcessingStart;
+            if ('processingStart' in fidEntry) {
+              this.metrics.set('FID', fidEntry.processingStart - fidEntry.startTime);
+              this.reportMetric('FID', fidEntry.processingStart - fidEntry.startTime);
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -67,9 +71,10 @@ export class PerformanceMonitor {
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntryWithValue) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+          entries.forEach((entry) => {
+            const clsEntry = entry as PerformanceEntryWithValue;
+            if ('value' in clsEntry && 'hadRecentInput' in clsEntry && !clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
             }
           });
           this.metrics.set('CLS', clsValue);
@@ -191,6 +196,133 @@ export const usePerformanceMonitor = () => {
   return {
     measureCustomMetric: (name: string, startTime: number) => monitor.measureCustomMetric(name, startTime),
     getMetrics: () => monitor.getMetrics(),
-    getMetric: (name: string) => monitor.getMetric(name)
+    getMetric: (name: string) => monitor.getMetric(name),
+    measurePageLoad: () => monitor.measurePageLoad()
   };
 };
+
+// Enhanced performance utilities
+export class ResourceMonitor {
+  private static instance: ResourceMonitor;
+  private resourceTimings: Map<string, PerformanceResourceTiming[]> = new Map();
+
+  public static getInstance(): ResourceMonitor {
+    if (!ResourceMonitor.instance) {
+      ResourceMonitor.instance = new ResourceMonitor();
+    }
+    return ResourceMonitor.instance;
+  }
+
+  public startMonitoring(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const domain = new URL(resourceEntry.name).hostname;
+            
+            if (!this.resourceTimings.has(domain)) {
+              this.resourceTimings.set(domain, []);
+            }
+            this.resourceTimings.get(domain)!.push(resourceEntry);
+          }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['resource'] });
+    }
+  }
+
+  public getResourceMetrics(): Record<string, {
+    count: number;
+    totalSize: number;
+    averageLoadTime: number;
+    slowestResource: string;
+  }> {
+    const metrics: Record<string, unknown> = {};
+    
+    this.resourceTimings.forEach((timings, domain) => {
+      const totalSize = timings.reduce((sum, timing) => sum + (timing.transferSize || 0), 0);
+      const totalLoadTime = timings.reduce((sum, timing) => sum + timing.duration, 0);
+      const averageLoadTime = totalLoadTime / timings.length;
+      const slowestResource = timings.reduce((slowest, timing) => 
+        timing.duration > slowest.duration ? timing : slowest
+      ).name;
+
+      metrics[domain] = {
+        count: timings.length,
+        totalSize,
+        averageLoadTime,
+        slowestResource
+      };
+    });
+
+    return metrics as Record<string, { count: number; totalSize: number; averageLoadTime: number; slowestResource: string; }>;
+  }
+}
+
+// Memory monitoring utilities
+export class MemoryMonitor {
+  private static instance: MemoryMonitor;
+  private memoryHistory: Array<{
+    timestamp: number;
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  }> = [];
+
+  public static getInstance(): MemoryMonitor {
+    if (!MemoryMonitor.instance) {
+      MemoryMonitor.instance = new MemoryMonitor();
+    }
+    return MemoryMonitor.instance;
+  }
+
+  public startMonitoring(intervalMs: number = 5000): void {
+    if ('memory' in performance) {
+      const interval = setInterval(() => {
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        this.memoryHistory.push({
+          timestamp: Date.now(),
+          usedJSHeapSize: memory?.usedJSHeapSize || 0,
+          totalJSHeapSize: memory?.totalJSHeapSize || 0,
+          jsHeapSizeLimit: memory?.jsHeapSizeLimit || 0
+        });
+
+        // Keep only last 100 measurements
+        if (this.memoryHistory.length > 100) {
+          this.memoryHistory.shift();
+        }
+      }, intervalMs);
+
+      // Store interval ID for cleanup
+      (this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId = interval;
+    }
+  }
+
+  public getMemoryMetrics(): {
+    current: number;
+    average: number;
+    peak: number;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  } {
+    const current = this.memoryHistory[this.memoryHistory.length - 1];
+    const average = this.memoryHistory.reduce((sum, m) => sum + m.usedJSHeapSize, 0) / this.memoryHistory.length;
+    const peak = Math.max(...this.memoryHistory.map(m => m.usedJSHeapSize));
+    
+    // Calculate trend (last 10 measurements)
+    const recent = this.memoryHistory.slice(-10);
+    const trend = recent.length >= 2 ? 
+      (recent[recent.length - 1].usedJSHeapSize > recent[0].usedJSHeapSize ? 'increasing' : 'decreasing') :
+      'stable';
+
+    return { current: current.usedJSHeapSize, average, peak, trend };
+  }
+
+  public stopMonitoring(): void {
+    if ((this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId) {
+      clearInterval((this as MemoryMonitor & { intervalId: NodeJS.Timeout }).intervalId);
+      (this as MemoryMonitor & { intervalId: NodeJS.Timeout | null }).intervalId = null;
+    }
+  }
+}

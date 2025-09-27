@@ -336,3 +336,223 @@ export const validateSEO = (data: SEOData): { isValid: boolean; warnings: string
     warnings
   };
 };
+
+// Advanced SEO utilities
+export class AdvancedSEOAnalytics {
+  private static instance: AdvancedSEOAnalytics;
+  private pageViews: Map<string, number> = new Map();
+  private userEngagement: Map<string, { timeOnPage: number; scrollDepth: number; clicks: number }> = new Map();
+
+  public static getInstance(): AdvancedSEOAnalytics {
+    if (!AdvancedSEOAnalytics.instance) {
+      AdvancedSEOAnalytics.instance = new AdvancedSEOAnalytics();
+    }
+    return AdvancedSEOAnalytics.instance;
+  }
+
+  public trackPageView(url: string): void {
+    const currentViews = this.pageViews.get(url) || 0;
+    this.pageViews.set(url, currentViews + 1);
+
+    // Track in analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: url
+      });
+    }
+  }
+
+  public trackUserEngagement(url: string, metrics: { timeOnPage: number; scrollDepth: number; clicks: number }): void {
+    this.userEngagement.set(url, metrics);
+  }
+
+  public generateSEOReport(): {
+    topPages: Array<{ url: string; views: number }>;
+    engagementMetrics: Record<string, unknown>;
+    recommendations: string[];
+  } {
+    const topPages = Array.from(this.pageViews.entries())
+      .map(([url, views]) => ({ url, views }))
+      .sort((a, b) => b.views - a.views)
+      .slice(0, 10);
+
+    const engagementMetrics = Object.fromEntries(this.userEngagement);
+
+    const recommendations: string[] = [];
+    
+    // Analyze engagement and provide recommendations
+    this.userEngagement.forEach((metrics, url) => {
+      if (metrics.timeOnPage < 30000) { // Less than 30 seconds
+        recommendations.push(`Consider improving content quality for ${url} - low time on page`);
+      }
+      if (metrics.scrollDepth < 0.5) { // Less than 50% scroll depth
+        recommendations.push(`Improve content structure for ${url} - low scroll depth`);
+      }
+    });
+
+    return {
+      topPages,
+      engagementMetrics,
+      recommendations
+    };
+  }
+}
+
+// Sitemap generation utilities
+export class SitemapGenerator {
+  private static instance: SitemapGenerator;
+  private pages: Array<{ url: string; lastModified: string; priority: number; changefreq: string }> = [];
+
+  public static getInstance(): SitemapGenerator {
+    if (!SitemapGenerator.instance) {
+      SitemapGenerator.instance = new SitemapGenerator();
+    }
+    return SitemapGenerator.instance;
+  }
+
+  public addPage(url: string, lastModified: string = new Date().toISOString(), priority: number = 0.5, changefreq: string = 'weekly'): void {
+    this.pages.push({ url, lastModified, priority, changefreq });
+  }
+
+  public generateSitemap(): string {
+    const baseUrl = window.location.origin;
+    
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    this.pages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <lastmod>${page.lastModified}</lastmod>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    });
+    
+    sitemap += '</urlset>';
+    return sitemap;
+  }
+}
+
+// Robots.txt generation
+export const generateRobotsTxt = (disallowPaths: string[] = [], sitemapUrl?: string): string => {
+  let robots = 'User-agent: *\n';
+  
+  disallowPaths.forEach(path => {
+    robots += `Disallow: ${path}\n`;
+  });
+  
+  if (sitemapUrl) {
+    robots += `Sitemap: ${sitemapUrl}\n`;
+  }
+  
+  return robots;
+};
+
+// Meta refresh and redirect utilities
+export class RedirectManager {
+  private static instance: RedirectManager;
+  private redirects: Map<string, string> = new Map();
+
+  public static getInstance(): RedirectManager {
+    if (!RedirectManager.instance) {
+      RedirectManager.instance = new RedirectManager();
+    }
+    return RedirectManager.instance;
+  }
+
+  public addRedirect(from: string, to: string): void {
+    this.redirects.set(from, to);
+  }
+
+  public handleRedirect(): void {
+    const currentPath = window.location.pathname;
+    const redirectTo = this.redirects.get(currentPath);
+    
+    if (redirectTo) {
+      // Use 301 redirect (permanent)
+      window.location.replace(redirectTo);
+    }
+  }
+
+  public generateRedirectRules(): string {
+    let rules = '';
+    this.redirects.forEach((to, from) => {
+      rules += `Redirect 301 ${from} ${to}\n`;
+    });
+    return rules;
+  }
+}
+
+// Performance SEO utilities
+export class PerformanceSEO {
+  private static instance: PerformanceSEO;
+  
+  public static getInstance(): PerformanceSEO {
+    if (!PerformanceSEO.instance) {
+      PerformanceSEO.instance = new PerformanceSEO();
+    }
+    return PerformanceSEO.instance;
+  }
+
+  public optimizeImages(): void {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      
+      // Add alt text if missing
+      if (!img.hasAttribute('alt')) {
+        img.setAttribute('alt', '');
+      }
+    });
+  }
+
+  public preloadCriticalResources(): void {
+    const criticalResources = [
+      '/fonts/main-font.woff2',
+      '/css/critical.css',
+      '/js/critical.js'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      
+      if (resource.endsWith('.woff2')) {
+        link.as = 'font';
+        link.type = 'font/woff2';
+        link.crossOrigin = 'anonymous';
+      } else if (resource.endsWith('.css')) {
+        link.as = 'style';
+      } else if (resource.endsWith('.js')) {
+        link.as = 'script';
+      }
+      
+      document.head.appendChild(link);
+    });
+  }
+
+  public optimizeFonts(): void {
+    // Add font-display: swap for better performance
+    const style = document.createElement('style');
+    style.textContent = `
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('/fonts/custom-font.woff2') format('woff2');
+        font-display: swap;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
+
+// Export instances
+export const seoAnalytics = AdvancedSEOAnalytics.getInstance();
+export const sitemapGenerator = SitemapGenerator.getInstance();
+export const redirectManager = RedirectManager.getInstance();
+export const performanceSEO = PerformanceSEO.getInstance();
