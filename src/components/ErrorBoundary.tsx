@@ -1,5 +1,6 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { createErrorBoundaryHandler } from '../utils/errorHandling';
 
 interface Props {
   children: ReactNode;
@@ -25,6 +26,10 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
+    
+    // Log error using our error handling utility
+    const errorHandler = createErrorBoundaryHandler('AppErrorBoundary');
+    errorHandler(error, errorInfo);
     
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {

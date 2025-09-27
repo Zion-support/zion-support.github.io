@@ -1,332 +1,149 @@
 /**
- * Advanced Security Utilities for Zion Tech Group Website
+ * Security utilities for protecting against common web vulnerabilities
  */
 
-interface SecurityConfig {
-  enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableClickjackingProtection: boolean;
-  enableMimeSniffingProtection: boolean;
-  enableReferrerPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
-}
+export class SecurityManager {
+  private static instance: SecurityManager;
+  private cspViolations: string[] = [];
 
-class SecurityManager {
-  private config: SecurityConfig;
-  private cspNonce: string;
-
-  constructor(config: Partial<SecurityConfig> = {}) {
-    this.config = {
-      enableCSP: true,
-      enableHSTS: true,
-      enableXSSProtection: true,
-      enableClickjackingProtection: true,
-      enableMimeSniffingProtection: true,
-      enableReferrerPolicy: true,
-      allowedOrigins: ['https://ziontechgroup.com', 'https://www.ziontechgroup.com'],
-      trustedDomains: ['ziontechgroup.com', 'www.ziontechgroup.com'],
-      ...config
-    };
-    
-    this.cspNonce = this.generateNonce();
-    this.initializeSecurity();
-  }
-
-  private generateNonce(): string {
-    const array = new Uint8Array(16);
-    crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
-
-  private initializeSecurity(): void {
-    if (typeof window === 'undefined') return;
-
-    // Set security headers
-    this.setSecurityHeaders();
-    
-    // Initialize Content Security Policy
-    if (this.config.enableCSP) {
-      this.initializeCSP();
+  public static getInstance(): SecurityManager {
+    if (!SecurityManager.instance) {
+      SecurityManager.instance = new SecurityManager();
     }
-    
-    // Initialize other security measures
-    this.initializeXSSProtection();
-    this.initializeClickjackingProtection();
-    this.initializeMimeSniffingProtection();
-    this.initializeReferrerPolicy();
-    
-    // Initialize input sanitization
-    this.initializeInputSanitization();
-    
-    // Initialize rate limiting
-    this.initializeRateLimiting();
+    return SecurityManager.instance;
   }
 
-  private setSecurityHeaders(): void {
-    // These would typically be set by the server, but we can set some client-side
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
-    document.head.appendChild(meta);
+  public initialize(): void {
+    this.setupCSPReporting();
+    this.setupXSSProtection();
+    this.setupClickjackingProtection();
+    this.setupSecureHeaders();
   }
 
-  private initializeCSP(): void {
-    const csp = [
-      "default-src 'self'",
-      `script-src 'self' 'nonce-${this.cspNonce}' 'strict-dynamic' https://cdn.jsdelivr.net`,
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https: blob:",
-      "connect-src 'self' https://api.ziontechgroup.com",
-      "frame-src 'none'",
-      "object-src 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
-    ].join('; ');
-
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = csp;
-    document.head.appendChild(meta);
-  }
-
-  private initializeXSSProtection(): void {
-    if (!this.config.enableXSSProtection) return;
-
-    // Sanitize user input
-    const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
+  private setupCSPReporting(): void {
+    // Report CSP violations
+    document.addEventListener('securitypolicyviolation', (event) => {
+      const violation = {
+        blockedURI: event.blockedURI,
+        violatedDirective: event.violatedDirective,
+        originalPolicy: event.originalPolicy,
+        timestamp: new Date().toISOString()
+      };
       
-      // Add input sanitization for form elements
-      if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) {
-        element.addEventListener('input', (e) => {
-          const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-          target.value = SecurityManager.sanitizeInput(target.value);
-        });
-      }
+      this.cspViolations.push(JSON.stringify(violation));
       
-      return element;
-    };
-  }
-
-  private initializeClickjackingProtection(): void {
-    if (!this.config.enableClickjackingProtection) return;
-
-    // Check if page is in iframe
-    if (window !== window.top) {
-      // Redirect to main page if in iframe
-      window.top.location.href = window.location.href;
-    }
-  }
-
-  private initializeMimeSniffingProtection(): void {
-    if (!this.config.enableMimeSniffingProtection) return;
-
-    // This is typically handled by server headers
-    console.log('MIME sniffing protection enabled');
-  }
-
-  private initializeReferrerPolicy(): void {
-    if (!this.config.enableReferrerPolicy) return;
-
-    const meta = document.createElement('meta');
-    meta.name = 'referrer';
-    meta.content = 'strict-origin-when-cross-origin';
-    document.head.appendChild(meta);
-  }
-
-  private initializeInputSanitization(): void {
-    // Override innerHTML to sanitize content
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')!;
-    
-    Object.defineProperty(Element.prototype, 'innerHTML', {
-      set: function(value: string) {
-        const sanitized = SecurityManager.sanitizeHTML(value);
-        originalInnerHTML.set!.call(this, sanitized);
-      },
-      get: originalInnerHTML.get
+      // Send violation to server
+      this.reportCSPViolation(violation);
     });
   }
 
-  private initializeRateLimiting(): void {
-    const rateLimits = new Map<string, { count: number; resetTime: number }>();
-    const RATE_LIMIT_WINDOW = 60000; // 1 minute
-    const MAX_REQUESTS = 100; // Max requests per window
-
-    // Override fetch to add rate limiting
-    const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const key = typeof input === 'string' ? input : input.toString();
-      const now = Date.now();
-      
-      // Check rate limit
-      const limit = rateLimits.get(key);
-      if (limit) {
-        if (now < limit.resetTime) {
-          if (limit.count >= MAX_REQUESTS) {
-            throw new Error('Rate limit exceeded');
-          }
-          limit.count++;
-        } else {
-          limit.count = 1;
-          limit.resetTime = now + RATE_LIMIT_WINDOW;
-        }
-      } else {
-        rateLimits.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
-      }
-      
-      return originalFetch(input, init);
+  private setupXSSProtection(): void {
+    // Sanitize user input
+    const sanitizeInput = (input: string): string => {
+      const div = document.createElement('div');
+      div.textContent = input;
+      return div.innerHTML;
     };
+
+    // Add to global scope for use throughout the app
+    (window as any).sanitizeInput = sanitizeInput;
   }
 
-  static sanitizeInput(input: string): string {
-    return input
-      .replace(/[<>]/g, '') // Remove angle brackets
-      .replace(/javascript:/gi, '') // Remove javascript: protocol
-      .replace(/on\w+\s*=/gi, '') // Remove event handlers
-      .trim();
-  }
-
-  static sanitizeHTML(html: string): string {
-    // Create a temporary div to parse HTML
-    const temp = document.createElement('div');
-    temp.textContent = html;
-    return temp.innerHTML;
-  }
-
-  static validateURL(url: string): boolean {
-    try {
-      const parsed = new URL(url);
-      return ['http:', 'https:'].includes(parsed.protocol);
-    } catch {
-      return false;
+  private setupClickjackingProtection(): void {
+    // Check if the page is being framed
+    if (window.top !== window.self) {
+      // Allow framing from same origin
+      if (window.top.location.origin !== window.location.origin) {
+        // Redirect to prevent clickjacking
+        window.top.location = window.location;
+      }
     }
   }
 
-  static validateEmail(email: string): boolean {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+  private setupSecureHeaders(): void {
+    // Add security headers via meta tags
+    const securityHeaders = [
+      { name: 'X-Content-Type-Options', content: 'nosniff' },
+      { name: 'X-Frame-Options', content: 'DENY' },
+      { name: 'X-XSS-Protection', content: '1; mode=block' },
+      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
+    ];
+
+    securityHeaders.forEach(header => {
+      let meta = document.querySelector(`meta[http-equiv="${header.name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('http-equiv', header.name);
+        document.head.appendChild(meta);
+      }
+      meta.content = header.content;
+    });
   }
 
-  static validatePhone(phone: string): boolean {
-    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ''));
+  private async reportCSPViolation(violation: any): Promise<void> {
+    try {
+      await fetch('/api/security/csp-violation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(violation),
+      });
+    } catch (error) {
+      console.error('Failed to report CSP violation:', error);
+    }
   }
 
-  static generateSecureToken(length: number = 32): string {
+  public sanitizeHTML(html: string): string {
+    // Basic HTML sanitization
+    const allowedTags = ['b', 'i', 'em', 'strong', 'p', 'br', 'a'];
+    const allowedAttributes = ['href', 'title'];
+    
+    // Remove script tags and dangerous attributes
+    let sanitized = html
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/on\w+="[^"]*"/gi, '')
+      .replace(/javascript:/gi, '');
+    
+    return sanitized;
+  }
+
+  public validateInput(input: string, type: 'email' | 'url' | 'phone' | 'text'): boolean {
+    const patterns = {
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      url: /^https?:\/\/.+/,
+      phone: /^\+?[\d\s\-\(\)]+$/,
+      text: /^[a-zA-Z0-9\s\-_.,!?]+$/
+    };
+
+    return patterns[type].test(input);
+  }
+
+  public generateSecureToken(length: number = 32): string {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
     const array = new Uint8Array(length);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
-
-  static hashPassword(password: string): Promise<string> {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
-      .then(hash => Array.from(new Uint8Array(hash), byte => byte.toString(16).padStart(2, '0')).join(''));
-  }
-
-  static encrypt(data: string, key: string): Promise<string> {
-    return crypto.subtle.importKey(
-      'raw',
-      new TextEncoder().encode(key),
-      { name: 'AES-GCM' },
-      false,
-      ['encrypt']
-    ).then(cryptoKey => {
-      const iv = crypto.getRandomValues(new Uint8Array(12));
-      return crypto.subtle.encrypt(
-        { name: 'AES-GCM', iv },
-        cryptoKey,
-        new TextEncoder().encode(data)
-      ).then(encrypted => {
-        const combined = new Uint8Array(iv.length + encrypted.byteLength);
-        combined.set(iv);
-        combined.set(new Uint8Array(encrypted), iv.length);
-        return btoa(String.fromCharCode(...combined));
-      });
-    });
-  }
-
-  static decrypt(encryptedData: string, key: string): Promise<string> {
-    const combined = new Uint8Array(atob(encryptedData).split('').map(c => c.charCodeAt(0)));
-    const iv = combined.slice(0, 12);
-    const encrypted = combined.slice(12);
     
-    return crypto.subtle.importKey(
-      'raw',
-      new TextEncoder().encode(key),
-      { name: 'AES-GCM' },
-      false,
-      ['decrypt']
-    ).then(cryptoKey => {
-      return crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv },
-        cryptoKey,
-        encrypted
-      ).then(decrypted => {
-        return new TextDecoder().decode(decrypted);
+    for (let i = 0; i < length; i++) {
+      result += chars[array[i] % chars.length];
+    }
+    
+    return result;
+  }
+
+  public hashString(input: string): Promise<string> {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(input))
+      .then(hashBuffer => {
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
       });
-    });
   }
 
-  getCSPNonce(): string {
-    return this.cspNonce;
-  }
-
-  isOriginAllowed(origin: string): boolean {
-    return this.config.allowedOrigins.includes(origin);
-  }
-
-  isDomainTrusted(domain: string): boolean {
-    return this.config.trustedDomains.includes(domain);
-  }
-
-  // Security audit
-  audit(): {
-    csp: boolean;
-    hsts: boolean;
-    xssProtection: boolean;
-    clickjackingProtection: boolean;
-    mimeSniffingProtection: boolean;
-    referrerPolicy: boolean;
-    score: number;
-  } {
-    const checks = {
-      csp: this.config.enableCSP,
-      hsts: this.config.enableHSTS,
-      xssProtection: this.config.enableXSSProtection,
-      clickjackingProtection: this.config.enableClickjackingProtection,
-      mimeSniffingProtection: this.config.enableMimeSniffingProtection,
-      referrerPolicy: this.config.enableReferrerPolicy
-    };
-
-    const score = Object.values(checks).filter(Boolean).length / Object.keys(checks).length * 100;
-
-    return {
-      ...checks,
-      score: Math.round(score)
-    };
+  public getCSPViolations(): string[] {
+    return [...this.cspViolations];
   }
 }
 
-// Export singleton instance
-export const security = new SecurityManager();
-
-// Export utility functions
-export const {
-  sanitizeInput,
-  sanitizeHTML,
-  validateURL,
-  validateEmail,
-  validatePhone,
-  generateSecureToken,
-  hashPassword,
-  encrypt,
-  decrypt
-} = SecurityManager;
-
-export default SecurityManager;
+export const securityManager = SecurityManager.getInstance();

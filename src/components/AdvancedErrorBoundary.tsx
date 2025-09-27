@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { analytics } from '../utils/analytics';
+import { analyticsManager } from '../utils/analytics';
 
 interface Props {
   children: ReactNode;
@@ -49,19 +49,20 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     });
 
     // Track error in analytics
-    analytics.trackEvent({
-      name: 'error_boundary_catch',
-      category: 'error',
-      action: 'catch',
-      label: error.message,
-      custom_parameters: {
+    analyticsManager.trackEvent(
+      'error_boundary_catch',
+      'error',
+      'catch',
+      error.message,
+      undefined,
+      {
         error_name: error.name,
         error_message: error.message,
         error_stack: error.stack,
         component_stack: errorInfo.componentStack,
         error_id: this.state.errorId
       }
-    });
+    );
 
     // Call custom error handler
     if (this.props.onError) {
@@ -112,28 +113,31 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         errorId: ''
       });
 
-      analytics.trackEvent({
-        name: 'error_boundary_retry',
-        category: 'error',
-        action: 'retry',
-        value: this.retryCount,
-        custom_parameters: {
+      analyticsManager.trackEvent(
+        'error_boundary_retry',
+        'error',
+        'retry',
+        'retry_attempt',
+        this.retryCount,
+        {
           error_id: this.state.errorId,
           retry_count: this.retryCount
         }
-      });
+      );
     }
   };
 
   private handleReload = () => {
-    analytics.trackEvent({
-      name: 'error_boundary_reload',
-      category: 'error',
-      action: 'reload',
-      custom_parameters: {
+    analyticsManager.trackEvent(
+      'error_boundary_reload',
+      'error',
+      'reload',
+      'page_reload',
+      undefined,
+      {
         error_id: this.state.errorId
       }
-    });
+    );
     
     window.location.reload();
   };

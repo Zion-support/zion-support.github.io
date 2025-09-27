@@ -1,38 +1,34 @@
 /**
- * Advanced Analytics and Performance Tracking for Zion Tech Group
+ * Analytics utilities for tracking user behavior and performance
  */
 
-interface AnalyticsEvent {
+export interface AnalyticsEvent {
   name: string;
   category: string;
   action: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, unknown>;
-  timestamp: number;
-  session_id: string;
-  user_id?: string;
+  customParameters?: Record<string, any>;
+  timestamp: string;
+  userId?: string;
+  sessionId: string;
 }
 
-interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  timestamp: number;
-  url: string;
-  user_agent: string;
-}
-
-class AnalyticsManager {
+export class AnalyticsManager {
+  private static instance: AnalyticsManager;
   private sessionId: string;
-  private userId?: string;
   private events: AnalyticsEvent[] = [];
-  private metrics: PerformanceMetric[] = [];
-  private isEnabled: boolean;
+  private maxEventsInMemory = 1000;
+
+  public static getInstance(): AnalyticsManager {
+    if (!AnalyticsManager.instance) {
+      AnalyticsManager.instance = new AnalyticsManager();
+    }
+    return AnalyticsManager.instance;
+  }
 
   constructor() {
     this.sessionId = this.generateSessionId();
-    this.isEnabled = this.shouldEnableAnalytics();
     this.initializeTracking();
   }
 
@@ -40,23 +36,7 @@ class AnalyticsManager {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private shouldEnableAnalytics(): boolean {
-    // Check for consent, do not track, etc.
-    if (typeof window === 'undefined') return false;
-    
-    // Check for Do Not Track
-    if (navigator.doNotTrack === '1') return false;
-    
-    // Check for consent cookie
-    const consent = localStorage.getItem('analytics_consent');
-    if (consent === 'false') return false;
-    
-    return true;
-  }
-
   private initializeTracking(): void {
-    if (!this.isEnabled) return;
-
     // Track page views
     this.trackPageView();
     
@@ -65,139 +45,97 @@ class AnalyticsManager {
     
     // Track user interactions
     this.trackUserInteractions();
-    
-    // Track errors
-    this.trackErrors();
   }
 
-  trackEvent(event: Omit<AnalyticsEvent, 'timestamp' | 'session_id' | 'user_id'>): void {
-    if (!this.isEnabled) return;
-
-    const analyticsEvent: AnalyticsEvent = {
-      ...event,
-      timestamp: Date.now(),
-      session_id: this.sessionId,
-      user_id: this.userId
+  public trackEvent(
+    name: string,
+    category: string,
+    action: string,
+    label?: string,
+    value?: number,
+    customParameters?: Record<string, any>
+  ): void {
+    const event: AnalyticsEvent = {
+      name,
+      category,
+      action,
+      label,
+      value,
+      customParameters,
+      timestamp: new Date().toISOString(),
+      userId: this.getUserId(),
+      sessionId: this.sessionId
     };
 
-    this.events.push(analyticsEvent);
-    this.sendEvent(analyticsEvent);
+    this.events.push(event);
+    
+    // Keep only recent events in memory
+    if (this.events.length > this.maxEventsInMemory) {
+      this.events = this.events.slice(-this.maxEventsInMemory);
+    }
+
+    // Send to analytics service
+    this.sendEventToService(event);
   }
 
-  trackPageView(page?: string): void {
-    const currentPage = page || window.location.pathname;
-    
-    this.trackEvent({
-      name: 'page_view',
-      category: 'navigation',
-      action: 'view',
-      label: currentPage,
-      custom_parameters: {
+  public trackPageView(pageName?: string): void {
+    const page = pageName || document.title;
+    this.trackEvent(
+      'page_view',
+      'navigation',
+      'view',
+      page,
+      undefined,
+      {
+        url: window.location.href,
         referrer: document.referrer,
-        title: document.title,
-        url: window.location.href
+        userAgent: navigator.userAgent
       }
-    });
+    );
   }
 
-  trackPerformanceMetric(metric: Omit<PerformanceMetric, 'timestamp' | 'url' | 'user_agent'>): void {
-    if (!this.isEnabled) return;
+  public trackUserInteraction(element: string, action: string, details?: string): void {
+    this.trackEvent(
+      'user_interaction',
+      'engagement',
+      action,
+      `${element}: ${details || ''}`,
+      undefined,
+      {
+        element,
+        details
+      }
+    );
+  }
 
-    const performanceMetric: PerformanceMetric = {
-      ...metric,
-      timestamp: Date.now(),
-      url: window.location.href,
-      user_agent: navigator.userAgent
-    };
-
-    this.metrics.push(performanceMetric);
-    this.sendMetric(performanceMetric);
+  public trackPerformanceMetric(metricName: string, value: number, unit: string = 'ms'): void {
+    this.trackEvent(
+      'performance_metric',
+      'performance',
+      'measure',
+      metricName,
+      value,
+      {
+        unit,
+        metricName
+      }
+    );
   }
 
   private trackPerformanceMetrics(): void {
     // Track Core Web Vitals
-    this.trackCoreWebVitals();
-    
+    if ('web-vital' in window) {
+      // This would integrate with web-vitals library
+      // getCLS, getFID, getLCP, etc.
+    }
+
     // Track custom performance metrics
-    this.trackCustomMetrics();
-  }
-
-  private trackCoreWebVitals(): void {
-    // First Contentful Paint
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            this.trackPerformanceMetric({
-              name: 'first_contentful_paint',
-              value: entry.startTime,
-              unit: 'ms'
-            });
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['paint'] });
-    }
-
-    // Largest Contentful Paint
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.trackPerformanceMetric({
-          name: 'largest_contentful_paint',
-          value: lastEntry.startTime,
-          unit: 'ms'
-        });
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
-
-    // First Input Delay
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const firstInputEntry = entry as PerformanceEntry & { processingStart?: number };
-          const fid = (firstInputEntry.processingStart || 0) - entry.startTime;
-          this.trackPerformanceMetric({
-            name: 'first_input_delay',
-            value: fid,
-            unit: 'ms'
-          });
-        }
-      });
-      observer.observe({ entryTypes: ['first-input'] });
-    }
-
-    // Cumulative Layout Shift
-    if ('PerformanceObserver' in window) {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
-            clsValue += layoutShiftEntry.value;
-          }
-        }
-        this.trackPerformanceMetric({
-          name: 'cumulative_layout_shift',
-          value: clsValue,
-          unit: 'score'
-        });
-      });
-      observer.observe({ entryTypes: ['layout-shift'] });
-    }
-  }
-
-  private trackCustomMetrics(): void {
-    // Page load time
     window.addEventListener('load', () => {
-      const loadTime = performance.now();
-      this.trackPerformanceMetric({
-        name: 'page_load_time',
-        value: loadTime,
-        unit: 'ms'
-      });
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
+      this.trackPerformanceMetric('page_load_time', navigation.loadEventEnd - navigation.fetchStart);
+      this.trackPerformanceMetric('dom_content_loaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
+      this.trackPerformanceMetric('first_byte', navigation.responseStart - navigation.fetchStart);
     });
 
     // Time to interactive
@@ -210,7 +148,7 @@ class AnalyticsManager {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
-          tti = navEntry.domContentLoadedEventEnd - navEntry.navigationStart;
+          tti = navEntry.domContentLoadedEventEnd - (navEntry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart;
           this.trackPerformanceMetric({
             name: 'time_to_interactive',
             value: tti,
@@ -226,145 +164,69 @@ class AnalyticsManager {
     // Track clicks
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
-      this.trackEvent({
-        name: 'click',
-        category: 'interaction',
-        action: 'click',
-        label: target.tagName,
-        custom_parameters: {
-          element_id: target.id,
-          element_class: target.className,
-          element_text: target.textContent?.substring(0, 100)
-        }
-      });
+      if (target.tagName === 'BUTTON' || target.tagName === 'A') {
+        this.trackUserInteraction(
+          target.tagName.toLowerCase(),
+          'click',
+          target.textContent?.trim() || target.getAttribute('href') || 'unknown'
+        );
+      }
     });
 
     // Track form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
-      this.trackEvent({
-        name: 'form_submit',
-        category: 'interaction',
-        action: 'submit',
-        label: form.id || form.className,
-        custom_parameters: {
-          form_action: form.action,
-          form_method: form.method
-        }
-      });
+      this.trackUserInteraction('form', 'submit', form.id || form.className || 'unknown');
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round(
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-      );
+      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        this.trackEvent({
-          name: 'scroll_depth',
-          category: 'engagement',
-          action: 'scroll',
-          value: maxScrollDepth,
-          custom_parameters: {
-            scroll_percentage: maxScrollDepth
-          }
-        });
+        this.trackEvent(
+          'scroll_depth',
+          'engagement',
+          'scroll',
+          `${scrollDepth}%`,
+          scrollDepth
+        );
       }
     });
   }
 
-  private trackErrors(): void {
-    // Track JavaScript errors
-    window.addEventListener('error', (event) => {
-      this.trackEvent({
-        name: 'javascript_error',
-        category: 'error',
-        action: 'error',
-        label: event.message,
-        custom_parameters: {
-          error_message: event.message,
-          error_filename: event.filename,
-          error_lineno: event.lineno,
-          error_colno: event.colno
-        }
-      });
-    });
-
-    // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackEvent({
-        name: 'unhandled_promise_rejection',
-        category: 'error',
-        action: 'rejection',
-        label: event.reason?.toString(),
-        custom_parameters: {
-          reason: event.reason?.toString()
-        }
-      });
-    });
-  }
-
-  private async sendEvent(event: AnalyticsEvent): Promise<void> {
+  private getUserId(): string | undefined {
     try {
-      // Send to analytics service
-      await fetch('/api/analytics/event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(event)
-      });
-    } catch (error) {
-      console.warn('Failed to send analytics event:', error);
+      return localStorage.getItem('userId') || undefined;
+    } catch {
+      return undefined;
     }
   }
 
-  private async sendMetric(metric: PerformanceMetric): Promise<void> {
+  private async sendEventToService(event: AnalyticsEvent): Promise<void> {
     try {
-      // Send to analytics service
-      await fetch('/api/analytics/metric', {
+      // Send to your analytics service
+      await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(metric)
+        body: JSON.stringify(event),
       });
     } catch (error) {
-      console.warn('Failed to send performance metric:', error);
+      console.error('Failed to send analytics event:', error);
     }
   }
 
-  setUserId(userId: string): void {
-    this.userId = userId;
-  }
-
-  getSessionId(): string {
-    return this.sessionId;
-  }
-
-  getEvents(): AnalyticsEvent[] {
+  public getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-  getMetrics(): PerformanceMetric[] {
-    return [...this.metrics];
-  }
-
-  enable(): void {
-    this.isEnabled = true;
-    localStorage.setItem('analytics_consent', 'true');
-  }
-
-  disable(): void {
-    this.isEnabled = false;
-    localStorage.setItem('analytics_consent', 'false');
+  public getSessionId(): string {
+    return this.sessionId;
   }
 }
 
-// Export singleton instance
-export const analytics = new AnalyticsManager();
-
-// Export types
-export type { AnalyticsEvent, PerformanceMetric };
+export const analyticsManager = AnalyticsManager.getInstance();
+export const analytics = analyticsManager;

@@ -10,13 +10,20 @@ import SEO from './components/SEO';
 import Home from './pages/Home';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { accessibilityManager } from './utils/accessibility';
-import { analytics } from './utils/analytics';
-import { security } from './utils/security';
+import { errorHandler, setupGlobalErrorHandlers } from './utils/errorHandling';
+import { analyticsManager } from './utils/analytics';
+import { securityManager } from './utils/security';
 import './index.css';
 import './styles/improvements.css';
 
 export default function App(): React.JSX.Element {
   useEffect(() => {
+    // Initialize security features
+    securityManager.initialize();
+    
+    // Setup global error handlers
+    setupGlobalErrorHandlers();
+    
     // Initialize enhanced accessibility features
     accessibilityManager.initialize({
       announceChanges: true,
@@ -25,15 +32,12 @@ export default function App(): React.JSX.Element {
     });
     accessibilityManager.announceToScreenReader('Zion website loaded successfully');
     
-    // Initialize analytics
-    analytics.trackPageView();
-    
-    // Initialize security
-    console.log('Security audit score:', security.audit().score);
-    
     // Start enhanced performance monitoring
     performanceMonitor.startMeasure('app-render');
     performanceMonitor.reportCoreWebVitals();
+    
+    // Track page load
+    analyticsManager.trackPageView('Home');
     
     return () => {
       performanceMonitor.endMeasure('app-render');
