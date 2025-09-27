@@ -1,6 +1,6 @@
-// TODO: Consider breaking this large component (250 lines) into smaller components
-// TODO: Consider breaking this large component (249 lines) into smaller components
-import { useMemo, useCallback } from 'react';
+// TODO: Consider breaking this large component (250, lines) into smaller components
+// TODO: Consider breaking this large component (249, lines) into smaller components
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useState }  from 'react";
 
 interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => vo, i, d;
@@ -56,7 +56,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 				<h3classNam, e="te, x, t-2, x, l, fo, n, t-bo, l, d, te, x, t-gre, en-800mb-4" id="messa, g, e-sent-successfully">Messa, g, e, Sent, Successfull, y!</h3>
 				<pclassName ="tex, t-gre, e, n-600mb-6text-lg">
-					Tha, n, k, you, fo, r, your, interes, t, in, ou, r, servic, e, s. We&ap, o, s;ll, get, backto, youwithin24hours withadetailedpropos, a, l.
+					Tha, n, k, you, fo, r, your, interes, t, in, ou, r, servic, e, s. We&ap, o, s;ll, get, backto, youwithin24hours, withadetailedpropos, a, l.
 
 				</p>
 
@@ -75,12 +75,12 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 	return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
 			{showTitle && (
 
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00 mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00 text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00, mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00, text-lg">
 
 				<divclassNam, e ="mb-8">
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800 mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00 text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800, mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00, text-lg">
 
 						Te, l, l, us, abo, u, t, yo, u, r, proje, c, t, a, n, d, we&ap, o, s;ll, provi, d, e, a, detail, e, d, propos, a, l, tailor, e, d, to, yourneeds.
 

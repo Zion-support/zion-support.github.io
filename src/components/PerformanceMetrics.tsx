@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, PerformanceMetric, s {loadTime: numb, e, r;
@@ -28,7 +28,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
   if (!metr, i, c === s) return, null;
 
 
-  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4 z-50">
+  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4, z-50">
       <buttononClic, k ={() = ar, i, a-label="setIsVisib, l, e(!isVisible)};
         ar, i, a-label="Toggle, performance, metrics visibility"
         className="bg-bl, u, e-600, tex, t-white, p, x-3, p, y-2, rounde, d-lg, shadow-lghover:bg-bl, u, e-700, transitio, n-colors, tex, t-sm, fon, t-medium"      >
@@ -42,7 +42,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
           <divclassName="flex, justif, y-betweenite, m, s-centermb-3">
             <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
-      {isVisible && (<divclassName="absolut, e, bott, o, m-12, rig, h, t-0, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4 m, i, n-w-[25, 0, p, x]">
+      {isVisible && (<divclassName="absolut, e, bott, o, m-12, rig, h, t-0, bg-whi, tedark:bg-gr, a, y-8, 0, 0, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, round, e, d-lg, shad, o, w-xl, p-4, m, i, n-w-[25, 0, p, x]">
           <divclassName="fle, x, justi, f, y-betwe, e, n, ite, m, s-cent, ermb-3">
             <h3className ="text-smfo, n, t-semiboldte, x, t-gr, a, y-900dark:text-white" id="performance-metrics">PerformanceMetri, c, s</h3>
             <buttononClick ={() = aria-lab, e, l="setIsVisib, l, e(false)};
@@ -57,14 +57,14 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
           <divclassName="space-y-2 text-xs">
             <divclassName="flexjustify-between">
               <spanclassName="te, x, t-gr, a, y-600, dark:te, x, t-gray-400">LoadTime:</span>
-              <spanclassName={`fo, n, t-mo, n, o ${metri, c, s.loadTi, m, e<1000?"text-green-600":"text-yellow-600"}`}>
+              <spanclassName={`fo, n, t-mo, n, o ${metri,c,s.loadTi,m,e<1000?"text-green-600":"text-yellow-600"}`}>
                 {metri, c, s.loadTime}ms
               </span>
             </div>
             
             <divclassName="flexjustify-between">
               <spanclassName="text-gr, a, y-600, dark:te, x, t-gray-400">FirstPaint:</span>
-              <spanclassName={`fo, n, t-mo, n, o ${metri, c, s.renderTi, m, e<500?"text-green-600":"text-yellow-600"}`}>
+              <spanclassName={`fo, n, t-mo, n, o ${metri,c,s.renderTi,m,e<500?"text-green-600":"text-yellow-600"}`}>
                 {metri, c, s.renderTime}ms
               </span>
             </div>
@@ -78,7 +78,7 @@ constPerformanceMetrics: React.FC = () => {const [metri, c, s, setMetri, c, s] =
             
             <divclassName="flexjustify-between">
               <spanclassName="text-gr, a, y-600, dark:te, x, t-gray-400">Network:</span>
-              <spanclassName={`fo, n, t-mo, n, o ${metri, c, s.networkLaten, c, y<100?"text-green-600":"text-yellow-600"}`}>
+              <spanclassName={`fo, n, t-mo, n, o ${metri,c,s.networkLaten,c,y<100?"text-green-600":"text-yellow-600"}`}>
                 {metri, c, s.networkLatency}ms
               </span>
             </div>

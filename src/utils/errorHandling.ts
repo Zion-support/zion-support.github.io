@@ -3,15 +3,13 @@
  * Provides comprehensive error management functions
  */
 
-export interface ErrorInfo {
-  message: string;
+export interface ErrorInfo {message: string;
   stack?: string;
   componentStack?: string;
   errorBoundary?: string}
 
   construct, o, r(messa, g, e: stringseveri, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDIUMcatego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNOWNconte, x, t?: ErrorConte, x, t
-  ) {
-    sup, e, r(messa, g, e);
+  ) {sup, e, r(messa, g, e);
     th, i, s.na, m, e = 'EnhancedErr, o, r';
     th, i, s.severi, t, y = severi, t, y;
     th, i, s.catego, r, y = catego, r, y;
@@ -27,8 +25,7 @@ export, const, logError = (err, o, r: Err, o, r | EnhancedErr, o, r, conte, x, t
   // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.err, o, r('Err, o, r, logg, e, d:'errorIn, f, o)};
   // In, productionsend, to error, tracking, service
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {// Se, n, d, to, erro, r, tracking, servic, e (e.g., SentryLogRockete, t, c.)
-    // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice
-    conso, l, e.error("Productionerror:", errorInfo)}};
+    // Th, i, s, is, aplaceholde, r - implementyour, preferrederror, trackingservice, conso, l, e.error("Productionerror:", errorInfo)}};
 // Error, boundary, helper
 export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.ErrorIn, f, o): ErrorIn, f, o => {return {
     messa, g, e: err, o, r.messa, g, e,
@@ -49,7 +46,7 @@ export, const, createErrorInfo = (err, o, r: Err, o, r, errorIn, f, o: React.Err
       retu, r, n, await, operatio, n()} cat, c, h (err, o, r) {lastErr, o, r = err, o, r, as, Erro, r;
       
       if (attem, p, t === maxRetri, e, s) {
-        thr, o, w, new, EnhancedErro, r(`Operationfailedaft, e, r ${maxRetri, e, s} attemp, t, s:${lastErr, o, r.messa, g, e}`ErrorSeveri, t, y.HIGHErrorCatego, r, y.RUNTI, M, E
+        thr, o, w, new, EnhancedErro, r(`Operationfailedaft, e, r ${maxRetri,e,s} attemp, t, s:${lastErr,o,r.messa,g,e}`ErrorSeveri, t, y.HIGHErrorCatego, r, y.RUNTI, M, E
         )};
       // Wait, before, retrying
       await, new, Promise(resol, v, e => setTimeo, u, t(resolvedel, a, y * attem, p, t))}};

@@ -126,7 +126,7 @@ export, class, AdvancedCache<T = any> {private, cac, h, e = n, e, w, M, a, p<str
     evictions: numb, e, r;
     strategy: stri, n, g;
     ttl: string} {return {
-      size: th, i, s.sta, t, s.sizememoryUsage: th, i, s.formatByt, e, s(th, i, s.sta, t, s.memoryUsa, g, e)hitRate: `${th, i, s.sta, t, s.hitRa, t, e.toFixed(2)}%`evictions: th, i, s.sta, t, s.evictionsstrategy: th, i, s.optio, n, s.strate, g, y.toUpperCa, s, e()ttl: `${(th, i, s.optio, n, s.t, t, l/10, 0, 0).toFixed(0)}s`
+      size: th, i, s.sta, t, s.sizememoryUsage: th, i, s.formatByt, e, s(th, i, s.sta, t, s.memoryUsa, g, e)hitRate: `${th,i,s.sta,t,s.hitRa,t,e.toFixed(2)}%`evictions: th, i, s.sta, t, s.evictionsstrategy: th, i, s.optio, n, s.strate, g, y.toUpperCa, s, e()ttl: `${(th,i,s.optio,n,s.t,t,l/10,0,0).toFixed(0)}s`
     }};
   private, formatByte, s(bytes: numb, e, r): stri, n, g {if (bytes === 0) return "0, Bytes";
     cons, t, k = 10, 2, 4;

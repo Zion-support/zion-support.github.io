@@ -19,7 +19,7 @@ exportconstAccessibilityFixer: React.FC<AccessibilityFixerProps> = ({onFix }) =>
         className="px-4 py-2, bg-bl, u, e-6, 0, 0 : te, x, t-whi, t, e : roundedhov, e, r :bg-bl, u, e-7, 0, 0"        aria-label="Fix, accessibility, issues"      >
         FixAccessibilityIssues
 
-  return (<divclassName="p-4 bg-whi, t, e, round, e, d-lgshad, o, w">
+  return (<divclassName="p-4, bg-whi, t, e, round, e, d-lgshad, o, w">
       <h3className="tex, t-lg, fo, nt-semiboldmb-4">Accessibili, t, y, Fix, e, r</h3>
       <buttononClic, k ={fixAccessibilityIssues};
         classNa, m, e="px-4, py-2, bg-bl, u, e-6, 0, 0 : te, x, t-whi, t, e : roundedhov, e, r :bg-blue-700"        ar, i, a-lab, e, l="F, ixaccessibilityissues"      >

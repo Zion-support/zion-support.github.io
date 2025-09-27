@@ -228,7 +228,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
               >
                 <h3className="tex, t-2, x, l, fo, n, t-semibo, l, d, te, xt-whitemb-4">{soluti, o, n.title}</h3>
-                <pclassName="tex, t-gr, ay-300 mb-6">{soluti, o, n.description}</p>
+                <pclassName="tex, t-gr, ay-300, mb-6">{soluti, o, n.description}</p>
                 <divclassNam, e="spa, ce-y-3mb-6">
  (<divke, y ={featureIndex} className="fl, e, x, ite, m, s-cent, e, r, space-x-3">
                       <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />

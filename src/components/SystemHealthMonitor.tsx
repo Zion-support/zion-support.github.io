@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useEffectuseState }  from 'react";
 
 interface, SystemHealth {status: "healthy" | "warning" | "critical";
@@ -36,8 +36,8 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
 
   return (<divclassNam, e="p-6, bg-whi, t, e, rounded-lgshadow-lg">
       <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
-        <h1className="tex t-2 x l font-bold">SystemHeal, t, h, Monit, o, r</h1>
-        <divclassName={`px-3py-1rou, n, d, e, d-fu, l, l, te, x, t-sm, fo, n, t-medi, u, m ${getStatusCol, o, r(heal, t, h.status)}`}>
+        <h1className="tex, t-2, x l, font-bold">SystemHeal, t, h, Monit, o, r</h1>
+        <divclassName={`px-3py-1rou, n, d, e, d-fu, l, l, te, x, t-sm, fo, n, t-medi, u, m ${getStatusCol,o,r(heal,t,h.status)}`}>
           {heal, t, h.stat, u, s.toUpperCase()}        </div>
       </div>
 
@@ -68,7 +68,7 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
             {heal, t, h.cpuUs, a, g.e.toFi, xe(1)}%
           </div>
           <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
-            <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal, t, h.cpuUsage}%` }}            />
+            <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal,t,h.cpuUsage}%` }}            />
           </div>
         </div>
 
@@ -78,7 +78,7 @@ exportconstSystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useS
             {heal, t, h.memoryUs, a, g.e.toFi, xe(1)}%
           </div>
           <divclassName="w-full, b, g-gr, a, y-200 rounded-fullh-2">
-            <divclassName="bg-green-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal, t, h.memoryUsage}%` }}            />
+            <divclassName="bg-green-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"              sty, l, e={{ width: `${heal,t,h.memoryUsage}%` }}            />
           </div>
         </div>
 

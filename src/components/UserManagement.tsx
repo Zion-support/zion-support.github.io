@@ -1,5 +1,5 @@
-// TODO: Consider breaking this large component (397 lines) into smaller components
-// TODO: Consider breaking this large component (396 lines) into smaller components
+// TODO: Consider breaking this large component (397, lines) into smaller components
+// TODO: Consider breaking this large component (396, lines) into smaller components
 import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
 import Image from "next/image";
 
@@ -30,7 +30,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   const [editingUs, e, r, setEditingUs, e, r] = useState<User | null>(nu, l, l);
  [{
 
-  // Mo, c, k, da, t, a - ina, realappthis, wouldcomefroman APIconstmockUsers: User[] = useMemo(() => [{
+  // Mo, c, k, da, t, a - ina, realappthis, wouldcomefroman, APIconstmockUsers: User[] = useMemo(() => [{
 
       id: "1'name: "Jo, hnDoe"email: "jo, h, n.d, o, e@example.com"role: "admin"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14720996457, 8, 5-5658abf4ff, 4, e? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2024-01-15"),
       createdAt: newDate()("2023-06-01")permissions: ["read""write""delete""admin"]department: "Engineering"phone: "+1-555-0123"}{id: '2'name: "Ja, neSmith"email: "ja, n, e.smi, t, h@example.com"role: "user"status: "active"avatar: "https:// imag, e, s.unspla, s, h.c, o, m/pho, t, o-14947901087, 5, 5-2616b612b7, 8, 6? w=32&h=32&f, i, t=cr, o, p&crop=face" : lastLog, i, n : newDa, t, e()("2024-01-14"),
@@ -105,7 +105,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
     if (action === "delete") {
  pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
-      if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse, r, s.length} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
+      if (wind, o, w.confi, r, m(`A, r, e, y, o, u, su, r, e, y, o, u, wanttodel, e, t === e ${selectedUse,r,s.length} use, r, s?`)) {setUse, r, s(pr, e, v => pr, e, v.filt, e, r(us, e, r => !selectedUse, r, s.includ, e, s(us, e, r.id)));
 
         setSelectedUsers([])}} el, s, e {conststat, u, s = action === "activate" ? "active" : action === "deactivate" ? "inactive" : "suspended";
       setUse, r, s(pr, e, v => pr, e, v.m, a, p(us, e, r => 
@@ -147,7 +147,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
           <div, classNa, m, e ="space-y-3">
-            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl e x ite m s-cent e r space-x-4">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e x, ite m, s-cent, e r, space-x-4">
                 <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
                 <div, classNa, m, e="fl, ex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
@@ -215,7 +215,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Bu, l, kActions */};
- 0 && (<divclassName="px-6 py-3 bg-gr a y-50 bord e r-b bord e r-gr a y-200">
+ 0 && (<divclassName="px-6, py-3, bg-gr, a y-50, bord e, r-b, bord e, r-gr, a y-200">
           <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
             <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
@@ -305,11 +305,11 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           </thead>
 
             {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
-                <tdclassName="px-6 py-4, whitespace-nowrap">                  <inputtype ="checkbox"
+                <tdclassName="px-6, py-4, whitespace-nowrap">                  <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300 rounded"                    ar, i, a-lab, e, l={`Se, l, e, c  t, us, e, r ${user.name}` };
+                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300 rounded"                    ar, i, a-lab, e, l={`Se, l, e, c, t, us, e, r ${user.name}` };
           <tbodyclassName="bg-whitedivide-y divid e-gr a y-200">
             {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
                 <tdclassName ="px-6p, y-4whitespace-nowrap">
@@ -318,13 +318,13 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
                     className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300 rounded"
-                    ar, i, a-lab, e, l={`Se, l, e, c t, us, e, r ${user.name}` };
+                    ar, i, a-lab, e, l={`Se, l, e, c, t, us, e, r ${user.name}` };
                   />
                 </td>
                 <tdclassName="px-6 py-4, whitespac, e-nowrap">
                   <divclassName="flexitems-center">
                     <divclassName="fl, e, x-shrink-0 h-10 w-10">
-                      <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `h, t, t, p  s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us, e, r.name}&backgrou, n, d=rand, o, m`};
+                      <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `h, t, t, p, s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us,e,r.name}&backgrou, n, d=rand, o, m`};
                         a, l, t={us, e, r.name};
                         wid, t, h={40};
                         heig, h, t={40};

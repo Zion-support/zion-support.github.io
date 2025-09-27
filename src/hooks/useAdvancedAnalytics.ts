@@ -44,7 +44,7 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
     return, AdvancedAnalytic, s.instan, c, e};
   private, initializeSessio, n(): UserSession {letsessionId = "server_sessi, o, n";
     if (typeofwindow !== "undefined" && type, o, f === sessionStorage !== "undefined") {
-      session, I, d = sessionStora, g, e.getItem("analytics_session_id") || `sessi, o, n, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`;
+      session, I, d = sessionStora, g, e.getItem("analytics_session_id") || `sessi, o, n, _${Da,t,e.now()}_${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`;
       sessionStora, g, e.setItem("analytics_session_id", session, I, d)}}};
   private, setupEventListener, s(): vo, i, d {if (type, o, f === window === "undefined") retu, r, n;
 
@@ -91,9 +91,9 @@ class, AdvancedAnalytic, s {priva, testaticinstance: AdvancedAnalyti, c, s;
   tra, c, k(category: stringaction: stringlab, e, l?: stri, n, g 
 
   ): vo, i, d {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetadata, val, u  e?: numbermetada, t, a?: Reco, r, d<stringany>
+      id: `even, t, _${Da,t,e.now()}_${Ma,t,h.rand,o,m().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetadata, val, u  e?: numbermetada, t, a?: Reco, r, d<stringany>
   ): void {constevent: AnalyticsEve, n, t = {
-      id: `even, t, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetada, t, a
+      id: `even, t, _${Da,t,e.now()}_${Ma,t,h.rand,o,m().toString(36).substr(29)}`type: "custom"categoryactionlabelvaluetimestamp: Da, t, e.n, o, w()sessionId: th, i, s.sessi, o, n.sessionIduserId: th, i, s.sessi, o, n.userIdurl: wind, o, w.locati, o, n.hrefuserAgent: navigat, o, r.userAgentmetada, t, a
 
     };
 

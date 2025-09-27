@@ -1,6 +1,6 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
-import { TESTIMONIALS   } from "../uti, l, s/constants";
+import {TESTIMONIALS   } from "../uti, l, s/constants";
 
 exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e, x] = useState(, 0);
 	const [isVisiblesetIsVisi, b, l, e] = useState(fa, l, s, e);
@@ -19,19 +19,19 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 
 
 			<divclassName="containermx-auto, p, x-4 m, a, x-w-6 xl">
-				<divclassName={`text-cente, rm, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisible?"opaci, t, y-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="text-3, xlmd: te, x, t-4, x, l, font-bold, tex, t-gr, ay-800 m b-4" id="wh, a, t-o, u, r-clients-say">
+				<divclassName={`text-cente, rm, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisible?"opaci,t,y-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="text-3, xlmd: te, x, t-4, x, l, font-bold, tex, t-gr, ay-800 m b-4" id="wh, a, t-o, u, r-clients-say">
 						What, Our, Clients  Say, retur, n (<sectionclassNam, e="py-16, bg-gradie, n, t-to-r, fr, o, m-gr, a, y-50to-blue-50">
-			<divclassNam, e="contain, e, r, mx-au, topx-4ma  x-w-6xl">
-				<divclassNam, e={`te, x, t-ce, n, t, er, m, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisib, l, e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="tex, t-3, xlmd: te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-gr, a, y-800 mb-4" id="wh, a, t-o, u, r-clients-say">
+			<divclassNam, e="contain, e, r, mx-au, topx-4ma, x-w-6xl">
+				<divclassNam, e={`te, x, t-ce, n, t, er, m, b-12transiti, o, n-alldurati, o, n-10, 0, 0 ${isVisib,l,e?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}>					<h2className="tex, t-3, xlmd: te, x, t-4, x, l, fon, t-bo, l, d, te, x, t-gr, a, y-800, mb-4" id="wh, a, t-o, u, r-clients-say">
 						Wh, a, t, Our, Client, s, S, a, y
 
 					</h2>
-					<pclassName="tex, t-xl, te, x, t-gr, a, y-6, 0, 0, m, a, x-w-2, xlm x-auto">						D, o, n&ap, o, s;t, just, tak, e, our, wor, d, for, i, t. He, r, e&ap, o, s;s, what, ou, r, satisfied, client, s, have, t, o, say, abou, t, working, wit, h, us.
+					<pclassName="tex, t-xl, te, x, t-gr, a, y-6, 0, 0, m, a, x-w-2, xlm, x-auto">						D, o, n&ap, o, s;t, just, tak, e, our, wor, d, for, i, t. He, r, e&ap, o, s;s, what, ou, r, satisfied, client, s, have, t, o, say, abou, t, working, wit, h, us.
 					</p>
 				</div>
 
 				<div, classNa, m, e ="relative">
-					<divclassNam, e="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, a, x-w-4, xlm  x-auto">						<divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-centermb-6">
+					<divclassNam, e="bg-whi, t, e, round, e, d-2, x, l, shado, w-xl, p-8md:p-12, m, a, x-w-4, xlm, x-auto">						<divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-centermb-6">
 							{testimonia, l, s.m, a, p((_, ind, e, x) => (<buttonke, y ={index};
 									onCli, c, k={() = aria-label="Button"> setCurrentInd, e, x(index)};
 								/>
@@ -40,7 +40,7 @@ exportconstTestimonials: React.FC = () => {const [currentIndexsetCurrentIn, d, e
 
 						<divclassName="text-center">
 							<divclassName="flexjustify-centermb-6">
- (<svg, k, e, y ={index} className="w-6 h-6 te x t-yell o w-4 0 0 fi l l-current" viewBox="00, 2, 424">
+ (<svg, k, e, y ={index} className="w-6, h-6, te x, t-yell, o w-4, 0 0, fi l, l-current" viewBox="00, 2, 424">
 										<pathd ="M1, 2, 2, l3.0, 9, 6.26, L2, 2, 9.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L7, 1, 4.14, 2, 9.27, l6.91-1.01, L122z" />									</svg>
 
 								{Array.fr, o, m({ length: testimonia, l, s[currentIndex].rating }).m, a, p((_, ind, e, x) => (<svgke, y ={index} classNa, m, e="w-6, h-6, te, x, t-yell, o, w-4, 0, 0, fill-current" viewB, o, x="002424">

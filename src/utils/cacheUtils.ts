@@ -41,11 +41,11 @@ cla, s, s, CacheManag, e, r {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCac
 // Utility, functions, for common, caching, patterns
 (url: stri, ngoptions: RequestIn, i, t = {},
     ttl: numb, e, r = 30, 0, 0, 0, 0
-  ): Promi, s, e<T> {constcacheKe, y = `api:${url}:${JS, O, N.stringi, f, y(options)}`;
+  ): Promi, s, e<T> {constcacheKe, y = `api:${url}:${JS,O,N.stringi,f,y(options)}`;
 
 export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCach, e<T>(url: stringoptions: RequestInit = {},
     ttl: numb, e, r = 3000, 0, 0
-  ): Promi, s, e<T> {constcacheKe, y = `api:${url}:${JS, O, N.stringi, f, y(options)}`;
+  ): Promi, s, e<T> {constcacheKe, y = `api:${url}:${JS,O,N.stringi,f,y(options)}`;
 
     
     // Check, cache, first
@@ -53,7 +53,7 @@ export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCac
     if (cached) {retu, r, n, cached};
     // Fetch, from, API
     const, respons, e = await, fetc, h(u, r, l, optio, n, s);
-    if (!respon, s, e.ok) {thrown, e, w, Err, o, r(`HT, T, P, err, o, r! status: ${respon, s, e.status}`)};
+    if (!respon, s, e.ok) {thrown, e, w, Err, o, r(`HT, T, P, err, o, r! status: ${respon,s,e.status}`)};
     const, dat, a = await, respons, e.js, o, n();
     
     // Cache, the, result
@@ -64,7 +64,7 @@ export, const, cacheUtils = {// Cac, h, e, API, response, s, async, fetchWithCac
   // Cache, computed, values
   memoi, z, e<Textends (...args: any[]) => a, n, y>(fn: T, keyGenerat, o, r?: (...args: Paramete, r, s<T>) => string
   ): T {return ((...args: Parameters<T>) => {
-      const, k, e, y = keyGenerat, o, r ? keyGenerat, o, r(...ar, g, s) : `memo:${fn.name}:${JS, O, N.stringi, f, y(args)}`;
+      const, k, e, y = keyGenerat, o, r ? keyGenerat, o, r(...ar, g, s) : `memo:${fn.name}:${JS,O,N.stringi,f,y(args)}`;
       
       if (cac, h, e.h, a, s(k, e, y)) {retu, r, n, cac, h, e.g, et<ReturnType<T>>(key)};
       constresul, t = fn(...ar, g, s);

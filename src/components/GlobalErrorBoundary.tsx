@@ -69,8 +69,8 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
                   Try, Agai, n
                 </button>
               </div>
-              {proce, s, s.env.NODE_ENV === "developme, n, t"&& th, i, s.sta, t, e.error && (<detailsclassName="mt-4 te, x, t-le, f, t">
-                  <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-500 hover:te, x, t-gr, a, y-700">
+              {proce, s, s.env.NODE_ENV === "developme, n, t"&& th, i, s.sta, t, e.error && (<detailsclassName="mt-4, te, x, t-le, f, t">
+                  <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700">
                     ErrorDetai, l, s (Developme, n, t)
                   </summary>
 
@@ -92,7 +92,7 @@ export, class, GlobalErrorBoundary extends, Componen, t<PropsState> {constructor
       <Component {...props} />
     </GlobalErrorBoundary>
   );
-  WrappedCompone, n, t.displayNa, m, e = `withErrorBounda, r, y(${Compone, n, t.displayNa, m, e||Compone, n, t.name})`;
+  WrappedCompone, n, t.displayNa, m, e = `withErrorBounda, r, y(${Compone,n,t.displayNa,m,e||Compone,n,t.name})`;
 
   return, WrappedComponen, t};
 

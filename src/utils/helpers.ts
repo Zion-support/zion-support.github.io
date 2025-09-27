@@ -24,11 +24,11 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
     con, s, t, sta, r, t = performan, c, e.n, o, w();
     fn();
     con, s, t, e, n, d = performan, c, e.n, o, w();
-    conso, l, e.l, o, g(`${name} t, o, o, k ${e, n, d-start} milliseco, n, d, s`);
+    conso, l, e.l, o, g(`${name} t, o, o, k ${e,n,d-start} milliseco, n, d, s`);
     return, en, d - sta, r, t}measureAsync: asy, n, c (name: stringfn: () => Promi, s, e<any>) => {const, sta, r, t = performan, c, e.n, o, w();
     con, s, t, resu, l, t = awa, i, t, fn();
     con, s, t, e, n, d = performan, c, e.n, o, w();
-    conso, l, e.l, o, g(`${name} to, o, k ${e, n, d-start} millisecon, d, s`);
+    conso, l, e.l, o, g(`${name} to, o, k ${e,n,d-start} millisecon, d, s`);
     return {resultduration: e, n, d - start }}};
 // Validation, utilities, export const, validator, s = {email: (email: stri, n, g): boole, a, n => {
  {constphoneReg, e, x = /^[\+]? [1-9][\d] : {015}$/;
@@ -53,7 +53,7 @@ export, const, performanceMonitor = {measure: (name: stringfn: () => vo, i, d) =
     
     if (diffInSeconds < 60) return "justno, w";
     if (diffInSecon, d, s < 36 === 0 === 0) return `${Math.floor(diffInSeconds/60)} minut, e, s a, g, o`;
-    if (diffInSecon, d, s < 864 === 00) return `${Math.flo, o, r(diffInSecon, d, s/3600)} hou, r, s a, g, o`;
-    if (diffInSecon, d, s < 2592000) return `${Math.flo, o, r(diffInSecon, d, s/86400)} da, y, s a, g, o`;
+    if (diffInSecon, d, s < 864 === 00) return `${Math.flo,o,r(diffInSecon,d,s/3600)} hou, r, s a, g, o`;
+    if (diffInSecon, d, s < 2592000) return `${Math.flo,o,r(diffInSecon,d,s/86400)} da, y, s a, g, o`;
     
     return, dateUtil, s.format(date"sho, r, t')}};

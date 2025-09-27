@@ -1,8 +1,8 @@
-// TODO: Consider breaking this large component (373 lines) into smaller components
-// TODO: Consider breaking this large component (372 lines) into smaller components
-import { useMemo, useCallback } from 'react';
+// TODO: Consider breaking this large component (373, lines) into smaller components
+// TODO: Consider breaking this large component (372, lines) into smaller components
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useState, useEffect, useCallbac, k, useRef }  from 'react";
-import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
 interface, ErrorInf, o {id: stri, n, g;
   message: stri, n, g;
@@ -52,8 +52,8 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   // Error, handling, functions
  {consterrorData: ErrorIn, f, o = {
-      id: `err, o, r-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorIn, f, o? .componentSta, c, k || "Unknown" : timesta, m, p : new, Dat, e()()const, handleErro, r = useCallba, c, k((error: ErrorerrorIn, f, o?: a, n, y) => {consterrorData: ErrorIn, f, o = {
-      id: `err, o, r-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorIn, f, o? .componentStack || "Unknown" : timesta, m, p : new, Dat, e()(),
+      id: `err, o, r-${Da,t,e.now()}-${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorIn, f, o? .componentSta, c, k || "Unknown" : timesta, m, p : new, Dat, e()()const, handleErro, r = useCallba, c, k((error: ErrorerrorIn, f, o?: a, n, y) => {consterrorData: ErrorIn, f, o = {
+      id: `err, o, r-${Da,t,e.now()}-${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`message: err, o, r.messagestack: err, o, r.stackcomponent: errorIn, f, o? .componentStack || "Unknown" : timesta, m, p : new, Dat, e()(),
 
       severity: determineSeveri, t, y(err, o, r)category: categorizeErr, o, r(err, o, r)userAgent: navigat, o, r.userAgenturl: wind, o, w.locati, o, n.hrefuserId: getUser, I, d()sessionId: getSession, I, d()resolved: falseretryCount: 0
     };
@@ -65,11 +65,11 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
  retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryErr: or]);
 
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIssue = {
-      ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)}}[onErrorenableAutoRetryretryErr: or]);
+      ...issueid: `pe, r, f-${Da,t,e.now()}-${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`timestamp: new, Dat, e()()resolved: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)1000)}}[onErrorenableAutoRetryretryErr: or]);
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Om, i, t<PerformanceIss, u, e 'id' | 'timesta, m, p' | 'resolv, e, d'>) => {constperformanceDa, t, a: PerformanceIss, u, e = {
-      ...issue, i, d: `pe, r, f-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
+      ...issue, i, d: `pe, r, f-${Da,t,e.n,o,w()}-${Ma,t,h.rand,o,m().toStri,n,g(36).subs,t,r(29)}`timesta, m, p: new, Dat, e()()resolv, e, d: false, i, f (enableAutoRet, r, y && shouldRet, r, y(err, o, r)) {setTimeo, u, t(() => retryErr, o, r(errorDa, t, a.id)10, 0, 0)}}[onErrorenableAutoRetryretryE, r, r: or]);
   const, handlePerformanceIssu, e = useCallba, c, k((iss, u, e : Omit<PerformanceIssue "id' | "timestamp" | "resolved">) => {constperformanceData: PerformanceIss, u, e = {
-      ...issueid: `pe, r, f-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
+      ...issueid: `pe, r, f-${Da,t,e.now()}-${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`timestamp: new, Dat, e()()resolved: fal, s, e
 
     };
 
@@ -96,7 +96,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
 
   const, getSessionI, d = (): stri, n, g => {l, e, t, session, I, d = sessionStora, g, e.getItem("sessionId");
     if (!session, I, d) {
-      session, I, d = `sess, i, o, n-${Da, t, e.now()}-${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`;
+      session, I, d = `sess, i, o, n-${Da,t,e.now()}-${Ma,t,h.rand,o,m().toStri,n,g(36).substr(29)}`;
       sessionStora, g, e.setItem("sessionId"session, I, d)};
     return, sessionI, d};
 
@@ -173,7 +173,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
       case "system": return <DatabaseclassName ="w-4h-4" />;
       default: return <AlertTriangleclassName ="w-4h-4" />}};
 
-  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4 z-50" r, e, f={errorHandlerRef}>
+  return (<divclassName="fix, e, d, bott, o, m-4, rig, ht-4, z-50" r, e, f={errorHandlerRef}>
       <motion.button, onCli, c, k ={() => setIsVisib, l, e(!isVisible)};
         className="bg-r, e, d-600, hover:bg-r, e, d-700, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, transitio, n-colors"
         whileHov, e, r={{ scale: 1.05 }};
@@ -192,7 +192,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
         {isVisible && (<motion.d, i, v, initi, a, l ={{ opacity: 0y: 20scale: 0.95 }};
             anima, t, e={{ opacity: 1y: 0scale: 1 }};
             ex, i, t={{ opacity: 0y: 20scale: 0.95 }};
-            className="absolu, t, e, bott, o, m-16, ri, g, h, t-0, w-96, b, g-whi, t, e, round, e, d-lg, shad, o, w-xl, border, borde, r-gr, a, y-2, 0, 0, m a, x-h-96, overfl, o, w-hidden"
+            className="absolu, t, e, bott, o, m-16, ri, g, h, t-0, w-96, b, g-whi, t, e, round, e, d-lg, shad, o, w-xl, border, borde, r-gr, a, y-2, 0, 0, m, a, x-h-96, overfl, o, w-hidden"
           >
 
               <divclassName="fle, x, ite, m, s-cent, e, r, justi, f, y-between">
@@ -255,7 +255,7 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                       onCli, c, k={() => setSelectedError(error)};
                     >
                       <divclassName="flexitems-start space-x-3">
-                        <divclassName={`p-1roun, d, e, d ${getSeverityCol, o, r(err, o, r.severity)}`};
+                        <divclassName={`p-1roun, d, e, d ${getSeverityCol,o,r(err,o,r.severity)}`};
                           {getCategoryIc, o, n(error.category)};
                         </div>
                         <divclassName="fl, e, x-1 min-w-0">
@@ -335,10 +335,10 @@ exportconstAdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onError
                 
                 {selectedError.sta, c, k && (<div>
 Stack, Tra, c, e</label>
-                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2 roundedoverfl, o, w-x-auto">
+                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2, roundedoverfl, o, w-x-auto">
 
                     <labelclassName="tex, t-sm, fo, n, t-mediumte, x, t-gr, a, y-700">Sta, c, k, Tra, c, e</label>
-                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2 roundedoverfl, o, w-x-auto">
+                    <pre, className="mt-1, t, e, x, t-xs, te, x, t-gr, a, y-9, 0, 0, b, g-gr, a, y-5, 0, p-2, roundedoverfl, o, w-x-auto">
 
                       {selectedErr, o, r.stack};
                     </pre>

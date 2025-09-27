@@ -84,38 +84,38 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
             <pathstrokeLinecap ="roun, d" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
         );
       case "error":
-        return (<svg, className="h-6, w-6, t, e, x t-r, e, d-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-r, e, d-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />          </svg>
         );
       case "warning":
-        return (<svg, className="h-6, w-6, t, e, x t-yell, o, w-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-yell, o, w-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.7, 3, 2, 4c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7, 3, 2, 0, L, 3.732, 1, 6.5c-.77.8, 3, 3.19, 2, 2.51.7322.5z" />          </svg>
         );
       case "info":
-        return (<svg, className="h-6, w-6, t, e, x t-bl, u, e-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-bl, u, e-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 3, 1, 6, h-1v-4h-1, m, 1-4h.0, 1, M, 2, 1, 12, a990, 1, 1-18099001180z" />          </svg>
         );
       case "loading":
-        return (<svg, className="h-6, w-6, te, x, t-gr, a, y-400 ani, m, a, t e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, te, x, t-gr, a, y-400, ani, m, a, t, e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M4, 4, v, 5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 5, 7-2m, 1, 5.3, 5, 7, 2H15" />          </svg>
 
-        return (<svg, className="h-6 w-6 te, x, t-gre, e, n-400" fill="none" viewBox="002424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, te, x, t-gre, e, n-400" fill="none" viewBox="002424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
         );
       case "error":
-        return (<svg, className="h-6, w-6, t, e, x t-r, e, d-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-r, e, d-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />          </svg>
         );
       case "warning":
-        return (<svg, className="h-6, w-6, t, e, x t-yell, o, w-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-yell, o, w-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M, 1, 2, 9v, 2, m, 0, 4h.0, 1, m-6.9, 3, 8, 4h, 1, 3.8, 5, 6, c, 1.54, 0, 2.5, 0, 2-1.6, 6, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7320, L, 3.732, 1, 6.5c-.77.8, 3, 3.19, 2, 2.51.7322.5z" />          </svg>
         );
       case "info":
-        return (<svg, className="h-6, w-6, t, e, x t-bl, u, e-400" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, t, e, x, t-bl, u, e-400" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M13, 1, 6, h-1v-4h-1, m, 1-4h.0, 1, M, 21, 1, 2, a, 990, 1, 1-18099001180z" />          </svg>
         );
       case "loading":
-        return (<svg, className="h-6, w-6, te, x, t-gr, a, y-400 ani, m, a, t e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
+        return (<svg, className="h-6, w-6, te, x, t-gr, a, y-400, ani, m, a, t, e-spin" fill="none" viewBox="0, 02424" stroke="currentColor">
             <pathstrokeLineca, p ="round" strokeLinejoin="round" strokeWidth={2} d="M4, 4, v, 5, h.58, 2, m, 1, 5.3, 5, 6, 2, A, 8.0, 0, 1, 8.0, 0, 1, 0, 0, 0, 4.5, 8, 2, 9, m, 0, 0H, 9, m, 1, 1, 1, 1, v-5h-.5, 8, 1, m, 0, 0, a, 8.0, 0, 3, 8.0, 0, 3, 0, 01-15.3, 5, 7-2m, 1, 5.357, 2H15" />          </svg>
 
         );
@@ -139,7 +139,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                 
                 {notification.actions && notificati, o, n.actio, n, s.leng, t, h > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actio, n, s.m, a, p((actionind, ex) => (<buttonkey={index};
                         onClic, k={acti, o, n.action};
-                        classNa, m, e={`te, x, t-smfo, n, t-medi, u, m ${acti, o, n.variant==="primary"?"te, x, t-bl, u, e-600hover:te, x, t-blue-500":acti, o, n.varia, n, t==="danger"?"te, x, t-r, e, d-600hover:te, x, t-red-500":"te, x, t-gr, a, y-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
+                        classNa, m, e={`te, x, t-smfo, n, t-medi, u, m ${acti,o,n.variant==="primary"?"te,x,t-bl,u,e-600hover:te,x,t-blue-500":acti,o,n.varia,n,t==="danger"?"te,x,t-r,e,d-600hover:te,x,t-red-500":"te,x,t-gr,a,y-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
 
                         {acti, o, n.label}                      </button>
                     ))};

@@ -1,7 +1,6 @@
-import React, { useEffect  } from 'react';
+import React, {useEffect  } from 'react';
 
-interface AccessibilityIssue {
-  type: "error" | "warning" | "info";
+interface AccessibilityIssue {type: "error" | "warning" | "info";
   message: string;
   element?: HTMLElement;
   rule?: string}
@@ -44,7 +43,7 @@ interface AccessibilityIssue {
     // Log, issues, to console, in, development
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && issu, e, s.leng, t, h > 0) {conso, l, e.gro, u, p('🔍 AccessibilityAuditResul, t, s');
       issu, e, s.forEa, c, h(iss, u, e => {
-        conso, l, e.l, o, g(`${pref, i, x} ${iss, u, e.messa, g, e}`iss, u, e.elementiss, u, e.ru, l, e)});
+        conso, l, e.l, o, g(`${pref,i,x} ${iss,u,e.messa,g,e}`iss, u, e.elementiss, u, e.ru, l, e)});
       conso, l, e.groupE, n, d()};
     // Return, cleanup, function {// Cleanupif, neededretur() => {
       // Cleanupif, neede, d

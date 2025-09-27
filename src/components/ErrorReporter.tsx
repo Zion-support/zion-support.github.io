@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
 interface, ErrorDetail, s {message: stri, n, g;
@@ -108,10 +108,10 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               <summaryclassName="curso, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0, hover:te, x, t-gr, a, y-800">
                 Err, o, r, Detai, l, s
               </summary>
-              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2 roundedoverfl, o, w-auto">
+              <pre, className="mt-2, te, x, t-xs, bg-gr, a, y-10, 0, p-2, roundedoverfl, o, w-auto">
 
             <detailsclassName ="mt-4">
-              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600 hover:te, x, t-gr, a, y-800">
+              <summaryclassName="curs, o, r-point, e, r, te, x, t-sm, te, x, t-gr, a, y-600, hover:te, x, t-gr, a, y-800">
                 ErrorDetai, l, s
               </summary>
               <preclassName ="mt-2text-xs, b, g-gr, a, y-10, 0, p-2roundedoverfl, o, w-auto">
@@ -133,7 +133,7 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
             <buttononClic, k ={clearErrorHistory};
               classNa, m, e="te, x, t-xs, te, x, t-gr, a, y-5, 0, 0, h, o, v : e : r :te, x, t-gray-700"
 
-        <divclassNam, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shadow-lgp-4ma  x-w-sm">
+        <divclassNam, e="fix, e, d, bott, o, m-4, rig, h, t-4, bg-whi, t, e, border, borde, r-gr, a, y-2, 0, 0, round, e, d-lg, shadow-lgp-4ma, x-w-sm">
           <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-2">
             <h4className="tex, t-sm, fo, n, t-medi, u, m, te, x, t-gray-900" id="error-history">Err, o, r, Histo, r, y</h4>
             <buttononClic, k ={clearErrorHistory};
@@ -143,8 +143,8 @@ exportconstErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
               Cle, a, r
             </button>
           </div>
-          <div, className="spa, c, e-y-2, m, a, x-h-32 overfl, o, w-y-auto">
-            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0 pl-2">
+          <div, className="spa, c, e-y-2, m, a, x-h-32, overfl, o, w-y-auto">
+            {errorHisto, r, y.sli, c, e(-5).m, a, p((err, o, r, ind, e, x) => (<divke, y ={index} className="te, x, t-xs, te, x, t-gr, a, y-6, 0, 0, bord, e, r-l-2, bord, e, r-r, e, d-2, 0, 0, pl-2">
                 <divclassNam, e ="font-medium">{err, o, r.component}</div>
                 <div, classNa, m, e ="truncate">{err, o, r.message}</div>
                 <div, className ="te, x, t-gr, a, y-400">

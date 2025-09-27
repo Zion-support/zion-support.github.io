@@ -28,18 +28,21 @@ export default function App({ Component, pageProps }: AppProps) {
 
   // Setup global error handling
   // React.useEffect(() => {
-    // setupGlobalErrorHandling(); //
-  }, []);
+  //   setupGlobalErrorHandling();
+  // }, []);
   
   // Register service worker for performance optimization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw-performance.js') .then((registration) => {
-    console.log('Service Worker registered successfully:', registration);
-  }) .catch((error) => {
+      navigator.serviceWorker.register('/sw-performance.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
           console.log('Service Worker registration failed:', error);
         });
-        }, []);
+    }
+  }, []);
 
   useEffect(() => {
     setIsLoading(false);

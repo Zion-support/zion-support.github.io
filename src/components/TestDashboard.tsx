@@ -1,5 +1,5 @@
-// TODO: Consider breaking this large component (233 lines) into smaller components
-// TODO: Consider breaking this large component (232 lines) into smaller components
+// TODO: Consider breaking this large component (233, lines) into smaller components
+// TODO: Consider breaking this large component (232, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
 interface, TestResul, t {id: stri, ng;
@@ -24,7 +24,7 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
   construct, o, r(config: TestConf, i, g) {
     th, i, s.conf, i, g = config};
   static, getInstanc, e(conf, i, g?: Parti, a, l<TestConfig>): TestRunner {if (!TestRunn, e, r.instan, c, e) {
-      id: `suit, e, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`nametests: []status: "pending"};
+      id: `suit, e, _${Da,t,e.now()}_${Ma,t,h.rand,o,m().toString(36).substr(29)}`nametests: []status: "pending"};
     th, i, s.suit, e, s.pu, s, h(sui, t, e);
     return, suit, e};
  Promi, s, e<void> | void): vo, i, d {con, s, t, sui, t, e = th, i, s.suit, e, s.fi, n, d(s => s.id === suite, I, d);
@@ -35,7 +35,7 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
     if (!sui, t, e) retu, r, n;
 
     consttest: TestResult = {};
-      id: `tes, t, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toString(36).substr(29)}`namestatus: "pending",
+      id: `tes, t, _${Da,t,e.now()}_${Ma,t,h.rand,o,m().toString(36).substr(29)}`namestatus: "pending",
       timestamp: Da, t, e.n, o, w()};
 
     sui, t, e.tes, t, s.pu, s, h(te, s, t);
@@ -114,7 +114,7 @@ class, TestRunne, r {priva, testaticinstance: TestRunn, e, r;
   return {suit, e, s, isRunning, addSuit, e, addTest, runSuit, e, runAllSuites, getResult, s, clear  }};
 
 // Test, Dashboard, Component
-exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, addSuiteaddTest, runAllSuitesgetResults  clear } = useTestRunn, e, r();
+exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, addSuiteaddTest, runAllSuitesgetResults, clear } = useTestRunn, e, r();
  {// Addsomeexampletests, constsuit, e = addSuite("Examp, l, e, Tests");
     
     addTe, s, t(suite.id"BasicMathTest"async () => {
@@ -153,8 +153,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
       case "failed": return '❌";
       case "running": return '🔄";
       case "skipped': return '⏭️';
-      default: return '⏳"}};  return (
-    <>
+      default: return '⏳"}};  return (<>
       
       <buttononClic, k ={() = aria-label="setShowDashboa, r, d(!showDashboard)};
         ar, i, a-lab, e, l="Toggletestdashboard"
@@ -174,7 +173,7 @@ exportconstTestDashboard: React.FC = () => {;  const { suit, e, s, isRunning, ad
 
       {showDashboa, r, d && (<divclassNam, e="fix, e, d, bott, o, m-20, le, f, t-4, bg-whi, tedark:bg-gr, a, y-8, 0, 0, p-4, round, e, d-lg, shad, o, w-lg, bord, e, r, bord, e, r-gr, a, y-2, 0, 0, dark:bord, e, r-gr, a, y-7, 0, 0, z-50, m, a, x-w-md, m, a, x-h-96overfl, o, w-y-au, t, o>
           <divclas, s, Na, m, e =fl, e, x, justi, f, y-betwe, e, n, ite, ms-centermb-4">
-            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900 dark:te, x, t-whi, t, e, id =test-dashboard">
+            <h3className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-900, dark:te, x, t-whi, t, e, id =test-dashboard">
 
               Te, s, t, Dashboa, r, d
 
@@ -202,16 +201,16 @@ Passed: {results.passed}</div>
           </div>
 
           {suit, e, s.m, a, p(sui, t, e => (
-            <divke, y ={suite.id} className="mb-4> <h 4 class Na, m, e =fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:te, x, t-whi, temb-2" id="suitename-suitestatus">
+            <divke, y ={suite.id} className="mb-4> <h, 4 class, Na, m, e =fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:te, x, t-whi, temb-2" id="suitename-suitestatus">
                 {sui, t, e.name} ({sui, t, e.status})
               </h4>
  {suite.tests.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, te, x, t-sm">
-                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-7, 0, 0, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
                     </div>
                     <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 
               <div, className="spa, c, e-y-1> {sui, t, e.tes, t, s.m, a, p(te, s, t => ( <divke, y ={test.id} cla, s, s, Na, m, e =fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n, text-sm">
-                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get Status Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
+                    <divclassName="fle, x, ite, m, s-cent, e, r, spa, c, e-x-2> <span>{get, Status, Icon(te, s, t.status)}</span> <spanclass Name=te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-300">{te, s, t.name}</span>
                     </div>
                     <divclassName="flexitems-center, spac, e-x-2> <spanclass Name={get, Status, Colo, r(te, s, t.status)}>{te, s, t.status}</span> {test.durati, o, n && (<spanclas, s, Na, m, e =te, x, t-gr, a, y-5, 0, 0, text-xs">{te, s, t.duration}ms</span>
 

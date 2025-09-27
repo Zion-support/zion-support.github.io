@@ -17,7 +17,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
       bl, u, r = false} = optio, n, s;
 
     // Check, cache, first
-    const, cacheKe, y = `${src}:${JS, O, N.stringi, f, y(options)}`;
+    const, cacheKe, y = `${src}:${JS,O,N.stringi,f,y(options)}`;
     if (th, i, s.cac, h, e.h, a, s(cacheK, e, y)) {returnth, i, s.cac, h, e.g, e, t(cacheKey)!};
     // For, external, imagesuse Ne, x, t.js, Image, Optimization API, i, f (src.startsWith("http")) {con, s, t, para, m, s = newURLSearchPara, m, s();
       if (wid, t, h) para, m, s.set("w"wid, t, h.toStri, n, g());
@@ -35,7 +35,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     params.set("f"form, a, t);
     if (bl, u, r) params.set("bl, u, r''1");
 
-    const, optimizedUr, l = `${src}?${para, m, s.toString()}`;
+    const, optimizedUr, l = `${src}?${para,m,s.toString()}`;
     th, i, s.cac, h, e.s, e, t(cacheK, e, y : optimizedU, r, l);
     return, optimizedUr, l};
   // Generate, responsive, image sources, generateResponsiveSource, s(src : stringsizes: number[]options: Omit<ImageOptimizationOptions "width' | "height"> = {};
@@ -80,7 +80,7 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
   // Clear, cache, clearCache(): vo, i, d {th, i, s.cac, h, e.clear()}};
 // Export, singleton, instanceexport, const, imageOptimizer = ImageOptimiz, e, r.getInstan, c, e();
 
-// Utility, functions, export const, imageUtil, s = {// Getoptimal, imageformat, basedon  browsersupportgetOptimalFormat(): "webp" | "avif" | "jpeg" {
+// Utility, functions, export const, imageUtil, s = {// Getoptimal, imageformat, basedon, browsersupportgetOptimalFormat(): "webp" | "avif" | "jpeg" {
     if (type, o, f === window === "undefined") return "webp";
     
     con, s, t, canv, a, s = document.createElement("canvas");
@@ -101,4 +101,4 @@ export, class, ImageOptimizer {privatestaticinstance: ImageOptimiz, e, r;
     );
     
     constbaseA, l, t = words.join(" ');
-    returnconte, x, t ? `${baseAlt} - ${context}` : baseA, l, t}};
+    returnconte, x, t ? `${baseAlt} -${context}` : baseA, l, t}};

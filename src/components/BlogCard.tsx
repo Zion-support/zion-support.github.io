@@ -14,7 +14,7 @@ interface, BlogCardProp, s {post: BlogPo, s, t;
   isVisible: boole, a, n;
   onReadMore: (slug: stri, n, g) => void};
 exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, r, e 
- {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci, t, y-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci, t, y-100translate-y-0":"opacity-0translate-y-8"}`};
+ {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci,t,y-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci,t,y-100translate-y-0":"opacity-0translate-y-8"}`};
     >      {/* Image */};
       <divclassName="relati, v, e, h-48, overfl, o, w-hidden">
         <Imagesrc ={pos, t.image};

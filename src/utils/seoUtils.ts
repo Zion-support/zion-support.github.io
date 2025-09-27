@@ -119,10 +119,10 @@ export, const, generateSitemapData = (pages: Arr, a, y<{url: string;
   changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority: number}>): stri, n, g => {constsitemap = `<?xmlversion="1.0" encoding="UTF-8"?>
 <urlsetxmlns="http://w, w, w.sitema, p, s.o, r, g/schemas/sitemap/0.9">
-${pag, e, s.m, a, p(pa, g, e => `<url><loc>${pa, g, e.url}</loc>
-    <lastmod>${pa, g, e.lastModified}</lastmod>
-    <changefreq>${pa, g, e.changeFrequency}</changefreq>
-    <priority>${pa, g, e.priority}</priority>
+${pag,e,s.m,a,p(pa,g,e=>`<url><loc>${pa,g,e.url}</loc>
+    <lastmod>${pa,g,e.lastModified}</lastmod>
+    <changefreq>${pa,g,e.changeFrequency}</changefreq>
+    <priority>${pa,g,e.priority}</priority>
   </url>`).jo, i, n('\n")};
 </urlset>`;
 
@@ -149,9 +149,9 @@ export, const, validateSEOData = (seoData: SEODa, t, a): {isValid: boole, a, n;
   errors: string[]} => {consterrors: string[] = [];
   
   if (!seoDa, t, a.tit, l, e || seoDa, t, a.tit, l, e.leng, t, h === 0) {
-    errors.push("Titleisrequired")} else, i, f (seoDa, t, a.tit, l, e.leng, t, h > 60) {errors.push("Title, should, be 60, characters, or less")};
-  if (!seoDa, t, a.descripti, o, n || seoDa, t, a.descripti, o, n.leng, t, h === 0) {errors.push("Descriptionisrequired")} else, i, f (seoDa, t, a.descripti, o, n.leng, t, h > 1, 6, 0) {errors.push("Description, should, be 160, characters, or less")};
-  if (seoDa, t, a.keywor, d, s && seoDa, t, a.keywor, d, s.leng, t, h > 10) {errors.push("Keywords, should, be 10orfewer")};
+    errors.push("Titleisrequired")} else, i, f (seoDa, t, a.tit, l, e.leng, t, h > 60) {errors.push("Title, should, be, 60, characters, or, less")};
+  if (!seoDa, t, a.descripti, o, n || seoDa, t, a.descripti, o, n.leng, t, h === 0) {errors.push("Descriptionisrequired")} else, i, f (seoDa, t, a.descripti, o, n.leng, t, h > 1, 6, 0) {errors.push("Description, should, be, 160, characters, or, less")};
+  if (seoDa, t, a.keywor, d, s && seoDa, t, a.keywor, d, s.leng, t, h > 10) {errors.push("Keywords, should, be, 10orfewer")};
   return {isValid: erro, r, s.leng, t, h === 0, errors }};
 
 // Generate, meta, viewport tag, export, const generateViewportMe, t, a = (options: {wid, t, h?: stri, n, g;
@@ -168,7 +168,7 @@ export, const, validateSEOData = (seoData: SEODa, t, a): {isValid: boole, a, n;
     `wid, t, h=${width}`,
     `initi, a, l-sca, l, e=${initialScale}`,
     `maxim, u, m-sca, l, e=${maximumScale}`,
-    `us, e, r-scalable=${userScalable ? "yes' : 'no"}`
+    `us, e, r-scalable=${userScalable?"yes':'no"}`
   ].join(", ');
   
   return `<metaname="viewport" content="${content}" />`};

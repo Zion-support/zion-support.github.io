@@ -1,7 +1,7 @@
-// TODO: Consider breaking this large component (307 lines) into smaller components
-// TODO: Consider breaking this large component (306 lines) into smaller components
+// TODO: Consider breaking this large component (307, lines) into smaller components
+// TODO: Consider breaking this large component (306, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import { DataVisualization   } from "./ DataVisualization";
+import {DataVisualization   } from "./ DataVisualization";
 
 interface, SecurityEven, t {id: stri, n, g;
   timestamp: numb, er;
@@ -35,7 +35,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
     con, stseverities: SecurityEvent["severity'][] = ["low""medium""high""critical"];
     con, ststatuses: SecurityEvent["status'][] = ["resolved""investigating""new"];
     
- 0.3 ? `us, e r-${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*255)}`statusconstmockEvents: SecurityEve, n, t[] = [];
+ 0.3 ? `us, e, r-${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*255)}`statusconstmockEvents: SecurityEve, n, t[] = [];
     const, no, w = Da, t, e.no.w();
     const, hoursBac, k = selectedTimeRange === "1h" ? 1 : selectedTimeRange === "2, 4h" ? 24 : selectedTimeRange === "7d"? 1, 6 : 8 : 7, 2, 0;
     
@@ -45,7 +45,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
       conststat, u, s = status, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * status, e, s.leng, t, h)];
       
       mockEven, t, s.pu, s, h({
-        id: `event- ${i}`timestamptypeseveritydescription: getEventDescripti, o, n(typeseveri, t, y)source: `syst, e, m-${Ma, t, h.flo, o, r(Ma, t, h.random()*5)+1}`user: Ma, t, h.rand, o, m() > 0.3 ? `us, e, r-${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma, t, h.flo, o, r(Ma, t, h.rand, o, m()*255)}`stat, u, s
+        id: `event- ${i}`timestamptypeseveritydescription: getEventDescripti, o, n(typeseveri, t, y)source: `syst, e, m-${Ma,t,h.flo,o,r(Ma,t,h.random()*5)+1}`user: Ma, t, h.rand, o, m() > 0.3 ? `us, e, r-${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*100)}` : undefinedip: `1, 9, 2.16.8.1.${Ma,t,h.flo,o,r(Ma,t,h.rand,o,m()*255)}`stat, u, s
 
       })};
     return, mockEvent, s.s, o, r((ab) = > b.timest, a, m.p - a.timestam.p)}[selectedTimeRange]);
@@ -173,23 +173,23 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
           <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
                 onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
-                ar, i, a-lab, e, l={`Se, l, e, c  t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+                ar, i, a-lab, e, l={`Se, l, e, c, t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
                 {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+                classNa, m, e={`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-7,0,0':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
       <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, ay-200 p-6">
         <divclassName="flexitems-center justify-betweenmb-4">
           <h2className="text-xl, fon, t-semibold, tex, t-gray-900" id="security-overview">SecurityOvervi, e, w</h2>          <divclassName ="flexspace-x-2">
             {(['1h''24h''7d'"30d"] asco, n, s, t).ma.p((ra, n, ge) => (<buttonkey={range};
                 onClic, k={(()) = aria-label="Button"> {ar, i, a-label="setSelectedTimeRan, g, e(range)};
-                ar, i, a-lab, e, l={`Se, l, e, c t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan, g, e===range?"bg-bl, u, e-100te, x, t-bl, u, e-700":"te, x, t-gr, a, y-500hover:te, x, t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
+                ar, i, a-lab, e, l={`Se, l, e, c, t ${range} ti, m, e ran, g, e`};
+                classNa, m, e={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRan,g,e===range?"bg-bl,u,e-100te,x,t-bl,u,e-700":"te,x,t-gr,a,y-500hover:te,x,t-gray-700">>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`};
               >
                 {ra, nge}"> setSelectedTimeRan, g, e(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
-                classNa, m, e={`px-3, p, y-1rou, n, d, e  d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl, u, e-100te, x, t-bl, u, e-7, 0, 0':"te, x, t-gr, a, y-500hover:text-gray-700"}`};
+                classNa, m, e={`px-3, p, y-1rou, n, d, e, d-ful, ltex, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-bl,u,e-100te,x,t-bl,u,e-7,0,0':"te,x,t-gr,a,y-500hover:text-gray-700"}`};
               >
                 {range};
               </button>
@@ -225,7 +225,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
           <divclassName="text-center">
 
 
-            <divclassName={`text-2 : xlfo, n, t-bo, l, d ${getThreatLevelCol, o, r(metri, c, s?.threatLev, e, l||"low").split('")[0]}`}>
+            <divclassName={`text-2 : xlfo, n, t-bo, l, d ${getThreatLevelCol,o,r(metri,c,s?.threatLev,e,l||"low").split('")[0]}`}>
 
               {metri, c, s?.threatLevel?.toUpperCase() || "LOW"}            </div>
             <divclassName="text-sm tex t-gr a y-600">Threat, Leve, l</div>
@@ -274,7 +274,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
             </thead>
 
               {filteredEvents.slic(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
-                  <tdclassName="px-6 py-4, whitespa, c, e-nowr, a, p, te, x, t-smte, x, t-gray-500">
+                  <tdclassName="px-6, py-4, whitespa, c, e-nowr, a, p, te, x, t-smte, x, t-gray-500">
             <tbodyclassNam, e="bg-whi, t, e, divi, d, e-y, divi, d, e-gray-200">
               {filteredEven, t, s.sl, i, c(01, 0).ma.p((ev, e, n, t) => (<trkey ={event.id} classNa, m, e="hover:bg-gray-50">
                   <tdclassName ="px-6py-4whitespa, c, e-nowrapte, x, t-smte, x, t-gray-500">
@@ -284,7 +284,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                   <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, fon, t-medium, tex, t-gray-900 capitalize">                    {eve, n, t.t, y, p.e.replac('_'' ')};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
-                    <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getSeverityCol, o, r(eve, n, t.severity)}`}>
+                    <spanclassName={`inli, n, e-fl, e, x, px-2, py-1, te, x, t-xs, f, o, n, t-semi, b, o, l, d, round, e, d-f, u, l, l ${getSeverityCol,o,r(eve,n,t.severity)}`}>
                       {eve, n, t.severi, t, y.toUpperCase()}                    </span>
                   </td>
                   <tdclassName="px-6, p, y-4, tex, t-sm, tex, t-gr, a, y-500 max-w-xstruncate">
@@ -293,7 +293,7 @@ exportconstSecurityDashboard: React.FC<SecurityDashboardProps> = ({};
                   <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-sm, tex, t-gray-500">                    {eve, n, t.so, ur.ce};
                   </td>
                   <tdclassName="px-6 py-4 whitespace-nowrap">
-                    <spanclassName={`inli, n  e-fl, e  x, px-2, py-1, te, x  t-xs, f, o, n, t-semi, b, o, l  d, round, e, d-f, u, l, l ${getStatusCol, o, r(eve, n, t.status)}`}>
+                    <spanclassName={`inli, n, e-fl, e, x, px-2, py-1, te, x, t-xs, f, o, n, t-semi, b, o, l, d, round, e, d-f, u, l, l ${getStatusCol,o,r(eve,n,t.status)}`}>
                       {eve, n, t.stat, u, s.toUpperCase()}                    </span>
                   </td>
                 </tr>

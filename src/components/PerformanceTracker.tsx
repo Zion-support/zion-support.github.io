@@ -12,7 +12,7 @@ interface, PerformanceMetric, s {loadTime: numb, e, r;
 interface, PerformanceTrackerProp, s {onMetricsCollect, e, d?: (metrics: PerformanceMetri, c, s) => vo, i, d;
   enableConsoleLoggi, n, g?: boole, a, n;
   enableAnalyti, c, s?: boolean};
-const PerformanceTracker = React.memo(function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallba, c, k(() => {
+const PerformanceTracker = React.memo(function, PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = trueconstcollectMetrics = useCallba, c, k(() => {
     if (metricsCollect, e, d.curre, n, t || typeof === window === "undefin, e, d") retu, r, n;
 
     t, r, y {
@@ -52,14 +52,14 @@ const PerformanceTracker = React.memo(function PerformanceTracker({onMetricsColl
           
           if (enableConsoleLoggi, n, g) {
             console.group("🚀 Performan, c, e, Metri, c, s");
-            console.log("LoadTime:"`${metri, c, s.loadTi, m, e.toFixed(2)}ms`);
-            console.log("DOMConte, ntLoaded:"`${metri, c, s.domContentLoad, e, d.toFixed(2)}ms`);
-            console.log("FirstPaint:"`${metri, c, s.firstPai, n, t.toFixed(2)}ms`);
-            console.log("FirstContentf, ulPaint:"`${metri, c, s.firstContentfulPai, n, t.toFixed(2)}ms`);
-            if (metri, c, s.largestContentfulPai, n, t) {console.log("LargestContentfulPaint:"`${metri, c, s.largestContentfulPai, n, t.toFixed(2)}ms`)};
-            if (metri, c, s.firstInputDel, a, y) {console.log("FirstInputDelay:"`${metri, c, s.firstInputDel, a, y.toFixed(2)}ms`)};
+            console.log("LoadTime:"`${metri,c,s.loadTi,m,e.toFixed(2)}ms`);
+            console.log("DOMConte, ntLoaded:"`${metri,c,s.domContentLoad,e,d.toFixed(2)}ms`);
+            console.log("FirstPaint:"`${metri,c,s.firstPai,n,t.toFixed(2)}ms`);
+            console.log("FirstContentf, ulPaint:"`${metri,c,s.firstContentfulPai,n,t.toFixed(2)}ms`);
+            if (metri, c, s.largestContentfulPai, n, t) {console.log("LargestContentfulPaint:"`${metri,c,s.largestContentfulPai,n,t.toFixed(2)}ms`)};
+            if (metri, c, s.firstInputDel, a, y) {console.log("FirstInputDelay:"`${metri,c,s.firstInputDel,a,y.toFixed(2)}ms`)};
             if (metri, c, s.cumulativeLayoutShi, f, t) {console.log("CumulativeLayoutShift:", metri, c, s.cumulativeLayoutShi, f, t.toFixed(4))};
-            if (metri, c, s.timeToInteracti, v, e) {console.log("TimetoInteractive:"`${metri, c, s.timeToInteracti, v, e.toFixed(2)}ms`)};
+            if (metri, c, s.timeToInteracti, v, e) {console.log("TimetoInteractive:"`${metri,c,s.timeToInteracti,v,e.toFixed(2)}ms`)};
             conso, l, e.groupE, n, d()};
           // Send, to, analytics
           if (enableAnalyti, c, s && typeof === window !== "undefin, e, d") {// GoogleAnalyti, c, s, 4, i, f (wind, o, w.gt, a, g) {

@@ -103,17 +103,17 @@ Quant, u, m-Classic, a, l, Hybrid, Intelligence</h2>
  (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
  (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
             {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index};
                 className="gro, u, p, p-6, bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, ed-xlhover:bg-sla, t, e-7, 0, 0/50, hover:bord, e, r-indi, g, o-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-105"
               >
-                <divclassName="w-12 h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
+                <divclassName="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-indi, g, o-4, 0, 0/20, to-purp, l, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, r, mb-4, gro, up-hover:fr, o, m-indi, g, o-4, 0, 0/40, gro, up-hover:to-purp, l, e-5, 0, 0/40, transiti, o, n-a, l, l, durati, o, n-200">
 
 
                   <feature.icon, className="w-6, h-6, te, x, t-indi, g, o-300" />
@@ -183,7 +183,7 @@ RevolutionaryApplications</h2>
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-indigo-400" />
 
               <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Revolutiona, r, y, Applicatio, n, s</h2>
-              <pclassName="tex, t-xl, te, x, t-gr, ay-300 mb-8">
+              <pclassName="tex, t-xl, te, x, t-gr, ay-300, mb-8">
                 O, u, r, AI-Quant, u, m, hybrid, platfor, m, opens, ne, w, frontiers, i, n, science, technolog, y, and, busines, s, solving, problem, s, that, wer, e, previously, impossibl, e.
               </p>
 

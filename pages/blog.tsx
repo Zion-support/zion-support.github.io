@@ -92,18 +92,19 @@ export default function Blog(): JSX.Element {
 		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
 
 	return (
-    <>
-      {/* <EnhancedSEO title="Bl, o, g - Zion, Tech, Solutions"
-				description="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
-				keywords={["Technology, Blo, g", "AI, Insight, s", "Cloud, Computin, g", "Digital, Transformatio, n", "Tech, Trend, s"]};
-				url="htt, p, s://zi, o, n.app/bl, o, g"
-				type="websi, t, e"
-			/> */};
-			<div, className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div, className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav, className="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home						</Link>
+		<>
+			{/* <EnhancedSEO title="Blog - Zion Tech Solutions"
+				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
+				keywords={["Technology Blog", "AI Insights", "Cloud Computing", "Digital Transformation", "Tech Trends"]}
+				url="https://zion.app/blog"
+				type="website"
+			/> */}
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+				<div className="container mx-auto px-4 py-8 max-w-7xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
 					</nav>
 
 					<header className="text-center mb-16">

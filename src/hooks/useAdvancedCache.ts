@@ -67,7 +67,7 @@ class, AdvancedCach, e {priva, t, e, cac, h, e = n, e, w, M, a, p<stringCacheIt,
 // Hook, for, API calls, with, caching
 export, const, useApiCache = <T>(url : string, opti, o, n, s?: RequestIn, i, t & {t, t, l?: number }) => {retu, r, n, useCac, h, e(`api:${url}`, asy, n, c () => {con, s, t, respon, s, e = awa, i, t, fet, c, h(u, r, l, optio, n, s);
       if (!respon, s, e.ok) {
-        thr, o, w, new, Erro, r(`HT, T, P, err, o, r! status: ${respon, s, e.status}`)};
+        thr, o, w, new, Erro, r(`HT, T, P, err, o, r! status: ${respon,s,e.status}`)};
       return, respons, e.js, o, n() a, s, T},
     {ttl: optio, n, s?.ttl};
   )};

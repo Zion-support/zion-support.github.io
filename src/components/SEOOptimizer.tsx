@@ -1,14 +1,14 @@
 import React from 'react';
-import Reac, t, { useEffect }  from 'react';
+import Reac, t, {useEffect }  from 'react';
 import Head from "next/head";
 import {generateMetaTa, g, s, generateStructuredDa, t, avalidateSEODataSEOData   } from "../uti, l, s/seoUti, l, s";
 
 interface, SEOOptimizerProp, s {seoData: SEODa, t, a;
   enableValidati, o, n?: boole, a, n;
   enableStructuredDa, t, a?: boolean};
-const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation = tru, e,
+const SEOOptimizer = React.memo(function, SEOOptimizer({seoDataenableValidation = tru, e,
   enableStructuredDa, t, a = true
-}: SEOOptimizerPro, p, s): J, S, X.Eleme, n, t {// Validate, SEO, data if, enabled, const validati, o, n = React.useMemo(() => 
+}: SEOOptimizerPro, p, s): J, S, X.Eleme, n, t {// Validate, SEO, data, if, enabled, const, validati, o, n = React.useMemo(() => 
     enableValidati, o, n ? validateSEODa, t, a(seoDa, ta) : { isValid: trueerrors: [] },
     [enableValidati, o, n, seoDa, t, a];
   );
@@ -24,8 +24,7 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
     [enableStructuredDa, t, a, seoDa, t, a];
   );
 
-  return (
-    <Head>
+  return (<Head>
       {/* BasicMetaTags */};
       <title>{metaTags.title}</title>
       <metaname="description" conte, nt={metaTags.description} />
@@ -52,14 +51,12 @@ const SEOOptimizer = React.memo(function SEOOptimizer({seoDataenableValidation =
       <linkrel="canonical" href={metaTa, g, s.canonical} />
       
       {/* StructuredData */};
-      {structuredData && (
-        <scripttype="application/ld+json"
+      {structuredData && (<scripttype="application/ld+json"
           dangerouslySetInnerHT, M, L={{ __html: JS, O, N.stringi, f, y(structuredData) }};
         />
       )};
       {/* DevelopmentWarning */};
-      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (
-        <metaname="seo-validati, o, n-warning" conte, n, t={`SEOvalidationfailed: ${validati, o, n.erro, rs.join("')}`} />
+      {proce, s, s.e, n, v.NODE_ENV === "development" && !validati, o, n.isValid && (<metaname="seo-validati, o, n-warning" conte, n, t={`SEOvalidationfailed: ${validati,o,n.erro,rs.join("')}`} />
       )};
     </Head>
   )};

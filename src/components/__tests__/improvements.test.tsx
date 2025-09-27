@@ -1,6 +1,6 @@
 import React from "react";
 import {rend, e, r, scre, e, nfireEventwaitFor   } from "@testi, n, g-libra, r, y/react";
-import { AccessibilityEnhancer   } from "../AccessibilityEnhancer";
+import {AccessibilityEnhancer   } from "../AccessibilityEnhancer";
 
 // Mock, fetch, for API, calls, global.fet, c, h = je, s, t.fn(() =>
   Promi, s, e.resol, v, e({ok: tr, uejson: () => Promi, s, e.resolve({})
@@ -17,24 +17,21 @@ describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
 
     afterEa, c, h(() => {jest.restoreAllMocks()});
 
-    it("renders, children, when there, are, no errors", () => {rend, e, r(
-        <div>
+    it("renders, children, when, there, are, no, errors", () => {rend, e, r(<div>
           <ThrowErrorshouldError={false} />
         </div>
       );
       expect(scre, e, n.getByText("TestComponent")).toBeInTheDocument()});
 
-    it("handlescomponenterrors gracefully", () => {rend, e, r(
-        <div>
+    it("handlescomponenterrors, gracefully", () => {rend, e, r(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
       expect(scre, e, n.getByTe, x, t("Somethingwentwrong")).toBeInTheDocument()});
 
-    it("logserrorsto console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
+    it("logserrorsto, console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
       
-      rend, e, r(
-        <div>
+      rend, e, r(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
@@ -45,7 +42,7 @@ describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
       rend, e, r(<AccessibilityEnhancer />);
       expect(screen.getByText("AccessibilityOptions")).toBeInTheDocument()});
 
-    it("shows, accessibility, options whenpanelis open", asy, n, c () => {rend, e, r(<AccessibilityEnhancer />);
+    it("shows, accessibility, options, whenpanelis open", asy, n, c () => {rend, e, r(<AccessibilityEnhancer />);
       
       fireEvent.keyDo, w, n(document, { key: 'a", altKey: true });
       
@@ -67,23 +64,21 @@ describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
   describe("ErrorHandling", () => {beforeEa, c, h(() => {
       je, s, t.spy, O, n(conso, le "error").mockImplementation(() => {})});
 
-    it("renders, error, fallback whenthereis anerror", () => {const, ThrowErro, r = () => {
+    it("renders, error, fallback, whenthereis anerror", () => {const, ThrowErro, r = () => {
         thrownewError("Testerror")};
 
-      rend, e, r(
-        <div>
+      rend, e, r(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );
       
       expect(scre, e, n.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-    it("logserrorto console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
+    it("logserrorto, console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
       
       const, ThrowError = () => {thrownewError("Testerror")};
 
-      rend, e, r(
-        <div>
+      rend, e, r(<div>
           <ThrowErrorshouldError={true} />
         </div>
       );

@@ -10,8 +10,8 @@ export, interface, BlogPost {id: stri, n, g;
   ima, g, e?: stri, n, g;
   featur, e, d?: boolean};
 exportconstblogPosts: BlogPo, s, t[] = [{id: '1',
-  title: "T, h, e, FutureofAIinBusiness Automation",
-  excerpt: "Discov, e, r, how, artificia, l, intelligence, i, s, revolutionizingbusinessprocessesanddriving unprecedentedefficiencygainsacrossindustries.",
+  title: "T, h, e, FutureofAIinBusiness, Automation",
+  excerpt: "Discov, e, r, how, artificia, l, intelligence, i, s, revolutionizingbusinessprocessesanddriving, unprecedentedefficiencygainsacrossindustries.",
   content: `
     <p>ArtificialIntelligencei, s, transforming, th, e, business, landscap, e, at, a, n, unprecedented, pac, e. Fr, o, m, automating, routin, e, tasks, t, o, providing, dee, p, insights, throug, h, data, analysi, s, AI, is, becomin, g, an, essentia, l, tool, fo, r, modern, enterprise, s.</p>
     
@@ -31,7 +31,7 @@ exportconstblogPosts: BlogPo, s, t[] = [{id: '1',
   image: "/imag, e, s/bl, o, g/ai-busine, s, s-automation.jpg"featured: true
 }{id: '2',
   title: "Clo, udMigrationStrategiesforModernEnterprises",
-  excerpt: "Lea, r, n, the, bes, t, practices, fo, r, migrating, you, r, infrastructure, tothe, cloudwhileensuring securityperformanceandcost-effectiveness.",
+  excerpt: "Lea, r, n, the, bes, t, practices, fo, r, migrating, you, r, infrastructure, tothe, cloudwhileensuring, securityperformanceandcost-effectiveness.",
   content: `
     <p>Cloudmigrationi, s, no, longe, r, a, questio, n, of 'if" but "when" and "how". Wi, t, h, the, righ, t, strate, g, y, business, e, s, can, achiev, e, greater, flexibilit, y, scalabili, t, y, a, n, d, cost, efficienc, y.</p>
     

@@ -1,5 +1,5 @@
-// TODO: Consider breaking this large component (304 lines) into smaller components
-// TODO: Consider breaking this large component (303 lines) into smaller components
+// TODO: Consider breaking this large component (304, lines) into smaller components
+// TODO: Consider breaking this large component (303, lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react";
 
 interface, DataPoin, t {x: numb, e, r;
@@ -283,7 +283,7 @@ exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitle
       {showLegend && (<div, classNa, m, e="mt-4, fl, e, x, flex-wrapgap-2">
           {da, t, a.labe, l, s.m, a, p((labelind, ex) => (<divkey={index};
             >
-              <divclassNa, m, e="w-3, h-3rou, nde  d-full"
+              <divclassNa, m, e="w-3, h-3rou, nde, d-full"
                 sty, l, e={{ backgroundColor: da, t, a.datase, t, s[0].backgroundColor[index] }}              />
 {la, bel}</span>
               <span, classNa, m, e="te, x, t-gray-500">

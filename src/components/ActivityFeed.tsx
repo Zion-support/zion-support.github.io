@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import {useMemo, useCallback } from 'react';
 import React from 'react';
 import Reac, t, {useStateuseEffect }  from 'react";
 
@@ -67,7 +67,7 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
           <divclassName="w-2, h-2, bg-gre, e, n-5, 0, 0, round, e, d-fullanimate-pulse"></div>
           <spanclassName="te, x, t-sm, tex, t-gr, a, y-6, 0, 0, dark:te, x, t-gray-400">Li, v, e</span>        </div>
 
-  return (<divclassName={`p-6rou, n, d, e, d-lg, bo, r, d, er-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMo, d, e?"bg-gr, a, y-800bord, e, r-gr, a, y-700hover:bord, e, r-gray-600":"bg-whitebord, e, r-gr, a, y-200hover:border-gray-300"}`}>      <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
+  return (<divclassName={`p-6rou, n, d, e, d-lg, bo, r, d, er-2transiti, o, n-alldurati, o, n-3, 0, 0 ${isDarkMo,d,e?"bg-gr,a,y-800bord,e,r-gr,a,y-700hover:bord,e,r-gray-600":"bg-whitebord,e,r-gr,a,y-200hover:border-gray-300"}`}>      <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justi, fy-betweenmb-6">
         <h3className="tex, t-xl, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="activity-feed">
           Activi, t, y, Fe, e, d
         </h3>
@@ -90,12 +90,12 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
                 {activi, t, y.avatar}              </div>
             </div>
             
-            <div, classNa, m, e="fl, ex-1mi  n-w-0">
+            <div, classNa, m, e="fl, ex-1mi, n-w-0">
               <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, space-x-2mb-1">
                 <spanclassNam, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-gr, a, y-9, 0, 0, dark:text-white">
                   {activi, ty.us.er};
                 </span>
-                <spanclassName={`te, x, t-sm ${getActivityCol, o, r(activi, t, y.type)}`}>                  {getActivityIc, o, n(activi, t, y.type)}                </span>
+                <spanclassName={`te, x, t-sm ${getActivityCol,o,r(activi,t,y.type)}`}>                  {getActivityIc, o, n(activi, t, y.type)}                </span>
                 <spanclassName="te, x, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">
                   {activi, t, y.ac, ti.on};
                 </span>

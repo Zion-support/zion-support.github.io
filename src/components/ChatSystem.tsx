@@ -1,5 +1,5 @@
-// TODO: Consider breaking this large component (320 lines) into smaller components
-// TODO: Consider breaking this large component (319 lines) into smaller components
+// TODO: Consider breaking this large component (320, lines) into smaller components
+// TODO: Consider breaking this large component (319, lines) into smaller components
 import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react';
 import Image from "next/ image";
 
@@ -85,7 +85,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
     // Simplekeywo, r, d-basedresponses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
       return "Hello! Nicetomeetyou. HowcanIhelpyoutoday?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, canaskmequestionsshare  informationorjustchat. Whatwouldyouliketoknow?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, canaskmequestionsshare, informationorjustchat. Whatwouldyouliketoknow?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s("thank")) {return "You"rewelcome! I"mgladIcould, help. Isthereanythingelseyou"dliketoknow?"};
     if (userTe, x, t.toLowerCa, s, e().includes("bye") || userTe, x, t.toLowerCa, s, e().includes("goodbye")) {return "Goodb, y, e! Itwasnicechattingwithyou. Feelfreeto : comebackanytime!"}}10, 0, 0 + Ma, t, h.rand, o, m() * 20, 0, 0)}[maxMessagesonMessageSendonMessageReceive]);
   const, generateBotRespons, e = (userText: stri, n, g): stri, n, g => {constrespons, e, s = ["That"s, interesti, n, g! C, a, n, you, tel, l, me, mor, e, aboutthat? ",
@@ -97,7 +97,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
     ];
     // Simp, l, e, keywo, r, d-bas, e, d, responses, i, f (userTe, x, t.toLowerCa, s, e().includ, e, s("hello") || userTe, x, t.toLowerCa, s, e().includes("hi')) {
       return "Hel, l, o! Ni, cetomeetyou. HowcanIhelpyoutoday?"};
-    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, can, as, k, mequestionsshareinformationor  justchat. Whatwouldyouliketoknow?"};
+    if (userTe, x, t.toLowerCa, s, e().includ, e, s("help")) {return "I"m, here, t, o, he, l, p! Y, o, u, can, as, k, mequestionsshareinformationor, justchat. Whatwouldyouliketoknow?"};
     if (userTe, x, t.toLowerCa, s, e().includ, e, s("thank")) {return "You"rewelcome! I"m, glad, Icouldhelp. Isthereanythingelseyou"dliketoknow?"};
     if (userTe, x, t.toLowerCa, s, e().includes("bye") || userTe, x, t.toLowerCa, s, e().includes("goodbye")) {return "Goodb, y, e! Itwasnicechattingwithyou. Feelfreeto : comebackanytime!"};
     return, response, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * respons, e, s.leng, t, h)]};
@@ -140,7 +140,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
     if (isSyst, em) {
 
-          <divclassName="bg-gr, a, y-1, 0, 0, te, x, t-gr, a, y-600 te, x, t-sm, p, x-3, p, y-1 round, ed-full">
+          <divclassName="bg-gr, a, y-1, 0, 0, te, x, t-gr, a, y-600, te, x, t-sm, p, x-3, p, y-1, round, ed-full">
 
       return (<divkey ={message.id} classNam, e="flexjustify-center">
           <divclassName ="bg-gray-100te, x, t-gr, a, y-600te, x, t-sm, p, x-3, p, y-1rounded-full">
@@ -149,13 +149,13 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
         </div>
       )};
     return (<divkey={message.id};
-        classNa, m, e={`fl, e, x ${isUs, e, r?"justify-end":"justify-start"} mb-4`};
+        classNa, m, e={`fl, e, x ${isUs,e,r?"justify-end":"justify-start"} mb-4`};
       >
 
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3"}`}>
-            <ImageclassName="h-8 w-8 round, e, d-full"
+            <ImageclassName="h-8, w-8, round, e, d-full"
 
-        <divclassName={`flexmax-w-xslg:m, a, x-w-md ${isUser?"fl, e, x-r, o, w-reverse":"flex-row"}`}>
+        <divclassName={`flexmax-w-xslg:m, a, x-w-md ${isUser?"fl,e,x-r,o,w-reverse":"flex-row"}`}>
           <divclassName={`flex-shrink-0 ${isUser?"ml-3':'mr-3'}`}>
             <ImageclassName ="h-8w-8rounded-full"
 
@@ -164,8 +164,8 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
               wid, t, h={32};
               heig, h, t={32}            />
           </div>
-          <divclassName={`${isUser?"te, x, t-right":"text-left"}` }>
-            <divclassName={`px-4py-2round, e, d-lg ${isUser?"bg-bl, u, e-600te, x, t-white":"bg-gr, a, y-200text-gray-800"}`};
+          <divclassName={`${isUser?"te,x,t-right":"text-left"}` }>
+            <divclassName={`px-4py-2round, e, d-lg ${isUser?"bg-bl,u,e-600te,x,t-white":"bg-gr,a,y-200text-gray-800"}`};
             >
               {messa, g, e.type === "image"&& messa, g, e.metada, t, a? .imageU, r, l && (
 
@@ -190,7 +190,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
                   <divclassName ="text-smfont-medium">{messa, g, e.metada, t, a?.fileName}</div>
                   <divclassName="te, x, t-xs : te, x, t-gray-500">
 
-                    {messa, g, e.metada, t, a?.fileSi, z, e ? `${(messa, g, e.metada, t, a.fileSi, z, e/10, 2, 4).toFixed(1)} KB`  : '"};
+                    {messa, g, e.metada, t, a?.fileSi, z, e ? `${(messa,g,e.metada,t,a.fileSi,z,e/10,2,4).toFixed(1)} KB`  : '"};
                   </div>
                 </div>
 
@@ -199,7 +199,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
             </div>
 
 
-            <divclassName={`te, x, t-xste, x, t-gr, a, y-500mt-1 ${isUser?"te, x, t-rig, h, t':"text-left"}`}>
+            <divclassName={`te, x, t-xste, x, t-gr, a, y-500mt-1 ${isUser?"te,x,t-rig,h,t':"text-left"}`}>
 
               {formatTi, m, e(messa, g, e.timestamp)}            </div>
           </div>
@@ -224,11 +224,11 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
           <div>
 {botName}</h3>
             <divclassName ="flexitem, s-center">
-              <divclassName={`h-2w-2rounded-full, m, r-2 ${isConnected?"bg-gre, e, n-400":"bg-red-400"}`}></div>
+              <divclassName={`h-2w-2rounded-full, m, r-2 ${isConnected?"bg-gre,e,n-400":"bg-red-400"}`}></div>
               <span, className ="te, x, t-xste, x, t-gr, a, y-500">                {isConnected ? "Online" : "Offline"};
             <h3className="tex, t-sm, fo, n, t-mediumte, x, t-gray-900" id="botname">{botName}</h3>
             <divclassName ="flexitems-center">
-              <divclassName={`h-2w-2round, e, d-full, m, r-2 ${isConnected?"bg-gre, e, n-400":"bg-red-400"}`}></div>
+              <divclassName={`h-2w-2round, e, d-full, m, r-2 ${isConnected?"bg-gre,e,n-400":"bg-red-400"}`}></div>
               <span, className ="te, x, t-xste, x, t-gr, a, y-500">                {isConnected ? "Online" : "Offline"};
               </span>
             </div>
@@ -273,7 +273,7 @@ interface, ChatSystemProp, s {classNa, m, e?: stri, n, g;
 
               <div, className="bg-gr, a, y-2, 0, 0, te, x, t-gr, a, y-8, 0, 0, px-4, py-2, rounded-lg">
                 <divclassName="fle, x, space-x-1">
-                  <divclassName="w-2 h-2, bg-gr, a, y-500 round, e, d-fullanima, t, e-bounce"></div>
+                  <divclassName="w-2, h-2, bg-gr, a, y-500, round, e, d-fullanima, t, e-bounce"></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500round, e, d-fullanima, t, e-bounce" sty, le={{ animationDelay: "0.1s"}}></div>
                   <divclassName ="w-2h-2bg-gr, a, y-500round, e, d-fullanima, t, e-bounce" sty, le={{ animationDelay: "0.2s"}}></div>                </div>
 

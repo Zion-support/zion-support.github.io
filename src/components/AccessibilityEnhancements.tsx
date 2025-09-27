@@ -1,7 +1,7 @@
-// TODO: Consider breaking this large component (277 lines) into smaller components
-// TODO: Consider breaking this large component (276 lines) into smaller components
+// TODO: Consider breaking this large component (277, lines) into smaller components
+// TODO: Consider breaking this large component (276, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
 interface, AccessibilitySettings {fontSize: "small" | "medium" | "large";
   contrast: "normal" | "high" | "inverted";
   cursor: "normal" | "large" | "extra-large";
@@ -53,8 +53,8 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
 
             Accessibili, t, y, Enhancemen, t, s
           </h3>
-          <divclassNam, e={`px-4, p, y-2round, e, d-lg ${getScoreBgCol, o, r(score)}`}>
-            <spanclassName={`text-lgfo, n, t-bo, l, d ${getScoreCol, o, r(score)}`}>
+          <divclassNam, e={`px-4, p, y-2round, e, d-lg ${getScoreBgCol,o,r(score)}`}>
+            <spanclassName={`text-lgfo, n, t-bo, l, d ${getScoreCol,o,r(score)}`}>
               {score}% Accessib, l, e            </span>
           </div>
         </div>
@@ -132,22 +132,22 @@ exportconstAccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> =
             <h4className="font-semibold, tex, t-gr, a, y-8, 00 m b-3">Recommendatio, ns</h4>
  0 ? (<divclassName ="space-y-2">
                 {recommendatio, n, s.m, a, p((r, e, c, ind, e, x) => (<divke, y ={index} className="fl, e, x, ite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassNam, e="w-4, h-4, mr-2, te, x, t-yell, o, w-5, 0, 0, mt-0.5, fle  x-shrink-0" />
+                    <AlertTriangleclassNam, e="w-4, h-4, mr-2, te, x, t-yell, o, w-5, 0, 0, mt-0.5, fle, x-shrink-0" />
                     <spanclassNam, e="te, x, t-smte, xt-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
             )  : (<d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
-                <CheckCircleclassNam, e="w-5, h-5, mr-2, t, e, x  t-green-500" />
+                <CheckCircleclassNam, e="w-5, h-5, mr-2, t, e, x, t-green-500" />
                 <spanclassNam, e="te, x, t-sm, fo, n, t-medi, u, m, te, x, t-green-800">                  A, l, l, accessibility, feature, s, are, enable, d! Greatj, o, b!
 
             {recommendatio, n, s.leng, t, h > 0 ? (<divclassNam, e ="space-y-2">
                 {recommendatio, n, s.m, a, p((r, e, c, ind, e, x) => (<divke, y ={index} className="fl, e, x, ite, m, s-sta, r, t, p-3, bg-yell, o, w-50, bord, e, r, bord, e, r-yell, o, w-2, 0, 0, rounded-lg">
-                    <AlertTriangleclassNam, e="w-4, h-4, mr-2, te, x, t-yell, o, w-5, 0, 0, mt-0.5, fle  x-shrink-0" />
+                    <AlertTriangleclassNam, e="w-4, h-4, mr-2, te, x, t-yell, o, w-5, 0, 0, mt-0.5, fle, x-shrink-0" />
                     <spanclassNam, e="te, x, t-smte, xt-yellow-80 : 0">{rec}</span>                  </div>
                 ))};
               </div>
             )  : (<d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, p-4, bg-gre, e, n-50, bord, e, r, bord, e, r-green-200rounded-lg">
-                <CheckCircleclassNam, e="w-5h-5, m, r-2, t, e, x  t-green-500" />
+                <CheckCircleclassNam, e="w-5h-5, m, r-2, t, e, x, t-green-500" />
                 <spanclassNam, e="te, x, t-sm, fo, n, t-mediumte, x, t-green-800">                  Allaccessibility, featuresare, enabled! Greatj, o, b!
 
                 </span>

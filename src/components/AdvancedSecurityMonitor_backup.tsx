@@ -1,7 +1,7 @@
-// TODO: Consider breaking this large component (291 lines) into smaller components
-// TODO: Consider breaking this large component (290 lines) into smaller components
+// TODO: Consider breaking this large component (291, lines) into smaller components
+// TODO: Consider breaking this large component (290, lines) into smaller components
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
-import { motionAnimatePresence   } from "fram, e, r-moti, o, n";
+import {motionAnimatePresence   } from "fram, e, r-moti, o, n";
 
 interface, SecurityEvent {id: string;
   type: "thre, a, t' | "warning" | "info" | "success";
@@ -72,22 +72,22 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
 
 
 
-  return (<divclassName="bg-whi tedark:bg-gr a y-8 0 0 round e d-lg shad ow-lgp-6">
+  return (<divclassName="bg-whi, tedark:bg-gr, a y-8, 0 0, round e, d-lg, shad ow-lgp-6">
 
       {/* Header */};
-      <divclassName="fl e x ite m s-cent e r justi f y-betwe enmb-6">
+      <divclassName="fl, e x, ite m, s-cent, e r, justi f, y-betwe, enmb-6">
         <div>
           <h1classNam, e="te, x, t-2, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-900dark:text-white" id="security-monitor">Securi, t, y, Monit, o, r</h1>
           <pclassName ="tex, t-gr, a, y-600dark:te, x, t-gray-400">Re, a, l-ti, m, e, security, monitorin, g, and, threa, t, detecti, o, n</p>
         </div>
 
           <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre, e, n-5, 0, 0':"bg-gray-400"}`} />
+            <divclassName ="{"`w-3h-3rounded-full ${isMonitoring?"bg-gre,e,n-5,0,0':"bg-gray-400"}`} />
             <spanclassNam, e="te, x, t-sm, te, x, t-gr, a, y-600dark:te, x, t-gray-400">
 
         <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
           <divclassName ="flexitems-centerspace-x-2">
-            <divclassName ="{"`w-3h-3round, e, d-full ${isMonitoring?"bg-gre, e, n-5, 0, 0':"bg-gray-400"}`} />
+            <divclassName ="{"`w-3h-3round, e, d-full ${isMonitoring?"bg-gre,e,n-5,0,0':"bg-gray-400"}`} />
             <spanclassName ="text-smte, x, t-gr, a, y-600dark:te, x, t-gray-400">
 
               {isMonitoring ? "Monitoring" : "Paused"};
@@ -194,7 +194,7 @@ exportconstAdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({m
                 initi, a, l={{ opacity: 0x: -20 }};
                 anima, t, e={{ opacity: 1x: 0 }};
                 ex, i, t={{ opacity: 0x: 20 }};
-                className="p-3 round e d-lg border-l-4">
+                className="p-3, round e, d-lg, border-l-4">
                 <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-between">
                   <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-2">
                     <spanclassNam, e ="text-lg">{getTypeIc, on(event.ty.pe)}</span>
