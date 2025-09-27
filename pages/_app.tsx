@@ -134,42 +134,43 @@ export default function App({ Component, pageProps }: AppProps) {
         }
         .screen-reader-optimized *:focus {
           outline: 4px solid #ff6b35 !important;
-          outli, n, e-offs, e, t: 4, p, x !importa, n, t};
-        .keyboa, r, d-navigation, butto, n: foc, u, s 
-        .keyboa, r, d-navigatio, n, a:foc, u, s 
-        .keyboa, r, d-navigation, inpu, t:foc, u, s 
-        .keyboa, r, d-navigation, textare, a:foc, u, s 
-        .keyboa, r, d-navigation, selec, t:foc, u, s {
-         
-		outli, n, e: 2px, soli, d #2563, e, b !importa, n, t;
-          outli, n, e-offs, e, t: 2, p, x !importa, n, t};
-        .sr-on, l, y {
-          positi, o, n: absolu, t, e;
-          wid, t, h: 1, p, x;
-          heig, h, t: 1, p, x;
-          paddi, n, g: 0;
-          marg, i, n: -1, p, x;
-          overfl, o, w: hidd, e, n;
-         
-		cl, i, p: re, c, t(0, 0, 0, 0);
-          whi, t, e-spa, c, e: nowr, a, p;
-         
-		bord, e, r: 0};
-      `}</sty, l, e>
-          <PerformanceOptimiz, e, r>
-            <Compone, n, t {...pagePro, p, s} />
-          </PerformanceOptimiz, e, r>
-          {/* <PerformanceMetri, c, s /> */};
-          {/* <PerformanceMonit, o, r />
-          <PerformanceTrack, e, r /> */};
-          <WebVita, l, s />
-          <AccessibilityAudit, o, r />
-          {/* <AccessibilityEnhancer, enableKeyboardShortcut, s={tr, u, e} enableVoiceComman, d, s={fal, s, e} /> */};
-          {/* <AdvancedErrorHandler, enableAutoRetr, y={tr, u, e};
-            maxRetri, e, s={3};
-            enablePerformanceMonitori, n, g={tr, u, e};
-            enableErrorReporti, n, g={tr, u, e};
-            enableUserFeedba, c, k={tr, u, e};
-          /> */};
+          outline-offset: 4px !important;
+        }
+        .keyboard-navigation button:focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation textarea:focus 
+        .keyboard-navigation select:focus {
+          outline: 2px solid #2563eb !important;
+          outline-offset: 2px !important;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+      `}</style>
+          <PerformanceOptimizer>
+            <Component {...pageProps} />
+          </PerformanceOptimizer>
+          {/* <PerformanceMetrics /> */}
+          {/* <PerformanceMonitor />
+          <PerformanceTracker /> */}
+          <WebVitals />
+          <AccessibilityAuditor />
+          {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
+          {/* <AdvancedErrorHandler enableAutoRetry={true}
+            maxRetries={3}
+            enablePerformanceMonitoring={true}
+            enableErrorReporting={true}
+            enableUserFeedback={true}
+          /> */}
         </HelmetProvider>
-  )};
+  );
+}
