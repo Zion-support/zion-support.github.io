@@ -43,6 +43,64 @@ const RealTimeMonitor: React.FC = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    const updateMetrics = () => {
+      setMetrics(prev => prev.map(metric => {
+        const change = (Math.random() - 0.5) * 10;
+        let newValue = metric.value + change;
+        
+        // Keep values within reasonable bounds
+        if (metric.id === 'cpu-usage' || metric.id === 'memory-usage') {
+          newValue = Math.max(0, Math.min(100, newValue));
+        } else if (metric.id === 'response-time') {
+          newValue = Math.max(50, Math.min(500, newValue));
+        } else if (metric.id === 'active-users') {
+          newValue = Math.max(0, Math.floor(newValue));
+        } else if (metric.id === 'error-rate') {
+          newValue = Math.max(0, Math.min(5, newValue));
+        } else if (metric.id === 'cache-hit-rate') {
+          newValue = Math.max(0, Math.min(100, newValue));
+        }
+
+        // Determine status based on value
+        let status: 'good' | 'warning' | 'critical' = 'good';
+        if (metric.id === 'cpu-usage' && newValue > 80) status = 'critical';
+        else if (metric.id === 'cpu-usage' && newValue > 60) status = 'warning';
+        else if (metric.id === 'memory-usage' && newValue > 85) status = 'critical';
+        else if (metric.id === 'memory-usage' && newValue > 70) status = 'warning';
+        else if (metric.id === 'response-time' && newValue > 300) status = 'critical';
+        else if (metric.id === 'response-time' && newValue > 200) status = 'warning';
+        else if (metric.id === 'error-rate' && newValue > 2) status = 'critical';
+        else if (metric.id === 'error-rate' && newValue > 1) status = 'warning';
+
+        // Determine trend
+        const trend = change > 2 ? 'up' : change < -2 ? 'down' : 'stable';
+
+        return {
+          ...metric,
+          value: newValue,
+          status,
+          trend,
+          lastUpdated: Date.now()
+        };
+      }));
+
+      // Randomly generate alerts
+      if (Math.random() < 0.1) {
+        generateAlert();
+      }
+    };
+
+    const initializeMonitoring = () => {
+      // Simulate WebSocket connection for real-time updates
+      simulateWebSocketConnection();
+      
+      // Generate initial metrics
+      generateInitialMetrics();
+      
+      // Start periodic updates
+      intervalRef.current = setInterval(updateMetrics, 2000);
+    };
+
     if (isVisible) {
       initializeMonitoring();
     } else {
@@ -51,17 +109,6 @@ const RealTimeMonitor: React.FC = () => {
 
     return cleanupMonitoring;
   }, [isVisible]);
-
-  const initializeMonitoring = () => {
-    // Simulate WebSocket connection for real-time updates
-    simulateWebSocketConnection();
-    
-    // Generate initial metrics
-    generateInitialMetrics();
-    
-    // Start periodic updates
-    intervalRef.current = setInterval(updateMetrics, 2000);
-  };
 
   const cleanupMonitoring = () => {
     if (wsRef.current) {
@@ -141,52 +188,6 @@ const RealTimeMonitor: React.FC = () => {
     setMetrics(initialMetrics);
   };
 
-  const updateMetrics = () => {
-    setMetrics(prev => prev.map(metric => {
-      const change = (Math.random() - 0.5) * 10;
-      let newValue = metric.value + change;
-      
-      // Keep values within reasonable bounds
-      if (metric.id === 'cpu-usage' || metric.id === 'memory-usage') {
-        newValue = Math.max(0, Math.min(100, newValue));
-      } else if (metric.id === 'response-time') {
-        newValue = Math.max(50, Math.min(500, newValue));
-      } else if (metric.id === 'active-users') {
-        newValue = Math.max(0, Math.floor(newValue));
-      } else if (metric.id === 'error-rate') {
-        newValue = Math.max(0, Math.min(5, newValue));
-      } else if (metric.id === 'cache-hit-rate') {
-        newValue = Math.max(0, Math.min(100, newValue));
-      }
-
-      // Determine status based on value
-      let status: 'good' | 'warning' | 'critical' = 'good';
-      if (metric.id === 'cpu-usage' && newValue > 80) status = 'critical';
-      else if (metric.id === 'cpu-usage' && newValue > 60) status = 'warning';
-      else if (metric.id === 'memory-usage' && newValue > 85) status = 'critical';
-      else if (metric.id === 'memory-usage' && newValue > 70) status = 'warning';
-      else if (metric.id === 'response-time' && newValue > 300) status = 'critical';
-      else if (metric.id === 'response-time' && newValue > 200) status = 'warning';
-      else if (metric.id === 'error-rate' && newValue > 2) status = 'critical';
-      else if (metric.id === 'error-rate' && newValue > 1) status = 'warning';
-
-      // Determine trend
-      const trend = change > 2 ? 'up' : change < -2 ? 'down' : 'stable';
-
-      return {
-        ...metric,
-        value: Math.round(newValue * 100) / 100,
-        status,
-        trend,
-        timestamp: Date.now()
-      };
-    }));
-
-    // Occasionally generate alerts
-    if (Math.random() < 0.1) {
-      generateAlert();
-    }
-  };
 
   const generateAlert = () => {
     const alertTypes = ['performance', 'security', 'error', 'network'];
@@ -204,8 +205,8 @@ const RealTimeMonitor: React.FC = () => {
 
     const newAlert: SystemAlert = {
       id: `alert-${Date.now()}`,
-      type: alertTypes[Math.floor(Math.random() * alertTypes.length)] as any,
-      severity: severities[Math.floor(Math.random() * severities.length)] as any,
+      type: alertTypes[Math.floor(Math.random() * alertTypes.length)] as 'performance' | 'security' | 'error' | 'network',
+      severity: severities[Math.floor(Math.random() * severities.length)] as 'low' | 'medium' | 'high' | 'critical',
       message: messages[Math.floor(Math.random() * messages.length)],
       timestamp: Date.now(),
       resolved: false
