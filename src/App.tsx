@@ -16,6 +16,7 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import './index.css';
 import './styles/notifications.css';
 
@@ -48,6 +49,37 @@ export default function App(): React.JSX.Element {
     // Initialize security features
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const securityManagerInstance = SecurityManager.getInstance();
+    
+    // Initialize advanced performance optimizer
+    advancedPerformanceOptimizer.addResourceHints();
+    advancedPerformanceOptimizer.optimizeCriticalCSS();
+    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
+    
+    // Register service worker for offline support and caching
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+          
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New content is available
+                  if (window.confirm('New version available! Reload to update?')) {
+                    window.location.reload();
+                  }
+                }
+              });
+            }
+          });
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
