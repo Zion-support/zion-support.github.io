@@ -112,6 +112,15 @@ const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   return render(ui);
 };
 
+// Import the components we need to test
+import Home from '../pages/Home';
+import Blog from '../pages/Blog';
+import Contact from '../pages/Contact';
+import About from '../pages/About';
+import Services from '../pages/Services';
+import Portfolio from '../pages/Portfolio';
+import NotFound from '../pages/NotFound';
+
 describe('App', () => {
   test('renders without crashing', () => {
     renderWithRouter(<App />);

@@ -32,10 +32,6 @@ interface PerformanceWithMemory extends Performance {
   };
 }
 
-interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
-}
-
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: PerformanceMetrics;
@@ -184,8 +180,7 @@ export class PerformanceOptimizer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        const firstInputEntry = entry as FirstInputEntry;
-        console.log('FID:', firstInputEntry.processingStart - firstInputEntry.startTime);
+        console.log('FID:', (entry as unknown as { processingStart: number }).processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 
