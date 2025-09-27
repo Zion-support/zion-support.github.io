@@ -51,6 +51,7 @@ if (!window.performance) {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = [];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
