@@ -67,4 +67,4 @@ global.PerformanceObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Setup testing library matchers
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
