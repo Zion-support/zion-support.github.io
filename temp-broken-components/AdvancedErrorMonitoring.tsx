@@ -288,8 +288,8 @@ const AdvancedErrorMonitoring: React.FC = () => {
               {errors.slice(0, 5).map((error) => (
                 <div 
                   key={error.id} 
-                  className={`p-3border rounded-lg cursor-pointer hover:bg-gray-50 ${
-                    selectedError?.id === error.id ? 'bg-blue-50 border-blue-200' : ''
+                  className = {`p-3border rounded-lg cursor-pointer hover:bg-gray-50 ${};
+                    selectedError?.id === error.id ? 'bg-blue-50 border-blue-200' : ''}
                   }`}
                   onClick={() => setSelectedError(error)}
                 >
@@ -396,9 +396,9 @@ const AdvancedErrorMonitoring: React.FC = () => {
                 </button>
                 {!selectedError.resolved && (
                   <button 
-                    onClick={() =>{
-                      resolveError(selectedError.id);
-                      setSelectedError(null);
+                    onClick = {() =>{
+                      resolveError(selectedError.id);};
+                      setSelectedError(null);}
                     }}
                     className="px-4py-2bg-green-600 text-white roundedhover:bg-green-700"
                   </button>

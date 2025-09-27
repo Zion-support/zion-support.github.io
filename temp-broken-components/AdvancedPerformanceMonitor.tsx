@@ -44,7 +44,7 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const renderTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 
       const newMetrics: PerformanceMetrics = {
-        loadTim, e: navigation.loadEventEnd - navigation.fetchStart,
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
         firstContentfulPaint: fcp,
         largestContentfulPaint: lcp,
         firstInputDelay: fid,
@@ -264,10 +264,10 @@ export const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       <div className="mt-4flexspace-x-2">
         <button
           onClick={isMonitoring ? stopMonitoring : startMonitoring}
-          className={`px-4py-2rounded-lg text-sm font-medium transition-colors ${
+          className = {`px-4py-2rounded-lg text-sm font-medium transition-colors ${
             isMonitoring
-              ? 'bg-red-500 hover:bg-red-600 text-white'
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              ? 'bg-red-500 hover:bg-red-600 text-white'};
+              : 'bg-green-500 hover:bg-green-600 text-white'}
           }`}
          aria-label="{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}">
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}

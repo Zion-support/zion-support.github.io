@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // // import ErrorBoundary from '../src/components/ErrorBoundary';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
-import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
+// import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
 import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Blog(): JSX.Element {
@@ -132,12 +132,12 @@ export default function Blog(): JSX.Element {
 						<section className={`mb-12 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<BlogSearch
+							{/* <BlogSearch
 								onSearch={handleSearch}
 								onCategoryFilter={handleCategoryFilter}
 								categories={categories}
 								currentCategory={selectedCategory}
-							/>
+							/> */}
 						</section>
 
 						{/* Featured Posts */}
@@ -158,13 +158,13 @@ export default function Blog(): JSX.Element {
 												exit={{ opacity: 0, y: -20 }}
 												transition={{ duration: 0.5, delay: index * 0.1 }}
 											>
-												<BlogCard
+												{/* <BlogCard
 													post={post}
 													variant="featured"
 													onReadMore={handleReadMore}
 													onBookmark={handleBookmark}
 													isBookmarked={bookmarkedPosts.has(post.id)}
-												/>
+												/> */}
 											</motion.div>
 										))}
 									</AnimatePresence>
@@ -189,13 +189,13 @@ export default function Blog(): JSX.Element {
 											exit={{ opacity: 0, y: -20 }}
 											transition={{ duration: 0.3, delay: index * 0.05 }}
 										>
-											<BlogCard
+											{/* <BlogCard
 												post={post}
 												variant="regular"
 												onReadMore={handleReadMore}
 												onBookmark={handleBookmark}
 												isBookmarked={bookmarkedPosts.has(post.id)}
-											/>
+											/> */}
 										</motion.div>
 									))}
 								</AnimatePresence>
@@ -203,11 +203,11 @@ export default function Blog(): JSX.Element {
 							
 							{/* Pagination */}
 							{totalPages > 1 && (
-								<BlogPagination
+								{/* <BlogPagination
 									currentPage={currentPage}
 									totalPages={totalPages}
 									onPageChange={setCurrentPage}
-								/>
+								/> */}
 							)}
 						</section>
 
@@ -215,10 +215,10 @@ export default function Blog(): JSX.Element {
 						<section className={`mb-16 transition-all duration-1000 delay-600 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<BlogNewsletter
+							{/* <BlogNewsletter
 								onSubscribe={handleNewsletterSubscribe}
 								isLoading={isNewsletterLoading}
-							/>
+							/> */}
 						</section>
 					</main>
 				</div>

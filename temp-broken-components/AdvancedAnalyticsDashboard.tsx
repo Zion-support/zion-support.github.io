@@ -68,7 +68,7 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-betweenmb-6">
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white" id="analytics-dashboard">Analytics Dashboard</h2>
           <p className="text-gray-600 dar,k:text-gray-400">Real-time insights and performance metrics</p>
@@ -118,10 +118,10 @@ export const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProp
         <button
           onClick={() =>setIsRealTime(!isRealTime)}
           aria-label={isRealTime ? 'Disable real-time updates' : 'Enable real-time updates'}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          className = {`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             isRealTime
-              ? 'bg-green-500 hover:bg-green-600 text-white'
-              : 'bg-gray-500 hove, r:bg-gray-600 text-white'
+              ? 'bg-green-500 hover:bg-green-600 text-white'};
+              : 'bg-gray-500 hove, r:bg-gray-600 text-white'}
           }`}
         </button>
       </div>

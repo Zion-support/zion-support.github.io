@@ -16,17 +16,17 @@ const PerformanceDashboard = dynamic(() => import('../src/components/Performance
 //   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>
 // });
 
-const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
-});
+// const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashboard'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div></div>
+// });
 
 // const EnhancedSearch = dynamic(() => import('../src/components/EnhancedSearch'), {
 //   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div></div>
 // });
 
-const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600"></div></div>
-});
+// const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-600"></div></div>
+// });
 
 const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
@@ -36,41 +36,41 @@ const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/C
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
 });
 
-const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div></div>
-});
+// const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div></div>
+// });
 
-const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600"></div></div>
-});
+// const AdvancedAnalyticsDashboard = dynamic(() => import('../src/components/AdvancedAnalyticsDashboard').then(mod => ({ default: mod.AdvancedAnalyticsDashboard })), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600"></div></div>
+// });
 
 const AdvancedSecurityMonitor = dynamic(() => import('../src/components/AdvancedSecurityMonitor').then(mod => ({ default: mod.AdvancedSecurityMonitor })), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div></div>
 });
 
-const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-600"></div></div>
-});
+// const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-600"></div></div>
+// });
 
-const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div></div>
-});
+// const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div></div>
+// });
 
-const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-rose-600"></div></div>
-});
+// const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-rose-600"></div></div>
+// });
 
-const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600"></div></div>
-});
+// const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-violet-600"></div></div>
+// });
 
-const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-600"></div></div>
-});
+// const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sky-600"></div></div>
+// });
 
-const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-600"></div></div>
-});
+// const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-600"></div></div>
+// });
 
 const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600"></div></div>
@@ -85,13 +85,13 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
 });
 
 
-const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
-});
+// const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
+// });
 
-const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
-  loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
-});
+// const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+//   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+// });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
 
@@ -182,7 +182,7 @@ const Dashboard: React.FC = () => {
   const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
-        return <ComprehensiveAnalyticsDashboard />;
+        return <div className="p-8"><h1 className="text-2xl font-bold">Comprehensive Analytics Dashboard</h1><p>Component temporarily disabled</p></div>;
       case 'analytics':
         return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
@@ -190,7 +190,7 @@ const Dashboard: React.FC = () => {
       case 'security':
         return <div>Security Dashboard (temporarily disabled)</div>;
       case 'enhanced':
-        return <EnhancedDashboard />;
+        return <div className="p-8"><h1 className="text-2xl font-bold">Enhanced Dashboard</h1><p>Component temporarily disabled</p></div>;
       case 'search':
         return (
           <div className="p-8">
@@ -223,20 +223,20 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedAnalyticsDashboard 
+            {/* <AdvancedAnalyticsDashboard 
               data={sampleAnalyticsData}
               onDataRefresh={() => console.log('Refreshing analytics data...')}
-            />
+            /> */}
           </div>
         );
       case 'advanced-performance':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
-            <AdvancedPerformanceMonitor 
+            {/* <AdvancedPerformanceMonitor 
               onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
               showDashboard={true}
-            />
+            /> */}
           </div>
         );
       case 'advanced-security':
@@ -266,9 +266,9 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
-            <AdvancedAccessibilityAuditor 
+            {/* <AdvancedAccessibilityAuditor 
               onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
-            />
+            /> */}
           </div>
         );
       case 'system-monitor':
@@ -294,19 +294,19 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <SystemMonitor 
+            {/* <SystemMonitor 
               onAlert={(alert) => console.log('System alert:', alert)}
               onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
-            />
+            /> */}
           </div>
         );
       case 'security-enhancements':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
-            <AdvancedSecurityEnhancements />
+            {/* <AdvancedSecurityEnhancements /> */}
           </div>
         );
       case 'new-performance':
@@ -358,11 +358,11 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <SecurityMonitor 
+            {/* <SecurityMonitor 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
               onSecurityAlert={(alert) => console.log('Security alert:', alert)}
-            />
+            /> */}
           </div>
         );
       case 'performance-optimizer':
@@ -416,14 +416,14 @@ const Dashboard: React.FC = () => {
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
-            <AdvancedErrorMonitoring />
+            {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
         return (
           <div className="p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
-            <AdvancedSystemMonitor />
+            {/* <AdvancedSystemMonitor /> */}
           </div>
         );
       case 'error-handler':
@@ -440,7 +440,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedErrorHandler 
+            {/* <AdvancedErrorHandler 
               onError={(error) => console.log('Error captured:', error)}
               onPerformanceIssue={(issue) => console.log('Performance issue:', issue)}
               enableAutoRetry={true}
@@ -448,7 +448,7 @@ const Dashboard: React.FC = () => {
               enablePerformanceMonitoring={true}
               enableErrorReporting={true}
               enableUserFeedback={true}
-            />
+            /> */}
           </div>
         );
       case 'performance-optimizer':
@@ -545,7 +545,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedErrorMonitoring />
+            {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
@@ -562,11 +562,11 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <AdvancedSystemMonitor />
+            {/* <AdvancedSystemMonitor /> */}
           </div>
         );
       default:
-        return <ComprehensiveAnalyticsDashboard />;
+        return <div className="p-8"><h1 className="text-2xl font-bold">Comprehensive Analytics Dashboard</h1><p>Component temporarily disabled</p></div>;
     }
   }, [activeTab, isRealTime, sampleAnalyticsData]);
 

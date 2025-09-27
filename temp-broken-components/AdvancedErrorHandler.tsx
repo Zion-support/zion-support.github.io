@@ -80,7 +80,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
   // Error handling functions
   const handleError = useCallback((error: Error, errorInfo?: any) => {
     const errorData: ErrorInfo = {
-      i, d: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       message: error.message,
       stack: error.stack,
       component: errorInfo?.componentStack || 'Unknown',
@@ -238,7 +238,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      defaul, t: return 'text-gray-600 bg-gray-50 border-gray-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
@@ -249,7 +249,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'validation': return <Shield className="w-4h-4" />;
       case 'permission': return <Shield className="w-4h-4" />;
       case 'system': return <Database className="w-4h-4" />;
-      defaul, t: return <AlertTriangle className="w-4h-4" />;
+      default: return <AlertTriangle className="w-4h-4" />;
     }
   };
 
@@ -329,8 +329,8 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                       key={error.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      className={`p-3 rounded-lg border cursor-pointer hover:shadow-md transition-shadow ${
-                        error.resolved ? 'opacity-50' : ''
+                      className = {`p-3 rounded-lg border cursor-pointer hover:shadow-md transition-shadow ${};
+                        error.resolved ? 'opacity-50' : ''}
                       }`}
                       onClick={() => setSelectedError(error)}
                     >
@@ -359,9 +359,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
                             )}
                             {!error.resolved && (
                               <button
-                                onClick={(e) =>{
-                                  e.stopPropagation();
-                                  resolveError(error.id);
+                                onClick = {(e) =>{
+                                  e.stopPropagation();};
+                                  resolveError(error.id);}
                                 }}
                                 className="text-xs text-green-600hover:text-green-800"
                               </button>
@@ -395,7 +395,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
               className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4 max-h-96overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-betweenmb-4">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lgfont-semibold" id="error-details">Error Details</h3>
                 <button
                   onClick={() => setSelectedError(null)}
