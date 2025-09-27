@@ -260,13 +260,13 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'login_attempt': return <Users className="h-4w-4" />;
-      case 'data_breach': return <Database className="h-4w-4" />;
-      case 'malware': return <AlertTriangle className="h-4w-4" />;
-      case 'ddos': return <Globe className="h-4w-4" />;
-      case 'unauthorized_access': return <Lock className="h-4w-4" />;
-      case 'suspicious_activity': return <Eye className="h-4w-4" />;
-      default: return <Activity className="h-4w-4" />;
+      case 'login_attempt': return <Users className="h-4 w-4" />;
+      case 'data_breach': return <Database className="h-4 w-4" />;
+      case 'malware': return <AlertTriangle className="h-4 w-4" />;
+      case 'ddos': return <Globe className="h-4 w-4" />;
+      case 'unauthorized_access': return <Lock className="h-4 w-4" />;
+      case 'suspicious_activity': return <Eye className="h-4 w-4" />;
+      default: return <Activity className="h-4 w-4" />;
     }
   };
 
@@ -296,12 +296,12 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Shield className="h-6w-6text-red-600" />
+              <Shield className="h-6 w-6 text-red-600" />
               <span>Comprehensive Security Dashboard</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                 <span className="text-sm text-gray-600">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
@@ -309,7 +309,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
               <select
                 value={selectedTimeRange}
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3py-1border border-gray-300rounded-md text-sm"
+                className="px-3 py-1border border-gray-300 rounded-md text-s m"
               >
                 <option value="1h">Last Hour</option>
                 <option value="24h">Last24Hours</option>
@@ -324,7 +324,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
-          <div className="flex space-x-1mb-6border-b border-gray-200">
+          <div className="flex space-x-1 mb-6border-b border-gra y-200">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -335,7 +335,7 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                     : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <tab.icon className="h-4w-4" />
+                <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>
               </button>
             ))}
@@ -345,36 +345,36 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Security Score */}
-              <div className="grid grid-cols-1md:grid-cols-4gap-4">
-                <div className="p-6border rounded-lg text-center">
+              <div className="grid grid-cols-1 md:grid-cols-4ga p-4">
+                <div className="p-6 border rounded-lg text-cente r">
                   <div className={`text-4xl font-bold ${getSecurityScoreColor(metrics.securityScore)}`}
                     {metrics.securityScore}
                   </div>
-                  <div className="text-sm text-gray-600">Security Score</div>
-                  <div className="text-xs text-gray-500mt-1">Out of100</div>
+                  <div className="text-sm text-gra y-600">Security Score</div>
+                  <div className="text-xs text-gray-500m t-1">Out of100</div>
                 </div>
-                <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-green-600">{metrics.threatsBlocked}</div>
-                  <div className="text-sm text-gray-600">Threats Blocked</div>
-                  <div className="text-xs text-gray-500mt-1">Last24h</div>
+                <div className="p-6 border rounded-lg text-cente r">
+                  <div className="text-4xl font-bold text-gree n-600">{metrics.threatsBlocked}</div>
+                  <div className="text-sm text-gra y-600">Threats Blocked</div>
+                  <div className="text-xs text-gray-500m t-1">Last 24h</div>
                 </div>
-                <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-blue-600">{metrics.vulnerabilities}</div>
-                  <div className="text-sm text-gray-600">Vulnerabilities</div>
-                  <div className="text-xs text-gray-500mt-1">Found</div>
+                <div className="p-6 border rounded-lg text-cente r">
+                  <div className="text-4xl font-bold text-blu e-600">{metrics.vulnerabilities}</div>
+                  <div className="text-sm text-gra y-600">Vulnerabilities</div>
+                  <div className="text-xs text-gray-500m t-1">Found</div>
                 </div>
-                <div className="p-6border rounded-lg text-center">
-                  <div className="text-4xl font-bold text-purple-600">{metrics.patchesApplied}</div>
-                  <div className="text-sm text-gray-600">Patches Applied</div>
-                  <div className="text-xs text-gray-500mt-1">This Week</div>
+                <div className="p-6 border rounded-lg text-cente r">
+                  <div className="text-4xl font-bold text-purpl e-600">{metrics.patchesApplied}</div>
+                  <div className="text-sm text-gra y-600">Patches Applied</div>
+                  <div className="text-xs text-gray-500m t-1">This Week</div>
                 </div>
               </div>
 
               {/* Threat Distribution */}
-              <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Threat Distribution</CardTitle>
+                    <CardTitle className="text-l g">Threat Distribution</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={200}>
@@ -399,21 +399,21 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Security Events Timeline</CardTitle>
+                    <CardTitle className="text-l g">Security Events Timeline</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-3">
+                    <div className="spac e-y-3">
                       {events.slice(0, 5).map((event) => (
                         <div key={event.id} className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
+                          <div className="flex items-center spac e-x-2">
                             {getTypeIcon(event.type)}
-                            <span className="text-sm font-medium">{event.description}</span>
+                            <span className="text-sm font-mediu m">{event.description}</span>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
+                          <div className="flex items-center spac e-x-2">
+                            <span className={`px-2 py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
                               {event.severity.toUpperCase()}
                             </span>
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gra y-500">
                               {event.timestamp.toLocaleTimeString()}
                             </span>
                           </div>
@@ -429,23 +429,23 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {/* Security Events Tab */}
           {activeTab === 'events' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Events</h3>
-                <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-red-600text-white rounded hover:bg-red-700">
+              <div className="flex justify-between items-cente r">
+                <h3 className="text-lg font-semibol d">Security Events</h3>
+                <div className="flex spac e-x-2">
+                  <button className="px-3 py-1text-sm bg-red-600 text-white rounded hover:bg-re d-700">
                     Block All Threats
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3 py-1text-sm border border-gray-300 rounded hover:bg-gra y-50">
                     Export
                   </button>
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="spac e-y-3">
                 {events.map((event) => (
-                  <div key={event.id} className="p-4border rounded-lg">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center space-x-3">
+                  <div key={event.id} className="p-4 border rounded-l g">
+                    <div className="flex items-center justify-between m b-3">
+                      <div className="flex items-center spac e-x-3">
                         <div className={`p-2rounded-full ${
                           event.severity === 'critical' ? 'bg-red-100' :
                           event.severity === 'high' ? 'bg-orange-100' :
@@ -455,35 +455,35 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
                           {getTypeIcon(event.type)}
                         </div>
                         <div>
-                          <div className="font-medium">{event.description}</div>
-                          <div className="text-sm text-gray-500">
+                          <div className="font-mediu m">{event.description}</div>
+                          <div className="text-sm text-gra y-500">
                             {event.source} → {event.target}
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
+                      <div className="flex items-center spac e-x-2">
+                        <span className={`px-2 py-1text-xs font-medium rounded-full border ${getSeverityColor(event.severity)}`}
                           {event.severity.toUpperCase()}
                         </span>
                         {event.resolved ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                          <CheckCircle className="h-4 w-4text-gree n-600" />
                         ) : (
-                          <Clock className="h-4w-4text-yellow-600" />
+                          <Clock className="h-4 w-4text-yello w-600" />
                         )}
                       </div>
                     </div>
-                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
+                    <div className="grid grid-cols-2 md:grid-cols-4gap-4 text-sm text-gra y-600">
                       <div>
-                        <span className="font-medium">IP Address:</span> {event.ipAddress}
+                        <span className="font-mediu m">IP Address:</span> {event.ipAddress}
                       </div>
                       <div>
-                        <span className="font-medium">Location:</span> {event.location}
+                        <span className="font-mediu m">Location:</span> {event.location}
                       </div>
                       <div>
-                        <span className="font-medium">Time:</span> {event.timestamp.toLocaleString()}
+                        <span className="font-mediu m">Time:</span> {event.timestamp.toLocaleString()}
                       </div>
                       <div>
-                        <span className="font-medium">Status:</span> {event.resolved ? 'Resolved' : 'Active'}
+                        <span className="font-mediu m">Status:</span> {event.resolved ? 'Resolved' : 'Active'}
                       </div>
                     </div>
                   </div>
@@ -495,56 +495,56 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {/* Vulnerabilities Tab */}
           {activeTab === 'vulnerabilities' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Vulnerabilities</h3>
-                <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-blue-600text-white rounded hover:bg-blue-700">
+              <div className="flex justify-between items-cente r">
+                <h3 className="text-lg font-semibol d">Security Vulnerabilities</h3>
+                <div className="flex spac e-x-2">
+                  <button className="px-3 py-1text-sm bg-blue-600 text-white rounded hover:bg-blu e-700">
                     Scan Now
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3 py-1text-sm border border-gray-300 rounded hover:bg-gra y-50">
                     View All
                   </button>
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="spac e-y-3">
                 {vulnerabilities.map((vuln) => (
-                  <div key={vuln.id} className="p-4border rounded-lg">
-                    <div className="flex items-center justify-between mb-3">
+                  <div key={vuln.id} className="p-4 border rounded-l g">
+                    <div className="flex items-center justify-between m b-3">
                       <div>
-                        <div className="font-medium">{vuln.name}</div>
-                        <div className="text-sm text-gray-500">{vuln.description}</div>
+                        <div className="font-mediu m">{vuln.name}</div>
+                        <div className="text-sm text-gra y-500">{vuln.description}</div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(vuln.severity)}`}
+                      <div className="flex items-center spac e-x-2">
+                        <span className={`px-2 py-1text-xs font-medium rounded-full border ${getSeverityColor(vuln.severity)}`}
                           {vuln.severity.toUpperCase()}
                         </span>
                         {vuln.patched ? (
-                          <CheckCircle className="h-4w-4text-green-600" />
+                          <CheckCircle className="h-4 w-4text-gree n-600" />
                         ) : (
-                          <XCircle className="h-4w-4text-red-600" />
+                          <XCircle className="h-4 w-4text-re d-600" />
                         )}
                       </div>
                     </div>
-                    <div className="grid grid-cols-2md:grid-cols-4gap-4text-sm text-gray-600">
+                    <div className="grid grid-cols-2 md:grid-cols-4gap-4 text-sm text-gra y-600">
                       <div>
-                        <span className="font-medium">CVSS Score:</span> {vuln.cvssScore}
+                        <span className="font-mediu m">CVSS Score:</span> {vuln.cvssScore}
                       </div>
                       <div>
-                        <span className="font-medium">CVE ID:</span> {vuln.cveId || 'N/A'}
+                        <span className="font-mediu m">CVE ID:</span> {vuln.cveId || 'N/A'}
                       </div>
                       <div>
-                        <span className="font-medium">Discovered:</span> {vuln.discoveredAt.toLocaleDateString()}
+                        <span className="font-mediu m">Discovered:</span> {vuln.discoveredAt.toLocaleDateString()}
                       </div>
                       <div>
-                        <span className="font-medium">Status:</span> {vuln.patched ? 'Patched' : 'Unpatched'}
+                        <span className="font-mediu m">Status:</span> {vuln.patched ? 'Patched' : 'Unpatched'}
                       </div>
                     </div>
-                    <div className="mt-2">
-                      <span className="font-medium text-sm">Affected Systems:</span>
-                      <div className="flex flex-wrap gap-1mt-1">
+                    <div className="m t-2">
+                      <span className="font-medium text-s m">Affected Systems:</span>
+                      <div className="flex flex-wrap gap-1m t-1">
                         {vuln.affectedSystems.map((system, index) => (
-                          <span key={index} className="px-2py-1bg-gray-100 text-gray-700text-xs rounded">
+                          <span key={index} className="px-2 py-1bg-gray-100 text-gray-700 text-xs rounde d">
                             {system}
                           </span>
                         ))}
@@ -559,41 +559,41 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {/* Policies Tab */}
           {activeTab === 'policies' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">Security Policies</h3>
-                <button className="px-3py-1text-sm bg-green-600text-white rounded hover:bg-green-700">
+              <div className="flex justify-between items-cente r">
+                <h3 className="text-lg font-semibol d">Security Policies</h3>
+                <button className="px-3 py-1text-sm bg-green-600 text-white rounded hover:bg-gree n-700">
                   Add Policy
                 </button>
               </div>
 
-              <div className="space-y-3">
+              <div className="spac e-y-3">
                 {policies.map((policy) => (
-                  <div key={policy.id} className="p-4border rounded-lg">
-                    <div className="flex items-center justify-between mb-3">
+                  <div key={policy.id} className="p-4 border rounded-l g">
+                    <div className="flex items-center justify-between m b-3">
                       <div>
-                        <div className="font-medium">{policy.name}</div>
-                        <div className="text-sm text-gray-500">{policy.description}</div>
+                        <div className="font-mediu m">{policy.name}</div>
+                        <div className="text-sm text-gra y-500">{policy.description}</div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <span className={`px-2py-1text-xs font-medium rounded-full ${
+                      <div className="flex items-center spac e-x-2">
+                        <span className={`px-2 py-1text-xs font-medium rounded-full ${
                           policy.status === 'active' ? 'bg-green-100text-green-800' :
                           policy.status === 'pending' ? 'bg-yellow-100text-yellow-800' :
                           'bg-gray-100 text-gray-800'
                         }`}
                           {policy.status.toUpperCase()}
                         </span>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gra y-600">
                           {policy.compliance}% compliance
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gra y-500">
                         Last updated: {policy.lastUpdated.toLocaleDateString()}
                       </div>
-                      <div className="w-32bg-gray-200rounded-full h-2">
+                      <div className="w-32 bg-gray-200rounded-ful l h-2">
                         <div 
-                          className="bg-blue-600h-2rounded-full" 
+                          className="bg-blue-600 h-2rounded-ful l" 
                           style={{ width: `${policy.compliance}%` }}
                         ></div>
                       </div>
@@ -607,56 +607,56 @@ const ComprehensiveSecurityDashboard: React.FC = () => {
           {/* Compliance Tab */}
           {activeTab === 'compliance' && (
             <div className="space-y-6">
-              <div className="grid grid-cols-1md:grid-cols-3gap-4">
-                <div className="p-4border rounded-lg text-center">
-                  <CheckCircle className="h-8w-8text-green-600mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">95%</div>
-                  <div className="text-sm text-gray-600">Overall Compliance</div>
+              <div className="grid grid-cols-1 md:grid-cols-3ga p-4">
+                <div className="p-4 border rounded-lg text-cente r">
+                  <CheckCircle className="h-8 w-8text-green-600 mx-auto m b-2" />
+                  <div className="text-2xl font-bold text-gree n-600">95%</div>
+                  <div className="text-sm text-gra y-600">Overall Compliance</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">12</div>
-                  <div className="text-sm text-gray-600">Standards Met</div>
+                <div className="p-4 border rounded-lg text-cente r">
+                  <div className="text-2xl font-bold text-blu e-600">12</div>
+                  <div className="text-sm text-gra y-600">Standards Met</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-yellow-600">2</div>
-                  <div className="text-sm text-gray-600">Needs Attention</div>
+                <div className="p-4 border rounded-lg text-cente r">
+                  <div className="text-2xl font-bold text-yello w-600">2</div>
+                  <div className="text-sm text-gra y-600">Needs Attention</div>
                 </div>
               </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">Compliance Standards</CardTitle>
+                  <CardTitle className="text-l g">Compliance Standards</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3border rounded-lg">
+                  <div className="spac e-y-4">
+                    <div className="flex items-center justify-between p-3border rounded-l g">
                       <div>
-                        <div className="font-medium">ISO27001</div>
-                        <div className="text-sm text-gray-500">Information Security Management</div>
+                        <div className="font-mediu m">ISO27001</div>
+                        <div className="text-sm text-gra y-500">Information Security Management</div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
-                        <span className="text-sm text-green-600">Compliant</span>
+                      <div className="flex items-center spac e-x-2">
+                        <CheckCircle className="h-5 w-5text-gree n-600" />
+                        <span className="text-sm text-gree n-600">Compliant</span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between p-3border rounded-lg">
+                    <div className="flex items-center justify-between p-3border rounded-l g">
                       <div>
-                        <div className="font-medium">GDPR</div>
-                        <div className="text-sm text-gray-500">General Data Protection Regulation</div>
+                        <div className="font-mediu m">GDPR</div>
+                        <div className="text-sm text-gra y-500">General Data Protection Regulation</div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5w-5text-green-600" />
-                        <span className="text-sm text-green-600">Compliant</span>
+                      <div className="flex items-center spac e-x-2">
+                        <CheckCircle className="h-5 w-5text-gree n-600" />
+                        <span className="text-sm text-gree n-600">Compliant</span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between p-3border rounded-lg">
+                    <div className="flex items-center justify-between p-3border rounded-l g">
                       <div>
-                        <div className="font-medium">SOC2</div>
-                        <div className="text-sm text-gray-500">Service Organization Control</div>
+                        <div className="font-mediu m">SOC2</div>
+                        <div className="text-sm text-gra y-500">Service Organization Control</div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="h-5w-5text-yellow-600" />
-                        <span className="text-sm text-yellow-600">In Progress</span>
+                      <div className="flex items-center spac e-x-2">
+                        <Clock className="h-5 w-5text-yello w-600" />
+                        <span className="text-sm text-yello w-600">In Progress</span>
                       </div>
                     </div>
                   </div>

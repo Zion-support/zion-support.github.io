@@ -217,9 +217,9 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="h-4w-4text-red-500" />;
-      case 'down': return <TrendingUp className="h-4w-4text-green-500rotate-180" />;
-      case 'stable': return <div className="h-4w-4bg-gray-400rounded-full" />;
+      case 'up': return <TrendingUp className="h-4 w-4text-r e d-500" />;
+      case 'down': return <TrendingUp className="h-4 w-4text-green-500rota t e-180" />;
+      case 'stable': return <div className="h-4 w-4bg-gray-400rounded-fu l l" />;
       default: return null;
     }
   };
@@ -243,21 +243,21 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Activity className="h-6w-6text-blue-600" />
+            <div className="flex items-center spa c e-x-2">
+              <Activity className="h-6 w-6 text-bl u e-600" />
               <span>Comprehensive Monitoring Dashboard</span>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
-                <span className="text-sm text-gray-600">
+            <div className="flex items-center spa c e-x-4">
+              <div className="flex items-center spa c e-x-2">
+                <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                <span className="text-sm text-gr a y-600">
                   {isMonitoring ? 'Monitoring' : 'Stopped'}
                 </span>
               </div>
               <select
                 value={selectedTimeRange}
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3py-1border border-gray-300rounded-md text-sm"
+                className="px-3 py-1border border-gray-300 rounded-md tex t-s m"
               >
                 <option value="1h">Last Hour</option>
                 <option value="6h">Last6Hours</option>
@@ -272,7 +272,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* Tab Navigation */}
-          <div className="flex space-x-1mb-6border-b border-gray-200">
+          <div className="flex space-x-1 mb-6border-b border-gr a y-200">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -283,7 +283,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                     : 'border-transparent text-gray-500hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
-                <tab.icon className="h-4w-4" />
+                <tab.icon className="h-4 w-4" />
                 <span>{tab.name}</span>
               </button>
             ))}
@@ -293,30 +293,30 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {activeTab === 'overview' && (
             <div className="space-y-6">
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-2md:grid-cols-4gap-4">
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">98.5%</div>
-                  <div className="text-sm text-gray-600">Uptime</div>
+              <div className="grid grid-cols-2 md:grid-cols-4g a p-4">
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-bl u e-600">98.5%</div>
+                  <div className="text-sm text-gr a y-600">Uptime</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-600">1.2s</div>
-                  <div className="text-sm text-gray-600">Avg Response</div>
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-gre e n-600">1.2s</div>
+                  <div className="text-sm text-gr a y-600">Avg Response</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">2,847</div>
-                  <div className="text-sm text-gray-600">Active Users</div>
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-purp l e-600">2,847</div>
+                  <div className="text-sm text-gr a y-600">Active Users</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-600">0.3%</div>
-                  <div className="text-sm text-gray-600">Error Rate</div>
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-oran g e-600">0.3%</div>
+                  <div className="text-sm text-gr a y-600">Error Rate</div>
                 </div>
               </div>
 
               {/* System Health Pie Chart */}
-              <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2g a p-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">System Health</CardTitle>
+                    <CardTitle className="tex t-l g">System Health</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={200}>
@@ -352,7 +352,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                             <span className="text-sm font-medium">{item.metric}</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <span className={`text-sm font-bold ${getStatusColor(item.status)}`}
+                            <span className={`text-sm font-bold ${getStatusColor(item.status)}`}>
                               {item.value}%
                             </span>
                             <span className="text-xs text-gray-500">
@@ -371,10 +371,10 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {/* Performance Tab */}
           {activeTab === 'performance' && (
             <div className="space-y-6">
-              <div className="grid grid-cols-1lg:grid-cols-2gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2g a p-6">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">System Performance</CardTitle>
+                    <CardTitle className="tex t-l g">System Performance</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={300}>
@@ -393,7 +393,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Network & Database</CardTitle>
+                    <CardTitle className="tex t-l g">Network & Database</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ResponsiveContainer width="100%" height={300}>
@@ -412,7 +412,7 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">Response Time & Throughput</CardTitle>
+                  <CardTitle className="tex t-l g">Response Time & Throughput</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ResponsiveContainer width="100%" height={250}>
@@ -434,35 +434,35 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {/* Security Tab */}
           {activeTab === 'security' && (
             <div className="space-y-6">
-              <div className="grid grid-cols-1md:grid-cols-3gap-4">
-                <div className="p-4border rounded-lg text-center">
-                  <Shield className="h-8w-8text-green-600mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-green-600">Secure</div>
-                  <div className="text-sm text-gray-600">Overall Status</div>
+              <div className="grid grid-cols-1 md:grid-cols-3g a p-4">
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <Shield className="h-8 w-8text-green-600 mx-aut o m b-2" />
+                  <div className="text-2xl font-bold text-gre e n-600">Secure</div>
+                  <div className="text-sm text-gr a y-600">Overall Status</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600">0</div>
-                  <div className="text-sm text-gray-600">Active Threats</div>
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-bl u e-600">0</div>
+                  <div className="text-sm text-gr a y-600">Active Threats</div>
                 </div>
-                <div className="p-4border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600">24/7</div>
-                  <div className="text-sm text-gray-600">Monitoring</div>
+                <div className="p-4 border rounded-lg text-cent e r">
+                  <div className="text-2xl font-bold text-purp l e-600">24/7</div>
+                  <div className="text-sm text-gr a y-600">Monitoring</div>
                 </div>
               </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">Security Events</CardTitle>
+                  <CardTitle className="tex t-l g">Security Events</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
+                  <div className="spa c e-y-3">
                     {alerts.filter(alert => alert.type === 'security').map((alert) => (
-                      <div key={alert.id} className="flex items-center justify-between p-3border rounded-lg">
-                        <div className="flex items-center space-x-3">
-                          <Shield className="h-5w-5text-red-600" />
+                      <div key={alert.id} className="flex items-center justify-between p-3 border rounde d-l g">
+                        <div className="flex items-center spa c e-x-3">
+                          <Shield className="h-5 w-5text-r e d-600" />
                           <div>
-                            <div className="font-medium">{alert.message}</div>
-                            <div className="text-sm text-gray-500">
+                            <div className="font-medi u m">{alert.message}</div>
+                            <div className="text-sm text-gr a y-500">
                               {alert.source} • {alert.timestamp.toLocaleTimeString()}
                             </div>
                           </div>
@@ -481,38 +481,38 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {/* Infrastructure Tab */}
           {activeTab === 'infrastructure' && (
             <div className="space-y-6">
-              <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-4">
-                <div className="p-4border rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <Cpu className="h-5w-5text-blue-600" />
-                    <span className="text-sm text-gray-500">8cores</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4g a p-4">
+                <div className="p-4 border rounde d-l g">
+                  <div className="flex items-center justify-betwee n m b-2">
+                    <Cpu className="h-5 w-5text-bl u e-600" />
+                    <span className="text-sm text-gr a y-500">8cores</span>
                   </div>
-                  <div className="text-2xl font-bold text-blue-600">65%</div>
-                  <div className="text-sm text-gray-600">CPU Usage</div>
+                  <div className="text-2xl font-bold text-bl u e-600">65%</div>
+                  <div className="text-sm text-gr a y-600">CPU Usage</div>
                 </div>
-                <div className="p-4border rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <HardDrive className="h-5w-5text-green-600" />
-                    <span className="text-sm text-gray-500">16GB</span>
+                <div className="p-4 border rounde d-l g">
+                  <div className="flex items-center justify-betwee n m b-2">
+                    <HardDrive className="h-5 w-5text-gre e n-600" />
+                    <span className="text-sm text-gr a y-500">16GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-green-600">78%</div>
-                  <div className="text-sm text-gray-600">Memory Usage</div>
+                  <div className="text-2xl font-bold text-gre e n-600">78%</div>
+                  <div className="text-sm text-gr a y-600">Memory Usage</div>
                 </div>
-                <div className="p-4border rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <Database className="h-5w-5text-purple-600" />
-                    <span className="text-sm text-gray-500">500GB</span>
+                <div className="p-4 border rounde d-l g">
+                  <div className="flex items-center justify-betwee n m b-2">
+                    <Database className="h-5 w-5text-purp l e-600" />
+                    <span className="text-sm text-gr a y-500">500GB</span>
                   </div>
-                  <div className="text-2xl font-bold text-purple-600">45%</div>
-                  <div className="text-sm text-gray-600">Disk Usage</div>
+                  <div className="text-2xl font-bold text-purp l e-600">45%</div>
+                  <div className="text-sm text-gr a y-600">Disk Usage</div>
                 </div>
-                <div className="p-4border rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <Network className="h-5w-5text-orange-600" />
-                    <span className="text-sm text-gray-500">1Gbps</span>
+                <div className="p-4 border rounde d-l g">
+                  <div className="flex items-center justify-betwee n m b-2">
+                    <Network className="h-5 w-5text-oran g e-600" />
+                    <span className="text-sm text-gr a y-500">1Gbps</span>
                   </div>
-                  <div className="text-2xl font-bold text-orange-600">120ms</div>
-                  <div className="text-sm text-gray-600">Latency</div>
+                  <div className="text-2xl font-bold text-oran g e-600">120ms</div>
+                  <div className="text-sm text-gr a y-600">Latency</div>
                 </div>
               </div>
             </div>
@@ -521,29 +521,29 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
           {/* Alerts Tab */}
           {activeTab === 'alerts' && (
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <h3className="text-lg font-semibold">System Alerts</h3>
-                <div className="flex space-x-2">
-                  <button className="px-3py-1text-sm bg-blue-600text-white rounded hover:bg-blue-700">
+              <div className="flex justify-between items-cent e r">
+                <h3 className="text-lg font-semibo l d">System Alerts</h3>
+                <div className="flex spa c e-x-2">
+                  <button className="px-3 py-1text-sm bg-blue-600 text-white rounded hover:bg-bl u e-700">
                     Mark All Read
                   </button>
-                  <button className="px-3py-1text-sm border border-gray-300rounded hover:bg-gray-50">
+                  <button className="px-3 py-1text-sm border border-gray-300 rounded hover:bg-gr a y-50">
                     Filter
                   </button>
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="spa c e-y-3">
                 {alerts.map((alert) => (
-                  <div key={alert.id} className="flex items-center justify-between p-4border rounded-lg">
-                    <div className="flex items-center space-x-4">
+                  <div key={alert.id} className="flex items-center justify-between p-4 border rounde d-l g">
+                    <div className="flex items-center spa c e-x-4">
                       <div className={`p-2rounded-full ${
                         alert.severity === 'critical' ? 'bg-red-100' :
                         alert.severity === 'high' ? 'bg-orange-100' :
                         alert.severity === 'medium' ? 'bg-yellow-100' :
                         'bg-blue-100'
                       }`}
-                        <AlertTriangle className={`h-5w-5 ${
+                        <AlertTriangle className={`h-5 w-5 ${
                           alert.severity === 'critical' ? 'text-red-600' :
                           alert.severity === 'high' ? 'text-orange-600' :
                           alert.severity === 'medium' ? 'text-yellow-600' :
@@ -551,18 +551,18 @@ const ComprehensiveMonitoringDashboard: React.FC = () => {
                         }`} />
                       </div>
                       <div>
-                        <div className="font-medium">{alert.message}</div>
-                        <div className="text-sm text-gray-500">
+                        <div className="font-medi u m">{alert.message}</div>
+                        <div className="text-sm text-gr a y-500">
                           {alert.source} • {alert.type} • {alert.timestamp.toLocaleString()}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center spa c e-x-2">
                       <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
                         {alert.severity.toUpperCase()}
                       </span>
                       {alert.resolved && (
-                        <span className="text-xs bg-green-100text-green-800px-2py-1rounded">RESOLVED</span>
+                        <span className="text-xs bg-green-100text-green-800px-2py-1round e d">RESOLVED</span>
                       )}
                     </div>
                   </div>

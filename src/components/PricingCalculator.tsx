@@ -206,10 +206,10 @@ export const PricingCalculator: React.FC = () => {
 	};
 
 	return (
-		<div className="bg-white rounded-2xl shadow-xlp-8">
+		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3className="text-3xl font-bold text-gray-800mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-600text-lg">
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<p className="text-gray-600 text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
 			</div>
@@ -219,26 +219,26 @@ export const PricingCalculator: React.FC = () => {
 				<div className="space-y-6">
 					{/* Service Selection */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Select Service *
 						</label>
-						<div className="grid grid-cols-1gap-3">
+						<div className="grid grid-cols-1 gap-3">
 							{services.map((service) => (
 								<button
 									key={service.id}
 									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4rounded-lg border-2text-left transition-all duration-200 ${
+									className={`p-4 rounded-lg border-2 text-left transition-all duration-200 ${
 										inputs.service === service.id
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
-									<div className="flex justify-betweenitems-start">
+									<div className="flex justify-between items-start">
 										<div>
-											<h4className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
+											<h4 className="font-semibold text-gray-800" id="servicename">{service.name}</h4>
 											<p className="text-sm text-gray-600">{service.description}</p>
 										</div>
-										<span className="text-sm font-mediumtext-blue-600">
+										<span className="text-sm font-medium text-blue-600">
 											{formatPrice(service.basePrice)}
 										</span>
 									</div>
@@ -249,7 +249,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Complexity */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Project Complexity
 						</label>
 						<div className="grid grid-cols-2gap-3">
@@ -259,8 +259,8 @@ export const PricingCalculator: React.FC = () => {
 									onClick={() => handleInputChange('complexity', complexity)}
 									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.complexity === complexity
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
@@ -271,7 +271,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Timeline */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Timeline
 						</label>
 						<div className="grid grid-cols-3gap-3">
@@ -281,8 +281,8 @@ export const PricingCalculator: React.FC = () => {
 									onClick={() => handleInputChange('timeline', timeline)}
 									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
 										inputs.timeline === timeline
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
@@ -293,7 +293,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Team Size */}
 					<div>
-						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700mb-3">
+						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700 mb-3">
 							Team Size
 						</label>
 						<input
@@ -309,7 +309,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Additional Features */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Additional Features
 						</label>
 						<div className="space-y-2">
