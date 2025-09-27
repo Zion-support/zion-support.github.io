@@ -19,7 +19,8 @@ global.PerformanceObserver = class PerformanceObserver {
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-} as typeof PerformanceObserver;
+  static readonly supportedEntryTypes: readonly string[] = [];
+} as unknown as typeof PerformanceObserver;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {

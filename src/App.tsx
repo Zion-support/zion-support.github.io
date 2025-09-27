@@ -8,6 +8,9 @@ import { securityManager } from './utils/security';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { analytics } from './utils/analytics';
+import { seoOptimizer } from './utils/seoOptimization';
+import { securityEnhancer } from './utils/securityEnhancements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -66,6 +69,52 @@ export default function App(): React.JSX.Element {
     // Initialize advanced performance optimizer
     performanceOptimizer.preloadCriticalResources();
     performanceOptimizer.optimizeImages();
+
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
+
+    // Initialize enhanced SEO optimizer
+    seoOptimizer.updateSEO({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords,
+      ogTitle: seoData.title,
+      ogDescription: seoData.description,
+      ogImage: seoData.ogImage,
+      ogType: seoData.ogType,
+      twitterCard: seoData.twitterCard,
+      twitterTitle: seoData.title,
+      twitterDescription: seoData.description,
+      twitterImage: seoData.ogImage,
+      structuredData: Array.isArray(seoData.structuredData) ? seoData.structuredData[0] : seoData.structuredData
+    });
+
+    // Initialize enhanced security features
+    securityEnhancer.configure({
+      enableCSP: true,
+      enableHSTS: true,
+      enableClickjackingProtection: true,
+      enableXSSProtection: true,
+      enableContentTypeSniffingProtection: true,
+      allowedOrigins: [
+        window.location.origin,
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://cdn.jsdelivr.net'
+      ],
+      reportUri: '/api/security/reports'
+    });
+
+    // Set up security violation handler
+    securityEnhancer.setViolationHandler((violation) => {
+      console.warn('Security violation detected:', violation);
+      analytics.trackEvent('security_violation', {
+        type: violation.type,
+        source: violation.source,
+        blockedURI: violation.blockedURI
+      });
+    });
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');

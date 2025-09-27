@@ -1,24 +1,57 @@
 /**
- * Analytics utilities for tracking user behavior and performance
+ * Analytics and Monitoring System
+ * Comprehensive analytics tracking for the Zion Tech Group website
  */
 
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  customParameters?: Record<string, unknown>;
-  timestamp: string;
+interface AnalyticsEvent {
+  event: string;
+  properties?: Record<string, unknown>;
+  timestamp: number;
   userId?: string;
   sessionId: string;
+  page: string;
+  userAgent: string;
+}
+
+interface UserSession {
+  id: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: number;
+  referrer?: string;
+  deviceInfo: {
+    userAgent: string;
+    screenResolution: string;
+    viewportSize: string;
+    language: string;
+    timezone: string;
+  };
+}
+
+interface PerformanceMetrics {
+  pageLoadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  totalBlockingTime: number;
+  speedIndex: number;
 }
 
 export class AnalyticsManager {
   private static instance: AnalyticsManager;
-  private sessionId: string;
-  private events: AnalyticsEvent[] = [];
-  private maxEventsInMemory = 1000;
+  private session: UserSession;
+  private eventQueue: AnalyticsEvent[] = [];
+  private isInitialized = false;
+  private batchSize = 10;
+  private flushInterval = 30000; // 30 seconds
+  private flushTimer?: NodeJS.Timeout;
+
+  private constructor() {
+    this.session = this.createSession();
+    this.initializeEventListeners();
+  }
 
   public static getInstance(): AnalyticsManager {
     if (!AnalyticsManager.instance) {
@@ -27,202 +60,236 @@ export class AnalyticsManager {
     return AnalyticsManager.instance;
   }
 
-  constructor() {
-    this.sessionId = this.generateSessionId();
-    this.initializeTracking();
+  public initialize(): void {
+    if (this.isInitialized) return;
+    
+    this.trackPageView();
+    this.startPerformanceMonitoring();
+    this.setupAutoFlush();
+    this.isInitialized = true;
+  }
+
+  private createSession(): UserSession {
+    const now = Date.now();
+    return {
+      id: this.generateSessionId(),
+      startTime: now,
+      lastActivity: now,
+      pageViews: 0,
+      events: 0,
+      referrer: document.referrer || undefined,
+      deviceInfo: {
+        userAgent: navigator.userAgent,
+        screenResolution: `${screen.width}x${screen.height}`,
+        viewportSize: `${window.innerWidth}x${window.innerHeight}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
+    };
   }
 
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private initializeTracking(): void {
-    // Track page views
-    this.trackPageView();
-    
-    // Track performance metrics
-    this.trackPerformanceMetrics();
-    
+  private initializeEventListeners(): void {
+    // Track page visibility changes
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        this.session.lastActivity = Date.now();
+      }
+    });
+
     // Track user interactions
-    this.trackUserInteractions();
+    ['click', 'scroll', 'keydown', 'mousemove'].forEach(eventType => {
+      document.addEventListener(eventType, () => {
+        this.session.lastActivity = Date.now();
+      }, { passive: true });
+    });
+
+    // Track page unload
+    window.addEventListener('beforeunload', () => {
+      this.flush();
+    });
   }
 
-  public trackEvent(
-    name: string,
-    category: string,
-    action: string,
-    label?: string,
-    value?: number,
-    customParameters?: Record<string, unknown>
-  ): void {
+  public trackEvent(eventName: string, properties?: Record<string, unknown>): void {
     const event: AnalyticsEvent = {
-      name,
-      category,
-      action,
-      label,
-      value,
-      customParameters,
-      timestamp: new Date().toISOString(),
-      userId: this.getUserId(),
-      sessionId: this.sessionId
+      event: eventName,
+      properties: {
+        ...properties,
+        page: window.location.pathname,
+        url: window.location.href
+      },
+      timestamp: Date.now(),
+      sessionId: this.session.id,
+      page: window.location.pathname,
+      userAgent: navigator.userAgent
     };
 
-    this.events.push(event);
+    this.eventQueue.push(event);
+    this.session.events++;
+    this.session.lastActivity = Date.now();
+
+    // Auto-flush if queue is full
+    if (this.eventQueue.length >= this.batchSize) {
+      this.flush();
+    }
+  }
+
+  public trackPageView(page?: string): void {
+    const currentPage = page || window.location.pathname;
     
-    // Keep only recent events in memory
-    if (this.events.length > this.maxEventsInMemory) {
-      this.events = this.events.slice(-this.maxEventsInMemory);
-    }
+    this.trackEvent('page_view', {
+      page: currentPage,
+      referrer: this.session.referrer,
+      sessionStart: this.session.startTime
+    });
 
-    // Send to analytics service
-    this.sendEventToService(event);
+    this.session.pageViews++;
+    this.session.lastActivity = Date.now();
   }
 
-  public trackPageView(pageName?: string): void {
-    const page = pageName || document.title;
-    this.trackEvent(
-      'page_view',
-      'navigation',
-      'view',
-      page,
-      undefined,
-      {
-        url: window.location.href,
-        referrer: document.referrer,
-        userAgent: navigator.userAgent
-      }
-    );
-  }
-
-  public trackUserInteraction(element: string, action: string, details?: string): void {
-    this.trackEvent(
-      'user_interaction',
-      'engagement',
-      action,
-      `${element}: ${details || ''}`,
-      undefined,
-      {
-        element,
-        details
-      }
-    );
-  }
-
-  public trackPerformanceMetric(metricName: string, value: number, unit: string = 'ms'): void {
-    this.trackEvent(
-      'performance_metric',
-      'performance',
-      'measure',
-      metricName,
+  public trackConversion(conversionType: string, value?: number, currency?: string): void {
+    this.trackEvent('conversion', {
+      type: conversionType,
       value,
-      {
-        unit,
-        metricName
-      }
-    );
-  }
-
-  private trackPerformanceMetrics(): void {
-    // Track Core Web Vitals
-    if ('web-vital' in window) {
-      // This would integrate with web-vitals library
-      // getCLS, getFID, getLCP, etc.
-    }
-
-    // Track custom performance metrics
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      this.trackPerformanceMetric('page_load_time', navigation.loadEventEnd - navigation.fetchStart);
-      this.trackPerformanceMetric('dom_content_loaded', navigation.domContentLoadedEventEnd - navigation.fetchStart);
-      this.trackPerformanceMetric('first_byte', navigation.responseStart - navigation.fetchStart);
-    });
-
-    // Time to interactive
-    this.trackTimeToInteractive();
-  }
-
-  private trackTimeToInteractive(): void {
-    let tti = 0;
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          tti = navEntry.domContentLoadedEventEnd - (navEntry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart;
-          this.trackPerformanceMetric('time_to_interactive', tti, 'ms');
-        }
-      }
-    });
-    observer.observe({ entryTypes: ['navigation'] });
-  }
-
-  private trackUserInteractions(): void {
-    // Track clicks
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.tagName === 'BUTTON' || target.tagName === 'A') {
-        this.trackUserInteraction(
-          target.tagName.toLowerCase(),
-          'click',
-          target.textContent?.trim() || target.getAttribute('href') || 'unknown'
-        );
-      }
-    });
-
-    // Track form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackUserInteraction('form', 'submit', form.id || form.className || 'unknown');
-    });
-
-    // Track scroll depth
-    let maxScrollDepth = 0;
-    window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        this.trackEvent(
-          'scroll_depth',
-          'engagement',
-          'scroll',
-          `${scrollDepth}%`,
-          scrollDepth
-        );
-      }
+      currency: currency || 'USD',
+      sessionId: this.session.id,
+      sessionDuration: Date.now() - this.session.startTime
     });
   }
 
-  private getUserId(): string | undefined {
-    try {
-      return localStorage.getItem('userId') || undefined;
-    } catch {
-      return undefined;
+  public trackError(error: Error, context?: Record<string, unknown>): void {
+    this.trackEvent('error', {
+      errorMessage: error.message,
+      errorStack: error.stack,
+      errorName: error.name,
+      page: window.location.pathname,
+      ...context
+    });
+  }
+
+  private startPerformanceMonitoring(): void {
+    // Wait for page load
+    if (document.readyState === 'loading') {
+      window.addEventListener('load', () => {
+        setTimeout(() => this.capturePerformanceMetrics(), 1000);
+      });
+    } else {
+      setTimeout(() => this.capturePerformanceMetrics(), 1000);
     }
   }
 
-  private async sendEventToService(event: AnalyticsEvent): Promise<void> {
+  private capturePerformanceMetrics(): void {
+    if (!('performance' in window)) return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+    const fidEntries = performance.getEntriesByType('first-input');
+    const clsEntries = performance.getEntriesByType('layout-shift');
+
+    const metrics: Partial<PerformanceMetrics> = {};
+
+    // Page load time
+    if (navigation) {
+      metrics.pageLoadTime = navigation.loadEventEnd - navigation.fetchStart;
+    }
+
+    // First Contentful Paint
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    if (fcp) {
+      metrics.firstContentfulPaint = fcp.startTime;
+    }
+
+    // Largest Contentful Paint
+    if (lcpEntries.length > 0) {
+      metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
+    }
+
+    // First Input Delay
+    if (fidEntries.length > 0) {
+      const fid = fidEntries[0] as PerformanceEntry & { processingStart: number };
+      metrics.firstInputDelay = fid.processingStart - fid.startTime;
+    }
+
+    // Cumulative Layout Shift
+    let cls = 0;
+    clsEntries.forEach((entry) => {
+      const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+      if (!layoutShiftEntry.hadRecentInput) {
+        cls += layoutShiftEntry.value;
+      }
+    });
+    metrics.cumulativeLayoutShift = cls;
+
+    // Track performance metrics
+    this.trackEvent('performance_metrics', {
+      ...metrics,
+      userAgent: navigator.userAgent,
+      connection: (navigator as Navigator & { connection?: { effectiveType?: string } }).connection?.effectiveType || 'unknown'
+    });
+  }
+
+  private setupAutoFlush(): void {
+    this.flushTimer = setInterval(() => {
+      if (this.eventQueue.length > 0) {
+        this.flush();
+      }
+    }, this.flushInterval);
+  }
+
+  public flush(): void {
+    if (this.eventQueue.length === 0) return;
+
+    const events = [...this.eventQueue];
+    this.eventQueue = [];
+
+    // Send to analytics endpoint
+    this.sendToAnalytics(events);
+  }
+
+  private async sendToAnalytics(events: AnalyticsEvent[]): Promise<void> {
     try {
-      // Send to your analytics service
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(event),
+        body: JSON.stringify({
+          events,
+          session: this.session,
+          timestamp: Date.now()
+        })
       });
     } catch (error) {
-      console.error('Failed to send analytics event:', error);
+      console.warn('Failed to send analytics data:', error);
+      // Re-queue events if sending failed
+      this.eventQueue.unshift(...events);
     }
   }
 
-  public getEvents(): AnalyticsEvent[] {
-    return [...this.events];
+  public getSessionInfo(): UserSession {
+    return { ...this.session };
   }
 
-  public getSessionId(): string {
-    return this.sessionId;
+  public getEventCount(): number {
+    return this.eventQueue.length;
+  }
+
+  public destroy(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
+    }
+    this.flush();
   }
 }
 
-export const analyticsManager = AnalyticsManager.getInstance();
-export const analytics = analyticsManager;
+// Export singleton instance
+export const analytics = AnalyticsManager.getInstance();
+
+// Auto-initialize when module is loaded
+if (typeof window !== 'undefined') {
+  analytics.initialize();
+}
