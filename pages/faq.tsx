@@ -50,19 +50,21 @@ export default function FAQ(): JSX.Element {
 				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50 to-indigo-100">
-			<divclassName="containermx-auto, p, x-4 py-8 max-w-6 xl">
-				<navclassName="mb-8">
-					<Linkhref="/" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-mediumtransition-colors">
-							← Back, to, Home						</Link>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+				<div className="container mx-auto px-4 py-8 max-w-6xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5 xl, md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Frequently Asked Questions
 						</h1>
-						<pclassName="text-xl, tex, t-gr, a, y-600, ma, x-w-3 xlmx-autoleading-relaxed">
-							Find, answers, to common, questions, about our, services, process  and, technology, solutions						</p>
+						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+							Find answers to common questions about our services, process and technology solutions
+						</p>
 					</header>
 
 					<main>

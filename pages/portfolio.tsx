@@ -44,14 +44,20 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7 xl">
-				<nav className="mb-8">
+				<div className="container mx-auto px-4 py-8 max-w-7xl">
+					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 
-	conststats = [{number: "50+'label: "ProjectsCompleted" }{number: '98%'label: "ClientSatisfaction" }{number: '2M+'label: "UsersImpacted" }{number: "5Years"label: "AveragePartnership" }];  return (
+	const stats = [
+		{ number: "50+", label: "Projects Completed" },
+		{ number: "98%", label: "Client Satisfaction" },
+		{ number: "2M+", label: "Users Impacted" },
+		{ number: "5 Years", label: "Average Partnership" }
+	];
+
+  return (
     <>
-      
       <Head>
         <title>Portfolio - ZionApp</title>
         <metaname="description" content="Explore, our, portfolio of, successful, projects and, case, studies across, A, I, cloud, computin, g, mobile, developmentandmore." />

@@ -147,7 +147,7 @@ export default function Home(): JSX.Element {
 					<section, className="te, x, t-cent, e, r">
 						<div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
 							<h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-								Ready to Transform Your Business?
+								Ready, to, Transform Your, Busines, s?
 							</h2>
 							<p, className="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.

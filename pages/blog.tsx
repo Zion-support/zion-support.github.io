@@ -87,9 +87,20 @@ export default function Blog(): JSX.Element {
 		setIsNewsletterLoading(false);
 	};
 
+	const handleCategoryFilter = (category: string) => {
+		setSelectedCategory(category);
+		trackClick('blog-category-filter', 'navigation');
+	};
+
+	const handleReadMore = (post: any) => {
+		trackClick('blog-read-more', 'engagement');
+		// Navigate to blog post detail page
+		window.location.href = `/blog/${post.slug}`;
+	};
+
 	const filteredPosts = selectedCategory === 'All' 
 		? blogPosts 
-		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
+		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory.toLowerCase());
 
 	return (
     <>
@@ -116,75 +127,81 @@ export default function Blog(): JSX.Element {
 						</p>
 					</header>
 
-					{/* Category, Filte, r */};
-					<section, className="mb-12">
-						<div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">
-							{categori, e, s.m, a, p((catego, r, y) => (
-								<button, ke, y={catego, r, y};
-									onCli, c, k={() => handleCategoryFilt, e, r(catego, r, y)};
-									classNa, m, e={`px-6, p, y-2, rounde, d-full, fon, t-medium, transitio, n-colo, r, s ${
-										selectedCatego, r, y === catego, r, y.toLowerCa, s, e() || (catego, r, y === 'A, l, l' && selectedCatego, r, y === 'a, l, l')
-											? 'bg-bl, u, e-600, tex, t-whi, t, e'
-											: 'bg-white, tex, t-gr, a, y-600, hover:bg-gr, a, y-1, 0, 0'
-									}`};								>
+					{/* Category Filter */}
+					<section className="mb-12">
+						<div className="flex flex-wrap justify-center gap-4">
+							{categories.map((category) => (
+								<button
+									key={category}
+									onClick={() => handleCategoryFilter(category)}
+									className={`px-6 py-2 rounded-full font-medium transition-colors ${
+										selectedCategory === category || (category === 'All' && selectedCategory === 'All')
+											? 'bg-blue-600 text-white'
+											: 'bg-white text-gray-600 hover:bg-gray-100'
+									}`}
+								>
 									{category}
 								</button>
 							))}
 						</div>
-					</div>
+					</section>
 
-					{/* Blog, Post, s */};
-					<section, className="mb-16">
-						<div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
-							{filteredPos, t, s.m, a, p((po, s, t) => (
-								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, className="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
-										<span, className="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
-									</d, i, v>
-									<div, className="p-6">
-										<div, className="flex, item, s-center, tex, t-sm, tex, t-gr, a, y-500, m, b-3">
-											<sp, a, n>{po, s, t.auth, o, r}</sp, a, n>
-											<span, className="mx-2">•</sp, a, n>
-											<sp, a, n>{po, s, t.da, t, e}</sp, a, n>
-											<span, className="mx-2">•</sp, a, n>
-											<sp, a, n>{po, s, t.readTi, m, e}</sp, a, n>
-										</d, i, v>
-										<h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
-										<p, className="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
-										<button, onClic, k={() => handleReadMo, r, e(po, s, t)};
-											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hover:te, x, t-bl, u, e-800, transitio, n-colo, r, s"										>
+					{/* Blog Posts */}
+					<section className="mb-16">
+						<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+							{filteredPosts.map((post) => (
+								<article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+									<div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+										<span className="text-white text-lg font-semibold">{post.category}</span>
+									</div>
+									<div className="p-6">
+										<div className="flex items-center text-sm text-gray-500 mb-3">
+											<span>{post.author}</span>
+											<span className="mx-2">•</span>
+											<span>{post.date}</span>
+											<span className="mx-2">•</span>
+											<span>{post.readTime}</span>
+										</div>
+										<h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
+										<p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+										<button
+											onClick={() => handleReadMore(post)}
+											className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
+										>
 											Read More →
 										</button>
 									</div>
-								</div>
-							</article>
-						))}
-					</div>
+								</article>
+							))}
+						</div>
+					</section>
 
-					{/* Newsletter, Signu, p */};
-					<section, className="te, x, t-cent, e, r">
-						<div, className="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
-							<h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-								Stay, Update, d
+					{/* Newsletter Signup */}
+					<section className="text-center">
+						<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto">
+							<h2 className="text-3xl font-bold text-gray-900 mb-4">
+								Stay Updated
 							</h2>
-							<p, className="te, x, t-gr, a, y-600, m, b-6">
-								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
+							<p className="text-gray-600 mb-6">
+								Get the latest insights and updates delivered to your inbox.
 							</p>
-							<div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
-								<input, typ, e="ema, i, l"
-									placehold, e, r="Enter, your, email"
-									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
+							<div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+								<input
+									type="email"
+									placeholder="Enter your email"
+									className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
 								/>
-								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
-									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
+								<button
+									onClick={() => trackClick('newsletter-signup', 'cta')}
+									className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
 								>
-									Subscri, b, e
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</secti, o, n>
-				</d, i, v>
-			</d, i, v>		
+									Subscribe
+								</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>		
     </>
   );
 }

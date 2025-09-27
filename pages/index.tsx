@@ -35,16 +35,18 @@ const Home = React.memo(function Home(): JSX.Element {
 //  loading: () => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" />
 // });
 
-const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
-	const [performanceMetri, c, s, setPerformanceMetri, c, s] = useState(null);
-	const [isLoadi, n, g, setIsLoadi, n, g] = useState(true);
-  const heroRef  = useR, e, f(null);
-  const featuresRef  = useR, e, f(null);
-  const isHeroInView  = useInVi, e, w(heroR, e, f, { once: true });
-  const isFeaturesInView  = useInVi, e, w(featuresR, e, f, {once: true });
+const Home = React.memo(function Home(): JSX.Element {
+	const [isVisible, setIsVisible] = useState(false);
+	const [performanceMetrics, setPerformanceMetrics] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+  const heroRef = useRef(null);
+  const featuresRef = useRef(null);
+  const isHeroInView = useInView(heroRef, { once: true });
+  const isFeaturesInView = useInView(featuresRef, {once: true });
 
-  useEffect(() => {setIsVisib, l, e(true);
-    setIsLoadi, n, g(false);    
+  useEffect(() => {
+    setIsVisible(true);
+    setIsLoading(false);    
     // Performance monitoring
     if (typeof window !== 'undefined') {
       const observer = new PerformanceObserver((list) => {
@@ -99,11 +101,15 @@ const Home = React.memo(function Home(): JSX.Element {const [isVisible, setIsVis
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
-      color: "blue" asconstdelay: 0.4}];  return (
+      color: "blue" as const,
+      delay: 0.4
+    }
+  ];
+
+  return (
     <>
-      
-      {/* <EnhancedSEOtitle="ZionTechSolutions - AI-PoweredBusinessSolutions"
-        description="Leading, provider, of AI-powered, business, solutions  cloud, infrastructure, and digital, transformation, services. Transform, your, business withcutting-edgetechnology."
+      {/* <EnhancedSEO title="Zion Tech Solutions - AI-Powered Business Solutions"
+        description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={[
           "AIsolutions",
           "cloudinfrastructure", 

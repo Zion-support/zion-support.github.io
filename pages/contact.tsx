@@ -240,47 +240,11 @@ export default function Contact(): JSX.Element {
 									/>
 								</div>
 
-								<d, i, v>
-									<label, htmlFo, r="ema, i, l" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Email, Addres, s
-									</lab, e, l>
-									<input, typ, e="ema, i, l"
-										id="ema, i, l"
-										na, m, e="ema, i, l"
-										val, u, e={formDa, t, a.ema, i, l};
-										onChan, g, e={handleInputChan, g, e};
-										required, className="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
-
-								<d, i, v>
-									<label, htmlFo, r="compa, n, y" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Compa, n, y
-									</lab, e, l>
-									<input, typ, e="te, x, t"
-										id="compa, n, y"
-										na, m, e="compa, n, y"
-										val, u, e={formDa, t, a.compa, n, y};
-										onChan, g, e={handleInputChan, g, e};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
-
-								<d, i, v>
-									<label, htmlFo, r="messa, g, e" classNa, m, e="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2">
-										Messa, g, e
-									</lab, e, l>
-									<textarea, i, d="messa, g, e"
-										na, m, e="messa, g, e"
-										val, u, e={formDa, t, a.messa, g, e};
-										onChan, g, e={handleInputChan, g, e};
-										required, row, s={5};
-										classNa, m, e="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-									/>
-								</d, i, v>
-
-								<button, typ, e="subm, i, t"
-									classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"								>
+								<button
+									type="submit"
+									className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+									disabled={isSubmitting}
+								>
 									{isSubmitting ? 'Sending Message...' : 'Send Message'}
 								</button>
 							</form>
@@ -324,43 +288,22 @@ export default function Contact(): JSX.Element {
 								</div>
 							</div>
 
-									<div, className="flex, item, s-cent, e, r">
-										<div, className="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, className="te, x, t-bl, u, e-600, tex, t-xl">📞</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Pho, n, e</p>
-											<p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
-										</d, i, v>
-									</d, i, v>
-
-									<div, className="flex, item, s-cent, e, r">
-										<div, className="w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, r-4">
-											<span, className="te, x, t-bl, u, e-600, tex, t-xl">📍</sp, a, n>
-										</d, i, v>
-										<d, i, v>
-											<p, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">Addre, s, s</p>
-											<p, className="te, x, t-gr, a, y-6, 0, 0">123, Tech, Street, Innovation, Cit, y, IC, 1234, 5</p>
-										</d, i, v>
-									</d, i, v>
-								</d, i, v>
-							</d, i, v>
-
-							<div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, tex, t-whi, t, e">
-								<h3, className="te, x, t-xl, fon, t-bold, m, b-4">Ready, to, get start, e, d?</h3>
-								<p, className="mb-6, opacit, y-90">
-									Schedule, a, free consultation, to, discuss your, project, needs.
+							<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+								<h3 className="text-xl font-bold mb-4">Ready to get started?</h3>
+								<p className="mb-6 opacity-90">
+									Schedule a free consultation to discuss your project needs.
 								</p>
-								<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n', 'c, t, a')};
-									classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colo, r, s"
+								<button
+									onClick={() => trackClick('schedule-consultation', 'cta')}
+									className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 								>
-									Schedule, Consultatio, n
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</d, i, v>
-				</d, i, v>
-			</d, i, v>		
+									Schedule Consultation
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
     </>
   );
 }
