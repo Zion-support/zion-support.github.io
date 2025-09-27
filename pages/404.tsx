@@ -2,13 +2,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Custom404() {
-  return (
-    <>
-      <Head>
+	return (
+		<>
+			<Head>
         <title>404 - Page Not Found | Zion App</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
-      </Head>
-      <div style={{ 
+			</Head>
+			<div style={{ 
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -16,9 +16,9 @@ export default function Custom404() {
         minHeight: '100vh',
         padding: '2rem',
         textAlign: 'center',
-        fontFamily: 'system-ui, -apple-system, sans-serif'
+        fontFamily: 'system-ui  -apple-system  sans-serif'
       }}>
-        <div style={{ marginBottom: '2rem' }}>
+			<div style={{ marginBottom: '2rem' }}>
           <h1 style={{ 
             fontSize: '6rem', 
             fontWeight: 'bold', 
@@ -42,12 +42,11 @@ export default function Custom404() {
             maxWidth: '500px',
             margin: '0 auto 2rem'
           }}>
-            Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
+            Sorry  the page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </div>
-        
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Link href="/">
+			<div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+					<Link href="/">
             <button style={{
               backgroundColor: '#2563eb',
               color: 'white',
@@ -80,8 +79,7 @@ export default function Custom404() {
             Go Back
           </button>
         </div>
-        
-        <div style={{ 
+			<div style={{ 
           marginTop: '3rem',
           padding: '2rem',
           backgroundColor: '#f8fafc',
@@ -92,13 +90,13 @@ export default function Custom404() {
             Need Help?
           </h3>
           <p style={{ color: '#64748b', marginBottom: '1rem' }}>
-            If you believe this is an error, please contact our support team.
+            If you believe this is an error  please contact our support team.
           </p>
           <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
-            Error Code: 404 | Timestamp: {new Date().toISOString()}
+            Error Code: 404 |,
+		Timestamp: {new Date().toISOString()}
           </p>
         </div>
       </div>
-    </>
-  );
-}
+		</>
+  )}

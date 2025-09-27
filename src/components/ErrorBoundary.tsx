@@ -3,14 +3,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -19,16 +17,14 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    };
-  }
+    }}
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null
-    };
-  }
+    }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -36,14 +32,12 @@ export class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console in development
+    // Log error in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary: ', error, errorInfo);
-    }
+      console.error('Error caught by boundary: ', error, errorInfo)}
 
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-  }
+    // Call onError callback if provided
+    this.props.onError?.(error, errorInfo)}
 
   render() {
     if (this.state.hasError) {
@@ -60,7 +54,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 Something went wrong
               </h1>
               <p className="text-gray-600 mb-4">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+                We're sorry but something unexpected happened. Please try refreshing the page.
               </p>
               <div className="space-y-2">
                 <button
@@ -103,11 +97,9 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;

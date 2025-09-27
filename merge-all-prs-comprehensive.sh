@@ -1,11 +1,96 @@
 #!/bin/bash
 
 # Comprehensive PR Merge Script
-# This script will merge all open PRs and resolve conflicts
+>>>>>> 0bbebc86edb8334c5c627c8dbbbf90bff5949103
 
 set -e
 
 echo "🚀 Starting comprehensive PR merge process..."
+
+ /dev/null 2>&1; then
+        echo "❌ Not in a git repository"
+        exit 1
+    fi
+}
+
+# Function to fetch latest changes
+fetch_latest() {
+    echo "📥 Fetching latest changes from remote..."
+    git fetch --all --prune
+}
+
+# Function to get open PRs from GitHub API
+get_open_prs() {
+    echo "🔍 Checking for open PRs..."
+    
+    # Get open PRs using GitHub API
+    PRS=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+        "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | \
+        grep -o '"number":[0-9]*' | grep -o '[0-9]*' || echo "")
+    
+    if [ -z "$PRS" ]; then
+        echo "✅ No open PRs found"
+        return 0
+    fi
+    
+    echo "📋 Found open PRs: $PRS"
+    echo "$PRS"
+}
+
+# Function to get PR branch name
+get_pr_branch() {
+    local pr_number=$1
+    local branch_name=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+        "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" | \
+        grep -o '"ref":"[^"]*"' | cut -d'"' -f4)
+    echo "$branch_name"
+}
+
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    local file=$1
+    echo "🔧 Resolving conflicts in $file..."
+    
+    # Common conflict resolution patterns
+    sed -i 's/>>>>>> [^[:space:]]*//g' "$file"
+    
+    # Fix common className spacing issues
+    sed -i 's/className="\([^"]*\)"/className="\1"/g' "$file"
+    sed -i 's/\([a-z]\)\([A-Z]\)/\1 \2/g' "$file"
+    
+    # Fix common syntax errors
+    sed -i 's/,\s*$//g' "$file"
+    sed -i 's/;\s*$//g' "$file"
+}
+
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name=$2
+    
+    echo "🔄 Merging PR #$pr_number from branch $branch_name..."
+    
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/"$branch_name"; then
+        echo "📝 Branch $branch_name exists locally"
+    else
+        echo "📥 Checking out branch $branch_name..."
+        git checkout -b "$branch_name" "origin/$branch_name" || {
+            echo "⚠️  Could not checkout branch $branch_name, trying to fetch it..."
+            git fetch origin "$branch_name"
+            git checkout -b "$branch_name" "origin/$branch_name"
+        }
+    fi
+    
+    # Switch to main
+    git checkout main
+    
+    # Try to merge
+    if git merge "$branch_name" --no-ff -m "Merge PR #$pr_number: $branch_name"; then
+        echo "✅ Successfully merged PR #$pr_number"
+        return 0
+    else
+        echo "⚠️  Merge conflicts detected in PR #$pr_number"
 
 # Get the list of recent cursor branches
 RECENT_BRANCHES=(
@@ -60,74 +145,17 @@ merge_branch() {
         return 0
     else
         echo "⚠️  Merge conflict in: $branch"
+
         
         # Get list of conflicted files
         local conflicted_files=$(git diff --name-only --diff-filter=U)
         
         if [ -n "$conflicted_files" ]; then
-            echo "🔧 Resolving conflicts in files: $conflicted_files"
-            
-            for file in $conflicted_files; do
-                resolve_conflicts "$file"
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Complete the merge
-            if git commit --no-edit; then
-                echo "✅ Successfully resolved conflicts and merged: $branch"
-                return 0
-            else
-                echo "❌ Failed to commit resolved conflicts for: $branch"
-                git merge --abort
-                return 1
-            fi
-        else
-            echo "❌ No conflicted files found but merge failed for: $branch"
+>>>>>> 0bbebc86edb8334c5c627c8dbbbf90bff5949103
             git merge --abort
             return 1
         fi
     fi
 }
 
-# Ensure we're on main branch
-echo "📍 Switching to main branch..."
-git checkout main
-git pull origin main
-
-# Merge each branch
-successful_merges=0
-failed_merges=0
-
-for branch in "${RECENT_BRANCHES[@]}"; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
-    
-    if merge_branch "$branch"; then
-        ((successful_merges++))
-    else
-        ((failed_merges++))
-    fi
-    
-    echo "📊 Progress: $((successful_merges + failed_merges))/${#RECENT_BRANCHES[@]} branches processed"
-done
-
-echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
-echo "📈 Total processed: $((successful_merges + failed_merges))"
-
-# Push changes to remote
-if [ $successful_merges -gt 0 ]; then
-    echo ""
-    echo "🚀 Pushing merged changes to remote..."
-    git push origin main
-    echo "✅ Changes pushed successfully!"
-else
-    echo "⚠️  No successful merges to push"
-fi
-
-echo ""
-echo "🎉 Comprehensive PR merge process completed!"
+>>>>>> 0bbebc86edb8334c5c627c8dbbbf90bff5949103

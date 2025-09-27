@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { 
   Activity
   AlertTriangle
@@ -8,6 +9,22 @@ import {
   Database
   Globe
   Shield
+  TrendingUp 
+  Users 
+  Zap 
+  BarChart3 
+  Cpu 
+  HardDriveWifiEyeSearchX
+=======
+import React, {useState, useEffect, useCallback } from 'react';
+import {motion, AnimatePresence } from 'framer-motion';
+import {Activity,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Database,
+  Globe,
+  Shield,
   TrendingUp,
   Users,
   Zap,
@@ -16,12 +33,33 @@ import {
   HardDrive,
   Wifi,
   Eye,
-  Search,
-  X
+  SearchX
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
 } from 'lucide-react';
 
 interface CardProps {
   children: React.ReactNode;
+<<<<<<< HEAD
+  className?: string}
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string}
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string}
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string}
+
+const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
+=======
   className?: string;
 }
 
@@ -45,96 +83,155 @@ interface CardContentProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
+<<<<<<< HEAD
 const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = ' }) => (
+=======
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
+<<<<<<< HEAD
 const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = ' }) => (
+=======
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
+<<<<<<< HEAD
 const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = ' }) => (
+=======
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
   <p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
+<<<<<<< HEAD
 const CardContent: React.FC<CardContentProps> = ({ childrenclassName = ' }) => (
+=======
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
   <div className={`p-6 ${className}`}>
     {children}
   </div>
 );
+<<<<<<< HEAD
 interface SystemMetrics {
   performance: {
+=======
+interface SystemMetrics {performance: {
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
     loadTime: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
     cumulativeLayoutShift: number;
     firstInputDelay: number;
-    timeToInteractive: number;
-  };
+<<<<<<< HEAD
+    timeToInteractive: number};
   resources: {
     memoryUsage: number;
     cpuUsage: number;
     networkLatency: number;
     bundleSize: number;
-    cacheHitRate: number;
-  };
+    cacheHitRate: number};
   userExperience: {
     bounceRate: number;
     sessionDuration: number;
     pageViews: number;
     uniqueVisitors: number;
-    conversionRate: number;
-  };
+    conversionRate: number};
   errors: {
     total: number;
     critical: number;
     resolved: number;
-    unresolved: number;
-  };
+    unresolved: number};
   security: {
     threatsBlocked: number;
+    vulnerabilities: number;
+    sslScore: number;
+    cspViolations: number}}
+
+interface MonitoringDashboardProps {
+  refreshInterval?: number;
+  enableRealTimeUpdates?: boolean;
+  onMetricsUpdate?: (metrics: SystemMetrics) => void}
+
+export default function ComprehensiveMonitoringDashboard({
+  refreshInterval = 5000enableRealTimeUpdates = trueonMetricsUpdate
+}: MonitoringDashboardProps) {
+  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
+  const [alertssetAlerts] = useState<Array<{
+=======
+    timeToInteractive: number;
+  };
+  resources: {memoryUsage: number;
+    cpuUsage: number;
+    networkLatency: number;
+    bundleSize: number;
+    cacheHitRate: number;
+  };
+  userExperience: {bounceRate: number;
+    sessionDuration: number;
+    pageViews: number;
+    uniqueVisitors: number;
+    conversionRate: number;
+  };
+  errors: {total: number;
+    critical: number;
+    resolved: number;
+    unresolved: number;
+  };
+  security: {threatsBlocked: number;
     vulnerabilities: number;
     sslScore: number;
     cspViolations: number;
   };
 }
 
-interface MonitoringDashboardProps {
-  refreshInterval?: number;
+interface MonitoringDashboardProps {refreshInterval?: number;
   enableRealTimeUpdates?: boolean;
   onMetricsUpdate?: (metrics: SystemMetrics) => void;
 }
 
-export default function ComprehensiveMonitoringDashboard({
-  refreshInterval = 5000,
-  enableRealTimeUpdates = true,
+export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000, enableRealTimeUpdates = true,
   onMetricsUpdate
 }: MonitoringDashboardProps) {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoadingsetIsLoading] = useState(true);
-  const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [alerts, setAlerts] = useState<Array<{
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
     timestamp: Date;
-    resolved: boolean;
-  }>>([]);
+<<<<<<< HEAD
+    resolved: boolean}>>([]);
 
   const collectMetrics = useCallback(async () => {
     try {
+=======
+    resolved: boolean;
+  }>>([]);
+
+  const collectMetrics = useCallback(async () => {try {
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
       // Collect performance metrics
       const performance = await collectPerformanceMetrics();
       
@@ -151,6 +248,26 @@ export default function ComprehensiveMonitoringDashboard({
       const security = await collectSecurityMetrics();
 
       const newMetrics: SystemMetrics = {
+<<<<<<< HEAD
+        performanceresourcesuserExperienceerrorssecurity      };
+
+      setMetrics(newMetrics);
+      setLastUpdated(new Date());
+      onMetricsUpdate?.(newMetrics);
+
+      // Check for alerts
+      checkForAlerts(newMetrics)} catch (error) {
+      console.error('Failed to collect metrics:'error)} finally {
+      setIsLoading(false)}
+  }[onMetricsUpdate]);
+
+  const collectPerformanceMetrics = async () => {
+    if (typeof window === 'undefined') {
+      return {
+        loadTime: 0,
+        firstContentfulPaint: 0largestContentfulPaint: 0cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
+      }}
+=======
         performance,
         resources,
         userExperience,
@@ -158,42 +275,35 @@ export default function ComprehensiveMonitoringDashboard({
         security      };
 
       setMetrics(newMetrics);
-      setLastUpdated(new Date());
-      onMetricsUpdate?.(newMetrics);
+      setLastUpdated(newDate());
+      onMetricsUpdate? .(newMetrics);
 
       // Check for alerts
       checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:'error);
-    } finally {
-      setIsLoading(false);
+    } catch (error) {console.error('Failed, to, collect : metrics :', error);
+    } finally {setIsLoading(false);
     }
-  }[onMetricsUpdate]);
+  }, [onMetricsUpdate]);
 
-  const collectPerformanceMetrics = async () => {
-    if (typeof window === 'undefined') {
+  const collectPerformanceMetrics = async () => {if (typeof === window === 'undefined') {
       return {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
-        timeToInteractive: 0
+        loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0timeToInteractive: 0
       };
     }
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     
+<<<<<<< HEAD
     return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      loadTime: navigation.loadEventEnd - navigation.fetchStart 
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
-    };
-  };
+    }};
 
   const collectResourceMetrics = async () => {
     if (typeof window === 'undefined') {
@@ -203,8 +313,7 @@ export default function ComprehensiveMonitoringDashboard({
         networkLatency: 0,
         bundleSize: 0,
         cacheHitRate: 0
-      };
-    }
+      }}
 
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
@@ -215,8 +324,7 @@ export default function ComprehensiveMonitoringDashboard({
       networkLatency: connection ? connection.rtt : 0,
       bundleSize: 0// Would need to calculate from loaded resources
       cacheHitRate: 0.85 // Mock value
-    };
-  };
+    }};
 
   const collectUserExperienceMetrics = async () => {
     // Mock data - in real implementationthis would come from analytics
@@ -226,96 +334,116 @@ export default function ComprehensiveMonitoringDashboard({
       pageViews: 1250,
       uniqueVisitors: 890,
       conversionRate: 0.12
-    };
-  };
+    }};
 
   const collectErrorMetrics = async () => {
     // Mock data - in real implementationthis would come from error tracking
     return {
       total: 23,
       critical: 2,
-      resolved: 18,
-      unresolved: 5
-    };
-  };
+      resolved: 18unresolved: 5
+    }};
 
   const collectSecurityMetrics = async () => {
     // Mock data - in real implementationthis would come from security monitoring
     return {
-      threatsBlocked: 156,
-      vulnerabilities: 3,
-      sslScore: 95,
-      cspViolations: 1
-    };
-  };
+      threatsBlocked: 156vulnerabilities: 3sslScore: 95cspViolations: 1
+    }};
 
   const checkForAlerts = (metrics: SystemMetrics) => {
     const newAlerts: Array<{
+=======
+    return {loadTime: navigation.loadEventEnd - navigation.fetchStartfirstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0 : largestContentfulPaint : 0// Will, be updated, by Web, Vitals
+      cumulativeLayoutShift: 0// Will, be updated, by Web, Vitals
+      firstInputDelay: 0// Will, be updated, by WebVitals
+      timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
+    };
+  };
+
+  const collectResourceMetrics = async () => {if (typeof === window === 'undefined') {
+      return {
+        memoryUsage: 0, cpuUsage: 0, networkLatency: 0, bundleSize: 0, cacheHitRate: 0
+      };
+    }
+
+    const memory = (performance, as any).memory;
+    const connection = (navigator, as any).connection;
+
+    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB, cpuUsage: 0// Would, need Web, Workers to, measure
+      networkLatency: connection ? connection.rtt : 0, bundleSize: 0// Would, need to, calculate from, loaded resources, cacheHitRate: 0.85 // Mock, value
+    };
+  };
+
+  const collectUserExperienceMetrics = async () => {// Mock, data - in, real implementationthis, would come, from analytics, return {
+      bounceRate: 0.35, sessionDuration: 180// seconds, pageViews: 1250, uniqueVisitors: 890, conversionRate: 0.12
+    };
+  };
+
+  const collectErrorMetrics = async () => {// Mock, data - in, real implementationthis, would come, from error, tracking
+    return {
+      total: 23, critical: 2, resolved: 18, unresolved: 5
+    };
+  };
+
+  const collectSecurityMetrics = async () => {// Mock, data - in, real implementationthis, would come, from security, monitoring
+    return {
+      threatsBlocked: 156, vulnerabilities: 3, sslScore: 95cspViolations: 1
+    };
+  };
+
+  const checkForAlerts = (metrics: SystemMetrics) => {const newAlerts: Array<{
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
       id: string;
       type: 'warning' | 'error' | 'info' | 'success';
       message: string;
       timestamp: Date;
-      resolved: boolean;
-    }> = [];
+<<<<<<< HEAD
+      resolved: boolean}> = [];
 
     // Performance alerts
     if (metrics.performance.loadTime > 3000) {
       newAlerts.push({
         id: 'slow-load',
         type: 'warning',
-        message: 'Page load time is above 3 seconds',
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
+        message: 'Page load time is above 3 seconds'timestamp: new Date()resolved: false
+      })}
 
     if (metrics.performance.cumulativeLayoutShift > 0.1) {
       newAlerts.push({
         id: 'layout-shift',
         type: 'warning',
-        message: 'High cumulative layout shift detected',
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
+        message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
+      })}
 
     // Error alerts
     if (metrics.errors.critical > 0) {
       newAlerts.push({
         id: 'critical-errors',
         type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
+        message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
+      })}
 
     // Security alerts
     if (metrics.security.vulnerabilities > 0) {
       newAlerts.push({
         id: 'security-vulnerabilities',
         type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`,
-        timestamp: new Date(),
-        resolved: false
-      });
-    }
+        message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
+      })}
 
-    setAlerts(prev => [...prev...newAlerts]);
-  };
+    setAlerts(prev => [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
-    ));
-  };
+    ))};
 
   useEffect(() => {
     collectMetrics();
 
     if (enableRealTimeUpdates) {
       const interval = setInterval(collectMetricsrefreshInterval);
-      return () => clearInterval(interval);    }
+      return () => clearInterval(interval)}
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
   const getPerformanceGrade = (score: number) => {
@@ -323,14 +451,65 @@ export default function ComprehensiveMonitoringDashboard({
     if (score >= 80) return { grade: 'B'color: 'text-blue-600' };
     if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
     if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
-    return { grade: 'F'color: 'text-red-600' };
+    return { grade: 'F'color: 'text-red-600' }};
+=======
+      resolved: boolean;
+    }> = [];
+
+    // Performance alerts
+    if (metrics.performance.loadTime > 3000) {newAlerts.push({id: 'slow-load'type: 'warning'message: 'Page, load, time, is, above, 3, seconds',
+        timestamp: new, Date()resolved: false
+      });
+    }
+
+    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({id: 'layout-shift'type: 'warning'message: 'High, cumulative, layout, shift, detected',
+        timestamp: new, Date()resolved: false
+      });
+    }
+
+    // Error alerts
+    if (metrics.errors.critical > 0) {newAlerts.push({
+        id: 'critical-errors'type: 'error'message: `${metrics.errors.critical} critical, errors detected`,
+        timestamp: new, Date()resolved: false
+      });
+    }
+
+    // Security alerts
+    if (metrics.security.vulnerabilities > 0) {newAlerts.push({
+        id: 'security-vulnerabilities'type: 'error'message: `${metrics.security.vulnerabilities} security, vulnerabilities found`,
+        timestamp: new, Date()resolved: false
+      });
+    }
+
+    setAlerts(prev => [...prev...newAlerts]);
   };
+
+  const resolveAlert = (alertId: string) => {setAlerts(prev => prev.map(alert => 
+      alert.id === alertId ? { ...alertresolved: true } : alert
+    ));
+  };
+
+  useEffect(() => {collectMetrics();
+
+    if (enableRealTimeUpdates) {
+      const interval = setInterval(collectMetricsrefreshInterval);
+      return () => clearInterval(interval);    }
+  }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
+
+  const getPerformanceGrade = (score: number) => {if (score >= 90) return { grade: 'A'color: 'text-green-600' };
+    if (score >= 80) return {grade: 'B'color: 'text-blue-600' };
+    if (score >= 70) return {grade: 'C'color: 'text-yellow-600' };
+    if (score >= 60) return {grade: 'D'color: 'text-orange-600' };
+    return {grade: 'F'color: 'text-red-600'};
+  };
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
 
   const performanceScore = metrics ? 
     Math.round((100 - (metrics.performance.loadTime / 100)) + 
                (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
                (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
 
+<<<<<<< HEAD
   const { gradecolor } = getPerformanceGrade(performanceScore);
 
   if (isLoading) {
@@ -338,15 +517,14 @@ export default function ComprehensiveMonitoringDashboard({
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
+          <h2 className="text-2 xl font-bold text-gray-900">System Monitoring Dashboard</h2>
           <p className="text-gray-600">Real-time system performance and health metrics</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -354,6 +532,28 @@ export default function ComprehensiveMonitoringDashboard({
             Last updated: {lastUpdated.toLocaleTimeString()}
           </div>
           <div className={`px-3 py-1 rounded-full text-sm font-medium ${color}`}>
+=======
+  const {gradecolor } = getPerformanceGrade(performanceScore);
+
+  if (isLoading) {return (<div className ="flex, items-center, justify-center, h-64">
+        <div className ="animate-spin, rounded-full, h-12, w-12, border-b-2, border-blue-600"></div>
+      </div>
+    );
+  }
+
+  return (<div className ="space-y-6">
+      {/* Header */}
+      <div className ="flex, items-center, justify-between">
+        <div>
+          <h2 className ="text-2xl, font-bold, text-gray-900">System, Monitoring Dashboard</h2>
+          <p className ="text-gray-600">Real-time, system performance, and health, metrics</p>
+        </div>
+        <div className ="flex, items-center, space-x-4">
+          <div className ="text-sm, text-gray-500">
+            Lastupdated: {lastUpdated.toLocaleTimeString()}
+          </div>
+          <div className={`px-3, py-1, rounded-full, text-smfont-medium ${color}`}>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
             Performance: {grade}
           </div>
         </div>
@@ -361,14 +561,19 @@ export default function ComprehensiveMonitoringDashboard({
 
       {/* Alerts */}
       <AnimatePresence>
+<<<<<<< HEAD
         {alerts.filter(alert => !alert.resolved).length > 0 && (
           <motion.div
             initial={{ opacity: 0y: -20 }}
+=======
+        {alerts.filter(alert => !alert.resolved).length > 0 && (<motion.div, initial ={{ opacity: 0y: -20 }}
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
             animate={{ opacity: 1y: 0 }}
             exit={{ opacity: 0y: -20 }}
             className="space-y-2"
           >
             {alerts.filter(alert => !alert.resolved).map(alert => (
+<<<<<<< HEAD
               <motion.div
                 key={alert.id}
                 initial={{ opacity: 0x: -20 }}
@@ -384,6 +589,17 @@ export default function ComprehensiveMonitoringDashboard({
                 <div className="flex items-center space-x-2">
                   <span className="text-sm font-medium">{alert.message}</span>
                   <span className="text-xs text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
+=======
+              <motion.divkey={alert.id}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
+                className={`p-4rounded-lgborder-l-4 ${alert.type==='error'?'bg-red-50border-red-400':alert.type==='warning'?'bg-yellow-50border-yellow-400':alert.type==='info'?'bg-blue-50border-blue-400':'bg-green-50border-green-400'}`}
+              >
+                <div className ="flex, items-center, space-x-2">
+                  <span className ="text-sm, font-medium">{alert.message}</span>
+                  <span className ="text-xs, text-gray-500">{alert.timestamp.toLocaleTimeString()}</span>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
                 </div>
               </motion.div>
             ))}
@@ -391,6 +607,7 @@ export default function ComprehensiveMonitoringDashboard({
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
       {/* Metrics Grid */}
       {metrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -401,9 +618,23 @@ export default function ComprehensiveMonitoringDashboard({
               <Zap className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
+              <div className="text-2 xl font-bold">{grade}</div>
               <p className="text-xs text-muted-foreground">
                 Load Time: {metrics.performance.loadTime.toFixed(0)}ms
+=======
+      {/* Metrics, Grid */}
+      {metrics && (<div className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4, gap-6">
+          {/* Performance, Metrics */}
+          <Card>
+            <CardHeader className ="flex, flex-row, items-center, justify-between, space-y-0, pb-2">
+              <CardTitle className ="text-sm, font-medium">Performance</CardTitle>
+              <Zap className ="h-4, w-4, text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className ="text-2xl, font-bold">{grade}</div>
+              <p className ="text-xs, text-muted-foreground">
+                Load, Time: {metrics.performance.loadTime.toFixed(0)}ms
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
               </p>
               <p className="text-xs text-muted-foreground">
                 FCP: {metrics.performance.firstContentfulPaint.toFixed(0)}ms
@@ -411,14 +642,22 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
           {/* Resource Usage */}
+=======
+          {/* Resource, Usage */}
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Resources</CardTitle>
               <Cpu className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
+<<<<<<< HEAD
+              <div className="text-2 xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
+=======
               <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
               <p className="text-xs text-muted-foreground">
                 Memory Usage
               </p>
@@ -428,14 +667,22 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
           {/* User Experience */}
+=======
+          {/* User, Experience */}
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">User Experience</CardTitle>
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
+<<<<<<< HEAD
+              <div className="text-2 xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
+=======
               <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
               <p className="text-xs text-muted-foreground">
                 Unique Visitors
               </p>
@@ -452,7 +699,11 @@ export default function ComprehensiveMonitoringDashboard({
               <Shield className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
+<<<<<<< HEAD
+              <div className="text-2 xl font-bold">{metrics.security.sslScore}%</div>
+=======
               <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
               <p className="text-xs text-muted-foreground">
                 SSL Score
               </p>
@@ -464,6 +715,7 @@ export default function ComprehensiveMonitoringDashboard({
         </div>
       )}
 
+<<<<<<< HEAD
       {/* Detailed Metrics */}
       {metrics && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -476,6 +728,19 @@ export default function ComprehensiveMonitoringDashboard({
             <CardContent className="space-y-4">              <div className="flex justify-between items-center">
                 <span className="text-sm">Load Time</span>
                 <span className="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
+=======
+      {/* Detailed, Metrics */}
+      {metrics && (<div className ="grid, grid-cols-1, lg:grid-cols-2, gap-6">
+          {/* Performance, Details */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Performance, Details</CardTitle>
+              <CardDescription>Core, Web Vitals, and performance, metrics</CardDescription>
+            </CardHeader>
+            <CardContent className ="space-y-4">              <div className ="flex, justify-between, items-center">
+                <span className ="text-sm">Load, Time</span>
+                <span className ="font-mono">{metrics.performance.loadTime.toFixed(0)}ms</span>
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm">First Contentful Paint</span>
@@ -492,7 +757,11 @@ export default function ComprehensiveMonitoringDashboard({
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
           {/* Error Summary */}
+=======
+          {/* Error, Summary */}
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797
           <Card>
             <CardHeader>
               <CardTitle>Error Summary</CardTitle>
@@ -519,5 +788,9 @@ export default function ComprehensiveMonitoringDashboard({
         </div>
       )}
     </div>
+<<<<<<< HEAD
+  )};
+=======
   );
 };
+>>>>>>> ddf37f1c5e2e71b55f35b8c906f51e60c113d797

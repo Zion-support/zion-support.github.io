@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -11,13 +12,12 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedService, setSelectedService] = useState<string | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsVisible(true);
-		setIsLoading(false);
-	}, []);
+		setIsLoading(false)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
@@ -45,7 +45,7 @@ export default function Services(): JSX.Element {
 		},
 		'cloud': {
 			title: 'Cloud Solutions',
-			description: 'Scalable, secure, and reliable cloud infrastructure tailored to your business needs.',
+			description: 'Scalable  secure  and reliable cloud infrastructure tailored to your business needs.',
 			features: [
 				'Cloud Migration & Strategy',
 				'Container Orchestration (Kubernetes)',
@@ -65,7 +65,7 @@ export default function Services(): JSX.Element {
 		},
 		'web-dev': {
 			title: 'Web Development',
-			description: 'Modern, responsive web applications built with the latest technologies and best practices.',
+			description: 'Modern  responsive web applications built with the latest technologies and best practices.',
 			features: [
 				'Progressive Web Apps (PWA)',
 				'Single Page Applications (SPA)',
@@ -151,30 +151,30 @@ export default function Services(): JSX.Element {
 			{/* <Navigation /> */}
 			<Head>
 				<title>Services - Zion App</title>
-				<meta name="description" content="Explore our comprehensive technology services including AI, cloud solutions, web development, mobile apps, data analytics, and cybersecurity." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			{isLoading ? (
-				<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-					<div className="text-center">
-						<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+			<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="text-center">
+			<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
 						<p className="text-gray-600">Loading services...</p>
 					</div>
 				</div>
 			) : (
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
-					<nav className="mb-8">
-						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl, md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Services
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
 							Comprehensive technology solutions to drive your business forward
 						</p>
 					</header>
@@ -182,18 +182,18 @@ export default function Services(): JSX.Element {
 					<main>
 						{/* Services Grid */}
 						<section className="mb-20">
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-								{SERVICES.map((service, index) => (
-									<div
+			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
+								{SERVICES.map((service ,, index) => (
+			<div
 										key={service.id}
 										className={`transform transition-all duration-700 delay-${index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}
 									>
-										<div className="p-6 bg-white rounded-lg shadow-md">
+			<div className="p-6 bg-white rounded-lg shadow-md">
 											<h3 className="text-xl font-semibold mb-2">{service.title}</h3>
 											<p className="text-gray-600 mb-4">{service.description}</p>
-											<div className="text-blue-600 font-medium">Service Card (temporarily disabled)</div>
+			<div className="text-blue-600 font-medium">Service Card (temporarily disabled)</div>
 										</div>
 									</div>
 								))}
@@ -205,10 +205,10 @@ export default function Services(): JSX.Element {
 							<section className={`mb-20 transition-all duration-500 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-									<div className="flex justify-between items-start mb-8">
-										<div>
-											<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+			<div className="bg-white rounded-3 xl shadow-2 xl p-8 md: p-12">
+			<div className="flex justify-between items-start mb-8">
+			<div>
+											<h2 className="text-3 xl, md:text-4 xl font-bold text-gray-800 mb-4">
 												{serviceDetails[selectedService as keyof typeof serviceDetails]?.title}
 											</h2>
 											<p className="text-xl text-gray-600 leading-relaxed">
@@ -216,7 +216,7 @@ export default function Services(): JSX.Element {
 											</p>
 										</div>
 										<button
-											onClick={() => setSelectedService(null)}
+										,, onClick={() => setSelectedService(null)}
 											className="text-gray-400 hover:text-gray-600 transition-colors"
 										>
 											<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,13 +224,12 @@ export default function Services(): JSX.Element {
 											</svg>
 										</button>
 									</div>
-
-									<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 										{/* Features */}
-										<div>
+			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature ,, index) => (
 													<li key={index} className="flex items-center text-gray-600">
 														<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -242,10 +241,10 @@ export default function Services(): JSX.Element {
 										</div>
 
 										{/* Technologies */}
-										<div>
+			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
-											<div className="flex flex-wrap gap-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech, index) => (
+			<div className="flex flex-wrap gap-2">
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech ,, index) => (
 													<span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
 														{tech}
 													</span>
@@ -254,10 +253,10 @@ export default function Services(): JSX.Element {
 										</div>
 
 										{/* Benefits */}
-										<div>
+			<div>
 											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
 											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit, index) => (
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit ,, index) => (
 													<li key={index} className="flex items-start text-gray-600">
 														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
 															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -276,43 +275,39 @@ export default function Services(): JSX.Element {
 						<section className={`mb-20 transition-all duration-1000 delay-700 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="text-center mb-12">
-								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+			<div className="text-center mb-12">
+								<h2 className="text-3 xl md: text-5 xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Why Choose Our Services?
 								</h2>
-								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+								<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
 									We combine technical expertise with business acumen to deliver solutions that drive real results.
 								</p>
 							</div>
-
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-								<div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-									<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2xl">👥</span>
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">👥</span>
 									</div>
 									<h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team</h3>
 									<p className="text-gray-600">Certified professionals with years of experience in cutting-edge technologies</p>
 								</div>
-
-								<div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-									<div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2xl">📈</span>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">📈</span>
 									</div>
 									<h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Results</h3>
 									<p className="text-gray-600">Track record of successful projects and satisfied clients across industries</p>
 								</div>
-
-								<div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-									<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2xl">🔄</span>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">🔄</span>
 									</div>
 									<h3 className="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
 									<p className="text-gray-600">Round-the-clock support and maintenance for all our solutions</p>
 								</div>
-
-								<div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-									<div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2xl">⚡</span>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg, hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">⚡</span>
 									</div>
 									<h3 className="text-xl font-semibold text-gray-800 mb-2">Scalable Solutions</h3>
 									<p className="text-gray-600">Future-proof solutions that grow with your business needs</p>
@@ -324,24 +319,22 @@ export default function Services(): JSX.Element {
 						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-500 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<div className="absolute inset-0 opacity-10">
-								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-								}}></div>
+			<div className="absolute inset-0 opacity-10">
+			<div className="absolute inset-0" style={{
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-							
-							<div className="relative z-10">
-								<h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+			<div className="relative z-10">
+								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Get Started?
 								</h2>
-								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss your project requirements and find the perfect solution for your business.
 								</p>
-								<div className="flex flex-col sm:flex-row gap-6 justify-center">
-									<Link href="/contact">
+			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
+					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('get-quote-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Get a Quote
@@ -353,7 +346,7 @@ export default function Services(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('schedule-consultation-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Schedule Consultation
@@ -368,21 +361,20 @@ export default function Services(): JSX.Element {
 
 						{/* Pricing Calculator Section */}
 						<section className={`mb-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-							<div className="text-center mb-12">
-								<h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+			<div className="text-center mb-12">
+								<h2 className="text-4 xl md:text-5 xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Project Pricing Calculator
 								</h2>
-								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+								<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
 									Get an instant estimate for your project based on your specific requirements and preferences.
 								</p>
 							</div>
 							{/* <PricingCalculator /> */}
-							<div className="text-center py-8 text-gray-500">Pricing Calculator temporarily disabled</div>
+			<div className="text-center py-8 text-gray-500">Pricing Calculator temporarily disabled</div>
 						</section>
 					</main>
 				</div>
 			</div>
 			)}
 		</>
-	);
-}
+	)}

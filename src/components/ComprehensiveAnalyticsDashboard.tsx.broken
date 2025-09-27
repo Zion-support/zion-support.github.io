@@ -89,9 +89,6 @@ interface AnalyticsData {
 }
 
 interface ComprehensiveAnalyticsDashboardProps {
-  data: AnalyticsData;
-  onDataRefresh?: () => void;
-  isRealTime?: boolean;
   className?: string;
 }
 
