@@ -1,230 +1,165 @@
 /**
- * SEO utility functions
- * Provides various SEO enhancement functions
+ * SEO utilities for enhanced search engine optimization
  */
 
 export interface SEOData {
   title: string;
   description: string;
   keywords?: string[];
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
-// Generate meta tags
-export const generateMetaTags = (seoData: SEOData): string => {
-  const {
-    title,
-    description,
-    keywords = [],
-    canonical,
-    ogTitle = title,
-    ogDescription = description,
-    ogImage,
-    ogType = 'website',
-    twitterCard = 'summary_large_image',
-    twitterTitle = title,
-    twitterDescription = description,
-    twitterImage,
-    structuredData
-  } = seoData;
-
-  const metaTags = [
-    `<title>${title}</title>`,
-    `<meta name="description" content="${description}" />`,
-    keywords.length > 0 && `<meta name="keywords" content="${keywords.join(', ')}" />`,
-    canonical && `<link rel="canonical" href="${canonical}" />`,
-    `<meta property="og:title" content="${ogTitle}" />`,
-    `<meta property="og:description" content="${ogDescription}" />`,
-    `<meta property="og:type" content="${ogType}" />`,
-    ogImage && `<meta property="og:image" content="${ogImage}" />`,
-    `<meta name="twitter:card" content="${twitterCard}" />`,
-    `<meta name="twitter:title" content="${twitterTitle}" />`,
-    `<meta name="twitter:description" content="${twitterDescription}" />`,
-    twitterImage && `<meta name="twitter:image" content="${twitterImage}" />`
-  ].filter(Boolean).join('\n');
-
-  const structuredDataScript = structuredData ? 
-    `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>` : '';
-
-  return metaTags + (structuredDataScript ? '\n' + structuredDataScript : '');
-};
-
-// Generate structured data for organization
-export const generateOrganizationStructuredData = (orgData: {
-  name: string;
-  url: string;
-  logo?: string;
-  description?: string;
-  socialProfiles?: string[];
-}) => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: orgData.name,
-    url: orgData.url,
-    ...(orgData.logo && { logo: orgData.logo }),
-    ...(orgData.description && { description: orgData.description }),
-    ...(orgData.socialProfiles && orgData.socialProfiles.length > 0 && {
-      sameAs: orgData.socialProfiles
-    })
-  };
-};
-
-// Generate structured data for website
-export const generateWebsiteStructuredData = (siteData: {
-  name: string;
-  url: string;
-  description?: string;
-  publisher?: string;
-}) => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteData.name,
-    url: siteData.url,
-    ...(siteData.description && { description: siteData.description }),
-    ...(siteData.publisher && { publisher: { '@type': 'Organization', name: siteData.publisher } })
-  };
-};
-
-// Generate structured data for breadcrumbs
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{
-  name: string;
-  url: string;
-}>) => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: breadcrumbs.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url
-    }))
-  };
-};
-
-// Generate structured data for FAQ
-export const generateFAQStructuredData = (faqs: Array<{
-  question: string;
-  answer: string;
-}>) => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
-  };
-};
-
-// Generate sitemap XML
-export const generateSitemap = (pages: Array<{
-  url: string;
-  lastmod?: string;
-  changefreq?: string;
-  priority?: number;
-}>): string => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `<url>
-  <loc>${page.url}</loc>
-  ${page.lastmod ? `<lastmod>${page.lastmod}</lastmod>` : ''}
-  ${page.changefreq ? `<changefreq>${page.changefreq}</changefreq>` : ''}
-  ${page.priority ? `<priority>${page.priority}</priority>` : ''}
-</url>`).join('\n')}
-</urlset>`;
-
-  return sitemap;
-};
-
-// Generate robots.txt
-export const generateRobotsTxt = (options: {
-  allowAll?: boolean;
-  disallowPaths?: string[];
-  sitemapUrl?: string;
-  crawlDelay?: number;
-}): string => {
-  const { allowAll = true, disallowPaths = [], sitemapUrl, crawlDelay } = options;
-
-  let content = '';
+export class SEOOptimizer {
+  private static instance: SEOOptimizer;
   
-  if (allowAll) {
-    content += 'User-agent: *\nAllow: /\n';
-  } else {
-    content += 'User-agent: *\nDisallow: /\n';
+  public static getInstance(): SEOOptimizer {
+    if (!SEOOptimizer.instance) {
+      SEOOptimizer.instance = new SEOOptimizer();
+    }
+    return SEOOptimizer.instance;
   }
 
-  if (disallowPaths.length > 0) {
-    disallowPaths.forEach(path => {
-      content += `Disallow: ${path}\n`;
+  public updateMetaTags(data: SEOData): void {
+    // Update title
+    document.title = data.title;
+    
+    // Update meta description
+    this.updateMetaTag('description', data.description);
+    
+    // Update keywords
+    if (data.keywords) {
+      this.updateMetaTag('keywords', data.keywords.join(', '));
+    }
+    
+    // Update Open Graph tags
+    this.updateOpenGraphTags(data);
+    
+    // Update Twitter Card tags
+    this.updateTwitterCardTags(data);
+    
+    // Update canonical URL
+    if (data.url) {
+      this.updateCanonicalUrl(data.url);
+    }
+    
+    // Update structured data
+    this.updateStructuredData(data);
+  }
+
+  private updateMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  }
+
+  private updateOpenGraphTags(data: SEOData): void {
+    const ogTags = {
+      'og:title': data.title,
+      'og:description': data.description,
+      'og:type': data.type || 'website',
+      'og:url': data.url || window.location.href,
+      'og:image': data.image || '/images/og-default.jpg',
+      'og:site_name': 'Zion Tech Group'
+    };
+
+    Object.entries(ogTags).forEach(([property, content]) => {
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
     });
   }
 
-  if (crawlDelay) {
-    content += `Crawl-delay: ${crawlDelay}\n`;
+  private updateTwitterCardTags(data: SEOData): void {
+    const twitterTags = {
+      'twitter:card': 'summary_large_image',
+      'twitter:title': data.title,
+      'twitter:description': data.description,
+      'twitter:image': data.image || '/images/twitter-default.jpg'
+    };
+
+    Object.entries(twitterTags).forEach(([name, content]) => {
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = name;
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    });
   }
 
-  if (sitemapUrl) {
-    content += `Sitemap: ${sitemapUrl}\n`;
+  private updateCanonicalUrl(url: string): void {
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = url;
   }
 
-  return content;
-};
+  private updateStructuredData(data: SEOData): void {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': data.type === 'article' ? 'Article' : 'WebPage',
+      name: data.title,
+      description: data.description,
+      url: data.url || window.location.href,
+      ...(data.image && { image: data.image }),
+      ...(data.author && { author: { '@type': 'Person', name: data.author } }),
+      ...(data.publishedTime && { datePublished: data.publishedTime }),
+      ...(data.modifiedTime && { dateModified: data.modifiedTime })
+    };
 
-// Validate SEO data
-export const validateSEOData = (seoData: SEOData): { isValid: boolean; errors: string[] } => {
-  const errors: string[] = [];
+    // Remove existing structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
 
-  if (!seoData.title || seoData.title.length === 0) {
-    errors.push('Title is required');
-  } else if (seoData.title.length > 60) {
-    errors.push('Title should be 60 characters or less');
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
   }
 
-  if (!seoData.description || seoData.description.length === 0) {
-    errors.push('Description is required');
-  } else if (seoData.description.length > 160) {
-    errors.push('Description should be 160 characters or less');
+  public generateSitemap(): string {
+    const baseUrl = 'https://ziontechgroup.com';
+    const pages = [
+      { url: '/', priority: '1.0', changefreq: 'daily' },
+      { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+      { url: '/services', priority: '0.9', changefreq: 'weekly' }
+    ];
+
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    pages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    });
+    
+    sitemap += '</urlset>';
+    return sitemap;
   }
+}
 
-  return { isValid: errors.length === 0, errors };
-};
-
-// Generate viewport meta tag
-export const generateViewportMeta = (options: {
-  width?: string;
-  initialScale?: number;
-  maximumScale?: number;
-  userScalable?: boolean;
-}): string => {
-  const {
-    width = 'device-width',
-    initialScale = 1,
-    maximumScale = 5,
-    userScalable = true
-  } = options;
-
-  const content = [
-    `width=${width}`,
-    `initial-scale=${initialScale}`,
-    `maximum-scale=${maximumScale}`,
-    `user-scalable=${userScalable ? 'yes' : 'no'}`
-  ].join(', ');
-
-  return `<meta name="viewport" content="${content}" />`;
-};
+export const seoOptimizer = SEOOptimizer.getInstance();
