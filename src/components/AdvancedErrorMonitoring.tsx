@@ -214,11 +214,11 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Bug className="h-6w-6text-red-600" />
+              <Bug className="h-6 w-6 text-red-600" />
               <span>Advanced Error Monitoring</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className={`w-3h-3rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
+              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-gray-400'}`}</div>
               <span className="text-sm text-gray-600">
                 {isMonitoring ? 'Monitoring' : 'Stopped'}
               </span>
@@ -279,7 +279,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <AlertTriangle className="h-5w-5text-red-600" />
+              <AlertTriangle className="h-5 w-5 text-red-600" />
               <span>Recent Errors</span>
             </CardTitle>
           </CardHeader>
@@ -326,7 +326,7 @@ const AdvancedErrorMonitoring: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Activity className="h-5w-5text-orange-600" />
+              <Activity className="h-5 w-5 text-orange-600" />
               <span>Performance Issues</span>
             </CardTitle>
           </CardHeader>

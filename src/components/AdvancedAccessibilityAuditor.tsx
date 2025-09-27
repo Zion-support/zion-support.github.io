@@ -331,10 +331,10 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       {metrics && (
         <>
           {/* Accessibility Score */}
-          <div className="bg-gradient-to-r from-blue-500to-purple-600rounded-lg p-6text-white mb-6">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white mb-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
+                <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
                   <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
                     {metrics.score}
@@ -396,19 +396,19 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
 
           {/* WCAG Compliance */}
           <div className="mb-6">
-            <h3className="text-lg font-semibold text-gray-900dark:text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
-            <div className="grid grid-cols-1md:grid-cols-3gap-4">
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4" id="wcag-compliance">WCAG Compliance</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-green-500">{metrics.wcagCompliance.levelA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level A</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level A</div>
               </div>
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-blue-500">{metrics.wcagCompliance.levelAA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level AA</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level AA</div>
               </div>
-              <div className="bg-gray-50dark:bg-gray-700rounded-lg p-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                 <div className="text-2xl font-bold text-purple-500">{metrics.wcagCompliance.levelAAA}%</div>
-                <div className="text-sm text-gray-600dark:text-gray-400">Level AAA</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Level AAA</div>
               </div>
             </div>
           </div>
@@ -416,7 +416,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           {/* Issues List */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
-              <h3className="text-lg font-semibold text-gray-900dark:text-white" id="issues-found">Issues Found</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white" id="issues-found">Issues Found</h3>
               <div className="flex space-x-2">
                 <select
                   value={selectedFilter}
@@ -462,10 +462,10 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                             {issue.severity}
                           </span>
                         </div>
-                        <div className="text-sm text-gray-600dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
                           {issue.impact}
                         </div>
-                        <div className="text-sm text-gray-600dark:text-gray-400mb-2">
+                        <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
                           <strong>Help:</strong> {issue.help}
                         </div>
                         <div className="text-xs text-gray-500dark:text-gray-500">

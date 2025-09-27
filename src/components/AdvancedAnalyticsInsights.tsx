@@ -261,9 +261,9 @@ export default function AdvancedAnalyticsInsights({
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'positive': return <TrendingUp className="h-5w-5text-green-600" />;
-      case 'negative': return <TrendingDown className="h-5w-5text-red-600" />;
-      default: return <Activity className="h-5w-5text-blue-600" />;
+      case 'positive': return <TrendingUp className="h-5 w-5 text-green-600" />;
+      case 'negative': return <TrendingDown className="h-5 w-5 text-red-600" />;
+      default: return <Activity className="h-5 w-5 text-blue-600" />;
     }
   };
 
@@ -278,7 +278,7 @@ export default function AdvancedAnalyticsInsights({
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12w-12border-b-2border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
@@ -290,7 +290,7 @@ export default function AdvancedAnalyticsInsights({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
           <p className="text-gray-600">Comprehensive analytics and performance insights</p>
         </div>
         <div className="flex items-center space-x-2">
@@ -312,7 +312,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
-            <Users className="h-4w-4text-muted-foreground" />
+            <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
@@ -325,7 +325,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
-            <Eye className="h-4w-4text-muted-foreground" />
+            <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
@@ -338,7 +338,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Page Views</CardTitle>
-            <MousePointer className="h-4w-4text-muted-foreground" />
+            <MousePointer className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.pageViews)}</div>
@@ -351,7 +351,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <Target className="h-4w-4text-muted-foreground" />
+            <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
