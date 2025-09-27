@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (311 lines) into smaller components
 // TODO: Consider breaking this large component (310 lines) into smaller components
 import React, {useStateuseEffectuseCallback } from 'react";
 import {Zap, Clock, CpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircle   } from "lucide-react";
