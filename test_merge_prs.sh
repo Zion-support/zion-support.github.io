@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# Comprehensive script to merge all open PRs into main branch
-# This script will resolve conflicts and merge all open PRs
-
+# Test script to merge first 3 open PRs into main branch
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
-echo "📊 Processing all open PRs into main branch"
+echo "🧪 Testing PR merge process with first 3 PRs..."
 
 # Create log file
-LOG_FILE="pr_merge_process_$(date +%Y%m%d_%H%M%S).log"
+LOG_FILE="test_pr_merge_$(date +%Y%m%d_%H%M%S).log"
 echo "📝 Logging to: $LOG_FILE"
 
 # Statistics
-TOTAL_PRS=$(wc -l < open_pr_numbers.txt)
+TOTAL_PRS=3
 PROCESSED=0
 MERGED=0
 FAILED=0
@@ -139,7 +136,7 @@ process_pr() {
 }
 
 # Main processing loop
-log "🎯 Starting to process $TOTAL_PRS open PRs..."
+log "🎯 Starting to process $TOTAL_PRS test PRs..."
 
 while IFS= read -r pr_num; do
     if [ -z "$pr_num" ]; then
@@ -159,18 +156,10 @@ while IFS= read -r pr_num; do
     # Small delay to avoid rate limiting
     sleep 2
     
-    # Commit progress every 5 PRs
-    if [ $((PROCESSED % 5)) -eq 0 ]; then
-        log "💾 Committing progress..."
-        git add -A 2>/dev/null || true
-        git commit -m "Progress: processed $PROCESSED/$TOTAL_PRS PRs (merged: $MERGED, failed: $FAILED)" 2>/dev/null || true
-        git push origin main 2>/dev/null || true
-    fi
-    
-done < open_pr_numbers.txt
+done < test_pr_numbers.txt
 
 # Final statistics
-log "🏁 Process completed!"
+log "🏁 Test process completed!"
 log "📊 Final Statistics:"
 log "   Total PRs: $TOTAL_PRS"
 log "   Processed: $PROCESSED"
@@ -178,9 +167,4 @@ log "   Merged: $MERGED"
 log "   Failed: $FAILED"
 log "   Conflicts Resolved: $CONFLICTS_RESOLVED"
 
-# Final commit
-git add -A 2>/dev/null || true
-git commit -m "Complete: processed $PROCESSED/$TOTAL_PRS PRs (merged: $MERGED, failed: $FAILED, conflicts: $CONFLICTS_RESOLVED)" 2>/dev/null || true
-git push origin main 2>/dev/null || true
-
-echo "🎉 PR merge process completed! Check $LOG_FILE for details."
+echo "🎉 Test PR merge process completed! Check $LOG_FILE for details."
