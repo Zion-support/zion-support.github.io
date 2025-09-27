@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
-interface SEOProps {title?: string;
+interface SEOProps {
+  title?: string;
   description?: string;
   canonical?: string;
   ogImage?: string;

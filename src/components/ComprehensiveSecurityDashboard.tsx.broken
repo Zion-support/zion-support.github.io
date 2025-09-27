@@ -19,14 +19,16 @@ import {Shield,
   TrendingUp,
   TrendingDown} from 'lucide-react';
 
-interface SecurityMetrics {overall: {
+interface SecurityMetrics {
+  overall: {
     securityScore: number;
     threatsBlocked: number;
     vulnerabilities: number;
     lastScan: Date;
     complianceStatus: 'compliant' | 'warning' | 'non-compliant';
   };
-  threats: {total: number;
+  threats: {
+    total: number;
     critical: number;
     high: number;
     medium: number;
@@ -41,7 +43,8 @@ interface SecurityMetrics {overall: {
       status: 'active' | 'investigating' | 'resolved';
     }>;
   };
-  vulnerabilities: {total: number;
+  vulnerabilities: {
+    total: number;
     critical: number;
     high: number;
     medium: number;
@@ -56,25 +59,30 @@ interface SecurityMetrics {overall: {
       status: 'open' | 'in-progress' | 'patched';
     }>;
   };
-  compliance: {ssl: {
+  compliance: {
+    ssl: {
       score: number;
       grade: string;
       issues: string[];
     };
-    csp: {enabled: boolean;
+    csp: {
+      enabled: boolean;
       violations: number;
       policies: string[];
     };
-    headers: {security: boolean;
+    headers: {
+      security: boolean;
       xss: boolean;
       frame: boolean;
       contentType: boolean;
     };
-    gdpr: {compliant: boolean;
+    gdpr: {
+      compliant: boolean;
       issues: string[];
     };
   };
-  monitoring: {activeAlerts: number;
+  monitoring: {
+    activeAlerts: number;
     resolvedAlerts: number;
     blockedIPs: number;
     suspiciousActivity: number;
@@ -83,7 +91,8 @@ interface SecurityMetrics {overall: {
   };
 }
 
-interface ComprehensiveSecurityDashboardProps {refreshInterval?: number;
+interface ComprehensiveSecurityDashboardProps {
+  refreshInterval?: number;
   enableRealTimeMonitoring?: boolean;
   onSecurityUpdate?: (metrics: SecurityMetrics) => void;
 }
