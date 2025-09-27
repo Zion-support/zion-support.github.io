@@ -102,5 +102,11 @@ global.PerformanceObserver = jest.fn().mockImplementation(() => ({
   takeRecords: jest.fn().mockReturnValue([])
 }));
 
+// Mock window.scrollTo to prevent test warnings
+Object.defineProperty(window, 'scrollTo', {
+  writable: true,
+  value: jest.fn()
+});
+
 // Setup testing library matchers
 import '@testing-library/jest-dom';
