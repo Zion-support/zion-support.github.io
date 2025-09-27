@@ -32,20 +32,22 @@ describe('Header', () => {
     renderWithRouter(<Header />);
     const hamburgerButton = screen.getByLabelText('Toggle menu');
     
-    // Menu should be closed initially
-    expect(screen.queryByText('Home')).not.toBeVisible();
+    // Mobile menu container should not be visible initially
+    const mobileMenuContainer = screen.queryByText('Home')?.closest('div')?.parentElement;
+    expect(mobileMenuContainer).not.toBeVisible();
     
     // Click to open menu
     fireEvent.click(hamburgerButton);
     
-    // Menu should be open
-    expect(screen.getByText('Home')).toBeVisible();
+    // Mobile menu should be open - check for the mobile nav container
+    const mobileNavContainer = document.querySelector('.md\\:hidden');
+    expect(mobileNavContainer).toBeVisible();
     
     // Click to close menu
     fireEvent.click(hamburgerButton);
     
-    // Menu should be closed again
-    expect(screen.queryByText('Home')).not.toBeVisible();
+    // Mobile menu should be closed again
+    expect(mobileNavContainer).not.toBeVisible();
   });
 
   test('closes mobile menu when navigation link is clicked', () => {
@@ -54,13 +56,17 @@ describe('Header', () => {
     
     // Open menu
     fireEvent.click(hamburgerButton);
-    expect(screen.getByText('Home')).toBeVisible();
+    const mobileNavContainer = document.querySelector('.md\\:hidden');
+    expect(mobileNavContainer).toBeVisible();
     
-    // Click on a navigation link
-    fireEvent.click(screen.getByText('About'));
+    // Click on a navigation link in the mobile menu
+    const mobileAboutLink = screen.getAllByText('About').find(link => 
+      link.closest('nav')?.parentElement?.classList.contains('md:hidden')
+    );
+    fireEvent.click(mobileAboutLink!);
     
     // Menu should be closed
-    expect(screen.queryByText('Home')).not.toBeVisible();
+    expect(mobileNavContainer).not.toBeVisible();
   });
 
   test('has proper accessibility attributes', () => {
