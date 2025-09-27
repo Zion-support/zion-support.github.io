@@ -157,6 +157,26 @@ export default function Home(): JSX.Element {
               </div>
             </div>
           </section>
+
+          {/* CTA Section */}
+          <section className="text-center py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                  Join hundreds of companies that have already revolutionized their operations with our technology solutions.
+                </p>
+                <button 
+                  onClick={() => trackClick('final-cta', 'conversion')}
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  Start Your Journey Today
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </>

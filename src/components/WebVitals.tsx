@@ -1,4 +1,5 @@
 import { NextWebVitalsMetric } from 'next/app';
+import { useEffect } from 'react';
 
 export interface WebVitalsMetric {
   id: string;
@@ -19,4 +20,26 @@ export function reportWebVitals(metric: WebVitalsMetric) {
       non_interaction: true,
     });
   }
+  
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vitals:', metric);
+  }
 }
+
+export function WebVitals() {
+  useEffect(() => {
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
+    });
+  }, []);
+
+  return null;
+}
+
+export default WebVitals;
