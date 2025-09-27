@@ -9,7 +9,7 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityEnhancer } from './utils/securityEnhancements';
+import { securityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -41,8 +41,7 @@ export default function App(): React.JSX.Element {
     // Initialize build optimizations
     initOptimizations();
     
-    // Initialize security features
-    securityManager.initialize();
+    // Security features are automatically initialized in SecurityManager constructor
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -78,49 +77,17 @@ export default function App(): React.JSX.Element {
     analytics.trackPageView();
 
     // Initialize enhanced SEO optimizer
-    seoOptimizer.updateSEO({
+    seoOptimizer.updatePageSEO({
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      ogTitle: seoData.title,
-      ogDescription: seoData.description,
-      ogImage: seoData.ogImage,
-      ogType: seoData.ogType,
-      twitterCard: seoData.twitterCard,
-      twitterTitle: seoData.title,
-      twitterDescription: seoData.description,
-      twitterImage: seoData.ogImage,
-      structuredData: Array.isArray(seoData.structuredData) ? seoData.structuredData[0] : seoData.structuredData
+      image: seoData.ogImage,
+      type: seoData.ogType as 'website' | 'article' | 'product',
+      url: window.location.href
     });
 
     // Initialize enhanced security features
-    securityEnhancer.configure({
-      enableCSP: true,
-      enableHSTS: true,
-      enableClickjackingProtection: true,
-      enableXSSProtection: true,
-      enableContentTypeSniffingProtection: true,
-      allowedOrigins: [
-        window.location.origin,
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://cdn.jsdelivr.net'
-      ],
-      reportUri: '/api/security/reports'
-    });
-
-    // Set up security violation handler
-    securityEnhancer.setViolationHandler((violation) => {
-      console.warn('Security violation detected:', violation);
-      analytics.trackEvent('security_violation', {
-        type: violation.type,
-        source: violation.source,
-        blockedURI: violation.blockedURI
-      });
-      
-      // Show security notification
-      notificationManager.error('Security Violation', `Blocked ${violation.type} from ${violation.source}`);
-    });
+    securityManager.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({
