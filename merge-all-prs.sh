@@ -1,130 +1,46 @@
 #!/bin/bash
 
-# Script to merge all PR branches into main
+# Script to merge all open PRs and resolve conflicts
 set -e
 
-echo "Starting PR merge process..."
+echo "Starting merge process..."
 
-# Get all PR branches
-PR_BRANCHES=$(git branch -r | grep -E "merge-pr-[0-9]+" | sed 's/origin\///' | sort -V)
-
-# Count total PRs
-TOTAL_PRS=$(echo "$PR_BRANCHES" | wc -l)
-echo "Found $TOTAL_PRS PR branches to merge"
-
-# Initialize counters
-MERGED_COUNT=0
-CONFLICT_COUNT=0
-ERROR_COUNT=0
-
-# Function to merge a single PR branch
-merge_pr_branch() {
-    local branch=$1
-    echo "Processing PR branch: $branch"
-    
-    # Checkout the PR branch
-    if ! git checkout "origin/$branch" -b "temp-$branch" 2>/dev/null; then
-        echo "Failed to checkout $branch"
-        return 1
-    fi
-    
-    # Try to merge into main
-    git checkout main
-    
-    if git merge "temp-$branch" --no-edit 2>/dev/null; then
-        echo "✓ Successfully merged $branch"
-        MERGED_COUNT=$((MERGED_COUNT + 1))
-        
-        # Clean up temp branch
-        git branch -D "temp-$branch"
-        return 0
-    else
-        echo "⚠ Merge conflict in $branch"
-        CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
-        
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts in $branch..."
-            
-            # Try to resolve conflicts automatically
-            if resolve_conflicts; then
-                git add -A
-                git commit -m "resolve: merge conflicts in $branch"
-                echo "✓ Resolved conflicts and merged $branch"
-                MERGED_COUNT=$((MERGED_COUNT + 1))
-                CONFLICT_COUNT=$((CONFLICT_COUNT - 1))
-            else
-                echo "✗ Failed to resolve conflicts in $branch"
-                git merge --abort
-                ERROR_COUNT=$((ERROR_COUNT + 1))
-            fi
-        else
-            git merge --abort
-            ERROR_COUNT=$((ERROR_COUNT + 1))
-        fi
-        
-        # Clean up temp branch
-        git branch -D "temp-$branch" 2>/dev/null || true
-        return 1
-    fi
+# First, try to pull the latest changes from main
+echo "Pulling latest changes from main..."
+git pull origin main --no-edit || {
+    echo "Pull failed, trying to resolve conflicts..."
+    git status
+    exit 1
 }
 
-# Function to resolve conflicts automatically
-resolve_conflicts() {
-    # Get conflicted files
-    local conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
-    
-    for file in $conflicted_files; do
+# Check if there are any merge conflicts
+if git diff --name-only --diff-filter=U | grep -q .; then
+    echo "Merge conflicts detected. Resolving..."
+    git diff --name-only --diff-filter=U | while read file; do
         echo "Resolving conflicts in $file"
-        
-        # For package.json conflicts, prefer the version with more dependencies
-        if [[ "$file" == "package.json" ]]; then
-            resolve_package_json_conflict "$file"
-        # For other files, try to merge intelligently
-        else
-            resolve_generic_conflict "$file"
-        fi
+        # Take the remote version for now
+        git checkout --theirs "$file"
+        git add "$file"
     done
-    
-    return 0
-}
+    git commit -m "resolve: merge conflicts resolved by taking remote version"
+fi
 
-# Function to resolve package.json conflicts
-resolve_package_json_conflict() {
-    local file=$1
-    
-    # Use git checkout to prefer the incoming version (from PR)
-    git checkout --theirs "$file"
-    git add "$file"
-}
+# Now try to merge recent branches that might be open PRs
+echo "Looking for recent branches to merge..."
 
-# Function to resolve generic conflicts
-resolve_generic_conflict() {
-    local file=$1
+# Get list of recent branches (excluding main and backup branches)
+git branch -r | grep -v "origin/main" | grep -v "origin/master" | grep -v "aggressive-merge-backup" | head -20 | while read branch; do
+    branch_name=$(echo "$branch" | sed 's/origin\///')
+    echo "Attempting to merge $branch_name..."
     
-    # For most conflicts, prefer the incoming version (from PR)
-    git checkout --theirs "$file"
-    git add "$file"
-}
-
-# Process each PR branch
-echo "$PR_BRANCHES" | while read -r branch; do
-    if [[ -n "$branch" ]]; then
-        merge_pr_branch "$branch"
+    # Try to merge the branch
+    if git merge "$branch" --no-edit 2>/dev/null; then
+        echo "Successfully merged $branch_name"
+    else
+        echo "Failed to merge $branch_name, skipping..."
+        git merge --abort 2>/dev/null || true
     fi
 done
 
-# Final summary
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Total PRs processed: $TOTAL_PRS"
-echo "Successfully merged: $MERGED_COUNT"
-echo "Conflicts encountered: $CONFLICT_COUNT"
-echo "Errors: $ERROR_COUNT"
-
-# Push the updated main branch
-echo ""
-echo "Pushing updated main branch..."
-git push origin main
-
-echo "PR merge process completed!"
+echo "Merge process completed."
+git status
