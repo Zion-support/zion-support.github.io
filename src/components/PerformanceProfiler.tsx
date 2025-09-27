@@ -40,11 +40,6 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
-  // Only render in development mode
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
   const collectPerformanceData = useCallback(() => {
     const now = Date.now();
     
@@ -129,6 +124,11 @@ const PerformanceProfiler: React.FC = () => {
       }
     };
   }, [isProfiling, startProfiling]);
+
+  // Only render in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
   const updateComponentPerformance = (componentName: string, duration: number) => {
     setComponentData(prev => {
