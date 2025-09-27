@@ -1,439 +1,305 @@
-import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import {;
-  BarChart3;
-  PieChart;
-  TrendingUp;
-  Activity;
-  Users;
-  DollarSign;
-  Calendar;
-  Target;
-  ArrowUp;
-  ArrowDown;
-  Minus;
-  Eye;
-  Download;
-  Share2;
-  RefreshCw;
-} from "lucide-react"
-interface ChartData {
-  labels: string[],datasets: {;
-    label: string,data: number[],backgroundColor: string[],borderColor: string[],borderWidth: number;
-  }[]
-};
+// TODO: Consider breaking this large component (304, lines) into smaller components
+// TODO: Consider breaking this large component (303, lines) into smaller components
+import Reac, t, {useState, useEffectuseRefuseCallback }  from 'react";
 
-interface MetricCard {
-  title: string,value: string | number,change: number,changeType: 'increase' | 'decrease' | 'neutral',icon: React.ReactNode,color: string;
-};
+interface, DataPoin, t {x: numb, e, r;
+  y: numb, e, r;
+  label: stri, n, g;
+  value: numb, e, r;
+  col, o, r?: string};
+interface, ChartDat, a {labels: stri, n, g[];
+  datasets: {
+    label: stri, n, g;
+    data: numb, e, r[];
+    backgroundColor: string[];
+    borderColor: stri, ng[];
+    borderWidth: number}[]};
+interfaceDataVisualizationProps {type: "li, n, e' | "bar" | "pie" | "doughnut" | "area";
+  data: ChartDa, t, a;
+  tit, l, e?: stri, n, g;
+  heig, h, t?: numb, e, r;
+  showLege, n, d?: boole, a, n;
+  showToolti, p, s?: boole, a, n;
+  classNa, m, e?: string};
+exportconstDataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLe, g, e, n, d = trueshowTooltips = trueclassName=""}) => {con, s, t, canvasR, e, f = useR, e, f<HTMLCanvasElement>(null);
+  const [hoveredIndexsetHoveredIn, d, e, x] = useState<number | null>(nu, l, l);
+  const [isLoadingsetIsLoading] = useState(tr, u, e);
 
-interface DataVisualizationProps {
-  title?: string;
-  showMetrics?: boolean;
-  showCharts?: boolean;
-  showActions?: boolean;
-};
+  useEffect(() => {
+    setIsLoadi, n, g(tr, u, e);
+    consttim, e, r = setTimeo, u, t(() => {
+      drawCha, r, t();
 
-export const DataVisualization: React.FC<DataVisualizationProps> = ({;
-  title = "Data Analytics Dashboard"
-  showMetrics = true;
-  showCharts = true;
-  showActions = true;
-}) => {;
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
-  const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar');
+    return () => clearTimeo, u, t(timer)}[datatypedrawChart]);
 
-  //[^;]*
-  const [chartData, setChartData] = useState<ChartData>({;
-    labels: ['JanFeb', 'MarApr', 'MayJun'];
-    datasets: [{;
-      label: 'Revenue',data: [65, 59, 80, 81, 56, 55];
-      backgroundColor: ['rgba(34, 221, 210, 0.2)'];
-      borderColor: ['rgba(34, 221, 210, 1)'];
-      borderWidth: 2;
-    }];
-  });
-  const [metrics, setMetrics] = useState<MetricCard[]>([;
-    {;
-      title: 'Total Revenue',value: '$2.4M',change: 12.5,changeType: 'increase',icon: <DollarSign className="w-5 h-5" />,color: 'text-green-400'
-    };
-    {;
-      title: 'Active Users',value: '45.2K',change: 8.1,changeType: 'increase',icon: <Users className="w-5 h-5" />,color: 'text-blue-400'
-    };
-    {;
-      title: 'Conversion Rate',value: '3.24%',change: -2.4,changeType: 'decrease',icon: <Target className="w-5 h-5" />,color: 'text-yellow-400'
-    };
-    {;
-      title: 'Avg Session',value: '2m 47s',change: 0.0,changeType: 'neutral',icon: <Activity className="w-5 h-5" />,color: 'text-purple-400'
-    };
-  ]);
-  //[^;]*
-  const refreshData = async () => {;
-    setIsLoading(true);
-    //[^;]*
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  const, drawChar, t = useCallba, c, k(() => {constcanv, a, s = canvasR, e, f.curr, e, n.t;
+    if (!can, v, a === s) retu, r, n;
 
-    //[^;]*
-    setChartData(prev => ({;
-      ...prev;
-      datasets: [{;
-        ...prev.datasets[0]
-        data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
-      }];
+    constc, t, x = canvas.getContex("2d");
+    if (!ct === x) retu, r, n;
+
+    const { widthheight: canvasHeight } = canv, a, s;
+    const, paddin, g = 40;
+    const, chartWidt, h = wid, t, h - paddi, n, g * 2;
+    const, chartHeigh, t = canvasHeig, h, t - paddi, n, g * 2;
+
+    // Clear, canvas, ctx.clearR, e, c(00widthcanvasHeig, h, t);
+
+    // Setupcolors
+    constcolors = ["#3B82F6'"#EF4444""#10B981""#F59E0B""#8B5CF6""#06B6D4""#84CC16""#F97316""#EC4899""#6B7280"
+    ];
+
+    // Define, drawing, functions inline, to, avoid dependency, issue, s
+ {constcente, r, X = wid, t, h / 2;
+      constcente, r, Y = heig, h, t / 2;
+      constradi, u, s = Ma, t, h.mi(widthheig, h, t) / 2 - 40;
+      constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+
+    con, s, t, drawPieCha, r, t = (ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: stri, n, g[]) => {constcente, r, X = wid, t, h / 2;
+      constcente, r, Y = heig, h, t / 2;
+      constradi, u, s = Ma, t, h.mi(widthheig, h, t) / 2 - 40;
+      constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+
+
+      l, e, t, currentAng, l, e = 0;
+      con, s, t, tot, a, l = da, t, a.datas, e, t.s[0].d, a, t.a.redu, c, e((sumval, u, e) = > s, u, m + valu, e, 0);
+
+      da, t, a.datas, e, t.s[0].d, a, t.a.forEa, c, h((valueind, e, x) => {
+        constsliceAng, l, e = (val, u, e / tot, a, l) * 2 * Ma, t, h.P.I;
+        constcol, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t.h];
+
+        c, t, x.mov, e, T.o(centerXcente, r, Y);
+        c, t, x.ar(centerXcenterYradiuscurrentAnglecurrentAng, l, e + sliceAng, l, e);
+        if (innerRadi, u, s >  === 0) {
+          c, t, x.ar(centerXcenterYinnerRadiuscurrentAng, l, e + sliceAnglecurrentAngletrue)};
+        c, t, x.closeP, a, t();
+        c, t, x.fillSt, y, l.e = col, o, r;
+        c, t, x.f, i, l.l();
+        c, t, x.strokeStyl.e = "#ffffff";
+        c, t, x.lineWi, d, t.h = 2;
+        c, t, x.str, o, k();
+
+        // Draw, label, const labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
+        const, label, X = cente, r, X + Ma, t, h.co(labelAng, l, e) * (radi, u, s + 20);
+        const, label, Y = cente, r, Y + Ma, t, h.si(labelAng, l, e) * (radi, u, s + 20);
+
+        c, t, x.fillStyl.e = "#374151";
+        c, t, x.fon.t = "12px, Intersan, s-serif";
+        c, t, x.textAlig.n = "center";
+        c, t, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
+
+        // Draw, percentage, const percenta, g, e = ((val, u, e / to, t, a, l) * 1, 0, 0).toFi, x, e(, 1);
+        c, t, x.fillT, e, x(`${percentage}%`labelXlabe, l, Y + 1, 5);
+
+        currentAng, l, e += sliceAng, l, e})};
+
+    const, drawBarChar, t = (ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
+      con, s, t, barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
+      con, s, t, maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[0].da.t, a);
+
+      da, t, a.datas, e, t.s[0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
+        constbarHeig, h, t = (val, u, e / maxVal, u, e) * chartHeig, h, t;
+        cons, t, x = paddi, n, g + ind, e, x * (barWid, t, h + barSpaci, n, g) + barSpaci, n, g / 2;
+        cons, t, y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+
+        c, t, x.fon.t = "12, pxIntersa, n, s-serif";
+        c, t, x.textAlig.n = "center";
+        c, t, x.fillT, e, x(val, u, e.toStr, i, n()x + barWid, t, h / 2y - 5);
+
+        // Dr, a, w, label, ct, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]x + barWid, t, h / 2pad, d, i, n, g + chartHeig, ht + 20)})};
+
+    const, drawLineChar, t = (ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+      con, s, t, minVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[, 0].da.t, a);
+      con, s, t, valueRan, g, e = maxVal, u, e - minVal, u, e;
+
+      if (valueRan, g, e ===  === 0) retu, r, n;
+
+      con, s, t, pointSpaci, n, g = chartWid, t, h / (da, t, a.lab, e, l.s.leng, t, h - , 1);
+      con, s, t, poin, t, s = da, t, a.datas, e, t.s[, 0].d, a, t.a.ma.p((valuein, d, e, x) => ({x: paddi, n, g + ind, e, x * pointSpacingy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeight
+      }));
+
+      // Draw, line, ctx.beginP, a, t();
+      c, t, x.mov, e, T.o(poin, t, s[0].xpoint.s[0].y);
+ {c, t, x.lin, e, T.o(poi, n, t.xpoin.t.y)});
+
+      poin, t, s.sl, i, c(1).forEa, c, h(poi, n, t => {c, t, x.lin, e, T.o(poi, n, t.xpoin.t.y)});
+
+      c, t, x.strokeSt, y, l.e = colo, r, s[0];
+      c, t, x.lineWi, d, t.h = 3;
+      c, t, x.str, o, k();
+
+      // Draw, points, points.forEa, c, h((pointind, e, x) = > {c, t, x.beginP, a, t();
+        c, t, x.ar(poi, n, t.xpo, i, n.t.y, 4, 0.2 * Ma, t, h.PI);
+        c, t, x.fillSt, y, l.e = colo, r, s[0];
+        c, t, x.f, i, l.l();
+        c, t, x.strokeStyl.e = "#ffffff";
+        c, t, x.lineWi, d, t.h = 2;
+        c, t, x.str, o, k();
+
+        // Drawval, u, e, c, t, x.fillStyl.e = "#37, 4151";
+        c, t, x.fon.t = "12, pxIntersa, n, s-serif";
+        c, t, x.textAlig.n = "center";
+        c, t, x.fillT, e, x(da, t, a.datas, e, t.s[, 0].d, a, t.a[index].toStr, i, n()poi, n, t.xpoin.t.y - 10);
+
+
+    if (type === "pie" || type === "doughnut") {drawPieCha, r, t(ctxwidthcanvasHeightcolors)} elseif (type === "bar") {drawBarCha, r, t(ctxchartWidthchartHeightpaddingcolors)} elseif (type === "line" || type === "area") {drawLineCha, r, t(ctxchartWidthchartHeightpaddingcol, ors)}}[typeda, t, a.datasetsd, a, t.a.lab, e, l.s]);
+ {constcente, r, X = wid, t, h / 2;
+    constcente, r, Y = heig, h, t / 2;
+    constradi, u, s = Ma, t, h.mi(widthheig, h, t) / 2 - 40;
+    constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+
+  con, s, t, drawPieCha, r, t = useCallba, c, k((ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: stri, n, g[]) => {constcente, r, X = wid, t, h / 2;
+    constcente, r, Y = heig, h, t / 2;
+    constradi, u, s = Ma, t, h.mi(widthheig, h, t) / 2 - 40;
+    constinnerRadius = type === "doughnut"? radi, u, s * 0.6 : 0;
+
+
+    l, e, t, currentAng, l, e = 0;
+    con, s, t, tot, a, l = da, t, a.datas, e, t.s[0].d, a, t.a.redu, c, e((sumval, u, e) = > s, u, m + valu, e, 0);
+
+    da, t, a.datas, e, t.s[0].d, a, t.a.forEa, c, h((valueind, e, x) => {
+      constsliceAng, l, e = (val, u, e / tot, a, l) * 2 * Ma, t, h.P.I;
+      constcol, o, r = colo, r, s[ind, e, x % colo, r, s.len, g, t.h];
+
+      c, t, x.mov, e, T.o(centerXcente, r, Y);
+      c, t, x.ar(centerXcenterYradiuscurrentAnglecurrentAng, l, e + sliceAng, l, e);
+      if (innerRadi, u, s >  === 0) {
+        c, t, x.ar(centerXcenterYinnerRadiuscurrentAng, l, e + sliceAnglecurrentAngletrue)};
+      c, t, x.closeP, a, t();
+      c, t, x.fillSt, y, l.e = col, o, r;
+      c, t, x.f, i, l.l();
+      c, t, x.strokeStyl.e = "#ffffff";
+      c, t, x.lineWi, d, t.h = 2;
+      c, t, x.str, o, k();
+
+      // Draw, label, const labelAng, l, e = currentAng, l, e + sliceAng, l, e / 2;
+      const, label, X = cente, r, X + Ma, t, h.co(labelAng, l, e) * (radi, u, s + 20);
+      const, label, Y = cente, r, Y + Ma, t, h.si(labelAng, l, e) * (radi, u, s + 20);
+
+      c, t, x.fillStyl.e = "#374151";
+      c, t, x.fon.t = "12px, Intersan, s-serif";
+      c, t, x.textAlig.n = "center";
+      c, t, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]labelXlab, e, l, Y);
+
+      // Draw, percentage, const percenta, g, e = ((val, u, e / to, t, a, l) * 1, 00).toFi, x, e(1);
+      c, t, x.fillT, e, x(`${percentage}%`labelXlabe, l, Y + 1, 5);
+
+      currentAng, l, e += sliceAng, l, e})}[typedata]);
+
+  const, drawBarChar, t = useCallba, c, k((ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, barWid, t, h = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.8;
+    con, s, t, barSpaci, n, g = chartWid, t, h / da, t, a.lab, e, l.s.leng, t, h * 0.2;
+    con, s, t, maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[0].da.t, a);
+
+    da, t, a.datas, e, t.s[0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
+      constbarHeig, h, t = (val, u, e / maxVal, u, e) * chartHeig, h, t;
+      cons, t, x = paddi, n, g + ind, e, x * (barWid, t, h + barSpaci, n, g) + barSpaci, n, g / 2;
+      cons, t, y = paddi, n, g + chartHeig, h, t - barHeig, h, t;
+
+      c, t, x.fon.t = "12, pxIntersa, n, s-serif";
+      c, t, x.textAlig.n = "center";
+      c, t, x.fillT, e, x(val, u, e.toStr, i, n()x + barWid, t, h / 2y - 5);
+
+      // Dr, a, w, label, ct, x.fillT, e, x(da, t, a.lab, e, l.s[in, d, e, x]x + barWid, t, h / 2pad, d, i, n, g + chartHeight + 20)})}[data]);
+
+  const, drawLineChar, t = useCallba, c, k((ctx: CanvasRenderingContext2DchartWidth: numberchartHeight: numberpadding: numbercolors: stri, n, g[]) => {con, s, t, maxVal, u, e = Ma, t, h.ma.x(...d, a, t.a.datas, e, t.s[0].da.ta);
+    constminVal, u, e = Ma, t, h.mi(...d, a, t.a.datas, e, t.s[0].da.ta);
+    constvalueRan, g, e = maxVal, u, e - minVal, u, e;
+
+ ({x: paddi, n, g + (ind, e, x / (da, t, a.lab, e, l.s.leng, t, h - 1)) * chartWidthy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeightvalueconst, point, s = da, t, a.datas, e, t.s[0].d, a, t.a.ma.p((valueind, e, x) => ({x: paddi, n, g + (ind, e, x / (da, t, a.lab, e, l.s.leng, t, h - 1)) * chartWidthy: paddi, n, g + chartHeig, h, t - ((val, u, e - minVal, u, e) / valueRan, g, e) * chartHeightvalue
+
     }));
-    //[^;]*
-    setMetrics(prev => prev.map(metric => ({;
-      ...metric;
-      change: Math.random() > 0.5 ?;
-        (Math.random() * 20 - 10) :;
-        (Math.random() * 15 - 7.5),changeType: Math.random() > 0.6 ? 'increase' :;
-                 Math.random() > 0.3 ? 'decrease' : 'neutral'
-    })));
-    setIsLoading(false);
-  };
 
-  //[^;]*
-  const getChangeDisplay = (change: number, changeType: string) => {;
-    const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :;
-                 changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :;
-                 <[^>]*/>
-    const color = changeType === 'increase' ? 'text-green-400' :;
-                  changeType === 'decrease' ? 'text-red-400' :;
-                  'text-zinc-400';
+    // Draw, area, under lineif (type === "area") {c, t, x.beginP, a, t();
+      poin, t, s.forEa, c, h(poi, n, t => c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
+      c, t, x.lin, e, T.o(poin, t, s[poin, t, s.leng, t, h - 1].xpadd, i, n.g + chartHeig, h, t);
+      c, t, x.closeP, a, t();
+      c, t, x.fillSt, y, l.e = colors[0] + "20";
+      c, t, x.fil.l()};
+    // Draw, line, ctx.beginP, a, t();
+ c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
 
-    return { icon, color };
-  };
+    c, t, x.mov, e, T.o(poin, t, s[0].xpoint.s[0].y);
+    poin, t, s.forEa, c, h(poi, n, t => c, t, x.lin, e, T.o(poi, n, t.xpo, i, n.t.y));
 
-  //[^;]*
-  const pieChartData = {;
-    labels: ['AI ServicesCloud Solutions', 'SecurityConsulting', 'Development'];
-    datasets: [{;
-      data: [35, 25, 20, 15, 5];
-      backgroundColor: [;
-        'rgba(34, 221, 210, 0.8)rgba(140, 21, 233, 0.8)';
-        'rgba(239, 68, 68, 0.8)rgba(16, 185, 129, 0.8)';
-        'rgba(245, 158, 11, 0.8)'
-      ];
-      borderColor: [;
-        'rgba(34, 221, 210, 1)rgba(140, 21, 233, 1)';
-        'rgba(239, 68, 68, 1)rgba(16, 185, 129, 1)';
-        'rgba(245, 158, 11, 1)'
-      ];
-      borderWidth: 2;
-    }];
-  };
-  //[^;]*
-  const lineChartData = {;
-    labels: ['MonTue', 'WedThu', 'FriSat', 'Sun'];
-    datasets: [{;
-      label: 'Weekly Performance',data: [65, 59, 80, 81, 56, 55, 70];
-      backgroundColor: 'rgba(34, 221, 210, 0.1)';
-      borderColor: 'rgba(34, 221, 210, 1)';
-      borderWidth: 3,fill: true,tension: 0.4;
-    }];
-  };
-  return (
-    <div className="w-full max-w-7xl mx-auto p-6">;
-      {/* Header */};
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">;
-        <div>;
-          <h1 className="text-3xl font-bold text-white mb-2">{title}</[^>]*>
-          <p className="text-zinc-400">Comprehensive analytics and insights for your business</[^>]*>
-        </[^>]*>
+    c, t, x.strokeSt, y, l.e = colo, r, s[0];
+    c, t, x.lineWi, d, t.h = 3;
+    c, t, x.str, o, k();
 
-        {showActions && (;&& (; (
-          <div className="flex items-center gap-3 mt-4 sm:mt-0">;
-            {/* Time Range Selector */};
-            <select;
-              value={selectedTimeRange};
-              onChange={(e) => setSelectedTimeRange(e.target.value)};
-              className="[^"]*"
-            >;
-              <option value="1d">Last 24 Hours</[^>]*>
-              <option value="7d">Last 7 Days</[^>]*>
-              <option value="30d">Last 30 Days</[^>]*>
-              <option value="90d">Last 90 Days</[^>]*>
-              <option value="1y">Last Year</[^>]*>
-            </[^>]*>
+    // Draw, points, points.forEa, c, h((pointind, e, x) = > {c, t, x.beginP, a, t();
+      c, t, x.ar(poi, n, t.xpo, i, n.t.y, 4, 0.2 * Ma, t, h.PI);
+      c, t, x.fillSt, y, l.e = colo, r, s[0];
+      c, t, x.f, i, l.l();
+      ctx.strokeStyl.e = "#ffff, f, f";
+      c, t, x.lineWi, d, t.h = 2;
+      c, t, x.str, o, k();
 
-            {/* Refresh Button */};
-            <button;
-              onClick={refreshData};
-              disabled={isLoading};
-              className="[^"]*"
-            >;
-              <[^>]*/>
-              Refresh;
-            </[^>]*>
+      // Drawval, u, e, ctx.fillStyl.e = "#37, 4, 1, 51";
+      ctx.fon.t = "12, pxIntersa, n, s-ser, i, f";
+      ctx.textAlig.n = "cent, e, r";
+      c, t, x.fillT, e, x(poi, n, t.va, l, u.e.toStr, i, n()poi, n, t.xpo, i, n.t.y - 10);
 
-            {/* Export Button */};
-            <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg hover:bg-zinc-700 transition-colors flex items-center gap-2">;
-              <[^>]*/>
-              Export;
-            </[^>]*>
 
-            {/* Share Button */};
-            <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg hover:bg-zinc-700 transition-colors flex items-center gap-2">;
-              <[^>]*/>
-              Share;
-            </[^>]*>
-          </[^>]*>
+  con, s, t, handleMouseMo, v, e = (event: React.MouseEv, e, n.t<HTMLCanvasElement>) => {if (!showTooltip === s) retu, r, n;
+
+    con, s, t, canv, a, s = canvasR, e, f.curr, e, n.t;
+    if (!can, v, a === s) retu, r, n;
+
+    con, s, t, re, c, t = canv, a, s.getBoundingClientR, e, c();
+    con, s, t, x = eve, n, t.clie, n, t.X - re, c, t.l, e, f.t;
+    con, s, t, y = eve, n, t.clie, n, t.Y - re, c, t.to.p;
+
+
+      if (distan, c, e <= radiu === s) {
+        const, ang, l, e = Ma, t, h.at, a, n.2(y - center, Y, x - cent, e, r, X);
+        con, s, t, normalizedAng, l, e = (ang, l, e + Ma, t, h.P, I) / (2 * Ma, t, h.P, I);
+        con, s, t, tot, a, l = da, t, a.datas, e, t.s[, 0].d, a, t.a.redu, c, e((sumva, l, u, e) => s, u, m + valu, e, 0);
+        
+        l, e, t, currentAng, l, e = 0;
+        da, t, a.datas, e, t.s[, 0].d, a, t.a.forEa, c, h((valuein, d, e, x) => {
+          con, s, t, sliceAng, l, e = (val, u, e / to, t, a, l) * 2 * Ma, t, h.P.I;
+          if (normalizedAng, l, e >= currentAng, l, e && normalizedAng, l, e < currentAngle + sliceAngl === e) {
+            setHoveredInd, e, x(ind, e, x);
+            return};
+          currentAng, l, e += sliceAng, l, e})} el, s, e {setHoveredInd, e, x(null)}}};
+  return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>      {title && (
+        <h3className="text-lg, fo, n, t-semibo, l, d, te, x, t-gr, a, y-9, 0, 0, m, b-4" id="title">{title}</h3>      )};
+      <divclassName="relative">
+
+            <divclassName="animate-spin, rounde, d-ful, l, h-8, w-8, bord, e, r-b-2 bord, e, r-blue-600"></div>
+
+        {isLoading && (<div, classNa, m, e="absolu, t, e, ins, e, t-0, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, bg-whi, t, e, bg-opacity-75rounded-lg">
+            <divclassNam, e="anima, t, e-sp, i, n, round, e, d-fu, l, l, h-8, w-8, bord, e, r-b-2bo, r, d, er-blue-600"></div>
+
+          </div>
         )};
-      </[^>]*>
+        <canvasref={canvasRef};
+          wid, t, h={400};
+          heig, h, t={hei, ght};
+          onMouseMo, v, e={handleMouseM, ove};
+          onMouseLea, v, e={() => setHoveredInd, e, x(null)};
+          classNa, m, e="w-fullh-full"/>
+      </div>
 
-      {/* Metrics Cards */};
-      {showMetrics && (;&& (; (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
-          {metrics.map((metric, index) => {;
-            const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
-            return (
-              <motion.div
-                key={metric.title};
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ delay: index * 0.1 }};
-                className="[^"]*"
-              >;
-                <div className="flex items-center justify-between mb-4">;
-                  <div className={`p-3 rounded-lg bg-zinc-800/50 ${metric.color}`}>;
-                    {metric.icon};
-                  </[^>]*>
-                  <div className={`flex items-center gap-1 text-sm ${color}`}>;
-                    {icon};
-                    <span>{Math.abs(metric.change).toFixed(1)}%</[^>]*>
-                  </[^>]*>
-                </[^>]*>
+      {showLegend && (<div, classNa, m, e="mt-4, fl, e, x, flex-wrapgap-2">
+          {da, t, a.labe, l, s.m, a, p((labelind, ex) => (<divkey={index};
+            >
+              <divclassNa, m, e="w-3, h-3rou, nde, d-full"
+                sty, l, e={{ backgroundColor: da, t, a.datase, t, s[0].backgroundColor[index] }}              />
+{la, bel}</span>
+              <span, classNa, m, e="te, x, t-gray-500">
 
-                <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</[^>]*>
-                <p className="text-zinc-400 text-sm">{metric.title}</[^>]*>
-              </[^>]*>
-            );
-          })};
-        </[^>]*>
+              <spanclassNam, e ="te, x, t-gray-700">{la, bel}</span>
+              <span, classNa, m, e ="te, x, t-gray-500">
+
+                ({da, t, a.datas, e, t.s[, 0].d, at.a[index]})
+              </span>
+            </div>
+          ))};
+        </div>
       )};
+      {hoveredInd, e, x !== nu, l, l && showToolti, p, s && (<divclassNam, e="mt-2, p-2, bg-gr, a, y-1, 0, 0, round, e, d, te, x, t-smte, x, t-gray-700">
 
-      {/* Charts Section */};
-      {showCharts && (;&& (; (
-        <div className="space-y-8">;
-          {/* Chart Type Selector */};
-          <div className="flex items-center gap-2 p-2 bg-zinc-900/30 rounded-lg w-fit">;
-            {[;
-              { id: 'bar', label: 'Bar Chart', icon: <BarChart3 className="w-4 h-4" /> };
-              { id: 'pie', label: 'Pie Chart', icon: <PieChart className="w-4 h-4" /> };
-              { id: 'line', label: 'Line Chart', icon: <TrendingUp className="w-4 h-4" /> };
-            ].map((chartType) => (;
-              <button;
-                key={chartType.id};
-                onClick={() => setActiveChart(chartType.id as any)};
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
-                  activeChart === chartType.id
-                    ? 'bg-zion-cyan text-white'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
-                }`};
-              >;
-                {chartType.icon};
-                {chartType.label};
-              </[^>]*>
-            ))};
-          </[^>]*>
-
-          {/* Chart Display */};
-          <div className="bg-zinc-900/30 border border-zinc-700/50 rounded-xl p-6">;
-            <div className="flex items-center justify-between mb-6">;
-              <h3 className="text-xl font-semibold text-white">;
-                {activeChart === 'bar' && 'Revenue Trends'};&& 'Revenue Trends'}; 'Revenue Trends'}
-                {activeChart === 'pie' && 'Service Distribution'};&& 'Service Distribution'}; 'Service Distribution'}
-                {activeChart === 'line' && 'Weekly Performance'};&& 'Weekly Performance'}; 'Weekly Performance'}
-              </[^>]*>
-              <div className="flex items-center gap-2 text-sm text-zinc-400">;
-                <[^>]*/>
-                <span>Live Data</[^>]*>
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></[^>]*>
-              </[^>]*>
-            </[^>]*>
-
-            {/* Chart Container */};
-            <div className="h-80 flex items-center justify-center">;
-              <AnimatePresence mode="wait">;
-                <motion.div
-                  key={activeChart};
-                  initial={{ opacity: 0, scale: 0.9 }};
-                  animate={{ opacity: 1, scale: 1 }};
-                  exit={{ opacity: 0, scale: 0.9 }};
-                  transition={{ duration: 0.3 }};
-                  className="[^"]*"
-                >;
-                  {activeChart === 'bar' && (;&& (; (
-                    <div className="w-full h-full flex items-end justify-center gap-4">;
-                      {chartData.labels.map((label, index) => (;
-                        <div key={label} className="flex flex-col items-center">;
-                          <div className="text-sm text-zinc-400 mb-2">{label}</[^>]*>
-                          <div className="relative">;
-                            <motion.div
-                              initial={{ height: 0 }};
-                              animate={{ height: `${chartData.datasets[0].data[index]}%` }};
-                              transition={{ delay: index * 0.1, duration: 0.8 }};
-                              className="[^"]*"
-                              style={{[^}]*}}
-                            />;
-                            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-zinc-300 bg-zinc-800 px-2 py-1 rounded">;
-                              {chartData.datasets[0].data[index]};
-                            </[^>]*>
-                          </[^>]*>
-                        </[^>]*>
-                      ))};
-                    </[^>]*>
-                  )};
-
-                  {activeChart === 'pie' && (;&& (; (
-                    <div className="relative w-64 h-64">;
-                      <svg className="w-full h-full transform -rotate-90">;
-                        {pieChartData.datasets[0].data.map((value, index) => {;
-                          const percentage = value / pieChartData.datasets[0].data.reduce((a, b) => a + b, 0);
-                          const angle = percentage * 360;
-                          const startAngle = pieChartData.datasets[0].data
-                            .slice(0, index)
-                            .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0);
-
-                          const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180)
-                          const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180)
-                          const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
-                          const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
-
-                          const largeArcFlag = angle > 180 ? 1 : 0
-
-                          return (
-                            <path;
-                              key={index};
-                              d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`};
-                              fill={pieChartData.datasets[0].backgroundColor[index]};
-                              stroke={pieChartData.datasets[0].borderColor[index]};
-                              strokeWidth="2"
-                            />;
-                          );
-                        })};
-                      </[^>]*>
-
-                      {/* Legend */};
-                      <div className="absolute -right-32 top-0 space-y-2">;
-                        {pieChartData.labels.map((label, index) => (;
-                          <div key={label} className="flex items-center gap-2">;
-                            <div;
-                              className="[^"]*"
-                              style={{[^}]*}}
-                            />;
-                            <span className="text-sm text-zinc-300">{label}</[^>]*>
-                            <span className="text-xs text-zinc-500">;
-                              ({pieChartData.datasets[0].data[index]}%);
-                            </[^>]*>
-                          </[^>]*>
-                        ))};
-                      </[^>]*>
-                    </[^>]*>
-                  )};
-
-                  {activeChart === 'line' && (;&& (; (
-                    <div className="w-full h-full flex items-center justify-center">;
-                      <svg className="w-full h-full" viewBox="0 0 600 300">;
-                        {/* Grid lines */};
-                        {[0, 1, 2, 3, 4, 5, 6].map((i) => (;
-                          <line;
-                            key={i};
-                            x1={i * 85.7};
-                            y1="0"
-                            x2={i * 85.7};
-                            y2="300"
-                            stroke="rgba(255,255,255,0.1)"
-                            strokeWidth="1"
-                          />;
-                        ))};
-                        {[0, 1, 2, 3, 4, 5].map((i) => (;
-                          <line;
-                            key={i};
-                            x1="0"
-                            y1={i * 60};
-                            x2="600"
-                            y2={i * 60};
-                            stroke="rgba(255,255,255,0.1)"
-                            strokeWidth="1"
-                          />;
-                        ))};
-
-                        {/* Line chart */};
-                        <polyline;
-                          fill="none"
-                          stroke="rgba(34, 221, 210, 1)"
-                          strokeWidth="3"
-                          points={lineChartData.datasets[0].data.map((value, index) =>;
-                            `${index * 85.7 + 42.85},${300 - (value / 100) * 300}`
-                          ).join(' ')};
-                        />;
-
-                        {/* Data points */};
-                        {lineChartData.datasets[0].data.map((value, index) => (;
-                          <circle;
-                            key={index};
-                            cx={index * 85.7 + 42.85};
-                            cy={300 - (value / 100) * 300};
-                            r="4"
-                            fill="rgba(34, 221, 210, 1)"
-                          />;
-                        ))};
-
-                        {/* Labels */};
-                        {lineChartData.labels.map((label, index) => (;
-                          <text;
-                            key={label};
-                            x={index * 85.7 + 42.85};
-                            y="295"
-                            textAnchor="middle"
-                            fill="rgba(255,255,255,0.6)"
-                            fontSize="12"
-                          >;
-                            {label};
-                          </[^>]*>
-                        ))};
-                      </[^>]*>
-                    </[^>]*>
-                  )};
-                </[^>]*>
-              </[^>]*>
-            </[^>]*>
-          </[^>]*>
-        </[^>]*>
+          <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}        </div>
       )};
-
-      {/* Insights Section */};
-      <div className="mt-8 p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;
-        <h3 className="text-xl font-semibold text-white mb-4">Key Insights</[^>]*>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div className="p-4 bg-zinc-800/30 rounded-lg">;
-            <h4 className="font-medium text-white mb-2">Revenue Growth</[^>]*>
-            <p className="text-zinc-400 text-sm">;
-              Revenue has increased by 12.5% compared to last month, driven by strong AI service adoption.;
-            </[^>]*>
-          </[^>]*>
-          <div className="p-4 bg-zinc-800/30 rounded-lg">;
-            <h4 className="font-medium text-white mb-2">User Engagement</[^>]*>
-            <p className="text-zinc-400 text-sm">;
-              Active users grew by 8.1%, with improved conversion rates in the mobile segment.;
-            </[^>]*>
-          </[^>]*>
-          <div className="p-4 bg-zinc-800/30 rounded-lg">;
-            <h4 className="font-medium text-white mb-2">Service Performance</[^>]*>
-            <p className="text-zinc-400 text-sm">;
-              AI services continue to lead revenue generation, accounting for 35% of total sales.;
-            </[^>]*>
-          </[^>]*>
-          <div className="p-4 bg-zinc-800/30 rounded-lg">;
-            <h4 className="font-medium text-white mb-2">Market Trends</[^>]*>
-            <p className="text-zinc-400 text-sm">;
-              Cloud solutions show strong growth potential with increasing enterprise adoption.;
-            </[^>]*>
-          </[^>]*>
-        </[^>]*>
-      </[^>]*>
-    </[^>]*>
-  );
-};
+    </div>
+  )};

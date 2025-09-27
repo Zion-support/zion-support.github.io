@@ -1,10 +1,24 @@
 /** @type {import('jest').Config} */
-const base = require('./jest.config.cjs');
-
 module.exports = {
-  ...base,
-  testMatch: ['**/?(*.)+(smoke).(ts|tsx|js|jsx)'],
-  testPathIgnorePatterns: [...(base.testPathIgnorePatterns || []), '/src/', '/components/'],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  roots: ['<rootDir>/src'],
+  testMatch: [
+    '**/__tests__/**/*.(ts|tsx|js)',
+    '**/*.(test|spec).(ts|tsx|js)'
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+  ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   passWithNoTests: true,
+  verbose: false,
+  silent: true
 };
-
