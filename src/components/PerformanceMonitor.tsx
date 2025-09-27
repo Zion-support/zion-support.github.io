@@ -46,7 +46,8 @@ const PerformanceMonitor: React.FC = () => {
       let fid = null;
       const fidEntries = performance.getEntriesByType('first-input');
       if (fidEntries.length > 0) {
-        fid = fidEntries[0].processingStart - fidEntries[0].startTime;
+        const fidEntry = fidEntries[0] as PerformanceEntry & { processingStart?: number };
+        fid = (fidEntry.processingStart || 0) - fidEntry.startTime;
       }
       
       // Get CLS (simulated)
@@ -65,8 +66,8 @@ const PerformanceMonitor: React.FC = () => {
         fid,
         cls,
         ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.navigationStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart
+        loadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - (navigation as any).navigationStart
       });
     };
 
