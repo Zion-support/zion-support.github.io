@@ -64,22 +64,22 @@ export default function PrivacyPolicy(): JSX.Element {
         <meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="container mx-auto px-4 py-8 max-w-4 xl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-8 max-w-4xl">
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+					<header className="text-centermb-16">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-texttext-transparent">
 							Privacy Policy
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
+						<p className="text-xl text-gray-600 max-w-3xl mx-autoleading-relaxed">
 							Your privacy is important to us. This policy explains how we collect  use  and protect your information.
 						</p>
-			<div className="mt-6 text-sm text-gray-500">
+			<div className="mt-6 text-smtext-gray-500">
 							Last,
 		updated: December 26, 2024
 						</div>
@@ -90,11 +90,11 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-white rounded-3 xl shadow-xl p-8">
-								<h2 className="text-2 xl md:text-3 xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-3 xl shadow-xlp-8">
+								<h2 className="text-2xl md:text-3xl font-bold text-gray-800mb-6">
 									Introduction
 								</h2>
-			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+			<div className="prose prose-lg max-w-none text-gray-600leading-relaxed">
 									<p className="mb-4">
 										Zion App (&quot;we &quot; &quot;our &quot; or &quot;us&quot;) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect  use  disclose  and safeguard your information when you visit our website or use our services.
 									</p>
@@ -113,11 +113,11 @@ export default function PrivacyPolicy(): JSX.Element {
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-			<div className="bg-white rounded-2 xl shadow-lg hover: shadow-xl transition-shadow p-8">
-									<h2 className="text-2 xl, md:text-3 xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-2 xl shadow-lg hover: shadow-xl transition-shadowp-8">
+									<h2 className="text-2xl, md:text-3xl font-bold text-gray-800mb-6">
 										{section.title}
 									</h2>
-			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+			<div className="prose prose-lg max-w-none text-gray-600leading-relaxed">
 										<p>{section.content}</p>
 									</div>
 								</div>
@@ -128,28 +128,28 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-1000 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3 xl p-8 text-white">
-								<h2 className="text-3 xl md: text-4 xl font-bold mb-6">
+			<div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3 xl p-8text-white">
+								<h2 className="text-3xl md: text-4xl font-boldmb-6">
 									Contact Us
 								</h2>
-								<p className="text-xl mb-8 opacity-90">
+								<p className="text-xl mb-8opacity-90">
 									If you have any questions about this Privacy Policy or our data practices  please contact us:
 								</p>
-			<div className="grid grid-cols-1, md:grid-cols-2 gap-6">
+			<div className="grid grid-cols-1, md:grid-cols-2gap-6">
 			<div>
-										<h3 className="text-xl font-semibold mb-3">Email</h3>
+										<h3 className="text-xl font-semiboldmb-3">Email</h3>
 										<p className="opacity-90">privacy@zion.app</p>
 									</div>
 			<div>
-										<h3 className="text-xl font-semibold mb-3">Phone</h3>
+										<h3 className="text-xl font-semiboldmb-3">Phone</h3>
 										<p className="opacity-90">+1 (555) 123-4567</p>
 									</div>
 			<div>
-										<h3 className="text-xl font-semibold mb-3">Address</h3>
+										<h3 className="text-xl font-semiboldmb-3">Address</h3>
 										<p className="opacity-90">123 Tech Avenue<br />Innovation City  CA 90210</p>
 									</div>
 			<div>
-										<h3 className="text-xl font-semibold mb-3">Response Time</h3>
+										<h3 className="text-xl font-semiboldmb-3">Response Time</h3>
 										<p className="opacity-90">We typically respond within 24-48 hours</p>
 									</div>
 								</div>
@@ -160,16 +160,16 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-1100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-white rounded-2 xl shadow-lg p-8">
-								<h2 className="text-2 xl md: text-3 xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-2 xl shadow-lgp-8">
+								<h2 className="text-2xl md: text-3xl font-bold text-gray-800mb-6">
 									Legal Compliance
 								</h2>
-			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+			<div className="prose prose-lg max-w-none text-gray-600leading-relaxed">
 									<p className="mb-4">
 										This Privacy Policy is designed to comply with applicable data protection laws ,
 		including:
 									</p>
-									<ul className="list-disc pl-6 mb-4">
+									<ul className="list-disc pl-6mb-4">
 										<li>General Data Protection Regulation (GDPR)</li>
 										<li>California Consumer Privacy Act (CCPA)</li>
 										<li>Children&apos;s Online Privacy Protection Act (COPPA)</li>
@@ -186,26 +186,26 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`text-center py-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-16 text-white relative overflow-hidden transition-all duration-1000 delay-1200 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="absolute inset-0 opacity-10">
-			<div className="absolute inset-0" style={{
+			<div className="absolute inset-0opacity-10">
+			<div className="absoluteinset-0" style={{
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
-			<div className="relative z-10">
-								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+			<div className="relativez-10">
+								<h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-texttext-transparent">
 									Questions About Privacy?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-lightleading-relaxed">
 									We&apos;re here to help. Contact us for any privacy-related questions or concerns.
 								</p>
-			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
+			<div className="flex flex-col, sm:flex-row gap-6justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-privacy', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1text-lg"
 										>
-											<span className="flex items-center justify-center gap-2">
+											<span className="flex items-center justify-centergap-2">
 												Contact Us
-												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transformduration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
 												</svg>
 											</span>
@@ -214,11 +214,11 @@ export default function PrivacyPolicy(): JSX.Element {
 					<Link href="/faq">
 										<button 
 											onClick={() => trackClick('view-faq-privacy', 'cta')}
-											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1text-lg"
 										>
-											<span className="flex items-center justify-center gap-2">
+											<span className="flex items-center justify-centergap-2">
 												View FAQ
-												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transformduration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 												</svg>
 											</span>

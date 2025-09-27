@@ -13,17 +13,18 @@ export default function Dashboard(): JSX.Element {
 
 	const handleTabChange = (tab: string) => {
 		setActiveTab(tab);
-		trackClick(`dashboard-tab-${tab}`, 'navigation')};
+		trackClick(`dashboard-tab-${tab}`, 'navigation');
+	};
 
 	const renderDashboard = () => {
 		switch (activeTab) {
 			case 'overview':
 				return (
 					<div className="p-8">
-						<div className="flex justify-between items-center mb-8">
-							<h1 className="text-3 xl font-bold text-gray-900">Dashboard Overview</h1>
-							<div className="flex items-center space-x-4">
-								<label className="flex items-center">
+						<div className="flex justify-between items-centermb-8">
+							<h1 className="text-3xl font-boldtext-gray-900">Dashboard Overview</h1>
+							<div className="flex items-centerspace-x-4">
+								<label className="flexitems-center">
 									<input
 										type="checkbox"
 										checked={isRealTime}
@@ -36,60 +37,60 @@ export default function Dashboard(): JSX.Element {
 						</div>
 
 						{/* Stats Cards */}
-						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-							<div className="bg-white rounded-xl shadow-lg p-6">
-								<div className="flex items-center justify-between">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6mb-8">
+							<div className="bg-white rounded-xl shadow-lgp-6">
+								<div className="flex items-centerjustify-between">
 									<div>
-										<p className="text-gray-600 text-sm">Total Users</p>
-										<p className="text-2 xl font-bold text-gray-900">1,234</p>
+										<p className="text-gray-600text-sm">Total Users</p>
+										<p className="text-2xl font-boldtext-gray-900">1,234</p>
 									</div>
-									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-										<span className="text-blue-600 text-xl">👥</span>
+									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-centerjustify-center">
+										<span className="text-blue-600text-xl">👥</span>
 									</div>
 								</div>
 							</div>
 
-							<div className="bg-white rounded-xl shadow-lg p-6">
-								<div className="flex items-center justify-between">
+							<div className="bg-white rounded-xl shadow-lgp-6">
+								<div className="flex items-centerjustify-between">
 									<div>
-										<p className="text-gray-600 text-sm">Active Sessions</p>
-										<p className="text-2 xl font-bold text-gray-900">567</p>
+										<p className="text-gray-600text-sm">Active Sessions</p>
+										<p className="text-2xl font-boldtext-gray-900">567</p>
 									</div>
-									<div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-										<span className="text-green-600 text-xl">🔋</span>
+									<div className="w-12 h-12 bg-green-100 rounded-lg flex items-centerjustify-center">
+										<span className="text-green-600text-xl">🔋</span>
 									</div>
 								</div>
 							</div>
 
-							<div className="bg-white rounded-xl shadow-lg p-6">
-								<div className="flex items-center justify-between">
+							<div className="bg-white rounded-xl shadow-lgp-6">
+								<div className="flex items-centerjustify-between">
 									<div>
-										<p className="text-gray-600 text-sm">Revenue</p>
-										<p className="text-2 xl font-bold text-gray-900">$45.6K</p>
+										<p className="text-gray-600text-sm">Revenue</p>
+										<p className="text-2xl font-boldtext-gray-900">$45.6K</p>
 									</div>
-									<div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-										<span className="text-purple-600 text-xl">💰</span>
+									<div className="w-12 h-12 bg-purple-100 rounded-lg flex items-centerjustify-center">
+										<span className="text-purple-600text-xl">💰</span>
 									</div>
 								</div>
 							</div>
 
-							<div className="bg-white rounded-xl shadow-lg p-6">
-								<div className="flex items-center justify-between">
+							<div className="bg-white rounded-xl shadow-lgp-6">
+								<div className="flex items-centerjustify-between">
 									<div>
-										<p className="text-gray-600 text-sm">Conversion Rate</p>
-										<p className="text-2 xl font-bold text-gray-900">3.2%</p>
+										<p className="text-gray-600text-sm">Conversion Rate</p>
+										<p className="text-2xl font-boldtext-gray-900">3.2%</p>
 									</div>
-									<div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-										<span className="text-orange-600 text-xl">📈</span>
+									<div className="w-12 h-12 bg-orange-100 rounded-lg flex items-centerjustify-center">
+										<span className="text-orange-600text-xl">📈</span>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						{/* Chart Placeholder */}
-						<div className="bg-white rounded-xl shadow-lg p-8">
-							<h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Overview</h3>
-							<div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+						<div className="bg-white rounded-xl shadow-lgp-8">
+							<h3 className="text-lg font-semibold text-gray-900mb-4">Performance Overview</h3>
+							<div className="h-64 bg-gray-100 rounded-lg flex items-centerjustify-center">
 								<p className="text-gray-500">Chart visualization would go here</p>
 							</div>
 						</div>
@@ -99,8 +100,8 @@ export default function Dashboard(): JSX.Element {
 			case 'analytics':
 				return (
 					<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
-						<div className="bg-white rounded-xl shadow-lg p-8">
+						<h1 className="text-3xl font-bold text-gray-900mb-8">Analytics Dashboard</h1>
+						<div className="bg-white rounded-xl shadow-lgp-8">
 							<p className="text-gray-600">Analytics features coming soon...</p>
 						</div>
 					</div>
@@ -109,8 +110,8 @@ export default function Dashboard(): JSX.Element {
 			case 'performance':
 				return (
 					<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Performance Dashboard</h1>
-						<div className="bg-white rounded-xl shadow-lg p-8">
+						<h1 className="text-3xl font-bold text-gray-900mb-8">Performance Dashboard</h1>
+						<div className="bg-white rounded-xl shadow-lgp-8">
 							<p className="text-gray-600">Performance monitoring features coming soon...</p>
 						</div>
 					</div>
@@ -119,12 +120,14 @@ export default function Dashboard(): JSX.Element {
 			default:
 				return (
 					<div className="p-8">
-						<h1 className="text-3 xl font-bold text-gray-900 mb-8">Dashboard</h1>
+						<h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
 						<div className="bg-white rounded-xl shadow-lg p-8">
 							<p className="text-gray-600">Select a tab to view dashboard content.</p>
 						</div>
 					</div>
-				)}
+				);
+			}
+		);
 	};
 
   return (
@@ -135,14 +138,14 @@ export default function Dashboard(): JSX.Element {
         <meta name="description" content="Access your Zion App dashboard for analytics, performance metrics, and system monitoring." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-			<div className="min-h-screen bg-gray-50">
+      <div className="min-h-screenbg-gray-50">
 				{/* Navigation */}
-				<nav className="bg-white shadow-sm border-b">
-					<div className="max-w-7 xl mx-auto px-4">
-						<div className="flex justify-between items-center h-16">
-							<div className="flex items-center space-x-8">
-								<h1 className="text-xl font-bold text-gray-900">Zion Dashboard</h1>
-								<div className="flex space-x-1">
+				<nav className="bg-white shadow-smborder-b">
+					<div className="max-w-7xl mx-autopx-4">
+						<div className="flex justify-between items-centerh-16">
+							<div className="flex items-centerspace-x-8">
+								<h1 className="text-xl font-boldtext-gray-900">Zion Dashboard</h1>
+								<div className="flexspace-x-1">
 									{['overview', 'analytics', 'performance'].map((tab) => (
 										<button
 											key={tab}
@@ -171,17 +174,17 @@ export default function Dashboard(): JSX.Element {
 
  import('../src/components/SecurityMonitor'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // Removed broken component
@@ -196,39 +199,39 @@ export default function Dashboard(): JSX.Element {
 
 // const AdvancedErrorHandler = dynamic(() => import('../src/components/AdvancedErrorHandler'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // const AdvancedPerformanceOptimizer = dynamic(() => import('../src/components/AdvancedPerformanceOptimizer'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 const EnhancedUserExperience = dynamic(() => import('../src/components/EnhancedUserExperience'), {
   ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+  loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 });
 
 // const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/AdvancedAnalyticsInsights'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // const AdvancedErrorMonitoring = dynamic(() => import('../src/components/AdvancedErrorMonitoring'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // Removed broken component
 
 // const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 // const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
 //   ssr: false,
-//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+//   loading: () => <div className="h-64 w-full bg-gray-200 roundedanimate-pulse" />
 // });
 
 type DashboardTab = 'comprehensive' | 'analytics' | 'performance' | 'security' | 'enhanced' | 'search' | 'advanced-analytics' | 'advanced-performance' | 'advanced-security' | 'accessibility' | 'system-monitor' | 'security-enhancements' | 'performance-optimizer' | 'user-experience' | 'error-handler' | 'analytics-insights' | 'error-monitoring' | 'advanced-system-monitor' | 'new-performance' | 'new-security' | 'new-analytics' | 'comprehensive-monitoring' | 'comprehensive-security';
@@ -331,8 +334,8 @@ const Dashboard: React.FC = () => {
       case 'search':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Enhanced Search</h1>
-            <div className="max-w-2 xl">
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Enhanced Search</h1>
+            <div className="max-w-2xl">
               {/* <EnhancedSearch 
                 onSearch={(query, results) => console.log('Search:', query, results)}
                 onResultClick={(result) => console.log('Result clicked:', result)}
@@ -346,10 +349,10 @@ const Dashboard: React.FC = () => {
       case 'advanced-analytics':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Advanced Analytics Dashboard</h1>
+              <div className="flex items-centerspace-x-4">
+                <label className="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
@@ -360,7 +363,7 @@ const Dashboard: React.FC = () => {
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh Data
                 </button>
@@ -375,18 +378,18 @@ const Dashboard: React.FC = () => {
       case 'advanced-performance':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Performance Monitor</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Advanced Performance Monitor</h1>
             {/* <AdvancedPerformanceMonitor 
               onMetricsUpdate={(metrics) => console.log('Performance metrics updated:', metrics)}
               showDashboard={true}
             /> */}
-            <div className="text-center py-8 text-gray-500">Performance Monitor temporarily disabled</div>
+            <div className="text-center py-8text-gray-500">Performance Monitor temporarily disabled</div>
           </div>
         );
       case 'advanced-security':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Security Monitor</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Advanced Security Monitor</h1>
             {/* <AdvancedSecurityMonitor 
               metrics={{
                 totalThreats: 0,
@@ -404,26 +407,26 @@ const Dashboard: React.FC = () => {
               }}
               onThreatDetected={(event) => console.log('Security threat detected:', event)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Security Monitor temporarily disabled</div>
+            <div className="text-center py-8text-gray-500">Security Monitor temporarily disabled</div>
           </div>
         );
       case 'accessibility':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Accessibility Auditor</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Accessibility Auditor</h1>
             {/* <AdvancedAccessibilityAuditor 
               onAuditComplete={(results) => console.log('Accessibility audit complete:', results)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Accessibility Auditor temporarily disabled</div>
+            <div className="text-center py-8text-gray-500">Accessibility Auditor temporarily disabled</div>
           </div>
         );
       case 'system-monitor':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">System Monitor</h1>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">System Monitor</h1>
+              <div className="flex items-centerspace-x-4">
+                <label className="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
@@ -434,7 +437,7 @@ const Dashboard: React.FC = () => {
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -451,18 +454,18 @@ const Dashboard: React.FC = () => {
       case 'security-enhancements':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Security Enhancements</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Advanced Security Enhancements</h1>
             {/* <AdvancedSecurityEnhancements /> */}
-            <div className="text-center py-8 text-gray-500">Security Enhancements temporarily disabled</div>
+            <div className="text-center py-8text-gray-500">Security Enhancements temporarily disabled</div>
           </div>
         );
       case 'new-performance':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Performance Dashboard</h1>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Enhanced Performance Dashboard</h1>
+              <div className="flex items-centerspace-x-4">
+                <label className="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
@@ -473,7 +476,7 @@ const Dashboard: React.FC = () => {
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -485,10 +488,10 @@ const Dashboard: React.FC = () => {
       case 'new-security':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Security Monitor</h1>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Enhanced Security Monitor</h1>
+              <div className="flex items-centerspace-x-4">
+                <label className="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
@@ -499,7 +502,7 @@ const Dashboard: React.FC = () => {
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -515,12 +518,12 @@ const Dashboard: React.FC = () => {
       case 'performance-optimizer':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Performance Optimizer</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -532,10 +535,10 @@ const Dashboard: React.FC = () => {
       case 'new-analytics':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Enhanced Analytics Dashboard</h1>
-              <div className="flex items-center space-x-4">
-                <label className="flex items-center">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Enhanced Analytics Dashboard</h1>
+              <div className="flex items-centerspace-x-4">
+                <label className="flexitems-center">
                   <input
                     type="checkbox"
                     checked={isRealTime}
@@ -546,7 +549,7 @@ const Dashboard: React.FC = () => {
                 </label>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -562,26 +565,26 @@ const Dashboard: React.FC = () => {
       case 'error-monitoring':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced Error Monitoring</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Advanced Error Monitoring</h1>
             {/* <AdvancedErrorMonitoring /> */}
           </div>
         );
       case 'advanced-system-monitor':
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Advanced System Monitor</h1>
+            <h1 className="text-3xl font-bold text-gray-900mb-8">Advanced System Monitor</h1>
             <AdvancedSystemMonitor />
           </div>
         );
       case 'error-handler':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Advanced Error Handler</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Advanced Error Handler</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -601,12 +604,12 @@ const Dashboard: React.FC = () => {
       case 'performance-optimizer':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Performance Optimizer</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Performance Optimizer</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -618,12 +621,12 @@ const Dashboard: React.FC = () => {
       case 'analytics-insights':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Analytics Insights</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Analytics Insights</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -673,18 +676,18 @@ const Dashboard: React.FC = () => {
               refreshInterval={30000}
               onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             /> */}
-            <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
+            <div className="text-center py-8text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
         );
       case 'comprehensive-monitoring':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Comprehensive Monitoring</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Comprehensive Monitoring</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -700,12 +703,12 @@ const Dashboard: React.FC = () => {
       case 'comprehensive-security':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Comprehensive Security</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Comprehensive Security</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -721,12 +724,12 @@ const Dashboard: React.FC = () => {
       case 'error-monitoring':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Advanced Error Monitoring</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Advanced Error Monitoring</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -738,12 +741,12 @@ const Dashboard: React.FC = () => {
       case 'advanced-system-monitor':
         return (
           <div className="p-8">
-            <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Advanced System Monitor</h1>
-              <div className="flex items-center space-x-4">
+            <div className="flex justify-between items-centermb-8">
+              <h1 className="text-3xl font-boldtext-gray-900">Advanced System Monitor</h1>
+              <div className="flex items-centerspace-x-4">
                 <button 
                   onClick={() => window.location.reload()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors"
                 >
                   Refresh
                 </button>
@@ -764,20 +767,20 @@ const Dashboard: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screenbg-gray-50">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b border-gray-200">
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
+        <header className="bg-white shadow-sm border-bborder-gray-200">
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="flex justify-between items-centerpy-6">
               <div>
-                <h1 className="text-2 xl font-bold text-gray-900">Advanced Analytics Dashboard</h1>
-                <p className="text-sm text-gray-600">Comprehensive monitoring with AI-powered insights, performance optimization, security analysis, and SEO recommendations</p>
+                <h1 className="text-2xl font-boldtext-gray-900">Advanced Analytics Dashboard</h1>
+                <p className="text-smtext-gray-600">Comprehensive monitoring with AI-powered insights, performance optimization, security analysis, and SEO recommendations</p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="text-sm text-gray-500">
+              <div className="flex items-centerspace-x-4">
+                <div className="text-smtext-gray-500">
                   Last updated: {new Date().toLocaleString()}
                 </div>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">
                   Refresh Data
                 </button>
               </div>
@@ -786,9 +789,9 @@ const Dashboard: React.FC = () => {
         </header>
 
         {/* Navigation Tabs */}
-        <div className="bg-white border-b border-gray-200">
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex space-x-8">
+        <div className="bg-white border-bborder-gray-200">
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <nav className="flexspace-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -809,11 +812,11 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Dashboard Content */}
-        <main className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative">
+        <main className="max-w-7xl mx-auto px-4sm:px-6lg:px-8 py-8relative">
           {isLoading && (
-            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
-              <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+            <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-centerz-10">
+              <div className="flex items-centerspace-x-2">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2border-blue-600"></div>
                 <span className="text-gray-600">Loading dashboard...</span>
               </div>
             </div>
@@ -822,9 +825,9 @@ const Dashboard: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <footer className="bg-white border-t border-gray-200 mt-12">
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="text-center text-sm text-gray-500">
+        <footer className="bg-white border-t border-gray-200mt-12">
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8py-6">
+            <div className="text-center text-smtext-gray-500">
               <p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
               <p className="mt-1">Dashboard powered by advanced analytics and monitoring systems.</p>
             </div>

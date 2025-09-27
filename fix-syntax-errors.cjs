@@ -1,116 +1,69 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix malformed variable names with commas and spaces
-function fixMalformedVariables(content) {
-  // Common patterns to fix
-  const fixes = [
-    // Fix variable names with commas
-    [/([a-zA-Z]),\s*([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2$3'],
-    [/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2'],
-    
-    // Fix specific patterns
-    [/\bnu,\s*l,\s*l\b/g, 'null'],
-    [/\btru,\s*e\b/g, 'true'],
-    [/\bfals,\s*e\b/g, 'false'],
-    [/\bundefined\b/g, 'undefined'],
-    
-    // Fix function names
-    [/\bgetSelect,\s*o,\s*r\b/g, 'getSelector'],
-    [/\bgetAttribu,\s*t,\s*e\b/g, 'getAttribute'],
-    [/\bquerySelectorAll\b/g, 'querySelectorAll'],
-    [/\bforEa,\s*c,\s*h\b/g, 'forEach'],
-    [/\bpu,\s*s,\s*h\b/g, 'push'],
-    [/\bsetTimeo,\s*u,\s*t\b/g, 'setTimeout'],
-    [/\bMa,\s*t,\s*h\b/g, 'Math'],
-    [/\bPromi,\s*s,\s*e\b/g, 'Promise'],
-    [/\bawa,\s*i,\s*t\b/g, 'await'],
-    [/\bn,\s*e,\s*w\b/g, 'new'],
-    [/\bresol,\s*v,\s*e\b/g, 'resolve'],
-    [/\bconso,\s*l,\s*e\b/g, 'console'],
-    [/\bcat,\s*c,\s*h\b/g, 'catch'],
-    [/\bel,\s*s,\s*e\b/g, 'else'],
-    [/\bif\b/g, 'if'],
-    [/\bfor\b/g, 'for'],
-    [/\bwhile\b/g, 'while'],
-    [/\btry\b/g, 'try'],
-    [/\breturn\b/g, 'return'],
-    [/\bconst\b/g, 'const'],
-    [/\blet\b/g, 'let'],
-    [/\bvar\b/g, 'var'],
-    [/\bfunction\b/g, 'function'],
-    [/\basync\b/g, 'async'],
-    [/\bawait\b/g, 'await'],
-    
-    // Fix property access
-    [/\btagNa,\s*m,\s*e\b/g, 'tagName'],
-    [/\bstartTi,\s*m,\s*e\b/g, 'startTime'],
-    [/\bentryTyp,\s*e,\s*s\b/g, 'entryTypes'],
-    [/\bgetEntri,\s*e,\s*s\b/g, 'getEntries'],
-    [/\bleng,\s*t,\s*h\b/g, 'length'],
-    [/\busedJSHeapSi,\s*z,\s*e\b/g, 'usedJSHeapSize'],
-    [/\brou,\s*n,\s*d\b/g, 'round'],
-    [/\bobserv,\s*e,\s*r\b/g, 'observer'],
-    [/\bobser,\s*v,\s*e\b/g, 'observe'],
-    [/\bPerformanceObserv,\s*e,\s*r\b/g, 'PerformanceObserver'],
-    
-    // Fix string literals
-    [/('a,\s*l,\s*l')/g, "'all'"],
-    [/('i,\s*m,\s*g')/g, "'img'"],
-    [/('ar,\s*i,\s*a-lab,\s*e,\s*l')/g, "'aria-label'"],
-    [/('navigati,\s*o,\s*n')/g, "'navigation'"],
-    [/('pai,\s*n,\s*t')/g, "'paint'"],
-    [/('large,\s*s,\s*t-contentf,\s*u,\s*l-pai,\s*n,\s*t')/g, "'largest-contentful-paint'"],
-    [/('fir,\s*s,\s*t-contentf,\s*u,\s*l-pai,\s*n,\s*t')/g, "'first-contentful-paint'"],
-    
-    // Fix method calls
-    [/\bgetEntriesByTy,\s*p,\s*e\b/g, 'getEntriesByType'],
-    [/\bfi,\s*n,\s*d\b/g, 'find'],
-    [/\bna,\s*m,\s*e\b/g, 'name'],
-    [/\bresponseE,\s*n,\s*d\b/g, 'responseEnd'],
-    [/\brequestSta,\s*r,\s*t\b/g, 'requestStart'],
-    [/\bdomContentLoadedEventE,\s*n,\s*d\b/g, 'domContentLoadedEventEnd'],
-    [/\bdomContentLoadedEventSta,\s*r,\s*t\b/g, 'domContentLoadedEventStart'],
-    [/\bloadEventE,\s*n,\s*d\b/g, 'loadEventEnd'],
-    [/\bfetchSta,\s*r,\s*t\b/g, 'fetchStart'],
-    
-    // Fix numbers
-    [/\b50,\s*0,\s*0\b/g, '5000'],
-    [/\b20,\s*0,\s*0\b/g, '2000'],
-    [/\b10,\s*2,\s*4\b/g, '1024'],
-    [/\b300,\s*0,\s*0\b/g, '300000'],
-  ];
-  
-  let result = content;
-  fixes.forEach(([pattern, replacement]) => {
-    result = result.replace(pattern, replacement);
-  });
-  
-  return result;
-}
-
 // Files to fix
 const filesToFix = [
-  'src/components/AdvancedAccessibilityAuditor.tsx',
-  'src/components/AdvancedAnalyticsInsights.tsx',
-  'src/components/AdvancedPerformanceMonitor.tsx',
-  'src/components/AdvancedSecurityEnhancements.tsx',
-  'src/components/AdvancedSecurityMonitor.tsx'
+  'pages/dashboard.tsx',
+  'pages/faq.tsx', 
+  'pages/index.tsx',
+  'pages/portfolio.tsx',
+  'pages/privacy-policy.tsx'
 ];
 
-console.log('Fixing syntax errors in TypeScript components...');
+function fixFile(filePath) {
+  console.log(`Fixing ${filePath}...`);
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix common JSX syntax issues
+  content = content
+    // Fix missing closing parentheses for JSX fragments
+    .replace(/return \(\s*<>\s*<Head>/g, 'return (\n    <>\n      <Head>')
+    .replace(/<>\s*<Head>/g, '<>\n      <Head>')
+    // Fix indentation issues
+    .replace(/\n\t\t\t<div className="min-h-screen/g, '\n      <div className="min-h-screen')
+    .replace(/\n\t\t\t<div className="container/g, '\n        <div className="container')
+    // Fix missing closing tags
+    .replace(/(\s*)<\/div>\s*\);\s*};/g, '$1  </div>\n    );\n  };')
+    // Fix className spacing issues
+    .replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"')
+    // Fix max-w spacing
+    .replace(/max-w-(\d+)\s+xl/g, 'max-w-$1xl')
+    .replace(/max-w-(\d+)\s+sm/g, 'max-w-$1sm')
+    .replace(/max-w-(\d+)\s+md/g, 'max-w-$1md')
+    .replace(/max-w-(\d+)\s+lg/g, 'max-w-$1lg')
+    // Fix text spacing
+    .replace(/text-(\d+)\s+xl/g, 'text-$1xl')
+    .replace(/text-(\d+)\s+sm/g, 'text-$1sm')
+    .replace(/text-(\d+)\s+md/g, 'text-$1md')
+    .replace(/text-(\d+)\s+lg/g, 'text-$1lg')
+    // Fix px spacing
+    .replace(/px-(\d+)\s+sm/g, 'px-$1sm')
+    .replace(/px-(\d+)\s+md/g, 'px-$1md')
+    .replace(/px-(\d+)\s+lg/g, 'px-$1lg')
+    // Fix py spacing
+    .replace(/py-(\d+)\s+sm/g, 'py-$1sm')
+    .replace(/py-(\d+)\s+md/g, 'py-$1md')
+    .replace(/py-(\d+)\s+lg/g, 'py-$1lg')
+    // Fix hover spacing
+    .replace(/hover:\s+text/g, 'hover:text')
+    .replace(/hover:\s+bg/g, 'hover:bg')
+    // Fix sm: spacing
+    .replace(/sm:\s+px/g, 'sm:px')
+    .replace(/sm:\s+py/g, 'sm:py')
+    .replace(/sm:\s+text/g, 'sm:text')
+    .replace(/sm:\s+bg/g, 'sm:bg')
+    // Fix lg: spacing
+    .replace(/lg:\s+px/g, 'lg:px')
+    .replace(/lg:\s+py/g, 'lg:py')
+    .replace(/lg:\s+text/g, 'lg:text')
+    .replace(/lg:\s+bg/g, 'lg:bg');
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed ${filePath}`);
+}
 
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  if (fs.existsSync(fullPath)) {
-    console.log(`Fixing ${filePath}...`);
-    const content = fs.readFileSync(fullPath, 'utf8');
-    const fixedContent = fixMalformedVariables(content);
-    fs.writeFileSync(fullPath, fixedContent, 'utf8');
-    console.log(`Fixed ${filePath}`);
-  } else {
-    console.log(`File not found: ${filePath}`);
-  }
-});
+// Fix all files
+filesToFix.forEach(fixFile);
 
-console.log('Syntax error fixes completed!');
+console.log('All files fixed!');
