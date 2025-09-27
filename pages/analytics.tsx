@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+// import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load the comprehensive dashboard
 // const ComprehensiveDashboard = dynamic(() => import('../src/components/ComprehensiveDashboard'), {
@@ -24,7 +24,7 @@ export default function AnalyticsPage() {
         <meta name="robots" content="noindex  nofollow" />
       </Head>
       
-      <EnhancedSEO
+      {/* <EnhancedSEO
         title="Analytics Dashboard - Zion Tech Solutions"
         description="Comprehensive website analytics dashboard for performance  accessibility  and SEO monitoring."
         keywords={[
@@ -37,10 +37,11 @@ export default function AnalyticsPage() {
           'web vitals',
           'dashboard'
         ]}
-      />
-			<div className="min-h-screen bg-gray-50 flex items-center justify-center">
-			<div className="text-center">
-          <h1 className="text-2 xl font-bold text-gray-900 mb-4">Analytics Dashboard</h1>
+      /> */}
+      
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h1>
           <p className="text-gray-600">Component temporarily disabled</p>
         </div>
       </div>

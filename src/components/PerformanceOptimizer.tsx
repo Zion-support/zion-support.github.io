@@ -31,10 +31,12 @@ function PerformanceOptimizerComponent({enableServiceWorker = true,
     updateMemoryUsage();
     const interval = setInterval(updateMemoryUsage, 5000);
 
-    return () => clearInterval(interval)}, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
+    return () => clearInterval(interval);
+  }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
 
   return null}
 
 // Export as a dynamic component that only renders on the client side
-export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {ssr: false
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
+  ssr: false
 });

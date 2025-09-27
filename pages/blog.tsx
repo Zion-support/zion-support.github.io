@@ -1,9 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+// // import ErrorBoundary from '../src/components/ErrorBoundary';
+import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
+// import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
+// import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -64,13 +68,14 @@ export default function Blog(): JSX.Element {
 
 	return (
 		<>
-			<SEO />
-			<Head>
-				<title>Blog - Zion Tech Solutions</title>
-				<meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+			{/* <EnhancedSEO
+				title="Blog - Zion Tech Solutions"
+				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
+				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
+				url="https://zion.app/blog"
+				type="website"
+			/> */}
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">

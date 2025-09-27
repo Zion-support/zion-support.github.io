@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+// import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load heavy components
 // const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -13,9 +13,9 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 		loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
-  ssr: false
-});
+// const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
+//   ssr: false
+// });
 
 // const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
 //   ssr: false 
@@ -109,13 +109,12 @@ export default function Home(): JSX.Element {
       description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
       icon: "🛡️",
       color: "blue" as const,
-      delay: 0.4
+		delay: 0.4
     }
   ], []);
-  
   return (
-    <div>
-      <EnhancedSEO
+    <>
+      {/* <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions  cloud infrastructure  and digital transformation services. Transform your business with cutting-edge technology."
         keywords={[
@@ -129,7 +128,7 @@ export default function Home(): JSX.Element {
           'cloud computing',
           'enterprise solutions'
         ]}
-      />
+      /> */}
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
@@ -144,10 +143,10 @@ export default function Home(): JSX.Element {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-			<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl animate-pulse"></div>
-			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+			<div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3 xl animate-pulse"></div>
+			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/5 rounded-full blur-3 xl animate-pulse delay-1000"></div>
           </motion.div>
-			<div className="max-w-7xl mx-auto relative z-10">
+			<div className="max-w-7 xl mx-auto relative z-10">
             <motion.div
               className="text-center"
               initial={{ y: 50, opacity: 0 }}
@@ -155,7 +154,7 @@ export default function Home(): JSX.Element {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.h1 
-                className="text-5xl md: text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                className="text-5 xl md: text-7 xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                 initial={{,
 		scale: 0.8, opacity: 0 }}
                 animate={isHeroInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
@@ -165,7 +164,7 @@ export default function Home(): JSX.Element {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md: text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
+                className="text-xl md: text-2 xl text-gray-600 mb-8 max-w-3 xl mx-auto"
                 initial={{,
 		y: 30, opacity: 0 }}
                 animate={isHeroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
@@ -204,7 +203,7 @@ export default function Home(): JSX.Element {
           ref={featuresRef}
           className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
         >
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-7 xl mx-auto">
             <motion.div 
               className="text-center mb-16"
               initial={{,
@@ -212,8 +211,8 @@ export default function Home(): JSX.Element {
               animate={isFeaturesInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">Why Choose Zion Tech?</h2>
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 We deliver innovative technology solutions that drive business growth and operational excellence.
               </p>
             </motion.div>
@@ -227,7 +226,7 @@ export default function Home(): JSX.Element {
                   whileHover={{ y: -5 }}
                   className="group"
                 >
-			<div className="text-center p-6 rounded-2xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
+			<div className="text-center p-6 rounded-2 xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 h-full">
                     <motion.div 
                       className={`w-20 h-20 bg-gradient-to-br ${
                         feature.color === 'blue' ? 'from-blue-100 to-blue-200' :
@@ -237,9 +236,9 @@ export default function Home(): JSX.Element {
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <span className="text-3xl">{feature.icon}</span>
+                      <span className="text-3 xl">{feature.icon}</span>
                     </motion.div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                    <h3 className="text-2 xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -254,8 +253,8 @@ export default function Home(): JSX.Element {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-			<div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+			<div className="max-w-4 xl mx-auto text-center">
+            <h2 className="text-4 xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -280,9 +279,9 @@ export default function Home(): JSX.Element {
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-50">
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-7 xl mx-auto">
 			<div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <h2 className="text-4 xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-600">
                 Don&apos;t just take our word for it - hear from our satisfied clients.
               </p>
@@ -306,9 +305,9 @@ export default function Home(): JSX.Element {
 
         {/* Advanced Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-900">
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-7 xl mx-auto">
 			<div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Advanced Monitoring & Analytics</h2>
+              <h2 className="text-4 xl font-bold text-white mb-4">Advanced Monitoring & Analytics</h2>
               <p className="text-xl text-gray-300">
                 Real-time performance monitoring  security analysis  and accessibility auditing
               </p>
@@ -434,21 +433,21 @@ export default function Home(): JSX.Element {
         </section>
 
         {/* Performance and Accessibility Components */}
-        <AccessibilityEnhancer />
+        {/* <AccessibilityEnhancer /> */}
         {/* <PerformanceTracker /> */}
 
         {/* Analytics Dashboard Link */}
         <section className="py-16 bg-white">
-			<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+			<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8">
 			<div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3 xl font-bold text-gray-900 mb-4">
                 Monitor Your Website Performance
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Get comprehensive insights into your website&apos;s performance  accessibility  and SEO with our advanced analytics dashboard.
               </p>
 					<Link href="/analytics">
-                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2, focus:ring-blue-500 transition-colors duration-200">
                   <span className="mr-2">📊</span>
                   View Analytics Dashboard
                 </a>
@@ -457,5 +456,8 @@ export default function Home(): JSX.Element {
           </div>
         </section>
       </div>
-    </div>
+
+
+		</>
+
   )}

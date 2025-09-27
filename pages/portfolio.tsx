@@ -78,8 +78,9 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Python', 'React', 'Elasticsearch', 'Kafka', 'Machine Learning'],
 			results: ['99.5% threat detection accuracy', '50% faster incident response', 'SOC2 compliance'],
 			image: '🔒',
-			featured: false,
-			duration: '10 months',
+			featured: false 
+		,
+		duration: '10 months',
 			team: '12 developers'
 		},
 		{
@@ -91,8 +92,9 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Next.js', 'TypeScript', 'PWA', 'WebRTC', 'IndexedDB'],
 			results: ['90% user retention', '60% faster load times', 'Offline functionality'],
 			image: '🎓',
-			featured: false,
-			duration: '7 months',
+			featured: false 
+		,
+		duration: '7 months',
 			team: '9 developers'
 		}
 	];
@@ -113,15 +115,15 @@ export default function Portfolio(): JSX.Element {
 		{ number: '5 Years', label: 'Average Partnership' }
 	];
 
-	return (
-		<div>
-			<Head>
-				<title>Portfolio - Zion App</title>
-				<meta name="description" content="Explore our portfolio of successful projects and case studies across AI  cloud computing  mobile development  and more." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
+  return (
+    <>
+      <Head>
+        <title>Portfolio - Zion App</title>
+        <meta name="description" content="Explore our portfolio of successful projects and case studies across AI, cloud computing, mobile development, and more." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				<div className="container mx-auto px-4 py-8 max-w-7xl">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -360,5 +362,8 @@ export default function Portfolio(): JSX.Element {
 					</main>
 				</div>
 			</div>
-		</div>
+
+
+		</>
+
 	)}
