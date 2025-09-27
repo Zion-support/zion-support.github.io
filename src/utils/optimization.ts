@@ -176,8 +176,12 @@ export class PerformanceOptimizer {
       let clsValue = 0;
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const layoutShiftEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value: number;
+        };
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
         }
       });
       console.log('CLS:', clsValue);
@@ -210,16 +214,28 @@ export class PerformanceOptimizer {
    */
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
+      this.metrics.memoryUsage = memory?.usedJSHeapSize || 0;
       
       // Log memory usage every 30 seconds
       setInterval(() => {
-        const currentMemory = (performance as any).memory;
+        const currentMemory = (performance as Performance & {
+          memory?: {
+            usedJSHeapSize: number;
+            totalJSHeapSize: number;
+            jsHeapSizeLimit: number;
+          };
+        }).memory;
         console.log('Memory usage:', {
-          used: currentMemory.usedJSHeapSize,
-          total: currentMemory.totalJSHeapSize,
-          limit: currentMemory.jsHeapSizeLimit
+          used: currentMemory?.usedJSHeapSize || 0,
+          total: currentMemory?.totalJSHeapSize || 0,
+          limit: currentMemory?.jsHeapSizeLimit || 0
         });
       }, 30000);
     }
