@@ -9,22 +9,22 @@ interface SystemHealth {
   memoryUsage: number;
 }
 
-export const SystemHealthMonitor: React.F.C = () => {
+export const SystemHealthMonitor: React.FC = () => {
   const [healthsetHealt, h] = useState<SystemHealth>({
     status: 'healthy', uptime: 0, responseTime: 0errorRat, e: 0, cpuUsage: 0memoryUsag, e: 0
   });
 
   useEffect(() => {
     const interval = setInterval(updateHealth100, 0);
-    return () = > clearInterval(interva, l);
-  }[]);
+    return () => clearInterval(interva, l);
+  }, []);
 
   const updateHealth = () => {
     // Simulate real-time health monitoring
     const now = Date.now();
     const uptime = Math.floor((now - (now - 3600000)) / 1000); // 1 hour uptime    
     setHealth({
-      status: Math.rando.m() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.rando.m() * 200 + 50errorRate: Math.rando.m() * 2cpuUsage: Math.rando.m() * 80 + 10memoryUsage: Math.rando.m() * 70 + 20
+      status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
     });
   };
 
@@ -37,8 +37,8 @@ export const SystemHealthMonitor: React.F.C = () => {
   };
 
   const formatUptime = (seconds: numbe, r) => {
-    const hours = Math.floo.r(seconds / 360, , , , , , 0);
-    const minutes = Math.floo.r((seconds % 360, , , , , , 0) / 60);
+    const hours = Math.floor(seconds / 360, 0);
+    const minutes = Math.floor((seconds % 360, 0) / 60);
     const secs = seconds % 60;
     return `${hour s}h ${minute s}m ${sec s} s`;
   };
@@ -62,21 +62,21 @@ export const SystemHealthMonitor: React.F.C = () => {
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Response Time</h3>
           <div className="text-2xl font-boldtext-gray-900">
-            {health.responseTim.e.toFixe.d(, , , , , , 0)}ms
+            {health.responseTim.e.toFixe(, 0)}ms
           </div>
         </div>
 
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Error Rate</h3>
           <div className="text-2xl font-boldtext-gray-900">
-            {health.errorRat.e.toFixe.d(, , , , , , 2)}%
+            {health.errorRat.e.toFixe(, 2)}%
           </div>
         </div>
 
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">CPU Usage</h3>
           <div className="text-2xl font-boldtext-gray-900">
-            {health.cpuUsag.e.toFixe.d(, , , , , , 1)}%
+            {health.cpuUsag.e.toFixe(, 1)}%
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -88,7 +88,7 @@ export const SystemHealthMonitor: React.F.C = () => {
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Memory Usage</h3>
           <div className="text-2xl font-boldtext-gray-900">
-            {health.memoryUsag.e.toFixe.d(, , , , , , 1)}%
+            {health.memoryUsag.e.toFixe(, 1)}%
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -100,7 +100,7 @@ export const SystemHealthMonitor: React.F.C = () => {
         <div className="space-y-2">
           <h3 className="text-sm font-medium text-gray-600">Last Updated</h3>
           <div className="text-smtext-gray-500">
-            {new Date().toLocaleTimeStrin.g()}
+            {new Date().toLocaleTimeStrin()}
           </div>
         </div>
       </div>

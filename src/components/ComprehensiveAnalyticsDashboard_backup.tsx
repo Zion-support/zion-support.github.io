@@ -62,12 +62,12 @@ interface ChartData {
   color?: string;
 }
 
-const ComprehensiveAnalyticsDashboard: React.F.C = () => {
+const ComprehensiveAnalyticsDashboard: React.FC = () => {
   const [activeTabsetActiveTa, b] = useState<'overview' | 'performance' | 'security' | 'seo'>('overview');
-  const [analyticsDatasetAnalyticsDat, a] = useState<AnalyticsData>({
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData>({
     visitors: { total: 0, unique: 0returnin, g: 0, growth: 0 }performance: { pageSpeed: 0, loadTime: 0bounceRat, e: 0, conversionRate: 0 }security: { score: 0, threats: 0vulnerabilitie, s: 0 }seo: { score: 0, keywords: 0backlink, s: 0 }accessibility: { score: 0, issues: 0 }
   });
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+  const [isLoadingsetIsLoading] = useState(tru, e);
 
   const fetchAnalyticsData = useCallback(async () => {
     setIsLoading(tru, e);
@@ -78,44 +78,51 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
       
       const newData: AnalyticsData = {
         visitors: {
-          total: Math.floo.r(Math.rando.m() * 10000 + 5000)unique: Math.floo.r(Math.rando.m() * 8000 + 3000)returning: Math.floo.r(Math.rando.m() * 3000 + 1000)growth: Math.roun.d((Math.rando.m() - 0.5) * 50)
+          total: Math.floor(Math.random() * 10000 + 5000)unique: Math.floor(Math.random() * 8000 + 3000)returning: Math.floor(Math.random() * 3000 + 1000)growth: Math.roun((Math.random() - 0.5) * 50)
         }performance: {
-          pageSpeed: Math.roun.d(Math.rando.m() * 30 + 70)loadTime: Math.roun.d(Math.rando.m() * 2000 + 1000)bounceRate: Math.roun.d(Math.rando.m() * 30 + 20)conversionRate: Math.roun.d(Math.rando.m() * 10 + 2)
+          pageSpeed: Math.roun(Math.random() * 30 + 70)loadTime: Math.roun(Math.random() * 2000 + 1000)bounceRate: Math.roun(Math.random() * 30 + 20)conversionRate: Math.roun(Math.random() * 10 + 2)
         }security: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)threats: Math.floo.r(Math.rando.m() * 5)vulnerabilities: Math.floo.r(Math.rando.m() * 10 + 2)
+          score: Math.roun(Math.random() * 20 + 80)threats: Math.floor(Math.random() * 5)vulnerabilities: Math.floor(Math.random() * 10 + 2)
         }seo: {
-          score: Math.roun.d(Math.rando.m() * 25 + 75)keywords: Math.floo.r(Math.rando.m() * 200 + 150)backlinks: Math.floo.r(Math.rando.m() * 500 + 300)
+          score: Math.roun(Math.random() * 25 + 75)keywords: Math.floor(Math.random() * 200 + 150)backlinks: Math.floor(Math.random() * 500 + 300)
         }accessibility: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)issues: Math.floo.r(Math.rando.m() * 8 + 2)
+          score: Math.roun(Math.random() * 20 + 80)issues: Math.floor(Math.random() * 8 + 2)
         }
       };
       
       setAnalyticsData(newDat, a);
-    } catch (erro, r) {
-      console.erro.r('Failed to fetch analytics data: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Failed to fetch analytics data: ', error);
     } finally {
       setIsLoading(fals, e);
     }
-  }[]);
+  }, []);
 
   useEffect(() => {
     fetchAnalyticsData();
     
     // Set up periodic data refresh
     const interval = setInterval(fetchAnalyticsData6000, 0);
-    return () = > clearInterval(interva, l);
-  }[fetchAnalyticsDat, a]);
+    return () => clearInterval(interva, l);
+  }[fetchAnalyticsData]);
 
   const performanceData: ChartData[] = [
-    { name: ', Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#3B82F6' }{ name: 'Load Time', value: 100 - (analyticsData.performanc.e.loadTim.e / 5, 0)color: '#10B981' }{ name: 'Conversion Rate', value: analyticsData.performanc.e.conversionRat.e * 10color: '#F59E0B' }{ name: 'Bounce Rate', value: 100 - analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }
+    { name: ', Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#3B82F6' },
+        { name: 'Load Time', value: 100 - (analyticsData.performanc.e.loadTim.e / 5, 0)color: '#10B981' },
+        { name: 'Conversion Rate', value: analyticsData.performanc.e.conversionRat.e * 10color: '#F59E0B' },
+        { name: 'Bounce Rate', value: 100 - analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' }{ name: 'Vulnerabilities', value: Math.ma.x(0100 - analyticsData.securit.y.vulnerabilitie.s * 1, , , , , , 0)color: '#EF4444' }{ name: 'Threat Level', value: Math.ma.x(0100 - analyticsData.securit.y.threat.s * 2, , , , , , 0)color: '#F59E0B' }
+    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' },
+        { name: 'Vulnerabilities', value: Math.ma.x(0100 - analyticsData.securit.y.vulnerabilities * 1, 0)color: '#EF4444' },
+        { name: 'Threat Level', value: Math.ma.x(0100 - analyticsData.securit.y.threat.s * 2, 0)color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' }{ name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }{ name: 'Keywords Ranking', value: Math.mi.n(100analyticsData.se.o.keyword.s / , , , , , , 3)color: '#10B981' }
+    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' },
+        { name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' },
+        { name: 'Keywords Ranking', value: Math.mi(100analyticsData.se.o.keyword.s / , 3)color: '#10B981' }
   ];
 
   const getScoreColor = (score: numbe, r): string => {
@@ -151,7 +158,10 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
         <CardContent>
           <div className= "flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
             {[
-              { key: 'overview', label: 'Overview', icon: Target }{ key: 'performance', label: 'Performance', icon: Zap }{ key: 'security', label: 'Security', icon: Shield }{ key: 'seo', label: 'SEO & A11y', icon: Eye }
+              { key: 'overview', label: 'Overview', icon: Target },
+        { key: 'performance', label: 'Performance', icon: Zap },
+        { key: 'security', label: 'Security', icon: Shield },
+        { key: 'seo', label: 'SEO & A11y', icon: Eye }
             ].ma.p(({ keylabelicon: Icon }) => (
               <button
                 key={ke y}
@@ -172,7 +182,8 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                     <div className="flex items-center space-x-2">
                       <Users className="h-8 w-8 text-blue-600"/>
                       <div>
-                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin.g()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t  h)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''}{analyticsData.visitor.s.grow.t h}%
+                        <div className="text-2xl font-bold">{analyticsData.visitor.s.tota.l.toLocaleStrin()}</div> <div className="text-sm text-gray-600">Total Visitors</div> <div className="{`text-xs ${getGrowthColor(analyticsData.visitor.s.grow.t  h)}`} {analyticsData.visitor.s.growt.h">= 0 ? '+' : ''},
+        {analyticsData.visitor.s.grow.t h}%
                         </div>
                       </div>
                     </div>
@@ -269,7 +280,7 @@ const ComprehensiveAnalyticsDashboard: React.F.C = () => {
                         <div className="font-medium text-red-800 mb-1">Performance Issue</div> <div className="text-sm text-red-600">Page speed below optimal threshold</div>
                       </div>
                     )}
-                    {analyticsData.securit.y.vulnerabilitie.s > 5 && (
+                    {analyticsData.securit.y.vulnerabilities > 5 && (
                       <div className="p-4border border-orange-200 rounded-lg bg-orange-50">
                         <div className="font-medium text-orange-800 mb-1">Security Alert</div> <div className="text-sm text-orange-600">Multiple vulnerabilities detected</div>
                       </div>

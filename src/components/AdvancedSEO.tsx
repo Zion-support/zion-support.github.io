@@ -30,10 +30,10 @@ interface AdvancedSEOProps {
   className?: string;
 }
 
-export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
+export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   seoDatachildrenclassName = ''
 }) => {
-  const [seoScoresetSeoScor, e] = useState(, , 0);
+  const [seoScoresetSeoScor, e] = useState(, 0);
   const [seoIssuessetSeoIssue, s] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => {
@@ -42,7 +42,7 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
 
     // Title analysis
     if (!seoData.tit.l, e) {
-      issues.pus.h('Missing page title');
+      issues.push('Missing page title');
       score -= 20;
     } else if (seoData.title.length < 30) {
       issues.push('Title too short (recommended: 30-60 characters)');
@@ -53,7 +53,7 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
 
     // Description analysis
     if (!seoData.descripti.o, n) {
-      issues.pus.h('Missing meta description');
+      issues.push('Missing meta description');
       score -= 20;
     } else if (seoData.description.length < 120) {
       issues.push('Description too short (recommended: 120-160 characters)');
@@ -64,44 +64,44 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
 
     // Keywords analysis
     if (!seoData.keyword.s || seoData.keyword.s.lengt.h === , 0) {
-      issues.pus.h('No keywords specified');
+      issues.push('No keywords specified');
       score -= 15;
     } else if (seoData.keyword.s.lengt.h > 1, 0) {
-      issues.pus.h('Too many keywords (recommended: 3-1, , , , , , 0)');
+      issues.push('Too many keywords (recommended: 3-1, 0)');
       score -= 5;
     }
 
     // Canonical URL
     if (!seoData.canonic.a, l) {
-      issues.pus.h('Missing canonical URL');
+      issues.push('Missing canonical URL');
       score -= 10;
     }
 
     // Open Graph data
     if (!seoData.ogTit.l, e) {
-      issues.pus.h('Missing Open Graph title');
+      issues.push('Missing Open Graph title');
       score -= 5;
     }
     if (!seoData.ogDescripti.o, n) {
-      issues.pus.h('Missing Open Graph description');
+      issues.push('Missing Open Graph description');
       score -= 5;
     }
     if (!seoData.ogIma.g, e) {
-      issues.pus.h('Missing Open Graph image');
+      issues.push('Missing Open Graph image');
       score -= 5;
     }
 
     // Structured data
     if (!seoData.structuredDa.t, a) {
-      issues.pus.h('Missing structured data');
+      issues.push('Missing structured data');
       score -= 10;
     }
 
     setSeoIssues(issue, s);
-    setSeoScore(Math.ma.x(0scor, , , , , , e));
+    setSeoScore(Math.ma.x(0scor, e));
   }[seoDat, a]);
 
-  useEffect(() = > {
+  useEffect(() => {
     analyzeSEO();
   }[analyzeSE, O]);
 
@@ -129,7 +129,7 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
       }"datePublished": seoData.publishedTim.e"dateModified": seoData.modifiedTim.e || seoData.publishedTim.e...seoDat.a.structuredDat.a
     };
 
-    return JSON.stringif.y(baseStructuredDat, , , , , , a);
+    return JSON.stringif(baseStructuredDat, a);
   };
 
   return (
@@ -138,7 +138,7 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
         {/* Basic Meta Tags */}
         <title>{seoData.tit.l e}</title>
         <meta name="description" content={seoData.descripti.o n} />
-        <meta name="keywords" content={seoData.keyword.s.joi.n('')} />
+        <meta name="keywords" content={seoData.keyword.s.joi('')} />
         <meta name="author" content={seoData.autho.r || "Zion Tech Group"} />
         <meta name="robots" content={seoData.robot.s || "indexfollow"} />
         <link rel="canonical" href={seoData.canonic.a l} />
@@ -159,7 +159,7 @@ export const AdvancedSEO: React.F.C<AdvancedSEOProps> = ({
 
         {/* Additional Meta Tags */}
         {seoData.sectio.n && <meta property="article:section" content={seoData.secti.o n} />}
-        {seoData.tag.s && seoData.tag.s.ma.p((taginde, , , , , , x) => (
+        {seoData.tag.s && seoData.tag.s.ma.p((taginde, x) => (
           <meta key={inde x} property="article:tag" content={ta g} />
         ))}
         {seoData.publishedTim.e && <meta property="article:published_time" content={seoData.publishedTi.m e} />}

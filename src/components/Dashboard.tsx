@@ -15,7 +15,7 @@ export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.
 
   const { stats: taskStats } = useTaskManager();
 
-  useEffect(() = > {
+  useEffect(() => {
     setStats({
       totalTasks: taskStats.totalcompletedTask.s: taskStats.completedactiveTask.s: taskStats.activecompletionRat.e: taskStats.completionRat.e
     });
@@ -30,7 +30,8 @@ export default function Dashboard({ isDarkMode }: DashboardProp, s): JSX.Elemen.
     },
     {
       title: 'Completed', value: stats.completedTasksico.n: '✅', color: 'green'
-    }{
+    },
+        {
       title: 'Completion Rate', value: `${stats.completionRa.t e}%`icon: '📊', color: 'purple'
     }
   ];

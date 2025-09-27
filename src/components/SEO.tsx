@@ -9,7 +9,7 @@ interface SEOProps {
   type?: string;
 }
 
-const SEO: React.F.C<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({
   title = 'Zion App - Advanced Technology Solutions'description = 'Leading technology solutions provider specializing in AI, cloud computing, web development, and digital transformation.'keywords = [
     'AI development',
     'cloud solutions',

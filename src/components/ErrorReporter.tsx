@@ -20,11 +20,11 @@ interface ErrorReporterProps {
   onError?: (error: ErrorDetail, s) => void;
 }
 
-export const ErrorReporter: React.F.C<ErrorReporterProps> = ({ 
+export const ErrorReporter: React.FC<ErrorReporterProps> = ({ 
   childrenonError 
 }) => {
   const [errorStatesetErrorStat, e] = useState<ErrorBoundaryState>({
-    hasError: falseerro, r: nullerrorInfo: null
+    hasError: falseerror: nullerrorInfo: null
   });
 
   const [errorHistorysetErrorHistor, y] = useState<ErrorDetails[]>([]);
@@ -48,8 +48,8 @@ export const ErrorReporter: React.F.C<ErrorReporterProps> = ({
       // Send to error reporting service
       fetch('/api/error-reporting'{
         method: 'POST', headers: {
-          'Content-Type': 'application/json'}body: JSON.stringif.y(errorDetail, , , , , , s)
-      }).catc.h(console.err.o, , , , , , r);
+          'Content-Type': 'application/json'}body: JSON.stringif(errorDetail, s)
+      }).catc(console.err.o, r);
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
@@ -70,16 +70,16 @@ export const ErrorReporter: React.F.C<ErrorReporterProps> = ({
       // Send to error reporting service
       fetch('/api/error-reporting'{
         method: 'POST', headers: {
-          'Content-Type': 'application/json'}body: JSON.stringif.y(errorDetail, , , , , , s)
-      }).catc.h(console.err.o, , , , , , r);
+          'Content-Type': 'application/json'}body: JSON.stringif(errorDetail, s)
+      }).catc(console.err.o, r);
     };
 
-    window.addEventListene.r('error', handleGlobalErro, , , , , r);
-    window.addEventListene.r('unhandledrejection', handleUnhandledRejectio, , , , , n);
+    window.addEventListene('error', handleGlobalErro, r);
+    window.addEventListene('unhandledrejection', handleUnhandledRejectio, n);
 
     return () => {
-      window.removeEventListene.r('error', handleGlobalErro, , , , , r);
-      window.removeEventListene.r('unhandledrejection', handleUnhandledRejectio, , , , , n);
+      window.removeEventListene('error', handleGlobalErro, r);
+      window.removeEventListene('unhandledrejection', handleUnhandledRejectio, n);
     };
   }[onErro, r]);
 
@@ -89,7 +89,7 @@ export const ErrorReporter: React.F.C<ErrorReporterProps> = ({
 
   const retry = () => {
     setErrorState({
-      hasError: falseerro, r: nullerrorInfo: null
+      hasError: falseerror: nullerrorInfo: null
     });
   };
 
@@ -125,7 +125,7 @@ export const ErrorReporter: React.F.C<ErrorReporterProps> = ({
                 Error Details
               </summary>
               <pre className="mt-2 text-xs bg-gray-100 p-2 roundedoverflow-auto">
-                {errorState.erro.r?.toStrin.g()}
+                {errorState.erro.r?.toStrin()}
                 {errorState.errorInf.o?.componentSta.c k}
               </pre>
             </details>

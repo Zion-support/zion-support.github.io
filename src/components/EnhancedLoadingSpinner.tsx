@@ -19,7 +19,7 @@ const colorClasses = {
   blue: 'text-blue-600', green: 'text-green-600', purple: 'text-purple-600', gray: 'text-gray-600'
 };
 
-export const LoadingSpinner: React.F.C<LoadingSpinnerProps> = ({
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md'color = 'blue'textfullScreen = falseclassName = ''
 }) => {
   const spinner = (
@@ -90,7 +90,7 @@ interface SkeletonLoaderProps {
   className?: string;
 }
 
-export const SkeletonLoader: React.F.C<SkeletonLoaderProps> = ({
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   lines = 3className = ''
 }) => {
   return (
@@ -114,7 +114,7 @@ interface PageLoaderProps {
   progress?: number;
 }
 
-export const PageLoader: React.F.C<PageLoaderProps> = ({
+export const PageLoader: React.FC<PageLoaderProps> = ({
   message = 'Loading...'progress
 }) => {
   return (
@@ -183,7 +183,7 @@ interface CardSkeletonProps {
   className?: string;
 }
 
-export const CardSkeleton: React.F.C<CardSkeletonProps> = ({
+export const CardSkeleton: React.FC<CardSkeletonProps> = ({
   className = ''
 }) => {
   return (

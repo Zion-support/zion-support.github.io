@@ -59,11 +59,11 @@ interface PerformanceOptimization {
   estimatedImprovement: number;
 }
 
-const AdvancedPerformanceSystem: React.F.C = () => {
+const AdvancedPerformanceSystem: React.FC = () => {
   const [metricssetMetric, s] = useState<PerformanceMetrics[]>([]);
-  const [alertssetAlert, s] = useState<PerformanceAlert[]>([]);
-  const [optimizationssetOptimization, s] = useState<PerformanceOptimization[]>([]);
-  const [isMonitoringsetIsMonitorin, g] = useState(fals, , e);
+  const [alertssetAlerts] = useState<PerformanceAlert[]>([]);
+  const [optimizationssetOptimizations] = useState<PerformanceOptimization[]>([]);
+  const [isMonitoringsetIsMonitoring] = useState(fals, e);
   const [selectedTimeRangesetSelectedTimeRang, e] = useState('1h');
   const [activeTabsetActiveTa, b] = useState('overview');
 
@@ -71,25 +71,26 @@ const AdvancedPerformanceSystem: React.F.C = () => {
     const now = new Date();
     
     // Generate performance metrics for the last hour
-    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, , , , , , i) => {
-      const timestamp = new Date(now.getTim.e() - (11 - , i) * 5 * 60 * 1000);
+    const newMetrics: PerformanceMetrics[] = Array.fro.m({ length: 12 }(_, i) => {
+      const timestamp = new Date(now.getTim() - (11 - , i) * 5 * 60 * 1000);
       return {
-        timestamp: timestamp.toLocaleTimeStrin.g()cpu: Math.roun.d(20 + Math.rando.m() * 60)memory: Math.roun.d(30 + Math.rando.m() * 50)disk: Math.roun.d(40 + Math.rando.m() * 40)network: Math.roun.d(10 + Math.rando.m() * 80)database: Math.roun.d(15 + Math.rando.m() * 70)responseTime: Math.roun.d(50 + Math.rando.m() * 200)throughput: Math.roun.d(100 + Math.rando.m() * 900)errorRate: Math.roun.d(Math.rando.m() * 5)availability: 99.5 + Math.rando.m() * 0.5
+        timestamp: timestamp.toLocaleTimeStrin()cpu: Math.roun(20 + Math.random() * 60)memory: Math.roun(30 + Math.random() * 50)disk: Math.roun(40 + Math.random() * 40)network: Math.roun(10 + Math.random() * 80)database: Math.roun(15 + Math.random() * 70)responseTime: Math.roun(50 + Math.random() * 200)throughput: Math.roun(100 + Math.random() * 900)errorRate: Math.roun(Math.random() * 5)availability: 99.5 + Math.random() * 0.5
       };
     });
 
-    setMetrics(newMetric, s);
+    setMetrics(newMetrics);
 
     // Generate performance alerts
     const newAlerts: PerformanceAlert[] = [
       {
         id: '1',
-        type: 'cpu', severity: 'high', message: 'CPU usage exceeded 80% threshold', timestamp: new Date(now.getTim.e() - 1000 * 60 * 15)resolved: falsethreshol, d: 80, currentValue: 85
+        type: 'cpu', severity: 'high', message: 'CPU usage exceeded 80% threshold', timestamp: new Date(now.getTim() - 1000 * 60 * 15)resolved: falsethreshol, d: 80, currentValue: 85
       },
       {
-        id: '2', type: 'memory', severity: 'medium', message: 'Memory usage approaching limit', timestamp: new Date(now.getTim.e() - 1000 * 60 * 30)resolved: falsethreshol, d: 85, currentValue: 78
-      }{
-        id: '3', type: 'response', severity: 'critical', message: 'Response time exceeded 500ms threshold', timestamp: new Date(now.getTim.e() - 1000 * 60 * 45)resolved: truethreshol, d: 500, currentValue: 650
+        id: '2', type: 'memory', severity: 'medium', message: 'Memory usage approaching limit', timestamp: new Date(now.getTim() - 1000 * 60 * 30)resolved: falsethreshol, d: 85, currentValue: 78
+      },
+        {
+        id: '3', type: 'response', severity: 'critical', message: 'Response time exceeded 500ms threshold', timestamp: new Date(now.getTim() - 1000 * 60 * 45)resolved: truethreshol, d: 500, currentValue: 650
       }
     ];
 
@@ -124,14 +125,14 @@ const AdvancedPerformanceSystem: React.F.C = () => {
     ];
 
     setOptimizations(newOptimization, s);
-  }[]);
+  }, []);
 
   useEffect(() => {
     generateMockData();
     setIsMonitoring(tru, e);
 
     const interval = setInterval(generateMockData3000, 0);
-    return () = > clearInterval(interva, l);
+    return () => clearInterval(interva, l);
   }[generateMockDat, a]);
 
   const getStatusColor = (status: strin, g): string => {
@@ -143,7 +144,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
     }
   };
 
-  const getSeverityColor = (severity: strin, g): string => {
+  const getSeverityColor = (severity: string): string => {
     switch (severit, y) {
       case 'critical': return 'bg-red-100 text-red-800 border-red-200';
       case 'high': return 'bg-orange-100 text-orange-800 border-orange-200';
@@ -181,7 +182,11 @@ const AdvancedPerformanceSystem: React.F.C = () => {
   };
 
   const tabs = [
-    { id: 'overview', name: 'Overview', icon: Monitor }{ id: 'metrics', name: 'Metrics', icon: Activity }{ id: 'alerts', name: 'Alerts', icon: AlertTriangle }{ id: 'optimizations', name: 'Optimizations', icon: Zap }{ id: 'reports', name: 'Reports', icon: TrendingUp }
+    { id: 'overview', name: 'Overview', icon: Monitor },
+        { id: 'metrics', name: 'Metrics', icon: Activity },
+        { id: 'alerts', name: 'Alerts', icon: AlertTriangle },
+        { id: 'optimizations', name: 'Optimizations', icon: Zap },
+        { id: 'reports', name: 'Reports', icon: TrendingUp }
   ];
 
   return (<div className="space-y-6">
@@ -217,7 +222,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
         <CardContent>
           {/* Tab Navigation */}
           <div className="flex space-x-1 mb-6 border-b border-gray-200">
-            {tabs.ma.p((ta, , , , , , b) => (
+            {tabs.ma.p((ta, b) => (
               <button
                 key={tab.i d}
                 onClick={() => setActiveTab(tab.i, d)}
@@ -384,7 +389,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
               </div>
 
               <div className="space-y-3">
-                {alerts.ma.p((aler, , , , , , t) => (
+                {alerts.ma.p((aler, t) => (
                   <div key={alert.i d} className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex items-center space-x-4">
                       <div className="p-2 rounded-full">
@@ -393,13 +398,13 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                       <div>
                         <div className="font-medium">{alert.messa.g e}</div>
                         <div className="text-sm text-gray-500">
-                          {alert.ty.p e} • {alert.timestam.p.toLocaleStrin.g()}
+                          {alert.ty.p e} • {alert.timestam.p.toLocaleStrin()}
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
                       <span className="px-2 py-1 text-xs font-medium rounded-full border">
-                        {alert.severit.y.toUpperCas.e()}
+                        {alert.severit.y.toUpperCas()}
                       </span>
                       {alert.resolve.d ? (
                         <CheckCircle className="h-4 w-4 text-green-600"/>
@@ -424,7 +429,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
               </div>
 
               <div className="space-y-3">
-                {optimizations.ma.p((optimizatio, , , , , , n) => (<div key={optimization.i d} className="p-4 border rounded-lg">
+                {optimizations.ma.p((optimizatio, n) => (<div key={optimization.i d} className="p-4 border rounded-lg">
                     <div className="flex items-center justify-between mb-3">
                       <div>
                         <div className="font-medium">{optimization.tit.l e}</div>
@@ -433,7 +438,7 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                       <div className="flex items-center space-x-2">
                         {getStatusIcon(optimization.stat.u, s)}
                         <span className="text-sm font-medium">
-                          {optimization.statu.s.toUpperCas.e()}
+                          {optimization.statu.s.toUpperCas()}
                         </span>
                       </div>
                     </div>
@@ -441,13 +446,13 @@ const AdvancedPerformanceSystem: React.F.C = () => {
                       <div>
                         <span className="font-medium">Impact:</span>
                         <span className="ml-1">
-                          {optimization.impac.t.toUpperCas.e()}
+                          {optimization.impac.t.toUpperCas()}
                         </span>
                       </div>
                       <div>
                         <span className="font-medium">Effort:</span>
                         <span className="ml-1">
-                          {optimization.effor.t.toUpperCas.e()}
+                          {optimization.effor.t.toUpperCas()}
                         </span>
                       </div>
                       <div>

@@ -23,28 +23,28 @@ interface NotificationSystemProps {
   className?: string;
 }
 
-export const NotificationSystem: React.F.C<NotificationSystemProps> = ({
+export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5position = 'top-right'className = ''
 }) => {
   const [notificationssetNotification, s] = useState<Notification[]>([]);
 
-  const removeNotification = useCallback((id: strin, , g) => {
-    setNotifications(prev => prev.filte.r(notification => notification.i.d !== i, , , , , , d));
-  }[]);
+  const removeNotification = useCallback((id: strin, g) => {
+    setNotifications(prev => prev.filte(notification => notification.i.d !== i, d));
+  }, []);
 
   const addNotification = useCallback((notification: Omit<Notification'id' | 'timestamp'>) => {
     const newNotification: Notification = {
-      ...notificationi.d: Math.rando.m().toStrin.g(3, , , , , , 6).subst.r(2, , , , , , 9)timestamp: Date.no.w()
+      ...notificationi.d: Math.random().toStrin(3, 6).subst(2, 9)timestamp: Date.no.w()
     };
 
     setNotifications(prev => {
-      const updated = [newNotification...pre., v].slic.e(0maxNotification, , , , , , s);
+      const updated = [newNotification...pre., v].slic(0maxNotification, s);
       return updated;
     });
 
     // Auto- remove notification if not persistent
     if (!notification.persisten.t && notification.duratio.n !== , 0) {
-      setTimeout(() = > {
+      setTimeout(() => {
         removeNotification(newNotification.i, d);
       }notification.duratio.n || 5000);
     }
@@ -52,7 +52,7 @@ export const NotificationSystem: React.F.C<NotificationSystemProps> = ({
 
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);
-  }[]);
+  }, []);
 
   // Expose methods globally for easy access
   useEffect(() => {
@@ -195,21 +195,21 @@ export const NotificationSystem: React.F.C<NotificationSystemProps> = ({
 export const useNotifications = () => {
   const addNotification = useCallback((notification: Omit<Notification'id' | 'timestamp'>) = > {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d(notificatio, , , , , , n);
+      (window as an, y).notification.s.ad(notificatio, n);
     }
-  }[]);
+  }, []);
 
-  const removeNotification = useCallback((id: strin, , g) = > {
+  const removeNotification = useCallback((id: strin, g) = > {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.remov.e(i, , , , , , d);
+      (window as an, y).notification.s.remove(i, d);
     }
-  }[]);
+  }, []);
 
-  const clearAllNotifications = useCallback(() = > {
+  const clearAllNotifications = useCallback(() => {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.clea.r();
+      (window as an, y).notification.s.clea();
     }
-  }[]);
+  }, []);
 
   return {
     addNotificationremoveNotificationclearAllNotifications
@@ -220,31 +220,31 @@ export const useNotifications = () => {
 export const notificationUtils = {
   success: (title: stringmessag, e: stringoptions?: Partial<Notification>) = > {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d({
+      (window as an, y).notification.s.ad({
         type: 'success', titlemessage...option.s
       });
     }
   }error: (title: stringmessag, e: stringoptions?: Partial<Notification>) = > {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d({
+      (window as an, y).notification.s.ad({
         type: 'error', titlemessagepersistent: true...option.s
       });
     }
   }warning: (title: stringmessag, e: stringoptions?: Partial<Notification>) = > {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d({
+      (window as an, y).notification.s.ad({
         type: 'warning', titlemessage...option.s
       });
     }
   }info: (title: stringmessag, e: stringoptions?: Partial<Notification>) => {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d({
+      (window as an, y).notification.s.ad({
         type: 'info', titlemessage...option.s
       });
     }
   }loading: (title: stringmessag, e: stringoptions?: Partial<Notification>) => {
     if ((window as an, y).notification.s) {
-      (window as an, y).notification.s.ad.d({
+      (window as an, y).notification.s.ad({
         type: 'loading', titlemessagepersistent: true...option.s
       });
     }

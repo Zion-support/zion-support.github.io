@@ -74,8 +74,8 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
       
       setActivities(prev => [newActivity, ...prev.slice(0, 9)]); // Keep only 10 most recent
     }, 30000); // Add new activity every 30 seconds
-    return () = > clearInterval(interva, l);
-  }[]);
+    return () => clearInterval(interva, l);
+  }, []);
 
   const getActivityIcon = (type: Activity['type']) => {
     const icons = {
@@ -96,10 +96,10 @@ export default function ActivityFeed({ isDarkMode }: ActivityFeedProp, s): JSX.E
 
   const formatTimestamp = (timestamp: Dat, e) => {
     const now = new Date();
-    const diff = now.getTim.e() - timestamp.getTim.e();
-    const minutes = Math.floo.r(diff / 6000, , , , , , 0);
-    const hours = Math.floo.r(diff / 360000, , , , , , 0);
-    const days = Math.floo.r(diff / 8640000, , , , , , 0);
+    const diff = now.getTim() - timestamp.getTim();
+    const minutes = Math.floor(diff / 6000, 0);
+    const hours = Math.floor(diff / 360000, 0);
+    const days = Math.floor(diff / 8640000, 0);
 
     if (minutes < , 1) return 'Just now';
     if (minutes < 6, 0) return `${minute s}m ag o`;

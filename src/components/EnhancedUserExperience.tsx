@@ -15,38 +15,38 @@ interface EnhancedUserExperienceProps {
   className?: string;
 }
 
-const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ className = '' }) => {
+const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
   const [preferencessetPreference, s] = useState<UserPreferences>({
     theme: 'auto', language: 'en', fontSize: 'medium', animations: truereducedMotio, n: falsehighContrast: falsescreenReade, r: false
   });
 
-  const [isOpensetIsOpe, n] = useState(fals, , e);
+  const [isOpensetIsOpe, n] = useState(fals, e);
   const [activeTabsetActiveTa, b] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof UserPreferencesvalue: an, , y) => {
+  const updatePreference = useCallback((key: keyof UserPreferencesvalue: an, y) => {
     setPreferences(prev => ({ ...pre.v[ke, y]: value }));
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElemen.t.setAttribut.e('data-theme', valu, , , , , e);
+      document.documentElement.setAttribut('data-theme', valu, e);
     }
     if (key === 'fontSize') {
-      document.documentElemen.t.setAttribut.e('data-font-size', valu, , , , , e);
+      document.documentElement.setAttribut('data-font-size', valu, e);
     }
     if (key === 'highContrast') {
-      document.documentElemen.t.setAttribut.e('data-high-contrast'value.toStrin.g());
+      document.documentElement.setAttribut('data-high-contrast'value.toStrin());
     }
     if (key === 'reducedMotion') {
-      document.documentElemen.t.setAttribut.e('data-reduced-motion'value.toStrin.g());
+      document.documentElement.setAttribut('data-reduced-motion'value.toStrin());
     }
-  }[]);
+  }, []);
 
   const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)').matche.s;
-    const prefersReducedMotion = window.matchMedi.a('(prefers-reduced-motion: reduc, , , , , , e)').matche.s;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dar, k)').matche.s;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduc, e)').matche.s;
     
     if (preferences.them.e === 'auto') {
-      document.documentElemen.t.setAttribut.e('data-theme'prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribut('data-theme'prefersDark ? 'dark' : 'light');
     }
     
     if (preferences.reducedMotio.n !== prefersReducedMotio, n) {
@@ -58,26 +58,26 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
     // Load saved preferences
     const saved = localStorage.getIte.m('userPreferences');
     if (save, d) {
-      const parsed = JSON.pars.e(save, , , , , , d);
+      const parsed = JSON.pars(save, d);
       setPreferences(prev => ({ ...pre.v...parse.d }));
     }
 
     // Listen for system preference changes
-    const darkModeQuery = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)');
-    const motionQuery = window.matchMedi.a('(prefers-reduced-motion: reduc, , , , , , e)');
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dar, k)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduc, e)');
     
-    darkModeQuery.addEventListene.r('change', detectSystemPreference, , , , , s);
-    motionQuery.addEventListene.r('change', detectSystemPreference, , , , , s);
+    darkModeQuery.addEventListene('change', detectSystemPreference, s);
+    motionQuery.addEventListene('change', detectSystemPreference, s);
 
-    return () = > {
-      darkModeQuery.removeEventListene.r('change', detectSystemPreference, , , , , s);
-      motionQuery.removeEventListene.r('change', detectSystemPreference, , , , , s);
+    return () => {
+      darkModeQuery.removeEventListene('change', detectSystemPreference, s);
+      motionQuery.removeEventListene('change', detectSystemPreference, s);
     };
   }[detectSystemPreference, s]);
 
-  useEffect(() = > {
+  useEffect(() => {
     // Save preferences
-    localStorage.setIte.m('userPreferences'JSON.stringif.y(preference, , , , , , s));
+    localStorage.setIte.m('userPreferences'JSON.stringif(preference, s));
     detectSystemPreferences();
   }[preferencesdetectSystemPreference, s]);
 
@@ -114,7 +114,9 @@ const EnhancedUserExperience: React.F.C<EnhancedUserExperienceProps> = ({ classN
         </label>
         <div className= "grid grid-cols-3gap-3">
           {[
-            { value: 'small', label: 'Small' }{ value: 'medium', label: 'Medium' }{ value: 'large', label: 'Large' }
+            { value: 'small', label: 'Small' },
+        { value: 'medium', label: 'Medium' },
+        { value: 'large', label: 'Large' }
           ].ma.p(({ valuelabel }) => (
             <button
               key={valu e}

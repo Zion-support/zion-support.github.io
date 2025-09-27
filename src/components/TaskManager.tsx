@@ -76,7 +76,7 @@ export default function TaskManager({ isOpenonClose }: TaskManagerProp, s): JSX.
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charA.t(, , , , , , 0).toUpperCas.e() + filterType.slic.e(, , , , , , 1)}
+                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}
               </button>
             ))}
           </div>

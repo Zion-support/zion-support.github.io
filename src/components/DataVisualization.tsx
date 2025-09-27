@@ -16,7 +16,7 @@ interface ChartData {
     backgroundColor: string[];
     borderColor: string[];
     borderWidth: number;
-  }[];
+  }, [];
 }
 
 interface DataVisualizationProps {
@@ -29,27 +29,27 @@ interface DataVisualizationProps {
   className?: string;
 }
 
-export const DataVisualization: React.F.C<DataVisualizationProps> = ({
+export const DataVisualization: React.FC<DataVisualizationProps> = ({
   typedatatitleheight = 300showLegend = trueshowTooltips = trueclassName=""}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(nul, l);
-  const [hoveredIndexsetHoveredInde, x] = useState<number | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [hoveredIndexsetHoveredInde, x] = useState<number | null>(null);
+  const [isLoadingsetIsLoading] = useState(tru, e);
 
   useEffect(() => {
     setIsLoading(tru, e);
-    const timer = setTimeout(() = > {
+    const timer = setTimeout(() => {
       drawChart();
       setIsLoading(fals, e);
     }100);
 
-    return () = > clearTimeout(time, r);
+    return () => clearTimeout(time, r);
   }[datatypedrawChar, t]);
 
   const drawChart = useCallback(() => {
     const canvas = canvasRef.curren.t;
     if (!canva, s) return;
 
-    const ctx = canvas.getContex.t('2d');
+    const ctx = canvas.getContex('2d');
     if (!ct, x) return;
 
     const { widthheight: canvasHeight } = canvas;
@@ -58,7 +58,7 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
     const chartHeight = canvasHeight - padding * 2;
 
     // Clear canvas
-    ctx.clearRec.t(00widthcanvasHeigh, , , , , , t);
+    ctx.clearRec(00widthcanvasHeigh, t);
 
     // Set up colors
     const colors = [
@@ -69,43 +69,43 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
     const drawPieChart = (ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolor, s: string[]) => {
       const centerX = width / 2;
       const centerY = height / 2;
-      const radius = Math.mi.n(widthheigh, , , , , , t) / 2 - 40;
+      const radius = Math.mi(widthheigh, t) / 2 - 40;
       const innerRadius = type === 'doughnut' ? radius * 0.6 : 0;
 
       let currentAngle = 0;
-      const total = data.dataset.s[, 0].dat.a.reduc.e((sumvalu, , , , , , e) = > sum + value0);
+      const total = data.dataset.s[, 0].dat.a.reduce((sumvalu, e) = > sum + value0);
 
-      data.dataset.s[, 0].dat.a.forEac.h((valueinde, , , , , , x) => {
+      data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
         const sliceAngle = (value / tota, l) * 2 * Math.P.I;
         const color = colors[index % colors.lengt., h];
 
         // Draw slice
-        ctx.beginPat.h();
-        ctx.moveT.o(centerXcenter, , , , , , Y);
-        ctx.ar.c(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngl, , , , , , e);
+        ctx.beginPat();
+        ctx.moveT.o(centerXcenter, Y);
+        ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngl, e);
         if (innerRadius > , 0) {
-          ctx.ar.c(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletru, , , , , , e);
+          ctx.ar(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletru, e);
         }
-        ctx.closePat.h();
+        ctx.closePat();
         ctx.fillStyl.e = color;
         ctx.fil.l();
         ctx.strokeStyl.e = '#ffffff';
         ctx.lineWidt.h = 2;
-        ctx.strok.e();
+        ctx.strok();
 
         // Draw label
         const labelAngle = currentAngle + sliceAngle / 2;
-        const labelX = centerX + Math.co.s(labelAngl, , , , , , e) * (radius + 2, 0);
-        const labelY = centerY + Math.si.n(labelAngl, , , , , , e) * (radius + 2, 0);
+        const labelX = centerX + Math.co(labelAngl, e) * (radius + 2, 0);
+        const labelY = centerY + Math.si(labelAngl, e) * (radius + 2, 0);
 
         ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12px Intersans-serif';
         ctx.textAlig.n = 'center';
-        ctx.fillTex.t(data.label.s[inde, x]labelXlabel, , , , , , Y);
+        ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
 
         // Draw percentage
-        const percentage = ((value / tota, l) * 100).toFixe.d(, , , , , , 1);
-        ctx.fillTex.t(`${percentag e}%`labelXlabelY + 1, , , , , , 5);
+        const percentage = ((value / tota, l) * 100).toFixe(, 1);
+        ctx.fillTex(`${percentag e}%`labelXlabelY + 1, 5);
 
         currentAngle += sliceAngle;
       });
@@ -114,68 +114,68 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
     const drawBarChart = (ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {
       const barWidth = chartWidth / data.label.s.lengt.h * 0.8;
       const barSpacing = chartWidth / data.label.s.lengt.h * 0.2;
-      const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, , , , , , a);
+      const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, a);
 
-      data.dataset.s[, 0].dat.a.forEac.h((valueinde, , , , , , x) => {
+      data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
         const barHeight = (value / maxValu, e) * chartHeight;
         const x = padding + index * (barWidth + barSpacin, g) + barSpacing / 2;
         const y = padding + chartHeight - barHeight;
 
         // Draw bar
         ctx.fillStyl.e = colors[index % colors.lengt., h];
-        ctx.fillRec.t(xybarWidthbarHeigh, , , , , , t);
+        ctx.fillRec(xybarWidthbarHeigh, t);
 
         // Draw value on top
         ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12px Intersans-serif';
         ctx.textAlig.n = 'center';
-        ctx.fillTex.t(value.toStrin.g()x + barWidth / 2y - 5);
+        ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
 
         // Draw label
-        ctx.fillTex.t(data.label.s[inde, x]x + barWidth / 2padding + chartHeight + 2, , , , , , 0);
+        ctx.fillTex(data.label.s[inde, x]x + barWidth / 2padding + chartHeight + 2, 0);
       });
     };
 
     const drawLineChart = (ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {
-      const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, , , , , , a);
-      const minValue = Math.mi.n(...dat.a.dataset.s[, 0].da.t, , , , , , a);
+      const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, a);
+      const minValue = Math.mi(...dat.a.dataset.s[, 0].da.t, a);
       const valueRange = maxValue - minValue;
 
       if (valueRange === , 0) return;
 
       const pointSpacing = chartWidth / (data.label.s.lengt.h - , 1);
-      const points = data.dataset.s[, 0].dat.a.ma.p((valueinde, , , , , , x) => ({
+      const points = data.dataset.s[, 0].dat.a.ma.p((valueinde, x) => ({
         x: padding + index * pointSpacingy: padding + chartHeight - ((value - minValu, e) / valueRange) * chartHeight
       }));
 
       // Draw line
-      ctx.beginPat.h();
-      ctx.moveT.o(points[, 0].xpoint.s[, 0]., , , , , , y);
-      points.slic.e(, , , , , , 1).forEac.h(point => {
-        ctx.lineT.o(point.xpoin.t., , , , , , y);
+      ctx.beginPat();
+      ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
+      points.slic(, 1).forEach(point => {
+        ctx.lineT.o(point.xpoin.t., y);
       });
       ctx.strokeStyl.e = colors[, 0];
       ctx.lineWidt.h = 3;
-      ctx.strok.e();
+      ctx.strok();
 
       // Draw points
-      points.forEac.h((pointinde, , , , , , x) = > {
-        ctx.beginPat.h();
-        ctx.ar.c(point.xpoin.t.y40.2 * Math.P, , , , , , I);
+      points.forEach((pointinde, x) = > {
+        ctx.beginPat();
+        ctx.ar(point.xpoin.t.y40.2 * Math.P, I);
         ctx.fillStyl.e = colors[, 0];
         ctx.fil.l();
         ctx.strokeStyl.e = '#ffffff';
         ctx.lineWidt.h = 2;
-        ctx.strok.e();
+        ctx.strok();
 
         // Draw value
         ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12px Intersans-serif';
         ctx.textAlig.n = 'center';
-        ctx.fillTex.t(data.dataset.s[, 0].dat.a[inde, x].toStrin.g()point.xpoin.t.y - 10);
+        ctx.fillTex(data.dataset.s[, 0].dat.a[inde, x].toStrin()point.xpoin.t.y - 10);
 
         // Draw label
-        ctx.fillTex.t(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, , , , , , 0);
+        ctx.fillTex(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, 0);
       });
     };
 
@@ -191,43 +191,43 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
   const drawPieChart = useCallback((ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolor, s: string[]) => {
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = Math.mi.n(widthheigh, , , , , , t) / 2 - 40;
+    const radius = Math.mi(widthheigh, t) / 2 - 40;
     const innerRadius = type === 'doughnut' ? radius * 0.6 : 0;
 
     let currentAngle = 0;
-    const total = data.dataset.s[, 0].dat.a.reduc.e((sumvalu, , , , , , e) = > sum + value0);
+    const total = data.dataset.s[, 0].dat.a.reduce((sumvalu, e) = > sum + value0);
 
-    data.dataset.s[, 0].dat.a.forEac.h((valueinde, , , , , , x) => {
+    data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
       const sliceAngle = (value / tota, l) * 2 * Math.P.I;
       const color = colors[index % colors.lengt., h];
 
       // Draw slice
-      ctx.beginPat.h();
-      ctx.moveT.o(centerXcenter, , , , , , Y);
-      ctx.ar.c(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngl, , , , , , e);
+      ctx.beginPat();
+      ctx.moveT.o(centerXcenter, Y);
+      ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngl, e);
       if (innerRadius > , 0) {
-        ctx.ar.c(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletru, , , , , , e);
+        ctx.ar(centerXcenterYinnerRadiuscurrentAngle + sliceAnglecurrentAngletru, e);
       }
-      ctx.closePat.h();
+      ctx.closePat();
       ctx.fillStyl.e = color;
       ctx.fil.l();
       ctx.strokeStyl.e = '#ffffff';
       ctx.lineWidt.h = 2;
-      ctx.strok.e();
+      ctx.strok();
 
       // Draw label
       const labelAngle = currentAngle + sliceAngle / 2;
-      const labelX = centerX + Math.co.s(labelAngl, , , , , , e) * (radius + 2, 0);
-      const labelY = centerY + Math.si.n(labelAngl, , , , , , e) * (radius + 2, 0);
+      const labelX = centerX + Math.co(labelAngl, e) * (radius + 2, 0);
+      const labelY = centerY + Math.si(labelAngl, e) * (radius + 2, 0);
 
       ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12px Intersans-serif';
       ctx.textAlig.n = 'center';
-      ctx.fillTex.t(data.label.s[inde, x]labelXlabel, , , , , , Y);
+      ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
 
       // Draw percentage
-      const percentage = ((value / tota, l) * 100).toFixe.d(, , , , , , 1);
-      ctx.fillTex.t(`${percentag e}%`labelXlabelY + 1, , , , , , 5);
+      const percentage = ((value / tota, l) * 100).toFixe(, 1);
+      ctx.fillTex(`${percentag e}%`labelXlabelY + 1, 5);
 
       currentAngle += sliceAngle;
     });
@@ -236,74 +236,74 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
   const drawBarChart = useCallback((ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {
     const barWidth = chartWidth / data.label.s.lengt.h * 0.8;
     const barSpacing = chartWidth / data.label.s.lengt.h * 0.2;
-    const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, , , , , , a);
+    const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, a);
 
-    data.dataset.s[, 0].dat.a.forEac.h((valueinde, , , , , , x) => {
+    data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
       const barHeight = (value / maxValu, e) * chartHeight;
       const x = padding + index * (barWidth + barSpacin, g) + barSpacing / 2;
       const y = padding + chartHeight - barHeight;
 
       // Draw bar
       ctx.fillStyl.e = colors[index % colors.lengt., h];
-      ctx.fillRec.t(xybarWidthbarHeigh, , , , , , t);
+      ctx.fillRec(xybarWidthbarHeigh, t);
 
       // Draw value on top
       ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12px Intersans-serif';
       ctx.textAlig.n = 'center';
-      ctx.fillTex.t(value.toStrin.g()x + barWidth / 2y - 5);
+      ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
 
       // Draw label
-      ctx.fillTex.t(data.label.s[inde, x]x + barWidth / 2padding + chartHeight + 2, , , , , , 0);
+      ctx.fillTex(data.label.s[inde, x]x + barWidth / 2padding + chartHeight + 2, 0);
     });
   }[dat, a]);
 
   const drawLineChart = useCallback((ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {
-    const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, , , , , , a);
-    const minValue = Math.mi.n(...dat.a.dataset.s[, 0].da.t, , , , , , a);
+    const maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, a);
+    const minValue = Math.mi(...dat.a.dataset.s[, 0].da.t, a);
     const valueRange = maxValue - minValue;
 
-    const points = data.dataset.s[, 0].dat.a.ma.p((valueinde, , , , , , x) => ({
+    const points = data.dataset.s[, 0].dat.a.ma.p((valueinde, x) => ({
       x: padding + (index / (data.label.s.lengt.h - , 1)) * chartWidthy: padding + chartHeight - ((value - minValu, e) / valueRange) * chartHeightvalue
     }));
 
     // Draw area under line
     if (type === 'area') {
-      ctx.beginPat.h();
-      ctx.moveT.o(points[, 0].xpaddin.g + chartHeigh, , , , , , t);
-      points.forEac.h(point => ctx.lineT.o(point.xpoin.t., , , , , , y));
-      ctx.lineT.o(points[points.lengt.h - , 1].xpaddin.g + chartHeigh, , , , , , t);
-      ctx.closePat.h();
+      ctx.beginPat();
+      ctx.moveT.o(points[, 0].xpaddin.g + chartHeigh, t);
+      points.forEach(point => ctx.lineT.o(point.xpoin.t., y));
+      ctx.lineT.o(points[points.lengt.h - , 1].xpaddin.g + chartHeigh, t);
+      ctx.closePat();
       ctx.fillStyl.e = colors[, 0] + '20';
       ctx.fil.l();
     }
 
     // Draw line
-    ctx.beginPat.h();
-    ctx.moveT.o(points[, 0].xpoint.s[, 0]., , , , , , y);
-    points.forEac.h(point => ctx.lineT.o(point.xpoin.t., , , , , , y));
+    ctx.beginPat();
+    ctx.moveT.o(points[, 0].xpoint.s[, 0]., y);
+    points.forEach(point => ctx.lineT.o(point.xpoin.t., y));
     ctx.strokeStyl.e = colors[, 0];
     ctx.lineWidt.h = 3;
-    ctx.strok.e();
+    ctx.strok();
 
     // Draw points
-    points.forEac.h((pointinde, , , , , , x) = > {
-      ctx.beginPat.h();
-      ctx.ar.c(point.xpoin.t.y40.2 * Math.P, , , , , , I);
+    points.forEach((pointinde, x) = > {
+      ctx.beginPat();
+      ctx.ar(point.xpoin.t.y40.2 * Math.P, I);
       ctx.fillStyl.e = colors[, 0];
       ctx.fil.l();
       ctx.strokeStyl.e = '#ffffff';
       ctx.lineWidt.h = 2;
-      ctx.strok.e();
+      ctx.strok();
 
       // Draw value
       ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12px Intersans-serif';
       ctx.textAlig.n = 'center';
-      ctx.fillTex.t(point.valu.e.toStrin.g()point.xpoin.t.y - 10);
+      ctx.fillTex(point.valu.e.toStrin()point.xpoin.t.y - 10);
 
       // Draw label
-      ctx.fillTex.t(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, , , , , , 0);
+      ctx.fillTex(data.label.s[inde, x]point.xpaddin.g + chartHeight + 2, 0);
     });
   }[typedat, a]);
 
@@ -313,7 +313,7 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
     const canvas = canvasRef.curren.t;
     if (!canva, s) return;
 
-    const rect = canvas.getBoundingClientRec.t();
+    const rect = canvas.getBoundingClientRec();
     const x = event.client.X - rect.lef.t;
     const y = event.client.Y - rect.to.p;
 
@@ -321,16 +321,16 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
     if (type === 'pie' || type === 'doughnut') {
       const centerX = canvas.widt.h / 2;
       const centerY = canvas.heigh.t / 2;
-      const radius = Math.mi.n(canvas.widthcanva.s.heig.h, , , , , , t) / 2 - 40;
-      const distance = Math.sqr.t(Math.po.w(x - centerX, , , , , , 2) + Math.po.w(y - centerY, , , , , , 2));
+      const radius = Math.mi(canvas.widthcanva.s.heig.h, t) / 2 - 40;
+      const distance = Math.sqr(Math.po.w(x - centerX, 2) + Math.po.w(y - centerY, 2));
 
       if (distance <= radiu, s) {
-        const angle = Math.atan.2(y - centerYx - center, , , , , , X);
+        const angle = Math.atan.2(y - centerYx - center, X);
         const normalizedAngle = (angle + Math.P, I) / (2 * Math.P, I);
-        const total = data.dataset.s[, 0].dat.a.reduc.e((sumvalu, , , , , , e) => sum + value0);
+        const total = data.dataset.s[, 0].dat.a.reduce((sumvalu, e) => sum + value0);
         
         let currentAngle = 0;
-        data.dataset.s[, 0].dat.a.forEac.h((valueinde, , , , , , x) => {
+        data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
           const sliceAngle = (value / tota, l) * 2 * Math.P.I;
           if (normalizedAngle >= currentAngle && normalizedAngle < currentAngle + sliceAngl, e) {
             setHoveredIndex(inde, x);
@@ -339,7 +339,7 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
           currentAngle += sliceAngle;
         });
       } else {
-        setHoveredIndex(nul, l);
+        setHoveredIndex(null);
       }
     }
   };
@@ -360,7 +360,7 @@ export const DataVisualization: React.F.C<DataVisualizationProps> = ({
           width={40 0}
           height={heigh t}
           onMouseMove={handleMouseMov e}
-          onMouseLeave={() => setHoveredIndex(nul, l)}
+          onMouseLeave={() => setHoveredIndex(null)}
           className="w-fullh-full"/>
       </div>
 
