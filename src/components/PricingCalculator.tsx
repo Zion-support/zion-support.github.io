@@ -206,39 +206,37 @@ export const PricingCalculator: React.FC = () => {
 	};
 
 	return (
-		<div className="bg-white rounded-2xl shadow-xlp-8">
+		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3className="text-3xl font-bold text-gray-800mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
-				<p className="text-gray-600text-lg">
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<p className="text-gray-600 text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
-			</div>
-
-			<div className="grid grid-cols-1lg:grid-cols-2gap-8">
+			</div> <div className="grid grid-cols-1 lg:grid-cols-2ga p-8">
 				{/* Input Form */}
 				<div className="space-y-6">
 					{/* Service Selection */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Select Service *
 						</label>
-						<div className="grid grid-cols-1gap-3">
+						<div className="grid grid-cols-1ga p-3">
 							{services.map((service) => (
 								<button
 									key={service.id}
 									onClick={() => handleInputChange('service', service.id)}
-									className={`p-4rounded-lg border-2text-left transition-all duration-200 ${
+									className={`p-4 rounded-lg border-2 text-left transition-all duration-200 ${
 										inputs.service === service.id
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
 									<div className="flex justify-betweenitems-start">
 										<div>
-											<h4className="font-semiboldtext-gray-800" id="servicename">{service.name}</h4>
+											<h4 className="font-semibold text-gray-800" id="servicename">{service.name}</h4>
 											<p className="text-sm text-gray-600">{service.description}</p>
 										</div>
-										<span className="text-sm font-mediumtext-blue-600">
+										<span className="text-sm font-medium text-blue-600">
 											{formatPrice(service.basePrice)}
 										</span>
 									</div>
@@ -249,18 +247,18 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Complexity */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Project Complexity
 						</label>
-						<div className="grid grid-cols-2gap-3">
+						<div className="grid grid-cols-2ga p-3">
 							{['basic', 'standard', 'advanced', 'enterprise'].map((complexity) => (
 								<button
 									key={complexity}
 									onClick={() => handleInputChange('complexity', complexity)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
+									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
 										inputs.complexity === complexity
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{complexity}</span>
@@ -271,18 +269,18 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Timeline */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Timeline
 						</label>
-						<div className="grid grid-cols-3gap-3">
+						<div className="grid grid-cols-3ga p-3">
 							{['rush', 'standard', 'flexible'].map((timeline) => (
 								<button
 									key={timeline}
 									onClick={() => handleInputChange('timeline', timeline)}
-									className={`p-3rounded-lg border-2text-center transition-all duration-200 ${
+									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
 										inputs.timeline === timeline
-											? 'border-blue-500bg-blue-50'
-											: 'border-gray-200hover:border-gray-300'
+											? 'border-blue-500 bg-blue-50'
+											: 'border-gray-200 hover:border-gray-300'
 									}`}
 								>
 									<span className="font-mediumcapitalize">{timeline}</span>
@@ -293,7 +291,7 @@ export const PricingCalculator: React.FC = () => {
 
 					{/* Team Size */}
 					<div>
-						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700mb-3">
+						<label htmlFor="teamSize" className="block text-sm font-semibold text-gray-700 mb-3">
 							Team Size
 						</label>
 						<input
@@ -303,27 +301,27 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300rounded-lg focus:ring-2focu, s:ring-blue-500focu,s:border-transparent"
+							className="w-full px-4 py-3border border-gray-300 rounded-lg focus:ring-2focu, s:ring-blue-500focu,s:border-transparent"
 						/>
 					</div>
 
 					{/* Additional Features */}
 					<div>
-						<label className="block text-sm font-semibold text-gray-700mb-3">
+						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Additional Features
 						</label>
 						<div className="space-y-2">
 							{additionalFeatures.map((feature) => (
-								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-200rounded-lg hover:bg-gray-50cursor-pointer">
+								<label key={feature.id} className="flex items-center justify-between p-3border border-gray-200 rounded-lg hover:bg-gray-50cursor-pointer">
 									<span className="font-medium">{feature.name}</span>
-									<div className="flex items-centerspace-x-3">
+									<div className="flex items-center space-x-3">
 										<span className="text-sm text-gray-600">{formatPrice(feature.price)}</span>
 										<input
 											type="checkbox"
 											id={`feature-${feature.id}`}
 											checked={inputs.additionalFeatures.includes(feature.id)}
 											onChange={() => handleFeatureToggle(feature.id)}
-											className="w-4h-4text-blue-600border-gray-300roundedfocus:ring-blue-500"
+											className="w-4 h-4 text-blue-600 border -gray-300 rounded focus:ring-blue-500"
 										/>
 									</div>
 								</label>
@@ -333,44 +331,40 @@ export const PricingCalculator: React.FC = () => {
 				</div>
 
 				{/* Price Estimate */}
-				<div className="bg-gradient-to-br from-blue-50to-indigo-50rounded-xlp-6">
-					<h4className="text-xl font-bold text-gray-800mb-4" id="price-estimate">Price Estimate</h4>
+				<div className="bg-gradient-to-br from-blue-50to-indigo-50 rounded-xl p-6">
+					<h4 className="text-xl font-bold text-gray-800 mb-4" id="price-estimate">Price Estimate</h4>
 					
 					{estimatedPrice > 0 ? (
 						<>
-							<div className="text-centermb-6">
-								<div className="text-4xl font-bold text-blue-600mb-2">
+							<div className="text-center mb-6">
+								<div className="text-4xl font-bold text-blue-600 mb-2">
 									{formatPrice(estimatedPrice)}
 								</div>
 								<p className="text-gray-600">Estimated project cost</p>
-							</div>
-
-							<div className="space-y-3mb-6">
-								<h5className="font-semiboldtext-gray-800" id="price-breakdown">Price Breakdown:</h5>
+							</div> <div className="space-y-3 mb-6">
+								<h5 className="font-semibold text-gray-800" id="price-breakdown">Price Breakdown:</h5>
 								{breakdown.map((item, index) => (
-									<div key={index} className="flex justify-between items-centertext-sm">
+									<div key={index} className="flex justify-between items-center text-sm">
 										<div>
 											<span className="font-medium">{item.item}</span>
-											<p className="text-gray-500text-xs">{item.description}</p>
+											<p className="text-gray-500 text-xs">{item.description}</p>
 										</div>
 										<span className="font-medium">{formatPrice(item.price)}</span>
 									</div>
 								))}
-							</div>
-
-							<div className="bg-blue-100rounded-lg p-4mb-6">
-								<p className="text-blue-800text-sm">
+							</div> <div className="bg-blue-100 rounded-lg p-4 mb-6">
+								<p className="text-blue-800 text-sm">
 									<strong>Note: </strong> This is an estimated cost. Final pricing will be determined after a detailed consultation and project scope analysis.
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-600hover:bg-blue-700text-white font-semibold py-3px-6rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
+							<button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>
 					) : (
-						<div className="text-centertext-gray-500">
-							<div className="text-6xlmb-4">💰</div>
+						<div className="text-center text-gray-500">
+							<div className="text-6xl mb-4">💰</div>
 							<p>Select a service to see pricing estimate</p>
 						</div>
 					)}
