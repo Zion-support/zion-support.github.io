@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import SEO from "../src/components/SEO";
+import { useAnalytics } from "../src/hooks/useAnalytics";
 
 export default function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,102 +12,103 @@ export default function Home(): JSX.Element {
     setIsVisible(true);
   }, []);
 
+  // Analytics tracking
   const { trackClick } = useAnalytics();
 
   const handleSelectPlan = (tierId: string) => {
-    trackClick(`select-plan-${tierId}`, 'conversion');
-    console.log('Selected plan:', tierId);
+    trackClick(`select-plan-${tierId}`, "conversion");
+    console.log("Selected plan:", tierId);
   };
 
   const handleReadMore = (slug: string) => {
-    trackClick(`read-blog-${slug}`, 'engagement');
-    console.log('Read more:', slug);
+    trackClick(`read-blog-${slug}`, "engagement");
+    console.log("Read more:", slug);
   };
 
   const features = [
     {
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge artificial intelligence to automate and optimize your business processes.',
+      title: "AI-Powered Solutions",
+      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.",
       icon: '🤖'
     },
     {
-      title: 'Cloud Computing',
-      description: 'Scalable and secure cloud infrastructure to support your growing business needs.',
+      title: "Cloud Computing",
+      description: "Scalable and secure cloud infrastructure to support your growing business needs.",
       icon: '☁️'
     },
     {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your operations and improve efficiency.',
+      title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your operations and improve efficiency.",
       icon: '🚀'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'Zion App transformed our entire digital infrastructure. The results exceeded our expectations.',
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      content: "Zion App transformed our entire digital infrastructure. The results exceeded our expectations.",
       rating: 5
     },
     {
-      name: 'David Lee',
-      company: 'Global Innovations',
-      content: 'Their cloud solutions are robust and have significantly improved our operational efficiency.',
+      name: "David Lee",
+      company: "Global Innovations",
+      content: "Their cloud solutions are robust and have significantly improved our operational efficiency.",
       rating: 4
     },
     {
-      name: 'Emily White',
-      company: 'Future Enterprises',
-      content: 'The AI integration provided by Zion App has given us a competitive edge in the market.',
+      name: "Emily White",
+      company: "Future Enterprises",
+      content: "The AI integration provided by Zion App has given us a competitive edge in the market.",
       rating: 5
     }
   ];
 
   const pricingTiers = [
     {
-      id: 'basic',
-      name: 'Basic',
-      price: '$49/month',
-      features: ['AI Automation', 'Cloud Hosting', 'Basic Analytics'],
-      buttonText: 'Choose Basic'
+      id: "basic",
+      name: "Basic",
+      price: "$49/month",
+      features: ["AI Automation", "Cloud Hosting", "Basic Analytics"],
+      buttonText: "Choose Basic"
     },
     {
-      id: 'pro',
-      name: 'Pro',
-      price: '$99/month',
-      features: ['All Basic Features', 'Advanced AI Models', 'Scalable Cloud', 'Custom Integrations'],
-      buttonText: 'Choose Pro'
+      id: "pro",
+      name: "Pro",
+      price: "$99/month",
+      features: ["All Basic Features", "Advanced AI Models", "Scalable Cloud", "Custom Integrations"],
+      buttonText: "Choose Pro"
     },
     {
-      id: 'enterprise',
-      name: 'Enterprise',
-      price: 'Custom',
-      features: ['All Pro Features', 'Dedicated Support', 'On-premise Options', 'Strategic Consulting'],
-      buttonText: 'Contact Us'
+      id: "enterprise",
+      name: "Enterprise",
+      price: "Custom",
+      features: ["All Pro Features", "Dedicated Support", "On-premise Options", "Strategic Consulting"],
+      buttonText: "Contact Us"
     }
   ];
 
   const blogPosts = [
     {
       id: 1,
-      title: 'The Future of AI in Business',
-      summary: 'Explore how artificial intelligence is reshaping industries and driving innovation.',
-      slug: 'future-of-ai',
-      image: '/images/blog/ai-future.jpg'
+      title: "The Future of AI in Business",
+      summary: "Explore how artificial intelligence is reshaping industries and driving innovation.",
+      slug: "future-of-ai",
+      image: "/images/blog/ai-future.jpg"
     },
     {
       id: 2,
-      title: 'Cloud Computing Best Practices',
-      summary: 'Learn essential strategies for optimizing your cloud infrastructure for performance and security.',
-      slug: 'cloud-best-practices',
-      image: '/images/blog/cloud-best.jpg'
+      title: "Cloud Computing Best Practices",
+      summary: "Learn essential strategies for optimizing your cloud infrastructure for performance and security.",
+      slug: "cloud-best-practices",
+      image: "/images/blog/cloud-best.jpg"
     },
     {
       id: 3,
-      title: 'Digital Transformation: A Step-by-Step Guide',
-      summary: 'A comprehensive guide to successfully implementing digital transformation in your organization.',
-      slug: 'digital-transformation-guide',
-      image: '/images/blog/digital-transform.jpg'
+      title: "Digital Transformation: A Step-by-Step Guide",
+      summary: "A comprehensive guide to successfully implementing digital transformation in your organization.",
+      slug: "digital-transformation-guide",
+      image: "/images/blog/digital-transform.jpg"
     }
   ];
 
@@ -176,7 +178,7 @@ export default function Home(): JSX.Element {
                   <p className="text-4xl font-bold text-blue-600 mb-6">{tier.price}</p>
                   <ul className="mb-8 text-gray-700">
                     {tier.features.map((feature, idx) => (
-                      <li key={idx} className="mb-2">✅ {feature}</li>
+                      <li key={idx}>✅ {feature}</li>
                     ))}
                   </ul>
                   <button

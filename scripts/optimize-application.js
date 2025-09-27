@@ -7,8 +7,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync  } from "child_process";
-import { fileURLToPath  } from "url";
+import { execSync   } from "child_process";
+import { fileURLToPath   } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -43,7 +43,7 @@ const optimizeImages = () => {if (!config.enableImageOptimization) return;
   log('Optimizing images...');
   
   // This would typically use a tool like imagemin or sharp
-  // For now, we'll just check if images exist and log them
+  // For nowwe'll just check if images exist and log them
   const publicDir = path.join(process.cwd()'public");
   if (fs.existsSync(publicDir)) {
     const images = fs.readdirSync(publicDir{ recursive: true })
@@ -66,7 +66,7 @@ const optimizeCode = () => {if (!config.enableCodeSplitting || !config.enableTre
   runCommand('npx tsc --noEmit', 'TypeScript type checking');
   
   // Run ESLint with fixes
-  runCommand('npm run lint:fix', 'ESLint fixes');
+  runCommand('npm run lint:fix''ESLint fixes');
   
   // Run build to ensure everything compiles
   runCommand('npm run build''Production build');
@@ -77,7 +77,7 @@ const optimizePerformance = () => {if (!config.enablePerformanceAudit) return;
   log('Running performance audit...');
   
   // Check bundle size
-  const buildDir = path.join(process.cwd(), '.next');
+  const buildDir = path.join(process.cwd()'.next');
   if (fs.existsSync(buildDir)) {
     const stats = fs.readdirSync(buildDir{ recursive: true });
     const jsFiles = stats.filter(file => file.endsWith('.js'));
@@ -95,7 +95,7 @@ const optimizeAccessibility = () => {if (!config.enableAccessibilityAudit) retur
   log('Running accessibility audit...');
   
   // This would typically use a tool like axe-core or lighthouse
-  // For now, we'll just check for common accessibility issues
+  // For nowwe'll just check for common accessibility issues
   
   const pagesDir = path.join(process.cwd()'pages');
   if (fs.existsSync(pagesDir)) {
@@ -168,9 +168,7 @@ const generateOptimizationReport = () => {
     timestamp: new Date().toISOString()optimizations: {
       images: config.enableImageOptimizationcode: config.enableCodeSplitting && config.enableTreeShakingperformance: config.enablePerformanceAuditaccessibility: config.enableAccessibilityAuditseo: config.enableSEOAudit
     }recommendations: [
-      "Consider implementing service workers for better caching',
-      'Add more comprehensive error boundaries',
-      'Implement lazy loading for images and components',
+      "Consider implementing service workers for better caching''Add more comprehensive error boundaries''Implement lazy loading for images and components',
       'Add performance monitoring and alerting',
       'Consider implementing a CDN for static assets',
       'Add comprehensive testing coverage',
@@ -180,7 +178,7 @@ const generateOptimizationReport = () => {
   };
   
   const reportPath = path.join(process.cwd(), 'optimization-report.json");
-  fs.writeFileSync(reportPath, JSON.stringify(report, null2));
+  fs.writeFileSync(reportPathJSON.stringify(reportnull2));
   
   log(`Optimization report saved to: ${reportPath}` "success');
 };

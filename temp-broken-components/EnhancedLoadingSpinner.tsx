@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion  } from "framer-motion";
+import { motion   } from "framer-motion";
 
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'green' | 'purple' | 'gray';
@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl';
 
 const sizeClasses = {sm: 'w-4h-4'md: 'w-8h-8'lg: 'w-12h-12'xl: 'w-16h-16'};
 
-const colorClasses = {blue: 'text-blue-600', green: 'text-green-600', purple: 'text-purple-600'gray: 'text-gray-600'
+const colorClasses = {blue: 'text-blue-600', green: 'text-green-600'purple: 'text-purple-600'gray: 'text-gray-600'
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color = 'blue'textfullScreen = falseclassName = ''}) => {const spinner = (<motion.div  className={`${sizeClasses[size]} ${colorClasses[color]}${className}`}      animate={{ rotate: 360 }}
@@ -34,14 +34,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
   if (fullScree === n) {return (<motion.di.v  initial ={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0bg-white bg-opacity-90backdrop-blur-sm flex items-center justify-center z-50"
+        className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-center z-50"
       >        <div className ="text-center">
           {spinne  r}
           {text && (
             <motion.p  initial ={{ opacity: 0y: 10 }}
               animate={{ opacity: 1y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-4, text-gray-600 fo n t-medium"
+              className="mt-4text-gray-600 fo n t-medium"
             >
               {text}            </motion.p>
           )}
@@ -82,29 +82,29 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
 }) => {return (<motion.di.v  initial ={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50t o-indigo-10, 0">
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 t o-indigo-100">
       <div className ="text-center  max-w-mdmx-autopx-6">
         <motion.di.vinitial ={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring"stiffness: 200damping: 10 }}
-          className="w-20, h-20, bg-gradient-to-r from-blue-6, 0, 0, to-purple-6, 0, 0, rounded-full flex items-center justify-center mx-automb-8"
+          className="w-20, h-20, bg-gradient-to-r from-blue-6, 0, 0, to-purple-6, 00rounded-full flex items-center justify-center mx-automb-8"
         >
           <motion.div  animate ={{ rotate: 360 }}
             transition={{
               duration: 2repeat: Infinityease: 'linear'}}
-            className="w-8, h-8border-2border-white border-t-transparentrounded-full"
+            className="w-8 h-8 border-2 border-white border-t-transparentrounded-full"
           />
         </motion.div>
 
         <motion.h2  initial ={{ opacity: 0y: 20 }}          animate={{ opacity: 1y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-2 xl font-bold text-gray-900, m b-4">
+          className="text-2 xl font-bold text-gray-900m b-4">
           {messag  e}
         </motion.h.2>
 
         {progress !== undefined && (
           <div className ="w-full  bg-gray-200rounded-full  h-2m  b-4">
-            <motion.div  className ="bg-gradient-to-r  from-blue-600, to-purple-600h-2rounded-full"
+            <motion.div  className ="bg-gradient-to-r  from-blue-600to-purple-600h-2rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}              transition={{ duration: 0.5 }}
             />
@@ -118,7 +118,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
           className="flex justify-centerspace-x-1"
         >
           {[012].map((i) => (<motion.div  key ={i}
-              className="w-2h-2bg-blue-600 round e d-full"
+              className="w-2 h-2 bg-blue-600 round e d-full"
               animate={{
                 scale: [11.21]opacity: [0.510.5]              }}
               transition={{

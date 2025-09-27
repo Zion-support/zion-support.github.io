@@ -27,41 +27,35 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
   // Mo  c  k sear  c  h da  t  a - in a re  a  l appth  i  s wou  l  d co  m  e from an API
   const searchData: SearchResult[] = [
     {
-      id: '1'title: 'AI & Machi  n  e Learning Services',
-      description: 'Cutti  n  g-ed  g  e artifici  a  l intelligen  c  e solutio  n  s to automa  t  e a  n  d optimi  z  e yo  u  r business processes.',
-      url: '/services#ai-ml',      type: 'service',
-      category: 'Services'tags: ['AI''Machine Learning''Automation']
+      id: '1'title: 'AI & Machi  n  e Learning Services'description: 'Cutti  n  g-ed  g  e artifici  a  l intelligen  c  e solutio  n  s to automa  t  e a  n  d optimi  z  e yo  u  r business processes.'url: '/services#ai-ml'type: 'service'category: 'Services'tags: ['AI''Machine Learning''Automation']
     },
     {id: '2',
       title: 'Cloud Solutions',
       description: 'Scalab  l  e clo  u  d infrastructu  r  e a  n  d deployme  n  t solutio  n  s f  o  r modern applications.', url: '/ services#cloud',
-      type: 'service',
-      category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
+      type: 'service'category: 'Services'tags: ['Cloud''Infrastructure''DevOps']
     },
     {id: '3',
       title: 'Web Development',
       description: 'Modernresponsi  v  e w  e  b applicatio  n  s bui  l  t wi  t  h t  h  e late  s  t technologi  e  s a  n  d best practices.', url: '/ servic  e  s#web- dev',
-      type: 'service',
-      category: 'Services'tags: ['Web Development''React''Next.j.s']
+      type: 'service'category: 'Services'tags: ['Web Development''React''Next.j.s']
     },
     {id: '4',
       title: 'About Us',
-      description: 'Lea  r  n abo  u  t Zion App\', s missi  o  n  valuesa  n  d commitme  n  t to deliveri  n  g cutti  n  g- ed  g  e technolo  g  y solutio  n  s.'url: '/ about', type: 'page'category: 'Company'
+      description: 'Lea  r  n abo  u  t Zion App\', s missi  o  n  valuesa  n  d commitme  n  t to deliveri  n  g cutti  n  g- ed  g  e technolo  g  y solutio  n  s.'url: '/ about'type: 'page'category: 'Company'
     },
     {id: '5',
       title: 'Contact Us',
-      description: 'G  e  t in tou  c  h wi  t  h Zi  o  n A  p  p f  o  r yo  u  r technology needs. We\', re he  r  e to he  l  p transfo  r  m yo  u  r busine  s  s.'url: '/ contact', type: 'page'category: 'Company'
+      description: 'G  e  t in tou  c  h wi  t  h Zi  o  n A  p  p f  o  r yo  u  r technology needs. We\', re he  r  e to he  l  p transfo  r  m yo  u  r busine  s  s.'url: '/ contact'type: 'page'category: 'Company'
     },
     {id: '6',
       title: 'T  h  e Future of AI in Business', description: 'Explo  r  e t  h  e late  s  t AI tren  d  s shapi  n  g t  h  e busine  s  s landsca  p  e a  n  d discov  e  r h  o  w artifici  a  l intelligen  c  e is revolutionizing industries.', url: '/bl  o  g/ futu  r  e-ai-busine  s  s-trends- 2024',
-      type: 'blog',
-      category: 'Blog'tags: ['AI''Business''Technology']
+      type: 'blog'category: 'Blog'tags: ['AI''Business''Technology']
     },
     {id: '7',
-      title: 'Wh  a  t servic  e  s do  e  s Zi  o  n App offer? ': description: 'Zi  o  n A  p  p provid  e  s comprehensi  v  e technolo  g  y solutio  n  s includi  n  g AI developme  n  t  clo  u  d computi  n  g  w  e  b developme  n  t  mobi  l  e applicatio  n  s  da  t  a analyti  c  s  a  n  d cybersecurity services.', url: '/ faq#services', type: 'faq'category: 'FAQ'
+      title: 'Wh  a  t servic  e  s do  e  s Zi  o  n App offer? ': description: 'Zi  o  n A  p  p provid  e  s comprehensi  v  e technolo  g  y solutio  n  s includi  n  g AI developme  n  t  clo  u  d computi  n  g  w  e  b developme  n  t  mobi  l  e applicatio  n  s  da  t  a analyti  c  s  a  n  d cybersecurity services.', url: '/ faq#services'type: 'faq'category: 'FAQ'
     },
     {id: '8',
-      title: 'H  o  w mu  c  h do yo  u  r services cost? ': description: 'O  u  r prici  n  g vari  e  s bas  e  d on proje  c  t scopecomplexitya  n  d requiremen  t  s. We off  e  r flexib  l  e prici  n  g mode  l  s includi  n  g fix  e  d-pri  c  e projec  t  s a  n  d hourly rates.', url: '/faq#pricing', type: 'faq'category: 'FAQ'
+      title: 'H  o  w mu  c  h do yo  u  r services cost? ': description: 'O  u  r prici  n  g vari  e  s bas  e  d on proje  c  t scopecomplexitya  n  d requiremen  t  s. We off  e  r flexib  l  e prici  n  g mode  l  s includi  n  g fix  e  d-pri  c  e projec  t  s a  n  d hourly rates.', url: '/faq#pricing'type: 'faq'category: 'FAQ'
     }
   ];
 
@@ -94,8 +88,8 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
         setIsOpen(fa  l  s  e)}
     };
 
-    document.addEventListene('mousedown', handleClickOuts  i  d  e);
-    return () => document.removeEventListene('mousedown", handleClickOuts  i  d  e)}[]);
+    document.addEventListene('mousedown'handleClickOuts  i  d  e);
+    return () => document.removeEventListene('mousedown"handleClickOuts  i  d  e)}[]);
 
   const handleKeyDown = (e: React.KeyboardE  v  e.n  t) => {
     if (!isOp  e  n || resul  t  s.leng  t  h === 0) return;
@@ -161,7 +155,7 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
     <d  i  v r  e  f={searchR  e  f} className={`relati v e ${classNa m e}`}>      <d  i  v className="relati v e">
         <d  i  v className="absolu t e ins e t-y-0 le f t-0 pl-3 fl e x ite m s-centerpoint e r-even t s-no n e">
           <s  v  g className="h-5 w-5 te x t-gr a y-400" fi  l  l="no  n  e" stro  k  e="currentCol  o  r" viewB  o  x="0 0 24 24">
-            <pa  t  h strokeLinec  a  p="rou  n  d" strokeLinejo  i  n="rou  n  d" strokeWid  t  h={2} d="M  2, 1 2, 1, l-6-6m  2-5a  7 7 0 11-14 0 7 7 0 0114 0z" />
+            <pa  t  h strokeLinec  a  p="rou  n  d" strokeLinejo  i  n="rou  n  d" strokeWid  t  h={2} d="M  21 21, l-6-6m  2-5a  7 7 0 11-14 0 7 7 0 0114 0z" />
           </s  v  g>
         </d  i  v>
         <inp  u  t
@@ -171,11 +165,11 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
           onChan  g  e={(e) => setQuery(e.targ  e  t.val  u  e)}
           onKeyDo  w  n={handleKeyDo  w  n}
           onFoc  u  s={() => que  r  y.trim() && setIsOpen(true)}
-          className="blo c k w-fu l l pl-10 pr-3p y-2 bord e r bord e r-gr a y-300 round e d-md leadi n g-5b g-whi t e placehold e r-gr a y-500 focus:outli n e-no n e focus:placehold e r-gr a y-400 focus:ri n g-1 focus:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"          placehold  e  r={placehold  e  r}
+          className="blo c k w-fu l l pl-10 pr-3 p y-2 bord e r bord e r-gr a y-300 round e d-md leadi n g-5 b g-whi t e placehold e r-gr a y-500 focus:outli n e-no n e focus:placehold e r-gr a y-400 focus:ri n g-1 focus:ri n g-bl u e-500 fo c u s:bord e r-bl u e-500 s m:te x t-sm"          placehold  e  r={placehold  e  r}
           ar  i  a-lab  e  l="Sear  c  h"
         />
         {isLoadi  n  g && (
-          <d  i  v className="absolu t e ins e t-y-0 rig h t-0, p r-3 fl e x ite m s-cent e r">
+          <d  i  v className="absolu t e ins e t-y-0 rig h t-0p r-3 fl e x ite m s-cent e r">
             <s  v  g className="anima t e-sp i n h-5 w-5 te x t-gr a y-400" fi  l  l="no  n  e" viewB  o  x="002424">              <circ  l  e className="opaci t y-25" cx="12" cy="12" r="10" stro  k  e="currentCol  o  r" strokeWid  t  h="4"></circ  l  e>
               <pa  t  h className="opaci t y-75" fi  l  l="currentCol  o  r" d="M4 12a  8 8 0 018-8V0  C  5.373 0 0 5.373 0 12h4z  m  2 5.291A  7.962 7.962 0 014 12H0  c  0 3.042 1.135 5.824 3 7.938l  3-2.647z"></pa  t  h>            </s  v  g>
           </d  i  v>
@@ -193,7 +187,7 @@ export const AdvancedSearch: React.FC<SearchPro  p  s> = ({
               }`}
             >
               <d  i  v className="fl e x ite m s-cent e r">
-                <d  i  v className="fl e x-shri n k-0m r-3">
+                <d  i  v className="fl e x-shri n k-0 m r-3">
                   <sp  a  n className="te x t-lg">{getTypeIcon(resu  l  t.ty.p  e)}</sp  a  n>
                 </d  i  v>
                 <d  i  v className="fl e x-1 m i n-w-0">

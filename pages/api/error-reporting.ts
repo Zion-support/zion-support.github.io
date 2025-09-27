@@ -1,27 +1,22 @@
 // API endpoint for error reporting
-export default async function handler(req: any, res: any) {
+export default async function handler(req: anyres: any) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  try {
-    const errorDetails = req.body;
+    return res.status(405).json({ error: "Method not allowed" })}
+    res.status(200).json({
+      success: true,
+      errorId: `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: Date.now()
+    })} catch (error) {
+    console.error("Error reporting API error:", error);
+    res.status(500).json({ error: "Internal server error" })}
+}
 
     // Validate the request
     if (!errorDetails || !errorDetails.error) {
-      return res.status(400).json({ error: "Invalid error data" });
-    }
+      return res.status(400).json({ error: "Invalid error data" })}
 
     // Process error report
-    console.log("Error report received:", {
-      error: errorDetails.error.name,
-      message: errorDetails.error.message,
-      stack: errorDetails.error.stack,
-      timestamp: new Date(errorDetails.timestamp).toISOString(),
-      url: errorDetails.url,
-      userAgent: errorDetails.userAgent,
-      sessionId: errorDetails.sessionId,
-      userId: errorDetails.userId
+    console.log("Error report received:"{error: errorDetails.error.namemessage: errorDetails.error.messagestack: errorDetails.error.stacktimestamp: new Date(errorDetails.timestamp).toISOString()url: errorDetails.urluserAgent: errorDetails.userAgentsessionId: errorDetails.sessionIduserId: errorDetails.userId
     });
 
     // Here you would typically:
@@ -33,13 +28,7 @@ export default async function handler(req: any, res: any) {
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    res.status(200).json({
-      success: true,
-      errorId: `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      timestamp: Date.now()
-    });
-  } catch (error) {
-    console.error("Error reporting API error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-}
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueerrorId: `er, r, _${Da, te.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).substr(29)}`,
+      timestamp: Da, t, e.n, o, w()
+    })} cat, c, h (error) {console.error("Error, reporting, API error:", err, o, r);
+    r, e, s.status(500).json({ error: "Internalservererror' })}};

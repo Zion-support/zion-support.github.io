@@ -1,7 +1,7 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell  } from "recharts";
-import { ActivityZapShieldEye  } from "lucide-react";
+import { motion  AnimatePresence   } from "framer-motion";
+import { BarChartBarXAxisYAxisCartesianGridTooltipResponsiveContainerLineChartLinePieChartPieCell   } from "recharts";
+import { ActivityZapShieldEye   } from "lucide-react";
 
 interface ChartData {
   name: string;
@@ -109,8 +109,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
     )}
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' }{ name: 'Load Time'value: data.performance.loadTime / 100color: '#F59E0B' }{ name: 'Bounce Rate'value: data.performance.bounceRatecolor: '#EF4444' },
-    { name: 'Conversion'value: data.performance.conversionRate * 10color: '#8B5CF6' }
+    { name: 'Page Speed'value: data.performance.pageSpeedcolor: '#10B981' }{ name: 'Load Time'value: data.performance.loadTime / 100color: '#F59E0B' }{ name: 'Bounce Rate'value: data.performance.bounceRatecolor: '#EF4444' }{ name: 'Conversion'value: data.performance.conversionRate * 10color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
@@ -165,8 +164,7 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                         <div className="text-2 xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
                         <div className="text-smtext-gray-600">Total Visitors</div>
                         <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}`}>
-                          {analyticsData.visitors.growth >= 0 ? '+' : '},
-        {analyticsData.visitors.growth}%                        </div>
+                          {analyticsData.visitors.growth >= 0 ? '+' : '}{analyticsData.visitors.growth}%                        </div>
                       </div>
                     </div>
                   </CardContent>

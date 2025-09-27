@@ -20,9 +20,7 @@ export const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProp
   const collectMetrics = React.useCallback(async () => {
     try {
       const newMetrics: PerformanceMetrics = {
-        loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0memoryUsage: 0networkLatency: 0renderTime: 0
+        loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0memoryUsage: 0networkLatency: 0renderTime: 0
       };
 
       setMetrics(newMetrics);

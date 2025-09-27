@@ -39,7 +39,7 @@ const nextConfig = {
   
   // Image optimization
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    domains: ["images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
@@ -48,7 +48,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: [
           {
             key: 'X-Frame-Options',
@@ -64,7 +64,7 @@ const nextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            value: "camera=(), microphone=(), geolocation=()",
           },
         ],
       },
@@ -73,7 +73,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600',
+            value: "public, max-age=3600, s-maxage=3600",
           },
         ],
       },
@@ -96,7 +96,7 @@ const nextConfig = {
     // Add custom webpack plugins
     config.plugins.push(
       new webpack.DefinePlugin({
-        'process.env.BUILD_ID': JSON.stringify(buildId),
+        "process.env.BUILD_ID": JSON.stringify(buildId),
       })
     );
     

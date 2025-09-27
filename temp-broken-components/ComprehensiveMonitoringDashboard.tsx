@@ -1,42 +1,4 @@
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Database,
-  Globe,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Eye,
-  Search,
-  X
-} from 'lucide-react';
-=import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { Activity
-  AlertTriangle
-  CheckCircle
-  Clock
-  Database
-  Globe
-  Shield
-  TrendingUp 
-  Users 
-  Zap 
-  BarChart3 
-  Cpu 
-  HardDriveWifiEyeSearchX
- } from "lucide-react";
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+<
 
 interface CardProps {
   children: React.ReactNode;
@@ -58,31 +20,31 @@ interface CardContentProps {
   children: React.ReactNode;
   className?: string}
 
-const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+const Card: React.FC<CardProps> = ({ childrenclassName = '' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = '' }) => (
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = '' }) => (
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+const CardDescription: React.FC<CardDescriptionProps> = ({ childrenclassName = '' }) => (
   <p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+const CardContent: React.FC<CardContentProps> = ({ childrenclassName = '' }) => (
   <div className={`p-6 ${className}`}>
     {children}
   </div>
@@ -126,16 +88,15 @@ interface MonitoringDashboardProps {
 export default function ComprehensiveMonitoringDashboard({
   refreshInterval = 5000enableRealTimeUpdates = trueonMetricsUpdate
 }: MonitoringDashboardProps) {
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
-  const [alerts, setAlerts] = useState<Array<{
+<(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
+  const [alertssetAlerts] = useState<Array<{
 =  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alertssetAlerts] = useState<Array<{
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+>
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
@@ -167,19 +128,7 @@ export default function ComprehensiveMonitoringDashboard({
       onMetricsUpdate?.(newMetrics);
 
       // Check for alerts
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-      checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [onMetricsUpdate]);
-=      checkForAlerts(newMetrics)} catch (error) {
-      console.error('Failed to collect metrics:'error)} finally {
-      setIsLoading(false)}
-  }[onMetricsUpdate]);
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+<
 
   const collectPerformanceMetrics = async () => {
     if (typeof window === 'undefined') {
@@ -190,18 +139,14 @@ export default function ComprehensiveMonitoringDashboard({
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     
-    return {
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0, // Will be updated by Web Vitals
-      cumulativeLayoutShift: 0, // Will be updated by Web Vitals
-      firstInputDelay: 0, // Will be updated by Web Vitals
-=      loadTime: navigation.loadEventEnd - navigation.fetchStart 
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
+    return {< entry.name === 'first-contentful-paint")?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+=      loadTime: navigation.loadEventEnd - navigation.fetchStart 
+      firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
+      cumulativeLayoutShift: 0// Will be updated by Web Vitals
+      firstInputDelay: 0// Will be updated by Web Vitals
+>
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     }};
 
@@ -214,25 +159,14 @@ export default function ComprehensiveMonitoringDashboard({
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
 
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0, // MB
-      cpuUsage: 0, // Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0, // Would need to calculate from loaded resources
-=    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
-      cpuUsage: 0// Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0bundleSize: 0// Would need to calculate from loaded resources
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+<
       cacheHitRate: 0.85 // Mock value
     }};
 
   const collectUserExperienceMetrics = async () => {// Mock data - in real implementationthis would come from analytics
     return {
-      bounceRate: 0.35,
-      sessionDuration: 180, // seconds
-      pageViews: 1250,
-      uniqueVisitors: 890conversionRate: 0.12
+      bounceRate: 0.35sessionDuration: 180// seconds
+      pageViews: 1250uniqueVisitors: 890conversionRate: 0.12
     }};
 
   const collectErrorMetrics = async () => {
@@ -262,56 +196,45 @@ export default function ComprehensiveMonitoringDashboard({
       })}
 
     if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({
-        id: 'layout-shift',
-        type: 'warning'message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
+        id: 'layout-shift'type: 'warning'message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
       })}
 
     // Error alerts
     if (metrics.errors.critical > 0) {newAlerts.push({
-        id: 'critical-errors',
-        type: 'error'message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
+        id: 'critical-errors'type: 'error'message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
       })}
 
     // Security alerts
     if (metrics.security.vulnerabilities > 0) {newAlerts.push({
-        id: 'security-vulnerabilities',
-        type: 'error'message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
+        id: 'security-vulnerabilities'type: 'error'message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
       })}
 
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-    setAlerts(prev => [...prev, ...newAlerts]);
-  };
+< [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
-    ));
-  };
+      alert.id === alertId ? { ...alertresolved: true } : alert
+    ))};
 =    setAlerts(prev => [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
     ))};
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+>
 
   useEffect(() => {
     collectMetrics();
 
     if (enableRealTimeUpdates) {
-<<<<<<<< HEAD:src/components/ComprehensiveMonitoringDashboard.tsx.broken
-      const interval = setInterval(collectMetrics, refreshInterval);
-      return () => clearInterval(interval);
-    }
-  }, [collectMetrics, enableRealTimeUpdates, refreshInterval]);
+< clearInterval(interval)}
+  }, [collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
-  const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-600' };
-    if (score >= 80) return { grade: 'B', color: 'text-blue-600' };
-    if (score >= 70) return { grade: 'C', color: 'text-yellow-600' };
-    if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
-    return { grade: 'F', color: 'text-red-600' };
-  };
+  const getPerformanceGrade = (score: number) => {if (score >= 90) return { grade: 'A'color: 'text-green-600' };
+    if (score >= 80) return {grade: 'B'color: 'text-blue-600' };
+    if (score >= 70) return {grade: 'C'color: 'text-yellow-600' };
+    if (score >= 60) return {grade: 'D'color: 'text-orange-600' };
+    return {grade: 'F'color: 'text-red-600' }};
 =      const interval = setInterval(collectMetricsrefreshInterval);
       return () => clearInterval(interval)}
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
@@ -322,14 +245,14 @@ export default function ComprehensiveMonitoringDashboard({
     if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
     if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
     return { grade: 'F'color: 'text-red-600' }};
->>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
+>
 
   const performanceScore = metrics ? 
     Math.round((100 - (metrics.performance.loadTime / 100)) + 
                (100 - (metrics.performance.cumulativeLayoutShift * 1000)) + 
                (100 - (metrics.resources.memoryUsage / 10))) / 3 : 0;
 
-  const { grade, color } = getPerformanceGrade(performanceScore);
+  const {gradecolor } = getPerformanceGrade(performanceScore);
 
   if (isLoading) {
     return (

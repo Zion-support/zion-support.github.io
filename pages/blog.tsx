@@ -45,47 +45,51 @@ export default function Blog(): JSX.Element {
 		},
 		{
 			id: 4,
-			title: 'Cybersecurity in 2024: Emerging Threats and Defense Strategies',
-			excerpt: 'Stay ahead of the latest cybersecurity threats and learn about the most effective defense strategies for modern businesses.',
+			title: 'Digital Transformation: A Strategic Approach',
+			excerpt: 'Understand how to plan and execute a successful digital transformation initiative that drives real business value.',
 			author: 'David Kim',
 			date: '2024-01-08',
 			readTime: '7 min read',
-			category: 'Cybersecurity',
+			category: 'Digital Transformation',
 			image: '/api/placeholder/600/300',
-			slug: 'cybersecurity-2024-threats-defense'
+			slug: 'digital-transformation-strategic-approach'
 		},
 		{
 			id: 5,
-			title: 'Digital Transformation: A Step-by-Step Implementation Guide',
-			excerpt: 'Navigate the complexities of digital transformation with our comprehensive guide to planning and executing successful initiatives.',
+			title: 'Cybersecurity in the Cloud: Essential Protection Strategies',
+			excerpt: 'Learn about the critical security considerations and best practices for protecting cloud-based applications and data.',
 			author: 'Sarah Johnson',
 			date: '2024-01-05',
 			readTime: '9 min read',
-			category: 'Digital Transformation',
+			category: 'Cybersecurity',
 			image: '/api/placeholder/600/300',
-			slug: 'digital-transformation-implementation-guide'
+			slug: 'cybersecurity-cloud-protection-strategies'
 		},
 		{
 			id: 6,
-			title: 'The Rise of Edge Computing: Benefits and Use Cases',
-			excerpt: 'Explore how edge computing is revolutionizing data processing and discover its potential applications across industries.',
+			title: 'The Rise of Edge Computing: Opportunities and Challenges',
+			excerpt: 'Explore how edge computing is revolutionizing data processing and what it means for the future of technology.',
 			author: 'Michael Chen',
 			date: '2024-01-03',
 			readTime: '6 min read',
 			category: 'Edge Computing',
 			image: '/api/placeholder/600/300',
-			slug: 'rise-edge-computing-benefits-use-cases'
+			slug: 'edge-computing-opportunities-challenges'
 		}
 	];
 
-	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
+	const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Digital Transformation', 'Cybersecurity', 'Edge Computing'];
+
+	const filteredPosts = blogPosts.filter(post => 
+		categories.includes('all') || post.category === categories.find(cat => cat !== 'all')
+	);
 
 	const handleNewsletterSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsNewsletterLoading(true);
 		
 		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise(resolve => setTimeout(resolve, 2000));
 		
 		setIsNewsletterLoading(false);
 		trackClick('newsletter-subscribe', 'engagement');
@@ -94,14 +98,11 @@ export default function Blog(): JSX.Element {
 
 	return (
 		<>
-			<EnhancedSEO
-				title="Blog - Zion App"
-				description="Stay updated with the latest insights on AI, cloud computing, digital transformation, and technology trends."
-				keywords={['technology blog', 'AI insights', 'cloud computing', 'digital transformation', 'tech trends']}
-			/>
+			<EnhancedSEO />
 			<Head>
 				<title>Blog - Zion App</title>
-				<meta name="description" content="Stay updated with the latest insights on AI, cloud computing, digital transformation, and technology trends." />
+				<meta name="description" content="Stay updated with the latest insights on AI, cloud computing, web development, and digital transformation from our expert team." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -112,80 +113,102 @@ export default function Blog(): JSX.Element {
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Blog
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-							Insights, trends, and best practices in technology, AI, and digital transformation.
+						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+							Insights, trends, and expert perspectives on technology, innovation, and digital transformation.
 						</p>
 					</header>
 
-					{/* Newsletter Signup */}
-					<section className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-						<div className="text-center">
-							<h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h2>
-							<p className="text-gray-600 mb-6">Get the latest insights delivered to your inbox.</p>
-							<form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
-								<div className="flex gap-4">
-									<input
-										type="email"
-										placeholder="Enter your email"
-										className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-										required
-									/>
+					<main>
+						{/* Category Filter */}
+						<section className="mb-12">
+							<div className="flex flex-wrap justify-center gap-4">
+								{categories.map((category) => (
 									<button
-										type="submit"
-										disabled={isNewsletterLoading}
-										className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
+										key={category}
+										className={`px-6 py-3 rounded-full font-semibold transition-colors ${
+											category === 'all'
+												? 'bg-blue-600 text-white shadow-md'
+												: 'bg-white text-gray-800 hover:bg-gray-100 shadow-sm'
+										}`}
+										onClick={() => trackClick(`blog-category-${category}`, 'navigation')}
 									>
-										{isNewsletterLoading ? 'Subscribing...' : 'Subscribe'}
+										{category === 'all' ? 'All Posts' : category}
 									</button>
-								</div>
-							</form>
-						</div>
-					</section>
+								))}
+							</div>
+						</section>
 
-					{/* Blog Posts */}
-					<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{blogPosts.map((post) => (
-							<article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-								<img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
-								<div className="p-6">
-									<div className="flex items-center gap-2 mb-3">
-										<span className="text-sm text-blue-600 font-medium">{post.category}</span>
-										<span className="text-gray-400">•</span>
-										<span className="text-sm text-gray-500">{post.readTime}</span>
-									</div>
-									<h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-										{post.title}
-									</h3>
-									<p className="text-gray-600 mb-4 line-clamp-3">
-										{post.excerpt}
-									</p>
-									<div className="flex items-center justify-between">
-										<div className="flex items-center gap-3">
-											<div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-												<span className="text-blue-600 text-sm font-semibold">
-													{post.author.split(' ').map(n => n[0]).join('')}
-												</span>
-											</div>
-											<div>
-												<p className="text-sm font-medium text-gray-900">{post.author}</p>
-												<p className="text-xs text-gray-500">{post.date}</p>
-											</div>
+						{/* Blog Posts Grid */}
+						<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+							{filteredPosts.map((post) => (
+								<article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+									<div className="relative h-48">
+										<Image
+											src={post.image}
+											alt={post.title}
+											fill
+											className="object-cover"
+										/>
+										<div className="absolute top-4 left-4">
+											<span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+												{post.category}
+											</span>
 										</div>
-										<Link
+									</div>
+									<div className="p-6">
+										<div className="flex items-center text-sm text-gray-500 mb-3">
+											<span>{post.author}</span>
+											<span className="mx-2">•</span>
+											<span>{post.date}</span>
+											<span className="mx-2">•</span>
+											<span>{post.readTime}</span>
+										</div>
+										<h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+											{post.title}
+										</h2>
+										<p className="text-gray-600 mb-4 line-clamp-3">
+											{post.excerpt}
+										</p>
+										<Link 
 											href={`/blog/${post.slug}`}
-											className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+											className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
 											onClick={() => trackClick(`blog-post-${post.slug}`, 'engagement')}
 										>
 											Read More →
 										</Link>
 									</div>
+								</article>
+							))}
+						</section>
+
+						{/* Newsletter Signup */}
+						<section className="bg-blue-600 rounded-2xl p-8 text-white text-center">
+							<h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+							<p className="text-xl mb-6 text-blue-100">
+								Get the latest insights and updates delivered to your inbox.
+							</p>
+							<form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
+								<div className="flex gap-4">
+									<input
+										type="email"
+										placeholder="Enter your email"
+										className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+										required
+									/>
+									<button
+										type="submit"
+										disabled={isNewsletterLoading}
+										className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50"
+									>
+										{isNewsletterLoading ? 'Subscribing...' : 'Subscribe'}
+									</button>
 								</div>
-							</article>
-						))}
-					</section>
+							</form>
+						</section>
+					</main>
 				</div>
 			</div>
 		</>

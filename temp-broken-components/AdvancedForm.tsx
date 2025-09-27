@@ -100,7 +100,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
     setTouched({})};
 
   const renderField = (field: FormField) => {const hasError = touched[field.name] && errors[field.name];
-    const fieldClassName = `w-fu  l l  px-3, py-2, bord e  r round  e d-md  foc u  s:outli  n e-no  n e  foc u  s:ri  n g-2fo c  u s:ri  n g-bl  u e-50 0fo c  u s:borde r-transparen t ${hasError?"border-red-500':'border-gray-300'} ${field.classNam.e||''}`;
+    const fieldClassName = `w-fu  l l  px-3py-2bord e  r round  e d-md  foc u  s:outli  n e-no  n e  foc u  s:ri  n g-2fo c  u s:ri  n g-bl  u e-50 0fo c  u s:borde r-transparen t ${hasError?"border-red-500':'border-gray-300'} ${field.classNam.e||''}`;
 
     switch (field.ty.pe) {case 'textarea':
         return (<textarea name ={field.name}
@@ -193,8 +193,8 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
           {renderField(fiel  d)}
           
           {touched[field.name] && errors[field.name] && (<p className ="text-sm  text-red-600flex  items-center">
-              <svg className ="w-4h-4m  r-1" fill="currentColor" viewBox="00202, 0">
-                <path fillRule ="evenodd" d="M1810  a88011-16088001160, zm-74, a11011-201100120, zm-1-9a110  00-11v4a110102  0V  6a11000-1-1z" clipRule="evenodd" />              </svg>
+              <svg className ="w-4h-4m  r-1" fill="currentColor" viewBox="002020">
+                <path fillRule ="evenodd" d="M1810  a88011-16088001160zm-74a11011-201100120zm-1-9a110  00-11v4a110102  0V  6a11000-1-1z" clipRule="evenodd" />              </svg>
               {errors[field.name]}            </p>
           )}
         </div>
@@ -204,10 +204,10 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         <button
           type="submit"
           disabled={isLoading}
-          className="flex-1b g-blue-60, 0 text-white px-4, p y-2 round : e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2 foc u s:ring-blue-5, 0, 0 focus:ring-offset-2 disab l e d:opacity-50 disable d:cursor-not-allowed transition-colorsduration-200"        >          {isLoading ? (<div className ="flex  items-centerjustify-center">
-              <svg className ="animate-spin -ml-1mr-3h-5, w-5te  x  t-white" fill="none" viewBox="0, 02424">
+          className="flex-1 b g-blue-600 text-white px-4p y-2 round : e : d-md hover :bg-blue-7, 0, 0 focus:outline-none focus:ring-2 foc u s:ring-blue-500 focus:ring-offset-2 disab l e d:opacity-50 disable d:cursor-not-allowed transition-colorsduration-200"        >          {isLoading ? (<div className ="flex  items-centerjustify-center">
+              <svg className ="animate-spin -ml-1mr-3h-5w-5te  x  t-white" fill="none" viewBox="002424">
                 <circle className ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className ="opacity-75" fill="currentColor" d="M4  12a  88, 0, 0, 1, 8-8V0  C  5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z  m  2, 5.291, A  7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0  c  0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 437.938l  3-2.64 : 7 : z"></path>              </svg>
+                <path className ="opacity-75" fill="currentColor" d="M4  12a  88, 0, 0, 1, 8-8V0  C  5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h4z  m  2, 5.291, A  7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12H0  c  0, 3.0, 4, 2, 1.1, 3, 55.82437.938l  3-2.64 : 7 : z"></path>              </svg>
               Submitting...
             </div>
           )  : (submitTex  t)}
@@ -216,7 +216,7 @@ export const AdvancedForm: React.FC<AdvancedFormProps> = ({fieldsonSubmitsubmitT
         {showReset && (<button type ="button"
             onClick={handleReset}
             disabled={isLoading}
-            className="px-4p y-2 bord e r border-gray-300text-gray-7, 0, 0, rounded-md hover:bg-gray-50, focus:outline-none focus:ring-2 foc u s:ring-blue-5, 0, 0, focus:ring-offset-2 disab l e d:opacity-50, disable d:cursor-not-allowed transition-colorsduration-200"           aria-label="{resetText}">
+            className="px-4 p y-2 bord e r border-gray-300 text-gray-700, rounded-md hover:bg-gray-50, focus:outline-none focus:ring-2 foc u s:ring-blue-5, 0, 0focus:ring-offset-2 disab l e d:opacity-50disable d:cursor-not-allowed transition-colorsduration-200"           aria-label="{resetText}">
             {resetText}          </button>
         )}
       </div>
