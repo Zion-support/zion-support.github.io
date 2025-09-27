@@ -159,7 +159,7 @@ const AccessibilityTester: React.FC = () => {
     
     for (const element of colorOnlyElements) {
       const text = element.textContent || '';
-      if (text.trim() && !element.getAttribute('aria-label') && !element.title) {
+      if (text.trim() && !element.getAttribute('aria-label') && !(element as HTMLElement).title) {
         hasColorOnlyInfo = true;
         break;
       }
