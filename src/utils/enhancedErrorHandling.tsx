@@ -402,7 +402,7 @@ export class EnhancedErrorBoundary extends React.Component<
             </h2>
             
             <p className="text-sm text-gray-500 text-center mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             
             <div className="flex space-x-3">

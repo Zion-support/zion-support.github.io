@@ -190,7 +190,7 @@ export class ResourcePreloader {
 export class PerformanceMetricsCollector {
   private static instance: PerformanceMetricsCollector;
   private metrics: Map<string, number[]> = new Map();
-  private customMetrics: Map<string, any> = new Map();
+  private customMetrics: Map<string, unknown> = new Map();
 
   static getInstance(): PerformanceMetricsCollector {
     if (!PerformanceMetricsCollector.instance) {
@@ -206,7 +206,7 @@ export class PerformanceMetricsCollector {
     this.metrics.get(name)?.push(value);
   }
 
-  recordCustomMetric(name: string, value: any): void {
+  recordCustomMetric(name: string, value: unknown): void {
     this.customMetrics.set(name, value);
   }
 
@@ -235,7 +235,7 @@ export class PerformanceMetricsCollector {
     return result;
   }
 
-  getCustomMetrics(): Record<string, any> {
+  getCustomMetrics(): Record<string, unknown> {
     return Object.fromEntries(this.customMetrics);
   }
 
@@ -365,7 +365,7 @@ export class MemoryMonitor {
 
   private checkMemoryUsage(): void {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usage = {
         used: memory.usedJSHeapSize,
         total: memory.totalJSHeapSize,
