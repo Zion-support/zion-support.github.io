@@ -290,7 +290,7 @@ export default function AdvancedAnalyticsInsights({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Analytics Insights</h2>
           <p className="text-gray-600">Comprehensive analytics and performance insights</p>
         </div>
         <div className="flex items-center space-x-2">
@@ -462,13 +462,13 @@ export default function AdvancedAnalyticsInsights({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className={`p-4rounded-lg border ${getInsightColor(insight.type)}`}
+                    className={`p-4 rounded-lg border ${getInsightColor(insight.type)}`}
                   >
                     <div className="flex items-start space-x-3">
                       {getInsightIcon(insight.type)}
                       <div className="flex-1">
-                        <h4className="font-semibold text-sm">{insight.title}</h4>
-                        <p className="text-sm text-gray-600mt-1">{insight.description}</p>
+                        <h4 className="font-semibold text-sm">{insight.title}</h4>
+                        <p className="text-sm text-gray-600 mt-1">{insight.description}</p>
                         <div className="mt-2">
                           <p className="text-xs font-medium text-gray-700">Impact:</p>
                           <p className="text-xs text-gray-600">{insight.impact}</p>
