@@ -11,12 +11,12 @@ interface ExtendedXMLHttpRequest extends XMLHttpRequest {
   _url?: string;
 }
 
-// Error object interface for better type safety
-interface ErrorLike {
-  message?: string;
-  stack?: string;
-  toString(): string;
-}
+// Error object interface for better type safety (currently unused but may be needed later)
+// interface ErrorLike {
+//   message?: string;
+//   stack?: string;
+//   toString(): string;
+// }
 
 export interface ErrorContext {
   userId?: string;
@@ -39,6 +39,20 @@ export interface ErrorReport {
   url: string;
   userId?: string;
   sessionId?: string;
+  context?: ErrorContext;
+  severity?: 'low' | 'medium' | 'high' | 'critical';
+  category?: string;
+  occurrences?: number;
+  firstSeen?: number;
+  lastSeen?: number;
+  resolved?: boolean;
+}
+
+export interface ErrorInfo {
+  componentStack?: string;
+  errorBoundary?: string;
+  errorBoundaryStack?: string;
+  message?: string;
 }
 
 export interface ErrorRecoveryOptions {
@@ -51,7 +65,10 @@ export interface ErrorRecoveryOptions {
 export class EnhancedErrorHandler {
   private static instance: EnhancedErrorHandler;
   private errorQueue: ErrorInfo[] = [];
+  private errors: Map<string, ErrorReport> = new Map();
   private maxQueueSize = 50;
+  private maxErrors = 100;
+  private reportEndpoint = '/api/error-reporting';
   private isReporting = false;
 
   static getInstance(): EnhancedErrorHandler {
@@ -61,15 +78,16 @@ export class EnhancedErrorHandler {
     return EnhancedErrorHandler.instance;
   }
 
-  public initialize(): void {
+  private constructor() {
+    this.initializeErrorHandling();
+  }
+
+  private initializeErrorHandling(): void {
     // Global error handlers
-    window.addEventListener('error', this.handleGlobalError.bind(this));
-    window.addEventListener('unhandledrejection', this.handleUnhandledRejection.bind(this));
+    window.addEventListener('error', (event) => this.handleGlobalError(event));
+    window.addEventListener('unhandledrejection', (event) => this.handleUnhandledRejection(event));
+    window.addEventListener('error', (event) => this.handleResourceError(event), true);
     
-    // Resource loading errors
-    window.addEventListener('error', this.handleResourceError.bind(this), true);
-    
-    // Network errors
     this.interceptFetch();
     this.interceptXMLHttpRequest();
   }
@@ -85,7 +103,10 @@ export class EnhancedErrorHandler {
       resolved: false,
       occurrences: 1,
       firstSeen: Date.now(),
-      lastSeen: Date.now()
+      lastSeen: Date.now(),
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
     };
 
     this.processError(errorReport);
@@ -102,7 +123,10 @@ export class EnhancedErrorHandler {
       resolved: false,
       occurrences: 1,
       firstSeen: Date.now(),
-      lastSeen: Date.now()
+      lastSeen: Date.now(),
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
     };
 
     this.processError(errorReport);
@@ -112,17 +136,17 @@ export class EnhancedErrorHandler {
     if (event.target !== window) {
       const errorReport: ErrorReport = {
         id: this.generateErrorId(event),
-        message: `Resource loading error: ${(event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href}`,
-        context: this.getErrorContext({
-          resourceType: (event.target as HTMLElement)?.tagName,
-          resourceUrl: (event.target as HTMLImageElement)?.src || (event.target as HTMLLinkElement)?.href
-        }),
+        message: `Failed to load resource: ${(event.target as HTMLElement & { src?: string; href?: string })?.src || (event.target as HTMLElement & { src?: string; href?: string })?.href}`,
+        context: this.getErrorContext(),
         severity: 'medium',
         category: 'resource',
         resolved: false,
         occurrences: 1,
         firstSeen: Date.now(),
-        lastSeen: Date.now()
+        lastSeen: Date.now(),
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
       };
 
       this.processError(errorReport);
@@ -132,47 +156,43 @@ export class EnhancedErrorHandler {
   private interceptFetch(): void {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
+      const url = typeof args[0] === 'string' ? args[0] : (args[0] as Request).url;
+      
       try {
         const response = await originalFetch(...args);
-        
         if (!response.ok) {
           const errorReport: ErrorReport = {
             id: this.generateErrorId(response),
-            message: `Network error: ${response.status} ${response.statusText}`,
-            context: this.getErrorContext({
-              url: args[0].toString(),
-              method: args[1]?.method || 'GET',
-              status: response.status,
-              statusText: response.statusText
-            }),
+            message: `Network request failed: ${url}`,
+            context: this.getErrorContext(),
             severity: response.status >= 500 ? 'high' : 'medium',
             category: 'network',
             resolved: false,
             occurrences: 1,
             firstSeen: Date.now(),
-            lastSeen: Date.now()
+            lastSeen: Date.now(),
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent,
+            url: window.location.href
           };
-
           this.processError(errorReport);
         }
-
         return response;
       } catch (error) {
         const errorReport: ErrorReport = {
           id: this.generateErrorId(error),
-          message: `Fetch error: ${error instanceof Error ? error.message : 'Unknown error'}`,
-          context: this.getErrorContext({
-            url: args[0].toString(),
-            method: args[1]?.method || 'GET'
-          }),
+          message: `Fetch request failed: ${url}`,
+          context: this.getErrorContext(),
           severity: 'high',
           category: 'network',
           resolved: false,
           occurrences: 1,
           firstSeen: Date.now(),
-          lastSeen: Date.now()
+          lastSeen: Date.now(),
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href
         };
-
         this.processError(errorReport);
         throw error;
       }
@@ -180,39 +200,38 @@ export class EnhancedErrorHandler {
   }
 
   private interceptXMLHttpRequest(): void {
-    const originalXHR = window.XMLHttpRequest;
-    const originalOpen = originalXHR.prototype.open;
-    const originalSend = originalXHR.prototype.send;
+    const originalOpen = XMLHttpRequest.prototype.open;
+    const originalSend = XMLHttpRequest.prototype.send;
 
-    originalXHR.prototype.open = function(method: string, url: string, ...args: unknown[]) {
+    XMLHttpRequest.prototype.open = function(method: string, url: string | URL, ...args: unknown[]) {
       (this as ExtendedXMLHttpRequest)._method = method;
-      (this as ExtendedXMLHttpRequest)._url = url;
-      return originalOpen.apply(this, [method, url, ...args] as Parameters<typeof originalOpen>);
+      (this as ExtendedXMLHttpRequest)._url = url.toString();
+      return originalOpen.call(this, method, url, ...(args as [boolean, string]));
     };
 
-    originalXHR.prototype.send = function(data?: unknown) {
+    XMLHttpRequest.prototype.send = function(data?: unknown) {
       this.addEventListener('error', () => {
         const errorReport: ErrorReport = {
           id: EnhancedErrorHandler.getInstance().generateErrorId(this),
           message: `XHR error: ${(this as ExtendedXMLHttpRequest)._method} ${(this as ExtendedXMLHttpRequest)._url}`,
           context: EnhancedErrorHandler.getInstance().getErrorContext({
-            url: (this as ExtendedXMLHttpRequest)._url,
             method: (this as ExtendedXMLHttpRequest)._method,
-            status: this.status,
-            statusText: this.statusText
+            url: (this as ExtendedXMLHttpRequest)._url
           }),
           severity: 'medium',
           category: 'network',
           resolved: false,
           occurrences: 1,
           firstSeen: Date.now(),
-          lastSeen: Date.now()
+          lastSeen: Date.now(),
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href
         };
-
         EnhancedErrorHandler.getInstance().processError(errorReport);
       });
 
-      return originalSend.apply(this, [data] as Parameters<typeof originalSend>);
+      return originalSend.call(this, data);
     };
   }
 
@@ -220,51 +239,35 @@ export class EnhancedErrorHandler {
     const existingError = this.errors.get(errorReport.id);
     
     if (existingError) {
-      existingError.occurrences++;
+      existingError.occurrences = (existingError.occurrences || 0) + 1;
       existingError.lastSeen = Date.now();
       this.errors.set(errorReport.id, existingError);
     } else {
       this.errors.set(errorReport.id, errorReport);
     }
 
-    // Log in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error captured:', errorReport);
+      console.error('Enhanced Error Handler:', errorReport);
     }
 
-    // Report to server in production
-    if (process.env.NODE_ENV === 'production') {
-      this.reportToServer(errorReport);
-    }
-
-    // Cleanup old errors
-    if (this.errors.size > this.maxErrors) {
-      const oldestErrors = Array.from(this.errors.entries())
-        .sort(([, a], [, b]) => a.firstSeen - b.firstSeen)
-        .slice(0, 100);
-      
-      oldestErrors.forEach(([id]) => this.errors.delete(id));
-    }
+    this.reportToServer(errorReport);
   }
 
   private async reportToServer(errorReport: ErrorReport): Promise<void> {
     try {
       await fetch(this.reportEndpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)
       });
     } catch (error) {
-      console.warn('Failed to report error to server:', error);
+      console.error('Failed to report error to server:', error);
     }
   }
 
   private generateErrorId(error: Error | Event | unknown): string {
-    const message = (error as ErrorLike)?.message || error?.toString() || 'unknown';
-    const stack = (error as ErrorLike)?.stack || '';
-    return btoa(message + stack).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+    const message = error instanceof Error ? error.message : String(error);
+    return btoa(message).slice(0, 16);
   }
 
   private getErrorContext(additionalData?: Record<string, unknown>): ErrorContext {
@@ -272,273 +275,123 @@ export class EnhancedErrorHandler {
       url: window.location.href,
       userAgent: navigator.userAgent,
       timestamp: Date.now(),
+      sessionId: this.getSessionId(),
       ...additionalData
     };
   }
 
   private determineSeverity(error: Error | Event | unknown): 'low' | 'medium' | 'high' | 'critical' {
-    const message = (error as ErrorLike)?.message || error?.toString() || '';
-    
-    if (message.includes('ChunkLoadError') || message.includes('Loading chunk')) {
-      return 'medium'; // Chunk loading errors are usually recoverable
+    if (error instanceof Error) {
+      if (error.message.includes('ChunkLoadError') || error.message.includes('Loading chunk')) {
+        return 'medium';
+      }
+      if (error.message.includes('Network') || error.message.includes('fetch')) {
+        return 'high';
+      }
     }
-    
-    if (message.includes('NetworkError') || message.includes('fetch')) {
-      return 'high'; // Network errors are more serious
-    }
-    
-    if (message.includes('TypeError') && message.includes('Cannot read property')) {
-      return 'high'; // Property access errors can break functionality
-    }
-    
-    if (message.includes('ReferenceError')) {
-      return 'critical'; // Reference errors usually indicate serious issues
-    }
-    
-    return 'medium';
+    return 'low';
   }
 
   public captureError(error: Error, context?: Partial<ErrorContext>): void {
     const errorReport: ErrorReport = {
       id: this.generateErrorId(error),
-      message: error.message,
+      message: error.message || 'Unknown error',
       stack: error.stack,
-      componentStack: context?.component,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      sessionId: this.getSessionId(),
-      userId: context?.userId,
+      context: this.getErrorContext(context),
       severity: this.determineSeverity(error),
       category: 'javascript',
       resolved: false,
-      context: this.getErrorContext(context)
+      occurrences: 1,
+      firstSeen: Date.now(),
+      lastSeen: Date.now(),
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
     };
 
     this.errors.set(errorReport.id, errorReport);
-    this.reportToServer(errorReport);
   }
 
-  /**
-   * Add error to queue for batch reporting
-   */
   private addToQueue(errorInfo: ErrorInfo): void {
     this.errorQueue.push(errorInfo);
     
-    // Maintain queue size
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
 
-    // Report errors in batches
-    if (this.errorQueue.length >= 10 && !this.isReporting) {
+    if (!this.isReporting) {
       this.reportBatch();
     }
   }
 
-  /**
-   * Log error to console with enhanced formatting
-   */
-  private logError(error: Error, errorInfo?: React.ErrorInfo): void {
-    console.group('🚨 Enhanced Error Handler');
-    console.error('Error:', error.message);
-    console.error('Stack:', error.stack);
-    
-    if (errorInfo) {
-      console.error('Component Stack:', errorInfo.componentStack);
-    }
-    
-    console.error('Timestamp:', new Date().toISOString());
-    console.error('URL:', window.location.href);
-    console.groupEnd();
-  }
-
-  /**
-   * Report error to external service
-   */
   private async reportError(errorInfo: ErrorInfo): Promise<void> {
     try {
-      // In a real application, you would send this to your error reporting service
-      // For now, we'll just log it
-      console.log('Reporting error:', errorInfo);
-      
-      // Example: Send to external service
-      // await fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorInfo)
-      // });
+      await fetch('/api/error-reporting', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...errorInfo,
+          timestamp: Date.now(),
+          url: window.location.href,
+          userAgent: navigator.userAgent
+        })
+      });
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError);
     }
   }
 
-  /**
-   * Report batch of errors
-   */
   private async reportBatch(): Promise<void> {
     if (this.isReporting || this.errorQueue.length === 0) return;
     
     this.isReporting = true;
-    const batch = [...this.errorQueue];
-    this.errorQueue = [];
-
+    
     try {
-      console.log('Reporting error batch:', batch);
-      // In a real application, send batch to your error reporting service
-      // await fetch('/api/errors/batch', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(batch)
-      // });
+      const batch = this.errorQueue.splice(0, 10);
+      await Promise.all(batch.map(error => this.reportError(error)));
     } catch (error) {
-      console.error('Failed to report error batch:', error);
-      // Re-add errors to queue if reporting failed
-      this.errorQueue.unshift(...batch);
+      console.error('Batch error reporting failed:', error);
     } finally {
       this.isReporting = false;
+      
+      if (this.errorQueue.length > 0) {
+        setTimeout(() => this.reportBatch(), 5000);
+      }
     }
   }
 
-  /**
-   * Attempt error recovery
-   */
-  private attemptRecovery(
-    error: Error,
-    options: Partial<ErrorRecoveryOptions>
-  ): void {
-    const maxRetries = options.maxRetries || 3;
-    const retryDelay = options.retryDelay || 1000;
-    
-    console.log(`Attempting error recovery (${maxRetries} retries, ${retryDelay}ms delay)`);
-    
-    // Implement retry logic based on error type
-    if (error.name === 'NetworkError' || error.message.includes('fetch')) {
-      this.retryNetworkOperation(error, maxRetries, retryDelay);
-    } else if (error.name === 'ChunkLoadError') {
-      this.retryChunkLoad(error, maxRetries, retryDelay);
-    }
-  }
-
-  /**
-   * Retry network operations
-   */
-  private retryNetworkOperation(
-    error: Error,
-    maxRetries: number,
-    retryDelay: number
-  ): void {
-    let retryCount = 0;
-    
-    const retry = () => {
-      if (retryCount >= maxRetries) {
-        console.error('Max retries exceeded for network operation');
-        return;
-      }
-      
-      retryCount++;
-      console.log(`Retrying network operation (attempt ${retryCount}/${maxRetries})`);
-      
-      setTimeout(() => {
-        // Reload the page for network errors
-        window.location.reload();
-      }, retryDelay * retryCount);
-    };
-    
-    retry();
-  }
-
-  /**
-   * Retry chunk loading
-   */
-  private retryChunkLoad(
-    error: Error,
-    maxRetries: number,
-    retryDelay: number
-  ): void {
-    let retryCount = 0;
-    
-    const retry = () => {
-      if (retryCount >= maxRetries) {
-        console.error('Max retries exceeded for chunk load');
-        // Fallback: reload the page
-        window.location.reload();
-        return;
-      }
-      
-      retryCount++;
-      console.log(`Retrying chunk load (attempt ${retryCount}/${maxRetries})`);
-      
-      setTimeout(() => {
-        // Try to reload the specific chunk
-        const chunkMatch = error.message.match(/Loading chunk (\d+) failed/);
-        if (chunkMatch) {
-          const chunkId = chunkMatch[1];
-          // Clear the chunk from cache and reload
-          if ('caches' in window) {
-            caches.keys().then(cacheNames => {
-              cacheNames.forEach(cacheName => {
-                caches.open(cacheName).then(cache => {
-                  cache.keys().then(requests => {
-                    requests.forEach(request => {
-                      if (request.url.includes(`chunk-${chunkId}`)) {
-                        cache.delete(request);
-                      }
-                    });
-                  });
-                });
-              });
-            });
-          }
-        }
-        
-        window.location.reload();
-      }, retryDelay * retryCount);
-    };
-    
-    retry();
-  }
-
-  /**
-   * Get session ID for error tracking
-   */
   private getSessionId(): string {
-    let sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('error-session-id');
     if (!sessionId) {
-      sessionId = Math.random().toString(36).substring(2, 15);
-      sessionStorage.setItem('sessionId', sessionId);
+      sessionId = Date.now().toString(36) + Math.random().toString(36).substr(2);
+      sessionStorage.setItem('error-session-id', sessionId);
     }
     return sessionId;
   }
 
-  /**
-   * Get error statistics
-   */
   getErrorStats(): {
     totalErrors: number;
-    recentErrors: ErrorInfo[];
     errorTypes: Record<string, number>;
+    recentErrors: ErrorInfo[];
   } {
     const recentErrors = this.errorQueue.slice(-10);
     const errorTypes: Record<string, number> = {};
     
     this.errorQueue.forEach(error => {
-      const type = error.message.split(':')[0] || 'Unknown';
+      const type = error.message?.split(':')[0] || 'Unknown';
       errorTypes[type] = (errorTypes[type] || 0) + 1;
     });
 
     return {
       totalErrors: this.errorQueue.length,
-      recentErrors,
       errorTypes,
+      recentErrors
     };
   }
 
-  /**
-   * Clear error queue
-   */
   clearErrors(): void {
     this.errorQueue = [];
+    this.errors.clear();
   }
 }
 
@@ -554,13 +407,8 @@ interface EnhancedErrorBoundaryState {
 
 interface EnhancedErrorBoundaryProps {
   children: React.ReactNode;
-  fallback?: React.ComponentType<{
-    error: Error;
-    errorInfo?: React.ErrorInfo;
-    retry: () => void;
-    retryCount: number;
-  }>;
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+  fallback?: React.ComponentType<{ error: Error; retry: () => void }>;
   maxRetries?: number;
 }
 
@@ -568,140 +416,118 @@ export class EnhancedErrorBoundary extends React.Component<
   EnhancedErrorBoundaryProps,
   EnhancedErrorBoundaryState
 > {
-  private errorHandler = EnhancedErrorHandler.getInstance();
+  private errorHandler: EnhancedErrorHandler;
 
   constructor(props: EnhancedErrorBoundaryProps) {
     super(props);
-    this.state = {
-      hasError: false,
-      retryCount: 0,
-    };
+    this.state = { hasError: false, retryCount: 0 };
+    this.errorHandler = EnhancedErrorHandler.getInstance();
   }
 
-  static getDerivedStateFromError(error: Error): Partial<EnhancedErrorBoundaryState> {
-    return {
-      hasError: true,
-      error,
-    };
+  static getDerivedStateFromError(error: Error): { hasError: boolean; error: Error } {
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
-    const { onError, maxRetries = 3 } = this.props;
+    const { onError } = this.props;
     
     this.setState({ errorInfo });
     
     // Capture error with enhanced handler
-    this.errorHandler.captureError(error, errorInfo, {
-      retryable: this.state.retryCount < maxRetries,
-      maxRetries,
-      retryDelay: 1000,
+    this.errorHandler.captureError(error, {
+      url: window.location.href,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      component: errorInfo.componentStack || undefined
     });
 
     // Call custom error handler
     onError?.(error, errorInfo);
   }
 
-  handleRetry = (): void => {
-    const { maxRetries = 3 } = this.props;
-    
-    if (this.state.retryCount < maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1,
-      }));
-    } else {
-      // Max retries exceeded, reload page
-      window.location.reload();
-    }
+  private handleRetry = (): void => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
   render(): React.ReactNode {
-    const { hasError, error, errorInfo, retryCount } = this.state;
-    const { children, fallback: FallbackComponent } = this.props;
+    if (this.state.hasError) {
+      const { fallback: FallbackComponent } = this.props;
+      const { error, retryCount } = this.state;
 
-    if (hasError && error) {
-      if (FallbackComponent) {
-        return (
-          <FallbackComponent
-            error={error}
-            errorInfo={errorInfo}
-            retry={this.handleRetry}
-            retryCount={retryCount}
-          />
-        );
+      if (FallbackComponent && error) {
+        return <FallbackComponent error={error} retry={this.handleRetry} />;
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg
-                className="w-6 h-6 text-red-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                />
-              </svg>
-            </div>
-            
-            <h2 className="text-lg font-medium text-gray-900 text-center mb-2">
-              Something went wrong
-            </h2>
-            
-            <p className="text-sm text-gray-500 text-center mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try again.
-            </p>
-            
-            <div className="flex space-x-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Try Again ({retryCount}/3)
-              </button>
-              
-              <button
-                onClick={() => window.location.reload()}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-              >
-                Reload Page
-              </button>
-            </div>
-            
-            {process.env.NODE_ENV === 'development' && error && (
-              <details className="mt-4">
-                <summary className="text-sm text-gray-600 cursor-pointer">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.stack}
-                </pre>
-              </details>
-            )}
-          </div>
+        <div className="error-boundary" style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Something went wrong</h2>
+          <p>We&apos;re sorry, but something unexpected happened.</p>
+          {process.env.NODE_ENV === 'development' && error && (
+            <details style={{ marginTop: '1rem', textAlign: 'left' }}>
+              <summary>Error Details</summary>
+              <pre style={{ 
+                background: '#f5f5f5', 
+                padding: '1rem', 
+                borderRadius: '4px',
+                overflow: 'auto'
+              }}>
+                {error.message}
+                {error.stack}
+              </pre>
+            </details>
+          )}
+          {retryCount < 3 && (
+            <button 
+              onClick={this.handleRetry}
+              style={{
+                marginTop: '1rem',
+                padding: '0.5rem 1rem',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              Try Again ({retryCount}/3)
+            </button>
+          )}
         </div>
       );
     }
 
-    return children;
+    return this.props.children;
   }
 }
 
-// React Error Boundary integration
-export class ReactErrorBoundary extends React.Component<
+/**
+ * Higher-order component for error boundary
+ */
+export function withErrorBoundary<P extends object>(
+  Component: React.ComponentType<P>,
+  fallback?: React.ComponentType<{ error: Error; retry: () => void }>
+) {
+  const WrappedComponent = (props: P) => (
+    <EnhancedErrorBoundary fallback={fallback}>
+      <Component {...props} />
+    </EnhancedErrorBoundary>
+  );
+
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+
+  return WrappedComponent;
+}
+
+// Simple error boundary for basic use cases
+export class SimpleErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
   { hasError: boolean; error?: Error }
 > {
-  private errorHandler = EnhancedErrorHandler.getInstance();
-
   constructor(props: { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> }) {
     super(props);
     this.state = { hasError: false };
@@ -712,48 +538,25 @@ export class ReactErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
-    this.errorHandler.captureError(error, {
-      component: errorInfo.componentStack,
-      url: window.location.href,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent
-    });
+    console.error('Simple Error Boundary caught an error:', error, errorInfo);
   }
 
   render(): React.ReactNode {
     if (this.state.hasError) {
-      const FallbackComponent = this.props.fallback || DefaultErrorFallback;
-      return <FallbackComponent error={this.state.error!} />;
+      const { fallback: FallbackComponent } = this.props;
+      
+      if (FallbackComponent && this.state.error) {
+        return <FallbackComponent error={this.state.error} />;
+      }
+
+      return (
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h2>Something went wrong</h2>
+          <p>Please refresh the page and try again.</p>
+        </div>
+      );
     }
 
     return this.props.children;
   }
 }
-
-const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => 
-  React.createElement('div', { className: 'error-boundary' },
-    React.createElement('h2', null, 'Something went wrong'),
-    React.createElement('p', null, 'We\'re sorry, but something unexpected happened.'),
-    process.env.NODE_ENV === 'development' && React.createElement('details', null,
-      React.createElement('summary', null, 'Error Details'),
-      React.createElement('pre', null, error.message),
-      React.createElement('pre', null, error.stack)
-    )
-  );
-
-// Utility functions
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  fallback?: React.ComponentType<{ error: Error }>
-) => {
-  const WrappedComponent = (props: P) => (
-    <ReactErrorBoundary fallback={fallback}>
-      <Component {...props} />
-    </ReactErrorBoundary>
-  );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-};
-
-export const enhancedErrorHandler = EnhancedErrorHandler.getInstance();

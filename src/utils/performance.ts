@@ -264,6 +264,7 @@ export class ResourceMonitor {
 // Memory monitoring utilities
 export class MemoryMonitor {
   private static instance: MemoryMonitor;
+  private intervalId: NodeJS.Timeout | null = null;
   private memoryHistory: Array<{
     timestamp: number;
     usedJSHeapSize: number;

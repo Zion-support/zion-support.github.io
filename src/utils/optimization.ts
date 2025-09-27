@@ -180,7 +180,7 @@ export class PerformanceOptimizer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        console.log('FID:', (entry as { processingStart: number }).processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -225,15 +225,15 @@ export class PerformanceOptimizer {
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as PerformanceWithMemory).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
+      this.metrics.memoryUsage = memory?.usedJSHeapSize || 0;
       
       // Log memory usage every 30 seconds
       setInterval(() => {
         const currentMemory = (performance as PerformanceWithMemory).memory;
         console.log('Memory usage:', {
-          used: currentMemory.usedJSHeapSize,
-          total: currentMemory.totalJSHeapSize,
-          limit: currentMemory.jsHeapSizeLimit
+          used: currentMemory?.usedJSHeapSize || 0,
+          total: currentMemory?.totalJSHeapSize || 0,
+          limit: currentMemory?.jsHeapSizeLimit || 0
         });
       }, 30000);
     }

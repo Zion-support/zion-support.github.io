@@ -262,9 +262,10 @@ export class PerformanceMetricsCollector {
     }
     
     const summary = this.customMetrics.get(categoryKey);
-    summary.count++;
-    summary.total += value;
-    summary.avg = summary.total / summary.count;
+    const typedSummary = summary as { count: number; total: number; avg: number };
+    typedSummary.count++;
+    typedSummary.total += value;
+    typedSummary.avg = typedSummary.total / typedSummary.count;
   }
 }
 
@@ -373,10 +374,10 @@ export class MemoryMonitor {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usage = {
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-        usagePercent: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+        used: memory?.usedJSHeapSize || 0,
+        total: memory?.totalJSHeapSize || 0,
+        limit: memory?.jsHeapSizeLimit || 0,
+        usagePercent: memory ? (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100 : 0
       };
 
       console.log('Memory Usage:', {
