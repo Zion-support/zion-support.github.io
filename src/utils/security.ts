@@ -46,7 +46,7 @@ export class SecurityManager {
     };
 
     // Add to global scope for use throughout the app
-    (window as any).sanitizeInput = sanitizeInput;
+    (window as Record<string, unknown>).sanitizeInput = sanitizeInput;
   }
 
   private setupClickjackingProtection(): void {
@@ -81,7 +81,7 @@ export class SecurityManager {
     });
   }
 
-  private async reportCSPViolation(violation: any): Promise<void> {
+  private async reportCSPViolation(violation: Record<string, unknown>): Promise<void> {
     try {
       await fetch('/api/security/csp-violation', {
         method: 'POST',
@@ -113,7 +113,7 @@ export class SecurityManager {
     const patterns = {
       email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       url: /^https?:\/\/.+/,
-      phone: /^\+?[\d\s\-\(\)]+$/,
+      phone: /^\+?[\d\s\-()]+$/,
       text: /^[a-zA-Z0-9\s\-_.,!?]+$/
     };
 
