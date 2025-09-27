@@ -1,0 +1,9 @@
+[
+  {
+    "branch": "pr-10",
+    "hasConflicts": false,
+    "commitCount": 0,
+    "lastCommit": "Resolve merge conflict in tsconfig.tsbuildinfo",
+    "status": "clean"
+  }
+]

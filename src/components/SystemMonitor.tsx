@@ -1,333 +1,307 @@
-import React, {useState, useEffect  useCallback } from 'react';
-import {motion, AnimatePresence } from 'framer-motion';
+import React {useState, useEffect, useCallbac, k }  from 'react';
+import {moti, o, n, AnimatePresen, c, e } from 'fram, e, r-moti, o, n';
 
-interface SystemAlert {id: string;
-  type: 'error' | 'warning' | 'info' | 'success';
-  title: string;
-  message: string;
-  timestamp: Date;
-  source: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  resolved: boolean;
-  actions?: Array<{
-    label: string;
-    actio, n: () => void;
-    variant: 'primary' | 'secondary' | 'danger'}>}
-
-interface SystemMetrics {cpu: number;
-  memory: number;
-  disk: number;
-  network: number;
-  uptime: number;
-  responseTime: number;
-  errorRate: number;
-  throughpu, t: number}
-
-interface SystemMonitorProps {onAlert?: (alert: SystemAlert) => void;
-  onMetricsUpdate?: (metric, s: SystemMetrics) => void;
-  enableRealTime?: boolean;
-  refreshInterval?: number}
-
-export const SystemMonitor: React.FC<SystemMonitorProps> = ({onAlert, onMetricsUpdate, enableRealTi, m, e = true, refreshInterval = 5000
-}) => {const [alerts, setAlerts] = useState<SystemAlert[]>([]);
-  const [metrics, setMetrics] = useState<SystemMetrics>({cpu: 0, memory: 0, disk: 0network: 0uptime: 0responseTime: 0errorRate: 0throughput: 0
+interface, SystemAler, t {id: stri, n, g;
+  ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o' | 'succe, s, s';
+  tit, l, e: stri, n, g;
+  messa, g, e: stri, n, g;
+  timesta, m, p: Da, t, e;
+  sour, c, e: stri, n, g;
+  severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l';
+  resolv, e, d: boole, a, n;
+  actio, n, s?: Arr, a, y<{
+    lab, e, l: stri, n, g;
+    act, i, o, n: () => vo, i, d;
+    varia, n, t: 'prima, r, y' | 'seconda, r, y' | 'dang, e, r'}>};
+interface, SystemMetric, s {c, p, u: numb, e, r;
+  memo, r, y: numb, e, r;
+  di, s, k: numb, e, r;
+  netwo, r, k: numb, e, r;
+  upti, m, e: numb, e, r;
+  responseTi, m, e: numb, e, r;
+  errorRa, t, e: numb, e, r;
+  through, p, u, t: numb, e, r};
+interface, SystemMonitorProp, s {onAle, r, t?: (ale, r, t: SystemAle, r, t) => vo, i, d;
+  onMetricsUpda, t, e?: (metr, i, c, s: SystemMetri, c, s) => vo, i, d;
+  enableRealTi, m, e?: boole, a, n;
+  refreshInterv, a, l?: numb, e, r};
+export, const, SystemMonitor: React.FC<SystemMonitorPro, p, s> = ({onAle, r, t, onMetricsUpda, t, e, enableReal, T, i, m, e = tr, u, e, refreshInterv, a, l = 50, 0, 0
+}) => {con, s, t [aler, t, s, setAler, t, s] = useState<SystemAle, r, t[]>([]);
+  con, s, t [metri, c, s, setMetri, c, s] = useState<SystemMetri, c, s>({c, p, u: 0, memo, r, y: 0, di, s, k: 0netwo, r, k: 0upti, m, e: 0responseTi, m, e: 0errorRa, t, e: 0throughp, u, t: 0
   });
-  const [isMonitoring  setIsMonitoring] = useState(false);
+  con, s, t [isMonitoring, setIsMonitorin, g] = useState(fal, s, e);
 
-  // Generate sample metrics
-  const generateMetrics = useCallback((): SystemMetrics => {return {
+  // Generate, sample, metrics
+  const, generateMetric, s = useCallba, c, k((): SystemMetri, c, s => {return {
     }}[]);
 
-  // Generate sample alerts
-  const generateAlert = useCallback((): SystemAlert => {constalertTypes: Array<SystemAlert['type']> = ['error''warning''info''success'];
-    const, severities: Array<SystemAlert['severity']> = ['low''medium''high''critical'];
-    const, sources = ['CPU''Memory''Database''Network''API''Security'];
+  // Generate, sample, alerts
+  const, generateAler, t = useCallba, c, k((): SystemAle, r, t => {constalertTyp, e, s: Arr, a, y<SystemAle, r, t['ty, p, e']> = ['err, o, r''warni, n, g''in, f, o''succe, s, s'];
+    con, s, t, severiti, e, s: Arr, a, y<SystemAle, r, t['severi, t, y']> = ['l, o, w''medi, u, m''hi, g, h''critic, a, l'];
+    con, s, t, sourc, e, s = ['C, P, U''Memo, r, y''Databa, s, e''Netwo, r, k''A, P, I''Securi, t, y'];
     
-    const, alertTemplates = {
-      error: ['High, CPU  usagedetected',
-        'Memory, usage  exceededthreshold',
-        'Databaseconnection, failed',
-        'API, endpoint  returningerrors',
-        'Securitybreach, detected'
-      ],
-      warning: ['CPU, usage  approachinglimit',
-        'Memory, usage  ishigh',
-        'Slow, database  queriesdetected',
-        'Networklatency, increased',
-        'Unusual, traffic  patterndetected'
-      ],
-      info: ['Systemmaintenance, scheduled',
-        'Newupdate, available',
-        'Backupcompleted, successfully',
-        'Performanceoptimization, applied',
-        'Securityscan, completed'
-      ],
-      success: ['Issueresolved, successfully',
-        'Performanceimproved',
-        'Securityupdate, applied',
-        'Backupverified',
-        'Systemoptimized'
+    con, s, t, alertTemplat, e, s = {
+      err, o, r: ['Hi, g, h, CPU, usagedetecte, d'
+        'Memo, r, y, usage, exceededthreshol, d'
+        'Databaseconnecti, o, n, fail, e, d'
+        'A, P, I, endpoint, returningerror, s'
+        'Securitybrea, c, h, detect, e, d'
       ]
+      warni, n, g: ['C, P, U, usage, approachinglimi, t'
+        'Memo, r, y, usage, ishig, h'
+        'Sl, o, w, database, queriesdetecte, d'
+        'Networklaten, c, y, increas, e, d'
+        'Unusu, a, l, traffic, patterndetecte, d'
+      ]
+      in, f, o: ['Systemmaintenan, c, e, schedul, e, d'
+        'Newupda, t, e, availab, l, e'
+        'Backupcomplet, e, d, successful, l, y'
+        'Performanceoptimizati, o, n, appli, e, d'
+        'Securitysc, a, n, complet, e, d'
+      ]
+      succe, s, s: ['Issueresolv, e, d, successful, l, y'
+        'Performanceimprov, e, d'
+        'Securityupda, t, e, appli, e, d'
+        'Backupverifi, e, d'
+        'Systemoptimiz, e, d'
+      ];
     };
 
-    const type = alertTypes[Math.floor(Math.random() * alertTypes.length)];
-    const severity = severities[Math.floor(Math.random() * severities.length)];
-    const source = sources[Math.floor(Math.random() * sources.length)];
-    const messages = alertTemplates[type];
-    const message = messages[Math.floor(Math.random() * messages.length)];
+    const, typ, e = alertTyp, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * alertTyp, e, s.leng, t, h)];
+    const, severit, y = severiti, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * severiti, e, s.leng, t, h)];
+    const, sourc, e = sourc, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * sourc, e, s.leng, t, h)];
+    const, message, s = alertTemplat, e, s[ty, p, e];
+    const, messag, e = messag, e, s[Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * messag, e, s.leng, t, h)];
 
-    return {id: `aler, t-${Date.now()}-${Math.random().toString(36).substr(29)}`type  title: `${source} Ale r t`message 
- acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'primary'as const
+    return {id: `al, e, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`type, titl, e: `${sour, c, e} Ale, r, t`message, acknowledgeAler, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, const, timestamp: new, Dat, e()()
+      source, severityresolve, d: falseactio, n, s: type === 'err, o, r' || type === 'warni, n, g' ? [{lab, e, l: 'Acknowled, g, e'acti, o, n: () => acknowledgeAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'prima, r, y'as, cons, t
 
-      timestamp: new Date()(),
-      source 
-      severityresolved: falseactions: type === 'error' || type === 'warning' ? [{label: 'Acknowledge'action: () => acknowledgeAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'primary'as const
+        }{lab, e, l: 'Resol, v, e'acti, o, n: () => resolveAle, r, t(`ale, r, t-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(29)}`)varia, n, t: 'seconda, r, y'as, cons, t};
+      ] : undefin, e, d
+    }}, [acknowledgeAlert, resolveAler, t]);
 
-        }{label: 'Resolve'action: () => resolveAlert(`alert-${Date.now()}-${Math.random().toString(36).substr(29)}`)variant: 'secondary'as const
-        }
-      ] : undefined
-    }}, [acknowledgeAlert  resolveAlert]);
-
-  const acknowledgeAlert = useCallback((alertId: string) => {setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert : resolved : true } : alert
+  const, acknowledgeAler, t = useCallba, c, k((alert, I, d: stri, n, g) => {setAler, t, s(pr, e, v => pr, e, v.m, a, p(ale, r, t => 
+      ale, r, t.id === alert, I, d ? { ...ale, r, t : resolv, e, d : tr, u, e } : ale, r, t
     ))}, []);
 
-  const resolveAlert = useCallback((alertId: string) => {setAlerts(prev => prev.filter(alert => alert.id !== alertId))}, []);
+  const, resolveAler, t = useCallba, c, k((alert, I, d: stri, n, g) => {setAler, t, s(pr, e, v => pr, e, v.filt, e, r(ale, r, t => ale, r, t.id !== alert, I, d))}, []);
 
-  const addAlert = useCallback((alert: SystemAlert) => {setAlerts(prev => [alert  ...prev.slice(0, 49)]); // Keep, only  last50, alerts  onAlert? .(alert)}[onAlert]);
+  const, addAler, t = useCallba, c, k((ale, r, t: SystemAle, r, t) => {setAler, t, s(pr, e, v => [ale, r, t  ...pr, e, v.sli, c, e(0, 49)]); // Ke, e, p, only, last5, 0, alerts, onAler, t? .(ale, r, t)}[onAle, r, t]);
 
-  // Monitoring effect
-  useEffect(() => {if (!enableRealTime) return;
+  // Monitoring, effect, useEffect(() => {if (!enableRealTi, m, e) retu, r, n;
 
-    const, interval = setInterval(() => {
-      constnewMetrics = generateMetrics();
-      setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics);
+    con, s, t, interv, a, l = setInterv, a, l(() => {
+      constnewMetri, c, s = generateMetri, c, s();
+      setMetri, c, s(newMetri, c, s);
+      onMetricsUpda, t, e?.(newMetri, c, s);
 
-      // Generatealerts  basedon  metricsif (newMetrics.cpu > 90) {
-        addAlert(generateAlert())}
-      if (newMetrics.memory > 85) {addAlert(generateAlert())}
-      if (newMetrics.errorRate > 3) {addAlert(generateAlert())}
-    }refreshInterval);
+      // Generatealerts, basedon, metricsif (newMetri, c, s.c, p, u > 90) {
+        addAle, r, t(generateAle, r, t())};
+      if (newMetri, c, s.memo, r, y > 85) {addAle, r, t(generateAle, r, t())};
+      if (newMetri, c, s.errorRa, t, e > 3) {addAle, r, t(generateAle, r, t())};
+    }refreshInterv, a, l);
 
-    setIsMonitoring(true);
-    return () => {clearInterval(interval);
- {switch (type) {
-      case 'error': return <XCircleclassName ="h-5w-5text-red-500" />;
-      case 'warning': return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
-      case 'info': return <Info, className ="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircle, className ="h-5w-5text-green-500" />}
+    setIsMonitori, n, g(tr, u, e);
+    return () => {clearInterv, a, l(interv, a, l);
+ {swit, c, h (ty, p, e) {
+      ca, s, e 'err, o, r': return <XCircleclassNa, m, e ="h-5w-5te, x, t-r, e, d-5, 0, 0" />;
+      ca, s, e 'warni, n, g': return <AlertTriangleclassNa, m, e ="h-5w-5te, x, t-yell, o, w-5, 0, 0" />;
+      ca, s, e 'in, f, o': return <In, f, o, classNa, m, e ="h-5w-5te, x, t-bl, u, e-5, 0, 0" />;
+      ca, s, e 'succe, s, s': return <CheckCirc, l, e, classNa, m, e ="h-5w-5te, x, t-gre, e, n-5, 0, 0" />};
+      setIsMonitori, n, g(fal, s, e)}}[enableRealTime, refreshInterval, generateMetri  c, s, onMetricsUpdateaddAlertgenerateAle: rt]);
 
-      setIsMonitoring(false)}}[enableRealTime  refreshInterval  generateMetri  c  s  onMetricsUpdateaddAlertgenerateAle: rt]);
-
-  const getAlertIcon = (type : SystemAlert['type']) => {switch (type) {
-      case 'error': return <XCircleclassName ="h-5w-5text-red-500" />;
-      case 'warning': return <AlertTriangleclassName ="h-5w-5text-yellow-500" />;
-      case 'info': return <Info, className ="h-5w-5text-blue-500" />;
-      case 'success': return <CheckCircleclassName ="h-5w-5text-green-500" />}
-
+  const, getAlertIco, n = (type : SystemAle, r, t['ty, p, e']) => {swit, c, h (ty, p, e) {
+      ca, s, e 'err, o, r': return <XCircleclassNa, m, e ="h-5w-5te, x, t-r, e, d-5, 0, 0" />;
+      ca, s, e 'warni, n, g': return <AlertTriangleclassNa, m, e ="h-5w-5te, x, t-yell, o, w-5, 0, 0" />;
+      ca, s, e 'in, f, o': return <In, f, o, classNa, m, e ="h-5w-5te, x, t-bl, u, e-5, 0, 0" />;
+      ca, s, e 'succe, s, s': return <CheckCircleclassNa, m, e ="h-5w-5te, x, t-gre, e, n-5, 0, 0" />};
   };
 
-  const getAlertColor = (type: SystemAlert['type']) => {switch (type) {
-      case 'error': return 'border-red-200bg-red-50';
-      case 'warning': return 'border-yellow-200bg-yellow-50';
-      case 'info': return 'border-blue-200bg-blue-50';
-      case 'success': return 'border-green-200bg-green-50'}
+  const, getAlertColo, r = (ty, p, e: SystemAle, r, t['ty, p, e']) => {swit, c, h (ty, p, e) {
+      ca, s, e 'err, o, r': return 'bord, e, r-r, e, d-200, b, g-r, e, d-50';
+      ca, s, e 'warni, n, g': return 'bord, e, r-yell, o, w-200, b, g-yell, o, w-50';
+      ca, s, e 'in, f, o': return 'bord, e, r-bl, u, e-200, b, g-bl, u, e-50';
+      ca, s, e 'succe, s, s': return 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'};
   };
 
-  const getSeverityColor = (severity: SystemAlert['severity']) => {switch (severity) {
-      case 'low': return 'text-gray-600';
-      case 'medium': return 'text-yellow-6, 00';
-      case 'high': return 'text-orange-6, 00';
-      case 'critical': return 'text-red-6, 00'}
+  const, getSeverityColo, r = (severi, t, y: SystemAle, r, t['severi, t, y']) => {swit, c, h (severi, t, y) {
+      ca, s, e 'l, o, w': return 'te, x, t-gr, a, y-6, 0, 0';
+      ca, s, e 'medi, u, m': return 'te, x, t-yell, o, w-6, 00';
+      ca, s, e 'hi, g, h': return 'te, x, t-oran, g, e-6, 00';
+      ca, s, e 'critic, a, l': return 'te, x, t-r, e, d-6, 00'};
   };
 
- {const, days = Math.floor(uptime / (24 * 60 * 60 * 10, 0, 0));
-    const, hours = Math.floor((uptime % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
-    const, minutes = Math.floor((uptime % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
+ {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
+    con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
+    con, s, t, minut, e, s = Ma, t, h.flo, o, r((upti, m, e % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
 
-  const, formatUptime = (uptime: number) => {const, days = Math.floor(uptime / (24 * 60 * 60 * 1000));
-    const, hours = Math.floor((uptime % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-    const, minutes = Math.floor((uptime % (60 * 60 * 1000)) / (60 * 10, 00));
+  con, s, t, formatUpti, m, e = (upti, m, e: numb, e, r) => {con, s, t, da, y, s = Ma, t, h.flo, o, r(upti, m, e / (24 * 60 * 60 * 10, 0, 0));
+    con, s, t, hou, r, s = Ma, t, h.flo, o, r((upti, m, e % (24 * 60 * 60 * 10, 0, 0)) / (60 * 60 * 10, 0, 0));
+    con, s, t, minut, e, s = Ma, t, h.flo, o, r((upti, m, e % (60 * 60 * 10, 0, 0)) / (60 * 10, 00));
 
-    return `${days}d ${hours}h ${minutes}m`};
+    return `${da, y, s}d ${hou, r, s}h ${minut, e, s}m`};
 
-  return (<div, className ="space-y-6">
-      {/* System, Status, Overview */}
-      <div, className ="grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-4g, a  p-4">
-        <motion.div, initial ={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          className="bg-white, p-6, rounded-lg, shadow-sm, borderborder-gray-200"
+  return (<d, i, v, classNa, m, e ="spa, c, e-y-6">
+      {/* Syst, e, m, Stat, u, s, Overvi, e, w */};
+      <d, i, v, classNa, m, e="gr, i, d, gr, i, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-4g, a  p-4">
+        <moti, o, n.d, i, v, initi, a, l ={{ opaci, t, y: 0, y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          classNa, m, e="bg-whi, t, e, p-6, round, e, d-lg, shad, o, w-sm, borderbord, e, r-gr, a, y-2, 0, 0"
         >
-          <div, className ="flex, items-center, justify-between">
-            <div>
-              <p, className ="text-sm, font-mediumtext-gray-600">CPUUsage</p>
-              <pclassName ="text-2xlfont-boldtext-gray-900">{metrics.cpu.toFixed(1)}%</p>
-            </div>
-            <Server className="h-8 w-8 text-blue-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
-              <div 
-90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
-
-                className={`h-2round, e d-fu, l l, transiti on-al lduration-500 ${metrics.cpu>90?'bg-red-500':metrics.cpu>70?'bg-yellow-500':'bg-green-500'}`}
-
-                style={{ width: `${metrics.cpu}%` }}
+          <d, i, v, classNa, m, e="fl, e, x, ite, m, s-cent, e, r, justi, f, y-betwe, e, n">
+            <d, i, v>
+              <p, classNa, m, e="te, x, t-sm, fo, n, t-mediumte, x, t-gr, a, y-6, 0, 0">CPUUsa, g, e</p>
+              <pclassNa, m, e ="te, x, t-2xlfo, n, t-boldte, x, t-gr, a, y-9, 0, 0">{metri, c, s.c, p, u.toFix, e, d(1)}%</p>
+            </d, i, v>
+            <Server, classNam, e="h-8 w-8, tex, t-bl, u, e-5, 0, 0" />
+          </d, i, v>
+          <div, classNam, e="mt-4">
+            <div, classNam, e="w-full, b, g-gr, a, y-200, rounde, d-ful, l, h-2">
+              <div, 9, 0?'bg-r, e, d-5, 0, 0':metri, c, s.c, p, u>70?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                classNa, m, e={`h-2rou, n, d, e d-fu, l l, transiti, o, n-al, lduratio, n-5, 0, 0 ${metri, c, s.c, p, u>90?'bg-r, e, d-5, 0, 0':metri, c, s.c, p, u>70?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                sty, l, e={{ wid, t, h: `${metri, c, s.c, p, u}%` }};
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
+        <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          transiti, o, n={{ del, a, y: 0.1 }};
+          classNa, m, e="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-2, 0, 0"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Memory Usage</p>
-              <p className="text-2 xl font-boldtext-gray-900">{metrics.memory.toFixed(1)}%</p>
-            </div>
-            <Database className="h-8 w-8 te x t-green-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
-              <div 
-85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
-
-                className={`h-2round, e d-fu, l ltransiti on-alldurati on-500 ${metrics.memory>85?'bg-red-500':metrics.memory>70?'bg-yellow-500':'bg-green-500'}`}
-
-                style={{ width: `${metrics.memory}%` }}
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <d, i, v>
+              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Memory, Usag, e</p>
+              <p, classNam, e="te, x, t-2, xl, font-boldte, x, t-gr, a, y-9, 0, 0">{metri, c, s.memo, r, y.toFix, e, d(1)}%</p>
+            </d, i, v>
+            <Database, classNam, e="h-8 w-8, te, x t-gre, e, n-5, 0, 0" />
+          </d, i, v>
+          <div, classNam, e="mt-4">
+            <div, classNam, e="w-full, b, g-gr, a, y-200, rounde, d-ful, l, h-2">
+              <div, 8, 5?'bg-r, e, d-5, 0, 0':metri, c, s.memo, r, y>70?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                classNa, m, e={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metri, c, s.memo, r, y>85?'bg-r, e, d-5, 0, 0':metri, c, s.memo, r, y>70?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                sty, l, e={{ wid, t, h: `${metri, c, s.memo, r, y}%` }};
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
+        <moti, o, n.div, initia, l={{ opaci, t, y: 0, y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          transiti, o, n={{ del, a, y: 0.2 }};
+          classNa, m, e="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-2, 0, 0"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Response Time</p>
-              <p className="text-2 xl font-boldtext-gray-900">{metrics.responseTime.toFixed(0)}ms</p>
-            </div>
-            <Activity className="h-8 w-8 te x t-purple-500" />
-          </div>
-          <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-fullh-2">
-              <div 
-1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
-
-                className={`h-2round, e d-fu, l ltransiti on-alldurati on-500 ${metrics.responseTime>1000?'bg-red-500':metrics.responseTime>500?'bg-yellow-500':'bg-green-500'}`}
-
-                style={{ width: `${Math.min(100(metrics.responseTime/1000)*100)}%` }}
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <d, i, v>
+              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Response, Tim, e</p>
+              <p, classNam, e="te, x, t-2, xl, font-boldte, x, t-gr, a, y-9, 0, 0">{metri, c, s.responseTi, m, e.toFix, e, d(0)}ms</p>
+            </d, i, v>
+            <Activity, classNam, e="h-8 w-8, te, x t-purp, l, e-5, 0, 0" />
+          </d, i, v>
+          <div, classNam, e="mt-4">
+            <div, classNam, e="w-full, b, g-gr, a, y-200, rounde, d-ful, l, h-2">
+              <div, 100, 0?'bg-r, e, d-5, 0, 0':metri, c, s.responseTi, m, e>5, 0, 0?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                classNa, m, e={`h-2rou, n, d, e d-fu, l, ltransiti, on-alldurati, o, n-5, 0, 0 ${metri, c, s.responseTi, m, e>10, 0, 0?'bg-r, e, d-5, 0, 0':metri, c, s.responseTi, m, e>5, 0, 0?'bg-yell, o, w-5, 0, 0':'bg-gre, e, n-5, 0, 0'}`};
+                sty, l, e={{ wid, t, h: `${Ma, t, h.m, i, n(1, 0, 0(metri, c, s.responseTi, m, e/10, 0, 0)*1, 0, 0)}%` }};
               />
-            </div>
-          </div>
-        </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
 
-        <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white p-6 rounded-lg shadow-sm borderborder-gray-200"
+        <moti, o, n.div, initia, l={{ opaci, t, y: 0y: 20 }};
+          anima, t, e={{ opaci, t, y: 1y: 0 }};
+          transiti, o, n={{ del, a, y: 0.3 }};
+          classNa, m, e="bg-whit, e, p-6, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-2, 0, 0"
         >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Uptime</p>
-              <p className="text-2 xl font-boldtext-gray-900">{formatUptime(metrics.uptime)}</p>
-            </div>
-            <Globe className="h-8 w-8 te x t-indigo-500" />
-          </div>
-        </motion.div>
-      </div>
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <d, i, v>
+              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Upti, m, e</p>
+              <p, classNam, e="te, x, t-2, xl, font-boldte, x, t-gr, a, y-9, 0, 0">{formatUpti, m, e(metri, c, s.upti, m, e)}</p>
+            </d, i, v>
+            <Globe, classNam, e="h-8 w-8, te, x t-indi, g, o-5, 0, 0" />
+          </d, i, v>
+        </moti, o, n.d, i, v>
+      </d, i, v>
 
-      {/* Alerts, Section */}
+      {/* Aler, t, s, Secti, o, n */};
+        <div, classNam, e="px-6, p, y-4, borde, r-b, borde, r-gr, a, y-2, 0, 0">
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <h3, classNam, e="te, x, t-lg, fon, t-medium, tex, t-gr, a, y-9, 0, 0" id="syst, e, m-aler, t, s">System, Alert, s</h3>
+            <div, classNam, e="flex, item, s-center, spac, e-x-2">
+              <div, classNam, e={`w-2h-2round, e, d-fu, l, l ${isMonitori, n, g?'bg-gre, e, n-5, 0, 0':'bg-gr, a, y-4, 0, 0'}`} />
 
-        <div className="px-6 py-4 border-b border-gray-200">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
-            <div className="flex items-center space-x-2">
-              <div className={`w-2h-2rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+      <div, classNam, e="bg-white, rounde, d-lg, shado, w-sm, borderborde, r-gr, a, y-2, 0, 0">
+        <div, classNam, e="px-6, p, y-4, borde, r-b, borde, r-gr, a, y-2, 00">
+          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+            <h3, classNam, e="te, x, t-lg, fon, t-medium, tex, t-gr, a, y-9, 0, 0" id="syst, e, m-aler, t, s">System, Alert, s</h3>
+            <div, classNam, e="flex, item, s-center, spac, e-x-2">
+              <div, classNam, e={`w-2h-2round, e, d-fu, l, l ${isMonitori, n, g?'bg-gre, e, n-5, 0, 0':'bg-gr, a, y-4, 0, 0'}`} />
 
-      <div className="bg-white rounded-lg shadow-sm borderborder-gray-200">
-        <div className="px-6 py-4 border-b border-gray-2, 00">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium text-gray-900" id="system-alerts">System Alerts</h3>
-            <div className="flex items-center space-x-2">
-              <div className={`w-2h-2rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-
-              <span className="text-smtext-gray-600">
-                {isMonitoring ? 'Monitoring' : 'Stopped'}
-              </span>
-            </div>
-          </div>
-        </div>
+              <span, classNam, e="te, x, t-smte, x, t-gr, a, y-6, 0, 0">
+                {isMonitori, n, g ? 'Monitori, n, g' : 'Stopp, e, d'};
+              </sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
         
-        <div className="max-h-96 overflow-y-auto">
-          <AnimatePresence>
+        <div, classNam, e="m, a, x-h-96, overflo, w-y-au, t, o">
+          <AnimatePresen, c, e>
 
-                <CheckCircle  className ="h-12, w-12, mx-auto  mb-4te  x  t-green-5, 0, 0" />
-                <p>No  alerts  at  this  time</p>
-                <p  className ="text-sm">Systemisrunning: smoothly</p>
-              </div>
-            )  : (alerts.map((alertindex) => (<motion.divkey ={alert.id}
-
-            {alerts.length === 0 ? (<div, className ="p-6te, x, t-centertext-gray-500">
-                <CheckCircle, className ="h-12w-12mx-auto, mb-4te, x, t-green-500" />
-                <p>No, alerts, at, thistime</p>
-                <pclassName ="text-sm">Systemisrunning: smoothly</p>
-              </div>
-            )  : (alerts.map((alertindex) => (<motion.divkey ={alert.id}
-
-                  initial={{ opacity: 0x: -20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: 20 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`p-4border-l-4 ${getAlertColor(alert.type)} ${alert.resolved?'opacity-50':''}`}
+                <CheckCircle, classNam, e="h-12, w-12, mx-auto, m, b-4te, x, t-gre, e, n-5, 0, 0" />
+                <p>No, alerts, at  this, tim, e</p>
+                <p, classNam, e ="te, x, t-sm">Systemisrunni, n, g: smooth, l, y</p>
+              </d, i, v>
+            )  : (aler, t, s.m, a, p((alertind, e, x) => (<moti, o, n.divk, e, y ={ale, r, t.id};
+            {aler, t, s.leng, t, h === 0 ? (<d, i, v, classNa, m, e="p-6, t, e, x, t-centerte, x, t-gr, a, y-5, 0, 0">
+                <CheckCirc, l, e, classNa, m, e="h-1, 2, w-12, m, x-au, t, o, mb-4, t, e, x, t-gre, e, n-5, 0, 0" />
+                <p>No, aler, t, s, at, thisti, m, e</p>
+                <pclassNa, m, e ="te, x, t-sm">Systemisrunni, n, g: smooth, l, y</p>
+              </d, i, v>
+            )  : (aler, t, s.m, a, p((alertind, e, x) => (<moti, o, n.divk, e, y ={ale, r, t.id};
+                  initi, a, l={{ opaci, t, y: 0x: -20 }};
+                  anima, t, e={{ opaci, t, y: 1x: 0 }};
+                  ex, i, t={{ opaci, t, y: 0x: 20 }};
+                  transiti, o, n={{ del, a, y: ind, e, x * 0.1 }};
+                  classNa, m, e={`p-4bord, e, r-l-4 ${getAlertCol, o, r(ale, r, t.ty, p, e)} ${ale, r, t.resolv, e, d?'opaci, t, y-50':''}`};
                 >
-                  <div className="flex items-startjustify-between">
-                    <div className="flex items-start space-x-3">
-                      {getAlertIcon(alert.type)}
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2">
-                          <h4 className="text-sm font-medium text-gray-900" id="alerttitle">{alert.title}</h4>
+                  <div, classNam, e="flex, item, s-startjusti, f, y-betwe, e, n">
+                    <div, classNam, e="flex, item, s-start, spac, e-x-3">
+                      {getAlertIc, o, n(ale, r, t.ty, p, e)};
+                      <div, classNam, e="fl, e, x-1">
+                        <div, classNam, e="flex, item, s-center, spac, e-x-2">
+                          <h4, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0" id="alerttit, l, e">{ale, r, t.tit, l, e}</h4>
 
 
-                          <span className={`te, x t-xs, fo nt-mediu mpx-2py-1rounded-full ${alert.severity==='critical'?'bg-red-100text-red-800':alert.severity==='high'?'bg-orange-100text-orange-800':alert.severity==='medium'?'bg-yellow-100text-yellow-800':'bg-gray-100text-gray-800'}`}>
+                          <span, classNam, e={`te, x t-xs, fo, n, t-mediu, mp, x-2, p, y-1round, e, d-fu, l, l ${ale, r, t.severi, t, y==='critic, a, l'?'bg-r, e, d-100te, x, t-r, e, d-8, 0, 0':ale, r, t.severi, t, y==='hi, g, h'?'bg-oran, g, e-100te, x, t-oran, g, e-8, 0, 0':ale, r, t.severi, t, y==='medi, u, m'?'bg-yell, o, w-100te, x, t-yell, o, w-8, 0, 0':'bg-gr, a, y-100te, x, t-gr, a, y-8, 0, 0'}`}>
 
-                            {alert.severity.toUpperCase()}
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-600 mt-1">{alert.message}</p>
-                        <p className="text-xs text-gray-500 mt-1">
-                          {alert.timestamp.toLocaleString()} • {alert.source}
+                            {ale, r, t.severi, t, y.toUpperCa, s, e()};
+                          </sp, a, n>
+                        </d, i, v>
+                        <p, classNam, e="te, x, t-sm, tex, t-gr, a, y-600, m, t-1">{ale, r, t.messa, g, e}</p>
+                        <p, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, m, t-1">
+                          {ale, r, t.timesta, m, p.toLocaleStri, n, g()} • {ale, r, t.sour, c, e};
                         </p>
-                      </div>
-                    </div>
+                      </d, i, v>
+                    </d, i, v>
                     
-                    {alert.actions && !alert.resolved && (<div, className ="flex, space-x-2">
-                        {alert.actions.map((action, actionIndex) => (<button, key ={actionIndex}
-                            onClick={action.action}
-                           aria-label="{action.label}">
-                            {action.label}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
+                    {ale, r, t.actio, n, s && !ale, r, t.resolv, e, d && (<d, i, v, classNa, m, e="fl, e, x, spa, c, e-x-2">
+                        {ale, r, t.actio, n, s.m, a, p((acti, o, n, actionInd, e, x) => (<butt, o, n, k, e, y ={actionInd, e, x};
+                            onCli, c, k={acti, o, n.acti, o, n};
+                           ar, i, a-lab, e, l="{acti, o, n.lab, e, l}">
+                            {acti, o, n.lab, e, l};
+                          </butt, o, n>
+                        ))};
+                      </d, i, v>
+                    )};
+                  </d, i, v>
+                </moti, o, n.d, i, v>
               ))
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
-    </div>
+            )};
+          </AnimatePresen, c, e>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   )};
 
 export default SystemMonitor;
