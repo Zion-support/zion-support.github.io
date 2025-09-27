@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function PrivacyPolicy(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const { trackClick } = useAnalytics();
 
   return (
     <>
+      <SEO 
+        title="Privacy Policy - Zion App"
+        description="Learn about how Zion App collects, uses, and protects your personal information."
+        keywords="privacy policy, data protection, privacy"
+      />
       <Head>
         <title>Privacy Policy - Zion App</title>
         <meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
@@ -20,73 +32,39 @@ export default function PrivacyPolicy(): JSX.Element {
               ← Back to Home
             </Link>
           </nav>
-
+          
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
           
-          <div className="bg-white rounded-lg shadow-lg p-8 space-y-8">
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
-              <p className="text-gray-600 mb-4">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
+              <p className="text-gray-600 mb-6">
                 We collect information you provide directly to us, such as when you create an account, 
                 use our services, or contact us for support.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Name and contact information</li>
-                <li>Account credentials</li>
-                <li>Payment information</li>
-                <li>Communication preferences</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
-              <p className="text-gray-600 mb-4">
-                We use the information we collect to provide, maintain, and improve our services.
+              
+              <h2 className="text-2xl font-bold mb-4">How We Use Your Information</h2>
+              <p className="text-gray-600 mb-6">
+                We use the information we collect to provide, maintain, and improve our services, 
+                process transactions, and communicate with you.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Process transactions and send related information</li>
-                <li>Send technical notices and support messages</li>
-                <li>Respond to your comments and questions</li>
-                <li>Improve our services and develop new features</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information Sharing</h2>
-              <p className="text-gray-600 mb-4">
+              
+              <h2 className="text-2xl font-bold mb-4">Information Sharing</h2>
+              <p className="text-gray-600 mb-6">
                 We do not sell, trade, or otherwise transfer your personal information to third parties 
                 without your consent, except as described in this policy.
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Data Security</h2>
-              <p className="text-gray-600 mb-4">
+              
+              <h2 className="text-2xl font-bold mb-4">Data Security</h2>
+              <p className="text-gray-600 mb-6">
                 We implement appropriate security measures to protect your personal information against 
                 unauthorized access, alteration, disclosure, or destruction.
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Your Rights</h2>
-              <p className="text-gray-600 mb-4">
-                You have the right to access, update, or delete your personal information. 
-                You may also opt out of certain communications from us.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+              
+              <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
               <p className="text-gray-600">
-                If you have any questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:privacy@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
-                  privacy@ziontechgroup.com
-                </a>
+                If you have any questions about this Privacy Policy, please contact us at privacy@zionapp.com
               </p>
-            </section>
-
-            <div className="text-sm text-gray-500 pt-8 border-t">
-              <p>Last updated: {new Date().toLocaleDateString()}</p>
             </div>
           </div>
         </div>

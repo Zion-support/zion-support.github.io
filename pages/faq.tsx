@@ -53,29 +53,28 @@ export default function FAQ(): JSX.Element {
     )
   })).filter(category => category.questions.length > 0);
 
-  return (
-    <>
-      <Head>
-        <title>FAQ - Zion App</title>
-        <meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-8 max-w-6xl">
-          <nav className="mb-8">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-              ← Back to Home
-            </Link>
-          </nav>
+	return (
+		<>
+			<Head>
+				<title>FAQ - Zion App</title>
+				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="container mx-auto px-4 py-8 max-w-6xl">
+				<nav className="mb-8">
+					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home						</Link>
+					</nav>
 
-          <header className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our services, development process, and technology solutions.
-            </p>
-          </header>
+					<header className="text-center mb-16">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+							Frequently Asked Questions
+						</h1>
+						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+							Find answers to common questions about our services, process and technology solutions
+						</p>
+					</header>
 
           <div className="max-w-3xl mx-auto">
             <div className="mb-8">
@@ -122,14 +121,8 @@ export default function FAQ(): JSX.Element {
               ))}
             </div>
 
-            {filteredData.length === 0 && (
-              <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">No FAQs found matching your search.</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </>
-  );
+
+
+		</>
+	);
 }

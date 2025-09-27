@@ -152,8 +152,8 @@ exportconstAnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className =
                 {range}"> set, Selected, Time Range(ran, g, e)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e range`};
                 className={"`px-3, p, y-1round, e, d-fullte, x, t-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
-      <divclassName="bg-whiterounded-lg, shado, w-sm, border, border-gr, a, y-2, 0, 0, p-6> <divclass Name=flexitems-center justify-betweenmb-4">
-          <h2className="text-xl, fon, t-semibold, tex, t-gr, a, y-900, i, d =analytics-overview">AnalyticsOverview</h2>
+      <divclassName="bg-whiterounded-lg shado w-sm border border-gr a y-2 0 0 p-6> <divclass Name=flexitems-center justify-betweenmb-4">
+          <h1className="text-xl fon t-semibold tex t-gr a y-900 i d =analytics-overview">AnalyticsOverview</h1>
           <divclassName="flex space-x-2> {(["1h' "24h" '7d' "30d"] ascon, s, t).map((ran, g, e) => (<buttonke, y ={range};                on, Cli, c, k ={() = ar, i, a-label="s, e, t, Selected, Tim, e, Range(range)};
                 ar, i, a-lab, e, l={`Sel, e, c, t ${range} ti, m, e ran, g, e`};
                 className={"`px-3, p, y-1rou, n, d, e, d-ful, lte, xt-smfo, n, t-medi, u, m ${selectedTimeRange===range?"bg-blue-100text-blue-700":"text-gray-500hover:text-gray-700"}`};
@@ -258,3 +258,4 @@ TotalRevenue</div> </d, i, v> </div> </div> {/* MetricSelectorandMainChart */} <
       </div>
     </div>
   )};
+}
