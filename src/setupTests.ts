@@ -14,7 +14,7 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
+global.PerformanceObserver = class {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'measure', 'mark'];
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -23,7 +23,7 @@ global.PerformanceObserver = class PerformanceObserver {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
-} as PerformanceObserver;
+} as unknown as typeof PerformanceObserver;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
@@ -169,10 +169,11 @@ Object.defineProperty(window, 'crypto', {
 const originalConsoleWarn = console.warn;
 console.warn = (...args: unknown[]) => {
   // Suppress specific warnings that are expected in test environment
+  const firstArg = args[0] as string | undefined;
   if (
-    args[0]?.includes?.('React Router') ||
-    args[0]?.includes?.('Warning:') ||
-    args[0]?.includes?.('Deprecated')
+    firstArg?.includes?.('React Router') ||
+    firstArg?.includes?.('Warning:') ||
+    firstArg?.includes?.('Deprecated')
   ) {
     return;
   }
