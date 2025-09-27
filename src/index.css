@@ -8,29 +8,48 @@
   }
 
   body {
-    @apply bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-200;
+    background-color: #111827;
+    color: white;
   }
 }
 
 @layer components {
   .btn-primary {
-    background: linear-gradient(to right, #3b82f6, #8b5cf6);
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     transition: all 0.3s;
+    background: linear-gradient(to right, #2563eb, #9333ea);
   }
   
   .btn-primary:hover {
-    background: linear-gradient(to right, #2563eb, #7c3aed);
+    background: linear-gradient(to right, #1d4ed8, #7c3aed);
   }
 
   .btn-secondary {
-    @apply bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg border border-slate-600 transition-all duration-300;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #374151;
   }
 
   .card {
-    @apply bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    background-color: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
+  }
+  
+  .card:hover {
+    background-color: rgba(31, 41, 55, 0.7);
   }
 }
