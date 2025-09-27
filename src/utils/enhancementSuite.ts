@@ -114,10 +114,6 @@ export class EnhancementSuite {
     return EnhancementSuite.instance;
   }
 
-  public initialize(): void {
-    console.log('EnhancementSuite initialized');
-  }
-
   public cleanup(): void {
     console.log('EnhancementSuite cleanup');
   }
