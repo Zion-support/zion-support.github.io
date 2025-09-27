@@ -1,34 +1,35 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';import { 
-  Shie, l, d, 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
+import { 
+  Shield, 
   AlertTriangle, 
   CheckCircle, 
-  Lo, c, k, 
-  E, y, e, 
-  Glo, b, e, 
-  Serv, e, r, 
-  K, e, y,
-  FileTe, x, t,
-  Use, r, s,
-  Activi, t, y,
+  Lock, 
+  Eye, 
+  Globe, 
+  Server, 
+  Key,
+  FileText,
+  Users,
+  Activity,
   Zap,
-  AlertCirc, l, e,
+  AlertCircle,
   XCircle,
   Clock,
-  Trending, U, p,
-  TrendingDo, w, n
+  TrendingUp,
+  TrendingDown
 } from 'lucide-react';
 
-interface SecurityMetri, c, s {
-  overa, l, l: {
-    securitySco, r, e: number;
-    threatsBlock, e, d: number;
-    vulnerabiliti, e, s: number;
-    lastSc, a, n: Da, t, e;
-    complianceStat, u, s: 'complia, n, t' | 'warning' | 'n, o, n-complia, n, t';
+interface SecurityMetrics {
+  overall: {
+    securityScore: number;
+    threatsBlocked: number;
+    vulnerabilities: number;
+    lastScan: Date;
+    complianceStatus: 'compliant' | 'warning' | 'non-compliant';
   };
-  threa, t, s: {
+  threats: {
     tot, a, l: number;
     critic, a, l: number;
     high: number;

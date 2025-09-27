@@ -1,19 +1,19 @@
-import He, a, d from 'ne, x, t/ he, a, d';
+import Head from 'next/head';
 
-interface SEOPro, p, s {
-  tit, l, e?: string;
-  descripti, o, n?: string;
-  canonic, a, l?: string;
-  ogIma, g, e?: string;
-  ogTy, p, e?: string;
+interface SEOProps {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
   twitterCard?: string;
-  keywor, d, s?: string[];
-  auth, o, r?: string;
-  publishedTi, m, e?: string;
-  modifiedTi, m, e?: string;
-  secti, o, n?: string;
-  ta, g, s?: string[];
-  noind, e, x?: boolean;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
   nofollow?: boolean;
 }
 

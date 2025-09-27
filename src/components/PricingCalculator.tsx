@@ -73,7 +73,6 @@ export const PricingCalculator: React.FC = () => {
       features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Monitoring']
     }
   ];
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
   const additionalFeatures = [
     { id: 'api-integration', name: 'API Integration', price: 5000 },
@@ -114,7 +113,6 @@ export const PricingCalculator: React.FC = () => {
 
     const complexityMultiplier = complexityMultipliers[inputs.complexity as keyof typeof complexityMultipliers];
     const complexityAdjustment = selectedService.basePrice * (complexityMultiplier - 1);
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
     if (complexityAdjustment > 0) {
       priceBreakdown.push({
@@ -133,7 +131,6 @@ export const PricingCalculator: React.FC = () => {
       standard: 1.0,
       flexible: 0.9
     };
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
     const timelineMultiplier = timelineMultipliers[inputs.timeline as keyof typeof timelineMultipliers];
     const timelineAdjustment = total * (timelineMultiplier - 1);
@@ -148,7 +145,6 @@ export const PricingCalculator: React.FC = () => {
     }
 
     total *= timelineMultiplier;
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
     // Team size adjustment
     if (inputs.teamSize > 1) {
@@ -239,7 +235,6 @@ export const PricingCalculator: React.FC = () => {
               ))}
             </select>
           </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
           {/* Complexity */}
           <div>
@@ -274,7 +269,6 @@ export const PricingCalculator: React.FC = () => {
               <option value="rush">Rush (1-2 months)</option>
             </select>
           </div>
->>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
 
           {/* Team Size */}
           <div>
