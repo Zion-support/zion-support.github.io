@@ -4,42 +4,43 @@ import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function PrivacyPol i c y(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
+export default function PrivacyPolicy(): JSX.Element {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  const secti o n s = [
+  const sections = [
     {
-      title: 'Informat i o n W e Coll e c t'
-      cont e n t: 'W e coll e c t informat i o n yo u prov i d e direc t l y t o u s s u c h a s w h e n yo u cre a t e a n acco u n t cont a c t u s o r us e ou r servi c e s. T h i s ma y incl u d e y o u r n a m e em a i l addr e s s ph o n e number comp a n y informat i o n an d an y ot h e r informat i o n yo u cho o s e t o prov i d e.'
-    }
+      title: 'Information We Collect',
+      content: 'We collect information you provide directly to us such as when you create an account contact us or use our services. This may include your name email address phone number company information and any other information you choose to provide.'
+    },
     {
-      title: 'Ho w W e Us e Y o u r Informat i o n'
-      cont e n t: 'W e us e th e informat i o n w e coll e c t t o prov i d e maint a i n an d impr o v e ou r servi c e s communic a t e w i t h yo u proc e s s transacti o n s an d com p l y w i t h le g a l obligati o n s. W e ma y a l s o us e y o u r informat i o n t o s e n d yo u techni c a l noti c e s upda t e s an d promotio n a l materi a l s.'
-    }
+      title: 'How We Use Your Information',
+      content: 'We use the information we collect to provide maintain and improve our services communicate with you process transactions and comply with legal obligations. We may also use your information to send you technical notices updates and promotional materials.'
+    },
     {
-      title: 'Informat i o n Shar i n g an d Disclos u r e'
-      cont e n t: 'W e d o no t sh a r e o r s e l l y o u r perso n a l informat i o n t o th i r d part i e s fo r th e i r market i n g purpo s e s with o u t y o u r expli c i t cons e n t. W e ma y sh a r e informat i o n w i t h serv i c e provid e r s wh o perf o r m servi c e s o n ou r beh a l f o r i f requi r e d b y la w.'
-    }
+      title: 'Information Sharing and Disclosure',
+      content: 'We do not share or sell your personal information to third parties for their marketing purposes without your explicit consent. We may share information with service providers who perform services on our behalf or if required by law.'
+    },
     {
-      title: 'D a t a Secur i t y'
-      cont e n t: 'W e implem e n t reasona b l e secur i t y measu r e s t o prot e c t y o u r informat i o n from unauthori z e d acc e s s disclos u r e alterat i o n an d destruct i o n. Howe v e r n o met h o d o f transmiss i o n o v e r th e Inter n e t o r electro n i c stor a g e i s 10 0% sec u r e.'
-    }
+      title: 'Data Security',
+      content: 'We implement reasonable security measures to protect your information from unauthorized access disclosure alteration and destruction. However no method of transmission over the Internet or electronic storage is 100% secure.'
+    },
     {
-      title: 'Y o u r Choi c e s'
-      cont e n t: 'Yo u h a v e th e ri g h t t o acc e s s upd a t e o r del e t e y o u r perso n a l informat i o n. Yo u ca n a l s o op t-ou t o f receiv i n g promotio n a l communicati o n s from u s a t an y t i m e b y follow i n g th e unsubscr i b e instructi o n s i n th o s e communicati o n s.'
-    }
+      title: 'Your Choices',
+      content: 'You have the right to access update or delete your personal information. You can also opt-out of receiving promotional communications from us at any time by following the unsubscribe instructions in those communications.'
+    },
     {
-      title: 'Chan g e s t o T h i s Priv a c y Pol i c y'
-      cont e n t: 'W e ma y upd a t e t h i s Priv a c y Pol i c y from t i m e t o t i m e. W e w i l l not i f y yo u o f an y chan g e s b y post i n g th e ne w Priv a c y Pol i c y o n t h i s p a g e an d updat i n g th e "L a s t Upda t e d" d a t e. W e encour a g e yo u t o rev i e w t h i s Priv a c y Pol i c y periodica l l y fo r an y chan g e s.'
-    }
+      title: 'Changes to This Privacy Policy',
+      content: 'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.'
+    },
     {
-      title: 'Contact U s'
-      cont e n t: 'I f yo u h a v e an y questi o n s ab o u t t h i s Priv a c y Pol i c y ple a s e cont a c t u s a t priv a c y@zion a p p.co m.'
+      title: 'Contact Us',
+      content: 'If you have any questions about this Privacy Policy please contact us at privacy@zionapp.com.'
     }
   ];
 
@@ -57,7 +58,7 @@ export default function PrivacyPol i c y(): JSX.Element {
             <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
               ← B a c k t o H o m e
             </Link>
-          </na v>
+          </nav>
 
           <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
             <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-b l u e-60 0 m b-4 b g-gradi e n t-t o-r from-b l u e-60 0 t o-ind i g o-60 0 b g-c l i p-t e x t t e x t-transpar e n t">

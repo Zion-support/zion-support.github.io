@@ -147,8 +147,8 @@ export default function Dashboard(): JSX.Element {
                 </div>              </div>
             </div>
             <SystemMonitor 
-              onAlert={(alert) => console.log('System alert:' alert)}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
+              onAlert={(alert) => console.log('System alert:', alert)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
               enableRealTime={isRealTime}
               refreshInterval={5000}
             />
@@ -214,7 +214,7 @@ export default function Dashboard(): JSX.Element {
             <SecurityMonitor 
               refreshInterval={isRealTime ? 5000 : 30000}
               enableAlerts={true}
-              onSecurityAlert={(alert) => console.log('Security alert:' alert)}
+              onSecurityAlert={(alert) => console.log('Security alert:', alert)}
             />
           </div>
         );
@@ -261,7 +261,7 @@ export default function Dashboard(): JSX.Element {
             <EnhancedAnalytics 
               refreshInterval={isRealTime ? 10000 : 60000}
               enableRealTime={isRealTime}
-              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             />
           </div>
         );
@@ -377,7 +377,7 @@ export default function Dashboard(): JSX.Element {
               }}
               enableRealTime={true}
               refreshInterval={30000}
-              onDataUpdate={(data) => console.log('Analytics data updated:' data)}
+              onDataUpdate={(data) => console.log('Analytics data updated:', data)}
             /> */}
       <div className="text-center py-8 text-gray-500">Analytics Insights temporarily disabled</div>
           </div>
@@ -399,7 +399,7 @@ export default function Dashboard(): JSX.Element {
             {/* <ComprehensiveMonitoringDashboard 
               refreshInterval={5000}
               enableRealTimeUpdates={true}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:' metrics)}
+              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
             /> */}
           </div>
         );

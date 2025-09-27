@@ -79,22 +79,22 @@ export default function Contact(): JSX.Element {
         <meta name="description" content="Ge t i n to u c h w i t h Z i o n Ap p. W e'r e h e r e t o h e l p yo u transf o r m y o u r busin e s s w i t h cutt i n g-e d g e technol o g y soluti o n s." />
         <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
       </Head>
-      <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
-        <di v classN a m e="contai n e r m x-a u t o p x-4 p y-8 ma x-w-7x l">
-          <na v classN a m e="m b-8">
-            <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
-              ← B a c k t o H o m e
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
             </Link>
-          </na v>
+          </nav>
 
-          <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
-            <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-g r a y-90 0 m b-6">
-              Contact U s
-            </h 1>
-            <p classN a m e="t e x t-x l t e x t-g r a y-60 0 ma x-w-3x l m x-a u t o">
-              Re a d y t o transf o r m y o u r busin e s s? Le t&a p o s;s disc u s s ho w w e ca n h e l p yo u achi e v e y o u r go a l s.
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.
             </p>
-          </hea d e r>
+          </header>
 
           <di v classN a m e="g r i d g r i d-c o l s-1 l g:g r i d-c o l s-2 ga p-1 2">
             {/* Contact F o r m */}

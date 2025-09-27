@@ -5,43 +5,44 @@ import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
-  const [selectedProject setSelectedProject] = useState<number | null>(null);
-  const [isVisible setIsVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  const proje c t s = [
+  const projects = [
     {
-      i d: 1
-      title: 'A I-Powe r e d E-comme r c e Platf o r m'
-      description: 'A comprehens i v e e-comme r c e solut i o n w i t h A I-dri v e n recommendati o n s an d analyt i c s.'
-      image: '/ap i/placehol d e r/40 0/30 0'
-      technolog i e s: ['React' 'N o d e.j s' 'A I/M L' 'Postgre S Q L']
-    }
+      id: 1,
+      title: 'AI-Powered E-commerce Platform',
+      description: 'A comprehensive e-commerce solution with AI-driven recommendations and analytics.',
+      image: '/api/placeholder/400/300',
+      technologies: ['React', 'Node.js', 'AI/ML', 'PostgreSQL']
+    },
     {
-      i d: 2
-      title: 'Cl o u d Infrastruct u r e Migrat i o n'
-      description: 'Compl e t e migrat i o n o f leg a c y syst e m s t o mod e r n cl o u d infrastruct u r e.'
-      image: '/ap i/placehol d e r/40 0/30 0'
-      technolog i e s: ['AW S' 'Doc k e r' 'Kuberne t e s' 'Terraf o r m']
-    }
+      id: 2,
+      title: 'Cloud Infrastructure Migration',
+      description: 'Complete migration of legacy systems to modern cloud infrastructure.',
+      image: '/api/placeholder/400/300',
+      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
+    },
     {
-      i d: 3
-      title: 'Mob i l e Bank i n g Ap p'
-      description: 'Sec u r e mob i l e bank i n g applicat i o n w i t h advan c e d secur i t y featu r e s.'
-      image: '/ap i/placehol d e r/40 0/30 0'
-      technolog i e s: ['React Nat i v e' 'N o d e.j s' 'Mong o D B' 'Blockch a i n']
+      id: 3,
+      title: 'Mobile Banking App',
+      description: 'Secure mobile banking application with advanced security features.',
+      image: '/api/placeholder/400/300',
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
     }
   ];
 
-  const st a t s = [
-    { number: '5 0+' la b e l: 'Proje c t s Comple t e d' }
-    { number: '2 5+' la b e l: 'Ha p p y Clie n t s' }
-    { number: '5+' la b e l: 'Ye a r s Experie n c e' }
-    { number: '9 9%' la b e l: 'Cli e n t Satisfact i o n' }
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' }
   ];
 
   return (
@@ -58,7 +59,7 @@ export default function Portfolio(): JSX.Element {
             <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
               ← B a c k t o H o m e
             </Link>
-          </na v>
+          </nav>
 
           <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
             <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-b l u e-60 0 m b-4 b g-gradi e n t-t o-r from-b l u e-60 0 t o-ind i g o-60 0 b g-c l i p-t e x t t e x t-transpar e n t">

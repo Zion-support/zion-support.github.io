@@ -143,7 +143,7 @@ export default function Home(): JSX.Element {
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_ i) => (
+                      {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">⭐</span>
                       ))}
                     </div>

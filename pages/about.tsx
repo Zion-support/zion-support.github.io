@@ -93,22 +93,22 @@ const About = React.memo(function About(): JSX.Element {
         <meta name="description" content="Le a r n ab o u t Z i o n Ap p's miss i o n values an d commitm e n t t o deliver i n g cutt i n g-e d g e technol o g y soluti o n s." />
         <meta name="viewp o r t" content="wi d t h=dev i c e-wi d t h init i a l-sc a l e=1" />
       </Head>
-      <di v classN a m e="mi n-h-scr e e n b g-gradi e n t-t o-b r from-b l u e-5 0 t o-ind i g o-10 0 p t-2 0">
-        <di v classN a m e="contai n e r m x-a u t o p x-4 p y-8 ma x-w-7x l">
-          <na v classN a m e="m b-8">
-            <Link href="/" classN a m e="t e x t-b l u e-60 0 ho v e r:t e x t-b l u e-80 0 f o n t-med i u m transit i o n-col o r s">
-              ← B a c k t o H o m e
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
             </Link>
-          </na v>
+          </nav>
 
-          <hea d e r classN a m e="t e x t-cen t e r m b-1 6">
-            <h 1 classN a m e="t e x t-5x l m d:t e x t-6x l f o n t-b o l d t e x t-b l u e-60 0 m b-4 b g-gradi e n t-t o-r from-b l u e-60 0 t o-ind i g o-60 0 b g-c l i p-t e x t t e x t-transpar e n t">
-              About Z i o n Ap p
-            </h 1>
-            <p classN a m e="t e x t-x l t e x t-g r a y-60 0 ma x-w-3x l m x-a u t o lead i n g-rela x e d">
-              W e&a p o s;r e a t e a m o f passion a t e technologi s t s dedica t e d t o transform i n g busines s e s thro u g h innovat i v e soluti o n s an d cutt i n g-e d g e technol o g y.
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              About Zion App
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We&apos;re a team of passionate technologists dedicated to transforming businesses through innovative solutions and cutting-edge technology.
             </p>
-          </hea d e r>
+          </header>
 
           {/* Miss i o n Sect i o n */}
           <sect i o n classN a m e="m b-2 0">
