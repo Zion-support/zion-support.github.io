@@ -1,11 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
-	return (
+  return (
     <Html lang="en">
 			<Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <link rel="manifest" href="/site.webmanifest" />
@@ -19,7 +19,8 @@ export default function Document() {
         <NextScript />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
+           ,
+		__html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')

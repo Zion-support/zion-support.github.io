@@ -64,16 +64,19 @@ export default function App({ Component, pageProps }: AppProps) {
         
         body {
           margin: 0;
-          padding: 0;
+         ,
+		padding: 0;
           font-family: 'Inter', system-ui  -apple-system  BlinkMacSystemFont  'Segoe UI', Roboto  sans-serif;
           line-height: 1.6;
           color: #1e293b;
           background-color: #ffffff;
-          transition: background-color 0.3s ease  color 0.3s ease}
+         ,
+		transition: background-color 0.3s ease  color 0.3s ease}
         
         .dark body {
           background-color: #0f172a;
-          color: #f1f5f9}
+         ,
+		color: #f1f5f9}
         
         h1  h2  h3  h4  h5  h6 {
           margin: 0 0 1rem 0;
@@ -86,8 +89,9 @@ export default function App({ Component, pageProps }: AppProps) {
         button {
           font-family: inherit}
         
-        button:hover {
-          opacity: 0.9}
+        button: hover {
+         ,
+		opacity: 0.9}
         
         @media (prefers-reduced-motion: reduce) {
           html {
@@ -136,12 +140,13 @@ export default function App({ Component, pageProps }: AppProps) {
           outline: 4px solid #ff6b35 !important;
           outline-offset: 4px !important}
         
-        .keyboard-navigation button:focus 
+        .keyboard-navigation button: focus 
         .keyboard-navigation a:focus 
         .keyboard-navigation input:focus 
         .keyboard-navigation textarea:focus 
         .keyboard-navigation select:focus {
-          outline: 2px solid #2563eb !important;
+         ,
+		outline: 2px solid #2563eb !important;
           outline-offset: 2px !important}
         
         .sr-only {
@@ -151,9 +156,11 @@ export default function App({ Component, pageProps }: AppProps) {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 0, 0);
+         ,
+		clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0}
+         ,
+		border: 0}
       `}</style>
           <PerformanceOptimizer>
             <Component {...pageProps} />

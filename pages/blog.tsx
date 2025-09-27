@@ -94,7 +94,7 @@ export default function Blog(): JSX.Element {
 				title="Blog - Zion Tech Solutions"
 				description="Stay updated with the latest insights on technology  AI  cloud computing  and digital transformation from our expert team."
 				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
-				url="https://zion.app/blog"
+				url="https: //zion.app/blog"
 				type="website"
 			/>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -106,7 +106,8 @@ export default function Blog(): JSX.Element {
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl,
+		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Blog
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -132,12 +133,13 @@ export default function Blog(): JSX.Element {
 							<section className={`mb-16 transition-all duration-700 delay-200 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
+								<h2 className="text-3xl md: text-4xl font-bold text-gray-800 mb-8 text-center">
 									Featured Articles
 								</h2>
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1,
+		lg:grid-cols-2 gap-8">
 									<AnimatePresence>
-										{featuredPosts.map((post , index) => (
+										{featuredPosts.map((post ,, index) => (
 											<motion.div
 												key={post.id}
 												initial={{ opacity: 0, y: 20 }}
@@ -166,9 +168,10 @@ export default function Blog(): JSX.Element {
 							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
 								{selectedCategory === 'all' ? 'Latest Articles' : `${selectedCategory} Articles`}
 							</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md: grid-cols-2,
+		lg:grid-cols-3 gap-8">
 								<AnimatePresence mode="wait">
-									{paginatedPosts.map((post , index) => (
+									{paginatedPosts.map((post ,, index) => (
 										<motion.div
 											key={post.id}
 											initial={{ opacity: 0, y: 20 }}

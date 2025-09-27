@@ -89,13 +89,14 @@ export default function About(): JSX.Element {
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 			<div className="container mx-auto px-4 py-8 max-w-7xl">
 				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl,
+		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							About Zion App
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -108,7 +109,7 @@ export default function About(): JSX.Element {
 						<section className={`mb-20 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+			<div className="bg-white rounded-3xl shadow-2xl p-8 md: p-12">
 			<div className="text-center mb-12">
 									<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
 										Our Mission
@@ -119,8 +120,9 @@ export default function About(): JSX.Element {
 										compete  and succeed in the digital age.
 									</p>
 								</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-									{stats.map((stat , index) => (
+			<div className="grid grid-cols-1 md:grid-cols-2,
+		lg:grid-cols-4 gap-8">
+									{stats.map((stat ,, index) => (
 			<div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
 			<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 												{stat.number}
@@ -139,15 +141,16 @@ export default function About(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 			<div className="text-center mb-12">
-								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Our Values
 								</h2>
 								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
 									The principles that guide everything we do
 								</p>
 							</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-								{values.map((value , index) => (
+			<div className="grid grid-cols-1,
+		md:grid-cols-2 gap-8">
+								{values.map((value ,, index) => (
 			<div key={index} className={`transform transition-all duration-700 delay-${300 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -181,15 +184,16 @@ export default function About(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 			<div className="text-center mb-12">
-								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Meet Our Team
 								</h2>
 								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
 									The experts behind our innovative solutions
 								</p>
 							</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-								{teamMembers.map((member , index) => (
+			<div className="grid grid-cols-1 md:grid-cols-2,
+		lg:grid-cols-4 gap-8">
+								{teamMembers.map((member ,, index) => (
 			<div key={index} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -218,7 +222,7 @@ export default function About(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 			<div className="text-center mb-12">
-								<h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+								<h2 className="text-3xl md: text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
 									Our Expertise
 								</h2>
 								<p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -227,7 +231,8 @@ export default function About(): JSX.Element {
 							</div>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 								{[
-									{ name: 'Artificial Intelligence', icon: '🤖' },
+									{,
+		name: 'Artificial Intelligence', icon: '🤖' },
 									{ name: 'Cloud Computing', icon: '☁️' },
 									{ name: 'Web Development', icon: '💻' },
 									{ name: 'Mobile Apps', icon: '📱' },
@@ -235,7 +240,7 @@ export default function About(): JSX.Element {
 									{ name: 'Cybersecurity', icon: '🔒' },
 									{ name: 'DevOps', icon: '⚙️' },
 									{ name: 'UI/UX Design', icon: '🎨' }
-								].map((tech , index) => (
+								].map((tech ,, index) => (
 			<div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
 			<div className="text-3xl mb-3">{tech.icon}</div>
 										<h3 className="text-sm font-medium text-gray-800">{tech.name}</h3>
@@ -253,17 +258,19 @@ export default function About(): JSX.Element {
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 			<div className="relative z-10">
-								<h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+								<h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Work Together?
 								</h2>
 								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss how we can help transform your business with innovative technology solutions.
 								</p>
-			<div className="flex flex-col sm:flex-row gap-6 justify-center">
+			<div className="flex flex-col,
+		sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('get-started-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform,
+		hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Get Started
@@ -275,7 +282,8 @@ export default function About(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('learn-more-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform,
+		hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											Learn More

@@ -64,7 +64,7 @@ export default function Custom404() {
           </Link>
           
           <button 
-           , onClick={() => window.history.back()}
+           ,, onClick={() => window.history.back()}
             style={{
               backgroundColor: 'transparent',
               color: '#2563eb',
@@ -93,7 +93,8 @@ export default function Custom404() {
             If you believe this is an error  please contact our support team.
           </p>
           <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
-            Error Code: 404 | Timestamp: {new Date().toISOString()}
+            Error Code: 404 |,
+		Timestamp: {new Date().toISOString()}
           </p>
         </div>
       </div>

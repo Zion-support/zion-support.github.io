@@ -34,7 +34,7 @@ export default function Contact(): JSX.Element {
 			[name]: value
 		}))};
 
-	const handleSubmit = async (e: React.FormEvent) => {
+	const handleSubmit = async (e:, React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		trackClick('contact-form-submit', 'form');
@@ -128,7 +128,7 @@ export default function Contact(): JSX.Element {
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 			<div className="container mx-auto px-4 py-8 max-w-7xl">
 				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
@@ -143,7 +143,8 @@ export default function Contact(): JSX.Element {
 					</header>
 
 					<main>
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+			<div className="grid grid-cols-1,
+		lg:grid-cols-2 gap-12 mb-20">
 							{/* Contact Form */}
 			<div className={`transition-all duration-700 delay-100 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -178,7 +179,8 @@ export default function Contact(): JSX.Element {
 													value={formData.name}
 													onChange={handleInputChange}
 													required
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors"
 												/>
 											</div>
 			<div>
@@ -192,11 +194,12 @@ export default function Contact(): JSX.Element {
 													value={formData.email}
 													onChange={handleInputChange}
 													required
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												/>
 											</div>
 										</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div className="grid grid-cols-1,
+		md:grid-cols-2 gap-6">
 			<div>
 												<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
 													Company
@@ -207,7 +210,8 @@ export default function Contact(): JSX.Element {
 													name="company"
 													value={formData.company}
 													onChange={handleInputChange}
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors"
 												/>
 											</div>
 			<div>
@@ -220,11 +224,12 @@ export default function Contact(): JSX.Element {
 													name="phone"
 													value={formData.phone}
 													onChange={handleInputChange}
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												/>
 											</div>
 										</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div className="grid grid-cols-1,
+		md:grid-cols-2 gap-6">
 			<div>
 												<label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
 													Service Interest
@@ -234,10 +239,11 @@ export default function Contact(): JSX.Element {
 													name="service"
 													value={formData.service}
 													onChange={handleInputChange}
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors"
 												>
 													<option value="">Select a service</option>
-													{services.map((service , index) => (
+													{services.map((service ,, index) => (
 														<option key={index} value={service}>{service}</option>
 													))}
 												</select>
@@ -251,10 +257,11 @@ export default function Contact(): JSX.Element {
 													name="budget"
 													value={formData.budget}
 													onChange={handleInputChange}
-													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors"
 												>
 													<option value="">Select budget range</option>
-													{budgetRanges.map((range , index) => (
+													{budgetRanges.map((range ,, index) => (
 														<option key={index} value={range}>{range}</option>
 													))}
 												</select>
@@ -269,10 +276,11 @@ export default function Contact(): JSX.Element {
 												name="timeline"
 												value={formData.timeline}
 												onChange={handleInputChange}
-												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors"
 											>
 												<option value="">Select timeline</option>
-												{timelines.map((timeline , index) => (
+												{timelines.map((timeline ,, index) => (
 													<option key={index} value={timeline}>{timeline}</option>
 												))}
 											</select>
@@ -288,7 +296,8 @@ export default function Contact(): JSX.Element {
 												onChange={handleInputChange}
 												required
 												rows={5}
-												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical"
+												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500,
+		focus:border-transparent transition-colors resize-vertical"
 												placeholder="Tell us about your project requirements..."
 											/>
 										</div>
@@ -296,7 +305,8 @@ export default function Contact(): JSX.Element {
 										<button
 											type="submit"
 											disabled={isSubmitting}
-											className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+											className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed,
+		disabled:transform-none"
 										>
 											{isSubmitting ? (
 												<span className="flex items-center justify-center">
@@ -324,7 +334,7 @@ export default function Contact(): JSX.Element {
 											Get in Touch
 										</h2>
 			<div className="space-y-6">
-											{contactInfo.map((info , index) => (
+											{contactInfo.map((info ,, index) => (
 			<div key={index} className="flex items-start space-x-4">
 			<div className="text-2xl">{info.icon}</div>
 			<div>
