@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { BarChart3, Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
 
 interface PerformanceData {
@@ -11,6 +11,16 @@ interface PerformanceData {
   loadTime: number;
   memoryUsage: number;
   renderTime: number;
+}
+
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+interface PerformanceWithMemory extends Performance {
+  memory?: PerformanceMemory;
 }
 
 interface ComponentPerformance {
@@ -30,25 +40,7 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
-  useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showPerformanceProfiler') === 'true';
-    
-    if (!shouldShow) return;
-
-    if (isProfiling) {
-      startProfiling();
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, [isProfiling]);
-
-  const startProfiling = () => {
+  const startProfiling = useCallback(() => {
     // Clear existing data
     setPerformanceData([]);
     setComponentData([]);
@@ -83,9 +75,27 @@ const PerformanceProfiler: React.FC = () => {
       clearInterval(interval);
       clearTimeout(timeout);
     };
-  };
+  }, [selectedTimeRange, collectPerformanceData]);
 
-  const collectPerformanceData = () => {
+  useEffect(() => {
+    // Only show in development or when explicitly enabled
+    const shouldShow = process.env.NODE_ENV === 'development' || 
+                      localStorage.getItem('showPerformanceProfiler') === 'true';
+    
+    if (!shouldShow) return;
+
+    if (isProfiling) {
+      startProfiling();
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [isProfiling, startProfiling]);
+
+  const collectPerformanceData = useCallback(() => {
     const now = Date.now();
     
     // Get Core Web Vitals
@@ -101,8 +111,8 @@ const PerformanceProfiler: React.FC = () => {
     const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     
     // Get memory usage
-    const memoryUsage = (performance as any).memory ? 
-      (performance as any).memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
+    const memoryUsage = (performance as PerformanceWithMemory).memory ? 
+      (performance as PerformanceWithMemory).memory!.usedJSHeapSize / 1024 / 1024 : 0; // MB
     
     // Calculate render time (simplified)
     const renderTime = performance.now() - (performanceData[performanceData.length - 1]?.timestamp || now);
@@ -125,7 +135,7 @@ const PerformanceProfiler: React.FC = () => {
       const cutoff = now - getTimeRangeMs(selectedTimeRange);
       return updated.filter(data => data.timestamp > cutoff);
     });
-  };
+  }, [performanceData, selectedTimeRange]);
 
   const updateComponentPerformance = (componentName: string, duration: number) => {
     setComponentData(prev => {
@@ -235,7 +245,7 @@ const PerformanceProfiler: React.FC = () => {
         </button>
         <select
           value={selectedTimeRange}
-          onChange={(e) => setSelectedTimeRange(e.target.value as any)}
+          onChange={(e) => setSelectedTimeRange(e.target.value as '1m' | '5m' | '15m' | '1h')}
           className="px-2 py-1 border border-gray-300 rounded text-sm"
         >
           <option value="1m">1 minute</option>

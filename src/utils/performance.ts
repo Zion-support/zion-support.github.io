@@ -5,6 +5,15 @@ declare global {
   function gtag(...args: any[]): void;
 }
 
+interface PerformanceEntryWithProcessingStart extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface PerformanceEntryWithValue extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
@@ -34,7 +43,7 @@ export class PerformanceMonitor {
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
-      } catch (e) {
+      } catch {
         console.warn('LCP observer not supported');
       }
 
@@ -42,14 +51,14 @@ export class PerformanceMonitor {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntryWithProcessingStart) => {
             this.metrics.set('FID', entry.processingStart - entry.startTime);
             this.reportMetric('FID', entry.processingStart - entry.startTime);
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         this.observers.push(fidObserver);
-      } catch (e) {
+      } catch {
         console.warn('FID observer not supported');
       }
 
@@ -58,7 +67,7 @@ export class PerformanceMonitor {
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntryWithValue) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
@@ -68,7 +77,7 @@ export class PerformanceMonitor {
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
-      } catch (e) {
+      } catch {
         console.warn('CLS observer not supported');
       }
 
@@ -85,7 +94,7 @@ export class PerformanceMonitor {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(fcpObserver);
-      } catch (e) {
+      } catch {
         console.warn('FCP observer not supported');
       }
     }
