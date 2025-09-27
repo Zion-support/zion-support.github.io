@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ServiceCard } from '../src/components/ServiceCard';
 // import Navigation from '../src/components/Navigation';
-import { PricingCalculator } from '../src/components/PricingCalculator';
+// Removed corrupted component import
 import { SERVICES } from '../src/utils/constants';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEO from '../src/components/SEO';
@@ -376,7 +376,10 @@ export default function Services(): JSX.Element {
 									Get an instant estimate for your project based on your specific requirements and preferences.
 								</p>
 							</div>
-							<PricingCalculator />
+							<div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+								<h3 className="text-lg font-semibold text-blue-900 mb-4">Pricing Calculator</h3>
+								<p className="text-blue-700">Pricing calculator component is being rebuilt. Coming soon!</p>
+							</div>
 						</section>
 					</main>
 				</div>
