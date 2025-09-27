@@ -238,32 +238,32 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({
       case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      defaul, t: return 'text-gray-600 bg-gray-50 border-gray-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
   const getCategoryIcon = (category: ErrorInfo['category']) => {
     switch (category) {
-      case 'javascript': return <Bug className="w-4h-4" />;
-      case 'network': return <Activity className="w-4h-4" />;
-      case 'validation': return <Shield className="w-4h-4" />;
-      case 'permission': return <Shield className="w-4h-4" />;
-      case 'system': return <Database className="w-4h-4" />;
-      defaul, t: return <AlertTriangle className="w-4h-4" />;
+      case 'javascript': return <Bug className="w-4 h-4" />;
+      case 'network': return <Activity className="w-4 h-4" />;
+      case 'validation': return <Shield className="w-4 h-4" />;
+      case 'permission': return <Shield className="w-4 h-4" />;
+      case 'system': return <Database className="w-4 h-4" />;
+      default: return <AlertTriangle className="w-4 h-4" />;
     }
   };
 
   return (
-    <div className="fixed bottom-4 right-4z-50" ref={errorHandlerRef}>
+    <div className="fixed bottom-4 right-4 z-50" ref={errorHandlerRef}>
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lgtransition-colors"
-        whileHover={{ scal, e: 1.05 }}
+        className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <AlertTriangle className="w-6h-6" />
+        <AlertTriangle className="w-6 h-6" />
         {stats.totalErrors > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-centerjustify-center">
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
             {stats.totalErrors}
           </span>
         )}

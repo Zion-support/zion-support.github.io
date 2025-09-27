@@ -72,15 +72,15 @@ const AdvancedSecurityEnhancements: React.FC<SecurityEnhancementsProps> = ({ cla
 
   useEffect(() => {
     performSecurityScan();
-    const interval = setInterval(performSecurityScan, 30000); // Scan every30 seconds
+    const interval = setInterval(performSecurityScan, 30000); // Scan every 30 seconds
     return () => clearInterval(interval);
   }, [performSecurityScan]);
 
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 `}>
       <div className="flex items-center justify-between mb-6">
-        <div className="flex items-centerspace-x-3">
-          <Shield className="w-8h-8text-blue-500" />
+        <div className="flex items-center space-x-3">
+          <Shield className="w-8 h-8 text-blue-500" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Advanced Security Monitor
           </h2>
