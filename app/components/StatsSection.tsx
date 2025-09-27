@@ -46,7 +46,7 @@ export default function StatsSection() {
             Trusted by Industry Leaders
           </h2>
           <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto'>
-            Our proven track record speaks for itself. Here's what we've
+            Our proven track record speaks for itself. Here&apos;s what we&apos;ve
             achieved for our clients.
           </p>
         </div>

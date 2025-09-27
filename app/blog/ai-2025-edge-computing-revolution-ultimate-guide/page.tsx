@@ -3,12 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 
-// Removed Next.js metadata export
-const metadata = {
-  title: 'AI 2025: Edge Computing Revolution - Ultimate Guide | Zion Tech Group',
-  description: 'Discover the revolutionary impact of edge computing on AI in 2025. Complete guide to edge AI implementation and enterprise transformation.',
-  keywords: ['edge computing', 'AI', '2025', 'revolution', 'guide', 'enterprise'],
-};
+// Removed Next.js metadata export - using React Router instead
 
 export default function EdgeComputingRevolutionPage() {
   return (
@@ -56,7 +51,7 @@ export default function EdgeComputingRevolutionPage() {
           
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Edge Computing Revolution</h2>
           <p className="text-gray-600 mb-6">
-            Edge computing represents a fundamental shift in how we process and analyze data, bringing computational power closer to where it's needed most.
+            Edge computing represents a fundamental shift in how we process and analyze data, bringing computational power closer to where it&apos;s needed most.
           </p>
           
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Benefits</h2>

@@ -216,7 +216,7 @@ export default function AIReadinessAssessment() {
               <div className="text-6xl font-bold mb-4">{results.percentage}%</div>
               <div className="text-3xl font-bold mb-2">{results.readinessLevel}</div>
               <div className="text-xl opacity-90">
-                Your organization's AI readiness level
+                Your organization&apos;s AI readiness level
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function AIReadinessAssessment() {
           <div className="bg-gray-50 rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Analysis</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {questions.map((question, index) => (
+              {questions.map((question) => (
                 <div key={question.id} className="bg-white rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">{question.title}</h3>
                   <div className="flex items-center gap-2 mb-2">
@@ -354,7 +354,7 @@ export default function AIReadinessAssessment() {
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Evaluate your organization's readiness for AI implementation. This comprehensive assessment 
+            Evaluate your organization&apos;s readiness for AI implementation. This comprehensive assessment 
             will help you understand your current capabilities and identify areas for improvement.
           </p>
         </div>
@@ -438,7 +438,7 @@ export default function AIReadinessAssessment() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What You'll Get</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What You&apos;ll Get</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm">
                 <li>Comprehensive AI readiness score</li>
                 <li>Personalized recommendations</li>

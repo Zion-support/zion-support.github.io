@@ -52,7 +52,7 @@ class PerformanceMonitor {
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        const firstInput = entry as any
+        const firstInput = entry as PerformanceEventTiming
         if (typeof firstInput.processingStart === 'number') {
           this.metrics.fid = firstInput.processingStart - firstInput.startTime
         }
@@ -63,8 +63,9 @@ class PerformanceMonitor {
     this.observeMetric('layout-shift', (entries) => {
       let clsValue = 0
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value
+        const layoutShiftEntry = entry as LayoutShift
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value
         }
       })
       this.metrics.cls = clsValue
@@ -187,7 +188,7 @@ export class ResourceOptimizer {
 
 // Bundle optimization utilities
 export class BundleOptimizer {
-  static async loadChunk(chunkName: string): Promise<any> {
+  static async loadChunk(chunkName: string): Promise<{ default: React.ComponentType<unknown> }> {
     try {
       return await import(/* webpackChunkName: "[request]" */ `../components/${chunkName}`)
     } catch (error) {
@@ -196,7 +197,7 @@ export class BundleOptimizer {
     }
   }
 
-  static createLazyComponent<T extends React.ComponentType<any>>(
+  static createLazyComponent<T extends React.ComponentType<unknown>>(
     importFunc: () => Promise<{ default: T }>
   ): React.LazyExoticComponent<T> {
     return React.lazy(importFunc)

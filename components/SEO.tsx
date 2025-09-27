@@ -8,6 +8,6 @@ export interface SEOProps {
 	url?: string;
 }
 
-export default function SEO(_props: SEOProps) {
+export default function SEO() {
 	return null;
 }
