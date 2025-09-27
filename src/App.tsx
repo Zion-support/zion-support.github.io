@@ -27,6 +27,10 @@ import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { enhancedSEO } from './utils/enhancedSEO';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -121,6 +125,11 @@ export default function App(): React.JSX.Element {
     AdvancedAccessibilityManager.getInstance().initialize();
     AdvancedSecurityManager.getInstance().initialize();
     EnhancedUXManager.getInstance().initialize();
+    
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    enhancedSEO.initialize();
     
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
@@ -364,6 +373,10 @@ export default function App(): React.JSX.Element {
       const securityEnhancer = SecurityEnhancer.getInstance();
       securityEnhancer.cleanup();
       
+      // Cleanup enhanced systems
+      enhancedPerformanceMonitor.stopMonitoring();
+      enhancedAnalytics.endSession();
+      
       // Final engagement tracking
       trackEngagement();
     };
@@ -378,6 +391,7 @@ export default function App(): React.JSX.Element {
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
       />
+      {showSystemDashboard && <EnhancedSystemDashboard />}
     </>
   );
 }
