@@ -49,7 +49,7 @@ interface AccessibilityMetrics {
 
 interface AdvancedAccessibilityAuditorProps {
   onAuditComplete?: (metrics: AccessibilityMetrics) => void;
-  onIssueFound?: (issu, e: AccessibilityIssue) => void;
+  onIssueFound?: (issue: AccessibilityIssue) => void;
   className?: string;
 }
 
