@@ -26740,3 +26740,18 @@ src/pages/about.tsx
 [2025-09-27 10:20:13] 📦 Package file: prefer main version
 [2025-09-27 10:20:13] ✅ Resolved conflicts in package.json
 [2025-09-27 10:20:13] 🔧 Resolving conflicts in src/pages/about.tsx for branch backup-main-20250926-074423...
+[2025-09-27 10:20:13] ✅ Successfully resolved conflicts and merged backup-main-20250926-074423
+[2025-09-27 10:20:13] ✅ Branch backup-main-20250926-074423 processed successfully
+[2025-09-27 10:20:13] 📊 Batch progress: 31 successful, 0 failed
+[2025-09-27 10:20:13] 📊 Overall progress: 31 successful, 0 failed, 5977 conflicts resolved
+[2025-09-27 10:20:13] 📋 Processing branch 32: backup-main-20250926-075437
+[2025-09-27 10:20:14] 🔄 Attempting to merge backup-main-20250926-075437...
+[2025-09-27 10:20:15] ⚠️  Merge conflicts detected in backup-main-20250926-075437, resolving...
+[2025-09-27 10:20:15] 📋 Conflicted files: package-lock.json
+package.json
+[2025-09-27 10:20:15] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250926-075437...
+[2025-09-27 10:20:15] 📦 Package file: prefer main version
+[2025-09-27 10:20:15] ✅ Resolved conflicts in package-lock.json
+[2025-09-27 10:20:15] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-075437...
+[2025-09-27 10:20:15] 📦 Package file: prefer main version
+[2025-09-27 10:20:15] ✅ Resolved conflicts in package.json
