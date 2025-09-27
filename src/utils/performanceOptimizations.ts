@@ -1,34 +1,23 @@
 /**
- * Performance optimization utilities
- * Provides various performance enhancement functions
+ * Performance optimization utilities for Zion Tech Group website
  */
 
-// Type definitions for performance API
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-// Image optimization utilities
-export const optimizeImage = (src: string): string => {
-  if (!src) return '';
+// Image optimization
+export const optimizeImage = (src: string, width?: number, height?: number): string => {
+  const params = new URLSearchParams();
+  if (width) params.set('w', width.toString());
+  if (height) params.set('h', height.toString());
+  params.set('q', '80'); // Quality
+  params.set('f', 'webp'); // Format
   
-  // For external images you might want to use a service like Cloudinary or Next.js Image
-  return src;
+  return `${src}?${params.toString()}`;
 };
 
 // Lazy loading utility
 export const createIntersectionObserver = (
-  callback: IntersectionObserverCallback,
-  options: IntersectionObserverInit = {}
-): IntersectionObserver | null => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return null;
-  }
+  callback: (entries: IntersectionObserverEntry[]) => void,
+  options?: IntersectionObserverInit
+): IntersectionObserver => {
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
@@ -37,79 +26,41 @@ export const createIntersectionObserver = (
 };
 
 // Debounce utility for performance
-export const debounce = <T extends (...args: unknown[]) => unknown>(func: T, wait: number) => {
-  let timeout: ReturnType<typeof setTimeout>;
-
-  return ((...args: Parameters<T>) => {
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
-  }) as (...args: Parameters<T>) => void;
+  };
 };
 
 // Throttle utility for performance
-export const throttle = <T extends (...args: unknown[]) => unknown>(func: T, limit: number) => {
+export const throttle = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-
-  return ((...args: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
-  }) as (...args: Parameters<T>) => void;
-};
-
-// Memory usage utility
-export const getMemoryUsage = (): { used: number; total: number; percentage: number } | null => {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null;
-  }
-
-  const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-  if (!memory) {
-    return null;
-  }
-
-  const used = memory.usedJSHeapSize;
-  const total = memory.totalJSHeapSize;
-  const percentage = (used / total) * 100;
-
-  return {
-    used,
-    total,
-    percentage
   };
-};
-
-// Bundle size analysis
-export const analyzeBundleSize = (): void => {
-  if (typeof window === 'undefined') return;
-
-  const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => {
-      if (entry.entryType === 'resource') {
-        const resource = entry as PerformanceResourceTiming;
-        if (resource.transferSize > 100000) { // 100KB
-          console.log(`Large resource: ${resource.name} (${resource.transferSize} bytes)`);
-        }
-      }
-    });
-  });
-
-  observer.observe({ entryTypes: ['resource'] });
 };
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-  if (typeof window === 'undefined') return;
-
   const criticalResources = [
     '/fonts/inter.woff2',
     '/images/hero-bg.webp',
     '/images/logo.svg'
   ];
 
-  criticalResources.forEach((resource) => {
+  criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -123,55 +74,74 @@ export const preloadCriticalResources = (): void => {
 
 // Service Worker registration
 export const registerServiceWorker = async (): Promise<void> => {
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
-
-  try {
-    const registration = await navigator.serviceWorker.register('/sw.js');
-    console.log('ServiceWorker registered successfully:', registration);
-  } catch (error) {
-    console.error('ServiceWorker registration failed:', error);
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('Service Worker registered:', registration);
+    } catch (error) {
+      console.error('Service Worker registration failed:', error);
+    }
   }
 };
 
-// Web Vitals monitoring
-export const observeWebVitals = (): void => {
-  if (typeof window === 'undefined') return;
-
-  const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => {
-      if (entry.entryType === 'largest-contentful-paint') {
-        console.log('LCP:', entry.startTime);
-      } else if (entry.entryType === 'first-input') {
-        const fidEntry = entry as PerformanceEventTiming;
-        console.log('FID:', fidEntry.processingStart - entry.startTime);
-      } else if (entry.entryType === 'layout-shift') {
-        const clsEntry = entry as LayoutShift;
-        console.log('CLS:', clsEntry.value);
-      }
-    });
-  });
-
-  observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+// Performance monitoring
+export const measurePerformance = (name: string, fn: () => void): void => {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
 };
 
-// DNS prefetch hints
-export const addDNSPrefetchHints = (): void => {
-  if (typeof window === 'undefined') return;
+// Bundle size optimization
+import React from 'react';
 
+export const loadComponentLazy = <T extends React.ComponentType<unknown>>(
+  importFunc: () => Promise<{ default: T }>
+): React.LazyExoticComponent<T> => {
+  return React.lazy(importFunc);
+};
+
+// Memory management
+export const cleanupResources = (): void => {
+  // Clear any intervals or timeouts
+  const highestTimeoutId = setTimeout(() => {}, 0) as unknown as number;
+  for (let i = 0; i < highestTimeoutId; i++) {
+    clearTimeout(i);
+  }
+  
+  // Clear any intervals
+  const highestIntervalId = setInterval(() => {}, 0) as unknown as number;
+  for (let i = 0; i < highestIntervalId; i++) {
+    clearInterval(i);
+  }
+};
+
+// Critical CSS inlining
+export const inlineCriticalCSS = (): void => {
+  const criticalCSS = `
+    .hero-gradient { background: linear-gradient(to bottom right, #1e3a8a, #2563eb, #581c87); }
+    .btn-primary { background: linear-gradient(to right, #2563eb, #9333ea); }
+    .card { background-color: rgba(30, 41, 59, 0.5); backdrop-filter: blur(8px); }
+  `;
+  
+  const style = document.createElement('style');
+  style.textContent = criticalCSS;
+  document.head.appendChild(style);
+};
+
+// Resource hints
+export const addResourceHints = (): void => {
   const hints = [
     { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    { rel: 'preconnect', href: 'https://api.ziontechgroup.com' }
   ];
 
   hints.forEach(hint => {
     const link = document.createElement('link');
-    link.rel = hint.rel;
-    link.href = hint.href;
-    if (hint.crossorigin) {
-      link.crossOrigin = hint.crossorigin;
-    }
+    Object.entries(hint).forEach(([key, value]) => {
+      link.setAttribute(key, value);
+    });
     document.head.appendChild(link);
   });
 };

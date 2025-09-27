@@ -1,11 +1,25 @@
+import React from 'react';
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
-import Header from '../components/Header';
-// import { Footer } from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
-      <Header />
+    <>
+      <SEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading the future of technology with innovative solutions, cutting-edge AI, and transformative digital experiences that drive real business results."
+        keywords={[
+          'AI solutions',
+          'IT consulting',
+          'machine learning',
+          'cloud computing',
+          'cybersecurity',
+          'software development',
+          'digital transformation',
+          'enterprise technology'
+        ]}
+      />
+      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
       {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'></div>
@@ -223,8 +237,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <Footer /> */}
-    </div>
+      </div>
+    </>
   );
 };
 
