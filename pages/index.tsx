@@ -73,7 +73,7 @@ export default function Home(): JSX.Element {
       return () => observer.disconnect()}
   }, []);
 
-	const, handleGetStarted = useCallback(() => {
+	const handleGetStarted = useCallback(() => {
     // Track user interaction
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
@@ -82,7 +82,7 @@ export default function Home(): JSX.Element {
       })}
   }, []);
 
-	const, features = useMemo(() => [
+	const features = useMemo(() => [
     {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",

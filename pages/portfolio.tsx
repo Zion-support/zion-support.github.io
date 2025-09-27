@@ -114,17 +114,18 @@ export default function Portfolio(): JSX.Element {
 		{ number: '2M+', label: 'Users Impacted' },
 		{ number: '5 Years', label: 'Average Partnership' }
 	];
+
 	return (
 		<>
 			<Head>
 				<title>Portfolio - Zion App</title>
 				<meta name="description" content="Explore our portfolio of successful projects and case studies across AI  cloud computing  mobile development  and more." />
-				<meta name="viewport" content="width=device-width  initial-scale=1" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 			<div className="container mx-auto px-4 py-8 max-w-7xl">
 				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>

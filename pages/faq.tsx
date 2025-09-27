@@ -22,8 +22,7 @@ export default function FAQ(): JSX.Element {
 			category: 'General',
 			questions: [
 				{
-				,
-		id: 1,
+					id: 1,
 					question: 'What services does Zion App offer?',
 					answer: 'Zion App provides comprehensive technology solutions including AI development  cloud computing  web development  mobile applications  data analytics  and cybersecurity services. We specialize in custom software development  digital transformation  and technology consulting.'
 				},
@@ -43,8 +42,7 @@ export default function FAQ(): JSX.Element {
 			category: 'Services & Pricing',
 			questions: [
 				{
-				,
-		id: 4,
+					id: 4,
 					question: 'How do you determine project pricing?',
 					answer: 'Our pricing is based on project scope  complexity  timeline  and specific requirements. We offer flexible pricing models including fixed-price projects  time and materials  and retainer agreements. We provide detailed quotes after understanding your needs and can work within various budget ranges.'
 				},

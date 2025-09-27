@@ -145,6 +145,7 @@ export default function Services(): JSX.Element {
 			]
 		}
 	};
+
 	return (
 		<>
 			<SEO />
