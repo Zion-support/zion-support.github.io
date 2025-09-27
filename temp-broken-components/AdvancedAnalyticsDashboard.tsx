@@ -8,16 +8,16 @@ interface AnalyticsData {
   bounceRate: number;
   avgSessionDuration: number;
   conversionRate: number;
-  topPages: Array<{ page: string; view, s: number; bounceRat, e: number }>;
-  trafficSources: Array<{ source: string; visitor, s: number; percentag, e: number }>;
-  deviceTypes: Array<{ device: string; coun, t: number; percentag, e: number }>;
-  geographicData: Array<{ country: string; visitor, s: number; percentag, e: number }>;
-  hourlyData: Array<{ hou, r: number; visitor, s: number }>;
-  dailyData: Array<{ date: string; visitor, s: number; pageView, s: number }>;
+  topPages: Array<{ page: string; views: number; bounceRate: number }>;
+  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
+  deviceTypes: Array<{ device: string; count: number; percentage: number }>;
+  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
+  hourlyData: Array<{ hour: number; visitors: number }>;
+  dailyData: Array<{ date: string; visitors: number; pageViews: number }>;
   realTimeVisitors: number;
-  topKeywords: Array<{ keyword: string; searche, s: number; positio, n: number }>;
+  topKeywords: Array<{ keyword: string; searches: number; position: number }>;
   errorRate: number;
-  performanceScor, e: number;
+  performanceScore: number;
 }
 
 interface AdvancedAnalyticsDashboardProps {
