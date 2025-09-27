@@ -45,6 +45,6 @@ export const useAnalytics = () => {
 // Global gtag declaration
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (...args: any[]) => void;
   }
 }

@@ -10,7 +10,6 @@ import { performanceOptimizer } from './utils/optimization';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager } from './utils/securityEnhancements';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -23,6 +22,7 @@ export default function App(): React.JSX.Element {
     description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
     keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
     ogType: 'website',
+    ogUrl: window.location.href,
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
     structuredData: [

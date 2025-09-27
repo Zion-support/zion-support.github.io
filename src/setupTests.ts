@@ -51,13 +51,15 @@ if (!window.performance) {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'measure', 'mark'];
+  
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   observe(_options?: PerformanceObserverInit) {}
   takeRecords() { return []; }
-};
+} as any;
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {

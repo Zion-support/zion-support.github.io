@@ -27,6 +27,37 @@ export class SecurityManager {
     this.monitorSuspiciousActivity();
   }
 
+  public monitorSecurityEvents(): void {
+    // Monitor and log security events
+    console.log('Security monitoring initialized');
+    
+    // Monitor for potential security threats
+    window.addEventListener('error', (event) => {
+      if (event.error && event.error.message) {
+        const message = event.error.message.toLowerCase();
+        if (message.includes('script error') || message.includes('blocked by client')) {
+          this.recordSuspiciousActivity('script_blocked', {
+            message: event.error.message,
+            filename: event.filename,
+            lineno: event.lineno
+          });
+        }
+      }
+    });
+
+    // Monitor for XSS attempts
+    document.addEventListener('DOMContentLoaded', () => {
+      const scripts = document.querySelectorAll('script');
+      scripts.forEach((script) => {
+        if (script.src && !this.isAllowedScript(script.src)) {
+          this.recordSuspiciousActivity('suspicious_script', {
+            src: script.src
+          });
+        }
+      });
+    });
+  }
+
   private setupCSPViolationReporting(): void {
     // Report CSP violations
     document.addEventListener('securitypolicyviolation', (event) => {
@@ -48,7 +79,9 @@ export class SecurityManager {
 
       // Report to analytics in production
       if (process.env.NODE_ENV === 'production') {
-        this.reportSecurityEvent('csp_violation', {
+        // Report to security monitoring service
+        this.reportSecurityViolation({
+          type: 'csp_violation',
           violatedDirective: event.violatedDirective,
           source: event.sourceFile,
           blockedURI: event.blockedURI
@@ -58,60 +91,24 @@ export class SecurityManager {
   }
 
   private setupXSSProtection(): void {
-    // Monitor for potential XSS attempts
-    const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
-      
-      // Check for suspicious attributes
-      const suspiciousPatterns = [
-        /javascript:/i,
-        /data:text\/html/i,
-        /vbscript:/i,
-        /on\w+\s*=/i
-      ];
-
-      // Monitor attribute changes
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'attributes') {
-            const attrValue = element.getAttribute(mutation.attributeName!);
-            if (attrValue && suspiciousPatterns.some(pattern => pattern.test(attrValue))) {
-              console.warn('Potential XSS attempt detected:', {
-                tagName: element.tagName,
-                attribute: mutation.attributeName,
-                value: attrValue
-              });
-            }
-          }
-        });
-      });
-
-      observer.observe(element, { attributes: true });
-      
-      return element;
-    };
+    // Set up XSS protection headers
+    const meta = document.createElement('meta');
+    meta.setAttribute('http-equiv', 'X-XSS-Protection');
+    meta.setAttribute('content', '1; mode=block');
+    document.head.appendChild(meta);
   }
 
   private setupClickjackingProtection(): void {
-    // Prevent clickjacking by checking if the page is in a frame
-    if (window.top !== window.self) {
-      // Page is in a frame - check if it's allowed
-      const allowedFraming = window.location.hostname === 'ziontechgroup.com' || 
-                            window.location.hostname === 'app.ziontechgroup.com';
-      
-      if (!allowedFraming) {
-        // Redirect to prevent clickjacking
-        if (window.top) {
-          window.top.location.href = window.location.href;
-        }
-      }
-    }
+    // Set up clickjacking protection
+    const meta = document.createElement('meta');
+    meta.setAttribute('http-equiv', 'X-Frame-Options');
+    meta.setAttribute('content', 'DENY');
+    document.head.appendChild(meta);
   }
 
   private monitorSuspiciousActivity(): void {
-    // Monitor for suspicious user behavior
-    let rapidClicks = 0;
+    // Monitor for suspicious user activities
+    let clickCount = 0;
     let lastClickTime = 0;
 
     document.addEventListener('click', (event) => {
@@ -119,164 +116,118 @@ export class SecurityManager {
       
       // Detect rapid clicking (potential bot behavior)
       if (now - lastClickTime < 100) {
-        rapidClicks++;
-        if (rapidClicks > 10) {
-          this.suspiciousActivities.push({
-            timestamp: now,
-            type: 'rapid_clicking',
-            details: { count: rapidClicks, target: event.target }
+        clickCount++;
+        if (clickCount > 10) {
+          this.recordSuspiciousActivity('rapid_clicking', {
+            clickCount,
+            timestamp: now
           });
         }
       } else {
-        rapidClicks = 0;
+        clickCount = 1;
       }
       
       lastClickTime = now;
     });
 
-    // Monitor for suspicious navigation patterns
-    let navigationCount = 0;
-    const navigationStart = Date.now();
-
-    window.addEventListener('beforeunload', () => {
-      const timeOnPage = Date.now() - navigationStart;
-      if (timeOnPage < 1000 && navigationCount > 5) {
-        this.suspiciousActivities.push({
-          timestamp: Date.now(),
-          type: 'rapid_navigation',
-          details: { count: navigationCount, timeOnPage }
-        });
+    // Monitor for suspicious form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Check for potential SQL injection patterns
+      for (const [key, value] of formData.entries()) {
+        if (typeof value === 'string' && this.containsSQLInjection(value)) {
+          this.recordSuspiciousActivity('potential_sql_injection', {
+            field: key,
+            value: value.substring(0, 100) // Truncate for security
+          });
+        }
       }
     });
   }
 
-  public sanitizeInput(input: string): string {
-    // Basic input sanitization
-    return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/javascript:/gi, '') // Remove javascript: protocols
-      .replace(/on\w+\s*=/gi, '') // Remove event handlers
-      .trim();
-  }
-
-  public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
-    switch (type) {
-      case 'email':
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
-      case 'url':
-        try {
-          new URL(input);
-          return true;
-        } catch {
-          return false;
-        }
-      case 'text':
-        return input.length > 0 && input.length < 1000;
-      default:
-        return false;
-    }
-  }
-
-  public generateCSRFToken(): string {
-    const array = new Uint8Array(32);
-    crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
-
-  public verifyCSRFToken(token: string, sessionToken: string): boolean {
-    return token === sessionToken;
-  }
-
-  public hashPassword(password: string): Promise<string> {
-    // This would typically use a proper hashing library like bcrypt
-    // For demonstration, we'll use a simple hash
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password + 'salt');
-    return crypto.subtle.digest('SHA-256', data).then(hash => {
-      return Array.from(new Uint8Array(hash))
-        .map(b => b.toString(16).padStart(2, '0'))
-        .join('');
+  private recordSuspiciousActivity(type: string, details: Record<string, unknown>): void {
+    this.suspiciousActivities.push({
+      timestamp: Date.now(),
+      type,
+      details
     });
-  }
 
-  public rateLimitCheck(identifier: string, maxRequests: number, windowMs: number): boolean {
-    const now = Date.now();
-    const key = `rate_limit_${identifier}`;
-    
-    let requests = JSON.parse(localStorage.getItem(key) || '[]') as number[];
-    requests = requests.filter(time => now - time < windowMs);
-    
-    if (requests.length >= maxRequests) {
-      return false;
+    // Log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Suspicious activity detected:', { type, details });
     }
-    
-    requests.push(now);
-    localStorage.setItem(key, JSON.stringify(requests));
-    return true;
-  }
 
-  private reportSecurityEvent(type: string, details: Record<string, unknown>): void {
-    // In production, this would send data to a security monitoring service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'security_event', {
-        event_category: 'Security',
-        event_label: type,
-        custom_map: details
+    // Report to security monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.reportSecurityViolation({
+        type: 'suspicious_activity',
+        activityType: type,
+        details
       });
     }
+  }
+
+  private reportSecurityViolation(violation: Record<string, unknown>): void {
+    // In a real application, this would send data to a security monitoring service
+    console.warn('Security violation reported:', violation);
+  }
+
+  private isAllowedScript(src: string): boolean {
+    // Define allowed script sources
+    const allowedDomains = [
+      'localhost',
+      'ziontechgroup.com',
+      'cdn.jsdelivr.net',
+      'unpkg.com',
+      'cdnjs.cloudflare.com'
+    ];
+
+    try {
+      const url = new URL(src);
+      return allowedDomains.some(domain => url.hostname.includes(domain));
+    } catch {
+      return false;
+    }
+  }
+
+  private containsSQLInjection(input: string): boolean {
+    const sqlPatterns = [
+      /union\s+select/i,
+      /drop\s+table/i,
+      /delete\s+from/i,
+      /insert\s+into/i,
+      /update\s+set/i,
+      /or\s+1=1/i,
+      /and\s+1=1/i,
+      /';\s*drop/i,
+      /\/\*.*\*\//i
+    ];
+
+    return sqlPatterns.some(pattern => pattern.test(input));
   }
 
   public getSecurityReport(): {
     cspViolations: number;
     suspiciousActivities: number;
-    recentViolations: Array<{ timestamp: number; type: string; details: Record<string, unknown> }>;
+    lastViolation?: number;
   } {
-    const now = Date.now();
-    const last24Hours = 24 * 60 * 60 * 1000;
-    
-    const recentViolations = this.cspViolations.filter(v => now - v.timestamp < last24Hours);
-    const recentActivities = this.suspiciousActivities.filter(a => now - a.timestamp < last24Hours);
-    
     return {
-      cspViolations: recentViolations.length,
-      suspiciousActivities: recentActivities.length,
-      recentViolations: recentViolations.slice(-10).map(v => ({ 
-        timestamp: v.timestamp, 
-        type: v.violation, 
-        details: { source: v.source, blockedURI: v.blockedURI } 
-      })) // Last 10 violations
+      cspViolations: this.cspViolations.length,
+      suspiciousActivities: this.suspiciousActivities.length,
+      lastViolation: this.cspViolations.length > 0 
+        ? Math.max(...this.cspViolations.map(v => v.timestamp))
+        : undefined
     };
-  }
-
-  public cleanup(): void {
-    this.cspViolations = [];
-    this.suspiciousActivities = [];
   }
 }
 
-// Content Security Policy configuration
-export const generateCSPHeader = (): string => {
-  return [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https:",
-    "connect-src 'self' https://www.google-analytics.com",
-    "frame-ancestors 'self'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    "object-src 'none'",
-    "media-src 'self'",
-    "worker-src 'self'"
-  ].join('; ');
-};
-
 // Security headers configuration
-export const securityHeaders = {
-  'Content-Security-Policy': generateCSPHeader(),
-  'X-Frame-Options': 'SAMEORIGIN',
+export const SECURITY_HEADERS = {
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.ziontechgroup.com; frame-ancestors 'none';",
   'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
   'X-XSS-Protection': '1; mode=block',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'geolocation=(), microphone=(), camera=()'
