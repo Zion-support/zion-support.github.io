@@ -195,9 +195,9 @@ const AdvancedSystemMonitor: React.FC = () => {
     return 'te  x  t-green-600'};
 
   const getStatusIcon = (value: number  thresholds: { warning: number; criti  cal: number }) => {
-    if (val  u  e >= threshol  d  s.critical) return <AlertTriangle className="h-4w-4te  x  t-r  e  d-600" />;
-    if (val  u  e >= threshol  d  s.warning) return <AlertTriangle className="h-4w-4te  x  t-yellow-600" />;
-    return <CheckCircle className="h-4w-4te  x  t-gre  e  n-600" />};
+    if (val  u  e >= threshol  d  s.critical) return <AlertTriangle className="h-4 w-4 te x t-r e d-600" />;
+    if (val  u  e >= threshol  d  s.warning) return <AlertTriangle className="h-4 w-4 te x t-yellow-600" />;
+    return <CheckCircle className="h-4 w-4 te x t-gre e n-600" />};
 
   const formatBytes = (bytes: number): string => {
     const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
@@ -212,17 +212,17 @@ const AdvancedSystemMonitor: React.FC = () => {
     return `${da y s}d ${hou r s}h ${minut e s}m`};
 
   return (
-    <d  i  v className="spa  c  e-y-6">
+    <d  i  v className="spa c e-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="fl  e  x ite  m  s-centerjusti  f  y-betwe  e  n">
-            <d  i  v className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-2">
-              <Serv  e  r className="h-6 w-6te  x  t-bl  u  e-600" />
+          <CardTitle className="fl e x ite m s-centerjusti f y-betwe e n">
+            <d  i  v className="fl e x ite m s-cent e r spa c e-x-2">
+              <Serv  e  r className="h-6 w-6 te x t-bl u e-600" />
               <sp  a  n>Syst  e  m Monit  o  r</sp  a  n>
             </d  i  v>
-            <d  i  v className="fl  e  x ite  m  s-cent  e  r space-x-2">
+            <d  i  v className="fl e x ite m s-cent e r space-x-2">
               <div className={`w-3 h-3 round e d-fu l l ${isMonitori n g ? 'bg-gre e n-5 0 0' : 'bg-gr a y-4 0 0'}`}></d  i  v>
-              <sp  a  n className="te  x  t-smte  x  t-gray-600">
+              <sp  a  n className="te x t-smte x t-gray-600">
                 {isMonitoring ? 'Monitori  n  g' : 'Stopped'}
               </sp  a  n>
             </d  i  v>
@@ -233,63 +233,63 @@ const AdvancedSystemMonitor: React.FC = () => {
         </CardHeader>
         <CardContent>
           {/* K  e  y Metri  c  s Gr  i  d */}
-          <d  i  v className="gr  i  d gr  i  d-co  l  s-2 md:gr  i  d-co  l  s-4 g  a  p-4 mb-6">
-            <d  i  v className="p-4 borderround  e  d-lg">
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-                <Cpu className="h-5 w-5te  x  t-bl  u  e-600" />
+          <d  i  v className="gr i d gr i d-co l s-2 md:gr i d-co l s-4 g a p-4 mb-6">
+            <d  i  v className="p-4 borderround e d-lg">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+                <Cpu className="h-5 w-5 te x t-bl u e-600" />
                 {getStatusIcon(metrics.c  p  u.usa  g  e  { warning: 70, critical: 90 })}
               </d  i  v>
               <d  i  v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.c p u.usa g e { warning: 70 critic a l: 90 })}` }>
                 {metrics.c  p  u.usa  g  e}%
               </d  i  v>
-              <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">C  P  U Usa  g  e</d  i  v>
-              <d  i  v className="te  x  t-xste  x  t-gr  a  y-500">{metrics.c  p  u.temperatu  r  e}°C</d  i  v>
+              <d  i  v className="te x t-sm te x t-gr a y-600">C  P  U Usa  g  e</d  i  v>
+              <d  i  v className="te x t-xste x t-gr a y-500">{metrics.c  p  u.temperatu  r  e}°C</d  i  v>
             </d  i  v>
 
-            <d  i  v className="p-4 borderround  e  d-lg">
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-                <HardDrive className="h-5 w-5te  x  t-gre  e  n-600" />
+            <d  i  v className="p-4 borderround e d-lg">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+                <HardDrive className="h-5 w-5 te x t-gre e n-600" />
                 {getStatusIcon(metrics.memory.percenta  g  e  { warning: 80, critical: 95 })}
               </d  i  v>
               <d  i  v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.memo r y.percenta g e { warning: 80 critic a l: 95 })}` }>
                 {metrics.memory.percenta  g  e}%
               </d  i  v>
-              <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Memo  r  y</d  i  v>
-              <d  i  v className="te  x  t-xste  x  t-gr  a  y-500">{metrics.memory.us  e  d}GB / {metrics.memory.tot  a  l}GB</d  i  v>
+              <d  i  v className="te x t-sm te x t-gr a y-600">Memo  r  y</d  i  v>
+              <d  i  v className="te x t-xste x t-gr a y-500">{metrics.memory.us  e  d}GB / {metrics.memory.tot  a  l}GB</d  i  v>
             </d  i  v>
 
-            <d  i  v className="p-4 borderround  e  d-lg">
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-                <Databa  s  e className="h-5 w-5te  x  t-purp  l  e-600" />
+            <d  i  v className="p-4 borderround e d-lg">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+                <Databa  s  e className="h-5 w-5 te x t-purp l e-600" />
                 {getStatusIcon(metrics.di  s  k.percenta  g  e  { warning: 85, critical: 95 })}
               </d  i  v>
               <d  i  v className={`te x t-2 x l fo n t-bo l d ${getStatusCol o r(metri c s.di s k.percenta g e { warning: 85 critic a l: 95 })}` }>
                 {metrics.di  s  k.percenta  g  e}%
               </d  i  v>
-              <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Di  s  k Usa  g  e</d  i  v>
-              <d  i  v className="te  x  t-xste  x  t-gr  a  y-500">{metrics.di  s  k.us  e  d}GB / {metrics.di  s  k.tot  a  l}GB</d  i  v>
+              <d  i  v className="te x t-sm te x t-gr a y-600">Di  s  k Usa  g  e</d  i  v>
+              <d  i  v className="te x t-xste x t-gr a y-500">{metrics.di  s  k.us  e  d}GB / {metrics.di  s  k.tot  a  l}GB</d  i  v>
             </d  i  v>
 
-            <d  i  v className="p-4 borderround  e  d-lg">
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-                <Wifi className="h-5 w-5te  x  t-oran  g  e-600" />
-                <CheckCircle className="h-4 w-4te  x  t-gre  e  n-600" />
+            <d  i  v className="p-4 borderround e d-lg">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+                <Wifi className="h-5 w-5 te x t-oran g e-600" />
+                <CheckCircle className="h-4 w-4 te x t-gre e n-600" />
               </d  i  v>
-              <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-bl  u  e-600">
+              <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">
                 {metrics.network.laten  c  y}ms
               </d  i  v>
-              <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Laten  c  y</d  i  v>
-              <d  i  v className="te  x  t-xste  x  t-gr  a  y-500">
+              <d  i  v className="te x t-sm te x t-gr a y-600">Laten  c  y</d  i  v>
+              <d  i  v className="te x t-xste x t-gr a y-500">
                 {formatBytes(metrics.network.bytes  I  n)}/s in
               </d  i  v>
             </d  i  v>
           </d  i  v>
 
           {/* Performan  c  e Char  t  s */}
-          <d  i  v className="gr  i  d gr  i  d-co  l  s-1 lg:gr  i  d-co  l  s-2 g  a  p-6 mb-6">
+          <d  i  v className="gr i d gr i d-co l s-1 lg:gr i d-co l s-2 g a p-6 mb-6">
             <Card>
               <CardHeader>
-                <CardTitle className="te  x  t-lg">C  P  U & Memo  r  y Usa  g  e</CardTitle>
+                <CardTitle className="te x t-lg">C  P  U & Memo  r  y Usa  g  e</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContain  e  r wid  t  h="100%" heig  h  t={200}>
@@ -307,7 +307,7 @@ const AdvancedSystemMonitor: React.FC = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="te  x  t-lg">Netwo  r  k & Di  s  k I/O</CardTitle>
+                <CardTitle className="te x t-lg">Netwo  r  k & Di  s  k I/O</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContain  e  r wid  t  h="100%" heig  h  t={200}>
@@ -327,39 +327,39 @@ const AdvancedSystemMonitor: React.FC = () => {
           {/* Databa  s  e Metri  c  s */}
           <Card>
             <CardHeader>
-              <CardTitle className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-2">
-                <Databa  s  e className="h-5 w-5te  x  t-purp  l  e-600" />
+              <CardTitle className="fl e x ite m s-cent e r spa c e-x-2">
+                <Databa  s  e className="h-5 w-5 te x t-purp l e-600" />
                 <sp  a  n>Databa  s  e Performan  c  e</sp  a  n>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <d  i  v className="gr  i  d gr  i  d-co  l  s-2, m  d:gr  i  d-co  l  s-4g  a  p-4">
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-bl  u  e-600">
+              <d  i  v className="gr i d gr i d-co l s-2, m d:gr i d-co l s-4 g a p-4">
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">
                     {metrics.databa  s  e.connectio  n  s}
                   </d  i  v>
-                  <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Acti  v  e Connectio  n  s</d  i  v>
-                  <d  i  v className="te  x  t-xste  x  t-gr  a  y-500">
+                  <d  i  v className="te x t-sm te x t-gr a y-600">Acti  v  e Connectio  n  s</d  i  v>
+                  <d  i  v className="te x t-xste x t-gr a y-500">
                     Max: {metrics.databa  s  e.maxConnectio  n  s}
                   </d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-gre  e  n-600">
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-gre e n-600">
                     {metrics.databa  s  e.queryTi  m  e}ms
                   </d  i  v>
-                  <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">A  v  g Que  r  y Ti  m  e</d  i  v>
+                  <d  i  v className="te x t-sm te x t-gr a y-600">A  v  g Que  r  y Ti  m  e</d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-purp  l  e-600">
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-purp l e-600">
                     {metrics.databa  s  e.cacheHitRa  t  e}%
                   </d  i  v>
-                  <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Cac  h  e H  i  t Ra  t  e</d  i  v>
+                  <d  i  v className="te x t-sm te x t-gr a y-600">Cac  h  e H  i  t Ra  t  e</d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-oran  g  e-600">
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-oran g e-600">
                     {formatUptime(metrics.upti  m  e)}
                   </d  i  v>
-                  <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Upti  m  e</d  i  v>
+                  <d  i  v className="te x t-sm te x t-gr a y-600">Upti  m  e</d  i  v>
                 </d  i  v>
               </d  i  v>
             </CardContent>
@@ -369,20 +369,20 @@ const AdvancedSystemMonitor: React.FC = () => {
           {alerts.leng  t  h > 0 && (
             <Card>
               <CardHeader>
-                <CardTitle className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-2">
-                  <AlertTriangle className="h-5 w-5te  x  t-r  e  d-600" />
+                <CardTitle className="fl e x ite m s-cent e r spa c e-x-2">
+                  <AlertTriangle className="h-5 w-5 te x t-r e d-600" />
                   <sp  a  n>Syst  e  m Aler  t  s</sp  a  n>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <d  i  v className="spa  c  e-y-3">
+                <d  i  v className="spa c e-y-3">
                   {alerts.slice(0, 5).map((ale  r  t) => (
-                    <d  i  v k  e  y={ale  r  t.id} className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n p-3 borderround  e  d-lg">
-                      <d  i  v className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-3">
+                    <d  i  v k  e  y={ale  r  t.id} className="fl e x ite m s-cent e r justi f y-betwe e n p-3 borderround e d-lg">
+                      <d  i  v className="fl e x ite m s-cent e r spa c e-x-3">
                         {getStatusIcon(alert.severity === 'critical' ? 100 : 80, { warning: 70, critical: 90 })}
                         <d  i  v>
-                          <d  i  v className="fo  n  t-medium">{ale  r  t.message}</d  i  v>
-                          <d  i  v className="te  x  t-smte  x  t-gr  a  y-500">
+                          <d  i  v className="fo n t-medium">{ale  r  t.message}</d  i  v>
+                          <d  i  v className="te x t-smte x t-gr a y-500">
                             {ale  r  t.ty  p  e.toUpperCase()} • {ale  r  t.timesta  m  p.toLocaleTimeString()}
                           </d  i  v>
                         </d  i  v>

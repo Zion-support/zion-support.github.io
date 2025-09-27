@@ -161,8 +161,7 @@ class AdvancedAnalytics {private, static  instance: AdvancedAnalytics;
         method: 'POST'headers: {
           'Content-Type': 'application/json'}body: JSON.stringify({events: eventsToSendsession: this.session
         })
-      })} catch (error) {console.error('Failedtosendanalyticsevents:', error);
-  }
+      })} catch (error) {console.error('Failedtosendanalyticsevents:', error)}
 
   getSession(): UserSession {return { ...this.session }}
 

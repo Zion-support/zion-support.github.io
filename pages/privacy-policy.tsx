@@ -65,7 +65,7 @@ export default function PrivacyPolicy(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="container mx-auto px-4 py-8 max-w-4xl">
+			<div className="container mx-auto px-4 py-8 max-w-4 xl">
 				<nav className="mb-8">
 					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -73,10 +73,10 @@ export default function PrivacyPolicy(): JSX.Element {
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Privacy Policy
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
 							Your privacy is important to us. This policy explains how we collect  use  and protect your information.
 						</p>
 			<div className="mt-6 text-sm text-gray-500">
@@ -90,8 +90,8 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-white rounded-3xl shadow-xl p-8">
-								<h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-3 xl shadow-xl p-8">
+								<h2 className="text-2 xl md:text-3 xl font-bold text-gray-800 mb-6">
 									Introduction
 								</h2>
 			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
@@ -113,9 +113,8 @@ export default function PrivacyPolicy(): JSX.Element {
 							<section key={index} className={`mb-12 transition-all duration-700 delay-${200 + index * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-			<div className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-shadow p-8">
-									<h2 className="text-2xl,
-		md:text-3xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-2 xl shadow-lg hover: shadow-xl transition-shadow p-8">
+									<h2 className="text-2 xl, md:text-3 xl font-bold text-gray-800 mb-6">
 										{section.title}
 									</h2>
 			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
@@ -129,15 +128,14 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-1000 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white">
-								<h2 className="text-3xl md: text-4xl font-bold mb-6">
+			<div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3 xl p-8 text-white">
+								<h2 className="text-3 xl md: text-4 xl font-bold mb-6">
 									Contact Us
 								</h2>
 								<p className="text-xl mb-8 opacity-90">
 									If you have any questions about this Privacy Policy or our data practices  please contact us:
 								</p>
-			<div className="grid grid-cols-1,
-		md:grid-cols-2 gap-6">
+			<div className="grid grid-cols-1, md:grid-cols-2 gap-6">
 			<div>
 										<h3 className="text-xl font-semibold mb-3">Email</h3>
 										<p className="opacity-90">privacy@zion.app</p>
@@ -162,8 +160,8 @@ export default function PrivacyPolicy(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-1100 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-			<div className="bg-white rounded-2xl shadow-lg p-8">
-								<h2 className="text-2xl md: text-3xl font-bold text-gray-800 mb-6">
+			<div className="bg-white rounded-2 xl shadow-lg p-8">
+								<h2 className="text-2 xl md: text-3 xl font-bold text-gray-800 mb-6">
 									Legal Compliance
 								</h2>
 			<div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
@@ -193,19 +191,17 @@ export default function PrivacyPolicy(): JSX.Element {
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 			<div className="relative z-10">
-								<h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Questions About Privacy?
 								</h2>
-								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									We&apos;re here to help. Contact us for any privacy-related questions or concerns.
 								</p>
-			<div className="flex flex-col,
-		sm:flex-row gap-6 justify-center">
+			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('contact-privacy', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform,
-		hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Contact Us
@@ -218,8 +214,7 @@ export default function PrivacyPolicy(): JSX.Element {
 					<Link href="/faq">
 										<button 
 											onClick={() => trackClick('view-faq-privacy', 'cta')}
-											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform,
-		hover:-translate-y-1 text-lg"
+											className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												View FAQ

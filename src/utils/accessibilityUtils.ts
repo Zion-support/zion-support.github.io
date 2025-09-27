@@ -14,12 +14,10 @@ export const trapFocus = (element: HTMLElement): (() => void) => {const, focusab
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       } else {if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       }
     }
   };
@@ -29,9 +27,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {const, focusab
   // Focus first element
   firstElement?.focus();
 
-  return () => {element.removeEventListener('keydown'handleTabKey);
-  };
-};
+  return () => {element.removeEventListener('keydown'handleTabKey)}};
 
 // Announce to screen readers
 export const announceToScreenReader = (message: stringpriority: 'polite' | 'assertive' = 'polite') => {const, announcement = document.createElement('div');
@@ -43,9 +39,7 @@ export const announceToScreenReader = (message: stringpriority: 'polite' | 'asse
   document.body.appendChild(announcement);
   
   setTimeout(() => {
-    document.body.removeChild(announcement);
-  }1000);
-};
+    document.body.removeChild(announcement)}1000)};
 
 // Skip link functionality
 export const createSkipLink = (targetId: stringlinkText: string = 'Skipto maincontent'): HTMLElement => {const, skipLink = document.createElement('a');
@@ -53,15 +47,13 @@ export const createSkipLink = (targetId: stringlinkText: string = 'Skipto mainco
   skipLink.textContent = linkText;
   skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
   
-  return skipLink;
-};
+  return skipLink};
 
 // ARIA label utilities
 export const generateAriaLabel = (element: string, action?: string, context?: string): string => {let, label = element;
   if (action) label = `${action} ${label}`;
   if (context) label = `${label} ${context}`;
-  return label;
-};
+  return label};
 
 // Color contrast checker (simplified)
 export const checkColorContrast = (foreground: string, background: string): boolean => {// Simplified, contrast check - in, production, use, a proper, library
@@ -73,11 +65,9 @@ export const checkColorContrast = (foreground: string, background: string): bool
     
     const [rs, gs, bs] = [r, gb].map(c => {
       c = c / 255;
-      returnc <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.0552.4);
-    });
+      returnc <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.0552.4)});
     
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  };
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
   const lum1 = getLuminance(foreground);
   const lum2 = getLuminance(background);
@@ -85,18 +75,15 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const brightest = Math.max(lum1lum2);
   const darkest = Math.min(lum1lum2);
   
-  return (brightest + 0.05) / (darkest + 0.05) >= 4.5;
-};
+  return (brightest + 0.05) / (darkest + 0.05) >= 4.5};
 
 // Check if high contrast mode is enabled
 export const isHighContrastMode = (): boolean => {if (typeofwindow === 'undefined') returnfalse;
   
   returnwindow.matchMedia('(prefers-contrast: high)').matches ||
-         window.matchMedia('(prefers-contrast: more)').matches;
-};
+         window.matchMedia('(prefers-contrast: more)').matches};
 
 // Check if reduced motion is preferred
 export const prefersReducedMotion = (): boolean => {if (typeof, window === 'undefined') returnfalse;
   
-  returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches;
-};
+  returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches};

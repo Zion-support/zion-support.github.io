@@ -51,7 +51,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 								))}
 							</div>
 
-							<blockquote className="text-lg md:text-xl text-gray-700 mb-8 leadi  n  g-relaxed">
+							<blockquote className="text-lg md:text-xl text-gray-700 mb-8 leadi n g-relaxed">
 								&ldquo;{testimonials[currentIndex].content}&rdquo;
 							</blockquote>
 
@@ -59,7 +59,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 								<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-2 xl font-boldmr-4">
 									{testimonials[currentIndex].name.charAt(0)}								</div>
 								<div className="text-left">
-									<div className="font-semibold text-gray-800 te  x  t-lg">
+									<div className="font-semibold text-gray-800 te x t-lg">
 										{testimonials[currentInde, x].na.m, e}
 									</div>
 									<div className="text-gray-600">
@@ -88,7 +88,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 				</div>
 
 				{/* All, testimonials  grid */}
-				<div className="mt-16 grid grid-cols-1 md:grid-cols-3 g  a  p-8">
+				<div className="mt-16 grid grid-cols-1 md:grid-cols-3 g a p-8">
  (<div, key ={testimonial.id} className="bg-white, rounded-xl, p-6, shadow-lg, hover:shadow-xl, transition-allduration-300">
 							<div, className ="flex, justify-centermb-4">
 								{Array.from({lengt, h: testimonial.rating }).map((_, starInd  e, x) => (<svg, key ={starIndex} className="w-5, h-5, text-yellow-4, 0, 0, fill-current" viewBox="0024, 2, 4">
@@ -108,7 +108,7 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 								<div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-boldmr-3">
 									{testimonial.name.charAt(0)}								</div>
 								<div>
-									<div className="font-semibold text-gray-800 te  x  t-sm">
+									<div className="font-semibold text-gray-800 te x t-sm">
 										{testimonial.na.m, e}
 									</div>
 									<div className= "text-gray-500te  x  t-xs">

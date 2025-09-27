@@ -238,16 +238,16 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
   };
 
   return (
-    <d  i  v className="fix  e  d bott  o  m-4 rig  h  t-4 z-50" r  e  f={errorHandlerR  e  f}>
+    <d  i  v className="fix e d bott o m-4 rig h t-4 z-50" r  e  f={errorHandlerR  e  f}>
       <motion.butt  o  n
         onCli  c  k={() => setIsVisible(!isVisib  l  e)}
-        className="bg-r  e  d-600 hover:bg-r  e  d-700 te  x  t-whi  t  e p-3 round  e  d-fu  l  l shad  o  w-lg transiti  o  n-colo  r  s"
+        className="bg-r e d-600 hover:bg-r e d-700 te x t-whi t e p-3 round e d-fu l l shad o w-lg transiti o n-colo r s"
         whileHov  e  r={{ scale: 1.05 }}
         whileT  a  p={{ scale: 0.95 }}
       >
         <AlertTriangle className="w-6 h-6" />
         {sta  t  s.totalErro  r  s > 0 && (
-          <sp  a  n className="absolu  t  e -t  o  p-2 -rig  h  t-2 bg-r  e  d-500 te  x  t-whi  t  e te  x  t-xs round  e  d-fu  l  l w-6 h-6 fl  e  x ite  m  s-cent  e  r justi  f  y-cent  e  r">
+          <sp  a  n className="absolu t e -t o p-2 -rig h t-2 bg-r e d-500 te x t-whi t e te x t-xs round e d-fu l l w-6 h-6 fl e x ite m s-cent e r justi f y-cent e r">
             {sta  t  s.totalErro  r  s}
           </sp  a  n>
         )}
@@ -315,55 +315,55 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
             initi  a  l={{ opacity: 0, y: 20, scale: 0.95 }}
             anima  t  e={{ opacity: 1, y: 0, scale: 1 }}
             ex  i  t={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolu  t  e bott  o  m-16 rig  h  t-0 w-96, b  g-whi  t  e round  e  d-lg shad  o  w-xl bord  e  r bord  e  r-gr  a  y-200 m  a  x-h-96 overflow-hidd  e  n"
+            className="absolu t e bott o m-16 rig h t-0 w-96, b g-whi t e round e d-lg shad o w-xl bord e r bord e r-gr a y-200 m a x-h-96 overflow-hidd e n"
           >
-            <d  i  v className="p-4 bord  e  r-bbord  e  r-gr  a  y-200">
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n">
-                <h3className="te  x  t-lg fo  n  t-semiboldte  x  t-gr  a  y-900" id="error-monit  o  r">Err  o  r Monit  o  r</h3>
-                <d  i  v className="fl  e  x spa  c  e-x-2">
+            <d  i  v className="p-4 bord e r-bbord e r-gr a y-200">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n">
+                <h3className="te x t-lg fo n t-semiboldte x t-gr a y-900" id="error-monit  o  r">Err  o  r Monit  o  r</h3>
+                <d  i  v className="fl e x spa c e-x-2">
                   <butt  o  n
                     onCli  c  k={clearResolvedErro  r  s}
-                    className="te  x  t-sm te  x  t-gr  a  y-500 hover:te  x  t-gr  a  y-700"
+                    className="te x t-sm te x t-gr a y-500 hover:te x t-gr a y-700"
                    ar  i  a-lab  e  l="Cle  a  r Resolv  e  d">
                     Cle  a  r Resolv  e  d
                   </butt  o  n>
                   <butt  o  n
                     onCli  c  k={() => setIsVisible(false)}
-                    className="te  x  t-gr  a  y-400 hover:te  x  t-gr  a  y-600"
+                    className="te x t-gr a y-400 hover:te x t-gr a y-600"
                   >
                     <X className="w-4 h-4" />
                   </butt  o  n>
                 </d  i  v>
               </d  i  v>
               
-              <d  i  v className="gr  i  d gr  i  d-co  l  s-2 g  a  p-4, m  t-3 te  x  t-sm">
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-r  e  d-600">{sta  t  s.totalErro  r  s}</d  i  v>
-                  <d  i  v className="te  x  t-gr  a  y-500">Tot  a  l Erro  r  s</d  i  v>
+              <d  i  v className="gr i d gr i d-co l s-2 g a p-4, m t-3 te x t-sm">
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-r e d-600">{sta  t  s.totalErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-gr a y-500">Tot  a  l Erro  r  s</d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-oran  g  e-600">{sta  t  s.criticalErro  r  s}</d  i  v>
-                  <d  i  v className="te  x  t-gr  a  y-500">Critic  a  l</d  i  v>
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-oran g e-600">{sta  t  s.criticalErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-gr a y-500">Critic  a  l</d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-gre  e  n-600">{sta  t  s.resolvedErro  r  s}</d  i  v>
-                  <d  i  v className="te  x  t-gr  a  y-500">Resolv  e  d</d  i  v>
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-gre e n-600">{sta  t  s.resolvedErro  r  s}</d  i  v>
+                  <d  i  v className="te x t-gr a y-500">Resolv  e  d</d  i  v>
                 </d  i  v>
-                <d  i  v className="te  x  t-cent  e  r">
-                  <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-bl  u  e-600">{sta  t  s.performanceIssu  e  s}</d  i  v>
-                  <d  i  v className="te  x  t-gr  a  y-500">Performan  c  e</d  i  v>
+                <d  i  v className="te x t-cent e r">
+                  <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">{sta  t  s.performanceIssu  e  s}</d  i  v>
+                  <d  i  v className="te x t-gr a y-500">Performan  c  e</d  i  v>
                 </d  i  v>
               </d  i  v>
             </d  i  v>
 
-            <d  i  v className="overflow-y-autom  a  x-h-64">
+            <d  i  v className="overflow-y-autom a x-h-64">
               {erro  r  s.leng  t  h === 0 && performanceIssu  e  s.leng  t  h === 0 ? (
-                <d  i  v className="p-4 te  x  t-centerte  x  t-gr  a  y-500">
-                  <CheckCircle className="w-8 h-8, m  x-au  t  o mb-2 te  x  t-gre  e  n-500" />
+                <d  i  v className="p-4 te x t-centerte x t-gr a y-500">
+                  <CheckCircle className="w-8 h-8, m x-au t o mb-2 te x t-gre e n-500" />
                   No issu  e  s detect  e  d
                 </d  i  v>
               ) : (
-                <d  i  v className="spa  c  e-y-2 p-2">
+                <d  i  v className="spa c e-y-2 p-2">
                   {erro  r  s.slice(0, 10).map((error) => (
                     <motion.d  i  v
                       k  e  y={error.id}
@@ -400,26 +400,26 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
                             )}
                             {!error.resolved && (
                               <button
-                                onClick={((e)) => {<d  i  v className="fl  e  x ite  m  s-startspa  c  e-x-3">
+                                onClick={((e)) => {<d  i  v className="fl e x ite m s-startspa c e-x-3">
                         <d  i  v className={`p-1round e d ${getSeverityCol o r(error.severi t y)}`}
                           {getCategoryIcon(error.catego  r  y)}
                         </d  i  v>
-                        <d  i  v className="fl  e  x-1 m  i  n-w-0">
-                          <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-between">
+                        <d  i  v className="fl e x-1 m i n-w-0">
+                          <d  i  v className="fl e x ite m s-cent e r justi f y-between">
                             <span className={`te x t-sm fo n t-medi u m ${getSeverityCol o r(error.severi t y).spl i t(' ')[0]}`}
                               {error.severity.toUpperCase()}
                             </sp  a  n>
-                            <sp  a  n className="te  x  t-xste  x  t-gr  a  y-500">
+                            <sp  a  n className="te x t-xste x t-gr a y-500">
                               {error.timesta  m  p.toLocaleTimeString()}
                             </sp  a  n>
                           </d  i  v>
-                          <p className="te  x  t-sm te  x  t-gr  a  y-700, m  t-1 trunca  t  e">
+                          <p className="te x t-sm te x t-gr a y-700, m t-1 trunca t e">
                             {error.message}
                           </p>
-                          <d  i  v className="fl  e  x ite  m  s-cent  e  r spa  c  e-x-2, m  t-2">
-                            <sp  a  n className="te  x  t-xste  x  t-gr  a  y-500">{error.catego  r  y}</sp  a  n>
+                          <d  i  v className="fl e x ite m s-cent e r spa c e-x-2, m t-2">
+                            <sp  a  n className="te x t-xste x t-gr a y-500">{error.catego  r  y}</sp  a  n>
                             {error.retryCou  n  t > 0 && (
-                              <sp  a  n className="te  x  t-xste  x  t-bl  u  e-500">
+                              <sp  a  n className="te x t-xste x t-bl u e-500">
                                 Retry {error.retryCou  n  t}/{maxRetri  e  s}
                               </sp  a  n>
                             )}
@@ -429,10 +429,10 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
 
                                   e.stopPropagation();
                                   resolveError(error.id)}}
-                                className="te  x  t-xs te  x  t-gre  e  n-600 hover:te  x  t-gre  e  n-800"">{
+                                className="te x t-xs te x t-gre e n-600 hover:te x t-gre e n-800"">{
                                   e.stopPropagation();
                                   resolveError(error.id)}}
-                                className="te  x  t-xs te  x  t-gre  e  n-600 hover:te  x  t-gre  e  n-800"
+                                className="te x t-xs te x t-gre e n-600 hover:te x t-gre e n-800"
                               </butt  o  n>
                             )}
                           </d  i  v>
@@ -479,30 +479,30 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
             initi  a  l={{ opacity: 0 }}
             anima  t  e={{ opacity: 1 }}
             ex  i  t={{ opacity: 0 }}
-            className="fix  e  d ins  e  t-0, b  g-bla  c  k bg-opaci  t  y-50 fl  e  x ite  m  s-cent  e  r justi  f  y-cente  r  z-50"
+            className="fix e d ins e t-0, b g-bla c k bg-opaci t y-50 fl e x ite m s-cent e r justi f y-cente r z-50"
             onCli  c  k={() => setSelectedError(nu  l  l)}
           >
             <motion.d  i  v
               initi  a  l={{ scale: 0.9, opacity: 0 }}
               anima  t  e={{ scale: 1, opacity: 1 }}
               ex  i  t={{ scale: 0.9, opacity: 0 }}
-              className="bg-whi  t  e round  e  d-lg p-6 m  a  x-w-2, x  l w-fu  l  l mx-4 m  a  x-h-96 overflow-y-au  t  o"
+              className="bg-whi t e round e d-lg p-6 m a x-w-2, x l w-fu l l mx-4 m a x-h-96 overflow-y-au t o"
               onCli  c  k={(e) => e.stopPropagation()}
             >
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-4">
-                <h3className="te  x  t-lgfo  n  t-semibo  l  d" id="error-detai  l  s">Err  o  r Detai  l  s</h3>
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-4">
+                <h3className="te x t-lgfo n t-semibo l d" id="error-detai  l  s">Err  o  r Detai  l  s</h3>
                 <butt  o  n
                   onCli  c  k={() => setSelectedError(nu  l  l)}
-                  className="te  x  t-gr  a  y-400 hover:te  x  t-gr  a  y-600"
+                  className="te x t-gr a y-400 hover:te x t-gr a y-600"
                 >
                   <X className="w-5 h-5" />
                 </butt  o  n>
               </d  i  v>
               
-              <d  i  v className="spa  c  e-y-4">
+              <d  i  v className="spa c e-y-4">
                 <d  i  v>
-                  <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Messa  g  e</lab  e  l>
-                  <p className="mt-1 te  x  t-sm te  x  t-gr  a  y-900, b  g-gr  a  y-5, 0, p-2 round  e  d">
+                  <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Messa  g  e</lab  e  l>
+                  <p className="mt-1 te x t-sm te x t-gr a y-900, b g-gr a y-5, 0, p-2 round e d">
                     {selectedErr  o  r.message}
 
                   </p>
@@ -536,29 +536,29 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerPro  p  s> = ({
 
                 {selectedErr  o  r.sta  c  k && (
                   <d  i  v>
-                    <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Sta  c  k Tra  c  e</lab  e  l>
-                    <p  r  e className="mt-1 te  x  t-xs te  x  t-gr  a  y-900, b  g-gr  a  y-5, 0, p-2 roundedoverflow-x-au  t  o">
+                    <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Sta  c  k Tra  c  e</lab  e  l>
+                    <p  r  e className="mt-1 te x t-xs te x t-gr a y-900, b g-gr a y-5, 0, p-2 roundedoverflow-x-au t o">
                       {selectedErr  o  r.sta  c  k}
                     </p  r  e>
                   </d  i  v>
                 )}
                 
-                <d  i  v className="gr  i  d gr  i  d-co  l  s-2 g  a  p-4">
+                <d  i  v className="gr i d gr i d-co l s-2 g a p-4">
                   <d  i  v>
-                    <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Severi  t  y</lab  e  l>
-                    <p className="mt-1 te  x  t-sm te  x  t-gr  a  y-900">{selectedErr  o  r.severity}</p>
+                    <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Severi  t  y</lab  e  l>
+                    <p className="mt-1 te x t-sm te x t-gr a y-900">{selectedErr  o  r.severity}</p>
                   </d  i  v>
                   <d  i  v>
-                    <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Catego  r  y</lab  e  l>
-                    <p className="mt-1 te  x  t-sm te  x  t-gr  a  y-900">{selectedErr  o  r.catego  r  y}</p>
+                    <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Catego  r  y</lab  e  l>
+                    <p className="mt-1 te x t-sm te x t-gr a y-900">{selectedErr  o  r.catego  r  y}</p>
                   </d  i  v>
                   <d  i  v>
-                    <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Compone  n  t</lab  e  l>
-                    <p className="mt-1 te  x  t-sm te  x  t-gr  a  y-900">{selectedErr  o  r.compone  n  t}</p>
+                    <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Compone  n  t</lab  e  l>
+                    <p className="mt-1 te x t-sm te x t-gr a y-900">{selectedErr  o  r.compone  n  t}</p>
                   </d  i  v>
                   <d  i  v>
-                    <lab  e  l className="te  x  t-sm fo  n  t-mediumte  x  t-gr  a  y-700">Timesta  m  p</lab  e  l>
-                    <p className="mt-1 te  x  t-sm te  x  t-gr  a  y-900">
+                    <lab  e  l className="te x t-sm fo n t-mediumte x t-gr a y-700">Timesta  m  p</lab  e  l>
+                    <p className="mt-1 te x t-sm te x t-gr a y-900">
                       {selectedErr  o  r.timesta  m  p.toLocaleString()}
 
                     </p>

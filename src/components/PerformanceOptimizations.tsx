@@ -60,7 +60,7 @@ const VirtualList = memo(({items, itemHeight = 50containerHeight = 400 }: {;
         <divstyle={{ transform: `translateY(${offsetY}px)` }}>
           {visibleItems.map((item) => (<divkey ={item.index}
 
-              style={{ height: itemHeight }}              className="flexitems-centerp-2border-b"
+              style={{ height: itemHeight }}              className="flexitems-centerp-2 border-b"
             >
               {item.content}
             </div>
@@ -114,7 +114,7 @@ const OptimizedImage = memo(({src, alt, width, height  ...props }: {;
           onError={handleError}
  )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({onSearchplaceholder = Search..." }: {onSearch: (quer;
 
-          className="{`transiti, on-opacityduration-300 ${isLoaded?'opacity-100':'opacity-0'}`} {...props} /> )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({on, Searchplaceholder = Search..." }: {onSearch: (quer;
+          className="{`transiti, on-opacityduration-300 ${is Loaded?'opacity-100':'opacity-0'}`} {...props} /> )} </div>; )}); Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; Optimized Image.display Name = 'Optimized Image'; // Debounced search componentconst Debounced Search = memo(({on, Searchplaceholder = Search..." }: {onSearch: (quer;
 
     y: string) => void;
   placeholder?: string }) => {const [querysetQuery] = React.useState('');
@@ -149,7 +149,7 @@ DebouncedSearch.displayName = 'DebouncedSearch';
 DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
-export const usePerformanceMonitor = () => {usePerformanceMonitor.displayName = 'usePerformanceMonitor';const [metricssetMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
+export const usePerformanceMonitor = () => {usePerformanceMonitor.displayName = 'usePerformanceMonitor';const [metrics, setMetrics] = React.useState({renderTime: 0memoryUsage: 0componentCount: 0 });
 
   const measureRender = useCallback((componentName: stringrenderFn: () => void) => {;
     renderFn();

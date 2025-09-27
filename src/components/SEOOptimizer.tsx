@@ -5,8 +5,7 @@ import { generateMetaTags, generateStructuredData, validateSEOData, SEOData } fr
 interface SEOOptimizerProps {
   seoData: SEOData;
   enableValidation?: boolean;
-  enableStructuredData?: boolean;
-}
+  enableStructuredData?: boolean}
 
 export default function SEOOptimizer({
   seoData,
@@ -22,8 +21,7 @@ export default function SEOOptimizer({
   // Log validation errors in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && !validation.isValid) {
-      console.warn('SEO Validation Errors:', validation.errors);
-    }
+      console.warn('SEO Validation Errors:', validation.errors)}
   }, [validation]);
 
   // Generate meta tags
@@ -75,5 +73,4 @@ export default function SEOOptimizer({
         <meta name="seo-validation-warning" content={`SEO validation failed: ${validation.errors.join(', ')}`} />
       )}
     </Head>
-  );
-}
+  )}

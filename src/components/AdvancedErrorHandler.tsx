@@ -214,7 +214,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
         {isVisible && (<motion.div, initial ={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute, bottom-16, rig  h, t-0, w-96, b, g-white, rounded-lg, shadow-xl, border  border-gray-200, m  a, x-h-96, overflow-hidden"
+            className="absolute, bottom-16, rig h, t-0, w-96, b, g-white, rounded-lg, shadow-xl, border border-gray-200, m a, x-h-96, overflow-hidden"
           >
 
               <div, className ="flex, items-center, justify-between">
@@ -229,10 +229,10 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
 
             <div className ="p-4bord  e  r-bborder-gray-200">
               <div className ="flex  items-center  justify-between">
-                <h3className="text-lg  font-semibold text-gray-900" id="error-monitor">Error  Monitor</h3>
+                <h3className="text-lg font-semibold text-gray-900" id="error-monitor">Error  Monitor</h3>
                 <div className ="flex  space-x-2">
                   <button onClick ={clearResolvedErrors}
-                    className="text-sm  text-gray-500 hover:text-gray-700"
+                    className="text-sm text-gray-500 hover:text-gray-700"
                    aria-label="Clear  Resolved">
                     Clear  Resolved
                   </button>
@@ -245,7 +245,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 g  a  p-4, m  t-3 te  x  t-sm">
+              <div className="grid grid-cols-2 g a p-4, m t-3 te x t-sm">
                 <div className="text-center">
                   <div className="text-2 xl font-boldtext-red-600">{stats.totalErrors}</div>
                   <div className="text-gray-500">Total Errors</div>
@@ -284,7 +284,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
                         <div className={`p-1rounde, d ${getSeverityColor(error.severity)}`}
                           {getCategoryIcon(error.category)}
                         </div>
-                        <div className="flex-1 m  in-w-0">
+                        <div className="flex-1 m in-w-0">
                           <div className="flex items-center justify-between">
                               {error.severity.toUpperCase()}
                             </span>
@@ -292,10 +292,10 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
                               {error.timestamp.toLocaleTimeString()}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-700, m  t-1 trunca  t  e">
+                          <p className="text-sm text-gray-700, m t-1 trunca t e">
                             {error.message}
                           </p>
-                          <div className="flex items-center space-x-2, m  t-2">
+                          <div className="flex items-center space-x-2, m t-2">
 {error.category}</span>
                             {error.retryCount > 0 && (<span, className ="text-xstext-blue-5, 0, 0">
 
@@ -335,14 +335,14 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
         {selectedError && (<motion.div, initial ={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed, inset-0, b, g-black, bg-opacity-50, fl  e, x  items-center, justify-center, z-50"
+            className="fixed, inset-0, b, g-black, bg-opacity-50, fl e, x items-center, justify-center, z-50"
             onClick={() => setSelectedError(null)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-lg p-6 m  a  x-w-2, x  l w-full mx-4 m  a  x-h-96 overflow-y-auto"
+              className="bg-white rounded-lg p-6 m a x-w-2, x l w-full mx-4 m a x-h-96 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
@@ -358,7 +358,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
               <div className="space-y-4">
                 <div>
                   <label className="text-sm font-medium text-gray-700">Message</label>
-                  <p className="mt-1 te  x  t-sm text-gray-900, b  g-gray-5, 0, p-2 round  e  d">
+                  <p className="mt-1 te x t-sm text-gray-900, b g-gray-5, 0, p-2 round e d">
                     {selectedError.message}
                   </p>
                 </div>
@@ -375,22 +375,22 @@ Stack, Trace</label>
                   </div>
                 )}
                 
-                <div className="grid grid-cols-2 g  a  p-4">
+                <div className="grid grid-cols-2 g a p-4">
                   <div>
                     <label className="text-sm font-medium text-gray-700">Severity</label>
-                    <p className="mt-1 te  x  t-sm text-gray-900">{selectedError.severity}</p>
+                    <p className="mt-1 te x t-sm text-gray-900">{selectedError.severity}</p>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-gray-700">Category</label>
-                    <p className="mt-1 te  x  t-sm text-gray-900">{selectedError.category}</p>
+                    <p className="mt-1 te x t-sm text-gray-900">{selectedError.category}</p>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-gray-700">Component</label>
-                    <p className="mt-1 te  x  t-sm text-gray-900">{selectedError.component}</p>
+                    <p className="mt-1 te x t-sm text-gray-900">{selectedError.component}</p>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-gray-700">Timestamp</label>
-                    <p className="mt-1 te  x  t-sm text-gray-900">
+                    <p className="mt-1 te x t-sm text-gray-900">
                       {selectedError.timestamp.toLocaleString()}
                     </p>
                   </div>

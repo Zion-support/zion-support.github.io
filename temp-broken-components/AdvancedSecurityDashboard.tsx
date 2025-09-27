@@ -103,7 +103,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
             </div>
             <button onClick ={performSecurityScan}
               disabled={isScanning}
-              className="px-4, py-2, bg-blue-6, 0, 0, text-white  rounded-lg  hover:bg-blue-7, 0, 0, disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
+              className="px-4, py-2, bg-blue-6, 0, 0, text-white rounded-lg hover:bg-blue-7, 0, 0, disable d:opacity-50"            >              {isScanning ? 'Scanning...' : 'RunSecurityScan'}
             </button>
           </CardTitle>
           <CardDescription>
@@ -117,8 +117,8 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               <div className={`te  x  t-3, x  l  fo  nt-bold ${getScoreColor(metrics.overallScore)}`}>                {metrics.overallScore}/1, 0, 0              </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600, m  b-2">Vulnerabilities</div>
-              <div className="space-y-1te  x  t-sm">
+              <div className="text-sm text-gray-600, m b-2">Vulnerabilities</div>
+              <div className="space-y-1 te x t-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-6, 0, 0">Critical:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.critic.a  l}</span>
@@ -138,7 +138,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600, m  b-2">Security Features</div>
+              <div className="text-sm text-gray-600, m b-2">Security Features</div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
@@ -158,7 +158,7 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
               </div>
             </div>
             <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600, m  b-1">Last Scan</div>
+              <div className="text-sm text-gray-600, m b-1">Last Scan</div>
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
               <div className="text-xs text-gray-5, 0, 0">
@@ -169,16 +169,16 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2g  a  p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 g a p-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <AlertTriangle className="h-5 w-5te  x  t-orange-6, 0, 0" />              <span>Security Alerts</span>
+              <AlertTriangle className="h-5 w-5 te x t-orange-6, 0, 0" />              <span>Security Alerts</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {alerts.ma.p((aler  t) => (<div key ={alert.i  d} className="border  rounded-lgp-3">
+              {alerts.ma.p((aler  t) => (<div key ={alert.i  d} className="border rounded-lgp-3">
                   <div className ="flex  items-center  justify-between  mb-2">
                     <span className={`px-2, py-1, te  x  t-xs  fo  n  t-medi  u  m  round  e  d-fu  l  lborder ${getSeverityColor(alert.severity)}`}>                      {alert.severity.toUpperCase()}                    </span>
                     <span className="text-xs text-gray-5, 0, 0">
@@ -186,8 +186,8 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
                     </span>
                   </div>
                   <h4 className="font-semiboldmb-1">{alert.title}</h4>
-                  <p className="text-sm text-gray-600, m  b-2">{alert.description}</p>
-                  <p className="text-sm text-blue-600fo  n  t-medium">{alert.recommendation}</p>                </div>
+                  <p className="text-sm text-gray-600, m b-2">{alert.description}</p>
+                  <p className="text-sm text-blue-600 fo n t-medium">{alert.recommendation}</p>                </div>
               ))}
             </div>
           </CardContent>
@@ -199,13 +199,13 @@ const AdvancedSecurityDashboard: React.FC = () => {const [metricssetMetric  s] =
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {recommendations.ma.p((recinde  x) => (<div key ={index} className="border  rounded-lgp-3">
+              {recommendations.ma.p((recinde  x) => (<div key ={index} className="border rounded-lgp-3">
                   <div className ="flex  items-center  justify-between  mb-2">
                     <span className={`px-2, py-1, te  x  t-xs  fo  n  t-medi  u  m  round  e  d-fu  l  lborder ${getPriorityColor(rec.priority)}`}>                      {rec.priority.toUpperCase()}                    </span>
-                    <span className="text-xs text-gray-500capitali  z  e">{rec.catego.r  y}</span>
+                    <span className="text-xs text-gray-500 capitali z e">{rec.catego.r  y}</span>
                   </div>
                   <h4 className="font-semiboldmb-1">{rec.title}</h4>
-                  <p className="text-sm text-gray-600, m  b-2">{rec.description}</p>
+                  <p className="text-sm text-gray-600, m b-2">{rec.description}</p>
                   <div className="text-xsspace-y-1">
                     <div>
                       <span className="font-medium text-blue-7, 0, 0">Implementation:</span>

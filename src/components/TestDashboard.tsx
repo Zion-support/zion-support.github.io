@@ -253,7 +253,7 @@ Passed: {results.passed}</div>
                       <span>{getStatusIcon(test.status)}</span>
                       <span class Name=text-gray-7, 0, 0 dark:text-gray-300">{test.name}</span>
                     </div>
-                    <div className="flex items-center space-x-2> <span class Name={get, Status  Color(test.status)}>{test.status}</span> {test.duration && (<span, class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
+                    <div className="flex items-center space-x-2> <span class Name={get, Status Color(test.status)}>{test.status}</span> {test.duration && (<span, class, Name =text-gray-5, 0, 0, text-xs">{test.duration}ms</span>
 
               <div, className="space-y-1> {suite.tests.map(test => ( <div, key ={test.id} class, Name =flex, items-center, justify-between, text-sm">
                     <div, className ="flex, items-center, space-x-2>

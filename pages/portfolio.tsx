@@ -123,7 +123,7 @@ export default function Portfolio(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="container mx-auto px-4 py-8 max-w-7xl">
+			<div className="container mx-auto px-4 py-8 max-w-7 xl">
 				<nav className="mb-8">
 						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
@@ -131,11 +131,10 @@ export default function Portfolio(): JSX.Element {
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl,
-		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5 xl, md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Portfolio
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
 							Showcasing our successful projects and the impact we&apos;ve made for our clients
 						</p>
 					</header>
@@ -147,8 +146,8 @@ export default function Portfolio(): JSX.Element {
 						}`}>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 								{stats.map((stat ,, index) => (
-			<div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
-			<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+			<div key={index} className="text-center p-6 bg-white rounded-2 xl shadow-lg">
+			<div className="text-3 xl md:text-4 xl font-bold text-blue-600 mb-2">
 											{stat.number}
 										</div>
 			<div className="text-gray-600 font-medium">
@@ -187,18 +186,17 @@ export default function Portfolio(): JSX.Element {
 							<section className={`mb-16 transition-all duration-700 delay-300 ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
-								<h2 className="text-3xl md: text-4xl font-bold text-gray-800 mb-8 text-center">
+								<h2 className="text-3 xl md: text-4 xl font-bold text-gray-800 mb-8 text-center">
 									Featured Projects
 								</h2>
-			<div className="grid grid-cols-1,
-		lg:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1, lg:grid-cols-2 gap-8">
 									{featuredProjects.map((project ,, index) => (
 			<div key={project.id} className={`transform transition-all duration-700 delay-${400 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
-			<div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-shadow p-8 h-full">
+			<div className="bg-white rounded-3 xl shadow-xl hover:shadow-2 xl transition-shadow p-8 h-full">
 			<div className="flex items-center mb-6">
-			<div className="text-5xl mr-4">{project.image}</div>
+			<div className="text-5 xl mr-4">{project.image}</div>
 			<div>
 														<span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
 															{project.category}
@@ -206,7 +204,7 @@ export default function Portfolio(): JSX.Element {
 														<p className="text-sm text-gray-500 mt-1">{project.duration} • {project.team}</p>
 													</div>
 												</div>
-												<h3 className="text-2xl font-bold text-gray-800 mb-3">
+												<h3 className="text-2 xl font-bold text-gray-800 mb-3">
 													{project.title}
 												</h3>
 												<p className="text-gray-600 mb-4 leading-relaxed">
@@ -253,18 +251,17 @@ export default function Portfolio(): JSX.Element {
 						<section className={`mb-16 transition-all duration-700 delay-500 ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
-							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
+							<h2 className="text-3 xl md:text-4 xl font-bold text-gray-800 mb-8 text-center">
 								{selectedCategory === 'all' ? 'All Projects' : `${selectedCategory} Projects`}
 							</h2>
-			<div className="grid grid-cols-1 md: grid-cols-2,
-		lg:grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
 								{regularProjects.map((project ,, index) => (
 			<div key={project.id} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
-			<div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-6 h-full">
+			<div className="bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow p-6 h-full">
 			<div className="flex items-center mb-4">
-			<div className="text-3xl mr-3">{project.image}</div>
+			<div className="text-3 xl mr-3">{project.image}</div>
 			<div>
 													<span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
 														{project.category}
@@ -328,19 +325,17 @@ export default function Portfolio(): JSX.Element {
 									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 			<div className="relative z-10">
-								<h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 									Ready to Start Your Project?
 								</h2>
-								<p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
+								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
 									Let&apos;s discuss how we can help bring your vision to life with our proven expertise.
 								</p>
-			<div className="flex flex-col,
-		sm:flex-row gap-6 justify-center">
+			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
 					<Link href="/contact">
 										<button 
 											onClick={() => trackClick('start-project-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform,
-		hover:-translate-y-1 text-lg"
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
 										>
 											<span className="flex items-center justify-center gap-2">
 												Start Your Project
@@ -352,8 +347,7 @@ export default function Portfolio(): JSX.Element {
 									</Link>
 									<button 
 										onClick={() => trackClick('view-case-studies-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform,
-		hover:-translate-y-1 text-lg"
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
 									>
 										<span className="flex items-center justify-center gap-2">
 											View Case Studies

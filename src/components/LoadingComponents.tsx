@@ -72,7 +72,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({title = truedescription
         
 
 
-        <div className="mt-4 fl  e  x space-x-2">
+        <div className="mt-4 fl e x space-x-2">
 
           <div className="h-8 bg-gray-300 roundedw-20" />
           <div className="h-8 bg-gray-300 roundedw-24" />        </div>      </div>
@@ -117,7 +117,7 @@ interface LoadingTableProps {rows?: number;
       <div, className ="animate-pulse">
         {/* Header */}
         <div, className ="bg-gray-50, px-6, p, y-3bord, e  r-bborder-gray-2, 0, 0">
-          <divclassName ="flexspace-x-4">            {Array.from({ length: columns }).map((_index) => (<divkey ={index} className="h-4bg-gray-300roundedflex-1" />            ))}
+          <divclassName ="flexspace-x-4">            {Array.from({ length: columns }).map((_index) => (<divkey ={index} className="h-4 bg-gray-300 roundedflex-1" />            ))}
 
 export const LoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4className = ''}) => {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-200, overfl, ow-hidden ${className}`}>
       <div, className ="animate-pulse">
@@ -129,11 +129,11 @@ export const LoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4cl
         </div>
         
         {/* Rows */}
- (<div, key ={rowIndex} className="px-6, p, y-4, bord  e, r-b, border-gray-2, 0, 0, last:border-b-0">
+ (<div, key ={rowIndex} className="px-6, p, y-4, bord e, r-b, border-gray-2, 0, 0, last:border-b-0">
             <div, className ="flex, space-x-4">              {Array.from({length: columns }).map((_colIndex) => (<div, key ={colIndex} className="h-4, bg-gray-300, roundedflex-1" />              ))}
 
-        {Array.from({ length: rows }).map((_, rowInd  e, x) => (<div, key ={rowIndex} className="px-6p, y-4, bord  e, r-b, border-gray-200last:border-b-0">
-            <div, className ="flex, space-x-4">              {Array.from({lengt, h: columns }).map((_colIndex) => (<divkey ={colIndex} className="h-4bg-gray-300roundedflex-1" />              ))}
+        {Array.from({ length: rows }).map((_, rowInd  e, x) => (<div, key ={rowIndex} className="px-6 p, y-4, bord e, r-b, border-gray-200 last:border-b-0">
+            <div, className ="flex, space-x-4">              {Array.from({lengt, h: columns }).map((_colIndex) => (<divkey ={colIndex} className="h-4 bg-gray-300 roundedflex-1" />              ))}
 
             </div>
           </div>

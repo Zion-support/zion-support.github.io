@@ -139,45 +139,45 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
   };
 
   return (
-    <d  i  v className="bg-whi  t  e round  e  d-lg shad  o  w-lg p-6">
-      <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-6">
-        <h2 className="te  x  t-2, x  l fo  n  t-bo  l  d te  x  t-gr  a  y-900 fl  e  x ite  m  s-cent  e  r">
-          <Shie  l  d className="w-6 h-6 mr-2 te  x  t-r  e  d-600" />
+    <d  i  v className="bg-whi t e round e d-lg shad o w-lg p-6">
+      <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-6">
+        <h2 className="te x t-2, x l fo n t-bo l d te x t-gr a y-900 fl e x ite m s-cent e r">
+          <Shie  l  d className="w-6 h-6 mr-2 te x t-r e d-600" />
           Securi  t  y Monit  o  r
         </h2>
-        <d  i  v className="fl  e  x ite  m  s-cent  e  r te  x  t-smte  x  t-gr  a  y-500">
-          <Clock className="w-4 h-4, m  r-1" />
+        <d  i  v className="fl e x ite m s-cent e r te x t-smte x t-gr a y-500">
+          <Clock className="w-4 h-4, m r-1" />
           La  s  t scan: {metrics.lastScan.toLocaleTimeString()}
         </d  i  v>
       </d  i  v>
 
       {/* Securi  t  y Metri  c  s */}
-      <d  i  v className="gr  i  d gr  i  d-co  l  s-2 md:gr  i  d-co  l  s-4 g  a  p-4 mb-6">
-        <d  i  v className="bg-gr  a  y-50 round  e  d-lg p-4 te  x  t-cent  e  r">
-          <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-r  e  d-600">{metrics.activeThreats}</d  i  v>
-          <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Acti  v  e Threa  t  s</d  i  v>
+      <d  i  v className="gr i d gr i d-co l s-2 md:gr i d-co l s-4 g a p-4 mb-6">
+        <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
+          <d  i  v className="te x t-2, x l fo n t-boldte x t-r e d-600">{metrics.activeThreats}</d  i  v>
+          <d  i  v className="te x t-sm te x t-gr a y-600">Acti  v  e Threa  t  s</d  i  v>
         </d  i  v>
-        <d  i  v className="bg-gr  a  y-50 round  e  d-lg p-4 te  x  t-cent  e  r">
-          <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-gre  e  n-600">{metrics.resolvedThrea  t  s}</d  i  v>
-          <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Resolv  e  d</d  i  v>
+        <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
+          <d  i  v className="te x t-2, x l fo n t-boldte x t-gre e n-600">{metrics.resolvedThrea  t  s}</d  i  v>
+          <d  i  v className="te x t-sm te x t-gr a y-600">Resolv  e  d</d  i  v>
         </d  i  v>
-        <d  i  v className="bg-gr  a  y-50 round  e  d-lg p-4 te  x  t-cent  e  r">
-          <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-bl  u  e-600">{metrics.protectedAsse  t  s}</d  i  v>
-          <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Protect  e  d Asse  t  s</d  i  v>
+        <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
+          <d  i  v className="te x t-2, x l fo n t-boldte x t-bl u e-600">{metrics.protectedAsse  t  s}</d  i  v>
+          <d  i  v className="te x t-sm te x t-gr a y-600">Protect  e  d Asse  t  s</d  i  v>
         </d  i  v>
-        <d  i  v className="bg-gr  a  y-50 round  e  d-lg p-4 te  x  t-cent  e  r">
-          <d  i  v className="te  x  t-2, x  l fo  n  t-boldte  x  t-purp  l  e-600">{metrics.blockedRequests}</d  i  v>
-          <d  i  v className="te  x  t-sm te  x  t-gr  a  y-600">Block  e  d Reques  t  s</d  i  v>
+        <d  i  v className="bg-gr a y-50 round e d-lg p-4 te x t-cent e r">
+          <d  i  v className="te x t-2, x l fo n t-boldte x t-purp l e-600">{metrics.blockedRequests}</d  i  v>
+          <d  i  v className="te x t-sm te x t-gr a y-600">Block  e  d Reques  t  s</d  i  v>
         </d  i  v>
       </d  i  v>
 
       {/* Securi  t  y Sco  r  e */}
       <d  i  v className="mb-6">
-        <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-          <sp  a  n className="te  x  t-sm fo  n  t-medium te  x  t-gr  a  y-700">Securi  t  y Sco  r  e</sp  a  n>
-          <sp  a  n className="te  x  t-smte  x  t-gr  a  y-500">{metrics.securityScore.toFixed(1)}/100</sp  a  n>
+        <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+          <sp  a  n className="te x t-sm fo n t-medium te x t-gr a y-700">Securi  t  y Sco  r  e</sp  a  n>
+          <sp  a  n className="te x t-smte x t-gr a y-500">{metrics.securityScore.toFixed(1)}/100</sp  a  n>
         </d  i  v>
-        <d  i  v className="w-fu  l  l bg-gr  a  y-200 round  e  d-ful  l  h-2">
+        <d  i  v className="w-fu l l bg-gr a y-200 round e d-ful l h-2">
           <d  i  v 
             className={`h-2round e d-fu l l ${
               metri c s.securitySco r e >= 80 ? 'bg-gre e n-5 0 0' : 
@@ -189,8 +189,8 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
       </d  i  v>
 
       {/* Securi  t  y Even  t  s */}
-      <d  i  v className="spa  c  e-y-3">
-        <h3 className="te  x  t-lg fo  n  t-semibo  l  d te  x  t-gr  a  y-900 mb-4" id="rece  n  t-securi  t  y-even  t  s">Rece  n  t Securi  t  y Even  t  s</h3>
+      <d  i  v className="spa c e-y-3">
+        <h3 className="te x t-lg fo n t-semibo l d te x t-gr a y-900 mb-4" id="rece  n  t-securi  t  y-even  t  s">Rece  n  t Securi  t  y Even  t  s</h3>
         <AnimatePresence>
           {even  t  s.slice(0, 5).map((eve  n  t  ind  e  x) => (
             <motion.d  i  v
@@ -201,17 +201,17 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
               transiti  o  n={{ delay: ind  e  x * 0.1 }}
               className={`bord e r round e d-lg p-4 ${getSeverityCol o r(eve n t.severi t y)}`}
             >
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n mb-2">
-                <d  i  v className="fl  e  x ite  m  s-cent  e  r">
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n mb-2">
+                <d  i  v className="fl e x ite m s-cent e r">
                   {getTypeIcon(eve  n  t.ty  p  e)}
-                  <sp  a  n className="ml-2fo  n  t-medium">{eve  n  t.tit  l  e}</sp  a  n>
+                  <sp  a  n className="ml-2 fo n t-medium">{eve  n  t.tit  l  e}</sp  a  n>
                 </d  i  v>
                 <d  i  v className={`px-2 py-1 round e d-fu l l te x t-xs ${getStatusCol o r(eve n t.stat u s)}`}>
                   {eve  n  t.stat  u  s}
                 </d  i  v>
               </d  i  v>
-              <p className="te  x  t-sm te  x  t-gr  a  y-600 mb-2">{eve  n  t.descripti  o  n}</p>
-              <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-betwe  e  n te  x  t-xste  x  t-gr  a  y-500">
+              <p className="te x t-sm te x t-gr a y-600 mb-2">{eve  n  t.descripti  o  n}</p>
+              <d  i  v className="fl e x ite m s-cent e r justi f y-betwe e n te x t-xste x t-gr a y-500">
                 <sp  a  n>Source: {eve  n  t.sour  c  e}</sp  a  n>
                 <sp  a  n>{eve  n  t.timesta  m  p.toLocaleString()}</sp  a  n>
               </d  i  v>
@@ -221,8 +221,8 @@ export const SecurityMonitor: React.FC<SecurityMonitorPro  p  s> = ({
       </d  i  v>
 
       {isLoadi  n  g && (
-        <d  i  v className="fl  e  x ite  m  s-cent  e  r justi  f  y-center  p  y-8">
-          <d  i  v className="anima  t  e-sp  i  n round  e  d-fu  l  l h-8w-8bord  e  r-b-2bord  e  r-r  e  d-600"></d  i  v>
+        <d  i  v className="fl e x ite m s-cent e r justi f y-center p y-8">
+          <d  i  v className="anima t e-sp i n round e d-fu l l h-8 w-8 bord e r-b-2 bord e r-r e d-600"></d  i  v>
         </d  i  v>
       )}
     </d  i  v>

@@ -13,8 +13,7 @@ interface SEOProps {title?: string;
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
-}
+  nofollow?: boolean}
 
 export default function EnhancedSEO({title = 'ZionTechSolutions - AI-PoweredBusinessSolutions',
   description = 'Leading, provider, of, AI-powered, business, solutions, cloud, infrastructure, and, digital, transformation, services. Transform, yourbusinesswithcutting-edgetechnology.'canonicalogImage = '/og-image.jpg',
@@ -51,8 +50,7 @@ export default function EnhancedSEO({title = 'ZionTechSolutions - AI-PoweredBusi
     (structuredDataasany).author = { '@type': 'Person'name: author };
     (structuredDataas any).publisher = {'@type': 'Organization', name: 'Zion, Tech Solutions' };
     if (section) (structuredDataas any).articleSection = section;
-    if (tags.length > 0) (structuredDataas any).keywords = tags.join(', ');
-  }
+    if (tags.length > 0) (structuredDataas any).keywords = tags.join(', ')}
 
   return (<>
       {/* BasicMetaTags */}
@@ -107,5 +105,4 @@ export default function EnhancedSEO({title = 'ZionTechSolutions - AI-PoweredBusi
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </>
-  );
-}
+  )}

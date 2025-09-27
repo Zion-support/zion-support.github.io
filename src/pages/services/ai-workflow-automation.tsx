@@ -49,7 +49,7 @@ export default function AIWorkflowAutomation() {const, features = [{
           <motion.div, initial ={{ opacity: 0y: 20 }}
             animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center, max-w-4, xl  mx-auto"
+            className="text-center, max-w-4, xl mx-auto"
           >
             <div, className ="inline-flex, items-center, px-4, py-2, bg-cyan-500/20, border, border-cyan-400/30, rounded-full, text-cyan-300, text-sm, font-medium, mb-6">
               <CheckCircle, className ="w-4, h-4, mr-2" />
@@ -74,7 +74,7 @@ export default function AIWorkflowAutomation() {const, features = [{
           <motion.div, initial ={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center, max-w-4, x, l  mx-auto"
+            className="text-center, max-w-4, x, l mx-auto"
           >
 
               <CheckCircle, className ="w-4, h-4, mr-2" />
@@ -136,7 +136,7 @@ export default function AIWorkflowAutomation() {const, features = [{
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="p-6, rounded-xl, border  border-cyan-400/20, bg-slate-800/40"
+                className="p-6, rounded-xl, border border-cyan-400/20, bg-slate-800/40"
               >
                 <div, className ="w-12, h-12, bg-gradient-to-br, from-cyan-400/20, to-blue-500/20, rounded-lg, flex  items-center, justify-center, mb-4">
 
@@ -212,7 +212,7 @@ export default function AIWorkflowAutomation() {const, features = [{
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="p-8 rounded-2, x  l border border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-blue-500/20"
+              className="p-8 rounded-2, x l border border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-blue-500/20"
             >
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -245,9 +245,9 @@ export default function AIWorkflowAutomation() {const, features = [{
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3, x  l mx-auto"
+            className="max-w-3, x l mx-auto"
           >
-            <h2 className="text-4, x  l font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
+            <h2 className="text-4, x l font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
 
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of businesses that have already transformed their operations with AI workflow automation.

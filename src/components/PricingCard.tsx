@@ -38,7 +38,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({tier, isVisible, onSele
         <h3 className="text-2 xl font-bold text-gray-800 mb-2" id="tiername">{tier.name}</h3>
         <p className="text-gray-600 mb-4">{tier.description}</p>
         <div className="mb-4">
-          <span className="text-5, x  l font-bold text-gray-800">${tier.price}</span>
+          <span className="text-5, x l font-bold text-gray-800">${tier.price}</span>
           <span className="text-gray-600 ml-2">/{tier.period}</span>
         </div>
       </div>

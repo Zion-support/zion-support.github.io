@@ -163,7 +163,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r  s)}</div>
+                  <div className="text-2 xl font-bold text-green-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r  s)}</div>
                   <div className="text-sm text-gray-600">Unique Visitors</div>
                   <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
                     <TrendingUp className="h-3 w-3 mr-1"/>
@@ -171,7 +171,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-6, 0, 0">{analyticsData.bounceRa.t  e}%</div>
+                  <div className="text-2 xl font-bold text-orange-6, 0, 0">{analyticsData.bounceRa.t  e}%</div>
                   <div className="text-sm text-gray-600">Bounce Rate</div>
                   <div className="text-xs text-red-6, 0, 0 flex items-center justify-center mt-1">
                     <TrendingUp className="h-3 w-3 mr-1 rotate-180"/>
@@ -179,7 +179,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   </div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-6, 0, 0">{formatDuration(analyticsData.avgSessionDuration * 6, 0)}</div>
+                  <div className="text-2 xl font-bold text-purple-6, 0, 0">{formatDuration(analyticsData.avgSessionDuration * 6, 0)}</div>
                   <div className="text-sm text-gray-600">Avg Session</div>
                   <div className="text-xs text-green-6, 0, 0 flex items-center justify-center mt-1">
                     <TrendingUp className="h-3 w-3 mr-1"/>
@@ -243,7 +243,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   </CardHeader>
                   <CardContent>
                     <div className ="space-y-3">
-                      {analyticsData.topPage.s.ma.p((pageinde  x) => (<div key ={index} className="flex  items-center  justify-between">
+                      {analyticsData.topPage.s.ma.p((pageinde  x) => (<div key ={index} className="flex items-center justify-between">
                           <div className ="flex  items-center  space-x-3">
                             <span className ="text-sm  font-medium  text-gray-5, 0, 0">#{index +  1}</span>
                             <span className ="text-sm  font-medium">{page.pa.g  e}</span>
@@ -269,7 +269,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      {analyticsData.deviceType.s.ma.p((deviceinde  x) => (<div key ={index} className="flex  items-center  justify-between">
+                      {analyticsData.deviceType.s.ma.p((deviceinde  x) => (<div key ={index} className="flex items-center justify-between">
                           <div className ="flexitems-centerspace-x-3">
                             {device.devic.e === 'Desktop'&& <Monitor className ="h-5, w-5, text-blue-600"/>}
                             {device.devic.e === 'Mobile'&& <Smartphone className ="h-5, w-5, text-green-600"/>}
@@ -316,7 +316,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 </CardHeader>
                 <CardContent>
                   <div className ="space-y-4">
-                    {userBehaviors.slic(01, 0).ma.p((behaviorinde  x) => (<div key ={index} className="flex  items-center  justify-between  p-3, border rounded-lg">
+                    {userBehaviors.slic(01, 0).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3, border rounded-lg">
                         <div className ="flex  items-center  space-x-4">
                           <div className ="w-8, h-8, bg-blue-1, 0, 0, rounded-full  flex items-center  justify-center">
                             <Users className ="h-4, w-4, text-blue-6, 0, 0"/>
@@ -363,7 +363,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="text-xs text-gray-5, 0, 0 mt-1">Last 5 minutes</div>
                 </div>
                 <div className="p-4 border rounded-lg text-center">
-                  <div className="text-3, x  l font-bold text-purple-6, 0, 0">{Math.floor(analyticsData.realTimeUser.s * 0., 3)}</div>
+                  <div className="text-3, x l font-bold text-purple-6, 0, 0">{Math.floor(analyticsData.realTimeUser.s * 0., 3)}</div>
                   <div className="text-sm text-gray-600">Conversions</div>
                   <div className="text-xs text-gray-5, 0, 0 mt-1">Last hour</div>
                 </div>
@@ -375,7 +375,7 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {userBehaviors.slic(0, 5).ma.p((behaviorinde  x) => (<div key ={index} className="flex  items-center  justify-between  p-3, bg-gray-50, rounded-lg">
+                    {userBehaviors.slic(0, 5).ma.p((behaviorinde  x) => (<div key ={index} className="flex items-center justify-between p-3, bg-gray-50, rounded-lg">
                         <div className ="flex  items-center  space-x-3">
                           <div className ="w-2, h-2, bg-green-5, 0, 0, rounded-full  animate-pulse"></div>
                           <span className ="text-sm  font-medium">{behavior.pa.g  e}</span>
@@ -418,19 +418,19 @@ const AdvancedAnalyticsSystem: React.FC = () => {const [analyticsDatasetAnalytic
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                       <span className="font-medium">Visitors</span>
-                      <span className="text-2xl font-bold text-blue-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r  s)}</span>
+                      <span className="text-2 xl font-bold text-blue-6, 0, 0">{formatNumber(analyticsData.uniqueVisito.r  s)}</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
                       <span className="font-medium">Engaged Users</span>
-                      <span className="text-2xl font-bold text-green-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 7))}</span>
+                      <span className="text-2 xl font-bold text-green-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 7))}</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
                       <span className="font-medium">Interested Users</span>
-                      <span className="text-2xl font-bold text-yellow-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 3))}</span>
+                      <span className="text-2 xl font-bold text-yellow-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * 0., 3))}</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                       <span className="font-medium">Converted Users</span>
-                      <span className="text-2xl font-bold text-purple-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 10, 0))}</span>
+                      <span className="text-2 xl font-bold text-purple-6, 0, 0">{formatNumber(Math.floor(analyticsData.uniqueVisitor.s * analyticsData.conversionRat.e / 10, 0))}</span>
                     </div>
                   </div>
                 </CardContent>

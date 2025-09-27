@@ -205,7 +205,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4> <div class Name=text-center">
  {getTotal, Metric('page, Views').toLocaleString()} </div> <div class Name=text-sm text-gray-600">Total Page Views</div>
 
-            <div className="text-3 xl font-bold text-blue-600> {getTotal Metric('page, Views').to, Locale String()} </div> <div class Name=text-sm text-gray-600">Total Page Views</div>
+            <div className="text-3 xl font-bold text-blue-600> {get Total Metric('page, Views').to, Locale String()} </div> <div class Name=text-sm text-gray-600">Total Page Views</div>
 
           </div>
           <div className="text-center> <div class Name=text-3 xl font-bold text-green-600">
@@ -231,7 +231,7 @@ Total Revenue</div> </div> </div> </div> {/* MetricSelector  andMainChart */} <d
                 aria-label={`Selec, t ${metric} metr i c`}
                 class Name={"`px-3py-1rounde  d-fullte xt-smfont-medium ${selectedMetric===metric?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'}`}
 
-            <div className="text-sm text-gray-600>Total Revenue</div> </div> </div> </div> {/* MetricSelector andMain Chart */} <div class Name=bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="text-sm text-gray-600>Total Revenue</div> </div> </div> </div> {/* Metric Selector and Main Chart */} <div class Name=bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-4> <h 3 class Name=text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2> {(['page, Views' 'unique, Visitors' 'revenue'] as, const).map((metric) => (<button, key ={metric} on, Click ={() = aria-label="set, Selected Metric(metric)}
                 aria-label={`Selec, t ${metric} metr i c`}
@@ -285,13 +285,13 @@ Total Revenue</div> </div> </div> </div> {/* MetricSelector  andMainChart */} <d
               </span>
             </div>
             <div className="flex justify-between items-center> <span class Name=text-sm text-gray-600">Conversion Rate</span>
-              <span className="text-sm font-medium text-gray-900> {(getAverageMetric('conversion, Rate') * 100).to, Fixed(2)}% </span> </div> <div class Name=flex justify-between items-center">
+              <span className="text-sm font-medium text-gray-900> {(get Average Metric('conversion, Rate') * 100).to, Fixed(2)}% </span> </div> <div class Name=flex justify-between items-center">
               <span className="text-sm text-gray-600>Latest Page Views</span> <span class Name=text-sm font-medium text-gray-900">
                 {getLatestMetric('pageViews').toLocaleString()}
               </span>
             </div>
             <div className="flex justify-between items-center> <span class Name=text-sm text-gray-600">Latest Unique Visitors</span>
-              <span className="text-sm font-medium text-gray-900> {get, Latest  Metric('unique, Visitors').to, Locale  String()} </span> </div> <div class Name=flex justify-between items-center">
+              <span className="text-sm font-medium text-gray-900> {get, Latest Metric('unique, Visitors').to, Locale String()} </span> </div> <div class Name=flex justify-between items-center">
               <span className="text-sm text-gray-600>Latest Revenue</span> <span class Name=text-sm font-medium text-gray-900">
                 ${getLatestMetric('revenue').toLocaleString()}
               </span>

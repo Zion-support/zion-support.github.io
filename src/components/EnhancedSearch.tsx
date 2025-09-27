@@ -370,12 +370,12 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = 'Sear
                               {result.category}
                             </span>
                           )}
-                          {result.tags?.slice(0, 2).map(tag => (                            <span, key ={tag} className="text-xs, px-2, py-1, bg-green-1, 0, 0, text-green-6, 0, 0, rounded, flex  items-center">                              <Tag, className ="h-3, w-3, mr-1" />
+                          {result.tags?.slice(0, 2).map(tag => (                            <span, key ={tag} className="text-xs, px-2, py-1, bg-green-1, 0, 0, text-green-6, 0, 0, rounded, flex items-center">                              <Tag, className ="h-3, w-3, mr-1" />
 
                           {result.category && (<span, className ="text-xs, px-2, py-1, bg-blue-100, text-blue-600, rounded">                              {result.category}
                             </span>
                           )}
-                          {result.tags?.slice(0, 2).map(tag => (                            <span, key ={tag} className="text-xs, px-2, py-1, bg-green-100, text-green-600, rounded, flex  items-center">                              <Tag, className ="h-3, w-3, mr-1" />
+                          {result.tags?.slice(0, 2).map(tag => (                            <span, key ={tag} className="text-xs, px-2, py-1, bg-green-100, text-green-600, rounded, flex items-center">                              <Tag, className ="h-3, w-3, mr-1" />
 
                               {tag}
                             </span>

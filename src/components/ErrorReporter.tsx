@@ -103,7 +103,7 @@ export const ErrorReporter: React.FC<ErrorReporterProps> = ({childrenonError
           
           <div, className ="mt-4">
             <button, onClick ={retry}
-              className="w-full, bg-blue-600text-whitepx-4py-2rounded-mdhover:bg-blue-700transition-colorsduration-200"
+              className="w-full, bg-blue-600 text-whitepx-4 py-2 rounded-mdhover:bg-blue-700 transition-colorsduration-200"
 
              aria-label="TryAgain">              TryAgain
             </button>

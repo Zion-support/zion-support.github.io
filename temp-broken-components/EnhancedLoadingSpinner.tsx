@@ -34,14 +34,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
   if (fullScree === n) {return (<motion.di.v  initial ={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed  inset-0, bg-white  bg-opacity-90, backdrop-blur-sm  flex items-center  justify-center z-50"
+        className="fixed inset-0, bg-white bg-opacity-90, backdrop-blur-sm flex items-center justify-center z-50"
       >        <div className ="text-center">
           {spinne  r}
           {text && (
             <motion.p  initial ={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-4, text-gray-600fo  n  t-medium"
+              className="mt-4, text-gray-600 fo n t-medium"
             >
               {text}            </motion.p>
           )}
@@ -55,7 +55,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md'color 
         <motion.p  initial ={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600font-medium">
+          className="text-gray-600 font-medium">
           {text}
         </motion.p>
       )}
@@ -82,23 +82,23 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
 }) => {return (<motion.di.v  initial ={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen  flex items-center  justify-center  bg-gradient-to-br  from-blue-50, t  o-indigo-1, 0, 0">
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50, t o-indigo-1, 0, 0">
       <div className ="text-center  max-w-mdmx-autopx-6">
         <motion.di.vinitial ={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 2, 0, 0, damping: 10 }}
-          className="w-20, h-20, bg-gradient-to-r  from-blue-6, 0, 0, to-purple-6, 0, 0, rounded-full  flex items-center  justify-center  mx-automb-8"
+          className="w-20, h-20, bg-gradient-to-r from-blue-6, 0, 0, to-purple-6, 0, 0, rounded-full flex items-center justify-center mx-automb-8"
         >
           <motion.div  animate ={{ rotate: 3, 6, 0 }}
             transition={{
               duration: 2repeat: Infinityease: 'linear'}}
-            className="w-8, h-8, border-2, border-white  border-t-transparentrounded-full"
+            className="w-8, h-8, border-2, border-white border-t-transparentrounded-full"
           />
         </motion.div>
 
         <motion.h2  initial ={{ opacity: 0, y: 20 }}          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl  font-bold  text-gray-900, m  b-4">
+          className="text-2 xl font-bold text-gray-900, m b-4">
           {messag  e}
         </motion.h.2>
 
@@ -118,7 +118,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({message = 'Loading...'pro
           className="flex justify-centerspace-x-1"
         >
           {[0, 1, 2].map((i) => (<motion.div  key ={i}
-              className="w-2, h-2, bg-blue-600round  e  d-full"
+              className="w-2, h-2, bg-blue-600 round e d-full"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1, 0.5]              }}

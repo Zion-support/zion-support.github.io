@@ -104,7 +104,7 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
   return null}
 
 // Hook for using performance metrics in components
-export function usePerformanceMetrics() {const [metricssetMetrics] = React.useState<PerformanceMetrics | null>(null);
+export function usePerformanceMetrics() {const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
   const [isLoadingsetIsLoading] = React.useState(true);
 
   React.useEffect(() => {

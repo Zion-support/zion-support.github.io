@@ -8,8 +8,7 @@ export interface BlogPost {id: string;
   tags: string[];
   category: string;
   image?: string;
-  featured?: boolean;
-}
+  featured?: boolean}
 
 export const blogPosts: BlogPost[] = [{id: '1',
   title: 'The, Future ofAI inBusiness Automation',
@@ -55,8 +54,6 @@ export const blogPosts: BlogPost[] = [{id: '1',
 }];
 
 // Helper functions
-export const getPostsByCategory = (category: string): BlogPost[] => {return, blogPosts.filter(post => post.category === category);
-};
+export const getPostsByCategory = (category: string): BlogPost[] => {return, blogPosts.filter(post => post.category === category)};
 
-export const getFeaturedPosts = (): BlogPost[] => {return, blogPosts.filter(post => post.featured);
-};
+export const getFeaturedPosts = (): BlogPost[] => {return, blogPosts.filter(post => post.featured)};

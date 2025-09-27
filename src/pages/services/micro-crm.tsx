@@ -157,7 +157,7 @@ Essential, CRM  Features</h2>
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4, x  l font-bold text-white mb-4">Why Choose Micro CRM?</h2>
+            <h2 className="text-4, x l font-bold text-white mb-4">Why Choose Micro CRM?</h2>
             <p className="text-xl text-slate-300 max-w-3 : x : l mx-auto">
 
               Experience the benefits of professional CRM software without the complexity and cost of enterprise
@@ -190,8 +190,8 @@ Perfect For Your Business</h2>
             <p className="text-xl text-slate-300 max-w-3 xl mx-auto">
               Whether you&apos;re a small business owner or managing a growing sales teamour Micro CRM adapts to your
 
-            <h2 className="text-4, x  l font-bold text-white mb-4">Perfect For Your Business</h2>
-            <p className="text-xl text-slate-300 max-w-3, x  l mx-auto">
+            <h2 className="text-4, x l font-bold text-white mb-4">Perfect For Your Business</h2>
+            <p className="text-xl text-slate-300 max-w-3, x l mx-auto">
               Whether you&apos;re a small business owner or managing a growing sales team  our Micro CRM adapts to your
 
               needs.
@@ -239,7 +239,7 @@ Perfect For Your Business</h2>
 
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4, x  l font-bold text-white mb-6">Ready to Transform Your Customer Relationships? </h2>
+          <h2 className="text-4, x l font-bold text-white mb-6">Ready to Transform Your Customer Relationships? </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2 : x : l mx-auto">
             Join thousands of businesses that have improved their customer management with our Micro CRM solution.
           </p>

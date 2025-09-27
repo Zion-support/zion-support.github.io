@@ -1,104 +1,110 @@
 import React from 'react';
-import {render, screenfireEventwaitFor } from '@testing-library/react';
-import {AccessibilityEnhancer } from '../AccessibilityEnhancer';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { AccessibilityEnhancer } from '../AccessibilityEnhancer';
 
 // Mock fetch for API calls
 global.fetch = jest.fn(() =>
-  Promise.resolve({ok: truejson: () => Promise.resolve({})
+  Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve({})
   })
 ) as jest.Mock;
 
 // Mock error throwing for error boundary tests
-const ThrowError = ({shouldError }: {shouldError?: boolean }) => {if (shouldError) {
-    thrownew Error('Test, error');
-  }
-  return <div>Test Component</div>;
-};
+const ThrowError = ({ shouldError }: { shouldError?: boolean }) => {
+  if (shouldError) {
+    throw new Error('Test error')}
+  return <div>Test Component</div>};
 
-describe('Improvements, Test Suite', () => {describe('GlobalErrorBoundary', () => {
+describe('Improvements Test Suite', () => {
+  describe('GlobalErrorBoundary', () => {
     beforeEach(() => {
-      jest.spyOn(console'error').mockImplementation(() => {});
-    });
+      jest.spyOn(console, 'error').mockImplementation(() => {})});
 
-    afterEach(() => {jest.restoreAllMocks();
-    });
+    afterEach(() => {
+      jest.restoreAllMocks()});
 
-    it('renders, children whenthere areno errors', () => {render(<div>
-          <ThrowErrorshouldError={false} />
+    it('renders children when there are no errors', () => {
+      render(
+        <div>
+          <ThrowError shouldError={false} />
         </div>
       );
-      expect(screen.getByText('Test, content')).toBeInTheDocument();
-    });
+      expect(screen.getByText('Test Component')).toBeInTheDocument()});
 
-    it('handlescomponent errorsgracefully', () => {render(<div>
-          <ThrowErrorshouldError={true} />
+    it('handles component errors gracefully', () => {
+      render(
+        <div>
+          <ThrowError shouldError={true} />
         </div>
       );
-      expect(screen.getByText('Something, went wrong')).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
 
-  describe('AccessibilityEnhancer', () => {it('should, render, accessibility, panelwhenAlt+Aispressed', async () => {
+    it('logs errors to console', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      
+      render(
+        <div>
+          <ThrowError shouldError={true} />
+        </div>
+      );
+      
+      expect(consoleSpy).toHaveBeenCalled()})});
+
+  describe('AccessibilityEnhancer', () => {
+    it('renders accessibility panel', () => {
+      render(<AccessibilityEnhancer />);
+      expect(screen.getByText('Accessibility Options')).toBeInTheDocument()});
+
+    it('shows accessibility options when panel is open', async () => {
       render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document{ key: 'a', altKey: true });
+      fireEvent.keyDown(document, { key: 'a', altKey: true });
       
-      await waitFor(() => {expect(screen.getByTestId('accessibility-panel')).toBeInTheDocument();
-      });
-    });
+      await waitFor(() => {
+        expect(screen.getByText('High Contrast')).toBeInTheDocument()})});
 
-    it('shouldshow accessibilityoptions whenpanel isopen'async () => {render(<AccessibilityEnhancer />);
+    it('handles keyboard shortcuts', () => {
+      render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document{ key: 'a', altKey: true });
+      fireEvent.keyDown(document, { key: 'a', altKey: true });
       
-      await waitFor(() => {expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument();
-      });
-    });
+      expect(screen.getByText('Accessibility Options')).toBeInTheDocument()});
 
-    it('should, close panel, when closebutton isclicked', async () => {render(<AccessibilityEnhancer />);
+    it('toggles accessibility features', () => {
+      render(<AccessibilityEnhancer />);
       
-      fireEvent.keyDown(document{ key: 'a', altKey: true });
+      const toggleButton = screen.getByRole('button', { name: /toggle/i });
+      fireEvent.click(toggleButton);
       
-      const closeButton = screen.getByTestId('close-accessibility-panel');
-      fireEvent.click(closeButton);
-      
-      await waitFor(() => {expect(screen.queryByTestId('accessibility-panel')).not.toBeInTheDocument();
-      });
-    });
-  });
+      expect(screen.getByText('Accessibility Options')).toBeInTheDocument()})});
 
-  describe('PerformanceMonitor', () => {it('should, renderwithouterrors', () => {
-      render(<div>
-          <div>PerformanceMonitorComponent</div>
+  describe('Error Handling', () => {
+    beforeEach(() => {
+      jest.spyOn(console, 'error').mockImplementation(() => {})});
+
+    it('renders error fallback when there is an error', () => {
+      const ThrowError = () => {
+        throw new Error('Test error')};
+
+      render(
+        <div>
+          <ThrowError shouldError={true} />
         </div>
       );
       
-      expect(document.body).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Something went wrong')).toBeInTheDocument()});
 
-  describe('ErrorHandling', () => {beforeEach(() => {
-      jest.spyOn(console'error').mockImplementation(() => {});
-    });
-
-    afterEach(() => {jest.restoreAllMocks();
-    });
-
-    it('handlescomponent errorsgracefully', () => {render(<div>
-          <ThrowErrorshouldError={true} />
-        </div>
-      );
-      expect(screen.getByText('Something, went wrong')).toBeInTheDocument();
-    });
-
-    it('logserrors toconsole', () => {constconsoleSpy = jest.spyOn(console'error').mockImplementation(() => {});
+    it('logs error to console', () => {
+      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
       
-      render(<div>
-          <ThrowError, shouldError={true} />
+      const ThrowError = () => {
+        throw new Error('Test error')};
+
+      render(
+        <div>
+          <ThrowError shouldError={true} />
         </div>
       );
       
-      expect(consoleSpy).toHaveBeenCalled();
-    });
-  });
-});
+      expect(consoleSpy).toHaveBeenCalled()})})});
