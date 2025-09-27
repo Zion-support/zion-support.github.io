@@ -44,9 +44,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       images.forEach((img  index) => {
         if (!img.alt && !img.getAttribute('aria-label')) {
           issues.push({
-            id: `alt-text-${index}`,
-            type: 'error',
-            severity: 'critical',
+            id: `alt-text-${index}`type: 'error'severity: 'critical',
             rule: 'image-alt',
             description: 'Image missing alternative text',
             element: img.tagName 
@@ -59,24 +57,22 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
       });
 
       // Calculate metrics
-      const newMetrics: AccessibilityMetrics = {
-        totalIssues: issues.length 
+      const newMetrics: AccessibilityMetrics = {totalIssues: issues.length 
         errors: issues.filter(issue => issue.type === 'error').length 
         warnings: issues.filter(issue => issue.type === 'warning').length 
-        score: Math.max(0, 100 - (issues.length * 5))
+        score: Math.max(0100 - (issues.length * 5))
       };
 
       setMetrics(newMetrics);
       if (onAuditComplete) {
         onAuditComplete(newMetrics)}
 
-    } catch (error) {
-      console.error('Accessibility audit failed:', error)} finally {
+    } catch (error) {console.error('Accessibility audit failed:"error)} finally {
       setIsAuditing(false)}
-  }, [onAuditComplete  onIssueFound]);
+  }[onAuditComplete  onIssueFound]);
 
   React.useEffect(() => {
-    auditAccessibility()}, [auditAccessibility]);
+    auditAccessibility()}[auditAccessibility]);
 
   return (
 
@@ -130,8 +126,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           {/* Issue Summary */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4"
             >
               <div className="text-2 xl font-bold text-red-600">{metrics.criticalIssues}</div>
@@ -139,8 +135,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ delay: 0.1 }}
               className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4"
             >
@@ -149,8 +145,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ delay: 0.2 }}
               className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4"
             >
@@ -159,8 +155,8 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ delay: 0.3 }}
               className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4"
             >
@@ -222,9 +218,9 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                 {filteredIssues.map((issue) => (
                   <motion.div
                     key={issue.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: 20 }}
                     className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
                   >
                     <div className="flex items-start justify-between">

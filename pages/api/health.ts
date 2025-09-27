@@ -1,41 +1,34 @@
-import typ, e { NextApiReque, s, t, NextApiRespon, s, e }  from 'next';
+import typ, e {NextApiReque, s, t, NextApiResponse }  from 'next";
 
-interface, HealthRespons, e {
-  stat, u, s: 'healt, h, y' | 'unhealt, h, y';
-  timesta, m, p: stri, n, g;
-  upti, m, e: numb, e, r;
-  versi, o, n: stri, n, g;
-  environme, n, t: stri, n, g;
-  servic, e, s: {
-    databa, s, e: 'connect, e, d' | 'disconnect, e, d';
-    cac, h, e: 'connect, e, d' | 'disconnect, e, d';
-    analyti, c, s: 'acti, v, e' | 'inacti, v, e'}};
-export default function handl, e, r(
-  r, e, q: NextApiRequest, re, s: NextApiRespon, s, e<HealthRespon, s, e>
-) {
-  if (r, e, q.meth, o, d !== 'G, E, T') {
-    return, re, s.stat, u, s(4, 0, 5).js, o, n({
-      stat, u, s: 'unhealt, h, y',
-      timesta, m, p: new, Dat, e().toISOStri, n, g(),
-      upti, m, e: proce, s, s.upti, m, e(),
-      versi, o, n: proce, s, s.e, n, v.npm_package_versi, o, n || '1.0.0',
-      environme, n, t: proce, s, s.e, n, v.NODE_E, N, V || 'developme, n, t',
-      servic, e, s: {
-        databa, s, e: 'connect, e, d',
-        cac, h, e: 'connect, e, d',
-        analyti, c, s: 'acti, v, e'
+interface, HealthResponse {status: "healthy" | "unhealthy";
+  timestamp: stri, n, g;
+  uptime: numb, e, r;
+  version: string;
+  environment: string;
+  services: {
+    database: "connected" | "disconnected";
+    cache: "connected" | "disconnected";
+    analytics: "active" | "inactive"}};
+export default function handler(
+  req: NextApiRequestres: NextApiResponse<HealthResponse>
+) {if (req.method !== "GET") {
+    return, re, s.stat, u, s(4, 0, 5).json({
+      status: "unhealthy",
+      timestamp: new, Dat, e().toISOStri, n, g(),
+      uptime: proce, s, s.upti, m, e(),
+      version: proce, s, s.e, n, v.npm_package_version || "1.0.0",
+      environment: proce, s, s.env.NODE_ENV || "developme, n, t",
+      services: {
+        database: "connected"cache: "connected"analytics: "active"
       };
     })};
-  const, healthDat, a: HealthRespon, s, e = {
-    stat, u, s: 'healt, h, y',
-    timesta, m, p: new, Dat, e().toISOStri, n, g(),
-    upti, m, e: proce, s, s.upti, m, e(),
-    versi, o, n: proce, s, s.e, n, v.npm_package_versi, o, n || '1.0.0',
-    environme, n, t: proce, s, s.e, n, v.NODE_E, N, V || 'developme, n, t',
-    servic, e, s: {
-      databa, s, e: 'connect, e, d',
-      cac, h, e: 'connect, e, d',
-      analyti, c, s: 'acti, v, e'
+  consthealthData: HealthResponse = {status: "healthy",
+    timestamp: new, Dat, e().toISOStri, n, g(),
+    uptime: proce, s, s.upti, m, e(),
+    version: proce, s, s.e, n, v.npm_package_version || "1.0.0",
+    environment: proce, s, s.env.NODE_ENV || "developme, n, t",
+    services: {
+      database: "connected"cache: "connected"analytics: "active"
     };
   };
 

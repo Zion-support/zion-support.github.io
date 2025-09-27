@@ -1,171 +1,171 @@
-import Reac, t, {useState }  from 'react';
-import {useTaskManag, e, r } from '../hooks/useTaskManag, e, r';
+import Reac, t, {useState }  from 'react";
+import { useTaskManager   } from "../hooks/useTaskManager";
 
-interface, TaskManagerProp, s {isOp, e, n: boole, a, n;
-  onClo, s, e: () => vo, i, d};
-export default function TaskManag, e, r({isOpenonClo, s, e }: TaskManagerPro, p, s): J, S, X.Eleme, n, t {con, s, t [newTaskTextsetNewTaskTe, x, t] = useState(');
-  con, s, t {
-    tas, k, s, filter, stat, s, addTask, toggleTas, k, deleteTask, setFilte, r
+interface, TaskManagerProp, s {isOpen: boole, a, n;
+  onClose: () => void};
+export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Element {const [newTaskTextsetNewTaskText] = useState(");
+  const {
+    tas, k, s, filter, stat, s, addTask, toggleTas, k, deleteTasksetFilter
   } = useTaskManag, e, r();
-  if (!isOp, e, n) return <></>;
+  if (!isOp, en) return <></>;
 
-  return (<d, i, v, classNa, m, e="fix, e, d, ins, e, t-0, bg-bla, c, k, bg-opaci, t, y-50, z-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, e, r, p-4">
-      <d, i, v, classNa, m, e="bg-whi, t, e, da, r, k:bg-gr, a, y-8, 0, 0, round, e, d-lg, shad, o, w-xl, w-fu, l, l, m, a, x-w-md, m, a, x-h-[80, vh] overfl, o, w-hidd, e, n">
-        <d, i, v, classNa, m, e ="p-6">
-          <d, i, v, classNa, m, e="fl, e, x, justi, f, y-betwe, e, n, ite, m, s-cent, e, r, mb-6">
-            <h2, classNa, m, e="te, x, t-2, xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 0, 0, da, r, k:te, x, t-whi, t, e" id="ta, s, k-manag, e, r">
+  return (<divclassName="fix, e, d, ins, e, t-0, bg-bla, c, k, bg-opaci, t, y-50, z-50, fl, e, x, ite, m, s-cent, e, r, justi, f, y-cent, erp-4">
+      <divclassNam, e="bg-whi, tedark:bg-gr, a, y-8, 0, 0, round, e, d-lg, shad, o, w-xl, w-fu, l, l, m, a, x-w-md, m, a, x-h-[80, vh] overflow-hidden">
+        <divclassNam, e ="p-6">
+          <divclassName="fle, x, justi, f, y-betwe, e, n, ite, m, s-cent, ermb-6">
+            <h2className="tex, t-2, xl, fo, n, t-bo, l, d, te, x, t-gr, a, y-9, 0, 0, dark:text-white" id="task-manager">
               Ta, s, k, Manag, e, r
             </h2>
-            <butt, o, n, onCli, c, k ={onClo, s, e};
-              classNa, m, e="te, x, t-gr, a, y-500, hove, r:te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-4, 0, 0, da, r, k:hov, e, r:te, x, t-gr, a, y-2, 0, 0, te, x, t-xl"
+            <buttononClic, k ={onClose};
+              classNa, m, e="te, x, t-gr, a, y-500, hover:te, x, t-gr, a, y-700, dark:te, x, t-gr, a, y-4, 0, 0, dark:hover:te, x, t-gr, a, y-2, 00text-xl"
              ar, i, a-lab, e, l="✕">              ✕
-            </butt, o, n>
-          </d, i, v>
+            </button>
+          </div>
 
-          {/* AddTaskFo, r, m */};
-            <d, i, v, classNa, m, e ="flexg, a, p-2">
-              <inputtype ="te, x, t"
+          {/* AddTaskForm */};
+            <divclassName ="flexga, p-2">
+              <inputtype ="text"
 
-          <divclassNa, m, e ="mb-6">
-            <divclassNa, m, e ="flexg, a, p-2">
-              <inputtype ="te, x, t"
+          <divclassName ="mb-6">
+            <divclassName ="flexgap-2">
+              <inputtype ="text"
 
-                val, u, e={newTaskTe, x, t};
-                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.val, u, e)};
-                onKeyPre, s, s={(e) => {
-                  if (e.k, e, y === 'Ent, e, r') {
-                    if (addTa, s, k(newTaskTe, x, t)) {
-                      setNewTaskTe, x, t(')};
+                value={newTaskText};
+                onChan, g, e={(e) => setNewTaskTe, x, t(e.targ, e, t.value)};
+                onKeyPress={(e) => {
+                  if (e.key === "Ent, e, r") {
+                    if (addTask(newTaskText)) {
+                      setNewTaskText(")};
                   };
                 }};
-                placehold, e, r="Add, a, new ta, s, k..."
-                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dar, k:bord, e, r-gr, a, y-600, rounde, d-md, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, dar, k:bg-gr, a, y-700, dar, k:te, x, t-whi, t, e"
-                ar, i, a-lab, e, l="Add, a, new ta, s, k"
+                placehold, e, r="Addanew task..."
+                classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, dark:bord, e, r-gr, a, y-600, rounded-mdfocus:outli, ne-nonefocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, dark:bg-gr, a, y-700, dark:text-white"
+                ar, i, a-lab, e, l="Addanew task"
               />
-              <button, onClic, k={(()) => {ar, i, a-lab, e, l="{
-            ar, i, a-lab, e, l="{
+              <buttononClick={(()) => {aria-lab, e, l="{
+            aria-label="{
                   if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                aria-label="Add, new, task"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {ar, i, a-lab, e, l="{
-            ar, i, a-lab, e, l="{
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+            ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {ar, i, a-lab, e, l="{
-                  if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {ar, i, a-label="{
+                  if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d"> {if (addTa, s, k(newTaskTe, x, t)) {
-                    setNewTaskTe, x, t(')};
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                Add"> {if (addTa, s, k(newTaskText)) {
+                    setNewTaskText(")};
                 }};
-                ar, i, a-lab, e, l="Add, new, task"
-                classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"              >
-                A, d, d
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
+                ar, i, a-label="Addnewtask"
+                className="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"              >
+                A, dd
+              </button>
+            </div>
+          </div>
 
-          {/* FilterButto, n, s */};
-          <div, classNam, e="flex, ga, p-2, m, b-4">
- (<butt, o, n, k, e, y ={filterTy, p, e};
-            {(['a, l, l''acti, v, e''complet, e, d'] ascon, s, t).m, a, p((filterTy, p, e) => (<butt, o, n, k, e, y ={filterTy, p, e};
-                onCli, c, k={(()) => {ar, i, a-lab, e, l="{
+          {/* FilterButtons */};
+          <divclassName="flexgap-2mb-4">
+ (<button, k, ey ={filterType};
+            {(["all""active""completed"] ascon, s, t).m, a, p((filterTy, p, e) => (<buttonke, y ={filterType};
+                onCli, c, k={(()) => {ar, i, a-label="{
 
-                ar, i, a-lab, e, l={`Filter, b, y ${filterTy, p, e}` };
-                classNa, m, e={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterTy, p, e?'bg-bl, u, e-600te, x, t-whi, t, e':'bg-gr, a, y-200da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-300hov, e, r:bg-gr, a, y-300da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'}`}              >
-                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.sl, i, c(1)}"> setFilt, e, r(filterTy, p, e)};
-                ar, i, a-lab, e, l={`Filter, b, y ${filterTy, p, e}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterTy, p, e?'bg-bl, u, e-600te, x, t-whi, t, e':'bg-gr, a, y-200da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-300hov, e, r:bg-gr, a, y-300da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'}`}              >
-                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.sl, i, c(1)}"> {ar, i, a-lab, e, l="setFilt, e, r(filterTy, p, e)};
-                ar, i, a-lab, e, l={`Filter, b, y ${filterTy, p, e}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterTy, p, e?'bg-bl, u, e-600te, x, t-whi, t, e':'bg-gr, a, y-200da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-300hov, e, r:bg-gr, a, y-300da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'}`}              >
-                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.sl, i, c(1)}"> setFilt, e, r(filterTy, p, e)};
-                ar, i, a-lab, e, l={`Filter, b, y ${filterTy, p, e}` };
-                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterTy, p, e?'bg-bl, u, e-600te, x, t-whi, t, e':'bg-gr, a, y-200da, r, k:bg-gr, a, y-700te, x, t-gr, a, y-700da, r, k:te, x, t-gr, a, y-300hov, e, r:bg-gr, a, y-300da, r, k:hov, e, r:bg-gr, a, y-6, 0, 0'}`}              >
-                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.sl, i, c(1)};
-              </butt, o, n>
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                classNa, m, e={`px-3, p, y-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterType?"bg-bl, u, e-600te, x, t-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, x, t-gr, a, y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> setFilt, e, r(filterTy, p, e)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl, u, e-600te, x, t-whi, t, e':"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, x, t-gr, a, y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> {aria-label="setFilt, e, r(filterType)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filt, e, r===filterTy, p, e?"bg-bl, u, e-600text-white":"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, x, t-gr, a, y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)}"> setFilt, e, r(filterTy, p, e)};
+                ar, i, a-lab, e, l={`Filter, b, y ${filterType}` };
+                classNa, m, e={`px-3, py-1round, e, d-mdte, x, t-smtransiti, o, n-colo, r, s ${filter===filterType?"bg-bl, u, e-600te, x, t-whi, t, e':"bg-gr, a, y-200dark:bg-gr, a, y-700te, x, t-gr, a, y-700dark:te, x, t-gr, a, y-300hover:bg-gray-300dark:hover:bg-gray-600"}`}              >
+                {filterTy, p, e.char, A, t(0).toUpperC, a, s() + filterTy, p, e.slic(1)};
+              </button>
             ))};
-          </d, i, v>
+          </div>
 
-          {/* Ta, s, k, Li, s, t */};
-          <div, classNam, e="m, a, x-h-64, overflo, w-y-au, t, o">
-            {tas, k, s.leng, t, h === 0 ? (<p};
-            classNa, m, e="te, x, t-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gr, a, y-400, tex, t-center, p, y-4">
+          {/* Ta, s, k, List */};
+          <divclassName="max-h-64overflow-y-auto">
+            {tas, k, s.length === 0 ? (<p};
+            className="text-gr, a, y-5, 0, 0 : da, r, k :te, x, t-gr, a, y-400text-centerpy-4">
                 Notasksfou, n, d
               </p>
-            ) : (<d, i, v};
-            classNa, m, e="spa, c, e-y-2">
- (<divk, e, y ={ta, s, k.id};
-                {tas, k, s.m, a, p((ta, s, k) => (<divk, e, y ={ta, s, k.id};
-                    classNa, m, e={`flexite, m, s-centerg, a, p-3p-3round, e, d-mdbord, e, r ${ta, s, k.complet, e, d?'bg-gr, a, y-100da, r, k:bg-gr, a, y-700bord, e, r-gr, a, y-200da, r, k:bord, e, r-gr, a, y-6, 0, 0':'bg-whiteda, r, k:bg-gr, a, y-800bord, e, r-gr, a, y-200da, r, k:bord, e, r-gr, a, y-6, 0, 0'}`};
+            ) : (<div};
+            className="space-y-2">
+ (<divkey ={task.id};
+                {tas, k, s.m, a, p((ta, sk) => (<divkey ={task.id};
+                    classNam, e={`flexite, m, s-centerg, a, p-3p-3round, e, d-mdbord, e, r ${ta, s, k.completed?"bg-gr, a, y-100dark:bg-gr, a, y-700bord, e, r-gr, a, y-200dark:bord, e, r-gr, a, y-600":"bg-whitedark:bg-gr, a, y-800bord, e, r-gr, a, y-200dark:border-gray-600"}`};
                   >
-                    <inp, u, t, type ="checkb, o, x"
-                      id={`ta, s, k-${ta, s, k.id}` };
-                      check, e, d={ta, s, k.complet, e, d};
-                      onChan, g, e={() => toggleTa, s, k(ta, s, k.id)};
-                      classNa, m, e="w-4 h-4, tex, t-bl, u, e-600, rounded, focus:ri, n, g-bl, u, e-5, 0, 0"
-                      ar, i, a-lab, e, l={`Markta, s, k "${ta, s, k.te, x, t}" as ${ta, s, k.complet, e, d?'incomple, t, e':'comple, t, e'}` };
+                    <inputtype ="checkbox"
+                      id={`tas, k-${task.id}` };
+                      check, e, d={ta, s, k.completed};
+                      onChan, g, e={() => toggleTa, s, k(task.id)};
+                      className="w-4 h-4, tex, t-bl, u, e-600, roundedfocus:ri, n, g-bl, u, e-500"
+                      ar, i, a-lab, e, l={`Marktask "${task.text}" as ${task.completed?"incomplete":"complete"}` };
                     />
-                    <span, classNam, e={`fl, e, x-1 ${ta, s, k.complet, e, d?'li, n, e-throughte, x, t-gr, a, y-500da, r, k:te, x, t-gr, a, y-4, 0, 0':'te, x, t-gr, a, y-900da, r, k:te, x, t-whi, t, e'}`}                    >
-                      {ta, s, k.te.x, t};
-                    </sp, a, n>
-                    <button, onClic, k={(()) => {ar, i, a-lab, e, l="{
+                    <spanclassName={`flex-1 ${ta, s, k.completed?"li, n, e-throughte, x, t-gr, a, y-500dark:te, x, t-gr, a, y-400":"te, x, t-gray-900dark:text-white"}`}                    >
+                      {ta, sk.te.xt};
+                    </span>
+                    <buttononClick={(()) => {ar, i, a-lab, e, l="{
 
-                      ar, i, a-lab, e, l="Dele, t, e, ta, s, k"
-                      classNa, m, e="te, x, t-r, e, d-5, 0, 0, hov, e, r:te, x, t-r, e, d-7, 0, 0, da, r, k:te, x, t-r, e, d-4, 0, 0, da, r, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      aria-label="Dele, t, e, ta, s, k"
+                      className="te, x, t-r, e, d-5, 0, 0, hover:te, x, t-r, e, d-7, 0, 0, dark:te, x, t-r, e, d-4, 0, 0, dark:hover:te, x, t-r, e, d-300"                    >
+                      🗑️"> deleteTa, s, k(task.id)};
+                      aria-label="Delete, tas, k"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
+                      🗑️"> {aria-label="deleteTa, s, k(task.id)};
+                      ar, i, a-lab, e, l="Deletetask"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
                       🗑️"> deleteTa, s, k(ta, s, k.id)};
-                      ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
-                      🗑️"> {ar, i, a-lab, e, l="deleteTa, s, k(ta, s, k.id)};
-                      ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
-                      🗑️"> deleteTa, s, k(ta, s, k.id)};
-                      ar, i, a-lab, e, l="Delete, tas, k"
-                      classNa, m, e="te, x, t-r, e, d-500, hove, r:te, x, t-r, e, d-700, dar, k:te, x, t-r, e, d-400, dar, k:hov, e, r:te, x, t-r, e, d-3, 0, 0"                    >
+                      aria-label="Delete, tas, k"
+                      className="te, x, t-r, e, d-500, hover:te, x, t-r, e, d-700, dark:te, x, t-r, e, d-400, dark:hover:te, x, t-r, e, d-300"                    >
                       🗑️
-                    </butt, o, n>
-                  </d, i, v>
+                    </button>
+                  </div>
                 ))};
-              </d, i, v>
+              </div>
             )};
           </d, i, v>
 
-          {/* TaskSta, t, s */};
-          <div, classNam, e="mt-4, p, t-4, borde, r-t, borde, r-gr, a, y-200, dar, k:bord, e, r-gr, a, y-6, 0, 0">
-            <div, classNam, e="flex, justif, y-between, tex, t-sm, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-4, 0, 0">
-              <sp, a, n>Tot, a, l: {sta, t, s.tot, a, l}</sp, a, n>
-              <sp, a, n>Acti, v, e: {sta, t, s.acti, v, e}</sp, a, n>
-              <sp, a, n>Complet, e, d: {sta, t, s.complet, e, d}</sp, a, n>
-            </d, i, v>
-            <div, classNam, e="mt-2">
-              <div, classNam, e="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-500, dar, k:te, x, t-gr, a, y-5, 0, 0">
-                <sp, a, n>Completion, Rat, e</sp, a, n>
-                <sp, a, n>{sta, t, s.completionRa, t, e}%</sp, a, n>
-              </d, i, v>
-              <div, classNam, e="w-full, b, g-gr, a, y-200, dar, k:bg-gr, a, y-700, rounde, d-ful, l, h-2, m, t-1">
-                <div, classNam, e="bg-bl, u, e-60, 0, h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0"
-                  sty, l, e={{ wid, t, h: `${sta, t, s.completionRa, t, e}%` }}                ></d, i, v>
-              </d, i, v>
-            </d, i, v>
+          {/* TaskStats */};
+          <divclassName="mt-4pt-4, borde, r-t, borde, r-gr, a, y-200, dark:bord, e, r-gr, a, y-600">
+            <divclassName="flexjustify-between, tex, t-sm, tex, t-gr, a, y-600, dark:te, x, t-gray-400">
+              <span>Total: {stats.total}</span>
+              <span>Active: {sta, t, s.active}</span>
+              <span>Completed: {sta, t, s.completed}</span>
+            </div>
+            <divclassName="mt-2">
+              <divclassName="flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-500, dark:te, x, t-gr, a, y-500">
+                <span>CompletionRate</span>
+                <sp, a, n>{sta, t, s.completionRate}%</span>
+              </div>
+              <divclassName="w-fullbg-gr, a, y-200, dark:bg-gr, a, y-700, rounde, d-ful, l, h-2mt-1">
+                <divclassName="bg-blue-60, 0, h-2, rounde, d-full, transitio, n-allduration-300"
+                  sty, l, e={{ width: `${sta, t, s.completionRate}%` }}                ></div>
+              </div>
+            </div>
           </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   )};

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect  } from "react";
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
@@ -19,9 +19,7 @@ export default function AccessibilityAuditor() {
     images.forEach((img: HTMLImageElement) => {
       if (!img.alt) {
         issues.push({
-          type: 'error',
-          message: 'Image missing alt attribute',
-          element: img 
+          type: 'error'message: 'Image missing alt attribute'element: img 
           rule: 'alt-text'
         })}
     });
@@ -36,9 +34,7 @@ export default function AccessibilityAuditor() {
       
       if (!label && !ariaLabel && !ariaLabelledBy) {
         issues.push({
-          type: 'error',
-          message: 'Form input missing label',
-          element: input 
+          type: 'error'message: 'Form input missing label'element: input 
           rule: 'label'
         })}
     });
@@ -50,26 +46,22 @@ export default function AccessibilityAuditor() {
       const currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning',
-          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
-          element: heading 
+          type: 'warning'message: `Heading level ${currentLevel} follows heading level ${previousLevel}`element: heading 
           rule: 'heading-order'
         })}
       previousLevel = currentLevel});
 
     // Check for proper ARIA attributes
     const elementsWithRole = document.querySelectorAll('[role]');
-    elementsWithRole.forEach((element: Element) => {
-      const role = element.getAttribute('role');
+    elementsWithRole.forEach((element: Element) => {const role = element.getAttribute('role');
       const ariaExpanded = element.getAttribute('aria-expanded');
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-      if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
+      if (ariaExpanded && !['button''menuitem''tab'].includes(role || '')) {
         issues.push({
           type: 'warning',
-          message: 'aria-expanded used without appropriate role',
-          element: element as HTMLElement 
+          message: 'aria-expanded used without appropriate role'element: element as HTMLElement 
           rule: 'aria-valid-attr'
         })}
     });

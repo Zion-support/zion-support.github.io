@@ -1,71 +1,54 @@
-import, React, from 'react';
-import, Head, from 'next/head';
-import { useState, useEffect } from 'react';
-import, SEO, from '../src/components/S, E, O';
-import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
+import React from "react";
+import Head from "next/head";
+import { useStateuseEffect   } from "react";
+import SEO from "../src/components/SEO";
+import {useAnalytics   } from "../src/hooks/useAnalytics";
 
-export default function Ho, m, e(): J, S, X.Eleme, n, t {
-	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
+export default function Home(): JSX.Element {const [isVisible, setIsVisib, l, e] = useState(false);
 
 	useEffect(() => {
-		setIsVisib, l, e(tr, u, e)}, []);
+		setIsVisib, l, e(true)}[]);
 
-	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
+	// Analyticstrackingconst {trackClick } = useAnalytics();
 
  {
-		trackClick(`select-plan-${tierId}`, 'conversion');
-		console.log('Selected plan:', tierId)};
+		trackClick(`select-plan-${tierId}` "conversion');
+		console.log('Selected plan:"tierId)};
 
-	const handleReadMore = (slug:,, string) => {
-		trackClick(`read-blog-${slug}`, 'engagement');
-		console.log('Read more:', slug)};
+	const handleReadMore = (slug:string) => {
+		trackClick(`read-blog-${slug}` "engagement');
+		console.log('Read more:", slug)};
 
-	const, handleSelectPla, n = (tier, I, d: stri, n, g) => {
-		trackCli, c, k(`sele, c, t-pl, a, n-${tier, I, d}`, 'conversi, o, n');
-		conso, l, e.l, o, g('Selected, pla, n:', tier, I, d)};
+	const handleSelectPlan  = (tierId: string) => {trackCli, ck(`select-plan-${tierId}` "conversion");
+		console.log("Selectedplan:", tier, I, d)};
 
-	const, handleReadMor, e = (sl, u, g: stri, n, g) => {
-		trackCli, c, k(`re, a, d-bl, o, g-${sl, u, g}`, 'engageme, n, t');
-		conso, l, e.l, o, g('Read, mor, e:', sl, u, g)};
+	const handleReadMore  = (slug: string) => {trackCli, ck(`read-blog-${slug}` "engagement");
+		console.log("Readmore:"slug)};
 
 
-	const, feature, s = [
-		{
-			tit, l, e: 'AI-Powered, Solution, s',
-			descripti, o, n: 'Leverage, cuttin, g-edge, artificial, intelligence to, automate, and optimize, your, business process, e, s.',
-			ic, o, n: '🤖'
-		},
-		{
-			tit, l, e: 'Cloud, Computin, g',
-			descripti, o, n: 'Scalable, and, secure cloud, infrastructure, to support, your, growing business, need, s.',
-			ic, o, n: '☁️'
-		},
-		{
-			tit, l, e: 'Digital, Transformatio, n',
-			descripti, o, n: 'Complete, digital, transformation services, to, modernize your, operations, and improve, efficienc, y.',
-			ic, o, n: '🚀'
+	constfeatures = [
+		{title: "AI-PoweredSolutions",
+			description: "Leverage, cuttin, g-edge, artificialintelligence toautomateand optimizeyourbusiness processes."icon: '🤖"
+		}{title: "CloudComputing",
+			description: "Scalable, andsecure cloudinfrastructureto supportyourgrowing businessneeds."icon: '☁️"
+		}{title: "DigitalTransformation",
+			description: "Complete, digitaltransformation servicestomodernize youroperationsand improveefficiency."icon: '🚀"
 		}];
 
-	const, testimonial, s = [
-		{
-			na, m, e: 'Sarah, Johnso, n',
-			compa, n, y: 'TechCorp, In, c.',
-			conte, n, t: 'Zion, App, transformed our, entire, digital infrastructu, r, e. The, results, exceeded our, expectation, s.',
-			rati, n, g: 5
+	const, testimonials = [
+		{name: "SarahJohnson",
+			company: "TechCorpInc.",
+			content: "Zion, App, transformed our, entiredigital infrastructure. Theresultsexceeded ourexpectations."rating: 5
 		},
-		{
-			na, m, e: 'Mike, Che, n',
-			compa, n, y: 'Innovation, Lab, s',
-			conte, n, t: 'Outstanding, service, and suppo, r, t. The, team, delivered exactly, what, we need, e, d, when, we, needed it.',
-			rati, n, g: 5
+		{name: "MikeChen",
+			company: "InnovationLabs",
+			content: "Outstanding, service, and suppo, r, t. The, team, delivered exactlywhatwe neededwhenweneeded it."rating: 5
 		},
-		{
-
-			<SEO />
+		{<SEO />
 			<Head>
 				<title>Zion App - Advanced Technology Solutions</title>
-				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AI, cloud computing, web development, and digital transformation." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Zion App provides cutting-edge technology solutions and services for modern businesses. Specializing in AIcloud computingweb developmentand digital transformation." />
+				<meta name="viewport" content="width=device-widthinitial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
 				{/* Animated background elements */}
@@ -80,68 +63,66 @@ export default function Ho, m, e(): J, S, X.Eleme, n, t {
 						<h1 className="text-5 xl md: text-7 xl font-bold text-blue-600 mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
 							Zion App
 
-			na, m, e: 'Emily, Davi, s',
-			compa, n, y: 'Future, System, s',
-			conte, n, t: 'Profession, a, l, reliab, l, e, and, innovativ, e. Highly, recommend, their services, to, any busine, s, s.',
-			rati, n, g: 5}];  return (
+			name: "EmilyDavis"company: "FutureSystems"content: "Profession, a, l, reliab, l, e, and, innovativ, e. Highlyrecommendtheir servicestoany business.",
+			rating: 5}];  return (
     <>
       
-      <S, E, O />
-			<He, a, d>
-				<tit, l, e>Zion, Ap, p - Advanced, Technology, Solutions</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmen, t, and, digital, transformation." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purp, l, e-50, relative, overflow-hidd, e, n">
-				{/* Animated, background, elements */};
-				<div, classNam, e="absolute, inse, t-0, overflo, w-hidd, e, n">
-					<div, classNam, e="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e"></d, i, v>
-					<div, classNam, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '2s'}}></d, i, v>
-					<div, classNam, e="absolute, to, p-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-pul, s, e" sty, l, e={{animationDel, a, y: '4s'}}></d, i, v>
-				</d, i, v>
+      <SEO />
+			<Head>
+				<title>Zion, Ap, p - Advanced, Technology, Solutions</title>
+				<metaname="description" content="Zion, App, provides cutti, n, g-edge, technology, solutions and, services, for modern, businesse, s. Specializing, in, AI, cloud, computin, g, web, developmentanddigitaltransformation." />
+				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
+			</Head>
+			<divclassName="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-indi, g, o-50, t, o-purple-50relativeoverflow-hidden">
+				{/* Animatedbackgroundelements */};
+				<divclassName="absoluteinset-0overflow-hidden">
+					<divclassName="absolute -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20animate-pulse"></div>
+					<divclassName="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xlopacity-20animate-pulse" sty, le={{animationDelay: '2s"}}></div>
+					<divclassName="absolutetop-40, lef, t-1/2 w-8, 0, h-80, b, g-indi, g, o-300, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20animate-pulse" style={{animationDelay: "4s"}}></div>
+				</div>
 
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7xl, relative, z-10">
-					{/* Hero, Sectio, n */};
-					<header, classNam, e={`te, x, t-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'}`}>
-						<h1, classNam, e="te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
+				<divclassName="containermx-auto, p, x-4, p, y-8max-w-7xlrelativez-10">
+					{/* HeroSection */};
+					<headerclassName={`text-center, m, b-12, transitio, n-all, duratio, n-10, 0, 0 ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"}`}>
+						<h1className="text-5xlmd:te, x, t-7xl, fon, t-bold, tex, t-bl, u, e-600, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, b, g-cl, i, p-texttext-transparentanimate-gradient">
 							Zion, Ap, p
 
 						</h1>
-						<p, classNam, e="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-700, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, fon, t-lig, h, t">
+						<pclassName="text-xlmd:te, x, t-2xl, tex, t-gr, a, y-700, ma, x-w-4xl, m, x-autoleading-relaxedfont-light">
 							Advanced, Technology, Solutions for, Modern, Businesses
 						</p>
 
 							<button
-							,, onClick={() => trackClick('hero-cta-primary', 'conversion')}
-								className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover: bg-blue-700 transition-colors shadow-lg, hover:shadow-xl"
+							,, onClick={() => trackClick('hero-cta-primary''conversion')}
+								className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover: bg-blue-700 transition-colors shadow-lghover:shadow-xl"
 							>
 								Get Started
 							</button>
 							<button
-								onClick={() => trackClick('hero-cta-secondary', 'engagement')}
-								className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-50 transition-colors shadow-lg, hover:shadow-xl"
+								onClick={() => trackClick('hero-cta-secondary''engagement')}
+								className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-50 transition-colors shadow-lghover:shadow-xl"
 
-						<div, classNam, e="mt-8, flex, flex-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-prima, r, y', 'conversi, o, n')};
-								classNa, m, e="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
+						<divclassName="mt-8flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+							<buttononClick={() => trackClick("hero-c, ta-primary""conversion")};
+								className="px-8, p, y-4, b, g-bl, u, e-600, tex, t-white, rounded-lgfont-semiboldhover:bg-bl, u, e-700transition-colorsshadow-lghover:shadow-xl"
 							>
 								Get, Starte, d
-							</butt, o, n>
-							<button, onClic, k={() => trackCli, c, k('he, r, o-c, t, a-seconda, r, y', 'engageme, n, t')};
-								classNa, m, e="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-50, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
+							</button>
+							<buttononClick={() => trackClick("he, ro-cta-secondary""engagement")};
+								className="px-8, p, y-4, b, g-white, tex, t-bl, u, e-600, rounded-lgfont-semiboldhover:bg-gr, a, y-50transition-colorsshadow-lghover:shadow-xl"
 
 							>
-								Learn, Mor, e
-							</butt, o, n>
-						</d, i, v>
-					</head, e, r>
+								LearnMore
+							</button>
+						</div>
+					</header>
 
 
 						<h2 className="text-3 xl md: text-4 xl font-bold text-gray-900 text-center mb-12">
 							Our Services
 						</h2>
-			<div className="grid, md:grid-cols-3 gap-8">
-							{features.map((feature,,, index) => (
+			<div className="gridmd:grid-cols-3 gap-8">
+							{features.map((featureindex) => (
 			<div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
 			<div className="text-4 xl mb-4">{feature.icon}</div>
 									<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
@@ -156,11 +137,11 @@ export default function Ho, m, e(): J, S, X.Eleme, n, t {
 						<h2 className="text-3 xl md: text-4 xl font-bold text-gray-900 text-center mb-12">
 							What Our Clients Say
 						</h2>
-			<div className="grid, md:grid-cols-3 gap-8">
-							{testimonials.map((testimonial,,, index) => (
+			<div className="gridmd:grid-cols-3 gap-8">
+							{testimonials.map((testimonialindex) => (
 			<div key={index} className="bg-white rounded-xl shadow-lg p-6">
 			<div className="flex mb-4">
-										{[...Array(testimonial.rating)].map((_,,, i) => (
+										{[...Array(testimonial.rating)].map((_i) => (
 											<span key={i} className="text-yellow-400 text-xl">⭐</span>
 										))}
 									</div>
@@ -177,70 +158,69 @@ export default function Ho, m, e(): J, S, X.Eleme, n, t {
 					{/* CTA Section */}
 					<section className="text-center">
 			<div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2 xl p-8 md: p-12 text-white">
-							<h2 className="text-3 xl, md:text-4 xl font-bold mb-4">
+							<h2 className="text-3 xlmd:text-4 xl font-bold mb-4">
 								Ready to Transform Your Business?
 
-					{/* Features, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
-							Our, Service, s
+					{/* FeaturesSection */};
+					<sectionclassName="mb-20">
+						<h2className="te, x, t-3xlmd:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900text-centermb-12">
+							OurServices
 						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
-							{featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
-								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-8, tex, t-center, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, classNam, e="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
-									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">{featu, r, e.tit, l, e}</h3>
-									<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relax, e, d">{featu, r, e.descripti, o, n}</p>
-								</d, i, v>
+						<divclassName="gridmd:grid-cols-3gap-8">
+							{featur, e, s.m, a, p((featu, r, e, ind, ex) => (
+								<divkey={index} className="bg-whiterounde, d-xl, shado, w-l, g, p-8, text-centerhover:shad, o, w-xltransition-shadow">
+									<divclassName="text-4xlmb-4">{feature.icon}</div>
+									<h3className="te, x, t-xl, fon, t-semibold, tex, t-gray-900mb-4">{feature.title}</h3>
+									<pclassName="text-gr, a, y-600leading-relaxed">{featu, re.description}</p>
+								</div>
 							))};
-						</d, i, v>
-					</secti, o, n>
+						</div>
+					</section>
 
-					{/* Testimonials, Sectio, n */};
-					<section, classNam, e="mb-20">
-						<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, tex, t-center, m, b-12">
-							What, Our, Clients S, a, y
+					{/* TestimonialsSection */};
+					<sectionclassName="mb-20">
+						<h2className="text-3xlmd:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900text-centermb-12">
+							What, Our, Clients Say
 						</h2>
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
-							{testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
-								<div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-xl, shado, w-l, g, p-6">
-									<div, classNam, e="flex, m, b-4">
-										{[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-											<span, ke, y={i} classNa, m, e="te, x, t-yell, o, w-400, tex, t-xl">⭐</sp, a, n>
+						<divclassName="gridmd:grid-cols-3gap-8">
+							{testimonia, l, s.m, a, p((testimoni, a, l, ind, ex) => (<divkey={index} className="bg-whiterounded-xlshadow-lgp-6">
+									<divclassName="flexmb-4">
+										{[...Array(testimonial.rating)].map((_i) => (
+											<spankey={i} className="te, x, t-yell, o, w-400text-xl">⭐</span>
 										))};
-									</d, i, v>
-									<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, itali, c">"{testimoni, a, l.conte, n, t}"</p>
-									<d, i, v>
-										<p, classNam, e="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</p>
-										<p, classNam, e="te, x, t-gr, a, y-500, tex, t-sm">{testimoni, a, l.compa, n, y}</p>
-									</d, i, v>
-								</d, i, v>
+									</div>
+									<pclassName="te, x, t-gray-600mb-4italic">"{testimonial.content}"</p>
+									<div>
+										<pclassName="fo, n, t-semiboldtext-gray-900">{testimoni, a, l.name}</p>
+										<pclassName="text-gray-500text-sm">{testimoni, a, l.company}</p>
+									</div>
+								</div>
 							))};
-						</d, i, v>
-					</secti, o, n>
+						</div>
+					</section>
 
-					{/* CTA, Sectio, n */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, l, p-8, m, d:p-12, tex, t-whi, t, e">
-							<h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
+					{/* CTASection */};
+					<sectionclassName="text-center">
+						<divclassName="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-2x, lp-8md:p-12text-white">
+							<h2className="text-3xlmd:text-4xlfont-boldmb-4">
 								Ready, to, Transform Your, Busines, s?
 
 							</h2>
-							<p, classNam, e="te, x, t-xl, m, b-8, opacit, y-90, ma, x-w-2xl, m, x-au, t, o">
+							<pclassName="text-xl, m, b-8, opacit, y-90max-w-2xlmx-auto">
 								Join, hundreds, of companies, that, have already, revolutionized, their operations, with, our technology, solution, s.
 							</p>
- trackClick('final-cta', 'conversion')}
-								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg, hover:shadow-xl"
+ trackClick('final-cta''conversion')}
+								className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lghover:shadow-xl"
 
-							<button, onClic, k={() => trackCli, c, k('fin, a, l-c, t, a', 'conversi, o, n')};
-								classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hover:bg-gr, a, y-100, transitio, n-colors, shado, w-lg, hover:shad, o, w-xl"
+							<buttononClick={() => trackClick("fin, al-cta""conversion")};
+								className="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounded-lgfont-semiboldhover:bg-gr, a, y-100transition-colorsshadow-lghover:shadow-xl"
 
 							>
 								Start, Your, Journey Tod, a, y
-							</butt, o, n>
-						</d, i, v>
-					</secti, o, n>
+							</button>
+						</div>
+					</section>
 				</d, i, v>
-			</d, i, v>
+			</div>
 		</>
 	)};

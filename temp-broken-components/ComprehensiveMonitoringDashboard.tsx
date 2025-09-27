@@ -1,7 +1,6 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { motion  AnimatePresence } from 'framer-motion';
-import { 
-  Activity
+import { motion  AnimatePresence  } from "framer-motion";
+import { Activity
   AlertTriangle
   CheckCircle
   Clock
@@ -14,7 +13,7 @@ import {
   BarChart3 
   Cpu 
   HardDriveWifiEyeSearchX
-} from 'lucide-react';
+ } from "lucide-react";
 
 interface CardProps {
   children: React.ReactNode;
@@ -147,8 +146,7 @@ export default function ComprehensiveMonitoringDashboard({
   const collectPerformanceMetrics = async () => {
     if (typeof window === 'undefined') {
       return {
-        loadTime: 0,
-        firstContentfulPaint: 0largestContentfulPaint: 0cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
+        loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
       }}
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -156,50 +154,39 @@ export default function ComprehensiveMonitoringDashboard({
     
     return {
       loadTime: navigation.loadEventEnd - navigation.fetchStart 
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0// Will be updated by Web Vitals
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
     }};
 
   const collectResourceMetrics = async () => {
-    if (typeof window === 'undefined') {
+    if (typeof window === 'undefined") {
       return {
-        memoryUsage: 0,
-        cpuUsage: 0,
-        networkLatency: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
+        memoryUsage: 0cpuUsage: 0networkLatency: 0bundleSize: 0cacheHitRate: 0
       }}
 
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
 
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
+    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
       cpuUsage: 0// Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0// Would need to calculate from loaded resources
+      networkLatency: connection ? connection.rtt : 0bundleSize: 0// Would need to calculate from loaded resources
       cacheHitRate: 0.85 // Mock value
     }};
 
-  const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementationthis would come from analytics
+  const collectUserExperienceMetrics = async () => {// Mock data - in real implementationthis would come from analytics
     return {
       bounceRate: 0.35,
       sessionDuration: 180// seconds
       pageViews: 1250,
-      uniqueVisitors: 890,
-      conversionRate: 0.12
+      uniqueVisitors: 890conversionRate: 0.12
     }};
 
   const collectErrorMetrics = async () => {
     // Mock data - in real implementationthis would come from error tracking
     return {
-      total: 23,
-      critical: 2,
-      resolved: 18unresolved: 5
+      total: 23critical: 2resolved: 18unresolved: 5
     }};
 
   const collectSecurityMetrics = async () => {
@@ -211,7 +198,7 @@ export default function ComprehensiveMonitoringDashboard({
   const checkForAlerts = (metrics: SystemMetrics) => {
     const newAlerts: Array<{
       id: string;
-      type: 'warning' | 'error' | 'info' | 'success';
+      type: "warning' | 'error' | 'info' | 'success';
       message: string;
       timestamp: Date;
       resolved: boolean}> = [];
@@ -219,32 +206,24 @@ export default function ComprehensiveMonitoringDashboard({
     // Performance alerts
     if (metrics.performance.loadTime > 3000) {
       newAlerts.push({
-        id: 'slow-load',
-        type: 'warning',
-        message: 'Page load time is above 3 seconds'timestamp: new Date()resolved: false
+        id: 'slow-load'type: 'warning'message: 'Page load time is above 3 seconds'timestamp: new Date()resolved: false
       })}
 
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {
-      newAlerts.push({
+    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({
         id: 'layout-shift',
-        type: 'warning',
-        message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
+        type: 'warning'message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
       })}
 
     // Error alerts
-    if (metrics.errors.critical > 0) {
-      newAlerts.push({
+    if (metrics.errors.critical > 0) {newAlerts.push({
         id: 'critical-errors',
-        type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
+        type: 'error'message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
       })}
 
     // Security alerts
-    if (metrics.security.vulnerabilities > 0) {
-      newAlerts.push({
+    if (metrics.security.vulnerabilities > 0) {newAlerts.push({
         id: 'security-vulnerabilities',
-        type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
+        type: 'error'message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
       })}
 
     setAlerts(prev => [...prev...newAlerts])};

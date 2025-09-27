@@ -1,22 +1,22 @@
-import {useEffect } from 'react';
+import { useEffect   } from "react";
 
-interface, WebVitalsMetri, c {na, m, e: stri, n, g;
-  val, u, e: numb, e, r;
-  del, t, a: numb, e, r;
+interface, WebVitalsMetri, c {name: stri, n, g;
+  value: numb, e, r;
+  delta: numb, e, r;
   id: stri, n, g;
-  navigationTy, p, e: stri, n, g};
-export, function, reportWebVitals(metr, i, c: WebVitalsMetr, i, c) {// Se, n, d, to, analyticsservice, if (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g' in, wind, o, w) {
-    (windowasa, n, y).gt, a, g('eve, n, t'metr, i, c.na, m, e{
-      event_catego, r, y: 'W, e, b, Vita, l, s'event_lab, e, l: metr, i, c.idval, u, e: Ma, t, h.rou, n, d(metr, i, c.na, m, e === 'C, L, S' ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
-      non_interacti, o, n: tr, u, e
+  navigationType: string};
+export, function, reportWebVitals(metric: WebVitalsMetr, i, c) {// Se, n, d, toanalyticsserviceif (typeofwindow !== "undefin, e, d' && "gtag" in, wind, o, w) {
+    (windowasa, n, y).gtag("event"metr, i, c.name{
+      event_category: "W, e, b, Vitals"event_label: metr, i, c.idvalue: Ma, t, h.rou, n, d(metr, i, c.name === "CLS" ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
+      non_interaction: true
     })};
-  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('WebVita, l, s:'metr, i, c)};
+  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("WebVitals:"metric)};
 };
 export, function, WebVitals() {useEffect(() => {
-    // Loadw, e, b-vitalslibrary, dynamicallyimpor, t('w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTT, F, B }) => {getC, L, S(reportWebVita, l, s);
+    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTTFB }) => {getC, L, S(reportWebVita, l, s);
       getF, I, D(reportWebVita, l, s);
       getF, C, P(reportWebVita, l, s);
       getL, C, P(reportWebVita, l, s);
-      getTT, F, B(reportWebVita, l, s)})}, []);
+      getTT, F, B(reportWebVitals)})}, []);
 
   return, nul, l};

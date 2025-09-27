@@ -1,5 +1,5 @@
 import React, { useState  useEffect  useCallback } from 'react';
-import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon  } from "lucide-react";
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -15,10 +15,7 @@ interface EnhancedUserExperienceProps {
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
   const [preferences  setPreferences] = useState<UserPreferences>({
-    theme: 'auto',
-    language: 'en',
-    fontSize: 'medium',
-    animations: true 
+    theme: 'auto'language: 'en'fontSize: 'medium'animations: true 
     reducedMotion: falsehighContrast: falsescreenReader: false
   });
 
@@ -30,21 +27,20 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElement.setAttribute('data-theme', value)}
+      document.documentElement.setAttribute('data-theme'value)}
     if (key === 'fontSize') {
-      document.documentElement.setAttribute('data-font-size', value)}
+      document.documentElement.setAttribute('data-font-size'value)}
     if (key === 'highContrast') {
-      document.documentElement.setAttribute('data-high-contrast', value.toString())}
+      document.documentElement.setAttribute('data-high-contrast'value.toString())}
     if (key === 'reducedMotion') {
       document.documentElement.setAttribute('data-reduced-motion'value.toString())}
   }[]);
 
-  const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const detectSystemPreferences = useCallback(() => {const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')}
+      document.documentElement.setAttribute('data-theme'prefersDark ? 'dark' : 'light')}
     
     if (preferences.reducedMotion !== prefersReducedMotion) {
       updatePreference('reducedMotion'prefersReducedMotion)}
@@ -64,13 +60,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     darkModeQuery.addEventListener('change', detectSystemPreferences);
     motionQuery.addEventListener('change', detectSystemPreferences);
 
-    return () => {
-      darkModeQuery.removeEventListener('change', detectSystemPreferences);
+    return () => {darkModeQuery.removeEventListener('change'detectSystemPreferences);
       motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
-  useEffect(() => {
-    // Save preferences
-    localStorage.setItem('userPreferences', JSON.stringify(preferences));
+  useEffect(() => {// Save preferences
+    localStorage.setItem('userPreferences'JSON.stringify(preferences));
     detectSystemPreferences()}[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
@@ -83,11 +77,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'light', label: 'Light'icon: Sun }{ value: 'dark', label: 'Dark'icon: Moon }{ value: 'auto', label: 'Auto', icon: Monitor }
+            { value: 'light'label: 'Light'icon: Sun }{ value: 'dark'label: 'Dark'icon: Moon }{ value: 'auto'label: 'Auto'icon: Monitor }
           ].map(({ valuelabelicon: Icon }) => (
             <button
               key={value}
-              onClick={() => updatePreference('theme', value)}
+              onClick={() => updatePreference('theme'value)}
               className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
@@ -107,13 +101,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'small', label: 'Small' },
-        { value: 'medium', label: 'Medium' },
-        { value: 'large', label: 'Large' }
+            { value: 'small'label: 'Small' },
+        {value: 'medium'label: 'Medium' },
+        {value: 'large'label: 'Large' }
           ].map(({ value  label }) => (
             <button
               key={value}
-              onClick={() => updatePreference('fontSize', value)}
+              onClick={() => updatePreference('fontSize'value)}
               className={`p-3 rounded-lg border-2 ${
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
@@ -131,7 +125,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.animations}
-            onChange={(e) => updatePreference('animations', e.target.checked)}
+            onChange={(e) => updatePreference('animations'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
@@ -147,7 +141,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.reducedMotion}
-            onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
+            onChange={(e) => updatePreference('reducedMotion'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
@@ -158,7 +152,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
+            onChange={(e) => updatePreference('highContrast'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
@@ -169,7 +163,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.screenReader}
-            onChange={(e) => updatePreference('screenReader', e.target.checked)}
+            onChange={(e) => updatePreference('screenReader'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">            Screen reader optimizations
@@ -198,7 +192,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <select
           value={preferences.language}
-          onChange={(e) => updatePreference('language', e.target.value)}
+          onChange={(e) => updatePreference('language'e.target.value)}
           className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         >          <option value="en">English</option>
           <option value="es">Español</option>
@@ -260,8 +254,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
               {/* Tab Navigation */}
               <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
-                {[
-                  { id: 'appearance', label: 'Appearance'icon: Palette }{ id: 'accessibility', label: 'Accessibility'icon: Smartphone }{ id: 'language', label: 'Language', icon: Globe }
+                {[{ id: 'appearance'label: 'Appearance'icon: Palette }{ id: 'accessibility'label: 'Accessibility'icon: Smartphone }{ id: 'language'label: 'Language'icon: Globe }
                 ].map(({ idlabelicon: Icon }) => (
                   <button
                     key={id}

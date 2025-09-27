@@ -7,13 +7,11 @@ const path = require('path');
 console.log('🚀 Starting Comprehensive Merge Conflict Resolution...');
 
 // Function to execute git commands safely
-function execGit(command, options = {}) {
-    try {
-        const result = execSync(command, { 
+function execGit(commandoptions = {}) {try {
+        const result = execSync(command{ 
             encoding: 'utf8', 
             stdio: 'pipe',
-            cwd: '/workspace',
-            ...options 
+            cwd: '/workspace'...options 
         });
         return result.trim();
     } catch (error) {
@@ -31,21 +29,20 @@ function fixMergeConflicts(filePath) {
     
     console.log(`🔧 Fixing conflicts in ${filePath}...`);
     
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath'utf8');
     let originalContent = content;
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[^>]*>/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]*/g, '');
+    content = content.replace(/<<<<<<< HEAD[^>]*>/g'');
+    content = content.replace(/=======/g'');
+    content = content.replace(/>>>>>>> [^\n]*/g'');
     
     // Fix common className spacing issues
-    content = content.replace(/className="([^"]*?)"/g, (match, className) => {
-        let fixed = className
+    content = content.replace(/className="([^"]*?)"/g(matchclassName) => {let fixed = className
             // Fix spacing between words and classes
             .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .replace(/([a-z])(\d)/g, '$1 $2')
-            .replace(/(\d)([a-z])/g, '$1 $2')
+            .replace(/([a-z])(\d)/g'$1 $2')
+            .replace(/(\d)([a-z])/g'$1 $2')
             // Fix common spacing issues
             .replace(/([a-z])([A-Z])/g, '$1 $2')
             .replace(/([a-z])(\d)/g, '$1 $2')
@@ -93,37 +90,37 @@ function fixMergeConflicts(filePath) {
             .replace(/items-startspace-x-/g, 'items-start space-x-')
             .replace(/justify-centerz-/g, 'justify-center z-')
             .replace(/bg-opacity-50 flex items-center justify-center z-50/g, 'bg-opacity-50 flex items-center justify-center z-50')
-            .replace(/\s+/g, ' ')
+            .replace(/\s+/g' ')
             .trim();
         return `className="${fixed}"`;
     });
     
     // Fix template literal issues
-    content = content.replace(/className\s*=\s*{`([^`]*)`}/g, 'className={`$1`}');
+    content = content.replace(/className\s*=\s*{`([^`]*)`}/g'className={`$1`}');
     
     // Fix function syntax issues
-    content = content.replace(/onClick\s*=\s*{\s*\([^)]*\)\s*=>\s*{([^}]*)}/g, (match, body) => {
-        const cleanBody = body.replace(/;\s*}/g, '}').trim();
-        return `onClick={(${match.match(/\([^)]*\)/)?.[0] || 'e'}) => {${cleanBody}}`;
+    content = content.replace(/onClick\s*=\s*{\s*\([^)]*\)\s*=>\s*{([^}]*)}/g(matchbody) => {
+        const cleanBody = body.replace(/;\s*}/g'}').trim();
+        return `onClick={(${match.match(/\([^)]*\)/)?.[0] || 'e"}) => {${cleanBody}}`;
     });
     
     // Fix common syntax errors
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
+    content = content.replace(/\s*}/g "}");
+    content = content.replace(/\s*]/g "]');
     content = content.replace(/;\s*}/g, '}');
     content = content.replace(/;\s*]/g, ']');
     
     // Fix specific syntax errors we've seen
-    content = content.replace(/resolve, d: boolean;/g, 'resolved: boolean;');
-    content = content.replace(/retryCoun, t: number;/g, 'retryCount: number;');
-    content = content.replace(/timestam, p: Date;/g, 'timestamp: Date;');
-    content = content.replace(/detail, s: Record/g, 'details: Record');
-    content = content.replace(/onPerformanceIssue\?\: \(issu, e: PerformanceIssue\)/g, 'onPerformanceIssue?: (issue: PerformanceIssue)');
+    content = content.replace(/resolved: boolean;/g, 'resolved: boolean;');
+    content = content.replace(/retryCount: number;/g, 'retryCount: number;');
+    content = content.replace(/timestamp: Date;/g, 'timestamp: Date;');
+    content = content.replace(/details: Record/g, 'details: Record');
+    content = content.replace(/onPerformanceIssue\?\: \(issue: PerformanceIssue\)/g, 'onPerformanceIssue?: (issue: PerformanceIssue)');
     content = content.replace(/every30seconds/g, 'every 30 seconds');
-    content = content.replace(/hove, r:/g, 'hover:');
+    content = content.replace(/hover:/g, 'hover:');
     
     // Fix onClick syntax
-    content = content.replace(/onClick = \{\(e\) =>\{/g, 'onClick={(e) => {');
+    content = content.replace(/onClick = \{\(e\) =>\{/g'onClick={(e) => {');
     content = content.replace(/e\.stopPropagation\(\);\};\s*resolveError\(/g, 'e.stopPropagation();\n                                  resolveError(');
     
     // Fix className template literals
@@ -133,7 +130,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/className = \{`px-4 py-2 rounded-lg text-sm font-medium transition-colors \$\{/g, 'className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${');
     
     if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
+        fs.writeFileSync(filePathcontent);
         console.log(`✅ Fixed ${filePath}`);
     } else {
         console.log(`ℹ️  No changes needed for ${filePath}`);
@@ -147,7 +144,7 @@ function getAllSourceFiles() {
     function walkDir(dir) {
         const items = fs.readdirSync(dir);
         for (const item of items) {
-            const fullPath = path.join(dir, item);
+            const fullPath = path.join(diritem);
             const stat = fs.statSync(fullPath);
             
             if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -173,7 +170,7 @@ async function main() {
     console.log('🔍 Checking current status...');
     const status = execGit('git status --porcelain');
     if (status) {
-        console.log('⚠️  Working directory not clean, stashing changes...');
+        console.log('⚠️  Working directory not cleanstashing changes...');
         execGit('git stash');
     }
     
@@ -222,9 +219,8 @@ async function main() {
                     // Get conflicted files
                     const conflictedFiles = execGit('git diff --name-only --diff-filter=U');
                     
-                    if (conflictedFiles) {
-                        const files = conflictedFiles.split('\n').filter(f => f.trim());
-                        console.log(`🔧 Resolving conflicts in: ${files.join(', ')}`);
+                    if (conflictedFiles) {const files = conflictedFiles.split('\n').filter(f => f.trim());
+                        console.log(`🔧 Resolving conflicts in: ${files.join('')}`);
                         
                         // Fix conflicts in each file
                         files.forEach(fixMergeConflicts);

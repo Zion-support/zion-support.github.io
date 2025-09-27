@@ -1,92 +1,82 @@
-import Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e }  from 'react';
+import Reac, t, {Compone, n, t, ErrorIn, f, o, ReactNode }  from 'react";
 
-interface, Prop, s {
-  childr, e, n: ReactNo, d, e;
+interface, Prop, s {children: ReactNo, d, e;
   fallba, c, k?: ReactNo, d, e;
-  onErr, o, r?: (err, o, r: Err, o, r, errorIn, f, o: ErrorIn, f, o) => vo, i, d};
-interface, Stat, e {
-  hasErr, o, r: boole, a, n;
-  err, o, r: Err, o, r | nu, l, l;
-  errorIn, f, o: ErrorIn, f, o | nu, l, l};
-export, class, ErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> {
-  construct, o, r(pro, p, s: Pro, p, s) {
+  onErr, o, r?: (error: Err, orerrorInfo: ErrorIn, f, o) => void};
+interface, Stat, e {hasError: boole, a, n;
+  error: Err, o, r | nu, l, l;
+  errorInfo: ErrorIn, f, o | null};
+export, class, ErrorBoundary extends, Componen, t<PropsStat, e> {construct, o, r(props: Pro, p, s) {
     sup, e, r(pro, p, s);
     th, i, s.sta, t, e = {
-      hasErr, o, r: fal, s, e,
-      err, o, r: nu, l, l,
-      errorIn, f, o: nu, l, l
+      hasError: fal, seerror: nu, llerrorInfo: null
     }};
-  static, getDerivedStateFromErro, r(err, o, r: Err, o, r): Sta, t, e {
-    return {
-      hasErr, o, r: tr, u, e,
-      err, o, r,
-      errorIn, f, o: nu, l, l
+  static, getDerivedStateFromErro, r(error: Err, o, r): Sta, t, e {return {
+      hasError: tr, u, e,
+      err, orerrorInfo: null
     }};
-  componentDidCat, c, h(err, o, r: Err, o, r, errorIn, f, o: ErrorIn, f, o) {
-    th, i, s.setSta, t, e({
+  componentDidCat, c, h(error: Err, orerrorInfo: ErrorIn, f, o) {th, i, s.setSta, t, e({
       err, o, r,
-      errorIn, f, o
+      errorInfo
     });
 
-    // Log, error, in development, i, f (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {
-      conso, l, e.err, o, r('Error, caught, by bounda, r, y: ', err, o, r, errorIn, f, o)};
+    // Log, error, in development, i, f (proce, s, s.env.NODE_ENV === "developme, n, t") {console.error("Error, caught, by boundary: ", err, o, r, errorInfo)};
     // Call, onError, callback if, provided, this.pro, p, s.onErr, o, r?.(err, o, r, errorIn, f, o)};
-  rend, e, r() {
-    if (th, i, s.sta, t, e.hasErr, o, r) {
-      return, thi, s.pro, p, s.fallba, c, k || (
-        <div, classNam, e="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
-          <div, classNam, e="m, a, x-w-m, d, w-full, b, g-white, shado, w-lg, rounde, d-l, g, p-6">
-            <div, classNam, e="flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100, rounde, d-full, m, b-4">
-              <svg, classNam, e="w-6 h-6, tex, t-r, e, d-6, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-                <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M12, 9v2m0, 4h.0, 1, m-6.938, 4h1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.732, 0L, 3.732, 1, 6.5c-.77.8, 3, 3.19, 2, 2.5 1.73, 2, 2.5z" />
-              </s, v, g>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cent, e, r">
-              <h1, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">
+  rend, e, r() {if (th, i, s.sta, t, e.hasErr, o, r) {
+      return, thi, s.props.fallback || (
+        <divclassName="min-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
+          <divclassName="max-w-m, d, w-full, b, g-white, shado, w-lgrounded-lgp-6">
+            <divclassName="flexitems-center, justif, y-cente, r, w-1, 2, h-12, m, x-auto, b, g-r, e, d-100rounded-fullmb-4">
+              <svgclassName="w-6 h-6text-red-600" fi, l, l="none" stroke="currentColor" viewBox="0024 24">
+                <pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12, 9v2m0, 4h.0, 1, m-6.938, 4h1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.732, 0L, 3.732, 1, 6.5c-.77.8, 3, 3.1922.5 1.7322.5z" />
+              </svg>
+            </div>
+            <divclassName="text-center">
+              <h1className="text-xl, fon, t-semibold, tex, t-gray-900mb-2">
                 Something, went, wrong
               </h1>
-              <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">
-                We're, sorry, but something, unexpected, happened. Please, try, refreshing the, pag, e.
+              <pclassName="text-gray-600mb-4">
+                We"re, sorry, but something, unexpected, happened. Pleasetryrefreshing thepage.
               </p>
-              <div, classNam, e="spa, c, e-y-2">
-                <button, onClic, k={() => wind, o, w.locati, o, n.relo, a, d()};
-                  classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
+              <divclassName="space-y-2">
+                <buttononClick={() => wind, o, w.location.reload()};
+                  className="w-full, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colo, r, s"
                 >
                   Refresh, Pag, e
-                </butt, o, n>
-                <button, onClic, k={() => th, i, s.setSta, t, e({ hasErr, o, r: fal, s, e, err, o, r: nu, l, l, errorIn, f, o: nu, l, l })};
-                  classNa, m, e="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounde, d-md, hove, r:bg-gr, a, y-300, transitio, n-colo, r, s"
+                </button>
+                <buttononClick={() => th, i, s.setSta, t, e({ hasError: falseerror: nullerrorInfo: null })};
+                  className="w-full, b, g-gr, a, y-200, tex, t-gr, a, y-800, p, x-4, p, y-2, rounded-mdhover:bg-gr, a, y-300, transitio, n-colo, r, s"
                 >
                   Try, Agai, n
-                </butt, o, n>
-              </d, i, v>
-              {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.err, o, r && (
-                <details, classNam, e="mt-4, tex, t-le, f, t">
-                  <summary, classNam, e="curs, o, r-pointer, tex, t-sm, tex, t-gr, a, y-500, hove, r:te, x, t-gr, a, y-7, 0, 0">
+                </button>
+              </div>
+              {proce, s, s.env.NODE_ENV === "developme, n, t" && th, i, s.state.error && (
+                <detailsclassName="mt-4text-le, f, t">
+                  <summaryclassName="cursor-pointer, tex, t-sm, tex, t-gr, a, y-500, hover:te, x, t-gray-700">
                     Error, Detail, s (Developme, n, t)
-                  </summa, r, y>
-                  <div, classNam, e="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2, rounded, overflow-au, t, o">
-                    <div, classNam, e="mb-2">
-                      <stro, n, g>Err, o, r:</stro, n, g> {th, i, s.sta, t, e.err, o, r.messa, g, e};
-                    </d, i, v>
-                    {th, i, s.sta, t, e.err, o, r.sta, c, k && (
-                      <div, classNam, e="mb-2">
-                        <stro, n, g>Sta, c, k:</stro, n, g>
-                        <pre, classNam, e="whitespa, c, e-p, r, e-wr, a, p">{th, i, s.sta, t, e.err, o, r.sta, c, k}</p, r, e>
-                      </d, i, v>
+                  </summary>
+                  <divclassName="mt-2, tex, t-xs, tex, t-r, e, d-600, b, g-r, e, d-5, 0, p-2roundedoverflow-auto">
+                    <divclassName="mb-2">
+                      <strong>Error:</strong> {th, i, s.sta, t, e.err, o, r.message};
+                    </div>
+                    {this.sta, t, e.error.stack && (
+                      <divclassName="mb-2">
+                        <strong>Stack:</strong>
+                        <preclassName="whitespa, c, e-p, r, e-wrap">{th, i, s.sta, t, e.err, o, r.stack}</pre>
+                      </div>
                     )};
                     {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k && (
-                      <d, i, v>
-                        <stro, n, g>Component, Stac, k:</stro, n, g>
-                        <pre, classNam, e="whitespa, c, e-p, r, e-wr, a, p">{th, i, s.sta, t, e.errorIn, f, o.componentSta, c, k}</p, r, e>
-                      </d, i, v>
+                      <div>
+                        <strong>ComponentStack:</strong>
+                        <preclassName="whitespa, c, e-p, r, e-wrap">{th, i, s.sta, t, e.errorIn, f, o.componentStack}</pre>
+                      </div>
                     )};
-                  </d, i, v>
+                  </div>
                 </detai, l, s>
               )};
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </div>
+          </div>
+        </div>
       )};
     return, thi, s.pro, p, s.childr, e, n};
 };
