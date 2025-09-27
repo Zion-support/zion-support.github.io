@@ -26755,3 +26755,50 @@ package.json
 [2025-09-27 10:20:15] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-075437...
 [2025-09-27 10:20:15] 📦 Package file: prefer main version
 [2025-09-27 10:20:15] ✅ Resolved conflicts in package.json
+[2025-09-27 10:20:15] ✅ Successfully resolved conflicts and merged backup-main-20250926-075437
+[2025-09-27 10:20:15] ✅ Branch backup-main-20250926-075437 processed successfully
+[2025-09-27 10:20:15] 📊 Batch progress: 32 successful, 0 failed
+[2025-09-27 10:20:15] 📊 Overall progress: 32 successful, 0 failed, 5979 conflicts resolved
+[2025-09-27 10:20:15] 📋 Processing branch 33: backup-main-20250926-081257
+[2025-09-27 10:20:16] 🔄 Attempting to merge backup-main-20250926-081257...
+[2025-09-27 10:20:16] ⚠️  Merge conflicts detected in backup-main-20250926-081257, resolving...
+[2025-09-27 10:20:16] 📋 Conflicted files: FINAL_IMPROVEMENTS_SUMMARY.md
+next.config.js
+package-lock.json
+package.json
+src/App.tsx
+src/pages/services/ai-project-management.tsx
+src/routes/ContentRoutes.tsx
+src/utils/cartUtils.js
+zion-website/database/connection.js
+zion-website/src/app/layout.tsx
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in FINAL_IMPROVEMENTS_SUMMARY.md for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 📝 Markdown: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in FINAL_IMPROVEMENTS_SUMMARY.md
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in next.config.js for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] ⚙️ Config file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in next.config.js
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 📦 Package file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in package-lock.json
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 📦 Package file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in package.json
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in src/App.tsx for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in src/App.tsx
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in src/pages/services/ai-project-management.tsx for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in src/pages/services/ai-project-management.tsx
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in src/routes/ContentRoutes.tsx for branch backup-main-20250926-081257...
+[2025-09-27 10:20:16] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:16] ✅ Resolved conflicts in src/routes/ContentRoutes.tsx
+[2025-09-27 10:20:16] 🔧 Resolving conflicts in src/utils/cartUtils.js for branch backup-main-20250926-081257...
+[2025-09-27 10:20:17] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:17] ✅ Resolved conflicts in src/utils/cartUtils.js
+[2025-09-27 10:20:17] 🔧 Resolving conflicts in zion-website/database/connection.js for branch backup-main-20250926-081257...
+[2025-09-27 10:20:17] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:17] ✅ Resolved conflicts in zion-website/database/connection.js
+[2025-09-27 10:20:17] 🔧 Resolving conflicts in zion-website/src/app/layout.tsx for branch backup-main-20250926-081257...
+[2025-09-27 10:20:17] 🧩 Generic file: prefer main version
+[2025-09-27 10:20:17] ✅ Resolved conflicts in zion-website/src/app/layout.tsx
