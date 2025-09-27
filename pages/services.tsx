@@ -1,92 +1,114 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const { trackClick } = useAnalytics();
 
   useEffect(() => {
     setIsVisible(true);
-  } []);
+  }, []);
 
-  const { trackClick } = useAnalytics();
-
-  const serviceDetails = {
-    'ai-ml': {
-      title: 'AI & Machine Learning'
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.'
-      features: [
-        'Natural Language Processing (NLP)'
-        'Computer Vision & Image Recognition'
-        'Predictive Analytics'
-        'Automated Decision Making'
-      ]
+  const services = [
+    {
+      id: 1,
+      title: "AI & Machine Learning",
+      description: "Custom AI solutions and machine learning models to automate processes and gain insights from your data.",
+      icon: "🤖",
+      features: ["Custom AI Models", "Data Analytics", "Process Automation", "Predictive Analytics"]
+    },
+    {
+      id: 2,
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions and infrastructure management to support your business growth.",
+      icon: "☁️",
+      features: ["Cloud Migration", "Infrastructure as Code", "Monitoring & Security", "Cost Optimization"]
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      description: "Modern, responsive web applications built with cutting-edge technologies and best practices.",
+      icon: "💻",
+      features: ["React/Next.js", "Full-Stack Development", "API Integration", "Performance Optimization"]
+    },
+    {
+      id: 4,
+      title: "Digital Transformation",
+      description: "Comprehensive digital transformation strategies to modernize your business operations.",
+      icon: "🚀",
+      features: ["Strategy Consulting", "Process Optimization", "Technology Integration", "Change Management"]
     }
-    'cloud': {
-      title: 'Cloud Infrastructure'
-      description: 'Scalable secure and reliable cloud solutions tailored to your business needs.'
-      features: [
-        'Cloud Migration'
-        'Infrastructure as Code'
-        'Auto-scaling Solutions'
-        'Disaster Recovery'
-      ]
-    }
-    'cybersecurity': {
-      title: 'Cybersecurity'
-      description: 'Protect your business with comprehensive security solutions and best practices.'
-      features: [
-        'Security Audits'
-        'Threat Detection'
-        'Data Protection'
-        'Compliance Management'
-      ]
-    }
-  };
+  ];
 
   return (
     <>
-      <SEO 
-        title="Services - Zion App"
-        description="Comprehensive technology services including AI cloud infrastructure and cybersecurity."
-        keywords="services AI cloud cybersecurity technology"
-      />
+      <SEO />
       <Head>
-        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <title>Services - Zion App</title>
+        <meta name="description" content="Comprehensive technology services including AI, cloud computing, web development, and digital transformation." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
-          <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(serviceDetails).map(([key service]) => (
-              <div key={key} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
+
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">
+              Our Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions to transform your business and drive growth.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            {services.map((service) => (
+              <div key={service.id} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="text-6xl mb-6">{service.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="text-green-500 mr-2">✓</span>
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-600">
+                      <span className="text-blue-600 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-                  onClick={() => trackClick(`service-${key}` 'engagement')}
+                <button
+                  onClick={() => trackClick(`service-${service.title.toLowerCase().replace(/\s+/g, '-')}`, 'engagement')}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Learn More
-                </Link>
+                </button>
               </div>
             ))}
           </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Get In Touch
+              </Link>
+              <Link href="/portfolio" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                View Our Work
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
     </>
   );
-};
+}

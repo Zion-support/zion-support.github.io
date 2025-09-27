@@ -1,73 +1,59 @@
-import React { useEffect useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 
 interface PerformanceOptimizerProps {
-  enableServiceWorker?: boolean;
-  enableLazyLoading?: boolean;
-  enableImageOptimization?: boolean;
+  enabled?: boolean;
 }
 
-export default function PerformanceOptimizer({ 
-  enableServiceWorker = true
-  enableLazyLoading = true
-  enableImageOptimization = true
-}: PerformanceOptimizerProps) {
-  const [isOptimized setIsOptimized] = useState(false);
-  const [memoryUsage setMemoryUsage] = useState({
-    used: 0
-    total: 0
-    percentage: 0
-  });
+export default function PerformanceOptimizer({ enabled = true }: PerformanceOptimizerProps) {
+  const [isOptimizing, setIsOptimizing] = useState(false);
 
   useEffect(() => {
+    if (!enabled) return;
+
     const optimizePerformance = () => {
-      // Enable lazy loading for images
-      if (enableLazyLoading && typeof window !== 'undefined') {
-        const images = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              img.src = img.dataset.src || '';
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          });
+      setIsOptimizing(true);
+      
+      // Lazy load images
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
         });
-        
-        images.forEach(img => imageObserver.observe(img));
-      }
-      
-      // Memory usage monitoring
-      const updateMemoryUsage = () => {
-        if ("memory" in performance) {
-          const memory = (performance as any).memory;
-          setMemoryUsage({
-            used: memory.usedJSHeapSize
-            total: memory.totalJSHeapSize
-            percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-          });
-        }
-      };
-      
-      updateMemoryUsage();
-      const interval = setInterval(updateMemoryUsage 5000);
-      
-      setIsOptimized(true);
-      
-      return () => clearInterval(interval);
+      });
+
+      images.forEach((img) => imageObserver.observe(img));
+
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/css/critical.css'
+      ];
+
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'font';
+        document.head.appendChild(link);
+      });
+
+      setTimeout(() => setIsOptimizing(false), 1000);
     };
-    
+
     optimizePerformance();
-  } [enableLazyLoading]);
-  
+  }, [enabled]);
+
+  if (!enabled) return null;
+
   return (
-    <div className="performance-optimizer">
-      {isOptimized && (
-        <div className="text-sm text-green-600">
-          Performance optimizations enabled
-        </div>
-      )}
+    <div className="fixed top-4 right-4 bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm z-50">
+      {isOptimizing ? 'Optimizing...' : 'Performance optimized'}
     </div>
   );
 }

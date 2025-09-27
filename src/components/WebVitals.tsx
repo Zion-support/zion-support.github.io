@@ -1,45 +1,39 @@
-import { NextWebVitalsMetric } from 'next/app';
-import { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-export interface WebVitalsMetric {
-  id: string;
+interface WebVitalsMetric {
   name: string;
   value: number;
+  id: string;
   delta: number;
   entries: PerformanceEntry[];
-  navigationType: string;
 }
 
 export function reportWebVitals(metric: WebVitalsMetric) {
   // Send to analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event' metric.name {
-      event_category: 'Web Vitals'
-      event_label: metric.id
+    (window as any).gtag('event', metric.name, {
+      event_category: 'Web Vitals',
+      event_label: metric.id,
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
-      non_interaction: true
     });
   }
-  
+
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vitals:' metric);
+    console.log(metric);
   }
 }
 
-export function WebVitals() {
-  useEffect(() => {
-    // Load web-vitals library dynamically
-    import('web-vitals').then(({ getCLS getFID getFCP getLCP getTTFB }) => {
-      getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    });
-  } []);
+export function initWebVitals() {
+  if (typeof window === 'undefined') return;
 
-  return null;
+  getCLS(reportWebVitals);
+  getFID(reportWebVitals);
+  getFCP(reportWebVitals);
+  getLCP(reportWebVitals);
+  getTTFB(reportWebVitals);
 }
 
-export default WebVitals;
+export default function WebVitals() {
+  return null;
+}
