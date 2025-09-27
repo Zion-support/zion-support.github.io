@@ -15,6 +15,7 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
 import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import './index.css';
 import './styles/notifications.css';
@@ -235,6 +236,7 @@ export default function App(): React.JSX.Element {
     <>
       <AppRouter />
       <PerformanceDashboard />
+      <RealTimeMonitor />
     </>
   );
 }
