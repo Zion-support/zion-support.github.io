@@ -1,418 +1,479 @@
-/**
- * SEO Optimization Utilities
- * Advanced SEO tools for the Zion Tech Group website
- */
+// Advanced SEO Optimization Utilities
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  language?: string;
-  alternateLanguages?: Array<{ hreflang: string; href: string }>;
+export interface SEOConfig {
+  siteName: string;
+  siteUrl: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  defaultImage: string;
+  twitterHandle?: string;
+  facebookAppId?: string;
+  enableStructuredData: boolean;
+  enableOpenGraph: boolean;
+  enableTwitterCards: boolean;
+  enableCanonical: boolean;
 }
 
-interface PagePerformance {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  speedIndex: number;
-  totalBlockingTime: number;
+export interface PageSEOData {
+  title: string;
+  description: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export class SEOOptimizer {
   private static instance: SEOOptimizer;
-  private currentSEOData: SEOData | null = null;
-  private performanceMetrics: Partial<PagePerformance> = {};
+  private config: SEOConfig;
 
-  private constructor() {
-    this.initializePerformanceMonitoring();
+  private constructor(config: Partial<SEOConfig> = {}) {
+    this.config = {
+      siteName: 'Zion Tech Group',
+      siteUrl: 'https://ziontechgroup.com',
+      defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+      defaultDescription: 'Leading provider of AI-powered solutions, cloud computing, and enterprise technology services. Transform your business with our cutting-edge technology solutions.',
+      defaultImage: '/images/og-default.jpg',
+      enableStructuredData: true,
+      enableOpenGraph: true,
+      enableTwitterCards: true,
+      enableCanonical: true,
+      ...config
+    };
+    this.initialize();
   }
 
-  public static getInstance(): SEOOptimizer {
+  public static getInstance(config?: Partial<SEOConfig>): SEOOptimizer {
     if (!SEOOptimizer.instance) {
-      SEOOptimizer.instance = new SEOOptimizer();
+      SEOOptimizer.instance = new SEOOptimizer(config);
     }
     return SEOOptimizer.instance;
   }
 
-  public updateSEO(data: SEOData): void {
-    this.currentSEOData = data;
-    this.updateMetaTags(data);
-    this.updateStructuredData(data.structuredData);
-    this.updateCanonicalUrl(data.canonicalUrl);
-    this.updateRobotsMeta(data.robots);
-    this.updateLanguageMeta(data.language, data.alternateLanguages);
+  private initialize(): void {
+    this.setupBasicMeta();
+    this.setupViewport();
+    this.setupRobots();
+    this.setupPreconnects();
   }
 
-  private updateMetaTags(data: SEOData): void {
-    // Update title
-    document.title = data.title;
-
-    // Update meta description
-    this.setMetaTag('description', data.description);
-
-    // Update keywords
-    if (data.keywords.length > 0) {
-      this.setMetaTag('keywords', data.keywords.join(', '));
-    }
-
-    // Update Open Graph tags
-    this.setMetaTag('og:title', data.ogTitle || data.title, 'property');
-    this.setMetaTag('og:description', data.ogDescription || data.description, 'property');
-    this.setMetaTag('og:type', data.ogType || 'website', 'property');
-    this.setMetaTag('og:url', data.canonicalUrl || window.location.href, 'property');
-    if (data.ogImage) {
-      this.setMetaTag('og:image', data.ogImage, 'property');
-    }
-
-    // Update Twitter Card tags
-    this.setMetaTag('twitter:card', data.twitterCard || 'summary_large_image', 'name');
-    this.setMetaTag('twitter:title', data.twitterTitle || data.title, 'name');
-    this.setMetaTag('twitter:description', data.twitterDescription || data.description, 'name');
-    if (data.twitterImage) {
-      this.setMetaTag('twitter:image', data.twitterImage, 'name');
-    }
+  private setupBasicMeta(): void {
+    this.setMetaTag('charset', 'utf-8');
+    this.setMetaTag('name', 'generator', 'React with Vite');
+    this.setMetaTag('name', 'theme-color', '#1f2937');
+    this.setMetaTag('name', 'msapplication-TileColor', '#1f2937');
   }
 
-  private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+  private setupViewport(): void {
+    this.setMetaTag('name', 'viewport', 'width=device-width, initial-scale=1.0, viewport-fit=cover');
+  }
+
+  private setupRobots(): void {
+    this.setMetaTag('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+  }
+
+  private setupPreconnects(): void {
+    const preconnects = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.google-analytics.com',
+      'https://www.googletagmanager.com'
+    ];
+
+    preconnects.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = url;
+      if (url.includes('gstatic')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  public updatePageSEO(data: PageSEOData): void {
+    this.updateTitle(data.title);
+    this.updateDescription(data.description);
     
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
+    if (data.keywords) {
+      this.updateKeywords(data.keywords);
     }
-    
-    meta.content = content;
+
+    if (this.config.enableCanonical) {
+      this.updateCanonical(data.url);
+    }
+
+    if (this.config.enableOpenGraph) {
+      this.updateOpenGraph(data);
+    }
+
+    if (this.config.enableTwitterCards) {
+      this.updateTwitterCards(data);
+    }
+
+    if (this.config.enableStructuredData) {
+      this.updateStructuredData(data);
+    }
+
+    this.updateAlternateLanguages();
   }
 
-  private updateStructuredData(data?: Record<string, unknown>): void {
+  private updateTitle(title: string): void {
+    const fullTitle = title === this.config.defaultTitle 
+      ? title 
+      : `${title} | ${this.config.siteName}`;
+    
+    document.title = fullTitle;
+    this.setMetaTag('property', 'og:title', title);
+    this.setMetaTag('name', 'twitter:title', title);
+  }
+
+  private updateDescription(description: string): void {
+    this.setMetaTag('name', 'description', description);
+    this.setMetaTag('property', 'og:description', description);
+    this.setMetaTag('name', 'twitter:description', description);
+  }
+
+  private updateKeywords(keywords: string[]): void {
+    this.setMetaTag('name', 'keywords', keywords.join(', '));
+  }
+
+  private updateCanonical(url?: string): void {
+    const canonicalUrl = url || window.location.href;
+    const canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    
+    if (canonical) {
+      canonical.href = canonicalUrl;
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = canonicalUrl;
+      document.head.appendChild(link);
+    }
+  }
+
+  private updateOpenGraph(data: PageSEOData): void {
+    const ogData = {
+      'og:site_name': this.config.siteName,
+      'og:type': data.type || 'website',
+      'og:url': data.url || window.location.href,
+      'og:image': data.image || this.config.defaultImage,
+      'og:image:width': '1200',
+      'og:image:height': '630',
+      'og:locale': 'en_US'
+    };
+
+    if (data.author) {
+      ogData['article:author'] = data.author;
+    }
+
+    if (data.publishedTime) {
+      ogData['article:published_time'] = data.publishedTime;
+    }
+
+    if (data.modifiedTime) {
+      ogData['article:modified_time'] = data.modifiedTime;
+    }
+
+    if (data.section) {
+      ogData['article:section'] = data.section;
+    }
+
+    if (data.tags) {
+      data.tags.forEach(tag => {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'article:tag');
+        meta.content = tag;
+        document.head.appendChild(meta);
+      });
+    }
+
+    Object.entries(ogData).forEach(([property, content]) => {
+      this.setMetaTag('property', property, content);
+    });
+
+    if (this.config.facebookAppId) {
+      this.setMetaTag('property', 'fb:app_id', this.config.facebookAppId);
+    }
+  }
+
+  private updateTwitterCards(data: PageSEOData): void {
+    const twitterData = {
+      'twitter:card': 'summary_large_image',
+      'twitter:site': this.config.twitterHandle || '@ziontechgroup',
+      'twitter:creator': this.config.twitterHandle || '@ziontechgroup',
+      'twitter:image': data.image || this.config.defaultImage,
+      'twitter:image:alt': `${data.title} - ${this.config.siteName}`
+    };
+
+    Object.entries(twitterData).forEach(([name, content]) => {
+      this.setMetaTag('name', name, content);
+    });
+  }
+
+  private updateStructuredData(data: PageSEOData): void {
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      existingScript.remove();
+    const existingLD = document.querySelector('script[type="application/ld+json"]');
+    if (existingLD) {
+      existingLD.remove();
     }
 
-    if (data) {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: this.config.siteName,
+      url: this.config.siteUrl,
+      logo: `${this.config.siteUrl}/images/logo.png`,
+      description: this.config.defaultDescription,
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-800-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: ['English']
+      },
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup',
+        'https://github.com/ziontechgroup'
+      ]
+    };
+
+    // Add page-specific structured data
+    if (data.type === 'article') {
+      const articleData = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: data.title,
+        description: data.description,
+        image: data.image || this.config.defaultImage,
+        author: {
+          '@type': 'Person',
+          name: data.author || this.config.siteName
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: this.config.siteName,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${this.config.siteUrl}/images/logo.png`
+          }
+        },
+        datePublished: data.publishedTime,
+        dateModified: data.modifiedTime || data.publishedTime
+      };
+
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(data);
+      script.textContent = JSON.stringify([structuredData, articleData]);
+      document.head.appendChild(script);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
   }
 
-  private updateCanonicalUrl(url?: string): void {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    
-    canonical.href = url || window.location.href;
+  private updateAlternateLanguages(): void {
+    // Add hreflang for international SEO
+    const languages = [
+      { code: 'en', region: 'us', url: this.config.siteUrl },
+      { code: 'en', region: 'gb', url: this.config.siteUrl },
+      { code: 'x-default', region: '', url: this.config.siteUrl }
+    ];
+
+    languages.forEach(lang => {
+      const hreflang = lang.region ? `${lang.code}-${lang.region}` : lang.code;
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = hreflang;
+      link.href = lang.url;
+      document.head.appendChild(link);
+    });
   }
 
-  private updateRobotsMeta(robots?: string): void {
-    if (robots) {
-      this.setMetaTag('robots', robots);
+  private setMetaTag(attribute: string, name: string, content: string): void {
+    const selector = `meta[${attribute}="${name}"]`;
+    let meta = document.querySelector(selector) as HTMLMetaElement;
+
+    if (meta) {
+      meta.content = content;
+    } else {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      meta.content = content;
+      document.head.appendChild(meta);
     }
   }
 
-  private updateLanguageMeta(language?: string, alternateLanguages?: Array<{ hreflang: string; href: string }>): void {
-    if (language) {
-      document.documentElement.lang = language;
+  public generateSitemap(): string {
+    const pages = [
+      { url: '', priority: '1.0', changefreq: 'weekly' },
+      { url: '/about', priority: '0.8', changefreq: 'monthly' },
+      { url: '/services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/portfolio', priority: '0.8', changefreq: 'monthly' },
+      { url: '/blog', priority: '0.7', changefreq: 'weekly' },
+      { url: '/contact', priority: '0.6', changefreq: 'monthly' }
+    ];
+
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${this.config.siteUrl}${page.url}</loc>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </url>`).join('\n')}
+</urlset>`;
+
+    return sitemap;
+  }
+
+  public generateRobotsTxt(): string {
+    return `User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: ${this.config.siteUrl}/sitemap.xml
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Block access to sensitive files
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Allow access to assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/`;
+  }
+
+  public trackPageView(page: string): void {
+    // Google Analytics 4
+    if (window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: page
+      });
     }
 
-    // Remove existing alternate language links
-    const existingAlternates = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingAlternates.forEach(link => link.remove());
-
-    // Add new alternate language links
-    if (alternateLanguages) {
-      alternateLanguages.forEach(({ hreflang, href }) => {
-        const link = document.createElement('link');
-        link.rel = 'alternate';
-        link.hreflang = hreflang;
-        link.href = href;
-        document.head.appendChild(link);
+    // Google Tag Manager
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'page_view',
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: page
       });
     }
   }
 
-  public generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): Record<string, unknown> {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
-    };
-  }
-
-  public generateOrganizationStructuredData(organization: {
-    name: string;
-    url: string;
-    logo?: string;
-    description?: string;
-    contactInfo?: {
-      telephone?: string;
-      email?: string;
-      address?: string;
-    };
-    socialMedia?: Array<{ platform: string; url: string }>;
-  }): Record<string, unknown> {
-    const structuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: organization.name,
-      url: organization.url
-    };
-
-    if (organization.logo) {
-      structuredData.logo = organization.logo;
-    }
-
-    if (organization.description) {
-      structuredData.description = organization.description;
-    }
-
-    if (organization.contactInfo) {
-      structuredData.contactPoint = {
-        '@type': 'ContactPoint',
-        ...organization.contactInfo
-      };
-    }
-
-    if (organization.socialMedia) {
-      structuredData.sameAs = organization.socialMedia.map(social => social.url);
-    }
-
-    return structuredData;
-  }
-
-  public generateArticleStructuredData(article: {
-    headline: string;
-    description: string;
-    author: string;
-    datePublished: string;
-    dateModified?: string;
-    image?: string;
-    url: string;
-  }): Record<string, unknown> {
-    const structuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: article.headline,
-      description: article.description,
-      author: {
-        '@type': 'Person',
-        name: article.author
-      },
-      datePublished: article.datePublished,
-      url: article.url
-    };
-
-    if (article.dateModified) {
-      structuredData.dateModified = article.dateModified;
-    }
-
-    if (article.image) {
-      structuredData.image = article.image;
-    }
-
-    return structuredData;
-  }
-
-  public generateServiceStructuredData(service: {
-    name: string;
-    description: string;
-    provider: string;
-    url: string;
-    price?: string;
-    priceCurrency?: string;
-    category?: string;
-  }): Record<string, unknown> {
-    const structuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: service.name,
-      description: service.description,
-      provider: {
-        '@type': 'Organization',
-        name: service.provider
-      },
-      url: service.url
-    };
-
-    if (service.price && service.priceCurrency) {
-      structuredData.offers = {
-        '@type': 'Offer',
-        price: service.price,
-        priceCurrency: service.priceCurrency
-      };
-    }
-
-    if (service.category) {
-      structuredData.category = service.category;
-    }
-
-    return structuredData;
-  }
-
-  private initializePerformanceMonitoring(): void {
-    if (!('performance' in window)) return;
-
-    // Monitor Core Web Vitals
-    this.observeLCP();
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-  }
-
-  private observeLCP(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.performanceMetrics.largestContentfulPaint = lastEntry.startTime;
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-  }
-
-  private observeFID(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        const fid = entry as PerformanceEntry & { processingStart: number };
-        this.performanceMetrics.firstInputDelay = fid.processingStart - fid.startTime;
+  public trackEvent(action: string, category: string, label?: string, value?: number): void {
+    if (window.gtag) {
+      window.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value
       });
-    });
+    }
 
-    observer.observe({ entryTypes: ['first-input'] });
-  }
-
-  private observeCLS(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        const cls = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-        if (!cls.hadRecentInput) {
-          clsValue += cls.value;
-        }
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'custom_event',
+        event_action: action,
+        event_category: category,
+        event_label: label,
+        event_value: value
       });
-      this.performanceMetrics.cumulativeLayoutShift = clsValue;
-    });
-
-    observer.observe({ entryTypes: ['layout-shift'] });
-  }
-
-  private observeFCP(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.name === 'first-contentful-paint') {
-          this.performanceMetrics.firstContentfulPaint = entry.startTime;
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['paint'] });
-  }
-
-  public getPerformanceMetrics(): Partial<PagePerformance> {
-    return { ...this.performanceMetrics };
+    }
   }
 
   public optimizeImages(): void {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      // Add loading="lazy" for images below the fold
+      // Add loading="lazy" for better performance
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
 
-      // Add decoding="async"
+      // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
 
-      // Add alt text if missing
+      // Ensure alt text is present
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', '');
+        console.warn('Image missing alt text:', img.src);
       }
     });
   }
 
-  public optimizeLinks(): void {
-    const links = document.querySelectorAll('a');
-    links.forEach(link => {
-      const href = link.getAttribute('href');
-      
-      // Add rel="noopener" for external links
-      if (href && href.startsWith('http') && !href.includes(window.location.hostname)) {
-        if (!link.hasAttribute('rel') || !link.getAttribute('rel')?.includes('noopener')) {
-          const currentRel = link.getAttribute('rel') || '';
-          link.setAttribute('rel', currentRel ? `${currentRel} noopener` : 'noopener');
-        }
-      }
-    });
+  public setupBreadcrumbs(breadcrumbs: Array<{ name: string; url: string }>): void {
+    const breadcrumbData = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((crumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: `${this.config.siteUrl}${crumb.url}`
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(breadcrumbData);
+    document.head.appendChild(script);
   }
 
-  public generateSitemap(): string {
-    const pages = [
-      '/',
-      '/about',
-      '/services',
-      '/portfolio',
-      '/blog',
-      '/contact'
-    ];
-
-    const baseUrl = window.location.origin;
-    
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`).join('\n')}
-</urlset>`;
+  public cleanup(): void {
+    // Remove dynamically added meta tags and structured data
+    const dynamicElements = document.querySelectorAll(
+      'script[type="application/ld+json"], meta[property^="og:"], meta[name^="twitter:"]'
+    );
+    dynamicElements.forEach(el => el.remove());
   }
 }
 
-// Export singleton instance
+// Initialize SEO optimizer
 export const seoOptimizer = SEOOptimizer.getInstance();
 
-// Auto-optimize when module is loaded
-if (typeof window !== 'undefined') {
-  seoOptimizer.optimizeImages();
-  seoOptimizer.optimizeLinks();
+// Export utility functions
+export const {
+  updatePageSEO,
+  generateSitemap,
+  generateRobotsTxt,
+  trackPageView,
+  trackEvent,
+  optimizeImages,
+  setupBreadcrumbs
+} = seoOptimizer;
+
+// Global type declarations for analytics
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
 }

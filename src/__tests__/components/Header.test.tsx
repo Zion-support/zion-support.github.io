@@ -4,7 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
 
 const renderWithRouter = (ui: React.ReactElement) => {
-  return render(ui, { wrapper: BrowserRouter });
+  const Wrapper = ({ children }: { children: React.ReactNode }) => (
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      {children}
+    </BrowserRouter>
+  );
+  return render(ui, { wrapper: Wrapper });
 };
 
 describe('Header', () => {
