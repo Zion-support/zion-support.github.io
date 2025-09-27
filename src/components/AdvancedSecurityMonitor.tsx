@@ -109,7 +109,6 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
   };
 
   return (
-
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">

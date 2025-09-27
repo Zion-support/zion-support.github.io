@@ -206,12 +206,11 @@ export const PricingCalculator: React.FC = () => {
 	};
 
 	return (
-		<div className="bg-white rounded-2 xl shadow-xlp-8">
+		<div className="bg-white rounded-2xl shadow-xl p-8">
 			<div className="mb-8">
 
-				<h3 className="text-3 xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
 				<p className="text-gray-600 text-lg">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
 			</div>
