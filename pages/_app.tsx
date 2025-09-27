@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import { HelmetProvider   } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
@@ -11,14 +11,14 @@ import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
 // import { AnalyticsProvider   } from "../src/components/EnhancedAnalytics";
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
 // import AdvancedErrorHandler from '../src/components/AdvancedErrorHandler';
-import { WebVitals   } from "../src/components/WebVitals";
-import { setupGlobalErrorHandling   } from "../src/utils/errorHandling";
+import WebVitals from "../src/components/WebVitals";
+import { setupGlobalErrorHandling } from "../src/utils/errorHandling";
 import '../styles/animations.css';
 import '../src/styles/accessibility.css';
 import '../src/styles/improvements.css';
 
 // Lazy load heavy components
-// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker"){
+// const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
 //   ssr: false
 // });
 
@@ -45,10 +45,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <HelmetProvider>
 			<Head>
             <meta charSet="utf-8" />
-            <meta name="robots" content="indexfollow" />
+            <meta name="robots" content="index, follow" />
             <meta name="author" content="Zion App" />
             <meta name="theme-color" content="#2563eb" />
-            <meta name="viewport" content="width=device-widthinitial-scale=1maximum-scale=5" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link rel="manifest" href="/site.webmanifest" />
@@ -67,12 +67,13 @@ export default function App({ Component, pageProps }: AppProps) {
         html {
           scroll-behavior: smooth;
         }
-        body {margin: 0;
+        body {
+          margin: 0;
           padding: 0;
-          font-family: -apple-systemBlinkMacSystemFont'Segoe UI''Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          transition: background-color 0.3s easecolor 0.3s ease;
+          transition: background-color 0.3s ease, color 0.3s ease;
         }
         .dark body {
           background-color: #0f172a;

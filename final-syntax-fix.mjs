@@ -1,126 +1,160 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob } from 'glob';
 
-console.log('🚀 Starting final syntax fix...');
-
-const finalFixes = [
-  // Fix missing commas before percentage
-  {
-    pattern: /(\w+)\s*percentage:/g,
-    replacement: '$1, percentage:'
-  },
-  // Fix missing commas in object arrays
-  {
-    pattern: /(\w+)\s*}\s*{\s*name:/g,
-    replacement: '$1}, { name:'
-  },
-  // Fix missing commas in object arrays with type
-  {
-    pattern: /(\w+)\s*}\s*{\s*type:/g,
-    replacement: '$1}, { type:'
-  },
-  // Fix missing commas after arrays
-  {
-    pattern: /(\]\s*)([a-zA-Z_][a-zA-Z0-9_]*\s*:\s*\[)/g,
-    replacement: '$1,$2'
-  },
-  // Fix comma-separated words in quotes
-  {
-    pattern: /'([^']*),\s*([^']*),\s*([^']*)'/g,
-    replacement: (match, p1, p2, p3) => {
-      const joined = p1 + p2 + p3;
-      return `'${joined}'`;
-    }
-  },
-  // Fix specific patterns
-  {
-    pattern: /Dire,\s*c,\s*t/g,
-    replacement: 'Direct'
-  },
-  {
-    pattern: /Goog,\s*l,\s*e/g,
-    replacement: 'Google'
-  },
-  {
-    pattern: /Soci,\s*a,\s*l\s*Med,\s*i,\s*a/g,
-    replacement: 'Social Media'
-  },
-  {
-    pattern: /Ema,\s*i,\s*l/g,
-    replacement: 'Email'
-  },
-  {
-    pattern: /Referr,\s*a,\s*l/g,
-    replacement: 'Referral'
-  },
-  {
-    pattern: /Deskt,\s*o,\s*p/g,
-    replacement: 'Desktop'
-  },
-  {
-    pattern: /Mobi,\s*l,\s*e/g,
-    replacement: 'Mobile'
-  },
-  {
-    pattern: /Tabl,\s*e,\s*t/g,
-    replacement: 'Tablet'
-  },
-  {
-    pattern: /baseMultiplier\)percentage:/g,
-    replacement: 'baseMultiplier), percentage:'
-  }
+const filesToFix = [
+  'pages/index.tsx',
+  'pages/enhanced-home.tsx', 
+  'pages/faq.tsx',
+  'pages/about.tsx',
+  'pages/dashboard.tsx'
 ];
+
+function fixRemainingIssues(content) {
+  // Fix malformed array destructuring with extra spaces
+  content = content.replace(/const \[\s*([^,\]]+),\s*([^,\]]+)\s*\] = useState/g, 'const [$1, $2] = useState');
+  content = content.replace(/const \[\s*([^,\]]+)\s+([^,\]]+)\s*\] = useState/g, 'const [$1, $2] = useState');
+  
+  // Fix malformed object destructuring with extra spaces
+  content = content.replace(/const \{\s*([^,}]+),\s*([^,}]+)\s*\} =/g, 'const { $1, $2 } =');
+  content = content.replace(/const \{\s*([^,}]+)\s+([^,}]+)\s*\} =/g, 'const { $1, $2 } =');
+  
+  // Fix malformed import statements with extra spaces
+  content = content.replace(/import \{\s*([^,}]+),\s*([^,}]+)\s*\} from/g, 'import { $1, $2 } from');
+  content = content.replace(/import \{\s*([^,}]+)\s+([^,}]+)\s*\} from/g, 'import { $1, $2 } from');
+  
+  // Fix malformed function calls with extra spaces
+  content = content.replace(/const \{([^}]+)\s+\} =/g, 'const { $1 } =');
+  
+  // Fix malformed useState calls
+  content = content.replace(/useState<Set<number>>\(new Set\(\)\)/g, 'useState<Set<number>>(new Set())');
+  
+  // Fix malformed comments
+  content = content.replace(/\/\/ Lazyloadheavy/g, '// Lazy load heavy');
+  content = content.replace(/\/\/ constPerformanceTracker/g, '// const PerformanceTracker');
+  
+  // Fix malformed dynamic imports
+  content = content.replace(/dynamic\(\(\) => import\("([^"]+)"\),\{/g, 'dynamic(() => import("$1"), {\n\t\tssr: false');
+  
+  // Fix malformed JSX comments
+  content = content.replace(/\/\/ \s*ssr: false/g, '\t\tssr: false');
+  
+  // Fix malformed loading components
+  content = content.replace(/loading: \(\) => <divclassName="([^"]+)"/g, 'loading: () => <div className="$1"');
+  
+  // Fix malformed className attributes
+  content = content.replace(/className="([^"]*),([^"]*)"/g, 'className="$1$2"');
+  
+  // Fix malformed object properties
+  content = content.replace(/(\w+):\s*"([^"]*),([^"]*)"/g, '$1: "$2$3"');
+  
+  // Fix malformed template literals
+  content = content.replace(/`([^`]*),([^`]*)`/g, '`$1$2`');
+  
+  // Fix malformed function parameters
+  content = content.replace(/\(([^)]*),([^)]*)\) =>/g, '($1, $2) =>');
+  
+  // Fix malformed array methods
+  content = content.replace(/\.map\(\(([^,)]+),([^,)]+)\) =>/g, '.map(($1, $2) =>');
+  content = content.replace(/\.forEach\(\(([^,)]+),([^,)]+)\) =>/g, '.forEach(($1, $2) =>');
+  
+  // Fix malformed destructuring in function parameters
+  content = content.replace(/const (\w+) = \(([^)]*),([^)]*)\) =>/g, 'const $1 = ($2, $3) =>');
+  
+  // Fix malformed object destructuring
+  content = content.replace(/const \{([^}]*),([^}]*)\} =/g, 'const { $1, $2 } =');
+  
+  // Fix malformed array destructuring
+  content = content.replace(/const \[([^\]]*),([^\]]*)\] =/g, 'const [ $1, $2 ] =');
+  
+  // Fix malformed imports (clean up any remaining issues)
+  content = content.replace(/import = \{/g, 'import {');
+  content = content.replace(/import = /g, 'import ');
+  
+  // Fix malformed export statements
+  content = content.replace(/export default function (\w+)\(\): JSX\.Element = \{/g, 'export default function $1(): JSX.Element {');
+  
+  // Fix malformed function declarations
+  content = content.replace(/const (\w+) = \(\) => \{/g, 'const $1 = () => {');
+  
+  // Fix malformed object literals
+  content = content.replace(/\{([^}]*),([^}]*)\}/g, '{ $1, $2 }');
+  
+  // Fix malformed array literals
+  content = content.replace(/\[([^\]]*),([^\]]*)\]/g, '[ $1, $2 ]');
+  
+  // Fix malformed string concatenation
+  content = content.replace(/"([^"]*),([^"]*)"/g, '"$1$2"');
+  
+  // Fix malformed comments
+  content = content.replace(/\/\/([^/]*),([^/]*)\//g, '// $1$2');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*),([^"]*)"/g, 'className="$1$2"');
+  content = content.replace(/href="([^"]*),([^"]*)"/g, 'href="$1$2"');
+  content = content.replace(/src="([^"]*),([^"]*)"/g, 'src="$1$2"');
+  
+  // Fix malformed conditional statements
+  content = content.replace(/if \(([^)]*),([^)]*)\)/g, 'if ($1 && $2)');
+  content = content.replace(/if \(([^)]*),([^)]*)\)/g, 'if ($1 || $2)');
+  
+  // Fix malformed ternary operators
+  content = content.replace(/\? ([^:]*),([^:]*):/g, '? $1 : $2 :');
+  
+  // Fix malformed logical operators
+  content = content.replace(/(\w+) && (\w+)/g, '$1 && $2');
+  content = content.replace(/(\w+) \|\| (\w+)/g, '$1 || $2');
+  
+  // Fix malformed assignment operators
+  content = content.replace(/(\w+) = (\w+),(\w+)/g, '$1 = $2, $3');
+  
+  // Fix malformed comparison operators
+  content = content.replace(/(\w+) === (\w+),(\w+)/g, '$1 === $2 && $3');
+  content = content.replace(/(\w+) !== (\w+),(\w+)/g, '$1 !== $2 && $3');
+  
+  // Fix malformed function calls with multiple parameters
+  content = content.replace(/(\w+)\(([^)]*),([^)]*)\)/g, '$1($2, $3)');
+  
+  // Fix malformed object method calls
+  content = content.replace(/(\w+)\.(\w+)\(([^)]*),([^)]*)\)/g, '$1.$2($3, $4)');
+  
+  // Fix malformed array access
+  content = content.replace(/(\w+)\[([^\]]*),([^\]]*)\]/g, '$1[$2, $3]');
+  
+  // Fix malformed property access
+  content = content.replace(/(\w+)\.(\w+),(\w+)/g, '$1.$2, $3');
+  
+  return content;
+}
 
 async function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    let fixedContent = content;
-    let changes = 0;
-
-    for (const fix of finalFixes) {
-      const originalContent = fixedContent;
-      if (typeof fix.replacement === 'function') {
-        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
-      } else {
-        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
-      }
-      if (fixedContent !== originalContent) {
-        changes++;
-      }
-    }
-
-    if (changes > 0) {
+    const fixedContent = fixRemainingIssues(content);
+    
+    if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed ${filePath} (${changes} patterns)`);
-      return true;
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+    } else {
+      console.log(`ℹ️  No changes needed for ${filePath}`);
     }
-    return false;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
 async function main() {
-  try {
-    const files = await glob('src/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-    
-    let fixedCount = 0;
-    for (const file of files) {
-      const wasFixed = await fixFile(file);
-      if (wasFixed) {
-        fixedCount++;
-      }
+  console.log('🔧 Final syntax error fixing...\n');
+  
+  for (const file of filesToFix) {
+    if (fs.existsSync(file)) {
+      await fixFile(file);
+    } else {
+      console.log(`⚠️  File not found: ${file}`);
     }
-
-    console.log(`✅ Fixed ${fixedCount} files`);
-    console.log('📊 Final syntax fix completed!');
-  } catch (error) {
-    console.error('❌ Error during final syntax fix:', error);
-    process.exit(1);
   }
+  
+  console.log('\n✨ Final syntax fixing completed!');
 }
 
-main();
+main().catch(console.error);

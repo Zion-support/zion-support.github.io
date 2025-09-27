@@ -1,22 +1,119 @@
-import { useEffect   } from "react";
+import { useEffect } from "react";
 
-interface, WebVitalsMetri, c {name: stri, n, g;
-  value: numb, e, r;
-  delta: numb, e, r;
-  id: stri, n, g;
-  navigationType: string};
-export, function, reportWebVitals(metric: WebVitalsMetr, i, c) {// Se, n, d, toanalyticsserviceif (typeofwindow !== "undefin, e, d' && "gtag" in, wind, o, w) {
-    (windowasa, n, y).gtag("event"metr, i, c.name{
-      event_category: "W, e, b, Vitals"event_label: metr, i, c.idvalue: Ma, t, h.rou, n, d(metr, i, c.name === "CLS" ? metr, i, c.val, u, e * 10, 0, 0 : metr, i, c.val, u, e),
-      non_interaction: true
-    })};
-  // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_ENV === "development") {conso, l, e.log("WebVitals:"metric)};
-};
-export, function, WebVitals() {useEffect(() => {
-    // Loadweb-vitalslibrarydynamicallyimport("w, e, b-vita, l, s').th, e, n(({ getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTTFB }) => {getC, L, S(reportWebVita, l, s);
-      getF, I, D(reportWebVita, l, s);
-      getF, C, P(reportWebVita, l, s);
-      getL, C, P(reportWebVita, l, s);
-      getTT, F, B(reportWebVitals)})}, []);
+interface WebVitalsMetric {
+	name: string;
+	value: number;
+	delta: number;
+	id: string;
+}
 
-  return, nul, l};
+interface WebVitalsProps {
+	onMetric?: (metric: WebVitalsMetric) => void;
+}
+
+export default function WebVitals({ onMetric }: WebVitalsProps) {
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+
+		const getCLS = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			let clsValue = 0;
+			let clsEntries: PerformanceEntry[] = [];
+			let sessionValue = 0;
+			let sessionEntries: PerformanceEntry[] = [];
+
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (!entry.hadRecentInput) {
+						const firstSessionEntry = sessionEntries[0];
+						const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+
+						if (sessionValue && entry.startTime - lastSessionEntry.startTime < 1000 && entry.startTime - firstSessionEntry.startTime < 5000) {
+							sessionValue += entry.value;
+							sessionEntries.push(entry);
+						} else {
+							sessionValue = entry.value;
+							sessionEntries = [entry];
+						}
+
+						if (sessionValue > clsValue) {
+							clsValue = sessionValue;
+							clsEntries = [...sessionEntries];
+						}
+					}
+				}
+
+				onPerfEntry?.({
+					name: 'CLS',
+					value: clsValue,
+					delta: clsValue,
+					id: `cls-${Date.now()}`
+				});
+			}).observe({ type: 'layout-shift', buffered: true });
+		};
+
+		const getFID = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					onPerfEntry?.({
+						name: 'FID',
+						value: entry.processingStart - entry.startTime,
+						delta: entry.processingStart - entry.startTime,
+						id: `fid-${Date.now()}`
+					});
+				}
+			}).observe({ type: 'first-input', buffered: true });
+		};
+
+		const getFCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (entry.name === 'first-contentful-paint') {
+						onPerfEntry?.({
+							name: 'FCP',
+							value: entry.startTime,
+							delta: entry.startTime,
+							id: `fcp-${Date.now()}`
+						});
+					}
+				}
+			}).observe({ type: 'paint', buffered: true });
+		};
+
+		const getLCP = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				const entries = entryList.getEntries();
+				const lastEntry = entries[entries.length - 1];
+				onPerfEntry?.({
+					name: 'LCP',
+					value: lastEntry.startTime,
+					delta: lastEntry.startTime,
+					id: `lcp-${Date.now()}`
+				});
+			}).observe({ type: 'largest-contentful-paint', buffered: true });
+		};
+
+		const getTTFB = (onPerfEntry?: (metric: WebVitalsMetric) => void) => {
+			new PerformanceObserver((entryList) => {
+				for (const entry of entryList.getEntries()) {
+					if (entry.entryType === 'navigation') {
+						onPerfEntry?.({
+							name: 'TTFB',
+							value: entry.responseStart - entry.fetchStart,
+							delta: entry.responseStart - entry.fetchStart,
+							id: `ttfb-${Date.now()}`
+						});
+					}
+				}
+			}).observe({ type: 'navigation', buffered: true });
+		};
+
+		// Initialize all metrics
+		getCLS(onMetric);
+		getFID(onMetric);
+		getFCP(onMetric);
+		getLCP(onMetric);
+		getTTFB(onMetric);
+	}, [onMetric]);
+
+	return null; // This component doesn't render anything
+}
