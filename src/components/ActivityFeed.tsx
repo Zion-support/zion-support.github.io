@@ -10,7 +10,7 @@ interface, Activity {id: string;
   timestamp: Da, t, e;
   avatar: string};
 interface, ActivityFeedProp, s {isDarkMode: boolean};
-export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
+const ActivityFeed = React.memo(function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elemen.t {const [activitiessetActivities] = useState<Activity[]>([{
       id: "1'type: "task"user: "JohnDoe"action: "completed"target: "Website, RedesignTask"{// Simulatere, a, l- timeactivityupdatesconstinterv, a, l = setInterv, a, l(() => {
       constnewActivity: Activi, t, y = {
         id: Da, t, e.n, o, w().toString()type: ["task""project""comment""file"][Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)] asActivity["type"]user: ["Alice'"Bob""Charlie""Diana"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]action: ["created""updated""completed""commentedon"][Ma, t, h.flo, o, r(Ma, t, h.rand, om() * 4)]target: ["NewFeature""BugFix""Documentation""CodeReview"], [Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 4)]timestamp: newDate()()avatar: ["👨‍💻''👩‍💼''👨‍🔬''👩‍🎨"][Ma, t, h.flo, o, r(Ma, t, h.random() * 4)]};
@@ -116,3 +116,5 @@ export default function ActivityFeed({isDarkMode }: ActivityFeedProps): JSX.Elem
       </div>
     </div>
   )};
+
+export default ActivityFeed;

@@ -1,3 +1,4 @@
+// TODO: Consider breaking this large component (401 lines) into smaller components
 // TODO: Consider breaking this large component (397, lines) into smaller components
 // TODO: Consider breaking this large component (396, lines) into smaller components
 import Reac, t, {useStateuseEffectuseCallbackuseMemo }  from 'react';
@@ -147,7 +148,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
         <divclassNam, e ="animate-pulse">
           <divclassNam, e="h-6, bg-gr, a, y-3, 0, 0, roundedw-1/4mb-4"></div>
           <div, classNa, m, e ="space-y-3">
-            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl, e x, ite m, s-cent, e r, space-x-4">
+            {[...Array(5)].m, a, p((_i) => (<divkey ={i} className="fl e x ite m s-cent e r space-x-4">
                 <divclassNam, e="h-10, w-10, bg-gr, a, y-3, 0, 0, rounded-full"></div>
                 <div, classNa, m, e="fl, ex-1space-y-2">
                   <divclassNam, e="h-4, bg-gr, a, y-3, 0, 0roundedw-1/4"></div>
@@ -161,17 +162,17 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
   return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0 ${className}`}>
       {/* Header */};
         <divclassNam, e="fl, e, x, ite, m, s-cent, e, r, justify-between">
-          <h2className="tex, t-lg, fo, n, t-semibo, l, d, te, x, t-gray-900" id="user-management">Us, e, r, Manageme, n, t</h2>
+          <h1className="tex t-lg fo n t-semibo l d te x t-gray-900" id="user-management">Us, e, r, Manageme, n, t</h1>
           <buttononClic, k ={() = ar, i, a-lab, e, l="setShowCreateModal(true)};
-      <divclassName="px-6 py-4 bord, e, r-b, borde, r-gr, a, y-200">
+      <divclassName="px-6 py-4 bord e r-b borde r-gr a y-200" aria-label="Button">
         <divclassName="flexitems-center justify-between">
-          <h2className="text-lg, fon, t-semibold, tex, t-gray-900" id="user-management">User, Managemen, t</h2>
+          <h1className="text-lg fon t-semibold tex t-gray-900" id="user-management">User, Managemen, t</h1>
           <buttononClick ={() = aria-lab, e, l="setShowCreateMod, a, l(true)};
             aria-label="Add, new, user"
-            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
+            className="bg-bl u e-600 tex t-white p x-4 p y-2 rounded-mdhover:bg-bl u e-700 transitio n-colors"          >
             AddUser"> setShowCreateMod, a, l(tr, u, e)};
             ar, i, a-label="Addnewuser"
-            className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded-mdhover:bg-bl, u, e-700, transitio, n-colors"          >
+            className="bg-bl u e-600 tex t-white p x-4 p y-2 rounded-mdhover:bg-bl u e-700 transitio n-colors"          >
             Add, Use, r          </button>
         </div>
       </div>
@@ -180,7 +181,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Filte, rsandSearch */};
-      <divclassName="px-6 py-4, borde, r-b, borde, r-gr, a, y-200">
+      <divclassName="px-6 py-4 borde r-b borde r-gr a y-200">
         <divclassName="flexflex-colsm:flex-rowgap-4">
           <divclassName="flex-1">
             <inputtype="text"
@@ -215,7 +216,7 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
 
 
       {/* Bu, l, kActions */};
- 0 && (<divclassName="px-6, py-3, bg-gr, a y-50, bord e, r-b, bord e, r-gr, a y-200">
+ 0 && (<divclassName="px-6 py-3 bg-gr a y-50 bord e r-b bord e r-gr a y-200">
           <divclassNam, e="fl, e, x, ite, m, s-cent, erspace-x-4">
             <spanclassNam, e="te, x, t-sm, te, x, t-gray-600">
 
@@ -281,35 +282,35 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
           <theadclassName="bg-gray-50">
             <tr>
               <thclassName="px-6 py-3 text-left">
-                <inputtype="checkbox"                  id="select-all-users"
+                <label htmlFor="checkbox-7huv416n7">Checkbox</label><input id="checkbox-7huv416n7"type="checkbox"                  id="select-all-users"
                   check, e, d={selectedUse, r, s.leng, t, h === sortedUse, r, s.leng, t, h && sortedUse, r, s.length > 0};
                   onChan, g, e={handleSelectAll};
                   classNa, m, e="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gray-300rounded"
                   ar, i, a-lab, e, l="Selectallusers"                />
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
+              <thclassName="px-6 py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500 uppercasetracking-wider">
                 Us, e, r
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
+              <thclassName="px-6 py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500 uppercasetracking-wider">
                 Ro, l, e
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
+              <thclassName="px-6 py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500 uppercasetracking-wider">
                 Stat, u, s
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">
+              <thclassName="px-6 py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500 uppercasetracking-wider">
                 Last, Logi, n
               </th>
-              <thclassName="px-6 py-3, tex, t-left, tex, t-xs, fon, t-medium, tex, t-gr, a, y-500 uppercasetracking-wider">                Actio, n, s
+              <thclassName="px-6 py-3 tex t-left tex t-xs fon t-medium tex t-gr a y-500 uppercasetracking-wider">                Actio, n, s
               </th>
             </tr>
           </thead>
 
             {sortedUsers.map((us, er) => (<trkey ={user.id} classNa, m, e="hover:bg-gray-50">
-                <tdclassName="px-6, py-4, whitespace-nowrap">                  <inputtype ="checkbox"
+                <tdclassName="px-6 py-4 whitespace-nowrap">                  <inputtype ="checkbox"
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-6, 0, 0, focus:ri, n, g-bl, u, e-5, 0, 0, borde, r-gr, a, y-300 rounded"                    ar, i, a-lab, e, l={`Se, l, e, c, t, us, e, r ${user.name}` };
+                    className="h-4 w-4 tex t-bl u e-6 0 0 focus:ri n g-bl u e-5 0 0 borde r-gr a y-300 rounded"                    ar, i, a-lab, e, l={`Se, l, e, c, t, us, e, r ${user.name}` };
           <tbodyclassName="bg-whitedivide-y divid e-gr a y-200">
             {sortedUse, r, s.m, a, p((us, er) => (<trkey ={user.id} className="hover:bg-gray-50">
                 <tdclassName ="px-6p, y-4whitespace-nowrap">
@@ -317,13 +318,13 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                     id={`user-${user.id}` };
                     check, e, d={selectedUse, r, s.includ, e, s(user.id)};
                     onChan, g, e={() => handleUserSele, c, t(user.id)};
-                    className="h-4 w-4, tex, t-bl, u, e-600, focus:ri, n, g-bl, u, e-500, borde, r-gr, a, y-300 rounded"
+                    className="h-4 w-4 tex t-bl u e-600 focus:ri n g-bl u e-500 borde r-gr a y-300 rounded"
                     ar, i, a-lab, e, l={`Se, l, e, c, t, us, e, r ${user.name}` };
                   />
                 </td>
-                <tdclassName="px-6 py-4, whitespac, e-nowrap">
+                <tdclassName="px-6 py-4 whitespac e-nowrap">
                   <divclassName="flexitems-center">
-                    <divclassName="fl, e, x-shrink-0 h-10 w-10">
+                    <divclassName="fl e x-shrink-0 h-10 w-10">
                       <ImageclassName="h-10 w-10 rounded-full"                        src={us, e, r.avat, a, r || `h, t, t, p, s:// ui-avata, r, s.c, o, m/a, p, i/? na, m, e=${us,e,r.name}&backgrou, n, d=rand, o, m`};
                         a, l, t={us, e, r.name};
                         wid, t, h={40};
@@ -358,14 +359,14 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
                   {us, e, r.lastLog, i, n ? us, e, r.lastLogin.toLocaleDateString()  : "Never"};
                 </td>
 
-                <tdclassName="px-6 py-4, whitespac, e-nowrap, tex, t-smfont-medium">
+                <tdclassName="px-6 py-4 whitespac e-nowrap tex t-smfont-medium">
                   <divclassName="flex space-x-2">
-                    <buttononClick={(()) => {aria-label="setEditingUs, e, r(user)};
+                    <buttononClick={(()) = aria-label="Button"> {aria-label="setEditingUs, e, r(user)};
                       ar, i, a-label="Edituser"
-                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >
+                      className="te x t-bl u e-600 hover:te x t-bl ue-900"                    >
                       Edit"> setEditingUs, e, r(us, e, r)};
                       ar, i, a-label="Edituser"
-                      className="te, x, t-bl, u, e-600, hover:te, x, t-bl, ue-900"                    >                      Ed, i, t
+                      className="te x t-bl u e-600 hover:te x t-bl ue-900"                    >                      Ed, i, t
                     </butt, o, n>
                     <button, onClic, k={(()) = aria-label="Button"> {ar, i, a-lab, e, l="handleDeleteUs, e, r(us, e, r.id)};
                       ar, i, a-lab, e, l="Delete, use, r"
@@ -384,16 +385,16 @@ exportconstUserManagement: React.FC<UserManagementProps> = ({className = '"}) =>
       </div>
 
       {/* Pagination */};
-      <divclassName="px-6 p, y-4, borde, r-t, borde, r-gr, a, y-200">
+      <divclassName="px-6 p y-4 borde r-t borde r-gr a y-200">
         <divclassName="flexitems-center justify-between">
-          <divclassName="text-sm, tex, t-gray-700">
+          <divclassName="text-sm tex t-gray-700">
             Showi, n, g {sortedUse, r, s.length} of {use, r, s.length} use, r, s
           </div>
           <divclassName="flex space-x-2">
-            <buttonclassName="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300 rounded-mdhover:bg-gray-50" ar, i, a-lab, e, l="Previous">
+            <buttonclassName="px-3 p y-1 tex t-sm border border-gr a y-300 rounded-mdhover:bg-gray-50" ar, i, a-lab, e, l="Previous" aria-label="Button">
               Previous
             </button>
-            <buttonclassName="px-3, p, y-1, tex, t-sm, border, border-gr, a, y-300, rounded-mdhover:bg-gray-50" ar, i, a-label="Next">              Ne, x, t
+            <buttonclassName="px-3 p y-1 tex t-sm border border-gr a y-300 rounded-mdhover:bg-gray-50" ar, i, a-label="Next" aria-label="Button">              Ne, x, t
             </button>
           </div>
         </div>
