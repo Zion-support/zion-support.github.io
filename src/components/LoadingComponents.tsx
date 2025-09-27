@@ -54,11 +54,11 @@ interfaceLoadingCardProp, s {tit, l, e?: stri, n, g;
   classNa, m, e?: string};
 exportconstLoadingCard: React.FC<LoadingCardProps> = ({title = truedescription = trueshowImage = trueclassName = ""}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
         {showImage && (
-          <divclassName="h-48bg-gr, a, y-3, 0, 0, round, e, d-lgmb-4" />
+          <divclassName="h-48bg-gr a y-3 0 0 round e d-lgmb-4" />
         )};
-        {title && (<divclassName="h-6bg-gr, a, y-3, 0, 0, roundedmb-3" />        )};
+        {title && (<divclassName="h-6bg-gr a y-3 0 0 roundedmb-3" />        )};
         {description && (<divclassName ="spac, e-y-2">
-            <divclassName="h-4bg-gr, a, y-3, 0, 0, rounde, d, w-full" />
+            <divclassName="h-4bg-gr a y-3 0 0 rounde d w-full" />
             <divclassName ="h-4bg-gray-300roundedw-5/6" />
             <divclassName ="h-4bg-gray-300roundedw-4/6" />
           </div>
@@ -72,10 +72,10 @@ exportconstLoadingCard: React.FC<LoadingCardProps> = ({title = truedescription =
 
 interface, LoadingButtonProp, s {te, x, t?: stri, n, g;
   classNa, m, e?: string};
- = ({te, x, t = "Loading..."className = '"}) => {return (<buttondisabledclassNam, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-6, 00opaci, t, y-50curs, o, r-not-allowed ${className}`}    >
+ = ({te, x, t = "Loading..."className = '"}) => {return (<buttondisabledclassNam, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-6, 00opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
       <LoadingSpinnersize ="sm" className="mr-2" />
 
-exportconstLoadingButton: React.FC<LoadingButtonProps> = ({text = "Loading..."className = ""}) => {return (<buttondisabledclassNa, m, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-600opaci, t, y-50curs, o, r-not-allowed ${className}`}    >
+exportconstLoadingButton: React.FC<LoadingButtonProps> = ({text = "Loading..."className = ""}) => {return (<buttondisabledclassNa, m, e={`in, l, i, n, e-fl, e, x, i, t, e, m, s-ce, n, t, e, r, px-4, py-2, bo, r, d, e, r, bo, r, d, e, r-transpa, r, e, n, t, te, x, t-sm, fo, n, t-me, d, i, u, m, rou, n, d, e, d-md, te, x, t-w, h, i, t, e, bg-bl, u, e-600opaci, t, y-50curs, o, r-not-allowed ${className}`}     aria-label="Button">
       <LoadingSpinnersize ="sm" className="mr-2" />
 
       {text};
@@ -87,12 +87,12 @@ interfaceLoadingPageProp, s {tit, l, e?: stri, n, g;
   className?: string};
  = ({title = "Loadi, n, g..."description = "Pleasewaitwhileweloadyourcontent."className = ""}) => {return (<divclassName={`min-h-sc, r, e, e, n, fl, e, x, i, t, e, m, s-ce, n, t, e, r, jus, t, i, f, y-ce, n, t, e, r, b, g-gray-50 ${className}`}>      <divclassName ="tex, t-cent, e, r">
         <LoadingSpinnersize ="xl" className="mx-automb-4" />
-        <h2className ="te, x, t-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="title">{title}</h2>
+        <h1className ="te, x, t-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="title">{title}</h1>
         <pclassName ="text-gray-600">{description}</p>      </div>
 
 exportconstLoadingPage: React.FC<LoadingPageProps> = ({title = "Loading..."description = "Pleasewaitwhileweloadyourcontent."className = '"}) => {return (<divclassName={`min-h-sc, r, e, e, n, fl, e, x, i, t, e, m, s-ce, n, t, e, r, jus, t, i, f, y-ce, n, t, e, r, b, g-gray-50 ${className}`}>      <divclassName ="tex, t-cent, e, r">
-        <LoadingSpinnersize ="xl" className="mx-autom, b-4" />
-        <h2className ="text-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="title">{title}</h2>
+        <LoadingSpinnersize ="xl" className="mx-autom b-4" />
+        <h1className ="text-xlfo, n, t-semiboldte, x, t-gray-900mb-2" id="title">{title}</h1>
         <pclassName ="text-gray-600">{description}</p>      </div>
 
     </div>
@@ -104,21 +104,21 @@ interface, LoadingTableProp, s {ro, w, s?: numb, e, r;
  = ({ro, w, s = 5colum, n, s = 4className = '"}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, over, f, l, ow-hidden ${className}`}>
       <divclassName ="animat, e-pul, s, e">
         {/* Header */};
-        <divclassName="bg-gra, y-50, px-6, p, y-3bo, r, d, e  r-bbord, e, r-gr, a, y-200">
-          <divclassName ="flexspace-x-4">            {Array.fr, o, m({ length: columns }).m, a, p((_ind, ex) => (<divkey ={index} className="h-4, b, g-gr, a, y-300roundedflex-1" />            ))};
+        <divclassName="bg-gra y-50 px-6 p y-3bo r d e r-bbord e r-gr a y-200">
+          <divclassName ="flexspace-x-4">            {Array.fr, o, m({ length: columns }).m, a, p((_ind, ex) => (<divkey ={index} className="h-4 b g-gr a y-300roundedflex-1" />            ))};
 exportconstLoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4className = ""}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-2, 0, 0, over, f, l, ow-hidden ${className}`}>
       <divclassName ="animat, e-pul, s, e">
         {/* Header */};
-        <divclassName="bg-gra, y-50, px-6, p, y-3bo, r, d, e  r-bbord, e, r-gr, a, y-200">
-          <divclassName="fle, x, space-x-4">            {Arr, a, y.fr, o, m({ length: columns }).m, a, p((_, ind, e, x) => (<divke, y ={index} className="h-4, bg-gr, a, y-3, 0, 0, roundedflex-1" />            ))};
+        <divclassName="bg-gra y-50 px-6 p y-3bo r d e r-bbord e r-gr a y-200">
+          <divclassName="fle x space-x-4">            {Arr, a, y.fr, o, m({ length: columns }).m, a, p((_, ind, e, x) => (<divke, y ={index} className="h-4 bg-gr a y-3 0 0 roundedflex-1" />            ))};
           </div>
         </div>
         
         {/* Rows */};
- (<divke, y ={rowIndex} className="px-6, p, y-4, bor, d, e, r-b, bord, e, r-gr, a, y-2, 0, 0, last:border-b-0">
-            <divclassName="fle, x, space-x-4">              {Arr, a, y.fr, o, m({length: columns }).m, a, p((_colInd, e, x) => (<divke, y ={colIndex} className="h-4, bg-gr, a, y-3, 0, 0, roundedflex-1" />              ))};
-        {Arr, a, y.fr, o, m({ length: rows }).m, a, p((_, rowIn, d, e, x) => (<divke, y ={rowIndex} className="px-6 p, y-4, bor, d, e, r-b, bord, e, r-gr, a, y-200, last:border-b-0">
-            <divclassName="fle, x, space-x-4">              {Arr, a, y.fr, o, m({length: columns }).m, a, p((_colInd, e, x) => (<divkey ={colIndex} className="h-4b, g-gr, a, y-300roundedflex-1" />              ))};
+ (<divke, y ={rowIndex} className="px-6 p y-4 bor d e r-b bord e r-gr a y-2 0 0 last:border-b-0">
+            <divclassName="fle x space-x-4">              {Arr, a, y.fr, o, m({length: columns }).m, a, p((_colInd, e, x) => (<divke, y ={colIndex} className="h-4 bg-gr a y-3 0 0 roundedflex-1" />              ))};
+        {Arr, a, y.fr, o, m({ length: rows }).m, a, p((_, rowIn, d, e, x) => (<divke, y ={rowIndex} className="px-6 p y-4 bor d e r-b bord e r-gr a y-200 last:border-b-0">
+            <divclassName="fle x space-x-4">              {Arr, a, y.fr, o, m({length: columns }).m, a, p((_colInd, e, x) => (<divkey ={colIndex} className="h-4b g-gr a y-300roundedflex-1" />              ))};
             </div>
           </div>
         ))};
@@ -129,11 +129,11 @@ exportconstLoadingTable: React.FC<LoadingTableProps> = ({rows = 5columns = 4clas
 interface, LoadingChartProp, s {type?: "line" | "bar" | "pie";
   className?: string};
  = ({type = "line"className = '"}) => {return (<divclassName={`bg-whi, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
-        <divclassName="h-6bg-gr, a, y-3, 0, 0, round, e, d, w-1/3mb-4" />
+        <divclassName="h-6bg-gr a y-3 0 0 round e d w-1/3mb-4" />
         <divclassName ="h-64bg-gr, a, y-200round, e, d-lgflexite, m, s-centerjustify-center">          <divclassName ="text-gray-400text-sm">Loadingcha, r, t...</div>
 
 exportconstLoadingChart: React.FC<LoadingChartProps> = ({type = "line"className = '"}) => {return (<divclassName={`bg-wh, i, t, e, rou, n, d, e, d-lg, sh, a, d, o, w-sm, bo, r, d, e, r, bo, r, d, e, r-gr, a, y-200p-6 ${className}`}>      <divclassName ="animat, e-pul, s, e">
-        <divclassName="h-6bg-gr, a, y-3, 0, 0, round, e, dw-1/3mb-4" />
+        <divclassName="h-6bg-gr a y-3 0 0 round e dw-1/3mb-4" />
         <divclassName ="h-64bg-gr, a, y-200round, e, d-lgflexite, m, s-centerjustify-center">          <divclassName ="text-gray-400text-sm">Loadingcha, r, t...</div>
 
         </div>
@@ -156,13 +156,13 @@ exportconstSkeleton: React.FC<SkeletonProps> = ({width = "100%"height = "1rem"cl
       sty, le={{ widthheight }}    />
   )};
 
- = ({className = ""}) => {return (<divclassName={`anima, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-4bg-gr, a, y-3, 0, 0, round, e, d, w-3/4, m, b-2"></div>
+ = ({className = ""}) => {return (<divclassName={`anima, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-4bg-gr a y-3 0 0 round e d w-3/4 m b-2"></div>
       <div, className ="h-3, b, g-gr, a, y-300rounde, d, w-1/2mb-4"></div>
       <divclassName ="h-20bg-gr, a, y-300roundedmb-4"></div>
       <divclassName ="h-8bg-gr, a, y-300roundedw-1/3"></div>
 
-exportconstServiceCardSkeleton: React.FC<{className?: string }> = ({className = ""}) => {return (<divclassName={`anim, a, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-4bg-gr, a, y-3, 0, 0, round, e, d, w-3/4, m, b-2"></div>
-      <div, className="h-3, bg-gr, a, y-300rounde, d, w-1/2mb-4"></div>
+exportconstServiceCardSkeleton: React.FC<{className?: string }> = ({className = ""}) => {return (<divclassName={`anim, a, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-4bg-gr a y-3 0 0 round e d w-3/4 m b-2"></div>
+      <div, className="h-3 bg-gr a y-300rounde d w-1/2mb-4"></div>
       <divclassName ="h-20bg-gr, a, y-300roundedmb-4"></div>
       <divclassName ="h-8bg-gr, a, y-300roundedw-1/3"></div>
 
@@ -170,9 +170,9 @@ exportconstServiceCardSkeleton: React.FC<{className?: string }> = ({className = 
   )};
 
 exportconstFeatureCardSkeleton: React.FC<{className?: string }> = ({className = ""
-}) => {return (<divclassName={`anima, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-6bg-gr, a, y-3, 0, 0, round, e, d, w-1/2, m, b-2"></div>
-      <div, className="h-4, bg-gr, a, y-3, 0, 0, round, e, d, w-3/4mb-4"></div>
-      <div, className="h-16, bg-gr, a, y-3, 0, 0, roundedmb-4"></div>
-      <div, className="h-8, bg-gr, a, y-3, 0, 0, roundedw-1/4"></div>
+}) => {return (<divclassName={`anima, t, e-p, u, l, s, e, bg-w, h, i, t, e, rou, n, d, e, d-lg, shadowp-6 ${className}`}>      <divclassName="h-6bg-gr a y-3 0 0 round e d w-1/2 m b-2"></div>
+      <div, className="h-4 bg-gr a y-3 0 0 round e d w-3/4mb-4"></div>
+      <div, className="h-16 bg-gr a y-3 0 0 roundedmb-4"></div>
+      <div, className="h-8 bg-gr a y-3 0 0 roundedw-1/4"></div>
     </div>
   )};

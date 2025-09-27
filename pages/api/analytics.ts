@@ -13,17 +13,37 @@ export default async function handler(req: any, res: any) {
     }
 
     // Process analytics events
-    const processedEvents = events.map((event: any) => ({
-      ...event,
-      timestamp: new Date().toISOString(),
-      sessionId: session?.id || 'anonymous',
-    }));
+    console.log("Analytics events received:", events.length);
+    console.log("Session data:", session);
 
-    // Here you would typically send to your analytics service
-    console.log('Analytics events received:', processedEvents);
+    // Here you would typically:
+    // 1. Store events in a database
+    // 2. Send to analytics service (Google Analytics, Mixpanel, etc.)
+    // 3. Process for real-time dashboards
+    // 4. Generate reports
 
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({ 
-      succe, s, s: true, processe, d: even, t, s.length, timestam, p: Da, t, e.n, o, w()
-    })} cat, c, h (err, o, r) {
-    conso, l, e.err, o, r('Analytics, API, error:', err, o, r);
-    r, e, s.stat, u, s(5, 0, 0).js, o, n({ err, o, r: 'Internal, server, error' })}};
+    // For now, just log the events
+    events.forEach((event: any) => {
+      console.log(`Event: ${event.category} - ${event.action}`, {
+        label: event.label,
+        value: event.value,
+        timestamp: new Date(event.timestamp).toISOString(),
+        sessionId: event.sessionId,
+        userId: event.userId,
+        url: event.url
+      });
+    });
+
+    // Simulate processing time
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    res.status(200).json({
+      success: true,
+      processed: events.length,
+      timestamp: Date.now()
+    });
+  } catch (error) {
+    console.error("Analytics API error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}

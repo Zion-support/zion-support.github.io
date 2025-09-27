@@ -20,8 +20,7 @@ import {
   Search,
   X
 } from 'lucide-react';
-========
-import React, { useState  useEffect  useCallback } from 'react';
+=import React, { useState  useEffect  useCallback } from 'react';
 import { motion  AnimatePresence  } from "framer-motion";
 import { Activity
   AlertTriangle
@@ -132,8 +131,7 @@ export default function ComprehensiveMonitoringDashboard({
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [alerts, setAlerts] = useState<Array<{
-========
-  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
+=  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alertssetAlerts] = useState<Array<{
@@ -177,8 +175,7 @@ export default function ComprehensiveMonitoringDashboard({
       setIsLoading(false);
     }
   }, [onMetricsUpdate]);
-========
-      checkForAlerts(newMetrics)} catch (error) {
+=      checkForAlerts(newMetrics)} catch (error) {
       console.error('Failed to collect metrics:'error)} finally {
       setIsLoading(false)}
   }[onMetricsUpdate]);
@@ -200,8 +197,7 @@ export default function ComprehensiveMonitoringDashboard({
       largestContentfulPaint: 0, // Will be updated by Web Vitals
       cumulativeLayoutShift: 0, // Will be updated by Web Vitals
       firstInputDelay: 0, // Will be updated by Web Vitals
-========
-      loadTime: navigation.loadEventEnd - navigation.fetchStart 
+=      loadTime: navigation.loadEventEnd - navigation.fetchStart 
       firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
@@ -224,8 +220,7 @@ export default function ComprehensiveMonitoringDashboard({
       cpuUsage: 0, // Would need Web Workers to measure
       networkLatency: connection ? connection.rtt : 0,
       bundleSize: 0, // Would need to calculate from loaded resources
-========
-    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
+=    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
       cpuUsage: 0// Would need Web Workers to measure
       networkLatency: connection ? connection.rtt : 0bundleSize: 0// Would need to calculate from loaded resources
 >>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveMonitoringDashboard.tsx
@@ -292,8 +287,7 @@ export default function ComprehensiveMonitoringDashboard({
       alert.id === alertId ? { ...alert, resolved: true } : alert
     ));
   };
-========
-    setAlerts(prev => [...prev...newAlerts])};
+=    setAlerts(prev => [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
@@ -318,8 +312,7 @@ export default function ComprehensiveMonitoringDashboard({
     if (score >= 60) return { grade: 'D', color: 'text-orange-600' };
     return { grade: 'F', color: 'text-red-600' };
   };
-========
-      const interval = setInterval(collectMetricsrefreshInterval);
+=      const interval = setInterval(collectMetricsrefreshInterval);
       return () => clearInterval(interval)}
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 

@@ -21,8 +21,7 @@ import {
   TrendingUp,
   TrendingDown,
 } from 'lucide-react';
-========
-import React, { useState  useEffect  useCallback } from 'react';
+=import React, { useState  useEffect  useCallback } from 'react';
 import { motion  AnimatePresence  } from "framer-motion";
 import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/Card";
 import { Shield
@@ -172,8 +171,7 @@ export default function ComprehensiveSecurityDashboard({
           security: true,
           xss: true,
           frame: true,
-========
-          score: 95 + Math.random() * 5grade: 'A+'issues: []
+=          score: 95 + Math.random() * 5grade: 'A+'issues: []
         }csp: {
           enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\"]
         }headers: {
@@ -192,8 +190,7 @@ export default function ComprehensiveSecurityDashboard({
 <<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
     };
   }, [selectedTimeRange]);
-========
-    }}[selectedTimeRange]);
+=    }}[selectedTimeRange]);
 >>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {const newAlerts = [];
@@ -235,8 +232,7 @@ export default function ComprehensiveSecurityDashboard({
 <<<<<<<< HEAD:src/components/ComprehensiveSecurityDashboard.tsx.broken
     setAlerts(prev => [...prev, ...newAlerts]);
   }, []);
-========
-    setAlerts(prev => [...prev...newAlerts])}[]);
+=    setAlerts(prev => [...prev...newAlerts])}[]);
 >>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
 
   const loadMetrics = useCallback(async () => {
@@ -259,8 +255,7 @@ export default function ComprehensiveSecurityDashboard({
       alert.id === alertId ? { ...alert, resolved: true } : alert
     ));
   };
-========
-      onSecurityUpdate?.(mockData)} catch (error) {
+=      onSecurityUpdate?.(mockData)} catch (error) {
       console.error('Failed to load security metrics:'error)} finally {
       setIsLoading(false)}
   }[generateMockDatagenerateAlertsonSecurityUpdate]);
@@ -280,8 +275,7 @@ export default function ComprehensiveSecurityDashboard({
       return () => clearInterval(interval);
     }
   }, [loadMetrics, enableRealTimeMonitoring, refreshInterval]);
-========
-      const interval = setInterval(loadMetricsrefreshInterval);
+=      const interval = setInterval(loadMetricsrefreshInterval);
       return () => clearInterval(interval)}
   }[loadMetricsenableRealTimeMonitoringrefreshInterval]);
 >>>>>>>> 3ef294bd58570d5cfb0ab23c2369801487b5a40c:temp-broken-components/ComprehensiveSecurityDashboard.tsx
