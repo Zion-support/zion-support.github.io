@@ -363,15 +363,15 @@ class SecurityEnhancer {
       lastClickTime = now;
     });
 
-    // Monitor for console access attempts
-    const originalConsole = console;
-    Object.keys(console).forEach(key => {
-      const originalMethod = (console as any)[key];
-      (console as any)[key] = (...args: any[]) => {
-        this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
-        return originalMethod.apply(console, args);
-      };
-    });
+    // Monitor for console access attempts (disabled to prevent infinite recursion)
+    // const originalConsole = console;
+    // Object.keys(console).forEach(key => {
+    //   const originalMethod = (console as any)[key];
+    //   (console as any)[key] = (...args: any[]) => {
+    //     this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
+    //     return originalMethod.apply(console, args);
+    //   };
+    // });
   }
 
   private monitorNetworkRequests(): void {
@@ -472,8 +472,12 @@ class SecurityEnhancer {
     // Update security score
     this.updateSecurityScore(event);
     
-    // Log security event
-    console.warn(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    // Log security event (avoid infinite recursion by not using console.warn)
+    if (severity === 'critical' || severity === 'high') {
+      console.error(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    } else {
+      console.info(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
+    }
   }
 
   private updateSecurityScore(event: SecurityEvent): void {
@@ -534,4 +538,5 @@ Security Report:
   }
 }
 
+export { SecurityEnhancer };
 export default SecurityEnhancer;

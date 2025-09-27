@@ -577,4 +577,5 @@ Accessibility Report:
   }
 }
 
+export { AccessibilityEnhancer };
 export default AccessibilityEnhancer;

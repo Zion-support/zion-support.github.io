@@ -4,7 +4,7 @@
 import { PerformanceOptimizer } from './performanceOptimizer';
 import { SecurityEnhancer } from './securityEnhancer';
 import { AccessibilityEnhancer } from './accessibilityEnhancer';
-import { EnhancedErrorHandler } from './enhancedErrorHandling';
+import { ErrorHandler } from './errorHandling';
 
 interface EnhancementConfig {
   performance: {
@@ -69,14 +69,14 @@ export class EnhancementSuite {
   private performanceOptimizer: PerformanceOptimizer;
   private securityEnhancer: SecurityEnhancer;
   private accessibilityEnhancer: AccessibilityEnhancer;
-  private errorHandler: EnhancedErrorHandler;
+  private errorHandler: ErrorHandler;
   private metricsInterval: NodeJS.Timeout | null = null;
 
   private constructor(config: Partial<EnhancementConfig> = {}) {
     this.performanceOptimizer = PerformanceOptimizer.getInstance();
     this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
-    this.errorHandler = EnhancedErrorHandler.getInstance();
+    this.errorHandler = ErrorHandler.getInstance();
     
     this.config = {
       performance: {
@@ -129,7 +129,7 @@ export class EnhancementSuite {
     this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
     this.securityEnhancer = SecurityEnhancer.getInstance(this.config.security);
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance(this.config.accessibility);
-    this.errorHandler = EnhancedErrorHandler.getInstance();
+    this.errorHandler = ErrorHandler.getInstance();
 
     // Initialize error handler
     if (this.config.errorHandling.enableGlobalErrorHandling) {
