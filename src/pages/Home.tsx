@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
 import Header from '../components/Header';
 // import { Footer } from '../components/Footer';

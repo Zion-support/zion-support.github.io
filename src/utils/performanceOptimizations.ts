@@ -66,6 +66,10 @@ export const getMemoryUsage = (): { used: number; total: number; percentage: num
   }
 
   const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  if (!memory) {
+    return null;
+  }
+
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
