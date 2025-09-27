@@ -75,7 +75,11 @@ class SecurityEnhancer {
 
     this.config = { ...this.config, ...config };
     
+<<<<<<< HEAD
     // Set up global reference for XMLHttpRequest monitoring
+=======
+    // Set global reference for XMLHttpRequest monitoring
+>>>>>>> cc85e364f81ca4c0f85e428f3362469b3f80604b
     (window as any).__securityEnhancerInstance = this;
     
     this.setupCSP();
@@ -407,7 +411,7 @@ class SecurityEnhancer {
       }
       
       return (originalXHR as any).apply(this, [method, url, ...args]);
-    };
+    };a4c0f85e428f3362469b3f80604b
   }
 
   private monitorDOMChanges(): void {
