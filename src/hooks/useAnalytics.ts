@@ -9,31 +9,22 @@ declare global {
 
 export function useAnalytics() {
   useEffect(() => {
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
-    }
-    (window as any).gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    // Initialize analytics if needed
   }, []);
 
-  const trackClick = (eventName: string, category: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, {
+  const trackClick = (action: string, category: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('event', 'click', {
         event_category: category,
-        event_label: eventName,
+        event_label: action,
       });
     }
   };
 
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
-        page_title: pageName,
+  const trackPageView = (page: string) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: page,
         page_location: window.location.href,
       });
     }

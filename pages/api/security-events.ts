@@ -1,33 +1,50 @@
-// API endpoint for security events
-export default async function handler(req: any, res: any) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+interface SecurityEvent {
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  source: string;
+  timestamp: number;
+  metadata?: Record<string, any>;
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const securityEvent = req.body;
+    const securityEvent: SecurityEvent = req.body;
 
-    // Validate the request
-    if (!securityEvent || !securityEvent.type) {
-      return res.status(400).json({ error: 'Invalid security event data' });
+    // Validate required fields
+    if (!securityEvent.type || !securityEvent.severity || !securityEvent.description) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // Log security event
-    console.warn('Security event reported:', securityEvent);
-
-    // Here you would typically send to your security monitoring service
-    // e.g., SIEM, security dashboard, etc.
+    // Log security event (in production, you might want to send to a security monitoring service)
+    console.warn('Security Event:', {
+      type: securityEvent.type,
+      severity: securityEvent.severity,
+      description: securityEvent.description,
+      source: securityEvent.source,
+      timestamp: new Date(securityEvent.timestamp).toISOString(),
+      metadata: securityEvent.metadata,
+    });
 
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    return res.status(200).json({
+    res.status(200).json({
       success: true,
       eventId: `sec_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: Date.now()
     });
   } catch (error) {
     console.error('Security API error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

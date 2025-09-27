@@ -1,34 +1,35 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { url, w, h, q, f } = req.query;
-
-  if (!url) {
-    return res.status(400).json({ error: 'URL parameter is required' });
-  }
-
   try {
-    // Basic image optimization logic
-    const optimizedUrl = url + '?w=' + (w || 800) + '&h=' + (h || 600) + '&q=' + (q || 75) + '&f=' + (f || 'webp');
-    
+    const { imageUrl, width, height, quality } = req.body;
+
+    if (!imageUrl) {
+      return res.status(400).json({ error: 'Image URL is required' });
+    }
+
+    // Fetch the image
+    const response = await fetch(imageUrl);
+    if (!response.ok) {
+      return res.status(400).json({ error: 'Failed to fetch image' });
+    }
+
+    const imageBuffer = await response.arrayBuffer();
+
     // For now, just return the original image
     // In a production environment, you would implement actual image optimization here
     // using libraries like Sharp or ImageMagick
     
-    return res.status(200).json({
-      optimizedUrl,
-      originalUrl: url,
-      width: w,
-      height: h,
-      quality: q,
-      format: f
-    });
+    res.status(200).send(Buffer.from(imageBuffer));
   } catch (error) {
     console.error('Image optimization error:', error);
-    return res.status(500).json({ error: 'Image optimization failed' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
