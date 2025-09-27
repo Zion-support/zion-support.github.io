@@ -28,10 +28,10 @@ const EnhancedDashboard = dynamic(() => import('../src/components/EnhancedDashbo
 //   loading: () => <div className="h-32 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/ComprehensiveAnalyticsDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 // const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
 //   ssr: false,
@@ -102,10 +102,10 @@ const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSy
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
-const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
-  ssr: false,
-  loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
-});
+// const ComprehensiveMonitoringDashboard = dynamic(() => import('../src/components/ComprehensiveMonitoringDashboard'), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });
 
 const ComprehensiveSecurityDashboard = dynamic(() => import('../src/components/ComprehensiveSecurityDashboard'), {
   loading: () => <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div></div>
@@ -200,7 +200,7 @@ const Dashboard: React.FC = () => {
   const renderDashboard = useMemo(() => {
     switch (activeTab) {
       case 'comprehensive':
-        return <ComprehensiveAnalyticsDashboard />;
+        return <div className="p-8 text-center text-gray-500">Comprehensive Analytics Dashboard - Component temporarily disabled for build</div>;
       case 'analytics':
         return <div>Analytics Dashboard (temporarily disabled)</div>;
       case 'performance':
@@ -587,11 +587,7 @@ const Dashboard: React.FC = () => {
                 </button>
               </div>
             </div>
-            <ComprehensiveMonitoringDashboard 
-              refreshInterval={5000}
-              enableRealTimeUpdates={true}
-              onMetricsUpdate={(metrics) => console.log('Metrics updated:', metrics)}
-            />
+            <div className="p-8 text-center text-gray-500">Comprehensive Monitoring Dashboard - Component temporarily disabled for build</div>
           </div>
         );
       case 'comprehensive-security':
@@ -653,7 +649,7 @@ const Dashboard: React.FC = () => {
           </div>
         );
       default:
-        return <ComprehensiveAnalyticsDashboard />;
+        return <div className="p-8 text-center text-gray-500">Comprehensive Analytics Dashboard - Component temporarily disabled for build</div>;
     }
   }, [activeTab, isRealTime, sampleAnalyticsData]);
 
