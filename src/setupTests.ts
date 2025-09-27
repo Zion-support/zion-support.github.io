@@ -1,16 +1,11 @@
 import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-  takeRecords() { return []; }
-  root = null;
-  rootMargin = '';
-  thresholds = [];
-} as typeof IntersectionObserver;
+(global as unknown as { IntersectionObserver: jest.Mock }).IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
@@ -53,6 +48,14 @@ if (!window.performance) {
     writable: true
   });
 }
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: PerformanceObserverCallback) {}
+  disconnect() {}
+  observe(options?: PerformanceObserverInit) {}
+  takeRecords() { return []; }
+};
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {

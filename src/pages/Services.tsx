@@ -50,7 +50,7 @@ export default function Services(): React.JSX.Element {
         <meta property="og:description" content="Comprehensive AI & IT solutions" />
       </Helmet>
       
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16" data-testid="services-page">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

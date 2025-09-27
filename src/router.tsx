@@ -21,7 +21,7 @@ const Portfolio = lazy(() => import('./pages/Portfolio'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Layout component
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="min-h-screen bg-white">
     <SkipLink />
     <ScrollToTop />
@@ -81,6 +81,7 @@ export const router = createBrowserRouter([
   },
 ], {
   future: {
+    // v7_startTransition: true, // Removed deprecated property
     v7_relativeSplatPath: true,
   },
 });

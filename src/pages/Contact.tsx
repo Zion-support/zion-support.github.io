@@ -31,7 +31,7 @@ export default function Contact(): React.JSX.Element {
         <meta property="og:description" content="Get in touch with our expert team" />
       </Helmet>
       
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16" data-testid="contact-page">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

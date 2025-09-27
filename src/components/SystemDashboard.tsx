@@ -1,240 +1,318 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Cpu, Wifi, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
+import { enhancementSuite, getSystemHealth } from '../utils/enhancementSuite';
+
+interface HealthReport {
+  overall: 'excellent' | 'good' | 'fair' | 'poor';
+  performance: number;
+  security: number;
+  accessibility: number;
+  reliability: number;
+  recommendations: string[];
+}
 
 interface SystemMetrics {
   performance: {
-    score: number;
     fcp: number;
     lcp: number;
     fid: number;
     cls: number;
+    ttfb: number;
   };
-  resources: {
-    memory: number;
-    cpu: number;
-    storage: number;
+  security: {
+    violationCount: number;
+    lastViolation: Date | null;
+    rateLimitHits: number;
   };
-  network: {
-    latency: number;
-    bandwidth: number;
-    status: 'online' | 'offline' | 'slow';
+  accessibility: {
+    violationCount: number;
+    lastAudit: Date | null;
+    complianceScore: number;
   };
   errors: {
-    count: number;
-    lastError: string | null;
-    critical: boolean;
+    totalErrors: number;
+    criticalErrors: number;
+    lastError: Date | null;
   };
 }
 
 const SystemDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<SystemMetrics>({
-    performance: { score: 0, fcp: 0, lcp: 0, fid: 0, cls: 0 },
-    resources: { memory: 0, cpu: 0, storage: 0 },
-    network: { latency: 0, bandwidth: 0, status: 'online' },
-    errors: { count: 0, lastError: null, critical: false }
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
+  const [healthReport, setHealthReport] = useState<HealthReport | null>(null);
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showSystemDashboard') === 'true';
-    
-    if (!shouldShow) return;
-
-    const updateMetrics = () => {
-      // Get performance metrics
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      
-      // Calculate performance score
-      const fcp = fcpEntry ? fcpEntry.startTime : 0;
-      const lcp = performance.now();
-      const fid = 0; // Would need to measure this
-      const cls = 0; // Would need to measure this
-      
-      const score = Math.max(0, 100 - (fcp / 10) - (lcp / 100) - (fid / 10) - (cls * 100));
-
-      // Simulate resource usage (performance.memory is not available in all browsers)
-      const memory = 0; // Simulated memory usage
-      const cpu = Math.random() * 100;
-      const storage = Math.random() * 100;
-
-      // Simulate network metrics
-      const latency = Math.random() * 100;
-      const bandwidth = Math.random() * 1000;
-      const status = latency > 500 ? 'slow' : 'online';
-
-      // Get error count from console
-      const errorCount = 0; // Would need to track this
-      const lastError = null; // Would need to track this
-      const critical = errorCount > 10;
-
-      setMetrics({
-        performance: { score, fcp, lcp, fid, cls },
-        resources: { memory, cpu, storage },
-        network: { latency, bandwidth, status },
-        errors: { count: errorCount, lastError, critical }
-      });
+    const loadData = () => {
+      try {
+        const health = getSystemHealth();
+        const systemMetrics = enhancementSuite.getSystemMetrics();
+        
+        setHealthReport(health);
+        setMetrics(systemMetrics);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Failed to load system data:', error);
+        setIsLoading(false);
+      }
     };
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, 5000);
-
+    loadData();
+    
+    // Update every 30 seconds
+    const interval = setInterval(loadData, 30000);
+    
     return () => clearInterval(interval);
   }, []);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'online': return 'text-green-500';
-      case 'slow': return 'text-yellow-500';
-      case 'offline': return 'text-red-500';
-      default: return 'text-gray-500';
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 75) return 'text-yellow-600';
+    if (score >= 60) return 'text-orange-600';
+    return 'text-red-600';
+  };
+
+  const getOverallColor = (overall: string): string => {
+    switch (overall) {
+      case 'excellent': return 'text-green-600 bg-green-50';
+      case 'good': return 'text-blue-600 bg-blue-50';
+      case 'fair': return 'text-yellow-600 bg-yellow-50';
+      case 'poor': return 'text-red-600 bg-red-50';
+      default: return 'text-gray-600 bg-gray-50';
     }
   };
 
-  const getPerformanceColor = (score: number) => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
+  const formatTimestamp = (date: Date | null): string => {
+    if (!date) return 'Never';
+    return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
+      Math.floor((date.getTime() - Date.now()) / (1000 * 60)),
+      'minute'
+    );
   };
 
-  if (!isVisible) {
+  const handleOptimize = () => {
+    enhancementSuite.optimizeAll();
+    // Reload data after optimization
+    setTimeout(() => {
+      const health = getSystemHealth();
+      const systemMetrics = enhancementSuite.getSystemMetrics();
+      setHealthReport(health);
+      setMetrics(systemMetrics);
+    }, 1000);
+  };
+
+  if (isLoading) {
     return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 left-4 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-colors"
-        aria-label="Show system dashboard"
-      >
-        <Activity className="w-5 h-5" />
-      </button>
+      <div className="flex items-center justify-center p-8">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <span className="ml-3 text-gray-600">Loading system metrics...</span>
+      </div>
+    );
+  }
+
+  if (!healthReport || !metrics) {
+    return (
+      <div className="p-8 text-center">
+        <p className="text-red-600">Failed to load system data</p>
+      </div>
     );
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 max-w-sm z-50">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
-          <Activity className="w-5 h-5 mr-2" />
-          System Dashboard
-        </h3>
+    <div className="max-w-6xl mx-auto p-6 space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-gray-900">System Dashboard</h1>
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-          aria-label="Close system dashboard"
+          onClick={handleOptimize}
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          ×
+          Optimize System
         </button>
       </div>
-      
-      <div className="space-y-4">
-        {/* Performance Metrics */}
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-            <Zap className="w-4 h-4 mr-2" />
-            Performance
-          </h4>
-          <div className="space-y-1">
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Score:</span>
-              <span className={getPerformanceColor(metrics.performance.score)}>
-                {Math.round(metrics.performance.score)}/100
-              </span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-              <span>{Math.round(metrics.performance.fcp)}ms</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-              <span>{Math.round(metrics.performance.lcp)}ms</span>
-            </div>
-          </div>
-        </div>
 
-        {/* Resource Usage */}
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-            <Cpu className="w-4 h-4 mr-2" />
-            Resources
-          </h4>
-          <div className="space-y-1">
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span>{Math.round(metrics.resources.memory)}%</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">CPU:</span>
-              <span>{Math.round(metrics.resources.cpu)}%</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Storage:</span>
-              <span>{Math.round(metrics.resources.storage)}%</span>
-            </div>
-          </div>
+      {/* Overall Health */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold text-gray-800">Overall Health</h2>
+          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getOverallColor(healthReport.overall)}`}>
+            {healthReport.overall.toUpperCase()}
+          </span>
         </div>
-
-        {/* Network Status */}
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-            <Wifi className="w-4 h-4 mr-2" />
-            Network
-          </h4>
-          <div className="space-y-1">
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Status:</span>
-              <span className={getStatusColor(metrics.network.status)}>
-                {metrics.network.status}
-              </span>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${getScoreColor(healthReport.performance)}`}>
+              {healthReport.performance}
             </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Latency:</span>
-              <span>{Math.round(metrics.network.latency)}ms</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Bandwidth:</span>
-              <span>{Math.round(metrics.network.bandwidth)}Mbps</span>
-            </div>
+            <div className="text-sm text-gray-600">Performance</div>
           </div>
-        </div>
-
-        {/* Error Status */}
-        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-            {metrics.errors.critical ? (
-              <AlertTriangle className="w-4 h-4 mr-2 text-red-500" />
-            ) : (
-              <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-            )}
-            Errors
-          </h4>
-          <div className="space-y-1">
-            <div className="flex justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">Count:</span>
-              <span className={metrics.errors.critical ? 'text-red-500' : 'text-green-500'}>
-                {metrics.errors.count}
-              </span>
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${getScoreColor(healthReport.security)}`}>
+              {healthReport.security}
             </div>
-            {metrics.errors.lastError && (
-              <div className="text-xs text-gray-500 truncate">
-                Last: {metrics.errors.lastError}
-              </div>
-            )}
+            <div className="text-sm text-gray-600">Security</div>
+          </div>
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${getScoreColor(healthReport.accessibility)}`}>
+              {healthReport.accessibility}
+            </div>
+            <div className="text-sm text-gray-600">Accessibility</div>
+          </div>
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${getScoreColor(healthReport.reliability)}`}>
+              {healthReport.reliability}
+            </div>
+            <div className="text-sm text-gray-600">Reliability</div>
           </div>
         </div>
       </div>
-      
-      <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
-        <button
-          onClick={() => {
-            localStorage.setItem('showSystemDashboard', 'false');
-            setIsVisible(false);
-          }}
-          className="text-xs text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-200"
-        >
-          Hide permanently
-        </button>
+
+      {/* Performance Metrics */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Performance Metrics</h2>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="text-center">
+            <div className="text-lg font-semibold text-blue-600">
+              {metrics.performance.fcp.toFixed(0)}ms
+            </div>
+            <div className="text-sm text-gray-600">First Contentful Paint</div>
+          </div>
+          <div className="text-center">
+            <div className="text-lg font-semibold text-blue-600">
+              {metrics.performance.lcp.toFixed(0)}ms
+            </div>
+            <div className="text-sm text-gray-600">Largest Contentful Paint</div>
+          </div>
+          <div className="text-center">
+            <div className="text-lg font-semibold text-blue-600">
+              {metrics.performance.fid.toFixed(0)}ms
+            </div>
+            <div className="text-sm text-gray-600">First Input Delay</div>
+          </div>
+          <div className="text-center">
+            <div className="text-lg font-semibold text-blue-600">
+              {metrics.performance.cls.toFixed(3)}
+            </div>
+            <div className="text-sm text-gray-600">Cumulative Layout Shift</div>
+          </div>
+          <div className="text-center">
+            <div className="text-lg font-semibold text-blue-600">
+              {metrics.performance.ttfb.toFixed(0)}ms
+            </div>
+            <div className="text-sm text-gray-600">Time to First Byte</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Security & Accessibility */}
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Security Status</h2>
+          <div className="space-y-3">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Violations:</span>
+              <span className={`font-semibold ${metrics.security.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
+                {metrics.security.violationCount}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Rate Limit Hits:</span>
+              <span className={`font-semibold ${metrics.security.rateLimitHits > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
+                {metrics.security.rateLimitHits}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Last Violation:</span>
+              <span className="font-semibold text-gray-800">
+                {formatTimestamp(metrics.security.lastViolation)}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Accessibility Status</h2>
+          <div className="space-y-3">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Violations:</span>
+              <span className={`font-semibold ${metrics.accessibility.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
+                {metrics.accessibility.violationCount}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Compliance Score:</span>
+              <span className={`font-semibold ${getScoreColor(metrics.accessibility.complianceScore * 100)}`}>
+                {Math.round(metrics.accessibility.complianceScore * 100)}%
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Last Audit:</span>
+              <span className="font-semibold text-gray-800">
+                {formatTimestamp(metrics.accessibility.lastAudit)}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Error Tracking */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Error Tracking</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${metrics.errors.totalErrors > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
+              {metrics.errors.totalErrors}
+            </div>
+            <div className="text-sm text-gray-600">Total Errors</div>
+          </div>
+          <div className="text-center">
+            <div className={`text-2xl font-bold ${metrics.errors.criticalErrors > 0 ? 'text-red-600' : 'text-green-600'}`}>
+              {metrics.errors.criticalErrors}
+            </div>
+            <div className="text-sm text-gray-600">Critical Errors</div>
+          </div>
+          <div className="text-center">
+            <div className="text-sm text-gray-800 font-medium">
+              Last Error: {formatTimestamp(metrics.errors.lastError)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Recommendations */}
+      {healthReport.recommendations.length > 0 && (
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Recommendations</h2>
+          <ul className="space-y-2">
+            {healthReport.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-yellow-500 mr-2">⚠️</span>
+                <span className="text-gray-700">{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Status Indicators */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">System Status</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+            <span className="text-sm text-gray-600">Performance Monitor</span>
+          </div>
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+            <span className="text-sm text-gray-600">Security Scanner</span>
+          </div>
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+            <span className="text-sm text-gray-600">Accessibility Checker</span>
+          </div>
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+            <span className="text-sm text-gray-600">Error Handler</span>
+          </div>
+        </div>
       </div>
     </div>
   );
