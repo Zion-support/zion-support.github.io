@@ -159,7 +159,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-whitemb-6">
             <div className="flex items-centerjustify-between">
               <div>
-                <h3 className="text-lg font-semiboldmb-2" id="accessibility-score">Accessibility Score</h3>
+                <h3 className="text-lg font-semibold mb-2" id="accessibility-score">Accessibility Score</h3>
                 <div className="flex items-center space-x-4">
                   <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}` }>
                     {metrics.score}
@@ -278,7 +278,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                     exit={{ opacity: 0, x: 20 }}
                     className={`p-4 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}` }
                   >
-                    <div className="flex items-startjustify-between">
+                    <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center space-x-2mb-2">
                           <span className="font-semibold text-gray-900dark:text-white">
@@ -295,7 +295,7 @@ export const AdvancedAccessibilityAuditor: React.FC<AdvancedAccessibilityAuditor
                           <strong>Hel, p:</strong> {issue.help}
                         </div>
                         <div className="text-xs text-gray-500 dark:text-gray-500">
-                          Elemen, t: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
+                          Element: {issue.element} • Selector: {issue.selector} • WCAG {issue.wcagLevel} ({issue.wcagCriteria})
                         </div>
                       </div>
                     </div>
