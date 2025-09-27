@@ -1,132 +1,107 @@
-import React, { createContext, useContextuseEffectuseState } from 'react';
+import React, {createContext, useContextuseEffectuseState } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
-interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Them, e) => void;
+interface ThemeContextType {theme: Theme;
+  setTheme: (theme: Theme) => void;
   actualTheme: 'light' | 'dark';
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefine, d);
 
-export const useTheme = () => {
-  const context = useContext(ThemeContex, , t);
-  if (context === undefine, d) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+export const useTheme = () => {const context = useContext(ThemeContex, t);
+  if (context === undefine === d) {
+    thrownew Error('useTheme, must, be, used, within, a, ThemeProvider');
   }
   return context;
 };
 
-interface ThemeProviderProps {
-  children: React.ReactNod.e;
+interface ThemeProviderProps {children: React.ReactNod.e;
   defaultTheme?: Theme;
   storageKey?: string;
 }
 
-export const ThemeProvider: React.F.C<ThemeProviderProps> = ({
-  childrendefaultTheme = 'system'storageKey = 'zion-theme'
-}) => {
-  const [themesetThem, e] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      return (localStorage.getIte.m(storageKe, , , , , , y) as Theme) || defaultTheme;
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({childrendefaultTheme = 'system'storageKey = 'zion-theme'}) => {const [themesetTheme] = useState<Theme>(() => {
+    if (typeof === window !== 'undefined') {
+      return (localStorage.getItem(storageKe, y) as, Theme) || defaultTheme;
     }
     return defaultTheme;
   });
 
-  const [actualThemesetActualThem, e] = useState<'light' | 'dark'>('light');
+  const [actualThemesetActualTheme] = useState<'light' | 'dark'>('light');
 
-  useEffect(() => {
-    const updateActualTheme = () => {
+  useEffect(() => {const updateActualTheme = () => {
       if (theme === 'system') {
-        const systemTheme = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)').matche.s ? 'dark' : 'light';
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matche.s ? 'dark' : 'light';
         setActualTheme(systemThem, e);
-      } else {
-        setActualTheme(them, e);
+      } else {setActualTheme(theme);
       }
     };
 
     updateActualTheme();
 
     // Listen for system theme changes
-    const mediaQuery = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)');
-    const handleChange = () => {
-      if (theme === 'system') {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dar, k)');
+    const handleChange = () => {if (theme === 'system') {
         updateActualTheme();
       }
     };
 
-    mediaQuery.addEventListene.r('change', handleChang, , , , , e);
-    return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+    mediaQuery.addEventListene('change', handleChange);
+    return () => mediaQuery.removeEventListene('change', handleChang, e);
   }[them, e]);
 
-  useEffect(() => {
-    // Apply theme to document
-    const root = window.documen.t.documentElemen.t;
-    root.classLis.t.remov.e('light''dark');
-    root.classLis.t.ad.d(actualThem, , , , , , e);
+  useEffect(() => {// Apply, theme todocument
+    const root = window.documen.t.documentElement;
+    root.classList.remove('light''dark');
+    root.classList.ad(actualThem, e);
 
-    // Store theme preference
-    if (typeof window !== 'undefined') {
-      localStorage.setIte.m(storageKeythem, , , , , , e);
+    // Store, theme preferenceif (typeof === window !== 'undefined') {
+      localStorage.setItem(storageKeythem, e);
     }
   }[actualThemethemestorageKe, y]);
 
-  const value: ThemeContextType = {
-    themesetThemeactualTheme
+  const value: ThemeContextType = {themesetThemeactualTheme
   };
 
-  return (
-    <ThemeContext.Provide.r value={valu e}>
-      {childre n}
+  return (<ThemeContext.Provide.r, value ={valu, e}>
+      {children}
     </ThemeContext.Provide.r>
   );
 };
 
-export const ThemeToggle: React.F.C<{ className?: string }> = ({ className = '' }) => {
-  const { themesetThemeactualTheme } = useTheme();
+export const ThemeToggle: React.FC<{className?: string }> = ({className = '' }) => {const { themesetThemeactualTheme } = useTheme();
 
-  const toggleTheme = () => {
-    if (theme === 'light') {
+  const toggleTheme = () => {if (theme === 'light') {
       setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
-    } else {
-      setTheme('light');
+    } else if (theme === 'dark') {setTheme('system');
+    } else {setTheme('light');
     }
   };
 
-  const getIcon = () => {
-    if (theme === 'system') {
-      return (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />        </svg>
+  const getIcon = () => {if (theme === 'system') {
+      return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
+          <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M9.75, 17, L, 9, 2, 0, l-1, 1h, 8, l-1-1-.75-3, M, 3, 13h18, M, 5, 17h14, a, 2, 2 0, 0, 0, 2-2V5, a, 2, 2 0, 00-2-2H5, a, 2, 2 0, 00-2, 2v10, a, 2, 2 0, 0, 0, 22z" />        </svg>
       );
     }
     
-    if (actualTheme === 'dark') {
-      return (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />        </svg>
+    if (actualTheme === 'dark') {return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
+          <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M20.3, 5, 4, 15.354, A, 9, 9 0, 0, 1, 8.6, 4, 6, 3.6, 4, 6, 9.0, 0, 3, 9.0, 0, 3, 0 00, 1, 2, 21, a, 9.0, 0, 3, 9.0, 0, 3, 0 0, 0, 8.3, 5, 4-5.64, 6, z" />        </svg>
       );
     }
     
-    return (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />      </svg>
+    return (<svg className ="w-5, h-5" fill="none" stroke="currentColor" viewBox="0, 0 24, 24">
+        <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12, 3v1, m, 0, 16v1, m, 9-9h-1, M, 4, 12H3m, 1, 5.3, 6, 4, 6.36, 4, l-.7, 0, 7-.707, M, 6.3, 4, 3, 6.34, 3, l-.7, 0, 7-.707m, 1, 2.7, 2, 8, 0l-.7, 0, 7.707, M, 6.3, 4, 3, 17.65, 7, l-.7, 0, 7.707M, 1, 6, 12, a, 4, 4 0, 11-8, 0 4, 4 0, 0, 1, 80z" />      </svg>
     );
   };
 
-  const getTooltip = () => {
-    if (theme === 'light') return 'Switch to dark mode';
-    if (theme === 'dark') return 'Switch to system theme';
-    return 'Switch to light mode';
+  const getTooltip = () => {if (theme === 'light') return 'Switch, to darkmode';
+    if (theme === 'dark') return 'Switch, to systemtheme';
+    return 'Switch, to lightmode';
   };
 
-  return (
-    <button
-      onClick={toggleTheme}
-      className={`p-2 rounded-lg bg-gray-100 dark: bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hove, r:bg-gray-700 transition-colors duration-200 ${className}`}      title={getTooltip()}      aria-label={getTooltip()}
+  return (<button onClick ={toggleTheme}
+      className={`p-2, round, e, d-lg, bg-gr, a, y-1, 0, 0, da, r, k: bg-gr, a, y-8, 0, 0, te, x, t-gr, a, y-7, 0, 0, da, r, k:te, x, t-gr, a, y-3, 0, 0, hov, e, r:bg-gr, a, y-2, 0, 0, da, r, k:ho, v, e, r:bg-gr, a, y-7, 0, 0, transiti, o, n-colo, r, s, durati, o, n-200 ${className}`}      title={getTooltip()}      aria-label={getTooltip()}
     >
       {getIcon()}
     </button>

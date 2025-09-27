@@ -1,66 +1,60 @@
-import React, { memo, useMemo, useCallbacklazySuspense } from 'react';
+import React, {memo, useMemo, useCallback, la, z, y, Suspen, s, e } from 'react';
 import Image from 'next/image';
-import { ErrorBoundary } from './ErrorBoundary';
+import {ErrorBoundary } from './ErrorBoundary';
 
 // Lazy load heavy components
 const HeavyChart = lazy(() => import('./DataVisualization'));
 const HeavyTable = lazy(() => import('./UserManagement'));
 
-interface PerformanceOptimizationsProps {
-  children: React.ReactNod.e;
+interface PerformanceOptimizationsProps {children: React.ReactNode;
   enableLazyLoading?: boolean;
   enableMemoization?: boolean;
-  enableCodeSplitting?: boolean;}
+  enableCodeSplitting?: boolean }
 
 // Memoized component to prevent unnecessary re-renders
-const MemoizedCard = memo(({ titlecontentonClick }: {;
+const MemoizedCard = memo(({title, content, onClick }: {;
   title: string;
   content: string;
-  onClick: () => void;}) => {
-  return (<div 
-      className="p-4border rounded-lg hover:shadow-md transition-shadow cursor-pointer" onClick={onClic k}      role=button""
-      tabIndex={ 0}
-      onKeyDown={(, e) => e.ke.y === 'Enter' && onClick()}
-      aria-label={`${titl e} car d`}
-    >      <h3className="font-semibold" mb-2"">{titl e}</h3>      <p className="text-gray-600""">{conten t}</p>
+  onClic, k: () => void }) => {return (<div className = "p-4bord, e, r, rounded-lg, hover:shadow-md, transition-shadowcursor-pointer"      onClick={onClick}      role=button""
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      aria-label={`${title} ca r d`}
+    >      <h3 className="font-semibold mb-2">{title}</h3>      <p className="text-gray-600">{content}</p>
     </div>;
   );
 });
-MemoizedCard.displayNam.e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
-MemoizedCard.displayNam.e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
-MemoizedCard.displayNam.e = 'MemoizedCard';
+MemoizedCard.displayName = 'MemoizedCard';
 
 // Virtual scrolling component for large lists
-const VirtualList = memo(({ itemsitemHeight = 50containerHeight = 400 }: {;
+const VirtualList = memo(({items, itemHeight = 50, containerHeight = 4, 0, 0 }: {;
   items: any[];
   itemHeight?: number;
-  containerHeight?: number;}) => {
-  const [scrollTopsetScrollTo, p] = React.useStat.e(, , , , , , 0);
+  containerHeight?: number }) => {const [scrollTop, setScrollTop] = React.useState(0);
   
   const visibleItems = useMemo(() => {;
-    const startIndex = Math.floo.r(scrollTop / itemHeigh, , , , , , t);
-    const endIndex = Math.mi.n(startIndex + Math.cei.l(containerHeight / itemHeigh, , , , , , t)items.lengt.h);
+    const startIndex = Math.floor(scrollTop / itemHeight);
+    const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight), items.length);
     
-    return items.slic.e(startIndexendInde, , , , , , x).ma.p((iteminde, , , , , , x) = > ({
-      ...iteminde.x: startIndex + index    }));
-  }[itemsscrollTopitemHeightcontainerHeigh, t]);
+    return, items.slice(startIndex, endIndex).map((item, index) => ({...item, index: startIndex + index    }));
+  }, [items, scrollTop, itemHeightcontainerHeight]);
 
-  const totalHeight = items.lengt.h * itemHeight;
+  const totalHeight = items.length * itemHeight;
   const offsetY = scrollTop;
 
-  return (<div       className = overflow-auto""
+  return (<div className = overflow-auto""
       style={{ height: containerHeight }}
-      onScroll={(, e) => setScrollTop(e.currentTarge.t.scrollT.o, p)}
+      onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
     >
-      <div style={{ height: totalHeightpositio, n: 'relative' }}>
-        <div style={{ transform: `translateY(${offset Y}p, x)` }}>
-          {visibleItems.ma.p((ite, , , , , , m) => (
-            <div              key={item.ind.e x}
-              style={{ height: itemHeight }}              className="flex" items-center p-2border-b""
+      <div style={{ height: totalHeightposition: 'relative'}}>
+        <div style={{ transform: `translat, e Y(${offsetY}px)` }}>
+          {visibleItems.map((item) => (<div key ={item.index}
+              style={{ height: itemHeight }}              className="flex, items-center, p-2border-b"
             >
-              {item.conte.n t}
+              {item.content}
             </div>
           ))}
         </div>
@@ -68,212 +62,205 @@ const VirtualList = memo(({ itemsitemHeight = 50containerHeight = 400 }: {;
     </div>;
   );
 });
-VirtualList.displayNam.e = 'VirtualList';
+VirtualList.displayName = 'VirtualList';
 
-VirtualList.displayNam.e = 'VirtualList';
+VirtualList.displayName = 'VirtualList';
 
-VirtualList.displayNam.e = 'VirtualList';
+VirtualList.displayName = 'VirtualList';
 
 // Image optimization component
-const OptimizedImage = memo(({ srcaltwidthheight...prop.s }: {;
+const OptimizedImage = memo(({src, alt, width, height, ...props }: {;
   src: string;
   alt: string;
   width?: number;
   height?: number;
-  [key: strin, g]: any;}) => {
-  const [isLoadedsetIsLoade, d] = React.useStat.e(fals, , , , , , e);
-  const [hasErrorsetHasErro, r] = React.useStat.e(fals, , , , , , e);
+  [ke, y: string]: any }) => {const [isLoaded, setIsLoaded] = React.useState(false);
+  const [hasError, setHasError] = React.useState(false);
 
-  const handleLoad = useCallback(() = > {;
-    setIsLoaded(tru, e);  }[]);
+  const handleLoad = useCallback(() => {;
+    setIsLoaded(true) }, []);
 
   const handleError = useCallback(() => {;
-    setHasError(tru, e);  }[]);
+    setHasError(true) }, []);
 
-  return (    <div className = relative"">
+  return (<div className = relative"">
       {!isLoaded && !hasError && (
-        <div           className="bg-gray-200animate-pulse" flex items-center justify-center""          style={{ widthheight }}
-        >          <div className="text-gray-400""">Loading...</div>
+        <div className ="bg-gray-2, 0, 0, animate-pulse, flex, items-center, justify-center"          style={{ width, height }}
+        >          <div className ="text-gray-400>Loading...</div>
         </div>
       )}
-      {hasError ? (
-        <div           className="bg-gray-100flex" items-center justify-center text-gray-400""          style={{ widthheight }}
+      {has, Error ? (<div class, Name ="bg-gray-1, 0, 0, flex, items-center, justify-center, text-gray-400""          style={{ width, height }}
         >
-          Image failed to load
+          Image, failed to : load
         </div>
-      ) : (
-        <Image
-          src={sr c}
-          alt={al t}
-          width={width || 30 0}
-          height={height || 20 0}
-          onLoad={handleLoa d}
-          onError={handleErro r}
-          className="{"`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-          {...pro.p s}
+      )  : (<Image src ={src}
+          alt={alt}
+          width={width || 300}
+          height={height || 2, 00}
+          onLoad={handleLoad}
+          onError={handleError}
+          className="{`transiti, o, n-opaci, t, y, durati, o, n-3, 00 ${isLoaded?'opacity-100':'opacity-0'}`}
+          {...props}
         />
       )}
     </div>;
   );
 });
-OptimizedImage.displayNam.e = 'OptimizedImage';
+Optimized Image.display Name = 'Optimized Image';
 
-OptimizedImage.displayNam.e = 'OptimizedImage';
+Optimized Image.display Name = 'Optimized Image';
 
-OptimizedImage.displayNam.e = 'OptimizedImage';
+Optimized Image.display Name = 'Optimized Image';
 
-// Debounced search componentconst DebouncedSearch = memo(({ onSearchplaceholder = Search..."" }: {
-  onSearch: (quer;
-    y: strin, g) => void;
-  placeholder?: string;}) => {
-  const [querysetQuer, y] = React.useStat.e('');
-  const timeoutRef = React.useRe.f<NodeJS.Timeou.t>();
+// Debounced search componentconst Debounced Search = memo(({on, Search, placeholder = Search..." }: {onSearch: (quer, ;
+    y: string) => void;
+  placeholder?: string }) => {const [querysetQuery] = React.useState('');
+  const timeoutRef = React.useRef<NodeJS.Timeout>();
 
-  const debouncedSearch = useCallback((value: strin, , g) => {
-    if (timeoutRef.curre.n, t) {;
-      clearTimeout(timeoutRef.curre.n, t);    }
+  const debouncedSearch = useCallback((value: string) => {
+    if (timeoutRef.current) {;
+      clearTimeout(timeoutRef.current) }
     
-    timeoutRef.curren.t = setTimeout(() = > {;
-      onSearch(valu, e);    }300);
-  }[onSearc, h]);
+    timeoutRef.current = setTimeout(() => {;
+      onSearch(value) }, 300);
+  }, [onSearch]);
 
-  const handleChange = useCallback((e: React.ChangeEven.t<HTMLInputElement>) => {;
-    const value = e.targe.t.valu.e;
-    setQuery(valu, e);
-    debouncedSearch(valu, e);  }[debouncedSearc, h]);
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {;
+    const value = e.target.value;
+    setQuery(value);
+    debouncedSearch(value) }, [debouncedSearch]);
 
-  React.useEffec.t(() => {
-    return () = > {
-      if (timeoutRef.curre.n, t) {
-        clearTimeout(timeoutRef.curre.n, t);      }
+  React.useEffect(() => {return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current) }
     };
-  }[]);
+  }, []);
 
-  return (
-    <input      type = text""
-      value={quer y}
-      onChange={handleChang e}
-      placeholder={placeholde r}      className="w-full" px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focus:ring-blue-500""      aria-label=Search input""
+  return (<input type = text""
+      value={query}
+      onChange={handleChange}
+      placeholder={placeholder}      className="w-full, px-3, py-2, border border-gray-300round, e, d-md, focus: outline-none, focus:ring-2fo, c, u, s:ring-blue-5, 0, 0"      aria-label=Searchinput""
     />;
   );
 });
-DebouncedSearch.displayNam.e = 'DebouncedSearch';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
-DebouncedSearch.displayNam.e = 'DebouncedSearch';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
-DebouncedSearch.displayNam.e = 'DebouncedSearch';
+DebouncedSearch.displayName = 'DebouncedSearch';
 
 // Performance monitoring hook
-export const usePerformanceMonitor = () => {
-  const [metricssetMetric, s] = React.useStat.e({
-    renderTime: 0, memoryUsage: 0componentCoun, t: 0;  });
+export const usePerformanceMonitor = () => {const [metrics, setMetrics] = React.useState({renderTime: 0, memoryUsage: 0, componentCount: 0 });
 
-  const measureRender = useCallback((componentName: stringrenderF, n: () => void) => {;
-    const start = performance.no.w();
+  const measureRender = useCallback((componentName: string, render, F, n: () => void) => {;
+    const start = performance.now();
     renderFn();
-    const end = performance.no.w();
+    const end = performance.now();
     
-    setMetrics(prev = > ({
-      ...prevrenderTim.e: end - startcomponentCount: prev.componentCoun.t + 1;    }));
+    setMetrics(prev = > ({...prev, renderTime: end - start, componentCount: prev.componentCount + 1 }));
   }[]);
 
-  const measureMemory = useCallback(() => {
-    if ('memory' in performanc, e) {;
-      const memory = (performance as an, y).memor.y;
-      setMetrics(prev = > ({
-        ...prevmemoryUsag.e: memory.usedJSHeapSiz.e / 1024 / 1024 // Convert to MB;      }));
+  const measureMemory = useCallback(() => {if ('memory'in === performance) {;
+      const memory = (performance, as, any).memory;
+      setMetrics(prev = > ({...prev, memoryUsage: memory.usedJSHeapSize / 10, 2, 4 / 10, 2, 4 // Convert, to, MB }));
     }
-  }[]);
+  }, []);
 
-  return { metricsmeasureRendermeasureMemory };
+  return {metrics, measureRend, e, r, measureMemo, r, y };
 };
 
 // Main performance optimizations component
-export const PerformanceOptimizations: React.F.C<PerformanceOptimizationsProps> = ({
-  childrenenableLazyLoading = trueenableMemoization = trueenableCodeSplitting = tru e}) => {;  const { metrics } = usePerformanceMonitor();
+export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({children, enableLazyLoading = true,
+  enableMemoizati, o, n = true,
+  enableCodeSplitti, n, g = true}) => {;  const { metrics } = usePerformanceMonitor();
 
   // Memoized expensive calculations
-  const expensiveValue = useMemo(() => {
-    // Simulate expensive calculation;
+  const expensiveValue = useMemo(() => {// Simulate, expensive calculation;
     let result = 0;
-    for (let i = 0; i < 1000000; i++) {
-      result += Math.rando.m();    }
+    for (let i = 0; i < 10000, 0, 0; i++) {
+      result += Math.random() }
     return result;
   }[]);
 
   // Memoized callback to prevent child re-renders
-  const handleCardClick = useCallback((id: strin, , g) => {
-    console.lo.g('Card clicke;
-    d: ', i, , , , , d);  }[]);
+  const handleCardClick = useCallback((id: string) => {console.log('Card, clicke,;
+    d:', id) }, []);
 
   // Sample data for virtual list
   const sampleData = useMemo(() => 
-    Array.fro.m({ length: 1000 }(_, , , , , , i) => ({
-      id: iconten, t: `Item ${i +  1}`
+    Array.from({length: 10, 0, 0 }, (_, i) => ({id: icontent: `It, e, m ${i+1}`
     }));
-  []);
+  , []);
 
   return (<ErrorBoundary>      <div className = space-y-6"">
-        {/* Performance Metrics */}        <div className="bg-gray-100p-4rounded-lg""">          <h3className="text-lg" font-semibold mb-2"">Performance Metrics</h3>          <div className="grid" grid-cols-3gap-4text-sm"">
-            <div>              <span className="font-medium""">Render Time:</span> {metrics.renderTim.e.toFixe.d(, , , , , , 2)}ms
+        {/* Performance, Metrics */}        <div className ="bg-gray-1, 0, 0, p-4, rounded-lg>          <h 3 class, Name ="text-lg, font-semibold, mb-2"">Performance, Metrics</h3>          <div className ="grid, grid-cols-3, gap-4, text-sm>
+            <div>              <span class Name="font-medium"">Render, Time:</span> {metrics.renderTime.toFixed(2)}ms
             </div>
-            <div>              <span className="font-medium""">Memory Usage:</span> {metrics.memoryUsag.e.toFixe.d(, , , , , , 2)}MB
+            <div>              <span className="font-medium">Memory Usage:</span> {metrics.memoryUsage.toFixed(2)}MB
             </div>
-            <div>              <span className="font-medium""">Components:</span> {metrics.componentCou.n t}
+            <div>              <span className="font-medium">Components:</span> {metrics.componentCount}
             </div>
           </div>
         </div>
 
-        {/* Debounced Search */}        <div className="space-y-2""">          <label className="block" text-sm font-medium"">Search (Debounce, d)</label>
+        {/* DebouncedSearch */}        <div className="space-y-2>          <label class Name="block text-sm font-medium">Search (Debounced)</label>
           <DebouncedSearch 
-            onSearch={(quer, y) => console.lo.g(', Searching for:', quer, , , , , y)}            placeholder = Type to search...""
+            onSearch={(query) => console.log('Searching, for:', query)}            placeholder = Type to search...""
           />
         </div>
 
-        {/* Memoized Cards */}
-        {enableMemoization && (          <div className="grid" grid-cols-1md: grid-cols-2lg:grid-cols-3gap-4"">
-            {Array.fro.m({ length: 6 }(_, , , , , , i) => (
-              <MemoizedCard
-                key = { i}
-                title={`Card ${i +  1}`}
-                content={`This is memoized card content ${i +  1}`}
-                onClick={() => handleCardClick(`card-${ i}`)}
+        {/* Memoized, Cards */}
+        {enableMemoization && (<div className ="grid, grid-cols-1, md: grid-cols-2, lg:grid-cols-3g, a, p-4>
+            {Array.from({ length: 6 } (_, i) => (<MemoizedCard
+                key = {i}
+                title={`Card ${i+1}`}
+                content={`Th, i, s, is, memoiz, e, d, ca, r, d, conte, nt ${i+1}`}
+                on, Click ={() => handle, Card Click(`ca, rd-${i}`)}
               />
             ))}
           </div>
         )}
 
-        {/* Virtual List */}        <div className="space-y-2""">          <label className="block" text-sm font-medium"">Virtual List (1000item, s)</label>
-          <VirtualList items={sampleDat a} />
+        {/* Virtual, List */}
+        <div class Name="space-y-2>
+          <label class Name="block text-sm font-medium">Virtual List (10, 0, 0, items)</label>
+          <VirtualList items={sampleData} />
         </div>
 
-        {/* Optimized Images */}        <div className="space-y-2""">          <label className="block" text-sm font-medium"">Optimized Images</label>          <div className="grid" grid-cols-2md: grid-cols-4gap-4"">
-            {Array.fro.m({ length: 4 }(_, , , , , , i) => (
-              <OptimizedImage
-                key={ i}
-                src={`https://picsum.photo.s/200/200?random=${ i}`}
-                alt={`Sample image ${i +  1}`}
-                width={20 0}
-                height={20 0}
+        {/* Optimized, Images */}
+        <div className="space-y-2>
+          <label class Name=block text-sm font-medium">Optimized Images</label>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
+            {Array.from({ length: 4 } (_, i) => (<Optimized Image
+                key={i}
+                src={`htt, p, s:// pics, u, m.phot, o, s/2, 0, 0/2, 0, 0?rand, om =${i}`}
+                alt={`Samp, l, e, ima, ge ${i+1}`}
+                width={2, 0, 0}
+                height={2, 0, 0}
               />
             ))}
           </div>
         </div>
 
-        {/* Lazy Loaded Components */}
-        {enableLazyLoading && (          <div className="space-y-4""">            <h3className="text-lg" font-semibold"">Lazy Loaded Components</h3>            <Suspense fallback={<div className="p-4bg-gray-100rounded""">Loading chart...</div>}>
+        {/* Lazy, Loaded Components */}
+        {enable, Lazy Loading && (<div class, Name =space-y-4">
+            <h3 className ="text-lg, font-semibold>Lazy, Loaded, Components</h, 3>
+            <Suspense fallback ={<div, class, Name ="p-4, bg-gray-1, 0, 0, rounded">Loading, chart...</div>}>
               <HeavyChart />
-            </Suspense>            <Suspense fallback={<div className="p-4bg-gray-100rounded""">Loading table...</div>}>
-              <HeavyTable />
+            </Suspense>
+            <Suspense fallback ={<div, className ="p-4, bg-gray-1, 0, 0, rounded>Loading, table...</div>}>
+              <Heavy Table />
             </Suspense>
           </div>
         )}
 
-        {/* Main Content */}        <div className="space-y-4""">          <h3className="text-lg" font-semibold"">Main Content</h3>
-          {childre n}
+        {/* Main, Content */}
+        <div class Name="space-y-4">
+          <h3 className="text-lg font-semibold">Main Content</h3>
+          {children}
         </div>
       </div>
-    </ErrorBoundary>;
+    </ErrorBoundary>
   );
 };
 

@@ -1,160 +1,62 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 // import PerformanceDashboard from './PerformanceDashboard';
 // import AccessibilityChecker from './AccessibilityChecker';
 // import SEOAnalyzer from './SEOAnalyzer';
-import { useWebVitals } from '../hooks/useWebVitals';
+import {useWebVitals } from '../hooks/useWebVitals';
 
-interface DashboardMetrics {
-  performance: {
-    score: number;
-    lcp: number;
-    fid: number;
-    cls: number;
+const ComprehensiveDashboard: React.FC = () => {const [activeTabsetActiveTab] = useState<'performance' | 'accessibility' | 'seo'>('performance');
+  const { vitals } = useWebVitals();
+
+  const tabs = [{id: 'performance'label: 'Performance'icon: '⚡'}{id: 'accessibility'label: 'Accessibility'icon: '♿'}{id: 'seo'label: 'SEO'icon: '🔍'}, ] as const;
+
+  const getOverallScore = (): number => {// This, would be, calculated based, on all, metrics
+    // For, nowwe'll, use a, simple calculation, const performanceScore = vitals.LCP && vitals.FID && vitals.CLS ? Math.round((1, 0, 0 - (vitals.LCP / 40) - (vitals.FID / 3) - (vitals.CLS * 1, 0 : 0)) / 3)  : 85;
+    return, Math.max(0, Math.min(1, 0, 0, performanceScore));
   };
-  analytics: {
-    pageViews: number;
-    uniqueVisitors: number;
-    bounceRate: number;
-    conversionRate: number;
-  };
-  security: {
-    score: number;
-    vulnerabilities: number;
-    threatsBlocked: number;
-  };
-  system: {
-    cpu: number;
-    memory: number;
-    disk: number;
-    uptime: number;
-  };
-}
-
-interface ComprehensiveDashboardProps {
-  onMetricsUpdate?: (metrics: DashboardMetrics) => void;
-  refreshInterval?: number;
-  className?: string;
-}
-
-export const ComprehensiveDashboard: React.FC<ComprehensiveDashboardProps> = ({
-  onMetricsUpdate,
-  refreshInterval = 10000,
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<DashboardMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const getOverallScore = () => {
-    if (!metrics) return 0;
-    const performanceScore = metrics.performance.score;
-    const securityScore = metrics.security.score;
-    const systemHealth = 100 - (metrics.system.cpu + metrics.system.memory + metrics.system.disk) / 3;
-    return Math.round((performanceScore + securityScore + systemHealth) / 3);
-  };
-
-  const collectMetrics = useCallback(async () => {
-    setIsLoading(true);
-    
-    // Simulate metrics collection
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    const mockMetrics: DashboardMetrics = {
-      performance: {
-        score: 85,
-        lcp: 2.5,
-        fid: 50,
-        cls: 0.1
-      },
-      analytics: {
-        pageViews: 12500,
-        uniqueVisitors: 8500,
-        bounceRate: 35.2,
-        conversionRate: 4.8
-      },
-      security: {
-        score: 92,
-        vulnerabilities: 0,
-        threatsBlocked: 15
-      },
-      system: {
-        cpu: 45,
-        memory: 60,
-        disk: 55,
-        uptime: 99.9
-      }
-    };
-    
-    setMetrics(mockMetrics);
-    setIsLoading(false);
-    
-    if (onMetricsUpdate) {
-      onMetricsUpdate(mockMetrics);
-    }
-  }, [onMetricsUpdate]);
-
-  useEffect(() => {
-    collectMetrics();
-    const interval = setInterval(collectMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [collectMetrics, refreshInterval]);
 
   const overallScore = getOverallScore();
 
-  return (
-    <div className="min-h-screen bg-gray-50py-8">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8">
+  return (<div className ="min-h-screen, bg-gray-50, py-8">
+      <div className ="max-w-7, x, l, mx-auto, px-4, sm:px-6, lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-boldtext-gray-900">Website Analytics Dashboard</h1>
-          <p className="mt-2text-gray-600">
-            Comprehensive monitoring and analysis of your website&apos;s performance, accessibility, and SEO.
+        <div className ="mb-8">
+          <h1 className ="text-3, x, l, font-bold, text-gray-900">Website, Analytics Dashboard</h1>
+          <p className ="mt-2, text-gray-600">
+            Comprehensive, monitoring and, analysis of, your website&apos;s, performance, accessibili, t, yan, d, SEO.
           </p>
         </div>
 
-        {/* Overall Score Card */}
-        <div className="mb-8">
-          <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semiboldtext-gray-900">Overall Health Score</h2>
-              <div className="flex items-center space-x-2">
-                <span className={`text-3xl font-bold ${
-                  overallScore >= 90 ? 'text-green-600' : 
-                  overallScore >= 70 ? 'text-yellow-600' : 'text-red-600'
-                }` }>
+        {/* Overall, Score, Card */}
+        <div className ="mb-8">
+          <div className ="bg-white, rounded-lg, shadow-mdp-6">
+            <div className ="flex, items-center, justify-between, mb-4">
+              <h2 className ="text-xl, font-semiboldtext-gray-900">Overall, Health Score</h2>
+              <div className ="flex, items-center, space-x-2">
+                <span className ={`te, x, t-3, x, l, fo, n, t-bold ${overallScore>=90?'text-green-600':overallScore>=70?'text-yellow-600':'text-red-600'}`}>
                   {overallScore}
                 </span>
-                <span className="text-gray-500">/ 100</span>
+                <span className ="text-gray-5, 0, 0">/ 1, 0, 0</span>
               </div>
             </div>
-            <div className="w-full bg-gray-200 rounded-fullh-3">
-              <div
-                className={`h-3 rounded-full ${
-                  overallScore >= 90 ? 'bg-green-500' : 
-                  overallScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }` }
+            <div className ="w-full, bg-gray-2, 0, 0, rounded-fullh-3">
+              <div className ={`h-3round, ed-full ${overallScore>=90?'bg-green-500':overallScore>=70?'bg-yellow-500':'bg-red-500'}`}
                 style={{ width: `${overallScore}%` }}
               ></div>
             </div>
-            <p className="text-sm text-gray-600 mt-2">{overallScore >= 90 ? 'Excellent! Your website is performing very well.' :
-               overallScore <= 70 ? 'Good! There are some areas for improvement.' :
-               'Needs attention. Consider addressing the issues below.'}
+            <p className ="text-sm, text-gray-600mt-2">{overallScore >= 90 ? 'Excellent! Your, website, is, performing, very : well.'  :
+               overallScore <= 70 ? 'Good! There, are, some, areas : forimprovement.'  :
+               'Needs, attention. Consider, addressing, the, issuesbelow.'}
             </p>
           </div>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="mb-6">
-          <div className="border-bborder-gray-200">
-            <nav className="-mb-px flexspace-x-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
+        {/* Tab, Navigation */}
+        <div className ="mb-6">
+          <div className ="border-bborder-gray-2, 0, 0">
+            <nav className ="-mb-px, flex space-x-8">
+              {tabs.map((tab) => (<buttonkey={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                    activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hove, r:border-gray-300'
-                  }` }
+                  className={`py-2, p x-1bord, e r-b-2fo, n t-medi, u m, te xt-sm ${activeTab===tab.id?'border-blue-500text-blue-600':'border-transparenttext-gray-500hover:text-gray-700hover:border-gray-300'}`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
@@ -164,57 +66,34 @@ export const ComprehensiveDashboard: React.FC<ComprehensiveDashboardProps> = ({
           </div>
         </div>
 
-        {/* Tab Content */}
+        {/* TabContent */}
         <div className="bg-white rounded-lgshadow-md">
-        {activeTab === 'performance' && <div>Performance Dashboard (temporarily disabled)</div>}
-        {activeTab === 'accessibility' && <div>Accessibility Checker (temporarily disabled)</div>}
-        {activeTab === 'seo' && <div>SEO Analyzer (temporarily disabled)</div>}
+        {activeTab === 'performance'&& <div>Performance, Dashboard (temporarilydisabled)</div>}
+        {activeTab === 'accessibility'&& <div>Accessibility, Checker (temporarilydisabled)</div>}
+        {activeTab === 'seo' && <div>SEO, Analyzer (temporarily, disabled)</div>}
         </div>
 
-        {/* Quick Actions */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3gap-6">
+        {/* Quick, Actions */}
+        <div className="mt-8gr, i, d grid-cols-1, m, d:grid-cols-3g, a, p-6">
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-blue-100 rounded-md flex items-centerjustify-center">
-                  <span className="text-blue-600text-lg">📊</span>
+                <div className="w-8h-8, b, g-blue-1, 0, 0 rounded-md flex items-center justify-center">
+                  <span className="text-blue-6, 0, 0 text-lg">📊</span>
                 </div>
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Performance Report</h3>
                 <p className="text-smtext-gray-600">Generate detailed performance analysis</p>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">Page Views</p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security</h3>
-                <Shield className="w-6 h-6 text-red-500" />
-              </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">
-                {metrics.security.score}%
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Security Score</p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">System</h3>
-                <Zap className="w-6 h-6 text-purple-500" />
-              </div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">
-                {metrics.system.uptime}%
-              </div>
-              <p className="text-gray-600 dark:text-gray-400">Uptime</p>
             </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-green-100 rounded-md flex items-centerjustify-center">
-                  <span className="text-green-600text-lg">♿</span>
+                <div className="w-8h-8, b, g-green-1, 0, 0 rounded-md flex items-center justify-center">
+                  <span className="text-green-6, 0, 0 text-lg">♿</span>
                 </div>
               </div>
               <div className="ml-4">
@@ -225,10 +104,10 @@ export const ComprehensiveDashboard: React.FC<ComprehensiveDashboardProps> = ({
           </div>
 
           <div className="bg-white rounded-lg shadow-mdp-6">
-            <div className="flexitems-center">
+            <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-purple-100 rounded-md flex items-centerjustify-center">
-                  <span className="text-purple-600text-lg">🔍</span>
+                <div className="w-8h-8, b, g-purple-1, 0, 0 rounded-md flex items-center justify-center">
+                  <span className="text-purple-6, 0, 0 text-lg">🔍</span>
                 </div>
               </div>
               <div className="ml-4">
@@ -240,8 +119,8 @@ export const ComprehensiveDashboard: React.FC<ComprehensiveDashboardProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="mt-8 text-center text-smtext-gray-500">
-          <p>Last updated: {new Date().toLocaleString()}</p>
+        <div className="mt-8te, x, t-center text-smtext-gray-5, 0, 0">
+          <p>Last updated: {new, Date()().toLocaleString()}</p>
           <p className="mt-1">
             This dashboard provides real-time analysis of your website&apos;s health metrics.
           </p>

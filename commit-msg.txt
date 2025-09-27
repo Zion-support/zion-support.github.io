@@ -1,0 +1,6 @@
+resolve: merge conflicts in FileUpload component and complete merge of cursor/check-fix-push-and-merge-to-main-b8b2
+
+- Fixed duplicate validateFile function definition in FileUpload component
+- Removed redundant validateFile function inside handleFileSelect
+- Updated useCallback dependencies to include validateFile
+- Resolved merge conflicts and completed the merge process
