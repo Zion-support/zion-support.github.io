@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,47 +17,43 @@ export default function Portfolio(): JSX.Element {
   const projects = [
     {
       id: 1,
-      title: 'AI-Powered Analytics Platform',
-      category: 'AI/ML',
-      description: 'Advanced analytics platform with machine learning capabilities for business intelligence.',
+      title: 'AI-Powered E-commerce Platform',
+      description: 'A comprehensive e-commerce solution with AI-driven recommendations and analytics.',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'Python', 'TensorFlow', 'AWS'],
-      link: '#'
+      technologies: ['React', 'Node.js', 'AI/ML', 'PostgreSQL']
     },
     {
       id: 2,
-      title: 'Cloud Migration Solution',
-      category: 'Cloud',
-      description: 'Complete cloud migration for enterprise applications with zero downtime.',
+      title: 'Cloud Infrastructure Migration',
+      description: 'Complete migration of legacy systems to modern cloud infrastructure.',
       image: '/api/placeholder/400/300',
-      technologies: ['Docker', 'Kubernetes', 'AWS', 'Terraform'],
-      link: '#'
+      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
     },
     {
       id: 3,
       title: 'Mobile Banking App',
-      category: 'Mobile',
       description: 'Secure mobile banking application with advanced security features.',
       image: '/api/placeholder/400/300',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'Stripe'],
-      link: '#'
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'Blockchain']
     }
   ];
 
-  const categories = ['All', ...Array.from(new Set(projects.map(project => project.category)))];
-
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' }
+  ];
 
   return (
     <>
+      <SEO />
       <Head>
         <title>Portfolio - Zion App</title>
         <meta name="description" content="Explore our portfolio of successful projects and case studies across AI, cloud computing, mobile development, and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
         <div className="container mx-auto px-4 py-8 max-w-7xl">
           <nav className="mb-8">
             <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
@@ -65,85 +62,81 @@ export default function Portfolio(): JSX.Element {
           </nav>
 
           <header className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Portfolio</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Our Portfolio
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our portfolio of successful projects and case studies across AI, cloud computing, mobile development, and more.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Showcasing our successful projects and the impact we&apos;ve made for our clients
             </p>
           </header>
 
-          <div className="flex flex-wrap gap-2 mb-8 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => {
-                  setSelectedCategory(category);
-                  trackClick(`portfolio-category-${category}`, 'filter');
-                }}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <main>
+            {/* Stats Section */}
+            <section className={`mb-16 transition-all duration-700 delay-100 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
+                    <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-600 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-              >
-                <div className="aspect-video bg-gray-200">
+            {/* Projects Grid */}
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+                >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-48 object-cover"
                   />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-                      {project.category}
-                    </span>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <Link
-                    href={project.link}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                    onClick={() => trackClick(`portfolio-view-${project.id}`, 'click')}
-                  >
-                    View Project →
-                  </Link>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </section>
 
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-gray-500 text-lg">No projects found in this category.</p>
-            </div>
-          )}
+            {/* CTA Section */}
+            <section className="mt-16 text-center">
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Let&apos;s discuss how we can bring your vision to life with our expertise.
+                </p>
+                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Get a Free Consultation
+                </Link>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
     </>

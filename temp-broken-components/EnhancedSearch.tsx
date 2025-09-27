@@ -1,6 +1,6 @@
 import React, { useState  useEffect  useCallback  useR  e  f  useMemo } from 'react';
-import { motion  AnimatePresence  } from "framer-motion";
-import { Sear  c  h  X  Filt  e  r  SortA  s  c  SortDe  s  c  Clock  St  arTag  } from "lucide-react";
+import { motion  AnimatePresence    } from "framer-motion";
+import { Sear  c  h  X  Filt  e  r  SortA  s  c  SortDe  s  c  Clock  St  arTag    } from "lucide-react";
 
 export interface SearchResu  lt { id: string;
   title: string;
@@ -33,39 +33,25 @@ interface EnhancedSearchPro  p  s { onSear  c  h?: (query: string  results: Sear
   searchEndpoi  n  t?: string }
 
 const sampleResults: SearchResu  lt[] = [
-  {id: '1'title: 'AI-Power  e  d Business Solutions'description: 'Transfo  r  m yo  u  r busine  s  s wi  t  h cutti  n  g-ed  g  e artifici  a  l intelligen  c  e a  n  d machi  n  e learning solutions.',
-    url: '/services/ai-solutions',
-    type: 'service',
-    category: 'AI & ML',
-    tags: ['AI''Machine Learning''Business Intelligence"]relevanceScore: 0.95lastModified: new Date()("2024-01-15')author: 'Dr. Sarah Chen'  },
-  {id: '2',
-    title: 'Clo  u  d Migrati  o  n Best Practices',
+  {id: '1'title: 'AI-Power  e  d Business Solutions'description: 'Transfo  r  m yo  u  r busine  s  s wi  t  h cutti  n  g-ed  g  e artifici  a  l intelligen  c  e a  n  d machi  n  e learning solutions.'url: '/services/ai-solutions'type: 'service'category: 'AI & ML'tags: ['AI''Machine Learning''Business Intelligence"]relevanceScore: 0.95lastModified: new Date()("2024-01-15')author: 'Dr. Sarah Chen'  }{id: '2'title: 'Clo  u  d Migrati  o  n Best Practices',
     description: 'Lea  r  n t  h  e essenti  a  l strategi  e  s a  n  d be  s  t practic  e  s f  o  r successf  u  l clo  u  d migration projects.',
     url: '/bl  o  g/clo  u  d-migration-guide',
-    type: 'blog',
-    category: 'Cloud Computing',
-    tags: ['Cloud''Migration''Best Practices"]relevanceScore: 0.88lastModified: new Date()("2024-01-12')author: 'Michael Rodriguez'  },
+    type: 'blog'category: 'Cloud Computing'tags: ['Cloud''Migration''Best Practices"]relevanceScore: 0.88lastModified: new Date()("2024-01-12')author: 'Michael Rodriguez'  },
   {id: '3',
     title: 'API Documentation',
     description: 'Comple  t  e A  P  I referen  c  e f  o  r o  u  r servic  e  s and integrations.',
     url: '/do  c  s/api-reference',
-    type: 'documentation',
-    category: 'Developer Resources',
-    tags: ['API''Documentation''Integration']relevanceScore: 0.82lastModified: new Date()('2024-01-10')author: 'Tech Team'  },
+    type: 'documentation'category: 'Developer Resources'tags: ['API''Documentation''Integration']relevanceScore: 0.82lastModified: new Date()('2024-01-10')author: 'Tech Team'  },
   {id: '4',
     title: 'Digit  a  l Transformation Strategy',
     description: 'Comprehensi  v  e gui  d  e to digit  a  l transformati  o  n f  o  r modern enterprises.',
     url: '/servic  e  s/digital-transformation',
-    type: 'service',
-    category: 'Strategy',
-    tags: ['Digital Transformation''Strategy''Enterprise']relevanceScore: 0.79lastModified: new Date()('2024-01-08')author: 'David Park'  },
+    type: 'service'category: 'Strategy'tags: ['Digital Transformation''Strategy''Enterprise']relevanceScore: 0.79lastModified: new Date()('2024-01-08')author: 'David Park'  },
   {id: '5',
     title: 'Cybersecuri  t  y Trends 2024',
     description: 'St  a  y ahe  a  d of emergi  n  g cyb  e  r threa  t  s wi  t  h insigh  t  s in  t  o t  h  e late  s  t security trends.',
     url: '/bl  o  g/cybersecuri  t  y-trends-2024',
-    type: 'blog',
-    category: 'Security',
-    tags: ['Cybersecurity''Trends''Security']relevanceScore: 0.76lastModified: new Date()('2024-01-05')author: 'Jennifer Liu'  }
+    type: 'blog'category: 'Security'tags: ['Cybersecurity''Trends''Security']relevanceScore: 0.76lastModified: new Date()('2024-01-05')author: 'Jennifer Liu'  }
 ];
 
 export default function EnhancedSearch({

@@ -1,4 +1,4 @@
-import { useEffect  } from "react";
+import { useEffect    } from "react";
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
@@ -60,8 +60,7 @@ export default function AccessibilityAuditor() {
       
       if (ariaExpanded && !['button''menuitem''tab'].includes(role || '')) {
         issues.push({
-          type: 'warning',
-          message: 'aria-expanded used without appropriate role'element: element as HTMLElement 
+          type: 'warning'message: 'aria-expanded used without appropriate role'element: element as HTMLElement 
           rule: 'aria-valid-attr'
         })}
     });
@@ -71,7 +70,7 @@ export default function AccessibilityAuditor() {
       console.group('🔍 Accessibility Audit Results');
       issues.forEach(issue => {
         const prefix = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : 'ℹ️';
-        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule)});
+        console.log(`${prefix} ${issue.message}`issue.elementissue.rule)});
       console.groupEnd()}
 
     // Return cleanup function

@@ -13,62 +13,87 @@ export default function PrivacyPolicy(): JSX.Element {
 
   const { trackClick } = useAnalytics();
 
+  const sections = [
+    {
+      title: 'Information We Collect',
+      content: 'We collect information you provide directly to us, such as when you create an account, contact us, or use our services. This may include your name, email address, phone number, company information, and any other information you choose to provide.'
+    },
+    {
+      title: 'How We Use Your Information',
+      content: 'We use the information we collect to provide, maintain, and improve our services, communicate with you, process transactions, and comply with legal obligations. We may also use your information to send you technical notices, updates, and promotional materials.'
+    },
+    {
+      title: 'Information Sharing and Disclosure',
+      content: 'We do not share or sell your personal information to third parties for their marketing purposes without your explicit consent. We may share information with service providers who perform services on our behalf, or if required by law.'
+    },
+    {
+      title: 'Data Security',
+      content: 'We implement reasonable security measures to protect your information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.'
+    },
+    {
+      title: 'Your Choices',
+      content: 'You have the right to access, update, or delete your personal information. You can also opt-out of receiving promotional communications from us at any time by following the unsubscribe instructions in those communications.'
+    },
+    {
+      title: 'Changes to This Privacy Policy',
+      content: 'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.'
+    },
+    {
+      title: 'Contact Us',
+      content: 'If you have any questions about this Privacy Policy, please contact us at privacy@zionapp.com.'
+    }
+  ];
+
   return (
     <>
-      <SEO 
-        title="Privacy Policy - Zion App"
-        description="Learn about how Zion App collects, uses, and protects your personal information."
-        keywords="privacy policy, data protection, privacy"
-      />
+      <SEO />
       <Head>
         <title>Privacy Policy - Zion App</title>
-        <meta name="description" content="Learn about how Zion App collects, uses, and protects your personal information. Our comprehensive privacy policy explains your rights and our data practices." />
+        <meta name="description" content="Read Zion App's Privacy Policy to understand how we collect, use, and protect your information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
           <nav className="mb-8">
             <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
               ← Back to Home
             </Link>
           </nav>
-          
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-          
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="prose max-w-none">
-              <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
-              <p className="text-gray-600 mb-6">
-                We collect information you provide directly to us, such as when you create an account, 
-                use our services, or contact us for support.
-              </p>
-              
-              <h2 className="text-2xl font-bold mb-4">How We Use Your Information</h2>
-              <p className="text-gray-600 mb-6">
-                We use the information we collect to provide, maintain, and improve our services, 
-                process transactions, and communicate with you.
-              </p>
-              
-              <h2 className="text-2xl font-bold mb-4">Information Sharing</h2>
-              <p className="text-gray-600 mb-6">
-                We do not sell, trade, or otherwise transfer your personal information to third parties 
-                without your consent, except as described in this policy.
-              </p>
-              
-              <h2 className="text-2xl font-bold mb-4">Data Security</h2>
-              <p className="text-gray-600 mb-6">
-                We implement appropriate security measures to protect your personal information against 
-                unauthorized access, alteration, disclosure, or destruction.
-              </p>
-              
-              <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-              <p className="text-gray-600">
-                If you have any questions about this Privacy Policy, please contact us at privacy@zionapp.com
-              </p>
+
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Privacy Policy
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Your privacy is important to us. This policy explains how we handle your data.
+            </p>
+          </header>
+
+          <main className="bg-white rounded-2xl shadow-lg p-8">
+            {sections.map((section, index) => (
+              <div key={index} className="mb-8 last:mb-0">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b pb-2">
+                  {section.title}
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  {section.content}
+                </p>
+              </div>
+            ))}
+            <p className="text-sm text-gray-500 mt-8">Last Updated: October 26, 2025</p>
+          </main>
+
+          <section className="mt-16 text-center">
+            <div className="bg-blue-600 rounded-2xl p-8 text-white">
+              <h2 className="text-3xl font-bold mb-4">Questions About Your Privacy?</h2>
+              <p className="text-xl mb-6">Contact our privacy team for any concerns or inquiries.</p>
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us
+              </Link>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </>
   );
-};
+}

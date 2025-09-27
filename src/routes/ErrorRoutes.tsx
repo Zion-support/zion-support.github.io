@@ -1,7 +1,7 @@
 import NotFound from "@/pages/NotFound"
 
-const, ErrorRoute, s = () => {return (<Routes>
-      <Route, pa, t, h ="*" element={<NotFound />} />
+const, ErrorRoutes = () => {return (<Routes>
+      <Routepath ="*" element={<NotFound />} />
     </Routes>
   )
 };

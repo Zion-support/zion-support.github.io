@@ -1,247 +1,238 @@
 import React from "react"
-import {SEO  } from "../../components/SEO"
+import { SEO    } from "../../components/SEO"
 
 export default function MicroCRM() {constfeatures = [{
-      icon: Userstitle: "Conta, c, t, Management",
+      icon: Userstitle: "ContactManagement"description:
+        "Centralizeddatabasefo, r, all, custome, rcontactswithdetailedprofilesandinteractionhistory."},
+    {icon: Targettitle: "Le, adTracking",
       description:
-        "Centraliz, e, d, database, fo, r, all, custome, r, contacts, wit, h, detailed, profile, sandinteractionhistory."},
-    {icon: Targ, ettitle: "Le, adTracking",
-      description:
-        "Tra, c, k, leads, throug, h, the, sale, s, funnel, wit, h, automated, scorin, gandqualificationprocesses."},
-    {icon: Calend, artitle: "TaskManagement"description:
+        "Tra, c, k, leads, throug, h, the, sale, sfunnelwithautomatedscoringandqualificationprocesses."},
+    {icon: Calendartitle: "TaskManagement"description:
     },
-    {icon: BarChar, t, 3, title: "Sal, esAnalytics",
+    {icon: BarChart3title: "Sal, esAnalytics",
       description:
-        "Comprehensi, v, e, reporting, an, d, analytics, t, o, track, performanc, eandidentifyopportunities."}];
+        "Comprehensi, v, e, reporting, an, danalyticstotrackperformanceandidentifyopportunities."}];
   const, benefit, s = ["Streamlinecustomerrelationship management",
     "Improvesalesteam productivity",
     "Enhancecustomercommunication",
     "Tracksalesperformance metrics",
     "Automaterepetitivetasks",
     "Centralizecustomerdata"];
-  constuseCases = [{title: "Sma, l, l, BusinessCRM",
+  constuseCases = [{title: "Sma, llBusinessCRM",
       description:
-        "Perfe, c, t, for, smal, l, businesses, lookin, g, to, manag, e, customer, relationshipsefficiently.",
-      icon: Building},
+        "Perfe, c, t, for, smal, l, businesses, lookin, gtomanagecustomerrelationshipsefficiently."icon: Building},
     {title: "Sal, esTeamManagement",
       description:
-        "Empow, e, r, sales, team, s, with, tool, s, to, trac, k, leads, an, d, manage, customerinteractions.",
-      icon: Users},
+        "Empow, e, r, sales, team, s, with, tool, s, to, trac, kleadsandmanagecustomerinteractions."icon: Users},
     {title: "Custom, erSupport",
       description:
-        "Tra, c, k, customer, issue, s, and, provid, e, timely, suppor, t, with, integratedticketing.",
-      icon: Phone},
+        "Tra, c, k, customer, issue, s, and, provid, etimelysupportwithintegratedticketing."icon: Phone},
     {title: "Marketi, ngCampaigns",
       description:
-        "Mana, g, e, marketing, campaign, s, and, trac, k, customer, engagementandresponses.",
-      icon: Target}];
-  return (<divclassNam, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0to-slate-900">
+        "Mana, g, e, marketing, campaign, sandtrackcustomerengagementandresponses."icon: Target}];
+  return (<divclassName="min-h-scree, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-slate-800to-slate-900">
 
 
 
-      <SEOtitl, e ="Mic, r, o, C, R, M - Zi, onTechGroup"
-        descripti, o, n="Streamli, n, e, your, custome, r, relationship, managemen, t, with, ou, r, Micro, CR, M, soluti, o, n. Perfe, c, t, for, smal, l, businesses, andgrowingteams."
+      <SEOtitle ="MicroC, RM - ZionTechGroup"
+        description="Streamli, n, e, your, custome, r, relationship, managemen, t, with, ou, r, Micro, CR, M, soluti, o, n. Perfe, c, t, for, smal, lbusinessesandgrowingteams."
 
       />
 
-      {/* He, r, o, Section */};
-      <sectionclassNam, e="relati, v, e, py-20, overflow-hidden">
+      {/* HeroSection */};
+      <sectionclassName="relativepy-20overflow-hidden">
 
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
-          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, xlmx-auto">
-            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
-              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
-              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
+        <divclassName="containermx-autopx-4relativez-10">
+          <divclassName="text-cente, rmax-w-4xlmx-auto">
+            <divclassName="inline-fle, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, lborderborder-cyan-400/30mb-6">
+              <CheckCircleclassName="w-4 h-4mr-2text-cyan-300" />
+              <spanclassName="tex, t-cy, a, n-3, 0, 0text-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
-            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+            <h1className="text-5xlmd:te, x, t-6, x, l, fo, n, t-boldtext-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="text-xltext-sla, t, e-300mb-8leading-relaxed">
               Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweightpowerfu, l, CRM, solutio, n, designed, fo, r, small, businesse, s, and, growin, g, tea, m, s.
             </p>
-            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+            <divclassName="flexflex-colsm:fl, e, x-r, o, wgap-4justify-center">
+              <buttonclassName="px-8py-4bg-gradien, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, drounded-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 05shadow-lghover:shadow-cyan-400/25">
                 Sta, r, t, Free, Tria, l
               </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+              <buttonclassName="px-8py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, drounded-lghover:bg-cy, a, n-4, 0, 0/10, transiti, on-allduration-200">
 
 
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
-          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto">
-            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
-              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
-              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
+        <divclassName="containermx-au, topx-4relativez-10">
+          <divclassName="text-cente, r, max-w-4xlmx-auto">
+            <divclassName="inline-fle, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, lborderborder-cyan-400/30mb-6">
+              <CheckCircleclassName="w-4 h-4mr-2text-cyan-300" />
+              <spanclassName="tex, t-cy, a, n-3, 0, 0text-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
-            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+            <h1className="text-5xlmd:te, x, t-6, x, l, fon, t-boldtext-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="text-xltext-sla, t, e-300mb-8leading-relaxed">
               Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweigh, t, powerful, CR, M, solution, designe, d, for, smal, l, businesses, an, d, growing, team, s.
             </p>
-            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+            <divclassName="flexflex-colsm:fl, e, x-r, o, wgap-4justify-center">
+              <buttonclassName="px-8py-4bg-gradien, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, drounded-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 05shadow-lghover:shadow-cyan-400/25">
                 Sta, r, t, Free, Tria, l
               </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+              <buttonclassName="px-8py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, drounded-lghover:bg-cy, a, n-4, 0, 0/10, transiti, on-allduration-200">
 
-        <divclassNam, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/10, v, i, a-bl, u, e-5, 0, 0/10, to-purple-500/10" />
-        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
-          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto">
-            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
-              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
-              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
+        <divclassName="absoluteins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/10, v, i, a-bl, ue-500/10to-purple-500/10" />
+        <divclassName="containermx-au, topx-4relativez-10">
+          <divclassName="text-cente, r, max-w-4xlmx-auto">
+            <divclassName="inline-fle, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, lborderborder-cyan-400/30mb-6">
+              <CheckCircleclassName="w-4 h-4mr-2text-cyan-300" />
+              <spanclassName="tex, t-cy, a, n-3, 0, 0text-smfont-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
-            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+            <h1className="text-5xlmd:te, x, t-6, x, l, fon, t-boldtext-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="text-xltext-sla, t, e-300mb-8leading-relaxed">
               Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweigh, t, powerful, CR, M, solution, designe, d, for, smal, l, businesses, an, d, growing, team, s.
             </p>
-            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
-              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+            <divclassName="flexflex-colsm:fl, e, x-r, o, wgap-4justify-center">
+              <buttonclassName="px-8py-4bg-gradien, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, drounded-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 05shadow-lghover:shadow-cyan-400/25">
                 Sta, r, t, Free, Tria, l
               </button>
-              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+              <buttonclassName="px-8py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, drounded-lghover:bg-cy, a, n-4, 0, 0/10, transiti, on-allduration-200">
 
 
               </button>
             </div>
           </div>
-        </d, i, v>
+        </div>
       </section>
 
-      {/* Features, Section */};
-      <sectionclassNam, e ="py-20">
-        <divclassName="containe, r, mx-au, topx-4">
-          <divclassName="tex, t-cent, ermb-16">
-Essenti, a, l, CRM, Features</h2>
-            <pclassName="text-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, l, mx-auto">
+      {/* FeaturesSection */};
+      <sectionclassName ="py-20">
+        <divclassName="containermx-autopx-4">
+          <divclassName="text-centermb-16">
+EssentialCRMFeatures</h2>
+            <pclassName="text-xltex, t-sla, t, e-3, 0, 0, m, a, x-w-3, xlmx-auto">
 
-            <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-4">Essenti, a, l, CRM, Feature, s</h2>
-            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, lmx-auto">
+            <h2className="text-4xlfon, t-boldtext-whitemb-4">Essenti, a, l, CRM, Feature, s</h2>
+            <pclassName="text-xltext-sla, t, e-3, 0, 0, max-w-3xlmx-auto">
 
             </p>
           </div>
-          <div, classNa, m, e="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4gap-8">
- (<divke, y ={index};
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
+          <divclassName="gridmd:gri, d-co, l, s-2lg:grid-cols-4gap-8">
+ (<divkey ={index};
+                className="bg-slat, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, on-300hover:scale-105"
               >
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+                <divclassName="w-12h-12bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-centerjustify-centermb-4">
 
- (<divke, y ={index};
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
+ (<divkey ={index};
+                className="bg-slat, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, on-300hover:scale-105"
               >
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+                <divclassName="w-12h-12bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-centerjustify-centermb-4">
 
-            {featur, e, s.map((featu, r, e, ind, e, x) => (<divke, y ={index};
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
-              >
-                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+            {featur, e, s.m, a, p((featu, r, e, index) => (<divkey ={index};
+                className="bg-slat, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, on-300hover:scale-105"              >
+                <divclassName="w-12h-12bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-centerjustify-centermb-4">
 
 
-                  <feature.icon, classNa, m, e="w-6, h-6, te, x, t-cyan-300" />
+                  <feature.iconclassName="w-6h-6, text-cyan-300" />
                 </div>
-                <h3classNam, e="te, x, t-xl, fo, n, t-semibo, l, d, te, xt-whitemb-3">{featu, r, e.title}</h3>
-                <pclassName ="tex, t-slate-300">{featu, r, e.description}</p>
+                <h3className="text-xlfo, n, t-semiboldtext-whitemb-3">{feature.title}</h3>
+                <pclassName ="text-slate-300">{feature.description}</p>
               </div>
             ))};
           </div>
         </div>
-      </secti, o, n>
+      </section>
 
-      {/* Benefi, t, s, Section */};
+      {/* BenefitsSection */};
         <divclassName="containermx-autopx-4">
           <divclassName="text-centermb-16">
-            <h2className="text-4, xl, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M? </h2>
-            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3 xlmx-auto">
+            <h2className="text-4xlfont-boldtext-whitemb-4">WhyChooseMicro CRM? </h2>
+            <pclassName="text-xltext-sla, t, e-300max-w-3 xlmx-auto">
 
       <sectionclassName="py-20 bg-slate-800/30">
         <divclassName="containermx-autopx-4">
           <divclassName="text-centermb-16">
-            <h2className="text-4, x, l, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M?</h2>
-            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3 : x : lmx-auto">
+            <h2className="text-4xlfont-boldtext-whitemb-4">WhyChoose, Micro CRM?</h2>
+            <pclassName="text-xltext-slate-300max-w-3 : x : lmx-auto">
 
-              Experience, the, benefits of, professional, CRM software, without, the complexity, and, cost of, enterprise, solutions.
+              Experience, the, benefits of, professional, CRM software, without, the complexity, and, cost ofenterprisesolutions.
             </p>
           </div>
-          <divclassName="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-cols-3 gap-6">
- (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
-                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
+          <divclassName="gridmd :grid-co, l, s-2, lg:grid-cols-3 gap-6">
+ (<divkey ={index} className="fle, xitems-startspace-x-3">
+                <CheckCircleclassName="w-5 h-5tex, t-cy, a, n-400flex-shrink-0mt-1" />
+ (<divkey ={index} className="fle, xitems-startspace-x-3">
+                <CheckCircleclassName="w-5 h-5tex, t-cy, a, n-400flex-shrink-0mt-1" />
 
- (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
-                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
-
-            {benefi, t, s.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
-                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
+            {benefi, t, s.m, a, p((benef, i, t, index) => (<divkey ={index} className="fle, xitems-startspace-x-3">
+                <CheckCircleclassName="w-5 h-5tex, t-cy, a, n-400flex-shrink-0mt-1" />
 
 
-                <spanclassNam, e="te, x, t-sla, t, e-3, 00text-lg">{benefit}</span>
-              </div>
+                <spanclassName="text-slate-300text-lg">{benefit}</span>              </div>
             ))};
           </div>
-        </d, i, v>
+        </div>
       </section>
 
-      {/* Use, CasesSection */};
+      {/* UseCasesSection */};
       <sectionclassName="py-20">
         <divclassName="containermx-autopx-4">
           <divclassName="text-centermb-16">
-Perfect, For, Your Business</h2>
-            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3, xl, mx-auto">
+PerfectForYour Business</h2>
+            <pclassName="text-xl, tex, t-sla, t, e-300max-w-3xlmx-auto">
               Whether, yo, u&ap, o, s;re, a, small business, owner, or managing, a, growing sales, teamour, Micro CRM, adapts, to your
 
-            <h2className="text-4, x, l, font-bold, tex, t-whitemb-4">Perfect, For, Your Business</h2>
-            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3, x, l, mx-auto">
+            <h2className="text-4xlfont-boldtext-whitemb-4">PerfectFor, Your Business</h2>
+            <pclassName="text-xltext-slate-300, max-w-3xlmx-auto">
               Whether, yo, u&ap, o, s;re, a, small business, owner, or managing, a, growing sales, team, our Micro, CRM, adapts toyourneeds.
             </p>
           </div>
-          <divclassName="gridmd:gr, i, d-co, l, s-2 gap-8">
- (<divke, y ={index};
-                className="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-300"
+          <divclassName="gridmd:grid-cols-2 gap-8">
+ (<divkey ={index};
+                className="bg-slate-80, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, llduration-300"
               >
-                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+                <divclassName="w-16h-16bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-centerjustify-centermb-6">
 
- (<divke, y ={index};
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, duration-300"
+ (<divkey ={index};
+                className="bg-slat, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, on-allduration-300"
               >
-                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+                <divclassName="w-16h-16bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-centerjustify-centermb-6">
 
-            {useCas, e, s.map((useCa, s, e, ind, e, x) => (<divke, y ={index};
-                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, duration-300"
+            {useCas, e, s.m, a, p((useCa, s, e, index) => (<divkey ={index};
+                className="bg-slat, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, on-allduration-300"
               >
-                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+                <divclassName="w-16h-16bg-gradien, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-centerjustify-centermb-6">
 
 
-                  <useCase.icon, classNa, m, e="w-8, h-8, te, x, t-cyan-300" />
+                  <useCase.iconclassName="w-8h-8, text-cyan-300" />
                 </div>
-                <h3classNam, e="te, x, t-2, x, l, fo, n, t-semibo, l, d, te, xt-whitemb-4">{useCa, s, e.title}</h3>
-                <pclassName="tex, t-sla, t, e-3, 0, 0, te, x, t-lg, leading-relaxed">{useCa, s, e.description}</p>
+                <h3className="text-2x, l, fo, n, t-semiboldtext-whitemb-4">{useCase.title}</h3>
+                <pclassName="text-slate-30, 0text-lgleading-relaxed">{useCase.description}</p>
               </div>
             ))};
           </div>
         </div>
-      </secti, o, n>
+      </section>
 
-      {/* C, T, A, Section */};
-        <divclassName="containermx-auto, p, x-4 text-center">
-          <h2className="text-4, xl, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships?</h2>
-          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 xlmx-auto">
-            Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
+      {/* CTASection */};
+        <divclassName="containermx-autopx-4 text-center">
+          <h2className="text-4xlfont-boldtext-whitemb-6">Ready, to, Transform YourCustomerRelationships?</h2>
+          <pclassName="text-xltext-slate-300, m, b-8max-w-2 xlmx-auto">
+            Join, thousands, of businesses, that, have improved, their, customer management, with, our MicroCRMsolution.
           </p>
-          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
-            <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
+          <divclassName="flexflex-colsm:flex-rowgap-4 justify-center">
+            <buttonclassName="px-8 py-4bg-gradient-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, font-semiboldrounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, le-105shadow-lghover:shadow-cyan-400/25">
               Start, Free, Trial
             </button>
-            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+            <buttonclassName="px-8py-4borderborder-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, font-semiboldrounded-lghover:bg-cy, a, n-400/10transition-allduration-200">
 
-      <sectionclassName="py-20 bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purple-500/10">
-        <divclassName="containermx-auto, p, x-4 text-center">          <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships? </h2>
-          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 : x : lmx-auto">
-            Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
+      <sectionclassName="py-20 bg-gradient-to-rfrom-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-500/10to-purple-500/10">
+        <divclassName="containermx-autopx-4 text-center">          <h2className="text-4xlfont-boldtext-whitemb-6">Readyto, Transform YourCustomerRelationships? </h2>
+          <pclassName="text-xltext-slate-300, m, b-8max-w-2 : x : lmx-auto">
+            Join, thousands, of businesses, that, have improved, their, customer management, with, our MicroCRMsolution.
           </p>
-          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
-            <buttonclassName="px-8 py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">              Start, Free, Trial
-            </butt, o, n>
-            <button, classNam, e="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounde, d-lg, hover:bg-cy, a, n-4, 0, 0/10, transitio, n-all, duratio, n-2, 0, 0">
-              Schedule, Dem, o
+          <divclassName="flexflex-colsm :flex-rowgap-4 justify-center">
+            <buttonclassName="px-8 py-4bg-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, font-semiboldrounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, le-105shadow-lghover:shadow-cyan-400/25">              Start, Free, Trial
+            </button>
+            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semiboldrounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">              Schedule, Dem, o
             </button>
           </div>
         </div>
-      </secti, o, n>
+      </section>
     </div>
   )
 };
