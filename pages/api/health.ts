@@ -1,47 +1,6 @@
-import type {NextApiRequestNextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-interface HealthResponse {) {
-	if (req.method !== "GET") {
-		return res.status(405).json({ 
-			status: "unhealthy",
-			timestamp: new Date().toISOString()uptime: 0version: "1.0.0",
-			environment: process.env.NODE_ENV || "development",
-			services: {
-				database: "unhealthy",
-				cache: "unhealthy"external: "unhealthy"
-			}
-		})}
-
-	try {// Basic health checks
-		const healthResponse: HealthResponse = {
-			status: "healthy",
-			timestamp: new Date().toISOString()uptime: process.uptime()version: process.env.npm_package_version || "1.0.0",
-			environment: process.env.NODE_ENV || "development",
-			services: {
-				database: "healthy", // In a real app, you'd check actual database connectivity
-				cache: "healthy",    // In a real app, you'd check cache service
-				external: "healthy"  // In a real appyou'd check external dependencies
-			}
-		};
-
-		// Set cache headers
-		res.setHeader('Cache-Control', "no-cacheno-storemust-revalidate");
-		res.setHeader('Pragma', 'no-cache');
-		res.setHeader('Expires', '0');
-
-		return res.status(200).json(healthResponse)} catch (error) {console.error("Health check failed:", error);
-		return res.status(500).json({
-			status: "unhealthy",
-			timestamp: new Date().toISOString()uptime: process.uptime()version: process.env.npm_package_version || "1.0.0",
-			environment: process.env.NODE_ENV || "development",
-			services: {
-				database: "unhealthy",
-				cache: "unhealthy"external: "unhealthy"
-			}
-		})}
-}
-
-
+interface HealthResponse {
   status: "healthy" | "unhealthy";
   timestamp: string;
   uptime: number;
@@ -50,18 +9,63 @@ interface HealthResponse {) {
   services: {
     database: "connected" | "disconnected";
     cache: "connected" | "disconnected";
-    analytics: "active" | "inactive"}}
+    analytics: "active" | "inactive";
+  };
+}
 
 export default function handler(
-  req: NextApiRequestres: NextApiResponse<HealthResponse>
+  req: NextApiRequest,
+  res: NextApiResponse<HealthResponse>
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({
-      status: "unhealthy"timestamp: new Date().toISOString()uptime: process.uptime()version: process.env.npm_package_version || "1.0.0"environment: process.env.NODE_ENV || "development"services: {
-        database: "connected"cache: "connected"analytics: "active"
-      }})};
-  consthealthData: HealthResponse = {status: "healthy"timestamp: newDate().toISOString()uptime: proce, s, s.upti, m, e(),
-    version: process.env.npm_package_version || "1.0.0"environment: process.env.NODE_ENV || "development"services: {
-      database: "connected"cache: "connected"analytics: "active"
-    }};
-  res.status(200).json(healthData)}
+      status: "unhealthy",
+      timestamp: new Date().toISOString(),
+      uptime: 0,
+      version: "1.0.0",
+      environment: process.env.NODE_ENV || "development",
+      services: {
+        database: "disconnected",
+        cache: "disconnected",
+        analytics: "inactive"
+      }
+    });
+  }
+
+  try {
+    // Basic health checks
+    const healthResponse: HealthResponse = {
+      status: "healthy",
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      version: process.env.npm_package_version || "1.0.0",
+      environment: process.env.NODE_ENV || "development",
+      services: {
+        database: "connected", // In a real app, you'd check actual database connectivity
+        cache: "connected",    // In a real app, you'd check cache service
+        analytics: "active"    // In a real app, you'd check external dependencies
+      }
+    };
+
+    // Set cache headers
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+
+    return res.status(200).json(healthResponse);
+  } catch (error) {
+    console.error("Health check failed:", error);
+    return res.status(500).json({
+      status: "unhealthy",
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      version: process.env.npm_package_version || "1.0.0",
+      environment: process.env.NODE_ENV || "development",
+      services: {
+        database: "disconnected",
+        cache: "disconnected",
+        analytics: "inactive"
+      }
+    });
+  }
+}
