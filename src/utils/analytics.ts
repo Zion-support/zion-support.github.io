@@ -8,7 +8,7 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-  customParameters?: Record<string, any>;
+  customParameters?: Record<string, unknown>;
   timestamp: string;
   userId?: string;
   sessionId: string;
@@ -53,7 +53,7 @@ export class AnalyticsManager {
     action: string,
     label?: string,
     value?: number,
-    customParameters?: Record<string, any>
+    customParameters?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
@@ -149,11 +149,7 @@ export class AnalyticsManager {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
           tti = navEntry.domContentLoadedEventEnd - (navEntry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart;
-          this.trackPerformanceMetric({
-            name: 'time_to_interactive',
-            value: tti,
-            unit: 'ms'
-          });
+          this.trackPerformanceMetric('time_to_interactive', tti, 'ms');
         }
       }
     });

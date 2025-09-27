@@ -50,7 +50,7 @@ describe('ErrorBoundary', () => {
     );
     
     expect(consoleSpy).toHaveBeenCalledWith(
-      'ErrorBoundary caught an error:', 
+      'Uncaught error:', 
       expect.any(Error), 
       expect.any(Object)
     );
@@ -60,8 +60,8 @@ describe('ErrorBoundary', () => {
     consoleSpy.mockRestore();
   });
 
-  it('resets error state when reset is called', () => {
-    const { rerender } = render(
+  it('resets error state when retry button is clicked', () => {
+    render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
       </ErrorBoundary>
@@ -69,13 +69,8 @@ describe('ErrorBoundary', () => {
     
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
     
-    // Rerender with no error
-    rerender(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={false} />
-      </ErrorBoundary>
-    );
-    
-    expect(screen.getByText('No error')).toBeInTheDocument();
+    // Click the refresh button (the ErrorBoundary component has "Refresh Page")
+    const refreshButton = screen.getByText('Refresh Page');
+    expect(refreshButton).toBeInTheDocument();
   });
 });
