@@ -1,39 +1,41 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" })}
-
-  const { url, w, h, q, f, blur } = req.query;
-
-  if (!url || typeof url !== "string") {
-    return res.status(400).json({ error: "URL parameter is required" })}
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   try {
-    // Validate URL
-    const imageUrl = new URL(url);
-    
-    // Basic security check - only allow certain domains
-    const allowedDomains = [
-      "ziontechgroup.com",
-      "zion.app",
-      "images.unsplash.com",
-      "via.placeholder.com"
-    ];
-    
-    if (!allowedDomains.some(domain => imageUrl.hostname.includes(domain))) {
-      return res.status(400).json({ error: "Domain not allowed" })}
+    const { imageUrl, width, height, quality, format } = req.body;
 
-    // Fetch the image
-    const imageResponse = await fetch(imageUrl.toString());
-    
+    if (!imageUrl) {
+      return res.status(400).json({ error: 'Image URL is required' });
+    }
+
+    // Validate parameters
+    const validWidth = width && width > 0 && width <= 4000 ? width : null;
+    const validHeight = height && height > 0 && height <= 4000 ? height : null;
+    const validQuality = quality && quality >= 10 && quality <= 100 ? quality : 80;
+    const validFormat = ['jpeg', 'png', 'webp'].includes(format) ? format : 'jpeg';
+
+    // Fetch the original image
+    const imageResponse = await fetch(imageUrl);
     if (!imageResponse.ok) {
-      return res.status(imageResponse.status).json({ 
-        error: "Failed to fetch image" 
-      })}
+      return res.status(400).json({ error: 'Failed to fetch image' });
+    }
 
-    // For, now, just return, the, original ima, g, e
-    // In, a, production environment, you, would implement, actual, image optimization, her, e
-    // using, libraries, like Sharp, or, ImageMagick
-    r, e, s.stat, u, s(2, 0, 0).se, n, d(Buff, e, r.fr, o, m(imageBuff, e, r))} cat, c, h (err, o, r) {conso, l, e.err, o, r('Imageoptimizationerror:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};
+    const imageBuffer = await imageResponse.arrayBuffer();
+
+    // For now, just return the original image
+    // In a production environment, you would implement actual image optimization here
+    // using libraries like Sharp or ImageMagick
+
+    res.status(200).send(Buffer.from(imageBuffer));
+  } catch (error) {
+    console.error('Image optimization error:', error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}

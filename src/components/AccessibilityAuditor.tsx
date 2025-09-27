@@ -1,56 +1,195 @@
-import React, {useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 
-interface AccessibilityIssue {type: "error" | "warning" | "info";
+interface AccessibilityIssue {
+  type: 'error' | 'warning' | 'info';
   message: string;
   element?: HTMLElement;
-  rule?: string}
+  rule: string;
+}
 
-    // Check, for, missing alt, attributes, on images, const, images = document.querySelectorAll("img");
+export const AccessibilityAuditor: React.FC = () => {
+  const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
+  const [isScanning, setIsScanning] = useState(false);
+
+  const runAccessibilityAudit = () => {
+    setIsScanning(true);
+    const newIssues: AccessibilityIssue[] = [];
+
+    // Check for missing alt attributes on images
+    const images = document.querySelectorAll('img');
     images.forEach((img: HTMLImageElement) => {
-    if (!img.alt) {
-        issues.push({
+      if (!img.alt) {
+        newIssues.push({
           type: "error",
-          message: "Image missing alt attribute", element: img, rule: "alt-text"
+          message: "Image missing alt attribute",
+          element: img,
+          rule: "alt-text"
         });
+      }
+    });
 
-    // Check, for, missing form, labels, const inputs = document.querySelectorAll("inp, u, t, textareaselect");
-
-    inpu, t, s.forEach((input: HTMLInputEleme, n, t) => {const, i, d = inp, u, t.id;
-      constlab, e, l = document.querySelector(`label[for="${id}"]`);
-
-      const, ariaLabe, l = input.getAttribute("ar, i, a-lab, e, l");
-      const, ariaLabelledB, y = input.getAttribute("ar, i, a-labelled, b, y");
+    // Check for missing form labels
+    const inputs = document.querySelectorAll("input, textarea, select");
+    inputs.forEach((input: HTMLInputElement) => {
+      const id = input.id;
+      const label = document.querySelector(`label[for="${id}"]`);
+      const ariaLabel = input.getAttribute("aria-label");
+      const ariaLabelledBy = input.getAttribute("aria-labelledby");
       
-      if (!lab, e, l && !ariaLab, e, l && !ariaLabelled, B, y) {issu, es.push({
-          type: "error"});
-    // Check, heading, hierarchy
-    constheadings = document.querySelectorAll('h1, h2, h3h4, h5h6');
-    let, previousLeve, l = 0;
-    headin, g, s.forEach((heading: HTMLHeadingEleme, n, t) => {con, s, t, currentLev, e, l = parseInt(headi, n, g.tagNa, m, e.charAt(1));
-      if (currentLev, e, l > previousLev, e, l + 1) {
-        issues.push({
-          type: 'warni, n, g'})};
-      previousLev, e, l = currentLev, e, l});
+      if (!label && !ariaLabel && !ariaLabelledBy) {
+        newIssues.push({
+          type: "error",
+          message: "Form element missing accessible label",
+          element: input,
+          rule: "form-labels"
+        });
+      }
+    });
 
-    // Check, for, proper ARIA, attributes, const elementsWithRole = document.querySelectorAll('[ro, l, e]');
-    elementsWithRo, l, e.forEach((element: Eleme, n, t) => {con, s, t, ro, l, e = element.getAttribute('ro, l, e');
-      con, s, t, ariaExpand, e, d = element.getAttribute('ar, i, a-expand, e, d');
-      con, s, t, ariaSelect, e, d = element.getAttribute('ar, i, a-select, e, d');
-      con, s, t, ariaCheck, e, d = element.getAttribute('ar, i, a-check, e, d');
+    // Check heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    headings.forEach((heading: HTMLHeadingElement) => {
+      const currentLevel = parseInt(heading.tagName.charAt(1));
+      if (currentLevel > previousLevel + 1) {
+        newIssues.push({
+          type: "warning",
+          message: `Heading hierarchy skipped from H${previousLevel} to H${currentLevel}`,
+          element: heading,
+          rule: "heading-order"
+        });
+      }
+      previousLevel = currentLevel;
+    });
+
+    // Check for missing focus indicators
+    const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+    focusableElements.forEach((element: HTMLElement) => {
+      const styles = window.getComputedStyle(element);
+      if (styles.outline === 'none' && !element.getAttribute('data-focus-visible-added')) {
+        newIssues.push({
+          type: "warning",
+          message: "Element may lack visible focus indicator",
+          element: element,
+          rule: "focus-visible"
+        });
+      }
+    });
+
+    // Check color contrast (simplified check)
+    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+    textElements.forEach((element: HTMLElement) => {
+      const styles = window.getComputedStyle(element);
+      const color = styles.color;
+      const backgroundColor = styles.backgroundColor;
       
-      if (ariaExpanded && !["button", "menuitem", "tab"].includes(role || "")) {
-        issu, es.push({
-          type: "warning"});
-    // Log, issues, to console, in, development
-    if (proce, s, s.e, n, v.NODE_ENV === 'developme, n, t' && issu, e, s.leng, t, h > 0) {console.group('🔍 AccessibilityAuditResul, t, s');
-      issu, e, s.forEach(iss, u, e => {
-        conso, l, e.log(`${prefix} ${issue.message}`iss, u, e.elementiss, u, e.ru, l, e)});
-      conso, l, e.groupEnd()};
-    // Return, cleanup, function {// Cleanupif, neededretur() => {
-      // Cleanupif, neede, d
+      if (color === backgroundColor) {
+        newIssues.push({
+          type: "error",
+          message: "Text color matches background color",
+          element: element,
+          rule: "color-contrast"
+        });
+      }
+    });
 
-    }}[]);
+    setIssues(newIssues);
+    setIsScanning(false);
+  };
 
-  return, nul, l; // Thiscomponentdoesn't, render, anything};
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      runAccessibilityAudit();
+    }
+  }, []);
+
+  const getIssueIcon = (type: string) => {
+    switch (type) {
+      case 'error':
+        return '🔴';
+      case 'warning':
+        return '🟡';
+      case 'info':
+        return '🔵';
+      default:
+        return '⚪';
+    }
+  };
+
+  const scrollToIssue = (element?: HTMLElement) => {
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.style.outline = '2px solid red';
+      setTimeout(() => {
+        element.style.outline = '';
+      }, 3000);
+    }
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-800">Accessibility Audit</h2>
+        <button
+          onClick={runAccessibilityAudit}
+          disabled={isScanning}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
+        >
+          {isScanning ? 'Scanning...' : 'Run Audit'}
+        </button>
+      </div>
+
+      <div className="mb-4">
+        <p className="text-gray-600">
+          Found {issues.length} accessibility issue{issues.length !== 1 ? 's' : ''}
+        </p>
+      </div>
+
+      {issues.length > 0 && (
+        <div className="space-y-3">
+          {issues.map((issue, index) => (
+            <div
+              key={index}
+              className={`p-4 rounded-lg border-l-4 ${
+                issue.type === 'error' 
+                  ? 'bg-red-50 border-red-500' 
+                  : issue.type === 'warning'
+                  ? 'bg-yellow-50 border-yellow-500'
+                  : 'bg-blue-50 border-blue-500'
+              }`}
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex items-start space-x-3">
+                  <span className="text-lg">{getIssueIcon(issue.type)}</span>
+                  <div>
+                    <p className="font-medium text-gray-800">{issue.message}</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Rule: {issue.rule}
+                    </p>
+                  </div>
+                </div>
+                {issue.element && (
+                  <button
+                    onClick={() => scrollToIssue(issue.element)}
+                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                  >
+                    Locate
+                  </button>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {issues.length === 0 && !isScanning && (
+        <div className="text-center py-8">
+          <div className="text-6xl mb-4">✅</div>
+          <p className="text-gray-600 text-lg">No accessibility issues found!</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default AccessibilityAuditor;

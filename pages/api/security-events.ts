@@ -1,35 +1,62 @@
-// API endpoint for security events
-export default async function handler(req: any, res: any) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" })}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+interface SecurityEvent {
+  type: 'login_attempt' | 'failed_login' | 'suspicious_activity' | 'data_access' | 'system_breach';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  ipAddress: string;
+  userAgent: string;
+  userId?: string;
+  sessionId?: string;
+  metadata?: Record<string, any>;
+  timestamp: number;
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   try {
-    const securityEvent = req.body;
+    const securityEvent: SecurityEvent = req.body;
 
-    // Validate the request
-    if (!securityEvent || !securityEvent.type) {
-      return res.status(400).json({ error: "Invalid security event data" })}
+    // Validate required fields
+    if (!securityEvent.type || !securityEvent.severity || !securityEvent.description) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
 
-    // Process security event
-    console.log("Security event received:", {
+    // Log the security event (in production, you'd send to a security monitoring service)
+    console.warn('Security Event:', {
       type: securityEvent.type,
       severity: securityEvent.severity,
-      message: securityEvent.message,
-      timestamp: new Date(securityEvent.timestamp).toISOString(),
-      url: securityEvent.url,
-      userAgent: securityEvent.userAgent
+      description: securityEvent.description,
+      ipAddress: securityEvent.ipAddress,
+      userAgent: securityEvent.userAgent,
+      userId: securityEvent.userId,
+      sessionId: securityEvent.sessionId,
+      metadata: securityEvent.metadata,
+      timestamp: securityEvent.timestamp
     });
 
     // Here you would typically:
     // 1. Store in security monitoring system
-    // 2. Send alerts for critical events
-    // 3. Update security dashboard
-    // 4. Trigger automated responses
+    // 2. Send alerts for high/critical severity events
+    // 3. Update security metrics and dashboards
+    // 4. Trigger automated responses (IP blocking, account lockout, etc.)
 
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueeventId: `se, c, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, tr(29)}`,
-      timestamp: Da, t, e.n, o, w()
-    })} cat, c, h (err, o, r) {console.error("SecurityAPIerror:", err, o, r);
-    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};
+    res.status(200).json({
+      success: true,
+      eventId: `sec_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: Date.now()
+    });
+  } catch (error) {
+    console.error("Security API error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
