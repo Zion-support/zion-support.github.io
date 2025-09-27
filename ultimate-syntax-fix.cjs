@@ -1,111 +1,99 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
-// Function to fix all remaining syntax errors
-function ultimateSyntaxFix(content) {
-  let fixed = content;
-  
-  // Fix corrupted type annotations
-  fixed = fixed.replace(/JS, X\.Elem, e, n, t/g, 'JSX.Element');
-  fixed = fixed.replace(/num, b, e, r/g, 'number');
-  fixed = fixed.replace(/n, u, l, l/g, 'null');
-  fixed = fixed.replace(/fa, l, s, e/g, 'false');
-  fixed = fixed.replace(/t, r, u, e/g, 'true');
-  fixed = fixed.replace(/st, r, i, n, g/g, 'string');
-  fixed = fixed.replace(/boo, l, e, a, n/g, 'boolean');
-  fixed = fixed.replace(/obj, e, c, t/g, 'object');
-  
-  // Fix corrupted function names
-  fixed = fixed.replace(/AnalyticsP, a, g, e/g, 'AnalyticsPage');
-  fixed = fixed.replace(/B, l, o, g/g, 'Blog');
-  fixed = fixed.replace(/Cont, a, c, t/g, 'Contact');
-  fixed = fixed.replace(/Portfo, l, i, o/g, 'Portfolio');
-  fixed = fixed.replace(/About/g, 'About');
-  
-  // Fix corrupted variable names
-  fixed = fixed.replace(/isVisi, b, l, e/g, 'isVisible');
-  fixed = fixed.replace(/setIsVisi, b, l, e/g, 'setIsVisible');
-  fixed = fixed.replace(/isNewsletterLoad, i, n, g/g, 'isNewsletterLoading');
-  fixed = fixed.replace(/setIsNewsletterLoad, i, n, g/g, 'setIsNewsletterLoading');
-  fixed = fixed.replace(/formD, a, t, a/g, 'formData');
-  fixed = fixed.replace(/setFormD, a, t, a/g, 'setFormData');
-  fixed = fixed.replace(/selectedProj, e, c, t/g, 'selectedProject');
-  fixed = fixed.replace(/setSelectedProj, e, c, t/g, 'setSelectedProject');
-  
-  // Fix corrupted object properties
-  fixed = fixed.replace(/n, a, m, e:/g, 'name:');
-  fixed = fixed.replace(/em, a, i, l:/g, 'email:');
-  fixed = fixed.replace(/trackCl, i, c, k/g, 'trackClick');
-  
-  // Fix corrupted strings
-  fixed = fixed.replace(/''/g, "''");
-  fixed = fixed.replace(/""/g, '""');
-  
-  // Fix corrupted component names in titles
-  fixed = fixed.replace(/Z, i, o, n T, e, c, h Solutions/g, 'Zion Tech Solutions');
-  fixed = fixed.replace(/Analytics Dashboard/g, 'Analytics Dashboard');
-  
-  // Fix corrupted function calls
-  fixed = fixed.replace(/useState\(fa, l, s, e\)/g, 'useState(false)');
-  fixed = fixed.replace(/useState\(t, r, u, e\)/g, 'useState(true)');
-  fixed = fixed.replace(/useState\(n, u, l, l\)/g, 'useState(null)');
-  
-  // Fix corrupted function parameters
-  fixed = fixed.replace(/setIsVisi, b, l, e\(t, r, u, e\)/g, 'setIsVisible(true)');
-  fixed = fixed.replace(/setIsVisi, b, l, e\(fa, l, s, e\)/g, 'setIsVisible(false)');
-  
-  // Fix corrupted type annotations in useState
-  fixed = fixed.replace(/useState<num, b, e, r \| n, u, l, l>/g, 'useState<number | null>');
-  
-  return fixed;
-}
-
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = ultimateSyntaxFix(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+// Function to completely fix corrupted text
+function fixCorruptedText(content) {
+  // Fix spaces in variable names and keywords
+  content = content.replace(/(\w)\s+(\w)/g, (match, p1, p2) => {
+    // Only fix if it's clearly corrupted (letters separated by spaces)
+    if (p1.match(/[a-zA-Z]/) && p2.match(/[a-zA-Z]/) && match.length <= 10) {
+      return p1 + p2;
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return match;
+  });
+  
+  // Fix specific corrupted patterns
+  content = content.replace(/teamMemb\s+e\s+r\s+s/g, 'teamMembers');
+  content = content.replace(/handleInputCha\s+n\s+g\s+e/g, 'handleInputChange');
+  content = content.replace(/React\.ChangeEv\s+e\s+n\s+t/g, 'React.ChangeEvent');
+  content = content.replace(/HTMLInputElem\s+e\s+n\s+t/g, 'HTMLInputElement');
+  content = content.replace(/HTMLTextAreaElem\s+e\s+n\s+t/g, 'HTMLTextAreaElement');
+  content = content.replace(/n\s+a\s+m\s+e/g, 'name');
+  content = content.replace(/va\s+l\s+u\s+e/g, 'value');
+  content = content.replace(/tar\s+g\s+e\s+t/g, 'target');
+  content = content.replace(/p\s+r\s+e\s+v/g, 'prev');
+  content = content.replace(/r\s+o\s+l\s+e/g, 'role');
+  content = content.replace(/expert\s+i\s+s\s+e/g, 'expertise');
+  content = content.replace(/readT\s+i\s+m\s+e/g, 'readTime');
+  content = content.replace(/descri\s+pti\s+o\s+n/g, 'description');
+  
+  // Fix object property syntax
+  content = content.replace(/name:\s*'([^']*)'\s*(\w+):/g, 'name: \'$1\',\n\t\t$2:');
+  content = content.replace(/role:\s*'([^']*)'\s*(\w+):/g, 'role: \'$1\',\n\t\t$2:');
+  content = content.replace(/expertise:\s*'([^']*)'\s*(\w+):/g, 'expertise: \'$1\',\n\t\t$2:');
+  content = content.replace(/image:\s*'([^']*)'\s*(\w+):/g, 'image: \'$1\',\n\t\t$2:');
+  content = content.replace(/description:\s*'([^']*)'/g, 'description: \'$1\'');
+  
+  // Fix array syntax
+  content = content.replace(/id:\s*(\d+),\s*title:/g, 'id: $1,\n\t\t\ttitle:');
+  content = content.replace(/title:\s*'([^']*)'\s*excerpt:/g, 'title: \'$1\',\n\t\t\texcerpt:');
+  content = content.replace(/excerpt:\s*'([^']*)',\s*author:/g, 'excerpt: \'$1\',\n\t\t\tauthor:');
+  content = content.replace(/author:\s*'([^']*)'\s*date:/g, 'author: \$1\',\n\t\t\tdate:');
+  content = content.replace(/date:\s*'([^']*)'\s*readTime:/g, 'date: \'$1\',\n\t\t\treadTime:');
+  content = content.replace(/readTime:\s*'([^']*)'\s*category:/g, 'readTime: \'$1\',\n\t\t\tcategory:');
+  content = content.replace(/category:\s*'([^']*)'\s*image:/g, 'category: \'$1\',\n\t\t\timage:');
+  content = content.replace(/image:\s*'([^']*)'\s*slug:/g, 'image: \'$1\',\n\t\t\tslug:');
+  content = content.replace(/slug:\s*'([^']*)'(\s*})/g, 'slug: \'$1\'$2');
+  
+  // Fix JSX syntax
+  content = content.replace(/<EnhancedSEOtitle=/g, '<EnhancedSEO\n\t\ttitle=');
+  content = content.replace(/title="([^"]*)"\s*description=/g, 'title="$1"\n\t\tdescription=');
+  content = content.replace(/description="([^"]*)"\s*keywords=/g, 'description="$1"\n\t\tkeywords=');
+  
+  // Fix function call syntax
+  content = content.replace(/setFormData\(\s*p\s+r\s+e\s+v\s*=>\s*\(\{/g, 'setFormData(prev => ({\n\t\t...prev,');
+  content = content.replace(/\.\.\.p\s+r\s+e\s+v\s*\[n\s+a\s+m\s+e\]:\s*va\s+l\s+u\s+e\s*\}\)/g, '\t\t[name]: value\n\t})');
+  
+  // Fix return statement indentation
+  content = content.replace(/return \(\s*<div className="p-8">/g, 'return (\n\t\t<div className="p-8">');
+  
+  return content;
 }
 
-// Function to recursively find and process files
-function processDirectory(dir) {
-  if (!fs.existsSync(dir)) {
-    return 0;
-  }
+// Function to fix specific files
+function fixSpecificFiles() {
+  const files = [
+    'pages/about.tsx',
+    'pages/analytics.tsx', 
+    'pages/blog.tsx',
+    'pages/contact.tsx',
+    'pages/dashboard.tsx'
+  ];
   
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      if (processFile(filePath)) {
-        fixedCount++;
+  files.forEach(filePath => {
+    try {
+      if (!fs.existsSync(filePath)) {
+        console.log(`File not found: ${filePath}`);
+        return;
       }
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      content = fixCorruptedText(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        console.log(`Fixed corrupted text in: ${filePath}`);
+      }
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
     }
-  }
-  
-  return fixedCount;
+  });
 }
 
-// Main execution
-console.log('Starting ultimate syntax fix...');
-const fixedCount = processDirectory('./pages') + processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+// Run the fixes
+console.log('Starting ultimate syntax fixes...');
+fixSpecificFiles();
+console.log('Ultimate syntax fixes completed!');
