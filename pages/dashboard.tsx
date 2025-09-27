@@ -2,14 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { useState } from "react";
 import SEO from "../src/components/SEO";
-import { useAnalytics } from "../src/hooks/useAnalytics";
-
 const Dashboard = React.memo(function Dashboard(): JSX.Element {
-	const [activeTab, setActiveTab] = useState("overview");
 	const [isRealTime, setIsRealTime] = useState(false);
-
-	// Analytics tracking
-	const { trackClick } = useAnalytics();
 
 
 	const renderDashboard = () => {

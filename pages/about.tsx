@@ -2,11 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import SEO from "../src/components/SEO";
-import { useAnalytics } from "../src/hooks/useAnalytics";
-
 const About = React.memo(function About(): JSX.Element {
-	// Analytics tracking
-	const { trackClick } = useAnalytics();
 
 	const teamMembers = [
 		{

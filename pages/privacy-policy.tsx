@@ -1,12 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { usePageView, useAnalytics } from "../src/hooks/useAnalytics";
+import { usePageView } from "../src/hooks/useAnalytics";
 
 export default function PrivacyPolicy(): JSX.Element {
 	// Analytics tracking
 	usePageView("privacy-policy");
-	const { trackClick } = useAnalytics();
 
 	const sections = [
 		{
