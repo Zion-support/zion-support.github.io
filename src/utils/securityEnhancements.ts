@@ -1,363 +1,181 @@
-/**
- * Security Enhancement Utilities
- * Advanced security features for the Zion Tech Group website
- */
+// Enhanced Security Utilities for Web Applications
 
-interface SecurityConfig {
+export interface SecurityConfig {
   enableCSP: boolean;
-  enableHSTS: boolean;
-  enableClickjackingProtection: boolean;
   enableXSSProtection: boolean;
-  enableContentTypeSniffingProtection: boolean;
-  allowedOrigins: string[];
-  reportUri?: string;
+  enableHSTS: boolean;
+  enableReferrerPolicy: boolean;
+  enablePermissionsPolicy: boolean;
 }
 
-interface SecurityViolation {
-  type: string;
-  source: string;
-  blockedURI: string;
-  violatedDirective: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
-}
-
-interface SecurityMetrics {
-  violations: SecurityViolation[];
-  suspiciousActivities: Array<{
-    type: string;
-    timestamp: number;
-    details: Record<string, unknown>;
-  }>;
-  blockedRequests: number;
-  allowedRequests: number;
-}
-
-export class SecurityEnhancer {
-  private static instance: SecurityEnhancer;
+export class SecurityManager {
+  private static instance: SecurityManager;
   private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private violationHandler?: (violation: SecurityViolation) => void;
 
-  private constructor() {
+  private constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
-      enableHSTS: true,
-      enableClickjackingProtection: true,
       enableXSSProtection: true,
-      enableContentTypeSniffingProtection: true,
-      allowedOrigins: [
-        window.location.origin,
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://cdn.jsdelivr.net'
-      ]
+      enableHSTS: true,
+      enableReferrerPolicy: true,
+      enablePermissionsPolicy: true,
+      ...config
     };
-
-    this.metrics = {
-      violations: [],
-      suspiciousActivities: [],
-      blockedRequests: 0,
-      allowedRequests: 0
-    };
-
-    this.initializeSecurityFeatures();
+    this.initialize();
   }
 
-  public static getInstance(): SecurityEnhancer {
-    if (!SecurityEnhancer.instance) {
-      SecurityEnhancer.instance = new SecurityEnhancer();
+  public static getInstance(config?: Partial<SecurityConfig>): SecurityManager {
+    if (!SecurityManager.instance) {
+      SecurityManager.instance = new SecurityManager(config);
     }
-    return SecurityEnhancer.instance;
+    return SecurityManager.instance;
   }
 
-  public configure(config: Partial<SecurityConfig>): void {
-    this.config = { ...this.config, ...config };
-    this.initializeSecurityFeatures();
-  }
-
-  public setViolationHandler(handler: (violation: SecurityViolation) => void): void {
-    this.violationHandler = handler;
-  }
-
-  private initializeSecurityFeatures(): void {
-    this.setupCSP();
+  private initialize(): void {
+    if (this.config.enableCSP) {
+      this.setupContentSecurityPolicy();
+    }
+    if (this.config.enableXSSProtection) {
+      this.setupXSSProtection();
+    }
+    if (this.config.enableHSTS) {
+      this.setupHSTS();
+    }
+    if (this.config.enableReferrerPolicy) {
+      this.setupReferrerPolicy();
+    }
+    if (this.config.enablePermissionsPolicy) {
+      this.setupPermissionsPolicy();
+    }
+    
+    this.setupInputSanitization();
     this.setupClickjackingProtection();
-    this.setupXSSProtection();
-    this.setupContentTypeSniffingProtection();
-    this.setupCSPViolationReporting();
-    this.setupSuspiciousActivityDetection();
   }
 
-  private setupCSP(): void {
-    if (!this.config.enableCSP) return;
-
-    const cspDirectives = [
+  private setupContentSecurityPolicy(): void {
+    const csp = [
       "default-src 'self'",
-      `script-src 'self' 'unsafe-inline' ${this.config.allowedOrigins.join(' ')}`,
-      `style-src 'self' 'unsafe-inline' ${this.config.allowedOrigins.join(' ')}`,
-      `img-src 'self' data: blob: ${this.config.allowedOrigins.join(' ')}`,
-      `font-src 'self' ${this.config.allowedOrigins.join(' ')}`,
-      `connect-src 'self' ${this.config.allowedOrigins.join(' ')}`,
-      "frame-ancestors 'none'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https: blob:",
+      "connect-src 'self' https: wss:",
+      "media-src 'self' https:",
+      "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "object-src 'none'",
+      "frame-ancestors 'none'",
       "upgrade-insecure-requests"
-    ];
+    ].join('; ');
 
-    if (this.config.reportUri) {
-      cspDirectives.push(`report-uri ${this.config.reportUri}`);
-    }
-
-    const cspHeader = cspDirectives.join('; ');
-    
-    // Set CSP meta tag
-    let cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]') as HTMLMetaElement;
-    if (!cspMeta) {
-      cspMeta = document.createElement('meta');
-      cspMeta.httpEquiv = 'Content-Security-Policy';
-      document.head.appendChild(cspMeta);
-    }
-    cspMeta.content = cspHeader;
-  }
-
-  private setupClickjackingProtection(): void {
-    if (!this.config.enableClickjackingProtection) return;
-
-    // Check if we're in a frame
-    if (window.self !== window.top) {
-      const allowedFraming = this.config.allowedOrigins.some(origin => 
-        window.location.hostname === new URL(origin).hostname
-      );
-
-      if (!allowedFraming) {
-        // Redirect to prevent clickjacking
-        if (window.top) {
-          window.top.location.href = window.location.href;
-        }
-      }
-    }
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = csp;
+    document.head.appendChild(meta);
   }
 
   private setupXSSProtection(): void {
-    if (!this.config.enableXSSProtection) return;
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
 
-    // Set X-XSS-Protection header via meta tag
-    let xssMeta = document.querySelector('meta[http-equiv="X-XSS-Protection"]') as HTMLMetaElement;
-    if (!xssMeta) {
-      xssMeta = document.createElement('meta');
-      xssMeta.httpEquiv = 'X-XSS-Protection';
-      document.head.appendChild(xssMeta);
-    }
-    xssMeta.content = '1; mode=block';
+    const xssProtection = document.createElement('meta');
+    xssProtection.httpEquiv = 'X-XSS-Protection';
+    xssProtection.content = '1; mode=block';
+    document.head.appendChild(xssProtection);
   }
 
-  private setupContentTypeSniffingProtection(): void {
-    if (!this.config.enableContentTypeSniffingProtection) return;
-
-    // Set X-Content-Type-Options header via meta tag
-    let contentTypeMeta = document.querySelector('meta[http-equiv="X-Content-Type-Options"]') as HTMLMetaElement;
-    if (!contentTypeMeta) {
-      contentTypeMeta = document.createElement('meta');
-      contentTypeMeta.httpEquiv = 'X-Content-Type-Options';
-      document.head.appendChild(contentTypeMeta);
-    }
-    contentTypeMeta.content = 'nosniff';
-  }
-
-  private setupCSPViolationReporting(): void {
-    document.addEventListener('securitypolicyviolation', (event) => {
-      const violation: SecurityViolation = {
-        type: 'CSP',
-        source: event.sourceFile || 'unknown',
-        blockedURI: event.blockedURI || 'unknown',
-        violatedDirective: event.violatedDirective || 'unknown',
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      };
-
-      this.metrics.violations.push(violation);
-      this.metrics.blockedRequests++;
-
-      // Call custom violation handler if set
-      if (this.violationHandler) {
-        this.violationHandler(violation);
-      }
-
-      // Send violation report
-      this.reportViolation(violation);
-    });
-  }
-
-  private setupSuspiciousActivityDetection(): void {
-    // Monitor for suspicious patterns
-    let suspiciousActivityCount = 0;
-    const suspiciousThreshold = 10;
-    const timeWindow = 60000; // 1 minute
-
-    const detectSuspiciousActivity = (activity: string, details: Record<string, unknown>) => {
-      suspiciousActivityCount++;
-      
-      this.metrics.suspiciousActivities.push({
-        type: activity,
-        timestamp: Date.now(),
-        details
-      });
-
-      // If too many suspicious activities in a short time, take action
-      if (suspiciousActivityCount > suspiciousThreshold) {
-        this.handleHighSuspiciousActivity();
-      }
-    };
-
-    // Monitor rapid clicks (potential bot activity)
-    let clickCount = 0;
-    let lastClickTime = 0;
-    document.addEventListener('click', () => {
-      const now = Date.now();
-      if (now - lastClickTime < 100) { // Less than 100ms between clicks
-        clickCount++;
-        if (clickCount > 5) {
-          detectSuspiciousActivity('rapid_clicks', {
-            clickCount,
-            timeWindow: now - lastClickTime
-          });
-        }
-      } else {
-        clickCount = 0;
-      }
-      lastClickTime = now;
-    });
-
-    // Monitor rapid form submissions
-    let formSubmissionCount = 0;
-    document.addEventListener('submit', () => {
-      formSubmissionCount++;
-      if (formSubmissionCount > 3) {
-        detectSuspiciousActivity('rapid_form_submissions', {
-          submissionCount: formSubmissionCount
-        });
-      }
-    });
-
-    // Monitor suspicious user agent patterns
-    const userAgent = navigator.userAgent.toLowerCase();
-    const suspiciousPatterns = [
-      'bot', 'crawler', 'spider', 'scraper', 'automated'
-    ];
-
-    if (suspiciousPatterns.some(pattern => userAgent.includes(pattern))) {
-      detectSuspiciousActivity('suspicious_user_agent', {
-        userAgent: navigator.userAgent
-      });
-    }
-
-    // Reset counters periodically
-    setInterval(() => {
-      suspiciousActivityCount = Math.max(0, suspiciousActivityCount - 1);
-      clickCount = 0;
-      formSubmissionCount = 0;
-    }, timeWindow);
-  }
-
-  private handleHighSuspiciousActivity(): void {
-    console.warn('High level of suspicious activity detected');
-    
-    // Implement rate limiting or additional security measures
-    this.enableRateLimiting();
-    
-    // Send alert to security monitoring
-    this.reportSecurityAlert('high_suspicious_activity', {
-      suspiciousActivities: this.metrics.suspiciousActivities.slice(-10),
-      timestamp: Date.now()
-    });
-  }
-
-  private enableRateLimiting(): void {
-    // Simple client-side rate limiting
-    let requestCount = 0;
-    const maxRequests = 10;
-    const timeWindow = 60000; // 1 minute
-
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      requestCount++;
-      
-      if (requestCount > maxRequests) {
-        throw new Error('Rate limit exceeded');
-      }
-
-      return originalFetch(...args);
-    };
-
-    // Reset counter periodically
-    setInterval(() => {
-      requestCount = Math.max(0, requestCount - 1);
-    }, timeWindow);
-  }
-
-  private async reportViolation(violation: SecurityViolation): Promise<void> {
-    try {
-      await fetch('/api/security/violations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(violation)
-      });
-    } catch (error) {
-      console.warn('Failed to report security violation:', error);
+  private setupHSTS(): void {
+    // Note: HSTS should be set by the server, but we can add the meta tag as a fallback
+    if (location.protocol === 'https:') {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'Strict-Transport-Security';
+      meta.content = 'max-age=31536000; includeSubDomains; preload';
+      document.head.appendChild(meta);
     }
   }
 
-  private async reportSecurityAlert(type: string, details: Record<string, unknown>): Promise<void> {
-    try {
-      await fetch('/api/security/alerts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          type,
-          details,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent
-        })
-      });
-    } catch (error) {
-      console.warn('Failed to report security alert:', error);
+  private setupReferrerPolicy(): void {
+    const meta = document.createElement('meta');
+    meta.name = 'referrer';
+    meta.content = 'strict-origin-when-cross-origin';
+    document.head.appendChild(meta);
+  }
+
+  private setupPermissionsPolicy(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Permissions-Policy';
+    meta.content = 'camera=(), microphone=(), geolocation=(), payment=(), usb=()';
+    document.head.appendChild(meta);
+  }
+
+  private setupClickjackingProtection(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Frame-Options';
+    meta.content = 'DENY';
+    document.head.appendChild(meta);
+  }
+
+  private setupInputSanitization(): void {
+    // Add global input sanitization
+    document.addEventListener('input', this.sanitizeInput.bind(this));
+    document.addEventListener('paste', this.sanitizePaste.bind(this));
+  }
+
+  private sanitizeInput(event: Event): void {
+    const target = event.target as HTMLInputElement | HTMLTextAreaElement;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+      target.value = this.sanitizeString(target.value);
     }
   }
 
-  public sanitizeInput(input: string): string {
-    // Basic XSS prevention
+  private sanitizePaste(event: ClipboardEvent): void {
+    const target = event.target as HTMLInputElement | HTMLTextAreaElement;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+      event.preventDefault();
+      const paste = event.clipboardData?.getData('text') || '';
+      const sanitized = this.sanitizeString(paste);
+      target.value += sanitized;
+    }
+  }
+
+  public sanitizeString(input: string): string {
     return input
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#x27;')
-      .replace(/\//g, '&#x2F;');
+      .replace(/[<>]/g, '') // Remove angle brackets
+      .replace(/javascript:/gi, '') // Remove javascript: protocol
+      .replace(/on\w+\s*=/gi, '') // Remove event handlers
+      .replace(/eval\s*\(/gi, '') // Remove eval calls
+      .trim();
+  }
+
+  public validateEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email) && !this.containsMaliciousContent(email);
   }
 
   public validateURL(url: string): boolean {
     try {
-      const parsedUrl = new URL(url);
-      return this.config.allowedOrigins.some(origin => {
-        try {
-          const allowedUrl = new URL(origin);
-          return parsedUrl.protocol === allowedUrl.protocol && 
-                 parsedUrl.hostname === allowedUrl.hostname;
-        } catch {
-          return false;
-        }
-      });
+      const urlObj = new URL(url);
+      return ['http:', 'https:'].includes(urlObj.protocol) && 
+             !this.containsMaliciousContent(url);
     } catch {
       return false;
     }
+  }
+
+  private containsMaliciousContent(input: string): boolean {
+    const maliciousPatterns = [
+      /javascript:/gi,
+      /data:text\/html/gi,
+      /vbscript:/gi,
+      /<script/gi,
+      /on\w+\s*=/gi,
+      /eval\s*\(/gi,
+      /expression\s*\(/gi
+    ];
+    
+    return maliciousPatterns.some(pattern => pattern.test(input));
   }
 
   public generateSecureToken(length: number = 32): string {
@@ -366,28 +184,128 @@ export class SecurityEnhancer {
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
-  public hashString(input: string): Promise<string> {
+  public hashPassword(password: string): Promise<string> {
     const encoder = new TextEncoder();
-    const data = encoder.encode(input);
-    return crypto.subtle.digest('SHA-256', data).then(hashBuffer => {
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    const data = encoder.encode(password);
+    return crypto.subtle.digest('SHA-256', data).then(hash => {
+      return Array.from(new Uint8Array(hash))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
     });
   }
 
-  public getSecurityMetrics(): SecurityMetrics {
-    return { ...this.metrics };
+  public setupSecureStorage(): {
+    setItem: (key: string, value: string) => void;
+    getItem: (key: string) => string | null;
+    removeItem: (key: string) => void;
+  } {
+    const prefix = 'secure_';
+    
+    return {
+      setItem: (key: string, value: string) => {
+        const secureKey = prefix + this.sanitizeString(key);
+        const secureValue = this.sanitizeString(value);
+        try {
+          localStorage.setItem(secureKey, secureValue);
+        } catch (error) {
+          console.warn('Secure storage failed:', error);
+        }
+      },
+      getItem: (key: string) => {
+        const secureKey = prefix + this.sanitizeString(key);
+        try {
+          return localStorage.getItem(secureKey);
+        } catch (error) {
+          console.warn('Secure storage retrieval failed:', error);
+          return null;
+        }
+      },
+      removeItem: (key: string) => {
+        const secureKey = prefix + this.sanitizeString(key);
+        try {
+          localStorage.removeItem(secureKey);
+        } catch (error) {
+          console.warn('Secure storage removal failed:', error);
+        }
+      }
+    };
   }
 
-  public clearMetrics(): void {
-    this.metrics = {
-      violations: [],
-      suspiciousActivities: [],
-      blockedRequests: 0,
-      allowedRequests: 0
-    };
+  public monitorSecurityEvents(): void {
+    // Monitor for potential security issues
+    window.addEventListener('error', this.handleSecurityError.bind(this));
+    window.addEventListener('unhandledrejection', this.handleSecurityError.bind(this));
+    
+    // Monitor for suspicious activity
+    let clickCount = 0;
+    let lastClickTime = 0;
+    
+    document.addEventListener('click', (event) => {
+      const now = Date.now();
+      if (now - lastClickTime < 100) {
+        clickCount++;
+        if (clickCount > 10) {
+          console.warn('Suspicious rapid clicking detected');
+          this.reportSecurityEvent('rapid_clicking', { count: clickCount });
+        }
+      } else {
+        clickCount = 0;
+      }
+      lastClickTime = now;
+    });
+  }
+
+  private handleSecurityError(event: ErrorEvent | PromiseRejectionEvent): void {
+    const error = 'error' in event ? event.error : event.reason;
+    if (this.isSecurityRelatedError(error)) {
+      this.reportSecurityEvent('security_error', { error: error.message });
+    }
+  }
+
+  private isSecurityRelatedError(error: any): boolean {
+    if (!error || typeof error.message !== 'string') return false;
+    
+    const securityKeywords = [
+      'script', 'eval', 'unsafe', 'blocked', 'csp', 'cors', 'mixed content'
+    ];
+    
+    return securityKeywords.some(keyword => 
+      error.message.toLowerCase().includes(keyword)
+    );
+  }
+
+  private reportSecurityEvent(type: string, details: any): void {
+    // In a real application, this would send to your security monitoring service
+    console.warn(`Security Event [${type}]:`, details);
+    
+    // Could integrate with services like Sentry, LogRocket, etc.
+    if (window.gtag) {
+      window.gtag('event', 'security_event', {
+        event_category: 'Security',
+        event_label: type,
+        value: 1
+      });
+    }
+  }
+
+  public cleanup(): void {
+    // Remove event listeners and cleanup
+    document.removeEventListener('input', this.sanitizeInput.bind(this));
+    document.removeEventListener('paste', this.sanitizePaste.bind(this));
+    window.removeEventListener('error', this.handleSecurityError.bind(this));
+    window.removeEventListener('unhandledrejection', this.handleSecurityError.bind(this));
   }
 }
 
-// Export singleton instance
-export const securityEnhancer = SecurityEnhancer.getInstance();
+// Initialize security manager
+export const securityManager = SecurityManager.getInstance();
+
+// Export utility functions
+export const {
+  sanitizeString,
+  validateEmail,
+  validateURL,
+  generateSecureToken,
+  hashPassword,
+  setupSecureStorage
+} = securityManager;

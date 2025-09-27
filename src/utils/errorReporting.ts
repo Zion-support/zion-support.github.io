@@ -277,6 +277,13 @@ class ErrorReporter {
 
   private async sendToMonitoringService(report: ErrorReport) {
     try {
+      // Prevent infinite recursion by checking if this is an error reporting error
+      if (report.error.message.includes('Failed to send error report') || 
+          report.error.message.includes('error-reporting') ||
+          report.error.message.includes('Maximum call stack size exceeded')) {
+        return;
+      }
+
       // Send to your error monitoring service
       await fetch('/api/error-reporting', {
         method: 'POST',
