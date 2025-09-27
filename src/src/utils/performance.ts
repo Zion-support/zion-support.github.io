@@ -67,7 +67,8 @@ export const measureWebVitals = () => {
     const entries = list.getEntries();
     entries.forEach((entry) => {
       if ('processingStart' in entry) {
-        console.log('FID:', (entry as any).processingStart - entry.startTime);
+        const processingStart = (entry as PerformanceEventTiming).processingStart;
+        console.log('FID:', processingStart - entry.startTime);
       }
     });
   });
