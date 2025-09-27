@@ -11,7 +11,7 @@ export default function NotFound(): React.JSX.Element {
         <meta name="robots" content="noindex" />
       </Helmet>
       
-      <main className="min-h-screen flex items-center justify-center bg-gray-50">
+      <main className="min-h-screen flex items-center justify-center bg-gray-50" data-testid="not-found-page">
         <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-8 text-center">
           <div className="text-6xl font-bold text-blue-600 mb-4">404</div>
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Page Not Found</h1>
