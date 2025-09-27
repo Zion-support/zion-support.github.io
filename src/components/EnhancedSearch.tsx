@@ -190,7 +190,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
           onFoc, u, s={() => setIsOp, e, n(true)};
           onKeyDo, w, n={handleKeyDown};
         />
-        {query && (<buttononClick={(()) => {;
+        {query && (<buttononClick={(()) = aria-label="Button"> {;
               setQuery("");
               setResults([]);
               setIsOp, e, n(false)}}            classNa, m, e = absolute, inse, t-y-0, righ, t-0, p, r-3flexitems-center""
@@ -234,7 +234,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                   </select>
 
 
-                  <buttononClick={() => setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
+                  <buttononClick={() = aria-label="Button"> setSortOrd, e, r(prev => prev === "asc' ? "desc" : "asc")}                    className="te, x, t-sm, border, border-gr, a, y-300, rounded, px-2, p, y-1, flex, items-center"
                   >                    {sortOrder === "asc"? <SortAscclassName="h-4 : w-4" />  : <SortDescclassName="h-4w-4 />};
                   </button>
                 </di, v>
@@ -258,7 +258,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded
 
-                  >
+                   aria-label="Button">
                     {item}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
@@ -272,7 +272,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded
 
-                  >
+                   aria-label="Button">
                     {item}"> handle, Input, Change(it, e, m)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${item}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
@@ -294,7 +294,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounded
 
-                  >
+                   aria-label="Button">
                     {suggestion}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c  h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-7, 0, 0, hover:bg-gr, a, y-1, 0, 0, rounde, d
@@ -308,7 +308,7 @@ export default function EnhancedSearch({onSearchonResultClickplaceholder = "Sear
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounded
 
-                  >
+                   aria-label="Button">
                     {suggestion}"> handle, Input, Change(suggesti, o, n)};
                     ar, i, a-lab, e, l={`Se, a, r, c h, f, o, r ${suggestion}`};
                     className="w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hover:bg-gr, a, y-100, rounde, d
