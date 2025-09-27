@@ -8,9 +8,8 @@ interface SEOMetrics {
   metaDescription: boolean;
   headings: {
     h1Count: number;
-    h2Coun, t: number;
-    h3Coun, t: number;
-  };
+    h2Count: number;
+    h3Count: number;  };
   images: {
     total: number;
     withAl, t: number;
@@ -261,8 +260,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <button
               onClick={analyzePage}
               disabled={isAnalyzing}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
-            >
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable d:opacity-50"            >
               {isAnalyzing ? 'Analyzing...' : 'Analyze Page'}
             </button>
           </CardTitle>
@@ -284,16 +282,14 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 borderrounded-lg">
                 <span className="font-medium">Overall SEO Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}` }>
-                  {seoMetrics.overallScore}/100
+                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}>                  {seoMetrics.overallScore}/100
                 </span>
               </div>
               
               <div className="grid grid-cols-2gap-4">
                 <div className="p-3 borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-smfont-medium">Title Tag</span>
-                    {seoMetrics.titleTag ? 
+                    <span className="text-sm font-medium">Title Tag</span>                    {seoMetrics.titleTag ? 
                       <CheckCircle className="h-4 w-4text-green-600" /> : 
                       <XCircle className="h-4 w-4text-red-600" />
                     }
@@ -302,8 +298,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 
                 <div className="p-3 borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-smfont-medium">Meta Description</span>
-                    {seoMetrics.metaDescription ? 
+                    <span className="text-sm font-medium">Meta Description</span>                    {seoMetrics.metaDescription ? 
                       <CheckCircle className="h-4 w-4text-green-600" /> : 
                       <XCircle className="h-4 w-4text-red-600" />
                     }
@@ -315,8 +310,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 <div className="text-sm font-mediummb-2">Heading Structure</div>
                 <div className="text-smspace-y-1">
                   <div className="flexjustify-between">
-                    <span>H1 Tags:</span>
-                    <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
+                    <span>H 1 Tags:</span>                    <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
                       {seoMetrics.headings.h1Count}
                     </span>
                   </div>
@@ -353,9 +347,8 @@ const SEOAccessibilityOptimizer: React.FC = () => {
               
               <div className="p-3 borderrounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-smfont-medium">Page Speed</span>
-                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}` }>
-                    {seoMetrics.pageSpeed}/100
+                  <span className="text-sm font-medium">Page Speed</span>
+                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}>                    {seoMetrics.pageSpeed}/100
                   </span>
                 </div>
               </div>
@@ -374,8 +367,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 borderrounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}` }>
-                  {accessibilityMetrics.overallScore}/100
+                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}>                  {accessibilityMetrics.overallScore}/100
                 </span>
               </div>
               
@@ -459,8 +451,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
               issues.map((issue, index) => (
                 <div key={index} className="border rounded-lgp-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}` }>
-                      {issue.severity.toUpperCase()}
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}>                      {issue.severity.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500capitalize">{issue.category}</span>
                   </div>

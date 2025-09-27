@@ -77,12 +77,11 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
           : 'bg-white shadow-sm'
-      } ${className}` }
+      } ${className}`}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8">
-        <div className="flex justify-between items-centerh-16">
+      <div className="max-w-7xl mx-auto px-4sm: px-6l g:px-8">        <div className="flex justify-between items-centerh-16">
           {/* Logo */}
           <Link 
             href="/" 
@@ -105,8 +104,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         activeDropdown === item.label
                           ? 'bg-blue-50 text-blue-600'
                           : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
-                      }` }
-                      aria-haspopup="true"
+                      }`}                      aria-haspopup="true"
                       aria-expanded={activeDropdown === item.label}
                     >
                       {item.icon && <span className="text-lg">{item.icon}</span>}
@@ -114,7 +112,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.label ? 'rotate-180' : ''
-                        }` }
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -133,7 +131,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                               isActiveRoute(child.href)
                                 ? 'bg-blue-50 text-blue-600 border-r-2 border-blue-600'
                                 : 'text-gray-700 hover:bg-gray-50'
-                            }` }
+                            }`}
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <div className="flex-1">
@@ -158,8 +156,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       isActiveRoute(item.href)
                         ? 'bg-blue-600 text-white'
                         : 'text-gray-700 hover:bg-gray-50 hove, r:text-gray-900'
-                    }` }
-                  >
+                    }`}                  >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                     {item.badge && (
@@ -176,14 +173,13 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md: hidden p-2 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu, s:ring-2 focu,s:ring-blue-500"
-            aria-label="Toggle mobile menu"
+            className="md: hidden p-2rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focu  s:ring-2focu s:ring-blue-500"            aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
             <svg
               className={`w-6 h-6 transition-transform duration-200 ${
                 isMobileMenuOpen ? 'rotate-90' : ''
-              }` }
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -201,8 +197,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-          }` }
-        >
+          }`}        >
           <div className="py-4space-y-2">
             {items.map((item) => (
               <div key={item.label}>
@@ -242,7 +237,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                               isActiveRoute(child.href)
                                 ? 'bg-blue-50 text-blue-600'
                                 : 'text-gray-600 hover:bg-gray-50'
-                            }` }
+                            }`}
                           >
                             {child.icon && <span className="text-lg">{child.icon}</span>}
                             <span>{child.label}</span>
@@ -263,7 +258,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                       isActiveRoute(item.href)
                         ? 'bg-blue-600 text-white'
                         : 'text-gray-700 hover:bg-gray-50'
-                    }` }
+                    }`}
                   >
                     {item.icon && <span className="text-lg">{item.icon}</span>}
                     <span>{item.label}</span>

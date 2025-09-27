@@ -356,8 +356,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}` }>
-      {title && (
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>      {title && (
         <h3 className="text-lg font-semibold text-gray-900mb-4" id="title">{title}</h3>
       )}
       
@@ -385,7 +384,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               key={index}
               className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm ${
                 hoveredIndex === index ? 'bg-gray-100' : ''
-              }` }
+              }`}
             >
               <div
                 className="w-3 h-3rounded-full"

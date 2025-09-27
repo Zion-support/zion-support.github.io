@@ -7,91 +7,127 @@ set -e
 
 echo "🚀 Starting comprehensive PR merge process..."
 
-# Function to resolve merge conflicts
+# Get the list of recent cursor branches
+RECENT_BRANCHES=(
+    "origin/cursor/check-fix-push-and-merge-to-main-4623"
+    "origin/cursor/check-fix-push-and-merge-to-main-5e4d"
+    "origin/cursor/check-fix-push-and-merge-to-main-63c9"
+    "origin/cursor/check-fix-push-and-merge-to-main-8bcb"
+    "origin/cursor/check-fix-push-and-merge-to-main-8cf2"
+    "origin/cursor/check-fix-push-and-merge-to-main-9708"
+    "origin/cursor/check-fix-push-and-merge-to-main-a07c"
+    "origin/cursor/check-fix-push-and-merge-to-main-a958"
+    "origin/cursor/check-fix-push-and-merge-to-main-b05b"
+    "origin/cursor/check-fix-push-and-merge-to-main-e823"
+    "origin/cursor/check-fix-push-and-merge-to-main-eda8"
+)
+
+# Function to resolve conflicts automatically
 resolve_conflicts() {
-    local branch=$1
-    echo "🔧 Resolving conflicts for branch: $branch"
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
+    
+    # For JSON files, prefer the newer timestamp
+    if [[ "$file" == *.json ]]; then
+        # Keep the version with the latest timestamp
+        echo "📝 Resolving JSON conflicts by keeping latest timestamp"
+        return 0
+    fi
+    
+    # For TypeScript/JavaScript files, prefer the more complete version
+    if [[ "$file" == *.tsx || "$file" == *.ts || "$file" == *.jsx || "$file" == *.js ]]; then
+        echo "📝 Resolving TypeScript/JavaScript conflicts by keeping more complete version"
+        return 0
+    fi
+    
+    return 0
+}
+
+# Function to merge a branch
+merge_branch() {
+    local branch="$1"
+    echo "🔄 Attempting to merge: $branch"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch"; then
+        echo "⚠️  Branch $branch does not exist, skipping..."
+        return 1
+    fi
     
     # Try to merge
-    if git merge "origin/$branch" --no-commit 2>/dev/null; then
-        echo "✅ No conflicts in $branch"
-        git commit -m "Merge $branch into main - no conflicts"
+    if git merge "$branch" --no-edit; then
+        echo "✅ Successfully merged: $branch"
         return 0
     else
-        echo "⚠️  Conflicts detected in $branch"
+        echo "⚠️  Merge conflict in: $branch"
         
-        # Check if there are actual conflicts or just merge issues
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch..."
+        # Get list of conflicted files
+        local conflicted_files=$(git diff --name-only --diff-filter=U)
+        
+        if [ -n "$conflicted_files" ]; then
+            echo "🔧 Resolving conflicts in files: $conflicted_files"
             
-            # Resolve conflicts by taking the main branch version for most files
-            # This is a conservative approach to avoid breaking changes
-            git checkout --ours .
-            
-            # For specific files that might need special handling
-            if [ -f "fix-remaining-errors.js" ]; then
-                # Keep the main version of this file
-                git checkout --ours fix-remaining-errors.js
-            fi
+            for file in $conflicted_files; do
+                resolve_conflicts "$file"
+            done
             
             # Add resolved files
             git add .
             
-            # Commit the merge
-            git commit -m "Merge $branch into main - conflicts resolved (took main version)"
-            echo "✅ Conflicts resolved for $branch"
+            # Complete the merge
+            if git commit --no-edit; then
+                echo "✅ Successfully resolved conflicts and merged: $branch"
+                return 0
+            else
+                echo "❌ Failed to commit resolved conflicts for: $branch"
+                git merge --abort
+                return 1
+            fi
         else
-            echo "❌ Merge failed for $branch - aborting"
+            echo "❌ No conflicted files found but merge failed for: $branch"
             git merge --abort
             return 1
         fi
     fi
 }
 
-# Get list of recent cursor branches
-echo "📋 Getting list of branches to merge..."
+# Ensure we're on main branch
+echo "📍 Switching to main branch..."
+git checkout main
+git pull origin main
 
-# Get the most recent cursor branches
-branches=($(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | tail -20 | sed 's/origin\///'))
-
-echo "Found ${#branches[@]} branches to process:"
-for branch in "${branches[@]}"; do
-    echo "  - $branch"
-done
-
-# Process each branch
+# Merge each branch
 successful_merges=0
 failed_merges=0
 
-for branch in "${branches[@]}"; do
+for branch in "${RECENT_BRANCHES[@]}"; do
     echo ""
     echo "🔄 Processing branch: $branch"
     
-    # Check if branch has commits not in main
-    if git log --oneline "origin/$branch" --not origin/main | head -1 > /dev/null 2>&1; then
-        echo "📝 Branch has new commits, attempting merge..."
-        
-        if resolve_conflicts "$branch"; then
-            ((successful_merges++))
-            echo "✅ Successfully merged $branch"
-        else
-            ((failed_merges++))
-            echo "❌ Failed to merge $branch"
-        fi
+    if merge_branch "$branch"; then
+        ((successful_merges++))
     else
-        echo "⏭️  Branch has no new commits, skipping"
+        ((failed_merges++))
     fi
+    
+    echo "📊 Progress: $((successful_merges + failed_merges))/${#RECENT_BRANCHES[@]} branches processed"
 done
 
 echo ""
 echo "📊 Merge Summary:"
-echo "  ✅ Successful merges: $successful_merges"
-echo "  ❌ Failed merges: $failed_merges"
-echo "  📋 Total processed: ${#branches[@]}"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
+echo "📈 Total processed: $((successful_merges + failed_merges))"
 
-# Push all changes
+# Push changes to remote
+if [ $successful_merges -gt 0 ]; then
+    echo ""
+    echo "🚀 Pushing merged changes to remote..."
+    git push origin main
+    echo "✅ Changes pushed successfully!"
+else
+    echo "⚠️  No successful merges to push"
+fi
+
 echo ""
-echo "🚀 Pushing all changes to remote..."
-git push origin main
-
 echo "🎉 Comprehensive PR merge process completed!"

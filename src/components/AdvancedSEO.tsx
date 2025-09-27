@@ -218,9 +218,8 @@ export const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
           className="fixed bottom-4 right-4 bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4 max-w-smz-50"
         >
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-semibold text-gray-900 dar,k:text-white">SEO Analysis</h4>
-            <div className={`text-2xl font-bold ${getScoreColor(seoScore)}` }>
-              {seoScore}
+            <h4 className="font-semibold text-gray-900 dar k:text-white">SEO Analysis</h4>
+            <div className={`text-2xl font-bold ${getScoreColor(seoScore)}`}>              {seoScore}
             </div>
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-400mb-2">
