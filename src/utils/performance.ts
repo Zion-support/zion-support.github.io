@@ -51,9 +51,12 @@ export class PerformanceMonitor {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntryWithProcessingStart) => {
-            this.metrics.set('FID', entry.processingStart - entry.startTime);
-            this.reportMetric('FID', entry.processingStart - entry.startTime);
+          entries.forEach((entry) => {
+            const fidEntry = entry as PerformanceEntryWithProcessingStart;
+            if ('processingStart' in fidEntry) {
+              this.metrics.set('FID', fidEntry.processingStart - fidEntry.startTime);
+              this.reportMetric('FID', fidEntry.processingStart - fidEntry.startTime);
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -67,9 +70,10 @@ export class PerformanceMonitor {
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntryWithValue) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+          entries.forEach((entry) => {
+            const clsEntry = entry as PerformanceEntryWithValue;
+            if ('value' in clsEntry && 'hadRecentInput' in clsEntry && !clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
             }
           });
           this.metrics.set('CLS', clsValue);
