@@ -16,6 +16,11 @@ Object.defineProperty(window, 'performance', {
   writable: true,
 });
 
+Object.defineProperty(global, 'performance', {
+  value: mockPerformance,
+  writable: true,
+});
+
 describe('performanceMonitor', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -33,7 +38,7 @@ describe('performanceMonitor', () => {
   });
 
   it('should handle missing performance API gracefully', () => {
-    // @ts-expect-error - Performance API is being deleted for testing
+    // @ts-expect-error - Testing behavior when performance API is not available
     delete window.performance;
     
     expect(() => {
@@ -48,8 +53,8 @@ describe('performanceMonitor', () => {
       disconnect: jest.fn(),
     };
     
-    // Mock ResizeObserver
-    global.ResizeObserver = jest.fn().mockImplementation(() => mockObserver);
+    // Mock PerformanceObserver
+    global.PerformanceObserver = jest.fn().mockImplementation(() => mockObserver);
     
     performanceMonitor.reportCoreWebVitals();
     
@@ -57,6 +62,12 @@ describe('performanceMonitor', () => {
   });
 
   it('should cleanup properly', () => {
+    // Ensure window.performance is properly mocked
+    Object.defineProperty(window, 'performance', {
+      value: mockPerformance,
+      writable: true,
+    });
+    
     performanceMonitor.startMeasure('test');
     performanceMonitor.cleanup();
     

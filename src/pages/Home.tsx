@@ -1,24 +1,27 @@
+import React from 'react';
 import { ArrowRight, Shield, Zap, Users, Globe, Star, CheckCircle, Sparkles, Rocket, Target } from 'lucide-react';
-import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
     <>
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading the future of technology with innovative solutions, cutting-edge AI, and transformative digital experiences that drive real business results."
-        keywords={[
-          'AI solutions',
-          'IT consulting',
-          'machine learning',
-          'cloud computing',
-          'cybersecurity',
-          'software development',
-          'digital transformation',
-          'enterprise technology'
-        ]}
-      />
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
+      <Helmet>
+        <title>Zion Tech Group - Leading AI & IT Solutions | Transform Your Business</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services." />
+        <meta name="keywords" content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" />
+        <meta property="og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      </Helmet>
+    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
+      <Header />
       {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'></div>
@@ -67,13 +70,13 @@ const Home = () => {
           </div>
           
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <button className='btn-primary flex items-center justify-center gap-2 group'>
+            <Link to="/services" className='btn-primary flex items-center justify-center gap-2 group'>
               Explore Services
               <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-            </button>
-            <button className='btn-secondary'>
+            </Link>
+            <Link to="/contact" className='btn-secondary'>
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -226,17 +229,18 @@ const Home = () => {
             Let&apos;s build something amazing together.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <button className='bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group'>
+            <Link to="/contact" className='bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group'>
               <Target className='w-5 h-5 group-hover:rotate-12 transition-transform duration-300' />
               Start Your Journey Today
-            </button>
-            <button className='border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+            </Link>
+            <Link to="/contact" className='border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
               Schedule a Call
-            </button>
+            </Link>
           </div>
         </div>
       </section>
-      </div>
+      {/* <Footer /> */}
+    </div>
     </>
   );
 };

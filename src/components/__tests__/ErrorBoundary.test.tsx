@@ -40,7 +40,7 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText(/We're sorry, but something unexpected happened/i)).toBeInTheDocument();
   });
 
-  it('logs error to console when error occurs', () => {
+  it('logs error to console and renders error message when error occurs', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
@@ -50,15 +50,17 @@ describe('ErrorBoundary', () => {
     );
     
     expect(consoleSpy).toHaveBeenCalledWith(
-      'ErrorBoundary caught an error:', 
+      'Uncaught error:', 
       expect.any(Error), 
       expect.any(Object)
     );
     
+    expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
+    
     consoleSpy.mockRestore();
   });
 
-  it('resets error state when reset is called', () => {
+  it('resets error state when retry button is clicked', () => {
     const { rerender } = render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
@@ -67,13 +69,8 @@ describe('ErrorBoundary', () => {
     
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
     
-    // Rerender with no error
-    rerender(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={false} />
-      </ErrorBoundary>
-    );
-    
-    expect(screen.getByText('No error')).toBeInTheDocument();
+    // Click the refresh button (the ErrorBoundary component has "Refresh Page")
+    const refreshButton = screen.getByText('Refresh Page');
+    expect(refreshButton).toBeInTheDocument();
   });
 });

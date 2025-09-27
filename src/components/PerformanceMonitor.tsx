@@ -28,16 +28,22 @@ const PerformanceMonitor: React.FC<{ show?: boolean }> = ({ show = false }) => {
     if (!isVisible) return;
 
     const updateMetrics = () => {
-      // Get performance metrics
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      // Get paint timing
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      
-      // Get LCP
-      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-      const lcp = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : null;
+      // Check if performance API is available
+      if (typeof performance === 'undefined' || !performance.getEntriesByType) {
+        return;
+      }
+
+      try {
+        // Get performance metrics
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        // Get paint timing
+        const paintEntries = performance.getEntriesByType('paint');
+        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        
+        // Get LCP
+        const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+        const lcp = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : null;
       
       // Get FID (simulated)
       let fid = null;
@@ -57,15 +63,18 @@ const PerformanceMonitor: React.FC<{ show?: boolean }> = ({ show = false }) => {
         }
       });
 
-      setMetrics({
-        fcp: fcpEntry ? fcpEntry.startTime : null,
-        lcp,
-        fid,
-        cls,
-        ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart
-      });
+        setMetrics({
+          fcp: fcpEntry ? fcpEntry.startTime : null,
+          lcp,
+          fid,
+          cls,
+          ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
+          loadTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : null,
+          domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.fetchStart : null
+        });
+      } catch (error) {
+        console.error('Error updating performance metrics:', error);
+      }
     };
 
     updateMetrics();

@@ -38,5 +38,33 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }));
 
+// Mock performance API
+global.performance = {
+  ...global.performance,
+  getEntriesByType: jest.fn().mockReturnValue([]),
+  mark: jest.fn(),
+  measure: jest.fn(),
+  clearMarks: jest.fn(),
+  clearMeasures: jest.fn(),
+  now: jest.fn().mockReturnValue(Date.now()),
+  navigation: {
+    loadEventEnd: 1000,
+    loadEventStart: 500,
+    domContentLoadedEventEnd: 800,
+    domContentLoadedEventStart: 600,
+    responseEnd: 400,
+    responseStart: 200,
+    requestStart: 100,
+    fetchStart: 0
+  }
+};
+
+// Mock PerformanceObserver
+global.PerformanceObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  disconnect: jest.fn(),
+  takeRecords: jest.fn().mockReturnValue([])
+}));
+
 // Setup testing library matchers
 import '@testing-library/jest-dom';
