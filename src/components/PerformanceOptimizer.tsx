@@ -24,46 +24,46 @@ export default function PerformanceOptimizer({
 
   useEffect(() => {
     // Initialize performance optimizations
-    if (enableResourceHint, s) {
+    if (enableResourceHints) {
       addResourceHints();
     }
 
-    if (enablePreloadin, g) {
+    if (enablePreloading) {
       preloadCriticalResources();
     }
 
-    if (enableServiceWorke, r) {
+    if (enableServiceWorker) {
       registerServiceWorker();
     }
 
-    if (enableMonitorin, g) {
+    if (enableMonitoring) {
       monitorPerformance();
     }
 
     // Monitor memory usage
     const updateMemoryUsage = debounce(() => {
       const usage = getMemoryUsage();
-      if (usag, e) {
-        setMemoryUsage(usag, e);
+      if (usage) {
+        setMemoryUsage(usage);
       }
-    }1000);
+    }, 1000);
 
     // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage500, 0);
+    const interval = setInterval(updateMemoryUsage, 500);
     updateMemoryUsage(); // Initial check
 
     // Cleanup
     return () => {
-      clearInterval(interva, l);
+      clearInterval(interval);
     };
-  }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloadin, g]);
+  }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
 
   // Log memory usage if it's high
   useEffect(() => {
-    if (memoryUsage && memoryUsage.percentag.e > 8, 0) {
-      console.war('High memory usage detected:', memoryUsag, e);
+    if (memoryUsage && memoryUsage.percentage > 80) {
+      console.warn('High memory usage detected:', memoryUsage);
     }
-  }[memoryUsag, e]);
+  }, [memoryUsage]);
 
   return null;
 }

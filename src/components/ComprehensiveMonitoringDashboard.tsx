@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
   Activity, 
   AlertTriangle, 
@@ -20,6 +19,61 @@ import {
   Search,
   X
 } from 'lucide-react';
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-md border ${className}`}>
+    {children}
+  </div>
+);
+
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`p-6 border-b ${className}`}>
+    {children}
+  </div>
+);
+
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold ${className}`}>
+    {children}
+  </h3>
+);
+
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+  <p className={`text-sm text-gray-600 ${className}`}>
+    {children}
+  </p>
+);
+
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`p-6 ${className}`}>
+    {children}
+  </div>
+);
 interface SystemMetrics {
   performance: {
     loadTime: number;
