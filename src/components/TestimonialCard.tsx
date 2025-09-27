@@ -20,7 +20,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   isVisible 
 }) => {
   const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }(_i) => (
+    return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
         className={`w-5 h-5 ${

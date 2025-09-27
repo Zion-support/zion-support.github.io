@@ -16,15 +16,15 @@ interface AccessibilityEnhancerProps {
   enableReducedMotionSupport?: boolean;
 }
 
-export default function AccessibilityEnhancer({
+const AccessibilityEnhancer = React.forwardRef<any, AccessibilityEnhancerProps>(({
   enableSkipLinks = true,
   enableFocusManagement = true,
   enableScreenReaderSupport = true,
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps) {
-  const [isHighContrastsetIsHighContrast] = useState(false);
-  const [prefersMotionsetPrefersMotion] = useState(true);
+}, ref) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotion, setPrefersMotion] = useState(true);
 
   useEffect(() => {
     // Initialize accessibility features
@@ -106,9 +106,11 @@ export default function AccessibilityEnhancer({
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(React.forwardRef(() => null)() => ({
+  React.useImperativeHandle(ref, () => ({
     announceChange
   }));
 
   return null; // This component doesn't render anything visible
-}
+});
+
+export default AccessibilityEnhancer;
