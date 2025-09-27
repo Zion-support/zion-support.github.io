@@ -219,12 +219,12 @@ export class BundleAnalyzer {
     console.group('📦 Bundle Analysis');
     
     scripts.forEach(script => {
-      const size = this.getResourceSize(script.src);
+      const size = this.getResourceSize();
       console.log(`Script: ${script.src} - ${size}`);
     });
 
     stylesheets.forEach(link => {
-      const size = this.getResourceSize(link.href);
+      const size = this.getResourceSize();
       console.log(`Stylesheet: ${link.href} - ${size}`);
     });
 
