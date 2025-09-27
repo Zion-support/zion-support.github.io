@@ -5,12 +5,12 @@ import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 // Removed Next.js metadata export
-const metadata = {
-  title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results.',
-  keywords: ['Fortune 500', 'AI transformation', 'ROI', 'success', '2025', 'case study'],
-  authors: [{ name: 'Zion Tech Group' }],
-};
+// const metadata = {
+//   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
+//   description: 'Discover how a Fortune 500 company achieved 500% ROI through AI transformation in 2025. Complete case study with implementation details and results.',
+//   keywords: ['Fortune 500', 'AI transformation', 'ROI', 'success', '2025', 'case study'],
+//   authors: [{ name: 'Zion Tech Group' }],
+// };
 
 export default function Fortune500AITransformationSuccessPage() {
   return (
@@ -59,7 +59,7 @@ export default function Fortune500AITransformationSuccessPage() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            This Fortune 500 company's AI transformation represents a paradigm shift in enterprise technology adoption. By achieving 500% ROI within 12 months, they've demonstrated that AI is not just a future technology—it's a present-day competitive advantage.
+            This Fortune 500 company&apos;s AI transformation represents a paradigm shift in enterprise technology adoption. By achieving 500% ROI within 12 months, they&apos;ve demonstrated that AI is not just a future technology—it&apos;s a present-day competitive advantage.
           </p>
           
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>

@@ -34,7 +34,7 @@ export default function App(): React.JSX.Element {
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
-              <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
+              <p className="text-xl text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>
             </main>
           } />
         </Routes>

@@ -149,7 +149,7 @@ const Home = () => {
               What Our Clients Say
             </h2>
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in'>
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
             </p>
           </div>
           
@@ -161,7 +161,7 @@ const Home = () => {
                 ))}
               </div>
               <p className='text-zion-slate-light mb-6 italic'>
-                "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%."
+                &ldquo;Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%.&rdquo;
               </p>
               <div>
                 <div className='font-semibold text-white'>Sarah Johnson</div>
@@ -176,7 +176,7 @@ const Home = () => {
                 ))}
               </div>
               <p className='text-zion-slate-light mb-6 italic'>
-                "Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget."
+                &ldquo;Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget.&rdquo;
               </p>
               <div>
                 <div className='font-semibold text-white'>Michael Chen</div>
@@ -191,7 +191,7 @@ const Home = () => {
                 ))}
               </div>
               <p className='text-zion-slate-light mb-6 italic'>
-                "The security solutions they implemented gave us complete peace of mind. Highly recommended!"
+                &ldquo;The security solutions they implemented gave us complete peace of mind. Highly recommended!&rdquo;
               </p>
               <div>
                 <div className='font-semibold text-white'>Emily Rodriguez</div>
@@ -211,7 +211,7 @@ const Home = () => {
           </h2>
           <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto animate-fade-in'>
             Join thousands of companies that trust Zion Tech Group for their technology needs. 
-            Let's build something amazing together.
+            Let&apos;s build something amazing together.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <button className='bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group'>
