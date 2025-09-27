@@ -68,15 +68,15 @@ export default function EnhancedSEO({
 
   return (
     <>
-      {/* Basic, MetaTags */}
+      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name ="description" content={fullDescription} />
-      <meta name ="keywords" content={keywords.join(', ')} />
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       
       {/* CanonicalURL */}
-      {fullCanonical && <linkrel="canonical" href={fullCanonical} />}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
       <meta name="robots" content={`${noindex?'noindex':'index'}${nofollow?'nofollow':'follow'}`} />

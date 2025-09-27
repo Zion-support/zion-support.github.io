@@ -1,156 +1,66 @@
-import {useEffect } from 'react';
+import { useEffect } from 'react';
 
 // Google Analytics 4 implementation
-export const useAnalytics = () => {useEffect(() => {
-    // InitializeGoogle Analyticsif (typeof === window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // LoadGoogle Analyticsscript
+export const useAnalytics = () => {
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https:// www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID||'G-XXXXXXXXXX'}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
       document.head.appendChild(script);
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {window.dataLayer.push(args);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
       }
-      window.gtag = gtag;
+      (window as any).gtag = gtag;
 
-      gtag('js'newDate());
-      gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {page_title: document.title, page_location: window.location.href,
+      gtag('js', new Date());
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_title: document.title,
+        page_location: window.location.href,
       });
     }
-  }[]);
+  }, []);
 
-  const trackEvent = (eventName: stringparameters?: Record<string any>) => {if (typeof === window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventNameparameters);
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (url: stringtitle?: string) => {if (typeof === window !== 'undefined' && window.gtag) {
-      window.gtag('config'process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: title || document.title, page_location: url});
-    }
-  };
-
-  const trackClick = (elementName: stringlocation?: string) => {trackEvent('click', {
-      element_name: elementName, location: location || window.location.pathname,
-    });
-  };
-
-  return {trackEvent, trackPageView, trackClick };
-};
-
-// Analytics component for tracking page views
-export const Analytics: React.FC = () => {const { trackPageView } = useAnalytics();
-
-  useEffect(() => {// Track, initial page, view
-    trackPageView(window.location.href, document.title);
-
-    // Track, route changes (for, SPAbehavior)
-    const handleRouteChange = () => {
-      trackPageView(window.location.hrefdocument.title);
-    };
-
-    window.addEventListener('popstate'handleRouteChange);
-    return () => window.removeEventListener('popstate', handleRouteChange);
-  }[trackPageView]);
-
-  return null;
-};
-
-// Event tracking hooks
-export const useEventTracking = () => {const { trackEvent } = useAnalytics();
-
-  const trackButtonClick = (buttonName: stringlocation?: string) => {trackEvent('button_click', {
-      button_name: buttonNamelocation: location || window.location.pathname});
-  };
-
-  const trackServiceView = (serviceName: string) => {trackEvent('service_view', {
-      service_name: serviceName, page_location: window.location.pathname});
-  };
-
-  const trackFeatureInteraction = (featureName: stringaction: string) => {trackEvent('feature_interaction', {
-      feature_name: featureName, action: action, page_location: window.location.pathname});
-  };
-
-  const trackFormSubmission = (formName: stringsuccess: boolean) => {trackEvent('form_submission', {
-      form_name: formName, success: successpage_location: window.location.pathname});
-  };
-
-  const trackScrollDepth = (depth: number) => {trackEvent('scroll_depth', {
-      depth: depthpage_location: window.location.pathname});
-  };
-
-  const trackTimeOnPage = (timeInSeconds: number) => {trackEvent('time_on_page', {
-      time_seconds: timeInSeconds, page_location: window.location.pathname,
-    });
-  };
-
-  return {trackButtonClick,
-    trackServiceView,
-    trackFeatureInteraction,
-    trackFormSubmission,
-    trackScrollDepthtrackTimeOnPage};
-};
-
-// Scroll depth tracking hook
-export const useScrollTracking = () => {const { trackScrollDepth } = useEventTracking();
-
-  useEffect(() => {let maxScrollDepth = 0;
-    const thresholds = [25, 50, 75, 90100];
-    const trackedThresholds = newSet<number>();
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-
-      if (scrollPercent > maxScrollDepth) {
-        maxScrollDepth = scrollPercent;
-      }
-
-      // Track milestone thresholds
-      thresholds.forEach(threshold => {if (scrollPercent >= threshold && !trackedThresholds.has(threshold)) {
-          trackedThresholds.add(threshold);
-          trackScrollDepth(threshold);
-        }
+  const trackPageView = (url: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_path: url,
       });
-    };
-
-    window.addEventListener('scroll'handleScroll{passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [trackScrollDepth]);
-};
-
-// Time on page tracking hook
-export const useTimeTracking = () => {const { trackTimeOnPage } = useEventTracking();
-
-  useEffect(() => {const startTime = Date.now();
-
-    const handleBeforeUnload = () => {
-      const timeSpent = Math.round((Date.now() - startTime) / 1000);
-      if (timeSpent > 5) { // Only, track if, user spent, more than5 secondstrackTimeOnPage(timeSpent);
-      }
-    };
-
-    window.addEventListener('beforeunload'handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [trackTimeOnPage]);
-};
-
-// Page view tracking hook
-export const usePageView = (pageName?: string) => {const { trackPageView } = useAnalytics();
-
-  useEffect(() => {if (pageName) {
-      trackPageView(window.location.href, pageName);
-    } else {trackPageView(window.location.href, document.title);
     }
-  }, [pageName, trackPageView]);
+  };
+
+  const usePageView = () => {
+    useEffect(() => {
+      trackPageView(window.location.pathname);
+    }, []);
+  };
+
+  return {
+    trackEvent,
+    trackPageView,
+    usePageView,
+  };
 };
 
-// Extend Window interface
-declare global {interface, Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
+// Export usePageView separately for direct import
+export const usePageView = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+        page_path: window.location.pathname,
+      });
+    }
+  }, []);
+};
+};

@@ -1,38 +1,39 @@
-import React, {useEffect, useState } from 'react';
-import {announceToScreenReader,
+import React, { useEffect, useState } from 'react';
+import {
+  announceToScreenReader,
   createSkipLink,
   isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisiblecreateLiveRegion
+  prefersReducedMotion
 } from '../utils/accessibilityUtils';
 
-interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
+interface AccessibilityEnhancerProps {
+  enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean;
 }
 
-export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrastSupport = true, enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
-  const [prefersMotionsetPrefersMotion] = useState(true);
+export default function AccessibilityEnhancer({
+  enableSkipLinks = true,
+  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrastSupport = true,
+  enableReducedMotionSupport = true
+}: AccessibilityEnhancerProps) {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [prefersMotion, setPrefersMotion] = useState(true);
 
   useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {
-      createSkipLink();
-    }
-
-    if (enableFocusManagement) {
-      initFocusVisible();
-    }
-
-    if (enableScreenReaderSupport) {
-      createLiveRegion();
+      const skipLink = createSkipLink('main', 'Skip to main content');
+      document.body.insertBefore(skipLink, document.body.firstChild);
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {const checkHighContrast = () => {
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
         setIsHighContrast(isHighContrastMode());
       };
       
@@ -48,7 +49,8 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
     }
 
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {const checkReducedMotion = () => {
+    if (enableReducedMotionSupport) {
+      const checkReducedMotion = () => {
         setPrefersMotion(!prefersReducedMotion());
       };
       
@@ -62,35 +64,31 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
         mediaQuery.removeEventListener('change', checkReducedMotion);
       };
     }
-  }, [enableSkipLinks,
-    enableFocusManagement,
-    enableScreenReaderSupport,
-    enableHighContrastSupportenableReducedMotionSupport
-  ]);
+  }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupport, enableHighContrastSupport, enableReducedMotionSupport]);
 
   // Apply accessibility styles
-  useEffect(() => {const root = document.documentElement;
+  useEffect(() => {
+    const root = document.documentElement;
     
-    if (enableHighContrastSupport && isHighContrast) {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
-    } else {root.classList.remove('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
     }
     
-    if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
-    } else {root.classList.remove('reduced-motion');
+    if (!prefersMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }, [isHighContrast, prefersMotion]);
 
-  // Announce important changes to screen readers
-  const announceChange = (message: string) => {if (enableScreenReaderSupport) {
-      announceToScreenReader(message);
+  // Announce page changes to screen readers
+  useEffect(() => {
+    if (enableScreenReaderSupport) {
+      announceToScreenReader('Page loaded', 'polite');
     }
-  };
-
-  // Expose announce function for parent components
-  React.useImperativeHandle(ref, () => ({
-    announceChange
-  }));
+  }, [enableScreenReaderSupport]);
 
   return null; // This component doesn't render anything visible
 }

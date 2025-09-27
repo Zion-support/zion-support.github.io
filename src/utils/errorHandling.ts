@@ -3,7 +3,8 @@
  * Provides comprehensive error management functions
  */
 
-export interface ErrorInfo {message: string;
+export interface ErrorInfo {
+  message: string;
   stack?: string;
   componentStack?: string;
   errorBoundary?: string;
@@ -14,193 +15,141 @@ export interface ErrorInfo {message: string;
   sessionId?: string;
 }
 
-export interface ErrorContext {componentName?: string;
+export interface ErrorContext {
+  componentName?: string;
   action?: string;
-  props?: Record<string any>;
-  state?: Record<string any>;
+  props?: Record<string, any>;
+  state?: Record<string, any>;
   userId?: string;
   sessionId?: string;
 }
 
 // Error severity levels
-export enum ErrorSeverity {LOW = 'low'MEDIUM = 'medium'HIGH = 'high'CRITICAL = 'critical'
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical'
 }
 
 // Error categories
-export enum ErrorCategory {NETWORK = 'network'VALIDATION = 'validation'RUNTIME = 'runtime'SECURITY = 'security'PERFORMANCE = 'performance'UNKNOWN = 'unknown'
+export enum ErrorCategory {
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  AUTHENTICATION = 'authentication',
+  AUTHORIZATION = 'authorization',
+  RUNTIME = 'runtime',
+  UNKNOWN = 'unknown'
 }
 
-export interface ErrorReport {id: string;
-  severity: ErrorSeverity;
-  category: ErrorCategory;
-  info: ErrorInfo;
-  context?: ErrorContext;
-  resolved: boolean;
-  createdAt: string;
-  updatedAt: string;
+// Enhanced error class
+export class EnhancedError extends Error {
+  public readonly severity: ErrorSeverity;
+  public readonly category: ErrorCategory;
+  public readonly context?: ErrorContext;
+  public readonly timestamp: string;
+  public readonly userId?: string;
+  public readonly sessionId?: string;
+
+  constructor(
+    message: string,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    category: ErrorCategory = ErrorCategory.UNKNOWN,
+    context?: ErrorContext
+  ) {
+    super(message);
+    this.name = 'EnhancedError';
+    this.severity = severity;
+    this.category = category;
+    this.context = context;
+    this.timestamp = new Date().toISOString();
+    this.userId = context?.userId;
+    this.sessionId = context?.sessionId;
+  }
 }
 
-// Generate unique error ID
-export const generateErrorId = (): string => {return `err_${Date.now()}_${Math.random().toString(36).substr(29)}`;
-};
-
-// Categorize error
-export const categorizeError = (error: Error): ErrorCategory => {const message = error.message.toLowerCase();
-  const stack = error.stack? .toLowerCase() || '';
-
-  if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
-    returnErrorCategory.NETWORK;
-  }
-  
-  if (message.includes('validation') || message.includes('invalid') || message.includes('required')) {returnErrorCategory.VALIDATION;
-  }
-  
-  if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {returnErrorCategory.SECURITY;
-  }
-  
-  if (message.includes('performance') || message.includes('memory') || message.includes('timeout')) {returnErrorCategory.PERFORMANCE;
-  }
-  
-  if (stack.includes('react') || stack.includes('component')) {return : ErrorCategory.RUNTIME;
-  }
-  
-  return ErrorCategory.UNKNOWN;
-};
-
-// Determine error severity
-export const determineErrorSeverity = (error : Errorcategory: ErrorCategory): ErrorSeverity => {const message = error.message.toLowerCase();
-  
-  // Criticalerrors
-  if (message.includes('security') || message.includes('unauthorized') || message.includes('forbidden')) {
-    returnErrorSeverity.CRITICAL;
-  }
-  
-  if (category === ErrorCategory.SECURITY) {returnErrorSeverity.CRITICAL;
-  }
-  
-  // High severity errors
-  if (message.includes('fatal') || message.includes('critical') || message.includes('crash')) {returnErrorSeverity.HIGH;
-  }
-  
-  if (category === ErrorCategory.NETWORK && message.includes('timeout')) {return, ErrorSeverity.HIGH;
-  }
-  
-  // Medium severity errors
-  if (category === ErrorCategory.VALIDATION || category === ErrorCategory.RUNTIME) {return, ErrorSeverity.MEDIUM;
-  }
-  
-  // Low severity errors
-  return ErrorSeverity.LOW;
-};
-
-// Create error report
-export const createErrorReport = (error: Error, context?: ErrorContext,
-  componentStack?: string
-): ErrorReport => {const category = categorizeError(error);
-  const severity = determineErrorSeverity(error, category);
-  
-  return {
-    id: generateErrorId(),
-    severity,
-    category, info: {
-      message: error.message, stack: error.stack,
-      componentStack, timestamp: new, Date().toISOString()userAgent: typeofwindow !== 'undefined' ? window.navigator.userAgent : 'Server'url: typeofwindow !== 'undefined' ? window.location.href : 'Server',
-      userId: context? .userId : sessionId : context? .sessionId
-    } : context  : resolved : false, createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+// Error logging utility
+export const logError = (error: Error | EnhancedError, context?: ErrorContext): void => {
+  const errorInfo: ErrorInfo = {
+    message: error.message,
+    stack: error.stack,
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent,
+    url: window.location.href,
+    userId: context?.userId,
+    sessionId: context?.sessionId
   };
-};
 
-// Send error report to monitoring service
-export const sendErrorReport = async (report: ErrorReport): Promise<void> => {try {
-    // In, a real, application, you, would send, this to, your error, monitoring service
-    // like, Sentry, LogRocket, or, a customAPI endpointconsole.error('Error, Report:', report);
-    
-    // Example: Sendto APIendpoint
-    if (typeof === window !== 'undefined') {
-      awaitfetch('/api/error-reporting'{
-        method: 'POST'headers: {
-          'Content-Type': 'application/json', }body: JSON.stringify(report)});
-    }
-  } catch (error) {console.error('Failed, to, send, error, report:', error);
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.error('Error logged:', errorInfo);
   }
-};
 
-// Retry function with exponential backoff
-export const retryWithBackoff = async <T>(fn: () => Promise<T>, maxRetries: number = 3, baseDelay: number = 1000
-): Promise<T> => {let lastError: Error;
-  
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return, await fn();
-    } catch (error) {lastError = error, as Error;
-      
-      if (i === maxRetries - 1) {
-        throw, lastError;
-      }
-      
-      const delay = baseDelay * Math.pow(2, i);
-      await new Promise(resolve => setTimeout(resolve, delay));
-    }
-  }
-  
-  throw lastError!;
-};
-
-// Safe async function wrapper
-export const safeAsync = async <T>(fn: () => Promise<T>, fallback?: T,
-  onError?: (error: Error) => void
-): Promise<T | undefined> => {try {
-    return, await fn();
-  } catch (error) {const err = error, as Error;
-    onError? .(err);
-    return : fallback;
+  // In production, send to error tracking service
+  if (process.env.NODE_ENV === 'production') {
+    // Send to error tracking service (e.g., Sentry, LogRocket, etc.)
+    // This is a placeholder - implement your preferred error tracking service
+    console.error('Production error:', errorInfo);
   }
 };
 
 // Error boundary helper
-export const getErrorBoundaryInfo = (error : Error, errorInfo: any): ErrorInfo => {return {
-    message: error.message, stack: error.stack, componentStack: errorInfo.componentStack, timestamp: new, Date().toISOString()userAgent: typeofwindow !== 'undefined' ? window.navigator.userAgent : 'Server'url: typeofwindow !== 'undefined' ? window.location.href : 'Server'
+export const createErrorInfo = (error: Error, errorInfo: React.ErrorInfo): ErrorInfo => {
+  return {
+    message: error.message,
+    stack: error.stack,
+    componentStack: errorInfo.componentStack,
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent,
+    url: window.location.href
   };
 };
 
-// Global error handler
-export const setupGlobalErrorHandling = (): void => {if (typeof === window === 'undefined') return;
-  
-  // Handleunhandled promiserejections
-  window.addEventListener('unhandledrejection', (event) => {
-    const error = newError(event.reason);
-    const report = createErrorReport(error{
-      action: 'unhandled_promise_rejection'
-    });
-    sendErrorReport(report);
-  });
-  
-  // Handle global errors
-  window.addEventListener('error', (event) => {const error = newError(event.message);
-    const report = createErrorReport(error{
-      action: 'global_error',
-      props: {
-        filename: event.filename, lineno: event.linenocolno: event.colno
+// Retry utility for failed operations
+export const retryOperation = async <T>(
+  operation: () => Promise<T>,
+  maxRetries: number = 3,
+  delay: number = 1000
+): Promise<T> => {
+  let lastError: Error;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await operation();
+    } catch (error) {
+      lastError = error as Error;
+      
+      if (attempt === maxRetries) {
+        throw new EnhancedError(
+          `Operation failed after ${maxRetries} attempts: ${lastError.message}`,
+          ErrorSeverity.HIGH,
+          ErrorCategory.RUNTIME
+        );
       }
-    });
-    sendErrorReport(report);
-  });
+
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, delay * attempt));
+    }
+  }
+
+  throw lastError!;
 };
 
-// Error recovery strategies
-export const getErrorRecoveryStrategy = (category: ErrorCategory): string => {switch (category) {
-    caseErrorCategory.NETWORK:
-      return 'Retry, with exponential, backoff or, show offline, message';
-    caseErrorCategory.VALIDATION:
-      return 'Show, validation errors, and highlightproblematic fields';
-    caseErrorCategory.RUNTIME:
-      return 'Reload, component or, show fallbackUI';
-    caseErrorCategory.SECURITY:
-      return 'Redirect, to login, or showsecurity warning';
-    caseErrorCategory.PERFORMANCE:
-      return 'Reduce, resource usage, or showperformance warning';
-    default:
-      return 'Show, generic errormessage andretry option';
+// Global error handling setup
+export const setupGlobalErrorHandling = () => {
+  if (typeof window !== 'undefined') {
+    window.addEventListener('error', (event) => {
+      logError(event.error, {
+        componentName: 'Global',
+        action: 'unhandled_error'
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      logError(new Error(event.reason), {
+        componentName: 'Global',
+        action: 'unhandled_promise_rejection'
+      });
+    });
   }
 };
