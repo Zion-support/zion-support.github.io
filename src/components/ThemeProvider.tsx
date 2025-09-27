@@ -1,74 +1,71 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import Reac, t, { createConte, x, t, useConte, x, t, useEffect, useState }  from 'react';
 
-type Theme = 'light' | 'dark' | 'system';
+type, Them, e = 'lig, h, t' | 'da, r, k' | 'syst, e, m';
 
-interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-  actualTheme: 'light' | 'dark'}
+interface, ThemeContextTyp, e {
+  the, m, e: The, m, e;
+  setThe, m, e: (the, m, e: The, m, e) => vo, i, d;
+  actualThe, m, e: 'lig, h, t' | 'da, r, k'};
+const, ThemeContex, t = createConte, x, t<ThemeContextTy, p, e | undefin, e, d>(undefin, e, d);
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export, const, useTheme = () => {
+  const, contex, t = useConte, x, t(ThemeConte, x, t);
+  if (conte, x, t === undefin, e, d) {
+    throw, new, Error('useTheme, must, be used, within, a ThemeProvid, e, r')};
+  return, contex, t};
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')}
-  return context};
+interface, ThemeProviderProp, s {
+  childr, e, n: React.ReactNo, d, e;
+  defaultThe, m, e?: The, m, e;
+  storageK, e, y?: stri, n, g};
+export default function ThemeProvid, e, r({
+  childr, e, n,
+  defaultThe, m, e = 'syst, e, m',
+  storageK, e, y = 'the, m, e'
+}: ThemeProviderPro, p, s) {
+  con, s, t [the, m, e, setThe, m, e] = useState<The, m, e>(() => {
+    if (typeof, windo, w !== 'undefin, e, d') {
+      return (localStora, g, e.getIt, e, m(storageK, e, y) as, Them, e) || defaultThe, m, e};
+    return, defaultThem, e});
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string}
-
-export default function ThemeProvider({
-  children,
-  defaultTheme = 'system',
-  storageKey = 'theme'
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme}
-    return defaultTheme});
-
-  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
+  con, s, t [actualThe, m, e, setActualThe, m, e] = useState<'lig, h, t' | 'da, r, k'>('lig, h, t');
 
   useEffect(() => {
-    const updateActualTheme = () => {
-      if (theme === 'system') {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        setActualTheme(systemTheme)} else {
-        setActualTheme(theme)}
+    const, updateActualThem, e = () => {
+      if (the, m, e === 'syst, e, m') {
+        const, systemThem, e = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: da, r, k)').match, e, s ? 'da, r, k' : 'lig, h, t';
+        setActualThe, m, e(systemThe, m, e)} el, s, e {
+        setActualThe, m, e(the, m, e)};
     };
 
-    updateActualTheme();
+    updateActualThe, m, e();
 
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      mediaQuery.addEventListener('change', updateActualTheme);
-      return () => mediaQuery.removeEventListener('change', updateActualTheme)}
-  }, [theme]);
+    if (the, m, e === 'syst, e, m') {
+      const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-col, o, r-sche, m, e: da, r, k)');
+      mediaQue, r, y.addEventListen, e, r('chan, g, e', updateActualThe, m, e);
+      return () => mediaQue, r, y.removeEventListen, e, r('chan, g, e', updateActualThe, m, e)};
+  }, [the, m, e]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(storageKey, theme);
+    if (typeof, windo, w !== 'undefin, e, d') {
+      localStora, g, e.setIt, e, m(storageK, e, y, the, m, e);
       
-      // Apply theme to document
-      const root = window.document.documentElement;
-      root.classList.remove('light', 'dark');
-      root.classList.add(actualTheme)}
-  }, [theme, actualTheme, storageKey]);
+      // Apply, theme, to document, const, root = wind, o, w.document.documentEleme, n, t;
+      ro, o, t.classLi, s, t.remo, v, e('lig, h, t', 'da, r, k');
+      ro, o, t.classLi, s, t.a, d, d(actualThe, m, e)};
+  }, [the, m, e, actualThe, m, e, storageK, e, y]);
 
-  const handleSetTheme = (newTheme: Theme) => {
-    setTheme(newTheme)};
+  const, handleSetThem, e = (newThe, m, e: The, m, e) => {
+    setThe, m, e(newThe, m, e)};
 
-  const value = {
-    theme,
-    setTheme: handleSetTheme,
-    actualTheme
+  const, valu, e = {
+    the, m, e,
+    setThe, m, e: handleSetThe, m, e,
+    actualThe, m, e
   };
 
   return (
-    <ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>
-  )}
+    <ThemeConte, x, t.Provider, valu, e={val, u, e}>
+      {childr, e, n};
+    </ThemeConte, x, t.Provid, e, r>
+  )};

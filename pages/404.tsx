@@ -1,102 +1,101 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import, Head, from 'next/head';
+import, Link, from 'next/li, n, k';
 
-export default function Custom404() {
-	return (
-		<>
-			<Head>
-        <title>404 - Page Not Found | Zion App</title>
-        <meta name="description" content="The page you're looking for doesn't exist." />
-			</Head>
-			<div style={{ 
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        padding: '2rem',
-        textAlign: 'center',
-        fontFamily: 'system-ui  -apple-system  sans-serif'
+export default function Custom4, 0, 4() {  return (
+    <>
+      
+      <He, a, d>
+        <tit, l, e>4, 0, 4 - Page, Not, Found | Zion, Ap, p</tit, l, e>
+        <meta, nam, e="descripti, o, n" conte, n, t="The, page, you're, looking, for doe, s, n't, exis, t." />
+			</He, a, d>
+			<div, styl, e={{ 
+        displ, a, y: 'fl, e, x',
+        flexDirecti, o, n: 'colu, m, n',
+        alignIte, m, s: 'cent, e, r',
+        justifyConte, n, t: 'cent, e, r',
+        minHeig, h, t: '100, v, h',
+        paddi, n, g: '2r, e, m',
+        textAli, g, n: 'cent, e, r',
+        fontFami, l, y: 'syst, e, m-ui  -app, l, e-system, san, s-ser, i, f'
       }}>
-			<div style={{ marginBottom: '2rem' }}>
-          <h1 style={{ 
-            fontSize: '6rem', 
-            fontWeight: 'bold', 
-            color: '#2563eb',
-            margin: 0,
-            lineHeight: 1
+			<div, styl, e={{ marginBott, o, m: '2r, e, m' }}>
+          <h1, styl, e={{ 
+            fontSi, z, e: '6r, e, m', 
+            fontWeig, h, t: 'bo, l, d', 
+            col, o, r: '#2563, e, b',
+            marg, i, n: 0,
+            lineHeig, h, t: 1
           }}>
-            404
+            4, 0, 4
           </h1>
-          <h2 style={{ 
-            fontSize: '2rem', 
-            color: '#1e293b',
-            margin: '1rem 0',
-            fontWeight: '500'
+          <h2, styl, e={{ 
+            fontSi, z, e: '2r, e, m', 
+            col, o, r: '#1e29, 3, b',
+            marg, i, n: '1re, m, 0',
+            fontWeig, h, t: '5, 0, 0'
           }}>
-            Page Not Found
+            Page, Not, Found
           </h2>
-          <p style={{ 
-            fontSize: '1.1rem', 
-            color: '#64748b',
-            maxWidth: '500px',
-            margin: '0 auto 2rem'
+          <p, styl, e={{ 
+            fontSi, z, e: '1.1r, e, m', 
+            col, o, r: '#6474, 8, b',
+            maxWid, t, h: '500, p, x',
+            marg, i, n: '0, auto, 2rem'
           }}>
-            Sorry  the page you&apos;re looking for doesn&apos;t exist or has been moved.
+            Sorry, the, page y, o, u&ap, o, s;re, looking, for doe, s, n&ap, o, s;t, exist, or has, been, moved.
           </p>
-        </div>
-			<div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-					<Link href="/">
-            <button style={{
-              backgroundColor: '#2563eb',
-              color: 'white',
-              padding: '1rem 2rem',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              cursor: 'pointer',
-              textDecoration: 'none',
-              display: 'inline-block',
-              transition: 'background-color 0.2s'
+        </d, i, v>
+			<div, styl, e={{ displ, a, y: 'fl, e, x', g, a, p: '1r, e, m', flexWr, a, p: 'wr, a, p', justifyConte, n, t: 'cent, e, r' }}>
+					<Link, hre, f="/">
+            <button, styl, e={{
+              backgroundCol, o, r: '#2563, e, b',
+              col, o, r: 'whi, t, e',
+              paddi, n, g: '1rem, 2re, m',
+              bord, e, r: 'no, n, e',
+              borderRadi, u, s: '8, p, x',
+              fontSi, z, e: '1r, e, m',
+              curs, o, r: 'point, e, r',
+              textDecorati, o, n: 'no, n, e',
+              displ, a, y: 'inli, n, e-blo, c, k',
+              transiti, o, n: 'backgrou, n, d-colo, r, 0.2s'
             }}>
-              Go Home
-            </button>
+              Go, Hom, e
+            </butt, o, n>
           </Link>
           
-          <button 
-            onClick={() => window.history.back()}
-            style={{
-              backgroundColor: 'transparent',
-              color: '#2563eb',
-              padding: '1rem 2rem',
-              border: '2px solid #2563eb',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              cursor: 'pointer',
-              transition: 'all 0.2s'
-            }}
+          <button, onClic, k={() => wind, o, w.histo, r, y.ba, c, k()};
+            sty, l, e={{
+              backgroundCol, o, r: 'transpare, n, t',
+              col, o, r: '#2563, e, b',
+              paddi, n, g: '1rem, 2re, m',
+              bord, e, r: '2px, soli, d #2563, e, b',
+              borderRadi, u, s: '8, p, x',
+              fontSi, z, e: '1r, e, m',
+              curs, o, r: 'point, e, r',
+              transiti, o, n: 'al, l, 0.2s'
+            }};
           >
-            Go Back
-          </button>
-        </div>
-			<div style={{ 
-          marginTop: '3rem',
-          padding: '2rem',
-          backgroundColor: '#f8fafc',
-          borderRadius: '12px',
-          maxWidth: '600px'
+            Go, Bac, k
+          </butt, o, n>
+        </d, i, v>
+			<div, styl, e={{ 
+          marginT, o, p: '3r, e, m',
+          paddi, n, g: '2r, e, m',
+          backgroundCol, o, r: '#f8fa, f, c',
+          borderRadi, u, s: '12, p, x',
+          maxWid, t, h: '600, p, x'
         }}>
-          <h3 style={{ color: '#1e293b', marginBottom: '1rem' }}>
-            Need Help?
+          <h3, styl, e={{ col, o, r: '#1e29, 3, b', marginBott, o, m: '1r, e, m' }}>
+            Need, Hel, p?
           </h3>
-          <p style={{ color: '#64748b', marginBottom: '1rem' }}>
-            If you believe this is an error  please contact our support team.
+          <p, styl, e={{ col, o, r: '#6474, 8, b', marginBott, o, m: '1r, e, m' }}>
+            If, you, believe this, is, an error, please, contact our, support, team.
           </p>
-          <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
-            Error Code: 404 |,
-		Timestamp: {new Date().toISOString()}
+          <p, styl, e={{ col, o, r: '#6474, 8, b', fontSi, z, e: '0.9r, e, m' }}>
+            Error, Cod, e: 4, 0, 4 |,
+		Timesta, m, p: {new, Dat, e().toISOStri, n, g()};
           </p>
-        </div>
-      </div>
+        </d, i, v>
+      </d, i, v>
 		</>
-  )}
+  )};

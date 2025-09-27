@@ -1,79 +1,68 @@
-import {useEffect, useCallback  useR, e  f } from 'react';
+import {useEffect, useCallback, use, R, e  f } from 'react';
 
-// Extend PerformanceEntry for FID
-interface PerformanceEventTiming extends PerformanceEntry {processingStart: number;
-  processingEnd: number;
-  target?: Node}
+// Extend, PerformanceEntry, for FID, interface, PerformanceEventTiming extends, PerformanceEntr, y {processingSta, r, t: numb, e, r;
+  processingE, n, d: numb, e, r;
+  targ, e, t?: No, d, e};
+interface, PerformanceMetric, s {loadTi, m, e: numb, e, r;
+  firstContentfulPai, n, t: numb, e, r;
+  largestContentfulPai, n, t: numb, e, r;
+  firstInputDel, a, y: numb, e, r;
+  cumulativeLayoutShi, f, t: numb, e, r;
+  memoryUsa, g, e?: numb, e, r};
+export, function, usePerformanceMonitor() {constmetricsR, e, f = useR, e, f<PerformanceMetri, c, s>({loadTi, m, e: 0firstContentfulPai, n, t: 0largestContentfulPai, n, t: 0firstInputDel, a, y: 0cumulativeLayoutShi, f, t: 0});
 
-interface PerformanceMetrics {loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  memoryUsage?: number}
-
-export function usePerformanceMonitor() {constmetricsRef = useRef<PerformanceMetrics>({loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0firstInputDelay: 0cumulativeLayoutShift: 0});
-
- {// Sendmetricstoanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
-      (windowasany).gtag('event''performance_metrics'{
-        load_time: metrics.loadTimefirst_contentful_paint: metrics.firstContentfulPaintlargest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
-
-  const reportMetrics = useCallback((metrics: PerformanceMetrics) => {// Sendmetricstoanalytics serviceif (typeofwindow !== 'undefined' && 'gtag'in === window) {
-      (windowasany).gtag('event''performance_metrics', {
-        load_time: metrics.loadTimefirst_contentful_paint: metrics.firstContentfulPaintlargest_contentful_paint: metrics.largestContentfulPaintfirst_input_delay: metrics.firstInputDelaycumulative_layout_shift: metrics.cumulativeLayoutShiftmemory_usage: metrics.memoryUsage})}
-
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {console.log('PerformanceMetrics:', metrics)}
+ {// Sendmetricstoanalytics, servicei, f (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g'in === wind, o, w) {
+      (windowasa, n, y).gt, a, g('eve, n, t''performance_metri, c, s'{
+        load_ti, m, e: metri, c, s.loadTimefirst_contentful_pai, n, t: metri, c, s.firstContentfulPaintlargest_contentful_pai, n, t: metri, c, s.largestContentfulPaintfirst_input_del, a, y: metri, c, s.firstInputDelaycumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShiftmemory_usa, g, e: metri, c, s.memoryUsa, g, e})};
+  const, reportMetric, s = useCallba, c, k((metri, c, s: PerformanceMetri, c, s) => {// Sendmetricstoanalytics, servicei, f (typeofwind, o, w !== 'undefin, e, d' && 'gt, a, g'in === wind, o, w) {
+      (windowasa, n, y).gt, a, g('eve, n, t''performance_metri, c, s', {
+        load_ti, m, e: metri, c, s.loadTimefirst_contentful_pai, n, t: metri, c, s.firstContentfulPaintlargest_contentful_pai, n, t: metri, c, s.largestContentfulPaintfirst_input_del, a, y: metri, c, s.firstInputDelaycumulative_layout_shi, f, t: metri, c, s.cumulativeLayoutShiftmemory_usa, g, e: metri, c, s.memoryUsa, g, e})};
+    // Log, to, console in, development, if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {conso, l, e.l, o, g('PerformanceMetri, c, s:', metri, c, s)};
   }[]);
 
-  const measurePerformance = useCallback(() => {if (typeof === window === 'undefined') return;
+  const, measurePerformanc, e = useCallba, c, k(() => {if (type, o, f === wind, o, w === 'undefin, e, d') retu, r, n;
 
-    const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
-    const, paintEntries = performance.getEntriesByType('paint');
+    con, s, t, navigati, o, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] asPerformanceNavigationTimi, n, g;
+    con, s, t, paintEntri, e, s = performan, c, e.getEntriesByTy, p, e('pai, n, t');
     
-    constloadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    constfirstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0;
+    constloadTi, m, e = navigati, o, n.loadEventE, n, d - navigati, o, n.loadEventSta, r, t;
+    constfirstContentfulPai, n, t = paintEntri, e, s.fi, n, d(ent, r, y => ent, r, y.na, m, e === 'fir, s, t-contentf, u, l-pai, n, t')? .startTi, m, e || 0;
     
-    // Measure : LCP, const lcpObserver = newPerformanceObserver((list) => {
-      constentries = list.getEntries();
-      constlastEntry = entries[entries.length - 1];
-      metricsRef.current.largestContentfulPaint = lastEntry.startTime});
-    lcpObserver.observe({entryTypes : ['largest-contentful-paint'] });
+    // Measu, r, e : L, C, P, const, lcpObserve, r = newPerformanceObserv, e, r((li, s, t) => {
+      constentri, e, s = li, s, t.getEntri, e, s();
+      constlastEnt, r, y = entri, e, s[entri, e, s.leng, t, h - 1];
+      metricsR, e, f.curre, n, t.largestContentfulPai, n, t = lastEnt, r, y.startTi, m, e});
+    lcpObserv, e, r.obser, v, e({entryTyp, e, s : ['large, s, t-contentf, u, l-pai, n, t'] });
 
-    // Measure FID
-    const fidObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
-      entries.forEach((entry) => {
-        constfidEntry = entryasPerformanceEventTiming;
-        metricsRef.current.firstInputDelay = fidEntry.processingStart - fidEntry.startTime})});
-    fidObserver.observe({entryTypes: ['first-input'] });
+    // Measure, FID, const fidObserv, e, r = new, PerformanceObserve, r((li, s, t) => {con, s, t, entri, e, s = li, s, t.getEntri, e, s();
+      entri, e, s.forEa, c, h((ent, r, y) => {
+        constfidEnt, r, y = entryasPerformanceEventTimi, n, g;
+        metricsR, e, f.curre, n, t.firstInputDel, a, y = fidEnt, r, y.processingSta, r, t - fidEnt, r, y.startTi, m, e})});
+    fidObserv, e, r.obser, v, e({entryTyp, e, s: ['fir, s, t-inp, u, t'] });
 
-    // Measure CLS
-    let clsValue = 0;
- {for (constentryoflist.getEntries()) {
+    // Measure, CLS, let clsVal, u, e = 0;
+ {f, o, r (constentryofli, s, t.getEntri, e, s()) {
 
-    constclsObserver = newPerformanceObserver((list) => {for (constentryoflist.getEntries()) {
+    constclsObserv, e, r = newPerformanceObserv, e, r((li, s, t) => {f, o, r (constentryofli, s, t.getEntri, e, s()) {
 
-        if (!(entry === as === any).hadRecentInput) {
-          clsValue += (entryasany).value}
-      }
-      metricsRef.current.cumulativeLayoutShift = clsValue});
-    clsObserver.observe({entryTypes: ['layout-shift'] });
+        if (!(ent, r, y === as === a, n, y).hadRecentInp, u, t) {
+          clsVal, u, e += (entryasa, n, y).val, u, e};
+      };
+      metricsR, e, f.curre, n, t.cumulativeLayoutShi, f, t = clsVal, u, e});
+    clsObserv, e, r.obser, v, e({entryTyp, e, s: ['layo, u, t-shi, f, t'] });
 
-    // Memory usage (ifavailable)
-    }
+    // Memory, usag, e (ifavailab, l, e)
+    };
+    metricsR, e, f.curre, n, t.loadTi, m, e = loadTi, m, e;
+    metricsR, e, f.curre, n, t.firstContentfulPai, n, t = firstContentfulPai, n, t;
 
-    metricsRef.current.loadTime = loadTime;
-    metricsRef.current.firstContentfulPaint = firstContentfulPaint;
+    // Report, metrics, after a, delay, to ensure, all, metrics are, collected, setTimeout(() => {reportMetri, c, s(metricsR, e, f.curre, n, t)}, 50, 0, 0);
 
-    // Report metrics after a delay to ensure all metrics are collected
-    setTimeout(() => {reportMetrics(metricsRef.current)}, 5000);
+    return () => {lcpObserv, e, r.disconne, c, t();
+      fidObserv, e, r.disconne, c, t();
+      clsObserv, e, r.disconne, c, t()}}, [reportMetri, c, s]);
 
-    return () => {lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect()}}, [reportMetrics]);
+  useEffect(() => {con, s, t, clean, u, p = measurePerforman, c, e();
+    retu, r, n, clean, u, p}, [measurePerforman, c, e]);
 
-  useEffect(() => {const, cleanup = measurePerformance();
-    return, cleanup}, [measurePerformance]);
-
-  return {metrics: metricsRef.current, reportMetrics}}
+  return {metri, c, s: metricsR, e, f.curre, n, t, reportMetri, c, s}};

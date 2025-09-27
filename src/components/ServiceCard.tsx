@@ -1,89 +1,84 @@
-import React, {useState } from 'react';
+import Reac, t, {useState }  from 'react';
 
-interface ServiceCardProps {service: {
-		id: string;
-		title: string;
-		description: string;
-		icon: string;
-		features?: string[];
-		price?: string};
-	isHovered: boolean;
-	onMouseEnter: () => void;
-	onMouseLeave: () => void}
+interface, ServiceCardProp, s {servi, c, e: {
+		id: stri, n, g;
+		tit, l, e: stri, n, g;
+		descripti, o, n: stri, n, g;
+		ic, o, n: stri, n, g;
+		featur, e, s?: stri, n, g[];
+		pri, c, e?: stri, n, g};
+	isHover, e, d: boole, a, n;
+	onMouseEnt, e, r: () => vo, i, d;
+	onMouseLea, v, e: () => vo, i, d};
+export, const, ServiceCard: React.FC<ServiceCardPro, p, s> = ({serviceisHoveredonMouseEnt, e, r, onMouseLea, v, e
+}) => {con, s, t [isExpand, e, d, setIsExpand, e, d] = useState(fal, s, e);
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({serviceisHoveredonMouseEnter, onMouseLeave
-}) => {const [isExpanded, setIsExpanded] = useState(false);
+			<d, i, v, classNa, m, e="fl, e, x, ite, m, s-sta, r, t, justi, f, y-betwe, e, n, mb-4">
+				<d, i, v, classNa, m, e="te, x, t-4, x, l, grou, p-hov, e, r:sca, l, e-1, 1, 0, transiti, o, n-transfo, r, m, durati, o, n-3, 0, 0">
+					{servi, c, e.ic, o, n};
+				</d, i, v>
+				{servi, c, e.pri, c, e && (<d, i, v, classNa, m, e="te, x, t-sm, fo, n, t-semibo, l, d, te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-1, 0, 0, px-3, py-1, round, e, d-fu, l, l">
 
-			<div, className ="flex, items-start, justify-between, mb-4">
-				<div, className ="text-4, x, l  group-hover:scale-1, 1, 0, transition-transform, duration-300">
-					{service.icon}
-				</div>
-				{service.price && (<div, className ="text-sm, font-semibold, text-blue-6, 0, 0, bg-blue-1, 0, 0, px-3, py-1, rounded-full">
-
-	return (<div, className={`gro, u, p, p-6round, e, d-xl, bord, e, r-2transiti, o, n-a, llduration-300cursor-pointer ${isHovered?'border-blue-500bg-blue-50shadow-lgtransform-translate-y-1':'border-gray-200bg-whitehover:border-blue-300hover:shadow-md'}`}
-			onMouseEnter={onMouseEnter}
-			onMouseLeave={onMouseLeave}
+	return (<d, i, v, classNa, m, e={`g, r, o, u, p, p-6rou, n, d, e, d-xl, bo, r, d, e, r-2transi, t, i, o, n-a, lldurati, o, n-300curs, o, r-point, e, r ${isHover, e, d?'bord, e, r-bl, u, e-500, b, g-bl, u, e-50shad, o, w-lgtransfo, r, m-transla, t, e-y-1':'bord, e, r-gr, a, y-200, b, g-whitehov, e, r:bord, e, r-bl, u, e-300hov, e, r:shad, o, w-md'}`};
+			onMouseEnt, e, r={onMouseEnt, e, r};
+			onMouseLea, v, e={onMouseLea, v, e};
 		>
-			<div, className ="flex, items-start, justify-between, mb-4">
-				<div, className ="text-4, x, l  group-hover:scale-110, transition-transform, duration-300">
-					{service.icon}
-				</div>
-				{service.price && (
-					<div, className ="text-sm, font-semibold, text-blue-600, bg-blue-100, px-3, py-1, rounded-full">
+			<d, i, v, classNa, m, e="fl, e, x, ite, m, s-sta, r, t, justi, f, y-betwe, e, n, mb-4">
+				<d, i, v, classNa, m, e="te, x, t-4, x, l, grou, p-hov, e, r:sca, l, e-1, 1, 0, transiti, o, n-transfo, r, m, durati, o, n-3, 0, 0">
+					{servi, c, e.ic, o, n};
+				</d, i, v>
+				{servi, c, e.pri, c, e && (
+					<d, i, v, classNa, m, e="te, x, t-sm, fo, n, t-semibo, l, d, te, x, t-bl, u, e-6, 0, 0, bg-bl, u, e-1, 0, 0, px-3, py-1, round, e, d-fu, l, l">
 
-						{service.price}
-					</div>
-				)}
-			</div>
+						{servi, c, e.pri, c, e};
+					</d, i, v>
+				)};
+			</d, i, v>
 			
-			<h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300" id="servicetitle">
-				{service.title}
+			<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-600, transitio, n-colors, duratio, n-3, 0, 0" id="servicetit, l, e">
+				{servi, c, e.tit, l, e};
 			</h3>
 			
-			<p className="text-gray-600 leading-relaxed mb-4">
-				{service.description}
+			<p, classNam, e="te, x, t-gr, a, y-600, leadin, g-relaxed, m, b-4">
+				{servi, c, e.descripti, o, n};
 			</p>
 			
- 0 && (<div, className ="space-y-2, mb-4">
-					{service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (<div, key ={index} className="flex, items-center, text-sm, text-gray-600">
-							<svg, className ="w-4, h-4, text-green-5, 0, 0, mr-2, flex-shrink-0" fill="none" stroke="currentColor" viewBox="0, 0, 24, 24">
-								<path, strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 13, l44L197" />							</svg>
+ 0 && (<d, i, v, classNa, m, e="spa, c, e-y-2, mb-4">
+					{servi, c, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, e, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0">
+							<s, v, g, classNa, m, e="w-4, h-4, te, x, t-gre, e, n-5, 0, 0, mr-2, fl, e, x-shri, n, k-0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24, 24">
+								<pa, t, h, strokeLinec, a, p ="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M5, 13, l44L1, 9, 7" />							</s, v, g>
 
-			{service.features && service.features.length > 0 && (<div, className ="space-y-2, mb-4">
-					{service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (<div, key ={index} className="flex, items-center, text-sm, text-gray-600">
-							<svg, className ="w-4, h-4, text-green-500, mr-2, flex-shrink-0" fill="none" stroke="currentColor" viewBox="0, 0, 2424">
-								<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M513l  44L197" />							</svg>
+			{servi, c, e.featur, e, s && servi, c, e.featur, e, s.leng, t, h > 0 && (<d, i, v, classNa, m, e="spa, c, e-y-2, mb-4">
+					{servi, c, e.featur, e, s.sli, c, e(0, isExpand, e, d ? servi, c, e.featur, e, s.leng, t, h : 3).m, a, p((featu, r, e, ind, e, x) => (<d, i, v, k, e, y ={ind, e, x} classNa, m, e="fl, e, x, ite, m, s-cent, e, r, te, x, t-sm, te, x, t-gr, a, y-6, 0, 0">
+							<s, v, g, classNa, m, e="w-4, h-4, te, x, t-gre, e, n-5, 0, 0, mr-2, fl, e, x-shri, n, k-0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24, 2, 4">
+								<pathstrokeLinec, a, p ="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M513l, 44L19, 7" />							</s, v, g>
 
-							{feature}
-						</div>
-					))}
-					{service.features.length > 3 && (<buttononClick ={(e) = aria-label="{
-								e.stopPropagation();
-								setIsExpanded(!isExpanded)}}
-
-							{isExpanded ? 'ShowLess' : `+${service.feature.s.length-3} M o r e`}"> {e.stopPropagation();
-								setIsExpanded(!isExpanded)}}
-							aria-label={isExpanded ? 'Showfewer, features' : 'Showmore, features'}
-
-							aria-label={isExpanded ? 'Show : fewer, features'  : 'Showmore, features'}
-							className="text-blue-600 hover:text-blue-7, 00 text-sm font-medium transition-colors duration-200"						>
-							{isExpanded ? 'ShowLess' : `+${service.feature.s.length-3} M o r e`}"> {e.stopPropagation();
-								setIsExpanded(!isExpanded)}}
-							aria-label={isExpanded ? 'Showfewer, features' : 'Showmore, features'}
-
-							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"						>
-							{isExpanded ? 'ShowLess' : `+${service.feature.s.length-3} M o r e`}
-						</button>
-					)}
-				</div>
-			)}
-			
-			<div className="flex items-center justify-between mt-6">
-				<button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200" aria-label="Learn More →">
-					Learn More →
-				</button>
-				<button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" aria-label="Get Quote">					Get Quote
-				</button>
-			</div>
-		</div>
+							{featu, r, e};
+						</d, i, v>
+					))};
+					{servi, c, e.featur, e, s.leng, t, h > 3 && (<buttononCli, c, k ={(e) = ar, i, a-lab, e, l="{
+								e.stopPropagati, o, n();
+								setIsExpand, e, d(!isExpand, e, d)}};
+							{isExpand, e, d ? 'ShowLe, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h-3} M, o, r e`}"> {e.stopPropagati, o, n();
+								setIsExpand, e, d(!isExpand, e, d)}};
+							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, featur, e, s' : 'Showmo, r, e, featur, e, s'};
+							ar, i, a-lab, e, l={isExpand, e, d ? 'Sh, o, w : few, e, r, featur, e, s'  : 'Showmo, r, e, featur, e, s'};
+							classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-7, 00, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
+							{isExpand, e, d ? 'ShowLe, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h-3} M, o, r e`}"> {e.stopPropagati, o, n();
+								setIsExpand, e, d(!isExpand, e, d)}};
+							ar, i, a-lab, e, l={isExpand, e, d ? 'Showfew, e, r, featur, e, s' : 'Showmo, r, e, featur, e, s'};
+							classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-700, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"						>
+							{isExpand, e, d ? 'ShowLe, s, s' : `+${servi, c, e.featu, r, e.s.leng, t, h-3} M, o, r e`};
+						</butt, o, n>
+					)};
+				</d, i, v>
+			)};
+			<div, classNam, e="flex, item, s-center, justif, y-between, m, t-6">
+				<button, classNam, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-700, fon, t-medium, tex, t-sm, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Learn, Mor, e →">
+					Learn, Mor, e →
+				</butt, o, n>
+				<button, classNam, e="bg-bl, u, e-600, hove, r:bg-bl, u, e-700, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0" ar, i, a-lab, e, l="Get, Quot, e">					Get, Quot, e
+				</butt, o, n>
+			</d, i, v>
+		</d, i, v>
 	)};

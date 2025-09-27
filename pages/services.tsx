@@ -1,380 +1,375 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import, React, from 'react';
+import, Head, from 'next/head';
+import, Link, from 'next/li, n, k';
 import { useState, useEffect } from 'react';
-// import { ServiceCard } from '../src/components/ServiceCard';
-// import Navigation from '../src/components/Navigation';
-// import { PricingCalculator } from '../src/components/PricingCalculator';
-import { SERVICES } from '../src/utils/constants';
-// import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEO from '../src/components/SEO';
-import { useAnalytics } from '../src/hooks/useAnalytics';
+// import { ServiceCa, r, d } from '../src/components/ServiceCa, r, d';
+// import, Navigation, from '../src/components/Navigati, o, n';
+// import { PricingCalculat, o, r } from '../src/components/PricingCalculat, o, r';
+import { SERVIC, E, S } from '../src/uti, l, s/constan, t, s';
+// import, ErrorBoundary, from '../src/components/ErrorBounda, r, y';
+import, SEO, from '../src/components/S, E, O';
+import { useAnalyti, c, s } from '../src/hooks/useAnalyti, c, s';
 
-export default function Services(): JSX.Element {
-	const [isVisible, setIsVisible] = useState(false);
-  const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export default function Servic, e, s(): J, S, X.Eleme, n, t {
+	con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
+  con, s, t [selectedServi, c, e, setSelectedServi, c, e] = useState<stri, n, g | nu, l, l>(nu, l, l);
+  con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useState(tr, u, e);
 
 	useEffect(() => {
-		setIsVisible(true);
-		setIsLoading(false)}, []);
+		setIsVisib, l, e(tr, u, e);
+		setIsLoadi, n, g(fal, s, e)}, []);
 
-	// Analytics tracking
-	const { trackClick } = useAnalytics();
+	// Analytics, tracking, const { trackCli, c, k } = useAnalyti, c, s();
 
-	const serviceDetails = {
+	const, serviceDetail, s = {
 		'ai-ml': {
-			title: 'AI & Machine Learning',
-			description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-			features: [
-				'Natural Language Processing (NLP)',
-				'Computer Vision & Image Recognition',
-				'Predictive Analytics & Forecasting',
-				'Chatbots & Virtual Assistants',
-				'Recommendation Systems',
-				'Automated Decision Making'
+			tit, l, e: 'AI & Machine, Learnin, g',
+			descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning solutio, n, s.',
+			featur, e, s: [
+				'Natural, Language, Processing (N, L, P)',
+				'Computer, Visio, n & Image, Recognitio, n',
+				'Predictive, Analytic, s & Forecasti, n, g',
+				'Chatbo, t, s & Virtual, Assistant, s',
+				'Recommendation, System, s',
+				'Automated, Decision, Making'
 			],
-			technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face', 'Scikit-learn', 'Pandas'],
-			benefits: [
-				'Automate repetitive tasks and processes',
-				'Gain insights from large datasets',
-				'Improve customer experience with intelligent interactions',
-				'Reduce operational costs through automation',
-				'Make data-driven decisions with predictive analytics'
-			]
+			technologi, e, s: ['TensorFl, o, w', 'PyTor, c, h', 'Open, A, I', 'Hugging, Fac, e', 'Scik, i, t-lea, r, n', 'Pand, a, s'],
+			benefi, t, s: [
+				'Automate, repetitive, tasks and, processe, s',
+				'Gain, insights, from large, dataset, s',
+				'Improve, customer, experience with, intelligent, interactions',
+				'Reduce, operational, costs through, automatio, n',
+				'Make, dat, a-driven, decisions, with predictive, analytic, s'
+			];
 		},
-		'cloud': {
-			title: 'Cloud Solutions',
-			description: 'Scalable  secure  and reliable cloud infrastructure tailored to your business needs.',
-			features: [
-				'Cloud Migration & Strategy',
-				'Container Orchestration (Kubernetes)',
-				'Serverless Architecture',
-				'DevOps & CI/CD Pipelines',
-				'Microservices Architecture',
-				'Cloud Security & Compliance'
+		'clo, u, d': {
+			tit, l, e: 'Cloud, Solution, s',
+			descripti, o, n: 'Scalable, secure, and reliable, cloud, infrastructure tailored, to, your business, need, s.',
+			featur, e, s: [
+				'Cloud, Migratio, n & Strate, g, y',
+				'Container, Orchestratio, n (Kubernet, e, s)',
+				'Serverless, Architectur, e',
+				'DevO, p, s & CI/CD, Pipeline, s',
+				'Microservices, Architectur, e',
+				'Cloud, Securit, y & Complian, c, e'
 			],
-			technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
-			benefits: [
-				'Scale resources based on demand',
-				'Reduce infrastructure costs',
-				'Improve reliability and uptime',
-				'Enable global accessibility',
-				'Simplify maintenance and updates'
-			]
+			technologi, e, s: ['A, W, S', 'Azu, r, e', 'Google, Clou, d', 'Dock, e, r', 'Kubernet, e, s', 'Terrafo, r, m'],
+			benefi, t, s: [
+				'Scale, resources, based on, deman, d',
+				'Reduce, infrastructure, costs',
+				'Improve, reliability, and upti, m, e',
+				'Enable, global, accessibility',
+				'Simplify, maintenance, and updat, e, s'
+			];
 		},
-		'web-dev': {
-			title: 'Web Development',
-			description: 'Modern  responsive web applications built with the latest technologies and best practices.',
-			features: [
-				'Progressive Web Apps (PWA)',
-				'Single Page Applications (SPA)',
-				'Responsive Design',
-				'API Development & Integration',
-				'Performance Optimization',
-				'SEO & Accessibility'
+		'w, e, b-d, e, v': {
+			tit, l, e: 'Web, Developmen, t',
+			descripti, o, n: 'Modern, responsive, web applications, built, with the, latest, technologies and, best, practices.',
+			featur, e, s: [
+				'Progressive, Web, Apps (P, W, A)',
+				'Single, Page, Applications (S, P, A)',
+				'Responsive, Desig, n',
+				'API, Developmen, t & Integrati, o, n',
+				'Performance, Optimizatio, n',
+				'S, E, O & Accessibili, t, y'
 			],
-			technologies: ['React', 'Next.js', 'Vue.js', 'Node.js', 'TypeScript', 'Tailwind CSS'],
-			benefits: [
-				'Enhanced user experience',
-				'Cross-platform compatibility',
-				'Fast loading times',
-				'Search engine optimization',
-				'Mobile-first design approach'
-			]
+			technologi, e, s: ['React', 'Ne, x, t.js', 'V, u, e.js', 'No, d, e.js', 'TypeScri, p, t', 'Tailwind, CS, S'],
+			benefi, t, s: [
+				'Enhanced, user, experience',
+				'Cro, s, s-platform, compatibilit, y',
+				'Fast, loading, times',
+				'Search, engine, optimization',
+				'Mobi, l, e-first, design, approach'
+			];
 		},
-		'mobile': {
-			title: 'Mobile Development',
-			description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
-			features: [
-				'iOS & Android Native Apps',
-				'Cross-platform Development',
-				'App Store Optimization',
-				'Push Notifications',
-				'Offline Functionality',
-				'Performance Monitoring'
+		'mobi, l, e': {
+			tit, l, e: 'Mobile, Developmen, t',
+			descripti, o, n: 'Native, and, cross-platform, mobile, applications that, deliver, exceptional user, experience, s.',
+			featur, e, s: [
+				'i, O, S & Android, Native, Apps',
+				'Cro, s, s-platform, Developmen, t',
+				'App, Store, Optimization',
+				'Push, Notification, s',
+				'Offline, Functionalit, y',
+				'Performance, Monitorin, g'
 			],
-			technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic'],
-			benefits: [
-				'Reach customers on their preferred devices',
-				'Leverage device-specific features',
-				'Improve customer engagement',
-				'Enable offline functionality',
-				'Faster time to market'
-			]
+			technologi, e, s: ['React, Nativ, e', 'Flutt, e, r', 'Swi, f, t', 'Kotl, i, n', 'Xamar, i, n', 'Ion, i, c'],
+			benefi, t, s: [
+				'Reach, customers, on their, preferred, devices',
+				'Leverage, devic, e-specific, feature, s',
+				'Improve, customer, engagement',
+				'Enable, offline, functionality',
+				'Faster, time, to mark, e, t'
+			];
 		},
-		'data-analytics': {
-			title: 'Data Analytics',
-			description: 'Transform your data into actionable insights with advanced analytics and visualization tools.',
-			features: [
-				'Business Intelligence Dashboards',
-				'Data Warehousing & ETL',
-				'Real-time Analytics',
-				'Predictive Modeling',
-				'Data Visualization',
-				'Custom Reporting Solutions'
+		'da, t, a-analyti, c, s': {
+			tit, l, e: 'Data, Analytic, s',
+			descripti, o, n: 'Transform, your, data into, actionable, insights with, advanced, analytics and, visualization, tools.',
+			featur, e, s: [
+				'Business, Intelligence, Dashboards',
+				'Data, Warehousin, g & E, T, L',
+				'Re, a, l-time, Analytic, s',
+				'Predictive, Modelin, g',
+				'Data, Visualizatio, n',
+				'Custom, Reporting, Solutions'
 			],
-			technologies: ['Python', 'R', 'Tableau', 'Power BI', 'Apache Spark', 'SQL'],
-			benefits: [
-				'Make informed business decisions',
-				'Identify trends and patterns',
-				'Improve operational efficiency',
-				'Enhance customer understanding',
-				'Drive revenue growth'
-			]
+			technologi, e, s: ['Pyth, o, n', 'R', 'Table, a, u', 'Power, B, I', 'Apache, Spar, k', 'S, Q, L'],
+			benefi, t, s: [
+				'Make, informed, business decisio, n, s',
+				'Identify, trends, and patter, n, s',
+				'Improve, operational, efficiency',
+				'Enhance, customer, understanding',
+				'Drive, revenue, growth'
+			];
 		},
-		'cybersecurity': {
-			title: 'Cybersecurity',
-			description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-			features: [
-				'Security Audits & Assessments',
-				'Penetration Testing',
-				'Compliance Management',
-				'Incident Response Planning',
-				'Security Training & Awareness',
-				'Threat Detection & Prevention'
+		'cybersecuri, t, y': {
+			tit, l, e: 'Cybersecuri, t, y',
+			descripti, o, n: 'Comprehensive, security, solutions to, protect, your digital, assets, and ensure, complianc, e.',
+			featur, e, s: [
+				'Security, Audit, s & Assessmen, t, s',
+				'Penetration, Testin, g',
+				'Compliance, Managemen, t',
+				'Incident, Response, Planning',
+				'Security, Trainin, g & Awarene, s, s',
+				'Threat, Detectio, n & Preventi, o, n'
 			],
-			technologies: ['SIEM', 'Firewalls', 'VPN', 'Encryption', 'Multi-factor Authentication', 'Security Monitoring'],
-			benefits: [
-				'Protect sensitive data and assets',
-				'Meet regulatory compliance requirements',
-				'Reduce security risks and vulnerabilities',
-				'Build customer trust and confidence',
-				'Minimize potential financial losses'
-			]
-		}
+			technologi, e, s: ['SI, E, M', 'Firewal, l, s', 'V, P, N', 'Encrypti, o, n', 'Mul, t, i-factor, Authenticatio, n', 'Security, Monitorin, g'],
+			benefi, t, s: [
+				'Protect, sensitive, data and, asset, s',
+				'Meet, regulatory, compliance requiremen, t, s',
+				'Reduce, security, risks and, vulnerabilitie, s',
+				'Build, customer, trust and, confidenc, e',
+				'Minimize, potential, financial loss, e, s'
+			];
+		};
 	};
 
 	return (
-		<div>
-			<SEO />
-			{/* <Navigation /> */}
-			<Head>
-				<title>Services - Zion App</title>
-				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			{isLoading ? (
-			<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="text-center">
-			<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-						<p className="text-gray-600">Loading services...</p>
-					</div>
-				</div>
+		<d, i, v>
+			<S, E, O />
+			{/* <Navigati, o, n /> */};
+			<He, a, d>
+				<tit, l, e>Servic, e, s - Zion, Ap, p</tit, l, e>
+				<meta, nam, e="descripti, o, n" conte, n, t="Explore, our, comprehensive technology, services, including AI, cloud, solutions  web, development, mobile apps, data, analytics  and, cybersecurit, y." />
+				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
+			</He, a, d>
+			{isLoadi, n, g ? (
+			<div, classNam, e="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
+			<div, classNam, e="te, x, t-cent, e, r">
+			<div, classNam, e="anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-600, m, x-auto, m, b-4"></d, i, v>
+						<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Loading, service, s...</p>
+					</d, i, v>
+				</d, i, v>
 			) : (
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
-			<div className="container mx-auto px-4 py-8 max-w-7 xl">
-				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover: text-blue-800 font-medium transition-colors">
-							← Back to Home
+			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
+			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
+				<nav, classNam, e="mb-8">
+					<Link, hre, f="/" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
+							← Back, to, Home
 						</Link>
-					</nav>
+					</n, a, v>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5 xl, md:text-6 xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-							Our Services
+					<header, classNam, e="te, x, t-center, m, b-16">
+						<h1, classNam, e="te, x, t-5, x, l, md:te, x, t-6, xl, font-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
+							Our, Service, s
 						</h1>
-						<p className="text-xl text-gray-600 max-w-3 xl mx-auto leading-relaxed">
-							Comprehensive technology solutions to drive your business forward
+						<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-auto, leadin, g-relax, e, d">
+							Comprehensive, technology, solutions to, drive, your business, forwar, d
 						</p>
-					</header>
+					</head, e, r>
 
-					<main>
-						{/* Services Grid */}
-						<section className="mb-20">
-			<div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
-								{SERVICES.map((service ,, index) => (
-			<div
-										key={service.id}
-										className={`transform transition-all duration-700 delay-${index * 100} ${
-											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-										}`}
+					<ma, i, n>
+						{/* Services, Gri, d */};
+						<section, classNam, e="mb-20">
+			<div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, ga, p-8">
+								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, e, x) => (
+			<div, ke, y={servi, c, e.id};
+										classNa, m, e={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 1, 0, 0} ${
+											isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
+										}`};
 									>
-			<div className="p-6 bg-white rounded-lg shadow-md">
-											<h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-											<p className="text-gray-600 mb-4">{service.description}</p>
-			<div className="text-blue-600 font-medium">Service Card (temporarily disabled)</div>
-										</div>
-									</div>
-								))}
-							</div>
-						</section>
+			<div, classNam, e="p-6, b, g-white, rounde, d-lg, shado, w-md">
+											<h3, classNam, e="te, x, t-xl, fon, t-semibold, m, b-2">{servi, c, e.tit, l, e}</h3>
+											<p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{servi, c, e.descripti, o, n}</p>
+			<div, classNam, e="te, x, t-bl, u, e-600, fon, t-medi, u, m">Service, Car, d (temporarily, disable, d)</d, i, v>
+										</d, i, v>
+									</d, i, v>
+								))};
+							</d, i, v>
+						</secti, o, n>
 
-						{/* Service Details */}
-						{selectedService && (
-							<section className={`mb-20 transition-all duration-500 ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+						{/* Service, Detail, s */};
+						{selectedServi, c, e && (
+							<section, classNam, e={`mb-20, transitio, n-all, duratio, n-5, 0, 0 ${
+								isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 							}`}>
-			<div className="bg-white rounded-3 xl shadow-2 xl p-8 md: p-12">
-			<div className="flex justify-between items-start mb-8">
-			<div>
-											<h2 className="text-3 xl, md:text-4 xl font-bold text-gray-800 mb-4">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.title}
+			<div, classNam, e="bg-white, rounde, d-3, xl, shadow-2, xl, p-8, m, d: p-12">
+			<div, classNam, e="flex, justif, y-between, item, s-start, m, b-8">
+			<d, i, v>
+											<h2, classNam, e="te, x, t-3, x, l, md:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800, m, b-4">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.tit, l, e};
 											</h2>
-											<p className="text-xl text-gray-600 leading-relaxed">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.description}
+											<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, leadin, g-relax, e, d">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.descripti, o, n};
 											</p>
-										</div>
-										<button
-										,, onClick={() => setSelectedService(null)}
-											className="text-gray-400 hover:text-gray-600 transition-colors"
+										</d, i, v>
+										<butt, o, n
+										,, onCli, c, k={() => setSelectedServi, c, e(nu, l, l)};
+											classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 										>
-											<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-											</svg>
-										</button>
-									</div>
-			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-										{/* Features */}
-			<div>
-											<h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
-											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature ,, index) => (
-													<li key={index} className="flex items-center text-gray-600">
-														<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-														</svg>
-														{feature}
+											<svg, classNam, e="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
+												<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />
+											</s, v, g>
+										</butt, o, n>
+									</d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-3, ga, p-8">
+										{/* Featur, e, s */};
+			<d, i, v>
+											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Key, Feature, s</h3>
+											<ul, classNam, e="spa, c, e-y-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((featu, r, e ,, ind, e, x) => (
+													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
+														<svg, classNam, e="w-4 h-4, tex, t-gre, e, n-500, m, r-2" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+															<path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />
+														</s, v, g>
+														{featu, r, e};
 													</li>
-												))}
+												))};
 											</ul>
-										</div>
+										</d, i, v>
 
-										{/* Technologies */}
-			<div>
-											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
-			<div className="flex flex-wrap gap-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech ,, index) => (
-													<span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-														{tech}
-													</span>
-												))}
-											</div>
-										</div>
+										{/* Technologi, e, s */};
+			<d, i, v>
+											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Technologi, e, s</h3>
+			<div, classNam, e="flex, fle, x-wrap, ga, p-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,, ind, e, x) => (
+													<span, ke, y={ind, e, x} classNa, m, e="px-3, p, y-1, b, g-bl, u, e-100, tex, t-bl, u, e-800, rounde, d-full, tex, t-sm, fon, t-medi, u, m">
+														{te, c, h};
+													</sp, a, n>
+												))};
+											</d, i, v>
+										</d, i, v>
 
-										{/* Benefits */}
-			<div>
-											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
-											<ul className="space-y-2">
-												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit ,, index) => (
-													<li key={index} className="flex items-start text-gray-600">
-														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-														</svg>
-														{benefit}
+										{/* Benefi, t, s */};
+			<d, i, v>
+											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Benefi, t, s</h3>
+											<ul, classNam, e="spa, c, e-y-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.m, a, p((benef, i, t ,, ind, e, x) => (
+													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, tex, t-gr, a, y-6, 0, 0">
+														<svg, classNam, e="w-4 h-4, tex, t-bl, u, e-500, m, r-2, m, t-0.5" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+															<path, fillRul, e="eveno, d, d" d="M10, 18a8, 8 0, 10, 0-16, 8, 8 0, 000, 16zm3.7, 0, 7-9.293a1, 1, 0 00-1.4, 1, 4-1.414L9, 1, 0.58, 6, 7.70, 7, 9.293a1, 1, 0 00-1.41, 4, 1.414l2, 2a1, 1 0, 00, 1.414, 0l, 4-4z" clipRu, l, e="eveno, d, d" />
+														</s, v, g>
+														{benef, i, t};
 													</li>
-												))}
+												))};
 											</ul>
-										</div>
-									</div>
-								</div>
-							</section>
-						)}
-
-						{/* Why Choose Us */}
-						<section className={`mb-20 transition-all duration-1000 delay-700 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+										</d, i, v>
+									</d, i, v>
+								</d, i, v>
+							</secti, o, n>
+						)};
+						{/* Why, Choose, Us */};
+						<section, classNam, e={`mb-20, transitio, n-all, duratio, n-1000, dela, y-7, 0, 0 ${
+							isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 						}`}>
-			<div className="text-center mb-12">
-								<h2 className="text-3 xl md: text-5 xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-									Why Choose Our Services?
+			<div, classNam, e="te, x, t-center, m, b-12">
+								<h2, classNam, e="te, x, t-3, xl, md: te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
+									Why, Choose, Our Servic, e, s?
 								</h2>
-								<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-									We combine technical expertise with business acumen to deliver solutions that drive real results.
+								<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-au, t, o">
+									We, combine, technical expertise, with, business acumen, to, deliver solutions, that, drive real, result, s.
 								</p>
-							</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
-			<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2 xl">👥</span>
-									</div>
-									<h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team</h3>
-									<p className="text-gray-600">Certified professionals with years of experience in cutting-edge technologies</p>
-								</div>
-			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
-			<div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2 xl">📈</span>
-									</div>
-									<h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Results</h3>
-									<p className="text-gray-600">Track record of successful projects and satisfied clients across industries</p>
-								</div>
-			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
-			<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2 xl">🔄</span>
-									</div>
-									<h3 className="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
-									<p className="text-gray-600">Round-the-clock support and maintenance for all our solutions</p>
-								</div>
-			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg, hover:shadow-xl transition-shadow">
-			<div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-										<span className="text-2 xl">⚡</span>
-									</div>
-									<h3 className="text-xl font-semibold text-gray-800 mb-2">Scalable Solutions</h3>
-									<p className="text-gray-600">Future-proof solutions that grow with your business needs</p>
-								</div>
-							</div>
-						</section>
+							</d, i, v>
+			<div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">👥</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Expert, Tea, m</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Certified, professionals, with years, of, experience in, cuttin, g-edge, technologie, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">📈</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Proven, Result, s</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Track, record, of successful, projects, and satisfied, clients, across industri, e, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">🔄</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">24/7, Suppor, t</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Rou, n, d-t, h, e-clock, support, and maintenance, for, all our, solution, s</p>
+								</d, i, v>
+			<div, classNam, e="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xl, shadow-lg, hov, e, r:shad, o, w-xl, transitio, n-shad, o, w">
+			<div, classNam, e="w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+										<span, classNam, e="te, x, t-2, x, l">⚡</sp, a, n>
+									</d, i, v>
+									<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-2">Scalable, Solution, s</h3>
+									<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Futu, r, e-proof, solutions, that grow, with, your business, need, s</p>
+								</d, i, v>
+							</d, i, v>
+						</secti, o, n>
 
-						{/* CTA Section */}
-						<section className={`text-center py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl mb-20 text-white relative overflow-hidden transition-all duration-1000 delay-500 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+						{/* CTA, Sectio, n */};
+						<section, classNam, e={`te, x, t-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-20, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-5, 0, 0 ${
+							isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 						}`}>
-			<div className="absolute inset-0 opacity-10">
-			<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
-							</div>
-			<div className="relative z-10">
-								<h2 className="text-4 xl md: text-6 xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-									Ready to Get Started?
+			<div, classNam, e="absolute, inse, t-0, opacit, y-10">
+			<div, classNam, e="absolute, inse, t-0" sty, l, e={{
+									backgroundIma, g, e: `u, r, l("da, t, a:ima, g, e/s, v, g+x, m, l %3Csvg, widt, h='60' heig, h, t='60' viewB, o, x='0, 0, 60 60' xml, n, s='ht, t, p://w, w, w.w3.o, r, g/20, 0, 0/s, v, g'%3E%3Cg, fil, l='no, n, e' fi, l, l-ru, l, e='eveno, d, d'%3E%3Cg, fil, l='%23ffff, f, f' fi, l, l-opaci, t, y='0.1'%3E%3Ccircle, c, x='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/s, v, g%3E")`}}></d, i, v>
+							</d, i, v>
+			<div, classNam, e="relativ, e, z-10">
+								<h2, classNam, e="te, x, t-4, xl, md: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t">
+									Ready, to, Get Start, e, d?
 								</h2>
-								<p className="text-xl md:text-2 xl mb-10 max-w-3 xl mx-auto opacity-90 font-light leading-relaxed">
-									Let&apos;s discuss your project requirements and find the perfect solution for your business.
+								<p, classNam, e="te, x, t-xl, m, d:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90, fon, t-light, leadin, g-relax, e, d">
+									L, e, t&ap, o, s;s, discuss, your project, requirements, and find, the, perfect solution, for, your busine, s, s.
 								</p>
-			<div className="flex flex-col, sm:flex-row gap-6 justify-center">
-					<Link href="/contact">
-										<button 
-											onClick={() => trackClick('get-quote-button', 'cta')}
-											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2 xl transform, hover:-translate-y-1 text-lg"
+			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
+					<Link, hre, f="/conta, c, t">
+										<button, onClic, k={() => trackCli, c, k('g, e, t-quo, t, e-butt, o, n', 'c, t, a')};
+											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 										>
-											<span className="flex items-center justify-center gap-2">
-												Get a Quote
-												<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-												</svg>
-											</span>
-										</button>
+											<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
+												Get, a, Quote
+												<svg, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
+													<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M17, 8l4, 4m0 0l-4, 4m, 4-4, H, 3" />
+												</s, v, g>
+											</sp, a, n>
+										</butt, o, n>
 									</Link>
-									<button 
-										onClick={() => trackClick('schedule-consultation-button', 'cta')}
-										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 transform, hover:-translate-y-1 text-lg"
+									<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n-butt, o, n', 'c, t, a')};
+										classNa, m, e="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hove, r: bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transfor, m, hov, e, r:-transla, t, e-y-1, tex, t-lg"
 									>
-										<span className="flex items-center justify-center gap-2">
-											Schedule Consultation
-											<svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-											</svg>
-										</span>
-									</button>
-								</div>
-							</div>
-						</section>
+										<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
+											Schedule, Consultatio, n
+											<svg, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
+												<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M8, 7V3m8, 4V3m-9, 8h10M5, 21h14a2 2, 0, 002-2V7a2, 2, 0 00-2-2H5a2, 2, 0 00-2, 2v12a2, 2 0, 002, 2z" />
+											</s, v, g>
+										</sp, a, n>
+									</butt, o, n>
+								</d, i, v>
+							</d, i, v>
+						</secti, o, n>
 
-						{/* Pricing Calculator Section */}
-						<section className={`mb-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-			<div className="text-center mb-12">
-								<h2 className="text-4 xl md:text-5 xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-									Project Pricing Calculator
+						{/* Pricing, Calculator, Section */};
+						<section, classNam, e={`mb-20, transitio, n-all, duratio, n-1000, dela, y-7, 0, 0 ${isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'}`}>
+			<div, classNam, e="te, x, t-center, m, b-12">
+								<h2, classNam, e="te, x, t-4, xl, md:te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
+									Project, Pricing, Calculator
 								</h2>
-								<p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-									Get an instant estimate for your project based on your specific requirements and preferences.
+								<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-au, t, o">
+									Get, an, instant estimate, for, your project, based, on your, specific, requirements and, preference, s.
 								</p>
-							</div>
-							{/* <PricingCalculator /> */}
-			<div className="text-center py-8 text-gray-500">Pricing Calculator temporarily disabled</div>
-						</section>
-					</main>
-				</div>
-			</div>
-			)}
-		</div>
-	)}
+							</d, i, v>
+							{/* <PricingCalculat, o, r /> */};
+			<div, classNam, e="te, x, t-center, p, y-8, tex, t-gr, a, y-5, 0, 0">Pricing, Calculator, temporarily disabl, e, d</d, i, v>
+						</secti, o, n>
+					</ma, i, n>
+				</d, i, v>
+			</d, i, v>
+			)};
+		</d, i, v>
+	)};
