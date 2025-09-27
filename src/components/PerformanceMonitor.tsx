@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -10,7 +11,7 @@ interface PerformanceMetrics {
   domContentLoaded: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC<{ show?: boolean }> = ({ show = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -21,17 +22,13 @@ const PerformanceMonitor: React.FC = () => {
     domContentLoaded: null
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(show);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('showPerformanceMonitor') === 'true';
-    
-    if (!shouldShow) return;
+    if (!isVisible) return;
 
-    const measurePerformance = () => {
-      // Get navigation timing
+    const updateMetrics = () => {
+      // Get performance metrics
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
       // Get paint timing
@@ -71,126 +68,84 @@ const PerformanceMonitor: React.FC = () => {
       });
     };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
 
-    // Re-measure on navigation
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          measurePerformance();
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['navigation'] });
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-      observer.disconnect();
-    };
-  }, []);
-
-  const getScore = (value: number | null, thresholds: { good: number; poor: number }): 'good' | 'needs-improvement' | 'poor' | 'unknown' => {
-    if (value === null) return 'unknown';
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.poor) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getScoreColor = (score: string): string => {
-    switch (score) {
-      case 'good': return 'text-green-500';
-      case 'needs-improvement': return 'text-yellow-500';
-      case 'poor': return 'text-red-500';
-      default: return 'text-gray-500';
-    }
-  };
+    return () => clearInterval(interval);
+  }, [isVisible]);
 
   if (!isVisible) {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 left-4 bg-zion-slate-800 hover:bg-zion-slate-700 text-white p-2 rounded-lg shadow-lg transition-colors z-50"
         aria-label="Show performance monitor"
       >
-        📊
+        <Activity className="w-5 h-5" />
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 max-w-sm z-50">
-      <div className="flex justify-between items-center mb-2">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
+    <div className="fixed bottom-4 left-4 bg-zion-slate-800 text-white p-4 rounded-lg shadow-lg z-50 min-w-[200px] border border-zion-slate-700">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold text-zion-cyan">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-          aria-label="Close performance monitor"
+          className="text-zion-slate-light hover:text-white text-xs"
         >
           ×
         </button>
       </div>
       
       <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-          <span className={getScoreColor(getScore(metrics.fcp, { good: 1800, poor: 3000 }))}>
-            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Clock className="w-3 h-3 text-zion-blue-light" />
+            <span className="text-zion-slate-light">FCP:</span>
+          </div>
+          <span className="text-white">{metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-          <span className={getScoreColor(getScore(metrics.lcp, { good: 2500, poor: 4000 }))}>
-            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Database className="w-3 h-3 text-zion-purple-light" />
+            <span className="text-zion-slate-light">LCP:</span>
+          </div>
+          <span className="text-white">{metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FID:</span>
-          <span className={getScoreColor(getScore(metrics.fid, { good: 100, poor: 300 }))}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Zap className="w-3 h-3 text-zion-cyan" />
+            <span className="text-zion-slate-light">FID:</span>
+          </div>
+          <span className="text-white">{metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">CLS:</span>
-          <span className={getScoreColor(getScore(metrics.cls, { good: 0.1, poor: 0.25 }))}>
-            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Activity className="w-3 h-3 text-zion-blue" />
+            <span className="text-zion-slate-light">CLS:</span>
+          </div>
+          <span className="text-white">{metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
-          <span className={getScoreColor(getScore(metrics.ttfb, { good: 800, poor: 1800 }))}>
-            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Clock className="w-3 h-3 text-zion-blue-light" />
+            <span className="text-zion-slate-light">TTFB:</span>
+          </div>
+          <span className="text-white">{metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}</span>
         </div>
         
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-          <span className={getScoreColor(getScore(metrics.loadTime, { good: 2000, poor: 4000 }))}>
-            {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Database className="w-3 h-3 text-zion-purple-light" />
+            <span className="text-zion-slate-light">Load Time:</span>
+          </div>
+          <span className="text-white">{metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}</span>
         </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-600">
-        <button
-          onClick={() => {
-            localStorage.setItem('showPerformanceMonitor', 'false');
-            setIsVisible(false);
-          }}
-          className="text-xs text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
-        >
-          Hide permanently
-        </button>
       </div>
     </div>
   );
