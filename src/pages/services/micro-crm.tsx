@@ -1,252 +1,250 @@
 import React from "react"
-<<<<<<< HEAD
-import {UsersTargetCheckCirclePhoneCalendarBarChart3Building } from "lucide-react"
-=======
-import {Users, Target, CheckCircle, Pho, n, e, Calend, a, r, BarChar, t, 3, Building } from "lucide-react"
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-import {SEO } from "../../components/SEO"
+import {SEO  } from "../../components/SEO"
 
-export default function MicroCRM() {const features = [{
-      icon: Users, title: "Contact, Management",
+export default function MicroCRM() {constfeatures = [{
+      icon: Userstitle: "Conta, c, t, Management",
       description:
-        "Centralized, database for, all customer, contacts with, detailed profiles, and interaction, history.",
+        "Centraliz, e, d, database, fo, r, all, custome, r, contacts, wit, h, detailed, profile, sandinteractionhistory."},
+    {icon: Targ, ettitle: "Le, adTracking",
+      description:
+        "Tra, c, k, leads, throug, h, the, sale, s, funnel, wit, h, automated, scorin, gandqualificationprocesses."},
+    {icon: Calend, artitle: "TaskManagement"description:
     },
-    {icon: Target, title: "Lead, Tracking",
+    {icon: BarChar, t, 3, title: "Sal, esAnalytics",
       description:
-        "Track, leads through, the sales, funnel with, automated scoring, and qualification, processes.",
-    },
-    {icon: Calendar, title: "Task, Management",
+        "Comprehensi, v, e, reporting, an, d, analytics, t, o, track, performanc, eandidentifyopportunities."}];
+  const, benefit, s = ["Streamlinecustomerrelationship management",
+    "Improvesalesteam productivity",
+    "Enhancecustomercommunication",
+    "Tracksalesperformance metrics",
+    "Automaterepetitivetasks",
+    "Centralizecustomerdata"];
+  constuseCases = [{title: "Sma, l, l, BusinessCRM",
       description:
-<<<<<<< HEAD
-        "Schedule, follow-upsmeetingsand, reminders with, integrated calendar, functionality.",
-=======
-        "Schedule, follow-ups, meetings, and, reminders with, integrated calendar, functionality.",
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-    },
-    {icon: BarChart3, title: "Sales, Analytics",
+        "Perfe, c, t, for, smal, l, businesses, lookin, g, to, manag, e, customer, relationshipsefficiently.",
+      icon: Building},
+    {title: "Sal, esTeamManagement",
       description:
-        "Comprehensive, reporting and, analytics to, track performance, and identify, opportunities.",
-    }, ]
+        "Empow, e, r, sales, team, s, with, tool, s, to, trac, k, leads, an, d, manage, customerinteractions.",
+      icon: Users},
+    {title: "Custom, erSupport",
+      description:
+        "Tra, c, k, customer, issue, s, and, provid, e, timely, suppor, t, with, integratedticketing.",
+      icon: Phone},
+    {title: "Marketi, ngCampaigns",
+      description:
+        "Mana, g, e, marketing, campaign, s, and, trac, k, customer, engagementandresponses.",
+      icon: Target}];
+  return (<divclassNam, e="m, i, n-h-scre, e, n, bg-gradie, n, t-to-br, fr, o, m-sla, t, e-90, 0, v, i, a-sla, t, e-8, 0, 0to-slate-900">
 
-  const benefits = ["Streamline customer relationship management",
-    "Improve sales team productivity",
-    "Enhance customer communication",
-    "Track sales performance metrics",
-    "Automate repetitive tasks",
-    "Centralize customer data", ]
 
-  const useCases = [{title: "Small, Business CRM",
-      description:
-        "Perfect, for small, businesses looking, to manage, customer relationships, efficiently.",
-      icon: Building,
-    },
-    {title: "Sales, Team Management",
-      description:
-        "Empower, sales teams, with tools, to track, leads and, manage customer, interactions.",
-      icon: Users,
-    },
-    {title: "Customer, Support",
-      description:
-        "Track, customer issues, and provide, timely support, with integrated, ticketing.",
-      icon: Phone,
-    },
-    {title: "Marketing, Campaigns",
-      description:
-        "Manage, marketing campaigns, and track, customer engagement, and responses.",
-      icon: Target,
-    }, ]
 
-  return (<<<<<<< HEAD
-    <div className ="min-h-screen, bg-gradient-to-br, from-slate-900, via-slate-800, to-slate-900">
-=======
-    <div className ="min-h-screen, bg-gradient-to-br, from-slate-90, 0, via-slate-8, 0, 0, to-slate-90, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-      <SEO title ="Micro, CRM - Zion, Tech Group"
-        description="Streamline, your customer, relationship management, with our, Micro CRM, solution. Perfect, for small, businesses and, growing teams."
+      <SEOtitl, e ="Mic, r, o, C, R, M - Zi, onTechGroup"
+        descripti, o, n="Streamli, n, e, your, custome, r, relationship, managemen, t, with, ou, r, Micro, CR, M, soluti, o, n. Perfe, c, t, for, smal, l, businesses, andgrowingteams."
+
       />
 
-      {/* Hero, Section */}
-      <section className ="relative, py-20, overflow-hidden">
-<<<<<<< HEAD
-        <div className ="absolute, inset-0, bg-gradient-to-r, from-cyan-500/10, via-blue-500/10, to-purple-500/10" />
-        <div className ="container, mx-auto, px-4, relative z-10">
-          <div className ="text-center, max-w-4xl, mx-auto">
-            <div className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-cyan-500/20, to-blue-500/20, rounded-full, border border-cyan-400/30, mb-6">
-              <CheckCircle className ="w-4, h-4, mr-2, text-cyan-300" />
-              <span className ="text-cyan-300, text-sm, font-medium">Customer, Relationship Management</span>
+      {/* He, r, o, Section */};
+      <sectionclassNam, e="relati, v, e, py-20, overflow-hidden">
+
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, xlmx-auto">
+            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
+              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
+              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
-            <h1 className ="text-5xl, md:text-6xl, font-bold, text-white, mb-6">Micro, CRM</h1>
-            <p className ="text-xl, text-slate-300, mb-8, leading-relaxed">
-              Streamline, your customer, relationships with, our lightweightpowerful, CRM solution, designed for, small
-              businesses, and growing, teams.
+            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fo, n, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+              Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweightpowerfu, l, CRM, solutio, n, designed, fo, r, small, businesse, s, and, growin, g, tea, m, s.
             </p>
-            <div className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
-              <button className ="px-8, py-4, bg-gradient-to-r, from-cyan-400, to-blue-500, text-white, font-semibold, rounded-lg, hover:from-cyan-500, hover:to-blue-600, transition-all, duration-200, hover:scale-105, shadow-lg, hover:shadow-cyan-400/25">
-                Start, Free Trial
+            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+                Sta, r, t, Free, Tria, l
               </button>
-              <button className ="px-8, py-4, border border-cyan-400/30, text-cyan-300, font-semibold, rounded-lg, hover:bg-cyan-400/10, transition-all, duration-200">
-=======
-        <div className ="absolute, inset-0, bg-gradient-to-r, from-cyan-5, 0, 0/10, via-blue-5, 0, 0/10, to-purple-5, 0, 0/10" />
-        <div className ="container, mx-auto, px-4, relative z-10">
-          <div className ="text-center, max-w-4, x, l, mx-auto">
-            <div className ="inline-flex, items-center, px-4, py-2, bg-gradient-to-r, from-cyan-5, 0, 0/20, to-blue-5, 0, 0/20, rounded-full, border border-cyan-4, 0, 0/30, mb-6">
-              <CheckCircle className ="w-4, h-4, mr-2, text-cyan-300" />
-              <span className ="text-cyan-300, text-sm, font-medium">Customer, Relationship Management</span>
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto">
+            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
+              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
+              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
             </div>
-            <h1 className ="text-5, x, l, md:text-6, x, l, font-bold, text-white, mb-6">Micro, CRM</h1>
-            <p className ="text-xl, text-slate-300, mb-8, leading-relaxed">
-              Streamline, your customer, relationships with, our lightweight, powerful, CRM solution, designed for, small
-              businesses, and growing, teams.
+            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+              Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweigh, t, powerful, CR, M, solution, designe, d, for, smal, l, businesses, an, d, growing, team, s.
             </p>
-            <div className ="flex, flex-col, sm:flex-row, gap-4, justify-center">
-              <button className ="px-8, py-4, bg-gradient-to-r, from-cyan-4, 0, 0, to-blue-5, 0, 0, text-white, font-semibold, rounded-lg, hover:from-cyan-5, 0, 0, hover:to-blue-6, 0, 0, transition-all, duration-2, 0, 0, hover:scale-1, 0, 5, shadow-lg, hover:shadow-cyan-4, 0, 0/25">
-                Start, Free Trial
+            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+                Sta, r, t, Free, Tria, l
               </button>
-              <button className ="px-8, py-4, border border-cyan-4, 0, 0/30, text-cyan-300, font-semibold, rounded-lg, hover:bg-cyan-4, 0, 0/10, transition-all, duration-2, 0, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f, Watch Demo
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+        <divclassNam, e="absolu, t, e, ins, e, t-0, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/10, v, i, a-bl, u, e-5, 0, 0/10, to-purple-500/10" />
+        <divclassNam, e="contain, e, r, mx-au, t, o, px-4relativez-10">
+          <divclassNam, e="te, x, t-cent, e, r, m, a, x-w-4, x, lmx-auto">
+            <divclassNam, e="inli, n, e-fl, e, x, ite, m, s-cent, e, r, px-4, py-2, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-5, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-fu, l, l, border, borde, r-cy, an-400/30mb-6">
+              <CheckCircleclassNam, e="w-4, h-4, mr-2, te, x, t-cyan-300" />
+              <spanclassNam, e="te, x, t-cy, a, n-3, 0, 0, te, x, t-sm, font-medium">Custom, e, r, Relationship, Managemen, t</span>
+            </div>
+            <h1classNam, e="te, x, t-5, xlmd:te, x, t-6, x, l, fon, t-bo, l, d, te, xt-whitemb-6">Mic, r, o, C, R, M</h1>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, mb-8, leading-relaxed">
+              Streamli, n, e, your, custome, r, relationships, wit, h, our, lightweigh, t, powerful, CR, M, solution, designe, d, for, smal, l, businesses, an, d, growing, team, s.
+            </p>
+            <divclassNam, e="fl, e, x, fl, ex-colsm:fl, e, x-r, o, w, g, a, p-4, justify-center">
+              <buttonclassNam, e="px-8, py-4, bg-gradie, n, t-to-r, fr, o, m-cy, a, n-4, 0, 0, to-bl, u, e-5, 0, 0, te, x, t-whi, t, e, fo, n, t-semibo, l, d, round, ed-lghover:fr, o, m-cy, a, n-5, 0, 0, hover:to-bl, u, e-6, 0, 0, transiti, o, n-a, l, l, durati, o, n-2, 0, 0, hover:sca, l, e-1, 0, 5, shad, ow-lghover:shad, o, w-cyan-400/25">
+                Sta, r, t, Free, Tria, l
+              </button>
+              <button, classNa, m, e="px-8, py-4, bord, e, r, bord, e, r-cy, a, n-4, 0, 0/30, te, x, t-cy, a, n-3, 0, 0, fo, n, t-semibo, l, d, round, ed-lghover:bg-cy, a, n-4, 0, 0/10, transiti, o, n-a, l, l, duration-200">
+
+
               </button>
             </div>
           </div>
-        </div>
+        </d, i, v>
       </section>
 
-      {/* Features, Section */}
-      <section className ="py-20">
-        <div className ="container, mx-auto, px-4">
-          <div className ="text-center, mb-16">
-<<<<<<< HEAD
-            <h2 className ="text-4xl, font-bold, text-white, mb-4">Essential, CRM Features</h2>
-            <p className ="text-xl, text-slate-300, max-w-3xl, mx-auto">
-=======
-            <h2 className ="text-4, x, l, font-bold, text-white, mb-4">Essential, CRM Features</h2>
-            <p className ="text-xl, text-slate-300, max-w-3, x, l, mx-auto">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f, Our Micro, CRM provides, all the, essential features, you need, to manage, customer relationships, without the, complexity of, enterprise solutions.
+      {/* Features, Section */};
+      <sectionclassNam, e ="py-20">
+        <divclassName="containe, r, mx-au, topx-4">
+          <divclassName="tex, t-cent, ermb-16">
+Essenti, a, l, CRM, Features</h2>
+            <pclassName="text-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, l, mx-auto">
+
+            <h2className="tex, t-4, x, l, fon, t-bo, l, d, te, xt-whitemb-4">Essenti, a, l, CRM, Feature, s</h2>
+            <pclassName="tex, t-xl, te, x, t-sla, t, e-3, 0, 0, m, a, x-w-3, x, lmx-auto">
+
             </p>
           </div>
-          <div className ="grid, md:grid-cols-2, lg:grid-cols-4, gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (<div key ={index}
-                className="bg-slate-800/50, border border-slate-700/50, rounded-xl, p-6, hover:border-cyan-400/30, transition-all, duration-300, hover:scale-105"
+          <div, classNa, m, e="gridmd:gr, i, d-co, l, s-2, lg:gr, i, d-co, ls-4gap-8">
+ (<divke, y ={index};
+                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-cyan-400/20, to-blue-500/20, rounded-lg, flex items-center, justify-center, mb-4">
-=======
-            {features.map((feature, index) => (<div key ={index}
-                className="bg-slate-8, 0, 0/50, border border-slate-7, 0, 0/50, rounded-xl, p-6, hover:border-cyan-4, 0, 0/30, transition-all, duration-300, hover:scale-1, 0, 5"
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+ (<divke, y ={index};
+                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
               >
-                <div className ="w-12, h-12, bg-gradient-to-br, from-cyan-4, 0, 0/20, to-blue-5, 0, 0/20, rounded-lg, flex items-center, justify-center, mb-4">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                  <feature.icon, className ="w-6, h-6, text-cyan-300" />
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<divke, y ={index};
+                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-6, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-3, 0, 0, hover:scale-105"
+              >
+                <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
+
+
+                  <feature.icon, classNa, m, e="w-6, h-6, te, x, t-cyan-300" />
                 </div>
-                <h3 className ="text-xl, font-semibold, text-white, mb-3">{feature.title}</h3>
-                <p className ="text-slate-300">{feature.description}</p>
+                <h3classNam, e="te, x, t-xl, fo, n, t-semibo, l, d, te, xt-whitemb-3">{featu, r, e.title}</h3>
+                <pclassName ="tex, t-slate-300">{featu, r, e.description}</p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
-      </section>
+      </secti, o, n>
 
-      {/* Benefits, Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Micro CRM? </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-=======
-      <section className="py-20 bg-slate-8, 0, 0/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4, x, l font-bold text-white mb-4">Why Choose Micro CRM?</h2>
-            <p className="text-xl text-slate-300 max-w-3 : x : l mx-auto">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-              Experience the benefits of professional CRM software without the complexity and cost of enterprise
-              solutions.
+      {/* Benefi, t, s, Section */};
+        <divclassName="containermx-autopx-4">
+          <divclassName="text-centermb-16">
+            <h2className="text-4, xl, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M? </h2>
+            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3xlmx-auto">
+
+      <sectionclassName="py-20bg-slate-800/30">
+        <divclassName="containermx-autopx-4">
+          <divclassName="text-centermb-16">
+            <h2className="text-4, x, l, font-boldtext-whitemb-4">Why, Choose, Micro C, R, M?</h2>
+            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3 : x : lmx-auto">
+
+              Experience, the, benefits of, professional, CRM software, without, the complexity, and, cost of, enterprise, solutions.
             </p>
           </div>
-          <div className="grid md :grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {benefits.map((benefitindex) => (<div key ={index} className="flex, items-start, space-x-3">
-                <CheckCircle className ="w-5, h-5, text-cyan-400, flex-shrink-0, mt-1" />
-=======
-            {benefits.map((benefit, index) => (<div key ={index} className="flex, items-start, space-x-3">
-                <CheckCircle className ="w-5, h-5, text-cyan-4, 0, 0, flex-shrink-0, mt-1" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                <span className ="text-slate-300, text-lg">{benefit}</span>
+          <divclassName="grid, m, d :gr, i, d-co, l, s-2, lg:gr, i, d-cols-3gap-6">
+ (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
+                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
+
+ (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
+                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
+
+            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-sta, rtspace-x-3">
+                <CheckCircleclassNam, e="w-5, h-5, te, x, t-cy, a, n-4, 0, 0, fl, ex-shrink-0mt-1" />
+
+
+                <spanclassNam, e="te, x, t-sla, t, e-3, 00text-lg">{benefit}</span>
               </div>
-            ))}
+            ))};
           </div>
-        </div>
+        </d, i, v>
       </section>
 
-      {/* Use, Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Perfect For Your Business</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Whether you&apos;re a small business owner or managing a growing sales teamour Micro CRM adapts to your
-=======
-            <h2 className="text-4, x, l font-bold text-white mb-4">Perfect For Your Business</h2>
-            <p className="text-xl text-slate-300 max-w-3, x, l mx-auto">
-              Whether you&apos;re a small business owner or managing a growing sales team, our Micro CRM adapts to your
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-              needs.
+      {/* Use, CasesSection */};
+      <sectionclassName="py-20">
+        <divclassName="containermx-autopx-4">
+          <divclassName="text-centermb-16">
+Perfect, For, Your Business</h2>
+            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3, xl, mx-auto">
+              Whether, yo, u&ap, o, s;re, a, small business, owner, or managing, a, growing sales, teamour, Micro CRM, adapts, to your
+
+            <h2className="text-4, x, l, font-bold, tex, t-whitemb-4">Perfect, For, Your Business</h2>
+            <pclassName="text-xl, tex, t-sla, t, e-300, ma, x-w-3, x, l, mx-auto">
+              Whether, yo, u&ap, o, s;re, a, small business, owner, or managing, a, growing sales, team, our Micro, CRM, adapts toyourneeds.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {useCases.map((useCaseindex) => (<div key ={index}
-                className="bg-slate-800/50, border border-slate-700/50, rounded-xl, p-8, hover:border-cyan-400/30, transition-all, duration-300"
+          <divclassName="gridmd:gr, i, d-co, l, s-2gap-8">
+ (<divke, y ={index};
+                className="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, durati, o, n-300"
               >
-                <div className ="w-16, h-16, bg-gradient-to-br, from-cyan-400/20, to-blue-500/20, rounded-xl, flex items-center, justify-center, mb-6">
-=======
-            {useCases.map((useCase, index) => (<div key ={index}
-                className="bg-slate-8, 0, 0/50, border border-slate-7, 0, 0/50, rounded-xl, p-8, hover:border-cyan-4, 0, 0/30, transition-all, duration-300"
+                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+
+ (<divke, y ={index};
+                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, duration-300"
               >
-                <div className ="w-16, h-16, bg-gradient-to-br, from-cyan-4, 0, 0/20, to-blue-5, 0, 0/20, rounded-xl, flex items-center, justify-center, mb-6">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-                  <useCase.icon, className ="w-8, h-8, text-cyan-300" />
+                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+
+            {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => (<divke, y ={index};
+                classNa, m, e="bg-sla, t, e-8, 0, 0/50, bord, e, r, bord, e, r-sla, t, e-7, 0, 0/50, round, e, d-xl, p-8, hover:bord, e, r-cy, a, n-4, 0, 0/30, transiti, o, n-a, l, l, duration-300"
+              >
+                <divclassNam, e="w-16, h-16, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-xl, flex, item, s-cent, e, r, justi, fy-centermb-6">
+
+
+                  <useCase.icon, classNa, m, e="w-8, h-8, te, x, t-cyan-300" />
                 </div>
-                <h3 className ="text-2xl, font-semibold, text-white, mb-4">{useCase.title}</h3>
-                <p className ="text-slate-300, text-lg, leading-relaxed">{useCase.description}</p>
+                <h3classNam, e="te, x, t-2, x, l, fo, n, t-semibo, l, d, te, xt-whitemb-4">{useCa, s, e.title}</h3>
+                <pclassName="tex, t-sla, t, e-3, 0, 0, te, x, t-lg, leading-relaxed">{useCa, s, e.description}</p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
-      </section>
+      </secti, o, n>
 
-      {/* CTA, Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Relationships?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have improved their customer management with our Micro CRM solution.
+      {/* C, T, A, Section */};
+        <divclassName="containermx-auto, p, x-4text-center">
+          <h2className="text-4, xl, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships?</h2>
+          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2xlmx-auto">
+            Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
-              Start Free Trial
+          <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+            <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
+              Start, Free, Trial
             </button>
-            <button className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-=======
-      <section className="py-20 bg-gradient-to-r from-cyan-5, 0, 0/10 via-blue-5, 0, 0/10 to-purple-5, 0, 0/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4, x, l font-bold text-white mb-6">Ready to Transform Your Customer Relationships? </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2 : x : l mx-auto">
-            Join thousands of businesses that have improved their customer management with our Micro CRM solution.
+            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+
+      <sectionclassName="py-20bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-purple-500/10">
+        <divclassName="containermx-auto, p, x-4text-center">
+          <h2className="text-4, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Customer, Relationships? </h2>
+          <pclassName="text-xl, tex, t-sla, t, e-300, m, b-8, ma, x-w-2 : x : lmx-auto">
+            Join, thousands, of businesses, that, have improved, their, customer management, with, our Micro, CRM, solution.
           </p>
-          <div className="flex flex-col sm :flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-4, 0, 0 to-blue-5, 0, 0 text-white font-semibold rounded-lg hover:from-cyan-5, 0, 0 hover:to-blue-6, 0, 0 transition-all duration-2, 0, 0 hover:scale-1, 0, 5 shadow-lg hover:shadow-cyan-4, 0, 0/25">
-              Start Free Trial
+          <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4justify-center">
+            <buttonclassName="px-8py-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-cy, a, n-500, hover:to-bl, u, e-600, transitio, n-all, duratio, n-200, hover:sca, l, e-105, shadow-lghover:shad, o, w-cyan-400/25">
+              Start, Free, Trial
             </button>
-            <button className="px-8 py-4 border border-cyan-4, 0, 0/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-4, 0, 0/10 transition-all duration-2, 0, 0">
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-              Schedule Demo
+            <buttonclassName="px-8, p, y-4, border, border-cy, a, n-4, 0, 0/30, tex, t-cy, a, n-300, fon, t-semibold, rounded-lghover:bg-cy, a, n-4, 0, 0/10, transitio, n-allduration-200">
+
+              Schedule, Dem, o
             </button>
           </div>
         </div>
-      </section>
+      </secti, o, n>
     </div>
   )
-}
+};

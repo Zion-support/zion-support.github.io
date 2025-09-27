@@ -13,7 +13,7 @@ const nextConfig = {
   // Enable experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['next/head', 'lucide-react', '@radix-ui/react-icons', 'framer-motion', 'recharts'],
+    optimizePackageImports: ["next/head", "lucide-react", "@radix-ui/react-icons", "framer-motion", "recharts"],
     turbo: {
       rules: {
         '*.svg': {
@@ -37,47 +37,14 @@ const nextConfig = {
     pagesBufferLength: 2,
   },
   
-  // Additional performance optimizations
-  reactStrictMode: true,
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
-  
-  // Enhanced performance features
-  output: 'standalone',
-  distDir: '.next',
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
-  
-  // Bundle analyzer (only in development)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
-      config.plugins.push(
-        new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)({
-          analyzerMode: 'server',
-          openAnalyzer: true,
-        })
-      );
-      return config;
-    },
-  }),
-  
   // Image optimization
   images: {
-    domains: [],
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   
-  // Performance optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  
-  // Security headers
+  // Headers for security and performance
   async headers() {
     return [
       {
@@ -96,14 +63,6 @@ const nextConfig = {
             value: 'origin-when-cross-origin',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains',
-          },
-          {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
@@ -114,16 +73,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=300, s-maxage=300',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
       },
@@ -143,7 +93,13 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configurations here if needed
+    // Add custom webpack plugins
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.BUILD_ID': JSON.stringify(buildId),
+      })
+    );
+    
     return config;
   },
 };

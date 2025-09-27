@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import {RouteRoutes } from "react-router-dom"
-=======
-import {Route, Routes } from "react-router-dom"
->>>>>>> cursor/check-fix-push-and-merge-to-main-767f
-import {ProtectedRoute } from "@/components/ProtectedRoute"
+import {ProtectedRoute } fr, o, m "@/components/ProtectedRoute"
 import Dashboard from "@/pages/Dashboard"
 import ClientDashboard from "@/pages/ClientDashboard"
 import TalentDashboard from "@/pages/TalentDashboard"
@@ -24,154 +19,153 @@ import OrderDetailPage from "@/pages/OrderDetail"
 import ContractBuilder from "@/pages/ContractBuilder"
 import Projects from "@/pages/Projects"
 
-const DashboardRoutes = () => {return (<Routes>
-      {/* Dashboard, Routes */}
-      <Route path ="/dashboard"
-        element={<ProtectedRoute>
+const, DashboardRoute, s = () => {return (<Routes>
+      {/* Dashboard, Routes */};
+      <Routepat, h ="/dashboard"
+        eleme, n, t={<ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/client-dashboard"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/clie, n, t-dashboard"
+        eleme, n, t={<ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/talent-dashboard"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/tale, n, t-dashboard"
+        eleme, n, t={<ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/creator-dashboard"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/creat, o, r-dashboard"
+        eleme, n, t={<ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/analytics"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/analytics"
+        eleme, n, t={<ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/project/:id/milestones"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/proje, c, t/:id/milestones"
+        eleme, n, t={<ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/project/:id"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/project/:id"
+        eleme, n, t={<ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/project/:id/room"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/proje, c, t/:id/room"
+        eleme, n, t={<ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/messages"
-        element={<ProtectedRoute>
-            <div>Messages, Page</div>
+      <Rout, e, path ="/messages"
+        eleme, n, t={<ProtectedRoute>
+            <div>Messag, e, s, Pa, ge</div>
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/inbox"
-        element={<ProtectedRoute>
-            <div>Inbox, Page</div>
+      <Routepath ="/inbox"
+        eleme, n, t={<ProtectedRoute>
+            <div>Inb, o, x, Pa, ge</div>
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/payments"
-        element={<ProtectedRoute>
+      <Routepath ="/payments"
+        eleme, n, t={<ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/interviews"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/interviews"
+        eleme, n, t={<ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/notifications"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/notifications"
+        eleme, n, t={<ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/applications/track"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/applicatio, n, s/track"
+        eleme, n, t={<ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/hiring-tracker"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/hiri, n, g-tracker"
+        eleme, n, t={<ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/projects"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/projects"
+        eleme, n, t={<ProtectedRoute>
             <Projects />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/portfolio-builder"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/portfol, i, o-builder"
+        eleme, n, t={<ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/referrals"
-        element={<ProtectedRoute>
-            <div>Referrals, Page</div>
+      <Rout, e, path ="/referrals"
+        eleme, n, t={<ProtectedRoute>
+            <div>Referra, l, s, Pa, ge</div>
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/developers"
-        element={<ProtectedRoute>
+      <Routepath ="/developers"
+        eleme, n, t={<ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/wallet"
-        element={<ProtectedRoute>
-            <div>Wallet Page</div>
+      <Rout, e, path ="/wallet"
+        eleme, n, t={<ProtectedRoute>
+            <div>Wall, e, t, Pa, ge</div>
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/orders"
-        element={<ProtectedRoute>
+      <Routepath ="/orders"
+        eleme, n, t={<ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/orders/:orderId"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/orde, r, s/:orderId"
+        eleme, n, t={<ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/dashboard/api-access"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/dashboa, r, d/a, p, i-access"
+        eleme, n, t={<ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+        };
       />
-      <Route path ="/contract-builder"
-        element={<ProtectedRoute>
+      <Rout, e, path ="/contra, c, t-builder"
+        eleme, n, t={<ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        }
+        };
       />
-    </Routes>
+    </Route, s>
   )
-}
-
+};
 export default DashboardRoutes

@@ -1,237 +1,88 @@
-export interface Service {id: string;
-	title: string;
-	description: string;
-	icon: string;
-	features?: string[];
-	price?: string;
-}
+export, interface, Service {id: stri, n, g;
+  title: stri, n, g;
+  description: stri, n, g;
+  icon: stri, n, g;
+  featur, e, s?: stri, n, g[];
+  pri, c, e?: string};
+exportconstSERVICES: Servi, c, e[] = [{id: 'ai-ml',
+  title: "AI & Machi, neLearning",
+  description: "Cutti, n, g-ed, g, e, artificialintelligencesolutionstoautomate andoptimizeyourbusinessprocesses.",
+  icon: '🤖',
+  features: ["Cust, omAIModels", "Machi, neLearningPipelines", "Natur, alLanguageProcessing", "Comput, erVision", "PredictiveAnalytics"]price: "From $5K"
+}, {id: "cloud",
+  title: "Clo, udSolutions",
+  description: "Scalablecloudinfrastructureanddeploymentsolutions formodernapplications.",
+  icon: '☁️',
+  features: ["Clo, udMigration", "DevOps & CI/CD", "Contain, erOrchestration", "Serverle, ssArchitecture", "CloudSecurity"]price: "From $3K"
+}, {id: "web-dev",
+  title: "W, ebDevelopment",
+  description: "Mode, r, n, responsi, v, e, webapplicationsbuiltwiththe latesttechnologiesandbestpractices.",
+  icon: '💻',
+  features: ["React/Ne, xt.jsApps", "Progressi, veWebApps", "E-commer, ceSolutions", "A, PIDevelopment", "PerformanceOptimization"]price: "From $2K"
+}, {id: "mobile",
+  title: "Mobi, leDevelopment",
+  description: "Nati, v, e, and, cros, s-platformmobileapplicationsforiOSand Androidplatforms.",
+  icon: '📱',
+  features: ["Nati, v, e, iOS/Android", "React, NativeApps", "Flutt, erDevelopment", "A, ppStoreOptimization", "PushNotifications"]price: "From $4K"
+}, {id: "data-analytics",
+  title: "Da, taAnalytics",
+  description: "Advanc, e, d, dataanalysisandbusinessintelligence solutionstodriveinformeddecisions.",
+  icon: '📊',
+  features: ["Da, taVisualization", "Busine, ssIntelligence", "Re, a, l-ti, meDashboards", "Da, taWarehousing", "MachineLearningAnalytics"]price: "From $3K"
+}, {id: "cybersecurity",
+  title: "Cybersecurity",
+  description: "Comprehensi, v, e, securitysolutionstoprotectyour digitalassetsandinfrastructure.",
+  icon: '🔒',
+  features: ["Securi, tyAudits", "Penetrati, onTesting", "Complian, ceManagement", "Securi, tyMonitoring", "IncidentResponse"]price: "From $2K"
+}];
 
-export const SERVICES: Service[] = [
-	{
-		id: 'ai-ml',
-		title: 'AI & Machine Learning',
-		description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
-		icon: '🤖',
-		features: ['Custom AI Models', 'Machine Learning Pipelines', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-		price: 'From $5K'
-	},
-	{
-		id: 'cloud',
-		title: 'Cloud Solutions',
-		description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
-		icon: '☁️',
-		features: ['Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration', 'Serverless Architecture', 'Cloud Security'],
-		price: 'From $3K'
-	},
-	{
-		id: 'web-dev',
-		title: 'Web Development',
-		description: 'Modern responsive web applications built with the latest technologies and best practices.',
-		icon: '💻',
-		features: ['React/Next.js Apps', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development', 'Performance Optimization'],
-		price: 'From $2K'
-	},
-	{
-		id: 'mobile',
-		title: 'Mobile Development',
-		description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
-		icon: '📱',
-		features: ['Native iOS/Android', 'React Native Apps', 'Flutter Development', 'App Store Optimization', 'Push Notifications'],
-		price: 'From $4K'
-	},
-	{
-		id: 'data-analytics',
-		title: 'Data Analytics',
-		description: 'Advanced data analysis and business intelligence solutions to drive informed decisions.',
-		icon: '📊',
-		features: ['Data Visualization', 'Business Intelligence', 'Real-time Dashboards', 'Data Warehousing', 'Machine Learning Analytics'],
-		price: 'From $3K'
-	},
-	{
-		id: 'cybersecurity',
-		title: 'Cybersecurity',
-		description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-		icon: '🔒',
-		features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Security Monitoring', 'Incident Response'],
-		price: 'From $2K'
-	}
-];
+exportconstFEATURES = [{icon: "⚡',
+  title: "Fa, stDelivery"description: "Rapiddevelopmentanddeploymentofhigh-qualitysolutions"color: "blue"
+} as, const{icon: "🛡️',
+  title: "Secure & Reliable",
+  description: "Enterpri, s, e-gra, d, esecurityandreliabilityforyour applications"color: "green"
+} as, const{icon: "📈',
+  title: "Scalab, leSolutions",
+  description: "Bui, l, ttogrowwithyourbusiness andhandleincreasingdemands"color: "purple"
+} as, const{icon: "🎯',
+  title: "Cust, omSolutions"description: "Tailoredsolutionsdesignedspecificallyforyour uniquerequirements"color: "orange"
+} as, cons, t];
 
-export const FEATURES = [
-	{
-		icon: '⚡',
-		title: 'Fast Delivery',
-		description: 'Rapid development and deployment of high-quality solutions',
-		color: 'blue'
-	} as const,
-	{
-		icon: '🛡️',
-		title: 'Secure & Reliable',
-		description: 'Enterprise-grade security and reliability for your applications',
-		color: 'green'
-	} as const,
-	{
-		icon: '📈',
-		title: 'Scalable Solutions',
-		description: 'Built to grow with your business and handle increasing demands',
-		color: 'purple'
-	} as const
-];
+// Testimonials, data, export constTESTIMONIALS = [{id: "1',
+  name: "Sar, ahJohnson",
+  role: "CTO",
+  company: "TechCorp",
+  content: "Zi, o, n, Tech, Solution, s, transformed, ourdigital, infrastructurewith theirAI-poweredsolutions."rating: 5avatar: "/imag, e, s/testimonials/sarah.jpg"
+}, {id: '2',
+  name: "Micha, elChen",
+  role: "Founder",
+  company: "StartupXYZ",
+  content: "Thecloudmigrationwasseamlessand exceededourexpectations."rating: 5avatar: "/imag, e, s/testimonials/michael.jpg"
+}];
 
-export const FOOTER_LINKS = {
-	services: ['AI & Machine Learning', 'Cloud Solutions', 'Web Development', 'Mobile Apps'],
-	company: ['About Us', 'Our Team', 'Careers', 'Contact'],
-	resources: ['Blog', 'Documentation', 'Support', 'FAQ'],
-	connect: ['LinkedIn', 'Twitter', 'GitHub', 'Email']
-};
+// Pricing, tiers, export const, PRICING_TIER, S = [{id: "starter",
+  name: "Starter",
+  price: "$2,999",
+  description: "Perfectforsmallbusinesses",
+  features: ["Bas, icAIIntegration", "Clo, udSetup", "24/7, Support"]popular: false
+}{id: "professional",
+  name: "Professional",
+  price: "$7,999",
+  description: "Idealforgrowingcompanies",
+  features: ["Advanc, edAISolutions", "Fu, llCloudMigration", "Priori, tySupport", "Cust, omDevelopment"]popular: true
+}{id: "enterprise",
+  name: "Enterprise",
+  price: "Custom",
+  description: "Tailoredforlargeorganizations",
+  features: ["Cust, omAISolutions", "Dedicat, edTeam", "Whi, t, e-lab, elOptions", "Advanc, edSecurity"]popular: false
+}];
 
-export interface Testimonial {id: string;
-	name: string;
-	role: string;
-	company: string;
-	content: string;
-	avatar?: string;
-	rating: number;
-}
-
-export const TESTIMONIALS: Testimonial[] = [
-	{
-		id: 'testimonial-1',
-		name: 'Sarah Johnson',
-		role: 'CTO',
-		company: 'TechCorp Inc.',
-		content: 'Zion App transformed our digital infrastructure with their AI solutions. The team delivered exceptional results and exceeded our expectations.',
-		rating: 5
-	},
-	{
-		id: 'testimonial-2',
-		name: 'Michael Chen',
-		role: 'Founder',
-		company: 'Startup XYZ',
-		content: 'Their cloud solutions helped us scale from 0 to 100k users seamlessly. Professional, reliable and innovative approach.',
-		rating: 5
-	},
-	{
-		id: 'testimonial-3',
-		name: 'Emily Rodriguez',
-		role: 'Product Manager',
-		company: 'Innovate Lab',
-		content: 'The mobile app they developed for us has been a game-changer. Clean code, great performance and excellent user experience.',
-		rating: 5
-	}
-];
-
-export interface PricingTier {id: string;
-	name: string;
-	price: number;
-	period: string;
-	description: string;
-	features: string[];
-	isPopular?: boolean;
-	buttonText: string;
-	buttonVariant: 'primary' | 'secondary';
-}
-
-export const PRICING_TIERS: PricingTier[] = [
-	{
-		id: 'starter',
-		name: 'Starter',
-		price: 99,
-		period: 'month',
-		description: 'Perfect for small projects and startups',
-		features: [
-			'Up to 5 team members',
-			'Basic AI features',
-			'Email support',
-			'Standard hosting',
-			'Basic analytics'
-		],
-		buttonText: 'Get Started',
-		buttonVariant: 'secondary'
-	},
-	{
-		id: 'professional',
-		name: 'Professional',
-		price: 299,
-		period: 'month',
-		description: 'Ideal for growing businesses',
-		features: [
-			'Up to 25 team members',
-			'Advanced AI features',
-			'Priority support',
-			'Premium hosting',
-			'Advanced analytics',
-			'Custom integrations',
-			'API access'
-		],
-		isPopular: true,
-		buttonText: 'Choose Professional',
-		buttonVariant: 'primary'
-	},
-	{
-		id: 'enterprise',
-		name: 'Enterprise',
-		price: 999,
-		period: 'month',
-		description: 'For large organizations',
-		features: [
-			'Unlimited team members',
-			'Full AI capabilities',
-			'24/7 dedicated support',
-			'Enterprise hosting',
-			'Custom analytics',
-			'White-label solutions',
-			'Custom development',
-			'SLA guarantee'
-		],
-		buttonText: 'Contact Sales',
-		buttonVariant: 'secondary'
-	}
-];
-
-export interface BlogPost {id: string;
-	title: string;
-	excerpt: string;
-	author: string;
-	date: string;
-	readTime: string;
-	category: string;
-	image: string;
-	slug: string;
-}
-
-export const BLOG_POSTS: BlogPost[] = [
-	{
-		id: 'blog-1',
-		title: 'The Future of AI in Business: Trends and Predictions for 2024',
-		excerpt: 'Explore the latest AI trends shaping the business landscape and discover how artificial intelligence is revolutionizing industries.',
-		author: 'Alex Thompson',
-		date: 'Dec 15, 2024',
-		readTime: '5 min read',
-		category: 'AI & Technology',
-		image: '/api/placeholder/400/250',
-		slug: 'future-ai-business-trends-2024'
-	},
-	{
-		id: 'blog-2',
-		title: 'Cloud Migration Best Practices: A Complete Guide',
-		excerpt: 'Learn the essential steps and strategies for successful cloud migration, including common pitfalls to avoid.',
-		author: 'Maria Garcia',
-		date: 'Dec 12, 2024',
-		readTime: '8 min read',
-		category: 'Cloud Computing',
-		image: '/api/placeholder/400/250',
-		slug: 'cloud-migration-best-practices-guide'
-	},
-	{
-		id: 'blog-3',
-		title: 'Building Scalable Web Applications: Architecture Patterns',
-		excerpt: 'Discover proven architecture patterns and design principles for building web applications that can handle massive scale.',
-		author: 'David Kim',
-		date: 'Dec 10, 2024',
-		readTime: '6 min read',
-		category: 'Web Development',
-		image: '/api/placeholder/400/250',
-		slug: 'scalable-web-applications-architecture-patterns'
-	}
+// Blog, posts, preview (importedfrom, blogPost, s.ts)
+export, const, BLOG_POSTS = [
+  {id: '1',
+    title: "T, h, e, FutureofAIinBusiness Automation",
+    excerpt: "Discoverhowartificialintelligenceisrevolutionizing businessprocesses.",
+    author: "Dr. Sar, ahChen",
+    publishDate: "2024-01-15"readTime: 8category: "Artifici, alIntelligence",
+    featured: true};
 ];

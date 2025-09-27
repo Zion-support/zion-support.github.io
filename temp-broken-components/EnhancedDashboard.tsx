@@ -1,29 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ActivityTrendingUpUsersZapShieldBarChart3 } from 'lucide-react';
-import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine } from 'recharts';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { ActivityTrendingUpUsersZapShieldBarChart3  } from "lucide-react";
+import { ResponsiveContainerAreaChartAreaXAxisYAxisCartesianGridTooltipPieChartPieCellLineChartLine  } from "recharts";
 interface DashboardWidget {
   id: string;
   title: string;
   type: 'chart' | 'metric' | 'table' | 'list';
   data: any;
   size: 'small' | 'medium' | 'large';
-  position: { x: number; y: number };
-}
+  position: { x: number; y: number }}
 
 interface DashboardProps {
   widgets: DashboardWidget[];
   onWidgetUpdate?: (widget: DashboardWidget) => void;
   onWidgetAdd?: (widget: Omit<DashboardWidget'id'>) => void;
   onWidgetRemove?: (widgetId: string) => void;
-  className?: string;
-}
+  className?: string}
 
 const sampleData = {
   revenue: [
-    { month: 'Jan'revenue: 4000profit: 2400 },
-    { month: 'Feb'revenue: 3000profit: 1398 },
-    { month: 'Mar'revenue: 2000profit: 9800 },
+    { month: 'Jan'revenue: 4000profit: 2400 }{ month: 'Feb'revenue: 3000profit: 1398 }{ month: 'Mar'revenue: 2000profit: 9800 },
     { month: 'Apr'revenue: 2780profit: 3908 },
     { month: 'May'revenue: 1890profit: 4800 },
     { month: 'Jun'revenue: 2390profit: 3800 }
@@ -45,34 +41,24 @@ const sampleData = {
 };
 
 const defaultWidgets: DashboardWidget[] = [
-  {
-    id: 'revenue-chart',
-    title: 'Revenue Overview',
-    type: 'chart'data: sampleData.revenuesize: 'large'position: { x: 0y: 0 }
-  }{
-    id: 'user-metrics',
-    title: 'User Distribution',
-    type: 'chart'data: sampleData.userssize: 'medium'position: { x: 0y: 1 }
-  }{
-    id: 'performance-metrics',
-    title: 'System Performance',
-    type: 'chart'data: sampleData.performancesize: 'large'position: { x: 1y: 0 }
-  }{
-    id: 'total- revenue',
+  {id: 'revenue-chart',
+    title: 'Revenue Overview'type: 'chart'data: sampleData.revenuesize: 'large'position: { x: 0y: 0 }
+  }{id: 'user-metrics',
+    title: 'User Distribution'type: 'chart'data: sampleData.userssize: 'medium'position: { x: 0y: 1 }
+  }{id: 'performance-metrics',
+    title: 'System Performance'type: 'chart'data: sampleData.performancesize: 'large'position: { x: 1y: 0 }
+  }{id: 'total- revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { value: '$45,231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
-  }{
-    id: 'active- users',
+    data: { value: '$45231'change: '+12.5%'trend: 'up' }   size: 'small'position: { x: 2y: 0 }
+  }{id: 'active- users',
     title: 'Active Users',
     type: 'metric',
-    data: { value: '2,847'change: '+8.2%'trend: 'up' },
+    data: { value: '2847'change: '+8.2%'trend: 'up' },
     size: 'small'position: { x: 2y: 1 }
-  }{
-    id: 'conversion-rate',
+  }{id: 'conversion-rate',
     title: 'Conversion Rate',
-    type: 'metric',
-    data: { value: '3.24%'change: '-2.1%'trend: 'down' },
+    type: 'metric'data: { value: '3.24%'change: '-2.1%'trend: 'down' },
     size: 'small',
     position: { x: 2y: 2 }
   }
@@ -89,13 +75,11 @@ export default function EnhancedDashboard({
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => setIsLoading(false)1000);
-    return () => clearTimeout(timer);
-  }[]);
+    return () => clearTimeout(timer)}[]);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
     setDashboardWidgets(updatedWidgets);
-    onWidgetUpdate?.(updatedWidgets);
-  };
+    onWidgetUpdate?.(updatedWidgets)};
 
   const renderChart = (widget: DashboardWidget) => {
     const { dataid } = widget;
@@ -149,13 +133,12 @@ export default function EnhancedDashboard({
         );
       
       default:
-        return <div>Chart not available</div>;
-    }
+        return <div>Chart not available</div>}
   };
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-      <div className="text-3xl font-bold text-gray-900mb-2">{data.value}</div>
+      <div className="text-3 xl font-bold text-gray-900 mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
       }`}>
@@ -166,9 +149,7 @@ export default function EnhancedDashboard({
 
   const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      small: 'col-span-1 row-span-1',
-      medium: 'col-span-2 row-span-1',
-      large: 'col-span-3 row-span-2'
+      small: 'col-span-1 row-span-1'medium: 'col-span-2 row-span-1'large: 'col-span-3 row-span-2'
     };
 
     return (
@@ -195,11 +176,9 @@ export default function EnhancedDashboard({
             )}
             {enableFullscreen && (
               <button 
-                className="text-gray-400hover:text-gray-600"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsFullscreen(true);
-                }}
+                className="text-gray-400 hover:text-gray-600"
+                onClick={((e)) => {e.stopPropagation();
+                  setIsFullscreen(true)}}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />                </svg>
@@ -211,38 +190,36 @@ export default function EnhancedDashboard({
         <div className="h-64">
           {widget.type === 'chart' ? renderChart(widget) : renderMetric(widget.data)}        </div>
       </motion.di.v>
-    );
-  };
+    )};
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-centerjustify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : '}`}>      <div className="p-6">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
+            <h1 className="text-3 xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
           </div>
           <div className="flex space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
               Export Data
             </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove  r:bg-gray-300transition-colors" aria-label="Settings">
+            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hove r:bg-gray-300 transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-6auto-rows-min">
+        <div className="grid grid-cols-3 gap-6 auto-rows-min">
           {dashboardWidgets.map(renderWidget)}        </div>
       </div>
 
@@ -257,14 +234,14 @@ export default function EnhancedDashboard({
             onClick={() => setIsFullscreen(false)}
           >
             <motion.div
-              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh] overflow-auto"
+              className="bg-white rounded-lg p-8 max-w-6 xl max-h-[90 vh] overflow-auto"
               initial={{ scale: 0.9opacity: 0 }}
               animate={{ scale: 1opacity: 1 }}
               exit={{ scale: 0.9opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
+                <h2 className="text-2 xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
                 <button
                   onClick={() => setIsFullscreen(false)}
                   className="text-gray-400 hover:text-gray-600"
@@ -281,7 +258,6 @@ export default function EnhancedDashboard({
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )};
 
 export default EnhancedDashboard;

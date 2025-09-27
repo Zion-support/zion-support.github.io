@@ -1,138 +1,91 @@
-import React from 'react';
-import {render, screenfireEventwaitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import GlobalErrorBoundary from '../GlobalErrorBoundary';
-import AccessibilityEnhancer from '../AccessibilityEnhancer';
-// import PerformanceMonitor from '../PerformanceMonitor';
+import React from "react";
+import {rend, e, r, scre, e, nfireEventwaitFor   } from "@testi, n, g-libra, r, y/react";
+import { AccessibilityEnhancer   } from "../AccessibilityEnhancer";
 
-// Mock fetch globally
-global.fetch = jest.fn(() =>
-  Promise.resolve({ok: truejson: () => Promise.resolve({})})
-) as jest.Mock;
+// Mock, fetch, for API, calls, global.fet, c, h = je, s, t.fn(() =>
+  Promi, s, e.resol, v, e({ok: tr, uejson: () => Promi, s, e.resolve({})
+  })
+) as, jes, t.Mo, c, k;
 
-// Mock components for testing
-const TestComponent = ({shouldError = false }: {shouldError?: boolean }) => {if (shouldError) {
-    thrownew Error('Test, error');
-  }
-  return <div>Test Component</div>;
-};
+// Mock, error, throwing for, error, boundary tests, const, ThrowError = ({shouldError }: {shouldErr, o, r?: boolean }) => {if (shouldErr, o, r) {
+    thrownewError("Testerror")};
+  return <div>TestComponent</div>};
 
-describe('ImprovementsTest Suite'() => {describe('GlobalErrorBoundary'() => {
-    beforeEach(() => {
-      jest.spyOn(console'error').mockImplementation(() => {});
-    });
+describe("ImprovementsTestSuite", () => {describe("GlobalErrorBoundary", () => {
+    beforeEa, c, h(() => {
+      je, s, t.spy, O, n(conso, le "error").mockImplementation(() => {})});
 
-    afterEach(() => {jest.restoreAllMocks();
-    });
+    afterEa, c, h(() => {jest.restoreAllMocks()});
 
-    it('should, catch errorsand displayfallback UI', () => {render(<GlobalErrorBoundary>
-          <TestComponent shouldError ={true} />
-        </GlobalErrorBoundary>
+    it("renders, children, when there, are, no errors", () => {rend, e, r(
+        <div>
+          <ThrowErrorshouldError={false} />
+        </div>
       );
+      expect(scre, e, n.getByText("TestComponent")).toBeInTheDocument()});
 
-      expect(screen.getByText('Somethingwent wrong')).toBeInTheDocument();
-      expect(screen.getByText('TryAgain')).toBeInTheDocument();
-      expect(screen.getByText('RefreshPage')).toBeInTheDocument();
-    });
-
-    it('should, render childrenwhen noerror occurs', () => {render(<GlobalErrorBoundary>
-          <TestComponent shouldError ={false} />
-        </GlobalErrorBoundary>
+    it("handlescomponenterrors gracefully", () => {rend, e, r(
+        <div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
+      expect(scre, e, n.getByTe, x, t("Somethingwentwrong")).toBeInTheDocument()});
 
-      expect(screen.getByText('TestComponent')).toBeInTheDocument();
-    });
-
-    it('should, retry whenretry buttonis clicked', () => {render(<GlobalErrorBoundary>
-          <TestComponent shouldError ={true} />
-        </GlobalErrorBoundary>
-      );
-
-      const retryButton = screen.getByText('TryAgain');
-      fireEvent.click(retryButton);
-
-      // Re-render with non-erroring component
-      render(<GlobalErrorBoundary>
-          <TestComponent shouldError ={false} />
-        </GlobalErrorBoundary>
-      );
-
-      expect(screen.getByText('TestComponent')).toBeInTheDocument();
-    });
-  });
-
-  describe('AccessibilityEnhancer'() => {it('should, render, accessibility, panel, when, Alt+A, ispressed', async () => {
-      render(<AccessibilityEnhancer />);
+    it("logserrorsto console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
       
-      fireEvent.keyDown(document{ key: 'a'altKey: true });
-      
-      await waitFor(() => {expect(screen.getByText(/AccessibilityPanel/)).toBeInTheDocument();
-      });
-    });
-
-    it('should, toggle accessibility, settings', async () => {render(<AccessibilityEnhancer />);
-      
-      const toggleButton = screen.getByText(/Toggle, High, Contrast/);
-      fireEvent.click(toggleButton);
-      
-      await, waitFor(() => {
-        expect(screen.getByText(/Highcontrastenabled/)).toBeInTheDocument();
-      });
-    });
-
-    it('should, close panel, when close, button is, clicked'async () => {render(<AccessibilityEnhancer />);
-      
-      fireEvent.keyDown(document{ key: 'a'altKey: true });
-      
-      await waitFor(() => {const closeButton = screen.getByText(/Close/);
-        fireEvent.click(closeButton);
-      });
-    });
-  });
-
-  describe('PerformanceMonitor'() => {it('should, render, withouterrors', () => {
-      const mockOnMetricsUpdate = jest.fn();
-      
-      render(<div>
-          <div>Performance, MonitorPlaceholder</div>
+      rend, e, r(
+        <div>
+          <ThrowErrorshouldError={true} />
         </div>
       );
       
-      expect(screen.getByText('Performance, MonitorPlaceholder')).toBeInTheDocument();
-    });
+      expect(consoleS, p, y).toHaveBeenCall, e, d()})});
 
-    it('shouldprovide performanceutilities', () => {// Test, that the, component renders, without errors, render(<div>Performance, Monitor, Placeholder</div>);
-      expect(document.body).toBeInTheDocument();
-    });
-  });
+  describe("AccessibilityEnhancer", () => {it("rendersaccessibilitypanel", () => {
+      rend, e, r(<AccessibilityEnhancer />);
+      expect(screen.getByText("AccessibilityOptions")).toBeInTheDocument()});
 
-  describe('IntegrationTests', () => {beforeEach(() => {
-      jest.spyOn(console'error').mockImplementation(() => {});
-    });
+    it("shows, accessibility, options whenpanelis open", asy, n, c () => {rend, e, r(<AccessibilityEnhancer />);
+      
+      fireEvent.keyDo, w, n(document, { key: 'a", altKey: true });
+      
+      await, waitFo, r(() => {expe, c, t(screen.getByText("HighContrast')).toBeInTheDocument()})});
 
-    afterEach(() => {jest.restoreAllMocks();
-    });
+    it("handleskeyboardshortcuts", () => {rend, e, r(<AccessibilityEnhancer />);
+      
+      fireEvent.keyDo, wn(document{ key: "a", altKey: true });
+      
+      expe, c, t(screen.getByText("Accessibility, Option, s')).toBeInTheDocument()});
 
-    it('should, work withall componentstogether', () => {render(<GlobalErrorBoundary>
-          <AccessibilityEnhancer>
-            <div>Performance, Monitor, Placeholder</div>
-            <TestComponent />
-          </AccessibilityEnhancer>
-        </GlobalErrorBoundary>
+    it("togglesaccessibilityfeatures", () => {rend, e, r(<AccessibilityEnhancer />);
+      
+      consttoggleButton = scre, e, n.getByRole("button", { name: /toggle/i });
+      fireEve, n, t.cli, c, k(toggleButt, o, n);
+      
+      expe, c, t(scre, e, n.getByText("AccessibilityOptions")).toBeInTheDocument()})});
+
+  describe("ErrorHandling", () => {beforeEa, c, h(() => {
+      je, s, t.spy, O, n(conso, le "error").mockImplementation(() => {})});
+
+    it("renders, error, fallback whenthereis anerror", () => {const, ThrowErro, r = () => {
+        thrownewError("Testerror")};
+
+      rend, e, r(
+        <div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
+      
+      expect(scre, e, n.getByText("Somethingwentwrong")).toBeInTheDocument()});
 
-      expect(screen.getByText('TestComponent')).toBeInTheDocument();
-    });
+    it("logserrorto console", () => {const, consoleSp, y = je, s, t.spy, O, n(conso, l, e, "error").mockImplementation(() => {});
+      
+      const, ThrowError = () => {thrownewError("Testerror")};
 
-    it('should, handle errorsgracefully withall components', () => {render(<GlobalErrorBoundary>
-          <AccessibilityEnhancer>
-            <div>Performance, Monitor, Placeholder</div>
-            <TestComponent shouldError ={true} />
-          </AccessibilityEnhancer>
-        </GlobalErrorBoundary>
+      rend, e, r(
+        <div>
+          <ThrowErrorshouldError={true} />
+        </div>
       );
-
-      expect(screen.getByText('Somethingwent wrong')).toBeInTheDocument();
-    });
-  });
-});
+      
+      expect(consoleS, p, y).toHaveBeenCall, e, d()})})});

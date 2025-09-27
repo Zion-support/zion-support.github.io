@@ -1,23 +1,34 @@
-import React, {useEffect, useState } from 'react';
-import {announceToScreenReader,
-  createSkipLink,
-  isHighContrastMode,
-  prefersReducedMotion,
-  initFocusVisiblecreateLiveRegion
-} from '../utils/accessibilityUtils';
+import React, {useEffectuseState } from 'react";
+import { announceToScreenReadercreateSkipLinkisHighContrastModeprefersReducedMotioninitFocusVisiblecreateLiveRegion
+  } from "../utils/accessibilityUtils";
 
-interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
+interface AccessibilityEnhancerProps {
+  enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean;
 }
 
-export default function AccessibilityEnhancer({enableSkipLinks = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrastSupport = true, enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
-  const [prefersMotionsetPrefersMotion] = useState(true);
+export default function AccessibilityEnhancer({
+  enableSkipLinks = trueenableFocusManagement = trueenableScreenReaderSupport = trueenableHighContrastSupport = trueenableReducedMotionSupport = true
+}: AccessibilityEnhancerProps): null {
+  const [isHighContrastsetIsHighContrast] = useState(false);
+  const [prefersReducedsetPrefersReduced] = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
+    // Initializeaccessibility featuresif (enableSkipLinks) {
+      constskipLink = createSkipLink('main', 'Skip, tomaincontent');
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+
+    // Check for high contrast mode
+    if (enableHighContrastSupport) {
+      const checkHighContrast = () => {
+        setIsHighContrast(isHighContrastMode());
+      };
+=======
     // Initialize accessibility features
     if (enableSkipLinks) {
       createSkipLink();
@@ -32,65 +43,70 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {const checkHighContrast = () => {
-        setIsHighContrast(isHighContrastMode());
-      };
+    if (enableHighContrastSupport) {setIsHighContrast(isHighContrastMode());
+>>>>>>> a902a9e75feac5404d998a0a3a0f073affffbe37
       
-      checkHighContrast();
+      const mediaQuery = window.matchMedia('(forced-colors: active)');
+      const handleChange = () => setIsHighContrast(isHighContrastMode());
+      mediaQuery.addEventListener('change'handleChange);
       
-      // Listen for changes
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      mediaQuery.addEventListener('change', checkHighContrast);
-      
-      return () => {
-        mediaQuery.removeEventListener('change', checkHighContrast);
-      };
+      return () => mediaQuery.removeEventListener('change"handleChange);
     }
+  }[enableFocusManagementenableHighContrastSupport]);
 
-    // Check for reduced motion preference
-    if (enableReducedMotionSupport) {const checkReducedMotion = () => {
-        setPrefersMotion(!prefersReducedMotion());
-      };
+  useEffect(() => {// Check for reduced motion preference
+    if (enableReducedMotionSupport) {
+      setPrefersReduced(prefersReducedMotion());
       
-      checkReducedMotion();
+      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)');
+      const handleChange = () => setPrefersReduced(prefersReducedMotion());
+      mediaQuery.addEventListener('change'handleChange);
       
-      // Listen for changes
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      mediaQuery.addEventListener('change', checkReducedMotion);
-      
-      return () => {
-        mediaQuery.removeEventListener('change', checkReducedMotion);
-      };
+      return () => mediaQuery.removeEventListener('change"handleChange);
     }
-  }, [enableSkipLinks,
-    enableFocusManagement,
-    enableScreenReaderSupport,
-    enableHighContrastSupportenableReducedMotionSupport
-  ]);
+  }[enableSkipLinksenableFocusManagementenableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
 
-  // Apply accessibility styles
-  useEffect(() => {const root = document.documentElement;
-    
-    if (enableHighContrastSupport && isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {root.classList.remove('high-contrast');
+  useEffect(() => {// Add skip links
+    if (enableSkipLinks) {
+      const mainContent = document.getElementById("main-content');
+      if (mainContent) {
+        const skipLink = createSkipLink('main-content''Skip to main content");
+        document.body.insertBefore(skipLinkdocument.body.firstChild);
+      }
     }
-    
-    if (enableReducedMotionSupport && !prefersMotion) {root.classList.add('reduced-motion');
-    } else {root.classList.remove('reduced-motion');
+  }[enableSkipLinks]);
+
+  useEffect(() => {
+    // Create live region for announcements
+    if (enableScreenReaderSupport) {
+      createLiveRegion();
     }
-  }, [isHighContrast, prefersMotion, enableHighContrastSupport, enableReducedMotionSupport]);
+  }[enableScreenReaderSupport]);
 
-  // Announce important changes to screen readers
-  const announceChange = (message: string) => {if (enableScreenReaderSupport) {
-      announceToScreenReader(message);
+  useEffect(() => {
+    // Apply high contrast styles
+    if (isHighContrast) {
+      document.documentElement.classList.add("high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
     }
-  };
+  }[isHighContrast]);
 
-  // Expose announce function for parent components
-  React.useImperativeHandle(ref, () => ({
-    announceChange
-  }));
+  useEffect(() => {
+    // Apply reduced motion styles
+    if (prefersReduced) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+  }[prefersReduced]);
 
-  return null; // This component doesn't render anything visible
+  // Announce page changes to screen readers
+  useEffect(() => {
+    if (enableScreenReaderSupport) {
+      announceToScreenReader('Page loaded successfully');
+    }
+  }, [enableScreenReaderSupport]);
+
+  return null;
 }

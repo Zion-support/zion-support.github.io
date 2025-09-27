@@ -5,34 +5,26 @@ interface SecurityMetrics {
   activeThreats: number;
   blockedRequests: number;
   securityScore: number;
-  lastScan: Date;
-}
+  lastScan: Date}
 
 interface AdvancedSecurityMonitorProps {
-  onSecurityUpdate?: (metrics: SecurityMetrics) => void;
-}
+  onSecurityUpdate?: (metrics: SecurityMetrics) => void}
 
 export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
   onSecurityUpdate
-}) => {
-  const [metrics, setMetrics] = React.useState<SecurityMetrics | null>(null);
+}) => {const [metrics  setMetrics] = React.useState<SecurityMetrics | null>(null);
 
   const updateSecurityMetrics = React.useCallback(() => {
     const newMetrics: SecurityMetrics = {
-      threatLevel: 'low',
-      activeThreats: 0,
-      blockedRequests: 0,
-      securityScore: 95,
-      lastScan: new Date()
+      threatLevel: 'low"activeThreats: 0blockedRequests: 0,
+      securityScore: 95lastScan: new Date()
     };
 
     setMetrics(newMetrics);
-    onSecurityUpdate?.(newMetrics);
-  }, [onSecurityUpdate]);
+    onSecurityUpdate?.(newMetrics)}[onSecurityUpdate]);
 
   React.useEffect(() => {
-    updateSecurityMetrics();
-  }, [updateSecurityMetrics]);
+    updateSecurityMetrics()}[updateSecurityMetrics]);
 
   return (
     <div className="advanced-security-monitor">
@@ -45,7 +37,6 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default AdvancedSecurityMonitor;

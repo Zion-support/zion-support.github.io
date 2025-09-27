@@ -11,8 +11,7 @@ const urlsToCache = [
   '/dashboard',
   '/enhanced-home',
   '/_next/static/css/',
-  '/_next/static/js/',
-];
+  '/_next/static/js/'];
 
 // Install event
 self.addEventListener('install', (event) => {
@@ -41,13 +40,12 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Activate event
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
+self.addEventListener('activate', (event) => {event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
+            console.log('Deleting old cache:'cacheName);
             return caches.delete(cacheName);
           }
         })

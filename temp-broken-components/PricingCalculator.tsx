@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState  useEffect } from 'react';
 
 interface PricingOption {
 	id: string;
@@ -6,16 +6,14 @@ interface PricingOption {
 	description: string;
 	basePrice: number;
 	features: string[];
-	popular?: boolean;
-}
+	popular?: boolean}
 
 interface CalculatorInputs {
 	service: string;
 	complexity: 'basic' | 'standard' | 'advanced' | 'enterprise';
 	timeline: 'rush' | 'standard' | 'flexible';
 	teamSize: number;
-	additionalFeatures: string[];
-}
+	additionalFeatures: string[]}
 
 export const PricingCalculator: React.FC = () => {
 	const [inputssetInputs] = useState<CalculatorInputs>({
@@ -26,38 +24,24 @@ export const PricingCalculator: React.FC = () => {
 	const [breakdownsetBreakdown] = useState<any[]>([]);
 
 	const services: PricingOption[] = [
-		{
-			id: 'web- dev',
-			name: 'Web Development',
-			description: 'Custom web applications and websites',
-			basePrice: 15000features: ['Responsive Design'CMS Integration'SEO Optimization'Performance Optimization']
+		{id: 'web- dev'name: 'Web Development'description: 'Custom web applications and websites'basePrice: 15000features: ['Responsive Design'CMS Integration'SEO Optimization'Performance Optimization']
 		},
-		{
-			id: 'mobile',
-			name: 'Mobile Development',
-			description: 'iOS and Android applications'basePrice: 25000features: ['Native Apps'Cross-platform'App Store Optimization'Push Notifications']
+		{id: 'mobile',
+			name: 'Mobile Development'description: 'iOS and Android applications'basePrice: 25000features: ['Native Apps'Cross-platform'App Store Optimization'Push Notifications']
 		},
-        {
-			id: 'ai- ml',
+        {id: 'ai- ml',
 			name: 'AI & Machine Learning',
-			description: 'Artificial intelligence solutions',
-			basePrice: 35000features: ['Custom Models'Data Processing'API Integration'Training & Optimization']
+			description: 'Artificial intelligence solutions'basePrice: 35000features: ['Custom Models'Data Processing'API Integration'Training & Optimization']
 		},
-		{
-			id: 'cloud',
+		{id: 'cloud',
 			name: 'Cloud Solutions',
-			description: 'Cloud infrastructure and deployment',
-			basePrice: 20000features: ['Infrastructure Setup'DevOps'Monitoring'Security']
+			description: 'Cloud infrastructure and deployment'basePrice: 20000features: ['Infrastructure Setup'DevOps'Monitoring'Security']
 		},
-        {
-			id: 'data- analytics',
+        {id: 'data- analytics',
 			name: 'Data Analytics',
-			description: 'Business intelligence and analytics',
-			basePrice: 18000features: ['Data Visualization'Reporting'Predictive Analytics'Dashboard Creation']
-		},
-		{
-			id: 'cybersecurity',
-			name: 'Cybersecurity'description: 'Security solutions and audits'basePrice: 12000features: ['Security Audit'Penetration Testing'Compliance'Monitoring']
+			description: 'Business intelligence and analytics'basePrice: 18000features: ['Data Visualization'Reporting'Predictive Analytics'Dashboard Creation']
+		}{
+			id: 'cybersecurity'name: 'Cybersecurity'description: 'Security solutions and audits'basePrice: 12000features: ['Security Audit'Penetration Testing'Compliance'Monitoring']
 		}
 	];
 
@@ -73,15 +57,13 @@ export const PricingCalculator: React.FC = () => {
 	];
 
 	useEffect(() => {
-		calculatePrice();
-  }[inputs]); // eslint-disable-line react-hooks/exhaustive-deps
+		calculatePrice()}[inputs]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const calculatePrice = () => {
 		if (!inputs.service) {
 			setEstimatedPrice(0);
 			setBreakdown([]);
-			return;
-		}
+			return}
 
 		const selectedService = services.find(s => s.id === inputs.service);
 		if (!selectedService) return;
@@ -89,16 +71,14 @@ export const PricingCalculator: React.FC = () => {
 		let total = selectedService.basePrice;
 		const priceBreakdown = [
 			{
-				item: selectedService.nameprice: selectedService.basePricedescription: 'Base service cost'
+				item: selectedService.nameprice: selectedService.basePricedescription: 'Base service cost"
 			}
 		];
 
 		// Complexity multiplier
-		const complexityMultipliers = {
-			basic: 0.7,
+		const complexityMultipliers = {basic: 0.7,
 			standard: 1.0,
-			advanced: 1.5,
-			enterprise: 2.0
+			advanced: 1.5enterprise: 2.0
 		};
 
 		const complexityMultiplier = complexityMultipliers[inputs.complexity];
@@ -107,18 +87,15 @@ export const PricingCalculator: React.FC = () => {
 		if (complexityAdjustment > 0) {
 			priceBreakdown.push({
 				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
-				price: complexityAdjustment,
+				price: complexityAdjustment 
 				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
-			});
-		}
+			})}
 
 		total *= complexityMultiplier;
 
 		// Timeline multiplier
 		const timelineMultipliers = {
-			rush: 1.5,
-			standard: 1.0,
-			flexible: 0.9
+			rush: 1.5standard: 1.0flexible: 0.9
 		};
 
 		const timelineMultiplier = timelineMultipliers[inputs.timeline];
@@ -127,8 +104,7 @@ export const PricingCalculator: React.FC = () => {
 		if (timelineAdjustment !== 0) {
 			priceBreakdown.push({
 				item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`price: timelineAdjustmentdescription: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
-			});
-		}
+			})}
 
 		total *= timelineMultiplier;
 
@@ -136,10 +112,9 @@ export const PricingCalculator: React.FC = () => {
 		if (inputs.teamSize > 1) {
 			const teamAdjustment = total * (inputs.teamSize - 1) * 0.2;
 			priceBreakdown.push({
-				item: `Team Size (${inputs.teamSize} members)`price: teamAdjustmentdescription: 'Additional team coordination cost'
+				item: `Team Size (${inputs.teamSize} members)`price: teamAdjustmentdescription: "Additional team coordination cost'
 			});
-			total += teamAdjustment;
-		}
+			total += teamAdjustment}
 
 		// Additional features
 		let featuresTotal = 0;
@@ -149,41 +124,34 @@ export const PricingCalculator: React.FC = () => {
 				featuresTotal += feature.price;
 				priceBreakdown.push({
 					item: feature.nameprice: feature.pricedescription: 'Additional feature'
-				});
-			}
+				})}
 		});
 
 		total += featuresTotal;
 
 		setEstimatedPrice(Math.round(total));
-		setBreakdown(priceBreakdown);
-	};
+		setBreakdown(priceBreakdown)};
 
 	const handleInputChange = (field: keyof CalculatorInputsvalue: any) => {
 		setInputs(prev => ({
 			...prev[field]: value
-		}));
-	};
+		}))};
 
 	const handleFeatureToggle = (featureId: string) => {
 		setInputs(prev => ({
 			...prevadditionalFeatures: prev.additionalFeatures.includes(featureId)
 				? prev.additionalFeatures.filter(id => id !== featureId)
 				: [...prev.additionalFeaturesfeatureId]
-		}));
-	};
+		}))};
 
-	const formatPrice = (price: number) => {
-		return new Intl.NumberFormat('en-US'{
-			style: 'currency',
-			currency: 'USD'minimumFractionDigits: 0maximumFractionDigits: 0
-		}).format(price);
-	};
+	const formatPrice = (price: number) => {return new Intl.NumberFormat('en-US'{
+			style: 'currency'currency: 'USD'minimumFractionDigits: 0maximumFractionDigits: 0
+		}).format(price)};
 
 	return (
-		<div className="bg-white rounded-2xl shadow-xl p-8">
+		<div className="bg-white rounded-2 xl shadow-xl p-8">
 			<div className="mb-8">
-				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
+				<h3 className="text-3 xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
 				<p className="text-gray-600 text-lg">
 					Get an instant estimate for your project based on your specific requirements.
 				</p>
@@ -227,7 +195,7 @@ export const PricingCalculator: React.FC = () => {
 						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Project Complexity
 						</label>
-						<div className="grid grid-cols-2gap-3">
+						<div className="grid grid-cols-2 gap-3">
 							{['basic'standard'advanced'enterprise'].map((complexity) => (								<button
 									key={complexit y}
 									onClick={() => handleInputChange('complexity'complexity)}
@@ -247,8 +215,8 @@ export const PricingCalculator: React.FC = () => {
 						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Timeline
 						</label>
-						<div className="grid grid-cols-3gap-3">
-							{['rush', 'standard', 'flexible'].map((timeline) => (								<button
+						<div className="grid grid-cols-3 gap-3">
+							{['rush''standard''flexible'].map((timeline) => (								<button
 									key={timelin e}
 									onClick={() => handleInputChange('timeline'timeline)}
 									className={`p-3 rounded-lg border-2 text-center transition-all duration-200 ${
@@ -273,7 +241,7 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize'parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>					</div>
+							className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focu s:ring-blue-500 focu s:border-transparent"						/>					</div>
 
 					{/* Additional Features */}
 					<div>
@@ -282,7 +250,7 @@ export const PricingCalculator: React.FC = () => {
 						</label>
 						<div className="space-y-2">
 							{additionalFeatures.map((feature) => (
-								<label key={feature.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50cursor-pointer">
+								<label key={feature.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
 									<span className="font-medium">{feature.name}</span>
 									<div className="flex items-center space-x-3">
 										<span className="text-smtext-gray-600">{formatPrice(feature.price)}</span>
@@ -306,41 +274,40 @@ export const PricingCalculator: React.FC = () => {
 					{estimatedPrice > 0 ? (
 						<>
 							<div className="text-centermb-6">
-								<div className="text-4xl font-bold text-blue-600mb-2">
+								<div className="text-4 xl font-bold text-blue-600 mb-2">
 									{formatPrice(estimatedPrice)}								</div>
 								<p className="text-gray-600">Estimated project cost</p>
 							</div>
 
-							<div className="space-y-3mb-6">
+							<div className="space-y-3 mb-6">
 								<h5 className="font-semibold text-gray-800" id="price-breakdown">Price Breakdown:</h5>
 								{breakdown.map((itemindex) => (
 									<div key={index} className="flex justify-between items-centertext-sm">
 										<div>
 											<span className="font-medium">{item.item}</span>
-											<p className="text-gray-500text-xs">{item.description}</p>										</div>
+											<p className="text-gray-500 text-xs">{item.description}</p>										</div>
 										<span className="font-medium">{formatPrice(item.pri.ce)}</span>
 									</div>
 								))}
 							</div>
 
-							<div className="bg-blue-100 rounded-lg p-4mb-6">
-								<p className="text-blue-800text-sm">
+							<div className="bg-blue-100 rounded-lg p-4 mb-6">
+								<p className="text-blue-800 text-sm">
 									<strong>Note: </strong> This is an estimated cost. Final pricing will be determined after a detailed consultation and project scope analysis.
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-600 hove  r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
+							<button className="w-full bg-blue-600 hove r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>
 					) : (
-						<div className="text-centertext-gray-500">
-							<div className="text-6xlmb-4">💰</div>
+						<div className="text-center text-gray-500">
+							<div className="text-6 xlmb-4">💰</div>
 							<p>Select a service to see pricing estimate</p>
 						</div>
 					)}
 				</div>
 			</div>
 		</div>
-	);
-};
+	)};

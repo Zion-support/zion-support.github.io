@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { User, SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
+import React, { useState  useEffect  useCallback } from 'react';
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon  } from "lucide-react";
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -8,19 +8,14 @@ interface UserPreferences {
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
 interface EnhancedUserExperienceProps {
-  className?: string;
-}
+  className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
-  const [preferences, setPreferences] = useState<UserPreferences>({
-    theme: 'auto',
-    language: 'en',
-    fontSize: 'medium',
-    animations: true,
+  const [preferences  setPreferences] = useState<UserPreferences>({
+    theme: 'auto'language: 'en'fontSize: 'medium'animations: true 
     reducedMotion: falsehighContrast: falsescreenReader: false
   });
 
@@ -32,30 +27,23 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElement.setAttribute('data-theme', value);
-    }
+      document.documentElement.setAttribute('data-theme'value)}
     if (key === 'fontSize') {
-      document.documentElement.setAttribute('data-font-size', value);
-    }
+      document.documentElement.setAttribute('data-font-size'value)}
     if (key === 'highContrast') {
-      document.documentElement.setAttribute('data-high-contrast', value.toString());
-    }
+      document.documentElement.setAttribute('data-high-contrast'value.toString())}
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion'value.toString());
-    }
+      document.documentElement.setAttribute('data-reduced-motion'value.toString())}
   }[]);
 
-  const detectSystemPreferences = useCallback(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const detectSystemPreferences = useCallback(() => {const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
+      document.documentElement.setAttribute('data-theme'prefersDark ? 'dark' : 'light')}
     
     if (preferences.reducedMotion !== prefersReducedMotion) {
-      updatePreference('reducedMotion'prefersReducedMotion);
-    }
+      updatePreference('reducedMotion'prefersReducedMotion)}
   }[preferences.themepreferences.reducedMotionupdatePreference]);
 
   useEffect(() => {
@@ -63,8 +51,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const saved = localStorage.getItem('userPreferences');
     if (saved) {
       const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }));
-    }
+      setPreferences(prev => ({ ...prev  ...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -73,17 +60,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     darkModeQuery.addEventListener('change', detectSystemPreferences);
     motionQuery.addEventListener('change', detectSystemPreferences);
 
-    return () => {
-      darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change'detectSystemPreferences);
-    };
-  }[detectSystemPreferences]);
+    return () => {darkModeQuery.removeEventListener('change'detectSystemPreferences);
+      motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
-  useEffect(() => {
-    // Save preferences
-    localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences();
-  }[preferencesdetectSystemPreferences]);
+  useEffect(() => {// Save preferences
+    localStorage.setItem('userPreferences'JSON.stringify(preferences));
+    detectSystemPreferences()}[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -95,11 +77,11 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'light', label: 'Light'icon: Sun }{ value: 'dark', label: 'Dark'icon: Moon }{ value: 'auto', label: 'Auto', icon: Monitor }
+            { value: 'light'label: 'Light'icon: Sun }{ value: 'dark'label: 'Dark'icon: Moon }{ value: 'auto'label: 'Auto'icon: Monitor }
           ].map(({ valuelabelicon: Icon }) => (
             <button
               key={value}
-              onClick={() => updatePreference('theme', value)}
+              onClick={() => updatePreference('theme'value)}
               className={`p-3 rounded-lg border-2 flex flex-col items-center space-y-2 ${
                 preferences.theme === value
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
@@ -119,13 +101,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </label>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { value: 'small', label: 'Small' },
-        { value: 'medium', label: 'Medium' },
-        { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
+            { value: 'small'label: 'Small' },
+        {value: 'medium'label: 'Medium' },
+        {value: 'large'label: 'Large' }
+          ].map(({ value  label }) => (
             <button
               key={value}
-              onClick={() => updatePreference('fontSize', value)}
+              onClick={() => updatePreference('fontSize'value)}
               className={`p-3 rounded-lg border-2 ${
                 preferences.fontSize === value
                   ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
@@ -143,7 +125,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.animations}
-            onChange={(e) => updatePreference('animations', e.target.checked)}
+            onChange={(e) => updatePreference('animations'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            Enable animations
@@ -159,7 +141,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.reducedMotion}
-            onChange={(e) => updatePreference('reducedMotion', e.target.checked)}
+            onChange={(e) => updatePreference('reducedMotion'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">
@@ -170,7 +152,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.highContrast}
-            onChange={(e) => updatePreference('highContrast', e.target.checked)}
+            onChange={(e) => updatePreference('highContrast'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
           <span className="text-sm font-medium text-gray-700 dar k:text-gray-300">            High contrast mode
@@ -181,19 +163,19 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
           <input
             type="checkbox"
             checked={preferences.screenReader}
-            onChange={(e) => updatePreference('screenReader', e.target.checked)}
+            onChange={(e) => updatePreference('screenReader'e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
-          <span className="text-sm font-medium text-gray-700dark:text-gray-300">            Screen reader optimizations
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">            Screen reader optimizations
           </span>
         </label>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
+        <ul className="text-sm text-blue-700 dar k:text-blue-300 space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -205,12 +187,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   const LanguageTab = () => (<div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dar k:text-gray-300 mb-3">
           Language
         </label>
         <select
           value={preferences.language}
-          onChange={(e) => updatePreference('language', e.target.value)}
+          onChange={(e) => updatePreference('language'e.target.value)}
           className="w-full p-3 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
         >          <option value="en">English</option>
           <option value="es">Español</option>
@@ -222,8 +204,8 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </select>
       </div>
 
-      <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
+      <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+        <h4 className="font-semibold text-green-900 dar k:text-green-100 mb-2">
           Internationalization
         </h4>
         <p className="text-sm text-green-700 dar k:text-green-300">
@@ -259,7 +241,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <User className="w-6 h-6text-blue-500" />
+                  <User className="w-6 h-6 text-blue-500" />
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">                    User Experience
                   </h2>
                 </div>
@@ -272,8 +254,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
               {/* Tab Navigation */}
               <div className="flex space-x-1 mb-6 bg-gray-100 dark: bg-gray-700 rounded-lgp-1">
-                {[
-                  { id: 'appearance', label: 'Appearance'icon: Palette }{ id: 'accessibility', label: 'Accessibility'icon: Smartphone }{ id: 'language', label: 'Language', icon: Globe }
+                {[{ id: 'appearance'label: 'Appearance'icon: Palette }{ id: 'accessibility'label: 'Accessibility'icon: Smartphone }{ id: 'language'label: 'Language'icon: Globe }
                 ].map(({ idlabelicon: Icon }) => (
                   <button
                     key={id}
@@ -281,9 +262,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                     className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hove, r:text-gray-200'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                     }`}                  >
-                    <Icon className="w-4h-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{label}</span>                  </button>
                 ))}
               </div>
@@ -297,7 +278,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

@@ -1,45 +1,39 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { Activity
   AlertTriangle
   CheckCircle
   Clock
   Database
   Globe
   Shield
-  TrendingUp,
-  Users,
-  Zap,
-  BarChart3,
-  Cpu,
+  TrendingUp 
+  Users 
+  Zap 
+  BarChart3 
+  Cpu 
   HardDriveWifiEyeSearchX
-} from 'lucide-react';
+ } from "lucide-react";
 
 interface CardProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardHeaderProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardTitleProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardDescriptionProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 interface CardContentProps {
   children: React.ReactNode;
-  className?: string;
-}
+  className?: string}
 
 const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
@@ -77,46 +71,39 @@ interface SystemMetrics {
     largestContentfulPaint: number;
     cumulativeLayoutShift: number;
     firstInputDelay: number;
-    timeToInteractive: number;
-  };
+    timeToInteractive: number};
   resources: {
     memoryUsage: number;
     cpuUsage: number;
     networkLatency: number;
     bundleSize: number;
-    cacheHitRate: number;
-  };
+    cacheHitRate: number};
   userExperience: {
     bounceRate: number;
     sessionDuration: number;
     pageViews: number;
     uniqueVisitors: number;
-    conversionRate: number;
-  };
+    conversionRate: number};
   errors: {
     total: number;
     critical: number;
     resolved: number;
-    unresolved: number;
-  };
+    unresolved: number};
   security: {
     threatsBlocked: number;
     vulnerabilities: number;
     sslScore: number;
-    cspViolations: number;
-  };
-}
+    cspViolations: number}}
 
 interface MonitoringDashboardProps {
   refreshInterval?: number;
   enableRealTimeUpdates?: boolean;
-  onMetricsUpdate?: (metrics: SystemMetrics) => void;
-}
+  onMetricsUpdate?: (metrics: SystemMetrics) => void}
 
 export default function ComprehensiveMonitoringDashboard({
   refreshInterval = 5000enableRealTimeUpdates = trueonMetricsUpdate
 }: MonitoringDashboardProps) {
-  const [metricssetMetrics] = useState<SystemMetrics | null>(null);
+  const [metrics  setMetrics] = useState<SystemMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [lastUpdatedsetLastUpdated] = useState<Date>(new Date());
   const [alertssetAlerts] = useState<Array<{
@@ -124,8 +111,7 @@ export default function ComprehensiveMonitoringDashboard({
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
     timestamp: Date;
-    resolved: boolean;
-  }>>([]);
+    resolved: boolean}>>([]);
 
   const collectMetrics = useCallback(async () => {
     try {
@@ -152,144 +138,107 @@ export default function ComprehensiveMonitoringDashboard({
       onMetricsUpdate?.(newMetrics);
 
       // Check for alerts
-      checkForAlerts(newMetrics);
-    } catch (error) {
-      console.error('Failed to collect metrics:'error);
-    } finally {
-      setIsLoading(false);
-    }
+      checkForAlerts(newMetrics)} catch (error) {
+      console.error('Failed to collect metrics:'error)} finally {
+      setIsLoading(false)}
   }[onMetricsUpdate]);
 
   const collectPerformanceMetrics = async () => {
     if (typeof window === 'undefined') {
       return {
-        loadTime: 0,
-        firstContentfulPaint: 0largestContentfulPaint: 0cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
-      };
-    }
+        loadTime: 0firstContentfulPaint: 0largestContentfulPaint: 0cumulativeLayoutShift: 0firstInputDelay: 0timeToInteractive: 0
+      }}
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     
     return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      largestContentfulPaint: 0// Will be updated by Web Vitals
+      loadTime: navigation.loadEventEnd - navigation.fetchStart 
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0largestContentfulPaint: 0// Will be updated by Web Vitals
       cumulativeLayoutShift: 0// Will be updated by Web Vitals
       firstInputDelay: 0// Will be updated by Web Vitals
       timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart
-    };
-  };
+    }};
 
   const collectResourceMetrics = async () => {
-    if (typeof window === 'undefined') {
+    if (typeof window === 'undefined") {
       return {
-        memoryUsage: 0,
-        cpuUsage: 0,
-        networkLatency: 0,
-        bundleSize: 0,
-        cacheHitRate: 0
-      };
-    }
+        memoryUsage: 0cpuUsage: 0networkLatency: 0bundleSize: 0cacheHitRate: 0
+      }}
 
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
 
-    return {
-      memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
+    return {memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0// MB
       cpuUsage: 0// Would need Web Workers to measure
-      networkLatency: connection ? connection.rtt : 0,
-      bundleSize: 0// Would need to calculate from loaded resources
+      networkLatency: connection ? connection.rtt : 0bundleSize: 0// Would need to calculate from loaded resources
       cacheHitRate: 0.85 // Mock value
-    };
-  };
+    }};
 
-  const collectUserExperienceMetrics = async () => {
-    // Mock data - in real implementationthis would come from analytics
+  const collectUserExperienceMetrics = async () => {// Mock data - in real implementationthis would come from analytics
     return {
       bounceRate: 0.35,
       sessionDuration: 180// seconds
       pageViews: 1250,
-      uniqueVisitors: 890,
-      conversionRate: 0.12
-    };
-  };
+      uniqueVisitors: 890conversionRate: 0.12
+    }};
 
   const collectErrorMetrics = async () => {
     // Mock data - in real implementationthis would come from error tracking
     return {
-      total: 23,
-      critical: 2,
-      resolved: 18unresolved: 5
-    };
-  };
+      total: 23critical: 2resolved: 18unresolved: 5
+    }};
 
   const collectSecurityMetrics = async () => {
     // Mock data - in real implementationthis would come from security monitoring
     return {
       threatsBlocked: 156vulnerabilities: 3sslScore: 95cspViolations: 1
-    };
-  };
+    }};
 
   const checkForAlerts = (metrics: SystemMetrics) => {
     const newAlerts: Array<{
       id: string;
-      type: 'warning' | 'error' | 'info' | 'success';
+      type: "warning' | 'error' | 'info' | 'success';
       message: string;
       timestamp: Date;
-      resolved: boolean;
-    }> = [];
+      resolved: boolean}> = [];
 
     // Performance alerts
     if (metrics.performance.loadTime > 3000) {
       newAlerts.push({
-        id: 'slow-load',
-        type: 'warning',
-        message: 'Page load time is above 3 seconds'timestamp: new Date()resolved: false
-      });
-    }
+        id: 'slow-load'type: 'warning'message: 'Page load time is above 3 seconds'timestamp: new Date()resolved: false
+      })}
 
-    if (metrics.performance.cumulativeLayoutShift > 0.1) {
-      newAlerts.push({
+    if (metrics.performance.cumulativeLayoutShift > 0.1) {newAlerts.push({
         id: 'layout-shift',
-        type: 'warning',
-        message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
-      });
-    }
+        type: 'warning'message: 'High cumulative layout shift detected'timestamp: new Date()resolved: false
+      })}
 
     // Error alerts
-    if (metrics.errors.critical > 0) {
-      newAlerts.push({
+    if (metrics.errors.critical > 0) {newAlerts.push({
         id: 'critical-errors',
-        type: 'error',
-        message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
-      });
-    }
+        type: 'error'message: `${metrics.errors.critical} critical errors detected`timestamp: new Date()resolved: false
+      })}
 
     // Security alerts
-    if (metrics.security.vulnerabilities > 0) {
-      newAlerts.push({
+    if (metrics.security.vulnerabilities > 0) {newAlerts.push({
         id: 'security-vulnerabilities',
-        type: 'error',
-        message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
-      });
-    }
+        type: 'error'message: `${metrics.security.vulnerabilities} security vulnerabilities found`timestamp: new Date()resolved: false
+      })}
 
-    setAlerts(prev => [...prev...newAlerts]);
-  };
+    setAlerts(prev => [...prev...newAlerts])};
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
-    ));
-  };
+    ))};
 
   useEffect(() => {
     collectMetrics();
 
     if (enableRealTimeUpdates) {
       const interval = setInterval(collectMetricsrefreshInterval);
-      return () => clearInterval(interval);    }
+      return () => clearInterval(interval)}
   }[collectMetricsenableRealTimeUpdatesrefreshInterval]);
 
   const getPerformanceGrade = (score: number) => {
@@ -297,8 +246,7 @@ export default function ComprehensiveMonitoringDashboard({
     if (score >= 80) return { grade: 'B'color: 'text-blue-600' };
     if (score >= 70) return { grade: 'C'color: 'text-yellow-600' };
     if (score >= 60) return { grade: 'D'color: 'text-orange-600' };
-    return { grade: 'F'color: 'text-red-600' };
-  };
+    return { grade: 'F'color: 'text-red-600' }};
 
   const performanceScore = metrics ? 
     Math.round((100 - (metrics.performance.loadTime / 100)) + 
@@ -312,15 +260,14 @@ export default function ComprehensiveMonitoringDashboard({
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">System Monitoring Dashboard</h2>
+          <h2 className="text-2 xl font-bold text-gray-900">System Monitoring Dashboard</h2>
           <p className="text-gray-600">Real-time system performance and health metrics</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -375,7 +322,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Zap className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{grade}</div>
+              <div className="text-2 xl font-bold">{grade}</div>
               <p className="text-xs text-muted-foreground">
                 Load Time: {metrics.performance.loadTime.toFixed(0)}ms
               </p>
@@ -392,7 +339,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Cpu className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
+              <div className="text-2 xl font-bold">{metrics.resources.memoryUsage.toFixed(1)}MB</div>
               <p className="text-xs text-muted-foreground">
                 Memory Usage
               </p>
@@ -409,7 +356,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
+              <div className="text-2 xl font-bold">{metrics.userExperience.uniqueVisitors}</div>
               <p className="text-xs text-muted-foreground">
                 Unique Visitors
               </p>
@@ -426,7 +373,7 @@ export default function ComprehensiveMonitoringDashboard({
               <Shield className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{metrics.security.sslScore}%</div>
+              <div className="text-2 xl font-bold">{metrics.security.sslScore}%</div>
               <p className="text-xs text-muted-foreground">
                 SSL Score
               </p>
@@ -493,5 +440,4 @@ export default function ComprehensiveMonitoringDashboard({
         </div>
       )}
     </div>
-  );
-};
+  )};

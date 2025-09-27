@@ -1,21 +1,20 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CardCardContentCardDescriptionCardHeaderCardTitle } from './ui/Card';
-import { 
-  Shield
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence  } from "framer-motion";
+import { CardCardContentCardDescriptionCardHeaderCardTitle  } from "./ui/Card";
+import { Shield
   AlertTriangle
   CheckCircle
   Lock
   Eye
   Globe
   Server
-  Key,
-  FileText,
-  Users,
-  Activity,
-  Zap,
-  AlertCircle,
-  XCircleClockTrendingUpTrendingDown} from 'lucide-react';
+  Key 
+  FileText 
+  Users 
+  Activity 
+  Zap 
+  AlertCircle 
+  XCircleClockTrendingUpTrendingDown } from "lucide-react";
 
 interface SecurityMetrics {
   overall: {
@@ -23,8 +22,7 @@ interface SecurityMetrics {
     threatsBlocked: number;
     vulnerabilities: number;
     lastScan: Date;
-    complianceStatus: 'compliant' | 'warning' | 'non-compliant';
-  };
+    complianceStatus: 'compliant' | 'warning' | 'non-compliant'};
   threats: {
     total: number;
     critical: number;
@@ -38,9 +36,7 @@ interface SecurityMetrics {
       description: string;
       timestamp: Date;
       source: string;
-      status: 'active' | 'investigating' | 'resolved';
-    }>;
-  };
+      status: 'active' | 'investigating' | 'resolved'}>};
   vulnerabilities: {
     total: number;
     critical: number;
@@ -54,63 +50,51 @@ interface SecurityMetrics {
       description: string;
       cve: string;
       discovered: Date;
-      status: 'open' | 'in-progress' | 'patched';
-    }>;
-  };
+      status: 'open' | 'in-progress' | 'patched'}>};
   compliance: {
     ssl: {
       score: number;
       grade: string;
-      issues: string[];
-    };
+      issues: string[]};
     csp: {
       enabled: boolean;
       violations: number;
-      policies: string[];
-    };
+      policies: string[]};
     headers: {
       security: boolean;
       xss: boolean;
       frame: boolean;
-      contentType: boolean;
-    };
+      contentType: boolean};
     gdpr: {
       compliant: boolean;
-      issues: string[];
-    };
-  };
+      issues: string[]}};
   monitoring: {
     activeAlerts: number;
     resolvedAlerts: number;
     blockedIPs: number;
     suspiciousActivity: number;
     loginAttempts: number;
-    failedLogins: number;
-  };
-}
+    failedLogins: number}}
 
 interface ComprehensiveSecurityDashboardProps {
   refreshInterval?: number;
   enableRealTimeMonitoring?: boolean;
-  onSecurityUpdate?: (metrics: SecurityMetrics) => void;
-}
+  onSecurityUpdate?: (metrics: SecurityMetrics) => void}
 
 export default function ComprehensiveSecurityDashboard({
-  refreshInterval = 10000,
-  enableRealTimeMonitoring = trueonSecurityUpdate
+  refreshInterval = 10000enableRealTimeMonitoring = trueonSecurityUpdate
 }: ComprehensiveSecurityDashboardProps) {
-  const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
+  const [metrics  setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
-  const [alerts, setAlerts] = useState<Array<{
+  const [alerts  setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
     severity: 'critical' | 'high' | 'medium' | 'low';
     title: string;
     description: string;
     timestamp: Date;
-    resolved: boolean;
-  }>>([]);
+    resolved: boolean}>>([]);
 
   const generateMockData = useCallback((): SecurityMetrics => {
     const baseTime = new Date();
@@ -119,125 +103,90 @@ export default function ComprehensiveSecurityDashboard({
     return {
       overall: {
         securityScore: 85 + Math.random() * 10threatsBlocked: Math.floor(150 * timeRangeMultiplier)vulnerabilities: Math.floor(5 + Math.random() * 10)lastScan: new Date(baseTime.getTime() - Math.random() * 3600000)complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'
-      },
-      threats: {
-        total: Math.floor(200 * timeRangeMultiplier),
-        critical: Math.floor(5 * timeRangeMultiplier)high: Math.floor(15 * timeRangeMultiplier)medium: Math.floor(50 * timeRangeMultiplier)low: Math.floor(130 * timeRangeMultiplier)recent: [
+      }threats: {total: Math.floor(200 * timeRangeMultiplier)critical: Math.floor(5 * timeRangeMultiplier)high: Math.floor(15 * timeRangeMultiplier)medium: Math.floor(50 * timeRangeMultiplier)low: Math.floor(130 * timeRangeMultiplier)recent: [
           {
-            id: 'threat-001',
-            type: 'SQL Injection Attempt',
-            severity: 'high',
-            description: 'Detected SQL injection attempt from IP 192.168.1.100'timestamp: new Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100',
-            status: 'investigating'
+            id: 'threat-001'type: 'SQL Injection Attempt'severity: 'high'description: 'Detected SQL injection attempt from IP 192.168.1.100'timestamp: new Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100'status: 'investigating'
           },
-          {
-            id: 'threat-002',
+          {id: 'threat-002',
             type: 'XSS Attack',
             severity: 'medium',
-            description: 'Cross-site scripting attempt detected in form submission'timestamp: new Date(baseTime.getTime() - Math.random() * 7200000)source: 'External',
-            status: 'resolved'
+            description: 'Cross-site scripting attempt detected in form submission'timestamp: new Date(baseTime.getTime() - Math.random() * 7200000)source: 'External'status: 'resolved'
           },
-          {
-            id: 'threat-003',
+          {id: 'threat-003',
             type: 'Brute Force Attack',
             severity: 'critical',
-            description: 'Multiple failed login attempts detected'timestamp: new Date(baseTime.getTime() - Math.random() * 1800000)source: '203.0.113.42',
-            status: 'active'
+            description: 'Multiple failed login attempts detected'timestamp: new Date(baseTime.getTime() - Math.random() * 1800000)source: '203.0.113.42'status: 'active"
           }
         ]
-      },
-      vulnerabilities: {
-        total: Math.floor(8 + Math.random() * 5),
-        critical: Math.floor(1 + Math.random() * 2)high: Math.floor(2 + Math.random() * 3)medium: Math.floor(3 + Math.random() * 4)low: Math.floor(2 + Math.random() * 3)recent: [
+      }vulnerabilities: {total: Math.floor(8 + Math.random() * 5)critical: Math.floor(1 + Math.random() * 2)high: Math.floor(2 + Math.random() * 3)medium: Math.floor(3 + Math.random() * 4)low: Math.floor(2 + Math.random() * 3)recent: [
           {
-            id: 'vuln-001',
+            id: "vuln-001',
             name: 'Outdated jQuery Library',
             severity: 'high',
-            description: 'jQuery version 3.4.1 has known security vulnerabilities',
-            cve: 'CVE-2020-11022'discovered: new Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'
+            description: 'jQuery version 3.4.1 has known security vulnerabilities'cve: 'CVE-2020-11022'discovered: new Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'
           },
-          {
-            id: 'vuln-002',
+          {id: 'vuln-002',
             name: 'Weak Password Policy',
             severity: 'medium',
-            description: 'Password policy does not enforce strong password requirements',
-            cve: 'N/A'discovered: new Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'
+            description: 'Password policy does not enforce strong password requirements'cve: 'N/A'discovered: new Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'
           }
         ]
       },compliance: {
         ssl: {
           score: 95 + Math.random() * 5grade: 'A+'issues: []
         }csp: {
-          enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\']
-        },
-        headers: {
-          security: true,
-          xss: true,
-          frame: true,
+          enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\"]
+        }headers: {
+          security: true 
+          xss: true 
+          frame: true 
           contentType: true
-        },
-        gdpr: {
-          compliant: true,
+        }gdpr: {
+          compliant: true 
           issues: []
         }
-      },
-      monitoring: {
-        activeAlerts: Math.floor(3 + Math.random() * 5),
-        resolvedAlerts: Math.floor(25 * timeRangeMultiplier)blockedIPs: Math.floor(12 * timeRangeMultiplier)suspiciousActivity: Math.floor(8 * timeRangeMultiplier)loginAttempts: Math.floor(500 * timeRangeMultiplier)failedLogins: Math.floor(50 * timeRangeMultiplier)
+      }monitoring: {
+        activeAlerts: Math.floor(3 + Math.random() * 5)resolvedAlerts: Math.floor(25 * timeRangeMultiplier)blockedIPs: Math.floor(12 * timeRangeMultiplier)suspiciousActivity: Math.floor(8 * timeRangeMultiplier)loginAttempts: Math.floor(500 * timeRangeMultiplier)failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
-    };
-  }[selectedTimeRange]);
+    }}[selectedTimeRange]);
 
-  const generateAlerts = useCallback((metrics: SecurityMetrics) => {
-    const newAlerts = [];
+  const generateAlerts = useCallback((metrics: SecurityMetrics) => {const newAlerts = [];
 
     // Critical threats
     if (metrics.threats.critical > 0) {
       newAlerts.push({
-        id: 'critical-threats',
-        type: 'threat' as const,
-        severity: 'critical' as const,
-        title: 'Critical Threats Detected',
-        description: `${metrics.threats.critical} critical security threats require immediate attention`timestamp: new Date()resolved: false
-      });
-    }
+        id: "critical-threats',
+        type: 'threat' as const 
+        severity: 'critical' as const 
+        title: 'Critical Threats Detected'description: `${metrics.threats.critical} critical security threats require immediate attention`timestamp: new Date()resolved: false
+      })}
 
     // High vulnerabilities
-    if (metrics.vulnerabilities.high > 0) {
-      newAlerts.push({
+    if (metrics.vulnerabilities.high > 0) {newAlerts.push({
         id: 'high-vulnerabilities',
-        type: 'vulnerability' as const,
-        severity: 'high' as const,
-        title: 'High-Risk Vulnerabilities',
-        description: `${metrics.vulnerabilities.high} high-risk vulnerabilities need patching`timestamp: new Date()resolved: false
-      });
-    }
+        type: 'vulnerability' as const 
+        severity: 'high' as const 
+        title: 'High-Risk Vulnerabilities'description: `${metrics.vulnerabilities.high} high-risk vulnerabilities need patching`timestamp: new Date()resolved: false
+      })}
 
     // Compliance issues
-    if (metrics.overall.complianceStatus !== 'compliant') {
-      newAlerts.push({
+    if (metrics.overall.complianceStatus !== 'compliant') {newAlerts.push({
         id: 'compliance-issues',
-        type: 'compliance' as const,
-        severity: 'medium' as const,
-        title: 'Compliance Issues',
-        description: 'Security compliance status requires attention'timestamp: new Date()resolved: false
-      });
-    }
+        type: 'compliance' as const 
+        severity: 'medium' as const 
+        title: 'Compliance Issues'description: 'Security compliance status requires attention'timestamp: new Date()resolved: false
+      })}
 
     // High failed login rate
     const failedLoginRate = metrics.monitoring.failedLogins / metrics.monitoring.loginAttempts;
-    if (failedLoginRate > 0.1) {
-      newAlerts.push({
+    if (failedLoginRate > 0.1) {newAlerts.push({
         id: 'high-failed-logins',
-        type: 'monitoring' as const,
-        severity: 'high' as const,
-        title: 'High Failed Login Rate',
-        description: `${(failedLoginRate * 100).toFixed(1)}% of login attempts are failing`timestamp: new Date()resolved: false
-      });
-    }
+        type: 'monitoring' as const 
+        severity: 'high' as const 
+        title: 'High Failed Login Rate'description: `${(failedLoginRate * 100).toFixed(1)}% of login attempts are failing`timestamp: new Date()resolved: false
+      })}
 
-    setAlerts(prev => [...prev...newAlerts]);
-  }[]);
+    setAlerts(prev => [...prev...newAlerts])}[]);
 
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -245,27 +194,22 @@ export default function ComprehensiveSecurityDashboard({
       const mockData = generateMockData();
       setMetrics(mockData);
       generateAlerts(mockData);
-      onSecurityUpdate?.(mockData);
-    } catch (error) {
-      console.error('Failed to load security metrics:'error);
-    } finally {
-      setIsLoading(false);
-    }
+      onSecurityUpdate?.(mockData)} catch (error) {
+      console.error('Failed to load security metrics:'error)} finally {
+      setIsLoading(false)}
   }[generateMockDatagenerateAlertsonSecurityUpdate]);
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
-    ));
-  };
+    ))};
 
   useEffect(() => {
     loadMetrics();
 
     if (enableRealTimeMonitoring) {
       const interval = setInterval(loadMetricsrefreshInterval);
-      return () => clearInterval(interval);
-    }
+      return () => clearInterval(interval)}
   }[loadMetricsenableRealTimeMonitoringrefreshInterval]);
 
   const getSeverityColor = (severity: string) => {
@@ -274,8 +218,7 @@ export default function ComprehensiveSecurityDashboard({
       case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
-    }
+      default: return 'text-gray-600 bg-gray-50 border-gray-200'}
   };
 
   const getSeverityIcon = (severity: string) => {
@@ -284,8 +227,7 @@ export default function ComprehensiveSecurityDashboard({
       case 'high': return <AlertCircle className="h-4 w-4" />;
       case 'medium': return <AlertTriangle className="h-4 w-4" />;
       case 'low': return <CheckCircle className="h-4 w-4" />;
-      default: return <Activity className="h-4 w-4" />;
-    }
+      default: return <Activity className="h-4 w-4" />}
   };
 
   if (isLoading) {
@@ -293,8 +235,7 @@ export default function ComprehensiveSecurityDashboard({
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
-    );
-  }
+    )}
 
   if (!metrics) return null;
 
@@ -303,7 +244,7 @@ export default function ComprehensiveSecurityDashboard({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>
+          <h2 className="text-2 xl font-bold text-gray-900">Security Dashboard</h2>
           <p className="text-gray-600">Comprehensive security monitoring and threat analysis</p>
         </div>
         <div className="flex items-center space-x-4">
@@ -372,7 +313,7 @@ export default function ComprehensiveSecurityDashboard({
             <Shield className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.overall.threatsBlocked}</div>
+            <div className="text-2 xl font-bold">{metrics.overall.threatsBlocked}</div>
             <p className="text-xs text-muted-foreground">
               +{Math.floor(Math.random() * 20)}% from last period
             </p>
@@ -385,7 +326,7 @@ export default function ComprehensiveSecurityDashboard({
             <AlertTriangle className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.vulnerabilities.total}</div>
+            <div className="text-2 xl font-bold">{metrics.vulnerabilities.total}</div>
             <p className="text-xs text-muted-foreground">
               {metrics.vulnerabilities.critical} critical
             </p>
@@ -398,7 +339,7 @@ export default function ComprehensiveSecurityDashboard({
             <Activity className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.monitoring.activeAlerts}</div>
+            <div className="text-2 xl font-bold">{metrics.monitoring.activeAlerts}</div>
             <p className="text-xs text-muted-foreground">
               {metrics.monitoring.resolvedAlerts} resolved
             </p>
@@ -411,7 +352,7 @@ export default function ComprehensiveSecurityDashboard({
             <CheckCircle className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">
+            <div className="text-2 xl font-bold">
               {metrics.overall.complianceStatus === 'compliant' ? '100%' : '85%'}
             </div>
             <p className="text-xs text-muted-foreground">
@@ -552,5 +493,4 @@ export default function ComprehensiveSecurityDashboard({
         </CardContent>
       </Card>
     </div>
-  );
-}
+  )}
