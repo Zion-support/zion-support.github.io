@@ -16,7 +16,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasErro, r: false,
+      hasError: false,
       error: null,
       errorInfo: null
     };
@@ -24,7 +24,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasErro, r: true,
+      hasError: true,
       error,
       errorInfo: null
     };
@@ -123,7 +123,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              <h 1 className="text-xl font-semibold text-gray-900 mb-2" id="something-went-wrong">
+              <h1 className="text-xl font-semibold text-gray-900 mb-2" id="something-went-wrong">
                 Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">

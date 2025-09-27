@@ -30,7 +30,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
   const updateStats = useCallback(() => {
     // Simulate cache statistics
     const newStats: CacheStats = {
-      hitRat, e: Math.random() * 30 + 70, // 70-100%
+      hitRate: Math.random() * 30 + 70, // 70-100%
       missRate: Math.random() * 30, // 0-30%
       totalRequests: Math.floor(Math.random() * 10000) + 1000,
       cacheSize: Math.floor(Math.random() * 100) + 50, // 50-150 MB
@@ -114,60 +114,60 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({ className = '' }) =
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-6mb-6">
-          <div className="bg-gray-50 rounded-lgp-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Hit Rate</span>
-              <CheckCircle className="w-4h-4text-green-500" />
+              <span className="text-sm font-medium text-gray-600">Hit Rate</span>
+              <CheckCircle className="w-4 h-4 text-green-500" />
             </div>
-            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}
+            <div className={`text-2xl font-bold ${getHitRateColor(stats.hitRate)}`}>
               {stats.hitRate.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Miss Rate</span>
-              <AlertTriangle className="w-4h-4text-yellow-500" />
+              <span className="text-sm font-medium text-gray-600">Miss Rate</span>
+              <AlertTriangle className="w-4 h-4 text-yellow-500" />
             </div>
-            <div className="text-2xl font-boldtext-red-500">
+            <div className="text-2xl font-bold text-red-500">
               {stats.missRate.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Total Requests</span>
-              <HardDrive className="w-4h-4text-blue-500" />
+              <span className="text-sm font-medium text-gray-600">Total Requests</span>
+              <HardDrive className="w-4 h-4 text-blue-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.totalRequests.toLocaleString()}
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Cache Size</span>
+              <span className="text-sm font-medium text-gray-600">Cache Size</span>
               <HardDrive className="w-4h-4text-purple-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.cacheSize} MB
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Memory Usage</span>
+              <span className="text-sm font-medium text-gray-600">Memory Usage</span>
               <HardDrive className="w-4h-4text-indigo-500" />
             </div>
-            <div className="text-2xl font-boldtext-gray-800">
+            <div className="text-2xl font-bold text-gray-800">
               {stats.memoryUsage.toFixed(1)}%
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lgp-4">
+          <div className="bg-gray-50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-mediumtext-gray-600">Last Cleared</span>
+              <span className="text-sm font-medium text-gray-600">Last Cleared</span>
               <RefreshCw className="w-4h-4text-gray-500" />
             </div>
             <div className="text-sm font-mediumtext-gray-800">
