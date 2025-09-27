@@ -119,11 +119,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       setSuggestions(optimizationSuggestions);
     } catch (error) {
-      console.error('Performance analysis failed: 'error);
+      console.error('Performance analysis failed:', error);
     } finally {
       setIsAnalyzing(false);
     }
-  }[]);
+  }, []);
 
   const performOptimization = useCallback(async () => {
     setIsOptimizing(true);
@@ -146,15 +146,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
     setOptimizations([]);
     setIsOptimizing(false);
-  }[]);
+  }, []);
 
-  const getPerformanceColor = (value: numberthresholds: { good: number; warning: number }) => {
+  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getPerformanceIcon = (value: numberthresholds: { good: number; warning: number }) => {
+  const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
     return <XCircle className="w-5 h-5 text-red-500" />;

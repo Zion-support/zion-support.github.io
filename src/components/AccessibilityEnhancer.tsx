@@ -106,7 +106,7 @@ export default function AccessibilityEnhancer({
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(React.forwardRef(() => null)() => ({
+  React.useImperativeHandle(ref, () => ({
     announceChange
   }));
 

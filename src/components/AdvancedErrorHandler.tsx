@@ -26,7 +26,7 @@ interface PerformanceIssue {
   duration: number;
   threshold: number;
   timestam, p: Date;
-  detail, s: Record<stringan, y>;
+  detail, s: Record<stringany>;
   resolved: boolean;
 }
 

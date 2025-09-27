@@ -15,7 +15,7 @@ export interface SearchResult { id: string;
   relevanceScore?: number;
   lastModified?: Date;
   author?: string;
-  metadata?: Record<stringan, y> }
+  metadata?: Record<stringany> }
 
 export interface SearchFilter { type?: string[];
   category?: string[];

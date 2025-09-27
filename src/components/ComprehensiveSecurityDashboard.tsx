@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 import { 
-  Shield
-  AlertTriangle
-  CheckCircle
-  Lock
-  Eye
-  Globe
-  Server
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  Lock,
+  Eye,
+  Globe,
+  Server,
   Key,
   FileText,
   Users,
@@ -201,7 +201,7 @@ export default function ComprehensiveSecurityDashboard({
         csp: {
           enabled: true,
           violations: Math.floor(2 + Math.random() * 5),
-          policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\']
+          policies: ['default-src \'self\'', 'script-src \'self\' \'unsafe-inline\'', 'style-src \'self\' \'unsafe-inline\'']
         },
         headers: {
           security: true,
@@ -223,7 +223,7 @@ export default function ComprehensiveSecurityDashboard({
         failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
     };
-  }[selectedTimeRange]);
+  }, [selectedTimeRange]);
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {
     const newAlerts = [];
@@ -281,8 +281,8 @@ export default function ComprehensiveSecurityDashboard({
       });
     }
 
-    setAlerts(prev => [...prev...newAlerts]);
-  }[]);
+    setAlerts(prev => [...prev, ...newAlerts]);
+  }, []);
 
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);

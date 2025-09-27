@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Activity
-  AlertTriangle
-  CheckCircle
-  Clock
-  Database
-  Globe
-  Shield
+  Activity,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Database,
+  Globe,
+  Shield,
   TrendingUp,
   Users,
   Zap,
@@ -45,19 +45,19 @@ interface CardContentProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ childrenclassName = ' }) => (
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
   <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({ childrenclassName = ' }) => (
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
   <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({ childrenclassName = ' }) => (
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
   <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
