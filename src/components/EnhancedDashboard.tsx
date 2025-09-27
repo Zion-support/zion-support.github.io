@@ -34,10 +34,10 @@ export const EnhancedDashboard: React.FC<EnhancedDashboardProps> = ({
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
           selectedWidget === widget.id ? 'ring-2 ring-blue-500' : ''
         }`}
-        onClick={() => setSelectedWidget(widget.id)}
+        role="button" tabIndex="0" onClick={() => setSelectedWidget(widget.id)}
       >
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">{widget.title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900" id="widgettitle">{widget.title}</h3>
         </div>
         <div className="text-center">
           <div className="text-3xl font-bold text-gray-900 mb-2">{widget.data.value || 'N/A'}</div>

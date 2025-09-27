@@ -304,7 +304,7 @@ export const PricingCalculator: React.FC = () => {
 
         {/* Price Estimate */}
         <div className="bg-gray-50 rounded-lg p-6">
-          <h4 className="text-xl font-bold text-gray-800 mb-4">Price Estimate</h4>
+          <h4 className="text-xl font-bold text-gray-800 mb-4" id="price-estimate">Price Estimate</h4>
           <div className="text-center mb-6">
             <div className="text-4xl font-bold text-blue-600 mb-2">
               {formatPrice(estimatedPrice)}
@@ -314,7 +314,7 @@ export const PricingCalculator: React.FC = () => {
 
           {breakdown.length > 0 && (
             <div>
-              <h5 className="font-semibold text-gray-700 mb-3">Cost Breakdown</h5>
+              <h5 className="font-semibold text-gray-700 mb-3" id="cost-breakdown">Cost Breakdown</h5>
               <div className="space-y-2">
                 {breakdown.map((item, index) => (
                   <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200">

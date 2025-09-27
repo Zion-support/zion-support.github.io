@@ -86,7 +86,8 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() =>
+                onClick={() = aria-label="{() => {
+            aria-label="setShowTaskManager(true)}">
               {() => {
             aria-label="setShowTaskManager(true)}
             </button>
@@ -109,7 +110,8 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() =>
+                onClick={() = aria-label="{() => {
+            aria-label="setIsMenuOpen(!isMenuOpen)}">
               {() => {
             aria-label="setIsMenuOpen(!isMenuOpen)}
             </button>
