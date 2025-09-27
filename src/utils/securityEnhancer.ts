@@ -1,476 +1,537 @@
-// Security Enhancement Utilities
+/**
+ * Security Enhancer Utility
+ * Provides comprehensive security features and monitoring
+ */
 
-interface SecurityConfig {
+export interface SecurityConfig {
   enableCSP: boolean;
   enableXSSProtection: boolean;
+  enableCSRFProtection: boolean;
   enableClickjackingProtection: boolean;
+  enableContentSecurityPolicy: boolean;
   enableSecureHeaders: boolean;
   enableInputSanitization: boolean;
-  enableRateLimiting: boolean;
+  enableSecurityMonitoring: boolean;
 }
 
-interface SecurityViolation {
-  type: string;
-  description: string;
-  timestamp: number;
-  url: string;
-  userAgent: string;
-  blocked: boolean;
+export interface SecurityMetrics {
+  xssAttempts: number;
+  csrfAttempts: number;
+  clickjackingAttempts: number;
+  suspiciousActivity: number;
+  blockedRequests: number;
+  securityScore: number;
+  lastSecurityEvent: Date | null;
 }
 
-export class SecurityEnhancer {
+export interface SecurityEvent {
+  type: 'xss' | 'csrf' | 'clickjacking' | 'suspicious' | 'blocked';
+  timestamp: Date;
+  details: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  source: string;
+}
+
+class SecurityEnhancer {
   private static instance: SecurityEnhancer;
   private config: SecurityConfig;
-  private violations: SecurityViolation[] = [];
-  private rateLimitMap: Map<string, { count: number; lastReset: number }> = new Map();
+  private metrics: SecurityMetrics;
+  private events: SecurityEvent[] = [];
+  private isInitialized = false;
+  private observers: MutationObserver[] = [];
 
-  private constructor(config: Partial<SecurityConfig> = {}) {
+  constructor() {
     this.config = {
       enableCSP: true,
       enableXSSProtection: true,
+      enableCSRFProtection: true,
       enableClickjackingProtection: true,
+      enableContentSecurityPolicy: true,
       enableSecureHeaders: true,
       enableInputSanitization: true,
-      enableRateLimiting: true,
-      ...config
+      enableSecurityMonitoring: true
     };
-    this.initialize();
+
+    this.metrics = {
+      xssAttempts: 0,
+      csrfAttempts: 0,
+      clickjackingAttempts: 0,
+      suspiciousActivity: 0,
+      blockedRequests: 0,
+      securityScore: 100,
+      lastSecurityEvent: null
+    };
   }
 
-  public static getInstance(config?: Partial<SecurityConfig>): SecurityEnhancer {
+  public static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
-      SecurityEnhancer.instance = new SecurityEnhancer(config);
+      SecurityEnhancer.instance = new SecurityEnhancer();
     }
     return SecurityEnhancer.instance;
   }
 
-  private initialize(): void {
-    if (this.config.enableCSP) {
-      this.setupContentSecurityPolicy();
-    }
-    if (this.config.enableXSSProtection) {
-      this.enableXSSProtection();
-    }
-    if (this.config.enableClickjackingProtection) {
-      this.enableClickjackingProtection();
-    }
-    if (this.config.enableSecureHeaders) {
-      this.setupSecureHeaders();
-    }
-    if (this.config.enableInputSanitization) {
-      this.setupInputSanitization();
-    }
-    if (this.config.enableRateLimiting) {
-      this.setupRateLimiting();
-    }
+  public initialize(config?: Partial<SecurityConfig>): void {
+    if (this.isInitialized) return;
 
+    this.config = { ...this.config, ...config };
+    
+    this.setupCSP();
+    this.setupXSSProtection();
+    this.setupCSRFProtection();
+    this.setupClickjackingProtection();
+    this.setupSecureHeaders();
+    this.setupInputSanitization();
     this.setupSecurityMonitoring();
+    
+    this.isInitialized = true;
+    console.log('Security Enhancer initialized');
   }
 
-  private setupContentSecurityPolicy(): void {
-    // Set up CSP headers (this would typically be done server-side)
-    const cspDirectives = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https: blob:",
-      "connect-src 'self' https://api.example.com",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "object-src 'none'"
-    ];
+  private setupCSP(): void {
+    if (!this.config.enableContentSecurityPolicy) return;
 
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = cspDirectives.join('; ');
-    document.head.appendChild(meta);
+    meta.content = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https: blob:",
+      "connect-src 'self' https://www.google-analytics.com",
+      "frame-src 'none'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'"
+    ].join('; ');
 
-    // Monitor CSP violations
-    document.addEventListener('securitypolicyviolation', (event) => {
-      this.reportSecurityViolation({
-        type: 'CSP Violation',
-        description: `${event.violatedDirective}: ${event.blockedURI}`,
-        timestamp: Date.now(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        blocked: true
-      });
-    });
+    document.head.appendChild(meta);
   }
 
-  private enableXSSProtection(): void {
-    // XSS Protection header (typically set server-side)
+  private setupXSSProtection(): void {
+    if (!this.config.enableXSSProtection) return;
+
+    // Add XSS protection header
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-XSS-Protection';
     meta.content = '1; mode=block';
     document.head.appendChild(meta);
 
-    // Client-side XSS detection
-    this.setupXSSDetection();
+    // Monitor for XSS attempts
+    this.monitorXSSAttempts();
   }
 
-  private enableClickjackingProtection(): void {
-    // X-Frame-Options header (typically set server-side)
+  private setupCSRFProtection(): void {
+    if (!this.config.enableCSRFProtection) return;
+
+    // Generate CSRF token
+    const csrfToken = this.generateCSRFToken();
+    sessionStorage.setItem('csrf-token', csrfToken);
+
+    // Monitor for CSRF attempts
+    this.monitorCSRFAttempts();
+  }
+
+  private setupClickjackingProtection(): void {
+    if (!this.config.enableClickjackingProtection) return;
+
+    // Add X-Frame-Options header
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Frame-Options';
     meta.content = 'DENY';
     document.head.appendChild(meta);
 
-    // Client-side clickjacking detection
-    if (window.top !== window.self) {
-      this.reportSecurityViolation({
-        type: 'Clickjacking Attempt',
-        description: 'Page loaded in frame',
-        timestamp: Date.now(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        blocked: false
-      });
-    }
+    // Monitor for clickjacking attempts
+    this.monitorClickjackingAttempts();
   }
 
   private setupSecureHeaders(): void {
-    // Additional security headers (typically set server-side)
+    if (!this.config.enableSecureHeaders) return;
+
     const headers = [
-      { name: 'X-Content-Type-Options', value: 'nosniff' },
-      { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
+      { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },
+      { httpEquiv: 'X-Download-Options', content: 'noopen' },
+      { httpEquiv: 'X-Permitted-Cross-Domain-Policies', content: 'none' },
+      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
     ];
 
     headers.forEach(header => {
       const meta = document.createElement('meta');
-      meta.httpEquiv = header.name;
-      meta.content = header.value;
+      meta.httpEquiv = header.httpEquiv;
+      meta.content = header.content;
       document.head.appendChild(meta);
     });
   }
 
   private setupInputSanitization(): void {
-    // Sanitize all form inputs
-    document.addEventListener('input', (event) => {
-      const target = event.target as HTMLInputElement | HTMLTextAreaElement;
-      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
-        const sanitized = this.sanitizeInput(target.value);
-        if (sanitized !== target.value) {
-          target.value = sanitized;
-          this.reportSecurityViolation({
-            type: 'Input Sanitization',
-            description: 'Potentially malicious input detected and sanitized',
-            timestamp: Date.now(),
-            url: window.location.href,
-            userAgent: navigator.userAgent,
-            blocked: true
-          });
-        }
-      }
-    });
-  }
+    if (!this.config.enableInputSanitization) return;
 
-  private setupRateLimiting(): void {
-    // Rate limiting for API calls
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0].toString();
-      const key = this.getRateLimitKey(url);
-      
-      if (this.isRateLimited(key)) {
-        this.reportSecurityViolation({
-          type: 'Rate Limiting',
-          description: `Rate limit exceeded for ${url}`,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          blocked: true
-        });
-        throw new Error('Rate limit exceeded');
-      }
-      
-      this.incrementRateLimit(key);
-      return originalFetch(...args);
-    };
-  }
-
-  private setupXSSDetection(): void {
-    // Monitor for potential XSS attempts
-    const dangerousPatterns = [
-      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-      /javascript:/gi,
-      /on\w+\s*=/gi,
-      /<iframe\b[^>]*>/gi,
-      /<object\b[^>]*>/gi,
-      /<embed\b[^>]*>/gi
-    ];
-
-    // Check URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.forEach((value, key) => {
-      dangerousPatterns.forEach(pattern => {
-        if (pattern.test(value)) {
-          this.reportSecurityViolation({
-            type: 'XSS Attempt',
-            description: `Malicious content detected in URL parameter: ${key}`,
-            timestamp: Date.now(),
-            url: window.location.href,
-            userAgent: navigator.userAgent,
-            blocked: true
-          });
-        }
-      });
-    });
-
-    // Check hash
-    if (window.location.hash) {
-      dangerousPatterns.forEach(pattern => {
-        if (pattern.test(window.location.hash)) {
-          this.reportSecurityViolation({
-            type: 'XSS Attempt',
-            description: 'Malicious content detected in URL hash',
-            timestamp: Date.now(),
-            url: window.location.href,
-            userAgent: navigator.userAgent,
-            blocked: true
-          });
-        }
-      });
-    }
+    // Monitor all input elements
+    this.observeInputElements();
   }
 
   private setupSecurityMonitoring(): void {
-    // Monitor for suspicious activities
+    if (!this.config.enableSecurityMonitoring) return;
+
+    // Monitor for suspicious activity
+    this.monitorSuspiciousActivity();
+    
+    // Monitor network requests
+    this.monitorNetworkRequests();
+    
+    // Monitor DOM changes
+    this.monitorDOMChanges();
+  }
+
+  private monitorXSSAttempts(): void {
+    // Monitor for script injection attempts
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as HTMLElement;
+            
+            // Check for script tags
+            if (element.tagName === 'SCRIPT') {
+              this.recordSecurityEvent('xss', 'Script tag injection attempt', 'high', 'dom');
+              this.metrics.xssAttempts++;
+              element.remove();
+            }
+            
+            // Check for inline event handlers
+            if (element.hasAttribute('onclick') || element.hasAttribute('onload') || element.hasAttribute('onerror')) {
+              this.recordSecurityEvent('xss', 'Inline event handler detected', 'medium', 'dom');
+              this.metrics.xssAttempts++;
+            }
+            
+            // Check for javascript: URLs
+            const links = element.querySelectorAll('a[href^="javascript:"]');
+            if (links.length > 0) {
+              this.recordSecurityEvent('xss', 'JavaScript URL detected', 'medium', 'dom');
+              this.metrics.xssAttempts++;
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['onclick', 'onload', 'onerror', 'href']
+    });
+
+    this.observers.push(observer);
+  }
+
+  private monitorCSRFAttempts(): void {
+    // Monitor form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      const csrfToken = sessionStorage.getItem('csrf-token');
+      const formToken = form.querySelector('input[name="csrf-token"]')?.getAttribute('value');
+      
+      if (csrfToken && formToken !== csrfToken) {
+        this.recordSecurityEvent('csrf', 'CSRF token mismatch', 'high', 'form');
+        this.metrics.csrfAttempts++;
+        event.preventDefault();
+        return false;
+      }
+    });
+
+    // Monitor AJAX requests
+    const originalFetch = window.fetch;
+    window.fetch = (input, init) => {
+      const csrfToken = sessionStorage.getItem('csrf-token');
+      
+      if (init && (init.method === 'POST' || init.method === 'PUT' || init.method === 'DELETE')) {
+        if (!init.headers) {
+          init.headers = {};
+        }
+        
+        if (csrfToken) {
+          (init.headers as any)['X-CSRF-Token'] = csrfToken;
+        }
+      }
+      
+      return originalFetch(input, init);
+    };
+  }
+
+  private monitorClickjackingAttempts(): void {
+    // Check if page is in a frame
+    if (window.top !== window.self) {
+      this.recordSecurityEvent('clickjacking', 'Page loaded in frame', 'high', 'navigation');
+      this.metrics.clickjackingAttempts++;
+      
+      // Redirect to top-level window
+      window.top.location.href = window.self.location.href;
+    }
+
+    // Monitor for frame busting attempts
+    window.addEventListener('beforeunload', () => {
+      if (window.top !== window.self) {
+        this.recordSecurityEvent('clickjacking', 'Frame busting attempt', 'medium', 'navigation');
+      }
+    });
+  }
+
+  private observeInputElements(): void {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as HTMLElement;
+            const inputs = element.querySelectorAll('input, textarea, select');
+            
+            inputs.forEach(input => {
+              this.sanitizeInput(input as HTMLInputElement);
+            });
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    this.observers.push(observer);
+  }
+
+  private sanitizeInput(input: HTMLInputElement): void {
+    // Add input validation
+    input.addEventListener('input', (event) => {
+      const value = (event.target as HTMLInputElement).value;
+      
+      // Check for script tags
+      if (/<script/i.test(value)) {
+        this.recordSecurityEvent('xss', 'Script tag in input', 'high', 'input');
+        (event.target as HTMLInputElement).value = value.replace(/<script[^>]*>.*?<\/script>/gi, '');
+      }
+      
+      // Check for dangerous characters
+      if (/[<>'"]/.test(value) && input.type !== 'password') {
+        this.recordSecurityEvent('xss', 'Potentially dangerous characters in input', 'medium', 'input');
+      }
+    });
+
+    // Add form submission validation
+    const form = input.closest('form');
+    if (form) {
+      form.addEventListener('submit', (event) => {
+        const inputs = form.querySelectorAll('input, textarea, select');
+        let hasViolation = false;
+        
+        inputs.forEach(input => {
+          const value = (input as HTMLInputElement).value;
+          if (/<script/i.test(value)) {
+            hasViolation = true;
+            this.recordSecurityEvent('xss', 'Script tag in form submission', 'high', 'form');
+          }
+        });
+        
+        if (hasViolation) {
+          event.preventDefault();
+          return false;
+        }
+      });
+    }
+  }
+
+  private monitorSuspiciousActivity(): void {
+    // Monitor for rapid clicks (potential bot activity)
     let clickCount = 0;
-    let keyCount = 0;
-    const resetInterval = 10000; // 10 seconds
-
-    document.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount > 100) { // Suspicious rapid clicking
-        this.reportSecurityViolation({
-          type: 'Suspicious Activity',
-          description: 'Rapid clicking detected',
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          blocked: false
-        });
-      }
-    });
-
-    document.addEventListener('keydown', () => {
-      keyCount++;
-      if (keyCount > 500) { // Suspicious rapid typing
-        this.reportSecurityViolation({
-          type: 'Suspicious Activity',
-          description: 'Rapid typing detected',
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          blocked: false
-        });
-      }
-    });
-
-    // Reset counters periodically
-    setInterval(() => {
-      clickCount = 0;
-      keyCount = 0;
-    }, resetInterval);
-
-    // Monitor for developer tools
-    let devtools = false;
-    setInterval(() => {
-      if (window.outerHeight - window.innerHeight > 200 || 
-          window.outerWidth - window.innerWidth > 200) {
-        if (!devtools) {
-          devtools = true;
-          this.reportSecurityViolation({
-            type: 'Developer Tools',
-            description: 'Developer tools opened',
-            timestamp: Date.now(),
-            url: window.location.href,
-            userAgent: navigator.userAgent,
-            blocked: false
-          });
+    let lastClickTime = 0;
+    
+    document.addEventListener('click', (event) => {
+      const now = Date.now();
+      
+      if (now - lastClickTime < 100) {
+        clickCount++;
+        if (clickCount > 10) {
+          this.recordSecurityEvent('suspicious', 'Rapid clicking detected', 'medium', 'user');
+          this.metrics.suspiciousActivity++;
         }
       } else {
-        devtools = false;
+        clickCount = 0;
       }
-    }, 1000);
+      
+      lastClickTime = now;
+    });
+
+    // Monitor for console access attempts
+    const originalConsole = console;
+    Object.keys(console).forEach(key => {
+      const originalMethod = (console as any)[key];
+      (console as any)[key] = (...args: any[]) => {
+        this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
+        return originalMethod.apply(console, args);
+      };
+    });
   }
 
-  private sanitizeInput(input: string): string {
-    // Remove potentially dangerous characters and patterns
-    return input
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^>]*>/gi, '')
-      .replace(/<object\b[^>]*>/gi, '')
-      .replace(/<embed\b[^>]*>/gi, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '')
-      .replace(/[<>]/g, (match) => match === '<' ? '&lt;' : '&gt;');
+  private monitorNetworkRequests(): void {
+    // Monitor fetch requests
+    const originalFetch = window.fetch;
+    window.fetch = (input, init) => {
+      const url = typeof input === 'string' ? input : input.url;
+      
+      // Check for suspicious URLs
+      if (this.isSuspiciousURL(url)) {
+        this.recordSecurityEvent('blocked', `Suspicious URL blocked: ${url}`, 'high', 'network');
+        this.metrics.blockedRequests++;
+        return Promise.reject(new Error('Suspicious URL blocked'));
+      }
+      
+      return originalFetch(input, init);
+    };
+
+    // Monitor XMLHttpRequest
+    const originalXHR = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(method, url, ...args) {
+      if (typeof url === 'string' && this.isSuspiciousURL(url)) {
+        this.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
+        this.metrics.blockedRequests++;
+        throw new Error('Suspicious URL blocked');
+      }
+      
+      return originalXHR.apply(this, [method, url, ...args]);
+    };
   }
 
-  private getRateLimitKey(url: string): string {
-    // Create a key for rate limiting based on URL and user
-    const urlObj = new URL(url, window.location.origin);
-    return `${urlObj.pathname}:${this.getUserIdentifier()}`;
-  }
-
-  private getUserIdentifier(): string {
-    // Get a user identifier (IP would be better, but not available client-side)
-    return navigator.userAgent + window.screen.width + window.screen.height;
-  }
-
-  private isRateLimited(key: string): boolean {
-    const now = Date.now();
-    const limit = this.rateLimitMap.get(key);
-    
-    if (!limit) return false;
-    
-    // Reset if more than 1 minute has passed
-    if (now - limit.lastReset > 60000) {
-      this.rateLimitMap.delete(key);
-      return false;
-    }
-    
-    // Allow max 100 requests per minute
-    return limit.count >= 100;
-  }
-
-  private incrementRateLimit(key: string): void {
-    const now = Date.now();
-    const limit = this.rateLimitMap.get(key);
-    
-    if (!limit || now - limit.lastReset > 60000) {
-      this.rateLimitMap.set(key, { count: 1, lastReset: now });
-    } else {
-      limit.count++;
-    }
-  }
-
-  private reportSecurityViolation(violation: SecurityViolation): void {
-    this.violations.push(violation);
-    
-    // Keep only last 100 violations
-    if (this.violations.length > 100) {
-      this.violations.shift();
-    }
-    
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Security Violation:', violation);
-    }
-    
-    // Report to security service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendSecurityReport(violation);
-    }
-  }
-
-  private async sendSecurityReport(violation: SecurityViolation): Promise<void> {
-    try {
-      await fetch('/api/security/violations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(violation)
+  private monitorDOMChanges(): void {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        // Check for suspicious DOM changes
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const element = node as HTMLElement;
+              
+              // Check for suspicious attributes
+              if (element.hasAttribute('onclick') || element.hasAttribute('onload')) {
+                this.recordSecurityEvent('xss', 'Suspicious attribute detected', 'medium', 'dom');
+              }
+            }
+          });
+        }
       });
-    } catch (error) {
-      console.error('Failed to report security violation:', error);
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true
+    });
+
+    this.observers.push(observer);
+  }
+
+  private isSuspiciousURL(url: string): boolean {
+    const suspiciousPatterns = [
+      /javascript:/i,
+      /data:text\/html/i,
+      /vbscript:/i,
+      /file:/i,
+      /ftp:/i,
+      /localhost/i,
+      /127\.0\.0\.1/i,
+      /0\.0\.0\.0/i
+    ];
+
+    return suspiciousPatterns.some(pattern => pattern.test(url));
+  }
+
+  private generateCSRFToken(): string {
+    const array = new Uint8Array(32);
+    crypto.getRandomValues(array);
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  private recordSecurityEvent(type: SecurityEvent['type'], details: string, severity: SecurityEvent['severity'], source: string): void {
+    const event: SecurityEvent = {
+      type,
+      timestamp: new Date(),
+      details,
+      severity,
+      source
+    };
+
+    this.events.push(event);
+    this.metrics.lastSecurityEvent = new Date();
+    
+    // Keep only last 100 events
+    if (this.events.length > 100) {
+      this.events.shift();
     }
+
+    // Update security score
+    this.updateSecurityScore(event);
+    
+    // Log security event
+    console.warn(`Security Event [${severity.toUpperCase()}]: ${details}`, event);
   }
 
-  public getViolations(): SecurityViolation[] {
-    return [...this.violations];
-  }
-
-  public clearViolations(): void {
-    this.violations = [];
-  }
-
-  public validateURL(url: string): boolean {
-    try {
-      const urlObj = new URL(url);
-      
-      // Check for dangerous protocols
-      const dangerousProtocols = ['javascript:', 'data:', 'vbscript:'];
-      if (dangerousProtocols.includes(urlObj.protocol)) {
-        return false;
-      }
-      
-      // Check for suspicious domains
-      const suspiciousDomains = ['bit.ly', 'tinyurl.com']; // Add more as needed
-      if (suspiciousDomains.includes(urlObj.hostname)) {
-        return false;
-      }
-      
-      return true;
-    } catch {
-      return false;
+  private updateSecurityScore(event: SecurityEvent): void {
+    let penalty = 0;
+    
+    switch (event.severity) {
+      case 'critical':
+        penalty = 20;
+        break;
+      case 'high':
+        penalty = 10;
+        break;
+      case 'medium':
+        penalty = 5;
+        break;
+      case 'low':
+        penalty = 1;
+        break;
     }
+    
+    this.metrics.securityScore = Math.max(0, this.metrics.securityScore - penalty);
   }
 
-  public encryptSensitiveData(data: string): string {
-    // Simple encryption (in production, use proper encryption libraries)
-    return btoa(data);
+  public getMetrics(): SecurityMetrics {
+    return { ...this.metrics };
   }
 
-  public decryptSensitiveData(encryptedData: string): string {
-    try {
-      return atob(encryptedData);
-    } catch {
-      return '';
-    }
+  public getEvents(): SecurityEvent[] {
+    return [...this.events];
+  }
+
+  public getSecurityScore(): number {
+    return this.metrics.securityScore;
+  }
+
+  public generateSecurityReport(): string {
+    const recentEvents = this.events.filter(event => 
+      Date.now() - event.timestamp.getTime() < 24 * 60 * 60 * 1000 // Last 24 hours
+    );
+
+    return `
+Security Report:
+- XSS Attempts: ${this.metrics.xssAttempts}
+- CSRF Attempts: ${this.metrics.csrfAttempts}
+- Clickjacking Attempts: ${this.metrics.clickjackingAttempts}
+- Suspicious Activity: ${this.metrics.suspiciousActivity}
+- Blocked Requests: ${this.metrics.blockedRequests}
+- Security Score: ${this.metrics.securityScore}/100
+- Recent Events (24h): ${recentEvents.length}
+- Last Security Event: ${this.metrics.lastSecurityEvent?.toISOString() || 'None'}
+    `.trim();
   }
 
   public cleanup(): void {
-    this.violations = [];
-    this.rateLimitMap.clear();
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
   }
 }
 
-// Utility functions
-export const enhanceSecurity = (config?: Partial<SecurityConfig>) => {
-  return SecurityEnhancer.getInstance(config);
-};
-
-export const sanitizeHTML = (html: string): string => {
-  const div = document.createElement('div');
-  div.textContent = html;
-  return div.innerHTML;
-};
-
-export const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-
-export const validatePassword = (password: string): { valid: boolean; errors: string[] } => {
-  const errors: string[] = [];
-  
-  if (password.length < 8) {
-    errors.push('Password must be at least 8 characters long');
-  }
-  
-  if (!/[A-Z]/.test(password)) {
-    errors.push('Password must contain at least one uppercase letter');
-  }
-  
-  if (!/[a-z]/.test(password)) {
-    errors.push('Password must contain at least one lowercase letter');
-  }
-  
-  if (!/\d/.test(password)) {
-    errors.push('Password must contain at least one number');
-  }
-  
-  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-    errors.push('Password must contain at least one special character');
-  }
-  
-  return { valid: errors.length === 0, errors };
-};
-
-// Initialize security enhancer
-export const securityEnhancer = SecurityEnhancer.getInstance();
+export default SecurityEnhancer;

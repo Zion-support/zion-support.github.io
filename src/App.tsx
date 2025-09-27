@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
@@ -20,20 +20,28 @@ import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/pe
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
 import { enhancedSecurityManager } from './utils/enhancedSecurity';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
+import AccessibilityEnhancer from './utils/accessibilityEnhancer';
+import SecurityEnhancer from './utils/securityEnhancer';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import './index.css';
 import './styles/notifications.css';
+import './styles/system-metrics.css';
 
 export default function App(): React.JSX.Element {
   // Initialize performance optimizations
   const { preloadResource, recordMetric } = usePerformanceOptimization();
+  
+  // State for system metrics dashboard
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading Technology Solutions',
-    description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
-    keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
     ogType: 'website',
-    ogUrl: window.location.href,
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
     structuredData: [
@@ -43,11 +51,16 @@ export default function App(): React.JSX.Element {
   }), []);
 
   useEffect(() => {
-    // Initialize error reporting
+    // Initialize error reporting with enhanced configuration
     initializeErrorReporting();
     
-    // Initialize build optimizations
+    // Initialize build optimizations with performance monitoring
     initOptimizations();
+    
+    // Add performance marks for better monitoring
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-start');
+    }
     
     // Initialize security features
     SecurityManager.getInstance();
@@ -61,6 +74,44 @@ export default function App(): React.JSX.Element {
     // Initialize enhanced accessibility manager
     enhancedAccessibilityManager.initialize();
     
+    // Initialize advanced performance monitor
+    const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+    advancedPerformanceMonitor.configure({
+      enableRealTimeMonitoring: true,
+      enableMemoryTracking: true,
+      enableNetworkTracking: true,
+      enableRenderTracking: true,
+      reportInterval: 5000,
+      maxMetricsHistory: 100
+    });
+    advancedPerformanceMonitor.startMonitoring();
+    
+    // Initialize accessibility enhancer
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    accessibilityEnhancer.initialize({
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrastMode: true,
+      enableReducedMotion: true,
+      enableFocusIndicators: true,
+      enableAriaLabels: true,
+      announceChanges: true,
+      enableSkipLinks: true
+    });
+    
+    // Initialize security enhancer
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    securityEnhancer.initialize({
+      enableCSP: true,
+      enableXSSProtection: true,
+      enableCSRFProtection: true,
+      enableClickjackingProtection: true,
+      enableContentSecurityPolicy: true,
+      enableSecureHeaders: true,
+      enableInputSanitization: true,
+      enableSecurityMonitoring: true
+    });
+    
     // Initialize advanced performance optimizer
     advancedPerformanceOptimizer.addResourceHints();
     advancedPerformanceOptimizer.optimizeCriticalCSS();
@@ -68,7 +119,10 @@ export default function App(): React.JSX.Element {
     
     // Register service worker for offline support and caching
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
+      })
         .then((registration) => {
           console.log('Service Worker registered successfully:', registration);
           
@@ -78,17 +132,29 @@ export default function App(): React.JSX.Element {
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-                  if (window.confirm('New version available! Reload to update?')) {
-                    window.location.reload();
-                  }
+                  // New content is available - show user-friendly notification
+                  notificationManager.info(
+                    'Update Available',
+                    'A new version of the application is available. Click to update.',
+                    {
+                      duration: 10000,
+                      onClick: () => window.location.reload()
+                    }
+                  );
                 }
               });
             }
           });
+          
+          // Check for updates every 60 seconds
+          setInterval(() => {
+            registration.update();
+          }, 60000);
         })
         .catch((error) => {
           console.error('Service Worker registration failed:', error);
+          // Track the error for monitoring
+          recordMetric('serviceWorkerRegistrationError', 1);
         });
     }
     
@@ -186,43 +252,72 @@ export default function App(): React.JSX.Element {
     // Set default SEO data
     seoManager.updateSEO(seoData);
 
-    // Track user engagement
+    // Track user engagement with throttling for better performance
     let startTime = Date.now();
     let scrollDepth = 0;
     let clicks = 0;
+    let scrollTimeout: NodeJS.Timeout;
+    let clickTimeout: NodeJS.Timeout;
 
     const trackEngagement = () => {
       const timeOnPage = Date.now() - startTime;
       seoAnalytics.trackUserEngagement(window.location.pathname, {
         timeOnPage,
         scrollDepth,
-        clicks
+        clicks,
+        userAgent: navigator.userAgent,
+        viewport: `${window.innerWidth}x${window.innerHeight}`,
+        connection: (navigator as any).connection?.effectiveType || 'unknown'
       });
     };
 
-    // Track scroll depth
+    // Track scroll depth with throttling
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
       scrollDepth = Math.max(scrollDepth, scrollTop / documentHeight);
+      
+      // Throttle scroll tracking
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        recordMetric('scrollDepth', scrollDepth);
+      }, 100);
     };
 
-    // Track clicks
+    // Track clicks with debouncing
     const handleClick = (event: Event) => {
       clicks++;
-      recordMetric('userClicks', 1);
       
-      // Track specific interaction types
-      const target = event.target as HTMLElement;
-      if (target.tagName === 'BUTTON') {
-        recordMetric('buttonClicks', 1);
-      } else if (target.tagName === 'A') {
-        recordMetric('linkClicks', 1);
-      }
+      // Debounce click tracking
+      clearTimeout(clickTimeout);
+      clickTimeout = setTimeout(() => {
+        recordMetric('userClicks', clicks);
+        
+        // Track specific interaction types
+        const target = event.target as HTMLElement;
+        if (target.tagName === 'BUTTON') {
+          recordMetric('buttonClicks', 1);
+        } else if (target.tagName === 'A') {
+          recordMetric('linkClicks', 1);
+        } else if (target.tagName === 'INPUT') {
+          recordMetric('inputClicks', 1);
+        }
+      }, 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClick);
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+    
+    // Handle system dashboard toggle (Ctrl/Cmd + Shift + D)
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+        event.preventDefault();
+        setShowSystemDashboard(prev => !prev);
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeyDown);
 
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
@@ -239,8 +334,28 @@ export default function App(): React.JSX.Element {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Clear timeouts
+      clearTimeout(scrollTimeout);
+      clearTimeout(clickTimeout);
+      
+      // Stop monitoring
       memoryMonitor.stopMonitoring();
+      
+      // Cleanup new utilities
+      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      advancedPerformanceMonitor.stopMonitoring();
+      
+      const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+      accessibilityEnhancer.cleanup();
+      
+      const securityEnhancer = SecurityEnhancer.getInstance();
+      securityEnhancer.cleanup();
+      
+      // Final engagement tracking
+      trackEngagement();
     };
   }, [preloadResource, recordMetric, seoData]);
 
@@ -249,6 +364,10 @@ export default function App(): React.JSX.Element {
       <AppRouter />
       <PerformanceDashboard />
       <RealTimeMonitor />
+      <SystemMetricsDashboard 
+        isVisible={showSystemDashboard}
+        onClose={() => setShowSystemDashboard(false)}
+      />
     </>
   );
 }
