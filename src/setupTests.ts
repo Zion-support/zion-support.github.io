@@ -55,7 +55,8 @@ global.PerformanceObserver = class PerformanceObserver {
   disconnect() {}
   observe() {}
   takeRecords() { return []; }
-};
+  static readonly supportedEntryTypes: readonly string[] = [];
+} as unknown as typeof PerformanceObserver;
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
