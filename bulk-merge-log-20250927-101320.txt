@@ -26715,3 +26715,28 @@ src/context/auth/AuthProvider.jsx
 [2025-09-27 10:20:09] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-072829...
 [2025-09-27 10:20:09] 📦 Package file: prefer main version
 [2025-09-27 10:20:09] ✅ Resolved conflicts in package.json
+[2025-09-27 10:20:10] ✅ Successfully resolved conflicts and merged backup-main-20250926-072829
+[2025-09-27 10:20:10] ✅ Branch backup-main-20250926-072829 processed successfully
+[2025-09-27 10:20:10] 📊 Batch progress: 29 successful, 0 failed
+[2025-09-27 10:20:10] 📊 Overall progress: 29 successful, 0 failed, 5975 conflicts resolved
+[2025-09-27 10:20:10] 📋 Processing branch 30: backup-main-20250926-074009
+[2025-09-27 10:20:10] 🔄 Attempting to merge backup-main-20250926-074009...
+[2025-09-27 10:20:11] ✅ Successfully merged backup-main-20250926-074009
+[2025-09-27 10:20:12] ✅ Branch backup-main-20250926-074009 processed successfully
+[2025-09-27 10:20:12] 📊 Batch progress: 30 successful, 0 failed
+[2025-09-27 10:20:12] 📊 Overall progress: 30 successful, 0 failed, 5975 conflicts resolved
+[2025-09-27 10:20:12] 📋 Processing branch 31: backup-main-20250926-074423
+[2025-09-27 10:20:13] 🔄 Attempting to merge backup-main-20250926-074423...
+[2025-09-27 10:20:13] ⚠️  Merge conflicts detected in backup-main-20250926-074423, resolving...
+[2025-09-27 10:20:13] 📋 Conflicted files: App.tsx
+package-lock.json
+package.json
+src/pages/about.tsx
+[2025-09-27 10:20:13] 🔧 Resolving conflicts in App.tsx for branch backup-main-20250926-074423...
+[2025-09-27 10:20:13] 🔧 Resolving conflicts in package-lock.json for branch backup-main-20250926-074423...
+[2025-09-27 10:20:13] 📦 Package file: prefer main version
+[2025-09-27 10:20:13] ✅ Resolved conflicts in package-lock.json
+[2025-09-27 10:20:13] 🔧 Resolving conflicts in package.json for branch backup-main-20250926-074423...
+[2025-09-27 10:20:13] 📦 Package file: prefer main version
+[2025-09-27 10:20:13] ✅ Resolved conflicts in package.json
+[2025-09-27 10:20:13] 🔧 Resolving conflicts in src/pages/about.tsx for branch backup-main-20250926-074423...
