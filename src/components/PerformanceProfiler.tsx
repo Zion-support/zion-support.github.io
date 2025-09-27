@@ -40,11 +40,6 @@ const PerformanceProfiler: React.FC = () => {
   
   const observerRef = useRef<PerformanceObserver | null>(null);
 
-  // Only render in development mode
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
   const collectPerformanceData = useCallback(() => {
     const now = Date.now();
     
@@ -55,8 +50,10 @@ const PerformanceProfiler: React.FC = () => {
     
     const fcp = fcpEntry ? fcpEntry.startTime : 0;
     const lcp = performance.getEntriesByName('largest-contentful-paint')[0]?.startTime || performance.now();
-    const fid = performance.getEntriesByName('first-input')[0]?.processingStart || 0;
-    const cls = performance.getEntriesByName('layout-shift')[0]?.value || 0;
+    const fidEntry = performance.getEntriesByName('first-input')[0] as any;
+    const fid = fidEntry?.processingStart || 0;
+    const clsEntry = performance.getEntriesByName('layout-shift')[0] as any;
+    const cls = clsEntry?.value || 0;
     const ttfb = navigation ? navigation.responseStart - navigation.requestStart : 0;
     const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
     
@@ -135,6 +132,11 @@ const PerformanceProfiler: React.FC = () => {
       }
     };
   }, [isProfiling, startProfiling]);
+
+  // Only render in development mode
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
   const updateComponentPerformance = (componentName: string, duration: number) => {
     setComponentData(prev => {
