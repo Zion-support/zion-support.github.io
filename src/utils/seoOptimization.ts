@@ -63,10 +63,23 @@ export class SEOOptimizer {
   }
 
   private setupBasicMeta(): void {
-    this.setMetaTag('charset', 'utf-8', '');
+    this.setCharsetMeta('utf-8');
     this.setMetaTag('name', 'generator', 'React with Vite');
     this.setMetaTag('name', 'theme-color', '#1f2937');
     this.setMetaTag('name', 'msapplication-TileColor', '#1f2937');
+  }
+
+  private setCharsetMeta(charset: string): void {
+    const selector = 'meta[charset]';
+    let meta = document.querySelector(selector) as HTMLMetaElement;
+
+    if (meta) {
+      meta.setAttribute('charset', charset);
+    } else {
+      meta = document.createElement('meta');
+      meta.setAttribute('charset', charset);
+      document.head.appendChild(meta);
+    }
   }
 
   private setupViewport(): void {

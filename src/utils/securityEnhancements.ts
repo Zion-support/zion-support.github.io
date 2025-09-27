@@ -274,7 +274,7 @@ export class SecurityManager {
     );
   }
 
-  private reportSecurityEvent(type: string, details: unknown): void {
+  private reportSecurityEvent(type: string, details: Record<string, unknown>): void {
     // In a real application, this would send to your security monitoring service
     console.warn(`Security Event [${type}]:`, details);
     

@@ -5,14 +5,17 @@ import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
-import { performanceOptimizer } from './utils/optimization';
+import { PerformanceOptimizer } from './utils/performanceOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
-import { securityManager } from './utils/securityEnhancements';
+import { SecurityManager } from './utils/securityEnhancements';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
 import './index.css';
 import './styles/notifications.css';
 
@@ -26,6 +29,7 @@ export default function App(): React.JSX.Element {
     description: 'Innovative technology solutions and consulting services for modern businesses. Expert development, cloud services, and digital transformation.',
     keywords: ['technology', 'consulting', 'development', 'cloud services', 'digital transformation'],
     ogType: 'website',
+    ogUrl: window.location.href,
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
     structuredData: [
@@ -41,7 +45,39 @@ export default function App(): React.JSX.Element {
     // Initialize build optimizations
     initOptimizations();
     
-    // Security features are automatically initialized in SecurityManager constructor
+    // Initialize security features
+    SecurityManager.getInstance();
+    
+    // Initialize advanced performance optimizer
+    advancedPerformanceOptimizer.addResourceHints();
+    advancedPerformanceOptimizer.optimizeCriticalCSS();
+    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
+    
+    // Register service worker for offline support and caching
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+          
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New content is available
+                  if (window.confirm('New version available! Reload to update?')) {
+                    window.location.reload();
+                  }
+                }
+              });
+            }
+          });
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
     
     // Initialize performance monitoring
     const performanceMonitor = PerformanceMonitor.getInstance();
@@ -69,8 +105,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     
     // Initialize advanced performance optimizer
-    performanceOptimizer.preloadCriticalResources();
-    performanceOptimizer.optimizeImages();
+    const performanceOptimizer = PerformanceOptimizer.getInstance();
+    performanceOptimizer.addResourceHints();
+    performanceOptimizer.optimizeCriticalCSS();
+    performanceOptimizer.setupWebVitalsMonitoring();
 
     // Initialize analytics system
     analytics.initialize();
@@ -82,12 +120,13 @@ export default function App(): React.JSX.Element {
       description: seoData.description,
       keywords: seoData.keywords,
       image: seoData.ogImage,
-      type: seoData.ogType as 'website' | 'article' | 'product',
-      url: window.location.href
+      url: window.location.href,
+      type: seoData.ogType as 'website' | 'article' | 'product'
     });
 
     // Initialize enhanced security features
-    securityManager.monitorSecurityEvents();
+    const securityManagerInstance = SecurityManager.getInstance();
+    securityManagerInstance.monitorSecurityEvents();
 
     // Initialize cache manager
     cacheManager.configure({
@@ -120,6 +159,12 @@ export default function App(): React.JSX.Element {
 
     // Show welcome notification
     notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
+
+    // Show welcome feedback
+    userFeedback.showSuccess(
+      'Welcome!',
+      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
+    );
 
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
@@ -186,5 +231,10 @@ export default function App(): React.JSX.Element {
     };
   }, [preloadResource, recordMetric, seoData]);
 
-  return <AppRouter />;
+  return (
+    <>
+      <AppRouter />
+      <PerformanceDashboard />
+    </>
+  );
 }

@@ -242,37 +242,48 @@ class ErrorReporter {
       customData?: Record<string, unknown>;
     } = {}
   ) {
-    const report: ErrorReport = {
-      id: this.generateErrorId(),
-      error: {
-        name: error.name,
-        message: error.message,
-        stack: error.stack,
-        cause: (error as Error & { cause?: unknown }).cause
-      },
-      context: this.getErrorContext(options.customData),
-      category: options.category || 'javascript',
-      severity: options.severity || 'medium',
-      tags: options.tags || []
-    };
-
-    // Add to reports array
-    this.reports.push(report);
-
-    // Keep only the most recent reports
-    if (this.reports.length > this.maxReports) {
-      this.reports = this.reports.slice(-this.maxReports);
+    // Prevent recursive error reporting
+    if (this.isReporting) {
+      return;
     }
 
-    // Send to monitoring service
-    this.sendToMonitoringService(report);
+    this.isReporting = true;
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group(`🚨 Error Report [${report.severity}]`);
-      console.error('Error:', error);
-      console.log('Report:', report);
-      console.groupEnd();
+    try {
+      const report: ErrorReport = {
+        id: this.generateErrorId(),
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+          cause: (error as Error & { cause?: unknown }).cause
+        },
+        context: this.getErrorContext(options.customData),
+        category: options.category || 'javascript',
+        severity: options.severity || 'medium',
+        tags: options.tags || []
+      };
+
+      // Add to reports array
+      this.reports.push(report);
+
+      // Keep only the most recent reports
+      if (this.reports.length > this.maxReports) {
+        this.reports = this.reports.slice(-this.maxReports);
+      }
+
+      // Send to monitoring service
+      this.sendToMonitoringService(report);
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.group(`🚨 Error Report [${report.severity}]`);
+        console.error('Error:', error);
+        console.log('Report:', report);
+        console.groupEnd();
+      }
+    } finally {
+      this.isReporting = false;
     }
   }
 
