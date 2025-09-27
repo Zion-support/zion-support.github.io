@@ -1,198 +1,199 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {  useState,  useEffect  } from 'react';
+import { useState, useEffect } from 'react';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 const About = React.memo(function About(): JSX.Element { 
-  const [  isVisible,    setIsVisible  ] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-   }, []););
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  constteamMembe rs = [
+  const teamMembers = [
     {
-      name: 'Sar ah Johns on'
-      ro le: 'CEO & Found er'
-      experti se: 'Strateg ic Leadersh ip AI Innovati on'
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      expertise: 'Strategic Leadership & AI Innovation',
       image: '👩‍💼',
-		description: '1 5+ yea rs in technolo gy leadersh ip form er VP at maj or te ch compani es.'
-    }
+      description: '15+ years in technology leadership, former VP at major tech companies.'
+    },
     {
-      name: 'Micha el Ch en'
-      ro le: 'CTO'
-      experti se: 'Clo ud Architectu re DevO ps'
+      name: 'Michael Chen',
+      role: 'CTO',
+      expertise: 'Cloud Architecture & DevOps',
       image: '👨‍💻',
-		description: 'Expe rt in scalab le clo ud solutio ns and mode rn developme nt practic es.'
-    }
+      description: 'Expert in scalable cloud solutions and modern development practices.'
+    },
     {
-      name: 'Emi ly Rodrigu ez'
-      ro le: 'Le ad Design er'
-      experti se: 'UX/UI Desi gn Produ ct Strate gy'
+      name: 'Emily Rodriguez',
+      role: 'Lead Designer',
+      expertise: 'UX/UI Design & Product Strategy',
       image: '👩‍🎨',
-		description: 'Awa rd-winni ng design er wi th experti se in us er-center ed desi gn principl es.'
-    }
+      description: 'Award-winning designer with expertise in user-centered design principles.'
+    },
     {
-      name: 'Dav id Kim'
-      ro le: 'Seni or Develop er'
-      experti se: 'Fu ll-Sta ck Developme nt AI/ML'
+      name: 'David Kim',
+      role: 'Senior Developer',
+      expertise: 'Full-Stack Development & AI/ML',
       image: '👨‍💻',
-		description: 'Fu ll-sta ck develop er specializi ng in AI integrati on and mode rn web technologi es.'
+      description: 'Full-stack developer specializing in AI integration and modern web technologies.'
     }
   ];
 
-  constvalu es = [
+  const values = [
     {
-      tit le: 'Innovati on Fir st'
-      description: 'We st ay at the forefro nt of technolo gy constant ly explori ng new possibiliti es and pushi ng the boundari es of wh at\'spossib le.'
-      ic on: '🚀'
-      col or: 'bl ue'
-    }
+      title: 'Innovation First',
+      description: 'We stay at the forefront of technology, constantly exploring new possibilities and pushing the boundaries of what\'s possible.',
+      icon: '🚀',
+      color: 'blue'
+    },
     {
-      tit le: 'Clie nt Succe ss'
-      description: 'Yo ur succe ss is our succe ss. We&ap os;re committ ed to deliveri ng solutio ns th at dri ve re al busine ss val ue and grow th.'
-      ic on: '🎯'
-      col or: 'gre en'
-    }
+      title: 'Client Success',
+      description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value and growth.',
+      icon: '🎯',
+      color: 'green'
+    },
     {
-      tit le: 'Quali ty Excellen ce'
-      description: 'We mainta in the highe st standar ds in everythi ng we do fromc od equali ty to us er experien ce.'
-      ic on: '⭐'
-      col or: 'yell ow'
-    }
+      title: 'Quality Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to user experience.',
+      icon: '⭐',
+      color: 'yellow'
+    },
     {
-      tit le: 'Transpare nt Communicati on'
-      description: 'Cle ar hone st communicati on is the foundati on of our relationshi ps wi th clien ts and te am membe rs.'
-      ic on: '💬'
-      col or: 'purp le'
-    }
+      title: 'Transparent Communication',
+      description: 'Clear, honest communication is the foundation of our relationships with clients and team members.',
+      icon: '💬',
+      color: 'purple'
+    },
     {
-      tit le: 'Continuo us Learni ng'
-      description: 'We embra ce chan ge and continuous ly lea rn ada pt and impro ve to st ay aheadi nthe fa st-pac ed te ch wor ld.'
-      ic on: '📚'
-      col or: 'indi go'
-    }
+      title: 'Continuous Learning',
+      description: 'We embrace change and continuously learn, adapt, and improve to stay ahead in the fast-paced tech world.',
+      icon: '📚',
+      color: 'indigo'
+    },
     {
-      tit le: 'Collaborati ve Approa ch'
-      description: 'We belie ve in the pow er of collaborati on worki ng as an extensi on of yo ur te am to achie ve shar ed goa ls and mutu al succe ss.'
-      ic on: '🤝'
-      col or: 'oran ge'
+      title: 'Collaborative Approach',
+      description: 'We believe in the power of collaboration, working as an extension of your team to achieve shared goals and mutual success.',
+      icon: '🤝',
+      color: 'orange'
     }
   ];
 
-  conststa ts = [
-    { number: '10 0+' lab el: 'Projec ts Complet ed' }
-    { number: '5 0+' lab el: 'Hap py Clien ts' }
-    { number: '1 0+' lab el: 'Yea rs Experien ce' }
-    { number: '2 4/7' lab el: 'Suppo rt Availab le' }
+  const stats = [
+    { number: '100+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '10+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <>
       <SEO />
       <Head>
-        <title>AboutU s - Zi on App</title>
-        <metaname="description" content="Lea rn abo ut Zi on App'smissi on valu es and commitme nt to deliveri ng cutti ng-ed ge technolo gy solutio ns." />
-        <metaname="viewpo rt" content="wid th=devi ce-wid th initi al-sca le=1" />
+        <title>About Us - Zion App</title>
+        <meta name="description" content="Learn about Zion App's mission, values, and commitment to delivering cutting-edge technology solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div classNa me="min-h-scre en bg-gradie nt-to-br from-bl ue-5 0 to-indi go-10 0 pt-2 0">
-        <div classNa me="contain er mx-au to px-4 p y-8 max-w-7xl">
-          <nav classNa me="mb-8">
-            <Linkhref="/" classNa me="te xt-bl ue-60 0 hov er:te xt-bl ue-80 0 fo nt-medi um transiti on-colo rs">
-              ← Ba ck to Ho me
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
             </Link>
           </nav>
 
-          <head er classNa me="te xt-cent er mb-1 6">
-            <h 1 classNa me="te xt-5xl md:te xt-6xl fo nt-bo ld te xt-bl ue-60 0 mb-4 b g-gradie nt-to-rfrom-bl ue-60 0 to-indi go-60 0 bg-cl ip-te xt te xt-transpare nt">
-              AboutZ io nApp
-            </h 1>
-            <pclassNa me="te xt-xl te xt-gr ay-60 0 max-w-3xl mx-au to leadi ng-relax ed">
-              We&ap os;re at ea mo fpassiona te technologis ts dedicat ed to transformi ng business es throu gh innovati ve solutio ns and cutti ng-ed ge technolo gy.
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              About Zion App
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We're a team of passionate technologists dedicated to transforming businesses through innovative solutions and cutting-edge technology.
             </p>
-          </head er>
+          </header>
 
-          {/* Missi on Secti on */}
-          <secti on classNa me="mb-2 0">
-            <div classNa me="bg-whi te round ed-2xl shad ow-xl p-8 m d:p-1 2">
-              <div classNa me="te xt-cent er mb-1 2">
-                <h 2 classNa me="te xt-4xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Our Missi on</h 2>
-                <pclassNa me="te xt-xl te xt-gr ay-60 0 leadi ng-relax ed max-w-4xl mx-au to">
-                  To empow er business es wi th innovati ve technolo gy solutio ns th at dri ve grow th efficien cy and succe ss in the digit al age.
+          {/* Mission Section */}
+          <section className="mb-20">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                  To empower businesses with innovative technology solutions that drive growth, efficiency, and success in the digital age.
                 </p>
               </div>
             </div>
-          </secti on>
+          </section>
 
-          {/* Valu es Secti on */}
-          <secti on classNa me="mb-2 0">
-            <h 2 classNa me="te xt-4xl fo nt-bo ld te xt-cent er te xt-gr ay-90 0 mb-1 6">Our Valu es</h 2>
-            <div classNa me="gr id gr id-co ls-1 m d:gr id-co ls-2 l g:gr id-co ls-3 gap-8">
-              {valu es.map((val ue ind ex) => (
-                <div key={ind ex} classNa me="bg-whi te round ed-xl p-6 shad ow-lg hov er:shad ow-xl transiti on-shad ow durati on-30 0">
-                  <div classNa me="te xt-4xl mb-4">{val ue.ic on}</div>
-                  <h 3 classNa me="te xt-xl fo nt-semibo ld te xt-gr ay-90 0 mb-3">{val ue.tit le}</h 3>
-                  <pclassNa me="te xt-gr ay-60 0 leadi ng-relax ed">{val ue.description}</p>
+          {/* Values Section */}
+          <section className="mb-20">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl mb-4">{value.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
                 </div>
               ))}
             </div>
-          </secti on>
+          </section>
 
-          {/* Te am Secti on */}
-          <secti on classNa me="mb-2 0">
-            <h 2 classNa me="te xt-4xl fo nt-bo ld te xt-cent er te xt-gr ay-90 0 mb-1 6">Me et Our Te am</h 2>
-            <div classNa me="gr id gr id-co ls-1 m d:gr id-co ls-2 l g:gr id-co ls-4 gap-8">
-              {teamMembe rs.map((memb er ind ex) => (
-                <div key={ind ex} classNa me="bg-whi te round ed-xl p-6 shad ow-lg hov er:shad ow-xl transiti on-shad ow durati on-30 0 te xt-cent er">
-                  <div classNa me="te xt-6xl mb-4">{memb er.image}</div>
-                  <h 3 classNa me="te xt-xl fo nt-semibo ld te xt-gr ay-90 0 mb-2">{memb er.na me}</h 3>
-                  <pclassNa me="te xt-bl ue-60 0 fo nt-medi um mb-2">{memb er.ro le}</p>
-                  <pclassNa me="te xt-sm te xt-gr ay-50 0 mb-3">{memb er.experti se}</p>
-                  <pclassNa me="te xt-gr ay-60 0 te xt-sm leadi ng-relax ed">{memb er.description}</p>
+          {/* Team Section */}
+          <section className="mb-20">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Meet Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                  <div className="text-6xl mb-4">{member.image}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-gray-500 mb-3">{member.expertise}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                 </div>
               ))}
             </div>
-          </secti on>
+          </section>
 
-          {/* Sta ts Secti on */}
-          <secti on classNa me="mb-2 0">
-            <div classNa me="bg-gradie nt-to-rfrom-bl ue-60 0 to-indi go-60 0 round ed-2xl p-8 m d:p-1 2 te xt-whi te">
-              <h 2 classNa me="te xt-4xl fo nt-bo ld te xt-cent er mb-1 2">Our Impa ct</h 2>
-              <div classNa me="gr id gr id-co ls-2 m d:gr id-co ls-4 gap-8">
-                {sta ts.map((st at ind ex) => (
-                  <div key={ind ex} classNa me="te xt-cent er">
-                    <div classNa me="te xt-4xl md:te xt-5xl fo nt-bo ld mb-2">{st at.number}</div>
-                    <div classNa me="te xt-bl ue-10 0">{st at.lab el}</div>
+          {/* Stats Section */}
+          <section className="mb-20">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
+              <h2 className="text-4xl font-bold text-center mb-12">Our Impact</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+                    <div className="text-blue-100">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
-          </secti on>
+          </section>
 
-          {/* CTA Secti on */}
-          <secti on classNa me="te xt-cent er">
-            <div classNa me="bg-whi te round ed-2xl shad ow-xl p-8 m d:p-1 2">
-              <h 2 classNa me="te xt-4xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Rea dy to Wo rk Wi th Us?</h 2>
-              <pclassNa me="te xt-xl te xt-gr ay-60 0 mb-8 max-w-2xl mx-au to">
-                Let&ap os;sdiscu ss how we can he lp transfo rm yo ur busine ss wi th cutti ng-ed ge technolo gy solutio ns.
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with cutting-edge technology solutions.
               </p>
-              <div classNa me="fl ex fl ex-col sm:fl ex-row gap-4 justi fy-cent er">
-                <Linkhref="/conta ct" classNa me="bg-bl ue-60 0 te xt-whi te px-8 p y-3 round ed-lg fo nt-semibo ld hov er:bg-bl ue-70 0 transiti on-colo rs">
-                  Get In Tou ch
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Get In Touch
                 </Link>
-                <Linkhref="/servic es" classNa me="bord er-2 bord er-bl ue-60 0 te xt-bl ue-60 0 px-8 p y-3 round ed-lg fo nt-semibo ld hov er:bg-bl ue-60 0 hov er:te xt-whi te transiti on-colo rs">
-                  Vi ew Our Servic es
+                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                  View Our Services
                 </Link>
               </div>
             </div>
-          </secti on>
+          </section>
         </div>
       </div>
     </>
-  )});
+  );
+});
 
-exportdefaultAbout;
+export default About;

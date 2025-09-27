@@ -1,20 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
 
-interf a c e SEOPr o p s {
-  ti t l e?: str i n g;
-  description?: str i n g;
-  keywo r d s?: str i n g[];
-  image?: str i n g;
-  ur l?: str i n g;
-  type?: str i n g;
-  twitterC a r d?: str i n g;
-  canonical U r l?: str i n g}
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: string;
+  twitterCard?: string;
+  canonicalUrl?: string;
+}
 
-const SEO: React.F C<SEOPr o p s> = ({
-  ti t l e = 'Z i o n Ap p - Advan c e d Technol o g y Solutions'
-  description = 'Z i o n Ap p provi d e s cutt i n g-e d g e A I Cl o u d Infrastruct u r e an d Digi t a l Transformat i o n soluti o n s t o empo w e r busines s e s.'
-  keywo r d s = ['A I soluti o n s' 'cl o u d infrastruct u r e' 'digi t a l transformat i o n' 'busin e s s technol o g y' 'automat i o n' 'mach i n e learn i n g' 'artific i a l intellige n c e']
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion App - Advanced Technology Solutions',
+  description = 'Zion App provides cutting-edge AI, Cloud Infrastructure and Digital Transformation solutions to empower businesses.',
+  keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business technology', 'automation', 'machine learning', 'artificial intelligence']
   image = '/ima g e s/o g-image.jp g' // Defa u l t O p e n Gr a p h image
   ur l = 'ht t p s://ziontechgr o u p.co m' // Defa u l t canoni c a l UR L
   type = 'website' // Defa u l t O p e n Gr a p h type

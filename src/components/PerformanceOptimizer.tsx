@@ -1,4 +1,4 @@
-import React { useEffect useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 
 interface PerformanceOptimizerProps {
@@ -7,14 +7,14 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean}
 
 export default function PerformanceOptimizer({ 
-  enableServiceWorker = true
-  enableLazyLoading = true
+  enableServiceWorker = true,
+  enableLazyLoading = true,
   enableImageOptimization = true
 }: PerformanceOptimizerProps) {
-  const [isOptimized setIsOptimized] = useState(false);
-  const [memoryUsage setMemoryUsage] = useState({
-    used: 0
-    total: 0
+  const [isOptimized, setIsOptimized] = useState(false);
+  const [memoryUsage, setMemoryUsage] = useState({
+    used: 0,
+    total: 0,
     percentage: 0
   });
 

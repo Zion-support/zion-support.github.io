@@ -1,45 +1,46 @@
-import React { useState useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Services(): JSX.Element {
-  const [isVisible setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
   const serviceDetails = {
     'ai-ml': {
-      title: 'AI & Machine Learning'
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.'
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
       features: [
-        'Natural Language Processing (NLP)'
-        'Computer Vision & Image Recognition'
-        'Predictive Analytics'
+        'Natural Language Processing (NLP)',
+        'Computer Vision & Image Recognition',
+        'Predictive Analytics',
         'Automated Decision Making'
       ]
-    }
+    },
     'cloud': {
-      title: 'Cloud Infrastructure'
-      description: 'Scalable secure and reliable cloud solutions tailored to your business needs.'
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure and reliable cloud solutions tailored to your business needs.',
       features: [
-        'Cloud Migration'
-        'Infrastructure as Code'
-        'Auto-scaling Solutions'
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Auto-scaling Solutions',
         'Disaster Recovery'
       ]
-    }
+    },
     'cybersecurity': {
-      title: 'Cybersecurity'
-      description: 'Protect your business with comprehensive security solutions and best practices.'
+      title: 'Cybersecurity',
+      description: 'Protect your business with comprehensive security solutions and best practices.',
       features: [
-        'Security Audits'
-        'Threat Detection'
-        'Data Protection'
+        'Security Audits',
+        'Threat Detection',
+        'Data Protection',
         'Compliance Management'
       ]
     }

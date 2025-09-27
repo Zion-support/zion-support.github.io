@@ -13,58 +13,61 @@ export default function Contact(): JSX.Element {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)} []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 
-  consthandleInputChan ge = (e: React.ChangeEve nt<HTMLInputEleme nt | HTMLTextAreaEleme nt>) => {
-    const { na me val ue } = e.targ et;
-    setFormData(pr ev => ({
-      ...pr ev
-      [na me]: val ue
-    }))};
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-  consthandleSubm it = async (e: React.FormEve nt) => {
-    e.preventDefau lt();
-    setIsSubmitti ng(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
     
-    // Simula te fo rm submissi on
-    awa it new Promi se(resol ve => setTimeo ut(resol ve 2 0 0 0));
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
-    setIsSubmitti ng(false);
-    trackClick('conta ct-fo rm-subm it' 'conversi on');
-    ale rt('Tha nk you for yo ur messa ge! We\'ll get ba ck to you so on.');
+    setIsSubmitting(false);
+    trackClick('contact-form-submit', 'conversion');
+    alert('Thank you for your message! We\'ll get back to you soon.');
     
-    // Res et fo rm
+    // Reset form
     setFormData({
       name: '',
-		email: ''
-      compa ny: ''
+      email: '',
+      company: '',
       subject: '',
       message: ''
-    })};
+    });
+  };
 
-  constcontactIn fo = [
+  const contactInfo = [
     {
-      ic on: '📧'
-      tit le: 'Ema il Us'
-      detai ls: 'hel lo@ziona pp.com'
-      description: 'Se nd us an ema il and we\'ll respo nd with in 2 4 hou rs.'
-    }
+      icon: '📧',
+      title: 'Email Us',
+      details: 'hello@zionapp.com',
+      description: 'Send us an email and we\'ll respond within 24 hours.'
+    },
     {
-      ic on: '📞'
-      tit le: 'Ca ll Us'
-      detai ls: '+1 (55 5) 12 3-4 5 6 7'
+      icon: '📞',
+      title: 'Call Us',
+      details: '+1 (555) 123-4567',
       description: 'Mon-Fri from 9am to 6pm EST'
-    }
+    },
     {
-      ic on: '📍'
-      tit le: 'Vis it Us'
-      detai ls: '12 3 Te ch Stre et Silic on Vall ey CA 94 0 0 0'
-      description: 'Co me say hel lo at our offi ce'
+      icon: '📍',
+      title: 'Visit Us',
+      details: '123 Tech Street, Silicon Valley, CA 94000',
+      description: 'Come say hello at our office'
     }
   ];
 
@@ -72,145 +75,145 @@ export default function Contact(): JSX.Element {
     <>
       <SEO />
       <Head>
-        <title>ContactU s - Zi on App</title>
-        <metaname="description" content="Get in tou ch wi th Zi on App. We're he re to he lp you transfo rm yo ur busine ss wi th cutti ng-ed ge technolo gy solutio ns." />
-        <metaname="viewpo rt" content="wid th=devi ce-wid th initi al-sca le=1" />
+        <title>Contact Us - Zion App</title>
+        <meta name="description" content="Get in touch with Zion App. We're here to help you transform your business with cutting-edge technology solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div classNa me="min-h-scre en bg-gradie nt-to-br from-bl ue-5 0 to-indi go-10 0 pt-2 0">
-        <div classNa me="contain er mx-au to px-4 p y-8 max-w-7xl">
-          <nav classNa me="mb-8">
-            <Linkhref="/" classNa me="te xt-bl ue-60 0 hov er:te xt-bl ue-80 0 fo nt-medi um transiti on-colo rs">
-              ← Ba ck to Ho me
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
             </Link>
           </nav>
 
-          <head er classNa me="te xt-cent er mb-1 6">
-            <h 1 classNa me="te xt-5xl md:te xt-6xl fo nt-bo ld te xt-gr ay-90 0 mb-6">
-              ContactU s
-            </h 1>
-            <pclassNa me="te xt-xl te xt-gr ay-60 0 max-w-3xl mx-au to">
-              Rea dy to transfo rm yo ur busine ss? Let&ap os;sdiscu ss how we can he lp you achie ve yo ur goa ls.
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss how we can help you achieve your goals.
             </p>
-          </head er>
+          </header>
 
-          <div classNa me="gr id gr id-co ls-1 l g:gr id-co ls-2 gap-1 2">
-            {/* ContactF or m */}
-            <div classNa me="bg-whi te round ed-2xl shad ow-xl p-8">
-              <h 2 classNa me="te xt-2xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Se nd us aMessa ge</h 2>
-              <fo rm onSubm it={handleSubm it} classNa me="spa ce-y-6">
-                <div classNa me="gr id gr id-co ls-1 m d:gr id-co ls-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <lab el htmlF or="na me" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
-                      Fu ll Na me *
-                    </lab el>
-                    <inp ut
-                      type="te xt"
-                      id="na me"
-                      name="na me"
-                      val ue={formData.na me}
-                      onChan ge={handleInputChan ge}
-                      requir ed
-                      classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
-                      placehold er="Yo ur fu ll na me"
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <lab el htmlF or="ema il" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
-                      Ema il Addre ss *
-                    </lab el>
-                    <inp ut
-                      type="ema il"
-                      id="ema il"
-                      name="ema il"
-                      val ue={formData.ema il}
-                      onChan ge={handleInputChan ge}
-                      requir ed
-                      classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
-                      placehold er="yo ur.ema il@examp le.com"
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
                 <div>
-                  <lab el htmlF or="compa ny" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
-                    Compa ny
-                  </lab el>
-                  <inp ut
-                    type="te xt"
-                    id="compa ny"
-                    name="compa ny"
-                    val ue={formData.compa ny}
-                    onChan ge={handleInputChan ge}
-                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
-                    placehold er="Yo ur compa ny na me"
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your company name"
                   />
                 </div>
                 <div>
-                  <lab el htmlF or="subje ct" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
-                    Subje ct *
-                  </lab el>
-                  <inp ut
-                    type="te xt"
-                    id="subje ct"
-                    name="subje ct"
-                    val ue={formData.subje ct}
-                    onChan ge={handleInputChan ge}
-                    requir ed
-                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
-                    placehold er="Wh at can we he lp you wi th?"
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="What can we help you with?"
                   />
                 </div>
                 <div>
-                  <lab el htmlF or="messa ge" classNa me="blo ck te xt-sm fo nt-medi um te xt-gr ay-70 0 mb-2">
-                    Messa ge *
-                  </lab el>
-                  <textar ea
-                    id="messa ge"
-                    name="messa ge"
-                    val ue={formData.messa ge}
-                    onChan ge={handleInputChan ge}
-                    requir ed
-                    ro ws={6}
-                    classNa me="w-fu ll px-4 p y-3 bord er bord er-gr ay-30 0 round ed-lg foc us:ri ng-2 foc us:ri ng-bl ue-50 0 foc us:bord er-transpare nt"
-                    placehold er="Te ll us abo ut yo ur proje ct or questi on..."
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project or question..."
                   />
                 </div>
-                <butt on
-                  type="subm it"
-                  disabl ed={isSubmitti ng}
-                  classNa me="w-fu ll bg-bl ue-60 0 te xt-whi te py-3 p x-6 round ed-lg fo nt-semibo ld hov er:bg-bl ue-70 0 transiti on-colo rs disabl ed:opaci ty-5 0 disabl ed:curs or-not-allow ed"
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitti ng ? 'Sendi ng...' : 'Se nd Messa ge'}
-                </butt on>
-              </fo rm>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
             </div>
 
-            {/* ContactInformati on */}
-            <div classNa me="spa ce-y-8">
+            {/* Contact Information */}
+            <div className="space-y-8">
               <div>
-                <h 2 classNa me="te xt-2xl fo nt-bo ld te xt-gr ay-90 0 mb-6">Get in Tou ch</h 2>
-                <pclassNa me="te xt-gr ay-60 0 mb-8">
-                  We&ap os;re he re to he lp you succe ed. Rea ch out to us throu gh any of the channe ls bel ow and we&ap os;ll get ba ck to you as so on as possib le.
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                <p className="text-gray-600 mb-8">
+                  We're here to help you succeed. Reach out to us through any of the channels below and we'll get back to you as soon as possible.
                 </p>
               </div>
 
-              <div classNa me="spa ce-y-6">
-                {contactIn fo.map((in fo ind ex) => (
-                  <div key={ind ex} classNa me="fl ex ite ms-sta rt spa ce-x-4 p-6 b g-whi te round ed-xl shad ow-lg">
-                    <div classNa me="te xt-3xl">{in fo.ic on}</div>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg">
+                    <div className="text-3xl">{info.icon}</div>
                     <div>
-                      <h 3 classNa me="te xt-lg fo nt-semibo ld te xt-gr ay-90 0 mb-2">{in fo.tit le}</h 3>
-                      <pclassNa me="te xt-bl ue-60 0 fo nt-medi um mb-1">{in fo.detai ls}</p>
-                      <pclassNa me="te xt-gr ay-60 0 te xt-sm">{in fo.description}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                      <p className="text-blue-600 font-medium mb-1">{info.details}</p>
+                      <p className="text-gray-600 text-sm">{info.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div classNa me="bg-bl ue-5 0 round ed-xl p-6">
-                <h 3 classNa me="te xt-lg fo nt-semibo ld te xt-gr ay-90 0 mb-3">Respon se Ti me</h 3>
-                <pclassNa me="te xt-gr ay-60 0 te xt-sm">
-                  We typical ly respo nd to all inquiri es with in 2 4 hou rs duri ng busine ss da ys. 
-                  For urge nt matte rs plea se ca ll us direct ly.
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Response Time</h3>
+                <p className="text-gray-600 text-sm">
+                  We typically respond to all inquiries within 24 hours during business days. 
+                  For urgent matters please call us directly.
                 </p>
               </div>
             </div>
@@ -218,4 +221,5 @@ export default function Contact(): JSX.Element {
         </div>
       </div>
     </>
-  )}
+  );
+}

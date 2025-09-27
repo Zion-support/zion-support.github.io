@@ -19,11 +19,12 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
       images.forEach((img) => {
         if (!img.getAttribute('alt')) {
           issues.push({
-            type: 'error'
-            message: 'Image missing alt attribute'
-            element: img
+            type: 'error',
+            message: 'Image missing alt attribute',
+            element: img,
             rule: 'img-alt'
-          })}
+          });
+        }
       });
       
       // Check for missing form labels
@@ -32,17 +33,20 @@ export default function AccessibilityAuditor({ onIssuesFound }: AccessibilityAud
         const id = input.getAttribute('id');
         if (id && !document.querySelector(`label[for="${id}"]`)) {
           issues.push({
-            type: 'warning'
-            message: 'Input missing associated label'
-            element: input as HTMLElement
+            type: 'warning',
+            message: 'Input missing associated label',
+            element: input as HTMLElement,
             rule: 'label'
-          })}
+          });
+        }
       });
       
       if (onIssuesFound) {
-        onIssuesFound(issues)}
+        onIssuesFound(issues);
+      }
     };
     
-    checkAccessibility()} [onIssuesFound]);
+    checkAccessibility();
+  }, [onIssuesFound]);
   
   return null}
