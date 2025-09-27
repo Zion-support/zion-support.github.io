@@ -63,8 +63,8 @@ const PerformanceMonitor: React.FC<{ show?: boolean }> = ({ show = false }) => {
         fid,
         cls,
         ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - (navigation as any).navigationStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - (navigation as any).navigationStart
+        loadTime: navigation.loadEventEnd - navigation.navigationStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart
       });
     };
 
