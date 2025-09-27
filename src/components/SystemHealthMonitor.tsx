@@ -59,7 +59,7 @@ export const SystemHealthMonitor: React.FC = () => {
     <div className="p-6bg-white rounded-lgshadow-lg">
       <div className="flex items-center justify-between mb-6">
         <h2className="text-2xl font-bold">System Health Monitor</h2>
-        <div className="{"`px-3py-1rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
+        <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(health.status)}`}
           {health.status.toUpperCase()}
         </div>
       </div>

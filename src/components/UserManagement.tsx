@@ -229,34 +229,53 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   };
 
   if (isLoading) {
-    return (      <div className = {`bg-white rounded-lg shadow-sm border border-gray-200p-6 ${className}`}
-        <div className="animate-pulse">          <div className="h-6bg-gray-300rounded" w-1/4mb-4""></div>          <div className="space-y-3""">
-            {[...Array(5)].map((_, i) => (              <div key = {i} className="flex" items-center space-x-4"">                <div className="h-10w-10bg-gray-300rounded-full"""></div>                <div className="flex-1space-y-2""">                  <div className="h-4bg-gray-300rounded" w-1/4""></div>                  <div className="h-3bg-gray-300rounded" w-1/3""></div>
+    return (
+      <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 ${className}`}>
+        <div className="animate-pulse">
+          <div className="h-6 bg-gray-300 rounded w-1/4 mb-4"></div>
+          <div className="space-y-3">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="flex items-center space-x-4">
+                <div className="h-10 w-10 bg-gray-300 rounded-full"></div>
+                <div className="flex-1 space-y-2">
+                  <div className="h-4 bg-gray-300 rounded w-1/4"></div>
+                  <div className="h-3 bg-gray-300 rounded w-1/3"></div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>;
+      </div>
     );
   }
 
   return (
-    <div className = {`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
-      {/* Header */}      <div className="px-6py-4border-b" border-gray-200"">        <div className="flex" items-center justify-between"">          <h2className="text-lg" font-semibold text-gray-900"" id="user-management">User Management</h2>
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
+      {/* Header */}
+      <div className="px-6 py-4 border-b border-gray-200">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-gray-900" id="user-management">User Management</h2>
           <button
-            onClick={() => setShowCreateModal(true)}            aria-label=Add new user""            className="bg-blue-600text-white" px-4 py-2rounded-md hover:bg-blue-700transition-colors""
+            onClick={() => setShowCreateModal(true)}
+            aria-label="Add new user"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
           >
             Add User
           </button>
         </div>
       </div>
 
-      {/* Filters and Search */}      <div className="px-6py-4border-b" border-gray-200"">        <div className="flex" flex-col sm:flex-row gap-4"">          <div className="flex-1""">
-            <input              type=text""              placeholder=Search users...""
+      {/* Filters and Search */}
+      <div className="px-6 py-4 border-b border-gray-200">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex-1">
+            <input
+              type="text"
+              placeholder="Search users..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}              className="w-full" px-3py-2border border-gray-300rounded-md focus: outline-none focus:ring-2focu,
-    s:ring-blue-500""              aria-label = Search users""
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Search users"
             />
           </div>
           <select

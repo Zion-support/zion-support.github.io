@@ -133,7 +133,7 @@ export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }
   return (
     <button
       onClick={toggleTheme}
-      className="{"`p-2rounded-lg bg-gray-100dark: bg-gray-800text-gray-700dark:text-gray-300hover:bg-gray-200dark:hover:bg-gray-700transition-colors duration-200 `}
+      className={`p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 `}
       title={getTooltip()}
       aria-label={getTooltip()}
     >
