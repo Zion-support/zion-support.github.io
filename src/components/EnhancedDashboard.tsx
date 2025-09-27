@@ -61,7 +61,7 @@ const sampleData = {
 
 const defaultWidgets: DashboardWidget[] = [
   {
-    id: 'revenue-chart',
+    i, d: 'revenue-chart',
     title: 'Revenue Overview',
     type: 'chart',
     data: sampleData.revenue,
@@ -88,7 +88,7 @@ const defaultWidgets: DashboardWidget[] = [
     id: 'total-revenue',
     title: 'Total Revenue',
     type: 'metric',
-    data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },
+    data: { value: '$45,231', change: '+12.5%', trend: 'up' },
     size: 'small',
     position: { x: 2, y: 0 }
   },
@@ -96,7 +96,7 @@ const defaultWidgets: DashboardWidget[] = [
     id: 'active-users',
     title: 'Active Users',
     type: 'metric',
-    data: { valu, e: '2,847', change: '+8.2%', trend: 'up' },
+    data: { value: '2,847', change: '+8.2%', trend: 'up' },
     size: 'small',
     position: { x: 2, y: 1 }
   },
@@ -104,7 +104,7 @@ const defaultWidgets: DashboardWidget[] = [
     id: 'conversion-rate',
     title: 'Conversion Rate',
     type: 'metric',
-    data: { valu, e: '3.24%', change: '-2.1%', trend: 'down' },
+    data: { value: '3.24%', change: '-2.1%', trend: 'down' },
     size: 'small',
     position: { x: 2, y: 2 }
   }
@@ -166,7 +166,7 @@ export default function EnhancedDashboard({
                 dataKey="value"
               >
                 {data.map((entry: any, index: number) => (
-                  <Cell key={`cell-${index}` } fill={entry.color} />
+                  <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
               <Tooltip />
@@ -196,13 +196,10 @@ export default function EnhancedDashboard({
 
   const renderMetric = (data: any) => (
     <div className="text-center">
-
-      <div className="text-3 xl font-bold text-gray-900 mb-2">{data.value}</div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+      <div className="text-3xl font-bold text-gray-900 mb-2">{data.value}</div>
       <div className={`flex items-center justify-center text-sm ${
         data.trend === 'up' ? 'text-green-600' : 'text-red-600'
-      }`}
-
+      }`}>
         <span className="mr-1">{data.trend === 'up' ? '↗' : '↘'}</span>
         {data.change}
       </div>
@@ -222,22 +219,19 @@ export default function EnhancedDashboard({
         className={`bg-white rounded-lg shadow-lg p-6 ${sizeClasses[widget.size]} ${
           selectedWidget === widget.id ? 'ring-2ring-blue-500' : ''
         }`}
-
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
         whileHover={{ scale: 1.02 }}
         onClick={() => setSelectedWidget(widget.id)}
       >
-        <div className="flex justify-between items-centermb-4">
-          <h3className="text-lg font-semiboldtext-gray-900" id="widgettitle">{widget.title}</h3>
-          <div className="flexspace-x-2">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold text-gray-900" id="widgettitle">{widget.title}</h3>
+          <div className="flex space-x-2">
             {enableResize && (
-
               <button className="text-gray-400 hover:text-gray-600">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55m11-1V4m00 h-4m40l-55M416v4m00h4 m-40l5-5m115l-5-5m55v-4m04 h-4" />
                 </svg>
               </button>
             )}
@@ -249,17 +243,13 @@ export default function EnhancedDashboard({
                   setIsFullscreen(true);
                 }}
               >
-
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="002424">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55 m 11-1V 4 m00 h-4m40 l-55M416v 4 m00 h4 m-40 l5-5m 115 l-5-5m55 v-4m04 h-4" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M48V4m00h4M44 l55m11-1V4m00 h-4m40l-55M416v4m00h4 m-40l5-5m115l-5-5m55v-4m04 h-4" />
                 </svg>
               </button>
             )}
           </div>
-        </div>
-        
-        <div className="h-64">
+        </div> <div className="h-64">
           {widget.type === 'chart' ? renderChart(widget) : renderMetric(widget.data)}
         </div>
       </motion.div>
@@ -270,9 +260,7 @@ export default function EnhancedDashboard({
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+          <div className="animate-spin rounded-full h-12 w-12 border -b-2 border -blue-600mx-auto mb-4"></div>
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
@@ -280,27 +268,20 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0z-50' : ''}`}
-
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
       <div className="p-6">
-        <div className="flex justify-between items-centermb-8">
+        <div className="flex justify-between items-center mb-8">
           <div>
-
-            <h 1 className="text-3 xl font-boldtext-gray-900" id="dashboard">Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900" id="dashboard">Dashboard</h1>
             <p className="text-gray-600">Monitor your business metrics and performance</p>
-          </div>
-          <div className="flexspace-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Export Data">
+          </div> <div className="flex space-x-4">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors" aria-label="Export Data">
               Export Data
-            </button>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors" aria-label="Settings">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+            </button> <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300transition-colors" aria-label="Settings">
               Settings
             </button>
           </div>
-        </div>
-
-        <div className="grid grid-cols-3 gap-6 auto-rows-min">
+        </div> <div className="grid grid-cols-3ga p-6auto-rows-min">
           {dashboardWidgets.map(renderWidget)}
         </div>
       </div>
@@ -309,41 +290,32 @@ export default function EnhancedDashboard({
       <AnimatePresence>
         {isFullscreen && selectedWidget && (
           <motion.div
-
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-centerz-50"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsFullscreen(false)}
           >
             <motion.div
-
-              className="bg-white rounded-lg p-8 max-w-6 xl max-h-[90 vh]overflow-auto"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+              className="bg-white rounded-lg p-8 max-w-6xl max-h-[90vh]overflow-auto"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2 xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                <h2 className="text-2xl font-bold text-gray-900" id="dashboardwidgetsfindw-wid-selectedwidgettitle">{dashboardWidgets.find(w =</w.id === selectedWidget)?.title}
+                >
                 <button
                   onClick={() => setIsFullscreen(false)}
                   className="text-gray-400 hover:text-gray-600"
                 >
-
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="002424">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66 l 1212" />
-
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M66l1212" />
                   </svg>
                 </button>
-              </div>
-              <div className="h-96">{renderChart(dashboardWidgets.find(w => w.id === selectedWidget)!)}
-              </div>
+              </div> <div className="h-96">{renderChart(dashboardWidgets.find(w =</w.id === selectedWidget)!)}
+              >
             </motion.div>
           </motion.div>
         )}
