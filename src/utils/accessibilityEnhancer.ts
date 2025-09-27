@@ -112,12 +112,12 @@ class AccessibilityEnhancer {
 
       // Handle tab navigation
       if (event.key === 'Tab') {
-        this.handleTabNavigation(event);
+        this.handleTabNavigation();
       }
 
       // Handle escape key
       if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
     });
   }
