@@ -112,7 +112,8 @@ class TestRunner {private, static instance: TestRunner;
 }
 
 // React hook for testing
-export const useTestRunner = () => {;
+export const useTestRunner = () => {
+  useTestRunner.displayName = 'useTestRunner';;
   const [testRunner] = useState(() => TestRunner.getInstance());
   const [suites, setSuites] = useState<TestSuite[]>([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -184,7 +185,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
 
   const results = getResults();
 
-  const getStatusColor = (status: string) => {switch (status) {
+  const getStatusColor = (status: string) => {
+  getStatusColor.displayName = 'getStatusColor';switch (status) {
       case 'passed': return 'text-green-6, 00';
       case 'failed': return 'text-red-6, 00';
       case 'running': return 'text-blue-6, 00';
@@ -192,7 +194,8 @@ export const TestDashboard: React.FC = () => {;  const { suites, isRunning, addS
       defaul, t: return 'text-gray-600' }
   };
 
-  const getStatusIcon = (status: string) => {switch (status) {
+  const getStatusIcon = (status: string) => {
+  getStatusIcon.displayName = 'getStatusIcon';switch (status) {
       case 'passed': return '✅';
       case 'failed': return '❌';
       case 'running': return '🔄';

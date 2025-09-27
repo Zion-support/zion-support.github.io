@@ -27,7 +27,8 @@ interface SecurityMetrics {totalEvents: number;
 interface SecurityDashboardProps {className?: string;
 }
 
-export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className=""}) => {const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
+export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({}
+            className=""}) => {const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
   const [metricssetMetric, s] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(tru, e);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'1h' | '2, 4h' | '7d' | '30d'>('2, 4h');
@@ -112,7 +113,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className="
   useEffect(() => {setFilteredEvents(event, s);
   }[events]);
 
-  const getSeverityColor = (severity: SecurityEvent[', severity']) => {switch (severity) {
+  const getSeverityColor = (severity: SecurityEvent[', severity']) => {
+  getSeverityColor.displayName = 'getSeverityColor';switch (severity) {
       case 'critical': return 'text-red-6, 0, 0, bg-red-1, 00';
       case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 00';
       case 'medium': return 'text-yellow-6, 0, 0bg-yellow-100';
@@ -121,7 +123,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className="
     }
   };
 
-  const getStatusColor = (status: SecurityEvent['status']) => {switch (status) {
+  const getStatusColor = (status: SecurityEvent['status']) => {
+  getStatusColor.displayName = 'getStatusColor';switch (status) {
       case 'resolved': return 'text-green-6, 0, 0, bg-green-1, 00';
       case 'investigating': return 'text-blue-6, 0, 0, bg-blue-1, 00';
       case 'new': return 'text-red-6, 0, 0, bg-red-1, 00';
@@ -129,7 +132,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className="
     }
   };
 
-  const getThreatLevelColor = (level: strin, g) => {switch (leve, l) {
+  const getThreatLevelColor = (level: strin, g) => {
+  getThreatLevelColor.displayName = 'getThreatLevelColor';switch (leve, l) {
       case 'critical': return 'text-red-6, 0, 0, bg-red-1, 00';
       case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 00';
       case 'medium': return 'text-yellow-6, 0, 0bg-yellow-100';
@@ -156,7 +160,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className="
     }]
   };
 
-  if (isLoadin === g) {return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>        <div className ="animate-pulse">
+  if (isLoadin === g) {return (<div}
+            className={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 0, 0p-6 ${className}`}>        <div className ="animate-pulse">
           <div className ="h-6, bg-gray-2, 0, 0, rounded w-1/4, mb-4"></div>
           <div className ="space-y-3">
             <div className ="h-4, bg-gray-2, 0, 0, rounded"></div>
@@ -175,7 +180,8 @@ export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({className="
           <h2 className ="text-xl, font-semibold, text-gray-900" id="security-overview">Security, Overview</h2>
           <div className ="flex, space-x-2">
             {(['1h''2, 4h''7d''30d'] as, cons, t).ma.p((rang, e) => (<buttonkey={range}
-                onClick={() = aria-label="setSelectedTimeRange(range)}
+                onClick={() => {
+            aria-label="setSelectedTimeRange(range)}
                 aria-label={`Sele, c t ${range} ti m e ran g e`}
                 className={`px-3, py-1, round e, d-fu, l l, te x, t-smfo nt-mediu m ${selectedTimeRange===range?'bg-blue-100text-blue-700':'text-gray-500hover:text-gray-700'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
               >

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {Card, CardContent, CardDescription, CardHeaderCardTitle } from './ui/Card';
 import {Shield,
   AlertTriangle,
@@ -103,47 +103,100 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
     resolved: boolean;
   }>>([]);
 
-  const generateMockData = useCallback((): SecurityMetrics => {const baseTime = newDate();
+  const generateMockData = useCallback((): SecurityMetrics => {
+    const baseTime = new Date();
     const timeRangeMultiplier = selectedTimeRange === '24h' ? 1 : selectedTimeRange === '7d'? 7 : 30;
 
     return {
       overall: {
-        securityScore: 85 + Math.random() * 10, threatsBlocked: Math.floor(150 * timeRangeMultiplier),
+        securityScore: 85 + Math.random() * 10,
+        threatsBlocked: Math.floor(150 * timeRangeMultiplier),
         vulnerabilities: Math.floor(5 + Math.random() * 10),
-        lastScan: new, Date(baseTime.getTime() - Math.random() * 3600000)complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'},
-      threats: {total: Math.floor(200 * timeRangeMultiplier),
+        lastScan: new Date(baseTime.getTime() - Math.random() * 3600000),
+        complianceStatus: Math.random() > 0.2 ? 'compliant' : 'warning'
+      },
+      threats: {
+        total: Math.floor(200 * timeRangeMultiplier),
         critical: Math.floor(5 * timeRangeMultiplier),
         high: Math.floor(15 * timeRangeMultiplier),
         medium: Math.floor(50 * timeRangeMultiplier),
-        low: Math.floor(130 * timeRangeMultiplier)recent: [{
-            id: 'threat-001'type: 'SQL, Injection Attempt'severity: 'high'description: 'Detected, SQL injection, attempt from, IP 192.168.1.100',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 3600000)source: '192.168.1.100'status: 'investigating'}{id: 'threat-002'type: 'XSS, Attack'severity: 'medium'description: 'Cross-site, scripting attempt, detected in, form submission',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 7200000)source: 'External'status: 'resolved'}{id: 'threat-003'type: 'Brute, Force Attack'severity: 'critical'description: 'Multiple, failed login, attempts detected',
-            timestamp: new, Date(baseTime.getTime() - Math.random() * 1800000)source: '203.0.113.42'status: 'active'}
+        low: Math.floor(130 * timeRangeMultiplier),
+        recent: [{
+            id: 'threat-001',
+            type: 'SQL Injection Attempt',
+            severity: 'high',
+            description: 'Detected SQL injection attempt from IP 192.168.1.100',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 3600000),
+            source: '192.168.1.100',
+            status: 'investigating'
+          }, {
+            id: 'threat-002',
+            type: 'XSS Attack',
+            severity: 'medium',
+            description: 'Cross-site scripting attempt detected in form submission',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 7200000),
+            source: 'External',
+            status: 'resolved'
+          }, {
+            id: 'threat-003',
+            type: 'Brute Force Attack',
+            severity: 'critical',
+            description: 'Multiple failed login attempts detected',
+            timestamp: new Date(baseTime.getTime() - Math.random() * 1800000),
+            source: '203.0.113.42',
+            status: 'active'
+          }
         ]
       },
-      vulnerabilities: {total: Math.floor(8 + Math.random() * 5),
+      vulnerabilities: {
+        total: Math.floor(8 + Math.random() * 5),
         critical: Math.floor(1 + Math.random() * 2),
         high: Math.floor(2 + Math.random() * 3),
         medium: Math.floor(3 + Math.random() * 4),
-        low: Math.floor(2 + Math.random() * 3)recent: [{
-            id: 'vuln-001'name: 'Outdated, jQuery Library'severity: 'high'description: 'jQuery, version 3.4.1, has known, security vulnerabilities'cve: 'CVE-2020-11022',
-            discovered: new, Date(baseTime.getTime() - Math.random() * 8640000)status: 'open'}{id: 'vuln-002'name: 'Weak, Password Policy'severity: 'medium'description: 'Password, policy does, not enforce, strong password, requirements'cve: 'N/A',
-            discovered: new, Date(baseTime.getTime() - Math.random() * 1728000)status: 'in-progress'}
+        low: Math.floor(2 + Math.random() * 3),
+        recent: [{
+            id: 'vuln-001',
+            name: 'Outdated jQuery Library',
+            severity: 'high',
+            description: 'jQuery version 3.4.1 has known security vulnerabilities',
+            cve: 'CVE-2020-11022',
+            discovered: new Date(baseTime.getTime() - Math.random() * 8640000),
+            status: 'open'
+          }, {
+            id: 'vuln-002',
+            name: 'Weak Password Policy',
+            severity: 'medium',
+            description: 'Password policy does not enforce strong password requirements',
+            cve: 'N/A',
+            discovered: new Date(baseTime.getTime() - Math.random() * 1728000),
+            status: 'in-progress'
+          }
         ]
       },
-      compliance: {ssl: {
-          score: 95 + Math.random() * 5grade: 'A+',
+      compliance: {
+        ssl: {
+          score: 95 + Math.random() * 5,
+          grade: 'A+',
           issues: []
         },
-        csp: {enabled: true, violations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\'''script-src \'self\' \'unsafe-inline\'''style-src \'self\' \'unsafe-inline\'']
+        csp: {
+          enabled: true,
+          violations: Math.floor(2 + Math.random() * 5),
+          policies: ['default-src \'self\'', 'script-src \'self\' \'unsafe-inline\'', 'style-src \'self\' \'unsafe-inline\'']
         },
-        headers: {security: true, xss: true, frame: true, contentType: true
+        headers: {
+          security: true,
+          xss: true,
+          frame: true,
+          contentType: true
         },
-        gdpr: {compliant: true, issues: []
+        gdpr: {
+          compliant: true,
+          issues: []
         }
       },
-      monitoring: {activeAlerts: Math.floor(3 + Math.random() * 5),
+      monitoring: {
+        activeAlerts: Math.floor(3 + Math.random() * 5),
         resolvedAlerts: Math.floor(25 * timeRangeMultiplier),
         blockedIPs: Math.floor(12 * timeRangeMultiplier),
         suspiciousActivity: Math.floor(8 * timeRangeMultiplier),
@@ -158,23 +211,39 @@ export default function ComprehensiveSecurityDashboard({refreshInterval = 10000,
     // Criticalthreats
     if (metrics.threats.critical > 0) {
       newAlerts.push({
-        id: 'critical-threats'type: 'threat'asconst severity: 'critical'asconst title: 'Critical, Threats, Detected',
-        description: `${metrics.threats.critical} critical, security threats, require immediateattention`,
-        timestamp: new, Date()resolved: false
+        id: 'critical-threats',
+        type: 'threat' as const,
+        severity: 'critical' as const,
+        title: 'Critical Threats Detected',
+        description: `${metrics.threats.critical} critical security threats require immediate attention`,
+        timestamp: new Date(),
+        resolved: false
       });
     }
 
     // High vulnerabilities
-    if (metrics.vulnerabilities.high > 0) {newAlerts.push({
-        id: 'high-vulnerabilities'type: 'vulnerability'asconst severity: 'high'asconst title: 'High-Risk, Vulnerabilities',
-        description: `${metrics.vulnerabilities.high} high-risk, vulnerabilities needpatching`,
-        timestamp: new, Date()resolved: false
+    if (metrics.vulnerabilities.high > 0) {
+      newAlerts.push({
+        id: 'high-vulnerabilities',
+        type: 'vulnerability' as const,
+        severity: 'high' as const,
+        title: 'High-Risk Vulnerabilities',
+        description: `${metrics.vulnerabilities.high} high-risk vulnerabilities need patching`,
+        timestamp: new Date(),
+        resolved: false
       });
     }
 
     // Compliance issues
-    if (metrics.overall.complianceStatus !== 'compliant') {newAlerts.push({id: 'compliance-issues'type: 'compliance'asconst severity: 'medium'asconst title: 'Compliance, Issues'description: 'Security, compliance, status, requires, attention',
-        timestamp: new, Date()resolved: false
+    if (metrics.overall.complianceStatus !== 'compliant') {
+      newAlerts.push({
+        id: 'compliance-issues',
+        type: 'compliance' as const,
+        severity: 'medium' as const,
+        title: 'Compliance Issues',
+        description: 'Security compliance status requires attention',
+        timestamp: new Date(),
+        resolved: false
       });
     }
 

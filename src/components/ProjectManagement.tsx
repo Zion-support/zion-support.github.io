@@ -21,7 +21,8 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
 
   const [selectedStatussetSelectedStatu] = useState<string>('all');
 
-  const getStatusColor = (status: Project['status']) => {const colors = {
+  const getStatusColor = (status: Project['status']) => {
+  getStatusColor.displayName = 'getStatusColor';const colors = {
       planning: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-8, 0, 0, dark:text-blue-2, 00',
       'in-progress': 'bg-yellow-100, dark:bg-yellow-90, 0, text-yellow-8, 0, 0, dark:text-yellow-2, 00',
       review: 'bg-purple-1, 0, 0, dark:bg-purple-90, 0, text-purple-8, 0, 0, dark:text-purple-2, 00',
@@ -29,7 +30,8 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     };
     return colors[status];  };
 
-  const getPriorityColor = (priority: Project['priority']) => {const colors = {
+  const getPriorityColor = (priority: Project['priority']) => {
+  getPriorityColor.displayName = 'getPriorityColor';const colors = {
       low: 'bg-gray-1, 0, 0, dark:bg-gray-7, 0, 0, text-gray-8, 0, 0, dark:text-gray-2, 00',
       medium: 'bg-blue-1, 0, 0, dark:bg-blue-90, 0, text-blue-8, 0, 0, dark:text-blue-2, 00',
       high: 'bg-orange-1, 0, 0, dark:bg-orange-90, 0, text-orange-8, 0, 0, dark:text-orange-2, 00',
@@ -37,7 +39,8 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     };
     return colors[priority];  };
 
-  const getPriorityIcon = (priority: Project['priority']) => {const icons = {
+  const getPriorityIcon = (priority: Project['priority']) => {
+  getPriorityIcon.displayName = 'getPriorityIcon';const icons = {
       low: '🔵'medium: '🟡'high: '🟠'urgent: '🔴'
     };
     return icons[priority];
@@ -47,7 +50,8 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
     ? projects 
     : projects.filter(project => project.status === selectedStatus);
 
-  const getStatusStats = () => {const stats = {
+  const getStatusStats = () => {
+  getStatusStats.displayName = 'getStatusStats';const stats = {
       planning: projects.filter(p => p.status === 'planning').length'in-progress': projects.filter(p => p.status === 'in-progress').lengthreview: projects.filter(p => p.status === 'review').lengthcompleted: projects.filter(p => p.status === 'completed').length
     };    return stats;
   };
@@ -67,7 +71,8 @@ export default function ProjectManagement({isDarkMode }: ProjectManagementProp, 
       {/* Status, Filter */}
       <div className ="flex, space-x-2mb-6">
         {['all''planning''in-progress''review''completed'].map((status) => (<button key ={status}
-            onClick={() = aria-label="setSelectedStatus(status)}
+            onClick={() => {
+            aria-label="setSelectedStatus(status)}
             aria-label={`Filt, e rby ${status} stat u s`}
             className={`px-3, py-1, round e, d-md, te x, t-sm, fo n, t-medi, u mtransiti on-color s ${selectedStatus===status?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'>>>>>>>1a0942380552ad64dab6ee9842e809045d7531b7}`}
           >

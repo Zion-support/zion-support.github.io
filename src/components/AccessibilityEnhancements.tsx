@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {Volume2, Eye, MousePointer, Ty, p, e, Contra, s, t, Zoom, I, n, Accessibili, ty } from 'lucide-react';
 interface AccessibilitySettings {fontSize: 'small' | 'medium' | 'large';
   contrast: 'normal' | 'high' | 'inverted';

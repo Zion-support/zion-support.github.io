@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {Search, X, Filt, e, r, SortA, s, c, SortDe, s, c, Clock, St, arT, ag } from 'lucide-react';
 
 export interface SearchResult {id: string;

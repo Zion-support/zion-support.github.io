@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {Activity,
   AlertTriangle,
   CheckCircle,
@@ -38,27 +38,32 @@ interface CardContentProps {children: React.ReactNode;
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({childrenclassName = ''}) => (<div className ={`bg-white, rounded-lgshadow-mdborder ${className}`}>
+const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-md border ${className}`}>
     {children}
   </div>
 );
 
-const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ''}) => (<div className ={`p-6border-b ${className}`}>
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`p-6 border-b ${className}`}>
     {children}
   </div>
 );
 
-const CardTitle: React.FC<CardTitleProps> = ({childrenclassName = ''}) => (<h3className={`text-lgfont-semibold ${className}`}>
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold ${className}`}>
     {children}
   </h3>
 );
 
-const CardDescription: React.FC<CardDescriptionProps> = ({childrenclassName = ''}) => (<pclassName={`text-smtext-gray-600 ${className}`}>
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+  <p className={`text-sm text-gray-600 ${className}`}>
     {children}
   </p>
 );
 
-const CardContent: React.FC<CardContentProps> = ({childrenclassName = ''}) => (<divclassName={`p-6 ${className}`}>
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`p-6 ${className}`}>
     {children}
   </div>
 );
@@ -101,10 +106,11 @@ interface MonitoringDashboardProps {refreshInterval?: number;
 
 export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000, enableRealTimeUpdates = true,
   onMetricsUpdate
-}: MonitoringDashboardProps) {const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoadingsetIsLoading] = useState(true);
-  const [lastUpdatedsetLastUpdated] = useState<Date>(new, Date());
-  const [alertssetAlerts] = useState<Array<{
+}: MonitoringDashboardProps) {
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
+  const [alerts, setAlerts] = useState<Array<{
     id: string;
     type: 'warning' | 'error' | 'info' | 'success';
     message: string;
@@ -113,16 +119,20 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
   }>>([]);
 
   const collectMetrics = useCallback(async () => {try {
-      // Collect, performance metrics, const performance = await, collectPerformanceMetrics();
+      // Collect performance metrics
+      const performance = await collectPerformanceMetrics();
       
-      // Collect, resource metrics, const resources = await, collectResourceMetrics();
+      // Collect resource metrics
+      const resources = await collectResourceMetrics();
       
-      // Collect, user experience, metrics
-      const userExperience = await, collectUserExperienceMetrics();
+      // Collect user experience metrics
+      const userExperience = await collectUserExperienceMetrics();
       
-      // Collect, error metrics, const errors = await, collectErrorMetrics();
+      // Collect error metrics
+      const errors = await collectErrorMetrics();
       
-      // Collect, security metrics, const security = await, collectSecurityMetrics();
+      // Collect security metrics
+      const security = await collectSecurityMetrics();
 
       const newMetrics: SystemMetrics = {
         performance,
@@ -140,7 +150,7 @@ export default function ComprehensiveMonitoringDashboard({refreshInterval = 5000
     } catch (error) {console.error('Failed, to, collect : metrics :', error);
     } finally {setIsLoading(false);
     }
-  }[onMetricsUpdate]);
+  }, [onMetricsUpdate]);
 
   const collectPerformanceMetrics = async () => {if (typeof === window === 'undefined') {
       return {

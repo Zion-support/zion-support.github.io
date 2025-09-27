@@ -47,7 +47,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                 aria-label="Add a new task"
               />
               <button
-                onClick={() = aria-label="{
+                onClick={() => {
+            aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
                     setNewTaskText(');
@@ -97,7 +98,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
           <div className="flex gap-2 mb-4">
             {(['all''active''completed'] as, const).map((filterType) => (<button key ={filterType}
 
-                onClick={() = aria-label="{
+                onClick={() => {
+            aria-label="{
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="setFilter(filterType)}
                 aria-label={`Filterby ${filterType}` }
                 className={`px-3, py-1rounded-mdtext-smtransition-colors ${filter===filterType?'bg-blue-600text-white':'bg-gray-200dark:bg-gray-700text-gray-700dark:text-gray-300hover:bg-gray-300dark:hover:bg-gray-600'}`}              >
@@ -139,7 +141,8 @@ export default function TaskManager({isOpenonClose }: TaskManagerProps): JSX.Ele
                     </span>
                     <button
 
-                      onClick={() = aria-label="{
+                      onClick={() => {
+            aria-label="{
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7, aria-label="deleteTask(task.id)}
                       aria-label="Delete task"
                       className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"                    >

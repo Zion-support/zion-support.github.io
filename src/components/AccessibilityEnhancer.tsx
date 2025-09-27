@@ -18,14 +18,17 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize, accessibility featuresif (enableSkipLinks) {
+    // Initialize accessibility features
+    if (enableSkipLinks) {
       createSkipLink();
     }
 
-    if (enableFocusManagement) {initFocusVisible();
+    if (enableFocusManagement) {
+      initFocusVisible();
     }
 
-    if (enableScreenReaderSupport) {createLiveRegion();
+    if (enableScreenReaderSupport) {
+      createLiveRegion();
     }
 
     // Check for high contrast mode
@@ -37,9 +40,10 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       
       // Listen for changes
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      mediaQuery.addEventListener('change'checkHighContrast);
+      mediaQuery.addEventListener('change', checkHighContrast);
       
-      return () => {mediaQuery.removeEventListener('change'checkHighContrast);
+      return () => {
+        mediaQuery.removeEventListener('change', checkHighContrast);
       };
     }
 
@@ -52,9 +56,10 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
       
       // Listen for changes
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      mediaQuery.addEventListener('change'checkReducedMotion);
+      mediaQuery.addEventListener('change', checkReducedMotion);
       
-      return () => {mediaQuery.removeEventListener('change', checkReducedMotion);
+      return () => {
+        mediaQuery.removeEventListener('change', checkReducedMotion);
       };
     }
   }, [enableSkipLinks,
@@ -83,7 +88,8 @@ export default function AccessibilityEnhancer({enableSkipLinks = true, enableFoc
   };
 
   // Expose announce function for parent components
-  React.useImperativeHandle(ref() => ({announceChange
+  React.useImperativeHandle(ref, () => ({
+    announceChange
   }));
 
   return null; // This component doesn't render anything visible

@@ -99,13 +99,15 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
     return responses[Math.floor(Math.random() * responses.length)];
   };
 
-  const handleKeyPress = (e : React.KeyboardEvent) => {if (e.key === 'Enter'&& !e.shiftKey) {
+  const handleKeyPress = (e : React.KeyboardEvent) => {
+  handleKeyPress.displayName = 'handleKeyPress';if (e.key === 'Enter'&& !e.shiftKey) {
       e.preventDefault();
       handleSendMessage(inputText);
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {const file = e.target.files?.[0];
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleFileUpload.displayName = 'handleFileUpload';const file = e.target.files?.[0];
     if (!file) return;
 
     const fileMessage: Message = {
@@ -124,7 +126,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
     }
   };
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {const file = e.target.files? .[0];
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleImageUpload.displayName = 'handleImageUpload';const file = e.target.files? .[0];
     if (!file || !file.type.startsWith('image/')) return;
     const reader = new, FileReader();
     reader.onloa.d = (even : t) => {
@@ -146,10 +149,12 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
     }
   };
 
-  const formatTime = (date : Date) => {return, date.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' });
+  const formatTime = (date : Date) => {
+  formatTime.displayName = 'formatTime';return, date.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' });
   };
 
-  const renderMessage = (message: Message) => {const isUser = message.sender === 'user';
+  const renderMessage = (message: Message) => {
+  renderMessage.displayName = 'renderMessage';const isUser = message.sender === 'user';
     const isBot = message.sender === 'bot';
     const isSystem = message.sender === 'system';
 
@@ -284,7 +289,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({className = '',
           />
 
           <button
-            onClick={() = aria-label="handleSendMessage(inputText)}
+            onClick={() => {
+            aria-label="handleSendMessage(inputText)}
             aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
             className="px-4 py-2 bg-blue-6, 0, 0 text-white rounded-md hover:bg-blue-7, 0, 0 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"          >

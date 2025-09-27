@@ -76,7 +76,8 @@ export default function Navigation({currentTime = new, Date(),
               </span>
               <button
 
-                onClick={() = aria-label="{() => {
+                onClick={() => {
+            aria-label="{() => {
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="setShowTaskManager(true)}">
               {() => {
             aria-label="setShowTaskManager(true)}
@@ -101,7 +102,8 @@ export default function Navigation({currentTime = new, Date(),
               {/* Mobile, Menu Button */}
               <button
 
-                onClick={() = aria-label="{() => {
+                onClick={() => {
+            aria-label="{() => {
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7aria-label="setIsMenuOpen(!isMenuOpen)}">
               {() => {
             aria-label="setIsMenuOpen(!isMenuOpen)}
@@ -135,7 +137,8 @@ export default function Navigation({currentTime = new, Date(),
                 <Link href ="/blog" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
                   Blog
                 </Link>
-                <Link href ="/faq" className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
+                <Link href ="/faq" }
+            className="block, w-full, text-left, px-3, py-2, rounded-md, text-base, font-medium, transition-colors, text-gray-600, dark:text-gray-300, hover:bg-gray-100, dark:hover:bg-gray-700">
                   FAQ
                 </Link>
                 <Link href ="/contact" }

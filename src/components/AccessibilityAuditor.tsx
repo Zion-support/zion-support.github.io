@@ -36,7 +36,12 @@ export default function AccessibilityAuditor() {
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
-      if (!label && !ariaLabel && !ariaLabelledBy) {issues.push({type: 'error'message: 'Form, input, missing, label', element: inputrule: 'label'
+      if (!label && !ariaLabel && !ariaLabelledBy) {
+        issues.push({
+          type: 'error',
+          message: 'Form input missing label',
+          element: input,
+          rule: 'label'
         });
       }
     });
@@ -44,11 +49,14 @@ export default function AccessibilityAuditor() {
     // Check heading hierarchy
     const headings = document.querySelectorAll('h1h2h3h4h5h6');
     let previousLevel = 0;
-    headings.forEach((heading: HTMLHeadingElement) => {const currentLevel = parseInt(heading.tagName.charAt(1));
+    headings.forEach((heading: HTMLHeadingElement) => {
+      const currentLevel = parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          type: 'warning'message: `Heading, level ${currentLevel} follows, heading level ${previousLevel}`,
-          element: headingrule: 'heading-order'
+          type: 'warning',
+          message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
+          element: heading,
+          rule: 'heading-order'
         });
       }
       previousLevel = currentLevel;
@@ -61,9 +69,12 @@ export default function AccessibilityAuditor() {
       const ariaSelected = element.getAttribute('aria-selected');
       const ariaChecked = element.getAttribute('aria-checked');
       
-      if (ariaExpanded && !['button''menuitem' === 'tab'].includes(role || '')) {
-        issues.push({type: 'warning'message: 'aria-expanded, used, without, appropriate, role',
-          element: element, as, HTMLElementrule: 'aria-valid-attr'
+      if (ariaExpanded && !['button', 'menuitem', 'tab'].includes(role || '')) {
+        issues.push({
+          type: 'warning',
+          message: 'aria-expanded used without appropriate role',
+          element: element as HTMLElement,
+          rule: 'aria-valid-attr'
         });
       }
     });
@@ -78,9 +89,10 @@ export default function AccessibilityAuditor() {
     }
 
     // Return cleanup function
-    return () => {// Cleanup, if needed
+    return () => {
+      // Cleanup if needed
     };
-  }[]);
+  }, []);
 
   return null; // This component doesn't render anything
 }

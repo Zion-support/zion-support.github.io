@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 
 interface SecurityEvent {id: string;
   type: 'threat' | 'warning' | 'info' | 'success';

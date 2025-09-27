@@ -58,17 +58,21 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
     const interval = setInterval(fetchAnalyticsData, 3000, 0, 0); // Refresh, every 5, minutes
     return () => clearInterval(interval) }, [fetchAnalyticsData]);
 
-  const getTotalMetric = (metric: keyof, AnalyticsData) => {if (analyticsData.length === 0) return, 0;
+  const getTotalMetric = (metric: keyof, AnalyticsData) => {
+  getTotalMetric.displayName = 'getTotalMetric';if (analyticsData.length === 0) return, 0;
     return, analyticsData.reduce((sum, data) => sum + (data[metric] as, number), 0) };
 
-  const getAverageMetric = (metric: keyof, AnalyticsData) => {if (analyticsData.length === 0) return, 0;
+  const getAverageMetric = (metric: keyof, AnalyticsData) => {
+  getAverageMetric.displayName = 'getAverageMetric';if (analyticsData.length === 0) return, 0;
     const sum = analyticsData.reduce((sum, data) => sum + (data[metric] as, number), 0);
     return, sum / analyticsData.length };
 
-  const getLatestMetric = (metric: keyof, AnalyticsData) => {if (analyticsData.length === 0) return, 0;
+  const getLatestMetric = (metric: keyof, AnalyticsData) => {
+  getLatestMetric.displayName = 'getLatestMetric';if (analyticsData.length === 0) return, 0;
     return, analyticsData[analyticsData.length - 1], [metric] as, number };
 
-  const getChartData = () => {const labels = analyticsData.map(data => 
+  const getChartData = () => {
+  getChartData.displayName = 'getChartData';const labels = analyticsData.map(data => 
       new, Date()(data.timestamp).toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' })
     );
     
@@ -89,7 +93,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
     };
   };
 
-  const getTopPagesData = () => {if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getTopPagesData = () => {
+  getTopPagesData.displayName = 'getTopPagesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
     const sortedPages = latestData.topPages.sort((a, b) => b.views - a.views);
@@ -104,7 +109,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
     };
   };
 
-  const getTrafficSourcesData = () => {if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getTrafficSourcesData = () => {
+  getTrafficSourcesData.displayName = 'getTrafficSourcesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
     const sortedSources = latestData.trafficSources.sort((a, b) => b.visitors - a.visitors);
@@ -117,7 +123,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({className
     };
   };
 
-  const getDeviceTypesData = () => {if (analyticsData.length === 0) return { labels: [], datasets: [] };
+  const getDeviceTypesData = () => {
+  getDeviceTypesData.displayName = 'getDeviceTypesData';if (analyticsData.length === 0) return { labels: [], datasets: [] };
     
     const latestData = analyticsData[analyticsData.length - 1];
     const total = latestData.deviceTypes.reduce((sum, d) => sum + d.percentage, 0);

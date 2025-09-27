@@ -13,41 +13,57 @@ interface UserPreferences {theme: 'light' | 'dark' | 'auto';
 interface EnhancedUserExperienceProps {className?: string;
 }
 
-const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({className = ''}) => {const [preferencessetPreferences] = useState<UserPreferences>({theme: 'auto'language: 'en'fontSize: 'medium',
-    animations: true, reducedMotion: false, highContrast: false, screenReader: false
+const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
+  const [preferences, setPreferences] = useState<UserPreferences>({
+    theme: 'auto',
+    language: 'en',
+    fontSize: 'medium',
+    animations: true,
+    reducedMotion: false,
+    highContrast: false,
+    screenReader: false
   });
 
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTabsetActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
+  const [activeTab, setActiveTab] = useState<'appearance' | 'accessibility' | 'language'>('appearance');
 
-  const updatePreference = useCallback((key: keyof, UserPreferences, value: any) => {setPreferences(prev => ({ ...prev[key]: value }));
+  const updatePreference = useCallback((key: keyof UserPreferences, value: any) => {
+    setPreferences(prev => ({ ...prev, [key]: value }));
     
     // Apply preferences immediately
-    if (key === 'theme') {document.documentElement.setAttribute('data-theme'value);
+    if (key === 'theme') {
+      document.documentElement.setAttribute('data-theme', value);
     }
-    if (key === 'fontSize') {document.documentElement.setAttribute('data-font-size'value);
+    if (key === 'fontSize') {
+      document.documentElement.setAttribute('data-font-size', value);
     }
-    if (key === 'highContrast') {document.documentElement.setAttribute('data-high-contrast'value.toString());
+    if (key === 'highContrast') {
+      document.documentElement.setAttribute('data-high-contrast', value.toString());
     }
-    if (key === 'reducedMotion') {document.documentElement.setAttribute('data-reduced-motion', value.toString());
+    if (key === 'reducedMotion') {
+      document.documentElement.setAttribute('data-reduced-motion', value.toString());
     }
-  }[]);
+  }, []);
 
-  const detectSystemPreferences = useCallback(() => {const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const detectSystemPreferences = useCallback(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme'prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
     }
     
-    if (preferences.reducedMotion !== prefersReducedMotion) {updatePreference('reducedMotion', prefersReducedMotion);
+    if (preferences.reducedMotion !== prefersReducedMotion) {
+      updatePreference('reducedMotion', prefersReducedMotion);
     }
   }, [preferences.theme, preferences.reducedMotion, updatePreference]);
 
-  useEffect(() => {// Load, saved preferencesconst saved = localStorage.getItem('userPreferences');
+  useEffect(() => {
+    // Load saved preferences
+    const saved = localStorage.getItem('userPreferences');
     if (saved) {
       const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev...parsed }));
+      setPreferences(prev => ({ ...prev, ...parsed }));
     }
 
     // Listen for system preference changes

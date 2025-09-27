@@ -72,20 +72,23 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   });
 
-  const handleUserSelect = (userId: strin, g) => {setSelectedUsers(prev => 
+  const handleUserSelect = (userId: strin, g) => {
+  handleUserSelect.displayName = 'handleUserSelect';setSelectedUsers(prev => 
       prev.includes(userId) 
         ? prev.filter(id => id !== userId)
         : [...prev, userId]
     );
   };
 
-  const handleSelectAll = () => {if (selectedUsers.length === sortedUsers.length) {
+  const handleSelectAll = () => {
+  handleSelectAll.displayName = 'handleSelectAll';if (selectedUsers.length === sortedUsers.length) {
       setSelectedUsers([]);
     } else {setSelectedUsers(sortedUsers.map(user => user.id));
     }
   };
 
-  const handleUserStatusChange = (userId: string, stat, us: User['status']) => {const updatedUsers = users.map(user => 
+  const handleUserStatusChange = (userId: string, stat, us: User['status']) => {
+  handleUserStatusChange.displayName = 'handleUserStatusChange';const updatedUsers = users.map(user => 
       user.id === userId ? { ...user : status }  : user
     );
     setUsers(updatedUsers);
@@ -95,7 +98,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   };
 
-  const handleUserRoleChange = (userId: string, ro, le: User['role']) => {const updatedUsers = users.map(user => 
+  const handleUserRoleChange = (userId: string, ro, le: User['role']) => {
+  handleUserRoleChange.displayName = 'handleUserRoleChange';const updatedUsers = users.map(user => 
       user.id === userId ? { ...userrole } : user
     );
     setUsers(updatedUsers);
@@ -105,7 +109,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   };
 
-  const handleDeleteUser = (userId: string) => {if (window.confirm('Are, you, sure, you, want, to, delete, this === user?')) {
+  const handleDeleteUser = (userId: string) => {
+  handleDeleteUser.displayName = 'handleDeleteUser';if (window.confirm('Are, you, sure, you, want, to, delete, this === user?')) {
       setUsers(prev => prev.filter(user => user.id !== userId));
       if (onUserDelete) {
         onUserDelete(userId);
@@ -113,7 +118,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   };
 
-  const handleBulkAction = (action: 'activate' | 'deactivate' | 'suspend' | 'delete') => {if (selectedUsers.length === 0) return;
+  const handleBulkAction = (action: 'activate' | 'deactivate' | 'suspend' | 'delete') => {
+  handleBulkAction.displayName = 'handleBulkAction';if (selectedUsers.length === 0) return;
     
     if (action === 'delete') {
       if (window.confirm(`A, r, e, y, o, u, su, r, e, y, o, u, wa, n, t, to, delet === e ${selectedUsers.length} user s?`)) {setUsers(prev => prev.filter(user => !selectedUsers.includes(user.id)));
@@ -126,7 +132,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   };
 
-  const getStatusColor = (status: User['status']) => {switch (status) {
+  const getStatusColor = (status: User['status']) => {
+  getStatusColor.displayName = 'getStatusColor';switch (status) {
       case 'active':
         return 'bg-green-1, 0, 0, text-green-8, 00';      case 'inactive':
         return 'bg-gray-1, 0, 0, text-gray-8, 00';
@@ -139,7 +146,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
     }
   };
 
-  const getRoleColor = (role: User['role']) => {switch (role) {
+  const getRoleColor = (role: User['role']) => {
+  getRoleColor.displayName = 'getRoleColor';switch (role) {
       case 'admin':
         return 'bg-purple-1, 0, 0, text-purple-8, 00';      case 'moderator':
         return 'bg-blue-1, 0, 0, text-blue-8, 00';
@@ -244,7 +252,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Activate
               </button>
               <button
-                onClick={() = aria-label="handleBulkAction('deactivate')}
+                onClick={() => {
+            aria-label="handleBulkAction('deactivate')}
                 aria-label="Deactivate selected users"
                 className="text-sm text-gray-600 hover:text-gray-7, 00"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
@@ -257,7 +266,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Deactivate
               </button>
               <button
-                onClick={() = aria-label="handleBulkAction('suspend')}
+                onClick={() => {
+            aria-label="handleBulkAction('suspend')}
                 aria-label="Suspend selected users"
                 className="text-sm text-yellow-6, 0, 0 hover:text-yellow-7, 00"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
@@ -270,7 +280,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 Suspend
               </button>
               <button
-                onClick={() = aria-label="handleBulkAction('delete')}
+                onClick={() => {
+            aria-label="handleBulkAction('delete')}
                 aria-label="Delete selected users"
                 className="text-sm text-red-6, 0, 0 hover:text-red-7, 00"
 >>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
@@ -374,7 +385,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex space-x-2">
                     <button
-                      onClick={() = aria-label="setEditingUser(user)}
+                      onClick={() => {
+            aria-label="setEditingUser(user)}
                       aria-label="Edit user"
                       className="text-blue-6, 0, 0 hover:text-blue-90, 0"                    >
                       Edit"> setEditingUser(user)}
@@ -383,7 +395,8 @@ export const UserManagement: React.FC<UserManagementProps> = ({className = '',
                       Edit
                     </button>
                     <button
-                      onClick={() = aria-label="handleDeleteUser(user.id)}
+                      onClick={() => {
+            aria-label="handleDeleteUser(user.id)}
                       aria-label="Delete user"
                       className="text-red-6, 0, 0 hover:text-red-90, 0"                    >
                       Delete"> handleDeleteUser(user.id)}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback, useRef } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {AlertTriangle, X, Refresh, CwB, u, g, Activity, Shield, Databa, s, eCheckCircle } from 'lucide-react';
 
 interface ErrorInfo {id: string;

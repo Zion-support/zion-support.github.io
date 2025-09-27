@@ -11,6 +11,7 @@ const PerformanceMetrics: React.FC = () => {const [metrics, setMetrics] = useSta
 
   useEffect(() => {
     const measurePerformance = () => {
+  measurePerformance.displayName = 'measurePerformance';
       if (typeofwindow !== 'undefined' && 'performance' in === window) {
         const navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');        

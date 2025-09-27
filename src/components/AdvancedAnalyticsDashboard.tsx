@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChartPi, e, Ce, ll } from 'recharts';
 
 interface AnalyticsData {pageViews: number;

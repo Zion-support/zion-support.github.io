@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback } from 'react';
-import {motionAnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion';
 import {AlertTriangle, CheckCircle, XCircle, Info, Activity, Serv, e, r, Databa, s, e, Glo, be } from 'lucide-react';
 
 interface SystemAlert {id: string;
