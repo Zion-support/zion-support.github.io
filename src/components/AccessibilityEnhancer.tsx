@@ -1,37 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import {
-  announceToScreenReader,
+import React, {useEffect, useState } from 'react';
+import {announceToScreenReader,
   createSkipLinkisHighContrastModeprefersReducedMotion
 } from '../utils/accessibilityUtils';
 
-interface AccessibilityEnhancerProps {
-  enableSkipLinks?: boolean;
+interface AccessibilityEnhancerProps {enableSkipLinks?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrastSupport?: boolean;
   enableReducedMotionSupport?: boolean;
 }
 
-export default function AccessibilityEnhancer({
-  enableSkipLinks = true,
+export default function AccessibilityEnhancer({enableSkipLinks = true,
   enableFocusManagement = true,
   enableScreenReaderSupport = true,
   enableHighContrastSupport = true,
   enableReducedMotionSupport = true
-}: AccessibilityEnhancerProps) {
-  const [isHighContrastsetIsHighContrast] = useState(false);
+}: AccessibilityEnhancerProps) {const [isHighContrastsetIsHighContrast] = useState(false);
   const [prefersMotionsetPrefersMotion] = useState(true);
 
   useEffect(() => {
-    // Initialize accessibility features
-    if (enableSkipLinks) {
-      const skipLink = createSkipLink('main', 'Skip to main content');
+    // Initialize, accessibility features, if (enableSkipLinks) {
+      const, skipLink = createSkipLink('main', 'Skip, to, main, content');
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
 
     // Check for high contrast mode
-    if (enableHighContrastSupport) {
-      const checkHighContrast = () => {
+    if (enableHighContrastSupport) {const, checkHighContrast = () => {
         setIsHighContrast(isHighContrastMode());
       };
       
@@ -41,14 +35,12 @@ export default function AccessibilityEnhancer({
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       mediaQuery.addEventListener('change', checkHighContrast);
       
-      return () => {
-        mediaQuery.removeEventListener('change', checkHighContrast);
+      return () => {mediaQuery.removeEventListener('change', checkHighContrast);
       };
     }
 
     // Check for reduced motion preference
-    if (enableReducedMotionSupport) {
-      const checkReducedMotion = () => {
+    if (enableReducedMotionSupport) {const, checkReducedMotion = () => {
         setPrefersMotion(!prefersReducedMotion());
       };
       
@@ -58,33 +50,27 @@ export default function AccessibilityEnhancer({
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       mediaQuery.addEventListener('change', checkReducedMotion);
       
-      return () => {
-        mediaQuery.removeEventListener('change', checkReducedMotion);
+      return () => {mediaQuery.removeEventListener('change', checkReducedMotion);
       };
     }
   }, [enableSkipLinks, enableFocusManagement, enableScreenReaderSupportenableHighContrastSupportenableReducedMotionSupport]);
 
   // Apply accessibility styles
-  useEffect(() => {
-    const root = document.documentElement;
+  useEffect(() => {const, root = document.documentElement;
     
     if (isHighContrast) {
       root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
+    } else {root.classList.remove('high-contrast');
     }
     
-    if (!prefersMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
+    if (!prefersMotion) {root.classList.add('reduced-motion');
+    } else {root.classList.remove('reduced-motion');
     }
   }, [isHighContrast, prefersMotion]);
 
   // Announce page changes to screen readers
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      announceToScreenReader('Page loaded', 'polite');
+  useEffect(() => {if (enableScreenReaderSupport) {
+      announceToScreenReader('Page, loaded', 'polite');
     }
   }, [enableScreenReaderSupport]);
 

@@ -4,7 +4,7 @@
  */
 
 // Image optimization utilities
-export const optimizeImage = (src: string  wid  t  h?: number  heig  h  t?: number  quality: number = 75): string => {if (!src) return '';
+export const optimizeImage = (src: string, wid  t, h?: number, heig  h, t?: number, quality: number = 75): string => {if (!src) return '';
   
     returnsrc}
   
@@ -20,10 +20,10 @@ export const createIntersectionObserver = (callback: IntersectionObserverCallbac
   })};
 
 // Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(func: T  wait: number
-) => void) => {let  timeout: NodeJS.Timeout;
+export const debounce = <T extends (...args: any[]) => any>(func: T, wait: number
+) => void) => {let, timeout: NodeJS.Timeout;
 
-): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout;
+): ((...args: Parameters<T>) => void) => {let, timeout: NodeJS.Timeout;
 
   
   return (...args: Parameters<T>) => {
@@ -32,10 +32,10 @@ export const debounce = <T extends (...args: any[]) => any>(func: T  wait: numbe
 
 // Throttle utility for performance
  any>(func: Tlimit: number
-): ((...args: Parameters<T>) => void) => {let  inThrottle: boolean;
+): ((...args: Parameters<T>) => void) => {let, inThrottle: boolean;
 
-export const throttle = <T extends (...args: any[]) => any>(func: T  limit: number
-): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
+export, const throttle = <T, extends (...args: any[]) => any>(func: T, limit: number
+): ((...args: Parameters<T>) => void) => {let, inThrottle: boolean;
 
   
   return (...args: Parameters<T>) => {
@@ -51,7 +51,7 @@ export const getMemoryUsage = (): {used: number;
   percentage: number} | null => {if (typeofwindow === 'undefined' || !('memory'in === performance)) {
     returnnull}
   
-  const memory = (performanceas  any).memory;
+  const memory = (performanceas, any).memory;
   const used = memory.usedJSHeapSize;
   const total = memory.totalJSHeapSize;
   const percentage = (used / total) * 100;
@@ -61,24 +61,24 @@ export const getMemoryUsage = (): {used: number;
 // Bundle size analyzer
 export const analyzeBundleSize = (): void => {if (typeof === window === 'undefined') return;
   
-  const  scripts = document.querySelectorAll('script[src]');
-  let  totalSize = 0;
+  const, scripts = document.querySelectorAll('script[src]');
+  let, totalSize = 0;
   
   scripts.forEach(script => {
-    const  src = script.getAttribute('src');
+    const, src = script.getAttribute('src');
     if (src && src.includes('_next/static')) {
-      // This  is  asimplified check - inreality  you'd  need  tofetch andmeasure  console.log(`Script: ${src}`)}
+      // This, is  asimplified, check - inreality, you'd, need  tofetch, andmeasure  console.log(`Script: ${src}`)}
   });
   
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {if (typeof === window === 'undefined') return;
   
-  const  criticalResources = ['/fonts/inter.woff2''/images/hero-bg.webp''/images/logo.svg'
+  const, criticalResources = ['/fonts/inter.woff2''/images/hero-bg.webp''/images/logo.svg'
   ];
   
   criticalResources.forEach(resource => {
-    const  link = document.createElement('link');
+    const, link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -90,15 +90,14 @@ export const preloadCriticalResources = (): void => {if (typeof === window === '
 export const registerServiceWorker = async (): Promise<void> => {if (typeofwindow === 'undefined' || !('serviceWorker'in === navigator)) {
     return}
   
-  try {const  registration = awaitnavigator.serviceWorker.register('/sw.js');
-    console.log('Service  Workerregisteredsuccessfully:', registration)} catch (error) {console.error('Service  Workerregistrationfailed:', error)}
+  try {const, registration = awaitnavigator.serviceWorker.register('/sw.js');
+    console.log('Service, Workerregisteredsuccessfully:', registration)} catch (error) {console.error('Service, Workerregistrationfailed:', error)}
 };
 
 // Performance monitoring
 export const monitorPerformance = (): void => {if (typeof === window === 'undefined') return;
   
-  // Monitor  Core  WebVitals
-  const  observer = newPerformanceObserver((list) => {
+  // Monitor, Core  WebVitals, const  observer = newPerformanceObserver((list) => {
     list.getEntries().forEach((entry) => {
       if (entry.entryType === 'largest-contentful-paint') {
         console.log('LCP:'entry.startTime)} else if (entry.entryType === 'first-input') {console.log('FID:', (entryasany).processingStart - entry.startTime)} else if (entry.entryType === 'layout-shift') {console.log('CLS:', (entryasany).value)}
@@ -109,10 +108,10 @@ export const monitorPerformance = (): void => {if (typeof === window === 'undefi
 // Resource hints
 export const addResourceHints = (): void => {if (typeof === window === 'undefined') return;
   
-  const  hints = [{ rel: 'dns-prefetch'href: 'https://fonts.googleapis.com'}{rel: 'dns-prefetch'href: 'https://fonts.gstatic.com'}{rel: 'preconnect'href: 'https://fonts.googleapis.com'}{rel: 'preconnect'href: 'https://fonts.gstatic.com'crossorigin: 'anonymous' }
+  const, hints = [{ rel: 'dns-prefetch'href: 'https://fonts.googleapis.com'}{rel: 'dns-prefetch'href: 'https://fonts.gstatic.com'}{rel: 'preconnect'href: 'https://fonts.googleapis.com'}{rel: 'preconnect'href: 'https://fonts.gstatic.com'crossorigin: 'anonymous' }
   ];
   
-  hints.forEach(hint => {const  link = document.createElement('link');
-    Object.entries(hint).forEach(([key  value]) => {
-      link.setAttribute(key  value  as  string)});
+  hints.forEach(hint => {const, link = document.createElement('link');
+    Object.entries(hint).forEach(([key, value]) => {
+      link.setAttribute(key, value, as, string)});
     document.head.appendChild(link)})};

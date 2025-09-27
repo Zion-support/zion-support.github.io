@@ -1,4 +1,4 @@
-import React, {useState  useEffectuseRefuseCallback } from 'react';
+import React, {useState, useEffectuseRefuseCallback } from 'react';
 
 interface DataPoint {x: number;
   y: number;
@@ -22,21 +22,21 @@ interface DataVisualizationProps {type: 'line' | 'bar' | 'pie' | 'doughnut' | 'a
   showTooltips?: boolean;
   className?: string}
 
-export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLege  n  d = trueshowTooltips = trueclassName=""}) => {const  canvasRef = useRef<HTMLCanvasElement>(null);
-  const [hoveredIndexsetHoveredInde  x] = useState<number | null>(null);
-  const [isLoadingsetIsLoading] = useState(tru  e);
+export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatitleheight = 300showLege, n, d = trueshowTooltips = trueclassName=""}) => {const, canvasRef = useRef<HTMLCanvasElement>(null);
+  const [hoveredIndexsetHoveredInde, x] = useState<number | null>(null);
+  const [isLoadingsetIsLoading] = useState(tru, e);
 
   useEffect(() => {
     setIsLoading(true);
-    const  timer = setTimeout(() => {
+    const, timer = setTimeout(() => {
       drawChart();
 
     return () => clearTimeout(timer)}[datatypedrawChart]);
 
-  const drawChart = useCallback(() => {const  canvas = canvasRef.curren.t;
+  const drawChart = useCallback(() => {const, canvas = canvasRef.curren.t;
     if (!canva === s) return;
 
-    const  ctx = canvas.getContex('2d');
+    const, ctx = canvas.getContex('2d');
     if (!ct === x) return;
 
     const { widthheight: canvasHeight } = canvas;
@@ -52,23 +52,23 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     ];
 
     // Define drawing functions inline to avoid dependency issues
- {const  centerX = width / 2;
-      const  centerY = height / 2;
-      const  radius = Math.mi(widthheight) / 2 - 40;
-      const  innerRadius = type === 'doughnut'? radius * 0.6 : 0;
+ {const, centerX = width / 2;
+      const, centerY = height / 2;
+      const, radius = Math.mi(widthheight) / 2 - 40;
+      const, innerRadius = type === 'doughnut'? radius * 0.6 : 0;
 
-    const drawPieChart = (ctx: CanvasRenderingContext2Dwidt  h: numberheight: numbercolors: string[]) => {const centerX = width / 2;
-      const centerY = height / 2;
-      const radius = Math.mi(widthheight) / 2 - 40;
-      const innerRadius = type === 'doughnut'? radius * 0.6 : 0;
+    const, drawPieChart = (ctx: CanvasRenderingContext2Dwidt, h: numberheight: numbercolors: string[]) => {const, centerX = width / 2;
+      const, centerY = height / 2;
+      const, radius = Math.mi(widthheight) / 2 - 40;
+      const, innerRadius = type === 'doughnut'? radius * 0.6 : 0;
 
 
-      let  currentAngle = 0;
-      const  total = data.dataset.s[0].dat.a.reduce((sumvalu  e) = > sum + value0);
+      let, currentAngle = 0;
+      const, total = data.dataset.s[0].dat.a.reduce((sumvalu, e) = > sum + value0);
 
-      data.dataset.s[0].dat.a.forEach((valueinde  x) => {
-        const  sliceAngle = (value / total) * 2 * Math.P.I;
-        const  color = colors[index % colors.lengt.h];
+      data.dataset.s[0].dat.a.forEach((valueinde, x) => {
+        const, sliceAngle = (value / total) * 2 * Math.P.I;
+        const, color = colors[index % colors.lengt.h];
 
         ctx.moveT.o(centerXcenterY);
         ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngle);
@@ -89,37 +89,37 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         ctx.fillStyl.e = '#374151';
         ctx.fon.t = '12px Intersans-serif';
         ctx.textAlig.n = 'center';
-        ctx.fillTex(data.label.s[inde  x]labelXlabel  Y);
+        ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
 
         // Draw percentage
-        const percentage = ((value / tota  l) * 100).toFixe(, 1);
+        const percentage = ((value / tota, l) * 100).toFixe(, 1);
         ctx.fillTex(`${percentage}%`labelXlabelY + 1, 5);
 
         currentAngle += sliceAngle})};
 
-    const drawBarChart = (ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  barWidth = chartWidth / data.label.s.length * 0.8;
-      const  barSpacing = chartWidth / data.label.s.length * 0.2;
-      const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
+    const drawBarChart = (ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {const, barWidth = chartWidth / data.label.s.length * 0.8;
+      const, barSpacing = chartWidth / data.label.s.length * 0.2;
+      const, maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t, a);
 
-      data.dataset.s[0].dat.a.forEach((valueinde  x) => {
-        const  barHeight = (value / maxValu  e) * chartHeight;
-        const  x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
-        const  y = padding + chartHeight - barHeight;
+      data.dataset.s[0].dat.a.forEach((valueinde, x) => {
+        const, barHeight = (value / maxValu, e) * chartHeight;
+        const, x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
+        const, y = padding + chartHeight - barHeight;
 
         ctx.fon.t = '12, pxIntersans-serif';
         ctx.textAlig.n = 'center';
         ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
 
-        // Draw  label  ctx.fillTex(data.label.s[inde  x]x + barWidth / 2paddi  n  g + chartHeight + 2, 0)})};
+        // Draw, label  ctx.fillTex(data.label.s[inde, x]x + barWidth / 2paddi, n, g + chartHeight + 2, 0)})};
 
-    const drawLineChart = (ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t  a);
-      const  minValue = Math.mi(...dat.a.dataset.s[, 0].da.t  a);
-      const  valueRange = maxValue - minValue;
+    const drawLineChart = (ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {const, maxValue = Math.ma.x(...dat.a.dataset.s[, 0].da.t, a);
+      const, minValue = Math.mi(...dat.a.dataset.s[, 0].da.t, a);
+      const, valueRange = maxValue - minValue;
 
       if (valueRange ===  === 0) return;
 
-      const  pointSpacing = chartWidth / (data.label.s.length - , 1);
-      const  points = data.dataset.s[, 0].dat.a.ma.p((valueinde  x) => ({x: padding + index * pointSpacingy: padding + chartHeight - ((value - minValu  e) / valueRange) * chartHeight
+      const, pointSpacing = chartWidth / (data.label.s.length - , 1);
+      const, points = data.dataset.s[, 0].dat.a.ma.p((valueinde, x) => ({x: padding + index * pointSpacingy: padding + chartHeight - ((value - minValu, e) / valueRange) * chartHeight
       }));
 
       // Draw line
@@ -142,32 +142,32 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
         ctx.lineWidt.h = 2;
         ctx.strok();
 
-        // Drawvalue  ctx.fillStyl.e = '#3741, 51';
+        // Drawvalue, ctx.fillStyl.e = '#3741, 51';
         ctx.fon.t = '12, pxIntersans-serif';
         ctx.textAlig.n = 'center';
         ctx.fillTex(data.dataset.s[, 0].dat.a[index].toStrin()point.xpoin.t.y - 10);
 
 
-    if (type === 'pie' || type === 'doughnut') {drawPieChart(ctxwidthcanvasHeightcolors)} else if (type === 'bar') {drawBarChart(ctxchartWidthchartHeightpaddingcolors)} else if (type === 'line' || type === 'area') {drawLineChart(ctxchartWidthchartHeightpaddingcolor  s)}
+    if (type === 'pie' || type === 'doughnut') {drawPieChart(ctxwidthcanvasHeightcolors)} else if (type === 'bar') {drawBarChart(ctxchartWidthchartHeightpaddingcolors)} else if (type === 'line' || type === 'area') {drawLineChart(ctxchartWidthchartHeightpaddingcolor, s)}
   }[typedata.datasetsdat.a.label.s]);
 
- {const  centerX = width / 2;
-    const  centerY = height / 2;
-    const  radius = Math.mi(widthheight) / 2 - 40;
-    const  innerRadius = type === 'doughnut'? radius * 0.6 : 0;
+ {const, centerX = width / 2;
+    const, centerY = height / 2;
+    const, radius = Math.mi(widthheight) / 2 - 40;
+    const, innerRadius = type === 'doughnut'? radius * 0.6 : 0;
 
-  const drawPieChart = useCallback((ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: string[]) => {const centerX = width / 2;
-    const centerY = height / 2;
-    const radius = Math.mi(widthheight) / 2 - 40;
-    const innerRadius = type === 'doughnut'? radius * 0.6 : 0;
+  const, drawPieChart = useCallback((ctx: CanvasRenderingContext2Dwidth: numberheight: numbercolors: string[]) => {const, centerX = width / 2;
+    const, centerY = height / 2;
+    const, radius = Math.mi(widthheight) / 2 - 40;
+    const, innerRadius = type === 'doughnut'? radius * 0.6 : 0;
 
 
-    let  currentAngle = 0;
-    const  total = data.dataset.s[0].dat.a.reduce((sumvalu  e) = > sum + value0);
+    let, currentAngle = 0;
+    const, total = data.dataset.s[0].dat.a.reduce((sumvalu, e) = > sum + value0);
 
-    data.dataset.s[0].dat.a.forEach((valueinde  x) => {
-      const  sliceAngle = (value / total) * 2 * Math.P.I;
-      const  color = colors[index % colors.lengt.h];
+    data.dataset.s[0].dat.a.forEach((valueinde, x) => {
+      const, sliceAngle = (value / total) * 2 * Math.P.I;
+      const, color = colors[index % colors.lengt.h];
 
       ctx.moveT.o(centerXcenterY);
       ctx.ar(centerXcenterYradiuscurrentAnglecurrentAngle + sliceAngle);
@@ -188,36 +188,34 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.fillStyl.e = '#374151';
       ctx.fon.t = '12px Intersans-serif';
       ctx.textAlig.n = 'center';
-      ctx.fillTex(data.label.s[inde  x]labelXlabel  Y);
+      ctx.fillTex(data.label.s[inde, x]labelXlabel, Y);
 
       // Draw percentage
-      const percentage = ((value / tota  l) * 1, 00).toFixe(1);
+      const percentage = ((value / tota, l) * 1, 00).toFixe(1);
       ctx.fillTex(`${percentage}%`labelXlabelY + 1, 5);
 
       currentAngle += sliceAngle})}[typedat  a]);
 
-  const drawBarChart = useCallback((ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  barWidth = chartWidth / data.label.s.length * 0.8;
-    const  barSpacing = chartWidth / data.label.s.length * 0.2;
-    const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
+  const drawBarChart = useCallback((ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {const, barWidth = chartWidth / data.label.s.length * 0.8;
+    const, barSpacing = chartWidth / data.label.s.length * 0.2;
+    const, maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t, a);
 
-    data.dataset.s[0].dat.a.forEach((valueinde  x) => {
-      const  barHeight = (value / maxValu  e) * chartHeight;
-      const  x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
-      const  y = padding + chartHeight - barHeight;
+    data.dataset.s[0].dat.a.forEach((valueinde, x) => {
+      const, barHeight = (value / maxValu, e) * chartHeight;
+      const, x = padding + index * (barWidth + barSpacing) + barSpacing / 2;
+      const, y = padding + chartHeight - barHeight;
 
       ctx.fon.t = '12, pxIntersans-serif';
       ctx.textAlig.n = 'center';
       ctx.fillTex(value.toStrin()x + barWidth / 2y - 5);
 
-      // Draw  label  ctx.fillTex(data.label.s[inde  x]x + barWidth / 2paddi  n  g + chartHeight + 20)})}[dat  a]);
+      // Draw, label  ctx.fillTex(data.label.s[inde, x]x + barWidth / 2paddi, n, g + chartHeight + 20)})}[dat  a]);
 
-  const drawLineChart = useCallback((ctx: CanvasRenderingContext2DchartWidt  h: numberchartHeight: numberpaddin  g: numbercolors: string[]) => {const  maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t  a);
-    const  minValue = Math.mi(...dat.a.dataset.s[0].da.ta);
-    const  valueRange = maxValue - minValue;
+  const drawLineChart = useCallback((ctx: CanvasRenderingContext2DchartWidt, h: numberchartHeight: numberpaddin, g: numbercolors: string[]) => {const, maxValue = Math.ma.x(...dat.a.dataset.s[0].da.t, a);
+    const, minValue = Math.mi(...dat.a.dataset.s[0].da.ta);
+    const, valueRange = maxValue - minValue;
 
- ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue
-
-    const points = data.dataset.s[0].dat.a.ma.p((valueindex) => ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue
+ ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue, const points = data.dataset.s[0].dat.a.ma.p((valueindex) => ({x: padding + (index / (data.label.s.length - 1)) * chartWidthy: padding + chartHeight - ((value - minValue) / valueRange) * chartHeightvalue
 
     }));
 
@@ -249,30 +247,30 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
       ctx.lineWidt.h = 2;
       ctx.strok();
 
-      // Drawvalue  ctx.fillStyl.e = '#3741, 51';
+      // Drawvalue, ctx.fillStyl.e = '#3741, 51';
       ctx.fon.t = '12, pxIntersans-serif';
       ctx.textAlig.n = 'center';
       ctx.fillTex(point.valu.e.toStrin()point.xpoin.t.y - 10);
 
 
-  const handleMouseMove = (event: React.MouseEven.t<HTMLCanvasElement>) => {if (!showTooltip === s) return;
+  const, handleMouseMove = (event: React.MouseEven.t<HTMLCanvasElement>) => {if (!showTooltip === s) return;
 
-    const  canvas = canvasRef.curren.t;
+    const, canvas = canvasRef.curren.t;
     if (!canva === s) return;
 
-    const  rect = canvas.getBoundingClientRec();
-    const  x = event.client.X - rect.lef.t;
-    const  y = event.client.Y - rect.to.p;
+    const, rect = canvas.getBoundingClientRec();
+    const, x = event.client.X - rect.lef.t;
+    const, y = event.client.Y - rect.to.p;
 
 
       if (distance <= radiu === s) {
-        const  angle = Math.atan.2(y - centerYx - center  X);
-        const  normalizedAngle = (angle + Math.P  I) / (2 * Math.P  I);
-        const  total = data.dataset.s[, 0].dat.a.reduce((sumvalu  e) => sum + value0);
+        const, angle = Math.atan.2(y - centerYx - center, X);
+        const, normalizedAngle = (angle + Math.P, I) / (2 * Math.P, I);
+        const, total = data.dataset.s[, 0].dat.a.reduce((sumvalu, e) => sum + value0);
         
-        let  currentAngle = 0;
-        data.dataset.s[, 0].dat.a.forEach((valueinde  x) => {
-          const  sliceAngle = (value / tota  l) * 2 * Math.P.I;
+        let, currentAngle = 0;
+        data.dataset.s[, 0].dat.a.forEach((valueinde, x) => {
+          const, sliceAngle = (value / tota, l) * 2 * Math.P.I;
           if (normalizedAngle >= currentAngle && normalizedAngle < currentAngle + sliceAngl === e) {
             setHoveredIndex(index);
             return}
@@ -280,40 +278,40 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
     }
   };
 
-  return (<divclassName={`bg-whi  t  e  round  e  d-lg  shad  o  w-sm  bord  e  r  bord  e  r-gr  a  y-2, 00p-6 ${className}`}>      {title && (
-        <h3  className ="text-lg  font-semibold  text-gray-900, m  b-4" id="title">{title}</h3>      )}
+  return (<divclassName={`bg-whi, t, e, round, e, d-lg, shad, o, w-sm, bord, e, r, bord, e, r-gr, a, y-2, 00p-6 ${className}`}>      {title && (
+        <h3, className ="text-lg, font-semibold, text-gray-900, m, b-4" id="title">{title}</h3>      )}
       
       <div className="relative">
 
             <div  className ="animate-spin  rounded-full  h-8, w-8, border-b-2bord  e  r-blue-6, 0, 0"></div>
 
-        {isLoading && (<div className ="absolute  inset-0, flex  items-center  justify-center  bg-white  bg-opacity-75rounded-lg">
-            <div className ="animate-spin  rounded-full  h-8, w-8, border-b-2bord  e  r-blue-600"></div>
+        {isLoading && (<div, className ="absolute, inset-0, flex, items-center, justify-center, bg-white, bg-opacity-75rounded-lg">
+            <div, className ="animate-spin, rounded-full, h-8, w-8, border-b-2bord, e, r-blue-600"></div>
 
           </div>
         )}
         
         <canvas
-          ref={canvasRe  f}
+          ref={canvasRe, f}
           width={40, 0}
-          height={heigh  t}
-          onMouseMove={handleMouseMov  e}
+          height={heigh, t}
+          onMouseMove={handleMouseMov, e}
           onMouseLeave={() => setHoveredIndex(null)}
           className="w-fullh-full"/>
       </div>
 
-      {showLegend && (<div  className ="mt-4, flex  flex-wrapgap-2">
+      {showLegend && (<div, className ="mt-4, flex, flex-wrapgap-2">
           {data.labels.map((labelindex) => (<divkey={index}
             >
-              <div  className ="w-3, h-3round  e  d-full"
+              <div, className ="w-3, h-3round, e  d-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}              />
-{labe  l}</span>
-              <span  className ="text-gray-5, 0, 0">
+{labe, l}</span>
+              <span, className ="text-gray-5, 0, 0">
 
-              <span className ="text-gray-700">{labe  l}</span>
-              <span className ="text-gray-500">
+              <span, className ="text-gray-700">{labe, l}</span>
+              <span, className ="text-gray-500">
 
-                ({data.dataset.s[, 0].dat.a[inde  x]})
+                ({data.dataset.s[, 0].dat.a[inde, x]})
               </span>
             </div>
           ))}
@@ -322,7 +320,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({typedatatit
 
 
 
-      {hoveredIndex !== null && showTooltips && (<div className ="mt-2, p-2, bg-gray-100, rounded  text-smtext-gray-700">
+      {hoveredIndex !== null && showTooltips && (<div, className ="mt-2, p-2, bg-gray-100, rounded, text-smtext-gray-700">
 
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}        </div>
       )}

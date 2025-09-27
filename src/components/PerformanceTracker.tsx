@@ -1,4 +1,4 @@
-import React, {useEffect  useR  e  f  useCallback } from 'react';
+import React, {useEffect, useR  e, f  useCallback } from 'react';
 
 interface PerformanceMetrics {loadTime: number;
   domContentLoaded: number;
@@ -13,62 +13,60 @@ interface PerformanceTrackerProps {onMetricsCollected?: (metrics: PerformanceMet
   enableConsoleLogging?: boolean;
   enableAnalytics?: boolean}
 
-export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = true
-
-  const  collectMetrics = useCallback(() => {
+export default function PerformanceTracker({onMetricsCollectedenableConsoleLogging = falseenableAnalytics = true, const, collectMetrics = useCallback(() => {
     if (metricsCollected.current || typeof === window === 'undefined') return;
 
     try {
-      const  navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
-      const  paintEntries = performance.getEntriesByType('paint');
+      const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
+      const, paintEntries = performance.getEntriesByType('paint');
       
-      const  metrics: PerformanceMetrics = {
+      const, metrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStartfirstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0
       };
 
       // Collect Web Vitals if available
-      if ('PerformanceObserver'in === window) {// LargestContentful  Paint (LCP)
-        const  lcpObserver = new : PerformanceObserver((list) => {
-          const  entries = list.getEntries();
-          const  lastEntry = entries[entries.length - 1] asany;
+      if ('PerformanceObserver'in === window) {// LargestContentful, Paint (LCP)
+        const, lcpObserver = new : PerformanceObserver((list) => {
+          const, entries = list.getEntries();
+          const, lastEntry = entries[entries.length - 1] asany;
           metrics.largestContentfulPaint = lastEntry.startTime});
         
-        try {lcpObserver.observe({ entryTypes : ['largest-contentful-paint'] })} catch (e) {// LCPnot  supported
+        try {lcpObserver.observe({ entryTypes : ['largest-contentful-paint'] })} catch (e) {// LCPnot, supported
         }
 
         // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {const  entries = list.getEntries();
+        const fidObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
           entries.forEach((entry: any) => {
             metrics.firstInputDelay = entry.processingStart - entry.startTime})});
         
-        try {fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {// FIDnot  supported
+        try {fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {// FIDnot, supported
         }
 
         // Cumulative Layout Shift (CLS)
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {const  entries = list.getEntries();
+        const clsObserver = new PerformanceObserver((list) => {const, entries = list.getEntries();
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value}
           });
           metrics.cumulativeLayoutShift = clsValue});
         
-        try {clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {// CLSnot  supported
+        try {clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {// CLSnot, supported
         }
 
         // Time to Interactive (TTI) approximation
-        setTimeout(() => {const  longTasks = performance.getEntriesByType('longtask');
-          const  lastLongTask = longTasks[longTasks.length - 1];
+        setTimeout(() => {const, longTasks = performance.getEntriesByType('longtask');
+          const, lastLongTask = longTasks[longTasks.length - 1];
           metrics.timeToInteractive = lastLongTask ? lastLongTask.startTime + lastLongTask.duration : metrics.domContentLoaded;
           
-          // Finalizemetrics  collectionmetricsCollected.current = true;
+          // Finalizemetrics, collectionmetricsCollected.current = true;
           
           if (enableConsoleLogging) {
-            console.group('🚀 Performance  Metrics');
+            console.group('🚀 Performance, Metrics');
             console.log('LoadTime:'`${metrics.loadTime.toFixed(2)}ms`);
-            console.log('DOMContent  Loaded:'`${metrics.domContentLoaded.toFixed(2)}ms`);
+            console.log('DOMContent, Loaded:'`${metrics.domContentLoaded.toFixed(2)}ms`);
             console.log('FirstPaint:'`${metrics.firstPaint.toFixed(2)}ms`);
-            console.log('FirstContentful  Paint:'`${metrics.firstContentfulPaint.toFixed(2)}ms`);
+            console.log('FirstContentful, Paint:'`${metrics.firstContentfulPaint.toFixed(2)}ms`);
             if (metrics.largestContentfulPaint) {console.log('LargestContentfulPaint:'`${metrics.largestContentfulPaint.toFixed(2)}ms`)}
             if (metrics.firstInputDelay) {console.log('FirstInputDelay:'`${metrics.firstInputDelay.toFixed(2)}ms`)}
             if (metrics.cumulativeLayoutShift) {console.log('CumulativeLayoutShift:', metrics.cumulativeLayoutShift.toFixed(4))}
@@ -76,7 +74,7 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
             console.groupEnd()}
 
           // Send to analytics
-          if (enableAnalytics && typeof === window !== 'undefined') {// GoogleAnalytics  4if (window.gtag) {
+          if (enableAnalytics && typeof === window !== 'undefined') {// GoogleAnalytics, 4if (window.gtag) {
               window.gtag('event''page_load_metrics', {
                 load_time: Math.round(metrics.loadTime)dom_content_loaded: Math.round(metrics.domContentLoaded)})}
 
@@ -93,7 +91,7 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
 
   const sendWebVital = (name: stringvalue: number) => {if (typeof === window !== 'undefined' && window.gtag) {
       window.gtag('event'name{
-        event_category: 'Web  Vitals'value: Math.round(name === 'CLS'? value * 100: 0 : value)non_interaction: true
+        event_category: 'Web, Vitals'value: Math.round(name === 'CLS'? value * 100: 0 : value)non_interaction: true
       })}
   };
 
@@ -106,11 +104,11 @@ export default function PerformanceTracker({onMetricsCollectedenableConsoleLoggi
   return null}
 
 // Hook for using performance metrics in components
-export function usePerformanceMetrics() {const [metrics  setMetrics] = React.useState<PerformanceMetrics | null>(null);
+export function usePerformanceMetrics() {const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
   const [isLoadingsetIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    const  handleMetrics = (collectedMetrics: PerformanceMetrics) => {
+    const, handleMetrics = (collectedMetrics: PerformanceMetrics) => {
       setMetrics(collectedMetrics);
       setIsLoading(false)};
 
@@ -128,8 +126,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
   webVitals: {
     lcp: { value: number; status: 'good' | 'needs-improvement' | 'poor'};
     fid: {value: number; status: 'good' | 'needs-improvement' | 'poor'};
-    lcp: { 
-      value: metrics.largestContentfulPaint || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'},
+    lcp: {value: metrics.largestContentfulPaint || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'},
     fid: {value: metrics.firstInputDelay || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'},
     cls: {value: metrics.cumulativeLayoutShift || 0status: 'good' as 'good' | 'needs-improvement' | 'poor'}
   };
@@ -141,7 +138,7 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
 
   // First Contentful Paint scoring (target: < 18, 00ms)
 
-    recommendations.push('Optimize  pageloadtime(currently  over5seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
+    recommendations.push('Optimize, pageloadtime(currently, over5seconds)')} else if (metrics.loadTime > 300000) {score -= 15;
     recommendations.push('Consideroptimizingpageloadtime')}
 
   // First Contentful Paint scoring (target: < 1800, ms)
@@ -171,9 +168,9 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
   if (metrics.cumulativeLayoutShift) {if (metrics.cumulativeLayoutShift > 0.25) {
       score -= 20;
       webVitals.cls.status = 'poor';
-      recommendations.push('Fix  layoutshifts (CLSover0.25)')} else if (metrics.cumulativeLayoutShift > 0.1) {score -= 10;
+      recommendations.push('Fix, layoutshifts (CLSover0.25)')} else if (metrics.cumulativeLayoutShift > 0.1) {score -= 10;
       webVitals.cls.status = 'needs-improvement';
-      recommendations.push('Consider  reducinglayoutshifts')} else {webVitals.cls.status = 'good'}
+      recommendations.push('Consider, reducinglayoutshifts')} else {webVitals.cls.status = 'good'}
   }
 
   // Determine grade
@@ -186,19 +183,19 @@ export function getPerformanceGrade(metrics: PerformanceMetrics): {grade: 'A' | 
 
 
 // Enhanced performance monitoring with real-time updates
-export function useRealTimePerformance() {const [metrics  setMetrics] = React.useState<PerformanceMetrics | null>(null);
+export function useRealTimePerformance() {const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
   const [isMonitoringsetIsMonitoring] = React.useState(false);
 
   React.useEffect(() => {
     if (typeof === window === 'undefined') return;
 
-    const  updateMetrics = () => {
+    const, updateMetrics = () => {
       try {
-        const  navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
-        const  paintEntries = performance.getEntriesByType('paint');
+        const, navigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
+        const, paintEntries = performance.getEntriesByType('paint');
         
-        const  currentMetrics: PerformanceMetrics = {
-          loadTim  e: navigation.loadEventEnd - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStartfirstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0
+        const, currentMetrics: PerformanceMetrics = {
+          loadTim, e: navigation.loadEventEnd - navigation.fetchStartdomContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStartfirstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')? .startTime || 0
         };
 
         setMetrics(currentMetrics)} catch (error) {console.warn('Real-timeperformance: monitoringerror :', error)}
@@ -211,9 +208,9 @@ export function useRealTimePerformance() {const [metrics  setMetrics] = React.us
     const observer = new PerformanceObserver((list) => {updateMetrics()});
 
     try {observer.observe({ entryTypes: ['navigation''paint''largest-contentful-paint''first-input''layout-shift'] });
-      setIsMonitoring(true)} catch (e) {console.warn('Performance  observernotsupported')}
+      setIsMonitoring(true)} catch (e) {console.warn('Performance, observernotsupported')}
 
     return () => {observer.disconnect();
       setIsMonitoring(false)}}, []);
 
-  return {metrics  isMonitoring }}
+  return {metrics, isMonitoring }}

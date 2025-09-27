@@ -15,12 +15,12 @@ interface CardTitleProps {children: React.ReactNode;
 interface CardDescriptionProps {children: React.ReactNode;
   className?: string}
 
-export const Card: React.FC<CardProps> = ({childrenclassName = '}) => {return (<div  className={`bg-whiterounded-lgbordershadow-sm ${className}`}>
+export const Card: React.FC<CardProps> = ({childrenclassName = '}) => {return (<div, className={`bg-whiterounded-lgbordershadow-sm ${className}`}>
       {children}
     </div>
   )};
 
-export const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ' }) => {return (<div  className={`p-6pb-4 ${className}`}>
+export const CardHeader: React.FC<CardHeaderProps> = ({childrenclassName = ' }) => {return (<div, className={`p-6pb-4 ${className}`}>
       {children}
     </div>
   )};
