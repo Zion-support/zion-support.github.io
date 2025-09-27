@@ -18,23 +18,21 @@ export default function Contact(): JSX.Element {
 		budget: '',
 		timeline: ''
 	});
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+	const [isSubmitting  setIsSubmitting] = useState(false);
+	const [submitStatus  setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	const { trackClick } = useAnalytics();
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		const { name, value } = e.target;
+		const { name  value } = e.target;
 		setFormData(prev => ({
-			...prev,
+			...prev 
 			[name]: value
-		}));
-	};
+		}))};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -43,9 +41,9 @@ export default function Contact(): JSX.Element {
 
 		try {
 			// Simulate API call
-			await new Promise(resolve => setTimeout(resolve, 2000));
+			await new Promise(resolve => setTimeout(resolve  2000));
 			
-			// In a real application, you would send the data to your API
+			// In a real application  you would send the data to your API
 			console.log('Form submitted:', formData);
 			
 			setSubmitStatus('success');
@@ -58,12 +56,9 @@ export default function Contact(): JSX.Element {
 				message: '',
 				budget: '',
 				timeline: ''
-			});
-		} catch (error) {
-			setSubmitStatus('error');
-		} finally {
-			setIsSubmitting(false);
-		}
+			})} catch (error) {
+			setSubmitStatus('error')} finally {
+			setIsSubmitting(false)}
 	};
 
 	const contactInfo = [
@@ -81,7 +76,7 @@ export default function Contact(): JSX.Element {
 		},
 		{
 			title: 'Office Hours',
-			value: 'Mon - Fri, 9AM - 6PM EST',
+			value: 'Mon - Fri  9AM - 6PM EST',
 			description: 'We&apos;re here to help',
 			icon: '🕒'
 		},
@@ -129,7 +124,7 @@ export default function Contact(): JSX.Element {
 			<Head>
 				<title>Contact Us - Zion App</title>
 				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -247,7 +242,7 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												>
 													<option value="">Select a service</option>
-													{services.map((service, index) => (
+													{services.map((service  index) => (
 														<option key={index} value={service}>{service}</option>
 													))}
 												</select>
@@ -265,7 +260,7 @@ export default function Contact(): JSX.Element {
 													className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 												>
 													<option value="">Select budget range</option>
-													{budgetRanges.map((range, index) => (
+													{budgetRanges.map((range  index) => (
 														<option key={index} value={range}>{range}</option>
 													))}
 												</select>
@@ -284,7 +279,7 @@ export default function Contact(): JSX.Element {
 												className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
 											>
 												<option value="">Select timeline</option>
-												{timelines.map((timeline, index) => (
+												{timelines.map((timeline  index) => (
 													<option key={index} value={timeline}>{timeline}</option>
 												))}
 											</select>
@@ -337,7 +332,7 @@ export default function Contact(): JSX.Element {
 											Get in Touch
 										</h2>
 										<div className="space-y-6">
-											{contactInfo.map((info, index) => (
+											{contactInfo.map((info  index) => (
 												<div key={index} className="flex items-start space-x-4">
 													<div className="text-2xl">{info.icon}</div>
 													<div>
@@ -392,5 +387,4 @@ export default function Contact(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

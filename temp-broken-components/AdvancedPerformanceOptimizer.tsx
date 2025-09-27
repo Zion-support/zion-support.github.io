@@ -6,18 +6,16 @@ interface PerformanceOptimizationSuggestion {
   title: string;
   description: string;
   impact: string;
-  effort: string;
-}
+  effort: string}
 
 interface AdvancedPerformanceOptimizerProps {
-  onOptimizationComplete?: (suggestions: PerformanceOptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: (suggestions: PerformanceOptimizationSuggestion[]) => void}
 
 export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   onOptimizationComplete
 }) => {
-  const [isAnalyzing, setIsAnalyzing] = React.useState(false);
-  const [suggestions, setSuggestions] = React.useState<PerformanceOptimizationSuggestion[]>([]);
+  const [isAnalyzing  setIsAnalyzing] = React.useState(false);
+  const [suggestions  setSuggestions] = React.useState<PerformanceOptimizationSuggestion[]>([]);
 
   const analyzePerformance = React.useCallback(async () => {
     setIsAnalyzing(true);
@@ -36,17 +34,13 @@ export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizer
       ];
 
       setSuggestions(optimizationSuggestions);
-      onOptimizationComplete?.(optimizationSuggestions);
-    } catch (error) {
-      console.error('Performance analysis failed:', error);
-    } finally {
-      setIsAnalyzing(false);
-    }
+      onOptimizationComplete?.(optimizationSuggestions)} catch (error) {
+      console.error('Performance analysis failed:', error)} finally {
+      setIsAnalyzing(false)}
   }, [onOptimizationComplete]);
 
   React.useEffect(() => {
-    analyzePerformance();
-  }, [analyzePerformance]);
+    analyzePerformance()}, [analyzePerformance]);
 
   return (
     <div className="advanced-performance-optimizer">
@@ -63,7 +57,6 @@ export const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizer
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default AdvancedPerformanceOptimizer;

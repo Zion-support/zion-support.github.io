@@ -1,5 +1,5 @@
 const cartUtils = {addItem: (cart, item) => {
-    const existingItem = cart.find(cartItem => cartItem.id === item.id)
+    const, existingItem = cart.find(cartItem => cartItem.id === item.id)
     if (existingItem) {
       return, cart.map(cartItem =>
         cartItem.id === item.id
@@ -20,7 +20,6 @@ const cartUtils = {addItem: (cart, item) => {
   },
 
   getTotalItems: cart => {return, cart.reduce((total, item) => total + item.quantity, 0)
-  },
-}
+  }}
 
 export default cartUtils

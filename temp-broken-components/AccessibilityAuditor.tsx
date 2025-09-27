@@ -4,15 +4,13 @@ interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: HTMLElement;
-  rule?: string;
-}
+  rule?: string}
 
 export default function AccessibilityAuditor() {
   useEffect(() => {
     // Only run in browser
     if (typeof window === 'undefined') {
-      return;
-    }
+      return}
 
     const issues: AccessibilityIssue[] = [];
 
@@ -23,14 +21,13 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'error',
           message: 'Image missing alt attribute',
-          element: img,
+          element: img 
           rule: 'alt-text'
-        });
-      }
+        })}
     });
 
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const inputs = document.querySelectorAll('input  textarea  select');
     inputs.forEach((input: HTMLInputElement) => {
       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
@@ -41,14 +38,13 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'error',
           message: 'Form input missing label',
-          element: input,
+          element: input 
           rule: 'label'
-        });
-      }
+        })}
     });
 
     // Check heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headings = document.querySelectorAll('h1  h2  h3  h4  h5  h6');
     let previousLevel = 0;
     headings.forEach((heading: HTMLHeadingElement) => {
       const currentLevel = parseInt(heading.tagName.charAt(1));
@@ -56,12 +52,10 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'warning',
           message: `Heading level ${currentLevel} follows heading level ${previousLevel}`,
-          element: heading,
+          element: heading 
           rule: 'heading-order'
-        });
-      }
-      previousLevel = currentLevel;
-    });
+        })}
+      previousLevel = currentLevel});
 
     // Check for proper ARIA attributes
     const elementsWithRole = document.querySelectorAll('[role]');
@@ -75,10 +69,9 @@ export default function AccessibilityAuditor() {
         issues.push({
           type: 'warning',
           message: 'aria-expanded used without appropriate role',
-          element: element as HTMLElement,
+          element: element as HTMLElement 
           rule: 'aria-valid-attr'
-        });
-      }
+        })}
     });
 
     // Log issues to console in development
@@ -86,16 +79,13 @@ export default function AccessibilityAuditor() {
       console.group('🔍 Accessibility Audit Results');
       issues.forEach(issue => {
         const prefix = issue.type === 'error' ? '❌' : issue.type === 'warning' ? '⚠️' : 'ℹ️';
-        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule);
-      });
-      console.groupEnd();
-    }
+        console.log(`${prefix} ${issue.message}`, issue.elementissue.rule)});
+      console.groupEnd()}
 
     // Return cleanup function
     return () => {
       // Cleanup if needed
-    };
-  }[]);
+    }}[]);
 
   return null; // This component doesn't render anything
 }

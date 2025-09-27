@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { User, SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
+import React, { useState  useEffect  useCallback } from 'react';
+import { User  SettingsPaletteGlobeSmartphoneMonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
   theme: 'light' | 'dark' | 'auto';
@@ -8,19 +8,17 @@ interface UserPreferences {
   animations: boolean;
   reducedMotion: boolean;
   highContrast: boolean;
-  screenReader: boolean;
-}
+  screenReader: boolean}
 
 interface EnhancedUserExperienceProps {
-  className?: string;
-}
+  className?: string}
 
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ className = '' }) => {
-  const [preferences, setPreferences] = useState<UserPreferences>({
+  const [preferences  setPreferences] = useState<UserPreferences>({
     theme: 'auto',
     language: 'en',
     fontSize: 'medium',
-    animations: true,
+    animations: true 
     reducedMotion: falsehighContrast: falsescreenReader: false
   });
 
@@ -32,17 +30,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     
     // Apply preferences immediately
     if (key === 'theme') {
-      document.documentElement.setAttribute('data-theme', value);
-    }
+      document.documentElement.setAttribute('data-theme', value)}
     if (key === 'fontSize') {
-      document.documentElement.setAttribute('data-font-size', value);
-    }
+      document.documentElement.setAttribute('data-font-size', value)}
     if (key === 'highContrast') {
-      document.documentElement.setAttribute('data-high-contrast', value.toString());
-    }
+      document.documentElement.setAttribute('data-high-contrast', value.toString())}
     if (key === 'reducedMotion') {
-      document.documentElement.setAttribute('data-reduced-motion'value.toString());
-    }
+      document.documentElement.setAttribute('data-reduced-motion'value.toString())}
   }[]);
 
   const detectSystemPreferences = useCallback(() => {
@@ -50,12 +44,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (preferences.theme === 'auto') {
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')}
     
     if (preferences.reducedMotion !== prefersReducedMotion) {
-      updatePreference('reducedMotion'prefersReducedMotion);
-    }
+      updatePreference('reducedMotion'prefersReducedMotion)}
   }[preferences.themepreferences.reducedMotionupdatePreference]);
 
   useEffect(() => {
@@ -63,8 +55,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
     const saved = localStorage.getItem('userPreferences');
     if (saved) {
       const parsed = JSON.parse(saved);
-      setPreferences(prev => ({ ...prev, ...parsed }));
-    }
+      setPreferences(prev => ({ ...prev  ...parsed }))}
 
     // Listen for system preference changes
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -75,15 +66,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
     return () => {
       darkModeQuery.removeEventListener('change', detectSystemPreferences);
-      motionQuery.removeEventListener('change'detectSystemPreferences);
-    };
-  }[detectSystemPreferences]);
+      motionQuery.removeEventListener('change'detectSystemPreferences)}}[detectSystemPreferences]);
 
   useEffect(() => {
     // Save preferences
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
-    detectSystemPreferences();
-  }[preferencesdetectSystemPreferences]);
+    detectSystemPreferences()}[preferencesdetectSystemPreferences]);
 
   const toggleSettings = () => setIsOpen(!isOpen);
 
@@ -122,7 +110,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
             { value: 'small', label: 'Small' },
         { value: 'medium', label: 'Medium' },
         { value: 'large', label: 'Large' }
-          ].map(({ value, label }) => (
+          ].map(({ value  label }) => (
             <button
               key={value}
               onClick={() => updatePreference('fontSize', value)}
@@ -193,7 +181,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         <h4 className="font-semibold text-blue-900 dark:text-blue-100mb-2">
           Accessibility Features
         </h4>
-        <ul className="text-sm text-blue-700 dar  k:text-blue-300space-y-1">
+        <ul className="text-sm text-blue-700 dar k:text-blue-300space-y-1">
           <li>• Keyboard navigation support</li>
           <li>• ARIA labels and roles</li>
           <li>• Focus indicators</li>
@@ -205,7 +193,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
 
   const LanguageTab = () => (<div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 dar  k:text-gray-300mb-3">
+        <label className="block text-sm font-medium text-gray-700 dar k:text-gray-300mb-3">
           Language
         </label>
         <select
@@ -223,7 +211,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
+        <h4 className="font-semibold text-green-900 dar k:text-green-100mb-2">
           Internationalization
         </h4>
         <p className="text-sm text-green-700 dar k:text-green-300">
@@ -281,9 +269,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
                     className={`flex-1 flex items-center justify-center space-x-2 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                       activeTab === id
                         ? 'bg-white dark: bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hove, r:text-gray-200'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                     }`}                  >
-                    <Icon className="w-4h-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{label}</span>                  </button>
                 ))}
               </div>
@@ -297,7 +285,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
         </div>
       )}
     </div>
-  );
-};
+  )};
 
 export default EnhancedUserExperience;

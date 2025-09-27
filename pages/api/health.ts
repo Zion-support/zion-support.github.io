@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest  NextApiResponse } from 'next';
 
 interface HealthResponse {
   status: 'healthy' | 'unhealthy';
@@ -9,12 +9,10 @@ interface HealthResponse {
   services: {
     database: 'connected' | 'disconnected';
     cache: 'connected' | 'disconnected';
-    analytics: 'active' | 'inactive';
-  };
-}
+    analytics: 'active' | 'inactive'}}
 
 export default function handler(
-  req: NextApiRequest,
+  req: NextApiRequest 
   res: NextApiResponse<HealthResponse>
 ) {
   if (req.method !== 'GET') {
@@ -29,8 +27,7 @@ export default function handler(
         cache: 'connected',
         analytics: 'active'
       }
-    });
-  }
+    })}
 
   const healthData: HealthResponse = {
     status: 'healthy',
@@ -45,5 +42,4 @@ export default function handler(
     }
   };
 
-  res.status(200).json(healthData);
-}
+  res.status(200).json(healthData)}

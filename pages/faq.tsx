@@ -2,16 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import { ErrorBoundary } from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function FAQ(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [openItems, setOpenItems] = useState<Set<number>>(new Set());
-	const [searchTerm, setSearchTerm] = useState('');
+	const [openItems  setOpenItems] = useState<Set<number>>(new Set());
+	const [searchTerm  setSearchTerm] = useState('');
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	usePageView('faq');
@@ -24,7 +23,7 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 1,
 					question: 'What services does Zion App offer?',
-					answer: 'Zion App provides comprehensive technology solutions including AI development, cloud computing, web development, mobile applications, data analytics, and cybersecurity services. We specialize in custom software development, digital transformation, and technology consulting.'
+					answer: 'Zion App provides comprehensive technology solutions including AI development  cloud computing  web development  mobile applications  data analytics  and cybersecurity services. We specialize in custom software development  digital transformation  and technology consulting.'
 				},
 				{
 					id: 2,
@@ -34,7 +33,7 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 3,
 					question: 'What makes Zion App different from other technology companies?',
-					answer: 'We combine deep technical expertise with a client-first approach. Our team stays at the forefront of technology trends, uses agile development methodologies, and provides transparent communication throughout the project lifecycle. We also offer ongoing support and maintenance services.'
+					answer: 'We combine deep technical expertise with a client-first approach. Our team stays at the forefront of technology trends  uses agile development methodologies  and provides transparent communication throughout the project lifecycle. We also offer ongoing support and maintenance services.'
 				}
 			]
 		},
@@ -44,17 +43,17 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 4,
 					question: 'How do you determine project pricing?',
-					answer: 'Our pricing is based on project scope, complexity, timeline, and specific requirements. We offer flexible pricing models including fixed-price projects, time and materials, and retainer agreements. We provide detailed quotes after understanding your needs and can work within various budget ranges.'
+					answer: 'Our pricing is based on project scope  complexity  timeline  and specific requirements. We offer flexible pricing models including fixed-price projects  time and materials  and retainer agreements. We provide detailed quotes after understanding your needs and can work within various budget ranges.'
 				},
 				{
 					id: 5,
 					question: 'Do you offer ongoing support and maintenance?',
-					answer: 'Yes, we provide comprehensive support and maintenance services including bug fixes, security updates, performance optimization, feature enhancements, and 24/7 monitoring. Our support packages are tailored to your specific needs and can include regular health checks and proactive maintenance.'
+					answer: 'Yes  we provide comprehensive support and maintenance services including bug fixes  security updates  performance optimization  feature enhancements  and 24/7 monitoring. Our support packages are tailored to your specific needs and can include regular health checks and proactive maintenance.'
 				},
 				{
 					id: 6,
 					question: 'Can you work with our existing technology stack?',
-					answer: 'Absolutely! We work with a wide range of technologies and can integrate with your existing systems. Our team is experienced with modern frameworks, legacy systems, and can help modernize your technology stack while maintaining compatibility with current systems.'
+					answer: 'Absolutely! We work with a wide range of technologies and can integrate with your existing systems. Our team is experienced with modern frameworks  legacy systems  and can help modernize your technology stack while maintaining compatibility with current systems.'
 				}
 			]
 		},
@@ -64,17 +63,17 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 7,
 					question: 'What is your development process?',
-					answer: 'We follow an agile development methodology with regular sprints, client feedback loops, and iterative improvements. Our process includes discovery and planning, design and prototyping, development and testing, deployment, and ongoing support. We maintain transparent communication throughout the entire process.'
+					answer: 'We follow an agile development methodology with regular sprints  client feedback loops  and iterative improvements. Our process includes discovery and planning  design and prototyping  development and testing  deployment  and ongoing support. We maintain transparent communication throughout the entire process.'
 				},
 				{
 					id: 8,
 					question: 'How do you ensure code quality and security?',
-					answer: 'We implement rigorous code review processes, automated testing, security audits, and follow industry best practices. Our team uses version control, continuous integration/continuous deployment (CI/CD), and conducts regular security assessments to ensure the highest quality and security standards.'
+					answer: 'We implement rigorous code review processes  automated testing  security audits  and follow industry best practices. Our team uses version control  continuous integration/continuous deployment (CI/CD), and conducts regular security assessments to ensure the highest quality and security standards.'
 				},
 				{
 					id: 9,
 					question: 'What is your typical project timeline?',
-					answer: 'Project timelines vary based on complexity and scope. Simple web applications typically take 2-4 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed project timelines during the planning phase and keep you updated on progress throughout development.'
+					answer: 'Project timelines vary based on complexity and scope. Simple web applications typically take 2-4 months  while complex enterprise solutions can take 6-12 months or more. We provide detailed project timelines during the planning phase and keep you updated on progress throughout development.'
 				}
 			]
 		},
@@ -84,17 +83,17 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 10,
 					question: 'How do you implement AI solutions?',
-					answer: 'We use machine learning frameworks like TensorFlow and PyTorch, cloud AI services from AWS and Google Cloud, and custom AI model development. Our approach includes data analysis, model training, integration with existing systems, and continuous optimization based on performance metrics.'
+					answer: 'We use machine learning frameworks like TensorFlow and PyTorch  cloud AI services from AWS and Google Cloud  and custom AI model development. Our approach includes data analysis  model training  integration with existing systems  and continuous optimization based on performance metrics.'
 				},
 				{
 					id: 11,
 					question: 'Do you provide cloud migration services?',
-					answer: 'Yes, we offer comprehensive cloud migration services including assessment, planning, migration execution, and optimization. We work with major cloud providers (AWS, Azure, Google Cloud) and can help you choose the best platform for your specific needs while ensuring security and cost optimization.'
+					answer: 'Yes  we offer comprehensive cloud migration services including assessment  planning  migration execution  and optimization. We work with major cloud providers (AWS  Azure  Google Cloud) and can help you choose the best platform for your specific needs while ensuring security and cost optimization.'
 				},
 				{
 					id: 12,
 					question: 'How do you handle data security and privacy?',
-					answer: 'We implement industry-standard security measures including encryption, secure authentication, regular security audits, and compliance with regulations like GDPR and HIPAA. We follow secure coding practices, use secure development tools, and provide ongoing security monitoring and updates.'
+					answer: 'We implement industry-standard security measures including encryption  secure authentication  regular security audits  and compliance with regulations like GDPR and HIPAA. We follow secure coding practices  use secure development tools  and provide ongoing security monitoring and updates.'
 				}
 			]
 		},
@@ -104,17 +103,17 @@ export default function FAQ(): JSX.Element {
 				{
 					id: 13,
 					question: 'How do you communicate with clients during projects?',
-					answer: 'We maintain regular communication through scheduled meetings, progress reports, project management tools, and direct access to your project team. We provide weekly status updates, demo sessions, and are available for questions and feedback throughout the development process.'
+					answer: 'We maintain regular communication through scheduled meetings  progress reports  project management tools  and direct access to your project team. We provide weekly status updates  demo sessions  and are available for questions and feedback throughout the development process.'
 				},
 				{
 					id: 14,
 					question: 'What happens if we need changes during development?',
-					answer: 'We understand that requirements can evolve. We have a flexible change management process that allows for modifications while maintaining project timeline and budget. We assess the impact of changes and provide options for implementation, ensuring transparency in any additional costs or timeline adjustments.'
+					answer: 'We understand that requirements can evolve. We have a flexible change management process that allows for modifications while maintaining project timeline and budget. We assess the impact of changes and provide options for implementation  ensuring transparency in any additional costs or timeline adjustments.'
 				},
 				{
 					id: 15,
 					question: 'Do you provide training for our team?',
-					answer: 'Yes, we provide comprehensive training for your team on the technologies and systems we implement. This includes documentation, video tutorials, hands-on training sessions, and ongoing support to ensure your team can effectively use and maintain the solutions we deliver.'
+					answer: 'Yes  we provide comprehensive training for your team on the technologies and systems we implement. This includes documentation  video tutorials  hands-on training sessions  and ongoing support to ensure your team can effectively use and maintain the solutions we deliver.'
 				}
 			]
 		}
@@ -123,16 +122,13 @@ export default function FAQ(): JSX.Element {
 	const toggleItem = (id: number) => {
 		const newOpenItems = new Set(openItems);
 		if (newOpenItems.has(id)) {
-			newOpenItems.delete(id);
-		} else {
-			newOpenItems.add(id);
-		}
+			newOpenItems.delete(id)} else {
+			newOpenItems.add(id)}
 		setOpenItems(newOpenItems);
-		trackClick(`faq-toggle-${id}`, 'interaction');
-	};
+		trackClick(`faq-toggle-${id}`, 'interaction')};
 
 	const filteredData = faqData.map(category => ({
-		...category,
+		...category 
 		questions: category.questions.filter(q => 
 			q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			q.answer.toLowerCase().includes(searchTerm.toLowerCase())
@@ -143,8 +139,8 @@ export default function FAQ(): JSX.Element {
 		<>
 			<Head>
 				<title>FAQ - Zion App</title>
-				<meta name="description" content="Find answers to frequently asked questions about Zion App's services, development process, pricing, and technology solutions." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Find answers to frequently asked questions about Zion App's services  development process  pricing  and technology solutions." />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				<div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -159,7 +155,7 @@ export default function FAQ(): JSX.Element {
 							Frequently Asked Questions
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Find answers to common questions about our services, process, and technology solutions
+							Find answers to common questions about our services  process  and technology solutions
 						</p>
 					</header>
 
@@ -185,7 +181,7 @@ export default function FAQ(): JSX.Element {
 						</section>
 
 						{/* FAQ Categories */}
-						{filteredData.map((category, categoryIndex) => (
+						{filteredData.map((category  categoryIndex) => (
 							<section key={category.category} className={`mb-16 transition-all duration-700 delay-${200 + categoryIndex * 100} ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 							}`}>
@@ -193,7 +189,7 @@ export default function FAQ(): JSX.Element {
 									{category.category}
 								</h2>
 								<div className="space-y-4">
-									{category.questions.map((item, index) => (
+									{category.questions.map((item  index) => (
 										<div key={item.id} className={`transform transition-all duration-500 delay-${300 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
@@ -238,8 +234,7 @@ export default function FAQ(): JSX.Element {
 						}`}>
 							<div className="absolute inset-0 opacity-10">
 								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-								}}></div>
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 							
 							<div className="relative z-10">
@@ -281,5 +276,4 @@ export default function FAQ(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}

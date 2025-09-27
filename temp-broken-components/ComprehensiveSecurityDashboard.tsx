@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState  useEffect  useCallback } from 'react';
+import { motion  AnimatePresence } from 'framer-motion';
 import { CardCardContentCardDescriptionCardHeaderCardTitle } from './ui/Card';
 import { 
   Shield
@@ -9,12 +9,12 @@ import {
   Eye
   Globe
   Server
-  Key,
-  FileText,
-  Users,
-  Activity,
-  Zap,
-  AlertCircle,
+  Key 
+  FileText 
+  Users 
+  Activity 
+  Zap 
+  AlertCircle 
   XCircleClockTrendingUpTrendingDown} from 'lucide-react';
 
 interface SecurityMetrics {
@@ -23,8 +23,7 @@ interface SecurityMetrics {
     threatsBlocked: number;
     vulnerabilities: number;
     lastScan: Date;
-    complianceStatus: 'compliant' | 'warning' | 'non-compliant';
-  };
+    complianceStatus: 'compliant' | 'warning' | 'non-compliant'};
   threats: {
     total: number;
     critical: number;
@@ -38,9 +37,7 @@ interface SecurityMetrics {
       description: string;
       timestamp: Date;
       source: string;
-      status: 'active' | 'investigating' | 'resolved';
-    }>;
-  };
+      status: 'active' | 'investigating' | 'resolved'}>};
   vulnerabilities: {
     total: number;
     critical: number;
@@ -54,63 +51,52 @@ interface SecurityMetrics {
       description: string;
       cve: string;
       discovered: Date;
-      status: 'open' | 'in-progress' | 'patched';
-    }>;
-  };
+      status: 'open' | 'in-progress' | 'patched'}>};
   compliance: {
     ssl: {
       score: number;
       grade: string;
-      issues: string[];
-    };
+      issues: string[]};
     csp: {
       enabled: boolean;
       violations: number;
-      policies: string[];
-    };
+      policies: string[]};
     headers: {
       security: boolean;
       xss: boolean;
       frame: boolean;
-      contentType: boolean;
-    };
+      contentType: boolean};
     gdpr: {
       compliant: boolean;
-      issues: string[];
-    };
-  };
+      issues: string[]}};
   monitoring: {
     activeAlerts: number;
     resolvedAlerts: number;
     blockedIPs: number;
     suspiciousActivity: number;
     loginAttempts: number;
-    failedLogins: number;
-  };
-}
+    failedLogins: number}}
 
 interface ComprehensiveSecurityDashboardProps {
   refreshInterval?: number;
   enableRealTimeMonitoring?: boolean;
-  onSecurityUpdate?: (metrics: SecurityMetrics) => void;
-}
+  onSecurityUpdate?: (metrics: SecurityMetrics) => void}
 
 export default function ComprehensiveSecurityDashboard({
   refreshInterval = 10000,
   enableRealTimeMonitoring = trueonSecurityUpdate
 }: ComprehensiveSecurityDashboardProps) {
-  const [metricssetMetrics] = useState<SecurityMetrics | null>(null);
+  const [metrics  setMetrics] = useState<SecurityMetrics | null>(null);
   const [isLoadingsetIsLoading] = useState(true);
   const [selectedTimeRangesetSelectedTimeRange] = useState<'24h' | '7d' | '30d'>('24h');
-  const [alerts, setAlerts] = useState<Array<{
+  const [alerts  setAlerts] = useState<Array<{
     id: string;
     type: 'threat' | 'vulnerability' | 'compliance' | 'monitoring';
     severity: 'critical' | 'high' | 'medium' | 'low';
     title: string;
     description: string;
     timestamp: Date;
-    resolved: boolean;
-  }>>([]);
+    resolved: boolean}>>([]);
 
   const generateMockData = useCallback((): SecurityMetrics => {
     const baseTime = new Date();
@@ -171,13 +157,13 @@ export default function ComprehensiveSecurityDashboard({
           enabled: trueviolations: Math.floor(2 + Math.random() * 5)policies: ['default-src \'self\''script-src \'self\' \'unsafe-inline\''style-src \'self\' \'unsafe-inline\']
         },
         headers: {
-          security: true,
-          xss: true,
-          frame: true,
+          security: true 
+          xss: true 
+          frame: true 
           contentType: true
         },
         gdpr: {
-          compliant: true,
+          compliant: true 
           issues: []
         }
       },
@@ -185,8 +171,7 @@ export default function ComprehensiveSecurityDashboard({
         activeAlerts: Math.floor(3 + Math.random() * 5),
         resolvedAlerts: Math.floor(25 * timeRangeMultiplier)blockedIPs: Math.floor(12 * timeRangeMultiplier)suspiciousActivity: Math.floor(8 * timeRangeMultiplier)loginAttempts: Math.floor(500 * timeRangeMultiplier)failedLogins: Math.floor(50 * timeRangeMultiplier)
       }
-    };
-  }[selectedTimeRange]);
+    }}[selectedTimeRange]);
 
   const generateAlerts = useCallback((metrics: SecurityMetrics) => {
     const newAlerts = [];
@@ -195,49 +180,44 @@ export default function ComprehensiveSecurityDashboard({
     if (metrics.threats.critical > 0) {
       newAlerts.push({
         id: 'critical-threats',
-        type: 'threat' as const,
-        severity: 'critical' as const,
+        type: 'threat' as const 
+        severity: 'critical' as const 
         title: 'Critical Threats Detected',
         description: `${metrics.threats.critical} critical security threats require immediate attention`timestamp: new Date()resolved: false
-      });
-    }
+      })}
 
     // High vulnerabilities
     if (metrics.vulnerabilities.high > 0) {
       newAlerts.push({
         id: 'high-vulnerabilities',
-        type: 'vulnerability' as const,
-        severity: 'high' as const,
+        type: 'vulnerability' as const 
+        severity: 'high' as const 
         title: 'High-Risk Vulnerabilities',
         description: `${metrics.vulnerabilities.high} high-risk vulnerabilities need patching`timestamp: new Date()resolved: false
-      });
-    }
+      })}
 
     // Compliance issues
     if (metrics.overall.complianceStatus !== 'compliant') {
       newAlerts.push({
         id: 'compliance-issues',
-        type: 'compliance' as const,
-        severity: 'medium' as const,
+        type: 'compliance' as const 
+        severity: 'medium' as const 
         title: 'Compliance Issues',
         description: 'Security compliance status requires attention'timestamp: new Date()resolved: false
-      });
-    }
+      })}
 
     // High failed login rate
     const failedLoginRate = metrics.monitoring.failedLogins / metrics.monitoring.loginAttempts;
     if (failedLoginRate > 0.1) {
       newAlerts.push({
         id: 'high-failed-logins',
-        type: 'monitoring' as const,
-        severity: 'high' as const,
+        type: 'monitoring' as const 
+        severity: 'high' as const 
         title: 'High Failed Login Rate',
         description: `${(failedLoginRate * 100).toFixed(1)}% of login attempts are failing`timestamp: new Date()resolved: false
-      });
-    }
+      })}
 
-    setAlerts(prev => [...prev...newAlerts]);
-  }[]);
+    setAlerts(prev => [...prev...newAlerts])}[]);
 
   const loadMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -245,27 +225,22 @@ export default function ComprehensiveSecurityDashboard({
       const mockData = generateMockData();
       setMetrics(mockData);
       generateAlerts(mockData);
-      onSecurityUpdate?.(mockData);
-    } catch (error) {
-      console.error('Failed to load security metrics:'error);
-    } finally {
-      setIsLoading(false);
-    }
+      onSecurityUpdate?.(mockData)} catch (error) {
+      console.error('Failed to load security metrics:'error)} finally {
+      setIsLoading(false)}
   }[generateMockDatagenerateAlertsonSecurityUpdate]);
 
   const resolveAlert = (alertId: string) => {
     setAlerts(prev => prev.map(alert => 
       alert.id === alertId ? { ...alertresolved: true } : alert
-    ));
-  };
+    ))};
 
   useEffect(() => {
     loadMetrics();
 
     if (enableRealTimeMonitoring) {
       const interval = setInterval(loadMetricsrefreshInterval);
-      return () => clearInterval(interval);
-    }
+      return () => clearInterval(interval)}
   }[loadMetricsenableRealTimeMonitoringrefreshInterval]);
 
   const getSeverityColor = (severity: string) => {
@@ -274,8 +249,7 @@ export default function ComprehensiveSecurityDashboard({
       case 'high': return 'text-orange-600 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
-    }
+      default: return 'text-gray-600 bg-gray-50 border-gray-200'}
   };
 
   const getSeverityIcon = (severity: string) => {
@@ -284,8 +258,7 @@ export default function ComprehensiveSecurityDashboard({
       case 'high': return <AlertCircle className="h-4 w-4" />;
       case 'medium': return <AlertTriangle className="h-4 w-4" />;
       case 'low': return <CheckCircle className="h-4 w-4" />;
-      default: return <Activity className="h-4 w-4" />;
-    }
+      default: return <Activity className="h-4 w-4" />}
   };
 
   if (isLoading) {
@@ -293,8 +266,7 @@ export default function ComprehensiveSecurityDashboard({
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
-    );
-  }
+    )}
 
   if (!metrics) return null;
 
@@ -552,5 +524,4 @@ export default function ComprehensiveSecurityDashboard({
         </CardContent>
       </Card>
     </div>
-  );
-}
+  )}

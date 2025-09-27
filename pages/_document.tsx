@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main  NextScript } from 'next/document'
 
 export default function Document() {
   return (
@@ -24,15 +24,10 @@ export default function Document() {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
+                      console.log('SW registered: ', registration)})
                     .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
-              }
-            `,
-          }}
+                      console.log('SW registration failed: ', registrationError)})})}
+            `}}
         />
       </body>
     </Html>

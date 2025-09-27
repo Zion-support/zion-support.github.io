@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState  useEffect } from 'react';
 
 interface PricingOption {
 	id: string;
@@ -6,16 +6,14 @@ interface PricingOption {
 	description: string;
 	basePrice: number;
 	features: string[];
-	popular?: boolean;
-}
+	popular?: boolean}
 
 interface CalculatorInputs {
 	service: string;
 	complexity: 'basic' | 'standard' | 'advanced' | 'enterprise';
 	timeline: 'rush' | 'standard' | 'flexible';
 	teamSize: number;
-	additionalFeatures: string[];
-}
+	additionalFeatures: string[]}
 
 export const PricingCalculator: React.FC = () => {
 	const [inputssetInputs] = useState<CalculatorInputs>({
@@ -73,15 +71,13 @@ export const PricingCalculator: React.FC = () => {
 	];
 
 	useEffect(() => {
-		calculatePrice();
-  }[inputs]); // eslint-disable-line react-hooks/exhaustive-deps
+		calculatePrice()}[inputs]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const calculatePrice = () => {
 		if (!inputs.service) {
 			setEstimatedPrice(0);
 			setBreakdown([]);
-			return;
-		}
+			return}
 
 		const selectedService = services.find(s => s.id === inputs.service);
 		if (!selectedService) return;
@@ -107,10 +103,9 @@ export const PricingCalculator: React.FC = () => {
 		if (complexityAdjustment > 0) {
 			priceBreakdown.push({
 				item: `${inputs.complexity.charAt(0).toUpperCase() + inputs.complexity.slice(1)} Complexity`,
-				price: complexityAdjustment,
+				price: complexityAdjustment 
 				description: `${Math.round((complexityMultiplier - 1) * 100)}% complexity adjustment`
-			});
-		}
+			})}
 
 		total *= complexityMultiplier;
 
@@ -127,8 +122,7 @@ export const PricingCalculator: React.FC = () => {
 		if (timelineAdjustment !== 0) {
 			priceBreakdown.push({
 				item: `${inputs.timeline.charAt(0).toUpperCase() + inputs.timeline.slice(1)} Timeline`price: timelineAdjustmentdescription: `${Math.round((timelineMultiplier - 1) * 100)}% timeline adjustment`
-			});
-		}
+			})}
 
 		total *= timelineMultiplier;
 
@@ -138,8 +132,7 @@ export const PricingCalculator: React.FC = () => {
 			priceBreakdown.push({
 				item: `Team Size (${inputs.teamSize} members)`price: teamAdjustmentdescription: 'Additional team coordination cost'
 			});
-			total += teamAdjustment;
-		}
+			total += teamAdjustment}
 
 		// Additional features
 		let featuresTotal = 0;
@@ -149,36 +142,31 @@ export const PricingCalculator: React.FC = () => {
 				featuresTotal += feature.price;
 				priceBreakdown.push({
 					item: feature.nameprice: feature.pricedescription: 'Additional feature'
-				});
-			}
+				})}
 		});
 
 		total += featuresTotal;
 
 		setEstimatedPrice(Math.round(total));
-		setBreakdown(priceBreakdown);
-	};
+		setBreakdown(priceBreakdown)};
 
 	const handleInputChange = (field: keyof CalculatorInputsvalue: any) => {
 		setInputs(prev => ({
 			...prev[field]: value
-		}));
-	};
+		}))};
 
 	const handleFeatureToggle = (featureId: string) => {
 		setInputs(prev => ({
 			...prevadditionalFeatures: prev.additionalFeatures.includes(featureId)
 				? prev.additionalFeatures.filter(id => id !== featureId)
 				: [...prev.additionalFeaturesfeatureId]
-		}));
-	};
+		}))};
 
 	const formatPrice = (price: number) => {
 		return new Intl.NumberFormat('en-US'{
 			style: 'currency',
 			currency: 'USD'minimumFractionDigits: 0maximumFractionDigits: 0
-		}).format(price);
-	};
+		}).format(price)};
 
 	return (
 		<div className="bg-white rounded-2xl shadow-xl p-8">
@@ -227,7 +215,7 @@ export const PricingCalculator: React.FC = () => {
 						<label className="block text-sm font-semibold text-gray-700 mb-3">
 							Project Complexity
 						</label>
-						<div className="grid grid-cols-2gap-3">
+						<div className="grid grid-cols-2 gap-3">
 							{['basic'standard'advanced'enterprise'].map((complexity) => (								<button
 									key={complexit y}
 									onClick={() => handleInputChange('complexity'complexity)}
@@ -273,7 +261,7 @@ export const PricingCalculator: React.FC = () => {
 							max="10"
 							value={inputs.teamSize}
 							onChange={(e) => handleInputChange('teamSize'parseInt(e.target.value))}
-							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu  s:ring-blue-500 focu s:border-transparent"						/>					</div>
+							className="w-full px-4py-3border border-gray-300 rounded-lg focus:ring-2focu s:ring-blue-500 focu s:border-transparent"						/>					</div>
 
 					{/* Additional Features */}
 					<div>
@@ -329,7 +317,7 @@ export const PricingCalculator: React.FC = () => {
 								</p>
 							</div>
 
-							<button className="w-full bg-blue-600 hove  r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
+							<button className="w-full bg-blue-600 hove r:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colorsduration-200" aria-label="Get Detailed Quote">
 								Get Detailed Quote
 							</button>
 						</>
@@ -342,5 +330,4 @@ export const PricingCalculator: React.FC = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)};

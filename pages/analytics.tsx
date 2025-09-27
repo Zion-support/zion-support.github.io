@@ -4,7 +4,7 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load the comprehensive dashboard
 // const ComprehensiveDashboard = dynamic(() => import('../src/components/ComprehensiveDashboard'), {
-//   ssr: false,
+//   ssr: false 
 //   loading: () => (
 //     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
 //       <div className="text-center">
@@ -20,13 +20,13 @@ export default function AnalyticsPage() {
     <>
       <Head>
         <title>Analytics Dashboard - Zion Tech Solutions</title>
-        <meta name="description" content="Comprehensive website analytics dashboard for performance, accessibility, and SEO monitoring." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="Comprehensive website analytics dashboard for performance  accessibility  and SEO monitoring." />
+        <meta name="robots" content="noindex  nofollow" />
       </Head>
       
       <EnhancedSEO
         title="Analytics Dashboard - Zion Tech Solutions"
-        description="Comprehensive website analytics dashboard for performance, accessibility, and SEO monitoring."
+        description="Comprehensive website analytics dashboard for performance  accessibility  and SEO monitoring."
         keywords={[
           'analytics',
           'performance monitoring',
@@ -46,5 +46,4 @@ export default function AnalyticsPage() {
         </div>
       </div>
     </>
-  );
-}
+  )}

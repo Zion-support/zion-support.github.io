@@ -2,16 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 // import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
+import { usePageView  useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Portfolio(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
-	const [selectedCategory, setSelectedCategory] = useState<string>('all');
-	const [selectedProject, setSelectedProject] = useState<number | null>(null);
+	const [selectedCategory  setSelectedCategory] = useState<string>('all');
+	const [selectedProject  setSelectedProject] = useState<number | null>(null);
 
 	useEffect(() => {
-		setIsVisible(true);
-	}, []);
+		setIsVisible(true)}, []);
 
 	// Analytics tracking
 	usePageView('portfolio');
@@ -23,11 +22,11 @@ export default function Portfolio(): JSX.Element {
 			title: 'AI-Powered E-commerce Platform',
 			client: 'TechRetail Inc.',
 			category: 'AI',
-			description: 'Built a comprehensive e-commerce platform with AI-powered recommendations, inventory management, and customer analytics.',
+			description: 'Built a comprehensive e-commerce platform with AI-powered recommendations  inventory management  and customer analytics.',
 			technologies: ['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],
 			results: ['40% increase in sales', '60% improvement in user engagement', '25% reduction in cart abandonment'],
 			image: '🛒',
-			featured: true,
+			featured: true 
 			duration: '6 months',
 			team: '8 developers'
 		},
@@ -40,7 +39,7 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
 			results: ['50% faster deployments', '99.9% uptime achieved', '40% cost reduction'],
 			image: '☁️',
-			featured: true,
+			featured: true 
 			duration: '4 months',
 			team: '6 developers'
 		},
@@ -53,7 +52,7 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
 			results: ['95% user satisfaction', 'Zero security incidents', '2M+ downloads'],
 			image: '🏦',
-			featured: false,
+			featured: false 
 			duration: '8 months',
 			team: '10 developers'
 		},
@@ -66,7 +65,7 @@ export default function Portfolio(): JSX.Element {
 			technologies: ['Python', 'Django', 'PostgreSQL', 'D3.js', 'Machine Learning'],
 			results: ['80% faster data insights', '30% improvement in patient outcomes', 'Real-time monitoring'],
 			image: '📊',
-			featured: false,
+			featured: false 
 			duration: '5 months',
 			team: '7 developers'
 		},
@@ -75,11 +74,11 @@ export default function Portfolio(): JSX.Element {
 			title: 'Cybersecurity Platform',
 			client: 'DefenseTech Systems',
 			category: 'Security',
-			description: 'Built a comprehensive cybersecurity platform with threat detection, incident response, and compliance management.',
+			description: 'Built a comprehensive cybersecurity platform with threat detection  incident response  and compliance management.',
 			technologies: ['Python', 'React', 'Elasticsearch', 'Kafka', 'Machine Learning'],
 			results: ['99.5% threat detection accuracy', '50% faster incident response', 'SOC2 compliance'],
 			image: '🔒',
-			featured: false,
+			featured: false 
 			duration: '10 months',
 			team: '12 developers'
 		},
@@ -88,11 +87,11 @@ export default function Portfolio(): JSX.Element {
 			title: 'Progressive Web Application',
 			client: 'EduTech Innovations',
 			category: 'Web Development',
-			description: 'Developed a PWA for online learning with offline capabilities, real-time collaboration, and adaptive learning paths.',
+			description: 'Developed a PWA for online learning with offline capabilities  real-time collaboration  and adaptive learning paths.',
 			technologies: ['Next.js', 'TypeScript', 'PWA', 'WebRTC', 'IndexedDB'],
 			results: ['90% user retention', '60% faster load times', 'Offline functionality'],
 			image: '🎓',
-			featured: false,
+			featured: false 
 			duration: '7 months',
 			team: '9 developers'
 		}
@@ -118,8 +117,8 @@ export default function Portfolio(): JSX.Element {
 		<>
 			<Head>
 				<title>Portfolio - Zion App</title>
-				<meta name="description" content="Explore our portfolio of successful projects and case studies across AI, cloud computing, mobile development, and more." />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Explore our portfolio of successful projects and case studies across AI  cloud computing  mobile development  and more." />
+				<meta name="viewport" content="width=device-width  initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -144,7 +143,7 @@ export default function Portfolio(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 							<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-								{stats.map((stat, index) => (
+								{stats.map((stat  index) => (
 									<div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg">
 										<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
 											{stat.number}
@@ -162,13 +161,11 @@ export default function Portfolio(): JSX.Element {
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 						}`}>
 							<div className="flex flex-wrap justify-center gap-4">
-								{categories.map((category, index) => (
+								{categories.map((category  index) => (
 									<button
 										key={category}
-										onClick={() => {
-											setSelectedCategory(category);
-											trackClick(`portfolio-category-${category}`, 'filter');
-										}}
+										onClick={(()) => {setSelectedCategory(category);
+											trackClick(`portfolio-category-${category}`, 'filter')}}
 										className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
 											selectedCategory === category
 												? 'bg-blue-600 text-white shadow-lg transform -translate-y-1'
@@ -190,7 +187,7 @@ export default function Portfolio(): JSX.Element {
 									Featured Projects
 								</h2>
 								<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-									{featuredProjects.map((project, index) => (
+									{featuredProjects.map((project  index) => (
 										<div key={project.id} className={`transform transition-all duration-700 delay-${400 + index * 100} ${
 											isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 										}`}>
@@ -213,7 +210,7 @@ export default function Portfolio(): JSX.Element {
 												<div className="mb-4">
 													<h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
 													<ul className="space-y-1">
-														{project.results.map((result, resultIndex) => (
+														{project.results.map((result  resultIndex) => (
 															<li key={resultIndex} className="flex items-center text-sm text-gray-600">
 																<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
 																	<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -224,7 +221,7 @@ export default function Portfolio(): JSX.Element {
 													</ul>
 												</div>
 												<div className="flex flex-wrap gap-2 mb-4">
-													{project.technologies.map((tech, techIndex) => (
+													{project.technologies.map((tech  techIndex) => (
 														<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 															{tech}
 														</span>
@@ -233,10 +230,8 @@ export default function Portfolio(): JSX.Element {
 												<div className="flex items-center justify-between">
 													<span className="text-sm font-medium text-gray-600">{project.client}</span>
 													<button 
-														onClick={() => {
-															setSelectedProject(project.id);
-															trackClick(`view-project-${project.id}`, 'cta');
-														}}
+														onClick={(()) => {setSelectedProject(project.id);
+															trackClick(`view-project-${project.id}`, 'cta')}}
 														className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
 													>
 														View Details →
@@ -257,7 +252,7 @@ export default function Portfolio(): JSX.Element {
 								{selectedCategory === 'all' ? 'All Projects' : `${selectedCategory} Projects`}
 							</h2>
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-								{regularProjects.map((project, index) => (
+								{regularProjects.map((project  index) => (
 									<div key={project.id} className={`transform transition-all duration-700 delay-${600 + index * 100} ${
 										isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 									}`}>
@@ -280,7 +275,7 @@ export default function Portfolio(): JSX.Element {
 											<div className="mb-4">
 												<h4 className="text-xs font-semibold text-gray-700 mb-2">Results:</h4>
 												<ul className="space-y-1">
-													{project.results.slice(0, 2).map((result, resultIndex) => (
+													{project.results.slice(0, 2).map((result  resultIndex) => (
 														<li key={resultIndex} className="flex items-center text-xs text-gray-600">
 															<svg className="w-3 h-3 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
 																<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -291,7 +286,7 @@ export default function Portfolio(): JSX.Element {
 												</ul>
 											</div>
 											<div className="flex flex-wrap gap-1 mb-4">
-												{project.technologies.slice(0, 3).map((tech, techIndex) => (
+												{project.technologies.slice(0, 3).map((tech  techIndex) => (
 													<span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
 														{tech}
 													</span>
@@ -305,10 +300,8 @@ export default function Portfolio(): JSX.Element {
 											<div className="flex items-center justify-between">
 												<span className="text-xs font-medium text-gray-600">{project.client}</span>
 												<button 
-													onClick={() => {
-														setSelectedProject(project.id);
-														trackClick(`view-project-${project.id}`, 'cta');
-													}}
+													onClick={(()) => {setSelectedProject(project.id);
+														trackClick(`view-project-${project.id}`, 'cta')}}
 													className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
 												>
 													View →
@@ -326,8 +319,7 @@ export default function Portfolio(): JSX.Element {
 						}`}>
 							<div className="absolute inset-0 opacity-10">
 								<div className="absolute inset-0" style={{
-									backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-								}}></div>
+									backgroundImage: `url("data:image/svg+xml %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
 							</div>
 							
 							<div className="relative z-10">
@@ -369,5 +361,4 @@ export default function Portfolio(): JSX.Element {
 				</div>
 			</div>
 		</>
-	);
-}
+	)}
