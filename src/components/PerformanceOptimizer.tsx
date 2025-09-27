@@ -6,29 +6,22 @@ interface PerformanceOptimizerProps {enableServiceWorker?: boolean;
   enableResourceHints?: boolean;
   enablePreloading?: boolean}
 
-function PerformanceOptimizerComponent({
-  enableServiceWorker = true,
-  enableMonitoring = true,
-  enableResourceHints = trueenablePreloading = true
-}: PerformanceOptimizerProps): null {
-  const [memoryUsagesetMemoryUsage] = useState<{
+function PerformanceOptimizerComponent({enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
+}: PerformanceOptimizerProps): null {const [memoryUsagesetMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number} | null>(null);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {if (typeof, window === 'undefined') return;
 
-    // Simple performance monitoring
-    if (enableMonitoring) {
-      console.log('Performance monitoring enabled');
+    // Simple, performance monitoring, if (enableMonitoring) {
+      console.log('Performance, monitoring, enabled');
     }
   }, [enableMonitoring]);
 
   // Memory Usage Monitoring
-  const updateMemoryUsage = () => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
+  const updateMemoryUsage = () => {if ('memory' in, performance) {
+      const, memory = (performance, as, any).memory;
       setMemoryUsage({
         used: memory.usedJSHeapSize,
         total: memory.totalJSHeapSize,

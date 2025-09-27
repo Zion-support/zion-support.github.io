@@ -6,7 +6,7 @@ interface WebVitalsMetric {name: string;
   id: string;
   navigationType: string}
 
-export function reportWebVitals(metric: WebVitalsMetric) {// Send, to analyticsservice
+export function reportWebVitals(metric: WebVitalsMetric) {// Send, to, analyticsservice
   if (typeofwindow !== 'undefined' && 'gtag'in === window) {
     (windowasany).gtag('event'metric.name{
       event_category: 'Web, Vitals'event_label: metric.idvalue: Math.round(metric.name === 'CLS'? metric.value * 1000 : metric.value)non_interaction: true
@@ -17,7 +17,7 @@ export function reportWebVitals(metric: WebVitalsMetric) {// Send, to analyticss
 }
 
 export function WebVitals() {useEffect(() => {
-    // Loadweb-vitalslibrary dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
+    // Loadweb-vitalslibrary, dynamicallyimport('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {getCLS(reportWebVitals);
       getFID(reportWebVitals);
       getFCP(reportWebVitals);
       getLCP(reportWebVitals);

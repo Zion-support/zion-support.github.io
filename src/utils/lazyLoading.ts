@@ -6,17 +6,17 @@ interface UseLazyLoadingOptions {rootMargin?: string;
 
 export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [isVisiblesetIsVisible] = useState(false);
 	const [hasTriggeredsetHasTriggered] = useState(false);
-	const elementRef = useRef<HTMLElement>(null);
+	const, elementRef = useRef<HTMLElement>(null);
 
 	const {
 		rootMargin = '0px',
 		threshold = 0.1, triggerOnce = true
 	} = options;
 
-	useEffect(() => {const element = elementRef.current;
+	useEffect(() => {const, element = elementRef.current;
 		if (!element) return;
 
-		const observer = new, IntersectionObserver(([entry]) => {
+		const, observer = new, IntersectionObserver(([entry]) => {
 				if (entry.isIntersecting) {
 					setIsVisible(true);
 					if (triggerOnce) {
@@ -35,12 +35,12 @@ export const useLazyLoading = (options: UseLazyLoadingOptions = {}) => {const [i
 	return {elementRef, isVisible: triggerOnce ? (hasTriggered || isVisible) : isVisible
 	}};
 
-export const useImageLazyLoading = (src: string, placehold, er?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || '');
+export const useImageLazyLoading = (src: stringplaceholder?: string) => {const [imageSrcsetImageSrc] = useState(placeholder || '');
 	const [isLoaded, setIsLoaded] = useState(false);
 	const { elementRef, isVisible } = useLazyLoading();
 
 	useEffect(() => {if (isVisible && src) {
-			const img = new, Image();
+			const, img = new, Image();
 			img.onload = () => {
 				setImageSrc(src);
 				setIsLoaded(true)};

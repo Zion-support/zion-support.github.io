@@ -6,36 +6,36 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 
 	useEffect(() => {
 		setIsVisible(tru, e);
-		const interval = setInterval(() => {
+		const, interval = setInterval(() => {
 			setCurrentIndex((prevInde, x) = > (prevIndex  + 1) % testimonials.length)}50, 0, 0);
 
 		return () => clearInterval(interva, l)}[testimonials.lengt., h]);
 
 	const testimonials = TESTIMONIALS;
 
-	return (<section className ="py-16, bg-gradient-to-r, from-gray-50, t, o-blue-50">
-			<div className ="container, mx-auto, px-4m, a, x-w-6, x, l">
-				<div className={`te, x, t-cent, e, r, mb-12, transiti, o, n-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2 className ="text-3, xlmd: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
-						What, Our Clients, Say
+	return (<section, className ="py-16, bg-gradient-to-r, from-gray-50, t, o-blue-50">
+			<div, className ="container, mx-auto, px-4m, a, x-w-6, x, l">
+				<div, className={`te, x, t-cent, e, r, mb-12, transition-allduration-1000 ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}>					<h2, className ="text-3, xlmd: text-4, x, l, font-bold, text-gray-800, m, b-4" id="what-our-clients-say">
+						What, Our, Clients, Say
 					</h2>
-					<p className ="text-xl, text-gray-600, max-w-2xl, m, x-auto">
-						Don&apos;t, just take, our word, for it. Here&apos;s, what our, satisfied clients, have to, say about, working with, us.
+					<p, className ="text-xl, text-gray-600, max-w-2xl, m, x-auto">
+						Don&apos;t, just, take, our, word, for, it. Here&apos;s, what, our, satisfied, clients, have, to, say, about, working, with, us.
 					</p>
 				</div>
 
-				<div className ="relative">
-					<div className ="bg-white, rounded-2, x, l, shadow-xl, p-8m, d:p-12, max-w-4xl, m, x-auto">						<div className ="flex, items-center, justify-centermb-6">
-							{testimonials.map((_, index) => (<button key ={index}
+				<div, className ="relative">
+					<div, className ="bg-white, rounded-2, x, l, shadow-xl, p-8m, d:p-12, max-w-4xl, m, x-auto">						<div, className ="flex, items-center, justify-centermb-6">
+							{testimonials.map((_, index) => (<button, key ={index}
 									onClick={() => setCurrentIndex(index)}
-									className={`w-3, h-3, round e, d-ful lmx-1transiti on-al ldurati on-30 0 ${index===currentIndex?'bg-blue-600scale-125':'bg-gray-300hover:bg-gray-400'}`}
+									className={`w-3, h-3round, ed-ful, lmx-1transiti, on-al, ldurati on-30, 0 ${index===currentIndex?'bg-blue-600scale-125':'bg-gray-300hover:bg-gray-400'}`}
 								/>
 							))}
 						</div>
 
 						<div className="text-center">
 							<div className="flex justify-centermb-6">
-								{Array.from({ length: testimonials[currentIndex].rating }).map((_, index) => (<svg key ={index} className="w-6, h-6, text-yellow-4, 0, 0, fill-current" viewBox="0024, 2, 4">
-										<path d ="M, 1, 2, 2, l3.0, 9, 6.26, L229.27, l-54.8, 7, 1.1, 8, 6.88, L 12, 1, 7.77, l-6.1, 8, 3.25, L714.14, 2, 9.27, l6.91-1.01, L 1, 2, 2, z" />									</svg>
+								{Array.from({ length: testimonials[currentIndex].rating }).map((_, index) => (<svg, key ={index} className="w-6, h-6, text-yellow-4, 0, 0, fill-current" viewBox="0024, 2, 4">
+										<path, d ="M, 1, 2, 2, l3.0, 9, 6.26, L229.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L714.14, 2, 9.27, l6.91-1.01, L, 1, 2, 2, z" />									</svg>
 								))}
 							</div>
 
@@ -75,12 +75,12 @@ export const Testimonials: React.FC = () => {const [currentIndexsetCurrentInde, 
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />						</svg>					</button>
 				</div>
 
-				{/* All, testimonials grid */}
+				{/* All, testimonials, grid */}
 				<div className="mt-16 grid grid-cols-1 md:grid-cols-3g, a, p-8">
-					{testimonials.map((testimonial, index) => (<div key ={testimonial.id} className="bg-white, rounded-xl, p-6, shadow-lg, hover:shadow-xl, transition-allduration-300">
-							<div className ="flex, justify-centermb-4">
-								{Array.from({lengt, h: testimonial.rating }).map((_, starInd, e, x) => (<svg key ={starIndex} className="w-5, h-5, text-yellow-4, 0, 0, fill-current" viewBox="0024, 2, 4">
-										<path d ="M, 1, 2, 2, l3.0, 9, 6.26, L229.27, l-54.8, 7, 1.1, 8, 6.88, L 12, 1, 7.77, l-6.1, 8, 3.25, L714.14, 2, 9.27, l6.91-1.01, L 1, 2, 2, z" />									</svg>
+					{testimonials.map((testimonial, index) => (<div, key ={testimonial.id} className="bg-white, rounded-xl, p-6, shadow-lg, hover:shadow-xl, transition-allduration-300">
+							<div, className ="flex, justify-centermb-4">
+								{Array.from({lengt, h: testimonial.rating }).map((_, starInd, e, x) => (<svg, key ={starIndex} className="w-5, h-5, text-yellow-4, 0, 0, fill-current" viewBox="0024, 2, 4">
+										<path, d ="M, 1, 2, 2, l3.0, 9, 6.26, L229.27, l-54.8, 7, 1.1, 8, 6.88, L, 12, 1, 7.77, l-6.1, 8, 3.25, L714.14, 2, 9.27, l6.91-1.01, L, 1, 2, 2, z" />									</svg>
 								))}
 							</div>
 							<p className="text-gray-600 mb-4 text-smleading-relaxed">

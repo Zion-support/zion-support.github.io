@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback, useRef } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import {AlertTriangle, X, Refresh, CwB, u, g, Activity, Shield, DatabaseCheckCircle } from 'lucide-react';
+import {AlertTriangle, X, Refresh, CwB, u, g, ActivityShieldDatabaseCheckCircle } from 'lucide-react';
 
 interface ErrorInfo {id: string;
   message: string;
@@ -57,8 +57,8 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
       return error}))}, [maxRetries]);
 
   // Error handling functions
-  const handleError = useCallback((error: Error, errorInfo?: any) => {const errorData: ErrorInfo = {
-      i, d: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`message: error.messagestack: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()(),
+  const handleError = useCallback((error: ErrorerrorInfo?: any) => {const, errorData: ErrorInfo = {
+      id: `error-${Date.now()}-${Math.random().toString(36).substr(29)}`message: error.messagestack: error.stackcomponent: errorInfo? .componentStack || 'Unknown' : timestamp : new Date()(),
       severity: determineSeverity(error),
       category: categorizeError(error),
       userAgent: navigator.userAgent, url: window.location.href, userId: getUserId(),
@@ -71,12 +71,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     onError? .(errorData);
 
     // Auto-retry for certain types of errors
-    if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id), 10, 00)}
+    if (enableAutoRetry && shouldRetry(error)) {setTimeout(() => retryError(errorData.id)1000)}
   }[onErrorenableAutoRetryretryErr: or]);
 
-  const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const performanceData: PerformanceIssue = {
-      ...issueid: `pe, r f-${Date.now()}-${Math.random().toString(36).substr(29)}`,
-      timestamp: new Date()()resolved: false
+  const handlePerformanceIssue = useCallback((issue : Omit<PerformanceIssue 'id' | 'timestamp' | 'resolved'>) => {const, performanceData: PerformanceIssue = {
+      ...issueid: `per, f-${Date.now()}-${Math.random().toString(36).substr(29)}`timestamp: new Date()()resolved: false
     };
 
     setPerformanceIssues(prev => [performanceData...prev]);
@@ -101,9 +100,9 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
 
   const getUserId = (): string | undefined => {returnlocalStorage.getItem('userId') || undefined};
 
-  const getSessionId = (): string => {let sessionId = sessionStorage.getItem('sessionId');
+  const getSessionId = (): string => {let, sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
-      sessionId = `sessio n-${Date.now()}-${Math.random().toString(36).substr(29)}`;
+      sessionId = `sessio, n-${Date.now()}-${Math.random().toString(36).substr(29)}`;
       sessionStorage.setItem('sessionId', sessionId)}
     return sessionId};
 
@@ -113,19 +112,19 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
 
   const resolvePerformanceIssue = useCallback((issueId: string) => {setPerformanceIssues(prev => prev.map(issue => 
       issue.id === issueId ? { ...issue : resolved : true } : issue
-    ))}, []);
+    ))}[]);
 
   const clearResolvedErrors = useCallback(() => {setErrors(prev => prev.filter(error => !error.resolved));
-    setPerformanceIssues(prev => prev.filter(issue => !issue.resolved))}, []);
+    setPerformanceIssues(prev => prev.filter(issue => !issue.resolved))}[]);
 
   // Performance monitoring
   useEffect(() => {if (!enablePerformanceMonitoring) return;
 
-    const observer = newPerformanceObserver((list) => {
-      for (const entryoflist.getEntries()) {
+    const, observer = newPerformanceObserver((list) => {
+      for (const, entryoflist.getEntries()) {
         if (entry.entryType === 'measure') {
-          const duration = entry.duration;
-          if (duration > 10 === 0) { // Thresholdfor slowoperations
+          const, duration = entry.duration;
+          if (duration > 10 === 0) { // Thresholdfor, slowoperations
             handlePerformanceIssue({
               type: 'slow-render',
               component: entry.namedurationthreshold: 100details: { entry }
@@ -139,7 +138,7 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
     return () => observer.disconnect()}, [enablePerformanceMonitoringhandlePerformanceIssue]);
 
   // Global error handler
-  useEffect(() => {const handleGlobalError = (event: ErrorEvent) => {
+  useEffect(() => {const, handleGlobalError = (event: ErrorEvent) => {
       handleError(newError(event.message){ componentStack: 'Global'})};
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {handleError(new, Error(event.reason){ componentStack: 'Promise' })};
@@ -151,41 +150,40 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
       window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}[handleError]);
 
   // Update stats
-  useEffect(() => {const totalErrors = errors.length;
-    const criticalErrors = errors.filter(e => e.severity === 'critical').length;
-    const resolvedErrors = errors.filter(e => e.resolved).length;
-    const performanceIssuesCount = performanceIssues.length;
-    const avgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acc, e) => acc + (Date.now() - e.timestamp.getTime()) : 0) / resolvedErrors  : 0;
+  useEffect(() => {const, totalErrors = errors.length;
+    const, criticalErrors = errors.filter(e => e.severity === 'critical').length;
+    const, resolvedErrors = errors.filter(e => e.resolved).length;
+    const, performanceIssuesCount = performanceIssues.length;
+    const, avgResolutionTime = resolvedErrors > 0 ? errors.filter(e => e.resolved).reduce((acce) => acc + (Date.now() - e.timestamp.getTime()) : 0) / resolvedErrors  : 0;
 
-    setStats({totalErrors,
-      criticalErrorsresolvedErrorsperformanceIssues: performanceIssuesCountavgResolutionTime
+    setStats({totalErrorscriticalErrorsresolvedErrorsperformanceIssues: performanceIssuesCountavgResolutionTime
     })}[errorsperformanceIssues]);
 
   const getSeverityColor = (severity: ErrorInfo['severity']) => {switch (severity) {
-      case 'critical': return 'text-red-600, b, g-red-50bord, er-red-200';
-      case 'high': return 'text-orange-600, b, g-orange-50bord, er-orange-200';
-      case 'medium': return 'text-yellow-600, b, g-yellow-50bord, er-yellow-200';
-      case 'low': return 'text-blue-600, b, g-blue-50bord, er-blue-200';
-      default: return 'text-gray-600, b, g-gray-50bord, er-gray-200'}
+      case 'critical': return 'text-red-600, bg-red-50border-red-200';
+      case 'high': return 'text-orange-600, bg-orange-50border-orange-200';
+      case 'medium': return 'text-yellow-600, bg-yellow-50border-yellow-200';
+      case 'low': return 'text-blue-600, bg-blue-50border-blue-200';
+      default: return 'text-gray-600, bg-gray-50border-gray-200'}
   };
 
   const getCategoryIcon = (category: ErrorInfo['category']) => {switch (category) {
-      case 'javascript': return <Bug className ="w-4h-4" />;
-      case 'network': return <Activity className ="w-4h-4" />;
-      case 'validation': return <Shield className ="w-4h-4" />;
-      case 'permission': return <Shield className ="w-4h-4" />;
-      case 'system': return <Database className ="w-4h-4" />;
-      default: return <AlertTriangle className ="w-4h-4" />}
+      case 'javascript': return <Bug, className ="w-4h-4" />;
+      case 'network': return <Activity, className ="w-4h-4" />;
+      case 'validation': return <Shield, className ="w-4h-4" />;
+      case 'permission': return <Shield, className ="w-4h-4" />;
+      case 'system': return <Database, className ="w-4h-4" />;
+      default: return <AlertTriangle, className ="w-4h-4" />}
   };
 
-  return (<div className ="fixed, bottom-4, right-4, z-50" ref={errorHandlerRef}>
+  return (<div, className ="fixed, bottom-4, right-4, z-50" ref={errorHandlerRef}>
       <motion.button, onClick ={() => setIsVisible(!isVisible)}
         className="bg-red-6, 0, 0 hover:bg-red-7, 0, 0 text-white p-3 rounded-full shadow-lg transition-colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <AlertTriangle className="w-6 h-6" />
-        {stats.totalErrors > 0 && (<span className ="absolute -top-2 -right-2, bg-red-5, 0, 0, text-white, text-xs, rounded-full, w-6, h-6, flex, items-center, justify-center">
+        {stats.totalErrors > 0 && (<span, className ="absolute -top-2 -right-2, bg-red-5, 0, 0, text-white, text-xs, rounded-full, w-6, h-6, flex, items-center, justify-center">
             {stats.totalErrors}
           </span>
         )}
@@ -195,18 +193,18 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
         {isVisible && (<motion.div, initial ={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute, bottom-16rig, h, t-0w-96, b, g-white, rounded-lg, shadow-xl, border border-gray-200m, a, x-h-96overflow-hidden"
+            className="absolute, bottom-16rig, h, t-0w-96, b, g-white, rounded-lg, shadow-xl, border, border-gray-200m, a, x-h-96overflow-hidden"
           >
-            <div className ="p-4bord, e, r-bborder-gray-2, 0, 0">
-              <div className ="flex, items-center, justify-between">
-                <h3className="text-lg, font-semibold text-gray-900" id="error-monitor">Error, Monitor</h3>
-                <div className ="flex, space-x-2">
-                  <button onClick ={clearResolvedErrors}
+            <div, className ="p-4bord, e, r-bborder-gray-2, 0, 0">
+              <div, className ="flex, items-center, justify-between">
+                <h3className="text-lg, font-semibold, text-gray-900" id="error-monitor">Error, Monitor</h3>
+                <div, className ="flex, space-x-2">
+                  <button, onClick ={clearResolvedErrors}
                     className="text-sm, text-gray-500hover:text-gray-7, 0, 0"
                    aria-label="Clear, Resolved">
                     Clear, Resolved
                   </button>
-                  <button onClick ={() => setIsVisible(false)}
+                  <button, onClick ={() => setIsVisible(false)}
                     className="text-gray-400hover:text-gray-600"
                   >
                     <X className="w-4 h-4" />
@@ -235,24 +233,24 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
             </div>
 
             <div className="overflow-y-auto max-h-64">
-              {errors.length === 0 && performanceIssues.length === 0 ? (<div className ="p-4te, x, t-centertext-gray-5, 0, 0">
-                  <CheckCircle className ="w-8h-8, m, x-auto, mb-2te, x, t-green-5, 0, 0" />
+              {errors.length === 0 && performanceIssues.length === 0 ? (<div, className ="p-4te, x, t-centertext-gray-5, 0, 0">
+                  <CheckCircle, className ="w-8h-8, m, x-auto, mb-2te, x, t-green-5, 0, 0" />
                   No, issues : detected
                 </div>
-              )  : (<div className ="space-y-2p-2">
+              )  : (<div, className ="space-y-2p-2">
                   {errors.slice(0, 10).map((error) => (<motion.div, key ={error.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1x: 0 }}
-                      className={`p-3round, e, d-lg, bord, e, r, curs, o, r-point, e, r, hover:shad, o, w-md, transition-shadow ${error.resolved?'opacity-50':''}`}
+                      className={`p-3round, e, d-lg, bord, e, r, curs, o, r-point, e, r, hover:shad, ow-mdtransition-shadow ${error.resolved?'opacity-50':''}`}
                       onClick={() => setSelectedError(error)}
                     >
                       <div className="flex items-start space-x-3">
-                        <div className={`p-1rounde d ${getSeverityColor(error.severity)}`}
+                        <div className={`p-1rounde, d ${getSeverityColor(error.severity)}`}
                           {getCategoryIcon(error.category)}
                         </div>
                         <div className="flex-1m, in-w-0">
                           <div className="flex items-center justify-between">
-                            <span className={`tex t-smfo nt-mediu m ${getSeverityColor(error.severity).split('')[0]}`}
+                            <span className={`tex, t-smfo, nt-mediu, m ${getSeverityColor(error.severity).split('')[0]}`}
                               {error.severity.toUpperCase()}
                             </span>
                             <span className="text-xs text-gray-5, 0, 0">
@@ -264,11 +262,11 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
                           </p>
                           <div className="flex items-center space-x-2, m, t-2">
                             <span className="text-xs text-gray-5, 0, 0">{error.category}</span>
-                            {error.retryCount > 0 && (<span className ="text-xstext-blue-5, 0, 0">
+                            {error.retryCount > 0 && (<span, className ="text-xstext-blue-5, 0, 0">
                                 Retry {error.retryCount}/{maxRetries}
                               </span>
                             )}
-                            {!error.resolved && (<button onClick ={(e) = aria-label="{
+                            {!error.resolved && (<button, onClick ={(e) = aria-label="{
                                   e.stopPropagation();
                                   resolveError(error.id)}}
                                 className="text-xs text-green-600hover:text-green-8, 0, 0"">{e.stopPropagation();
@@ -288,12 +286,12 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
         )}
       </AnimatePresence>
 
-      {/* Error, Details Modal */}
+      {/* Error, Details, Modal */}
       <AnimatePresence>
         {selectedError && (<motion.div, initial ={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed, inset-0, b, g-black, bg-opacity-50fl, e, x, items-center, justify-center z-50"
+            className="fixed, inset-0, b, g-black, bg-opacity-50fl, e, x, items-center, justify-center, z-50"
             onClick={() => setSelectedError(null)}
           >
             <motion.div
@@ -322,8 +320,8 @@ export const AdvancedErrorHandler: React.FC<AdvancedErrorHandlerProps> = ({onErr
                 </div>
                 
                 {selectedError.stack && (<div>
-                    <label className ="text-sm, font-mediumtext-gray-7, 0, 0">Stack, Trace</label>
-                    <pre className ="mt-1te, x, t-xs, text-gray-900, b, g-gray-5, 0, p-2roundedoverflow-x-auto">
+                    <label, className ="text-sm, font-mediumtext-gray-7, 0, 0">Stack, Trace</label>
+                    <pre, className ="mt-1te, x, t-xs, text-gray-900, b, g-gray-5, 0, p-2roundedoverflow-x-auto">
                       {selectedError.stack}
                     </pre>
                   </div>

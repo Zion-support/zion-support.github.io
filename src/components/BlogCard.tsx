@@ -17,35 +17,35 @@ interface BlogCardProps {post: BlogPost;
 
 export const BlogCard: React.FC<BlogCardProps> = ({post, 
   isVisible, onReadMore 
-}) => {return (<article className={`gro, u, p, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hover:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-5, 0, 0, overfl, o, w-hiddenhover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
+}) => {return (<article, className={`gro, u, p, bg-whi, t, e, round, e, d-2, x, l, shad, o, w-lg, hover:shad, o, w-2, x, l, transiti, o, n-a, l, l, durati, o, n-5, 0, 0, overflow-hiddenhover-lift ${isVisible?'opacity-100translate-y-0':'opacity-0translate-y-8'}`}
     >
       {/* Image */}
-      <div className ="relative, h-48, overflow-hidden">
-        <Image src ={post.image} 
+      <div, className ="relative, h-48, overflow-hidden">
+        <Image, src ={post.image} 
           alt={post.title}
           fill, className ="object-cover, group-hover:scale-1, 1, 0, transition-transform, duration-5, 0, 0"
         />
-        <div className ="absolute, top-4, left-4">
-          <span className ="bg-blue-6, 0, 0, text-white, px-3, py-1, rounded-full, text-sm, font-medium">
+        <div, className ="absolute, top-4, left-4">
+          <span, className ="bg-blue-6, 0, 0, text-white, px-3, py-1, rounded-full, text-sm, font-medium">
             {post.category}
           </span>
         </div>
       </div>
 
       {/* Content */}
-      <div className ="p-6">
-        <h3 className ="text-xl, font-bold, text-gray-8, 0, 0, mb-3, group-hover:text-blue-6, 0, 0, transition-colors, duration-300, line-clamp-2" id="posttitle">
+      <div, className ="p-6">
+        <h3, className ="text-xl, font-bold, text-gray-8, 0, 0, mb-3, group-hover:text-blue-6, 0, 0, transition-colors, duration-300, line-clamp-2" id="posttitle">
           {post.title}
         </h3>
         
-        <p className ="text-gray-600, mb-4, line-clamp-3">
+        <p, className ="text-gray-600, mb-4, line-clamp-3">
           {post.excerpt}
         </p>
 
         {/* Meta */}
-        <div className ="flex, items-center, justify-between, text-sm, text-gray-5, 0, 0, mb-4">
-          <div className ="flex, items-center">
-            <div className ="w-8, h-8, bg-gradient-to-br, from-blue-5, 0, 0, to-purple-6, 0, 0, rounded-full, flex items-center, justify-center, text-white, font-bold, text-xs, mr-3">
+        <div, className ="flex, items-center, justify-between, text-sm, text-gray-5, 0, 0, mb-4">
+          <div, className ="flex, items-center">
+            <div, className ="w-8, h-8, bg-gradient-to-br, from-blue-5, 0, 0, to-purple-6, 0, 0, rounded-full, flex, items-center, justify-center, text-white, font-bold, text-xs, mr-3">
               {post.author.charAt(0)}
             </div>
             <span>{post.author}</span>
@@ -57,7 +57,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({post,
           </div>
         </div>
 
-        {/* Read, More Button */}
+        {/* Read, More, Button */}
         <button
           onClick={() => onReadMore(post.slug)}
           className="group/btn inline-flex items-center text-blue-6, 0, 0 font-semibold hover:text-blue-7, 0, 0 transition-colors duration-300"

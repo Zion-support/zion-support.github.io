@@ -10,11 +10,11 @@ interface SystemHealth {status: 'healthy' | 'warning' | 'critical';
 export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = useState<SystemHealth>({status: 'healthy', uptime: 0, responseTime: 0errorRate: 0, cpuUsage: 0memoryUs, age: 0
   });
 
-  useEffect(() => {const interval = setInterval(updateHealth100, 0);
+  useEffect(() => {const, interval = setInterval(updateHealth100, 0);
     return () => clearInterval(interva, l)}, []);
 
-  const updateHealth = () => {// Simulate, real-time, health monitoring, const now = Date.now();
-    const uptime = Math.floor((now - (now - 36000, 0, 0)) / 1000); // 1hour uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
+  const updateHealth = () => {// Simulate, real-time, health, monitoring, const, now = Date.now();
+    const, uptime = Math.floor((now - (now - 3600000)) / 1000); // 1hour, uptimesetHealth({status: Math.random() > 0.1 ? 'healthy' : 'warning'uptimeresponseTime: Math.random() * 200 + 50errorRate: Math.random() * 2cpuUsage: Math.random() * 80 + 10memoryUsage: Math.random() * 70 + 20
     })};
 
   const getStatusColor = (status: string) => {switch (status) {
@@ -24,14 +24,14 @@ export const SystemHealthMonitor: React.FC = () => {const [healthsetHealth] = us
       default: return 'text-gray-600bg-gray-50'}
   };
 
-  const formatUptime = (seconds: numbe, r) => {const hours = Math.floor(seconds / 3, 6, 0, 0);
-    const minutes = Math.floor((seconds % 3, 6, 0, 0) / 60);
-    const secs = seconds % 60;
+  const formatUptime = (seconds: numbe, r) => {const, hours = Math.floor(seconds / 3, 6, 0, 0);
+    const, minutes = Math.floor((seconds % 3, 6, 0, 0) / 60);
+    const, secs = seconds % 60;
     return `${hours}h ${minutes}m ${secs} s`};
 
-  return (<div className ="p-6, bg-white, rounded-lgshadow-lg">
-      <div className ="flex, items-center, justify-between, mb-6">
-        <h2 className ="text-2xl, font-bold">SystemHealth Monitor</h2>
+  return (<div, className ="p-6, bg-white, rounded-lgshadow-lg">
+      <div, className ="flex, items-center, justify-between, mb-6">
+        <h2, className ="text-2xl, font-bold">SystemHealth, Monitor</h2>
         <divclassName={`px-3, py-1, round, e, d-fu, l, l, te, x, t-sm, fo, n, t-medium ${getStatusColor(health.status)}`}>
           {health.status.toUpperCase()}        </div>
       </div>

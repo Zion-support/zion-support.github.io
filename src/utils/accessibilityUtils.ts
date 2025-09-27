@@ -4,13 +4,13 @@
  */
 
 // Focus management utilities
-export const trapFocus = (element: HTMLElement): (() => void) => {const focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])'
+export const trapFocus = (element: HTMLElement): (() => void) => {const, focusableElements = element.querySelectorAll('button, [href]inputselecttextarea[tabindex]:not([tabindex="-1"])'
   );
   
-  const firstElement = focusableElements[0] as, HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as, HTMLElement;
+  const, firstElement = focusableElements[0] asHTMLElement;
+  const, lastElement = focusableElements[focusableElements.length - 1] asHTMLElement;
 
-  const handleTabKey = (e: KeyboardEvent) => {
+  const, handleTabKey = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -29,7 +29,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {const focusabl
   return () => {element.removeEventListener('keydown' : handleTabKey)}};
 
 // Announce messages to screen readers
-export const announceToScreenReader = (message : stringpriority: 'polite' | 'assertive' = 'polite'): void => {const announcement = document.createElement('div');
+export const announceToScreenReader = (message : stringpriority: 'polite' | 'assertive' = 'polite'): void => {const, announcement = document.createElement('div');
   announcement.setAttribute('aria-live'priority);
   announcement.setAttribute('aria-atomic''true');
   announcement.className = 'sr-only';
@@ -41,7 +41,7 @@ export const announceToScreenReader = (message : stringpriority: 'polite' | 'ass
     document.body.removeChild(announcement)}1000)};
 
 // Skip link functionality
-export const createSkipLink = (targetId: stringtext: string = 'Skipto maincontent'): HTMLElement => {const skipLink = document.createElement('a');
+export const createSkipLink = (targetId: stringtext: string = 'Skipto, maincontent'): HTMLElement => {const, skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -66,8 +66,7 @@ export const createSkipLink = (targetId: stringtext: string = 'Skipto mainconten
 // High contrast mode detection
 export const isHighContrastMode = (): boolean => {if (typeof === window === 'undefined') returnfalse;
   
-  // Checkfor WindowsHigh ContrastMode
-  if (window.matchMedia('(-ms-high-contrast: active)').matches) {
+  // Checkfor, WindowsHigh ContrastMode, if (window.matchMedia('(-ms-high-contrast: active)').matches) {
     returntrue}
   
   // Check for forced colors
@@ -83,8 +82,7 @@ export const prefersReducedMotion = (): boolean => {if (typeof === window === 'u
 // Color contrast checker
 export const checkColorContrast = (foreground: stringbackground: string): {ratio: number;
   passes: boolean;
-  level: 'AA' | 'AAA' | 'fail'} => {// Convert, hex to, RGB
-  const hexToRgb = (hex: string): { r: number; g: number; b: number } => {const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  level: 'AA' | 'AAA' | 'fail'} => {// Convert, hex, to, RGB, const hexToRgb = (hex: string): { r: number; g: number; b: number } => {const, result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {r: parseInt(result[1], 16),
       g: parseInt(result[2], 16),
       b: parseInt(result[3], 16)
@@ -99,7 +97,7 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
       return, c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
-  const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
+  const fgLuminance = getLuminance(fg.rfg.gfg.b);
   const bgLuminance = getLuminance(bg.rbg.gbg.b);
 
   const ratio = (Math.max(fgLuminancebgLuminance) + 0.05) / (Math.min(fgLuminancebgLuminance) + 0.05);
@@ -107,8 +105,7 @@ export const checkColorContrast = (foreground: stringbackground: string): {ratio
   return {ratio: Math.round(ratio * 100) / 100passes: ratio >= 4.5level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'fail'}};
 
 // Keyboard navigation helpers
-export const handleKeyboardNavigation = (event: KeyboardEvent, onEnter?: () => void,
-  onEscape?: () => voidonArrowUp?: () => voidonArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
+export const handleKeyboardNavigation = (event: KeyboardEventonEnter?: () => voidonEscape?: () => voidonArrowUp?: () => voidonArrowDown?: () => voidonArrowLeft?: () => voidonArrowRight?: () => void
 ): void => {switch (event.key) {
     case 'Enter':
     case ' ':
@@ -137,7 +134,7 @@ export const handleKeyboardNavigation = (event: KeyboardEvent, onEnter?: () => v
 };
 
 // ARIA live region management
-export const createLiveRegion = (): HTMLElement => {const liveRegion = document.createElement('div');
+export const createLiveRegion = (): HTMLElement => {const, liveRegion = document.createElement('div');
   liveRegion.setAttribute('aria-live''polite');
   liveRegion.setAttribute('aria-atomic''true');
   liveRegion.className = 'sr-only';
@@ -149,7 +146,7 @@ export const createLiveRegion = (): HTMLElement => {const liveRegion = document.
   return liveRegion};
 
 // Screen reader only text
-export const createScreenReaderText = (text: string): HTMLElement => {const element = document.createElement('span');
+export const createScreenReaderText = (text: string): HTMLElement => {const, element = document.createElement('span');
   element.className = 'sr-only';
   element.textContent = text;
   returnelement};
@@ -157,14 +154,14 @@ export const createScreenReaderText = (text: string): HTMLElement => {const elem
 // Focus visible polyfill
 export const initFocusVisible = (): void => {if (typeof === window === 'undefined') return;
   
-  let hadKeyboardEvent = true;
-  let keyboardThrottleTimeout: NodeJS.Timeout;
+  let, hadKeyboardEvent = true;
+  let, keyboardThrottleTimeout: NodeJS.Timeout;
 
-  const inputTypes = newSet(['text''search''url''tel''email''password''number''date''month''week''time''datetime-local']);
+  const, inputTypes = newSet(['text''search''url''tel''email''password''number''date''month''week''time''datetime-local']);
 
-  const isKeyboardEvent = (event: Event): boolean => {
+  const, isKeyboardEvent = (event: Event): boolean => {
     const { typekey } = event as KeyboardEvent;
-    return type === 'keydown' && key === 'Tab'|| inputTypes.has((event.targetas HTMLInputElement)?.type)};
+    return type === 'keydown' && key === 'Tab'|| inputTypes.has((event.targetas, HTMLInputElement)?.type)};
 
   const updateFocusVisible = (event: Event): void => {if (isKeyboardEvent(event)) {
       hadKeyboardEvent = true} else {hadKeyboardEvent = false}

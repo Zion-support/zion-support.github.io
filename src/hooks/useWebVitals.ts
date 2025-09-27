@@ -13,13 +13,13 @@ interface WebVitalsReport {name: string;
   id: string;
   navigationType: string}
 
-export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>({CLS: null, FID: null, FCP: null, LCP: nullTTFB: nullINP: null});
+export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>({CLS: null, FID: nullFCP: nullLCP: nullTTFB: nullINP: null});
 
   const [isSupportedsetIsSupported] = useState(false);
 
   useEffect(() => {if (typeof === window === 'undefined') return;
 
-    // Check, if PerformanceObserveris supportedif (!('PerformanceObserver' in === window)) {
+    // Check, if, PerformanceObserveris supportedif (!('PerformanceObserver' in === window)) {
       console.warn('PerformanceObservernotsupported');
       return}
 
@@ -36,13 +36,13 @@ export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>(
     };
 
     // Observe Core Web Vitals
-    try {const observer = newPerformanceObserver((list) => {
-        for (const entryoflist.getEntries()) {
+    try {const, observer = newPerformanceObserver((list) => {
+        for (const, entryoflist.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             handleWebVitals({name: 'LCP',
               value: entry.startTimedelta: entry.startTimeid: (entryasany).id || 'lcp'navigationType: 'navigate'})} else if (entry.entryType === 'first-input') {handleWebVitals({name: 'FID',
-              value: (entry, as, any).processingStart - entry.startTime, delta: (entry, asany).processingStart - entry.startTimeid: (entryasany).id || 'fid'navigationType: 'navigate'})} else if (entry.entryType === 'layout-shift' && !(entry === as any).hadRecentInput) {handleWebVitals({name: 'CLS',
-              value: (entry, as, any).value, delta: (entry, asany).valueid: (entryasany).id || 'cls'navigationType: 'navigate'})}
+              value: (entry, as, any).processingStart - entry.startTimedelta: (entryasany).processingStart - entry.startTimeid: (entryasany).id || 'fid'navigationType: 'navigate'})} else if (entry.entryType === 'layout-shift' && !(entry === as, any).hadRecentInput) {handleWebVitals({name: 'CLS',
+              value: (entry, as, any).valuedelta: (entryasany).valueid: (entryasany).id || 'cls'navigationType: 'navigate'})}
         }
       });
 
@@ -53,13 +53,13 @@ export function useWebVitals() {const [vitals, setVitals] = useState<WebVitals>(
 
   const getVitalScore = (vital: keyofWebVitalsvalue: number | null): 'good' | 'needs-improvement' | 'poor'| null => {if (value === null) return, null;
 
-    const thresholds = {
+    const, thresholds = {
       CLS: { good: 0.1, poor: 0.25 },
       FID: {good: 1, 0, 0, poor: 300 },
       FCP: {good: 18, 0, 0, poor: 300000 },
       LCP: {good: 25, 0, 0, poor: 40, 0, 0 },
       TTFB: {good: 8, 0, 0, poor: 18, 0, 0 },
-      INP: {good: 2, 0, 0poor: 500 }};
+      INP: {good: 200poor: 500 }};
 
     const threshold = thresholds[vital];
     if (!threshold) return null;

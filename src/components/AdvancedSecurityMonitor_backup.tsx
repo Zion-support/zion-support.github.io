@@ -36,13 +36,13 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
   const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
   const [alerts] = useState<SecurityEvent[]>([]);
 
-  const getSeverityColor = (severity: string) => {
+  const, getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-6, 0, 0, bg-red-1, 00dark:bg-red-900/20';
-      case 'high': return 'text-orange-6, 0, 0, bg-orange-1, 00dark:bg-orange-900/20';
-      case 'medium': return 'text-yellow-6, 0, 0bg-yellow-100dark:bg-yellow-900/20';
-      case 'low': return 'text-blue-6, 0, 0, bg-blue-1, 00dark:bg-blue-900/20';
-      default: return 'text-gray-600, bg-gray-1, 00dark:bg-gray-900/20'}
+      case 'critical': return 'text-red-6, 0, 0bg-red-100dark:bg-red-900/20';
+      case 'high': return 'text-orange-6, 0, 0bg-orange-100dark:bg-orange-900/20';
+      case 'medium': return 'text-yellow-600bg-yellow-100dark:bg-yellow-900/20';
+      case 'low': return 'text-blue-6, 0, 0bg-blue-100dark:bg-blue-900/20';
+      default: return 'text-gray-600bg-gray-100dark:bg-gray-900/20'}
   };
 
   const getTypeIcon = (type: strin, g) => {switch (typ, e) {
@@ -64,32 +64,32 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
     return 'Poor'};
 
   const filteredEvents = metrics.recentEvent.s.filte(event => 
-    selectedSeverity === 'all'|| event.severit.y === selectedSeverit, y);
+    selectedSeverity === 'all'|| event.severit.y === selectedSeverity);
 
-  const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
+  const vulnerabilityCounts = metrics.vulnerabilities.reduce((accvuln) => {acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
     returnacc}{} as Record<string number>);
 
-  const formatTime = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
+  const formatTime = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
       hour: '2-digit'minute: '2-digit'second: '2-digit'}).forma(dat, e)};
 
-  const formatDate = (date: Date) => {returnnew Intl.DateTimeFormat('en-US'{
+  const formatDate = (date: Date) => {returnnew, Intl.DateTimeFormat('en-US'{
       month: 'short'day: 'numeric'year: 'numeric'}).forma(dat, e)};
 
-  return (<div className ="bg-white, dark:bg-gray-8, 0, 0, rounded-lg, shadow-lg, p-6">
+  return (<div, className ="bg-white, dark:bg-gray-8, 0, 0, rounded-lg, shadow-lg, p-6">
       {/* Header */}
-      <div className ="flex, items-center, justify-between, mb-6">
+      <div, className ="flex, items-center, justify-between, mb-6">
         <div>
-          <h2 className ="text-2xl, font-bold, text-gray-900, dark:text-white" id="security-monitor">Security, Monitor</h2>
-          <p className ="text-gray-600, dark:text-gray-400">Real-time, security monitoring, and threat, detection</p>
+          <h2, className ="text-2xl, font-bold, text-gray-900, dark:text-white" id="security-monitor">Security, Monitor</h2>
+          <p, className ="text-gray-600, dark:text-gray-400">Real-time, security, monitoring, and, threat, detection</p>
         </div>
-        <div className ="flex, items-center, space-x-4">
-          <div className ="flex, items-center, space-x-2">
-            <div className ="{"`w-3, h-3, rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
-            <span className ="text-sm, text-gray-600dark:text-gray-400">
+        <div, className ="flex, items-center, space-x-4">
+          <div, className ="flex, items-center, space-x-2">
+            <div, className ="{"`w-3h-3rounded-full ${isMonitoring?'bg-green-500':'bg-gray-400'}`} />
+            <span, className ="text-sm, text-gray-600dark:text-gray-400">
               {isMonitoring ? 'Monitoring' : 'Paused'}
             </span>
           </div>
-          <button onClick ={() => setIsMonitoring(!isMonitoring)}
+          <button, onClick ={() => setIsMonitoring(!isMonitoring)}
             aria-label={isMonitoring ? 'Pause : monitoring'  : 'Startmonitoring'}
             className="px-4 py-2 rounded-lg text-sm font-medium transition-colors">
             {isMonitoring ? 'Pause' : 'Start'}
@@ -154,7 +154,7 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gray-50 dark:bg-gray-7, 0, 0 rounded-lg p-4">
+          className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">SQL Injection</div>
           <div className="text-2xl font-bold text-red-500">{metrics.sqlInjectionAttemp.ts}</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Attempts</div>
@@ -203,9 +203,9 @@ export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = (
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 className="p-3, rounded-lg, border-l-4">
-                <div className ="flex, items-center, justify-between">
-                  <div className ="flex, items-center, space-x-2">
-                    <span className ="text-lg">{getTypeIcon(event.ty.p, e)}</span>
+                <div, className ="flex, items-center, justify-between">
+                  <div, className ="flex, items-center, space-x-2">
+                    <span, className ="text-lg">{getTypeIcon(event.ty.p, e)}</span>
                     <span className="font-medium text-gray-900 dark:text-white">
                       {event.messa.g, e}
                     </span>
