@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 // Lazy load heavy components to reduce initial bundle size
 // const PerformanceDashboard = dynamic(() => import('../src/components/PerformanceDashboard').then(mod => ({ default: mod.PerformanceDashboard })), {
@@ -13,10 +14,20 @@ import dynamic from 'next/dynamic';
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
+export default function Dashboard(): JSX.Element {
+  const [activeTab, setActiveTab] = useState('comprehensive');
+  const [isRealTime, setIsRealTime] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const { trackClick } = useAnalytics();
+
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    trackClick(`dashboard-tab-${tab}`, 'navigation')};
-  const renderDashboard = () => {    switch (activeTab) {
+    trackClick(`dashboard-tab-${tab}`, 'navigation');
+  };
+
+  const renderDashboard = () => {
+    switch (activeTab) {
       case 'comprehensive':
         return <ComprehensiveAnalyticsDashboard />;
       case 'analytics':
@@ -46,7 +57,8 @@ import dynamic from 'next/dynamic';
         return (
           <div className="p-8">
             <div className="flex justify-between items-center mb-8">
-              <h1 className="text-3 xl font-bold text-gray-900">Dashboard Overview</h1>              <div className="flex items-center space-x-4">
+              <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
+              <div className="flex items-center space-x-4">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -474,12 +486,15 @@ import dynamic from 'next/dynamic';
       default:
         return (
           <div className="p-8">
-            <h1 className="text-3 xl font-bold text-gray-900 mb-8">Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <p className="text-gray-600">Select a tab to view dashboard content.</p>
             </div>
           </div>
-        )}  };
+        );
+    }
+  };
+
   return (
     <>
       <Head>

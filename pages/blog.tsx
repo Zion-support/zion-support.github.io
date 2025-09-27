@@ -6,6 +6,7 @@ import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
 	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState('All');
 	const { trackClick } = useAnalytics();
 
 	const blogPosts = [
@@ -75,26 +76,7 @@ export default function Blog(): JSX.Element {
 			image: '/api/placeholder/600/300',
 			slug: 'rise-edge-computing-benefits-use-cases'
 		}
-		{
-			id: 2
-			tit, l, e: 'Cloud, Computing, Best Practic, e, s'
-			excer, p, t: 'Essential, strategies, for successful, cloud, migration and, optimizatio, n.'
-			auth, o, r: 'Sarah, Johnso, n'
-			da, t, e: '20, 2, 4-01-10'
-			catego, r, y: 'Cloud, Computin, g'
-			readTi, m, e: '7, min, read'
-			ima, g, e: '/imag, e, s/bl, o, g/clo, u, d-be, s, t-practic, e, s.j, p, g'
-		}
-		{
-			id: 3
-			tit, l, e: 'Digital, Transformation, Guide'
-			excer, p, t: 'A, comprehensive, roadmap for, modernizing, your business, processe, s.'
-			auth, o, r: 'Mike, Che, n'
-			da, t, e: '20, 2, 4-01-05'
-			catego, r, y: 'Digital, Transformatio, n'
-			readTi, m, e: '8, min, read'
-			ima, g, e: '/imag, e, s/bl, o, g/digit, a, l-transformati, o, n.j, p, g'
-		}];
+	];
 	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
 
 	const handleNewsletterSubscribe = async (email: string) => {
@@ -105,9 +87,11 @@ export default function Blog(): JSX.Element {
 		setIsNewsletterLoading(false);
 	};
 
-	const, filteredPost, s = selectedCatego, r, y === 'a, l, l' 
-		? blogPos, t, s 
-		: blogPos, t, s.filt, e, r(po, s, t => po, s, t.catego, r, y.toLowerCa, s, e() === selectedCatego, r, y);  return (
+	const filteredPosts = selectedCategory === 'All' 
+		? blogPosts 
+		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
+
+	return (
     <>
       
       {/* <EnhancedSEO, titl, e="Bl, o, g - Zion, Tech, Solutions"

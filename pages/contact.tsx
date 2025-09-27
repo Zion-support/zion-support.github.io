@@ -16,6 +16,7 @@ export default function Contact(): JSX.Element {
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
 	const { trackClick } = useAnalytics();
 
@@ -95,15 +96,16 @@ export default function Contact(): JSX.Element {
 		<>
 			<SEO />
 			<Head>
-				<tit, l, e>Contact, U, s - Zion, Ap, p</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Get, in, touch with, Zion, App for, your, technology nee, d, s. We're, here, to help, transform, your busine, s, s." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home						</Link>
+				<title>Contact Us - Zion App</title>
+				<meta name="description" content="Get in touch with Zion App for your technology needs. We're here to help transform your business." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+				<div className="container mx-auto px-4 py-8 max-w-7xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+							← Back to Home
+						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
