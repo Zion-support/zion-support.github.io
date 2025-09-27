@@ -1,4 +1,4 @@
-import React, { useStateuseEffectuseCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { User, Settings, Palette, Globe, Smartphone, MonitorSunMoon } from 'lucide-react';
 
 interface UserPreferences {
@@ -7,8 +7,8 @@ interface UserPreferences {
   fontSize: 'small' | 'medium' | 'large';
   animations: boolean;
   reducedMotion: boolean;
-  highContras, t: boolean;
-  screenReade, r: boolean;
+  highContrast: boolean;
+  screenReader: boolean;
 }
 
 interface EnhancedUserExperienceProps {
@@ -227,10 +227,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       </div>
 
       <div className="bg-green-50 dark:bg-green-900/20 p-4rounded-lg">
-        <h4 className="font-semibold text-green-900 dar  k:text-green-100mb-2">
+        <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
           Internationalization
         </h4>
-        <p className="text-sm text-green-700 dar k:text-green-300">
+        <p className="text-sm text-green-700 dark:text-green-300">
           Full i18n support with RTL language support and localized content.
         </p>
       </div>
@@ -243,7 +243,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ classNa
       <button
         onClick={toggleSettings}
         className="fixed bottom-6 right-6 z-50 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
-        aria-label="Open user experience settings"      >
+        aria-label="Open user experience settings">
         <Settings className="w-6 h-6"/>
       </button>
 

@@ -184,9 +184,9 @@ export default function EnhancedDashboard({
     </div>
   );
 
-  const renderWidget = (widget: DashboardWidge, t) => {
+  const renderWidget = (widget: DashboardWidget) => {
     const sizeClasses = {
-      smal, l: 'col-span-1 row-span-1',
+      small: 'col-span-1 row-span-1',
       medium: 'col-span-2 row-span-1',
       large: 'col-span-3 row-span-2'
     };

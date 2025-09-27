@@ -27,7 +27,7 @@ export const PricingCalculator: React.FC = () => {
 
 	const services: PricingOption[] = [
 		{
-			id: 'web- dev',
+			id: 'web-dev',
 			name: 'Web Development',
 			description: 'Custom web applications and websites',
 			basePrice: 15000, features: ['Responsive Design', 'CMS Integration', 'SEO Optimization', 'Performance Optimization']
@@ -38,7 +38,7 @@ export const PricingCalculator: React.FC = () => {
 			description: 'iOS and Android applications', basePrice: 25000, features: ['Native Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications']
 		},
         {
-			id: 'ai- ml',
+			id: 'ai-ml',
 			name: 'AI & Machine Learning',
 			description: 'Artificial intelligence solutions',
 			basePrice: 35000, features: ['Custom Models', 'Data Processing', 'API Integration', 'Training & Optimization']

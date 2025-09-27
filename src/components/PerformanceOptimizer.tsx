@@ -1,9 +1,11 @@
-import React, { useEffectuseState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   preloadCriticalResources, 
   registerServiceWorker, 
   monitorPerformance, 
-  addResourceHintsgetMemoryUsagedebounce
+  addResourceHints,
+  getMemoryUsage,
+  debounce
 } from '../utils/performanceOptimizations';
 
 interface PerformanceOptimizerProps {
@@ -14,9 +16,12 @@ interface PerformanceOptimizerProps {
 }
 
 export default function PerformanceOptimizer({
-  enableServiceWorker = trueenableMonitoring = trueenableResourceHints = trueenablePreloading = true
-}: PerformanceOptimizerProp, s): null {
-  const [memoryUsagesetMemoryUsag, e] = useState<{
+  enableServiceWorker = true,
+  enableMonitoring = true,
+  enableResourceHints = true,
+  enablePreloading = true
+}: PerformanceOptimizerProps): null {
+  const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
     total: number;
     percentage: number;
@@ -49,7 +54,7 @@ export default function PerformanceOptimizer({
     }, 1000);
 
     // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage, 500);
+    const interval = setInterval(updateMemoryUsage, 5000);
     updateMemoryUsage(); // Initial check
 
     // Cleanup
