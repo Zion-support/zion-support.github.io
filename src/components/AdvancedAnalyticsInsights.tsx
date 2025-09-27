@@ -312,7 +312,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Total Sessions</CardTitle>
-            <Users className="h-4w-4text-muted-foreground" />
+            <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.totalSessions)}</div>
@@ -325,7 +325,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Unique Users</CardTitle>
-            <Eye className="h-4w-4text-muted-foreground" />
+            <Eye className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.uniqueUsers)}</div>
@@ -338,7 +338,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Page Views</CardTitle>
-            <MousePointer className="h-4w-4text-muted-foreground" />
+            <MousePointer className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{formatNumber(data.overview.pageViews)}</div>
@@ -351,7 +351,7 @@ export default function AdvancedAnalyticsInsights({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <Target className="h-4w-4text-muted-foreground" />
+            <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{(data.overview.conversionRate * 100).toFixed(1)}%</div>
