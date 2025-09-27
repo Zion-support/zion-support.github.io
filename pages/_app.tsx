@@ -41,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         .catch((error) => {
           console.log('Service Worker registration failed:', error);
         });
+    }
   }, []);
 
   useEffect(() => {
