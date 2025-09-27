@@ -1,219 +1,168 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-// // import ErrorBoundary from '../src/components/ErrorBoundary';
-import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
-import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
-// import { BlogSearch  BlogCard  BlogPagination  BlogNewsletter } from '../src/components/BlogEnhancements';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+import { useState, useEffect } from 'react';
+import SEO from '../src/components/SEO';
+import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
 	const [selectedCategory, setSelectedCategory] = useState<string>('all');
-	const [searchQuery, setSearchQuery] = useState('');
-	const [bookmarkedPosts, setBookmarkedPosts] = useState<Set<string>>(new Set());
-	const [currentPage, setCurrentPage] = useState(1);
-	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
-	const postsPerPage = 6;
 
 	useEffect(() => {
 		setIsVisible(true);
-		// Load bookmarked posts from localStorage
-		const savedBookmarks = localStorage.getItem('blog-bookmarks');
-		if (savedBookmarks) {
-			try {
-				setBookmarkedPosts(new Set(JSON.parse(savedBookmarks)))} catch (error) {
-				console.warn('Failed to load bookmarks:', error)}
-		}
 	}, []);
 
 	// Analytics tracking
-	usePageView('blog');
 	const { trackClick } = useAnalytics();
 
-	// Use memoized data for better performance
-	const filteredPosts = useMemo(() => {
-		let posts = getPostsByCategory(selectedCategory === 'all' ? 'All' : selectedCategory);
-		
-		if (searchQuery) {
-			posts = posts.filter(post => 
-				post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-			)}
-		
-		return posts}, [selectedCategory, searchQuery]);
-	
-	const featuredPosts = useMemo(() => getFeaturedPosts(), []);
-	const regularPosts = useMemo(() => 
-		filteredPosts.filter(post => !post.featured), 
-		[filteredPosts]
-	);
+	const categories = ['All', 'Technology', 'AI', 'Cloud Computing', 'Digital Transformation'];
 
-	// Pagination
-	const totalPages = Math.ceil(regularPosts.length / postsPerPage);
-	const paginatedPosts = useMemo(() => {
-		const startIndex = (currentPage - 1) * postsPerPage;
-		return regularPosts.slice(startIndex, startIndex + postsPerPage)}, [regularPosts, currentPage, postsPerPage]);
-
-	// Handlers
-	const handleSearch = (query: string) => {
-		setSearchQuery(query);
-		setCurrentPage(1);
-		trackClick('blog-search', 'search');
-	};
+	const blogPosts = [
+		{
+			id: 1,
+			title: 'The Future of AI in Business',
+			excerpt: 'Explore how artificial intelligence is revolutionizing modern business operations.',
+			author: 'John Smith',
+			date: '2024-01-15',
+			category: 'AI',
+			readTime: '5 min read',
+			image: '/images/blog/ai-future.jpg'
+		},
+		{
+			id: 2,
+			title: 'Cloud Computing Best Practices',
+			excerpt: 'Essential strategies for successful cloud migration and optimization.',
+			author: 'Sarah Johnson',
+			date: '2024-01-10',
+			category: 'Cloud Computing',
+			readTime: '7 min read',
+			image: '/images/blog/cloud-best-practices.jpg'
+		},
+		{
+			id: 3,
+			title: 'Digital Transformation Guide',
+			excerpt: 'A comprehensive roadmap for modernizing your business processes.',
+			author: 'Mike Chen',
+			date: '2024-01-05',
+			category: 'Digital Transformation',
+			readTime: '8 min read',
+			image: '/images/blog/digital-transformation.jpg'
+		}
+	];
 
 	const handleCategoryFilter = (category: string) => {
 		setSelectedCategory(category.toLowerCase());
-		setCurrentPage(1);
-		trackClick(`blog-category-${category}`, 'filter')};
+		trackClick(`blog-category-${category}`, 'filter');
+	};
 
 	const handleReadMore = (post: any) => {
 		trackClick(`read-post-${post.id}`, 'cta');
-		// Navigate to post detail page or open modal
-		console.log('Read more:', post.title)};
-
-	const handleBookmark = (post: any) => {
-		const newBookmarks = new Set(bookmarkedPosts);
-		if (newBookmarks.has(post.id)) {
-			newBookmarks.delete(post.id)} else {
-			newBookmarks.add(post.id)}
-		setBookmarkedPosts(newBookmarks);
-		localStorage.setItem('blog-bookmarks', JSON.stringify([...newBookmarks]));
-		trackClick(`bookmark-post-${post.id}`, 'engagement')};
-
-	const handleNewsletterSubscribe = async (email: string) => {
-		setIsNewsletterLoading(true);
-		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 1000));
-		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false);
+		console.log('Read more:', post.title);
 	};
-  return (
-    <>
-			<EnhancedSEO
-				title="Blog - Zion Tech Solutions"
-				description="Stay updated with the latest insights on technology  AI  cloud computing  and digital transformation from our expert team."
-				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
-				url="https: //zion.app/blog"
-				type="website"
-			/>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-			<div className="container mx-auto px-4 py-8 max-w-7xl">
-				<nav className="mb-8">
-					<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+
+	const filteredPosts = selectedCategory === 'all' 
+		? blogPosts 
+		: blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
+
+	return (
+		<>
+			<SEO />
+			<Head>
+				<title>Blog - Zion Tech Solutions</title>
+				<meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+				<div className="container mx-auto px-4 py-8 max-w-7xl">
+					<nav className="mb-8">
+						<Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
 							← Back to Home
 						</Link>
 					</nav>
 
 					<header className="text-center mb-16">
-						<h1 className="text-5xl,
-		md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 							Our Blog
 						</h1>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Insights  trends  and best practices from our technology experts
+							Insights, trends, and best practices from our technology experts
 						</p>
 					</header>
 
-					<main>
-						{/* Search and Filter */}
-						<section className={`mb-12 transition-all duration-700 delay-100 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}>
-							{/* <BlogSearch
-								onSearch={handleSearch}
-								onCategoryFilter={handleCategoryFilter}
-								categories={categories}
-								currentCategory={selectedCategory}
-							/> */}
-						</section>
+					{/* Category Filter */}
+					<section className="mb-12">
+						<div className="flex flex-wrap justify-center gap-4">
+							{categories.map((category) => (
+								<button
+									key={category}
+									onClick={() => handleCategoryFilter(category)}
+									className={`px-6 py-2 rounded-full font-medium transition-colors ${
+										selectedCategory === category.toLowerCase() || (category === 'All' && selectedCategory === 'all')
+											? 'bg-blue-600 text-white'
+											: 'bg-white text-gray-600 hover:bg-gray-100'
+									}`}
+								>
+									{category}
+								</button>
+							))}
+						</div>
+					</section>
 
-						{/* Featured Posts */}
-						{selectedCategory === 'all' && (
-							<section className={`mb-16 transition-all duration-700 delay-200 ${
-								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-							}`}>
-								<h2 className="text-3xl md: text-4xl font-bold text-gray-800 mb-8 text-center">
-									Featured Articles
-								</h2>
-			<div className="grid grid-cols-1,
-		lg:grid-cols-2 gap-8">
-									<AnimatePresence>
-										{featuredPosts.map((post ,, index) => (
-											<motion.div
-												key={post.id}
-												initial={{ opacity: 0, y: 20 }}
-												animate={{ opacity: 1, y: 0 }}
-												exit={{ opacity: 0, y: -20 }}
-												transition={{ duration: 0.5, delay: index * 0.1 }}
-											>
-												{/* <BlogCard
-													post={post}
-													variant="featured"
-													onReadMore={handleReadMore}
-													onBookmark={handleBookmark}
-													isBookmarked={bookmarkedPosts.has(post.id)}
-												/> */}
-											</motion.div>
-										))}
-									</AnimatePresence>
-								</div>
-							</section>
-						)}
-
-						{/* Regular Posts */}
-						<section className={`mb-16 transition-all duration-700 delay-400 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}>
-							<h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
-								{selectedCategory === 'all' ? 'Latest Articles' : `${selectedCategory} Articles`}
-							</h2>
-			<div className="grid grid-cols-1 md: grid-cols-2,
-		lg:grid-cols-3 gap-8">
-								<AnimatePresence mode="wait">
-									{paginatedPosts.map((post ,, index) => (
-										<motion.div
-											key={post.id}
-											initial={{ opacity: 0, y: 20 }}
-											animate={{ opacity: 1, y: 0 }}
-											exit={{ opacity: 0, y: -20 }}
-											transition={{ duration: 0.3, delay: index * 0.05 }}
+					{/* Blog Posts */}
+					<section className="mb-16">
+						<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+							{filteredPosts.map((post) => (
+								<article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+									<div className="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+										<span className="text-white text-lg font-semibold">{post.category}</span>
+									</div>
+									<div className="p-6">
+										<div className="flex items-center text-sm text-gray-500 mb-3">
+											<span>{post.author}</span>
+											<span className="mx-2">•</span>
+											<span>{post.date}</span>
+											<span className="mx-2">•</span>
+											<span>{post.readTime}</span>
+										</div>
+										<h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
+										<p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+										<button
+											onClick={() => handleReadMore(post)}
+											className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
 										>
-											{/* <BlogCard
-												post={post}
-												variant="regular"
-												onReadMore={handleReadMore}
-												onBookmark={handleBookmark}
-												isBookmarked={bookmarkedPosts.has(post.id)}
-											/> */}
-										</motion.div>
-									))}
-								</AnimatePresence>
-							</div>
-							
-							{/* Pagination */}
-							{totalPages > 1 && (
-								{/* <BlogPagination
-									currentPage={currentPage}
-									totalPages={totalPages}
-									onPageChange={setCurrentPage}
-								/> */}
-							)}
-						</section>
+											Read More →
+										</button>
+									</div>
+								</article>
+							))}
+						</div>
+					</section>
 
-						{/* Newsletter Signup */}
-						<section className={`mb-16 transition-all duration-1000 delay-600 ${
-							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}>
-							{/* <BlogNewsletter
-								onSubscribe={handleNewsletterSubscribe}
-								isLoading={isNewsletterLoading}
-							/> */}
-						</section>
-					</main>
+					{/* Newsletter Signup */}
+					<section className="text-center">
+						<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto">
+							<h2 className="text-3xl font-bold text-gray-900 mb-4">
+								Stay Updated
+							</h2>
+							<p className="text-gray-600 mb-6">
+								Get the latest insights and updates delivered to your inbox.
+							</p>
+							<div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+								<input
+									type="email"
+									placeholder="Enter your email"
+									className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+								/>
+								<button
+									onClick={() => trackClick('newsletter-signup', 'cta')}
+									className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+								>
+									Subscribe
+								</button>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
 		</>
