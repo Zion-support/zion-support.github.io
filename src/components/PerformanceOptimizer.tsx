@@ -44,12 +44,12 @@ function PerformanceOptimizerComponent({
     const interval = setInterval(updateMemoryUsage5000);
 
     return () => clearInterval(interval);
-  }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloading]);
+  }, [enableServiceWorker, enableMonitoring, enableResourceHints, enablePreloading]);
 
   return null;
 }
 
 // Export as a dynamic component that only renders on the client side
-export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent){
+export default dynamic(() => Promise.resolve(PerformanceOptimizerComponent), {
   ssr: false
 });

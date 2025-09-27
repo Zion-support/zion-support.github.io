@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePageView, useAnalytics } from '../src/hooks/useAnalytics';
 import { blogPosts, categories, getPostsByCategory, getFeaturedPosts } from '../src/data/blogPosts';
 // import { BlogSearch, BlogCard, BlogPagination, BlogNewsletter } from '../src/components/BlogEnhancements';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+// import EnhancedSEO from '../src/components/EnhancedSEO';
 
 export default function Blog(): JSX.Element {
 	const [isVisible, setIsVisible] = useState(false);
@@ -103,13 +103,13 @@ export default function Blog(): JSX.Element {
 
 	return (
 		<>
-			<EnhancedSEO
+			{/* <EnhancedSEO
 				title="Blog - Zion Tech Solutions"
 				description="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team."
 				keywords={['Technology Blog', 'AI Insights', 'Cloud Computing', 'Digital Transformation', 'Tech Trends']}
 				url="https://zion.app/blog"
 				type="website"
-			/>
+			/> */}
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				<div className="container mx-auto px-4 py-8 max-w-7xl">
 					<nav className="mb-8">

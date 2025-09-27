@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+// import EnhancedSEO from '../src/components/EnhancedSEO';
 
 // Lazy load heavy components
 // const PerformanceTracker = dynamic(() => import('../src/components/PerformanceTracker'), {
@@ -11,9 +11,9 @@ import EnhancedSEO from '../src/components/EnhancedSEO';
 //   loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
-  ssr: false
-});
+// const AccessibilityEnhancer = dynamic(() => import('../src/components/AccessibilityEnhancer'), {
+//   ssr: false
+// });
 
 // const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor'), {
 //   ssr: false,
@@ -115,7 +115,7 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <EnhancedSEO
+      {/* <EnhancedSEO
         title="Zion Tech Solutions - AI-Powered Business Solutions"
         description="Leading provider of AI-powered business solutions, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={[
@@ -129,7 +129,7 @@ export default function Home(): JSX.Element {
           'cloud computing',
           'enterprise solutions'
         ]}
-      />
+      /> */}
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         
         {/* Hero Section */}
@@ -425,7 +425,7 @@ export default function Home(): JSX.Element {
         </section>
 
         {/* Performance and Accessibility Components */}
-        <AccessibilityEnhancer />
+        {/* <AccessibilityEnhancer /> */}
         {/* <PerformanceTracker /> */}
 
         {/* Analytics Dashboard Link */}

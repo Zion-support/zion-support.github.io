@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
 // import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+// import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 // import EnhancedErrorBoundary from '../src/components/EnhancedErrorBoundary';
 // import { AnalyticsProvider } from '../src/components/EnhancedAnalytics';
 import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
@@ -186,7 +186,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <PerformanceTracker /> */}
           <WebVitals />
           <AccessibilityAuditor />
-          <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} />
+          {/* <AccessibilityEnhancer enableKeyboardShortcuts={true} enableVoiceCommands={false} /> */}
           {/* <AdvancedErrorHandler 
             enableAutoRetry={true}
             maxRetries={3}
