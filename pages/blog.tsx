@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+import SEO from '../src/components/SEO';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
@@ -58,7 +58,7 @@ export default function Blog(): JSX.Element {
 
   return (
     <>
-      <EnhancedSEO
+      <SEO
         title="Blog - Zion Tech Solutions"
         description="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and digital transformation from our expert team."
         keywords={['tech blog', 'AI insights', 'cloud computing', 'cybersecurity', 'digital transformation', 'technology trends']}
