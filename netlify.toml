@@ -4,9 +4,8 @@
   status = 200
  
 [build]
-  command = "npm run build"
-  publish = ".next"
-  functions = "netlify/functions"
+  command = "yarn build"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
@@ -14,10 +13,6 @@
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
   [plugins.inputs]
 
 # Compression is handled by Netlify's built-in compression
@@ -28,7 +23,7 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "yarn build"
 
 [context.branch-deploy]
-  command = "npm run build"
+  command = "yarn build"

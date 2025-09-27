@@ -1,196 +1,114 @@
 /**
- * Enhanced error handling utilities
- * Provides comprehensive error tracking and reporting
+ * Comprehensive error handling utilities
  */
 
 export interface ErrorInfo {
   message: string;
   stack?: string;
   componentStack?: string;
+  errorBoundary?: string;
   timestamp: string;
   userAgent: string;
   url: string;
   userId?: string;
-  sessionId?: string;
 }
 
-export enum ErrorSeverity {
-  LOW = "low",
-  MEDIUM = "medium",
-  HIGH = "high",
-  CRITICAL = "critical"
-}
+export class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorLog: ErrorInfo[] = [];
+  private maxLogSize = 100;
 
-export enum ErrorCategory {
-  NETWORK = "network",
-  VALIDATION = "validation",
-  AUTHENTICATION = "authentication",
-  AUTHORIZATION = "authorization",
-  RUNTIME = "runtime",
-  UNKNOWN = "unknown"
-}
-
-export interface ErrorContext {
-  userId?: string;
-  sessionId?: string;
-  componentName?: string;
-  action?: string;
-}
-
-export class EnhancedError extends Error {
-  public severity: ErrorSeverity;
-  public category: ErrorCategory;
-  public context?: ErrorContext;
-  public timestamp: string;
-  public componentStack?: string;
-
-  constructor(
-    message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    category: ErrorCategory = ErrorCategory.UNKNOWN,
-    context?: ErrorContext
-  ) {
-    super(message);
-    this.name = "EnhancedError";
-    this.severity = severity;
-    this.category = category;
-    this.context = context;
-    this.timestamp = new Date().toISOString();
-  }
-}
-
-export const logError = (error: Error | EnhancedError, context?: ErrorContext): void => {
-  const errorInfo: ErrorInfo = {
-    message: error.message,
-    stack: error.stack,
-    timestamp: new Date().toISOString(),
-    userAgent: navigator.userAgent,
-    url: window.location.href,
-    userId: context?.userId,
-    sessionId: context?.sessionId
-  };
-
-  // Log to console in development
-  if (process.env.NODE_ENV === "development") {
-    console.error("Error logged:", errorInfo);
+  public static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
   }
 
-  // In production, send to error tracking service
-  if (process.env.NODE_ENV === "production") {
-    // Send to error tracking service (e.g., Sentry, LogRocket, etc.)
-    // This is a placeholder - implement your preferred error tracking service
-    console.error("Production error:", errorInfo);
-  }
-};
+  public logError(error: Error, errorInfo?: { componentStack?: string; errorBoundary?: string }): void {
+    const errorData: ErrorInfo = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo?.componentStack,
+      errorBoundary: errorInfo?.errorBoundary,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId()
+    };
 
-// Error boundary helper
-export const createErrorInfo = (error: Error, errorInfo: React.ErrorInfo): ErrorInfo => {
-  return {
-    message: error.message,
-    stack: error.stack,
-    componentStack: errorInfo.componentStack || undefined,
-    timestamp: new Date().toISOString(),
-    userAgent: navigator.userAgent,
-    url: window.location.href
-  };
-};
+    this.errorLog.push(errorData);
+    
+    // Keep only the most recent errors
+    if (this.errorLog.length > this.maxLogSize) {
+      this.errorLog = this.errorLog.slice(-this.maxLogSize);
+    }
 
-// Retry utility with exponential backoff
-export const retryOperation = async <T>(
-  operation: () => Promise<T>,
-  maxRetries: number = 3,
-  delay: number = 1000
-): Promise<T> => {
-  let lastError: Error;
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error logged:', errorData);
+    }
 
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      return await operation();
-    } catch (error) {
-      lastError = error as Error;
-
-      if (attempt === maxRetries) {
-        throw new EnhancedError(
-          `Operation failed after ${maxRetries} attempts: ${lastError.message}`,
-          ErrorSeverity.HIGH,
-          ErrorCategory.RUNTIME
-        );
-      }
-
-      // Exponential backoff
-      const waitTime = delay * Math.pow(2, attempt - 1);
-      await new Promise(resolve => setTimeout(resolve, waitTime));
+    // Send to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.sendErrorToService(errorData);
     }
   }
 
-  throw lastError!;
-};
-
-// Safe async operation wrapper
-export const safeAsync = async <T>(
-  operation: () => Promise<T>,
-  fallback?: T
-): Promise<T | undefined> => {
-  try {
-    return await operation();
-  } catch (error) {
-    logError(error as Error);
-    return fallback;
+  public getErrorLog(): ErrorInfo[] {
+    return [...this.errorLog];
   }
-};
 
-// Error boundary component props
-export interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: React.ErrorInfo;
+  public clearErrorLog(): void {
+    this.errorLog = [];
+  }
+
+  private getUserId(): string | undefined {
+    // Try to get user ID from localStorage or other sources
+    try {
+      return localStorage.getItem('userId') || undefined;
+    } catch {
+      return undefined;
+    }
+  }
+
+  private async sendErrorToService(errorData: ErrorInfo): Promise<void> {
+    try {
+      // Send to your error tracking service
+      await fetch('/api/error-reporting', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorData),
+      });
+    } catch (error) {
+      console.error('Failed to send error to service:', error);
+    }
+  }
 }
+
+export const errorHandler = ErrorHandler.getInstance();
 
 // Global error handlers
 export const setupGlobalErrorHandlers = (): void => {
-  // Handle unhandled promise rejections
-  window.addEventListener("unhandledrejection", (event) => {
-    const error = new EnhancedError(
-      `Unhandled promise rejection: ${event.reason}`,
-      ErrorSeverity.HIGH,
-      ErrorCategory.RUNTIME,
-      {
-        componentName: "Global",
-        action: "unhandled_promise_rejection"
-      }
-    );
-    logError(error);
+  // Unhandled promise rejections
+  window.addEventListener('unhandledrejection', (event) => {
+    errorHandler.logError(new Error(event.reason));
   });
 
-  // Handle global JavaScript errors
-  window.addEventListener("error", (event) => {
-    const error = new EnhancedError(
-      `Global error: ${event.message}`,
-      ErrorSeverity.HIGH,
-      ErrorCategory.RUNTIME,
-      {
-        componentName: "Global",
-        action: "global_error"
-      }
-    );
-    logError(error);
+  // Global JavaScript errors
+  window.addEventListener('error', (event) => {
+    errorHandler.logError(event.error || new Error(event.message));
   });
 };
 
-// Validation error helper
-export const createValidationError = (field: string, message: string): EnhancedError => {
-  return new EnhancedError(
-    `Validation error for ${field}: ${message}`,
-    ErrorSeverity.MEDIUM,
-    ErrorCategory.VALIDATION
-  );
-};
-
-// Network error helper
-export const createNetworkError = (url: string, status?: number): EnhancedError => {
-  return new EnhancedError(
-    `Network error for ${url}${status ? ` (${status})` : ""}`,
-    ErrorSeverity.HIGH,
-    ErrorCategory.NETWORK
-  );
+// React Error Boundary helper
+export const createErrorBoundaryHandler = (errorBoundaryName: string) => {
+  return (error: Error, errorInfo: { componentStack: string }) => {
+    errorHandler.logError(error, {
+      componentStack: errorInfo.componentStack,
+      errorBoundary: errorBoundaryName
+    });
+  };
 };

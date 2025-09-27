@@ -2,16 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../src/components/SEO';
-// import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function PrivacyPolicy(): React.ReactElement {
-  // const [isVisible, setIsVisible] = useState(false);
+export default function PrivacyPolicy(): JSX.Element {
+  // Removed unused visibility state
 
-  // useEffect(() => {
-  //   setIsVisible(true);
-  // }, []);
-
-  // const { trackClick } = useAnalytics();
+  // Removed unused analytics hook
 
   const sections = [
     {
