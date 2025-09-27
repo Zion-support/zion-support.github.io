@@ -1,205 +1,116 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import EnhancedSEO from '../src/components/EnhancedSEO';
+import { blogPosts } from '../src/data/blogPosts';
 import { useAnalytics } from '../src/hooks/useAnalytics';
 
 export default function Blog(): JSX.Element {
-	const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
-	const { trackClick } = useAnalytics();
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [isVisible, setIsVisible] = useState(false);
 
-	const blogPosts = [
-		{
-			id: 1,
-			title: 'The Future of AI in Business: Trends and Predictions for 2024',
-			excerpt: 'Explore the latest AI trends shaping the business landscape and how companies are leveraging artificial intelligence for competitive advantage.',
-			author: 'Sarah Johnson',
-			date: '2024-01-15',
-			readTime: '5 min read',
-			category: 'AI & Machine Learning',
-			image: '/api/placeholder/600/300',
-			slug: 'future-ai-business-2024'
-		},
-		{
-			id: 2,
-			title: 'Cloud Migration Best Practices: A Complete Guide',
-			excerpt: 'Learn the essential strategies and considerations for successfully migrating your infrastructure to the cloud.',
-			author: 'Michael Chen',
-			date: '2024-01-12',
-			readTime: '8 min read',
-			category: 'Cloud Computing',
-			image: '/api/placeholder/600/300',
-			slug: 'cloud-migration-best-practices'
-		},
-		{
-			id: 3,
-			title: 'Building Scalable Web Applications with Modern Architecture',
-			excerpt: 'Discover the architectural patterns and technologies that enable web applications to scale efficiently and reliably.',
-			author: 'Emily Rodriguez',
-			date: '2024-01-10',
-			readTime: '6 min read',
-			category: 'Web Development',
-			image: '/api/placeholder/600/300',
-			slug: 'scalable-web-applications-architecture'
-		},
-		{
-			id: 4,
-			title: 'Cybersecurity in 2024: Emerging Threats and Defense Strategies',
-			excerpt: 'Stay ahead of the latest cybersecurity threats and learn about the most effective defense strategies for modern businesses.',
-			author: 'David Kim',
-			date: '2024-01-08',
-			readTime: '7 min read',
-			category: 'Cybersecurity',
-			image: '/api/placeholder/600/300',
-			slug: 'cybersecurity-2024-threats-defense'
-		},
-		{
-			id: 5,
-			title: 'Digital Transformation: A Step-by-Step Implementation Guide',
-			excerpt: 'Navigate the complexities of digital transformation with our comprehensive guide to planning and executing successful initiatives.',
-			author: 'Sarah Johnson',
-			date: '2024-01-05',
-			readTime: '9 min read',
-			category: 'Digital Transformation',
-			image: '/api/placeholder/600/300',
-			slug: 'digital-transformation-implementation-guide'
-		},
-		{
-			id: 6,
-			title: 'The Rise of Edge Computing: Benefits and Use Cases',
-			excerpt: 'Explore how edge computing is revolutionizing data processing and discover its potential applications across industries.',
-			author: 'Michael Chen',
-			date: '2024-01-03',
-			readTime: '6 min read',
-			category: 'Edge Computing',
-			image: '/api/placeholder/600/300',
-			slug: 'rise-edge-computing-benefits-use-cases'
-		}
-		{
-			id: 2
-			tit, l, e: 'Cloud, Computing, Best Practic, e, s'
-			excer, p, t: 'Essential, strategies, for successful, cloud, migration and, optimizatio, n.'
-			auth, o, r: 'Sarah, Johnso, n'
-			da, t, e: '20, 2, 4-01-10'
-			catego, r, y: 'Cloud, Computin, g'
-			readTi, m, e: '7, min, read'
-			ima, g, e: '/imag, e, s/bl, o, g/clo, u, d-be, s, t-practic, e, s.j, p, g'
-		}
-		{
-			id: 3
-			tit, l, e: 'Digital, Transformation, Guide'
-			excer, p, t: 'A, comprehensive, roadmap for, modernizing, your business, processe, s.'
-			auth, o, r: 'Mike, Che, n'
-			da, t, e: '20, 2, 4-01-05'
-			catego, r, y: 'Digital, Transformatio, n'
-			readTi, m, e: '8, min, read'
-			ima, g, e: '/imag, e, s/bl, o, g/digit, a, l-transformati, o, n.j, p, g'
-		}];
-	const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Web Development', 'Cybersecurity', 'Digital Transformation', 'Edge Computing'];
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-	const handleNewsletterSubscribe = async (email: string) => {
-		setIsNewsletterLoading(true);
-		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 1000));
-		trackClick('newsletter-signup', 'cta');
-		setIsNewsletterLoading(false);
-	};
+  const { trackClick } = useAnalytics();
 
-	const, filteredPost, s = selectedCatego, r, y === 'a, l, l' 
-		? blogPos, t, s 
-		: blogPos, t, s.filt, e, r(po, s, t => po, s, t.catego, r, y.toLowerCa, s, e() === selectedCatego, r, y);  return (
+  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category.toLowerCase() === selectedCategory);
+
+  return (
     <>
+      <Head>
+        <title>Blog - Zion Tech Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on technology, AI, cloud computing, and digital transformation from our expert team." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       
-      {/* <EnhancedSEO, titl, e="Bl, o, g - Zion, Tech, Solutions"
-				descripti, o, n="Stay, updated, with the, latest, insights on, technolog, y, AI, cloud, computin, g, and, digital, transformation from, our, expert te, a, m."
-				keywor, d, s={['Technology, Blo, g', 'AI, Insight, s', 'Cloud, Computin, g', 'Digital, Transformatio, n', 'Tech, Trend, s']};
-				u, r, l="htt, p, s://zi, o, n.app/bl, o, g"
-				ty, p, e="websi, t, e"
-			/> */};
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
-				<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-					<nav, classNam, e="mb-8">
-						<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover:te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home						</Link>
-					</nav>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-8 max-w-7xl">
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
-					<header className="text-center mb-16">
-						<h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-							Tech Insights & Updates
-						</h1>
-						<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-							Stay informed with the latest trends, insights, and best practices in technology from our expert team.
-						</p>
-					</header>
+          <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Tech Insights & Updates
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead with the latest technology trends, insights, and best practices from our expert team.
+            </p>
+          </header>
 
-					{/* Category, Filte, r */};
-					<section, classNam, e="mb-12">
-						<div, classNam, e="flex, fle, x-wrap, justif, y-center, ga, p-4">
-							{categori, e, s.m, a, p((catego, r, y) => (
-								<button, ke, y={catego, r, y};
-									onCli, c, k={() => handleCategoryFilt, e, r(catego, r, y)};
-									classNa, m, e={`px-6, p, y-2, rounde, d-full, fon, t-medium, transitio, n-colo, r, s ${
-										selectedCatego, r, y === catego, r, y.toLowerCa, s, e() || (catego, r, y === 'A, l, l' && selectedCatego, r, y === 'a, l, l')
-											? 'bg-bl, u, e-600, tex, t-whi, t, e'
-											: 'bg-white, tex, t-gr, a, y-600, hover:bg-gr, a, y-1, 0, 0'
-									}`};								>
-									{category}
-								</button>
-							))}
-						</div>
-					</div>
+          <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={(()) => {setSelectedCategory(category);
+                    trackClick('blog_category_filter', { category})}}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
 
-					{/* Blog, Post, s */};
-					<section, classNam, e="mb-16">
-						<div, classNam, e="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8">
-							{filteredPos, t, s.m, a, p((po, s, t) => (
-								<article, ke, y={po, s, t.id} classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hover:shad, o, w-xl, transitio, n-shad, o, w">
-									<div, classNam, e="h-48, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-indi, g, o-500, flex, items-center, justif, y-cent, e, r">
-										<span, classNam, e="te, x, t-white, tex, t-lg, fon, t-semibo, l, d">{po, s, t.catego, r, y}</sp, a, n>
-									</d, i, v>
-									<div, classNam, e="p-6">
-										<div, classNam, e="flex, item, s-center, tex, t-sm, tex, t-gr, a, y-500, m, b-3">
-											<sp, a, n>{po, s, t.auth, o, r}</sp, a, n>
-											<span, classNam, e="mx-2">•</sp, a, n>
-											<sp, a, n>{po, s, t.da, t, e}</sp, a, n>
-											<span, classNam, e="mx-2">•</sp, a, n>
-											<sp, a, n>{po, s, t.readTi, m, e}</sp, a, n>
-										</d, i, v>
-										<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">{po, s, t.tit, l, e}</h3>
-										<p, classNam, e="te, x, t-gr, a, y-600, m, b-4, leadin, g-relax, e, d">{po, s, t.excer, p, t}</p>
-										<button, onClic, k={() => handleReadMo, r, e(po, s, t)};
-											classNa, m, e="te, x, t-bl, u, e-600, fon, t-medium, hover:te, x, t-bl, u, e-800, transitio, n-colo, r, s"										>
-											Read More →
-										</button>
-									</div>
-								</div>
-							</article>
-						))}
-					</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
+                    <time className="text-gray-500 text-sm">
+                      {new Date(post.date).toLocaleDateString()}
+                    </time>
+                  </div>
+                  
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">
+                      {post.readTime} min read
+                    </span>
+                    <button
+                      onClick={() => trackClick('blog_post_click', { postId: post.id })}
+                      className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                    >
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
 
-					{/* Newsletter, Signu, p */};
-					<section, classNam, e="te, x, t-cent, e, r">
-						<div, classNam, e="bg-white, rounde, d-2xl, shado, w-x, l, p-8, m, d:p-12, ma, x-w-2xl, m, x-au, t, o">
-							<h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-								Stay, Update, d
-							</h2>
-							<p, classNam, e="te, x, t-gr, a, y-600, m, b-6">
-								Get, the, latest insights, and, updates delivered, to, your inb, o, x.
-							</p>
-							<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">
-								<input, typ, e="ema, i, l"
-									placehold, e, r="Enter, your, email"
-									classNa, m, e="fl, e, x-1, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-								/>
-								<button, onClic, k={() => trackCli, c, k('newslett, e, r-sign, u, p', 'c, t, a')};
-									classNa, m, e="px-6, p, y-3, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, fon, t-semibold, hover:bg-bl, u, e-700, transitio, n-colo, r, s"
-								>
-									Subscri, b, e
-								</butt, o, n>
-							</d, i, v>
-						</d, i, v>
-					</secti, o, n>
-				</d, i, v>
-			</d, i, v>		</>
-	);
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No posts found in this category.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
 }

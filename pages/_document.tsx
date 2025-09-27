@@ -34,14 +34,9 @@ export default function Document() {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')
                     .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
+                      console.log('SW registered: 'registration)})
                     .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
-              }
-            `}}
+                      console.log('SW registration failed: 'registrationError)})})}            `}}
         />
       </Head>
       <body>
@@ -49,5 +44,4 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
-}
+  )}

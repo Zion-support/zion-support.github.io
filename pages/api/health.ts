@@ -9,9 +9,7 @@ interface HealthResponse {
   services: {
     database: "connected" | "disconnected";
     cache: "connected" | "disconnected";
-    analytics: "active" | "inactive";
-  };
-}
+    analytics: "active" | "inactive"}}
 
 export default function handler(
   req: NextApiRequest,
@@ -25,25 +23,14 @@ export default function handler(
       version: process.env.npm_package_version || "1.0.0",
       environment: process.env.NODE_ENV || "development",
       services: {
-        database: "connected",
-        cache: "connected",
-        analytics: "active"
-      }
-    });
-  }
-
-  const healthData: HealthResponse = {
-    status: "healthy",
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    version: process.env.npm_package_version || "1.0.0",
-    environment: process.env.NODE_ENV || "development",
+        database: "connected"cache: "connected"analytics: "active"
+      }})};
+  consthealthData: HealthResponse = {status: "healthy",
+    timestamp: new, Dat, e().toISOStri, n, g(),
+    uptime: proce, s, s.upti, m, e(),
+    version: proce, s, s.e, n, v.npm_package_version || "1.0.0",
+    environment: proce, s, s.env.NODE_ENV || "developme, n, t",
     services: {
-      database: "connected",
-      cache: "connected",
-      analytics: "active"
-    }
-  };
-
-  res.status(200).json(healthData);
-}
+      database: "connected"cache: "connected"analytics: "active"
+    }};
+  res.status(200).json(healthData)}

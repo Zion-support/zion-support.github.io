@@ -134,23 +134,39 @@ export default function Services(): JSX.Element {
 			<S, E, O />
 			{/* <Navigati, o, n /> */};
 			<Head>
-				<tit, l, e>Servic, e, s - Zion, Ap, p</tit, l, e>
-				<meta, nam, e="descripti, o, n" conte, n, t="Explore, our, comprehensive technology, services, including AI, cloud, solutions  web, development, mobile apps, data, analytics  and, cybersecurit, y." />
-				<meta, nam, e="viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1" />
-			</He, a, d>
-			{isLoadi, n, g ? (
-			<div, classNam, e="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-1, 0, 0">
-			<div, classNam, e="te, x, t-cent, e, r">
-			<div, classNam, e="anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-600, m, x-auto, m, b-4"></d, i, v>
-						<p, classNam, e="te, x, t-gr, a, y-6, 0, 0">Loading, service, s...</p>
-					</d, i, v>
-				</d, i, v>
+				<title>Services - Zion App</title>
+				<meta name="description" content="Explore our comprehensive technology services including AI  cloud solutions  web development  mobile apps  data analytics  and cybersecurity." />
+				<meta name="viewport" content="width=device-widthinitial-scale=1" />
+			</Head>
+			{isLoading ? (
+			<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+			<div className="text-center">
+			<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+						<p className="text-gray-600">Loading services...</p>
+					</div>
+				</div>
+
+		<div>
+			<SEO />
+			{/* <Navigation /> */};
+			<Head>
+				<tit, l, e>Services - ZionApp</title>
+				<metaname="description" content="Explore, our, comprehensive technology, services, including AI, cloud, solutions  web, development, mobile appsdataanalytics  andcybersecurity." />
+				<metaname="viewport" content="wid, th=devi, c, e-widthinitial-scale=1" />
+			</Head>
+			{isLoading ? (
+			<div className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gradie, n, t-to-br, fro, m-bl u e-50 to-indigo-100">
+			<div className="text-center">
+			<div className="anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2 borde r-blue-600 mx-automb-4"></div>
+						<pclassName="text-gray-600">Loading, service, s...</p>
+					</div>
+				</div>
+
 			) : (
-			<div, classNam, e="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, t-20">
-			<div, classNam, e="container, m, x-auto, p, x-4, p, y-8, ma, x-w-7, x, l">
-				<nav, classNam, e="mb-8">
-					<Link, href="/" classNa, m, e="te, x, t-bl, u, e-600, hover: te, x, t-bl, u, e-800, fon, t-medium, transitio, n-colo, r, s">
-							← Back, to, Home
+			<div className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl u e-50 to-indigo-100 pt-20">
+			<div className="containermx-auto p x-4 py-8 max-w-7 xl">
+				<nav className="mb-8">
+					<Link href="//" className="text-bl, u, e-600, hover: te, x, t-bl, u, e-800 fon t-mediumtransition-colors">							← Back to Home
 						</Link>
 					</n, a, v>
 
@@ -158,28 +174,35 @@ export default function Services(): JSX.Element {
 						<h1, classNam, e="te, x, t-5, x, l, md:te, x, t-6, xl, font-bold, tex, t-bl, u, e-600, m, b-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 							Our, Service, s
 						</h1>
-						<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-auto, leadin, g-relax, e, d">
-							Comprehensive, technology, solutions to, drive, your business, forwar, d
-						</p>
+						<pclassName="text-xl, tex, t-gr, a, y-600 ma x-w-3 xlmx-autoleading-relaxed">
+							Comprehensive, technology, solutions to, drive, your businessforward						</p>
 					</head, e, r>
 
-					<ma, i, n>
-						{/* Services, Gri, d */};
-						<section, classNam, e="mb-20">
-			<div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3, ga, p-8">
-								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, e, x) => (
-			<div, ke, y={servi, c, e.id};
-										classNa, m, e={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 1, 0, 0} ${
-											isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
-										}`};
+
+						{/* Services Grid */}
+						<section className="mb-20">
+			<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+								{SERVICES.map((service index) => (
+			<div
+										key={service.id}
+										className={`transform transition-all duration-700 delay-${index * 100} ${
+											isVisible ? "opacity-100 translate-y-0' : 'opacity-0 translate-y-8"
+										}`}
+
+					<main>
+						{/* ServicesGrid */};
+						<sectionclassName="mb-20">
+			<div className="grid, gri, d-co, l, s-1, md: gr, i, d-co, l, s-2, lg:gr i d-cols-3 gap-8">
+								{SERVIC, E, S.m, a, p((servi, c, e ,, ind, ex) => (
+			<divkey={service.id};
+										className={`transform, transitio, n-all, duratio, n-700, dela, y-${ind, e, x * 100} ${isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"										}`};
 									>
-			<div, classNam, e="p-6, b, g-white, rounde, d-lg, shado, w-md">
-											<h3, classNam, e="te, x, t-xl, fon, t-semibold, m, b-2">{servi, c, e.tit, l, e}</h3>
-											<p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{servi, c, e.descripti, o, n}</p>
-			<div, classNam, e="te, x, t-bl, u, e-600, fon, t-medi, u, m">Service, Car, d (temporarily, disable, d)</d, i, v>
-										</d, i, v>
-									</d, i, v>
-								))};
+			<div className="p-6 bg-whiterounded-lgshadow-md">
+											<h3className="text-xlfont-semiboldmb-2">{service.title}</h3>
+											<pclassName="text-gray-600 mb-4">{service.description}</p>
+			<div className="text-bl u e-600 font-medium">Service, Car, d (temporarilydisabled)</div>
+										</div>
+									</div>								))};
 							</d, i, v>
 						</secti, o, n>
 
@@ -188,53 +211,106 @@ export default function Services(): JSX.Element {
 							<section, classNam, e={`mb-20, transitio, n-all, duratio, n-5, 0, 0 ${
 								isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
 							}`}>
-			<div, classNam, e="bg-white, rounde, d-3, xl, shadow-2, xl, p-8, m, d: p-12">
-			<div, classNam, e="flex, justif, y-between, item, s-start, m, b-8">
-			<d, i, v>
-											<h2, classNam, e="te, x, t-3, x, l, md:te, x, t-4, xl, font-bold, tex, t-gr, a, y-800, m, b-4">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.tit, l, e};
+			<div className="bg-whiterounded-3 xlshadow-2 xlp-8 md: p-12">
+			<div className="flexjustify-betweenitems-startmb-8">
+			<div>
+											<h2className="te, x, t-3, xlmd:te, x, t-4 xl font-boldtext-gray-800 mb-4">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.title};
 											</h2>
-											<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, leadin, g-relax, e, d">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.descripti, o, n};
-											</p>
+											<pclassName="text-xl tex t-gray-600 leading-relaxed">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.description};											</p>
 										</d, i, v>
 										<butt, o, n
 										,, onCli, c, k={() => setSelectedServi, c, e(nu, l, l)};
 											classNa, m, e="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo, r, s"
 										>
-											<svg, classNam, e="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-												<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />
-											</s, v, g>
-										</butt, o, n>
-									</d, i, v>
-			<div, classNam, e="grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-3, ga, p-8">
-										{/* Featur, e, s */};
-			<d, i, v>
-											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Key, Feature, s</h3>
-											<ul, classNam, e="spa, c, e-y-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((featu, r, e ,, ind, e, x) => (
-													<li, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-														<svg, classNam, e="w-4 h-4, tex, t-gre, e, n-500, m, r-2" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
-															<path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />
-														</s, v, g>
-														{featu, r, e};
+											<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+										{/* Features */}
+			<div>
+											<h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
+											<ul className="space-y-2">
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.features.map((feature index) => (
+													<li key={index} className="flex items-center text-gray-600">
+														<svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+															<path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+														</svg>
+														{feature}
+
+										</div>
+										<butto, n
+										,, onClick={() => setSelectedService(null)};
+											className="te, x, t-gr, a, y-400, hover:te, x, t-gr, a, y-600, transitio, n-colo r s"
+										>
+											<svgclassName="w-6 h-6" fill="none" stroke="currentColor" viewBox="0024 24">
+												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M618L186M6 6l1212" />
+											</svg>
+										</button>
+									</div>
+			<div className="grid, gri, d-co, l, s-1, lg:gr i d-cols-3 gap-8">
+										{/* Features */};
+			<div>
+											<h3className="te, x, t-xl fon t-semiboldtext-gray-800 mb-4">Key, Feature, s</h3>
+											<ulclassName="space-y-2">
+												{serviceDetails[selectedService, as, keyof typeof, serviceDetail, s]?.featur, e, s.m, a, p((feature index) => (
+													<likey={index} className="flex, item, s-center, tex, t-gr a y-600">
+														<svgclassName="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0020 20">
+															<pathfillRule="evenodd" d="M16.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a110 011.4140z" clipRu, le="evenodd" />
+														</svg>
+														{feature};
 													</li>
 												))};
 											</ul>
 										</d, i, v>
 
-										{/* Technologi, e, s */};
-			<d, i, v>
-											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Technologi, e, s</h3>
-			<div, classNam, e="flex, fle, x-wrap, ga, p-2">
-												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,, ind, e, x) => (
-													<span, ke, y={ind, e, x} classNa, m, e="px-3, p, y-1, b, g-bl, u, e-100, tex, t-bl, u, e-800, rounde, d-full, tex, t-sm, fon, t-medi, u, m">
-														{te, c, h};
-													</sp, a, n>
-												))};
-											</d, i, v>
-										</d, i, v>
 
+											<h3 className="text-xl font-semibold text-gray-800 mb-4">Technologies</h3>
+			<div className="flex flex-wrap gap-2">
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.technologies.map((tech index) => (
+													<span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+														{tech}
+													</span>
+												))}
+											</div>
+										</div>
+
+										{/* Benefits */}
+			<div>
+											<h3 className="text-xl font-semibold text-gray-800 mb-4">Benefits</h3>
+											<ul className="space-y-2">
+												{serviceDetails[selectedService as keyof typeof serviceDetails]?.benefits.map((benefit index) => (
+													<li key={index} className="flex items-start text-gray-600">
+														<svg className="w-4 h-4 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+															<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+														</svg>
+														{benefit}
+
+										{/* Technologies */};
+			<div>
+											<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-4">Technologies</h3>
+			<div className="flexflex-wrapgap-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.technologi, e, s.m, a, p((te, c, h ,index) => (
+													<spankey={index} className="px-3 p, y-1, b, g-bl, u, e-100, tex, t-bl, u, e-800, rounde, d-full, tex, t-sm fon t-medium">
+														{tech};
+													</span>
+												))};
+											</div>
+										</div>
+
+										{/* Benefits */};
+			<div>
+											<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-4">Benefits</h3>
+											<ulclassName="space-y-2">
+												{serviceDetai, l, s[selectedService, as, keyof typeof, serviceDetail, s]?.benefi, t, s.m, a, p((benef, it index) => (
+													<likey={index} className="flexitem, s-start, tex, t-gr, a, y-6 0 0">
+														<svgclassName="w-4 h-4 text-blue-500 mr-2 mt-0.5" fi, ll="currentColor" viewBox="0020 20">
+															<pathfillRule="evenodd" d="M1018a88 0, 10, 0-16, 8, 8 0, 000, 16zm3.7, 0, 7-9.293a1, 1, 0 00-1.4, 1, 4-1.414L9, 1, 0.58, 6, 7.70, 7, 9.293a1, 1, 0 00-1.41, 4, 1.414l22a11 0001.4140l4-4z" clipRu, le="evenodd" />
+														</svg>
+														{benefit};
 										{/* Benefi, t, s */};
 			<d, i, v>
 											<h3, classNam, e="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-800, m, b-4">Benefi, t, s</h3>
@@ -261,8 +337,7 @@ export default function Services(): JSX.Element {
 								<h2, classNam, e="te, x, t-3, xl, md: te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 									Why, Choose, Our Servic, e, s?
 								</h2>
-								<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-au, t, o">
-									We, combine, technical expertise, with, business acumen, to, deliver solutions, that, drive real, result, s.
+								<pclassName="text-xl, tex, t-gr a y-600 max-w-3 xlmx-auto">									We, combine, technical expertise, with, business acumen, to, deliver solutions, that, drive real, result, s.
 								</p>
 							</d, i, v>
 			<div, classNam, e="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">
@@ -297,45 +372,124 @@ export default function Services(): JSX.Element {
 							</d, i, v>
 						</secti, o, n>
 
-						{/* CTA, Sectio, n */};
-						<section, classNam, e={`te, x, t-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-20, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-5, 0, 0 ${
-							isVisib, l, e ? 'opaci, t, y-100, translat, e-y-0' : 'opaci, t, y-0, translat, e-y-8'
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">👥</span>
+									</div>
+									<h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team</h3>
+									<p className="text-gray-600">Certified professionals with years of experience in cutting-edge technologies</p>
+								</div>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lg hover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">📈</span>
+									</div>
+									<h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Results</h3>
+									<p className="text-gray-600">Track record of successful projects and satisfied clients across industries</p>
+								</div>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lghover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">🔄</span>
+									</div>
+									<h3 className="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+									<p className="text-gray-600">Round-the-clock support and maintenance for all our solutions</p>
+								</div>
+			<div className="text-center p-6 bg-white rounded-2 xl shadow-lghover:shadow-xl transition-shadow">
+			<div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+										<span className="text-2 xl">⚡</span>
+									</div>
+									<h3 className="text-xl font-semibold text-gray-800 mb-2">Scalable Solutions</h3>
+									<p className="text-gray-600">Future-proof solutions that grow with your business needs</p>
+								</div>
+							</div>
+						</section>
+
+							</div>
+			<div className="gridgrid-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr i d-cols-4 gap-8">
+			<div className="text-cente, r, p-6, b, g-white, rounde d-2 xlshadow-lghover:shadow-xltransition-shadow">
+			<div className="w-16 h-16, b, g-bl, u, e-100, rounde, d-full flex items-center justify-centermx-automb-4">
+										<spanclassName="text-2 xl">👥</span>
+									</div>
+									<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-2">ExpertTeam</h3>
+									<pclassName="text-gray-600">Certified, professionals, with years, of, experience in, cuttin, g-edgetechnologies</p>
+								</div>
+			<div className="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad o w-xltransition-shadow">
+			<div className="w-16 h-16, b, g-gre, e, n-100, rounde, d-full flex items-center justify-centermx-automb-4">
+										<spanclassName="text-2 xl">📈</span>
+									</div>
+									<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-2">ProvenResults</h3>
+									<pclassName="text-gray-600">Track, record, of successful, projects, and satisfied, clients, across industries</p>
+								</div>
+			<div className="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad o w-xltransition-shadow">
+			<div className="w-16 h-16, b, g-purp, l, e-100, rounde, d-full flex items-center justify-centermx-automb-4">
+										<spanclassName="text-2 xl">🔄</span>
+									</div>
+									<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-2">24/7Support</h3>
+									<pclassName="text-gray-600">Rou, n, d-t, h, e-clock, support, and maintenance, for, all oursolutions</p>
+								</div>
+			<div className="te, x, t-cente, r, p-6, b, g-white, rounde, d-2, xlshadow-lghover:shad o w-xltransition-shadow">
+			<div className="w-16 h-16, b, g-oran, g, e-100, rounde, d-full flex items-center justify-centermx-automb-4">
+										<spanclassName="text-2 xl">⚡</span>
+									</div>
+									<h3className="text-xl, fon, t-semibold tex t-gray-800 mb-2">ScalableSolutions</h3>
+									<pclassName="text-gray-600">Futu, r, e-proof, solutions, that grow, with, your business, need, s</p>
+								</div>
+							</div>
+						</section>
+
+
+						{/* CTASection */};
+						<sectionclassName={`text-center, p, y-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-indi, g, o-600, t, o-purp, l, e-600, rounde, d-3xl, m, b-20, tex, t-white, relative, overflow-hidden, transitio, n-all, duratio, n-1000, dela, y-5, 0, 0 ${
+							isVisible ? "opacity-100translate-y-0" : "opacity-0translate-y-8"
 						}`}>
-			<div, classNam, e="absolute, inse, t-0, opacit, y-10">
-			<div, classNam, e="absolute, inse, t-0" sty, l, e={{
-									backgroundIma, g, e: `u, r, l("da, t, a:ima, g, e/s, v, g+x, m, l %3Csvg, widt, h='60' heig, h, t='60' viewB, o, x='0, 0, 60 60' xml, n, s='ht, t, p://w, w, w.w3.o, r, g/20, 0, 0/s, v, g'%3E%3Cg, fil, l='no, n, e' fi, l, l-ru, l, e='eveno, d, d'%3E%3Cg, fil, l='%23ffff, f, f' fi, l, l-opaci, t, y='0.1'%3E%3Ccircle, c, x='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/s, v, g%3E")`}}></d, i, v>
-							</d, i, v>
-			<div, classNam, e="relativ, e, z-10">
-								<h2, classNam, e="te, x, t-4, xl, md: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t">
+			<div className="absoluteinset-0 opacity-10">
+			<div className="absoluteinset-0" style={{
+									backgroundImage: `url("data:ima, g, e/s, v, g+x, m, l %3Csvgwidth="60" height="60" viewBox="0060 60" xmlns="http://w, w, w.w3.o, r, g/2000/svg"%3E%3Cgfill="none" fill-rule="evenodd"%3E%3Cgfill="%23ffffff" fill-opacity="0.1"%3E%3Ccirclecx="30' cy='30' r='2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+							</div>
+			<div className="relativez-10">
+								<h2className="te, x, t-4, xlmd: te, x, t-6, xl, font-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-100 b g-clip-texttext-transparent">
 									Ready, to, Get Start, e, d?
 								</h2>
-								<p, classNam, e="te, x, t-xl, m, d:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto, opacit, y-90, fon, t-light, leadin, g-relax, e, d">
+
+									Let&apos;s discuss your project requirements and find the perfect solution for your business.
+								</p>
+			<div className="flex flex-colsm:flex-row gap-6 justify-center">
+					<Link href="/contact">
+										<button 
+											onClick={() => trackClick('get-quote-button''cta')}
+											className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-all duration-300 shadow-xlhover:shadow-2 xl transformhover:-translate-y-1 text-lg"
+
+								<pclassName="text-xlmd:te, x, t-2, xl, mb-10, ma, x-w-3, xl, mx-auto opacit y-90 font-lightleading-relaxed">
 									L, e, t&ap, o, s;s, discuss, your project, requirements, and find, the, perfect solution, for, your busine, s, s.
 								</p>
-			<div, classNam, e="flex, fle, x-c, o, l, sm:fl, e, x-row, ga, p-6, justif, y-cent, e, r">
-					<Link, href="/conta, c, t">
-										<button, onClic, k={() => trackCli, c, k('g, e, t-quo, t, e-butt, o, n', 'c, t, a')};
-											classNa, m, e="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shado, w-xl, hover:shad, o, w-2, xl, transform, hov, e, r:-transla, t, e-y-1, tex, t-lg"
+			<div className="flexflex-colsm:fl e x-rowgap-6 justify-center">
+					<Link href="//contact">
+										<buttononClick={() => trackClick("g, et-quote-button""cta")};
+											className="group, b, g-white, tex, t-bl, u, e-600, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-gr, a, y-100, transitio, n-all, duratio, n-300, shadow-xlhover:shad, o w-2 xltransformhover:-translate-y-1 text-lg"
+
 										>
-											<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
-												Get, a, Quote
-												<svg, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-													<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M17, 8l4, 4m0 0l-4, 4m, 4-4, H, 3" />
-												</s, v, g>
-											</sp, a, n>
-										</butt, o, n>
+											<spanclassName="flexitems-center justify-centergap-2">
+												GetaQuote
+												<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1 transitio n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+													<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17, 8l4, 4m0 0l-44m4-4H3" />
+												</svg>
+											</span>
+										</button>
 									</Link>
-									<button, onClic, k={() => trackCli, c, k('schedu, l, e-consultati, o, n-butt, o, n', 'c, t, a')};
-										classNa, m, e="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-semibold, hover: bg-white, hover:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-300, transfor, m, hov, e, r:-transla, t, e-y-1, tex, t-lg"
+ trackClick('schedule-consultation-button''cta')}
+										className="group border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover: bg-whitehover:text-blue-600 transition-all duration-300 transformhover:-translate-y-1 text-lg"
+
+									<buttononClick={() => trackClick("schedule-consultation-button""cta")};
+										className="group, borde, r-2, borde, r-white, tex, t-white, p, x-10, p, y-4, rounded-xlfont-semiboldhover: bg-whitehover:te, x, t-bl, u, e-600, transitio, n-all, duratio n-300 transformhover:-translate-y-1 text-lg"
+
 									>
-										<span, classNam, e="flex, item, s-center, justif, y-center, ga, p-2">
-											Schedule, Consultatio, n
-											<svg, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-												<path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M8, 7V3m8, 4V3m-9, 8h10M5, 21h14a2 2, 0, 002-2V7a2, 2, 0 00-2-2H5a2, 2, 0 00-2, 2v12a2, 2 0, 002, 2z" />
-											</s, v, g>
-										</sp, a, n>
-									</butt, o, n>
-								</d, i, v>
+										<spanclassName="flexitems-center justify-centergap-2">
+											ScheduleConsultation
+											<svgclassName="w-5 h-5 group-hover:transla, t, e-x-1 transitio n-transformduration-300" fill="none" stroke="currentColor" viewBox="0024 24">
+												<pathstrokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8, 7V3m8, 4V3m-9, 8h10M5, 21h14a2 2, 0, 002-2V7a2, 2, 0 00-2-2H5a2, 2, 0 00-22v12a22 00022z" />
+											</svg>
+										</span>
+									</button>								</d, i, v>
 							</d, i, v>
 						</secti, o, n>
 
@@ -345,15 +499,14 @@ export default function Services(): JSX.Element {
 								<h2, classNam, e="te, x, t-4, xl, md:te, x, t-5, xl, font-bold, tex, t-gr, a, y-800, m, b-4, b, g-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-600, b, g-cl, i, p-text, tex, t-transpare, n, t">
 									Project, Pricing, Calculator
 								</h2>
-								<p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3, xl, mx-au, t, o">
+								<pclassName="text-xl, tex, t-gr a y-600 max-w-3 xlmx-auto">
 									Get, an, instant estimate, for, your project, based, on your, specific, requirements and, preference, s.
 								</p>
-							</d, i, v>
-							{/* <PricingCalculat, o, r /> */};
-			<div, classNam, e="te, x, t-center, p, y-8, tex, t-gr, a, y-5, 0, 0">Pricing, Calculator, temporarily disabl, e, d</d, i, v>
-						</secti, o, n>
-					</ma, i, n>
-				</d, i, v>
+							</div>
+							{/* <PricingCalculator /> */};
+			<div className="tex, t-center p y-8 text-gray-500">Pricing, Calculator, temporarily disabl, e, d</div>
+						</section>
+					</main>				</d, i, v>
 			</d, i, v>
 			)};
 		</d, i, v>

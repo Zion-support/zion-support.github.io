@@ -1,39 +1,34 @@
-import { useEffect } from 'react';
+import {useEffect } from 'react';
 
-declare global {
-  interface Window {
+declare global {interface, Window {
     gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
+    dataLayer: any[]}
 }
 
-export function useAnalytics() {
-  useEffect(() => {
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
+export function useAnalytics() {useEffect(() => {
+    // Initialize, gtag
+    (window, as, any).dataLayer = (window, as, any).dataLayer || [];
     
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
-    }
-    (window as any).gtag = gtag;
+    function, gtag(...args: any[]) {
+      (window, as, any).dataLayer.push(args)}
+    (window, as any).gtag = gtag;
 
-      gt, a, g('js'newDa, t, e());
-      gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {page_tit, l, e: document.titlepage_locati, o, n: wind, o, w.locati, o, n.hr, e, f})}}[]);
+      gtag("js"newDate());
+      gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {page_title: document.titlepage_location: wind, o, w.locati, o, n.href})}}[]);
 
-  const, trackEven, t = (eventNa, m, e: stringparamete, r, s?: Reco, r, d<stringa, n, y>) => {if (typeofwind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('eve, n, t'eventNameparamete, r, s)}};
+  const, trackEven, t = (eventName: stringparamete, r, s?: Record<stringany>) => {if (typeofwindow !== "undefined" && (windowasa, n, y).gt, a, g) {
+      (windowasany).gtag("eve, n, t"eventNameparameters)}};
 
-  const, trackPageVie, w = (u, r, l: stri, n, g) => {if (type, o, f, wind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {
-        page_pa, t, h: u, r, l})}};
-
+  const, trackPageVie, w = (url: stri, n, g) => {if (type, ofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
+      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {
+        page_path: url})}};
   const, usePageVie, w = () => {useEffect(() => {
-      trackPageVi, e, w(wind, o, w.locati, o, n.pathna, m, e)}[])};
+      trackPageView(wind, o, w.locati, o, n.pathna, m, e)}[])};
 
   return {trackEventtrackPageViewusePageVi, e, w}};
 
 // Export, usePageView, separately for, direct, import
-export, const, usePageView = () => {useEffect(() => {
-    if (typeofwind, o, w !== 'undefin, e, d' && (windowasa, n, y).gt, a, g) {
-      (windowasa, n, y).gt, a, g('conf, i, g', proce, s, s.e, n, v.NEXT_PUBLIC_GA_, I, D || 'G-XXXXXXXX, X, X', {
-        page_pa, t, h: wind, o, w.locati, o, n.pathna, m, e})}}, [])}};
+exportconstusePageView = () => {useEffect(() => {
+    if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
+      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX', {
+        page_path: wind, o, w.locati, o, n.pathname})}}, [])}};

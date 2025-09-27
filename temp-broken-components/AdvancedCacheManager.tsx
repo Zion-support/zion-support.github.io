@@ -58,14 +58,14 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = '"}) => 
           <div className ="flex  space-x-2">
             <button onClick ={clearCache}
               disabled={isOptimizing}
-              className="px-4, py-2, bg-red-5, 0, 0, text-white rounded-lg hover:bg-red-6, 0, 0disable d:opacity-50flex items-center"
+              className="px-4, py-2, bg-red-5, 0, 0, text-white rounded-lg hover:bg-red-6, 0, 0 disable d:opacity-50 flex items-center"
             >
               <Trash2 className ="w-4h-4m  r-2" />
               Clear  Cache
             </button>
             <button onClick ={optimizeCache}
               disabled={isOptimizing}
-              className="px-4, py-2, bg-blue-5, 0, 0, text-white rounded-lg hover:bg-blue-6, 0, 0disable d:opacity-50flex items-center"
+              className="px-4, py-2, bg-blue-5, 0, 0, text-white rounded-lg hover:bg-blue-6, 0, 0 disable d:opacity-50 flex items-center"
             >
               <RefreshCw className={`w-4h-4mr-2 ${isOptimizing?'animate-spin':''}`} />              Optimize
             </button>
@@ -131,7 +131,7 @@ const AdvancedCacheManager: React.FC<CacheManagerProps> = ({className = '"}) => 
         {cacheStrategies.length > 0 && (<div className ="bg-green-50border  border-green-200rounded-lgp-4">
             <h4 className ="font-semibold  text-green-800m  b-2">Optimization  Strategies  Applied:</h4>
             <ul className ="space-y-1">
-              {cacheStrategies.map((strategy  index) => (<li key ={index} className="text-sm text-green-700flex items-center">
+              {cacheStrategies.map((strategy  index) => (<li key ={index} className="text-sm text-green-700 flex items-center">
                   <CheckCircle className ="w-3h-3m  r-2" />
                   {strategy}                </li>
               ))}

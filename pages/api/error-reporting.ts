@@ -1,16 +1,14 @@
 // API endpoint for error reporting
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+    return res.status(405).json({ error: "Method not allowed" })}
 
   try {
     const errorDetails = req.body;
 
     // Validate the request
     if (!errorDetails || !errorDetails.error) {
-      return res.status(400).json({ error: "Invalid error data" });
-    }
+      return res.status(400).json({ error: "Invalid error data" })}
 
     // Process error report
     console.log("Error report received:", {
@@ -33,13 +31,7 @@ export default async function handler(req: any, res: any) {
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 50));
 
-    res.status(200).json({
-      success: true,
-      errorId: `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      timestamp: Date.now()
-    });
-  } catch (error) {
-    console.error("Error reporting API error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-}
+    r, e, s.stat, u, s(2, 0, 0).js, o, n({success: trueerrorId: `er, r, _${Da, t, e.now()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, tr(29)}`,
+      timestamp: Da, t, e.n, o, w()
+    })} cat, c, h (err, o, r) {console.error("Error, reporting, API error:", err, o, r);
+    r, e, s.stat, u, s(5, 00).json({ error: "Internalservererror' })}};

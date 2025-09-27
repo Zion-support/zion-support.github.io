@@ -1,6 +1,9 @@
-// TODO: Consider breaking this large component (249 lines) into smaller components
-import { useMemo, useCallback } from 'react';
-import Reac, t, {useState }  from 'react";
+// TODO: Consider breaking this large component (252 lines) into smaller components
+// TODO: Consider breaking this large component (251 lines) into smaller components
+// TODO: Consider breaking this large component (250, lines) into smaller components
+// TODO: Consider breaking this large component (249, lines) into smaller components
+import {useMemo, useCallback } from 'react';
+import React{useState }  from 'react";
 
 interface, ContactFormProp, s {onSubm, i, t?: (data: a, n, y) => vo, i, d;
 	showTit, l, e?: boole, a, n;
@@ -23,28 +26,28 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 	consttimelines = ["ASAP""1-2months""3-6months""6-12months""12+ months""Flexible"];
 
 	const, handleInputChang, e = (e: React.ChangeEve, n, t<HTMLInputElement | HTMLTextAreaElement | HTMLSelectEleme, n, t>) => {handleInputChan, g, e.displayName = "handleInputChange";const { namevalue } = e.targ, e, t;
-		setFormDa, t, a(pr, e, v => ({...pr, e, v[name]: value
+		setFormData(pr, e, v => ({...pr, e, v[name]: value
 		}))};
 
-	const, handleSubmi, t = asy, n, c (e: React.FormEve, n, t) => {e.preventDefau, l, t();
-		setIsSubmitti, n, g(tr, u, e);
+	const, handleSubmi, t = async(e: React.FormEve, n, t) => {e.preventDefault();
+		setIsSubmitting(tr, u, e);
 		t, r, y {
- setTimeo, u, t(resolve20, 0, 0));
+ setTimeout(resolve20, 0, 0));
 
-			// SimulateA, P, I, callawait, newPromis, e(resol, v, e = > setTimeo, u, t(resolve20, 0, 0));
+			// SimulateA, P, I, callawaitnewPromise(resolve = > setTimeout(resolve20, 0, 0));
 
 			
-			if (onSubm, i, t) {
-				onSubm, i, t(formDa, t, a)};
-			setSubmitStat, u, s('succe, s, s');
-			setFormDa, t, a({na, m, e: ''ema, i, l: ''compa, n, y: ''pho, n, e: ''servi, c, e: ''messa, g, e: ''budg, e, t: ''timeli, n, e: ''
-			})} cat, c, h (err, o, r) {setSubmitStat, u, s('err, o, r')} final, l, y {setIsSubmitti, n, g(fal, s, e)}};
+			if (onSubmit) {
+				onSubmit(formData)};
+			setSubmitStatus("success");
+			setFormData({name: "'email: ''company: ''phone: ''service: ''message: ''budget: ''timeline: '"
+			})} catch(error) {setSubmitStatus("error")} final, ly {setIsSubmitting(false)}};
 
-				<divclassName="w-20h-20bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
-					<svgclassName="w-10h-10te, x, t-green-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
+				<divclassName="w-20 h-20 bg-gre, e, n-1, 0, 0, round, e, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
+					<svgclassName="w-10 h-10 te, x, t-green-600" fi, l, l="none" stroke="currentColor" viewBox="0, 02424">
 						<pathstrokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M5, 1, 3, l  4, 4, L, 197" />					</svg>
 				</div>
-				<h3className="te, x, t-2xl, fon, t-bold, tex, t-gre, en-800mb-4" id="messa, g, e-sent-successfully">Message, Sent, Successfully!</h3>
+				<h3className="te, x, t-2 xl, fon, t-bold, tex, t-gre, en-800 mb-4" id="messa, g, e-sent-successfully">Message, Sent, Successfully!</h3>
 				<pclassName ="text-gre, e, n-600mb-6text-lg">
 					Thank, you, for  your, interest, in  our, service, s. We&ap, o, s;llget, backto, youwithin  24hours, witha, detailedproposal.
 
@@ -55,16 +58,16 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 				<h3classNam, e="te, x, t-2, x, l, fo, n, t-bo, l, d, te, x, t-gre, en-800mb-4" id="messa, g, e-sent-successfully">Messa, g, e, Sent, Successfull, y!</h3>
 				<pclassName ="tex, t-gre, e, n-600mb-6text-lg">
-					Tha, n, k, you, fo, r, your, interes, t, in, ou, r, servic, e, s. We&ap, o, s;ll, get, backto, youwithin24hours withadetailedpropos, a, l.
+					Tha, n, k, you, fo, r, your, interes, t, in, ou, r, servic, e, s. We&ap, o, s;ll, get, backto, youwithin24hours, withadetailedpropos, a, l.
 
 				</p>
 
-				<buttononCli, c, k ={() = ar, i, a-lab, e, l="setSubmitStat, u, s('id, l, e')};
+				<buttononCli, c, k ={() = ar, i, a-label="setSubmitStatus('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
 					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"
 
 				>
-					Send, Another, Message"> setSubmitStat, u, s('id, l, e')};
+					SendAnotherMessage"> setSubmitStatus('id, l, e')};
 					ar, i, a-lab, e, l="Send, another, message"
 					classNa, m, e="bg-gre, e, n-600, hover:bg-gre, e, n-700, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-medium, transitio, n-colors, duratio, n-2, 0, 0"				>
 					Send, Another, Message
@@ -74,12 +77,12 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 	return (<div, classNa, m, e={`bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, shad, o, w-x, l, p-8 ${className}`}>
 			{showTitle && (
 
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, a, y-8, 00, mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00, text-lg">
 
 				<divclassNam, e ="mb-8">
-					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
-					<pclassName="tex, t-gr, a, y-6, 00text-lg">
+					<h3className="tex, t-3, x, l, fo, n, t-bo, l, d, te, x, t-gr, ay-800, mb-3" id="sta, r, t-your-project">Sta, r, t, Yo, u, r, Proje, c, t</h3>
+					<pclassName="tex, t-gr, a, y-6, 00, text-lg">
 
 						Te, l, l, us, abo, u, t, yo, u, r, proje, c, t, a, n, d, we&ap, o, s;ll, provi, d, e, a, detail, e, d, propos, a, l, tailor, e, d, to, yourneeds.
 
@@ -87,9 +90,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 			)};
 			<formonSubmit={handleSubmit} classNa, m, e="space-y-6">
-				<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2gap-6">
+				<divclassName="gridgrid-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 					<div>
-						<labelhtmlFor="name" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="name" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							FullName *
 						</label>
 						<inputtype="text"
@@ -101,7 +104,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							placeholder="JohnDoe"						/>
 					</div>
 					<div>
-						<labelhtmlFor="email" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="email" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							EmailAddress *
 						</label>
 						<inputtype="email"
@@ -115,9 +118,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</div>
 				</div>
 
-				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2gap-6">
+				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2 gap-6">
 					<div>
-						<labelhtmlFor="company" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="company" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Company *
 						</label>
 						<inputtype="text"
@@ -129,7 +132,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							placeholder="YourCompany"						/>
 					</div>
 					<div>
-						<labelhtmlFor="phone" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="phone" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							PhoneNumber
 						</label>
 						<inputtype="tel"
@@ -143,9 +146,9 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 					</div>
 				</div>
 
-				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-3gap-6">
+				<divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-3 gap-6">
 					<div>
-						<labelhtmlFor="service" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="service" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							ServiceInterest *
 						</label>
 						<selectid="service"
@@ -155,13 +158,13 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selectaservice</option>
-							{servic, e, s.m, a, p((servi, ce) => (<optionkey ={service} valu, e={service}>
+							{servic, e, s.map((servi, ce) => (<optionkey ={service} valu, e={service}>
 									{service}								</option>
 							))};
 						</select>
 					</div>
 					<div>
-						<labelhtmlFor="budg, e, t" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="budg, e, t" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Budget, Rang, e *
 						</label>
 						<selectid="budget"
@@ -171,13 +174,13 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selectbudget</option>
-							{budge, t, s.m, a, p((budg, et) => (<optionkey ={budget} valu, e={budget}>
+							{budge, t, s.map((budg, et) => (<optionkey ={budget} valu, e={budget}>
 									{budget}								</option>
 							))};
 						</select>
 					</div>
 					<div>
-						<labelhtmlFor="timeli, n, e" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+						<labelhtmlFor="timeli, n, e" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 							Timeli, n, e *
 						</label>
 						<selectid="timeline"
@@ -187,7 +190,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 							requiredclassName="w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounded-lgfocus:ri, n, g-2, focus:ri, n, g-bl, u, e-500, focus:bord, e, r-transparent, transitio, n-colors, duratio, n-200"
 						>
 							<optionvalue="">Selecttimeline</option>
-							{timelin, e, s.m, a, p((timeli, ne) => (<optionkey ={timeline} valu, e={timeline}>
+							{timelin, e, s.map((timeli, ne) => (<optionkey ={timeline} valu, e={timeline}>
 									{timeline}								</option>
 							))};
 						</select>
@@ -195,7 +198,7 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				</div>
 
 				<div>
-					<labelhtmlFor="message" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700mb-2">
+					<labelhtmlFor="message" className="block, tex, t-sm, fon, t-semibold, tex, t-gr, a, y-700 mb-2">
 						Project, Detail, s *
 					</label>
 					<textareaid="message"
@@ -219,14 +222,14 @@ exportconstContactForm: React.FC<ContactFormProps> = ({onSubmitshowTitle = truec
 				)};
 				<button, typ, e="subm, i, t"
 					disabl, e, d={isSubmitti, n, g};
-					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xl, transform, hover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"				>
+					classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hover:fr, o, m-bl, u, e-700, hover:to-indi, g, o-700, disable, d:fr, o, m-bl, u, e-400, disable, d:to-indi, g, o-400, tex, t-white, fon, t-semibold, p, y-4, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, shado, w-lg, hover:shad, o, w-xltransformhover:-transla, t, e-y-0.5, disable, d:transfo, r, m-no, n, e"				>
 
 					{isSubmitti, ng ? (<>
       
 								<circleclassName ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path, className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l3-2.647z"></path>							</svg>
 
-							<svg, classNa, m, e="anima, t, e-sp, i, n -ml-1, mr-3, h-5 : w-5  : text-white" xml, n, s="ht, t, p :// w, w, w.w3.o, r, g/2000/svg" fi, l, l="none" viewBox="00, 2424">
+							<svg, classNa, m, e="anima, t, e-sp, i, n -ml-1, mr-3, h-5 : w-5  : text-white" xml, n, s="http:// w, w, w.w3.o, r, g/2000/svg" fi, l, l="none" viewBox="00, 2424">
 								<circleclassNam, e ="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
 								<path, className ="opacity-75" fill="currentColor" d="M4, 12, a, 8, 8, 0, 0, 1, 8-8, V, 0, C, 5.3, 7, 3, 0, 0, 5.3, 7, 3, 0, 12h, 4, z, m, 2, 5.2, 9, 1, A, 7.9, 6, 2, 7.9, 6, 2, 0, 0, 1, 4, 12, H, 0, c, 0, 3.0, 4, 2, 1.1, 3, 5, 5.8, 2, 4, 3, 7.9, 3, 8l3-2.647z"></path>							</svg>
 

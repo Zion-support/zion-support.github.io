@@ -134,7 +134,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
               >
                 <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
 
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
+            {featur, e, s.map((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
@@ -162,7 +162,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
             <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-auto">
               Our, A, I-powered, project, management delivers, measurable, improvements in, delivery, timecost reductionand
 
-      <sectionclassName="py-20bg-sla, t, e-800/30">
+      <sectionclassName="py-20 bg-sla, t, e-800/30">
         <divclassName="containermx-autopx-4">
           <motion.div, initia, l={{ opacity: 0y: 20 }} whileInVi, e, w={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2className="text-4, xllg:te, x, t-5, x, l, font-bold, tex, t-whitemb-6">Proven, Result, s & Benefits</h2>
@@ -173,7 +173,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
             </p>
           </motion.div>
 
-          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3gap-6">
+          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-co, l, s-2, lg:gr, i, d-co, l, s-3 gap-6">
  (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0x: -20 }};
                 whileInVi, e, w={{ opacity: 1x: 0 }};
@@ -182,7 +182,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
               >
                 <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
 
-            {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<motion.div, k, e, y ={index};
+            {benefi, t, s.map((benef, i, t, ind, e, x) => (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0x: -20 }};
                 whileInVi, e, w={{ opacity: 1x: 0 }};
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
@@ -205,7 +205,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
         <divclassName="containermx-autopx-4">
 
             <h2className="text-4, xllg:te, x, t-5, xl, font-boldtext-whitemb-6">Flexible, Solutions, for Every, Projec, t</h2>
-            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3xlmx-auto">
+            <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3 xlmx-auto">
 
           <motion.divinitial={{ opacity: 0y: 20 }} whileInVi, e, w={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <h2className="text-4, xllg:te, x, t-5, x, l, font-boldtext-whitemb-6">Flexible, Solutions, for Every, Projec, t</h2>
@@ -215,20 +215,20 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
             </p>
           </motion.div>
 
-          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2gap-8">
+          <divclassName="grid, gri, d-co, l, s-1, md:gr, i, d-cols-2 gap-8">
  (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6delay: index * 0.1 }};
                 classNa, m, e="p-6, round, e, d-xl, border, borde, r-oran, g, e-4, 0, 0/20, bg-slate-800/40"
 
-            {solutio, n, s.m, a, p((soluti, o, n, ind, e, x) => (<motion.div, k, e, y ={index};
+            {solutio, n, s.map((soluti, o, n, ind, e, x) => (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
               >
                 <h3className="tex, t-2, x, l, fo, n, t-semibo, l, d, te, xt-whitemb-4">{soluti, o, n.title}</h3>
-                <pclassName="tex, t-gr, ay-300mb-6">{soluti, o, n.description}</p>
+                <pclassName="tex, t-gr, ay-300, mb-6">{soluti, o, n.description}</p>
                 <divclassNam, e="spa, ce-y-3mb-6">
  (<divke, y ={featureIndex} className="fl, e, x, ite, m, s-cent, e, r, space-x-3">
                       <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
@@ -236,17 +236,19 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
  (<divke, y ={featureIndex} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                       <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
 
-                  {soluti, o, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (<divke, y ={featureIndex} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                  {soluti, o, n.featur, e, s.map((featu, r, e, featureInd, e, x) => (<divke, y ={featureIndex} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                       <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
 
 
                       <spanclassNam, e ="te, x, t-gray-300">{feature}</span>
                     </div>
                   ))};
-                </d, i, v>
-{soluti, o, n.pri, c, e}</d, i, v>
-                <button, classNam, e="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-all, duratio, n-3, 0, 0">
+                </div>
+{soluti, o, n.price}</div>
+                <buttonclassName="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-allduration-300">
 
+                <divclassName="text-3, x, l, font-bold, tex, t-orange-400 mb-6">{soluti, o, n.price}</div>
+                <buttonclassName="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounded-lghover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-allduration-300">
                 <div, classNam, e="te, x, t-3, x, l, font-bold, tex, t-oran, g, e-400, m, b-6">{soluti, o, n.pri, c, e}</d, i, v>
                 <button, classNam, e="w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, fon, t-semibold, rounde, d-lg, hover:fr, o, m-oran, g, e-600, hover:to-r, e, d-600, transitio, n-all, duratio, n-3, 0, 0">
                   Get, Starte, d
@@ -263,7 +265,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
             <h2className="text-4, xllg:te, x, t-5, xl, font-bold, tex, t-whitemb-6">Optimized, for, Any ProjectType</h2>
             <pclassName="text-xl, tex, t-gr, a, y-300, ma, x-w-3, xl, mx-auto">
 
-      <sectionclassName="py-20bg-slate-800/30">
+      <sectionclassName="py-20 bg-slate-800/30">
         <divclassName="containermx-autopx-4">
           <motion.div, initia, l={{ opacity: 0y: 20 }} whileInVi, e, w={{ opacity: 1y: 0 }} transition={{ duration: 0.8 }}>
             <h2className="text-4, xllg:te, x, t-5, x, l, font-bold, tex, t-whitemb-6">Optimized, for, Any ProjectType</h2>
@@ -273,7 +275,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
             </p>
           </motion.div>
 
-          <divclassName="grid, gri, d-co, l, s-2, md:gr, i, d-co, l, s-3, lg:gr, i, d-co, l, s-6gap-6">
+          <divclassName="grid, gri, d-co, l, s-2, md:gr, i, d-co, l, s-3, lg:gr, i, d-co, l, s-6 gap-6">
  (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0scale: 0.8 }};
                 whileInVi, e, w={{ opacity: 1scale: 1 }};
@@ -283,7 +285,7 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
                 <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-oran, g, e-4, 0, 0/20, to-r, e, d-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, f, y-cent, e, rmx-automb-3">
                   <CheckCircleclassNam, e="w-5, h-5, te, x, t-orange-400" />
 
-            {projectTyp, e, s.m, a, p((projectTy, p, e, ind, e, x) => (<motion.div, k, e, y ={index};
+            {projectTyp, e, s.map((projectTy, p, e, ind, e, x) => (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0scale: 0.8 }};
                 whileInVi, e, w={{ opacity: 1scale: 1 }};
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
@@ -305,27 +307,27 @@ Advanc, e, d, AI, Technolog, y, for, Bette, r, Project, Deliver, y</h2>
       </section>
 
       {/* C, T, A, Section */};
-        <divclassName="containermx-auto, p, x-4text-center">
+        <divclassName="containermx-auto, p, x-4 text-center">
           <motion.divinitial={{ opacity: 0y: 20 }} whileInVi, e, w={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <h2className="text-4, xllg:te, x, t-5, xl, font-boldtext-whitemb-6">Ready, to, Transform Your, Project, Delivery?</h2>
-            <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3xlmx-auto">
+            <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3 xlmx-auto">
               Join, the, AI revolution, in, project management, and, deliver projects, fastercheaperand, with higher, success, rates.
             </p>
-            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4justify-center">
+            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
               <motion.buttonwhileHover={{ scale: 1.05 }} whileT, a, p={{ scale: 0.95 }} classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-whitefont-semiboldrounded-lg">
                 Start, Your, Free Tri, a, l
               </motion.button>
               <motion.button, whileHove, r={{ scale: 1.05 }} whileT, a, p={{ scale: 0.95 }} classNa, m, e="px-8, p, y-4, border, border-oran, g, e-4, 0, 0/30, tex, t-oran, g, e-300font-semiboldrounded-lg">
                 Ca, l, l +1, 302, 464 09, 5, 0
 
-      <sectionclassName="py-20bg-gradie, n, t-to-r, fro, m-oran, g, e-5, 0, 0/10, vi, a-r, e, d-5, 0, 0/10, t, o-pink-500/10">
-        <divclassName="containermx-auto, p, x-4text-center">
+      <sectionclassName="py-20 bg-gradie, n, t-to-r, fro, m-oran, g, e-5, 0, 0/10, vi, a-r, e, d-5, 0, 0/10, t, o-pink-500/10">
+        <divclassName="containermx-auto, p, x-4 text-center">
           <motion.divinitial={{ opacity: 0y: 20 }} whileInVi, e, w={{ opacity: 1y: 0 }} transiti, o, n={{ duration: 0.8 }}>
             <h2className="text-4, xllg:te, x, t-5, x, l, font-boldtext-whitemb-6">Ready, to, Transform Your, Project, Delivery? </h2>
             <pclassName="text-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3, xlmx-auto">
-              Join, the, AI revolution, in, project management, and, deliver projects, faste, r : cheap, e, r : and, with, higher success, rate, s.
+              Join, the, AI revolution, in, project management, and, deliver projectsfaster: cheaper: and, with, higher success, rate, s.
             </p>
-            <divclassName="flexflex-col, s, m :fl, e, x-row, ga, p-4justify-center">
+            <divclassName="flexflex-colsm:fl, e, x-row, ga, p-4 justify-center">
               <motion.buttonwhileHover={{ scale: 1.05 }} whileT, a, p={{ scale: 0.95 }} classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-whitefont-semiboldrounded-lg">
                 Start, Your, Free Tri, a, l
               </motion.button>
