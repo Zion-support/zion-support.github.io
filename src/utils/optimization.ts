@@ -169,54 +169,80 @@ export class PerformanceOptimizer {
    * Monitor Core Web Vitals
    */
   private monitorCoreWebVitals(): void {
+    // Check if PerformanceObserver is available (not available in test environments)
+    if (typeof PerformanceObserver === 'undefined') {
+      return;
+    }
+
     // Largest Contentful Paint (LCP)
-    new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.loadTime = lastEntry.startTime;
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+    try {
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.loadTime = lastEntry.startTime;
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+    } catch (error) {
+      console.warn('LCP monitoring not supported:', error);
+    }
 
     // First Input Delay (FID)
-    new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        console.log('FID:', entry.processingStart - entry.startTime);
-      });
-    }).observe({ entryTypes: ['first-input'] });
+    try {
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        });
+      }).observe({ entryTypes: ['first-input'] });
+    } catch (error) {
+      console.warn('FID monitoring not supported:', error);
+    }
 
     // Cumulative Layout Shift (CLS)
-    new PerformanceObserver((list) => {
-      let clsValue = 0;
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        const layoutShiftEntry = entry as LayoutShiftEntry;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
-        }
-      });
-      console.log('CLS:', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+    try {
+      new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
+          }
+        });
+        console.log('CLS:', clsValue);
+      }).observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('CLS monitoring not supported:', error);
+    }
   }
 
   /**
    * Monitor resource loading
    */
   private monitorResourceLoading(): void {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.entryType === 'resource') {
-          const resourceEntry = entry as PerformanceResourceTiming;
-          console.log('Resource loaded:', {
-            name: resourceEntry.name,
-            duration: resourceEntry.duration,
-            size: resourceEntry.transferSize
-          });
-        }
-      });
-    });
+    // Check if PerformanceObserver is available (not available in test environments)
+    if (typeof PerformanceObserver === 'undefined') {
+      return;
+    }
 
-    observer.observe({ entryTypes: ['resource'] });
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            console.log('Resource loaded:', {
+              name: resourceEntry.name,
+              duration: resourceEntry.duration,
+              size: resourceEntry.transferSize
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['resource'] });
+    } catch (error) {
+      console.warn('Resource loading monitoring not supported:', error);
+    }
   }
 
   /**
