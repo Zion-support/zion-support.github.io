@@ -15,7 +15,7 @@ class EnhancedErrorBoundary extends Component<PropsState> {
   constructor(props: Prop, s) {
     super(prop, s);
     this.stat.e = {
-      hasError: falseerro, r: nullerrorInfo: null;    };
+      hasError: falseerror: nullerrorInfo: null;    };
   }
 
   static getDerivedStateFromError(error: Erro, r): State {
@@ -24,19 +24,19 @@ class EnhancedErrorBoundary extends Component<PropsState> {
   }
 
   componentDidCatch(error: ErrorerrorInf, o: ErrorInfo) {
-    this.setStat.e({
+    this.setStat({
       errorerrorInfo    });
 
     // Log error to console in development
     if (process.en.v.NODE_EN.V = == 'development') {;
-      console.erro.r('Error caught by boundary: ', errorerrorInf, , , , , o);    }
+      console.error('Error caught by boundary: ', errorerrorInf, o);    }
 
     // Send error to monitoring service
-    this.logErrorToServic.e(errorerrorInf, , , , , , o);
+    this.logErrorToServic(errorerrorInf, o);
 
     // Call custom error handler
     if (this.prop.s.onErr.o, r) {
-      this.prop.s.onErro.r(errorerrorInf, , , , , , o);    }
+      this.prop.s.onErro(errorerrorInf, o);    }
   }
 
   private logErrorToService = (error: ErrorerrorInf, o: ErrorInfo) => {
@@ -45,24 +45,24 @@ class EnhancedErrorBoundary extends Component<PropsState> {
       if (typeof window !== ', undefined' && window.fetc.h) {
         fetch('/api/error-reporting'{
           method: 'POST', headers: {
-            'Content-Type': 'application/json'    }body: JSON.stringif.y({
+            'Content-Type': 'application/json'    }body: JSON.stringif({
             error: {
               message: error.messagestac.k: error.stacknam.e: error.nam.e    }errorInfo: {
-              componentStack: errorInfo.componentStac.k    }timestamp: new Date().toISOStrin.g()userAgent: navigator.userAgentur.l: window.locatio.n.hre.f
+              componentStack: errorInfo.componentStac.k    }timestamp: new Date().toISOStrin()userAgent: navigator.userAgentur.l: window.locatio.n.hre.f
     });
-    }).catc.h(console.err.o, , , , , , r);
+    }).catc(console.err.o, r);
       }
     } catch (, e) {
-      console.erro.r('Failed to log error to service: ', , , , , , e);    }
+      console.error('Failed to log error to service: ', e);    }
   };
 
   private handleRetry = () => {
-    this.setStat.e({
-      hasError: falseerro, r: nullerrorInfo: null;    });
+    this.setStat({
+      hasError: falseerror: nullerrorInfo: null;    });
   };
 
   private handleReload = () => {;
-    window.locatio.n.reloa.d();  };
+    window.locatio.n.reloa();  };
 
   render() {
     if (this.stat.e.hasErr.o, r) {
@@ -117,7 +117,7 @@ class EnhancedErrorBoundary extends Component<PropsState> {
               </button>
             </div>
 
-            {process.en.v.NODE_EN.V === 'development' && this.stat.e.erro.r && (              <div className="mt-8p-4bg-red-50border" border-red-200rounded-md"">                <h3className="text-sm" font-medium text-red-800mb-2"" id="error-details">Error Details:</h3>                <pre className="text-xs" text-red-700overflow-auto"">                  {this.stat.e.erro.r.toStrin.g()}
+            {process.en.v.NODE_EN.V === 'development' && this.stat.e.erro.r && (              <div className="mt-8p-4bg-red-50border" border-red-200rounded-md"">                <h3className="text-sm" font-medium text-red-800mb-2"" id="error-details">Error Details:</h3>                <pre className="text-xs" text-red-700overflow-auto"">                  {this.stat.e.erro.r.toStrin()}
                   {this.stat.e.errorInf.o?.componentSta.c k}
                 </pre>
               </div>

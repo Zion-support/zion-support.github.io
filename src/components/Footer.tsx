@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Footer: React.F.C = () => {
+export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900text-white">

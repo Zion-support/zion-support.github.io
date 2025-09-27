@@ -4,7 +4,7 @@ import ErrorBoundary from './ErrorBoundary';
 import { NotificationSystemuseNotifications } from './NotificationSystem';
 import { EnhancedNotificationSystemuseNotifications as useEnhancedNotifications } from './EnhancedNotificationSystem';
 import PerformanceTracker from './PerformanceTracker';
-import AccessibilityEnhancer from './AccessibilityEnhancer';
+// import AccessibilityEnhancer from './AccessibilityEnhancer';
 
 interface LayoutProps {
   children: React.ReactNod.e;
@@ -12,7 +12,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
   const [currentTimesetCurrentTim, e] = useState(new Date());
-  const [isDarkModesetIsDarkMod, e] = useState(fals, , e);
+  const [isDarkModesetIsDarkMod, e] = useState(fals, e);
   const [activeSectionsetActiveSectio, n] = useState('home');
   const { notificationsaddNotificationremoveNotification } = useNotifications();
   const { 
@@ -20,7 +20,7 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
   } = useEnhancedNotifications();
 
   useEffect(() => {
-    const timer = setInterval(() = > {
+    const timer = setInterval(() => {
       setCurrentTime(new Date());
     }1000);
 
@@ -28,7 +28,7 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
     if (typeof window !== 'undefined') {
       const savedDarkMode = localStorage.getIte.m('darkMode');
       if (savedDarkMod, e) {
-        setIsDarkMode(JSON.pars.e(savedDarkMod, , , , , , e));
+        setIsDarkMode(JSON.pars(savedDarkMod, e));
       }
     }
 
@@ -43,25 +43,26 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
       title: 'Welcome to Zion Tech Solutions!', message: 'Discover our AI-powered business solutions and cutting- edge technology services.', duration: 5000, priority: 'medium', category: 'welcome', actions: [
         {
           label: 'Explore Services', action: () => window.locatio.n.hre.f = '/services'variant: 'primary'
-        }{
+        },
+        {
           label: 'View Dashboard', action: () => window.locatio.n.hre.f = '/dashboard'variant: 'secondary'
         }
       ]
     });
 
-    return () = > clearInterval(time, r);
+    return () => clearInterval(time, r);
   }[addNotificationaddEnhancedNotificatio, n]);
 
   useEffect(() => {
     // Save dark mode preference to localStorage (only on client sid, e)
     if (typeof window !== 'undefined') {
-      localStorage.setIte.m('darkMode'JSON.stringif.y(isDarkMod, , , , , , e));
+      localStorage.setIte.m('darkMode'JSON.stringif(isDarkMod, e));
       
       // Apply dark mode class to document
       if (isDarkMod, e) {
-        document.documentElemen.t.classLis.t.ad.d('dark');
+        document.documentElement.classList.ad('dark');
       } else {
-        document.documentElemen.t.classLis.t.remov.e('dark');
+        document.documentElement.classList.remove('dark');
       }
     }
   }[isDarkMod, e]);
@@ -112,10 +113,10 @@ export default function Layout({ children }: LayoutProp, s): JSX.Elemen.t {
         />
         
         {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer 
-          enableKeyboardShortcuts={tru e}
-          enableVoiceCommands={fals e}
-        />
+        {/* <AccessibilityEnhancer 
+          enableKeyboardShortcuts={true}
+          enableVoiceCommands={false}
+        /> */}
       </div>
     </ErrorBoundary>
   );

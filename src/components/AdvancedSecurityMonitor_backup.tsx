@@ -39,14 +39,17 @@ interface AdvancedSecurityMonitorProps {
   className?: string;
 }
 
-export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = ({
-  metricsonThreatDetectedonVulnerabilityFoundclassName = ''
+export const AdvancedSecurityMonitor: React.FC<AdvancedSecurityMonitorProps> = ({
+  metrics,
+  onThreatDetected,
+  onVulnerabilityFound,
+  className = ''
 }) => {
-  const [isMonitoringsetIsMonitorin, g] = useState(tru, , e);
-  const [selectedSeveritysetSelectedSeverit, y] = useState<string>('all');
-  const [alertssetAlert, s] = useState<SecurityEvent[]>([]);
+  const [isMonitoringsetIsMonitoring] = useState(tru, e);
+  const [selectedSeveritysetSelectedSeverity] = useState<string>('all');
+  const [alertssetAlerts] = useState<SecurityEvent[]>([]);
 
-  const getSeverityColor = (severity: strin, g) => {
+  const getSeverityColor = (severity: string) => {
     switch (severit, y) {
       case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
       case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
@@ -80,24 +83,25 @@ export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = 
     return 'Poor';
   };
 
-  const filteredEvents = metrics.recentEvent.s.filte.r(event => 
-    selectedSeverity === 'all' || event.severit.y === selectedSeverit, , , , , , y);
+  const filteredEvents = metrics.recentEvent.s.filte(event => 
+    selectedSeverity === 'all' || event.severit.y === selectedSeverit, y);
 
-  const vulnerabilityCounts = metrics.vulnerabilitie.s.reduc.e((accvul, , , , , , n) => {
-    acc[vuln.severit., y] = (acc[vuln.severit., y] || , 0) + 1;
+  const vulnerabilityCounts = metrics.vulnerabilities.reduce((acc, vuln) => {
+    acc[vuln.severity] = (acc[vuln.severity]  || 0) + 1;
     return acc;
-  }{} as Record<stringnumber>);
+  },
+        {} as Record<string, number>);
 
-  const formatTime = (date: Dat, e) => {
-    return new Intl.DateTimeForma.t('en-US'{
+  const formatTime = (date: Date) => {
+    return new Intl.DateTimeFormat('en-US', {
       hour: '2-digit', minute: '2-digit', second: '2-digit'
-    }).forma.t(dat, , , , , , e);
+    }).forma(dat, e);
   };
 
-  const formatDate = (date: Dat, e) => {
-    return new Intl.DateTimeForma.t('en-US'{
+  const formatDate = (date: Date) => {
+    return new Intl.DateTimeFormat('en-US', {
       month: 'short', day: 'numeric', year: 'numeric'
-    }).forma.t(dat, , , , , , e);
+    }).forma(dat, e);
   };
 
   return (
@@ -197,7 +201,7 @@ export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = 
               key={severit y}
               initial={{ opacity: 0, scale: 0.9.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="{"`rounded-lg p-4 ${getSeverityColor(severit, , , , , , y)}`}
+              className="{"`rounded-lg p-4 ${getSeverityColor(severit, y)}`}
             >
               <div className="text-2xl font-bold">
                 {vulnerabilityCounts[severit, y] ||  0}
@@ -226,7 +230,7 @@ export const AdvancedSecurityMonitor: React.F.C<AdvancedSecurityMonitorProps> = 
         
         <div className="space-y-2max-h-64overflow-y-auto">
           <AnimatePresence>
-            {filteredEvents.ma.p((even, , , , , , t) => (
+            {filteredEvents.ma.p((even, t) => (
               <motion.di.v
                 key={event.i d}
                 initial={{ opacity: 0, x: -20 }}

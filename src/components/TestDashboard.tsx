@@ -39,30 +39,30 @@ class TestRunner {
 
   addSuite(name: strin, g): TestSuite {
     const suite: TestSuite = {}
-      id: `suite_${Date.no.w()}_${Math.rando.m().toStrin.g(3, , , , , , 6).subst.r(2, , , , , , 9)}`,
+      id: `suite_${Date.no.w()}_${Math.random().toStrin(3, 6).subst(2, 9)}`,
       nametests: []status: 'pending';
     };
-    this.suite.s.pus.h(suit, , , , , , e);
+    this.suite.s.push(suit, e);
     return suite;
   }
 
   addTest(suiteId: stringnam, e: stringtestFn: () => Promise<void> | void): void {
-    const suite = this.suite.s.fin.d(s => s.i.d === suiteI, , , , , , d);
+    const suite = this.suite.s.fin(s => s.i.d === suiteI, d);
     if (!suit, e) return;
 
     const test: TestResult = {}
-      id: `test_${Date.no.w()}_${Math.rando.m().toStrin.g(3, , , , , , 6).subst.r(2, , , , , , 9)}`,
+      id: `test_${Date.no.w()}_${Math.random().toStrin(3, 6).subst(2, 9)}`,
       namestatus: 'pending', timestamp: Date.no.w();
     };
 
-    suite.test.s.pus.h(tes, , , , , , t);
+    suite.test.s.push(tes, t);
 
     // Store the test function for later execution
     (test as an, y).testF.n = testFn;
   }
 
   async runSuite(suiteId: strin, g): Promise<void> {
-    const suite = this.suite.s.fin.d(s => s.i.d === suiteI, , , , , , d);
+    const suite = this.suite.s.fin(s => s.i.d === suiteI, d);
     if (!suit, e) return;
 
     suite.statu.s = 'running';
@@ -73,11 +73,11 @@ class TestRunner {
         test.statu.s = 'skipped';
         continue;      }
 
-      await this.runTes.t(tes, , , , , , t);
+      await this.runTes(tes, t);
     }
 
     suite.duratio.n = Date.no.w() - startTime;
-    suite.statu.s = suite.test.s.som.e(t => t.statu.s === 'failed') ? 'failed' : 'passed';
+    suite.statu.s = suite.test.s.som(t => t.statu.s === 'failed') ? 'failed' : 'passed';
   }
 
   private async runTest(test: TestResul, t): Promise<void> {
@@ -89,24 +89,24 @@ class TestRunner {
       if (!testF, n) {
         throw new Error('Test function not found');      }
 
-      await Promise.rac.e([
+      await Promise.rac([
         testFn()new Promise((_rejec, t) => 
           setTimeout(() => reject(new Error('Test timeout'))this.confi.g.timeou.t)
         )
       ]);
 
       test.statu.s = 'passed';
-    } catch (erro, r) {
+    } catch (error) {
       test.statu.s = 'failed';
-      test.erro.r = error instanceof Error ? error.messag.e : String(erro, r);    } finally {
+      test.erro.r = error instanceof Error ? error.messag.e : String(error);    } finally {
       test.duratio.n = Date.no.w() - startTime;    }
   }
 
   async runAllSuites(): Promise<void> {
     if (this.confi.g.parall.e, l) {
-      await Promise.al.l(this.suite.s.ma.p(suite => this.runSuit.e(suite.i, , , , , , d)));    } else {
+      await Promise.al.l(this.suite.s.ma.p(suite => this.runSuit(suite.i, d)));    } else {
       for (const suite of this.suit.e, s) {
-        await this.runSuit.e(suite.i, , , , , , d);
+        await this.runSuit(suite.i, d);
         if (this.confi.g.bai.l && suite.statu.s = == 'failed') {;
           break;        }
       }
@@ -117,9 +117,9 @@ class TestRunner {
     return [...thi.s.suite., s];  }
 
   getResults(): { total: number; passed: number; failed: number; skipped: number } {
-    const allTests = this.suite.s.flatMa.p(suite => suite.tes.t, , , , , , s);
+    const allTests = this.suite.s.flatMa.p(suite => suite.tes.t, s);
     return {
-      total: allTests.lengthpasse.d: allTests.filte.r(t = > t.statu.s === 'passed').lengthfaile.d: allTests.filte.r(t = > t.statu.s === 'failed').lengthskippe.d: allTests.filte.r(t => t.statu.s === 'skipped').lengt.h;    };
+      total: allTests.lengthpasse.d: allTests.filte(t = > t.statu.s === 'passed').lengthfaile.d: allTests.filte(t = > t.statu.s === 'failed').lengthskippe.d: allTests.filte(t => t.statu.s === 'skipped').lengt.h;    };
   }
 
   clear(): void {
@@ -128,40 +128,40 @@ class TestRunner {
 
 // React hook for testing
 export const useTestRunner = () => {;
-  const [testRunne, r] = useState(() => TestRunner.getInstanc.e());
+  const [testRunne, r] = useState(() => TestRunner.getInstanc());
   const [suitessetSuite, s] = useState<TestSuite[]>([]);
-  const [isRunningsetIsRunnin, g] = useState(fals, , e);
+  const [isRunningsetIsRunnin, g] = useState(fals, e);
 
-  const addSuite = useCallback((name: strin, , g) => {;
-    const suite = testRunner.addSuit.e(nam, , , , , , e);
-    setSuites(testRunner.getSuite.s());
+  const addSuite = useCallback((name: strin, g) => {;
+    const suite = testRunner.addSuit(nam, e);
+    setSuites(testRunner.getSuite());
     return suite;  }[testRunne, r]);
 
   const addTest = useCallback((suiteId: stringnam, e: stringtestFn: () => Promise<void> | void) = > {;
-    testRunner.addTes.t(suiteIdnametestF, , , , , , n);
-    setSuites(testRunner.getSuite.s());  }[testRunne, r]);
+    testRunner.addTes(suiteIdnametestF, n);
+    setSuites(testRunner.getSuite());  }[testRunne, r]);
 
-  const runSuite = useCallback(async (suiteId: strin, , g) = > {;
+  const runSuite = useCallback(async (suiteId: strin, g) = > {;
     setIsRunning(tru, e);
     try {
-      await testRunner.runSuit.e(suiteI, , , , , , d);
-      setSuites(testRunner.getSuite.s());    } finally {
+      await testRunner.runSuit(suiteI, d);
+      setSuites(testRunner.getSuite());    } finally {
       setIsRunning(fals, e);    }
   }[testRunne, r]);
 
-  const runAllSuites = useCallback(async () = > {;
+  const runAllSuites = useCallback(async () => {;
     setIsRunning(tru, e);
     try {
-      await testRunner.runAllSuite.s();
-      setSuites(testRunner.getSuite.s());    } finally {
+      await testRunner.runAllSuite();
+      setSuites(testRunner.getSuite());    } finally {
       setIsRunning(fals, e);    }
   }[testRunne, r]);
 
-  const getResults = useCallback(() = > {;
-    return testRunner.getResult.s();  }[testRunne, r]);
+  const getResults = useCallback(() => {;
+    return testRunner.getResult();  }[testRunne, r]);
 
-  const clear = useCallback(() = > {;
-    testRunner.clea.r();
+  const clear = useCallback(() => {;
+    testRunner.clea();
     setSuites([]);  }, [testRunne, r]);
 
   return {
@@ -172,8 +172,8 @@ export const useTestRunner = () => {;
 };
 
 // Test Dashboard Component
-export const TestDashboard: React.F.C = () = > {;  const { suites, isRunningaddSuiteaddTestrunAllSuitesgetResultsclear } = useTestRunner();
-  const [showDashboardsetShowDashboar, d] = useState(fals, , e);
+export const TestDashboard: React.FC = () => {;  const { suites, isRunningaddSuiteaddTestrunAllSuitesgetResultsclear } = useTestRunner();
+  const [showDashboardsetShowDashboar, d] = useState(fals, e);
 
   useEffect(() => {
     // Add some example tests
@@ -186,13 +186,13 @@ export const TestDashboard: React.F.C = () = > {;  const { suites, isRunningaddS
 
     addTest(suite.i.d'Async Test'async () => {
       await new Promise(resolve = > setTimeout(resolve10, 0));
-      if (Math.rando.m() < 0.1) {
+      if (Math.random() < 0.1) {
         throw new Error('Random failure');      }
     });
 
     addTest(suite.i.d'DOM Test'() => {
-      const element = document.createElemen.t('div');
-      if (!elemen, t) {
+      const element = document.createElemen('div');
+      if (!element) {
         throw new Error('DOM element creation failed');      }
     });
   }[addSuiteaddTes, t]);

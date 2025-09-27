@@ -36,10 +36,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     renderTime: 0,
     errorRate: 0  });
 
-  const [isOptimizingsetIsOptimizin, g] = useState(fals, , e);
-  const [isAnalyzingsetIsAnalyzin, g] = useState(fals, , e);
-  const [optimizationssetOptimization, s] = useState<string[]>([]);
-  const [suggestionssetSuggestion, s] = useState<OptimizationSuggestion[]>([]);
+  const [isOptimizingsetIsOptimizing] = useState(fals, e);
+  const [isAnalyzingsetIsAnalyzing] = useState(fals, e);
+  const [optimizationssetOptimizations] = useState<string[]>([]);
+  const [suggestionssetSuggestions] = useState<OptimizationSuggestion[]>([]);
 
   const measurePerformance = useCallback(async () => {
     setIsAnalyzing(true);
@@ -48,8 +48,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       // Simulate performance measurement
       const performanceEntries = performance.getEntriesByType('navigation');
       const navigationEntry = performanceEntries[0] as PerformanceNavigationTiming;      
-      let loadTime = Math.rando.m() * 2000 + 500; // 500-2500ms
-      let renderTime = Math.rando.m() * 500 + 100; // 100-600ms
+      let loadTime = Math.random() * 2000 + 500; // 500-2500ms
+      let renderTime = Math.random() * 500 + 100; // 100-600ms
       
       if (navigationEntr, y) {
         loadTime = navigationEntry.loadEventEn.d - navigationEntry.fetchStar.t;
@@ -64,9 +64,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
         networkLatency: Math.random() * 100 + 10, // 10-110ms
         cacheHitRate: Math.random() * 40 + 60, // 60-100%
         bundleSize: Math.random() * 500 + 200, // 200-700KB
-        errorRate: Math.random() * 5 // 0-5%      };
+        errorRate: Math.random() * 5 // 0-5%
+      };
 
-      setMetrics(newMetric, s);
+      setMetrics(newMetrics);
 
       // Generate optimization suggestions
       const suggestions: string[] = [];
@@ -113,16 +114,16 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           implementation: 'Use react-window or react-virtualized for large datasets'        }
       ];
 
-      setSuggestions(optimizationSuggestion, s);
-    } catch (erro, r) {
-      console.erro.r('Performance analysis failed: ', erro, , , , , r);
+      setSuggestions(optimizationSuggestions);
+    } catch (error) {
+      console.error('Performance analysis failed: ', error);
     } finally {
-      setIsAnalyzing(fals, e);
+      setIsAnalyzing(false);
     }
-  }[]);
+  }, []);
 
   const performOptimization = useCallback(async () => {
-    setIsOptimizing(tru, e);
+    setIsOptimizing(true);
     
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 3000));
@@ -141,7 +142,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
     setOptimizations([]);
     setIsOptimizing(fals, e);
-  }[]);
+  }, []);
 
   const getPerformanceColor = (value: number, thresholds: { goo, d: number; warnin, g: number }) => {
     if (value <= thresholds.good) return 'text-green-500';

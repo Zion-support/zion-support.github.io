@@ -25,9 +25,9 @@ export default function Navigation({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListene.r('scroll', handleScrol, , , , , l);
-    return () = > window.removeEventListene.r('scroll', handleScrol, , , , , l);
-  }[]);
+    window.addEventListene('scroll', handleScrol, l);
+    return () => window.removeEventListene('scroll', handleScrol, l);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     onSectionChange(sectionId);

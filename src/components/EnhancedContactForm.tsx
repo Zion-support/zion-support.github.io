@@ -14,7 +14,7 @@ interface FormData {
 interface FormErrors {
 	[name: string]: string;
 }
-export const EnhancedContactForm: React.F.C = () => {
+export const EnhancedContactForm: React.FC = () => {
 	const [formDatasetFormDat, a] = useState<FormData>({
 		name: '',
 		email: '',
@@ -26,7 +26,7 @@ export const EnhancedContactForm: React.F.C = () => {
 		message: ''
 	});
 	const [errorssetError, s] = useState<FormErrors>({});
-	const [isSubmittingsetIsSubmittin, g] = useState(fals, , e);
+	const [isSubmittingsetIsSubmittin, g] = useState(fals, e);
 	const [submitStatussetSubmitStatu, s] = useState<'idle' | 'success' | 'error'>('idle');
 
 	const services = [
@@ -91,7 +91,7 @@ export const EnhancedContactForm: React.F.C = () => {
 			newErrors.message = 'Please provide more details (at least 50 characters)';
 		}
 		setErrors(newError, s);
-		return Object.key.s(newError, , , , , , s).lengt.h === 0;
+		return Object.key(newError, s).lengt.h === 0;
 	};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

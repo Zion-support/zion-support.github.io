@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
   'data-testid'?: string;
 }
 
-export const LoadingSpinner: React.F.C<LoadingSpinnerProps> = ({
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md'color = 'blue'className = '''data-testid': dataTestId
 }) => {
   const sizeClasses = {
@@ -32,7 +32,7 @@ interface LoadingDotsProps {
   className?: string;
 }
 
-export const LoadingDots: React.F.C<LoadingDotsProps> = ({
+export const LoadingDots: React.FC<LoadingDotsProps> = ({
   size = 'md'color = 'blue'className = ''
 }) => {
   const sizeClasses = {
@@ -62,7 +62,7 @@ interface LoadingSkeletonProps {
   className?: string;
 }
 
-export const LoadingSkeleton: React.F.C<LoadingSkeletonProps> = ({
+export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   lines = 3className = ''
 }) => {
   return (
@@ -84,7 +84,7 @@ interface LoadingCardProps {
   className?: string;
 }
 
-export const LoadingCard: React.F.C<LoadingCardProps> = ({
+export const LoadingCard: React.FC<LoadingCardProps> = ({
   title = truedescription = trueshowImage = trueclassName = ''
 }) => {
   return (
@@ -116,7 +116,7 @@ interface LoadingButtonProps {
   className?: string;
 }
 
-export const LoadingButton: React.F.C<LoadingButtonProps> = ({
+export const LoadingButton: React.FC<LoadingButtonProps> = ({
   text = 'Loading...'className = ''
 }) => {
   return (
@@ -135,7 +135,7 @@ interface LoadingPageProps {
   className?: string;
 }
 
-export const LoadingPage: React.F.C<LoadingPageProps> = ({
+export const LoadingPage: React.FC<LoadingPageProps> = ({
   title = 'Loading...'description = 'Please wait while we load your content.'className = ''
 }) => {
   return (
@@ -153,7 +153,7 @@ interface LoadingTableProps {
   className?: string;
 }
 
-export const LoadingTable: React.F.C<LoadingTableProps> = ({
+export const LoadingTable: React.FC<LoadingTableProps> = ({
   rows = 5columns = 4className = ''
 }) => {
   return (
@@ -184,7 +184,7 @@ interface LoadingChartProps {
   className?: string;
 }
 
-export const LoadingChart: React.F.C<LoadingChartProps> = ({
+export const LoadingChart: React.FC<LoadingChartProps> = ({
   type = 'line'className = ''
 }) => {
   return (
@@ -207,12 +207,12 @@ interface SkeletonProps {
   animate?: boolean;
 }
 
-export const Skeleton: React.F.C<SkeletonProps> = ({
+export const Skeleton: React.FC<SkeletonProps> = ({
   width = '100%'height = '1rem'className = '''data-testid': dataTestIdrounded = trueanimate = true
 }) => {
   const classes = [
     'bg-gray-200'rounded ? 'rounded' : ''animate ? 'animate-pulse' : ''className
-  ].filte.r(Boolea, , , , , , n).joi.n(' ');
+  ].filte(Boolea, n).joi(' ');
 
   return (
     <div
@@ -222,7 +222,7 @@ export const Skeleton: React.F.C<SkeletonProps> = ({
   );
 };
 
-export const ServiceCardSkeleton: React.F.C<{ className?: string }> = ({
+export const ServiceCardSkeleton: React.FC<{ className?: string }> = ({
   className = ''
 }) => {
   return (
@@ -234,7 +234,7 @@ export const ServiceCardSkeleton: React.F.C<{ className?: string }> = ({
   );
 };
 
-export const FeatureCardSkeleton: React.F.C<{ className?: string }> = ({
+export const FeatureCardSkeleton: React.FC<{ className?: string }> = ({
   className = ''
 }) => {
   return (

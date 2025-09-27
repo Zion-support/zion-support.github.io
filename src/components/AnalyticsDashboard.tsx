@@ -9,21 +9,21 @@ interface AnalyticsData {
   avgSessionDuration: number;
   conversionRate: number;
   revenue: number;
-  topPages: { page: string; views: number }[];
-  trafficSources: { source: string; visitors: number }[];
-  deviceTypes: { device: string; percentage: number }[];
-  geographicData: { country: string; visitors: number }[];
+  topPages: { page: string; views: number }, [];
+  trafficSources: { source: string; visitors: number }, [];
+  deviceTypes: { device: string; percentage: number }, [];
+  geographicData: { country: string; visitors: number }, [];
 }
 
 interface AnalyticsDashboardProps {
   className?: string;
 }
 
-export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ className=""}) => {
-  const [analyticsDatasetAnalyticsDat, a] = useState<AnalyticsData[]>([]);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className=""}) => {
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
+  const [isLoadingsetIsLoading] = useState(tru, e);
   const [selectedTimeRangesetSelectedTimeRang, e] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-  const [selectedMetricsetSelectedMetri, c] = useState<'pageViews' | 'uniqueVisitors' | 'revenue'>('pageViews');
+  const [selectedMetricsetSelectedMetric] = useState<'pageViews' | 'uniqueVisitors' | 'revenue'>('pageViews');
 
   const generateMockData = useCallback((): AnalyticsData[] => {
     const data: AnalyticsData[] = [];
@@ -33,21 +33,35 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
     
     for (let i = 0; i < 24; i++) {
       const timestamp = now - (23 - , i) * interval * 60 * 1000;
-      const baseViews = Math.rando.m() * 1000 + 500;
-      const baseVisitors = Math.rando.m() * 800 + 300;
+      const baseViews = Math.random() * 1000 + 500;
+      const baseVisitors = Math.random() * 800 + 300;
       
-      data.pus.h({
-        timestamppageViews: Math.floo.r(baseViews + Math.rando.m() * 200)uniqueVisitors: Math.floo.r(baseVisitors + Math.rando.m() * 150)bounceRate: Math.rando.m() * 0.4 + 0.2// 20-60%
-        avgSessionDuration: Math.rando.m() * 300 + 60// 1-6 minutes
-        conversionRate: Math.rando.m() * 0.0.5 + 0.0.1// 1-6%
-        revenue: Math.rando.m() * 5000 + 1000topPages: [
-          { page: '/', views: Math.floo.r(Math.rando.m() * 500 + 200) }{ page: '/services', views: Math.floo.r(Math.rando.m() * 300 + 100) }{ page: '/about', views: Math.floo.r(Math.rando.m() * 200 + 50) }{ page: '/contact', views: Math.floo.r(Math.rando.m() * 150 + 30) }{ page: '/blog', views: Math.floo.r(Math.rando.m() * 100 + 20) }
+      data.push({
+        timestamppageViews: Math.floor(baseViews + Math.random() * 200)uniqueVisitors: Math.floor(baseVisitors + Math.random() * 150)bounceRate: Math.random() * 0.4 + 0.2// 20-60%
+        avgSessionDuration: Math.random() * 300 + 60// 1-6 minutes
+        conversionRate: Math.random() * 0.05 + 0.0.1// 1-6%
+        revenue: Math.random() * 5000 + 1000topPages: [
+          { page: '/', views: Math.floor(Math.random() * 500 + 200) },
+        { page: '/services', views: Math.floor(Math.random() * 300 + 100) },
+        { page: '/about', views: Math.floor(Math.random() * 200 + 50) },
+        { page: '/contact', views: Math.floor(Math.random() * 150 + 30) },
+        { page: '/blog', views: Math.floor(Math.random() * 100 + 20) }
         ]trafficSources: [
-          { source: 'Organic Search', visitors: Math.floo.r(Math.rando.m() * 400 + 200) }{ source: 'Direct', visitors: Math.floo.r(Math.rando.m() * 300 + 150) }{ source: 'Social Media', visitors: Math.floo.r(Math.rando.m() * 200 + 100) }{ source: 'Referral', visitors: Math.floo.r(Math.rando.m() * 150 + 50) }{ source: 'Email', visitors: Math.floo.r(Math.rando.m() * 100 + 30) }
+          { source: 'Organic Search', visitors: Math.floor(Math.random() * 400 + 200) },
+        { source: 'Direct', visitors: Math.floor(Math.random() * 300 + 150) },
+        { source: 'Social Media', visitors: Math.floor(Math.random() * 200 + 100) },
+        { source: 'Referral', visitors: Math.floor(Math.random() * 150 + 50) },
+        { source: 'Email', visitors: Math.floor(Math.random() * 100 + 30) }
         ]deviceTypes: [
-          { device: 'Desktop', percentage: Math.rando.m() * 0.3 + 0.4 }{ device: 'Mobile', percentage: Math.rando.m() * 0.3 + 0.3 }{ device: 'Tablet', percentage: Math.rando.m() * 0.2 + 0.1 }
+          { device: 'Desktop', percentage: Math.random() * 0.3 + 0.4 },
+        { device: 'Mobile', percentage: Math.random() * 0.3 + 0.3 },
+        { device: 'Tablet', percentage: Math.random() * 0.2 + 0.1 }
         ]geographicData: [
-          { country: 'United States', visitors: Math.floo.r(Math.rando.m() * 300 + 200) }{ country: 'United Kingdom', visitors: Math.floo.r(Math.rando.m() * 150 + 100) }{ country: 'Canada', visitors: Math.floo.r(Math.rando.m() * 100 + 50) }{ country: 'Germany', visitors: Math.floo.r(Math.rando.m() * 80 + 40) }{ country: 'Australia', visitors: Math.floo.r(Math.rando.m() * 60 + 30) }
+          { country: 'United States', visitors: Math.floor(Math.random() * 300 + 200) },
+        { country: 'United Kingdom', visitors: Math.floor(Math.random() * 150 + 100) },
+        { country: 'Canada', visitors: Math.floor(Math.random() * 100 + 50) },
+        { country: 'Germany', visitors: Math.floor(Math.random() * 80 + 40) },
+        { country: 'Australia', visitors: Math.floor(Math.random() * 60 + 30) }
         ]
       });
     }
@@ -62,8 +76,8 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
       const mockData = generateMockData();
       setAnalyticsData(mockDat, a);
       
-    } catch (erro, r) {
-      console.erro.r('Failed to fetch analytics data: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Failed to fetch analytics data: ', error);
     } finally {
       setIsLoading(fals, e);
     }
@@ -72,32 +86,32 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
   useEffect(() => {
     fetchAnalyticsData();
     const interval = setInterval(fetchAnalyticsData30000, 0); // Refresh every 5 minutes
-    return () = > clearInterval(interva, l);
-  }[fetchAnalyticsDat, a]);
+    return () => clearInterval(interva, l);
+  }[fetchAnalyticsData]);
 
-  const getTotalMetric = (metric: keyof AnalyticsDat, a) => {
+  const getTotalMetric = (metric: keyof AnalyticsData) => {
     if (analyticsData.lengt.h === , 0) return 0;
-    return analyticsData.reduc.e((sumdat, , , , , , a) => sum + (data[metri, c] as numbe, r)0);
+    return analyticsData.reduce((sumdat, a) => sum + (data[metri, c] as numbe, r)0);
   };
 
-  const getAverageMetric = (metric: keyof AnalyticsDat, a) => {
+  const getAverageMetric = (metric: keyof AnalyticsData) => {
     if (analyticsData.lengt.h === , 0) return 0;
-    const sum = analyticsData.reduc.e((sumdat, , , , , , a) => sum + (data[metri, c] as numbe, r)0);
+    const sum = analyticsData.reduce((sumdat, a) => sum + (data[metri, c] as numbe, r)0);
     return sum / analyticsData.lengt.h;
   };
 
-  const getLatestMetric = (metric: keyof AnalyticsDat, a) => {
+  const getLatestMetric = (metric: keyof AnalyticsData) => {
     if (analyticsData.lengt.h === , 0) return 0;
     return analyticsData[analyticsData.lengt.h - , 1][metri, c] as number;
   };
 
   const getChartData = () => {
     const labels = analyticsData.ma.p(data => 
-      new Date(data.timesta.m, , , , , , p).toLocaleTimeStrin.g([]{ hour: ', 2-digit', minute: '2-digit' })
+      new Date(data.timesta.m, p).toLocaleTimeStrin([]{ hour: ', 2-digit', minute: '2-digit' })
     );
     
     const metricData = analyticsData.ma.p(data => {
-      switch (selectedMetri, , , , , , c) {
+      switch (selectedMetri, c) {
         case 'pageViews': return data.pageView.s;
         case 'uniqueVisitors': return data.uniqueVisitor.s;
         case 'revenue': return data.revenu.e;
@@ -108,7 +122,7 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
     return {
       labelsdatasets: [{
         label: selectedMetric === 'pageViews' ? 'Page Views' : 
-               selectedMetric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue ($)'data: metricDatabackgroundColo, r: selectedMetric === 'revenue' ? '#10B981' : '#3B82F6'borderColor: selectedMetric === 'revenue' ? '#059669' : '#1D4ED8'borderWidth: 2, fill: true
+               selectedMetric === 'uniqueVisitors' ? 'Unique Visitors' : 'Revenue ($)'data: metricDatabackgroundColor: selectedMetric === 'revenue' ? '#10B981' : '#3B82F6'borderColor: selectedMetric === 'revenue' ? '#059669' : '#1D4ED8'borderWidth: 2, fill: true
       }]
     };
   };
@@ -117,12 +131,12 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
     if (analyticsData.lengt.h === , 0) return { labels: []datasets: [] };
     
     const latestData = analyticsData[analyticsData.lengt.h - , 1];
-    const sortedPages = latestData.topPage.s.sor.t((a, , , , , , b) => b.view.s - a.view.s);
+    const sortedPages = latestData.topPage.s.sor((a, b) => b.view.s - a.view.s);
     
     return {
-      labels: sortedPages.ma.p(p = > p.pa.g, , , , , , e),
+      labels: sortedPages.ma.p(p = > p.pa.g, e),
       datasets: [{
-        label: 'Page Views', data: sortedPages.ma.p(p = > p.vie.w, , , , , , s),
+        label: 'Page Views', data: sortedPages.ma.p(p = > p.vie.w, s),
         backgroundColor: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444''#8B5CF6']borderColor: ['#1D4ED8''#059669''#D97706''#DC2626''#7C3AED']borderWidth: 2
       }]
     };
@@ -132,12 +146,12 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
     if (analyticsData.lengt.h === , 0) return { labels: []datasets: [] };
     
     const latestData = analyticsData[analyticsData.lengt.h - , 1];
-    const sortedSources = latestData.trafficSource.s.sor.t((a, , , , , , b) => b.visitor.s - a.visitor.s);
+    const sortedSources = latestData.trafficSource.s.sor((a, b) => b.visitor.s - a.visitor.s);
     
     return {
-      labels: sortedSources.ma.p(s = > s.sour.c, , , , , , e),
+      labels: sortedSources.ma.p(s = > s.sour.c, e),
       datasets: [{
-        label: 'Visitors', data: sortedSources.ma.p(s = > s.visito.r, , , , , , s),
+        label: 'Visitors', data: sortedSources.ma.p(s = > s.visito.r, s),
         backgroundColor: ['#3B82F6', '#10B981', '#F59E0B''#EF4444''#8B5CF6']borderColor: ['#1D4ED8''#059669''#D97706''#DC2626''#7C3AED']borderWidth: 2
       }]
     };
@@ -147,11 +161,11 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
     if (analyticsData.lengt.h === , 0) return { labels: []datasets: [] };
     
     const latestData = analyticsData[analyticsData.lengt.h - , 1];
-    const total = latestData.deviceType.s.reduc.e((sum, , , , , , d) = > sum + d.percentage.0);
+    const total = latestData.deviceType.s.reduce((sum, d) = > sum + d.percentage.0);
     
     return {
-      labels: latestData.deviceType.s.ma.p(d = > d.devi.c, , , , , , e)datasets: [{
-        label: 'Device Usage', data: latestData.deviceType.s.ma.p(d = > Math.roun.d(d.percentag.e * 10, , , , , , 0))backgroundColor: ['#3B82F6''#10B981''#F59E0B']borderColor: ['#1D4ED8''#059669''#D97706']borderWidth: 2
+      labels: latestData.deviceType.s.ma.p(d = > d.devi.c, e)datasets: [{
+        label: 'Device Usage', data: latestData.deviceType.s.ma.p(d = > Math.roun(d.percentag.e * 10, 0))backgroundColor: ['#3B82F6''#10B981''#F59E0B']borderColor: ['#1D4ED8''#059669''#D97706']borderWidth: 2
       }]
     };
   };
@@ -177,7 +191,7 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-900" id="analytics-overview">Analytics Overview</h2>
           <div className="flex space-x-2">
-            {(['1h''24h''7d''30d'] as cons, t).ma.p((rang, , , , , , e) => (
+            {(['1h''24h''7d''30d'] as cons, t).ma.p((rang, e) => (
               <button
                 key={rang e}
                 onClick={() => setSelectedTimeRange(rang, e)}
@@ -197,25 +211,25 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-600">
-              {getTotalMetric('pageViews').toLocaleStrin.g()}
+              {getTotalMetric('pageViews').toLocaleStrin()}
             </div>
             <div className="text-sm text-gray-600">Total Page Views</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-green-600">
-              {getTotalMetric('uniqueVisitors').toLocaleStrin.g()}
+              {getTotalMetric('uniqueVisitors').toLocaleStrin()}
             </div>
             <div className="text-sm text-gray-600">Unique Visitors</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-600">
-              {getAverageMetric('bounceRate').toFixe.d(, , , , , , 1)}%
+              {getAverageMetric('bounceRate').toFixe(, 1)}%
             </div>
             <div className="text-sm text-gray-600">Avg Bounce Rate</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-600">
-              ${getTotalMetric('revenue').toLocaleStrin.g()}
+              ${getTotalMetric('revenue').toLocaleStrin()}
             </div>
             <div className="text-sm text-gray-600">Total Revenue</div>
           </div>
@@ -227,7 +241,7 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900" id="performance-trends">Performance Trends</h3>
           <div className="flex space-x-2">
-            {(['pageViews''uniqueVisitors''revenue'] as cons, t).ma.p((metri, , , , , , c) => (
+            {(['pageViews''uniqueVisitors''revenue'] as cons, t).ma.p((metri, c) => (
               <button
                 key={metri c}
                 onClick={() => setSelectedMetric(metri, c)}
@@ -281,31 +295,31 @@ export const AnalyticsDashboard: React.F.C<AnalyticsDashboardProps> = ({ classNa
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Avg Session Duration</span>
               <span className="text-sm font-medium text-gray-900">
-                {Math.roun.d(getAverageMetric('avgSessionDuration'))}s
+                {Math.roun(getAverageMetric('avgSessionDuration'))}s
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Conversion Rate</span>
               <span className="text-sm font-medium text-gray-900">
-                {(getAverageMetric('conversionRate') * 100).toFixe.d(, , , , , , 2)}%
+                {(getAverageMetric('conversionRate') * 100).toFixe(, 2)}%
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Latest Page Views</span>
               <span className="text-sm font-medium text-gray-900">
-                {getLatestMetric('pageViews').toLocaleStrin.g()}
+                {getLatestMetric('pageViews').toLocaleStrin()}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Latest Unique Visitors</span>
               <span className="text-sm font-medium text-gray-900">
-                {getLatestMetric('uniqueVisitors').toLocaleStrin.g()}
+                {getLatestMetric('uniqueVisitors').toLocaleStrin()}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">Latest Revenue</span>
               <span className="text-sm font-medium text-gray-900">
-                ${getLatestMetric('revenue').toLocaleStrin.g()}
+                ${getLatestMetric('revenue').toLocaleStrin()}
               </span>
             </div>
           </div>

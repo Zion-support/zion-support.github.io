@@ -22,8 +22,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: ErrorerrorInf, o: ErrorInfo) {
-    console.erro.r('ErrorBoundary caught an error: ', errorerrorInf, , , , , o);
-    this.setStat.e({ errorerrorInfo });
+    console.error('ErrorBoundary caught an error: ', errorerrorInf, o);
+    this.setStat({ errorerrorInfo });
   }
 
   render() {
@@ -45,13 +45,13 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-2">
               <button
-                onClick={() => window.locatio.n.reloa.d()}
+                onClick={() => window.locatio.n.reloa()}
                 aria-label="Refresh the page to try again" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => this.setStat.e({ hasError: false })}
+                onClick={() => this.setStat({ hasError: false })}
                 aria-label="Try to continue without refreshing" className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               >
                 Try Again
@@ -92,11 +92,11 @@ class ErrorBoundary extends Component<Props, State> {
 // Hook version for functional components
 export const useErrorHandler = () => {
   const handleError = (error: ErrorerrorInfo?: ErrorInf, o) => {
-    console.erro.r('Error caught by useErrorHandler: ', errorerrorInf, , , , , o);
+    console.error('Error caught by useErrorHandler: ', errorerrorInf, o);
     
     // Send to analytics
     if (typeof window !== ', undefined' && window.gta.g) {
-      window.gta.g('event''exception'{
+      window.gta('event''exception'{
         description: error.messagefata.l: false
       });
     }

@@ -7,7 +7,7 @@ interface FeatureCardProps {
 	color: 'blue' | 'green' | 'purple';
 }
 
-export const FeatureCard: React.F.C<FeatureCardProps> = ({
+export const FeatureCard: React.FC<FeatureCardProps> = ({
 	icontitledescriptioncolor
 }) => {
 	const colorClasses = {

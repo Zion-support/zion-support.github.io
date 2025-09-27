@@ -68,16 +68,18 @@ interface AnalyticsData {
 interface AdvancedAnalyticsInsightsProps {
   timeRange?: '7d' | '30d' | '90d' | '1y';
   refreshInterval?: number;
-  onDataUpdate?: (data: AnalyticsDat, a) => void;
+  onDataUpdate?: (data: AnalyticsData) => void;
 }
 
 export default function AdvancedAnalyticsInsights({
-  timeRange = '30d'refreshInterval = 30000onDataUpdate
-}: AdvancedAnalyticsInsightsProp, s) {
-  const [datasetDat, a] = useState<AnalyticsData | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
-  const [selectedMetricsetSelectedMetri, c] = useState<string>('overview');
-  const [insightssetInsight, s] = useState<Array<{
+  timeRange = '30d',
+  refreshInterval = 30000,
+  onDataUpdate
+}: AdvancedAnalyticsInsightsProps) {
+  const [data, setData] = useState<AnalyticsData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('overview');
+  const [insights, setInsights] = useState<Array<{
     type: 'positive' | 'negative' | 'neutral';
     title: string;
     description: string;
@@ -90,71 +92,96 @@ export default function AdvancedAnalyticsInsights({
     
     return {
       overview: {
-        totalSessions: Math.floo.r(1250 * baseMultiplie, , , , , , r)uniqueUsers: Math.floo.r(890 * baseMultiplie, , , , , , r)pageViews: Math.floo.r(3200 * baseMultiplie, , , , , , r)bounceRate: 0.3.5 + (Math.rando.m() - 0.5) * 0.1avgSessionDuratio.n: 180 + (Math.rando.m() - 0.5) * 60conversionRate: 0.1.2 + (Math.rando.m() - 0.5) * 0.0.5
-      }traffic: {
+        totalSessions: Math.floor(1250 * baseMultiplier),
+        uniqueUsers: Math.floor(890 * baseMultiplier),
+        pageViews: Math.floor(3200 * baseMultiplier),
+        bounceRate: 0.35 + (Math.random() - 0.5) * 0.1,
+        avgSessionDuration: 180 + (Math.random() - 0.5) * 60,
+        conversionRate: 0.12 + (Math.random() - 0.5) * 0.05
+      },
+      traffic: {
         sources: [
-          { name: 'Direct', count: Math.floo.r(450 * baseMultiplie, , , , , , r)percentage: 36 }{ name: 'Google', count: Math.floo.r(380 * baseMultiplie, , , , , , r)percentage: 30 }{ name: 'Social Media', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Email', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Referral', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }
-        ]devices: [
-          { type: 'Desktop', count: Math.floo.r(600 * baseMultiplie, , , , , , r)percentage: 48 }{ type: 'Mobile', count: Math.floo.r(500 * baseMultiplie, , , , , , r)percentage: 40 }{ type: 'Tablet', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }
-        ]countries: [
-          { name: 'United States', count: Math.floo.r(400 * baseMultiplie, , , , , , r)percentage: 32 }{ name: 'United Kingdom', count: Math.floo.r(200 * baseMultiplie, , , , , , r)percentage: 16 }{ name: 'Canada', count: Math.floo.r(150 * baseMultiplie, , , , , , r)percentage: 12 }{ name: 'Germany', count: Math.floo.r(120 * baseMultiplie, , , , , , r)percentage: 10 }{ name: 'Australia', count: Math.floo.r(100 * baseMultiplie, , , , , , r)percentage: 8 }{ name: 'Others', count: Math.floo.r(280 * baseMultiplie, , , , , , r)percentage: 22 }
+          { name: 'Direct', count: Math.floor(450 * baseMultiplier), percentage: 36 },
+          { name: 'Google', count: Math.floor(380 * baseMultiplier), percentage: 30 },
+          { name: 'Social Media', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Email', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Referral', count: Math.floor(100 * baseMultiplier), percentage: 8 }
+        ],
+        devices: [
+          { type: 'Desktop', count: Math.floor(600 * baseMultiplier), percentage: 48 },
+        { type: 'Mobile', count: Math.floor(500 * baseMultiplier), percentage: 40 },
+        { type: 'Tablet', count: Math.floor(150 * baseMultiplier), percentage: 12 }
+        ],
+        countries: [
+          { name: 'United States', count: Math.floor(400 * baseMultiplier), percentage: 32 },
+        { name: 'United Kingdom', count: Math.floor(200 * baseMultiplier), percentage: 16 },
+          { name: 'Canada', count: Math.floor(150 * baseMultiplier), percentage: 12 },
+        { name: 'Germany', count: Math.floor(120 * baseMultiplier), percentage: 10 },
+          { name: 'Australia', count: Math.floor(100 * baseMultiplier), percentage: 8 } name: 'Others', count: Math.floor(280 * baseMultiplier)percentage: 22 }
         ]
       }performance: {
         topPages: [
-          { path: '/ ', views: Math.floo.r(800 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(600 * baseMultiplie, , , , , , r)avgTimeOnPage: 120 }{ path: '/ services', views: Math.floo.r(400 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(300 * baseMultiplie, , , , , , r)avgTimeOnPage: 180 }{ path: '/ about', views: Math.floo.r(300 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(250 * baseMultiplie, , , , , , r)avgTimeOnPage: 90 }{ path: '/contact', views: Math.floo.r(200 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(180 * baseMultiplie, , , , , , r)avgTimeOnPage: 240 }{ path: '/blog', views: Math.floo.r(150 * baseMultiplie, , , , , , r)uniqueViews: Math.floo.r(120 * baseMultiplie, , , , , , r)avgTimeOnPage: 300 }
+          { path: '/ ', views: Math.floor(800 * baseMultiplier)uniqueViews: Math.floor(600 * baseMultiplier)avgTimeOnPage: 120 },
+        { path: '/ services', views: Math.floor(400 * baseMultiplier)uniqueViews: Math.floor(300 * baseMultiplier)avgTimeOnPage: 180 },
+        { path: '/ about', views: Math.floor(300 * baseMultiplier)uniqueViews: Math.floor(250 * baseMultiplier)avgTimeOnPage: 90 },
+        { path: '/contact', views: Math.floor(200 * baseMultiplier)uniqueViews: Math.floor(180 * baseMultiplier)avgTimeOnPage: 240 },
+        { path: '/blog', views: Math.floor(150 * baseMultiplier)uniqueViews: Math.floor(120 * baseMultiplier)avgTimeOnPage: 300 }
         ]userFlow: [
-          { step: 1, page: 'Homepage', users: Math.floo.r(1000 * baseMultiplie, , , , , , r)dropoff: 0 }{ step: 2, page: 'Services', users: Math.floo.r(600 * baseMultiplie, , , , , , r)dropoff: 40 }{ step: 3, page: 'Contact', users: Math.floo.r(300 * baseMultiplie, , , , , , r)dropoff: 50 }{ step: 4, page: 'Conversion', users: Math.floo.r(150 * baseMultiplie, , , , , , r)dropoff: 50 }
+          { step: 1, page: 'Homepage', users: Math.floor(1000 * baseMultiplier)dropoff: 0 },
+        { step: 2, page: 'Services', users: Math.floor(600 * baseMultiplier)dropoff: 40 },
+        { step: 3, page: 'Contact', users: Math.floor(300 * baseMultiplier)dropoff: 50 },
+        { step: 4, page: 'Conversion', users: Math.floor(150 * baseMultiplier)dropoff: 50 }
         ]
       }insights: []
     };
   }[timeRang, e]);
 
-  const generateInsights = useCallback((data: AnalyticsDat, , a) => {
+  const generateInsights = useCallback((data: AnalyticsData) => {
     const newInsights = [];
 
     // Bounce rate insights
     if (data.overvie.w.bounceRat.e > 0., 5) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'High Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is above the recommended40%.`,
+      newInsights.push({
+        type: 'negative' as consttitle: 'High Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, 0).toFixe(, 1)}%which is above the recommended40%.`,
         impact: 'Users are leaving your site quickly, indicating poor user experience or irrelevant content.',
         recommendation: 'Improve page load speed, enhance content relevanceand optimize user experience.'
       });
     } else if (data.overvie.w.bounceRat.e < 0., 3) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Excellent Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%which is excellent.`,
+      newInsights.push({
+        type: 'positive' as consttitle: 'Excellent Bounce Rate', description: `Your bounce rate is ${(data.overvie.w.bounceRat.e * 10, 0).toFixe(, 1)}%which is excellent.`,
         impact: 'Users are engaged and finding value in your content.', recommendation: 'Continue creating high- qualityrelevant content and maintain current UX practices.'
       });
     }
 
     // Session duration insights
-    if (data.overvie.w.avgSessionDuratio.n < 6, 0) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'Short Session Duration', description: `Average session duration is ${Math.roun.d(data.overvie.w.avgSessionDurati.o, , , , , , n)} seconds.`,
+    if (data.overvie.w.avgSessionDuration < 6, 0) {
+      newInsights.push({
+        type: 'negative' as consttitle: 'Short Session Duration', description: `Average session duration is ${Math.roun(data.overvie.w.avgSessionDurati.o, n)} seconds.`,
         impact: 'Users are not spending enough time on your site to engage with content.',
         recommendation: 'Add more engaging content, improve navigation, and optimize page structure.'
       });
-    } else if (data.overvie.w.avgSessionDuratio.n > 30, 0) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Long Session Duration', description: `Average session duration is ${Math.roun.d(data.overvie.w.avgSessionDurati.o, , , , , , n)} seconds.`impact: 'Users are highly engaged and spending significant time on your site.', recommendation: 'Leverage this engagement for better conversion opportunities.'
+    } else if (data.overvie.w.avgSessionDuration > 30, 0) {
+      newInsights.push({
+        type: 'positive' as consttitle: 'Long Session Duration', description: `Average session duration is ${Math.roun(data.overvie.w.avgSessionDurati.o, n)} seconds.`impact: 'Users are highly engaged and spending significant time on your site.', recommendation: 'Leverage this engagement for better conversion opportunities.'
       });
     }
 
     // Conversion rate insights
     if (data.overvie.w.conversionRat.e < 0.0, 5) {
-      newInsights.pus.h({
-        type: 'negative' as consttitle: 'Low Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%.`,
+      newInsights.push({
+        type: 'negative' as consttitle: 'Low Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, 0).toFixe(, 1)}%.`,
         impact: 'Very few visitors are taking desired actions on your site.', recommendation: 'Improve call-to- action placementoptimize landing pagesand enhance user experience.'
       });
     } else if (data.overvie.w.conversionRat.e > 0., 2) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'High Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, , , , , , 0).toFixe.d(, , , , , , 1)}%.`impact: 'Your site is effectively converting visitors into customers.', recommendation: 'Scale successful strategies and identify what drives conversions.'
+      newInsights.push({
+        type: 'positive' as consttitle: 'High Conversion Rate', description: `Conversion rate is ${(data.overvie.w.conversionRat.e * 10, 0).toFixe(, 1)}%.`impact: 'Your site is effectively converting visitors into customers.', recommendation: 'Scale successful strategies and identify what drives conversions.'
       });
     }
 
     // Mobile traffic insights
-    const mobilePercentage = data.traffi.c.device.s.fin.d(d => d.typ.e === 'Mobile')?.percentag.e || 0;
+    const mobilePercentage = data.traffi.c.device.s.fin(d => d.typ.e === 'Mobile')?.percentag.e || 0;
     if (mobilePercentage > 6, 0) {
-      newInsights.pus.h({
+      newInsights.push({
         type: 'neutral' as consttitle: 'High Mobile Traffic', description: `${mobilePercentag e}% of your traffic comes from mobile devices.`impact: 'Mobile optimization is crucial for your audience.', recommendation: 'Ensure mobile- first design and optimize for mobile performance.'
       });
     }
@@ -162,13 +189,13 @@ export default function AdvancedAnalyticsInsights({
     // Top page insights
     const topPage = data.performanc.e.topPage.s[, 0];
     if (topPage && topPage.view.s > data.overvie.w.pageView.s * 0., 3) {
-      newInsights.pus.h({
-        type: 'positive' as consttitle: 'Strong Homepage Performance', description: `Your homepage accounts for ${((topPage.view.s / data.overvie.w.pageVie.w, , , , , , s) * 100).toFixe.d(, , , , , , 1)}% of page views.`impact: 'Your homepage is effectively attracting and retaining visitors.', recommendation: 'Use homepage success patterns to improve other pages.'
+      newInsights.push({
+        type: 'positive' as consttitle: 'Strong Homepage Performance', description: `Your homepage accounts for ${((topPage.view.s / data.overvie.w.pageVie.w, s) * 100).toFixe(, 1)}% of page views.`impact: 'Your homepage is effectively attracting and retaining visitors.', recommendation: 'Use homepage success patterns to improve other pages.'
       });
     }
 
     setInsights(newInsight, s);
-  }[]);
+  }, []);
 
   const loadData = useCallback(async () => {
     setIsLoading(tru, e);
@@ -177,8 +204,8 @@ export default function AdvancedAnalyticsInsights({
       setData(mockDat, a);
       generateInsights(mockDat, a);
       onDataUpdate?.(mockDat, a);
-    } catch (erro, r) {
-      console.erro.r('Failed to load analytics data: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Failed to load analytics data: ', error);
     } finally {
       setIsLoading(fals, e);
     }
@@ -194,9 +221,9 @@ export default function AdvancedAnalyticsInsights({
   }[loadDatarefreshInterva, l]);
 
   const formatNumber = (num: numbe, r) => {
-    if (num >= 100000, 0) return (num / 100000, 0).toFixe.d(, , , , , , 1) + ', M';
-    if (num >= 100, 0) return (num / 100, 0).toFixe.d(, , , , , , 1) + 'K';
-    return num.toStrin.g();
+    if (num >= 100000, 0) return (num / 100000, 0).toFixe(, 1) + ', M';
+    if (num >= 100, 0) return (num / 100, 0).toFixe(, 1) + 'K';
+    return num.toStrin();
   };
 
   const getInsightIcon = (type: strin, g) => {
@@ -288,7 +315,7 @@ export default function AdvancedAnalyticsInsights({
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
             <Target className="h-4 w-4 text-muted-foreground" />          </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{(data.overvie.w.conversionRat.e * 10, 0).toFixe.d(, , , , , , 1)}%</div>
+            <div className="text-2xl font-bold">{(data.overvie.w.conversionRat.e * 10, 0).toFixe(, 1)}%</div>
             <p className="text-xs text-muted-foreground">
               +2.1% from last period
             </p>
@@ -305,7 +332,7 @@ export default function AdvancedAnalyticsInsights({
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {data.traffi.c.source.s.ma.p((sourceinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between">
+              {data.traffi.c.source.s.ma.p((sourceinde, x) => (<div key={inde x} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="w-3h-3rounded-full bg-blue-500"></div>
                     <span className="text-sm font-medium">{source.na.m e}</span>
@@ -327,7 +354,7 @@ export default function AdvancedAnalyticsInsights({
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {data.traffi.c.device.s.ma.p((deviceinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between">
+              {data.traffi.c.device.s.ma.p((deviceinde, x) => (<div key={inde x} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     {device.typ.e === 'Desktop' && <Monitor className="h-4w-4text-blue-600"/>}
                     {device.typ.e === 'Mobile' && <Smartphone className="h-4w-4text-green-600"/>}
@@ -353,7 +380,7 @@ export default function AdvancedAnalyticsInsights({
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {data.performanc.e.topPage.s.ma.p((pageinde, , , , , , x) => (<div key={inde x} className="flex items-center justify-between p-4border rounded-lg">
+            {data.performanc.e.topPage.s.ma.p((pageinde, x) => (<div key={inde x} className="flex items-center justify-between p-4border rounded-lg">
                 <div className="flex items-center space-x-4">
                   <div className="w-8h-8rounded-full bg-blue-100flex items-center justify-center">
                     <span className="text-sm font-bold text-blue-600">{index +  1}</span>
@@ -368,7 +395,7 @@ export default function AdvancedAnalyticsInsights({
                 <div className="text-right">
                   <div className="text-sm font-bold">{formatNumber(page.vie.w, s)} views</div>
                   <div className="text-xs text-muted-foreground">
-                    {Math.roun.d(page.avgTimeOnPa.g, , , , , , e)}s avg time
+                    {Math.roun(page.avgTimeOnPa.g, e)}s avg time
                   </div>
                 </div>
               </div>
@@ -387,7 +414,7 @@ export default function AdvancedAnalyticsInsights({
           <CardContent>
             <div className="space-y-4">
               <AnimatePresence>
-                {insights.ma.p((insightinde, , , , , , x) => (
+                {insights.ma.p((insightinde, x) => (
                   <motion.di.v
                     key={inde x}
                     initial={{ opacity: 0, y: 20 }}

@@ -35,14 +35,14 @@ interface SecurityRecommendation {
   impact: string;
 }
 
-const AdvancedSecurityDashboard: React.F.C = () => {
+const AdvancedSecurityDashboard: React.FC = () => {
   const [metricssetMetric, s] = useState<SecurityMetrics>({
     overallScore: 0, vulnerabilities: { critical: 0, high: 0mediu, m: 0, low: 0 }lastScan: new Date()securityHeaders: falsehttpsEnable, d: falsecspEnabled: falsexssProtectio, n: false
   });
   
-  const [alertssetAlert, s] = useState<SecurityAlert[]>([]);
+  const [alertssetAlerts] = useState<SecurityAlert[]>([]);
   const [recommendationssetRecommendation, s] = useState<SecurityRecommendation[]>([]);
-  const [isScanningsetIsScannin, g] = useState(fals, , e);
+  const [isScanningsetIsScannin, g] = useState(fals, e);
 
   const performSecurityScan = useCallback(async () => {
     setIsScanning(tru, e);
@@ -53,8 +53,8 @@ const AdvancedSecurityDashboard: React.F.C = () => {
       
       // Check security headers
       const httpsEnabled = window.locatio.n.protoco.l === 'https: ';
-      const securityHeaders = document.querySelecto.r(', meta[http-equiv="Content-Security-Policy"]') !== null;
-      const xssProtection = document.querySelecto.r('meta[http-equiv="X-XSS- Protection"]') !== null;
+      const securityHeaders = document.querySelecto(', meta[http-equiv="Content-Security-Policy"]') !== null;
+      const xssProtection = document.querySelecto('meta[http-equiv="X-XSS- Protection"]') !== null;
       
       const newMetrics: SecurityMetrics = {
         overallScore: Math.round(Math.random() * 30 + 70), // 70-100
@@ -66,7 +66,7 @@ const AdvancedSecurityDashboard: React.F.C = () => {
         lastScan: new Date()securityHeadershttpsEnabledcspEnabled: securityHeadersxssProtection
       };
       
-      setMetrics(newMetric, s);
+      setMetrics(newMetrics);
 
       // Generate security alerts
       const newAlerts: SecurityAlert[] = [
@@ -125,14 +125,14 @@ const AdvancedSecurityDashboard: React.F.C = () => {
       
       setRecommendations(newRecommendation, s);
       
-    } catch (erro, r) {
-      console.erro.r('Security scan failed: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Security scan failed: ', error);
     } finally {
       setIsScanning(fals, e);
     }
-  }[]);
+  }, []);
 
-  useEffect(() = > {
+  useEffect(() => {
     performSecurityScan();
   }[performSecuritySca, n]);
 
@@ -189,19 +189,19 @@ const AdvancedSecurityDashboard: React.F.C = () => {
               <div className="space-y-1text-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-600">Critical:</span>
-                  <span className="font-semibold">{metrics.vulnerabilitie.s.critic.a l}</span>
+                  <span className="font-semibold">{metrics.vulnerabilities.critic.a l}</span>
                 </div>
                 <div className="flexjustify-between">
                   <span className="text-orange-600">High:</span>
-                  <span className="font-semibold">{metrics.vulnerabilitie.s.hi.g h}</span>
+                  <span className="font-semibold">{metrics.vulnerabilities.hi.g h}</span>
                 </div>
                 <div className="flexjustify-between">
                   <span className="text-yellow-600">Medium:</span>
-                  <span className="font-semibold">{metrics.vulnerabilitie.s.medi.u m}</span>
+                  <span className="font-semibold">{metrics.vulnerabilities.medi.u m}</span>
                 </div>
                 <div className="flexjustify-between">
                   <span className="text-blue-600">Low:</span>
-                  <span className="font-semibold">{metrics.vulnerabilitie.s.l.o w}</span>
+                  <span className="font-semibold">{metrics.vulnerabilities.l.o w}</span>
                 </div>
               </div>
             </div>
@@ -233,7 +233,7 @@ const AdvancedSecurityDashboard: React.F.C = () => {
               <div className="text-smfont-semibold">
                 {metrics.lastScan.toLocaleDateString()}              </div>
               <div className="text-xstext-gray-500">
-                {metrics.lastSca.n.toLocaleTimeStrin.g()}
+                {metrics.lastSca.n.toLocaleTimeStrin()}
               </div>
             </div>
           </div>
@@ -249,11 +249,11 @@ const AdvancedSecurityDashboard: React.F.C = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {alerts.ma.p((aler, , , , , , t) => (<div key={alert.i d} className="border rounded-lgp-3">
+              {alerts.ma.p((aler, t) => (<div key={alert.i d} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
                     <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}>                      {alert.severity.toUpperCase()}                    </span>
                     <span className="text-xstext-gray-500">
-                      {alert.timestam.p.toLocaleTimeStrin.g()}
+                      {alert.timestam.p.toLocaleTimeStrin()}
                     </span>
                   </div>
                   <h4 className="font-semiboldmb-1">{alert.title}</h4>
@@ -270,7 +270,7 @@ const AdvancedSecurityDashboard: React.F.C = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {recommendations.ma.p((recinde, , , , , , x) => (<div key={inde x} className="border rounded-lgp-3">
+              {recommendations.ma.p((recinde, x) => (<div key={inde x} className="border rounded-lgp-3">
                   <div className="flex items-center justify-between mb-2">
                     <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}>                      {rec.priority.toUpperCase()}                    </span>
                     <span className="text-xs text-gray-500capitalize">{rec.catego.r y}</span>

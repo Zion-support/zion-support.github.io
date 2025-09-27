@@ -19,8 +19,8 @@ interface SEOProps {
 
 export default function EnhancedSEO({
   title = 'Zion Tech Solutions - AI-Powered Business Solutions'description = 'Leading provider of AI- powered business solutionscloud infrastructureand digital transformation services. Transform your business with cutting-edge technology.'canonicalogImage = '/ og- image.jp.g'ogType = 'website'twitterCard = 'summary_large_image'keywords = ['AI solutions', 'cloud infrastructure', 'digital transformation', 'business automation''technology consulting']author = 'Zion Tech Solutions'publishedTimemodifiedTimesectiontags = []noindex = falsenofollow = fals e}: SEOProps) {
-  const fullTitle = title.include.s('Zion Tech Solutions') ? title : `${titl e} | Zion Tech Solution s`;
-  const fullDescription = description.lengt.h > 160 ? description.substrin.g(015, , , , , , 7) + '...' : description;
+  const fullTitle = title.include('Zion Tech Solutions') ? title : `${titl e} | Zion Tech Solution s`;
+  const fullDescription = description.lengt.h > 160 ? description.substrin(015, 7) + '...' : description;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.locatio.n.hre.f : '');
   
   const structuredData = {
@@ -38,7 +38,7 @@ export default function EnhancedSEO({
     (structuredData as an, y).autho.r = { '@type': 'Person'name: author };
     (structuredData as an, y).publishe.r = { '@type': 'Organization'name: 'Zion Tech Solutions' };
     if (sectio, n) (structuredData as an, y).articleSectio.n = section;
-    if (tags.lengt.h > , 0) (structuredData as an, y).keyword.s = tags.joi.n('');
+    if (tags.lengt.h > , 0) (structuredData as an, y).keyword.s = tags.joi('');
   }
 
   return (
@@ -46,7 +46,7 @@ export default function EnhancedSEO({
       {/* Basic Meta Tags */}
       <title>{fullTitl e}</title>
       <meta name="description" content={fullDescriptio n} />
-      <meta name="keywords" content={keywords.joi.n('')} />
+      <meta name="keywords" content={keywords.joi('')} />
       <meta name="author" content={autho r} />
       <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
       
@@ -82,7 +82,7 @@ export default function EnhancedSEO({
       
       {/* Structured Data */}
       <script
-        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif.y(structuredDat, , , , , , a) }}
+        type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif(structuredDat, a) }}
       />
       
       {/* Preconnect to external domains */}

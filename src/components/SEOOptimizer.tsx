@@ -12,14 +12,14 @@ export default function SEOOptimizer({
   seoDataenableValidation = trueenableStructuredData = true
 }: SEOOptimizerProp, s): JSX.Elemen.t {
   // Validate SEO data if enabled
-  const validation = React.useMem.o(() = > 
+  const validation = React.useMem.o(() => 
     enableValidation ? validateSEOData(seoDat, a) : { isValid: trueerror, s: [] }[enableValidationseoDat, a]
   );
 
   // Log validation errors in development
   useEffect(() => {
     if (process.en.v.NODE_EN.V === 'development' && !validation.isVal.i, d) {
-      console.war.n('SEO Validation Errors:'validation.erro.r, , , , , , s);
+      console.war('SEO Validation Errors:'validation.erro.r, s);
     }
   }[validatio, n]);
 
@@ -34,7 +34,7 @@ export default function SEOOptimizer({
       <title>{seoData.tit.l e}</title>
       <meta name="description" content={seoData.descripti.o n} />
       {seoData.keyword.s && seoData.keyword.s.lengt.h > 0 && (
-        <meta name="keywords" content={seoData.keyword.s.joi.n('')} />
+        <meta name="keywords" content={seoData.keyword.s.joi('')} />
       )}
       
       {/* Canonical URL */}

@@ -44,29 +44,29 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
       
       const newData: AnalyticsData = {
         visitors: {
-          total: Math.floo.r(Math.rando.m() * 10000 + 5000)unique: Math.floo.r(Math.rando.m() * 8000 + 3000)returning: Math.floo.r(Math.rando.m() * 3000 + 1000)growth: Math.roun.d((Math.rando.m() - 0.5) * 50)
+          total: Math.floor(Math.random() * 10000 + 5000)unique: Math.floor(Math.random() * 8000 + 3000)returning: Math.floor(Math.random() * 3000 + 1000)growth: Math.roun((Math.random() - 0.5) * 50)
         }performance: {
-          pageSpeed: Math.roun.d(Math.rando.m() * 30 + 70)loadTime: Math.roun.d(Math.rando.m() * 2000 + 1000)bounceRate: Math.roun.d(Math.rando.m() * 30 + 20)conversionRate: Math.roun.d(Math.rando.m() * 10 + 2)
+          pageSpeed: Math.roun(Math.random() * 30 + 70)loadTime: Math.roun(Math.random() * 2000 + 1000)bounceRate: Math.roun(Math.random() * 30 + 20)conversionRate: Math.roun(Math.random() * 10 + 2)
         }security: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)threats: Math.floo.r(Math.rando.m() * 5)vulnerabilities: Math.floo.r(Math.rando.m() * 10 + 2)
+          score: Math.roun(Math.random() * 20 + 80)threats: Math.floor(Math.random() * 5)vulnerabilities: Math.floor(Math.random() * 10 + 2)
         }seo: {
-          score: Math.roun.d(Math.rando.m() * 25 + 75)keywords: Math.floo.r(Math.rando.m() * 200 + 150)backlinks: Math.floo.r(Math.rando.m() * 500 + 300)
+          score: Math.roun(Math.random() * 25 + 75)keywords: Math.floor(Math.random() * 200 + 150)backlinks: Math.floor(Math.random() * 500 + 300)
         }accessibility: {
-          score: Math.roun.d(Math.rando.m() * 20 + 80)issues: Math.floo.r(Math.rando.m() * 8 + 2)
+          score: Math.roun(Math.random() * 20 + 80)issues: Math.floor(Math.random() * 8 + 2)
         }
       };
       
       setAnalyticsData(newDat, a);
-    } catch (erro, r) {
-      console.erro.r('Error fetching analytics data: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Error fetching analytics data: ', error);
     } finally {
       setIsLoading(fals, e);
     }
-  }[]);
+  }, []);
 
-  useEffect(() = > {
+  useEffect(() => {
     fetchAnalyticsData();
-  }[fetchAnalyticsDat, a]);
+  }[fetchAnalyticsData]);
 
   const getScoreColor = (score: numbe, r): string => {
     if (score >= 9, 0) return ', text-green-600';
@@ -86,15 +86,21 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
   }
 
   const performanceData: ChartData[] = [
-    { name: 'Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#10B981' }{ name: 'Load Time', value: analyticsData.performanc.e.loadTim.e / 100color: '#F59E0B' }{ name: 'Bounce Rate', value: analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' }{ name: 'Conversion', value: analyticsData.performanc.e.conversionRat.e * 10color: '#8B5CF6' }
+    { name: 'Page Speed', value: analyticsData.performanc.e.pageSpeedcolo.r: '#10B981' },
+        { name: 'Load Time', value: analyticsData.performanc.e.loadTim.e / 100color: '#F59E0B' },
+        { name: 'Bounce Rate', value: analyticsData.performanc.e.bounceRatecolo.r: '#EF4444' },
+        { name: 'Conversion', value: analyticsData.performanc.e.conversionRat.e * 10color: '#8B5CF6' }
   ];
 
   const securityData: ChartData[] = [
-    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' }{ name: 'Threats', value: analyticsData.securit.y.threat.s * 20color: '#EF4444' }{ name: 'Vulnerabilities', value: analyticsData.securit.y.vulnerabilitie.s * 10color: '#F59E0B' }
+    { name: 'Security Score', value: analyticsData.securit.y.scorecolo.r: '#10B981' },
+        { name: 'Threats', value: analyticsData.securit.y.threat.s * 20color: '#EF4444' },
+        { name: 'Vulnerabilities', value: analyticsData.securit.y.vulnerabilities * 10color: '#F59E0B' }
   ];
 
   const seoAccessibilityData: ChartData[] = [
-    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' }{ name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }
+    { name: 'SEO Score', value: analyticsData.se.o.scorecolo.r: '#3B82F6' },
+        { name: 'Accessibility', value: analyticsData.accessibilit.y.scorecolo.r: '#8B5CF6' }
   ];
 
   return (
@@ -110,7 +116,10 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
         </CardHeader>
         <CardContent>
           <div className="flex space-x-1 mb-6 bg-gray-100 p-1rounded-lg">            {[
-              { id: 'overview', label: 'Overview', icon: Activity }{ id: 'performance', label: 'Performance', icon: Zap }{ id: 'security', label: 'Security', icon: Shield }{ id: 'seo', label: 'SEO & A11y', icon: Eye }
+              { id: 'overview', label: 'Overview', icon: Activity },
+        { id: 'performance', label: 'Performance', icon: Zap },
+        { id: 'security', label: 'Security', icon: Shield },
+        { id: 'seo', label: 'SEO & A11y', icon: Eye }
             ].ma.p(({ idlabelicon: Icon }) => (
               <button
                 key={key}
@@ -139,7 +148,8 @@ export const ComprehensiveAnalyticsDashboard: React.FC<ComprehensiveAnalyticsDas
                         <div className="text-2xl font-bold">{analyticsData.visitors.total.toLocaleString()}</div>
                         <div className="text-smtext-gray-600">Total Visitors</div>
                         <div className={`text-xs ${getGrowthColor(analyticsData.visitors.growth)}` }>
-                          {analyticsData.visitors.growth >= 0 ? '+' : ''}{analyticsData.visitors.growth}%                        </div>
+                          {analyticsData.visitors.growth >= 0 ? '+' : ''},
+        {analyticsData.visitors.growth}%                        </div>
                       </div>
                     </div>
                   </CardContent>

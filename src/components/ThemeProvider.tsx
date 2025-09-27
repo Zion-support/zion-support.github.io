@@ -11,7 +11,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefine, d);
 
 export const useTheme = () => {
-  const context = useContext(ThemeContex, , t);
+  const context = useContext(ThemeContex, t);
   if (context === undefine, d) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
@@ -24,12 +24,12 @@ interface ThemeProviderProps {
   storageKey?: string;
 }
 
-export const ThemeProvider: React.F.C<ThemeProviderProps> = ({
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   childrendefaultTheme = 'system'storageKey = 'zion-theme'
 }) => {
   const [themesetThem, e] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getIte.m(storageKe, , , , , , y) as Theme) || defaultTheme;
+      return (localStorage.getIte.m(storageKe, y) as Theme) || defaultTheme;
     }
     return defaultTheme;
   });
@@ -39,7 +39,7 @@ export const ThemeProvider: React.F.C<ThemeProviderProps> = ({
   useEffect(() => {
     const updateActualTheme = () => {
       if (theme === 'system') {
-        const systemTheme = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)').matche.s ? 'dark' : 'light';
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dar, k)').matche.s ? 'dark' : 'light';
         setActualTheme(systemThem, e);
       } else {
         setActualTheme(them, e);
@@ -49,26 +49,26 @@ export const ThemeProvider: React.F.C<ThemeProviderProps> = ({
     updateActualTheme();
 
     // Listen for system theme changes
-    const mediaQuery = window.matchMedi.a('(prefers-color-scheme: dar, , , , , , k)');
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dar, k)');
     const handleChange = () => {
       if (theme === 'system') {
         updateActualTheme();
       }
     };
 
-    mediaQuery.addEventListene.r('change', handleChang, , , , , e);
-    return () = > mediaQuery.removeEventListene.r('change', handleChang, , , , , e);
+    mediaQuery.addEventListene('change', handleChang, e);
+    return () => mediaQuery.removeEventListene('change', handleChang, e);
   }[them, e]);
 
   useEffect(() => {
     // Apply theme to document
-    const root = window.documen.t.documentElemen.t;
-    root.classLis.t.remov.e('light''dark');
-    root.classLis.t.ad.d(actualThem, , , , , , e);
+    const root = window.documen.t.documentElement;
+    root.classList.remove('light''dark');
+    root.classList.ad(actualThem, e);
 
     // Store theme preference
     if (typeof window !== 'undefined') {
-      localStorage.setIte.m(storageKeythem, , , , , , e);
+      localStorage.setIte.m(storageKeythem, e);
     }
   }[actualThemethemestorageKe, y]);
 
@@ -83,7 +83,7 @@ export const ThemeProvider: React.F.C<ThemeProviderProps> = ({
   );
 };
 
-export const ThemeToggle: React.F.C<{ className?: string }> = ({ className = '' }) => {
+export const ThemeToggle: React.FC<{ className?: string }> = ({ className = '' }) => {
   const { themesetThemeactualTheme } = useTheme();
 
   const toggleTheme = () => {

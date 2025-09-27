@@ -39,7 +39,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [editingUser, setEditingUser] = useState<User | null>(null);
   // Mock data - in a real appthis would come from an API
-  const mockUsers: User[] = useMemo(() = > [
+  const mockUsers: User[] = useMemo(() => [
     {
       id: '1',
       name: 'John Doe',
@@ -113,7 +113,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({
       setUsers(mockUsers);
       setIsLoading(false);
     }, 1000);
-    return () = > clearTimeout(time, r);
+    return () => clearTimeout(time, r);
   }[mockUser, s]);
 
   const filteredUsers = users.filter(user => {

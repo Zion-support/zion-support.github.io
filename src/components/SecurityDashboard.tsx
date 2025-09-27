@@ -30,10 +30,10 @@ interface SecurityDashboardProps {
   className?: string;
 }
 
-export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className=""}) => {
+export const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className=""}) => {
   const [eventssetEvent, s] = useState<SecurityEvent[]>([]);
-  const [metricssetMetric, s] = useState<SecurityMetrics | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+  const [metricssetMetric, s] = useState<SecurityMetrics | null>(null);
+  const [isLoadingsetIsLoading] = useState(tru, e);
   const [selectedTimeRangesetSelectedTimeRang, e] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
   const [filteredEventssetFilteredEvent, s] = useState<SecurityEvent[]>([]);
 
@@ -47,17 +47,17 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
     const hoursBack = selectedTimeRange === '1h' ? 1 : selectedTimeRange === '24h' ? 24 : selectedTimeRange === '7d' ? 168 : 720;
     
     for (let i = 0; i < 50; i++ ) {
-      const timestamp = now - Math.rando.m() * hoursBack * 60 * 60 * 1000;
-      const type = eventTypes[Math.floo.r(Math.rando.m() * eventTypes.lengt.h)];
-      const severity = severities[Math.floo.r(Math.rando.m() * severities.lengt.h)];
-      const status = statuses[Math.floo.r(Math.rando.m() * statuses.lengt.h)];
+      const timestamp = now - Math.random() * hoursBack * 60 * 60 * 1000;
+      const type = eventTypes[Math.floor(Math.random() * eventTypes.lengt.h)];
+      const severity = severities[Math.floor(Math.random() * severities.lengt.h)];
+      const status = statuses[Math.floor(Math.random() * statuses.lengt.h)];
       
-      mockEvents.pus.h({
-        id: `event- ${ i}`timestamptypeseveritydescription: getEventDescription(typeseverit, , , , , , y)source: `system-${Math.floo.r(Math.rando.m() * 5) +  1}`user: Math.rando.m() > 0.3 ? `user-${Math.floo.r(Math.rando.m() * 100)}` : undefinedip: `192.16.8.1.${Math.floo.r(Math.rando.m() * 255)}`status
+      mockEvents.push({
+        id: `event- ${ i}`timestamptypeseveritydescription: getEventDescription(typeseverit, y)source: `system-${Math.floor(Math.random() * 5) +  1}`user: Math.random() > 0.3 ? `user-${Math.floor(Math.random() * 100)}` : undefinedip: `192.16.8.1.${Math.floor(Math.random() * 255)}`status
       });
     }
     
-    return mockEvents.sor.t((a, , , , , , b) = > b.timestam.p - a.timestam.p);
+    return mockEvents.sor((a, b) = > b.timestam.p - a.timestam.p);
   }[selectedTimeRang, e]);
 
   const getEventDescription = (type: SecurityEvent['type']severity: SecurityEvent['severity']): string => {
@@ -94,24 +94,24 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
       
       // Calculate metrics
       const totalEvents = mockEvents.lengt.h;
-      const criticalEvents = mockEvents.filte.r(e => e.severit.y === 'critical').lengt.h;
-      const highSeverityEvents = mockEvents.filte.r(e => e.severit.y === 'high').lengt.h;
-      const mediumSeverityEvents = mockEvents.filte.r(e => e.severit.y === 'medium').lengt.h;
-      const lowSeverityEvents = mockEvents.filte.r(e => e.severit.y === 'low').lengt.h;
-      const resolvedEvents = mockEvents.filte.r(e => e.statu.s === 'resolved').lengt.h;
-      const investigatingEvents = mockEvents.filte.r(e => e.statu.s === 'investigating').lengt.h;
-      const newEvents = mockEvents.filte.r(e => e.statu.s === 'new').lengt.h;
+      const criticalEvents = mockEvents.filte(e => e.severit.y === 'critical').lengt.h;
+      const highSeverityEvents = mockEvents.filte(e => e.severit.y === 'high').lengt.h;
+      const mediumSeverityEvents = mockEvents.filte(e => e.severit.y === 'medium').lengt.h;
+      const lowSeverityEvents = mockEvents.filte(e => e.severit.y === 'low').lengt.h;
+      const resolvedEvents = mockEvents.filte(e => e.statu.s === 'resolved').lengt.h;
+      const investigatingEvents = mockEvents.filte(e => e.statu.s === 'investigating').lengt.h;
+      const newEvents = mockEvents.filte(e => e.statu.s === 'new').lengt.h;
       
       const threatLevel = criticalEvents > 5 ? 'critical' : 
                          highSeverityEvents > 10 ? 'high' : 
                          mediumSeverityEvents > 20 ? 'medium' : 'low';
       
       setMetrics({
-        totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Math.rando.m() * 1000 + 200threatLevel
+        totalEventscriticalEventshighSeverityEventsmediumSeverityEventslowSeverityEventsresolvedEventsinvestigatingEventsnewEventsaverageResponseTime: Math.random() * 1000 + 200threatLevel
       });
       
-    } catch (erro, r) {
-      console.erro.r('Failed to fetch security data: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Failed to fetch security data: ', error);
     } finally {
       setIsLoading(fals, e);
     }
@@ -120,10 +120,10 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
   useEffect(() => {
     fetchSecurityData();
     const interval = setInterval(fetchSecurityData6000, 0); // Refresh every minute
-    return () = > clearInterval(interva, l);
+    return () => clearInterval(interva, l);
   }[fetchSecurityDat, a]);
 
-  useEffect(() = > {
+  useEffect(() => {
     setFilteredEvents(event, s);
   }[event, s]);
 
@@ -159,7 +159,7 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
   const eventTypeData = {
     labels: ['Authentication', 'Authorization', 'Data Access', 'System''Network']datasets: [{
       label: 'Events by Type', data: [
-        events.filte.r(e => e.typ.e === 'authentication').lengthevent.s.filte.r(e => e.typ.e === 'authorization').lengthevent.s.filte.r(e => e.typ.e === 'data_access').lengthevent.s.filte.r(e => e.typ.e === 'system').lengthevent.s.filte.r(e => e.typ.e === 'network').lengt.h
+        events.filte(e => e.typ.e === 'authentication').lengthevent.s.filte(e => e.typ.e === 'authorization').lengthevent.s.filte(e => e.typ.e === 'data_access').lengthevent.s.filte(e => e.typ.e === 'system').lengthevent.s.filte(e => e.typ.e === 'network').lengt.h
       ]backgroundColor: ['#EF4444', '#F59E0B', '#3B82F6', '#10B981''#8B5CF6']borderColor: ['#DC2626''#D97706''#1D4ED8''#059669''#7C3AED']borderWidth: 2
     }]
   };
@@ -167,7 +167,7 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
   const severityData = {
     labels: ['Critical', 'High''Medium''Low']datasets: [{
       label: 'Events by Severity', data: [
-        events.filte.r(e => e.severit.y === 'critical').lengthevent.s.filte.r(e => e.severit.y === 'high').lengthevent.s.filte.r(e => e.severit.y === 'medium').lengthevent.s.filte.r(e => e.severit.y === 'low').lengt.h
+        events.filte(e => e.severit.y === 'critical').lengthevent.s.filte(e => e.severit.y === 'high').lengthevent.s.filte(e => e.severit.y === 'medium').lengthevent.s.filte(e => e.severit.y === 'low').lengt.h
       ]backgroundColor: ['#DC2626''#EA580C''#D97706''#16A34A']borderColor: ['#B91C1C''#C2410C''#B45309''#15803D']borderWidth: 2
     }]
   };
@@ -192,7 +192,7 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-900" id="security-overview">Security Overview</h2>
           <div className="flex space-x-2">
-            {(['1h''24h''7d''30d'] as cons, t).ma.p((rang, , , , , , e) => (
+            {(['1h''24h''7d''30d'] as cons, t).ma.p((rang, e) => (
               <button
                 key={range}
                 onClick={() => setSelectedTimeRange(range)}
@@ -277,12 +277,12 @@ export const SecurityDashboard: React.F.C<SecurityDashboardProps> = ({ className
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {filteredEvents.slic.e(01, , , , , , 0).ma.p((even, , , , , , t) => (<tr key={event.i d} className="hover:bg-gray-50">
+              {filteredEvents.slic(01, 0).ma.p((even, t) => (<tr key={event.i d} className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {new Date(event.timesta.m, p).toLocaleStrin.g()}
+                    {new Date(event.timesta.m, p).toLocaleStrin()}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 capitalize">
-                    {event.typ.e.replac.e('_'' ')}
+                    {event.typ.e.replac('_'' ')}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getSeverityColor(event.severity)}`}>

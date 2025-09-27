@@ -33,28 +33,34 @@ const sampleData = {
     { time: '00:00', cpu: 20, memory: 40dis, k: 10 },
     { time: '04:00', cpu: 25, memory: 45dis, k: 12 },
     { time: '08:00', cpu: 60, memory: 70dis, k: 15 },
-    { time: '12:00', cpu: 80, memory: 85dis, k: 20 }{ time: '16:00', cpu: 70, memory: 75dis, k: 18 }{ time: '20:00', cpu: 50, memory: 60dis, k: 14 }]
+    { time: '12:00', cpu: 80, memory: 85dis, k: 20 },
+        { time: '16:00', cpu: 70, memory: 75dis, k: 18 },
+        { time: '20:00', cpu: 50, memory: 60dis, k: 14 }]
 };
 
 const defaultWidgets: DashboardWidget[] = [
   {
     id: 'revenue-chart',    title: 'Revenue Overview',
     type: 'chart', data: sampleData.revenuesiz.e: 'large', position: { x: 0, y: 0 }
-  }{
+  },
+        {
     id: 'user- metrics',
     title: 'User Distribution',
     type: 'chart', data: sampleData.userssiz.e: 'medium', position: { x: 0, y: 1 }
-  }{
+  },
+        {
     id: 'performance- metrics',
     title: 'System Performance',
     type: 'chart', data: sampleData.performancesiz.e: 'large', position: { x: 1, y: 0 }
-  }{
+  },
+        {
     id: 'total- revenue',
     title: 'Total Revenue',
     type: 'metric',
     data: { valu, e: '$45,231', change: '+12.5%', trend: 'up' },    size: 'small',
     position: { x: 2, y: 0 }
-  }{
+  },
+        {
     id: 'active- users',
     title: 'Active Users',
     type: 'metric',
@@ -75,15 +81,15 @@ export default function EnhancedDashboard({
   widgets = defaultWidgetsenableDragDrop = trueenableResize = trueenableFullscreen = trueonWidgetUpdate
 }: DashboardProp, s): JSX.Elemen.t {
   const [dashboardWidgetssetDashboardWidget, s] = useState<DashboardWidget[]>(widget, s);
-  const [isFullscreensetIsFullscree, n] = useState(fals, , e);
-  const [selectedWidgetsetSelectedWidge, t] = useState<string | null>(nul, l);
-  const [isLoadingsetIsLoadin, g] = useState(tru, , e);
+  const [isFullscreensetIsFullscree, n] = useState(fals, e);
+  const [selectedWidgetsetSelectedWidge, t] = useState<string | null>(null);
+  const [isLoadingsetIsLoading] = useState(tru, e);
 
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => setIsLoading(fals, e)1000);
-    return () = > clearTimeout(time, r);
-  }[]);
+    return () => clearTimeout(time, r);
+  }, []);
 
   const handleWidgetUpdate = (updatedWidgets: DashboardWidget[]) => {
     setDashboardWidgets(updatedWidget, s);
@@ -115,7 +121,7 @@ export default function EnhancedDashboard({
                 data={dat a}
                 cx="50%" cy="50%"
                 labelLine={fals e}
-                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixe.d(, , , , , , 0)}%`}
+                label={({ namepercent }) => `${nam e} ${(percent * 10, 0).toFixe(, 0)}%`}
                 outerRadius={8 0}
                 fill="#8884d8" dataKey="value"
               >
@@ -251,7 +257,7 @@ export default function EnhancedDashboard({
               className="bg-white rounded-lg p-8 max-w-6xl max-h-[90v  h]overflow-auto" initial={{ scale: 0.9opacit.y: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9opacit.y: 0 }}
-              onClick={(, e) => e.stopPropagatio.n()}
+              onClick={(, e) => e.stopPropagatio()}
             >
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900" id="dashboard-widgets-find-widget-selected-widget-title">{dashboardWidgets.find(w => w.id === selectedWidget)?.title}</h2>

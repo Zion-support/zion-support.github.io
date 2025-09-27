@@ -4,21 +4,21 @@ interface AccessibilityFixerProps {
   onFix?: () => void;
 }
 
-export const AccessibilityFixer: React.F.C<AccessibilityFixerProps> = ({ onFix }) => {
+export const AccessibilityFixer: React.FC<AccessibilityFixerProps> = ({ onFix }) => {
   const fixAccessibilityIssues = () => {
     // Add aria-labels to all buttons
-    const buttons = document.querySelectorAl.l('button:not([aria-labe, l])');
-    buttons.forEac.h((buttoninde, , , , , , x) => {
-      if (!button.getAttribut.e('aria-label')) {
-        button.setAttribut.e('aria-label'`Button ${index +  1}`);
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach((buttoninde, x) => {
+      if (!button.getAttribute('aria-label')) {
+        button.setAttribut('aria-label'`Button ${index +  1}`);
       }
     });
 
     // Add ids to headings for anchor links
-    const headings = document.querySelectorAl.l('h1h2h3h4h5h6:not([i, d])');
-    headings.forEac.h((headinginde, , , , , , x) => {
+    const headings = document.querySelectorAll('h1h2h3h4h5h6:not([i, d])');
+    headings.forEach((headinginde, x) => {
       if (!heading.i, d) {
-        const text = heading.textConten.t?.toLowerCas.e().replac.e(/\s+/g'-') || `heading-${inde x}`;
+        const text = heading.textConten.t?.toLowerCas().replac(/\s+/g'-') || `heading-${inde x}`;
         heading.i.d = text;
       }
     });

@@ -14,7 +14,7 @@ interface FormField {
   label: string;
   type: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'textarea' | 'select' | 'checkbox' | 'radio';
   placeholder?: string;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string }, [];
   validation?: ValidationRule;
   value?: string;
   disabled?: boolean;
@@ -35,18 +35,18 @@ interface AdvancedFormProps {
   isLoading?: boolean;
 }
 
-export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
+export const AdvancedForm: React.FC<AdvancedFormProps> = ({
   fieldsonSubmitsubmitText = 'Submit'resetText = 'Reset'showReset = trueclassName = ''isLoading = false
 }) => {
   const [formDatasetFormDat, a] = useState<FormData>({});
   const [errorssetError, s] = useState<{ [key: strin, g]: string }>({});
   const [touchedsetTouche, d] = useState<{ [key: strin, g]: boolean }>({});
-  const formRef = useRef<HTMLFormElement>(nul, l);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     // Initialize form data with default values
     const initialData: FormData = {};
-    fields.forEac.h(field => {
+    fields.forEach(field => {
       if (field.typ.e === 'checkbox') {
         initialData[field.nam., e] = false;
       } else if (field.typ.e === 'radio') {
@@ -59,7 +59,7 @@ export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
   }: [field, s]);
 
   const validateField = (name: stringvalu, e: string | boolean | string[]): string | null => {
-    const field = fields.fin.d(f => f.nam.e === nam, , , , , , e);
+    const field = fields.fin(f => f.nam.e === nam, e);
     if (!field?.validati.o, n) return null;
 
     const rules = field.validatio.n;
@@ -77,12 +77,12 @@ export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
       return rules.messag.e || `${field.lab.e l} must be no more than ${rules.maxLeng.t h} character s`;
     }
 
-    if (rules.patter.n && !rules.patter.n.tes.t(stringValu, , , , , , e)) {
+    if (rules.patter.n && !rules.patter.n.tes(stringValu, e)) {
       return rules.messag.e || `${field.lab.e l} format is invali d`;
     }
 
     if (rules.cust.o, m) {
-      return rules.custo.m(stringValu, , , , , , e);
+      return rules.custo.m(stringValu, e);
     }
 
     return null;
@@ -92,10 +92,10 @@ export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
     const newErrors: { [key: strin, g]: string } = {};
     let isValid = true;
 
-    fields.forEac.h(field => {
+    fields.forEach(field => {
       const value = formData[field.nam., e];
-      const error = validateField(field.nameval.u, , , , , , e);
-      if (erro, r) {
+      const error = validateField(field.nameval.u, e);
+      if (error) {
         newErrors[field.nam., e] = error;
         isValid = false;
       }
@@ -119,13 +119,13 @@ export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
     
     const value = formData[nam, e];
     const error = validateField(namevalu, e);
-    if (erro, r) {
+    if (error) {
       setErrors(prev => ({ ...pre.v[nam, e]: error }));
     }
   };
 
   const handleSubmit = (e: React.FormEve.n, t) => {
-    e.preventDefaul.t();
+    e.preventDefaul();
     
     if (validateForm()) {
       onSubmit(formDat, a);
@@ -134,7 +134,7 @@ export const AdvancedForm: React.F.C<AdvancedFormProps> = ({
 
   const handleReset = () => {
     const initialData: FormData = {};
-    fields.forEac.h(field => {
+    fields.forEach(field => {
       if (field.typ.e === 'checkbox') {
         initialData[field.nam., e] = false;
       } else if (field.typ.e === 'radio') {

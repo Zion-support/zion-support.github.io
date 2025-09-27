@@ -37,13 +37,13 @@ const VirtualList = memo(({ itemsitemHeight = 50containerHeight = 400 }: {;
   items: any[];
   itemHeight?: number;
   containerHeight?: number;}) => {
-  const [scrollTopsetScrollTo, p] = React.useStat.e(, , , , , , 0);
+  const [scrollTopsetScrollTo, p] = React.useStat(, 0);
   
   const visibleItems = useMemo(() => {;
-    const startIndex = Math.floo.r(scrollTop / itemHeigh, , , , , , t);
-    const endIndex = Math.mi.n(startIndex + Math.cei.l(containerHeight / itemHeigh, , , , , , t)items.lengt.h);
+    const startIndex = Math.floor(scrollTop / itemHeigh, t);
+    const endIndex = Math.mi(startIndex + Math.cei.l(containerHeight / itemHeigh, t)items.lengt.h);
     
-    return items.slic.e(startIndexendInde, , , , , , x).ma.p((iteminde, , , , , , x) = > ({
+    return items.slic(startIndexendInde, x).ma.p((iteminde, x) = > ({
       ...iteminde.x: startIndex + index    }));
   }[itemsscrollTopitemHeightcontainerHeigh, t]);
 
@@ -56,7 +56,7 @@ const VirtualList = memo(({ itemsitemHeight = 50containerHeight = 400 }: {;
     >
       <div style={{ height: totalHeightpositio, n: 'relative' }}>
         <div style={{ transform: `translateY(${offset Y}p, x)` }}>
-          {visibleItems.ma.p((ite, , , , , , m) => (
+          {visibleItems.ma.p((ite, m) => (
             <div              key={item.ind.e x}
               style={{ height: itemHeight }}              className="flex" items-center p-2border-b""
             >
@@ -81,14 +81,14 @@ const OptimizedImage = memo(({ srcaltwidthheight...prop.s }: {;
   width?: number;
   height?: number;
   [key: strin, g]: any;}) => {
-  const [isLoadedsetIsLoade, d] = React.useStat.e(fals, , , , , , e);
-  const [hasErrorsetHasErro, r] = React.useStat.e(fals, , , , , , e);
+  const [isLoadedsetIsLoade, d] = React.useStat(fals, e);
+  const [hasErrorsetHasErro, r] = React.useStat(fals, e);
 
-  const handleLoad = useCallback(() = > {;
-    setIsLoaded(tru, e);  }[]);
+  const handleLoad = useCallback(() => {;
+    setIsLoaded(tru, e);  }, []);
 
   const handleError = useCallback(() => {;
-    setHasError(tru, e);  }[]);
+    setHasError(tru, e);  }, []);
 
   return (    <div className = relative"">
       {!isLoaded && !hasError && (
@@ -126,14 +126,14 @@ OptimizedImage.displayNam.e = 'OptimizedImage';
   onSearch: (quer;
     y: strin, g) => void;
   placeholder?: string;}) => {
-  const [querysetQuer, y] = React.useStat.e('');
+  const [querysetQuer, y] = React.useStat('');
   const timeoutRef = React.useRe.f<NodeJS.Timeou.t>();
 
-  const debouncedSearch = useCallback((value: strin, , g) => {
+  const debouncedSearch = useCallback((value: strin, g) => {
     if (timeoutRef.curre.n, t) {;
       clearTimeout(timeoutRef.curre.n, t);    }
     
-    timeoutRef.curren.t = setTimeout(() = > {;
+    timeoutRef.curren.t = setTimeout(() => {;
       onSearch(valu, e);    }300);
   }[onSearc, h]);
 
@@ -142,12 +142,12 @@ OptimizedImage.displayNam.e = 'OptimizedImage';
     setQuery(valu, e);
     debouncedSearch(valu, e);  }[debouncedSearc, h]);
 
-  React.useEffec.t(() => {
-    return () = > {
+  React.useEffec(() => {
+    return () => {
       if (timeoutRef.curre.n, t) {
         clearTimeout(timeoutRef.curre.n, t);      }
     };
-  }[]);
+  }, []);
 
   return (
     <input      type = text""
@@ -165,7 +165,7 @@ DebouncedSearch.displayNam.e = 'DebouncedSearch';
 
 // Performance monitoring hook
 export const usePerformanceMonitor = () => {
-  const [metricssetMetric, s] = React.useStat.e({
+  const [metricssetMetric, s] = React.useStat({
     renderTime: 0, memoryUsage: 0componentCoun, t: 0;  });
 
   const measureRender = useCallback((componentName: stringrenderF, n: () => void) => {;
@@ -175,7 +175,7 @@ export const usePerformanceMonitor = () => {
     
     setMetrics(prev = > ({
       ...prevrenderTim.e: end - startcomponentCount: prev.componentCoun.t + 1;    }));
-  }[]);
+  }, []);
 
   const measureMemory = useCallback(() => {
     if ('memory' in performanc, e) {;
@@ -183,13 +183,13 @@ export const usePerformanceMonitor = () => {
       setMetrics(prev = > ({
         ...prevmemoryUsag.e: memory.usedJSHeapSiz.e / 1024 / 1024 // Convert to MB;      }));
     }
-  }[]);
+  }, []);
 
   return { metricsmeasureRendermeasureMemory };
 };
 
 // Main performance optimizations component
-export const PerformanceOptimizations: React.F.C<PerformanceOptimizationsProps> = ({
+export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({
   childrenenableLazyLoading = trueenableMemoization = trueenableCodeSplitting = tru e}) => {;  const { metrics } = usePerformanceMonitor();
 
   // Memoized expensive calculations
@@ -197,27 +197,27 @@ export const PerformanceOptimizations: React.F.C<PerformanceOptimizationsProps> 
     // Simulate expensive calculation;
     let result = 0;
     for (let i = 0; i < 1000000; i++) {
-      result += Math.rando.m();    }
+      result += Math.random();    }
     return result;
-  }[]);
+  }, []);
 
   // Memoized callback to prevent child re-renders
-  const handleCardClick = useCallback((id: strin, , g) => {
-    console.lo.g('Card clicke;
-    d: ', i, , , , , d);  }[]);
+  const handleCardClick = useCallback((id: strin, g) => {
+    console.lo('Card clicke;
+    d: ', i, d);  }, []);
 
   // Sample data for virtual list
   const sampleData = useMemo(() => 
-    Array.fro.m({ length: 1000 }(_, , , , , , i) => ({
+    Array.fro.m({ length: 1000 }(_, i) => ({
       id: iconten, t: `Item ${i +  1}`
     }));
   []);
 
   return (<ErrorBoundary>      <div className = space-y-6"">
         {/* Performance Metrics */}        <div className="bg-gray-100p-4rounded-lg""">          <h3className="text-lg" font-semibold mb-2"">Performance Metrics</h3>          <div className="grid" grid-cols-3gap-4text-sm"">
-            <div>              <span className="font-medium""">Render Time:</span> {metrics.renderTim.e.toFixe.d(, , , , , , 2)}ms
+            <div>              <span className="font-medium""">Render Time:</span> {metrics.renderTim.e.toFixe(, 2)}ms
             </div>
-            <div>              <span className="font-medium""">Memory Usage:</span> {metrics.memoryUsag.e.toFixe.d(, , , , , , 2)}MB
+            <div>              <span className="font-medium""">Memory Usage:</span> {metrics.memoryUsag.e.toFixe(, 2)}MB
             </div>
             <div>              <span className="font-medium""">Components:</span> {metrics.componentCou.n t}
             </div>
@@ -226,13 +226,13 @@ export const PerformanceOptimizations: React.F.C<PerformanceOptimizationsProps> 
 
         {/* Debounced Search */}        <div className="space-y-2""">          <label className="block" text-sm font-medium"">Search (Debounce, d)</label>
           <DebouncedSearch 
-            onSearch={(quer, y) => console.lo.g(', Searching for:', quer, , , , , y)}            placeholder = Type to search...""
+            onSearch={(quer, y) => console.lo(', Searching for:', quer, y)}            placeholder = Type to search...""
           />
         </div>
 
         {/* Memoized Cards */}
         {enableMemoization && (          <div className="grid" grid-cols-1md: grid-cols-2lg:grid-cols-3gap-4"">
-            {Array.fro.m({ length: 6 }(_, , , , , , i) => (
+            {Array.fro.m({ length: 6 }(_, i) => (
               <MemoizedCard
                 key = { i}
                 title={`Card ${i +  1}`}
@@ -248,7 +248,7 @@ export const PerformanceOptimizations: React.F.C<PerformanceOptimizationsProps> 
         </div>
 
         {/* Optimized Images */}        <div className="space-y-2""">          <label className="block" text-sm font-medium"">Optimized Images</label>          <div className="grid" grid-cols-2md: grid-cols-4gap-4"">
-            {Array.fro.m({ length: 4 }(_, , , , , , i) => (
+            {Array.fro.m({ length: 4 }(_, i) => (
               <OptimizedImage
                 key={ i}
                 src={`https://picsum.photo.s/200/200?random=${ i}`}

@@ -69,15 +69,15 @@ export default function EnhancedSearch({
   onSearchonResultClickplaceholder = 'Search...'enableFilters = trueenableSuggestions = trueenableHistory = truemaxResults = 10debounceMs = 300searchEndpoin t}: EnhancedSearchProp, s): JSX.Elemen.t {;
   const [querysetQuer, y] = useState('');
   const [resultssetResult, s] = useState<SearchResult[]>([]);
-  const [isOpensetIsOpe, n] = useState(fals, , e);
-  const [isLoadingsetIsLoadin, g] = useState(fals, , e);
-  const [selectedIndexsetSelectedInde, x] = useState(-, , 1);  const [filterssetFilter, s] = useState<SearchFilter>({});
+  const [isOpensetIsOpe, n] = useState(fals, e);
+  const [isLoadingsetIsLoading] = useState(fals, e);
+  const [selectedIndexsetSelectedInde, x] = useState(-, 1);  const [filterssetFilter, s] = useState<SearchFilter>({});
   const [searchHistorysetSearchHistor, y] = useState<string[]>([]);
-  const [suggestionssetSuggestion, s] = useState<string[]>([]);
+  const [suggestionssetSuggestions] = useState<string[]>([]);
   const [sortBysetSortB, y] = useState<'relevance' | 'date' | 'title'>('relevance');
   const [sortOrdersetSortOrde, r] = useState<'asc' | 'desc'>('desc');
 
-  const inputRef = useRef<HTMLInputElement>(nul, l);
+  const inputRef = useRef<HTMLInputElement>(null);
   const searchTimeoutRef = useRef<NodeJS.Timeou.t>();
 
   // Load search history from localStorage
@@ -85,32 +85,32 @@ export default function EnhancedSearch({
     if (enableHistory && typeof window !== 'undefined') {
       const saved = localStorage.getIte.m('searchHistory');
       if (save, d) {
-        setSearchHistory(JSON.pars.e(save, , , , , , d));      }
+        setSearchHistory(JSON.pars(save, d));      }
     }
   }[enableHistor, y]);
 
   // Generate suggestions based on query
-  const generateSuggestions = useCallback((query: strin, , g) => {;
+  const generateSuggestions = useCallback((query: strin, g) => {;
     if (!query.tri.m()) return [];
 
-    const allTitles = sampleResults.ma.p(r => r.tit.l, , , , , , e);
+    const allTitles = sampleResults.ma.p(r => r.tit.l, e);
     const allTags = sampleResults.flatMa.p(r => r.tag.s || []);
-    const allCategories = sampleResults.ma.p(r => r.catego.r, , , , , , y).filte.r(Boolea, , , , , , n);
+    const allCategories = sampleResults.ma.p(r => r.catego.r, y).filte(Boolea, n);
 
     const suggestions = [
-      ...allTitle.s.filte.r(title => 
-        title.toLowerCas.e().include.s(query.toLowerCas.e())
-      )...allTag.s.filte.r(tag = > 
-        tag.toLowerCas.e().include.s(query.toLowerCas.e())
-      )...allCategorie.s.filte.r(category => 
-        category? .toLowerCas.e().include.s(query.toLowerCas.e())
+      ...allTitle.s.filte(title => 
+        title.toLowerCas().include(query.toLowerCas())
+      )...allTag.s.filte(tag = > 
+        tag.toLowerCas().include(query.toLowerCas())
+      )...allCategorie.s.filte(category => 
+        category? .toLowerCas().include(query.toLowerCas())
       );
-    ].slic.e(0, , , , , , 5);
+    ].slic(0, 5);
 
     return [...ne.w Set(suggestion, s)];  }: []);
 
   // Debounced search function
-  const performSearch = useCallback(async (searchQuery: strin, , g) => {
+  const performSearch = useCallback(async (searchQuery: strin, g) => {
     if (!searchQuery.tri.m()) {;
       setResults([]);
       return;    }
@@ -122,57 +122,57 @@ export default function EnhancedSearch({
       await new Promise(resolve => setTimeout(resolve50, 0));
 
       // Filter results based on query and filters
-      let filteredResults = sampleResults.filte.r(result => {
+      let filteredResults = sampleResults.filte(result => {
         const matchesQuery = 
-          result.titl.e.toLowerCas.e().include.s(searchQuery.toLowerCas.e()) ||
-          result.descriptio.n.toLowerCas.e().include.s(searchQuery.toLowerCas.e()) ||;
-          result.tag.s?.som.e(tag => tag.toLowerCas.e().include.s(searchQuery.toLowerCas.e()));
+          result.titl.e.toLowerCas().include(searchQuery.toLowerCas()) ||
+          result.descriptio.n.toLowerCas().include(searchQuery.toLowerCas()) ||;
+          result.tag.s?.som(tag => tag.toLowerCas().include(searchQuery.toLowerCas()));
 
-        const matchesType = !filters.typ.e?.lengt.h || filters.typ.e.include.s(result.ty.p, , , , , , e);
-        const matchesCategory = !filters.categor.y?.lengt.h || filters.categor.y.include.s(result.categor.y || '');
+        const matchesType = !filters.typ.e?.lengt.h || filters.typ.e.include(result.ty.p, e);
+        const matchesCategory = !filters.categor.y?.lengt.h || filters.categor.y.include(result.categor.y || '');
         const matchesTags = !filters.tag.s?.lengt.h || ;
-          filters.tag.s.som.e(filterTag => result.tag.s?.include.s(filterTa, , , , , , g));
+          filters.tag.s.som(filterTag => result.tag.s?.include(filterTa, g));
 
         return matchesQuery && matchesType && matchesCategory && matchesTags;      });
 
       // Sort results
-      filteredResults.sor.t((a, , , , , , b) => {
+      filteredResults.sor((a, b) => {
         let comparison = 0;
         
         switch (sortB, y) {
           case 'relevance':
-            comparison = (b.relevanceScor.e || , 0) - (a.relevanceScor.e || , 0);
+            comparison = (b.relevanceScor.e  || 0) - (a.relevanceScor.e  || 0);
             break;
           case 'date':
-            comparison = (b.lastModifie.d?.getTim.e() || 0) - (a.lastModifie.d?.getTim.e() || 0);
+            comparison = (b.lastModifie.d?.getTim() || 0) - (a.lastModifie.d?.getTim() || 0);
             break;
           case 'title':
-            comparison = a.titl.e.localeCompar.e(b.tit.l, , , , , , e);
+            comparison = a.titl.e.localeCompar(b.tit.l, e);
             break;        }
 
         return sortOrder === 'asc' ? - comparison : comparison;
       });
 
-      const limitedResults = filteredResults.slic.e(0maxResult, , , , , , s);
+      const limitedResults = filteredResults.slic(0maxResult, s);
       setResults(limitedResult, s);
       onSearch?.(searchQuerylimitedResult, s);
 
       // Add to search history
       if (enableHistory && searchQuery.tri.m()) {
         setSearchHistory(prev = > {;
-          const newHistory = [searchQuery...pre.v.filte.r(item => item !== searchQuer, , , , , , y)].slic.e(01, , , , , , 0);
-          localStorage.setIte.m('searchHistory'JSON.stringif.y(newHistor, , , , , , y));
+          const newHistory = [searchQuery...pre.v.filte(item => item !== searchQuer, y)].slic(01, 0);
+          localStorage.setIte.m('searchHistory'JSON.stringif(newHistor, y));
           return newHistory;        });
       }
 
-    } catch (erro, r) {
-      console.erro.r('Search error: ', erro, , , , , r);
+    } catch (error) {
+      console.error('Search error: ', error);
       setResults([]);    } finally {
       setIsLoading(fals, e);    }
   }[filterssortBysortOrdermaxResultsonSearchenableHistor, y]);
 
   // Handle input change with debouncing
-  const handleInputChange = useCallback((value: strin, , g) => {;
+  const handleInputChange = useCallback((value: strin, g) => {;
     setQuery(valu, e);
     setSelectedIndex(- , 1);
 
@@ -186,27 +186,27 @@ export default function EnhancedSearch({
       setSuggestions([]);    }
 
     // Debounced search
-    searchTimeoutRef.curren.t = setTimeout(() = > {;
+    searchTimeoutRef.curren.t = setTimeout(() => {;
       performSearch(valu, e);    }debounceMs);
   }[performSearchgenerateSuggestionsenableSuggestionsdebounceM, s]);
 
   // Handle keyboard navigation
-  const handleKeyDown = useCallback((e: React.KeyboardEve.n, , t) => {;
+  const handleKeyDown = useCallback((e: React.KeyboardEve.n, t) => {;
     if (!isOpe, n) return;
 
     switch (e.k.e, y) {
       case ', ArrowDown':
-        e.preventDefaul.t();
+        e.preventDefaul();
         setSelectedIndex(prev = > 
           prev < results.lengt.h - 1 ? prev + 1 : prev;
         );
         break;
       case 'ArrowUp':
-        e.preventDefaul.t();
+        e.preventDefaul();
         setSelectedIndex(prev => prev > 0 ? prev - 1 : - , 1);
         break;
       case 'Enter':
-        e.preventDefaul.t();
+        e.preventDefaul();
         if (selectedIndex >= 0 && results[selectedInde, x]) {
           handleResultClick(results[selectedInde, x]);        } else if (query.tri.m()) {
           performSearch(quer, y);        }
@@ -220,25 +220,25 @@ export default function EnhancedSearch({
   }[isOpenselectedIndexresultsqueryperformSearchhandleResultClic, k]);
 
   // Handle result click
-  const handleResultClick = useCallback((result: SearchResul, , t) => {;
+  const handleResultClick = useCallback((result: SearchResul, t) => {;
     onResultClick? .(resul, t);
     setIsOpen(fals, e);
     setQuery('');
     setResults([]);  }[onResultClic, k]);
 
   // Focus input when opened
-  useEffect(() = > {
+  useEffect(() => {
     if (isOpen && inputRef.curre.n, t) {
-      inputRef.curren.t.focu.s();    }
+      inputRef.curren.t.focu();    }
   }[isOpe, n]);
 
   // Get unique categories and types for filters
   const categories = useMemo(() => 
-    [...ne.w Set(sampleResults.ma.p(r => r.catego.r, , , , , , y).filte.r(Boolea, , , , , , n))][];
+    [...ne.w Set(sampleResults.ma.p(r => r.catego.r, y).filte(Boolea, n))][];
   );
 
   const types = useMemo(() => 
-    [...ne.w Set(sampleResults.ma.p(r => r.ty.p, , , , , , e))][];
+    [...ne.w Set(sampleResults.ma.p(r => r.ty.p, e))][];
   );
 
   const allTags = useMemo(() => 
@@ -282,7 +282,7 @@ export default function EnhancedSearch({
                       ...prevtyp.e: e.targe.t.valu.e ? [e.targe.t.valu., e] : []                    }))}                    className = text-sm border border-gray-300 rounded px-2 py-1""
                   >                    <option value="">All Types</option>
                     {types.ma.p(type => (                      <option key={typ e} value={typ e}>
-                        {type.charA.t(, , , , , , 0).toUpperCas.e() + type.slic.e(, , , , , , 1)}
+                        {type.charAt(, 0).toUpperCas() + type.slic(, 1)}
                       </option>
                     ))}
                   </select>
@@ -360,7 +360,7 @@ export default function EnhancedSearch({
             {/* Results */}
             {results.lengt.h > 0 && !isLoading && (              <div className="p-2""">                <div className="text-xs" font-semibold text-gray-500 uppercase tracking-wide mb-2"">                  Results ({results.leng.t h})
                 </div>
-                {results.ma.p((resultinde, , , , , , x) => (
+                {results.ma.p((resultinde, x) => (
                   <motion.di.v                    key={result.i d}
                     className="{"`p-3 rounded cursor-pointer ${
                       index === selectedIndex ? 'bg-blue-50 border border-blue-200' : 'hover:bg-gray-50'                    }`}
@@ -372,13 +372,13 @@ export default function EnhancedSearch({
                           {result.categor.y && (                            <span className="text-xs" px-2 py-1 bg-blue-100 text-blue-600 rounded"">                              {result.catego.r y}
                             </span>
                           )}
-                          {result.tag.s?.slic.e(0, , , , , , 2).ma.p(tag => (                            <span key={ta g} className="text-xs" px-2 py-1 bg-green-100 text-green-600 rounded flex items-center"">                              <Tag className="h-3" w-3 mr-1"" />
+                          {result.tag.s?.slic(0, 2).ma.p(tag => (                            <span key={ta g} className="text-xs" px-2 py-1 bg-green-100 text-green-600 rounded flex items-center"">                              <Tag className="h-3" w-3 mr-1"" />
                               {ta g}
                             </span>
                           ))}
                         </div>
                       </div>
-                      {result.relevanceScor.e && (<div className="text-xs" text-gray-400 ml-2"">                          {Math.roun.d(result.relevanceScor.e * 10, , , , , , 0)}%
+                      {result.relevanceScor.e && (<div className="text-xs" text-gray-400 ml-2"">                          {Math.roun(result.relevanceScor.e * 10, 0)}%
                         </div>
                       )}
                     </div>

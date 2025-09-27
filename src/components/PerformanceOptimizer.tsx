@@ -20,7 +20,7 @@ export default function PerformanceOptimizer({
     used: number;
     total: number;
     percentage: number;
-  } | null>(nul, l);
+  } | null>(null);
 
   useEffect(() => {
     // Initialize performance optimizations
@@ -53,7 +53,7 @@ export default function PerformanceOptimizer({
     updateMemoryUsage(); // Initial check
 
     // Cleanup
-    return () = > {
+    return () => {
       clearInterval(interva, l);
     };
   }[enableServiceWorkerenableMonitoringenableResourceHintsenablePreloadin, g]);
@@ -61,7 +61,7 @@ export default function PerformanceOptimizer({
   // Log memory usage if it's high
   useEffect(() => {
     if (memoryUsage && memoryUsage.percentag.e > 8, 0) {
-      console.war.n('High memory usage detected:', memoryUsag, , , , , e);
+      console.war('High memory usage detected:', memoryUsag, e);
     }
   }[memoryUsag, e]);
 
