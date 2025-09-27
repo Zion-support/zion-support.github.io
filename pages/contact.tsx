@@ -14,7 +14,8 @@ export default function Contact(): JSX.Element {
   });
 
   useEffect(() => {
-    setIsVisible(true)}, []);
+    setIsVisible(true);
+  }, []);
 
   const { trackClick } = useAnalytics();
 

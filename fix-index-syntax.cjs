@@ -1,11 +1,16 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import SEO from '../src/components/SEO';
+#!/usr/bin/env node
 
-const Home = React.memo(function Home(): JSX.Element {
+const fs = require('fs');
+
+console.log('🔧 Fixing index.tsx syntax errors...');
+
+const filePath = '/workspace/pages/index.tsx';
+let content = fs.readFileSync(filePath, 'utf8');
+
+// Fix the duplicated function declaration and malformed code
+content = content.replace(
+  /const Home = React\.memo\(function Home\(\): JSX\.Element \{const \[isVisible, setIsVisib, l, e\] = useState\(false\);\s*const \[performanceMetri, c, s, setPerformanceMetri, c, s\] = useState\(null\);\s*const \[isLoadi, n, g, setIsLoadi, n, g\] = useState\(true\);\s*const heroRef\s*=\s*useR, e, f\(null\);\s*const featuresRef\s*=\s*useR, e, f\(null\);\s*const isHeroInView\s*=\s*useInVi, e, w\(heroR, e, f, \{ once: true \}\);\s*const isFeaturesInView\s*=\s*useInVi, e, w\(featuresR, e, f, \{once: true\}\);\s*useEffect\(\(\) => \{setIsVisib, l, e\(true\);\s*setIsLoadi, n, g\(false\);/g,
+  `const Home = React.memo(function Home(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
   const [performanceMetrics, setPerformanceMetrics] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -16,68 +21,14 @@ const Home = React.memo(function Home(): JSX.Element {
 
   useEffect(() => {
     setIsVisible(true);
-    setIsLoading(false);
-    
-    // Performance monitoring
-    if (typeof window !== 'undefined') {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const metrics = entries.map(entry => ({
-          name: entry.name,
-          duration: entry.duration,
-          startTime: entry.startTime
-        }));
-        setPerformanceMetrics(metrics);
-      });
-      
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-      
-      return () => observer.disconnect();
-    }
-  }, []);
+    setIsLoading(false);`
+);
 
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to automate processes and gain intelligent insights.",
-      icon: "🤖",
-      color: "blue" as const,
-      delay: 0.1
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions that grow with your business needs.",
-      icon: "☁️",
-      color: "indigo" as const,
-      delay: 0.2
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business operations.",
-      icon: "🚀",
-      color: "purple" as const,
-      delay: 0.3
-    },
-    {
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your data and systems from threats.",
-      icon: "🛡️",
-      color: "green" as const,
+// Fix the malformed features array
+content = content.replace(
+  /color: "blue" asconstdelay: 0\.4\}\];\s*return \(/g,
+  `color: "blue" as const,
       delay: 0.4
-    },
-    {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with the latest technologies.",
-      icon: "💻",
-      color: "orange" as const,
-      delay: 0.5
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring to ensure your systems run smoothly.",
-      icon: "🛡️",
-      color: "blue" as const,
-      delay: 0.6
     }
   ];
 
@@ -202,40 +153,64 @@ const Home = React.memo(function Home(): JSX.Element {
             </div>
           </div>
         </motion.div>
-
-        {/* Performance Metrics Section */}
-        {performanceMetrics && (
-          <div className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Performance Insights</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/80 rounded-lg p-6">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    {performanceMetrics.length}
-                  </div>
-                  <div className="text-gray-600">Metrics Tracked</div>
-                </div>
-                <div className="bg-white/80 rounded-lg p-6">
-                  <div className="text-3xl font-bold text-green-600 mb-2">
-                    {isVisible ? '✓' : '⏳'}
-                  </div>
-                  <div className="text-gray-600">Page Loaded</div>
-                </div>
-                <div className="bg-white/80 rounded-lg p-6">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    {isLoading ? '⏳' : '✓'}
-                  </div>
-                  <div className="text-gray-600">Ready</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
-});
+});`
+);
 
-Home.displayName = 'Home';
+// Fix the malformed comments
+content = content.replace(
+  /\/\/ Lazyloadheavy components/g,
+  '// Lazy load heavy components'
+);
 
-export default Home;
+content = content.replace(
+  /\/\/ constPerformanceTracker = dynamic\(\(\) => import\("\.\.\/src\/components\/PerformanceTracker"\), \{\/\/\s*ssr: false\s*\n\/\/\s*loading: \(\) => <divclassName="h-4 w-fullbg-gray-200 roundedanimate-pulse" \/>\n\/\/ \}\);/g,
+  `// const PerformanceTracker = dynamic(() => import("../src/components/PerformanceTracker"), {
+//   ssr: false,
+//   loading: () => <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+// });`
+);
+
+// Fix other malformed dynamic imports
+content = content.replace(
+  /\/\/ constAdvancedPerformanceMonitor = dynamic\(\(\) => import\("\.\.\/src\/components\/AdvancedPerformanceMonitor"\), \{\/\/\s*ssr: false\s*\n\/\/\s*loading: \(\) => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" \/>\n\/\/ \}\);/g,
+  `// const AdvancedPerformanceMonitor = dynamic(() => import("../src/components/AdvancedPerformanceMonitor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });`
+);
+
+content = content.replace(
+  /\/\/ constAdvancedAnalyticsDashboard = dynamic\(\(\) => import\("\.\.\/src\/components\/AdvancedAnalyticsDashboard"\), \{\/\/\s*ssr: false\s*\n\/\/\s*loading: \(\) => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" \/>\n\/\/ \}\);/g,
+  `// const AdvancedAnalyticsDashboard = dynamic(() => import("../src/components/AdvancedAnalyticsDashboard"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });`
+);
+
+content = content.replace(
+  /\/\/ constAdvancedSecurityMonitor = dynamic\(\(\) => import\("\.\.\/src\/components\/AdvancedSecurityMonitor"\), \{\/\/\s*ssr: false\s*\n\/\/\s*loading: \(\) => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" \/>\n\/\/ \}\);/g,
+  `// const AdvancedSecurityMonitor = dynamic(() => import("../src/components/AdvancedSecurityMonitor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });`
+);
+
+content = content.replace(
+  /\/\/ constAdvancedAccessibilityAuditor = dynamic\(\(\) => import\("\.\.\/src\/components\/AdvancedAccessibilityAuditor"\), \{\/\/\s*ssr: false\s*\n\/\/\s*loading: \(\) => <divclassName="h-64 w-full, b, g-gr, a, y-200 roundedanimate-pulse" \/>\n\/\/ \}\);/g,
+  `// const AdvancedAccessibilityAuditor = dynamic(() => import("../src/components/AdvancedAccessibilityAuditor"), {
+//   ssr: false,
+//   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
+// });`
+);
+
+// Remove the duplicate function declaration at the top
+content = content.replace(
+  /const Home = React\.memo\(function Home\(\): JSX\.Element \{\s*const \[isVisible, setIsVisible\] = useState\(false\);\s*const \[performanceMetrics, setPerformanceMetrics\] = useState\(null\);\s*const \[isLoading, setIsLoading\] = useState\(true\);\s*const heroRef = useRef\(null\);\s*const featuresRef = useRef\(null\);\s*const isHeroInView = useInView\(heroRef, \{ once: true \}\);\s*const isFeaturesInView = useInView\(featuresRef, \{ once: true \}\);\s*useEffect\(\(\) => \{\s*setIsVisible\(true\);\s*setIsLoading\(false\);/g,
+  ''
+);
+
+fs.writeFileSync(filePath, content);
+console.log('✅ Fixed index.tsx syntax errors');

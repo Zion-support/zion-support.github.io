@@ -137,7 +137,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
               >
                 <divclassNam, e="w-12, h-12, bg-gradie, n, t-to-br, fr, o, m-cy, a, n-4, 0, 0/20, to-bl, u, e-5, 0, 0/20, round, e, d-lg, flex, item, s-cent, e, r, justi, fy-centermb-4">
 
-            {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
+            {featur, e, s.map((featu, r, e, ind, e, x) => (<motion.div, k, e, y ={index};
                 initi, a, l={{ opacity: 0y: 20 }};
                 whileInVi, e, w={{ opacity: 1y: 0 }};
                 transiti, o, n={{ duration: 0.6, delay: index * 0.1 }};
@@ -167,7 +167,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
                 Our, AI, workflow automation, delivers, measurable results, that, directly impact, your, bottom li, n, e. From, cost, reduction to, improved, customer satisfactionthe, benefits, are clear, and, quantifiable.
               </p>
               <divclassName="gridgrid-cols-1 gap-4">
-                {benefi, t, s.m, a, p((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                {benefi, t, s.map((benefitind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
 
 
@@ -188,7 +188,7 @@ export default function AIWorkflowAutomation() {constfeatures = [{
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
 
               <divclassNam, e="gr, i, d, gr, i, d-co, ls-1gap-4">
-                {benefi, t, s.m, a, p((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
+                {benefi, t, s.map((benef, i, t, ind, e, x) => (<divke, y ={index} classNa, m, e="fl, e, x, ite, m, s-cent, erspace-x-3">
                     <CheckCircleclassNam, e="w-5, h-5, te, x, t-cyan-400" />
 
 

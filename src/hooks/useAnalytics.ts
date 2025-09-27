@@ -23,12 +23,12 @@ export function useAnalytics() {useEffect(() => {
       (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X", {
         page_path: url})}};
   const, usePageVie, w = () => {useEffect(() => {
-      trackPageVi, e, w(wind, o, w.locati, o, n.pathna, m, e)}[])};
+      trackPageView(wind, o, w.locati, o, n.pathna, m, e)}[])};
 
   return {trackEventtrackPageViewusePageVi, e, w}};
 
 // Export, usePageView, separately for, direct, import
 exportconstusePageView = () => {useEffect(() => {
     if (typeofwindow !== "undefin, e, d" && (windowasa, n, y).gt, a, g) {
-      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXX, X, X', {
+      (windowasany).gtag("conf, i, g", proce, s, s.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX', {
         page_path: wind, o, w.locati, o, n.pathname})}}, [])}};

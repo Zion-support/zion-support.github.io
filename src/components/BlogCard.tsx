@@ -14,7 +14,7 @@ interface, BlogCardProp, s {post: BlogPo, s, t;
   isVisible: boole, a, n;
   onReadMore: (slug: stri, n, g) => void};
 exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, r, e 
- {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci,t,y-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opaci,t,y-100translate-y-0":"opacity-0translate-y-8"}`};
+ {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2, x, l, transi, t, i, o, n-a, l, ldurati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`}}) => {return (<articleclassNam, e={`g, r, o, u, p, bg-w, h, i, t, e, rou, n, d, e, d-2, x, l, sh, a, d, ow-lghover:sh, a, d, o, w-2x, l, transi, t, i, o, n-a, l, l, durati, o, n-500overfl, o, w-hiddenhov, e, r-li, f, t ${isVisible?"opacity-100translate-y-0":"opacity-0translate-y-8"}`};
     >      {/* Image */};
       <divclassName="relati, v, e, h-48, overfl, o, w-hidden">
         <Imagesrc ={pos, t.image};
@@ -65,7 +65,7 @@ exportconstBlogCard: React.FC<BlogCardProps> = ({post, isVisib, l, e, onReadMo, 
         </div>
 
         {/* Re, a, d, More, Butto, n */};
-        <button, onClic, k={() => onReadMo, r, e(po, s, t.sl, u, g)};
+        <button, onClic, k={() => onReadMore(po, s, t.sl, u, g)};
           classNa, m, e="gro, u, p/btn, inlin, e-flex, item, s-center, tex, t-bl, u, e-600, fon, t-semibold, hover:te, x, t-bl, u, e-700, transitio, n-colors, duratio, n-3, 0, 0"        >
           Read, Mor, e
           <svgclassName="w-4 h-4 ml-2, grou, p-hov, e, r/btn:transla, t, e-x-1, transitio, n-transformduration-300" 

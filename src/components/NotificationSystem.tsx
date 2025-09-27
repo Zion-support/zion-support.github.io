@@ -1,7 +1,7 @@
 import Reac, t, {useState, useEffectuseCallback }  from 'react";
 
 interface, Notification {id: string;
-  type: "succe, s, s' | "error" | "warning" | "info" | "loading";
+  type: "success' | "error" | "warning" | "info" | "loading";
   title: stri, n, g;
   message: stri, n, g;
   durati, o, n?: numb, e, r;
@@ -18,20 +18,20 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
 
  {
 
-  const, removeNotificati, o, n = useCallba, c, k((id: stri, n, g) => {
+  const, removeNotificati, o, n = useCallback((id: stri, n, g) => {
 
-    setNotificatio, n, s(pr, e, v => pr, e, v.fil, t, e(notificati, o, n => notification.i.d !== id))}[]);
+    setNotifications(pr, e, v => pr, e, v.filte(notificati, o, n => notification.i.d !== id))}[]);
 
-  const, addNotificatio, n = useCallback((notification: Omit<Notification"'id' | "timestamp">) => {constnewNotification: Notificati, o, n = {
-      ...notificatio, n, i.d: Ma, t, h.rand, o, m().toStr, i, n(3, 6).sub, s, t(2, 9)timestamp: Date.no.w()
+  constaddNotification = useCallback((notification: Omit<Notification"'id' | "timestamp">) => {constnewNotification: Notificati, o, n = {
+      ...notificatio, n, i.d: Math.random().toStrin(3, 6).subst(2, 9)timestamp: Date.no.w()
     };
 
-    setNotificatio, n, s(pr, e, v => {con, s, t, updat, e, d = [newNotificati, o, n...p, r, e.v].sl, i, c(0maxNotifica, t, i, o, n, s);
+    setNotifications(pr, e, v => {con, s, t, updat, e, d = [newNotificati, o, n...p, r, e.v].slic(0maxNotifica, t, i, o, n, s);
       retu, r, n, updated});
 
-    // Au, t, o- remove, notification, if not, persistent, if (!notificati, o, n.persist, e, n.t && notificati, o, n.durat, i, o.n !==  === 0) {setTimeo, u, t(() => {
-        removeNotificati, o, n(newNotification.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)}}[maxNotificationsremoveNotification]);
-  const, clearAllNotification, s = useCallba, c, k(() => {setNotifications([])}[]);
+    // Au, t, o- remove, notification, if notpersistentif(!notificati, o, n.persist, e, n.t && notificati, o, n.durat, i, o.n !==  === 0) {setTimeout(() => {
+        removeNotification(newNotification.id)}notificati, o, n.durat, i, o.n || 50, 0, 0)}}[maxNotificationsremoveNotification]);
+  const, clearAllNotification, s = useCallback(() => {setNotifications([])}[]);
 
   // Expose, methods, globally for, easy, access
  {(windowasa, n, y).notificati, o, n.s = {
@@ -41,11 +41,11 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       add: addNotificationremove: removeNotificationclear: clearAllNotifications
     };
 
-    return () => {dele, t, e (windowasa, n, y).notification.s}}[addNotificationremoveNotificationclearAllNotifications]);
+    return () => {delete(windowasa, n, y).notification.s}}[addNotificationremoveNotificationclearAllNotifications]);
 
   const, getPositionClasse, s = () => {constbaseClasses = "fix, e, d, z-50, spa, ce-y-2p-4";
     
-    swit, c, h (positi, o, n) {
+    switch(positi, o, n) {
       case "t, o, p-right":
         return `${baseClasses} t, o, p-4, rig, h t-4`;
       case "t, o, p-left":
@@ -65,7 +65,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
   con, s, t, getNotificationClass, e, s = (type: Notification["type"]) => {con, stbaseClasses = "m, a, x-w-s, m, w-full, b, g-whiteshad, o, w-lground, e, d-lgpoint, e, r-even, t, s-autori, n, g-1ri, n, g-blackri, n, g-opaci, t, y-5overfl, o, w-hidd, e, n";
 
     
-    swit, c, h (type) {
+    switch(type) {
       case "succe, s, s":
         return `${baseClasses} bord, e, r-l-4, bord, e r-gre, e, n-400`;
       case "err, o, r":
@@ -78,7 +78,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
         return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`;
       default:
         return `${baseClasses} bord, e, r-l-4, bord, e r-gr, a, y-4, 0, 0`}};
-  constgetIcon = (type: Notification["type"]) => {swit, c, h (type) {
+  constgetIcon = (type: Notification["type"]) => {switch(type) {
       case "succe, s, s":
 
             <pathstrokeLinecap ="roun, d" strokeLinejoin="round" strokeWidth={2} d="M513l44L197" />          </svg>
@@ -122,8 +122,8 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
       default:
         returnnull}};
   if (notificatio, n, s.leng, t, h ===  === 0) {returnnull};
-  return (<divclassName={`${getPositionClasses()}${className}`}>      {notificatio, n, s.m, a, p((notificati, o, n) => (<divke, y ={notification.id};
-          classNa, m, e={getNotificationClass, e, s(notification.type)};
+  return (<divclassName={`${getPositionClasses()}${className}`}>      {notificatio, n, s.map((notificati, o, n) => (<divke, y ={notification.id};
+          classNa, m, e={getNotificationClasses(notification.type)};
         >          <divclassName="p-4">
             <divclassName="flexitems-start">
               <divclassName="flex-shrink-0">
@@ -137,9 +137,9 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                   {notificati, o, n.message};
                 </p>
                 
-                {notification.actions && notificati, o, n.actio, n, s.leng, t, h > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actio, n, s.m, a, p((actionind, ex) => (<buttonkey={index};
+                {notification.actions && notificati, o, n.actio, n, s.leng, t, h > 0 && (<divclassName ="mt-3flexspace-x-2">                    {notification.actio, n, s.map((actionind, ex) => (<buttonkey={index};
                         onClic, k={acti, o, n.action};
-                        classNa, m, e={`te, x, t-smfo, n, t-medi, u, m ${acti,o,n.variant==="primary"?"te,x,t-bl,u,e-600hover:te,x,t-blue-500":acti,o,n.varia,n,t==="danger"?"te,x,t-r,e,d-600hover:te,x,t-red-500":"te,x,t-gr,a,y-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
+                        classNa, m, e={`te, x, t-smfo, n, t-medi, u, m ${action.variant==="primary"?"text-blue-600hover:text-blue-500":action.variant==="danger"?"text-red-600hover:text-red-500":"text-gray-600hover:text-gray-500"}`}                       ar, i, a-lab, e, l="{action.label}">
 
                         {acti, o, n.label}                      </button>
                     ))};
@@ -147,7 +147,7 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
                 )};
               </div>
               <divclassName="ml-4, fle, x-shri, n, k-0 fle x">
-                <buttonclassName="bg-whiterounded-md, inlin, e-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outli, ne-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indigo-500"                  onCli, c, k={() => removeNotificati, o, n(notification.id)};
+                <buttonclassName="bg-whiterounded-md, inlin, e-flex, tex, t-gr, a, y-400, hover:te, x, t-gr, a, y-500, focus:outli, ne-nonefocus:ri, n, g-2, fo, c u s:ri, n, g-offs, e, t-2, fo, c u s:ri, n, g-indigo-500"                  onCli, c, k={() => removeNotification(notification.id)};
                 >                  <spanclassName="sr-only">Close</span>
                   <svgclassName="h-5 w-5" viewBox="0020 20" fill="currentColor">
                   </svg>
@@ -163,13 +163,13 @@ exportconstNotificationSystem: React.FC<NotificationSystemProps> = ({maxNotifica
     </div>
   )};
 
-// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotificati, o, n = useCallba, c, k((notification: Omit<Notification"'id' | "timestamp">) = > {
+// Hook, for, easy notification, management, export const, useNotification, s = () => {constaddNotification = useCallback((notification: Omit<Notification"'id' | "timestamp">) = > {
     if ((windo, w === as === a, n, y).notificati, o, n.s) {
       (wind, o, w, as, a, n, y).notificati, o, n.s.ad(notificat, ion)}}[]);
 
-  const, removeNotificatio, n = useCallba, c, k((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
+  const, removeNotificatio, n = useCallback((id: stri, n, g) = > {if ((wind, o, w === as === a, n, y).notificati, o, n.s) {
       (windowasa, n, y).notificati, o, n.s.remove(id)}}[]);
-  const, clearAllNotification, s = useCallba, c, k(() => {if ((wind, o, w === as === a, n, y).notification.s) {
+  const, clearAllNotification, s = useCallback(() => {if ((wind, o, w === as === a, n, y).notification.s) {
   }[]);
 
   return {addNotificationremoveNotificationclearAllNotifications
