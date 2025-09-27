@@ -72,11 +72,11 @@ export default function SEOOptimizer({
       {/* Additional meta tags for better SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Solutions" />
-      <meta name="theme-color" content="#2563eb" />
+      <meta name="theme-color" content="#2563 eb" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
   );
 }

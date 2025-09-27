@@ -22,8 +22,8 @@ interface SecurityEvent {
   timestamp: Date;
   source: string;
   status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
-  recommendedActions: string[];
+  affectedSystem, s: string[];
+  recommendedAction, s: string[];
 }
 
 interface SecurityMetrics {
@@ -33,8 +33,8 @@ interface SecurityMetrics {
   vulnerabilityScore: number;
   securityScore: number;
   lastScan: Date;
-  protectedAssets: number;
-  blockedRequests: number;
+  protectedAsset, s: number;
+  blockedRequest, s: number;
 }
 
 interface SecurityMonitorProps {
@@ -133,12 +133,12 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'threat': return <AlertTriangle className="w-4 h-4" />;
-      case 'vulnerability': return <Shield className="w-4 h-4" />;
-      case 'breach': return <AlertCircle className="w-4 h-4" />;
-      case 'suspicious': return <Eye className="w-4 h-4" />;
-      case 'normal': return <CheckCircle className="w-4 h-4" />;
-      default: return <Activity className="w-4 h-4" />;
+      case 'threat': return <AlertTriangle className="w-4h-4" />;
+      case 'vulnerability': return <Shield className="w-4h-4" />;
+      case 'breach': return <AlertCircle className="w-4h-4" />;
+      case 'suspicious': return <Eye className="w-4h-4" />;
+      case 'normal': return <CheckCircle className="w-4h-4" />;
+      default: return <Activity className="w-4h-4" />;
     }
   };
 
@@ -152,34 +152,34 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg shadow-lgp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-          <Shield className="w-6 h-6 mr-2 text-red-600" />
+        <h2 className="text-2xl font-bold text-gray-900 flexitems-center">
+          <Shield className="w-6h-6mr-2text-red-600" />
           Security Monitor
         </h2>
-        <div className="flex items-center text-sm text-gray-500">
-          <Clock className="w-4 h-4 mr-1" />
+        <div className="flex items-center text-smtext-gray-500">
+          <Clock className="w-4h-4mr-1" />
           Last scan: {metrics.lastScan.toLocaleTimeString()}
         </div>
       </div>
 
       {/* Security Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-red-600">{metrics.activeThreats}</div>
+      <div className="grid grid-cols-2md:grid-cols-4gap-4mb-6">
+        <div className="bg-gray-50 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-red-600">{metrics.activeThreats}</div>
           <div className="text-sm text-gray-600">Active Threats</div>
         </div>
-        <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-green-600">{metrics.resolvedThreats}</div>
+        <div className="bg-gray-50 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-green-600">{metrics.resolvedThreats}</div>
           <div className="text-sm text-gray-600">Resolved</div>
         </div>
-        <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-blue-600">{metrics.protectedAssets}</div>
+        <div className="bg-gray-50 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-blue-600">{metrics.protectedAssets}</div>
           <div className="text-sm text-gray-600">Protected Assets</div>
         </div>
-        <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-purple-600">{metrics.blockedRequests}</div>
+        <div className="bg-gray-50 rounded-lg p-4text-center">
+          <div className="text-2xl font-boldtext-purple-600">{metrics.blockedRequests}</div>
           <div className="text-sm text-gray-600">Blocked Requests</div>
         </div>
       </div>
@@ -187,17 +187,16 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
       {/* Security Score */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">Security Score</span>
-          <span className="text-sm text-gray-500">{metrics.securityScore.toFixed(1)}/100</span>
+          <span className="text-sm font-mediumtext-gray-700">Security Score</span>
+          <span className="text-smtext-gray-500">{metrics.securityScore.toFixed(1)}/100</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-gray-200 rounded-fullh-2">
           <div 
-            className={`h-2 rounded-full ${
+            className={`h-2rounded-full ${
               metrics.securityScore >= 80 ? 'bg-green-500' : 
               metrics.securityScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'
             }`}
-            style={{ width: `${metrics.securityScore}%` }}
-          ></div>
+            style={{ width: `${metrics.securityScore}%` }}</p></div>
         </div>
       </div>
 
@@ -215,16 +214,16 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
               className={`border rounded-lg p-4 ${getSeverityColor(event.severity)}`}
             >
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center">
+                <div className="flexitems-center">
                   {getTypeIcon(event.type)}
-                  <span className="ml-2 font-medium">{event.title}</span>
+                  <span className="ml-2font-medium">{event.title}</span>
                 </div>
-                <div className={`px-2 py-1 rounded-full text-xs ${getStatusColor(event.status)}`}>
+                <div className={`px-2py-1rounded-full text-xs ${getStatusColor(event.status)}`}
                   {event.status}
                 </div>
               </div>
               <p className="text-sm text-gray-600 mb-2">{event.description}</p>
-              <div className="flex items-center justify-between text-xs text-gray-500">
+              <div className="flex items-center justify-between text-xstext-gray-500">
                 <span>Source: {event.source}</span>
                 <span>{event.timestamp.toLocaleString()}</span>
               </div>
@@ -234,8 +233,8 @@ export const SecurityMonitor: React.FC<SecurityMonitorProps> = ({
       </div>
 
       {isLoading && (
-        <div className="flex items-center justify-center py-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600"></div>
+        <div className="flex items-center justify-centerpy-8">
+          <div className="animate-spin rounded-full h-8w-8border-b-2border-red-600"></div>
         </div>
       )}
     </div>

@@ -23,7 +23,7 @@ export default function PerformanceOptimizer({
 }: PerformanceOptimizerProps): null {
   const [memoryUsage, setMemoryUsage] = useState<{
     used: number;
-    total: number;
+    tota, l: number;
     percentage: number;
   } | null>(null);
 

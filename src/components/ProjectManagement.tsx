@@ -66,7 +66,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       planning: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
       'in-progress': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
       review: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-      completed: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'}
+      completed: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
     };
     return colors[status];
   };
@@ -76,7 +76,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       low: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
       medium: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
       high: 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
-      urgent: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'}
+      urgent: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
     };
     return colors[priority];
   };
@@ -86,7 +86,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       low: '🔵',
       medium: '🟡',
       high: '🟠',
-      urgent: '🔴'}
+      urgent: '🔴'
     };
     return icons[priority];
   };
@@ -100,7 +100,7 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
       planning: projects.filter(p => p.status === 'planning').length,
       'in-progress': projects.filter(p => p.status === 'in-progress').length,
       review: projects.filter(p => p.status === 'review').length,
-      completed: projects.filter(p => p.status === 'completed').length}
+      completed: projects.filter(p => p.status === 'completed').length
     };
     return stats;
   };
@@ -108,10 +108,10 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
   const stats = getStatusStats();
 
   return (
-    <div className = {`p-6 rounded-lg border-2 transition-all duration-300 ${
+    <div className={`p-6 rounded-lg border-2 transition-all duration-300 ${
       isDarkMode 
         ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-        : 'bg-white border-gray-200 hover:border-gray-300'}
+        : 'bg-white border-gray-200 hover:border-gray-300'
     }`}>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white" id="project-management">
@@ -127,18 +127,12 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         {['all', 'planning', 'in-progress', 'review', 'completed'].map((status) => (
           <button
             key={status}
-            onClick={() = aria-label="setSelectedStatus(status)}
-            className = {`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+            onClick={() => setSelectedStatus(status)}
+            aria-label={`Filter by ${status} status`}
+            className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
               selectedStatus === status
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}
-            }`}
-          >
-            {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}"> setSelectedStatus(status)}
-            className = {`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
-              selectedStatus === status
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}
+                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
           >
             {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1)}
@@ -171,10 +165,10 @@ export default function ProjectManagement({ isDarkMode }: ProjectManagementProps
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className = {`p-4 rounded-lg border transition-all duration-200 hover:shadow-md ${
+            className={`p-4 rounded-lg border transition-all duration-200 hover:shadow-md ${
               isDarkMode 
                 ? 'bg-gray-700 border-gray-600 hover:border-gray-500' 
-                : 'bg-gray-50 border-gray-200 hover:border-gray-300'}
+                : 'bg-gray-50 border-gray-200 hover:border-gray-300'
             }`}
           >
             <div className="flex items-start justify-between mb-3">

@@ -7,37 +7,37 @@ interface SEOMetrics {
   titleTag: boolean;
   metaDescription: boolean;
   headings: {
-    h1Count: number;
-    h2Count: number;
-    h3Count: number;
+    h 1 Count: number;
+    h2 Coun, t: number;
+    h3 Coun, t: number;
   };
   images: {
     total: number;
-    withAlt: number;
-    missingAlt: number;
+    withAl, t: number;
+    missingAl, t: number;
   };
   links: {
     internal: number;
-    external: number;
-    broken: number;
+    externa, l: number;
+    broke, n: number;
   };
   pageSpeed: number;
-  mobileOptimized: boolean;
+  mobileOptimize, d: boolean;
 }
 
 interface AccessibilityMetrics {
   overallScore: number;
   contrast: {
-    passed: number;
-    failed: number;
+    passe, d: number;
+    faile, d: number;
   };
   keyboardNavigation: boolean;
   screenReaderFriendly: boolean;
   focusIndicators: boolean;
   semanticHTML: boolean;
   ariaLabels: {
-    present: number;
-    missing: number;
+    presen, t: number;
+    missin, g: number;
   };
 }
 
@@ -46,8 +46,8 @@ interface OptimizationIssue {
   severity: 'critical' | 'high' | 'medium' | 'low';
   title: string;
   description: string;
-  solution: string;
-  impact: string;
+  solutio, n: string;
+  impac, t: string;
 }
 
 const SEOAccessibilityOptimizer: React.FC = () => {
@@ -55,21 +55,21 @@ const SEOAccessibilityOptimizer: React.FC = () => {
     overallScore: 0,
     titleTag: false,
     metaDescription: false,
-    headings: { h1Count: 0, h2Count: 0, h3Count: 0 },
-    images: { total: 0, withAlt: 0, missingAlt: 0 },
-    links: { internal: 0, external: 0, broken: 0 },
+    headings: { h 1 Coun, t: 0, h2 Count: 0, h3 Count: 0 },
+    images: { tota, l: 0, withAlt: 0, missingAlt: 0 },
+    links: { interna, l: 0, external: 0, broken: 0 },
     pageSpeed: 0,
     mobileOptimized: false
   });
 
   const [accessibilityMetrics, setAccessibilityMetrics] = useState<AccessibilityMetrics>({
     overallScore: 0,
-    contrast: { passed: 0, failed: 0 },
+    contrast: { passe, d: 0, failed: 0 },
     keyboardNavigation: false,
     screenReaderFriendly: false,
     focusIndicators: false,
     semanticHTML: false,
-    ariaLabels: { present: 0, missing: 0 }
+    ariaLabels: { presen, t: 0, missing: 0 }
   });
 
   const [issues, setIssues] = useState<OptimizationIssue[]>([]);
@@ -83,9 +83,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       const titleTag = document.querySelector('title') !== null;
       const metaDescription = document.querySelector('meta[name="description"]') !== null;
       
-      const h1Elements = document.querySelectorAll('h1');
-      const h2Elements = document.querySelectorAll('h2');
-      const h3Elements = document.querySelectorAll('h3');
+      const h 1 Elements = document.querySelectorAll('h1');
+      const h2 Elements = document.querySelectorAll('h2');
+      const h3 Elements = document.querySelectorAll('h3');
       
       const images = document.querySelectorAll('img');
       const imagesWithAlt = document.querySelectorAll('img[alt]');
@@ -94,21 +94,21 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
       
       const newSeoMetrics: SEOMetrics = {
-        overallScore: Math.round(Math.random() * 30 + 70),
+        overallScor, e: Math.round(Math.random() * 30 + 70),
         titleTag,
         metaDescription,
         headings: {
-          h1Count: h1Elements.length,
-          h2Count: h2Elements.length,
-          h3Count: h3Elements.length
+          h 1 Coun, t: h 1 Elements.length,
+          h2 Count: h2 Elements.length,
+          h3 Count: h3 Elements.length
         },
         images: {
-          total: images.length,
+          tota, l: images.length,
           withAlt: imagesWithAlt.length,
           missingAlt: images.length - imagesWithAlt.length
         },
         links: {
-          internal: internalLinks.length,
+          interna, l: internalLinks.length,
           external: externalLinks.length,
           broken: Math.floor(Math.random() * 3)
         },
@@ -123,9 +123,9 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
       
       const newAccessibilityMetrics: AccessibilityMetrics = {
-        overallScore: Math.round(Math.random() * 25 + 75),
+        overallScor, e: Math.round(Math.random() * 25 + 75),
         contrast: {
-          passed: Math.round(Math.random() * 20 + 30),
+          passe, d: Math.round(Math.random() * 20 + 30),
           failed: Math.round(Math.random() * 5)
         },
         keyboardNavigation: document.querySelectorAll('[tabindex]').length > 0,
@@ -133,7 +133,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         focusIndicators: true, // Simplified check
         semanticHTML: document.querySelectorAll('main, header, nav, section, article, aside, footer').length > 0,
         ariaLabels: {
-          present: ariaLabels.length,
+          presen, t: ariaLabels.length,
           missing: Math.max(0, interactiveElements.length - ariaLabels.length)
         }
       };
@@ -145,7 +145,7 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       
       if (!titleTag) {
         optimizationIssues.push({
-          category: 'seo',
+          categor, y: 'seo',
           severity: 'critical',
           title: 'Missing Title Tag',
           description: 'The page is missing a title tag, which is crucial for SEO',
@@ -176,24 +176,24 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         });
       }
       
-      if (newSeoMetrics.headings.h1Count === 0) {
+      if (newSeoMetrics.headings.h 1 Count === 0) {
         optimizationIssues.push({
           category: 'seo',
           severity: 'high',
-          title: 'Missing H1 Tag',
-          description: 'The page is missing an H1 heading tag',
-          solution: 'Add a single, descriptive H1 tag to the main content',
+          title: 'Missing H 1 Tag',
+          description: 'The page is missing an H 1 heading tag',
+          solution: 'Add a single, descriptive H 1 tag to the main content',
           impact: 'Improves content structure and SEO rankings'
         });
       }
       
-      if (newSeoMetrics.headings.h1Count > 1) {
+      if (newSeoMetrics.headings.h 1 Count > 1) {
         optimizationIssues.push({
           category: 'seo',
           severity: 'medium',
-          title: 'Multiple H1 Tags',
-          description: 'The page has multiple H1 tags, which can confuse search engines',
-          solution: 'Use only one H1 tag per page and use H2-H6 for subheadings',
+          title: 'Multiple H 1 Tags',
+          description: 'The page has multiple H 1 tags, which can confuse search engines',
+          solution: 'Use only one H 1 tag per page and use H2-H 6 for subheadings',
           impact: 'Improves content hierarchy and SEO structure'
         });
       }
@@ -255,13 +255,13 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Search className="h-6 w-6 text-blue-600" />
+              <Search className="h-6w-6text-blue-600" />
               <span>SEO & Accessibility Optimizer</span>
             </div>
             <button
               onClick={analyzePage}
               disabled={isAnalyzing}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              className="px-4py-2bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,d:opacity-50"
             >
               {isAnalyzing ? 'Analyzing...' : 'Analyze Page'}
             </button>
@@ -272,77 +272,77 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         </CardHeader>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1lg:grid-cols-2gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Search className="h-5 w-5 text-blue-600" />
+              <Search className="h-5w-5text-blue-600" />
               <span>SEO Metrics</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-3 border rounded-lg">
+              <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Overall SEO Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}>
+                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}
                   {seoMetrics.overallScore}/100
                 </span>
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 border rounded-lg">
+              <div className="grid grid-cols-2gap-4">
+                <div className="p-3borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium">Title Tag</span>
                     {seoMetrics.titleTag ? 
-                      <CheckCircle className="h-4 w-4 text-green-600" /> : 
-                      <XCircle className="h-4 w-4 text-red-600" />
+                      <CheckCircle className="h-4w-4text-green-600" /> : 
+                      <XCircle className="h-4w-4text-red-600" />
                     }
                   </div>
                 </div>
                 
-                <div className="p-3 border rounded-lg">
+                <div className="p-3borderrounded-lg">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium">Meta Description</span>
                     {seoMetrics.metaDescription ? 
-                      <CheckCircle className="h-4 w-4 text-green-600" /> : 
-                      <XCircle className="h-4 w-4 text-red-600" />
+                      <CheckCircle className="h-4w-4text-green-600" /> : 
+                      <XCircle className="h-4w-4text-red-600" />
                     }
                   </div>
                 </div>
               </div>
               
-              <div className="p-3 border rounded-lg">
-                <div className="text-sm font-medium mb-2">Heading Structure</div>
-                <div className="text-sm space-y-1">
-                  <div className="flex justify-between">
-                    <span>H1 Tags:</span>
-                    <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
-                      {seoMetrics.headings.h1Count}
+              <div className="p-3borderrounded-lg">
+                <div className="text-sm font-mediummb-2">Heading Structure</div>
+                <div className="text-smspace-y-1">
+                  <div className="flexjustify-between">
+                    <span>H 1 Tags:</span>
+                    <span className={seoMetrics.headings.h 1 Count === 1 ? 'text-green-600' : 'text-red-600'}>
+                      {seoMetrics.headings.h 1 Count}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>H2 Tags:</span>
-                    <span>{seoMetrics.headings.h2Count}</span>
+                  <div className="flexjustify-between">
+                    <span>H 2 Tags:</span>
+                    <span>{seoMetrics.headings.h2 Count}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>H3 Tags:</span>
-                    <span>{seoMetrics.headings.h3Count}</span>
+                  <div className="flexjustify-between">
+                    <span>H 3 Tags:</span>
+                    <span>{seoMetrics.headings.h3 Count}</span>
                   </div>
                 </div>
               </div>
               
-              <div className="p-3 border rounded-lg">
-                <div className="text-sm font-medium mb-2">Images</div>
-                <div className="text-sm space-y-1">
-                  <div className="flex justify-between">
+              <div className="p-3borderrounded-lg">
+                <div className="text-sm font-mediummb-2">Images</div>
+                <div className="text-smspace-y-1">
+                  <div className="flexjustify-between">
                     <span>Total Images:</span>
                     <span>{seoMetrics.images.total}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flexjustify-between">
                     <span>With Alt Text:</span>
                     <span className="text-green-600">{seoMetrics.images.withAlt}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flexjustify-between">
                     <span>Missing Alt:</span>
                     <span className={seoMetrics.images.missingAlt > 0 ? 'text-red-600' : 'text-green-600'}>
                       {seoMetrics.images.missingAlt}
@@ -351,10 +351,10 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 </div>
               </div>
               
-              <div className="p-3 border rounded-lg">
+              <div className="p-3borderrounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium">Page Speed</span>
-                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}>
+                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}
                     {seoMetrics.pageSpeed}/100
                   </span>
                 </div>
@@ -366,27 +366,27 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <Eye className="h-5 w-5 text-purple-600" />
+              <Eye className="h-5w-5text-purple-600" />
               <span>Accessibility Metrics</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-3 border rounded-lg">
+              <div className="flex items-center justify-between p-3borderrounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}>
+                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}
                   {accessibilityMetrics.overallScore}/100
                 </span>
               </div>
               
-              <div className="p-3 border rounded-lg">
-                <div className="text-sm font-medium mb-2">Color Contrast</div>
-                <div className="text-sm space-y-1">
-                  <div className="flex justify-between">
+              <div className="p-3borderrounded-lg">
+                <div className="text-sm font-mediummb-2">Color Contrast</div>
+                <div className="text-smspace-y-1">
+                  <div className="flexjustify-between">
                     <span>Passed:</span>
                     <span className="text-green-600">{accessibilityMetrics.contrast.passed}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flexjustify-between">
                     <span>Failed:</span>
                     <span className={accessibilityMetrics.contrast.failed > 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.contrast.failed}
@@ -395,40 +395,40 @@ const SEOAccessibilityOptimizer: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 gap-3">
-                <div className="flex items-center justify-between p-2 border rounded">
+              <div className="grid grid-cols-1gap-3">
+                <div className="flex items-center justify-between p-2borderrounded">
                   <span className="text-sm">Keyboard Navigation</span>
                   {accessibilityMetrics.keyboardNavigation ? 
-                    <CheckCircle className="h-4 w-4 text-green-600" /> : 
-                    <XCircle className="h-4 w-4 text-red-600" />
+                    <CheckCircle className="h-4w-4text-green-600" /> : 
+                    <XCircle className="h-4w-4text-red-600" />
                   }
                 </div>
                 
-                <div className="flex items-center justify-between p-2 border rounded">
+                <div className="flex items-center justify-between p-2borderrounded">
                   <span className="text-sm">Screen Reader Friendly</span>
                   {accessibilityMetrics.screenReaderFriendly ? 
-                    <CheckCircle className="h-4 w-4 text-green-600" /> : 
-                    <XCircle className="h-4 w-4 text-red-600" />
+                    <CheckCircle className="h-4w-4text-green-600" /> : 
+                    <XCircle className="h-4w-4text-red-600" />
                   }
                 </div>
                 
-                <div className="flex items-center justify-between p-2 border rounded">
+                <div className="flex items-center justify-between p-2borderrounded">
                   <span className="text-sm">Semantic HTML</span>
                   {accessibilityMetrics.semanticHTML ? 
-                    <CheckCircle className="h-4 w-4 text-green-600" /> : 
-                    <XCircle className="h-4 w-4 text-red-600" />
+                    <CheckCircle className="h-4w-4text-green-600" /> : 
+                    <XCircle className="h-4w-4text-red-600" />
                   }
                 </div>
               </div>
               
-              <div className="p-3 border rounded-lg">
-                <div className="text-sm font-medium mb-2">ARIA Labels</div>
-                <div className="text-sm space-y-1">
-                  <div className="flex justify-between">
+              <div className="p-3borderrounded-lg">
+                <div className="text-sm font-mediummb-2">ARIA Labels</div>
+                <div className="text-smspace-y-1">
+                  <div className="flexjustify-between">
                     <span>Present:</span>
                     <span className="text-green-600">{accessibilityMetrics.ariaLabels.present}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flexjustify-between">
                     <span>Missing:</span>
                     <span className={accessibilityMetrics.ariaLabels.missing > 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.ariaLabels.missing}
@@ -444,35 +444,35 @@ const SEOAccessibilityOptimizer: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <AlertCircle className="h-5 w-5 text-orange-600" />
+            <AlertCircle className="h-5w-5text-orange-600" />
             <span>Optimization Issues</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {issues.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
-                <CheckCircle className="h-12 w-12 mx-auto mb-4 text-green-600" />
+              <div className="text-center py-8text-gray-500">
+                <CheckCircle className="h-12 w-12 mx-auto mb-4text-green-600" />
                 <p>No critical issues found. Great job!</p>
               </div>
             ) : (
               issues.map((issue, index) => (
-                <div key={index} className="border rounded-lg p-4">
+                <div key={index} className="border rounded-lgp-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}>
+                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
                       {issue.severity.toUpperCase()}
                     </span>
                     <span className="text-xs text-gray-500 capitalize">{issue.category}</span>
                   </div>
-                  <h4 className="font-semibold mb-2">{issue.title}</h4>
+                  <h4 className="font-semiboldmb-2">{issue.title}</h4>
                   <p className="text-sm text-gray-600 mb-3">{issue.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                  <div className="grid grid-cols-1md:grid-cols-2gap-3text-sm">
                     <div>
-                      <span className="font-medium text-blue-700">Solution:</span>
+                      <span className="font-mediumtext-blue-700">Solutio, n:</span>
                       <p className="text-gray-600">{issue.solution}</p>
                     </div>
                     <div>
-                      <span className="font-medium text-green-700">Impact:</span>
+                      <span className="font-mediumtext-green-700">Impact:</span>
                       <p className="text-gray-600">{issue.impact}</p>
                     </div>
                   </div>

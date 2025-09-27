@@ -42,10 +42,10 @@ export default function EnhancedSEO({
     '@type': 'Organization',
     name: 'Zion Tech Solutions',
     description: fullDescription,
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    url: 'http, s://ziontechgroup.com',
+    logo: 'http, s://ziontechgroup.com/logo.png',
     sameAs: [
-      'https://linkedin.com/company/zion-tech-solutions',
+      'http, s://linkedin.com/company/zion-tech-solutions',
       'https://twitter.com/ziontechsolutions',
     ],
     contactPoint: {
@@ -91,20 +91,20 @@ export default function EnhancedSEO({
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={fullCanonical} />
-      <meta property="og:site_name" content="Zion Tech Solutions" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og: site_name" content="Zion Tech Solutions" />
+      <meta property="o, g:locale" content="en_US" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechsolutions" />
-      <meta name="twitter:creator" content="@ziontechsolutions" />
+      <meta name="twitter: site" content="@ziontechsolutions" />
+      <meta name="twitte, r:creator" content="@ziontechsolutions" />
       
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
+      <meta name="theme-color" content="#2563 eb" />
+      <meta name="msapplication-TileColor" content="#2563 eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Solutions" />
@@ -116,9 +116,9 @@ export default function EnhancedSEO({
       />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http, s://www.google-analytics.com" />
       
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />

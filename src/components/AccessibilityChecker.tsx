@@ -2,17 +2,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 interface AccessibilityIssue {
   type: 'error' | 'warning' | 'info';
-  message: string;
+  messag, e: string;
   element?: HTMLElement;
   selector?: string;
-  severity: 'high' | 'medium' | 'low';
+  severit, y: 'high' | 'medium' | 'low';
 }
 
 interface AccessibilityReport {
   issues: AccessibilityIssue[];
   score: number;
-  totalChecks: number;
-  passedChecks: number;
+  totalCheck, s: number;
+  passedCheck, s: number;
 }
 
 const AccessibilityChecker: React.FC = () => {
@@ -185,7 +185,7 @@ const AccessibilityChecker: React.FC = () => {
   const scrollToElement = (selector: string) => {
     const element = document.querySelector(selector);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavio, r: 'smooth', block: 'center' });
       element.classList.add('ring-2', 'ring-red-500', 'ring-opacity-50');
       setTimeout(() => {
         element.classList.remove('ring-2', 'ring-red-500', 'ring-opacity-50');
@@ -199,22 +199,20 @@ const AccessibilityChecker: React.FC = () => {
   }, [checkAccessibility]);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-mdp-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-gray-900">Accessibility Checker</h2>
-        <div className="flex space-x-2">
+        <h2 className="text-xl font-semiboldtext-gray-900">Accessibility Checker</h2>
+        <div className="flexspace-x-2">
           <button
             onClick={checkAccessibility}
             disabled={isRunning}
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4py-2text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Checking...' : 'Recheck'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
-          >
-            {isVisible ? 'Hide Details' : 'Show Details'}
+            className="px-4py-2text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -224,16 +222,15 @@ const AccessibilityChecker: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Accessibility Score</span>
-              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}>
+              <span className="text-sm font-mediumtext-gray-700">Accessibility Score</span>
+              <span className={`text-2xl font-bold ${report.score >= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
                 {report.score}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-fullh-2">
               <div
-                className={`h-2 rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
-                style={{ width: `${report.score}%` }}
-              ></div>
+                className={`h-2rounded-full ${report.score >= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                style={{ width: `${report.score}%` }}</p></div>
             </div>
             <p className="text-sm text-gray-600 mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
@@ -241,40 +238,31 @@ const AccessibilityChecker: React.FC = () => {
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">❌</span>
+          <div className="grid grid-cols-1md:grid-cols-3gap-4mb-6">
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">❌</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Errors</p>
-                  <p className="text-2xl font-bold text-red-600">
-                    {report.issues.filter(issue => issue.type === 'error').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Errors</p>
+                  <p className="text-2xl font-boldtext-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
               </div>
             </div>
             
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">⚠️</span>
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">⚠️</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Warnings</p>
-                  <p className="text-2xl font-bold text-yellow-600">
-                    {report.issues.filter(issue => issue.type === 'warning').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Warnings</p>
+                  <p className="text-2xl font-boldtext-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
               </div>
             </div>
             
-            <div className="p-4 border rounded-lg">
-              <div className="flex items-center">
-                <span className="text-2xl mr-2">ℹ️</span>
+            <div className="p-4borderrounded-lg">
+              <div className="flexitems-center">
+                <span className="text-2xlmr-2">ℹ️</span>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Info</p>
-                  <p className="text-2xl font-bold text-blue-600">
-                    {report.issues.filter(issue => issue.type === 'info').length}
-                  </p>
-                </div>
+                  <p className="text-sm font-mediumtext-gray-900">Info</p>
+                  <p className="text-2xl font-boldtext-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
               </div>
             </div>
           </div>
@@ -282,15 +270,15 @@ const AccessibilityChecker: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && report.issues.length > 0 && (
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-gray-900">Issues Found</h3>
-              <div className="space-y-2 max-h-96 overflow-y-auto">
+              <h3 className="text-lg font-mediumtext-gray-900">Issues Found</h3>
+              <div className="space-y-2max-h-96 overflow-y-auto">
                 {report.issues.map((issue, index) => (
                   <div
                     key={index}
-                    className={`p-3 rounded-md border ${getSeverityColor(issue.severity)}`}
+                    className={`p-3rounded-md border ${getSeverityColor(issue.severity)}`}
                   >
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-start space-x-2">
+                    <div className="flex items-startjustify-between">
+                      <div className="flex items-startspace-x-2">
                         <span className="text-lg">{getTypeIcon(issue.type)}</span>
                         <div>
                           <p className="text-sm font-medium">{issue.message}</p>
@@ -303,10 +291,8 @@ const AccessibilityChecker: React.FC = () => {
                       </div>
                       {issue.selector && (
                         <button
-                          onClick={() => scrollToElement(issue.selector!)}
+                          onClick={() =>scrollToElement(issue.selector!)}
                           className="text-xs text-blue-600 hover:text-blue-800 underline"
-                        >
-                          Go to element
                         </button>
                       )}
                     </div>
@@ -317,8 +303,8 @@ const AccessibilityChecker: React.FC = () => {
           )}
 
           {report.issues.length === 0 && (
-            <div className="text-center py-8">
-              <div className="text-4xl mb-4">🎉</div>
+            <div className="text-centerpy-8">
+              <div className="text-4xlmb-4">🎉</div>
               <h3 className="text-lg font-medium text-gray-900 mb-2">Great job!</h3>
               <p className="text-gray-600">No accessibility issues found.</p>
             </div>

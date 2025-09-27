@@ -24,10 +24,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
 	return (
 		<div
-			className = {`group p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
+			className={`group p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
 				isHovered
 					? 'border-blue-500 bg-blue-50 shadow-lg transform -translate-y-1'
-					: 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'}
+					: 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'
 			}`}
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
@@ -67,7 +67,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 								e.stopPropagation();
 								setIsExpanded(!isExpanded);
 							}}
-							aria-label={isExpanded ? 'Collapse features' : 'Expand features'}
+							aria-label={isExpanded ? 'Show fewer features' : 'Show more features'}
 							className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
 						>
 							{isExpanded ? 'Show Less' : `+${service.features.length - 3} More`}

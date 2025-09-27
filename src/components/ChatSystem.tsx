@@ -360,11 +360,8 @@ export const ChatSystem: React.FC<ChatSystemProps> = ({
             aria-label="Type your message"
           />
           <button
-            onClick={() = aria-label="handleSendMessage(inputText)}
-            disabled={!inputText.trim() || !isConnected}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            Send"> handleSendMessage(inputText)}
+            onClick={() => handleSendMessage(inputText)}
+            aria-label="Send message"
             disabled={!inputText.trim() || !isConnected}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
