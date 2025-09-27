@@ -66,7 +66,6 @@ const AdvancedSecurityDashboard: React.FC = () => {
       const newMetric, s: SecurityMetrics = {
         overallScor, e: Math.round(Math.random() * 30 + 70), // 70-100vulnerabilities: {
           critica, l: Math.floor(Math.random() * 2),
-
           high: Math.floor(Math.random() * 3),
           medium: Math.floor(Math.random() * 5 + 2),
           low: Math.floor(Math.random() * 8 + 3)
@@ -83,7 +82,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
       // Generate security alerts
       const newAlerts: SecurityAlert[] = [
         {
-          id: '1',
+          i, d: '1',
           severity: 'high',
           title: 'Missing Content Security Policy',
           description: 'Your application lacks a proper Content Security Policy header',
@@ -170,20 +169,20 @@ const AdvancedSecurityDashboard: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100text-red-800border-red-200';
-      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
-      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
-      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
-      default: return 'bg-gray-100text-gray-800border-gray-200';
+      case 'critical': return 'bg-red-100 text-red-800 border -red-200';
+      case 'high': return 'bg-orange-100 text-orange-800 border -orange-200';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 border -yellow-200';
+      case 'low': return 'bg-blue-100 text-blue-800 border -blue-200';
+      default: return 'bg-gray-100 text-gray-800 border -gray-200';
     }
   };
 
   const getPriorityColor = (priority: string): string => {
     switch (priority) {
-      case 'high': return 'bg-red-100text-red-800border-red-200';
-      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
-      case 'low': return 'bg-green-100text-green-800border-green-200';
-      default: return 'bg-gray-100text-gray-800border-gray-200';
+      case 'high': return 'bg-red-100 text-red-800 border -red-200';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 border -yellow-200';
+      case 'low': return 'bg-green-100 text-green-800 border -green-200';
+      default: return 'bg-gray-100 text-gray-800 border -gray-200';
     }
   };
 
@@ -194,15 +193,12 @@ const AdvancedSecurityDashboard: React.FC = () => {
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Shield className="h-6 w-6 text-blue-600" />
-
               <span>Security Dashboard</span>
             </div>
             <button
               onClick={performSecurityScan}
               disabled={isScanning}
-
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700disable,d:opacity-50"
             >
               {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>
@@ -212,59 +208,40 @@ const AdvancedSecurityDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-4mb-6">
-            <div className="p-4 border rounded-lgtext-center">
-              <div className="text-sm text-gray-600 mb-1">Security Score</div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
-              <div className={`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`}
-
-                {metrics.overallScore}/100
-              </div>
-            </div>
-
-            <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Vulnerabilities</div>
-              <div className="space-y-1 text-sm">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4ga p-4 mb-6">
+            <div className="p-4border rounded-lg text-center">
+              <div className="text-sm text-gray-600 mb-1">Security Score</div> <div className="{`text-3xl font-bold ${getScoreColor(metrics.overallScore)}`} {metrics.overallScore}/100 </div">
+            </div> <div className="p-4border rounded-lg">
+              <div className="text-sm text-gray-600 mb-2">Vulnerabilities</div> <div className="space-y-1 text-sm">
                 <div className="flexjustify-between">
                   <span className="text-red-600">Critical:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.critical}</span>
-                </div>
-                <div className="flexjustify-between">
+                </div> <div className="flexjustify-between">
                   <span className="text-orange-600">High:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.high}</span>
-                </div>
-                <div className="flexjustify-between">
+                </div> <div className="flexjustify-between">
                   <span className="text-yellow-600">Medium:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.medium}</span>
-                </div>
-                <div className="flexjustify-between">
+                </div> <div className="flexjustify-between">
                   <span className="text-blue-600">Low:</span>
                   <span className="font-semibold">{metrics.vulnerabilities.low}</span>
                 </div>
               </div>
-            </div>
-
-            <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-2">Security Features</div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
-              <div className="space-y-2">
+            </div> <div className="p-4border rounded-lg">
+              <div className="text-sm text-gray-600 mb-2">Security Features</div> <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm">HTTPS</span>
                   {metrics.httpsEnabled ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
                     <XCircle className="h-4 w-4 text-red-600" />
                   }
-                </div>
-                <div className="flex items-center justify-between">
+                </div> <div className="flex items-center justify-between">
                   <span className="text-sm">CSP</span>
                   {metrics.cspEnabled ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
                     <XCircle className="h-4 w-4 text-red-600" />
                   }
-                </div>
-                <div className="flex items-center justify-between">
+                </div> <div className="flex items-center justify-between">
                   <span className="text-sm">XSS Protection</span>
                   {metrics.xssProtection ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
@@ -272,15 +249,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
                   }
                 </div>
               </div>
-            </div>
-
-            <div className="p-4 borderrounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Last Scan</div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
-              <div className="text-sm font-semibold">
+            </div> <div className="p-4border rounded-lg">
+              <div className="text-sm text-gray-600 mb-1">Last Scan</div> <div className="text-sm font-semibold">
                 {metrics.lastScan.toLocaleDateString()}
-              </div>
-              <div className="text-xstext-gray-500">
+              </div> <div className="text-xs text-gray-500">
                 {metrics.lastScan.toLocaleTimeString()}
               </div>
             </div>
@@ -288,33 +260,27 @@ const AdvancedSecurityDashboard: React.FC = () => {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <AlertTriangle className="h-5 w-5 text-orange-600" />
-
               <span>Security Alerts</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {alerts.map((alert) => (
-                <div key={alert.id} className="border rounded-lgp-3">
+                <div key={alert.id} className="border rounded-lg p-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`}
-
-                      {alert.severity.toUpperCase()}
-                    </span>
-                    <span className="text-xstext-gray-500">
+                    <span className="{`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(alert.severity)}`} {alert.severity.toUpperCase()} </span">
+                    <span className="text-xs text-gray-500">
                       {alert.timestamp.toLocaleTimeString()}
                     </span>
                   </div>
-
                   <h4 className="font-semibold mb-1">{alert.title}</h4>
                   <p className="text-sm text-gray-600 mb-2">{alert.description}</p>
-                  <p className="text-sm text-blue-600 font-medium">{alert.recommendation}</p>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                  <p className="text-sm text-blue-600font-medium">{alert.recommendation}</p>
                 </div>
               ))}
             </div>
@@ -328,24 +294,18 @@ const AdvancedSecurityDashboard: React.FC = () => {
           <CardContent>
             <div className="space-y-3">
               {recommendations.map((rec, index) => (
-                <div key={index} className="border rounded-lgp-3">
+                <div key={index} className="border rounded-lg p-3">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`}
-
-                      {rec.priority.toUpperCase()}
-                    </span>
-                    <span className="text-xs text-gray-500 capitalize">{rec.category}</span>
+                    <span className="{`px-2 py-1 text-xs font-medium rounded-full border ${getPriorityColor(rec.priority)}`} {rec.priority.toUpperCase()} </span">
+                    <span className="text-xs text-gray-500capitalize">{rec.category}</span>
                   </div>
-
                   <h4 className="font-semibold mb-1">{rec.title}</h4>
                   <p className="text-sm text-gray-600 mb-2">{rec.description}</p>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
-                  <div className="text-xsspace-y-1">
+                  <div className="text-xs space-y-1">
                     <div>
                       <span className="font-medium text-blue-700">Implementation:</span>
                       <p className="text-gray-600">{rec.implementation}</p>
-                    </div>
-                    <div>
+                    </div> <div>
                       <span className="font-medium text-green-700">Impact:</span>
                       <p className="text-gray-600">{rec.impact}</p>
                     </div>

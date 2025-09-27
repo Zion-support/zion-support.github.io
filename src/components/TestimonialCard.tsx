@@ -23,9 +23,9 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
     return Array.from({ lengt, h: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5h-5 ${
+        className={`w-5 h-5 ${
           i < rating ? 'text-yellow-400' : 'text-gray-300'
-        }` }
+        }`}
         fill="currentColor"
         viewBox="002020"
       >
@@ -36,39 +36,31 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div 
-      className={`group p-8bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500border border-gray-100hover:border-blue-200hover-lift ${
+      className={`group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500border border-gray-100 hover:border-blue-200hover-lift ${
         isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-8'
       }`}
-
     >
       {/* Rating */}
-      <div className="flex items-centermb-4">
+      <div className="flex items-center mb-4">
         {renderStars(testimonial.rating)}
       </div>
 
       {/* Content */}
-
-      <blockquote className="text-gray-700 text-lg leading-relaxed mb-6 italic">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+      <blockquote className="text-gray-700 text-lg leading-relaxed mb-6italic">
         &ldquo;{testimonial.content}&rdquo;
       </blockquote>
 
       {/* Author */}
       <div className="flexitems-center">
-        <div className="w-12 h-12bg-gradient-to-br from-blue-500to-purple-600rounded-full flex items-center justify-center text-white font-bold text-lgmr-4">
+        <div className="w-12 h-12 bg-gradient-to-br from-blue-500to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
           {testimonial.name.charAt(0)}
-        </div>
-        <div>
-          <div className="font-semiboldtext-gray-800">{testimonial.name}</div>
-          <div className="text-gray-600 text-sm">{testimonial.role}</div>
-          <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>
+        </div> <div>
+          <div className="font-semibold text-gray-800">{testimonial.name}</div> <div className="text-gray-600 text-sm">{testimonial.role}</div> <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>
         </div>
       </div>
 
       {/* Quote decoration */}
-
-      <div className="absolute top-4 right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+      <div className="absolute to p-4right-4 text-blue-200 text-6xl font-serif leading-noneopacity-20">
         &ldquo;
       </div>
     </div>

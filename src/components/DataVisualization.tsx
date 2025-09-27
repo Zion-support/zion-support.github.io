@@ -356,20 +356,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   return (
-
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-200 p-6 `}>
-
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+    <div className="{`bg-white rounded-lg shadow-sm border border-gray-200 p-6 `}">
       {title && (
-        <h3className="text-lg font-semibold text-gray-900 mb-4" id="title">{title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4" id="title">{title}</h3>
       )}
       
       <div className="relative">
         {isLoading && (
-
           <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 rounded-lg">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2border-blue-600"></div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+            <div className="animate-spin rounded-full h-8 w-8 border -b-2 border -blue-600"></div>
           </div>
         )}
         
@@ -384,16 +379,16 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
 
       {showLegend && (
-        <div className="mt-4 flex flex-wrapgap-2">
+        <div className="mt-4 flex flex-wrapga p-2">
           {data.labels.map((label, index) => (
             <div
               key={index}
-              className={`flex items-center space-x-2px-3py-1rounded-full text-sm ${
+              className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm ${
                 hoveredIndex === index ? 'bg-gray-100' : ''
-              }` }
+              }`}
             >
               <div
-                className="w-3 h-3rounded-full"
+                className="w-3 h-3 rounded-full"
                 style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}
               />
               <span className="text-gray-700">{label}</span>
@@ -406,9 +401,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       )}
 
       {hoveredIndex !== null && showTooltips && (
-
-        <div className="mt-2 p-2 bg-gray-100 rounded text-smtext-gray-700">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+        <div className="mt-2 p-2 bg-gray-100 rounded text-sm text-gray-700">
           <strong>{data.labels[hoveredIndex]}:</strong> {data.datasets[0].data[hoveredIndex]}
         </div>
       )}

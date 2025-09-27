@@ -241,11 +241,11 @@ const SEOAccessibilityOptimizer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'critical': return 'bg-red-100text-red-800border-red-200';
-      case 'high': return 'bg-orange-100text-orange-800border-orange-200';
-      case 'medium': return 'bg-yellow-100text-yellow-800border-yellow-200';
-      case 'low': return 'bg-blue-100text-blue-800border-blue-200';
-      default: return 'bg-gray-100text-gray-800border-gray-200';
+      case 'critical': return 'bg-red-100 text-red-800 border -red-200';
+      case 'high': return 'bg-orange-100 text-orange-800 border -orange-200';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 border -yellow-200';
+      case 'low': return 'bg-blue-100 text-blue-800 border -blue-200';
+      default: return 'bg-gray-100 text-gray-800 border -gray-200';
     }
   };
 
@@ -256,15 +256,12 @@ const SEOAccessibilityOptimizer: React.FC = () => {
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Search className="h-6 w-6 text-blue-600" />
-
               <span>SEO & Accessibility Optimizer</span>
             </div>
             <button
               onClick={analyzePage}
               disabled={isAnalyzing}
-
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700disable,d:opacity-50"
             >
               {isAnalyzing ? 'Analyzing...' : 'Analyze Page'}
             </button>
@@ -275,96 +272,71 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         </CardHeader>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2ga p-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Search className="h-5 w-5 text-blue-600" />
-
               <span>SEO Metrics</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-3 borderrounded-lg">
+              <div className="flex items-center justify-between p-3border rounded-lg">
                 <span className="font-medium">Overall SEO Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`}
-
-                  {seoMetrics.overallScore}/100
-                </span>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 borderrounded-lg">
+                <span className="{`text-2xl font-bold ${getScoreColor(seoMetrics.overallScore)}`} {seoMetrics.overallScore}/100 </span">
+              </div> <div className="grid grid-cols-2ga p-4">
+                <div className="p-3border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium">Title Tag</span>
-
                     {seoMetrics.titleTag ? 
                       <CheckCircle className="h-4 w-4 text-green-600" /> : 
                       <XCircle className="h-4 w-4 text-red-600" />
                     }
                   </div>
-                </div>
-                
-                <div className="p-3 borderrounded-lg">
+                </div> <div className="p-3border rounded-lg">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium">Meta Description</span>
-
                     {seoMetrics.metaDescription ? 
                       <CheckCircle className="h-4 w-4 text-green-600" /> : 
                       <XCircle className="h-4 w-4 text-red-600" />
                     }
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-3 borderrounded-lg">
-                <div className="text-sm font-mediummb-2">Heading Structure</div>
-                <div className="text-smspace-y-1">
+              </div> <div className="p-3border rounded-lg">
+                <div className="text-sm font-medium mb-2">Heading Structure</div> <div className="text-sm space-y-1">
                   <div className="flexjustify-between">
                     <span>H1Tags:</span>
                     <span className={seoMetrics.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
                       {seoMetrics.headings.h1Count}
                     </span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>H2Tags:</span>
                     <span>{seoMetrics.headings.h2Count}</span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>H3Tags:</span>
                     <span>{seoMetrics.headings.h3Count}</span>
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-3 borderrounded-lg">
-                <div className="text-sm font-mediummb-2">Images</div>
-                <div className="text-smspace-y-1">
+              </div> <div className="p-3border rounded-lg">
+                <div className="text-sm font-medium mb-2">Images</div> <div className="text-sm space-y-1">
                   <div className="flexjustify-between">
                     <span>Total Images:</span>
                     <span>{seoMetrics.images.total}</span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>With Alt Text:</span>
                     <span className="text-green-600">{seoMetrics.images.withAlt}</span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>Missing Alt:</span>
-                    <span className={seoMetrics.images.missingAlt > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{seoMetrics.images.missingAlt"> 0 ? 'text-red-600' : 'text-green-600'}>
                       {seoMetrics.images.missingAlt}
                     </span>
                   </div>
                 </div>
-              </div>
-              
-              <div className="p-3 borderrounded-lg">
+              </div> <div className="p-3border rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium">Page Speed</span>
-                  <span className={`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`}
-
-                    {seoMetrics.pageSpeed}/100
-                  </span>
+                  <span className="{`font-bold ${getScoreColor(seoMetrics.pageSpeed)}`} {seoMetrics.pageSpeed}/100 </span">
                 </div>
               </div>
             </div>
@@ -375,72 +347,54 @@ const SEOAccessibilityOptimizer: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Eye className="h-5 w-5 text-purple-600" />
-
               <span>Accessibility Metrics</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-3 borderrounded-lg">
+              <div className="flex items-center justify-between p-3border rounded-lg">
                 <span className="font-medium">Accessibility Score</span>
-                <span className={`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`}
-
-                  {accessibilityMetrics.overallScore}/100
-                </span>
-              </div>
-              
-              <div className="p-3 borderrounded-lg">
-                <div className="text-sm font-mediummb-2">Color Contrast</div>
-                <div className="text-smspace-y-1">
+                <span className="{`text-2xl font-bold ${getScoreColor(accessibilityMetrics.overallScore)}`} {accessibilityMetrics.overallScore}/100 </span">
+              </div> <div className="p-3border rounded-lg">
+                <div className="text-sm font-medium mb-2">Color Contrast</div> <div className="text-sm space-y-1">
                   <div className="flexjustify-between">
                     <span>Passed:</span>
                     <span className="text-green-600">{accessibilityMetrics.contrast.passed}</span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>Failed:</span>
-                    <span className={accessibilityMetrics.contrast.failed > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{accessibilityMetrics.contrast.failed"> 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.contrast.failed}
                     </span>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 gap-3">
-                <div className="flex items-center justify-between p-2 borderrounded">
+              </div> <div className="grid grid-cols-1ga p-3">
+                <div className="flex items-center justify-between p-2 border rounded">
                   <span className="text-sm">Keyboard Navigation</span>
                   {accessibilityMetrics.keyboardNavigation ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
                     <XCircle className="h-4 w-4 text-red-600" />
                   }
-                </div>
-                
-                <div className="flex items-center justify-between p-2 borderrounded">
+                </div> <div className="flex items-center justify-between p-2 border rounded">
                   <span className="text-sm">Screen Reader Friendly</span>
                   {accessibilityMetrics.screenReaderFriendly ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
                     <XCircle className="h-4 w-4 text-red-600" />
                   }
-                </div>
-                
-                <div className="flex items-center justify-between p-2 borderrounded">
+                </div> <div className="flex items-center justify-between p-2 border rounded">
                   <span className="text-sm">Semantic HTML</span>
                   {accessibilityMetrics.semanticHTML ? 
                     <CheckCircle className="h-4 w-4 text-green-600" /> : 
                     <XCircle className="h-4 w-4 text-red-600" />
                   }
                 </div>
-              </div>
-              
-              <div className="p-3 borderrounded-lg">
-                <div className="text-sm font-mediummb-2">ARIA Labels</div>
-                <div className="text-smspace-y-1">
+              </div> <div className="p-3border rounded-lg">
+                <div className="text-sm font-medium mb-2">ARIA Labels</div> <div className="text-sm space-y-1">
                   <div className="flexjustify-between">
                     <span>Present:</span>
                     <span className="text-green-600">{accessibilityMetrics.ariaLabels.present}</span>
-                  </div>
-                  <div className="flexjustify-between">
+                  </div> <div className="flexjustify-between">
                     <span>Missing:</span>
-                    <span className={accessibilityMetrics.ariaLabels.missing > 0 ? 'text-red-600' : 'text-green-600'}>
+                    <span className="{accessibilityMetrics.ariaLabels.missing"> 0 ? 'text-red-600' : 'text-green-600'}>
                       {accessibilityMetrics.ariaLabels.missing}
                     </span>
                   </div>
@@ -455,40 +409,30 @@ const SEOAccessibilityOptimizer: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
             <AlertCircle className="h-5 w-5 text-orange-600" />
-
             <span>Optimization Issues</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {issues.length === 0 ? (
-
               <div className="text-center py-8 text-gray-500">
-                <CheckCircle className="h-12 w-12 mx-auto mb-4 text-green-600" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                <CheckCircle className="h-12 w-12mx-auto mb-4 text-green-600" />
                 <p>No critical issues found. Great job!</p>
               </div>
             ) : (
               issues.map((issue, index) => (
-                <div key={index} className="border rounded-lgp-4">
+                <div key={index} className="border rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`px-2py-1text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`}
-
-                      {issue.severity.toUpperCase()}
-                    </span>
-                    <span className="text-xs text-gray-500 capitalize">{issue.category}</span>
+                    <span className="{`px-2 py-1 text-xs font-medium rounded-full border ${getSeverityColor(issue.severity)}`} {issue.severity.toUpperCase()} </span">
+                    <span className="text-xs text-gray-500capitalize">{issue.category}</span>
                   </div>
-
                   <h4 className="font-semibold mb-2">{issue.title}</h4>
                   <p className="text-sm text-gray-600 mb-3">{issue.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3text-sm">
-
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+                  <div className="grid grid-cols-1 md:grid-cols-2ga p-3 text-sm">
                     <div>
                       <span className="font-medium text-blue-700">Solutio, n:</span>
                       <p className="text-gray-600">{issue.solution}</p>
-                    </div>
-                    <div>
+                    </div> <div>
                       <span className="font-medium text-green-700">Impact:</span>
                       <p className="text-gray-600">{issue.impact}</p>
                     </div>

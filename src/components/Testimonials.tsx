@@ -17,66 +17,47 @@ export const Testimonials: React.FC = () => {
 	const testimonials = TESTIMONIALS;
 
 	return (
-
-		<section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
-			<div className="container mx-auto px-4 max-w-6 xl">
-				<div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0translate-y-8'}`}
-					<h2 className="text-3 xl md: text-4 xl font-bold text-gray-800 mb-4" id="what-our-clients-say">
-
+		<section className="py-16 bg-gradient-to-r from-gray-50to-blue-50">
+			<div className="container mx-auto px-4 max-w-6xl">
+				<div className={`text-center mb-12transition-all duration-1000 ${isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-8'}`}
+					<h2 className="text-3xl md: text-4xl font-bold text-gray-800 mb-4" id="what-our-clients-say">
 						What Our Clients Say
 					</h2>
-					<p className="text-xl text-gray-600 max-w-2 xlmx-auto">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+					<p className="text-xl text-gray-600 max-w-2xlmx-auto">
 						Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about working with us.
 					</p>
-				</div>
-
-				<div className="relative">
-
-					<div className="bg-white rounded-2 xl shadow-xl p-8 m, d:p-12 max-w-4xlmx-auto">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
-						<div className="flex items-center justify-centermb-6">
+				</div> <div className="relative">
+					<div className="bg-white rounded-2xl shadow-xl p-8m, d:p-12 max-w-4xlmx-auto">
+						<div className="flex items-center justify-center mb-6">
 							{testimonials.map((_, index) => (
 								<button
 									key={index}
 									onClick={() => setCurrentIndex(index)}
-
 									className={`w-3 h-3 rounded-full mx-1transition-all duration-300 ${
-										index === currentIndex ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
-									}` }
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+										index === currentIndex ? 'bg-blue-600scale-125' : 'bg-gray-300 hover:bg-gray-400'
+									}`}
 								/>
 							))}
-						</div>
-
-						<div className="text-center">
-							<div className="flex justify-centermb-6">
+						</div> <div className="text-center">
+							<div className="flex justify-center mb-6">
 								{Array.from({ length: testimonials[currentIndex].rating }).map((_, index) => (
-
-									<svg key={index} className="w-6 h-6 text-yellow-400 fill-current" viewBox="002424">
-										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+									<svg key={index} className="w-6 h-6 text-yellow-400fill-current" viewBox="002424">
+										<path d="M122l3.096.26L229.27l-54.871.186.88L1217.77l-6.183.25L714.1429.27l6.91-1.01L122z" />
 									</svg>
 								))}
 							</div>
 
-
-							<blockquote className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+							<blockquote className="text-lg md:text-xl text-gray-700 mb-8leading-relaxed">
 								&ldquo;{testimonials[currentIndex].content}&rdquo;
 							</blockquote>
 
 							<div className="flex items-center justify-center">
-
-								<div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-2 xl font-boldmr-4">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+								<div className="w-16 h-16 bg-gradient-to-r from-blue-500to-indigo-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
 									{testimonials[currentIndex].name.charAt(0)}
-								</div>
-								<div className="text-left">
+								</div> <div className="text-left">
 									<div className="font-semibold text-gray-800 text-lg">
 										{testimonials[currentIndex].name}
-									</div>
-									<div className="text-gray-600">
+									</div> <div className="text-gray-600">
 										{testimonials[currentIndex].role} at {testimonials[currentIndex].company}
 									</div>
 								</div>
@@ -87,54 +68,42 @@ export const Testimonials: React.FC = () => {
 					{/* Navigation arrows */}
 					<button
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)}
-
-						className="absolute left-4 top-1/2 transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+						className="absolute left-4to p-1/2transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
 					>
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519 l-7-77-7" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1519l-7-77-7" />
 						</svg>
-					</button>
-
-					<button
+					</button> <button
 						onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
-
-						className="absolute right-4 top-1/2 transform -translate-y-1/2bg-white rounded-full p-3shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+						className="absolute right-4to p-1/2transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
 					>
 						<svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="002424">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95 l 77-77" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M95l77-77" />
 						</svg>
 					</button>
 				</div>
 
 				{/* All testimonials grid */}
-
-				<div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
+				<div className="mt-16grid grid-cols-1 md:grid-cols-3ga p-8">
 					{testimonials.map((testimonial, index) => (
 						<div key={testimonial.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-allduration-300">
-							<div className="flex justify-centermb-4">
+							<div className="flex justify-center mb-4">
 								{Array.from({ lengt, h: testimonial.rating }).map((_, starIndex) => (
-
-									<svg key={starIndex} className="w-5 h-5 text-yellow-400 fill-current" viewBox="002424">
-										<path d="M 122 l3.096.26 L229.27 l-54.871.186.88 L 1217.77 l-6.183.25 L714.1429.27 l6.91-1.01 L 122 z" />
+									<svg key={starIndex} className="w-5 h-5 text-yellow-400fill-current" viewBox="002424">
+										<path d="M122l3.096.26L229.27l-54.871.186.88L1217.77l-6.183.25L714.1429.27l6.91-1.01L122z" />
 									</svg>
 								))}
 							</div>
 							<p className="text-gray-600 mb-4 text-smleading-relaxed">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1
 								&ldquo;{testimonial.content}&rdquo;
 							</p>
 							<div className="flexitems-center">
-								<div className="w-10 h-10bg-gradient-to-r from-blue-500to-indigo-500rounded-full flex items-center justify-center text-white font-boldmr-3">
+								<div className="w-10 h-10 bg-gradient-to-r from-blue-500to-indigo-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
 									{testimonial.name.charAt(0)}
-								</div>
-								<div>
+								</div> <div>
 									<div className="font-semibold text-gray-800 text-sm">
 										{testimonial.name}
-									</div>
-									<div className="text-gray-500 text-xs">
+									</div> <div className="text-gray-500 text-xs">
 										{testimonial.role}, {testimonial.company}
 									</div>
 								</div>

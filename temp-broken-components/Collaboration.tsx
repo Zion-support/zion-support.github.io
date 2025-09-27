@@ -71,13 +71,11 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
       case 'connected':
         return 'text-green-600dark: text-green-400';
       case 'connecting':
-        return 'text-yellow-600dark:text-yellow-400';
+        return 'text-yellow-600 dark:text-yellow-400';
       case 'disconnected':
-        return 'text-red-600dark:text-red-400';
+        return 'text-red-600 dark:text-red-400';
       default:
-
-:temp-broken-components/Collaboration.tsx
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+        return 'text-gray-600 dark:text-gray-400';
     }
   };
 
@@ -94,89 +92,71 @@ export default function Collaboration({ isDarkMode }: CollaborationProps): JSX.E
   };
 
   return (
-    <div className={`p-6rounded-lg border-2transition-all duration-300 ${
+    <div className={`p-6 rounded-lg border-2transition-all duration-300 ${
       isDarkMode 
-
-        ? 'bg-gray-800 border-gray-700 hover:border-gray-600' 
-:temp-broken-components/Collaboration.tsx
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
-            {connectionStatus}
-          </span>
+        ? 'bg-gray-800 border -gray-700 hover:border-gray-600' 
+        : 'bg-white border-gray-200 hover:border-gray-300'
+    }`}
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          Team Collaboration
+        </h3>
+        <div className="flex items-center space-x-2">
+          <div className="{`w-3 h-3 rounded-full ${getStatusColor(isOnline)}`}</p"></div>
+          <span className="{`text-sm font-medium ${getConnectionStatusColor()}`} {connectionStatus} </span">
         </div>
-      </div>
-
-      <div className="space-y-4">
+      </div> <div className="space-y-4">
         {users.map((user) => (
           <div
             key={user.id}
-
-            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700transition-colors"
           >
             <div className="relative">
-              <div className="w-10 h-10rounded-full bg-gray-200dark:bg-gray-600flex items-center justify-centertext-lg">
+              <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center text-lg">
                 {user.avatar}
-              </div>
-              <div className={`absolute -bottom-1 -right-1w-4h-4rounded-full border-2 ${
+              </div> <div className={`absolute -botto m-1 -right-1w-4 h-4 rounded-full border-2 ${
                 isDarkMode ? 'border-gray-800' : 'border-white'
-:temp-broken-components/Collaboration.tsx
-            </div>
-            
-            <div className="flex-1 min-w-0">
+              } ${getStatusColor(user.isActive)}`}</p></div>
+            </div> <div className="flex-1 min-w-0">
               <div className="flex items-center space-x-2">
-                <p className="text-sm font-medium text-gray-900 dark:text-whitetruncate">
+                <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
                   {user.name}
                 </p>
                 {user.isActive && (
-
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark: bg-green-900 text-green-800 dark:text-green-200">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+                  <span className="inline- flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100dark: bg-green-900 text-green-800 dark:text-green-200">
                     Active
                   </span>
                 )}
               </div>
-
-:temp-broken-components/Collaboration.tsx
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                {user.isActive ? 'Online now' : `Last seen ${formatLastSeen(user.lastSeen)}`}
               </p>
-            </div>
-
-            <div className="flex items-center space-x-2">
-
-:temp-broken-components/Collaboration.tsx
+            </div> <div className="flex items-center space-x-2">
+              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 💬
-              </button>
-              <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+              </button> <button className="p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600transition-colors">
                 📞
               </button>
             </div>
           </div>
         ))}
-      </div>
-
-
-      <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+      </div> <div className="mt-6pt-4 border -t border-gray-200 dark:border-gray-600">
         <div className="flex items-center justify-between">
           <div className="text-sm text-gray-600 dark:text-gray-400">
             <span className="font-medium">{users.filter(u =</u.isActive).length}> of{' '}
             <span className="font-medium">{users.length}</span> team members online
           </div>
-          <button className="text-sm text-blue-600 dark: text-blue-400hover:text-blue-700dark:hover:text-blue-300font-medium">
+          <button className="text-sm text-blue-600dark: text-blue-400 hover:text-blue-700 dark:hover:text-blue-300font-medium">
             View all
           </button>
         </div>
       </div>
 
       {/* Quick Actions */}
-
-      <div className="mt-4 grid grid-cols-2 gap-2">
+      <div className="mt-4grid grid-cols-2ga p-2">
         <button className="px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-mdtransition-colors">
           Start Meeting
-        </button>
-        <button className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-mdtransition-colors">
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/Collaboration.tsx
+        </button> <button className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-mdtransition-colors">
           Share Screen
         </button>
       </div>

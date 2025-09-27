@@ -296,10 +296,10 @@ const SEOAnalyzer: React.FC = () => {
 
   const getSeverityColor = (severity: string): string => {
     switch (severity) {
-      case 'high': return 'text-red-600bg-red-50';
-      case 'medium': return 'text-yellow-600bg-yellow-50';
-      case 'low': return 'text-blue-600bg-blue-50';
-      default: return 'text-gray-600bg-gray-50';
+      case 'high': return 'text-red-600 bg-red-50';
+      case 'medium': return 'text-yellow-600 bg-yellow-50';
+      case 'low': return 'text-blue-600 bg-blue-50';
+      default: return 'text-gray-600 bg-gray-50';
     }
   };
 
@@ -317,24 +317,19 @@ const SEOAnalyzer: React.FC = () => {
   }, [checkSEO]);
 
   return (
-    <div className="bg-white rounded-lg shadow-mdp-6">
+    <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2className="text-xl font-semiboldtext-gray-900">SEO Analyzer</h2>
-        <div className="flexspace-x-2">
+        <h2 className="text-xl font-semibold text-gray-900">SEO Analyzer</h2>
+        <div className="flex space-x-2">
           <button
             onClick={checkSEO}
             disabled={isRunning}
-
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disable, d:opacity-50 disabled:cursor-not-allowed"
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/SEOAnalyzer.tsx
+            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700disable, d:opacity-50disable,d:cursor-not-allowed"
           >
             {isRunning ? 'Analyzing...' : 'Reanalyze'}
-          </button>
-          <button
+          </button> <button
             onClick={() => setIsVisible(!isVisible)}
-
-:temp-broken-components/SEOAnalyzer.tsx
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/SEOAnalyzer.tsx
+            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
           </button>
         </div>
       </div>
@@ -344,13 +339,13 @@ const SEOAnalyzer: React.FC = () => {
           {/* Overall Score */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
-:temp-broken-components/SEOAnalyzer.tsx
+              <span className="text-sm font-medium text-gray-700">SEO Score</span>
+              <span className="{`text-2xl font-bold ${report.score">= 90 ? 'text-green-600' : report.score >= 70 ? 'text-yellow-600' : 'text-red-600'}`}
                 {report.score}%
               </span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-fullh-2">
-              <div
-:temp-broken-components/SEOAnalyzer.tsx
+            </div> <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="{`h-2 rounded-full ${report.score">= 90 ? 'bg-green-500' : report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                style={{ width: `${report.score}%` }}</p></div>
             </div>
             <p className="text-sm text-gray-600 mt-2">
               {report.passedChecks} of {report.totalChecks} checks passed
@@ -358,50 +353,44 @@ const SEOAnalyzer: React.FC = () => {
           </div>
 
           {/* Quick Stats */}
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4mb-6">
-            <div className="p-4 border rounded-lgtext-center">
-              <p className="text-2 xl font-boldtext-blue-600">{report.headings.h1}</p>
-              <p className="text-sm text-gray-600">H 1 Tags</p>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/SEOAnalyzer.tsx
-            </div>
-            <div className="p-4 border rounded-lgtext-center">
-              <p className="text-2 xl font-boldtext-green-600">{report.images.withAlt}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4ga p-4 mb-6">
+            <div className="p-4border rounded-lg text-center">
+              <p className="text-2xl font-bold text-blue-600">{report.headings.h1}</p>
+              <p className="text-sm text-gray-600">H1Tags</p>
+            </div> <div className="p-4border rounded-lg text-center">
+              <p className="text-2xl font-bold text-green-600">{report.images.withAlt}</p>
               <p className="text-sm text-gray-600">Images with Alt</p>
-            </div>
-            <div className="p-4 border rounded-lgtext-center">
-              <p className="text-2 xl font-boldtext-purple-600">{report.links.internal}</p>
+            </div> <div className="p-4border rounded-lg text-center">
+              <p className="text-2xl font-bold text-purple-600">{report.links.internal}</p>
               <p className="text-sm text-gray-600">Internal Links</p>
-            </div>
-            <div className="p-4 border rounded-lgtext-center">
-              <p className="text-2 xl font-boldtext-orange-600">{report.links.external}</p>
+            </div> <div className="p-4border rounded-lg text-center">
+              <p className="text-2xl font-bold text-orange-600">{report.links.external}</p>
               <p className="text-sm text-gray-600">External Links</p>
             </div>
           </div>
 
           {/* Issues Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4mb-6">
-            <div className="p-4 borderrounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3ga p-4 mb-6">
+            <div className="p-4border rounded-lg">
               <div className="flexitems-center">
-                <span className="text-2 xlmr-2">❌</span>
+                <span className="text-2xl mr-2">❌</span>
                 <div>
-:temp-broken-components/SEOAnalyzer.tsx
+                  <p className="text-sm font-medium text-gray-900">Errors</p>
+                  <p className="text-2xl font-bold text-red-600">{report.issues.filter(issue =</issue.type === 'error').length}</p></div>
               </div>
-            </div>
-            
-            <div className="p-4 borderrounded-lg">
+            </div> <div className="p-4border rounded-lg">
               <div className="flexitems-center">
-                <span className="text-2 xlmr-2">⚠️</span>
+                <span className="text-2xl mr-2">⚠️</span>
                 <div>
-:temp-broken-components/SEOAnalyzer.tsx
+                  <p className="text-sm font-medium text-gray-900">Warnings</p>
+                  <p className="text-2xl font-bold text-yellow-600">{report.issues.filter(issue =</issue.type === 'warning').length}</p></div>
               </div>
-            </div>
-            
-            <div className="p-4 borderrounded-lg">
+            </div> <div className="p-4border rounded-lg">
               <div className="flexitems-center">
-                <span className="text-2 xlmr-2">ℹ️</span>
+                <span className="text-2xl mr-2">ℹ️</span>
                 <div>
-:temp-broken-components/SEOAnalyzer.tsx
+                  <p className="text-sm font-medium text-gray-900">Info</p>
+                  <p className="text-2xl font-bold text-blue-600">{report.issues.filter(issue =</issue.type === 'info').length}</p></div>
               </div>
             </div>
           </div>
@@ -409,11 +398,14 @@ const SEOAnalyzer: React.FC = () => {
           {/* Detailed Issues */}
           {isVisible && (
             <div className="space-y-4">
-
-:temp-broken-components/SEOAnalyzer.tsx
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/SEOAnalyzer.tsx
+              <h3 className="text-lg font-medium text-gray-900">Issues Found</h3>
+              <div className="space-y-2 max- h-96overflow-y-auto">
+                {report.issues.map((issue, index) => (
+                  <div
+                    key={index}
+                    className={`p-3 rounded-md border ${getSeverityColor(issue.severity)}`}
                   >
-                    <div className="flex items-startspace-x-2">
+                    <div className="flex items-start space-x-2">
                       <span className="text-lg">{getTypeIcon(issue.type)}</span>
                       <div className="flex-1">
                         <p className="text-sm font-medium">{issue.message}</p>
@@ -431,11 +423,9 @@ const SEOAnalyzer: React.FC = () => {
           )}
 
           {report.issues.length === 0 && (
-            <div className="text-centerpy-8">
-
-              <div className="text-4 xlmb-4">🎉</div>
+            <div className="text-center py-8">
+              <div className="text-4xl mb-4">🎉</div>
               <h3 className="text-lg font-medium text-gray-900 mb-2">Excellent SEO!</h3>
->>>>>>> cursor/check-fix-push-and-merge-to-main-54b1:temp-broken-components/SEOAnalyzer.tsx
               <p className="text-gray-600">No SEO issues found.</p>
             </div>
           )}
