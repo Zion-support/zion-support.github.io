@@ -207,7 +207,6 @@ export const PricingCalculator: React.FC = () => {
 
 	return (
 		<div className="bg-white rounded-2xl shadow-xl p-8">
-			<div className="mb-8">
 
 				<h3 className="text-3xl font-bold text-gray-800 mb-3" id="project-pricing-calculator">Project Pricing Calculator</h3>
 				<p className="text-gray-600 text-lg">

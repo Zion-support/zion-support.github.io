@@ -268,8 +268,7 @@ export default function EnhancedDashboard({
   }
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
-      <div className="p-6">
+    <div className={`min-h-screen bg-gray-50 ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>>
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-900" id="dashboard">Dashboard</h1>
