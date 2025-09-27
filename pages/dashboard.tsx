@@ -33,7 +33,7 @@ const ComprehensiveAnalyticsDashboard = dynamic(() => import('../src/components/
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedPerformanceMonitor = dynamic(() => import('../src/components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
+const AdvancedPerformanceMonitor = dynamic(() => import('../temp-broken-components/AdvancedPerformanceMonitor').then(mod => ({ default: mod.AdvancedPerformanceMonitor })), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
@@ -48,27 +48,27 @@ const AdvancedSecurityMonitor = dynamic(() => import('../src/components/Advanced
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedAccessibilityAuditor = dynamic(() => import('../src/components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
+const AdvancedAccessibilityAuditor = dynamic(() => import('../temp-broken-components/AdvancedAccessibilityAuditor').then(mod => ({ default: mod.AdvancedAccessibilityAuditor })), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const SystemMonitor = dynamic(() => import('../src/components/SystemMonitor'), {
+const SystemMonitor = dynamic(() => import('../temp-broken-components/SystemMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const AdvancedSecurityEnhancements = dynamic(() => import('../src/components/AdvancedSecurityEnhancements'), {
+const AdvancedSecurityEnhancements = dynamic(() => import('../temp-broken-components/AdvancedSecurityEnhancements'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const SecurityMonitor = dynamic(() => import('../src/components/SecurityMonitor'), {
+const SecurityMonitor = dynamic(() => import('../temp-broken-components/SecurityMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
 
-const EnhancedAnalytics = dynamic(() => import('../src/components/EnhancedAnalytics'), {
+const EnhancedAnalytics = dynamic(() => import('../temp-broken-components/EnhancedAnalytics'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
@@ -98,7 +98,7 @@ const AdvancedAnalyticsInsights = dynamic(() => import('../src/components/Advanc
 //   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 // });
 
-const AdvancedSystemMonitor = dynamic(() => import('../src/components/AdvancedSystemMonitor'), {
+const AdvancedSystemMonitor = dynamic(() => import('../temp-broken-components/AdvancedSystemMonitor'), {
   ssr: false,
   loading: () => <div className="h-64 w-full bg-gray-200 rounded animate-pulse" />
 });
@@ -633,7 +633,7 @@ const Dashboard: React.FC = () => {
       default:
         return <ComprehensiveAnalyticsDashboard />;
     }
-  }, [activeTab, isRealTime, sampleAnalyticsData]);
+  }, [activeTab, isRealTime]);
 
   return (
     <>
