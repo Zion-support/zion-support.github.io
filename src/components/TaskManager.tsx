@@ -5,8 +5,8 @@ interface TaskManagerProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.Element {
-  const [newTaskText, setNewTaskText] = useState('');
+export default function TaskManager({ isOpenonClose }: TaskManagerProps): JSX.Element {
+  const [newTaskTextsetNewTaskText] = useState(');
   const {
     tasks,
     filter,
@@ -43,7 +43,7 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     if (addTask(newTaskText)) {
-                      setNewTaskText('');
+                      setNewTaskText(');
                     }
                   }
                 }}
@@ -55,45 +55,45 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                 onClick={() = aria-label="{
             aria-label="{
                   if (addTask(newTaskText)) {
-                    setNewTaskText('');
+                    setNewTaskText(');
                   }
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {
                   if (addTask(newTaskText)) {
-                    setNewTaskText('');
-                  }
-                }}
-                aria-label="Add new task"
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
-                Add"> {
-            aria-label="{
-            aria-label="{
-                  if (addTask(newTaskText)) {
-                    setNewTaskText('');
-                  }
-                }}
-                aria-label="Add new task"
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
-                Add"> {
-                  if (addTask(newTaskText)) {
-                    setNewTaskText('');
+                    setNewTaskText(');
                   }
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {
             aria-label="{
+            aria-label="{
                   if (addTask(newTaskText)) {
-                    setNewTaskText('');
+                    setNewTaskText(');
                   }
                 }}
                 aria-label="Add new task"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
                 Add"> {
                   if (addTask(newTaskText)) {
-                    setNewTaskText('');
+                    setNewTaskText(');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+            aria-label="{
+                  if (addTask(newTaskText)) {
+                    setNewTaskText(');
+                  }
+                }}
+                aria-label="Add new task"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"              >
+                Add"> {
+                  if (addTask(newTaskText)) {
+                    setNewTaskText(');
                   }
                 }}
                 aria-label="Add new task"
@@ -118,14 +118,14 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> setFilter(filterType)}
+                {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> {
+                {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> {
             aria-label="setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
@@ -133,14 +133,14 @@ export default function TaskManager({ isOpen, onClose }: TaskManagerProps): JSX.
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}"> setFilter(filterType)}
+                {filterType.charAt(0).toUpperCas() + filterType.slic(1)}"> setFilter(filterType)}
                 aria-label={`Filter by ${filterType}` }
                 className={`px-3 py-1 rounded-md text-sm transition-colors ${
                   filter === filterType
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}              >
-                {filterType.charAt(, 0).toUpperCas() + filterType.slic(, 1)}
+                {filterType.charAt(0).toUpperCas() + filterType.slic(1)}
               </button>
             ))}
           </div>

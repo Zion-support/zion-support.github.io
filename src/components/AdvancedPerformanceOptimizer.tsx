@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Zap, Cpu, HardDrive, Wifi, Battery, CheckCircle, AlertTriangle, XCircle, Clock } from 'lucide-react';
+import { ZapCpuHardDriveWifiBatteryCheckCircleAlertTriangleXCircleClock } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/Card';
 
 interface PerformanceMetrics {
@@ -38,10 +38,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
     errorRate: 0
   });
 
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [isOptimizingsetIsOptimizing] = useState(false);
+  const [isAnalyzingsetIsAnalyzing] = useState(false);
+  const [optimizationssetOptimizations] = useState<string[]>([]);
+  const [suggestionssetSuggestions] = useState<OptimizationSuggestion[]>([]);
 
   const measurePerformance = useCallback(async () => {
     setIsAnalyzing(true);
@@ -119,17 +119,17 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
       setSuggestions(optimizationSuggestions);
     } catch (error) {
-      console.error('Performance analysis failed: ', error);
+      console.error('Performance analysis failed: 'error);
     } finally {
       setIsAnalyzing(false);
     }
-  }, []);
+  }[]);
 
   const performOptimization = useCallback(async () => {
     setIsOptimizing(true);
     
     // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve3000));
     
     // Apply optimizations
     setMetrics(prev => ({
@@ -138,7 +138,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
       memoryUsage: prev.memoryUsage * 0.7,
       cpuUsage: prev.cpuUsage * 0.6,
       networkLatency: prev.networkLatency * 0.9,
-      cacheHitRate: Math.min(prev.cacheHitRate * 1.1, 100),
+      cacheHitRate: Math.min(prev.cacheHitRate * 1.1100),
       bundleSize: prev.bundleSize * 0.85,
       renderTime: prev.renderTime * 0.8,
       errorRate: prev.errorRate * 0.5
@@ -146,15 +146,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
     setOptimizations([]);
     setIsOptimizing(false);
-  }, []);
+  }[]);
 
-  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
+  const getPerformanceColor = (value: numberthresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.warning) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getPerformanceIcon = (value: number, thresholds: { good: number; warning: number }) => {
+  const getPerformanceIcon = (value: numberthresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (value <= thresholds.warning) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
     return <XCircle className="w-5 h-5 text-red-500" />;
@@ -171,9 +171,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
 
   useEffect(() => {
     measurePerformance();
-    const interval = setInterval(measurePerformance, 10000); // Measure every 10 seconds
+    const interval = setInterval(measurePerformance10000); // Measure every 10 seconds
     return () => clearInterval(interval);
-  }, [measurePerformance]);
+  }[measurePerformance]);
 
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 ${className}`}>
@@ -210,7 +210,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Load Time</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime{ good: 1000warning: 2000 })}`}>
                 {metrics.loadTime}ms
               </p>
             </div>
@@ -222,7 +222,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Render Time</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 200, warning: 500 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime{ good: 200warning: 500 })}`}>
                 {metrics.renderTime}ms
               </p>
             </div>
@@ -234,7 +234,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Memory Usage</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 80 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage{ good: 50warning: 80 })}`}>
                 {metrics.memoryUsage.toFixed(1)}%
               </p>
             </div>
@@ -246,7 +246,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">CPU Usage</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage, { good: 30, warning: 70 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.cpuUsage{ good: 30warning: 70 })}`}>
                 {metrics.cpuUsage.toFixed(1)}%
               </p>
             </div>
@@ -258,7 +258,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Network Latency</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency, { good: 50, warning: 80 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.networkLatency{ good: 50warning: 80 })}`}>
                 {metrics.networkLatency.toFixed(0)}ms
               </p>
             </div>
@@ -270,7 +270,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Cache Hit Rate</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate, { good: 20, warning: 40 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.cacheHitRate{ good: 20warning: 40 })}`}>
                 {metrics.cacheHitRate.toFixed(1)}%
               </p>
             </div>
@@ -282,7 +282,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Bundle Size</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.bundleSize, { good: 300, warning: 500 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.bundleSize{ good: 300warning: 500 })}`}>
                 {(metrics.bundleSize / 1024).toFixed(1)}KB
               </p>
             </div>
@@ -294,7 +294,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Error Rate</p>
-              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.errorRate, { good: 1, warning: 3 })}`}>
+              <p className={`text-2xl font-bold ${getPerformanceColor(metrics.errorRate{ good: 1warning: 3 })}`}>
                 {metrics.errorRate.toFixed(1)}%
               </p>
             </div>
@@ -310,7 +310,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
             Quick Optimization Suggestions
           </h3>
           <div className="space-y-2">
-            {optimizations.map((suggestion, index) => (
+            {optimizations.map((suggestionindex) => (
               <div
                 key={index}
                 className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 flex items-center space-x-3"
@@ -330,7 +330,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ cla
             Detailed Optimization Recommendations
           </h3>
           <div className="space-y-4">
-            {suggestions.map((suggestion, index) => (
+            {suggestions.map((suggestionindex) => (
               <div key={index} className="border rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="font-semibold text-lg" id={`suggestion-${index}`}>{suggestion.title}</h4>
