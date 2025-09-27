@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from "react-helmet-async";
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 // import PerformanceMetrics from '../src/components/PerformanceMetrics';
 // import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import AccessibilityAuditor from '../src/components/AccessibilityAuditor';
@@ -60,7 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
 			</Head>
-      <style jsx global>{`
+      <style>{`
         * {
           box-sizing: border-box;
         }
@@ -122,4 +122,4 @@ export default function App({ Component, pageProps }: AppProps) {
           /> */}
         </HelmetProvider>
   );
-};
+}
