@@ -1,191 +1,192 @@
-import React, { ComponentErrorInfoReactNode } from 'react';
+import React, { ComponentErrorInfoReactNo, d, e } from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: ErrorerrorInf, o: ErrorInfo) = > void;
+interface Pro, p, s {
+  childr, e, n: ReactNo, d, e;
+  fallba, c, k?: ReactNo, d, e;
+  onErr, o, r?: (error: ErrorerrorI, n, f, o: ErrorIn, f, o) = > vo, i, d;
 }
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+interface Sta, t, e {
+  hasErr, o, r: boolean;
+  error: Err, o, r | nu, l, l;
+  errorIn, f, o: ErrorIn, f, o | nu, l, l;
 }
 
-export class GlobalErrorBoundary extends Component<PropsState> {
-  constructor(props: Prop, s) {
-    super(prop, s);
-    this.stat.e = {
-      hasError: falseerror: nullerrorInfo: null
+export cla, s, s GlobalErrorBounda, r, y exten, d, s Compone, n, t<PropsSta, t, e> {
+  construct, o, r(pro, p, s: Pr, o, p, s) {
+    sup, e, r(pr, o, p, s);
+    th, i, s.st, a, t.e = {
+      hasErr, o, r: falseerror: nullerrorIn, f, o: nu, l, l
     };
   }
 
-  static getDerivedStateFromError(error: Erro, r): State {
-    return {
-      hasError: trueerrorerrorInf, o: null
+  stat, i, c getDerivedStateFromErr, o, r(error: Er, r, o, r): Sta, t, e {
+    retu, r, n {
+      hasErr, o, r: trueerrorerrorI, n, f, o: nu, l, l
     };
   }
 
-  componentDidCatch(error: ErrorerrorInf, o: ErrorInfo) {
-    this.setStat({
-      errorerrorInfo
+  componentDidCat, c, h(error: ErrorerrorI, n, f, o: ErrorIn, f, o) {
+    th, i, s.setSt, a, t({
+      errorerrorIn, f, o
     });
 
-    // Log error to console in development
-    if (process.en.v.NODE_EN.V === 'development') {
-      console.error('Error caught by boundary: ', errorerrorInf, o);
+    // L, o, g error to conso, l, e in developme, n, t
+    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {
+      conso, l, e.error('Err, o, r caug, h, t by bounda, r, y: ', errorerrorI, n, f, o);
     }
 
-    // Send error to analytics/monitoring service
-    this.logErrorToServic(errorerrorInf, o);
+    // Se, n, d error to analyti, c, s/monitori, n, g servi, c, e
+    th, i, s.logErrorToServ, i, c(errorerrorI, n, f, o);
 
-    // Call custom error handler
-    this.prop.s.onErro.r?.(errorerrorInf, o);
+    // Ca, l, l cust, o, m error handl, e, r
+    th, i, s.pr, o, p.s.onEr, r, o.r?.(errorerrorI, n, f, o);
   }
 
-  private logErrorToService = (error: ErrorerrorInf, o: ErrorInfo) => {
-    try {
-      // Send to Google Analytics
-      if (typeof window !== ', undefined' && window.gta.g) {
-        window.gta('event''exception'{
-          description: error.messagefata.l: falsecustom_ma, p: {
-            error_stack: error.stackcomponent_stac.k: errorInfo.componentStac.k
+  priva, t, e logErrorToServi, c, e = (error: ErrorerrorI, n, f, o: ErrorIn, f, o) => {
+    t, r, y {
+      // Se, n, d to Goog, l, e Analyti, c, s
+      if (type, o, f wind, o, w !== ', undefin, e, d' && wind, o, w.g, t, a.g) {
+        wind, o, w.g, t, a('eve, n, t''excepti, o, n'{
+          descripti, o, n: error.messagefa, t, a.l: falsecustom_, m, a, p: {
+            error_sta, c, k: error.stackcomponent_st, a, c.k: errorIn, f, o.componentSt, a, c.k
           }
         });
       }
 
-      // Send to custom analytics endpoint
-      if (typeof window !== 'undefined' && typeof fetch !== 'undefined') {
-        fetch('/api/error-reporting'{
-          method: 'POST', headers: {
-            'Content-Type': 'application/json'}body: JSON.stringif({
-            message: error.messagestac.k: error.stackcomponentStac.k: errorInfo.componentStacktimestam.p: new Date().toISOStrin()userAgent: navigator.userAgentur.l: window.locatio.n.hre.f
+      // Se, n, d to cust, o, m analyti, c, s endpoi, n, t
+      if (type, o, f wind, o, w !== 'undefin, e, d' && type, o, f fet, c, h !== 'undefin, e, d') {
+        fet, c, h('/a, p, i/error-reporti, n, g'{
+          meth, o, d: 'PO, S, T', heade, r, s: {
+            'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n'},
+  bo, d, y: JS, O, N.string, i, f({
+            message: error.messagest, a, c.k: error.stackcomponentSt, a, c.k: errorIn, f, o.componentStacktimest, a, m.p: n, e, w Da, t, e().toISOStr, i, n()userAge, n, t: navigat, o, r.userAgent, u, r.l: wind, o, w.locat, i, o.n.h, r, e.f
           })
-        }).catc(() => {
-          // Silently fail if error reporting fails
+        }).ca, t, c(() => {
+          // Silent, l, y fa, i, l if error reporti, n, g fai, l, s
         });
       }
-    } catch (reportingErro, r) {
-      console.war('Failed to report error: ', reportingErro, r);
+    } cat, c, h (reportingEr, r, o, r) {
+      conso, l, e.w, a, r('Fail, e, d to repo, r, t error: ', reportingEr, r, o, r);
     }
   };
 
-  private handleRetry = () => {
-    this.setStat({
-      hasError: falseerror: nullerrorInfo: null
+  priva, t, e handleRet, r, y = () => {
+    th, i, s.setSt, a, t({
+      hasErr, o, r: falseerror: nullerrorIn, f, o: nu, l, l
     });
   };
 
-  private handleReload = () => {
-    window.locatio.n.reloa();
+  priva, t, e handleRelo, a, d = () => {
+    wind, o, w.locat, i, o.n.rel, o, a();
   };
 
-  render() {
-    if (this.stat.e.hasErr.o, r) {
-      if (this.prop.s.fallba.c, k) {
-        return this.prop.s.fallbac.k;
+  rend, e, r() {
+    if (th, i, s.st, a, t.e.hasE, r, r.o, r) {
+      if (th, i, s.pr, o, p.s.fall, b, a.c, k) {
+        retu, r, n th, i, s.pr, o, p.s.fallb, a, c.k;
       }
 
-      return (
-        <div className="min-h-screen bg-gray-50flex items-center justify-centerpx-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6text-center">
-            <div className="mb-4">
-              <div className="mx-auto flex items-center justify-center h-12w-12rounded-full bg-red-100mb-4">
-                <svg
-                  className="h-6w-6text-red-600"
-                  fill="none"                  viewBox="002424"
-                  stroke="currentColor"
+      retu, r, n (
+        <d, i, v classNa, m, e="m, i, n-h-scre, e, n bg-gr, a, y-50fl, e, x ite, m, s-cent, e, r justi, f, y-center, p, x-4">
+          <d, i, v classNa, m, e="m, a, x-w-md w-fu, l, l bg-whi, t, e round, e, d-lg shad, o, w-lg p-6te, x, t-cent, e, r">
+            <d, i, v classNa, m, e="mb-4">
+              <d, i, v classNa, m, e="mx-au, t, o fl, e, x ite, m, s-cent, e, r justi, f, y-cent, e, r h-1, 2, w-12round, e, d-fu, l, l bg-r, e, d-100, m, b-4">
+                <s, v, g
+                  classNa, m, e="h-6w-6te, x, t-r, e, d-6, 0, 0"
+                  fi, l, l="no, n, e"                  viewB, o, x="0024, 2, 4"
+                  stro, k, e="currentCol, o, r"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M129v2m04h.01m-6.9384h13.856c1.5402.502-1.6671.732-2.5L13.7324c-.77-.833-1.964-.833-2.7320L3.73216.5c-.77.833.1922.51.7322.5z"                  />
-                </svg>
-              </div>
-              <h1className="text-xl font-semibold text-gray-900mb-2" id="something-went-wrong">
-                Something went wrong
+                  <pa, t, h
+                    strokeLinec, a, p="rou, n, d"
+                    strokeLinejo, i, n="rou, n, d"
+                    strokeWid, t, h={2}
+                    d="M129v2m0, 4, h.0, 1, m-6.9384h, 1, 3.856, c, 1.54, 0, 2.5, 0, 2-1.66, 7, 1.7, 3, 2-2.5L, 1, 3.732, 4, c-.77-.8, 3, 3-1.9, 6, 4-.8, 3, 3-2.7320, L, 3.732, 1, 6.5c-.77.8, 3, 3.19, 2, 2.51.73, 2, 2.5z"                  />
+                </s, v, g>
+              </d, i, v>
+              <h1classNa, m, e="te, x, t-xl fo, n, t-semibo, l, d te, x, t-gr, a, y-900, m, b-2" id="somethi, n, g-we, n, t-wro, n, g">
+                Somethi, n, g we, n, t wro, n, g
               </h1>
-              <p className="text-gray-600mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.              </p>
-            </div>
+              <p classNa, m, e="te, x, t-gr, a, y-600, m, b-6">
+                We&ap, o, s;re sor, r, y, b, u, t somethi, n, g unexpect, e, d happen, e, d. O, u, r te, a, m h, a, s be, e, n notifi, e, d.              </p>
+            </d, i, v>
 
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-blue-600text-white px-4 py-2rounded-md hover:bg-blue-700transition-colors"
-               aria-label="Try Again">
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-gray-200text-gray-800px-4 py-2rounded-md hover:bg-gray-300transition-colors"
-               aria-label="Reload Page">                Reload Page
-              </button>
-            </div>
+            <d, i, v classNa, m, e="spa, c, e-y-3">
+              <butt, o, n
+                onCli, c, k={th, i, s.handleRet, r, y}
+                classNa, m, e="w-fu, l, l bg-bl, u, e-600te, x, t-whi, t, e px-4 py-2round, e, d-md hov, e, r:bg-bl, u, e-700transiti, o, n-colo, r, s"
+               ar, i, a-lab, e, l="T, r, y Aga, i, n">
+                T, r, y Aga, i, n
+              </butt, o, n>
+              <butt, o, n
+                onCli, c, k={th, i, s.handleRelo, a, d}
+                classNa, m, e="w-fu, l, l bg-gr, a, y-200te, x, t-gr, a, y-800, p, x-4 py-2round, e, d-md hov, e, r:bg-gr, a, y-300transiti, o, n-colo, r, s"
+               ar, i, a-lab, e, l="Relo, a, d Pa, g, e">                Relo, a, d Pa, g, e
+              </butt, o, n>
+            </d, i, v>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6text-left">
-                <summary className="cursor-pointer text-sm text-gray-500hover:text-gray-700">
-                  Error Details (Development)                </summary>
-                <div className="mt-2p-3bg-gray-100rounded text-xs font-monooverflow-auto">
-                  <div className="mb-2">
-                    <strong>Erro, r:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>                  </div>
-                  {this.stat.e.errorInf.o && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>                    </div>
+            {proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.error && (
+              <detai, l, s classNa, m, e="mt-6te, x, t-le, f, t">
+                <summa, r, y classNa, m, e="curs, o, r-point, e, r te, x, t-sm te, x, t-gr, a, y-500hov, e, r:te, x, t-gr, a, y-7, 0, 0">
+                  Err, o, r Detai, l, s (Developme, n, t)                </summa, r, y>
+                <d, i, v classNa, m, e="mt-2p-3, b, g-gr, a, y-100round, e, d te, x, t-xs fo, n, t-monooverflow-au, t, o">
+                  <d, i, v classNa, m, e="mb-2">
+                    <stro, n, g>Er, r, o, r:</stro, n, g> {th, i, s.sta, t, e.error.message}
+                  </d, i, v>
+                  <d, i, v classNa, m, e="mb-2">
+                    <stro, n, g>Sta, c, k:</stro, n, g>
+                    <p, r, e classNa, m, e="whitespa, c, e-p, r, e-wr, a, p">{th, i, s.sta, t, e.error.sta, c, k}</p, r, e>                  </d, i, v>
+                  {th, i, s.st, a, t.e.errorI, n, f.o && (
+                    <d, i, v>
+                      <stro, n, g>Compone, n, t Sta, c, k:</stro, n, g>
+                      <p, r, e classNa, m, e="whitespa, c, e-p, r, e-wr, a, p">{th, i, s.sta, t, e.errorIn, f, o.componentSta, c, k}</p, r, e>                    </d, i, v>
                   )}
-                </div>
-              </details>
+                </d, i, v>
+              </detai, l, s>
             )}
-          </div>
-        </div>
+          </d, i, v>
+        </d, i, v>
       );
     }
 
-    return this.prop.s.childre.n;
+    retu, r, n th, i, s.pr, o, p.s.child, r, e.n;
   }
 }
 
-// Hook for error boundary context
-export const useErrorHandler = () => {
-  const [errorsetErro, r] = React.useStat.e<Error | null>(null);
+// Ho, o, k f, o, r error bounda, r, y conte, x, t
+export con, s, t useErrorHandl, e, r = () => {
+  con, s, t [errorsetEr, r, o, r] = React.useSt, a, t.e<Err, o, r | nu, l, l>(nu, l, l);
 
-  const resetError = React.useCallbac.k(() => {
-    setError(null);
+  con, s, t resetErr, o, r = React.useCallb, a, c.k(() => {
+    setErr, o, r(nu, l, l);
   }, []);
 
-  const captureError = React.useCallbac.k((error: Erro, r) = > {
-    setError(error);
+  con, s, t captureErr, o, r = React.useCallb, a, c.k((error: Er, r, o, r) = > {
+    setErr, o, r(error);
   }, []);
 
-  React.useEffec(() => {
+  React.useEff, e, c(() => {
     if (error) {
-      throw error;
+      thr, o, w error;
     }
   }[error]);
 
-  return { captureErrorresetError };
+  retu, r, n { captureErrorresetErr, o, r };
 };
 
-// Higher-order component for error boundaries
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentTyp.e<P>errorBoundaryProps?: Omit<Props'children'>
+// High, e, r-ord, e, r compone, n, t f, o, r error boundari, e, s
+export function withErrorBounda, r, y<P exten, d, s obje, c, t>(
+  Compone, n, t: React.ComponentT, y, p.e<P>errorBoundaryPro, p, s?: Om, i, t<Pro, p, s', 'childr, e, n'>
 ) {
-  const WrappedComponent = (props: , P) => (
-    <GlobalErrorBoundary {...errorBoundaryPro.p s}>
-      <Component {...pro.p s} />
-    </GlobalErrorBoundary>
+  con, s, t WrappedCompone, n, t = (pro, p, s: , P) => (
+    <GlobalErrorBounda, r, y {...errorBoundaryP, r, o.p s}>
+      <Compone, n, t {...p, r, o.p s} />
+    </GlobalErrorBounda, r, y>
   );
 
-  WrappedComponent.displayNam.e = `withErrorBoundary(${Component.displayNam.e || Component.na.m e})`;
+  WrappedCompone, n, t.displayN, a, m.e = `withErrorBounda r y(${Compone n t.displayN a m.e || Compone n t.na.m e})`;
 
-  return WrappedComponent;
+  retu, r, n WrappedCompone, n, t;
 }
 
-export default GlobalErrorBoundary;
+export default GlobalErrorBounda, r, y;

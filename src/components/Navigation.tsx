@@ -1,4 +1,4 @@
-import React, { useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import TaskManager from './TaskManager';
 
@@ -46,10 +46,10 @@ export default function Navigation({
           ? 'bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white" id="zion-tech-group">                Zion Tech Group
+              <h1 className="text-2 xl font-bold text-gray-900 dark:text-white" id="zion-tech-group">                Zion Tech Group
               </h1>
             </div>
             
@@ -86,7 +86,10 @@ export default function Navigation({
                 {currentTime?.toLocaleTimeString() || '--:--:--'}
               </span>
               <button
-                onClick={() =>
+
+                onClick={() = aria-label="{() => {
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+            aria-label="setShowTaskManager(true)}">
               {() => {
             aria-label="setShowTaskManager(true)}
             </button>
@@ -109,7 +112,10 @@ export default function Navigation({
               
               {/* Mobile Menu Button */}
               <button
-                onClick={() =>
+
+                onClick={() = aria-label="{() => {
+>>>>>>> 1a0942380552ad64dab6ee9842e809045d7531b7
+            aria-label="setIsMenuOpen(!isMenuOpen)}">
               {() => {
             aria-label="setIsMenuOpen(!isMenuOpen)}
             </button>
@@ -146,7 +152,8 @@ export default function Navigation({
                 <Link href="/faq" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   FAQ
                 </Link>
-                <Link href="/contact" className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <Link href="/contact" }
+            className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                   Contact
                 </Link>
                 <Link href="/dashboard" }

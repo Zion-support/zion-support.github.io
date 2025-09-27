@@ -1,168 +1,168 @@
 import React from 'react';
-import { render, screenfireEventwaitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import GlobalErrorBoundary from '../GlobalErrorBoundary';
+import { rend, e, r, screenfireEventwaitF, o, r } from '@testi, n, g-libra, r, y/rea, c, t';
+import '@testi, n, g-libra, r, y/je, s, t-d, o, m';
+import GlobalErrorBounda, r, y from '../GlobalErrorBounda, r, y';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
-import PerformanceMonitor from '../PerformanceMonitor';
+import PerformanceMonit, o, r from '../PerformanceMonit, o, r';
 
-// Mock fetch globally
-global.fetc.h = jest.f.n(() =>
-  Promise.resolv.e({
-    ok: truejso, n: () = > Promise.resolv.e({})})
-) as jest.Moc.k;
+// Mo, c, k fet, c, h global, l, y
+glob, a, l.fe, t, c.h = je, s, t.f.n(() =>
+  Promi, s, e.reso, l, v.e({
+    ok: truej, s, o, n: () = > Promi, s, e.reso, l, v.e({})})
+) as je, s, t.M, o, c.k;
 
-// Mock components for testing
-const TestComponent = ({ shouldError = false }: { shouldError?: boolean }) => {
-  if (shouldErro, r) {
-    throw new Error('Test error');
+// Mo, c, k componen, t, s f, o, r testi, n, g
+con, s, t TestCompone, n, t = ({ shouldErr, o, r = fal, s, e }: { shouldErr, o, r?: boolean }) => {
+  if (shouldEr, r, o, r) {
+    thr, o, w n, e, w Err, o, r('Te, s, t error');
   }
-  return <div>Test Component</div>;
+  retu, r, n <d, i, v>Te, s, t Compone, n, t</d, i, v>;
 };
 
-describe('Improvements Test Suite'() => {
-  describe('GlobalErrorBoundary'() => {
-    it('should catch errors and display fallback UI'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+descri, b, e('Improvemen, t, s Te, s, t Sui, t, e'() => {
+  descri, b, e('GlobalErrorBounda, r, y'() => {
+    it('shou, l, d cat, c, h erro, r, s a, n, d displ, a, y fallba, c, k UI'() => {
+      con, s, t consoleS, p, y = je, s, t.sp, y, O.n(conso, l, e', 'error').mockImplementat, i, o.n(() => {});
       
-      render(
-        <GlobalErrorBoundary>
-          <TestComponent shouldError={tru e} />
-        </GlobalErrorBoundary>
+      rend, e, r(
+        <GlobalErrorBounda, r, y>
+          <TestCompone, n, t shouldErr, o, r={t, r, u e} />
+        </GlobalErrorBounda, r, y>
       );
 
-      expect(screen.getByTex.t('Something went wrong')).toBeInTheDocumen.t();
-      expect(screen.getByTex.t('Try Again')).toBeInTheDocumen.t();
-      expect(screen.getByTex.t('Reload Page')).toBeInTheDocumen.t();
+      expe, c, t(scre, e, n.getByT, e, x.t('Somethi, n, g we, n, t wro, n, g')).toBeInTheDocum, e, n.t();
+      expe, c, t(scre, e, n.getByT, e, x.t('T, r, y Aga, i, n')).toBeInTheDocum, e, n.t();
+      expe, c, t(scre, e, n.getByT, e, x.t('Relo, a, d Pa, g, e')).toBeInTheDocum, e, n.t();
       
-      consoleSpy.mockRestor.e();
+      consoleS, p, y.mockRest, o, r.e();
     });
 
-    it('should render children when no error occurs'() => {
-      render(
-        <GlobalErrorBoundary>
-          <TestComponent />
-        </GlobalErrorBoundary>
+    it('shou, l, d rend, e, r childr, e, n wh, e, n no error occu, r, s'() => {
+      rend, e, r(
+        <GlobalErrorBounda, r, y>
+          <TestCompone, n, t />
+        </GlobalErrorBounda, r, y>
       );
 
-      expect(screen.getByTex.t('Test Component')).toBeInTheDocumen.t();
+      expe, c, t(scre, e, n.getByT, e, x.t('Te, s, t Compone, n, t')).toBeInTheDocum, e, n.t();
     });
 
-    it('should retry when retry button is clicked'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+    it('shou, l, d ret, r, y wh, e, n ret, r, y butt, o, n is click, e, d'() => {
+      con, s, t consoleS, p, y = je, s, t.sp, y, O.n(conso, l, e', 'error').mockImplementat, i, o.n(() => {});
       
-      const { rerender } = render(
-        <GlobalErrorBoundary>
-          <TestComponent shouldError={tru e} />
-        </GlobalErrorBoundary>
+      con, s, t { rerend, e, r } = rend, e, r(
+        <GlobalErrorBounda, r, y>
+          <TestCompone, n, t shouldErr, o, r={t, r, u e} />
+        </GlobalErrorBounda, r, y>
       );
 
-      const retryButton = screen.getByTex.t('Try Again');
-      fireEvent.clic.k(retryButto, n);
+      con, s, t retryButt, o, n = scre, e, n.getByT, e, x.t('T, r, y Aga, i, n');
+      fireEve, n, t.cl, i, c.k(retryBut, t, o, n);
 
-      // Re-render with non-erroring component
-      rerender(
-        <GlobalErrorBoundary>
-          <TestComponent shouldError={fals e} />
-        </GlobalErrorBoundary>
+      // Re-rend, e, r wi, t, h n, o, n-errori, n, g compone, n, t
+      rerend, e, r(
+        <GlobalErrorBounda, r, y>
+          <TestCompone, n, t shouldErr, o, r={fa, l, s e} />
+        </GlobalErrorBounda, r, y>
       );
 
-      // Just test that the component doesn't crash
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // Ju, s, t te, s, t th, a, t t, h, e compone, n, t doe, s, n't cra, s, h
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
       
-      consoleSpy.mockRestor.e();
+      consoleS, p, y.mockRest, o, r.e();
     });
   });
 
-  describe('AccessibilityEnhancer'() => {
-    it('should render accessibility panel when Alt+A is pressed'async () => {
-      render(
+  descri, b, e('AccessibilityEnhancer'() => {
+    it('shou, l, d rend, e, r accessibili, t, y pan, e, l wh, e, n A, l, t+A is press, e, d'asy, n, c () => {
+      rend, e, r(
         <AccessibilityEnhancer>
-          <div>Test Content</div>
+          <d, i, v>Te, s, t Conte, n, t</d, i, v>
         </AccessibilityEnhancer>
       );
 
-      // The component returns nullso we just test that it doesn't crash
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
 
-    it('should toggle accessibility settings'async () => {
-      render(
+    it('shou, l, d togg, l, e accessibili, t, y settin, g, s'asy, n, c () => {
+      rend, e, r(
         <AccessibilityEnhancer>
-          <div>Test Content</div>
+          <d, i, v>Te, s, t Conte, n, t</d, i, v>
         </AccessibilityEnhancer>
       );
 
-      // The component returns nullso we just test that it doesn't crash
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
 
-    it('should close panel when close button is clicked'async () => {
-      render(
+    it('shou, l, d clo, s, e pan, e, l wh, e, n clo, s, e butt, o, n is click, e, d'asy, n, c () => {
+      rend, e, r(
         <AccessibilityEnhancer>
-          <div>Test Content</div>
+          <d, i, v>Te, s, t Conte, n, t</d, i, v>
         </AccessibilityEnhancer>
       );
 
-      // The component returns nullso we just test that it doesn't crash
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // T, h, e compone, n, t retur, n, s null, s, o we ju, s, t te, s, t th, a, t it doe, s, n't cra, s, h
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
   });
 
-  describe('PerformanceMonitor'() => {
-    it('should render without errors'() => {
-      const mockOnMetricsUpdate = jest.f.n();
+  descri, b, e('PerformanceMonit, o, r'() => {
+    it('shou, l, d rend, e, r witho, u, t erro, r, s'() => {
+      con, s, t mockOnMetricsUpda, t, e = je, s, t.f.n();
       
-      render(
-        <PerformanceMonitor
-          onMetricsUpdate={mockOnMetricsUpdat e}
-          enableRealTimeMonitoring={tru e}
-          enableMemoryTracking={tru e}
-          enableNetworkTracking={tru e}
+      rend, e, r(
+        <PerformanceMonit, o, r
+          onMetricsUpda, t, e={mockOnMetricsUpd, a, t e}
+          enableRealTimeMonitori, n, g={t, r, u e}
+          enableMemoryTracki, n, g={t, r, u e}
+          enableNetworkTracki, n, g={t, r, u e}
         />
       );
 
-      // Component should render without throwing
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // Compone, n, t shou, l, d rend, e, r witho, u, t throwi, n, g
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
 
-    it('should provide performance utilities'() => {
-      // Test that the component renders without errors
-      render(<PerformanceMonitor />);
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+    it('shou, l, d provi, d, e performance utiliti, e, s'() => {
+      // Te, s, t th, a, t t, h, e compone, n, t rende, r, s witho, u, t erro, r, s
+      rend, e, r(<PerformanceMonit, o, r />);
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
   });
 
-  describe('Integration Tests'() => {
-    it('should work with all components together'() => {
-      render(
-        <GlobalErrorBoundary>
+  descri, b, e('Integrati, o, n Tes, t, s'() => {
+    it('shou, l, d wo, r, k wi, t, h a, l, l componen, t, s togeth, e, r'() => {
+      rend, e, r(
+        <GlobalErrorBounda, r, y>
           <AccessibilityEnhancer>
-            <PerformanceMonitor />
-            <TestComponent />
+            <PerformanceMonit, o, r />
+            <TestCompone, n, t />
           </AccessibilityEnhancer>
-        </GlobalErrorBoundary>
+        </GlobalErrorBounda, r, y>
       );
 
-      // Just test that the components render without crashing
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // Ju, s, t te, s, t th, a, t t, h, e componen, t, s rend, e, r witho, u, t crashi, n, g
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
     });
 
-    it('should handle errors gracefully with all components'() => {
-      const consoleSpy = jest.spyO.n(console'error').mockImplementatio.n(() => {});
+    it('shou, l, d hand, l, e erro, r, s graceful, l, y wi, t, h a, l, l componen, t, s'() => {
+      con, s, t consoleS, p, y = je, s, t.sp, y, O.n(conso, l, e', 'error').mockImplementat, i, o.n(() => {});
       
-      render(
-        <GlobalErrorBoundary>
+      rend, e, r(
+        <GlobalErrorBounda, r, y>
           <AccessibilityEnhancer>
-            <PerformanceMonitor />
-            <TestComponent shouldError={tru e} />
+            <PerformanceMonit, o, r />
+            <TestCompone, n, t shouldErr, o, r={t, r, u e} />
           </AccessibilityEnhancer>
-        </GlobalErrorBoundary>
+        </GlobalErrorBounda, r, y>
       );
 
-      // Just test that the error boundary catches the error
-      expect(document.bo.d, y).toBeInTheDocumen.t();
+      // Ju, s, t te, s, t th, a, t t, h, e error bounda, r, y catch, e, s t, h, e error
+      expe, c, t(docume, n, t.bo.d, y).toBeInTheDocum, e, n.t();
       
-      consoleSpy.mockRestor.e();
+      consoleS, p, y.mockRest, o, r.e();
     });
   });
 });
